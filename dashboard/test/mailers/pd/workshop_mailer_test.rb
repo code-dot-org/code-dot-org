@@ -187,6 +187,8 @@ class WorkshopMailerTest < ActionMailer::TestCase
       {course: Pd::Workshop::COURSE_CS_IN_A, subject: Pd::Workshop::SUBJECT_CS_IN_A_PHASE_3},
       {course: Pd::Workshop::COURSE_CS_IN_S, subject: Pd::Workshop::SUBJECT_CS_IN_S_PHASE_3_SEMESTER_1},
       {course: Pd::Workshop::COURSE_CS_IN_S, subject: Pd::Workshop::SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2},
+      {course: Pd::Workshop::COURSE_CSA, subject: Pd::Workshop::SUBJECT_CSA_SUMMER_WORKSHOP},
+      {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP},
       {course: Pd::Workshop::COURSE_CSF, subject: Pd::Workshop::SUBJECT_CSF_101},
       {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1},
       {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP},
@@ -215,12 +217,15 @@ class WorkshopMailerTest < ActionMailer::TestCase
 
   test 'teacher enrollment reminder links are complete urls' do
     test_cases = [
-      {course: Pd::Workshop::COURSE_ADMIN, subject: Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_WELCOME},
-      {course: Pd::Workshop::COURSE_COUNSELOR, subject: Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_WELCOME},
+      {course: Pd::Workshop::COURSE_CSA, subject: Pd::Workshop::SUBJECT_CSA_SUMMER_WORKSHOP, days_before: 3},
+      {course: Pd::Workshop::COURSE_CSA, subject: Pd::Workshop::SUBJECT_CSA_SUMMER_WORKSHOP, days_before: 10},
+      {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP, days_before: 3},
+      {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_SUMMER_WORKSHOP, days_before: 10},
       {course: Pd::Workshop::COURSE_CSF, subject: Pd::Workshop::SUBJECT_CSF_101},
       {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1, days_before: 3},
       {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1, days_before: 10},
-      {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP},
+      {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP, days_before: 3},
+      {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP, days_before: 10},
       {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_WORKSHOP_1, days_before: 3},
       {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_WORKSHOP_1, days_before: 10},
     ]
