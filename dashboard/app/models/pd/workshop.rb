@@ -447,6 +447,7 @@ class Pd::Workshop < ApplicationRecord
   # email in various cases -- see the serialized attribute 'suppress_email'
   # for more information.
   # Suppress 3 and 10-day reminders for certain workshops
+  # [MEG] It appears that these courses can move into the MUST_SUPPRESS_EMAIL_SUBJECTS constant
   def suppress_reminders?
     [
       SUBJECT_CSP_TEACHER_CON,
