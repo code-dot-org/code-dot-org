@@ -42,7 +42,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     user: :teacher,
     response: :forbidden
   test_user_gets_response_for :get_access_token_with_override_validation,
-    params: {channelId: storage_encrypt_channel_id(1, 1), overrideValidation: "{'MyClass.java': {}}", projectVersion: 123, projectUrl: URL, executionType: 'RUN', miniAppType: 'console'},
+    params: {channelId: storage_encrypt_channel_id(1, 1), overrideValidation: "{'MyClass.java': {}}", executionType: 'RUN', miniAppType: 'console'},
     user: :levelbuilder,
     response: :success
 
