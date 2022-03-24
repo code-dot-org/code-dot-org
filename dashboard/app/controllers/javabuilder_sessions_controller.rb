@@ -41,6 +41,22 @@ class JavabuilderSessionsController < ApplicationController
     upload_project_files_and_render(session_id, project_files, encoded_payload)
   end
 
+  # GET /javabuilder/access_token_with_override_validation
+  def get_access_token_with_override_validation
+    unless has_required_params?([:channelId, :overrideValidation])
+      return render status: :bad_request, json: {}
+    end
+    channel_id = params[:channelId]
+    override_validation = params[:overrideValidation]
+
+    session_id = SecureRandom.uuid
+    encoded_payload = get_encoded_payload({sid: session_id, channel_id: channel_id})
+
+    level_id = params[:levelId].to_i
+    project_files = JavalabFilesHelper.get_project_files_with_override_validation(channel_id, level_id, override_validation)
+    upload_project_files_and_render(session_id, project_files, encoded_payload)
+  end
+
   private
 
   def upload_project_files_and_render(session_id, project_files, encoded_payload)

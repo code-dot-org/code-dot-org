@@ -19,35 +19,13 @@
       ],
       "project_widget_visible": true,
       "student_detail_progress_view": true,
-      "teacher_resources": [
-        [
-          "lessonPlans",
-          "https://curriculum.code.org/csd-20/unit6/"
-        ],
-        [
-          "teacherForum",
-          "https://forum.code.org/c/csd"
-        ],
-        [
-          "vocabulary",
-          "https://curriculum.code.org/csd-20/unit6/vocab/"
-        ],
-        [
-          "standardMappings",
-          "https://curriculum.code.org/csd-20/unit6/standards/"
-        ],
-        [
-          "codeIntroduced",
-          "https://curriculum.code.org/csd-20/unit6/code/"
-        ]
-      ],
       "tts": true,
       "use_legacy_lesson_plans": true,
       "version_year": "2020"
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2022-03-11 12:07:57 UTC",
+    "serialized_at": "2022-03-22 21:16:26 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -8513,13 +8491,96 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "Code Introduced",
+      "url": "https://curriculum.code.org/csd-20/unit6/code/",
+      "key": "code_introduced_2",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "code_introduced_2"
+      }
+    },
+    {
+      "name": "Lesson Plans",
+      "url": "https://curriculum.code.org/csd-20/unit6/",
+      "key": "lesson_plans_5",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_plans_5"
+      }
+    },
+    {
+      "name": "Standard Mappings",
+      "url": "https://curriculum.code.org/csd-20/unit6/standards/",
+      "key": "standard_mappings_4",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "standard_mappings_4"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csd",
+      "key": "teacher_forum",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
+    },
+    {
+      "name": "Vocabulary",
+      "url": "https://curriculum.code.org/csd-20/unit6/vocab/",
+      "key": "vocabulary_4",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "vocabulary_4"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "code_introduced_2",
+        "script.name": "csd6-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "lesson_plans_5",
+        "script.name": "csd6-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "standard_mappings_4",
+        "script.name": "csd6-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csd6-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "vocabulary_4",
+        "script.name": "csd6-2020"
+      }
+    }
   ],
   "scripts_student_resources": [
 
