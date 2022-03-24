@@ -1,5 +1,5 @@
 <%- # Note this file must be indented one level, as it is a child of 'Resources'. %>
-<%- unless rack_env?(:adhoc) -%>
+<%- if rack_env?(:staging, :test, :production) -%>
 # -----------------------------------------------
 # Begin codeprojects.org resources
 # 

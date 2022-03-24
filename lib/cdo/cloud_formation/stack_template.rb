@@ -78,8 +78,9 @@ module Cdo::CloudFormation
     end
 
     # Inline stack resources into the template using local variables as parameters
+    # This allows component file to be unindented, and will add a 2-space indent when loaded
     def resource_component(name, var = {})
-      resource_indent = 2 # allow component file to be unindented
+      resource_indent = 2
       indent(erb_file(aws_dir("cloudformation/components/#{name}.yml.erb"), vars), resource_indent)
     end
 
