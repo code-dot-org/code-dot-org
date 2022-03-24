@@ -5,16 +5,12 @@ import AllCodeDocs from '@cdo/apps/lib/levelbuilder/code-docs-editor/AllCodeDocs
 
 $(document).ready(() => {
   const programmingEnvironments = getScriptData('programmingEnvironments');
-  const programmingEnvironmentsForSelect = getScriptData(
-    'programmingEnvironmentsForSelect'
-  );
-  const categoriesForSelect = getScriptData('categoriesForSelect');
+  const allCategories = getScriptData('allCategories');
 
   ReactDOM.render(
     <AllCodeDocs
       programmingEnvironments={programmingEnvironments}
-      programmingEnvironmentsForSelect={programmingEnvironmentsForSelect}
-      categoriesForSelect={categoriesForSelect}
+      allCategories={allCategories}
     />,
     document.getElementById('container')
   );

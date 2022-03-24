@@ -13,10 +13,7 @@ class ProgrammingExpressionsController < ApplicationController
     @programming_environments = ProgrammingEnvironment.all.map do |env|
       {id: env.id, name: env.name, title: env.title, published: env.published, editPath: edit_programming_environment_path(env.name)}
     end
-    @environments_for_select = ProgrammingEnvironment.all.map do |env|
-      {id: env.id, name: env.name, title: env.title}
-    end
-    @categories_for_select = ProgrammingEnvironmentCategory.all.map do |cat|
+    @all_categories = ProgrammingEnvironmentCategory.all.map do |cat|
       {id: cat.id, key: cat.key, envId: cat.programming_environment.id, envName: cat.programming_environment.name, name: cat.name, formattedName: "#{cat.programming_environment.title}:#{cat.name}"}
     end
   end
