@@ -81,6 +81,9 @@ levelbuilder:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
+  <<: *environment_defaults
+  # Override the default values for `database` and `pool` fields to accommodate
+  # CI needs. To do that, we have to redefine the whole `primary` block
   primary:
     <<: *mysql_defaults
     database: dashboard_test<%= ENV['TEST_ENV_NUMBER'] %>
