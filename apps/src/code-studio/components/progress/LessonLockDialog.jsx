@@ -18,26 +18,16 @@ function LessonLockDialog({
   saving,
   saveDialog
 }) {
-  const [state, setState] = useState({
-    lockStatus: initialLockStatus
-  });
+  const [lockStatuses, setlockStatuses] = useState(initialLockStatus);
 
   useEffect(() => {
     if (!saving) {
-      setState({
-        lockStatus: initialLockStatus
-      });
+      setlockStatuses(initialLockStatus);
     }
   }, [initialLockStatus]);
 
   const setAllLockStatus = lockStatus => {
-    setState({
-      lockStatus: state.lockStatus.map(item =>
-        Object.assign({}, item, {
-          lockStatus
-        })
-      )
-    });
+    setlockStatuses(lockStatuses.map(item => ({...item, lockStatus})));
   };
 
   const allowEditing = () => setAllLockStatus(LockStatus.Editable);
@@ -58,20 +48,18 @@ function LessonLockDialog({
     const modifiedIndex = parseInt(event.target.name, 10);
     const value = event.target.value;
 
-    setState({
-      lockStatus: state.lockStatus.map((item, index) => {
+    setlockStatuses(
+      lockStatuses.map((item, index) => {
         if (index !== modifiedIndex) {
           return item;
         }
-        return Object.assign({}, item, {
-          lockStatus: value
-        });
+        return {...item, lockStatus: value};
       })
-    });
+    );
   };
 
   const handleSave = () => {
-    saveDialog(selectedSectionId, state.lockStatus);
+    saveDialog(selectedSectionId, lockStatuses);
   };
 
   const responsiveHeight = {
@@ -177,7 +165,7 @@ function LessonLockDialog({
             </tr>
           </thead>
           <tbody>
-            {state.lockStatus.map(({name, lockStatus}, index) => (
+            {lockStatuses.map(({name, lockStatus}, index) => (
               <tr key={index}>
                 <td style={styles.tableCell}>{name}</td>
                 <td
