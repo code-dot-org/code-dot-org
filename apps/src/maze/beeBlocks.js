@@ -123,11 +123,11 @@ function addIfOnlyFlower(blockly, generator) {
   blockly.Blocks.bee_ifOnlyFlower = {
     helpUrl: '',
     init: function() {
-      this.setHSV(196, 1.0, 0.79);
-      this.appendDummyInput().appendTitle(msg.ifCode());
-      this.appendDummyInput().appendTitle(msg.atFlower());
+      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
+      this.appendDummyInput().appendField(msg.ifCode());
+      this.appendDummyInput().appendField(msg.atFlower());
       this.setInputsInline(true);
-      this.appendStatementInput('DO').appendTitle(msg.doCode());
+      this.appendStatementInput('DO').appendField(msg.doCode());
       this.setTooltip(msg.ifOnlyFlowerTooltip());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -157,14 +157,14 @@ function addIfFlowerHive(blockly, generator) {
         [msg.atHoneycomb(), 'atHoneycomb']
       ];
 
-      this.setHSV(196, 1.0, 0.79);
-      this.appendDummyInput().appendTitle(msg.ifCode());
-      this.appendDummyInput().appendTitle(
+      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
+      this.appendDummyInput().appendField(msg.ifCode());
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(LOCATIONS),
         'LOC'
       );
       this.setInputsInline(true);
-      this.appendStatementInput('DO').appendTitle(msg.doCode());
+      this.appendStatementInput('DO').appendField(msg.doCode());
       this.setTooltip(msg.ifFlowerTooltip());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -196,15 +196,15 @@ function addIfElseFlowerHive(blockly, generator) {
         [msg.atHoneycomb(), 'atHoneycomb']
       ];
 
-      this.setHSV(196, 1.0, 0.79);
-      this.appendDummyInput().appendTitle(msg.ifCode());
-      this.appendDummyInput().appendTitle(
+      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
+      this.appendDummyInput().appendField(msg.ifCode());
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(LOCATIONS),
         'LOC'
       );
       this.setInputsInline(true);
-      this.appendStatementInput('DO').appendTitle(msg.doCode());
-      this.appendStatementInput('ELSE').appendTitle(msg.elseCode());
+      this.appendStatementInput('DO').appendField(msg.doCode());
+      this.appendStatementInput('ELSE').appendField(msg.elseCode());
       this.setTooltip(msg.ifelseFlowerTooltip());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -237,7 +237,7 @@ function addRepeatedActionBlock(
   blockly.Blocks[name] = {
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.interpolateMsg(
         blockMsg,
         ['NUM', 'Number', Blockly.ALIGN_RIGHT],
@@ -274,39 +274,39 @@ function addConditionalComparisonBlock(blockly, generator, name, type, arg1) {
       switch (type) {
         case 'if':
           conditionalMsg = msg.ifCode();
-          this.setHSV(196, 1.0, 0.79);
+          Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
           break;
         case 'ifelse':
           conditionalMsg = msg.ifCode();
-          this.setHSV(196, 1.0, 0.79);
+          Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
           break;
         case 'while':
           conditionalMsg = msg.whileMsg();
-          this.setHSV(322, 0.9, 0.95);
+          Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
           break;
         default:
           throw 'Unexpected type for addConditionalComparisonBlock';
       }
 
-      this.appendDummyInput().appendTitle(conditionalMsg);
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(conditionalMsg);
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(arg1),
         'ARG1'
       );
-      this.appendDummyInput().appendTitle(' ');
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(' ');
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(Blockly.RTL ? RTL_OPERATORS : OPERATORS),
         'OP'
       );
-      this.appendDummyInput().appendTitle(' ');
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(' ');
+      this.appendDummyInput().appendField(
         new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator),
         'ARG2'
       );
       this.setInputsInline(true);
-      this.appendStatementInput('DO').appendTitle(msg.doCode());
+      this.appendStatementInput('DO').appendField(msg.doCode());
       if (type === 'ifelse') {
-        this.appendStatementInput('ELSE').appendTitle(msg.elseCode());
+        this.appendStatementInput('ELSE').appendField(msg.elseCode());
       }
       this.setPreviousStatement(true);
       this.setNextStatement(true);

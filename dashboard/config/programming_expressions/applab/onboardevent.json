@@ -71,6 +71,11 @@
       "description": "The callback function executed in response to an event for the matching component of the matching *event*. "
     }
   ],
+  "parameters": [
+    "component",
+    "event",
+    "callback"
+  ],
   "short_description": "Lets the board respond to inputs on the board such as buttons and the switch. ",
-  "syntax": "onBoardEvent(component, event, callback)"
+  "syntax": "onBoardEvent(component, event, function(event) {...});"
 }

@@ -27,7 +27,6 @@ class XhrProxyController < ApplicationController
 
   # 'code.org' is included so applab apps can access the tables and properties of other applab apps.
   ALLOWED_HOSTNAME_SUFFIXES = %w(
-    apex.oracle.com
     api.amadeus.com
     api.blizzard.com
     api.census.gov
@@ -53,6 +52,7 @@ class XhrProxyController < ApplicationController
     api.randomuser.me
     api.rebrandly.com
     api.scryfall.com
+    api.spoonacular.com
     api.si.edu
     api.spacexdata.com
     api.spotify.com
@@ -63,9 +63,11 @@ class XhrProxyController < ApplicationController
     api.weather.gov
     api.zippopotam.us
     bible-api.com
+    ch.tetr.io
     code.org
     covidtracking.com
     cryptonator.com
+    currencyapi.com
     data.austintexas.gov
     data.cityofchicago.org
     data.gv.at
@@ -75,11 +77,8 @@ class XhrProxyController < ApplicationController
     deckofcardsapi.com
     distanza.org
     dweet.io
-    enclout.com
-    freecurrencyapi.net
     googleapis.com
     grobchess.com
-    herokuapp.com
     hubblesite.org
     images-api.nasa.gov
     itunes.apple.com
@@ -91,8 +90,8 @@ class XhrProxyController < ApplicationController
     newsapi.org
     noaa.gov
     numbersapi.com
+    open.mapquestapi.com
     opentdb.com
-    pastebin.com
     pixabay.com
     pokeapi.co
     pro-api.coinmarketcap.com
@@ -104,7 +103,6 @@ class XhrProxyController < ApplicationController
     roblox.com
     runescape.com
     sessionserver.mojang.com
-    spreadsheets.google.com
     stats.minecraftservers.org
     swapi.dev
     textures.minecraft.net

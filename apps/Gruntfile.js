@@ -346,6 +346,10 @@ describe('entry tests', () => {
           ['build/package/css/levels.css', 'style/curriculum/levels.scss'],
           ['build/package/css/rollups.css', 'style/curriculum/rollups.scss'],
           [
+            'build/package/css/reference_guides.css',
+            'style/curriculum/reference_guides.scss'
+          ],
+          [
             'build/package/css/levelbuilder.css',
             'style/code-studio/levelbuilder.scss'
           ],
@@ -581,6 +585,8 @@ describe('entry tests', () => {
     'projects/index': './src/sites/studio/pages/projects/index.js',
     'report_abuse/report_abuse_form':
       './src/sites/studio/pages/report_abuse/report_abuse_form.js',
+    'reference_guides/show':
+      './src/sites/studio/pages/reference_guides/show.js',
     'scripts/show': './src/sites/studio/pages/scripts/show.js',
     'scripts/vocab': './src/sites/studio/pages/scripts/vocab.js',
     'scripts/resources': './src/sites/studio/pages/scripts/resources.js',
@@ -650,6 +656,10 @@ describe('entry tests', () => {
       './src/sites/studio/pages/programming_expressions/new.js',
     'programming_expressions/edit':
       './src/sites/studio/pages/programming_expressions/edit.js',
+    'reference_guides/edit':
+      './src/sites/studio/pages/reference_guides/edit.js',
+    'reference_guides/edit_all':
+      './src/sites/studio/pages/reference_guides/edit_all.js',
     'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
     'scripts/new': './src/sites/studio/pages/scripts/new.js',
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',

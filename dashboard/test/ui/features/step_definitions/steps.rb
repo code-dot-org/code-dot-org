@@ -374,6 +374,10 @@ When /^I select the "([^"]*)" option in dropdown "([^"]*)"( to load a new page)?
   select_dropdown(@browser.find_element(:id, element_id), option_text, load)
 end
 
+When /^I select the "([^"]*)" option in dropdown with class "([^"]*)"( to load a new page)?$/ do |option_text, class_name, load|
+  select_dropdown(@browser.find_element(:css, ".#{class_name}"), option_text, load)
+end
+
 When /^I select the "([^"]*)" option in dropdown named "([^"]*)"( to load a new page)?$/ do |option_text, element_name, load|
   select_dropdown(@browser.find_element(:css, "select[name=#{element_name}]"), option_text, load)
 end
@@ -811,6 +815,7 @@ Then /^I print the HTML contents of element "([^"]*)"$/ do |element_to_print|
 end
 
 Then /^I wait to see an image "([^"]*)"$/ do |path|
+  wait_for_jquery
   wait_until {@browser.execute_script("return $('img[src*=\"#{path}\"]').length != 0;")}
 end
 

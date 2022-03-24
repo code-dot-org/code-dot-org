@@ -38,6 +38,7 @@ require 'cdo/safe_names'
 
 class Section < ApplicationRecord
   include SerializedProperties
+  include SharedConstants
   self.inheritance_column = :login_type
 
   class << self
@@ -80,6 +81,8 @@ class Section < ApplicationRecord
   alias_attribute :lesson_extras, :stage_extras
 
   validates :participant_type, acceptance: {accept: SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values, message: 'must be facilitator, teacher, or student'}
+  validates :grade, acceptance: {accept: SharedConstants::STUDENT_GRADE_LEVELS, message: "must be one of the valid student grades. Expected one of: #{SharedConstants::STUDENT_GRADE_LEVELS}. Got: \"%{value}\"."}
+
   validate :pl_sections_must_use_email_logins
   validate :participant_type_not_changed
 
@@ -132,6 +135,10 @@ class Section < ApplicationRecord
 
   def self.valid_login_type?(type)
     LOGIN_TYPES.include? type
+  end
+
+  def self.valid_grade?(grade)
+    SharedConstants::STUDENT_GRADE_LEVELS.include? grade
   end
 
   # Override default script accessor to use our cache
@@ -328,6 +335,9 @@ class Section < ApplicationRecord
       tts_autoplay_enabled: tts_autoplay_enabled,
       sharing_disabled: sharing_disabled?,
       login_type: login_type,
+      course_offering_id: unit_group ? unit_group&.course_version&.course_offering&.id : script&.course_version&.course_offering&.id,
+      course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
+      unit_id: unit_group ? script_id : nil,
       course_id: course_id,
       script: {
         id: script_id,
@@ -340,20 +350,11 @@ class Section < ApplicationRecord
       hidden: hidden,
       students: include_students ? unique_students.map(&:summarize) : nil,
       restrict_section: restrict_section,
-      code_review_enabled: code_review_enabled?,
       is_assigned_csa: assigned_csa?,
       # this will be true when we are in emergency mode, for the scripts returned by ScriptConfig.hoc_scripts and ScriptConfig.csf_scripts
       post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
       code_review_expires_at: code_review_expires_at
     }
-  end
-
-  def self.valid_grades
-    @@valid_grades ||= ['K'] + (1..12).collect(&:to_s) + ['Other']
-  end
-
-  def self.valid_grade?(grade)
-    valid_grades.include? grade
   end
 
   def provider_managed?
@@ -445,12 +446,8 @@ class Section < ApplicationRecord
   end
 
   def code_review_enabled?
-    if DCDO.get('code_review_groups_enabled', false)
-      return false if code_review_expires_at.nil?
-      return code_review_expires_at > Time.now.utc
-    else
-      return code_review_enabled.nil? ? true : code_review_enabled
-    end
+    return false if code_review_expires_at.nil?
+    return code_review_expires_at > Time.now.utc
   end
 
   # A section can be assigned a course (aka unit_group) without being assigned a script,

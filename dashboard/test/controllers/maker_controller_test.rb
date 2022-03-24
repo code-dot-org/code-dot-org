@@ -66,6 +66,36 @@ class MakerControllerTest < ActionController::TestCase
     assert_equal @csd6_2019, MakerController.maker_script(@student)
   end
 
+  test "shows pilot script if student is enrolled" do
+    @pilot_script = create(:script, name: 'csd-pilot-test', family_name: 'csd6', version_year: '2022', is_maker_unit: true, pilot_experiment: 'my-experiment').tap do |script|
+      lesson_group = create :lesson_group, script: script
+      lesson = create :lesson, script: script, lesson_group: lesson_group
+      create :script_level, script: script, lesson: lesson
+    end
+
+    @pilot_student = create :student
+    experiment = create :single_user_experiment, min_user_id: @pilot_student.id, name: 'my-experiment'
+    create :user_script, user: @pilot_student, script: @pilot_script, assigned_at: Time.now
+    assert_includes @pilot_student.scripts, @pilot_script
+
+    assert_equal @pilot_script, MakerController.maker_script(@pilot_student)
+    experiment.destroy
+  end
+
+  test "does not show pilot script if student is not in experiment" do
+    @pilot_script = create(:script, name: 'csd-pilot-test', family_name: 'csd6', version_year: '2022', is_maker_unit: true, pilot_experiment: 'my-experiment').tap do |script|
+      lesson_group = create :lesson_group, script: script
+      lesson = create :lesson, script: script, lesson_group: lesson_group
+      create :script_level, script: script, lesson: lesson
+    end
+
+    ## Even creating the user_script is not sufficient: the student must be enrolled in the pilot for it to show up
+    @pilot_student = create :student
+    create :user_script, user: @pilot_student, script: @pilot_script, assigned_at: Time.now
+
+    assert_equal @csd6_2019, MakerController.maker_script(@pilot_student)
+  end
+
   test "shows CSD6-2018 if CSD6-2018 is assigned" do
     create :user_script, user: @student, script: @csd6_2018, assigned_at: Time.now
     refute_includes @student.scripts, @csd6_2017

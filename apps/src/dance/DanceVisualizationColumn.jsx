@@ -62,7 +62,8 @@ class DanceVisualizationColumn extends React.Component {
     levelRunIsStarting: PropTypes.bool,
     isShareView: PropTypes.bool.isRequired,
     songData: PropTypes.objectOf(PropTypes.object).isRequired,
-    userType: PropTypes.string.isRequired
+    userType: PropTypes.string.isRequired,
+    under13: PropTypes.bool.isRequired
   };
 
   state = {
@@ -77,13 +78,14 @@ class DanceVisualizationColumn extends React.Component {
   };
 
   /*
-    The filter defaults to on. If the user is over 13 (identified via account or anon dialog), filter turns off
+    The filter defaults to on. If the user is over 13 (identified via account or anon dialog), filter turns off.
    */
   setFilterStatus() {
-    // userType - 'teacher', assumed age > 13. 'student', age > 13.
-    //            'student_y', age < 13. 'unknown', signed out users
+    // userType - 'teacher', 'student', 'unknown' - signed out users.
+    // under13 - boolean for signed in user representing age category. Teacher assumed > 13.
     const signedInOver13 =
-      this.props.userType === 'teacher' || this.props.userType === 'student';
+      this.props.userType === 'teacher' ||
+      (this.props.userType === 'student' && !this.props.under13);
     const signedOutAge = signedOutOver13();
     return signedInOver13 || signedOutAge;
   }
@@ -173,6 +175,7 @@ export default connect(state => ({
   songData: state.songs.songData,
   selectedSong: state.songs.selectedSong,
   userType: state.currentUser.userType,
+  under13: state.currentUser.under13,
   levelIsRunning: state.runState.isRunning,
   levelRunIsStarting: state.songs.runIsStarting
 }))(DanceVisualizationColumn);

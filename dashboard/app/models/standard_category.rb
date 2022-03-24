@@ -26,6 +26,14 @@ class StandardCategory < ApplicationRecord
     description
   )
 
+  def crowdin_key
+    [framework.shortcode, shortcode].join('/')
+  end
+
+  def localized_description
+    Services::I18n::CurriculumSyncUtils.get_localized_property(self, :description, crowdin_key)
+  end
+
   def self.seed_all
     Framework.all.each do |framework|
       filename = "config/standards/#{framework.shortcode}_categories.csv"

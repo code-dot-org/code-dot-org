@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-02-23T21:02:46.000Z",
-  "level_num": "custom",
-  "user_id": 63,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -63,11 +59,16 @@
     "hint_prompt_attempts_threshold": "1",
     "project_template_level_name": "courseF_clicker_template_2022_pilot",
     "validation_code": "if (World.frameCount == 1) {\r\n  addCriteria(function(){\r\n    return minimumSprites(3);\r\n  }, 'createAtLeastThreeSprites');\r\n  addCriteria(function(){\r\n    return allSpriteHaveSameCostume();\r\n  }, 'spritesNeedSameCostumes');\r\n}\r\n\r\ncheck();\r\n",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": "np14LZuLU+/xrGRNnc95+ZcI9+f0ss7UnZ/2Xad4OpYiJXUxTMyZtl8geGe2\nXGXGLSrrRnP/B+V0cZLARM03eA==\n"
   },
+  "game_id": 64,
   "published": true,
+  "created_at": "2022-02-23T21:02:46.000Z",
+  "level_num": "custom",
+  "user_id": 63,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-02-23T21:02:46.751+00:00\",\"changed\":[\"cloned from \\\"courseF_clicker_sprites\\\"\"],\"cloned_from\":\"courseF_clicker_sprites\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-02-23T21:02:46.751+00:00\",\"changed\":[\"cloned from \\\"courseF_clicker_sprites\\\"\"],\"cloned_from\":\"courseF_clicker_sprites\"},{\"changed_at\":\"2022-03-02 04:31:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -34,7 +34,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-30 19:30:26 UTC",
+    "serialized_at": "2022-03-23 21:08:58 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2935,7 +2935,7 @@
       "key": "40a19e9c-dfc5-43df-a13c-a23d97fcd53d",
       "position": 5,
       "properties": {
-        "description": "**Key Vocabulary:** Parameter - An extra piece of information passed to a function to customize it for a specific need\r\n\r\n**Question of the Day:  How can we use parameters to give the computer more specific instructions?**"
+        "description": "**Key Vocabulary:** Parameter - Additional information provided as input to a block to customize it's functionality\n\n**Question of the Day:  How can we use parameters to give the computer more specific instructions?**"
       },
       "seeding_key": {
         "activity_section.key": "40a19e9c-dfc5-43df-a13c-a23d97fcd53d",
@@ -17912,7 +17912,7 @@
     {
       "key": "parameter",
       "word": "Parameter",
-      "definition": "An extra piece of information passed to a function to customize it for a specific need",
+      "definition": "Additional information provided as input to a block to customize it's functionality",
       "properties": {
       },
       "seeding_key": {

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_24_161129) do
+ActiveRecord::Schema.define(version: 2022_03_17_180504) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -846,6 +846,7 @@ ActiveRecord::Schema.define(version: 2022_02_24_161129) do
     t.text "properties"
     t.datetime "deleted_at"
     t.text "status_timestamp_change_log"
+    t.datetime "applied_at"
     t.index ["application_guid"], name: "index_pd_applications_on_application_guid"
     t.index ["application_type"], name: "index_pd_applications_on_application_type"
     t.index ["application_year"], name: "index_pd_applications_on_application_year"
@@ -1344,6 +1345,23 @@ ActiveRecord::Schema.define(version: 2022_02_24_161129) do
     t.index ["user_id", "plc_course_id"], name: "index_plc_user_course_enrollments_on_user_id_and_plc_course_id", unique: true
   end
 
+  create_table "programming_classes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.integer "programming_environment_id"
+    t.integer "programming_environment_category_id"
+    t.string "key"
+    t.string "name"
+    t.text "content"
+    t.text "fields"
+    t.text "examples"
+    t.text "tips"
+    t.string "syntax"
+    t.string "external_documentation"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["key", "programming_environment_category_id"], name: "index_programming_classes_on_key_and_category_id", unique: true
+    t.index ["key", "programming_environment_id"], name: "index_programming_classes_on_key_and_programming_environment_id", unique: true
+  end
+
   create_table "programming_environment_categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "programming_environment_id", null: false
     t.string "key", null: false
@@ -1361,6 +1379,7 @@ ActiveRecord::Schema.define(version: 2022_02_24_161129) do
     t.text "properties"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "published", default: false, null: false
     t.index ["name"], name: "index_programming_environments_on_name", unique: true
   end
 
@@ -1377,6 +1396,21 @@ ActiveRecord::Schema.define(version: 2022_02_24_161129) do
     t.index ["programming_environment_category_id"], name: "index_programming_expressions_on_environment_category_id"
     t.index ["programming_environment_id", "key"], name: "programming_environment_key", unique: true
     t.index ["programming_environment_id"], name: "index_programming_expressions_on_programming_environment_id"
+  end
+
+  create_table "programming_methods", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.integer "programming_class_id"
+    t.string "key"
+    t.integer "position"
+    t.string "name"
+    t.text "content"
+    t.text "parameters"
+    t.text "examples"
+    t.string "syntax"
+    t.string "external_link"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["key", "programming_class_id"], name: "index_programming_methods_on_key_and_programming_class_id", unique: true
   end
 
   create_table "project_versions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
@@ -1978,6 +2012,12 @@ ActiveRecord::Schema.define(version: 2022_02_24_161129) do
     t.integer "conditionals_d5_count", default: 0
     t.datetime "basic_proficiency_at"
     t.index ["user_id"], name: "index_user_proficiencies_on_user_id", unique: true
+  end
+
+  create_table "user_project_storage_ids", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "user_id"
+    t.index ["user_id"], name: "user_id", unique: true
+    t.index ["user_id"], name: "user_storage_ids_user_id_index"
   end
 
   create_table "user_school_infos", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
