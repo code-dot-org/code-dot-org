@@ -1,0 +1,332 @@
+{
+  "script": {
+    "name": "csd-playground",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
+    },
+    "new_name": null,
+    "family_name": "csd-playground",
+    "serialized_at": "2022-03-23 17:58:26 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "csd-playground"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Level Updates",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "c9b6d8fe-ef3d-4cb7-a7a9-6a40e03e8da3",
+      "position": 1,
+      "properties": {
+        "name": "CSD U3L27.1"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c9b6d8fe-ef3d-4cb7-a7a9-6a40e03e8da3",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "63954ee5-436b-4559-ae43-c21ae5cce179",
+      "position": 2,
+      "properties": {
+        "name": "CSD U3L17.2"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "63954ee5-436b-4559-ae43-c21ae5cce179",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "0c97a3a8-f8f5-4a52-8436-8fe98990218e",
+      "position": 3,
+      "properties": {
+        "name": "CSD U2L9.6.A"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0c97a3a8-f8f5-4a52-8436-8fe98990218e",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "ee728cbd-581b-41d7-8f1b-34d308286f18",
+      "position": 4,
+      "properties": {
+        "name": "CSD U3L7.8"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ee728cbd-581b-41d7-8f1b-34d308286f18",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "4864ddaa-707a-4c07-bf8e-94d0e9a21e53",
+      "position": 1,
+      "properties": {
+        "description": "This level will replace CSD U3L27.1 from 2021 curriculum ([Link here](https://levelbuilder-studio.code.org/s/csd3-2021/lessons/27/levels/1))",
+        "progression_name": "U3L27.1"
+      },
+      "seeding_key": {
+        "activity_section.key": "4864ddaa-707a-4c07-bf8e-94d0e9a21e53",
+        "lesson_activity.key": "c9b6d8fe-ef3d-4cb7-a7a9-6a40e03e8da3"
+      }
+    },
+    {
+      "key": "16274d8f-b59c-49d3-b37b-fe0d8b19cfdc",
+      "position": 1,
+      "properties": {
+        "description": "This level will replace CSD U3L17.2 from 2021 curriculum ([Link here](https://levelbuilder-studio.code.org/s/csd3-2021/lessons/17/levels/2))",
+        "progression_name": "U3L17.2"
+      },
+      "seeding_key": {
+        "activity_section.key": "16274d8f-b59c-49d3-b37b-fe0d8b19cfdc",
+        "lesson_activity.key": "63954ee5-436b-4559-ae43-c21ae5cce179"
+      }
+    },
+    {
+      "key": "fcc3ce79-fefe-4516-b86e-fff7f36ee8f1",
+      "position": 1,
+      "properties": {
+        "description": "This level will replace CSD U2L9.6.A from 2021 curriculum ([Link Here](https://levelbuilder-studio.code.org/s/csd2-2021/lessons/9/levels/6/sublevel/1))",
+        "progression_name": "CSD U2L9.6.A"
+      },
+      "seeding_key": {
+        "activity_section.key": "fcc3ce79-fefe-4516-b86e-fff7f36ee8f1",
+        "lesson_activity.key": "0c97a3a8-f8f5-4a52-8436-8fe98990218e"
+      }
+    },
+    {
+      "key": "9e1ea5bb-2845-44d9-b7dd-f33fe78d4799",
+      "position": 1,
+      "properties": {
+        "description": "This level will replace CSD U3L7.8 from 2021 curriculum ([Link Here](https://studio.code.org/s/csd3-2021/lessons/7/levels/8))",
+        "progression_name": "CSD U3L7.8"
+      },
+      "seeding_key": {
+        "activity_section.key": "9e1ea5bb-2845-44d9-b7dd-f33fe78d4799",
+        "lesson_activity.key": "ee728cbd-581b-41d7-8f1b-34d308286f18"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 - Design a Game 1 - ExampleChoice_2022"
+        ],
+        "progression": "U3L27.1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 - Design a Game 1 - ExampleChoice_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "4864ddaa-707a-4c07-bf8e-94d0e9a21e53"
+      },
+      "level_keys": [
+        "CSD U3 - Design a Game 1 - ExampleChoice_2022"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U3 - Interactive Card - ExampleChoice_2022"
+        ],
+        "progression": "U3L17.2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 - Interactive Card - ExampleChoice_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "16274d8f-b59c-49d3-b37b-fe0d8b19cfdc"
+      },
+      "level_keys": [
+        "CSD U3 - Interactive Card - ExampleChoice_2022"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "CSD U2L9.6.A"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 image debug match_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "fcc3ce79-fefe-4516-b86e-fff7f36ee8f1"
+      },
+      "level_keys": [
+        "CSD U2 image debug match_2022"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "CSD U3L7.8"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 drawSprites placement match_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9e1ea5bb-2845-44d9-b7dd-f33fe78d4799"
+      },
+      "level_keys": [
+        "CSD U3 drawSprites placement match_2022"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 - Design a Game 1 - ExampleChoice_2022",
+        "script_level.level_keys": [
+          "CSD U3 - Design a Game 1 - ExampleChoice_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "4864ddaa-707a-4c07-bf8e-94d0e9a21e53"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 - Interactive Card - ExampleChoice_2022",
+        "script_level.level_keys": [
+          "CSD U3 - Interactive Card - ExampleChoice_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "16274d8f-b59c-49d3-b37b-fe0d8b19cfdc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 image debug match_2022",
+        "script_level.level_keys": [
+          "CSD U2 image debug match_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "fcc3ce79-fefe-4516-b86e-fff7f36ee8f1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 drawSprites placement match_2022",
+        "script_level.level_keys": [
+          "CSD U3 drawSprites placement match_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9e1ea5bb-2845-44d9-b7dd-f33fe78d4799"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

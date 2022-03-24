@@ -206,7 +206,7 @@ class AdminUsersController < ApplicationController
       if search_term =~ /^\d+$/
         @user = restricted_users.find_by(id: search_term)
       else
-        users = restricted_users.where(hashed_email: User.hash_email(search_term))
+        users = restricted_users.where(hashed_email: User.hash_email(search_term)).or(restricted_users.where(username: search_term))
         @user = users.first
         if users.many?
           flash[:notice] = "More than one User matches email address.  "\

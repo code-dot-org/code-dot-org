@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csd6-pilot",
-    "serialized_at": "2022-03-21 22:41:36 UTC",
+    "serialized_at": "2022-03-22 16:08:36 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -10131,6 +10131,31 @@
       }
     },
     {
+      "name": "Peer Review - Human Device Interaction",
+      "url": "https://docs.google.com/document/d/1lfEr8muFsAGldj7DHMxl8jVsUA_7Pb4LIaFNMWWvNaw/view",
+      "key": "peer_review_-_human_device_interaction",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "peer_review_-_human_device_interaction"
+      }
+    },
+    {
+      "name": "Peer Review - Prototype an Innovation",
+      "url": "https://docs.google.com/document/d/1g9mDgXX5iaf2rhvR7nCLAmgMzKNNXRlIbExlBym3ILM/view",
+      "key": "peer_review_-_prototype_an_innovation",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "peer_review_-_prototype_an_innovation"
+      }
+    },
+    {
       "name": "Peer Review 1",
       "url": "https://docs.google.com/document/d/1hCLS30HEvP3YNDdvCYRuWfBa5mao7msUIcY6iopaKbg",
       "key": "peer_review_1",
@@ -10725,6 +10750,12 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Prototype an Innovation",
+        "resource.key": "peer_review_-_prototype_an_innovation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Prototype an Innovation",
         "resource.key": "peer_review_1"
       }
     },
@@ -10840,6 +10871,12 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "resource.key": "exemplar_3_-_red_light_green_light"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "peer_review_-_human_device_interaction"
       }
     },
     {

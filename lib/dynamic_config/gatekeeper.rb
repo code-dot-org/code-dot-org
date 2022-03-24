@@ -17,15 +17,12 @@
 # This allows you to turn on feature-sharing for specific scripts
 
 require 'dynamic_config/datastore_cache'
+require 'dynamic_config/dynamic_config_base'
 require 'dynamic_config/adapters/dynamodb_adapter'
 require 'dynamic_config/adapters/json_file_adapter'
 require 'dynamic_config/adapters/memory_adapter'
 
-class GatekeeperBase
-  def initialize(datastore_cache)
-    @datastore_cache = datastore_cache
-  end
-
+class GatekeeperBase < DynamicConfigBase
   # @param feature [String] the name of the feature
   # @param where [Hash] a hash of conditions
   # @param default [Bool] the default value to return
@@ -52,12 +49,11 @@ class GatekeeperBase
   # @param where [Hash]
   # @param value [Bool]
   def set(feature, where: {}, value: nil)
-    raise ArgumentError, "feature must be a string" unless feature.is_a? String
     raise ArgumentError, "Value must be a boolean" unless !!value == value
 
     rule_map = get_rule_map(feature)
     rule_map[where_key(where)] = value
-    @datastore_cache.set(feature, rule_map)
+    super(feature, rule_map)
   end
 
   # Deletes a specific where clause
@@ -93,11 +89,6 @@ class GatekeeperBase
     Oj.dump(stringify_keys(where).sort, mode: :strict)
   end
 
-  # Clear all stored settings
-  def clear
-    @datastore_cache.clear
-  end
-
   # Factory method for creating GatekeeperBase objects
   # @returns [GatekeeperBase]
   def self.create
@@ -118,11 +109,6 @@ class GatekeeperBase
 
     datastore_cache = DatastoreCache.new adapter, cache_expiration: cache_expiration
     GatekeeperBase.new datastore_cache
-  end
-
-  # We need to reinitialize the update thread after fork
-  def after_fork
-    @datastore_cache.after_fork
   end
 
   # Returns the hash version of gatekeeper
@@ -179,6 +165,7 @@ class GatekeeperBase
 
   # Converts the current config state to a yaml string
   # @returns [String]
+  # @override
   def to_yaml
     YAML.dump(to_hash)
   end
