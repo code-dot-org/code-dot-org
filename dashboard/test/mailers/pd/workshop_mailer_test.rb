@@ -183,8 +183,7 @@ class WorkshopMailerTest < ActionMailer::TestCase
 
   test 'teacher enrollment receipt links are complete urls' do
     test_cases = [
-      {course: Pd::Workshop::COURSE_ADMIN, subject: nil},
-      {course: Pd::Workshop::COURSE_COUNSELOR, subject: nil},
+      {course: Pd::Workshop::COURSE_ADMIN_COUNSELOR, subject: Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_INTRO},
       {course: Pd::Workshop::COURSE_CS_IN_A, subject: Pd::Workshop::SUBJECT_CS_IN_A_PHASE_3},
       {course: Pd::Workshop::COURSE_CS_IN_S, subject: Pd::Workshop::SUBJECT_CS_IN_S_PHASE_3_SEMESTER_1},
       {course: Pd::Workshop::COURSE_CS_IN_S, subject: Pd::Workshop::SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2},
@@ -203,7 +202,8 @@ class WorkshopMailerTest < ActionMailer::TestCase
       workshop = if Pd::Workshop::ACADEMIC_YEAR_WORKSHOP_SUBJECTS.include?(test_case[:subject])
                    create :academic_year_workshop, course: test_case[:course], subject: test_case[:subject]
                  else
-                   create :workshop, course: test_case[:course], subject: test_case[:subject]
+                   suppress_email = Pd::Workshop::MUST_SUPPRESS_EMAIL_SUBJECTS.include?(test_case[:subject]) ? true : false
+                   create :workshop, course: test_case[:course], subject: test_case[:subject], suppress_email: suppress_email
                  end
 
       enrollment = create :pd_enrollment, workshop: workshop
