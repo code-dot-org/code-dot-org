@@ -187,15 +187,15 @@ module LevelsHelper
     # - For levels with contained levels, the outer level is read-only and does
     #   not write to the channel. (We currently do not support inner levels that
     #   are channel-backed.)
-    # - In edit_blocks mode, the source code is saved as a level property and
+    # - In edit_blocks and edit_exemplar mode, the source code is saved as a level property and
     #   is not written to the channel.
     #
-    # Note that Javalab requires a channel to _execute_ the code on Javabuilder
-    # so it always needs a channel, regardless of whether it will be written to.
+    # Note that Javalab requires a channel if Javabuilder needs to access assets.
     level_requires_channel = @level.is_a?(Javalab) ||
         (@level.channel_backed? &&
           !@level.try(:contained_levels).present? &&
           params[:action] != 'edit_blocks')
+    level_requires_channel = false if @is_editing_exemplar
 
     # If the level is cached, the channel is loaded client-side in loadApp.js
     if level_requires_channel && !@public_caching
