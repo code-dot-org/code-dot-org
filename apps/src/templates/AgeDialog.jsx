@@ -17,8 +17,8 @@ import queryString from 'query-string';
 const AGE_DIALOG_SESSION_KEY = 'ad_anon_over13';
 const SONG_FILTER_SESSION_KEY = 'song_filter_on';
 
-export const signedOutUnder13 = () => {
-  return sessionStorage.getItem(AGE_DIALOG_SESSION_KEY) !== 'true';
+export const signedOutOver13 = () => {
+  return sessionStorage.getItem(AGE_DIALOG_SESSION_KEY) === 'true';
 };
 
 export const songFilterOn = () => {
