@@ -293,6 +293,15 @@ export default class SetupChecklist extends Component {
             onClick={this.redetect.bind(this)}
             disabled={this.state.isDetecting}
           />
+          <input
+            style={{marginLeft: 9, marginTop: -4}}
+            className="btn"
+            type="button"
+            value={'Connect to Board'}
+            onClick={() => {
+              navigator.serial.requestPort();
+            }}
+          />
         </h2>
         <div className="setup-status">
           {this.renderPlatformSpecificSteps()}
