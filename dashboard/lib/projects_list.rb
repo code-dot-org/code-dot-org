@@ -198,27 +198,28 @@ module ProjectsList
     end
 
     def project_and_featured_project_and_user_fields
-      storage_apps_fields = prefix_storage_app_fields(%w(id___id storage_id___storage_id value___value project_type___project_type published_at___published_at))
-
-      other_fields = [
+      [
+        :projects__id___id,
+        :projects__storage_id___storage_id,
+        :projects__value___value,
+        :projects__project_type___project_type,
+        :projects__published_at___published_at,
         :featured_projects__featured_at___featured_at,
         :featured_projects__unfeatured_at___unfeatured_at,
         :users__name___name,
         :users__birthday___birthday,
         :users__properties___properties,
       ]
-
-      storage_apps_fields.concat(other_fields)
     end
 
     def fetch_featured_projects_by_type(project_type)
-      storage_apps_table = DCDO.get('storage_apps_in_dashboard', false) ? "#{CDO.dashboard_db_name}__projects".to_sym : "#{CDO.pegasus_db_name}__storage_apps".to_sym
+      projects = "#{CDO.dashboard_db_name}__projects".to_sym
       user_project_storage_ids = "#{CDO.dashboard_db_name}__user_project_storage_ids".to_sym
 
       project_featured_project_user_combo_data = DASHBOARD_DB[:featured_projects].
         select(*project_and_featured_project_and_user_fields).
-        join(storage_apps_table, id: :storage_app_id).
-        join(user_project_storage_ids, id: Sequel[storage_apps_table][:storage_id]).
+        join(projects, id: :storage_app_id).
+        join(user_project_storage_ids, id: Sequel[:projects][:storage_id]).
         join(:users, id: Sequel[user_project_storage_ids][:user_id]).
         where(
           unfeatured_at: nil,
@@ -301,15 +302,17 @@ module ProjectsList
     end
 
     def project_and_user_fields
-      storage_app_fields = prefix_storage_app_fields(%w(id___id storage_id___storage_id value___value project_type___project_type published_at___published_at abuse_score___abuse_score))
-
-      user_fields = [
+      [
+        :projects__id___id,
+        :projects__storage_id___storage_id,
+        :projects__value___value,
+        :projects__project_type___project_type,
+        :projects__published_at___published_at,
+        :projects__abuse_score___abuse_score,
         :users__name___name,
         :users__birthday___birthday,
         :users__properties___properties,
       ]
-
-      storage_app_fields.concat(user_fields)
     end
 
     def fetch_published_project_types(project_groups, limit:, published_before: nil)
@@ -353,10 +356,6 @@ module ProjectsList
           isFeatured: false
         }
       ).with_indifferent_access
-    end
-
-    def prefix_storage_app_fields(field_names)
-      field_names.map {|field_name| "#{StorageApps.table_name}__#{field_name}".to_sym}
     end
   end
 end
