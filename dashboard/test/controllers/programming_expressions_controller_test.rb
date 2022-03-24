@@ -202,14 +202,11 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
       @levelbuilder = create :levelbuilder
     end
 
-    test 'get_filtered_expressions returns everything with no filters' do
+    test 'get_filtered_expressions returns not_acceptable if no page providewd' do
       sign_in @levelbuilder
 
       get :get_filtered_expressions, params: {}
-      assert_response :ok
-      response = JSON.parse(@response.body)
-      assert_equal 1, response['numPages']
-      assert_equal 24, response['expressions'].length
+      assert_response :not_acceptable
     end
 
     test 'get_filtered_expressions returns paged expressions' do

@@ -9,6 +9,12 @@ import CloneProgrammingExpressionDialog from './CloneProgrammingExpressionDialog
 
 const DEFAULT_VALUE = 'all';
 
+/*
+ * A component that fetches programming expressions and displays them in a
+ * table. It includes filters for which expressions are fetched as well as the
+ * ability to destroy and clone expressions.
+ * This is a levelbuilder-facing component.
+ */
 export default function ProgrammingExpressionsTable({
   programmingEnvironmentsForSelect,
   categoriesForSelect,
