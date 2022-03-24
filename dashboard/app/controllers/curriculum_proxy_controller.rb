@@ -22,8 +22,6 @@ class CurriculumProxyController < ApplicationController
 
   # Proxy from studio.code.org/docs/foo to curriculum.code.org/docs/foo
   def get_doc
-    puts request.original_url
-    puts URI.parse(request.original_url).path.sub(/^\/docs/, 'https://curriculum.code.org/docs')
     render_proxied_url(
       URI.parse(request.original_url).path.sub(/^\/docs/, 'https://curriculum.code.org/docs'),
       allowed_content_types: nil,

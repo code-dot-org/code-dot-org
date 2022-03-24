@@ -106,7 +106,7 @@ class ProgrammingExpressionsController < ApplicationController
   end
 
   def docs_show
-    if DCDO.get('use-studio-code-docs', false) && ProgrammingEnvironment.find_by_name(params[:programming_environment_name])
+    if DCDO.get('use-studio-code-docs', false)
       return render :not_found unless @programming_expression
       @programming_environment_categories = @programming_expression.programming_environment.categories.select {|c| c.programming_expressions.count > 0}.map(&:summarize_for_environment_show)
       return render :show
