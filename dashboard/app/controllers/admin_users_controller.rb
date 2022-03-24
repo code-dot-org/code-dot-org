@@ -116,12 +116,6 @@ class AdminUsersController < ApplicationController
     redirect_to :manual_pass_form
   end
 
-  # PUT /admin/nps_update
-  def nps_update
-    # in survey_results_helper.rb set the NPS_SURVEY_ENABLED = true
-    # set audience according to odd/even etc in survey_results_helper.rb show_nps_survey?
-  end
-
   # GET /admin/user_progress
   def user_progress_form
     script_offset = params[:script_offset] || 0 # Not currently exposed in admin UI but can be manually added to URL

@@ -445,6 +445,10 @@ Dashboard::Application.routes.draw do
   # HOC dashboards.
   get '/admin/hoc/students_served', to: 'admin_hoc#students_served', as: 'hoc_students_served'
 
+  # NPS dashboards
+  get '/admin/nps_form', to: 'admin_nps#nps_form', as: 'nps_form'
+  post '/admin/nps_update', to: 'admin_nps#nps_update', as: 'nps_update'
+
   # internal report dashboards
   get '/admin/levels', to: 'admin_reports#level_completions', as: 'level_completions'
   get '/admin/level_answers(.:format)', to: 'admin_reports#level_answers', as: 'level_answers'
@@ -486,8 +490,6 @@ Dashboard::Application.routes.draw do
   get '/admin/user_progress', to: 'admin_users#user_progress_form', as: 'user_progress_form'
   get '/admin/user_projects', to: 'admin_users#user_projects_form', as: 'user_projects_form'
   put '/admin/user_project', to: 'admin_users#user_project_restore_form', as: 'user_project_restore_form'
-  get '/admin/nps_form', to: 'admin_users#nps_form', as: 'nps_form'
-  post '/admin/nps_update', to: 'admin_users#nps_update', as: 'nps_update'
   get '/admin/delete_progress', to: 'admin_users#delete_progress_form', as: 'delete_progress_form'
   post '/admin/delete_progress', to: 'admin_users#delete_progress', as: 'delete_progress'
   get '/census/review', to: 'census_reviewers#review_reported_inaccuracies', as: 'review_reported_inaccuracies'
