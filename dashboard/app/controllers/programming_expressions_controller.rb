@@ -6,16 +6,22 @@ class ProgrammingExpressionsController < ApplicationController
   before_action :require_levelbuilder_mode_or_test_env, except: [:search, :show, :show_by_keys]
 
   # GET /programming_expressions/get_filtered_expressions
+  # Possible filters:
+  # - programmingEnvironmentId
+  # - categoryId
+  # - page (1 indexed)
   def get_filtered_expressions
+    return render(status: :not_acceptable, json: {error: 'Page is required'}) unless params[:page]
+
     @programming_expressions = ProgrammingExpression.all
     @programming_expressions = @programming_expressions.where(programming_environment_id: params[:programmingEnvironmentId]) if params[:programmingEnvironmentId]
     @programming_expressions = @programming_expressions.where(programming_environment_category_id: params[:categoryId]) if params[:categoryId]
 
     results_per_page = 20
     total_expressions = @programming_expressions.length
-    num_pages = params[:page].blank? ? 1 : (total_expressions / results_per_page.to_f).ceil
+    num_pages = (total_expressions / results_per_page.to_f).ceil
 
-    @programming_expressions = @programming_expressions.page(params[:page]).per(results_per_page) if params[:page]
+    @programming_expressions = @programming_expressions.page(params[:page]).per(results_per_page)
     render json: {numPages: num_pages, expressions: @programming_expressions.map(&:summarize_for_all_code_docs)}
   end
 
