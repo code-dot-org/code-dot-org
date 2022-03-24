@@ -164,37 +164,85 @@ export default function ProgrammingExpressionsTable({
       }
     ];
   };
+
+  const renderFilters = () => {
+    return (
+      <>
+        <select
+          onChange={onEnvironmentSelect}
+          value={selectedEnvironment}
+          style={{marginRight: 7}}
+        >
+          <option value={DEFAULT_VALUE}>All IDEs</option>
+          {programmingEnvironmentsForSelect.map(env => (
+            <option key={env.id} value={env.id}>
+              {env.title || env.name}
+            </option>
+          ))}
+        </select>
+        <select
+          onChange={e => {
+            setSelectedCategory(e.target.value);
+            setCurrentPage(1);
+          }}
+          value={selectedCategory}
+        >
+          <option value={DEFAULT_VALUE}>All Categories</option>
+          {categoriesAvailableForSelect.map(category => (
+            <option key={category.id} value={category.id}>
+              {category.formattedName}
+            </option>
+          ))}
+        </select>
+      </>
+    );
+  };
+
+  const renderDialogs = () => {
+    return (
+      <>
+        {!!itemToDelete && (
+          <StylizedBaseDialog
+            body={`Are you sure you want to remove ${itemToDelete.name ||
+              itemToDelete.key} and its associated code doc?`}
+            handleConfirmation={() => {
+              destroyExpression(
+                `/programming_expressions/${itemToDelete.id}`,
+                () => {
+                  setItemToDelete(null);
+                  fetchExpressions(
+                    selectedEnvironment,
+                    selectedCategory,
+                    currentPage
+                  );
+                }
+              );
+            }}
+            handleClose={() => setItemToDelete(null)}
+            isOpen
+          />
+        )}
+        {!!itemToClone && (
+          <CloneProgrammingExpressionDialog
+            itemToClone={itemToClone}
+            programmingEnvironmentsForSelect={programmingEnvironmentsForSelect}
+            categoriesForSelect={categoriesForSelect}
+            onClose={() => {
+              setItemToClone(null);
+              fetchExpressions();
+            }}
+          />
+        )}
+      </>
+    );
+  };
+
   if (hidden) {
     return null;
   }
   return (
     <>
-      <select
-        onChange={onEnvironmentSelect}
-        value={selectedEnvironment}
-        style={{marginRight: 7}}
-      >
-        <option value={DEFAULT_VALUE}>All IDEs</option>
-        {programmingEnvironmentsForSelect.map(env => (
-          <option key={env.id} value={env.id}>
-            {env.title || env.name}
-          </option>
-        ))}
-      </select>
-      <select
-        onChange={e => {
-          setSelectedCategory(e.target.value);
-          setCurrentPage(1);
-        }}
-        value={selectedCategory}
-      >
-        <option value={DEFAULT_VALUE}>All Categories</option>
-        {categoriesAvailableForSelect.map(category => (
-          <option key={category.id} value={category.id}>
-            {category.formattedName}
-          </option>
-        ))}
-      </select>
+      {renderFilters()}
       {error && <div>{error}</div>}
       <Table.Provider columns={getColumns()} style={{width: '100%'}}>
         <Table.Header />
@@ -205,38 +253,7 @@ export default function ProgrammingExpressionsTable({
         currentPage={currentPage}
         onChangePage={setCurrentPage}
       />
-      {!!itemToDelete && (
-        <StylizedBaseDialog
-          body={`Are you sure you want to remove ${itemToDelete.name ||
-            itemToDelete.key} and its associated code doc?`}
-          handleConfirmation={() => {
-            destroyExpression(
-              `/programming_expressions/${itemToDelete.id}`,
-              () => {
-                setItemToDelete(null);
-                fetchExpressions(
-                  selectedEnvironment,
-                  selectedCategory,
-                  currentPage
-                );
-              }
-            );
-          }}
-          handleClose={() => setItemToDelete(null)}
-          isOpen
-        />
-      )}
-      {!!itemToClone && (
-        <CloneProgrammingExpressionDialog
-          itemToClone={itemToClone}
-          programmingEnvironmentsForSelect={programmingEnvironmentsForSelect}
-          categoriesForSelect={categoriesForSelect}
-          onClose={() => {
-            setItemToClone(null);
-            fetchExpressions();
-          }}
-        />
-      )}
+      {renderDialogs()}
     </>
   );
 }
