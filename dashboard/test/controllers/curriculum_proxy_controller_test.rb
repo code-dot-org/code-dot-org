@@ -9,7 +9,7 @@ class CurriculumProxyControllerTest < ActionController::TestCase
         to_return(body: 'curriculum.code.org content', headers: {})
 
     request.host = "studio.code.org"
-    get :get_doc, params: {path: 'game-lab/drawing-shapes/'}
+    get :get_doc, params: {path: 'concepts/game-lab/drawing-shapes/'}
     assert_response :success
     assert_equal response.body, 'curriculum.code.org content'
   end

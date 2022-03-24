@@ -3,7 +3,7 @@ class ProgrammingEnvironmentsController < ApplicationController
   EXPIRY_TIME = 30.minutes
 
   before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show]
-  before_action :set_programming_environment, except: [:index, :docs_index, :new, :create]
+  before_action :set_programming_environment, except: [:index, :docs_index, :new, :create, :docs_show]
   authorize_resource
 
   def index
@@ -76,6 +76,7 @@ class ProgrammingEnvironmentsController < ApplicationController
 
   def docs_show
     if DCDO.get('use-studio-code-docs', false)
+      @programming_environment = ProgrammingEnvironment.find_by_name(params[:programming_environment_name])
       return render :not_found unless @programming_environment
       @programming_environment_categories = @programming_environment.categories.select {|c| c.programming_expressions.count > 0}.map(&:summarize_for_environment_show)
       render :show
