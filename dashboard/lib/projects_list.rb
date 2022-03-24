@@ -212,14 +212,13 @@ module ProjectsList
     end
 
     def fetch_featured_projects_by_type(project_type)
-      storage_apps = "#{CDO.pegasus_db_name}__storage_apps".to_sym
-
+      storage_apps_table = DCDO.get('storage_apps_in_dashboard', false) ? "#{CDO.dashboard_db_name}__projects".to_sym : "#{CDO.pegasus_db_name}__#{table_name}".to_sym
       user_project_storage_ids = "#{CDO.dashboard_db_name}__user_project_storage_ids".to_sym
 
       project_featured_project_user_combo_data = DASHBOARD_DB[:featured_projects].
         select(*project_and_featured_project_and_user_fields).
-        join(storage_apps, id: :storage_app_id).
-        join(user_project_storage_ids, id: Sequel[:storage_apps][:storage_id]).
+        join(storage_apps_table, id: :storage_app_id).
+        join(user_project_storage_ids, id: Sequel[storage_apps_table][:storage_id]).
         join(:users, id: Sequel[user_project_storage_ids][:user_id]).
         where(
           unfeatured_at: nil,
@@ -357,8 +356,7 @@ module ProjectsList
     end
 
     def prefix_storage_app_fields(field_names)
-      table_name = "storage_apps"
-      field_names.map {|field_name| "#{table_name}__#{field_name}".to_sym}
+      field_names.map {|field_name| "#{StorageApps.table_name}__#{field_name}".to_sym}
     end
   end
 end
