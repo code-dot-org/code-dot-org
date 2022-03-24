@@ -36,12 +36,7 @@ export default function ProgrammingClassEditor({
   environmentCategories
 }) {
   // We don't want to update id or key
-  const {
-    id,
-    key,
-    showPath,
-    ...remainingProgrammingClass
-  } = initialProgrammingClass;
+  const {id, key, ...remainingProgrammingClass} = initialProgrammingClass;
   remainingProgrammingClass.examples.forEach(e => (e.key = createUuid()));
   const [programmingClass, updateProgrammingClass] = useProgrammingClass(
     remainingProgrammingClass
@@ -67,7 +62,8 @@ export default function ProgrammingClassEditor({
         setIsSaving(false);
         if (response.ok) {
           if (shouldCloseAfterSave) {
-            navigateToHref(showPath);
+            // TODO: update this when we have a show page for classes
+            navigateToHref('/');
           } else {
             setLastUpdated(Date.now());
             setError(null);
@@ -125,17 +121,6 @@ export default function ProgrammingClassEditor({
           Choose a category for the code documentation to fall beneath
         </HelpTip>
       </label>
-
-      {programmingClass.environmentEditorType === 'blockly' && (
-        <label>
-          Block Name
-          <input
-            value={programmingClass.blockName}
-            onChange={e => updateProgrammingClass('blockName', e.target.value)}
-            style={styles.textInput}
-          />
-        </label>
-      )}
       <CollapsibleEditorSection title="Documentation" collapsed>
         <label>
           External Documentation
@@ -191,7 +176,7 @@ export default function ProgrammingClassEditor({
         isSaving={isSaving}
         lastSaved={lastUpdated}
         error={error}
-        handleView={() => navigateToHref(showPath)}
+        handleView={() => navigateToHref('/')}
       />
     </div>
   );
@@ -211,8 +196,7 @@ const programmingClassShape = PropTypes.shape({
 
 ProgrammingClassEditor.propTypes = {
   initialProgrammingClass: programmingClassShape.isRequired,
-  environmentCategories: PropTypes.arrayOf(PropTypes.object).isRequired,
-  videoOptions: PropTypes.arrayOf(PropTypes.object).isRequired
+  environmentCategories: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 const styles = {
