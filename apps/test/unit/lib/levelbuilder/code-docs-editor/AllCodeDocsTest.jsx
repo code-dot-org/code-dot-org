@@ -24,23 +24,7 @@ describe('AllCodeDocs', () => {
           title: 'Game Lab'
         }
       ],
-      programmingEnvironmentsForSelect: [
-        {
-          id: 1,
-          name: 'applab',
-          title: 'App Lab'
-        },
-        {
-          id: 2,
-          name: 'spritelab'
-        },
-        {
-          id: 3,
-          name: 'gamelab',
-          title: 'Game Lab'
-        }
-      ],
-      categoriesForSelect: [
+      allCategories: [
         {
           id: 100,
           envId: 2,

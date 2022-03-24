@@ -4,11 +4,7 @@ import ProgrammingEnvironmentsTable from './ProgrammingEnvironmentsTable';
 import ProgrammingExpressionsTable from './ProgrammingExpressionsTable';
 import {TextLink} from '@dsco_/link';
 
-export default function AllCodeDocs({
-  programmingEnvironments,
-  programmingEnvironmentsForSelect,
-  categoriesForSelect
-}) {
+export default function AllCodeDocs({programmingEnvironments, allCategories}) {
   const [ideSelected, setIdeSelected] = useState(true);
   const ideSelectButtonStyle = {
     ...styles.button,
@@ -61,8 +57,8 @@ export default function AllCodeDocs({
       <div>
         {' '}
         <ProgrammingExpressionsTable
-          programmingEnvironmentsForSelect={programmingEnvironmentsForSelect}
-          categoriesForSelect={categoriesForSelect}
+          allProgrammingEnvironments={programmingEnvironments}
+          allCategories={allCategories}
           hidden={ideSelected}
         />
         <ProgrammingEnvironmentsTable
@@ -76,9 +72,7 @@ export default function AllCodeDocs({
 
 AllCodeDocs.propTypes = {
   programmingEnvironments: PropTypes.arrayOf(PropTypes.object).isRequired,
-  programmingEnvironmentsForSelect: PropTypes.arrayOf(PropTypes.object)
-    .isRequired,
-  categoriesForSelect: PropTypes.arrayOf(PropTypes.object).isRequired
+  allCategories: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 const styles = {
