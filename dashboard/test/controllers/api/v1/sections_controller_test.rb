@@ -210,6 +210,12 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "student cannot leave joined section" do
+    sign_in @student
+    post :leave, params: {id: @section.code}
+    assert_response 403
+  end
+
   test "leave with valid unjoined section code" do
     student = create :student
     sign_in student
