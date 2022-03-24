@@ -677,7 +677,16 @@ class ScriptLevel < ApplicationRecord
 
     # if level.is_a?(Javalab) && level.try(:exemplar_sources).present? && current_user&.verified_instructor?
     if level.is_a?(Javalab) && current_user&.verified_instructor?
-      level_example_links = [build_script_level_url(self, {exemplar: true})]
+      # should probably directly check oldest_active_level.bubble_choice?
+      if bubble_choice?
+        sublevel_position = oldest_active_level.sublevel_position(level)
+        level_example_links = [build_script_level_url(self, {exemplar: true, sublevel_position: sublevel_position}) + '?exemplar=true']
+        # Figure out what to do if we're directly on a level with bubble choices below it (should show no exemplars)
+        # Putsing is showing 3 level example links being created (one per sublevel), but none show up in blue pullout
+        puts level_example_links
+      else
+        level_example_links = [build_script_level_url(self, {exemplar: true})]
+      end
     elsif level.try(:examples).present? && (current_user&.verified_instructor? || script&.csf?) # 'solutions' for applab-type levels
       level_example_links = level.examples.map do |example|
         # We treat Sprite Lab levels as a sub-set of game lab levels right now which breaks their examples solutions

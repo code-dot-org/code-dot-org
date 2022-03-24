@@ -517,8 +517,11 @@ class ScriptLevelsController < ApplicationController
       (current_user.teacher? || (current_user&.sections_as_student&.any?(&:code_review_enabled?) && !current_user.code_review_groups.empty?))
 
     # javalab specfiic
-    # check for exemplar as URL param
+    # should this go in show?
     if params[:exemplar]
+      # maybe create new partial with better messaging
+      return render 'levels/no_access' unless current_user&.verified_instructor?
+
       @is_viewing_exemplar = true
       exemplar_sources = @level.try(:exemplar_sources)
       level_view_options(@level.id, {exemplar_sources: exemplar_sources})
