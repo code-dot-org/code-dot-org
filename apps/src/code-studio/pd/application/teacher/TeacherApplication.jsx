@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import queryString from 'query-string';
 import {assign, isEmpty} from 'lodash';
 import FormController from '../../form_components_func/FormController';
 import AboutYou from './AboutYou';
@@ -7,7 +8,7 @@ import ChooseYourProgram from './ChooseYourProgram';
 import ProfessionalLearningProgramRequirements from './ProfessionalLearningProgramRequirements';
 import AdditionalDemographicInformation from './AdditionalDemographicInformation';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import queryString from 'query-string';
+import {reload} from '@cdo/apps/utils';
 /* global ga */
 
 const submitButtonText = 'Complete and Send';
@@ -75,7 +76,7 @@ const TeacherApplication = props => {
 
   const onSuccessfulSubmit = () => {
     // Let the server display a confirmation page as appropriate
-    window.location.reload(true);
+    reload();
 
     sendFirehoseEvent(userId, 'submitted-teacher-application');
   };

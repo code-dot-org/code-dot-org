@@ -2209,7 +2209,7 @@ ms-MY:
           rawak, jadi anda tidak tahu sekiranya virus itu akan tersebar dengan cepat
           atau lambat. Setiap kali anda menukar kod anda, pastikan untuk menjalankan
           simulasi anda lebih dari sekali. Perkara tidak akan berlaku dengan cara
-          yang sama dua kali!\n\n## Mengumpul Data\nCuba tuliskan pemerhatian anda
+          yang sama dua kali!\n\n## Mengumpul Data\nCuba menulis pemerhatian anda
           semasa menjalankan simulasi anda. Anda boleh mengira bilangan raksasa yang
           jatuh sakit atau menggunakan pemasa untuk melihat seberapa cepat perkara
           itu berlaku. Contohnya, berapa lama biasanya semua raksasa jatuh sakit jika
@@ -2235,6 +2235,8 @@ ms-MY:
         content1: penerangan di sini
       courseAB_EOC_2021:
         display_name: Akhir Projek Kursus
+        description: Anda telah sampai pada pelajaran terakhir! Pilih projek untuk
+          dicipta.
       courseB_EOC_2021:
         display_name: Akhir Projek Kursus
       courseC_multi_artist_prog6_predict1_2021:
@@ -2242,6 +2244,7 @@ ms-MY:
         - {}
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         questions:
         - {}
@@ -2250,38 +2253,62 @@ ms-MY:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: Betul!
         - text: '15'
         - text: '20'
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - correct: true
-        - {}
+        - text: Scrat akan sampai kepada buah oak. Tiada pepijat dalam kod.
+          feedback: Tidak betul! Mula-mula, Scrat berpusing ke arah yang salah, kemudian
+            Scrat tidak sempat bergerak ke hadapan untuk mencapai buah oak itu.
+        - text: Scrat tidak akan sampai kepada buah oak kerana ia berpusing ke arah
+            yang salah.
+          correct: true
+          feedback: Betul! Mula-mula, Scrat berpusing ke arah yang salah, kemudian
+            Scrat tidak sempat bergerak ke hadapan untuk mencapai buah oak itu.
+        - text: Scrat tidak akan sampai kepada buah oak kerana blok `bergerak ke hadapan`
+            tidak mencukupi.
+          correct: true
+          feedback: Betul! Mula-mula, Scrat berpusing ke arah yang salah, kemudian
+            Scrat tidak sempat bergerak ke hadapan untuk mencapai buah oak itu.
+        - feedback: Terdapat dua pepijat dalam kod. Mula-mula, Scrat berpusing ke
+            arah yang salah, kemudian Scrat tidak sempat bergerak ke hadapan untuk
+            mencapai buah oak itu.
         questions:
-        - {}
+        - text: Cari pepijat dalam kod ini. Adakah Scrat akan mencapai buah oak atau
+            terdapat masalah?
       courseC_multi_maze_programming8_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Burung itu akan ketinggalan selangkah berbanding khinzir.
+          feedback: Salah. Kod ini betul-betul membawa burung kepada khinzir.
+        - text: Burung itu akan sampai kepada khinzir.
+          correct: true
+          feedback: Betul!
+        - text: Burung itu akan terserempak dengan TNT.
+          feedback: Salah. Kod ini betul-betul membawa burung kepada khinzir.
+        - feedback: Salah. Kod ini betul-betul membawa burung kepada khinzir.
         questions:
-        - {}
+        - text: Baca keseluruhan kod di bawah dengan amat teliti. Apakah yang akan
+            berlaku apabila anda mengklik "Jalankan"?
       courseC_multi_starWars_predict1_2021:
         answers:
         - {}
         - {}
-        - correct: true
+        - text: BB-8 akan bergerak 5 kali dan mendapatkan semua logam sekerap
+          correct: true
+          feedback: Betul!
         - {}
         questions:
         - {}
       courseC_multi_starWars_predict2_2021:
         answers:
         - {}
-        - correct: true
+        - text: BB-8 tidak akan berjalan cukup jauh di dalam gelung pertama untuk
+            mendapatkan semua logam sekerap.
+          correct: true
+          feedback: Betul!
         - {}
         - {}
         questions:
@@ -2292,6 +2319,7 @@ ms-MY:
         answers:
         - text: A
           correct: true
+          feedback: Betul!
         - text: B
         - text: C
         - {}
@@ -2301,6 +2329,7 @@ ms-MY:
         answers:
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         - {}
         questions:
@@ -2316,6 +2345,7 @@ ms-MY:
       courseD_multi_bee_conditionals7_predict2_2021:
         answers:
         - correct: true
+          feedback: Betul!
         - {}
         - {}
         - {}
@@ -2326,6 +2356,7 @@ ms-MY:
         - {}
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         questions:
         - {}
@@ -2334,6 +2365,7 @@ ms-MY:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: Betul!
         - text: '10'
         - text: '12'
         questions:
@@ -2343,6 +2375,7 @@ ms-MY:
         - {}
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         questions:
         - {}
@@ -2350,6 +2383,7 @@ ms-MY:
         answers:
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         - {}
         questions:
@@ -2359,34 +2393,44 @@ ms-MY:
         - {}
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         questions:
         - {}
       courseD_multi_maze_until10_predict2_2021:
         answers:
         - correct: true
+          feedback: Betul!
         - {}
         - {}
-        - {}
+        - feedback: Dalam kod ini, zombi akan melepasi laluan yang betul dan berkesudahan
+            dengan ia bergerak berulang-alik selama-lamanya.
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2021:
         answers:
         - {}
-        - correct: true
-        - {}
+        - text: Burung itu akan sampai kepada khinzir.
+          correct: true
+          feedback: Betul!
+        - text: Burung itu akan bergerak ke hadapan dan terserempak dengan TNT.
         - {}
         questions:
         - {}
       courseE_EOC_2021:
         display_name: Akhir Projek Kursus
+        description: Anda telah sampai pada penghujung Kursus E! Pilih projek untuk
+          dicipta.
       courseE_EOC_examples_2021:
         display_name: Akhir Projek Kursus
+        description: Anda telah sampai pada penghujung Kursus E! Pilih projek untuk
+          dicipta.
       courseE_multi_dance_events_predict1_2021:
         answers:
         - {}
         - text: Makhluk asing akan mula meronda dari kanan ke kiri.
         - correct: true
+          feedback: Betul!
         - {}
         questions:
         - {}
@@ -2395,6 +2439,7 @@ ms-MY:
         - {}
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         questions:
         - {}
@@ -2404,6 +2449,8 @@ ms-MY:
         - {}
         - {}
         - correct: true
+          feedback: Betul! Fungsi itu dipanggil dua kali dalam atur cara, bersama
+            lompatan di antaranya.
         questions:
         - {}
       courseE_prediction_artistFunction1_dani:
@@ -2419,60 +2466,98 @@ ms-MY:
         - {}
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         questions:
         - {}
       courseF_EOC_2021:
         display_name: Akhir Projek Kursus
+        description: Anda telah sampai pada penghujung Kursus F! Pilih projek untuk
+          dicipta.
       courseF_EOC_examples_2021:
         display_name: Akhir Projek Kursus
+        description: Anda telah sampai pada penghujung Kursus F! Pilih projek untuk
+          dicipta.
       courseF_EOC_samples_2021:
         display_name: Akhir Projek Kursus
+        description: Anda akan memulakan projek akhir anda. Sebelum anda bermula,
+          luangkan sedikit masa dengan melihat projek contoh.
       courseF_events_predict_multi:
         answers:
         - {}
         - {}
         - correct: true
+          feedback: Betul! Kedua-dua tingkah laku akan berlaku secara serentak.
         - {}
         questions:
-        - {}
+        - text: Baca kod, kemudian buat ramalan.
       courseF_labels_predict_multi:
         answers:
         - {}
         - {}
-        - {}
+        - feedback: Salah. Label pemboleh ubah tidak pernah dicetak.
         - correct: true
         - {}
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: Artis akan melukis segi tiga dengan sisi yang terdiri daripada 50
+            piksel.
+          correct: true
+          feedback: Betul!
+        - text: Artis akan melukis poligon 50 sisi dengan sisi yang terdiri daripada
+            3 piksel.
+          feedback: Salah. Pemboleh ubah `panjang` perlu berada di dalam gelung `berulang`
+            untuk perkara tersebut berlaku.
+        - text: Artis akan melukis tiga sisi terbuka dengan pusingan 50 darjah.
+          feedback: Salah. Pemboleh ubah `panjang` perlu digunakan dalam blok `pusing`
+            untuk perkara tersebut berlaku.
+        - feedback: Pemboleh ubah `panjang` ditetapkan kepada 50 dan sedang digunakan
+            dalam blok `bergerak ke hadapan sebanyak`, oleh itu artis akan melukis
+            segi tiga dengan sisi yang terdiri daripada 50 piksel.
         questions:
-        - {}
+        - text: Kita telah tetapkan pemboleh ubah "panjang" kepada 50. Apakah yang
+            akan berlaku apabila anda mengklik "Jalankan"?
       courseF_multi_bee_for3_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: 'Lebah akan bergerak ke hadapan dan mengumpul semua nektar daripada
+            setiap bunga. '
+          feedback: Salah. Gelung `untuk` akan membenarkan lebah mengumpul jumlah
+            nektar yang betul, tetapi gelung tersebut hanya ditetapkan untuk mencapai
+            4 bunga.
+        - text: 'Lebah akan bergerak ke hadapan dan mengumpul semua nektar daripada
+            setiap bunga, kecuali satu bunga. '
+          correct: true
+          feedback: Betul!
+        - text: 'Lebah akan bergerak ke hadapan dan mengumpul satu nektar daripada
+            setiap bunga. '
+          feedback: Salah. Gelung `untuk` akan membenarkan lebah mengumpul jumlah
+            nektar yang betul, tetapi gelung tersebut hanya ditetapkan untuk mencapai
+            4 bunga.
+        - feedback: Salah. Gelung `untuk` akan membenarkan lebah mengumpul jumlah
+            nektar yang betul, tetapi gelung tersebut hanya ditetapkan untuk mencapai
+            4 bunga.
         questions:
-        - {}
+        - text: Baca kod di bawah. Apakah yang akan berlaku apabila anda mengklik
+            "Jalankan"?
+        markdown: Ah! Penggunaan gelung `untuk` membuatkan teka-teki ini menjadi lebih
+          mudah!
       courseF_sprites_predict_multi:
         answers:
         - {}
         - correct: true
+          feedback: Betul! Tingkah laku ini memberitahu kapal terbang supaya mula
+            bergerak dan teruskan.
         - {}
         - {}
         questions:
-        - {}
+        - text: Baca kod, kemudian buat ramalan.
       courseF_variables_predict_multi:
         answers:
         - {}
         - correct: true
+          feedback: Betul! Perkara yang anda taip digunakan di tempat blok nama.
         - {}
         - {}
         questions:
@@ -2481,20 +2566,32 @@ ms-MY:
         answers:
         - {}
         - correct: true
+          feedback: Betul!
         - {}
         - {}
         questions:
         - {}
       express_EOC_2021:
         display_name: Akhir Projek Kursus
+        description: Anda telah sampai pada penghujung Kursus E! Pilih projek untuk
+          dicipta.
       grade2_multi_collector_A_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Laurel akan mengumpulkan 4 harta karun dengan menggunakan kod ini.
+          feedback: Salah. Laurel cuba mengumpulkan harta karun tetapi tidak ditemui
+            di tempat tersebut dan ia menyebabkan ralat.
+        - text: Laurel akan cuba mengumpulkan harta karun tetapi tiada apa-apa ditemui
+            di tempat tersebut dan ia menyebabkan ralat.
+          correct: true
+          feedback: Betul!
+        - text: Laurel akan mengumpulkan semua harta karun itu.
+          feedback: Salah. Laurel cuba mengumpulkan harta karun tetapi tidak ditemui
+            di tempat tersebut dan ia menyebabkan ralat.
+        - feedback: Salah. Laurel cuba mengumpulkan harta karun tetapi tidak ditemui
+            di tempat tersebut dan ia menyebabkan ralat.
         questions:
-        - {}
+        - text: Lihat pada kod ini dengan teliti. Pada pendapat anda, apakah yang
+            akan berlaku apabila atur cara ini dijalankan?
       CourseF_outbreak_story:
         markdown: "# Wabak: Kod Simulasi Anda Yang Tersendiri\n\n## Selamat datang
           ke Bandar Raksasa!\nBandar Raksasa dulunya tempat yang gembira dan sihat.
@@ -3050,9 +3147,150 @@ ms-MY:
         content1: penerangan di sini
       csf_putting_a_stop_to_online_meanness_2021:
         content1: penerangan di sini
+        markdown: |
+          # HENTIKAN Kezaliman
+
+          ## Apakah yang perlu anda lakukan jika seseorang bertindak zalim kepada anda dalam talian?
+
+          * **S**tep away - Jauhkan diri.
+          * **T**ell a trusted adult - Beritahu orang dewasa yang dipercayai.
+          * **O**K sites first - Layari laman web yang OK terlebih dahulu.
+          * **P**ause and think online - Berhenti sementara dan berfikir dalam talian.
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       courseF_intro_apps:
         description: Selamat datang ke Asas CS! Semua projek ini telah dicipta dengan
           Makmal Peperi. Cuba projek ini sekarang untuk melihat perkara yang boleh
           dilakukan. Pada akhir kursus ini, anda akan dapat membuat projek anda sendiri
           seperti ini...dan banyak lagi!
         display_name: Aplikasi Makmal Peperi
+        teacher_markdown: |
+          # Gambaran Keseluruhan Tahap Pilihan
+          Tahap pilihan memberikan menu tahap tambahan untuk pelajar melengkapkan. Pelajar mesti melengkapkan sekurang-kurangnya satu daripada subtahap di sini, tetapi boleh menyelesaikan seberapa banyak yang mereka (atau anda) suka.
+
+          Pilihan di sini membawa pelajar kepada sampel aplikasi yang boleh mereka terokai. Aktiviti ini bertujuan menyelaras dengan lembaran kerja Meneroka Aplikasi, yang terdapat dalam [lesson plan](.././).
+      Internet-Unplugged_2021:
+        markdown: |
+          # Internet
+
+          Bina Internet anda sendiri di dalam kelas hanya menggunakan helaian kertas.
+      MoveItMoveIt-Unplugged_2021:
+        markdown: |
+          # Cepat, Cepat
+
+          Gunakan peta dan berikan perintah untuk mencapai matlamat.
+      PowerOfWords-Unplugged_2021:
+        markdown: |
+          # Kuasa Kata-kata
+
+          ## Apakah yang perlu anda lakukan apabila seseorang menggunakan bahasa kesat atau menyakitkan hati dalam internet?
+      courseD_EOC_examples_2021:
+        description: Anda akan memulakan projek akhir anda. Sebelum anda bermula,
+          luangkan sedikit masa dengan melihat projek contoh.
+      courseF_beeFor_practice:
+        display_name: Latihan Lebah
+      courseF_beeVar_practice:
+        display_name: Latihan Lebah
+      courseF_events_practice:
+        teacher_markdown: |+
+          # Gambaran Keseluruhan Tahap Pilihan
+          Tahap pilihan memberikan menu tahap tambahan untuk pelajar melengkapkan. Pelajar mesti melengkapkan sekurang-kurangnya satu daripada subtahap di sini, tetapi boleh menyelesaikan seberapa banyak yang mereka (atau anda) suka.
+
+          Anda boleh menggunakan huraian di bawah untuk membantu pelajar memilih sendiri pilihan mereka, atau menetapkan jangkaan sekitar bilangan subtahap yang perlu mereka lengkapkan.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Dilancarkan!|Belajar menerbangkan kapal terbang|Lakukan gerakan aerobatik terbalik|Mengecil dan Membesar|Mengembungkan ikan!|Penguin sedang bergerak|
+          |-|-|-|-|-|-|-|
+          | ***Taip*** |**Semak**|**Nyahpepijat**|**Nyahpepijat**|**Nyahpepijat**|**Kandungan Pilihan**|**Kandungan Pilihan**
+          | ***Konsep***|*peristiwa, tingkah laku*|*peristiwa, tingkah laku*|*peristiwa, tingkah laku*|*peristiwa, tingkah laku*|*apabila/semasa peristiwa*|*apabila/semasa peristiwa*|
+
+
+      courseF_sprites_practice:
+        teacher_markdown: |+
+          # Gambaran Keseluruhan Tahap Pilihan
+          Tahap pilihan memberikan menu tahap tambahan untuk pelajar melengkapkan. Pelajar mesti melengkapkan sekurang-kurangnya satu daripada subtahap di sini, tetapi boleh menyelesaikan seberapa banyak yang mereka (atau anda) suka.
+
+          Anda boleh menggunakan huraian di bawah untuk membantu pelajar memilih sendiri pilihan mereka, atau menetapkan jangkaan sekitar bilangan subtahap yang perlu mereka lengkapkan.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Pemandangan Gurun|Mengubah saiz buah.|Menganimasikan Kapal Layar|Hari yang Berangin|
+          |-|-|-|-|-|
+          | ***Taip*** |**Semak**|**Semak**|**Semak**|**Semak**|
+          | ***Konsep***|*peperi, lokasi*|*peperi, sifat*|*peperi, lokasi, tingkah laku*|*tingkah laku*|
+
+
+      courseF_text_practice:
+        teacher_markdown: |+
+          # Gambaran Keseluruhan Tahap Pilihan
+          Tahap pilihan memberikan menu tahap tambahan untuk pelajar melengkapkan. Pelajar mesti melengkapkan sekurang-kurangnya satu daripada subtahap di sini, tetapi boleh menyelesaikan seberapa banyak yang mereka (atau anda) suka.
+
+          Anda boleh menggunakan huraian di bawah untuk membantu pelajar memilih sendiri pilihan mereka, atau menetapkan jangkaan sekitar bilangan subtahap yang perlu mereka lengkapkan.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Menggunakan Pertuturan untuk Teks|Teks untuk Prom|Namakan robot!|Label Pemboleh Ubah|Teks Besar|Menggesa untuk warna|Memulakan tanpa apa-apa asas|
+          |-|-|-|-|-|-|-|-|
+          | ***Taip*** |**Semak**|**Nyapepijat**|**Nyapepijat**|**Nyapepijat**|**Kandungan Pilihan**|**Kandungan Pilihan**|**Permainan Bebas**
+          | ***Konsep***|*blok cetak, peristiwa*|*prom, peristiwa*|*menambahkan ruangan*|*padanan label pemboleh ubah*|*tajuk blok skrin*|*menyimpan warna*|*tiada kandungan baharu*
+
+
+      courseF_variables_projects:
+        teacher_markdown: |
+          # Gambaran Keseluruhan Tahap Pilihan
+          Tahap pilihan memberikan menu tahap tambahan untuk pelajar melengkapkan. Pelajar mesti melengkapkan sekurang-kurangnya satu daripada subtahap di sini, tetapi perlu digalakkan melengkapkan **dua** tahap untuk projek yang sama.
+
+          Pelajar mungkin memerlukan arahan yang amat jelas untuk memahami cara menavigasi pilihan di sini. Untuk setiap pilihan projek, terdapat dua subtahap di sini. Untuk mulakan, pelajar perlu memilih satu daripada tahap yang ditandakan sebagai "Bahagian 1". Sebaik sahaja mereka menamatkan tahap itu, mereka perlu kembali ke sini dan memilih "Bahagian 2" daripada projek yang *sama*. Tahap pertama untuk setiap pilihan akan memberikan maklum balas kepada pelajar semasa mereka menggabungkan komponen asas projek mereka. Tahap kedua ialah "permainan bebas" yang bertujuan membolehkan pelajar membuat apa-apa perubahan kepada kod mereka yang mereka suka.
+      courseF_variables_samples:
+        teacher_markdown: |
+          # Gambaran Keseluruhan Tahap Pilihan
+          Tahap pilihan memberikan menu tahap tambahan untuk pelajar melengkapkan. Pelajar mesti melengkapkan sekurang-kurangnya satu daripada subtahap di sini, tetapi boleh menyelesaikan seberapa banyak yang mereka (atau anda) suka.
+
+          Anda boleh menggunakan huraian di bawah untuk membantu pelajar memilih sendiri pilihan mereka, atau menetapkan jangkaan sekitar bilangan subtahap yang perlu mereka lengkapkan.
+      csf_digital_trails_2021:
+        markdown: |
+          # Ikuti Jejak Digital
+
+          ## Apakah maklumat yang OK untuk ada dalam jejak digital anda?
+      express_EOC_examples_2021:
+        description: Anda akan memulakan projek akhir anda. Sebelum anda bermula,
+          luangkan sedikit masa dengan melihat projek contoh.
+      ForLoopFun-Unplugged_2021:
+        markdown: |
+          # Gelung Untuk yang Menyeronokkan
+
+          Kita tahu bahawa gelung membolehkan kita melakukan perkara berulang-kali, tetapi kini kita akan mempelajari cara menggunakan gelung yang mempunyai struktur tambahan terbina di dalam.
+      BigEvent-Unplugged_2021:
+        markdown: |
+          # Peristiwa Besar
+
+          Dalam sains komputer, peristiwa ialah tindakan yang dipantau oleh komputer. Dalam pelajaran ini anda akan bertindak balas dengan berbeza bergantung pada butang yang ditekan.
+      GettingLoopy-Unplugged_2021:
+        markdown: |
+          # Menjadi Bergelung
+
+          Pelajaran ini memperkenalkan konsep pengaturcaraan gelung melalui aktiviti menari.
+      HappyMaps-Unplugged_2021:
+        markdown: |
+          # Peta Bahagia
+
+          Cipta algoritma untuk menggerakkan watak melalui pagar sesat.
+      TheRightAppMarkdownLevel_2021:
+        markdown: |
+          # Aplikasi yang Betul
+
+          * Pada masa kini, semua individu menggunakan komputer terutamanya telefon pintar.
+          * Aplikasi telefon pintar membantu orang ramai melakukan banyak perkara seperti bercakap dengan rakan, mendengar muzik, membeli-belah, atau hanya melayari laman web.
+          * Adalah penting untuk pengatur cara memahami keperluan individu lain dan mereka bentuk aplikasi dengan mengambil kira perkara tersebut!
+
+          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+      csf_safety_in_my_online_neighborhood_2021:
+        markdown: |
+          # Kejiranan Dalam Talian Saya
+
+          ## Bagaimanakah anda pergi ke tempat dengan selamat secara dalam talian?
+      MyLoopyRoboticFriends-Unplugged_2021:
+        markdown: |
+          # Rakan Robotik Bergelung Saya
+
+          Buatkan atur cara anda lebih pendek dengan menggunakan gelung!
+      MyRoboticFriends-Unplugged_2021:
+        markdown: |
+          # Rakan Robotik Saya
+
+          Belajar mengatur cara dengan menulis kod untuk rakan anda!

@@ -24,6 +24,7 @@
   "compilerError": "Nie mogliśmy skompilować Twojego programu. Poszukaj w nim błędów i spróbuj ponownie.",
   "compiling": "Kompilowanie...",
   "compilingProgram": "'Kompilowanie programu...",
+  "connecting": "Łączenie...",
   "console": "Konsola",
   "delete": "Usuń",
   "deleteFileConfirmation": "Czy na pewno chcesz usunąć {filename}?",

@@ -32,8 +32,11 @@
       "description": "The name of the target sprite or target group you want to check for touching."
     }
   ],
+  "parameters": [
+    "target"
+  ],
   "return_value": "Boolean true or false.",
   "short_description": "Checks if the sprite is touching the target sprite or any sprite in the target group.",
-  "syntax": "isTouching(target)",
+  "syntax": "sprite.isTouching(target)",
   "tips": "- To fine tune your collision detection use `setCollider` to change the shape and size of the collider area and set `debug` to true for the sprites."
 }

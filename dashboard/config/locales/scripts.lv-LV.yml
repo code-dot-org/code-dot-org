@@ -2566,6 +2566,10 @@ lv:
               display_name: Cikli
             csf_events:
               display_name: Pasākumi
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: Mainīgie
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -2578,3 +2582,37 @@ lv:
           lessons:
             lesson-9:
               name: Cikli
+        coursef-2022-pilot:
+          lessons:
+            The Internet:
+              name: Internets
+              key: Internets
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitālā pilsonība
+            lessonGroup-8:
+              display_name: Mainīgie
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Mainīgie
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Cikli
+              key: Cikli
+            Events:
+              name: Pasākumi
+              key: Pasākumi
+            Conditionals:
+              name: Sazarojumi
+              key: Sazarojumi
+            Functions:
+              name: Funkcijas
+              key: Funkcijas
+            Variables:
+              name: Mainīgie
+              key: Mainīgie
+            For Loops:
+              name: '"par" cikli'
+              key: '"par" cikli'

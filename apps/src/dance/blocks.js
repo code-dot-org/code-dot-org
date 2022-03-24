@@ -53,8 +53,8 @@ const customInputTypes = {
       };
 
       currentInputRow
-        .appendTitle(inputConfig.label)
-        .appendTitle(
+        .appendField(inputConfig.label)
+        .appendField(
           new Blockly.FieldVariable(
             null,
             null,
@@ -76,8 +76,8 @@ const customInputTypes = {
         columns: 3
       };
       currentInputRow
-        .appendTitle(inputConfig.label)
-        .appendTitle(
+        .appendField(inputConfig.label)
+        .appendField(
           new Blockly.FieldColour('#ff0000', undefined, options),
           'VAL'
         );
@@ -123,8 +123,8 @@ export default {
         fieldLabel.EDITABLE = true;
         this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
         this.appendDummyInput()
-          .appendTitle(Blockly.Msg.VARIABLES_GET_TITLE)
-          .appendTitle(
+          .appendField(Blockly.Msg.VARIABLES_GET_TITLE)
+          .appendField(
             Blockly.disableVariableEditing
               ? fieldLabel
               : new Blockly.FieldVariable(
@@ -136,7 +136,7 @@ export default {
                 ),
             'VAR'
           )
-          .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
+          .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
         this.setStrictOutput(true, Blockly.BlockValueType.SPRITE);
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
       },
@@ -170,9 +170,9 @@ export default {
         fieldLabel.EDITABLE = true;
         this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
         this.appendDummyInput()
-          .appendTitle(Blockly.Msg.VARIABLES_GET_TITLE)
-          .appendTitle(fieldLabel, 'VAR')
-          .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
+          .appendField(Blockly.Msg.VARIABLES_GET_TITLE)
+          .appendField(fieldLabel, 'VAR')
+          .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
         this.setStrictOutput(true, Blockly.BlockValueType.SPRITE);
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
       },
@@ -192,10 +192,10 @@ export default {
         // Must be marked EDITABLE so that cloned blocks share the same var name
         fieldLabel.EDITABLE = true;
         this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
-        this.setHSV(136, 0.84, 0.8);
+        Blockly.cdoUtils.setHSV(this, 631, 0.84, 0.8);
         const mainTitle = this.appendDummyInput()
-          .appendTitle(fieldLabel, 'VAR')
-          .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
+          .appendField(fieldLabel, 'VAR')
+          .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
 
         if (Blockly.useModalFunctionEditor) {
           var editLabel = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
@@ -205,7 +205,7 @@ export default {
             this,
             this.openEditor
           );
-          mainTitle.appendTitle(editLabel);
+          mainTitle.appendField(editLabel);
         }
 
         this.setStrictOutput(true, Blockly.BlockValueType.BEHAVIOR);

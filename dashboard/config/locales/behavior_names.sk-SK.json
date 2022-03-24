@@ -2863,7 +2863,7 @@
           "wobbling": "kolísanie",
           "moving west and looping": "posun na západ a cyklenie",
           "moving east and looping": "posun na východ a cyklenie",
-          "moving north and looping": "posun na sever a cyklenie",
+          "moving north and looping": "posuv na sever a cyklenie",
           "moving south and looping": "posun na juh a cyklenie"
         },
         "helloworld_animals_costumes": {
@@ -2917,7 +2917,7 @@
           "wobbling": "kolísanie",
           "moving west and looping": "posun na západ a cyklenie",
           "moving east and looping": "posun na východ a cyklenie",
-          "moving north and looping": "posun na sever a cyklenie",
+          "moving north and looping": "posuv na sever a cyklenie",
           "moving south and looping": "posun na juh a cyklenie"
         },
         "helloworld_emoji_backgrounds": {
@@ -2961,7 +2961,7 @@
           "wobbling": "kolísanie",
           "moving west and looping": "posun na západ a cyklenie",
           "moving east and looping": "posun na východ a cyklenie",
-          "moving north and looping": "posun na sever a cyklenie",
+          "moving north and looping": "posuv na sever a cyklenie",
           "moving south and looping": "posun na juh a cyklenie"
         },
         "helloworld_emoji_costumes": {
@@ -3015,7 +3015,7 @@
           "wobbling": "kolísanie",
           "moving west and looping": "posun na západ a cyklenie",
           "moving east and looping": "posun na východ a cyklenie",
-          "moving north and looping": "posun na sever a cyklenie",
+          "moving north and looping": "posuv na sever a cyklenie",
           "moving south and looping": "posun na juh a cyklenie"
         },
         "helloworld_food_backgrounds": {
@@ -3091,7 +3091,7 @@
           "wobbling": "kolísanie",
           "moving west and looping": "posun na západ a cyklenie",
           "moving east and looping": "posun na východ a cyklenie",
-          "moving north and looping": "posun na sever a cyklenie",
+          "moving north and looping": "posuv na sever a cyklenie",
           "moving south and looping": "posun na juh a cyklenie"
         },
         "helloworld_retro_backgrounds": {
@@ -3135,7 +3135,7 @@
           "wobbling": "kolísanie",
           "moving west and looping": "posun na západ a cyklenie",
           "moving east and looping": "posun na východ a cyklenie",
-          "moving north and looping": "posun na sever a cyklenie",
+          "moving north and looping": "posuv na sever a cyklenie",
           "moving south and looping": "posun na juh a cyklenie"
         },
         "helloworld_retro_costumes": {
@@ -3189,7 +3189,7 @@
           "wobbling": "kolísanie",
           "moving west and looping": "posun na západ a cyklenie",
           "moving east and looping": "posun na východ a cyklenie",
-          "moving north and looping": "posun na sever a cyklenie",
+          "moving north and looping": "posuv na sever a cyklenie",
           "moving south and looping": "posun na juh a cyklenie"
         },
         "helloworld_food_behaviors": {
@@ -3211,7 +3211,7 @@
           "wobbling": "kolísanie",
           "moving west and looping": "posun na západ a cyklenie",
           "moving east and looping": "posun na východ a cyklenie",
-          "moving north and looping": "posun na sever a cyklenie",
+          "moving north and looping": "posuv na sever a cyklenie",
           "moving south and looping": "posun na juh a cyklenie"
         },
         "poetry_hoc_spriteSizes": {

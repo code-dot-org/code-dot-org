@@ -1,0 +1,38 @@
+<Weblab>
+  <config><![CDATA[{
+  "properties": {
+    "long_instructions": "# Styling Elements with CSS\r\n\r\nAfter learning how to style text using CSS, students will move on to style other elements of their web page such as background color and image placement. \r\n\r\n# Do this\r\n\r\n* Look through web page below for new styles.\r\n* Open the style sheet.\r\n* Identify parts of the CSS code that are making the page appear different.\r\n  * What makes the entire page blue?\r\n  * How are the images positioned to the left of all the other elements?\r\n",
+    "instructions_important": "false",
+    "project_template_level_name": "CSDU2 - layout style template_2021",
+    "hide_share_and_remix": "false",
+    "submittable": "false",
+    "parent_level_id": 20042,
+    "name_suffix": "_2021",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "validation_enabled": "false",
+    "reference_links": [
+      "/docs/concepts/css/body-styling/",
+      "/docs/concepts/html/images-in-html/",
+      "/docs/concepts/other/creative-commons-search/",
+      "/docs/concepts/css/style-sheets/",
+      "/docs/concepts/css/text-properties/",
+      "/docs/concepts/html/formatting-html/",
+      "/docs/concepts/html/lists/",
+      "/docs/concepts/html/headings-and-paragraphs/",
+      "/docs/concepts/html/html-tags/"
+    ],
+    "map_reference": "/docs/concepts/css/layout-properties/",
+    "encrypted_examples": [
+
+    ]
+  },
+  "game_id": 58,
+  "published": true,
+  "created_at": "2022-03-20T21:51:23.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2022-03-20T21:51:23.214+00:00\",\"changed\":[\"cloned from \\\"CSD U2 layout style sample_2021\\\"\"],\"cloned_from\":\"CSD U2 layout style sample_2021\"},{\"changed_at\":\"2022-03-23 15:21:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2022-03-23 15:22:52 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]"
+}]]></config>
+</Weblab>

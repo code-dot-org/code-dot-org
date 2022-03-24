@@ -3265,6 +3265,9 @@ sq:
             csf_events:
               display_name: Ngjarje
         csa2-2022:
+          lessons:
+            lesson-6:
+              name: variabla
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
@@ -3303,3 +3306,52 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        coursef-2022-pilot:
+          lessons:
+            The Internet:
+              name: Interneti
+              key: Interneti
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Shtetësi Dixhitale
+            lessonGroup-8:
+              display_name: variabla
+        csa6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa7-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa8-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: variabla
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Përmbajtja
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: cikle
+              key: cikle
+            Events:
+              name: Ngjarje
+              key: Ngjarje
+            Conditionals:
+              name: Kushtet
+              key: Kushtet
+            Functions:
+              name: funksione
+              key: funksione
+            Variables:
+              name: variabla
+              key: variabla
+            For Loops:
+              name: Për Ciklet
+              key: Për Ciklet

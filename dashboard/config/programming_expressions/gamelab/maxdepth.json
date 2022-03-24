@@ -17,6 +17,6 @@
   ],
   "return_value": "The highest depth in the group.",
   "short_description": "Returns the highest depth in a group.",
-  "syntax": "maxDepth",
+  "syntax": "group.maxDepth()",
   "tips": "- Groups of sprites all have the same functions and you use the dot notation (combining the name of the group, followed by a dot, with the function name) to call the function for that group of sprites."
 }

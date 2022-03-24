@@ -43,7 +43,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2021-11-22 19:56:09 UTC",
+    "serialized_at": "2022-03-22 21:16:02 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -8286,13 +8286,79 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "Lesson Plans",
+      "url": "https://curriculum.code.org/csf-18/coursee/",
+      "key": "lesson_plans",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_plans"
+      }
+    },
+    {
+      "name": "Standard Mappings",
+      "url": "https://curriculum.code.org/csf-18/coursee/standards/",
+      "key": "standard_mappings",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "standard_mappings"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csf",
+      "key": "teacher_forum",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
+    },
+    {
+      "name": "Vocabulary",
+      "url": "https://curriculum.code.org/csf-18/coursee/vocab/",
+      "key": "vocabulary",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "vocabulary"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "lesson_plans",
+        "script.name": "coursee-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "standard_mappings",
+        "script.name": "coursee-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "coursee-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "vocabulary",
+        "script.name": "coursee-2018"
+      }
+    }
   ],
   "scripts_student_resources": [
 

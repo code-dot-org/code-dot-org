@@ -32,6 +32,8 @@ class ProgrammingExpression < ApplicationRecord
   validates_uniqueness_of :key, scope: :programming_environment_id, case_sensitive: false
   validate :validate_key_format
 
+  after_destroy :remove_serialization
+
   serialized_attrs %w(
     color
     syntax
@@ -242,6 +244,10 @@ class ProgrammingExpression < ApplicationRecord
     end
   end
 
+  def file_path
+    Rails.root.join("config/programming_expressions/#{programming_environment.name}/#{key.parameterize(preserve_case: false)}.json")
+  end
+
   def serialize
     {
       key: key,
@@ -253,8 +259,42 @@ class ProgrammingExpression < ApplicationRecord
 
   def write_serialization
     return unless Rails.application.config.levelbuilder_mode
-    file_path = Rails.root.join("config/programming_expressions/#{programming_environment.name}/#{key.parameterize(preserve_case: false)}.json")
     object_to_serialize = serialize
+    directory_name = File.dirname(file_path)
+    Dir.mkdir(directory_name) unless File.exist?(directory_name)
     File.write(file_path, JSON.pretty_generate(object_to_serialize))
+  end
+
+  def remove_serialization
+    return unless Rails.application.config.levelbuilder_mode
+    File.delete(file_path) if File.exist?(file_path)
+  end
+
+  def clone_to_programming_environment(environment_name, new_category_key = nil)
+    new_env = ProgrammingEnvironment.find_by_name(environment_name)
+    raise "Cannot find programming environment with name #{environment_name}" unless new_env
+
+    # Find the category for the new expressions:
+    # - if new_category_key is provided, use that
+    # - if not, try to find a category with the same key as the original expression's category
+    # - if that doesn't exist, search for a category with the same name as the original expression's category
+    # As there's no (current) problem with an expression not having a category,
+    # stop there. It won't appear in navigation but will still be valid
+    new_category = nil
+    if new_category_key
+      new_category = new_env.categories.find_by_key(new_category_key)
+    else
+      new_category ||= new_env.categories.find_by_key(programming_environment_category&.key)
+      new_category ||= new_env.categories.find_by_name(programming_environment_category&.name)
+    end
+
+    new_exp = dup
+    new_exp.programming_environment_id = new_env.id
+    new_exp.programming_environment_category_id = new_category&.id
+
+    new_exp.save!
+    new_exp.write_serialization
+
+    new_exp
   end
 end

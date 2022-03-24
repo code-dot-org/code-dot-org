@@ -387,7 +387,7 @@
           "description": "تمييز الأخطاء في البرنامج وتحديد موقعها."
         },
         "ce53a40d-db75-451a-a901-93f93226306a": {
-          "description": "توقع المكان الذي سيفشل عنده البرنامج."
+          "description": "توقع أين سيخفق البرنامج."
         },
         "3ad547f9-c577-4953-88d5-41f7ac1ab710": {
           "description": "تعديل برنامج موجود لحل الأخطاء."
@@ -489,16 +489,16 @@
           "description": "التغلب على العقبات مثل قيود الوقت أو الأخطاء."
         },
         "e546a87d-131a-4d75-b2c6-d5942ee4a0c0": {
-          "description": ""
+          "description": "عرف مصطلح \"الكلمة السرية\" واشرح الهدف من الكلمة السرية."
         },
         "ea9adc1d-dc64-4a08-a97f-19eec1e448e6": {
-          "description": ""
+          "description": "تدرب على إنشاء كلمة سرية قوية يسهل تذكرها."
         },
         "3c4b51d5-b72f-42df-a55a-86c146214424": {
           "description": "إعادة صياغة سلسلة من الخطوات في صورة برنامج مشفر"
         },
         "16d1e174-7b4d-4b5e-a7be-9d4399743d19": {
-          "description": "شرح قيود ترجمة المشكلات من اللغة البشرية إلى اللغة الآلية\n"
+          "description": "شرح قيود ترجمة المشكلات من اللغة البشرية إلى اللغة الآلية"
         },
         "69023643-6dd6-4d71-b31a-d2dff7952ea7": {
           "description": "ترتيب أوامر الحركة في صورة خطوات متسلسلة في البرنامج."
@@ -615,7 +615,7 @@
           "description": "تمييز الأخطاء في البرنامج وتحديد موقعها."
         },
         "f0852e8e-a4ab-49a6-8fc4-0c805f14999a": {
-          "description": "توقع المكان الذي سيفشل عنده البرنامج."
+          "description": "توقع أين سيخفق البرنامج."
         },
         "857073db-dcda-4868-8be6-e0fba5f981d7": {
           "description": "تعديل برنامج موجود لحل الأخطاء."
@@ -639,31 +639,13 @@
           "description": "تقسيم الأشكال المعقدة إلى أجزاء بسيطة."
         },
         "090bc5c3-f9cb-4aea-bc89-a1dd85c9d196": {
-          "description": ""
-        },
-        "09281dd0-4b33-4537-9543-a2377bc2f923": {
-          "description": ""
-        },
-        "30a80046-d715-46b1-8b89-65c410d04690": {
-          "description": ""
-        },
-        "e0d4a883-51dc-4647-8c9f-59652f699aec": {
-          "description": ""
-        },
-        "6ba64af5-a4d3-4473-b004-166dfdc6bd71": {
-          "description": ""
+          "description": "عرّف \"الكائن\" على أنه شيء أو كائن على الشاشة يمكن نقله وتغييره."
         },
         "d9604b08-064f-43e3-83ac-d3a91f321627": {
           "description": "طوّر  برامج تستجيب للأحداث المحددة بوقت."
         },
         "422b4e75-8ff9-4f2e-b4f8-e6f1fdea3969": {
           "description": "طوّر  برامج تستجيب لمدخلات المستخدم."
-        },
-        "203638b5-ded8-4023-be3e-f66dfbdc6f8f": {
-          "description": ""
-        },
-        "f5e7cf67-bc19-4175-82b0-f449d09551d4": {
-          "description": ""
         },
         "21ba9121-5cce-4ebe-8a8e-a04dae7f9c09": {
           "description": "طوّر  برامج تستجيب للأحداث المحددة بوقت"
@@ -761,12 +743,6 @@
         "5bbd5970-dd02-4100-b9c4-6d051ec9bba2": {
           "description": "استخدام دوال محددة مسبقًا لإكمال المهام المتكررة بشكل شائع."
         },
-        "ef77d0c7-ef92-4f67-85fc-b9e4c8d14c49": {
-          "description": ""
-        },
-        "077a5626-d78c-4ae2-9620-e0558a2ab8cf": {
-          "description": ""
-        },
         "16854174-125c-4c79-9a42-064ef84535e3": {
           "description": "إعطاء قيم للمتغيرات الموجودة."
         },
@@ -776,32 +752,8 @@
         "f1d6a4e2-cc10-4b3a-8c31-27e6972846a4": {
           "description": "استخدام المتغيرات لتغيير القيم داخل الحلقة."
         },
-        "a80a4857-3cff-46f5-9fc5-63a3969a4631": {
-          "description": ""
-        },
-        "dd4add89-b2d6-4b12-a073-6ec56b4c6de1": {
-          "description": ""
-        },
-        "14d7681c-8e63-4c4f-9bb8-4bbd17910ef2": {
-          "description": ""
-        },
-        "3abab07c-e404-45d4-ab89-f92a34c68356": {
-          "description": ""
-        },
-        "1b705c64-cbba-4dfe-8d47-549eb6754326": {
-          "description": ""
-        },
-        "a5169230-8faf-4492-bc49-ca11dca864fa": {
-          "description": ""
-        },
         "db7a8439-bc00-43ef-a9a8-2067da8dbda6": {
           "description": "التغلب على العقبات مثل قيود الوقت أو الأخطاء."
-        },
-        "14f085e6-a0a8-4218-9060-00d7b0dfbf07": {
-          "description": ""
-        },
-        "d1485387-01e4-484d-9935-75f7c14b9d76": {
-          "description": ""
         },
         "565151fd-85db-44eb-9cfc-ccbe279cf49a": {
           "description": "قم بتمثيل السلوكيات المناسبة لمختبر الكمبيوتر"
@@ -879,40 +831,37 @@
           "description": "مشاركة قطعة إبداعية مع الطلاب الآخرين."
         },
         "a937dee9-2cd3-4978-8f88-09f8af577395": {
-          "description": ""
+          "description": "ابدأ بربط المعلومات اللازمة لتعلم طريقة جديدة لكتابة البرامج"
         },
         "88e512c1-9ce0-4aaf-9dab-e0f2716c73ae": {
-          "description": ""
-        },
-        "bd575116-1370-4f4c-bc5a-a81472d6ab61": {
-          "description": ""
+          "description": "عرّف \"الكائن\" على أنه شيء أو كائن على الشاشة يمكن نقله وتغييره."
         },
         "57a5eb7e-bd65-420e-b1b5-65a796565f9b": {
           "description": "تحديد الإجراءات التي ترتبط بأحداث الإدخال."
         },
         "ce28bc63-1bc8-4239-985b-43ff3a8b98ea": {
-          "description": ""
+          "description": "أنشئ رسوماً متحركة تفاعلية باستخدام الكائنات، السلوكيات والأحداث."
         },
         "33b4a09f-5e7c-4e05-84e6-414b2424ef68": {
-          "description": ""
+          "description": "حدد الأسباب التي تجعل الأشخاص يشاركون معلومات عن أنفسهم عبر الإنترنت."
         },
         "c89aa3e0-f0ba-4188-b2b3-39731a6d0fac": {
-          "description": ""
+          "description": "اشرح الفرق بين المعلومات الخاصة والشخصية!"
         },
         "ffeaa29c-8d0a-47c0-be5b-275f8a01e138": {
-          "description": ""
+          "description": "اشرح سبب خطورة مشاركة المعلومات الخاصة عبر الإنترنت."
         },
         "c217a50f-4aa2-4eb7-998d-7d06b38bdd93": {
-          "description": ""
+          "description": "اختر المعلومات التي يمكن مشاركتها عن أنفسهم عبر الإنترنت بأمان."
         },
         "3ab2d965-5fe5-4a1e-b745-8118e6815776": {
-          "description": ""
+          "description": "قم بإنشاء برنامج كمبيوتر تفاعلي يعبر عن هويتهم بالنصوص والصور المخصصة."
         },
         "0ab15cd0-3d1b-48a6-8a93-53c87d679c05": {
-          "description": ""
+          "description": "افهم الفرق بين المشاركة الأخلاقية للمواد المحمية بحقوق الطبع والنشر مقابل المشاركة غير الأخلاقية."
         },
         "0709575a-e9e6-4856-a4f4-02b290f86975": {
-          "description": ""
+          "description": "فهم حقوقهم الخاصة فيما يتعلق بالمواد التي قاموا بإنشائها"
         },
         "5d061773-3d1d-4dc1-866b-66a878b9b5e4": {
           "description": "التعرف على فوائد استخدام هيكل حلقة بدلاً من التكرار اليدوي."
@@ -978,13 +927,13 @@
           "description": "استخدام دوال محددة مسبقًا لإكمال المهام المتكررة بشكل شائع."
         },
         "87094122-056f-4fa4-83b7-e3d6abb52e67": {
-          "description": ""
+          "description": "وصف تأثير تطبيقات الأجهزة المحمولة على العالم الحديث."
         },
         "b672db1b-ee05-44b3-9f82-73b1b1f94e1a": {
-          "description": ""
+          "description": "اشرح لماذا تعد إمكانية الوصول جزءًا مهمًا من تصميم تطبيق للمستخدمين."
         },
         "3a5ae2ad-5774-4da7-b4e4-4e0aaeb02cbe": {
-          "description": ""
+          "description": "قم بتحسين تصميم تطبيق موجود من خلال تلبية احتياجات إمكانية الوصول للمستخدمين."
         },
         "cc7b3a7a-21b5-4450-9b38-e85bb5c378bc": {
           "description": "تعلم التخطيط مسبقًا لمهمة مستمرة."
@@ -1001,11 +950,206 @@
         "2594052b-3b87-4d83-9038-56175058c1c2": {
           "description": "توضيح عملية التصميم وكيف ساعدت في تشكيل مشروع التتويج النهائي."
         },
+        "80e00862-0fe7-44a4-9e0c-785e6674f0e5": {
+          "description": ""
+        },
+        "19b5be99-7f7e-42e1-9ce4-6e53d7361d35": {
+          "description": ""
+        },
+        "6ad62a76-15c2-4ee6-812b-89426ccbaf53": {
+          "description": ""
+        },
+        "314c3d2c-32d4-4b31-a7b7-bc848001a0ef": {
+          "description": ""
+        },
+        "a4a38d49-6a85-4c4e-9e9f-b589bc00b61a": {
+          "description": ""
+        },
+        "607265dd-c7c2-4ef7-bb9d-ea8026f769e3": {
+          "description": ""
+        },
+        "3a37860e-7f85-4921-a622-4c0435783261": {
+          "description": ""
+        },
+        "bddab4e2-74ad-4394-8180-11dde4ab88f9": {
+          "description": ""
+        },
+        "572e2633-ed9c-4957-9399-4cdd236c9da9": {
+          "description": ""
+        },
+        "7db30b84-9106-4f12-9a6b-3d4119423ec7": {
+          "description": ""
+        },
+        "1eceabc4-6a94-4939-bdb3-a1084c6e6aa4": {
+          "description": ""
+        },
+        "42021a55-c97c-432b-9420-a62927cc2bba": {
+          "description": ""
+        },
+        "e537dea9-f777-4037-8c48-d20298ba53b2": {
+          "description": ""
+        },
+        "e4ff5379-6af0-43ba-8611-535630489148": {
+          "description": ""
+        },
+        "8f1a62d6-c1b7-400f-9324-3f7cf5cecc72": {
+          "description": ""
+        },
+        "d7b16ab2-6683-4efa-93d9-d425024858bf": {
+          "description": ""
+        },
+        "550ed66e-4795-428a-aee8-9a77e03f667d": {
+          "description": ""
+        },
+        "88327c34-dbb7-4b44-8c32-c76166910b39": {
+          "description": ""
+        },
+        "87ac4c51-43bc-4219-93ba-29f517c309ef": {
+          "description": ""
+        },
+        "98d5856a-9dc5-4d14-bfc1-c79f4d9191d0": {
+          "description": ""
+        },
+        "5ac58714-911b-460c-b34b-73d1e67c160e": {
+          "description": ""
+        },
+        "fd6610c2-f7c5-4e4a-ac5a-b1e358c8a11d": {
+          "description": ""
+        },
+        "8d396418-f31f-438e-b9d8-43730f49868f": {
+          "description": ""
+        },
+        "1d63355b-8406-4aba-a3e7-a4a559c67c5f": {
+          "description": ""
+        },
+        "a656b8a6-b4f4-4014-9c91-ed44f25b2831": {
+          "description": ""
+        },
+        "e645e06c-9cb1-479c-91b6-1b81b8961d54": {
+          "description": ""
+        },
+        "b17ebfe7-f8da-40c2-82d1-43b00a7e8364": {
+          "description": ""
+        },
+        "02c329fa-a4a0-4b23-b77e-788296c2bc7b": {
+          "description": ""
+        },
+        "b8217d7c-960e-42d1-b3f0-1035158a64a0": {
+          "description": ""
+        },
+        "fd3bf488-7c63-4869-9c48-a97556d39150": {
+          "description": ""
+        },
+        "44bb192f-0e71-405f-b8a6-5757ff7f37e1": {
+          "description": ""
+        },
         "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
           "description": "تدريب نموذج تعلُّم آلي واختباره."
         },
         "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
           "description": "التفكير في الدور الذي يؤديه التحيز البشري في التعلم الآلي."
+        },
+        "6885b6d1-78d2-4560-8bf5-8f14cfc68bb7": {
+          "description": ""
+        },
+        "b0342e84-056b-46d6-ac84-1d976155c38d": {
+          "description": ""
+        },
+        "74126a3c-61fa-40ac-aef5-ffe0bf68a549": {
+          "description": ""
+        },
+        "8bc02767-3a96-4d13-a946-1e5a0dbcb037": {
+          "description": ""
+        },
+        "1a3a0395-0d25-44f7-9d47-e1c7700c3507": {
+          "description": ""
+        },
+        "e8cad68d-4922-47bd-9b73-c22e8af10879": {
+          "description": ""
+        },
+        "34e775e2-0c00-4052-9987-1ea46e705fa0": {
+          "description": ""
+        },
+        "ccfcb058-12bd-488b-8356-b22d10c4ea6f": {
+          "description": ""
+        },
+        "bac6e9a1-3d3a-4632-951a-18176be462c8": {
+          "description": ""
+        },
+        "10f87a6a-1dee-44d3-b8d9-1a8d79891db9": {
+          "description": ""
+        },
+        "b77ee6ff-2558-4b8a-b835-6cc16409602f": {
+          "description": ""
+        },
+        "372ca368-9509-4398-b84c-21ac4c890a1d": {
+          "description": ""
+        },
+        "36878c76-5f41-4efb-bba1-e9ca4a2e32fa": {
+          "description": ""
+        },
+        "dd98dbf4-2b0d-4d8b-be4e-4807c06de0a0": {
+          "description": ""
+        },
+        "434ebdb0-40d0-4a29-bcfb-635ade18fb5e": {
+          "description": ""
+        },
+        "eecfc6b0-93e7-4a6f-bdc2-fcfe306a3407": {
+          "description": ""
+        },
+        "f8ceacee-8c38-4d94-a2f3-35ee71d8b382": {
+          "description": ""
+        },
+        "30f1b582-38d8-402b-83da-c8a7cba4b2aa": {
+          "description": ""
+        },
+        "e543e22d-8270-4eb9-81ad-6de8d5455d59": {
+          "description": ""
+        },
+        "6fa18746-fa9c-4ace-a0e3-fc7936899b64": {
+          "description": ""
+        },
+        "5caf913a-779e-4174-9e9f-b6a87756263e": {
+          "description": ""
+        },
+        "07998a0e-1ef2-4bc0-af59-5278007a0058": {
+          "description": ""
+        },
+        "74336c50-eaa5-4dce-a478-27925ce67729": {
+          "description": ""
+        },
+        "30d66e3d-96aa-4b8e-adb5-6f112d41f16d": {
+          "description": ""
+        },
+        "71eb384e-9034-406d-a8fc-3e410e869985": {
+          "description": ""
+        },
+        "eb402ed0-5510-4b3a-bc73-694ddde8bf0f": {
+          "description": ""
+        },
+        "9f5e8294-cf6c-4f28-9f8f-1c0c869a69be": {
+          "description": ""
+        },
+        "dd44e0a2-e2a0-46aa-bc51-e0d67dc95491": {
+          "description": ""
+        },
+        "2c2dc6c4-9a9f-4186-85ba-44882179e48b": {
+          "description": ""
+        },
+        "1829ce9e-4e7e-451f-898e-692c3abb5ad6": {
+          "description": ""
+        },
+        "a98e9a65-fe9a-421b-854f-ee5c090c9503": {
+          "description": ""
+        },
+        "4616a321-c362-4a0e-928a-b1bc642d4010": {
+          "description": ""
+        },
+        "69a7b9a8-b9be-4d2e-aacc-43805fc5f186": {
+          "description": ""
+        },
+        "1e8b24b5-f8b6-46a6-b0b1-aba1633a02f0": {
+          "description": ""
         }
       }
     }

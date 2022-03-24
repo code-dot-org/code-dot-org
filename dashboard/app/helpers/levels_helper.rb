@@ -46,7 +46,7 @@ module LevelsHelper
   end
 
   def url_from_path(path)
-    "#{root_url.chomp('/')}#{path}"
+    CDO.studio_url(path)
   end
 
   def readonly_view_options
@@ -187,15 +187,15 @@ module LevelsHelper
     # - For levels with contained levels, the outer level is read-only and does
     #   not write to the channel. (We currently do not support inner levels that
     #   are channel-backed.)
-    # - In edit_blocks mode, the source code is saved as a level property and
+    # - In edit_blocks and edit_exemplar mode, the source code is saved as a level property and
     #   is not written to the channel.
     #
-    # Note that Javalab requires a channel to _execute_ the code on Javabuilder
-    # so it always needs a channel, regardless of whether it will be written to.
+    # Note that Javalab requires a channel if Javabuilder needs to access assets.
     level_requires_channel = @level.is_a?(Javalab) ||
         (@level.channel_backed? &&
           !@level.try(:contained_levels).present? &&
           params[:action] != 'edit_blocks')
+    level_requires_channel = false if @is_editing_exemplar
 
     # If the level is cached, the channel is loaded client-side in loadApp.js
     if level_requires_channel && !@public_caching
@@ -363,6 +363,7 @@ module LevelsHelper
       @app_options[:experiments] =
         Experiment.get_all_enabled(user: current_user, section: section, script: @script).pluck(:name)
       @app_options[:usingTextModePref] = !!current_user.using_text_mode
+      @app_options[:muteMusic] = !!current_user.mute_music
       @app_options[:displayTheme] = current_user.display_theme
       @app_options[:userSharingDisabled] = current_user.sharing_disabled?
     end

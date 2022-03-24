@@ -138,16 +138,16 @@ es:
     para entrenar el SVM. Según los datos de entrenamiento, el SVM separa el "espacio"
     de todos los peces posibles en dos partes, que corresponden a las clases que estamos
     tratando de aprender (como "azul" o "no azul").
-  social_hoc2019_oceans_title: 'IA para océanos #CSForGood'
+  social_hoc2019_oceans_title: 'Inteligencia Artificial para los Océanos #CSForGood'
   social_hoc2019_oceans_desc: Aprende sobre inteligencia artificial, aprendizaje automático,
     datos de entrenamiento y prejuicios, mientras exploras cuestiones éticas y cómo
     la inteligencia artificial se puede utilizar para abordar problemas mundiales.
     ¡Las ciencias de la computación son mucho más que programar! Disfruta del primer
     paso de Code.org en un nuevo viaje para enseñar más sobre IA en nuestro plan de
     estudios.
-  social_coldplay_title: Create with Coldplay & Code.org
-  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
-    and you could win.
+  social_coldplay_title: Crea con Coldplay y Code.org
+  social_coldplay_desc: "¡Muéstranos tus mejores movimientos! Programa, baila, comparte
+    con el mundo y podrás ganar."
   hoc_live: Hora del Código En Vivo
   hoc_live_sign_up_title: Regístrate para la Hora del Código En Vivo
   hoc_live_learn_title: Aprende con la Hora del Código En Vivo
@@ -171,20 +171,21 @@ es:
     ciencias y estudios sociales. A través de estos módulos, proyectos y lecciones,
     las escuelas pueden estudiar sus asignaturas habituales de formas nuevas e interesantes.
   hoc_overview_csc_learn_more: Conoce más sobre Conexiones a las Ciencias de la Computación
-  ai_video_title_what_is_ai: "¿Qué es IA?"
+  ai_video_title_what_is_ai: "¿Qué es la Inteligencia Artificial?"
   ai_video_title_algorithm_bias: Combatiendo el sesgo en los algoritmos
   ai_video_title_phone_knows_dog: "¿Cómo sabe tu teléfono que esto es un perro?"
-  ai_video_title_what_is_ml: "¿Qué es el aprendizaje automático?"
-  ai_video_title_ml_big_small_prickly: 'Aprendizaje automático: cómo resolver problemas
-    grandes, pequeños y espinosos'
-  ai_video_title_ethics_of_ai: Ética de la IA
-  ai_video_title_ml_human_bias: Aprendizaje automático y prejuicios humanos
-  ai_video_title_seeing_ai: 'Ver IA: hacer que el mundo visual sea más accesible'
+  ai_video_title_what_is_ml: "¿Qué es el Aprendizaje Automático?"
+  ai_video_title_ml_big_small_prickly: 'Aprendizaje Automático: Resolviendo Problemas
+    Grandes, Pequeños y Espinosos'
+  ai_video_title_ethics_of_ai: Ética de la Inteligencia Artificial
+  ai_video_title_ml_human_bias: Aprendizaje Automático y Sesgo Humano
+  ai_video_title_seeing_ai: 'Viendo la Inteligencia Artificial: Haciendo el mundo
+    visual más accesible'
   activity: Actividad
   name: Nombre
   description: Descripción
   audience: Audiencia
-  ai_resource_header: Enseñar y aprender sobre IA
+  ai_resource_header: Enseña y Aprende  la Inteligencia Artificial
   ai_resource_minecraft: Minecraft AI for Good
   ai_resource_minecraft_desc: 'Accede a recursos gratuitos que incluyen un plan de
     lecciones, videos, un plan de estudios en ciencias de la computación y entrenamientos

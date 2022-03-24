@@ -91,6 +91,7 @@ sv:
     facebook: 'Facebook'
     windowslive: 'Microsoft Account'
     microsoft_v2_auth: 'Microsoft Account'
+    clever: 'Smart'
     forgot_password: 'Glömt ditt lösenord?'
     need_confirmation: "Har du inte fått bekräftelseinstruktioner?"
     need_unlock: "Har du inte fått instruktioner för att låsa upp?"
@@ -201,6 +202,7 @@ sv:
       picture: 'Bild-lösenord'
       word: 'Hemligt ord'
       email: 'E-post'
+      clever: 'Smart'
   follower:
     invite_sent: 'Inbjuda skickades'
     added_teacher: '%{name} är tillagd som din lärare'
@@ -276,6 +278,7 @@ sv:
       district_dashboard: 'Distriktets kontrollpanel'
       label: 'Hej %{username}'
       stats: 'Mina framsteg'
+      my_projects: 'Mina projekt'
       settings: 'Mitt konto'
       logout: 'Logga ut'
       signin: 'Logga in'
@@ -289,6 +292,7 @@ sv:
       algebra_game: 'Algebra'
       applab: 'App Lab'
       artist: 'Konstnären'
+      basketball: 'Basket'
       bounce: 'Studsa'
       calc: 'Calc'
       dance: 'Dansparty'
@@ -300,6 +304,7 @@ sv:
       infinity: 'Oändligt'
       minecraft_designer: 'Minecraft'
       playlab: 'Spel-labb'
+      poetry: 'Poesi'
       sports: 'Sport'
       starwars: 'Star Wars'
       loading: 'Laddar...'
@@ -366,6 +371,7 @@ sv:
     remove_parent_email_label: "Ta bort"
     none: "Ingen"
     only_one_parent_email_supported_warning: "Obs! Vi kan för närvarande endast stödja en e-postadress till förälder / vårdnadshavare per konto."
+    encrypted: "krypterad"
   user_level:
     completed: 'Avklarade'
     tried: 'Försökte'
@@ -618,6 +624,8 @@ sv:
     open_response_body: "Tack för ditt svar!"
     correct_title: "Rätt"
     correct_body: "Det är det rätta svaret."
+  lesson_extras:
+    bonus_level: "Bonusnivå"
   dialog:
     ok: "Ok"
     startover_title: "Är du säker på att du vill börja om?"
@@ -793,6 +801,7 @@ sv:
   pd:
     form_labels:
       first_name: 'Förnamn'
+      last_name: 'Efternamn'
       email: 'E-post'
       school: 'Skola'
       school_name: 'Skolnamn'
@@ -804,6 +813,16 @@ sv:
         female: 'Kvinna'
         non_binary: 'Icke-binär'
         none: 'Föredrar att inte svara'
+      school_country:
+        canada: 'Kanada'
+        chile: 'Chile'
+        israel: 'Israel'
+        mexico: 'Mexiko'
+        thailand: 'Thailand'
+        uzbekistan: 'Uzbekistan'
+      ages:
+        ages_under_6: '< 6 år gammal'
+        ages_7_8: '7-8 år gammal'
       subjects:
         cs: 'Datavetenskap'
         math: 'Matte'
@@ -820,6 +839,7 @@ sv:
         other: "Övrigt:"
       robotics:
         kodable: 'Kodable'
+        microbit: 'Microbit'
         raspberry: 'Raspberry Pi'
         other: "Övrigt:"
       email_opt_in:
@@ -827,6 +847,7 @@ sv:
         opt_in_no: 'Nej'
   cookie_banner:
     accept: 'Jag håller med'
+  page_not_found_button: "Återvänd hem"
   copy: 'Kopiera'
   confirm: 'Bekräfta'
   parent_email_banner:

@@ -3,7 +3,7 @@
   "name": "button",
   "category": "UI controls",
   "category_key": "ui_controls",
-  "content": "Creates a button on the screen displaying the *text* provided and referenced by the given *id* at default location (0,0).\n\nMany apps use buttons to allow the user to initiate some app action. An event handler must be created for each type of user interaction with the button using `onEvent()` and the *id*.\n\n\n[bug]\n\nFound a bug in the documentation? Let us know at documentation@code.org\n\n[/bug]",
+  "content": "Creates a button on the screen displaying the *text* provided and referenced by the given *id* at default location (0,0).\n\nMany apps use buttons to allow the user to initiate some app action. An event handler must be created for each type of user interaction with the button using `onEvent()` and the *id*.\n\n\n",
   "examples": [
     {
       "name": "Example: Simple Turtle Control 2",
@@ -46,6 +46,10 @@
       "required": true,
       "description": "The text displayed within the button. "
     }
+  ],
+  "parameters": [
+    "id",
+    "text"
   ],
   "return_value": "No return value. Modifies screen only.",
   "short_description": "Creates a button on the screen displaying the text provided and referenced by the given id at default location (0,0).",

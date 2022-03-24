@@ -19,6 +19,9 @@ class Ability
       Script, # see override below
       Lesson, # see override below
       ScriptLevel, # see override below
+      ProgrammingEnvironment, # see override below
+      ProgrammingExpression, # see override below
+      ReferenceGuide, # see override below
       :reports,
       User,
       UserPermission,
@@ -74,8 +77,12 @@ class Ability
       can? :update, level
     end
 
-    can [:show_by_keys], ProgrammingExpression do |expression|
-      can? :read, expression
+    can [:read], ProgrammingEnvironment do |environment|
+      environment.published || user.permission?(UserPermission::LEVELBUILDER)
+    end
+
+    can [:read, :show_by_keys], ProgrammingExpression do |expression|
+      can? :read, expression.programming_environment
     end
 
     if user.persisted?
@@ -307,6 +314,11 @@ class Ability
       can?(:read, script)
     end
 
+    can :read, ReferenceGuide do |guide|
+      course_or_unit = guide.course_version.content_root
+      can?(:read, course_or_unit)
+    end
+
     # Handle standalone projects as a special case.
     # They don't necessarily have a model, permissions and redirects are run
     # through ProjectsController and their view/edit requirements are defined
@@ -345,6 +357,7 @@ class Ability
         Lesson,
         ProgrammingEnvironment,
         ProgrammingExpression,
+        ReferenceGuide,
         CourseOffering,
         UnitGroup,
         Resource,
@@ -396,6 +409,11 @@ class Ability
       end
     end
 
+    # This action allows levelbuilders to work on exemplars and validation in levelbuilder
+    if user.persisted? && user.permission?(UserPermission::LEVELBUILDER)
+      can [:get_access_token_with_override_sources, :get_access_token_with_override_validation], :javabuilder_session
+    end
+
     if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)
       # let them change the hidden state
       can :manage, LevelSource
@@ -416,6 +434,7 @@ class Ability
         CourseOffering,
         Script,
         Lesson,
+        ReferenceGuide,
         ScriptLevel,
         UserLevel,
         UserScript,

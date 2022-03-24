@@ -2,6 +2,10 @@
   "sk-SK": {
     "data": {
       "vocabularies": {
+        "code/dance-extras/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
         "event/dance-extras/unversioned": {
           "word": "Udalosť",
           "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
@@ -10,8 +14,12 @@
           "word": "Program",
           "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
         },
+        "code/minecraft/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
         "debugging/minecraft/unversioned": {
-          "word": "Hľadanie a odstraňovanie chýb",
+          "word": "Ladenie",
           "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
         },
         "program/minecraft/unversioned": {
@@ -26,8 +34,12 @@
           "word": "Cyklus",
           "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
         },
+        "code/hero/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
         "debugging/hero/unversioned": {
-          "word": "Hľadanie a odstraňovanie chýb",
+          "word": "Ladenie",
           "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
         },
         "program/hero/unversioned": {
@@ -58,32 +70,48 @@
           "word": "Program",
           "definition": "Séria krokov, ktoré boli zakódované do niečoho, čo môže byť spustené strojom."
         },
+        "code/flappy/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
         "debugging/flappy/unversioned": {
-          "word": "Hľadanie a odstraňovanie chýb",
+          "word": "Ladenie",
           "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
         },
         "program/flappy/unversioned": {
           "word": "Program",
           "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
         },
+        "code/hourofcode/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
         "debugging/hourofcode/unversioned": {
-          "word": "Hľadanie a odstraňovanie chýb",
+          "word": "Ladenie",
           "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
         },
         "program/hourofcode/unversioned": {
           "word": "Program",
           "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
         },
+        "code/frozen/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
         "debugging/frozen/unversioned": {
-          "word": "Hľadanie a odstraňovanie chýb",
+          "word": "Ladenie",
           "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
         },
         "program/frozen/unversioned": {
           "word": "Program",
           "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
         },
+        "code/iceage/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
         "debugging/iceage/unversioned": {
-          "word": "Hľadanie a odstraňovanie chýb",
+          "word": "Ladenie",
           "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
         },
         "program/iceage/unversioned": {
@@ -91,18 +119,23 @@
           "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
         },
         "code/artist/unversioned": {
-          "word": "Kód"
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
         },
         "debugging/artist/unversioned": {
-          "word": "Hľadanie a odstraňovanie chýb",
+          "word": "Ladenie",
           "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
         },
         "program/artist/unversioned": {
           "word": "Program",
           "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
         },
+        "code/gumball/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
         "debugging/gumball/unversioned": {
-          "word": "Hľadanie a odstraňovanie chýb",
+          "word": "Ladenie",
           "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
         },
         "program/gumball/unversioned": {
@@ -117,8 +150,16 @@
           "word": "Program",
           "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
         },
+        "code/dance/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
+        "code/aquatic/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
         "debugging/aquatic/unversioned": {
-          "word": "Hľadanie a odstraňovanie chýb",
+          "word": "Ladenie",
           "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
         },
         "program/aquatic/unversioned": {
@@ -130,39 +171,55 @@
           "definition": "Miesto, kde program pred vykonaním akcie kontroluje splnenie nejakej požiadavky."
         },
         "conditionals/aquatic/unversioned": {
-          "word": "Podmienky",
+          "word": "Podmienené príkazy",
           "definition": "Príkazy, ktoré sa spúšťajú iba po splnení určitých podmienok."
         },
         "loops/aquatic/unversioned": {
           "word": "Cykly",
           "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
         },
+        "code/starwars/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
         "debugging/starwars/unversioned": {
-          "word": "Hľadanie a odstraňovanie chýb",
+          "word": "Ladenie",
           "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
         },
         "program/starwars/unversioned": {
           "word": "Program",
           "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
         },
+        "code/mc/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
         "debugging/mc/unversioned": {
-          "word": "Hľadanie a odstraňovanie chýb",
+          "word": "Ladenie",
           "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
         },
         "program/mc/unversioned": {
           "word": "Program",
           "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
         },
+        "code/playlab/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
         "debugging/playlab/unversioned": {
-          "word": "Hľadanie a odstraňovanie chýb",
+          "word": "Ladenie",
           "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
         },
         "program/playlab/unversioned": {
           "word": "Program",
           "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
         },
+        "code/starwarsblocks/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
         "debugging/starwarsblocks/unversioned": {
-          "word": "Hľadanie a odstraňovanie chýb",
+          "word": "Ladenie",
           "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
         },
         "program/starwarsblocks/unversioned": {
@@ -181,15 +238,19 @@
           "word": "Kód"
         },
         "debugging/sports/unversioned": {
-          "word": "Hľadanie a odstraňovanie chýb",
+          "word": "Ladenie",
           "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
         },
         "program/sports/unversioned": {
           "word": "Program",
           "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
         },
+        "code/infinity/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
         "debugging/infinity/unversioned": {
-          "word": "Hľadanie a odstraňovanie chýb",
+          "word": "Ladenie",
           "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
         },
         "program/infinity/unversioned": {
@@ -200,13 +261,21 @@
           "word": "Udalosť",
           "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
         },
+        "code/basketball/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
         "debugging/basketball/unversioned": {
-          "word": "Hľadanie a odstraňovanie chýb",
+          "word": "Ladenie",
           "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
         },
         "program/basketball/unversioned": {
           "word": "Program",
           "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "code/dance-extras-2019/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
         },
         "event/dance-extras-2019/unversioned": {
           "word": "Udalosť",
@@ -215,6 +284,10 @@
         "program/dance-extras-2019/unversioned": {
           "word": "Program",
           "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "code/dance-2019/unversioned": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
         },
         "event/dance-2019/unversioned": {
           "word": "Udalosť",
@@ -358,7 +431,7 @@
           "definition": "Časť programu, ktorá nefunguje správne."
         },
         "debugging/courseb/2021": {
-          "word": "Hľadanie a odstraňovanie chýb",
+          "word": "Ladenie",
           "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
         },
         "click/courseb/2021": {
@@ -406,7 +479,7 @@
           "definition": "Zoznam krokov na dokončenie úlohy. "
         },
         "debugging/coursea/2021": {
-          "word": "Hľadanie a odstraňovanie chýb",
+          "word": "Ladenie",
           "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
         },
         "program/coursea/2021": {
@@ -458,7 +531,7 @@
           "definition": "Časť programu, ktorá nefunguje správne."
         },
         "debugging/coursec/2021": {
-          "word": "Hľadanie a odstraňovanie chýb",
+          "word": "Ladenie",
           "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
         },
         "program/coursec/2021": {
@@ -502,7 +575,7 @@
           "definition": "Časť programu, ktorá nefunguje správne."
         },
         "debugging/coursed/2021": {
-          "word": "Hľadanie a odstraňovanie chýb",
+          "word": "Ladenie",
           "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
         },
         "loop/coursed/2021": {
@@ -525,6 +598,10 @@
           "word": "Udalosť",
           "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
         },
+        "code/coursed/2021": {
+          "word": "Kódovanie",
+          "definition": "Písanie kódu/písanie inštrukcií pre počítač."
+        },
         "repeat/coursed/2021": {
           "word": "Opakovať",
           "definition": "Urobiť niečo znova."
@@ -534,7 +611,7 @@
           "definition": "Pokyn pre počítač. Veľké množstvo príkazov spolu tvorí algoritmy a počítačové programy."
         },
         "conditionals/coursed/2021": {
-          "word": "Podmienky",
+          "word": "Podmienené príkazy",
           "definition": "Príkazy, ktoré sa spúšťajú iba po splnení určitých podmienok."
         },
         "pseudocode/coursed/2021": {
@@ -562,7 +639,7 @@
           "definition": "Časť programu, ktorá nefunguje správne."
         },
         "debugging/express/2021": {
-          "word": "Hľadanie a odstraňovanie chýb",
+          "word": "Ladenie",
           "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
         },
         "sequencing/express/2021": {
@@ -590,6 +667,7 @@
           "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
         },
         "code/express/2021": {
+          "word": "Kódovanie",
           "definition": "písanie kódu/písanie inštrukcií pre počítač."
         },
         "loop/express/2021": {
@@ -609,7 +687,7 @@
           "definition": "Miesto, kde program pred vykonaním akcie kontroluje splnenie nejakej požiadavky."
         },
         "conditionals/express/2021": {
-          "word": "Podmienky",
+          "word": "Podmienené príkazy",
           "definition": "Príkazy, ktoré sa spúšťajú iba po splnení určitých podmienok."
         },
         "while_loop/express/2021": {
@@ -677,7 +755,7 @@
           "definition": "Časť programu, ktorá nefunguje správne."
         },
         "debugging/pre-express/2021": {
-          "word": "Hľadanie a odstraňovanie chýb",
+          "word": "Ladenie",
           "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
         },
         "program/pre-express/2021": {
@@ -741,7 +819,7 @@
           "definition": "Miesto, kde program pred vykonaním akcie kontroluje splnenie nejakej požiadavky."
         },
         "conditionals/coursee/2021": {
-          "word": "Podmienky",
+          "word": "Podmienené príkazy",
           "definition": "Príkazy, ktoré sa spúšťajú iba po splnení určitých podmienok."
         },
         "while_loop/coursee/2021": {
@@ -779,7 +857,7 @@
           "definition": "Cykly, ktoré majú vopred určený začiatok, koniec a prírastok."
         },
         "debugging/csd/2021": {
-          "word": "Hľadanie a odstraňovanie chýb",
+          "word": "Ladenie",
           "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
         },
         "program/csd/2021": {
@@ -797,7 +875,7 @@
           "word": "Podmienka"
         },
         "conditionals/csd/2021": {
-          "word": "Podmienky"
+          "word": "Podmienené príkazy"
         },
         "abstraction/csd/2021": {
           "word": "Abstrakcia"

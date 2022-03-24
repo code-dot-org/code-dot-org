@@ -4132,26 +4132,30 @@ es-ES:
           ayuda>></button></a>\n\nDespués de comentar en el foro, regresa aquí y haz
           clic a continuación para pasar a la siguiente etapa.\n"
       OPD-K5 CS Courses:
-        markdown: |+
-          # Planificación > Comenzar en Code.org
-
-
-          ## Paso 1: Elige un curso
-          Todos nuestros cursos, desde prelectores hasta estudiantes de secundaria, figuran en nuestro **[catálogo de cursos] (https://studio.code.org/courses)**. Para encontrar las lecciones de Fundamentos de las Ciencias de la Computación con las que has estado practicando, ve a nuestra ** [página primaria] (https://code.org/educate/curriculum/elementary-school)** y ve a la sección "Cursos". Todos nuestros cursos están disponibles sin costo. Chatea con colegas de tu escuela para determinar cómo se puede integrar el plan de estudios del curso con una variedad de materias.
-          ![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)
-          ***
-          ## Paso 2: Configura la sección de tu clase
-          Configura una sección en el aula para ver el progreso de tu estudiante, imprime tarjetas de inicio de sesión para tus estudiantes, administra tus cuentas e imprime certificados que pueden llevar a casa cuando terminen el curso. Haz clic en este enlace para **[ver un breve video](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)** que demuestra cómo configurar tu primera clase de informática en Code.org. También puedes encontrar los pasos en **[este artículo de soporte](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.
-          ![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)
-          ***
-          ## Paso 3: Asigna el curso a tu sección
-          Haz clic en el curso que estás enseñando; deberías ver una pantalla que se parece a la siguiente. Luego puedes hacer clic en "Asignar curso" y asignar ese curso a una de tus secciones.
-          ![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)
-          ***
-          ## Paso 4: ¡Comienza a enseñar!
-          Lo único que necesitas es una lección para llevar los conceptos informáticos a tu salón de clases. Una vez que veas el entusiasmo de tus estudiantes por las Ciencias de la Computación, ve más allá con planes de lecciones diarias para guiar a tus estudiantes, actividades desconectadas que puedes hacer sin una computadora y foros para conectarte con otros profesores.
-
-
+        markdown: "# Planificación > Empezar en Code.org\n\n\n## Paso 1: Elige un
+          curso\nTodos nuestros cursos, desde los de preescolar hasta los de secundaria,
+          aparecen en nuestro **[catálogo de cursos](https://studio.code.org/courses)**.
+          Para encontrar las lecciones de Fundamentos de Informática con las que has
+          estado practicando, busca en nuestra **[página de primaria](https://code.org/educate/curriculum/elementary-school)**
+          y desplázate hacia abajo hasta la sección \"Cursos\". Todos nuestros cursos
+          están disponibles sin coste alguno. Habla con los colegas de tu colegio
+          para determinar cómo se puede integrar el plan de estudios del curso con
+          una variedad de asignaturas.\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
+          Paso 2: Configura tu sección de clase\nConfigura una sección del aula para
+          ver el progreso de tus alumnos, imprimir tarjetas de acceso para tus alumnos,
+          gestionar sus cuentas e imprimir certificados que puedan llevar a casa cuando
+          terminen el curso. Pulsa este enlace para **[ver un breve vídeo](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
+          que muestra cómo configurar tu primera clase de informática en Code.org.
+          También puedes encontrar los pasos en **[este artículo de apoyo](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
+          Paso 3: Asigna el curso a tu sección\nPulsa en el curso que estás enseñando,
+          deberías ver una pantalla parecida a la de abajo. A continuación, puedes
+          hacer clic en \"Asignar curso\" y asignar ese curso a una de tus secciones.
+          \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
+          Paso 4: ¡Empieza a enseñar! \nTodo lo que se necesita es una lección para
+          llevar los conceptos de la informática a tu aula. Una vez que veas el entusiasmo
+          de tus alumnos por la informática, profundiza con planes de estudio diarios
+          para guiar a tus alumnos, actividades sin conexión que puedes hacer sin
+          ordenador y foros para conectar con otros profesores.\n\n\n\n\n"
       OPD-K5 CS Tips:
         markdown: |
           # Primeros pasos > Navegar este curso en línea
@@ -5964,25 +5968,25 @@ es-ES:
           - Prepararte para "dominar los conceptos básicos" de la computación revisando lo que sigue en el curso
       'Overview: Design Mode':
         markdown: |
-          # Bienvenido al Modo de diseño de laboratorio de aplicaciones
-          En el Laboratorio de aplicaciones, el "Modo de diseño" te permite arrastrar y soltar elementos de la interfaz de usuario en la aplicación.
+          # Bienvenido al Modo de Diseño del Laboratorio de Aplicaciones
+          En el Laboratorio de Aplicaciones, el "Modo de Diseño" te permite arrastrar y soltar elementos de la Interfaz de Usuario en la aplicación.
 
           ### Vocabulario
-          * ** Interfaz de usuario (IU) ** - Cómo una persona (usuario) interactúa con la computadora o la aplicación.
-          * ** Elementos u objetos de la IU **, como botones, imágenes, cuadros de texto, menús desplegables, pantallas, etc.
+          **Interfaz de Usuario (UI)** - Cómo una persona (usuario) interactúa con el ordenador o la aplicación.
+          * **Elementos UI** u objetos, como botones, imágenes, ventanas de texto, menús desplegables, pantallas, etc.
 
           ## Ejemplo
 
           <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
 
           <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
-          Verás un nuevo conjunto de interruptores sobre el área de la aplicación que le permite alternar entre "Modo de diseño" y "Modo de código".</p>
+          Verás un nuevo conjunto de interruptores sobre el área de la aplicación que te permiten alternar entre el "Modo Diseño" y el "Modo Código".</p>
 
-          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>Agregar un elemento es tan fácil como arrastrarlo y soltarlo en la aplicación donde lo desees. Una vez que está en la pantalla de la aplicación, puedes cambiar su posición, cambiar su tamaño y cambiar muchas otras propiedades al respecto.</p>
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>Añadir un elemento es tan fácil como arrastrarlo y soltarlo en la aplicación donde quieras. Una vez que esté en la pantalla de la aplicación, puedes cambiar su posición, su tamaño y muchas otras propiedades.</p>
 
-          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>La pestaña <em> Propiedades </em> muestra todo lo que puede cambiar sobre el aspecto de un elemento de la interfaz de usuario.</p>
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>La<em>pestaña</em> de Propiedades te muestra todo lo que puedes cambiar sobre el aspecto de un elemento de la interfaz de usuario.</p>
 
-          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>La <strong> ID del elemento </strong> es importante porque es cómo refieres al elemento en tu código. Discutiremos las ID de elementos más adelante.</p>
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>El <strong>ID del elemento</strong> es importante porque es la forma de referirse al elemento en su código. Más adelante hablaremos de los ID de los elementos.</p>
           </div>
 
           ![](https://images.code.org/01a31ac3be66deb6d01a92a1edfffd21-image-1476726587662.png)
@@ -5990,9 +5994,9 @@ es-ES:
 
           <div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 66%; float: right">
 
-          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>Puedes hacer que el texto que el usuario ve en el texto del botón sea lo que quieras.</p>
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>Puedes hacer que el texto que el usuario vea en el botón sea el que tu quieras.</p>
 
-          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span><strong>Nota: </strong> desplázate hacia abajo para ver otras propiedades, porque podría haber un elemento de la interfaz de usuario que está "oculto".</p>
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span><strong>Nota:</strong> Desplázate hacia abajo para ver otras propiedades de un elemento de la interfaz de usuario, que podría estar "oculto" más abajo.</p>
           </div>
 
           <div style="clear: both"></div>
@@ -6001,37 +6005,38 @@ es-ES:
           **¡Ahora inténtalo tú!**
       'Overview: If Statements':
         markdown: |+
-          # Sentencias si
+          # Sentencia `si`
 
-          ## Cómo funcionan las sentencias si
+          ## Cómo funcionan las sentencias `si`
 
           <img src="https://images.code.org/361556bbff61bf91e2c737f745582dff-image-1479418505481.png" style="float: right; margin-left: 20px; margin-right: 20px">
 
-          Las sentencias si te permiten *tomar una decisión que determine qué líneas de código deben ejecutarse a continuación.*
+          Las sentencias `si` te permiten *tomar una decisión que determina qué líneas de código deben ejecutarse a continuación.*
 
-          A la derecha, hay un diagrama que muestra los elementos de una sentencia `si` básica en JavaScript.
+          A la derecha hay un diagrama que muestra los elementos de una sentencia `si` básica en JavaScript.
 
-          Hay dos partes básicas en una sentencia si.
+          Hay dos partes básicas en una sentencia `si`.
 
-          1. Una condición por evaluar (una expresión booleana que evalúa a **verdadero** o **falso**)
-          2. Código que debería ejecutar *si* la expresión era verdadera; encerrada entre llaves
+          1. Una condición a ser evaluada (Una expresión booleana que se evalúa a **verdadera** o **falsa**)
+          2. Código que debe ejecutarse *si* la expresión es verdadera - encerrado entre llaves
 
-          ## Un ejemplo trabajado
+          ## Un ejemplo práctico
           <img src="https://images.code.org/ca716e009ddb8dc397eb5a651a1ac2d7-image-1479420772852.png" style="display: block; margin: auto; float: right">
 
           <p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">1.</span>
-          El programa se ejecuta línea por línea como es de esperar. Muestra un mensaje, luego le pide al usuario que ingrese un número. Cualquiera que sea el tipo de usuario, se almacenará en la variable <code>edad</code> y luego pasará a la siguiente línea...
+          El programa se ejecuta línea por línea como es de esperar. Muestra un mensaje y luego pide al usuario que introduzca un número.  Lo que el usuario escriba se almacenará en la variable <code>edad</code> y luego pasa a la siguiente línea...
           </p>
 
           <p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">2.</span>
-          Cuando se encuentra la sentencia <code> si</code>, lo que <em>primero</em> hace es evaluar la condición entre paréntesis. Comprueba si, en este punto del programa, el valor en una variable <code>edad</code> es mayor o igual a 18. Si es así, decimos que la expresión "<strong>devuelve verdadero</ fuerte> ". De lo contrario, devuelve falso.
+          Cuando se encuentra la sentencia <code>`si`</code> lo <em>primero</em> que hace es evaluar la condición en el paréntesis. Comprueba si, en este punto del programa, el valor de una variable <code>edad</code> es mayor o igual que 18.  Si lo es, entonces decimos que la expresión "<strong>devuelve verdadero</strong>".  En caso contrario, devuelve falso.
           </p>
 
           <p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">3.</span>
-          Estas sentencias de console.log <em>solo</em> se ejecutarán si la sentencia es verdadera. Las llaves encierran todo el código que debe ejecutarse si, y solo si, la expresión es verdadera. De lo contrario, toda la sección de código encapsulada en la sentencia si se <em>omite</em>.
+          Estas sentencias console.log <em>sólo</em> se ejecutarán si la expresión era verdadera. Los corchetes rodean todo el código que debe ejecutarse `si`, y sólo `si`, la expresión era verdadera. En caso contrario, toda la sección de código incluida en la sentencia `si` será <em>omitida</em>.
+          </p>
 
           <p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">4.</span>
-          La ejecución comienza aquí, en la primera línea después de la llave de cierre de la sentencia si. Esta línea <em>siempre</em> se ejecutará, pero ten en cuenta que si el usuario ingresó una edad menor de 18 años, se omitirá toda la sentencia if, y solo dirá "Gracias por verificar". (Arreglaremos esta incomodidad pronto).
+          La ejecución comienza aquí, en la primera línea después de la llave de cierre de la sentencia `si`.  Esta línea <em>siempre</em> se ejecuta, pero fíjate que si el usuario introduce una edad inferior a 18 años, se salta toda la sentencia `si`, y sólo dice "Gracias por verificar".  (Arreglaremos esta torpeza pronto).
 
           </p>
 
@@ -6039,43 +6044,36 @@ es-ES:
 
 
       'Overview: Images':
-        markdown: |+
-          # Imágenes
-
-          ## Ingresa una URL de una imagen en la web
-
-          <img src="https://images.code.org/acf4542eda586e7b73bc27dd8746848c-image-1477675154724.png" style="width: 250px; float: right">
-
-          Hay varias formas de obtener la URL de una imagen.
-
-          Una técnica común (que se muestra a la derecha) es encontrar una imagen que te guste en una página web y luego hacer clic derecho (o ctrl-clic), y elegir una opción que diga algo como "Copiar dirección de imagen", y luego puedes pegarla en el cuadro de texto en el Laboratorio de aplicaciones.
-
-          Si no estás seguro, también puedes elegir una opción como "Abrir imagen en una nueva pestaña" que aísla la imagen por sí misma y la URL se mostrará en la barra de direcciones, que puedes copiar/pegar en el Laboratorio de aplicaciones.
-
-          **Error común**: Uso de la URL de un *sitio web de búsqueda de imágenes* en lugar de una URL de la imagen en sí.
-
-          * Asegúrate de obtener la ruta a un archivo de imagen real, algo que termina con **.Jpg**, **.gif** o **.png**.
-          * Una URL que comienza así: `https://www.google.com/search?q=cat&espv=2&biw=1497....` probablemente sea incorrecta.
-
-
-          ## Sube tus propias imágenes
-
-          Si has guardado imágenes en tu computadora, puedes cargarlas en el **administrador de recursos** del laboratorio de aplicaciones. Simplemente **haz clic en Cargar archivo** y siga los cuadros de diálogo en pantalla.
-
-          Para las imágenes, el archivo debe ser de tipo: **.jpg**, **.png** o **.gif**
-
-          Una vez que hayas cargado la imagen, debes **Elegirla** para configurar la imagen en ese archivo. Si agregas varias imágenes, las verás listadas cada vez que cargues un archivo y puedes elegir usar *cualquier* archivo que ya hayas cargado.
-
-          ![](https://images.code.org/d64d7e3dadc882897e450b00a0fc6cb2-image-1476896824985.gif)
-
-          ### ¡Haz clic en Continuar para probarlo!
-
-
+        markdown: "# Imágenes\n\n## Introduce una URL de una imagen en la web\n\n<img
+          src=\"https://images.code.org/acf4542eda586e7b73bc27dd8746848c-image-1477675154724.png\"
+          style=\"width: 250px; float: right\">\n\nHay varias formas de obtener la
+          URL de una imagen.  \n\nUna técnica común (mostrada a la derecha) es encontrar
+          una imagen que te guste en una página web y luego hacer clic con el botón
+          derecho del ratón (o ctrl-clic) y elegir una opción que diga algo así como
+          \"Copiar la dirección de la imagen\", entonces puedes pegarla en el cuadro
+          de texto del Laboratorio de Aplicaciones.\n\nSi no estás seguro, también
+          puedes elegir una opción como \"Abrir imagen en una pestaña nueva\" que
+          aísla la imagen por sí misma y la URL se mostrará en la barra de direcciones,
+          que puedes copiar/pegar en el Laboratorio de Aplicaciones.\n\n**Error común**:
+          Utilizar la URL de un *sitio web de búsqueda de imágenes* en lugar de la
+          URL de la propia imagen.\n\n* Asegúrate de obtener la ruta de un archivo
+          de imagen real - algo que termine en **.jpg**, **.gif** o **.png**.\n* Una
+          URL que empiece así: `https://www.google.com/search?q=cat&espv=2&biw=1497....`
+          es probablemente errónea.\n\n\n## Sube tus propias imágenes\n\nSi tienes
+          imágenes guardadas en tu ordenador, puedes subirlas al **administrador de
+          recursos** del Laboratorio de Aplicaciones.  Sólo tienes que **hacer clic
+          en Subir archivo** y seguir los diálogos que aparecen en pantalla.\n\nPara
+          las imágenes el archivo debe ser del tipo **.jpg**, **.png**, o **.gif**\n\nUna
+          vez que hayas subido la imagen, tienes que **seleccionarla** para establecer
+          la imagen en ese archivo. Si añades varias imágenes, las verás todas en
+          la lista cada vez que subas un archivo y podrás elegir usar *cualquier*
+          archivo que ya hayas subido.\n\n![](https://images.code.org/d64d7e3dadc882897e450b00a0fc6cb2-image-1476896824985.gif)\n\n###
+          ¡Haz clic en Continuar para probarlo!\n\n\n"
       'Overview: onEvent':
         markdown: |
-          # Responder a la entrada del usuario
+          # Respondiendo a la Entrada del Usuario
 
-          Tendrás que sumergirte en el Dodo de código para que realmente responda a los usuarios. Laboratorio de aplicaciones espera para responder a ciertos **eventos** que ocurren en un programa. El bloque `enEvento` especifica en qué elemento de la interfaz de usuario esperar un evento.
+          Tendrás que entrar en el Modo Código para hacer que realmente responda a los usuarios. Laboratorio de Aplicaciones espera para responder a ciertos **eventos** que ocurren en un programa. El bloque `enEvento` especifica en qué elemento de la interfaz de usuario se debe esperar un evento.
 
           ## EnEvento
 
@@ -6084,44 +6082,36 @@ es-ES:
           <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 4; width: 100%">
 
           <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
-          Cambiar al Modo de código</p>
+          Cambiar al Modo Código</p>
 
           <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
           Arrastra un bloque <code>enEvento</code> de la caja de herramientas al espacio de trabajo.</p>
 
           <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>
-          Usa el menú desplegable para seleccionar la <em> ID </em> del elemento de la interfaz de usuario que deseas configurar para responder a algún evento. Las ID de todos los elementos de la interfaz de usuario agregados en modo de diseño se enumerarán aquí.</p>
+          Utiliza el menú desplegable para seleccionar el <em>ID</em> del elemento de interfaz de usuario que quieras configurar para que responda a algún evento. Los IDs de todos los elementos de la interfaz de usuario añadidos en el modo de diseño aparecerán listados aquí.</p>
           <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>
-          Usa el menú desplegable para seleccionar el <em>tipo</em> de evento al que desea responder. (Solo usa "clic" por ahora).</p>
+          Utiliza el menú desplegable para seleccionar el <em>tipo</em> de evento al que quieres responder. (Por ahora, sólo utiliza "clic").</p>
 
           <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>
-          Agrega código dentro de la función que desea ejecutar <em>cuando</em> el usuario desencadena el evento. La función se ejecutará una vez cada vez que el usuario active el evento específico.</p>
+          Introduce el código dentro de la función que quieres ejecutar <em>cuando</em> el usuario activa el evento.  La función se ejecutará una vez cada vez que el usuario active el evento específico.</p>
 
           </div>
 
           ![](https://images.code.org/9b506faaaadf61338dc738a4eafb66b2-image-1476740205599.png)
       'Overview: setPosition':
-        markdown: |
-          # configurarPosición y dimensiones de pantalla
-
-          El comando `configurarPosición` te permite mover elementos de la IU a una posición arbitraria en la pantalla.
-
-          <img src="https://images.code.org/ee55080bb341528ca7e8ebc79f9f978b-image-1490369263385.27.12 AM.png" style="display: block; margin: auto">
-
-          Tú (quizás obviamente) necesitas conectar números reales en estos parámetros de `configurarPosición` para que tenga algún efecto. Los números para configurarPosición **coordenadas x e y de la pantalla**.
-
-          **Sugerencias:**
-
-          * 0,0 es la esquina superior izquierda.
-          * Especifica una ubicación según la cantidad de píxeles desde la **izquierda y abajo** desde la parte superior de la pantalla.
-          * La pantalla es **320 por 450 píxeles**.
-          * Puedes **desplazarte sobre la pantalla** para ver la coordenada x, y de cualquier punto.
-
-          <div style="width: 100%; text-align: center">
-          <img src="https://images.code.org/8b346602d75f2877c64e1793b6a04302-image-1476889124747.png">
-
-          <img src="https://images.code.org/fc7e830fa2ea994b885c76618b484dfa-image-1476889137756.gif">
-          </div>
+        markdown: "# configurarPosición y Dimensiones de Pantalla\n\nEl comando `configurarPosición`
+          te permite mover los elementos de la interfaz de usuario a una posición
+          arbitraria en la pantalla.\n\n<img src=\"https://images.code.org/ee55080bb341528ca7e8ebc79f9f978b-image-1490369263385.27.12
+          AM.png\" style=\"display: block; margin: auto\">\n\nEs evidente que hay
+          que introducir números reales en estos parámetros de `configurarPosición`
+          para que tenga algún efecto.  Los números para configurarPosición **coordenadas
+          x e y de la pantalla**.\n\n**Pistas:**\n\n* 0,0 es la esquina superior izquierda.\n*
+          Especifica una ubicación según la cantidad píxeles desde la **izquierda
+          y hacia abajo** desde la parte superior de la pantalla.  \n* La pantalla
+          es de **320 por 450 píxeles**.  \n* Puedes **desplazarte por encima de la
+          pantalla** para ver la coordenada x,y de cualquier punto.\n\n<div style=\"width:
+          100%; text-align: center\">\n<img src=\"https://images.code.org/8b346602d75f2877c64e1793b6a04302-image-1476889124747.png\">\n\n<img
+          src=\"https://images.code.org/fc7e830fa2ea994b885c76618b484dfa-image-1476889137756.gif\">\n</div>\n"
       Prepare for your presentation:
         content1: descripción aquí
         markdown: |-
@@ -10065,15 +10055,15 @@ es-ES:
           superior derecha de la página principal de Code.org.\n\n![](https://images.code.org/35d6218f47f5b0b00975369dd9f5bea5-image-1573169909110.38.03
           PM.png)\n\n"
       OPD-K5 CS Courses_copy:
-        markdown: "# Empezando en Code.org\n\n\n## Paso 1: Elegir un curso\nTodos
-          nuestros cursos, desde los de pre-lectores hasta los de bachillerato, están
-          listados en nuestro **<a href=\"https://studio.code.org/courses\" target=\"blank\">catálogo
+        markdown: "# Empezando en Code.org\n\n\n## Paso 1: Elige un curso\nTodos nuestros
+          cursos, desde preescolar hasta los de bachillerato, están incluidos en nuestro
+          **<a href=\"https://studio.code.org/courses\" target=\"blank\">catálogo
           de cursos</a>**. Todos nuestros cursos están disponibles sin coste alguno.
           Habla con los colegas de tu colegio para determinar cómo se puede integrar
           el plan de estudios del curso con una variedad de asignaturas.\n\n<table
           style=\"width:100%; border-style:none;\">\n  <tr>\n    <th style=\"background-color:#ff9900;
           text-align:center; border-style:none; font-weight:bold;\"\"\">\n      <b>Curso
-          A</b><br/>\n      <i>Jardín de infancia</i>\n    </th>\n    <th style=\"background-color:#f1c232;
+          A</b><br/>\n      <i>Preescolar</i>\n    </th>\n    <th style=\"background-color:#f1c232;
           text-align:center; border-style:none;\"\"\">\n        Curso B<br/>\n        <i>Primer
           grado</i>\n    </th>\n    <th style=\"background-color:#b8bf0d; text-align:center;
           border-style:none;\"\"\">\n        Curso C<br/>\n        <i>Segundo grado</i>\n
@@ -10099,15 +10089,15 @@ es-ES:
           border-style:none;\">Conceptos</td>\n  </tr>\n  <tr>\n    <td style=\"background-color:#f9cb9c;
           color:black; border-style:none; vertical-align: text-top;\"\">\n      <ul
           style=\"font-style:italic;\">\n        <li>Ciudadanía Digital</li>\n        <li>Secuenciación</li>\n
-          \       <li>Bucles</li>\n        <li>Sucesos</li>\n      </ul>\n    </td>\n
+          \       <li>Bucles</li>\n        <li>Eventos</li>\n      </ul>\n    </td>\n
           \   <td style=\"background-color:#ffe599; color:black; border-style:none;
           vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
           \       <li>Ciudadanía Digital</li>\n        <li>Secuenciación</li>\n        <li>Bucles</li>\n
-          \       <li>Repercusiones de la informática</li>\n        <li>Sucesos</li>\n
+          \       <li>Repercusiones de la informática</li>\n        <li>Eventos</li>\n
           \     </ul>\n    </td>\n    <td style=\"background-color:#d2da0e; color:black;
           border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
           \       <li>Ciudadanía Digital</li>\n        <li>Secuenciación</li>\n        <li>Sistema
-          Binario</li>\n        <li>Bucles</li>\n        <li>Sucesos</li>\n        <li>Datos</li>\n
+          Binario</li>\n        <li>Bucles</li>\n        <li>Eventos</li>\n        <li>Datos</li>\n
           \     </ul>\n    </td>\n    <td style=\"background-color:#68ebf5; color:black;
           border-style:none; vertical-align: text-top;\"\">\n      <ul style=\"font-style:italic;\">\n
           \       <li>Secuenciación</li>\n        <li>Sucesos</li>\n        <li>Bucles</li>\n
@@ -10146,10 +10136,10 @@ es-ES:
           \       <button>Ver el curso</button><br/>\n      </a>\n      <a href=\"https://curriculum.code.org/csf/coursee\"
           target=\"_blank\" style='text-decoration:none'>\n        <button>Planes
           de estudio</button>\n      </a>\n    </td>  \n  </tr>\n</table>\n<br/>\n\n\n***\n##
-          Paso 2: Configurar la sección del aula\nConfigura una sección de aula para
+          Paso 2: Configura la sección del aula\nConfigura una sección de clase para
           ver el progreso de tus alumnos, imprimir tarjetas de acceso para tus alumnos,
           gestionar sus cuentas e imprimir certificados que puedan llevar a casa cuando
-          terminen el curso. Haz clic en este enlace para **<a href=\"https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b\"
+          terminen el curso. Haz clic en este enlace **<a href=\"https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b\"
           target=\"blank\">ver un breve vídeo</a>** que muestra cómo configurar tu
           primera clase de informática en Code.org. También puedes encontrar los pasos
           en **<a href=\"https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section\"
@@ -10157,11 +10147,10 @@ es-ES:
           el curso a tu sección\nHaz clic en el curso que estás impartiendo. Luego
           puedes hacer clic en \"Asignar curso\" y asignas ese curso a una de tus
           secciones. \n***\n## Paso 4: ¡Empieza a enseñar! \nTodo lo que necesitas
-          es una lección para llevar los conceptos de las ciencias de la computación
-          a tu clase. Una vez que veas el entusiasmo de tus alumnos por las ciencias
-          de la computación, ve más allá con planes de lecciones diarias para guiar
-          a tus alumnos, actividades desconectadas que puedes hacer sin ordenador
-          y foros para conectar con otros profesores.\n\n\n\n"
+          es una lección para llevar los conceptos de informática a tu clase. Una
+          vez que veas el entusiasmo de tus alumnos por la informática, ve más allá
+          con planes de estudio diarios para guiar a tus alumnos, actividades desconectadas
+          que puedes hacer sin ordenador y foros para conectar con otros profesores.\n\n\n\n"
       OPD-K5 Connect_copy:
         markdown: "#Siguientes pasos \n\n\n## Realiza la encuesta final\n\nTanto si
           has hecho el curso completo como si no, queremos conocer tu opinión. Por
@@ -10401,9 +10390,9 @@ es-ES:
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       ConditionalsWithCards-Unplugged_2021:
         markdown: |-
-          # Condicionales con cartas
+          # Condicionales con Cartas
 
-          Juega a un juego de cartas y crea reglas como "Si saco una carta roja, me llevo un punto" y "Si saco una carta negra, te llevas un punto".
+          Participa en un juego de cartas y crea reglas como "Si saco una carta roja, me llevo un punto" y "Si saco una carta negra, te llevas un punto".
       DesigningForAccessibilityMarkdownLevel_2021:
         markdown: |-
           # Diseñando para ser accesible
@@ -10426,9 +10415,9 @@ es-ES:
           Esta lección introduce el concepto de programación de los bucles a través de una actividad de baile.
       GraphPaperProgramming-Unplugged_2021:
         markdown: |
-          #Programación de papel cuadriculado
+          # Programación en Papel Cuadriculado
 
-          Escribe algoritmos que tus compañeros puedan usar para dibujar imágenes.
+          Escribe algoritmos que tus compañeros puedan utilizar para hacer dibujos.
       HappyMaps-Unplugged_2021:
         markdown: |
           # Mapas Felices
@@ -12327,17 +12316,25 @@ es-ES:
           de estar preparado para seguir adelante, ¡consulta con tu profesor!\n"
       CSD Games Properties multi predict_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: un sprite de abeja en el centro de la pantalla
+        - text: un sprite de abeja en la esquina inferior derecha
+          correct: true
+        - text: dos sprites de abejas, uno en el centro y otro en la esquina inferior
+            derecha
+        - text: tres sprites de abejas, todos en diferentes lugares
+        - text: nada, se producirá un error
         questions:
-        - {}
+        - text: "¿Qué mostrará el programa?"
+        content1: Mira el código de abajo y adivina dónde aparecerá el sprite de la
+          abeja.
+        title: Posicionamiento del Sprite de la Abeja
       CSD Games Properties practice_2021:
         display_name: Propiedades de Sprite
+        description: Prueba las propiedades de los sprites que has aprendido aquí
       CSD Games variables practice_2021:
         display_name: Variables Practicar
+        description: Elige una de las siguientes actividades para practicar el uso
+          de variables.
       CSD Header Size MC_2018_2019_pilot_2021:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -12372,13 +12369,16 @@ es-ES:
         title: 'Prueba Fin de Proyecto: Ordenadores y Resolución de Problemas '
       CSD U2 CSS practice_pilot_2021:
         display_name: Estilos de texto con CSS
+        description: "¡Prueba tus nuevas habilidades en estos desafíos diferentes!"
       CSD U2 Image challenge_pilot_2021:
         display_name: Añadiendo Imágenes
+        description: Encuentra aquí un desafío adicional o un nuevo tipo de código.
       CSD U2 Image practice_pilot_2021:
         display_name: Añadiendo Imágenes
+        description: Practica tus nuevas habilidades aquí.
       CSD U2 image debug match_pilot_2021:
         answers:
-        - {}
+        - text: https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34%20PM.png
         - text: <img src="https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01
             PM.png">
         - text: <img src="https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47
@@ -12407,6 +12407,33 @@ es-ES:
           # Punto de control de la planificación
 
           Revise los planes de los alumnos antes de permitirles continuar en el resto de los niveles.
+        markdown: |
+          # Tu Página Web Personal
+
+          En los próximos niveles, completarás y publicarás tu página web personal.  Esta es tu oportunidad de compartir tus ideas con el mundo, y también de mostrar todo lo que has aprendido.
+
+          Necesitarás...
+
+          * Tu guía de proyecto completada
+          * Las imágenes que has descargado
+          * La rúbrica del proyecto
+
+          Estas son las cosas que has aprendido...
+
+          * Cómo usar HTML para estructurar el contenido de tu página
+          * Cómo usar CSS para dar estilo al texto, los colores y el diseño de tu página
+          * Cómo dar formato a tu código para que sea más fácil de leer
+          * Cómo depurar el código HTML y CSS
+          * Cómo utilizar las imágenes de forma responsable
+          * Cómo proteger tu información personal en línea
+
+          ## Ejemplos
+
+          <div style="float: left; text-align:center;"><strong>El Perro Más Bonito</strong><br /><a href="https://codeprojects.org/vfqqBSl9WL5EmWlRTaCuyGL523thd_RLmA6fZjoahHo/" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/be0c20dba6319b34dc07a9f87ae615fa-image-1565304900473.png" alt="Dog Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Mi Viaje</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhHHDE0tb28ed-9-scxvFYE0" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/51b787b6a25663e092b3f55e051e9a94-image-1565630570417.png" alt="Trip Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Instrumentos Musicales</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhMuNKEOTdyH5PPeUpDimEeY" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/82323a78b17b69101dd6e98a6a21c55c-image-1565630573896.png" alt="Instrument Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Club de Reciclaje</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhBiffg8HpOk2lRx1kd5sgaw" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/5b0044bfd92d44c97cd74d82f1933daa-image-1565630578147.png" alt="Recycling Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Haikus</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhLgd_3k2ffeKaGZZO7Ebvgs" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/40892c338c78da445310ddfb7cf63127-image-1565630595445.png" alt="Haiku Sample Page"></a></div>
       CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
         answers:
         - text: perro.rotacion &lt; gato.rotacion
@@ -12434,6 +12461,14 @@ es-ES:
         questions:
         - text: "¿Qué resultado se imprimirá en la consola con este programa?"
         title: Título
+        markdown: |
+          # Expresiones Booleanas
+
+          **Expresión booleana** - una expresión que sólo puede evaluarse como `Verdadero` o `Falso`.
+
+          # Adivinar
+
+          Lee el código de abajo. Hay algunos símbolos nuevos que no conoces. Adivina qué significan e intenta responder a la siguiente pregunta
       CSD U3 Card Examples_2018_2019_pilot_2021:
         content1: descripción aquí
         markdown: |-
@@ -12505,6 +12540,7 @@ es-ES:
         title: dibujarSprites
       CSD U3 drawing practice choice_2021:
         display_name: Practica
+        description: "¡Practica mucho!"
       CSD U3 game intro_2018_2019_pilot_2021:
         content1: descripción aquí
         markdown: |-
@@ -12625,48 +12661,17 @@ es-ES:
         display_name: Desafíos
       CSD web conditionals practice choice_2021:
         display_name: Condicionales Practicar
+        description: Practica el uso de booleanos y condicionales con estas actividades.
       CSD web draw loop practice choice_2021:
         display_name: Practica
+        description: Prueba a utilizar el bucle de dibujo con estas actividades.
       CSD web movement practice choice_2021:
         display_name: Practica
+        description: Prueba a utilizar el bucle de dibujo con estas actividades.
       CSD web text practice choice_2021:
         display_name: Practica
+        description: Pon a prueba tus conocimientos de texto en estas actividades.
       CSDU6 Innovation_2021:
-        markdown: |+
-          #Investigación sobre la innovación
-
-          Elija uno de los siguientes temas para investigar. Querrá encontrar información sobre algunos de los dispositivos informáticos innovadores más recientes relacionados con su categoría.
-
-          ## Tecnología vestible
-          La tecnología vestible incluye cualquier forma de informática diseñada para ser llevada por el usuario, ya sea integrada en la ropa o como accesorio. Muchos wearables, como los podómetros inteligentes, se solapan en cierto modo con la salud y la seguridad, ya que el dispositivo es a la vez wearable _y_ pretende ayudar a mejorar la salud personal.
-
-          ## Salud y seguridad
-          Este tema tan amplio incluye tanto la tecnología de consumo (cosas que usted podría utilizar para mejorar su salud o seguridad) como la tecnología profesional (equipos que podría utilizar un médico u otro profesional).
-
-          ## Agricultura
-          Puede que la agricultura no sea un tema obvio, pero las innovaciones tecnológicas han tenido un gran impacto en la forma en que abordamos la agricultura. Esto incluye la incorporación de ordenadores a los equipos agrícolas existentes, el uso de sensores y robótica para controlar los cultivos y el análisis de datos para mejorar la eficiencia y la sostenibilidad.
-
-          ## Fabricación
-          Los avances en la creación rápida de prototipos, la robótica industrial y la automatización han tenido un gran impacto en la forma de producir bienes. Ya sea la tecnología que permite la fabricación asequible a pequeña escala (como las impresoras 3D y las cortadoras láser) o la integración de los ordenadores en el trabajo de las fábricas, hay muchas áreas interesantes que investigar aquí.
-
-          ## Arte y diseño
-          La intersección entre la expresión artística y la informática puede dar resultados impresionantes e inesperados. Aunque es menos probable encontrar productos comerciales relacionados con el arte y el diseño, sí que se puede encontrar una gran variedad de creaciones caseras que utilizan todo tipo de dispositivos informáticos de forma creativa y expresiva.
-
-          ## Casa inteligente
-          El sueño de una casa que entienda e incluso se anticipe a tus necesidades está más cerca que nunca. Tanto si se controlan explícitamente mediante comandos de voz como si se utilizan sensores para controlar y responder a las condiciones cambiantes, los dispositivos domésticos inteligentes se encargan de cualquier número de tareas mundanas o repetitivas en la casa.
-
-
-          # Consideraciones sobre la investigación
-
-          Cuando busques dispositivos sobre tu tema, ten en cuenta las siguientes consideraciones:
-
-          * Concéntrese en las soluciones basadas en hardware sobre los programas de software
-          * Céntrese en las innovaciones recientes por encima de las antiguas
-          * Sigue lo que te interesa
-
-          Además de los sitios recomendados para cada tema, considera la posibilidad de mirar hacia los distintos sitios web de financiación colectiva (como Kickstarter e Indiegogo) para ver los productos que aún no han salido al mercado.
-
-
         teacher_markdown: |+
           A continuación, se muestran algunos sitios recomendados para que los estudiantes comiencen su investigación.  Aunque estos sitios son generalmente apropiados para la escuela, el contenido dentro de ellos cambia con frecuencia, por lo que **sugerimos encarecidamente que compruebes cada sitio para ver si hay contenido inapropiado antes de compartirlo con los estudiantes**.
 
@@ -12698,6 +12703,44 @@ es-ES:
 
           * [CNet](https://www.cnet.com/smart-home/)
           * [IoT Evolution](http://www.iotevolutionworld.com/smart-home/)
+
+
+        markdown: |+
+          # Investigación sobre la Innovación
+
+          Elige uno de los siguientes temas para investigar. Querrás encontrar información sobre algunos de los dispositivos informáticos innovadores más recientes relacionados con tu categoría.
+
+          ## Tecnología Portable
+          La tecnología vestible incluye cualquier forma de informática diseñada para ser llevada por el usuario, ya sea integrada en la ropa o como accesorio. Muchos dispositivos para llevar puestos, como los podómetros inteligentes, se solapan en cierto modo con la salud y la seguridad, ya que el dispositivo es a la vez vestible _y_ pretende ayudar a mejorar la salud personal.
+
+          ## Salud y Seguridad
+          Este tema tan amplio incluye tanto la tecnología de consumo (cosas que puedes usar para mejorar tu salud o seguridad) como la tecnología profesional (equipos que puede usar un médico u otro profesional).
+
+          ## Agricultura
+          Puede que la agricultura no sea un tema obvio, pero las innovaciones tecnológicas han tenido un gran impacto en la forma en que concebimos la agricultura. Esto incluye la incorporación de ordenadores a los equipos agrícolas existentes, el uso de sensores y robótica para controlar los cultivos y el análisis de datos para mejorar la eficiencia y la sostenibilidad.
+
+          ## Fabricación
+          Los avances en la creación rápida de prototipos, la robótica industrial y la automatización han tenido un gran impacto en la forma de producir bienes. Ya sea la tecnología que permite la fabricación asequible a pequeña escala (como las impresoras 3D y las cortadoras láser) o la integración de los ordenadores en el trabajo de la fábrica, hay muchas áreas interesantes para investigar aquí.
+
+          ## Arte y Diseño
+          La intersección entre la expresión artística y la informática puede dar resultados impresionantes e inesperados. Aunque es menos probable encontrar productos comerciales relacionados con el arte y el diseño, sí que se puede encontrar una gran variedad de creaciones caseras que utilizan todo tipo de dispositivos informáticos de forma creativa y expresiva.
+
+          ## Casa Inteligente
+          El sueño de una casa que entienda e incluso se anticipe a tus necesidades está más cerca que nunca. Tanto si se controlan explícitamente mediante comandos de voz como si se utilizan sensores para controlar y responder a las condiciones cambiantes, los dispositivos domésticos inteligentes se encargan de cualquier número de tareas mundanas o repetitivas en la casa.
+
+
+          # Consideraciones sobre la Investigación
+
+          Cuando busques dispositivos sobre tu especialidad, ten en cuenta las siguientes consideraciones:
+
+          * Céntrate en las soluciones basadas en hardware sobre los programas de software
+          * Céntrate en las innovaciones recientes por encima de las antiguas
+          * Sigue lo que te interesa
+
+          # Comenzando tu Investigación
+
+          Consulta con tu profesor los sitios web recomendados para comenzar tu investigación. También puedes utilizar algunas de las palabras clave anteriores para empezar a buscar ideas específicas en Internet. Por ejemplo, considera la posibilidad de buscar en los distintos sitios web de financiación colectiva (como Kickstarter e Indiegogo) para ver los productos que aún no han salido al mercado.
+
 
 
       Design a Screen for your App_2021:
@@ -12840,3 +12883,173 @@ es-ES:
           con planes de lecciones diarias para guiar a tus alumnos, actividades sin
           conexión que puedes hacer sin ordenador y foros para conectar con otros
           profesores.\n\n\n\n"
+      ml-club app-choice parent:
+        display_name: Personaliza tu Aplicación
+      ml-intro app lab-book recommender 5-2021:
+        display_name: Personaliza tu Aplicación
+      CSD HTML project Lists_2021:
+        description: Echa un vistazo a estas nuevas etiquetas que te permitirán añadir
+          listas a tu página web.
+        display_name: Listas HTML
+      CSD HTML project Review_2021:
+        description: Aquí tienes algunas etiquetas HTML que habrás visto en las últimas
+          lecciones.  Puedes utilizarlas para repasar las etiquetas que podrías necesitar
+          para tu página web.
+        display_name: Revisión de HTML
+      CSD U2 Sample CSS text_2021:
+        markdown: |
+          # Ejemplo de Sitio Web
+
+          Pulsa el sitio web que aparece a continuación para descubrir algunos nuevos tipos de estilo para tus páginas.
+
+          [![](https://images.code.org/4343b7c16ca18f6d2c003bf95d756f42-image-1585189253769.png)](https://codeprojects.org/g4ZEsGYTllMm_2Ien3QDtJ4wya6onDyRVzRjWiKNdLo/)
+      CSD Web Headings challenge_2021:
+        description: Aquí hay algunos códigos HTML adicionales para probar, y un área
+          de Juego Libre para usarlos.
+        display_name: Cabeceras HTML
+      CSD Web Headings practice_2021:
+        description: Prueba lo que has aprendido en una o varias de las siguientes
+          actividades.
+        display_name: Cabeceras HTML
+      CSD Web Sample Pages_2021:
+        content1: Mira estos ejemplos de páginas web y decide qué propósitos tienen
+          sus creadores y visitantes.
+        markdown: |+
+          # Ejemplos de Páginas Web Personales
+
+          <div style="float: left; text-align:center;"><strong>El Perro Más Bonito</strong><br /><a href="https://codeprojects.org/uqvtQ_zKapQ2XocJkdGZypbJWM1nDMCpts1dN7NZ9wQ" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/be0c20dba6319b34dc07a9f87ae615fa-image-1565304900473.png" alt="Dog Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Mi Viaje</strong><br /><a href="https://codeprojects.org/qNceXIsgEYKraWZxd0Lq9uOO7Jj3yBfcp8pHR4uXq8c" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/51b787b6a25663e092b3f55e051e9a94-image-1565630570417.png" alt="Trip Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Instrumentos Musicales</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhMuNKEOTdyH5PPeUpDimEeY" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/82323a78b17b69101dd6e98a6a21c55c-image-1565630573896.png" alt="Instrument Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Club de Reciclaje</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhBiffg8HpOk2lRx1kd5sgaw" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/5b0044bfd92d44c97cd74d82f1933daa-image-1565630578147.png" alt="Recycling Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Haikus</strong><br /><a href="https://codeprojects.org/PPGOslHhH0Od4yEOHHdnjLT4-x4yfDMStUTlMUZy6Cc" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/40892c338c78da445310ddfb7cf63127-image-1565630595445.png" alt="Haiku Sample Page"></a></div>
+
+
+
+      csd-post-survey-markdown-with-link-to-survey_2021:
+        markdown: "# Encuesta Fin de Curso de Descubrimientos de Informática \n\n**¡Tu
+          opinión es muy importante para nosotros!** La utilizamos para:\n\n* Entender
+          tu experiencia\n* Realizar mejoras en el curso\n\n¡Gracias por dedicar tu
+          tiempo a mejorar Descubrimientos de Informática!\n\n<a class=\"btn btn-large
+          btn-success\" href=\"/s/csd-post-survey-2021/lockable/1/levels/1/page/1\"
+          target=\"top\">Pulsa aquí para completar la Encuesta Fin de Curso de Descubrimientos
+          de Informática</a>\n\n(se abre en una nueva pestaña)\n\n<br>\n\n\n\n\n\n"
+        teacher_markdown: |+
+          Este nivel aparece al final de cada unidad. **¡Por favor, pide a tus alumnos que completen esta encuesta al final de la última unidad!** Los alumnos sólo tienen que hacer la encuesta una vez al final del curso.
+
+          * Los resultados son vitales para que nosotros (code.org) podamos mantener nuestros cursos y hacer mejoras.
+          * También habrá una encuesta para los profesores en la que podrán dar su opinión. Se te notificará por correo electrónico sobre la encuesta para profesores.
+
+          **Instrucciones para desbloquear la encuesta para los estudiantes:** [[google doc](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/view)] [[pdf](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/export?format=pdf)]
+
+          Si los alumnos hacen clic en el enlace y ven un mensaje de error sobre que la encuesta está bloqueada, sigue los pasos de las instrucciones anteriores para desbloquear la encuesta para los alumnos.
+
+
+      ml-models in applab-choice parent:
+        description: Prueba lo que has aprendido en una o varias de las siguientes
+          actividades.
+      CSD CSS project RGB_2021:
+        description: Comprueba cómo puedes conseguir aún más colores utilizando los
+          códigos RGB.
+        display_name: Colores RGB
+      CSD CSS project Review_2021:
+        description: Aquí hay algunas propiedades CSS que tal vez hayas visto en las
+          últimas lecciones.  Puedes usarlas para revisar los estilos que podrías
+          necesitar para tu página web.
+        display_name: Revisión de CSS
+      CSD U2 CSS challenge_pilot_2021:
+        description: Hay muchas formas diferentes de dar estilo al texto.  Utiliza
+          los siguientes desafíos para obtener nuevas ideas y aplicarlas en tu página
+          web.
+        display_name: Desafíos y Código Adicional
+      CSD U2 Expression Exemplars_2018_2019_pilot_2021:
+        markdown: |
+          # Ejemplos de Sitios Web Personales
+
+          Haz clic en los sitios web que aparecen a continuación para ver los sitios web personales que han creado otros alumnos.
+
+          ## Ejemplos
+
+          <div style="float: left; text-align:center;"><strong>El Perro Más Bonito</strong><br /><a href="https://codeprojects.org/vfqqBSl9WL5EmWlRTaCuyGL523thd_RLmA6fZjoahHo/" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/be0c20dba6319b34dc07a9f87ae615fa-image-1565304900473.png" alt="Dog Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Mi Viaje</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhHHDE0tb28ed-9-scxvFYE0" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/51b787b6a25663e092b3f55e051e9a94-image-1565630570417.png" alt="Trip Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Instrumentos Musicales</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhMuNKEOTdyH5PPeUpDimEeY" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/82323a78b17b69101dd6e98a6a21c55c-image-1565630573896.png" alt="Instrument Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Club de Reciclaje</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhBiffg8HpOk2lRx1kd5sgaw" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/5b0044bfd92d44c97cd74d82f1933daa-image-1565630578147.png" alt="Recycling Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Haikus</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhLgd_3k2ffeKaGZZO7Ebvgs" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/40892c338c78da445310ddfb7cf63127-image-1565630595445.png" alt="Haiku Sample Page"></a></div>
+      CSD U2 Sample CSS layout_2021:
+        markdown: "# Ejemplos de Sitios Web \nHaz clic en el sitio web de abajo para
+          descubrir algunos nuevos tipos de estilo para tus páginas.\n\n|Ejemplo 1|Ejemplo
+          2|Ejemplo 3|\n|-|-|-|\n|[![](https://images.code.org/7c31d954229b205eff20e4a131271845-image-1585070245513.png)](https://studio.code.org/projects/weblab/-lbgSOg0xktagjHqalYTlPvYzGmfV3OyQxwifLBmmWE/view)|[![](https://images.code.org/00410044eee7dedc993ec9d6c8887444-image-1589309900750.56.13
+          PM.png)](https://studio.code.org/projects/weblab/3ZP18hc29B_ZMG2Yh17zXJfOZ_97JAa882aj9oJScME/view)|[![](https://images.code.org/c67c9e9b8e44094a403e3974db09e2e3-image-1589314612876.15.47
+          PM.png)](https://studio.code.org/projects/weblab/Hdfq1QJEwNjrbpI8x7qwPO6ZHgLyywZOxGRKqIZGp8Y/view)|\n\n\n"
+      CSD U2 Sample classes_2021:
+        markdown: |
+          # Ejemplo de Sitio Web
+
+          Haz clic en la página web que aparece a continuación para descubrir nuevas formas de dar estilo a los elementos.
+
+          [![](https://images.code.org/71a3cb8e9708093b17b9c75eb0723d10-image-1588247512749.49.53 AM.png)](https://codeprojects.org/zu24LsgcyFFFLdZo9Q3vpBvDu3RpEDrNHtOLnEKNhZE)
+      CSD U2 Top Websites_2018_2019_pilot_2021:
+        markdown: |
+          # Sitios Web para la Resolución de Problemas
+
+          Aquí tienes algunas páginas web creadas para resolver problemas.  Elige dos sitios y utilízalos para completar la guía de actividades.
+
+          [<img src="https://images.code.org/752da9829923228ba71fd32499c2a5bf-image-1566856199999.png" style="float: left; margin: 10px">](https://codeprojects.org/3zq0Xy-f0olOr1uy1wzTzdFqvq4bGQx0zi_PrWM5p8Y)
+
+          [<img src="https://images.code.org/3dbd54718965bf83f0695422d5600b0c-image-1566240318585.png" style="float: left; margin: 10px">](https://codeprojects.org/0YXSEeSdj7HHu8NqZndJKlRz7dO1Vxj8o70HhBSfTHU/)
+
+          [<img src="https://images.code.org/37b9660399cb69d5c0bbc2603e2c43da-image-1566240321606.png" style="float: left; margin: 10px">](https://codeprojects.org/kMDTPWRtSww05TgT-ZnhnNjpStohzsZGRmBxRTtV6cA/)
+
+          [<img src="https://images.code.org/7331e5d4b1dda825360217270212ed46-image-1566240324800.png" style="float: left; margin: 10px">](https://codeprojects.org/5FQC3-_R1-LCbwW5oRUVt2h7BKe-N5OBaBr_OfTlxpk/)
+      CSD U2 layout style challenge_pilot_2021:
+        description: Prueba desafíos adicionales o aprende algún código nuevo.
+        display_name: Elementos de Estilo
+      CSD U2 layout style practice_pilot_2021:
+        description: Practica tus nuevas habilidades aquí.
+        display_name: Elementos de Estilo
+      CSD U2 links challenge_2021:
+        description: Prueba desafíos adicionales o aprende algún código nuevo.
+        display_name: Creando Vínculos
+      CSD web classes challenge_2021:
+        description: Prueba desafíos adicionales o aprende algún código nuevo.
+        display_name: Usando las Clases
+      CSD web classes practice_2021:
+        description: Practica tus nuevas habilidades aquí.
+        display_name: Usando las Clases
+      CSD Games Parameters challenge_2021:
+        description: Echa un vistazo a uno o varios de estos bloques adicionales que
+          puedes utilizar para hacer tus imágenes más interesantes.
+        display_name: Desafíos de Figuras y Parámetros
+      CSD Games Properties challenge_2021:
+        description: Prueba estos nuevos desafíos con las propiedades de los sprites
+        display_name: 'Desafíos: Propiedades de los Sprites'
+      CSD Games Sprites Challenges_2021:
+        description: Prueba estos desafíos adicionales que te ayudarán a hacer tus
+          sprites aún más especiales.
+        display_name: 'Desafíos: Sprites y Animaciones'
+      CSD Games Sprites practice_2021:
+        description: Utiliza tus nuevos conocimientos de sprites y animaciones para
+          completar estos niveles.
+        display_name: Creando sprites y animaciones
+      CSD Games parameters practice_2021:
+        display_name: Práctica con Parámetros
+      CSD Games variables challenge_2021:
+        description: Amplía tus conocimientos sobre las variables con estos desafíos.
+        display_name: 'Desafíos de Variables '
+      CSD U3 drawing challenges_2021:
+        description: "¡Prueba algunos desafíos!"
+        display_name: Desafíos de Dibujo
+      CSD games random challenge_2021:
+        description: Prueba estos desafíos adicionales con números aleatorios.
+        display_name: 'Desafíos: Números Aleatorios'
+      CSD games random practice_2021:
+        description: Prueba tus nuevos conocimientos en estos niveles.
+        display_name: Práctica con Números Aleatorios
+      CSD web draw loop challenge choice_2021:
+        description: Prueba estos desafíos de bucles de dibujo.
+        display_name: Desafíos del Bucle de Dibujo
+      CSD web movement challenge choice_2021:
+        description: Añade más a tu escena de peces o crea algo nuevo.
+        display_name: Desafíos de Movimiento de Sprite
+      CSD web text challenge choice_2021:
+        description: Prueba estos nuevos bloques y desafíos.
+        display_name: Desafíos de Texto

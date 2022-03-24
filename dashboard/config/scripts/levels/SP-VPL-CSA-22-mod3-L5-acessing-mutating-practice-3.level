@@ -1,0 +1,24 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**Do this:**\r\n\r\n1. Write your class header and main method. \r\n2. Declare and initialize an array named `prices` which contains 5 different `double` values that you will choose.\r\n3. Declare and initialize a variable `sum` of type `double`.  Initialize sum to the sum of all elements in `prices`.\r\n4. Update the value of each element in `prices` to be half of its original value. \r\n5. Update the value of `sum` to be the new sum of the elements stored in `prices`.\r\n",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "SumPractice.java": {
+        "text": "",
+        "isVisible": true
+      }
+    }
+  },
+  "game_id": 68,
+  "created_at": "2022-03-21T20:32:51.000Z",
+  "level_num": "custom",
+  "user_id": 977,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-03-22 00:58:16 +0000\",\"changed\":[\"published\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-22 00:59:04 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]"
+}]]></config>
+</Javalab>

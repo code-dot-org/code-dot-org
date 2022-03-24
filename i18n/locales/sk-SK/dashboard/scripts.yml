@@ -91,13 +91,13 @@ sk:
             'Bee: Conditionals':
               name: 'Včela: Podmienky'
             'Bee: Debugging':
-              name: 'Včela: Odstraňovanie chýb'
+              name: 'Včela: ladenie'
             'Bee: Loops':
               name: 'Včela: Cykly'
             Binary Bracelets:
               name: Binárne náramky
             Conditionals:
-              name: Podmienky
+              name: Podmienené príkazy
             Flappy:
               name: Flappy
             Getting Loopy:
@@ -136,7 +136,7 @@ sk:
             'Bee: Conditionals':
               name: 'Včela: Podmienky'
             'Bee: Debugging':
-              name: 'Včela: Odstraňovanie chýb'
+              name: 'Včela: ladenie'
             'Bee: Functions':
               name: 'Včela: Funkcie'
             'Bee: Nested Loops':
@@ -176,6 +176,7 @@ sk:
             Play Lab:
               name: Play Lab
               description_student: V tejto lekcii žiaci získajú úvodnú skúsenosť s informatikou a pomocou základných programových blokov vytvoria hru.
+              description_teacher: V tejto lekcii získajú žiaci úvodnú skúsenosť s informatikou a pomocou jednoduchých blokov s kódom si vytvoria vlastnú hru. Táto lekcia bola navrhnutá pre žiakov 2. stupňa vo veku od 10 do 16 rokov, ale pomocou uvedených návrhov sa dá upraviť aj pre mladších či starších žiakov.
           student_description: Vytvor príbeh alebo hru s Play Labom!
         artist:
           title: Umelec
@@ -185,6 +186,7 @@ sk:
             Artist:
               name: Umelec
               description_student: Programuj Umelca a vytváraj nádherné obrázky.
+              description_teacher: V tejto lekcii budú žiaci ovládať Umelca, aby dokončili kresby na obrazovke. V tomto súbore úloh budú žiaci vytvárať postupne čoraz náročnejšie obrázky pomocou programovacích blokov ako `posuň sa dopredu o 100 pixelov` a `otoč sa vpravo o 90 stupňov`.
           student_description: Nakresli skvelé obrázky a vzory s Umelcom!
         hourofcode:
           title: Klasické bludisko
@@ -273,7 +275,7 @@ sk:
             'Bee: Conditionals':
               name: 'Včela: Podmienky'
             'Bee: Debugging':
-              name: 'Včela: Odstraňovanie chýb'
+              name: 'Včela: ladenie'
             'Bee: Nested Loops':
               name: 'Včela: Vnorené cykly'
             'Farmer: While Loops':
@@ -303,7 +305,7 @@ sk:
             'Eval: Boolean Operators':
               name: Booleovské operátory (pravdivé/nepravdivé)
             'Eval: Conditionals':
-              name: Podmienky
+              name: Podmienené príkazy
             'Eval: Defining Functions':
               name: Zložené funkcie
             'Eval: Functions':
@@ -344,6 +346,7 @@ sk:
             Infinity:
               name: Disney Infinity Play Lab
               description_student: V tejto lekcii žiaci získajú úvodnú skúsenosť s informatikou a pomocou základných programových blokov vytvoria hru.
+              description_teacher: V tejto lekcii získajú žiaci úvodnú skúsenosť s informatikou a pomocou jednoduchých blokov s kódom si vytvoria vlastnú hru. Táto lekcia bola navrhnutá pre žiakov 2. stupňa vo veku od 10 do 16 rokov, ale pomocou uvedených návrhov sa dá upraviť aj pre mladších či starších žiakov.
           student_description: Použi Play Lab a vytvor príbeh alebo hru s Disney postavičkami.
         algebrademo:
           lessons:
@@ -431,7 +434,7 @@ sk:
             Computational Thinking:
               name: Algoritmické myslenie
             Conditionals:
-              name: Podmienky
+              name: Podmienené príkazy
             Functions:
               name: Funkcie
             Graph Paper Programming:
@@ -498,10 +501,12 @@ sk:
         flappy:
           title: Flappy kód
           description: Chceš napísať vlastnú hru za menej než 10 minút? Vyskúšaj náš Flappy kód!
-          description_short: Vytvor si svoju vlastnú "Flappy" hru!
+          description_short: Vytvor si hru v štýle Flappy Bird
           lessons:
             Flappy Code:
               name: Flappy kód
+              description_student: V tejto lekcii získajú žiaci úvodnú skúsenosť s informatikou a pomocou jednoduchých blokov s kódom si vytvoria vlastnú hru. Táto lekcia bola navrhnutá pre žiakov 2. stupňa vo veku od 10 do 16 rokov, ale pomocou uvedených návrhov sa dá upraviť aj pre mladších či starších žiakov.
+              description_teacher: V tejto lekcii získajú žiaci úvodnú skúsenosť s informatikou a pomocou jednoduchých blokov s kódom si vytvoria vlastnú hru. Táto lekcia bola navrhnutá pre žiakov 2. stupňa vo veku od 10 do 16 rokov, ale pomocou uvedených návrhov sa dá upraviť aj pre mladších či starších žiakov.
           student_description: Chceš napísať vlastnú hru za menej než 10 minút? Vyskúšaj náš Flappy kód!
         jigsaw:
           title: Skladačka
@@ -1164,6 +1169,7 @@ sk:
             Ice Age Play Lab:
               name: Play Lab Doba ľadová
               description_student: V tejto lekcii žiaci získajú úvodnú skúsenosť s informatikou a pomocou základných programových blokov vytvoria hru.
+              description_teacher: V tejto lekcii získajú žiaci úvodnú skúsenosť s informatikou a pomocou jednoduchých blokov s kódom si vytvoria vlastnú hru. Táto lekcia bola navrhnutá pre žiakov 2. stupňa vo veku od 10 do 16 rokov, ale pomocou uvedených návrhov sa dá upraviť aj pre mladších či starších žiakov.
           student_description: Vytvor príbeh alebo hru s Play Labom v Dobe ľadovej!
         CSPPD3-Unit3:
           lessons:
@@ -1190,6 +1196,8 @@ sk:
           lessons:
             Gumball Play Lab:
               name: Gumball Play Lab
+              description_student: V tejto lekcii získajú žiaci úvodnú skúsenosť s informatikou a pomocou jednoduchých blokov s kódom si vytvoria vlastnú hru. Táto lekcia bola navrhnutá pre žiakov 2. stupňa vo veku od 10 do 16 rokov, ale pomocou uvedených návrhov sa dá upraviť aj pre mladších či starších žiakov.
+              description_teacher: V tejto lekcii získajú žiaci úvodnú skúsenosť s informatikou a pomocou jednoduchých blokov s kódom si vytvoria vlastnú hru. Táto lekcia bola navrhnutá pre žiakov 2. stupňa vo veku od 10 do 16 rokov, ale pomocou uvedených návrhov sa dá upraviť aj pre mladších či starších žiakov.
           student_description: Vytvor príbeh alebo hru s Gumball Play Labom!
         starwars:
           description: Nauč sa programovať droidy a vytvor si vlastnú hru Star Wars v ďalekej galaxii.
@@ -1216,9 +1224,9 @@ sk:
           description_short: Preskúmaj Minecraft svet prostredníctvom kódu.
           lessons:
             Hour of Code 2015:
-              name: Hodina kódu 2015
-              description_student: V tejto lekcii získajú študenti všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia je vhodná pre všetkých žiakov, ktorí už vedia čítať (od 6 rokov). Mladšie deti tento výukový kurz pravdepodobne nedokončia, ale hodina venovaná týmto úlohám pre nich bude ohromne zábavná. Študenti stredných škôl najskôr nebudú mať s dokončením kurzu problém a ku koncu im zostane čas na voľné hranie.
-              description_teacher: V tejto lekcii získajú študenti všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia je vhodná pre všetkých žiakov, ktorí už vedia čítať (od 6 rokov). Mladšie deti tento výukový kurz pravdepodobne nedokončia, ale hodina venovaná týmto úlohám pre nich bude ohromne zábavná. Študenti stredných škôl najskôr nebudú mať s dokončením kurzu problém a ku koncu im zostane čas na voľné hranie.
+              name: 'Minecraft: Dobrodruh'
+              description_student: V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s programovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia je vhodná pre všetkých žiakov, ktorí už vedia čítať (od 6 rokov). Mladšie deti tento výukový kurz pravdepodobne nedokončia, ale hodina venovaná týmto úlohám pre nich bude nesmierne zábavná. Žiaci stredných škôl pravdepodobne nebudú mať s dokončením kurzu problém a ku koncu im zostane čas na voľné hranie.
+              description_teacher: V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s programovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia je vhodná pre všetkých žiakov, ktorí už vedia čítať (od 6 rokov). Mladšie deti tento výukový kurz pravdepodobne nedokončia, ale hodina venovaná týmto úlohám pre nich bude nesmierne zábavná. Žiaci stredných škôl pravdepodobne nebudú mať s dokončením kurzu problém a ku koncu im zostane čas na voľné hranie.
           student_description: Použi bloky kódov, aby si vzal Steva alebo Alex na dobrodružstvo po svete Minecraftu.
         oceans:
           title: AI pomáha oceánom
@@ -1597,7 +1605,7 @@ sk:
           description_audience: Vek 5-18
           lessons:
             Debugging:
-              name: Hľadanie a odstraňovanie chýb
+              name: Ladenie
             Events:
               name: Udalosti
             'Jigsaw: Learn to drag and drop':
@@ -1637,7 +1645,7 @@ sk:
           description_audience: Vek 5-18
           lessons:
             Debugging:
-              name: Hľadanie a odstraňovanie chýb
+              name: Ladenie
             Events:
               name: Udalosti
             'Jigsaw: Learn to drag and drop':
@@ -1756,7 +1764,7 @@ sk:
             'Artist: Nested Loops':
               name: 'Umelec: Vnorené cykly'
             Bee Debugging:
-              name: 'Včela: Hľadanie a odstraňovanie chýb'
+              name: 'Včela: ladenie'
             Bounce:
               name: Bounce
             Farmer Debug Relay Programming:
@@ -1868,7 +1876,7 @@ sk:
             Sprite Movement:
               name: Pohyb "sprite" objektu
             Conditionals:
-              name: Podmienky
+              name: Podmienené príkazy
               description_student: V tejto lekcii použijeme logické výrazy na porovnanie aktuálnej hodnoty vlastnosti objektu „postava“ s jej cieľovou hodnotou. Toto porovnanie použijeme na určenie toho, či „postava“ dosiahla určený bod na obrazovke, narástla do definovanej veľkosti alebo dosiahla inú hodnotu. Nakoniec pridáme podmienkové výroky, "ak", v ktorých logické výrazy použijeme ako základ pre rozhodovanie.
               description_teacher: V tejto lekcii použijeme logické výrazy na porovnanie aktuálnej hodnoty vlastnosti objektu „postava“ s jej cieľovou hodnotou. Toto porovnanie použijeme na určenie toho, či „postava“ dosiahla určený bod na obrazovke, narástla do definovanej veľkosti alebo dosiahla inú hodnotu. Nakoniec pridáme podmienkové výroky, "ak", v ktorých logické výrazy použijeme ako základ pre rozhodovanie.
             Keyboard Input:
@@ -1925,7 +1933,7 @@ sk:
             Binary:
               name: Binárny
             Conditionals:
-              name: Podmienky
+              name: Podmienené príkazy
             Events:
               name: Udalosti
             For Loops:
@@ -2033,6 +2041,11 @@ sk:
           title: Vytvor basketbalový zápas
           description_short: Vytvor basketbalový zápas
           description: Vytvor basketbalový zápas
+          lessons:
+            Bounce:
+              name: Vytvor si vlastný basketbalový zápas
+              description_student: Aj tebe už niekedy napadlo, že by bolo super hrať sa v škole počítačové hry? Tak v tejto lekcii si dokonca budeš môcť vytvoriť vlastnú!
+              description_teacher: V tejto on‑line aktivite sa žiaci naučia, čo sú udalosti a ako ich počítače využívajú v rôznych programoch, napríklad videohrách. Žiaci budú prechádzať úlohami, v ktorých budú upravovať program tak, aby reagoval na udalosti (napríklad na stlačenie tlačidla). Na konci úloh budú mať žiaci možnosť prispôsobiť si hru upravením rýchlosti či pridaním zvukov.
           student_description: Vytvor basketbalový zápas
         sample-csp5:
           lessons:
@@ -2101,9 +2114,9 @@ sk:
           description: Naprogramuj zvieratá a iné postavy a vytvor svoju vlastnú verziu hry Minecraft.
           lessons:
             Minecraft Hour of Code Designer:
-              name: Hodina kódu Minecraft dizajnér
-              description_student: V tejto lekcii získajú študenti všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia je vhodná pre všetkých žiakov, ktorí už vedia čítať (od 6 rokov). Mladšie deti tento výukový kurz pravdepodobne nedokončia, ale hodina venovaná týmto úlohám pre nich bude ohromne zábavná. Študenti stredných škôl najskôr nebudú mať s dokončením kurzu problém a ku koncu im zostane čas na voľné hranie.
-              description_teacher: V tejto lekcii získajú študenti všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia je vhodná pre všetkých žiakov, ktorí už vedia čítať (od 6 rokov). Mladšie deti tento výukový kurz pravdepodobne nedokončia, ale hodina venovaná týmto úlohám pre nich bude ohromne zábavná. Študenti stredných škôl najskôr nebudú mať s dokončením kurzu problém a ku koncu im zostane čas na voľné hranie.
+              name: 'Minecraft: Dizajnér'
+              description_student: V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s programovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia je vhodná pre všetkých žiakov, ktorí už vedia čítať (od 6 rokov). Mladšie deti tento výukový kurz pravdepodobne nedokončia, ale hodina venovaná týmto úlohám pre nich bude nesmierne zábavná. Žiaci stredných škôl pravdepodobne nebudú mať s dokončením kurzu problém a ku koncu im zostane čas na voľné hranie.
+              description_teacher: V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s programovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia je vhodná pre všetkých žiakov, ktorí už vedia čítať (od 6 rokov). Mladšie deti tento výukový kurz pravdepodobne nedokončia, ale hodina venovaná týmto úlohám pre nich bude nesmierne zábavná. Žiaci stredných škôl pravdepodobne nebudú mať s dokončením kurzu problém a ku koncu im zostane čas na voľné hranie.
           student_description: Naprogramuj zvieratá a iné postavy a vytvor svoju vlastnú verziu hry Minecraft.
         flappy-impact-study:
           lessons:
@@ -2181,7 +2194,7 @@ sk:
             'Events: The Big Event':
               name: 'Udalosti: Veľká udalosť'
             Build a Flappy Game:
-              name: Vytvor si vlastnú hru Flappy
+              name: Vytvor si hru v štýle Flappy Bird
             Binary Bracelets:
               name: Binárne náramky
             Events in Play Lab:
@@ -2242,7 +2255,7 @@ sk:
             Nested Loops Project in Artist:
               name: Projekt s vnorenými cyklami s Umelcom
             Debugging in Collector:
-              name: Odstraňovanie chýb s Laurel
+              name: Ladenie so zberateľkou
         coursee-draft:
           description_short: Nauč sa základy informatiky a vytvor si vlastné obrázky, príbehy a hry.
           lesson_groups:
@@ -2290,7 +2303,7 @@ sk:
             Introduction:
               name: Úvod
             Conditionals:
-              name: Podmienky
+              name: Podmienené príkazy
         coursef-draft:
           description_short: Nauč sa základy informatiky a vytvor si vlastné obrázky, príbehy a hry.
           lesson_groups:
@@ -2359,6 +2372,10 @@ sk:
           title: Naprogramuj si vlastný zápas
           description_short: Pomiešaj športy
           description: Pomiešaj športy
+          lessons:
+            Sports:
+              description_student: Aj tebe už niekedy napadlo, že by bolo super hrať sa v škole počítačové hry? Tak v tejto lekcii si dokonca budeš môcť vytvoriť vlastnú!
+              description_teacher: V tejto on‑line aktivite sa žiaci naučia, čo sú udalosti a ako ich počítače využívajú v rôznych programoch, napríklad videohrách. Žiaci budú prechádzať úlohami, v ktorých budú upravovať program tak, aby reagoval na udalosti (napríklad na stlačenie tlačidla). Na konci úloh budú mať žiaci možnosť prispôsobiť si hru upravením rýchlosti či pridaním zvukov.
           student_description: Pomiešaj športy
         2016_sciencePD-phase2b:
           lessons:
@@ -2520,7 +2537,7 @@ sk:
             Introduction:
               name: Úvod
             Conditionals:
-              name: Podmienky
+              name: Podmienené príkazy
             'Real Life Algorithms: Dice Race':
               name: 'Algoritmy z reálneho života: Hod kockou'
         csd6-2017:
@@ -2561,7 +2578,7 @@ sk:
             The Counter Pattern Unplugged:
               name: Kód pre počítanie (bez počítača)
             Conditionals:
-              name: Podmienky
+              name: Podmienené príkazy
             'Project: Interactive Card':
               name: 'Projekt: Interaktívna pohľadnica'
             Keyboard Input:
@@ -2675,7 +2692,7 @@ sk:
             Sprite Movement:
               name: Pohyb "sprite" objektu
             Conditionals:
-              name: Podmienky
+              name: Podmienené príkazy
             Keyboard Input:
               name: Stlačenie kláves ako vstup
             Other Forms of Input:
@@ -2853,7 +2870,7 @@ sk:
             'Events: The Big Event':
               name: 'Udalosti: Veľká udalosť'
             Build a Flappy Game:
-              name: Vytvor si vlastnú hru Flappy
+              name: Vytvor si hru v štýle Flappy Bird
             Events in Play Lab:
               name: Udalosti v Play Labe
             Screen Out the Mean:
@@ -2880,6 +2897,8 @@ sk:
               description_teacher: '"Naprogramovaním" jeden druhého na kreslenie obrázkov študenti začnú chápať, o čom skutočne programovanie je. Hodina začne aktivitou, v ktorej si študenti navzájom dajú inštrukcie na vyfarbenie štvorčekov na štvorčekovom papieri za účelom reprodukovania existujúceho obrázka. Ak máte dostatok času, hodina sa môže skončiť programovaním na kreslenie obrázkov, ktoré študenti vytvorili sami.'
             Events in Bounce:
               name: Udalosti v Bounce
+              description_student: Aj tebe už niekedy napadlo, že by bolo super hrať sa v škole počítačové hry? Tak v tejto lekcii si dokonca budeš môcť vytvoriť vlastnú!
+              description_teacher: V tejto on‑line aktivite sa žiaci naučia, čo sú udalosti a ako ich počítače využívajú v rôznych programoch, napríklad videohrách. Žiaci budú prechádzať úlohami, v ktorých budú upravovať program tak, aby reagoval na udalosti (napríklad na stlačenie tlačidla). Na konci úloh budú mať žiaci možnosť prispôsobiť si hru upravením rýchlosti či pridaním zvukov.
             Nested Loops:
               name: Vnorené cykly
             Nested Loops in Artist:
@@ -2924,7 +2943,7 @@ sk:
               description_student: Viac vnorených cyklov! Tentokrát s vnorenými cyklami vytvoríš ÚŽASNÉ kresby.
               description_teacher: V dnešných úlohách študenti s pomocou Umelca vytvoria spletité kresby. Precvičovanie vnorených cyklov v nových, komplexnejších úlohách umožní študentom uvedomiť si širšie možnosti ich využitia. Tieto úlohy tiež ponúkajú vyššiu mieru kreativity s možnosťou vytvorenia vlastnej kresby v poslednej úlohe.
             Debugging in Collector:
-              name: Odstraňovanie chýb s Laurel
+              name: Ladenie so zberateľkou
               description_teacher: '"V rámci tejto aktivity budú študenti trénovať ladenie v prostredí „zberateľov“. Študenti sa naučia čítať a editovať kód a opravovať hádanky jednoduchými algoritmami, slučkami a vnorenými slučkami."'
         coursee-2017:
           title: Kurz E
@@ -3254,7 +3273,7 @@ sk:
             Events in Bounce:
               name: Udalosti v Bounce
             Build a Flappy Game:
-              name: Vytvor si vlastnú hru Flappy
+              name: Vytvor si hru v štýle Flappy Bird
             Conditionals with Cards:
               name: Podmienky s kartami
             While Loops in Farmer:
@@ -3387,15 +3406,19 @@ sk:
           description_short: Vytvor si svoju vlastnú aplikáciu v JavaScripte pomocou blokového programovania alebo textu. Ak máš už nejaké programovanie s blokmi za sebou, posuň svoje zručnosti na ďalšiu úroveň.
           description: Vytvor si svoju vlastnú aplikáciu v JavaScripte pomocou blokového programovania alebo textu. Ak máš už nejaké programovanie s blokmi za sebou, posuň svoje zručnosti na ďalšiu úroveň.
           lessons:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Úvod do App Labu – Interaktívny príbeh
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Úvod do App Labu – Interaktívny príbeh 2
             Intro to App Lab:
               name: Úvod do App Labu
-              description_student: 'Na konci kurzu budeš môcť svoj rozpracovaný projekt rozšíriť na niektorú z týchto aplikácií: „Vyberte si svoje dobrodružstvo“, „Pohľadnice“, alebo „Osobnostný kvíz“. Tiež môžeš pokračovať vo vytváraní ďalších projektov dostupných na stránke code.org/applab.'
+              description_student: 'Na konci kurzu budeš môcť svoj rozpracovaný projekt rozšíriť na niektorú z týchto aplikácií: „Interaktívny príbeh“, „Pohľadnice“, alebo „Osobnostný kvíz“. Tiež môžeš pokračovať vo vytváraní ďalších projektov dostupných na stránke code.org/applab.'
               description_teacher: |-
-                Tento výukový kurz je navrhnutý ako rýchly úvod do programovania v programovacom prostredí App Lab, čo je výkonný nástroj na vytváranie a zdieľanie aplikácií. Vo výukovom kurze ako takom sa študenti naučia vytvárať a ovládať tlačidlá, text, obrázky, zvuky a obrazovky v jazyku JavaScript pomocou blokov alebo textu. Na konci kurzu dostanú čas na to, aby rozpracovaný projekt rozšírili na niektorú z týchto aplikácií: „Vyberte si svoje dobrodružstvo“, „Pohľadnice“, alebo „Osobnostný kvíz“. Môžu tiež pokračovať vo vytváraní ďalších projektov dostupných na stránke code.org/applab.
+                Tento výukový kurz je navrhnutý ako rýchly úvod do programovania v programovacom prostredí App Lab, čo je výkonný nástroj na vytváranie a zdieľanie aplikácií. Vo výukovom kurze ako takom sa žiaci naučia vytvárať a ovládať tlačidlá, text, obrázky, zvuky a obrazovky v jazyku JavaScript pomocou blokov alebo textu. Na konci kurzu dostanú čas na to, aby rozpracovaný projekt rozšírili na niektorú z týchto aplikácií: „Interaktívny príbeh“, „Pohľadnica“ alebo „Osobnostný kvíz“. Môžu tiež pokračovať vo vytváraní ďalších projektov dostupných na stránke code.org/applab.
 
-                Dôležité je, aby sa pri Hodine kóde s App Lab dobre zabavili!
+                Hlavné je, aby sa pri Hodine kódu s App Labom dobre zabavili!
 
-                **Vhodnosť pre vekovú kategóriu:** Tento výukový kurz je navrhnutý pre žiakov nad 13 rokov. Pretože im umožňuje nahrávať vlastné zvuky a obrázky, mladší žiaci by ho nemali používať bez dohľadu dospelých. Kvôli ochrane súkromia žiakov nebudú môcť žiaci mladší ako 13 rokov tento kurz používať, pokiaľ im najprv nevytvoríte účty vo vami spravovanej sekcii.
+                **Vhodnosť pre vekovú kategóriu:** Tento výukový kurz je navrhnutý pre žiakov nad 13 rokov. Keďže im umožňuje používať vlastné zvuky a obrázky, mladší žiaci by ho nemali používať bez dohľadu dospelých. Kvôli ochrane súkromia žiakov nebudú môcť žiaci mladší ako 13 rokov tento kurz používať, pokiaľ im najprv nevytvoríte účty vo vami spravovanej sekcii.
           student_description: Vytvor si svoju vlastnú aplikáciu v JavaScripte pomocou blokového programovania alebo textu. Ak máš už nejaké programovanie s blokmi za sebou, posuň svoje zručnosti na ďalšiu úroveň.
         e-f-ramp:
           lesson_groups:
@@ -3427,7 +3450,7 @@ sk:
             Course E Introduction:
               name: Kurz E Úvod
             Conditionals:
-              name: Podmienky
+              name: Podmienené príkazy
             Private and Personal Information:
               name: Súkromné a osobné údaje
             Build a Star Wars Game:
@@ -3476,7 +3499,7 @@ sk:
             'Algorithms: Relay Programming':
               name: 'Algoritmy: Štafetové programovanie'
             Debugging in Collector:
-              name: Odstraňovanie chýb s Laurel
+              name: Ladenie so zberateľkou
             While Loops in Farmer:
               name: Cykly "pokiaľ" s Farmárkou
             Conditionals with Cards:
@@ -3519,7 +3542,7 @@ sk:
             'Algorithms: Relay Programming':
               name: 'Algoritmy: Štafetové programovanie'
             Debugging in Collector:
-              name: Odstraňovanie chýb s Laurel
+              name: Ladenie so zberateľkou
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Loops in Artist:
@@ -3610,7 +3633,7 @@ sk:
             Course E Introduction:
               name: Kurz E Úvod
             Conditionals:
-              name: Podmienky
+              name: Podmienené príkazy
             Private and Personal Information:
               name: Súkromné a osobné údaje
             Build a Star Wars Game:
@@ -3747,18 +3770,23 @@ sk:
             CSD pre-survey 21-2:
               name: Objavujeme informatiku Predbežný prieskum 21-22
         hero:
-          title: 'Minecraft: Cesta Hrdinu'
+          title: 'Minecraft: Cesta hrdinu'
           description_short: Minecraft je späť s úplne novou aktivitou pre Hodinu Kódu!
           description: Minecraft je späť v Hodine Kódu s úplne novou aktivitou! Prejdi sa po Minecrafte s kódom.
           lessons:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft: Cesta Hrdinu v Hodine Kódu'
             Minecraft Hour of Code:
-              name: 'Minecraft: Cesta Hrdinu'
-              description_teacher: V tejto lekcii získajú študenti všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia je vhodná pre všetkých žiakov, ktorí už vedia čítať (od 6 rokov). Mladšie deti tento výukový kurz pravdepodobne nedokončia, ale hodina venovaná týmto úlohám pre nich bude ohromne zábavná. Študenti stredných škôl najskôr nebudú mať s dokončením kurzu problém a ku koncu im zostane čas na voľné hranie.
+              name: 'Minecraft: Cesta hrdinu'
+              description_student: V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí.
+              description_teacher: V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s programovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia je vhodná pre všetkých žiakov, ktorí už vedia čítať (od 6 rokov). Mladšie deti tento výukový kurz pravdepodobne nedokončia, ale hodina venovaná týmto úlohám pre nich bude nesmierne zábavná. Žiaci stredných škôl pravdepodobne nebudú mať s dokončením kurzu problém a ku koncu im zostane čas na voľné hranie.
           student_description: Minecraft je späť v Hodine Kódu s úplne novou aktivitou! Prejdi sa po Minecrafte s kódom.
         applab-intro-staging:
           lessons:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Úvod do App Labu – Interaktívny príbeh
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Úvod do App Labu – Interaktívny príbeh 2
             Intro to App Lab:
               name: Úvod do App Labu
         csp-explore-2017:
@@ -3816,7 +3844,7 @@ sk:
             Introduction:
               name: Úvod
             Conditionals:
-              name: Podmienky
+              name: Podmienené príkazy
             Private and Personal Information:
               name: Súkromné a osobné údaje
             'Functions: Songwriting':
@@ -3948,7 +3976,7 @@ sk:
             Booleans Unplugged:
               name: Logické výrazy – lekcia bez počítača
             Conditionals:
-              name: Podmienky
+              name: Podmienené príkazy
             Keyboard Input:
               name: Stlačenie kláves ako vstup
             Other Forms of Input:
@@ -4021,7 +4049,7 @@ sk:
 
                 Na záver si predstavíme podmienky využívajúce logické výroky ako nástroj na rozhodovanie, či na ovplyvnenie toku programu.
             Conditionals:
-              name: Podmienky
+              name: Podmienené príkazy
               description_student: V tejto lekcii použijeme logické výrazy na porovnanie aktuálnej hodnoty vlastnosti objektu „postava“ s jej cieľovou hodnotou. Toto porovnanie použijeme na určenie toho, či „postava“ dosiahla určený bod na obrazovke, narástla do definovanej veľkosti alebo dosiahla inú hodnotu. Nakoniec pridáme podmienkové výroky, "ak", v ktorých logické výrazy použijeme ako základ pre rozhodovanie.
               description_teacher: V tejto lekcii použijeme logické výrazy na porovnanie aktuálnej hodnoty vlastnosti objektu „postava“ s jej cieľovou hodnotou. Toto porovnanie použijeme na určenie toho, či „postava“ dosiahla určený bod na obrazovke, narástla do definovanej veľkosti alebo dosiahla inú hodnotu. Nakoniec pridáme podmienkové výroky, "ak", v ktorých logické výrazy použijeme ako základ pre rozhodovanie.
             Keyboard Input:
@@ -4155,7 +4183,7 @@ sk:
             Building a Foundation:
               name: Budovanie základov
             Debugging in Collector:
-              name: Odstraňovanie chýb s Laurel
+              name: Ladenie so zberateľkou
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Loops in Artist:
@@ -4249,7 +4277,7 @@ sk:
             Determine the Concept:
               name: Urči správny koncept
             Build a Flappy Game:
-              name: Vytvor si vlastnú hru Flappy
+              name: Vytvor si hru v štýle Flappy Bird
             The Power of Words:
               name: Objav silu slov
             Envelope Variables:
@@ -4339,7 +4367,7 @@ sk:
             Building a Foundation:
               name: Budovanie základov
             Debugging in Collector:
-              name: Odstraňovanie chýb s Laurel
+              name: Ladenie s Laurel
             Events in Bounce:
               name: Udalosti v Bounce
             Loops in Artist:
@@ -4421,7 +4449,7 @@ sk:
             'Events: The Big Event':
               name: Veľká udalosť
             Build a Flappy Game:
-              name: Vytvor si vlastnú hru Flappy
+              name: Vytvor si hru v štýle Flappy Bird
             Events in Play Lab:
               name: Naháňačka s udalosťami
             Screen Out the Mean:
@@ -5059,8 +5087,8 @@ sk:
           lessons:
             Dance Party:
               name: Tanečná Párty
-              description_student: V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov všetkých vekových kategórií, ktorí už vedia čítať. Vyžaduje možnosť prehrávať zvuk, pretože ide o nástroj vytvorený tak, aby reagoval na hudbu.
-              description_teacher: V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov všetkých vekových kategórií, ktorí už vedia čítať. Vyžaduje možnosť prehrávať zvuk, pretože ide o nástroj vytvorený tak, aby reagoval na hudbu.
+              description_student: V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov všetkých vekových kategórií, ktorí už vedia čítať. Vyžaduje možnosť prehrávať zvuk, pretože nástroj bol vytvorený tak, aby reagoval na hudbu.
+              description_teacher: V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov všetkých vekových kategórií, ktorí už vedia čítať. Vyžaduje možnosť prehrávať zvuk, pretože nástroj bol vytvorený tak, aby reagoval na hudbu.
           student_description: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju s kamarátmi!
         frozen-2018-test-b:
           title: Nový Frozen Skript
@@ -5068,13 +5096,14 @@ sk:
             Artist:
               name: Umelec
         aquatic:
-          title: Minecraft Vodné Dobrodužstvo
+          title: 'Minecraft: Vodné dobrodužstvo'
           description_short: Pomocou kreativity, schopnosti riešiť problémy a sily kódu objav a vybuduj podvodný svet!
           description: Minecraft je späť s úplne novou aktivitou! Použi tvoju kreativitu, schopnosť riešiť problémy a silu kódu, aby si objavil a vybudoval podvodný svet.
           lessons:
             Aquatic:
-              name: Minecraft Vodné Dobrodužstvo
-              description_teacher: V tejto lekcii získajú študenti všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia je vhodná pre všetkých žiakov, ktorí už vedia čítať (od 6 rokov). Mladšie deti tento výukový kurz pravdepodobne nedokončia, ale hodina venovaná týmto úlohám pre nich bude ohromne zábavná. Študenti stredných škôl najskôr nebudú mať s dokončením kurzu problém a ku koncu im zostane čas na voľné hranie.
+              name: 'Minecraft: Vodné dobrodužstvo'
+              description_student: V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí.
+              description_teacher: V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s programovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia je vhodná pre všetkých žiakov, ktorí už vedia čítať (od 6 rokov). Mladšie deti tento výukový kurz pravdepodobne nedokončia, ale hodina venovaná týmto úlohám pre nich bude nesmierne zábavná. Žiaci stredných škôl pravdepodobne nebudú mať s dokončením kurzu problém a ku koncu im zostane čas na voľné hranie.
           student_description: Minecraft je späť s úplne novou aktivitou! Použi tvoju kreativitu, schopnosť riešiť problémy a silu kódu, aby si objavil a vybudoval podvodný svet.
         sconyers:
           lessons:
@@ -5094,19 +5123,20 @@ sk:
             csp_variables:
               display_name: Premenné
             csp_conditionals:
-              display_name: Podmienky
+              display_name: Podmienené príkazy
             csp_functions:
               display_name: Funkcie
             csp_project:
               display_name: Projekt
         dance-extras:
+          title: Neprestávaj tancovať (2018)
           description_short: Pokračuj za hranice Hodiny Kódu s touto aktivitou nadväzujúcou na Code.org Tanečnú Párty.
           description: Pokračuj za hranice prvej hodiny s nápadmi na ďalšie projekty.
           lessons:
             Dance Party - Go Further:
-              name: Tanečná párty - Pokračuj ďalej
-              description_student: V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov všetkých vekových kategórií, ktorí už vedia čítať. Vyžaduje možnosť prehrávať zvuk, pretože ide o nástroj vytvorený tak, aby reagoval na hudbu.
-              description_teacher: V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov všetkých vekových kategórií, ktorí už vedia čítať. Vyžaduje možnosť prehrávať zvuk, pretože ide o nástroj vytvorený tak, aby reagoval na hudbu.
+              name: Neprestávaj tancovať (2018)
+              description_student: V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov všetkých vekových kategórií, ktorí už vedia čítať. Vyžaduje možnosť prehrávať zvuk, pretože nástroj bol vytvorený tak, aby reagoval na hudbu.
+              description_teacher: V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov všetkých vekových kategórií, ktorí už vedia čítať. Vyžaduje možnosť prehrávať zvuk, pretože nástroj bol vytvorený tak, aby reagoval na hudbu.
           student_description: Pokračuj za hranice prvej hodiny s nápadmi na ďalšie projekty.
         coursef-2019:
           title: Kurz F (2019)
@@ -5258,7 +5288,7 @@ sk:
             csf_loops:
               display_name: Cykly
             csf_conditionals:
-              display_name: Podmienky
+              display_name: Podmienené príkazy
             csf_binary:
               display_name: Binárny
             csf_digcit:
@@ -5276,10 +5306,12 @@ sk:
               name: Štafetové programovanie
               description_teacher: Táto aktivita začne krátkym cvičením v hľadaní a opravovaní chýb a vo vytrvalosti. Následne sa študenti rozdelia do skupín, v ktorých, pretekajúc s časom, postupne po jednotlivých príkazoch vytvoria program.
             Debugging in Collector:
-              name: Odstraňovanie chýb s Laurel
+              name: Ladenie s Laurel
               description_teacher: '"V rámci tejto aktivity budú študenti trénovať ladenie v prostredí „zberateľov“. Študenti sa naučia čítať a editovať kód a opravovať hádanky jednoduchými algoritmami, slučkami a vnorenými slučkami."'
             Events in Bounce:
               name: Udalosti v Bounce
+              description_student: Aj tebe už niekedy napadlo, že by bolo super hrať sa v škole počítačové hry? Tak v tejto lekcii si dokonca budeš môcť vytvoriť vlastnú!
+              description_teacher: V tejto on‑line aktivite sa žiaci naučia, čo sú udalosti a ako ich počítače využívajú v rôznych programoch, napríklad videohrách. Žiaci budú prechádzať úlohami, v ktorých budú upravovať program tak, aby reagoval na udalosti (napríklad na stlačenie tlačidla). Na konci úloh budú mať žiaci možnosť prispôsobiť si hru upravením rýchlosti či pridaním zvukov.
             Loops in Ice Age:
               name: Cykly v Dobe ľadovej
             Loops in Artist:
@@ -5482,7 +5514,7 @@ sk:
             csf_loops:
               display_name: Cykly
             csf_conditionals:
-              display_name: Podmienky
+              display_name: Podmienené príkazy
             csf_functions:
               display_name: Funkcie
             csf_variables:
@@ -5543,7 +5575,7 @@ sk:
             'Events: The Big Event':
               name: 'Udalosti: Veľká udalosť'
             Build a Flappy Game:
-              name: Vytvor si vlastnú hru Flappy
+              name: Vytvor si hru v štýle Flappy Bird
             The Power of Words:
               name: Objav silu slov
             Envelope Variables:
@@ -5674,7 +5706,7 @@ sk:
               name: andrea-test-fáza3
           name: andrea-test
         dance-extras-gallery:
-          title: Pokračuj v tancovaní
+          title: Neprestávaj tancovať
           description_short: Pokračuj za hranice Hodiny Kódu s touto aktivitou nadväzujúcou na Code.org Tanečnú Párty.
           description: Pokračuj za hranice prvej hodiny s nápadmi na ďalšie projekty.
           lessons:
@@ -5726,7 +5758,7 @@ sk:
             'Events: The Big Event':
               name: Veľká udalosť
             Build a Flappy Game:
-              name: Vytvor si vlastnú hru Flappy
+              name: Vytvor si hru v štýle Flappy Bird
               description_teacher: V tejto špeciálnej lekcii si žiaci vytvoria svoju vlastnú hru Flappy. Využijú v nej udalosti na detekovanie kliknutia myšou a kolízie medzi postavami. Na konci lekcie si žiaci hru upravia pomocou rôznych pozadí či vytvorením vlastných pravidiel.
             Screen Out the Mean:
               name: Vytrieď to zlé
@@ -6029,7 +6061,7 @@ sk:
 
                 Na záver si predstavíme podmienky využívajúce logické výroky ako nástroj na rozhodovanie, či na ovplyvnenie toku programu.
             Conditionals:
-              name: Podmienky
+              name: Podmienené príkazy
               description_student: V tejto lekcii použijeme logické výrazy na porovnanie aktuálnej hodnoty vlastnosti objektu „postava“ s jej cieľovou hodnotou. Toto porovnanie použijeme na určenie toho, či „postava“ dosiahla určený bod na obrazovke, narástla do definovanej veľkosti alebo dosiahla inú hodnotu. Nakoniec pridáme podmienkové výroky, "ak", v ktorých logické výrazy použijeme ako základ pre rozhodovanie.
               description_teacher: V tejto lekcii použijeme logické výrazy na porovnanie aktuálnej hodnoty vlastnosti objektu „postava“ s jej cieľovou hodnotou. Toto porovnanie použijeme na určenie toho, či „postava“ dosiahla určený bod na obrazovke, narástla do definovanej veľkosti alebo dosiahla inú hodnotu. Nakoniec pridáme podmienkové výroky, "ak", v ktorých logické výrazy použijeme ako základ pre rozhodovanie.
             Keyboard Input:
@@ -6121,7 +6153,7 @@ sk:
             csp_variables:
               display_name: Premenné
             csp_conditionals:
-              display_name: Podmienky
+              display_name: Podmienené príkazy
             csp_functions:
               display_name: Funkcie
             csp_project:
@@ -6302,7 +6334,7 @@ sk:
             Pet Giraffe with Sprite Lab:
               name: Moja malá žirafa so Sprite Labom
             Build a Flappy Game:
-              name: Vytvor si vlastnú hru Flappy
+              name: Vytvor si hru v štýle Flappy Bird
             Build a Star Wars Game:
               name: Vytvor hru Star Wars
             'Events: The Big Event':
@@ -6322,7 +6354,7 @@ sk:
             csp_variables:
               display_name: Premenné
             csp_conditionals:
-              display_name: Podmienky
+              display_name: Podmienené príkazy
             csp_functions:
               display_name: Funkcie
             csp_project:
@@ -6333,7 +6365,7 @@ sk:
             csp_variables:
               display_name: Premenné
             csp_conditionals:
-              display_name: Podmienky
+              display_name: Podmienené príkazy
             csp_functions:
               display_name: Funkcie
             csp_project:
@@ -6347,7 +6379,7 @@ sk:
             csp_variables:
               display_name: Premenné
             csp_conditionals:
-              display_name: Podmienky
+              display_name: Podmienené príkazy
             csp_functions:
               display_name: Funkcie
             csp_project:
@@ -6369,7 +6401,7 @@ sk:
             csp_variables:
               display_name: Premenné
             csp_conditionals:
-              display_name: Podmienky
+              display_name: Podmienené príkazy
             csp_functions:
               display_name: Funkcie
             csp_project:
@@ -6388,7 +6420,7 @@ sk:
             csp_variables:
               display_name: Premenné
             csp_conditionals:
-              display_name: Podmienky
+              display_name: Podmienené príkazy
             csp_functions:
               display_name: Funkcie
             csp_project:
@@ -6399,7 +6431,7 @@ sk:
             csp_variables:
               display_name: Premenné
             csp_conditionals:
-              display_name: Podmienky
+              display_name: Podmienené príkazy
             csp_functions:
               display_name: Funkcie
             csp_project:
@@ -6409,7 +6441,7 @@ sk:
             csp_variables:
               display_name: Premenné
             csp_conditionals:
-              display_name: Podmienky
+              display_name: Podmienené príkazy
             csp_functions:
               display_name: Funkcie
             csp_project:
@@ -6585,7 +6617,7 @@ sk:
 
                 Na záver si predstavíme podmienky využívajúce logické výroky ako nástroj na rozhodovanie, či na ovplyvnenie toku programu.
             Conditionals:
-              name: Podmienky
+              name: Podmienené príkazy
               description_student: V tejto lekcii použijeme logické výrazy na porovnanie aktuálnej hodnoty vlastnosti objektu „postava“ s jej cieľovou hodnotou. Toto porovnanie použijeme na určenie toho, či „postava“ dosiahla určený bod na obrazovke, narástla do definovanej veľkosti alebo dosiahla inú hodnotu. Nakoniec pridáme podmienkové výroky, "ak", v ktorých logické výrazy použijeme ako základ pre rozhodovanie.
               description_teacher: V tejto lekcii použijeme logické výrazy na porovnanie aktuálnej hodnoty vlastnosti objektu „postava“ s jej cieľovou hodnotou. Toto porovnanie použijeme na určenie toho, či „postava“ dosiahla určený bod na obrazovke, narástla do definovanej veľkosti alebo dosiahla inú hodnotu. Nakoniec pridáme podmienkové výroky, "ak", v ktorých logické výrazy použijeme ako základ pre rozhodovanie.
             Keyboard Input:
@@ -6647,7 +6679,7 @@ sk:
             'Project: Share Your App':
               name: 'Projekt: Zdieľaj svoju appku'
             Debugging:
-              name: Hľadanie a odstraňovanie chýb
+              name: Ladenie
         csl-vn:
           lesson_groups:
             csf_sequencing:
@@ -6761,7 +6793,7 @@ sk:
             Introduction:
               name: Úvod
             Debugging in Collector:
-              name: Odstraňovanie chýb s Laurel
+              name: Ladenie so zberateľkou
             'Loops: My Loopy Robotic Friends':
               name: 'Cykly: Moji zacyklení robotickí kamaráti'
             Loops in Artist:
@@ -6783,8 +6815,8 @@ sk:
           lessons:
             Dance Party:
               name: Tanečná Párty
-              description_student: V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov všetkých vekových kategórií, ktorí už vedia čítať. Vyžaduje možnosť prehrávať zvuk, pretože ide o nástroj vytvorený tak, aby reagoval na hudbu.
-              description_teacher: V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov všetkých vekových kategórií, ktorí už vedia čítať. Vyžaduje možnosť prehrávať zvuk, pretože ide o nástroj vytvorený tak, aby reagoval na hudbu.
+              description_student: V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov všetkých vekových kategórií, ktorí už vedia čítať. Vyžaduje možnosť prehrávať zvuk, pretože nástroj bol vytvorený tak, aby reagoval na hudbu.
+              description_teacher: V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov všetkých vekových kategórií, ktorí už vedia čítať. Vyžaduje možnosť prehrávať zvuk, pretože nástroj bol vytvorený tak, aby reagoval na hudbu.
           student_description: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju s kamarátmi!
         k5-onlinepd-2019:
           lesson_groups:
@@ -6810,7 +6842,7 @@ sk:
             Loops:
               name: Cykly
             Conditionals:
-              name: Podmienky
+              name: Podmienené príkazy
             Events:
               name: Udalosti
             Functions:
@@ -6828,18 +6860,20 @@ sk:
             End of Course projects:
               name: Záverečné projekty
         dance-extras-2019:
+          title: Neprestávaj tancovať (2019)
           description: Pokračuj za hranice prvej hodiny s nápadmi na ďalšie projekty.
           description_short: Pokračuj za hranice Hodiny Kódu s touto aktivitou nadväzujúcou na Code.org Tanečnú Párty.
           lessons:
             Dance Party - Go Further:
-              name: Tanečná párty - Pokračuj ďalej
+              name: Neprestávaj tancovať
+              description_student: Žiaci všetkých vekových kategórií získajú ďalšiu skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí.
           student_description: Pokračuj za hranice prvej hodiny s nápadmi na ďalšie projekty.
         csp4-preview:
           lesson_groups:
             csp_variables:
               display_name: Premenné
             csp_conditionals:
-              display_name: Podmienky
+              display_name: Podmienené príkazy
             csp_functions:
               display_name: Funkcie
             csp_project:
@@ -6851,7 +6885,7 @@ sk:
             'Conditionals in Minecraft: Voyage Aquatic':
               name: 'Podmienky v Minecrafte: Vodné dobrodružstvo'
             Conditionals:
-              name: Podmienky
+              name: Podmienené príkazy
             'Events: The Big Event':
               name: 'Udalosti: Veľká udalosť'
             Simon Says:
@@ -6869,7 +6903,7 @@ sk:
             csf_digcit:
               display_name: Digitálne občianstvo
             csf_conditionals:
-              display_name: Podmienky
+              display_name: Podmienené príkazy
             csf_nested_loops:
               display_name: Vnorené cykly
             csf_functions:
@@ -6920,7 +6954,7 @@ sk:
             csf_loops:
               display_name: Cykly
             csf_conditionals:
-              display_name: Podmienky
+              display_name: Podmienené príkazy
             csf_events:
               display_name: Udalosti
             csf_sprites:
@@ -6937,7 +6971,7 @@ sk:
             'Conditionals in Minecraft: Voyage Aquatic':
               name: 'Podmienky v Minecrafte: Vodné dobrodružstvo'
             Conditionals:
-              name: Podmienky
+              name: Podmienené príkazy
             'Events: The Big Event':
               name: 'Udalosti: Veľká udalosť'
             Simon Says:
@@ -6955,7 +6989,7 @@ sk:
             csf_loops:
               display_name: Cykly
             csf_conditionals:
-              display_name: Podmienky
+              display_name: Podmienené príkazy
             csf_events:
               display_name: Udalosti
             csf_sprites:
@@ -6972,7 +7006,7 @@ sk:
             'Conditionals in Minecraft: Voyage Aquatic':
               name: 'Podmienky v Minecrafte: Vodné dobrodružstvo'
             Conditionals:
-              name: Podmienky
+              name: Podmienené príkazy
             'Events: The Big Event':
               name: 'Udalosti: Veľká udalosť'
             Simon Says:
@@ -6996,7 +7030,7 @@ sk:
             csp_variables:
               display_name: Premenné
             csp_conditionals:
-              display_name: Podmienky
+              display_name: Podmienené príkazy
             csp_functions:
               display_name: Funkcie
             csp_project:
@@ -7286,7 +7320,7 @@ sk:
 
                 Na záver si predstavíme podmienky využívajúce logické výroky ako nástroj na rozhodovanie, či na ovplyvnenie toku programu.
             Conditionals:
-              name: Podmienky
+              name: Podmienené príkazy
             Keyboard Input:
               name: Stlačenie kláves ako vstup
               description_student: |-
@@ -7540,7 +7574,7 @@ sk:
             'Events: The Big Event':
               name: Veľká udalosť
             Build a Flappy Game:
-              name: Vytvor si vlastnú hru Flappy
+              name: Vytvor si hru v štýle Flappy Bird
               description_teacher: V tejto špeciálnej lekcii si žiaci vytvoria svoju vlastnú hru Flappy. Využijú v nej udalosti na detekovanie kliknutia myšou a kolízie medzi postavami. Na konci lekcie si žiaci hru upravia pomocou rôznych pozadí či vytvorením vlastných pravidiel.
             Events in Play Lab:
               name: Naháňačka s udalosťami
@@ -7565,7 +7599,7 @@ sk:
             csf_loops:
               display_name: Cykly
             csf_conditionals:
-              display_name: Podmienky
+              display_name: Podmienené príkazy
             csf_binary:
               display_name: Binárny
             csf_digcit:
@@ -7583,10 +7617,12 @@ sk:
               name: Štafetové programovanie
               description_teacher: Táto aktivita začne krátkym cvičením v hľadaní a opravovaní chýb a vo vytrvalosti. Následne sa študenti rozdelia do skupín, v ktorých, pretekajúc s časom, postupne po jednotlivých príkazoch vytvoria program.
             Debugging in Collector:
-              name: Odstraňovanie chýb s Laurel
+              name: Ladenie s Laurel
               description_teacher: '"V rámci tejto aktivity budú študenti trénovať ladenie v prostredí „zberateľov“. Študenti sa naučia čítať a editovať kód a opravovať hádanky jednoduchými algoritmami, slučkami a vnorenými slučkami."'
             Events in Bounce:
               name: Udalosti v Bounce
+              description_student: Aj tebe už niekedy napadlo, že by bolo super hrať sa v škole počítačové hry? Tak v tejto lekcii si dokonca budeš môcť vytvoriť vlastnú!
+              description_teacher: V tejto on‑line aktivite sa žiaci naučia, čo sú udalosti a ako ich počítače využívajú v rôznych programoch, napríklad videohrách. Žiaci budú prechádzať úlohami, v ktorých budú upravovať program tak, aby reagoval na udalosti (napríklad na stlačenie tlačidla). Na konci úloh budú mať žiaci možnosť prispôsobiť si hru upravením rýchlosti či pridaním zvukov.
             Build a Star Wars Game:
               name: Vytvor hru Star Wars
               description_student: Nech ťa sila sprevádza pri tvorení tvojej vlastnej hry Star Wars.
@@ -7812,7 +7848,7 @@ sk:
             csf_loops:
               display_name: Cykly
             csf_conditionals:
-              display_name: Podmienky
+              display_name: Podmienené príkazy
             csf_functions:
               display_name: Funkcie
             csf_variables:
@@ -7982,7 +8018,7 @@ sk:
               display_name: Hodnotenie kurzu
           lessons:
             Debugging:
-              name: Hľadanie a odstraňovanie chýb
+              name: Ladenie
         csp6-2020:
           lesson_groups:
             cspSurvey2020:
@@ -8011,7 +8047,7 @@ sk:
             Tools:
               name: Nástroje
             Debugging:
-              name: Hľadanie a odstraňovanie chýb
+              name: Ladenie
         csd2-virtual:
           lesson_groups:
             csd2_1:
@@ -8094,7 +8130,7 @@ sk:
             Events:
               name: Udalosti
             Conditionals:
-              name: Podmienky
+              name: Podmienené príkazy
             End of Course projects:
               name: Záverečné projekty
             Functions:
@@ -8175,7 +8211,7 @@ sk:
             Sprite Movement:
               name: Pohyb "sprite" objektu
             Conditionals:
-              name: Podmienky
+              name: Podmienené príkazy
             Keyboard Input:
               name: Stlačenie kláves ako vstup
               description_student: |-
@@ -8365,7 +8401,7 @@ sk:
             outbreak:
               display_name: Simulácia nákazy
             debugging:
-              display_name: Hľadanie a odstraňovanie chýb
+              display_name: Ladenie
         csd1-2021:
           lessons:
             Intro to Problem Solving:
@@ -8477,8 +8513,8 @@ sk:
               key: Pohyb "sprite" objektu
               name: Pohyb "sprite" objektu
             Conditionals:
-              key: Podmienky
-              name: Podmienky
+              key: Podmienené príkazy
+              name: Podmienené príkazy
             Keyboard Input:
               key: Stlačenie kláves ako vstup
               name: Stlačenie kláves ako vstup
@@ -8598,14 +8634,14 @@ sk:
         csp3-2021:
           lessons:
             Debugging:
-              key: Hľadanie a odstraňovanie chýb
-              name: Hľadanie a odstraňovanie chýb
+              key: Ladenie
+              name: Ladenie
         csp4-2021:
           lesson_groups:
             csp_variables:
               display_name: Premenné
             csp_conditionals:
-              display_name: Podmienky
+              display_name: Podmienené príkazy
             csp_functions:
               display_name: Funkcie
             csp_project:
@@ -8839,8 +8875,8 @@ sk:
               key: 'Udalosti: Veľká udalosť'
               name: Veľká udalosť
             Build a Flappy Game:
-              key: Vytvor si vlastnú hru Flappy
-              name: Vytvor si vlastnú hru Flappy
+              key: Vytvor si hru v štýle Flappy Bird
+              name: Vytvor si hru v štýle Flappy Bird
               description_teacher: V tejto špeciálnej lekcii si žiaci vytvoria svoju vlastnú hru Flappy. Využijú v nej udalosti na detekovanie kliknutia myšou a kolízie medzi postavami. Na konci lekcie si žiaci hru upravia pomocou rôznych pozadí či vytvorením vlastných pravidiel.
             Events in Play Lab:
               key: Udalosti v Play Labe
@@ -8883,12 +8919,13 @@ sk:
               key: Štafetové programovanie
               name: Štafetové programovanie
             Debugging in Collector:
-              key: Odstraňovanie chýb s Laurel
-              name: Odstraňovanie chýb s Laurel
+              key: Ladenie so zberateľkou
+              name: Ladenie s Laurel
               description_teacher: '"V rámci tejto aktivity budú študenti trénovať ladenie v prostredí „zberateľov“. Študenti sa naučia čítať a editovať kód a opravovať hádanky jednoduchými algoritmami, slučkami a vnorenými slučkami."'
             Events in Bounce:
               key: Udalosti v Bounce
               name: Udalosti v Bounce
+              description_student: Aj tebe už niekedy napadlo, že by bolo super hrať sa v škole počítačové hry? Tak v tejto lekcii si dokonca budeš môcť vytvoriť vlastnú!
             Build a Star Wars Game:
               key: Vytvor hru Star Wars
               name: Vytvor hru Star Wars
@@ -8959,7 +8996,7 @@ sk:
             csf_loops:
               display_name: Cykly
             csf_conditionals:
-              display_name: Podmienky
+              display_name: Podmienené príkazy
             csf_binary:
               display_name: Binárny
             csf_digcit:
@@ -8985,7 +9022,7 @@ sk:
               description_student: V tejto lekcii sa oboznámiš s podmienenými príkazmi vo svete _Minecraftu_.
               description_teacher: V tejto lekcii zameranej na **vytvorenie kontextu** žiaci dostanú príležitosť precvičiť si, čo sa doteraz naučili, a dokonca nahliadnuť do podmienených príkazov!
             Conditionals:
-              key: Podmienky
+              key: Podmienené príkazy
               name: Podmienky s Farmárkou
               description_student: Pomôž farmárovi pripraviť polia na výsadbu a spoznaj pri tom podmienené výrazy!
               description_teacher: Táto lekcia študentom predstaví  cykly `pokiaľ` a výroky  `ak / inak`.  _Cykly `pokiaľ`_  sú cykly, ktoré sa opakujú, kým je podmienka pravdivá. Cykly `pokiaľ` sa používajú, keď programátor nevie presný počet opakovaní, koľkokrát sa musí príkaz vykonať, ale vie, aké podmienky musia byť pravdivé, aby cyklus v opakovaní pokračoval .  Výroky `ak / inak` ponúkajú v programovaní väčšiu flexibilitu tak, že  sa spustí celá časť kódu len vtedy, ak je niečo pravdivé, inak sa spustí niečo iné.
@@ -9068,7 +9105,7 @@ sk:
             csf_digcit:
               display_name: Digitálne občianstvo
             csf_nested_loops:
-              display_name: Podmienky
+              display_name: Podmienené príkazy
             csf_functions:
               display_name: Funkcie
             csf_impacts:
@@ -9356,7 +9393,7 @@ sk:
             csf_loops:
               display_name: Cykly
             csf_conditionals:
-              display_name: Podmienky
+              display_name: Podmienené príkazy
             csf_functions:
               display_name: Funkcie
             csf_variables:
@@ -9652,8 +9689,8 @@ sk:
               key: Udalosti
               name: Udalosti
             Conditionals:
-              key: Podmienky
-              name: Podmienky
+              key: Podmienené príkazy
+              name: Podmienené príkazy
             End of Course projects:
               key: Záverečné projekty
               name: Záverečné projekty
@@ -11076,7 +11113,7 @@ sk:
             csf_loops:
               display_name: Cykly
             csf_conditionals:
-              display_name: Podmienky
+              display_name: Podmienené príkazy
             csf_functions:
               display_name: Funkcie
             csf_variables:
@@ -11109,14 +11146,14 @@ sk:
         csp3-2022:
           lessons:
             Debugging:
-              name: Hľadanie a odstraňovanie chýb
-              key: Hľadanie a odstraňovanie chýb
+              name: Ladenie
+              key: Ladenie
         csp4-2022:
           lesson_groups:
             csp_variables:
               display_name: Premenné
             csp_conditionals:
-              display_name: Podmienky
+              display_name: Podmienené príkazy
             csp_functions:
               display_name: Funkcie
             csp_project:
@@ -11257,9 +11294,9 @@ sk:
             The Big Event:
               name: Veľká udalosť
             Build a Flappy Game:
-              name: Vytvor si vlastnú hru Flappy
+              name: Vytvor si hru v štýle Flappy Bird
               description_teacher: V tejto špeciálnej lekcii si žiaci vytvoria svoju vlastnú hru Flappy. Využijú v nej udalosti na detekovanie kliknutia myšou a kolízie medzi postavami. Na konci lekcie si žiaci hru upravia pomocou rôznych pozadí či vytvorením vlastných pravidiel.
-              key: Vytvor si vlastnú hru Flappy
+              key: Vytvor si hru v štýle Flappy Bird
             Picturing Data:
               name: Zobrazenie dát v grafoch
               key: Zobrazenie dát v grafoch
@@ -11365,10 +11402,11 @@ sk:
               name: Štafetové programovanie
               key: Štafetové programovanie
             Debugging with Laurel:
-              name: Odstraňovanie chýb s Laurel
+              name: Ladenie s Laurel
               description_teacher: '"V rámci tejto aktivity budú študenti trénovať ladenie v prostredí „zberateľov“. Študenti sa naučia čítať a editovať kód a opravovať hádanky jednoduchými algoritmami, slučkami a vnorenými slučkami."'
             Events in Bounce:
               name: Udalosti v Bounce
+              description_student: Aj tebe už niekedy napadlo, že by bolo super hrať sa v škole počítačové hry? Tak v tejto lekcii si dokonca budeš môcť vytvoriť vlastnú!
               key: Udalosti v Bounce
             Build a Star Wars Game:
               name: Vytvor hru Star Wars
@@ -11420,8 +11458,8 @@ sk:
               key: 'Algoritmy: Programovanie na štvorčekovom papieri'
               name: Programovanie na štvorčekový papier
             Debugging in Collector:
-              key: Odstraňovanie chýb s Laurel
-              name: Odstraňovanie chýb s Laurel
+              key: Ladenie so zberateľkou
+              name: Ladenie s Laurel
               description_teacher: '"V rámci tejto aktivity budú študenti trénovať ladenie v prostredí „zberateľov“. Študenti sa naučia čítať a editovať kód a opravovať hádanky jednoduchými algoritmami, slučkami a vnorenými slučkami."'
             Loops in Artist:
               key: Cykly s Umelcom
@@ -11450,7 +11488,7 @@ sk:
             csf_loops:
               display_name: Cykly
             csf_conditionals:
-              display_name: Podmienky
+              display_name: Podmienené príkazy
             end_of_course_project:
               display_name: Záverečný projekt
           title: Kurz D (2021)
@@ -11568,7 +11606,7 @@ sk:
               description_student: Vytvor zložitejšie kresby s funkciami!
               description_teacher: V tejto lekcii zameranej na **budovanie zručností** budú žiaci používať funkcie v Umelcovi.
             Conditionals:
-              key: Podmienky
+              key: Podmienené príkazy
               name: Podmienky s Farmárkou
               description_student: Pomôž farmárovi pripraviť polia na výsadbu a spoznaj pri tom podmienené výrazy!
               description_teacher: Táto lekcia študentom predstaví  cykly `pokiaľ` a výroky  `ak / inak`.  _Cykly `pokiaľ`_  sú cykly, ktoré sa opakujú, kým je podmienka pravdivá. Cykly `pokiaľ` sa používajú, keď programátor nevie presný počet opakovaní, koľkokrát sa musí príkaz vykonať, ale vie, aké podmienky musia byť pravdivé, aby cyklus v opakovaní pokračoval .  Výroky `ak / inak` ponúkajú v programovaní väčšiu flexibilitu tak, že  sa spustí celá časť kódu len vtedy, ak je niečo pravdivé, inak sa spustí niečo iné.
@@ -11594,7 +11632,7 @@ sk:
             csf_functions:
               display_name: Funkcie
             csf_nested_loops:
-              display_name: Podmienky
+              display_name: Podmienené príkazy
             lessonGroup-7:
               display_name: Vplyv Informatiky
             end_of_course_project:
@@ -11800,6 +11838,9 @@ sk:
             csf_events:
               display_name: Udalosti
         csa2-2022:
+          lessons:
+            lesson-6:
+              name: Premenné
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
@@ -11810,15 +11851,15 @@ sk:
         cs4all-invasive-species:
           lessons:
             lesson-12:
-              name: Podmienky
+              name: Podmienené príkazy
             lesson-14:
               name: Podmienky v Minecrafte
             lesson-16:
-              name: Hľadanie a odstraňovanie chýb
+              name: Ladenie
             lesson-17:
               name: Inšpirácia pre projekt
             lesson-19:
-              name: Hľadanie a odstraňovanie chýb
+              name: Ladenie
         csa4-2022:
           lesson_groups:
             lessonGroup-2:
@@ -11920,3 +11961,189 @@ sk:
               display_name: Obsah
             lessonGroup-5:
               display_name: Sandbox
+        coursef-2022-pilot:
+          lessons:
+            The Power of Words:
+              name: Objav silu slov
+              description_student: Šikana nikdy nie je v poriadku. Počas tejto lekcie sa naučíte, čo je OK povedať na internete a čo nie.
+              key: Objav silu slov
+            Introducing Sprite Lab:
+              name: Predstavenie Sprite Labu
+              description_student: Budete diskutovať o role počítačov a technológií vo vašich životoch, pričom sa zameriate na to, ako aplikácie a nástroje poskytujú používateľom nové možnosti a ako ich môžu používať.
+              key: Predstavenie Sprite Labu
+            Making Sprites:
+              name: Vytváranie postáv
+              description_teacher: 'V tejto lekcii zameranej na **budovanie zručností** si žiaci na počítači prejdú sériou programovacích úrovní, ktorá sa končí voľnou úlohou, v ktorej môžu vytvoriť čokoľvek. Žiaci budú písať programy a učiť sa o konceptoch, ktoré sú stredobodom Sprite Labu: o sprajtoch (postavách) a správaní.'
+              key: Vytváranie postáv
+            Sprites in Action:
+              name: Postavy v akcii
+              description_student: Prejdeš si programovacie úrovne, ktoré sa končia voľnou úlohou, kde môžeš vytvoriť čokoľvek, čo sa ti páči.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností** si žiaci na počítači prejdú sériou programovacích úrovní, ktorá sa končí voľnou úlohou, v ktorej môžu vytvoriť čokoľvek. Žiaci budú písať programy, ktoré reagujú na udalosti podmienené časom a vstupy používateľa.
+              key: Postavy v akcii
+            'Mini-Project: Virtual Pet':
+              name: 'Mini-Projekt: Virtuálny maznáčik'
+              description_student: Vytvor si interaktívne virtuálne zvieratko, ktoré vyzerá a správa sa presne tak, ako chceš ty. Vdýchni svojmu zvieratku život!
+              description_teacher: V tomto **miniprojekte** si žiaci vytvoria interaktívne virtuálne zvieratko, ktoré vyzerá a správa sa presne tak, ako chcú. Žiaci budú vzhľad zvieratka upravovať pomocou funkcie „kostýmy“, ktorá je k dispozícii v Sprite Labe. Potom svojmu projektu vdýchnu život pomocou udalostí, správania a ďalších konceptov, s ktorými sa už oboznámili.
+              key: 'Mini-Projekt: Virtuálny maznáčik'
+            Blank Space Stories:
+              name: Príbehy na doplnenie
+              description_student: V rámci tejto aktivity budete používať dopĺňacie príbehy príbehy (podobné ako Mad Libs®) na uľahčenie pochopenia toho, ako počítače prijímajú a ukladajú vstupy od používateľov a potom ich neskôr používajú počas vykonávania programu.
+              description_teacher: 'Na tejto lekcii zameranej na **vytvorenie kontextu** budú žiakom ako kontext na pochopenie toho, ako počítače prijímajú a ukladajú vstupy od používateľov a potom ich neskôr používajú počas vykonávania programu, slúžiť dopĺňacie príbehy (podobné ako Mad Libs®). '
+              key: Príbehy na doplnenie
+            Text and Prompts:
+              name: Text a výzvy
+              description_student: V tejto lekcii si precvičíš používanie premenných v Sprite Labe.
+              description_teacher: V tejto lekcii zameranej na **budovanie zručností** si žiaci precvičia použitie premenných v Sprite Labe.
+              key: Text a výzvy
+            'Mini-Project: User Input Programs':
+              name: 'Miniprojekt: Programy reagujúce na vstupy používateľa'
+              key: 'Miniprojekt: Programy reagujúce na vstupy používateľa'
+            Simulating Experiments:
+              name: Simulácia experimentov
+              description_student: Spusti simulácie na počítači a experimentuj zmenou premenných.
+              description_teacher: Spustením jednoduchej simulácie v Sprite Lab si študenti vyskúšajú, ako je možné pomocou výpočtov zhromažďovať údaje, ktoré identifikujú trendy alebo vzory. Po opakovanom spustení simulácie budú mať študenti možnosť predpovedať, ako môže zmena premennej v simulácii ovplyvniť výsledok, a potom túto hypotézu otestovať.
+              key: Simulácia experimentov
+            Outbreak:
+              name: Nákaza
+              key: Nákaza
+            AI For Oceans:
+              name: AI pomáha oceánom
+              key: AI pomáha oceánom
+            The Internet:
+              name: Internet
+              description_teacher: I keď mnoho ľudí denne internet používa, veľa z nich nevie, ako funguje. V tejto lekcii budú študenti predstierať, že prechádzajú cez internet a to tak, že sa budú učiť o pripojeniach, URL aj IP adresách a DNS.
+              key: Internet
+            End of Course Project:
+              name: Záverečný projekt
+              description_student: Na takéto veľké projekty treba veľa času a plánovania. Nájdite inšpiráciu, vytvorte si plán a potom prejavte svoju tvorivosť naplno!
+              description_teacher: Táto lekcia s **projektom** prevedie žiakov procesom navrhovania, vytvárania a prezentácie nových projektov.
+              key: Záverečný projekt
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitálne občianstvo
+            ramp_up:
+              display_name: Objekt "sprite"
+            lessonGroup-8:
+              display_name: Premenné
+            end_of_course_project:
+              display_name: Záverečný projekt
+          description_audience: Vek 9-13
+          description_short: Nauč sa všetky koncepty z kurzu Základy informatiky a vytvor vlastné umelecké dielo, príbeh alebo hru.
+        csa6-2022:
+          lessons:
+            Documenting Program Code:
+              description_student: Projekty, ktoré ste vypracovali počas kurzu, podnietili v komunite veľa kreativity! Uskutoční sa oblastný festival literatúry, ktorý predstaví kreatívne príbehy, scenáre, texty piesní, listy a básne. Projekt oblastného festivalu literatúry je rozsiahly projekt, na ktorom sa pracuje počas celého modulu a stratégie projektového manažmentu vám pomôžu zorganizovať a štruktúrovať vašu prácu. Objavte stratégie písania a tvorenia štruktúry kódu, aby iní softvéroví inžinieri mohli ľahko pochopiť a použiť nástroj Java na vytvorenie dokumentácie programu.
+              description_teacher: Žiaci sa oboznámia s projektom oblastného festivalu literatúry a vyhodnotia požiadavky a príklady, aby identifikovali otázky a kľúčové črty. Pred začatím práce na projekte si žiaci rozšíria svoje chápanie programovej štruktúry a komentovania identifikáciou osvedčených postupov a skúmaním použitia Javadocs na generovanie programovej dokumentácie.
+            Exploring Integer and Double Objects:
+              description_student: Objekty „Integer“ a „Double“ vytvoríte tak, aby reprezentovali primitívne hodnoty „int“ a „double“ ako referenčné hodnoty. Pomocou metód v triedach „Integer“ a „Double“ získate hodnoty, ktoré tieto objekty ukladajú, ako primitívne hodnoty. Pred plánovaním úloh, ktoré musíte dokončiť pre svoj projekt v oblastnom festivale literatúry, tiež preskúmate minimálne a maximálne hodnoty celých čísel, aby ste sa vyhli chybám typu overflow.
+              description_teacher: Žiaci vytvárajú objekty „Integer“ a „Double“, aby reprezentovali primitívne hodnoty „int“ a „double“ ako referenčné hodnoty. Pomocou metód v triedach „Integer“ a „Double“ žiaci získajú hodnoty, ktoré tieto objekty ukladajú, ako primitívne hodnoty. Žiaci tiež skúmajú minimálne a maximálne hodnoty pre celé čísla, aby sa vyhli chybám typu overflow pred plánovaním úloh, ktoré musia dokončiť pre svoj projekt v oblastnom festivale literatúry.
+            Using ArrayLists to Store Data:
+              description_student: Pri práci s poľami a zoznamami sa niekedy stretávame s problémami, kedy je neznámy počet prvkov alebo sa neustále mení veľkosť zoznamu. V tejto lekcii sa dozviete viac informácií o zoznamoch „ArrayList“ a identifikujete scenáre, kde je táto dátová štruktúra vhodnejšia.
+              description_teacher: Žiaci vytvárajú zoznamy „ArrayList“ na ukladanie hodnôt „int“ a „double“. Žiaci rozlišujú medzi zoznamami „ArrayList“ a jednorozmernými poľami, aby určili, ktorá dátová štruktúra je pre daný scenár najvhodnejšia. Žiaci pridávajú prvky do zoznamu „ArrayList“ a naučia sa, ako funkcia autoboxing vykonáva konverzie medzi primitívnymi hodnotami a triedami typu wrapper pri práci s uloženými údajmi.
+            Working with ArrayList Data:
+              description_student: Na získanie a úpravu prvkov použijete metódy zoznamu „ArrayList“ „get()“ a „set()“ a dozviete sa o metóde „String“ „length()“ na počítanie počtu znakov v objekte „String“. Používate štandardné algoritmy, ktoré ste vyvinuli s 1D a 2D poľami na úpravu prvkov v zozname „ArrayList“. Dozviete sa, ako funkcia unboxing vykonáva konverzie medzi primitívnymi hodnotami a triedami typu wrapper, keď pracujú s údajmi uloženými v zozname „ArrayList“.
+              description_teacher: 'Žiaci pracujú s metódami „get()“ a „set()“ na získanie a úpravu prvkov v zozname „ArrayList“ a dozvedia sa o metóde „String“ „length()“ na zistenie počtu znakov v objekte „String“. Používajú štandardné algoritmy, ktoré vyvinuli s 1D a 2D poľami na úpravu prvkov v zozname „ArrayList“. Žiaci sa naučia, ako funkcia unboxing vykonáva konverzie medzi primitívnymi hodnotami a triedami wrapper pri práci s údajmi uloženými v zozname „ArrayList“. '
+            Storing Objects in an ArrayList:
+              description_student: Doteraz ste vytvorili zoznamy „ArrayList“ na ukladanie objektov „Integer“, „Double“ a „String“. Podobne ako pri 1D a 2D poliach môžete tiež ukladať vytvorené objekty do zoznamu „ArrayList“. V tejto lekcii vytvoríte zoznam „ArrayList“ objektov na použitie štandardných algoritmov, ktoré ste používali počas roka na prácu s údajmi uloženými v tomto zozname.
+              description_teacher: Žiaci vytvárajú zoznamy „ArrayList“ na ukladanie objektov a učia sa o generických typoch v Jave. Žiaci aplikujú algoritmy, ktoré sa naučili, pomocou jednorozmerných polí na zoznamy „ArrayList“, aby našli minimálne a maximálne hodnoty, vypočítali súčty a priemery alebo našli prvky, ktoré spĺňajú špecifické kritériá.
+            Removing Data from an ArrayList:
+              description_student: Objavíte funkčnosť metódy zoznamu „ArrayList()“ v triede „ArrayList“ a identifikujete potenciálne chyby pri pokusoch o odstránenie položiek pri prechádzaní zoznamom. V tomto procese si uvedomíte, kedy je zoznam „ArrayList“ pre určitý scenár alebo problém najvhodnejší.
+              description_teacher: Žiaci objavia funkčnosť metódy „remove()“ v triede „ArrayList“ a identifikujú potenciálne chyby pri pokusoch o odstránenie položiek pri prechádzaní zoznamom. Žiaci si potom uvedomia, kedy je „ArrayList“ pre daný scenár alebo problém najvhodnejší.
+            Using String Methods:
+              description_student: Objavíte štruktúru reťazca „string“ a spomeniete si, že „string“ sú objekty. Použijete metódy „indexOf()“ a „substring()“ na vyhľadávanie podreťazcov v rámci reťazca „String“ a na vytváranie nových objektov „String“ z existujúceho reťazca „String“.
+              description_teacher: Žiaci objavia štruktúru reťazca „string“ a spomenú si, že reťazec „string“ sú objekty. Žiaci použijú metódy „indexOf()“ a „substring()“ na vyhľadávanie podreťazcov v rámci reťazca „String“ a na vytváranie nových objektov „String“ z existujúceho reťazca „String“.
+            Comparing Strings:
+              description_student: Pomocou funkcie „compareTo()“ preskúmate, či sú reťazce „String“ v abecednom poradí. Potom pracujete na svojom projekte oblastného festivalu literatúry a zameriate sa konkrétne na úlohy, ktoré máte na svojej projektovej plánovacej tabuli.
+              description_teacher: Žiaci pomocou funkcie „compareTo()“ preskúmajú, či sú reťazce „String“ v abecednom poradí. Žiaci potom pracujú na svojom projekte oblastného festivalu literatúry, pričom sa zameriavajú konkrétne na úlohy, ktoré majú na svojej projektovej plánovacej tabuli.
+            Solving Problems with Strings:
+              description_student: 'Skombinujete svoje znalosti o štandardných algoritmoch a reťazcoch „String“, aby ste skontrolovali, či „String“ je palindróm. Potom sa zúčastníte stretnutia o spätnej väzbe medzi kolegami a premýšľate o svojom pokroku vo svojom projekte oblastného festivalu literatúry. '
+              description_teacher: Žiaci skombinujú svoje znalosti o štandardných algoritmoch a reťazcoch „String“, aby skontrolovali, či „String“ je palindróm. Žiaci sa potom zúčastnia stretnutia so spätnou väzbou a uvažujú o svojom pokroku v projekte Neighborhood Lit Fest.
+            Solving Problems with ArrayLists:
+              description_student: Na zoznamy „ArrayList“ aplikujete štandardné algoritmy, ktoré ste napísali pre 1D a 2D polia. Implementujete nový štandardný algoritmus na získanie jednotlivých číslic z celého čísla pred úpravou a použitím predchádzajúcich algoritmov na výmenu prvkov, odstránenie duplikátov alebo nájdenie prvkov spĺňajúcich špecifické kritériá vo vašom projekte oblastného festivalu literatúry
+              description_teacher: Žiaci aplikujú štandardné algoritmy, ktoré napísali pre 1D a 2D polia, na zoznamy „ArrayList“. Žiaci implementujú nový štandardný algoritmus na získanie jednotlivých číslic z celého čísla pred úpravou a aplikáciou predchádzajúcich algoritmov na výmenu prvkov, odstránenie duplikátov alebo nájdenie prvkov, ktoré spĺňajú špecifické kritériá v ich projekte oblastného festivalu literatúry.
+            Neighborhood Lit Fest Project - Day 1:
+              name: Projekt oblastného festivalu literatúry – 1. deň
+              description_student: Pokračujete v rozvíjaní svojho projektu oblastného festivalu literatúry, aby ste vytvorili príbeh, poéziu, pieseň alebo inú formu literatúry na základe analýzy diela vášho obľúbeného autora alebo umelca. Najprv sami zhodnotíte svoju prácu, aby ste posúdili svoj pokrok pri plnení požiadaviek projektu, potom napíšete kritériá prijatia pre funkciu vo svojom projekte, ktorú otestuje váš spolupracovník. Pomocou sebahodnotenia a spätnej väzby od kolegov určíte priority zostávajúcich úloh a budete pokračovať vo vývoji svojho projektu.
+              description_teacher: Žiaci pokračujú v rozvíjaní svojho projektu oblastného festivalu literatúry, aby vytvorili príbeh, poéziu, pieseň alebo inú formu literatúry na základe analýzy diela od svojho obľúbeného autora alebo umelca. Žiaci najprv sami zhodnotia svoju prácu, aby posúdili svoj pokrok pri plnení požiadaviek projektu, potom napíšu kritériá prijatia pre funkciu vo svojom projekte, ktorú otetuje ich spolužiak. Žiaci využívajú sebahodnotenie a spätnú väzbu od spolužiakov, aby určili priority svojich zostávajúcich úloh a pokračovali vo vývoji svojich projektov.
+              key: Projekt oblastného festivalu literatúry – 1. deň
+            Neighborhood Lit Fest Project - Day 2:
+              name: Projekt oblastného festivalu literatúry – 2. deň
+              description_student: V predchádzajúcej lekcii ste vykonali sebahodnotenie a napísali ste kritériá prijatia pre váš projekt. V tejto lekcii získate spätnú väzbu od kolegu, aby ste identifikovali zostávajúce úlohy na dokončenie a pokračovali v rozvíjaní svojho projektu oblastného festivalu literatúry.
+              description_teacher: V predchádzajúcej lekcii žiaci vykonali sebahodnotenie a napísali kritériá prijatia pre svoje projekty. Žiaci v tejto lekcii získajú spätnú väzbu od svojich rovesníkov, aby identifikovali zostávajúce úlohy, ktoré majú dokončiť, a pokračovali v rozvíjaní svojho projektu oblastného festivalu literatúry.
+              key: Projekt oblastného festivalu literatúry – 2. deň
+            Neighborhood Lit Fest Project - Day 3:
+              name: Projekt oblastného festivalu literatúry – 3. deň
+              description_student: Vykonáte finálne úpravy a aktualizácie na základe preskúmania kódu a plánovacej projektovej tabule. Svoj projekt oblastného festivalu literatúry zdieľate so svojimi kolegami. Potom oslávite svoj úspech a dokončíte záverečnú reflexiu procesu vývoja.
+              description_teacher: Žiaci vykonajú finálne úpravy a aktualizácie na základe preskúmania kódu a plánovacej projektovej tabule. Žiaci zdieľajú svoje projekty oblastného festivalu literatúry so svojimi spolužiakmi. Žiaci potom oslávia svoj úspech a dokončia záverečnú reflexiu procesu vývoja.
+              key: Projekt oblastného festivalu literatúry – 3. deň
+            Assessment Day:
+              description_student: V tomto module ste použili zoznam „ArrayList“ na ukladanie údajov programu a na rozlíšenie medzi tým, kedy použiť 1D a 2D polia a zoznam „ArrayList“. Objavili ste výhody a funkcie zoznamu „ArrayList“, pomocou ktorých ste riešili problémy s numerickými a objektovými dátami. Použili ste metódy v triede „String“ na analýzu a spracovanie textu získaného zo vstupu používateľa a súboru. Počas modulu ste napísali dokumentáciu programu pomocou jednoriadkových komentárov, viacriadkových komentárov a komentárov Javadoc, aby ste vytvorili dokumentáciu API. V tomto procese ste identifikovali a zdokumentovali predbežné a následné podmienky objektov a metód. Teraz vyhodnotíte dosiahnutie vzdelávacích cieľov modulu a zručností na základe hodnotenia s viacerými možnosťami.
+              description_teacher: V tomto module žiaci použili zoznam „ArrayList“ na ukladanie údajov programu a na rozlíšenie medzi tým, kedy použiť 1D a 2D polia a „ArrayList“. Žiaci skúmali výhody a funkcie zoznamu „ArrayList“, pomocou ktorých riešili problémy s numerickými a objektovými dátami. Žiaci použili metódy v triede „String“ na analýzu a spracovanie textu získaného zo vstupu používateľa a súboru. Počas modulu žiaci napísali dokumentáciu programu pomocou jednoriadkových komentárov, viacriadkových komentárov a komentárov Javadoc, aby vytvorili dokumentáciu API. V tomto procese žiaci identifikovali a zdokumentovali predbežné a následné podmienky objektov a metód. Teraz žiaci vyhodnotia dosiahnutie vzdelávacích cieľov modulu a zručností na základe hodnotenia s viacerými možnosťami.
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-1:
+              key: lekcia-1
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox
+        csa7-2022:
+          lessons:
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox
+        csa8-2022:
+          lessons:
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+            lessonGroup-5:
+              display_name: Sandbox
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Premenné
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: Začíname
+              key: Začíname
+            Sequencing:
+              name: Postupnosť
+              key: Postupnosť
+            Loops:
+              name: Cykly
+              key: Cykly
+            Events:
+              name: Udalosti
+              key: Udalosti
+            Conditionals:
+              name: Podmienené príkazy
+              key: Podmienené príkazy
+            Functions:
+              name: Funkcie
+              key: Funkcie
+            Variables:
+              name: Premenné
+              key: Premenné
+            For Loops:
+              name: Cykly "Pre"
+              key: Cykly "Pre"
+            End of Course projects:
+              name: Záverečné projekty
+              key: Záverečné projekty
+            Lesson Planning:
+              key: Plánovanie hodín

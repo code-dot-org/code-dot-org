@@ -982,6 +982,12 @@ id:
         text: setelan
       Dancelab_whenSetup2:
         text: setelan
+      Dancelab_whenSetupSong:
+        options:
+          SONG:
+            '"macklemore90"': Macklemore - Tak bisa menahan kita
+            '"hammer"': MC Hammer - Kamu tak bisa menyentuhnya
+            '"peas"': The Black Eyed Peas - I Got a Feeling
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} mulai {BEHAVIOR}
       gamelab_addTarget:
@@ -1014,6 +1020,8 @@ id:
             '"y"': posisi y
             '"direction"': Arah pergerakan
             '"speed"': kecepatan
+      gamelab_changeVarBy:
+        text: Ubah [VARIABLE] [0] oleh [VAL]
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} menyentuh {SPRITE2}"
         options:
@@ -1030,9 +1038,13 @@ id:
           BEHAVIOR:
             new Behavior(spinning_right, []): berputar ke kanan
             new Behavior(spinning_left, []): berputar ke kiri
+            new Behavior(fluttering, []): sempoyongan
             new Behavior(jittering, []): gugup
+            new Behavior(wobbling, []): terhuyung-huyung
             new Behavior(wandering, []): pengembaraan
             new Behavior(patrolling, []): perondaan
+            new Behavior(moving_west_and_looping, []): bergerak ke barat dan looping
+            new Behavior(moving_east_and_looping, []): bergerak ke timur dan looping
             new Behavior(moving_north_and_looping, []): bergerak ke utara dan berulang
             new Behavior(moving_south_and_looping, []): bergerak ke selatan dan berulang
       gamelab_comment:
@@ -1295,6 +1307,7 @@ id:
         options:
           BEHAVIOR:
             new Behavior(moving_with_arrow_keys, []): bergerak dengan tanda panah
+            new Behavior(driving_with_arrow_keys, []): bergerak dengan tanda panah
             draggable(): yang diseret
       gamelab_pointInDirection:
         text: titik {SPRITE} {DIRECTION}
@@ -1402,13 +1415,14 @@ id:
             '"width"': lebar
             '"height"': tinggi
       gamelab_setSpeed_dropdown:
+        text: atur {SPRITE} menjadi {SIZE}
         options:
           SIZE:
-            '1': extra slow
+            '1': Ekstra lambat
             '3': lambat
             '5': normal
             '7': cepat
-            '9': extra fast
+            '9': ekstra cepat
       gamelab_setTint:
         text: ubah warna {THIS} menjadi {COLOR}
       gamelab_setupScoreboard:
@@ -1629,6 +1643,7 @@ id:
         text: "{SELECT} {COSTUME} {PROPERTY}"
         options:
           SELECT:
+            '"average"': rata-rata
             '"this"': ini
           PROPERTY:
             '"scale"': ukuran
@@ -1737,6 +1752,14 @@ id:
         text: 'lokasi x: {X} y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
+      Mikelab_poemTextJoin:
+        text: "{TEXT1} {VAR} {TEXT2}"
+        options:
+          TEXT1:
+            '"A chubby cat "': '"Kucing gemuk"'
+          TEXT2:
+            '" fence"': '"pagar"'
+            '""': '""'
       Mikelab_randomColor:
         text: warna acak
       Mikelab_removeBehaviorSimple:
@@ -1777,6 +1800,13 @@ id:
             '"x"': posisi x
             '"y"': posisi y
             '"direction"': Arah pergerakan
+      Mikelab_setupLevel:
+        text: |-
+          Atur level
+          {A1}{A2}{A3}{A4}
+          {A5}{A6}{A7}{A8}
+          {B1}{B2}{B3}{B4}
+          {B5}{B6}{B7}{B8}
       Mikelab_setupSim:
         text: |-
           setup simulasi dengan
@@ -1792,6 +1822,7 @@ id:
       Mikelab_showText:
         options:
           PREPOSITION:
+            '"above"': di atas
             '"below"': di bawah ini
       Mikelab_sprite:
         text: baru {COSTUME} sprite di {LOCATION}
@@ -1817,6 +1848,7 @@ id:
             '"down"': panah ke bawah
             '"left"': panah ke kiri
             '"right"': panah ke kanan
+            '"space"': spasi
             '"w"': B
             '"a"': A
             '"s"': S
@@ -1828,6 +1860,7 @@ id:
             '"down"': panah ke bawah
             '"left"': panah ke kiri
             '"right"': panah ke kanan
+            '"space"': spasi
             '"w"': B
             '"a"': A
             '"s"': S
@@ -1847,6 +1880,7 @@ id:
             '"down"': panah ke bawah
             '"left"': panah ke kiri
             '"right"': panah ke kanan
+            '"space"': spasi
       Mikelab_xLocationOf:
         text: x koordinat {SPRITE}
       Mikelab_yLocationOf:
@@ -2004,6 +2038,7 @@ id:
         text: 'sprite {ANIMATION_NAME} mulai {BEHAVIOR} '
         options:
           BEHAVIOR:
+            '"fluttering"': sempoyongan
             '"growing"': pertumbuhan
             '"jittering"': gugup
             '"shrinking"': penyusutan
@@ -2011,10 +2046,12 @@ id:
             '"spinning_right"': berputar ke kanan
             '"swimming_left_and_right"': berenang
             '"wandering"': pengembaraan
+            '"wobbling"': terhuyung-huyung
       Poetry_stopBehavior:
         text: 'sprite {ANIMATION_NAME} berhenti {BEHAVIOR} '
         options:
           BEHAVIOR:
+            '"fluttering"': sempoyongan
             '"growing"': pertumbuhan
             '"jittering"': gugup
             '"shrinking"': penyusutan
@@ -2022,6 +2059,7 @@ id:
             '"spinning_right"': berputar ke kanan
             '"swimming_left_and_right"': berenang
             '"wandering"': pengembaraan
+            '"wobbling"': terhuyung-huyung
             '"all"': "--semua perilaku--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
@@ -2093,6 +2131,10 @@ id:
             '0.75': most
             '0.5': half of
             '0.25': few
+          RATE:
+            '"slowly"': pelan-pelan
+          BEHAVIOR:
+            '"avoiding"': jaga jarak
       aalab_someStartIntervention:
         options:
           PORTION:
@@ -2100,8 +2142,18 @@ id:
             '0.75': most
             '0.5': half of
             '0.25': few
+          BEHAVIOR:
+            '"avoiding"': jaga jarak
       aalab_spriteSayChoices:
         text: "{SPRITE} ucapan {SPEECH}"
+        options:
+          SPEECH:
+            '"Roar!"': Roar!
+      aalab_startIntervention:
+        text: monster mulai {BEHAVIOR}
+        options:
+          BEHAVIOR:
+            '"avoiding"': jaga jarak
       binary_drawBin:
         text: menggambar biner {BIN}
       binary_drawBinScreen:
@@ -2159,12 +2211,16 @@ id:
         options:
           DIR:
             "'ahead'": adang
+            "'right'": ke kanan
+            "'left'": ke kiri
       craft_ifStandingOn:
         text: |-
           jika berdiri di {TYPE}
           {STATEMENT}
         options:
           TYPE:
+            "'blueCoralBlock'": coral biru
+            "'redCoralBlock'": coral merah
             "'sand'": pasir
             "'planksOak'": papan kayu pohon ek
       craft_ifStandingOnLimit:
@@ -2180,6 +2236,9 @@ id:
         text: Gerak maju
       craft_placeBlock:
         text: tempat {blockType}
+        options:
+          blockType:
+            '"packedIce"': Setumpuk es
       craft_placePrismarine:
         text: tempat prismarine
       craft_placeTorch:
@@ -2206,3 +2265,5 @@ id:
             left: kiri -
       validation_validatedBackground:
         text: atur latar belakang ke {IMG}
+      validation_validatedSound:
+        text: MAINKAN Suara {SOUND}
