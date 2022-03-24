@@ -302,6 +302,7 @@ class ShareAllowedDialog extends React.Component {
                         ...(this.state.hasBeenCopied && styles.copyButtonLight)
                       }}
                       onClick={wrapShareClick(this.copy, 'copy')}
+                      value={this.props.shareUrl}
                     >
                       <FontAwesome icon="clipboard" style={{fontSize: 16}} />
                       <span style={{paddingLeft: 10}}>
