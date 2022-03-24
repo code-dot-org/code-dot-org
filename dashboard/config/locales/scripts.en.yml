@@ -33474,8 +33474,8 @@ en:
           title: 'Module 1: Preparing to Teach Problem Solving and Computing'
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: "This professional learning module is designed to help you prepare to teach Code.org's Problem Solving and Computing unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Problem Solving and Computing.\n* Practice key concepts included in the unit.\n* Explore end of chapter projects.\n\n**Suggested time:** 30 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Problem Solving and Computing unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Problem Solving and Computing.\n* Practice key concepts included in the unit.\n* Explore end of chapter projects.\n\n**Suggested time:** 30 minutes"
         vpl-csd2-ci-pilot-2022:
           lessons:
             lesson-1:
@@ -33486,31 +33486,50 @@ en:
                 * Get an introduction to code.org's Web Development unit.
                 * Get a preview of the first week of the Web Development unit content.
 
-                **Suggested time:** 15 minutes
+                **Suggested time:** 10 minutes
               description_teacher: |-
                 **You will:**
 
                 * Get an introduction to code.org's Web Development unit.
                 * Get a preview of the first week of the Web Development unit content.
 
-                **Suggested time:** 15 minutes
+                **Suggested time:** 10 minutes
             lesson-2:
               name: Build a website with HTML
-              description_student: 
-              description_teacher: 
+              description_student: "**You will:**\n\n* Get an introduction to using Web Lab.\n* Add structure to a web page using HML. \n* Add images to a web page. \n\n**Suggested time:** 30 minutes"
+              description_teacher: "**You will:**\n\n* Get an introduction to using Web Lab.\n* Add structure to a web page using HML. \n* Add images to a web page. \n\n**Suggested time:** 30 minutes"
             lesson-3:
               name: Style a website with CSS
-              description_student: 
-              description_teacher: 
-            lesson-4:
-              name: Consider real-world implications
-              description_student: 
+              description_student: |-
+                **You will:**
+
+                * Style the text of a web page using CSS.
+                * Link a CSS style sheet to the web page index.
+                * Explore additional properties to style elements on a web page.
+
+                **Suggested time:** 25 minutes
               description_teacher: |-
                 **You will:**
 
-                * Consider real-world implications of web development.
+                * Style the text of a web page using CSS.
+                * Link a CSS style sheet to the web page index.
+                * Explore additional properties to style elements on a web page.
 
-                **Suggested time:** 20 minutes
+                **Suggested time:** 25 minutes
+            lesson-4:
+              name: Consider roles and responsibilities related to digital media
+              description_student: |-
+                **You will:**
+
+                * Explore the ways in which students will work to understand their role and responsibilities as both creators and consumers of digital media.
+
+                **Suggested time:** 15 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Explore the ways in which students will work to understand their role and responsibilities as both creators and consumers of digital media.
+
+                **Suggested time:** 15 minutes
             lesson-5:
               name: Unit wrap up
               description_student: "**You will:**\n\n* Explore end of chapter projects. \n\n**Suggested time:** 10 minutes"
@@ -33522,17 +33541,31 @@ en:
           title: 'Module 2: Preparing to Teach Web Development'
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: "This professional learning module is designed to help you prepare to teach Code.org's Web Development unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Web Development.\n* Practice key concepts included in the unit.\n* Engage with Web Lab.\n* Explore end of chapter projects.\n\n**Suggested time:** 90 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Web Development unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Web Development.\n* Practice key concepts included in the unit.\n* Engage with Web Lab.\n* Explore end of chapter projects.\n\n**Suggested time:** 90 minutes"
         vpl-csd3-ci-pilot-2022:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Introduction to Interactive Animations and Games
+            lesson-2:
+              name: Create a scene
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Aniumate an interactive card
+            lesson-4:
+              name: Explore game design
+            lesson-5:
+              name: Unit wrap up
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Preparing to Teach Interactive Animations and Games
           name: vpl-csd3-ci-pilot-2022
           title: 'Module 3: Preparing to Teach Interactive Animations and Games '
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end of chapter projects.\n\n**Suggested time:** 90 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end of chapter projects.\n\n**Suggested time:** 90 minutes"
         vpl-csd4-ci-pilot-2022:
           lessons: {}
           lesson_groups: {}
@@ -33540,8 +33573,8 @@ en:
           title: " Module 4: Preparing to Teach The Design Process"
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: "This professional learning module is designed to help you prepare to teach Code.org's Design Process unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to The Design Process.\n* Practice key concepts included in the unit.\n* Engage with App Lab.\n* Explore end of chapter projects.\n\n**Suggested time:** 90 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Design Process unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to The Design Process.\n* Practice key concepts included in the unit.\n* Engage with App Lab.\n* Explore end of chapter projects.\n\n**Suggested time:** 90 minutes"
         vpl-csd5-ci-pilot-2022:
           lessons: {}
           lesson_groups: {}
@@ -33549,8 +33582,8 @@ en:
           title: 'Module 5: Preparing to Teach Data and Society'
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end of chapter projects.\n\n**Suggested time:** 90 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end of chapter projects.\n\n**Suggested time:** 90 minutes"
         vpl-csd6-ci-pilot-2022:
           lessons: {}
           lesson_groups: {}
@@ -33558,8 +33591,8 @@ en:
           title: 'Module 6: Preparing to Teach Physical Computing'
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: "This professional learning module is designed to help you prepare to teach Code.org's Physical Computing unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Physical Computing.\n* Practice key concepts included in the unit.\n* Engage with the maker app.\n* Explore end of chapter projects.\n\n**Suggested time:** 90 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Physical Computing unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Physical Computing.\n* Practice key concepts included in the unit.\n* Engage with the maker app.\n* Explore end of chapter projects.\n\n**Suggested time:** 90 minutes"
         vpl-csd7-ci-pilot-2022:
           lessons: {}
           lesson_groups: {}
@@ -33567,8 +33600,8 @@ en:
           title: 'Module 7: Preparing to Teach AI and Machine Learning'
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to AI and Machine Learning.\n* Practice key concepts included in the unit.\n* Engage with AI Lab and App Lab.\n* Explore end of chapter projects.\n* Make a plan for implementing the unit with your students.\n\n**Suggested time:** 120 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to AI and Machine Learning.\n* Practice key concepts included in the unit.\n* Engage with AI Lab and App Lab.\n* Explore end of chapter projects.\n* Make a plan for implementing the unit with your students.\n\n**Suggested time:** 120 minutes"
         hello-world-csc:
           lessons:
             lesson-1:
