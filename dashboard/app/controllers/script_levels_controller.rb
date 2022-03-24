@@ -524,7 +524,7 @@ class ScriptLevelsController < ApplicationController
       exemplar_sources = @level.try(:exemplar_sources)
       return render 'levels/no_exemplar' unless exemplar_sources
 
-      level_view_options(@level.id, {exemplar_sources: exemplar_sources})
+      level_view_options(@level.id, {is_viewing_exemplar: true, exemplar_sources: exemplar_sources})
       readonly_view_options
     end
 
