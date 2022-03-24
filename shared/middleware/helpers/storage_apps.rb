@@ -138,8 +138,7 @@ class StorageApps
   end
 
   # Returns an array of all ids for storage apps with storage id = @storage_id
-  # Maureen the name of this method is very confusing - fix
-  def get_all_storage_ids
+  def get_all_storage_app_ids
     StorageApps.table.
       where(storage_id: @storage_id).
       map(:id)
