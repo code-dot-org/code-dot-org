@@ -516,16 +516,15 @@ class ScriptLevelsController < ApplicationController
       current_user.present? &&
       (current_user.teacher? || (current_user&.sections_as_student&.any?(&:code_review_enabled?) && !current_user.code_review_groups.empty?))
 
-    # javalab specfiic
-    # should this go in show?
+    # Javalab exemplar URLs include ?exemplar=true as a URL param
     if params[:exemplar]
-      # maybe create new partial with better messaging
-      return render 'levels/no_access' unless current_user&.verified_instructor?
+      return render 'levels/no_access_exemplar' unless current_user&.verified_instructor?
 
       @is_viewing_exemplar = true
       exemplar_sources = @level.try(:exemplar_sources)
+      return render 'levels/no_exemplar' unless exemplar_sources
+
       level_view_options(@level.id, {exemplar_sources: exemplar_sources})
-      # add some cancan check that only verified teachers can view this
       readonly_view_options
     end
 
