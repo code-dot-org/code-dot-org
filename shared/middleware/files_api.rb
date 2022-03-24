@@ -368,14 +368,18 @@ class FilesApi < Sinatra::Base
 
   def put_file(endpoint, encrypted_channel_id, filename, body)
     not_authorized unless owns_channel?(encrypted_channel_id)
+    file_type = File.extname(filename)
+    buckets = get_bucket_impl(endpoint).new
+    if body.length >= max_file_size
+      body = buckets.try_resize_file(body, file_type)
+    end
+
     file_too_large(endpoint) unless body.length < max_file_size
 
-    buckets = get_bucket_impl(endpoint).new
     bad_request unless buckets.allowed_file_name? filename
 
     # verify that file type is in our allowlist, and that the user-specified
     # mime type matches what Sinatra expects for that file type.
-    file_type = File.extname(filename)
     unsupported_media_type unless buckets.allowed_file_type?(file_type)
     category = buckets.category_from_file_type(file_type)
 

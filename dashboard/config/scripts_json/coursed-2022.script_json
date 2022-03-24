@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2022-03-22 22:21:35 UTC",
+    "serialized_at": "2022-03-23 20:16:33 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -210,7 +210,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **context-setting**/**skill-building** lesson, students will learn what events are and how programmers use them in video games. Students will build a game that they can customize with different speeds and sounds.",
-        "preparation": "\n - Play through the puzzles to find any potential problem areas for your class.\n - Read the ***slide deck** (to be presented to students at end of class).",
+        "preparation": "\n - Play through the puzzles to find any potential problem areas for your class.\n",
         "purpose": "Events are very common in computer programs, especially in video games.  \n\nIn this lesson, students will develop their understanding of events by making a sports-based game. Students will learn to make their paddle move according to arrow keys, and make noises when objects collide. At the very end, they will get to customize their game to make it more unique!",
         "student_overview": "Ever wish you could play video games in school? In this lesson, you will get to make your own!"
       },
@@ -582,8 +582,7 @@
       "key": "a7dae702-74f1-442a-83fd-ff60c956071d",
       "position": 5,
       "properties": {
-        "duration": 10,
-        "name": "Optional Assessment"
+        "name": "Optional Assessment (10 minutes)"
       },
       "seeding_key": {
         "lesson_activity.key": "a7dae702-74f1-442a-83fd-ff60c956071d",
@@ -1751,7 +1750,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _Why is it important to give a robot specific instructions when you “program” it?_\n\nStudents will either be learning a lot of new concepts or reviewing a lot of basic concepts. Based on your class's experience, you can cover the following vocabulary or move on to a bridging activity. We recommend using the following words in sentences if the definitions aren't explicitly covered.",
-        "name": "Introduction\r"
+        "name": "Reflect"
       },
       "seeding_key": {
         "activity_section.key": "96499db1-0002-4488-b370-2d718a5c90ec",
@@ -1762,7 +1761,8 @@
       "key": "c10c099e-fd94-4a79-9bd6-bfc55b2b1059",
       "position": 2,
       "properties": {
-        "description": "\n####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\nThis lesson has the following important vocabulary words:\n\n\n\n - **Bug** -    An error in a program that prevents the program from running as expected. \n\n - **Debugging** -    Finding and fixing errors in programs. \n\n - **Loop** -    The action of doing something over and over again\n\n - **Program** -    An algorithm that has been coded into something that can be run by a machine.\n\n - **Programming** -    The art of creating a program. "
+        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\nThis lesson has the following important vocabulary words:\n\n\n\n - **Bug** -    An error in a program that prevents the program from running as expected. \n\n - **Debugging** -    Finding and fixing errors in programs. \n\n - **Loop** -    The action of doing something over and over again\n\n - **Program** -    An algorithm that has been coded into something that can be run by a machine.\n\n - **Programming** -    The art of creating a program. ",
+        "name": "Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "c10c099e-fd94-4a79-9bd6-bfc55b2b1059",
@@ -1873,6 +1873,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide \n\n**Reflect:** _When have you “debugged” a frustrating problem in your life?_",
+        "name": "Reflect",
         "tips": [
           {
             "type": "teachingTip",
@@ -1889,7 +1890,8 @@
       "key": "5dbc43b8-f734-4c93-99d4-0995393a9f25",
       "position": 2,
       "properties": {
-        "description": "\n&nbsp\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Algorithm** - A list of steps to finish a task.\n\n\n- **Bug** - Part of a program that does not work correctly.\n\n- **Debugging** - Finding and fixing problems in an algorithm or program.\n\n- **Program** - An algorithm that has been coded into something that can be run by a machine.\n\n&nbsp\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary: (continued)” slide\n\n- **Frustrated** - Feeling annoyed or angry because something is not the way you want it. \n\n- **Persistence** - Trying again and again, even when something is very hard.\n"
+        "description": "\n\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Algorithm** - A list of steps to finish a task.\n\n\n- **Bug** - Part of a program that does not work correctly.\n\n- **Debugging** - Finding and fixing problems in an algorithm or program.\n\n- **Program** - An algorithm that has been coded into something that can be run by a machine.\n\n&nbsp\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary: (continued)” slide\n\n- **Frustrated** - Feeling annoyed or angry because something is not the way you want it. \n\n- **Persistence** - Trying again and again, even when something is very hard.\n",
+        "name": "Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "5dbc43b8-f734-4c93-99d4-0995393a9f25",
@@ -1900,7 +1902,8 @@
       "key": "3ab2b28c-3947-44d9-ae6d-8d8d43320c27",
       "position": 3,
       "properties": {
-        "description": "Recall that in \"Graph Paper Programming\" we guided our teammate's Automatic Realization Machine (ARM) using arrows. This warm up will bring back these ideas, which will be needed in the main activity."
+        "description": "Recall that in \"Graph Paper Programming\" we guided our teammate's Automatic Realization Machine (ARM) using arrows. This warm up will bring back these ideas, which will be needed in the main activity.",
+        "name": "Introduction"
       },
       "seeding_key": {
         "activity_section.key": "3ab2b28c-3947-44d9-ae6d-8d8d43320c27",
@@ -1911,8 +1914,7 @@
       "key": "1a76c73e-a54d-4d84-ae77-8cf516d6661e",
       "position": 4,
       "properties": {
-        "description": "**Goal:** In this lesson, we want to help students learn to identify and fix bugs in their own programs.  The easiest way to do that is to first present students with a program that contains bugs that are not their fault.  Once they've helped you fix \"your\" program, share with them how frustrating it can be to make mistakes, and help them see that those feelings are completely normal and they shouldn't feel embarrassed by them.\n\n&nbsp\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Debugging” slide\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-05-11-12.30.53.png)\n\n**Discuss:** Get the attention of the class and let them know that you are stuck!  You have this challenge, and you thought you had solved it, but it doesn't seem to be working.  Your program has a bug, can they help you fix it?\n\nTake a moment to walk them through the rules:\n- _Start at the star._\n- _Follow the instructions step-by-step._\n- _End when all of the right squares are filled in._\n\n*Optional:*  Follow along by filling in a blank grid. Express frustration when the picture doesn't turn out the way that you wanted it to.\n\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Think, Pair, Share” slide\n\n**Think:** *Can you figure out why my program doesn't work?*\n\n**Pair:** Let students work together to see if they can figure out what the program is supposed to say.\n\n**Share:** Ask students if anyone was able to figure out a way to solve the problem.  When you get a correct answer, let the students know that they are great at debugging!",
-        "name": "Where did I go wrong?"
+        "description": "\n####Where did I go wrong?\n**Goal:** In this lesson, we want to help students learn to identify and fix bugs in their own programs.  The easiest way to do that is to first present students with a program that contains bugs that are not their fault.  Once they've helped you fix \"your\" program, share with them how frustrating it can be to make mistakes, and help them see that those feelings are completely normal and they shouldn't feel embarrassed by them.\n\n&nbsp\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Debugging” slide\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-05-11-12.30.53.png)\n\n**Discuss:** Get the attention of the class and let them know that you are stuck!  You have this challenge, and you thought you had solved it, but it doesn't seem to be working.  Your program has a bug, can they help you fix it?\n\nTake a moment to walk them through the rules:\n- _Start at the star._\n- _Follow the instructions step-by-step._\n- _End when all of the right squares are filled in._\n\n*Optional:*  Follow along by filling in a blank grid. Express frustration when the picture doesn't turn out the way that you wanted it to.\n\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Think, Pair, Share” slide\n\n**Think:** *Can you figure out why my program doesn't work?*\n\n**Pair:** Let students work together to see if they can figure out what the program is supposed to say.\n\n**Share:** Ask students if anyone was able to figure out a way to solve the problem.  When you get a correct answer, let the students know that they are great at debugging!"
       },
       "seeding_key": {
         "activity_section.key": "1a76c73e-a54d-4d84-ae77-8cf516d6661e",
@@ -5353,6 +5355,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_bonus12022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5374,6 +5379,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_bonus32022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -9952,17 +9960,6 @@
       }
     },
     {
-      "name": "Events in Bounce - How Do They Happen?",
-      "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/template/preview",
-      "key": "events_in_bounce_-_how_do_they_happen_",
-      "properties": {
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "events_in_bounce_-_how_do_they_happen_"
-      }
-    },
-    {
       "name": "Feeling Faces",
       "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
       "key": "feeling_faces",
@@ -10352,6 +10349,12 @@
     {
       "seeding_key": {
         "lesson.key": "Build a Star Wars Game",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Star Wars Game",
         "resource.key": "open-ended_programming_levels_1"
       }
     },
@@ -10399,6 +10402,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Conditionals with Cards",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Dance Party",
         "resource.key": "dance_party_project_guide"
       }
@@ -10424,6 +10439,12 @@
     {
       "seeding_key": {
         "lesson.key": "Debugging with Laurel",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging with Laurel",
         "resource.key": "relay_programming_5"
       }
     },
@@ -10435,6 +10456,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Drawing Shapes with Loops",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "End of Course Project",
         "resource.key": "csf_course_d_end_of_course_project_planning_guide"
       }
@@ -10442,7 +10475,7 @@
     {
       "seeding_key": {
         "lesson.key": "Events in Bounce",
-        "resource.key": "events_in_bounce_-_how_do_they_happen_"
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
       }
     },
     {
@@ -10502,6 +10535,12 @@
     {
       "seeding_key": {
         "lesson.key": "If/Else with Bee",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "If/Else with Bee",
         "resource.key": "unplugged_blocks_courses_c-f_"
       }
     },
@@ -10515,6 +10554,18 @@
       "seeding_key": {
         "lesson.key": "Introduction to Online Puzzles",
         "resource.key": "pair_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Looking Ahead with Minecraft",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
       }
     },
     {
@@ -10533,6 +10584,12 @@
       "seeding_key": {
         "lesson.key": "Loops in Ice Age",
         "resource.key": "pause_and_think_online"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Maze",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
       }
     },
     {
@@ -10580,6 +10637,12 @@
     {
       "seeding_key": {
         "lesson.key": "Relay Programming",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Relay Programming",
         "resource.key": "relay_programming"
       }
     },
@@ -10615,8 +10678,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Until Loops in Maze",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "While Loops in Farmer",
         "resource.key": "conditionals_with_cards_sample_program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "While Loops in Farmer",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
       }
     },
     {

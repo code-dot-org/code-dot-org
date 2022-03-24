@@ -165,8 +165,39 @@ exports.load = function(assetUrl, id) {
 
     return mapping;
   };
+  /**
+   * Generates a mapping of geometry sticker names to the urls of their images.
+   *
+   * @return the mapping of names to urls
+   */
+  var shapes = function() {
+    // Pattern Blocks
+    var shapes = [
+      'smallRhombusMaroon',
+      'smallRhombusRed',
+      'smallRhombusOrange',
+      'smallRhombusYellow',
+      'smallRhombusGreen',
+      'smallRhombusCyan',
+      'smallRhombusLightBlue',
+      'smallRhombusBlue',
+      'smallRhombusPurple',
+      'smallRhombusMagenta'
+    ];
+
+    var mapping = {};
+    var name;
+
+    for (var i = 0; i < shapes.length; i++) {
+      name = shapes[i];
+      mapping[name] = assetUrl('media/common_images/shapes/' + name + '.png');
+    }
+
+    return mapping;
+  };
 
   skin.stickers = stickers();
+  skin.shapes = shapes();
 
   var config = CONFIGS[skin.id];
 
