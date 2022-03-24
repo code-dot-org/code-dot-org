@@ -16,8 +16,8 @@ const DEFAULT_VALUE = 'all';
  * This is a levelbuilder-facing component.
  */
 export default function ProgrammingExpressionsTable({
-  programmingEnvironmentsForSelect,
-  categoriesForSelect,
+  allProgrammingEnvironments,
+  allCategories,
   hidden
 }) {
   const [selectedEnvironment, setSelectedEnvironment] = useState(DEFAULT_VALUE);
@@ -26,7 +26,7 @@ export default function ProgrammingExpressionsTable({
   const [
     categoriesAvailableForSelect,
     setCategoriesAvailableForSelect
-  ] = useState(categoriesForSelect);
+  ] = useState(allCategories);
   const [itemToClone, setItemToClone] = useState(null);
 
   const [itemToDelete, setItemToDelete] = useState(null);
@@ -115,10 +115,10 @@ export default function ProgrammingExpressionsTable({
     const newSelectedEnvironment = e.target.value;
     setSelectedEnvironment(newSelectedEnvironment);
     if (newSelectedEnvironment === DEFAULT_VALUE) {
-      setCategoriesAvailableForSelect(categoriesForSelect);
+      setCategoriesAvailableForSelect(allCategories);
     } else {
       setCategoriesAvailableForSelect(
-        categoriesForSelect.filter(
+        allCategories.filter(
           cat => String(cat.envId) === String(newSelectedEnvironment)
         )
       );
@@ -174,7 +174,7 @@ export default function ProgrammingExpressionsTable({
           style={{marginRight: 7}}
         >
           <option value={DEFAULT_VALUE}>All IDEs</option>
-          {programmingEnvironmentsForSelect.map(env => (
+          {allProgrammingEnvironments.map(env => (
             <option key={env.id} value={env.id}>
               {env.title || env.name}
             </option>
@@ -225,8 +225,8 @@ export default function ProgrammingExpressionsTable({
         {!!itemToClone && (
           <CloneProgrammingExpressionDialog
             itemToClone={itemToClone}
-            programmingEnvironmentsForSelect={programmingEnvironmentsForSelect}
-            categoriesForSelect={categoriesForSelect}
+            programmingEnvironmentsForSelect={allProgrammingEnvironments}
+            categoriesForSelect={allCategories}
             onClose={() => {
               setItemToClone(null);
               fetchExpressions();
@@ -259,9 +259,8 @@ export default function ProgrammingExpressionsTable({
 }
 
 ProgrammingExpressionsTable.propTypes = {
-  programmingEnvironmentsForSelect: PropTypes.arrayOf(PropTypes.object)
-    .isRequired,
-  categoriesForSelect: PropTypes.arrayOf(PropTypes.object).isRequired,
+  allProgrammingEnvironments: PropTypes.arrayOf(PropTypes.object).isRequired,
+  allCategories: PropTypes.arrayOf(PropTypes.object).isRequired,
   hidden: PropTypes.bool
 };
 

@@ -51,7 +51,7 @@ describe('ProgrammingExpressionsTable', () => {
       ]
     };
     defaultProps = {
-      programmingEnvironmentsForSelect: [
+      allProgrammingEnvironments: [
         {
           id: 1,
           name: 'applab',
@@ -67,7 +67,7 @@ describe('ProgrammingExpressionsTable', () => {
           title: 'Game Lab'
         }
       ],
-      categoriesForSelect: [
+      allCategories: [
         {
           id: 100,
           envId: 2,
