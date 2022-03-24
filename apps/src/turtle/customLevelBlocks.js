@@ -59,13 +59,13 @@ function makeBlockInitializer(title, parameter) {
     init: function() {
       this.setHSV(94, 0.84, 0.6);
 
-      this.appendDummyInput().appendTitle(title);
+      this.appendDummyInput().appendField(title);
 
       if (parameter !== undefined) {
         this.appendValueInput('VALUE')
           .setAlign(Blockly.ALIGN_RIGHT)
           .setCheck(Blockly.BlockValueType.NUMBER)
-          .appendTitle(parameter + ':');
+          .appendField(parameter + ':');
       }
 
       this.setPreviousStatement(true);
@@ -580,7 +580,7 @@ function installCreateASnowflakeDropdown(blockly, generator, gensym) {
       this.setHSV(94, 0.84, 0.6);
 
       var title = new blockly.FieldDropdown(snowflakes);
-      this.appendDummyInput().appendTitle(title, 'TYPE');
+      this.appendDummyInput().appendField(title, 'TYPE');
 
       this.setPreviousStatement(true);
       this.setNextStatement(true);
