@@ -27,7 +27,9 @@ function LessonLockDialog({
   }, [initialLockStatus]);
 
   const setAllLockStatus = lockStatus => {
-    setlockStatuses(lockStatuses.map(item => ({...item, lockStatus})));
+    setlockStatuses(currentLockStatuses =>
+      currentLockStatuses.map(item => ({...item, lockStatus}))
+    );
   };
 
   const allowEditing = () => setAllLockStatus(LockStatus.Editable);
@@ -48,8 +50,8 @@ function LessonLockDialog({
     const modifiedIndex = parseInt(event.target.name, 10);
     const value = event.target.value;
 
-    setlockStatuses(
-      lockStatuses.map((item, index) => {
+    setlockStatuses(currentLockStatuses =>
+      currentLockStatuses.map((item, index) => {
         if (index !== modifiedIndex) {
           return item;
         }
