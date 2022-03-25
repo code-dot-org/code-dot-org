@@ -47,7 +47,7 @@ describe('ProgrammingClassEditor', () => {
     fetchSpy.restore();
   });
 
-  it('displays initial values in input fields', () => {
+  it('displays initial values in input fields in top section', () => {
     const wrapper = shallow(<ProgrammingClassEditor {...defaultProps} />);
     expect(wrapper.text().includes('Editing Class')).to.be.true;
 
@@ -79,9 +79,15 @@ describe('ProgrammingClassEditor', () => {
     expect(
       categorySelect.find('option').map(option => option.props().value)
     ).to.eql(['', 'circuit', 'variables', 'canvas']);
+  });
+
+  it('displays initial values in input fields in documentation section', () => {
+    const wrapper = shallow(<ProgrammingClassEditor {...defaultProps} />);
+    expect(wrapper.text().includes('Editing Class')).to.be.true;
 
     // Documentation section
     const documentationSection = wrapper.find('CollapsibleEditorSection').at(0);
+    expect(documentationSection.props().title).to.equal('Documentation');
     expect(
       documentationSection
         .find('input')
@@ -102,18 +108,29 @@ describe('ProgrammingClassEditor', () => {
         .at(0)
         .props().markdown
     ).to.equal('Painter()');
+  });
+
+  it('displays initial values in input fields in tips section', () => {
+    const wrapper = shallow(<ProgrammingClassEditor {...defaultProps} />);
+    expect(wrapper.text().includes('Editing Class')).to.be.true;
 
     // Tips section
     const tipsSection = wrapper.find('CollapsibleEditorSection').at(2);
+    expect(tipsSection.props().title).to.equal('Tips');
     expect(
       tipsSection
         .find('TextareaWithMarkdownPreview')
         .at(0)
         .props().markdown
     ).to.equal('some tips on how to use this class');
+  });
 
+  it('displays initial values in input fields in examples section', () => {
+    const wrapper = shallow(<ProgrammingClassEditor {...defaultProps} />);
+    expect(wrapper.text().includes('Editing Class')).to.be.true;
     // Examples section
     const examplesSection = wrapper.find('CollapsibleEditorSection').at(3);
+    expect(examplesSection.props().title).to.equal('Examples');
     const orderableExampleList = examplesSection.find('OrderableList');
     expect(orderableExampleList.props().addButtonText).to.equal(
       'Add Another Example'
