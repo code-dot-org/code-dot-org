@@ -38,8 +38,35 @@
   display: block;
 }
 
-.nested-content {
-  background-color: white;
-  margin-left: 10px;
-  padding-left: 4px;
+.nav-bar {
+  padding-right: 5px;
+  min-width: 150px;
+
+  .category {
+    margin-bottom: 5px;
+    width: 150px;
+
+    .title {
+      padding: 5px 10px;
+      display: block;
+      color: $dimgray;
+    }
+    &.open .title {
+      color: $black;
+    }
+  }
+
+  .nested-content {
+    background-color: $background_gray;
+    margin-left: 10px;
+    padding-left: 4px;
+
+    .nested-link {
+      font-size: 13px;
+    }
+
+    & > * {
+      margin-bottom: 4px;
+    }
+  }
 }
