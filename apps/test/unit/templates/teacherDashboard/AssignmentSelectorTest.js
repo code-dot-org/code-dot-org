@@ -112,7 +112,7 @@ describe('AssignmentSelector', () => {
   it('filters out unused course offering categories', () => {
     const wrapper = shallow(<AssignmentSelector {...defaultProps} />);
     assert.equal(wrapper.find('optgroup').length, 3);
-    assert.equal(wrapper.find('optgroup').map(s => s.props().label), [
+    assert.deepEqual(wrapper.find('optgroup').map(s => s.props().label), [
       'Full Courses',
       'CS Fundamentals',
       'Hour of Code'
