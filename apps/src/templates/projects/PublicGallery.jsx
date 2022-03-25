@@ -31,8 +31,7 @@ class PublicGallery extends Component {
       artist: PropTypes.arrayOf(publishedProjectPropType),
       minecraft: PropTypes.arrayOf(publishedProjectPropType),
       dance: PropTypes.arrayOf(publishedProjectPropType),
-      poetry: PropTypes.arrayOf(publishedProjectPropType),
-      thebadguys: PropTypes.arrayOf(publishedProjectPropType)
+      poetry: PropTypes.arrayOf(publishedProjectPropType)
     })
   };
 
