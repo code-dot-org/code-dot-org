@@ -18,6 +18,7 @@
 
 require 'dynamic_config/datastore_cache'
 require 'dynamic_config/dynamic_config_base'
+require 'dynamic_config/environment_aware_dynamic_config_helper'
 require 'dynamic_config/adapters/dynamodb_adapter'
 require 'dynamic_config/adapters/json_file_adapter'
 require 'dynamic_config/adapters/memory_adapter'
@@ -92,22 +93,7 @@ class GatekeeperBase < DynamicConfigBase
   # Factory method for creating GatekeeperBase objects
   # @returns [GatekeeperBase]
   def self.create
-    env = rack_env.to_s
-    env = Rails.env.to_s if defined?(Rails) && Rails.respond_to?(:env)
-
-    cache_expiration = 5
-
-    # Use the memory adapter if we're running tests, but not if we running the test Rails server.
-    if env == 'test' && File.basename($0) != 'unicorn'
-      adapter = MemoryAdapter.new
-    elsif env == 'production'
-      cache_expiration = 30
-      adapter = DynamoDBAdapter.new CDO.gatekeeper_table_name
-    else
-      adapter = JSONFileDatastoreAdapter.new("#{dashboard_dir(CDO.gatekeeper_table_name)}_temp.json")
-    end
-
-    datastore_cache = DatastoreCache.new adapter, cache_expiration: cache_expiration
+    datastore_cache = EnvironmentAwareDynamicConfigHelper.create_datastore_cache(CDO.gatekeeper_table_name)
     GatekeeperBase.new datastore_cache
   end
 
