@@ -51,6 +51,10 @@ export default class JavabuilderConnection {
     this.connectJavabuilderHelper(ajaxPayload, /* checkProjectEdited */ true);
   }
 
+  // Get the access token to connect to javabuilder and then open the websocket connection.
+  // When getting the access token, send override sources to run instead of attempting to find
+  // sources based on a channel id.
+  // The token prevents access to our javabuilder AWS execution environment by un-verified users.
   connectJavabuilderWithOverrideSources(overrideSources) {
     let requestData = this.getDefaultRequestData();
     requestData.overrideSources = overrideSources;
@@ -60,11 +64,15 @@ export default class JavabuilderConnection {
       data: requestData
     };
 
-    // When we have override sources, we do not need to check if the project has been edited, as the override sources
-    // are what we want to run.
+    // When we have override sources, we do not need to check if the project has been edited,
+    // as the override sources are what we want to run.
     this.connectJavabuilderHelper(ajaxPayload, /* checkProjectEdited */ false);
   }
 
+  // Get the access token to connect to javabuilder and then open the websocket connection.
+  // When getting the access token, send override validation code to run instead of any existing validation
+  // code on the level.
+  // The token prevents access to our javabuilder AWS execution environment by un-verified users.
   connectJavabuilderWithOverrideValidation(overrideValidation) {
     let requestData = this.getDefaultRequestData();
     requestData.channelId = this.channelId;
@@ -79,8 +87,8 @@ export default class JavabuilderConnection {
   }
 
   connectJavabuilderHelper(ajaxPayload, checkProjectEdited) {
-    // Don't attempt to connect to Javabuilder if we do not have a project and we want to check
-    // the edit status.
+    // Don't attempt to connect to Javabuilder if we do not have a project
+    // and we want to check the edit status.
     // This typically occurs if a teacher is trying to view a student's project
     // that has not been modified from the starter code.
     // This case does not apply to students, who are able to execute unmodified starter code.
