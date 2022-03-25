@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "properties": {
+    "video_key": "csp_cs_is_changing_everything",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 18967,
+    "name_suffix": "_2021",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "## HOLDER SPACE for VIDEO\r\n\r\nScript: https://docs.google.com/document/d/1xuCFy2T5tjRFZCvk51ZcbQzau2lKkS4W43xmEYnbRLw/edit\r\n\r\n**Vocabulary:**\r\n\r\n* **Class header** - consists of the class keyword and the name of the class\r\n* **Integrated development environment (IDE)** - a software application for writing, compiling, testing, and debugging program code\r\n"
+  },
+  "game_id": 54,
+  "published": true,
+  "created_at": "2022-03-15T16:57:16.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2022-03-15T16:57:16.959+00:00\",\"changed\":[\"cloned from \\\"Computer Science is Changing Everything_2021\\\"\"],\"cloned_from\":\"Computer Science is Changing Everything_2021\"},{\"changed_at\":\"2022-03-15 16:58:24 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-17 17:41:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-17 17:42:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

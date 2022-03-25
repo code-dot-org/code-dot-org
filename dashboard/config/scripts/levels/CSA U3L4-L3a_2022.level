@@ -1,0 +1,22 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "project_template_level_name": "CSA U3L4-L3a PBT_2022",
+    "long_instructions": "##In someclass.java:\r\n\r\nThe x class represents x. It has an instance variable for a 1D array that stores x. The method hasSomething() returns true if at least one value in the array is x. In the method hasSomething(),\r\n\r\n1. Traverse the 1D array.\r\n\r\n2. Check if the current element is x.\r\n\r\n3. Return true if the current element is x.\r\n\r\n4. If no elements are x, return false.\r\n\r\n##In MyConsole.java:\r\n\r\n5. Call hasSomething() on the x object to test the method.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-03-25T00:45:21.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2022-03-25 00:45:23 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

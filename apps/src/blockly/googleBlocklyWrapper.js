@@ -18,6 +18,7 @@ import CdoTheme from './addons/cdoTheme';
 import CdoToolbox from './addons/cdoToolbox';
 import initializeTouch from './addons/cdoTouch';
 import CdoTrashcan from './addons/cdoTrashcan';
+import * as cdoUtils from './addons/cdoUtils';
 import initializeVariables from './addons/cdoVariables';
 import CdoVariableMap from './addons/cdoVariableMap';
 import CdoVerticalFlyout from './addons/cdoVerticalFlyout';
@@ -25,6 +26,7 @@ import CdoWorkspaceSvg from './addons/cdoWorkspaceSvg';
 import initializeBlocklyXml from './addons/cdoXml';
 import initializeCss from './addons/cdoCss';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
+import {registerAllContextMenuItems} from './addons/contextMenu';
 
 /**
  * Wrapper class for https://github.com/google/blockly
@@ -190,7 +192,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     CdoRenderer,
     true /* opt_allowOverrides */
   );
-
+  registerAllContextMenuItems();
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
   // because the alias name is not the same as the underlying property name.
   Object.defineProperty(blocklyWrapper, 'mainBlockSpace', {
@@ -370,6 +372,8 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.Blocks.unknown = UNKNOWN_BLOCK;
   blocklyWrapper.JavaScript.unknown = () => '/* unknown block */\n';
+
+  blocklyWrapper.cdoUtils = cdoUtils;
 
   return blocklyWrapper;
 }

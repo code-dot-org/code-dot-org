@@ -39,7 +39,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2022-03-11 12:08:28 UTC",
+    "serialized_at": "2022-03-17 15:20:35 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1354,6 +1354,7 @@
       "key": "d01a520e-a4bb-4422-80ae-fc1fe2157446",
       "position": 2,
       "properties": {
+        "duration": 35,
         "name": "Main Activity"
       },
       "seeding_key": {
@@ -1367,6 +1368,7 @@
       "key": "8fdf7e2e-9fd7-401d-b9af-43736a1a2c8b",
       "position": 3,
       "properties": {
+        "duration": 10,
         "name": "Wrap Up"
       },
       "seeding_key": {

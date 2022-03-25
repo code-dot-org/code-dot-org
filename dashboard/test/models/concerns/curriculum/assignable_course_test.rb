@@ -35,6 +35,19 @@ class AssignableCourseTests < ActiveSupport::TestCase
     refute pilot_course.course_assignable?(@teacher)
   end
 
+  test 'course_assignable? is true if user has editor experiment access' do
+    partner_pilot_unit = create :script, pilot_experiment: 'my-experiment', editor_experiment: 'ed-experiment'
+    partner = create :teacher, editor_experiment: 'ed-experiment'
+
+    assert partner_pilot_unit.course_assignable?(partner)
+  end
+
+  test 'course_assignable? is false if user does not have editor experiment access' do
+    partner_pilot_unit = create :script, pilot_experiment: 'my-experiment', editor_experiment: 'ed-experiment'
+
+    refute partner_pilot_unit.course_assignable?(@teacher)
+  end
+
   test 'course_assignable? if levelbuilder and item is in development' do
     in_development_course = create(:script, published_state: 'in_development')
     assert in_development_course.course_assignable?(@levelbuilder)
@@ -42,6 +55,16 @@ class AssignableCourseTests < ActiveSupport::TestCase
 
   test 'course_assignable? is false if not a levelbuilder and item is in development' do
     in_development_course = create(:script, published_state: 'in_development')
+    refute in_development_course.course_assignable?(@teacher)
+  end
+
+  test 'course_assignable? if levelbuilder and item is beta' do
+    in_development_course = create(:script, published_state: 'beta')
+    assert in_development_course.course_assignable?(@levelbuilder)
+  end
+
+  test 'course_assignable? is false if not a levelbuilder and item is beta' do
+    in_development_course = create(:script, published_state: 'beta')
     refute in_development_course.course_assignable?(@teacher)
   end
 end
