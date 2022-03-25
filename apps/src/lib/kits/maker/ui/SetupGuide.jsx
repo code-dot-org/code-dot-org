@@ -21,6 +21,7 @@ import {createStore, combineReducers} from 'redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
 import {Provider} from 'react-redux';
+import experiments from '@cdo/apps/util/experiments';
 
 const DOWNLOAD_PREFIX = 'https://downloads.code.org/maker/';
 const WINDOWS = 'windows';
@@ -50,7 +51,9 @@ export default class SetupGuide extends React.Component {
       })
     );
 
-    if (true) {
+    // Experiment 'webserial' uses the WebSerial protocol and requires no downloads
+    let isWebSerial = experiments.isEnabled('webserial');
+    if (isCodeOrgBrowser() || isChromeOS() || isWebSerial) {
       return <SetupChecklist setupChecker={this.setupChecker} />;
     }
     return (
