@@ -2,5 +2,6 @@
   "key": "pl-csp-academic-virtual",
   "display_name": "pl-csp-academic-virtual",
   "category": "other",
-  "is_featured": false
+  "is_featured": false,
+  "assignable": true
 }
