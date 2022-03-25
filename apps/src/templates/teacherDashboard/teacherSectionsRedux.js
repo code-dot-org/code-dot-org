@@ -808,10 +808,22 @@ export default function teacherSections(state = initialState, action) {
       }
     }
 
+    const lessonExtraSettings = {};
+    if (action.props.unitId && !action.props.lessonExtras) {
+      lessonExtraSettings.lessonExtras = true;
+    }
+
+    const ttsAutoplayEnabledSettings = {};
+    if (action.props.unitId && !action.props.ttsAutoplayEnabled) {
+      ttsAutoplayEnabledSettings.ttsAutoplayEnabled = false;
+    }
+
     return {
       ...state,
       sectionBeingEdited: {
         ...state.sectionBeingEdited,
+        ...lessonExtraSettings,
+        ...ttsAutoplayEnabledSettings,
         ...action.props
       }
     };

@@ -423,12 +423,60 @@ describe('teacherSectionsRedux', () => {
       ).to.throw();
     });
 
-    it('when updating script assignment for a section, ttsAutoplayEnabled defaults to false', () => {
+    it('switching script assignment updates lesson extras value to default value if no lesson extras value passed', () => {
+      let state = reducer(
+        editingNewSectionState,
+        setCourseOfferings(courseOfferings)
+      );
+      state = reducer(
+        state,
+        editSectionProperties({unitId: 1, lessonExtras: false})
+      );
+      expect(state.sectionBeingEdited.lessonExtras).to.equal(false);
+
+      state = reducer(state, editSectionProperties({unitId: 36}));
+      expect(state.sectionBeingEdited.lessonExtras).to.equal(true);
+    });
+
+    it('switching script assignment and passing lesson extras value results in lesson extras being set to the passed value', () => {
+      let state = reducer(
+        editingNewSectionState,
+        setCourseOfferings(courseOfferings)
+      );
+      state = reducer(
+        state,
+        editSectionProperties({unitId: 1, lessonExtras: false})
+      );
+      expect(state.sectionBeingEdited.lessonExtras).to.equal(false);
+
+      state = reducer(
+        state,
+        editSectionProperties({unitId: 36, lessonExtras: true})
+      );
+      expect(state.sectionBeingEdited.lessonExtras).to.equal(true);
+    });
+
+    it('when updating script assignment for a section, ttsAutoplayEnabled defaults to false if no value provided', () => {
       let state = editingNewSectionState;
       state = reducer(state, editSectionProperties({unitId: 2}));
       expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);
 
       state = reducer(state, editSectionProperties({unitId: 37}));
+      expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);
+    });
+
+    it('when updating script assignment for a section and setting ttsAutoplayEnabled sets to passed value', () => {
+      let state = editingNewSectionState;
+      state = reducer(
+        state,
+        editSectionProperties({unitId: 2, ttsAutoplayEnabled: true})
+      );
+      expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(true);
+
+      state = reducer(
+        state,
+        editSectionProperties({unitId: 37, ttsAutoplayEnabled: false})
+      );
       expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);
     });
   });
