@@ -11,6 +11,8 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     @teacher = create(:teacher)
     @section = create(:section, user: @teacher, login_type: 'word')
     @student = create(:follower, section: @section).student_user
+    @following_teacher = create(:teacher)
+    create(:follower, section: @section, student_user: @following_teacher)
   end
 
   CSP_COURSE_NAME = 'csp-2017'
@@ -208,9 +210,15 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test "leave with valid joined section code" do
-    sign_in @student
+    sign_in @following_teacher
     post :leave, params: {id: @section.code}
     assert_response :success
+  end
+
+  test "student cannot leave joined section" do
+    sign_in @student
+    post :leave, params: {id: @section.code}
+    assert_response 403
   end
 
   test "leave with valid unjoined section code" do
