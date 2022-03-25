@@ -58,14 +58,16 @@ class CourseVersion < ApplicationRecord
   # accessing them via course version. In the future, these fields will be moved
   # into the course version itself.
 
-  delegate :name, to: :content_root
-  delegate :pl_course?, to: :content_root
-  delegate :stable?, to: :content_root
-  delegate :launched?, to: :content_root
-  delegate :in_development?, to: :content_root
-  delegate :has_pilot_access?, to: :content_root
-  delegate :can_be_instructor?, to: :content_root
-  delegate :course_assignable?, to: :content_root
+  delegate :name, to: :content_root, allow_nil: true
+  delegate :pl_course?, to: :content_root, allow_nil: true
+  delegate :stable?, to: :content_root, allow_nil: true
+  delegate :launched?, to: :content_root, allow_nil: true
+  delegate :in_development?, to: :content_root, allow_nil: true
+  delegate :pilot?, to: :content_root, allow_nil: true
+  delegate :has_pilot_experiment?, to: :content_root, allow_nil: true
+  delegate :has_editor_experiment?, to: :content_root, allow_nil: true
+  delegate :can_be_instructor?, to: :content_root, allow_nil: true
+  delegate :course_assignable?, to: :content_root, allow_nil: true
 
   # Seeding method for creating / updating / deleting the CourseVersion for the given
   # potential content root, i.e. a Script or UnitGroup.
@@ -153,7 +155,8 @@ class CourseVersion < ApplicationRecord
       id,
       {
         id: id,
-        version_year: key,
+        key: key,
+        version_year: content_root_type == 'UnitGroup' ? content_root.localized_version_title : display_name,
         content_root_id: content_root.id,
         name: content_root.localized_title,
         path: content_root.link,

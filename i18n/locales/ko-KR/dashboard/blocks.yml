@@ -10,7 +10,7 @@ ko:
             '"ALIEN"': 모든 외계인
             '"BEAR"': 곰
             '"CAT"': 모든 고양이
-            '"DOG"': 모든 개
+            '"DOG"': 개
             '"DUCK"': 오리
             '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
@@ -64,7 +64,7 @@ ko:
             '"ALIEN"': 모든 외계인
             '"BEAR"': 곰
             '"CAT"': 모든 고양이
-            '"DOG"': 모든 개
+            '"DOG"': 개
             '"DUCK"': 오리
             '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
@@ -124,7 +124,7 @@ ko:
             '"ALIEN"': 모든 외계인
             '"BEAR"': 곰
             '"CAT"': 모든 고양이
-            '"DOG"': 모든 개
+            '"DOG"': 개
             '"DUCK"': 오리
             '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
@@ -148,7 +148,7 @@ ko:
             '"ALIEN"': 모든 외계인
             '"BEAR"': 곰
             '"CAT"': 모든 고양이
-            '"DOG"': 모든 개
+            '"DOG"': 개
             '"DUCK"': 오리
             '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
@@ -303,7 +303,7 @@ ko:
             '"ALIEN"': 모든 외계인
             '"BEAR"': 곰
             '"CAT"': 모든 고양이
-            '"DOG"': 모든 개
+            '"DOG"': 개
             '"DUCK"': 오리
             '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
@@ -331,7 +331,7 @@ ko:
             '"ALIEN"': 모든 외계인
             '"BEAR"': 곰
             '"CAT"': 모든 고양이
-            '"DOG"': 모든 개
+            '"DOG"': 개
             '"DUCK"': 오리
             '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
@@ -462,7 +462,7 @@ ko:
             '"ALIEN"': 모든 외계인
             '"BEAR"': 곰
             '"CAT"': 모든 고양이
-            '"DOG"': 모든 개
+            '"DOG"': 개
             '"DUCK"': 오리
             '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
@@ -550,7 +550,6 @@ ko:
             '"fireworks"': 불꽃놀이
             '"flowers"': 꽃
             '"growing_stars"': 커지는 별
-            '"higher_power"': 더 높은 파워
             '"swirl"': 최면
             '"kaleidoscope"': 만화경
             '"lasers"': 레이저 댄스 플로어
@@ -594,7 +593,7 @@ ko:
             '"ALIEN"': 모든 외계인
             '"BEAR"': 곰
             '"CAT"': 모든 고양이
-            '"DOG"': 모든 개
+            '"DOG"': 개
             '"DUCK"': 오리
             '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
@@ -668,7 +667,7 @@ ko:
             '"ALIEN"': 모든 외계인
             '"BEAR"': 곰
             '"CAT"': 모든 고양이
-            '"DOG"': 모든 개
+            '"DOG"': 개
             '"DUCK"': 오리
             '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
@@ -704,7 +703,7 @@ ko:
             '"ALIEN"': 모든 외계인
             '"BEAR"': 곰
             '"CAT"': 모든 고양이
-            '"DOG"': 모든 개
+            '"DOG"': 개
             '"DUCK"': 오리
             '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
@@ -731,7 +730,7 @@ ko:
             '"ALIEN"': 모든 외계인
             '"BEAR"': 곰
             '"CAT"': 모든 고양이
-            '"DOG"': 모든 개
+            '"DOG"': 개
             '"DUCK"': 오리
             '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
@@ -748,7 +747,7 @@ ko:
             '"ALIEN"': 모든 외계인
             '"BEAR"': 곰
             '"CAT"': 모든 고양이
-            '"DOG"': 모든 개
+            '"DOG"': 개
             '"DUCK"': 오리
             '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
@@ -773,7 +772,7 @@ ko:
             '"ALIEN"': 모든 외계인
             '"BEAR"': 곰
             '"CAT"': 모든 고양이
-            '"DOG"': 모든 개
+            '"DOG"': 개
             '"DUCK"': 오리
             '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
@@ -808,7 +807,7 @@ ko:
             '"ALIEN"': 모든 외계인
             '"BEAR"': 곰
             '"CAT"': 모든 고양이
-            '"DOG"': 모든 개
+            '"DOG"': 개
             '"DUCK"': 오리
             '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
@@ -853,7 +852,7 @@ ko:
             '"ALIEN"': 모든 외계인
             '"BEAR"': 곰
             '"CAT"': 모든 고양이
-            '"DOG"': 모든 개
+            '"DOG"': 개
             '"DUCK"': 오리
             '"FROG"': 개구리
             '"MOOSE"': 모든 사슴
@@ -1989,6 +1988,7 @@ ko:
             '"jittering"': 지터링
             '"spinning_left"': 왼쪽으로 회전
             '"spinning_right"': 오른쪽으로 회전
+            '"swimming_left_and_right"': 수영
             '"wandering"': 배회
       Poetry_stopBehavior:
         text: '스프라이트 {ANIMATION_NAME} 는 {BEHAVIOR}을 멈춥니다 '
@@ -1998,6 +1998,7 @@ ko:
             '"jittering"': 지터링
             '"spinning_left"': 왼쪽으로 회전
             '"spinning_right"': 오른쪽으로 회전
+            '"swimming_left_and_right"': 수영
             '"wandering"': 배회
             '"all"': "--모든 행동--"
       Poetry_stringValue:

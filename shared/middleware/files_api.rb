@@ -368,14 +368,18 @@ class FilesApi < Sinatra::Base
 
   def put_file(endpoint, encrypted_channel_id, filename, body)
     not_authorized unless owns_channel?(encrypted_channel_id)
+    file_type = File.extname(filename)
+    buckets = get_bucket_impl(endpoint).new
+    if body.length >= max_file_size
+      body = buckets.try_resize_file(body, file_type)
+    end
+
     file_too_large(endpoint) unless body.length < max_file_size
 
-    buckets = get_bucket_impl(endpoint).new
     bad_request unless buckets.allowed_file_name? filename
 
     # verify that file type is in our allowlist, and that the user-specified
     # mime type matches what Sinatra expects for that file type.
-    file_type = File.extname(filename)
     unsupported_media_type unless buckets.allowed_file_type?(file_type)
     category = buckets.category_from_file_type(file_type)
 
@@ -404,6 +408,19 @@ class FilesApi < Sinatra::Base
       return bad_request if share_failure && share_failure[:type] != "address"
     end
 
+    # Don't allow project to be saved if it contains non-UTF-8 characters (causing error / project to not load when opened).
+    if 'sources' == endpoint
+      body_json = JSON.parse(body)
+      source = body_json["source"]
+      html = body_json["html"]
+
+      source_is_valid = source && has_valid_encoding?(source)
+      # HTML only exists for AppLab projects
+      html_is_valid = html ? source.force_encoding("UTF-8").valid_encoding? : true
+
+      return bad_request unless source_is_valid && html_is_valid
+    end
+
     # Replacing a non-current version of main.json could lead to perceived data loss.
     # Log to firehose so that we can better troubleshoot issues in this case.
 
@@ -428,6 +445,26 @@ class FilesApi < Sinatra::Base
       versionId: response.version_id,
       timestamp: Time.now # for logging purposes
     }.to_json
+  end
+
+  def has_valid_encoding?(source)
+    if source.is_a?(String)
+      return source.force_encoding("UTF-8").valid_encoding?
+    end
+
+    # Handle Multi-file Projects, like Java Lab
+    if source.is_a?(Hash)
+      # Iterate over each file
+      source.each_key do |key|
+        # Multi-file source structure:
+        # {"source":{"MyClass.java":{"text":"“public class ClassName: {...<code here>...}”","isVisible":true}}
+        return false unless source[key]["text"] && source[key]["text"].force_encoding("UTF-8").valid_encoding?
+      end
+      return true
+    end
+
+    # If source is an unexpected type, return false to trigger a bad_request response
+    return false
   end
 
   #

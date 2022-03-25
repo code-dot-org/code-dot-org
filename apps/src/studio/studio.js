@@ -55,6 +55,7 @@ import project from '../code-studio/initApp/project';
 import {blockAsXmlNode, cleanBlocks} from '../block_utils';
 import {parseElement} from '../xml';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
+import cookies from 'js-cookie';
 import {
   showArrowButtons,
   dismissSwipeOverlay
@@ -62,6 +63,8 @@ import {
 
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
+
+const muteMusic = 'mute_music';
 
 var Direction = constants.Direction;
 var CardinalDirections = constants.CardinalDirections;
@@ -2200,7 +2203,9 @@ Studio.init = function(config) {
   Studio.musicController = new MusicController(
     Sounds.getSingleton(),
     skin.assetUrl,
-    levelTracks
+    levelTracks,
+    undefined,
+    config.level.muteMusic || cookies.get(muteMusic) === 'true'
   );
 
   /**

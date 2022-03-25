@@ -5,7 +5,7 @@ ko:
       Actions: 동작
       Advanced: 고급
       Behaviors: 행동
-      Brushes: 브러쉬
+      Brushes: 브러시
       Color: 색
       Comment: 댓글
       Comments: 의견
@@ -20,6 +20,7 @@ ko:
       Game/Score: 게임/점수
       Games/Score: 게임/점수
       Groups: 그룹
+      Input: 입력
       Location: 위치
       Locations: 위치
       Logic: 논리

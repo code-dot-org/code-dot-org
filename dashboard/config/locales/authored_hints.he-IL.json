@@ -2589,7 +2589,8 @@
           "courseC_maze_programming1_0": "בדוק שוב שחיברת את כל הבלוקים יחד ואז לחץ שוב על \"הרץ\"."
         },
         "courseC_maze_programming2_2021": {
-          "courseC_maze_programming2_b": "בדוק שוב שחיברת את כל הבלוקים יחד ואז לחץ שוב על \"הרץ\"."
+          "courseC_maze_programming2_b": "בדוק שוב שחיברת את כל הבלוקים יחד ואז לחץ שוב על \"הרץ\".",
+          "courseC_maze_programming2_a": "כדי להשתמש ב <xml><block type=\"maze_moveForward\"/></xml> , גררו אותו מחוץ לארגז הכלים והצמידו אותו אל <xml><block type=\"when_run\"/></xml>."
         },
         "courseC_maze_programming3_2021": {
           "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nכדי להסיר בלוק שנמצא באמצע הקוד שלך, גרור את כל הבלוקים יחד למקום אחר בסביבת העבודה שלך. \n\nגרור את הבלוק שאתה רוצה למחוק בחזרה אל תיבת הכלים. \n\nלבסוף, חבר בחזרה את הבלוקים למקום שלהם."

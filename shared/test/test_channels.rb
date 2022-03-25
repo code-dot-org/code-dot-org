@@ -456,18 +456,18 @@ class ChannelsTest < Minitest::Test
 
     _, storage_app_id = storage_decrypt_channel_id(response['id'])
     _, parent_storage_app_id = storage_decrypt_channel_id(encrypted_parent_channel_id)
-    assert_equal parent_storage_app_id, PEGASUS_DB[:storage_apps].where(id: storage_app_id).first[:remix_parent_id]
+    assert_equal parent_storage_app_id, StorageApps.table.where(id: storage_app_id).first[:remix_parent_id]
   end
 
   def test_update_project_type
     post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     encrypted_channel_id = last_response.location.split('/').last
     _, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
-    assert_nil PEGASUS_DB[:storage_apps].where(id: storage_app_id).first[:project_type]
+    assert_nil StorageApps.table.where(id: storage_app_id).first[:project_type]
 
     post "/v3/channels/#{encrypted_channel_id}", {projectType: 'gamelab'}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     assert last_response.successful?
-    assert_equal 'gamelab', PEGASUS_DB[:storage_apps].where(id: storage_app_id).first[:project_type]
+    assert_equal 'gamelab', StorageApps.table.where(id: storage_app_id).first[:project_type]
   end
 
   private

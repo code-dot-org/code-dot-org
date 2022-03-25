@@ -6,5 +6,5 @@
   "content": "Determines if the button is being pressed or not\r\n\r\nMuch like `toggleSwitch.isOpen`, `buttonL.isPressed` returns boolean `true` if the button is being pressed, otherwise, returns `false`. This property is best to use with conditionals.",
   "return_value": "Boolean",
   "short_description": "Determines if the button is being pressed or not",
-  "syntax": "isPressed"
+  "syntax": "buttonL.isPressed"
 }
