@@ -35,8 +35,8 @@ module SurveyResultsHelper
   def target_audience?(user_id)
     return (
       NPS_AUDIENCE == "all" ||
-      (NPS_AUDIENCE == "odd" && user_id.odd) ||
-      (NPS_AUDIENCE == "even" && user_id.even)
+      (NPS_AUDIENCE == "odd" && user_id.odd?) ||
+      (NPS_AUDIENCE == "even" && user_id.even?)
       )
   end
 
