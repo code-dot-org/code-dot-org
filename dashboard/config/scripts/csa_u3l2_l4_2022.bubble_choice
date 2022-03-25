@@ -1,0 +1,9 @@
+name 'CSA U3L2-L4_2022'
+display_name 'Assign Values to a 1D Array'
+description 'Assign and modify values in a 1D array.'
+
+sublevels
+level 'CSA U3L2-L4a_2022'
+level 'CSA U3L2-L4b_2022'
+level 'CSA U3L2-L4c_2022'
+level 'CSA U3L2-L4d_2022'
