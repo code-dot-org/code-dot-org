@@ -1,4 +1,3 @@
-<%- # Note this file must be indented one level, as it is a child of 'Resources'. %>
 <%- if rack_env?(:staging, :test, :production) -%>
 # -----------------------------------------------
 # Begin codeprojects.org resources
@@ -36,7 +35,15 @@ CodeprojectsCertificate:
       <%- if rack_env?(:production) -%>
       - DomainName: www.<%= CDO.codeprojects_hostname %>
         HostedZoneId: <%= CDO.codeprojects_hostedzone_id %>
+      - DomainName: static.<%= CDO.codeprojects_hostname %>
+        HostedZoneId: <%= CDO.codeprojects_hostedzone_id %>
       <%- end -%>
+
+# Import/Recreate Additional Resources - TODO
+#   - Route53 DNS RecordSets
+#   - S3-Backed Cloudfront Distributions
+#   - Classic Load Balancers
+#   - S3 Buckets
 
 # -----------------------------------------------
 # End codeprojects.org resources
