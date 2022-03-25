@@ -2,5 +2,6 @@
   "key": "poembot-hoc",
   "display_name": "poembot-hoc",
   "category": "csc",
-  "is_featured": false
+  "is_featured": false,
+  "assignable": true
 }
