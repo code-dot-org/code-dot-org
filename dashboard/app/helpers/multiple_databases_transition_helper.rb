@@ -75,4 +75,14 @@ module MultipleDatabasesTransitionHelper
       raise "unknown Rails version #{Rails.version.inspect}"
     end
   end
+
+  # inspired by https://medium.com/grailed-engineering/distributing-database-reads-across-replicas-with-rails-6-and-activerecord-23a24aa90c84
+  def self.get_writing_role_name
+    :primary
+  end
+
+  def self.get_reading_role_name
+    configurations = ActiveRecord::Base.configurations.configs_for(env_name: Rails.env, include_replicas: true)
+    configurations.find(&:replica?)&.spec_name&.to_sym || get_writing_role_name
+  end
 end
