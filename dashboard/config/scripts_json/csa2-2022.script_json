@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-22 14:48:41 UTC",
+    "serialized_at": "2022-03-22 16:51:46 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -125,7 +125,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "**How can I create objects with specific values?**\n\nStudents revisit constructors to identify the need for parameterized constructors and learn how to implement these in a class. In the process, students differentiate between actual and formal parameters and explore how constructor calls function in programs.",
-        "preparation": "* Gather the Classes and Objects Manipulatives from the previous lesson",
+        "preparation": "* Gather the Classes and Objects Manipulatives from the previous lesson\n* Gather several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn",
         "student_overview": "**How can I create objects with specific values?**\n\nIn the previous unit, you wrote constructors in your `Painter` subclasses that instantiated an object using the `Painter` class constructor. In this lesson, you revisit constructors to identify the need for parameterized constructors and learn how to implement these in a class. In the process, you learn the difference between actual and formal parameters and explore how constructor calls function in programs."
       },
       "seeding_key": {
@@ -178,7 +178,7 @@
       "relative_position": 7,
       "properties": {
         "overview": "**How can I access the values of an object's instance variables?**\n\nStudents discover the need for accessor methods to obtain the values stored in the instance variables of a class. Students review the components of a method signature and how methods return values. Students practice writing accessor methods in the Project Mercury Pastries Food Truck classes and calling them within expressions.",
-        "preparation": "* Gather the Classes and Objects Manipulatives (introduced in Lesson 3 and last used in Lesson 4)",
+        "preparation": "* Gather the Classes and Objects Manipulatives (introduced in Lesson 3 and last used in Lesson 4)\n* Gather several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn",
         "student_overview": "**How can I access the values of an object's instance variables?**\n\nYou have learned that `private` instance variables cannot be directly accessed from outside the class. In this lesson, you discover the need for accessor methods to obtain the values stored in the instance variables of a class. You review the components of a method signature and how methods return values. You practice writing accessor methods in the Project Mercury Pastries Food Truck classes and calling them within expressions."
       },
       "seeding_key": {
@@ -1597,16 +1597,31 @@
       "key": "775cc692-ef1d-45f3-9dcd-acd92f1f313b",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a set of Classes and Objects Manipulatives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate designing a class and creating its UML diagram.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate creating objects from the class.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students use the Classes and Objects Manipulatives to design a class of their choice with examples of objects that could be created from their classes.",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a set of Classes and Objects Manipulatives, several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn.\n\n**Do This:** Click through the animated slides to demonstrate designing a class:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Identify the attributes and behaviors that are needed\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Write the class name and constructor\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Write the methods\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> List the instance variables\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Briefly introduce `private` methods",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "Gather the Classes and Objects Manipulatives to reuse in upcoming lessons."
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "Students learn about `private` methods in a later unit. Introduce that methods can be `private` but do not spend time explaining what that means or how it works."
           }
         ]
       },
       "seeding_key": {
         "activity_section.key": "775cc692-ef1d-45f3-9dcd-acd92f1f313b",
+        "lesson_activity.key": "3ac6dc19-524a-4849-ba00-20bfcf35cc15"
+      }
+    },
+    {
+      "key": "d065e464-f228-458e-8f92-905c3d1d800d",
+      "position": 13,
+      "properties": {
+        "description": "**Do This:** Click through the animated slides to demonstrate creating objects from the class:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declaring the reference variable\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Instantiating the object\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Pointing the reference variable to the object\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students use the Classes and Objects Manipulatives to design a class of their choice with examples of objects that could be created from their classes."
+      },
+      "seeding_key": {
+        "activity_section.key": "d065e464-f228-458e-8f92-905c3d1d800d",
         "lesson_activity.key": "3ac6dc19-524a-4849-ba00-20bfcf35cc15"
       }
     },
@@ -1783,7 +1798,7 @@
       "key": "c524dcfe-bef6-4131-a786-f700cddf3fd0",
       "position": 1,
       "properties": {
-        "description": "**Group:** Place students in groups of four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student the set of Classes and Objects Manipulatives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Four on a Pencil strategy to discuss the prompts.\n* *What would a no-argument constructor look like for the class you designed?*\n* *What would a parameterized constructor look like for the class you designed?*\n\n**Discussion Goal:** Students share ideas about the default values they would set in the no-argument constructor for their objects. Students identify the parameters for the parameterized constructor they would need to define.",
+        "description": "**Group:** Place students in groups of four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each group a set of Classes and Objects Manipulatives, several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Four on a Pencil strategy to discuss the prompts.\n* *What would a no-argument constructor look like for the class you designed?*\n* *What would a parameterized constructor look like for the class you designed?*\n\n**Discussion Goal:** Students share ideas about the default values they would set in the no-argument constructor for their objects. Students identify the parameters for the parameterized constructor they would need to define.",
         "name": "Designing Your Object",
         "tips": [
           {
@@ -2304,7 +2319,7 @@
       "key": "4f3d0d90-f95b-4936-94cb-2709b2d46b7a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Accessor Methods*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate writing and calling an accessor method and define *return type* and `return` *keyword*.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair the set of Classes and Objects Manipulatives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write an accessor method for one of their instance variables and call it using their Classes and Objects Manipulatives.\n\n**Do This:** Explain return by value:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Calling the method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Return by value\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *How did the manipulatives demonstrate return by value?*\n\n**Discussion Goal:** Students realize that return by value occurred when they copied the value to a new sticky note to pass to where the method was called.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Accessor Methods*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate writing and calling an accessor method and define *return type* and `return` *keyword*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate calling an accessor method using the Classes and Objects Manipulatives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a set of Classes and Objects Manipulatives, several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write an accessor method for one of their instance variables and call it using their Classes and Objects Manipulatives.\n\n**Do This:** Explain return by value:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Calling the method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Return by value\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *How did the manipulatives demonstrate return by value?*\n\n**Discussion Goal:** Students realize that return by value occurred when they copied the value to a new sticky note to pass to where the method was called.",
         "tips": [
           {
             "type": "teachingTip",

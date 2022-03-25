@@ -168,16 +168,20 @@ class ProjectsController < ApplicationController
   end
 
   def project_and_featured_project_fields
-    [
-      :storage_apps__id___id,
-      :storage_apps__storage_id___storage_id,
-      :storage_apps__value___value,
-      :storage_apps__project_type___project_type,
-      :storage_apps__published_at___published_at,
+    storage_apps_fields = prefix_storage_app_fields(%w(id___id storage_id___storage_id value___value project_type___project_type published_at___published_at))
+
+    featured_projects_fields = [
       :featured_projects__featured_at___featured_at,
       :featured_projects__unfeatured_at___unfeatured_at,
       :featured_projects__topic___topic
     ]
+
+    storage_apps_fields.concat(featured_projects_fields)
+  end
+
+  def prefix_storage_app_fields(field_names)
+    table_name = "storage_apps"
+    field_names.map {|field_name| "#{table_name}__#{field_name}".to_sym}
   end
 
   def combine_projects_and_featured_projects_data
