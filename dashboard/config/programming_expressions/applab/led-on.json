@@ -25,5 +25,5 @@
     }
   ],
   "short_description": "Turns the red LED on.",
-  "syntax": "led.on"
+  "syntax": "led.on()"
 }

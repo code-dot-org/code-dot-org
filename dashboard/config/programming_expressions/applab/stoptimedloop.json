@@ -33,6 +33,6 @@
     }
   ],
   "short_description": "Stops any running Timed Loops, or a specific one if passed in return value of timedLoop().",
-  "syntax": "stopTimedLoop",
+  "syntax": "stopTimedLoop(loop);",
   "tips": "- Without a parameter, all running timed loops will be stopped.\r\n- If you want to a specific loop you need to save the value returned by `timedLoop()`, eg `var i = timedLoop(ms, callback);\r\n"
 }
