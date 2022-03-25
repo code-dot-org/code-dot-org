@@ -4,7 +4,7 @@
     # Since this line is restricted to only run in production, we are comfortable using it.
     redirected_domains << "www.#{CDO.pegasus_hostname}" if rack_env?(:production)
     
-    www_redirect_hosted_zone_id = hostedzone_id(domain)
+    www_redirect_hosted_zone_id = CDO.hostedzone_id(domain)
   -%>
 
   <%=app%>RedirectDNS:
