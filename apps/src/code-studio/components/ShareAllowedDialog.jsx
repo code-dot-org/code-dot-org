@@ -309,6 +309,10 @@ class ShareAllowedDialog extends React.Component {
                         {i18n.copyLinkToProject()}
                       </span>
                     </button>
+                    <DownloadReplayVideoButton
+                      style={{...styles.button, marginBottom: 8}}
+                      onError={this.replayVideoNotFound}
+                    />
                   </div>
                 </div>
                 <div className="social-buttons">
@@ -348,10 +352,7 @@ class ShareAllowedDialog extends React.Component {
                       className="no-mc"
                     />
                   )}
-                  <DownloadReplayVideoButton
-                    style={styles.button}
-                    onError={this.replayVideoNotFound}
-                  />
+
                   {canPrint && hasThumbnail && (
                     <a href="#" onClick={wrapShareClick(this.print, 'print')}>
                       <FontAwesome icon="print" style={{fontSize: 26}} />
@@ -500,8 +501,8 @@ const styles = {
     verticalAlign: 'top'
   },
   copyButton: {
-    paddingTop: 5,
-    paddingBottom: 5,
+    paddingTop: 12.5,
+    paddingBottom: 12.5,
     marginBottom: 5
   },
   copyButtonLight: {

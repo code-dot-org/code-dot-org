@@ -16,6 +16,10 @@
       <i class="fa fa-clipboard fa-lg"></i>
         <%= msg.copyLinkToProject() %>
     </button>
+    <% if (options.downloadReplayVideo) { %>
+      <!-- Mount point for DownloadReplayVideoButton component. -->
+      <span id="download-replay-video-container"></span>
+    <% } %>
   </div>
   <div class='social-buttons'>
     <% if (options.facebookUrl) { -%>
@@ -49,11 +53,7 @@
           <%= msg.publish() %>
       </button>
     <% } %>
-    <% if (options.downloadReplayVideo) { %>
-      <!-- Mount point for DownloadReplayVideoButton component. -->
-      <span id="download-replay-video-container"></span>
-    <% } %>
-    <button id="sharing-phone">
+   <button id="sharing-phone">
       <i class="fa fa-mobile fa-lg"></i>
       &nbsp;
       <%= msg.sendToPhone() %>
