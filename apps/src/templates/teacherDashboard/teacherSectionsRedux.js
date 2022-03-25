@@ -597,8 +597,6 @@ function newSectionData(id, loginType) {
   };
 }
 
-const defaultLessonExtras = false;
-
 // Fields to copy from the assignmentInfo when creating an assignmentFamily.
 export const assignmentFamilyFields = [
   'category_priority',
@@ -874,23 +872,10 @@ export default function teacherSections(state = initialState, action) {
       }
     }
 
-    const lessonExtraSettings = {};
-    const ttsAutoplayEnabledSettings = {};
-    if (action.props.scriptId) {
-      const unit =
-        state.validAssignments[assignmentId(null, action.props.scriptId)];
-      if (unit) {
-        lessonExtraSettings.lessonExtras =
-          unit.lesson_extras_available || defaultLessonExtras;
-      }
-    }
-
     return {
       ...state,
       sectionBeingEdited: {
         ...state.sectionBeingEdited,
-        ...lessonExtraSettings,
-        ...ttsAutoplayEnabledSettings,
         ...action.props
       }
     };
