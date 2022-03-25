@@ -1,7 +1,7 @@
 module SurveyResultsHelper
   DIVERSITY_SURVEY_ENABLED = false
-  ### Make this check the dcdo flag, potentially with a helper function
-  NPS_SURVEY_ENABLED = false
+  DEFAULT_NPS_AUDIENCE = "none"
+  NPS_AUDIENCE = DCDO.get('nps_audience', DEFAULT_NPS_AUDIENCE)
 
   def show_diversity_survey?(kind)
     return false unless SurveyResultsHelper::DIVERSITY_SURVEY_ENABLED
@@ -20,10 +20,9 @@ module SurveyResultsHelper
   end
 
   def show_nps_survey?
-    return false unless SurveyResultsHelper::NPS_SURVEY_ENABLED
+    return false unless NPS_AUDIENCE != "none"
     return false unless current_user
-    # Nov 2021: only display to teachers with even ids
-    return false unless current_user.id.even?
+    return false unless target_audience?(current_user.id)
     return false unless language == "en"
     return false if current_user.under_13?
     return false unless country_us?
@@ -31,6 +30,14 @@ module SurveyResultsHelper
 
     # There is no reason not to show the survey, so show the survey.
     return true
+  end
+
+  def target_audience?(user_id)
+    return (
+      NPS_AUDIENCE == "all" ||
+      (NPS_AUDIENCE == "odd" && user_id.odd) ||
+      (NPS_AUDIENCE == "even" && user_id.even)
+      )
   end
 
   def account_existed_14_days?
