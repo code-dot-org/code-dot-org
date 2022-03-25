@@ -5,6 +5,7 @@ class AdminNpsControllerTest < ActionController::TestCase
 
   setup do
     @admin = create(:admin)
+    @not_admin = create(:teacher, username: 'notadmin', email: 'not_admin@email.xx')
   end
 
   generate_admin_only_tests_for :nps_form
@@ -25,5 +26,11 @@ class AdminNpsControllerTest < ActionController::TestCase
     assert_equal DCDO.get('nps_audience', 'null'), 'all'
     post :nps_update, params: {audience: 'none'}
     assert_equal DCDO.get('nps_audience', 'null'), 'none'
+  end
+
+  test "nps survey updating is admin only" do
+    sign_in(@not_admin)
+    post :nps_update, params: {audience: 'all'}
+    assert_response :forbidden
   end
 end
