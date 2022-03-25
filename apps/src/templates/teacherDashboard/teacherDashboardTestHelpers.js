@@ -1,6 +1,8 @@
 export const testSection = {
   id: 11,
   courseId: 29,
+  courseOfferingId: 2,
+  courseVersionId: 3,
   scriptId: null,
   name: 'my_section',
   loginType: 'word',
@@ -12,10 +14,11 @@ export const testSection = {
   studentCount: 10,
   code: 'PMTKVH'
 };
-
 export const noStudentsSection = {
   id: 11,
   courseId: 29,
+  courseOfferingId: 2,
+  courseVersionId: 3,
   scriptId: null,
   name: 'my_section',
   loginType: 'word',
@@ -91,6 +94,7 @@ export const courseOfferings = {
     course_versions: {
       1: {
         id: 1,
+        key: '2017',
         version_year: '2017',
         content_root_id: 10,
         name: 'Course A',
@@ -104,12 +108,14 @@ export const courseOfferings = {
             id: 1,
             name: 'Course A',
             path: '/s/coursea-2017',
-            lesson_extras_available: true
+            lesson_extras_available: true,
+            position: null
           }
         }
       },
       2: {
         id: 2,
+        key: '2018',
         version_year: '2018',
         content_root_id: 11,
         name: 'Course A',
@@ -123,7 +129,8 @@ export const courseOfferings = {
             id: 2,
             name: 'Course A (2018)',
             path: '/s/coursea-2018',
-            lesson_extras_available: true
+            lesson_extras_available: true,
+            position: null
           }
         }
       }
@@ -137,7 +144,8 @@ export const courseOfferings = {
     course_versions: {
       3: {
         id: 3,
-        version_year: '2017',
+        key: '2017',
+        version_year: "'17-'18",
         content_root_id: 12,
         name: 'CS Discoveries 2017',
         path: '/courses/csd-2017',
@@ -151,20 +159,23 @@ export const courseOfferings = {
             name: 'Unit 1',
             path: '/s/csd1-2017',
             lesson_extras_available: false,
-            text_to_speech_enabled: false
+            text_to_speech_enabled: false,
+            position: 1
           },
           4: {
             id: 4,
             name: 'Unit 2',
             path: '/s/csd2-2017',
             lesson_extras_available: false,
-            text_to_speech_enabled: false
+            text_to_speech_enabled: false,
+            position: 2
           }
         }
       },
       4: {
         id: 4,
-        version_year: '2018',
+        key: '2018',
+        version_year: "'18-'19",
         content_root_id: 13,
         name: 'CS Discoveries 2018',
         path: '/courses/csd-2018',
@@ -178,14 +189,16 @@ export const courseOfferings = {
             name: 'Unit 1',
             path: '/s/csd1-2018',
             lesson_extras_available: false,
-            text_to_speech_enabled: false
+            text_to_speech_enabled: false,
+            position: 1
           },
           6: {
             id: 6,
             name: 'Unit 2',
             path: '/s/csd2-2018',
             lesson_extras_available: false,
-            text_to_speech_enabled: false
+            text_to_speech_enabled: false,
+            position: 2
           }
         }
       }
@@ -199,6 +212,7 @@ export const courseOfferings = {
     course_versions: {
       5: {
         id: 5,
+        key: '2022',
         version_year: '2022',
         content_root_id: 14,
         name: 'CS A',
@@ -213,14 +227,16 @@ export const courseOfferings = {
             name: 'Unit 1',
             path: '/s/csa1-2022',
             lesson_extras_available: false,
-            text_to_speech_enabled: false
+            text_to_speech_enabled: false,
+            position: 1
           },
           8: {
             id: 8,
             name: 'Unit 2',
             path: '/s/csa2-2022',
             lesson_extras_available: false,
-            text_to_speech_enabled: false
+            text_to_speech_enabled: false,
+            position: 2
           }
         }
       }
@@ -234,6 +250,7 @@ export const courseOfferings = {
     course_versions: {
       6: {
         id: 6,
+        key: 'unversioned',
         version_year: 'unversioned',
         content_root_id: 15,
         name: 'Flappy',
@@ -248,7 +265,8 @@ export const courseOfferings = {
             name: 'Flappy',
             path: '/s/flappy',
             lesson_extras_available: false,
-            text_to_speech_enabled: false
+            text_to_speech_enabled: false,
+            position: null
           }
         }
       }
@@ -262,6 +280,7 @@ export const courseOfferings = {
     course_versions: {
       7: {
         id: 7,
+        key: 'unversioned',
         version_year: 'unversioned',
         content_root_id: 16,
         name: 'Hello World',
@@ -276,7 +295,8 @@ export const courseOfferings = {
             name: 'Hello World',
             path: '/s/hello-world',
             lesson_extras_available: false,
-            text_to_speech_enabled: false
+            text_to_speech_enabled: false,
+            position: null
           }
         }
       }
@@ -290,6 +310,7 @@ export const courseOfferings = {
     course_versions: {
       8: {
         id: 8,
+        key: 'unversioned',
         version_year: 'unversioned',
         content_root_id: 17,
         name: 'Poem Art',
@@ -304,7 +325,8 @@ export const courseOfferings = {
             name: 'Poem Art',
             path: '/s/poem-art',
             lesson_extras_available: false,
-            text_to_speech_enabled: false
+            text_to_speech_enabled: false,
+            position: null
           }
         }
       }
@@ -318,6 +340,7 @@ export const courseOfferings = {
     course_versions: {
       9: {
         id: 9,
+        key: 'unversioned',
         version_year: 'unversioned',
         content_root_id: 18,
         name: 'Artist',
@@ -332,7 +355,8 @@ export const courseOfferings = {
             name: 'Artist',
             path: '/s/artist',
             lesson_extras_available: false,
-            text_to_speech_enabled: false
+            text_to_speech_enabled: false,
+            position: null
           }
         }
       }

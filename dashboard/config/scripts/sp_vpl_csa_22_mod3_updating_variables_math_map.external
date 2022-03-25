@@ -7,7 +7,9 @@ markdown <<MARKDOWN
 
 In addition to declaring and initializing variables, we also want to update the value stored in a variable.  To update the values stored in a variable, we use the name of the variable, the assignment operator (=), and the new value we want to store in the variable.
 
-```Example
+## Example
+
+```
 1. // declare and initialize a String bestDate
 2. String bestDate = “April 25th”
 3. 
@@ -15,10 +17,10 @@ In addition to declaring and initializing variables, we also want to update the 
 5. bestDate = “May 4th”
 ```
 
-We would read line 5 as “bestDate gets May 4th”.  `“May 4th”` is now stored in `bestDate` and the old value is essentially "forgotten" by the computer.
+**Explanation:** In the example above, we would read line 5 as “bestDate gets May 4th”.  `“May 4th”` is now stored in `bestDate` and the old value is essentially "forgotten" by the computer.
 
 ## Using mathematical operators
-We can also use **mathematical operators** to update `ints` and `doubles` stored inside variables.  The mathematical operators Java uses are in the table below:
+We can also use **mathematical operators** to update `int` and `double` values stored inside variables.  The mathematical operators Java uses are in the table below:
 
 | Operation      | Java Operator | Example  |
 | :---        		|    :----:   | :--- |
@@ -30,6 +32,8 @@ We can also use **mathematical operators** to update `ints` and `doubles` stored
 
 
 <br><br>
+
+## Example
 Let's look at an example:
 
 ```
@@ -40,7 +44,7 @@ Let's look at an example:
 5. numberOfPets = numberOfPets + 2;
 ```
 
-In the example above, `numberOfPets` holds the value `3` when it is initialized.  On line, 5 we get the value of `numberOfPets` and add `2` to the value stored in `numberOfPets`.  We then store the new value of `5` now in `numberOfPets`.
+**Explanation:** In the example above, `numberOfPets` holds the value `3` when it is initialized.  On line, 5 we get the value of `numberOfPets` and add `2` to the value stored in `numberOfPets`.  We then store the new value of `5` now in `numberOfPets`.
 
 ## Additional resources
 Looking for more practice and resource understanding variables in Java? Consider using the following resources:
