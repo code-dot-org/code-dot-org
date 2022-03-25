@@ -1,5 +1,6 @@
 module SurveyResultsHelper
   DIVERSITY_SURVEY_ENABLED = false
+  ### Make this check the dcdo flag, potentially with a helper function
   NPS_SURVEY_ENABLED = false
 
   def show_diversity_survey?(kind)
