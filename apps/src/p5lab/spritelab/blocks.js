@@ -75,7 +75,7 @@ const limitedColours = [
 const customInputTypes = {
   locationPicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
-      currentInputRow.appendTitle(
+      currentInputRow.appendField(
         `${inputConfig.label}(0, 0)`,
         `${inputConfig.name}_LABEL`
       );
@@ -107,7 +107,7 @@ const customInputTypes = {
           }
         }
       );
-      currentInputRow.appendTitle(button, inputConfig.name);
+      currentInputRow.appendField(button, inputConfig.name);
     },
     generateCode(block, arg) {
       return `(${block.getTitleValue(arg.name)})`;
@@ -138,9 +138,9 @@ const customInputTypes = {
       };
 
       currentInputRow
-        .appendTitle(inputConfig.label)
-        .appendTitle(Blockly.Msg.VARIABLES_GET_TITLE)
-        .appendTitle(
+        .appendField(inputConfig.label)
+        .appendField(Blockly.Msg.VARIABLES_GET_TITLE)
+        .appendField(
           new Blockly.FieldVariable(
             Blockly.Msg.VARIABLES_SET_ITEM,
             null,
@@ -150,7 +150,7 @@ const customInputTypes = {
           ),
           inputConfig.name
         )
-        .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
+        .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
     },
     generateCode(block, arg) {
       return Blockly.JavaScript.translateVarName(block.getTitleValue(arg.name));
@@ -161,7 +161,7 @@ const customInputTypes = {
       var onSelect = function(soundValue) {
         block.setTitleValue(soundValue, inputConfig.name);
       };
-      currentInputRow.appendTitle(inputConfig.label).appendTitle(
+      currentInputRow.appendField(inputConfig.label).appendField(
         new Blockly.FieldDropdown([['Choose', 'Choose']], () => {
           dashboard.assets.showAssetManager(onSelect, 'audio', null, {
             libraryOnly: true
@@ -193,8 +193,8 @@ const customInputTypes = {
         ];
       }
       currentInputRow
-        .appendTitle(inputConfig.label)
-        .appendTitle(
+        .appendField(inputConfig.label)
+        .appendField(
           new Blockly.FieldImageDropdown(sprites, 32, 32, buttons),
           inputConfig.name
         );
@@ -220,8 +220,8 @@ const customInputTypes = {
         ];
       }
       currentInputRow
-        .appendTitle(inputConfig.label)
-        .appendTitle(
+        .appendField(inputConfig.label)
+        .appendField(
           new Blockly.FieldImageDropdown(backgroundList, 40, 40, buttons),
           inputConfig.name
         );
@@ -262,8 +262,8 @@ const customInputTypes = {
       }
       block.thumbnailSize = 32;
       currentInputRow
-        .appendTitle(block.longString)
-        .appendTitle(
+        .appendField(block.longString)
+        .appendField(
           new Blockly.FieldImage('', 1, block.thumbnailSize),
           inputConfig.name
         );
@@ -317,8 +317,8 @@ const customInputTypes = {
       };
 
       currentInputRow
-        .appendTitle(inputConfig.label)
-        .appendTitle(
+        .appendField(inputConfig.label)
+        .appendField(
           new Blockly.FieldVariable(
             null,
             null,
@@ -342,8 +342,8 @@ const customInputTypes = {
         columns: 3
       };
       currentInputRow
-        .appendTitle(inputConfig.label)
-        .appendTitle(
+        .appendField(inputConfig.label)
+        .appendField(
           new Blockly.FieldColour('#ff0000', undefined, options),
           'VAL'
         );
@@ -408,8 +408,8 @@ export default {
         fieldLabel.EDITABLE = true;
         this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
         this.appendDummyInput()
-          .appendTitle(Blockly.Msg.VARIABLES_GET_TITLE)
-          .appendTitle(
+          .appendField(Blockly.Msg.VARIABLES_GET_TITLE)
+          .appendField(
             Blockly.disableVariableEditing
               ? fieldLabel
               : new Blockly.FieldVariable(
@@ -421,7 +421,7 @@ export default {
                 ),
             'VAR'
           )
-          .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
+          .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
         this.setStrictOutput(true, Blockly.BlockValueType.SPRITE);
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
       },
@@ -457,9 +457,9 @@ export default {
         fieldLabel.EDITABLE = true;
         this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
         this.appendDummyInput()
-          .appendTitle(Blockly.Msg.VARIABLES_GET_TITLE)
-          .appendTitle(fieldLabel, 'VAR')
-          .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
+          .appendField(Blockly.Msg.VARIABLES_GET_TITLE)
+          .appendField(fieldLabel, 'VAR')
+          .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
         this.setStrictOutput(true, Blockly.BlockValueType.SPRITE);
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
       },
@@ -479,10 +479,10 @@ export default {
         // Must be marked EDITABLE so that cloned blocks share the same var name
         fieldLabel.EDITABLE = true;
         this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
-        this.setHSV(136, 0.84, 0.8);
+        Blockly.cdoUtils.setHSV(this, 136, 0.84, 0.8);
         const mainTitle = this.appendDummyInput()
-          .appendTitle(fieldLabel, 'VAR')
-          .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
+          .appendField(fieldLabel, 'VAR')
+          .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
 
         let allowBehaviorEditing = Blockly.useModalFunctionEditor;
 
@@ -506,7 +506,7 @@ export default {
             this,
             this.openEditor
           );
-          mainTitle.appendTitle(editLabel);
+          mainTitle.appendField(editLabel);
         }
 
         this.setStrictOutput(true, Blockly.BlockValueType.BEHAVIOR);

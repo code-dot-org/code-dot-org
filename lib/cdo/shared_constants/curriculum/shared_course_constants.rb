@@ -68,6 +68,9 @@ module SharedCourseConstants
     csf_international: 'CS Fundamentals International',
     math: 'Math',
     twenty_hour: '20-hour',
-    other: 'Other'
+    other: 'Other',
+    pl_self_paced: 'Self Paced Professional Learning',
+    pl_virtual: 'Virtual Professional Learning',
+    pl_other: 'Other Professional Learning'
   ).freeze
 end

@@ -1,13 +1,12 @@
 name 'CSA U1L9-L6_2022'
 title 'Check for Understanding'
 
-wrong 'Code inside the body runs forever'
-right 'Make decisions about whether or not to run code'
-wrong 'Code inside the body runs multiple times'
-wrong 'Code inside the body runs only once'
-wrong 'Code inside the body never runs'
+wrong 'Code inside the body runs forever.'
+right 'Make decisions about whether or not to run code.'
+wrong 'Code inside the body runs multiple times.'
+wrong 'Code inside the body runs only once.'
+wrong 'Code inside the body never runs.'
 
 markdown <<MARKDOWN
-Which of the following is ALWAYS true for BOTH   
-`while`(#e7e8ea) loops and `if`(#e7e8ea) statements?
+Which of the following is **ALWAYS** true for **BOTH** `while` loops and `if` statements?
 MARKDOWN

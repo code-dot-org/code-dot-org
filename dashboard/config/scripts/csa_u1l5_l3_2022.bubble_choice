@@ -1,6 +1,6 @@
 name 'CSA U1L5-L3_2022'
 display_name 'Conditional Moving and Painting'
-description 'Use if statements with the isOnBucket(), isOnPaint(), and canMove() methods to navigate The Neighborhood.'
+description 'Use if statements with the `isOnBucket()`, `isOnPaint()`, and `canMove()` methods to navigate The Neighborhood.'
 
 sublevels
 level 'CSA U1L5-L3a_2022'
