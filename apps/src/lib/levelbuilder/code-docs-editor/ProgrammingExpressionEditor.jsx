@@ -144,7 +144,7 @@ export default function ProgrammingExpressionEditor({
         </HelpTip>
       </label>
 
-      {programmingExpression.environmentEditorType === 'blockly' && (
+      {programmingExpression.environmentLanguageType === 'blockly' && (
         <label>
           Block Name
           <input

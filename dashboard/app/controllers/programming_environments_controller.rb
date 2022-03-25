@@ -79,7 +79,7 @@ class ProgrammingEnvironmentsController < ApplicationController
       :title,
       :published,
       :description,
-      :editor_type,
+      :editor_language,
       :block_pool_name,
       :image_url,
       :project_url,
