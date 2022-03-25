@@ -1,6 +1,10 @@
 /** @file Stubbable core setup check behavior for the setup page. */
 import CircuitPlaygroundBoard from '../boards/circuitPlayground/CircuitPlaygroundBoard';
-import {ensureAppInstalled, findPortWithViableDevice, findWebSerialPortWithViableDevice} from '../portScanning';
+import {
+  ensureAppInstalled,
+  findPortWithViableDevice,
+  findWebSerialPortWithViableDevice
+} from '../portScanning';
 import {
   isCodeOrgBrowser,
   isChrome,
@@ -9,6 +13,7 @@ import {
 } from './browserChecks';
 import {BOARD_TYPE, detectBoardTypeFromPort} from './boardUtils';
 import MicroBitBoard from '../boards/microBit/MicroBitBoard';
+import experiments from '@cdo/apps/util/experiments';
 
 export default class SetupChecker {
   port = null;
@@ -20,18 +25,17 @@ export default class SetupChecker {
    */
   detectSupportedBrowser() {
     return new Promise((resolve, reject) => {
-      resolve();
-      // if (isCodeOrgBrowser()) {
-      //   // TODO: Check browser version
-      //   resolve();
-      // } else if (isChromeOS()) {
-      //   resolve();
-      // } else if (isChrome() && gtChrome33()) {
-      //   // Legacy support for Chrome App on Desktop
-      //   resolve();
-      // } else {
-      //   reject(new Error('Not using a supported browser.'));
-      // }
+      if (isCodeOrgBrowser()) {
+        // TODO: Check browser version
+        resolve();
+      } else if (isChromeOS()) {
+        resolve();
+      } else if (isChrome() && gtChrome33()) {
+        // Legacy support for Chrome App on Desktop
+        resolve();
+      } else {
+        reject(new Error('Not using a supported browser.'));
+      }
     });
   }
 
@@ -40,16 +44,20 @@ export default class SetupChecker {
    * @return {Promise}
    */
   detectChromeAppInstalled() {
-    return true;
-    // return ensureAppInstalled();
+    return ensureAppInstalled();
   }
 
   /**
    * @return {Promise}
    */
   detectBoardPluggedIn() {
-    return findWebSerialPortWithViableDevice().then(port => this.port = port);
-    //return findPortWithViableDevice().then(port => (this.port = port));
+    if (experiments.isEnabled('webserial')) {
+      return findWebSerialPortWithViableDevice().then(
+        port => (this.port = port)
+      );
+    } else {
+      return findPortWithViableDevice().then(port => (this.port = port));
+    }
   }
 
   /**
