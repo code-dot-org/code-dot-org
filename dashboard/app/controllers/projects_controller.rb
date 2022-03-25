@@ -149,6 +149,9 @@ class ProjectsController < ApplicationController
     },
     poetry_hoc: {
       name: 'New Poetry HOC Project'
+    },
+    thebadguys: {
+      name: 'New The Bad Guys Project'
     }
   }.with_indifferent_access.freeze
 
