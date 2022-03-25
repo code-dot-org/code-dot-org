@@ -656,6 +656,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/programming_expressions/new.js',
     'programming_expressions/edit':
       './src/sites/studio/pages/programming_expressions/edit.js',
+    'reference_guides/edit':
+      './src/sites/studio/pages/reference_guides/edit.js',
     'reference_guides/edit_all':
       './src/sites/studio/pages/reference_guides/edit_all.js',
     'scripts/edit': './src/sites/studio/pages/scripts/edit.js',

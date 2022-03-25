@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2022-03-18 15:32:59 UTC",
+    "serialized_at": "2022-03-23 20:16:33 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -210,7 +210,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **context-setting**/**skill-building** lesson, students will learn what events are and how programmers use them in video games. Students will build a game that they can customize with different speeds and sounds.",
-        "preparation": "\n - Play through the puzzles to find any potential problem areas for your class.\n - Read the ***slide deck** (to be presented to students at end of class).",
+        "preparation": "\n - Play through the puzzles to find any potential problem areas for your class.\n",
         "purpose": "Events are very common in computer programs, especially in video games.  \n\nIn this lesson, students will develop their understanding of events by making a sports-based game. Students will learn to make their paddle move according to arrow keys, and make noises when objects collide. At the very end, they will get to customize their game to make it more unique!",
         "student_overview": "Ever wish you could play video games in school? In this lesson, you will get to make your own!"
       },
@@ -582,8 +582,7 @@
       "key": "a7dae702-74f1-442a-83fd-ff60c956071d",
       "position": 5,
       "properties": {
-        "duration": 10,
-        "name": "Optional Assessment"
+        "name": "Optional Assessment (10 minutes)"
       },
       "seeding_key": {
         "lesson_activity.key": "a7dae702-74f1-442a-83fd-ff60c956071d",
@@ -1751,7 +1750,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _Why is it important to give a robot specific instructions when you “program” it?_\n\nStudents will either be learning a lot of new concepts or reviewing a lot of basic concepts. Based on your class's experience, you can cover the following vocabulary or move on to a bridging activity. We recommend using the following words in sentences if the definitions aren't explicitly covered.",
-        "name": "Introduction\r"
+        "name": "Reflect"
       },
       "seeding_key": {
         "activity_section.key": "96499db1-0002-4488-b370-2d718a5c90ec",
@@ -1762,7 +1761,8 @@
       "key": "c10c099e-fd94-4a79-9bd6-bfc55b2b1059",
       "position": 2,
       "properties": {
-        "description": "\n####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\nThis lesson has the following important vocabulary words:\n\n\n\n - **Bug** -    An error in a program that prevents the program from running as expected. \n\n - **Debugging** -    Finding and fixing errors in programs. \n\n - **Loop** -    The action of doing something over and over again\n\n - **Program** -    An algorithm that has been coded into something that can be run by a machine.\n\n - **Programming** -    The art of creating a program. "
+        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\nThis lesson has the following important vocabulary words:\n\n\n\n - **Bug** -    An error in a program that prevents the program from running as expected. \n\n - **Debugging** -    Finding and fixing errors in programs. \n\n - **Loop** -    The action of doing something over and over again\n\n - **Program** -    An algorithm that has been coded into something that can be run by a machine.\n\n - **Programming** -    The art of creating a program. ",
+        "name": "Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "c10c099e-fd94-4a79-9bd6-bfc55b2b1059",
@@ -1873,6 +1873,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide \n\n**Reflect:** _When have you “debugged” a frustrating problem in your life?_",
+        "name": "Reflect",
         "tips": [
           {
             "type": "teachingTip",
@@ -1889,7 +1890,8 @@
       "key": "5dbc43b8-f734-4c93-99d4-0995393a9f25",
       "position": 2,
       "properties": {
-        "description": "\n&nbsp\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Algorithm** - A list of steps to finish a task.\n\n\n- **Bug** - Part of a program that does not work correctly.\n\n- **Debugging** - Finding and fixing problems in an algorithm or program.\n\n- **Program** - An algorithm that has been coded into something that can be run by a machine.\n\n&nbsp\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary: (continued)” slide\n\n- **Frustrated** - Feeling annoyed or angry because something is not the way you want it. \n\n- **Persistence** - Trying again and again, even when something is very hard.\n"
+        "description": "\n\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Algorithm** - A list of steps to finish a task.\n\n\n- **Bug** - Part of a program that does not work correctly.\n\n- **Debugging** - Finding and fixing problems in an algorithm or program.\n\n- **Program** - An algorithm that has been coded into something that can be run by a machine.\n\n&nbsp\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary: (continued)” slide\n\n- **Frustrated** - Feeling annoyed or angry because something is not the way you want it. \n\n- **Persistence** - Trying again and again, even when something is very hard.\n",
+        "name": "Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "5dbc43b8-f734-4c93-99d4-0995393a9f25",
@@ -1900,7 +1902,8 @@
       "key": "3ab2b28c-3947-44d9-ae6d-8d8d43320c27",
       "position": 3,
       "properties": {
-        "description": "Recall that in \"Graph Paper Programming\" we guided our teammate's Automatic Realization Machine (ARM) using arrows. This warm up will bring back these ideas, which will be needed in the main activity."
+        "description": "Recall that in \"Graph Paper Programming\" we guided our teammate's Automatic Realization Machine (ARM) using arrows. This warm up will bring back these ideas, which will be needed in the main activity.",
+        "name": "Introduction"
       },
       "seeding_key": {
         "activity_section.key": "3ab2b28c-3947-44d9-ae6d-8d8d43320c27",
@@ -1911,8 +1914,7 @@
       "key": "1a76c73e-a54d-4d84-ae77-8cf516d6661e",
       "position": 4,
       "properties": {
-        "description": "**Goal:** In this lesson, we want to help students learn to identify and fix bugs in their own programs.  The easiest way to do that is to first present students with a program that contains bugs that are not their fault.  Once they've helped you fix \"your\" program, share with them how frustrating it can be to make mistakes, and help them see that those feelings are completely normal and they shouldn't feel embarrassed by them.\n\n&nbsp\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Debugging” slide\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-05-11-12.30.53.png)\n\n**Discuss:** Get the attention of the class and let them know that you are stuck!  You have this challenge, and you thought you had solved it, but it doesn't seem to be working.  Your program has a bug, can they help you fix it?\n\nTake a moment to walk them through the rules:\n- _Start at the star._\n- _Follow the instructions step-by-step._\n- _End when all of the right squares are filled in._\n\n*Optional:*  Follow along by filling in a blank grid. Express frustration when the picture doesn't turn out the way that you wanted it to.\n\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Think, Pair, Share” slide\n\n**Think:** *Can you figure out why my program doesn't work?*\n\n**Pair:** Let students work together to see if they can figure out what the program is supposed to say.\n\n**Share:** Ask students if anyone was able to figure out a way to solve the problem.  When you get a correct answer, let the students know that they are great at debugging!",
-        "name": "Where did I go wrong?"
+        "description": "\n####Where did I go wrong?\n**Goal:** In this lesson, we want to help students learn to identify and fix bugs in their own programs.  The easiest way to do that is to first present students with a program that contains bugs that are not their fault.  Once they've helped you fix \"your\" program, share with them how frustrating it can be to make mistakes, and help them see that those feelings are completely normal and they shouldn't feel embarrassed by them.\n\n&nbsp\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Debugging” slide\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-05-11-12.30.53.png)\n\n**Discuss:** Get the attention of the class and let them know that you are stuck!  You have this challenge, and you thought you had solved it, but it doesn't seem to be working.  Your program has a bug, can they help you fix it?\n\nTake a moment to walk them through the rules:\n- _Start at the star._\n- _Follow the instructions step-by-step._\n- _End when all of the right squares are filled in._\n\n*Optional:*  Follow along by filling in a blank grid. Express frustration when the picture doesn't turn out the way that you wanted it to.\n\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Think, Pair, Share” slide\n\n**Think:** *Can you figure out why my program doesn't work?*\n\n**Pair:** Let students work together to see if they can figure out what the program is supposed to say.\n\n**Share:** Ask students if anyone was able to figure out a way to solve the problem.  When you get a correct answer, let the students know that they are great at debugging!"
       },
       "seeding_key": {
         "activity_section.key": "1a76c73e-a54d-4d84-ae77-8cf516d6661e",
@@ -2247,7 +2249,7 @@
       "key": "ea99adc6-d611-4d13-9da7-04fcb43c6df3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** What is your favorite (classroom appropriate) video game? What is your favorite part of the game?\n\n\nMost of the time, students will respond with some kind of event. When you recognize a student response that describes an event, ask the student to describe it further.\n\nOnce the student is done describing their fun, take a minute to relate it back to the definition of an **event**.\n\n&nbsp\n\n\n###Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n\n - **Event**: An action that causes something to happen.\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Pair-Share” slide\n\n\nAsk the students to try and relate some of their favorite parts of video games and how they can be described as events. Have them pair-share and discuss the differences between their events and their partner's.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** What is your favorite (classroom appropriate) video game? What is your favorite part of the game?\n\n\nMost of the time, students will respond with some kind of event. When you recognize a student response that describes an event, ask the student to describe it further.\n\nOnce the student is done describing their game, take a minute to relate it back to the definition of an **event**.\n\n&nbsp\n\n\n###Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n\n - **Event**: An action that causes something to happen.\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Pair-Share” slide\n\n\nAsk the students to try and relate some of their favorite parts of video games and how they can be described as events. Have them pair-share and discuss the differences between their events and their partner's.",
         "name": "Introduction",
         "tips": [
           {
@@ -2552,8 +2554,7 @@
       "key": "92a12478-0870-4331-a034-b5f1ed4164af",
       "position": 13,
       "properties": {
-        "description": "&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 16-17 - Lesson Extras” slide",
-        "progression_name": "Lesson Extras"
+        "description": "&nbsp\n####Lesson Extras\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras” slide"
       },
       "seeding_key": {
         "activity_section.key": "92a12478-0870-4331-a034-b5f1ed4164af",
@@ -2705,8 +2706,19 @@
       }
     },
     {
-      "key": "31073c5d-beaf-420a-af98-4aa468a7b9d4",
+      "key": "e26c0781-e8ca-4864-ab22-1af5ce60b1f4",
       "position": 7,
+      "properties": {
+        "description": "####Lesson Extras\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras” slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "e26c0781-e8ca-4864-ab22-1af5ce60b1f4",
+        "lesson_activity.key": "bd41d9a1-3212-4e4a-928e-ad0e05bbdfee"
+      }
+    },
+    {
+      "key": "31073c5d-beaf-420a-af98-4aa468a7b9d4",
+      "position": 8,
       "properties": {
         "tips": [
           {
@@ -2722,7 +2734,7 @@
     },
     {
       "key": "426a591c-ec85-48bf-9864-5f909eafa458",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "**Circulate:** Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize ***Pause and Think Online** Video whenever possible.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Remind students to use the debugging process before you approach.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own."
       },
@@ -2778,10 +2790,21 @@
       }
     },
     {
-      "key": "bc19ceeb-4c22-40a1-9794-7b0e998b5e78",
+      "key": "b232d54d-74fd-4360-bf15-83f2cd03f717",
       "position": 1,
       "properties": {
-        "description": "\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Artist Intro with JR Hildebrand” video",
+        "description": "####Online Puzzles\n\nSome students may discover where to add `repeat` loops by writing out the program without loops then circling sections of repetitions. If the students in your class seem like they could benefit from this, have them keep paper and pencils beside them at their computers. Students might also enjoy drawing some of the shapes and figures on paper as they program online."
+      },
+      "seeding_key": {
+        "activity_section.key": "b232d54d-74fd-4360-bf15-83f2cd03f717",
+        "lesson_activity.key": "911da8c1-6cda-4fe7-a888-af2af8b70994"
+      }
+    },
+    {
+      "key": "bc19ceeb-4c22-40a1-9794-7b0e998b5e78",
+      "position": 2,
+      "properties": {
+        "description": "\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Artist Intro with JR Hildebrand” video",
         "name": "Drawing Shapes with Loops",
         "progression_name": "Video: Artist Intro with JR Hildebrand"
       },
@@ -2792,7 +2815,7 @@
     },
     {
       "key": "61fa4607-bb88-4573-8bea-10a12e88181a",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-3 - Skill Building” slide",
         "progression_name": "Skill Building"
@@ -2804,7 +2827,7 @@
     },
     {
       "key": "5f35a867-9366-4759-b0e8-be48c34c09c5",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "&nbsp\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Loops with the Artist” video\n",
         "progression_name": "Video: Loops with the Artist"
@@ -2816,7 +2839,7 @@
     },
     {
       "key": "f52282b3-cfad-49a9-a004-5297a4ca7bbc",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "\n&nbsp\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 5-9 - Skill Building” slide\n",
         "progression_name": "Skill Building"
@@ -2828,7 +2851,7 @@
     },
     {
       "key": "f83fde9f-a2d7-4f99-94fb-ac2fc9b79352",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Challenge” slide\n",
         "progression_name": "Challenge"
@@ -2840,7 +2863,7 @@
     },
     {
       "key": "3f3774e2-c8fa-4318-9e6e-d58f6983e746",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 11 - Practice” slide\n",
         "progression_name": "Practice"
@@ -2851,13 +2874,13 @@
       }
     },
     {
-      "key": "b232d54d-74fd-4360-bf15-83f2cd03f717",
-      "position": 7,
+      "key": "3315af90-e8ff-4568-813e-2b743e90bf30",
+      "position": 8,
       "properties": {
-        "description": "####Online Puzzles\n\nSome students may discover where to add `repeat` loops by writing out the program without loops then circling sections of repetitions. If the students in your class seem like they could benefit from this, have them keep paper and pencils beside them at their computers. Students might also enjoy drawing some of the shapes and figures on paper as they program online."
+        "description": "####Lesson Extras\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras” slide"
       },
       "seeding_key": {
-        "activity_section.key": "b232d54d-74fd-4360-bf15-83f2cd03f717",
+        "activity_section.key": "3315af90-e8ff-4568-813e-2b743e90bf30",
         "lesson_activity.key": "911da8c1-6cda-4fe7-a888-af2af8b70994"
       }
     },
@@ -2996,8 +3019,7 @@
       "key": "791b5b99-593d-4287-ab93-a9970d63744e",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 14-15 - Lesson Extras” slide",
-        "progression_name": "Lesson Extras"
+        "description": "####Lesson Extras\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 14-15 - Lesson Extras” slide"
       },
       "seeding_key": {
         "activity_section.key": "791b5b99-593d-4287-ab93-a9970d63744e",
@@ -3066,7 +3088,7 @@
       "key": "dda904ae-113f-4561-8a61-e9ed43297a47",
       "position": 1,
       "properties": {
-        "name": "Reflection",
+        "description": "&nbsp\n####Flash Chat: What did we learn?\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Flash Chat” slide",
         "tips": [
           {
             "type": "teachingTip",
@@ -3083,7 +3105,7 @@
       "key": "0634eee0-ab96-4581-adc1-8bda642fdf93",
       "position": 2,
       "properties": {
-        "description": "\n&nbsp\n####Flash Chat: What did we learn?\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Flash Chat” slide\n\n\nThe two bolded questions below are the ones featured in the slides. Feel free to ask your students to answer the other Flash Chat questions as well.\n- If you were going to code this up in Blocky, what would you need to add around your conditionals to let the code run more than one time? (A loop)\n- What other things do you do during the day under certain conditions?\n- **If you are supposed to do something when the value of a card is more than 5, and you draw a 5, do you meet that condition?**\n- Notice that conditions are either \"True\" or \"False.\" There is no assessment of a condition that evaluates to \"Banana.\"\n- **When you need to meet several combinations of conditions, we can use something called \"nested conditionals.\"**\n\t- **What do you think that means?**\n\t- **Can you give an example of where we saw that during the game?**\n- What part of that game did you like the best?"
+        "description": "\nThe two bolded questions below are the ones featured in the slides. Feel free to ask your students to answer the other Flash Chat questions as well.\n- If you were going to code this up in Blocky, what would you need to add around your conditionals to let the code run more than one time? (A loop)\n- What other things do you do during the day under certain conditions?\n- **If you are supposed to do something when the value of a card is more than 5, and you draw a 5, do you meet that condition?**\n- Notice that conditions are either \"True\" or \"False.\" There is no assessment of a condition that evaluates to \"Banana.\"\n- **When you need to meet several combinations of conditions, we can use something called \"nested conditionals.\"**\n\t- **What do you think that means?**\n\t- **Can you give an example of where we saw that during the game?**\n- What part of that game did you like the best?"
       },
       "seeding_key": {
         "activity_section.key": "0634eee0-ab96-4581-adc1-8bda642fdf93",
@@ -3249,6 +3271,17 @@
       },
       "seeding_key": {
         "activity_section.key": "268e56b4-6f3e-4a44-8383-2e538ae1ab72",
+        "lesson_activity.key": "818d6302-7244-4a90-934f-31dc3381836a"
+      }
+    },
+    {
+      "key": "3ea15706-caac-499b-aef5-a7210f291bfc",
+      "position": 10,
+      "properties": {
+        "description": "####Lesson Extras\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "3ea15706-caac-499b-aef5-a7210f291bfc",
         "lesson_activity.key": "818d6302-7244-4a90-934f-31dc3381836a"
       }
     },
@@ -3431,6 +3464,17 @@
       }
     },
     {
+      "key": "3edea7b4-3cb0-44c0-8705-5e2f51f2802d",
+      "position": 11,
+      "properties": {
+        "description": "####Lesson Extras\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "3edea7b4-3cb0-44c0-8705-5e2f51f2802d",
+        "lesson_activity.key": "c381e292-d281-4325-a307-4c4358dba746"
+      }
+    },
+    {
       "key": "a1959bb9-3d8d-46ac-826c-df29b6dcb135",
       "position": 1,
       "properties": {
@@ -3597,6 +3641,17 @@
       }
     },
     {
+      "key": "3694bab1-5f1b-411a-8170-601003b9d32c",
+      "position": 10,
+      "properties": {
+        "description": "####Lesson Extras\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "3694bab1-5f1b-411a-8170-601003b9d32c",
+        "lesson_activity.key": "3c7c2254-c6ec-4f6d-89a4-81633cc72170"
+      }
+    },
+    {
       "key": "44daf4e4-d94e-4ba5-9364-8e3a93dc267e",
       "position": 1,
       "properties": {
@@ -3724,6 +3779,17 @@
       },
       "seeding_key": {
         "activity_section.key": "c5b4eff7-95ff-4c51-acb5-2c23f8758991",
+        "lesson_activity.key": "5450558e-b0ec-4668-a5c0-599b76edb64f"
+      }
+    },
+    {
+      "key": "baf8f43c-6977-4f51-a3c6-3b571a735941",
+      "position": 8,
+      "properties": {
+        "description": "####Lesson Extras\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "baf8f43c-6977-4f51-a3c6-3b571a735941",
         "lesson_activity.key": "5450558e-b0ec-4668-a5c0-599b76edb64f"
       }
     },
@@ -4414,6 +4480,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_collector_debugging8a2022"
+        ],
         "progression": "Challenge/Practice"
       },
       "bonus": false,
@@ -4436,6 +4505,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_collector_debugging9a2022"
+        ],
         "progression": "Challenge/Practice"
       },
       "bonus": false,
@@ -5285,10 +5357,9 @@
       "properties": {
         "level_keys": [
           "CourseD_Dance_2020_bonus12022"
-        ],
-        "progression": "Lesson Extras"
+        ]
       },
-      "bonus": true,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseD_Dance_2020_bonus12022"
@@ -5310,10 +5381,9 @@
       "properties": {
         "level_keys": [
           "CourseD_Dance_2020_bonus32022"
-        ],
-        "progression": "Lesson Extras"
+        ]
       },
-      "bonus": true,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CourseD_Dance_2020_bonus32022"
@@ -6238,8 +6308,7 @@
       "properties": {
         "level_keys": [
           "courseD_harvester_nested_loops_challenge12022"
-        ],
-        "progression": "Lesson Extras"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -6263,8 +6332,7 @@
       "properties": {
         "level_keys": [
           "courseD_collector_nested_loops_challenge22022"
-        ],
-        "progression": "Lesson Extras"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -6311,6 +6379,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursed_looking_ahead_minecraft_intro"
+        ],
         "progression": "Video: Learn the Basics of Computer Science"
       },
       "bonus": false,
@@ -6333,6 +6404,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overworld Move to Sheep2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6354,6 +6428,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overworld Chop Tree2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6375,6 +6452,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overworld Shear Sheep2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6396,6 +6476,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overworld Chop Trees2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6417,6 +6500,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursed_looking_ahead_minecraft_repeat_loops"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6588,6 +6674,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursed_looking_ahead_minecraft_if_statements"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6711,6 +6800,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overworld Free Play 20x202022"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -9868,17 +9960,6 @@
       }
     },
     {
-      "name": "Events in Bounce - How Do They Happen?",
-      "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/template/preview",
-      "key": "events_in_bounce_-_how_do_they_happen_",
-      "properties": {
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "events_in_bounce_-_how_do_they_happen_"
-      }
-    },
-    {
       "name": "Feeling Faces",
       "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
       "key": "feeling_faces",
@@ -10268,6 +10349,12 @@
     {
       "seeding_key": {
         "lesson.key": "Build a Star Wars Game",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Star Wars Game",
         "resource.key": "open-ended_programming_levels_1"
       }
     },
@@ -10315,6 +10402,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Conditionals with Cards",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Dance Party",
         "resource.key": "dance_party_project_guide"
       }
@@ -10340,6 +10439,12 @@
     {
       "seeding_key": {
         "lesson.key": "Debugging with Laurel",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging with Laurel",
         "resource.key": "relay_programming_5"
       }
     },
@@ -10351,6 +10456,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Drawing Shapes with Loops",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "End of Course Project",
         "resource.key": "csf_course_d_end_of_course_project_planning_guide"
       }
@@ -10358,7 +10475,7 @@
     {
       "seeding_key": {
         "lesson.key": "Events in Bounce",
-        "resource.key": "events_in_bounce_-_how_do_they_happen_"
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
       }
     },
     {
@@ -10418,13 +10535,37 @@
     {
       "seeding_key": {
         "lesson.key": "If/Else with Bee",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "If/Else with Bee",
         "resource.key": "unplugged_blocks_courses_c-f_"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Introduction to Online Puzzles",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Online Puzzles",
         "resource.key": "pair_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Looking Ahead with Minecraft",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
       }
     },
     {
@@ -10443,6 +10584,12 @@
       "seeding_key": {
         "lesson.key": "Loops in Ice Age",
         "resource.key": "pause_and_think_online"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Maze",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
       }
     },
     {
@@ -10490,6 +10637,12 @@
     {
       "seeding_key": {
         "lesson.key": "Relay Programming",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Relay Programming",
         "resource.key": "relay_programming"
       }
     },
@@ -10525,8 +10678,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Until Loops in Maze",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "While Loops in Farmer",
         "resource.key": "conditionals_with_cards_sample_program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "While Loops in Farmer",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
       }
     },
     {

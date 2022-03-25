@@ -65,6 +65,8 @@ module ViewOptionsHelper
     :start_blocks,
     :toolbox_blocks,
     :edit_blocks,
+    :is_editing_exemplar,
+    :exemplar_sources,
     :skip_instructions_popup,
     :embed,
     :share,
