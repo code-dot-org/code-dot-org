@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-22 19:01:52 UTC",
+    "serialized_at": "2022-03-23 15:22:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -435,6 +435,17 @@
       },
       "seeding_key": {
         "activity_section.key": "1ecc5a5d-dc29-429c-8d05-f5def9487e73",
+        "lesson_activity.key": "0180195d-d482-49a8-b6fd-e79c2fdd00ac"
+      }
+    },
+    {
+      "key": "3fd00bf3-4f55-4b5c-a3be-1331682db1c1",
+      "position": 6,
+      "properties": {
+        "progression_name": "Wrap up"
+      },
+      "seeding_key": {
+        "activity_section.key": "3fd00bf3-4f55-4b5c-a3be-1331682db1c1",
         "lesson_activity.key": "0180195d-d482-49a8-b6fd-e79c2fdd00ac"
       }
     }
@@ -1513,6 +1524,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-matching"
+        ],
         "progression": "Vocabulary"
       },
       "bonus": false,
@@ -2147,6 +2161,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-Vocab-lesson-5-matching"
+        ],
         "progression": "Vocabulary"
       },
       "bonus": false,
@@ -2161,6 +2178,28 @@
       },
       "level_keys": [
         "SP-VPL-CSA-22-mod3-Vocab-lesson-5-matching"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 17,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-Navigation-Mod3"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "3fd00bf3-4f55-4b5c-a3be-1331682db1c1"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-Navigation-Mod3"
       ]
     }
   ],
@@ -2979,6 +3018,18 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csa3-2022",
         "activity_section.key": "1ecc5a5d-dc29-429c-8d05-f5def9487e73"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-Navigation-Mod3",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-Navigation-Mod3"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "3fd00bf3-4f55-4b5c-a3be-1331682db1c1"
       }
     }
   ],

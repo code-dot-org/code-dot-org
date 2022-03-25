@@ -122,7 +122,8 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
   test 'teacher cannot view nonexistent section details' do
     sign_in @teacher
-    get :show, params: {id: 1_000_000}
+    nonexistant_id = Section.last.id + 1000
+    get :show, params: {id: nonexistant_id}
     assert_response :forbidden
   end
 
