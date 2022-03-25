@@ -89,7 +89,7 @@ class Section < ApplicationRecord
   # PL courses which are run with adults should be set up with teacher accounts so they must use
   # email logins
   def pl_sections_must_use_email_logins
-    if participant_type != SharedCourseConstants::PARTICIPANT_AUDIENCE.student && login_type != LOGIN_TYPE_EMAIL
+    if pl_section? && login_type != LOGIN_TYPE_EMAIL
       errors.add(:login_type, 'must be email for professional learning sections.')
     end
   end
@@ -101,6 +101,10 @@ class Section < ApplicationRecord
     if participant_type_changed? && persisted?
       errors.add(:participant_type, "can not be update once set.")
     end
+  end
+
+  def pl_section?
+    participant_type != SharedCourseConstants::PARTICIPANT_AUDIENCE.student
   end
 
   serialized_attrs %w(code_review_expires_at)
