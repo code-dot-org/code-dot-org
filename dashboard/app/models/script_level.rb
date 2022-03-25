@@ -681,13 +681,15 @@ class ScriptLevel < ApplicationRecord
         # If the script level has sublevels, get a link for the sublevel that looks like
         # /csa1/lessons/6/levels/5/sublevel/1?exemplar=true
         sublevel_position = oldest_active_level.sublevel_position(level)
-        link = 'https://studio.code.org' + build_script_level_path(self, {sublevel_position: sublevel_position}) + '?exemplar=true'
-        level_example_links = [link]
+        return [] unless sublevel_position
+
+        path = build_script_level_path(self, {sublevel_position: sublevel_position})
+        level_example_links = [build_exemplar_url(path)]
       else
         # Otherwise, exemplar link should look like
         # csa1/lessons/2/levels/1?exemplar=true
-        link = 'https://studio.code.org' + build_script_level_path(self) + '?exemplar=true'
-        level_example_links = [link]
+        path = build_script_level_path(self)
+        level_example_links = [build_exemplar_url(path)]
       end
     elsif level.try(:examples).present? && (current_user&.verified_instructor? || script&.csf?) # 'solutions' for applab-type levels
       level_example_links = level.examples.map do |example|
@@ -735,5 +737,9 @@ class ScriptLevel < ApplicationRecord
     else
       LEVEL_KIND.puzzle
     end
+  end
+
+  def build_exemplar_url(path)
+    'https://studio.code.org' + path + '?exemplar=true'
   end
 end

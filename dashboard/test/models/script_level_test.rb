@@ -141,6 +141,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
       assert_equal sl.get_example_solutions(level, @authorized_teacher), ["https://studio.code.org/projects/playlab/example-1/view", "https://studio.code.org/projects/playlab/example-2/view"]
     end
 
+    # Should be removed as part of this task:
+    # https://codedotorg.atlassian.net/browse/JAVA-525
     test 'get_example_solutions for javalab level with example (deprecated)' do
       level = create(:javalab, :with_example_solutions)
       sl = create(:script_level, levels: [level])
@@ -157,13 +159,13 @@ class ScriptLevelTest < ActiveSupport::TestCase
     end
 
     test 'get_example_solutions for javalab sublevel level with exemplar' do
-      sublevel1 = create :javalab, exemplar_sources: 'some code', name: 'choice_1', display_name: 'Choice 1!', thumbnail_url: 'some-fake.url/kittens.png', bubble_choice_description: 'Choose me!'
-      sublevels = [sublevel1]
-      bubble_choice = create :bubble_choice_level, name: 'bubble_choices', display_name: 'Bubble Choices', description: 'Choose one or more!', sublevels: sublevels
+      sublevel = create :javalab, exemplar_sources: 'some code'
+      sublevels = [sublevel]
+      bubble_choice = create :bubble_choice_level, sublevels: sublevels
       script = create(:script)
       sl = create :script_level, levels: [bubble_choice], script: script
 
-      assert_equal ["https://studio.code.org/s/#{script.name}/lessons/1/levels/1/sublevel/1?exemplar=true"], sl.get_example_solutions(sublevel1, @authorized_teacher)
+      assert_equal ["https://studio.code.org/s/#{script.name}/lessons/1/levels/1/sublevel/1?exemplar=true"], sl.get_example_solutions(sublevel, @authorized_teacher)
     end
 
     test 'get_example_solutions for level with ideal level source' do

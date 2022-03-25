@@ -176,7 +176,6 @@ module LevelsHelper
 
   # Options hash for all level types
   def app_options
-    # Figure out if caching is a concern
     # Unsafe to generate these twice, so use the cached version if it exists.
     return @app_options unless @app_options.nil?
 
@@ -193,7 +192,8 @@ module LevelsHelper
     level_requires_channel = (@level.channel_backed? &&
           !@level.try(:contained_levels).present? &&
           params[:action] != 'edit_blocks')
-    # Javalab always requires a channel if Javabuilder needs to access project-specific assets.
+    # Javalab requires a channel if Javabuilder needs to access project-specific assets,
+    # or if we want to access a project's code from S3.
     # Two special cases are when we edit and view Javalab exemplar code,
     # where we load the exemplar code from the level definition, edit it locally in Javalab,
     # and pass the edited code directly to Javabuilder.
