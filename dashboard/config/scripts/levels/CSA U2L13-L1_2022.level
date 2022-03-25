@@ -5,7 +5,7 @@
     "project_template_level_name": "CSA U2 Store Management Project PBT_2022",
     "long_instructions": "##Store Management Project\r\n1. Make revisions to your project using the feedback you received and your self-assessment.\r\n\r\n2. Finish writing your store management program.\r\n\r\n3. Submit your project when you have finished!",
     "mini_rubric": "false",
-    "submittable": "false",
+    "submittable": "true",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
     "encrypted_examples": "FbsCZrMxC5FHjbOSeeJoXvAtSWe1qbZ2J2eStIapXaCtjVIJW7NjFUFcmqvs\nIbvbZkY8qe0NUu5mCg465KgnPQqiW9xRcf6S6eXtIXIYZLk=\n"
@@ -15,6 +15,6 @@
   "created_at": "2022-03-07T00:40:14.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-03-07T00:40:14.728+00:00\",\"changed\":[\"cloned from \\\"CSA U2L12-L1_2022\\\"\"],\"cloned_from\":\"CSA U2L12-L1_2022\"},{\"changed_at\":\"2022-03-07 00:40:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-08 14:11:02 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-07T00:40:14.728+00:00\",\"changed\":[\"cloned from \\\"CSA U2L12-L1_2022\\\"\"],\"cloned_from\":\"CSA U2L12-L1_2022\"},{\"changed_at\":\"2022-03-07 00:40:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-08 14:11:02 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-24 13:39:25 +0000\",\"changed\":[\"submittable\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
