@@ -212,7 +212,7 @@ module ProjectsList
     end
 
     def fetch_featured_projects_by_type(project_type)
-      storage_apps_table = DCDO.get('storage_apps_in_dashboard', false) ? "#{CDO.dashboard_db_name}__projects".to_sym : "#{CDO.pegasus_db_name}__#{table_name}".to_sym
+      storage_apps_table = DCDO.get('storage_apps_in_dashboard', false) ? "#{CDO.dashboard_db_name}__projects".to_sym : "#{CDO.pegasus_db_name}__storage_apps}".to_sym
       user_project_storage_ids = "#{CDO.dashboard_db_name}__user_project_storage_ids".to_sym
 
       project_featured_project_user_combo_data = DASHBOARD_DB[:featured_projects].
