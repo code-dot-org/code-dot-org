@@ -57,6 +57,26 @@ module JavalabFilesHelper
     all_files
   end
 
+  # Get all files for the project to be executed as a hash, with validation code provided as an argument.
+  # Much of this can be constructed from the level where this project was created (get_level_files).
+  # This method adds in user-specific code and assets uploaded on the level where the project was created,
+  # and the validation code that was passed in replaces any existing validation on the level.
+  # The returned hash is in the format below. All values are strings.
+  # {
+  #   "sources": {"main.json": <main source file for a project>, "grid.txt": <serialized maze if it exists>},
+  #   "assetUrls": {"asset_name_1": <asset_url>, ...}
+  #   "validation": <all validation code for a project, in json format>
+  # }
+  # If the level doesn't have a maze, that field will not be present.
+  def self.get_project_files_with_override_validation(channel_id, level_id, validation)
+    all_files = get_project_files(channel_id, level_id)
+    unless all_files["validation"]
+      all_files["validation"] = {}
+    end
+    all_files["validation"] = {source: validation}.to_json
+    all_files
+  end
+
   # Get all files that can be derived from the level where a project was built (ie, files that are not user-specific).
   # The hash is in the format below. All values are strings.
   # Note that this hash does **not** include a "main.json" entry in under "sources", which is required for Javabuilder.
