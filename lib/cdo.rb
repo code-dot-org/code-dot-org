@@ -87,10 +87,6 @@ module Cdo
       canonical_hostname('advocacy.code.org')
     end
 
-    def codeprojects_hostname
-      canonical_hostname('codeprojects.org')
-    end
-
     def site_host(domain)
       host = canonical_hostname(domain)
       if (rack_env?(:development) && !https_development) ||
@@ -99,16 +95,6 @@ module Cdo
         host += ":#{port}"
       end
       host
-    end
-
-    def hostedzone_id(domain)
-      hosted_zone = Aws::Route53::Client.new.list_hosted_zones_by_name(dns_name: domain).hosted_zones.first
-      raise "Could not find #{domain} in hosted zones" unless hosted_zone.name.delete_suffix('.') == domain
-      return hosted_zone.id.delete_prefix("/hostedzone/")
-    end
-
-    def codeprojects_hostedzone_id
-      hostedzone_id('codeprojects.org')
     end
 
     def site_url(domain, path = '', scheme = '')
