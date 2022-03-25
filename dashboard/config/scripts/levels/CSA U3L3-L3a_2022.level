@@ -1,0 +1,22 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "project_template_level_name": "CSA U3L3-L3a PBT_2022",
+    "long_instructions": "##In someclass.java:\r\n\r\nThe x class has a method printArray() that is intended to print the elements in its instance variable x. In the method printArray(),\r\n\r\n1. Write a for loop to traverse the 1D array and print each element to the console.\r\n\r\n##In MyConsole.java:\r\n\r\n2. Call the printArray() method on the x object to test your method.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-03-25T00:16:09.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2022-03-25 00:16:19 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>
