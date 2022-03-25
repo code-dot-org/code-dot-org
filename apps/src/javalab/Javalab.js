@@ -375,7 +375,8 @@ Javalab.prototype.executeJavabuilder = function(executionType) {
       this.javabuilderConnection.connectJavabuilderWithOverrideSources(
         overrideSources
       );
-  } else if (this.isStartMode) {
+  } else if (this.isStartMode && executionType === ExecutionType.TEST) {
+    // we only need to override validation if we are in start mode and running tests.
     const overrideValidation = getValidation(getStore().getState());
     connectToJavabuilder = () =>
       this.javabuilderConnection.connectJavabuilderWithOverrideValidation(
