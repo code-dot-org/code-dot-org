@@ -100,7 +100,7 @@ class CourseOffering < ApplicationRecord
   end
 
   def self.assignable_course_offerings(user)
-    CourseOffering.all.select {|co| co.assignable?(user)}
+    CourseOffering.all.select {|co| co.can_be_assigned?(user)}
   end
 
   def self.assignable_course_offerings_info(user, locale_code = 'en-us')
@@ -123,7 +123,8 @@ class CourseOffering < ApplicationRecord
     assignable_pl_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
-  def assignable?(user)
+  def can_be_assigned?(user)
+    return false unless assignable?
     return false unless can_be_instructor?(user)
     return true if any_versions_launched?
     return true if any_version_is_assignable_pilot?(user)
@@ -160,7 +161,8 @@ class CourseOffering < ApplicationRecord
       key: key,
       is_featured: is_featured?,
       category: category,
-      display_name: display_name
+      display_name: display_name,
+      assignable: assignable?
     }
   end
 
@@ -169,7 +171,8 @@ class CourseOffering < ApplicationRecord
       key: key,
       display_name: display_name,
       category: category,
-      is_featured: is_featured
+      is_featured: is_featured,
+      assignable: assignable?
     }
   end
 
