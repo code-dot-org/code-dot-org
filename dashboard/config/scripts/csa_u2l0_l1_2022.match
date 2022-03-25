@@ -1,7 +1,7 @@
 name 'CSA U2L0-L1_2022'
 title 'Check for Understanding'
 description 'Match the term to the correct definition.'
-height 'auto'
+height '100'
 
 question 'override'
 answer 'to define a method in a subclass with the same method signature as a method inherited from a superclass'
