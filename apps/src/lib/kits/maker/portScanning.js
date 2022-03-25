@@ -55,6 +55,32 @@ export function findPortWithViableDevice() {
 }
 
 /**
+ * Scan system serial ports for a device compatible with Maker Toolkit using Web Serial Protocol.
+ * @returns {Promise.<string>} resolves to a serial port object for a viable
+ *   device, or rejects if no such device can be found.
+ */
+export async function findWebSerialPortWithViableDevice() {
+  let list = await navigator.serial.getPorts();
+  console.log(list);
+
+  // TODO: refactor ensureAppInstalled when remove chrome app
+  return Promise.resolve()
+    .then(ensureAppInstalled)
+    .then(() => {
+      const bestOption = getPreferredPortWebSerial(list);
+      if (bestOption) {
+        return bestOption;
+      } else {
+        return Promise.reject(
+          new ConnectionFailedError(
+            applabI18n.foundDevices({deviceList: JSON.stringify(list)})
+          )
+        );
+      }
+    });
+}
+
+/**
  * Check whether the Code.org Serial Connector Chrome extension is available.
  * @returns {Promise} Resolves if installed, rejects if not.
  */
@@ -144,4 +170,54 @@ export function getPreferredPort(portList) {
       parseInt(productId, 16) > 0
     );
   });
+}
+
+/**
+ * Given a collection of serial port configurations, pick the one that is
+ * most likely to be compatible with maker toolkit. Accepts WebSerial ports.
+ * @param {Array.<SerialPort>} portList
+ * @return {SerialPort|undefined} the best option, if one is found
+ */
+export function getPreferredPortWebSerial(portList) {
+  // TODO - Pull out the logic that 'getInfo's each loop
+  // Circuit Playground Classic
+  for (const port of portList) {
+    let {usbProductId, usbVendorId} = port.getInfo();
+    if (
+      usbVendorId === ADAFRUIT_VID &&
+      usbProductId === CIRCUIT_PLAYGROUND_PID
+    ) {
+      return port;
+    }
+  }
+
+  // Circuit Playground Express
+  for (const port of portList) {
+    let {usbProductId, usbVendorId} = port.getInfo();
+    if (
+      usbVendorId === ADAFRUIT_VID &&
+      usbProductId === CIRCUIT_PLAYGROUND_EXPRESS_PID
+    ) {
+      return port;
+    }
+  }
+
+  // micro:bit
+  for (const port of portList) {
+    let {usbProductId, usbVendorId} = port.getInfo();
+    if (
+      usbVendorId === MICROBIT_VID &&
+      usbProductId === MICROBIT_PID
+    ) {
+      return port;
+    }
+  }
+
+  // Some other Adafruit product that might also work
+  for (const port of portList) {
+    let {usbProductId, usbVendorId} = port.getInfo();
+    if (usbVendorId === ADAFRUIT_VID) {
+      return port;
+    }
+  }
 }

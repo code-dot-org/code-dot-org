@@ -22,8 +22,15 @@ import {
 import Led from './Led';
 import PlaygroundButton from './Button';
 import {detectBoardTypeFromPort, BOARD_TYPE} from '../../util/boardUtils';
-import {isChromeOS, serialPortType} from '../../util/browserChecks';
+import {isChromeOS} from '../../util/browserChecks';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {
+  ADAFRUIT_VID,
+  CIRCUIT_PLAYGROUND_EXPRESS_PID,
+  CIRCUIT_PLAYGROUND_PID,
+  MICROBIT_VID,
+  MICROBIT_PID
+} from '../../portScanning';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
@@ -93,31 +100,38 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   connectToFirmware() {
     return new Promise((resolve, reject) => {
       const name = this.port_ ? this.port_.comName : undefined;
-      const serialPort = CircuitPlaygroundBoard.openSerialPort(name);
-      const playground = CircuitPlaygroundBoard.makePlaygroundTransport(
-        serialPort
-      );
-      const board = new five.Board({io: playground, repl: false, debug: false});
-      board.once('ready', () => {
-        this.serialPort_ = serialPort;
-        this.logWithFirehose(
-          'serial-port-set',
-          JSON.stringify({serialPort, name})
+      let serialPort;
+      CircuitPlaygroundBoard.openSerialPort(name).then(port => {
+        serialPort = port;
+        const playground = CircuitPlaygroundBoard.makePlaygroundTransport(
+          serialPort
         );
+        const board = new five.Board({
+          io: playground,
+          repl: false,
+          debug: false
+        });
+        board.once('ready', () => {
+          this.serialPort_ = serialPort;
+          this.logWithFirehose(
+            'serial-port-set',
+            JSON.stringify({serialPort, name})
+          );
 
-        this.fiveBoard_ = board;
-        this.fiveBoard_.samplingInterval(100);
-        this.boardType_ = detectBoardTypeFromPort(this.port_);
-        if (this.boardType_ === BOARD_TYPE.EXPRESS) {
-          this.fiveBoard_.isExpressBoard = true;
-        }
-        if (experiments.isEnabled('detect-board')) {
-          this.detectFirmwareVersion(playground);
-        }
-        resolve();
+          this.fiveBoard_ = board;
+          this.fiveBoard_.samplingInterval(100);
+          this.boardType_ = detectBoardTypeFromPort(this.port_);
+          if (this.boardType_ === BOARD_TYPE.EXPRESS) {
+            this.fiveBoard_.isExpressBoard = true;
+          }
+          if (experiments.isEnabled('detect-board')) {
+            this.detectFirmwareVersion(playground);
+          }
+          resolve();
+        });
+        board.on('error', reject);
+        playground.on('error', reject);
       });
-      board.on('error', reject);
-      playground.on('error', reject);
     });
   }
 
@@ -382,12 +396,14 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * @param {string} portName
    * @return {SerialPort}
    */
-  static openSerialPort(portName) {
-    const SerialPortType = serialPortType();
+  static async openSerialPort(portName) {
+    const filters = [
+      {usbVendorId: ADAFRUIT_VID, usbProductId: CIRCUIT_PLAYGROUND_PID},
+      {usbVendorId: ADAFRUIT_VID, usbProductId: CIRCUIT_PLAYGROUND_EXPRESS_PID},
+      {usbVendorId: MICROBIT_VID, usbProductId: MICROBIT_PID}
+    ];
 
-    const port = new SerialPortType(portName, {
-      baudRate: SERIAL_BAUD
-    });
+    const port = await navigator.serial.requestPort({filters});
 
     if (!isChromeOS()) {
       port.queue = [];

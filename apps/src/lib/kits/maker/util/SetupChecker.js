@@ -1,6 +1,6 @@
 /** @file Stubbable core setup check behavior for the setup page. */
 import CircuitPlaygroundBoard from '../boards/circuitPlayground/CircuitPlaygroundBoard';
-import {ensureAppInstalled, findPortWithViableDevice} from '../portScanning';
+import {ensureAppInstalled, findPortWithViableDevice, findWebSerialPortWithViableDevice} from '../portScanning';
 import {
   isCodeOrgBrowser,
   isChrome,
@@ -20,17 +20,18 @@ export default class SetupChecker {
    */
   detectSupportedBrowser() {
     return new Promise((resolve, reject) => {
-      if (isCodeOrgBrowser()) {
-        // TODO: Check browser version
-        resolve();
-      } else if (isChromeOS()) {
-        resolve();
-      } else if (isChrome() && gtChrome33()) {
-        // Legacy support for Chrome App on Desktop
-        resolve();
-      } else {
-        reject(new Error('Not using a supported browser.'));
-      }
+      resolve();
+      // if (isCodeOrgBrowser()) {
+      //   // TODO: Check browser version
+      //   resolve();
+      // } else if (isChromeOS()) {
+      //   resolve();
+      // } else if (isChrome() && gtChrome33()) {
+      //   // Legacy support for Chrome App on Desktop
+      //   resolve();
+      // } else {
+      //   reject(new Error('Not using a supported browser.'));
+      // }
     });
   }
 
@@ -39,14 +40,16 @@ export default class SetupChecker {
    * @return {Promise}
    */
   detectChromeAppInstalled() {
-    return ensureAppInstalled();
+    return true;
+    // return ensureAppInstalled();
   }
 
   /**
    * @return {Promise}
    */
   detectBoardPluggedIn() {
-    return findPortWithViableDevice().then(port => (this.port = port));
+    return findWebSerialPortWithViableDevice().then(port => this.port = port);
+    //return findPortWithViableDevice().then(port => (this.port = port));
   }
 
   /**
