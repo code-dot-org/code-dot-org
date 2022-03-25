@@ -70,8 +70,8 @@ class ProgrammingEnvironmentsController < ApplicationController
 
   def show
     return render :not_found unless @programming_environment
-    @programming_environment_categories = @programming_environment.categories.select {|c| c.programming_expressions.count > 0}.map(&:summarize_for_environment_show)
     return head :forbidden unless can?(:read, @programming_environment)
+    @programming_environment_categories = @programming_environment.categories.select {|c| c.programming_expressions.count > 0}.map(&:summarize_for_environment_show)
   end
 
   def docs_show
@@ -82,7 +82,7 @@ class ProgrammingEnvironmentsController < ApplicationController
       render :show
     else
       render_proxied_url(
-        "https://curriculum.code.org/docs/#{params[:name]}/",
+        "https://curriculum.code.org/docs/#{params[:programming_environment_name]}/",
         allowed_content_types: nil,
         allowed_hostname_suffixes: %w(curriculum.code.org),
         expiry_time: EXPIRY_TIME,
