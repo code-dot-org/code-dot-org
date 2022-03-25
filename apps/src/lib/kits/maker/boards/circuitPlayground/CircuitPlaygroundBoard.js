@@ -397,13 +397,10 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * @return {SerialPort}
    */
   static async openSerialPort(portName) {
-    const filters = [
-      {usbVendorId: ADAFRUIT_VID, usbProductId: CIRCUIT_PLAYGROUND_PID},
-      {usbVendorId: ADAFRUIT_VID, usbProductId: CIRCUIT_PLAYGROUND_EXPRESS_PID},
-      {usbVendorId: MICROBIT_VID, usbProductId: MICROBIT_PID}
-    ];
-
-    const port = await navigator.serial.requestPort({filters});
+    const ports = await navigator.serial.getPorts();
+    //TODO - handle when the desired port is not the first one
+    const port = ports[0];
+    await port.open({baudRate: SERIAL_BAUD});
 
     if (!isChromeOS()) {
       port.queue = [];
