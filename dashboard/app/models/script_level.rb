@@ -675,17 +675,18 @@ class ScriptLevel < ApplicationRecord
 
     return [] if !Policies::InlineAnswer.visible_for_script_level?(current_user, self) || CDO.properties_encryption_key.blank?
 
-    # if level.is_a?(Javalab) && level.try(:exemplar_sources).present? && current_user&.verified_instructor?
-    if level.is_a?(Javalab) && current_user&.verified_instructor?
-      # should probably directly check oldest_active_level.bubble_choice?
-      if bubble_choice?
+    if level.try(:exemplar_sources).present? && current_user&.verified_instructor? && DCDO.get('use_new_javalab_exemplars', false)
+      if oldest_active_level.is_a? BubbleChoice
+        # If the script level has sublevels, get a link for the sublevel that looks like
+        # /csa1/lessons/6/levels/5/sublevel/1?exemplar=true
         sublevel_position = oldest_active_level.sublevel_position(level)
-        level_example_links = [build_script_level_url(self, {exemplar: true, sublevel_position: sublevel_position}) + '?exemplar=true']
-        # Figure out what to do if we're directly on a level with bubble choices below it (should show no exemplars)
-        # Putsing is showing 3 level example links being created (one per sublevel), but none show up in blue pullout
-        puts level_example_links
+        link = build_script_level_url(self, {exemplar: true, sublevel_position: sublevel_position}) + '?exemplar=true'
+        level_example_links = [link]
       else
-        level_example_links = [build_script_level_url(self, {exemplar: true})]
+        # Otherwise, exemplar link should look like
+        # csa1/lessons/2/levels/1?exemplar=true
+        link = build_script_level_url(self) + '?exemplar=true'
+        level_example_links = [link]
       end
     elsif level.try(:examples).present? && (current_user&.verified_instructor? || script&.csf?) # 'solutions' for applab-type levels
       level_example_links = level.examples.map do |example|
@@ -709,6 +710,8 @@ class ScriptLevel < ApplicationRecord
         elsif level.is_a?(Studio) # playlab
           send("#{'playlab'}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         elsif level.is_a?(Javalab)
+          # TO DO: remove this statement after switching over to use new Javalab exemplars
+          # https://codedotorg.atlassian.net/browse/JAVA-525
           example
         else
           send("#{level.game.app}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
