@@ -7,6 +7,8 @@ class AdminNpsController < ApplicationController
   before_action :require_admin
   check_authorization
 
+  include SurveyResultsHelper
+
   # PUT /admin/nps_update
   def nps_update
     audience = params[:audience]
