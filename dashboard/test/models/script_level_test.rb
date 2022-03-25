@@ -155,7 +155,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
       script = create(:script)
       sl = create(:script_level, levels: [level], script: script)
 
-      assert_equal ["https://studio.code.org/s/#{script.name}/lessons/1/levels/1?exemplar=true"], sl.get_example_solutions(level, @authorized_teacher)
+      assert_equal ["https://test-studio.code.org/s/#{script.name}/lessons/1/levels/1?exemplar=true"], sl.get_example_solutions(level, @authorized_teacher)
     end
 
     test 'get_example_solutions for javalab sublevel level with exemplar' do
@@ -165,7 +165,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
       script = create(:script)
       sl = create :script_level, levels: [bubble_choice], script: script
 
-      assert_equal ["https://studio.code.org/s/#{script.name}/lessons/1/levels/1/sublevel/1?exemplar=true"], sl.get_example_solutions(sublevel, @authorized_teacher)
+      assert_equal ["https://test-studio.code.org/s/#{script.name}/lessons/1/levels/1/sublevel/1?exemplar=true"], sl.get_example_solutions(sublevel, @authorized_teacher)
     end
 
     test 'get_example_solutions for level with ideal level source' do
