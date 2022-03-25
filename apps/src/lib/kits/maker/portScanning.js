@@ -61,7 +61,6 @@ export function findPortWithViableDevice() {
  */
 export async function findWebSerialPortWithViableDevice() {
   let list = await navigator.serial.getPorts();
-  console.log(list);
 
   // TODO: refactor ensureAppInstalled when remove chrome app
   return Promise.resolve()
@@ -205,18 +204,15 @@ export function getPreferredPortWebSerial(portList) {
   // micro:bit
   for (const port of portList) {
     let {usbProductId, usbVendorId} = port.getInfo();
-    if (
-      usbVendorId === MICROBIT_VID &&
-      usbProductId === MICROBIT_PID
-    ) {
+    if (usbVendorId === MICROBIT_VID && usbProductId === MICROBIT_PID) {
       return port;
     }
   }
 
   // Some other Adafruit product that might also work
   for (const port of portList) {
-    let {usbProductId, usbVendorId} = port.getInfo();
-    if (usbVendorId === ADAFRUIT_VID) {
+    let portInfo = port.getInfo();
+    if (portInfo.usbVendorId === ADAFRUIT_VID) {
       return port;
     }
   }

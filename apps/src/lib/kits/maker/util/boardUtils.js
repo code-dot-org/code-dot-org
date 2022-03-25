@@ -18,8 +18,17 @@ export const BOARD_TYPE = {
 export function detectBoardTypeFromPort(port) {
   let boardType = BOARD_TYPE.OTHER;
   if (port) {
-    const vendorId = port.vendorId ? parseInt(port.vendorId, 16) : null;
-    const productId = port.productId ? parseInt(port.productId, 16) : null;
+    let vendorId;
+    let productId;
+    if (port.vendorId) {
+      vendorId = parseInt(port.vendorId, 16);
+      productId = parseInt(port.productId, 16);
+    } else if (!!port.getInfo) {
+      // WebSerial ports have a getInfo function
+      const portInfo = port.getInfo();
+      vendorId = portInfo.usbVendorId;
+      productId = portInfo.usbProductId;
+    }
     if (vendorId === ADAFRUIT_VID && productId === CIRCUIT_PLAYGROUND_PID) {
       boardType = BOARD_TYPE.CLASSIC;
     } else if (
