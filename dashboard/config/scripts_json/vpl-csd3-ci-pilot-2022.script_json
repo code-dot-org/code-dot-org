@@ -2,48 +2,479 @@
   "script": {
     "name": "vpl-csd3-ci-pilot-2022",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
-      "is_migrated": true
+      "has_verified_resources": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-16 21:30:29 UTC",
-    "published_state": "in_development",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "serialized_at": "2022-03-25 01:51:11 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "vpl-csd3-ci-pilot-2022"
     }
   },
   "lesson_groups": [
     {
-      "key": "",
-      "user_facing": false,
+      "key": "lessonGroup-2",
+      "user_facing": true,
       "position": 1,
       "properties": {
+        "display_name": "Preparing to Teach Interactive Animations and Games"
       },
       "seeding_key": {
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd3-ci-pilot-2022"
       }
     }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Introduction to Interactive Animations and Games",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Create a scene",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Aniumate an interactive card",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Explore game design",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Unit wrap up",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "90b867a8-c479-416a-bafd-243c5ad1c5ea",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "90b867a8-c479-416a-bafd-243c5ad1c5ea",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "4a995c82-4d87-4e9f-8254-5c8cc5456a0c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Position shapes on the grid"
+      },
+      "seeding_key": {
+        "activity_section.key": "4a995c82-4d87-4e9f-8254-5c8cc5456a0c",
+        "lesson_activity.key": "90b867a8-c479-416a-bafd-243c5ad1c5ea"
+      }
+    },
+    {
+      "key": "af12c822-31ba-4d22-a4ab-d2c7d34061bb",
+      "position": 2,
+      "properties": {
+        "progression_name": "Add color to shapes "
+      },
+      "seeding_key": {
+        "activity_section.key": "af12c822-31ba-4d22-a4ab-d2c7d34061bb",
+        "lesson_activity.key": "90b867a8-c479-416a-bafd-243c5ad1c5ea"
+      }
+    },
+    {
+      "key": "15571571-b321-4164-bf4e-b796ea5be868",
+      "position": 3,
+      "properties": {
+        "progression_name": "Add parameters"
+      },
+      "seeding_key": {
+        "activity_section.key": "15571571-b321-4164-bf4e-b796ea5be868",
+        "lesson_activity.key": "90b867a8-c479-416a-bafd-243c5ad1c5ea"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Position shapes on the grid"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-grid-overview"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "4a995c82-4d87-4e9f-8254-5c8cc5456a0c"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod3-grid-overview"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Drawing in Game Lab 1_2021"
+        ],
+        "progression": "Position shapes on the grid"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Drawing in Game Lab 1_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "4a995c82-4d87-4e9f-8254-5c8cc5456a0c"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD: Drawing in Game Lab 1_2021"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "progression": "Position shapes on the grid"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Drawing Squares to Corners_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "4a995c82-4d87-4e9f-8254-5c8cc5456a0c"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U3 Drawing Squares to Corners_2021"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Add color to shapes "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Drawing in Game Lab 2_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "af12c822-31ba-4d22-a4ab-d2c7d34061bb"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD: Drawing in Game Lab 2_2021"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "progression": "Add color to shapes "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 sequence_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "af12c822-31ba-4d22-a4ab-d2c7d34061bb"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U3 sequence_2021"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Add parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-DrawingShapes-overview"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "15571571-b321-4164-bf4e-b796ea5be868"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod3-DrawingShapes-overview"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "progression": "Add parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Random Taller Rectangle_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "15571571-b321-4164-bf4e-b796ea5be868"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U3 Random Taller Rectangle_2021"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "progression": "Add parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Random Debug Grass_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "15571571-b321-4164-bf4e-b796ea5be868"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U3 Random Debug Grass_2021"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Add parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-matching-c4u-DrawingShapes"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "15571571-b321-4164-bf4e-b796ea5be868"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-matching-c4u-DrawingShapes"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod3-grid-overview",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-grid-overview"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "4a995c82-4d87-4e9f-8254-5c8cc5456a0c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD: Drawing in Game Lab 1_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Drawing in Game Lab 1_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "4a995c82-4d87-4e9f-8254-5c8cc5456a0c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U3 Drawing Squares to Corners_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Drawing Squares to Corners_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "4a995c82-4d87-4e9f-8254-5c8cc5456a0c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD: Drawing in Game Lab 2_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Drawing in Game Lab 2_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "af12c822-31ba-4d22-a4ab-d2c7d34061bb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U3 sequence_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 sequence_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "af12c822-31ba-4d22-a4ab-d2c7d34061bb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod3-DrawingShapes-overview",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-DrawingShapes-overview"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "15571571-b321-4164-bf4e-b796ea5be868"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U3 Random Taller Rectangle_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Random Taller Rectangle_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "15571571-b321-4164-bf4e-b796ea5be868"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U3 Random Debug Grass_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Random Debug Grass_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "15571571-b321-4164-bf4e-b796ea5be868"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-matching-c4u-DrawingShapes",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-matching-c4u-DrawingShapes"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "15571571-b321-4164-bf4e-b796ea5be868"
+      }
+    }
   ],
   "resources": [
 
