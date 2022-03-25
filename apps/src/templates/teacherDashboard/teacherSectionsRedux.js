@@ -697,6 +697,7 @@ export default function teacherSections(state = initialState, action) {
       sectionIds: _.uniq(
         state.sectionIds.concat(sections.map(section => section.id))
       ),
+      //Add student section ids and pl section ids for when need to separate
       sections: {
         ...state.sections,
         ..._.keyBy(sections, 'id')

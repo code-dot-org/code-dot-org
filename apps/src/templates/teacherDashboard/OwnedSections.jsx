@@ -21,6 +21,7 @@ import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 
 class OwnedSections extends React.Component {
   static propTypes = {
+    isPlSections: PropTypes.bool,
     // redux provided
     sectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     hiddenSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,

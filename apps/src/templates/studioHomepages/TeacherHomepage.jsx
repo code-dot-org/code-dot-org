@@ -236,7 +236,6 @@ export const UnconnectedTeacherHomepage = ({
           </div>
         )}
         <TeacherSections />
-        <TeacherSections />
         <RecentCourses
           courses={courses}
           topCourse={topCourse}
@@ -264,6 +263,7 @@ export const UnconnectedTeacherHomepage = ({
           <StudentSections
             initialSections={joinedPlSections}
             isTeacher={true}
+            isPlSections={true}
           />
         )}
       </div>

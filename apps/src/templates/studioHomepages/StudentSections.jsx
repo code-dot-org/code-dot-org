@@ -13,7 +13,8 @@ export default class StudentSections extends Component {
   // isTeacher will be set false for teachers who are seeing this as a student in another teacher's section.
   static propTypes = {
     initialSections: PropTypes.array.isRequired,
-    isTeacher: PropTypes.bool
+    isTeacher: PropTypes.bool,
+    isPLSections: PropTypes.bool
   };
 
   constructor(props) {
@@ -48,7 +49,7 @@ export default class StudentSections extends Component {
   };
 
   render() {
-    const {isTeacher} = this.props;
+    const {isTeacher, isPLSections} = this.props;
     const {
       sections,
       action,
@@ -58,7 +59,11 @@ export default class StudentSections extends Component {
       sectionCapacity,
       viewHidden
     } = this.state;
-    const heading = isTeacher ? i18n.sectionsJoined() : i18n.sectionsTitle();
+    const heading = isTeacher
+      ? isPLSections
+        ? i18n.plSectionsJoined()
+        : i18n.sectionsJoined()
+      : i18n.sectionsTitle();
     const description = isTeacher ? '' : i18n.enrollmentDescription();
 
     const styles = {
