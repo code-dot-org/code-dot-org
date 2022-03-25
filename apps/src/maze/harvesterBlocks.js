@@ -16,11 +16,11 @@ function addIfAtSpecificCropBlock(blockly, generator, crop) {
     helpUrl: '',
     init: function() {
       Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(
         [msg.ifCode(), msg.at(), msg[crop]()].join(' ')
       );
       this.setInputsInline(true);
-      this.appendStatementInput('DO').appendTitle(msg.doCode());
+      this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -41,12 +41,12 @@ function addIfAtSpecificCropElseBlock(blockly, generator, crop) {
     helpUrl: '',
     init: function() {
       Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(
         [msg.ifCode(), msg.at(), msg[crop]()].join(' ')
       );
       this.setInputsInline(true);
-      this.appendStatementInput('DO').appendTitle(msg.doCode());
-      this.appendStatementInput('ELSE').appendTitle(msg.elseCode());
+      this.appendStatementInput('DO').appendField(msg.doCode());
+      this.appendStatementInput('ELSE').appendField(msg.elseCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -68,11 +68,11 @@ function addUntilAtSpecificCropBlock(blockly, generator, crop) {
     helpUrl: '',
     init: function() {
       Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(
         [msg.repeatUntil(), msg.at(), msg[crop]()].join(' ')
       );
       this.setInputsInline(true);
-      this.appendStatementInput('DO').appendTitle(msg.doCode());
+      this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -92,11 +92,11 @@ function addIfSpecificCropHasBlock(blockly, generator, crop) {
     helpUrl: '',
     init: function() {
       Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(
         [msg.ifCode(), msg[`has${crop}`]()].join(' ')
       );
       this.setInputsInline(true);
-      this.appendStatementInput('DO').appendTitle(msg.doCode());
+      this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -117,12 +117,12 @@ function addIfSpecificCropHasElseBlock(blockly, generator, crop) {
     helpUrl: '',
     init: function() {
       Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(
         [msg.ifCode(), msg[`has${crop}`]()].join(' ')
       );
       this.setInputsInline(true);
-      this.appendStatementInput('DO').appendTitle(msg.doCode());
-      this.appendStatementInput('ELSE').appendTitle(msg.elseCode());
+      this.appendStatementInput('DO').appendField(msg.doCode());
+      this.appendStatementInput('ELSE').appendField(msg.elseCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -144,11 +144,11 @@ function addWhileSpecificCropHasBlock(blockly, generator, crop) {
     helpUrl: '',
     init: function() {
       Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(
         [msg.whileMsg(), msg[`has${crop}`]()].join(' ')
       );
       this.setInputsInline(true);
-      this.appendStatementInput('DO').appendTitle(msg.doCode());
+      this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -170,11 +170,11 @@ function addUntilSpecificCropHasBlock(blockly, generator, crop) {
     helpUrl: '',
     init: function() {
       Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(
         [msg.repeatUntil(), msg[`has${crop}`]()].join(' ')
       );
       this.setInputsInline(true);
-      this.appendStatementInput('DO').appendTitle(msg.doCode());
+      this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -232,13 +232,13 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
-      this.appendDummyInput().appendTitle([msg.ifCode(), msg.at()].join(' '));
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField([msg.ifCode(), msg.at()].join(' '));
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(AT_OPTIONS),
         'LOC'
       );
       this.setInputsInline(true);
-      this.appendStatementInput('DO').appendTitle(msg.doCode());
+      this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -255,14 +255,14 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
-      this.appendDummyInput().appendTitle([msg.ifCode(), msg.at()].join(' '));
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField([msg.ifCode(), msg.at()].join(' '));
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(AT_OPTIONS),
         'LOC'
       );
       this.setInputsInline(true);
-      this.appendStatementInput('DO').appendTitle(msg.doCode());
-      this.appendStatementInput('ELSE').appendTitle(msg.elseCode());
+      this.appendStatementInput('DO').appendField(msg.doCode());
+      this.appendStatementInput('ELSE').appendField(msg.elseCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -280,15 +280,15 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(
         [msg.repeatUntil(), msg.at()].join(' ')
       );
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(AT_OPTIONS),
         'LOC'
       );
       this.setInputsInline(true);
-      this.appendStatementInput('DO').appendTitle(msg.doCode());
+      this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -306,13 +306,13 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
-      this.appendDummyInput().appendTitle(msg.ifCode());
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(msg.ifCode());
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(HAS_OPTIONS),
         'LOC'
       );
       this.setInputsInline(true);
-      this.appendStatementInput('DO').appendTitle(msg.doCode());
+      this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -331,14 +331,14 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
-      this.appendDummyInput().appendTitle(msg.ifCode());
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(msg.ifCode());
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(HAS_OPTIONS),
         'LOC'
       );
       this.setInputsInline(true);
-      this.appendStatementInput('DO').appendTitle(msg.doCode());
-      this.appendStatementInput('ELSE').appendTitle(msg.elseCode());
+      this.appendStatementInput('DO').appendField(msg.doCode());
+      this.appendStatementInput('ELSE').appendField(msg.elseCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -358,13 +358,13 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
-      this.appendDummyInput().appendTitle(msg.whileMsg());
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(msg.whileMsg());
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(HAS_OPTIONS),
         'LOC'
       );
       this.setInputsInline(true);
-      this.appendStatementInput('DO').appendTitle(msg.doCode());
+      this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -384,13 +384,13 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
-      this.appendDummyInput().appendTitle(msg.repeatUntil());
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(msg.repeatUntil());
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(HAS_OPTIONS),
         'LOC'
       );
       this.setInputsInline(true);
-      this.appendStatementInput('DO').appendTitle(msg.doCode());
+      this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
