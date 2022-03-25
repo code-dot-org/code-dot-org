@@ -88,12 +88,12 @@ exports.install = function(blockly, blockInstallOptions) {
         init: function() {
           Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
           this.appendDummyInput()
-            .appendTitle(
+            .appendField(
               new blockly.FieldLabel(directionConfig.letter, {
                 fixedSize: {width: 12, height: 18}
               })
             )
-            .appendTitle(new blockly.FieldImage(directionConfig.image));
+            .appendField(new blockly.FieldImage(directionConfig.image));
           this.setPreviousStatement(true);
           this.setNextStatement(true);
           this.setTooltip(directionConfig.tooltip);
@@ -141,7 +141,7 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: 'http://code.google.com/p/blockly/wiki/Move',
     init: function() {
       Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(this.DIRECTIONS),
         'DIR'
       );
@@ -167,7 +167,7 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: 'http://code.google.com/p/blockly/wiki/Turn',
     init: function() {
       Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(this.DIRECTIONS),
         'DIR'
       );
@@ -194,7 +194,7 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
       this.setOutput(true, blockly.BlockValueType.NUMBER);
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(this.DIRECTIONS),
         'DIR'
       );
@@ -219,12 +219,12 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(this.DIRECTIONS),
         'DIR'
       );
       this.setInputsInline(true);
-      this.appendStatementInput('DO').appendTitle(msg.doCode());
+      this.appendStatementInput('DO').appendField(msg.doCode());
       this.setTooltip(msg.ifTooltip());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -247,13 +247,13 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(this.DIRECTIONS),
         'DIR'
       );
       this.setInputsInline(true);
-      this.appendStatementInput('DO').appendTitle(msg.doCode());
-      this.appendStatementInput('ELSE').appendTitle(msg.elseCode());
+      this.appendStatementInput('DO').appendField(msg.doCode());
+      this.appendStatementInput('ELSE').appendField(msg.elseCode());
       this.setTooltip(msg.ifelseTooltip());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -278,13 +278,13 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
-      this.appendDummyInput().appendTitle(msg.ifCode());
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(msg.ifCode());
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(this.DIRECTIONS),
         'DIR'
       );
       this.setInputsInline(true);
-      this.appendStatementInput('DO').appendTitle(msg.doCode());
+      this.appendStatementInput('DO').appendField(msg.doCode());
       this.setTooltip(msg.ifTooltip());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -312,14 +312,14 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
-      this.appendDummyInput().appendTitle(msg.ifCode());
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(msg.ifCode());
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(this.DIRECTIONS),
         'DIR'
       );
       this.setInputsInline(true);
-      this.appendStatementInput('DO').appendTitle(msg.doCode());
-      this.appendStatementInput('ELSE').appendTitle(msg.elseCode());
+      this.appendStatementInput('DO').appendField(msg.doCode());
+      this.appendStatementInput('ELSE').appendField(msg.elseCode());
       this.setTooltip(msg.ifelseTooltip());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -343,11 +343,11 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: 'http://code.google.com/p/blockly/wiki/Repeat',
     init: function() {
       Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(this.DIRECTIONS),
         'DIR'
       );
-      this.appendStatementInput('DO').appendTitle(msg.doCode());
+      this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.whileTooltip());
@@ -371,8 +371,8 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: 'http://code.google.com/p/blockly/wiki/Repeat',
     init: function() {
       Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
-      this.appendDummyInput().appendTitle(msg.repeatUntilBlocked());
-      this.appendStatementInput('DO').appendTitle(msg.doCode());
+      this.appendDummyInput().appendField(msg.repeatUntilBlocked());
+      this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.whileTooltip());
@@ -392,9 +392,9 @@ exports.install = function(blockly, blockInstallOptions) {
     init: function() {
       Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
       this.appendDummyInput()
-        .appendTitle(msg.repeatUntil())
-        .appendTitle(new blockly.FieldImage(skin.maze_forever, 35, 35));
-      this.appendStatementInput('DO').appendTitle(msg.doCode());
+        .appendField(msg.repeatUntil())
+        .appendField(new blockly.FieldImage(skin.maze_forever, 35, 35));
+      this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setTooltip(msg.whileTooltip());
     }
@@ -414,11 +414,11 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: 'http://code.google.com/p/blockly/wiki/Repeat',
     init: function() {
       Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(this.DIRECTIONS),
         'DIR'
       );
-      this.appendStatementInput('DO').appendTitle(msg.doCode());
+      this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.whileTooltip());
