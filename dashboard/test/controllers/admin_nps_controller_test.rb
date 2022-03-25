@@ -5,7 +5,6 @@ class AdminNpsControllerTest < ActionController::TestCase
 
   setup do
     @admin = create(:admin)
-    @not_admin = create(:teacher, username: 'notadmin', email: 'not_admin@email.xx')
   end
 
   generate_admin_only_tests_for :nps_form
@@ -26,15 +25,5 @@ class AdminNpsControllerTest < ActionController::TestCase
     assert_equal DCDO.get('nps_audience', 'null'), 'all'
     post :nps_update, params: {audience: 'none'}
     assert_equal DCDO.get('nps_audience', 'null'), 'none'
-  end
-
-  test 'if set to all, teacher sees survey' do
-    sign_in @admin
-    post :nps_update, params: {audience: 'all'}
-    assert_equal DCDO.get('nps_audience', 'null'), 'all'
-
-    sign_in @not_admin
-
-    post :nps_update, params: {audience: 'none'}
   end
 end
