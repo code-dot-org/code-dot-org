@@ -3,26 +3,33 @@ import PropTypes from 'prop-types';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import NavigationBar from './NavigationBar';
 import color from '@cdo/apps/util/color';
-import {TextLink} from '@dsco_/link';
+import {Link} from '@dsco_/link';
+import {organizeReferenceGuides} from '@cdo/apps/util/referenceGuideHelpers';
 
 const baseUrl = window.location.href
   .split('/')
   .slice(0, -1)
   .join('/');
 
+const referenceGuideShape = PropTypes.shape({
+  display_name: PropTypes.string,
+  content: PropTypes.string,
+  position: PropTypes.number,
+  parent_reference_guide_key: PropTypes.string
+});
+
 // the contents of each top level nav bar category
-// eslint-disable-next-line react/prop-types
 const NestedGuideList = ({referenceGuide, referenceGuides}) => {
   const children = referenceGuides.filter(
     guide => guide.parent_reference_guide_key === referenceGuide.key
   );
   return (
-    <div style={{paddingLeft: `6px`, borderBottom: '1px solid grey'}}>
-      <TextLink
-        className="nested-link"
-        href={`${baseUrl}/${referenceGuide.key}`}
-        text={referenceGuide.display_name}
-      />
+    <>
+      <div style={{paddingLeft: `${referenceGuide.level * 12}px`}}>
+        <Link className="nested-link" href={`${baseUrl}/${referenceGuide.key}`}>
+          {referenceGuide.display_name}
+        </Link>
+      </div>
       {children &&
         children.length > 0 &&
         children.map(guide => (
@@ -32,18 +39,24 @@ const NestedGuideList = ({referenceGuide, referenceGuides}) => {
             referenceGuides={referenceGuides}
           />
         ))}
-    </div>
+    </>
   );
+};
+NestedGuideList.propTypes = {
+  referenceGuide: referenceGuideShape.isRequired,
+  referenceGuides: PropTypes.arrayOf(referenceGuideShape).isRequired
 };
 
 export default function ReferenceGuideView({referenceGuide, referenceGuides}) {
+  const organizedGuides = organizeReferenceGuides(referenceGuides);
   let rootCategory = referenceGuide;
-  while (rootCategory.parent_reference_guide_key !== null) {
-    rootCategory = referenceGuides.find(
+  // TODO(tim): re-organize things to get rid of the concepts guide
+  while (rootCategory.parent_reference_guide_key !== 'concepts') {
+    rootCategory = organizedGuides.find(
       guide => guide.key === rootCategory.parent_reference_guide_key
     );
   }
-  const topLevelGuides = referenceGuides.filter(
+  const topLevelGuides = organizedGuides.filter(
     guide => guide.parent_reference_guide_key === 'concepts'
   );
   const navCategories = topLevelGuides
@@ -55,7 +68,7 @@ export default function ReferenceGuideView({referenceGuide, referenceGuides}) {
         <div className="nested-content">
           <NestedGuideList
             referenceGuide={guide}
-            referenceGuides={referenceGuides}
+            referenceGuides={organizedGuides}
           />
         </div>
       ),
@@ -74,13 +87,6 @@ export default function ReferenceGuideView({referenceGuide, referenceGuides}) {
     </>
   );
 }
-
-const referenceGuideShape = PropTypes.shape({
-  display_name: PropTypes.string,
-  content: PropTypes.string,
-  position: PropTypes.number,
-  parent_reference_guide_key: PropTypes.string
-});
 
 ReferenceGuideView.propTypes = {
   referenceGuide: referenceGuideShape.isRequired,
