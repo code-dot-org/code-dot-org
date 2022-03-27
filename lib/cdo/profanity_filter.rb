@@ -23,6 +23,7 @@ class ProfanityFilter
   # @param [String] text to check for profanity
   # @param [String] language_code a two-character ISO 639-1 language code ('en').
   #   Will also convert a four-character locale code ('en-US').
+  # @param [Hash{word => replacementText}] optional words to replace.
   # @return [String, nil] The first instance of profanity (if any) or nil (if none)
   def self.find_potential_profanity(text, language_code, replace_text_list = {})
     expletive = find_potential_profanities(text, language_code, replace_text_list)
@@ -35,6 +36,7 @@ class ProfanityFilter
   # @param [String] text to check for profanity
   # @param [String] language_code a two-character ISO 639-1 language code ('en').
   #   Will also convert a four-character locale code ('en-US').
+  # @param [Hash{word => replacementText}] optional words to replace.
   # @return [Array<String>, nil] The profanities (if any) or nil (if none)
   def self.find_potential_profanities(text, language_code, replace_text_list = {})
     language_code = language(language_code)
