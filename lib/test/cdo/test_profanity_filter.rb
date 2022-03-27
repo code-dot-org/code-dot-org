@@ -59,4 +59,12 @@ class ProfanityFilterTest < Minitest::Test
 
     WebPurify.unstub(:find_potential_profanities)
   end
+
+  def test_find_potential_profanities_replace_text_list
+    WebPurify.stubs(:find_potential_profanities).with("testing  replacenah testing", ['en', 'en']).returns(["replacee"])
+
+    assert_equal ['replacee'], ProfanityFilter.find_potential_profanities('testing replacee replacenah testing', 'en', {replacee: ''})
+
+    WebPurify.unstub(:find_potential_profanities)
+  end
 end
