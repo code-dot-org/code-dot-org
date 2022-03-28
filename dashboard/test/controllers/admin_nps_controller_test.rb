@@ -12,24 +12,24 @@ class AdminNpsControllerTest < ActionController::TestCase
 
   test 'updates dcdo flag to even and odd correctly' do
     sign_in @admin
-    assert_equal DCDO.get('nps_audience', 'null'), 'none'
+    assert_equal DCDO.get('nps_audience', default: nil), 'none'
     post :nps_update, params: {audience: 'even'}
     assert_equal(
       "Survey audience updated",
       flash[:notice]
     )
-    assert_equal DCDO.get('nps_audience', 'null'), 'even'
+    assert_equal DCDO.get('nps_audience', default: nil), 'even'
     post :nps_update, params: {audience: 'odd'}
-    assert_equal DCDO.get('nps_audience', 'null'), 'odd'
+    assert_equal DCDO.get('nps_audience', default: nil), 'odd'
     post :nps_update, params: {audience: 'none'}
   end
 
   test 'updates dcdo flag to all and none correctly' do
     sign_in @admin
     post :nps_update, params: {audience: 'all'}
-    assert_equal DCDO.get('nps_audience', 'null'), 'all'
+    assert_equal DCDO.get('nps_audience', default: nil), 'all'
     post :nps_update, params: {audience: 'none'}
-    assert_equal DCDO.get('nps_audience', 'null'), 'none'
+    assert_equal DCDO.get('nps_audience', default: nil), 'none'
   end
 
   test "nps survey updating is admin only" do
