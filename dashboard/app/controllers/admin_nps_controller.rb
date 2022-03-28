@@ -1,5 +1,4 @@
 require 'cdo/env'
-require 'set'
 
 # The controller for manipulating NPS surveys
 class AdminNpsController < ApplicationController
@@ -10,6 +9,11 @@ class AdminNpsController < ApplicationController
   # PUT /admin/nps_update
   def nps_update
     audience = params[:audience]
-    DCDO.set('nps_audience', audience)
+    if ['all', 'even', 'odd', 'none'].include? audience
+      DCDO.set('nps_audience', audience)
+      flash[:notice] = 'Survey audience updated'
+    else
+      flash[:alert] = 'Invalid audience type'
+    end
   end
 end
