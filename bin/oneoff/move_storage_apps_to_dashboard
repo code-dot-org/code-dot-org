@@ -1,9 +1,11 @@
+#!/usr/bin/env ruby
+
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require src_dir 'database'
 require 'optparse'
 
-# To run: ruby bin/oneoff/move_storage_apps_to_dashboard.rb
-# To revert: ruby bin/oneoff/move_storage_apps_to_dashboard.rb --revert
+# To run: bin/oneoff/move_storage_apps_to_dashboard
+# To revert: bin/oneoff/move_storage_apps_to_dashboard --revert
 
 # Parse options
 options = {
