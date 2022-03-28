@@ -2,9 +2,9 @@
 import React, {useState, useRef} from 'react';
 import {connect} from 'react-redux';
 import $ from 'jquery';
-import BackToFrontConfetti from './BackToFrontConfetti';
+import BackToFrontConfetti from '../BackToFrontConfetti';
 import i18n from '@cdo/locale';
-import color from '../util/color';
+import color from '../../util/color';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import SocialShare from './SocialShare';

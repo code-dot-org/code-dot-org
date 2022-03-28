@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../util/reconfiguredChai';
-import CertificateShare from '@cdo/apps/templates/CertificateShare';
+import {expect} from '../../../util/reconfiguredChai';
+import CertificateShare from '@cdo/apps/templates/certificates/CertificateShare';
 
 const defaultProps = {
   imageUrl: '/certificate-image',

@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 
 import React, {Component} from 'react';
 import i18n from '@cdo/locale';
-import color from '../util/color';
-import testImageAccess from '../code-studio/url_test';
+import color from '../../util/color';
+import testImageAccess from '../../code-studio/url_test';
 
 export default class SocialShare extends Component {
   static propTypes = {

@@ -3,8 +3,8 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import VerticalImageResourceCard from './VerticalImageResourceCard';
-import ResourceCardResponsiveContainer from './studioHomepages/ResourceCardResponsiveContainer';
+import VerticalImageResourceCard from '../VerticalImageResourceCard';
+import ResourceCardResponsiveContainer from '../studioHomepages/ResourceCardResponsiveContainer';
 import {ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
 
 class TeachersBeyondHoc extends Component {
