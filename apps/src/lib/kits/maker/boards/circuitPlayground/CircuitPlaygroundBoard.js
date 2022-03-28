@@ -24,13 +24,6 @@ import PlaygroundButton from './Button';
 import {detectBoardTypeFromPort, BOARD_TYPE} from '../../util/boardUtils';
 import {isChromeOS} from '../../util/browserChecks';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {
-  ADAFRUIT_VID,
-  CIRCUIT_PLAYGROUND_EXPRESS_PID,
-  CIRCUIT_PLAYGROUND_PID,
-  MICROBIT_VID,
-  MICROBIT_PID
-} from '../../portScanning';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
@@ -98,6 +91,43 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * @return {Promise}
    */
   connectToFirmware() {
+    return new Promise((resolve, reject) => {
+      const name = this.port_ ? this.port_.comName : undefined;
+      const serialPort = CircuitPlaygroundBoard.openSerialPort(name);
+      const playground = CircuitPlaygroundBoard.makePlaygroundTransport(
+        serialPort
+      );
+      const board = new five.Board({io: playground, repl: false, debug: false});
+      board.once('ready', () => {
+        this.serialPort_ = serialPort;
+        this.logWithFirehose(
+          'serial-port-set',
+          JSON.stringify({serialPort, name})
+        );
+
+        this.fiveBoard_ = board;
+        this.fiveBoard_.samplingInterval(100);
+        this.boardType_ = detectBoardTypeFromPort(this.port_);
+        if (this.boardType_ === BOARD_TYPE.EXPRESS) {
+          this.fiveBoard_.isExpressBoard = true;
+        }
+        if (experiments.isEnabled('detect-board')) {
+          this.detectFirmwareVersion(playground);
+        }
+        resolve();
+      });
+      board.on('error', reject);
+      playground.on('error', reject);
+    });
+  }
+
+  /**
+   * Open the serial port connection on a WebSerial port and create a johnny-five board controller.
+   * Exposed as a separate step here for the sake of the setup page; generally
+   * recommended to just call connect(), above.
+   * @return {Promise}
+   */
+  connectToFirmwareWebSerial() {
     return new Promise((resolve, reject) => {
       const name = this.port_ ? this.port_.comName : undefined;
       let serialPort;
