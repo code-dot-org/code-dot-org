@@ -120,7 +120,7 @@ steps:
       restore: true
 
   - name: ui-tests
-    image: codedotorg/code-dot-org:latest
+    image: codedotorg/code-dot-org:1.2
     volumes:
       - name: rbenv
         path: /home/circleci/.rbenv
@@ -187,6 +187,6 @@ trigger:
     - pull_request
 ---
 kind: signature
-hmac: ea2b6b015f9bee1820bc7b3add10da2c79ebc0872a4d42a1627508a32b1864da
+hmac: 3315742acecada4bfb2964c19fcded2cfc85efb967ed7449f92d453539520207
 
 ...
