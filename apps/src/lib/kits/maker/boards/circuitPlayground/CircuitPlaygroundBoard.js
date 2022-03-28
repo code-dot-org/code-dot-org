@@ -22,7 +22,7 @@ import {
 import Led from './Led';
 import PlaygroundButton from './Button';
 import {detectBoardTypeFromPort, BOARD_TYPE} from '../../util/boardUtils';
-import {isChromeOS} from '../../util/browserChecks';
+import {isChromeOS, serialPortType} from '../../util/browserChecks';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
@@ -131,7 +131,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     return new Promise((resolve, reject) => {
       const name = this.port_ ? this.port_.comName : undefined;
       let serialPort;
-      CircuitPlaygroundBoard.openSerialPort(name).then(port => {
+      CircuitPlaygroundBoard.openSerialPortWebSerial(name).then(port => {
         serialPort = port;
         const playground = CircuitPlaygroundBoard.makePlaygroundTransport(
           serialPort
@@ -426,7 +426,56 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * @param {string} portName
    * @return {SerialPort}
    */
-  static async openSerialPort(portName) {
+  static openSerialPort(portName) {
+    const SerialPortType = serialPortType();
+
+    const port = new SerialPortType(portName, {
+      baudRate: SERIAL_BAUD
+    });
+
+    if (!isChromeOS()) {
+      port.queue = [];
+      let sendPending = false;
+      const oldWrite = port.write;
+
+      const trySend = buffer => {
+        if (buffer) {
+          port.queue.push(buffer);
+        }
+
+        if (sendPending || port.queue.length === 0) {
+          // Exhausted pending send buffer.
+          return;
+        }
+        if (port.queue.length > 512) {
+          throw new Error(
+            'Send queue is full! More than 512 pending messages.'
+          );
+        }
+
+        const toSend = port.queue.shift();
+        sendPending = true;
+        oldWrite.call(port, toSend, 'binary', function() {
+          sendPending = false;
+
+          if (port.queue.length !== 0) {
+            trySend();
+          }
+        });
+      };
+
+      port.write = (...args) => trySend(...args);
+    }
+
+    return port;
+  }
+
+  /**
+   * Create a serial port controller and open the Web Serial port immediately.
+   * @param {string} portName
+   * @return {SerialPort}
+   */
+  static async openSerialPortWebSerial(portName) {
     const ports = await navigator.serial.getPorts();
     //TODO - handle when the desired port is not the first one
     const port = ports[0];
