@@ -162,14 +162,13 @@ describe('Javalab', () => {
       );
     });
 
-    it('with exemplarSources if there are any and we are editing an exemplar', () => {
+    it('with exemplarSources if there are any', () => {
       config.level = {
         exemplarSources: {
           'File.java': {
             text: 'Some exemplar code'
           }
-        },
-        isEditingExemplar: true
+        }
       };
       javalab.init(config);
 
