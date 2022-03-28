@@ -32,6 +32,7 @@
             - elsif @level.is_a? Javalab
               %ul
                 %li= link_to "[s]tart", edit_blocks_level_path(@level, :start_sources), { accesskey: 's' }
+                %li= link_to "e[x]emplar", edit_exemplar_level_path(@level), { accesskey: 'x'}
         - else
           %li (Cannot edit)
         - if can? :delete, @level
