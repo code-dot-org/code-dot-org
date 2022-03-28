@@ -6,10 +6,10 @@
 
 %h2 Survey Audience
 
-= form_tag({controller: 'admin_nps', action: 'nps_update', method: "post"}, style: 'margin: 5px;') do
+= form_tag({controller: 'admin_nps', action: 'nps_update', method: "post"}, style: 'display: table-caption;') do
   %select{:name => "audience"}
     %option{:value => "all"} all teachers
     %option{:value => "even"} even ID teachers
     %option{:value => "odd"} odd ID teachers
     %option{:value => "none"} no teachers
-  %button.btn{type: 'submit'}= "Save"
+  %button.btn{type: 'submit', style: 'margin: 0px'}= "Save"
