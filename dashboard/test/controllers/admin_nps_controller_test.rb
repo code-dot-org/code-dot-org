@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'dynamic_config/dcdo'
 
 class AdminNpsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
