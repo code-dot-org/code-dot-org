@@ -29,9 +29,9 @@ class ProgrammingEnvironment < ApplicationRecord
 
   after_destroy :remove_serialization
 
-  # @attr [String] editor_type - Type of editor one of the following: 'text-based', 'droplet', 'blockly'
+  # @attr [String] editor_language - Type of editor one of the following: 'text-based', 'droplet', 'blockly'
   serialized_attrs %w(
-    editor_type
+    editor_language
     block_pool_name
     title
     description
@@ -97,7 +97,7 @@ class ProgrammingEnvironment < ApplicationRecord
       imageUrl: image_url,
       projectUrl: project_url,
       description: description,
-      editorType: editor_type,
+      editorLanguage: editor_language,
       blockPoolName: block_pool_name,
       categories: categories.map(&:serialize_for_edit),
       showPath: programming_environment_path(name)
