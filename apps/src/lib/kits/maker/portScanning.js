@@ -55,31 +55,6 @@ export function findPortWithViableDevice() {
 }
 
 /**
- * Scan system serial ports for a device compatible with Maker Toolkit using Web Serial Protocol.
- * @returns {Promise.<string>} resolves to a serial port object for a viable
- *   device, or rejects if no such device can be found.
- */
-export async function findWebSerialPortWithViableDevice() {
-  let list = await navigator.serial.getPorts();
-
-  // TODO: refactor ensureAppInstalled when remove chrome app
-  return Promise.resolve()
-    .then(ensureAppInstalled)
-    .then(() => {
-      const bestOption = getPreferredPortWebSerial(list);
-      if (bestOption) {
-        return bestOption;
-      } else {
-        return Promise.reject(
-          new ConnectionFailedError(
-            applabI18n.foundDevices({deviceList: JSON.stringify(list)})
-          )
-        );
-      }
-    });
-}
-
-/**
  * Check whether the Code.org Serial Connector Chrome extension is available.
  * @returns {Promise} Resolves if installed, rejects if not.
  */

@@ -39,7 +39,7 @@ const style = {
 export default class SetupGuide extends React.Component {
   constructor(props) {
     super(props);
-    this.setupChecker = new SetupChecker();
+    this.state = {webSerialPort: null};
   }
 
   render() {
@@ -50,9 +50,29 @@ export default class SetupGuide extends React.Component {
         responsive
       })
     );
+    const {webSerialPort} = this.state;
 
     // Experiment 'webserial' uses the WebSerial protocol and requires no downloads
     let isWebSerial = experiments.isEnabled('webserial');
+
+    if (isWebSerial && !webSerialPort) {
+      return (
+        <input
+          style={{marginLeft: 9, marginTop: -4}}
+          className="btn"
+          type="button"
+          value={'Connect to Board'}
+          onClick={() => {
+            navigator.serial.requestPort().then(port => {
+              this.setState({webSerialPort: port});
+            });
+          }}
+        />
+      );
+    }
+
+    this.setupChecker = new SetupChecker(webSerialPort);
+
     if (isCodeOrgBrowser() || isChromeOS() || isWebSerial) {
       return <SetupChecklist setupChecker={this.setupChecker} />;
     }
