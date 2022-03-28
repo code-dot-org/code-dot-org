@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {TwoColumnActionBlock} from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
-import styleConstants from '../styleConstants';
+import styleConstants from '../../styleConstants';
 
 export default function CertificateShare({announcement, printUrl, imageUrl}) {
   return (

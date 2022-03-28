@@ -3,7 +3,7 @@ import React from 'react';
 import Certificate from './Certificate';
 import StudentsBeyondHoc from './StudentsBeyondHoc';
 import TeachersBeyondHoc from './TeachersBeyondHoc';
-import styleConstants from '../styleConstants';
+import styleConstants from '../../styleConstants';
 
 export default function Congrats(props) {
   /**

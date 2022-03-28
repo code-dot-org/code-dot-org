@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
-import CourseBlocksStudentGradeBands from './studioHomepages/CourseBlocksStudentGradeBands';
-import VerticalImageResourceCardRow from './VerticalImageResourceCardRow';
-import {LocalClassActionBlock} from './studioHomepages/TwoColumnActionBlock';
-import {tutorialTypes} from './tutorialTypes.js';
+import CourseBlocksStudentGradeBands from '../studioHomepages/CourseBlocksStudentGradeBands';
+import VerticalImageResourceCardRow from '../VerticalImageResourceCardRow';
+import {LocalClassActionBlock} from '../studioHomepages/TwoColumnActionBlock';
+import {tutorialTypes} from '../tutorialTypes.js';
 import {cardSets} from './congratsBeyondHocActivityCards';
 import {ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
 
