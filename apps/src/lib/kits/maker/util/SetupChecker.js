@@ -71,7 +71,11 @@ export default class SetupChecker {
       });
     } else {
       this.boardController = new CircuitPlaygroundBoard(this.port);
-      return this.boardController.connectToFirmware();
+      if (experiments.isEnabled('webserial')) {
+        return this.boardController.connectToFirmwareWebSerial();
+      } else {
+        return this.boardController.connectToFirmware();
+      }
     }
   }
 
