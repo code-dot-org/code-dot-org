@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-25 01:51:11 UTC",
+    "serialized_at": "2022-03-26 01:06:39 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -65,16 +65,16 @@
       }
     },
     {
-      "key": "lesson-3",
-      "name": "Aniumate an interactive card",
+      "key": "lesson-6",
+      "name": "Animate a scene using sprites",
       "absolute_position": 3,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "lesson-3",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd3-ci-pilot-2022"
       }
@@ -122,6 +122,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd3-ci-pilot-2022"
       }
+    },
+    {
+      "key": "52dd74a2-0c07-4ed9-b2be-bc43e4f2a0e5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "52dd74a2-0c07-4ed9-b2be-bc43e4f2a0e5",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022"
+      }
     }
   ],
   "activity_sections": [
@@ -157,6 +169,61 @@
         "activity_section.key": "15571571-b321-4164-bf4e-b796ea5be868",
         "lesson_activity.key": "90b867a8-c479-416a-bafd-243c5ad1c5ea"
       }
+    },
+    {
+      "key": "01ebea29-e5fe-47ba-a954-49bbffc779ef",
+      "position": 4,
+      "properties": {
+        "progression_name": "Add variables"
+      },
+      "seeding_key": {
+        "activity_section.key": "01ebea29-e5fe-47ba-a954-49bbffc779ef",
+        "lesson_activity.key": "90b867a8-c479-416a-bafd-243c5ad1c5ea"
+      }
+    },
+    {
+      "key": "c170874b-68c3-40bc-8e21-4c752d426590",
+      "position": 1,
+      "properties": {
+        "progression_name": "Create a sprite"
+      },
+      "seeding_key": {
+        "activity_section.key": "c170874b-68c3-40bc-8e21-4c752d426590",
+        "lesson_activity.key": "52dd74a2-0c07-4ed9-b2be-bc43e4f2a0e5"
+      }
+    },
+    {
+      "key": "6ee99e48-7f28-45df-a275-8c79715266db",
+      "position": 2,
+      "properties": {
+        "progression_name": "Animate a sprite"
+      },
+      "seeding_key": {
+        "activity_section.key": "6ee99e48-7f28-45df-a275-8c79715266db",
+        "lesson_activity.key": "52dd74a2-0c07-4ed9-b2be-bc43e4f2a0e5"
+      }
+    },
+    {
+      "key": "319620ce-deaf-4df2-9369-159a766804df",
+      "position": 3,
+      "properties": {
+        "progression_name": "Add movement to a sprite"
+      },
+      "seeding_key": {
+        "activity_section.key": "319620ce-deaf-4df2-9369-159a766804df",
+        "lesson_activity.key": "52dd74a2-0c07-4ed9-b2be-bc43e4f2a0e5"
+      }
+    },
+    {
+      "key": "1d5c07a3-e20f-4e64-9ee7-b09cc97ddac0",
+      "position": 4,
+      "properties": {
+        "progression_name": "Move a sprite across the screen "
+      },
+      "seeding_key": {
+        "activity_section.key": "1d5c07a3-e20f-4e64-9ee7-b09cc97ddac0",
+        "lesson_activity.key": "52dd74a2-0c07-4ed9-b2be-bc43e4f2a0e5"
+      }
     }
   ],
   "script_levels": [
@@ -166,6 +233,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-grid-overview"
+        ],
         "progression": "Position shapes on the grid"
       },
       "bonus": false,
@@ -214,6 +284,9 @@
       "assessment": false,
       "properties": {
         "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Drawing Squares to Corners_2021"
+        ],
         "progression": "Position shapes on the grid"
       },
       "bonus": false,
@@ -236,6 +309,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Drawing in Game Lab 2_2021"
+        ],
         "progression": "Add color to shapes "
       },
       "bonus": false,
@@ -259,6 +335,9 @@
       "assessment": false,
       "properties": {
         "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 sequence_2021"
+        ],
         "progression": "Add color to shapes "
       },
       "bonus": false,
@@ -281,6 +360,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-DrawingShapes-overview"
+        ],
         "progression": "Add parameters"
       },
       "bonus": false,
@@ -304,6 +386,9 @@
       "assessment": false,
       "properties": {
         "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Random Taller Rectangle_2021"
+        ],
         "progression": "Add parameters"
       },
       "bonus": false,
@@ -327,6 +412,9 @@
       "assessment": false,
       "properties": {
         "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Random Debug Grass_2021"
+        ],
         "progression": "Add parameters"
       },
       "bonus": false,
@@ -347,8 +435,11 @@
       "chapter": 9,
       "position": 9,
       "activity_section_position": 4,
-      "assessment": false,
+      "assessment": true,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-matching-c4u-DrawingShapes"
+        ],
         "progression": "Add parameters"
       },
       "bonus": false,
@@ -363,6 +454,500 @@
       },
       "level_keys": [
         "VPL-CSD-PILOT-S22-CI-matching-c4u-DrawingShapes"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Add variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Introduction to Variables - Part 1_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "01ebea29-e5fe-47ba-a954-49bbffc779ef"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-Introduction to Variables - Part 1_2021"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "progression": "Add variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Variables Draw Poppy_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "01ebea29-e5fe-47ba-a954-49bbffc779ef"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U3 Variables Draw Poppy_2021"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Add variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-variaables-overview"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "01ebea29-e5fe-47ba-a954-49bbffc779ef"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod3-variaables-overview"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+        "progression": "Add variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson2-C4U-variables"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "01ebea29-e5fe-47ba-a954-49bbffc779ef"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod3-lesson2-C4U-variables"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "progression": "Add variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Variables random with assignment_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "01ebea29-e5fe-47ba-a954-49bbffc779ef"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U3 Variables random with assignment_2021"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "progression": "Create a sprite"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Sprites Exploration_2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "c170874b-68c3-40bc-8e21-4c752d426590"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U3 Sprites Exploration_2021"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Create a sprite"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Sprites in Game Lab_2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "c170874b-68c3-40bc-8e21-4c752d426590"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD: Sprites in Game Lab_2021"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "progression": "Create a sprite"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprites intro sprites_2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "c170874b-68c3-40bc-8e21-4c752d426590"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprites intro sprites_2021"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Animate a sprite"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Animation Tab_2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "6ee99e48-7f28-45df-a275-8c79715266db"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD: Animation Tab_2021"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "progression": "Animate a sprite"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprites sequencing_2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "6ee99e48-7f28-45df-a275-8c79715266db"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprites sequencing_2021"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Animate a sprite"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-spriteOverview"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "6ee99e48-7f28-45df-a275-8c79715266db"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod3-spriteOverview"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+        "progression": "Animate a sprite"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-matching-c4u-mod3-lesson3-MakingSprites"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "6ee99e48-7f28-45df-a275-8c79715266db"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-matching-c4u-mod3-lesson3-MakingSprites"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 8,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "progression": "Animate a sprite"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD Games properties xy_2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "6ee99e48-7f28-45df-a275-8c79715266db"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD Games properties xy_2021"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Add movement to a sprite"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Introduction to the Draw Loop_2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "319620ce-deaf-4df2-9369-159a766804df"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD: Introduction to the Draw Loop_2021"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 10,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "progression": "Add movement to a sprite"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Draw Loop Plugged orange and green_2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "319620ce-deaf-4df2-9369-159a766804df"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U3 Draw Loop Plugged orange and green_2021"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 11,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "progression": "Add movement to a sprite"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 dancing alien_2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "319620ce-deaf-4df2-9369-159a766804df"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U3 dancing alien_2021"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 12,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Add movement to a sprite"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-drawLoop-overview"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "319620ce-deaf-4df2-9369-159a766804df"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod3-drawLoop-overview"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Move a sprite across the screen "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Animating Sprite Movement_2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "1d5c07a3-e20f-4e64-9ee7-b09cc97ddac0"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD: Animating Sprite Movement_2021"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 14,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "progression": "Move a sprite across the screen "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprite Movement Right_2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "1d5c07a3-e20f-4e64-9ee7-b09cc97ddac0"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprite Movement Right_2021"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 15,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "progression": "Move a sprite across the screen "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Diagonal Movement_2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "1d5c07a3-e20f-4e64-9ee7-b09cc97ddac0"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U3 Diagonal Movement_2021"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 16,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Move a sprite across the screen "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-counterPattern-overview"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "1d5c07a3-e20f-4e64-9ee7-b09cc97ddac0"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod3-counterPattern-overview"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 17,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Move a sprite across the screen "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Sprite Movement Predict_2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "1d5c07a3-e20f-4e64-9ee7-b09cc97ddac0"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U3 Sprite Movement Predict_2021"
       ]
     }
   ],
@@ -473,6 +1058,270 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd3-ci-pilot-2022",
         "activity_section.key": "15571571-b321-4164-bf4e-b796ea5be868"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-Introduction to Variables - Part 1_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Introduction to Variables - Part 1_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "01ebea29-e5fe-47ba-a954-49bbffc779ef"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U3 Variables Draw Poppy_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Variables Draw Poppy_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "01ebea29-e5fe-47ba-a954-49bbffc779ef"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod3-variaables-overview",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-variaables-overview"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "01ebea29-e5fe-47ba-a954-49bbffc779ef"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod3-lesson2-C4U-variables",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-lesson2-C4U-variables"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "01ebea29-e5fe-47ba-a954-49bbffc779ef"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U3 Variables random with assignment_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Variables random with assignment_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "01ebea29-e5fe-47ba-a954-49bbffc779ef"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U3 Sprites Exploration_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Sprites Exploration_2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "c170874b-68c3-40bc-8e21-4c752d426590"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD: Sprites in Game Lab_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Sprites in Game Lab_2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "c170874b-68c3-40bc-8e21-4c752d426590"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprites intro sprites_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprites intro sprites_2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "c170874b-68c3-40bc-8e21-4c752d426590"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD: Animation Tab_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Animation Tab_2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "6ee99e48-7f28-45df-a275-8c79715266db"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprites sequencing_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprites sequencing_2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "6ee99e48-7f28-45df-a275-8c79715266db"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod3-spriteOverview",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-spriteOverview"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "6ee99e48-7f28-45df-a275-8c79715266db"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-matching-c4u-mod3-lesson3-MakingSprites",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-matching-c4u-mod3-lesson3-MakingSprites"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "6ee99e48-7f28-45df-a275-8c79715266db"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD Games properties xy_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD Games properties xy_2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "6ee99e48-7f28-45df-a275-8c79715266db"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD: Introduction to the Draw Loop_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Introduction to the Draw Loop_2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "319620ce-deaf-4df2-9369-159a766804df"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U3 Draw Loop Plugged orange and green_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Draw Loop Plugged orange and green_2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "319620ce-deaf-4df2-9369-159a766804df"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U3 dancing alien_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 dancing alien_2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "319620ce-deaf-4df2-9369-159a766804df"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod3-drawLoop-overview",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-drawLoop-overview"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "319620ce-deaf-4df2-9369-159a766804df"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD: Animating Sprite Movement_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD: Animating Sprite Movement_2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "1d5c07a3-e20f-4e64-9ee7-b09cc97ddac0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprite Movement Right_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-2-CSD U3 Sprite Movement Right_2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "1d5c07a3-e20f-4e64-9ee7-b09cc97ddac0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U3 Diagonal Movement_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Diagonal Movement_2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "1d5c07a3-e20f-4e64-9ee7-b09cc97ddac0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod3-counterPattern-overview",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod3-counterPattern-overview"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "1d5c07a3-e20f-4e64-9ee7-b09cc97ddac0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U3 Sprite Movement Predict_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U3 Sprite Movement Predict_2021"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-ci-pilot-2022",
+        "activity_section.key": "1d5c07a3-e20f-4e64-9ee7-b09cc97ddac0"
       }
     }
   ],
