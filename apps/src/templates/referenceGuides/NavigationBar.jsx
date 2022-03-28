@@ -1,20 +1,21 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import color from '@cdo/apps/util/color';
 
 export const CategoryNavigation = ({initialIsOpen, category}) => {
   const [isOpen, setIsOpen] = useState(initialIsOpen || false);
   return (
     <div
       style={{
-        backgroundColor: category.color
+        backgroundColor: isOpen ? category.color : color.lightest_gray
       }}
       className={classNames({category: true, open: isOpen})}
     >
       <span className="title" onClick={() => setIsOpen(!isOpen)}>
         {category.name}
       </span>
-      {isOpen && category.content}
+      {category.content}
     </div>
   );
 };
@@ -31,10 +32,10 @@ CategoryNavigation.propTypes = {
   category: categoryShape.isRequired
 };
 
-export default function NavigationBar({items, initialCategoryKey}) {
+export default function NavigationBar({categories, initialCategoryKey}) {
   return (
     <div className="nav-bar header">
-      {items.map(category => (
+      {categories.map(category => (
         <CategoryNavigation
           key={category.key}
           category={category}
@@ -48,6 +49,6 @@ export default function NavigationBar({items, initialCategoryKey}) {
 }
 
 NavigationBar.propTypes = {
-  items: PropTypes.arrayOf(categoryShape).isRequired,
+  categories: PropTypes.arrayOf(categoryShape).isRequired,
   initialCategoryKey: PropTypes.string
 };

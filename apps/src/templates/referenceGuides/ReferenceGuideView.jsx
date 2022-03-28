@@ -5,6 +5,7 @@ import NavigationBar from './NavigationBar';
 import color from '@cdo/apps/util/color';
 import {Link} from '@dsco_/link';
 import {organizeReferenceGuides} from '@cdo/apps/util/referenceGuideHelpers';
+import classNames from 'classnames';
 
 const baseUrl = window.location.href
   .split('/')
@@ -18,68 +19,55 @@ const referenceGuideShape = PropTypes.shape({
   parent_reference_guide_key: PropTypes.string
 });
 
-// the contents of each top level nav bar category
-const NestedGuideList = ({referenceGuide, referenceGuides}) => {
-  const children = referenceGuides.filter(
-    guide => guide.parent_reference_guide_key === referenceGuide.key
-  );
-  return (
-    <>
-      <div style={{paddingLeft: `${referenceGuide.level * 12}px`}}>
-        <Link className="nested-link" href={`${baseUrl}/${referenceGuide.key}`}>
-          {referenceGuide.display_name}
-        </Link>
-      </div>
-      {children &&
-        children.length > 0 &&
-        children.map(guide => (
-          <NestedGuideList
-            key={guide.key}
-            referenceGuide={guide}
-            referenceGuides={referenceGuides}
-          />
-        ))}
-    </>
-  );
-};
-NestedGuideList.propTypes = {
-  referenceGuide: referenceGuideShape.isRequired,
-  referenceGuides: PropTypes.arrayOf(referenceGuideShape).isRequired
-};
-
 export default function ReferenceGuideView({referenceGuide, referenceGuides}) {
-  const organizedGuides = organizeReferenceGuides(referenceGuides);
   let rootCategory = referenceGuide;
   // TODO(tim): re-organize things to get rid of the concepts guide
   while (rootCategory.parent_reference_guide_key !== 'concepts') {
-    rootCategory = organizedGuides.find(
+    rootCategory = referenceGuides.find(
       guide => guide.key === rootCategory.parent_reference_guide_key
     );
   }
-  const topLevelGuides = organizedGuides.filter(
+  const topLevelGuides = referenceGuides.filter(
     guide => guide.parent_reference_guide_key === 'concepts'
   );
   const navCategories = topLevelGuides
     .sort((a, b) => a.position - b.position)
-    .map(guide => ({
-      key: guide.key,
-      name: guide.display_name,
-      content: (
-        <div className="nested-content">
-          <NestedGuideList
-            referenceGuide={guide}
-            referenceGuides={organizedGuides}
-          />
-        </div>
-      ),
-      color: color.teal
-    }));
+    .map(guide => {
+      const children = organizeReferenceGuides(referenceGuides, guide.key, 1);
+      return {
+        key: guide.key,
+        name: guide.display_name,
+        content: (
+          <>
+            {children.map(guide => (
+              <div
+                style={{paddingLeft: `${guide.level * 12}px`}}
+                className={classNames({
+                  'nav-link': true,
+                  active: guide.key === referenceGuide.key
+                })}
+                key={guide.key}
+              >
+                <Link
+                  className="link"
+                  href={`${baseUrl}/${guide.key}`}
+                  weight="medium"
+                >
+                  {guide.display_name}
+                </Link>
+              </div>
+            ))}
+          </>
+        ),
+        color: color.teal
+      };
+    });
   return (
     <>
       <h1>{referenceGuide.display_name}</h1>
       <div className="page-content">
         <NavigationBar
-          items={navCategories}
+          categories={navCategories}
           initialCategoryKey={rootCategory.key}
         />
         <EnhancedSafeMarkdown markdown={referenceGuide.content} />
