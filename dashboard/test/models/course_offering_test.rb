@@ -306,7 +306,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
     refute unit1.course_version.course_offering.any_versions_in_development?
   end
 
-  test 'can_be_assigned? is false if can not be instructor' do
+  test 'can_be_assigned? is false if its an unassignable course' do
     unassignable_course_offering = create :course_offering
     refute unassignable_course_offering.can_be_assigned?(@student)
     refute unassignable_course_offering.can_be_assigned?(@teacher)
