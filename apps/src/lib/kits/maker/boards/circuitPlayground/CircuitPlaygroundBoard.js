@@ -131,7 +131,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     return new Promise((resolve, reject) => {
       const name = this.port_ ? this.port_.comName : undefined;
       let serialPort;
-      CircuitPlaygroundBoard.openSerialPortWebSerial(name).then(port => {
+      CircuitPlaygroundBoard.openSerialPortWebSerial(this.port_).then(port => {
         serialPort = port;
         const playground = CircuitPlaygroundBoard.makePlaygroundTransport(
           serialPort
@@ -475,10 +475,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * @param {string} portName
    * @return {SerialPort}
    */
-  static async openSerialPortWebSerial(portName) {
-    const ports = await navigator.serial.getPorts();
-    //TODO - handle when the desired port is not the first one
-    const port = ports[0];
+  static async openSerialPortWebSerial(port) {
     await port.open({baudRate: SERIAL_BAUD});
 
     if (!isChromeOS()) {

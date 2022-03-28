@@ -1,10 +1,6 @@
 /** @file Stubbable core setup check behavior for the setup page. */
 import CircuitPlaygroundBoard from '../boards/circuitPlayground/CircuitPlaygroundBoard';
-import {
-  ensureAppInstalled,
-  findPortWithViableDevice,
-  findWebSerialPortWithViableDevice
-} from '../portScanning';
+import {ensureAppInstalled, findPortWithViableDevice} from '../portScanning';
 import {
   isCodeOrgBrowser,
   isChrome,
@@ -16,8 +12,13 @@ import MicroBitBoard from '../boards/microBit/MicroBitBoard';
 import experiments from '@cdo/apps/util/experiments';
 
 export default class SetupChecker {
-  port = null;
-  boardController = null;
+  constructor(webSerialPort) {
+    this.port = null;
+    this.boardController = null;
+    if (webSerialPort) {
+      this.port = webSerialPort;
+    }
+  }
 
   /**
    * Resolve if using Chrome > 33 or Code.org Browser
@@ -51,13 +52,13 @@ export default class SetupChecker {
    * @return {Promise}
    */
   detectBoardPluggedIn() {
-    if (experiments.isEnabled('webserial')) {
-      return findWebSerialPortWithViableDevice().then(
-        port => (this.port = port)
-      );
-    } else {
+    if (!experiments.isEnabled('webserial')) {
       return findPortWithViableDevice().then(port => (this.port = port));
     }
+
+    // In the Web Serial Experiment, user already selected port
+    // TODO - handle when user doesn't select correct port
+    return Promise.resolve(this.port);
   }
 
   /**

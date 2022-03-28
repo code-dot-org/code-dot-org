@@ -281,7 +281,6 @@ export default class SetupChecklist extends Component {
       isLinux() &&
       this.state.caughtError?.message?.includes('Permission denied');
 
-    const useWebSerial = experiments.isEnabled('webserial');
     return (
       <div>
         <h2>
@@ -294,17 +293,6 @@ export default class SetupChecklist extends Component {
             onClick={this.redetect.bind(this)}
             disabled={this.state.isDetecting}
           />
-          {useWebSerial && (
-            <input
-              style={{marginLeft: 9, marginTop: -4}}
-              className="btn"
-              type="button"
-              value={'Connect to Board'}
-              onClick={() => {
-                navigator.serial.requestPort();
-              }}
-            />
-          )}
         </h2>
         <div className="setup-status">
           {this.renderPlatformSpecificSteps()}
