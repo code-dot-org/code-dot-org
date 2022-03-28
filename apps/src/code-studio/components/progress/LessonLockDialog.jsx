@@ -163,7 +163,10 @@ function LessonLockDialog({
       <div style={{...styles.descriptionText, ...hiddenUnlessSelectedSection}}>
         {commonMsg.studentLockStateInstructions()}
       </div>
-      <table style={{...styles.studentTable, ...hiddenUnlessSelectedSection}}>
+      <table
+        id="ui-test-student-table"
+        style={{...styles.studentTable, ...hiddenUnlessSelectedSection}}
+      >
         <thead>
           <tr>
             <th style={styles.headerRow}>{commonMsg.student()}</th>
