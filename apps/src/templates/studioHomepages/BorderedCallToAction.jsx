@@ -94,6 +94,7 @@ const styles = {
   },
   button: {
     marginTop: 28,
+    flexShrink: 0,
     marginLeft: extraSpace,
     marginRight: extraSpace,
     paddingLeft: extraSpace,
