@@ -1,5 +1,11 @@
 @import 'color';
 
+.page-content {
+  display: flex;
+  gap: 10%;
+  width: 100%;
+}
+
 .page-actions {
   display: flex;
   justify-content: flex-end;
@@ -30,4 +36,10 @@
 
 .input {
   display: block;
+}
+
+.nested-content {
+  background-color: white;
+  margin-left: 10px;
+  padding-left: 4px;
 }
