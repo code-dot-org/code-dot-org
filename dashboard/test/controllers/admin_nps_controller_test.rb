@@ -5,7 +5,7 @@ class AdminNpsControllerTest < ActionController::TestCase
 
   setup do
     @admin = create(:admin)
-    @not_admin = create(:teacher, username: 'notadmin', email: 'not_admin@email.xx')
+    @not_admin = create(:teacher, username: 'notadmin', email: 'not_admin@email.xx', admin: false)
   end
 
   generate_admin_only_tests_for :nps_form
@@ -14,6 +14,10 @@ class AdminNpsControllerTest < ActionController::TestCase
     sign_in @admin
     assert_equal DCDO.get('nps_audience', 'null'), 'none'
     post :nps_update, params: {audience: 'even'}
+    assert_equal(
+      "Survey audience updated",
+      flash[:notice]
+    )
     assert_equal DCDO.get('nps_audience', 'null'), 'even'
     post :nps_update, params: {audience: 'odd'}
     assert_equal DCDO.get('nps_audience', 'null'), 'odd'
@@ -29,8 +33,17 @@ class AdminNpsControllerTest < ActionController::TestCase
   end
 
   test "nps survey updating is admin only" do
-    sign_in(@not_admin)
+    sign_in @not_admin
     post :nps_update, params: {audience: 'all'}
     assert_response :forbidden
+  end
+
+  test "dcdo flag cannot update to unknown audience type" do
+    sign_in @admin
+    post :nps_update, params: {audience: 'some'}
+    assert_equal(
+      "Invalid audience type",
+      flash[:alert]
+    )
   end
 end
