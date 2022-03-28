@@ -42,7 +42,8 @@ class ProgrammingClassesControllerTest < ActionController::TestCase
       content: 'a longer description of the code',
       syntax: 'new Class()',
       tips: 'some tips on how to use this class',
-      examples: [{name: 'example 1', embed_app_with_code_height: '300px'}]
+      examples: [{name: 'example 1', embed_app_with_code_height: '300px'}],
+      fields: [{name: 'field 1', type: 'int'}]
     }
     assert_response :ok
     programming_class.reload
@@ -54,6 +55,7 @@ class ProgrammingClassesControllerTest < ActionController::TestCase
     assert_equal 'new Class()', programming_class.syntax
     assert_equal 'some tips on how to use this class', programming_class.tips
     assert_equal [{name: 'example 1', embed_app_with_code_height: '300px'}].to_json, programming_class.examples
+    assert_equal [{name: 'field 1', type: 'int'}].to_json, programming_class.fields
   end
 
   test 'data is passed down to edit page' do

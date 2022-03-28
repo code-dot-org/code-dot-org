@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import OrderableList from './OrderableList';
 import ExampleEditor from './ExampleEditor';
+import FieldEditor from './FieldEditor';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
@@ -31,6 +32,15 @@ function renderExampleEditor(example, updateFunc) {
   );
 }
 
+function renderFieldEditor(field, updateFunc) {
+  return (
+    <FieldEditor
+      field={field}
+      updateField={(key, value) => updateFunc(key, value)}
+    />
+  );
+}
+
 export default function ProgrammingClassEditor({
   initialProgrammingClass,
   environmentCategories
@@ -38,6 +48,7 @@ export default function ProgrammingClassEditor({
   // We don't want to update id or key
   const {id, key, ...remainingProgrammingClass} = initialProgrammingClass;
   remainingProgrammingClass.examples.forEach(e => (e.key = createUuid()));
+  remainingProgrammingClass.fields.forEach(f => (f.key = createUuid()));
   const [programmingClass, updateProgrammingClass] = useProgrammingClass(
     remainingProgrammingClass
   );
@@ -169,6 +180,14 @@ export default function ProgrammingClassEditor({
           setList={list => updateProgrammingClass('examples', list)}
           addButtonText="Add Another Example"
           renderItem={renderExampleEditor}
+        />
+      </CollapsibleEditorSection>
+      <CollapsibleEditorSection title="Fields" collapsed>
+        <OrderableList
+          list={programmingClass.fields || []}
+          setList={list => updateProgrammingClass('fields', list)}
+          addButtonText="Add Another Field"
+          renderItem={renderFieldEditor}
         />
       </CollapsibleEditorSection>
       <SaveBar
