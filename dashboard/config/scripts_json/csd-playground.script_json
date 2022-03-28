@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csd-playground",
-    "serialized_at": "2022-03-23 17:58:26 UTC",
+    "serialized_at": "2022-03-25 16:51:29 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -101,6 +101,19 @@
         "lesson_group.key": "",
         "script.name": "csd-playground"
       }
+    },
+    {
+      "key": "cdba95c2-afc7-424b-a894-5bfa81c6a4bd",
+      "position": 5,
+      "properties": {
+        "name": "CSD U4L14 and L16"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cdba95c2-afc7-424b-a894-5bfa81c6a4bd",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
     }
   ],
   "activity_sections": [
@@ -150,6 +163,18 @@
       "seeding_key": {
         "activity_section.key": "9e1ea5bb-2845-44d9-b7dd-f33fe78d4799",
         "lesson_activity.key": "ee728cbd-581b-41d7-8f1b-34d308286f18"
+      }
+    },
+    {
+      "key": "a59eba24-d43c-45ee-9833-6e0efdefa3b3",
+      "position": 1,
+      "properties": {
+        "description": "These levels will replace existing video at beginning of U4 Level 14, and instead they will appear at beginning of Level 14 and then Level 16",
+        "progression_name": "CSD U4L14 & U4L16"
+      },
+      "seeding_key": {
+        "activity_section.key": "a59eba24-d43c-45ee-9833-6e0efdefa3b3",
+        "lesson_activity.key": "cdba95c2-afc7-424b-a894-5bfa81c6a4bd"
       }
     }
   ],
@@ -210,6 +235,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 image debug match_2022"
+        ],
         "progression": "CSD U2L9.6.A"
       },
       "bonus": false,
@@ -232,6 +260,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 drawSprites placement match_2022"
+        ],
         "progression": "CSD U3L7.8"
       },
       "bonus": false,
@@ -246,6 +277,50 @@
       },
       "level_keys": [
         "CSD U3 drawSprites placement match_2022"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "CSD U4L14 & U4L16"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U4 App Lab Design Mode Video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "a59eba24-d43c-45ee-9833-6e0efdefa3b3"
+      },
+      "level_keys": [
+        "CSD U4 App Lab Design Mode Video"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "CSD U4L14 & U4L16"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U4 App Lab Events Video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "a59eba24-d43c-45ee-9833-6e0efdefa3b3"
+      },
+      "level_keys": [
+        "CSD U4 App Lab Events Video"
       ]
     }
   ],
@@ -296,6 +371,30 @@
         "lesson_group.key": "",
         "script.name": "csd-playground",
         "activity_section.key": "9e1ea5bb-2845-44d9-b7dd-f33fe78d4799"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U4 App Lab Design Mode Video",
+        "script_level.level_keys": [
+          "CSD U4 App Lab Design Mode Video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "a59eba24-d43c-45ee-9833-6e0efdefa3b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U4 App Lab Events Video",
+        "script_level.level_keys": [
+          "CSD U4 App Lab Events Video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "a59eba24-d43c-45ee-9833-6e0efdefa3b3"
       }
     }
   ],
