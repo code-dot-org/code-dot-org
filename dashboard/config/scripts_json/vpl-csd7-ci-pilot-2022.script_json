@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-23 17:08:06 UTC",
+    "serialized_at": "2022-03-28 04:41:45 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -33,13 +33,129 @@
     }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Introduction to AI and Machine Learning",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd7-ci-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Train a machine learning model",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd7-ci-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Engage with machine learning apps",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd7-ci-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Consider real world implications",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd7-ci-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Unit wrap up",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd7-ci-pilot-2022"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "5e91b559-74d3-4f8d-9820-001c19fcc60e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5e91b559-74d3-4f8d-9820-001c19fcc60e",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd7-ci-pilot-2022"
+      }
+    },
+    {
+      "key": "6c98bb7e-09ef-47ad-b345-556378bb2234",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6c98bb7e-09ef-47ad-b345-556378bb2234",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd7-ci-pilot-2022"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "76c83ca3-98cf-4268-a8e0-a6b66264a9c5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "76c83ca3-98cf-4268-a8e0-a6b66264a9c5",
+        "lesson_activity.key": "5e91b559-74d3-4f8d-9820-001c19fcc60e"
+      }
+    },
+    {
+      "key": "2132368e-74b2-4b8a-92a4-fe777bb8fd47",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2132368e-74b2-4b8a-92a4-fe777bb8fd47",
+        "lesson_activity.key": "6c98bb7e-09ef-47ad-b345-556378bb2234"
+      }
+    }
   ],
   "script_levels": [
 
