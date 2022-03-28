@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-22 14:09:41 UTC",
+    "serialized_at": "2022-03-25 15:17:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -10826,13 +10826,6 @@
         "lesson.key": "lesson-4",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-1.E.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.E.8"
       }
     },
     {
