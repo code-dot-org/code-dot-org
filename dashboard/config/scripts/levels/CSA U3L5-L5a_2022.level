@@ -1,0 +1,21 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "long_instructions": "##In someclass.java:\r\n\r\nThe x class represents x. It has an instance variable for a 1D array to store x. The method calculateSum() returns the sum of all the values in the 1D array. In the calculateSum() method,\r\n\r\n1. Declare and initialize a variable called sum to 0.\r\n\r\n2. Use an enhanced for loop to traverse the array.\r\n\r\n3. Add each value in the array to sum.\r\n\r\n4. Return the sum.\r\n\r\n##In MyConsole.java:\r\n\r\n5. Call calculateSum() on the x object to test the method.",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "submittable": "false",
+    "csa_view_mode": "console"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-03-25T12:18:32.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2022-03-25 12:18:35 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>
