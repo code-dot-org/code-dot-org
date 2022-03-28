@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import FontAwesome from './FontAwesome';
-import color from '../util/color';
+import FontAwesome from '../FontAwesome';
+import color from '../../util/color';
 
 class LargeChevronLink extends Component {
   static propTypes = {
