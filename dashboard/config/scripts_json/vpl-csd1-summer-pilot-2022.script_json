@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-19 00:53:39 UTC",
+    "serialized_at": "2022-03-27 21:22:21 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -96,8 +96,8 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "This appears for teachers / facilitators",
-        "student_overview": "This appears for participants / students"
+        "overview": "**Overview:**\nThis session is designed to introduce participants to Code.org’s “why” related to CS education which will lay the foundation for the conversations around equity, access, diversity, and inclusion that are woven throughout the workshop agenda. Participants will also have the opportunity to define their personal “why” related to CS education.\n\n**Participants will:**\n\n* Get an introduction to Code.org’s “why” related to equity in CS education. \n* Differentiate between equity, access, diversity, and inclusion as they relate to CS education.\n* Define your personal “why” related to CS education. \n\n**Suggested time:** 30 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to Code.org’s “why” related to equity in CS education. \n* Differentiate between equity, access, diversity, and inclusion as they relate to CS education.\n* Define your personal “why” related to CS education. "
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -113,6 +113,8 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "overview": "**Overview:**\nDuring this role play activity, participants will engage in Unit 1 Lesson 2: The Problem Solving Process. This lesson will provide participants with an introduction to the problem solving process that is used throughout the CS Discoveries curriculum. This model lesson will also highlight the main components of all CS Discoveries lessons: Warm Up - Activity - Wrap Up. \n\n**Participants will:**\n\n* Engage in Unit 1 Lesson 2 while playing the role of the student. \n* Reflect on your experience as a student engaging in the lesson. \n* Discuss the role of the problem solving process in the CS Discoveries curriculum. \n\n**Suggested time:** 60 minutes",
+        "student_overview": "**You will:**\n\n* Engage in Unit 1 Lesson 2 while playing the role of the student. \n* Reflect on your experience as a student engaging in the lesson. \n* Discuss the role of the problem solving process in the CS Discoveries curriculum. "
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -128,8 +130,8 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "**Participants will:**\n* Gain a high-level understanding of the CS Discoveries curriculum.\n\n**Suggested time:** 40 minutes",
-        "student_overview": "**You will:**\n* Gain a high-level understanding of the CS Discoveries curriculum.\n\n**Suggested time:** 40 minutes"
+        "overview": "**Overview:**\nThese asynchronous activities will provide participants with a high-level overview of the CS Discoveries curriculum including a high-level overview of the course content and tools, an outline of how the course is structured, and a preview of how the problem solving process is used throughout the course. \n\n**Participants will:**\n\n* Gain a high-level understanding of the CS Discoveries curriculum. \n\n\n**Suggested time:** 40 minutes",
+        "student_overview": "**You will:**\n* Gain a high-level understanding of the CS Discoveries curriculum.\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -145,8 +147,9 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "**Participants will:**\n* Consider their role as the teacher in a CS Discoveries classroom.\n\n**Suggested time:** 20 minutes",
-        "student_overview": "**You will:**\n* Consider your role as the teacher in a CS Discoveries classroom.\n\n**Suggested time:** 20 minutes"
+        "overview": "**Overview:**\nThese asynchronous activities will provide participants an introduction to the role of the teacher as the lead learner. Participants will be prompted to consider how their experiences and beliefs about CS influence how they see their role as the teacher in a CS classroom. This reflection will prime participants for the identity session later in the workshop. \n\n**Participants will:**\n\n* Consider your/their role as the teacher in the CS Discoveries classroom. \n\n**Suggested time:** 20 minutes",
+        "student_overview": "**You will:**\n* Consider your role as the teacher in a CS Discoveries classroom.\n",
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -162,6 +165,8 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "overview": "**Overview:**\nIn this session, participants will have the opportunity to debrief the activities completed as a part of the asynchronous portion of this workshop. \n\n**Participants will:**\n\n* Discuss questions that came up during the asynchronous time. \n* Reflect on the content introduced in the asynchronous activities. \n* Share ideas with the cohort. \n\n**Suggested time:** 15 minutes",
+        "student_overview": "**You will:**\n\n* Discuss questions that came up during the asynchronous time. \n* Reflect on the content introduced in the asynchronous activities. \n* Share ideas with the cohort. "
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -177,6 +182,8 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "overview": "**Overview:**\nDuring this role play activity, participants will engage in Unit 2 Lesson 2: Intro to HTML. This lesson will provide participants with an introduction to HTML and the Web Lab programming environment. This model lesson will also highlight the importance of student exploration before direct instruction in a CS Discoveries lesson.\n\n**Participants will:**\n\n* Engage in Unit 2 Lesson 2 while playing the role of the student.\n* Reflect on your experience as a student engaging in the lesson.\n* Discuss the role of student exploration in the CS Discoveries curriculum. \n\n**Suggested time:** 60 minutes",
+        "student_overview": "**You will:**\n\n* Engage in Unit 2 Lesson 2 while playing the role of the student.\n* Reflect on your experience as a student engaging in the lesson.\n* Discuss the role of student exploration in the CS Discoveries curriculum. \n"
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -192,6 +199,8 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "overview": "**Overview:**\nThis session is designed to establish a shared definition of identity and to provide participants with the space to reflect on how their identity, experiences, and beliefs shape how they see their role as CS teachers. A key takeaway of this session is that we all have identity markers that shape how we engage with students in our classrooms.  \n\n**Participants will:**\n\n* Define identity. \n* Reflect on how your identity, experiences, and beliefs shape how you see your role as a CS teacher. \n\n**Suggested time:** 35 minutes",
+        "student_overview": "**You will:**\n\n* Define identity. \n* Reflect on how your identity, experiences, and beliefs shape how you see your role as a CS teacher. "
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -200,28 +209,32 @@
       }
     },
     {
-      "key": "lesson-8",
-      "name": "Lesson Assignment",
+      "key": "lesson-11",
+      "name": "Wrap Up",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "overview": "**Overview:**\nIn this session, participants will reflect on what they have gotten out of the day along with what they still need from the workshop experience.\n\n**Participants will:**\n\n* Get an introduction to the asynchronous activities. \n* Reflect on gots and needs. \n\n**Suggested time:** 10 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to the asynchronous activities. \n* Reflect on gots and needs. "
       },
       "seeding_key": {
-        "lesson.key": "lesson-8",
+        "lesson.key": "lesson-11",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "vpl-csd1-summer-pilot-2022"
       }
     },
     {
       "key": "lesson-9",
-      "name": "Lesson Planning",
+      "name": "Explore a Lesson",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "overview": "**Overview:**\nThis activity is an opportunity for participants to both explore a lesson plan for a CS Discoveries lesson and begin to familiarize themselves with the content of their TLO lesson.\n\n**Participants will:**\n\n* Explore the lesson plan and additional resources for your/their assigned TLO lesson.\n* Complete the activities from your/their assigned TLO lesson. \n\n**Suggested time:** 60 minutes",
+        "student_overview": "**You will:**\n\n* Explore the lesson plan and additional resources for your/their assigned TLO lesson.\n* Complete the activities from your/their assigned TLO lesson. \n\n**Suggested time:** 60 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
@@ -301,6 +314,66 @@
         "lesson_activity.key": "00214bfa-e4bd-4143-ac05-6c989991278d",
         "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd1-summer-pilot-2022"
+      }
+    },
+    {
+      "key": "8fee919c-27a3-4d77-982c-d7ada56a156b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8fee919c-27a3-4d77-982c-d7ada56a156b",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "vpl-csd1-summer-pilot-2022"
+      }
+    },
+    {
+      "key": "e359db68-7e0f-4c3a-90fb-5b205f30219e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e359db68-7e0f-4c3a-90fb-5b205f30219e",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "vpl-csd1-summer-pilot-2022"
+      }
+    },
+    {
+      "key": "a1284323-2e7e-49f7-8107-6c3e98415993",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a1284323-2e7e-49f7-8107-6c3e98415993",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "vpl-csd1-summer-pilot-2022"
+      }
+    },
+    {
+      "key": "35aece1f-29a3-423a-9f8b-7b06fb699b07",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "35aece1f-29a3-423a-9f8b-7b06fb699b07",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "vpl-csd1-summer-pilot-2022"
+      }
+    },
+    {
+      "key": "a24f640d-abcc-4d2a-ab02-8989f7412a47",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a24f640d-abcc-4d2a-ab02-8989f7412a47",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "vpl-csd1-summer-pilot-2022"
       }
     }
@@ -401,6 +474,56 @@
       "seeding_key": {
         "activity_section.key": "ae562069-dafe-4360-9142-9303737e8cef",
         "lesson_activity.key": "00214bfa-e4bd-4143-ac05-6c989991278d"
+      }
+    },
+    {
+      "key": "6e116483-72c5-45c4-886b-37454e631063",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6e116483-72c5-45c4-886b-37454e631063",
+        "lesson_activity.key": "8fee919c-27a3-4d77-982c-d7ada56a156b"
+      }
+    },
+    {
+      "key": "3e0b0c93-ba8a-4954-baf0-d2787c5af40a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3e0b0c93-ba8a-4954-baf0-d2787c5af40a",
+        "lesson_activity.key": "e359db68-7e0f-4c3a-90fb-5b205f30219e"
+      }
+    },
+    {
+      "key": "3bd06316-c72c-4073-baaa-25a487ff7f4b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3bd06316-c72c-4073-baaa-25a487ff7f4b",
+        "lesson_activity.key": "a1284323-2e7e-49f7-8107-6c3e98415993"
+      }
+    },
+    {
+      "key": "44a52813-5dbc-43e4-8153-2a41959afac9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "44a52813-5dbc-43e4-8153-2a41959afac9",
+        "lesson_activity.key": "35aece1f-29a3-423a-9f8b-7b06fb699b07"
+      }
+    },
+    {
+      "key": "9d0ad604-ba2a-4a36-8b1d-ea4a121fa15c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9d0ad604-ba2a-4a36-8b1d-ea4a121fa15c",
+        "lesson_activity.key": "a24f640d-abcc-4d2a-ab02-8989f7412a47"
       }
     }
   ],
@@ -637,6 +760,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-LearningTools"
+        ],
         "progression": "Overview of learning tools"
       },
       "bonus": false,
@@ -659,6 +785,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod3-Tools-c4u"
+        ],
         "progression": "Overview of learning tools"
       },
       "bonus": false,

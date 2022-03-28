@@ -6,6 +6,7 @@ FactoryGirl.define do
   factory :course_offering do
     sequence(:key, 'a') {|c| "bogus-course-offering-#{c}"}
     sequence(:display_name, 'a') {|c| "bogus-course-offering-#{c}"}
+    assignable true
   end
 
   factory :course_version do
@@ -993,6 +994,12 @@ FactoryGirl.define do
     association :programming_environment
     sequence(:name) {|n| "programming expression #{n}"}
     sequence(:key) {|n| "programming-expression-#{n}"}
+  end
+
+  factory :programming_class do
+    association :programming_environment
+    sequence(:name) {|n| "programming class #{n}"}
+    sequence(:key) {|n| "programming-class-#{n}"}
   end
 
   factory :callout do

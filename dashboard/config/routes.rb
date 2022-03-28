@@ -258,7 +258,7 @@ Dashboard::Application.routes.draw do
       get 'get_rubric'
       get 'embed_level'
       get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
-      get 'edit_exemplar'
+      get 'edit_exemplar', to: 'levels#edit_exemplar', as: 'edit_exemplar'
       get 'get_serialized_maze'
       post 'update_properties'
       post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
@@ -330,6 +330,8 @@ Dashboard::Application.routes.draw do
       get :search
     end
   end
+
+  resources :programming_classes, only: [:new, :create, :edit, :update]
 
   resources :programming_expressions, only: [:new, :create, :edit, :update, :show, :destroy] do
     collection do
