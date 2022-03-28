@@ -89,9 +89,6 @@ module SetupTest
     AWS::S3.s3 = nil
 
     # Reset AUTO_INCREMENT, since it is unaffected by transaction rollback.
-    PEGASUS_TEST_TABLES.each do |table|
-      PEGASUS_DB.execute("ALTER TABLE `#{table}` AUTO_INCREMENT = 1")
-    end
     DASHBOARD_TEST_TABLES.each do |table|
       DASHBOARD_DB.execute("ALTER TABLE `#{table}` AUTO_INCREMENT = 1")
     end
