@@ -19,6 +19,24 @@ const referenceGuideShape = PropTypes.shape({
   parent_reference_guide_key: PropTypes.string
 });
 
+const NavBarItem = ({guide, isActive}) => (
+  <div
+    style={{paddingLeft: `${guide.level * 12}px`}}
+    className={classNames({
+      'nav-link': true,
+      active: isActive
+    })}
+  >
+    <Link className="link" href={`${baseUrl}/${guide.key}`} weight="medium">
+      {guide.display_name}
+    </Link>
+  </div>
+);
+NavBarItem.propTypes = {
+  guide: referenceGuideShape.isRequired,
+  isActive: PropTypes.bool
+};
+
 export default function ReferenceGuideView({referenceGuide, referenceGuides}) {
   let rootCategory = referenceGuide;
   // TODO(tim): re-organize things to get rid of the concepts guide
@@ -40,22 +58,11 @@ export default function ReferenceGuideView({referenceGuide, referenceGuides}) {
         content: (
           <>
             {children.map(guide => (
-              <div
-                style={{paddingLeft: `${guide.level * 12}px`}}
-                className={classNames({
-                  'nav-link': true,
-                  active: guide.key === referenceGuide.key
-                })}
+              <NavBarItem
                 key={guide.key}
-              >
-                <Link
-                  className="link"
-                  href={`${baseUrl}/${guide.key}`}
-                  weight="medium"
-                >
-                  {guide.display_name}
-                </Link>
-              </div>
+                guide={guide}
+                isActive={guide.key === referenceGuide.key}
+              />
             ))}
           </>
         ),
