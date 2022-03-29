@@ -98,7 +98,9 @@ export default class AssignmentSelector extends Component {
         }
 
         const units = courseVersionId
-          ? Object.values(courseVersions[courseVersionId].units)
+          ? Object.values(
+              _.orderBy(courseVersions[courseVersionId].units, 'position')
+            )
           : null;
         const firstUnitId = units?.length > 1 ? units[0].id : noAssignment;
 
@@ -131,8 +133,11 @@ export default class AssignmentSelector extends Component {
 
       if (this.state.selectedCourseVersionId !== courseVersionId) {
         const units = Object.values(
-          this.props.courseOfferings[this.state.selectedCourseOfferingId]
-            ?.course_versions[courseVersionId].units
+          _.orderBy(
+            this.props.courseOfferings[this.state.selectedCourseOfferingId]
+              ?.course_versions[courseVersionId].units,
+            'position'
+          )
         );
         const firstUnitId = units.length > 1 ? units[0].id : noAssignment;
         this.setState(
