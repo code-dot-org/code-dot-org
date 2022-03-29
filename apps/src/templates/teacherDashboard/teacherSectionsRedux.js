@@ -874,21 +874,17 @@ export default function teacherSections(state = initialState, action) {
       }
     }
 
-    let newSections = {
-      // When updating a persisted section, omitting oldSectionId is still fine
-      // because we're adding it back on the next line
-      ..._.omit(state.sections, oldSectionId),
-      [section.id]: {
-        ...state.sections[section.id],
-        ...section
-      }
+    let newSections = _.omit(state.sections, oldSectionId);
+    newSections[section.id] = {
+      ...state.sections[section.id],
+      ...section
     };
 
     let newStudentSectionIds = newSections
-      .filter(section => section.audience === 'student')
+      ?.filter(section => section.audience === 'student')
       .map(section => section.id);
     let newPlSectionIds = newSections
-      .filter(section => section.audience !== 'student')
+      ?.filter(section => section.audience !== 'student')
       .map(section => section.id);
 
     if (section.loginType !== state.initialLoginType) {

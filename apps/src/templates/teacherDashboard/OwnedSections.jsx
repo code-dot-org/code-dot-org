@@ -99,7 +99,7 @@ class OwnedSections extends React.Component {
 
     return (
       <div className="uitest-owned-sections">
-        <SetUpSections hasSections={hasSections} />
+        <SetUpSections hasSections={hasSections} isPlSections={isPlSections} />
         {hasSections && (
           <div>
             {visibleSectionIds.length > 0 && (
