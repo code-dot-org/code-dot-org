@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-28 04:53:08 UTC",
+    "serialized_at": "2022-03-29 04:11:56 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -176,6 +176,7 @@
       "key": "c3b2db4f-4178-465a-ba8b-76673621e782",
       "position": 1,
       "properties": {
+        "progression_name": "Unit Overview"
       },
       "seeding_key": {
         "activity_section.key": "c3b2db4f-4178-465a-ba8b-76673621e782",
@@ -224,10 +225,42 @@
     }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U5L2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd5-ci-pilot-2022",
+        "activity_section.key": "c3b2db4f-4178-465a-ba8b-76673621e782"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-Unit_Overview_U5L2"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-Unit_Overview_U5L2",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U5L2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd5-ci-pilot-2022",
+        "activity_section.key": "c3b2db4f-4178-465a-ba8b-76673621e782"
+      }
+    }
   ],
   "resources": [
 
