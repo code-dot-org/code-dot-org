@@ -24,7 +24,9 @@ const getStudentRows = wrapper =>
   wrapper.find('#ui-test-student-table tbody tr');
 
 // Helper function to verify that the radio buttons in the given student row
-// correctly reflect the expected lock status.
+// correctly reflect the expected lock status. Each student row has four cells,
+// the name followed by three radio button inputs:
+//   <student name> | [] Locked | [] Editable | [] Read-only
 const verifyRowLockStatus = (row, expectedLockStatus) => {
   const radioButtons = row.find('input');
   const lockedSelected = radioButtons.at(0).props().checked;
