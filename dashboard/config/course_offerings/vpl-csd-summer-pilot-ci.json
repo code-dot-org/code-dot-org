@@ -2,5 +2,6 @@
   "key": "vpl-csd-summer-pilot-ci",
   "display_name": "vpl-csd-summer-pilot-ci",
   "category": "other",
-  "is_featured": false
+  "is_featured": false,
+  "assignable": true
 }

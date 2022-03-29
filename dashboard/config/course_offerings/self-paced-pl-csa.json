@@ -2,5 +2,6 @@
   "key": "self-paced-pl-csa",
   "display_name": "self-paced-pl-csa",
   "category": "other",
-  "is_featured": false
+  "is_featured": false,
+  "assignable": true
 }

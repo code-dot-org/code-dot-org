@@ -300,30 +300,36 @@ class CourseOfferingTest < ActiveSupport::TestCase
     refute unit1.course_version.course_offering.any_versions_in_development?
   end
 
-  test 'assignable? is false if can not be instructor' do
-    refute @unit_teacher_to_students.course_version.course_offering.assignable?(@student)
-    assert @unit_teacher_to_students.course_version.course_offering.assignable?(@teacher)
-
-    refute @unit_facilitator_to_teacher.course_version.course_offering.assignable?(@teacher)
-    assert @unit_facilitator_to_teacher.course_version.course_offering.assignable?(@facilitator)
+  test 'can_be_assigned? is false if its an unassignable course' do
+    unassignable_course_offering = create :course_offering
+    refute unassignable_course_offering.can_be_assigned?(@student)
+    refute unassignable_course_offering.can_be_assigned?(@teacher)
   end
 
-  test 'assignable? is true if has pilot access and any course version is in pilot state' do
-    refute @pilot_unit.course_version.course_offering.assignable?(@teacher)
-    assert @pilot_unit.course_version.course_offering.assignable?(@pilot_teacher)
-    refute @pilot_unit.course_version.course_offering.assignable?(@pilot_instructor)
+  test 'can_be_assigned? is false if can not be instructor' do
+    refute @unit_teacher_to_students.course_version.course_offering.can_be_assigned?(@student)
+    assert @unit_teacher_to_students.course_version.course_offering.can_be_assigned?(@teacher)
 
-    refute @pilot_pl_unit.course_version.course_offering.assignable?(@teacher)
-    refute @pilot_pl_unit.course_version.course_offering.assignable?(@pilot_teacher)
-    assert @pilot_pl_unit.course_version.course_offering.assignable?(@pilot_instructor)
+    refute @unit_facilitator_to_teacher.course_version.course_offering.can_be_assigned?(@teacher)
+    assert @unit_facilitator_to_teacher.course_version.course_offering.can_be_assigned?(@facilitator)
   end
 
-  test 'assignable? is true if any versions in development and user is levelbuilder' do
+  test 'can_be_assigned? is true if has pilot access and any course version is in pilot state' do
+    refute @pilot_unit.course_version.course_offering.can_be_assigned?(@teacher)
+    assert @pilot_unit.course_version.course_offering.can_be_assigned?(@pilot_teacher)
+    refute @pilot_unit.course_version.course_offering.can_be_assigned?(@pilot_instructor)
+
+    refute @pilot_pl_unit.course_version.course_offering.can_be_assigned?(@teacher)
+    refute @pilot_pl_unit.course_version.course_offering.can_be_assigned?(@pilot_teacher)
+    assert @pilot_pl_unit.course_version.course_offering.can_be_assigned?(@pilot_instructor)
+  end
+
+  test 'can_be_assigned? is true if any versions in development and user is levelbuilder' do
     unit1 = create(:script, name: 'unit2', family_name: 'family-10', version_year: '1992', is_course: true, published_state: 'in_development')
     CourseOffering.add_course_offering(unit1)
 
-    refute unit1.course_version.course_offering.assignable?(@teacher)
-    assert unit1.course_version.course_offering.assignable?(@levelbuilder)
+    refute unit1.course_version.course_offering.can_be_assigned?(@teacher)
+    assert unit1.course_version.course_offering.can_be_assigned?(@levelbuilder)
   end
 
   test 'get assignable course offerings for student should return no offerings' do
