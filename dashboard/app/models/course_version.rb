@@ -42,7 +42,7 @@ class CourseVersion < ApplicationRecord
   UNVERSIONED = 'unversioned'.freeze
 
   def units
-    content_root_type == 'UnitGroup' ? content_root_from_cache.default_units : [content_root_from_cache]
+    content_root_type == 'UnitGroup' ? content_root_from_cache&.default_units : [content_root_from_cache]
   end
 
   def content_root_from_cache
@@ -169,7 +169,7 @@ class CourseVersion < ApplicationRecord
         is_stable: stable?,
         is_recommended: recommended?(locale_code),
         locales: content_root_type == 'UnitGroup' ? ['English'] : content_root.supported_locale_names,
-        units: units.select {|u| u.course_assignable?(user)}.map(&:summarize_for_assignment_dropdown).to_h
+        units: units&.select {|u| u.course_assignable?(user)}&.map(&:summarize_for_assignment_dropdown).to_h
       }
     ]
   end
