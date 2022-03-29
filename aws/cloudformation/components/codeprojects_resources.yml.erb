@@ -13,7 +13,7 @@ LocalhostCodeprojectsRecord:
   Type: AWS::Route53::RecordSet
   Properties:
     HostedZoneId: <%= CDO.codeprojects_hostedzone_id %>
-    Name: <%="localhost.#{domain}"%>
+    Name: localhost.<%= CDO.codeprojects_hostname %>
     Type: A
     TTL: 3600
     ResourceRecords:

@@ -85,6 +85,7 @@ Javalab.prototype.init = function(config) {
   this.displayTheme = getDisplayThemeFromString(config.displayTheme);
   this.isStartMode = !!config.level.editBlocks;
   this.isEditingExemplar = !!config.level.isEditingExemplar;
+  this.isViewingExemplar = !!config.level.isViewingExemplar;
   config.makeYourOwn = false;
   config.wireframeShare = true;
   config.noHowItWorks = true;
@@ -220,8 +221,8 @@ Javalab.prototype.init = function(config) {
 
   const startSources = config.level.lastAttempt || config.level.startSources;
   const validation = config.level.validation || {};
-  if (this.isEditingExemplar && config.level.exemplarSources) {
-    // If we're editing an exemplar, set initial sources
+  if (config.level.exemplarSources) {
+    // If we have exemplar sources (either for editing or viewing), set initial sources
     // with the exemplar code saved to the level definition.
     getStore().dispatch(setAllSources(config.level.exemplarSources));
   } else if (
@@ -369,7 +370,7 @@ Javalab.prototype.executeJavabuilder = function(executionType) {
   );
 
   let connectToJavabuilder;
-  if (this.isEditingExemplar) {
+  if (this.isEditingExemplar || this.isViewingExemplar) {
     const overrideSources = getSources(getStore().getState());
     connectToJavabuilder = () =>
       this.javabuilderConnection.connectJavabuilderWithOverrideSources(

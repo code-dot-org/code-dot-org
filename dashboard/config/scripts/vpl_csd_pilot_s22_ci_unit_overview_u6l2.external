@@ -1,0 +1,42 @@
+name 'VPL-CSD-pilot-S22-CI-Unit_Overview_U6L2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Unit Overview
+
+##### In the Physical Computing unit, students explore the role of physical devices in computing. Using App Lab and Adafruit’s Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.
+
+## Students will:
+* ##### Design and build a physical computing device that integrates physical inputs and outputs with digital apps. 
+* ##### Create app prototypes that use a physical device to solve real-world problems
+* ##### Use physical computing to solve problems in fun and innovative ways.
+
+
+## 
+
+## Update with a unit specific image then remove this text
+
+<img src="https://images.code.org/c5c29ed5d000cd99987c8e829da3aa3b-image-1634828701624.gif" alt="Image of AI bot moving through the steps: choose a dataset, prepare data, train AI model, assess results"  style="padding-left: 120px; height: 250px; clear: both; margin: 0 20px 20px 0;">
+
+
+### **Implementation guidance** 
+
+* ##### Complete Unit 1, Unit 2, Unit 3, Unit 4 and Unit 5 before starting this unit
+* ##### Guidance for how to support students in programming levels and differentiate tasks are available in the <a href="https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit?usp=sharing" target="blank" rel="noopener noreferrer">Debugging Guide</a> and <a href="https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/edit?usp=sharing" target="blank" rel="noopener noreferrer">Differentiation Guide</a>
+ 
+ * ##### You can learn more about the Maker App environment on p. 32 - <a href="https://studio.code.org/courses/csd-2021" target="blank" rel="noopener noreferrer"> Learning Tools <a href="https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/edit?usp=sharing" target="blank" rel="noopener noreferrer"> </a>
+
+* ##### You can learn about the <a href="https://studio.code.org/courses/csd-2021" target="blank" rel="noopener noreferrer"> Problem Solving Process with Programming </a> on p. 41 <a href="https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/edit?usp=sharing" target="blank" rel="noopener noreferrer"> </a>
+
+* ##### You can view the full <a href="https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/edit?usp=sharing" target="blank" rel="noopener noreferrer">Curriculum Guide</a> and <a href="https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/edit?usp=sharing" target="blank" rel="noopener noreferrer">Implementation Guide</a> for more information about this unit. 
+
+### **Suggested time to complete the unit:** 6 weeks 
+##### The suggested time is based on 225 instructional minutes per week. Visit the <a href="https://studio.code.org/s/csd6-2022" target="blank" rel="noopener noreferrer">Unit Overview Page</a> and use the unit calendar to adjust the instructional minutes to reflect the time you have with your students each week. 
+
+<div style="clear:both"/>
+
+
+
+
+MARKDOWN
