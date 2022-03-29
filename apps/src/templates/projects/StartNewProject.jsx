@@ -33,7 +33,6 @@ export default class StartNewProject extends React.Component {
       'dance',
       'poetry',
       'flappy',
-      'thebadguys',
       'starwarsblocks',
       'starwars',
       'bounce',
