@@ -26,6 +26,7 @@ class ProgrammingClass < ApplicationRecord
 
   belongs_to :programming_environment
   belongs_to :programming_environment_category
+  has_many :programming_methods
 
   validates_uniqueness_of :key, scope: :programming_environment_id, case_sensitive: false
   validate :validate_key_format
@@ -92,6 +93,7 @@ class ProgrammingClass < ApplicationRecord
       content: content || '',
       examples: parsed_examples,
       fields: parsed_fields,
+      methods: programming_methods,
       tips: tips || '',
       syntax: syntax || '',
       external_documentation: external_documentation || '',

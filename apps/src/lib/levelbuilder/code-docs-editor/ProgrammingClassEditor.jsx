@@ -41,6 +41,19 @@ function renderFieldEditor(field, updateFunc) {
   );
 }
 
+function renderMethodEditor(method, updateFunc) {
+  return (
+    <label>
+      Display Name
+      <input
+        value={method.name || ''}
+        onChange={e => updateFunc('name', e.target.value)}
+        style={styles.textInput}
+      />
+    </label>
+  );
+}
+
 export default function ProgrammingClassEditor({
   initialProgrammingClass,
   environmentCategories
@@ -190,6 +203,14 @@ export default function ProgrammingClassEditor({
           renderItem={renderFieldEditor}
         />
       </CollapsibleEditorSection>
+      <CollapsibleEditorSection title="Methods" collapsed>
+        <OrderableList
+          list={programmingClass.methods || []}
+          setList={list => updateProgrammingClass('methods', list)}
+          addButtonText="Add Another Method"
+          renderItem={renderMethodEditor}
+        />
+      </CollapsibleEditorSection>
       <SaveBar
         handleSave={save}
         isSaving={isSaving}
@@ -210,7 +231,9 @@ const programmingClassShape = PropTypes.shape({
   content: PropTypes.string,
   syntax: PropTypes.string,
   tips: PropTypes.string,
-  examples: PropTypes.arrayOf(PropTypes.object)
+  examples: PropTypes.arrayOf(PropTypes.object),
+  fields: PropTypes.arrayOf(PropTypes.object),
+  methods: PropTypes.arrayOf(PropTypes.object)
 });
 
 ProgrammingClassEditor.propTypes = {
