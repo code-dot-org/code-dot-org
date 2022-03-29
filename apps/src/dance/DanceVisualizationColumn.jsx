@@ -8,7 +8,10 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import AgeDialog, {signedOutOver13, songFilterOn} from '../templates/AgeDialog';
+import AgeDialog, {
+  ageDialogSelectedOver13,
+  songFilterOn
+} from '../templates/AgeDialog';
 import {getFilteredSongKeys} from '@cdo/apps/dance/songs';
 
 const SongSelector = Radium(
@@ -97,14 +100,15 @@ class DanceVisualizationColumn extends React.Component {
     }
 
     // userType - 'teacher', 'student', 'unknown' - signed out users.
-    // If user is signed out, query session key to determine age.
-    // Return false (no filter), if user is over 13.
+    // If the user is signed out . . .
     if (userType === 'unknown') {
-      return !signedOutOver13();
+      // Query session key set from user selection in age dialog.
+      // Return false (no filter), if user is over 13.
+      return !ageDialogSelectedOver13();
     }
 
-    // User is signed in (student or teacher) and the filter is off.
-    // Return true (filterOn) if the user is under 13. Teachers assumed over13.
+    // User is signed in (student or teacher) and the filter override is not turned on.
+    // Return true (filter should be turned on) if the user is under 13. Teachers assumed over13.
     return under13;
   }
 
