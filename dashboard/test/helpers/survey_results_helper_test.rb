@@ -50,4 +50,24 @@ class SurveyResultsHelperTest < ActionView::TestCase
     follower.student_user.update(age: 10)
     refute show_diversity_survey? SurveyResult::DIVERSITY_2021
   end
+
+  test 'show nps survey' do
+    DCDO.stubs(:set).with('nps_audience', 'all')
+    stubs(:language).returns "en"
+    assert show_nps_survey?
+    DCDO.unstub(:set)
+  end
+
+  test 'do not show nps survey' do
+    @teacher.update!(created_at: 1.week.ago)
+    refute show_nps_survey?
+  end
+
+  test 'target audience' do
+    DCDO.stubs(:set).with('nps_audience', 'all')
+    assert target_audience? @teacher.id
+    DCDO.stubs(:set).with('nps_audience', 'none')
+    refute target_audience? @teacher.id
+    DCDO.unstub(:set)
+  end
 end
