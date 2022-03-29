@@ -90,6 +90,9 @@ export default function ProgrammingExpressionsTable({
           setProgrammingExpressions(data.expressions);
           setNumPages(data.numPages);
         }
+      })
+      .catch(error => {
+        setError(error);
       });
   };
 
