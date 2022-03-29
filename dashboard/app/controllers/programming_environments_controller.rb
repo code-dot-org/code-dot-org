@@ -39,11 +39,9 @@ class ProgrammingEnvironmentsController < ApplicationController
   end
 
   def edit
-    return render :not_found unless @programming_environment
   end
 
   def update
-    return render :not_found unless @programming_environment
     @programming_environment.assign_attributes(programming_environment_params.except(:categories))
     begin
       if programming_environment_params[:categories]
@@ -69,7 +67,6 @@ class ProgrammingEnvironmentsController < ApplicationController
   end
 
   def show
-    return render :not_found unless @programming_environment
     return head :forbidden unless can?(:read, @programming_environment)
     @programming_environment_categories = @programming_environment.categories.select {|c| c.programming_expressions.count > 0}.map(&:summarize_for_environment_show)
   end
@@ -92,13 +89,10 @@ class ProgrammingEnvironmentsController < ApplicationController
   end
 
   def destroy
-    return render :not_found unless @programming_environment
-    begin
-      @programming_environment.destroy!
-      render(status: 200, plain: "Destroyed #{@programming_environment.name}")
-    rescue => e
-      render(status: :not_acceptable, plain: e.message)
-    end
+    @programming_environment.destroy!
+    render(status: 200, plain: "Destroyed #{@programming_environment.name}")
+  rescue => e
+    render(status: :not_acceptable, plain: e.message)
   end
 
   private
@@ -120,5 +114,6 @@ class ProgrammingEnvironmentsController < ApplicationController
 
   def set_programming_environment
     @programming_environment = ProgrammingEnvironment.find_by_name(params[:name])
+    raise ActiveRecord::RecordNotFound unless @programming_environment
   end
 end
