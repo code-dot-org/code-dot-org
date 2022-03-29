@@ -51,9 +51,11 @@ class ProgrammingClassesController < ApplicationController
       :content,
       :syntax,
       :tips,
-      examples: [:name, :description, :code, :app, :image, :app_display_type, :embed_app_with_code_height]
+      examples: [:name, :description, :code, :app, :image, :app_display_type, :embed_app_with_code_height],
+      fields: [:name, :type, :description]
     )
     transformed_params[:examples] = transformed_params[:examples].to_json if transformed_params[:examples]
+    transformed_params[:fields] = transformed_params[:fields].to_json if transformed_params[:fields]
     transformed_params
   end
 end
