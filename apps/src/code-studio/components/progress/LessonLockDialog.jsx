@@ -18,11 +18,11 @@ function LessonLockDialog({
   saving,
   saveDialog
 }) {
-  const [lockStatuses, setlockStatuses] = useState(initialLockStatus);
+  const [lockStatuses, setLockStatuses] = useState(initialLockStatus);
 
   useEffect(() => {
     if (!saving) {
-      setlockStatuses(initialLockStatus);
+      setLockStatuses(initialLockStatus);
     }
   }, [initialLockStatus]);
 
@@ -30,7 +30,7 @@ function LessonLockDialog({
   // Event handlers
   //
   const setAllLockStatus = lockStatus => {
-    setlockStatuses(currentLockStatuses =>
+    setLockStatuses(currentLockStatuses =>
       currentLockStatuses.map(item => ({...item, lockStatus}))
     );
   };
@@ -53,7 +53,7 @@ function LessonLockDialog({
     const modifiedIndex = parseInt(event.target.name, 10);
     const value = event.target.value;
 
-    setlockStatuses(currentLockStatuses =>
+    setLockStatuses(currentLockStatuses =>
       currentLockStatuses.map((item, index) => {
         if (index !== modifiedIndex) {
           return item;
