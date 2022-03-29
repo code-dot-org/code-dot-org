@@ -7,7 +7,11 @@ import _ from 'lodash';
 import OwnedSectionsTable from './OwnedSectionsTable';
 import RosterDialog from './RosterDialog';
 import Button from '@cdo/apps/templates/Button';
-import {hiddenSectionIds, beginEditingSection} from './teacherSectionsRedux';
+import {
+  hiddenPlSectionIds,
+  hiddenStudentSectionIds,
+  beginEditingSection
+} from './teacherSectionsRedux';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import styleConstants from '@cdo/apps/styleConstants';
@@ -23,8 +27,10 @@ class OwnedSections extends React.Component {
   static propTypes = {
     isPlSections: PropTypes.bool,
     // redux provided
-    sectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
-    hiddenSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
+    plSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
+    studentSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
+    hiddenPlSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
+    hiddenStudentSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     asyncLoadComplete: PropTypes.bool.isRequired,
     beginEditingSection: PropTypes.func.isRequired
   };
@@ -68,12 +74,25 @@ class OwnedSections extends React.Component {
   };
 
   render() {
-    const {sectionIds, hiddenSectionIds, asyncLoadComplete} = this.props;
+    const {
+      plSectionIds,
+      isPlSections,
+      studentSectionIds,
+      hiddenPlSectionIds,
+      hiddenStudentSectionIds,
+      asyncLoadComplete
+    } = this.props;
     const {viewHidden} = this.state;
 
     if (!asyncLoadComplete) {
       return <Spinner size="large" style={styles.spinner} />;
     }
+
+    let sectionIds = isPlSections ? plSectionIds : studentSectionIds;
+
+    let hiddenSectionIds = isPlSections
+      ? hiddenPlSectionIds
+      : hiddenStudentSectionIds;
 
     const hasSections = sectionIds.length > 0;
     const visibleSectionIds = _.without(sectionIds, ...hiddenSectionIds);
@@ -159,11 +178,13 @@ export const UnconnectedOwnedSections = OwnedSections;
 
 export default connect(
   state => ({
-    sectionIds: state.teacherSections.sectionIds,
-    hiddenSectionIds: hiddenSectionIds(state),
+    studentSectionIds: state.teacherSections.studentSectionIds,
+    plSectionIds: state.teacherSections.plSectionIds,
+    hiddenPlSectionIds: hiddenPlSectionIds(state),
+    hiddenStudentSectionIds: hiddenStudentSectionIds(state),
     asyncLoadComplete: state.teacherSections.asyncLoadComplete
   }),
   {
     beginEditingSection
   }
-)(OwnedSections);
+)(UnconnectedOwnedSections);

@@ -543,6 +543,8 @@ const initialState = {
   // for consistency and ease of comparison).
   providers: [],
   sectionIds: [],
+  studentSectionIds: [],
+  plSectionIds: [],
   selectedSectionId: NO_SECTION,
   // Array of course offerings, to populate the assignment dropdown
   // with options like "CSD", "Course A", or "Frozen". See the
@@ -690,14 +692,24 @@ export default function teacherSections(state = initialState, action) {
       }
     });
 
+    let sectionIds = _.uniq(
+      state.sectionIds.concat(sections.map(section => section.id))
+    );
+
+    let studentSectionIds = sections
+      .filter(section => section.audience === 'student')
+      .map(section => section.id);
+    let plSectionIds = sections
+      .filter(section => section.audience !== 'student')
+      .map(section => section.id);
+
     return {
       ...state,
       sectionsAreLoaded: true,
       selectedSectionId,
-      sectionIds: _.uniq(
-        state.sectionIds.concat(sections.map(section => section.id))
-      ),
-      //Add student section ids and pl section ids for when need to separate
+      sectionIds: sectionIds,
+      studentSectionIds: studentSectionIds,
+      plSectionIds: plSectionIds,
       sections: {
         ...state.sections,
         ..._.keyBy(sections, 'id')
@@ -735,6 +747,8 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       sectionIds: _.without(state.sectionIds, sectionId),
+      studentSectionIds: _.without(state.studentSectionIds, sectionId),
+      plSectionIds: _.without(state.plSectionIds, sectionId),
       sections: _.omit(state.sections, sectionId)
     };
   }
@@ -860,6 +874,23 @@ export default function teacherSections(state = initialState, action) {
       }
     }
 
+    let newSections = {
+      // When updating a persisted section, omitting oldSectionId is still fine
+      // because we're adding it back on the next line
+      ..._.omit(state.sections, oldSectionId),
+      [section.id]: {
+        ...state.sections[section.id],
+        ...section
+      }
+    };
+
+    let newStudentSectionIds = newSections
+      .filter(section => section.audience === 'student')
+      .map(section => section.id);
+    let newPlSectionIds = newSections
+      .filter(section => section.audience !== 'student')
+      .map(section => section.id);
+
     if (section.loginType !== state.initialLoginType) {
       firehoseClient.putRecord(
         {
@@ -916,15 +947,9 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       sectionIds: newSectionIds,
-      sections: {
-        // When updating a persisted section, omitting oldSectionId is still fine
-        // because we're adding it back on the next line
-        ..._.omit(state.sections, oldSectionId),
-        [section.id]: {
-          ...state.sections[section.id],
-          ...section
-        }
-      },
+      studentSectionIds: newStudentSectionIds,
+      plSectionIds: newPlSectionIds,
+      sections: newSections,
       sectionBeingEdited: null,
       saveInProgress: false
     };
@@ -1333,6 +1358,26 @@ export const sortSectionsList = sectionsList =>
 export function hiddenSectionIds(state) {
   state = getRoot(state);
   return state.sectionIds.filter(id => state.sections[id].hidden);
+}
+
+/**
+ * @param {object} state - Full state of redux tree
+ */
+export function hiddenStudentSectionIds(state) {
+  state = getRoot(state);
+  return state.sectionIds.filter(
+    id => state.sections[id].hidden && state.sections[id].audience === 'student'
+  );
+}
+
+/**
+ * @param {object} state - Full state of redux tree
+ */
+export function hiddenPlSectionIds(state) {
+  state = getRoot(state);
+  return state.sectionIds.filter(
+    id => state.sections[id].hidden && state.sections[id].audience !== 'student'
+  );
 }
 
 export const studentShape = PropTypes.shape({
