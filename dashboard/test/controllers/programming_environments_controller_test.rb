@@ -77,13 +77,41 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
     assert_equal @response.body, 'curriculum.code.org/docs content'
   end
 
+  test 'page is not proxied to docs index if using studio code docs' do
+    DCDO.expects(:get).at_least_once
+    DCDO.expects(:get).with('use-studio-code-docs', false).returns(true).at_least_once
+
+    create :programming_environment
+    stubbed_request = stub_request(:get, "https://curriculum.code.org/docs/").
+      to_return(body: 'curriculum.code.org/docs content', headers: {})
+
+    get :docs_index
+    assert_response :ok
+    assert_not_requested stubbed_request
+  end
+
+  test 'page is proxied to docs index page if not using studio code docs' do
+    DCDO.expects(:get).with('use-studio-code-docs', false).returns(false).at_least_once
+    create :programming_environment
+
+    stubbed_request = stub_request(:get, "https://curriculum.code.org/docs/").
+        to_return(body: 'curriculum.code.org/docs content', headers: {})
+
+    request.host = "studio.code.org"
+    get :docs_index
+    assert_response :ok
+    assert_equal @response.body, 'curriculum.code.org/docs content'
+    assert_requested stubbed_request
+  end
+
   test 'returns not_found if editing a non-existant programming environment' do
     sign_in @levelbuilder
 
-    post :edit, params: {
-      name: 'fake_name'
-    }
-    assert_response :not_found
+    assert_raises(ActiveRecord::RecordNotFound) do
+      post :edit, params: {
+        name: 'fake_name'
+      }
+    end
   end
 
   test 'can update programming expression from params' do
@@ -135,11 +163,12 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
   test 'returns not_found if updating a non-existant programming environment' do
     sign_in @levelbuilder
 
-    post :update, params: {
-      name: 'fake_name',
-      title: 'title'
-    }
-    assert_response :not_found
+    assert_raises(ActiveRecord::RecordNotFound) do
+      post :update, params: {
+        name: 'fake_name',
+        title: 'title'
+      }
+    end
   end
 
   test 'can create a new programming environment' do
