@@ -84,10 +84,10 @@ RUN export CHROMEDRIVER_RELEASE=$(curl http://chromedriver.storage.googleapis.co
       && sudo chmod +x /usr/local/bin/chromedriver
 
 # install mysql
-RUN curl -sSL -o /tmp/mysql-apt-config_0.8.12-1_all.deb https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.deb \
+RUN curl -sSL -o /tmp/mysql-apt-config_0.8.22-1_all.deb https://dev.mysql.com/get/mysql-apt-config_0.8.22-1_all.deb \
   && echo "mysql-apt-config mysql-apt-config/select-server select mysql-5.7" | /usr/bin/debconf-set-selections \
-  && DEBIAN_FRONTEND=noninteractive dpkg -i /tmp/mysql-apt-config_0.8.12-1_all.deb || apt-get -fy install \
-  && rm -rf /tmp/mysql-apt-config_0.8.12-1_all.deb \
+  && DEBIAN_FRONTEND=noninteractive dpkg -i /tmp/mysql-apt-config_0.8.22-1_all.deb || apt-get -fy install \
+  && rm -rf /tmp/mysql-apt-config_0.8.22-1_all.deb \
   && apt-get update \
   && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     mysql-server \
