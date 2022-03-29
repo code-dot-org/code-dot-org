@@ -39,16 +39,17 @@ export default class JavabuilderConnection {
 
   // Get the access token to connect to javabuilder and then open the websocket connection.
   // The token prevents access to our javabuilder AWS execution environment by un-verified users.
+  // This method should be used for any connection to Javabuilder that does not require a special override
+  // for sources or validation.
   connectJavabuilder() {
     let requestData = this.getDefaultRequestData();
     requestData.channelId = this.channelId;
-    const ajaxPayload = {
-      url: '/javabuilder/access_token',
-      type: 'get',
-      data: requestData
-    };
 
-    this.connectJavabuilderHelper(ajaxPayload, /* checkProjectEdited */ true);
+    this.connectJavabuilderHelper(
+      '/javabuilder/access_token',
+      requestData,
+      /* checkProjectEdited */ true
+    );
   }
 
   // Get the access token to connect to javabuilder and then open the websocket connection.
@@ -58,15 +59,14 @@ export default class JavabuilderConnection {
   connectJavabuilderWithOverrideSources(overrideSources) {
     let requestData = this.getDefaultRequestData();
     requestData.overrideSources = overrideSources;
-    const ajaxPayload = {
-      url: '/javabuilder/access_token_with_override_sources',
-      type: 'get',
-      data: requestData
-    };
 
     // When we have override sources, we do not need to check if the project has been edited,
     // as the override sources are what we want to run.
-    this.connectJavabuilderHelper(ajaxPayload, /* checkProjectEdited */ false);
+    this.connectJavabuilderHelper(
+      '/javabuilder/access_token_with_override_sources',
+      requestData,
+      /* checkProjectEdited */ false
+    );
   }
 
   // Get the access token to connect to javabuilder and then open the websocket connection.
@@ -77,16 +77,15 @@ export default class JavabuilderConnection {
     let requestData = this.getDefaultRequestData();
     requestData.channelId = this.channelId;
     requestData.overrideValidation = overrideValidation;
-    const ajaxPayload = {
-      url: '/javabuilder/access_token_with_override_validation',
-      type: 'get',
-      data: requestData
-    };
 
-    this.connectJavabuilderHelper(ajaxPayload, /* checkProjectEdited */ true);
+    this.connectJavabuilderHelper(
+      '/javabuilder/access_token_with_override_validation',
+      requestData,
+      /* checkProjectEdited */ true
+    );
   }
 
-  connectJavabuilderHelper(ajaxPayload, checkProjectEdited) {
+  connectJavabuilderHelper(url, data, checkProjectEdited) {
     // Don't attempt to connect to Javabuilder if we do not have a project
     // and we want to check the edit status.
     // This typically occurs if a teacher is trying to view a student's project
@@ -97,6 +96,12 @@ export default class JavabuilderConnection {
       this.onOutputMessage(javalabMsg.errorProjectNotEditedYet());
       return;
     }
+
+    const ajaxPayload = {
+      url: url,
+      type: 'get',
+      data: data
+    };
 
     this.onOutputMessage(`${STATUS_MESSAGE_PREFIX} ${javalabMsg.connecting()}`);
     this.onNewlineMessage();
