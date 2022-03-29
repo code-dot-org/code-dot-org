@@ -11,27 +11,14 @@ class AdminNpsControllerTest < ActionController::TestCase
 
   generate_admin_only_tests_for :nps_form
 
-  test 'updates dcdo flag to even and odd correctly' do
+  test 'flashes alert when audience correctly updated' do
     sign_in @admin
     DCDO.stubs(:get).with('nps_audience', nil).returns(['none'])
-    post :nps_update, params: {audience: 'even'}
+    post :nps_update, params: {audience: 'none'}
     assert_equal(
       "Survey audience updated",
       flash[:notice]
     )
-    DCDO.stubs(:get).with('nps_audience', nil).returns(['even'])
-    post :nps_update, params: {audience: 'odd'}
-    DCDO.stubs(:get).with('nps_audience', nil).returns(['odd'])
-    post :nps_update, params: {audience: 'none'}
-    DCDO.unstub(:get)
-  end
-
-  test 'updates dcdo flag to all and none correctly' do
-    sign_in @admin
-    post :nps_update, params: {audience: 'all'}
-    DCDO.stubs(:get).with('nps_audience', nil).returns(['all'])
-    post :nps_update, params: {audience: 'none'}
-    DCDO.stubs(:get).with('nps_audience', nil).returns(['none'])
     DCDO.unstub(:get)
   end
 
