@@ -84,7 +84,7 @@ WebServerAMI:
         # Ref: http://stackoverflow.com/a/10455027
         sed -i 's/scripts-user$/\[scripts-user, always\]/' /etc/cloud/cloud.cfg
 
-        <%=indent(build_ami, 10)%>
+        <%=indent(build_ami, 8)%>
         # Signal CloudFormation resource.
         aws cloudformation signal-resource \
           --unique-id $INSTANCE_ID \
@@ -144,7 +144,7 @@ Frontends:
     DesiredCapacity: !GetAtt [ASGCount, DesiredCapacity]
     HealthCheckType: EC2 # TODO: use ELB health check that returns healthy even when fully loaded.
     HealthCheckGracePeriod: 2000
-    <%=indent(add_properties(frontend_properties), 6)%>
+    <%=indent(add_properties(frontend_properties), 4)%>
     MetricsCollection:
       - Granularity: 1Minute
 
@@ -173,7 +173,7 @@ FrontendLaunchConfig:
         REGION=${AWS::Region}
 
         INSTANCE_ID=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
-        <%=indent(build_frontend, 10)%>
+        <%=indent(build_frontend, 8)%>
         if [ $? -eq 0 ]
         then
           CFN_STATUS=SUCCESS
