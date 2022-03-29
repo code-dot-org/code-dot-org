@@ -183,12 +183,11 @@ class ProjectsController < ApplicationController
   end
 
   def prefix_storage_app_fields(field_names)
-    table_name = "storage_apps"
-    field_names.map {|field_name| "#{table_name}__#{field_name}".to_sym}
+    field_names.map {|field_name| "#{StorageApps.table_name}__#{field_name}".to_sym}
   end
 
   def combine_projects_and_featured_projects_data
-    storage_apps = "#{CDO.pegasus_db_name}__storage_apps".to_sym
+    storage_apps = DCDO.get('storage_apps_in_dashboard', false) ? "#{CDO.dashboard_db_name}__projects".to_sym : "#{CDO.pegasus_db_name}__storage_apps".to_sym
     project_featured_project_combo_data = DASHBOARD_DB[:featured_projects].
       select(*project_and_featured_project_fields).
       join(storage_apps, id: :storage_app_id, state: 'active').all
