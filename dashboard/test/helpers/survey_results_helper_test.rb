@@ -52,10 +52,10 @@ class SurveyResultsHelperTest < ActionView::TestCase
   end
 
   test 'show nps survey' do
-    DCDO.stubs(:set).with('nps_audience', 'all')
+    DCDO.stubs(:get).with('nps_audience', 'all').returns(['all'])
     stubs(:language).returns "en"
     assert show_nps_survey?
-    DCDO.unstub(:set)
+    DCDO.unstub(:get)
   end
 
   test 'do not show nps survey' do
@@ -64,10 +64,10 @@ class SurveyResultsHelperTest < ActionView::TestCase
   end
 
   test 'target audience' do
-    DCDO.stubs(:set).with('nps_audience', 'all')
+    DCDO.stubs(:get).with('nps_audience', 'all').returns(['all'])
     assert target_audience? @teacher.id
-    DCDO.stubs(:set).with('nps_audience', 'none')
+    DCDO.stubs(:get).with('nps_audience', 'none').returns(['none'])
     refute target_audience? @teacher.id
-    DCDO.unstub(:set)
+    DCDO.unstub(:get)
   end
 end
