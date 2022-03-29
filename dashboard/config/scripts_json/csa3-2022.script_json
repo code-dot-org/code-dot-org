@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-26 00:20:50 UTC",
+    "serialized_at": "2022-03-28 23:57:42 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -1373,7 +1373,7 @@
       "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define `ArrayIndexOutOfBoundsException`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to complete Levels 4 and 5. Students complete a choice level on Level 4 to assign and change individual elements in a 1D array. On Level 5, students print the contents of the 1D array using a `while` loop.",
-        "progression_name": "Adding and Printing Values"
+        "progression_name": "Using and Changing Values"
       },
       "seeding_key": {
         "activity_section.key": "becc8e9d-c868-43cc-9101-f796de1630f8",
@@ -3698,6 +3698,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L1-L1_2022"
+        ],
         "progression": "Investigate: 1D Arrays"
       },
       "bonus": false,
@@ -3720,6 +3723,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L1-L2_2022"
+        ],
         "progression": "Using 1D Arrays"
       },
       "bonus": false,
@@ -3742,6 +3748,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L1-L3_2022"
+        ],
         "progression": "Using 1D Arrays"
       },
       "bonus": false,
@@ -3764,6 +3773,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L1-L4_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3786,6 +3798,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L1_2022"
+        ],
         "progression": "Predict: Adding and Changing Values"
       },
       "bonus": false,
@@ -3808,6 +3823,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L2_2022"
+        ],
         "progression": "Investigate: 1D Array Elements"
       },
       "bonus": false,
@@ -3830,6 +3848,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L3_2022"
+        ],
         "progression": "Investigate: 1D Array Elements"
       },
       "bonus": false,
@@ -3852,7 +3873,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Adding and Printing Values"
+        "level_keys": [
+          "CSA U3L2-L4_2022"
+        ],
+        "progression": "Using and Changing Values"
       },
       "bonus": false,
       "seeding_key": {
@@ -3874,7 +3898,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Adding and Printing Values"
+        "level_keys": [
+          "CSA U3L2-L5_2022"
+        ],
+        "progression": "Using and Changing Values"
       },
       "bonus": false,
       "seeding_key": {
@@ -3896,6 +3923,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L6_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3918,6 +3948,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L3-L1_2022"
+        ],
         "progression": "Using for Loops"
       },
       "bonus": false,
@@ -3940,6 +3973,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L3-L2_2022"
+        ],
         "progression": "Using for Loops"
       },
       "bonus": false,
@@ -3962,6 +3998,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L3-L3_2022"
+        ],
         "progression": "Using for Loops"
       },
       "bonus": false,
@@ -3984,6 +4023,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L3-L4 CR_2022"
+        ],
         "progression": "Code Review: Using for Loops"
       },
       "bonus": false,
@@ -4006,6 +4048,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L3-L5_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4028,6 +4073,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L1_2022"
+        ],
         "progression": "Predict: Finding Elements"
       },
       "bonus": false,
@@ -4050,6 +4098,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L2_2022"
+        ],
         "progression": "Investigate: Exploring Algorithms"
       },
       "bonus": false,
@@ -4072,6 +4123,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L3_2022"
+        ],
         "progression": "Writing Algorithms with Arrays"
       },
       "bonus": false,
@@ -4094,6 +4148,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L4 CR_2022"
+        ],
         "progression": "Code Review: Writing Algorithms with Arrays"
       },
       "bonus": false,
@@ -4116,6 +4173,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L5_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4138,6 +4198,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L5-L1_2022"
+        ],
         "progression": "Predict: Enhanced for Loops"
       },
       "bonus": false,
@@ -4160,6 +4223,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L5-L2_2022"
+        ],
         "progression": "Investigate: Enhanced for Loops"
       },
       "bonus": false,
@@ -4182,6 +4248,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L5-L3_2022"
+        ],
         "progression": "Using Enhanced for Loops"
       },
       "bonus": false,
@@ -4204,6 +4273,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L5-L4_2022"
+        ],
         "progression": "Using Enhanced for Loops"
       },
       "bonus": false,
@@ -4226,6 +4298,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L5-L5_2022"
+        ],
         "progression": "Using Enhanced for Loops"
       },
       "bonus": false,
@@ -4248,6 +4323,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L5-L6_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4270,6 +4348,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L6-L1_2022"
+        ],
         "progression": "Predict: Static Variables"
       },
       "bonus": false,
@@ -4292,6 +4373,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L6-L2_2022"
+        ],
         "progression": "Investigate: Constants"
       },
       "bonus": false,
@@ -4314,6 +4398,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L6-L3_2022"
+        ],
         "progression": "Using Static Variables and Constants"
       },
       "bonus": false,
@@ -4336,6 +4423,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L6-L4_2022"
+        ],
         "progression": "Using Static Variables and Constants"
       },
       "bonus": false,
@@ -4358,6 +4448,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L6-L5_2022"
+        ],
         "progression": "Using Static Variables and Constants"
       },
       "bonus": false,
@@ -4380,6 +4473,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L6-L6_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4402,6 +4498,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L7-L1_2022"
+        ],
         "progression": "Predict: Arrays of Objects"
       },
       "bonus": false,
@@ -4424,6 +4523,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L7-L2_2022"
+        ],
         "progression": "Investigate: Polymorphism"
       },
       "bonus": false,
@@ -4446,6 +4548,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L7-L3_2022"
+        ],
         "progression": "Using Polymorphism"
       },
       "bonus": false,
@@ -4468,6 +4573,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L7-L4_2022"
+        ],
         "progression": "Using Polymorphism"
       },
       "bonus": false,
@@ -4490,6 +4598,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L7-L5_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4512,6 +4623,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L8-L1_2022"
+        ],
         "progression": "Predict: Reading a File"
       },
       "bonus": false,
@@ -4534,6 +4648,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L8-L2_2022"
+        ],
         "progression": "Investigate: Accessing Pairs"
       },
       "bonus": false,
@@ -4556,6 +4673,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L8-L3_2022"
+        ],
         "progression": "Finding Minimum and Maximum Values"
       },
       "bonus": false,
@@ -4578,6 +4698,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L8-L4_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4600,6 +4723,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L1_2022"
+        ],
         "progression": "Predict: In the Wrong Order"
       },
       "bonus": false,
@@ -4622,6 +4748,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L2_2022"
+        ],
         "progression": "Reversing a 1D Array"
       },
       "bonus": false,
@@ -4644,6 +4773,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L3_2022"
+        ],
         "progression": "Reversing a 1D Array"
       },
       "bonus": false,
@@ -4666,6 +4798,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L4_2022"
+        ],
         "progression": "Reversing a 1D Array"
       },
       "bonus": false,
@@ -4688,6 +4823,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L5 CR_2022"
+        ],
         "progression": "Code Review: Reversing a 1D Array"
       },
       "bonus": false,
@@ -4710,6 +4848,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L6_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4732,6 +4873,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L10-L1_2022"
+        ],
         "progression": "Predict: Nested Loops"
       },
       "bonus": false,
@@ -4754,6 +4898,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L10-L2_2022"
+        ],
         "progression": "Finding Duplicates"
       },
       "bonus": false,
@@ -4776,6 +4923,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L10-L3_2022"
+        ],
         "progression": "Finding Duplicates"
       },
       "bonus": false,
@@ -4798,6 +4948,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L10-L5_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4820,6 +4973,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L11-L1_2022"
+        ],
         "progression": "Data for Social Good Project"
       },
       "bonus": false,
@@ -4842,6 +4998,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L12-L1_2022"
+        ],
         "progression": "Data for Social Good Project"
       },
       "bonus": false,
@@ -4864,6 +5023,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L12-L2_2022"
+        ],
         "progression": "Code Review: Data for Social Good Project"
       },
       "bonus": false,
@@ -4886,6 +5048,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L13-L1_2022"
+        ],
         "progression": "Data for Social Good Project"
       },
       "bonus": false,

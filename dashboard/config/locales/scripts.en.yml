@@ -31604,7 +31604,18 @@ en:
           title: Class Structure and Design ('22-'23)
           description_audience: ''
           description_short: ''
-          description: This unit expands on the object-oriented programming principles introduced in Unit 1 to explore design principles as students develop classes with attributes and behaviors and work with primitive and object data. Students learn to work with variables and user input as they develop and utilize classes and objects to represent desserts, customers, and food trucks for the Project Mercury Pastries Food Truck business. As students work with the `Dessert` class, they build on their knowledge of inheritance to design subclasses that represent specific types of desserts. While working with variables, students learn to create and evaluate expressions using assignment and relational operators and trace code segments to determine the result of output. Throughout this unit, students continue to develop software engineering skills as they learn to use UML diagrams to represent classes and the DRY principle to refactor program code.
+          description: |-
+            This unit expands on the object-oriented programming principles introduced in Unit 1 to explore design principles as students develop classes with attributes and behaviors and work with primitive and object data. Students learn to work with variables and user input as they develop and utilize classes and objects to represent desserts, customers, and food trucks for the Project Mercury Pastries Food Truck business. As students work with the `Dessert` class, they build on their knowledge of inheritance to design subclasses that represent specific types of desserts. While working with variables, students learn to create and evaluate expressions using assignment and relational operators and trace code segments to determine the result of output. Throughout this unit, students continue to develop software engineering skills as they learn to use UML diagrams to represent classes and the DRY principle to refactor program code.
+
+            ### AP Classroom Personal Progress Checks
+            To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org/s/csa6-pilot-facilitator/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
+
+            The following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:
+            * Personal Progress Check 1
+            * Personal Progress Check 5
+            * Personal Progress Check 9
+
+            ***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.*
           student_description: This unit expands on the object-oriented programming principles introduced in Unit 1 to explore design principles as you develop classes with attributes and behaviors and work with primitive and object data. You learn to work with variables and user input as you develop and utilize classes and objects to represent desserts, customers, and food trucks for the Project Mercury Pastries Food Truck business. As you work with the `Dessert` class, you build on your knowledge of inheritance to design subclasses that represent specific types of desserts. While working with variables, you learn to create and evaluate expressions using assignment and relational operators and trace code segments to determine the result of output. Throughout this unit, you continue to develop software engineering skills as you learn to use UML diagrams to represent classes and the DRY principle to refactor program code.
         csa3-2022:
           lessons:
@@ -31901,6 +31912,32 @@ en:
               name: FRQ Practice
             lesson-2:
               name: Unit 4 Assessment
+            lesson-3:
+              name: The Theater
+            lesson-4:
+              name: Object Aliases and Equality
+            lesson-5:
+              name: Nested if Statements
+            lesson-6:
+              name: Logical Operators
+            lesson-7:
+              name: De Morgan's Laws
+            lesson-8:
+              name: Static Methods
+            lesson-9:
+              name: The Math Class
+            lesson-10:
+              name: Casting and Rounding
+            lesson-11:
+              name: Random
+            lesson-12:
+              name: Multi-Selection Statements
+            lesson-13:
+              name: Abstract Data Art Project – Day 1
+            lesson-14:
+              name: Abstract Data Art Project – Day 2
+            lesson-15:
+              name: Abstract Data Art Project – Day 3
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -31910,8 +31947,17 @@ en:
           title: Conditions and Logic ('22-'23)
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            This unit revisits the use of packages to access existing functionalities in their programs, such as The Neighborhood, to expand their knowledge of APIs and libraries and explore The Theater. With The Theater, students learn to improve the decisions made in conditionals and loops with relational and logical operators to evaluate primitive values and object references. Additionally, students use casting operators and `Math` class methods to evaluate expressions and perform calculations, including incorporating random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, students develop an understanding of De Morgan's Laws and learn how to evaluate truth tables.
+
+            ### AP Classroom Personal Progress Checks
+            To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org/s/csa6-pilot-facilitator/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
+
+            The following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:
+            * Personal Progress Check 3
+
+            ***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.*
+          student_description: This unit expands your knowledge of APIs and libraries as you explore The Theater. With The Theater, you learn to improve the decisions made in conditionals and loops with relational and logical operators to evaluate primitive values and object references. Additionally, you use casting operators and `Math` class methods to evaluate expressions and perform calculations, including incorporating random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, you develop an understanding of De Morgan's Laws and learn how to evaluate truth tables.
         csa5-2022:
           lessons:
             lesson-1:
@@ -33849,6 +33895,8 @@ en:
           lessons:
             lesson-1:
               name: Introduction to Interactive Animations and Games
+              description_student: 
+              description_teacher: 
             lesson-2:
               name: Create a scene
               description_student: 
@@ -33859,8 +33907,12 @@ en:
               description_teacher: 
             lesson-4:
               name: Explore game design
+              description_student: 
+              description_teacher: 
             lesson-5:
               name: Unit wrap up
+              description_student: 
+              description_teacher: 
             lesson-6:
               name: Animate a scene using sprites
               description_student: 
@@ -33878,14 +33930,24 @@ en:
           lessons:
             lesson-1:
               name: Introduction to The Design Process
+              description_student: 
+              description_teacher: 
             lesson-2:
               name: Apply the design process to the development of a paper prototype
+              description_student: 
+              description_teacher: 
             lesson-3:
               name: Explore design mode and events in App Lab
+              description_student: 
+              description_teacher: 
             lesson-4:
               name: Consider how apps can be used for good
+              description_student: 
+              description_teacher: 
             lesson-5:
               name: Unit wrap up
+              description_student: 
+              description_teacher: 
           lesson_groups: {}
           name: vpl-csd4-ci-pilot-2022
           title: " Module 4: Preparing to Teach The Design Process"
@@ -33955,10 +34017,16 @@ en:
           lessons:
             lesson-1:
               name: Introduction to AI and Machine Learning
+              description_student: 
+              description_teacher: 
             lesson-2:
               name: Train a machine learning model
+              description_student: 
+              description_teacher: 
             lesson-3:
               name: Engage with machine learning apps
+              description_student: 
+              description_teacher: 
             lesson-4:
               name: Consider real world implications
               description_student: 
@@ -33978,8 +34046,8 @@ en:
           lessons:
             lesson-1:
               name: Hello World CSC
-              description_student: 
-              description_teacher: 
+              description_student: In this lesson, you will learn to create and animate sprites and make them interactive using events.
+              description_teacher: 'In this **skill-building** lesson, students will learn to create and animate sprites and make them interactive using events. '
           lesson_groups: {}
           name: hello-world-csc
           title: Hello World
@@ -33993,6 +34061,15 @@ en:
               name: Level Updates
               description_student: 
               description_teacher: 
+            Innovations in Computing:
+              name: Innovations in Computing
+              description_student: 'In this lesson, you will explore a wide variety of new and innovative computing platforms while expanding your understanding of what a computer can be.
+
+'
+              description_teacher: |-
+                In this lesson, students will do some research into interesting innovations in computing. This lesson will expose students to a wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.
+
+                **Question of the Day:** What is a computing innovation?
           lesson_groups: {}
           name: csd-playground
           title: CSD Playground
@@ -34000,3 +34077,38 @@ en:
           description_short: For staging updates to lessons or levels between curriculum versions
           description: For staging updates to lessons or levels between curriculum versions
           student_description: ''
+        csc-pilot-2022-ecosystems:
+          lessons:
+            lesson-1:
+              name: 'Hello World CSC '
+            lesson-2:
+              name: 'Ecosystems: Interactions, Energy & Dynamics'
+            lesson-3:
+              name: Biological Evolution
+          lesson_groups: {}
+          name: csc-pilot-2022-ecosystems
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csc-pilot-2022-timecapsule:
+          lessons:
+            lesson-1:
+              name: Visual Effects
+            lesson-2:
+              name: My Time Capsule Story
+            lesson-3:
+              name: Coding My Time Capsule
+            lesson-4:
+              name: Gallery Walk
+          lesson_groups: {}
+          name: csc-pilot-2022-timecapsule
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csc-pilot-2022-starquilts:
+          lessons: {}
+          lesson_groups: {}
