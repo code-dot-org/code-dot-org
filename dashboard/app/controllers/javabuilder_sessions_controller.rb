@@ -77,8 +77,8 @@ class JavabuilderSessionsController < ApplicationController
 
     # Set the IAT a little in the past to account for time drift between environments
     issued_at_time = (Time.now - 5.seconds).to_i
-    # expire token in 15 minutes
-    expiration_time = (Time.now + 15.minutes).to_i
+    # expire token in 1 minute
+    expiration_time = (Time.now + 1.minute).to_i
 
     payload = {
       iat: issued_at_time,

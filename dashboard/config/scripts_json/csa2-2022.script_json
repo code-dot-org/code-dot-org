@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-25 15:46:19 UTC",
+    "serialized_at": "2022-03-28 12:33:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5625,6 +5625,18 @@
       }
     },
     {
+      "name": "[KEY] U2L10 Extra Practice",
+      "url": "https://docs.google.com/document/d/1V6RzkOVfNI_fqFH0LEjYR_yNHFbPuS3jaH6Hf28eZQQ/edit?usp=sharing",
+      "key": "_key_u2l10_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u2l10_extra_practice"
+      }
+    },
+    {
       "name": "[KEY] U2L1 Extra Practice",
       "url": "https://docs.google.com/document/d/1n6xEhE4ajp_vcU1cC6tyzzZmiukRFJ5vtHeVcgunlaU/edit?usp=sharing",
       "key": "_key_u2l1_extra_practice",
@@ -5871,6 +5883,18 @@
       },
       "seeding_key": {
         "resource.key": "store_management_project_planning_guide"
+      }
+    },
+    {
+      "name": "U2L10 Extra Practice",
+      "url": "https://docs.google.com/document/d/1xYvqBsOIfRxiGILRvDK-YeQBo_NXLl3rG--HtGBpdMo/edit?usp=sharing",
+      "key": "u2l10_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l10_extra_practice"
       }
     },
     {
@@ -6160,7 +6184,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-15",
+        "resource.key": "_key_u2l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
         "resource.key": "diagramming_scope"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "u2l10_extra_practice"
       }
     },
     {

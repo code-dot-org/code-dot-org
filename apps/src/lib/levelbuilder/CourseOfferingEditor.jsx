@@ -95,7 +95,7 @@ export default function CourseOfferingEditor(props) {
           type="checkbox"
           defaultChecked={courseOffering.is_featured}
           style={styles.checkbox}
-          onChange={e => updateCourseOffering('is_featured', e.target.value)}
+          onChange={e => updateCourseOffering('is_featured', e.target.checked)}
         />
       </label>
       <label>
@@ -111,7 +111,7 @@ export default function CourseOfferingEditor(props) {
           type="checkbox"
           defaultChecked={courseOffering.assignable}
           style={styles.checkbox}
-          onChange={e => updateCourseOffering('assignable', e.target.value)}
+          onChange={e => updateCourseOffering('assignable', e.target.checked)}
         />
       </label>
 
