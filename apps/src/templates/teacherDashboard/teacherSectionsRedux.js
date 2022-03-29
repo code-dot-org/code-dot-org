@@ -202,7 +202,10 @@ function removeNullValues(key, val) {
  * the server
  * @param {number} sectionId
  * @param {number} courseId
+ * @param {number} courseOfferingId
+ * @param {number} courseVersionId
  * @param {number} unitId
+ * @param {string} pageType
  */
 export const assignToSection = (
   sectionId,
