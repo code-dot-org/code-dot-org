@@ -108,29 +108,31 @@ Resources:
           - Effect: Allow
             Action: 's3:*'
             Resource: '*'
+
 <% if frontends -%>
-<%=  component 'ami', ami: (ami = commit[0..4]),
-  image_id: IMAGE_ID,
-  ssh_key_name: SSH_KEY_NAME,
-  subnets: subnets(azs(AVAILABILITY_ZONES - ['us-east-1e'])), # us-east-1e doesn't support m5 instance types.
-  frontend_policies: [{Ref: 'CDOPolicy'}, {'Fn::ImportValue': 'IAM-SessionPermissions'}],
-  frontend_properties: {TargetGroupARNs: [Ref: 'ALBTargetGroup']},
-  frontend_volume_size: 64,
-  ami_timeout: 'PT120M',
-  build_ami: erb_file(BOOTSTRAP_CHEF,
-    resource_id: "AMICreate#{ami}",
-    node_name: 'ami-$INSTANCE_ID',
-    run_list: [CDO.chef_local_mode ? 'recipe[cdo-apps]' : 'role[unmonitored-frontend]'],
-    commit: commit,
-    daemon: false
-  ),
-  frontend_timeout: 'PT50M',
-  build_frontend: erb_file(aws_dir('cloudformation/bootstrap_frontend.sh.erb'),
-    node_name: 'fe-$INSTANCE_ID',
-    commit: commit
-  )
-%>
+  <%= component 'ami', ami: (ami = commit[0..4]),
+    image_id: IMAGE_ID,
+    ssh_key_name: SSH_KEY_NAME,
+    subnets: subnets(azs(AVAILABILITY_ZONES - ['us-east-1e'])), # us-east-1e doesn't support m5 instance types.
+    frontend_policies: [{Ref: 'CDOPolicy'}, {'Fn::ImportValue': 'IAM-SessionPermissions'}],
+    frontend_properties: {TargetGroupARNs: [Ref: 'ALBTargetGroup']},
+    frontend_volume_size: 64,
+    ami_timeout: 'PT120M',
+    build_ami: erb_file(BOOTSTRAP_CHEF,
+      resource_id: "AMICreate#{ami}",
+      node_name: 'ami-$INSTANCE_ID',
+      run_list: [CDO.chef_local_mode ? 'recipe[cdo-apps]' : 'role[unmonitored-frontend]'],
+      commit: commit,
+      daemon: false
+    ),
+    frontend_timeout: 'PT50M',
+    build_frontend: erb_file(aws_dir('cloudformation/bootstrap_frontend.sh.erb'),
+      node_name: 'fe-$INSTANCE_ID',
+      commit: commit
+    )
+  %>
 <% end -%>
+
 <% if load_balancer -%>
   # TODO hourofcode.com and csedweek.org load balancers should be added to this template.
 <% raise "LoadBalancer name [#{stack_name}] cannot be longer than 32 characters" if stack_name.length > 32 -%>
@@ -207,15 +209,15 @@ Resources:
 <% end -%>
 
 <% if frontends -%>
-<%= component 'slack_scaling_events' -%>
-<%  if environment == :production -%>
-<%=   component 'slack_health_events' -%>
-<%=   component 'scaling_schedule' -%>
-<%  end -%>
+  <%= component 'slack_scaling_events' -%>
+  <%- if environment == :production -%>
+  <%=   component 'slack_health_events' -%>
+  <%=   component 'scaling_schedule' -%>
+  <%  end -%>
 <% end -%>
 
-# Route53 (DNS) and CloudFront (CDN) resources:
-# TODO hourofcode.com and csedweek.org DNS/CDN resources should be added to this template.
+  # Route53 (DNS) and CloudFront (CDN) resources:
+  # TODO hourofcode.com and csedweek.org DNS/CDN resources should be added to this template.
 <%
   %w(Dashboard Pegasus).each do |app|
     app_domain = app == 'Dashboard' ? studio_subdomain : subdomain
@@ -248,7 +250,7 @@ Resources:
 <%   end -%>
 
 <% if cdn_enabled && app == 'Pegasus' -%>
-<%=  component 'www_redirect', app: app -%>
+  <%= component 'www_redirect', app: app -%>
 <% end -%>
 
 <% end -%>
@@ -272,7 +274,7 @@ Resources:
 <% end -%>
 
 <% if frontends-%>
-<%=  component 'cache'%>
+  <%= component 'cache'%>
 <% end -%>
 
   DaemonRole:
@@ -536,20 +538,20 @@ Resources:
         - DeviceIndex: 0
           SubnetId: <%=subnets[1].to_json%>
           GroupSet: [!ImportValue VPC-FrontendSecurityGroup]
-<%   if database %>
+<%- if database -%>
     DependsOn: Aurora1
-<%   end -%>
+<%- end -%>
 <% end-%>
 
-<% if alarms-%>
-<%=  component 'alarms'%>
+<% if alarms -%>
+  <%=  component 'alarms'%>
 <% end -%>
 
-<% if database-%>
-<%= component 'database'%>
+<% if database -%>
+  <%= component 'database'%>
 <% end -%>
 
-<%= component 'codeprojects' %>
+  <%= component 'codeprojects' %>
 
   ChefConfig:
     Type: AWS::SecretsManager::Secret
@@ -567,7 +569,7 @@ Outputs:
   PegasusURL:
     Value: "https://<%=subdomain%>"
     Description: Pegasus URL
-# display information about how to ssh to console if this is a single instance adhoc environment
+<%# display information about how to ssh to console if this is a single instance adhoc environment %>
 <% if rack_env?(:adhoc) && !frontends -%>
   SSHServerName:
     Value: <%=cdn_enabled ? subdomain('origin') : stack_name%>
