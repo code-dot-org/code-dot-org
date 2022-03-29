@@ -12,6 +12,7 @@ class ProgrammingClassesControllerTest < ActionController::TestCase
 
   test 'can create programming class from params' do
     sign_in @levelbuilder
+    File.expects(:write).once
     assert_creates(ProgrammingClass) do
       post :create, params: {key: 'class_key', name: 'class name', programming_environment_id: @programming_environment.id}
     end
@@ -29,6 +30,7 @@ class ProgrammingClassesControllerTest < ActionController::TestCase
 
   test 'can update programming class from params' do
     sign_in @levelbuilder
+    File.expects(:write).once
 
     programming_class = create :programming_class, programming_environment: @programming_environment
     category = create :programming_environment_category, programming_environment: @programming_environment
