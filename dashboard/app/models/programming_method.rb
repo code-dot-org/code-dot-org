@@ -20,4 +20,23 @@
 #  index_programming_methods_on_key_and_programming_class_id  (key,programming_class_id) UNIQUE
 #
 class ProgrammingMethod < ApplicationRecord
+  include CurriculumHelper
+
+  belongs_to :programming_class
+
+  before_validation :generate_key, on: :create
+  validates_uniqueness_of :key, scope: :programming_class_id, case_sensitive: false
+  validate :validate_key_format
+
+  def generate_key
+    return key if key
+    key = ProgrammingMethod.sanitize_key(name)
+    self.key = key
+  end
+
+  def self.sanitize_key(str)
+    str.strip.downcase.chars.map do |character|
+      KEY_CHAR_RE.match(character) ? character : '_'
+    end.join.gsub(/_+/, '_')
+  end
 end
