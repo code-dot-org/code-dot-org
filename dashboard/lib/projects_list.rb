@@ -33,7 +33,7 @@ module ProjectsList
     def fetch_personal_projects(user_id)
       personal_projects_list = []
       storage_id = storage_id_for_user_id(user_id)
-      PEGASUS_DB[:storage_apps].where(storage_id: storage_id, state: 'active').each do |project|
+      StorageApps.new(storage_id).get_active_projects.each do |project|
         channel_id = storage_encrypt_channel_id(storage_id, project[:id])
         project_data = get_project_row_data(project, channel_id, nil, true)
         personal_projects_list << project_data if project_data
@@ -50,9 +50,7 @@ module ProjectsList
       personal_projects_list = []
       storage_id = storage_id_for_user_id(user_id)
 
-      storage_apps_query = PEGASUS_DB[:storage_apps].
-        where(storage_id: storage_id, state: state).
-        order(Sequel.desc(:updated_at))
+      storage_apps_query = StorageApps.new(storage_id).get_projects_with_state(state: state, order: Sequel.desc(:updated_at))
 
       storage_apps_query.each do |project|
         channel_id = storage_encrypt_channel_id(storage_id, project[:id])
@@ -73,7 +71,7 @@ module ProjectsList
         student_storage_ids = get_storage_ids_by_user_ids(section_students.pluck(:id))
         section_students.each do |student|
           next unless student_storage_id = student_storage_ids[student.id]
-          PEGASUS_DB[:storage_apps].where(storage_id: student_storage_id, state: 'active').each do |project|
+          StorageApps.new(student_storage_id).get_active_projects.each do |project|
             # The channel id stored in the project's value field may not be reliable
             # when apps are remixed, so recompute the channel id.
             channel_id = storage_encrypt_channel_id(student_storage_id, project[:id])
@@ -149,7 +147,7 @@ module ProjectsList
       [].tap do |projects_list_data|
         user_storage_ids = get_user_ids_by_storage_ids(section_users.pluck(:id))
         user_storage_id_list = user_storage_ids.keys
-        PEGASUS_DB[:storage_apps].
+        StorageApps.table.
           where(storage_id: user_storage_id_list, state: 'active').
           where(project_type: project_types).
           where("value->'$.libraryName' IS NOT NULL").
@@ -185,7 +183,8 @@ module ProjectsList
       return [] if project_ids.nil_or_empty?
 
       updated_library_channels = []
-      PEGASUS_DB[:storage_apps].where(id: project_ids).each do |project|
+
+      StorageApps.get_by_ids(project_ids).each do |project|
         library = libraries.find {|lib| lib['project_id'] == project[:id]}
         project_value = JSON.parse(project[:value])
         next unless library && project_value['latestLibraryVersion']
@@ -199,29 +198,27 @@ module ProjectsList
     end
 
     def project_and_featured_project_and_user_fields
-      [
-        :storage_apps__id___id,
-        :storage_apps__storage_id___storage_id,
-        :storage_apps__value___value,
-        :storage_apps__project_type___project_type,
-        :storage_apps__published_at___published_at,
+      storage_apps_fields = prefix_storage_app_fields(%w(id___id storage_id___storage_id value___value project_type___project_type published_at___published_at))
+
+      other_fields = [
         :featured_projects__featured_at___featured_at,
         :featured_projects__unfeatured_at___unfeatured_at,
         :users__name___name,
         :users__birthday___birthday,
         :users__properties___properties,
       ]
+
+      storage_apps_fields.concat(other_fields)
     end
 
     def fetch_featured_projects_by_type(project_type)
-      storage_apps = "#{CDO.pegasus_db_name}__storage_apps".to_sym
-
+      storage_apps_table = DCDO.get('storage_apps_in_dashboard', false) ? "#{CDO.dashboard_db_name}__projects".to_sym : "#{CDO.pegasus_db_name}__storage_apps".to_sym
       user_project_storage_ids = "#{CDO.dashboard_db_name}__user_project_storage_ids".to_sym
 
       project_featured_project_user_combo_data = DASHBOARD_DB[:featured_projects].
         select(*project_and_featured_project_and_user_fields).
-        join(storage_apps, id: :storage_app_id).
-        join(user_project_storage_ids, id: Sequel[:storage_apps][:storage_id]).
+        join(storage_apps_table, id: :storage_app_id).
+        join(user_project_storage_ids, id: Sequel[storage_apps_table][:storage_id]).
         join(:users, id: Sequel[user_project_storage_ids][:user_id]).
         where(
           unfeatured_at: nil,
@@ -304,17 +301,15 @@ module ProjectsList
     end
 
     def project_and_user_fields
-      [
-        :storage_apps__id___id,
-        :storage_apps__storage_id___storage_id,
-        :storage_apps__value___value,
-        :storage_apps__project_type___project_type,
-        :storage_apps__published_at___published_at,
-        :storage_apps__abuse_score___abuse_score,
+      storage_app_fields = prefix_storage_app_fields(%w(id___id storage_id___storage_id value___value project_type___project_type published_at___published_at abuse_score___abuse_score))
+
+      user_fields = [
         :users__name___name,
         :users__birthday___birthday,
         :users__properties___properties,
       ]
+
+      storage_app_fields.concat(user_fields)
     end
 
     def fetch_published_project_types(project_groups, limit:, published_before: nil)
@@ -325,7 +320,7 @@ module ProjectsList
       {}.tap do |projects|
         project_groups.map do |project_group|
           project_types = PUBLISHED_PROJECT_TYPE_GROUPS[project_group]
-          projects[project_group] = PEGASUS_DB[:storage_apps].
+          projects[project_group] = StorageApps.table.
             select(*project_and_user_fields).
             join(user_project_storage_ids, id: :storage_id).
             join(users, id: :user_id).
@@ -358,6 +353,10 @@ module ProjectsList
           isFeatured: false
         }
       ).with_indifferent_access
+    end
+
+    def prefix_storage_app_fields(field_names)
+      field_names.map {|field_name| "#{StorageApps.table_name}__#{field_name}".to_sym}
     end
   end
 end

@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-22 15:12:03 UTC",
+    "serialized_at": "2022-03-23 15:22:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -186,7 +186,6 @@
       "key": "1457c5b4-bc26-48aa-a933-e3fbca0bd410",
       "position": 1,
       "properties": {
-        "description": "**After this lesson, you will be able to:**\n\n* Create a new file in the Java Lab IDE\n* Name Java files using conventions for naming\n* Know the basics of Java syntax\n* Print information to the console",
         "progression_name": "Overview"
       },
       "seeding_key": {
@@ -235,17 +234,6 @@
       },
       "seeding_key": {
         "activity_section.key": "18b7040e-3e67-4816-a18b-c1a0b96201a5",
-        "lesson_activity.key": "0c402e2a-025e-4a40-8c9e-efd3bcae7163"
-      }
-    },
-    {
-      "key": "ab365644-ee84-46d3-8ebf-5cf218887350",
-      "position": 6,
-      "properties": {
-        "progression_name": "Holder info - DO NOT REVIEW"
-      },
-      "seeding_key": {
-        "activity_section.key": "ab365644-ee84-46d3-8ebf-5cf218887350",
         "lesson_activity.key": "0c402e2a-025e-4a40-8c9e-efd3bcae7163"
       }
     },
@@ -449,6 +437,17 @@
         "activity_section.key": "1ecc5a5d-dc29-429c-8d05-f5def9487e73",
         "lesson_activity.key": "0180195d-d482-49a8-b6fd-e79c2fdd00ac"
       }
+    },
+    {
+      "key": "3fd00bf3-4f55-4b5c-a3be-1331682db1c1",
+      "position": 6,
+      "properties": {
+        "progression_name": "Wrap up"
+      },
+      "seeding_key": {
+        "activity_section.key": "3fd00bf3-4f55-4b5c-a3be-1331682db1c1",
+        "lesson_activity.key": "0180195d-d482-49a8-b6fd-e79c2fdd00ac"
+      }
     }
   ],
   "script_levels": [
@@ -508,6 +507,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "Intro to Java Lab - debugging 1"
         ],
@@ -558,6 +558,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "Intro to Java Lab - System"
         ],
@@ -608,6 +609,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "CSAPL3-1-SyntaxDebugging1"
         ],
@@ -633,6 +635,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "CSAPL3-1-SyntaxDebugging2"
         ],
@@ -658,6 +661,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "CSAPL3-1-SyntaxDebugging3"
         ],
@@ -704,31 +708,6 @@
     },
     {
       "chapter": 11,
-      "position": 11,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "Javalab Example - Using Instructor in Training"
-        ],
-        "progression": "Holder info - DO NOT REVIEW"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Javalab Example - Using Instructor in Training"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-csa3-2022",
-        "activity_section.key": "ab365644-ee84-46d3-8ebf-5cf218887350"
-      },
-      "level_keys": [
-        "Javalab Example - Using Instructor in Training"
-      ]
-    },
-    {
-      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -753,7 +732,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -778,7 +757,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 13,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -803,11 +782,12 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 14,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-CSA-22-mod3-variables-practice-1"
         ],
@@ -828,11 +808,12 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 15,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-CSA-22-mod3-variables-practice-2"
         ],
@@ -853,7 +834,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 16,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -878,7 +859,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 17,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -903,11 +884,12 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 18,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-CSA-22-mod3-variables-practice-3"
         ],
@@ -928,7 +910,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 19,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
@@ -953,11 +935,12 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 20,
       "position": 10,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-CSA-22-mod3-modify-variables-practice-1"
         ],
@@ -978,7 +961,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 21,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -1003,7 +986,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 22,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -1028,7 +1011,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 23,
       "position": 13,
       "activity_section_position": 3,
       "assessment": false,
@@ -1053,11 +1036,12 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 24,
       "position": 14,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-CSA-22-mod3-variables-increment-practice-1"
         ],
@@ -1078,7 +1062,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 25,
       "position": 15,
       "activity_section_position": 5,
       "assessment": false,
@@ -1103,7 +1087,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 26,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -1128,7 +1112,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1153,7 +1137,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1178,7 +1162,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 29,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -1203,7 +1187,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 30,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -1228,11 +1212,12 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 31,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-CSA-22-mod3-L3-if-statement-practice-1"
         ],
@@ -1253,7 +1238,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 32,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -1278,11 +1263,12 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 33,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-CSA-22-mod3-L3-variables-predict-1"
         ],
@@ -1303,11 +1289,12 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 34,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-CSA-22-mod3-L3-variables-practice-2"
         ],
@@ -1328,7 +1315,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 9,
       "activity_section_position": 6,
       "assessment": false,
@@ -1353,7 +1340,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -1378,11 +1365,12 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-CSA-22-mod3-L3-if-else-practice-.5"
         ],
@@ -1403,11 +1391,12 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 38,
       "position": 12,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-CSA-22-mod3-L3-if-else-practice-1"
         ],
@@ -1428,7 +1417,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 39,
       "position": 13,
       "activity_section_position": 4,
       "assessment": false,
@@ -1453,7 +1442,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 40,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -1478,11 +1467,12 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 41,
       "position": 15,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-CSA-22-mod3-L3-else-if-practice-1"
         ],
@@ -1503,11 +1493,12 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 42,
       "position": 16,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-CSA-22-mod3-L3-else-if-practice-2"
         ],
@@ -1528,11 +1519,14 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 43,
       "position": 17,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-L3-matching"
+        ],
         "progression": "Vocabulary"
       },
       "bonus": false,
@@ -1550,7 +1544,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1575,7 +1569,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1600,7 +1594,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 46,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -1625,11 +1619,12 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 47,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-CSA-22-mod3-L4-for-loop-practice-1"
         ],
@@ -1650,11 +1645,12 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 48,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-CSA-22-mod3-L4-for-loop-practice-2"
         ],
@@ -1675,11 +1671,12 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 49,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-CSA-22-mod3-L4-for-loop-practice-3"
         ],
@@ -1700,11 +1697,12 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 50,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-CSA-22-mod3-L4-for-loop-practice-4"
         ],
@@ -1725,11 +1723,12 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 51,
       "position": 8,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-CSA-22-mod3-L4-for-loop-practice-5"
         ],
@@ -1750,11 +1749,12 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 52,
       "position": 9,
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-CSA-22-mod3-L4-for-loop-practice-6"
         ],
@@ -1775,7 +1775,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1800,7 +1800,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1825,7 +1825,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 55,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -1850,7 +1850,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 56,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -1875,7 +1875,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 57,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -1900,7 +1900,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 58,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -1925,7 +1925,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 59,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -1950,11 +1950,12 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 60,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-CSA-22-mod3-L5-acessing-mutating-practice-1"
         ],
@@ -1975,11 +1976,12 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 61,
       "position": 9,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-CSA-22-mod3-L5-acessing-mutating-practice-2"
         ],
@@ -2000,11 +2002,12 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 62,
       "position": 10,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-CSA-22-mod3-L5-acessing-mutating-practice-3"
         ],
@@ -2025,7 +2028,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 63,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -2050,7 +2053,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 64,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -2075,11 +2078,12 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 65,
       "position": 13,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-CSA-22-L5-traverse-practice-1"
         ],
@@ -2100,11 +2104,12 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 66,
       "position": 14,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-CSA-22-L5-traverse-practice-3"
         ],
@@ -2125,11 +2130,12 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 67,
       "position": 15,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-CSA-22-L5-traverse-practice-2"
         ],
@@ -2150,11 +2156,14 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 68,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-mod3-Vocab-lesson-5-matching"
+        ],
         "progression": "Vocabulary"
       },
       "bonus": false,
@@ -2169,6 +2178,28 @@
       },
       "level_keys": [
         "SP-VPL-CSA-22-mod3-Vocab-lesson-5-matching"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 17,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-Navigation-Mod3"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "3fd00bf3-4f55-4b5c-a3be-1331682db1c1"
+      },
+      "level_keys": [
+        "SP-VPL-CSA-22-Navigation-Mod3"
       ]
     }
   ],
@@ -2291,18 +2322,6 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csa3-2022",
         "activity_section.key": "18b7040e-3e67-4816-a18b-c1a0b96201a5"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Javalab Example - Using Instructor in Training",
-        "script_level.level_keys": [
-          "Javalab Example - Using Instructor in Training"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-csa3-2022",
-        "activity_section.key": "ab365644-ee84-46d3-8ebf-5cf218887350"
       }
     },
     {
@@ -2999,6 +3018,18 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-csa3-2022",
         "activity_section.key": "1ecc5a5d-dc29-429c-8d05-f5def9487e73"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSA-22-Navigation-Mod3",
+        "script_level.level_keys": [
+          "SP-VPL-CSA-22-Navigation-Mod3"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "3fd00bf3-4f55-4b5c-a3be-1331682db1c1"
       }
     }
   ],

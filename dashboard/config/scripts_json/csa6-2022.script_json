@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-12 01:32:18 UTC",
+    "serialized_at": "2022-03-25 22:54:38 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -7251,7 +7251,7 @@
     {
       "key": "postcondition",
       "word": "Postcondition",
-      "definition": "A condition that must be true just after a block of code executes",
+      "definition": "a condition that must always be true just after the execution of a code segment",
       "properties": {
       },
       "seeding_key": {
@@ -7261,7 +7261,7 @@
     {
       "key": "precondition",
       "word": "Precondition",
-      "definition": "A condition that must be true just before a block of code can execute",
+      "definition": "a condition that must always be true just before the execution of a code segment",
       "properties": {
       },
       "seeding_key": {
@@ -7311,7 +7311,7 @@
     {
       "key": "text_file",
       "word": "Text File",
-      "definition": "A file that contains letters, numbers, and/or symbols but has no special formatting",
+      "definition": "a file that contains letters, numbers, and/or symbols but has no special formatting",
       "properties": {
       },
       "seeding_key": {

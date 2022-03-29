@@ -1,0 +1,28 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##In MyConsole.java:\r\n\r\n1. Declare and initialize an `int`(#e7e8ea) array called `numbers`(#e7e8ea) using the `new`(#e7e8ea) keyword that will store `10`(#e7e8ea) elements.\r\n\r\n::: details [**Show Me How**]\r\nA 1D array is declared and initialized using the following syntax:\r\n  \r\n  ```\r\n  dataType[] variableName = new dataType[length];\r\n  ```\r\n\r\nBe sure to replace `dataType`(#e7e8ea) with the type of data the array will store. The `variableName`(#e7e8ea) should be the name of the array. The `length`(#e7e8ea) is the number of elements the array will store.\r\n:::",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    // TO DO #1: Declare and initialize a 1D array.\n    \n    \n  }\n}",
+        "isVisible": true
+      }
+    },
+    "encrypted_exemplar_sources": "HM0H7Z3L+CTAPTxDu6u7zslyjM60me7VHOAdpgMoPI58Z9n1/Uvg5we2B/FE\nmp9NBTUKrtoDV7wRJYP+/Rfy3gmQBhHz4t6lqFAcUL03Gda2cDGuK+v+Jm/e\nfnfB0CCoTAJ1OgrJHochpW91uSVKnbg+QqPu3SgJiJ68hF1g9t6oTqUIDY6b\nXSynIi1uToCvBqu3CUzKKbVon6cY+hBBVA8xM/3m6chqNbiW4T8lOGk6DD+f\n38bBrh8ibgYZQCKTXJ0Iv33dUQ/a28nt8OC7RjRkICZHcTex/PsYx4GBTjnL\n/ykwIQfl+7iwxEj+j1AA\n",
+    "encrypted_examples": [
+
+    ]
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-03-24T23:54:18.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2022-03-24 23:54:21 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 15:46:41 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 15:49:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 15:49:59 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 15:50:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

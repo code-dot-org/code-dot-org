@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-22 14:48:41 UTC",
+    "serialized_at": "2022-03-28 12:33:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -125,7 +125,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "**How can I create objects with specific values?**\n\nStudents revisit constructors to identify the need for parameterized constructors and learn how to implement these in a class. In the process, students differentiate between actual and formal parameters and explore how constructor calls function in programs.",
-        "preparation": "* Gather the Classes and Objects Manipulatives from the previous lesson",
+        "preparation": "* Gather the Classes and Objects Manipulatives from the previous lesson\n* Gather several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn",
         "student_overview": "**How can I create objects with specific values?**\n\nIn the previous unit, you wrote constructors in your `Painter` subclasses that instantiated an object using the `Painter` class constructor. In this lesson, you revisit constructors to identify the need for parameterized constructors and learn how to implement these in a class. In the process, you learn the difference between actual and formal parameters and explore how constructor calls function in programs."
       },
       "seeding_key": {
@@ -178,7 +178,7 @@
       "relative_position": 7,
       "properties": {
         "overview": "**How can I access the values of an object's instance variables?**\n\nStudents discover the need for accessor methods to obtain the values stored in the instance variables of a class. Students review the components of a method signature and how methods return values. Students practice writing accessor methods in the Project Mercury Pastries Food Truck classes and calling them within expressions.",
-        "preparation": "* Gather the Classes and Objects Manipulatives (introduced in Lesson 3 and last used in Lesson 4)",
+        "preparation": "* Gather the Classes and Objects Manipulatives (introduced in Lesson 3 and last used in Lesson 4)\n* Gather several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn",
         "student_overview": "**How can I access the values of an object's instance variables?**\n\nYou have learned that `private` instance variables cannot be directly accessed from outside the class. In this lesson, you discover the need for accessor methods to obtain the values stored in the instance variables of a class. You review the components of a method signature and how methods return values. You practice writing accessor methods in the Project Mercury Pastries Food Truck classes and calling them within expressions."
       },
       "seeding_key": {
@@ -1418,7 +1418,7 @@
       "key": "9bf2754a-5ec7-4964-b760-4b7a86379cf0",
       "position": 5,
       "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.3\n* Topic Questions 1.4\n* Topic Questions 2.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.3\n* Topic Questions 1.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "name": "AP Classroom Topic Questions"
       },
       "seeding_key": {
@@ -1597,16 +1597,31 @@
       "key": "775cc692-ef1d-45f3-9dcd-acd92f1f313b",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a set of Classes and Objects Manipulatives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate designing a class and creating its UML diagram.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate creating objects from the class.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students use the Classes and Objects Manipulatives to design a class of their choice with examples of objects that could be created from their classes.",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a set of Classes and Objects Manipulatives, several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn.\n\n**Do This:** Click through the animated slides to demonstrate designing a class:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Identify the attributes and behaviors that are needed\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Write the class name and constructor\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Write the methods\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> List the instance variables\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Briefly introduce `private` methods",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "Gather the Classes and Objects Manipulatives to reuse in upcoming lessons."
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "Students learn about `private` methods in a later unit. Introduce that methods can be `private` but do not spend time explaining what that means or how it works."
           }
         ]
       },
       "seeding_key": {
         "activity_section.key": "775cc692-ef1d-45f3-9dcd-acd92f1f313b",
+        "lesson_activity.key": "3ac6dc19-524a-4849-ba00-20bfcf35cc15"
+      }
+    },
+    {
+      "key": "d065e464-f228-458e-8f92-905c3d1d800d",
+      "position": 13,
+      "properties": {
+        "description": "**Do This:** Click through the animated slides to demonstrate creating objects from the class:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declaring the reference variable\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Instantiating the object\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Pointing the reference variable to the object\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students use the Classes and Objects Manipulatives to design a class of their choice with examples of objects that could be created from their classes."
+      },
+      "seeding_key": {
+        "activity_section.key": "d065e464-f228-458e-8f92-905c3d1d800d",
         "lesson_activity.key": "3ac6dc19-524a-4849-ba00-20bfcf35cc15"
       }
     },
@@ -1643,6 +1658,18 @@
       },
       "seeding_key": {
         "activity_section.key": "ff2ab4e5-dfeb-47ca-90e4-4689efb042b3",
+        "lesson_activity.key": "2e3c40ad-d9b4-462a-9b94-acfcf48ce3d1"
+      }
+    },
+    {
+      "key": "43bc5d3f-4e76-4ad6-a001-aa02506d245f",
+      "position": 4,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "activity_section.key": "43bc5d3f-4e76-4ad6-a001-aa02506d245f",
         "lesson_activity.key": "2e3c40ad-d9b4-462a-9b94-acfcf48ce3d1"
       }
     },
@@ -1783,7 +1810,7 @@
       "key": "c524dcfe-bef6-4131-a786-f700cddf3fd0",
       "position": 1,
       "properties": {
-        "description": "**Group:** Place students in groups of four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student the set of Classes and Objects Manipulatives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Four on a Pencil strategy to discuss the prompts.\n* *What would a no-argument constructor look like for the class you designed?*\n* *What would a parameterized constructor look like for the class you designed?*\n\n**Discussion Goal:** Students share ideas about the default values they would set in the no-argument constructor for their objects. Students identify the parameters for the parameterized constructor they would need to define.",
+        "description": "**Group:** Place students in groups of four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each group a set of Classes and Objects Manipulatives, several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Four on a Pencil strategy to discuss the prompts.\n* *What would a no-argument constructor look like for the class you designed?*\n* *What would a parameterized constructor look like for the class you designed?*\n\n**Discussion Goal:** Students share ideas about the default values they would set in the no-argument constructor for their objects. Students identify the parameters for the parameterized constructor they would need to define.",
         "name": "Designing Your Object",
         "tips": [
           {
@@ -1836,7 +1863,7 @@
       "key": "17afc55b-d5b9-4904-8ddd-74d5eeaec04d",
       "position": 5,
       "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.2\n* Topic Questions 5.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "name": "AP Classroom Topic Questions"
       },
       "seeding_key": {
@@ -2029,7 +2056,7 @@
       "key": "d8f7c0c2-30fb-4585-ae23-b553c85997c5",
       "position": 5,
       "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.2\n* Topic Questions 5.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "name": "AP Classroom Topic Questions"
       },
       "seeding_key": {
@@ -2304,7 +2331,7 @@
       "key": "4f3d0d90-f95b-4936-94cb-2709b2d46b7a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Accessor Methods*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate writing and calling an accessor method and define *return type* and `return` *keyword*.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair the set of Classes and Objects Manipulatives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write an accessor method for one of their instance variables and call it using their Classes and Objects Manipulatives.\n\n**Do This:** Explain return by value:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Calling the method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Return by value\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *How did the manipulatives demonstrate return by value?*\n\n**Discussion Goal:** Students realize that return by value occurred when they copied the value to a new sticky note to pass to where the method was called.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Accessor Methods*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate writing and calling an accessor method and define *return type* and `return` *keyword*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate calling an accessor method using the Classes and Objects Manipulatives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a set of Classes and Objects Manipulatives, several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write an accessor method for one of their instance variables and call it using their Classes and Objects Manipulatives.\n\n**Do This:** Explain return by value:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Calling the method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Return by value\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *How did the manipulatives demonstrate return by value?*\n\n**Discussion Goal:** Students realize that return by value occurred when they copied the value to a new sticky note to pass to where the method was called.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2630,7 +2657,7 @@
       "key": "6c8a8390-272a-4adc-bb58-91920719d8a0",
       "position": 6,
       "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.4\n* Topic Questions 5.5\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.4\n* Topic Questions 3.1\n* Topic Questions 5.5\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "name": "AP Classroom Topic Questions"
       },
       "seeding_key": {
@@ -2817,7 +2844,7 @@
       "key": "ad87ec22-7fad-4dc7-800e-05427e087055",
       "position": 5,
       "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 9.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.6\n* Topic Questions 9.7\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "name": "AP Classroom Topic Questions"
       },
       "seeding_key": {
@@ -2987,7 +3014,7 @@
       "key": "6055aa1a-d31b-434e-adb9-6c9f428e454c",
       "position": 1,
       "properties": {
-        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. It is completed in three class periods to plan and create the program, including writing a superclass and subclasses and incorporating user interaction using the Scanner class. Students participate in planning and feedback activities to solve problems, reinforce software development practices and self-image as software engineers, and improve their programs. Lessons 11, 12, and 13 collectively include instructions for the three-day project.\n\nIf there is not enough time for the three-day project, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the [**Store Management Project 1 Day Lesson Plan**](https://docs.google.com/document/d/1_XM0ptd_dRtEKLdDYhPDnbhzAoQ3D4N4NzGTako_Hns/edit?usp=sharing), which includes a one-day version of the [**Store Management Project Planning Guide**](https://docs.google.com/document/d/1pkBWwY20EIPTKxOwDoQ-LeLoqOanQ2FzWw8NFrEPLwI/edit?usp=sharing). Direct students to develop their program on Lesson 13 to submit their project. While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use."
+        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. It is completed in three class periods to plan and create the program, including writing a superclass and subclasses and incorporating user interaction using the `Scanner` class. Students participate in planning and feedback activities to solve problems, reinforce software development practices and self-image as software engineers, and improve their programs. Lessons 11, 12, and 13 collectively include instructions for the three-day project.\n\nIf there is not enough time for the three-day project, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the [**Store Management Project 1 Day Lesson Plan**](https://docs.google.com/document/d/1_XM0ptd_dRtEKLdDYhPDnbhzAoQ3D4N4NzGTako_Hns/edit?usp=sharing), which includes a one-day version of the [**Store Management Project Planning Guide**](https://docs.google.com/document/d/1pkBWwY20EIPTKxOwDoQ-LeLoqOanQ2FzWw8NFrEPLwI/edit?usp=sharing). Direct students to develop their program on Lesson 13 to submit their project. While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use."
       },
       "seeding_key": {
         "activity_section.key": "6055aa1a-d31b-434e-adb9-6c9f428e454c",
@@ -5598,6 +5625,18 @@
       }
     },
     {
+      "name": "[KEY] U2L10 Extra Practice",
+      "url": "https://docs.google.com/document/d/1V6RzkOVfNI_fqFH0LEjYR_yNHFbPuS3jaH6Hf28eZQQ/edit?usp=sharing",
+      "key": "_key_u2l10_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u2l10_extra_practice"
+      }
+    },
+    {
       "name": "[KEY] U2L1 Extra Practice",
       "url": "https://docs.google.com/document/d/1n6xEhE4ajp_vcU1cC6tyzzZmiukRFJ5vtHeVcgunlaU/edit?usp=sharing",
       "key": "_key_u2l1_extra_practice",
@@ -5691,6 +5730,18 @@
       },
       "seeding_key": {
         "resource.key": "_key_u2l8_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U2L9 Extra Practice",
+      "url": "https://docs.google.com/document/d/15q80JedF448in_yPCzzuDX7fCGdNdmpIEnhwQD-X31w/edit?usp=sharing",
+      "key": "_key_u2l9_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u2l9_extra_practice"
       }
     },
     {
@@ -5835,6 +5886,18 @@
       }
     },
     {
+      "name": "U2L10 Extra Practice",
+      "url": "https://docs.google.com/document/d/1xYvqBsOIfRxiGILRvDK-YeQBo_NXLl3rG--HtGBpdMo/edit?usp=sharing",
+      "key": "u2l10_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l10_extra_practice"
+      }
+    },
+    {
       "name": "U2L1 Extra Practice",
       "url": "https://docs.google.com/document/d/1e_iaBTTV0srizdsC0oNzjgECyKMl9aLILm9TW6Qbobs/edit?usp=sharing",
       "key": "u2l1_extra_practice",
@@ -5928,6 +5991,18 @@
       },
       "seeding_key": {
         "resource.key": "u2l8_extra_practice"
+      }
+    },
+    {
+      "name": "U2L9 Extra Practice",
+      "url": "https://docs.google.com/document/d/1LV_u-HF6wafh6Wa-wB40Sr68RZKdwsF74ePCo8L5JM8/edit?usp=sharing",
+      "key": "u2l9_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l9_extra_practice"
       }
     },
     {
@@ -6073,6 +6148,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-14",
+        "resource.key": "_key_u2l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
         "resource.key": "cs_bingo_cards_1"
       }
     },
@@ -6080,6 +6161,12 @@
       "seeding_key": {
         "lesson.key": "lesson-14",
         "resource.key": "cs_bingo_definitions_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "u2l9_extra_practice"
       }
     },
     {
@@ -6097,7 +6184,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-15",
+        "resource.key": "_key_u2l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
         "resource.key": "diagramming_scope"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "u2l10_extra_practice"
       }
     },
     {

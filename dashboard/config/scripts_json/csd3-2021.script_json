@@ -34,7 +34,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-11 12:08:11 UTC",
+    "serialized_at": "2022-03-28 19:15:05 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -364,7 +364,7 @@
         "assessment_opportunities": "1. **Use conditionals to react to changes in variables and sprite properties**\n\n\tSee Level 9 in Code Studio.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day:  How can programs react to changes as they are running?**\r\n\r\nThis lesson introduces booleans and conditionals, which allow a program to run differently depending on whether a condition is true. Students start by playing a short game in which they respond according to whether particular conditions are met. They then move to Code Studio, where they learn how the computer evaluates Boolean expressions, and how they can be used to structure a program.",
-        "purpose": "This lesson follows closely the booleans model that students first experienced in the Booleans Unplugged lesson. As before, we start with using booleans directly before using booleans to trigger _if_ statements. In the following lesson we will introduce some boolean producing blocks, such as [`keyDown()`(#fff176)](/docs/gamelab/keyDown/), which can be used in place of simple boolean comparisons to write programs that respond to user input.",
+        "purpose": "We start with using booleans directly before using booleans to trigger _if_ statements. In the following lesson we will introduce some boolean producing blocks, such as [`keyDown()`(#fff176)](/docs/gamelab/keyDown/), which can be used in place of simple boolean comparisons to write programs that respond to user input.",
         "student_overview": "**Question of the Day:  How can programs react to changes as they are running?**\n\nIn this lesson, you will learn about booleans and conditionals, which will allow you to create programs that run differently depending on whether a condition is true. \n"
       },
       "seeding_key": {
@@ -2935,7 +2935,7 @@
       "key": "40a19e9c-dfc5-43df-a13c-a23d97fcd53d",
       "position": 5,
       "properties": {
-        "description": "**Key Vocabulary:** Parameter - An extra piece of information passed to a function to customize it for a specific need\r\n\r\n**Question of the Day:  How can we use parameters to give the computer more specific instructions?**"
+        "description": "**Key Vocabulary:** Parameter - Additional information provided as input to a block to customize it's functionality\n\n**Question of the Day:  How can we use parameters to give the computer more specific instructions?**"
       },
       "seeding_key": {
         "activity_section.key": "40a19e9c-dfc5-43df-a13c-a23d97fcd53d",
@@ -17912,7 +17912,7 @@
     {
       "key": "parameter",
       "word": "Parameter",
-      "definition": "An extra piece of information passed to a function to customize it for a specific need",
+      "definition": "Additional information provided as input to a block to customize it's functionality",
       "properties": {
       },
       "seeding_key": {

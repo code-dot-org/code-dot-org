@@ -648,6 +648,10 @@ describe('entry tests', () => {
     'levels/editors/_studio':
       './src/sites/studio/pages/levels/editors/_studio.js',
     'libraries/edit': './src/sites/studio/pages/libraries/edit.js',
+    'programming_classes/new':
+      './src/sites/studio/pages/programming_classes/new.js',
+    'programming_classes/edit':
+      './src/sites/studio/pages/programming_classes/edit.js',
     'programming_environments/new':
       './src/sites/studio/pages/programming_environments/new.js',
     'programming_environments/edit':
@@ -656,6 +660,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/programming_expressions/new.js',
     'programming_expressions/edit':
       './src/sites/studio/pages/programming_expressions/edit.js',
+    'reference_guides/edit':
+      './src/sites/studio/pages/reference_guides/edit.js',
     'reference_guides/edit_all':
       './src/sites/studio/pages/reference_guides/edit_all.js',
     'scripts/edit': './src/sites/studio/pages/scripts/edit.js',

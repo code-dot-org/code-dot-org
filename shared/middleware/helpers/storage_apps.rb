@@ -12,7 +12,7 @@ class StorageApps
   def initialize(storage_id)
     @storage_id = storage_id
 
-    @table = PEGASUS_DB[:storage_apps]
+    @table = StorageApps.table
   end
 
   def create(value, ip:, type: nil, published_at: nil, remix_parent_id: nil, standalone: true)
@@ -121,6 +121,43 @@ class StorageApps
       studentName: user && UserHelpers.initial(user[:name]),
       studentAgeRange: user && UserHelpers.age_range_from_birthday(user[:birthday]),
     )
+  end
+
+  def get_active_projects
+    StorageApps.table.where(storage_id: @storage_id, state: 'active')
+  end
+
+  def get_projects_with_state(state: 'active', order: nil)
+    query = StorageApps.table.where(storage_id: @storage_id, state: state)
+
+    if order.present?
+      query.order(order)
+    end
+
+    query
+  end
+
+  # Returns an array of all ids for storage apps with storage id = @storage_id
+  def get_all_storage_app_ids
+    StorageApps.table.
+      where(storage_id: @storage_id).
+      map(:id)
+  end
+
+  # Soft-delete all of the storage apps for user with storage id @storage_id
+  def soft_delete_all
+    StorageApps.table.
+      where(storage_id: @storage_id).
+      exclude(state: 'deleted').
+      update(state: 'deleted', updated_at: Time.now)
+  end
+
+  # Restores all of this user's projects that were soft-deleted after the given time
+  def restore_if_deleted_after(deleted_time)
+    StorageApps.table.
+      where(storage_id: @storage_id, state: 'deleted').
+      where(Sequel.lit('updated_at >= ?', deleted_time.localtime)).
+      update(state: 'active', updated_at: Time.now)
   end
 
   # extracts published project data from a project (aka storage_apps table row).
@@ -334,9 +371,9 @@ class StorageApps
   def self.remix_ancestry(channel_id, depth: 1)
     [].tap do |ancestors|
       _, storage_app_id = storage_decrypt_channel_id(channel_id)
-      next_row = PEGASUS_DB[:storage_apps].where(id: storage_app_id).first
+      next_row = StorageApps.table.where(id: storage_app_id).first
       while next_row&.[](:remix_parent_id)
-        next_row = PEGASUS_DB[:storage_apps].where(id: next_row[:remix_parent_id]).first
+        next_row = StorageApps.table.where(id: next_row[:remix_parent_id]).first
         ancestors.push storage_encrypt_channel_id(next_row[:storage_id], next_row[:id]) if next_row
         break if ancestors.size >= depth
       end
@@ -347,8 +384,21 @@ class StorageApps
 
   def self.get_abuse(channel_id)
     _, storage_app_id = storage_decrypt_channel_id(channel_id)
-    project_info = PEGASUS_DB[:storage_apps].where(id: storage_app_id).first
+    project_info = StorageApps.table.where(id: storage_app_id).first
     project_info[:abuse_score]
+  end
+
+  # Returns storage apps with id in ids
+  def self.get_by_ids(ids)
+    StorageApps.table.where(id: ids)
+  end
+
+  def self.table
+    DCDO.get('storage_apps_in_dashboard', false) ? DASHBOARD_DB[:projects] : PEGASUS_DB[:storage_apps]
+  end
+
+  def self.table_name
+    DCDO.get('storage_apps_in_dashboard', false) ? "projects" : "storage_apps"
   end
 
   private
