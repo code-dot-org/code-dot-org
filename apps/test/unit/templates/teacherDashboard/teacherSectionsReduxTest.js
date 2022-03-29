@@ -324,20 +324,20 @@ describe('teacherSectionsRedux', () => {
       );
     });
 
-    it('adds courseId/scriptId/assignId to courses', () => {
+    it('adds courseId/unitId/assignId to courses', () => {
       const assignId = assignmentId(validCourses[0].id, null);
       assert.strictEqual(nextState.validAssignments[assignId].courseId, 29);
-      assert.strictEqual(nextState.validAssignments[assignId].scriptId, null);
+      assert.strictEqual(nextState.validAssignments[assignId].unitId, null);
       assert.strictEqual(
         nextState.validAssignments[assignId].assignId,
         assignId
       );
     });
 
-    it('adds courseId/scriptId/assignId to scripts', () => {
+    it('adds courseId/unitId/assignId to scripts', () => {
       const assignId = assignmentId(null, validScripts[0].id);
       assert.strictEqual(nextState.validAssignments[assignId].courseId, null);
-      assert.strictEqual(nextState.validAssignments[assignId].scriptId, 1);
+      assert.strictEqual(nextState.validAssignments[assignId].unitId, 1);
       assert.strictEqual(
         nextState.validAssignments[assignId].assignId,
         assignId
@@ -601,7 +601,7 @@ describe('teacherSectionsRedux', () => {
         studentCount: 0,
         code: '',
         courseId: null,
-        scriptId: null,
+        unitId: null,
         hidden: false,
         isAssigned: undefined,
         restrictSection: false
@@ -623,7 +623,7 @@ describe('teacherSectionsRedux', () => {
         ttsAutoplayEnabled: false,
         pairingAllowed: true,
         sharingDisabled: false,
-        scriptId: 36,
+        unitId: 36,
         courseId: null,
         courseOfferingId: undefined,
         courseVersionId: undefined,
@@ -634,8 +634,7 @@ describe('teacherSectionsRedux', () => {
         restrictSection: false,
         postMilestoneDisabled: false,
         codeReviewExpiresAt: null,
-        isAssignedCSA: undefined,
-        unitId: undefined
+        isAssignedCSA: undefined
       });
     });
   });
@@ -709,22 +708,22 @@ describe('teacherSectionsRedux', () => {
         setValidAssignments(validCourses, validScripts),
         setCourseOfferings(courseOfferings)
       );
-      state = reducer(state, editSectionProperties({scriptId: 1}));
+      state = reducer(state, editSectionProperties({unitId: 1}));
       expect(state.sectionBeingEdited.lessonExtras).to.equal(false);
 
-      state = reducer(state, editSectionProperties({scriptId: 36}));
+      state = reducer(state, editSectionProperties({unitId: 36}));
       expect(state.sectionBeingEdited.lessonExtras).to.equal(true);
 
-      state = reducer(state, editSectionProperties({scriptId: 37}));
+      state = reducer(state, editSectionProperties({unitId: 37}));
       expect(state.sectionBeingEdited.lessonExtras).to.equal(true);
     });
 
     it('when updating script assignment for a section, ttsAutoplayEnabled defaults to false', () => {
       let state = editingNewSectionState;
-      state = reducer(state, editSectionProperties({scriptId: 2}));
+      state = reducer(state, editSectionProperties({unitId: 2}));
       expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);
 
-      state = reducer(state, editSectionProperties({scriptId: 37}));
+      state = reducer(state, editSectionProperties({unitId: 37}));
       expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);
     });
   });
@@ -756,12 +755,11 @@ describe('teacherSectionsRedux', () => {
       courseId: null,
       courseOfferingId: undefined,
       courseVersionId: undefined,
-      scriptId: null,
+      unitId: null,
       createdAt: createdAt,
       hidden: false,
       restrict_section: false,
-      post_milestone_disabled: false,
-      unitId: undefined
+      post_milestone_disabled: false
     };
 
     function successResponse(customProps = {}) {
@@ -910,8 +908,7 @@ describe('teacherSectionsRedux', () => {
           courseId: undefined,
           courseOfferingId: undefined,
           courseVersionId: undefined,
-          unitId: undefined,
-          scriptId: null,
+          unitId: null,
           createdAt: createdAt,
           hidden: false,
           isAssigned: undefined,
@@ -1291,7 +1288,7 @@ describe('teacherSectionsRedux', () => {
 
     it('maps from a script object to a script_id', () => {
       const sectionWithoutScript = sectionFromServerSection(serverSection);
-      assert.strictEqual(sectionWithoutScript.scriptId, null);
+      assert.strictEqual(sectionWithoutScript.unitId, null);
 
       const sectionWithScript = sectionFromServerSection({
         ...serverSection,
@@ -1300,7 +1297,7 @@ describe('teacherSectionsRedux', () => {
           name: 'Accelerated Course'
         }
       });
-      assert.strictEqual(sectionWithScript.scriptId, 1);
+      assert.strictEqual(sectionWithScript.unitId, 1);
     });
 
     it('sets student count', () => {

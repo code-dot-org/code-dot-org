@@ -16,7 +16,6 @@ const USER_EDITABLE_SECTION_PROPS = [
   'pairingAllowed',
   'ttsAutoplayEnabled',
   'courseId',
-  'scriptId',
   'courseOfferingId',
   'courseVersionId',
   'unitId',
@@ -209,7 +208,10 @@ function removeNullValues(key, val) {
  * the server
  * @param {number} sectionId
  * @param {number} courseId
- * @param {number} scriptId
+ * @param {number} courseOfferingId
+ * @param {number} courseVersionId
+ * @param {number} unitId
+ * @param {string} pageType
  */
 export const assignToSection = (
   sectionId,
@@ -240,7 +242,9 @@ export const assignToSection = (
     dispatch(
       editSectionProperties({
         courseId: courseId,
-        scriptId: unitId
+        courseOfferingId: courseOfferingId,
+        courseVersionId: courseVersionId,
+        unitId: unitId
       })
     );
     return dispatch(finishEditingSection(pageType));
@@ -258,7 +262,14 @@ export const unassignSection = (sectionId, location) => (
 ) => {
   dispatch(beginEditingSection(sectionId, true));
   const {initialCourseId, initialUnitId} = getState().teacherSections;
-  dispatch(editSectionProperties({courseId: '', scriptId: ''}));
+  dispatch(
+    editSectionProperties({
+      courseId: null,
+      courseOfferingId: null,
+      courseVersionId: null,
+      unitId: null
+    })
+  );
   firehoseClient.putRecord(
     {
       study: 'assignment',
@@ -590,7 +601,9 @@ function newSectionData(id, loginType) {
     studentCount: 0,
     code: '',
     courseId: null,
-    scriptId: null,
+    courseOfferingId: null,
+    courseVersionId: null,
+    unitId: null,
     hidden: false,
     isAssigned: undefined,
     restrictSection: false
@@ -653,13 +666,13 @@ export default function teacherSections(state = initialState, action) {
     // NOTE: We depend elsewhere on the order of our keys in validAssignments
     action.validCourses.forEach(course => {
       const assignId = assignmentId(course.id, null);
-      const scriptAssignIds = (course.script_ids || []).map(scriptId =>
-        assignmentId(null, scriptId)
+      const scriptAssignIds = (course.script_ids || []).map(unitId =>
+        assignmentId(null, unitId)
       );
       validAssignments[assignId] = {
         ..._.omit(course, 'script_ids'),
         courseId: course.id,
-        scriptId: null,
+        unitId: null,
         scriptAssignIds,
         assignId,
         path: `/courses/${course.script_name}`
@@ -689,7 +702,7 @@ export default function teacherSections(state = initialState, action) {
       validAssignments[assignId] = {
         ...unit,
         courseId: null,
-        scriptId: unit.id,
+        unitId: unit.id,
         assignId,
         path: `/s/${unit.script_name}`,
         assignment_family_name: assignmentFamilyName,
@@ -853,7 +866,9 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       initialCourseId: initialSectionData.courseId,
-      initialUnitId: initialSectionData.scriptId,
+      initialUnitId: initialSectionData.unitId,
+      initialCourseOfferingId: initialSectionData.courseOfferingId,
+      initialCourseVersionId: initialSectionData.courseVersionId,
       initialLoginType: initialSectionData.loginType,
       sectionBeingEdited: initialSectionData,
       showSectionEditDialog: !action.silent
@@ -876,9 +891,9 @@ export default function teacherSections(state = initialState, action) {
 
     const lessonExtraSettings = {};
     const ttsAutoplayEnabledSettings = {};
-    if (action.props.scriptId) {
+    if (action.props.unitId) {
       const unit =
-        state.validAssignments[assignmentId(null, action.props.scriptId)];
+        state.validAssignments[assignmentId(null, action.props.unitId)];
       if (unit) {
         lessonExtraSettings.lessonExtras =
           unit.lesson_extras_available || defaultLessonExtras;
@@ -947,11 +962,17 @@ export default function teacherSections(state = initialState, action) {
       section_creation_timestamp: section.createdAt,
       page_name: state.pageType
     };
-    if (section.scriptId !== state.initialUnitId) {
-      assignmentData.script_id = section.scriptId;
+    if (section.unitId !== state.initialUnitId) {
+      assignmentData.script_id = section.unitId;
     }
     if (section.courseId !== state.initialCourseId) {
       assignmentData.course_id = section.courseId;
+    }
+    if (section.courseOfferingId !== state.initialCourseOfferingId) {
+      assignmentData.course_offering_id = section.courseOfferingId;
+    }
+    if (section.courseVersionId !== state.initialCourseVersionId) {
+      assignmentData.course_version_id = section.courseVersionId;
     }
     if (
       // If either of these is not undefined, then assignment changed and should be logged
@@ -1092,7 +1113,7 @@ export default function teacherSections(state = initialState, action) {
 
 // Helpers and Selectors
 
-export const assignmentId = (courseId, scriptId) => `${courseId}_${scriptId}`;
+export const assignmentId = (courseId, unitId) => `${courseId}_${unitId}`;
 
 function getRoot(state) {
   return state.teacherSections; // Global knowledge eww.
@@ -1141,7 +1162,7 @@ export function isSaveInProgress(state) {
 export function assignedUnit(state) {
   const {sectionBeingEdited, validAssignments} = getRoot(state);
 
-  const assignId = assignmentId(null, sectionBeingEdited.scriptId);
+  const assignId = assignmentId(null, sectionBeingEdited.unitId);
   return validAssignments[assignId];
 }
 
@@ -1225,9 +1246,6 @@ export const sectionFromServerSection = serverSection => ({
   courseVersionId: serverSection.course_version_id,
   unitId: serverSection.unit_id,
   courseId: serverSection.course_id,
-  scriptId: serverSection.script
-    ? serverSection.script.id
-    : serverSection.script_id || null,
   hidden: serverSection.hidden,
   isAssigned: serverSection.isAssigned,
   restrictSection: serverSection.restrict_section,
@@ -1271,7 +1289,6 @@ export function serverSectionFromSection(section) {
     course_version_id: section.courseVersionId,
     unit_id: section.unitId,
     course_id: section.courseId,
-    script: section.scriptId ? {id: section.scriptId} : undefined,
     restrict_section: section.restrictSection
   };
 }
@@ -1284,8 +1301,8 @@ const assignmentsForSection = (validAssignments, section) => {
       assignments.push(validAssignments[assignId]);
     }
   }
-  if (section.scriptId) {
-    const assignId = assignmentId(null, section.scriptId);
+  if (section.unitId) {
+    const assignId = assignmentId(null, section.unitId);
     if (validAssignments[assignId]) {
       assignments.push(validAssignments[assignId]);
     }
@@ -1333,12 +1350,7 @@ export function isEditingSection(state) {
 }
 
 /**
- * Ask for the id of the section we're currently editing, or null if we're not
- * editing a section.
- */
-export function editedSectionId(state) {
-  return state.sectionBeingEdited ? state.sectionBeingEdited.id : null;
-}
+
 
 /**
  * @param {object} state - state.teacherSections in redux tree
@@ -1356,16 +1368,11 @@ export function sectionsNameAndId(state) {
 /**
  * @param {object} state - state.teacherSections in redux tree
  */
-export function sectionsForDropdown(
-  state,
-  scriptId,
-  courseId,
-  onCourseOverview
-) {
+export function sectionsForDropdown(state, unitId, courseId, onCourseOverview) {
   return sortedSectionsList(state.sections).map(section => ({
     ...section,
     isAssigned:
-      (scriptId !== null && section.scriptId === scriptId) ||
+      (unitId !== null && section.unitId === unitId) ||
       (courseId !== null && section.courseId === courseId && onCourseOverview)
   }));
 }

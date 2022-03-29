@@ -83,7 +83,9 @@ export const taughtSections = [
     studentCount: 25,
     code: 'MRTHUN',
     courseId: 360,
-    scriptId: 361,
+    courseOfferingId: 360,
+    courseVersionId: 362,
+    unitId: 361,
     grade: 'K',
     providerManaged: false,
     hidden: false
@@ -97,7 +99,9 @@ export const taughtSections = [
     studentCount: 18,
     code: 'DINOSAR',
     courseId: 150,
-    scriptId: 13,
+    courseOfferingId: 150,
+    courseVersionId: 151,
+    unitId: 13,
     grade: '7',
     providerManaged: false,
     hidden: false

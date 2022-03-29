@@ -19,7 +19,9 @@ const defaultProps = {
     studentCount: 0,
     code: 'asdf',
     courseId: null,
-    scriptId: null
+    courseOfferingId: null,
+    courseVersionId: null,
+    unitId: null
   },
   assignments: {
     // course with scripts
@@ -31,7 +33,7 @@ const defaultProps = {
       position: 1,
       category_priority: 0,
       courseId: 29,
-      scriptId: null,
+      unitId: null,
       scriptAssignIds: ['null_168'],
       assignId: '29_null',
       path: '//localhost-studio.code.org:3000/courses/csd',
@@ -50,7 +52,7 @@ const defaultProps = {
       position: 0,
       category_priority: 7,
       courseId: null,
-      scriptId: 168,
+      unitId: 168,
       assignId: 'null_168',
       path: '//localhost-studio.code.org:3000/s/csd1-2019',
       assignment_family_name: 'csd1',
@@ -68,7 +70,7 @@ const defaultProps = {
       position: 4,
       category_priority: 2,
       courseId: null,
-      scriptId: 6,
+      unitId: 6,
       assignId: 'null_6',
       path: '//localhost-studio.code.org:3000/s/flappy',
       assignment_family_name: 'flappy',
@@ -87,7 +89,7 @@ const defaultProps = {
       position: 4,
       category_priority: 2,
       courseId: null,
-      scriptId: 7,
+      unitId: 7,
       assignId: 'null_7',
       path: '//localhost-studio.code.org:3000/s/flappy',
       assignment_family_name: 'flappy',
@@ -128,7 +130,9 @@ const hiddenSectionProps = {
     studentCount: 0,
     code: 'asdf',
     courseId: null,
-    scriptId: 36
+    courseOfferingId: 2,
+    courseVersionId: 4,
+    unitId: 36
   },
   assignments: defaultProps.assignments,
   assignmentFamilies: defaultProps.assignmentFamilies
@@ -143,7 +147,7 @@ describe('AssignmentSelector', () => {
     assert.equal(wrapper.find('select').value, undefined);
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseId: null,
-      scriptId: null
+      unitId: null
     });
   });
 
@@ -158,7 +162,7 @@ describe('AssignmentSelector', () => {
     assert.equal(wrapper.find('select').length, 2);
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseId: 29,
-      scriptId: null
+      unitId: null
     });
   });
 
@@ -169,14 +173,14 @@ describe('AssignmentSelector', () => {
         section={{
           ...defaultProps.section,
           courseId: 29, // CS Discoveries
-          scriptId: 168 // Unit 1: Problem Solving
+          unitId: 168 // Unit 1: Problem Solving
         }}
       />
     );
     assert.equal(wrapper.find('select').length, 2);
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseId: 29,
-      scriptId: 168
+      unitId: 168
     });
   });
 
@@ -207,7 +211,7 @@ describe('AssignmentSelector', () => {
     );
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseId: null,
-      scriptId: null
+      unitId: null
     });
   });
 
@@ -236,7 +240,7 @@ describe('AssignmentSelector', () => {
     );
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseId: 29,
-      scriptId: null
+      unitId: null
     });
   });
 
@@ -252,7 +256,7 @@ describe('AssignmentSelector', () => {
       .simulate('change', {target: {value: 'null_168'}});
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseId: 29,
-      scriptId: 168
+      unitId: 168
     });
   });
 
@@ -265,7 +269,7 @@ describe('AssignmentSelector', () => {
     assert.equal(wrapper.find('select').length, 2);
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseId: 29,
-      scriptId: null
+      unitId: null
     });
 
     wrapper
@@ -275,7 +279,7 @@ describe('AssignmentSelector', () => {
     assert.equal(wrapper.find('select').length, 1);
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
       courseId: null,
-      scriptId: null
+      unitId: null
     });
   });
 
@@ -290,7 +294,7 @@ describe('AssignmentSelector', () => {
         section={{
           ...defaultProps.section,
           courseId: null,
-          scriptId: 168
+          unitId: 168
         }}
       />
     );
@@ -325,7 +329,7 @@ describe('AssignmentSelector', () => {
           section={{
             ...defaultProps.section,
             courseId: null,
-            scriptId: 7
+            unitId: 7
           }}
         />
       );
@@ -351,7 +355,7 @@ describe('AssignmentSelector', () => {
           section={{
             ...defaultProps.section,
             courseId: null,
-            scriptId: 6
+            unitId: 6
           }}
         />
       );
@@ -388,7 +392,7 @@ describe('AssignmentSelector', () => {
         section={{
           ...defaultProps.section,
           courseId: 29,
-          scriptId: 168
+          unitId: 168
         }}
       />
     );
@@ -401,7 +405,7 @@ describe('AssignmentSelector', () => {
         {...hiddenSectionProps}
         section={{
           ...hiddenSectionProps.section,
-          scriptId: 36
+          unitId: 36
         }}
       />
     );
@@ -458,7 +462,7 @@ describe('AssignmentSelector', () => {
         .simulate('change', {target: {value: '__decideLater__'}});
       assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
         courseId: null,
-        scriptId: null
+        unitId: null
       });
     });
   });
@@ -484,7 +488,7 @@ describe('AssignmentSelector', () => {
         .simulate('change', {target: {value: 'csd'}});
       expect(spy).to.have.been.calledOnce.and.to.have.been.calledWith({
         courseId: 29,
-        scriptId: null
+        unitId: null
       });
     });
 
@@ -500,7 +504,7 @@ describe('AssignmentSelector', () => {
         .simulate('change', {target: {value: 'null_168'}});
       expect(spy).to.have.been.calledOnce.and.to.have.been.calledWith({
         courseId: 29,
-        scriptId: 168
+        unitId: 168
       });
     });
   });
