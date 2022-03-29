@@ -9,6 +9,7 @@
 #  updated_at   :datetime         not null
 #  category     :string(255)      default("other"), not null
 #  is_featured  :boolean          default(FALSE), not null
+#  assignable   :boolean          default(TRUE), not null
 #
 # Indexes
 #
