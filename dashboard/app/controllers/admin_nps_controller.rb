@@ -11,9 +11,10 @@ class AdminNpsController < ApplicationController
     audience = params[:audience]
     if ['all', 'even', 'odd', 'none'].include? audience
       DCDO.set('nps_audience', audience)
-      flash[:notice] = 'Survey audience updated'
+      flash[:notice] = "Survey audience updated"
     else
-      flash[:alert] = 'Invalid audience type'
+      flash[:alert] = "Invalid audience type"
     end
+    redirect_to nps_form_path
   end
 end
