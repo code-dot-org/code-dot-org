@@ -209,11 +209,11 @@ Resources:
 <% end -%>
 
 <% if frontends -%>
-  <%= component 'slack_scaling_events' -%>
+  <%= component 'slack_scaling_events' %>
   <%- if environment == :production -%>
-  <%=   component 'slack_health_events' -%>
-  <%=   component 'scaling_schedule' -%>
-  <%  end -%>
+  <%= component 'slack_health_events' %>
+  <%= component 'scaling_schedule' %>
+  <%-   end -%>
 <% end -%>
 
   # Route53 (DNS) and CloudFront (CDN) resources:
@@ -250,9 +250,8 @@ Resources:
 <%   end -%>
 
 <% if cdn_enabled && app == 'Pegasus' -%>
-  <%= component 'www_redirect', app: app -%>
+  <%= component 'www_redirect', app: app %>
 <% end -%>
-
 <% end -%>
 
 <% if cdn_enabled -%>
@@ -274,7 +273,7 @@ Resources:
 <% end -%>
 
 <% if frontends-%>
-  <%= component 'cache'%>
+  <%= component 'cache' %>
 <% end -%>
 
   DaemonRole:
@@ -496,7 +495,7 @@ Resources:
           - !ImportValue VPC-ELBSecurityGroup # Accept HTTP traffic on daemon
 <%  end -%>
       DisableApiTermination: <%= rack_env?(:adhoc) ? false : true %>
-<% if database %>
+<% if database -%>
     DependsOn: Aurora1
 <% end -%>
 <%end-%>
@@ -544,11 +543,11 @@ Resources:
 <% end-%>
 
 <% if alarms -%>
-  <%=  component 'alarms'%>
+  <%=  component 'alarms' %>
 <% end -%>
 
 <% if database -%>
-  <%= component 'database'%>
+  <%= component 'database' %>
 <% end -%>
 
   <%= component 'codeprojects' %>
