@@ -55,7 +55,7 @@ module ShareFiltering
     find_failure(program_name, locale)
   end
 
-  def self.find_failure(text, locale)
+  def self.find_failure(text, locale, profanity_filter_replace_text_list = {})
     return nil unless Gatekeeper.allows('webpurify', default: true)
 
     email = RegexpUtils.find_potential_email(text)
@@ -64,7 +64,7 @@ module ShareFiltering
     phone_number = RegexpUtils.find_potential_phone_number(text)
     return ShareFailure.new(FailureType::PHONE, phone_number) if phone_number
 
-    expletive = ProfanityFilter.find_potential_profanity(text, locale)
+    expletive = ProfanityFilter.find_potential_profanity(text, locale, profanity_filter_replace_text_list)
     return ShareFailure.new(FailureType::PROFANITY, expletive) if expletive
 
     street_address = Geocoder.find_potential_street_address(text)
