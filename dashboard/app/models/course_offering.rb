@@ -9,6 +9,7 @@
 #  updated_at   :datetime         not null
 #  category     :string(255)      default("other"), not null
 #  is_featured  :boolean          default(FALSE), not null
+#  assignable   :boolean          default(TRUE), not null
 #
 # Indexes
 #
@@ -77,11 +78,6 @@ class CourseOffering < ApplicationRecord
     course_versions.any? {|cv| cv.can_be_instructor?(user)}
   end
 
-  # All course versions in a course offering should have the same participant audience
-  def pl_course?
-    course_versions.any?(&:pl_course?)
-  end
-
   def any_versions_launched?
     course_versions.any?(&:launched?)
   end
@@ -106,22 +102,6 @@ class CourseOffering < ApplicationRecord
     assignable_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
-  def self.assignable_student_course_offerings(user)
-    assignable_course_offerings(user).select {|aco| !aco.pl_course?}
-  end
-
-  def self.assignable_student_course_offerings_info(user, locale_code = 'en-us')
-    assignable_student_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}.to_h
-  end
-
-  def self.assignable_pl_course_offerings(user)
-    assignable_course_offerings(user).select(&:pl_course?)
-  end
-
-  def self.assignable_pl_course_offerings_info(user, locale_code = 'en-us')
-    assignable_pl_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}.to_h
-  end
-
   def assignable?(user)
     return false unless can_be_instructor?(user)
     return true if any_versions_launched?
@@ -140,6 +120,7 @@ class CourseOffering < ApplicationRecord
         display_name: localized_display_name,
         category: category,
         is_featured: is_featured?,
+        participant_audience: course_versions.first.content_root.participant_audience,
         course_versions: course_versions.select {|cv| cv.course_assignable?(user)}.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
       }
     ]
