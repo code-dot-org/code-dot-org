@@ -247,9 +247,9 @@ Resources:
       DistributionConfig: <%= cloudfront_config(app) %>
 <%   end -%>
 
-<%   if cdn_enabled && app == 'Pegasus' -%>
-<%=    component 'www_redirect', app: app -%>
-<%  end -%>
+<% if cdn_enabled && app == 'Pegasus' -%>
+<%=  component 'www_redirect', app: app -%>
+<% end -%>
 
 <% end -%>
 
@@ -546,10 +546,10 @@ Resources:
 <% end -%>
 
 <% if database-%>
-<%=  component 'database'%>
+<%= component 'database'%>
 <% end -%>
 
-<%= resource_component 'codeprojects_resources' %>
+<%= component 'codeprojects' %>
 
   ChefConfig:
     Type: AWS::SecretsManager::Secret
