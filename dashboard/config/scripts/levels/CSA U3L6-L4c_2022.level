@@ -1,0 +1,21 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "long_instructions": "##Getting Started\r\n\r\nImport Dessert.java from the Backpack.\r\n\r\nDon't have it or it doesn't work? That's ok! Just copy and paste the code from here.\r\n\r\n##In Dessert.java:\r\n\r\n1. Declare and initialize a static variable called totalDesserts.\r\n\r\n2. In the Dessert constructors, increment the value of totalDesserts.\r\n\r\n##In MyConsole.java:\r\n\r\n3. Print the value of totalDesserts.\r\n\r\n4. Create more Dessert objects, then print the new value of totalDesserts.",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "submittable": "false",
+    "csa_view_mode": "console"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-03-25T12:33:11.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2022-03-25 12:33:13 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>
