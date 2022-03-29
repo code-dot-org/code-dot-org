@@ -667,7 +667,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     section_with_script = create(
       :section,
       user: @teacher,
-      script_id: @script_in_preview_state.id,
+      unit_id: @script_in_preview_state.id,
       login_type: Section::LOGIN_TYPE_WORD,
       grade: "1",
       lesson_extras: true,
@@ -691,7 +691,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     section_with_script = Section.find(section_with_script.id)
 
     assert_equal(@beta_unit_group.id, section_with_script.course_id)
-    assert_nil(section_with_script.script_id)
+    assert_nil(section_with_script.unit_id)
     assert_equal("My Section", section_with_script.name)
     assert_equal(Section::LOGIN_TYPE_PICTURE, section_with_script.login_type)
     assert_equal("K", section_with_script.grade)
@@ -743,26 +743,26 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     post :update, params: {
       id: section.id,
-      script_id: @csp_script.id
+      unit_id: @csp_script.id
     }
     section.reload
     assert_response :success
-    assert_equal @csp_script.id, section.script_id
+    assert_equal @csp_script.id, section.unit_id
     assert_equal @csp_script.unit_group.id, section.course_id
   end
 
-  test "update: script_id is cleared if not provided" do
+  test "update: unit_id is cleared if not provided" do
     sign_in @teacher
-    section = create(:section, user: @teacher, script_id: @csp_script.id)
+    section = create(:section, user: @teacher, unit_id: @csp_script.id)
 
-    refute_nil section.script_id
+    refute_nil section.unit_id
 
     post :update, params: {
       id: section.id
     }
     section.reload
     assert_response :success
-    assert_nil section.script_id
+    assert_nil section.unit_id
   end
 
   test "update: course_id is not updated if invalid" do
@@ -780,19 +780,19 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_nil section.course_id
   end
 
-  test "update: script_id is not updated if invalid" do
+  test "update: unit_id is not updated if invalid" do
     Script.stubs(:valid_unit_id?).returns(false)
 
     sign_in @teacher
-    section = create(:section, user: @teacher, script_id: nil)
+    section = create(:section, user: @teacher, unit_id: nil)
 
     post :update, params: {
       id: section.id,
-      script_id: 1,
+      unit_id: 1,
     }
     section.reload
     assert_response :success
-    assert_nil section.script_id
+    assert_nil section.unit_id
   end
 
   test "update: hidden script is unhidden when assigned" do
@@ -801,7 +801,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     refute_nil SectionHiddenScript.find_by(script: @csp_script, section: @section)
     post :update, params: {
       id: @section.id,
-      script_id: @csp_script.id,
+      unit_id: @csp_script.id,
     }
     assert_nil SectionHiddenScript.find_by(script: @csp_script, section: @section)
   end
@@ -826,52 +826,52 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
   test "update: can set course and script" do
     sign_in @teacher
-    section = create(:section, user: @teacher, script_id: @script_in_preview_state.id)
+    section = create(:section, user: @teacher, unit_id: @script_in_preview_state.id)
     post :update, as: :json, params: {
       id: section.id,
       course_id: @csp_unit_group.id,
-      script_id: @csp_script.id
+      unit_id: @csp_script.id
     }
     assert_response :success
     section.reload
     assert_equal(@csp_unit_group.id, section.course_id)
-    assert_equal(@csp_script.id, section.script_id)
+    assert_equal(@csp_script.id, section.unit_id)
   end
 
   test "update: non-matching course/script rejected" do
     sign_in @teacher
-    section = create(:section, user: @teacher, script_id: @script_in_preview_state.id)
+    section = create(:section, user: @teacher, unit_id: @script_in_preview_state.id)
     post :update, params: {
       id: section.id,
       course_id: @beta_unit_group.id,
-      script_id: @script.id
+      unit_id: @script.id
     }
     assert_response 400
   end
 
   test "update: can set course-less script" do
     sign_in @teacher
-    section = create(:section, user: @teacher, script_id: @script_in_preview_state.id)
+    section = create(:section, user: @teacher, unit_id: @script_in_preview_state.id)
     post :update, params: {
       id: section.id,
-      script_id: @script.id
+      unit_id: @script.id
     }
     assert_response :success
     section.reload
     assert_nil section.course_id
-    assert_equal(@script.id, section.script_id)
+    assert_equal(@script.id, section.unit_id)
   end
 
   test "update: setting a script results in UserScripts for students" do
     sign_in @teacher
-    section = create(:section, user: @teacher, script_id: @script_in_preview_state.id)
+    section = create(:section, user: @teacher, unit_id: @script_in_preview_state.id)
     student = create(:follower, section: section).student_user
 
     assert_nil UserScript.find_by(script: @script, user: student)
 
     post :update, params: {
       id: section.id,
-      script_id: @script.id
+      unit_id: @script.id
     }
 
     assert_not_nil UserScript.find_by(script: @script, user: student)
@@ -879,14 +879,14 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
   test "update: can set script from nested script param" do
     sign_in @teacher
-    section = create(:section, user: @teacher, script_id: @script_in_preview_state.id)
+    section = create(:section, user: @teacher, unit_id: @script_in_preview_state.id)
     post :update, as: :json, params: {
       id: section.id,
       script: {id: @script.id}
     }
     assert_response :success
     section.reload
-    assert_equal(@script.id, section.script_id)
+    assert_equal(@script.id, section.unit_id)
   end
 
   test 'logged out cannot delete a section' do
@@ -955,7 +955,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
   test "update_sharing_disabled updates sharing_disabled" do
     sign_in @teacher
-    section = create(:section, user: @teacher, script_id: @script_in_preview_state.id)
+    section = create(:section, user: @teacher, unit_id: @script_in_preview_state.id)
     post :update_sharing_disabled, params: {
       id: section.id,
       sharing_disabled: true

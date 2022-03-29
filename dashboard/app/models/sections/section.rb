@@ -60,6 +60,7 @@ class Section < ApplicationRecord
 
   belongs_to :user
   alias_attribute :teacher, :user
+  alias_attribute :unit_id, :script_id
 
   has_many :followers, dependent: :destroy
   accepts_nested_attributes_for :followers
@@ -337,7 +338,7 @@ class Section < ApplicationRecord
       login_type: login_type,
       course_offering_id: unit_group ? unit_group&.course_version&.course_offering&.id : script&.course_version&.course_offering&.id,
       course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
-      unit_id: unit_group ? script_id : nil,
+      unit_id: script_id,
       course_id: course_id,
       script: {
         id: script_id,
