@@ -2345,36 +2345,17 @@ class User < ApplicationRecord
   private def soft_delete_channels
     return unless user_storage_id
 
-    channel_ids = PEGASUS_DB[:storage_apps].
-      where(storage_id: user_storage_id).
-      map(:id)
+    user_storage_apps = StorageApps.new(user_storage_id)
+    storage_app_ids = user_storage_apps.get_all_storage_app_ids
 
     # Unfeature any featured projects owned by the user
     FeaturedProject.
-      where(storage_app_id: channel_ids, unfeatured_at: nil).
+      where(storage_app_id: storage_app_ids, unfeatured_at: nil).
       where.not(featured_at: nil).
       update_all(unfeatured_at: Time.now)
 
-    # Soft-delete all of the user's channels
-    PEGASUS_DB[:storage_apps].
-      where(id: channel_ids).
-      exclude(state: 'deleted').
-      update(state: 'deleted', updated_at: Time.now)
-  end
-
-  # Restores all of this user's projects that were soft-deleted after the given time
-  # Called after undestroy
-  private def restore_channels_deleted_after(deleted_at)
-    return unless user_storage_id
-
-    channel_ids = PEGASUS_DB[:storage_apps].
-      where(storage_id: user_storage_id).
-      map(:id)
-
-    PEGASUS_DB[:storage_apps].
-      where(id: channel_ids, state: 'deleted').
-      where(Sequel.lit('updated_at >= ?', deleted_at.localtime)).
-      update(state: 'active', updated_at: Time.now)
+    # Soft-delete all of the user's storage_apps
+    user_storage_apps.soft_delete_all
   end
 
   def user_storage_id
@@ -2392,7 +2373,8 @@ class User < ApplicationRecord
 
     # Paranoia documentation at https://github.com/rubysherpas/paranoia#usage.
     result = restore(recursive: true, recovery_window: 5.minutes)
-    restore_channels_deleted_after(soft_delete_time - 5.minutes)
+    deleted_time = soft_delete_time - 5.minutes
+    StorageApps.new(user_storage_id).restore_if_deleted_after(deleted_time) if user_storage_id
     result
   end
 

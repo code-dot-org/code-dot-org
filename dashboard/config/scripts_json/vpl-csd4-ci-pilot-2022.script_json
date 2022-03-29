@@ -2,17 +2,19 @@
   "script": {
     "name": "vpl-csd4-ci-pilot-2022",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
-      "is_migrated": true
+      "has_verified_resources": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-16 21:31:58 UTC",
-    "published_state": "in_development",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "serialized_at": "2022-03-29 04:12:28 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "vpl-csd4-ci-pilot-2022"
     }
@@ -31,19 +33,234 @@
     }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Introduction to The Design Process",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Apply the design process to the development of a paper prototype",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Explore design mode and events in App Lab",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Consider how apps can be used for good",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Unit wrap up",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "97070e05-035b-4acb-af41-8a89bb9e5f67",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "97070e05-035b-4acb-af41-8a89bb9e5f67",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022"
+      }
+    },
+    {
+      "key": "8764b275-c977-4bd0-b2fa-826a8bd388a3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8764b275-c977-4bd0-b2fa-826a8bd388a3",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022"
+      }
+    },
+    {
+      "key": "d63e92e6-555c-4749-8432-f7d0e91af673",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d63e92e6-555c-4749-8432-f7d0e91af673",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022"
+      }
+    },
+    {
+      "key": "7948e1c8-6a2c-4fc7-9e71-28d3a744b0ee",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7948e1c8-6a2c-4fc7-9e71-28d3a744b0ee",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022"
+      }
+    },
+    {
+      "key": "a3e70ab8-db23-4786-990d-712e4a61f721",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a3e70ab8-db23-4786-990d-712e4a61f721",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "b679d526-44ff-4218-b867-5f6d3389db78",
+      "position": 1,
+      "properties": {
+        "progression_name": "Unit Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "b679d526-44ff-4218-b867-5f6d3389db78",
+        "lesson_activity.key": "97070e05-035b-4acb-af41-8a89bb9e5f67"
+      }
+    },
+    {
+      "key": "963bddf4-87e9-42dc-86aa-fc6555ece144",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "963bddf4-87e9-42dc-86aa-fc6555ece144",
+        "lesson_activity.key": "8764b275-c977-4bd0-b2fa-826a8bd388a3"
+      }
+    },
+    {
+      "key": "70a4033d-1ac1-40a8-9c02-b4d75a8648f5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "70a4033d-1ac1-40a8-9c02-b4d75a8648f5",
+        "lesson_activity.key": "d63e92e6-555c-4749-8432-f7d0e91af673"
+      }
+    },
+    {
+      "key": "3766232e-ec33-42e6-ab2a-ba8f7546d23c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3766232e-ec33-42e6-ab2a-ba8f7546d23c",
+        "lesson_activity.key": "7948e1c8-6a2c-4fc7-9e71-28d3a744b0ee"
+      }
+    },
+    {
+      "key": "874cd06e-8af3-41cb-b4c9-d7d10bc8e1e3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "874cd06e-8af3-41cb-b4c9-d7d10bc8e1e3",
+        "lesson_activity.key": "a3e70ab8-db23-4786-990d-712e4a61f721"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U4L2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "b679d526-44ff-4218-b867-5f6d3389db78"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-Unit_Overview_U4L2"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-Unit_Overview_U4L2",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U4L2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "b679d526-44ff-4218-b867-5f6d3389db78"
+      }
+    }
   ],
   "resources": [
 

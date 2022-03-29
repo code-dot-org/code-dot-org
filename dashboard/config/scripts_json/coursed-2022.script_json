@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2022-03-18 15:32:59 UTC",
+    "serialized_at": "2022-03-25 21:47:25 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -210,7 +210,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **context-setting**/**skill-building** lesson, students will learn what events are and how programmers use them in video games. Students will build a game that they can customize with different speeds and sounds.",
-        "preparation": "\n - Play through the puzzles to find any potential problem areas for your class.\n - Read the ***slide deck** (to be presented to students at end of class).",
+        "preparation": "\n - Play through the puzzles to find any potential problem areas for your class.\n",
         "purpose": "Events are very common in computer programs, especially in video games.  \n\nIn this lesson, students will develop their understanding of events by making a sports-based game. Students will learn to make their paddle move according to arrow keys, and make noises when objects collide. At the very end, they will get to customize their game to make it more unique!",
         "student_overview": "Ever wish you could play video games in school? In this lesson, you will get to make your own!"
       },
@@ -528,7 +528,7 @@
       "key": "abaa6b2f-5158-4a3b-b861-28580f6362af",
       "position": 1,
       "properties": {
-        "duration": 10,
+        "duration": 15,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -568,7 +568,7 @@
       "key": "8bc2a962-0eac-4bae-85ff-c1ae50a085f6",
       "position": 4,
       "properties": {
-        "duration": 15,
+        "duration": 10,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -579,22 +579,8 @@
       }
     },
     {
-      "key": "a7dae702-74f1-442a-83fd-ff60c956071d",
-      "position": 5,
-      "properties": {
-        "duration": 10,
-        "name": "Optional Assessment"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "a7dae702-74f1-442a-83fd-ff60c956071d",
-        "lesson.key": "Graph Paper Programming",
-        "lesson_group.key": "csf_sequencing",
-        "script.name": "coursed-2022"
-      }
-    },
-    {
       "key": "f83a0af4-2b5c-4400-8f8b-7bc64de25f5b",
-      "position": 6,
+      "position": 5,
       "properties": {
         "name": "Extended Learning"
       },
@@ -732,7 +718,7 @@
       "key": "e982d792-ed3f-403f-8782-58d0e74eb342",
       "position": 1,
       "properties": {
-        "duration": 15,
+        "duration": 10,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -774,7 +760,7 @@
       "key": "c387cf31-fc0e-49bb-9eed-dc67641c1d05",
       "position": 4,
       "properties": {
-        "duration": 15,
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -884,7 +870,7 @@
       "key": "740f1b78-c1b2-40d1-a774-6d6ac44689b2",
       "position": 3,
       "properties": {
-        "duration": 15,
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -898,7 +884,7 @@
       "key": "f4151504-1d9a-4bf3-9d39-94f6fd1e142a",
       "position": 1,
       "properties": {
-        "duration": 5,
+        "duration": 10,
         "name": "Getting Started"
       },
       "seeding_key": {
@@ -926,7 +912,7 @@
       "key": "83904b3e-7ab5-4cb0-9166-38c40c6d06c9",
       "position": 3,
       "properties": {
-        "duration": 7,
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -940,6 +926,7 @@
       "key": "cdab872c-b226-4099-93d2-17e3a0f47ca1",
       "position": 4,
       "properties": {
+        "name": "Assessment (2 minutes)"
       },
       "seeding_key": {
         "lesson_activity.key": "cdab872c-b226-4099-93d2-17e3a0f47ca1",
@@ -952,6 +939,7 @@
       "key": "26389f28-c8e4-44e9-855f-b95094d2dae0",
       "position": 5,
       "properties": {
+        "name": "Cross-Curricular Opportunity"
       },
       "seeding_key": {
         "lesson_activity.key": "26389f28-c8e4-44e9-855f-b95094d2dae0",
@@ -1166,22 +1154,8 @@
       }
     },
     {
-      "key": "bf3fdec3-2b04-474d-b004-d6d717a600b7",
-      "position": 5,
-      "properties": {
-        "duration": 5,
-        "name": "Assessment"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "bf3fdec3-2b04-474d-b004-d6d717a600b7",
-        "lesson.key": "Conditionals with Cards",
-        "lesson_group.key": "csf_conditionals",
-        "script.name": "coursed-2022"
-      }
-    },
-    {
       "key": "a340f15a-7b7f-4105-803c-f7e1759cced5",
-      "position": 6,
+      "position": 5,
       "properties": {
         "name": "Extended Learning"
       },
@@ -1194,7 +1168,7 @@
     },
     {
       "key": "fa9d8e25-c013-4772-814a-5c7f8f80278d",
-      "position": 7,
+      "position": 6,
       "properties": {
         "name": "Cross-Curricular Opportunity"
       },
@@ -1700,6 +1674,8 @@
       "key": "fb8d3443-62f5-478c-95b5-1530c6d592e7",
       "position": 11,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide if using the Optional Assessment\n- Hand out ***Graph Paper Programming - Assessment** and allow students to complete the activity independently after the instructions have been well explained.\n- This should feel familiar, thanks to the previous activities.",
+        "name": "Optional Assessment (10 minutes)"
       },
       "seeding_key": {
         "activity_section.key": "fb8d3443-62f5-478c-95b5-1530c6d592e7",
@@ -1725,17 +1701,6 @@
       }
     },
     {
-      "key": "f996a13c-3afe-49d4-9698-afca4cbd77c1",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide if using the Optional Assessment\n- Hand out ***Graph Paper Programming - Assessment** and allow students to complete the activity independently after the instructions have been well explained.\n- This should feel familiar, thanks to the previous activities."
-      },
-      "seeding_key": {
-        "activity_section.key": "f996a13c-3afe-49d4-9698-afca4cbd77c1",
-        "lesson_activity.key": "a7dae702-74f1-442a-83fd-ff60c956071d"
-      }
-    },
-    {
       "key": "88774581-810b-4ffd-9baf-292c584f9a3e",
       "position": 1,
       "properties": {
@@ -1751,7 +1716,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _Why is it important to give a robot specific instructions when you “program” it?_\n\nStudents will either be learning a lot of new concepts or reviewing a lot of basic concepts. Based on your class's experience, you can cover the following vocabulary or move on to a bridging activity. We recommend using the following words in sentences if the definitions aren't explicitly covered.",
-        "name": "Introduction\r"
+        "name": "Reflect"
       },
       "seeding_key": {
         "activity_section.key": "96499db1-0002-4488-b370-2d718a5c90ec",
@@ -1762,7 +1727,8 @@
       "key": "c10c099e-fd94-4a79-9bd6-bfc55b2b1059",
       "position": 2,
       "properties": {
-        "description": "\n####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\nThis lesson has the following important vocabulary words:\n\n\n\n - **Bug** -    An error in a program that prevents the program from running as expected. \n\n - **Debugging** -    Finding and fixing errors in programs. \n\n - **Loop** -    The action of doing something over and over again\n\n - **Program** -    An algorithm that has been coded into something that can be run by a machine.\n\n - **Programming** -    The art of creating a program. "
+        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\nThis lesson has the following important vocabulary words:\n\n\n\n - **Bug** -    An error in a program that prevents the program from running as expected. \n\n - **Debugging** -    Finding and fixing errors in programs. \n\n - **Loop** -    The action of doing something over and over again\n\n - **Program** -    An algorithm that has been coded into something that can be run by a machine.\n\n - **Programming** -    The art of creating a program. ",
+        "name": "Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "c10c099e-fd94-4a79-9bd6-bfc55b2b1059",
@@ -1873,6 +1839,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide \n\n**Reflect:** _When have you “debugged” a frustrating problem in your life?_",
+        "name": "Reflect",
         "tips": [
           {
             "type": "teachingTip",
@@ -1889,7 +1856,8 @@
       "key": "5dbc43b8-f734-4c93-99d4-0995393a9f25",
       "position": 2,
       "properties": {
-        "description": "\n&nbsp\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Algorithm** - A list of steps to finish a task.\n\n\n- **Bug** - Part of a program that does not work correctly.\n\n- **Debugging** - Finding and fixing problems in an algorithm or program.\n\n- **Program** - An algorithm that has been coded into something that can be run by a machine.\n\n&nbsp\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary: (continued)” slide\n\n- **Frustrated** - Feeling annoyed or angry because something is not the way you want it. \n\n- **Persistence** - Trying again and again, even when something is very hard.\n"
+        "description": "\n\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Algorithm** - A list of steps to finish a task.\n\n\n- **Bug** - Part of a program that does not work correctly.\n\n- **Debugging** - Finding and fixing problems in an algorithm or program.\n\n- **Program** - An algorithm that has been coded into something that can be run by a machine.\n\n&nbsp\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary: (continued)” slide\n\n- **Frustrated** - Feeling annoyed or angry because something is not the way you want it. \n\n- **Persistence** - Trying again and again, even when something is very hard.\n",
+        "name": "Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "5dbc43b8-f734-4c93-99d4-0995393a9f25",
@@ -1900,7 +1868,8 @@
       "key": "3ab2b28c-3947-44d9-ae6d-8d8d43320c27",
       "position": 3,
       "properties": {
-        "description": "Recall that in \"Graph Paper Programming\" we guided our teammate's Automatic Realization Machine (ARM) using arrows. This warm up will bring back these ideas, which will be needed in the main activity."
+        "description": "Recall that in \"Graph Paper Programming\" we guided our teammate's Automatic Realization Machine (ARM) using arrows. This warm up will bring back these ideas, which will be needed in the main activity.",
+        "name": "Introduction"
       },
       "seeding_key": {
         "activity_section.key": "3ab2b28c-3947-44d9-ae6d-8d8d43320c27",
@@ -1911,8 +1880,7 @@
       "key": "1a76c73e-a54d-4d84-ae77-8cf516d6661e",
       "position": 4,
       "properties": {
-        "description": "**Goal:** In this lesson, we want to help students learn to identify and fix bugs in their own programs.  The easiest way to do that is to first present students with a program that contains bugs that are not their fault.  Once they've helped you fix \"your\" program, share with them how frustrating it can be to make mistakes, and help them see that those feelings are completely normal and they shouldn't feel embarrassed by them.\n\n&nbsp\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Debugging” slide\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-05-11-12.30.53.png)\n\n**Discuss:** Get the attention of the class and let them know that you are stuck!  You have this challenge, and you thought you had solved it, but it doesn't seem to be working.  Your program has a bug, can they help you fix it?\n\nTake a moment to walk them through the rules:\n- _Start at the star._\n- _Follow the instructions step-by-step._\n- _End when all of the right squares are filled in._\n\n*Optional:*  Follow along by filling in a blank grid. Express frustration when the picture doesn't turn out the way that you wanted it to.\n\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Think, Pair, Share” slide\n\n**Think:** *Can you figure out why my program doesn't work?*\n\n**Pair:** Let students work together to see if they can figure out what the program is supposed to say.\n\n**Share:** Ask students if anyone was able to figure out a way to solve the problem.  When you get a correct answer, let the students know that they are great at debugging!",
-        "name": "Where did I go wrong?"
+        "description": "\n####Where did I go wrong?\n**Goal:** In this lesson, we want to help students learn to identify and fix bugs in their own programs.  The easiest way to do that is to first present students with a program that contains bugs that are not their fault.  Once they've helped you fix \"your\" program, share with them how frustrating it can be to make mistakes, and help them see that those feelings are completely normal and they shouldn't feel embarrassed by them.\n\n&nbsp\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Debugging” slide\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-05-11-12.30.53.png)\n\n**Discuss:** Get the attention of the class and let them know that you are stuck!  You have this challenge, and you thought you had solved it, but it doesn't seem to be working.  Your program has a bug, can they help you fix it?\n\nTake a moment to walk them through the rules:\n- _Start at the star._\n- _Follow the instructions step-by-step._\n- _End when all of the right squares are filled in._\n\n*Optional:*  Follow along by filling in a blank grid. Express frustration when the picture doesn't turn out the way that you wanted it to.\n\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Think, Pair, Share” slide\n\n**Think:** *Can you figure out why my program doesn't work?*\n\n**Pair:** Let students work together to see if they can figure out what the program is supposed to say.\n\n**Share:** Ask students if anyone was able to figure out a way to solve the problem.  When you get a correct answer, let the students know that they are great at debugging!"
       },
       "seeding_key": {
         "activity_section.key": "1a76c73e-a54d-4d84-ae77-8cf516d6661e",
@@ -2247,8 +2215,8 @@
       "key": "ea99adc6-d611-4d13-9da7-04fcb43c6df3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** What is your favorite (classroom appropriate) video game? What is your favorite part of the game?\n\n\nMost of the time, students will respond with some kind of event. When you recognize a student response that describes an event, ask the student to describe it further.\n\nOnce the student is done describing their fun, take a minute to relate it back to the definition of an **event**.\n\n&nbsp\n\n\n###Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n\n - **Event**: An action that causes something to happen.\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Pair-Share” slide\n\n\nAsk the students to try and relate some of their favorite parts of video games and how they can be described as events. Have them pair-share and discuss the differences between their events and their partner's.",
-        "name": "Introduction",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** What is your favorite (classroom appropriate) video game? What is your favorite part of the game?\n\n\nMost of the time, students will respond with some kind of event. When you recognize a student response that describes an event, ask the student to describe it further.\n\nOnce the student is done describing their game, take a minute to relate it back to the definition of an **event**.\n\n\n\n\n\n\n\n\n\n",
+        "name": "Reflect",
         "tips": [
           {
             "type": "teachingTip",
@@ -2258,6 +2226,30 @@
       },
       "seeding_key": {
         "activity_section.key": "ea99adc6-d611-4d13-9da7-04fcb43c6df3",
+        "lesson_activity.key": "8799b3de-39a1-4578-87f7-2dc2b97e9e00"
+      }
+    },
+    {
+      "key": "6c45fccd-0b3b-4db0-9224-2dce4fee891a",
+      "position": 2,
+      "properties": {
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n\n - **Event**: An action that causes something to happen.\n\n",
+        "name": "Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "6c45fccd-0b3b-4db0-9224-2dce4fee891a",
+        "lesson_activity.key": "8799b3de-39a1-4578-87f7-2dc2b97e9e00"
+      }
+    },
+    {
+      "key": "b7541d65-dbb6-4402-8392-0a1416e131d5",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Pair-Share” slide\n\n\nAsk the students to try and relate some of their favorite parts of video games and how they can be described as events. Have them pair-share and discuss the differences between their events and their partner's.",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "b7541d65-dbb6-4402-8392-0a1416e131d5",
         "lesson_activity.key": "8799b3de-39a1-4578-87f7-2dc2b97e9e00"
       }
     },
@@ -2305,16 +2297,6 @@
       }
     },
     {
-      "key": "1608b8b8-d08a-413d-ad14-f6cccd1c0f29",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "1608b8b8-d08a-413d-ad14-f6cccd1c0f29",
-        "lesson_activity.key": "7434edcb-2b00-412f-8333-1b9d5f4091d4"
-      }
-    },
-    {
       "key": "2f77a890-cf45-4d1a-a4ca-d12e723d8d6f",
       "position": 1,
       "properties": {
@@ -2358,7 +2340,8 @@
       "key": "7c5f7ed0-8e92-4943-8403-033e846373a0",
       "position": 3,
       "properties": {
-        "description": "&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide"
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide",
+        "name": "Reflect"
       },
       "seeding_key": {
         "activity_section.key": "7c5f7ed0-8e92-4943-8403-033e846373a0",
@@ -2378,13 +2361,13 @@
       }
     },
     {
-      "key": "4183cc0f-f87e-4c3b-80e8-9b849d0aba39",
+      "key": "62aac1c8-7601-454f-be68-0e7f16664f69",
       "position": 5,
       "properties": {
-        "description": "Encourage students to share the ways they express creativity, such as with art, dance, music, writing.\n\nExplain that today we're going to be creative with our code. Just like choosing which type of colors of paint to use, or what kinds of words you write with can express creativity, choosing what code you write and how people interact with it can be an opportunity to express your creativity too!\n\n**Get up and dance:** Announce to the class that today we're going to see how we can combine coding with dancing in a creative way. Ask your kids to floss, dab, or do a creative dance move of their own for 10 seconds to get them in the mood. You can play a song from this ***Spotify Playlist** to help kick things off. Capture your class's moves on video.\n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)"
+        "description": "Encourage students to share the ways they express creativity, such as with art, dance, music, writing."
       },
       "seeding_key": {
-        "activity_section.key": "4183cc0f-f87e-4c3b-80e8-9b849d0aba39",
+        "activity_section.key": "62aac1c8-7601-454f-be68-0e7f16664f69",
         "lesson_activity.key": "f4151504-1d9a-4bf3-9d39-94f6fd1e142a"
       }
     },
@@ -2392,10 +2375,23 @@
       "key": "b272663e-4596-4ddd-b25e-b3a5a0c165f7",
       "position": 6,
       "properties": {
-        "description": "###Vocabulary\n&nbsp\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Event** - An action that causes something to happen.\n- **Program** - An algorithm that has been coded into something that can be run by a machine.\n- **Code** - (v) to write code, or to write instructions for a computer.\n"
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Event** - An action that causes something to happen.\n- **Program** - An algorithm that has been coded into something that can be run by a machine.\n- **Code** - (v) to write code, or to write instructions for a computer.\n",
+        "name": "Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "b272663e-4596-4ddd-b25e-b3a5a0c165f7",
+        "lesson_activity.key": "f4151504-1d9a-4bf3-9d39-94f6fd1e142a"
+      }
+    },
+    {
+      "key": "4183cc0f-f87e-4c3b-80e8-9b849d0aba39",
+      "position": 7,
+      "properties": {
+        "description": "\n\nExplain that today we're going to be creative with our code. Just like choosing which type of colors of paint to use, or what kinds of words you write with can express creativity, choosing what code you write and how people interact with it can be an opportunity to express your creativity too!\n\n**Get up and dance:** Announce to the class that today we're going to see how we can combine coding with dancing in a creative way. Ask your kids to floss, dab, or do a creative dance move of their own for 10 seconds to get them in the mood. You can play a song from this ***Spotify Playlist** to help kick things off. Capture your class's moves on video.\n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "4183cc0f-f87e-4c3b-80e8-9b849d0aba39",
         "lesson_activity.key": "f4151504-1d9a-4bf3-9d39-94f6fd1e142a"
       }
     },
@@ -2415,7 +2411,7 @@
       "key": "6b622947-8880-4d2d-8cb2-ed13f13a63c9",
       "position": 2,
       "properties": {
-        "description": "\n\n##### Level 1\n&nbsp\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Dance Party Warm Up” video\n",
+        "description": "\n\n##### Level 1\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Dance Party Warm Up” video\n",
         "name": "Level by Level Support",
         "progression_name": "Video: Warm Up"
       },
@@ -2428,7 +2424,7 @@
       "key": "4d7270ba-f9ba-4089-b9c1-0448f6eead69",
       "position": 3,
       "properties": {
-        "description": "\n##### Level 2\n&nbsp\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Practice” slide\n\n\n\n* Drag the red `make a new` block from the toolbox on the left to the workspace on the right. Connect it inside the `setup` block.\n* You have now written your first program. Make sure to press Run to see what happens. You should hear music and see a character start to move in the display area.",
+        "description": "\n##### Level 2\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Practice” slide\n\n\n\n* Drag the red `make a new` block from the toolbox on the left to the workspace on the right. Connect it inside the `setup` block.\n* You have now written your first program. Make sure to press Run to see what happens. You should hear music and see a character start to move in the display area.",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2440,7 +2436,7 @@
       "key": "c9ed59ff-70e5-4915-b258-f37aae334833",
       "position": 4,
       "properties": {
-        "description": "&nbsp\n##### Level 3 \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Dance Party Events” video\nLevel 3\n\n",
+        "description": "\n##### Level 3 \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Dance Party Events” video\nLevel 3\n\n",
         "progression_name": "Video: Events"
       },
       "seeding_key": {
@@ -2452,7 +2448,7 @@
       "key": "715c15b8-ce05-4be2-a6e3-63c7addc5abf",
       "position": 5,
       "properties": {
-        "description": "\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 4-5 - Events” slide\n##### Level 4\n\n* Levels 4-5 are about making the dance interactive. \n* The green blocks are event blocks. These blocks start a new sequence of code and do not need to be connected inside the `setup` block. \n* Connecting the purple block under the green event block allows you to make the character perform a dance by pressing the orange arrow buttons or keys on your keyboard.\n* Make sure to press the arrow buttons after pressing Run or the dancer(s) won’t move.\n\n##### Level 5\n\n* Make sure to bring out a second purple `do once` block. You should have a `bears do once` block and a `cats do once` block in your workspace. Both should be connected to a green `when pressed` event block.\n* Make sure to press the arrow buttons after pressing Run or the dancers won’t move.\n",
+        "description": "\n\n\n##### Level 4\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 4-5 - Events” slide\n* Levels 4-5 are about making the dance interactive. \n* The green blocks are event blocks. These blocks start a new sequence of code and do not need to be connected inside the `setup` block. \n* Connecting the purple block under the green event block allows you to make the character perform a dance by pressing the orange arrow buttons or keys on your keyboard.\n* Make sure to press the arrow buttons after pressing Run or the dancer(s) won’t move.\n\n##### Level 5\n\n* Make sure to bring out a second purple `do once` block. You should have a `bears do once` block and a `cats do once` block in your workspace. Both should be connected to a green `when pressed` event block.\n* Make sure to press the arrow buttons after pressing Run or the dancers won’t move.\n",
         "progression_name": "Events"
       },
       "seeding_key": {
@@ -2552,7 +2548,7 @@
       "key": "92a12478-0870-4331-a034-b5f1ed4164af",
       "position": 13,
       "properties": {
-        "description": "&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 16-17 - Lesson Extras” slide",
+        "description": "&nbsp\n####Lesson Extras\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras” slide",
         "progression_name": "Lesson Extras"
       },
       "seeding_key": {
@@ -2577,9 +2573,7 @@
       "key": "2c20e776-eba9-4b67-b0f1-f539ddcccf13",
       "position": 1,
       "properties": {
-        "description": "Ask students to add their “Whip Around” sticky notes or note cards to your \"Computer Science\" mind map on their way out the door. Try to populate the board with lots of great ideas about what CS is and why it matters.",
-        "duration": "2",
-        "name": "Assessment"
+        "description": "Ask students to add their “Whip Around” sticky notes or note cards to your \"Computer Science\" mind map on their way out the door. Try to populate the board with lots of great ideas about what CS is and why it matters."
       },
       "seeding_key": {
         "activity_section.key": "2c20e776-eba9-4b67-b0f1-f539ddcccf13",
@@ -2590,8 +2584,7 @@
       "key": "19085421-a961-434d-8cca-783977387177",
       "position": 1,
       "properties": {
-        "description": "\n### Survival of the Dancers (45-60 minutes)\n\n![](https://curriculum.code.org/media/uploads/scienceSmall.png) \n**Computer Science + Science**\n\n[Survival of the Dancers](https://docs.google.com/document/d/1F1E-qPyfnh7HV1euIjsRX01PZMhbOAA0q447FqRdefo/edit?usp=sharing)  is an optional activity aligned to Next Generation Science Standards, written by our teacher community. Using Dance Party, students will select at least one organism (dancer) which is well suited for the environment (world) they create. Students are encouraged to utilize the “properties” blocks of code to customize the characteristics of each organism (dancer). \n\n*Standards Addressed:*\n\n- **NGSS.3-LS4-2:** Use evidence to construct an explanation for how the variations in characteristics among individuals of the same species may provide advantages in surviving, finding mates, and reproducing. \n\n- **NGSS.3-LS4-3:** Construct an argument with evidence that in a particular habitat some organisms can survive well, some survive less well, and some cannot survive at all. \n\n- **OPTIONAL EXTENSION: NGSS.3-LS4-4:** Make a claim about the merit of a solution to a problem caused when the environment changes and the types of plants and animals that live there may change.\n\n\n\n",
-        "name": "Cross-Curricular Opportunity"
+        "description": "\n### Survival of the Dancers (45-60 minutes)\n\n![](https://curriculum.code.org/media/uploads/scienceSmall.png) \n**Computer Science + Science**\n\n[Survival of the Dancers](https://docs.google.com/document/d/1F1E-qPyfnh7HV1euIjsRX01PZMhbOAA0q447FqRdefo/edit?usp=sharing)  is an optional activity aligned to Next Generation Science Standards, written by our teacher community. Using Dance Party, students will select at least one organism (dancer) which is well suited for the environment (world) they create. Students are encouraged to utilize the “properties” blocks of code to customize the characteristics of each organism (dancer). \n\n*Standards Addressed:*\n\n- **NGSS.3-LS4-2:** Use evidence to construct an explanation for how the variations in characteristics among individuals of the same species may provide advantages in surviving, finding mates, and reproducing. \n\n- **NGSS.3-LS4-3:** Construct an argument with evidence that in a particular habitat some organisms can survive well, some survive less well, and some cannot survive at all. \n\n- **OPTIONAL EXTENSION: NGSS.3-LS4-4:** Make a claim about the merit of a solution to a problem caused when the environment changes and the types of plants and animals that live there may change.\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "19085421-a961-434d-8cca-783977387177",
@@ -2705,8 +2698,19 @@
       }
     },
     {
-      "key": "31073c5d-beaf-420a-af98-4aa468a7b9d4",
+      "key": "e26c0781-e8ca-4864-ab22-1af5ce60b1f4",
       "position": 7,
+      "properties": {
+        "description": "####Lesson Extras\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras” slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "e26c0781-e8ca-4864-ab22-1af5ce60b1f4",
+        "lesson_activity.key": "bd41d9a1-3212-4e4a-928e-ad0e05bbdfee"
+      }
+    },
+    {
+      "key": "31073c5d-beaf-420a-af98-4aa468a7b9d4",
+      "position": 8,
       "properties": {
         "tips": [
           {
@@ -2722,7 +2726,7 @@
     },
     {
       "key": "426a591c-ec85-48bf-9864-5f909eafa458",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "**Circulate:** Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize ***Pause and Think Online** Video whenever possible.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Remind students to use the debugging process before you approach.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own."
       },
@@ -2778,10 +2782,21 @@
       }
     },
     {
-      "key": "bc19ceeb-4c22-40a1-9794-7b0e998b5e78",
+      "key": "b232d54d-74fd-4360-bf15-83f2cd03f717",
       "position": 1,
       "properties": {
-        "description": "\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Artist Intro with JR Hildebrand” video",
+        "description": "####Online Puzzles\n\nSome students may discover where to add `repeat` loops by writing out the program without loops then circling sections of repetitions. If the students in your class seem like they could benefit from this, have them keep paper and pencils beside them at their computers. Students might also enjoy drawing some of the shapes and figures on paper as they program online."
+      },
+      "seeding_key": {
+        "activity_section.key": "b232d54d-74fd-4360-bf15-83f2cd03f717",
+        "lesson_activity.key": "911da8c1-6cda-4fe7-a888-af2af8b70994"
+      }
+    },
+    {
+      "key": "bc19ceeb-4c22-40a1-9794-7b0e998b5e78",
+      "position": 2,
+      "properties": {
+        "description": "\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Artist Intro with JR Hildebrand” video",
         "name": "Drawing Shapes with Loops",
         "progression_name": "Video: Artist Intro with JR Hildebrand"
       },
@@ -2792,7 +2807,7 @@
     },
     {
       "key": "61fa4607-bb88-4573-8bea-10a12e88181a",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-3 - Skill Building” slide",
         "progression_name": "Skill Building"
@@ -2804,7 +2819,7 @@
     },
     {
       "key": "5f35a867-9366-4759-b0e8-be48c34c09c5",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "&nbsp\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Loops with the Artist” video\n",
         "progression_name": "Video: Loops with the Artist"
@@ -2816,7 +2831,7 @@
     },
     {
       "key": "f52282b3-cfad-49a9-a004-5297a4ca7bbc",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "\n&nbsp\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 5-9 - Skill Building” slide\n",
         "progression_name": "Skill Building"
@@ -2828,7 +2843,7 @@
     },
     {
       "key": "f83fde9f-a2d7-4f99-94fb-ac2fc9b79352",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Challenge” slide\n",
         "progression_name": "Challenge"
@@ -2840,7 +2855,7 @@
     },
     {
       "key": "3f3774e2-c8fa-4318-9e6e-d58f6983e746",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 11 - Practice” slide\n",
         "progression_name": "Practice"
@@ -2851,13 +2866,13 @@
       }
     },
     {
-      "key": "b232d54d-74fd-4360-bf15-83f2cd03f717",
-      "position": 7,
+      "key": "3315af90-e8ff-4568-813e-2b743e90bf30",
+      "position": 8,
       "properties": {
-        "description": "####Online Puzzles\n\nSome students may discover where to add `repeat` loops by writing out the program without loops then circling sections of repetitions. If the students in your class seem like they could benefit from this, have them keep paper and pencils beside them at their computers. Students might also enjoy drawing some of the shapes and figures on paper as they program online."
+        "description": "####Lesson Extras\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras” slide"
       },
       "seeding_key": {
-        "activity_section.key": "b232d54d-74fd-4360-bf15-83f2cd03f717",
+        "activity_section.key": "3315af90-e8ff-4568-813e-2b743e90bf30",
         "lesson_activity.key": "911da8c1-6cda-4fe7-a888-af2af8b70994"
       }
     },
@@ -2996,8 +3011,7 @@
       "key": "791b5b99-593d-4287-ab93-a9970d63744e",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 14-15 - Lesson Extras” slide",
-        "progression_name": "Lesson Extras"
+        "description": "####Lesson Extras\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 14-15 - Lesson Extras” slide"
       },
       "seeding_key": {
         "activity_section.key": "791b5b99-593d-4287-ab93-a9970d63744e",
@@ -3017,10 +3031,23 @@
       }
     },
     {
-      "key": "84144ea8-ec9f-40ad-925b-6170d47437ef",
+      "key": "bde81c73-ab2e-4430-88c8-7b0a493c6a18",
       "position": 1,
       "properties": {
-        "description": "####Vocabulary\n\nThis lesson has one new and important word:\n\n**Conditionals** - *Say it with me: Con-di-shun-uls* \n\nStatements that only run under certain conditions."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _We use the word “if” to make sure that some action only occurs when it is supposed to._\n\n_Finish this statement: \nIf I do well in my classes, then...._\n",
+        "name": "Reflect"
+      },
+      "seeding_key": {
+        "activity_section.key": "bde81c73-ab2e-4430-88c8-7b0a493c6a18",
+        "lesson_activity.key": "91d98159-1f12-468b-acf3-5e44b885c44b"
+      }
+    },
+    {
+      "key": "84144ea8-ec9f-40ad-925b-6170d47437ef",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Conditionals** - Statements that only run under certain conditions.\n\n- **Pseudocode** - A plain language description of the steps in an algorithm.",
+        "name": "Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "84144ea8-ec9f-40ad-925b-6170d47437ef",
@@ -3029,9 +3056,9 @@
     },
     {
       "key": "a8dddc64-bf3e-4023-85b5-e202ec1a0eb6",
-      "position": 2,
+      "position": 3,
       "properties": {
-        "description": "- We can start this lesson off right away\n\t- Let the class know that if they can be completely quiet for thirty seconds, you will do something like:\n\t\t- Sing an opera song\n\t\t- Give five more minutes of recess\n\t\t- Do a handstand\n\t- Start counting right away.\n\t- If the students succeed, point out that they succeeded, so they get the reward.\n\t- Otherwise, point out that they were not completely quiet for a full thirty seconds, so they do not get the reward.\n- Ask the class *What was the condition of the reward?*\n\t- The condition was IF you were quiet for 30 seconds\n\t\t- If you were, the condition would be true, and you would get the reward.\n\t\t- If you weren't, the condition would be false, so the reward would not apply.\n\t- _Can we come up with another conditional?_\n\t\t- If you can guess my age correctly, the class can give you applause.\n\t\t- If I know an answer, I can raise my hand.\n\t\t- What examples can you come up with?\n- *Sometimes, we want to have an extra condition, in case the \"IF\" statement is not true.*\n\t- *This extra condition is called an \"ELSE\" statement*\n\t- *When the \"IF\" condition isn't met, we can look at the \"ELSE\" for what to do*\n\t\t- *Example: IF I draw a king from this deck of cards, everybody claps. Or ELSE, everyone says \"Awwwwwwe.\"*\n\t\t- *Let's try it.*(Draw a card and see if your class reacts appropriately.)\n\t- Ask the class to analyze what just happened.\n\t\t- *What was the IF?*\n\t\t- *What was the ELSE?*\n\t\t- *Which condition was met?*\n\t- *Believe it or not, we have even one more option.*\n\t\t- *What if I wanted you to clap if I draw a 7, or else if I draw something less than seven you say \"YAY,\" or else you say \"Awwwwwwwe\"?*\n\t\t\t- *This is why we have the terms If, Else-If, and Else.*\n\t\t\t- *If is the first condition.*\n\t\t\t- *Else-If gets looked at only if the \"If\" isn't true.*\n\t\t\t- *Else gets looked at only if nothing before it is true.*\n\nNow let's play a game.",
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reward” slide\n- We can start this lesson off right away\n\t- Let the class know that if they can be completely quiet for thirty seconds, you will do something like:\n\t\t- Sing an opera song\n\t\t- Give five more minutes of recess\n\t\t- Do a handstand\n\n\t- Start counting right away.\n\t- If the students succeed, point out that they succeeded, so they get the reward.\n\t- Otherwise, point out that they were not completely quiet for a full thirty seconds, so they do not get the reward.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “If Statement” slide\n\n**Say:** *What was the condition of the reward?*\n\n- _The condition was IF you were quiet for 30 seconds_\n\n\t- _If you were quiet, the condition would be true, and you would get the reward._\n\t- _If you weren't quiet, the condition would be false, so the reward would not apply._\n\n- _Can we come up with another conditional?_\n\t- _If you can guess my age correctly, the class can give you applause._\n\t- _If I know an answer, I can raise my hand._\n\t- _What examples can you come up with?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Else Statement” slide\n\n- *Sometimes, we want to have an extra condition, in case the \"IF\" statement is not true.*\n\t- *This extra condition is called an \"ELSE\" statement*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Else Statement (example)” slide\n\n- *When the \"IF\" condition isn't met, we can look at the \"ELSE\" for what to do*\n\t- *Example: **IF** I draw a king from this deck of cards, everybody claps. \n  - Or **ELSE**, everyone says \"Awwwwwwe.\"*\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Let's Try It” slide\n\n- *Let's try it.*(Draw a card and see if your class reacts appropriately.)\n\t- Ask the class to analyze what just happened.\n\t\t- *What was the IF?*\n\t\t- *What was the ELSE?*\n\t\t- *Which condition was met?*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Believe it or Not” slide\n\n- *Believe it or not, we have even one more option.*\n\t- **If** I draw a 7, clap.\n\n   - **Else if** I draw something less than 7, you say \"YAY\".\n\n   - **Else** say \"Awwwwe\".\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “If, Else-If, Else” slide\n\n- *This is why we have the terms If, Else-If, and Else.*\n\t- _**If** is the first condition._\n\t- _**Else-If** gets looked at only if the \"If isn't true._\n\t- _**Else** gets looked at only if nothing before it is true._\n\n_Now let's play a game._",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -3055,7 +3082,7 @@
       "key": "4bffc95b-dede-4aa0-8c95-ccf689c4d9a0",
       "position": 1,
       "properties": {
-        "description": "\n####Conditionals with Cards Sample Program - Teacher Prep Guide\n\n**Directions:**\n\n- Create a few programs with your class that depend on things like a card's suit, color, or value to award or subtract points. You can write the program as an algorithm, pseudocode, or actual code.\n\nHere is a sample algorithm:\n\n\tif (CARD is RED)\n\t\tAward YOUR team 1 point\n\t\n\tElse\n\t\tAward OTHER team 1 point\n\n\nHere is a sample of the same program in pseudocode:\n\n\n\tIf (card.color == RED){\n\t\tpoints.yours = points.yours + 1;\n\t}\n\t\n\tElse {\n\t\tpoints.other = points.other + 1;\n\t}\n\n\n- Decide how you want to split your class into teams.\n- Each team should have a pile of cards (at least as many cards as team members) nearby.\n- Put one of your “Programs” up on the board for all to see.\n- Have the teams take turns drawing cards and following the program to see how many points they score in each round.\n- Play several times with several different programs to help the students really understand conditionals.\n\n\nOnce the class has had some practice, you can encourage students to nest conditionals inside one another. Make sure they understand that if the card is red, YOUR team is awarded 1 point, and then _nothing else happens_, since the condition was met:\n\n\n\tIf (CARD is RED)\n\t\tAward YOUR team 1 point\n\t\n\tElse\n\t\tIf (CARD is higher than 9)\n\t\t\tAward OTHER team 1 point\n\t\tElse\n\t\t\tAward YOUR team the same number of points on the card\n\n\n\nHere is the same program in pseudocode:\n\n\tIf (card.color == RED ){\n\t\tpoints.yours = points.yours + 1;\n\t}\n\tElse {\n\t\tif (card.value > 9){\n\t\t\tpoints.other = points.other + 1;\n\t\t}\n\t\tElse {\n\t\t\tpoints.yours = points.yours + card.value;\n\t\t}\n\t}"
+        "description": "\n####Conditionals with Cards Sample Program - Teacher Prep Guide\n\n\n\n**Directions:**\n\n- Create a few programs with your class that depend on things like a card's suit, color, or value to award or subtract points. You can write the program as an algorithm, pseudocode, or actual code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Sample” slide\n\nHere is a sample algorithm:\n\n\tif (CARD is RED)\n\t\tAward YOUR team 1 point\n\t\n\tElse\n\t\tAward OTHER team 1 point\n\n\nHere is a sample of the same program in pseudocode:\n\n\n\tIf (card.color == RED){\n\t\tpoints.yours = points.yours + 1;\n\t}\n\t\n\tElse {\n\t\tpoints.other = points.other + 1;\n\t}\n\n\n- Decide how you want to split your class into teams.\n- Each team should have a pile of cards (at least as many cards as team members) nearby.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Let's play a game!” slide\n\n- Put one of your “Programs” up on the board for all to see.\n- Have the teams take turns drawing cards and following the program to see how many points they score in each round.\n- Play several times with several different programs to help the students really understand conditionals. (Three additional slides have been provided for this part of the activity if needed.)\n\n\n\n\nOnce the class has had some practice, you can encourage students to nest conditionals inside one another. Make sure they understand that if the card is red, YOUR team is awarded 1 point, and then _nothing else happens_, since the condition was met:\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Let's nest conditionals” slide\n\n\n\n\tIf (CARD is RED)\n\t\tAward YOUR team 1 point\n\t\n\tElse\n\t\tIf (CARD is higher than 9)\n\t\t\tAward OTHER team 1 point\n\t\tElse\n\t\t\tAward YOUR team the same number of points on the card\n\n\n\nHere is the same program in pseudocode:\n\n\tIf (card.color == RED ){\n\t\tpoints.yours = points.yours + 1;\n\t}\n\tElse {\n\t\tif (card.value > 9){\n\t\t\tpoints.other = points.other + 1;\n\t\t}\n\t\tElse {\n\t\t\tpoints.yours = points.yours + card.value;\n\t\t}\n\t}"
       },
       "seeding_key": {
         "activity_section.key": "4bffc95b-dede-4aa0-8c95-ccf689c4d9a0",
@@ -3063,10 +3090,22 @@
       }
     },
     {
+      "key": "6d22e6b7-57d6-4bf5-a926-e5104c8f3bd5",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Optional Assessment” slide\n\n\nHand out ***Conditionals with Cards - Assessment** and allow students to complete the activity independently after the instructions have been well explained. This should feel familiar, thanks to the previous activities. If needed, refer to the **Assessment Video** resource as a guide.",
+        "name": "Optional Assessment (5 minutes)"
+      },
+      "seeding_key": {
+        "activity_section.key": "6d22e6b7-57d6-4bf5-a926-e5104c8f3bd5",
+        "lesson_activity.key": "bda68aaa-6a54-4667-93cf-e8502cb651b5"
+      }
+    },
+    {
       "key": "dda904ae-113f-4561-8a61-e9ed43297a47",
       "position": 1,
       "properties": {
-        "name": "Reflection",
+        "description": "&nbsp\n####Flash Chat: What did we learn?\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Flash Chat” slide",
         "tips": [
           {
             "type": "teachingTip",
@@ -3083,7 +3122,7 @@
       "key": "0634eee0-ab96-4581-adc1-8bda642fdf93",
       "position": 2,
       "properties": {
-        "description": "\n&nbsp\n####Flash Chat: What did we learn?\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Flash Chat” slide\n\n\nThe two bolded questions below are the ones featured in the slides. Feel free to ask your students to answer the other Flash Chat questions as well.\n- If you were going to code this up in Blocky, what would you need to add around your conditionals to let the code run more than one time? (A loop)\n- What other things do you do during the day under certain conditions?\n- **If you are supposed to do something when the value of a card is more than 5, and you draw a 5, do you meet that condition?**\n- Notice that conditions are either \"True\" or \"False.\" There is no assessment of a condition that evaluates to \"Banana.\"\n- **When you need to meet several combinations of conditions, we can use something called \"nested conditionals.\"**\n\t- **What do you think that means?**\n\t- **Can you give an example of where we saw that during the game?**\n- What part of that game did you like the best?"
+        "description": "\nThe two bolded questions below are the ones featured in the slides. Feel free to ask your students to answer the other Flash Chat questions as well.\n- If you were going to code this up in Blocky, what would you need to add around your conditionals to let the code run more than one time? (A loop)\n- What other things do you do during the day under certain conditions?\n- **If you are supposed to do something when the value of a card is more than 5, and you draw a 5, do you meet that condition?**\n- Notice that conditions are either \"True\" or \"False.\" There is no assessment of a condition that evaluates to \"Banana.\"\n- **When you need to meet several combinations of conditions, we can use something called \"nested conditionals.\"**\n\t- **What do you think that means?**\n\t- **Can you give an example of where we saw that during the game?**\n- What part of that game did you like the best?"
       },
       "seeding_key": {
         "activity_section.key": "0634eee0-ab96-4581-adc1-8bda642fdf93",
@@ -3100,17 +3139,6 @@
       "seeding_key": {
         "activity_section.key": "5310e8c8-822b-4c59-baa0-4583cdf3d249",
         "lesson_activity.key": "1cf3af21-4b21-4292-9b39-7dfccd10f419"
-      }
-    },
-    {
-      "key": "a5b66ff5-50a8-4074-a380-498d7864ba24",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Assessment” slide\n\n\nHand out ***Conditionals with Cards - Assessment** and allow students to complete the activity independently after the instructions have been well explained. This should feel familiar, thanks to the previous activities. If needed, refer to the **Assessment Video** resource as a guide."
-      },
-      "seeding_key": {
-        "activity_section.key": "a5b66ff5-50a8-4074-a380-498d7864ba24",
-        "lesson_activity.key": "bf3fdec3-2b04-474d-b004-d6d717a600b7"
       }
     },
     {
@@ -3249,6 +3277,17 @@
       },
       "seeding_key": {
         "activity_section.key": "268e56b4-6f3e-4a44-8383-2e538ae1ab72",
+        "lesson_activity.key": "818d6302-7244-4a90-934f-31dc3381836a"
+      }
+    },
+    {
+      "key": "3ea15706-caac-499b-aef5-a7210f291bfc",
+      "position": 10,
+      "properties": {
+        "description": "####Lesson Extras\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "3ea15706-caac-499b-aef5-a7210f291bfc",
         "lesson_activity.key": "818d6302-7244-4a90-934f-31dc3381836a"
       }
     },
@@ -3431,6 +3470,17 @@
       }
     },
     {
+      "key": "3edea7b4-3cb0-44c0-8705-5e2f51f2802d",
+      "position": 11,
+      "properties": {
+        "description": "####Lesson Extras\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "3edea7b4-3cb0-44c0-8705-5e2f51f2802d",
+        "lesson_activity.key": "c381e292-d281-4325-a307-4c4358dba746"
+      }
+    },
+    {
       "key": "a1959bb9-3d8d-46ac-826c-df29b6dcb135",
       "position": 1,
       "properties": {
@@ -3597,6 +3647,17 @@
       }
     },
     {
+      "key": "3694bab1-5f1b-411a-8170-601003b9d32c",
+      "position": 10,
+      "properties": {
+        "description": "####Lesson Extras\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "3694bab1-5f1b-411a-8170-601003b9d32c",
+        "lesson_activity.key": "3c7c2254-c6ec-4f6d-89a4-81633cc72170"
+      }
+    },
+    {
       "key": "44daf4e4-d94e-4ba5-9364-8e3a93dc267e",
       "position": 1,
       "properties": {
@@ -3724,6 +3785,17 @@
       },
       "seeding_key": {
         "activity_section.key": "c5b4eff7-95ff-4c51-acb5-2c23f8758991",
+        "lesson_activity.key": "5450558e-b0ec-4668-a5c0-599b76edb64f"
+      }
+    },
+    {
+      "key": "baf8f43c-6977-4f51-a3c6-3b571a735941",
+      "position": 8,
+      "properties": {
+        "description": "####Lesson Extras\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "baf8f43c-6977-4f51-a3c6-3b571a735941",
         "lesson_activity.key": "5450558e-b0ec-4668-a5c0-599b76edb64f"
       }
     },
@@ -4414,6 +4486,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_collector_debugging8a2022"
+        ],
         "progression": "Challenge/Practice"
       },
       "bonus": false,
@@ -4436,6 +4511,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_collector_debugging9a2022"
+        ],
         "progression": "Challenge/Practice"
       },
       "bonus": false,
@@ -6238,8 +6316,7 @@
       "properties": {
         "level_keys": [
           "courseD_harvester_nested_loops_challenge12022"
-        ],
-        "progression": "Lesson Extras"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -6263,8 +6340,7 @@
       "properties": {
         "level_keys": [
           "courseD_collector_nested_loops_challenge22022"
-        ],
-        "progression": "Lesson Extras"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -6311,6 +6387,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursed_looking_ahead_minecraft_intro"
+        ],
         "progression": "Video: Learn the Basics of Computer Science"
       },
       "bonus": false,
@@ -6333,6 +6412,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overworld Move to Sheep2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6354,6 +6436,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overworld Chop Tree2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6375,6 +6460,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overworld Shear Sheep2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6396,6 +6484,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overworld Chop Trees2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6417,6 +6508,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursed_looking_ahead_minecraft_repeat_loops"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6588,6 +6682,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursed_looking_ahead_minecraft_if_statements"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6711,6 +6808,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overworld Free Play 20x202022"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -9868,17 +9968,6 @@
       }
     },
     {
-      "name": "Events in Bounce - How Do They Happen?",
-      "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/template/preview",
-      "key": "events_in_bounce_-_how_do_they_happen_",
-      "properties": {
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "events_in_bounce_-_how_do_they_happen_"
-      }
-    },
-    {
       "name": "Feeling Faces",
       "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
       "key": "feeling_faces",
@@ -10268,6 +10357,12 @@
     {
       "seeding_key": {
         "lesson.key": "Build a Star Wars Game",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Star Wars Game",
         "resource.key": "open-ended_programming_levels_1"
       }
     },
@@ -10315,6 +10410,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Conditionals with Cards",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Dance Party",
         "resource.key": "dance_party_project_guide"
       }
@@ -10340,6 +10447,12 @@
     {
       "seeding_key": {
         "lesson.key": "Debugging with Laurel",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging with Laurel",
         "resource.key": "relay_programming_5"
       }
     },
@@ -10351,6 +10464,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Drawing Shapes with Loops",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "End of Course Project",
         "resource.key": "csf_course_d_end_of_course_project_planning_guide"
       }
@@ -10358,7 +10483,7 @@
     {
       "seeding_key": {
         "lesson.key": "Events in Bounce",
-        "resource.key": "events_in_bounce_-_how_do_they_happen_"
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
       }
     },
     {
@@ -10418,13 +10543,37 @@
     {
       "seeding_key": {
         "lesson.key": "If/Else with Bee",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "If/Else with Bee",
         "resource.key": "unplugged_blocks_courses_c-f_"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Introduction to Online Puzzles",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Online Puzzles",
         "resource.key": "pair_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Looking Ahead with Minecraft",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
       }
     },
     {
@@ -10443,6 +10592,12 @@
       "seeding_key": {
         "lesson.key": "Loops in Ice Age",
         "resource.key": "pause_and_think_online"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Maze",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
       }
     },
     {
@@ -10490,6 +10645,12 @@
     {
       "seeding_key": {
         "lesson.key": "Relay Programming",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Relay Programming",
         "resource.key": "relay_programming"
       }
     },
@@ -10525,8 +10686,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Until Loops in Maze",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "While Loops in Farmer",
         "resource.key": "conditionals_with_cards_sample_program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "While Loops in Farmer",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
       }
     },
     {

@@ -85,6 +85,8 @@ Javalab.prototype.init = function(config) {
   // Sets display theme based on displayTheme user preference
   this.displayTheme = getDisplayThemeFromString(config.displayTheme);
   this.isStartMode = !!config.level.editBlocks;
+  this.isEditingExemplar = !!config.level.isEditingExemplar;
+  this.isViewingExemplar = !!config.level.isViewingExemplar;
   config.makeYourOwn = false;
   config.wireframeShare = true;
   config.noHowItWorks = true;
@@ -206,15 +208,31 @@ Javalab.prototype.init = function(config) {
       validation: getValidation(getStore().getState())
     }));
   }
+  if (this.isEditingExemplar) {
+    showLevelBuilderSaveButton(
+      () => ({
+        exemplar_sources: getSources(getStore().getState())
+      }),
+      'Levelbuilder: edit exemplar',
+      `/levels/${
+        getStore().getState().pageConstants.serverLevelId
+      }/update_exemplar_code`
+    );
+  }
 
   const startSources = config.level.lastAttempt || config.level.startSources;
   const validation = config.level.validation || {};
-  // if startSources exists and contains at least one key, use startSources
-  if (
+  if (config.level.exemplarSources) {
+    // If we have exemplar sources (either for editing or viewing), set initial sources
+    // with the exemplar code saved to the level definition.
+    getStore().dispatch(setAllSources(config.level.exemplarSources));
+  } else if (
     startSources &&
     typeof startSources === 'object' &&
     Object.keys(startSources).length > 0
   ) {
+    // Otherwise, if startSources exists and contains at least one key, use startSources.
+
     if (config.level.editBlocks) {
       Object.keys(startSources).forEach(key => {
         startSources[key].isValidation = false;
@@ -338,6 +356,12 @@ Javalab.prototype.executeJavabuilder = function(executionType) {
   if (this.level.csaViewMode === CsaViewMode.NEIGHBORHOOD) {
     options.useNeighborhood = true;
   }
+
+  let overrideSources;
+  if (this.isEditingExemplar || this.isViewingExemplar) {
+    overrideSources = getSources(getStore().getState());
+  }
+
   this.javabuilderConnection = new JavabuilderConnection(
     this.level.javabuilderUrl,
     this.onOutputMessage,
@@ -348,7 +372,8 @@ Javalab.prototype.executeJavabuilder = function(executionType) {
     this.setIsRunning,
     this.setIsTesting,
     executionType,
-    this.level.csaViewMode
+    this.level.csaViewMode,
+    overrideSources
   );
   project.autosave(() => {
     this.javabuilderConnection.connectJavabuilder();

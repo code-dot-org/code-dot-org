@@ -92,7 +92,9 @@ class Ability
       can :create, UserLevel, user_id: user.id
       can :update, UserLevel, user_id: user.id
       can :create, Follower, student_user_id: user.id
-      can :destroy, Follower, student_user_id: user.id
+      can :destroy, Follower do |follower|
+        follower.student_user_id == user.id && !user.student?
+      end
       can :read, UserPermission, user_id: user.id
       can [:show, :pull_review, :update], PeerReview, reviewer_id: user.id
       can :toggle_resolved, CodeReviewComment, project_owner_id: user.id
@@ -355,6 +357,7 @@ class Ability
         Game,
         Level,
         Lesson,
+        ProgrammingClass,
         ProgrammingEnvironment,
         ProgrammingExpression,
         ReferenceGuide,
@@ -409,9 +412,9 @@ class Ability
       end
     end
 
-    # This action allows levelbuilders to work on exemplars in levelbuilder
+    # This action allows levelbuilders to work on exemplars and validation in levelbuilder
     if user.persisted? && user.permission?(UserPermission::LEVELBUILDER)
-      can :get_access_token_with_override_sources, :javabuilder_session
+      can [:get_access_token_with_override_sources, :get_access_token_with_override_validation], :javabuilder_session
     end
 
     if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)
