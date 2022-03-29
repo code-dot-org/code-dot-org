@@ -13,13 +13,14 @@ class AdminNpsControllerTest < ActionController::TestCase
 
   test 'flashes alert when audience correctly updated' do
     sign_in @admin
-    DCDO.stubs(:get).with('nps_audience', nil).returns(['none'])
+    DCDO.stubs(:set).with('nps_audience', 'none').returns(['none'])
+    DCDO.expects(:set).with('nps_audience', 'none')
     post :nps_update, params: {audience: 'none'}
     assert_equal(
       "Survey audience updated",
       flash[:notice]
     )
-    DCDO.unstub(:get)
+    DCDO.unstub(:set)
   end
 
   test "nps survey updating is admin only" do
