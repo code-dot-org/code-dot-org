@@ -61,9 +61,19 @@ class ProfanityFilterTest < Minitest::Test
   end
 
   def test_find_potential_profanities_replace_text_list
-    WebPurify.stubs(:find_potential_profanities).with("testing  replacenah testing", ['en', 'en']).returns(["replacee"])
+    # Ensure that when ProfanityFilter.find_potential_profanities is called with text_original,
+    # that it calls WebPurify.find_potential_profanities with text_word_removed.
+    # Note that because it only replaces standalone words, "replacenah" will not be replaced.
+    # Also note that text_word_removed has two spaces in it because we remove standalone words,
+    # leaving two spaces surrounding the place where the word used to be.
 
-    assert_equal ['replacee'], ProfanityFilter.find_potential_profanities('testing replacee replacenah testing', 'en', {replacee: ''})
+    text_original = 'testing replace replacenah testing'
+    text_word_removed = 'testing  replacenah testing'
+    word_to_remove = 'replace'
+
+    WebPurify.stubs(:find_potential_profanities).with(text_word_removed, ['en', 'en']).returns([word_to_remove])
+
+    assert_equal [word_to_remove], ProfanityFilter.find_potential_profanities(text_original, 'en', {word_to_remove => ''})
 
     WebPurify.unstub(:find_potential_profanities)
   end
