@@ -70,12 +70,12 @@ class EditSectionForm extends Component {
   onSaveClick = () => {
     const {section, hiddenLessonState} = this.props;
     const sectionId = section.id;
-    const scriptId = section.scriptId;
+    const unitId = section.unitId;
 
     const isScriptHidden =
       sectionId &&
-      scriptId &&
-      isScriptHiddenForSection(hiddenLessonState, sectionId, scriptId);
+      unitId &&
+      isScriptHiddenForSection(hiddenLessonState, sectionId, unitId);
 
     if (isScriptHidden) {
       this.setState({showHiddenUnitWarning: true});
@@ -88,7 +88,7 @@ class EditSectionForm extends Component {
     const {section, updateHiddenScript} = this.props;
 
     // Avoid incorrectly showing the hidden unit warning twice.
-    updateHiddenScript(section.id.toString(), section.scriptId, false);
+    updateHiddenScript(section.id.toString(), section.unitId, false);
 
     this.setState({showHiddenUnitWarning: false});
     this.handleSave();
@@ -114,7 +114,7 @@ class EditSectionForm extends Component {
         study: 'section_setting',
         study_group: 'tts_auto_play',
         event: ttsAutoplayEnabled ? 'turn_on' : 'turn_off',
-        script_id: this.props.section.scriptId,
+        script_id: this.props.section.unitId,
         data_json: JSON.stringify({
           section_id: this.props.section.id
         })

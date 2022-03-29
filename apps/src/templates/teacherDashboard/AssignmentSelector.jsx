@@ -114,9 +114,9 @@ export default class AssignmentSelector extends Component {
       selectedSecondaryId = noAssignment;
     } else if (section.courseId) {
       selectedPrimaryId = assignmentId(section.courseId, null);
-      selectedSecondaryId = assignmentId(null, section.scriptId);
+      selectedSecondaryId = assignmentId(null, section.unitId);
     } else {
-      selectedPrimaryId = assignmentId(null, section.scriptId);
+      selectedPrimaryId = assignmentId(null, section.unitId);
       selectedSecondaryId = noAssignment;
     }
 
@@ -148,13 +148,13 @@ export default class AssignmentSelector extends Component {
       const secondary = this.props.assignments[selectedSecondaryId];
       return {
         courseId: primary.courseId,
-        scriptId: secondary.scriptId
+        unitId: secondary.unitId
       };
     } else {
       // If we don't have a secondary, primary could be course, script, or null
       return {
         courseId: primary ? primary.courseId : null,
-        scriptId: primary ? primary.scriptId : null
+        unitId: primary ? primary.unitId : null
       };
     }
   }
@@ -180,7 +180,7 @@ export default class AssignmentSelector extends Component {
       return noAssignment;
     }
 
-    return assignmentId(primaryAssignment.courseId, primaryAssignment.scriptId);
+    return assignmentId(primaryAssignment.courseId, primaryAssignment.unitId);
   }
 
   /** @param versions {Array.<assignmentVersionShape>} */
