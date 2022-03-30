@@ -84,8 +84,10 @@ class ProgressLessonTeacherInfo extends React.Component {
       isLessonHiddenForSection(hiddenLessonState, sectionId, lesson.id);
     const courseId =
       (section && section.code && parseInt(section.code.substring(2))) || null;
-    const loginRequiredLessonStartUrl =
-      lesson.lessonStartUrl + '?login_required=true';
+    const loginRequiredLessonStartUrl = new URL(
+      lesson.lessonStartUrl + '?login_required=true',
+      window.location
+    ).href;
     const shouldRender =
       lesson.lesson_plan_html_url ||
       (lesson.lockable && !hasNoSections) ||
