@@ -42,6 +42,10 @@ export default class StartNewProject extends React.Component {
       'playlab'
     ];
 
+    const defaultProjectTypes = canViewAdvancedTools
+      ? DEFAULT_PROJECT_TYPES_ADVANCED
+      : DEFAULT_PROJECT_TYPES_BASIC;
+
     const OPEN_ENDED = ['spritelab', 'dance', 'poetry', 'thebadguys'];
 
     const DRAWING = ['artist', 'frozen'];
@@ -67,9 +71,7 @@ export default class StartNewProject extends React.Component {
 
     const PREREADER = ['playlab_k1', 'artist_k1'];
 
-    const defaultProjectTypes = canViewAdvancedTools
-      ? DEFAULT_PROJECT_TYPES_ADVANCED
-      : DEFAULT_PROJECT_TYPES_BASIC;
+    const MATH = ['calc', 'eval'];
 
     return (
       <div>
@@ -121,6 +123,10 @@ export default class StartNewProject extends React.Component {
             <NewProjectButtons
               description={i18n.projectGroupPreReader()}
               projectTypes={PREREADER}
+            />
+            <NewProjectButtons
+              description={i18n.projectGroupMath()}
+              projectTypes={MATH}
             />
           </div>
         )}
