@@ -124,10 +124,12 @@ export default class StartNewProject extends React.Component {
               description={i18n.projectGroupPreReader()}
               projectTypes={PREREADER}
             />
-            <NewProjectButtons
-              description={i18n.projectGroupMath()}
-              projectTypes={MATH}
-            />
+            {canViewAdvancedTools && (
+              <NewProjectButtons
+                description={i18n.projectGroupMath()}
+                projectTypes={MATH}
+              />
+            )}
           </div>
         )}
         <div style={styles.spacer} />
