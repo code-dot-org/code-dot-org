@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import OrderableList from './OrderableList';
 import ExampleEditor from './ExampleEditor';
 import FieldEditor from './FieldEditor';
+import MethodEditor from './MethodEditor';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
@@ -24,34 +25,15 @@ function useProgrammingClass(initialProgrammingClass) {
 }
 
 function renderExampleEditor(example, updateFunc) {
-  return (
-    <ExampleEditor
-      example={example}
-      updateExample={(key, value) => updateFunc(key, value)}
-    />
-  );
+  return <ExampleEditor example={example} updateExample={updateFunc} />;
 }
 
 function renderFieldEditor(field, updateFunc) {
-  return (
-    <FieldEditor
-      field={field}
-      updateField={(key, value) => updateFunc(key, value)}
-    />
-  );
+  return <FieldEditor field={field} updateField={updateFunc} />;
 }
 
 function renderMethodEditor(method, updateFunc) {
-  return (
-    <label>
-      Display Name
-      <input
-        value={method.name || ''}
-        onChange={e => updateFunc('name', e.target.value)}
-        style={styles.textInput}
-      />
-    </label>
-  );
+  return <MethodEditor method={method} updateMethod={updateFunc} />;
 }
 
 export default function ProgrammingClassEditor({
