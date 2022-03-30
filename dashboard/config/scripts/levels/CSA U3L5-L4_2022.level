@@ -2,20 +2,30 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
-    "long_instructions": "##In someclass.java:\r\n\r\nThe x class represents x. It has an instance variable for a 1D array to store x. The method printValues() prints each value in the 1D array.\r\n\r\n1. In the printValues() method, refactor the for loop to an enhanced for loop.",
+    "long_instructions": "The `StatesStats`(#e7e8ea) class has an instance variable for a 1D array of states.\r\n\r\n##In StatesStats.java:\r\n\r\nThe method `printStates()`(#e7e8ea) prints the elements in the `states`(#e7e8ea) array. In the method `printStates()`(#e7e8ea),\r\n\r\n1. Refactor the `for`(#e7e8ea) loop to use an enhanced `for`(#e7e8ea) loop to traverse the `states`(#e7e8ea) array.\r\n\r\n***Curious about this dataset?*** *Learn more about it [**here**](https://github.com/CivilServiceUSA/us-states)!*\r\n\r\n::: details [**Show Me How**]\r\nAn enhanced `for`(#e7e8ea) loop uses the following syntax:\r\n  \r\n  ```\r\n  for (dataType variableName : arrayName) {\r\n    // code to execute\r\n  }\r\n  ```\r\n\r\nBe sure to replace `dataType`(#e7e8ea) with the type of data stored in the 1D array. The `variableName`(#e7e8ea) should be a name that is easily recognizable and represents the data stored in the array. The `arrayName`(#e7e8ea) should be the name of the array to traverse.\r\n:::",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "submittable": "false",
-    "csa_view_mode": "console"
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    String[] states = {\"California\", \"Texas\", \"New York\", \"Florida\", \"Illinois\"};\n\n    StatesStats myStates = new StatesStats(states);\n\n    myStates.printStates();\n    \n  }\n}",
+        "isVisible": true
+      },
+      "StatesStats.java": {
+        "text": "/*\n * Stores and analyzes the list of states\n */\npublic class StatesStats {\n\n  private String[] states;   // The list of states\n\n  /*\n   * Constructor to create a StatesStats object with\n   * specified states list\n   */\n  public StatesStats(String[] states) {\n    this.states = states;\n  }\n\n  /*\n   * Prints the list of states\n   */\n  public void printStates() {\n    // TO DO #1: Use an enhanced for loop to print\n    // the elements in the states array.\n\n\n    \n  }\n  \n}",
+        "isVisible": true
+      }
+    },
+    "encrypted_examples": [
+
+    ]
   },
   "game_id": 68,
   "published": true,
   "created_at": "2022-03-25T12:17:24.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-03-25 12:17:26 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-25 12:17:26 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 23:15:23 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 23:16:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 23:20:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
