@@ -129,11 +129,6 @@ class Level < ApplicationRecord
     @@specified_autoplay_video[video_key + ":" + I18n.locale.to_s] ||= Video.current_locale.find_by_key(video_key) unless video_key.nil?
   end
 
-  def self.key_list
-    @@all_level_keys ||= Level.all.map {|l| [l.id, l.key]}.to_h
-    @@all_level_keys
-  end
-
   def summarize_concepts
     concepts.pluck(:name).map {|c| "'#{c}'"}.join(', ')
   end

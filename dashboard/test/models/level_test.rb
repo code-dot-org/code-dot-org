@@ -1103,7 +1103,7 @@ class LevelTest < ActiveSupport::TestCase
   test 'key list' do
     # Make sure there are no levels from test fixtures for which computing a
     # level key raises errors.
-    Level.key_list
+    Level.all.map(&:key)
   end
 
   test "get search options" do
