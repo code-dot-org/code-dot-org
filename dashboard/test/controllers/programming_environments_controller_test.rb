@@ -57,7 +57,7 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
       name: programming_environment.name,
       title: 'title',
       description: 'description',
-      editorType: 'blockly',
+      editorLanguage: 'blockly',
       blockPoolName: 'GamelabJr',
       projectUrl: '/p/project'
     }
@@ -66,7 +66,7 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
     programming_environment.reload
     assert_equal 'title', programming_environment.title
     assert_equal 'description', programming_environment.description
-    assert_equal 'blockly', programming_environment.editor_type
+    assert_equal 'blockly', programming_environment.editor_language
     assert_equal 'GamelabJr', programming_environment.block_pool_name
     assert_equal '/p/project', programming_environment.project_url
   end
@@ -82,7 +82,7 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
       {
         name: programming_environment.name,
         title: 'title',
-        editorType: 'blockly',
+        editorLanguage: 'blockly',
         categories: [{id: nil, name: 'brand new category', color: '#00FFFF'}, {id: category_to_keep.id, name: category_to_keep.name, color: category_to_keep.color}]
       }
     assert_response :ok

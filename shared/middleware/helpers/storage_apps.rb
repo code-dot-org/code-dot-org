@@ -394,7 +394,11 @@ class StorageApps
   end
 
   def self.table
-    PEGASUS_DB[:storage_apps]
+    DCDO.get('storage_apps_in_dashboard', false) ? DASHBOARD_DB[:projects] : PEGASUS_DB[:storage_apps]
+  end
+
+  def self.table_name
+    DCDO.get('storage_apps_in_dashboard', false) ? "projects" : "storage_apps"
   end
 
   private
