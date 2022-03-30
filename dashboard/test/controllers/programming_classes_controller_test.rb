@@ -5,6 +5,7 @@ class ProgrammingClassesControllerTest < ActionController::TestCase
 
   setup do
     File.stubs(:write)
+    Dir.stubs(:mkdir)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     @levelbuilder = create :levelbuilder
     @programming_environment = create :programming_environment
