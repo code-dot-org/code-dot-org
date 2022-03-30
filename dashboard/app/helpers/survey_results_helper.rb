@@ -1,5 +1,4 @@
 module SurveyResultsHelper
-
   DIVERSITY_SURVEY_ENABLED = true
 
   def show_diversity_survey?(kind)
