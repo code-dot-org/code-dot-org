@@ -13,19 +13,19 @@
         "isVisible": true
       },
       "Ticket.java": {
-        "text": "public class Ticket {\n\n  // each ticket has a unique number and price\n\n  \n\n  // ability to construct a ticket by number\n  // ability to get ticket's price\n  // toString to return information about the ticket\n  \n}",
+        "text": "public class Ticket {\n\n  private int ticketNumber;\n\n  public Ticket(int ticketNumber) {\n    this.ticketNumber = ticketNumber;\n  }\n\n  public double getTicketPrice() {\n    return 0;\n  }\n\n  public String toString() {\n    return \"Ticket No: \" + ticketNumber + \" - \" + \"$\" + getTicketPrice();\n  }\n  \n}",
         "isVisible": true
       },
       "WalkupTicket.java": {
-        "text": "public class WalkupTicket {\n\n  // purchased the day of the event and cost $50\n\n  \n}",
+        "text": "public class WalkupTicket extends Ticket {\n\n  public WalkupTicket(int ticketNumber) {\n    super(ticketNumber);\n  }\n\n  public double getTicketPrice() {\n    return 50;\n  }\n  \n}",
         "isVisible": true
       },
       "AdvanceTicket.java": {
-        "text": "public class AdvanceTicket {\n\n  // purchased 10 or more days before the event - cost $30\n  // purchased fewer than 10 days before the event - cost $40\n\n  // constructed with a ticket number and number of days in advance the ticket was purchased\n  \n}",
+        "text": "public class AdvanceTicket extends Ticket {\n\n  private int numDays;\n\n  public AdvanceTicket(int ticketNumber, int numDays) {\n    super(ticketNumber);\n    this.numDays = numDays;\n  }\n\n  public double getTicketPrice() {\n    if (numDays >= 10) {\n      return 30;\n    }\n    else {\n      return 40;\n    }\n  }\n  \n}",
         "isVisible": true
       },
       "StudentAdvanceTicket.java": {
-        "text": "public class StudentAdvanceTicket {\n\n  // half the price of normal advance tickets:\n  // purchased 10 or more days before the event - cost $15\n  // purchased fewer than 10 days before the event - cost $20\n\n  // constructed with a ticket number and number of days in advance the ticket was purchased\n\n  // toString mentions that the student must show their student ID\n  \n}",
+        "text": "public class StudentAdvanceTicket extends AdvanceTicket {\n\n  public StudentAdvanceTicket(int ticketNumber, int numDays) {\n    super(ticketNumber, numDays);\n  }\n\n  public double getTicketPrice() {\n    return super.getTicketPrice() / 2;\n  }\n\n  public String toString() {\n    return super.toString + \"\\nStudents must show their student ID.\";\n  }\n  \n}",
         "isVisible": true
       }
     }
@@ -35,6 +35,6 @@
   "level_num": "custom",
   "user_id": 16889,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-03-25 12:50:15 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 22:05:10 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-25 12:50:15 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 22:05:10 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 23:26:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 23:43:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 23:47:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
