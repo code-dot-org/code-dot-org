@@ -2,20 +2,39 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "long_instructions": "using polymorphism",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "submittable": "false",
-    "csa_view_mode": "console"
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    \n  }\n}",
+        "isVisible": true
+      },
+      "Ticket.java": {
+        "text": "public class Ticket {\n\n  // each ticket has a unique number and price\n\n  \n\n  // ability to construct a ticket by number\n  // ability to get ticket's price\n  // toString to return information about the ticket\n  \n}",
+        "isVisible": true
+      },
+      "WalkupTicket.java": {
+        "text": "public class WalkupTicket {\n\n  // purchased the day of the event and cost $50\n\n  \n}",
+        "isVisible": true
+      },
+      "AdvanceTicket.java": {
+        "text": "public class AdvanceTicket {\n\n  // purchased 10 or more days before the event - cost $30\n  // purchased fewer than 10 days before the event - cost $40\n\n  // constructed with a ticket number and number of days in advance the ticket was purchased\n  \n}",
+        "isVisible": true
+      },
+      "StudentAdvanceTicket.java": {
+        "text": "public class StudentAdvanceTicket {\n\n  // half the price of normal advance tickets:\n  // purchased 10 or more days before the event - cost $15\n  // purchased fewer than 10 days before the event - cost $20\n\n  // constructed with a ticket number and number of days in advance the ticket was purchased\n\n  // toString mentions that the student must show their student ID\n  \n}",
+        "isVisible": true
+      }
+    }
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-03-25T12:50:13.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-03-25 12:50:15 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-03-25 12:50:15 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 22:05:10 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

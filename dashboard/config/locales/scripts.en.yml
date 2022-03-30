@@ -31976,7 +31976,11 @@ en:
           description: ''
           student_description: ''
         tess-test-csa:
-          lessons: {}
+          lessons:
+            Comparing Recursive and Iterative Solutions:
+              name: Comparing Recursive and Iterative Solutions
+              description_student: Sometimes it's easier to write a method iteratively, and other times a recursive method is best! You examine problems and algorithms to identify their base cases and recursive cases. You differentiate between recursive and iterative solutions and practice converting iterative solutions to recursive methods.
+              description_teacher: Students examine problems and algorithms to identify their base cases and recursive cases. Students differentiate between recursive and iterative solutions and practice converting iterative solutions to recursive methods.
           lesson_groups: {}
           name: tess-test-csa
           title: ''
