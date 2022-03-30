@@ -1,0 +1,21 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "The `VolcanoStats`(#e7e8ea) class analyzes data about volcano eruptions and has an instance variable for the elevation of volcanoes.\r\n\r\n##In VolcanoStats.java:\r\n\r\nThe method `calculatePositiveSum()`(#e7e8ea) returns the sum of all positive values in a 1D array. In the `calculatePositiveSum()`(#e7e8ea) method,\r\n\r\n1. Declare and initialize a variable called `sum`(#e7e8ea) to `0`(#e7e8ea).\r\n\r\n2. Traverse the instance variable `meltingPoints`(#e7e8ea) using an enhanced `for`(#e7e8ea) loop.\r\n\r\n3. If the value is positive, add the value to `sum`(#e7e8ea).\r\n\r\n4. Return the `sum`(#e7e8ea).\r\n\r\n##In MyConsole.java:\r\n\r\n5. Print the result of a call to `calculatePositiveSum()`(#e7e8ea) on the `firstTenElements`(#e7e8ea) object.\r\n\r\n***Curious about this dataset?*** *Learn more about it [**here**](https://openweathermap.org/)!*\r\n\r\n::: details [**Show Me How**]\r\nAn enhanced `for`(#e7e8ea) loop uses the following syntax:\r\n  \r\n  ```\r\n  for (dataType variableName : arrayName) {\r\n    // code to execute\r\n  }\r\n  ```\r\n\r\nBe sure to replace `dataType`(#e7e8ea) with the type of data stored in the 1D array. The `variableName`(#e7e8ea) should be a name that is easily recognizable and represents the data stored in the array. The `arrayName`(#e7e8ea) should be the name of the array to traverse.\r\n:::",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "submittable": "false",
+    "csa_view_mode": "console",
+    "encrypted_examples": [
+
+    ]
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-03-25T12:20:42.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2022-03-25 12:20:44 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 23:21:51 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 00:24:10 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

@@ -6,15 +6,22 @@
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
-    "encrypted_examples": [
-
-    ]
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    String[] planetsList = {\"Mercury\", \"Venus\", \"Earth\", \"Mars\", \"Jupiter\", \"Saturn\", \"Uranus\", \"Neptune\", \"Pluto\"};\n    \n    boolean[] ringSystemsList = {false, false, false, false, true, true, true, true, false};\n\n    PlanetsStats myPlanets = new PlanetsStats(planetsList, ringSystemsList);\n\n    System.out.println(\"Planets has at least one with a ring system: \" + myPlanets.hasRingSystems(true));\n    \n  }\n}",
+        "isVisible": true
+      },
+      "PlanetsStats.java": {
+        "text": "/*\n * Stores and analyzes the list of planets\n * and whether or not they have ring systems\n */\npublic class PlanetsStats {\n\n  private String[] planets;        // The list of planets\n  private boolean[] ringSystems;   // The list of ring system statuses\n\n  /*\n   * Constructor to create a PlanetsStats object with\n   * specified planets and ring systems\n   */\n  public PlanetsStats(String[] planets, boolean[] ringSystems) {\n    this.planets = planets;\n    this.ringSystems = ringSystems;\n  }\n\n  /*\n   * Checks if ringSystems array contains at\n   * least one value that is equal to status\n   */\n  public boolean hasRingSystems(boolean status) {\n    // TO DO #1: Check if ringSystems array contains at least\n    // one value that is equal to status.\n\n\n    \n  }\n}",
+        "isVisible": true
+      }
+    }
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-03-25T00:47:12.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-03-25T00:47:12.378+00:00\",\"changed\":[\"cloned from \\\"CSA U3L4-L3b PBT_2022\\\"\"],\"cloned_from\":\"CSA U3L4-L3b PBT_2022\"},{\"changed_at\":\"2022-03-25 00:47:14 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-03-25T00:47:12.378+00:00\",\"changed\":[\"cloned from \\\"CSA U3L4-L3b PBT_2022\\\"\"],\"cloned_from\":\"CSA U3L4-L3b PBT_2022\"},{\"changed_at\":\"2022-03-25 00:47:14 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 21:12:59 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 21:14:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

@@ -125,6 +125,11 @@ When /^I switch to the first iframe$/ do
   @browser.switch_to.frame @browser.find_element(tag_name: 'iframe')
 end
 
+When /^I switch to the iframe "([^"]*)"$/ do |iframe_selector|
+  $default_window = @browser.window_handle
+  @browser.switch_to.frame @browser.find_element(:css, iframe_selector)
+end
+
 # Can switch out of iframe content
 When /^I switch to the default content$/ do
   @browser.switch_to.default_content
@@ -940,6 +945,14 @@ Given(/^I am assigned to unit "([^"]*)"$/) do |script_name|
     url: '/api/test/assign_script_as_student',
     method: 'POST',
     body: {script_name: script_name}
+  )
+end
+
+Given(/^I am assigned to course "([^"]*)" and unit "([^"]*)"$/) do |course_name, script_name|
+  browser_request(
+    url: '/api/test/assign_course_and_unit_as_student',
+    method: 'POST',
+    body: {script_name: script_name, course_name: course_name}
   )
 end
 

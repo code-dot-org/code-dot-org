@@ -4,7 +4,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Review Your App\r\n\r\nTake a moment to review your app. Double-check that it meets all the requirements in the rubric - [click here to see the rubric](). Make any changes or updates you think are necessary, or you may decide that the app is fine.\r\n\r\nWhenever your finished, press Run and then the purple Submit button to submit your project. Once you submit it, you won't be able to edit it.",
+    "long_instructions": "# Review Your App\r\n\r\nTake a moment to review your app. Double-check that it meets all the requirements in the rubric - [click here to see the rubric](https://docs.google.com/document/d/1j3snUDbEsv13M-sab6SXtwpHdUx6ilXS7BzUR2xnnk8/view). Make any changes or updates you think are necessary, or you may decide that the app is fine.\r\n\r\nWhenever your finished, press Run and then the purple Submit button to submit your project. Once you submit it, you won't be able to edit it.",
     "instructions_important": "false",
     "submittable": "true",
     "is_k1": "false",
@@ -64,11 +64,11 @@
     "libraries_enabled": "false",
     "ai_enabled": "false",
     "project_template_level_name": "CSD U6 - Prototype Innovation Template_2022",
+    "teacher_markdown": "**Exemplars:** See the lesson plan for links to sample rubrics and exemplar projects",
+    "preload_asset_list": null,
     "encrypted_examples": [
 
-    ],
-    "preload_asset_list": null,
-    "teacher_markdown": "**Exemplars:** See the lesson plan for links to sample rubrics and exemplar projects"
+    ]
   },
   "game_id": 41,
   "published": true,
@@ -76,7 +76,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-02-11T20:25:17.919+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Human Device - Review_2022\\\"\"],\"cloned_from\":\"CSD U6 - Human Device - Review_2022\"},{\"changed_at\":\"2022-02-11 20:25:25 +0000\",\"changed\":[\"project_template_level_name\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-11 20:26:50 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-03-21 15:50:58 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-02-11T20:25:17.919+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Human Device - Review_2022\\\"\"],\"cloned_from\":\"CSD U6 - Human Device - Review_2022\"},{\"changed_at\":\"2022-02-11 20:25:25 +0000\",\"changed\":[\"project_template_level_name\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-11 20:26:50 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-03-21 15:50:58 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-03-29 20:01:31 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

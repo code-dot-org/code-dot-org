@@ -18,10 +18,24 @@ MARKDOWN
 markdown <<MARKDOWN
 Consider the following code segment:
 
+```
+public class Point2D {
+  private int x;
+  private int y;
+  
+  public void location() {
+    System.out.println("x: " + x + "\ny: " + y);
+  }
+  
+  // other methods
+}
 
- 
-
-![](https://images.code.org/4a3ee0e14d75e6e512eb7e3aa0c7cb2d-image-1634928016679.png)
+public class Point3D extends Point2D {
+  private int z;
+  
+  // other code
+}
+```
 
 Which of the following methods in `Point3D` best overrides location to print all three values each on their own line?
 
