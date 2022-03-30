@@ -22,12 +22,26 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
 import {Provider} from 'react-redux';
 import experiments from '@cdo/apps/util/experiments';
+import {
+  ADAFRUIT_VID,
+  CIRCUIT_PLAYGROUND_EXPRESS_PID,
+  CIRCUIT_PLAYGROUND_PID,
+  MICROBIT_PID,
+  MICROBIT_VID
+} from '../portScanning';
 
 const DOWNLOAD_PREFIX = 'https://downloads.code.org/maker/';
 const WINDOWS = 'windows';
 const MAC = 'mac';
 const LINUX = 'linux';
 const CHROMEBOOK = 'chromebook';
+
+// Filter available ports to the boards we support
+const WEB_SERIAL_FILTERS = [
+  {usbVendorId: ADAFRUIT_VID, usbProductId: CIRCUIT_PLAYGROUND_PID},
+  {usbVendorId: ADAFRUIT_VID, usbProductId: CIRCUIT_PLAYGROUND_EXPRESS_PID},
+  {usbVendorId: MICROBIT_VID, usbProductId: MICROBIT_PID}
+];
 
 const style = {
   icon: {
@@ -52,9 +66,11 @@ export default class SetupGuide extends React.Component {
     );
     const {webSerialPort} = this.state;
 
-    // Experiment 'webserial' uses the WebSerial protocol and requires no downloads
+    // Experiment 'webserial' uses the WebSerial protocol and requires no downloads.
     let isWebSerial = experiments.isEnabled('webserial');
 
+    // WebSerial requires user input for user to select port.
+    // Add a button for user interaction before initiated Setup Checklist
     if (isWebSerial && !webSerialPort) {
       return (
         <input
@@ -63,9 +79,11 @@ export default class SetupGuide extends React.Component {
           type="button"
           value={'Connect to Board'}
           onClick={() => {
-            navigator.serial.requestPort().then(port => {
-              this.setState({webSerialPort: port});
-            });
+            navigator.serial
+              .requestPort({filters: WEB_SERIAL_FILTERS})
+              .then(port => {
+                this.setState({webSerialPort: port});
+              });
           }}
         />
       );
