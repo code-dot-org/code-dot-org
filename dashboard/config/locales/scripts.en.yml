@@ -33308,6 +33308,14 @@ en:
               name: Wrap Up
               description_student: "**You will:**\n\n* Get an introduction to the asynchronous activities. \n* Reflect on gots and needs. "
               description_teacher: "**Overview:**\nIn this session, participants will reflect on what they have gotten out of the day along with what they still need from the workshop experience.\n\n**Participants will:**\n\n* Get an introduction to the asynchronous activities. \n* Reflect on gots and needs. \n\n**Suggested time:** 10 minutes"
+            The Problem Solving Process:
+              name: Model Lesson 1 - Unit 1 Lesson 2
+              description_student: "**You will:**\n\n* Engage in Unit 1 Lesson 2 while playing the role of the student. \n* Reflect on your experience as a student engaging in the lesson. \n* Discuss the role of the problem solving process in the CS Discoveries curriculum. "
+              description_teacher: "**Overview:**\nDuring this role play activity, participants will engage in Unit 1 Lesson 2: The Problem Solving Process. This lesson will provide participants with an introduction to the problem solving process that is used throughout the CS Discoveries curriculum. This model lesson will also highlight the main components of all CS Discoveries lessons: Warm Up - Activity - Wrap Up. \n\n**Participants will:**\n\n* Engage in Unit 1 Lesson 2 while playing the role of the student. \n* Reflect on their experience as a student engaging in the lesson. \n* Discuss the role of the problem solving process in the CS Discoveries curriculum. \n\n**Suggested time:** 60 minutes"
+            Intro to HTML:
+              name: Model Lesson 2 - Unit 2 Lesson 2
+              description_student: "**You will:**\n\n* Engage in Unit 2 Lesson 2 while playing the role of the student.\n* Reflect on your experience as a student engaging in the lesson.\n* Discuss the role of student exploration in the CS Discoveries curriculum. "
+              description_teacher: "**Overview:**\nDuring this role play activity, participants will engage in Unit 2 Lesson 2: Intro to HTML. This lesson will provide participants with an introduction to HTML and the Web Lab programming environment. This model lesson will also highlight the importance of student exploration before direct instruction in a CS Discoveries lesson.\n\n**Participants will:**\n\n* Engage in Unit 2 Lesson 2 while playing the role of the student.\n* Reflect on your experience as a student engaging in the lesson.\n* Discuss the role of student exploration in the CS Discoveries curriculum. \n\n**Suggested time:** 60 minutes"
           lesson_groups:
             lessonGroup-2:
               display_name: Synchronous Part 1
@@ -34110,5 +34118,32 @@ en:
           description: ''
           student_description: ''
         csc-pilot-2022-starquilts:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Native American Star Quilts
+            lesson-2:
+              name: Getting Started with The Artist
+            lesson-3:
+              name: Code Your Star Quilt
           lesson_groups: {}
+          name: csc-pilot-2022-starquilts
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csc-pilot-2022-fables:
+          lessons:
+            lesson-1:
+              name: Hello World - CSC
+            lesson-2:
+              name: Code Your Fable
+            lesson-3:
+              name: Share Your Fable
+          lesson_groups: {}
+          name: csc-pilot-2022-fables
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
