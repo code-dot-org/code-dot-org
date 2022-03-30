@@ -20,7 +20,7 @@ Sequel.migration do
         # and there will be no previously existing storage_apps data, so the old pegasus table can be dropped.
         # The view will be created for consistency across environments.
         if is_table_already_exists_error && is_pegasus_table_empty
-          puts "projects has already been created, dropping pegasus storage_apps..."
+          CDO.log.warn "projects has already been created, dropping pegasus storage_apps..."
           drop_table(pegasus_storage_apps)
           create_view(pegasus_storage_apps, DB[dashboard_projects].select_all)
         else
