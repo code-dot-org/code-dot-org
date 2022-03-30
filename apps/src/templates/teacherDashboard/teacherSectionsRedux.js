@@ -873,12 +873,15 @@ export default function teacherSections(state = initialState, action) {
     }
 
     const lessonExtraSettings = {};
-    if (action.props.scriptId && !action.props.lessonExtras) {
+    if (action.props.scriptId && action.props.lessonExtras === undefined) {
       lessonExtraSettings.lessonExtras = true;
     }
 
     const ttsAutoplayEnabledSettings = {};
-    if (action.props.scriptId && !action.props.ttsAutoplayEnabled) {
+    if (
+      action.props.scriptId &&
+      action.props.ttsAutoplayEnabled === undefined
+    ) {
       ttsAutoplayEnabledSettings.ttsAutoplayEnabled = false;
     }
 
