@@ -135,7 +135,7 @@ class ProjectsListTest < ActionController::TestCase
         abuse_score: 0
       }
     ]
-    PEGASUS_DB.stubs(:[]).returns(db_result(stub_projects))
+    StorageApps.stubs(:table).returns(db_result(stub_projects))
     StorageApps.stubs(:get_published_project_data).returns({})
     assert_equal 2, ProjectsList.send(:fetch_published_project_types, ['applab'], limit: 4)['applab'].length
   end
@@ -170,7 +170,7 @@ class ProjectsListTest < ActionController::TestCase
         abuse_score: 0
       }
     ]
-    PEGASUS_DB.stubs(:[]).returns(db_result(stub_projects))
+    StorageApps.stubs(:table).returns(db_result(stub_projects))
     StorageApps.stubs(:get_published_project_data).returns({})
     assert_equal 3, ProjectsList.send(:fetch_published_project_types, ['dance'], limit: 4)['dance'].length
   end
@@ -205,7 +205,7 @@ class ProjectsListTest < ActionController::TestCase
         abuse_score: -50
       }
     ]
-    PEGASUS_DB.stubs(:[]).returns(db_result(stub_projects))
+    StorageApps.stubs(:table).returns(db_result(stub_projects))
     StorageApps.stubs(:get_published_project_data).returns({})
     assert_equal 2, ProjectsList.send(:fetch_published_project_types, ['applab'], limit: 4)['applab'].length
   end
@@ -325,7 +325,7 @@ class ProjectsListTest < ActionController::TestCase
     section = Section.new([student], teacher, 321, 'sectionName', teacher.id)
 
     ProjectsList.stubs(:get_user_ids_by_storage_ids).returns(stub_users)
-    PEGASUS_DB.stubs(:[]).returns(library_db_result(stub_projects))
+    StorageApps.stubs(:table).returns(library_db_result(stub_projects))
 
     StorageApps.stubs(:get_published_project_data).returns({})
     lib_response = ProjectsList.send(:fetch_section_libraries, section)
@@ -363,7 +363,7 @@ class ProjectsListTest < ActionController::TestCase
     section = Section.new([section_participant], section_owner, 321, 'sectionName', section_owner.id)
 
     ProjectsList.stubs(:get_user_ids_by_storage_ids).returns(stub_users)
-    PEGASUS_DB.stubs(:[]).returns(library_db_result(stub_projects))
+    StorageApps.stubs(:table).returns(library_db_result(stub_projects))
 
     StorageApps.stubs(:get_published_project_data).returns({})
     lib_response = ProjectsList.send(:fetch_section_libraries, section)
@@ -409,7 +409,7 @@ class ProjectsListTest < ActionController::TestCase
     section = Section.new([], teacher, 321, 'sectionName', teacher.id)
 
     ProjectsList.stubs(:get_user_ids_by_storage_ids).returns(stub_users)
-    PEGASUS_DB.stubs(:[]).returns(library_db_result(stub_projects))
+    StorageApps.stubs(:table).returns(library_db_result(stub_projects))
 
     StorageApps.stubs(:get_published_project_data).returns({})
     lib_response = ProjectsList.send(:fetch_section_libraries, section)
@@ -441,7 +441,7 @@ class ProjectsListTest < ActionController::TestCase
       }
     ]
 
-    PEGASUS_DB.stubs(:[]).returns(stub(where: stub_projects))
+    StorageApps.stubs(:table).returns(stub(where: stub_projects))
 
     updated_channel_ids = ProjectsList.fetch_updated_library_channels(libraries)
     assert_equal [updated_channel_id], updated_channel_ids
