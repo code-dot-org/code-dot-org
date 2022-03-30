@@ -230,8 +230,6 @@ export default class AssignmentSelector extends Component {
 
     const orderedUnits = _.orderBy(selectedCourseVersion?.units, 'position');
 
-    Object.keys(CourseOfferingCategories);
-
     const filteredCategories = _.filter(
       Object.keys(CourseOfferingCategories),
       function(category) {

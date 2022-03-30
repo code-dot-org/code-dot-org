@@ -210,7 +210,10 @@ function removeNullValues(key, val) {
  * the server
  * @param {number} sectionId
  * @param {number} courseId
+ * @param {number} courseOfferingId
+ * @param {number} courseVersionId
  * @param {number} unitId
+ * @param {string} pageType
  */
 export const assignToSection = (
   sectionId,
@@ -824,12 +827,12 @@ export default function teacherSections(state = initialState, action) {
     }
 
     const lessonExtraSettings = {};
-    if (action.props.unitId && !action.props.lessonExtras) {
+    if (action.props.unitId && action.props.lessonExtras === undefined) {
       lessonExtraSettings.lessonExtras = true;
     }
 
     const ttsAutoplayEnabledSettings = {};
-    if (action.props.unitId && !action.props.ttsAutoplayEnabled) {
+    if (action.props.unitId && action.props.ttsAutoplayEnabled === undefined) {
       ttsAutoplayEnabledSettings.ttsAutoplayEnabled = false;
     }
 
