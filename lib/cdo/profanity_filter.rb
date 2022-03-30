@@ -44,7 +44,7 @@ class ProfanityFilter
     # Replace certain words before they are sent to the profanity filter.
     replace_pattern = replace_text_list.keys.map {|t| "\\b" + t.to_s + "\\b"}.join('|')
     matcher = Regexp.new replace_pattern, Regexp::IGNORECASE
-    updated_text = text.gsub(matcher, replace_text_list)
+    updated_text = text&.gsub(matcher, replace_text_list)
 
     LANGUAGE_SPECIFIC_ALLOWLIST.each do |word, languages|
       next if languages.include? language_code
