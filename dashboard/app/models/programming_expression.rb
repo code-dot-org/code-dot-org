@@ -228,6 +228,18 @@ class ProgrammingExpression < ApplicationRecord
     }
   end
 
+  def summarize_for_all_code_docs
+    {
+      id: id,
+      key: key,
+      name: name,
+      environmentId: programming_environment.id,
+      environmentTitle: programming_environment.title,
+      categoryName: programming_environment_category&.name,
+      editPath: edit_programming_expression_path(self)
+    }
+  end
+
   def get_blocks
     return unless block_name
     return unless programming_environment.block_pool_name

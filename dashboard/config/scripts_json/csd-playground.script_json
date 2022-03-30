@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csd-playground",
-    "serialized_at": "2022-03-29 02:49:43 UTC",
+    "serialized_at": "2022-03-29 19:12:35 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -56,10 +56,10 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "assessment_opportunities": "1. **Identify computing innovations within a given field**\r\n\r\n\tActivity Guide, page 2: The description of the device, its purpose, and the type of innovation should clearly demonstrate what it does and why it is innovative.\r\n\r\n2. **For a given device, articulate the likely inputs and outputs**\r\n\r\n\tActivity Guide, page 2: The description of the user interaction should identify multiple possible inputs and outputs for the device.\r\n\r\n3. **Suggest improvements to help a device better solve a specific problem**\r\n\r\n\tActivity Guide, page 2: The suggested improvements should relate to the purpose of the device and how it is used.",
+        "assessment_opportunities": "1. **Identify computing innovations within a given field**\n\n\tActivity Guide, page 2: The description of the device, its purpose, and the type of innovation should clearly demonstrate what it does and why it is innovative.\n\n2. **Describe the inputs and outputs of a device**\n\n\tActivity Guide, page 2: The description of the user interaction should identify multiple possible inputs and outputs for the device.\n\n3. **Describe the impacts of the device on society**\n\n\tActivity Guide, page 2: The description of the impact should identify the people who are impacted and either positive or negative effects of that impact.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students will do some research into interesting innovations in computing. This lesson will expose students to a wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.\n\n**Question of the Day:** What is a computing innovation?",
-        "preparation": "* Review the resource pages linked in Code Studio\n* Cue up [The Internet of Things - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [Computer Science is Changing Everything - Video](https://www.youtube.com/watch?v=QvyTEx1wyOY)\t\n* Print out a copy of the activity guide for each student",
+        "preparation": "* Cue up [The Internet of Things - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [Computer Science is Changing Everything - Video](https://www.youtube.com/watch?v=QvyTEx1wyOY)\t\n* Print out a copy of the activity guide for each student\n* Decide how you would like to distribute the Computing Innovations Research Areas, and if you would like to make any edits to the document to add or remove websites.",
         "purpose": "This lesson will lay the groundwork for students' understanding of how their Circuit Board could be used to model an innovative computing device. The goal is to get them thinking about how computers can be embedded into just about anything, and to start considering the potential impacts of such applications.",
         "student_overview": "In this lesson, you will explore a wide variety of new and innovative computing platforms while expanding your understanding of what a computer can be.\n"
       },
@@ -137,8 +137,21 @@
       }
     },
     {
-      "key": "fbc92e10-407e-4e93-a138-0990a9f54e8e",
+      "key": "3d436273-7ad2-4c0a-b1c6-001c3b446090",
       "position": 1,
+      "properties": {
+        "name": "Before The Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3d436273-7ad2-4c0a-b1c6-001c3b446090",
+        "lesson.key": "Innovations in Computing",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "fbc92e10-407e-4e93-a138-0990a9f54e8e",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -152,7 +165,7 @@
     },
     {
       "key": "b9d9fa22-6bbe-4570-9b5f-9116b9593bb1",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -166,7 +179,7 @@
     },
     {
       "key": "5259db4f-6402-4f4d-841c-9c3430ae9669",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -180,7 +193,7 @@
     },
     {
       "key": "85ceb281-9af3-4c7c-9592-4b4f7538d81e",
-      "position": 4,
+      "position": 5,
       "properties": {
         "name": "Extensions"
       },
@@ -193,7 +206,7 @@
     },
     {
       "key": "f2e844ff-6a5b-43eb-8a80-665f7e4fe94d",
-      "position": 5,
+      "position": 6,
       "properties": {
         "name": "Lesson Feedback"
       },
@@ -267,24 +280,56 @@
       }
     },
     {
-      "key": "7ac051a1-d538-459c-8139-f760d5d8b3be",
+      "key": "66e0738b-0af6-41eb-a8a8-9246c3b80bec",
       "position": 1,
       "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "This unit requires the Adafruit Circuit Playground.  You can read more about this microcontroller board at [https://code.org/circuitplayground](https://code.org/circuitplayground)\r\n"
-          }
-        ]
+        "description": "This unit requires the Adafruit Circuit Playground.  You can read more about this microcontroller board at [https://code.org/circuitplayground](https://code.org/circuitplayground)",
+        "name": "Preparing for the Unit"
       },
       "seeding_key": {
-        "activity_section.key": "7ac051a1-d538-459c-8139-f760d5d8b3be",
+        "activity_section.key": "66e0738b-0af6-41eb-a8a8-9246c3b80bec",
+        "lesson_activity.key": "3d436273-7ad2-4c0a-b1c6-001c3b446090"
+      }
+    },
+    {
+      "key": "460ffc7e-eb3e-49f7-aba3-497c2865e711",
+      "position": 2,
+      "properties": {
+        "description": "Students will be researching computing innovations on the internet. You can provide students with copies of the [Computing Innovation Research Areas](https://docs.google.com/document/d/1X2wAnrEJLFhQeDWiBHbNyMk-D0KCff9T2Bl2LXQ9xbI/edit) guide to students in their research. We haven't provided these directly to students because sometimes these sites are blocked by district filtering programs, or the latest news-worthy innovation may not be middle-school appropriate. **We strongly suggest you check each site for inappropriate content and to make sure it will load on classroom computers before sharing it with students.**",
+        "name": "Preparing for the Lesson"
+      },
+      "seeding_key": {
+        "activity_section.key": "460ffc7e-eb3e-49f7-aba3-497c2865e711",
+        "lesson_activity.key": "3d436273-7ad2-4c0a-b1c6-001c3b446090"
+      }
+    },
+    {
+      "key": "d799b632-f143-4f95-8e8b-3516b598f89c",
+      "position": 1,
+      "properties": {
+        "description": "**Prompt:** _What is an example of a time you've used a computer that doesn't look or feel like a computer? Think about devices you may have at home or even in your pocket!_\n\n**Discussion Goal:** Encourage students to consider computing devices as part of their everyday experiences, such as embedded in a car or in a watch or even a touchscreen that lets them order food or drink at a restaurant. As students share answers, you might keep track of their responses at the front of the room and encourage them to keep coming up with ideas.",
+        "name": "Journal"
+      },
+      "seeding_key": {
+        "activity_section.key": "d799b632-f143-4f95-8e8b-3516b598f89c",
+        "lesson_activity.key": "fbc92e10-407e-4e93-a138-0990a9f54e8e"
+      }
+    },
+    {
+      "key": "2e714d62-5bfa-4dba-92ba-31b01993c397",
+      "position": 2,
+      "properties": {
+        "description": "Computing devices are all around us, embedded in vehicles or our pockets or sometimes even our clothes! In this unit, we'll learn how to create our own computing devices to solve problems in the world around us.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2e714d62-5bfa-4dba-92ba-31b01993c397",
         "lesson_activity.key": "fbc92e10-407e-4e93-a138-0990a9f54e8e"
       }
     },
     {
       "key": "dc1a813c-efaa-418f-bd5e-3de077c18620",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "**Video:** Watch either [The Internet of Things - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [Computer Science is Changing Everything - Video](https://www.youtube.com/watch?v=QvyTEx1wyOY) as a class.",
         "name": "Get Inspired\r"
@@ -295,28 +340,11 @@
       }
     },
     {
-      "key": "55c7fd82-48bc-479c-b40d-7252b2fca865",
+      "key": "8f5ef1b5-7286-443c-8b7f-ebc618b67946",
       "position": 1,
       "properties": {
-        "description": "**Group:** Place students in groups of 3-4\r\n\r\n**Distribute:** Hand out copies of the activity guide",
-        "name": "Innovation Research\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "55c7fd82-48bc-479c-b40d-7252b2fca865",
-        "lesson_activity.key": "b9d9fa22-6bbe-4570-9b5f-9116b9593bb1"
-      }
-    },
-    {
-      "key": "8f5ef1b5-7286-443c-8b7f-ebc618b67946",
-      "position": 2,
-      "properties": {
-        "description": "**Discuss:** What is an innovation? What does it mean for something to be innovative?",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "This should be a quick discussion. The primary goal is for the class to come to a common understanding of what it means for something to be innovative. That it's not enough for a product to look sleeker than the last version, but that innovation means to really do something better than it's been done before, or to do things that have _never_ been done before.\r\n"
-          }
-        ]
+        "description": "**Prompt:** _What is an innovation? What does it mean for something to be innovative?_\n\n**Discussion Goal:** This should be a quick discussion. The primary goal is for the class to come to a common understanding of what it means for something to be innovative. That it's not enough for a product to look sleeker than the last version, but that innovation means to really do something better than it's been done before, or to do things that have _never_ been done before.\n",
+        "name": "Innovation Research"
       },
       "seeding_key": {
         "activity_section.key": "8f5ef1b5-7286-443c-8b7f-ebc618b67946",
@@ -324,10 +352,26 @@
       }
     },
     {
+      "key": "55c7fd82-48bc-479c-b40d-7252b2fca865",
+      "position": 2,
+      "properties": {
+        "description": "**Group:** Place students in groups of 3-4\n\n**Distribute:** Hand out copies of the activity guide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Innovation Research:** Present the overview from the activity guide or the slides as a class. During this activity student groups will research the recent technological innovations related to a chosen topic. Once they have identified a few interesting innovations, they will choose one to analyze in greater depth and report back to the class about. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students choose a topic they would like to focus on and mark it on their activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Researching Your Topic:** Present the next section of the activity guide or slides as a class. Students will be using the internet to research computing innovations in their chosen area.\n\n**Distribute:** Digitally distribute copies of the Computing Innovations Research Areas handout.\n\n**Do This:** Find at least two computing innovations from your chosen topic. Students can use the provided websites, or search the internet for other reputable sources."
+      },
+      "seeding_key": {
+        "activity_section.key": "55c7fd82-48bc-479c-b40d-7252b2fca865",
+        "lesson_activity.key": "b9d9fa22-6bbe-4570-9b5f-9116b9593bb1"
+      }
+    },
+    {
       "key": "7990e95d-c410-4c48-8315-22eff3b35396",
       "position": 3,
       "properties": {
-        "description": "#### Computing Innovations\n\nDuring this activity student groups will research the recent technological innovations related to a chosen topic. Once they have identified a few interesting innovations, they will choose one to analyze in greater depth and report back to the class about.\n\n#### Innovation Research\n\n* **Introduce the topics**: Make sure that students understand the scope of each of the potential topics.\n\t* Wearable Technology (eg. clothing, jewelry, or accessories with built-in computers)\n\t* Health and Safety (eg. devices that treat disease, track your health, or protect users from danger)\n\t* Agriculture (eg. technology to improve the effectiveness, sustainability, or efficiency of farming)\n\t* Manufacturing (eg. advancements in rapid prototyping, industrial robotics, and the production of goods)\n\t* Art and Design (eg. interactive art or public installations)\n\t* Smart Home (eg. devices that allow you to interact with your thermostat, locks, or lights using computers)\n* **Explain the research task**: The goal of this research is twofold:\n\t* First, develop a deeper understanding of your chosen topic. How is computer technology changing this field, what are some of the problems that people are trying to solve with technology?\n    * Second, identify a handful of innovative devices within this topic. Students should focus on finding _hardware_ devices that demonstrate unique or novel _form factors_. That is to say, computers that don't _look_ like computers.\n* **Send to Code Studio**: On Code Studio we have compiled more detailed descriptions of the topics. Students can use this as a jumping off point for keywords to search for with student research. You can also use the teaching tip below as a guide for how to provide your own starting point for student research."
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Student Research**: The goal of this research is twofold:\n* First, develop a deeper understanding of a chosen topic. How is computer technology changing this field, what are some of the problems that people are trying to solve with technology?\n* Second, identify a handful of innovative devices within this topic. Students should focus on finding _hardware_ devices that may not look like computers, but perform computing functions using input and output."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "7990e95d-c410-4c48-8315-22eff3b35396",
@@ -335,30 +379,26 @@
       }
     },
     {
-      "key": "20da6585-7039-4de8-bab8-2c1de9b7ed13",
+      "key": "1235535b-04c6-4e32-98f5-4d770687cf9c",
       "position": 4,
       "properties": {
-        "progression_name": "Innovation Research",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Below are several websites that students can use to start their research. We haven't provided these directly to students because sometimes these sites are blocked by district filtering programs, or the latest news-worthy innovation may not be middle-school appropriate. **We strongly suggest you check each site for inappropriate content and to make sure it will load on classroom computers before sharing it with students**.\n\nUsing the list below as a starting point, we recommend providing a digital list of research websites to students. It can include the websites below, and any additional resources you may find in your own research.\n\n### Wearable Technology\n\n* [Wareable.com](https://www.wareable.com/)\n\n### Health and Safety\n\n* [Modern Healthcare](http://www.modernhealthcare.com/section/medical-devices)\n* [Medstartr](http://www.medstartr.com/)\n\n### Agriculture\n\n* [National Institute of Food and Agriculture](https://nifa.usda.gov/topic/agriculture-technology)\n* [Farm Industry News](http://www.farmindustrynews.com/technology)\n\n### Manufacturing\n\n* [Industry Week](https://www.industryweek.com/technology-and-iiot)\n* [3D Printing](https://3dprinting.com/)\n\n### Art and Design\n\n* [ArtFab](http://artfab.art.cmu.edu/)\n* [Instructables](http://www.instructables.com/tag/type-id/category-technology/)\n\n### Smart Home\n\n* [CNet](https://www.cnet.com/smart-home/)\n* [IoT Evolution](http://www.iotevolutionworld.com/smart-home/)\n\n"
-          }
-        ]
+        "description": "Once groups have selected a specific innovative device, they can complete the second page of this activity guide, which asks them to do the following:\n\n* **What Problem Does It Solve?:** For some topics this may be more clear (for example healthcare devices typically have a very specific goal), but for others students may need to think more broadly about what they consider problems. More frivolous wearables or digital art installations may be more concerned with personal expression than solving a specific problem.\n* **What Is Innovative About It?:** Encourage students to refer back to the earlier discussion about innovation for this. It can also be useful to compare against other devices found during the research phase.\n* **How Do You Interact With It?:** Ask students to think back to the _Input, Output, Storage, Processing_ model that was introduced way back in Unit 1. The goal here is to identify specifically the Inputs and Outputs provided by a given device - the more specific these are, the more easily students will be able to connect elements of the Circuit Playground to these devices.\n* **What is the Impact?:** Encourage students to think of the people who are affected by this innovation. Most innovations were probably designed to improve someone's life, and students can write about the impact this could have on individuals. But some devices may have unexpected or unintended consequences, and students can reflect on how those consequences could affect individuals.",
+        "name": "An Innovative Solution"
       },
       "seeding_key": {
-        "activity_section.key": "20da6585-7039-4de8-bab8-2c1de9b7ed13",
+        "activity_section.key": "1235535b-04c6-4e32-98f5-4d770687cf9c",
         "lesson_activity.key": "b9d9fa22-6bbe-4570-9b5f-9116b9593bb1"
       }
     },
     {
-      "key": "1235535b-04c6-4e32-98f5-4d770687cf9c",
+      "key": "5f93034b-5213-41fc-9440-1047992185c6",
       "position": 5,
       "properties": {
-        "description": "#### An Innovative Solution\r\n\r\nOnce groups have selected a specific innovative device, they can complete the second page of this activity guide, which asks them to do the following:\r\n\r\n* **What Problem Does It Solve?:** For some topics this may be more clear (for example healthcare devices typically have a very specific goal), but for others students may need to think more broadly about what they consider problems. More frivolous wearables or digital art installations may be more concerned with personal expression than solving a specific problem.\r\n* **What Is Innovative About It?:** Encourage students to refer back to the earlier discussion about innovation for this. It can also be useful to compare against other devices found during the research phase.\r\n* **How Do You Interact With It?:** Ask students to think back to the _Input, Output, Storage, Processing_ model that was introduced way back in Unit 1. The goal here is to identify specifically the Inputs and Outputs provided by a given device - the more specific these are, the more easily students will be able to connect elements of the Circuit Playground to these devices.\r\n* **How Could You Improve It?:** Feel free to make this as realistic or aspirational as you like. The goal here is just to get students thinking about how they might develop an innovation of their own by using an existing product as a jumping off point.\r\n\r\n\r\n\r\n\r\n**Share:** Give groups a minute each to share their findings. See the extension activities for alternate ways to share."
+        "description": "Give groups a minute each to share their findings. See the extension activities for alternate ways to share.",
+        "name": "Share Out"
       },
       "seeding_key": {
-        "activity_section.key": "1235535b-04c6-4e32-98f5-4d770687cf9c",
+        "activity_section.key": "5f93034b-5213-41fc-9440-1047992185c6",
         "lesson_activity.key": "b9d9fa22-6bbe-4570-9b5f-9116b9593bb1"
       }
     },
@@ -560,28 +600,6 @@
       "level_keys": [
         "CSD U4 App Lab Events Video"
       ]
-    },
-    {
-      "chapter": 7,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Innovation Research"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSDU6 Innovation_2021"
-        ],
-        "lesson.key": "Innovations in Computing",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "20da6585-7039-4de8-bab8-2c1de9b7ed13"
-      },
-      "level_keys": [
-        "CSDU6 Innovation_2021"
-      ]
     }
   ],
   "levels_script_levels": [
@@ -656,18 +674,6 @@
         "script.name": "csd-playground",
         "activity_section.key": "a59eba24-d43c-45ee-9833-6e0efdefa3b3"
       }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSDU6 Innovation_2021",
-        "script_level.level_keys": [
-          "CSDU6 Innovation_2021"
-        ],
-        "lesson.key": "Innovations in Computing",
-        "lesson_group.key": "",
-        "script.name": "csd-playground",
-        "activity_section.key": "20da6585-7039-4de8-bab8-2c1de9b7ed13"
-      }
     }
   ],
   "resources": [
@@ -685,10 +691,11 @@
     },
     {
       "name": "Computing Innovations",
-      "url": "https://docs.google.com/document/d/1-fvLAoZcGopplA-0bwCFrCRoPFYPCPgSeb2ablNteCg/edit",
+      "url": "https://docs.google.com/document/d/1gGU_SDQ2ys9ZI2h3p0stCdNBGKx4BTGIrOtW30nNJJA/view",
       "key": "computing_innovations",
       "properties": {
         "audience": "Student",
+        "download_url": "https://docs.google.com/document/d/1gGU_SDQ2ys9ZI2h3p0stCdNBGKx4BTGIrOtW30nNJJA/export?format=pdf",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
@@ -697,11 +704,25 @@
       }
     },
     {
+      "name": "Computing Innovations Research Areas",
+      "url": "https://docs.google.com/document/d/1X2wAnrEJLFhQeDWiBHbNyMk-D0KCff9T2Bl2LXQ9xbI/edit",
+      "key": "computing_innovations_research_areas",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1X2wAnrEJLFhQeDWiBHbNyMk-D0KCff9T2Bl2LXQ9xbI/export?format=pdf",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "computing_innovations_research_areas"
+      }
+    },
+    {
       "name": "Innovations in Computing",
-      "url": "https://docs.google.com/presentation/d/1GGS8st8d149AdXSgBxLrYHc1i8TXvLfo8nHCOhjLMXg/copy",
+      "url": "https://docs.google.com/presentation/d/1GGS8st8d149AdXSgBxLrYHc1i8TXvLfo8nHCOhjLMXg/template/preview",
       "key": "innovations_in_computing",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1GGS8st8d149AdXSgBxLrYHc1i8TXvLfo8nHCOhjLMXg/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -732,6 +753,12 @@
       "seeding_key": {
         "lesson.key": "Innovations in Computing",
         "resource.key": "computing_innovations"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "resource.key": "computing_innovations_research_areas"
       }
     },
     {
@@ -780,7 +807,7 @@
     {
       "key": "43157d11-cd32-45a6-bf01-a58915905177",
       "properties": {
-        "description": "Suggest improvements to help a device better solve a specific problem"
+        "description": "Describe the impacts of the device on society"
       },
       "seeding_key": {
         "lesson.key": "Innovations in Computing",
@@ -790,7 +817,7 @@
     {
       "key": "adacbb5c-dc7d-445f-9139-beba72ce596f",
       "properties": {
-        "description": "Identify computing innovations within a given field"
+        "description": "Describe the inputs and outputs of a device"
       },
       "seeding_key": {
         "lesson.key": "Innovations in Computing",
@@ -800,7 +827,7 @@
     {
       "key": "d5dda030-df23-4276-812e-6ba4df91d9aa",
       "properties": {
-        "description": "For a given device, articulate the likely inputs and outputs"
+        "description": "Identify computing innovations within a given field"
       },
       "seeding_key": {
         "lesson.key": "Innovations in Computing",
