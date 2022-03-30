@@ -2,5 +2,6 @@
   "key": "course3",
   "display_name": "Course 3",
   "category": "csf_international",
-  "is_featured": false
+  "is_featured": false,
+  "assignable": true
 }
