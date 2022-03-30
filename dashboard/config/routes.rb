@@ -337,6 +337,7 @@ Dashboard::Application.routes.draw do
   resources :programming_expressions, only: [:new, :create, :edit, :update, :show, :destroy] do
     collection do
       get :search
+      get :get_filtered_expressions
     end
     member do
       post :clone
