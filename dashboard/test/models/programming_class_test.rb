@@ -1,10 +1,6 @@
 require 'test_helper'
 
 class ProgrammingClassTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
-
   test "can serialize and seed programming class" do
     programming_environment = create :programming_environment
     category = create :programming_environment_category, programming_environment: programming_environment, name: 'World', color: '#ABCDEF'
