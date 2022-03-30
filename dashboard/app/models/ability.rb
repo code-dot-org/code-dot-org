@@ -361,6 +361,7 @@ class Ability
         Game,
         Level,
         Lesson,
+        ProgrammingClass,
         ProgrammingEnvironment,
         ProgrammingExpression,
         ReferenceGuide,
