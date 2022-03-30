@@ -194,7 +194,11 @@ class Homepage
         {
           text: action["text"],
           type: action["type"],
-          url: action["url"]
+          url: action["url"],
+          youtube_id: action["youtube_id"],
+          download_path: action["download_path"],
+          facebook: action["facebook"],
+          twitter: action["twitter"]
         }
       end
     elsif hoc_mode == "actual-hoc"

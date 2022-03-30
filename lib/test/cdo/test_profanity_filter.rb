@@ -77,4 +77,12 @@ class ProfanityFilterTest < Minitest::Test
 
     WebPurify.unstub(:find_potential_profanities)
   end
+
+  def test_nil_text
+    WebPurify.stubs(:find_potential_profanities).with(nil, ['en', 'en']).returns(nil)
+
+    assert_nil ProfanityFilter.find_potential_profanities(nil, 'en')
+
+    WebPurify.unstub(:find_potential_profanities)
+  end
 end
