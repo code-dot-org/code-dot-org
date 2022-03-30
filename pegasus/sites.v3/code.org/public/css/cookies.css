@@ -20,6 +20,8 @@
 }
 
 .ot-cat-item:before,
-.ot-abt-tab:before {
+.ot-abt-tab:before,
+.ot-host-item:before,
+.ot-host-info:before {
   content: none;
 }
