@@ -71,6 +71,7 @@ describe('ProgressLessonTeacherInfo', () => {
     const lessonUrl = wrapper.find('SendLesson').props().lessonUrl;
     assert(lessonUrl.includes('code.org?login_required=true'));
     assert(urlHrefSpy.calledOnce);
+    assert(lessonUrl.includes('http'));
   });
 
   it('renders a purple Button if and only if we have a student lesson plan', () => {
