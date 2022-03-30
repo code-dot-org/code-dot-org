@@ -95,9 +95,26 @@ export default function CourseOfferingEditor(props) {
           type="checkbox"
           defaultChecked={courseOffering.is_featured}
           style={styles.checkbox}
-          onChange={e => updateCourseOffering('is_featured', e.target.value)}
+          onChange={e => updateCourseOffering('is_featured', e.target.checked)}
         />
       </label>
+      <label>
+        Course Offering Assignable
+        <HelpTip>
+          <p>
+            Assignable course offerings will show up in the assignment dropdown
+            for instructors to assign to participants. Most courses will want
+            this turned on.
+          </p>
+        </HelpTip>
+        <input
+          type="checkbox"
+          defaultChecked={courseOffering.assignable}
+          style={styles.checkbox}
+          onChange={e => updateCourseOffering('assignable', e.target.checked)}
+        />
+      </label>
+
       <SaveBar
         handleSave={handleSave}
         error={error}
@@ -114,7 +131,8 @@ CourseOfferingEditor.propTypes = {
     key: PropTypes.string,
     is_featured: PropTypes.bool,
     category: PropTypes.string,
-    display_name: PropTypes.string
+    display_name: PropTypes.string,
+    assignable: PropTypes.bool
   })
 };
 
