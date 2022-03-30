@@ -360,7 +360,7 @@ class UnitGroup < ApplicationRecord
     [SharedCourseConstants::PUBLISHED_STATE.preview, SharedCourseConstants::PUBLISHED_STATE.stable].include?(published_state)
   end
 
-  def summarize(user = nil, for_edit: false)
+  def summarize(user = nil, for_edit: false, locale_code: nil)
     {
       name: name,
       id: id,
@@ -387,7 +387,7 @@ class UnitGroup < ApplicationRecord
       is_migrated: has_migrated_unit?,
       has_verified_resources: has_verified_resources?,
       has_numbered_units: has_numbered_units?,
-      versions: summarize_versions(user),
+      versions: summarize_versions(user, locale_code),
       show_assign_button: assignable_for_user?(user),
       announcements: announcements,
       course_offering_id: course_version&.course_offering&.id,
@@ -424,7 +424,7 @@ class UnitGroup < ApplicationRecord
 
   # Returns an array of objects showing the name and version year for all courses
   # sharing the family_name of this course, including this one.
-  def summarize_versions(user = nil)
+  def summarize_versions(user = nil, locale_code = nil)
     return [] unless family_name
 
     # Include launched courses, plus self if not already included

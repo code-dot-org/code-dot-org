@@ -6,6 +6,7 @@ FactoryGirl.define do
   factory :course_offering do
     sequence(:key, 'a') {|c| "bogus-course-offering-#{c}"}
     sequence(:display_name, 'a') {|c| "bogus-course-offering-#{c}"}
+    assignable true
   end
 
   factory :course_version do
