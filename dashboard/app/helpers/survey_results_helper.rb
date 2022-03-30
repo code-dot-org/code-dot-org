@@ -1,17 +1,18 @@
 module SurveyResultsHelper
-  DIVERSITY_SURVEY_ENABLED = false
+
+  DIVERSITY_SURVEY_ENABLED = true
 
   def show_diversity_survey?(kind)
     return false unless SurveyResultsHelper::DIVERSITY_SURVEY_ENABLED
     return false unless current_user
+    return false unless country_us?
     return false unless language == "en"
     return false if current_user.under_13?
-    return false if existing_survey_result?(kind)
     return false unless account_existed_14_days?
+    return false if existing_survey_result?(kind)
     return false unless current_user.teacher?
     return false unless has_any_students?
     return false unless has_any_student_under_13?
-    return false unless country_us?
 
     # There is no reason not to show the survey, so show the survey.
     return true

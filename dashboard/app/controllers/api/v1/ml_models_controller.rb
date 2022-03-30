@@ -8,6 +8,12 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
 
   S3_BUCKET = 'cdo-v3-trained-ml-models'
 
+  # Remove certain words that we don't want to be inspected by the
+  # profanity filter.
+  PROFANITY_FILTER_REPLACE_TEXT_LIST = {
+    sex: ''
+  }
+
   # POST api/v1/ml_models/save
   # Save a trained ML model to S3 and a reference to it in the database.
   def save
@@ -16,9 +22,12 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
     return head :bad_request if model_data.nil? || model_data == ""
     # If there's a PII/profanity API error, we rescue the exception and the save
     # will succeed. The saved model will bypass the PII/profanity filters.
+
     begin
       profanity_or_pii = ShareFiltering.find_failure(
-        model_data.except(:trainedModel).to_s, request.locale
+        model_data.except(:trainedModel).to_s,
+        request.locale,
+        PROFANITY_FILTER_REPLACE_TEXT_LIST
       )
     rescue OpenURI::HTTPError => share_filtering_error
     end

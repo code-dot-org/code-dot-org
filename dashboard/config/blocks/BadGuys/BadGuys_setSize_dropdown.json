@@ -1,0 +1,38 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "setSize_dropdown",
+    "blockText": "set {SPRITE} size to {SIZE}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "SIZE",
+        "options": [
+          [
+            "extra large",
+            "300"
+          ],
+          [
+            "large",
+            "200"
+          ],
+          [
+            "medium",
+            "100"
+          ],
+          [
+            "small",
+            "75"
+          ],
+          [
+            "extra small",
+            "50"
+          ]
+        ]
+      }
+    ]
+  }
+}
