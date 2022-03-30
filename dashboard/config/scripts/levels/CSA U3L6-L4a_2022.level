@@ -2,20 +2,34 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
-    "long_instructions": "##In FoodTruck.java:\r\n\r\n1. Declare and initialize a static variable called businessName to Project Mercury Pastries Food Truck.\r\n\r\n##In MyConsole.java:\r\n\r\n2. Print the value of businessName for each FoodTruck object.\r\n\r\n3 Change the value of businessName then print the new value for one of the FoodTruck objects.",
+    "long_instructions": "##In FoodTruck.java:\r\n\r\n1. Declare and initialize a static variable called `businessName`(#e7e8ea) to `\"Project Mercury Pastries Food Truck\"`(#e7e8ea).\r\n\r\n##In MyConsole.java:\r\n\r\n2. Print the value of `businessName`(#e7e8ea) for each `FoodTruck`(#e7e8ea) object.\r\n\r\n3. Change the value of `businessName`(#e7e8ea) to a different name, then print the new value of `businessName`(#e7e8ea) for each of the `FoodTruck`(#e7e8ea) objects.\r\n\r\n::: details [**Show Me How**]\r\nA static variable uses the following syntax:\r\n  \r\n  ```\r\n  public static dataType variableName;\r\n  \r\n  OR\r\n  \r\n  public static dataType variableName = initialValue;\r\n  ```\r\n\r\nA static variable is accessed using the following syntax:\r\n  \r\n  ```\r\n  ClassName.variableName;\r\n  ```\r\n:::",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "submittable": "false",
-    "csa_view_mode": "console"
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    FoodTruck rosiesFoodTruck = new FoodTruck(\"Rosie\");\n    FoodTruck erinsFoodTruck = new FoodTruck(\"Erin\");\n\n    // TO DO #2: Print the value of businessName for each FoodTruck object.\n\n\n    // TO DO #3: Change businessName to a different name then print the\n    // new value of businessName for each FoodTruck object.\n\n\n    \n  }\n}",
+        "isVisible": true
+      },
+      "FoodTruck.java": {
+        "text": "/*\n * Represents a single Food Truck at the\n * Project Mercury Pastries Food Truck business\n */\npublic class FoodTruck {\n\n  private String owner;        // The owner of the Food Truck\n\n  // TO DO #1: Declare and initialize a static variable called businessName.\n  \n\n  /*\n   * Creates a Food Truck with the specified owner\n   */\n  public FoodTruck(String owner) {\n    this.owner = owner;\n  }\n\n}",
+        "isVisible": true
+      }
+    },
+    "display_name": "Food Truck",
+    "bubble_choice_description": "Set the business name for all FoodTruck objects.",
+    "thumbnail_url": "https://images.code.org/75b4d8f46067cf4372a2e2076ab69004-image-1648646873227.png",
+    "encrypted_exemplar_sources": "jrRNHcOowRx22njbDNzE6K10Ex1m7JwmHnodMo3x9M2GlYa/Q/IhwI3MZOnR\n5bZSkPxNgc/shzAYRSks1NHPjJr2Lo15U6SiOqQbTyE3ZrvEVnn6JDK9wfuD\nLMmS8UJgjxjzAiFQhhr4tsCUI2bua5o2duTuiz5JJybyQbXybIS16LOktLXi\nbaJKKcuyVbEbX8tYcIWJ05tXMBkvAYF5cGbJnodNKopG8yrpAEro9HRhZ1+s\nSwO1ItWxMCkNKO4ubGrqLxf2SudnzO63xZUFnWEk/awvRx1X0gfYvJ/NE7PZ\nzPs8OhRnffVyDyXZsM3KrItSpZZ+ZVPhXurqiGFfpImMNom5MpmN+4zj9ITV\nZzBAR/IE8QSWrOEzyc7+HzDuYB9yP0fwxB06dam01R8OOsp5y3Wbi/wCaJwo\nyDo71ws+7Wjb6Agn+/JoNvbheB23iJz+UW+XmDWkzAcdakmDJZOGJa6tRjto\nqpyggG+k9TkXJrGOLw5es1u2NyoyaOx2vMb1LkcXPIGSEG5NGephr+cIOlJu\nJ9VvESgwHxRSVF4v6gkb5D819TV1OJ/sB91qHn1YPftdZ6XLoKqw1sZfZ6en\nTLyAnbZz1qAtJfYkGNU53X+/c0vdGRgA2QuC8cPUTYE4B3YASGT00EBWpxl3\now2RSjMmSvClW4cpaxwKPbS7HMC5W04YByR4QsCpHoP+nyitWAc0sEUnqAkd\npBdA82Otwmc4Z27GFDujmHictbRf9T34bShtt15i//QaD4EpdMo28tyWqqh7\nzKyVF1wMMxcKBgjuuxQa2nZok95wpqajAUZMrEr3g36e//3u2qLIs4CbBfJw\nBOT5o7MRoiadGN3dbnMSt1Mwb7LRnmpX5yQOGazntEr5Ykxh8jXrqxsZigWA\nudbSXLQDdbZHjCNUJ07D77nXEgf96O+8Wm8u3PWgNK0mdBQyQq34RlMkNj34\nVVh2u36F09d40nNJXLTgxazRGaVkqzpU7fVeNEp+X9z+cCKfmdv8eHTX5+Wi\n37YYUT2+0dIOVQKlKM+HSaJ+3UQJBiowIJK7WUm2b3Cp9aZkFTZGjE5kUHAC\nDPrLQTZKj1d48BPQfp7l48I0gHZtV6NIpxI9U0MRaEVTt2O/YJoWck1RU8gc\n7d1ZtMaTYjmAHp9cl8exdBr94eM+Xs/rCnB6QDt7J+lp7pc9Q4pFGPB0wvE0\nyjt/Guj4SFiUoXJ/3sSAG2Zm9vErhJqaWlKMHLSwz1+OuGPksv6PPquRV2xF\nzZb5wFNeM8DlPZnsWJNtzIffMXkVrQyPousHXx650UH7YvodN93kj0TrQmWR\nfJf+yz1s/+ur0kQ4l1o81N931xp96vjJ6WJkqxI3WzazhFrP7NDCFE3u2KO1\n6JCgxDg732PSAFe4UwGzzeTuYue3XLVs/DJcEWUkd8jgN2GJWPbnX9Fwhjvs\nRnn/YpXGyJI45Gtc5zgdID2D4/n55I+aLlJ+HH7+cZe9mvrwmpfvXLTjtq3e\nUiN5JKlw/BoDU6+O5zvpg58ZMllX5Ok1AWYnbnNmZ5HObjQpKkK3bOjA5qFv\nB9fo/ffUOqapuDULU25DfZsjz8tsPbde2NUlMfklVEw1gXqQ5l1q98kdLVUD\n2dD/OIv/wxOJnK+TqH9suaB6rTWsoF5Y6sUbySra5vg7VvprsnXuucM/3QlY\n7Aq/J0zWF+06n0PN4v2+4qt8hi3KJf72mryfHM10Ewy17SUfsMSQncIMWjdf\nyugEmxbTCLDOsaTK1ZTtbuwVAuBlLCfSlAQb3/xlmi5r8bNi4A5D\n",
+    "encrypted_examples": [
+
+    ]
   },
   "game_id": 68,
   "published": true,
   "created_at": "2022-03-25T12:30:51.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-03-25 12:30:53 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-25 12:30:53 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 13:26:21 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 13:28:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 13:31:29 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 14:30:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-28 12:33:07 UTC",
+    "serialized_at": "2022-03-30 14:23:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1916,10 +1916,27 @@
       }
     },
     {
-      "key": "578c7cfd-c028-47d1-96ec-8ea39b1f0dd1",
+      "key": "a4ec562c-05ed-416e-9b18-a041c59cae38",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *application program interface (API)* and *library*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the `java.util` package and the `Scanner` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Creating a Scanner Object*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *application program interface (API)* and *library*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the `java.util` package and the `Scanner` class.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The term *package* was introduced in Unit 1 Lesson 3 when The Neighborhood was introduced. Ask students to recall the meaning of *package* and how The Neighborhood consists of classes that can be imported and used."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a4ec562c-05ed-416e-9b18-a041c59cae38",
+        "lesson_activity.key": "73e5db0d-c2c9-42ef-87e2-f60e11d00c6b"
+      }
+    },
+    {
+      "key": "578c7cfd-c028-47d1-96ec-8ea39b1f0dd1",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Creating a Scanner Object*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict: Getting User Input"
       },
       "seeding_key": {
@@ -1929,7 +1946,7 @@
     },
     {
       "key": "a784f712-b6f9-4c74-be5c-aee8e4d9dac3",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that a user can input values into the program. Students may wonder what other methods are in the `Scanner` class for getting user input."
       },
@@ -1940,7 +1957,7 @@
     },
     {
       "key": "1e78bcd2-9857-435a-90f9-d925e43b4228",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "The `Scanner` class has several methods for obtaining input based on the type of data we want to get from the user. Let's look at some of the methods that we will use today.",
         "remarks": true
@@ -1952,7 +1969,7 @@
     },
     {
       "key": "db8fb864-47b4-4022-819a-da241668ec1f",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Scanner Class Methods*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *What are some ways you could use these methods in your programs?*\n\n**Discussion Goal:** Students suggest types of information they could obtain from a user, such as asking how much paint a `Painter` object should start with or a flavor for a `Dessert` object.",
         "tips": [
@@ -1969,7 +1986,7 @@
     },
     {
       "key": "f8797801-0679-495d-824d-3b47d4abf696",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate common errors using `Scanner` class methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define `null` and `NullPointerException`."
       },
@@ -1980,7 +1997,7 @@
     },
     {
       "key": "d8f2d2bb-33e8-4aa5-8b9f-272ccde70828",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "The methods we saw in the video earlier are not the only methods available in the `Scanner` class. We can refer to the documentation for the `Scanner` class to see what methods it has and how to use them.",
         "duration": "15",
@@ -1994,7 +2011,7 @@
     },
     {
       "key": "55930d62-5967-421a-a7be-1def044d7878",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to access documentation in Java Lab.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students debug a program on Level 2 with a `NullPointer` exception, then continue to Level 3 to complete a choice level to create and use a `Scanner` object to obtain user input.",
         "progression_name": "Getting User Input"
@@ -2106,7 +2123,7 @@
       "key": "2cc6621d-a7b0-46e3-8077-839b77cc7096",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review inheritance, efficiency, and redundant code.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review inheritance, efficiency, and redundant code.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2152,7 +2169,7 @@
       "key": "1e4c398e-1c83-4d14-b0d6-819c5b24f37b",
       "position": 5,
       "properties": {
-        "description": "**Do This:** Explain refactoring and discuss the example:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Two classes with redundant code\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Refactored using inheritance\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the code segments and the redundant code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *To refactor code is to improve the readability, reusability, or structure of program code without altering its functionality. Using inheritance, how can we refactor the code to follow the DRY principle?*\n\n**Discussion Goal:** Students note that the classes have the same instance variables and method. Students suggest refactoring the code to create a superclass and subclass so the instance variables and method are shared.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the refactored code segment and identify the superclass and subclasses.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted. ",
         "duration": "10",
         "name": "Refactoring Code",
         "progression_name": "Investigate: Superclasses and Subclasses"
@@ -6559,7 +6576,7 @@
     {
       "key": "dry_principle",
       "word": "DRY principle",
-      "definition": "a software development principle that stands \"Don't Repeat Yourself\" which aims to reduce repetition in code",
+      "definition": "a software development principle that stands for \"Don't Repeat Yourself\" which aims to reduce repetition in code",
       "properties": {
       },
       "seeding_key": {

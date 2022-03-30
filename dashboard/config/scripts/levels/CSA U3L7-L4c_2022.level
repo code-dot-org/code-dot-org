@@ -2,20 +2,39 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "long_instructions": "using polymorphism",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "submittable": "false",
-    "csa_view_mode": "console"
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    \n  }\n}",
+        "isVisible": true
+      },
+      "Appointment.java": {
+        "text": "public class Appointment {\n\n  private String description;\n  private int date;\n\n  public Appointment(String description, int date) {\n    this.description = description;\n    this.date = date;\n  }\n\n  public int getDate() {\n    return month;\n  }\n\n  public boolean hasAppointment(int date) {\n    if (this.date == date) {\n      return true;\n    }\n\n    return false;\n  }\n  \n}",
+        "isVisible": true
+      },
+      "OneTime.java": {
+        "text": "public class OneTime extends Appointment {\n\n  public OneTime(String description, int date) {\n    super(description, date);\n  }\n  \n}",
+        "isVisible": true
+      },
+      "Daily.java": {
+        "text": "public class Daily extends Appointment {\n\n  public Daily(String description, int date) {\n    super(description, int date);\n  }\n\n  public boolean hasAppointment(int date) {\n    return true;\n  }\n  \n}",
+        "isVisible": true
+      },
+      "Monthly.java": {
+        "text": "public class Monthly extends Appointment {\n\n  public Monthly(String description, int date) {\n    super(description, date);\n  }\n\n  public boolean hasAppointment(int date) {\n    int dayToCheck = date % 100;\n    int apptDay = super.getDate() % 100;\n\n    if (dayToCheck == apptDay) {\n      return true;\n    }\n\n    return false;\n  }\n  \n}",
+        "isVisible": true
+      }
+    }
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-03-25T12:49:40.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-03-25 12:49:42 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-03-25 12:49:42 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 22:09:18 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 22:11:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 22:19:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 23:02:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 23:03:34 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
