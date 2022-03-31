@@ -179,7 +179,7 @@ module Services
                 results[name] ||= {}
                 results[name][key] = attributes
               end
-	    end
+            end
 
             # recursively process "reflections" (ie, related model data) into their
             # own objects
