@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
-import NavigationBar from './NavigationBar';
-import color from '@cdo/apps/util/color';
-import {Link} from '@dsco_/link';
+import {
+  NavigationBar,
+  NavigationCategory,
+  NavigationItem
+} from './NavigationBar';
 import {organizeReferenceGuides} from '@cdo/apps/util/referenceGuideHelpers';
-import classNames from 'classnames';
 
 const baseUrl = window.location.href
   .split('/')
@@ -18,24 +19,6 @@ const referenceGuideShape = PropTypes.shape({
   position: PropTypes.number,
   parent_reference_guide_key: PropTypes.string
 });
-
-const NavBarItem = ({guide, isActive}) => (
-  <div
-    style={{paddingLeft: `${guide.level * 12}px`}}
-    className={classNames({
-      'nav-link': true,
-      active: isActive
-    })}
-  >
-    <Link className="link" href={`${baseUrl}/${guide.key}`} weight="medium">
-      {guide.display_name}
-    </Link>
-  </div>
-);
-NavBarItem.propTypes = {
-  guide: referenceGuideShape.isRequired,
-  isActive: PropTypes.bool
-};
 
 export default function ReferenceGuideView({referenceGuide, referenceGuides}) {
   let rootCategory = referenceGuide;
@@ -55,28 +38,32 @@ export default function ReferenceGuideView({referenceGuide, referenceGuides}) {
       return {
         key: guide.key,
         name: guide.display_name,
-        content: (
-          <>
-            {children.map(guide => (
-              <NavBarItem
-                key={guide.key}
-                guide={guide}
-                isActive={guide.key === referenceGuide.key}
-              />
-            ))}
-          </>
-        ),
-        color: color.teal
+        items: children
       };
     });
   return (
     <>
       <h1>{referenceGuide.display_name}</h1>
       <div className="page-content">
-        <NavigationBar
-          categories={navCategories}
-          initialCategoryKey={rootCategory.key}
-        />
+        <NavigationBar initialCategoryKey={rootCategory.key}>
+          {navCategories.map(category => (
+            <NavigationCategory
+              key={category.key}
+              name={category.name}
+              initialIsOpen={category.key === rootCategory.key}
+            >
+              {category.items.map(guide => (
+                <NavigationItem
+                  key={guide.key}
+                  text={guide.display_name}
+                  indentLevel={guide.level}
+                  href={`${baseUrl}/${guide.key}`}
+                  isActive={guide.key === referenceGuide.key}
+                />
+              ))}
+            </NavigationCategory>
+          ))}
+        </NavigationBar>
         <EnhancedSafeMarkdown markdown={referenceGuide.content} />
       </div>
     </>
