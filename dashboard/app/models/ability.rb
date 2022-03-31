@@ -157,7 +157,7 @@ class Ability
             CodeReviewComment.user_can_review_project?(
               user_to_assume,
               user,
-              reviewable_project.storage_app_id,
+              reviewable_project.project_id,
               reviewable_project.level_id,
               reviewable_project.script_id
             )
