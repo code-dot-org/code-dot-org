@@ -51,7 +51,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "palette_category_at_start": "Circuit",
-    "long_instructions": "# Buzzer Frequencies\r\n\r\nCreate an app that plays the buzzer at the frequency listed on each button\r\n\r\n## Do This\r\n\r\n- Add a `buzzer.frequency` block to each `onEvent` to play the buzzer for half a second at the listed frequency\r\n\t- For example: The \"100\" button should play at a frequency of 100 for half a second\r\n\r\n",
+    "long_instructions": "# Buzzer Frequencies\r\n\r\nCreate an app that plays the buzzer at the frequency listed on each button\r\n\r\n## Do This\r\n\r\n1) Add a [`buzzer.frequency()`(#f78183)](/docs/applab/buzzer.frequency/) block to each [`onEvent()`(#fff176)](/docs/applab/onEvent/) to play the buzzer for half a second at the listed frequency\r\n\t- For example: The \"100\" button should play at a frequency of 100 for half a second\r\n\r\n",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20396,
     "name_suffix": "_2021",
@@ -71,8 +71,8 @@
     "display_name": "Buzzer Buttons",
     "bubble_choice_description": "Add code to make each button play a certain frequency",
     "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L2/practice/D.png",
-    "preload_asset_list": null,
-    "encrypted_examples": "/ErCMOYEGqpGHO/g1tWFtn0EM3rWqeOEpNRy256kXWnh6cM0XhX16gwW5p/T\nulp20NBMSr7C3y7buP80SyFF6g==\n"
+    "encrypted_examples": "/ErCMOYEGqpGHO/g1tWFtn0EM3rWqeOEpNRy256kXWnh6cM0XhX16gwW5p/T\nulp20NBMSr7C3y7buP80SyFF6g==\n",
+    "preload_asset_list": null
   },
   "game_id": 41,
   "published": true,
@@ -80,7 +80,7 @@
   "level_num": "custom",
   "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-12-02T00:10:58.311+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - PracC_2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - PracC_2022\"},{\"changed_at\":\"2021-12-02 00:11:28 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-20 21:28:33 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-21 04:07:49 +0000\",\"changed\":[],\"changed_by_id\":17326,\"changed_by_email\":\"larsensn@yahoo.com\"},{\"changed_at\":\"2022-02-15 02:56:39 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 16:07:06 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\",\"thumbnail_url\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 16:32:15 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"thumbnail_url\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-21 08:20:00 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":17326,\"changed_by_email\":\"larsensn@yahoo.com\"},{\"changed_at\":\"2022-03-02 02:16:06 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-02T00:10:58.311+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - PracC_2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - PracC_2022\"},{\"changed_at\":\"2021-12-02 00:11:28 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-20 21:28:33 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-21 04:07:49 +0000\",\"changed\":[],\"changed_by_id\":17326,\"changed_by_email\":\"larsensn@yahoo.com\"},{\"changed_at\":\"2022-02-15 02:56:39 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 16:07:06 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\",\"thumbnail_url\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 16:32:15 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"thumbnail_url\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-21 08:20:00 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":17326,\"changed_by_email\":\"larsensn@yahoo.com\"},{\"changed_at\":\"2022-03-02 02:16:06 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-03-30 17:14:16 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
