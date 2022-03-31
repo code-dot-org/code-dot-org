@@ -16,6 +16,7 @@ const USER_EDITABLE_SECTION_PROPS = [
   'pairingAllowed',
   'participantType',
   'ttsAutoplayEnabled',
+  'participantType',
   'courseId',
   'courseOfferingId',
   'courseVersionId',
@@ -582,11 +583,11 @@ const initialState = {
   // DCDO Flag - show/hide Lock Section field
   showLockSectionField: null
 };
-
 /**
  * Generate shape for new section
  * @returns {sectionShape}
  */
+
 function newSectionData(participantType) {
   return {
     id: PENDING_NEW_SECTION_ID,

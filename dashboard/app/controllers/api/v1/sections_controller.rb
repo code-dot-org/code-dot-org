@@ -182,11 +182,11 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
 
     participant_types =
       if current_user.permission?(UserPermission::PLC_REVIEWER) || current_user.permission?(UserPermission::UNIVERSAL_INSTRUCTOR) || current_user.permission?(UserPermission::LEVELBUILDER)
-        ['student', 'teacher', 'facilitator']
+        [SharedCourseConstants::PARTICIPANT_AUDIENCE.student, SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator]
       elsif current_user.permission?(UserPermission::FACILITATOR)
-        ['student', 'teacher']
+        [SharedCourseConstants::PARTICIPANT_AUDIENCE.student, SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher]
       else
-        ['student']
+        [SharedCourseConstants::PARTICIPANT_AUDIENCE.student]
       end
 
     render json: {availableParticipantTypes: participant_types}
