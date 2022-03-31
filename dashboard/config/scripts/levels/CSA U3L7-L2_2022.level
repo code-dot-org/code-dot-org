@@ -2,20 +2,35 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "long_instructions": "##Investigate and Modify\r\n\r\nExplore this program using the guiding questions on the **Investigating Polymorphism** activity guide.",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "submittable": "false",
-    "csa_view_mode": "console"
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    Shape myShape = new Shape(4);\n    Rectangle myRectangle = new Rectangle(3, 6);\n    Circle myCircle = new Circle(8);\n\n    Shape[] shapesList = {myShape, myRectangle, myCircle};\n\n    for (Shape theShape : shapesList) {\n      System.out.println(theShape.calculateArea());\n    }\n    \n  }\n}",
+        "isVisible": true
+      },
+      "Shape.java": {
+        "text": "public class Shape {\n\n  private double width;\n\n  public Shape(double width) {\n    this.width = width;\n  }\n\n  public double getWidth() {\n    return width;\n  }\n\n  public void setWidth(double width) {\n    this.width = width;\n  }\n\n  public double calculateArea() {\n    return width * width;\n  }\n  \n}",
+        "isVisible": true
+      },
+      "Rectangle.java": {
+        "text": "public class Rectangle extends Shape {\n\n  private double height;\n\n  public Rectangle(double width, double height) {\n    super(width);\n    this.height = height;\n  }\n\n  public double getHeight() {\n    return height;\n  }\n\n  public void setHeight(double height) {\n    this.height = height;\n  }\n\n  public double calculateArea() {\n    return getWidth() * height;\n  }\n  \n}",
+        "isVisible": true
+      },
+      "Circle.java": {
+        "text": "public class Circle extends Shape {\n\n  public Circle(double width) {\n    super(width);\n  }\n\n  public double calculateArea() {\n    double radius = getWidth() / 2;\n    return 3.14 * (radius * radius);\n  }\n  \n}",
+        "isVisible": true
+      }
+    }
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-03-25T12:42:45.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-03-25 12:42:46 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-03-25 12:42:46 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 19:57:28 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 21:32:56 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
