@@ -173,7 +173,7 @@ class ProgrammingExpression < ApplicationRecord
       blockName: block_name,
       categoryKey: programming_environment_category&.key,
       programmingEnvironmentName: programming_environment.name,
-      environmentEditorType: programming_environment.editor_type,
+      environmentEditorLanguage: programming_environment.editor_language,
       imageUrl: image_url,
       videoKey: video_key,
       shortDescription: short_description || '',
@@ -225,6 +225,18 @@ class ProgrammingExpression < ApplicationRecord
       color: get_color,
       syntax: syntax,
       link: studio_documentation_path
+    }
+  end
+
+  def summarize_for_all_code_docs
+    {
+      id: id,
+      key: key,
+      name: name,
+      environmentId: programming_environment.id,
+      environmentTitle: programming_environment.title,
+      categoryName: programming_environment_category&.name,
+      editPath: edit_programming_expression_path(self)
     }
   end
 

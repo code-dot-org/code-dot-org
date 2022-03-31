@@ -68,9 +68,6 @@ class JavabuilderSessionsController < ApplicationController
 
   def get_encoded_payload(additional_payload)
     teacher_list = get_teacher_list.join(',')
-    project_version = params[:projectVersion]
-    # TODO: remove project_url after javabuilder is deployed with update to no longer need it
-    project_url = params[:projectUrl]
     level_id = params[:levelId]
     options = params[:options]
     execution_type = params[:executionType]
@@ -80,16 +77,14 @@ class JavabuilderSessionsController < ApplicationController
 
     # Set the IAT a little in the past to account for time drift between environments
     issued_at_time = (Time.now - 5.seconds).to_i
-    # expire token in 15 minutes
-    expiration_time = (Time.now + 15.minutes).to_i
+    # expire token in 1 minute
+    expiration_time = (Time.now + 1.minute).to_i
 
     payload = {
       iat: issued_at_time,
       iss: CDO.dashboard_hostname,
       exp: expiration_time,
       uid: current_user.id,
-      project_version: project_version,
-      project_url: project_url,
       level_id: level_id,
       execution_type: execution_type,
       mini_app_type: mini_app_type,
@@ -140,7 +135,7 @@ class JavabuilderSessionsController < ApplicationController
   end
 
   def has_required_params?(additional_params)
-    default_params = [:projectVersion, :projectUrl, :executionType, :miniAppType]
+    default_params = [:executionType, :miniAppType]
 
     begin
       params.require(default_params.concat(additional_params))

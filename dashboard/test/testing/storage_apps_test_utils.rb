@@ -36,6 +36,6 @@ module StorageAppsTestUtils
   end
 
   def storage_apps
-    PEGASUS_DB[:storage_apps]
+    StorageApps.table
   end
 end

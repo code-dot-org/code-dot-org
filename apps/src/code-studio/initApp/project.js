@@ -809,6 +809,7 @@ var projects = (module.exports = {
       case 'gamelab':
         return msg.defaultProjectNameGameLab();
       case 'spritelab':
+      case 'thebadguys':
         return msg.defaultProjectNameSpriteLab();
       case 'weblab':
         return msg.defaultProjectNameWebLab();
@@ -872,6 +873,7 @@ var projects = (module.exports = {
       case 'weblab':
       case 'gamelab':
       case 'spritelab':
+      case 'thebadguys':
       case 'javalab':
         return appOptions.app; // Pass through type exactly
       case 'turtle':
