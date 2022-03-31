@@ -391,16 +391,10 @@ class JavalabEditor extends React.Component {
     }
     const {fileMetadata, editTabKey} = this.state;
     // check for duplicate filename
-    if (Object.keys(this.props.sources).includes(newFilename)) {
+    const duplicateFileError = this.checkDuplicateFileName(newFilename);
+    if (duplicateFileError) {
       this.setState({
-        renameFileError: this.props.sources[newFilename].isVisible
-          ? this.duplicateFileError(newFilename)
-          : this.duplicateSupportFileError(newFilename)
-      });
-      return;
-    } else if (Object.keys(this.props.validation).includes(newFilename)) {
-      this.setState({
-        renameFileError: this.duplicateSupportFileError(newFilename)
+        renameFileError: duplicateFileError
       });
       return;
     }
@@ -426,9 +420,10 @@ class JavalabEditor extends React.Component {
       return;
     }
     fileContents = fileContents || '';
-    if (Object.keys(this.props.sources).includes(filename)) {
+    const duplicateFileError = this.checkDuplicateFileName(filename);
+    if (duplicateFileError) {
       this.setState({
-        newFileError: this.duplicateFileError(filename)
+        newFileError: duplicateFileError
       });
       return;
     }
@@ -535,6 +530,20 @@ class JavalabEditor extends React.Component {
 
   duplicateSupportFileError(filename) {
     return javalabMsg.duplicateSupportFilenameError({filename: filename});
+  }
+
+  /**
+   * Checks if the new file name already exists in the project in both user and support code.
+   * Returns the appropriate error message if so.
+   */
+  checkDuplicateFileName(newFilename) {
+    if (Object.keys(this.props.sources).includes(newFilename)) {
+      return this.props.sources[newFilename].isVisible
+        ? this.duplicateFileError(newFilename)
+        : this.duplicateSupportFileError(newFilename);
+    } else if (Object.keys(this.props.validation).includes(newFilename)) {
+      return this.duplicateSupportFileError(newFilename);
+    }
   }
 
   // This is called from the file explorer when we want to jump to a file

@@ -824,11 +824,16 @@ describe('teacherSectionsRedux', () => {
     it('sets asyncLoadComplete to true after success responses', () => {
       const promise = store.dispatch(asyncLoadSectionData('id'));
 
-      expect(server.requests).to.have.length(3);
+      expect(server.requests).to.have.length(4);
       server.respondWith('GET', '/dashboardapi/sections', successResponse());
       server.respondWith(
         'GET',
         '/dashboardapi/sections/valid_course_offerings',
+        successResponse()
+      );
+      server.respondWith(
+        'GET',
+        '/dashboardapi/sections/available_participant_types',
         successResponse()
       );
       server.respondWith(
@@ -864,7 +869,7 @@ describe('teacherSectionsRedux', () => {
       const promise = store.dispatch(asyncLoadSectionData());
       expect(state().sections).to.deep.equal({});
 
-      expect(server.requests).to.have.length(2);
+      expect(server.requests).to.have.length(3);
       server.respondWith(
         'GET',
         '/dashboardapi/sections',
@@ -874,6 +879,11 @@ describe('teacherSectionsRedux', () => {
         'GET',
         '/dashboardapi/sections/valid_course_offerings',
         successResponse()
+      );
+      server.respondWith(
+        'GET',
+        '/dashboardapi/sections/available_participant_types',
+        successResponse({availableParticipantTypes: ['student']})
       );
       server.respond();
 
@@ -886,12 +896,17 @@ describe('teacherSectionsRedux', () => {
       const promise = store.dispatch(asyncLoadSectionData());
       expect(state().courseOfferings).to.deep.equal({});
 
-      expect(server.requests).to.have.length(2);
+      expect(server.requests).to.have.length(3);
       server.respondWith('GET', '/dashboardapi/sections', successResponse());
       server.respondWith(
         'GET',
         '/dashboardapi/sections/valid_course_offerings',
         successResponse(courseOfferings)
+      );
+      server.respondWith(
+        'GET',
+        '/dashboardapi/sections/available_participant_types',
+        successResponse({availableParticipantTypes: ['student']})
       );
       server.respond();
 
@@ -902,8 +917,8 @@ describe('teacherSectionsRedux', () => {
       });
     });
 
-    it('sets students from server responses', () => {
-      const promise = store.dispatch(asyncLoadSectionData('id'));
+    it('sets availableParticipantTypes from server responses', () => {
+      const promise = store.dispatch(asyncLoadSectionData());
       expect(state().courseOfferings).to.deep.equal({});
 
       expect(server.requests).to.have.length(3);
@@ -912,6 +927,34 @@ describe('teacherSectionsRedux', () => {
         'GET',
         '/dashboardapi/sections/valid_course_offerings',
         successResponse(courseOfferings)
+      );
+      server.respondWith(
+        'GET',
+        '/dashboardapi/sections/available_participant_types',
+        successResponse({availableParticipantTypes: ['student', 'teacher']})
+      );
+      server.respond();
+
+      return promise.then(() => {
+        expect(state().availableParticipantTypes).to.have.length(2);
+      });
+    });
+
+    it('sets students from server responses', () => {
+      const promise = store.dispatch(asyncLoadSectionData('id'));
+      expect(state().courseOfferings).to.deep.equal({});
+
+      expect(server.requests).to.have.length(4);
+      server.respondWith('GET', '/dashboardapi/sections', successResponse());
+      server.respondWith(
+        'GET',
+        '/dashboardapi/sections/valid_course_offerings',
+        successResponse(courseOfferings)
+      );
+      server.respondWith(
+        'GET',
+        '/dashboardapi/sections/available_participant_types',
+        successResponse({availableParticipantTypes: ['student']})
       );
       server.respondWith(
         'GET',
@@ -1330,6 +1373,11 @@ describe('teacherSectionsRedux', () => {
         '/dashboardapi/sections/valid_course_offerings',
         successResponse([])
       );
+      server.respondWith(
+        'GET',
+        '/dashboardapi/sections/available_participant_types',
+        successResponse({availableParticipantTypes: ['student']})
+      );
     });
     afterEach(() => server.restore());
 
@@ -1421,12 +1469,16 @@ describe('teacherSectionsRedux', () => {
         importOrUpdateRoster(TEST_COURSE_ID, TEST_COURSE_NAME)
       );
       return expect(promise).to.be.fulfilled.then(() => {
-        expect(server.requests).to.have.length(3);
+        expect(server.requests).to.have.length(4);
         expect(server.requests[1].method).to.equal('GET');
         expect(server.requests[1].url).to.equal('/dashboardapi/sections');
         expect(server.requests[2].method).to.equal('GET');
         expect(server.requests[2].url).to.equal(
           '/dashboardapi/sections/valid_course_offerings'
+        );
+        expect(server.requests[5].method).to.equal('GET');
+        expect(server.requests[5].url).to.equal(
+          '/dashboardapi/sections/available_participant_types'
         );
         expect(Object.keys(getState().teacherSections.sections)).to.have.length(
           sections.length
