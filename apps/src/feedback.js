@@ -984,12 +984,12 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
   }
 
   var sharingCopyButton = sharingDiv.querySelector(
-    '#sharing-input-copy-button'
+    '#sharing-dialog-copy-button'
   );
   if (sharingCopyButton) {
     dom.addClickTouchEvent(sharingCopyButton, function() {
       copyToClipboard(options.shareLink, () => {
-        sharingCopyButton.className = 'sharing-input-copy-button-shared';
+        sharingCopyButton.className = 'sharing-dialog-copy-button-shared';
       });
     });
   }
