@@ -170,14 +170,16 @@ module Services
         def self.flatten(object_hash, serializer, name)
           results = {}
           object_hash.each do |key, object|
-            object = object.symbolize_keys
+            if object.is_a?(Hash)
+              object = object.symbolize_keys
 
-            # store attributes directly on the results for this object
-            attributes = object.slice(*serializer._attributes)
-            if attributes.present?
-              results[name] ||= {}
-              results[name][key] = attributes
-            end
+              # store attributes directly on the results for this object
+              attributes = object.slice(*serializer._attributes)
+              if attributes.present?
+                results[name] ||= {}
+                results[name][key] = attributes
+              end
+	    end
 
             # recursively process "reflections" (ie, related model data) into their
             # own objects
