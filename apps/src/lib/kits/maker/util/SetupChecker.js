@@ -57,7 +57,6 @@ export default class SetupChecker {
     }
 
     // In the Web Serial Experiment, user already selected port
-    // TODO - handle when user doesn't select correct port
     return Promise.resolve(this.port);
   }
 
