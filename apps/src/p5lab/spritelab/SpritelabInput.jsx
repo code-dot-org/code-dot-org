@@ -6,7 +6,7 @@ import * as shapes from '../shapes';
 import {KeyCodes} from '@cdo/apps/constants';
 import {selectors} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {PromptType} from '../redux/spritelabInput';
-
+import {animations as animationsApi} from '@cdo/apps/clientApi';
 class SpritelabInput extends React.Component {
   static propTypes = {
     animationList: shapes.AnimationList.isRequired,
@@ -59,9 +59,11 @@ class SpritelabInput extends React.Component {
 
   constructSpriteMap = memoize(animationPropsByKey => {
     const spriteMap = {};
-    Object.values(animationPropsByKey).forEach(
-      animation => (spriteMap[`image_${animation.name}`] = animation.sourceUrl)
-    );
+
+    Object.entries(animationPropsByKey).forEach(animation => {
+      spriteMap[`image_${animation[1].name}`] =
+        animation[1].sourceUrl || animationsApi.basePath(animation[0]) + '.png'; // this could be confusing since we expect sourceUrl to be null sometimes?
+    });
     return spriteMap;
   });
 
