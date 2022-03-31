@@ -100,28 +100,18 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         const name = this.port_.getInfo().usbProductId;
         CircuitPlaygroundBoard.openSerialPortWebSerial(this.port_).then(
           port => {
-            CircuitPlaygroundBoard.initializePlaygroundAndBoard(
-              port,
-              name,
-              resolve,
-              reject
-            );
+            this.initializePlaygroundAndBoard(port, name, resolve, reject);
           }
         );
       } else {
         const name = this.port_ ? this.port_.comName : undefined;
         const serialPort = CircuitPlaygroundBoard.openSerialPort(name);
-        CircuitPlaygroundBoard.initializePlaygroundAndBoard(
-          serialPort,
-          name,
-          resolve,
-          reject
-        );
+        this.initializePlaygroundAndBoard(serialPort, name, resolve, reject);
       }
     });
   }
 
-  static initializePlaygroundAndBoard(serialPort, name, resolve, reject) {
+  initializePlaygroundAndBoard(serialPort, name, resolve, reject) {
     const playground = CircuitPlaygroundBoard.makePlaygroundTransport(
       serialPort
     );
