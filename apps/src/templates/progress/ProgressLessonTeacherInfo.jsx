@@ -84,14 +84,8 @@ class ProgressLessonTeacherInfo extends React.Component {
       isLessonHiddenForSection(hiddenLessonState, sectionId, lesson.id);
     const courseId =
       (section && section.code && parseInt(section.code.substring(2))) || null;
-
-    // lesson.lessonStartUrl is a protocol-relative url, it needs to be changed
-    // to an absolute URL so when the teacher copies it, they'll get the full URL
-    const loginRequiredLessonStartUrl = new URL(
-      lesson.lessonStartUrl + '?login_required=true',
-      window.location
-    ).href;
-
+    const loginRequiredLessonStartUrl =
+      lesson.lessonStartUrl + '?login_required=true';
     const shouldRender =
       lesson.lesson_plan_html_url ||
       (lesson.lockable && !hasNoSections) ||
