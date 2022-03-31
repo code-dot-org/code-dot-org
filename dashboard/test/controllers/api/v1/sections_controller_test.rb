@@ -4,6 +4,10 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
+    @levelbuilder = create(:levelbuilder)
+    @universal_instructor = create(:universal_instructor)
+    @plc_reviewer = create(:plc_reviewer)
+    @facilitator = create(:facilitator)
     @teacher = create(:teacher)
     @section = create(:section, user: @teacher, login_type: 'word')
     @student = create(:follower, section: @section).student_user
@@ -1017,6 +1021,52 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @student_with_script
     get :student_script_ids, params: {id: @section_with_script.id}
     assert_response :forbidden
+  end
+
+  test "available_participant_types: returns forbidden if no user" do
+    get :available_participant_types
+    assert_response :forbidden
+  end
+
+  test "available_participant_types: returns forbidden if student" do
+    sign_in @student_with_script
+    get :available_participant_types
+    assert_response :forbidden
+  end
+
+  test "available_participant_types: returns just students if teacher" do
+    sign_in @teacher
+    get :available_participant_types
+    assert_response :success
+    assert_equal(['student'], json_response["availableParticipantTypes"])
+  end
+
+  test "available_participant_types: returns students and teachers if facilitator" do
+    sign_in @facilitator
+    get :available_participant_types
+    assert_response :success
+    assert_equal(['student', 'teacher'], json_response["availableParticipantTypes"])
+  end
+
+  test "available_participant_types: returns all 3 options if universal instructor" do
+    sign_in @universal_instructor
+    get :available_participant_types
+    assert_response :success
+    assert_equal(['student', 'teacher', 'facilitator'], json_response["availableParticipantTypes"])
+  end
+
+  test "available_participant_types: returns all 3 options if plc reviewer" do
+    sign_in @plc_reviewer
+    get :available_participant_types
+    assert_response :success
+    assert_equal(['student', 'teacher', 'facilitator'], json_response["availableParticipantTypes"])
+  end
+
+  test "available_participant_types: returns all 3 options if levelbuilder" do
+    sign_in @levelbuilder
+    get :available_participant_types
+    assert_response :success
+    assert_equal(['student', 'teacher', 'facilitator'], json_response["availableParticipantTypes"])
   end
 
   test "membership: returns status 403 'Forbidden' when not signed in" do

@@ -1417,7 +1417,7 @@ ActiveRecord::Schema.define(version: 2022_03_25_185859) do
   create_table "project_versions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.integer "storage_app_id", null: false
     t.string "object_version_id", null: false
-    t.text "comment"
+    t.text "comment", size: :medium
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["storage_app_id", "object_version_id"], name: "index_project_versions_on_storage_app_id_and_object_version_id", unique: true
@@ -1426,7 +1426,7 @@ ActiveRecord::Schema.define(version: 2022_03_25_185859) do
 
   create_table "projects", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.integer "storage_id"
-    t.text "value", limit: 16777215
+    t.text "value", size: :medium
     t.datetime "updated_at", null: false
     t.string "updated_ip", limit: 39, null: false
     t.string "state", limit: 50, default: "active", null: false
