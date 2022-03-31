@@ -108,11 +108,11 @@ class Ability
         code_review_comment.project_owner&.student_of?(user) ||
           (user.teacher? && user == code_review_comment.commenter)
       end
-      can :create,  CodeReviewComment do |_, project_owner, storage_app_id, level_id, script_id|
-        CodeReviewComment.user_can_review_project?(project_owner, user, storage_app_id, level_id, script_id)
+      can :create,  CodeReviewComment do |_, project_owner, project_id, level_id, script_id|
+        CodeReviewComment.user_can_review_project?(project_owner, user, project_id, level_id, script_id)
       end
-      can :project_comments, CodeReviewComment do |_, project_owner, storage_app_id|
-        CodeReviewComment.user_can_review_project?(project_owner, user, storage_app_id)
+      can :project_comments, CodeReviewComment do |_, project_owner, project_id|
+        CodeReviewComment.user_can_review_project?(project_owner, user, project_id)
       end
       can :create, ReviewableProject do |_, project_owner|
         ReviewableProject.user_can_mark_project_reviewable?(project_owner, user)
