@@ -2,20 +2,34 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
-    "long_instructions": "The owner of the Project Mercury Pastries Food Truck wants to keep track of the number of new customers they get each day. The Customer class represents a customer of the food truck. A Customer object is created each time a new customer places an order.\r\n\r\n##Getting Started\r\n\r\nImport Dessert.java from the Backpack.\r\n\r\nDon't have it or it doesn't work? That's ok! Just copy and paste the code from here.\r\n\r\n##In Customer.java:\r\n\r\n1. Declare and initialize a static variable called newCustomer.\r\n\r\n2. In the Customer constructor, increment the value of newCustomer.\r\n\r\n##In MyConsole.java:\r\n\r\n3. Print the value of newCustomer.\r\n\r\n4. Create more Customer objects, then print the new value of newCustomer.",
+    "long_instructions": "The owner of the Project Mercury Pastries Food Truck wants to keep track of the number of new customers they get each day. The `Customer`(#e7e8ea) class represents a customer of the food truck. A `Customer`(#e7e8ea) object is created each time a new customer places an order.\r\n\r\n##In Customer.java:\r\n\r\n1. Declare and initialize a static variable called `newCustomers`(#e7e8ea) to `0`(#e7e8ea).\r\n\r\n2. In the `Customer`(#e7e8ea) constructor, increase the value of `newCustomers`(#e7e8ea) by `1`(#e7e8ea).\r\n\r\n##In MyConsole.java:\r\n\r\n3. Print the value of `newCustomers`(#e7e8ea).\r\n\r\n4. Create more `Customer`(#e7e8ea) objects, then print the new value of `newCustomers`(#e7e8ea).\r\n\r\n::: details [**Show Me How**]\r\nA static variable uses the following syntax:\r\n  \r\n  ```\r\n  public static dataType variableName;\r\n  \r\n  OR\r\n  \r\n  public static dataType variableName = initialValue;\r\n  ```\r\n\r\nA static variable is accessed using the following syntax:\r\n  \r\n  ```\r\n  ClassName.variableName;\r\n  ```\r\n:::",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "submittable": "false",
-    "csa_view_mode": "console"
+    "csa_view_mode": "console",
+    "display_name": "Counting Customers",
+    "bubble_choice_description": "Keep track of the number of Customer objects created.",
+    "thumbnail_url": "https://images.code.org/09e893415e2610d10a0e108f78cb754d-image-1648648472547.png",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    Customer firstCustomer = new Customer(\"Julienne\", 7);\n    Customer secondCustomer = new Customer(\"Maria\", 3);\n\n    // TO DO #3: Print the value of newCustomers.\n\n\n    // TO DO #4: Create more Customer objects, then print\n    // the new value of newCustomers.\n\n\n    \n  }\n}",
+        "isVisible": true
+      },
+      "Customer.java": {
+        "text": "/*\n * Represents a Customer at the Project\n * Mercury Pastries Food Truck\n */\npublic class Customer {\n\n  private String name;    // The name of the customer\n  private int quantity;   // The number of desserts the customer ordered\n\n  // TO DO #1: Declare and initialize a static variable called newCustomers.\n  \n\n  /*\n   * Constructor to create a Customer object with\n   * a specified name and quantity\n   */\n  public Customer(String name, int quantity) {\n    this.name = name;\n    this.quantity = quantity;\n\n    // TO DO #2: Increase the value of newCustomers by 1.\n\n    \n  }\n\n}",
+        "isVisible": true
+      }
+    },
+    "encrypted_exemplar_sources": "jrRNHcOowRx22njbDNzE6K10Ex1m7JwmHnodMo3x9M1EYG7S3FPb43ZudZxX\ne8PmzxazCo95TrNUKtM7mA3CS2SMu+lWOrOhzN/pCahXBv1BCM71wFwruG0f\nSzBw/SKxUlAgQZrJyPxuFIoLeFIm2bc0GvvtVxR7XK6mVeG9vIFvNLt5JlCR\nMEvC6/R0nRT4i+awHj5WVyOFkoZgDEw1f10WmmckMINRltn6t+zGn4hh28rZ\n3d2j+5b0Ids3n8GCBfw1qLAJ537WA5G1OgabONvEjn1mwoGsV3nEnhMXvptZ\nxETL5AM257FtPrL+5heAGAou753WyNJW63YxYdjkCKKKeGsKTy79rDFUt/l9\n5nTgpt6BnZjfklNMzpryElHaUM2JmnL4ujPp6sYUpr63rwT5L1YpY5ea2YYY\npoA7yfcLZX+5mIdtkfKpZeJQ1FbKV2qsUnyXPBcTgofLtho8qR1eBn3P4Ta5\nQYluYYqFXm4d4MS7Prq4YeCMgrk8nru/y6F24iIwKpzg1iRN0ppVkFc924DP\nkxGY5IEL14cSS9UiO6UZU0SunBxUQVxuRJ4nbZmieeRb7hI6ECvdGWg5j6pE\n+Nfqw3eu/CpVfW584d+DLmwUieq31+YZFurE43Mjbq/jv0aMaYhOf5x7RW30\n8+67vPjrQ+ONkYcPF79y03P9Kyi2w5h3SEl9n8SpV/fFjGTLrRFMYbCNG/V5\n3VSjt0z29p64k0L9iaNahRYgBeuElUhtLWUKtdaOEOV2YtQKyOUOY+y5bExv\nGYfgjYe4V2dDEZBZBfEyQPJBgfsKRhgykZt+ew8zTfFTRAW2B5rqTq8psrFB\n+55imYbbisT+JmjaD5KD2e8JSgzc5ZSNX1VKF2y9dQ2q/ekEgq9yIO8ezeOH\n4GoxLSvCTna4u+uDE21RvZHlm9W3FXQhuXgN2jnnaicyS02TUnw0rY9O28h7\nu4Xwb/jujvsYcn9ZzF6d777vYaTMQPA9x853LzDbUrwrGHlcfi+oXzwtCsP5\nZqsnICgx7HC6M7XMIoTOtnYfIdpY79VbKXHK81wnt4u+rpSWCh8yCJO0TlIf\n+L3qJAkOCDuD3ozoLqabQ0++czq7DxrZMVau6XCATfuolXk3OQIpvxMJceqX\njLlSSUpk7gfqTDHZ0sZrRWPL8SqU5THNKlx54Kd6MIA1ePLmM+F46IF2GyZp\nkjT9c18F4Vx1BZFpZ76G+VrGunukzjTCYICj3llFMRkPzRjgYlIsju1bCgpS\ndAe7+A3Tedw3JkMDD0de29Y6ZEeaNhnnTK9BFYbc59+aw1CRuQD78HXg0KBa\n0hN8ZyVPCt8hqmQNRjmNIzfEfY707cjZY+PFjdPx6/Eh0b8GeAnqS6hOWobK\nbqNDz4R4c1uwzQMO3bNulpM75Ipn0fF9dgK/MbSD9D+/p2eJFrf6AFfhmsiG\nxrMY+iSUDO8/RnOZXtEOrC0zq4aNsHGl1luklqmQKHHOwn4HjG7ZblHsvx9x\neQY5v9l1qdxRgTqWhjVFOFGFF5jL+IRwRF3EtgQV/+nbHSlnK+VCIORM71zL\n26RO05/2gd+0Bnphls4JXe30tnP/UriVlo6z3MAzY3Kkwy25nXWzC6zRx4kE\nG+uSuPt2PuBygofWH+326RdlnhWmGq+KpUSDhV4rcCT6ig0QMY5a7KabqzST\nqZcb5++sT7W2Xm2lXHyDWa6XRTOWtOte0dUMP1zflUu0LysohmgihmhsN5ob\nzZA765q4Y6nOB5xLfJYbEJkkJoN4xf0fa7jS9poSIJmge0Tfu7M1\n",
+    "encrypted_examples": [
+
+    ]
   },
   "game_id": 68,
   "published": true,
   "created_at": "2022-03-25T12:34:12.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-03-25 12:34:14 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-25 12:34:14 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 13:54:46 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 13:56:03 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 13:56:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 13:57:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 13:59:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 14:01:39 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 14:31:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
