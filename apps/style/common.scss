@@ -1428,12 +1428,12 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
     cursor: text;
   }
 
-  #sharing-input-copy-button {
+  #sharing-dialog-copy-button {
     margin-top: 1px;
     box-sizing: border-box;
   }
 
-  .sharing-input-copy-button-shared {
+  .sharing-dialog-copy-button-shared {
     background-color: $light_purple;
   }
 
