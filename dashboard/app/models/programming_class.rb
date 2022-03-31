@@ -37,6 +37,7 @@ class ProgrammingClass < ApplicationRecord
       name: name || '',
       content: content || '',
       examples: parsed_examples,
+      fields: parsed_fields,
       tips: tips || '',
       syntax: syntax || '',
       external_documentation: external_documentation || '',
@@ -48,5 +49,9 @@ class ProgrammingClass < ApplicationRecord
 
   def parsed_examples
     examples.blank? ? [] : JSON.parse(examples)
+  end
+
+  def parsed_fields
+    fields.blank? ? [] : JSON.parse(fields)
   end
 end

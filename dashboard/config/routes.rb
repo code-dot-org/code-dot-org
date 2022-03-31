@@ -337,6 +337,7 @@ Dashboard::Application.routes.draw do
   resources :programming_expressions, only: [:new, :create, :edit, :update, :show, :destroy] do
     collection do
       get :search
+      get :get_filtered_expressions
     end
     member do
       post :clone
@@ -451,6 +452,10 @@ Dashboard::Application.routes.draw do
 
   # HOC dashboards.
   get '/admin/hoc/students_served', to: 'admin_hoc#students_served', as: 'hoc_students_served'
+
+  # NPS dashboards
+  get '/admin/nps/nps_form', to: 'admin_nps#nps_form', as: 'nps_form'
+  post '/admin/nps/nps_update', to: 'admin_nps#nps_update', as: 'nps_update'
 
   # internal report dashboards
   get '/admin/levels', to: 'admin_reports#level_completions', as: 'level_completions'

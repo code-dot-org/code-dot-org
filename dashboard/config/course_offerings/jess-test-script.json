@@ -2,5 +2,6 @@
   "key": "jess-test-script",
   "display_name": "jess-test-script",
   "category": "other",
-  "is_featured": false
+  "is_featured": false,
+  "assignable": true
 }
