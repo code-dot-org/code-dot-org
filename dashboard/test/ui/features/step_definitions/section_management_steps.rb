@@ -1,7 +1,8 @@
 # Helper steps for creating and managing sections
 
 And /^I create a new student section( and go home)?$/ do |home|
-  section = JSON.parse(browser_request(url: '/dashboardapi/sections', method: 'POST', body: {login_type: 'email', participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student}))
+  # TODO(dani): Once end point is set up to take participant type param update this to participant_type: student
+  section = JSON.parse(browser_request(url: '/dashboardapi/sections', method: 'POST', body: {login_type: 'email'}))
   section_code = section['code']
   @section_url = "http://studio.code.org/join/#{section_code}"
   navigate_to replace_hostname('http://studio.code.org') if home
