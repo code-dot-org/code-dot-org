@@ -20,9 +20,12 @@ const participantTypesByAudience = {
   facilitator: ['student', 'teacher', 'facilitator']
 };
 
-export const getCourseOfferingsByCategory = (courseOfferings, audience) => {
+export const getCourseOfferingsByCategory = (
+  courseOfferings,
+  participantType
+) => {
   const filterCourseOfferings = _.filter(courseOfferings, function(offering) {
-    return participantTypesByAudience[audience].includes(
+    return participantTypesByAudience[participantType].includes(
       offering.participant_audience
     );
   });
@@ -55,7 +58,8 @@ export default class AssignmentSelector extends Component {
     disabled: PropTypes.bool,
     localeCode: PropTypes.string,
     isNewSection: PropTypes.bool,
-    audience: PropTypes.oneOf(Object.keys(ParticipantAudience)).isRequired
+    participantType: PropTypes.oneOf(Object.keys(ParticipantAudience))
+      .isRequired
   };
 
   constructor(props) {
@@ -212,7 +216,12 @@ export default class AssignmentSelector extends Component {
   };
 
   render() {
-    const {dropdownStyle, disabled, courseOfferings, audience} = this.props;
+    const {
+      dropdownStyle,
+      disabled,
+      courseOfferings,
+      participantType
+    } = this.props;
     const {
       selectedCourseOfferingId,
       selectedCourseVersionId,
@@ -221,7 +230,7 @@ export default class AssignmentSelector extends Component {
 
     const courseOfferingsByCategories = getCourseOfferingsByCategory(
       courseOfferings,
-      audience
+      participantType
     );
 
     const selectedCourseOffering = courseOfferings[selectedCourseOfferingId];

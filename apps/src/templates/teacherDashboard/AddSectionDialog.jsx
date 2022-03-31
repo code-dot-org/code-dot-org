@@ -44,7 +44,7 @@ class AddSectionDialog extends Component {
       handleCancel,
       availableParticipantTypes
     } = this.props;
-    const {loginType, audience} = section || {};
+    const {loginType, participantType} = section || {};
     const title = i18n.newSectionUpdated();
 
     if (availableParticipantTypes.length === 1) {
@@ -69,7 +69,7 @@ class AddSectionDialog extends Component {
               handleCancel={handleCancel}
             />
           )}
-          {loginType && !audience && (
+          {loginType && !participantType && (
             <ParticipantTypePicker
               title={title}
               setParticipantType={setParticipantType}
@@ -77,11 +77,11 @@ class AddSectionDialog extends Component {
               availableParticipantTypes={availableParticipantTypes}
             />
           )}
-          {loginType && audience && (
+          {loginType && participantType && (
             <EditSectionForm
               title={title}
               isNewSection={true}
-              audience={audience}
+              participantType={participantType}
             />
           )}
         </PadAndCenter>
@@ -102,7 +102,8 @@ export default connect(
     beginImportRosterFlow: () => dispatch(beginImportRosterFlow()),
     setRosterProvider: provider => dispatch(setRosterProvider(provider)),
     setLoginType: loginType => dispatch(editSectionProperties({loginType})),
-    setParticipantType: audience => dispatch(editSectionProperties({audience})),
+    setParticipantType: participantType =>
+      dispatch(editSectionProperties({participantType})),
     handleCancel: () => dispatch(cancelEditingSection())
   })
 )(AddSectionDialog);

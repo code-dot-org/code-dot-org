@@ -10,7 +10,7 @@ import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashb
 const defaultProps = {
   localeCode: 'en-US',
   courseOfferings: courseOfferings,
-  audience: 'student',
+  participantType: 'student',
   section: {
     id: 11,
     name: 'foo',
@@ -29,7 +29,7 @@ const defaultProps = {
 
 const hiddenSectionProps = {
   courseOfferings: courseOfferings,
-  audience: 'student',
+  participantType: 'student',
   section: {
     id: 11,
     name: 'foo',

@@ -14,7 +14,7 @@ const USER_EDITABLE_SECTION_PROPS = [
   'loginType',
   'lessonExtras',
   'pairingAllowed',
-  'audience',
+  'participantType',
   'ttsAutoplayEnabled',
   'courseId',
   'courseOfferingId',
@@ -601,7 +601,7 @@ function newSectionData(id, loginType) {
     ttsAutoplayEnabled: false,
     sharingDisabled: false,
     studentCount: 0,
-    audience: null,
+    participantType: null,
     code: '',
     courseId: null,
     courseOfferingId: null,
@@ -700,10 +700,10 @@ export default function teacherSections(state = initialState, action) {
     );
 
     let studentSectionIds = sections
-      .filter(section => section.audience === 'student')
+      .filter(section => section.participantType === 'student')
       .map(section => section.id);
     let plSectionIds = sections
-      .filter(section => section.audience !== 'student')
+      .filter(section => section.participantType !== 'student')
       .map(section => section.id);
 
     return {
@@ -884,10 +884,10 @@ export default function teacherSections(state = initialState, action) {
     };
 
     let newStudentSectionIds = newSections
-      ?.filter(section => section.audience === 'student')
+      ?.filter(section => section.participantType === 'student')
       .map(section => section.id);
     let newPlSectionIds = newSections
-      ?.filter(section => section.audience !== 'student')
+      ?.filter(section => section.participantType !== 'student')
       .map(section => section.id);
 
     if (section.loginType !== state.initialLoginType) {
@@ -1196,7 +1196,7 @@ export const sectionFromServerSection = serverSection => ({
   courseVersionId: serverSection.course_version_id,
   unitId: serverSection.unit_id,
   courseId: serverSection.course_id,
-  audience: serverSection.audience,
+  participantType: serverSection.participant_type,
   hidden: serverSection.hidden,
   isAssigned: serverSection.isAssigned,
   restrictSection: serverSection.restrict_section,
@@ -1240,7 +1240,7 @@ export function serverSectionFromSection(section) {
     course_version_id: section.courseVersionId,
     unit_id: section.unitId,
     course_id: section.courseId,
-    audience: section.audience,
+    participant_type: section.participantType,
     restrict_section: section.restrictSection
   };
 }
@@ -1365,7 +1365,9 @@ export function hiddenSectionIds(state) {
 export function hiddenStudentSectionIds(state) {
   state = getRoot(state);
   return state.sectionIds.filter(
-    id => state.sections[id].hidden && state.sections[id].audience === 'student'
+    id =>
+      state.sections[id].hidden &&
+      state.sections[id].participantType === 'student'
   );
 }
 
@@ -1375,7 +1377,9 @@ export function hiddenStudentSectionIds(state) {
 export function hiddenPlSectionIds(state) {
   state = getRoot(state);
   return state.sectionIds.filter(
-    id => state.sections[id].hidden && state.sections[id].audience !== 'student'
+    id =>
+      state.sections[id].hidden &&
+      state.sections[id].participantType !== 'student'
   );
 }
 

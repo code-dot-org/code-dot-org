@@ -37,7 +37,8 @@ class EditSectionForm extends Component {
     title: PropTypes.string.isRequired,
     //Whether the user is adding a brand new section or editing an existing one.
     isNewSection: PropTypes.bool,
-    audience: PropTypes.oneOf(Object.keys(ParticipantAudience)).isRequired,
+    participantType: PropTypes.oneOf(Object.keys(ParticipantAudience))
+      .isRequired,
 
     //Comes from redux
     initialUnitId: PropTypes.number,
@@ -137,7 +138,7 @@ class EditSectionForm extends Component {
       section,
       title,
       courseOfferings,
-      audience,
+      participantType,
       isSaveInProgress,
       editSectionProperties,
       handleClose,
@@ -216,7 +217,7 @@ class EditSectionForm extends Component {
             disabled={isSaveInProgress}
             localeCode={localeCode}
             isNewSection={isNewSection}
-            audience={audience}
+            participantType={participantType}
           />
           {assignedUnitLessonExtrasAvailable && (
             <LessonExtrasField
@@ -377,7 +378,7 @@ const AssignmentField = ({
   disabled,
   localeCode,
   isNewSection,
-  audience
+  participantType
 }) => (
   <div>
     <FieldName>{i18n.course()}</FieldName>
@@ -391,7 +392,7 @@ const AssignmentField = ({
       disabled={disabled}
       localeCode={localeCode}
       isNewSection={isNewSection}
-      audience={audience}
+      participantType={participantType}
     />
   </div>
 );
@@ -402,7 +403,7 @@ AssignmentField.propTypes = {
   disabled: PropTypes.bool,
   localeCode: PropTypes.string,
   isNewSection: PropTypes.bool,
-  audience: PropTypes.oneOf(Object.keys(ParticipantAudience)).isRequired
+  participantType: PropTypes.oneOf(Object.keys(ParticipantAudience)).isRequired
 };
 
 const LessonExtrasField = ({value, onChange, disabled}) => (

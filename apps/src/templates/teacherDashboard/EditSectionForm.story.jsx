@@ -26,7 +26,7 @@ export default storybook => {
         assignedUnitName="script name"
         assignedUnitLessonExtrasAvailable={false}
         assignedUnitTextToSpeechEnabled={false}
-        audience={'student'}
+        participantType={'student'}
       />
     ));
     storybook = storybook.add('no students yet', () => (
@@ -47,7 +47,7 @@ export default storybook => {
         assignedUnitName="script name"
         assignedUnitLessonExtrasAvailable={false}
         assignedUnitTextToSpeechEnabled={false}
-        audience={'student'}
+        participantType={'student'}
       />
     ));
     storybook = storybook.add('save in progress', () => (
@@ -65,7 +65,7 @@ export default storybook => {
         assignedUnitName="script name"
         assignedUnitLessonExtrasAvailable={false}
         assignedUnitTextToSpeechEnabled={false}
-        audience={'student'}
+        participantType={'student'}
       />
     ));
   });
