@@ -7,9 +7,12 @@ import {
   gtChrome33,
   isChromeOS
 } from './browserChecks';
-import {BOARD_TYPE, detectBoardTypeFromPort} from './boardUtils';
+import {
+  BOARD_TYPE,
+  detectBoardTypeFromPort,
+  isWebSerialPort
+} from './boardUtils';
 import MicroBitBoard from '../boards/microBit/MicroBitBoard';
-import experiments from '@cdo/apps/util/experiments';
 
 export default class SetupChecker {
   constructor(webSerialPort) {
@@ -52,7 +55,7 @@ export default class SetupChecker {
    * @return {Promise}
    */
   detectBoardPluggedIn() {
-    if (!experiments.isEnabled('webserial')) {
+    if (isWebSerialPort(this.port)) {
       return findPortWithViableDevice().then(port => (this.port = port));
     }
 

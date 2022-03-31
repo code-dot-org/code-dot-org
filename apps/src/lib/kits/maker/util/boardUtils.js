@@ -20,14 +20,14 @@ export function detectBoardTypeFromPort(port) {
   if (port) {
     let vendorId;
     let productId;
-    if (port.vendorId) {
-      vendorId = parseInt(port.vendorId, 16);
-      productId = parseInt(port.productId, 16);
-    } else if (!!port.getInfo) {
+    if (isWebSerialPort(port)) {
       // WebSerial ports have a getInfo function
       const portInfo = port.getInfo();
       vendorId = portInfo.usbVendorId;
       productId = portInfo.usbProductId;
+    } else {
+      vendorId = parseInt(port.vendorId, 16);
+      productId = parseInt(port.productId, 16);
     }
     if (vendorId === ADAFRUIT_VID && productId === CIRCUIT_PLAYGROUND_PID) {
       boardType = BOARD_TYPE.CLASSIC;
@@ -41,4 +41,12 @@ export function detectBoardTypeFromPort(port) {
     }
   }
   return boardType;
+}
+
+/**
+ * Determines whether the serial port is WebSerial Port. Otherwise, port is assumed to be Node SerialPort.
+ */
+export function isWebSerialPort(port) {
+  // The WebSerial API includes a getInfo function on the port. This function is not present for Node SerialPort.
+  return port && !!port.getInfo;
 }
