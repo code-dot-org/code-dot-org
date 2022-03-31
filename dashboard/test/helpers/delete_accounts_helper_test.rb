@@ -1824,9 +1824,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   test "unfeatures any featured projects owned by soft-deleted user" do
     skip
     student = create :student
-    with_channel_for student do |storage_app_id|
+    with_channel_for student do |project_id|
       featured_project = create :featured_project,
-        storage_app_id: storage_app_id,
+        project_id: project_id,
         featured_at: Time.now
 
       assert featured_project.featured?
@@ -1841,9 +1841,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   test "unfeatures any featured projects owned by purged user" do
     skip
     student = create :student
-    with_channel_for student do |storage_app_id|
+    with_channel_for student do |project_id|
       featured_project = create :featured_project,
-        storage_app_id: storage_app_id,
+        project_id: project_id,
         featured_at: Time.now
 
       assert featured_project.featured?
@@ -1860,9 +1860,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     student = create :student
     featured_time = Time.now - 20
     unfeatured_time = Time.now - 10
-    with_channel_for student do |storage_app_id|
+    with_channel_for student do |project_id|
       featured_project = create :featured_project,
-        storage_app_id: storage_app_id,
+        project_id: project_id,
         featured_at: featured_time,
         unfeatured_at: unfeatured_time
 

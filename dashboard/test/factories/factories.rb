@@ -850,7 +850,7 @@ FactoryGirl.define do
   end
 
   factory :featured_project do
-    storage_app_id {456}
+    project_id {456}
   end
 
   factory :user_ml_model do
