@@ -1,0 +1,38 @@
+{
+  "pl-PL": {
+    "data": {
+      "standards": {
+        "csta/1B-AP-12": {
+          "description": "Modyfikuj, remiksuj i wprowadzaj części istniejącego programu do czyjejś pracy, aby opracować coś nowego lub dodać zaawansowane funkcje."
+        },
+        "csta/1B-AP-15": {
+          "description": "Testuj i debuguj (identyfikuj i naprawiaj błędy) program lub algorytm, aby zapewnić jego działania zgodnie z przeznaczeniem."
+        },
+        "csta2011/CT.L2:12": {
+          "description": "Stosuj abstrakcję, aby rozkładać problem na mniejsze podproblemy. "
+        },
+        "csta/1A-IC-17": {
+          "description": "Pracuj z innymi w trybie online okazując szacunek i odpowiedzialność."
+        },
+        "csta/1B-CS-01": {
+          "description": "Opisz, jak funkcjonują wewnętrzne i zewnętrzne części urządzeń komputerowych, tworząc system."
+        },
+        "csta/1B-CS-02": {
+          "description": "Modeluj, jak sprzęt komputerowy i oprogramowanie współpracują ze sobą jako system, aby wykonywać zadania."
+        },
+        "csta/1A-CS-02": {
+          "description": "Use appropriate terminology in identifying and describing the function of common physical components of computing systems (hardware)."
+        },
+        "csta/1A-CS-03": {
+          "description": "Opisz podstawowe problemy ze sprzętem i oprogramowaniem, używając dokładnej terminologii."
+        },
+        "csta/1B-AP-11": {
+          "description": "Rozkładaj (podziel) zadania na mniejsze, możliwe do opanowania podzadania, aby ułatwić proces tworzenia programu."
+        },
+        "csta/1B-NI-05": {
+          "description": "Omów problemy cyberbezpieczeństwa w świecie oraz, jak mogą być chronione informacje osobiste."
+        }
+      }
+    }
+  }
+}
