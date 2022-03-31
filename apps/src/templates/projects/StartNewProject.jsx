@@ -110,16 +110,16 @@ export default class StartNewProject extends React.Component {
               description={i18n.projectGroupEvents()}
               projectTypes={GAMES_AND_EVENTS}
             />
-            <NewProjectButtons
-              description={i18n.projectGroupPlaylab()}
-              projectTypes={PLAYLAB}
-            />
             {canViewAdvancedTools && (
               <NewProjectButtons
                 description={i18n.projectGroupAdvancedTools()}
                 projectTypes={ADVANCED_TOOLS}
               />
             )}
+            <NewProjectButtons
+              description={i18n.projectGroupPlaylab()}
+              projectTypes={PLAYLAB}
+            />
             <NewProjectButtons
               description={i18n.projectGroupPreReader()}
               projectTypes={PREREADER}
