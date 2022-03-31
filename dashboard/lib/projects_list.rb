@@ -9,7 +9,7 @@ module ProjectsList
   PUBLISHED_PROJECT_TYPE_GROUPS = {
     applab: ['applab'],
     gamelab: ['gamelab'],
-    spritelab: ['spritelab'],
+    spritelab: ['spritelab', 'thebadguys'],
     playlab: ['playlab', 'gumball', 'infinity', 'iceage'],
     artist: ['artist', 'frozen'],
     minecraft: ['minecraft_adventurer', 'minecraft_designer', 'minecraft_hero', 'minecraft_aquatic'],
