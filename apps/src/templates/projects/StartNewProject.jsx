@@ -28,18 +28,6 @@ export default class StartNewProject extends React.Component {
     const {canViewAdvancedTools, canViewFullList} = this.props;
     const {showFullList} = this.state;
 
-    const GAMES_AND_EVENTS = [
-      'spritelab',
-      'dance',
-      'poetry',
-      'flappy',
-      'starwarsblocks',
-      'starwars',
-      'bounce',
-      'sports',
-      'basketball'
-    ];
-
     const DEFAULT_PROJECT_TYPES_ADVANCED = [
       'spritelab',
       'artist',
@@ -50,14 +38,40 @@ export default class StartNewProject extends React.Component {
     const DEFAULT_PROJECT_TYPES_BASIC = [
       'spritelab',
       'artist',
-      'minecraft_designer',
       'dance',
-      'poetry'
+      'playlab'
     ];
 
     const defaultProjectTypes = canViewAdvancedTools
       ? DEFAULT_PROJECT_TYPES_ADVANCED
       : DEFAULT_PROJECT_TYPES_BASIC;
+
+    const OPEN_ENDED = ['spritelab', 'dance', 'poetry', 'thebadguys'];
+
+    const DRAWING = ['artist', 'frozen'];
+
+    const MINECRAFT = [
+      'minecraft_adventurer',
+      'minecraft_designer',
+      'minecraft_hero',
+      'minecraft_aquatic'
+    ];
+
+    const GAMES_AND_EVENTS = [
+      'flappy',
+      'starwarsblocks',
+      'bounce',
+      'sports',
+      'basketball'
+    ];
+
+    const PLAYLAB = ['playlab', 'infinity', 'gumball', 'iceage'];
+
+    const ADVANCED_TOOLS = ['applab', 'gamelab', 'weblab', 'starwars'];
+
+    const PREREADER = ['playlab_k1', 'artist_k1'];
+
+    const MATH = ['calc', 'eval'];
 
     return (
       <div>
@@ -81,40 +95,41 @@ export default class StartNewProject extends React.Component {
         {showFullList && (
           <div>
             <NewProjectButtons
-              description={i18n.projectGroupPlaylab()}
-              projectTypes={['playlab', 'infinity', 'gumball', 'iceage']}
+              description={i18n.projectGroupOpenEnded()}
+              projectTypes={OPEN_ENDED}
+            />
+            <NewProjectButtons
+              description={i18n.projectGroupArtist()}
+              projectTypes={DRAWING}
+            />
+            <NewProjectButtons
+              description={i18n.projectGroupMinecraft()}
+              projectTypes={MINECRAFT}
             />
             <NewProjectButtons
               description={i18n.projectGroupEvents()}
               projectTypes={GAMES_AND_EVENTS}
             />
-            <NewProjectButtons
-              description={i18n.projectGroupArtist()}
-              projectTypes={['artist', 'frozen']}
-            />
-            <NewProjectButtons
-              description={i18n.projectGroupMinecraft()}
-              projectTypes={[
-                'minecraft_aquatic',
-                'minecraft_hero',
-                'minecraft_designer',
-                'minecraft_adventurer'
-              ]}
-            />
             {canViewAdvancedTools && (
               <NewProjectButtons
                 description={i18n.projectGroupAdvancedTools()}
-                projectTypes={['applab', 'gamelab', 'weblab']}
+                projectTypes={ADVANCED_TOOLS}
               />
             )}
             <NewProjectButtons
-              description={i18n.projectGroupPreReader()}
-              projectTypes={['playlab_k1', 'artist_k1']}
+              description={i18n.projectGroupPlaylab()}
+              projectTypes={PLAYLAB}
             />
             <NewProjectButtons
-              description={i18n.projectGroupMath()}
-              projectTypes={['calc', 'eval']}
+              description={i18n.projectGroupPreReader()}
+              projectTypes={PREREADER}
             />
+            {canViewAdvancedTools && (
+              <NewProjectButtons
+                description={i18n.projectGroupMath()}
+                projectTypes={MATH}
+              />
+            )}
           </div>
         )}
         <div style={styles.spacer} />
