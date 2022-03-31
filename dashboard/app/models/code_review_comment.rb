@@ -32,7 +32,7 @@ class CodeReviewComment < ApplicationRecord
 
   before_save :compute_is_from_teacher
 
-  # The projects table used to be named storage_apps. This column has not been updated
+  # The projects table used to be named storage_apps. This column has not been renamed
   # to reflect the new table name, so an alias is used to clarify which table this ID maps to.
   alias_attribute :project_id, :storage_app_id
 
