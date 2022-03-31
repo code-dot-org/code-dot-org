@@ -417,40 +417,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       baudRate: SERIAL_BAUD
     });
 
-    if (!isChromeOS()) {
-      port.queue = [];
-      let sendPending = false;
-      const oldWrite = port.write;
-
-      const trySend = buffer => {
-        if (buffer) {
-          port.queue.push(buffer);
-        }
-
-        if (sendPending || port.queue.length === 0) {
-          // Exhausted pending send buffer.
-          return;
-        }
-        if (port.queue.length > 512) {
-          throw new Error(
-            'Send queue is full! More than 512 pending messages.'
-          );
-        }
-
-        const toSend = port.queue.shift();
-        sendPending = true;
-        oldWrite.call(port, toSend, 'binary', function() {
-          sendPending = false;
-
-          if (port.queue.length !== 0) {
-            trySend();
-          }
-        });
-      };
-
-      port.write = (...args) => trySend(...args);
-    }
-
+    this.createPendingQueue(port);
     return port;
   }
 
@@ -462,6 +429,12 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   static async openSerialPortWebSerial(port) {
     await port.open({baudRate: SERIAL_BAUD});
 
+    this.createPendingQueue(port);
+    return port;
+  }
+
+  // Creates a queue on the port to store pending buffers
+  static createPendingQueue(port) {
     if (!isChromeOS()) {
       port.queue = [];
       let sendPending = false;
@@ -495,8 +468,6 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
 
       port.write = (...args) => trySend(...args);
     }
-
-    return port;
   }
 
   /**
