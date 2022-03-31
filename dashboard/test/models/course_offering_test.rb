@@ -23,9 +23,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
     @in_development_unit = create(:script, name: 'in-development-unit2', family_name: 'development', version_year: '1991', is_course: true, published_state: 'in_development')
     CourseOffering.add_course_offering(@in_development_unit)
-  end
 
-  setup do
     @unit_group = create(:unit_group, name: 'course-instructed-by-teacher2', family_name: 'family-1', version_year: '1991', published_state: 'stable')
     @unit_in_course = create(:script, name: 'unit-in-teacher-instructed-course2', instructor_audience: nil, participant_audience: nil, instruction_type: nil, published_state: nil)
     create(:unit_group_unit, script: @unit_in_course, unit_group: @unit_group, position: 1)
