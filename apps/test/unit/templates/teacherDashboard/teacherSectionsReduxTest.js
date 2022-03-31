@@ -1476,8 +1476,8 @@ describe('teacherSectionsRedux', () => {
         expect(server.requests[2].url).to.equal(
           '/dashboardapi/sections/valid_course_offerings'
         );
-        expect(server.requests[5].method).to.equal('GET');
-        expect(server.requests[5].url).to.equal(
+        expect(server.requests[3].method).to.equal('GET');
+        expect(server.requests[3].url).to.equal(
           '/dashboardapi/sections/available_participant_types'
         );
         expect(Object.keys(getState().teacherSections.sections)).to.have.length(
