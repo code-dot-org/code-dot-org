@@ -1,7 +1,6 @@
 import React from 'react';
 import {isolateComponent} from 'isolate-react';
 import {expect} from '../../../util/reconfiguredChai';
-import color from '@cdo/apps/util/color';
 import ReferenceGuideView from '@cdo/apps/templates/referenceGuides/ReferenceGuideView';
 
 describe('ReferenceGuideView', () => {
@@ -97,7 +96,6 @@ describe('ReferenceGuideView', () => {
     expect(bar.props.children.length).to.equal(2);
     expect(bar.props.children[0].key).to.equal('guide1');
     expect(bar.props.children[1].key).to.equal('guide2');
-    expect(bar.props.children[1].color).to.equal(color.teal);
 
     // renders first category item
     expect(bar.props.children[0].props.children[0].props.text).to.include(
