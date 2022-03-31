@@ -21,7 +21,11 @@ import {
 } from './PlaygroundConstants';
 import Led from './Led';
 import PlaygroundButton from './Button';
-import {detectBoardTypeFromPort, BOARD_TYPE} from '../../util/boardUtils';
+import {
+  detectBoardTypeFromPort,
+  isWebSerialPort,
+  BOARD_TYPE
+} from '../../util/boardUtils';
 import {isChromeOS, serialPortType} from '../../util/browserChecks';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
@@ -92,8 +96,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    */
   connectToFirmware() {
     return new Promise((resolve, reject) => {
-      // A port that exists, but doesn't have a comName is a Web Serial port
-      if (this.port_ && !this.port_.comName) {
+      if (isWebSerialPort(this.port_)) {
         const name = this.port_.getInfo().usbProductId;
         CircuitPlaygroundBoard.openSerialPortWebSerial(this.port_).then(
           port => {
