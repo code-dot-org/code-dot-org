@@ -39,12 +39,6 @@ VCR.configure do |c|
   end
 end
 
-# Truncate database tables to ensure repeatable tests.
-DASHBOARD_TEST_TABLES = %w(channel_tokens user_project_storage_ids projects).freeze
-DASHBOARD_TEST_TABLES.each do |table|
-  DASHBOARD_DB[table.to_sym].truncate
-end.freeze
-
 module SetupTest
   def around(&block)
     random = Random.new(0)
@@ -87,10 +81,5 @@ module SetupTest
     # so reset them to ensure that they are not reused across tests.
     BucketHelper.s3 = nil if defined?(BucketHelper)
     AWS::S3.s3 = nil
-
-    # Reset AUTO_INCREMENT, since it is unaffected by transaction rollback.
-    DASHBOARD_TEST_TABLES.each do |table|
-      DASHBOARD_DB.execute("ALTER TABLE `#{table}` AUTO_INCREMENT = 1")
-    end
   end
 end
