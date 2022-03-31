@@ -91,7 +91,6 @@ class ProgressLessonTeacherInfo extends React.Component {
       (lesson.lockable && !hasNoSections) ||
       loginRequiredLessonStartUrl ||
       showHiddenForSectionToggle;
-
     if (!shouldRender) {
       return null;
     }
