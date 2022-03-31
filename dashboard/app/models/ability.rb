@@ -77,7 +77,7 @@ class Ability
       can? :update, level
     end
 
-    can [:read], ProgrammingEnvironment do |environment|
+    can [:read, :docs_show, :docs_index], ProgrammingEnvironment do |environment|
       environment.published || user.permission?(UserPermission::LEVELBUILDER)
     end
 
