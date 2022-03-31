@@ -4,6 +4,10 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
+    @levelbuilder = create(:levelbuilder)
+    @universal_instructor = create(:universal_instructor)
+    @plc_reviewer = create(:plc_reviewer)
+    @facilitator = create(:facilitator)
     @teacher = create(:teacher)
     @section = create(:section, user: @teacher, login_type: 'word')
     @student = create(:follower, section: @section).student_user

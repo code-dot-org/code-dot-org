@@ -585,13 +585,13 @@ const initialState = {
   // DCDO Flag - show/hide Lock Section field
   showLockSectionField: null
 };
-
 /**
  * Generate shape for new section
  * @param id
  * @param loginType
  * @returns {sectionShape}
  */
+
 function newSectionData(id, loginType) {
   return {
     id: id,
