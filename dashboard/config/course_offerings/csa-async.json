@@ -2,5 +2,6 @@
   "key": "csa-async",
   "display_name": "csa-async",
   "category": "other",
-  "is_featured": false
+  "is_featured": false,
+  "assignable": true
 }

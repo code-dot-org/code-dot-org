@@ -130,6 +130,16 @@ class Javalab < Level
       # Set the javabuilder url
       level_prop['javabuilderUrl'] = CDO.javabuilder_url
 
+      # Send validation file names without code to prevent naming collisions. If we are in start mode,
+      # the actual validation code will be sent by levels_controller.
+      if validation
+        validation_names_only = validation
+        validation_names_only.each do |key, _|
+          validation_names_only[key] = ""
+        end
+        level_prop['validation'] = validation_names_only
+      end
+
       # Don't set nil values
       level_prop.reject! {|_, value| value.nil?}
     end
