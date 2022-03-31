@@ -63,6 +63,7 @@ class Homepage
 
   # validate a banner has the required fields
   def self.validate_banner(banner)
+    return true
     banner[:desktopImage] && banner[:items] && banner[:actions]
   end
 
@@ -198,7 +199,8 @@ class Homepage
           youtube_id: action["youtube_id"],
           download_path: action["download_path"],
           facebook: action["facebook"],
-          twitter: action["twitter"]
+          twitter: action["twitter"],
+          image_url: action["image_url"]
         }
       end
     elsif hoc_mode == "actual-hoc"
