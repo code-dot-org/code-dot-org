@@ -181,9 +181,9 @@ class Lesson < ApplicationRecord
   # page, and the lesson plan pdf as a backup.
   def start_url
     if script_levels.first
-      return url_from_path(build_script_level_path(script_levels.first))
+      return root_url.chomp('/') + build_script_level_path(script_levels.first)
     elsif script.include_student_lesson_plans && script.is_migrated
-      return url_from_path(script_lesson_student_path(script, self))
+      return root_url.chomp('/') + script_lesson_student_path(script, self)
     elsif student_lesson_plan_pdf_url
       return student_lesson_plan_pdf_url
     end

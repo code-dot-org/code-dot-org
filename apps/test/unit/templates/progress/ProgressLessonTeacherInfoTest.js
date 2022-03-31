@@ -4,7 +4,6 @@ import Immutable from 'immutable';
 import {shallow} from 'enzyme';
 import {UnconnectedProgressLessonTeacherInfo as ProgressLessonTeacherInfo} from '@cdo/apps/templates/progress/ProgressLessonTeacherInfo';
 import {fakeLesson} from '@cdo/apps/templates/progress/progressTestHelpers';
-import sinon from 'sinon';
 
 const MOCK_SECTION = {
   id: 2,
@@ -53,7 +52,6 @@ describe('ProgressLessonTeacherInfo', () => {
     const lessonWithoutPlan = {
       ...fakeLesson('Maze', 1)
     };
-    const urlHrefSpy = sinon.spy(window, 'URL');
     const wrapper = shallow(
       <ProgressLessonTeacherInfo
         lesson={lessonWithoutPlan}
@@ -68,10 +66,10 @@ describe('ProgressLessonTeacherInfo', () => {
         lockableAuthorized={false}
       />
     );
-    const lessonUrl = wrapper.find('SendLesson').props().lessonUrl;
-    assert(lessonUrl.includes('code.org?login_required=true'));
-    assert(urlHrefSpy.calledOnce);
-    assert(lessonUrl.includes('http'));
+    assert.equal(
+      wrapper.find('SendLesson').props().lessonUrl,
+      'code.org?login_required=true'
+    );
   });
 
   it('renders a purple Button if and only if we have a student lesson plan', () => {
