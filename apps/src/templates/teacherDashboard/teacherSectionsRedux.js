@@ -15,6 +15,7 @@ const USER_EDITABLE_SECTION_PROPS = [
   'lessonExtras',
   'pairingAllowed',
   'ttsAutoplayEnabled',
+  'participantType',
   'courseId',
   'scriptId',
   'courseOfferingId',
@@ -48,6 +49,8 @@ const importUrlByProvider = {
 // Action keys
 //
 const SET_COURSE_OFFERINGS = 'teacherDashboard/SET_COURSE_OFFERINGS';
+const SET_AVAILABLE_PARTICIPANT_TYPES =
+  'teacherDashboard/SET_AVAILABLE_PARTICIPANT_TYPES';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
 const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
 const SET_PAGE_TYPE = 'teacherDashboard/SET_PAGE_TYPE';
@@ -127,6 +130,10 @@ export const setValidAssignments = (validCourses, validScripts) => ({
 export const setCourseOfferings = courseOfferings => ({
   type: SET_COURSE_OFFERINGS,
   courseOfferings
+});
+export const setAvailableParticipantTypes = availableParticipantTypes => ({
+  type: SET_AVAILABLE_PARTICIPANT_TYPES,
+  availableParticipantTypes
 });
 export const setStudentsForCurrentSection = (sectionId, studentInfo) => ({
   type: SET_STUDENT_SECTION,
@@ -388,7 +395,8 @@ export const asyncLoadSectionData = id => dispatch => {
     '/dashboardapi/sections',
     `/dashboardapi/courses`,
     '/dashboardapi/sections/valid_scripts',
-    '/dashboardapi/sections/valid_course_offerings'
+    '/dashboardapi/sections/valid_course_offerings',
+    '/dashboardapi/sections/available_participant_types'
   ];
   if (id) {
     apis.push('/dashboardapi/sections/' + id + '/students');
@@ -401,10 +409,16 @@ export const asyncLoadSectionData = id => dispatch => {
         validCourses,
         validScripts,
         validCourseOfferings,
+        availableParticipantTypes,
         students
       ]) => {
         dispatch(setValidAssignments(validCourses, validScripts));
         dispatch(setCourseOfferings(validCourseOfferings));
+        dispatch(
+          setAvailableParticipantTypes(
+            availableParticipantTypes.availableParticipantTypes
+          )
+        );
         dispatch(setSections(sections));
         if (id) {
           dispatch(setStudentsForCurrentSection(id, students));
@@ -542,6 +556,8 @@ const initialState = {
   // with options like "CSD", "Course A", or "Frozen". See the
   // assignmentCourseOfferingShape PropType.
   courseOfferings: {},
+  // The participant types the user can create sections for
+  availableParticipantTypes: [],
   // Mapping from sectionId to section object
   sections: {},
   // List of students in section currently being edited (see studentShape PropType)
@@ -569,13 +585,13 @@ const initialState = {
   // DCDO Flag - show/hide Lock Section field
   showLockSectionField: null
 };
-
 /**
  * Generate shape for new section
  * @param id
  * @param loginType
  * @returns {sectionShape}
  */
+
 function newSectionData(id, loginType) {
   return {
     id: id,
@@ -713,6 +729,13 @@ export default function teacherSections(state = initialState, action) {
       ...state,
       validAssignments,
       assignmentFamilies: _.values(assignmentFamilyMap)
+    };
+  }
+
+  if (action.type === SET_AVAILABLE_PARTICIPANT_TYPES) {
+    return {
+      ...state,
+      availableParticipantTypes: action.availableParticipantTypes
     };
   }
 

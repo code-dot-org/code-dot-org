@@ -9,7 +9,6 @@
     "parent_level_id": 20643,
     "name_suffix": "_2021",
     "long_instructions": "##### After practicing with shape placement, students will learn how to change the color of their shapes. This video is included in the CS Discoveries curriculum to introduce students adding color to shapes in Game Lab.\r\n\r\n## As you watch the video, consider the following:\r\n#### What’s the difference between stroke and fill?\r\n",
-    "teacher_markdown": "## Discussion Goals\r\n\r\nStroke controls the border color of the shape, and fill controls the color inside of it.",
     "encrypted": "false"
   },
   "game_id": 54,
@@ -18,7 +17,7 @@
   "level_num": "custom",
   "user_id": 42,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-03-23T20:32:29.857+00:00\",\"changed\":[\"cloned from \\\"CSD: Drawing in Game Lab 2_2021\\\"\"],\"cloned_from\":\"CSD: Drawing in Game Lab 2_2021\"},{\"changed_at\":\"2022-03-24 15:53:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-03-23T20:32:29.857+00:00\",\"changed\":[\"cloned from \\\"CSD: Drawing in Game Lab 2_2021\\\"\"],\"cloned_from\":\"CSD: Drawing in Game Lab 2_2021\"},{\"changed_at\":\"2022-03-24 15:53:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2022-03-31 00:52:32 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
