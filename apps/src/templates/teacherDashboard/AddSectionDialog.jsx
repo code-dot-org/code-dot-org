@@ -14,7 +14,7 @@ import {
   editSectionProperties,
   cancelEditingSection
 } from './teacherSectionsRedux';
-import AudienceTypePicker from './AudienceTypePicker';
+import ParticipantTypePicker from './ParticipantTypePicker';
 
 /**
  * UI for a teacher to add a new class section.  For editing a section see
@@ -70,7 +70,7 @@ class AddSectionDialog extends Component {
             />
           )}
           {loginType && !audience && (
-            <AudienceTypePicker
+            <ParticipantTypePicker
               title={title}
               setParticipantType={setParticipantType}
               handleCancel={handleCancel}

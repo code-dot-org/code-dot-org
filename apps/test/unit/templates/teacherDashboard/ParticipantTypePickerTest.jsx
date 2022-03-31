@@ -2,9 +2,9 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import {assert, expect} from '../../../util/reconfiguredChai';
-import AudienceTypePicker from '@cdo/apps/templates/teacherDashboard/AudienceTypePicker';
+import ParticipantTypePicker from '@cdo/apps/templates/teacherDashboard/ParticipantTypePicker';
 
-describe('AudienceTypePicker', () => {
+describe('ParticipantTypePicker', () => {
   let defaultProps, setParticipantType, handleCancel;
 
   beforeEach(() => {
@@ -20,7 +20,7 @@ describe('AudienceTypePicker', () => {
 
   it('shows 3 cards when 3 participant types available', () => {
     const wrapper = shallow(
-      <AudienceTypePicker
+      <ParticipantTypePicker
         {...defaultProps}
         availableParticipantTypes={['student', 'teacher', 'facilitator']}
       />
@@ -30,7 +30,7 @@ describe('AudienceTypePicker', () => {
 
   it('clicking on a card calls setParticipantType', () => {
     const wrapper = shallow(
-      <AudienceTypePicker
+      <ParticipantTypePicker
         {...defaultProps}
         availableParticipantTypes={['student', 'teacher', 'facilitator']}
       />

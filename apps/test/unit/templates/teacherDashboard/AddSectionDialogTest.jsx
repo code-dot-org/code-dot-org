@@ -68,7 +68,7 @@ describe('AddSectionDialog', () => {
       />
     );
     expect(wrapper.find('LoginTypePicker').length).to.equal(0);
-    expect(wrapper.find('AudienceTypePicker').length).to.equal(1);
+    expect(wrapper.find('ParticipantTypePicker').length).to.equal(1);
     expect(wrapper.find('EditSectionForm').length).to.equal(0);
   });
 
@@ -84,7 +84,7 @@ describe('AddSectionDialog', () => {
       />
     );
     expect(wrapper.find('LoginTypePicker').length).to.equal(0);
-    expect(wrapper.find('AudienceTypePicker').length).to.equal(0);
+    expect(wrapper.find('ParticipantTypePicker').length).to.equal(0);
     expect(wrapper.find('EditSectionForm').length).to.equal(1);
   });
 });

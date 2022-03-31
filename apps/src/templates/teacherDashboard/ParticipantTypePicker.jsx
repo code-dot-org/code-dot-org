@@ -30,7 +30,7 @@ const cardInfoByAudience = {
  * UI for selecting the participant type of a class section:
  * Student, Teacher or Facilitator
  */
-export default class AudienceTypePicker extends Component {
+export default class ParticipantTypePicker extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
     setParticipantType: PropTypes.func.isRequired,
