@@ -983,14 +983,13 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
       .click(window.dashboard.popupWindow);
   }
 
-  var sharingInput = sharingDiv.querySelector('#sharing-input-copy-button');
-  if (sharingInput) {
-    var sharingInputCopyButton = sharingDiv.querySelector(
-      '#sharing-input-copy-button'
-    );
-    dom.addClickTouchEvent(sharingInputCopyButton, function() {
+  var sharingCopyButton = sharingDiv.querySelector(
+    '#sharing-input-copy-button'
+  );
+  if (sharingCopyButton) {
+    dom.addClickTouchEvent(sharingCopyButton, function() {
       copyToClipboard(options.shareLink, () => {
-        sharingInputCopyButton.className = 'sharing-input-copy-button-shared';
+        sharingCopyButton.className = 'sharing-input-copy-button-shared';
       });
     });
   }
