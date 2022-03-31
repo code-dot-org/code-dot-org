@@ -22,14 +22,13 @@ const referenceGuideShape = PropTypes.shape({
 
 export default function ReferenceGuideView({referenceGuide, referenceGuides}) {
   let rootCategory = referenceGuide;
-  // TODO(tim): re-organize things to get rid of the concepts guide
-  while (rootCategory.parent_reference_guide_key !== 'concepts') {
+  while (rootCategory.parent_reference_guide_key !== null) {
     rootCategory = referenceGuides.find(
       guide => guide.key === rootCategory.parent_reference_guide_key
     );
   }
   const topLevelGuides = referenceGuides.filter(
-    guide => guide.parent_reference_guide_key === 'concepts'
+    guide => guide.parent_reference_guide_key === null
   );
   const navCategories = topLevelGuides
     .sort((a, b) => a.position - b.position)
