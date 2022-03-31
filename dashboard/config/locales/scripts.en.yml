@@ -33911,24 +33911,24 @@ en:
               description_teacher: 
             lesson-2:
               name: Create a scene
-              description_student: 
-              description_teacher: 
+              description_student: "**You will:**\n\n* Use the coordinate grid in Game Lab to draw colorful shapes.\n* Customize shapes by adjusting multiple parameters. \n* Use variables to store information that is used multiple times in a program.\n\n**Suggested time:** 40 minutes"
+              description_teacher: "**You will:**\n\n* Use the coordinate grid in Game Lab to draw colorful shapes.\n* Customize shapes by adjusting multiple parameters. \n* Use variables to store information that is used multiple times in a program.\n\n**Suggested time:** 40 minutes\n"
             lesson-3:
               name: Animate a scene with sprites
               description_student: 
               description_teacher: 
             lesson-4:
               name: Explore game design
-              description_student: 
-              description_teacher: 
+              description_student: "**You will:**\n\n* Use conditionals to react to changes in variables and sprite properties.\n* Move sprites in response to inputs. \n* Use abstractions to reduce the complexity of code. \n\n**Suggested time:** 20 minutes"
+              description_teacher: "**You will:**\n\n* Use conditionals to react to changes in variables and sprite properties.\n* Move sprites in response to inputs. \n* Use abstractions to reduce the complexity of code. \n\n**Suggested time:** 20 minutes"
             lesson-5:
               name: Unit wrap up
               description_student: 
               description_teacher: 
             lesson-6:
               name: Animate a scene using sprites
-              description_student: 
-              description_teacher: 
+              description_student: "**You will:**\n\n* Create and use a sprite.\n* Use a draw loop to create sprite animations. \n* Use the counter pattern to move sprites across the screen. \n\n**Suggested time:** 40 minutes"
+              description_teacher: "**You will:**\n\n* Create and use a sprite.\n* Use a draw loop to create sprite animations. \n* Use the counter pattern to move sprites across the screen. \n\n**Suggested time:** 40 minutes"
           lesson_groups:
             lessonGroup-2:
               display_name: Preparing to Teach Interactive Animations and Games
@@ -33936,8 +33936,8 @@ en:
           title: 'Module 3: Preparing to Teach Interactive Animations and Games '
           description_audience: ''
           description_short: ''
-          description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end of chapter projects.\n\n**Suggested time:** 90 minutes"
-          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end of chapter projects.\n\n**Suggested time:** 90 minutes"
+          description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end of chapter projects.\n\n**Suggested time:** 120 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end of chapter projects.\n\n**Suggested time:** 120 minutes"
         vpl-csd4-ci-pilot-2022:
           lessons:
             lesson-1:
