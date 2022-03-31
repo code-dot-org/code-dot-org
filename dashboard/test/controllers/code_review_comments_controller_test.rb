@@ -21,7 +21,7 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
 
     create :reviewable_project,
       user_id: @project_owner.id,
-      storage_app_id: @project_id,
+      project_id: @project_id,
       level_id: 2,
       script_id: 1
   end
