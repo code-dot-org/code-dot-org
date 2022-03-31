@@ -92,77 +92,61 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    */
   connectToFirmware() {
     return new Promise((resolve, reject) => {
-      const name = this.port_ ? this.port_.comName : undefined;
-      const serialPort = CircuitPlaygroundBoard.openSerialPort(name);
-      const playground = CircuitPlaygroundBoard.makePlaygroundTransport(
-        serialPort
-      );
-      const board = new five.Board({io: playground, repl: false, debug: false});
-      board.once('ready', () => {
-        this.serialPort_ = serialPort;
-        this.logWithFirehose(
-          'serial-port-set',
-          JSON.stringify({serialPort, name})
+      // A port that exists, but doesn't have a comName is a Web Serial port
+      if (this.port_ && !this.port_.comName) {
+        const name = this.port_.getInfo().usbProductId;
+        CircuitPlaygroundBoard.openSerialPortWebSerial(this.port_).then(
+          port => {
+            CircuitPlaygroundBoard.initializePlaygroundAndBoard(
+              port,
+              name,
+              resolve,
+              reject
+            );
+          }
         );
-
-        this.fiveBoard_ = board;
-        this.fiveBoard_.samplingInterval(100);
-        this.boardType_ = detectBoardTypeFromPort(this.port_);
-        if (this.boardType_ === BOARD_TYPE.EXPRESS) {
-          this.fiveBoard_.isExpressBoard = true;
-        }
-        if (experiments.isEnabled('detect-board')) {
-          this.detectFirmwareVersion(playground);
-        }
-        resolve();
-      });
-      board.on('error', reject);
-      playground.on('error', reject);
+      } else {
+        const name = this.port_ ? this.port_.comName : undefined;
+        const serialPort = CircuitPlaygroundBoard.openSerialPort(name);
+        CircuitPlaygroundBoard.initializePlaygroundAndBoard(
+          serialPort,
+          name,
+          resolve,
+          reject
+        );
+      }
     });
   }
 
-  /**
-   * Open the serial port connection on a WebSerial port and create a johnny-five board controller.
-   * Exposed as a separate step here for the sake of the setup page; generally
-   * recommended to just call connect(), above.
-   * @return {Promise}
-   */
-  connectToFirmwareWebSerial() {
-    return new Promise((resolve, reject) => {
-      const name = this.port_ ? this.port_.comName : undefined;
-      let serialPort;
-      CircuitPlaygroundBoard.openSerialPortWebSerial(this.port_).then(port => {
-        serialPort = port;
-        const playground = CircuitPlaygroundBoard.makePlaygroundTransport(
-          serialPort
-        );
-        const board = new five.Board({
-          io: playground,
-          repl: false,
-          debug: false
-        });
-        board.once('ready', () => {
-          this.serialPort_ = serialPort;
-          this.logWithFirehose(
-            'serial-port-set',
-            JSON.stringify({serialPort, name})
-          );
-
-          this.fiveBoard_ = board;
-          this.fiveBoard_.samplingInterval(100);
-          this.boardType_ = detectBoardTypeFromPort(this.port_);
-          if (this.boardType_ === BOARD_TYPE.EXPRESS) {
-            this.fiveBoard_.isExpressBoard = true;
-          }
-          if (experiments.isEnabled('detect-board')) {
-            this.detectFirmwareVersion(playground);
-          }
-          resolve();
-        });
-        board.on('error', reject);
-        playground.on('error', reject);
-      });
+  static initializePlaygroundAndBoard(serialPort, name, resolve, reject) {
+    const playground = CircuitPlaygroundBoard.makePlaygroundTransport(
+      serialPort
+    );
+    const board = new five.Board({
+      io: playground,
+      repl: false,
+      debug: false
     });
+    board.once('ready', () => {
+      this.serialPort_ = serialPort;
+      this.logWithFirehose(
+        'serial-port-set',
+        JSON.stringify({serialPort, name})
+      );
+
+      this.fiveBoard_ = board;
+      this.fiveBoard_.samplingInterval(100);
+      this.boardType_ = detectBoardTypeFromPort(this.port_);
+      if (this.boardType_ === BOARD_TYPE.EXPRESS) {
+        this.fiveBoard_.isExpressBoard = true;
+      }
+      if (experiments.isEnabled('detect-board')) {
+        this.detectFirmwareVersion(playground);
+      }
+      resolve();
+    });
+    board.on('error', reject);
+    playground.on('error', reject);
   }
 
   /**
@@ -473,7 +457,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
   /**
    * Create a serial port controller and open the Web Serial port immediately.
    * @param {string} portName
-   * @return {SerialPort}
+   * @return {Promise<SerialPort>}
    */
   static async openSerialPortWebSerial(port) {
     await port.open({baudRate: SERIAL_BAUD});
