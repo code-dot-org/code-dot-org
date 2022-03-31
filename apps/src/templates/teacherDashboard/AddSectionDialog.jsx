@@ -47,10 +47,6 @@ class AddSectionDialog extends Component {
     const {loginType, participantType} = section || {};
     const title = i18n.newSectionUpdated();
 
-    if (availableParticipantTypes.length === 1) {
-      setParticipantType(availableParticipantTypes[0]);
-    }
-
     return (
       <BaseDialog
         useUpdatedStyles

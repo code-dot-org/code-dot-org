@@ -585,15 +585,13 @@ const initialState = {
 
 /**
  * Generate shape for new section
- * @param id
- * @param loginType
  * @returns {sectionShape}
  */
-function newSectionData(id, loginType) {
+function newSectionData(participantType) {
   return {
-    id: id,
+    id: PENDING_NEW_SECTION_ID,
     name: '',
-    loginType: loginType,
+    loginType: undefined,
     grade: '',
     providerManaged: false,
     lessonExtras: true,
@@ -601,7 +599,7 @@ function newSectionData(id, loginType) {
     ttsAutoplayEnabled: false,
     sharingDisabled: false,
     studentCount: 0,
-    participantType: null,
+    participantType: participantType,
     code: '',
     courseId: null,
     courseOfferingId: null,
@@ -797,9 +795,13 @@ export default function teacherSections(state = initialState, action) {
   }
 
   if (action.type === EDIT_SECTION_BEGIN) {
+    const initialParticipantType =
+      state.availableParticipantTypes.length === 1
+        ? state.availableParticipantTypes[0]
+        : undefined;
     const initialSectionData = action.sectionId
       ? {...state.sections[action.sectionId]}
-      : newSectionData(PENDING_NEW_SECTION_ID, undefined);
+      : newSectionData(initialParticipantType);
     return {
       ...state,
       initialCourseId: initialSectionData.courseId,
