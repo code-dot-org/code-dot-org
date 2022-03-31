@@ -1740,16 +1740,16 @@ a.download-video {
     color: $selectUserTypeButtonTextColor;
     border-radius: 15px;
     border-color: $selectUserTypeButtonBorderColor;
+    display: flex;
+    flex-direction: column;
 
     .user-type-name {
-      position: absolute;
       left: 35%;
       top: 20px;
       text-align: center;
     }
 
     .user-type-desc {
-      position: absolute;
       top: 55px;
       text-align: left;
       margin-left: 5px;
@@ -1757,11 +1757,10 @@ a.download-video {
     }
 
     .user-type-abilities-unordered-list {
-      position: absolute;
       text-align: left;
       margin-left: 30px;
       margin-right: 5px;
-      top: 100px;
+      margin-top: 10px;
     }
   }
 
