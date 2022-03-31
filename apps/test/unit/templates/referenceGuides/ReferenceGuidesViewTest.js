@@ -51,6 +51,11 @@ describe('ReferenceGuideView', () => {
       position: 0,
       parent_reference_guide_key: 'guide1'
     };
+    // guide1
+    /// guide3
+    //// guide5
+    // guide2
+    /// guide4
     const referenceGuides = [
       {
         display_name: 'display name 1',
@@ -73,6 +78,13 @@ describe('ReferenceGuideView', () => {
         key: 'guide4',
         position: 0,
         parent_reference_guide_key: 'guide2'
+      },
+      {
+        display_name: 'display name 5',
+        content: 'content 5',
+        key: 'guide5',
+        position: 0,
+        parent_reference_guide_key: 'guide3'
       }
     ];
     const wrapper = isolateComponent(
@@ -81,23 +93,18 @@ describe('ReferenceGuideView', () => {
         referenceGuides={referenceGuides}
       />
     );
-    expect(wrapper.findOne('NavigationBar').props.categories.length).to.equal(
-      2
-    );
-    expect(wrapper.findOne('NavigationBar').props.categories[0].key).to.equal(
-      'guide1'
-    );
-    expect(wrapper.findOne('NavigationBar').props.categories[1].key).to.equal(
-      'guide2'
-    );
-    expect(wrapper.findOne('NavigationBar').props.categories[0].color).to.equal(
-      color.teal
-    );
+    const bar = wrapper.findOne('NavigationBar');
+    expect(bar.props.children.length).to.equal(2);
+    expect(bar.props.children[0].key).to.equal('guide1');
+    expect(bar.props.children[1].key).to.equal('guide2');
+    expect(bar.props.children[1].color).to.equal(color.teal);
 
-    const innerContent = JSON.stringify(
-      wrapper.findOne('NavigationBar').props.categories[0].content
+    // renders first category item
+    expect(bar.props.children[0].props.children[0].props.text).to.include(
+      'display name 3'
     );
-    expect(innerContent).to.include('display name 3');
-    expect(innerContent).to.not.include('display name 4');
+    expect(bar.props.children[0].props.children[1].props.text).to.include(
+      'display name 5'
+    );
   });
 });
