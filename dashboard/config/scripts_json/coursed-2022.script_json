@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2022-03-25 21:47:25 UTC",
+    "serialized_at": "2022-03-31 19:52:29 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1128,20 +1128,8 @@
       }
     },
     {
-      "key": "bda68aaa-6a54-4667-93cf-e8502cb651b5",
-      "position": 3,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "bda68aaa-6a54-4667-93cf-e8502cb651b5",
-        "lesson.key": "Conditionals with Cards",
-        "lesson_group.key": "csf_conditionals",
-        "script.name": "coursed-2022"
-      }
-    },
-    {
       "key": "1cf3af21-4b21-4292-9b39-7dfccd10f419",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -1155,7 +1143,7 @@
     },
     {
       "key": "a340f15a-7b7f-4105-803c-f7e1759cced5",
-      "position": 5,
+      "position": 4,
       "properties": {
         "name": "Extended Learning"
       },
@@ -1168,7 +1156,7 @@
     },
     {
       "key": "fa9d8e25-c013-4772-814a-5c7f8f80278d",
-      "position": 6,
+      "position": 5,
       "properties": {
         "name": "Cross-Curricular Opportunity"
       },
@@ -3079,26 +3067,27 @@
       }
     },
     {
-      "key": "4bffc95b-dede-4aa0-8c95-ccf689c4d9a0",
-      "position": 1,
+      "key": "c6fd7ef2-91b5-48f4-b02e-a6c1ab644dd7",
+      "position": 2,
       "properties": {
         "description": "\n####Conditionals with Cards Sample Program - Teacher Prep Guide\n\n\n\n**Directions:**\n\n- Create a few programs with your class that depend on things like a card's suit, color, or value to award or subtract points. You can write the program as an algorithm, pseudocode, or actual code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Sample” slide\n\nHere is a sample algorithm:\n\n\tif (CARD is RED)\n\t\tAward YOUR team 1 point\n\t\n\tElse\n\t\tAward OTHER team 1 point\n\n\nHere is a sample of the same program in pseudocode:\n\n\n\tIf (card.color == RED){\n\t\tpoints.yours = points.yours + 1;\n\t}\n\t\n\tElse {\n\t\tpoints.other = points.other + 1;\n\t}\n\n\n- Decide how you want to split your class into teams.\n- Each team should have a pile of cards (at least as many cards as team members) nearby.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Let's play a game!” slide\n\n- Put one of your “Programs” up on the board for all to see.\n- Have the teams take turns drawing cards and following the program to see how many points they score in each round.\n- Play several times with several different programs to help the students really understand conditionals. (Three additional slides have been provided for this part of the activity if needed.)\n\n\n\n\nOnce the class has had some practice, you can encourage students to nest conditionals inside one another. Make sure they understand that if the card is red, YOUR team is awarded 1 point, and then _nothing else happens_, since the condition was met:\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Let's nest conditionals” slide\n\n\n\n\tIf (CARD is RED)\n\t\tAward YOUR team 1 point\n\t\n\tElse\n\t\tIf (CARD is higher than 9)\n\t\t\tAward OTHER team 1 point\n\t\tElse\n\t\t\tAward YOUR team the same number of points on the card\n\n\n\nHere is the same program in pseudocode:\n\n\tIf (card.color == RED ){\n\t\tpoints.yours = points.yours + 1;\n\t}\n\tElse {\n\t\tif (card.value > 9){\n\t\t\tpoints.other = points.other + 1;\n\t\t}\n\t\tElse {\n\t\t\tpoints.yours = points.yours + card.value;\n\t\t}\n\t}"
       },
       "seeding_key": {
-        "activity_section.key": "4bffc95b-dede-4aa0-8c95-ccf689c4d9a0",
-        "lesson_activity.key": "bda68aaa-6a54-4667-93cf-e8502cb651b5"
+        "activity_section.key": "c6fd7ef2-91b5-48f4-b02e-a6c1ab644dd7",
+        "lesson_activity.key": "e019b34b-4c36-4f63-9059-e7cdc4b6d36f"
       }
     },
     {
-      "key": "6d22e6b7-57d6-4bf5-a926-e5104c8f3bd5",
-      "position": 2,
+      "key": "175f1856-2873-43ee-b172-6c73420f7af6",
+      "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Optional Assessment” slide\n\n\nHand out ***Conditionals with Cards - Assessment** and allow students to complete the activity independently after the instructions have been well explained. This should feel familiar, thanks to the previous activities. If needed, refer to the **Assessment Video** resource as a guide.",
-        "name": "Optional Assessment (5 minutes)"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Assessment” slide\n\nHand out ***Conditionals with Cards - Assessment** and allow students to complete the activity independently after the instructions have been well explained. This should feel familiar, thanks to the previous activities. If needed, refer to the **Assessment Video** resource as a guide.",
+        "duration": "5",
+        "name": "Optional Assessment"
       },
       "seeding_key": {
-        "activity_section.key": "6d22e6b7-57d6-4bf5-a926-e5104c8f3bd5",
-        "lesson_activity.key": "bda68aaa-6a54-4667-93cf-e8502cb651b5"
+        "activity_section.key": "175f1856-2873-43ee-b172-6c73420f7af6",
+        "lesson_activity.key": "e019b34b-4c36-4f63-9059-e7cdc4b6d36f"
       }
     },
     {
