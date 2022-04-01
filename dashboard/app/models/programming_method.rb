@@ -39,4 +39,8 @@ class ProgrammingMethod < ApplicationRecord
       KEY_CHAR_RE.match(character) ? character : '_'
     end.join.gsub(/_+/, '_')
   end
+
+  def serialize
+    attributes.except('id', 'programming_class_id', 'created_at', 'updated_at')
+  end
 end
