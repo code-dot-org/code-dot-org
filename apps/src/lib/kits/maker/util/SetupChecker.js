@@ -55,7 +55,7 @@ export default class SetupChecker {
    * @return {Promise}
    */
   detectBoardPluggedIn() {
-    if (isWebSerialPort(this.port)) {
+    if (!isWebSerialPort(this.port)) {
       return findPortWithViableDevice().then(port => (this.port = port));
     }
 
