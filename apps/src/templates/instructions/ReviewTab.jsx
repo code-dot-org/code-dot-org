@@ -20,15 +20,15 @@ const FLASH_ERROR_TIME_MS = 5000;
 class ReviewTab extends Component {
   static propTypes = {
     onLoadComplete: PropTypes.func,
+    // Used only in tests
+    dataApi: PropTypes.object,
     // Populated by redux
     codeReviewEnabled: PropTypes.bool,
     viewAsCodeReviewer: PropTypes.bool.isRequired,
     viewAsTeacher: PropTypes.bool,
     channelId: PropTypes.string,
     serverLevelId: PropTypes.number,
-    serverScriptId: PropTypes.number,
-    // Used only in tests
-    dataApi: PropTypes.object
+    serverScriptId: PropTypes.number
   };
 
   state = {
