@@ -292,7 +292,8 @@ Craft.init = function(config) {
 
   // Push initial level properties into the Redux store
   studioApp().setPageConstants(config, {
-    isMinecraft: true
+    isMinecraft: true,
+    isBackgroundMusicLevel: true
   });
 
   ReactDOM.render(
