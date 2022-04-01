@@ -64,7 +64,7 @@ class Homepage
   # validate a banner has the required fields
   def self.validate_banner(banner)
     return true
-    banner[:desktopImage] && banner[:items] && banner[:actions]
+    banner[:desktopImage] && banner[:actions]
   end
 
   def self.get_heroes
@@ -418,7 +418,7 @@ class Homepage
   end
 
   def self.get_video(request)
-    video = get_actions(request).find {|a| a[:type] == "video" || a[:type] == "code_break_video"}
+    video = get_actions(request).find {|a| ["video", "video_thumbnail"].include? a[:type]}
 
     if video
       {
