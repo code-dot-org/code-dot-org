@@ -1281,7 +1281,7 @@
           "description": "Planificar de antemano una tarea en curso."
         },
         "63070ef2-2aab-4493-a65f-7516e7aadb98": {
-          "description": "Explicar cómo las limitaciones del sistema pueden afectar el diseño del proyecto."
+          "description": "Explicar cómo las limitaciones del sistema pueden afectar el diseño de un proyecto."
         },
         "45927b72-922a-4845-8b40-2458a92372f5": {
           "description": "Explicar cómo el compromiso puede mantener un proyecto en marcha e inspirar creatividad."
@@ -1383,7 +1383,7 @@
           "description": "Coloca el texto en la pantalla usando un plano de coordenadas."
         },
         "b40e994c-3d1e-4ba8-9cf1-8674567bb26c": {
-          "description": "Utiliza argumentos para controlar el texto que se muestra en la pantalla."
+          "description": "Utilizar argumentos para controlar el texto que se muestra en la pantalla."
         },
         "d6709c2c-76b3-495d-bb07-af8a4c772363": {
           "description": "Utilizar un proceso estructurado para planificar y desarrollar un programa."

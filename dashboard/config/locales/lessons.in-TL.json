@@ -165,7 +165,7 @@
         },
         "dance-extras-2019/Dance Party - Go Further": {
           "overview": "crwdns2700541:0crwdne2700541:0",
-          "preparation": "crwdns2700543:0[0]crwdne2700543:0",
+          "preparation": "crwdns2700543:0[0]crwdnd2700543:0[1]crwdnd2700543:0[2]crwdnd2700543:0[3]crwdnd2700543:0[certificate]crwdnd2700543:0[4]crwdne2700543:0",
           "purpose": "crwdns2700545:0crwdne2700545:0",
           "student_overview": "crwdns2700547:0crwdne2700547:0"
         },
@@ -180,17 +180,6 @@
           "preparation": "crwdns2700745:0[0]crwdnd2700745:0[1]crwdnd2700745:0[certificate]crwdnd2700745:0[2]crwdne2700745:0",
           "purpose": "crwdns2700747:0crwdne2700747:0",
           "student_overview": "crwdns2700749:0crwdne2700749:0"
-        },
-        "hello-world-food/lesson-1": {
-          "overview": "crwdns2710461:0[0]crwdne2710461:0",
-          "preparation": "crwdns2710463:0[0]crwdne2710463:0",
-          "purpose": "crwdns2710465:0[0]crwdne2710465:0",
-          "student_overview": "crwdns2710467:0crwdne2710467:0"
-        },
-        "poem-art/lesson-1": {
-          "overview": "crwdns2710883:0[0]crwdne2710883:0",
-          "preparation": "crwdns2710885:0[0]crwdnd2710885:0[Optional]crwdnd2710885:0[Optional]crwdnd2710885:0[video]crwdnd2710885:0[1]crwdnd2710885:0[Support]crwdnd2710885:0[2]crwdne2710885:0",
-          "student_overview": "crwdns2710887:0crwdne2710887:0"
         },
         "jigsaw/Jigsaw": {
           "overview": "crwdns2700945:0crwdne2700945:0",

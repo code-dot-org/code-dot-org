@@ -2,6 +2,8 @@
 ko:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: 새로운 만들기 {ANIMATION_NAME} 스프라이트 에서 {LOCATION}
       Dancelab_alternateMoves:
         text: "{GROUP} 이(가) {N} 마디마다 \n{MOVE1} 와(과) {MOVE2} 을(를) 교대"
         options:
@@ -1046,6 +1048,12 @@ ko:
         text: 라인 {COLOR}  {LOC1}  {LOC2} 그리기
       gamelab_edgesDisplace:
         text: 모서리 이동에서 블록 {SPRITE}
+      gamelab_everySeconds:
+        text: '매 {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': "~초 기다리기"
+            '"frames"': 프레임
       gamelab_followingTargets:
         text: 다음 목표물
       gamelab_getAllSprites:
@@ -1199,6 +1207,8 @@ ko:
             '"pop"': 펑!
             '"rain"': 비
             '"spiral"': 나선
+      gamelab_makeNewScaledSprite:
+        text: 새로운 만들기 {ANIMATION_NAME} 스프라이트 에서 {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: 새로운 만들기 {ANIMATION_NAME} 스프라이트 에서 {LOCATION}
       gamelab_makeNumSprites:

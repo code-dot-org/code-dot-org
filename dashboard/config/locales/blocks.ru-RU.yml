@@ -2,6 +2,8 @@
 ru:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: сделать новые {ANIMATION_NAME} спрайт на {LOCATION}
       Dancelab_alternateMoves:
         text: "{GROUP} чередовать каждые {N} тактов \n{MOVE1} и {MOVE2}"
         options:
@@ -1029,6 +1031,12 @@ ru:
         text: нарисовать линию {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: блок края {SPRITE} от перемещения
+      gamelab_everySeconds:
+        text: 'каждые {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': секунд
+            '"frames"': кадры
       gamelab_followingTargets:
         text: следование целям
       gamelab_getAllSprites:
@@ -1145,6 +1153,8 @@ ru:
             '"pop"': прыжок
             '"rain"': дождь
             '"spiral"': спираль
+      gamelab_makeNewScaledSprite:
+        text: сделать новые {ANIMATION_NAME} спрайт на {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: сделать новые {ANIMATION_NAME} спрайт на {LOCATION}
       gamelab_makeNumSprites:

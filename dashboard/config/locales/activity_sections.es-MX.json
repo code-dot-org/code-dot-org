@@ -1472,7 +1472,7 @@
         },
         "2a0e6d6d-f8b2-4f88-86e2-1b4c8c2ee300": {
           "name": "Ejemplo 2: Uso de la visión de la Información para mejorar el modelo",
-          "description": "Añadir más datos de entrenamiento no sólo cambia los resultados, sino también los datos mostrados en la visión de la información. A veces, el gráfico de resultados que se muestra puede aclarar por qué los resultados no coinciden con las expectativas.\n\nConsideremos un estudiante que quiere entrenar a la Inteligencia Artificial para que reconozca a los peces \"enfadados\".\nQuiere conseguirlo seleccionando cualquier pez con cejas que apunten hacia dentro y bocas fruncidas. Etiquetarán a un pez como \"enfadado\" si tiene una combinación de estos rasgos:\n\n| \"Angry\" eyes: ![](https://curriculum.code.org/media/uploads/eyes11.png)![](https://curriculum.code.org/media/uploads/eyes17.png) \"Angry\" mouths: ![](https://curriculum.code.org/media/uploads/mouth11.png)![](https://curriculum.code.org/media/uploads/mouth9.png)![](https://curriculum.code.org/media/uploads/mouth12.png)![](https://curriculum.code.org/media/uploads/mouth6.png) |\n| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n\n¿Puede la Inteligencia Artificial averiguar lo que hace el alumno sin ser programada explícitamente? Depende de la cantidad de datos de entrenamiento que proporcione el alumno y de la calidad de los datos del conjunto. \n\n| \"Angry\" fish - training: 30                                                       | \"Angry\" fish - training: 200                                               |\n| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |\n| <img src=\"https://curriculum.code.org/media/uploads/30_foyL4uc.png\" width=\"4000\"> | <img src=\"https://curriculum.code.org/media/uploads/200.png\" width=\"4000\"> |\n\n| \\_Aquí, podemos ver que la Inteligencia Artificial captó enseguida que los \"ojos\" eran el rasgo más importante, pero seguido de cerca por el \"color\", no por la \"boca\". En la imagen de la izquierda hay algunos peces de color púrpura que tienen bocas diferentes a las que el alumno tenía como objetivo. ¿Quizás muchos de los peces \"enfadados\" que el alumno seleccionó inicialmente eran morados? Una forma de mejorar el modelo sería continuar el entrenamiento, asegurándose de seguir hasta que varios peces morados \"no enfadados\" hayan sido etiquetados correctamente."
+          "description": "Añadir más datos de entrenamiento no sólo cambia los resultados, sino también los datos mostrados en la visión de la información. A veces, el gráfico de resultados que se muestra puede aclarar por qué los resultados no coinciden con las expectativas.\n\nConsideremos un estudiante que quiere entrenar a la Inteligencia Artificial para que reconozca a los peces \"enfadados\".\nQuiere conseguirlo seleccionando cualquier pez con cejas que apunten hacia dentro y bocas fruncidas. Etiquetarán a un pez como \"enfadado\" si tiene una combinación de estos rasgos:\n\n| \"Angry\" eyes: ![](https://curriculum.code.org/media/uploads/eyes11.png)![](https://curriculum.code.org/media/uploads/eyes17.png) \"Angry\" mouths: ![](https://curriculum.code.org/media/uploads/mouth11.png)![](https://curriculum.code.org/media/uploads/mouth9.png)![](https://curriculum.code.org/media/uploads/mouth12.png)![](https://curriculum.code.org/media/uploads/mouth6.png) |\n| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n\n¿Puede la Inteligencia Artificial averiguar lo que hace el alumno sin ser programada explícitamente? Depende de la cantidad de datos de entrenamiento que proporcione el alumno y de la calidad de los datos del conjunto. \n\n| \"Angry\" fish - training: 30                                                       | \"Angry\" fish - training: 200                                               |\n| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |\n| <img src=\"https://curriculum.code.org/media/uploads/30_foyL4uc.png\" width=\"4000\"> | <img src=\"https://curriculum.code.org/media/uploads/200.png\" width=\"4000\"> |\n\n\\| \\_Aquí, podemos ver que la Inteligencia Artificial captó enseguida que los \"ojos\" eran el rasgo más importante, pero seguido de cerca por el \"color\", no por la \"boca\". En la imagen de la izquierda hay algunos peces de color púrpura que tienen bocas diferentes a las que el alumno tenía como objetivo. ¿Quizás muchos de los peces \"enfadados\" que el alumno seleccionó inicialmente eran morados? Una forma de mejorar el modelo sería continuar el entrenamiento, asegurándose de seguir hasta que varios peces morados \"no enfadados\" hayan sido etiquetados correctamente."
         },
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Calentamiento"
@@ -6046,7 +6046,7 @@
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
           "description": "#### Preparando el Escenario\n\nDa la bienvenida a los alumnos a la clase y presenta la actividad del día.",
           "tips": [
-            "Una forma de presentar la Hora del Código, si no estás muy familiarizado con la codificación, es mostrar uno de [nuestros vídeos inspiradores](https://hourofcode.com/promote/resources#videos). Elige el que creas que tus alumnos encontrarán más estimulante y compártelo ahora. Para los alumnos de los grados intermedios, sugerimos [La Hora del Código está Aquí](https://youtu.be/FC5FbmsH4fw)."
+            "Una forma de presentar la Hora del Código, si no estás muy familiarizado con la codificación, es mostrar uno de [nuestros vídeos inspiradores][0]. Elige el que creas que tus alumnos encontrarán más estimulante y compártelo ahora. Para los alumnos de los grados intermedios, sugerimos [La Hora del Código está Aquí][1]."
           ]
         },
         "d99fc09e-a586-41df-84b2-e552cc4735e3": {
@@ -6059,7 +6059,7 @@
           "description": "¿Sabías que la informática puede ser muy creativa? De hecho, se puede hacer arte con el código. Como recordatorio, el código es un conjunto de instrucciones que un ordenador puede entender. Al igual que la elección de los colores de la pintura, la elección del código que escribes puede ser una oportunidad para expresar tu creatividad. \n\nHoy vamos a utilizar la poesía para inspirar nuestra codificación creativa. ¿Alguien sabe qué es la poesía? ¿Tienes algún poema o poeta favorito? "
         },
         "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
-          "description": "**Leer poesía juntos:** Leer [algunos poemas](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) juntos en la clase, practicando el nombre del estado de ánimo de cada poema. Anima a los alumnos a compartir su interpretación, aunque sea diferente a la de los demás. "
+          "description": "**Leer poesía juntos:** Leer [algunos poemas][0] juntos en la clase, practicando el nombre del estado de ánimo de cada poema. Anima a los alumnos a compartir su interpretación, aunque sea diferente a la de los demás. "
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
           "name": "El Arte del Poema",
@@ -9006,7 +9006,7 @@
           "description": "Muestra un desafío de la lección. Recomendamos el desafío número 9.\n\n-   Pregunta que debería hacer la abeja cuando llegue a la nube.\n    -   La abeja debería usar una condicional para revisar si hay una flor o un panal.\n-   Use el bloque \"si en flor / si no\". Pregunta qué debería hacer la abeja si hay una flor. Si no hay una flor, habrá un panal, ¿qué debería hacer la abeja entonces?\n    -   Si hay una flor, la abeja debe \"obtener néctar\"; si hay un panal, la abeja debe \"hacer miel\".\n\nCompleta el resto del código y presiona \"Ejecutar\". Conversa con la clase por qué funciona el programa."
         },
         "7f949bd4-c8d6-42b7-a6b2-a835a8a63e41": {
-          "name": "Condicionales con Abeja",
+          "name": "Condicionales (Si/sino) con Abeja",
           "description": "Estos desafíos podrían generar dudas y preguntas, por lo que es recomendable programar en parejas o implementar la regla de “pregúntale a 3 antes que a mí” (que los estudiantes le pidan ayuda al menos a tres compañeros antes de preguntarle al docente). Esto suscitará análisis y conversaciones que desarrollarán la comprensión de cada estudiante."
         },
         "ca607451-3bb5-4aea-bca0-efd3fed0c6be": {
@@ -9677,7 +9677,7 @@
           "description": "Ahora usaremos **condicionales** para ayudar a la _abeja_ Code.org a lidiar con algunas nubes misteriosas. No sabemos si las flores tienen néctar o no, por lo que necesitaremos usar condicionales para asegurarnos de recolectar el néctar si hubiese y no intentar recolectarlo en flores donde no haya nada.\n\nMuestra un desafío de la lección. Recomendamos el desafío número 9. \n\n-   Pregunta que debería hacer la abeja cuando llegue a la nube. \n    -   La abeja debería usar una condicional para revisar si hay una flor o un panal. \n-   Usa el bloque si en flor / si no. Pregunta qué debería hacer la abeja si hay una flor. Si no hay una flor, habrá un panal, ¿qué debería hacer la abeja entonces? \n    -   Si hay una flor, la abeja debe obtener néctar; si hay un panal, la abeja debe hacer miel. \n\nCompleta el resto del código y presiona Ejecutar. Conversa con la clase por qué funciona el programa."
         },
         "22580642-ad9a-48f6-9ad6-8693e42ed9d3": {
-          "name": "Condicionales con Abeja",
+          "name": "Condicionales (Si/sino) con Abeja",
           "description": "Estos desafíos podrían generar dudas y preguntas, por lo que es recomendable programar en parejas o implementar la regla de “pregúntale a 3 antes que a mí” (que los estudiantes le pidan ayuda al menos a tres compañeros antes de preguntarle al docente). Esto suscitará análisis y conversaciones que desarrollarán la comprensión de cada estudiante."
         },
         "c622f540-96a1-4448-9a80-18850f23abdd": {
@@ -11144,19 +11144,19 @@
           ]
         },
         "943225fd-17d1-40af-884c-76370ba25b32": {
-          "description": "#### Crear:\n\nLo ideal es disponer de tiempo de clase para que los alumnos trabajen en sus presentaciones.  Esto les permitirá incorporar componentes multimedia interesantes, como _Google Slides_. Para otras ideas de presentaciones, visite **\\*72 Formas Creativas para que tus Alumnos Muestren lo que Saben** - Sitio web.\n\nAnima a los estudiantes a incluir en su presentación toda la información de la sección J de la Hoja de Trabajo de Diseño del Proyecto Final, así como dos o más preguntas de la sección K.\n\n#### Presentar:\n\nLos estudiantes deben mostrar sus aplicaciones primero, y luego pueden comentar las preguntas que han cubierto en sus presentaciones. \n\nPuede ser muy útil que los alumnos se apunten a un orden específico para hacer sus presentaciones, de modo que puedan disfrutar de las demostraciones de sus compañeros sin preocuparse de si serán llamados a continuación."
+          "description": "#### Crear:\n\nIdealmente, tendrás suficiente tiempo disponible para que los estudiantes trabajen en sus presentaciones. Esto les permitirá incorporar elementos multimedia, como diapositivas. Para más ideas de presentaciones, visita el sitio web 72 Creative Ways for Your Students to Show What They Know (sitio en inglés).\n\nAlienta a los estudiantes a incluir toda la información de la sección J de la Guía de diseño del proyecto final en sus presentaciones, además de dos o más preguntas de la sección K.\n\n#### Presentar:\n\nLos estudiantes deberán, primero que todo, presentar sus apps. Luego, pueden discutir las preguntas que hayan incluido en sus presentaciones.\n\nPuede ser muy útil que los estudiantes se anoten en una lista para establecer el orden de las presentaciones, de manera que puedan disfrutar de las presentaciones de sus compañeros sin la ansiedad producida por la incertidumbre de no saber si serán los siguientes. "
         },
         "6a4f65e2-5864-40c5-84bb-d1f70643e914": {
           "name": "Presentaciones - Día 5",
           "description": "Los estudiantes seguirán presentando sus proyectos de la manera aprobada (por escrito, oralmente o usando multimedia). "
         },
         "f8072f39-4638-4fa9-9ad9-f26e5e9af893": {
-          "name": "Reflexiona y Vuelve a Intentarlo ",
-          "description": "Los estudiantes trabajarán con otro grupo para dar y recibir consejos en un esfuerzo por fortalecer los proyectos de los demás.\n\n#### Reflexionar:\n\nPara las reflexiones, haz que cada grupo se empareje con otro para probar los proyectos de los demás.  Después de unos 10 minutos, haz que los grupos analicen las preguntas de la hoja de trabajo de diseño del proyecto final.  \n\nAnima a los estudiantes a formular las preguntas de la Hoja de Trabajo de Diseño del Proyecto Final y a anotar los comentarios proporcionados por sus equipos de revisión para que puedan consultarlos más tarde.  Esta parte debería durar aproximadamente 15 minutos más."
+          "name": "Reflexionar y volver a intentarlo",
+          "description": "Los estudiantes trabajarán con otro grupo para dar y recibir consejos en un esfuerzo por fortalecer los proyectos de los demás.\n\n#### Reflexionar:\n\nPara reflexionar, que cada grupo se junte con otro grupo para probar el proyecto de cada uno. Después de 10 minutos, haz que los grupos analicen y discutan las preguntas de la Guía de trabajo – Diseño del proyecto final.  \n\nAnima a los estudiantes a hacer las preguntas de la Guía de trabajo – Diseño del proyecto final al otro grupo y anotar las respuestas de manera que puedan recurrir a ellas en el futuro. Esta actividad podría tomar aproximadamente 15 minutos extras."
         },
         "91a938ed-5c11-4efb-be88-9d4875f227c6": {
           "tips": [
-            "Los profesores deben evitar asignar la parte final del proyecto como deberes a menos que estén seguros de que los estudiantes viven cerca unos de otros **y** tienen acceso a Internet en casa."
+            "Los docentes deben evitar enviar esta última parte de la lección como tarea, a menos que estén seguros de que los estudiantes cuentan con acceso a Internet **y** viven cerca uno del otro."
           ]
         },
         "da7c2a4a-94de-4469-a887-e6f19dda99fb": {
@@ -13952,7 +13952,7 @@
         "8f56a7b9-e17b-4173-bae9-c996824270b4": {
           "description": "\\*\\* Análisis del video\\*\\* \n\n-   ¿Qué se deben seguir para añadir una imagen a una sprite? \n    \\-¿Cuáles son las distintas formas con las que se puede obtener una imagen?",
           "tips": [
-            "Asegúrese que los estudiantes comprendan que deben crear la imagen (o animación) en la pestaña de animación y luego deben añadir esta animación al sprite utilizando el bloque [\\`setAnimation\\`(#f78183)](/docs/gamelab/setAnimation/) Los estudiantes pueden malinterpretar la palabra “animación” al usarla con imágenes individuales, sin embargo, en el Game Lab, las imágenes sin movimiento son consideradas “animaciones” de un solo cuadro. \n\nLos estudiantes pueden utilizar una animación que ya se encuentre en la biblioteca de animación, cargar una desde su computadora o crearla utilizando las herramientas de dibujo. Adicionalmente, los estudiantes pueden utilizar las herramientas de dibujo para modificar imágenes que ya tengan en su biblioteca o las que hayan cargado.\n\n**Alerta de confusión** Es posible que los estudiantes confundan los conceptos de sprite, su animación, y la imagen que dibuja en la pantalla. En las próximas lecciones, evite la confusión y refuerce la idea de que una animación de un sprite es solamente una de sus propiedades, la que controla qué imagen se dibuja en la pantalla. Recuérdeles que un sprite puede tener distintas animaciones en el transcurso del programa, y también que al igual que las otras propiedades, puede cambiar, y que dos o más sprites pueden compartir la misma animación."
+            "Asegúrese que los estudiantes comprendan que deben crear la imagen (o animación) en la pestaña de animación y luego deben añadir esta animación al sprite utilizando el bloque [\\`setAnimation\\`(#f78183)](/docs/gamelab/setAnimation/) Los estudiantes pueden malinterpretar la palabra “animación” al usarla con imágenes individuales, sin embargo, en el Game Lab, las imágenes sin movimiento son consideradas “animaciones” de un solo cuadro. \n\nLos estudiantes pueden utilizar una animación que ya se encuentre en la biblioteca de animación, cargar una desde su computadora o crearla utilizando las herramientas de dibujo. Adicionalmente, los estudiantes pueden utilizar las herramientas de dibujo para modificar imágenes que ya tengan en su biblioteca o las que hayan cargado.\n\n**Alerta de concepto erroneo** Es posible que los estudiantes confundan los conceptos de sprite, su animación, y la imagen que dibuja en la pantalla. En las próximas lecciones, evite la confusión y refuerce la idea de que una animación de un sprite es solamente una de sus propiedades, la que controla qué imagen se dibuja en la pantalla. Recuérdeles que un sprite puede tener distintas animaciones en el transcurso del programa, y también que al igual que las otras propiedades, puede cambiar, y que dos o más sprites pueden compartir la misma animación."
           ],
           "progression_name": "Video: La pestaña de animación"
         },
@@ -14140,11 +14140,11 @@
         "c490c403-c5dc-4755-a03b-1532565b1119": {
           "description": "**Análisis:** Pida a los estudiantes que escriban sus respuestas individualmente, luego que las compartan con sus compañeros y finalmente con todo el grupo.",
           "tips": [
-            "**Objetivo:** El objetivo de este análisis es que los estudiantes comprendan algunos elementos claves de la programación. Los estudiantes deben comprender que la clave es ver muchas imágenes en secuencia y que cada una tiene una pequeña diferencia con la otra. Introduzca la palabra \"frame\" (cuadro), como una de las imágenes en una animación. Luego comente a los estudiantes que muy pronto podrán crear animaciones propias."
+            "**Objetivo:** El objetivo de este análisis es que los estudiantes comprendan algunos elementos claves de la animación. Los estudiantes deben comprender que la clave es ver muchas imágenes en secuencia y que cada una tiene una pequeña diferencia con la otra. Introduzca la palabra \"frame\" (cuadro), como una de las imágenes en una animación. Luego comente a los estudiantes que muy pronto podrán crear animaciones propias."
           ]
         },
         "fec359dd-3f5c-4956-a6ba-037f6da3460b": {
-          "description": "Comenzaremos a hacer animaciones, no solo imágenes fijas. Para hacer esto necesitaremos encontrar una forma en la que nuestros programas dibujen muchas imágenes por segundo. Nuestros ojos las verán como una sola animación. Para hacer esto, necesitaremos aprender una nueva herramienta."
+          "description": "Aprenderemos cómo hacer animaciones. Por lo tanto, necesitaremos encontrar una forma en la que nuestros programas dibujen muchas imágenes por segundo para que nuestros ojos las vean como si estuvieran en movimiento. Para lograr esto, necesitamos aprender una nueva herramienta."
         },
         "bfb74221-6537-4c48-8e03-2f536bc27635": {
           "description": "\\*\\* Pregunta del día: ¿Cómo podemos animar nuestras imágenes en el Game Lab?\\*\\*"
@@ -14156,7 +14156,7 @@
           ]
         },
         "a2b62aaa-e34a-4413-b6cc-710fa82cdc5f": {
-          "description": "**Demostración:** Si lo desea, puede utilizar los manipulativos proporcionados para realizar una demostración y explorar \n como están conectados el ciclo dibujar y las animaciones."
+          "description": "**Demostración:** Si lo desea, puede utilizar los manipulativos proporcionados para realizar una demostración y explorar el vínculo entre el ciclo dibujar y las animaciones."
         },
         "18bcf449-d684-4e93-abbd-5af4e82d1e7b": {
           "description": "**Análisis del video:**\n\n-   ¿Qué hace la función dibujar?",
@@ -14173,7 +14173,7 @@
         },
         "fcb22a6b-b548-4ea4-b2bf-23f3db9dde29": {
           "tips": [
-            "Fíjate en que el fondo azul nunca es visible porque el fondo rojo lo cubre inmediatamente. Además, sólo hay un punto amarillo visible, ya que a medida que el bucle de dibujo se ejecuta una y otra vez, va colocando nuevos fondos."
+            "Note que el fondo azul nunca es visible porque el fondo rojo lo cubre inmediatamente. Además, sólo hay un punto amarillo visible, ya que a medida que el bucle de dibujo se ejecuta una y otra vez, va colocando nuevos fondos."
           ],
           "progression_name": "Predicción"
         },
@@ -14199,7 +14199,7 @@
           "description": "\\*\\* Pregunta del día: ¿Cómo podemos animar nuestras imágenes en el Game Lab?\\*\\*"
         },
         "4e97aa36-b285-40f3-83cb-383e83158dc5": {
-          "description": "**Decir:** ¿Cómo el bucle dibujar nos ayuda al hacer animaciones?",
+          "description": "**Decir:** ¿Cómo nos ayuda el ciclo de dibujo cuando hacemos animaciones?",
           "tips": [
             "**Conceptos clave:** Puede haber confusiones comunes con el bucle dibujar. Asegúrese que los estudiantes comprenden lo siguiente:\n\n-   El bucle dibujar debe ejecutarse al final, después de todo el código del programa y sin importar en que parte del programa se ubique.\n-   El bucle dibujar es ejecutado por el Game Lab a una tasa de fotogramas constante de 30 fotogramas por segundo y no es necesario llamar a la función.\n-   Los \"fotogramas\" en el Game Lab pueden compararse a hojas transparentes, esto quiere decir que, a menos que dibujes un fondo, todas las formas nuevas o sprites simplemente aparecerán encima de las anteriores.\n-   Tu programa solo debe tener un bucle dibujar."
           ]
@@ -14217,7 +14217,7 @@
         "b8ce874f-8e09-4a78-aa14-7b32de942c69": {
           "description": "**Análisis:** Permita que los estudiantes compartan sus ideas con un compañero antes de compartirlas con toda la clase.",
           "tips": [
-            "El objetivo de este análisis es que los estudiantes comiencen a analizar de que forma pueden utilizar las propiedades sprite que han aprendido hasta ahora para realizar animaciones con movimiento. Si los estudiantes tienen dificultades, puede ayudarlos preguntando por propiedades específicas. Por ejemplo:\n\n-   ¿Qué le sucedería a un sprite si incrementas constantemente su propiedad [\\`x\\`(#f78183)](/docs/gamelab/x/) ?\n-   ¿Qué le sucedería a un sprite si incrementas constantemente su propiedad [\\`y\\`(#f78183)](/docs/gamelab/y/)] ?\n-   ¿Qué sucedería si incrementas otras propiedades o si combinas varias de estas?"
+            "El objetivo de este análisis es que los estudiantes comiencen a analizar de que forma pueden utilizar las propiedades sprite que han aprendido hasta ahora para realizar animaciones con movimiento. Si los estudiantes tienen dificultades, puede ayudarlos preguntando por propiedades específicas. Por ejemplo:\n\n-   ¿Qué le sucedería a un sprite si incrementas constantemente su propiedad [\\`x\\`(#f78183)](/docs/gamelab/x/) ?\n-   ¿Qué le sucedería a un sprite si incrementas constantemente su propiedad [\\`y\\`(#f78183)](/docs/gamelab/y/)] ?\n-   ¿Qué sucedería si incrementas otras propiedades o si las combinas?"
           ]
         },
         "405ad4ad-0633-4613-9883-f54a8559b49b": {
@@ -14231,7 +14231,7 @@
           "progression_name": "Predicción"
         },
         "a6ebae49-e1ca-4918-9d7f-4c0e33cdf00e": {
-          "description": "**Análisis del video:**\n\n-   ¿Cuál es el patrón del contador?\n-   ¿De qué forma el patrón del contador logra mover a los sprites por la pantalla?",
+          "description": "**Análisis del video:**\n\n-   ¿Qué es el patrón de contador?\n-   ¿De qué forma el patrón del contador logra mover a los sprites por la pantalla?",
           "tips": [
             "**Objetivo del análisis:**\n\nLos estudiantes pueden describir el patrón contador de varias maneras. Asegúrese de que vayan más allá de simplemente indicar los bloques o el código que utiliza el patrón de contador. Deben comprender que el patrón contador permite al programador actualizar el valor de una variable en un patrón que cuenta hacia arriba (o hacia abajo) en cada iteración del ciclo de dibujo. Esto se puede usar para muchas cosas diferentes, como girar, crecer, encogerse o temporizadores, pero se usa con mayor frecuencia para mover sprites por la pantalla.\n\nCuando la propiedad x o y de un sprite se actualiza en un patrón de contador, su posición cambia de manera constante con el tiempo, lo que hace que se mueva por la pantalla. Los estudiantes deben poder explicar que el movimiento en una animación es solo un cambio de posición, y que cambiar la posición x de un sprite hará que se mueva horizontalmente, y cambiar la posición y de un sprite hará que se mueva verticalmente."
           ],
@@ -14251,12 +14251,12 @@
         },
         "a8fccbf5-3042-489e-97eb-19fb589b606d": {
           "name": "Escribir en la bitácora",
-          "description": "**Pregunta del día: ¿Cómo podemos controlar el movimiento de un sprite en el Game Lab?**\n\n**Decir:** Han aprendido dos maneras de crear animaciones con el ciclo de dibujo: números aleatorios y patrón contador. ¿Para qué tipo de movimiento usarías números aleatorios?, ¿Para qué tipo de movimiento usarías el patrón contador?, ¿Existen movimientos que combinen el patrón contador y los números aleatorios?"
+          "description": "**Pregunta del día: ¿Cómo podemos controlar el movimiento de un sprite en el Game Lab?**\n\n**Decir:** Han aprendido dos maneras de crear animaciones con el ciclo de dibujo: números aleatorios y patrón contador. ¿Para qué tipo de movimiento usarías números aleatorios?, ¿Para qué tipo de movimiento usarías el patrón contador?, ¿Existen movimientos que combinen el patrón de contador y los números aleatorios?"
         },
         "06cad4ef-4d60-42e4-829c-02fd3364c31e": {
           "description": "**Análisis:** Deje que los estudiantes compartan sus ideas con un compañero antes de compartirlas con el resto de la clase.",
           "tips": [
-            "Las respuestas de los estudiantes pueden variar, pero los movimientos como sacudir utilizan números aleatorios, y los movimientos más potentes utilizan el patrón contador. Si bien no se exigen respuestas exactas,  los estudiantes deben reflejar una comprensión de cómo funcionan las construcciones de los distintos programas.\n\nEs posible que en algunos de los desafíos los estudiantes hayan visto que los números aleatorios se utilizaron en una propiedad (rotación) y el patrón contador en otra (posición x). Si el tiempo de la clase lo permite, pídales imaginen lo que pasaría si usaran el patrón contador para añadir o quitar un número aleatorio a la propiedad de un sprite o para combinar las dos construcciones de otra forma."
+            "Las respuestas de los estudiantes pueden variar, pero los movimientos como sacudir utilizan números aleatorios, y los movimientos más potentes utilizan el patrón de contador. Si bien no se exigen respuestas exactas,  los estudiantes deben reflejar una comprensión de cómo funcionan las construcciones de los distintos programas.\n\nEs posible que en algunos de los desafíos los estudiantes hayan visto que los números aleatorios se utilizaron en una propiedad (rotación) y el patrón contador en otra (posición x). Si el tiempo de la clase lo permite, pídales imaginen lo que pasaría si usaran el patrón contador para añadir o quitar un número aleatorio a la propiedad de un sprite o para combinar las dos construcciones de otra forma."
           ]
         },
         "814e725b-8ddc-466b-808a-1ea5687fbf6a": {
@@ -14269,7 +14269,7 @@
         "a5361b9b-6e15-4bba-9b35-ae31a1e1b525": {
           "description": "**Compartir:** Deje que los estudiantes compartan sus respuestas con el resto del curso.",
           "tips": [
-            "El objetivo de este análisis es repasar los distintos tipos de movimiento y animaciones que los estudiantes han aprendido. Cuando los estudiantes conversen acerca de los distintos métodos, asegúrese de que mencionen que tipo de movimiento les sería útil. Incítelos a que especifiquen lo que podrían animar utilizando estos métodos."
+            "El objetivo de este análisis es repasar los distintos tipos de movimiento y animaciones que los estudiantes han aprendido. Cuando los estudiantes conversen acerca de los distintos métodos, asegúrese de que mencionen que tipo de movimiento les sería útil. Pídales que especifiquen lo que podrían animar utilizando estos métodos."
           ]
         },
         "c0a4e139-2176-45dd-9d6d-aecd235122a6": {
@@ -14279,7 +14279,7 @@
           "description": "**Pregunta del día: ¿Cómo podemos combinar diferentes patrones de programación para hacer una animación completa?**"
         },
         "688648c7-ae17-46ad-8eb4-c4198f741607": {
-          "description": "**Distribuir:**(Opcional) Distribuya copias de la guía de actividades. Los estudiantes pueden utilizar esta hoja para planear la animación que tendrán que crear al final de esta lección. También pueden usar una hoja de papel.\n\n**Transición:** Pida a los estudiantes que ingresen a Code Studio."
+          "description": "**Distribuir:**(Opcional) Distribuya copias de la guía de actividades. Los estudiantes pueden utilizar esta hoja para planificar la animación que crearán al final de esta lección. También pueden usar una hoja de papel.\n\n**Transición:** Pida a los estudiantes que ingresen a Code Studio."
         },
         "d77db66e-6e3a-4e3a-82df-2499a5ad0efd": {
           "progression_name": "Ejemplo de Escena Animada"
@@ -14394,7 +14394,7 @@
         },
         "9addd7c3-06f4-4522-b6b3-d469bf2290ad": {
           "name": "Considerando las condicionales",
-          "description": "**Pregunta del día: ¿Cómo pueden reaccionar los programas a los cambios cuando están en ejecución?**\n\n**Vocabulario Clave:**\n\n-   **Condición** - algo que un programa verifica para comprobar si es verdadero antes de decidir que acción realizar.\n-   **Condicionales** - Sentencias que solo se ejecutan bajo ciertas condiciones.\n-   **Expresión booleana** - En programación, una expresión que evalúa si es verdadero o falso."
+          "description": "**Pregunta del día: ¿Cómo pueden reaccionar los programas a los cambios cuando están en ejecución?**\n\n**Vocabulario Clave:**\n\n-   **Condición** - algo que un programa verifica para comprobar si es verdadero antes de decidir que acción realizar.\n-   **Condicionales** - Sentencias que solo se ejecutan bajo ciertas condiciones.\n-   **Expresión booleana** - En programación, una expresión que evalúa si es verdadero o falso.\n\n**Decir:** Ahora que ya saben como funcionan las condicionales, ¿En qué partes de los programas y aplicaciones que ya conoces se podrían utilizar?"
         },
         "2b5e9944-1e90-4362-98e9-ef74a8d1d48b": {
           "description": "**Análisis:** Solicite a los estudiantes que compartan sus respuestas.",
@@ -14572,7 +14572,7 @@
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**!Atención!** Si está enseñando virtualmente o en una clase con distanciamiento social, haga [clic aquí](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit) para acceder a las modificaciones que puede usar para esta lección."
         },
         "5699b426-cfa2-4614-9434-9554d27e785d": {
-          "description": "**Demuestre:** Pida a un voluntario que pase al frente del salón de clases y actúe como un sprite. Diga que le dará instrucciones al sprite como si lo estuviera haciendo un programa del Game Lab.\n\nCuando su estudiante esté listo, ubíquese frente a el para que tenga espacio suficiente para moverse y pídale que se \"avance 1  hacia adelante\". El estudiante debería dar un paso más adelante. Luego repita la misma instrucción varias veces, cada vez indicando al estudiante que se mueva un paso más adelante. El objetivo es hacer que se note que lo repetitivo de la instrucción. Cuando su estudiante haya completado la actividad, pídale que vuelva al lugar en donde comenzó. Repita la instrucción nuevamente y pídale a su estudiante que se \"avance 2 hacia adelante\", para que se mueva dos pasos más adelante cada vez. Una vez que haya finalizado la demostración, pídale a la clase que de un aplauso a su compañero e indíquele que regrese a su puesto.\n\n**Decir:** Le estaba dando algunas instrucciones a mi \"sprite\", pero me pareció que se hicieron muy repetitivas. ¿Cómo podría haber simplificado mis instrucciones? "
+          "description": "**Demuestre:** Pida a un voluntario que pase al frente del salón de clases y actúe como un sprite. Diga a la clase que le dará instrucciones al sprite como si lo estuviera haciendo un programa del Game Lab.\n\nCuando su estudiante esté listo, ubíquese frente a el para que tenga espacio suficiente para moverse y pídale que se \"avance 1  hacia adelante\". El estudiante debería dar un paso más adelante. Luego repita la misma instrucción varias veces, cada vez indicando al estudiante que se mueva un paso más adelante. El objetivo es hacer que se note que lo repetitivo de la instrucción. Cuando su estudiante haya completado la actividad, pídale que vuelva al lugar en donde comenzó. Repita la instrucción nuevamente y pídale a su estudiante que se \"avance 2 hacia adelante\", para que se mueva dos pasos más adelante cada vez. Una vez que haya finalizado la demostración, pídale a la clase que de un aplauso a su compañero e indíquele que regrese a su puesto.\n\n**Decir:** Le estaba dando algunas instrucciones a mi \"sprite\", pero me pareció que se hicieron muy repetitivas. ¿Cómo podría haber simplificado mis instrucciones? "
         },
         "a2fda764-6cf6-419d-a9cb-7d62a2749660": {
           "description": "**Análisis:** De unos minutos a los estudiantes para que escriban sus ideas antes de comentarlas con un compañero. Luego solicíteles que compartan sus respuestas con la clase. Recomendamos que escriba sus respuestas en la pizarra. ",
@@ -14590,7 +14590,7 @@
           "description": "Una forma de simplificar estas instrucciones, es comunicar a nuestro sprite que se siga moviendo 1 o 2, o cuantos pasos queramos. Esto haría que las instrucciones fueran más fáciles de comprender para nosotros como humanos. A continuación aprenderemos que también existen muchas formas en las que podemos simplificar nuestro código."
         },
         "e09946dd-2f75-40a0-ac8f-38a20df49236": {
-          "description": "**Transición:** Solicite a los estudiantes que ingresen a Code Studio\n\n**Circule:** Estos niveles presentan las propiedades de velocidadX, velocidadY y velocidad de rotación analizadas previamente en la clase. Acérquese a los estudiantes para revisar sus avances y continúe revisando que todos hayan llegado al final del nivel 10."
+          "description": "**Transición:** Solicite a los estudiantes que ingresen a Code Studio\n\n**Recorra el salón de clases:** Estos niveles presentan las propiedades de velocidadX, velocidadY y velocidad de rotación analizadas previamente en la clase. Acérquese a los estudiantes para revisar sus avances y, continúe revisando que todos hayan llegado al final del nivel 10."
         },
         "498b10a2-a029-449b-a37d-0b85141e917b": {
           "progression_name": "Desarrollo de Habilidades"
@@ -14604,7 +14604,7 @@
         },
         "e8b8a1b0-89e9-4b09-978f-11db835db760": {
           "tips": [
-            "**El interior versus el exterior de un bucle de dibujo**\n\nEsta es una buena instancia para recordar a los estudiantes que el código escrito fuera del bucle de dibujo se utiliza para configurar el programa; con él pueden establecer la forma en la que inicia el programa. El código escrito dentro del bucle de dibujo se utiliza para las cosas que están cambiando a medida que el programa se ejecuta, es decir, aquellas que dependen de la interacción con el usuario.\n\nEs posible que exista la confusión de que los bloques nuevos son bloques de animación (cambian de posiciones), ya que hasta este punto se han mantenido fuera del bucle de dibujo. Esto sucede porque, hasta ahora, la velocidad se ha establecido al inicio del programa y no se ha cambiado, sin embargo, si los estudiantes desean cambiar la velocidad durante el programa, deberán hacerlo dentro del bucle de dibujo."
+            "**El interior versus el exterior de un ciclo de dibujo**\n\nEsta es una buena instancia para recordar a los estudiantes que el código escrito fuera del ciclo de dibujo se utiliza para configurar el programa; con él pueden establecer la forma en la que inicia el programa. El código escrito dentro del ciclo de dibujo se utiliza para las cosas que están cambiando a medida que el programa se ejecuta, es decir, aquellas que dependen de la interacción con el usuario.\n\nEs posible que exista la confusión de que los bloques nuevos son bloques de animación (cambian de posiciones), ya que hasta este punto se han dejado fuera del ciclo de dibujo. Esto sucede porque, hasta ahora, la velocidad se ha establecido al inicio del programa y no se ha cambiado, sin embargo, si los estudiantes desean cambiar la velocidad durante el programa, deberán hacerlo dentro del ciclo de dibujo."
           ],
           "progression_name": "Desarrollo de Habilidades"
         },
@@ -14727,7 +14727,7 @@
           "description": "**Distribuya:** (Opcional) reparta las copias de la guía de actividades. Los estudiantes pueden usar esta guía para planificar el juego que quieren crear, la planificación también se puede realizar en una hoja de papel.\n\n**Transición:** Pida a los estudiantes que ingresen a Code Studio."
         },
         "0525516c-cd72-4700-9c7b-36644137ab93": {
-          "progression_name": "Introducción a los Desplazamientos Laterales"
+          "progression_name": "Introducción a los juegos de desplazamiento lateral"
         },
         "c62c9fee-1e51-4d9d-b221-915d73af2cd2": {
           "progression_name": "Dibuja tu Fondo"
