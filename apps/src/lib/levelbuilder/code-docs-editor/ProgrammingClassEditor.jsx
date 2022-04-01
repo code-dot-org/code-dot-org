@@ -21,7 +21,7 @@ function useProgrammingClass(initialProgrammingClass) {
     setProgrammingClass({...programmingClass, [key]: value});
   }
 
-  return [programmingClass, updateProgrammingClass];
+  return [programmingClass, updateProgrammingClass, setProgrammingClass];
 }
 
 function renderExampleEditor(example, updateFunc) {
@@ -44,9 +44,11 @@ export default function ProgrammingClassEditor({
   const {id, key, ...remainingProgrammingClass} = initialProgrammingClass;
   remainingProgrammingClass.examples.forEach(e => (e.key = createUuid()));
   remainingProgrammingClass.fields.forEach(f => (f.key = createUuid()));
-  const [programmingClass, updateProgrammingClass] = useProgrammingClass(
-    remainingProgrammingClass
-  );
+  const [
+    programmingClass,
+    updateProgrammingClass,
+    setProgrammingClass
+  ] = useProgrammingClass(remainingProgrammingClass);
   const [isSaving, setIsSaving] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
   const [error, setError] = useState(null);
@@ -67,15 +69,19 @@ export default function ProgrammingClassEditor({
       .then(response => {
         setIsSaving(false);
         if (response.ok) {
-          if (shouldCloseAfterSave) {
-            // TODO: update this when we have a show page for classes
-            navigateToHref('/');
-          } else {
-            setLastUpdated(Date.now());
-            setError(null);
-          }
+          return response.json();
         } else {
-          setError(response.statusText);
+          throw new Error(response.statusText);
+        }
+      })
+      .then(json => {
+        if (shouldCloseAfterSave) {
+          // TODO: update this when we have a show page for classes
+          navigateToHref('/');
+        } else {
+          setLastUpdated(Date.now());
+          setError(null);
+          setProgrammingClass(json);
         }
       })
       .catch(error => {
