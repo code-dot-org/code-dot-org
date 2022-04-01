@@ -6,15 +6,46 @@
     "hide_share_and_remix": "false",
     "submittable": "false",
     "csa_view_mode": "console",
-    "encrypted_examples": [
-
-    ]
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    // TO DO: Read the files you need into 1D arrays and create a BasketballStadiums object with the arrays.\n\n\n    \n\n    // TO DO: Call the methods you write to provide the information to the user.\n\n\n    \n    \n  }\n}",
+        "isVisible": true
+      },
+      "FileReader.java": {
+        "text": "import java.util.Scanner;\nimport java.io.File;\nimport java.io.FileNotFoundException;\n\n/*\n * Reads data from a file\n */\npublic class FileReader {\n  private Scanner input;  // The Scanner object for reading the data\n\n  /*\n   * Constructor to create a FileReader object with\n   * a specified filename\n   */\n  public FileReader(String newFileName) {\n    File newFile = new File(newFileName);\n    input = null;\n\n    createScanner(newFile);\n  }\n\n  /*\n   * Creates the input object with the specified file\n   * or notifies the user that the file is not found\n   */\n  public void createScanner(File newFile) {\n    try {\n      input = new Scanner(newFile);\n    } catch (FileNotFoundException error) {\n      System.out.println(\"File not found.\");\n    }\n  }\n\n  /*\n   * Creates a new File object from the specified filename\n   * and updates the input object with the new file\n   */\n  public void changeFile(String filename) {\n    File newFile = new File(filename);\n    createScanner(newFile);\n  }\n\n  /*\n   * Reads numValues integers from a file into\n   * an int 1D array and returns the array\n   */\n  public int[] readNumbers(int numValues) {\n    int[] values = new int[numValues];\n\n    for (int index = 0; index < values.length; index++) {\n      if (input.hasNextInt()) {\n        values[index] = input.nextInt();\n      }\n    }\n\n    input.close();\n    return values;\n  }\n\n  /*\n   * Reads numValues doubles from a file into\n   * an double 1D array and returns the array\n   */\n  public double[] readDoubles(int numValues) {\n    double[] values = new double[numValues];\n\n    for (int index = 0; index < values.length; index++) {\n      if (input.hasNextDouble()) {\n        values[index] = input.nextDouble();\n      }\n    }\n\n    input.close();\n    return values;\n  }\n\n  /*\n   * Reads numValues Strings from a file into\n   * an String 1D array and returns the array\n   */\n  public String[] readText(int numValues) {\n    String[] text = new String[numValues];\n\n    for (int index = 0; index < text.length; index++) {\n      if (input.hasNextLine()) {\n        text[index] = input.nextLine();\n      }\n    }\n\n    input.close();\n    return text;\n  }\n\n}",
+        "isVisible": true
+      },
+      "BasketballStadiums.java": {
+        "text": "/*\n * Processes and analyzes data about basketball stadiums\n */\npublic class BasketballStadiums {\n\n  // TO DO: Declare instance variables for the arrays you need.\n\n\n  \n  // TO DO: Write a constructor to initialize the instance variables.\n\n  \n\n  // TO DO: Write your methods to find the information you need about your data.\n\n\n\n  \n  \n}",
+        "isVisible": true
+      },
+      "teams.txt": {
+        "text": "Boston Celtics\nBrooklyn Nets\nNew York Knicks\nPhiladelphia 76ers\nToronto Raptors\nChicago Bulls\nCleveland Cavaliers\nDetroit Pistons\nIndiana Pacers\nMilwaukee Bucks\nAtlanta Hawks\nCharlotte Hornets\nMiami Heat\nOrlando Magic\nWashington Wizards\nDenver Nuggets\nMinnesota Timberwolves\nOklahoma City Thunder\nPortland Trail Blazers\nUtah Jazz\nGolden State Warriors\nLos Angeles Clippers\nLos Angeles Lakers\nPhoenix Suns\nSacramento Kings\nDallas Mavericks\nHouston Rockets\nMemphis Grizzlies\nNew Orleans Pelicans\nSan Antonio Spurs",
+        "isVisible": true
+      },
+      "locations.txt": {
+        "text": "Boston, Massachusetts\nNew York City, New York\nNew York City, New York\nPhiladelphia, Pennsylvania\nToronto, Ontario\nChicago, Illinois\nCleveland, Ohio\nDetroit, Michigan\nIndianapolis, Indiana\nMilwaukee, Wisconsin\nAtlanta, Georgia\nCharlotte, North Carolina\nMiami, Florida\nOrlando, Florida\nWashington, D.C.\nDenver, Colorado\nMinneapolis, Minnesota\nOklahoma City, Oklahoma\nPortland, Oregon\nSalt Lake City, Utah\nSan Francisco, California\nLos Angeles, California\nLos Angeles, California\nPhoenix, Arizona\nSacramento, California\nDallas, Texas\nHouston, Texas\nMemphis, Tennessee\nNew Orleans, Louisiana\nSan Antonio, Texas",
+        "isVisible": true
+      },
+      "arenas.txt": {
+        "text": "TD Garden\nBarclays Center\nMadison Square Garden\nWells Fargo Center\nScotiabank Arena\nUnited Center\nRocket Mortgage FieldHouse\nLittle Caesars Arena\nBankers Life Fieldhouse\nFiserv Forum\nState Farm Arena\nSpectrum Center\nAmerican Airlines Arena\nAmway Center\nCapital One Arena\nPepsi Center\nTarget Center\nChesapeake Energy Arena\nModa Center\nVivint Smart Home Arena\nChase Center\nStaples Center\nStaples Center\nTalking Stick Resort Arena\nGolden 1 Center\nAmerican Airlines Center\nToyota Center\nFedExForum\nSmoothie King Center\nAT&T Center",
+        "isVisible": true
+      },
+      "capacities.txt": {
+        "text": "18624\n17732\n19812\n21600\n19800\n20917\n20562\n20491\n17923\n18717\n15711\n19077\n19600\n18846\n20356\n19520\n19356\n18203\n19441\n19911\n18064\n19060\n18997\n18055\n17500\n19200\n18055\n18119\n16867\n18418",
+        "isVisible": true
+      },
+      "championshipwins.txt": {
+        "text": "17\n0\n2\n3\n1\n6\n1\n3\n0\n1\n1\n0\n3\n0\n1\n0\n0\n1\n1\n0\n6\n0\n16\n0\n1\n1\n2\n0\n0\n5",
+        "isVisible": true
+      }
+    }
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-03-25T13:27:00.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-03-25T13:27:00.087+00:00\",\"changed\":[\"cloned from \\\"CSA U3 Data for Social Good Project D PBT_2022\\\"\"],\"cloned_from\":\"CSA U3 Data for Social Good Project D PBT_2022\"},{\"changed_at\":\"2022-03-25 13:27:02 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-03-25T13:27:00.087+00:00\",\"changed\":[\"cloned from \\\"CSA U3 Data for Social Good Project D PBT_2022\\\"\"],\"cloned_from\":\"CSA U3 Data for Social Good Project D PBT_2022\"},{\"changed_at\":\"2022-03-25 13:27:02 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 23:57:13 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 23:57:14 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 23:59:40 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-01 00:12:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
