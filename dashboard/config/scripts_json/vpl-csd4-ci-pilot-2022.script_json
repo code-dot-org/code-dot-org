@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-29 04:12:28 UTC",
+    "serialized_at": "2022-03-31 20:58:36 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -65,7 +65,7 @@
     },
     {
       "key": "lesson-3",
-      "name": "Explore design mode and events in App Lab",
+      "name": "Build a digital prototype in App Lab",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": false,
@@ -197,9 +197,32 @@
       "key": "70a4033d-1ac1-40a8-9c02-b4d75a8648f5",
       "position": 1,
       "properties": {
+        "progression_name": "Overview"
       },
       "seeding_key": {
         "activity_section.key": "70a4033d-1ac1-40a8-9c02-b4d75a8648f5",
+        "lesson_activity.key": "d63e92e6-555c-4749-8432-f7d0e91af673"
+      }
+    },
+    {
+      "key": "bd988911-a2cf-43f6-abf6-cde0d4f284f2",
+      "position": 2,
+      "properties": {
+        "progression_name": "Design a digital prototype"
+      },
+      "seeding_key": {
+        "activity_section.key": "bd988911-a2cf-43f6-abf6-cde0d4f284f2",
+        "lesson_activity.key": "d63e92e6-555c-4749-8432-f7d0e91af673"
+      }
+    },
+    {
+      "key": "0d6025d7-3f4c-4b8a-9f09-66ea864a334a",
+      "position": 3,
+      "properties": {
+        "progression_name": "Add events to your digital prototype"
+      },
+      "seeding_key": {
+        "activity_section.key": "0d6025d7-3f4c-4b8a-9f09-66ea864a334a",
         "lesson_activity.key": "d63e92e6-555c-4749-8432-f7d0e91af673"
       }
     },
@@ -231,6 +254,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U4L2"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -246,6 +272,380 @@
       "level_keys": [
         "VPL-CSD-pilot-S22-CI-Unit_Overview_U4L2"
       ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U4L3"
+        ],
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U4L3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "b679d526-44ff-4218-b867-5f6d3389db78"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-Unit_PSP-U4L3"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-U4L5"
+        ],
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-U4L5"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "b679d526-44ff-4218-b867-5f6d3389db78"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-2-week1-U4L5"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-vocab-c4u-U4L6"
+        ],
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-vocab-c4u-U4L6"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "b679d526-44ff-4218-b867-5f6d3389db78"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-vocab-c4u-U4L6"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod4-lesson3-overview"
+        ],
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod4-lesson3-overview"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "70a4033d-1ac1-40a8-9c02-b4d75a8648f5"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod4-lesson3-overview"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Design a digital prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U4 App Lab Design Mode Video"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "bd988911-a2cf-43f6-abf6-cde0d4f284f2"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U4 App Lab Design Mode Video"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "progression": "Design a digital prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 1_2021"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "bd988911-a2cf-43f6-abf6-cde0d4f284f2"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-U4 Model Design 1_2021"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "progression": "Design a digital prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 2_2021"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "bd988911-a2cf-43f6-abf6-cde0d4f284f2"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-U4 Model Design 2_2021"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "progression": "Design a digital prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 3_2021"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "bd988911-a2cf-43f6-abf6-cde0d4f284f2"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-U4 Model Design 3_2021"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "progression": "Design a digital prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 4_2021"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "bd988911-a2cf-43f6-abf6-cde0d4f284f2"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-U4 Model Design 4_2021"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "progression": "Design a digital prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 5_2021"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "bd988911-a2cf-43f6-abf6-cde0d4f284f2"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-U4 Model Design 5_2021"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 8,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "progression": "Design a digital prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 6_2021"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "bd988911-a2cf-43f6-abf6-cde0d4f284f2"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-U4 Model Design 6_2021"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Add events to your digital prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U4 App Lab Events Video"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "0d6025d7-3f4c-4b8a-9f09-66ea864a334a"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U4 App Lab Events Video"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 10,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "progression": "Add events to your digital prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Program 1_2021"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "0d6025d7-3f4c-4b8a-9f09-66ea864a334a"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-U4 Model Program 1_2021"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 11,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "progression": "Add events to your digital prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Program 1.5_2021"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "0d6025d7-3f4c-4b8a-9f09-66ea864a334a"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-U4 Model Program 1.5_2021"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 12,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "progression": "Add events to your digital prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Program 2_2021"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "0d6025d7-3f4c-4b8a-9f09-66ea864a334a"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-U4 Model Program 2_2021"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 13,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "progression": "Add events to your digital prototype"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Program 4_2021"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "0d6025d7-3f4c-4b8a-9f09-66ea864a334a"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-U4 Model Program 4_2021"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -259,6 +659,198 @@
         "lesson_group.key": "",
         "script.name": "vpl-csd4-ci-pilot-2022",
         "activity_section.key": "b679d526-44ff-4218-b867-5f6d3389db78"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-Unit_PSP-U4L3",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U4L3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "b679d526-44ff-4218-b867-5f6d3389db78"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-2-week1-U4L5",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-U4L5"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "b679d526-44ff-4218-b867-5f6d3389db78"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-vocab-c4u-U4L6",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-vocab-c4u-U4L6"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "b679d526-44ff-4218-b867-5f6d3389db78"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod4-lesson3-overview",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod4-lesson3-overview"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "70a4033d-1ac1-40a8-9c02-b4d75a8648f5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U4 App Lab Design Mode Video",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U4 App Lab Design Mode Video"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "bd988911-a2cf-43f6-abf6-cde0d4f284f2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-U4 Model Design 1_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 1_2021"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "bd988911-a2cf-43f6-abf6-cde0d4f284f2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-U4 Model Design 2_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 2_2021"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "bd988911-a2cf-43f6-abf6-cde0d4f284f2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-U4 Model Design 3_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 3_2021"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "bd988911-a2cf-43f6-abf6-cde0d4f284f2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-U4 Model Design 4_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 4_2021"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "bd988911-a2cf-43f6-abf6-cde0d4f284f2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-U4 Model Design 5_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 5_2021"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "bd988911-a2cf-43f6-abf6-cde0d4f284f2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-U4 Model Design 6_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Design 6_2021"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "bd988911-a2cf-43f6-abf6-cde0d4f284f2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U4 App Lab Events Video",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U4 App Lab Events Video"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "0d6025d7-3f4c-4b8a-9f09-66ea864a334a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-U4 Model Program 1_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Program 1_2021"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "0d6025d7-3f4c-4b8a-9f09-66ea864a334a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-U4 Model Program 1.5_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Program 1.5_2021"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "0d6025d7-3f4c-4b8a-9f09-66ea864a334a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-U4 Model Program 2_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Program 2_2021"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "0d6025d7-3f4c-4b8a-9f09-66ea864a334a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-U4 Model Program 4_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-U4 Model Program 4_2021"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd4-ci-pilot-2022",
+        "activity_section.key": "0d6025d7-3f4c-4b8a-9f09-66ea864a334a"
       }
     }
   ],
