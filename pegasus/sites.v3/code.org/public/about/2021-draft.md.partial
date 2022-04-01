@@ -37,7 +37,7 @@ Millions of teachers and educators, our Regional Partner and International Partn
 <h2 class="purple-block">2021 Highlights</h2>
 
 <h2 class="highlight">We helped students make cross-curricular connections to CS ➤</h2>
-To help students make meaningful connections between CS and other disciplines — and to help teachers from a variety of backgrounds more easily begin teaching the subject — we introduced a new set of cross-curricular modules, projects, and lessons called Computer Science (CS) Connections. This curriculum allows students to learn computer science concepts at the same time as learning other subjects like language arts, math, and science. 
+To help students make meaningful connections between CS and other disciplines — and to help teachers from a variety of backgrounds more easily begin teaching the subject — we introduced a new set of cross-curricular modules, projects, and lessons called <a href="https://code.org/educate/csc" target="_blank">Computer Science (CS) Connections</a>. This curriculum allows students to learn computer science concepts at the same time as learning other subjects like language arts, math, and science. 
 
 
 
@@ -56,7 +56,7 @@ The curriculum considers cultural references and learning styles in every facet.
 
 
 <h2 class="highlight">We showed students CS in the real world ➤</h2>
-We're excited to help bring computer science lessons to life for students of all ages. CS Journeys is a program designed for students to explore how CS impacts their world and envision their own future possibilities.
+We're excited to help bring computer science lessons to life for students of all ages. <a href="https://code.org/csjourneys" target="_blank">CS Journeys</a> is a program designed for students to explore how CS impacts their world and envision their own future possibilities.
 
 From virtual field trips with NASA and live class chats with Star Wars creators, students are encouraged to uncover CS in unexpected places. We hope these unique experiences will inspire students to continue their CS journey, both in the classroom and beyond. 
 
@@ -75,7 +75,7 @@ This year, our founder and CEO Hadi Partovi <a href="https://codeorg.medium.com/
 
 
 <h2 class="highlight">We reported on foundational CS course participation by demographics and passed policy in most states ➤</h2>
-We developed and produced the 5th annual State of Computer Science Education report in partnership with the CSTA and ECEP Alliance. The report includes state policy data and Access Report data. For the first time, we reported on enrollment in foundational computer science courses overall and by demographics. 
+We developed and produced the 5th annual <a href="https://advocacy.code.org/stateofcs" target="_blank">State of Computer Science Education</a> report in partnership with the CSTA and ECEP Alliance. The report includes state policy data and Access Report data. For the first time, we reported on enrollment in foundational computer science courses overall and by demographics. 
 
 Highlights include:
 - For the first time, over half of all high schools offer CS (51%)
@@ -98,7 +98,7 @@ Last year was the first time in Code.org history there were more new accounts cr
 
 
 
-<h2 class="highlight">We achieved milestones in our localization work and continued to drive systemic change. ➤</h2>
+<h2 class="highlight">We achieved milestones in our localization work and continued to drive systemic change ➤</h2>
 We hit our goal of translating our primary education content into 30 languages leading to large increases in CS Fundamentals usage (especially in South Korea, Japan, Poland, France, and Brazil).
 
 In 2021, Code.org contributed to and helped launch <a href="https://www.brookings.edu/essay/building-skills-for-life-how-to-expand-and-improve-computer-science-education-around-the-world/" target="_blank">the global CS report created by the Brookings Institute</a>, which validated that 70 countries already teach CS in primary, secondary, or both. We also worked with the Inter-American Development Bank to author an assessment of CS education in seven Caribbean countries, which will result in a two-country pilot and recommendations for ministries of education to adopt CS. 
@@ -150,11 +150,11 @@ The table below shows the total cost breakdown of our headline achievements sinc
 
 | <strong>Areas of effort / Achievements in 2013 - 2021</strong>                                                                                                                                                                                           | <strong>Fully-loaded cost (including admin)</strong> |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| ----------------------------------- |
-| **Diversity and Global Marketing:** Diversity and Global Marketing: Hour of Code campaign, 1.3 billion served, reaching 20% of students globally. 49% female participation.                                                                       | $17.9 million                       |
-| **Curriculum + Code Studio learning platform:** ~330 hours of coursework created, 1.8M teacher accounts. 56 million student accounts. 46% female, 46% underrepresented racial/ethnic groups.                                                       | $43.4 million                       |
+| **Diversity and Global Marketing:** Diversity and Global Marketing: Hour of Code campaign, 1.3 billion served, reaching 20% of students globally. 48% female participation.                                                                       | $17.9 million                       |
+| **Curriculum + Code Studio learning platform:** ~330 hours of coursework created, 2M teacher accounts. 67 million student accounts. 45% female, 50% underrepresented racial/ethnic groups.                                                       | $43.4 million                       |
 | **Partnership + professional learning:**  60 [regional partners](/educate/regional-partner) and 998 facilitators who have prepared over 113,000 new CS teachers across grades K-12. ($16.1M spent on grades K-5, $44.7M on grades 6-12.)| $74.7 million                      |
-| **Government affairs:** Policies changed in 50 states, $176M in state budgets allocated to computer science.                                                                                                                          | $12.8 million |
-| **International:** Translation of curriculum into 67 languages, support for 104 international partnerships.                                                                                                                             | $8.7 million |                         |
+| **Government affairs:** Policies changed in 50 states, $241M in state budgets allocated to computer science.                                                                                                                          | $12.8 million |
+| **International:** Translation of CSF curriculum into 30 languages, Hour of Code activities in 67 languages, and support for 110 international partnerships.                                                                                                                             | $8.7 million |                         |
 | <strong>TOTAL SPENT (2013-2021)</strong>                                                                                                                                                                                                                 | $157.5 million                       |
 
 ## Other reports
