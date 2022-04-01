@@ -1252,8 +1252,6 @@ pl:
           student_description: 'Faza 2 Online: Mieszane letnie studia'
         equity-pd:
           lessons:
-            Code.org Equity PD:
-              name: Równość PD z Code. org
             Necessary Background:
               name: Niezbędne przygotowanie
         science-PD2:
@@ -3472,6 +3470,7 @@ pl:
               description_student: Czy kiedykolwiek chciałeś grać w szkole w gry wideo? Na tej lekcji będziesz tworzyć swoje własne!
               description_teacher: Na tych zajęciach internetowych uczniowie będą się uczyć, czym są zdarzenia oraz jak komputery z nich korzystają w programach takich, jak gry wideo. Uczniowie będą pracować nad łamigłówkami sprawiając, że program reaguje na zdarzenia (jak naciskanie klawiszy ze strzałkami). Na końcu łamigłówki uczniowie będą mieli możliwość spersonalizowano grę przy pomocy różnych prędkości i dźwięków.
           student_description: Wybierz swoją drużynę i zrób grę w koszykówkę
+          name: piłka do kosza
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -4048,6 +4047,7 @@ pl:
               description_student: Czy kiedykolwiek chciałeś grać w szkole w gry wideo? Na tej lekcji będziesz tworzyć swoje własne!
               description_teacher: Na tych zajęciach internetowych uczniowie będą się uczyć, czym są zdarzenia oraz jak komputery z nich korzystają w programach takich, jak gry wideo. Uczniowie będą pracować nad łamigłówkami sprawiając, że program reaguje na zdarzenia (jak naciskanie klawiszy ze strzałkami). Na końcu łamigłówki uczniowie będą mieli możliwość spersonalizowano grę przy pomocy różnych prędkości i dźwięków.
           student_description: Mieszaj i łącz różne dyscypliny sportowe
+          name: zawody
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -6819,6 +6819,7 @@ pl:
               name: 'Minecraft: Podróż Bohatera'
               description_teacher: Na tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym ich środowisku. Ta lekcja jest odpowiednia dla wszystkich uczniów, którzy potrafią czytać (w wieku 6+). Młodsi uczniowie prawdopodobnie nie ukończą samouczka, ale będą mieli mnóstwo zabawy, pracując nad łamigłówkami przez godzinę. Uczniowie szkół średnich w większości ukończą samouczek i na koniec będą mieli trochę czasu, aby zagrać w dowolną grę.
           student_description: Minecraft powraca na Godzinę Kodowania z najnowszą serią zadań! Koduj podróżując po świecie Minecraftu.
+          name: bohater
         applab-intro-staging:
           title: Wprowadzenie do inscenizacji App Lab
           lessons:
@@ -9208,6 +9209,7 @@ pl:
               description_student: Na tej lekcji uczniowie w każdym wieku zapoznają się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla uczniów w każdym wieku, ale wymaga umiejętności czytania. Ta aktywność wymaga dźwięku, ponieważ narzędzie zostało zbudowane, aby reagować na muzykę.
               description_teacher: Na tej lekcji uczniowie w każdym wieku zapoznają się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla uczniów w każdym wieku, ale wymaga umiejętności czytania. Ta aktywność wymaga dźwięku, ponieważ narzędzie zostało zbudowane, aby reagować na muzykę.
           student_description: Stwórz kod swojej własnej imprezy tanecznej i udostępnij ją swoim znajomym.
+          name: taniec
         frozen-2018-test-b:
           title: Nowy skrypt zamrożony
           lessons:
@@ -9222,6 +9224,7 @@ pl:
               name: 'Minecraft: Wodna podróż'
               description_teacher: Na tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym ich środowisku. Ta lekcja jest odpowiednia dla wszystkich uczniów, którzy potrafią czytać (w wieku 6+). Młodsi uczniowie prawdopodobnie nie ukończą samouczka, ale będą mieli mnóstwo zabawy, pracując nad łamigłówkami przez godzinę. Uczniowie szkół średnich w większości ukończą samouczek i na koniec będą mieli trochę czasu, aby zagrać w dowolną grę.
           student_description: Minecraft powraca z zupełnie nowymi zajęciami! Wykorzystaj swoją kreatywność i umiejętność rozwiązywania problemów, aby odkrywać i budować podwodne światy za pomocą kodu.
+          name: wodny
         sconyers:
           title: Plac zabaw Tracey
           lessons:
@@ -12919,7 +12922,7 @@ pl:
           description: Stwórz kod swojej własnej imprezy tanecznej i udostępnij ją swoim znajomym.
           lessons:
             Dance Party:
-              name: Potańcówka
+              name: Potańcówka (2019)
               description_student: Na tej lekcji uczniowie w każdym wieku zapoznają się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla uczniów w każdym wieku, ale wymaga umiejętności czytania. Ta aktywność wymaga dźwięku, ponieważ narzędzie zostało zbudowane, aby reagować na muzykę.
               description_teacher: Na tej lekcji uczniowie w każdym wieku zapoznają się z kodowaniem i informatyką w bezpiecznym, wspierającym środowisku. Ta lekcja została zaprojektowana dla uczniów w każdym wieku, ale wymaga umiejętności czytania. Ta aktywność wymaga dźwięku, ponieważ narzędzie zostało zbudowane, aby reagować na muzykę.
           student_description: Stwórz kod swojej własnej imprezy tanecznej i udostępnij ją swoim znajomym.
@@ -16421,8 +16424,6 @@ pl:
               name: Programy USE (tylko AppLab)
             MODIFY Programs:
               name: Programy MODIFY (AppLab -> Widget -> AppLab)
-            Does Code.org Like Your Dog?:
-              name: Czy Code.org lubi Twojego psa?
             dog:
               name: Czy Code.org lubi Twojego psa?
             AI for Oceans:
@@ -20311,8 +20312,7 @@ pl:
           title: '"Witaj świecie!"'
         csa-self-paced-pl:
           lessons:
-            Navigating the Code.org learning platform:
-              name: Poruszanie się po platformie edukacyjnej Code.org
+            Navigating the Codeorg learning platform:
               description_teacher: |-
                 **Dowiesz się, jak:**
 
@@ -22231,7 +22231,7 @@ pl:
               description_student: Używaj pętli i wzorców, aby ukończyć ilustracje.
               description_teacher: Wracając do pętli, uczniowie uczą się rysować poprzez powtarzanie w pętli prostych sekwencji instrukcji. W poprzedniej lekcji pętle były użyte do przemierzania labiryntu i zbierania skarbów. Tutaj, pętle tworzą wzorce. Pod koniec tego etapu uczniowie będą mieli możliwość tworzenia własnych obrazów za pomocą pętli.
               key: Scena oceanu z pętlami
-            The Big Event Jr.:
+            The Big Event Jr:
               name: Wielkie Zdarzenie Jr.
               description_student: Idź i krzycz, gdy Twoi nauczyciele naciskają przyciski na wielkim pilocie.
               description_teacher: Zdarzenia są świetnym sposobem na urozmaicenie napisanego wcześniej algorytmu. Czasami chcesz, aby Twój program był w stanie odpowiedzieć na działanie użytkownika w odpowiednim momencie. Właśnie do tego służą zdarzenia.
@@ -22777,7 +22777,7 @@ pl:
               description_student: Utwórz szkice swoj własnej aplikacji na smartfona.
               description_teacher: Na tej lekcji uczniowie będą stwierdzać, że informatyka może pomóc ludziom w prawdziwym życiu.  Najpierw uczniowie wykazują empatię względem kilku fikcyjnych użytkowników smartfona, aby pomóc im znaleźć "właściwą aplikację", które stanowi odpowiedź na ich potrzeby. Wówczas uczniowie okazują empatię i kreatywność, aby naszkicować swoją własną aplikacje na smartfona, która stanowi odpowiedź na potrzeby jednego dodatkowego użytkownika.
               key: Odpowiednia aplikacja
-            The Big Event Jr.:
+            The Big Event Jr:
               name: Wielkie Zdarzenie Jr.
               description_student: Idź i krzycz, gdy Twój nauczyciel naciska przyciski na wielkim pilocie.
               description_teacher: Zdarzenia są świetnym sposobem na urozmaicenie napisanego wcześniej algorytmu. Czasami chcesz, aby Twój program był w stanie odpowiedzieć na działanie użytkownika w odpowiednim momencie. Właśnie do tego służą zdarzenia.
@@ -22860,7 +22860,7 @@ pl:
               name: Stawianie STOP świństwom online
               description_student: Na tej lekcji dowiesz się, czym jest złośliwość oraz co robić, jeśli spotka Cię ona w Internecie.
               key: Stawianie STOP świństwom online
-            My Robotic Friends Jr.:
+            My Robotic Friends Jr:
               name: Moi robotyczni przyjaciele Jr.
               description_student: Na tej lekcji będziesz udawać, że koledzy z klasy są robotami i zaprogramujesz ich tak, aby budowali wzorce piramid z kubeczków.
               description_teacher: Używając zbioru symboli zamiast kodu uczniowie będą projektować algorytmy, aby instruować "robota", jak ma ustawiać kubeczki według różnych wzorców. Uczniowie będą po kolei wcielać się w rolę robota, reagując tylko na algorytmy zdefiniowane przez rówieśników. W tym segmencie uczniom przedstawia się połączenia pomiędzy symbolami a działaniami, różnicę pomiędzy algorytmem a programem oraz cenną umiejętność debugowania.
@@ -22881,7 +22881,7 @@ pl:
               name: Tworzenie grafiki przy pomocy kodu
               description_student: Twórz piękne obrazki programując Artystę.
               description_teacher: Na tej lekcji uczniowie przejmą sterowania Artystą, aby dokończyć rysunki na ekranie. Ta scena Artysty pozwoli uczniom tworzyć obrazy o coraz wyższym stopniu złożoności, korzystając z nowych bloków takich jak "idź do przodu o 100 pikseli" oraz "skręć w prawo o 90 stopni".
-            My Loopy Robotic Friends Jr.:
+            My Loopy Robotic Friends Jr:
               name: Moi zapętleni robotyczni przyjaciele Jr.
               description_student: Na tej lekcji będziesz ponownie programować swoich kolegów z klasy, ale używając pętli będziesz mógł rozwiązywać większe i bardziej złożone problemy.
               description_teacher: Tworząc wstępną wersję zajęć "Moi robotyczni przyjaciele", uczniowie zajmują się większymi i bardziej skomplikowanymi projektami. W celu zaprojektowanie swoich "robotów", aby ukończyć większe konstrukcje, uczniowie będą musieli identyfikować wzorce powtórzone w swoich instrukcjach, które można zastąpić pętlą.
@@ -23687,6 +23687,8 @@ pl:
             lesson-20:
               name: Jednostka 1 - Sprawdzian
               description_student: Gratulacje, ukończyłeś swoją pierwszą jednostkę! Oceń swoje postępy w ramach Sprawdzianu Jednostki 1.
+            lesson-21:
+              name: Konsola
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -23749,6 +23751,7 @@ pl:
               name: Praktyka FRQ
             lesson-5:
               name: Jednostka 2 Sprawdzian
+              description_student: Oceń swoje postępy w sprawdzianie z Jednostki 2.
             lesson-6:
               name: Zmienne
             lesson-7:
@@ -23769,6 +23772,8 @@ pl:
               name: Drukowanie obiektów
             lesson-15:
               name: Zakres
+            lesson-16:
+              name: Konsola
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -23782,6 +23787,12 @@ pl:
               name: Praktyka FRQ
             lesson-2:
               name: Jednostka 3 - Sprawdzian
+            lesson-5:
+              name: Pętle dla (for)
+            lesson-12:
+              name: Znajdowanie duplikatów
+            lesson-16:
+              name: Konsola
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -23951,6 +23962,35 @@ pl:
           lessons:
             lesson-1:
               name: Witaj na Code.org
+              description_student: |-
+                Czeka Cię:
+
+                -   Wprowadzenie do Code.org.
+                -   Dowiesz się, jak zaangażować się w te moduły profesjonalnej nauki.
+
+                **Przybliżony czas:** 20 minut
+              description_teacher: |-
+                Czeka Cię:
+
+                -   Wprowadzenie do Code.org.
+                -   Dowiesz się, jak zaangażować się w te moduły profesjonalnej nauki.
+
+                **Przybliżony czas:** 20 minut
+            lesson-2:
+              description_student: |-
+                Czeka Cię:
+
+                -   Wprowadzenie do kursu AP Computer Science A
+                -   Poznasz programowe podejście Code.org do CSA
+
+                **Przybliżony czas:** 40 minut
+              description_teacher: |-
+                Czeka Cię:
+
+                -   Wprowadzenie do kursu AP Computer Science A
+                -   Poznasz programowe podejście Code.org do CSA
+
+                **Przybliżony czas:** 40 minut
           name: self-paced-pl-csa1-2022
           title: 'Jednostka 1 - Moduł 1: Powitanie'
         self-paced-pl-csa2-2022:
@@ -24458,6 +24498,7 @@ pl:
               display_name: Pokaż, co wiesz
             lessonGroup-5:
               display_name: Piaskownica
+          name: csa6-2022
         csa7-2022:
           lessons:
             Writing Methods to Satisfy Conditions:
@@ -24643,6 +24684,10 @@ pl:
               description_teacher: To pojawia się dla nauczycieli / facylitatorów
             lesson-3:
               name: Model Lekcja 1 - Jednostka 1 Lekcja 2
+            lesson-9:
+              name: Planowanie lekcji
+            lesson-10:
+              name: Rola nauczyciela
           lesson_groups:
             lessonGroup-2:
               display_name: Synchroniczna Część 1
@@ -24781,7 +24826,21 @@ pl:
               key: Przeglądanie Twoich refleksji
             Welcome to "Teaching Computer Science Fundamentals":
               key: Witamy na "Podstawach Nauczania Informatyki"
+            CS Teaching and Student Practices:
+              key: Nauczanie informatyki i praktyki uczniów
             Lesson Planning:
               key: Planowanie lekcji
             Next steps:
               key: Następne kroki
+        vpl-csd2-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Oiczenia fizyczne
+        vpl-csd3-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Oiczenia fizyczne
+        hello-world-csc:
+          title: Witaj świecie
+        csd-playground:
+          name: csd-playground

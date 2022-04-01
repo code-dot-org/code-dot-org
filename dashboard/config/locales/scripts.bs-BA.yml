@@ -2707,10 +2707,6 @@ bs:
           lesson_groups:
             required:
               display_name: Pregled
-        dance-2019:
-          lessons:
-            Dance Party:
-              name: Plesna zabava
         k5-onlinepd-2019:
           lesson_groups:
             k5_next_steps:
@@ -3619,6 +3615,10 @@ bs:
           lessons:
             lesson-6:
               name: Varijable
+        csa3-2022:
+          lessons:
+            lesson-5:
+              name: Od-Do-Za Petlje
         cs4all-invasive-species:
           lessons:
             lesson-12:

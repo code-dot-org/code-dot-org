@@ -339,6 +339,35 @@
         },
         "courseF_variables_predict": {
           "f6429fe0f1a76611670df7e1234af936": "Apakah nama anda?"
+        },
+        "courseC19_playLab_EOC5_2021": {
+          "5cec903c4d41c49412a70a94d54999ee": "Anda boleh menulis sesuatu.",
+          "3e11a2dc6edb909c47778bed75a81769": "Teks di sini"
+        },
+        "courseC19_playLab_EOC6_2021": {
+          "5cec903c4d41c49412a70a94d54999ee": "Anda boleh menulis sesuatu.",
+          "3e11a2dc6edb909c47778bed75a81769": "Teks di sini"
+        },
+        "courseC19_playLab_sample1_2021": {
+          "5cec903c4d41c49412a70a94d54999ee": "Anda boleh menulis sesuatu.",
+          "3e11a2dc6edb909c47778bed75a81769": "Teks di sini"
+        },
+        "courseC19_playLab_sample2_2021": {
+          "5cec903c4d41c49412a70a94d54999ee": "Anda boleh menulis sesuatu.",
+          "3e11a2dc6edb909c47778bed75a81769": "Teks di sini"
+        },
+        "courseC_data wizard_2021": {
+          "d93dfc24c6ce3e53d8ee07416c743e60": "Seekor anjing!",
+          "336ad881e37e713ba0325500a8fa1f00": " anjing!",
+          "27944770529dd15319a983bee8951560": "Seekor kucing!",
+          "22f6f6821f4d6d0a08653935b466ac2f": " kucing!",
+          "1c64ef29c853587fbe94f69f05272b79": "Seekor burung!",
+          "5b402e6ea05e847a076e03ad74420c45": " burung!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Seekor naga!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " naga!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Kira semua haiwan!",
+          "f62038e77820419cd978f7b722da560a": "Berapa banyak yang akan muncul?",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Kira Haiwan Peliharaan"
         }
       }
     }

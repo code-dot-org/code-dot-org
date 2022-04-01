@@ -283,6 +283,10 @@ hr:
             new Behavior(moving_north_and_looping, []): krećući se prema sjeveru i
               petljajući
             new Behavior(moving_south_and_looping, []): krećući se prema jugu i petljajući
+      gamelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': sekunde
       gamelab_getProp:
         options:
           PROPERTY:

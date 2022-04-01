@@ -2,6 +2,8 @@
 uk:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: створити новий спрайт {ANIMATION_NAME} у {LOCATION}
       Dancelab_alternateMoves:
         text: "{GROUP} чергують кожні {N} \nтакти {MOVE1} та {MOVE2}"
         options:
@@ -1039,6 +1041,12 @@ uk:
         text: будучи перетягуваним
       gamelab_edgesDisplace:
         text: краї блокують рух {SPRITE}
+      gamelab_everySeconds:
+        text: 'повторювати кожні {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': секунди
+            '"frames"': кадри
       gamelab_followingTargets:
         text: наступні цілі
       gamelab_getAllSprites:
@@ -1187,6 +1195,8 @@ uk:
           EFFECT:
             '"burst"': вибух
             '"rain"': дощ
+      gamelab_makeNewScaledSprite:
+        text: створити новий спрайт {ANIMATION_NAME} у {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: створити новий спрайт {ANIMATION_NAME} у {LOCATION}
       gamelab_makeNumSprites:
