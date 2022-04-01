@@ -6,10 +6,11 @@ import * as shapes from '../shapes';
 import {KeyCodes} from '@cdo/apps/constants';
 import {selectors} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {PromptType} from '../redux/spritelabInput';
-import {animations as animationsApi} from '@cdo/apps/clientApi';
+import {animationSourceUrl} from '../redux/animationList';
 class SpritelabInput extends React.Component {
   static propTypes = {
     animationList: shapes.AnimationList.isRequired,
+    channelId: PropTypes.string,
     inputList: PropTypes.arrayOf(
       PropTypes.shape({
         promptType: PropTypes.string,
@@ -61,8 +62,13 @@ class SpritelabInput extends React.Component {
     const spriteMap = {};
 
     Object.entries(animationPropsByKey).forEach(animation => {
-      spriteMap[`image_${animation[1].name}`] =
-        animation[1].sourceUrl || animationsApi.basePath(animation[0]) + '.png'; // this could be confusing since we expect sourceUrl to be null sometimes?
+      const animationKey = animation[0];
+      const animationData = animation[1];
+      const url =
+        animationData.sourceUrl ||
+        // If custom animation, generate URL from animations API
+        animationSourceUrl(animationKey, animationData, this.props.channelId);
+      spriteMap[`image_${animation[1].name}`] = url;
     });
     return spriteMap;
   });
@@ -242,6 +248,7 @@ const styles = {
 
 export default connect(state => ({
   animationList: state.animationList,
+  channelId: state.pageConstants.channelId,
   inputList: state.spritelabInputList || [],
   isRunning: selectors.isRunning(state),
   isPaused: selectors.isPaused(state)
