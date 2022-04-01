@@ -62,10 +62,12 @@ class ActivitiesController < ApplicationController
       end
 
       unless share_failure || ActivityConstants.skipped?(params[:new_result].to_i)
-        @level_source = LevelSource.find_identical_or_create(
-          @level,
-          params[:program].strip_utf8mb4
-        )
+        MultipleDatabasesTransitionHelper.use_writer_connection do
+          @level_source = LevelSource.find_identical_or_create(
+            @level,
+            params[:program].strip_utf8mb4
+          )
+        end
         if share_filtering_error
           FirehoseClient.instance.put_record(
             :analysis,
