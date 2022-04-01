@@ -11,15 +11,15 @@ class BackpackTest < ActiveSupport::TestCase
     @storage_id = fake_storage_id_for_user_id(@user.id)
   end
 
-  test 'find_or_create creates storage_app if backpack does not exist' do
+  test 'find_or_create creates project if backpack does not exist' do
     Backpack.stubs(:storage_id_for_user_id).with(@user.id).returns(@storage_id)
     backpack = Backpack.find_or_create(@user.id, 'fake-ip')
-    assert backpack.storage_app_id > 0
+    assert backpack.project_id > 0
     assert_equal @user.id, backpack.user_id
   end
 
   # storage apps with value hidden are hidden from a user's projects list
-  test 'storage_app that is created has value hidden = true' do
+  test 'project that is created has value hidden = true' do
     Backpack.stubs(:storage_id_for_user_id).with(@user.id).returns(@storage_id)
     Backpack.any_instance.stubs(:storage_id_for_user_id).with(@user.id).returns(@storage_id)
     backpack = Backpack.find_or_create(@user.id, 'fake-ip')
