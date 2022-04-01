@@ -2346,11 +2346,11 @@ class User < ApplicationRecord
     return unless user_storage_id
 
     user_storage_apps = StorageApps.new(user_storage_id)
-    storage_app_ids = user_storage_apps.get_all_storage_app_ids
+    project_ids = user_storage_apps.get_all_storage_app_ids
 
     # Unfeature any featured projects owned by the user
     FeaturedProject.
-      where(storage_app_id: storage_app_ids, unfeatured_at: nil).
+      where(project_id: project_ids, unfeatured_at: nil).
       where.not(featured_at: nil).
       update_all(unfeatured_at: Time.now)
 
