@@ -62,18 +62,22 @@
     "mini_toolbox": "false",
     "validation_enabled": "false",
     "hide_pause_button": "false",
-    "start_animations": "{\r\n   \"orderedKeys\":[\r\n      \"tarantula\",\r\n      \"wolf\",\r\n      \"snake\",\r\n      \"shark\",\r\n      \"pirahna\",\r\n      \"car_group\",\r\n      \"tarantula_sunglasses\",\r\n      \"wolf_sunglasses\",\r\n      \"snake_sunglasses\",\r\n      \"shark_sunglasses\",\r\n      \"piranha_sunglasses\",\r\n      \"background\"\r\n   ],\r\n   \"propsByKey\":{\r\n      \"background\":{\r\n         \"name\":\"background\",\r\n         \"categories\":[\r\n            \"backgrounds\"\r\n         ],\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\r\n            \"x\":400,\r\n            \"y\":400\r\n         },\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\".NWp1RQPGtRTBhG07c6kz1Sz1HmroWQP\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/.NWp1RQPGtRTBhG07c6kz1Sz1HmroWQP/thebadguys_background.png\",\r\n         \"sourceSize\":{\r\n            \"x\":400,\r\n            \"y\":400\r\n         }\r\n      },\r\n      \"tarantula\":{\r\n         \"name\":\"tarantula\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":400,\"y\":309},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"VIUVapEVJ2UHJRmvBYt4Y1HEbL_Uz3Tr\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/VIUVapEVJ2UHJRmvBYt4Y1HEbL_Uz3Tr/thebadguys_tarantula.png\",\r\n         \"sourceSize\":{\"x\":400,\"y\":309}\r\n      },\r\n      \"tarantula_sunglasses\":{\r\n         \"name\":\"tarantula_sunglasses\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":400,\"y\":309},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"a6A7za6N68UpVY7_6jH08FqOPOzUnmPA\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/a6A7za6N68UpVY7_6jH08FqOPOzUnmPA/thebadguys_tarantula_sunglasses.png\",\r\n         \"sourceSize\":{\"x\":400,\"y\":309}\r\n      },\r\n      \"wolf\":{\r\n         \"name\":\"wolf\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":188,\"y\":550},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"5KReYAkLJWaRp7h86klokv5iD3gKo.ze\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/5KReYAkLJWaRp7h86klokv5iD3gKo.ze/thebadguys_wolf.png\",\r\n         \"sourceSize\":{\"x\":188,\"y\":550}\r\n      },\r\n      \"wolf_sunglasses\":{\r\n         \"name\":\"wolf_sunglasses\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":188,\"y\":550},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"QxmkhpFCUe8oaJZb2UtMGlEgcjyjUnin\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/QxmkhpFCUe8oaJZb2UtMGlEgcjyjUnin/thebadguys_wolf_sunglasses.png\",\r\n         \"sourceSize\":{\"x\":188,\"y\":550}\r\n      },\r\n      \"snake\":{\r\n         \"name\":\"snake\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":267,\"y\":400},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"6YSpapx5lsjbLvTzhvB7jhuFgaBZYTeZ\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/6YSpapx5lsjbLvTzhvB7jhuFgaBZYTeZ/thebadguys_snake.png\",\r\n         \"sourceSize\":{\"x\":267,\"y\":400}\r\n      },\r\n      \"snake_sunglasses\":{\r\n         \"name\":\"snake_sunglasses\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":267,\"y\":400},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"IeU1ICLEPBvWgZV1Dn37sCULXg10yDLT\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/IeU1ICLEPBvWgZV1Dn37sCULXg10yDLT/thebadguys_snake_sunglasses.png\",\r\n         \"sourceSize\":{\"x\":267,\"y\":400}\r\n      },\r\n      \"shark\":{\r\n         \"name\":\"shark\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":259,\"y\":350},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"IBCWkq9Ho4GwW5LBSNOKqDly3C0ZsInb\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/IBCWkq9Ho4GwW5LBSNOKqDly3C0ZsInb/thebadguys_shark.png\",\r\n         \"sourceSize\":{\"x\":259,\"y\":350}\r\n      },\r\n      \"shark_sunglasses\":{\r\n         \"name\":\"shark_sunglasses\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":259,\"y\":350},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"QbGNAYyROJ8b54sVVQycbL95Q9oAlzpV\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/QbGNAYyROJ8b54sVVQycbL95Q9oAlzpV/thebadguys_shark_sunglasses.png\",\r\n         \"sourceSize\":{\"x\":259,\"y\":350}\r\n      },\r\n      \"pirahna\":{\r\n         \"name\":\"pirahna\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":345,\"y\":400},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"5FEXaHVYwT.z_.tB9Pdc8wLYcS6pYGjI\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/5FEXaHVYwT.z_.tB9Pdc8wLYcS6pYGjI/thebadguys_pirahna.png\",\r\n         \"sourceSize\":{\"x\":345,\"y\":400}\r\n      },\r\n      \"piranha_sunglasses\":{\r\n         \"name\":\"piranha_sunglasses\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":345,\"y\":400},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"Tr98JLLtz3Uu5fuaJnOO.bRFuoWMgboS\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/Tr98JLLtz3Uu5fuaJnOO.bRFuoWMgboS/thebadguys_piranha_sunglasses.png\",\r\n         \"sourceSize\":{\"x\":345,\"y\":400}\r\n      },\r\n      \"car_group\":{\r\n         \"name\":\"car_group\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":269,\"y\":275},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"kDvn7JokDQqhoR5QCseAUhdcv_u6DhwS\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/kDvn7JokDQqhoR5QCseAUhdcv_u6DhwS/thebadguys_car_group.png\",\r\n         \"sourceSize\":{\"x\":269,\"y\":275}\r\n      }\r\n   }\r\n}",
-    "short_instructions": "Create your own program with the Bad Guys!",
+    "start_animations": "{\r\n   \"orderedKeys\":[\r\n      \"tarantula\",\r\n      \"wolf\",\r\n      \"snake\",\r\n      \"shark\",\r\n      \"pirahna\",\r\n      \"marmalade\",\r\n      \"foxington\",\r\n      \"fluffit\",\r\n      \"luggins\",\r\n      \"tarantula_sunglasses\",\r\n      \"wolf_sunglasses\",\r\n      \"snake_sunglasses\",\r\n      \"shark_sunglasses\",\r\n      \"piranha_sunglasses\",\r\n      \"background\",\r\n      \"background3\",\r\n      \"background4\",\r\n      \"background5\",\r\n      \"background2\"\r\n   ],\r\n   \"propsByKey\":{\r\n      \"background\":{\r\n         \"name\":\"background\",\r\n         \"categories\":[\r\n            \"backgrounds\"\r\n         ],\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\r\n            \"x\":400,\r\n            \"y\":400\r\n         },\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\".NWp1RQPGtRTBhG07c6kz1Sz1HmroWQP\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/.NWp1RQPGtRTBhG07c6kz1Sz1HmroWQP/thebadguys_background.png\",\r\n         \"sourceSize\":{\r\n            \"x\":400,\r\n            \"y\":400\r\n         }\r\n      },\r\n      \"background2\":{\r\n         \"name\":\"background2\",\r\n         \"categories\":[\r\n            \"backgrounds\"\r\n         ],\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\r\n            \"x\":400,\r\n            \"y\":400\r\n         },\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"0gnAYVjglEazMzRUruJUruzm9EuCLA9u\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/0gnAYVjglEazMzRUruJUruzm9EuCLA9u/thebadguys_background2.png\",\r\n         \"sourceSize\":{\r\n            \"x\":400,\r\n            \"y\":400\r\n         }\r\n      },\r\n      \"background3\":{\r\n         \"name\":\"background3\",\r\n         \"categories\":[\r\n            \"backgrounds\"\r\n         ],\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\r\n            \"x\":400,\r\n            \"y\":400\r\n         },\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"m0p0d3bPyp59SRd0Kq6tmG5aNSmU_9vc\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/m0p0d3bPyp59SRd0Kq6tmG5aNSmU_9vc/thebadguys_background3.png\",\r\n         \"sourceSize\":{\r\n            \"x\":400,\r\n            \"y\":400\r\n         }\r\n      },\r\n      \"background4\":{\r\n         \"name\":\"background4\",\r\n         \"categories\":[\r\n            \"backgrounds\"\r\n         ],\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\r\n            \"x\":400,\r\n            \"y\":400\r\n         },\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"dI9bQYlJ.Lk8VsGrWZuFh2XQThSGJz63\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/dI9bQYlJ.Lk8VsGrWZuFh2XQThSGJz63/thebadguys_background4.png\",\r\n         \"sourceSize\":{\r\n            \"x\":400,\r\n            \"y\":400\r\n         }\r\n      },\r\n      \"background5\":{\r\n         \"name\":\"background5\",\r\n         \"categories\":[\r\n            \"backgrounds\"\r\n         ],\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\r\n            \"x\":400,\r\n            \"y\":400\r\n         },\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"w2t8BwRIKupVTV4c0n1dlkDEDVBNJa.M\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/w2t8BwRIKupVTV4c0n1dlkDEDVBNJa.M/thebadguys_background5.png\",\r\n         \"sourceSize\":{\r\n            \"x\":400,\r\n            \"y\":400\r\n         }\r\n      },\r\n      \"tarantula\":{\r\n         \"name\":\"tarantula\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":373,\"y\":281},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"AqQBU1iLeyeMcEz_QHd0ygEJanajG75k\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/AqQBU1iLeyeMcEz_QHd0ygEJanajG75k/thebadguys_tarantula.png\",\r\n         \"sourceSize\":{\"x\":373,\"y\":281}\r\n      },\r\n      \"tarantula_sunglasses\":{\r\n         \"name\":\"tarantula_sunglasses\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":373,\"y\":281},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"nXuE1Mes83mDmdCJI31bnMVLf9zW9vvg\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/nXuE1Mes83mDmdCJI31bnMVLf9zW9vvg/thebadguys_tarantula_sunglasses.png\",\r\n         \"sourceSize\":{\"x\":373,\"y\":281}\r\n      },\r\n      \"wolf\":{\r\n         \"name\":\"wolf\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":182,\"y\":520},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"i16i9uw1eEHe0ed2JfiQJctdNb4hZ33A\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/i16i9uw1eEHe0ed2JfiQJctdNb4hZ33A/thebadguys_wolf.png\",\r\n         \"sourceSize\":{\"x\":182,\"y\":520}\r\n      },\r\n      \"wolf_sunglasses\":{\r\n         \"name\":\"wolf_sunglasses\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":182,\"y\":520},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"J3YGR3V.J9gp3UEjZZHxov3Ko2MlSIQi\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/J3YGR3V.J9gp3UEjZZHxov3Ko2MlSIQi/thebadguys_wolf_sunglasses.png\",\r\n         \"sourceSize\":{\"x\":182,\"y\":520}\r\n      },\r\n      \"snake\":{\r\n         \"name\":\"snake\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":208,\"y\":380},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"X1AgB8ai_Vin73yj0I52EtsKIFs0yHvH\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/X1AgB8ai_Vin73yj0I52EtsKIFs0yHvH/thebadguys_snake.png\",\r\n         \"sourceSize\":{\"x\":208,\"y\":380}\r\n      },\r\n      \"snake_sunglasses\":{\r\n         \"name\":\"snake_sunglasses\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":208,\"y\":380},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"ErtyT2xVqC4okaP8JiFWzk_GoihR2RFG\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/ErtyT2xVqC4okaP8JiFWzk_GoihR2RFG/thebadguys_snake_sunglasses.png\",\r\n         \"sourceSize\":{\"x\":208,\"y\":380}\r\n      },\r\n      \"shark\":{\r\n         \"name\":\"shark\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":255,\"y\":331},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"xoz.uMedMu9m9dl6XgTQr2OkwulRYQNW\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/xoz.uMedMu9m9dl6XgTQr2OkwulRYQNW/thebadguys_shark.png\",\r\n         \"sourceSize\":{\"x\":255,\"y\":331}\r\n      },\r\n      \"shark_sunglasses\":{\r\n         \"name\":\"shark_sunglasses\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":255,\"y\":331},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"QbGNAYyROJ8b54sVVQycbL95Q9oAlzpV\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/QbGNAYyROJ8b54sVVQycbL95Q9oAlzpV/thebadguys_shark_sunglasses.png\",\r\n         \"sourceSize\":{\"x\":255,\"y\":331}\r\n      },\r\n      \"pirahna\":{\r\n         \"name\":\"pirahna\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":276,\"y\":370},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"Ms52OxAsa_eSmDLInO1VKry.sl1tEZ_0\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/Ms52OxAsa_eSmDLInO1VKry.sl1tEZ_0/thebadguys_pirahna.png\",\r\n         \"sourceSize\":{\"x\":276,\"y\":370}\r\n      },\r\n      \"piranha_sunglasses\":{\r\n         \"name\":\"piranha_sunglasses\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":276,\"y\":370},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"Tr98JLLtz3Uu5fuaJnOO.bRFuoWMgboS\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/Tr98JLLtz3Uu5fuaJnOO.bRFuoWMgboS/thebadguys_piranha_sunglasses.png\",\r\n         \"sourceSize\":{\"x\":276,\"y\":370}\r\n      },\r\n      \"marmalade\":{\r\n         \"name\":\"marmalade\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":273,\"y\":395},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"0Pl7WrO_hidZBtUCB2yFJzDdLcufOGeI\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/0Pl7WrO_hidZBtUCB2yFJzDdLcufOGeI/thebadguys_marmalade.png\",\r\n         \"sourceSize\":{\"x\":273,\"y\":395}\r\n      },\r\n      \"luggins\":{\r\n         \"name\":\"luggins\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":364,\"y\":398},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"kil9cQjt9cv1hFNi0OL.13R5lTGprHlN\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/kil9cQjt9cv1hFNi0OL.13R5lTGprHlN/thebadguys_luggins.png\",\r\n         \"sourceSize\":{\"x\":364,\"y\":398}\r\n      },\r\n      \"fluffit\":{\r\n         \"name\":\"fluffit\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":100,\"y\":394},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"n.6Dx8un6YrzygwqecC4gVfIiGdc4XKn\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/n.6Dx8un6YrzygwqecC4gVfIiGdc4XKn/thebadguys_fluffit.png\",\r\n         \"sourceSize\":{\"x\":100,\"y\":394}\r\n      },\r\n      \"foxington\":{\r\n         \"name\":\"foxington\",\r\n         \"frameCount\":1,\r\n         \"frameSize\":{\"x\":112,\"y\":395},\r\n         \"looping\":true,\r\n         \"frameDelay\":2,\r\n         \"version\":\"O2uEQxhgCbuSWkWjinT4QxK.oN6nrwTY\",\r\n         \"sourceUrl\":\"/api/v1/animation-library/level_animations/O2uEQxhgCbuSWkWjinT4QxK.oN6nrwTY/thebadguys_foxington.png\",\r\n         \"sourceSize\":{\"x\":112,\"y\":395}\r\n      }\r\n   }\r\n}",
+    "short_instructions": "Code with the Bad Guys!",
     "instructions_icon": "thebadguys_tarantula",
-    "preload_asset_list": null
+    "long_instructions": "### Code with The Bad Guys!\r\nMake a game or animation starring Ms. Tarantula, Mr. Wolf, and more!\r\nIf you're new to coding, start [here](https://code.org/helloworld), then come back to make a Sprite Lab project with The Bad Guys.",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "level_num": "custom",
   "game_id": 64,
-  "created_at": "2022-03-28T19:25:57.000Z",
-  "user_id": 9,
   "published": true,
+  "created_at": "2022-03-28T19:25:57.000Z",
+  "level_num": "custom",
+  "user_id": 9,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-03-23T11:38:24.847+00:00\",\"changed\":[\"cloned from \\\"New Sprite Lab Project\\\"\"],\"cloned_from\":\"New Sprite Lab Project\"},{\"changed_at\":\"2022-03-23 11:55:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"use_default_sprites\",\"soft_buttons\",\"preload_asset_list\"],\"changed_by_id\":4,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2022-03-23 12:10:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_animation_mode\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":4,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2022-03-23 12:14:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":4,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2022-03-23 12:15:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":4,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2022-03-23 09:33:18 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-23 09:54:36 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-23 10:00:33 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-23 10:02:57 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-23 10:13:40 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-23 10:14:25 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"mini_toolbox\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-23 10:19:02 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-23 10:21:49 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-23 10:22:51 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-23 10:51:42 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-29 15:32:14 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-03-29 15:32:45 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-03-29 15:37:40 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-03-29 15:41:34 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-03-29 19:37:11 +0000\",\"changed\":[\"toolbox_blocks\",\"block_pools\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-03-29 19:58:47 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-03-29 20:01:44 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-03-29 21:26:10 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-03-23T11:38:24.847+00:00\",\"changed\":[\"cloned from \\\"New Sprite Lab Project\\\"\"],\"cloned_from\":\"New Sprite Lab Project\"},{\"changed_at\":\"2022-03-23 11:55:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"use_default_sprites\",\"soft_buttons\",\"preload_asset_list\"],\"changed_by_id\":4,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2022-03-23 12:10:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_animation_mode\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":4,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2022-03-23 12:14:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":4,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2022-03-23 12:15:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":4,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2022-03-23 09:33:18 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-23 09:54:36 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-23 10:00:33 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-23 10:02:57 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-23 10:13:40 -0400\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-23 10:14:25 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"mini_toolbox\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-23 10:19:02 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-23 10:21:49 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-23 10:22:51 -0400\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-23 10:51:42 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-03-29 15:32:14 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-03-29 15:32:45 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-03-29 15:37:40 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-03-29 15:41:34 +0000\",\"changed\":[\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-03-29 19:37:11 +0000\",\"changed\":[\"toolbox_blocks\",\"block_pools\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-03-29 19:58:47 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-03-29 20:01:44 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-03-29 21:26:10 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-03-30 18:47:14 +0000\",\"changed\":[\"toolbox_blocks\",\"short_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-03-30 18:48:31 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-03-31 12:04:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-03-31 13:54:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-03-31 14:39:27 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-03-31 14:41:00 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-03-31 14:42:20 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-03-31 14:45:35 +0000\",\"changed\":[\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-03-31 15:11:26 +0000\",\"changed\":[\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"encrypted_examples\",\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -97,7 +101,7 @@
                       <field name="ANIMATION_NAME">"snake"</field>
                       <value name="LOCATION">
                         <block type="gamelab_location_picker">
-                          <field name="LOCATION">{"x":105,"y":295}</field>
+                          <field name="LOCATION">{"x":93,"y":301}</field>
                         </block>
                       </value>
                       <next>
@@ -105,7 +109,7 @@
                           <field name="ANIMATION_NAME">"wolf"</field>
                           <value name="LOCATION">
                             <block type="gamelab_location_picker">
-                              <field name="LOCATION">{"x":173,"y":263}</field>
+                              <field name="LOCATION">{"x":163,"y":273}</field>
                             </block>
                           </value>
                           <next>
@@ -113,7 +117,7 @@
                               <field name="ANIMATION_NAME">"pirahna"</field>
                               <value name="LOCATION">
                                 <block type="gamelab_location_picker">
-                                  <field name="LOCATION">{"x":353,"y":327}</field>
+                                  <field name="LOCATION">{"x":362,"y":345}</field>
                                 </block>
                               </value>
                               <next>
@@ -121,7 +125,7 @@
                                   <field name="ANIMATION_NAME">"tarantula"</field>
                                   <value name="LOCATION">
                                     <block type="gamelab_location_picker">
-                                      <field name="LOCATION">{"x":38,"y":352}</field>
+                                      <field name="LOCATION">{"x":34,"y":365}</field>
                                     </block>
                                   </value>
                                   <next>
@@ -144,96 +148,6 @@
                   </next>
                 </block>
               </next>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_spriteClicked">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"tarantula"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSay">
-              <field name="SPEECH">I'm Ms. Tarantula, the crew's in-house tech wizard!</field>
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"tarantula"</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_spriteClicked">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"snake"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSay">
-              <field name="SPEECH">I'm Mr. Snake, the serpentine, safe-cracking machine!</field>
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"snake"</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_spriteClicked">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"wolf"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSay">
-              <field name="SPEECH">Rounding out the crew is me, the big, bad wolf!</field>
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"wolf"</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_spriteClicked">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"shark"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSay">
-              <field name="SPEECH">I'm Mr. Shark, Master of Disguise!</field>
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"shark"</field>
-                </block>
-              </value>
-            </block>
-          </next>
-        </block>
-        <block type="gamelab_spriteClicked">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"pirahna"</field>
-            </block>
-          </value>
-          <next>
-            <block type="gamelab_spriteSay">
-              <field name="SPEECH">I'm the brave and crazy Mr. Piranha!</field>
-              <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation">
-                  <field name="ANIMATION">"pirahna"</field>
-                </block>
-              </value>
             </block>
           </next>
         </block>
@@ -333,12 +247,14 @@
               </block>
             </value>
           </block>
-          <block type="gamelab_makeBurst">
-            <field name="EFFECT">"burst"</field>
-            <field name="ANIMATION_NAME">"tarantula"</field>
-            <value name="NUM">
-              <block type="math_number">
-                <field name="NUM">10</field>
+          <block type="BadGuys_setSizeAll_dropdown">
+            <field name="SIZE">0.50</field>
+          </block>
+          <block type="gamelab_mirrorSprite">
+            <field name="DIRECTION">"left"</field>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <field name="ANIMATION">"tarantula"</field>
               </block>
             </value>
           </block>
@@ -350,7 +266,7 @@
             </value>
           </block>
           <block type="BadGuys_setSize_dropdown">
-            <field name="SIZE">300</field>
+            <field name="SIZE">0.50</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
                 <field name="ANIMATION">"tarantula"</field>
@@ -422,7 +338,7 @@
             </value>
           </block>
           <block type="gamelab_mirrorSprite">
-            <field name="DIRECTION">"right"</field>
+            <field name="DIRECTION">"left"</field>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
                 <field name="ANIMATION">"tarantula"</field>
@@ -515,15 +431,42 @@
           <block type="gamelab_allSpritesWithAnimation">
             <field name="ANIMATION">"tarantula"</field>
           </block>
-          <block type="gamelab_getAllSprites"/>
+          <block type="gamelab_makeBurst">
+            <field name="EFFECT">"burst"</field>
+            <field name="ANIMATION_NAME">"tarantula"</field>
+            <value name="NUM">
+              <block type="math_number">
+                <field name="NUM">10</field>
+              </block>
+            </value>
+          </block>
           <block type="gamelab_getProp">
             <field name="PROPERTY">"scale"</field>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <field name="ANIMATION">"tarantula"</field>
+              </block>
+            </value>
           </block>
-          <block type="gamelab_isCostumeEqual">
-            <field name="COSTUME">"tarantula"</field>
+          <block type="gamelab_isTouchingEdges">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <field name="ANIMATION">"tarantula"</field>
+              </block>
+            </value>
           </block>
-          <block type="gamelab_isTouchingEdges"/>
-          <block type="gamelab_isTouchingSprite"/>
+          <block type="gamelab_isTouchingSprite">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <field name="ANIMATION">"tarantula"</field>
+              </block>
+            </value>
+            <value name="TARGET">
+              <block type="gamelab_allSpritesWithAnimation">
+                <field name="ANIMATION">"pirahna"</field>
+              </block>
+            </value>
+          </block>
         </category>
         <category name="Locations">
           <block type="gamelab_randomLocation"/>
@@ -666,11 +609,6 @@
         <category name="Math">
           <block type="math_arithmetic">
             <field name="OP">ADD</field>
-            <value name="A">
-              <block type="math_number">
-                <field name="NUM">0</field>
-              </block>
-            </value>
             <value name="B">
               <block type="math_number">
                 <field name="NUM">0</field>

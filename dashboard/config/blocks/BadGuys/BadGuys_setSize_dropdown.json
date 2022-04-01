@@ -12,24 +12,24 @@
         "name": "SIZE",
         "options": [
           [
-            "extra large",
-            "300"
-          ],
-          [
-            "large",
-            "200"
-          ],
-          [
-            "medium",
-            "100"
+            "extra small",
+            "0.50"
           ],
           [
             "small",
-            "75"
+            "0.75"
           ],
           [
-            "extra small",
-            "50"
+            "medium",
+            "1.00"
+          ],
+          [
+            "large",
+            "2.00"
+          ],
+          [
+            "extra large",
+            "3.00"
           ]
         ]
       }
