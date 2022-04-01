@@ -1432,7 +1432,7 @@ FeedbackUtils.prototype.checkForEmptyContainerBlockFailure_ = function() {
     const emptyBlockInfo = emptyBlock.getProcedureInfo();
     const findUsages = block =>
       block.type === emptyBlockInfo.callType &&
-      block.getTitleValue('NAME') === emptyBlockInfo.name;
+      block.getFieldValue('NAME') === emptyBlockInfo.name;
 
     if (Blockly.mainBlockSpace.getAllUsedBlocks().filter(findUsages).length) {
       return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
@@ -1877,7 +1877,7 @@ FeedbackUtils.prototype.hasUnusedParam_ = function() {
             (block.type === 'parameters_get' ||
               block.type === 'functional_parameters_get' ||
               block.type === 'variables_get') &&
-            block.getTitleValue('VAR') === paramName
+            block.getFieldValue('VAR') === paramName
           );
         });
       })
@@ -1912,7 +1912,7 @@ FeedbackUtils.prototype.hasUnusedFunction_ = function() {
   var userDefs = [];
   var callBlocks = {};
   Blockly.mainBlockSpace.getAllUsedBlocks().forEach(function(block) {
-    var name = block.getTitleValue('NAME');
+    var name = block.getFieldValue('NAME');
     if (/^procedures_def/.test(block.type) && block.userCreated) {
       userDefs.push(name);
     } else if (/^procedures_call/.test(block.type)) {
