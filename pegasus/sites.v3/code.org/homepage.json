@@ -1,15 +1,12 @@
 {
   "pages": {
-    "homepage": "thebadguys"
+    "homepage": ["thebadguys"]
   },
 
   "banners": {
     "thebadguys": {
       "dcdo": "thebadguys-promotion",
       "desktopImage": "/images/marketing/homepage-thebadguys-background.jpg",
-      "items:": [
-
-      ],
       "actions": [
         {
           "type": "image",
