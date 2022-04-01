@@ -202,7 +202,11 @@ exports.load = function(assetUrl, id) {
       'smallRhombusLightBlue30',
       'smallRhombusBlue30',
       'smallRhombusPurple30',
-      'smallRhombusMagenta30'
+      'smallRhombusMagenta30',
+      'hexagonYellow',
+      'triangleGreen',
+      'squareOrange',
+      'trapezoidRed'
     ];
 
     var mapping = {};
