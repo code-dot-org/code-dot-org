@@ -1100,10 +1100,8 @@ class LevelTest < ActiveSupport::TestCase
     assert_includes error.message, 'Game required for non-custom levels'
   end
 
-  test 'key list' do
-    # Make sure there are no levels from test fixtures for which computing a
-    # level key raises errors.
-    Level.key_list
+  test 'can compute keys for all levels from test fixtures without errors' do
+    Level.all.map(&:key)
   end
 
   test "get search options" do

@@ -2,6 +2,8 @@
 in:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: crwdns2887212:0[ANIMATION_NAME]crwdnd2887212:0[0]crwdnd2887212:0[LOCATION]crwdnd2887212:0[1]crwdne2887212:0
       Dancelab_alternateMoves:
         text: crwdns2071154:0[GROUP]crwdnd2071154:0[0]crwdnd2071154:0[N]crwdnd2071154:0[1]crwdnd2071154:0[MOVE1]crwdnd2071154:0[2]crwdnd2071154:0[MOVE2]crwdnd2071154:0[3]crwdne2071154:0
         options:
@@ -1073,6 +1075,12 @@ in:
         text: crwdns2486178:0[COLOR]crwdnd2486178:0[0]crwdnd2486178:0[LOC1]crwdnd2486178:0[1]crwdnd2486178:0[LOC2]crwdnd2486178:0[2]crwdne2486178:0
       gamelab_edgesDisplace:
         text: crwdns169039:0[SPRITE]crwdnd169039:0[0]crwdne169039:0
+      gamelab_everySeconds:
+        text: crwdns2887214:0[N]crwdnd2887214:0[0]crwdnd2887214:0[UNIT]crwdnd2887214:0[1]crwdne2887214:0
+        options:
+          UNIT:
+            '"seconds"': crwdns2887216:0crwdne2887216:0
+            '"frames"': crwdns2887218:0crwdne2887218:0
       gamelab_followingTargets:
         text: crwdns2478912:0crwdne2478912:0
       gamelab_getAllSprites:
@@ -1225,6 +1233,8 @@ in:
             '"pop"': crwdns2692827:0crwdne2692827:0
             '"rain"': crwdns2692829:0crwdne2692829:0
             '"spiral"': crwdns2696057:0crwdne2696057:0
+      gamelab_makeNewScaledSprite:
+        text: crwdns2887220:0[ANIMATION_NAME]crwdnd2887220:0[0]crwdnd2887220:0[LOCATION]crwdnd2887220:0[1]crwdne2887220:0
       gamelab_makeNewSpriteAnon:
         text: crwdns401076:0[ANIMATION_NAME]crwdnd401076:0[0]crwdnd401076:0[LOCATION]crwdnd401076:0[1]crwdne401076:0
       gamelab_makeNumSprites:

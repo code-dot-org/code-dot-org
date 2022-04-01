@@ -2,6 +2,8 @@
 vi:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: tạo nhân vật {ANIMATION_NAME} mới tại {LOCATION}
       Dancelab_alternateMoves:
         text: "{GROUP} luân phiên giữa \n{MOVE1} và {MOVE2} sau mỗi {N} nhịp"
         options:
@@ -1006,6 +1008,8 @@ vi:
             '"y"': toạ độ y
             '"direction"': hướng chuyển động
             '"speed"': tốc độ
+      gamelab_changeVarBy:
+        text: thay đổi {VARIABLE} bởi {VAL}
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} chạm {SPRITE2}"
         options:
@@ -1052,6 +1056,12 @@ vi:
         text: vẽ đường {COLOR} {LOC1} {LOC2}
       gamelab_edgesDisplace:
         text: cạnh chặn {SPRITE} di chuyển
+      gamelab_everySeconds:
+        text: 'mỗi {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': giây
+            '"frames"': khuôn hình
       gamelab_followingTargets:
         text: đi theo mục tiêu
       gamelab_getAllSprites:
@@ -1144,7 +1154,7 @@ vi:
       gamelab_jumpTo:
         text: "{SPRITE} nhảy đến {LOCATION}"
       gamelab_keyPressed:
-        text: "{CONDITION} {KEY} ép"
+        text: "{CONDITION} {KEY} được bấm"
         options:
           CONDITION:
             '"when"': khi nào
@@ -1202,6 +1212,8 @@ vi:
           EFFECT:
             '"pop"': nổ
             '"rain"': mưa
+      gamelab_makeNewScaledSprite:
+        text: tạo nhân vật {ANIMATION_NAME} mới tại {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: tạo nhân vật {ANIMATION_NAME} mới tại {LOCATION}
       gamelab_makeNumSprites:
@@ -1419,6 +1431,7 @@ vi:
             '"width"': chiều rộng
             '"height"': chiều cao
       gamelab_setSpeed_dropdown:
+        text: đặt tốc độ của {SPRITE} thành {SIZE}
         options:
           SIZE:
             '1': extra slow
@@ -1432,12 +1445,8 @@ vi:
         text: "vẽ bảng điểm \n{SPRITE1COSTUME}điểm{VAR1}{SPRITE2COSTUME}điểm{VAR2}mục
           tiêu{SPRITE3COSTUME}"
       gamelab_setupSim:
-        text: |-
-          thiết lập mô phỏng với
-          {SPRITE1N}{SPRITE1COSTUME}Tốc độ{SPRITE1SPEED}
-          {SPRITE2N}{SPRITE2COSTUME}Tốc độ{SPRITE2SPEED}
-          Thu thập
-          {SPRITE3N}{SPRITE3COSTUME}
+        text: thiết lập mô phỏng với {SPRITE1N}{SPRITE1COSTUME}tốc độ{SPRITE1SPEED}{SPRITE2N}{SPRITE2COSTUME}tốc
+          độ{SPRITE2SPEED} thu thập {SPRITE3N}{SPRITE3COSTUME}
       gamelab_showTitleScreen:
         text: Hiển thị màn hình tiêu đề {BREAK} tiêu đề {TITLE} văn bản {SUBTITLE}
       gamelab_spriteClicked:
@@ -1807,12 +1816,8 @@ vi:
           quần thể:{SPRITE2N}
           {TOGGLE}vi rút
       Mikelab_setupSim:
-        text: |-
-          thiết lập mô phỏng với
-          {SPRITE1N}{SPRITE1COSTUME}Tốc độ{SPRITE1SPEED}
-          {SPRITE2N}{SPRITE2COSTUME}Tốc độ{SPRITE2SPEED}
-          Thu thập
-          {SPRITE3N}{SPRITE3COSTUME}
+        text: thiết lập mô phỏng với {SPRITE1N}{SPRITE1COSTUME}tốc độ{SPRITE1SPEED}{SPRITE2N}{SPRITE2COSTUME}tốc
+          độ{SPRITE2SPEED} thu thập {SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
         options:
           CORNER:

@@ -2,33 +2,78 @@
 bg:
   data:
     variable_names:
+      "???": "???"
+      Blue: Синьо
+      Green: Зелено
+      Red: Червено
       actor: актьор
       age: възраст
+      animal1score: животно1точки
+      animal1speed: животно1скорост
+      animal2score: животно2точки
+      animal2speed: животно2скорост
       answer: oтговор
       binary: двоичен код
       birds: птици
-      cats: всички котки
+      blue1: синьо1
+      blue2: синьо2
+      buttonHeight: бутонВисочина
+      buttonWidth: бутонШирочина
+      cat_score: котка_точки
+      cat_speed: котка_скорост
+      cats: котки
+      choice: избор
+      codeName: кодИме
       color: цвят
       counter: брояч
-      dogs: всички кучета
+      counter2: брояч2
+      direction: посока
+      dog_score: куче_точки
+      dog_speed: куче_скорост
+      dogs: кучета
+      dragons: дракони
+      enemy_speed: враг_скорост
+      energy: енергия
+      firstName: първоИме
+      gather: съберете
+      green1: зелено1
+      green2: зелено2
+      guess: предположение
       height: височина
       honey: мед
+      i: i
       left: наляво
+      legangle: крак_ъгъл
+      leglength: крак_дължина
       length: дължина
+      level: ниво
+      meal: ястие
+      myName: моетоИме
       name: Име
       nectar: нектар
       planet: планета
+      player_score: играч_точки
       points: точки
       random: случаен
+      red1: червено1
+      red2: червено2
       repeat: повтори
+      repetitions: повторения
       right: надясно
       score: точки
+      score1: точки1
+      score2: точки2
+      screenHeight: екранВисочина
+      screenWidth: екранШирина
+      set sides: задайте страни
       shout: викам
       size: размер
       speed: скорост
-      startX: startX
-      startY: startY
+      startX: стартX
+      startY: стартY
       variable: променлива
       width: широчина
       wizard: магьосник
       x: x
+      your var 1: вашата променлива 1
+      your var 2: вашата променлива 2

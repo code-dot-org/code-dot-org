@@ -33949,7 +33949,7 @@ en:
               description_student: 
               description_teacher: 
             lesson-3:
-              name: Explore design mode and events in App Lab
+              name: Build a digital prototype in App Lab
               description_student: 
               description_teacher: 
             lesson-4:
@@ -34047,7 +34047,83 @@ en:
               name: Unit wrap up
               description_student: 
               description_teacher: 
-          lesson_groups: {}
+            Introduction to AI and machine learning:
+              name: Introduction to AI and machine learning
+              description_student: |-
+                **You will:**
+
+                * Get an introduction to artificial intelligence and machine learning.
+                * Get a preview of the first week of the AI and Machine Learning unit content.
+
+                **Suggested time:** 25 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Get an introduction to artificial intelligence and machine learning.
+                * Get a preview of the first week of the AI and Machine Learning unit content.
+
+                **Suggested time:** 25 minutes
+            Train a machine learning model:
+              name: Train a machine learning model
+              description_student: |-
+                **You will:**
+
+                * Train a machine learning model using AI Lab.
+
+                **Suggested time:** 35 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Train a machine learning model using AI Lab.
+
+                **Suggested time:** 35 minutes
+            Engage with machine learning apps:
+              name: Engage with machine learning apps
+              description_student: |-
+                **You will:**
+
+                * Engage with machine learning apps in App Lab.
+
+                **Suggested time:** 20 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Engage with machine learning apps in App Lab.
+
+                **Suggested time:** 20 minutes
+            Consider real world implications:
+              name: Consider real world implications
+              description_student: |-
+                **You will:**
+
+                * Consider real-world implications of AI and machine learning.
+
+                **Suggested time:** 20 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Consider real-world implications of AI and machine learning.
+
+                **Suggested time:** 20 minutes
+            Unit wrap up:
+              name: Unit wrap up
+              description_student: |-
+                **You will:**
+
+                * Explore end of chapter projects.
+                * Make a plan for implementing the unit with your students.
+
+                **Suggested time:** 20 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Explore end of chapter projects.
+                * Make a plan for implementing the unit with your students.
+
+                **Suggested time:** 20 minutes
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Teaching AI and machine learning
           name: vpl-csd7-ci-pilot-2022
           title: 'Module 7: Preparing to Teach AI and Machine Learning'
           description_audience: ''
@@ -34093,10 +34169,18 @@ en:
           lessons:
             lesson-1:
               name: 'Hello World CSC '
+              description_student: 
+              description_teacher: 
             lesson-2:
               name: 'Ecosystems: Interactions, Energy & Dynamics'
             lesson-3:
               name: Biological Evolution
+              description_student: 
+              description_teacher: 
+            Hello World CSC:
+              name: Hello World CSC
+              description_student: In this lesson, you will learn to create and animate sprites and make them interactive using events.
+              description_teacher: 'In this **skill-building** lesson, students will learn to create and animate sprites and make them interactive using events. '
           lesson_groups: {}
           name: csc-pilot-2022-ecosystems
           title: ''
@@ -34114,6 +34198,10 @@ en:
               name: Coding My Time Capsule
             lesson-4:
               name: Gallery Walk
+            Poem Art:
+              name: Poem Art
+              description_student: 'Poetry is making art with words. Add visual effects and images to your own animated poem. '
+              description_teacher: "In this CS and ELA integrated lesson for new coders, students will animate a poem with code to illustrate the mood of a poem. Students will read and detect the mood of a poem. They will then find corresponding effects and images to help illustrate the poem's mood. Finally, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n"
           lesson_groups: {}
           name: csc-pilot-2022-timecapsule
           title: ''
@@ -34144,6 +34232,10 @@ en:
               name: Code Your Fable
             lesson-3:
               name: Share Your Fable
+            Hello World CSC:
+              name: Hello World CSC
+              description_student: In this lesson, you will learn to create and animate sprites and make them interactive using events.
+              description_teacher: 'In this **skill-building** lesson, students will learn to create and animate sprites and make them interactive using events. '
           lesson_groups: {}
           name: csc-pilot-2022-fables
           title: ''

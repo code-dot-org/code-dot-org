@@ -1,8 +1,6 @@
 !!! 5
 %html
   %head
-    = render inline: File.read(deploy_dir('shared/haml/hoc_onetrust_cookie_scripts.haml')), type: :haml
-
     =view :theme_common_head_before
 
     -unless page_translated?

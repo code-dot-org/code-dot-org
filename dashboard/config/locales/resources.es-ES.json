@@ -113,6 +113,429 @@
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Vídeo"
         },
+        "lesson_plans/courseb/2018": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings/courseb/2018": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum/courseb/2018": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary/courseb/2018": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings/coursea/2018": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum/coursea/2018": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary/coursea/2018": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/coursed/2018": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings/coursed/2018": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum/coursed/2018": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary/coursed/2018": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings/coursef/2018": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum/coursef/2018": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary/coursef/2018": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/express/2018": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings/express/2018": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum/express/2018": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary/express/2018": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings/coursee/2018": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum/coursee/2018": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary/coursee/2018": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings/coursec/2018": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum/coursec/2018": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary/coursec/2018": {
+          "name": "Vocabulario"
+        },
+        "code_introduced_1/csd/2018": {
+          "name": "Código introducido"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings_2/csd/2018": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum_2/csd/2018": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary_2/csd/2018": {
+          "name": "Vocabulario"
+        },
+        "code_introduced_3/csd/2018": {
+          "name": "Código introducido"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings_5/csd/2018": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum_5/csd/2018": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary_5/csd/2018": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings_4/csd/2018": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum_4/csd/2018": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary_4/csd/2018": {
+          "name": "Vocabulario"
+        },
+        "code_introduced_2/csd/2018": {
+          "name": "Código introducido"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings_3/csd/2018": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum_3/csd/2018": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary_3/csd/2018": {
+          "name": "Vocabulario"
+        },
+        "code_introduced/csd/2018": {
+          "name": "Código introducido"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings_1/csd/2018": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum_1/csd/2018": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary_1/csd/2018": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings/csd/2018": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum/csd/2018": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary/csd/2018": {
+          "name": "Vocabulario"
+        },
+        "curriculum_guide/coursea/2019": {
+          "name": "Guía del plan de estudios"
+        },
+        "lesson_plans/coursea/2019": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings/coursea/2019": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum/coursea/2019": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary/coursea/2019": {
+          "name": "Vocabulario"
+        },
+        "curriculum_guide/courseb/2019": {
+          "name": "Guía del plan de estudios"
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings/courseb/2019": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum/courseb/2019": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary/courseb/2019": {
+          "name": "Vocabulario"
+        },
+        "curriculum_guide/coursed/2019": {
+          "name": "Guía del plan de estudios"
+        },
+        "lesson_plans/coursed/2019": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings/coursed/2019": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum/coursed/2019": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary/coursed/2019": {
+          "name": "Vocabulario"
+        },
+        "curriculum_guide/coursef/2019": {
+          "name": "Guía del plan de estudios"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings/coursef/2019": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum/coursef/2019": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary/coursef/2019": {
+          "name": "Vocabulario"
+        },
+        "curriculum_guide/coursee/2019": {
+          "name": "Guía del plan de estudios"
+        },
+        "lesson_plans/coursee/2019": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings/coursee/2019": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum/coursee/2019": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary/coursee/2019": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/express/2019": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings/express/2019": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum/express/2019": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary/express/2019": {
+          "name": "Vocabulario"
+        },
+        "curriculum_guide/coursec/2019": {
+          "name": "Guía del plan de estudios"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings/coursec/2019": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum/coursec/2019": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary/coursec/2019": {
+          "name": "Vocabulario"
+        },
+        "teacher_forum/csd/2019": {
+          "name": "Foro de profesores"
+        },
+        "code_introduced_1/csd/2019": {
+          "name": "Código introducido"
+        },
+        "lesson_plans_2/csd/2019": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings_2/csd/2019": {
+          "name": "Asignaciones estándar"
+        },
+        "vocabulary_2/csd/2019": {
+          "name": "Vocabulario"
+        },
+        "code_introduced_3/csd/2019": {
+          "name": "Código introducido"
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings_5/csd/2019": {
+          "name": "Asignaciones estándar"
+        },
+        "vocabulary_5/csd/2019": {
+          "name": "Vocabulario"
+        },
+        "code_introduced_2/csd/2019": {
+          "name": "Código introducido"
+        },
+        "lesson_plans_3/csd/2019": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings_3/csd/2019": {
+          "name": "Asignaciones estándar"
+        },
+        "vocabulary_3/csd/2019": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans_4/csd/2019": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings_4/csd/2019": {
+          "name": "Asignaciones estándar"
+        },
+        "vocabulary_4/csd/2019": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings/csd/2019": {
+          "name": "Asignaciones estándar"
+        },
+        "vocabulary/csd/2019": {
+          "name": "Vocabulario"
+        },
+        "code_introduced/csd/2019": {
+          "name": "Código introducido"
+        },
+        "lesson_plans_1/csd/2019": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings_1/csd/2019": {
+          "name": "Asignaciones estándar"
+        },
+        "vocabulary_1/csd/2019": {
+          "name": "Vocabulario"
+        },
+        "code_introduced_1/csd/2017": {
+          "name": "Código introducido"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings_2/csd/2017": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum_2/csd/2017": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary_2/csd/2017": {
+          "name": "Vocabulario"
+        },
+        "code_introduced_3/csd/2017": {
+          "name": "Código introducido"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings_5/csd/2017": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum_5/csd/2017": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary_5/csd/2017": {
+          "name": "Vocabulario"
+        },
+        "code_introduced/csd/2017": {
+          "name": "Código introducido"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings_1/csd/2017": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum_1/csd/2017": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary_1/csd/2017": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/csd/2017": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings/csd/2017": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum/csd/2017": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary/csd/2017": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings_4/csd/2017": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum_4/csd/2017": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary_4/csd/2017": {
+          "name": "Vocabulario"
+        },
+        "code_introduced_2/csd/2017": {
+          "name": "Código introducido"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings_3/csd/2017": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum_3/csd/2017": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary_3/csd/2017": {
+          "name": "Vocabulario"
+        },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "Lista de Poemas",
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
@@ -516,7 +939,7 @@
         "unplugged-video-big-event/courseb/2021": {
           "name": "El Gran Evento",
           "url": "https://youtu.be/u0WV9shCoak",
-          "type": "Vídeo Sin Conexión"
+          "type": "Vídeo"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "El Gran Evento",
@@ -2630,6 +3053,120 @@
         },
         "website-for-a-purpose-reflect/csd/2021": {
           "type": "Guía de Proyecto"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings/pre-express/2020": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum/pre-express/2020": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary/pre-express/2020": {
+          "name": "Vocabulario"
+        },
+        "lesson_plans/express/2020": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings/express/2020": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum/express/2020": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary/express/2020": {
+          "name": "Vocabulario"
+        },
+        "curriculum_guide/courseb/2020": {
+          "name": "Guía del plan de estudios"
+        },
+        "lesson_plans/courseb/2020": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings/courseb/2020": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum/courseb/2020": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary/courseb/2020": {
+          "name": "Vocabulario"
+        },
+        "curriculum_guide/coursed/2020": {
+          "name": "Guía del plan de estudios"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings/coursed/2020": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum/coursed/2020": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary/coursed/2020": {
+          "name": "Vocabulario"
+        },
+        "curriculum_guide/coursec/2020": {
+          "name": "Guía del plan de estudios"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings/coursec/2020": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum/coursec/2020": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary/coursec/2020": {
+          "name": "Vocabulario"
+        },
+        "curriculum_guide/coursee/2020": {
+          "name": "Guía del plan de estudios"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings/coursee/2020": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum/coursee/2020": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary/coursee/2020": {
+          "name": "Vocabulario"
+        },
+        "curriculum_guide/coursea/2020": {
+          "name": "Guía del plan de estudios"
+        },
+        "lesson_plans/coursea/2020": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings/coursea/2020": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum/coursea/2020": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary/coursea/2020": {
+          "name": "Vocabulario"
+        },
+        "curriculum_guide/coursef/2020": {
+          "name": "Guía del plan de estudios"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "Plan de estudio"
+        },
+        "standard_mappings/coursef/2020": {
+          "name": "Asignaciones estándar"
+        },
+        "teacher_forum/coursef/2020": {
+          "name": "Foro de profesores"
+        },
+        "vocabulary/coursef/2020": {
+          "name": "Vocabulario"
         }
       }
     }

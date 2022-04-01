@@ -2,6 +2,8 @@
 hi:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: "{LOCATION} पर नया {ANIMATION_NAME} स्प्राइट बनाएं"
       Dancelab_alternateMoves:
         text: "{GROUP} प्रत्येक {N} संगीत प्रविधियों के बाद \n{MOVE1} और {MOVE2} को बदलता है"
         options:
@@ -1049,6 +1051,12 @@ hi:
         text: लाइन {COLOR}  {LOC1}  {LOC2} चित्रित करें
       gamelab_edgesDisplace:
         text: किनारे {SPRITE} को मूव होने से रोकते हैं
+      gamelab_everySeconds:
+        text: 'प्रत्येक {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': सेकंड
+            '"frames"': फ्रेम्स
       gamelab_followingTargets:
         text: लक्ष्यों का अनुसरण करना
       gamelab_getAllSprites:
@@ -1202,6 +1210,8 @@ hi:
             '"pop"': पॉप
             '"rain"': बारिश
             '"spiral"': घुमावदार
+      gamelab_makeNewScaledSprite:
+        text: "{LOCATION} पर नया {ANIMATION_NAME} स्प्राइट बनाएं"
       gamelab_makeNewSpriteAnon:
         text: "{LOCATION} पर नया {ANIMATION_NAME} स्प्राइट बनाएं"
       gamelab_makeNumSprites:

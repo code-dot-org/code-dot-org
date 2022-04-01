@@ -6,15 +6,15 @@
   "banners": {
     "thebadguys": {
       "dcdo": "thebadguys-promotion",
-      "desktopImage": "/images/marketing/homepage-higher-power-background.jpg",
+      "desktopImage": "/images/marketing/homepage-thebadguys-background.jpg",
       "items": [
         {
           "type": "image",
-          "url": "/images/marketing/homepage-higher-power-logo.png"
+          "url": "/images/marketing/homepage-thebadguys-logo.png"
         },
         {
           "type": "text",
-          "text": "homepage_higher_power_body"
+          "text": "homepage_thebadguys_body"
         }
       ],
       "actions": [
