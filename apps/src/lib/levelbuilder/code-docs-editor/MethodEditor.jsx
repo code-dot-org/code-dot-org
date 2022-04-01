@@ -2,28 +2,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import color from '@cdo/apps/util/color';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
-import ExampleEditor from './ExampleEditor';
-import ParameterEditor from './ParameterEditor';
-import OrderableList from './OrderableList';
-import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
-
-function renderParameterEditor(param, updateFunc) {
-  return (
-    <ParameterEditor
-      parameter={param}
-      update={(key, value) => updateFunc(key, value)}
-    />
-  );
-}
-
-function renderExampleEditor(example, updateFunc) {
-  return (
-    <ExampleEditor
-      example={example}
-      updateExample={(key, value) => updateFunc(key, value)}
-    />
-  );
-}
 
 export default function MethodEditor({method, updateMethod}) {
   return (
@@ -42,22 +20,6 @@ export default function MethodEditor({method, updateMethod}) {
         handleMarkdownChange={e => updateMethod('content', e.target.value)}
         features={{imageUpdate: true}}
       />
-      <CollapsibleEditorSection title="Parameters" collapsed>
-        <OrderableList
-          list={method.parameters || []}
-          setList={list => updateMethod('parameters', list)}
-          addButtonText="Add Another Parameter"
-          renderItem={renderParameterEditor}
-        />
-      </CollapsibleEditorSection>
-      <CollapsibleEditorSection title="Examples" collapsed>
-        <OrderableList
-          list={method.examples || []}
-          setList={list => updateMethod('examples', list)}
-          addButtonText="Add Another Example"
-          renderItem={renderExampleEditor}
-        />
-      </CollapsibleEditorSection>
     </div>
   );
 }

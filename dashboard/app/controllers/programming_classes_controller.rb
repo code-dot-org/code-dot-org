@@ -33,14 +33,15 @@ class ProgrammingClassesController < ApplicationController
     @programming_class.assign_attributes(programming_class_params.except(:category_key, :methods))
     programming_environment_category = @programming_class.programming_environment.categories.find_by_key(programming_class_params[:category_key])
     @programming_class.programming_environment_category_id = programming_environment_category&.id
-    puts programming_class_params.inspect
-    @programming_class.programming_methods = programming_class_params[:methods].map do |method_params|
-      if method_params['id']
-        method = ProgrammingMethod.find(method_params.id)
-        method.update!(method_params)
-        method
-      else
-        ProgrammingMethod.create!(method_params)
+    if programming_class_params[:methods]
+      @programming_class.programming_methods = programming_class_params[:methods].each_with_index.map do |method_params, i|
+        if method_params['id']
+          method = ProgrammingMethod.find(method_params.id)
+          method.update!(method_params.merge(position: i))
+          method
+        else
+          ProgrammingMethod.create!(method_params.merge(programming_class_id: @programming_class.id, position: 1))
+        end
       end
     end
     begin
@@ -65,7 +66,7 @@ class ProgrammingClassesController < ApplicationController
       :tips,
       examples: [:name, :description, :code, :app, :image, :app_display_type, :embed_app_with_code_height],
       fields: [:name, :type, :description],
-      methods: [:name]
+      methods: [:name, :content]
     )
     transformed_params[:examples] = transformed_params[:examples].to_json if transformed_params[:examples]
     transformed_params[:fields] = transformed_params[:fields].to_json if transformed_params[:fields]

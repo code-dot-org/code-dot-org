@@ -67,9 +67,10 @@ class ProgrammingClass < ApplicationRecord
   end
 
   def serialize
-    {
+    serialization = {
       category_key: programming_environment_category&.key
     }.merge(attributes.except('id', 'programming_environment_id', 'programming_environment_category_id', 'created_at', 'updated_at').sort.to_h)
+    serialization[:methods] = programming_methods.map(&:serialize)
   end
 
   def write_serialization
