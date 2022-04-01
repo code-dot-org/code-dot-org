@@ -3,20 +3,23 @@
   "properties": {
     "encrypted": "false",
     "project_template_level_name": "CSA U3 Data for Social Good Project C PBT_2022",
-    "long_instructions": "##Data for Social Good Project\r\n\r\nThe x class represents a user. It has an instance variable for a 1D array called data to store the values from the text file data.txt. Complete the class with:\r\n\r\n1. a method to read the values in the text file to the 1D array\r\n\r\n2. one or more methods to find the information the user needs",
+    "long_instructions": "##Data for Social Good Project\r\n\r\n**User Story C:** As a manager of a technology non-profit organization, I want to find the areas that have low internet access so I can focus my team's efforts.\r\n\r\nThe `InternetAccess`(#e7e8ea) class processes and analyzes data about Internet access in different countries. Complete the `InternetAccess`(#e7e8ea) class with:\r\n\r\n* instance variables to store the data you want to analyze\r\n\r\n* a constructor to initialize the instance variables\r\n\r\n* method(s) to analyze the data to find the information needed\r\n\r\n**Hint:** To compare two `String`(#e7e8ea)s for equality, you will need to use the `equals()`(#e7e8ea) method instead of the `==`(#e7e8ea) operator. For example:\r\n\r\n```\r\nString first = \"Hello\";\r\nString second = \"Hello\";\r\n\r\nfirst.equals(second);   // returns true\r\n\r\nString third = \"Hello\";\r\nString fourth = \"HELLO\";\r\n\r\nthird.equals(fourth);   // returns false\r\n```\r\n\r\n##Possible Extensions\r\nI would like to consider multiple datasets.",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "submittable": "false",
     "csa_view_mode": "console",
     "encrypted_examples": [
 
-    ]
+    ],
+    "display_name": "User Story C",
+    "bubble_choice_description": "As a manager of a technology non-profit organization, I want to find the areas that have low internet access so I can focus my team's efforts.",
+    "thumbnail_url": "https://images.code.org/1a1f7bf7ddbf3dc458c9e813900bbfe5-image-1648762676145.png"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2022-03-25T13:30:12.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-03-25T13:30:12.429+00:00\",\"changed\":[\"cloned from \\\"CSA U3L11-L1b_2022\\\"\"],\"cloned_from\":\"CSA U3L11-L1b_2022\"},{\"changed_at\":\"2022-03-25 13:30:21 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-25T13:30:12.429+00:00\",\"changed\":[\"cloned from \\\"CSA U3L11-L1b_2022\\\"\"],\"cloned_from\":\"CSA U3L11-L1b_2022\"},{\"changed_at\":\"2022-03-25 13:30:21 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 21:38:06 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 22:40:49 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 22:41:49 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 23:10:05 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 23:26:49 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
