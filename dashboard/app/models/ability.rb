@@ -81,12 +81,8 @@ class Ability
       environment.published || user.permission?(UserPermission::LEVELBUILDER)
     end
 
-    can [:read, :show_by_keys, :docs_show], ProgrammingExpression do |expression|
+    can [:read, :show_by_keys], ProgrammingExpression do |expression|
       can? :read, expression.programming_environment
-    end
-
-    can [:docs_index, :docs_show], ProgrammingEnvironment do |environment|
-      can? :read, environment
     end
 
     if user.persisted?

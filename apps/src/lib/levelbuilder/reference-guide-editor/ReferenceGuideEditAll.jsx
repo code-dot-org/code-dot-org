@@ -6,7 +6,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
   getGuideChildren,
   organizeReferenceGuides
-} from './referenceGuideHelpers';
+} from '@cdo/apps/util/referenceGuideHelpers';
 import Dialog, {
   Title as DialogTitle,
   Body as DialogBody
