@@ -380,7 +380,7 @@ EquationSet.getEquationFromBlock = function(block) {
 
     case 'functional_math_number':
     case 'functional_math_number_dropdown':
-      var val = block.getTitleValue('NUM') || 0;
+      var val = block.getFieldValue('NUM') || 0;
       if (val === '???') {
         val = 0;
       }
@@ -410,7 +410,7 @@ EquationSet.getEquationFromBlock = function(block) {
       }
 
     case 'functional_definition':
-      name = block.getTitleValue('NAME');
+      name = block.getFieldValue('NAME');
 
       var expression = firstChild
         ? EquationSet.getEquationFromBlock(firstChild).expression
@@ -426,7 +426,7 @@ EquationSet.getEquationFromBlock = function(block) {
       return new Equation(
         null,
         [],
-        new ExpressionNode(block.getTitleValue('VAR'))
+        new ExpressionNode(block.getFieldValue('VAR'))
       );
 
     case 'functional_example':
