@@ -12,7 +12,7 @@ exports.call = function(name) {
     test: function(block) {
       return (
         block.type === 'procedures_callnoreturn' &&
-        block.getTitleValue('NAME').toLowerCase() === name.toLowerCase()
+        block.getFieldValue('NAME').toLowerCase() === name.toLowerCase()
       );
     },
     type: 'procedures_callnoreturn',
@@ -32,7 +32,7 @@ exports.callWithArg = function(func_name, arg_name) {
     test: function(block) {
       return (
         block.type === 'procedures_callnoreturn' &&
-        block.getTitleValue('NAME').toLowerCase() === func_name.toLowerCase()
+        block.getFieldValue('NAME').toLowerCase() === func_name.toLowerCase()
       );
     },
     type: 'procedures_callnoreturn',
@@ -58,7 +58,7 @@ exports.define = function(name) {
     test: function(block) {
       return (
         block.type === 'procedures_defnoreturn' &&
-        block.getTitleValue('NAME').toLowerCase() === name.toLowerCase()
+        block.getFieldValue('NAME').toLowerCase() === name.toLowerCase()
       );
     },
     type: 'procedures_defnoreturn',
