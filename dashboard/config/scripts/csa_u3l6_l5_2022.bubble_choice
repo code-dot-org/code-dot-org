@@ -1,6 +1,6 @@
 name 'CSA U3L6-L5_2022'
-display_name 'Using Static Variables and Constants'
-description 'level description here'
+display_name 'Using Constants'
+description 'Use a constant to declare and initialize a constant value for different scenarios.'
 
 sublevels
 level 'CSA U3L6-L5a_2022'

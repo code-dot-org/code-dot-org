@@ -97,6 +97,7 @@ Dashboard::Application.routes.draw do
         get 'membership'
         get 'valid_scripts'
         get 'valid_course_offerings'
+        get 'available_participant_types'
         get 'require_captcha'
       end
     end
@@ -452,6 +453,10 @@ Dashboard::Application.routes.draw do
 
   # HOC dashboards.
   get '/admin/hoc/students_served', to: 'admin_hoc#students_served', as: 'hoc_students_served'
+
+  # NPS dashboards
+  get '/admin/nps/nps_form', to: 'admin_nps#nps_form', as: 'nps_form'
+  post '/admin/nps/nps_update', to: 'admin_nps#nps_update', as: 'nps_update'
 
   # internal report dashboards
   get '/admin/levels', to: 'admin_reports#level_completions', as: 'level_completions'
