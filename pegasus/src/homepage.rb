@@ -12,18 +12,25 @@ class Homepage
     return nil if @@load_error || !@@announcements_data
     pages = @@announcements_data[:pages]
     banners = @@announcements_data[:banners]
-    banner_id_for_page = pages[page]
-    return nil unless banner_id_for_page
 
-    banner = banners[banner_id_for_page]
+    # Try each potential banner for this page until we find the first that can be used.
+    pages[page].each do |banner_id_for_page|
+      banner = banners[banner_id_for_page]
 
-    # If the banner has an array of environments, then the current environment must be one of them.
-    return nil if banner["environments"] && !banner["environments"].include?(CDO.rack_env.to_s)
+      next unless banner
 
-    # If the banner has a required DCDO flag, then it must be set.
-    return nil if banner["dcdo"] && !DCDO.get(banner["dcdo"], false)
+      # If the banner has an array of environments, then the current environment must be one of them.
+      next if banner["environments"] && !banner["environments"].include?(CDO.rack_env.to_s)
 
-    banner ? banner.merge({"id": banner_id_for_page}) : nil
+      # If the banner has a required DCDO flag, then it must be set.
+      next if banner["dcdo"] && !DCDO.get(banner["dcdo"], false)
+
+      # We have a banner.  Add the ID to the hash that we return.
+      return banner.merge({"id": banner_id_for_page})
+    end
+
+    # If we made it to here, none of the potential banners was available.
+    nil
   end
 
   def self.load_announcements
@@ -63,7 +70,6 @@ class Homepage
 
   # validate a banner has the required fields
   def self.validate_banner(banner)
-    return true
     banner[:desktopImage] && banner[:actions]
   end
 
