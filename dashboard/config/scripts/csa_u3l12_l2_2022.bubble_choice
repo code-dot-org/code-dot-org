@@ -1,6 +1,6 @@
 name 'CSA U3L12-L2_2022'
 display_name 'Data for Social Good Project'
-description 'level description here'
+description 'Request a code review from your peers.'
 
 sublevels
 level 'CSA U3L12-L2a_2022'
