@@ -221,6 +221,7 @@ module TextToSpeech
   end
 
   def tts_update(update_all = false)
+    return unless Rails.application.config.levelbuilder_mode
     context = 'update_level'
     tts_upload_to_s3(tts_short_instructions_text, context) if tts_should_update_short_instructions?(update_all)
 
