@@ -178,7 +178,7 @@ class Homepage
 
   def self.get_action_buttons_css_class
     custom_banner = get_announcement_for_page("homepage")
-    if custom_banner
+    if custom_banner && custom_banner["class"]
       custom_banner["class"]
     else
       "action_buttons"
