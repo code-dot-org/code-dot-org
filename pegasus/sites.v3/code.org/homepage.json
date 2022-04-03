@@ -6,6 +6,7 @@
   "banners": {
     "thebadguys": {
       "dcdo": "thebadguys-promotion",
+      "class": "vertical-stack",
       "desktopImage": "/images/marketing/homepage-thebadguys-background.jpg",
       "actions": [
         {

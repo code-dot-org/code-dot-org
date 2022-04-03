@@ -176,6 +176,15 @@ class Homepage
     ]
   end
 
+  def self.get_action_buttons_css_class
+    custom_banner = get_announcement_for_page("homepage")
+    if custom_banner
+      custom_banner["class"]
+    else
+      "action_buttons"
+    end
+  end
+
   def self.get_actions(request)
     # Show a Latin American specific video to users browsing in Spanish or
     # Portuguese to promote LATAM HOC.
