@@ -3,6 +3,7 @@
   show_single_hero = Homepage.show_single_hero(request)
   heroes_arranged, hero_display_time = Homepage.get_heroes_arranged(request)
   actions = Homepage.get_actions(request)
+  action_buttons_css_class = Homepage.get_action_buttons_css_class()
 
 - main_actions = capture_haml do
   - if show_single_hero == "changeworld"
@@ -19,7 +20,7 @@
         - elsif item["type"] == "image"
           %img{src: item["url"], style: "width: 100%; max-width: 600px; margin-bottom: 20px"}
 
-  .action_buttons
+  %div{class: action_buttons_css_class}
     - actions.each do |entry|
       - if ["cta_button", "cta_button_solid_white", "cta_button_hollow_white", "cta_button_solid_yellow", "cta_button_solid_grey"].include? entry[:type]
         .action
@@ -35,13 +36,13 @@
             %img.video-play-icon{src: "/shared/images/fit-48/play-button.png"}
             %span#playtext= I18n.t(entry[:text])
       - elsif entry[:type] == "video_thumbnail"
-        %div{style: "width: 300px; margin: 0 auto"}
+        .video_thumbnail
           = view :display_video_thumbnail, thumbnail_only: true, id: "mainvideo", video_code: entry[:youtube_id], image_url: entry[:image_url], play_button: 'center', facebook: {u: entry[:facebook]}, twitter: nil, letterbox: "false", download_path: entry[:download_path]
       - elsif entry[:type] == "text"
-        .hero-message-line{style: "color: white; font-size: 24px; line-height: 1.5em; padding-bottom: 0px; font-family: 'Gotham 4r', sans-serif", dir: "auto"}
+        .text{dir: "auto"}
           = I18n.t(entry[:text])
       - elsif entry[:type] == "image"
-        %img{src: entry[:url], style: "_width: 100%; max-width: 600px; margin-bottom: 20px"}
+        %img.image{src: entry[:url]}
       - elsif entry[:type] == "cta_link_white"
         %a.herohocbutton.herolink-white{href: entry[:href]}
           %i.fa{class: entry[:icon_class]}
