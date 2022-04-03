@@ -924,6 +924,11 @@
         text: er flyttbar
       gamelab_edgesDisplace:
         text: kantene blokkerer {SPRITE} fra å flytte seg
+      gamelab_everySeconds:
+        text: 'hver {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': sekunder
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:

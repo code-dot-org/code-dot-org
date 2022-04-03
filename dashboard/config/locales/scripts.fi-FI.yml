@@ -1120,6 +1120,7 @@ fi:
           description_short: Tee koripallopeli
           description: Tee koripallopeli
           student_description: Tee koripallopeli
+          name: koripallo
         csd2-2017:
           lesson_groups:
             csd2_1:
@@ -2020,6 +2021,7 @@ fi:
           lessons:
             Aquatic:
               name: 'Minecraft: Merellinen matka'
+          name: merellinen
         dance--draft:
           lessons:
             Dance Party:
@@ -2582,7 +2584,7 @@ fi:
           description: Koodaa oma Dance Party, jonka voit jakaa ystäviesi kanssa!
           lessons:
             Dance Party:
-              name: Tanssibileet
+              name: Tanssibileet (2019)
           student_description: Koodaa oma Dance Party, jonka voit jakaa ystäviesi
             kanssa!
         k5-onlinepd-2019:
@@ -3540,6 +3542,10 @@ fi:
           lessons:
             lesson-6:
               name: Muuttujat
+        csa3-2022:
+          lessons:
+            lesson-5:
+              name: Silmukat
         cs4all-invasive-species:
           lessons:
             lesson-12:

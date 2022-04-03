@@ -940,6 +940,8 @@ hr:
           lesson_groups:
             required:
               display_name: Pregled
+        basketball:
+          name: košarkaška lopta
         csd2-2017:
           lessons:
             Lists:
@@ -1620,6 +1622,8 @@ hr:
           lessons:
             Artist:
               name: Umjetnik
+        aquatic:
+          name: morska
         cspplayground:
           lesson_groups:
             csp_variables:
@@ -2788,6 +2792,10 @@ hr:
           lessons:
             lesson-6:
               name: Varijable
+        csa3-2022:
+          lessons:
+            lesson-5:
+              name: Petlja brojača
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -2812,6 +2820,10 @@ hr:
               display_name: Likovi
             lessonGroup-8:
               display_name: Varijable
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-9:
+              name: Nastavni plan
         csa2-2022-exemplars:
           lessons:
             lesson-1:

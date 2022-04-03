@@ -1196,6 +1196,7 @@ ga:
           description_short: Roghnaigh d'fhoireann agus cruthaigh cluiche cispheile
           description: Roghnaigh d'fhoireann agus cruthaigh cluiche cispheile
           student_description: Roghnaigh d'fhoireann agus cruthaigh cluiche cispheile
+          name: cispheil
         hoc-encryption:
           title: 'An Uair Chódála: Criptiú Simplí'
           lessons:
@@ -3355,7 +3356,7 @@ ga:
             Lil Nas X, Jonas Brothers, Nicki Minaj, agus 34 réalta eile!
           lessons:
             Dance Party:
-              name: Cóisir Dhamhsa
+              name: Cóisir Dhamhsa (2019)
         k5-onlinepd-2019:
           lesson_groups:
             k5_basic_concepts:
@@ -5002,6 +5003,9 @@ ga:
             lessonGroup-2:
               display_name: Ábhar
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: Lúba "Do Gach"
           lesson_groups:
             lessonGroup-2:
               display_name: Ábhar
@@ -5071,6 +5075,10 @@ ga:
           lesson_groups:
             lessonGroup-2:
               display_name: Ábhar
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-9:
+              name: Ceachtanna a Phleanáil
         csa2-2022-exemplars:
           lessons:
             lesson-1:

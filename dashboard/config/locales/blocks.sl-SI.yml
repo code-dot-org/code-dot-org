@@ -369,6 +369,10 @@ sl:
           CONDITION:
             '"when"': ko
             '"while"': dokler
+      gamelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': sekund(e)
       gamelab_getProp:
         options:
           PROPERTY:

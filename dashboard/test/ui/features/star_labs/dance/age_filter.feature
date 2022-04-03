@@ -29,6 +29,7 @@ Feature: Dance Lab Age Filter
     And I see option "Synthesize" or "Ed Sheeran - Shape of You" in the dropdown "#song_selector"
 
     Then I am on "http://studio.code.org/s/allthethings/lessons/37/levels/1?noautoplay=true&songfilter=on"
+    And I reload the page
     And I wait for the page to fully load
     And I wait until I don't see selector "#p5_loading"
     And I wait for the song selector to load

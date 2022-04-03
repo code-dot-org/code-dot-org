@@ -1222,7 +1222,7 @@ es:
   tutorial_bbcphys_name: Programación + física de Bitsbox
   tutorial_bitsbox_name: Crear aplicaciones locas con Bitsbox
   tutorial_tlcemo_name: 'Máquina de emociones: tarjeta de crear una cara'
-  tutorial_crd_name: Condicionales con naipes
+  tutorial_crd_name: Condicionales con Cartas
   tutorial_bbcbio_name: Programación + biología de Bitsbox
   tutorial_ticklebb8_name: BB-8 Swing
   tutorial_grok_name: Aprendizaje de Grok
@@ -2058,7 +2058,7 @@ es:
     escrito real! Los principiantes son bienvenidos."
   tutorial_tlcemo_shortdescription: Programa una cara de robot de tarjeta para mostrar
     diferentes emociones una tras otra.
-  tutorial_crd_shortdescription: Aprende algoritmos con una baraja de naipes
+  tutorial_crd_shortdescription: Aprende algoritmos con una baraja de cartas
   tutorial_bbcbio_shortdescription: 'Plan de lecciones basado en estándares para los
     niveles K-5. '
   tutorial_ticklebb8_shortdescription: Con Tickle, una aplicación de codificación
@@ -3796,7 +3796,7 @@ es:
     para traducir emociones (comandos de alto nivel) en instrucciones de máquina de
     bajo nivel.
   tutorial_crd_longdescription: Aprende sobre algoritmos y sentencias condicionales
-    en esta actividad "fuera de línea" usando una baraja de cartas. Los estudiantes
+    en esta actividad "sin conexión" usando una baraja de cartas. Los estudiantes
     hacen esta actividad en equipos y necesitan una baraja de cartas por equipo.
   tutorial_bbcbio_longdescription: Plan de lecciones basado en estándares para los
     grados K-5. Lleva a tus hijos al laboratorio de computación con hojas de trabajo

@@ -5,7 +5,7 @@ theme: responsive
 
 # Code with The Bad Guys
 
-{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Code with The Bad Guys", left_description: "Make a game or animation starring Ms. Tarantula, Mr. Wolf, and more!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Start Now", right_heading: "Learn the ropes", right_description: "If you're new to coding, start here, then come back to make a project with The Bad Guys.", right_specs: "", right_button_url: "https://code.org/helloworld", right_button_text: "Learn First" }}
+{{ tutorial_promo2, heading: "", background_image: "/images/marketing/landingpage-thebadguys-banner.png", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Code with The Bad Guys", left_description: "Make a story or animation starring Ms. Tarantula, Mr. Wolf, and more!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Start Now", right_heading: "New to coding?", right_description: "Try a tutorial, then come back to make a project with The Bad Guys.", right_specs: "", right_button_url: "https://code.org/helloworld", right_button_text: "Learn First" }}
 
 ## Featured Student Creations
 
