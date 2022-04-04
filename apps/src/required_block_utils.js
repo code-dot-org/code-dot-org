@@ -350,8 +350,8 @@ exports.blocksMatch = function(blockA, blockB) {
  * @param blockB
  */
 exports.blockTitlesMatch = function(blockA, blockB) {
-  var blockATitles = blockA.getTitles();
-  var blockBTitles = blockB.getTitles();
+  var blockATitles = Blockly.cdoUtils.getBlockFields(blockA);
+  var blockBTitles = Blockly.cdoUtils.getBlockFields(blockB);
 
   var nameCompare = function(a, b) {
     return a.name < b.name;
