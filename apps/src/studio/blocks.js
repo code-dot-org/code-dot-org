@@ -45,7 +45,7 @@ var POSITION_VALUES = [
 ];
 
 var generateSetterCode = function(opts) {
-  var value = opts.value || opts.ctx.getTitleValue('VALUE');
+  var value = opts.value || opts.ctx.getFieldValue('VALUE');
   if (value === RANDOM_VALUE) {
     var possibleValues = _(opts.ctx.VALUES)
       .map(function(item) {
@@ -127,7 +127,7 @@ function getSpriteOrDropdownIndex(
   inputName = 'SPRITE'
 ) {
   return actorSelectDropdown
-    ? block.getTitleValue(inputName) || 0
+    ? block.getFieldValue(inputName) || 0
     : getSpriteIndex(block, inputName);
 }
 
@@ -656,7 +656,7 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   generator.studio_allowSpritesOutsidePlayspace = function() {
-    const allowSpritesOutsidePlayspace = this.getTitleValue('VALUE') === 'true';
+    const allowSpritesOutsidePlayspace = this.getFieldValue('VALUE') === 'true';
     return `Studio.setAllowSpritesOutsidePlayspace('block_id_${this.id}',
         ${allowSpritesOutsidePlayspace});\n`;
   };
@@ -702,7 +702,7 @@ exports.install = function(blockly, blockInstallOptions) {
       "Studio.stop('block_id_" +
       this.id +
       "', " +
-      (this.getTitleValue('SPRITE') || '0') +
+      (this.getFieldValue('SPRITE') || '0') +
       ');\n'
     );
   };
@@ -735,7 +735,7 @@ exports.install = function(blockly, blockInstallOptions) {
     var allValues = skin.itemChoices.slice(0, -1).map(function(item) {
       return item[1];
     });
-    var valParam = this.getTitleValue('VALUE');
+    var valParam = this.getFieldValue('VALUE');
     if (valParam === 'random') {
       valParam = 'Studio.random([' + allValues + '])';
     }
@@ -770,14 +770,14 @@ exports.install = function(blockly, blockInstallOptions) {
     var allValues = skin.itemChoices.slice(0, -1).map(function(item) {
       return item[1];
     });
-    var valParam = this.getTitleValue('VALUE');
+    var valParam = this.getFieldValue('VALUE');
     if (valParam === 'random') {
       valParam = 'Studio.random([' + allValues + '])';
     }
     var allTypes = skin.activityChoices.slice(0, -1).map(function(item) {
       return item[1];
     });
-    var typeParam = this.getTitleValue('TYPE');
+    var typeParam = this.getFieldValue('TYPE');
     if (typeParam === 'random') {
       typeParam = 'Studio.random([' + allTypes + '])';
     }
@@ -826,7 +826,7 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.studio_setItemSpeed = function() {
     return generateSetterCode({
       ctx: this,
-      extraParams: this.getTitleValue('CLASS'),
+      extraParams: this.getFieldValue('CLASS'),
       name: 'setItemSpeed'
     });
   };
@@ -858,14 +858,14 @@ exports.install = function(blockly, blockInstallOptions) {
           return item[1];
         }
       );
-      var dirParam = this.getTitleValue('DIR');
+      var dirParam = this.getFieldValue('DIR');
       if (dirParam === 'random') {
         dirParam = 'Studio.random([' + allDirections + '])';
       }
       var allValues = skin.projectileChoices.slice(0, -1).map(function(item) {
         return item[1];
       });
-      var valParam = this.getTitleValue('VALUE');
+      var valParam = this.getFieldValue('VALUE');
       if (valParam === 'random') {
         valParam = 'Studio.random([' + allValues + '])';
       }
@@ -928,9 +928,9 @@ exports.install = function(blockly, blockInstallOptions) {
       "Studio.makeProjectile('block_id_" +
       this.id +
       "', " +
-      this.getTitleValue('VALUE') +
+      this.getFieldValue('VALUE') +
       ', ' +
-      this.getTitleValue('ACTION') +
+      this.getFieldValue('ACTION') +
       ');\n'
     );
   };
@@ -978,7 +978,7 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.studio_setSpritePosition = function() {
     return generateSetterCode({
       ctx: this,
-      extraParams: this.getTitleValue('SPRITE') || '0',
+      extraParams: this.getFieldValue('SPRITE') || '0',
       name: 'setSpritePosition'
     });
   };
@@ -1091,7 +1091,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.studio_addGoal.VALUES = POSITION_VALUES;
 
   generator.studio_addGoal = function() {
-    var value = this.getTitleValue('VALUE');
+    var value = this.getFieldValue('VALUE');
     if (value === RANDOM_VALUE) {
       var possibleValues = _(this.VALUES)
         .map(function(item) {
@@ -1261,7 +1261,7 @@ exports.install = function(blockly, blockInstallOptions) {
       var directionConfig = SimpleMove.DIRECTION_CONFIGS[direction];
 
       return function() {
-        var sprite = this.getTitleValue('SPRITE') || '0';
+        var sprite = this.getFieldValue('SPRITE') || '0';
         var direction = directionConfig.studioValue.toString();
         var methodName = isEventMove ? 'move' : 'moveDistance';
         // For diagonal move blocks, the move distance is longer than normal by
@@ -1272,7 +1272,7 @@ exports.install = function(blockly, blockInstallOptions) {
         )
           ? SimpleMove.DEFAULT_MOVE_DISTANCE
           : SimpleMove.DEFAULT_MOVE_DISTANCE * Math.sqrt(2);
-        var distance = this.getTitleValue('DISTANCE') || defaultDistance;
+        var distance = this.getFieldValue('DISTANCE') || defaultDistance;
         return (
           'Studio.' +
           methodName +
@@ -1351,9 +1351,9 @@ exports.install = function(blockly, blockInstallOptions) {
       "Studio.move('block_id_" +
       this.id +
       "', " +
-      (this.getTitleValue('SPRITE') || '0') +
+      (this.getFieldValue('SPRITE') || '0') +
       ', ' +
-      this.getTitleValue('DIR') +
+      this.getFieldValue('DIR') +
       ');\n'
     );
   };
@@ -1467,14 +1467,14 @@ exports.install = function(blockly, blockInstallOptions) {
     var allDistances = this.DISTANCE.slice(0, -1).map(function(item) {
       return item[1];
     });
-    var distParam = this.getTitleValue('DISTANCE');
+    var distParam = this.getFieldValue('DISTANCE');
     if (distParam === 'random') {
       distParam = 'Studio.random([' + allDistances + '])';
     }
     var allDirections = this.DIR.slice(0, -1).map(function(item) {
       return item[1];
     });
-    var dirParam = this.getTitleValue('DIR');
+    var dirParam = this.getFieldValue('DIR');
     if (dirParam === 'random') {
       dirParam = 'Studio.random([' + allDirections + '])';
     }
@@ -1483,7 +1483,7 @@ exports.install = function(blockly, blockInstallOptions) {
       "Studio.moveDistance('block_id_" +
       this.id +
       "', " +
-      (this.getTitleValue('SPRITE') || '0') +
+      (this.getFieldValue('SPRITE') || '0') +
       ', ' +
       dirParam +
       ', ' +
@@ -1498,7 +1498,7 @@ exports.install = function(blockly, blockInstallOptions) {
     var allDirections = this.DIR.slice(0, -1).map(function(item) {
       return item[1];
     });
-    var dirParam = this.getTitleValue('DIR');
+    var dirParam = this.getFieldValue('DIR');
     if (dirParam === 'random') {
       dirParam = 'Studio.random([' + allDirections + '])';
     }
@@ -1513,7 +1513,7 @@ exports.install = function(blockly, blockInstallOptions) {
       "Studio.moveDistance('block_id_" +
       this.id +
       "', " +
-      (this.getTitleValue('SPRITE') || '0') +
+      (this.getFieldValue('SPRITE') || '0') +
       ', ' +
       dirParam +
       ', ' +
@@ -1530,7 +1530,7 @@ exports.install = function(blockly, blockInstallOptions) {
     var allDirections = this.DIR.slice(0, -1).map(function(item) {
       return item[1];
     });
-    var dirParam = this.getTitleValue('DIR');
+    var dirParam = this.getFieldValue('DIR');
     if (dirParam === 'random') {
       dirParam = 'Studio.random([' + allDirections + '])';
     }
@@ -1576,7 +1576,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   generator.studio_moveOrientation = function() {
     // Generate JavaScript for moving forward/backward
-    var dir = this.getTitleValue('DIR');
+    var dir = this.getFieldValue('DIR');
     return 'Studio.' + dir + "('block_id_" + this.id + "');\n";
   };
 
@@ -1602,7 +1602,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   generator.studio_turnOrientation = function() {
     // Generate JavaScript for turning left or right.
-    var dir = this.getTitleValue('DIR');
+    var dir = this.getFieldValue('DIR');
     return 'Studio.' + dir + "('block_id_" + this.id + "');\n";
   };
 
@@ -1671,7 +1671,7 @@ exports.install = function(blockly, blockInstallOptions) {
       "Studio.playSound('block_id_" +
       this.id +
       "', '" +
-      this.getTitleValue('SOUND') +
+      this.getFieldValue('SOUND') +
       "');\n"
     );
   };
@@ -1710,7 +1710,7 @@ exports.install = function(blockly, blockInstallOptions) {
       "Studio.changeScore('block_id_" +
       this.id +
       "', '" +
-      (this.getTitleValue('VALUE') || '1') +
+      (this.getFieldValue('VALUE') || '1') +
       "');\n"
     );
   };
@@ -1744,7 +1744,7 @@ exports.install = function(blockly, blockInstallOptions) {
       "Studio.addPoints('block_id_" +
       this.id +
       "', '" +
-      (this.getTitleValue('VALUE') || '1') +
+      (this.getFieldValue('VALUE') || '1') +
       "');\n"
     );
   };
@@ -1778,7 +1778,7 @@ exports.install = function(blockly, blockInstallOptions) {
       "Studio.removePoints('block_id_" +
       this.id +
       "', '" +
-      (this.getTitleValue('VALUE') || '1') +
+      (this.getFieldValue('VALUE') || '1') +
       "');\n"
     );
   };
@@ -1939,7 +1939,7 @@ exports.install = function(blockly, blockInstallOptions) {
       "Studio.setDroidSpeed('block_id_" +
       this.id +
       '\', "' +
-      this.getTitleValue('VALUE') +
+      this.getFieldValue('VALUE') +
       '");\n'
     );
   };
@@ -2020,7 +2020,7 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.studio_setSpriteSpeed = function() {
     return generateSetterCode({
       ctx: this,
-      extraParams: this.getTitleValue('SPRITE') || '0',
+      extraParams: this.getFieldValue('SPRITE') || '0',
       name: 'setSpriteSpeed'
     });
   };
@@ -2101,7 +2101,7 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.studio_setSpriteSize = function() {
     return generateSetterCode({
       ctx: this,
-      extraParams: this.getTitleValue('SPRITE') || '0',
+      extraParams: this.getFieldValue('SPRITE') || '0',
       name: 'setSpriteSize'
     });
   };
@@ -2573,9 +2573,9 @@ exports.install = function(blockly, blockInstallOptions) {
       "Studio.showTitleScreen('block_id_" +
       this.id +
       "', " +
-      blockly.JavaScript.quote_(this.getTitleValue('TITLE')) +
+      blockly.JavaScript.quote_(this.getFieldValue('TITLE')) +
       ', ' +
-      blockly.JavaScript.quote_(this.getTitleValue('TEXT')) +
+      blockly.JavaScript.quote_(this.getFieldValue('TEXT')) +
       ');\n'
     );
   };
@@ -2712,7 +2712,7 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   generator.studio_setSprite = function() {
-    var indexString = this.getTitleValue('SPRITE') || '0';
+    var indexString = this.getFieldValue('SPRITE') || '0';
     return generateSetterCode({
       ctx: this,
       extraParams: indexString,
@@ -2730,7 +2730,7 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   generator.studio_setSpriteParamValue = function() {
-    var indexString = this.getTitleValue('SPRITE') || '0';
+    var indexString = this.getFieldValue('SPRITE') || '0';
     var spriteValue = blockly.JavaScript.valueToCode(
       this,
       'VALUE',
@@ -2822,7 +2822,7 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.studio_setSpriteEmotion = function() {
     return generateSetterCode({
       ctx: this,
-      extraParams: this.getTitleValue('SPRITE') || '0',
+      extraParams: this.getFieldValue('SPRITE') || '0',
       name: 'setSpriteEmotion'
     });
   };
@@ -2920,9 +2920,9 @@ exports.install = function(blockly, blockInstallOptions) {
       "Studio.saySprite('block_id_" +
       this.id +
       "', " +
-      (this.getTitleValue('SPRITE') || '0') +
+      (this.getFieldValue('SPRITE') || '0') +
       ', ' +
-      blockly.JavaScript.quote_(this.getTitleValue('TEXT')) +
+      blockly.JavaScript.quote_(this.getFieldValue('TEXT')) +
       ');\n'
     );
   };
@@ -2933,9 +2933,9 @@ exports.install = function(blockly, blockInstallOptions) {
       "Studio.saySprite('block_id_" +
       this.id +
       "', " +
-      (this.getTitleValue('SPRITE') || '0') +
+      (this.getFieldValue('SPRITE') || '0') +
       ", '" +
-      (this.getTitleValue('VALUE') || ' ') +
+      (this.getFieldValue('VALUE') || ' ') +
       "');\n"
     );
   };
@@ -2952,7 +2952,7 @@ exports.install = function(blockly, blockInstallOptions) {
       "Studio.saySprite('block_id_" +
       this.id +
       "', " +
-      (this.getTitleValue('SPRITE') || '0') +
+      (this.getFieldValue('SPRITE') || '0') +
       ', ' +
       textParam +
       ');\n'
@@ -3089,7 +3089,7 @@ exports.install = function(blockly, blockInstallOptions) {
       "Studio.endGame('block_id_" +
       this.id +
       "','" +
-      this.getTitleValue('VALUE') +
+      this.getFieldValue('VALUE') +
       "');\n"
     );
   };
@@ -3403,7 +3403,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   generator.functional_sprite_dropdown = function() {
     // returns the sprite index
-    return blockly.JavaScript.quote_(this.getTitleValue('SPRITE_INDEX'));
+    return blockly.JavaScript.quote_(this.getFieldValue('SPRITE_INDEX'));
   };
 
   /**
@@ -3433,7 +3433,7 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.functional_background_dropdown = function() {
     // returns the sprite index
     return generateSetterCode({
-      value: this.getTitleValue('BACKGROUND'),
+      value: this.getFieldValue('BACKGROUND'),
       ctx: this,
       returnValue: true
     });
@@ -3503,9 +3503,9 @@ exports.install = function(blockly, blockInstallOptions) {
 
   generator.studio_ask = function() {
     var blockId = `block_id_${this.id}`;
-    var question = this.getTitleValue('TEXT');
+    var question = this.getFieldValue('TEXT');
     var varName = Blockly.JavaScript.translateVarName(
-      this.getTitleValue('VAR')
+      this.getFieldValue('VAR')
     );
 
     var nextBlock = this.nextConnection && this.nextConnection.targetBlock();
@@ -3552,7 +3552,7 @@ function installVanish(
   };
 
   generator.studio_vanish = function() {
-    var sprite = this.getTitleValue('SPRITE');
+    var sprite = this.getFieldValue('SPRITE');
     return "Studio.vanish('block_id_" + this.id + "', " + sprite + ');\n';
   };
 }
@@ -3649,9 +3649,9 @@ function installConditionals(
     },
     function(actorSelectDropdown, includeElseStatement) {
       let sprite = actorSelectDropdown
-        ? this.getTitleValue('SPRITE') || 0
+        ? this.getFieldValue('SPRITE') || 0
         : getSpriteIndex(this);
-      let emotion = this.getTitleValue('EMOTION');
+      let emotion = this.getFieldValue('EMOTION');
       let branch = generator.statementToCode(this, 'DO');
       let callback = `function (emotion) {\n  if (emotion === ${emotion}) {\n  ${branch}  }\n}`;
 
@@ -3732,10 +3732,10 @@ function installConditionals(
         GTE: '>='
       };
       let sprite = actorSelectDropdown
-        ? this.getTitleValue('SPRITE') || 0
+        ? this.getFieldValue('SPRITE') || 0
         : getSpriteIndex(this);
-      let position = this.getTitleValue('POSITION');
-      let operator = this.getTitleValue('OPERATOR');
+      let position = this.getFieldValue('POSITION');
+      let operator = this.getFieldValue('OPERATOR');
       let order =
         operator === 'EQ' || operator === 'NEQ'
           ? Blockly.JavaScript.ORDER_EQUALITY
@@ -3790,9 +3790,9 @@ function installConditionals(
     },
     function(actorSelectDropdown, includeElseStatement) {
       let sprite = actorSelectDropdown
-        ? this.getTitleValue('SPRITE') || 0
+        ? this.getFieldValue('SPRITE') || 0
         : getSpriteIndex(this);
-      let visibility = this.getTitleValue('VISIBILITY');
+      let visibility = this.getFieldValue('VISIBILITY');
       let branch = generator.statementToCode(this, 'DO');
       let callback = `function (visibility) {\n  if (visibility === ${visibility}) {\n  ${branch}  }\n}`;
 
@@ -3844,9 +3844,9 @@ function installConditionals(
     },
     function(actorSelectDropdown, includeElseStatement) {
       let sprite = actorSelectDropdown
-        ? this.getTitleValue('SPRITE') || 0
+        ? this.getFieldValue('SPRITE') || 0
         : getSpriteIndex(this);
-      let value = this.getTitleValue('VALUE');
+      let value = this.getFieldValue('VALUE');
       let branch = generator.statementToCode(this, 'DO');
       let callback = `function (value) {\n  if (value === ${value}) {\n  ${branch}  }\n}`;
 

@@ -31,6 +31,12 @@ social:
 <a id="recordings"></a>
 
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
+  {{ myjourney15 }}
+  <h3><strong>Making interactive art with technology</strong></h3>
+  <p>Learn how a creative engineer at Meow Wolf helps to build interactive art installations that immerse visitors in mind-blowing new worlds with the intersection of art and engineering.</p>
+</div>
+
+<div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   <a href="https://code.zoom.us/rec/play/h5l0dtXgmDO4BWCRwJvLq_9tSJBD3wRuIgCaXTF_qK68R-OIEe3JRA9hvRJISN6ttBbMW3aynY12vE0r.z3y6UMg8hnyhDfK4" target="_blank">
     <img src="/images/csjourneys/ilm3-youtube.png" style="max-width:100%" alt="Creating Visual Effects for Star Wars click to view">
   </a>  <h3><strong>Creating visual effects for Star Wars</strong></h3>
@@ -44,13 +50,13 @@ social:
   <p>Hear from Richard Nelson, V, a mechanical engineer at Motorola Solutions who plays a crucial role in ensuring public safety.</p>
 </div>
 
+<div style="clear: both"></div>
+
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney13 }}
   <h3><strong>How to outsmart a malicious hacker</strong></h3>
   <p>Learn how Christopher Lopez, a security analyst with Tanium, helps organizations protect their networks from cybersecurity threats.</p>
 </div>
-
-<div style="clear: both"></div>
 
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney12 }}
@@ -64,20 +70,19 @@ social:
   <p>Hear about the career path that led a non-computer science major to become a Product Manager at Code.org and how she creates fun tools used in classrooms around the world.</p>
 </div>
 
+<div style="clear: both"></div>
+
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney10 }}
   <h3><strong>Music and more at Spotify</strong></h3>
   <p>Hear about the career path that led two software engineers to Spotify and how each plays a different role in helping to bring music to our lives.</p>
 </div>
 
-<div style="clear: both"></div>
-
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney3 }}
   <h3><strong>Building models of the universe</strong></h3>
   <p>Hear from NASA scientists Kim Arcand and Rutu Das about their career journeys and how they use data science to build 3D models of the universe.</p>
 </div>
-
 
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   <a href="https://code.zoom.us/rec/play/09veMf1354wOxNcJxSMPqmGgf6qh3vTdvIaSGHTpeyik4_59etRQXEIuPbAQwSzKiYAIMkXpqSRGHO_L.ym6IZsLcInwcxQAG" target="_blank">
@@ -87,6 +92,7 @@ social:
   <p>Learn how Patrick Lucey, a former semi-pro soccer player, uses data and AI to help athletes and teams improve their performance. <i>Only available as a Zoom recording.</i></p>
 </div>
 
+<div style="clear: both"></div>
 
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney5 }}
@@ -94,20 +100,19 @@ social:
   <p>Learn how Eva Moscat and Anna Elzer are helping build software for robots and designing learning experiences that inspire the next generation of technologists.</p>
 </div>
 
-<div style="clear: both"></div>
-
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney8 }}
   <h3><strong>Using Roblox to empower students</strong></h3>
   <p>Learn how Roblox designer Genevieve Johnson uses the platform to empower students to pursue careers as entrepreneurs, engineers, and designers.</p>
 </div>
 
-
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney9 }}
   <h3><strong>Art + Tech</strong></h3>
   <p>Learn how Tomas Garcia and Joel Ferree make space for artists to explore the intersections of art and emerging technologies at the Los Angeles County Museum of Art.</p>
 </div>
+
+<div style="clear: both"></div>
 
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney6 }}
