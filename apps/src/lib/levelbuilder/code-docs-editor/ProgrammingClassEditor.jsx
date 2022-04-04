@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import OrderableList from './OrderableList';
 import ExampleEditor from './ExampleEditor';
 import FieldEditor from './FieldEditor';
-import MethodEditor from './MethodEditor';
+import MethodToken from './MethodToken';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
@@ -32,8 +32,8 @@ function renderFieldEditor(field, updateFunc) {
   return <FieldEditor field={field} updateField={updateFunc} />;
 }
 
-function renderMethodEditor(method, updateFunc) {
-  return <MethodEditor method={method} updateMethod={updateFunc} />;
+function renderMethodToken(method, updateFunc) {
+  return <MethodToken method={method} updateMethod={updateFunc} />;
 }
 
 export default function ProgrammingClassEditor({
@@ -196,7 +196,7 @@ export default function ProgrammingClassEditor({
           list={programmingClass.methods || []}
           setList={list => updateProgrammingClass('methods', list)}
           addButtonText="Add Another Method"
-          renderItem={renderMethodEditor}
+          renderItem={renderMethodToken}
         />
       </CollapsibleEditorSection>
       <SaveBar

@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import color from '@cdo/apps/util/color';
-import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 
-export default function MethodEditor({method, updateMethod}) {
+export default function MethodToken({method, updateMethod}) {
   return (
     <div>
       <label>
@@ -14,17 +13,11 @@ export default function MethodEditor({method, updateMethod}) {
           style={styles.textInput}
         />
       </label>
-      <TextareaWithMarkdownPreview
-        markdown={method.content || ''}
-        label={'Content'}
-        handleMarkdownChange={e => updateMethod('content', e.target.value)}
-        features={{imageUpdate: true}}
-      />
     </div>
   );
 }
 
-MethodEditor.propTypes = {
+MethodToken.propTypes = {
   method: PropTypes.object.isRequired,
   updateMethod: PropTypes.func.isRequired
 };
