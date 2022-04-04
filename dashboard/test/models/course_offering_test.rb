@@ -435,6 +435,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
     @@script_cached ||= Script.unit_cache_to_cache
     Script.script_cache
 
+    # Run the command once to load the cache before checking queries
     CourseOffering.assignable_course_offerings_info(@facilitator)
 
     assert_queries(0) do
