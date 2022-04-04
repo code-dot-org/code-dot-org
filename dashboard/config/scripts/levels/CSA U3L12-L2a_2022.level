@@ -3,20 +3,23 @@
   "properties": {
     "encrypted": "false",
     "project_template_level_name": "CSA U3 Data for Social Good Project A PBT_2022",
-    "long_instructions": "Request a code review to get feedback from your peers on your Data for Social Good Project.",
+    "long_instructions": "Request a code review to get feedback from your peers on your Data for Social Good Project.\r\n\r\n##Requesting Feedback\r\n\r\n* Provide a description of the goals and intended outcome of the program.\r\n\r\n* Include any additional relevant information.\r\n\r\n* Ask the reviewer to perform specific tasks or answer any specific questions that you have.\r\n\r\n##TAG to Give Feedback\r\n*Remember to keep feedback kind, specific, and helpful. Refer to your sentence starters to structure your feedback.*\r\n\r\n1. Tell them something you like about their code.\r\n\r\n2. Ask them something about the code.\r\n\r\n3. Give a suggestion for improvement.",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "submittable": "false",
     "csa_view_mode": "console",
     "encrypted_examples": [
 
-    ]
+    ],
+    "display_name": "User Story A",
+    "bubble_choice_description": "As a customer of the streaming music service Spotbox, I want to create a smart playlist based on my music preferences so I can learn about more new artists.",
+    "thumbnail_url": "https://images.code.org/55e4611008798387b0c0f693b5a80404-image-1648762608704.png"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2022-03-25T13:47:09.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-03-25T13:47:09.353+00:00\",\"changed\":[\"cloned from \\\"CSA U3L12-L1a_2022\\\"\"],\"cloned_from\":\"CSA U3L12-L1a_2022\"},{\"changed_at\":\"2022-03-25 13:48:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-25T13:47:09.353+00:00\",\"changed\":[\"cloned from \\\"CSA U3L12-L1a_2022\\\"\"],\"cloned_from\":\"CSA U3L12-L1a_2022\"},{\"changed_at\":\"2022-03-25 13:48:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 22:19:02 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

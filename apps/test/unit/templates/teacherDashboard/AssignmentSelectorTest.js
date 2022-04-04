@@ -56,7 +56,9 @@ describe('AssignmentSelector', () => {
     assert.deepEqual(Object.keys(courseOfferingsByCategory), [
       'hoc',
       'full_course',
-      'csf'
+      'csf',
+      'self_paced_pl',
+      'virtual_pl'
     ]);
     assert.deepEqual(
       courseOfferingsByCategory['full_course'].map(s => s.display_name),
