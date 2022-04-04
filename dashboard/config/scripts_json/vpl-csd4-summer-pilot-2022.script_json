@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-27 22:07:21 UTC",
+    "serialized_at": "2022-04-01 21:21:26 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -91,7 +91,7 @@
     },
     {
       "key": "lesson-5",
-      "name": "TLO 6 - Unit 6 Leson 3",
+      "name": "TLO 6 - Unit 6 Lesson 3 - delete",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -107,12 +107,32 @@
       }
     },
     {
-      "key": "lesson-6",
-      "name": "TLO 7 - Unit 7 Lesson 1",
+      "key": "Updating Screen Elements",
+      "name": "Updating Screen Elements",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
+      "properties": {
+        "assessment_opportunities": "1. **Set the properties of UI elements using code**\n\n\tCode Studio: See the rubric on the assessment level\n\n1. **Change text on the screen using code**\n\n\tCode Studio: See the rubric on the assessment level\n\n1. **Respond to user input using event handlers**\n\n\tCode Studio: See the rubric on the assessment level",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "Students should already be familiar with programming in App Lab, specifically using Design Mode to create screen elements and using `onEvent` blocks to create button click events. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the `setProperty()` and `setText()` blocks that allow users to change the properties and content of various UI elements. In this lesson students explore how they can use events to update elements on the screen\n\n**Question of the Day:** How can you update design elements of an app?",
+        "preparation": "- Students do _not_ need Circuit Playgrounds for this lesson, and we recommend teaching the lesson without devices to avoid distractions",
+        "student_overview": "In this lesson, you will start to build apps that allow for lots of user interaction and functionality"
+      },
+      "seeding_key": {
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd4-summer-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "TLO 7 - Unit 7 Lesson 1",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
       "properties": {
         "overview": "**Overview:**\nDuring this role play activity, participants will engage in Unit 7 Lesson 1: Introduction to Machine Learning. In this lesson, participants will train a robot to solve problems. This TLO lesson will also share ideas for helping students manage multiple resources and tabs while engaging in a CS Discoveries lesson. \n\n**Participants will:**\n\n* Engage in Unit 7 Lesson 1 while playing the role of the student.\n* Reflect on your experience as a student engaging in the lesson.\n* Share ideas for helping students manage multiple resources and tabs while engaging in a CS Discoveries lesson. \n\n**Suggested time:** 60 minutes",
         "student_overview": "**You will:**\n\n* Engage in Unit 7 Lesson 1 while playing the role of the student.\n* Reflect on your experience as a student engaging in the lesson.\n* Share ideas for helping students manage multiple resources and tabs while engaging in a CS Discoveries lesson. "
@@ -126,10 +146,10 @@
     {
       "key": "lesson-8",
       "name": "Differentiation",
-      "absolute_position": 4,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 4,
+      "relative_position": 5,
       "properties": {
         "overview": "**Overview:**\nDuring these asynchronous activities, participants will consider the three ways to differentiate lessons within the CS Discoveries curriculum: by task, by timing, by resources.\n\n**Participants will:**\n\n* Explore opportunities for differentiation while using the CS Discoveries curriculum. \n\n**Suggested time:** 15 minutes",
         "student_overview": "**You will:**\n\n* Explore opportunities for differentiation while using the CS Discoveries curriculum. \n\n**Suggested time:** 15 minutes"
@@ -143,10 +163,10 @@
     {
       "key": "lesson-9",
       "name": "Navigating Support",
-      "absolute_position": 5,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 5,
+      "relative_position": 6,
       "properties": {
         "overview": "**Overview:**\n During these asynchronous activities, participants will navigate to and explore the additional supports available to them while teaching CS Discoveries: help and support, report a problem, teacher forum. \n\n**Participants will:**\n\n* Learn how to access support while teaching CS Discoveries \n\n**Suggested time:** 15 minutes",
         "student_overview": "**You will:**\n\n* Learn how to access support while teaching CS Discoveries \n\n**Suggested time:** 15 minutes"
@@ -160,10 +180,10 @@
     {
       "key": "lesson-10",
       "name": "Building Community in Support of CS Education",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 7,
       "properties": {
         "overview": "**Overview:**\nThe goal of these asynchronous activities is for participants to recognize that they are part of something bigger than what is happening just in their own classroom. For some teachers, computer science can be isolating because CS teachers often do not have a built in community in their schools like math or english teachers naturally have. This activity is about expanding our idea of community to include our local community and the national computer science community.\n\n**Participants will:**\n\n* Identify potential community resources that could be used to enhance the learning experience for students and raise awareness of CS education within your/their local community. \n* Identify ways to connect with CS educators outside of your/their school community. \n\n**Suggested time:** 30 minutes",
         "student_overview": "**You will:**\n\n* Identify potential community resources that could be used to enhance the learning experience for students and raise awareness of CS education within your/their local community. \n* Identify ways to connect with CS educators outside of your/their school community. \n\n**Suggested time:** 30 minutes"
@@ -177,10 +197,10 @@
     {
       "key": "lesson-11",
       "name": "Asynchronous Debrief",
-      "absolute_position": 7,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 8,
       "properties": {
         "overview": "**Overview:**\nIn this session, participants will have the opportunity to debrief the activities completed as a part of the asynchronous portion of this workshop. \n\n**Participants will:**\n\n* Discuss questions that came up during the asynchronous time. \n* Reflect on the content introduced in the asynchronous activities. \n* Share ideas with the cohort. \n\n**Suggested time:** 15 minutes",
         "student_overview": "**You will:**\n\n* Discuss questions that came up during the asynchronous time. \n* Reflect on the content introduced in the asynchronous activities. \n* Share ideas with the cohort. "
@@ -194,10 +214,10 @@
     {
       "key": "lesson-12",
       "name": "Equity in CS Education",
-      "absolute_position": 8,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 9,
       "properties": {
         "overview": "**Overview:**\nDuring this session, participants will share their 30-60-90 plans and expand the plan to include a concrete and actionable commitment to equity in CS education. \n\n**Participants will:**\n\n* Define a commitment you/they will pursue in support of equity in CS education. \n* Outline the strategies you/they will use to pursue that commitment along with how they will monitor progress toward that commitment. \n\n**Suggested time:** 40 minutes",
         "student_overview": "**You will:**\n\n* Define a commitment you/they will pursue in support of equity in CS education. \n* Outline the strategies you/they will use to pursue that commitment along with how they will monitor progress toward that commitment. "
@@ -211,10 +231,10 @@
     {
       "key": "lesson-13",
       "name": "Modularity Planning",
-      "absolute_position": 9,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 10,
       "properties": {
         "overview": "**Overview:**\nNow that participants have been introduced to the content within the full course, participants will utilize the CS Discoveries implementation guide to determine which units they will teach and in which order. This is an important step to take before moving into the curriculum investigation in the next session. \n\n**Participants will:**\n\n* Review the CS Discoveries implementation guide. \n* Consider the various ways in which the curriculum can be implemented. \n* Determine which units you/they will teach and in which order. \n\n**Suggested time:** 20 minutes",
         "student_overview": "**You will:**\n\n* Review the CS Discoveries implementation guide. \n* Consider the various ways in which the curriculum can be implemented. \n* Determine which units you/they will teach and in which order. "
@@ -228,10 +248,10 @@
     {
       "key": "lesson-14",
       "name": "Wrap Up",
-      "absolute_position": 10,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 11,
       "properties": {
         "overview": "**Overview:**\nIn this session, participants will reflect on what they have gotten out of the day along with what they still need from the workshop experience. \n\n**Participants will:**\n\n* Get an introduction to the asynchronous activities. \n* Reflect on gots and needs. \n\n**Suggested time:** 5 minutes",
         "student_overview": "**You will:**\n\n* Get an introduction to the asynchronous activities. \n* Reflect on gots and needs. "
@@ -245,10 +265,10 @@
     {
       "key": "lesson-1",
       "name": "[TEMPLATE] Introduction to...",
-      "absolute_position": 11,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 11,
+      "relative_position": 12,
       "properties": {
         "overview": "**You will:**\n\n* Get an introduction to code.org's ___________ unit.\n* Get a preview of the first week of the ________ unit content.\n\n**Suggested time:** 15 minutes",
         "student_overview": "**You will:**\n\n* Get an introduction to code.org's ___________ unit.\n* Get a preview of the first week of the ________ unit content.\n\n**Suggested time:** 15 minutes"
@@ -262,10 +282,10 @@
     {
       "key": "lesson-3",
       "name": "[TEMPLATE] Content lessons",
-      "absolute_position": 12,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 12,
+      "relative_position": 13,
       "properties": {
         "overview": "**You will:**\n\n* Insert lesson objectives.\n\n**Suggested time:** ____ minutes",
         "student_overview": "**You will:**\n\n* Insert lesson objectives.\n\n**Suggested time:** ____ minutes"
@@ -279,10 +299,10 @@
     {
       "key": "lesson-2",
       "name": "[TEMPLATE] Unit Wrap Up",
-      "absolute_position": 13,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 13,
+      "relative_position": 14,
       "properties": {
         "overview": "**You will:**\n\n* Explore end of chapter projects. \n\n**Suggested time:** 10 minutes",
         "student_overview": "**You will:**\n\n* Explore end of chapter projects. \n\n**Suggested time:** 10 minutes"
@@ -315,6 +335,61 @@
       "seeding_key": {
         "lesson_activity.key": "6dc7569e-e93d-4616-a70e-4a247e77832c",
         "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd4-summer-pilot-2022"
+      }
+    },
+    {
+      "key": "f87de7b2-7a27-493c-8291-12412a83c31a",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f87de7b2-7a27-493c-8291-12412a83c31a",
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd4-summer-pilot-2022"
+      }
+    },
+    {
+      "key": "326cbeb0-b4b9-42bb-b277-2e844fc2d7af",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "326cbeb0-b4b9-42bb-b277-2e844fc2d7af",
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd4-summer-pilot-2022"
+      }
+    },
+    {
+      "key": "cce31d2f-7e5e-43a7-9b59-af3bf71f6612",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cce31d2f-7e5e-43a7-9b59-af3bf71f6612",
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd4-summer-pilot-2022"
+      }
+    },
+    {
+      "key": "d97591d2-ce4b-4830-b464-ba1b7e91afde",
+      "position": 4,
+      "properties": {
+        "name": "Lesson Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d97591d2-ce4b-4830-b464-ba1b7e91afde",
+        "lesson.key": "Updating Screen Elements",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd4-summer-pilot-2022"
       }
@@ -471,6 +546,160 @@
       "seeding_key": {
         "activity_section.key": "a3292ee4-8bab-45aa-a5a7-fe32fe894407",
         "lesson_activity.key": "6dc7569e-e93d-4616-a70e-4a247e77832c"
+      }
+    },
+    {
+      "key": "f13f9d26-409d-4d08-a797-e3d26e74eecc",
+      "position": 1,
+      "properties": {
+        "description": "**Display:** Show students this example image\n\n<img alt=\"\" src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/diamond.png\" style=\"max-width: 200px;\">",
+        "name": "UI Element Properties Refresher"
+      },
+      "seeding_key": {
+        "activity_section.key": "f13f9d26-409d-4d08-a797-e3d26e74eecc",
+        "lesson_activity.key": "f87de7b2-7a27-493c-8291-12412a83c31a"
+      }
+    },
+    {
+      "key": "9c84f3b0-9eae-44cb-9643-363143037b79",
+      "position": 2,
+      "properties": {
+        "description": "**Discuss:** How would you describe to somebody else how to recreate this screen? What specific details would they need to know about each design element?"
+      },
+      "seeding_key": {
+        "activity_section.key": "9c84f3b0-9eae-44cb-9643-363143037b79",
+        "lesson_activity.key": "f87de7b2-7a27-493c-8291-12412a83c31a"
+      }
+    },
+    {
+      "key": "a476333c-9474-4112-8d29-22cd711519e3",
+      "position": 3,
+      "properties": {
+        "description": "**Discussion Goal:** The goal of this discussion is to prime students to think about the _properties_ of various design elements, which they will learn to change with code later in this lesson. Students should rely on their previous experiences with Design Mode, and you can use this as a brief refresher on App Lab if needed.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "a476333c-9474-4112-8d29-22cd711519e3",
+        "lesson_activity.key": "f87de7b2-7a27-493c-8291-12412a83c31a"
+      }
+    },
+    {
+      "key": "6fdffe11-2886-4d2a-925c-caf62e9b6316",
+      "position": 1,
+      "properties": {
+        "description": "**Transition:** Send students to Code Studio"
+      },
+      "seeding_key": {
+        "activity_section.key": "6fdffe11-2886-4d2a-925c-caf62e9b6316",
+        "lesson_activity.key": "326cbeb0-b4b9-42bb-b277-2e844fc2d7af"
+      }
+    },
+    {
+      "key": "51bfcbca-7361-4a39-b8d2-716cfdf3312e",
+      "position": 2,
+      "properties": {
+        "progression_name": "Predict"
+      },
+      "seeding_key": {
+        "activity_section.key": "51bfcbca-7361-4a39-b8d2-716cfdf3312e",
+        "lesson_activity.key": "326cbeb0-b4b9-42bb-b277-2e844fc2d7af"
+      }
+    },
+    {
+      "key": "c4f42982-e248-46b9-be7a-8d36beb38be2",
+      "position": 3,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "c4f42982-e248-46b9-be7a-8d36beb38be2",
+        "lesson_activity.key": "326cbeb0-b4b9-42bb-b277-2e844fc2d7af"
+      }
+    },
+    {
+      "key": "75984c60-3b6e-4a61-9809-3a9cafa13f59",
+      "position": 4,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "75984c60-3b6e-4a61-9809-3a9cafa13f59",
+        "lesson_activity.key": "326cbeb0-b4b9-42bb-b277-2e844fc2d7af"
+      }
+    },
+    {
+      "key": "06d037ee-fd5a-42be-8878-e79729738a3a",
+      "position": 5,
+      "properties": {
+        "progression_name": "Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "06d037ee-fd5a-42be-8878-e79729738a3a",
+        "lesson_activity.key": "326cbeb0-b4b9-42bb-b277-2e844fc2d7af"
+      }
+    },
+    {
+      "key": "5d0c7901-2c78-48e6-9ef2-359c9f369ffb",
+      "position": 6,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "5d0c7901-2c78-48e6-9ef2-359c9f369ffb",
+        "lesson_activity.key": "326cbeb0-b4b9-42bb-b277-2e844fc2d7af"
+      }
+    },
+    {
+      "key": "7ae3d902-3c02-49ee-a289-2ed873ea86b8",
+      "position": 1,
+      "properties": {
+        "description": "**Prompt:** Imagine you were creating an app and needed to represent an “error” to the user. Thinking about today’s lesson and yesterday’s lesson, how could we show an “error” to the user on both the screen and circuit playground?"
+      },
+      "seeding_key": {
+        "activity_section.key": "7ae3d902-3c02-49ee-a289-2ed873ea86b8",
+        "lesson_activity.key": "cce31d2f-7e5e-43a7-9b59-af3bf71f6612"
+      }
+    },
+    {
+      "key": "972f0e1c-140d-4046-b8ce-6a2d7b85a4f9",
+      "position": 2,
+      "properties": {
+        "description": "**Share Out:** Have students share with a partner, then with the class"
+      },
+      "seeding_key": {
+        "activity_section.key": "972f0e1c-140d-4046-b8ce-6a2d7b85a4f9",
+        "lesson_activity.key": "cce31d2f-7e5e-43a7-9b59-af3bf71f6612"
+      }
+    },
+    {
+      "key": "49dfafd2-50de-4ebd-a2dc-235f9b4a574e",
+      "position": 3,
+      "properties": {
+        "description": "**Discussion Goal:** Students should brainstorm a variety of options they can use to represent an error to users. For example:\n- Changing the text or background color red\n- Having the circuit playground buzz\n- Having the red LED on the circuit playground light up\n- Changing the text on the screen to say “Error!”\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "49dfafd2-50de-4ebd-a2dc-235f9b4a574e",
+        "lesson_activity.key": "cce31d2f-7e5e-43a7-9b59-af3bf71f6612"
+      }
+    },
+    {
+      "key": "950d353b-90f8-4cb6-a160-0ffb81407807",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "950d353b-90f8-4cb6-a160-0ffb81407807",
+        "lesson_activity.key": "cce31d2f-7e5e-43a7-9b59-af3bf71f6612"
+      }
+    },
+    {
+      "key": "fa67f8dc-67f0-47c0-81d4-68140fb524b2",
+      "position": 1,
+      "properties": {
+        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfROQdamfLnHVn11tsjHsGPElKhC5LzDfHFEqhaj0igtsqHAA/viewform?usp=sf_link)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
+      },
+      "seeding_key": {
+        "activity_section.key": "fa67f8dc-67f0-47c0-81d4-68140fb524b2",
+        "lesson_activity.key": "d97591d2-ce4b-4830-b464-ba1b7e91afde"
       }
     },
     {
@@ -649,6 +878,204 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - P_vpl-summer-pilot-2022"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "51bfcbca-7361-4a39-b8d2-716cfdf3312e"
+      },
+      "level_keys": [
+        "CSD U6 - Screen Outputs - P_vpl-summer-pilot-2022"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - SB1_vpl-summer-pilot-2022"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "c4f42982-e248-46b9-be7a-8d36beb38be2"
+      },
+      "level_keys": [
+        "CSD U6 - Screen Outputs - SB1_vpl-summer-pilot-2022"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - SB1.1_vpl-summer-pilot-2022"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "c4f42982-e248-46b9-be7a-8d36beb38be2"
+      },
+      "level_keys": [
+        "CSD U6 - Screen Outputs - SB1.1_vpl-summer-pilot-2022"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - SB2_vpl-summer-pilot-2022"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "c4f42982-e248-46b9-be7a-8d36beb38be2"
+      },
+      "level_keys": [
+        "CSD U6 - Screen Outputs - SB2_vpl-summer-pilot-2022"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - SB3_vpl-summer-pilot-2022"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "c4f42982-e248-46b9-be7a-8d36beb38be2"
+      },
+      "level_keys": [
+        "CSD U6 - Screen Outputs - SB3_vpl-summer-pilot-2022"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - SB4_vpl-summer-pilot-2022"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "c4f42982-e248-46b9-be7a-8d36beb38be2"
+      },
+      "level_keys": [
+        "CSD U6 - Screen Outputs - SB4_vpl-summer-pilot-2022"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - Prac_vpl-summer-pilot-2022"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "75984c60-3b6e-4a61-9809-3a9cafa13f59"
+      },
+      "level_keys": [
+        "CSD U6 - Screen Outputs - Prac_vpl-summer-pilot-2022"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - A_vpl-summer-pilot-2022"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "06d037ee-fd5a-42be-8878-e79729738a3a"
+      },
+      "level_keys": [
+        "CSD U6 - Screen Outputs - A_vpl-summer-pilot-2022"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenge"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - Chal_vpl-summer-pilot-2022"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "5d0c7901-2c78-48e6-9ef2-359c9f369ffb"
+      },
+      "level_keys": [
+        "CSD U6 - Screen Outputs - Chal_vpl-summer-pilot-2022"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-ModuleOverview-sample"
         ],
@@ -669,7 +1096,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 11,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -694,7 +1121,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 12,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -719,7 +1146,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 13,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -744,7 +1171,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 14,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -769,7 +1196,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 15,
       "position": 6,
       "activity_section_position": 2,
       "assessment": true,
@@ -794,7 +1221,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -819,7 +1246,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -844,7 +1271,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -869,7 +1296,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 19,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -895,6 +1322,114 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Screen Outputs - P_vpl-summer-pilot-2022",
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - P_vpl-summer-pilot-2022"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "51bfcbca-7361-4a39-b8d2-716cfdf3312e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Screen Outputs - SB1_vpl-summer-pilot-2022",
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - SB1_vpl-summer-pilot-2022"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "c4f42982-e248-46b9-be7a-8d36beb38be2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Screen Outputs - SB1.1_vpl-summer-pilot-2022",
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - SB1.1_vpl-summer-pilot-2022"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "c4f42982-e248-46b9-be7a-8d36beb38be2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Screen Outputs - SB2_vpl-summer-pilot-2022",
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - SB2_vpl-summer-pilot-2022"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "c4f42982-e248-46b9-be7a-8d36beb38be2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Screen Outputs - SB3_vpl-summer-pilot-2022",
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - SB3_vpl-summer-pilot-2022"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "c4f42982-e248-46b9-be7a-8d36beb38be2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Screen Outputs - SB4_vpl-summer-pilot-2022",
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - SB4_vpl-summer-pilot-2022"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "c4f42982-e248-46b9-be7a-8d36beb38be2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Screen Outputs - Prac_vpl-summer-pilot-2022",
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - Prac_vpl-summer-pilot-2022"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "75984c60-3b6e-4a61-9809-3a9cafa13f59"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Screen Outputs - A_vpl-summer-pilot-2022",
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - A_vpl-summer-pilot-2022"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "06d037ee-fd5a-42be-8878-e79729738a3a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Screen Outputs - Chal_vpl-summer-pilot-2022",
+        "script_level.level_keys": [
+          "CSD U6 - Screen Outputs - Chal_vpl-summer-pilot-2022"
+        ],
+        "lesson.key": "Updating Screen Elements",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd4-summer-pilot-2022",
+        "activity_section.key": "5d0c7901-2c78-48e6-9ef2-359c9f369ffb"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "VPL-CSD-PILOT-S22-CI-ModuleOverview-sample",
@@ -1046,10 +1581,81 @@
       "seeding_key": {
         "resource.key": "day_4_-_csd_pilot_agenda"
       }
+    },
+    {
+      "name": "Designing Screens with Code",
+      "url": "https://drive.google.com/file/d/1Jpoij-Rp7SE5-lySX8J2x7vgADErzBt3/view?usp=sharing",
+      "key": "designing_screens_with_code",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "designing_screens_with_code"
+      }
+    },
+    {
+      "name": "Random Numbers",
+      "url": "https://drive.google.com/file/d/1Ix9XXFWgnPi7xoGUZ9ljdD8gZPrhFLUn/view?usp=sharing",
+      "key": "random_numbers",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "random_numbers"
+      }
+    },
+    {
+      "name": "Responding to User Input",
+      "url": "https://drive.google.com/file/d/1zTyBx7l2RiRLcB9AjRZZ314PL6kvY_-D/view?usp=sharing",
+      "key": "responding_to_user_input",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "responding_to_user_input"
+      }
+    },
+    {
+      "name": "Updating Screen Elements",
+      "url": "https://docs.google.com/presentation/d/1Q1TDByGJq8wIrILuE0E0nWExpE4GAjYdALiA974moAQ/copy",
+      "key": "updating_screen_elements",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "updating_screen_elements"
+      }
     }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Updating Screen Elements",
+        "resource.key": "designing_screens_with_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Updating Screen Elements",
+        "resource.key": "random_numbers"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Updating Screen Elements",
+        "resource.key": "responding_to_user_input"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Updating Screen Elements",
+        "resource.key": "updating_screen_elements"
+      }
+    }
   ],
   "scripts_resources": [
     {
@@ -1081,13 +1687,68 @@
 
   ],
   "lessons_programming_expressions": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Updating Screen Elements",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "setProperty"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Updating Screen Elements",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "setText"
+      }
+    }
   ],
   "objectives": [
-
+    {
+      "key": "0cdb39f9-d107-4637-add7-bc38f2fa8afc",
+      "properties": {
+        "description": "Respond to user input using event handlers"
+      },
+      "seeding_key": {
+        "lesson.key": "Updating Screen Elements",
+        "objective.key": "0cdb39f9-d107-4637-add7-bc38f2fa8afc"
+      }
+    },
+    {
+      "key": "4336300d-ad3c-4145-b0f7-4b174bf84615",
+      "properties": {
+        "description": "Change text on the screen using code"
+      },
+      "seeding_key": {
+        "lesson.key": "Updating Screen Elements",
+        "objective.key": "4336300d-ad3c-4145-b0f7-4b174bf84615"
+      }
+    },
+    {
+      "key": "ab7c7175-b0ea-40bc-b157-ff19cc083ef9",
+      "properties": {
+        "description": "Set the properties of UI elements using code"
+      },
+      "seeding_key": {
+        "lesson.key": "Updating Screen Elements",
+        "objective.key": "ab7c7175-b0ea-40bc-b157-ff19cc083ef9"
+      }
+    }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Updating Screen Elements",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Updating Screen Elements",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 
