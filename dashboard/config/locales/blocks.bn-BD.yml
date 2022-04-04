@@ -157,6 +157,10 @@ bn:
           CONDITION:
             '"when"': যখন
             '"while"': যখন
+      gamelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': সেকেন্ড
       gamelab_getProp:
         options:
           PROPERTY:

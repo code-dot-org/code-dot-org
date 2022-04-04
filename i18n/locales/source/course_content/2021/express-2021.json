@@ -2058,18 +2058,22 @@
     }
   },
   "https://studio.code.org/s/express-2021/lessons/14/levels/9": {
-    "short_instructions": "Great job! You’ve gathered lots of resources and built a modest home. Now lay rail from the edge of the map to the door of your house.",
-    "authored_hints": {
-      "mc_13_a": "Use `place rail` to lay rail on the square you are standing in.",
-      "mc_13_b": "Use `repeat` loops to make your code shorter."
-    }
-  },
-  "https://studio.code.org/s/express-2021/lessons/14/levels/10": {
     "short_instructions": "You’ll find the most valuable resources underground, but it can get dark. Place at least 2 torches and mine at least 2 coal.",
     "authored_hints": {
       "mc_9_a": "Are you facing the right way? The `destroy block` mines the block in front of you.",
       "mc_9_b": "The black specks in the wall are coal! Use `destroy block` on these to mine the coal.",
       "mc_9_c": "Use `place torch` to put a torch in the space where you are standing."
+    }
+  },
+  "https://studio.code.org/s/express-2021/lessons/14/levels/10": {
+    "short_instructions": "Walking into molten lava is a bad idea. Place cobblestone to create a bridge, then mine at least two of the iron blocks.",
+    "authored_hints": {
+      "mc_10_a": "The iron blocks are the speckled spaces behind the torch! How are you going to get over there?",
+      "mc_10_b": "When you are standing at the edge of the lava, use `place cobblestone ahead` to make a safe path. Then, you can walk over it!",
+      "mc_10_c": "Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet."
+    },
+    "callouts": {
+      "craft_what_is_iron": "Mine this iron!"
     }
   },
   "https://studio.code.org/s/express-2021/lessons/14/levels/11": {
@@ -2093,14 +2097,10 @@
     }
   },
   "https://studio.code.org/s/express-2021/lessons/14/levels/13": {
-    "short_instructions": "Walking into molten lava is a bad idea. Place cobblestone to create a bridge, then mine at least two of the iron blocks.",
+    "short_instructions": "Great job! You’ve gathered lots of resources and built a modest home. Now lay rail from the edge of the map to the door of your house.",
     "authored_hints": {
-      "mc_10_a": "The iron blocks are the speckled spaces behind the torch! How are you going to get over there?",
-      "mc_10_b": "When you are standing at the edge of the lava, use `place cobblestone ahead` to make a safe path. Then, you can walk over it!",
-      "mc_10_c": "Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet."
-    },
-    "callouts": {
-      "craft_what_is_iron": "Mine this iron!"
+      "mc_13_a": "Use `place rail` to lay rail on the square you are standing in.",
+      "mc_13_b": "Use `repeat` loops to make your code shorter."
     }
   },
   "https://studio.code.org/s/express-2021/lessons/14/levels/14": {

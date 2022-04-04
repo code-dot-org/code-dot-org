@@ -370,6 +370,7 @@ bg:
       minecraft_hero: Minecraft герой
       playlab: Театрална лаборатория
       poetry: Поезия
+      scratch: Scratch
       sports: Спорт
       starwars: Междузвездни войни
       starwarsblocks: Междузвездни войни (блокове)
@@ -410,6 +411,7 @@ bg:
       example: Примерно решение
       example_with_number: Примерно решение %{solution_number}
       submitted_on: Добавено на %{date}
+      last_updated: 'Последна актуализация:'
       unsubmit: Не е добавено
       worked_with: Работи с
       update_lock_settings: Актуализирайте настройките за заключване тук.
@@ -461,6 +463,8 @@ bg:
       във форма, която да позволява да се свържете с ученици. Курсистите не получават
       имейли от Code.org освен за възстановяване на парола. Вижте нашата [декларация
       за поверителност](%{privacy_policy_url}) за повече информация.'
+    update: Актуализиране на акаунт
+    account_successfully_updated: Успешно актуализиране на акоунт.
     update_email: Актуализиране
     remove_parent_email_label: Премахване
     none: Без
@@ -594,6 +598,7 @@ bg:
     notes_coming_soon: Бележки за този клип очаквайте скоро.
     autoplay_option: Автоматично изпълнение на видеата
     download: Изтегляне на видео
+    show_video: Покажете видео
     label: Видео
   compatibility:
     upgrade:
@@ -784,6 +789,8 @@ bg:
     open_response_body: Благодаря за вашия отговор!
     correct_title: Правилно
     correct_body: Това е верният отговор.
+  lesson_extras:
+    bonus_level: Бонус ниво
   dialog:
     ok: OK
     startover_title: Наистина ли искате да започнете отначало?
@@ -798,6 +805,8 @@ bg:
   age_interstitial:
     age: Вашата възраст
     header: Актуализиране на информацията за акаунта
+    disclaimer: Както винаги, code.org никога няма да отдава, продава тази информация
+      на когото и да е от трета страна.
   terms_interstitial:
     title: Актуализираните условия за ползване и поверителност
     intro_desc: 'Обновихме нашите условия за ползване и поверителност, както е показано
@@ -838,7 +847,14 @@ bg:
       може да са недостъпни за вашите ученици преди изрично приемане на променените
       условия.
     review_terms: Преглед на актуализираните условия
+  donor_interstitial:
+    support_codeorg_1: Всеки лев дарен на Code.org дава възможност на повече студенти.
+    support_codeorg_2: "[Дарете сега[(%{donate_url}) за да подкрепите Code.org."
+    get_started: Започнете на Code.org.
   school_info_interstitial:
+    message: Моля попълнете информацията за вашето училище по-долу.
+    message_with_suggestion: Моля, уверете се че следната информация е правилна или
+      я поправете, ако е нужно.
     save: Запазване
   race_interstitial:
     title: 'По желание: Помогнете ни подобрим многообразието от уроци по компютърни
@@ -881,6 +897,8 @@ bg:
     new: Създаване на нов
     exit: Връщане към курса
     project_gallery: Проекти
+    publish: Публикувайте
+    unpublish: Отпубликувайте
     share_title: Споделяне на Вашия проект
     share_copy_link: 'Копиране на връзката:'
     share_embed_description: Можете да поставите кода за вграждане в HTML страница
@@ -1021,10 +1039,19 @@ bg:
     или за да прегледате вашите отговори.
   hidden_stage: Вашият учител не е позволил достъпа до този етап. Моля, попитайте
     учителя кой урок трябва започнете.
+  no_script_access_teacher: Нямате достъп до това ниво. Ако смятате, че трябва да
+    имате достъп до нивото, моля пишете до support@code.org, за да можем да оправим
+    ситуацията.
+  no_level_access_student: Нямате достъп до това ниво. Моля питайте вашият ментор/учител
+    на кое ниво трябва да бъдете.
+  no_level_access_teacher: Нямате достъп до това ниво. Ако смятате, че трябва да имате
+    достъп до нивото, моля пишете до support@code.org, за да можем да оправим ситуацията.
   return_unit_overview: Прегледайте тази част
   return_course_overview: Прегледайте тази част
   pd:
     form_labels:
+      first_name: Име
+      last_name: Фамилия
       email: Имейл
       school: Училище
       school_name: Име на училището
@@ -1032,29 +1059,64 @@ bg:
       school_country: Училищен район
       colombian_school_city: 'Града на Училището '
       colombian_chilean_school_name: Име на училището
+      ages: На кои класове преподавате тази година?
+      subjects: Кои предмети преподавате тази година?
     form_entries:
       gender:
         male: Мъж
         female: Жена
         none: Предпочитам да не отговоря
+      school_country:
+        canada: Канада
+        chile: Чили
+        colombia: Колумбия
+        israel: Израел
+        malaysia: Малайзия
+        mexico: Мексико
+        thailand: Тайланд
+        uzbekistan: Узбекистан
+      ages:
+        ages_under_6: "< 6 годишни"
+        ages_7_8: 7-8 годишни
+        ages_9_10: 9-10 годишни
+        ages_11_12: 11-12 годишни
+        ages_13_14: 13-14 годишни
+        ages_15_16: 15-16 годишни
+        ages_17_18: 17-18 годишни
+        ages_19_over: 19+ годишни
       subjects:
         cs: Компютърни науки
         math: Математика
         science: Наука
         la: Език, изкуства
+        efl: Английски като чужд език
         music: Музика
+        art: Изкуство
+        other: 'Друго:'
       resources:
         khan: Khan Academy
         kodable: Kodable
         lightbot: Lightbot
+        scratch: Scratch
+        other: 'Друго:'
       robotics:
         kodable: Kodable
+        lego: LEGO Education
+        microbit: Microbit
+        ozobot: Ozobot
+        sphero: Sphero
+        raspberry: Raspberry Pi
+        other: 'Друго:'
       workshop_course:
         csp: '"15-" 16 CS принципи'
       email_opt_in:
         opt_in_yes: Да
         opt_in_no: Не
+  courses_category: Пълните курсове
   cookie_banner:
     accept: Приемам
   page_not_found_title: Страницата не е намерена
   copy: Копиране
+  confirm: Потвърдете
+  parent_email_banner:
+    not_now: Не сега

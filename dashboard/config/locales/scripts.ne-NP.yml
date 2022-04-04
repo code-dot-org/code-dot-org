@@ -622,6 +622,9 @@ ne:
             through this Minecraft world
         oceans:
           title: महासागरका लागि A.I
+          lessons:
+            Oceans:
+              name: महासागरका लागि A.I
         ScienceP3OLPT3:
           lessons:
             Wrap-Up:
@@ -848,6 +851,7 @@ ne:
           description_short: Choose your team and make a basketball game
           description: Choose your team and make a basketball game
           student_description: Choose your team and make a basketball game
+          name: basketball
         csd2-2017:
           lessons:
             Peer Review:
@@ -2055,6 +2059,9 @@ ne:
           title: डान्स पार्टी (२०१९)
           description_short: क्याटी पेरी, शन मेन्डेस, प्यानिक । द डिस्कोमा लिल नास
             एक्स, जोनास ब्रदर्स, निक्की मिनाज, र थप ३४ अरु ।
+          lessons:
+            Dance Party:
+              name: डान्स पार्टी (२०१९)
         k5-onlinepd-2019:
           lessons:
             Loops:
@@ -2902,6 +2909,9 @@ ne:
             lessonGroup-2:
               display_name: Content
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: For Loops
           lesson_groups:
             lessonGroup-2:
               display_name: Content

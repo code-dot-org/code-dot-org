@@ -142,6 +142,10 @@ kk:
           CONDITION:
             '"when"': кезде
             '"while"': болған кезде
+      gamelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': секунд
       gamelab_getProp:
         options:
           PROPERTY:

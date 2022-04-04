@@ -200,6 +200,10 @@ si:
           CONDITION:
             '"when"': විට
             '"while"': while
+      gamelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': තත්පර
       gamelab_getProp:
         options:
           PROPERTY:

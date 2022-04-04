@@ -1573,8 +1573,6 @@ es:
           description_short: Cómo dirigir un debate sobre la igualdad en un Desarrollo
             Profesional de Code.org
           lessons:
-            Code.org Equity PD:
-              name: Desarrollo profesional de Code.org en condiciones de igualdad
             Necessary Background:
               name: Experiencia necesaria
           student_description: Cómo dirigir un debate sobre la igualdad en un Desarrollo
@@ -2271,6 +2269,7 @@ es:
                 de tiempo para jugar en el nivel de juego libre al final.
           student_description: Utiliza bloques de código para llevar a Steve o Alex
             en una aventura a través del mundo de Minecraft.
+          name: mc
         oceans:
           title: Inteligencia Artificial para Océanos
           description: Aprende cómo IA y el aprendizaje automático se pueden usar
@@ -4851,6 +4850,7 @@ es:
                 tendrán la oportunidad de personalizar su juego con diferentes velocidades
                 y sonidos.
           student_description: Elije un equipo y crea un juego de basquetbol
+          name: baloncesto
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -6054,6 +6054,7 @@ es:
                 tendrán la oportunidad de personalizar su juego con diferentes velocidades
                 y sonidos.
           student_description: Multideporte
+          name: deportes
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -10390,6 +10391,7 @@ es:
                 de tiempo para jugar en el nivel de juego libre al final.
           student_description: "¡Minecraft vuelve a la Hora del Código con una nueva
             actividad! Viaja a través de Minecraft con código."
+          name: héroe
         applab-intro-staging:
           title: Introducción a la preparación del Laboratorio de aplicaciones
           lessons:
@@ -14692,6 +14694,7 @@ es:
                 fue creada para responder a la música.
           student_description: "¡Programa tu propio baile para compartirlo con tus
             amigos!"
+          name: baile
         frozen-2018-test-b:
           title: Nuevo guión de Frozen
           lessons:
@@ -14721,6 +14724,7 @@ es:
           student_description: "¡Minecraft está de vuelta con una nueva actividad!
             Usa tu creatividad y tu capacidad de resolver problemas para explorar
             y construir mundos acuáticos a través del código."
+          name: acuático
         sconyers:
           title: Playground de Tracey
           lessons:
@@ -21057,7 +21061,7 @@ es:
           description: "¡Programa tu propio baile para compartirlo con tus amigos!"
           lessons:
             Dance Party:
-              name: Fiesta de Baile
+              name: Fiesta de baile (remix 2019)
               description_student: En esta lección, los estudiantes de todas las edades
                 obtienen una experiencia introductoria con la programación y las ciencias
                 de la computación en un entorno seguro y que les brinda apoyo. Esta
@@ -27074,8 +27078,6 @@ es:
               name: USAR Programas (Sólo Laboratorio de Aplicaciones )
             MODIFY Programs:
               name: MODIFICAR Programas (AppLab -> Widget -> AppLab)
-            Does Code.org Like Your Dog?:
-              name: "¿Le gusta a Code.org tu perro?"
             dog:
               name: "¿Le gusta a Code.org tu perro?"
             AI for Oceans:
@@ -36451,7 +36453,7 @@ es:
               name: Módulo 1
             Getting Started:
               name: Primeros pasos
-            What is Code.org:
+            What is Codeorg:
               name: "¿Qué es Code.org?"
             Addressing Implementation Approaches and Barriers:
               name: Enfoques de Aplicación y Obstáculos
@@ -38642,8 +38644,7 @@ es:
           title: '"¡Hola, mundo!"'
         csa-self-paced-pl:
           lessons:
-            Navigating the Code.org learning platform:
-              name: " Navegando por la plataforma de aprendizaje Code.org"
+            Navigating the Codeorg learning platform:
               description_teacher: |-
                 **Aprenderás cómo:**
 
@@ -43719,7 +43720,7 @@ es:
                 Al final de esta etapa, los estudiantes tendrán la oportunidad de
                 crear sus propias imágenes mediante bucles.
               key: Escena del océano con bucles
-            The Big Event Jr.:
+            The Big Event Jr:
               name: El Gran Evento Jr.
               description_student: Muévete y grita cuando tus docentes presionen los
                 botones de un control remoto gigante.
@@ -45492,7 +45493,7 @@ es:
                 ejercitan la empatía y la creatividad para esbozar una aplicación
                 para smartphone que responda a las necesidades de otro usuario.
               key: La aplicación correcta
-            The Big Event Jr.:
+            The Big Event Jr:
               name: El Gran Evento Jr.
               description_student: Muévete o grita cuando tu docente presione los
                 botones de un control remoto gigante.
@@ -45650,7 +45651,7 @@ es:
 
                 Internet está lleno de todo tipo de personas interesantes, pero a veces, algunas de ellas pueden ser malintencionadas. Con este juego de rol, ayuda a tus alumnos a entender por qué a menudo es más fácil ser malvado en línea que en persona, y cómo lidiar con la maldad en línea cuando la ven.
               key: Poner un STOP a la maldad en Internet
-            My Robotic Friends Jr.:
+            My Robotic Friends Jr:
               name: Mis amigos robóticos Jr.
               description_student: En esta lección, harás de cuenta que tus compañeros
                 de clase son robots y los programarás para crear patrones de tazas
@@ -45698,7 +45699,7 @@ es:
                 del Artista, los estudiantes podrán crear imágenes de mayor complejidad
                 mediante nuevos bloques, tales como como `avanzar 100 pixeles` y `girar
                 90 grados a la derecha`.
-            My Loopy Robotic Friends Jr.:
+            My Loopy Robotic Friends Jr:
               name: Mis amigos robóticos y repetitivos Jr.
               description_student: En esta lección, volverás a programar a tus compañeros
                 de clase. Al usar bucles, podrás resolver problemas más grandes y
@@ -48071,6 +48072,10 @@ es:
                 Evalúa tu progreso a través de la Evaluación de la Unidad 1.
               description_teacher: Los alumnos realizan una evaluación de opción múltiple
                 que abarca los temas de la unidad.
+            lesson-21:
+              name: Consola
+            lesson-22:
+              name: Clases y Objetos
           lesson_groups:
             lessonGroup-2:
               display_name: Contenido
@@ -48159,6 +48164,10 @@ es:
               name: Imprimiendo Objetos
             lesson-15:
               name: Ámbito
+            lesson-16:
+              name: Consola
+            lesson-17:
+              name: Clases y Objetos
           lesson_groups:
             lessonGroup-2:
               display_name: Contenido
@@ -48172,6 +48181,14 @@ es:
               name: Práctica de FRQ
             lesson-2:
               name: Evaluación de la Unidad 3
+            lesson-5:
+              name: Bucles Para
+            lesson-12:
+              name: Búsqueda de Duplicados
+            lesson-16:
+              name: Consola
+            lesson-17:
+              name: Clases y Objetos
           lesson_groups:
             lessonGroup-2:
               display_name: Contenido
@@ -48404,6 +48421,7 @@ es:
 
                 **Tiempo sugerido:** 15 minutos
           name: autodidáctico-pl-csa2-2022
+          title: 'Módulo 2: Navegando por Code.org'
         self-paced-pl-csa3-2022:
           lessons:
             lesson-1:
@@ -50323,6 +50341,12 @@ es:
           lessons:
             lesson-1:
               name: Bienvenidos
+            lesson-4:
+              name: Resumen de los Descubrimientos de la Informática
+            lesson-9:
+              name: Planificación de lecciones
+            lesson-10:
+              name: El papel del profesor
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -50343,6 +50367,8 @@ es:
               name: Métodos Mutadores
             lesson-9:
               name: Imprimiendo Objetos
+            lesson-10:
+              name: Ámbito
             lesson-11:
               name: 'El Barrio: Proyecto de Gestión de Tiendas - Día 1'
             lesson-12:
@@ -50439,3 +50465,15 @@ es:
           description_audience: "¡Bienvenido al curso en línea gratuito para educadores,
             a su propio ritmo, de Code.org para iniciarse en los Conceptos Básicos
             de Informática!"
+        vpl-csd2-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Computación física
+        vpl-csd3-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Computación física
+        hello-world-csc:
+          title: Hola Mundo
+        csd-playground:
+          name: csd-playground

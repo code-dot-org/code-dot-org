@@ -490,6 +490,11 @@ eu:
         text: 'iruzkina: {COMMENT}'
       gamelab_destroy:
         text: ezabatu {THIS}
+      gamelab_everySeconds:
+        text: "{N} {UNIT} aldiro "
+        options:
+          UNIT:
+            '"seconds"': segundu
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:

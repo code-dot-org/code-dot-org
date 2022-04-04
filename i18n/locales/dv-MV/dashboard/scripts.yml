@@ -12,6 +12,9 @@ dv:
           student_description: އިވެންޓުތައް
         oceans:
           title: އޭއައި ފޯރ އޯޝަންސް
+          lessons:
+            Oceans:
+              name: އޭއައި ފޯރ އޯޝަންސް
         gradeKinder:
           lessons:
             Events:
@@ -51,6 +54,9 @@ dv:
         dance-2019:
           title: ޑާންސް ޕާޓީ 2019
           description_short: ފީޗަރކުރަނީ ކޭޓީ ޕެރީ، ޝޯން މެންޑޭސް، ޕެނިކް! އެޓް ދަ ޑިސްކޯ، ލިލް ނަސް އެކްސް، ޖޯނަސް ބްރަދަރސް، ނިކީ މިނާޖް އަދި 34 އިތުރު ފަރާތް!
+          lessons:
+            Dance Party:
+              name: ޑާންސް ޕާޓީ 2019
         k5-onlinepd-2019:
           lessons:
             Events:

@@ -859,6 +859,7 @@ et:
               name: Kooditund 2015
           student_description: Kasuta koodi plokke, et viia Steve või Alex seiklusele
             läbi selle Minecrafti maailma.
+          name: mc
         ScienceP3OLPT3:
           lessons:
             Welcome!:
@@ -1203,6 +1204,7 @@ et:
           description_short: Vali meeskond ja tee korvpallimäng
           description: Vali meeskond ja tee korvpallimäng
           student_description: Vali meeskond ja tee korvpallimäng
+          name: korvpall
         csd2-2017:
           lessons:
             Peer Review:
@@ -2710,10 +2712,6 @@ et:
               display_name: Sisu
             required:
               display_name: Ülevaade
-        dance-2019:
-          lessons:
-            Dance Party:
-              name: Tantsuõhtu
         k5-onlinepd-2019:
           lesson_groups:
             k5_next_steps:
@@ -3757,6 +3755,9 @@ et:
             lessonGroup-2:
               display_name: Sisu
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: For tsükkel
           lesson_groups:
             lessonGroup-2:
               display_name: Sisu

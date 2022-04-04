@@ -957,7 +957,8 @@ he:
           lesson_groups:
             required:
               display_name: סקירה
-        basketball: {}
+        basketball:
+          name: כדורסל
         hoc-encryption: {}
         csd2-2017:
           lesson_groups:
@@ -1085,7 +1086,8 @@ he:
           lessons:
             Hour of Code 2013:
               name: שעת קוד 2013
-        sports: {}
+        sports:
+          name: ספורט
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -3283,7 +3285,7 @@ he:
           description: קודדו מסיבת ריקודים משלכם ושתפו עם חברים!
           lessons:
             Dance Party:
-              name: מסיבת ריקודים
+              name: מסיבת ריקודים (2019)
           student_description: קודדו מסיבת ריקודים משלכם ושתפו עם חברים!
         k5-onlinepd-2019:
           lesson_groups:
@@ -4804,7 +4806,7 @@ he:
             lesson-1: {}
         csa-self-paced-pl:
           lessons:
-            Navigating the Code.org learning platform: {}
+            Navigating the Codeorg learning platform: {}
             Navigating lesson plans and resources: {}
             Navigating support: {}
             lesson-4: {}
@@ -5450,6 +5452,8 @@ he:
           lessons:
             lesson-9:
               name: חזרות
+            lesson-21: {}
+            lesson-22: {}
         pre-express-2022:
           lessons:
             Learn to Drag and Drop: {}
@@ -5476,7 +5480,14 @@ he:
           lessons:
             lesson-6:
               name: משתנים
-        csa3-2022: {}
+            lesson-16: {}
+            lesson-17: {}
+        csa3-2022:
+          lessons:
+            lesson-5:
+              name: בשביל לולאות
+            lesson-16: {}
+            lesson-17: {}
         tessplayground: {}
         cs4all-invasive-species:
           lessons:
@@ -5535,7 +5546,6 @@ he:
         self-paced-pl-csa3-2022:
           lessons:
             lesson-1: {}
-            lesson-2: {}
         csa7-pilot-extra:
           lessons:
             Unit 7 Pilot Survey: {}
@@ -5611,16 +5621,13 @@ he:
             lesson-3: {}
         vpl-csd1-summer-pilot-2022:
           lessons:
-            lesson-1: {}
             lesson-3: {}
         vpl-csd2-summer-pilot-2022:
           lessons:
             lesson-1: {}
             lesson-2: {}
         vpl-csd3-summer-pilot-2022: {}
-        vpl-csd4-summer-pilot-2022:
-          lessons:
-            lesson-1: {}
+        vpl-csd4-summer-pilot-2022: {}
         vpl-csd5-summer-pilot-2022: {}
         csa2-2022-exemplars:
           lessons:
@@ -5676,3 +5683,16 @@ he:
             Lesson Planning: {}
             Implementation Approaches and Barriers: {}
             Next steps: {}
+        vpl-csd1-ci-pilot-2022: {}
+        vpl-csd2-ci-pilot-2022: {}
+        vpl-csd3-ci-pilot-2022:
+          lessons:
+            lesson-2: {}
+        vpl-csd4-ci-pilot-2022: {}
+        vpl-csd5-ci-pilot-2022: {}
+        vpl-csd6-ci-pilot-2022: {}
+        vpl-csd7-ci-pilot-2022: {}
+        hello-world-csc: {}
+        csd-playground:
+          lessons:
+            lesson-1: {}
