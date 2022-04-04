@@ -54,10 +54,6 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
     return fields;
   }
 
-  getTitleValue(name) {
-    return super.getFieldValue(name);
-  }
-
   isUserVisible() {
     return false; // TODO - used for EXTRA_TOP_BLOCKS_FAIL feedback
   }

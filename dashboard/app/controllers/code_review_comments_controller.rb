@@ -9,14 +9,14 @@ class CodeReviewCommentsController < ApplicationController
   def create
     additional_attributes = {
       commenter_id: current_user.id,
-      storage_app_id: @storage_app_id,
+      project_id: @project_id,
       project_owner_id: @project_owner.id
     }
     @code_review_comment = CodeReviewComment.new(code_review_comments_params.merge(additional_attributes))
 
     # We wait to authorize until this point because we need to know
     # who owns the project that the comment is associated with.
-    authorize! :create, @code_review_comment, @project_owner, @storage_app_id, params[:level_id], params[:script_id]
+    authorize! :create, @code_review_comment, @project_owner, @project_id, params[:level_id], params[:script_id]
 
     if @code_review_comment.save
       return render json: serialize(@code_review_comment)
@@ -45,13 +45,13 @@ class CodeReviewCommentsController < ApplicationController
 
   # GET /code_review_comments/project_comments
   def project_comments
-    authorize! :project_comments, CodeReviewComment.new, @project_owner, @storage_app_id
+    authorize! :project_comments, CodeReviewComment.new, @project_owner, @project_id
 
     # Setting custom header here allows us to access the csrf-token and manually use for create
     headers['csrf-token'] = form_authenticity_token
 
     @project_comments = CodeReviewComment.where(
-      storage_app_id: @storage_app_id
+      project_id: @project_id
     ).order(:created_at)
 
     # Keep teacher comments private between project owner and teacher.
@@ -68,7 +68,7 @@ class CodeReviewCommentsController < ApplicationController
 
   def decrypt_channel_id
     # TO DO: handle errors in decrypting, or can't find user
-    @storage_id, @storage_app_id = storage_decrypt_channel_id(params[:channel_id])
+    @storage_id, @project_id = storage_decrypt_channel_id(params[:channel_id])
     @project_owner = User.find_by(id: user_id_for_storage_id(@storage_id))
   end
 

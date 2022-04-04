@@ -116,22 +116,6 @@ social:
 <p><strong>Note that clicking any of the "View details" buttons below will take you to Eventbrite.com.</strong></p>
 <br>
 
-
-
-<div class="col-33" style="padding-bottom:15px">
-  <div class="tutorial-tile" style="padding-right:20px">
-      <a class="linktag" id="meowwolf-chat" href="https://www.eventbrite.com/e/my-journey-making-interactive-art-with-technology-registration-261398238167" target="_blank">
-        <img class="tutorial-tile-img" src="/images/csjourneys/meowwolf-myjourney.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="My Journey Chat Danny Bazo of Meow Wolf">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-        <div class="smalltext" style="color: #00adbc; text-align: left"><strong>Fri, April 1 at 1 pm EDT</strong></div>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Making interactive art with technology</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Learn how a creative engineer at Meow Wolf helps to build interactive art installations that immerse visitors in mind-blowing new worlds with the intersection of art and engineering. <i>For grades 6-12</i>.</div>
-        <a class="linktag" id="meowwolf-chat" href="https://www.eventbrite.com/e/my-journey-making-interactive-art-with-technology-registration-261398238167" target="_blank"><button>View details</button></a>
-  </div>
-</div>
-</div>
-
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="snapchat-chat" href="https://www.eventbrite.com/e/252182493627" target="_blank">
@@ -142,6 +126,21 @@ social:
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Creating an inclusive camera at Snapchat</strong></h3>
         <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Hear about a Snapchat Product Lead’s journey from building a jukebox app to creating an inclusive camera that works well for everyone, regardless of their skin tone, culture, beauty standards, or ability. <i>For grades 6-12</i>.</div>
         <a class="linktag" id="snapchat-chat" href="https://www.eventbrite.com/e/252182493627" target="_blank"><button>View details</button></a>
+  </div>
+</div>
+</div>
+
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="greenwayhealth-chat" href="https://www.eventbrite.com/e/277186250537" target="_blank">
+        <img class="tutorial-tile-img" src="/images/csjourneys/myjourney-greenwayhealth2.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="My Journey Chat with Kevin Schriver of Greenway Health">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+        <div class="smalltext" style="color: #00adbc; text-align: left"><strong>Wednesday, April 13 at 2 pm EDT</strong></div>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Improving user experiences in healthcare</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Hear from a self-taught web developer about how his contributions at Greenway Health make access to healthcare information more user-friendly. <i>For grades K-5</i>.</div>
+		<br>
+		<a class="linktag" id="greenwayhealth-chat" href="https://www.eventbrite.com/e/277186250537" target="_blank"><button>View details</button></a>
   </div>
 </div>
 </div>
@@ -165,25 +164,6 @@ social:
   <div style="clear: both"></div>
   <br>
 </div>
-
-<div style="clear: both; margin-bottom: 20px"></div>
-
-
-<div class="col-33" style="padding-bottom:15px">
-  <div class="tutorial-tile" style="padding-right:20px">
-      <a class="linktag" id="greenwayhealth-chat" href="https://www.eventbrite.com/e/277186250537" target="_blank">
-        <img class="tutorial-tile-img" src="/images/csjourneys/myjourney-greenwayhealth2.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="My Journey Chat with Kevin Schriver of Greenway Health">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-        <div class="smalltext" style="color: #00adbc; text-align: left"><strong>Wednesday, April 13 at 2 pm EDT</strong></div>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Improving user experiences in healthcare</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Hear from a self-taught web developer about how his contributions at Greenway Health make access to healthcare information more user-friendly. <i>For grades K-5</i>.</div>
-		<br>
-		<a class="linktag" id="greenwayhealth-chat" href="https://www.eventbrite.com/e/277186250537" target="_blank"><button>View details</button></a>
-  </div>
-</div>
-</div>
-
 
 <div style="clear: both; margin-bottom: 20px"></div>
 
