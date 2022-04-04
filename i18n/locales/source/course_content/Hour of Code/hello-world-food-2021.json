@@ -69,6 +69,7 @@
     }
   },
   "https://studio.code.org/s/hello-world-food-2021/lessons/1/levels/6": {
+    "display_name": "Click Events",
     "short_instructions": "Let's learn how to change the background.",
     "long_instructions": "_What else can we do with events? Let's learn how to change the background._\n\n_You may have already noticed these blocks:_ \n[blockly block][0]\n\n[blockly block][1]\n\n-   Place another `set background` block under an event to change the scene by clicking a sprite.\n\n_Extra Challenge:_ Change the background multiple times by clicking on multiple sprites!",
     "authored_hints": {
