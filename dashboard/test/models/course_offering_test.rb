@@ -441,6 +441,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert_queries(0) do
       CourseOffering.assignable_course_offerings_info(@facilitator)
     end
+
+    Script.clear_cache
   end
 
   test "can serialize and seed course offerings" do
