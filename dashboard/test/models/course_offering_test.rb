@@ -430,6 +430,11 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test 'query count for assignable_course_offerings' do
+    Script.stubs(:should_cache?).returns true
+    # Only need to populate cache once per test-suite run
+    @@script_cached ||= Script.unit_cache_to_cache
+    Script.script_cache
+
     CourseOffering.assignable_course_offerings_info(@facilitator)
 
     assert_queries(0) do
