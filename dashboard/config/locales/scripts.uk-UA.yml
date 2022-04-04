@@ -1539,6 +1539,7 @@ uk:
           description_short: Обери команду та створи гру в баскетбол
           description: Обери команду та створи гру в баскетбол
           student_description: Обери команду та створи гру в баскетбол
+          name: баскетбол
         hoc-encryption:
           lessons:
             Simple Encryption:
@@ -2502,6 +2503,7 @@ uk:
             Подорожуйте Майнкрафтом з кодом.
           student_description: Майнкрафт повернувся до Години коду з новеньким підручником!
             Подорожуйте Майнкрафтом з кодом.
+          name: герой
         csp-explore-2017:
           lesson_groups:
             csp_ap_2:
@@ -3318,6 +3320,7 @@ uk:
           student_description: Майнкрафт повертається в Годину коду з новим підручником!
             Скористайтесь своєю креативністю та вміннями розв'язання проблем для того,
             щоб дослідити та збудувати підводні світи за допомогою коду.
+          name: водний
         dance--draft:
           lessons:
             Dance Party:
@@ -4364,10 +4367,6 @@ uk:
               display_name: Зміст
             required:
               display_name: Огляд
-        dance-2019:
-          lessons:
-            Dance Party:
-              name: Танцювальна вечірка
         k5-onlinepd-2019:
           title: Викладання основ інформатики
           description: Дізнайтеся, як викладати інформатику за допомогою безкоштовного
@@ -6455,6 +6454,9 @@ uk:
             lessonGroup-2:
               display_name: Зміст
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: Цикли For
           lesson_groups:
             lessonGroup-2:
               display_name: Зміст
@@ -6533,6 +6535,8 @@ uk:
           lessons:
             lesson-1:
               name: Ласкаво просимо
+            lesson-9:
+              name: Планування уроку
         csa2-2022-exemplars:
           lessons:
             lesson-1:

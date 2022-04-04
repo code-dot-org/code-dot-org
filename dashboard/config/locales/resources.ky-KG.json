@@ -29,6 +29,138 @@
         "ai-training/oceans/unversioned": {
           "type": "Видео"
         },
+        "vocabulary/courseb/2018": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/coursea/2018": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/coursed/2018": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/coursef/2018": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/express/2018": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/coursee/2018": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/coursec/2018": {
+          "name": "Сөздүк"
+        },
+        "code_introduced_1/csd/2018": {
+          "name": "Код киргизилди"
+        },
+        "vocabulary_2/csd/2018": {
+          "name": "Сөздүк"
+        },
+        "code_introduced_3/csd/2018": {
+          "name": "Код киргизилди"
+        },
+        "vocabulary_5/csd/2018": {
+          "name": "Сөздүк"
+        },
+        "vocabulary_4/csd/2018": {
+          "name": "Сөздүк"
+        },
+        "code_introduced_2/csd/2018": {
+          "name": "Код киргизилди"
+        },
+        "vocabulary_3/csd/2018": {
+          "name": "Сөздүк"
+        },
+        "code_introduced/csd/2018": {
+          "name": "Код киргизилди"
+        },
+        "vocabulary_1/csd/2018": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/csd/2018": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/coursea/2019": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/courseb/2019": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/coursed/2019": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/coursef/2019": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/coursee/2019": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/express/2019": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/coursec/2019": {
+          "name": "Сөздүк"
+        },
+        "code_introduced_1/csd/2019": {
+          "name": "Код киргизилди"
+        },
+        "vocabulary_2/csd/2019": {
+          "name": "Сөздүк"
+        },
+        "code_introduced_3/csd/2019": {
+          "name": "Код киргизилди"
+        },
+        "vocabulary_5/csd/2019": {
+          "name": "Сөздүк"
+        },
+        "code_introduced_2/csd/2019": {
+          "name": "Код киргизилди"
+        },
+        "vocabulary_3/csd/2019": {
+          "name": "Сөздүк"
+        },
+        "vocabulary_4/csd/2019": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/csd/2019": {
+          "name": "Сөздүк"
+        },
+        "code_introduced/csd/2019": {
+          "name": "Код киргизилди"
+        },
+        "vocabulary_1/csd/2019": {
+          "name": "Сөздүк"
+        },
+        "code_introduced_1/csd/2017": {
+          "name": "Код киргизилди"
+        },
+        "vocabulary_2/csd/2017": {
+          "name": "Сөздүк"
+        },
+        "code_introduced_3/csd/2017": {
+          "name": "Код киргизилди"
+        },
+        "vocabulary_5/csd/2017": {
+          "name": "Сөздүк"
+        },
+        "code_introduced/csd/2017": {
+          "name": "Код киргизилди"
+        },
+        "vocabulary_1/csd/2017": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/csd/2017": {
+          "name": "Сөздүк"
+        },
+        "vocabulary_4/csd/2017": {
+          "name": "Сөздүк"
+        },
+        "code_introduced_2/csd/2017": {
+          "name": "Код киргизилди"
+        },
+        "vocabulary_3/csd/2017": {
+          "name": "Сөздүк"
+        },
         "introducing_sprite_lab_1/coursef/2021": {
           "type": "Видео"
         },
@@ -57,6 +189,9 @@
           "type": "Видео"
         },
         "common-sense-media-pause-think/courseb/2021": {
+          "type": "Видео"
+        },
+        "unplugged-video-big-event/courseb/2021": {
           "type": "Видео"
         },
         "wiggles-go_noodle/coursea/2021": {
@@ -329,6 +464,30 @@
         },
         "how-search-works-video/csd/2021": {
           "type": "Видео"
+        },
+        "vocabulary/pre-express/2020": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/express/2020": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/courseb/2020": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/coursed/2020": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/coursec/2020": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/coursee/2020": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/coursea/2020": {
+          "name": "Сөздүк"
+        },
+        "vocabulary/coursef/2020": {
+          "name": "Сөздүк"
         }
       }
     }

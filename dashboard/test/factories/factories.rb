@@ -850,7 +850,7 @@ FactoryGirl.define do
   end
 
   factory :featured_project do
-    storage_app_id {456}
+    project_id {456}
   end
 
   factory :user_ml_model do
@@ -1536,7 +1536,7 @@ FactoryGirl.define do
     association :commenter, factory: :student
     association :project_owner, factory: :student
 
-    storage_app_id 1
+    project_id 1
     comment 'a comment about your project'
   end
 
@@ -1551,7 +1551,7 @@ FactoryGirl.define do
   end
 
   factory :reviewable_project do
-    sequence(:storage_app_id)
+    sequence(:project_id)
     association :user, factory: :student
     association :level
     association :script

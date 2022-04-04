@@ -2,6 +2,8 @@
 tr:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: yeni yapmak {ANIMATION_NAME} sprite at {LOCATION}
       Dancelab_alternateMoves:
         text: "{MOVE1} ve {MOVE2} arasındaki her {N} ölçümünde  {GROUP} değiştirilir"
         options:
@@ -994,6 +996,12 @@ tr:
         text: çizgi çiz {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: kenarları blok {SPRITE} hareket
+      gamelab_everySeconds:
+        text: 'her {N} {UNIT}’de bir '
+        options:
+          UNIT:
+            '"seconds"': saniye
+            '"frames"': çerçeveler
       gamelab_followingTargets:
         text: takip eden hedefler
       gamelab_getAllSprites:
@@ -1126,6 +1134,8 @@ tr:
             '"pop"': patlamak
             '"rain"': yağmur
             '"spiral"': sarmal
+      gamelab_makeNewScaledSprite:
+        text: yeni yapmak {ANIMATION_NAME} sprite at {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: yeni yapmak {ANIMATION_NAME} sprite at {LOCATION}
       gamelab_makeNumSprites:

@@ -953,6 +953,8 @@ eu:
           lesson_groups:
             required:
               display_name: Bista orokorra
+        basketball:
+          name: saskibaloia
         csd2-2017:
           lessons:
             Lists:
@@ -2756,6 +2758,10 @@ eu:
           lessons:
             lesson-6:
               name: Aldagaiak
+        csa3-2022:
+          lessons:
+            lesson-5:
+              name: For begiztak
         cs4all-invasive-species:
           lessons:
             lesson-12:

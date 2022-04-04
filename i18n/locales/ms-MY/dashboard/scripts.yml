@@ -357,12 +357,14 @@ ms:
           title: Jam Kod Minecraft
           lessons:
             Hour of Code 2015:
+              name: Jam Kod Minecraft
               description_student: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup umur untuk membaca (umur 6+). Pelajar yang lebih muda mungkin tidak akan menghabiskan tutorial, tetapi akan berasa seronok mengerjakan teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menghabiskan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada penghujungnya.
               description_teacher: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup umur untuk membaca (umur 6+). Pelajar yang lebih muda mungkin tidak akan menghabiskan tutorial, tetapi akan berasa seronok mengerjakan teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menghabiskan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada penghujungnya.
         oceans:
           title: Kecerdasan Buatan (AI) untuk Lautan
           lessons:
             Oceans:
+              name: Kecerdasan Buatan (AI) untuk Lautan
               description_student: 'Rumusan Tutorial: Pelajar pertama mengklasifikasikan objek sebagai sama ada "ikan" atau "bukan ikan" sebagai usaha untuk mengaut sampah keluar dari lautan. Kemudian, pelajar akan perlu mengembangkan kumpulan data latihan mereka untuk memasukkan hidupan laut lain yang terdapat di dalam air. Dalam bahagian kedua aktiviti itu, pelajar akan memilih label mereka sendiri untuk digunakan pada imej ikan yang dihasilkan secara rawak. Data latihan ini digunakan untuk model pembelajaran mesin yang sepatutnya boleh melabelkan imej baharu dengan sendirinya.'
               description_teacher: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pertama, pelajar mengelaskan objek sama ada "ikan" atau "bukan ikan" untuk cuba membuang sampah dari lautan. Kemudian, pelajar perlu mengembangkan set data latihan mereka untuk memasukkan makhluk laut lain yang berada di dalam air. Dalam bahagian kedua aktiviti, pelajar akan memilih label mereka sendiri untuk digunakan pada imej ikan yang dijana secara rawak. Data latihan ini digunakan untuk model pembelajaran mesin yang kemudiannya boleh melabelkan imej baharu sendiri.
         ScienceP3OLPT3:
@@ -536,6 +538,7 @@ ms:
             Bounce:
               description_student: Adakah anda pernah berharap agar dapat bermain permainan video di sekolah? Dalam pelajaran ini, anda akan mencipta permainan itu sendiri!
               description_teacher: Dalam aktiviti dalam talian ini, pelajar akan mempelajari maksud peristiwa dan cara komputer menggunakannya dalam pengaturcaraan seperti permainan video. Pelajar akan melakukannya melalui teka-teki dengan membuatkan pengaturcaraan memberikan reaksi terhadap peristiwa (seperti butang anak panah ditekan.) Pada akhir teka-teki, pelajar akan mempunyai peluang menyesuaikan permainan mereka dengan kelajuan dan suara yang berbeza.
+          name: bola keranjang
         hoc-encryption:
           lessons:
             Simple Encryption:
@@ -757,6 +760,7 @@ ms:
             Sports:
               description_student: Adakah anda pernah berharap agar dapat bermain permainan video di sekolah? Dalam pelajaran ini, anda akan mencipta permainan itu sendiri!
               description_teacher: Dalam aktiviti dalam talian ini, pelajar akan mempelajari maksud peristiwa dan cara komputer menggunakannya dalam pengaturcaraan seperti permainan video. Pelajar akan melakukannya melalui teka-teki dengan membuatkan pengaturcaraan memberikan reaksi terhadap peristiwa (seperti butang anak panah ditekan.) Pada akhir teka-teki, pelajar akan mempunyai peluang menyesuaikan permainan mereka dengan kelajuan dan suara yang berbeza.
+          name: sukan
         2016_sciencePD-phase2b:
           lessons:
             Wrap-Up:
@@ -1804,6 +1808,7 @@ ms:
             Minecraft Hour of Code:
               description_teacher: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup umur untuk membaca (umur 6+). Pelajar yang lebih muda mungkin tidak akan menghabiskan tutorial, tetapi akan berasa seronok mengerjakan teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menghabiskan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada penghujungnya.
           student_description: Minecraft kembali untuk Jam Kod dengan aktiviti baharu! Perjalanan merentasi Minecraft dengan kod.
+          name: hero
         applab-intro-staging:
           lessons:
             Intro to App Lab:
@@ -2570,6 +2575,7 @@ ms:
               description_student: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini telah direka untuk pelajar semua peringkat umur tetapi memerlukan pembacaan. Aktiviti ini memerlukan bunyi kerana alat itu dibina untuk bertindak balas kepada muzik.
               description_teacher: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini telah direka untuk pelajar semua peringkat umur tetapi memerlukan pembacaan. Aktiviti ini memerlukan bunyi kerana alat itu dibina untuk bertindak balas kepada muzik.
           student_description: Kod majlis tari-menari anda sendiri untuk berkongsi dengan rakan anda!
+          name: menari
         frozen-2018-test-b:
           title: Skrip Frozen Baharu
           lessons:
@@ -2580,6 +2586,7 @@ ms:
           lessons:
             Aquatic:
               description_teacher: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup umur untuk membaca (umur 6+). Pelajar yang lebih muda mungkin tidak akan menghabiskan tutorial, tetapi akan berasa seronok mengerjakan teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menghabiskan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada penghujungnya.
+          name: akuatik
         dance--draft:
           lessons:
             Dance Party:
@@ -3697,7 +3704,6 @@ ms:
           description: Kod majlis tari-menari anda sendiri untuk berkongsi dengan rakan anda!
           lessons:
             Dance Party:
-              name: Majlis Tari-Menari
               description_student: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini telah direka untuk pelajar semua peringkat umur tetapi memerlukan pembacaan. Aktiviti ini memerlukan bunyi kerana alat itu dibina untuk bertindak balas kepada muzik.
               description_teacher: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini telah direka untuk pelajar semua peringkat umur tetapi memerlukan pembacaan. Aktiviti ini memerlukan bunyi kerana alat itu dibina untuk bertindak balas kepada muzik.
           student_description: Kod majlis tari-menari anda sendiri untuk berkongsi dengan rakan anda!
@@ -5790,8 +5796,7 @@ ms:
               display_name: Demo dan Sumber
         csa-self-paced-pl:
           lessons:
-            Navigating the Code.org learning platform:
-              name: " Menavigasi platform pembelajaran Code.org"
+            Navigating the Codeorg learning platform:
               description_teacher: |-
                 **Anda akan belajar cara untuk:**
 
@@ -6785,7 +6790,7 @@ ms:
               name: Pemandangan Lautan dengan Gelung
               description_student: Gunakan gelung dan corak untuk menyiapkan imej.
               key: Pemandangan Lautan dengan Gelung
-            The Big Event Jr.:
+            The Big Event Jr:
               name: Jr. Peristiwa Besar
               description_student: Bergerak dan berteriak apabila guru anda menekan butang pada alat kawalan jauh gergasi.
               description_teacher: Dalam pelajaran **tetapan konteks** ini, kelas akan mengalami konsep peristiwa melalui permainan apabila mereka bergerak atau berteriak semasa anda menekan butang pada alat kawalan jauh gergasi.
@@ -7058,7 +7063,7 @@ ms:
               description_student: Gunakan corak dan gelung untuk menyiapkan imej.
             The Right App:
               description_student: Lakarkan aplikasi telefon pintar anda sendiri.
-            The Big Event Jr.:
+            The Big Event Jr:
               name: Jr. Peristiwa Besar
               description_student: Bergerak atau berteriak apabila guru anda menekan butang pada alat kawalan jauh gergasi.
               description_teacher: Dalam pelajaran **tetapan konteks** ini, kelas akan mengalami konsep peristiwa melalui permainan apabila mereka bergerak atau berteriak semasa anda menekan butang pada alat kawalan jauh gergasi.
@@ -7132,7 +7137,7 @@ ms:
 
                 Internet dipenuhi dengan semua jenis individu yang menarik, tetapi kadang-kadang, sebilangan daripada mereka boleh menjadi zalim antara satu sama lain. Dengan peranan ini, bantu pelajar anda memahami sebab lebih mudah bersikap zalim dalam talian daripada bersemuka dan cara menangani kekejian dalam talian apabila mereka melihatnya.
               key: MENGHENTIKAN Kekejian Dalam Talian
-            My Robotic Friends Jr.:
+            My Robotic Friends Jr:
               name: Rakan Robotik Junior Saya
               description_student: Dalam pelajaran ini, anda akan berpura-pura yang rakan sekelas anda ialah robot dan mengatur cara mereka untuk membina corak cawan yang tersusun.
             Programming with Angry Birds:
@@ -7151,7 +7156,7 @@ ms:
               name: Mencipta Seni dengan Kod
               description_student: Cipta imej yang cantik dengan mengatur cara Artis.
               description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan mengawal Artis bagi melengkapkan lukisan pada skrin.
-            My Loopy Robotic Friends Jr.:
+            My Loopy Robotic Friends Jr:
               name: Rakan Robotik Bergelung Junior Saya
               description_student: Dalam pelajaran ini, anda akan mengatur cara rakan sekelas anda sekali lagi, tetapi dengan menggunakan gelung, anda akan dapat menyelesaikan masalah yang lebih besar dan lebih rumit.
             Loops with Rey and BB-8:
@@ -7632,6 +7637,8 @@ ms:
               name: Java Lab
             lesson-9:
               name: Gelung
+            lesson-21:
+              name: Konsol
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
@@ -7678,6 +7685,12 @@ ms:
           lessons:
             lesson-6:
               name: Pembolehubah
+            lesson-16:
+              name: Konsol
+        csa3-2022:
+          lessons:
+            lesson-16:
+              name: Konsol
         tessplayground:
           name: tessplayground
         cs4all-invasive-species:
@@ -7940,3 +7953,5 @@ ms:
             Variables:
               name: Pembolehubah
               key: Pembolehubah
+        hello-world-csc:
+          title: Helo Dunia

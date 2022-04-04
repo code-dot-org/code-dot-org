@@ -953,6 +953,7 @@ cs:
           title: AI pomáhá oceánům
           lessons:
             Oceans:
+              name: AI pomáhá oceánům
               description_student: 'Shrnutí výukového kurzu: Nejprve studenti zařadí
                 předměty jako buďto „ryba“ nebo „neryba“, aby se pokusili odstranit
                 odpad z oceánu. Pak budou studenti muset rozšířit svůj cvičný datový
@@ -1405,6 +1406,7 @@ cs:
                 dostanou studenti příležitost přizpůsobit si svou hru různými stupni
                 rychlosti a zvuky.
           student_description: Vyberte si svůj tým a vytvořte basketbalovou hru
+          name: basketbalový míč
         hoc-encryption:
           lessons:
             Simple Encryption:
@@ -1753,6 +1755,7 @@ cs:
                 dostanou studenti příležitost přizpůsobit si svou hru různými stupni
                 rychlosti a zvuky.
           student_description: Mix a zápas napříč sporty
+          name: sporty
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -3439,6 +3442,7 @@ cs:
                 konci jim zbyde čas na volné hraní.
           student_description: Minecraft je zpět v Hodině kódu se zcela novou aktivitou!
             Procestuj Minecraft s kódem.
+          name: hrdina
         applab-intro-staging:
           lessons:
             Intro to App Lab:
@@ -4737,6 +4741,7 @@ cs:
                 vytvořený tak, aby reagoval na hudbu.
           student_description: Vytvoř si svůj vlastní taneční večírek a sdílej ho
             s kamarády!
+          name: tanec
         frozen-2018-test-b:
           title: Nový skript Frozen
           lessons:
@@ -4755,6 +4760,7 @@ cs:
                 ale hodina věnované těmto úlohám pro ně bude ohromně zábavná. Studenti
                 středních škol nejspíš nebudou mít s dokončením kurzu problém a ke
                 konci jim zbyde čas na volné hraní.
+          name: vodní
         dance--draft:
           lessons:
             Dance Party:
@@ -6719,7 +6725,7 @@ cs:
           description: Vytvoř si svůj vlastní taneční večírek a sdílej ho s kamarády!
           lessons:
             Dance Party:
-              name: Taneční večírek
+              name: Taneční večírek (2019)
               description_student: V téhle lekci získají žáci všech věkových kategorií
                 úvodní zkušenost s programováním a informatikou v bezpečném a podpůrném
                 prostředí. Tahle lekce byla navržena pro žáky všech věkových kategorií,
@@ -10272,8 +10278,7 @@ cs:
               name: Ahoj světe!
         csa-self-paced-pl:
           lessons:
-            Navigating the Code.org learning platform:
-              name: " Jak se vyznat ve výukové platformě Code.org"
+            Navigating the Codeorg learning platform:
               description_teacher: |-
                 **Co se naučíte:**
 
@@ -11802,7 +11807,7 @@ cs:
               name: Oceánská scéna s cykly
               description_student: K dokončování obrázků používejte cykly a vzory.
               key: Oceánská scéna s cykly
-            The Big Event Jr.:
+            The Big Event Jr:
               name: Velká událost mladší
               description_student: Když Vaši učitelé stisknou tlačítko na velkém dálkovém
                 ovládání, pohněte se nebo vykřikněte.
@@ -12150,7 +12155,7 @@ cs:
             The Right App:
               description_student: Načrtněte si svou vlastní aplikaci pro inteligentní
                 telefon.
-            The Big Event Jr.:
+            The Big Event Jr:
               name: Velká událost mladší
               description_student: Když Váš učitel stiskne tlačítko na velkém dálkovém
                 ovládání, pohněte se nebo vykřikněte.
@@ -12230,7 +12235,7 @@ cs:
 
                 Internet je plný spousty různých zajímavých lidí, ale někdy jsou lidé na sebe navzájem zlí. V tomto hraní rolí pomůžete svým studentům pochopit, proč častokrát bývá online snadnější být zlý než osobně, a jak se vypořádat s online zlovolností, když se s ní setkáte.
               key: Dát STOP online zlovolnostem
-            My Robotic Friends Jr.:
+            My Robotic Friends Jr:
               name: Moji robotičtí přátelé (ml.)
               description_student: V této lekci budete předstírat, že Vaši spolužáci
                 jsou roboti a budete je programovat, aby stavěli obrazce z naskládaných
@@ -12253,7 +12258,7 @@ cs:
             Creating Art with Code:
               name: Malujeme s pomocí kódu
               description_student: Vytvářejte krásné obrazy programováním Umělce.
-            My Loopy Robotic Friends Jr.:
+            My Loopy Robotic Friends Jr:
               name: Moji zacyklení robotičtí přátelé (ml.)
               description_student: V této lekci budete zase programovat své spolužáky,
                 avšak s užitím cyklů budete schopni řešit větší a složitější problémy.
@@ -12895,6 +12900,8 @@ cs:
               name: Java Lab
             lesson-9:
               name: Cykly
+            lesson-21:
+              name: Konzola
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
@@ -12944,10 +12951,17 @@ cs:
           lessons:
             lesson-6:
               name: Proměnné
+            lesson-16:
+              name: Konzola
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: Cykly "For"
+            lesson-16:
+              name: Konzola
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
@@ -13340,6 +13354,10 @@ cs:
               display_name: Obsah
             lessonGroup-5:
               display_name: Sandbox
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-9:
+              name: Plánování hodiny
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -13378,3 +13396,5 @@ cs:
               key: Projekty k ukončení kurzu
             Lesson Planning:
               key: Plánování hodiny
+        hello-world-csc:
+          title: Ahoj, světe

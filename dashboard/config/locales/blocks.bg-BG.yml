@@ -6,10 +6,10 @@ bg:
         options:
           GROUP:
             sprites: всички
-            '"ALIEN"': всички извънземни
+            '"ALIEN"': извънземни
             '"BEAR"': мечки
-            '"CAT"': всички котки
-            '"DOG"': всички кучета
+            '"CAT"': котки
+            '"DOG"': кучета
             '"DUCK"': патици
             '"FROG"': жаби
             '"MOOSE"': всички лосове
@@ -57,10 +57,10 @@ bg:
         options:
           GROUP:
             sprites: всички
-            '"ALIEN"': всички извънземни
+            '"ALIEN"': извънземни
             '"BEAR"': мечки
-            '"CAT"': всички котки
-            '"DOG"': всички кучета
+            '"CAT"': котки
+            '"DOG"': кучета
             '"DUCK"': патици
             '"FROG"': жаби
             '"MOOSE"': всички лосове
@@ -119,10 +119,10 @@ bg:
         options:
           GROUP:
             sprites: всички
-            '"ALIEN"': всички извънземни
+            '"ALIEN"': извънземни
             '"BEAR"': мечки
-            '"CAT"': всички котки
-            '"DOG"': всички кучета
+            '"CAT"': котки
+            '"DOG"': кучета
             '"DUCK"': патици
             '"FROG"': жаби
             '"MOOSE"': всички лосове
@@ -142,10 +142,10 @@ bg:
         options:
           GROUP:
             sprites: всички
-            '"ALIEN"': всички извънземни
+            '"ALIEN"': извънземни
             '"BEAR"': мечки
-            '"CAT"': всички котки
-            '"DOG"': всички кучета
+            '"CAT"': котки
+            '"DOG"': кучета
             '"DUCK"': патици
             '"FROG"': жаби
             '"MOOSE"': всички лосове
@@ -255,10 +255,10 @@ bg:
         options:
           GROUP:
             sprites: всички
-            '"ALIEN"': всички извънземни
+            '"ALIEN"': извънземни
             '"BEAR"': мечки
-            '"CAT"': всички котки
-            '"DOG"': всички кучета
+            '"CAT"': котки
+            '"DOG"': кучета
             '"DUCK"': патици
             '"FROG"': жаби
             '"MOOSE"': всички лосове
@@ -276,10 +276,10 @@ bg:
         options:
           GROUP:
             sprites: всички
-            '"ALIEN"': всички извънземни
+            '"ALIEN"': извънземни
             '"BEAR"': мечки
-            '"CAT"': всички котки
-            '"DOG"': всички кучета
+            '"CAT"': котки
+            '"DOG"': кучета
             '"DUCK"': патици
             '"FROG"': жаби
             '"MOOSE"': всички лосове
@@ -380,10 +380,10 @@ bg:
             '39': '39'
             '40': '40'
           COSTUME:
-            '"ALIEN"': всички извънземни
+            '"ALIEN"': извънземни
             '"BEAR"': мечки
-            '"CAT"': всички котки
-            '"DOG"': всички кучета
+            '"CAT"': котки
+            '"DOG"': кучета
             '"DUCK"': патици
             '"FROG"': жаби
             '"MOOSE"': всички лосове
@@ -429,10 +429,10 @@ bg:
         options:
           GROUP:
             sprites: всички
-            '"ALIEN"': всички извънземни
+            '"ALIEN"': извънземни
             '"BEAR"': мечки
-            '"CAT"': всички котки
-            '"DOG"': всички кучета
+            '"CAT"': котки
+            '"DOG"': кучета
             '"DUCK"': патици
             '"FROG"': жаби
             '"MOOSE"': всички лосове
@@ -481,10 +481,10 @@ bg:
         options:
           GROUP:
             sprites: всички
-            '"ALIEN"': всички извънземни
+            '"ALIEN"': извънземни
             '"BEAR"': мечки
-            '"CAT"': всички котки
-            '"DOG"': всички кучета
+            '"CAT"': котки
+            '"DOG"': кучета
             '"DUCK"': патици
             '"FROG"': жаби
             '"MOOSE"': всички лосове
@@ -514,10 +514,10 @@ bg:
         options:
           GROUP:
             sprites: всички
-            '"ALIEN"': всички извънземни
+            '"ALIEN"': извънземни
             '"BEAR"': мечки
-            '"CAT"': всички котки
-            '"DOG"': всички кучета
+            '"CAT"': котки
+            '"DOG"': кучета
             '"DUCK"': патици
             '"FROG"': жаби
             '"MOOSE"': всички лосове
@@ -537,10 +537,10 @@ bg:
         options:
           THIS:
             sprites: всички
-            '"ALIEN"': всички извънземни
+            '"ALIEN"': извънземни
             '"BEAR"': мечки
-            '"CAT"': всички котки
-            '"DOG"': всички кучета
+            '"CAT"': котки
+            '"DOG"': кучета
             '"DUCK"': патици
             '"FROG"': жаби
             '"MOOSE"': всички лосове
@@ -552,10 +552,10 @@ bg:
         options:
           THIS:
             sprites: всички
-            '"ALIEN"': всички извънземни
+            '"ALIEN"': извънземни
             '"BEAR"': мечки
-            '"CAT"': всички котки
-            '"DOG"': всички кучета
+            '"CAT"': котки
+            '"DOG"': кучета
             '"DUCK"': патици
             '"FROG"': жаби
             '"MOOSE"': всички лосове
@@ -572,10 +572,10 @@ bg:
         options:
           THIS:
             sprites: всички
-            '"ALIEN"': всички извънземни
+            '"ALIEN"': извънземни
             '"BEAR"': мечки
-            '"CAT"': всички котки
-            '"DOG"': всички кучета
+            '"CAT"': котки
+            '"DOG"': кучета
             '"DUCK"': патици
             '"FROG"': жаби
             '"MOOSE"': всички лосове
@@ -603,10 +603,10 @@ bg:
         options:
           GROUP:
             sprites: всички
-            '"ALIEN"': всички извънземни
+            '"ALIEN"': извънземни
             '"BEAR"': мечки
-            '"CAT"': всички котки
-            '"DOG"': всички кучета
+            '"CAT"': котки
+            '"DOG"': кучета
             '"DUCK"': патици
             '"FROG"': жаби
             '"MOOSE"': всички лосове
@@ -643,10 +643,10 @@ bg:
         options:
           GROUP:
             sprites: всички
-            '"ALIEN"': всички извънземни
+            '"ALIEN"': извънземни
             '"BEAR"': мечки
-            '"CAT"': всички котки
-            '"DOG"': всички кучета
+            '"CAT"': котки
+            '"DOG"': кучета
             '"DUCK"': патици
             '"FROG"': жаби
             '"MOOSE"': всички лосове
@@ -695,6 +695,7 @@ bg:
             '"d"': d
             '"f"': f
             '"g"': g
+            '"i"': i
             '"q"': q
             '"s"': s
             '"w"': w
@@ -736,10 +737,27 @@ bg:
             '"while"': докато
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): въртене надясно
+            new Behavior(spinning_left, []): въртене наляво
+            new Behavior(fluttering, []): пърхане
+            new Behavior(wandering, []): блуждаейки
+            new Behavior(patrolling, []): патрулиране
+            new Behavior(moving_west_and_looping, []): движение на запад и циклене
+            new Behavior(moving_east_and_looping, []): движение на изток и циклене
+            new Behavior(moving_north_and_looping, []): движение на север и циклене
+            new Behavior(moving_south_and_looping, []): движение на юг и циклене
       gamelab_costumeImage:
         text: "{COSTUME}"
       gamelab_draggable:
         text: може да се мести
+      gamelab_everySeconds:
+        text: 'всеки {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': секунди
       gamelab_getProp:
         options:
           PROPERTY:
@@ -781,6 +799,7 @@ bg:
             '"d"': d
             '"f"': f
             '"g"': g
+            '"i"': i
             '"q"': q
             '"s"': s
             '"w"': w
@@ -801,6 +820,7 @@ bg:
             '"d"': d
             '"f"': f
             '"g"': g
+            '"i"': i
             '"q"': q
             '"s"': s
             '"w"': w
@@ -857,6 +877,8 @@ bg:
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): местене със стрелките
+            new Behavior(driving_with_arrow_keys, []): движение с стрелките
             draggable(): може да се мести
       gamelab_randColor:
         text: случаен цвят
@@ -1193,11 +1215,23 @@ bg:
       Poetry_startBehavior:
         options:
           BEHAVIOR:
+            '"fluttering"': пърхане
+            '"growing"': растене
+            '"shrinking"': смаляване
+            '"spinning_left"': въртене наляво
+            '"spinning_right"': въртене надясно
             '"swimming_left_and_right"': плуване
+            '"wandering"': блуждаейки
       Poetry_stopBehavior:
         options:
           BEHAVIOR:
+            '"fluttering"': пърхане
+            '"growing"': растене
+            '"shrinking"': смаляване
+            '"spinning_left"': въртене наляво
+            '"spinning_right"': въртене надясно
             '"swimming_left_and_right"': плуване
+            '"wandering"': блуждаейки
       Poetry_whenLineShows:
         options:
           N:

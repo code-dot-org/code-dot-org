@@ -1766,20 +1766,20 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   test "clears 'comment' on any version of all of a purged user's projects" do
     skip
     student = create :student
-    with_channel_for student do |storage_app_id|
+    with_channel_for student do |project_id|
       comment_text = 'a comment'
       ProjectVersion.create(
-        storage_app_id: storage_app_id,
+        project_id: project_id,
         object_version_id: 'xyz',
         comment: comment_text
       )
-      assert_equal 1, ProjectVersion.where(storage_app_id: storage_app_id).count
-      assert_equal comment_text, ProjectVersion.where(storage_app_id: storage_app_id).first.comment
+      assert_equal 1, ProjectVersion.where(project_id: project_id).count
+      assert_equal comment_text, ProjectVersion.where(project_id: project_id).first.comment
 
       purge_user student
 
-      assert_equal 1, ProjectVersion.where(storage_app_id: storage_app_id).count
-      assert_nil ProjectVersion.where(storage_app_id: storage_app_id).first.comment
+      assert_equal 1, ProjectVersion.where(project_id: project_id).count
+      assert_nil ProjectVersion.where(project_id: project_id).first.comment
       assert_logged "Cleared 1 ProjectVersion comments"
     end
   end
@@ -1788,31 +1788,31 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     skip
     student_to_purge = create :student
     other_student = create :student
-    with_channel_for student_to_purge do |storage_app_id_to_purge|
-      with_channel_for other_student do |storage_app_id_other|
+    with_channel_for student_to_purge do |project_id_to_purge|
+      with_channel_for other_student do |project_id_other|
         comment_text = 'a comment'
         ProjectVersion.create(
-          storage_app_id: storage_app_id_to_purge,
+          project_id: project_id_to_purge,
           object_version_id: 'xyz',
           comment: comment_text
         )
         ProjectVersion.create(
-          storage_app_id: storage_app_id_other,
+          project_id: project_id_other,
           object_version_id: 'xyz',
           comment: comment_text
         )
 
-        assert_equal 1, ProjectVersion.where(storage_app_id: storage_app_id_to_purge).count
-        assert_equal comment_text, ProjectVersion.where(storage_app_id: storage_app_id_to_purge).first.comment
-        assert_equal 1, ProjectVersion.where(storage_app_id: storage_app_id_other).count
-        assert_equal comment_text, ProjectVersion.where(storage_app_id: storage_app_id_other).first.comment
+        assert_equal 1, ProjectVersion.where(project_id: project_id_to_purge).count
+        assert_equal comment_text, ProjectVersion.where(project_id: project_id_to_purge).first.comment
+        assert_equal 1, ProjectVersion.where(project_id: project_id_other).count
+        assert_equal comment_text, ProjectVersion.where(project_id: project_id_other).first.comment
 
         purge_user student_to_purge
 
-        assert_equal 1, ProjectVersion.where(storage_app_id: storage_app_id_to_purge).count
-        assert_nil ProjectVersion.where(storage_app_id: storage_app_id_to_purge).first.comment
-        assert_equal 1, ProjectVersion.where(storage_app_id: storage_app_id_other).count
-        assert_equal comment_text, ProjectVersion.where(storage_app_id: storage_app_id_other).first.comment
+        assert_equal 1, ProjectVersion.where(project_id: project_id_to_purge).count
+        assert_nil ProjectVersion.where(project_id: project_id_to_purge).first.comment
+        assert_equal 1, ProjectVersion.where(project_id: project_id_other).count
+        assert_equal comment_text, ProjectVersion.where(project_id: project_id_other).first.comment
       end
     end
   end
@@ -1824,9 +1824,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   test "unfeatures any featured projects owned by soft-deleted user" do
     skip
     student = create :student
-    with_channel_for student do |storage_app_id|
+    with_channel_for student do |project_id|
       featured_project = create :featured_project,
-        storage_app_id: storage_app_id,
+        project_id: project_id,
         featured_at: Time.now
 
       assert featured_project.featured?
@@ -1841,9 +1841,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   test "unfeatures any featured projects owned by purged user" do
     skip
     student = create :student
-    with_channel_for student do |storage_app_id|
+    with_channel_for student do |project_id|
       featured_project = create :featured_project,
-        storage_app_id: storage_app_id,
+        project_id: project_id,
         featured_at: Time.now
 
       assert featured_project.featured?
@@ -1860,9 +1860,9 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     student = create :student
     featured_time = Time.now - 20
     unfeatured_time = Time.now - 10
-    with_channel_for student do |storage_app_id|
+    with_channel_for student do |project_id|
       featured_project = create :featured_project,
-        storage_app_id: storage_app_id,
+        project_id: project_id,
         featured_at: featured_time,
         unfeatured_at: unfeatured_time
 
