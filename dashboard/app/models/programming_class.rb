@@ -26,7 +26,7 @@ class ProgrammingClass < ApplicationRecord
 
   belongs_to :programming_environment
   belongs_to :programming_environment_category
-  has_many :programming_methods
+  has_many :programming_methods, dependent: :destroy
 
   validates_uniqueness_of :key, scope: :programming_environment_id, case_sensitive: false
   validate :validate_key_format

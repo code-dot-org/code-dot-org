@@ -353,6 +353,8 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  resources :programming_methods, only: [:edit, :update]
+
   resources :standards, only: [] do
     collection do
       get :search
