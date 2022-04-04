@@ -1,0 +1,25 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "CSA U3 Data for Social Good Project B PBT_2022",
+    "long_instructions": "##Data for Social Good Project\r\n\r\n1. Continue implementing your method(s) to find the information the user needs.\r\n\r\n2. (Optional) Implement user interaction with your program using the `Scanner`(#e7e8ea) class.\r\n\r\n**User Story B:** As an avian veterinary student, I want to identify groups of similar birds so I can study them for my final exams.\r\n\r\n**Hint:** To compare two `String`(#e7e8ea)s for equality, you will need to use the `equals()`(#e7e8ea) method instead of the `==`(#e7e8ea) operator. For example:\r\n\r\n```\r\nString first = \"Hello\";\r\nString second = \"Hello\";\r\n\r\nfirst.equals(second);   // returns true\r\n\r\nString third = \"Hello\";\r\nString fourth = \"HELLO\";\r\n\r\nthird.equals(fourth);   // returns false\r\n```\r\n\r\n##Possible Extensions\r\nI would like to be quizzed on descriptors based on the bird.",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "submittable": "false",
+    "csa_view_mode": "console",
+    "encrypted_examples": [
+
+    ],
+    "display_name": "User Story B",
+    "bubble_choice_description": "As an avian veterinary student, I want to identify groups of similar birds so I can study them for my final exams.",
+    "thumbnail_url": "https://images.code.org/d5bfefa347786f5d6bc25709905e1555-image-1648762646150.png"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-03-25T13:41:48.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2022-03-25T13:41:48.164+00:00\",\"changed\":[\"cloned from \\\"CSA U3L11-L1b_2022\\\"\"],\"cloned_from\":\"CSA U3L11-L1b_2022\"},{\"changed_at\":\"2022-03-25 13:43:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 22:17:33 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 22:34:45 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 23:25:24 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

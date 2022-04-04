@@ -62,7 +62,16 @@ Dashboard::Application.routes.draw do
 
   get 'redirected_url', to: 'redirect_proxy#get', format: false
 
-  get 'docs/', to: 'curriculum_proxy#get_doc_landing'
+  # We moved code docs off of curriculum builder in spring 2022.
+  # In that move, we wanted to preserve the previous /docs routes for these
+  # pages. However, there are a lot of other /docs URLs that did not move over
+  # so we're allow-listing the four IDEs that lived on curriculum builder to be
+  # served by ProgrammingEnvironmentsController and ProgrammingExpressionsController,
+  # with the rest falling back to the old proxying logic.
+  get 'docs/', to: 'programming_environments#docs_index'
+  get 'docs/:programming_environment_name', to: 'programming_environments#docs_show', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/}
+  get 'docs/:programming_environment_name/:programming_expression_key', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/, programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/}, to: 'programming_expressions#docs_show'
+  get 'docs/:programming_environment_name/:programming_expression_key/index.html', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/, programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/}, to: 'programming_expressions#docs_show'
   get 'docs/*path', to: 'curriculum_proxy#get_doc'
   get 'curriculum/*path', to: 'curriculum_proxy#get_curriculum'
 
@@ -96,6 +105,7 @@ Dashboard::Application.routes.draw do
       collection do
         get 'membership'
         get 'valid_course_offerings'
+        get 'available_participant_types'
         get 'require_captcha'
       end
     end
@@ -258,7 +268,7 @@ Dashboard::Application.routes.draw do
       get 'get_rubric'
       get 'embed_level'
       get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
-      get 'edit_exemplar'
+      get 'edit_exemplar', to: 'levels#edit_exemplar', as: 'edit_exemplar'
       get 'get_serialized_maze'
       post 'update_properties'
       post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
@@ -331,9 +341,12 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  resources :programming_classes, only: [:new, :create, :edit, :update]
+
   resources :programming_expressions, only: [:new, :create, :edit, :update, :show, :destroy] do
     collection do
       get :search
+      get :get_filtered_expressions
     end
     member do
       post :clone
@@ -448,6 +461,10 @@ Dashboard::Application.routes.draw do
 
   # HOC dashboards.
   get '/admin/hoc/students_served', to: 'admin_hoc#students_served', as: 'hoc_students_served'
+
+  # NPS dashboards
+  get '/admin/nps/nps_form', to: 'admin_nps#nps_form', as: 'nps_form'
+  post '/admin/nps/nps_update', to: 'admin_nps#nps_update', as: 'nps_update'
 
   # internal report dashboards
   get '/admin/levels', to: 'admin_reports#level_completions', as: 'level_completions'

@@ -1765,6 +1765,14 @@ a.download-video {
     }
   }
 
+  #select-user-type-original {
+    display: flex;
+  }
+
+  #select-user-type-variant {
+    display: none;
+  }
+
   .select-user-type-teacher-button:hover, .select-user-type-student-button:hover {
     background-color: $selectUserTypeButtonBackgroundColorHover;
     color: $selectUserTypeButtonTextColorHover;
@@ -1919,7 +1927,7 @@ a.download-video {
     }
 
     #signup-select-user-type-label {
-      width: 135px;
+      width: 220px;
     }
 
     .padded-container {

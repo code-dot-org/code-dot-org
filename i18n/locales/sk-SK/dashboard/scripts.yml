@@ -1232,6 +1232,7 @@ sk:
           title: AI pomáha oceánom
           lessons:
             Oceans:
+              name: AI pomáha oceánom
               description_teacher: V tejto lekcii získajú študenti všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí. Najprv roztriedi objekty na "ryby" a "ostatné" a pokúsi sa vyčistiť oceán od neporiadku. Potom bude ich úlohou rozšíriť cvičný dátový súbor o ďalšie morské živočíchy. V druhej časti aktivity budú vyberať vlastné značky, ktoré pridajú k obrázkom náhodne vytvorených rýb. Tieto cvičné dáta poslúžia pre tréning modelu strojového učenia, ktorý by potom mal nové obrázky označovať automaticky.
         ScienceP3OLPT3:
           lessons:
@@ -2047,6 +2048,7 @@ sk:
               description_student: Aj tebe už niekedy napadlo, že by bolo super hrať sa v škole počítačové hry? Tak v tejto lekcii si dokonca budeš môcť vytvoriť vlastnú!
               description_teacher: V tejto on‑line aktivite sa žiaci naučia, čo sú udalosti a ako ich počítače využívajú v rôznych programoch, napríklad videohrách. Žiaci budú prechádzať úlohami, v ktorých budú upravovať program tak, aby reagoval na udalosti (napríklad na stlačenie tlačidla). Na konci úloh budú mať žiaci možnosť prispôsobiť si hru upravením rýchlosti či pridaním zvukov.
           student_description: Vytvor basketbalový zápas
+          name: basketbal
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -2377,6 +2379,7 @@ sk:
               description_student: Aj tebe už niekedy napadlo, že by bolo super hrať sa v škole počítačové hry? Tak v tejto lekcii si dokonca budeš môcť vytvoriť vlastnú!
               description_teacher: V tejto on‑line aktivite sa žiaci naučia, čo sú udalosti a ako ich počítače využívajú v rôznych programoch, napríklad videohrách. Žiaci budú prechádzať úlohami, v ktorých budú upravovať program tak, aby reagoval na udalosti (napríklad na stlačenie tlačidla). Na konci úloh budú mať žiaci možnosť prispôsobiť si hru upravením rýchlosti či pridaním zvukov.
           student_description: Pomiešaj športy
+          name: športy
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -3781,6 +3784,7 @@ sk:
               description_student: V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí.
               description_teacher: V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s programovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia je vhodná pre všetkých žiakov, ktorí už vedia čítať (od 6 rokov). Mladšie deti tento výukový kurz pravdepodobne nedokončia, ale hodina venovaná týmto úlohám pre nich bude nesmierne zábavná. Žiaci stredných škôl pravdepodobne nebudú mať s dokončením kurzu problém a ku koncu im zostane čas na voľné hranie.
           student_description: Minecraft je späť v Hodine Kódu s úplne novou aktivitou! Prejdi sa po Minecrafte s kódom.
+          name: hrdina
         applab-intro-staging:
           lessons:
             Intro to AppLab - Choose Your Own Adventure:
@@ -5090,6 +5094,7 @@ sk:
               description_student: V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov všetkých vekových kategórií, ktorí už vedia čítať. Vyžaduje možnosť prehrávať zvuk, pretože nástroj bol vytvorený tak, aby reagoval na hudbu.
               description_teacher: V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov všetkých vekových kategórií, ktorí už vedia čítať. Vyžaduje možnosť prehrávať zvuk, pretože nástroj bol vytvorený tak, aby reagoval na hudbu.
           student_description: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju s kamarátmi!
+          name: tanec
         frozen-2018-test-b:
           title: Nový Frozen Skript
           lessons:
@@ -5105,6 +5110,7 @@ sk:
               description_student: V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí.
               description_teacher: V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s programovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia je vhodná pre všetkých žiakov, ktorí už vedia čítať (od 6 rokov). Mladšie deti tento výukový kurz pravdepodobne nedokončia, ale hodina venovaná týmto úlohám pre nich bude nesmierne zábavná. Žiaci stredných škôl pravdepodobne nebudú mať s dokončením kurzu problém a ku koncu im zostane čas na voľné hranie.
           student_description: Minecraft je späť s úplne novou aktivitou! Použi tvoju kreativitu, schopnosť riešiť problémy a silu kódu, aby si objavil a vybudoval podvodný svet.
+          name: vodný
         sconyers:
           lessons:
             Digital Design:
@@ -6814,7 +6820,6 @@ sk:
           description: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju s kamarátmi!
           lessons:
             Dance Party:
-              name: Tanečná Párty
               description_student: V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov všetkých vekových kategórií, ktorí už vedia čítať. Vyžaduje možnosť prehrávať zvuk, pretože nástroj bol vytvorený tak, aby reagoval na hudbu.
               description_teacher: V tejto lekcii získajú žiaci všetkých vekových kategórií úvodnú skúsenosť s kódovaním a informatikou v bezpečnom a podpornom prostredí. Táto lekcia bola navrhnutá pre žiakov všetkých vekových kategórií, ktorí už vedia čítať. Vyžaduje možnosť prehrávať zvuk, pretože nástroj bol vytvorený tak, aby reagoval na hudbu.
           student_description: Nakóduj si vlastnú Tanečnú párty a zdieľaj ju s kamarátmi!
@@ -9852,8 +9857,7 @@ sk:
           title: '"Ahoj svet!"'
         csa-self-paced-pl:
           lessons:
-            Navigating the Code.org learning platform:
-              name: Ako sa vyznať vo výukovej platforme Code.org
+            Navigating the Codeorg learning platform:
               description_teacher: |-
                 **Čo sa naučíte:**
 
@@ -10880,7 +10884,7 @@ sk:
               description_student: Dokonči obrázky pomocou cyklov a vzorov.
               description_teacher: V tejto lekcii si ešte raz zopakujeme cykly. Žiaci začnú kreslením obrázkov pomocou opakovania krátkych sekvencií príkazov. V predchádzajúcej lekcii sme cykly použili na prechádzanie bludiskom a zbieranie drahokamov. Tu ich použijeme na kreslenie vzorov. Na konci lekcie dostanú žiaci príležitosť pomozou cyklov nakresliť vlastné obrazy.
               key: Na mori s cyklami
-            The Big Event Jr.:
+            The Big Event Jr:
               name: Veľká udalosť Jr.
               description_teacher: Udalosti sú skvelým spôsobom, ako nášmu programu pridať trochu flexibililty a spraviť ho viac zaujímavým a interaktívnym. Niekedy chceme, aby náš program reagoval na používateľa presne v tom momente, keď to používateľ chce. Práve na toto používame udalosti.
             'Mini-Project: On the Move with Play Lab':
@@ -11198,7 +11202,7 @@ sk:
             The Right App:
               name: Správna aplikácia
               key: Správna aplikácia
-            The Big Event Jr.:
+            The Big Event Jr:
               name: Veľká udalosť Jr.
               description_teacher: Udalosti sú skvelým spôsobom, ako nášmu programu pridať trochu flexibililty a spraviť ho viac zaujímavým a interaktívnym. Niekedy chceme, aby náš program reagoval na používateľa presne v tom momente, keď to používateľ chce. Práve na toto používame udalosti.
             'Mini-Project: A Royal Battle with Events':
@@ -11263,7 +11267,7 @@ sk:
           description_audience: Vek 5-8
         coursec-2022:
           lessons:
-            My Robotic Friends Jr.:
+            My Robotic Friends Jr:
               name: Moji robotickí kamaráti (ml.)
             Programming with Angry Birds:
               name: Programovanie s Angry Birds
@@ -11281,7 +11285,7 @@ sk:
               name: Umenie s pomocou kódu
               description_student: Programuj Umelca a vytváraj nádherné obrázky.
               description_teacher: V tejto lekcii zameranej na **budovanie zručností** budú žiaci ovládať Umelca, aby dokončili kresby na obrazovke.
-            My Loopy Robotic Friends Jr.:
+            My Loopy Robotic Friends Jr:
               name: Moji zacyklení robotickí kamaráti (ml.)
             Loops with Rey and BB-8:
               name: Cykly s Rey a BB-8
@@ -11792,6 +11796,8 @@ sk:
               name: Java Lab
             lesson-9:
               name: Cykly
+            lesson-21:
+              name: Konzola
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
@@ -11841,10 +11847,17 @@ sk:
           lessons:
             lesson-6:
               name: Premenné
+            lesson-16:
+              name: Konzola
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: Cykly "Pre"
+            lesson-16:
+              name: Konzola
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
@@ -12109,6 +12122,10 @@ sk:
               display_name: Obsah
             lessonGroup-5:
               display_name: Sandbox
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-9:
+              name: Plánovanie hodín
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -12147,3 +12164,13 @@ sk:
               key: Záverečné projekty
             Lesson Planning:
               key: Plánovanie hodín
+        vpl-csd2-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Fyzické výpočty
+        vpl-csd3-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Fyzické výpočty
+        hello-world-csc:
+          title: Ahoj Svet

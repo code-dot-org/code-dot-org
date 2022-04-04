@@ -1,0 +1,23 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "CSA U3L4-L3c PBT_2022",
+    "long_instructions": "The `PlanetsStats`(#e7e8ea) class has instance variables for a 1D array of planets and a 1D array whether or not each planet has a ring system.\r\n\r\n##In PlanetsStats.java:\r\n\r\nThe method `hasRingSystems()`(#e7e8ea) should return `true`(#e7e8ea) if at least one value in the `ringSystems`(#e7e8ea) array is equal to its parameter `status`(#e7e8ea). In the method `hasRingSystems()`(#e7e8ea),\r\n\r\n1. Traverse the `ringSystems`(#e7e8ea) array and check if the current value is equal to `status`(#e7e8ea).\r\n\r\n   * Return `true`(#e7e8ea) if the current value is equal to `status`(#e7e8ea).\r\n\r\n2. If no values in `ringSystems`(#e7e8ea) is equal to `status`(#e7e8ea), return `false`(#e7e8ea).\r\n\r\n***Curious about this dataset?*** *Learn more about it [**here**](https://devstronomy.com/#/datasets)!*",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "display_name": "Planets",
+    "bubble_choice_description": "Determine if a 1D array containing the ring systems status of planets has at least one value that is equal to a specific value.",
+    "thumbnail_url": "https://images.code.org/f2723404547bb936e8276b73381139d4-image-1648586592074.png",
+    "encrypted_exemplar_sources": "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\n"
+  },
+  "game_id": 68,
+  "created_at": "2022-03-25T00:47:41.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-03-25 00:47:43 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 20:44:54 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 21:14:13 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 21:14:47 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

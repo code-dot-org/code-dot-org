@@ -2,7 +2,9 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import {assert, expect} from '../../../util/reconfiguredChai';
-import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
+import AssignmentSelector, {
+  getCourseOfferingsByCategory
+} from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
 import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
 const defaultProps = {
@@ -43,6 +45,43 @@ const hiddenSectionProps = {
 };
 
 describe('AssignmentSelector', () => {
+  it('getCourseOfferingsByCategory gets the right course offerings', () => {
+    let courseOfferingsByCategory = getCourseOfferingsByCategory(
+      defaultProps.courseOfferings
+    );
+
+    assert.deepEqual(Object.keys(courseOfferingsByCategory), [
+      'hoc',
+      'full_course',
+      'csf',
+      'self_paced_pl',
+      'virtual_pl'
+    ]);
+    assert.deepEqual(
+      courseOfferingsByCategory['full_course'].map(s => s.display_name),
+      ['Computer Science A', 'Computer Science Discoveries']
+    );
+    // Hello World and Poem Art at featured so they show up before non-featured
+    assert.deepEqual(
+      courseOfferingsByCategory['hoc'].map(s => s.display_name),
+      ['Hello World', 'Poem Art', 'Artist', 'Flappy']
+    );
+    assert.deepEqual(
+      courseOfferingsByCategory['csf'].map(s => s.display_name),
+      ['Course A']
+    );
+  });
+
+  it('filters out unused course offering categories', () => {
+    const wrapper = shallow(<AssignmentSelector {...defaultProps} />);
+    assert.equal(wrapper.find('optgroup').length, 3);
+    assert.deepEqual(wrapper.find('optgroup').map(s => s.props().label), [
+      'Full Courses',
+      'CS Fundamentals',
+      'Hour of Code'
+    ]);
+  });
+
   it('defaults to just course offering dropdown with no selection when no section is provided', () => {
     const wrapper = shallow(
       <AssignmentSelector {...defaultProps} section={null} />

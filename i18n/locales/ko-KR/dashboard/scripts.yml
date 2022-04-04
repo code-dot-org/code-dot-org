@@ -1225,8 +1225,6 @@ ko:
           student_description: '단계 2 온라인: 혼합된 여름 공부'
         equity-pd:
           lessons:
-            Code.org Equity PD:
-              name: Code.org 공정 PD
             Necessary Background:
               name: 필수 배경
         science-PD2:
@@ -3425,6 +3423,7 @@ ko:
               description_student: 학교에서 비디오 게임을 맘대로 해봤으면 하고 원해 본 적 있으세요? 이 레슨에서는 직접 비디오 게임을 만들거예요.
               description_teacher: 이 온라인 활동에서, 학생들은 이벤트가 무엇이고, 컴퓨터가 그것을 비디오 게임 등과 같은 프로그램에서 어떻게 사용하는지 배우게 될 것입니다. 학생들은 퍼즐을 하며 프로그램이 이벤트 (화살표 버튼이 눌러지는 등)에 반응하게 만들 것입니다. 퍼즐의 끝에서, 학생들은 속도와 소리를 다르게 함으로써 자신만의 게임으로 만들 기회를 갖습니다.
           student_description: 팀을 선택하고 농구경기를 하세요
+          name: 농구공
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -3989,6 +3988,7 @@ ko:
               description_student: 학교에서 비디오 게임을 맘대로 해봤으면 하고 원해 본 적 있으세요? 이 레슨에서는 직접 비디오 게임을 만들거예요.
               description_teacher: 이 온라인 활동에서, 학생들은 이벤트가 무엇이고, 컴퓨터가 그것을 비디오 게임 등과 같은 프로그램에서 어떻게 사용하는지 배우게 될 것입니다. 학생들은 퍼즐을 하며 프로그램이 이벤트 (화살표 버튼이 눌러지는 등)에 반응하게 만들 것입니다. 퍼즐의 끝에서, 학생들은 속도와 소리를 다르게 함으로써 자신만의 게임으로 만들 기회를 갖습니다.
           student_description: 스포츠 혼합 및 매칭
+          name: 스포츠
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -6701,6 +6701,7 @@ ko:
               description_student: 이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다.
               description_teacher: 이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다. 이 레슨은 글을 읽기에 충분한 나이의 학생 (6세 이상)에게 효과가 있습니다. 더 어린 학습자는 아마도 튜토리얼을 끝내지는 못하지만 한 시간 동안 재미있게 퍼즐을 할 것입니다. 고등학교 학생들은 대부분 튜토리얼을 마치고 끝에서 프리 플레이를 할 시간을 가질 것입니다.
           student_description: 마인크래프트가 새로운 활동과 함께 코딩의 시간을 위해 돌아왔습니다! 코딩과 함께 마인크래프트를 여행하세요.
+          name: 영웅
         applab-intro-staging:
           title: 앱 랩 소개 대기
           lessons:
@@ -9063,6 +9064,7 @@ ko:
               description_student: 이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다. 이 레슨은 모든 연령의 학습자를 위해 고안되었으나 읽기 능력을 요구합니다. 이 활동에서 사용하는 툴은 음악에 반응하므로 사운드가 필요합니다.
               description_teacher: 이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다. 이 레슨은 모든 연령의 학습자를 위해 고안되었으나 읽기 능력을 요구합니다. 이 활동에서 사용하는 툴은 음악에 반응하므로 사운드가 필요합니다.
           student_description: 나만의 댄스 파티의 코드를 만들고 친구와 공유하세요!
+          name: 춤
         frozen-2018-test-b:
           title: 새 겨울 왕국 스크립트
           lessons:
@@ -9078,6 +9080,7 @@ ko:
               description_student: 이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다.
               description_teacher: 이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다. 이 레슨은 글을 읽기에 충분한 나이의 학생 (6세 이상)에게 효과가 있습니다. 더 어린 학습자는 아마도 튜토리얼을 끝내지는 못하지만 한 시간 동안 재미있게 퍼즐을 할 것입니다. 고등학교 학생들은 대부분 튜토리얼을 마치고 끝에서 프리 플레이를 할 시간을 가질 것입니다.
           student_description: 마인크래프트가 완전히 새로운 활동으로 다시 돌아 왔습니다! 창의력과 문제 해결 능력을 사용하여 코드로 물 속 세계를 코드로 탐험하고 구축하세요.
+          name: 바다
         sconyers:
           title: 트레이시의 플레이그라운드
           lessons:
@@ -12730,7 +12733,7 @@ ko:
           description: 나만의 댄스 파티의 코드를 만들고 친구와 공유하세요!
           lessons:
             Dance Party:
-              name: 댄스 파티
+              name: 댄스 파티 (2019)
               description_student: 이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다. 이 레슨은 모든 연령의 학습자를 위해 고안되었으나 읽기 능력을 요구합니다. 이 활동에서 사용하는 툴은 음악에 반응하므로 사운드가 필요합니다.
               description_teacher: 이 레슨은 모든 연령의 학습자에게 안전한 지원환경에서 코딩과 컴퓨터 과학을 소개합니다. 이 레슨은 모든 연령의 학습자를 위해 고안되었으나 읽기 능력을 요구합니다. 이 활동에서 사용하는 툴은 음악에 반응하므로 사운드가 필요합니다.
           student_description: 나만의 댄스 파티의 코드를 만들고 친구와 공유하세요!
@@ -15895,8 +15898,6 @@ ko:
               name: 프로그램 사용 (앱 랩 전용)
             MODIFY Programs:
               name: 프로그램 수정 (앱 랩 -> 위젯 -> 앱 랩)
-            Does Code.org Like Your Dog?:
-              name: Code.org가 여러분의 개를 좋아해요?
             dog:
               name: Code.org가 여러분의 개를 좋아해요?
             AI for Oceans:
@@ -18629,8 +18630,7 @@ ko:
           title: '"안녕하세요. 여러분!"'
         csa-self-paced-pl:
           lessons:
-            Navigating the Code.org learning platform:
-              name: Code.org 학습 플랫폼 탐색하기
+            Navigating the Codeorg learning platform:
               description_teacher: |-
                 **다음을 하는 방식을 배울 것입니다:**
 
@@ -19687,7 +19687,7 @@ ko:
               description_student: 루프와 패턴을 사용하여 이미지를 완성하세요.
               description_teacher: 루프로 다시 돌아와, 학생들은 설명문의 간단한 시퀸스를 반복하여 이미지를 그리는 법을 배웁니다. 이전 플러그드 레슨에서, 루프는 미로를 이동하여 보물을 모으는데 사용했습니다. 여기서는 루프로 패턴을 만들 것입니다. 이 단계의 끝에서, 학생들은 루프를 사용해 이미지를 만들 기회를 갖게 될 것입니다.
               key: 루프를 사용한 해양 장면
-            The Big Event Jr.:
+            The Big Event Jr:
               name: 빅 이벤트 주니어
               description_student: 선생님이 거대한 리모트 위 버튼을 누를 때 움직이고 소리치세요.
               description_teacher: 이벤트는 미리 작성된 알고리즘에 다양성을 추가하는 좋은 방법입니다. 여러분은 종종 자신의 프로그램이 사용자가 정확하게 원하는 지점에서 사용자에게 반응하길 원합니다. 이벤트는 바로 이럴 때 사용합니다.
@@ -20262,7 +20262,7 @@ ko:
               description_student: 스마트폰 앱 스케치
               description_teacher: 이 레슨은 학생들에게 컴퓨터 과학이 실생활에서 사람들에게 도움을 줄 수 있음을 인식하게 만듭니다. 먼저, 학생들은 서너 명의 허구의 스마트폰 사용자에게 그들의 필요에 "맞는 앱"을 찾아 주기 위해 그들의 입장이 되어 그들과 공감합니다. 그 다음, 공감력과 창의성을 발휘하여 한 명의 추가적인 사용자의 필요를 만족하는 스마트폰 앱을 스케치합니다.
               key: 바른 앱
-            The Big Event Jr.:
+            The Big Event Jr:
               name: 빅 이벤트 주니어
               description_student: 선생님이 거대한 리모트 위 버튼을 누를 때 움직이고 소리치세요.
               description_teacher: 이벤트는 미리 작성된 알고리즘에 다양성을 추가하는 좋은 방법입니다. 여러분은 종종 자신의 프로그램이 사용자가 정확하게 원하는 지점에서 사용자에게 반응하길 원합니다. 이벤트는 바로 이럴 때 사용합니다.
@@ -20340,7 +20340,7 @@ ko:
               name: 온라인 상에서 비열한 행동을 멈추게 함
               description_student: 이 레슨에서는 비열한 짓이 무엇인지 그리고 온라인 상에서 이런 일에 닥쳤을 때 할 일에 대해 배웁니다.
               key: 온라인 상에서 비열한 행동을 멈추게 함
-            My Robotic Friends Jr.:
+            My Robotic Friends Jr:
               name: 내 로봇 친구 주니어
               description_student: 이 레슨에서는 학급 친구들을 로봇이라고 생각하고 그들이 컵 쌓는 패턴을 만들도록 프로그래밍합니다.
               description_teacher: 코드 대신에 기호를 사용하여 학생들은 "로봇"에게 컵을 여러 패턴으로 쌓으라고 지시하는 알고리즘을 설계할 것입니다. 학생들은 교대로 로봇이 되어 친구가 정의한 알고리즘에만 반응합니다. 이 부분은 학생들에게 기호와 동작 간의 연관성과 알고리즘과 프로그램의 차이, 가치 있는 디버깅 스킬에 대해 가르칩니다.
@@ -20361,7 +20361,7 @@ ko:
               name: 코드로 아트 창작
               description_student: 아티스트로 프로그래밍하여 아름다운 이미지를 만드세요.
               description_teacher: 이 레슨에서 학생들은 아티스트를 컨트롤하여 화면 위 그림을 완성할 것입니다. 이 아티스트 단계는 학생들에게 '100 픽셀 앞으로 이동'과 '90도 우회전'과 같은 새 블록을 사용하여 점점 더 복잡해 지는 이미지를 만들 수 있게 합니다.
-            My Loopy Robotic Friends Jr.:
+            My Loopy Robotic Friends Jr:
               name: 내 루피 로봇 친구 주니어
               description_student: 이 레슨에서 다시 한번 학급원으로 프로그래밍을 하지만 이번에는 루프를 사용해 더 크고 더 복잡한 문제를 풀 수 있습니다.
               description_teacher: 이니셜 "내 로봇 친구" 활동에 기반하여, 학생들은 더 크고 더 복잡한 설계를 다룹니다. "로봇"이 다음의 더 큰 설계를 완료하도록 프로그래밍하기 위해, 학생들은 루프로 대체할 수 있는 반복된 패턴을 설명서에서 식별해야 합니다.
@@ -21088,6 +21088,8 @@ ko:
               name: Java 연구소
             lesson-9:
               name: 반복
+            lesson-21:
+              name: 콘솔
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
@@ -21139,10 +21141,17 @@ ko:
               name: 단원 2 평가
             lesson-6:
               name: 변수
+            lesson-16:
+              name: 콘솔
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: 반복을 위한
+            lesson-16:
+              name: 콘솔
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
@@ -21426,6 +21435,8 @@ ko:
           lessons:
             lesson-1:
               name: 환영합니다
+            lesson-9:
+              name: 레슨 계획
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -21473,3 +21484,13 @@ ko:
               key: 레슨 계획
             Next steps:
               key: 다음 단계
+        vpl-csd2-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: 물리적 컴퓨팅
+        vpl-csd3-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: 물리적 컴퓨팅
+        hello-world-csc:
+          title: 헬로우 월드

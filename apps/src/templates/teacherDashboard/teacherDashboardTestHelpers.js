@@ -37,12 +37,13 @@ export const courseOfferings = {
     display_name: 'Course A',
     category: 'csf',
     is_featured: false,
+    participant_audience: 'student',
     course_versions: {
       1: {
         id: 1,
         key: '2017',
         version_year: '2017',
-        content_root_id: 10,
+        content_root_id: 1,
         name: 'Course A',
         path: '/s/coursea-2017',
         type: 'Script',
@@ -63,7 +64,7 @@ export const courseOfferings = {
         id: 2,
         key: '2018',
         version_year: '2018',
-        content_root_id: 11,
+        content_root_id: 2,
         name: 'Course A',
         path: '/s/coursea-2018',
         type: 'Script',
@@ -87,12 +88,13 @@ export const courseOfferings = {
     display_name: 'Computer Science Discoveries',
     category: 'full_course',
     is_featured: false,
+    participant_audience: 'student',
     course_versions: {
       3: {
         id: 3,
         key: '2017',
         version_year: "'17-'18",
-        content_root_id: 12,
+        content_root_id: 52,
         name: 'CS Discoveries 2017',
         path: '/courses/csd-2017',
         type: 'UnitGroup',
@@ -122,7 +124,7 @@ export const courseOfferings = {
         id: 4,
         key: '2018',
         version_year: "'18-'19",
-        content_root_id: 13,
+        content_root_id: 51,
         name: 'CS Discoveries 2018',
         path: '/courses/csd-2018',
         type: 'UnitGroup',
@@ -155,12 +157,13 @@ export const courseOfferings = {
     display_name: 'Computer Science A',
     category: 'full_course',
     is_featured: false,
+    participant_audience: 'student',
     course_versions: {
       5: {
         id: 5,
         key: '2022',
         version_year: '2022',
-        content_root_id: 14,
+        content_root_id: 50,
         name: 'CS A',
         path: '/courses/csa-2022',
         type: 'UnitGroup',
@@ -193,12 +196,13 @@ export const courseOfferings = {
     display_name: 'Flappy',
     category: 'hoc',
     is_featured: false,
+    participant_audience: 'student',
     course_versions: {
       6: {
         id: 6,
         key: 'unversioned',
         version_year: 'unversioned',
-        content_root_id: 15,
+        content_root_id: 9,
         name: 'Flappy',
         path: '/s/flappy',
         type: 'Script',
@@ -228,7 +232,7 @@ export const courseOfferings = {
         id: 7,
         key: 'unversioned',
         version_year: 'unversioned',
-        content_root_id: 16,
+        content_root_id: 10,
         name: 'Hello World',
         path: '/s/hello-world',
         type: 'Script',
@@ -258,7 +262,7 @@ export const courseOfferings = {
         id: 8,
         key: 'unversioned',
         version_year: 'unversioned',
-        content_root_id: 17,
+        content_root_id: 11,
         name: 'Poem Art',
         path: '/s/poem-art',
         type: 'Script',
@@ -283,12 +287,13 @@ export const courseOfferings = {
     display_name: 'Artist',
     category: 'hoc',
     is_featured: false,
+    participant_audience: 'student',
     course_versions: {
       9: {
         id: 9,
         key: 'unversioned',
         version_year: 'unversioned',
-        content_root_id: 18,
+        content_root_id: 12,
         name: 'Artist',
         path: '/s/artist',
         type: 'Script',
@@ -300,6 +305,98 @@ export const courseOfferings = {
             id: 12,
             name: 'Artist',
             path: '/s/artist',
+            lesson_extras_available: false,
+            text_to_speech_enabled: false,
+            position: null
+          }
+        }
+      }
+    }
+  },
+  8: {
+    id: 8,
+    display_name: 'Self Paced PL CSP',
+    category: 'self_paced_pl',
+    is_featured: false,
+    participant_audience: 'teacher',
+    course_versions: {
+      10: {
+        id: 10,
+        key: '2021',
+        version_year: '2021',
+        content_root_id: 53,
+        name: 'Self Paced PL CSP 2021',
+        path: '/courses/self-paced-pl-csp-2021',
+        type: 'UnitGroup',
+        is_stable: true,
+        is_recommended: true,
+        locales: [],
+        units: {
+          13: {
+            id: 13,
+            name: 'Unit 1',
+            path: '/s/self-paced-pl-csp1-2021',
+            lesson_extras_available: false,
+            text_to_speech_enabled: false,
+            position: 1
+          },
+          14: {
+            id: 14,
+            name: 'Unit 2',
+            path: '/s/self-paced-pl-csp2-2021',
+            lesson_extras_available: false,
+            text_to_speech_enabled: false,
+            position: 2
+          }
+        }
+      }
+    }
+  },
+  9: {
+    id: 9,
+    display_name: 'Virtual PL CSP',
+    category: 'virtual_pl',
+    is_featured: false,
+    participant_audience: 'teacher',
+    course_versions: {
+      11: {
+        id: 11,
+        key: '2020',
+        version_year: '2020',
+        content_root_id: 15,
+        name: 'Virtual PL CSP 2020',
+        path: '/s/vpl-csp-2020',
+        type: 'Script',
+        is_stable: true,
+        is_recommended: true,
+        locales: [],
+        units: {
+          15: {
+            id: 15,
+            name: 'Virtual PL CSP 2020',
+            path: '/s/vpl-csp-2020',
+            lesson_extras_available: false,
+            text_to_speech_enabled: false,
+            position: null
+          }
+        }
+      },
+      12: {
+        id: 12,
+        key: '2021',
+        version_year: '2021',
+        content_root_id: 16,
+        name: 'Virtual PL CSP 2021',
+        path: '/s/vpl-csp-2021',
+        type: 'Script',
+        is_stable: true,
+        is_recommended: true,
+        locales: [],
+        units: {
+          16: {
+            id: 16,
+            name: 'Virtual PL CSP 2021',
+            path: '/s/vpl-csp-2021',
             lesson_extras_available: false,
             text_to_speech_enabled: false,
             position: null

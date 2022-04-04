@@ -1,0 +1,28 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "This program contains a `mountain`(#e7e8ea) array of the top five highest mountains in the world, and the `height`(#e7e8ea) array contains the height of each mountain in feet (in order).\r\n\r\n##In MyConsole.java:\r\n\r\n1. Write a `while`(#e7e8ea) loop to print the contents of the `mountains`(#e7e8ea) and `height`(#e7e8ea) arrays to the console.\r\n\r\n![](https://images.code.org/692b0c9eef9d2dcda2e458bba1a2f83a-image-1648496712531.png)\r\n\r\n***Curious about this dataset?*** *Learn more about it [**here**](https://www.summitpost.org/)!*\r\n\r\n::: details [**Show Me How**]\r\nLoop through a 1D array using the following syntax:\r\n  \r\n  ```\r\n  // a variable to keep track of the current position in the array\r\n  int variableName = startingIndex;\r\n  \r\n  while (variableName < arrayName.length) {\r\n    // code to execute\r\n    // change of variableName\r\n  }\r\n  ```\r\n\r\nBe sure to change `variableName`(#e7e8ea) to a name you can easily identify, such as `index`(#e7e8ea), and set the `startingIndex`(#e7e8ea) to the index position you want to start at in the array.\r\n\r\nInside the `while`(#e7e8ea) loop, change the `variableName`(#e7e8ea) by the amount you want to move in the array, such as `variableName += 1`(#e7e8ea) to move one index at a time.\r\n:::",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    String[] mountains = {\"Mount Everest\", \"K2\", \"Kangchenjunga\", \"Lhotse\", \"Makalu\"};\n    int[] height = {29029, 28251, 28169, 27940, 27838};\n\n    // TO DO #1: Print the elements in the arrays using a while loop.\n\n\n    \n  }\n}",
+        "isVisible": true
+      }
+    },
+    "encrypted_exemplar_sources": "HM0H7Z3L+CTAPTxDu6u7zslyjM60me7VHOAdpgMoPI4iWuq1sUW4e09SPja1\nDVxLGArt4q8hyvoukDMkEY17z1VIXFCG9Tb+Su0MnH+B5SXZiRWpmbZ8X3AN\nmN3iPb1Dg71JKImJXQxR4G0/+UTpmIBtfTrjfVFHmiMJOxtxHI2okLHcniRO\nlzD8bRVz0MQZKVx6aQ0FRXNNy9/4u2HvyWbbO02p6G0r+krt88RQq5wjUNvP\nKa+Zw+PhyoFnJf24HzbE9Wze5j+Ou3FoimdFWhxWFwCh43SfIqc4krrzthmm\n1bkewjyqXga8ODSTfMGWJUsc+xwPtS+nxbACk00oecJ/YgT7u2g6zY48bwJM\nQNgyRcOb/4xjGQmSWBSm4TVnPGWOtr6hxo/n92c8EJqI/eYnD+E3zKaFHgdK\nMcGejZrKH/cAky38tPHFqCLwQ7225DDJvbYU+NNPUl1L34uhgMnxgJWym65c\nBNP9sQeEbVGb3jVE1vb3ZDA6F6tEsxFiRtlUviWkDOxmJ0LwQGBFQn+h1qyN\n5Gjb5e9zGyUY6irrH1I8ptFB07pM07Hx8VYiIzVgZ2c43pJ+l90gg9hrf4On\nADBuRo3TL7wS8sCkh+3NDCeY0LbmdgwCTgQKzulsSX4TdC+9DX5YuiNyKk/t\nh8sx5Pw5NRZIWDCmKaRqSZwDNcMqZNxbfLhKzRtkLLn7\n",
+    "encrypted_examples": [
+
+    ]
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-03-25T00:09:05.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2022-03-25 00:09:08 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 19:32:21 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 19:40:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 19:41:48 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 19:43:19 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 19:45:24 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

@@ -167,8 +167,24 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   def valid_course_offerings
     return head :forbidden unless current_user
 
-    course_offerings = CourseOffering.assignable_course_offerings_info(current_user)
+    course_offerings = CourseOffering.assignable_course_offerings_info(current_user, request.locale)
     render json: course_offerings
+  end
+
+  # GET /api/v1/sections/available_participant_types
+  def available_participant_types
+    return head :forbidden unless current_user && !current_user.student?
+
+    participant_types =
+      if current_user.permission?(UserPermission::PLC_REVIEWER) || current_user.permission?(UserPermission::UNIVERSAL_INSTRUCTOR) || current_user.permission?(UserPermission::LEVELBUILDER)
+        [SharedCourseConstants::PARTICIPANT_AUDIENCE.student, SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator]
+      elsif current_user.permission?(UserPermission::FACILITATOR)
+        [SharedCourseConstants::PARTICIPANT_AUDIENCE.student, SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher]
+      else
+        [SharedCourseConstants::PARTICIPANT_AUDIENCE.student]
+      end
+
+    render json: {availableParticipantTypes: participant_types}
   end
 
   # GET /api/v1/sections/require_captcha

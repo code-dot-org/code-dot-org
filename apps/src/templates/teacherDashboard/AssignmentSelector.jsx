@@ -11,6 +11,21 @@ const noAssignment = '__noAssignment__';
 const decideLater = '__decideLater__';
 const isValidAssignment = id => id !== noAssignment && id !== decideLater;
 
+export const getCourseOfferingsByCategory = courseOfferings => {
+  let orderedCourseOfferings = _.orderBy(courseOfferings, 'display_name');
+  orderedCourseOfferings = _.orderBy(
+    orderedCourseOfferings,
+    'is_featured',
+    'desc'
+  );
+  const courseOfferingsByCategories = _.groupBy(
+    orderedCourseOfferings,
+    'category'
+  );
+
+  return courseOfferingsByCategories;
+};
+
 /**
  * This component displays a dropdown of courses/scripts, with each of these
  * grouped and ordered appropriately.
@@ -98,7 +113,9 @@ export default class AssignmentSelector extends Component {
         }
 
         const units = courseVersionId
-          ? Object.values(courseVersions[courseVersionId].units)
+          ? Object.values(
+              _.orderBy(courseVersions[courseVersionId].units, 'position')
+            )
           : null;
         const firstUnitId = units?.length > 1 ? units[0].id : noAssignment;
 
@@ -131,8 +148,11 @@ export default class AssignmentSelector extends Component {
 
       if (this.state.selectedCourseVersionId !== courseVersionId) {
         const units = Object.values(
-          this.props.courseOfferings[this.state.selectedCourseOfferingId]
-            ?.course_versions[courseVersionId].units
+          _.orderBy(
+            this.props.courseOfferings[this.state.selectedCourseOfferingId]
+              ?.course_versions[courseVersionId].units,
+            'position'
+          )
         );
         const firstUnitId = units.length > 1 ? units[0].id : noAssignment;
         this.setState(
@@ -184,15 +204,8 @@ export default class AssignmentSelector extends Component {
       selectedUnitId
     } = this.state;
 
-    let orderedCourseOfferings = _.orderBy(courseOfferings, 'display_name');
-    orderedCourseOfferings = _.orderBy(
-      orderedCourseOfferings,
-      'is_featured',
-      'desc'
-    );
-    const courseOfferingsByCategories = _.groupBy(
-      orderedCourseOfferings,
-      'category'
+    const courseOfferingsByCategories = getCourseOfferingsByCategory(
+      courseOfferings
     );
 
     const selectedCourseOffering = courseOfferings[selectedCourseOfferingId];
@@ -200,6 +213,13 @@ export default class AssignmentSelector extends Component {
       selectedCourseOffering?.course_versions[selectedCourseVersionId];
 
     const orderedUnits = _.orderBy(selectedCourseVersion?.units, 'position');
+
+    const filteredCategories = _.filter(
+      Object.keys(CourseOfferingCategories),
+      function(category) {
+        return courseOfferingsByCategories[category];
+      }
+    );
 
     return (
       <div>
@@ -220,7 +240,7 @@ export default class AssignmentSelector extends Component {
                 {i18n.decideLater()}
               </option>
             )}
-            {Object.keys(CourseOfferingCategories).map(category => (
+            {filteredCategories.map(category => (
               <optgroup
                 key={category}
                 label={CourseOfferingCategories[category]}

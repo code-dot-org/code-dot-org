@@ -1,6 +1,7 @@
 {
   "key": "vpl-csp",
-  "display_name": "vpl-csp",
-  "category": "other",
-  "is_featured": false
+  "display_name": "CS Principles Virtual Professional Learning",
+  "category": "pl_virtual",
+  "is_featured": false,
+  "assignable": true
 }

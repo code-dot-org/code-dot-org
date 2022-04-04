@@ -15,6 +15,7 @@ const USER_EDITABLE_SECTION_PROPS = [
   'lessonExtras',
   'pairingAllowed',
   'ttsAutoplayEnabled',
+  'participantType',
   'courseId',
   'courseOfferingId',
   'courseVersionId',
@@ -47,6 +48,8 @@ const importUrlByProvider = {
 // Action keys
 //
 const SET_COURSE_OFFERINGS = 'teacherDashboard/SET_COURSE_OFFERINGS';
+const SET_AVAILABLE_PARTICIPANT_TYPES =
+  'teacherDashboard/SET_AVAILABLE_PARTICIPANT_TYPES';
 const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
 const SET_PAGE_TYPE = 'teacherDashboard/SET_PAGE_TYPE';
 
@@ -120,6 +123,10 @@ export const setRosterProvider = rosterProvider => ({
 export const setCourseOfferings = courseOfferings => ({
   type: SET_COURSE_OFFERINGS,
   courseOfferings
+});
+export const setAvailableParticipantTypes = availableParticipantTypes => ({
+  type: SET_AVAILABLE_PARTICIPANT_TYPES,
+  availableParticipantTypes
 });
 export const setStudentsForCurrentSection = (sectionId, studentInfo) => ({
   type: SET_STUDENT_SECTION,
@@ -202,7 +209,10 @@ function removeNullValues(key, val) {
  * the server
  * @param {number} sectionId
  * @param {number} courseId
+ * @param {number} courseOfferingId
+ * @param {number} courseVersionId
  * @param {number} unitId
+ * @param {string} pageType
  */
 export const assignToSection = (
   sectionId,
@@ -388,20 +398,33 @@ export const asyncLoadSectionData = id => dispatch => {
   dispatch({type: ASYNC_LOAD_BEGIN});
   let apis = [
     '/dashboardapi/sections',
-    '/dashboardapi/sections/valid_course_offerings'
+    '/dashboardapi/sections/valid_course_offerings',
+    '/dashboardapi/sections/available_participant_types'
   ];
   if (id) {
     apis.push('/dashboardapi/sections/' + id + '/students');
   }
 
   return Promise.all(apis.map(fetchJSON))
-    .then(([sections, validCourseOfferings, students]) => {
-      dispatch(setCourseOfferings(validCourseOfferings));
-      dispatch(setSections(sections));
-      if (id) {
-        dispatch(setStudentsForCurrentSection(id, students));
+    .then(
+      ([
+        sections,
+        validCourseOfferings,
+        availableParticipantTypes,
+        students
+      ]) => {
+        dispatch(setCourseOfferings(validCourseOfferings));
+        dispatch(
+          setAvailableParticipantTypes(
+            availableParticipantTypes.availableParticipantTypes
+          )
+        );
+        dispatch(setSections(sections));
+        if (id) {
+          dispatch(setStudentsForCurrentSection(id, students));
+        }
       }
-    })
+    )
     .catch(err => {
       console.error(err.message);
     })
@@ -527,6 +550,8 @@ const initialState = {
   // with options like "CSD", "Course A", or "Frozen". See the
   // assignmentCourseOfferingShape PropType.
   courseOfferings: {},
+  // The participant types the user can create sections for
+  availableParticipantTypes: [],
   // Mapping from sectionId to section object
   sections: {},
   // List of students in section currently being edited (see studentShape PropType)
@@ -554,13 +579,13 @@ const initialState = {
   // DCDO Flag - show/hide Lock Section field
   showLockSectionField: null
 };
-
 /**
  * Generate shape for new section
  * @param id
  * @param loginType
  * @returns {sectionShape}
  */
+
 function newSectionData(id, loginType) {
   return {
     id: id,
@@ -616,6 +641,13 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       courseOfferings: action.courseOfferings
+    };
+  }
+
+  if (action.type === SET_AVAILABLE_PARTICIPANT_TYPES) {
+    return {
+      ...state,
+      availableParticipantTypes: action.availableParticipantTypes
     };
   }
 
@@ -778,12 +810,12 @@ export default function teacherSections(state = initialState, action) {
     }
 
     const lessonExtraSettings = {};
-    if (action.props.unitId && !action.props.lessonExtras) {
+    if (action.props.unitId && action.props.lessonExtras === undefined) {
       lessonExtraSettings.lessonExtras = true;
     }
 
     const ttsAutoplayEnabledSettings = {};
-    if (action.props.unitId && !action.props.ttsAutoplayEnabled) {
+    if (action.props.unitId && action.props.ttsAutoplayEnabled === undefined) {
       ttsAutoplayEnabledSettings.ttsAutoplayEnabled = false;
     }
 
