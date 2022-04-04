@@ -21,6 +21,7 @@ function TopInstructionsHeader(props) {
     displayDocumentationTab,
     displayReviewTab,
     isViewingAsTeacher,
+    isBackgroundMusicLevel,
     fetchingData,
     handleDocumentationClick,
     handleInstructionTabClick,
@@ -30,6 +31,7 @@ function TopInstructionsHeader(props) {
     handleReviewTabClick,
     handleTeacherOnlyTabClick,
     handleClickCollapser,
+    handleMuteMusicTabClick,
     isMinecraft,
     dynamicInstructions,
     ttsLongInstructionsUrl,
@@ -137,6 +139,16 @@ function TopInstructionsHeader(props) {
               onClick={handleReviewTabClick}
               selected={tabSelected === TabType.REVIEW}
               text={i18n.review()}
+              isMinecraft={isMinecraft}
+              isRtl={isRtl}
+            />
+          )}
+          {isBackgroundMusicLevel && (
+            <InstructionsTab
+              className="uitest-backgroundMusicTab"
+              onClick={handleMuteMusicTabClick}
+              selected={tabSelected === TabType.MUTE_MUSIC}
+              text={i18n.backgroundMusicOff()}
               isMinecraft={isMinecraft}
               isRtl={isRtl}
             />
@@ -249,6 +261,7 @@ TopInstructionsHeader.propTypes = {
   displayDocumentationTab: PropTypes.bool,
   displayReviewTab: PropTypes.bool,
   isViewingAsTeacher: PropTypes.bool,
+  isBackgroundMusicLevel: PropTypes.bool.isRequired,
   fetchingData: PropTypes.bool,
   handleDocumentationClick: PropTypes.func.isRequired,
   handleInstructionTabClick: PropTypes.func.isRequired,
@@ -258,6 +271,7 @@ TopInstructionsHeader.propTypes = {
   handleReviewTabClick: PropTypes.func.isRequired,
   handleTeacherOnlyTabClick: PropTypes.func.isRequired,
   handleClickCollapser: PropTypes.func.isRequired,
+  handleMuteMusicTabClick: PropTypes.func.isRequired,
   isMinecraft: PropTypes.bool.isRequired,
   dynamicInstructions: PropTypes.object,
   ttsLongInstructionsUrl: PropTypes.string,

@@ -48,7 +48,8 @@ export const TabType = {
   COMMENTS: 'comments',
   DOCUMENTATION: 'documentation',
   REVIEW: 'review',
-  TEACHER_ONLY: 'teacher-only'
+  TEACHER_ONLY: 'teacher-only',
+  MUTE_MUSIC: 'mute-music'
 };
 
 // Minecraft-specific styles
@@ -444,6 +445,15 @@ class TopInstructions extends Component {
     this.recordEvent('click-help-and-tips-tab');
   };
 
+  handleMuteMusicTabClick = () => {
+    console.log('we are toggling the mute button');
+    const record = {
+      study: 'mute-music',
+      event: 'mute-toggle'
+    };
+    firehoseClient.putRecord(record);
+  };
+
   handleCommentTabClick = () => {
     this.scrollToTopOfTab();
     // Only increment visit count if user is switching from another tab to the
@@ -575,6 +585,7 @@ class TopInstructions extends Component {
       isMinecraft,
       teacherMarkdown,
       isCollapsed,
+      isBackgroundMusicLevel,
       user,
       mainStyle,
       containerStyle,
@@ -663,6 +674,7 @@ class TopInstructions extends Component {
       teacherMarkdown,
       isEmbedView,
       isCollapsed,
+      isBackgroundMusicLevel,
       dynamicInstructions,
       dynamicInstructionsKey
     };
@@ -683,6 +695,7 @@ class TopInstructions extends Component {
           displayDocumentationTab={displayDocumentationTab}
           displayReviewTab={displayReviewTab}
           isViewingAsTeacher={this.isViewingAsTeacher}
+          isBackgroundMusicLevel={isBackgroundMusicLevel}
           fetchingData={fetchingData}
           handleDocumentationClick={this.handleDocumentationClick}
           handleInstructionTabClick={() =>
@@ -695,6 +708,7 @@ class TopInstructions extends Component {
           }
           handleReviewTabClick={() => this.handleTabClick(TabType.REVIEW)}
           handleTeacherOnlyTabClick={this.handleTeacherOnlyTabClick}
+          handleMuteMusicTabClick={this.handleMuteMusicTabClick}
           collapsible={this.props.collapsible}
           handleClickCollapser={this.handleClickCollapser}
           {...passThroughHeaderProps}
