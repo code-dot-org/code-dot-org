@@ -94,7 +94,6 @@ const styles = {
     paddingBottom: extraSpace
   },
   button: {
-    marginTop: 28,
     flexShrink: 0,
     marginLeft: extraSpace,
     marginRight: extraSpace,
