@@ -20,6 +20,8 @@ const FLASH_ERROR_TIME_MS = 5000;
 class ReviewTab extends Component {
   static propTypes = {
     onLoadComplete: PropTypes.func,
+    // Used only in tests
+    dataApi: PropTypes.object,
     // Populated by redux
     codeReviewEnabled: PropTypes.bool,
     viewAsCodeReviewer: PropTypes.bool.isRequired,
@@ -43,7 +45,7 @@ class ReviewTab extends Component {
     authorizationError: false,
     commentSaveError: false,
     commentSaveInProgress: false,
-    dataApi: {}
+    commentSaveErrorMessage: ''
   };
 
   onSelectPeer = peer => {
@@ -85,11 +87,10 @@ class ReviewTab extends Component {
       return;
     }
 
-    this.dataApi = new CodeReviewDataApi(
-      channelId,
-      serverLevelId,
-      serverScriptId
-    );
+    // API should only be passed via props for testing purposes
+    this.dataApi =
+      this.props.dataApi ||
+      new CodeReviewDataApi(channelId, serverLevelId, serverScriptId);
 
     const loadPromises = [];
 
@@ -137,7 +138,8 @@ class ReviewTab extends Component {
   onNewCommentCancel = () => {
     this.setState({
       commentSaveError: false,
-      commentSaveInProgress: false
+      commentSaveInProgress: false,
+      commentSaveErrorMessage: ''
     });
   };
 
@@ -150,7 +152,7 @@ class ReviewTab extends Component {
 
     this.dataApi
       .submitNewCodeReviewComment(commentText)
-      .done(newComment => {
+      .then(newComment => {
         const newComments = comments;
         newComments.push(newComment);
 
@@ -160,8 +162,14 @@ class ReviewTab extends Component {
           commentSaveInProgress: false
         });
       })
-      .fail(result => {
-        if (result.status === 404) {
+      .catch(result => {
+        if (result.profanityFoundError) {
+          this.setState({
+            commentSaveError: true,
+            commentSaveInProgress: false,
+            commentSaveErrorMessage: result.profanityFoundError
+          });
+        } else if (result.status === 404) {
           this.setState({
             authorizationError: true,
             commentSaveInProgress: false
@@ -221,6 +229,13 @@ class ReviewTab extends Component {
     updatedComments[resolvedCommentIndex].hasError = newErrorStatus;
 
     this.setState({comments: updatedComments});
+  };
+
+  clearCommentError = () => {
+    this.setState({
+      commentSaveError: false,
+      commentSaveErrorMessage: ''
+    });
   };
 
   renderReadyForReviewCheckbox() {
@@ -315,16 +330,19 @@ class ReviewTab extends Component {
       authorizationError,
       isReadyForReview,
       commentSaveInProgress,
-      commentSaveError
+      commentSaveError,
+      commentSaveErrorMessage
     } = this.state;
     if (!authorizationError && (isReadyForReview || this.props.viewAsTeacher)) {
       return (
         <CommentEditor
           onNewCommentSubmit={this.onNewCommentSubmit}
           onNewCommentCancel={this.onNewCommentCancel}
+          onCommentUpdate={this.clearCommentError}
           key={forceRecreateEditorKey}
           saveInProgress={commentSaveInProgress}
           saveError={commentSaveError}
+          saveErrorMessage={commentSaveErrorMessage}
         />
       );
     }

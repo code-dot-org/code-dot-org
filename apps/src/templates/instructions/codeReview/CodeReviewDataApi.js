@@ -1,4 +1,7 @@
+/* global appOptions */
 import $ from 'jquery';
+import {findProfanity} from '@cdo/apps/utils';
+import javalabMsg from '@cdo/javalab/locale';
 
 export default class CodeReviewDataApi {
   constructor(channelId, levelId, scriptId) {
@@ -44,16 +47,34 @@ export default class CodeReviewDataApi {
 
   submitNewCodeReviewComment(commentText) {
     this.raiseIfNoToken();
-    return $.ajax({
-      url: `/code_review_comments`,
-      type: 'POST',
-      headers: {'X-CSRF-Token': this.token},
-      data: {
-        channel_id: this.channelId,
-        script_id: this.scriptId,
-        level_id: this.levelId,
-        comment: commentText
-      }
+
+    return new Promise((resolve, reject) => {
+      findProfanity(commentText, appOptions.locale, this.token)
+        .done(profaneWords => {
+          if (profaneWords?.length > 0) {
+            reject({
+              profanityFoundError: javalabMsg.commentProfanityFound({
+                wordCount: profaneWords.length,
+                words: profaneWords.join(', ')
+              })
+            });
+          } else {
+            $.ajax({
+              url: `/code_review_comments`,
+              type: 'POST',
+              headers: {'X-CSRF-Token': this.token},
+              data: {
+                channel_id: this.channelId,
+                script_id: this.scriptId,
+                level_id: this.levelId,
+                comment: commentText
+              }
+            })
+              .done(newComment => resolve(newComment))
+              .fail(result => reject(result));
+          }
+        })
+        .fail(error => reject(error));
     });
   }
 

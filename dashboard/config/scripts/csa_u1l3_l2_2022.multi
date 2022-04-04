@@ -8,7 +8,7 @@ wrong 'II and III'
 wrong 'I, II, and III'
 
 markdown <<MARKDOWN
-Which of the following are attributes and behaviors that a `Student` object might have?
+Which of the following are attributes that a `Student` object might have?
 
 I. `name`
 
