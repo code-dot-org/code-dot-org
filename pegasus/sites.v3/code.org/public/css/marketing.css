@@ -1,10 +1,26 @@
 /* banner */
-.banner-pt1, .banner-pt2 {padding: 0 20px;  }
-banner-pt1 {width20%;} 
-banner-pt2 {width80%;}
+.banner-pt1, .banner-pt2 {
+  padding: 0 20px;
+}
 
-h2.purple-block{background-color:#7665a0; padding:15px 10px;font-size:24px;color:#ffffff;border-top-left-radius:10px;border-top-right-radius:10px;}
-.centerspot {text-align:center; padding:30px }
+h2.purple-block{
+  background-color: #7665a0; 
+  padding: 1em;
+  font-size: 24px;
+  color: #ffffff;
+  border-radius: 10px 10px 0 0;
+}
+
+figcaption {
+  font-size: .875em;
+  margin-top: 1em;
+  line-height: 1.4;
+}
+  
+.centerspot {
+  text-align:center; 
+  padding:30px 
+}
 
 /* columns */
 .column-container { margin: 20px 0;}
@@ -63,7 +79,54 @@ h3.rounded-info-h {  margin-top: 0px;  font-weight: bold;}
 .embedvid .video_caption_link {padding-top:6px; font-weight:bold; font-size:1.1em}
 
 /* Annual report */
-h2.highlight {background: url("../images/AR2020/highlight.png") no-repeat top 5px left; padding-left: 32px;}
+h2.highlight {
+  background: url("../images/AR2020/highlight.png") no-repeat top left; 
+  background-size: 22px 32px;
+  padding-left: 32px;
+  min-height: 32px;
+  margin: 3em auto .5em;
+}
+
+table.donors.featured, 
+table.donors.featured th, 
+table.donors.featured td {
+  border: 0;
+  text-align: center;
+}
+
+  table.donors.featured .large {
+    height: 150px;
+    width: 390px;
+  }
+
+  table.donors.featured .large-img {
+    max-width: 100%;
+    max-height: 120px;
+  }
+
+table.donors,
+table.donors th {
+  border: 0;
+  text-align: left;
+} 
+
+  table.donors th{
+    font-size: 16px;
+  }
+    table.donors th.sub{
+      font-size: 14px;
+      padding: 8px 16px;
+      /* This is a hacky way to do margins in a table */
+      border-top: 16px solid white;
+      border-bottom: 12px solid white;
+      background: #5b6770;
+    }
+
+  table.donors td {
+    border: 0;
+    padding: 0 16px;
+  }
+
 .bythenumbers th {background:#5b6770; padding: 7px 15px; border-top-color: #5b6770;  border-bottom-color: #5b6770;  border-left-color: #5b6770; border-right-color: #5b6770;}
 .bythenumbers td:nth-child(2n+1) {background:#e7e8ea;}
 .bythenumbers td:nth-child(2n+0), .bythenumbers th:nth-child(2n+0) {text-align:center;}
@@ -91,18 +154,19 @@ hr.bhm-border {  border:none;  height:5px;  background-image: url('../images/bhm
 /* RESPONSIVE */
 
 @media screen and (max-width: 600px) and (min-width: 0px) {
-.container_responsive h1 {font-size: 26px;}
-.bhm-banner h2 {font-size:23px;}
-.callout-quote {font-size:18px}
+  .container_responsive h1 {font-size: 26px;}
+  .bhm-banner h2 {font-size:23px;}
+  .callout-quote {font-size:18px}
+  h2.highlight { background-position-y: 4px; }
 }
 
 @media only screen and (max-width: 960px) {
-.column-container .col-50:nth-child(n), .column-container .col-33:nth-child(n), .column-container .col-25:nth-child(n) {  padding: 20px 10px;}
-.column-container .col-20:nth-child(n) {  padding: 15px 10px;}
-.rounded-info {  height: auto;}
-.bhm-banner {  padding-bottom:135px;  background-position: center bottom;}
-.bhm-banner h1, .bhm-banner h2{text-align: center; color:#000000}
-.banner-pt1, .banner-pt2 {  text-align:center;  padding: 15px;}
+  .column-container .col-50:nth-child(n), .column-container .col-33:nth-child(n), .column-container .col-25:nth-child(n) {  padding: 20px 10px;}
+  .column-container .col-20:nth-child(n) {  padding: 15px 10px;}
+  .rounded-info {  height: auto;}
+  .bhm-banner {  padding-bottom:135px;  background-position: center bottom;}
+  .bhm-banner h1, .bhm-banner h2{text-align: center; color:#000000}
+  .banner-pt1, .banner-pt2 {  text-align:center;  padding: 15px;}
 }
 
 .center {
