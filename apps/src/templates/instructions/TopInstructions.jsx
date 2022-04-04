@@ -48,8 +48,7 @@ export const TabType = {
   COMMENTS: 'comments',
   DOCUMENTATION: 'documentation',
   REVIEW: 'review',
-  TEACHER_ONLY: 'teacher-only',
-  MUTE_MUSIC: 'mute-music'
+  TEACHER_ONLY: 'teacher-only'
 };
 
 // Minecraft-specific styles
@@ -446,7 +445,6 @@ class TopInstructions extends Component {
   };
 
   handleMuteMusicTabClick = () => {
-    console.log('we are toggling the mute button');
     const record = {
       study: 'mute-music',
       event: 'mute-toggle'
