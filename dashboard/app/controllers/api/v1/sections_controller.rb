@@ -167,7 +167,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   def valid_course_offerings
     return head :forbidden unless current_user
 
-    course_offerings = CourseOffering.assignable_course_offerings_info(current_user)
+    course_offerings = CourseOffering.assignable_course_offerings_info(current_user, request.locale)
     render json: course_offerings
   end
 
