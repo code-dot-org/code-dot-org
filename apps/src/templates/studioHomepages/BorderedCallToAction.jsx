@@ -65,7 +65,8 @@ const styles = {
     boxSizing: 'border-box',
     marginBottom: 20,
     display: 'flex',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    alignItems: 'center'
   },
   solidBorder: {
     borderStyle: 'solid',
