@@ -143,16 +143,6 @@ function TopInstructionsHeader(props) {
               isRtl={isRtl}
             />
           )}
-          {isBackgroundMusicLevel && (
-            <InstructionsTab
-              className="uitest-backgroundMusicTab"
-              onClick={handleMuteMusicTabClick}
-              selected={tabSelected === TabType.MUTE_MUSIC}
-              text={i18n.backgroundMusicOff()}
-              isMinecraft={isMinecraft}
-              isRtl={isRtl}
-            />
-          )}
           {(isViewingAsTeacher || isViewingAsInstructorInTraining) &&
             (teacherMarkdown ||
               showContainedLevelAnswer ||
@@ -167,6 +157,16 @@ function TopInstructionsHeader(props) {
                 isRtl={isRtl}
               />
             )}
+          {isBackgroundMusicLevel && (
+            <button
+              type="button"
+              className="uitest-backgroundMusicTab"
+              onClick={handleMuteMusicTabClick}
+              style={{float: 'right'}}
+            >
+              {i18n.backgroundMusicOff()}
+            </button>
+          )}
         </div>
         {/* For CSF contained levels we use the same collapse function as CSD/CSP*/}
         {collapsible &&
