@@ -2,6 +2,8 @@
 en:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: make new {ANIMATION_NAME} sprite at {LOCATION}
       Dancelab_alternateMoves:
         text: "{GROUP} alternate every {N} measures \nbetween {MOVE1} and {MOVE2}"
         options:
@@ -1089,6 +1091,12 @@ en:
         text: draw line {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: edges block {SPRITE} from moving
+      gamelab_everySeconds:
+        text: 'repeat every {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': seconds
+            '"frames"': frames
       gamelab_followingTargets:
         text: following targets
       gamelab_getAllSprites:
@@ -1243,6 +1251,8 @@ en:
             '"pop"': pop
             '"rain"': rain
             '"spiral"': spiral
+      gamelab_makeNewScaledSprite:
+        text: make new {ANIMATION_NAME} sprite at {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: make new {ANIMATION_NAME} sprite at {LOCATION}
       gamelab_makeNumSprites:
