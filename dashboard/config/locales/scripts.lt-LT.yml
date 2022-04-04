@@ -1046,6 +1046,7 @@ lt:
           description_short: Sukurk kreipšinio žaidimą
           description: Sukurk kreipšinio žaidimą
           student_description: Sukurk kreipšinio žaidimą
+          name: krepšinio kamuolys
         csd2-2017:
           lessons:
             new stage:
@@ -3237,6 +3238,9 @@ lt:
             lessonGroup-2:
               display_name: Turinys
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: Kartojimas
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys

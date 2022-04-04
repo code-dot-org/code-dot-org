@@ -309,10 +309,13 @@
           "name": "Qo‘shimcha mashg‘ulotlar"
         },
         "544fd00b-84f3-47e4-9e02-cb27a6cfbbca": {
-          "name": "Mashg‘ulot (30-45 daqiqa)"
+          "name": "Faoliyat"
         },
         "e12c8da3-986d-488b-bed5-a7bb9e95e393": {
           "name": "Darajalar"
+        },
+        "2f9c446a-0802-48b0-91ff-a7df9fe4afe2": {
+          "name": "Wrap Up"
         },
         "42552407-b313-4fc4-9163-e6a8e4a6029d": {
           "name": "Qo‘shimcha mashg‘ulotlar"
@@ -321,13 +324,16 @@
           "name": "Darajalar"
         },
         "82dec89b-f375-4238-a251-ffae17c2dfd1": {
-          "name": "Mashg‘ulot (30-45 daqiqa)"
+          "name": "Faoliyat"
         },
         "a25c23cd-4e73-4a82-882f-7cc0a9fdfeb4": {
           "name": "Darajalar"
         },
         "239ba7ce-544c-4508-9e5c-e956de964002": {
           "name": "Wrap Up"
+        },
+        "7afb9d6e-2c07-44d2-8504-90df0cecc778": {
+          "name": "Baholash"
         },
         "a676c281-2f0e-41d3-8e30-dbf6bb8d6dc0": {
           "name": "Qizdirish"
@@ -3897,10 +3903,10 @@
           "name": "Wrap Up"
         },
         "235b3b14-975a-43b6-93bc-d386b857fd6b": {
-          "name": "Kirish (5 minut)"
+          "name": "Boshlash"
         },
         "fd06b4db-e3d4-491b-9372-af9a05dc2bb7": {
-          "name": "Mashg‘ulot (30-45 daqiqa)"
+          "name": "Faoliyat"
         },
         "e96a358f-201b-4474-8950-90dd94426aff": {
           "name": "Wrap Up"

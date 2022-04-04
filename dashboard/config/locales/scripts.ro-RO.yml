@@ -2007,6 +2007,7 @@ ro:
                 cu săgeți). La sfârșitul puzzle-ului, elevii vor putea să personalizeze
                 jocul, adăugând viteze și sunete diferite.
           student_description: Realizeaza un joc de baschet
+          name: baschet
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -2379,6 +2380,7 @@ ro:
                 cu săgeți). La sfârșitul puzzle-ului, elevii vor putea să personalizeze
                 jocul, adăugând viteze și sunete diferite.
           student_description: Amesteca si potriveste sporturile
+          name: sporturi
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -4199,6 +4201,7 @@ ro:
                 de la sfârșit.
           student_description: Minecraft s-a întors pentru Ora de Codare cu o activitate
             nou-nouță! Călătorie prin Minecraft cu cod.
+          name: erou
         csp-explore-2017:
           lesson_groups:
             cspSurvey:
@@ -5599,6 +5602,7 @@ ro:
                 de toate vârstele, dar necesită abilități de citire. Această activitate
                 necesită activarea sunetului, deoarece instrumentul a fost conceput
                 să răspundă muzicii.
+          name: dans
         frozen-2018-test-b:
           lessons:
             Artist:
@@ -5619,6 +5623,7 @@ ro:
                 lucrând prin puzzle-uri timp de o oră. Elevii de liceu vor termina
                 în mare parte tutorialul și vor avea ceva timp să joace nivelul liber
                 de la sfârșit.
+          name: acvatic
         dance--draft:
           lessons:
             Dance Party:
@@ -7806,7 +7811,6 @@ ro:
         dance-2019:
           lessons:
             Dance Party:
-              name: Petrecere dansantă
               description_student: În această lecție, elevii de toate vârstele beneficiază
                 de o experiență introductivă în codare și informatică, într-un mediu
                 sigur și încurajator. Această lecție a fost concepută pentru elevii
@@ -11851,8 +11855,7 @@ ro:
               display_name: Demonstrații și Resurse
         csa-self-paced-pl:
           lessons:
-            Navigating the Code.org learning platform:
-              name: Navigând pe platforma de învățare Code.org
+            Navigating the Codeorg learning platform:
               description_teacher: |-
                 **Vei învăța cum să:**
 
@@ -13461,7 +13464,7 @@ ro:
                 acestei etape, elevii vor avea posibilitatea de a crea propriile imagini
                 folosind buclele.
               key: Peisaj oceanic cu bucle
-            The Big Event Jr.:
+            The Big Event Jr:
               name: Marele Eveniment, ediția Juniori
               description_student: Mișcă-te și fă zgomot atunci când profesorii apasă
                 butoanele unei telecomenzi uriașe.
@@ -13953,7 +13956,7 @@ ro:
                 „aplicația potrivită” care să răspundă nevoilor lor. Apoi, elevii
                 își folosesc empatia și creativitatea pentru a crea propria aplicație
                 pentru smartphone care răspunde nevoilor unui utilizator suplimentar.
-            The Big Event Jr.:
+            The Big Event Jr:
               name: Marele Eveniment, ediția Juniori
               description_student: Mișcă-te și fă zgomot atunci când profesorul apasă
                 butoanele unei telecomenzi uriașe.
@@ -14081,7 +14084,7 @@ ro:
                 online decât în persoană și cum pot să facă față atitudinii răutăcioase
                 online când se lovesc de aceasta."
               key: Să punem capăt comportamentelor răutăcioase din mediul online
-            My Robotic Friends Jr.:
+            My Robotic Friends Jr:
               name: Prietenii mei, roboții, ediția Juniori
               description_student: În această lecție vei pretinde că toți colegii
                 tăi sunt roboți și îi vei programa să construiască modele cu ajutorul
@@ -14115,7 +14118,7 @@ ro:
                 elevii vor crea imagini a căror complexitate va crește progresiv,
                 folosind blocuri noi, cum ar fi `avansează cu 100 pixeli` și `virează
                 la dreapta cu 90 de grade`.
-            My Loopy Robotic Friends Jr.:
+            My Loopy Robotic Friends Jr:
               name: Prietenii mei, roboții trăsniți, ediția Juniori
               description_student: În această lecție îți vei putea „programa” din
                 nou colegii, dar acum vei folosi bucle pentru a rezolva probleme mai
@@ -14944,6 +14947,8 @@ ro:
               name: Laboratorul Java
             lesson-9:
               name: Bucle
+            lesson-21:
+              name: Consolă
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
@@ -14993,10 +14998,17 @@ ro:
           lessons:
             lesson-6:
               name: Variabile
+            lesson-16:
+              name: Consolă
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: Bucle Pentru
+            lesson-16:
+              name: Consolă
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
@@ -15430,6 +15442,10 @@ ro:
               display_name: Conţinut
             lessonGroup-5:
               display_name: Cutie cu nisip
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-9:
+              name: Planificare lecție
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -15462,3 +15478,5 @@ ro:
               key: Bucle Pentru
             Lesson Planning:
               key: Planificare lecție
+        hello-world-csc:
+          title: Bună Lume

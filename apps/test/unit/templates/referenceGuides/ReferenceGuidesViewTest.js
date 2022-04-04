@@ -7,10 +7,16 @@ describe('ReferenceGuideView', () => {
   it('reference guide shows title', () => {
     const referenceGuide = {
       display_name: 'display name',
-      content: 'markdown text'
+      content: 'markdown text',
+      position: 0,
+      key: 'guide',
+      parent_reference_guide_key: null
     };
     const wrapper = isolateComponent(
-      <ReferenceGuideView referenceGuide={referenceGuide} />
+      <ReferenceGuideView
+        referenceGuide={referenceGuide}
+        referenceGuides={[referenceGuide]}
+      />
     );
     expect(wrapper.findOne('h1').content()).to.equal(
       referenceGuide.display_name
@@ -20,13 +26,83 @@ describe('ReferenceGuideView', () => {
   it('reference guide shows content', () => {
     const referenceGuide = {
       display_name: 'display name',
-      content: 'markdown text'
+      content: 'markdown text',
+      position: 0,
+      key: 'guide',
+      parent_reference_guide_key: null
     };
     const wrapper = isolateComponent(
-      <ReferenceGuideView referenceGuide={referenceGuide} />
+      <ReferenceGuideView
+        referenceGuide={referenceGuide}
+        referenceGuides={[referenceGuide]}
+      />
     );
     expect(wrapper.findOne('EnhancedSafeMarkdown').props.markdown).to.equal(
       referenceGuide.content
+    );
+  });
+
+  it('reference guide formats categories for nav bar', () => {
+    const referenceGuide = {
+      display_name: 'display name 3',
+      content: 'content 3',
+      key: 'guide3',
+      position: 0,
+      parent_reference_guide_key: 'guide1'
+    };
+    // guide1
+    /// guide3
+    //// guide5
+    // guide2
+    /// guide4
+    const referenceGuides = [
+      {
+        display_name: 'display name 1',
+        content: 'content 1',
+        key: 'guide1',
+        position: 0,
+        parent_reference_guide_key: null
+      },
+      {
+        display_name: 'display name 2',
+        content: 'content 2',
+        key: 'guide2',
+        position: 1,
+        parent_reference_guide_key: null
+      },
+      referenceGuide,
+      {
+        display_name: 'display name 4',
+        content: 'content 4',
+        key: 'guide4',
+        position: 0,
+        parent_reference_guide_key: 'guide2'
+      },
+      {
+        display_name: 'display name 5',
+        content: 'content 5',
+        key: 'guide5',
+        position: 0,
+        parent_reference_guide_key: 'guide3'
+      }
+    ];
+    const wrapper = isolateComponent(
+      <ReferenceGuideView
+        referenceGuide={referenceGuide}
+        referenceGuides={referenceGuides}
+      />
+    );
+    const bar = wrapper.findOne('NavigationBar');
+    expect(bar.props.children.length).to.equal(2);
+    expect(bar.props.children[0].key).to.equal('guide1');
+    expect(bar.props.children[1].key).to.equal('guide2');
+
+    // renders first category item
+    expect(bar.props.children[0].props.children[0].props.text).to.include(
+      'display name 3'
+    );
+    expect(bar.props.children[0].props.children[1].props.text).to.include(
+      'display name 5'
     );
   });
 });

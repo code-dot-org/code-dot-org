@@ -601,6 +601,8 @@ sl:
               display_name: Pregled
             content:
               display_name: Vsebina
+        basketball:
+          name: žoga za košarko
         csd2-2017:
           lessons:
             Lists:

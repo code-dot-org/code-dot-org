@@ -154,6 +154,10 @@ gl:
           CONDITION:
             '"when"': cando
             '"while"': mentras
+      gamelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': segundos
       gamelab_getProp:
         options:
           PROPERTY:

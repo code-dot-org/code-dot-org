@@ -1288,8 +1288,6 @@ ar:
               name: الجلسة الختامية
         equity-pd:
           lessons:
-            Code.org Equity PD:
-              name: عدالة التطوير المهني على Code.org
             Necessary Background:
               name: خلفية معرفية ضرورية
         science-PD2:
@@ -3924,6 +3922,7 @@ ar:
                 على أزرار الأسهم). في نهاية اللغز، ستتاح للطلاب الفرصة لتخصيص لعبتهم
                 بسرعات وأصوات مختلفة.
           student_description: اصنع لعبة كرة السلة
+          name: كرة سلة
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -4893,6 +4892,7 @@ ar:
                 على أزرار الأسهم). في نهاية اللغز، ستتاح للطلاب الفرصة لتخصيص لعبتهم
                 بسرعات وأصوات مختلفة.
           student_description: امزج وطابق عبر الألعاب الرياضية
+          name: الأنشطة الرياضية
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -8735,6 +8735,7 @@ ar:
                 الحر في النهاية.
           student_description: عاد Minecraft بأنشطة جديدة تمامًا ومخصصة لساعة من البرمجة!
             رحلة عبر Minecraft مع البرمجة.
+          name: بطل
         applab-intro-staging:
           title: مقدمة عن إعداد مختبر التطبيقات
           lessons:
@@ -12491,6 +12492,7 @@ ar:
                 هذا الدرس للمتعلمين من جميع الأعمار ولكنه يتطلب القراءة. يتطلب هذا
                 النشاط صوتًا حيث تم تصميم الأداة للاستجابة للموسيقى.
           student_description: برمِج حفلة الرقص الخاصة بك لمشاركتها مع أصدقائك.
+          name: رقص
         frozen-2018-test-b:
           title: نص فروزن الجديد
           lessons:
@@ -12515,6 +12517,7 @@ ar:
           student_description: عادت لعبة ماينكرافت بنشاط جديد تمامًا! استخدم مهاراتك
             في الإبداع وحل المشكلات لاستكشاف العوالم تحت الماء وبنائها باستخدام الأوامر
             البرمجية.
+          name: مائي
         sconyers:
           title: ملعب تريسي
           lessons:
@@ -18089,7 +18092,7 @@ ar:
           description: برمِج حفلة الرقص الخاصة بك لمشاركتها مع أصدقائك.
           lessons:
             Dance Party:
-              name: حفلة الرقص
+              name: حفلة رقص (2019)
               description_student: في هذا الدرس، يحصل المتعلمون من جميع الأعمار على
                 خبرة تمهيدية في البرمجة وعلوم الكمبيوتر في بيئة آمنة وداعمة. تم تصميم
                 هذا الدرس للمتعلمين من جميع الأعمار ولكنه يتطلب القراءة. يتطلب هذا
@@ -26118,7 +26121,7 @@ ar:
               name: الوحدة 1
             Getting Started:
               name: البدء
-            What is Code.org:
+            What is Codeorg:
               name: فهم مقررات أساسيات علم الحاسوب
           lesson_groups:
             k5_getting_started_1:
@@ -26396,8 +26399,7 @@ ar:
           title: '"مرحبا بالعالم!"'
         csa-self-paced-pl:
           lessons:
-            Navigating the Code.org learning platform:
-              name: تصفح منصة التعلم Code.org
+            Navigating the Codeorg learning platform:
               description_teacher: |-
                 **سوف تتعلم كيفية:**
 
@@ -27909,7 +27911,7 @@ ar:
                 رسم الصور من خلال تكرار سلاسل بسيطة من التعليمات. هنا، الحلقات تخلق
                 أنماطًا. في نهاية هذا الدرس، سيقوم الطلاب بإنشاء صورهم الخاصة.
               key: مشهد المحيط مع الحلقات
-            The Big Event Jr.:
+            The Big Event Jr:
               name: الحدث الكبير للصغار
               description_student: تحرك واصرخ عندما يضغط معلمك على الأزرار الموجودة
                 على جهاز تحكم عملاق.
@@ -28668,7 +28670,7 @@ ar:
                 مع العديد من مستخدمي الهواتف الذكية الوهميين لمساعدتهم في العثور على
                 "التطبيق المناسب" الذي يلبي احتياجاتهم.
               key: التطبيق المناسب
-            The Big Event Jr.:
+            The Big Event Jr:
               name: الحدث الكبير للصغار
               description_student: تحرك أو اصرخ عندما يضغط معلمك على الأزرار الموجودة
                 على جهاز تحكم عملاق.
@@ -28784,7 +28786,7 @@ ar:
             Putting a STOP to Online Meanness:
               name: وضع حد للدناءة على الإنترنت
               key: وضع حد للدناءة على الإنترنت
-            My Robotic Friends Jr.:
+            My Robotic Friends Jr:
               name: أصدقائي الآليون الصغار
               description_student: في هذا الدرس، سوف تتظاهر بأن زملائك في المدرسة
                 هم من الروبوتات وتبرمجهم لبناء أنماط أكواب مكدسة.
@@ -28824,7 +28826,7 @@ ar:
                 على الشاشة. ستسمح مرحلة الفنان هذه للطلاب بإنشاء صور ذات تعقيد متزايد
                 باستخدام قطع جديدة مثل "تحرك إلى الأمام بمقدار 100 بكسل" و "انعطف
                 يمينًا بمقدار 90 درجة".
-            My Loopy Robotic Friends Jr.:
+            My Loopy Robotic Friends Jr:
               name: أصدقائي الآليون دائمي الدوران للصغار
               description_student: في هذا الدرس، ستبرمج زملائك في الصف مرة أخرى، ولكن
                 باستخدام الحلقات ستتمكن من حل المشكلات الأكبر والأكثر تعقيدًا.
@@ -29904,6 +29906,8 @@ ar:
               name: مختبر Java
             lesson-9:
               name: الحلقات
+            lesson-21:
+              name: وحدة التحكم
           lesson_groups:
             lessonGroup-2:
               display_name: محتوى
@@ -29955,10 +29959,17 @@ ar:
               name: الوحدة 2 التقييم
             lesson-6:
               name: المتغيرات
+            lesson-16:
+              name: وحدة التحكم
           lesson_groups:
             lessonGroup-2:
               display_name: محتوى
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: للحلقات
+            lesson-16:
+              name: وحدة التحكم
           lesson_groups:
             lessonGroup-2:
               display_name: محتوى
@@ -30370,6 +30381,8 @@ ar:
           lessons:
             lesson-1:
               name: مرحبًا
+            lesson-9:
+              name: تخطيط الدرس
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -30419,3 +30432,13 @@ ar:
               key: الخطوات التالية
           student_description: تعرف على كيفية تدريس علم الحاسوب باستخدام أساسيات علم
             الحاسوب في Code.org من خلال هذه الدورة التدريبية المجانية عبر الإنترنت!
+        vpl-csd2-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: الحوسبة المادية
+        vpl-csd3-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: الحوسبة المادية
+        hello-world-csc:
+          title: مرحبًا أيها العالم

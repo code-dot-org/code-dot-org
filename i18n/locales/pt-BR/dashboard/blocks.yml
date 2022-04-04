@@ -2,6 +2,8 @@
 pt:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: criar novo {ANIMATION_NAME} elemento em {LOCATION}
       Dancelab_alternateMoves:
         text: "{GROUP} alterna a cada {N} medida entre {MOVE1} e {MOVE2}"
         options:
@@ -548,7 +550,6 @@ pt:
             '"fireworks"': Fogos de artifício
             '"flowers"': Flores
             '"growing_stars"': Estrelas em crescimento
-            '"higher_power"': Potência mais alta
             '"swirl"': Hipno
             '"kaleidoscope"': Caleidoscópio
             '"lasers"': Laser de pista de dança
@@ -1055,6 +1056,12 @@ pt:
         text: desenhar linha {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: bordas bloqueiam {SPRITE} de se mover
+      gamelab_everySeconds:
+        text: 'a cada {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': segundos
+            '"frames"': quadros
       gamelab_followingTargets:
         text: seguindo alvos
       gamelab_getAllSprites:
@@ -1206,6 +1213,8 @@ pt:
             '"burst"': explosão
             '"pop"': estalo
             '"rain"': chuva
+      gamelab_makeNewScaledSprite:
+        text: criar novo {ANIMATION_NAME} elemento em {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: criar novo {ANIMATION_NAME} elemento em {LOCATION}
       gamelab_makeNumSprites:

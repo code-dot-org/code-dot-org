@@ -1844,6 +1844,7 @@ ro:
               description_student: Ți-ai dorit vreodată să poți juca jocuri video la școală? În această lecție vei putea să-ți creezi propriul joc!
               description_teacher: În această activitate online, elevii vor învăța ce sunt evenimentele și cum sunt acestea folosite de computere în programe precum jocurile video. Elevii vor rezolva puzzle-uri, făcând programul să reacționeze la evenimente (cum ar fi apăsarea butoanelor cu săgeți). La sfârșitul puzzle-ului, elevii vor putea să personalizeze jocul, adăugând viteze și sunete diferite.
           student_description: Realizeaza un joc de baschet
+          name: baschet
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -2157,6 +2158,7 @@ ro:
               description_student: Ți-ai dorit vreodată să poți juca jocuri video la școală? În această lecție vei putea să-ți creezi propriul joc!
               description_teacher: În această activitate online, elevii vor învăța ce sunt evenimentele și cum sunt acestea folosite de computere în programe precum jocurile video. Elevii vor rezolva puzzle-uri, făcând programul să reacționeze la evenimente (cum ar fi apăsarea butoanelor cu săgeți). La sfârșitul puzzle-ului, elevii vor putea să personalizeze jocul, adăugând viteze și sunete diferite.
           student_description: Amesteca si potriveste sporturile
+          name: sporturi
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -3468,6 +3470,7 @@ ro:
               name: 'Minecraft: Călătoria eroului'
               description_teacher: În această lecție, elevii de toate vârstele beneficiază de o experiență introductivă în codificare și informatică într-un mediu sigur și încurajator. Această lecție este potrivita pentru orice elev suficient de mare pentru a citi (cu vârste peste 6 ani). Cursanții mai tineri probabil nu vor termina tutorialul, dar se vor distra mult lucrând prin puzzle-uri timp de o oră. Elevii de liceu vor termina în mare parte tutorialul și vor avea ceva timp să joace nivelul liber de la sfârșit.
           student_description: Minecraft s-a întors pentru Ora de Codare cu o activitate nou-nouță! Călătorie prin Minecraft cu cod.
+          name: erou
         applab-intro-staging: {}
         csp-explore-2017:
           lesson_groups:
@@ -4623,6 +4626,7 @@ ro:
               name: Petrecere dansantă
               description_student: În această lecție, elevii de toate vârstele beneficiază de o experiență introductivă în codare și informatică, într-un mediu sigur și încurajator. Această lecție a fost concepută pentru elevii de toate vârstele, dar necesită abilități de citire. Această activitate necesită activarea sunetului, deoarece instrumentul a fost conceput să răspundă muzicii.
               description_teacher: În această lecție, elevii de toate vârstele beneficiază de o experiență introductivă în codare și informatică, într-un mediu sigur și încurajator. Această lecție a fost concepută pentru elevii de toate vârstele, dar necesită abilități de citire. Această activitate necesită activarea sunetului, deoarece instrumentul a fost conceput să răspundă muzicii.
+          name: dans
         frozen-2018-test-b:
           lessons:
             Artist:
@@ -4634,6 +4638,7 @@ ro:
             Aquatic:
               name: 'Minecraft: Voiaj Acvatic'
               description_teacher: În această lecție, elevii de toate vârstele beneficiază de o experiență introductivă în codificare și informatică într-un mediu sigur și încurajator. Această lecție este potrivita pentru orice elev suficient de mare pentru a citi (cu vârste peste 6 ani). Cursanții mai tineri probabil nu vor termina tutorialul, dar se vor distra mult lucrând prin puzzle-uri timp de o oră. Elevii de liceu vor termina în mare parte tutorialul și vor avea ceva timp să joace nivelul liber de la sfârșit.
+          name: acvatic
         sconyers: {}
         dance--draft:
           lessons:
@@ -6162,7 +6167,6 @@ ro:
         dance-2019:
           lessons:
             Dance Party:
-              name: Petrecere dansantă
               description_student: În această lecție, elevii de toate vârstele beneficiază de o experiență introductivă în codare și informatică, într-un mediu sigur și încurajator. Această lecție a fost concepută pentru elevii de toate vârstele, dar necesită abilități de citire. Această activitate necesită activarea sunetului, deoarece instrumentul a fost conceput să răspundă muzicii.
               description_teacher: În această lecție, elevii de toate vârstele beneficiază de o experiență introductivă în codare și informatică, într-un mediu sigur și încurajator. Această lecție a fost concepută pentru elevii de toate vârstele, dar necesită abilități de citire. Această activitate necesită activarea sunetului, deoarece instrumentul a fost conceput să răspundă muzicii.
         k5-onlinepd-2019:
@@ -8984,8 +8988,7 @@ ro:
             lesson-1: {}
         csa-self-paced-pl:
           lessons:
-            Navigating the Code.org learning platform:
-              name: Navigând pe platforma de învățare Code.org
+            Navigating the Codeorg learning platform:
               description_teacher: |-
                 **Vei învăța cum să:**
 
@@ -10094,7 +10097,7 @@ ro:
               description_student: Folosește bucle și modele pentru a finaliza imaginile.
               description_teacher: Revenind la bucle, elevii învață să deseneze imagini repetând secvențe simple de instrucțiuni. În lecția precedentă, buclele au fost folosite pentru a traversa un labirint și pentru a strânge comori. Aici, buclele sunt utilizate pentru a crea modele. La sfârșitul acestei etape, elevii vor avea posibilitatea de a crea propriile imagini folosind buclele.
               key: Peisaj oceanic cu bucle
-            The Big Event Jr.:
+            The Big Event Jr:
               name: Marele Eveniment, ediția Juniori
               description_student: Mișcă-te și fă zgomot atunci când profesorii apasă butoanele unei telecomenzi uriașe.
               description_teacher: Evenimentele sunt o modalitate foarte ușoară de a imprima varietate unui algoritm scris anterior. Poate că uneori vă doriți ca programul dvs. să răspundă utilizatorului exact atunci când dorește utilizatorul. Acesta este scopul evenimentelor.
@@ -10373,7 +10376,7 @@ ro:
             The Right App:
               description_student: Creează-ți propria aplicație pentru smartphone.
               description_teacher: În această lecție elevii învață faptul că informatica poate fi de ajutor în viața reală. Mai întâi, elevii se pun în locul mai multor utilizatori fictivi de smartphone-uri și îi ajută să găsească „aplicația potrivită” care să răspundă nevoilor lor. Apoi, elevii își folosesc empatia și creativitatea pentru a crea propria aplicație pentru smartphone care răspunde nevoilor unui utilizator suplimentar.
-            The Big Event Jr.:
+            The Big Event Jr:
               name: Marele Eveniment, ediția Juniori
               description_student: Mișcă-te și fă zgomot atunci când profesorul apasă butoanele unei telecomenzi uriașe.
               description_teacher: Evenimentele sunt o modalitate foarte ușoară de a imprima varietate unui algoritm scris anterior. Poate că uneori vă doriți ca programul dvs. să răspundă utilizatorului exact atunci când dorește utilizatorul. Acesta este scopul evenimentelor.
@@ -10448,7 +10451,7 @@ ro:
               description_student: În această lecție vei afla mai multe despre comportamentele răutăcioase și despre ce trebuie să faci dacă le întâlnești online.
               description_teacher: " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)Această lecție a fost concepută inițial de Common Sense Education [Mai multe informații.](https://www.commonsense.org/education/digital-citizenship/curriculum)Pe Internet sunt tot felul de oameni interesanți, dar uneori aceștia pot fi răutăcioși unii cu alții. Ajutați-i pe elevi, folosind acest joc de rol, să înțeleagă de ce este adesea mai ușor să fii răutăcios online decât în persoană și cum pot să facă față atitudinii răutăcioase online când se lovesc de aceasta."
               key: Să punem capăt comportamentelor răutăcioase din mediul online
-            My Robotic Friends Jr.:
+            My Robotic Friends Jr:
               name: Prietenii mei, roboții, ediția Juniori
               description_student: În această lecție vei pretinde că toți colegii tăi sunt roboți și îi vei programa să construiască modele cu ajutorul paharelor suprapuse.
               description_teacher: Folosind un set de simboluri în loc de cod, elevii vor concepe algoritmi prin care transmit instrucțiuni unui „robot” să suprapună pahare folosind pentru aceasta diferite modele. Elevii vor fi pe rând roboți și vor reacționa numai la algoritmul definit de colegii lor. În acest segment, elevii învață legătura care există între simboluri și acțiuni, diferența dintre un algoritm și un program, precum și cât de importantă este depanarea.
@@ -10464,7 +10467,7 @@ ro:
             Creating Art with Code:
               description_student: Creați imagini extraordinare programând Artistul.
               description_teacher: În această lecție, elevii vor avea control asupra Artistului și vor finaliza desene pe ecran. În această etapă din Artist, elevii vor crea imagini a căror complexitate va crește progresiv, folosind blocuri noi, cum ar fi `avansează cu 100 pixeli` și `virează la dreapta cu 90 de grade`.
-            My Loopy Robotic Friends Jr.:
+            My Loopy Robotic Friends Jr:
               name: Prietenii mei, roboții trăsniți, ediția Juniori
               description_student: În această lecție îți vei putea „programa” din nou colegii, dar acum vei folosi bucle pentru a rezolva probleme mai mari și mai complicate.
               description_teacher: Luând activitatea inițială „Prietenii mei, roboții” drept punct de plecare, elevii se confruntă acum cu sarcini mai mari și mai complicate. Pentru a programa „roboții” să finalizeze aceste sarcini mai complexe, elevii trebuie să identifice modele repetate din instrucțiuni care pot fi înlocuite cu o buclă.
@@ -10928,6 +10931,9 @@ ro:
               name: Laboratorul Java
             lesson-9:
               name: Bucle
+            lesson-21:
+              name: Consolă
+            lesson-22: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
@@ -10977,10 +10983,19 @@ ro:
           lessons:
             lesson-6:
               name: Variabile
+            lesson-16:
+              name: Consolă
+            lesson-17: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: Bucle Pentru
+            lesson-16:
+              name: Consolă
+            lesson-17: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
@@ -11054,7 +11069,6 @@ ro:
         self-paced-pl-csa3-2022:
           lessons:
             lesson-1: {}
-            lesson-2: {}
         csa7-pilot-extra:
           lessons:
             Unit 7 Pilot Survey: {}
@@ -11301,16 +11315,15 @@ ro:
             lesson-3: {}
         vpl-csd1-summer-pilot-2022:
           lessons:
-            lesson-1: {}
             lesson-3: {}
+            lesson-9:
+              name: Planificare lecție
         vpl-csd2-summer-pilot-2022:
           lessons:
             lesson-1: {}
             lesson-2: {}
         vpl-csd3-summer-pilot-2022: {}
-        vpl-csd4-summer-pilot-2022:
-          lessons:
-            lesson-1: {}
+        vpl-csd4-summer-pilot-2022: {}
         vpl-csd5-summer-pilot-2022: {}
         csa2-2022-exemplars:
           lessons:
@@ -11372,3 +11385,17 @@ ro:
               key: Planificare lecție
             Implementation Approaches and Barriers: {}
             Next steps: {}
+        vpl-csd1-ci-pilot-2022: {}
+        vpl-csd2-ci-pilot-2022: {}
+        vpl-csd3-ci-pilot-2022:
+          lessons:
+            lesson-2: {}
+        vpl-csd4-ci-pilot-2022: {}
+        vpl-csd5-ci-pilot-2022: {}
+        vpl-csd6-ci-pilot-2022: {}
+        vpl-csd7-ci-pilot-2022: {}
+        hello-world-csc:
+          title: Bună Lume
+        csd-playground:
+          lessons:
+            lesson-1: {}

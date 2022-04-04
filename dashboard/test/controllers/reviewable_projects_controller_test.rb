@@ -9,7 +9,7 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
     @project_level_id = 12
     @project_script_id = 34
     @project_owner_storage_id = 56
-    @project_storage_app_id = 78
+    @project_id = 78
 
     @teacher = create :teacher
 
@@ -36,7 +36,7 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
   end
 
   test 'student can mark their own project reviewable' do
-    stub_storage_apps_calls
+    stub_projects_calls
 
     sign_in @project_owner
     post :create, params: {
@@ -49,7 +49,7 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
   end
 
   test 'teachers cannot mark student project reviewable' do
-    stub_storage_apps_calls
+    stub_projects_calls
 
     sign_in @teacher
     post :create, params: {
@@ -62,7 +62,7 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
   end
 
   test 'other students cannot mark student project reviewable' do
-    stub_storage_apps_calls
+    stub_projects_calls
 
     sign_in @teacher
     post :create, params: {
@@ -75,7 +75,7 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
   end
 
   test 'reviewable_status returns correct status for student when own project is not reviewable' do
-    stub_storage_apps_calls
+    stub_projects_calls
 
     sign_in @project_owner
 
@@ -95,13 +95,13 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
   end
 
   test 'reviewable_status returns correct status for student when own project is reviewable' do
-    stub_storage_apps_calls
+    stub_projects_calls
 
     sign_in @project_owner
 
     reviewable_project = create :reviewable_project,
       user_id: @project_owner.id,
-      storage_app_id: @project_storage_app_id,
+      project_id: @project_id,
       level_id: @project_level_id,
       script_id: @project_script_id
 
@@ -122,7 +122,7 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
   end
 
   test 'reviewable_status returns correct status for other user when student project is not reviewable' do
-    stub_storage_apps_calls
+    stub_projects_calls
 
     sign_in @another_student
 
@@ -143,13 +143,13 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
   end
 
   test 'reviewable_status returns correct status for other user when student project is reviewable' do
-    stub_storage_apps_calls
+    stub_projects_calls
 
     sign_in @another_student
 
     create :reviewable_project,
       user_id: @project_owner.id,
-      storage_app_id: @project_storage_app_id,
+      project_id: @project_id,
       level_id: @project_level_id,
       script_id: @project_script_id
 
@@ -172,7 +172,7 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
   test 'students can disable review for their own projects' do
     reviewable_project = create :reviewable_project,
       user_id: @project_owner.id,
-      storage_app_id: @project_storage_app_id
+      project_id: @project_id
 
     sign_in @project_owner
     delete :destroy, params: {id: reviewable_project.id}
@@ -183,7 +183,7 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
   test 'other users cannot disable review for other student projects' do
     reviewable_project = create :reviewable_project,
       user_id: @project_owner.id,
-      storage_app_id: @project_storage_app_id
+      project_id: @project_id
 
     [@another_student, @teacher].each do |user|
       sign_in user
@@ -239,12 +239,12 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
     assert_equal [], JSON.parse(response.body)
   end
 
-  def stub_storage_apps_calls
+  def stub_projects_calls
     ReviewableProjectsController.
       any_instance.
       expects(:storage_decrypt_channel_id).
       with(@project_owner_channel_id).
-      returns([@project_owner_storage_id, @project_storage_app_id])
+      returns([@project_owner_storage_id, @project_id])
     ReviewableProjectsController.
       any_instance.
       expects(:user_id_for_storage_id).
