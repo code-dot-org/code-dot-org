@@ -364,6 +364,7 @@ class Ability
         ProgrammingClass,
         ProgrammingEnvironment,
         ProgrammingExpression,
+        ProgrammingMethod,
         ReferenceGuide,
         CourseOffering,
         UnitGroup,
