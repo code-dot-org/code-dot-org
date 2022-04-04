@@ -38,15 +38,7 @@ const sendFirehoseEvent = (userId, event) => {
 };
 
 const TeacherApplication = props => {
-  const {
-    // [MEG] TODO: remove allowPartialSaving prop when experiment is complete (TeacherApps will always have this option)
-    // instead, pass in allowPartialSaving prop to FormController
-    savedFormData,
-    accountEmail,
-    userId,
-    savedStatus,
-    schoolId
-  } = props;
+  const {savedFormData, accountEmail, userId, savedStatus, schoolId} = props;
 
   const getInitialData = () => {
     const dataOnPageLoad = savedFormData && JSON.parse(savedFormData);
@@ -109,6 +101,7 @@ const TeacherApplication = props => {
   return (
     <FormController
       {...props}
+      allowPartialSaving={true}
       pageComponents={pageComponents}
       autoComputedFields={autoComputedFields}
       getPageProps={getPageProps}
