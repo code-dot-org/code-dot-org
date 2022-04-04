@@ -649,8 +649,7 @@ class UnitGroup < ApplicationRecord
   end
 
   def has_pilot_experiment?(user)
-    return false unless pilot_experiment
-    SingleUserExperiment.enabled?(user: user, experiment_name: pilot_experiment)
+    user.has_pilot_experiment?(pilot_experiment)
   end
 
   def has_pilot_access?(user = nil)

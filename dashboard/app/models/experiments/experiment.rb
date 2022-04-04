@@ -54,10 +54,10 @@ class Experiment < ApplicationRecord
   end
 
   def self.get_all_enabled(user: nil, section: nil, script: nil, experiment_name: nil)
-    if @@experiments.nil? || @@experiments_loaded < DateTime.now - MAX_CACHE_AGE
+    if Experiment.experiments.nil? || Experiment.experiments_loaded < DateTime.now - MAX_CACHE_AGE
       update_cache
     end
-    @@experiments.select do |experiment|
+    Experiment.experiments.select do |experiment|
       experiment.enabled?(user: user, section: section) &&
         (experiment.script_id.nil? || experiment.script_id == script.try(:id)) &&
         (experiment_name.nil? || experiment.name == experiment_name)
@@ -130,5 +130,13 @@ class Experiment < ApplicationRecord
     else
       self.overflow_max_user_id = 0
     end
+  end
+
+  def self.experiments
+    @@experiments
+  end
+
+  def self.experiments_loaded
+    @@experiments_loaded
   end
 end
