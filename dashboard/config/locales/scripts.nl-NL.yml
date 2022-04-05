@@ -1640,6 +1640,8 @@ nl:
           lessons:
             'Lessons 10 - 11: Routers, Redundancy, and Packets':
               name: 'Lessen 10 - 11: Routers, Redundantie en Pakketten'
+        basketball:
+          name: basketbal
         hoc-encryption:
           lessons:
             Simple Encryption:
@@ -3233,6 +3235,7 @@ nl:
                 maar vereist wel dat ze kunnen lezen. Voor deze activiteit is geluid
                 vereist aangezien het programma werd ontworpen om op muziek te reageren.
           student_description: Programmeer je eigen dansfeest om te delen met je vrienden!
+          name: dans
         frozen-2018-test-b:
           lessons:
             Artist:
@@ -4494,7 +4497,6 @@ nl:
           description: Programmeer je eigen dansfeest om te delen met je vrienden!
           lessons:
             Dance Party:
-              name: Dansfeest
               description_student: In deze les maken studenten van alle leeftijden
                 in een veilige en ondersteunende omgeving kennis met het programmeren
                 en informatica. Deze les is voor studenten van alle leeftijden ontworpen,
@@ -6611,8 +6613,7 @@ nl:
           title: '"Hallo, wereld!"'
         csa-self-paced-pl:
           lessons:
-            Navigating the Code.org learning platform:
-              name: " Navigeren door het leerplatform van Code.org"
+            Navigating the Codeorg learning platform:
               description_teacher: |-
                 **U zult leren hoe u:**
 
@@ -8389,6 +8390,8 @@ nl:
           lessons:
             lesson-9:
               name: Lussen
+            lesson-21:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -8402,10 +8405,17 @@ nl:
           lessons:
             lesson-6:
               name: Variabelen
+            lesson-16:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Content
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: For-lussen
+            lesson-16:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -8781,3 +8791,5 @@ nl:
               key: For-lussen
             Next steps:
               key: Volgende stappen
+        hello-world-csc:
+          title: Hallo Wereld

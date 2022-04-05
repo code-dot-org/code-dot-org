@@ -26,7 +26,7 @@ steps:
       filename: unit-tests-cache.tar
 
   - name: unit-tests
-    image: codedotorg/code-dot-org:1.2
+    image: codedotorg/code-dot-org:1.3
     pull: always
     volumes:
       - name: rbenv
@@ -120,7 +120,7 @@ steps:
       restore: true
 
   - name: ui-tests
-    image: codedotorg/code-dot-org:1.2
+    image: codedotorg/code-dot-org:1.3
     volumes:
       - name: rbenv
         path: /home/circleci/.rbenv
@@ -187,6 +187,6 @@ trigger:
     - pull_request
 ---
 kind: signature
-hmac: 3315742acecada4bfb2964c19fcded2cfc85efb967ed7449f92d453539520207
+hmac: b949c82bc9fc54d6c75388030da923439557d8ddab1ccce30150f4146143ffd0
 
 ...

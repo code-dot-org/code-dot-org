@@ -95,6 +95,429 @@
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Video"
         },
+        "lesson_plans/courseb/2018": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings/courseb/2018": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum/courseb/2018": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary/courseb/2018": {
+          "name": "Lüğət"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings/coursea/2018": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum/coursea/2018": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary/coursea/2018": {
+          "name": "Lüğət"
+        },
+        "lesson_plans/coursed/2018": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings/coursed/2018": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum/coursed/2018": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary/coursed/2018": {
+          "name": "Lüğət"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings/coursef/2018": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum/coursef/2018": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary/coursef/2018": {
+          "name": "Lüğət"
+        },
+        "lesson_plans/express/2018": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings/express/2018": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum/express/2018": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary/express/2018": {
+          "name": "Lüğət"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings/coursee/2018": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum/coursee/2018": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary/coursee/2018": {
+          "name": "Lüğət"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings/coursec/2018": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum/coursec/2018": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary/coursec/2018": {
+          "name": "Lüğət"
+        },
+        "code_introduced_1/csd/2018": {
+          "name": "Tanıtdırılmış kod."
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings_2/csd/2018": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum_2/csd/2018": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary_2/csd/2018": {
+          "name": "Lüğət"
+        },
+        "code_introduced_3/csd/2018": {
+          "name": "Tanıtdırılmış kod."
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings_5/csd/2018": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum_5/csd/2018": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary_5/csd/2018": {
+          "name": "Lüğət"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings_4/csd/2018": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum_4/csd/2018": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary_4/csd/2018": {
+          "name": "Lüğət"
+        },
+        "code_introduced_2/csd/2018": {
+          "name": "Tanıtdırılmış kod."
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings_3/csd/2018": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum_3/csd/2018": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary_3/csd/2018": {
+          "name": "Lüğət"
+        },
+        "code_introduced/csd/2018": {
+          "name": "Tanıtdırılmış kod."
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings_1/csd/2018": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum_1/csd/2018": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary_1/csd/2018": {
+          "name": "Lüğət"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings/csd/2018": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum/csd/2018": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary/csd/2018": {
+          "name": "Lüğət"
+        },
+        "curriculum_guide/coursea/2019": {
+          "name": "Kurikulum Bələdçisi"
+        },
+        "lesson_plans/coursea/2019": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings/coursea/2019": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum/coursea/2019": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary/coursea/2019": {
+          "name": "Lüğət"
+        },
+        "curriculum_guide/courseb/2019": {
+          "name": "Kurikulum Bələdçisi"
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings/courseb/2019": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum/courseb/2019": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary/courseb/2019": {
+          "name": "Lüğət"
+        },
+        "curriculum_guide/coursed/2019": {
+          "name": "Kurikulum Bələdçisi"
+        },
+        "lesson_plans/coursed/2019": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings/coursed/2019": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum/coursed/2019": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary/coursed/2019": {
+          "name": "Lüğət"
+        },
+        "curriculum_guide/coursef/2019": {
+          "name": "Kurikulum Bələdçisi"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings/coursef/2019": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum/coursef/2019": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary/coursef/2019": {
+          "name": "Lüğət"
+        },
+        "curriculum_guide/coursee/2019": {
+          "name": "Kurikulum Bələdçisi"
+        },
+        "lesson_plans/coursee/2019": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings/coursee/2019": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum/coursee/2019": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary/coursee/2019": {
+          "name": "Lüğət"
+        },
+        "lesson_plans/express/2019": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings/express/2019": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum/express/2019": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary/express/2019": {
+          "name": "Lüğət"
+        },
+        "curriculum_guide/coursec/2019": {
+          "name": "Kurikulum Bələdçisi"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings/coursec/2019": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum/coursec/2019": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary/coursec/2019": {
+          "name": "Lüğət"
+        },
+        "teacher_forum/csd/2019": {
+          "name": "Müəllim Forumu"
+        },
+        "code_introduced_1/csd/2019": {
+          "name": "Tanıtdırılmış kod."
+        },
+        "lesson_plans_2/csd/2019": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings_2/csd/2019": {
+          "name": "Standart Eşlemeler"
+        },
+        "vocabulary_2/csd/2019": {
+          "name": "Lüğət"
+        },
+        "code_introduced_3/csd/2019": {
+          "name": "Tanıtdırılmış kod."
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings_5/csd/2019": {
+          "name": "Standart Eşlemeler"
+        },
+        "vocabulary_5/csd/2019": {
+          "name": "Lüğət"
+        },
+        "code_introduced_2/csd/2019": {
+          "name": "Tanıtdırılmış kod."
+        },
+        "lesson_plans_3/csd/2019": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings_3/csd/2019": {
+          "name": "Standart Eşlemeler"
+        },
+        "vocabulary_3/csd/2019": {
+          "name": "Lüğət"
+        },
+        "lesson_plans_4/csd/2019": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings_4/csd/2019": {
+          "name": "Standart Eşlemeler"
+        },
+        "vocabulary_4/csd/2019": {
+          "name": "Lüğət"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings/csd/2019": {
+          "name": "Standart Eşlemeler"
+        },
+        "vocabulary/csd/2019": {
+          "name": "Lüğət"
+        },
+        "code_introduced/csd/2019": {
+          "name": "Tanıtdırılmış kod."
+        },
+        "lesson_plans_1/csd/2019": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings_1/csd/2019": {
+          "name": "Standart Eşlemeler"
+        },
+        "vocabulary_1/csd/2019": {
+          "name": "Lüğət"
+        },
+        "code_introduced_1/csd/2017": {
+          "name": "Tanıtdırılmış kod."
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings_2/csd/2017": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum_2/csd/2017": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary_2/csd/2017": {
+          "name": "Lüğət"
+        },
+        "code_introduced_3/csd/2017": {
+          "name": "Tanıtdırılmış kod."
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings_5/csd/2017": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum_5/csd/2017": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary_5/csd/2017": {
+          "name": "Lüğət"
+        },
+        "code_introduced/csd/2017": {
+          "name": "Tanıtdırılmış kod."
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings_1/csd/2017": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum_1/csd/2017": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary_1/csd/2017": {
+          "name": "Lüğət"
+        },
+        "lesson_plans/csd/2017": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings/csd/2017": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum/csd/2017": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary/csd/2017": {
+          "name": "Lüğət"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings_4/csd/2017": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum_4/csd/2017": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary_4/csd/2017": {
+          "name": "Lüğət"
+        },
+        "code_introduced_2/csd/2017": {
+          "name": "Tanıtdırılmış kod."
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings_3/csd/2017": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum_3/csd/2017": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary_3/csd/2017": {
+          "name": "Lüğət"
+        },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "Şeirlərin siyahısı",
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
@@ -316,7 +739,8 @@
           "url": "https://docs.google.com/presentation/d/1WzO71WwSTbn2XhkWjG3tvD7vnQbsCSb58rhSBpurQjw/edit#slide=id.g45fb8e6318_0_0"
         },
         "unplugged-video-big-event/courseb/2021": {
-          "name": "Böyük hadisə"
+          "name": "Böyük hadisə",
+          "type": "Video"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "Böyük hadisə",
@@ -1486,6 +1910,120 @@
         },
         "website-for-a-purpose-reflect/csd/2021": {
           "type": "Layihə Bələdçisi"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings/pre-express/2020": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum/pre-express/2020": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary/pre-express/2020": {
+          "name": "Lüğət"
+        },
+        "lesson_plans/express/2020": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings/express/2020": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum/express/2020": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary/express/2020": {
+          "name": "Lüğət"
+        },
+        "curriculum_guide/courseb/2020": {
+          "name": "Kurikulum Bələdçisi"
+        },
+        "lesson_plans/courseb/2020": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings/courseb/2020": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum/courseb/2020": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary/courseb/2020": {
+          "name": "Lüğət"
+        },
+        "curriculum_guide/coursed/2020": {
+          "name": "Kurikulum Bələdçisi"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings/coursed/2020": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum/coursed/2020": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary/coursed/2020": {
+          "name": "Lüğət"
+        },
+        "curriculum_guide/coursec/2020": {
+          "name": "Kurikulum Bələdçisi"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings/coursec/2020": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum/coursec/2020": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary/coursec/2020": {
+          "name": "Lüğət"
+        },
+        "curriculum_guide/coursee/2020": {
+          "name": "Kurikulum Bələdçisi"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings/coursee/2020": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum/coursee/2020": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary/coursee/2020": {
+          "name": "Lüğət"
+        },
+        "curriculum_guide/coursea/2020": {
+          "name": "Kurikulum Bələdçisi"
+        },
+        "lesson_plans/coursea/2020": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings/coursea/2020": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum/coursea/2020": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary/coursea/2020": {
+          "name": "Lüğət"
+        },
+        "curriculum_guide/coursef/2020": {
+          "name": "Kurikulum Bələdçisi"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "Dərs Planları"
+        },
+        "standard_mappings/coursef/2020": {
+          "name": "Standart Eşlemeler"
+        },
+        "teacher_forum/coursef/2020": {
+          "name": "Müəllim Forumu"
+        },
+        "vocabulary/coursef/2020": {
+          "name": "Lüğət"
         }
       }
     }

@@ -1,9 +1,11 @@
 bg:
   data:
     parameter_names:
+      "???": "???"
       actor: актьор
       color: цвят
       counter: брояч
+      direction: посока
       height: височина
       honey: мед
       left: наляво

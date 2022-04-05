@@ -45,8 +45,8 @@ module LevelsHelper
     url_from_path(build_script_level_path(script_level, params))
   end
 
-  def url_from_path(path)
-    CDO.studio_url(path)
+  def url_from_path(path, scheme = '')
+    CDO.studio_url(path, scheme)
   end
 
   def readonly_view_options

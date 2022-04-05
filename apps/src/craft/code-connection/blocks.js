@@ -144,7 +144,7 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_move = function() {
-    var dir = this.getTitleValue('DIR');
+    var dir = this.getFieldValue('DIR');
     return `move('block_id_${this.id}','${dir}');`;
   };
 
@@ -166,7 +166,7 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_turn = function() {
-    var dir = this.getTitleValue('DIR');
+    var dir = this.getFieldValue('DIR');
     return `turn('block_id_${this.id}','${dir}');`;
   };
 
@@ -191,7 +191,7 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_place = function() {
-    var dir = this.getTitleValue('DIR');
+    var dir = this.getFieldValue('DIR');
     var value = Blockly.JavaScript.valueToCode(
       this,
       'SLOTNUM',
@@ -218,7 +218,7 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_till = function() {
-    var dir = this.getTitleValue('DIR');
+    var dir = this.getFieldValue('DIR');
     return `till('block_id_${this.id}','${dir}');`;
   };
 
@@ -240,7 +240,7 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_attack = function() {
-    var dir = this.getTitleValue('DIR');
+    var dir = this.getFieldValue('DIR');
     return `attack('block_id_${this.id}','${dir}');`;
   };
 
@@ -262,7 +262,7 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_destroy = function() {
-    var dir = this.getTitleValue('DIR');
+    var dir = this.getFieldValue('DIR');
     return `destroy('block_id_${this.id}','${dir}');`;
   };
 
@@ -337,7 +337,7 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_drop = function() {
-    var dir = this.getTitleValue('DIR');
+    var dir = this.getFieldValue('DIR');
     var slotNumber = Blockly.JavaScript.valueToCode(
       this,
       'SLOTNUM',
@@ -369,7 +369,7 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_dropall = function() {
-    var dir = this.getTitleValue('DIR');
+    var dir = this.getFieldValue('DIR');
     return `dropall('block_id_${this.id}','${dir}');`;
   };
 
@@ -390,7 +390,7 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_detect = function() {
-    var dir = this.getTitleValue('DIR');
+    var dir = this.getFieldValue('DIR');
     return [
       `detect('block_id_${this.id}','${dir}')`,
       Blockly.JavaScript.ORDER_FUNCTION_CALL
@@ -414,7 +414,7 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_inspect = function() {
-    var dir = this.getTitleValue('DIR');
+    var dir = this.getFieldValue('DIR');
     return [
       `inspect('block_id_${this.id}','${dir}')`,
       Blockly.JavaScript.ORDER_FUNCTION_CALL
@@ -438,7 +438,7 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_inspectdata = function() {
-    var dir = this.getTitleValue('DIR');
+    var dir = this.getFieldValue('DIR');
     return [
       `inspectdata('block_id_${this.id}','${dir}')`,
       Blockly.JavaScript.ORDER_FUNCTION_CALL
@@ -462,7 +462,7 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_detectredstone = function() {
-    var dir = this.getTitleValue('DIR');
+    var dir = this.getFieldValue('DIR');
     return [
       `detectredstone('block_id_${this.id}','${dir}')`,
       Blockly.JavaScript.ORDER_FUNCTION_CALL
@@ -652,7 +652,7 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_wait = function() {
-    var milliseconds = window.parseInt(this.getTitleValue('MILLISECONDS'), 10);
+    var milliseconds = window.parseInt(this.getFieldValue('MILLISECONDS'), 10);
     return `wait('block_id_${this.id}','${milliseconds}');`;
   };
 
@@ -682,14 +682,14 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_executeasother = function() {
-    var target = encodeURIComponent(this.getTitleValue('TARGET'));
-    var positionType = this.getTitleValue('POSITIONTYPE');
+    var target = encodeURIComponent(this.getFieldValue('TARGET'));
+    var positionType = this.getFieldValue('POSITIONTYPE');
     var vec3 = Blockly.JavaScript.valueToCode(
       this,
       'VEC3',
       Blockly.JavaScript.ORDER_NONE
     );
-    var command = this.getTitleValue('COMMAND');
+    var command = this.getFieldValue('COMMAND');
     return `executeasother('block_id_${
       this.id
     }','${target}',createBlockPosFromVec3(${vec3}, "${positionType}"),'${command}');`;
@@ -713,7 +713,7 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_timesetbyname = function() {
-    var time = this.getTitleValue('TIME');
+    var time = this.getFieldValue('TIME');
     return `timesetbyname('block_id_${this.id}','${time}');`;
   };
 
@@ -764,7 +764,7 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_weather = function() {
-    var weather = this.getTitleValue('WEATHER');
+    var weather = this.getFieldValue('WEATHER');
     return `weather('block_id_${this.id}','${weather}');`;
   };
 
@@ -790,8 +790,8 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_tptotarget = function() {
-    var victim = encodeURIComponent(this.getTitleValue('VICTIM'));
-    var destination = encodeURIComponent(this.getTitleValue('DESTINATION'));
+    var victim = encodeURIComponent(this.getFieldValue('VICTIM'));
+    var destination = encodeURIComponent(this.getFieldValue('DESTINATION'));
     return `tptotarget('block_id_${this.id}','${victim}','${destination}');`;
   };
 
@@ -818,8 +818,8 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_tptopos = function() {
-    var victim = encodeURIComponent(this.getTitleValue('VICTIM'));
-    var positionType = this.getTitleValue('POSITIONTYPE');
+    var victim = encodeURIComponent(this.getFieldValue('VICTIM'));
+    var positionType = this.getFieldValue('POSITIONTYPE');
     var vec3 = Blockly.JavaScript.valueToCode(
       this,
       'VEC3',
@@ -867,13 +867,13 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_fill = function() {
-    var fromPositionType = this.getTitleValue('FROMPOSITIONTYPE');
+    var fromPositionType = this.getFieldValue('FROMPOSITIONTYPE');
     var fromVec3 = Blockly.JavaScript.valueToCode(
       this,
       'FROM_VEC3',
       Blockly.JavaScript.ORDER_NONE
     );
-    var toPositionType = this.getTitleValue('TOPOSITIONTYPE');
+    var toPositionType = this.getFieldValue('TOPOSITIONTYPE');
     var toVec3 = Blockly.JavaScript.valueToCode(
       this,
       'TO_VEC3',
@@ -914,7 +914,7 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_give = function() {
-    var player = encodeURIComponent(this.getTitleValue('PLAYER'));
+    var player = encodeURIComponent(this.getFieldValue('PLAYER'));
     var item = Blockly.JavaScript.valueToCode(
       this,
       'ITEM',
@@ -948,7 +948,7 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_kill = function() {
-    var target = encodeURIComponent(this.getTitleValue('TARGET'));
+    var target = encodeURIComponent(this.getFieldValue('TARGET'));
     return `kill('block_id_${this.id}','${target}');`;
   };
 
@@ -984,8 +984,8 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_setblock = function() {
-    var positionType = this.getTitleValue('POSITIONTYPE');
-    var oldBlockHandling = this.getTitleValue('OLDBLOCKHANDLING');
+    var positionType = this.getFieldValue('POSITIONTYPE');
+    var oldBlockHandling = this.getFieldValue('OLDBLOCKHANDLING');
     var vec3 = Blockly.JavaScript.valueToCode(
       this,
       'VEC3',
@@ -1026,8 +1026,8 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_summon = function() {
-    var entityType = this.getTitleValue('ENTITYTYPE');
-    var positionType = this.getTitleValue('POSITIONTYPE');
+    var entityType = this.getFieldValue('ENTITYTYPE');
+    var positionType = this.getFieldValue('POSITIONTYPE');
     var vec3 = Blockly.JavaScript.valueToCode(
       this,
       'VEC3',
@@ -1064,7 +1064,7 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_testforblock = function() {
-    var positionType = this.getTitleValue('POSITIONTYPE');
+    var positionType = this.getFieldValue('POSITIONTYPE');
     var vec3 = Blockly.JavaScript.valueToCode(
       this,
       'VEC3',
@@ -1125,25 +1125,25 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_testforblocks = function() {
-    var fromPositionType = this.getTitleValue('FROMPOSITIONTYPE');
+    var fromPositionType = this.getFieldValue('FROMPOSITIONTYPE');
     var fromVec3 = Blockly.JavaScript.valueToCode(
       this,
       'FROM_VEC3',
       Blockly.JavaScript.ORDER_NONE
     );
-    var toPositionType = this.getTitleValue('TOPOSITIONTYPE');
+    var toPositionType = this.getFieldValue('TOPOSITIONTYPE');
     var toVec3 = Blockly.JavaScript.valueToCode(
       this,
       'TO_VEC3',
       Blockly.JavaScript.ORDER_NONE
     );
-    var positionType = this.getTitleValue('POSITIONTYPE');
+    var positionType = this.getFieldValue('POSITIONTYPE');
     var vec3 = Blockly.JavaScript.valueToCode(
       this,
       'VEC3',
       Blockly.JavaScript.ORDER_NONE
     );
-    var testMode = this.getTitleValue('TESTMODE');
+    var testMode = this.getFieldValue('TESTMODE');
     return [
       `testforblocks('block_id_${
         this.id
@@ -1197,26 +1197,26 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_clone = function() {
-    var fromPositionType = this.getTitleValue('FROMPOSITIONTYPE');
+    var fromPositionType = this.getFieldValue('FROMPOSITIONTYPE');
     var fromVec3 = Blockly.JavaScript.valueToCode(
       this,
       'FROM_VEC3',
       Blockly.JavaScript.ORDER_NONE
     );
-    var toPositionType = this.getTitleValue('TOPOSITIONTYPE');
+    var toPositionType = this.getFieldValue('TOPOSITIONTYPE');
     var toVec3 = Blockly.JavaScript.valueToCode(
       this,
       'TO_VEC3',
       Blockly.JavaScript.ORDER_NONE
     );
-    var positionType = this.getTitleValue('POSITIONTYPE');
+    var positionType = this.getFieldValue('POSITIONTYPE');
     var vec3 = Blockly.JavaScript.valueToCode(
       this,
       'VEC3',
       Blockly.JavaScript.ORDER_NONE
     );
-    var maskMode = this.getTitleValue('MASKMODE');
-    var cloneMode = this.getTitleValue('CLONEMODE');
+    var maskMode = this.getFieldValue('MASKMODE');
+    var cloneMode = this.getFieldValue('CLONEMODE');
     return `clone('block_id_${
       this.id
     }',createBlockPosFromVec3(${fromVec3}, "${fromPositionType}"),createBlockPosFromVec3(${toVec3}, "${toPositionType}"),createBlockPosFromVec3(${vec3}, "${positionType}"),'${maskMode}','${cloneMode}');`;
@@ -1265,25 +1265,25 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_clonefiltered = function() {
-    var fromPositionType = this.getTitleValue('FROMPOSITIONTYPE');
+    var fromPositionType = this.getFieldValue('FROMPOSITIONTYPE');
     var fromVec3 = Blockly.JavaScript.valueToCode(
       this,
       'FROM_VEC3',
       Blockly.JavaScript.ORDER_NONE
     );
-    var toPositionType = this.getTitleValue('TOPOSITIONTYPE');
+    var toPositionType = this.getFieldValue('TOPOSITIONTYPE');
     var toVec3 = Blockly.JavaScript.valueToCode(
       this,
       'TO_VEC3',
       Blockly.JavaScript.ORDER_NONE
     );
-    var positionType = this.getTitleValue('POSITIONTYPE');
+    var positionType = this.getFieldValue('POSITIONTYPE');
     var vec3 = Blockly.JavaScript.valueToCode(
       this,
       'VEC3',
       Blockly.JavaScript.ORDER_NONE
     );
-    var cloneMode = this.getTitleValue('CLONEMODE');
+    var cloneMode = this.getFieldValue('CLONEMODE');
     var item = Blockly.JavaScript.valueToCode(
       this,
       'ITEM',
@@ -1350,7 +1350,7 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_block = function() {
-    var block = this.getTitleValue('BLOCK');
+    var block = this.getFieldValue('BLOCK');
     return [
       `item('block_id_${this.id}','${getName(block)}','${getData(block)}')`,
       Blockly.JavaScript.ORDER_FUNCTION_CALL
@@ -1376,7 +1376,7 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_miscellaneous = function() {
-    var item = this.getTitleValue('ITEM');
+    var item = this.getFieldValue('ITEM');
     return [
       `item('block_id_${this.id}','${getName(item)}','${getData(item)}')`,
       Blockly.JavaScript.ORDER_FUNCTION_CALL
@@ -1402,7 +1402,7 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_decoration = function() {
-    var item = this.getTitleValue('ITEM');
+    var item = this.getFieldValue('ITEM');
     return [
       `item('block_id_${this.id}','${getName(item)}','${getData(item)}')`,
       Blockly.JavaScript.ORDER_FUNCTION_CALL
@@ -1428,7 +1428,7 @@ export const install = (blockly, blockInstallOptions) => {
   };
 
   blockly.JavaScript.craft_tool = function() {
-    var item = this.getTitleValue('ITEM');
+    var item = this.getFieldValue('ITEM');
     return [
       `item('block_id_${this.id}','${getName(item)}','${getData(item)}')`,
       Blockly.JavaScript.ORDER_FUNCTION_CALL

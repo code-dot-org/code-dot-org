@@ -2,6 +2,8 @@
 cs:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: vytvoř novou postavu {ANIMATION_NAME} na {LOCATION}
       Dancelab_alternateMoves:
         text: "{GROUP} střídat každých {N} taktů \nmezi {MOVE1} a {MOVE2}"
         options:
@@ -1040,6 +1042,12 @@ cs:
         text: nakreslit čáru {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: hrany bloku {SPRITE} z přesunutí
+      gamelab_everySeconds:
+        text: 'opakovat každé {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': sekund
+            '"frames"': Rámce
       gamelab_followingTargets:
         text: sledování cílů
       gamelab_getAllSprites:
@@ -1193,6 +1201,8 @@ cs:
             '"pop"': kuk
             '"rain"': déšť
             '"spiral"': spirála
+      gamelab_makeNewScaledSprite:
+        text: vytvoř novou postavu {ANIMATION_NAME} na {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: vytvoř novou postavu {ANIMATION_NAME} na {LOCATION}
       gamelab_makeNumSprites:

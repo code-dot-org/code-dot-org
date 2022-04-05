@@ -35,21 +35,21 @@ class DeleteAccountsHelper
 
     @log.puts "Deleting project backed progress"
 
-    storage_app_ids = StorageApps.table.where(storage_id: user.user_storage_id).map(:id)
-    channel_count = storage_app_ids.count
-    encrypted_channel_ids = storage_app_ids.map do |storage_app_id|
-      storage_encrypt_channel_id user.user_storage_id, storage_app_id
+    project_ids = StorageApps.table.where(storage_id: user.user_storage_id).map(:id)
+    channel_count = project_ids.count
+    encrypted_channel_ids = project_ids.map do |project_id|
+      storage_encrypt_channel_id user.user_storage_id, project_id
     end
 
     # Clear potential PII from user's channels
     StorageApps.table.
-      where(id: storage_app_ids).
+      where(id: project_ids).
       update(value: nil, updated_ip: '', updated_at: Time.now)
 
     # Clear any comments associated with specific versions of projects.
     # At time of writing, this feature is in use only in Javalab when a student
     # commits their code.
-    project_versions = ProjectVersion.where(storage_app_id: storage_app_ids)
+    project_versions = ProjectVersion.where(project_id: project_ids)
     project_versions.each {|version| version.update!(comment: nil)}
     @log.puts "Cleared #{project_versions.count} ProjectVersion comments" if project_versions.count > 0
 

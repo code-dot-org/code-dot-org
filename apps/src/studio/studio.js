@@ -3135,8 +3135,8 @@ var registerHandlers = function(
     var block = blocks[x];
     // default title values to '0' for case when there is only one sprite
     // and no title value is set through a dropdown
-    var titleVal1 = block.getTitleValue(nameParam1) || '0';
-    var titleVal2 = block.getTitleValue(nameParam2) || '0';
+    var titleVal1 = block.getFieldValue(nameParam1) || '0';
+    var titleVal2 = block.getFieldValue(nameParam2) || '0';
     if (
       block.type === blockName &&
       (!nameParam1 || matchParam1Val === titleVal1) &&
@@ -3397,7 +3397,7 @@ Studio.checkExamples_ = function() {
     var name = unfilled
       .getRootBlock()
       .getInputTargetBlock('ACTUAL')
-      .getTitleValue('NAME');
+      .getFieldValue('NAME');
     outcome.message = commonMsg.emptyExampleBlockErrorMsg({functionName: name});
     return outcome;
   }

@@ -2230,6 +2230,7 @@ it:
             <https://studio.code.org/s/basketball/stage/>
 
             Scegli la tua squadra e fai una partita di basket
+          name: pallacanestro
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -2524,6 +2525,7 @@ it:
               description_student: Ti piacerebbe poter giocare con dei videogiochi a scuola? In questa lezione potrai crearne uno tutto tuo!
               description_teacher: In questa attività online, gli studenti impareranno cosa sono gli Eventi e come i computer li usano in programmi come i videogiochi. Gli studenti creeranno dei programmi che reagiscono agli Eventi (come la pressione dei pulsanti freccia). Alla fine della lezione, gli studenti avranno la possibilità di personalizzare il proprio gioco modificando velocità e suoni.
           student_description: Combina diversi sport
+          name: sport
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -3891,6 +3893,7 @@ it:
               name: 'Minecraft: Il viaggio dell''eroe'
               description_teacher: In questa lezione, gli studenti di tutte le età vivono un'esperienza introduttiva alla programmazione e all'informatica in un ambiente sicuro e di supporto. Questa lezione funziona bene per tutti gli alunni che sanno già leggere (dai 6 anni in su). I più piccoli probabilmente non finiranno il tutorial, ma si divertiranno molto a risolvere gli esercizi per un'ora. Gli studenti delle scuole superiori in maggior parte finiranno il tutorial e avranno un po' di tempo per giocare nel livello di gioco gratuito alla fine.
           student_description: Minecraft è tornato per l'Ora del Codice con una nuovissima attività! Viaggia attraverso Minecraft grazie al coding.
+          name: eroe
         applab-intro-staging:
           lessons:
             Intro to AppLab - Choose Your Own Adventure:
@@ -5140,6 +5143,7 @@ it:
               description_student: In questa lezione, gli studenti di tutte le età hanno un'esperienza introduttiva con la codifica e l'informatica in un ambiente sicuro e di supporto. Questa lezione è stata progettata per studenti di tutte le età, ma richiede una lettura. Questa attività richiede il suono poiché lo strumento è stato creato per rispondere alla musica.
               description_teacher: In questa lezione, gli studenti di tutte le età hanno un'esperienza introduttiva con la codifica e l'informatica in un ambiente sicuro e di supporto. Questa lezione è stata progettata per studenti di tutte le età, ma richiede una lettura. Questa attività richiede il suono poiché lo strumento è stato creato per rispondere alla musica.
           student_description: Crea un ballo tutto tuo e condividilo con i tuoi amici!
+          name: danza
         frozen-2018-test-b:
           lessons:
             Artist:
@@ -5153,6 +5157,7 @@ it:
               name: 'Minecraft: Viaggio Acquatico'
               description_teacher: In questa lezione, gli studenti di tutte le età vivono un'esperienza introduttiva alla programmazione e all'informatica in un ambiente sicuro e di supporto. Questa lezione funziona bene per tutti gli alunni che sanno già leggere (dai 6 anni in su). I più piccoli probabilmente non finiranno il tutorial, ma si divertiranno molto a risolvere gli esercizi per un'ora. Gli studenti delle scuole superiori in maggior parte finiranno il tutorial e avranno un po' di tempo per giocare nel livello di gioco gratuito alla fine.
           student_description: Anche quest'anno Minecraft propone un'attività nuova di zecca! Usa la tua creatività e le competenze di problem solving per esplorare e creare mondi sottomarini grazie alla potenza della programmazione.
+          name: acquatico
         dance--draft:
           lessons:
             Dance Party:
@@ -6766,7 +6771,6 @@ it:
           description: Crea un ballo tutto tuo e condividilo con i tuoi amici!
           lessons:
             Dance Party:
-              name: Ballando col codice
               description_student: In questa lezione, gli studenti di tutte le età hanno un'esperienza introduttiva con la codifica e l'informatica in un ambiente sicuro e di supporto. Questa lezione è stata progettata per studenti di tutte le età, ma richiede una lettura. Questa attività richiede il suono poiché lo strumento è stato creato per rispondere alla musica.
               description_teacher: In questa lezione, gli studenti di tutte le età hanno un'esperienza introduttiva con la codifica e l'informatica in un ambiente sicuro e di supporto. Questa lezione è stata progettata per studenti di tutte le età, ma richiede una lettura. Questa attività richiede il suono poiché lo strumento è stato creato per rispondere alla musica.
           student_description: Crea un ballo tutto tuo e condividilo con i tuoi amici!
@@ -9266,8 +9270,7 @@ it:
           title: '"Ciao a tutti!"'
         csa-self-paced-pl:
           lessons:
-            Navigating the Code.org learning platform:
-              name: " Navigare nella piattaforma di apprendimento di Code.org"
+            Navigating the Codeorg learning platform:
               description_teacher: |-
                 **Imparerai a:**
 
@@ -10203,7 +10206,7 @@ it:
               name: Al mare con i cicli
               description_teacher: Tornando ai cicli, gli studenti imparano a disegnare immagini ripetendo semplici sequenze di istruzioni. Nella precedente lezione, i cicli sono stati utilizzati per attraversare un labirinto e raccogliere i diamanti. Qui, i cicli stanno creano dei modelli. Alla fine di questa lezione, gli studenti avranno l'opportunità di creare le proprie immagini utilizzando i cicli.
               key: Al mare con i cicli
-            The Big Event Jr.:
+            The Big Event Jr:
               name: Il grande evento (per i più piccoli)
               description_teacher: Gli eventi sono un ottimo strumento per aggiungere variazioni ad un algoritmo già scritto. A volte si desidera che il proprio programma risponda all'utente esattamente quando l'utente ne ha bisogno. Gli eventi servono proprio a questo.
             'Mini-Project: On the Move with Play Lab':
@@ -10472,7 +10475,7 @@ it:
             The Right App:
               name: L'App Giusta
               key: L'App Giusta
-            The Big Event Jr.:
+            The Big Event Jr:
               name: Il grande evento (per i più piccoli)
               description_teacher: Gli eventi sono un ottimo strumento per aggiungere variazioni ad un algoritmo già scritto. A volte si desidera che il proprio programma risponda all'utente esattamente quando l'utente ne ha bisogno. Gli eventi servono proprio a questo.
             'Mini-Project: A Royal Battle with Events':
@@ -10530,7 +10533,7 @@ it:
           description_audience: Da 5 a 8 anni
         coursec-2022:
           lessons:
-            My Robotic Friends Jr.:
+            My Robotic Friends Jr:
               name: I miei amici robotici (per i più piccoli)
             Programming with Angry Birds:
               name: Programmare con Angry Bird
@@ -10544,7 +10547,7 @@ it:
             Creating Art with Code:
               name: Programmare con l'artista
               description_student: Crea splendide immagini programmando l'artista.
-            My Loopy Robotic Friends Jr.:
+            My Loopy Robotic Friends Jr:
               name: I miei ciclici amici robotici (per i più piccoli)
             Loops with Rey and BB-8:
               name: Cicli con Rey e BB-8
@@ -10954,6 +10957,8 @@ it:
           lessons:
             lesson-9:
               name: Cicli
+            lesson-21:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
@@ -11003,10 +11008,17 @@ it:
           lessons:
             lesson-6:
               name: Variabili
+            lesson-16:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: Cicli con contatore
+            lesson-16:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
@@ -11229,6 +11241,10 @@ it:
               display_name: Contenuto
             lessonGroup-5:
               display_name: Sandbox
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-9:
+              name: Pianificazione Lezione
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -11274,3 +11290,5 @@ it:
               key: Pianificazione Lezione
             Next steps:
               key: Passi successivi
+        hello-world-csc:
+          title: Ciao Mondo

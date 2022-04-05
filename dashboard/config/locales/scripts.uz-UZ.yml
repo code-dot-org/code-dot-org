@@ -1223,8 +1223,6 @@ uz:
               name: Xulosa
         equity-pd:
           lessons:
-            Code.org Equity PD:
-              name: Code.org Equity PD
             Necessary Background:
               name: Necessary Background
         science-PD2:
@@ -3829,6 +3827,7 @@ uz:
                 ustida ishlashadi. Boshqotirmaning oxirida, talabalarda o‘yinlarini
                 turli xil tezlik va tovushlar bilan moslashtirish imkoniyati tug‘iladi.
           student_description: Choose your team and make a basketball game
+          name: basketbol
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -4873,6 +4872,7 @@ uz:
                 ustida ishlashadi. Boshqotirmaning oxirida, talabalarda o‘yinlarini
                 turli xil tezlik va tovushlar bilan moslashtirish imkoniyati tug‘iladi.
           student_description: Mix and match across sports
+          name: sport
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -18823,7 +18823,7 @@ uz:
           description: Do‘stlaringiz bilan ulashish uchun o‘z Raqs bazmingizni dasturlang!
           lessons:
             Dance Party:
-              name: Dance Party
+              name: Raqs bazmi (2019)
           student_description: Do‘stlaringiz bilan ulashish uchun o‘z Raqs bazmingizni
             dasturlang!
         k5-onlinepd-2019:
@@ -28183,7 +28183,7 @@ uz:
                 shakllar yaratilyapti. Bu bosqichning oxirida, talabalarga sikllardan
                 foydalanib o‘z rasmlarini yaratish imkoniyati beriladi.
               key: Sikllar bilan okean manzarasi
-            The Big Event Jr.:
+            The Big Event Jr:
               name: Katta hodisa Jr.
               description_student: Move and shout when your teachers presses buttons
                 on a giant remote.
@@ -28878,7 +28878,7 @@ uz:
                 qo‘shimcha ravishda bitta foydalanuvchi ehtiyojlarini qondirish uchun
                 yordam beradilar va ijodkorlikdan foydalanadilar.
               key: To'g'ri ilova
-            The Big Event Jr.:
+            The Big Event Jr:
               name: Katta hodisa Jr.
               description_teacher: Hodisalar - oldindan yozilgan algoritmga interfaollik
                 qo‘shishning ajoyib usuli. Ba'zan siz dasturingiz foydalanuvchi xohlagan
@@ -29001,7 +29001,7 @@ uz:
             Putting a STOP to Online Meanness:
               description_student: Ushbu darsda siz ma'nosizlik haqida va agar Internetda
                 duch kelganda nima qilish kerakligi haqida bilib olasiz.
-            My Robotic Friends Jr.:
+            My Robotic Friends Jr:
               name: Mening robot do‘stlarim Jr.
               description_student: In this lesson, you'll pretend your classmates
                 are robots and program them to build patterns of stacked cups.
@@ -29048,7 +29048,7 @@ uz:
                 bo‘limlar, masalan, `move forward by 100 pixels` va `turn right by
                 90 degrees` kabilardan foydalangan holda yuqori mukammallikdagi rasmlar
                 yaratish imkonini beradi.
-            My Loopy Robotic Friends Jr.:
+            My Loopy Robotic Friends Jr:
               name: Mening sikllashtirilgan robot do‘stlarim Jr.
               description_student: In this lesson, you'll program your classmates
                 again, but using loops you'll be able to solve bigger and more complicated
@@ -30146,6 +30146,9 @@ uz:
             lessonGroup-2:
               display_name: Kontent
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: For sikllari
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
@@ -30325,6 +30328,8 @@ uz:
           lessons:
             lesson-1:
               name: Xush kelibsiz
+            lesson-9:
+              name: Darsni rejalashtirish
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -30362,3 +30367,11 @@ uz:
               key: For sikllari
             Lesson Planning:
               key: Darsni rejalashtirish
+        vpl-csd2-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Jismoniy hisoblash
+        vpl-csd3-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Jismoniy hisoblash

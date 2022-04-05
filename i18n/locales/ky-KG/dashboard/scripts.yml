@@ -420,6 +420,8 @@ ky:
           lessons:
             Teacher Dashboard:
               name: Мугалимдин тактасы
+        basketball:
+          name: баскетбол
         hoc-encryption:
           title: 'Код сааты: кадимки шифрлөө'
         csd2-2017:
