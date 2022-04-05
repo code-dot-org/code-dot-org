@@ -1,6 +1,6 @@
 require 'test_helper'
 
-require_relative '../../../shared/middleware/helpers/projects'
+require_relative '../../../shared/middleware/helpers/storage_apps'
 
 class ChannelTokenTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
