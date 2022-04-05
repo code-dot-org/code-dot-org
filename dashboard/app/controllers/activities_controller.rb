@@ -107,13 +107,15 @@ class ActivitiesController < ApplicationController
       params[:lines] = MAX_LINES_OF_CODE if params[:lines] > MAX_LINES_OF_CODE
     end
 
-    @level_source_image = find_or_create_level_source_image(params[:image], @level_source)
+    MultipleDatabasesTransitionHelper.use_writer_connection do
+      @level_source_image = find_or_create_level_source_image(params[:image], @level_source)
 
-    @new_level_completed = false
-    if current_user
-      track_progress_for_user if @script_level
-    else
-      track_progress_in_session
+      @new_level_completed = false
+      if current_user
+        track_progress_for_user if @script_level
+      else
+        track_progress_in_session
+      end
     end
 
     total_lines = if current_user && current_user.total_lines
