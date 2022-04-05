@@ -19,6 +19,9 @@ class Ability
       Script, # see override below
       Lesson, # see override below
       ScriptLevel, # see override below
+      ProgrammingEnvironment, # see override below
+      ProgrammingExpression, # see override below
+      ReferenceGuide, # see override below
       :reports,
       User,
       UserPermission,
@@ -74,8 +77,16 @@ class Ability
       can? :update, level
     end
 
-    can [:show_by_keys], ProgrammingExpression do |expression|
-      can? :read, expression
+    can [:read, :docs_show, :docs_index], ProgrammingEnvironment do |environment|
+      environment.published || user.permission?(UserPermission::LEVELBUILDER)
+    end
+
+    can [:read, :show_by_keys, :docs_show], ProgrammingExpression do |expression|
+      can? :read, expression.programming_environment
+    end
+
+    can [:docs_index, :docs_show], ProgrammingEnvironment do |environment|
+      can? :read, environment
     end
 
     if user.persisted?
@@ -85,7 +96,9 @@ class Ability
       can :create, UserLevel, user_id: user.id
       can :update, UserLevel, user_id: user.id
       can :create, Follower, student_user_id: user.id
-      can :destroy, Follower, student_user_id: user.id
+      can :destroy, Follower do |follower|
+        follower.student_user_id == user.id && !user.student?
+      end
       can :read, UserPermission, user_id: user.id
       can [:show, :pull_review, :update], PeerReview, reviewer_id: user.id
       can :toggle_resolved, CodeReviewComment, project_owner_id: user.id
@@ -95,11 +108,11 @@ class Ability
         code_review_comment.project_owner&.student_of?(user) ||
           (user.teacher? && user == code_review_comment.commenter)
       end
-      can :create,  CodeReviewComment do |_, project_owner, storage_app_id, level_id, script_id|
-        CodeReviewComment.user_can_review_project?(project_owner, user, storage_app_id, level_id, script_id)
+      can :create,  CodeReviewComment do |_, project_owner, project_id, level_id, script_id|
+        CodeReviewComment.user_can_review_project?(project_owner, user, project_id, level_id, script_id)
       end
-      can :project_comments, CodeReviewComment do |_, project_owner, storage_app_id|
-        CodeReviewComment.user_can_review_project?(project_owner, user, storage_app_id)
+      can :project_comments, CodeReviewComment do |_, project_owner, project_id|
+        CodeReviewComment.user_can_review_project?(project_owner, user, project_id)
       end
       can :create, ReviewableProject do |_, project_owner|
         ReviewableProject.user_can_mark_project_reviewable?(project_owner, user)
@@ -144,7 +157,7 @@ class Ability
             CodeReviewComment.user_can_review_project?(
               user_to_assume,
               user,
-              reviewable_project.storage_app_id,
+              reviewable_project.project_id,
               reviewable_project.level_id,
               reviewable_project.script_id
             )
@@ -307,6 +320,11 @@ class Ability
       can?(:read, script)
     end
 
+    can :read, ReferenceGuide do |guide|
+      course_or_unit = guide.course_version.content_root
+      can?(:read, course_or_unit)
+    end
+
     # Handle standalone projects as a special case.
     # They don't necessarily have a model, permissions and redirects are run
     # through ProjectsController and their view/edit requirements are defined
@@ -343,8 +361,10 @@ class Ability
         Game,
         Level,
         Lesson,
+        ProgrammingClass,
         ProgrammingEnvironment,
         ProgrammingExpression,
+        ReferenceGuide,
         CourseOffering,
         UnitGroup,
         Resource,
@@ -396,6 +416,11 @@ class Ability
       end
     end
 
+    # This action allows levelbuilders to work on exemplars and validation in levelbuilder
+    if user.persisted? && user.permission?(UserPermission::LEVELBUILDER)
+      can [:get_access_token_with_override_sources, :get_access_token_with_override_validation], :javabuilder_session
+    end
+
     if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)
       # let them change the hidden state
       can :manage, LevelSource
@@ -416,6 +441,7 @@ class Ability
         CourseOffering,
         Script,
         Lesson,
+        ReferenceGuide,
         ScriptLevel,
         UserLevel,
         UserScript,

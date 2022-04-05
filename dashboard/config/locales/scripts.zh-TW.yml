@@ -1311,8 +1311,6 @@ zh-TW:
           student_description: 階段 2 暑假的線上混合式學習
         equity-pd:
           lessons:
-            Code.org Equity PD:
-              name: Code.org 公平 PD
             Necessary Background:
               name: 前備知識
         science-PD2:
@@ -1810,6 +1808,7 @@ zh-TW:
               description_student: 在本課堂中，所有年齡的學生都會在安全且充滿支持的環境中，獲得程式編寫與電腦科學的新手體驗。本課堂適用於有能力閱讀的學生（6歲以上）。年齡較小的學生未必會完成教程，但是會在1小時解謎中獲得大量樂趣。大部分高中學生都會完成教程，並會在課堂結束時有一些時間玩自由探索關卡。
               description_teacher: 在本課堂中，所有年齡的學生都會在安全且充滿支持的環境中，獲得程式編寫與電腦科學的新手體驗。本課堂適用於有能力閱讀的學生（6歲以上）。年齡較小的學生未必會完成教程，但是會在1小時解謎中獲得大量樂趣。大部分高中學生都會完成教程，並會在課堂結束時有一些時間玩自由探索關卡。
           student_description: 使用程式積木，幫助 Steve 或 Alex 在 Minecraft 裡完成探險。
+          name: mc
         oceans:
           title: 在海洋中使用的 AI
           description: 瞭解 AI（人工智慧）和機器學習，可以怎樣用來解決全球問題。
@@ -3652,6 +3651,7 @@ zh-TW:
               description_student: 有沒有想過，你可以在學校玩電子遊戲？在本課堂中，你將有機會製作自己的遊戲！
               description_teacher: 在這項線上活動中，學生會學習甚麼是事件（event），以及電腦怎樣在程式（例如電子遊戲）中使用事件。學生會在各種謎題中，讓程式，對事件做出反應（例如按下箭頭按鈕後）。在謎題結束時，學生將有機會以不同的速度與聲音自訂遊戲。
           student_description: 選擇你的球隊，來場籃球比賽
+          name: 籃球
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -4263,6 +4263,7 @@ zh-TW:
               description_student: 有沒有想過，你可以在學校玩電子遊戲？在本課堂中，你將有機會製作自己的遊戲！
               description_teacher: 在這項線上活動中，學生會學習甚麼是事件（event），以及電腦怎樣在程式（例如電子遊戲）中使用事件。學生會在各種謎題中，讓程式，對事件做出反應（例如按下箭頭按鈕後）。在謎題結束時，學生將有機會以不同的速度與聲音自訂遊戲。
           student_description: 搞個混搭的運動遊戲
+          name: 運動
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -7153,6 +7154,7 @@ zh-TW:
               name: Minecraft：英雄之旅
               description_teacher: 在本課堂中，所有年齡的學生都會在安全且充滿支持的環境中，獲得程式編寫與電腦科學的新手體驗。本課堂適用於有能力閱讀的學生（6歲以上）。年齡較小的學生未必會完成教程，但是會在1小時解謎中獲得大量樂趣。大部分高中學生都會完成教程，並會在課堂結束時有一些時間玩自由探索關卡。
           student_description: 全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。
+          name: 英雄
         applab-intro-staging:
           title: App Lab 入門集結
           lessons:
@@ -9681,6 +9683,7 @@ zh-TW:
               description_student: 在本課程中，所有年齡段的學習者都將在一個安全、支持性的環境中獲得編碼和電腦科學的入門體驗。本課是為所有需要閱讀的年齡段學習者而設計的。本活動需要有聲音，因為這個工具是為響應音樂而構建的。
               description_teacher: 在本課程中，所有年齡段的學習者都將在一個安全、支持性的環境中獲得編碼和電腦科學的入門體驗。本課是為所有需要閱讀的年齡段學習者而設計的。本活動需要有聲音，因為這個工具是為響應音樂而構建的。
           student_description: 寫個你自己的舞蹈程式，並分享給朋友們！
+          name: 舞蹈
         frozen-2018-test-b:
           title: 新冰雪奇緣腳本
           lessons:
@@ -9695,6 +9698,7 @@ zh-TW:
               name: 'Minecraft: 水上巡航'
               description_teacher: 在本課堂中，所有年齡的學生都會在安全且充滿支持的環境中，獲得程式編寫與電腦科學的新手體驗。本課堂適用於有能力閱讀的學生（6歲以上）。年齡較小的學生未必會完成教程，但是會在1小時解謎中獲得大量樂趣。大部分高中學生都會完成教程，並會在課堂結束時有一些時間玩自由探索關卡。
           student_description: Minecraft 帶著新活動回來啦！拿出你的創造力和解決問題能力，一同用程式探索與打造水世界。
+          name: 水生
         sconyers:
           title: 翠絲的遊樂場
           lessons:
@@ -13527,7 +13531,7 @@ zh-TW:
           description: 寫個你自己的舞蹈程式，並分享給朋友們！
           lessons:
             Dance Party:
-              name: 舞蹈派對
+              name: 舞蹈派對 2019
               description_student: 在本課程中，所有年齡段的學習者都將在一個安全、支持性的環境中獲得編碼和電腦科學的入門體驗。本課是為所有需要閱讀的年齡段學習者而設計的。本活動需要有聲音，因為這個工具是為響應音樂而構建的。
               description_teacher: 在本課程中，所有年齡段的學習者都將在一個安全、支持性的環境中獲得編碼和電腦科學的入門體驗。本課是為所有需要閱讀的年齡段學習者而設計的。本活動需要有聲音，因為這個工具是為響應音樂而構建的。
           student_description: 寫個你自己的舞蹈程式，並分享給朋友們！
@@ -19238,8 +19242,7 @@ zh-TW:
           title: 你好，世界！
         csa-self-paced-pl:
           lessons:
-            Navigating the Code.org learning platform:
-              name: " Code.org學習平臺導航"
+            Navigating the Codeorg learning platform:
               description_teacher: |-
                 **你將學習如何：**
 
@@ -20396,7 +20399,7 @@ zh-TW:
               description_student: 使用迴圈與模式完成圖像。
               description_teacher: 學生會回到迴圈學習：將一系列簡單指令迴圈，從而繪畫圖像。在前一個插電課堂中，迴圈曾用於穿越迷宮並收集寶物。在這裡，迴圈則用於建立模式。在這個階段結束時，學生將有機會使用迴圈來製作自己的圖像。
               key: 海洋場景與迴圈（Loop）
-            The Big Event Jr.:
+            The Big Event Jr:
               name: 小小大事件
               description_student: 教師按下巨型遙控器的按鈕後，學生便會移動和大叫。
               description_teacher: 事件是很好的方式，在預先編寫好的演算法中增加變化。有時候，你希望自己的程式能夠完全以使用者預期的方式回應使用者。這正是事件之目的。
@@ -20916,7 +20919,7 @@ zh-TW:
               description_student: 製作你自己的智慧型手機應用程式草稿。
               description_teacher: 本課堂會讓學生明白，電腦可協助現實生活中的大眾。首先，學生會理解一些虛構的智慧型手機使用者，以協助他們找出「合適的應用程式」解決他們的需要。然後，學生會練習同理心與創意，製作自己的智慧型手機應用程式草稿，解決下一位使用者的需要。
               key: 合適的應用程式
-            The Big Event Jr.:
+            The Big Event Jr:
               name: 小小大事件
               description_student: 老師按下巨型遙控器的按鈕後，你便會移動或是大叫。
               description_teacher: 事件是很好的方式，在預先編寫好的演算法中增加變化。有時候，你希望自己的程式能夠完全以使用者預期的方式回應使用者。這正是事件之目的。
@@ -20993,7 +20996,7 @@ zh-TW:
           description_audience: 年齡 5-8
         coursec-2022:
           lessons:
-            My Robotic Friends Jr.:
+            My Robotic Friends Jr:
               name: 我的小機器人朋友
               description_student: 在本課堂中，你會假設同學是機器人，然後為他們設計程式，建立杯子堆疊的模式。
               description_teacher: 學生會使用一組符號來代替程式碼，設計演算法指示「機器人」把杯子疊起成不同的模式。學生會輪流扮演機器人，且僅回應同伴定義的演算法。這個部分會教導學生符號和行動關的聯繫、演算法和程式間的分別，以及有用的除錯技巧。
@@ -21017,7 +21020,7 @@ zh-TW:
               description_teacher: 在本課堂中，學生會控制藝術家完成畫面上的圖畫。這個藝術家舞台可讓學生製作越來越複雜的圖像，期間會使用新的積木，例如「move
                 forward by 100 pixels」（向前移動 100 像素）與「turn right by 90 degrees」（向右旋轉
                 90 度）等。
-            My Loopy Robotic Friends Jr.:
+            My Loopy Robotic Friends Jr:
               name: 我的愛迴圈小機器人朋友
               description_student: 在本課堂中，你會再次為同學設計程式，但會使用迴圈（loop），這樣，你便能夠解決更龐大、更複雜的問題。
               description_teacher: 學生會以最初的「我的機器人朋友」活動為基礎，處理更大型且更複雜的設計。為了幫助「機器人」設計程式，以完成這些更大型的設計，學生將需要找出指令裡有哪些重複模式可使用迴圈（loop）取代。
@@ -21705,6 +21708,8 @@ zh-TW:
               name: Java 實驗室
             lesson-9:
               name: 迴圈
+            lesson-21:
+              name: 主控台
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
@@ -21754,10 +21759,19 @@ zh-TW:
           lessons:
             lesson-5:
               name: 單元 2 評估
+            lesson-6:
+              name: 變數
+            lesson-16:
+              name: 主控台
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: 計次迴圈（For Loops）
+            lesson-16:
+              name: 主控台
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
@@ -21888,3 +21902,211 @@ zh-TW:
               display_name: 內容
             lessonGroup-5:
               display_name: 沙盒
+        coursef-2022-pilot:
+          lessons:
+            The Power of Words:
+              name: 語言的力量
+              description_student: 欺凌絕對是不恰當的行為。本課堂會教導你可以和不可以在線上做些甚麼。
+              key: 語言的力量
+            Introducing Sprite Lab:
+              name: Sprite Lab 簡介
+              key: Sprite Lab 簡介
+            Making Sprites:
+              name: 製作精靈圖
+              key: 製作精靈圖
+            Sprites in Action:
+              name: 運行中的角色
+              key: 運行中的角色
+            'Mini-Project: Virtual Pet':
+              name: '小專案: 虛擬寵物'
+              description_student: 在本課堂中，學生會製作互動的虛擬寵物，並依據學生的喜好設計寵物的外觀與行為。學生會使用 Sprite
+                Lab 的「Costumes」（造型）工具自訂寵物的外表。然後，學生會使用學到的事件、行為與其他概念，讓寵物擁有自己的生命！
+              description_teacher: 在本課堂中，學生會製作互動的虛擬寵物，並依據學生的喜好設計寵物的外觀與行為。學生會使用 Sprite
+                Lab 的「Costumes」（造型）工具自訂寵物的外表。然後，學生會使用學到的事件、行為與其他概念，讓寵物擁有自己的生命！
+              key: '小專案: 虛擬寵物'
+            Simulating Experiments:
+              name: 模擬實驗
+              description_student: 在電腦上執行模擬，並實驗一下變更參數後的情況。
+              description_teacher: 在 Sprite Lab 上執行簡單模擬，學生便會體驗到電腦運算可怎樣用來收集資料，從而找出各種趨勢與模式。多次執行模擬後，學生便會有機會預測一下，變更模擬中的變數可能會怎樣影響結果，然後再測試這個假設。
+              key: 模擬實驗
+            Outbreak:
+              name: 疫情爆發
+              key: 疫情爆發
+            AI For Oceans:
+              name: 在海洋中使用的 AI
+              key: 在海洋中使用的 AI
+            The Internet:
+              name: 網際網路
+              description_student: 你有沒有想過，資訊怎樣在網際網路中傳輸？不是魔術！本課堂將會教導網際網路運作方面的基本知識。
+              description_teacher: 即便許多人每天都會上網，但是理解其中原理的中卻不多。在本課堂中，學生會假裝流經網際網路，同時學習連線、URL、IP
+                位址與 DNS 的知識。
+              key: 網際網路
+            End of Course Project:
+              name: 課程結束專案
+              description_student: 這麼大型的專案需要時間與充分計畫。找出靈感、制訂計畫，激發你的創意！
+              key: 課程結束專案
+          lesson_groups:
+            lessonGroup-7:
+              display_name: 數位公民
+            ramp_up:
+              display_name: 角色
+            lessonGroup-8:
+              display_name: 變數
+            end_of_course_project:
+              display_name: 課程結束專案
+          description_audience: 年齡 9-13
+          description_short: 學習計算機科學的基礎概念，並創建自己的藝術、故事、遊戲作品。
+        csa6-2022:
+          lessons:
+            Documenting Program Code:
+              description_student: 你在整個課程中所開發的專案已為社群帶來諸多創意！《四鄰燈光節》即將到來，鄰居們將展示創意故事、劇本、歌詞、文字和詩歌。《四鄰燈光節》是一個大型專案，你將在整個單元中參與其中，專案管理戰略板將説明你組織和構建你的創作。你將探索編寫和構建代碼的策略，供其他軟體工程師輕鬆理解和使用Java工具來創建程式文檔。
+              description_teacher: 向學生們介紹《四鄰燈光節》專案，並評估要求和示例，明確其中的問題和關鍵特徵。在著手專案之前，學生們透過確定最佳實踐和探索如何使用Javadoc生成程式文檔，來擴展他們對程式結構和注釋的理解。
+            Exploring Integer and Double Objects:
+              description_student: 你將構建`Integer`和`Double`物件來將`int`和`double`原始值表示為參考值。使用`Integer`和`Double`類中的方法，你可以返回這些物件存儲為原始值的值。
+                在規劃《四鄰燈光節》所需的籌備任務前，你還將探索整數的最小和最大值，以避免溢出錯誤。
+              description_teacher: 學生們將構建`Integer`和`Double`對象來將`int`和`double`原始值表示為參考值。使用`Integer`和`Double`類中的方法，學生們可以返回這些物件存儲為原始值的值。
+                在規劃《四鄰燈光節》所需的籌備任務前，學生們還將探索整數的最小和最大值，以避免溢出錯誤。
+            Using ArrayLists to Store Data:
+              description_student: 在處理陣列和清單時，我們有時會遇到元素數量未知或清單大小不斷變化的問題。在本節課中，你將學習`ArrayList`結構，並明確這種資料結構較適宜的場景。
+              description_teacher: 學生們將創建`ArrayList`來存儲`int`和`double`值。學生們區分`ArrayList`和一維陣列，以確定某個特定場景下最適宜的資料結構。
+                學生們將向`ArrayList`中添加元素，並在處理存儲的資料時，學習如何在原始值和包裝類之間進行自動裝箱轉換。
+            Working with ArrayList Data:
+              description_student: 你將使用`ArrayList`方法`get()`和`set()`，來檢索和修改元素，並學習`String`方法`length()`，來計算`String`物件中的字元數。你將應用在一維和二維陣列中所開發出的標準演算法來修改`ArrayList`中的元素。你將在處理存儲在`ArrayList`中的資料時，學習如何在原始值和包裝類之間執行拆箱轉換。
+              description_teacher: 學生們將使用`ArrayList`方法`get()`和`set()`，來檢索和修改元素，並學習`String`方法`length()`，來返回`String`物件中的字元數。他們將應用在一維和二維陣列中所開發出的標準演算法來修改`ArrayList`中的元素。學生們將在處理存儲在`ArrayList`中的資料時，學習如何在原始值和包裝類之間執行拆箱轉換。
+            Storing Objects in an ArrayList:
+              description_student: 到目前為止，你已經創建了`ArrayList`來存儲`Integer`、`Double`和`String`。與一維和二維陣列一樣，你也可以將創建的物件存儲在`ArrayList`中。在本節課中，你將創建一個物件的`ArrayList`，以應用你在全年中所使用的標準演算法來處理存儲在此清單中的資料。
+              description_teacher: 學生將創建`ArrayList`來存儲物件，並學習Java中的通用類型。學生們將一維陣列中所學到的演算法應用於`ArrayList`，以查找最小值和最大值、計算總和及平均值，或找出滿足特定條件的元素。
+            Removing Data from an ArrayList:
+              description_student: 你將探索`ArrayList`類中的`remove()`方法的功能，並在遍歷該列表的過程中，在嘗試刪除專案時識別出潛在的錯誤。在此過程中，你會認識到`ArrayList`在哪種情況下最適合某個場景或問題。
+              description_teacher: 學生們將探索`ArrayList`類中的`remove()`方法的功能，並在遍歷該列表的過程中，在嘗試刪除專案時識別出潛在的錯誤。學生們會認識到`ArrayList`在哪種情況下最適合某個場景或問題。
+            Using String Methods:
+              description_student: 你將探索`String`結構，了解`String`屬於物件。你將使用`indexOf()`和`substring()`方法來搜索`String`中的子字串，並從當前`String`中創建新的`String`物件。
+              description_teacher: 學生們將探索`String`結構，了解`String`屬於物件。學生們將使用`indexOf()`和`substring()`方法來搜索`String`中的子字串，並從當前`String`中創建新的`String`物件。
+            Comparing Strings:
+              description_student: 你將探索如何使用`compareTo()`，來檢查`String`是否按字母順序排列。然後，你將啟動《四鄰燈光節》專案，特別留意專案規劃板上的任務。
+              description_teacher: 學生們將探索如何使用`compareTo()`，來檢查`String`是否按字母順序排列。然後，學生們將啟動《四鄰燈光節》專案，特別留意專案規劃板上的任務。
+            Solving Problems with Strings:
+              description_student: 你將綜合標準演算法和`String`的知識，來檢查`String`是否是回文串。然後，你將參加同行評議會話，並反思《四鄰燈光節》項目的進展。
+              description_teacher: 學生們將綜合標準演算法和`String`的知識，來檢查`String`是否是回文串。然後，學生們將參加同行評議會話，並反思各自《四鄰燈光節》項目的進展。
+            Solving Problems with ArrayLists:
+              description_student: 你將在一維陣列和二維陣列中所編寫的標準演算法應用於`ArrayList`。你將應用新的標準演算法，從整數中獲取單個數位，然後修改和應用之前的演算法，以交換元素、刪除重複項，或在《四鄰燈光節》專案中查找符合特定條件的元素。
+              description_teacher: 學生們將在一維陣列和二維陣列中所編寫的標準演算法應用於`ArrayList`。學生們將應用新的標準演算法，從整數中獲取單個數位，然後修改和應用之前的演算法，以交換元素、刪除重複項，或在《四鄰燈光節》專案中查找符合特定條件的元素。
+            Neighborhood Lit Fest Project - Day 1:
+              name: "《四鄰燈光節》項目 - 第1天"
+              description_student: 你將繼續開發自己的《四鄰燈光節》專案，參照最喜歡的作家或藝術家的作品鑒賞來創作故事、詩歌、歌曲或其他形式的文學作品。首先你將自我測評自己的作品，按照專案完成要求評估進度情況，然後針對專案中的某個功能編寫驗收標準，供同行測試。你借助自我評估和同行評議的形式，確定剩餘任務的優先順序，並繼續開發自己的專案。
+              description_teacher: 學生們將繼續開發自己的《四鄰燈光節》專案，參照最喜歡的作家或藝術家的作品鑒賞來創作故事、詩歌、歌曲或其他形式的文學作品。首先學生們將自我測評自己的作品，按照專案完成要求評估進度情況，然後針對專案中的某個功能編寫驗收標準，供同行測試。學生們借助自我評估和同行評議的形式，確定剩餘任務的優先順序，並繼續開發自己的專案。
+              key: "《四鄰燈光節》項目 - 第1天"
+            Neighborhood Lit Fest Project - Day 2:
+              name: "《四鄰燈光節》項目 - 第2天"
+              description_student: 在上一課中，你已經完成了自我測評，並為自己的項目編寫了驗收標準。在本節課中，你將獲得同行評議，以確定待完成的剩餘任務並繼續開發自己的《四鄰燈光節》專案。
+              description_teacher: 在上一課中，學生們已經完成了自我測評，並為自己的項目編寫了驗收標準。在本節課中，學生們將獲得同行評議，以確定待完成的剩餘任務並繼續開發自己的《四鄰燈光節》專案。
+              key: "《四鄰燈光節》項目 - 第2天"
+            Neighborhood Lit Fest Project - Day 3:
+              name: "《四鄰燈光節》項目 - 第3天"
+              description_student: 你根據代碼審查和專案規劃板，完成最終的修改和更新任務。你將與同行分享各自的《四鄰燈光節》項目。隨後，你將慶祝自己大功告成，並對自己的開發進度作出最後的反思。
+              description_teacher: 學生們根據代碼審查和專案規劃板，完成最終的修改和更新任務。學生們將與同行分享各自的《四鄰燈光節》項目。隨後，學生們將慶祝自己大功告成，並對自己的開發進度作出最後的反思。
+              key: "《四鄰燈光節》項目 - 第3天"
+            Assessment Day:
+              name: 評估日
+              description_student: 在本單元中，你將使用`ArrayList`來存儲程式資料，並區分何時使用一維陣列、二維陣列及`ArrayList`。你將使用`ArrayList`來解決涉及數值和物件資料的問題，借此探索該資料結構的優勢和功能。你將使用`String`類中的方法來分析和處理來自使用者和檔輸入中的文本。在整個單元中，你將使用單行注釋、多行注釋和Javadoc注釋編寫程式文檔，以創建API文檔。在此過程中，你將確定並記錄物件和方法的前置條件和後置條件。此外，你將接受多選題測驗，來評估本單元學習目標和技能的掌握情況。
+              description_teacher: 在本單元中，學生們將使用`ArrayList`來存儲程式資料，並區分何時使用一維陣列、二維陣列及`ArrayList`。學生們將使用`ArrayList`來解決涉及數值和物件資料的問題，借此探索該資料結構的優勢和功能。學生們將使用`String`類中的方法來分析和處理來自使用者和檔輸入中的文本。在整個單元中，學生們將使用單行注釋、多行注釋和Javadoc注釋編寫程式文檔，以創建API文檔。在此過程中，學生們將確定並記錄物件和方法的前置條件和後置條件。此外，學生們將接受多選題測驗，來評估本單元學習目標和技能的掌握情況。
+              key: 評估日
+            Java Lab:
+              name: Java 實驗室
+              key: Java 實驗室
+            lesson-1:
+              key: 第1課
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+            lessonGroup-5:
+              display_name: 沙盒
+        csa7-2022:
+          lessons:
+            Assessment Day:
+              name: 評估日
+              key: 評估日
+            Java Lab:
+              name: Java 實驗室
+              key: Java 實驗室
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+            lessonGroup-5:
+              display_name: 沙盒
+        csa8-2022:
+          lessons:
+            Assessment Day:
+              name: 評估日
+              key: 評估日
+            Java Lab:
+              name: Java 實驗室
+              key: Java 實驗室
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+            lessonGroup-5:
+              display_name: 沙盒
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: 歡迎
+            lesson-9:
+              name: 教學計畫
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: 變數
+            lesson-15:
+              name: 單元 2 評估
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: 新手上路
+              key: 新手上路
+            Sequencing:
+              name: 序列
+              key: 序列
+            Loops:
+              name: 迴圈
+              key: 迴圈
+            Events:
+              name: 事件
+              key: 事件
+            Conditionals:
+              name: 條件判斷（Conditionals）
+              key: 條件判斷（Conditionals）
+            Functions:
+              name: 函式
+              key: 函式
+            Variables:
+              name: 變數
+              key: 變數
+            For Loops:
+              name: 計次迴圈（For Loops）
+              key: 計次迴圈（For Loops）
+            End of Course projects:
+              name: 課程結束專案
+              key: 課程結束專案
+            Reviewing your reflections:
+              name: 檢閱你的反思
+              key: 檢閱你的反思
+            Welcome to "Teaching Computer Science Fundamentals":
+              key: 歡迎來到「教授計算機科學基礎」
+            Lesson Planning:
+              key: 教學計畫
+            Next steps:
+              key: 下一步
+        vpl-csd2-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: 實體運算
+        vpl-csd3-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: 實體運算
+        hello-world-csc:
+          title: 你好世界

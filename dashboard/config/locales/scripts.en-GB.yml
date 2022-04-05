@@ -442,7 +442,27 @@ en-GB:
           lesson_groups:
             csf_loops:
               display_name: Loops
+        csa2-2022:
+          lessons:
+            lesson-6:
+              name: Variables
         csa1-2022-exemplars:
           lessons:
             lesson-9:
               name: Loops
+        coursef-2022-pilot:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Variables
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Variables
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Loops
+              key: Loops
+            Variables:
+              name: Variables
+              key: Variables

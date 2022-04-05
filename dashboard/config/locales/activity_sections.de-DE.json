@@ -981,7 +981,7 @@
           "progression_name": "Der Maus folgen"
         },
         "8ca97900-8855-4bb6-9717-d9e403b12fb0": {
-          "progression_name": "Video: Bedingungen"
+          "progression_name": "Video: Konditionen mit dem Wenn/Sonst-Block"
         },
         "8c59555a-a199-4983-904f-af605d4d24f4": {
           "progression_name": "Eingabe mit Wenn/Sonst"
@@ -1270,7 +1270,7 @@
           "progression_name": "Programme, die sich wiederholen"
         },
         "bca84870-d563-4903-b1d9-51253cbbfc90": {
-          "progression_name": "\"Zähle mit\"-Schleifen"
+          "progression_name": "Schleifen mit dem Wiederhol-Block"
         },
         "18ead11c-bea7-41a3-84ac-be932e91d480": {
           "progression_name": "Für-Schleifen und Farb-LEDs"
@@ -3162,7 +3162,7 @@
           "progression_name": "Video: For-Schleifen"
         },
         "d6edc1c1-8e4b-47d8-821a-718c5007dfc6": {
-          "progression_name": "\"Zähle mit\"-Schleifen"
+          "progression_name": "Schleifen mit dem Wiederhol-Block"
         },
         "e6e515ed-5cc0-4db3-8b4e-4f416a208e55": {
           "name": "Für-Schleifen und Farb-LEDs",
@@ -3822,7 +3822,7 @@
           "progression_name": "Der Maus folgen"
         },
         "7b10d24c-5e4b-49cb-a89c-e659288c3731": {
-          "progression_name": "Video: Bedingungen"
+          "progression_name": "Video: Konditionen mit dem Wenn/Sonst-Block"
         },
         "639ee94d-ffeb-4d6d-ab50-dc6ed0701855": {
           "progression_name": "Eingabe mit Wenn/Sonst"
@@ -4125,10 +4125,10 @@
           "progression_name": "Programme, die sich wiederholen"
         },
         "ffe0d2ab-7af9-4415-8af0-48c88e6a0693": {
-          "progression_name": "\"Zähle mit\"-Schleifen"
+          "progression_name": "Schleifen mit dem Wiederhol-Block"
         },
         "2b5209d7-f495-4e26-b2af-8b639c085bca": {
-          "progression_name": "\"Zähle mit\"-Schleifen"
+          "progression_name": "Schleifen mit dem Wiederhol-Block"
         },
         "09d72bde-4b77-4508-ab36-596d06ec9d72": {
           "name": "Für-Schleifen und Farb-LEDs",
@@ -4602,7 +4602,7 @@
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
           "description": "### Vorbereitung\n\nBegrüßen Sie die SchülerInnen im Unterricht und stellen Sie die für den Tag geplanten Aktivitäten kurz vor.",
           "tips": [
-            "Eine Möglichkeit, die Hour of Code einzuführen, wenn Sie selbst nicht sehr vertraut mit dem Programmieren sind, das Vorführen eines unserer [inspirierenden Videos](https://hourofcode.com/promote/resources#videos). Wählen Sie das Video aus, von dem Sie glauben, dass es Ihre SchülerInnen inspirieren wird, und zeigen Sie es ihnen jetzt. Für SchülerInnen der Mittelstufe empfehlen wir [Die Hour of Code ist hier](https://youtu.be/FC5FbmsH4fw)."
+            "Eine Möglichkeit, die Hour of Code einzuführen, wenn Sie selbst nicht sehr vertraut mit dem Programmieren sind, das Vorführen eines unserer [inspirierenden Videos][0]. Wählen Sie das Video aus, von dem Sie glauben, dass es Ihre SchülerInnen inspirieren wird, und zeigen Sie es ihnen jetzt. Für SchülerInnen der Mittelstufe empfehlen wir [Die Hour of Code ist hier][1]."
           ]
         },
         "d99fc09e-a586-41df-84b2-e552cc4735e3": {
@@ -9642,7 +9642,7 @@
           "progression_name": "Video: For-Schleifen"
         },
         "2aed74d8-d9e0-4c5d-b0bc-7bc5e90ce0df": {
-          "progression_name": "\"Zähle mit\"-Schleifen"
+          "progression_name": "Schleifen mit dem Wiederhol-Block"
         },
         "4eae7990-8111-4f59-a7ef-212acf9f054f": {
           "tips": [

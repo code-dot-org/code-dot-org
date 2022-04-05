@@ -2920,10 +2920,16 @@ kk:
             csf_events:
               display_name: Шаралар
         csa2-2022:
+          lessons:
+            lesson-6:
+              name: Айнымалылар
           lesson_groups:
             lessonGroup-2:
               display_name: Контент
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: For ілмектері
           lesson_groups:
             lessonGroup-2:
               display_name: Контент
@@ -2958,3 +2964,52 @@ kk:
           lesson_groups:
             lessonGroup-2:
               display_name: Контент
+        coursef-2022-pilot:
+          lessons:
+            The Internet:
+              name: Ғаламтор
+              key: Ғаламтор
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Сандық Азаматтық
+            lessonGroup-8:
+              display_name: Айнымалылар
+        csa6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa7-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa8-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Айнымалылар
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Ілмек
+              key: Ілмек
+            Events:
+              name: Шаралар
+              key: Шаралар
+            Conditionals:
+              name: Шарттар
+              key: Шарттар
+            Functions:
+              name: Функциялар
+              key: Функциялар
+            Variables:
+              name: Айнымалылар
+              key: Айнымалылар
+            For Loops:
+              name: For ілмектері
+              key: For ілмектері

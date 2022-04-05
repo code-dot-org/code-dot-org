@@ -1118,6 +1118,7 @@ ga:
           description_short: Roghnaigh d'fhoireann agus cruthaigh cluiche cispheile
           description: Roghnaigh d'fhoireann agus cruthaigh cluiche cispheile
           student_description: Roghnaigh d'fhoireann agus cruthaigh cluiche cispheile
+          name: cispheil
         hoc-encryption:
           title: 'An Uair Chódála: Criptiú Simplí'
           lessons:
@@ -3218,7 +3219,7 @@ ga:
           description_short: Ina bhfuil Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, agus 34 réalta eile!
           lessons:
             Dance Party:
-              name: Cóisir Dhamhsa
+              name: Cóisir Dhamhsa (2019)
         k5-onlinepd-2019:
           lesson_groups:
             k5_basic_concepts:
@@ -4829,10 +4830,16 @@ ga:
             csf_events:
               display_name: Teagmhais
         csa2-2022:
+          lessons:
+            lesson-6:
+              name: Athróga
           lesson_groups:
             lessonGroup-2:
               display_name: Ábhar
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: Lúba "Do Gach"
           lesson_groups:
             lessonGroup-2:
               display_name: Ábhar
@@ -4867,3 +4874,73 @@ ga:
           lesson_groups:
             lessonGroup-2:
               display_name: Ábhar
+        coursef-2022-pilot:
+          lessons:
+            Introducing Sprite Lab:
+              name: Fáilte go dtí Saotharlann na Sprideanna
+              key: Fáilte go dtí Saotharlann na Sprideanna
+            Sprites in Action:
+              name: Sprideanna ar Obair
+              key: Sprideanna ar Obair
+            AI For Oceans:
+              name: AI ar son an Aigéin
+              key: AI ar son an Aigéin
+            The Internet:
+              name: An tIdirlíon
+              key: An tIdirlíon
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Saoránacht Dhigiteach
+            ramp_up:
+              display_name: Sprideanna
+            lessonGroup-8:
+              display_name: Athróga
+          description_short: Foghlaim na coincheapa go léir i mBuntús na Ríomheolaíochta agus cruthaigh ealaín, scéal, nó cluiche.
+        csa6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+        csa7-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+        csa8-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-9:
+              name: Ceachtanna a Phleanáil
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Athróga
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ábhar
+        k5-onlinepd-2022:
+          lessons:
+            Sequencing:
+              name: Seicheamhú
+              key: Seicheamhú
+            Loops:
+              name: Lúba
+              key: Lúba
+            Events:
+              name: Teagmhais
+              key: Teagmhais
+            Conditionals:
+              name: Coinníollacha
+              key: Coinníollacha
+            Functions:
+              name: Feidhmeanna
+              key: Feidhmeanna
+            Variables:
+              name: Athróga
+              key: Athróga
+            For Loops:
+              name: Lúba "Do Gach"
+              key: Lúba "Do Gach"
+            Lesson Planning:
+              key: Ceachtanna a Phleanáil

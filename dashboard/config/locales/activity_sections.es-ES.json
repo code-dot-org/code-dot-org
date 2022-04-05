@@ -437,9 +437,9 @@
           "description": "#### Informe\n\nPide a los alumnos que reflexionen sobre las actividades del día. ¿Qué han aprendido sobre la codificación? ¿Sprites? ¿Eventos?\n\n¿Cómo se sienten con respecto a la informática y la codificación después de pasar una hora explorando?\n\n#### Próximos Pasos\n\nComenta a los alumnos que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Visita [Conexiones CS](https://code.org/educate/csc) para obtener ideas sobre cómo integrar las ciencias de la computación en otras asignaturas o lee más sobre nuestra [oferta de cursos para escuelas primarias](https://code.org/educate/curriculum/elementary-school)."
         },
         "6b51b4f1-5b1d-4b29-af25-c48d716a2d22": {
-          "description": "#### Preparando el Terreno\n\nDales la bienvenida a los alumnos a la clase y presenta muy brevemente la actividad del día.\n\n**Comenta:** \\_Hoy vamos a dedicar una hora a aprender a codificar. ¿Alguien ha oído antes el término \"código\"? ¿Qué significa?\n\nLos alumnos pueden mencionar que un \"código\" es como un mensaje secreto, o que está relacionado con los ordenadores de alguna manera.",
+          "description": "#### Preparando el Terreno\n\nDamos la bienvenida a los alumnos a la clase y presentamos muy brevemente la actividad del día.\n\n**Comenta:** \\_Hoy vamos a dedicar una hora a aprender a codificar. ¿Alguien ha oído antes el término \"código\"? ¿Qué significa?\n\nLos alumnos pueden mencionar que un \"código\" es como un mensaje secreto, o que está relacionado con los ordenadores de alguna manera.",
           "tips": [
-            "Una forma de presentar la Hora del Código si no estás muy familiarizado con la codificación es mostrar uno de nuestros [vídeos inspiradores](https://hourofcode.com/us/resources#videos). Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los alumnos más jóvenes, sugerimos [La Hora del Código está Aquí](https://youtu.be/FC5FbmsH4fw)."
+            "Una forma de presentar la Hora del Código, si no estás muy familiarizado con la codificación, es mostrar uno de nuestros [vídeos inspiradores](https://hourofcode.com/us/resources#videos). Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los alumnos más jóvenes, sugerimos [La Hora del Código está Aquí](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "dd7bde99-d360-4587-8d30-75383b930808": {
@@ -450,23 +450,23 @@
         },
         "88489303-1952-49c3-914a-2cfa7a138778": {
           "name": "Introducción",
-          "description": "Muestra a los alumnos uno o los dos vídeos siguientes como introducción a los ángulos:\n\n**Introducción al Artista - Vídeo del Alumno** (1,5 minutos de duración)\n\n**Giros y Ángulos - Vídeo del alumno** (2 minutos de duración)\n\nUtiliza **Giros y ángulos - Folleto del Alumno** con el fin de mostrar a los alumnos los ángulos interiores frente a los exteriores de las diferentes formas. Este documento se puede utilizar como un folleto o puedes optar por imprimirlo como un póster para que los estudiantes lo consulten.\n\nAnaliza las formas cuadradas y triangulares del documento.\n\n-   ¿Cómo codificarías un ordenador para dibujar esa forma?\n-   ¿Qué orden deben tener las instrucciones?\n\nDile a los alumnos que en estos rompecabezas van a mover a un personaje que deja una línea por donde quiera que vaya. Los alumnos escribirán un código para que el personaje dibuje varias formas, entre ellas un cuadrado."
+          "description": "Muestra a los alumnos uno o los dos vídeos siguientes como introducción a los ángulos:\n\n**Introducción al Artista - Vídeo del Alumno** (1,5 minutos de duración)\n\n**Giros y Ángulos - Vídeo del alumno** (2 minutos de duración)\n\nUtiliza **Giros y ángulos - Guía del Alumno** con el fin de mostrar a los alumnos los ángulos interiores frente a los exteriores de las diferentes formas. Este documento se puede utilizar como un folleto o puedes optar por imprimirlo como un póster para que los estudiantes lo consulten.\n\nAnaliza las formas cuadradas y triangulares del documento.\n\n-   ¿Cómo programarías un ordenador para dibujar esa forma?\n-   ¿Qué orden deben tener las instrucciones?\n\nDile a los alumnos que en estos rompecabezas van a mover a un personaje que deja una línea por donde quiera que vaya. Los alumnos escribirán un código para que el personaje dibuje varias formas, entre ellas un cuadrado."
         },
         "75db60fb-671b-4740-80ae-0b13f4c09897": {
           "name": "Artista",
           "description": "En este juego de rompecabezas, el Artista no estará limitado a los ángulos de 90 grados. Disponer de transportadores físicos puede ayudar a los alumnos a visualizar mejor los ángulos que necesitan. De lo contrario, el escenario proporciona imágenes de los ángulos mientras el estudiante selecciona qué ángulo utilizar. (Nota: las opciones de ángulos están limitadas a dos dentro del menú desplegable, lo que reduce el número de opciones que los alumnos tienen que trabajar).\n\nAntes de enviar a los alumnos a los ordenadores para que trabajen en los rompecabezas, puede ser beneficioso hacer una breve presentación de cómo utilizar las herramientas de este nivel. Recomendamos el rompecabezas 5 como un buen rompecabezas para mostrar cómo usar el transportador en línea."
         },
         "8aeabd7e-dab0-4f23-827b-58d98a04085f": {
-          "description": "Desafía a tus alumnos a completar esta actividad [Artist](https://studio.code.org/s/artist/lessons/1/levels/1).\n\nDependiendo de la edad y la capacidad de tus alumnos, puedes considerar: \n\n-   Para los alumnos más jóvenes, te sugerimos que dividas tu clase en parejas y pidas a cada grupo que trabaje conjuntamente para completar el tutorial utilizando la [programación por parejas](https://youtu.be/vgkahOzFH2Q).\n-   En el caso de los alumnos de grado medio, nos parece que trabajar de forma independiente en los tutoriales funciona bien. A veces ayuda permitir que los alumnos elijan su propio tutorial. Si los alumnos no están interesados en Minecraft, pueden tener una experiencia similar con los tutoriales [Código con Anna y Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) o [Star Wars](https://code.org/starwars).\n-   Para los alumnos mayores o adultos, el tutorial [Artista](https://studio.code.org/s/artist/lessons/1/levels/1) funciona muy bien como reto independiente o como actividad de programación en parejas."
+          "description": "Desafía a tus alumnos a completar esta actividad [Artist](https://studio.code.org/s/artist/lessons/1/levels/1).\n\nDependiendo de la edad y la capacidad de tus alumnos, puedes considerar: \n\n-   Para los alumnos más jóvenes, te sugerimos que dividas tu clase en parejas y pidas a cada grupo que trabaje conjuntamente para completar el tutorial utilizando la [programación por parejas](https://youtu.be/vgkahOzFH2Q).\n-   En el caso de los alumnos de grado medio, nos parece que trabajar de forma independiente en los tutoriales funciona bien. A veces ayuda permitir que los alumnos elijan su propio tutorial. Si los alumnos no están interesados en Minecraft, pueden tener una experiencia similar con los tutoriales [Código con Anna y Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) o [Star Wars](https://code.org/starwars).\n-   Para los alumnos más mayores o adultos, el tutorial [Artista](https://studio.code.org/s/artist/lessons/1/levels/1) funciona muy bien como reto independiente o como actividad de programación en parejas."
         },
         "cce13cd7-04e3-4d93-9b74-9c3df8a7691a": {
           "description": "Si un grupo o individuo termina antes, pueden intentar otro tutorial visitando [code.org/learn](<>)."
         },
         "461e1eda-c85f-4f41-aa4d-719d6a88d8d2": {
-          "description": "#### Informe\n\nSolicita a los alumnos que reflexionen sobre las actividades del día. ¿Qué han aprendido sobre la codificación? ¿De programación? ¿Depuración?\n\n-   ¿Cuáles son los ángulos interiores que forman un cuadrado? ¿Y los de un triángulo?\n-   Dibuja una forma sencilla en tu papel e imagina el código utilizado para dibujarla. ¿Puedes escribir ese código junto a la forma? \n\n¿Cómo se sienten acerca de la informática y la codificación después de pasar una hora explorando?\n\n#### Celebrar\n\nExplica que hoy vas a pasar una hora codificando, porque esta semana es la Semana de la Educación en Ciencias de la Computación y millones de otros estudiantes en todo el mundo también han participado en una Hora del Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](https://code.org/certificates) con su nombre.\n\n#### Próximos pasos\n\nComunica a los alumnos que si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar code.org/learn para obtener una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
+          "description": "#### Informe\n\nSolicita a los alumnos que reflexionen sobre las actividades del día. ¿Qué han aprendido sobre la codificación? ¿De programación? ¿Depuración?\n\n-   ¿Cuáles son los ángulos interiores que forman un cuadrado? ¿Y los de un triángulo?\n-   Dibuja una forma sencilla en tu papel e imagina el código utilizado para dibujarla. ¿Puedes escribir ese código junto a la forma? \n\n¿Cómo se sienten acerca de la informática y la codificación después de pasar una hora explorando?\n\n#### Celebrar\n\nCuéntales que hoy vas a pasar una hora codificando, porque esta semana es la Semana de la Educación en Ciencias de la Computación y millones de estudiantes en todo el mundo también han participado en una Hora del Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](https://code.org/certificates) con su nombre.\n\n#### Próximos pasos\n\nComunica a los alumnos que si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar code.org/learn para obtener una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
         },
         "532c3e19-487f-44e0-97ff-a71886e169f2": {
-          "description": "#### Más allá de la Hora del Código\n\nUna vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. He aquí algunas ideas:\n\n-   Enseña los cursos [Code Studio Fundamentos de Ciencias de la Computación](http://code.org/educate/k5). Estos seis cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren camino a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de lecciones que ayudan a que el aprendizaje cobre vida. Code.org ofrece desarrollo profesional gratuito para estos cursos, en línea o en persona.\n-   **Visita [Tú Puedes Enseñar Ciencias de la Computación](https://studio.code.org/courses?view=teacher)** para más sugerencias de cursos.\n-   **Invita a un experto en ciencias de la computación para que hable en tu clase sobre su trabajo**. ¿No conoces a ningún informático local? Ponte en contacto con un voluntario en nuestro [mapa de voluntarios](https://code.org/volunteer/local)\n\nUtiliza la siguiente actividad para mejorar el aprendizaje de los alumnos. Puedes utilizarla como actividad fuera de clase o como enriquecimiento.\n\n**La Fotocopiadora**\n\n-   Entrega a los alumnos dos hojas de papel\n-   En una hoja dibuja una imagen sencilla, utilizando sólo líneas rectas.\n-   En la segunda hoja dibuja las instrucciones para recrear los comandos de esa imagen para moverse en línea recta y girar en varios ángulos.\n-   Intercambiar las hojas de instrucciones e intentar recrear la imagen utilizando sólo las instrucciones proporcionadas."
+          "description": "#### Más allá de la Hora del Código\n\nUna vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. He aquí algunas ideas:\n\n-   Enseña los cursos [Code Studio Fundamentos de Ciencias de la Computación](http://code.org/educate/k5). Estos seis cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren camino a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de estudio que ayudan a que el aprendizaje cobre vida. Code.org ofrece desarrollo profesional gratuito para estos cursos, en línea o en persona.\n-   **Visita [Tú Puedes Enseñar Ciencias de la Computación](https://studio.code.org/courses?view=teacher)** para más sugerencias de cursos.\n-   **Invita a un experto en informática para que hable en tu clase sobre su trabajo**. ¿No conoces a ningún informático local? Ponte en contacto con un voluntario en nuestro [mapa de voluntarios](https://code.org/volunteer/local)\n\nUtiliza la siguiente actividad para mejorar el aprendizaje de los alumnos. Puedes utilizarla como actividad extraescolar o como enriquecimiento.\n\n**La Fotocopiadora**\n\n-   Entrega a los alumnos dos hojas de papel\n-   En una hoja dibuja una imagen sencilla, utilizando sólo líneas rectas.\n-   En la segunda hoja dibuja las instrucciones para recrear los comandos de esa imagen para moverse en línea recta y girar en varios ángulos.\n-   Intercambiar las hojas de instrucciones e intentar recrear la imagen utilizando sólo las instrucciones proporcionadas."
         },
         "a2f60a17-c25f-4c4d-9f2d-384486d7a67d": {
           "name": "Preparando el terreno",
@@ -796,7 +796,7 @@
         },
         "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
           "tips": [
-            "Una forma de presentar la Hora del Código si no estás muy familiarizado con la codificación es mostrar uno de nuestros [vídeos inspiradores](https://hourofcode.com/us/resources#videos). Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los alumnos más jóvenes, sugerimos [La Hora del Código está Aquí](https://youtu.be/FC5FbmsH4fw)."
+            "Una forma de presentar la Hora del Código, si no estás muy familiarizado con la codificación, es mostrar uno de nuestros [vídeos inspiradores](https://hourofcode.com/us/resources#videos). Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los alumnos más jóvenes, sugerimos [La Hora del Código está Aquí](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "7f1244d9-811b-410c-96b2-9f7086959c6b": {
@@ -926,7 +926,7 @@
         "bdbf2184-a699-461e-b766-8b3e35e1a5e8": {
           "name": "Introducción",
           "description": "#### Crear Entusiasmo\n\n**Motivar:** Explica a los alumnos los objetivos de la actividad de hoy. Van a empezar a utilizar una nueva herramienta que les permitirá crear rápidamente aplicaciones que podrán enviarse al instante a sí mismos o a sus amigos para que las utilicen. \n\n**Vídeo:** El primer nivel de esta actividad es un vídeo que debería motivar a los estudiantes a completar la actividad y explicar cómo funcionará. Considera la posibilidad de verlo en clase y de hacer un rápido repaso después para responder a las preguntas.",
-          "progression_name": "Introducción al Laboratorio de Aplicaciones - Vídeo"
+          "progression_name": " Vídeo: Introducción al Laboratorio de Aplicaciones "
         },
         "430134f0-2f85-4888-abd3-f55fbf0753da": {
           "name": "Introducción al Laboratorio de aplicaciones",
@@ -986,11 +986,11 @@
         },
         "00b66dcf-d546-4649-aa21-6d97981fa444": {
           "name": "Preparando el terreno",
-          "description": "#### Preparando el Terreno\n\nDales la bienvenida a los alumnos a la clase y presenta muy brevemente la actividad del día.\n\n**Comenta:** \\_Hoy vamos a dedicar una hora a aprender a codificar. ¿Alguien ha oído antes el término \"código\"? ¿Qué significa?\n\nLos alumnos pueden mencionar que un \"código\" es como un mensaje secreto, o que está relacionado con los ordenadores de alguna manera."
+          "description": "#### Preparando el Terreno\n\nDamos la bienvenida a los alumnos a la clase y presentamos muy brevemente la actividad del día.\n\n**Comenta:** \\_Hoy vamos a dedicar una hora a aprender a codificar. ¿Alguien ha oído antes el término \"código\"? ¿Qué significa?\n\nLos alumnos pueden mencionar que un \"código\" es como un mensaje secreto, o que está relacionado con los ordenadores de alguna manera."
         },
         "88f6ccc1-0efa-4c60-985c-971a235d5645": {
           "tips": [
-            "Una forma de presentar la Hora del Código si no estás muy familiarizado con la codificación es mostrar uno de nuestros [vídeos inspiradores](https://hourofcode.com/us/resources#videos). Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los alumnos más jóvenes, sugerimos [La Hora del Código está Aquí](https://youtu.be/FC5FbmsH4fw)."
+            "Una forma de presentar la Hora del Código, si no estás muy familiarizado con la codificación, es mostrar uno de nuestros [vídeos inspiradores](https://hourofcode.com/us/resources#videos). Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los alumnos más jóvenes, sugerimos [La Hora del Código está Aquí](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "dbeab27b-4231-4281-be73-ae2aaa3d94b2": {
@@ -1117,7 +1117,7 @@
           "name": "Introducción",
           "description": "#### Preparando el Terreno\n\nDa la bienvenida a los alumnos a la clase y presenta muy brevemente la actividad del día.\n\nComenta: _Hoy vamos a dedicar una hora a aprender a codificar. ¿Alguien ha oído hablar antes del término \"código\"? ¿Qué significa?_\n\nLos alumnos pueden mencionar que un \"código\" es como un mensaje secreto, o que está relacionado con los ordenadores de alguna manera.",
           "tips": [
-            "Una forma de presentar la Hora del Código si no estás muy familiarizado con la codificación es mostrar uno de nuestros [vídeos inspiradores](https://hourofcode.com/us/resources#videos). Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los alumnos más jóvenes, sugerimos [La Hora del Código está Aquí](https://youtu.be/FC5FbmsH4fw)."
+            "Una forma de presentar la Hora del Código, si no estás muy familiarizado con la codificación, es mostrar uno de nuestros [vídeos inspiradores](https://hourofcode.com/us/resources#videos). Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los alumnos más jóvenes, sugerimos [La Hora del Código está Aquí](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "e7a740e5-690b-408c-b647-fb6f47cc2d3d": {
@@ -1206,7 +1206,7 @@
           "name": "Introducción",
           "description": "#### Preparando el Terreno\n\nDa la bienvenida a los alumnos a la clase y presenta muy brevemente la actividad del día.\n\nComenta: _Hoy vamos a dedicar una hora a aprender a codificar. ¿Alguien ha oído hablar antes del término \"código\"? ¿Qué significa?_\n\nLos alumnos pueden mencionar que un \"código\" es como un mensaje secreto, o que está relacionado con los ordenadores de alguna manera.",
           "tips": [
-            "Una forma de presentar la Hora del Código si no estás muy familiarizado con la codificación es mostrar uno de nuestros [vídeos inspiradores](https://hourofcode.com/us/resources#videos). Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los alumnos más jóvenes, sugerimos [La Hora del Código está Aquí](https://youtu.be/FC5FbmsH4fw)."
+            "Una forma de presentar la Hora del Código, si no estás muy familiarizado con la codificación, es mostrar uno de nuestros [vídeos inspiradores](https://hourofcode.com/us/resources#videos). Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los alumnos más jóvenes, sugerimos [La Hora del Código está Aquí](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "6b27ea94-da11-4c56-99c0-48e35ac5fbda": {
@@ -1246,7 +1246,7 @@
         },
         "1f9abc1c-6217-4fb4-a348-e0293042dc7a": {
           "name": "Preparando el terreno",
-          "description": "Da la bienvenida a los alumnos a la clase y presenta muy brevemente la actividad del día. Anima a los alumnos a tomarse su tiempo con la actividad y a experimentar."
+          "description": "Damos la bienvenida a los alumnos a la clase y presentamos muy brevemente la actividad del día. Anima a los alumnos a dedicarle tiempo a la actividad y a experimentar."
         },
         "16f14f63-53a6-4f79-b6cf-8aa9f3b22e69": {
           "description": "¿Cuál es tu forma favorita de ser creativo?"
@@ -1263,7 +1263,7 @@
         },
         "faf90391-c01a-42d3-b79c-0becac0a50d2": {
           "name": "Apoyo General",
-          "description": "**Apoyo general:** Como profesor, tu papel es principalmente el de apoyar a los estudiantes a medida que avanzan en la tutoría. A continuación se ofrecen algunos consejos que deberían ayudar a los estudiantes, independientemente del nivel en el que estén trabajando:\n\n-   Anime a los estudiantes a pasar por los diferentes \"extras\" en el orden que deseen. Siempre pueden volver al nivel 1 para revisar el menú.\n\n-   **Colabora con los Compañeros:** Anima a los alumnos a consultar con un compañero cuando se queden atascados. Como este tutorial incluye vídeos y los estudiantes pueden llevar auriculares, puede ser fácil \"entrar en una burbuja\". Ayude a romper esas barreras emparejando activamente a los estudiantes si parece que necesitan ayuda. Dependiendo de la edad y la capacidad de sus alumnos, puede considerar dividir formalmente su clase en parejas para completar el tutorial utilizando la [programación por parejas](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Lee las instrucciones:** Las instrucciones suelen proporcionar consejos útiles sobre cómo completar el nivel. Antes de completar un nivel para un estudiante asegúrate de que ha mirado bien la imagen de destino y ha leído todo el texto que hay.\n\n-   ![](https://curriculum.code.org/media/uploads/hint.png)**¿Atascado? Busca las pistas:** Cada nivel incluye una pista con más detalles sobre cómo pasar el nivel. Si los alumnos intentan pasar los rompecabezas lo más rápido posible, puede que se den cuenta de que sólo tienen que esperar un tiempo determinado para que se ejecute todo el código antes de seguir adelante. Muchos niveles contienen una segunda pista con sugerencias para ser aún más creativos ampliando la tarea.\n\n-   **Avanza y Retrocede:** A veces, los alumnos se benefician más de volver a un nivel difícil. Todos los niveles son independientes entre sí, aunque se basan en cierta medida en los conceptos introducidos previamente. \n\n-   **Tómate tu tiempo y experimenta:** Lee el código con atención. Aunque los primeros niveles indican a los estudiantes exactamente lo que deben hacer para aprobar, también deben sentirse libres de probar sus propias ideas. No hay respuestas correctas o incorrectas en estos niveles. (¡Todo es juego libre!)"
+          "description": "**Apoyo general:** Como profesor, tu papel es principalmente el de apoyar a los estudiantes a medida que avanzan en la tutoría. A continuación se ofrecen algunos consejos que deberían ayudar a los estudiantes, independientemente del nivel en el que estén trabajando:\n\n-   Anima a los estudiantes a pasar por los diferentes \"extras\" en el orden que deseen. Siempre pueden volver al nivel 1 para revisar el menú.\n\n-   **Colabora con los Compañeros:** Anima a los alumnos a consultar con un compañero cuando se queden atascados. Como este tutorial incluye vídeos y los estudiantes pueden llevar auriculares, puede ser fácil \"entrar en una burbuja\". Ayude a romper esas barreras emparejando activamente a los estudiantes si parece que necesitan ayuda. Dependiendo de la edad y la capacidad de sus alumnos, puede considerar dividir formalmente su clase en parejas para completar el tutorial utilizando la [programación por parejas](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Lee las instrucciones:** Las instrucciones suelen proporcionar consejos útiles sobre cómo completar el nivel. Antes de completar un nivel para un estudiante asegúrate de que ha mirado bien la imagen de destino y ha leído todo el texto que hay.\n\n-   ![](https://curriculum.code.org/media/uploads/hint.png)**¿Dificultades? Busca las pistas:** Cada nivel incluye una pista con más detalles sobre cómo pasar el nivel. Si los alumnos intentan pasar los rompecabezas lo más rápido posible, puede que se den cuenta de que sólo tienen que esperar un tiempo determinado para que se ejecute todo el código antes de seguir adelante. Muchos niveles contienen una segunda pista con sugerencias para ser aún más creativos ampliando la tarea.\n\n-   **Avanza y Retrocede:** A veces, los alumnos se benefician más de volver a un nivel difícil. Todos los niveles son independientes entre sí, aunque se basan en cierta medida en los conceptos introducidos previamente. \n\n-   **Tómate tu tiempo y experimenta:** Lee el código con atención. Aunque los primeros niveles indican a los estudiantes exactamente lo que deben hacer para aprobar, también deben sentirse libres de probar sus propias ideas. No hay respuestas correctas o incorrectas en estos niveles. (¡Todo es juego libre!)"
         },
         "bfdf9e27-6c04-46fc-8539-1d87d7e507dd": {
           "tips": [
@@ -1310,13 +1310,13 @@
         },
         "0dffb367-12f3-485a-bcde-cf4e789baed9": {
           "name": "Siguientes Pasos",
-          "description": "Comunica a los alumnos que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar [code.org/learn](http://code.org/learn) para ver una lista de opciones o, si estás planeando alguna de las otras actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
+          "description": "Comenta a los alumnos que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar [code.org/learn](http://code.org/learn) para ver una lista de opciones o, si estás planeando alguna de las otras actividades para ampliar la enseñanza, cuéntales lo que viene a continuación en tu aula."
         },
         "7905508e-c354-4909-93eb-38e2e9ef5661": {
           "description": "Pídele a los alumnos que añadan sus notas adhesivas \"importantes\" o tarjetas de notas a su mapa mental de \"Ciencias de Computación\" antes de que salgan de clase. Trata de llenar el cuadro con muchas ideas acerca de lo que son las Ciencias de Computación y por qué son importantes."
         },
         "4587cdae-c2ce-4d5f-9540-063b6383388d": {
-          "description": "#### Más Allá de la Hora del Código\n\nDespués de que termine la Hora del Código, hay muchas maneras de seguir enseñando ciencias de la computación en tu aula de K-5. He aquí algunas ideas:\n\n-   \\*\\*Enseña los cursos [Fundamentos de Informática de Code Studio](http://code.org/educate/k5). Estos seis cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren paso a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de estudio que ayudan a que el aprendizaje cobre vida. Code.org ofrece desarrollo profesional gratuito para estos cursos, en línea o en persona.\n-   **Visita [Tú Puedes Enseñar Informática](https://studio.code.org/courses?view=teacher)** para ver más sugerencias de cursos.\n-   Invita a un experto en informática para que hable en tu clase sobre su trabajo\\*\\*. ¿No conoces a ningún informático local? Ponte en contacto con un voluntario en nuestro [mapa de voluntarios](https://code.org/volunteer/local)"
+          "description": "#### Más Allá de la Hora del Código\n\nDespués de que termine la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. He aquí algunas ideas:\n\n-   \\*\\*Enseña los cursos [Fundamentos de Informática de Code Studio](http://code.org/educate/k5). Estos seis cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren paso a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de estudio que ayudan a que el aprendizaje cobre vida. Code.org ofrece desarrollo profesional gratuito para estos cursos, en línea o presenciales.\n-   **Visita [Tú Puedes Enseñar Informática](https://studio.code.org/courses?view=teacher)** para ver más sugerencias de cursos.\n-   Invita a un experto en informática para que hable en tu clase sobre su trabajo\\*\\*. ¿No conoces a ningún informático local? Ponte en contacto con un voluntario en nuestro [mapa de voluntarios](https://code.org/volunteer/local)"
         },
         "1a919c4d-50b6-47fd-bcee-b2465b5c0f84": {
           "name": "Preparando el terreno",
@@ -1472,7 +1472,7 @@
         },
         "2a0e6d6d-f8b2-4f88-86e2-1b4c8c2ee300": {
           "name": "Ejemplo 2: Uso de la visión de la Información para mejorar el modelo",
-          "description": "Añadir más datos de entrenamiento no sólo cambia los resultados, sino también los datos mostrados en la visión de la información. A veces, el gráfico de resultados que se muestra puede aclarar por qué los resultados no coinciden con las expectativas.\n\nConsideremos un estudiante que quiere entrenar a la Inteligencia Artificial para que reconozca a los peces \"enfadados\".\nQuiere conseguirlo seleccionando cualquier pez con cejas que apunten hacia dentro y bocas fruncidas. Etiquetarán a un pez como \"enfadado\" si tiene una combinación de estos rasgos:\n\n| \"Angry\" eyes: ![](https://curriculum.code.org/media/uploads/eyes11.png)![](https://curriculum.code.org/media/uploads/eyes17.png) \"Angry\" mouths: ![](https://curriculum.code.org/media/uploads/mouth11.png)![](https://curriculum.code.org/media/uploads/mouth9.png)![](https://curriculum.code.org/media/uploads/mouth12.png)![](https://curriculum.code.org/media/uploads/mouth6.png) |\n| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n\n¿Puede la Inteligencia Artificial averiguar lo que hace el alumno sin ser programada explícitamente? Depende de la cantidad de datos de entrenamiento que proporcione el alumno y de la calidad de los datos del conjunto. \n\n| \"Angry\" fish - training: 30                                                       | \"Angry\" fish - training: 200                                               |\n| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |\n| <img src=\"https://curriculum.code.org/media/uploads/30_foyL4uc.png\" width=\"4000\"> | <img src=\"https://curriculum.code.org/media/uploads/200.png\" width=\"4000\"> |\n\n| \\_Aquí, podemos ver que la Inteligencia Artificial captó enseguida que los \"ojos\" eran el rasgo más importante, pero seguido de cerca por el \"color\", no por la \"boca\". En la imagen de la izquierda hay algunos peces de color púrpura que tienen bocas diferentes a las que el alumno tenía como objetivo. ¿Quizás muchos de los peces \"enfadados\" que el alumno seleccionó inicialmente eran morados? Una forma de mejorar el modelo sería continuar el entrenamiento, asegurándose de seguir hasta que varios peces morados \"no enfadados\" hayan sido etiquetados correctamente."
+          "description": "Añadir más datos de entrenamiento no sólo cambia los resultados, sino también los datos mostrados en la visión de la información. A veces, el gráfico de resultados que se muestra puede aclarar por qué los resultados no coinciden con las expectativas.\n\nConsideremos un estudiante que quiere entrenar a la Inteligencia Artificial para que reconozca a los peces \"enfadados\".\nQuiere conseguirlo seleccionando cualquier pez con cejas que apunten hacia dentro y bocas fruncidas. Etiquetarán a un pez como \"enfadado\" si tiene una combinación de estos rasgos:\n\n| \"Angry\" eyes: ![](https://curriculum.code.org/media/uploads/eyes11.png)![](https://curriculum.code.org/media/uploads/eyes17.png) \"Angry\" mouths: ![](https://curriculum.code.org/media/uploads/mouth11.png)![](https://curriculum.code.org/media/uploads/mouth9.png)![](https://curriculum.code.org/media/uploads/mouth12.png)![](https://curriculum.code.org/media/uploads/mouth6.png) |\n| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n\n¿Puede la Inteligencia Artificial averiguar lo que hace el alumno sin ser programada explícitamente? Depende de la cantidad de datos de entrenamiento que proporcione el alumno y de la calidad de los datos del conjunto. \n\n| \"Angry\" fish - training: 30                                                       | \"Angry\" fish - training: 200                                               |\n| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |\n| <img src=\"https://curriculum.code.org/media/uploads/30_foyL4uc.png\" width=\"4000\"> | <img src=\"https://curriculum.code.org/media/uploads/200.png\" width=\"4000\"> |\n\n\\| \\_Aquí, podemos ver que la Inteligencia Artificial captó enseguida que los \"ojos\" eran el rasgo más importante, pero seguido de cerca por el \"color\", no por la \"boca\". En la imagen de la izquierda hay algunos peces de color púrpura que tienen bocas diferentes a las que el alumno tenía como objetivo. ¿Quizás muchos de los peces \"enfadados\" que el alumno seleccionó inicialmente eran morados? Una forma de mejorar el modelo sería continuar el entrenamiento, asegurándose de seguir hasta que varios peces morados \"no enfadados\" hayan sido etiquetados correctamente."
         },
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Calentamiento"
@@ -1511,7 +1511,7 @@
           "description": "#### Informe\n\nPide a los alumnos que reflexionen sobre las actividades del día. ¿Qué han aprendido sobre la codificación? ¿Sprites? ¿Eventos?\n\n¿Cómo se sienten con respecto a la informática y la codificación después de pasar una hora explorando?\n\n#### Próximos Pasos\n\nComenta a los alumnos que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Visita [Conexiones CS][0] para obtener ideas sobre cómo integrar las ciencias de la computación en otras asignaturas o lee más sobre nuestra [oferta de cursos para escuelas primarias][1]."
         },
         "d6c0f379-8c4b-44a4-a027-b1b0d67a9605": {
-          "progression_name": "Construir una Interfaz de Usuario con el Modo de Diseño"
+          "progression_name": "Creando una Interfaz de Usuario con el Modo de Diseño"
         },
         "5baa2f9a-16b7-412f-b3cb-4fb126c06add": {
           "progression_name": "Eligiendo Buenas Identificaciones"
@@ -1783,7 +1783,7 @@
           "progression_name": "Sprites y el Bucle Dibujar"
         },
         "7cde2f9a-d424-43de-bb23-9301a3467204": {
-          "progression_name": "Animar Tu Escena"
+          "progression_name": "Anima tu Escena"
         },
         "707ace55-660a-436d-aabd-9a63ca2b00d8": {
           "name": "Resumen de la lección",
@@ -1973,7 +1973,7 @@
           "progression_name": "Muestra del juego de salto de plataformas"
         },
         "7cee437f-0aa0-4131-9d81-d5cac21d1cab": {
-          "progression_name": "Crea un salto de plataformas"
+          "progression_name": "Crear un Saltador de Plataformas"
         },
         "f0cc8898-9190-4844-9010-7229bb0a652a": {
           "progression_name": "Plataforma de Salto - Antecedentes y variables"
@@ -2043,8 +2043,8 @@
           "progression_name": "Ejemplo de máquina de emociones"
         },
         "db8d9f01-122e-4e38-8b20-7ad2414b1086": {
-          "name": "Crear una app",
-          "progression_name": "Crear una app"
+          "name": "Creando una Aplicación",
+          "progression_name": "Creando una Aplicación"
         },
         "c26ef3cd-6946-42be-9cbb-abb4cc3db2a2": {
           "progression_name": "Resumen de la lección"
@@ -2076,7 +2076,7 @@
           "progression_name": "Responder a los eventos del tablero"
         },
         "7f68e527-5e45-45e4-a825-3229b3ef7cfd": {
-          "progression_name": "Eventos del tablero"
+          "progression_name": "Eventos de la Placa"
         },
         "ae40b937-a438-41f6-a84c-2d68bd235ab0": {
           "progression_name": "Botones e interruptores"
@@ -2285,7 +2285,7 @@
           "progression_name": "Bicicleta Inteligente - Intermitentes"
         },
         "21848bf7-b017-406c-a1f5-9451d0e782b4": {
-          "progression_name": "Circuitos de botones"
+          "progression_name": "Circuitos de Pulsadores"
         },
         "4f72e18c-1119-4576-baa5-49e6b0c0c6a6": {
           "name": "Terminar el prototipo",
@@ -2301,7 +2301,7 @@
           "progression_name": "Pantalla de Usuario"
         },
         "dc7dc8a0-f6d6-46aa-b3d6-ed54ec45d0e8": {
-          "progression_name": "Entrada y salida de la placa"
+          "progression_name": "Entradas y Salidas de la Placa"
         },
         "79919bdd-fd5c-40d3-bff5-2b51c1b30f08": {
           "progression_name": "Retoques finales"
@@ -2337,7 +2337,7 @@
           "progression_name": "Resumen de la lección"
         },
         "8c2572d4-ae23-481b-9a2d-a82c1ca6c083": {
-          "progression_name": "Números binarios"
+          "progression_name": "Números Binarios"
         },
         "039f881e-d9a5-42e0-add5-9780d8bdc15f": {
           "name": "Binario y datos",
@@ -2412,8 +2412,8 @@
           "progression_name": "Instrucciones para la encuesta fin de curso"
         },
         "8667bd82-fed3-4fa1-8d54-bb13b22370e3": {
-          "name": "Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación",
-          "progression_name": "Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación"
+          "name": "Encuesta Fin de Curso de Descubrimientos de la Informática",
+          "progression_name": "Encuesta Fin de Curso de Descubrimientos de la Informática"
         },
         "5c41d9b3-d4cc-4069-b143-2df7d9e2e91f": {
           "name": "Resumen de la lección",
@@ -2478,7 +2478,7 @@
           "progression_name": "Introducción al modo de diseño"
         },
         "dad0e2b6-695d-4d58-bf2b-0c88f27f06ac": {
-          "progression_name": "Construir una Pantalla"
+          "progression_name": "Crear una Pantalla"
         },
         "0c50e3b4-a993-42ff-959b-6e197b358a9a": {
           "progression_name": "Elementos del modo de diseño"
@@ -2490,14 +2490,14 @@
           "progression_name": "Diseña una Pantalla para tu Aplicación"
         },
         "aae0a3cd-a0e4-4945-b7fb-f9b4e54cc9c4": {
-          "name": "Proyecto de aplicación: diseño de pantalla",
-          "progression_name": "Proyecto de aplicación: diseño de pantalla"
+          "name": "Proyecto de Aplicación: Diseño de Pantalla",
+          "progression_name": "Proyecto de Aplicación: Diseño de Pantalla"
         },
         "ae32291b-bce5-4e45-ac78-5e24b891f867": {
           "progression_name": "Resumen de la lección"
         },
         "b4f90851-d1cc-4d08-bf3e-b8713bb6331d": {
-          "progression_name": "Añadiendo las Pantallas"
+          "progression_name": "Añadiendo Pantallas"
         },
         "ed742835-e65c-4038-9db0-9ec1c5d540eb": {
           "progression_name": "Eventos"
@@ -3864,7 +3864,7 @@
           "progression_name": "Sprites y el Bucle Dibujar"
         },
         "40b1875f-642b-41c8-b209-a80034c39f59": {
-          "progression_name": "Animar Tu Escena"
+          "progression_name": "Anima tu Escena"
         },
         "b4370a4e-d466-4b6c-bdc9-68f07f5f64ec": {
           "name": "Resumen de la lección",
@@ -4060,7 +4060,7 @@
           "progression_name": "Muestra del juego de salto de plataformas"
         },
         "35d19875-08f0-421b-8044-60f3264fb51c": {
-          "progression_name": "Crea un salto de plataformas"
+          "progression_name": "Crear un Saltador de Plataformas"
         },
         "5046d996-d0fd-42f1-a168-2ad392ce30f7": {
           "progression_name": "Plataforma de Salto - Antecedentes y variables"
@@ -4126,7 +4126,7 @@
           "progression_name": "Resumen de la lección"
         },
         "f7cf3218-cefb-4c70-bc21-4f565bbe32e2": {
-          "progression_name": "Eventos del tablero"
+          "progression_name": "Eventos de la Placa"
         },
         "e958bf4b-0c69-4be0-8d01-650699cd5711": {
           "progression_name": "Responder a los eventos del tablero"
@@ -4345,7 +4345,7 @@
           "progression_name": "Bicicleta Inteligente - Intermitentes"
         },
         "6dde267c-0406-4d04-bf98-05356f89668a": {
-          "progression_name": "Circuitos de botones"
+          "progression_name": "Circuitos de Pulsadores"
         },
         "ad0b1d36-a873-418e-b719-b9306fc37b37": {
           "name": "Terminar el prototipo",
@@ -4361,7 +4361,7 @@
           "progression_name": "Pantalla de Usuario"
         },
         "818f22f8-26b8-4738-b143-aff923b35b45": {
-          "progression_name": "Entrada y salida de la placa"
+          "progression_name": "Entradas y Salidas de la Placa"
         },
         "fc972a0e-ea6c-4b2a-ac42-e8636a5ec8c4": {
           "progression_name": "Retoques finales"
@@ -4422,7 +4422,7 @@
           "progression_name": "Introducción al modo de diseño"
         },
         "440973a7-6351-45b5-938f-17845fbd92c6": {
-          "progression_name": "Construir una Pantalla"
+          "progression_name": "Crear una Pantalla"
         },
         "a2ef497e-7a9d-48aa-a188-412d082afd64": {
           "progression_name": "Recorrido por el modo de diseño"
@@ -4437,14 +4437,14 @@
           "progression_name": "Diseña una Pantalla para tu Aplicación"
         },
         "9271144d-1d13-473d-99ba-96efd4b022ea": {
-          "name": "Proyecto de aplicación: diseño de pantalla",
-          "progression_name": "Proyecto de aplicación: diseño de pantalla"
+          "name": "Proyecto de Aplicación: Diseño de Pantalla",
+          "progression_name": "Proyecto de Aplicación: Diseño de Pantalla"
         },
         "99d617bc-9759-4d6d-928e-948f53a627f8": {
           "progression_name": "Resumen de la lección"
         },
         "1d83d565-21fa-499c-8a66-27f53423ea9b": {
-          "progression_name": "Añadiendo las Pantallas"
+          "progression_name": "Añadiendo Pantallas"
         },
         "351d0f3e-feee-4c78-8318-4666de043c40": {
           "progression_name": "Aplicaciones con varias pantallas"
@@ -4498,7 +4498,7 @@
           "progression_name": "Resumen de la lección"
         },
         "d9046a60-1bfa-40fd-bc94-4d9fb418cabf": {
-          "progression_name": "Números binarios"
+          "progression_name": "Números Binarios"
         },
         "f6def880-27cc-4670-a83c-e3649b67f3aa": {
           "name": "Binario y datos",
@@ -5038,7 +5038,7 @@
           "progression_name": "Sprites y el Bucle Dibujar"
         },
         "219f0d70-6ef7-4477-949e-180dbaef8e34": {
-          "progression_name": "Animar Tu Escena"
+          "progression_name": "Anima tu Escena"
         },
         "bb202266-76ce-425e-83e1-fa5ccee34421": {
           "name": "Juego libre",
@@ -5330,8 +5330,8 @@
           "progression_name": "Ejemplo de máquina de emociones"
         },
         "44e3ffdb-ef64-47a5-bdd5-1520778f694e": {
-          "name": "Crear una app",
-          "progression_name": "Crear una app"
+          "name": "Creando una Aplicación",
+          "progression_name": "Creando una Aplicación"
         },
         "38c450dd-db4d-4662-b493-c40b418d561a": {
           "progression_name": "Resumen de la lección"
@@ -5363,7 +5363,7 @@
           "progression_name": "Responder a los eventos del tablero"
         },
         "68beaef7-db4f-4053-88df-7129a41d99ea": {
-          "progression_name": "Eventos del tablero"
+          "progression_name": "Eventos de la Placa"
         },
         "9e2c3efe-f050-4a20-8a47-d447e5491a18": {
           "progression_name": "Botones e interruptores"
@@ -5583,7 +5583,7 @@
           "progression_name": "Bicicleta Inteligente - Intermitentes"
         },
         "54241a71-28da-4a59-86c9-3f9f07e9406f": {
-          "progression_name": "Circuitos de botones"
+          "progression_name": "Circuitos de Pulsadores"
         },
         "4c1b3b6f-ce5f-4b2d-acc1-9a9e9f393da1": {
           "name": "Terminar el prototipo",
@@ -5599,7 +5599,7 @@
           "progression_name": "Pantalla de Usuario"
         },
         "b55ac1ef-838d-45e7-9bd6-b334df8c02d5": {
-          "progression_name": "Entrada y salida de la placa"
+          "progression_name": "Entradas y Salidas de la Placa"
         },
         "65f5741b-d679-49e2-96f2-a2dcfa926374": {
           "progression_name": "Retoques finales"
@@ -5865,7 +5865,7 @@
           "progression_name": "Resumen de la lección"
         },
         "ea794705-6489-44b1-a635-9a1a2249d4e5": {
-          "progression_name": "Números binarios"
+          "progression_name": "Números Binarios"
         },
         "a2699212-b72a-4863-9d12-e8451b93f5c6": {
           "name": "Binario y datos",
@@ -5991,7 +5991,7 @@
           "progression_name": "Introducción al modo de diseño"
         },
         "9b0828bc-ccf8-466b-b351-5d9b0fcb4d9a": {
-          "progression_name": "Construir una Pantalla"
+          "progression_name": "Crear una Pantalla"
         },
         "84dbdb28-4574-4fee-bbaa-2e5914ee2989": {
           "progression_name": "Elementos del modo de diseño"
@@ -6003,14 +6003,14 @@
           "progression_name": "Diseña una Pantalla para tu Aplicación"
         },
         "023b14b7-4298-426c-bbc3-2d60a52f08c1": {
-          "name": "Proyecto de aplicación: diseño de pantalla",
-          "progression_name": "Proyecto de aplicación: diseño de pantalla"
+          "name": "Proyecto de Aplicación: Diseño de Pantalla",
+          "progression_name": "Proyecto de Aplicación: Diseño de Pantalla"
         },
         "8dcb2f89-a876-4734-ae35-72624eb8a806": {
           "progression_name": "Resumen de la lección"
         },
         "86d32260-eb05-4162-a79e-f6d56995793c": {
-          "progression_name": "Añadiendo las Pantallas"
+          "progression_name": "Añadiendo Pantallas"
         },
         "2462e46e-2f0c-48e2-b59d-bd3bb61ab202": {
           "progression_name": "Eventos"
@@ -6046,7 +6046,7 @@
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
           "description": "#### Preparando el Escenario\n\nDa la bienvenida a los alumnos a la clase y presenta la actividad del día.",
           "tips": [
-            "Una forma de presentar la Hora del Código, si no estás muy familiarizado con la codificación, es mostrar uno de [nuestros vídeos inspiradores](https://hourofcode.com/promote/resources#videos). Elige el que creas que tus alumnos encontrarán más estimulante y compártelo ahora. Para los alumnos de los grados intermedios, sugerimos [La Hora del Código está Aquí](https://youtu.be/FC5FbmsH4fw)."
+            "Una forma de presentar la Hora del Código, si no estás muy familiarizado con la codificación, es mostrar uno de [nuestros vídeos inspiradores][0]. Elige el que creas que tus alumnos encontrarán más estimulante y compártelo ahora. Para los alumnos de los grados intermedios, sugerimos [La Hora del Código está Aquí][1]."
           ]
         },
         "d99fc09e-a586-41df-84b2-e552cc4735e3": {
@@ -6059,7 +6059,7 @@
           "description": "¿Sabías que la informática puede ser muy creativa? De hecho, se puede hacer arte con el código. Como recordatorio, el código es un conjunto de instrucciones que un ordenador puede entender. Al igual que la elección de los colores de la pintura, la elección del código que escribes puede ser una oportunidad para expresar tu creatividad. \n\nHoy vamos a utilizar la poesía para inspirar nuestra codificación creativa. ¿Alguien sabe qué es la poesía? ¿Tienes algún poema o poeta favorito? "
         },
         "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
-          "description": "**Leer poesía juntos:** Leer [algunos poemas](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) juntos en la clase, practicando el nombre del estado de ánimo de cada poema. Anima a los alumnos a compartir su interpretación, aunque sea diferente a la de los demás. "
+          "description": "**Leer poesía juntos:** Leer [algunos poemas][0] juntos en la clase, practicando el nombre del estado de ánimo de cada poema. Anima a los alumnos a compartir su interpretación, aunque sea diferente a la de los demás. "
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
           "name": "Arte del Poema",
@@ -6121,8 +6121,8 @@
           "description": "#### Más allá de la Hora del Código\n\nUna vez finalizada la Hora del Código, hay muchas maneras de continuar con la enseñanza de las ciencias de la computación en tu aula de K-5. He aquí algunas ideas:\n\n-   Enseña los cursos [Code Studio Fundamentos de Informática](http://code.org/educate/k5). Estos seis cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren camino a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de estudio que ayudan a que el aprendizaje cobre vida. Code.org ofrece formación del profesorado gratuita para estos cursos, en línea o presencial.\n\n-   Invita a un experto en informática para que hable en tu clase sobre su trabajo. ¿No conoces a ningún informático local? Ponte en contacto con un voluntario en nuestro [mapa de voluntarios](https://code.org/volunteer/local)"
         },
         "f108ae93-f672-4062-b6d6-522901659990": {
-          "name": "Encuesta fin de curso de Descubrimientos de Ciencias de la Computación",
-          "progression_name": "Encuesta fin de curso de Descubrimientos de Ciencias de la Computación"
+          "name": "Encuesta Fin de Curso de Descubrimientos de la Informática",
+          "progression_name": "Encuesta Fin de Curso de Descubrimientos de la Informática"
         },
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
           "name": "Introducción",
@@ -7948,10 +7948,10 @@
           ]
         },
         "18c817e9-4ffc-43c1-b470-4ae4fb703372": {
-          "description": "**Muestra:** **\\*Clave de símbolos** o escribe las acciones permitidas en la pizarra - asegúrate de que están en un lugar donde se puedan ver durante toda la actividad. Explica a la clase que éstas serán las únicas cuatro acciones que podrán utilizar en este ejercicio. Para esta tarea, darán instrucciones a su amigo \"robot\" para que construya una pila de tazas específica utilizando únicamente los comandos que aparecen en la clave.\n\n**Modelo:** Para explicar cómo deben funcionar las instrucciones, modele para la clase cómo crear y seguir un algoritmo para replicar un patrón simple. Coloca una sola pila de vasos delante de ti para empezar.\n\n**Muestra:** Sostén el patrón que piensas modelar. Un patrón simple de tres tazas es un buen punto de partida.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/image_29uZ9YD.png\" style=\"max-width: 300px; margin: 10px;\">\n\n**Sugerencia:** Pregunta a la clase cuál debe ser la primera instrucción, utilizando _sólo las cuatro instrucciones permitidas_. El primer movimiento debe ser \"recoger la taza\". Si los alumnos sugieren otra cosa de la lista, realiza esa acción y permite que vean su error.  Si sugieren algo que no sea de la lista, haz una reacción clara de mal funcionamiento y hazles saber que la orden no se ha entendido.\n\nCon la taza en la mano, pide a la clase que continúe dándole instrucciones hasta que coloque la primera taza. Este es un buen momento para aclarar que \"paso adelante\" y \"paso atrás\" implican cada uno el movimiento de media anchura de la taza. Consulta la siguiente imagen como referencia.\n\n![Patrón de 3 tazas](https://curriculum.code.org/media/uploads/image_d0bGRBl.png)\n\nContinúa pidiendo instrucciones a la clase hasta que hayas completado todo el diseño.\n\nUna vez que tu pila esté completa, señala que te acaban de dar una lista de pasos para completar una tarea. Eso es un algoritmo.  Los algoritmos son estupendos para compartir ideas, pero deletrearlos palabra por palabra puede llevar mucho tiempo. Para eso están los símbolos.  Cuando conviertes un algoritmo en símbolos que un robot (o un ordenador) entiende, eso se llama programación.\n\nPide a la clase que te ayude a escribir el \"programa\" de ese primer movimiento cambiando el texto por una flecha. A continuación, trabaja con ellos para escribir el resto de movimientos necesarios para completar el patrón. Dependiendo de la confianza de tus alumnos, puedes alternar con frecuencia entre actuar como \"robot\" y escribir el código, o puedes empujarles a escribir todo el programa antes de ponerlo en práctica. Una posible solución es la siguiente:\n\n![Solución de 3 tazas](https://curriculum.code.org/media/uploads/image_xmBkoQZ_0OrQqsy.png)\n\n**Voluntario:** Una vez que la clase haya completado el programa modelo, pide a uno de los alumnos que se acerque y actúe como \"robot\" para asegurarse de que el programa realmente funciona. Anímale a decir las instrucciones en voz alta mientras \"ejecuta\" el código."
+          "description": "**Muestra:** **\\*Clave de símbolos** o escribe las acciones permitidas en la pizarra, asegúrate de que están en un lugar donde se puedan ver durante toda la actividad. Explica a la clase que éstas serán las únicas cuatro acciones que podrán utilizar en este ejercicio. Para esta tarea, darán instrucciones a su amigo \"robot\" para que construya una pila de vasos específica utilizando únicamente los comandos indicados en la clave.\n\n**Modelo:** Para explicar cómo deben funcionar las instrucciones, enseña a la clase cómo crear y seguir un algoritmo para replicar un patrón simple. Coloca una sola pila de vasos delante de ti para empezar.\n\n**Muestra:** Sostén el patrón que planeas representar. Un patrón simple de tres vasos es un buen punto de partida.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/image_29uZ9YD.png\" style=\"max-width: 300px; margin: 10px;\">\n\n**Sugerencia:** Pregunta a la clase cuál debe ser la primera instrucción, utilizando _sólo las cuatro instrucciones permitidas_. El primer movimiento debe ser \"recoger el vaso\". Si los alumnos sugieren otra cosa de la lista, realiza esa acción y permite que vean su error.  Si sugieren algo que no está en la lista, provoca una reacción clara de mal funcionamiento y hazles saber que la orden no se ha entendido.\n\nCon el vaso en la mano, pide a la clase que continúe dándote instrucciones hasta que se coloque el primer vaso. Este es un buen momento para aclarar que \"paso adelante\" y \"paso atrás\" implican cada uno el movimiento de media anchura del vaso. Consulta la imagen de abajo como referencia.\n\n![Patrón de 3 vasos](https://curriculum.code.org/media/uploads/image_d0bGRBl.png)\n\nSigue pidiendo instrucciones a la clase hasta que hayas completado todo el diseño.\n\nUna vez que tu pila esté completa, señala que te acaban de dar una lista de pasos para completar una tarea. Eso es un algoritmo.  Los algoritmos son estupendos para compartir ideas, pero deletrearlos palabra por palabra puede llevar mucho tiempo. Para eso están los símbolos.  Cuando conviertes un algoritmo en símbolos que un robot (o un ordenador) entiende, eso se llama programación.\n\nPide a la clase que te ayude a escribir el \"programa\" de ese primer movimiento cambiando el texto por una flecha. A continuación, trabaja con ellos para escribir el resto de movimientos necesarios para completar el patrón. Dependiendo de la confianza de tus alumnos, puedes alternar con frecuencia entre actuar como \"robot\" y escribir el código, o puedes empujarles a escribir todo el programa antes de ponerlo en práctica. Una posible solución es la siguiente:\n\n![Solución de 3 vasos](https://curriculum.code.org/media/uploads/image_xmBkoQZ_0OrQqsy.png)\n\n**Voluntario:** Una vez que la clase haya completado el programa modelo, pide a uno de los alumnos que se acerque y actúe como \"robot\" para asegurarse de que el programa realmente funciona. Anímale a que diga las instrucciones en voz alta mientras \"ejecuta\" el código."
         },
         "81f309fd-bac6-4eb6-9056-b469ccdf98b7": {
-          "description": "#### Programando tus Robots\n\n**Agrupar:** Coloca a los estudiantes en grupos de 4. Cada grupo debe dividirse a su vez en dos parejas - cada pareja desarrollará su propio programa que será \"ejecutado\" por la otra pareja.\n\n**Distribuir:** Dale a cada grupo una pila de vasos o recortes de papel.\n\n**Mostrar: \\*\\* \\*_\\\\_Ideas para Apilar Tazas** a la clase o reparte copias individuales para que las usen los grupos. Haz que cada pareja (no grupo) elija el diseño que quiere que hagan sus robots. Intenta que la primera vez elijan un diseño más fácil y que más adelante elijan un diseño más complejo. Anima a las parejas a mantener su elección en secreto para la otra mitad de su grupo.\n\n**Debatir:** Dale tiempo a cada pareja para deliberar sobre cómo debe construirse la pila, utilizando únicamente los símbolos proporcionados. Asegúrate de que cada grupo escriba el \"programa\" en algún lugar para que el \"robot\" lo lea más tarde.\n\n**Hacer:** Una vez que las dos parejas del grupo hayan completado sus programas, pueden turnarse para ser \"robots\" del otro siguiendo las instrucciones que la otra pareja escribió. Anima a los alumnos a que observen atentamente a su \"robot\" para asegurarse de que siguen las instrucciones. Si un alumno ve un error y levanta la mano, haz que el robot termine las instrucciones lo mejor posible. A continuación, pida a los alumnos que discutan el posible fallo y propongan soluciones. Continúa repitiendo hasta que la pila esté construida correctamente.\n\n**Circular:** Busca grupos que estén intentando tomar atajos añadiendo cosas extra (como números) a su código.  Elógialos por su ingenio, pero recuérdales que en este ejercicio los robots no entienden nada más que los símbolos proporcionados.  Si quieres, puedes sugerirles que guarden su brillante solución para la próxima vez que jueguen a este juego, ya que podrían tener la oportunidad de utilizar su invento pronto.\n\n**Repetir:** Dependiendo del tiempo disponible, mezcla las parejas y dales la oportunidad de hacer un patrón diferente. Cada vez que los grupos repitan el proceso, anímales a elegir un patrón más desafiante."
+          "description": "#### Programando tus Robots\n\n**Agrupar:** Coloca a los estudiantes en grupos de 4. Cada grupo debe dividirse en dos parejas - cada pareja desarrollará su propio programa para ser \"ejecutado\" por la otra pareja.\n\n**Distribuir:** Entrega a cada grupo una pila de vasos o recortes de papel.\n\n**Mostrar: \\*\\* \\*_\\\\_Ideas para Apilar Vasos** a la clase o reparte copias individuales para que las utilicen los grupos. Haz que cada pareja (no grupo) elija el diseño que quiere que hagan sus robots. Intenta que la primera vez elijan un diseño más fácil y que más adelante elijan un diseño más complejo. Anima a las parejas a mantener su elección en secreto para la otra mitad de su grupo.\n\n**Debatir:** Dale a cada pareja tiempo para deliberar sobre cómo debe construirse la pila, utilizando únicamente los símbolos proporcionados. Asegúrate de que cada grupo escriba el \"programa\" en algún lugar para que el \"robot\" lo lea más adelante.\n\n**Hacer:** Una vez que las dos parejas del grupo hayan completado sus programas, pueden turnarse para ser \"robots\" del otro siguiendo las instrucciones que la otra pareja escribió. Anima a los alumnos a que observen atentamente a su \"robot\" para asegurarse de que sigue las instrucciones. Si un alumno ve un error y levanta la mano, haz que el robot termine las instrucciones lo mejor posible. A continuación, pide a los alumnos que examinen el posible fallo y propongan soluciones. Continúa repitiendo hasta que la pila esté construida correctamente.\n\n**Circular:** Busca grupos que estén intentando tomar atajos añadiendo cosas extra (como números) a su código.  Elógialos por su ingenio, pero recuérdales que en este ejercicio los robots no entienden nada más que los símbolos proporcionados.  Si quieres, puedes sugerirles que guarden su brillante solución para la próxima vez que realicen este juego, ya que podrían tener la oportunidad de utilizar su invento pronto.\n\n**Repetir:** Dependiendo del tiempo disponible, mezcla las parejas y dales la oportunidad de hacer un patrón diferente. Cada vez que los grupos repitan el proceso, anímales a elegir un patrón más desafiante."
         },
         "d540dc8b-96d7-4d9e-9e16-b9c31aae8e4e": {
           "description": "**Debate:** Después de que todos hayan tenido la oportunidad de ser el robot, vuelve a reunir a la clase para comentar su experiencia.  El objetivo de este debate es dar a los estudiantes un espacio para que den sentido a su experiencia como robot y como programador. Las preguntas son intencionadamente amplias, pero están diseñadas para que los alumnos reflexionen sobre los retos de escribir un programa claro y las limitaciones de un robot u ordenador a la hora de interpretar sus instrucciones. En particular, debate en clase:"
@@ -7968,7 +7968,7 @@
         },
         "0919b37a-9bc1-44a3-ac64-8be4769d5ef4": {
           "name": "Introducción",
-          "description": "Esta lección se basa en muchas de las ideas desconectadas que los alumnos han aprendido en las semanas previas a esta primera actividad en línea.  Es importante que traigas esos conceptos (como la persistencia, la depuración, los algoritmos y los programas) en un círculo completo para que tu clase pueda beneficiarse de ellos en su trabajo en línea también.\n\n**Mostrar:** Enseña a los alumnos una pila de tazas del ejercicio \"Mis Amigos Robóticos\" que completaron en las lecciones anteriores a ésta. \n\n**Debatir:** Pide a los alumnos que recuerden los símbolos utilizados en \"Mis amigos robóticos\".    \n\n-   ¿Qué sucede cuando el robot lee las diferentes flechas?\n\nAnima a los alumnos a pensar en los consejos de depuración:\n\n-   _¿Estaba todo bien en el primer paso?_\n-   _¿Qué pasa con el segundo?_\n-   _¿Dónde ha ido mal?_\n\n**Transición:** Una vez que estés satisfecho de que tus alumnos recuerden \"Mis amigos robóticos\", puedes pasar a la Actividad de Transición."
+          "description": "Esta lección se basa en muchas de las ideas sin conexión que los alumnos han aprendido en las semanas previas a esta primera actividad en línea.  Es importante que traigas esos conceptos (como la persistencia, la depuración, los algoritmos y los programas) en un círculo completo para que tu clase pueda beneficiarse de ellos en su trabajo en línea también.\n\n**Mostrar:** Enseña a los alumnos una pila de vasos del ejercicio \"Mis Amigos Robóticos\" que completaron en las lecciones anteriores a ésta. \n\n**Debatir:** Pide a los alumnos que recuerden los símbolos utilizados en \"Mis amigos robóticos\".    \n\n-   ¿Qué sucede cuando el robot lee las diferentes flechas?\n\nAnima a los alumnos a pensar en los consejos de depuración:\n\n-   _¿Estaba todo bien en el primer paso?_\n-   _¿Qué pasa con el segundo?_\n-   _¿Dónde ha ido mal?_\n\n**Transición:** Una vez que estés satisfecho de que tus alumnos recuerden \"Mis amigos robóticos\", puedes pasar a la Actividad de Transición."
         },
         "ccbf325b-05d5-4e4a-b009-1576cdfce4a4": {
           "name": "La Transición de Desconectado a En Línea",
@@ -8142,7 +8142,7 @@
         },
         "359899f5-314a-401a-a75f-1b0cd32829d8": {
           "name": "Mis Amigos Robóticos - Revisión",
-          "description": "**Objetivo:** Este repaso refrescará la mente de los alumnos sobre la rapidez con la que los programas de la actividad \"Mis Amigos Robóticos\" pueden ser intensos. \n\n**Presentación:** Muestra la **\\*Clave de Símbolos** que utilizamos en \"Mis Amigos Robóticos\". Para cada uno de los cuatro símbolos, pide a los alumnos que te muestren cómo es el robot que sigue esa instrucción.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-19.49.03.png\" style=\"max-width: 300px;\">\n\n**Modelo:** Con la clase reunida en grupo, saca un rompecabezas fácil de los **\\*Ideas para apilar vasos** y prográmalo con los demás como recordatorio de las reglas y la terminología.\n\nA continuación, saca un rompecabezas un poco más difícil, pero que también requiera muchos pasos como el de abajo.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-14-18.17.12.png\" style=\"max-width: 300px;\">\n\n**Voluntario:** Pide a un voluntario (o a un grupo de voluntarios) que se presente para ayudar a programar éste en el tablero.  Si les obligas a cumplir estrictamente la regla de \"no hay más símbolos que los de la clave\", probablemente tardarán un rato.\n\n**Pantalla:** Ahora, saca esta imagen:\n\n<img src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-14-17.59.02.png\" style=\"max-width: 300px;\">\n\n¿Cuál es la reacción de la clase?\n\n**Sugerencia:** Da a los estudiantes la oportunidad de hacer una lluvia de ideas sobre formas más cortas de transmitir el código que están a punto de crear. (Esta parte puede omitirse si sus alumnos empiezan a decir cosas como: \"Avanza 6 veces\". Ya que eso abrirá la discusión sobre cómo mostrar \"seis veces\" con símbolos).\n\nUna vez que los alumnos hayan comprendido la idea de \"repetir\" el código, dales el vocabulario que lo rodea.  Asegúrate de compartir con ellos que, a menudo, los términos \"repetir algo\" y \"hacer un bucle de algo\" se utilizan indistintamente."
+          "description": "**Objetivo:** Este repaso refrescará la mente de los alumnos sobre la rapidez con la que los programas de la actividad \"Mis Amigos Robóticos\" pueden ser intensos. \n\n**Presentación:** Muestra la **\\*Clave de Símbolos** que utilizamos en \"Mis Amigos Robóticos\". Para cada uno de los cuatro símbolos, pide a los alumnos que te muestren cómo es el robot que sigue esa instrucción.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-19.49.03.png\" style=\"max-width: 300px;\">\n\n**Modelo:** Con la clase reunida en grupo, saca un rompecabezas fácil de los **\\*Ideas para Apilar Vasos** y prográmalo con los demás como recordatorio de las reglas y la terminología.\n\nA continuación, saca un rompecabezas un poco más difícil, pero que también requiera muchos pasos como el de abajo.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-14-18.17.12.png\" style=\"max-width: 300px;\">\n\n**Voluntario:** Pide a un voluntario (o a un grupo de voluntarios) que se presente para ayudar a programar éste en la pizarra.  Si les obligas a cumplir estrictamente la regla de \"no hay más símbolos que los de la clave\", probablemente tardarán un rato.\n\n**Pantalla:** Ahora, saca esta imagen:\n\n<img src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-14-17.59.02.png\" style=\"max-width: 300px;\">\n\n¿Cuál es la reacción de la clase?\n\n**Sugerencia:** Da a los estudiantes la oportunidad de hacer una lluvia de ideas sobre formas más cortas de transmitir el código que están a punto de crear. (Esta parte puede omitirse si tus alumnos empiezan a decir cosas como: \"Avanza 6 veces\". Ya que eso abrirá la discusión sobre cómo mostrar \"seis veces\" con símbolos).\n\nUna vez que los alumnos hayan comprendido la idea de \"repetir\" el código, dales el vocabulario que lo rodea.  Asegúrate de compartir con ellos que, a menudo, los términos \"repetir algo\" y \"hacer un bucle de algo\" se utilizan indistintamente."
         },
         "8896c62b-c73c-43f8-89c3-3def6c89d7bf": {
           "name": "traducción pendiente: en-US.data.unplugged.courseB_unplugged_loopyMRF\\_2018.title",
@@ -8447,7 +8447,7 @@
         },
         "0f1b65c7-e3fe-44d1-a3c7-11b44c96ab5d": {
           "name": "Pulseras Binarias",
-          "progression_name": "Pulseras Binarias - Actividad Desconectada"
+          "progression_name": "Pulseras Binarias - Actividad Sin Conexión"
         },
         "9ef02596-61a9-4eee-b8b5-db290a9721d0": {
           "tips": [
@@ -8940,18 +8940,18 @@
           "description": "\\*\\*Indicaciones: \\*\\*\n\n-   ¿De qué trata la lección de hoy?\n-   ¿Qué te pareció la lección de hoy?\n-   ¿Qué es un bucle anidado?\n-   ¿Puedes dibujar un rompecabezas que usaría un bucle anidado? Intenta codificar la solución según tu propio rompecabezas."
         },
         "6b52ae43-bb00-43ac-9260-7c554d2f9f29": {
-          "description": "#### Vocabulario\n\nEsta lección tiene una palabra nueva e importante:\n\n**Condicionales** - _Dilo conmigo: Con-di-shun-uls_ \n\nEnunciados que solo se ejecutan bajo ciertas condiciones."
+          "description": "#### Vocabulario\n\nEsta lección tiene una palabra nueva e importante:\n\n**Condicionales** - _Dilo conmigo: Con-di-cio-na-les_ \n\nSentencias que sólo se ejecutan bajo ciertas condiciones."
         },
         "75e07169-e97a-4d68-b9dc-18aefddf1eab": {
           "name": "Introducción",
-          "description": "-   Podemos empezar esta lección de inmediato\n    -   Hazle saber a la clase que si pueden estar completamente callados durante treinta segundos, harás algo como:\n        -   Canta una canción de ópera\n        -   Da cinco minutos más de recreo\n        -   Ponte de manos\n    -   Empieza a contar de inmediato.\n    -   Si los alumnos tienen éxito, indique que lo consiguieron, para que reciban la recompensa.\n    -   De lo contrario, señale que no estuvieron completamente callados durante treinta segundos completos, por lo que no obtienen la recompensa.\n-   Pregunta a la clase \\_ ¿Cuál era la condición de la recompensa? \\_\n    -   La condición era SI estuvieras callado durante 30 segundos\n        -   Si lo estuvieras, la condición sería cierta y obtendrías la recompensa.\n        -   Si no lo hicieras, la condición sería falsa, por lo que la recompensa no se aplicaría.\n    -   \\_ ¿Podemos inventar otro condicional? \\_\n        -   Si adivinas mi edad correctamente, la clase puede darte aplausos.\n        -   Si sé una respuesta, puedo levantar la mano.\n        -   ¿Qué ejemplos puedes encontrar?\n-   _A veces, queremos tener una condición adicional, en caso de que la instrucción «IF» no sea verdadera._\n    -   \\_Esta condición adicional se denomina «ELSE» \\_\n    -   _Cuando no se cumple la condición «IF», podemos ver la» ELSE» para saber qué hacer_\n        -   _Ejemplo: SI saco un rey de esta baraja, todos aplauden. O bien, todo el mundo dice «Awwwwwwe. «_\n        -   \\_Probemos. \\_ (Saca una carta y mira si tu clase reacciona adecuadamente).\n    -   Pida a la clase que analice lo que acaba de pasar.\n        -   \\_ ¿Qué fue el IF? \\_\n        -   \\_ ¿Qué fue el ELSE? \\_\n        -   \\_ ¿Qué condición se ha cumplido? \\_\n    -   \\_Lo creas o no, tenemos incluso una opción más. \\_\n        -   \\_ ¿Qué pasa si quisiera que aplaudieras si saco un 7, o si saco algo menos de siete dices «YAY», o bien dices «Awwwwwwwwe»? \\_\n            -   _Por eso tenemos los términos If, Else-If y Else._\n            -   _If es la primera condición._\n            -   _Else-Si se mira solo si el «Si» no es verdad._\n            -   \\_Else mira a lo demás solo si nada antes es verdad. \\_\n\nAhora juguemos un juego."
+          "description": "-   Podemos empezar esta lección de inmediato\n    -   Informa a la clase de que si pueden estar completamente callados durante treinta segundos, harás algo como:\n        -   Cantar una canción de ópera\n        -   Dar cinco minutos más de recreo\n        -   Hacer el pino con las manos\n    -   Empezar a contar de inmediato.\n    -   Si los alumnos lo consiguen, señala que lo han logrado, para que reciban la recompensa.\n    -   De lo contrario, señala que no estuvieron completamente callados durante treinta segundos, por lo que no reciben la recompensa.\n-   Pregunta a la clase _¿Cuál era la condición de la recompensa?_\n    -   La condición era, SI estabas en silencio durante 30 segundos\n        -   Si lo hubieras hecho, la condición sería verdadera y obtendrías la recompensa.\n        -   Si no lo hubieras hecho, la condición sería falsa, de manera que la recompensa no se obtendría.\n    -   _¿Podemos plantear otra condicional?_\n        -   Si adivinas mi edad correctamente, la clase te dará un aplauso.\n        -   Si sé una respuesta, puedo levantar la mano.\n        -   ¿Qué ejemplos se te ocurren?\n-   _A veces, queremos tener una condición extra, en caso de que la declaración \"SI\" no sea verdadera._\n    -   Esta condición adicional se llama sentencia \"SINO\".\n    -   _Cuando la condición \"SI\" no se cumple, podemos buscar en el \"SINO\" qué hacer_\n        -   \\_Ejemplo: SI saco un rey de esta baraja, todos aplauden. Pero SINO, todo el mundo dice \"Awwwwwwe\".\n        -   _Vamos a probarlo._ (Saca una carta y mira si tu clase reacciona correctamente).\n    -   Pide a la clase que analice lo que acaba de ocurrir.\n        -   _¿Qué era el SI?_\n        -   _¿Qué era el SINO?_\n        -   _¿Qué condición se cumplió?_\n    -   _Aunque no lo creas, tenemos una opción más._\n        -   \\_¿Qué pasa si quiero que aplaudas si saco un 7, o sino si saco algo menos de siete dices \"YAY\", o sino dices \"Awwwwwwwe\"?\n            -   _Por eso tenemos los términos If, Else-If y Else._\n            -   _If es la primera condición._\n            -   _Else-If se mira sólo si el \"If\" no es verdadero._\n            -   _Else se mira sólo si nada antes de él es verdadero._\n\nAhora vamos a hacer un juego."
         },
         "721db2fe-1035-40b0-a9a6-e1fae1e2edbd": {
           "name": "Condicionales con tarjetas",
           "progression_name": "Condicionales con Cartas - Actividad Desenchufada"
         },
         "13a60f33-de92-4780-b8a6-f7eff9d0a87c": {
-          "description": "#### ¿Dónde estarás...\n\ncuando encontremos vida más allá de la Tierra?\nPrograma de Ejemplos de Condicionales con Cartas - Guía de Preparación del Profesor\n\n**Instrucciones:**\n\n-   Crea con tu clase algunos programas que dependan de cosas como el palo, el color o el valor de una carta para sumar o restar puntos. Puedes escribir el programa como un algoritmo, pseudocódigo o código real.\n\nAquí tienes un ejemplo de algoritmo:\n\n    Si (CARTA es ROJA)\n    \tConcede a tu equipo 1 punto\n\n    Si no\n    \tConcede 1 punto al otro equipo\n\nAquí hay una muestra del mismo programa en pseudocódigo:\n\n    If (card.color == RED){\n    \tpuntos.tuyos = puntos.tuyos + 1;\n    }\n\n    Else {\n    \tpuntos.otros = puntos.otros + 1;\n    }\n\n-   Decide cómo quieres dividir tu clase en equipos.\n-   Cada equipo debe tener cerca  un montón de cartas (al menos tantas como miembros del equipo) .\n-   Coloca uno de tus \"Programas\" en el tablero para que todos lo vean.\n-   Haz que los equipos se turnen para robar cartas y seguir el programa para ver cuántos puntos consiguen en cada ronda.\n-   Juega varias veces con varios programas diferentes para ayudar a los alumnos a entender realmente las condicionales.\n\nUna vez que la clase haya practicado un poco, puedes animar a los alumnos a anidar las condicionales unas dentro de otras. Asegúrate de que entienden que si la tarjeta es roja, TU equipo recibe 1 punto, y luego _no pasa nada más_, ya que la condición se ha cumplido:\n\n    Si (LA TARJETA ES ROJA)\n    \tConcede 1 punto a tu equipo\n\n    Si no\n    \tSi (TARJETA es superior a 9)\n    \t\tConcede 1 punto al OTRO equipo\n    \tSi no\n    \t\tConcede a TU equipo el mismo número de puntos de la tarjeta\n\nAquí está el mismo programa en pseudocódigo:\n\n   If (card.color == RED ){\n    \tpuntos.tuyos = puntos.tuyos + 1;\n    }\n    Else {\n    \tif (card.value > 9){\n    \t\tpuntos.otros = puntos.otros + 1;\n    \t}\n    \tElse {\n    \t\tpuntos.tuyos = puntos.tuyos + valor.tarjeta;\n    \t}\n    }"
+          "description": "#### Programa de Ejemplos de Condicionales con Cartas - Guía de Preparación del Profesor\n\n**Instrucciones:**\n\n-   Crea con tu clase algunos programas que dependan de cosas como el palo, el color o el valor de una carta para sumar o restar puntos. Puedes escribir el programa como un algoritmo, pseudocódigo o código real.\n\nAquí tienes un ejemplo de algoritmo:\n\n    Si (CARTA es ROJA)\n    \tConcede a tu equipo 1 punto\n\n    Si no\n    \tConcede 1 punto al otro equipo\n\nAquí hay una muestra del mismo programa en pseudocódigo:\n\n    If (card.color == RED){\n    \tpuntos.tuyos = puntos.tuyos + 1;\n    }\n\n    Else {\n    \tpuntos.otros = puntos.otros + 1;\n    }\n\n-   Decide cómo quieres dividir tu clase en equipos.\n-   Cada equipo debe tener cerca  un montón de cartas (al menos tantas como miembros del equipo) .\n-   Coloca uno de tus \"Programas\" en el tablero para que todos lo vean.\n-   Haz que los equipos se turnen para robar cartas y seguir el programa para ver cuántos puntos consiguen en cada ronda.\n-   Juega varias veces con varios programas diferentes para ayudar a los alumnos a entender realmente las condicionales.\n\nUna vez que la clase haya practicado un poco, puedes animar a los alumnos a anidar las condicionales unas dentro de otras. Asegúrate de que entienden que si la tarjeta es roja, TU equipo recibe 1 punto, y luego _no pasa nada más_, ya que la condición se ha cumplido:\n\n    Si (LA TARJETA ES ROJA)\n    \tConcede 1 punto a tu equipo\n\n    Si no\n    \tSi (TARJETA es superior a 9)\n    \t\tConcede 1 punto al OTRO equipo\n    \tSi no\n    \t\tConcede a TU equipo el mismo número de puntos de la tarjeta\n\nAquí está el mismo programa en pseudocódigo:\n\n   If (card.color == RED ){\n    \tpuntos.tuyos = puntos.tuyos + 1;\n    }\n    Else {\n    \tif (card.value > 9){\n    \t\tpuntos.otros = puntos.otros + 1;\n    \t}\n    \tElse {\n    \t\tpuntos.tuyos = puntos.tuyos + valor.tarjeta;\n    \t}\n    }"
         },
         "4a483f91-af16-44dc-982f-c62424c8d5ec": {
           "name": "Reflexión",
@@ -8960,20 +8960,20 @@
           ]
         },
         "810f850f-370f-4cf5-beb4-3caca272ec00": {
-          "description": "#### Chat Flash: ¿Qué hemos aprendido?\n\n-   Si fueras a codificar esto en Blocky, ¿qué necesitarías agregar alrededor de tus condicionales para que el código se ejecute más de una vez? (Un bucle)\n-   ¿Qué otras cosas haces durante el día bajo ciertas condiciones?\n-   Si se supone que debes hacer algo cuando el valor de una carta es superior a 5 y sacas un 5, ¿cumples esa condición?\n-   Observe que las condiciones son «Verdaderas» o «Falsas». No hay evaluación de una condición que se evalúe como «plátano».\n-   Cuando necesites cumplir varias combinaciones de condiciones, podemos usar algo llamado «condicionales anidados».\n    -   ¿Qué crees que significa eso?\n    -   ¿Puedes dar un ejemplo de dónde vimos eso durante el partido?\n-   ¿Qué parte del juego te ha gustado más?"
+          "description": "#### Flash Chat: ¿Qué hemos aprendido?\n\n-   Si fueras a programar esto en Blocky, ¿qué necesitarías añadir alrededor de tus condicionales para que el código se ejecute más de una vez? (Un bucle)\n-   ¿Qué otras cosas haces durante el día en determinadas condiciones?\n-   Si se supone que debes hacer algo cuando el valor de una carta es superior a 5, y sacas un 5, ¿cumples esa condición?\n-   Observa que las condiciones son \"Verdadero\" o \"Falso\". No hay posibilidad de evaluar una condición que sea \"Plátano\".\n-   Cuando se necesita cumplir varias combinaciones de condiciones, podemos utilizar algo llamado \"condicionales anidadas\".\n    -   ¿Qué crees que significa eso?\n    -   ¿Puedes poner un ejemplo de dónde hemos visto eso durante el juego?\n-   ¿Qué parte del juego te ha gustado más?"
         },
         "95951ba3-d513-4635-a484-1d1819906049": {
           "name": "Reflexión",
-          "description": "\\*\\*Indicaciones: \\*\\*\n\n-   ¿De qué trata la lección de hoy?\n-   ¿Qué opina de la lección de hoy?\n-   ¿Qué es un condicional? ¿Cómo usaste un condicional hoy?\n-   ¿Cuáles son algunos de los condicionales que usaste hoy? ¿Se te ocurren más que usarías con una baraja de cartas?"
+          "description": "**Preguntas:**\n\n-   ¿De qué trata la lección de hoy?\n-   ¿Qué opinas de la lección de hoy?\n-   ¿Qué es una condicional? ¿Cómo usaste una condicional hoy?\n-   ¿Cuáles son algunas de las condicionales que has utilizado hoy? ¿Se te ocurren algunas más que utilizarías con una baraja de cartas?"
         },
         "d3c82a83-b5e1-498a-a130-9df9f7f36e88": {
-          "description": "Reparte **\\\\ \\*Condicionales con Tarjetas - Evaluación** y permite a los estudiantes completar la actividad de forma independiente después de que las instrucciones hayan sido bien explicadas. Esto debería resultarle familiar, gracias a las actividades anteriores. Si es necesario, consulte el recurso **Vídeo de evaluación** como guía."
+          "description": "Distribuye **\\*Condicionales con Cartas - Evaluación** y deja que los alumnos completen la actividad de forma independiente después de que se hayan explicado bien las instrucciones. Esto debería resultarles familiar, gracias a las actividades anteriores. Si es necesario, consulta el recurso **Video de Evaluación** como guía."
         },
         "abc8cb08-ade8-44d3-95ba-558fadaf4c21": {
-          "description": "Use estas actividades para mejorar el aprendizaje de sus estudiantes. Pueden usarse como actividades fuera de aula u otros   enriquecimientos.\n\n**Etiqueta Verdadero/Falso**\n\n-   Ponga a los/as estudiantes en fila para jugar Luz Roja/Luz Verde.\n-   Seleccione a una persona para pararse delante como el que dirige.\n-   El que dirige escoge una condición y le pregunta a todos quien cumple la condición para que dé un paso al frente.  \n-   Si tienen un cinturón rojo, un paso al frente.\n-   Si estás usando sandalias, un paso al frente.\n-   Intente cambiar diciendo cosas como “si te gustan las manzanas, un paso al frente”.\n\n**Anidar**\n\n-   Separe a los/as estudiantes en parejas o pequeños grupos.\n-   Pídales que escriban afirmaciones “Si” en tiras de papel para jugar cartas, como: \n-   la pinta es trébol. \n-   el color es rojo.\n-   Pida a los/as estudiantes crear tiras de papel para los resultados.\n-   Agregar un punto. \n-   Quitar un punto.\n-   Una vez que eso está hecho, pida a los/as estudiantes que escojan tres de cada tipo de tira y tres cartas, poniendo atención al orden seleccionado.\n-   Usando estos papeles, pida a los/as estudiantes escribir tres programas diferentes usando sólo las tiras de papel seleccionadas, en cualquier orden.\n-   Anime a los/as estudiantes a poner algunas afirmaciones “Si” dentro de otras afirmaciones “Si”.  \n-   Ahora, los/as estudiantes deberían ejecutar los tres programas usando las cartas que escogieron, en el mismo orden para cada programa.\n-   ¿Entregó la misma respuesta, alguno de los dos programas? \n-   ¿Alguno respondió algo diferente? "
+          "description": "Utiliza estas actividades para mejorar el aprendizaje de los alumnos. Se pueden utilizar como actividades extraescolares o de perfeccionamiento.\n\n**Etiqueta Verdadero/Falso**\n\n-   Coloca a los alumnos en fila como si fueran a jugar a [Luz roja / Luz verde](http://www.gameskidsplay.net/games/sensing_games/rl_gl.htm).\n-   Selecciona a una persona para que se ponga delante como locutor.\n-   La persona que hace de locutor elige una condición y pide a todos los que cumplen esa condición que den un paso adelante..\n    -   Si tienes un cinturón rojo, da un paso adelante.\n    -   Si llevas sandalias, da un paso adelante.\n-   Intenta cambiarlo diciendo cosas como \"Si no eres rubia, da un paso adelante\".\n\n**Anidación**\n\n-   Divide a los alumnos en parejas o pequeños grupos.\n-   Pídeles que escriban en tiras de papel los enunciados de las cartas, como por ejemplo:\n    -   el palo es de tréboles\n    -   el color es rojo\n-   Pide a los alumnos que creen tiras similares para los resultados.\n    -   Suma un punto\n    -   Resta un punto\n-   Una vez hecho esto, pide a los alumnos que elijan tres de cada tipo de tira y tres cartas, prestando atención al orden elegido.\n-   Con tres hojas de papel, pide a los alumnos que escriban tres programas diferentes utilizando sólo los conjuntos de tiras que han seleccionado, en cualquier orden.\n    -   Anima a los alumnos a poner algunas sentencias if dentro de otras sentencias if.\n-   Ahora, los alumnos deben recorrer los tres programas utilizando las cartas que sacaron, en el mismo orden para cada programa.\n    -   ¿Hay dos programas que den la misma respuesta?\n    -   ¿Alguien ha respondido de forma diferente?"
         },
         "45c6ec0b-356a-418b-9d46-7e4d2453729a": {
-          "description": "### Juega el mazo con condicionales (20-30 minutos)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) **Informática+Artes del lenguaje inglés + Matemáticas**\n\n[Juega el mazo con condicionales](https://docs.google.com/document/d/13-vYx6erXi_PE6sYwCUuayjaeNHkyMxOPQ38zTxHL00/edit) es una actividad opcional alineada con los estándares Common Core ELA y Matemáticas, escrita por nuestra comunidad docente. Los estudiantes usarán una baraja de naipes para revisar problemas básicos de multiplicación y división a medida que apliques el concepto de condicionales en ciencias de la computación.\n\n\\_Normas abordadas: \\_\n\n-   \\*\\*CCSS.ELA-ALFABETIZACIÓN.SL.3.3: \\*\\* Formular y responder preguntas sobre la información de un orador, ofreciendo la elaboración y los detalles adecuados.\n\n-   \\*\\*CCSS.MATH.CONTENT.3.OA.C.7: \\*\\* Multiplica y divide fluidamente dentro de 100, usando estrategias como la relación entre multiplicación y división (por ejemplo, sabiendo que 8 × 5 = 40, uno conoce 40 ÷ 5 = 8) o las propiedades de las operaciones. Al final del tercer grado, conoce de memoria todos los productos de dos números de un dígito."
+          "description": "### Jugar a la Baraja con Condicionales (20-30 minutos)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) **Informática + Lengua Inglesa + Matemáticas**\n\n[Jugar a la Baraja con Condicionales](https://docs.google.com/document/d/13-vYx6erXi_PE6sYwCUuayjaeNHkyMxOPQ38zTxHL00/edit) es una actividad opcional alineada con los estándares de Common Core ELA y Math, escrita por nuestra comunidad de profesores. Los alumnos utilizarán una baraja de cartas para repasar problemas básicos de multiplicación y división mientras aplicas el concepto informático de las condicionales.\n\n_Estándares que se abordan:_\n\n-   **CSCS.ELA-LITERACY.SL.3.3:** Formular y responder preguntas sobre la información de un interlocutor, ofreciendo la elaboración y los detalles apropiados.\n\n-   **CCCSS.MATH.CONTENT.3.OA.C.7:** Multiplicar y dividir con fluidez dentro de 100, utilizando estrategias como la relación entre la multiplicación y la división (por ejemplo, sabiendo que 8 × 5 = 40, se sabe que 40 ÷ 5 = 8) o las propiedades de las operaciones. Al final del tercer grado, saber de memoria todos los productos de dos números de una cifra."
         },
         "6b12a150-fd35-4498-821d-938ad47883e4": {
           "name": "Introducción",
@@ -10720,7 +10720,7 @@
         },
         "bba24018-1d90-4a18-b596-eaab2e50567e": {
           "name": "Colaboración digital",
-          "progression_name": "Intercambio Digital - Actividad Desconectada"
+          "progression_name": "Intercambio Digital - Actividad Sin Conexión"
         },
         "a0c0c4ee-7e5a-4f4f-a085-49ea2a791169": {
           "description": "#### Compartir éticamente\n\n**Actividad:** Haz que todos tus alumnos se pongan de pie. Comienza a leer la lista de formas de crear contenido que aparece a continuación. Indica a los alumnos que se sienten en cuanto puedan responder \"Sí\" a una de las preguntas.\n\n-   _¿Has hecho alguna vez un vídeo (con una cámara, un teléfono, un iPad o un ordenador) y se lo has enviado a un familiar o lo has publicado en Internet?_\n-   _¿Has hecho una foto y la has enviado a un familiar o la has publicado en Internet?_\n-   _¿Has creado una obra de arte para compartirla con tu familia y amigos?_\n-   _¿Has inventado una canción para hacer reír a tus amigos? ¿O una canción triste para hacerles llorar?_\n-   _¿Has escrito un poema para tu madre o tu padre en su cumpleaños?_\n\nSigue haciendo preguntas similares hasta que toda la clase esté sentada.\n\n**Comenta:** \n\n-   _¿Cómo te sentiste al producir algo creativo?_\n-   _¿Cómo te sentiste cuando pudiste compartir tu creación con los demás?_\n-   _¿Cómo te sientes cuando ves o escuchas las creaciones de otras personas?_\n\nAnima todas las respuestas.\n\nAyuda a los alumnos a sentir la alegría de crear algo. Crear puede ser un trabajo duro, pero es una de las cosas más gratificantes que hacemos. Compartir lo que creamos es divertido y puede fomentar más creatividad y arte. A medida que crecemos, tenemos cada vez más oportunidades de compartir nuestro trabajo y explorar los medios y el arte que han creado otras personas. Queremos asegurarnos de que siempre somos justos cuando utilizamos el arte y el trabajo creativo de otros.\n\n**Diles:** _Recuerda que los derechos de autor protegen todo tipo de trabajos creativos para que los artistas/creadores puedan cobrar por su trabajo. Esto incluye la escritura original (historias), el arte, las fotografías, el audio, las imágenes, la música, las letras de canciones, incluso el garabato que dibujaste en tu servilleta en el almuerzo. No importa si ha sido creado por un artista famoso o por ti. Cuando haces una obra original, puedes decidir quién puede:_ \n\n-   _hacer copias_ \n-   _distribuir copias_\n-   _visualizar o representar la obra en público_\n-   _hacer copias, lo que llamamos derivados (por ejemplo, un libro convertido en película)._ \n\n_Estos derechos se conceden a los artistas y creadores para animarles a realizar más obras creativas._\n\n**Piensa:** Haz que los alumnos piensen en el momento de la creación artística en el que se sentaron por primera vez. Infórmales de que han creado una obra original con protección legal. ¡Enhorabuena! \n\n**Empareja:**  \n\n-   _¿Cómo puedes saber si algo tiene derechos de autor?_ \n    -   El círculo © indica los derechos de autor, pero la protección de los derechos de autor existe incluso sin el símbolo. Los creadores tienen la propiedad de su obra, a menos que la vendan a otra persona.\n-   _¿Dónde has visto el símbolo del copyright?_ \n    -   En la portada de los libros, en las películas, en las imágenes, en los carteles, etc.\n\n**Compartir:** Anima a los alumnos a compartir sus respuestas con la clase.\n\n**Demuestra:** Muestra a los alumnos cómo dibujar un símbolo de copyright y escribir el año junto a él. Cuando haces algo creativo como esto, está automáticamente protegido por los derechos de autor, incluso sin el símbolo de copyright. \n\n**Comenta:** \n\n-   _¿Cómo te sientes cuando compartes tus cosas con otra persona?_ \n-   _¿Qué sientes cuando alguien coge tus cosas y las comparte sin tu permiso?_\n\n_Los mismos principios de respeto y equidad se aplican cuando compartimos nuestro trabajo o el de otra persona en Internet._"
@@ -11171,15 +11171,24 @@
             null
           ]
         },
+        "42738b6d-fc16-4de9-b190-d6253f5e2c67": {
+          "progression_name": "Reconocimiento de Peces"
+        },
         "aa866b7f-747f-49e4-9578-f937dbef61e4": {
           "tips": [
             null
           ]
         },
+        "0cd5acdb-155e-4161-aba7-610f3869ec29": {
+          "progression_name": "Reconocimiento de Características de Peces"
+        },
         "8c5b9e26-3b22-4a68-a10d-2e8f3d24a9b0": {
           "tips": [
             null
           ]
+        },
+        "1ce2130f-e735-4060-811f-b8c87e6f74b0": {
+          "progression_name": "Reconocimiento de Expresiones"
         },
         "01e90cb3-4a6f-46ed-9a4e-4e7524589e47": {
           "tips": [
@@ -11187,7 +11196,8 @@
           ]
         },
         "d26ab8fe-dc83-4704-8aba-bd0cdbdd80a4": {
-          "name": "Reflexión"
+          "name": "Reflexión",
+          "progression_name": "Encuesta de Comprobación"
         },
         "8bdf1f4e-1c20-42bd-a5d5-7217dfa0bd4f": {
           "tips": [
@@ -11197,7 +11207,11 @@
         "57d8014b-4da5-4981-b5aa-bd5feb656548": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Buscando Patrones"
+        },
+        "3b73e965-37ee-48c9-b346-0b2f05e5664d": {
+          "progression_name": "Puerta de Cristal Verde"
         },
         "14ad319c-b3ec-4f24-a9c7-5f80f29c9ba8": {
           "tips": [
@@ -11219,10 +11233,26 @@
             null
           ]
         },
+        "09d3ff6d-f87e-4309-b138-3ef66e33eab5": {
+          "name": "Recomendación de Calzado"
+        },
+        "bf65cfae-cdec-4456-8acf-d475d2835417": {
+          "progression_name": "Recomendación de Calzado"
+        },
         "48b299c7-bdd4-453e-aa47-d9d2c7622ee8": {
           "tips": [
             null
           ]
+        },
+        "4e1f64ea-a1bd-4509-b618-84f364384c9a": {
+          "name": "Recomendación de Calzado Mejorada"
+        },
+        "e2df5e33-a11a-4ad5-9607-4a67f1b95608": {
+          "progression_name": "Recomendación de Calzado Mejorada"
+        },
+        "a0725763-95c5-47e3-ad8f-ce01dba4cda3": {
+          "name": "Encuesta de Recomendación de Calzado",
+          "progression_name": "Encuesta de Recomendación de Calzado"
         },
         "aa9a6902-38d1-4613-8535-7b515b0f7e04": {
           "tips": [
@@ -11233,6 +11263,9 @@
           "tips": [
             null
           ]
+        },
+        "a5c8ac6d-bf15-4ce6-ae63-cc39ad9d23e4": {
+          "progression_name": "El Mejor Recomendador de Calzado"
         },
         "ec6a94fb-4529-40b5-bee7-42c5d06822e1": {
           "tips": [
@@ -11259,6 +11292,9 @@
             null
           ]
         },
+        "f2beead8-eebd-486b-8748-d31955df2c4d": {
+          "progression_name": "Explorador de Frutas y Verduras"
+        },
         "40e5d7a1-ae14-4585-bdab-1fc0036d91b2": {
           "tips": [
             null
@@ -11269,10 +11305,16 @@
             null
           ]
         },
+        "3b4dcf97-2764-4939-af16-c39d10ab214f": {
+          "name": "Reconocimiento de Formas"
+        },
         "187961bf-44e5-4407-81d7-a47884e32eb6": {
           "tips": [
             null
           ]
+        },
+        "d6f29378-22de-403d-955a-f8e77800dd27": {
+          "progression_name": "Reconocimiento de Formas"
         },
         "859c17eb-f742-4430-ab49-fe335f6dc3c0": {
           "tips": [
@@ -11289,6 +11331,9 @@
             null
           ]
         },
+        "040518cf-bdfa-4bea-a3c4-7e2a5b973097": {
+          "progression_name": "Recomendaciones sobre Pizzas"
+        },
         "948494c6-f9ab-422f-a5e5-1ba0dd2bb690": {
           "tips": [
             null
@@ -11297,12 +11342,16 @@
         "bde096a8-755f-4d46-8e37-2b7c22c6112d": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Tú Eliges: Recomendaciones de Restaurantes"
         },
         "bebc0942-fc14-4063-9feb-e47a4a62d9c8": {
           "tips": [
             null
           ]
+        },
+        "52e962a0-c40b-49c4-859e-bad1e64068ee": {
+          "progression_name": "App: Recomendación de Libros "
         },
         "73ce1ded-8856-4156-bfc4-c114b2bae063": {
           "tips": [
@@ -11322,7 +11371,11 @@
         "d3990be6-8d37-475a-bb3e-5a4f4fc990ca": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Importar un Modelo"
+        },
+        "24852ddc-3470-46ba-b727-e205b2a6da3c": {
+          "progression_name": "Personaliza tu Aplicación"
         },
         "a93eb670-a170-422f-b5cc-1bb0cba75be3": {
           "tips": [
@@ -11332,7 +11385,8 @@
         "35bd3261-9e58-490f-a4f7-6f6188cf278e": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Niveles Opcionales: Personaliza tu Aplicación"
         },
         "7cc32c19-2a9a-423f-a8b7-90a739cd379c": {
           "tips": [
@@ -11343,6 +11397,12 @@
           "tips": [
             null
           ]
+        },
+        "5930841f-14d4-4405-915f-abebc0c094fe": {
+          "name": "Aplicación de Prioridad Médica"
+        },
+        "a19cc9c3-8670-48e8-bcea-dcddf2581cfa": {
+          "progression_name": "Aplicación de Prioridad Médica"
         },
         "189848b1-8798-4d6b-ba64-c7e43f6aa84a": {
           "tips": [
@@ -11364,6 +11424,12 @@
             null
           ]
         },
+        "2f337322-f504-4ba7-9714-1c178eba4ca9": {
+          "progression_name": "Tarjeta Modelo para la Recomendación de Libros"
+        },
+        "8a788853-2486-42f1-b0d0-572ad723f421": {
+          "progression_name": "Fichas Modelo de Bases de Datos Médicas"
+        },
         "db8f4d62-af34-4871-993d-281cacf5ff29": {
           "tips": [
             null
@@ -11375,23 +11441,35 @@
             null
           ]
         },
+        "d5f051bd-7a5c-464f-a830-e486187a0463": {
+          "name": "Predicciones del Zoo",
+          "progression_name": "Predicciones del Zoo"
+        },
         "6dc2399a-dad6-46a3-8124-e6b3d100d4fe": {
           "tips": [
             null
           ]
         },
         "0c250e92-85e3-4f85-8a99-44a79fb72c03": {
+          "name": "Importando tu Modelo",
           "tips": [
             null
           ]
+        },
+        "7d040814-9039-4b26-b0ef-29cb28227d53": {
+          "progression_name": "Importando tu Modelo"
         },
         "1503235c-6a46-401d-85f0-1fa291901771": {
           "progression_name": "Personalizando tu Aplicación"
         },
+        "42abdf12-61c8-48a4-8118-6f0b713e28dc": {
+          "progression_name": "Ejemplo de Aplicación: Clasificación de Zoológico"
+        },
         "527dacdb-36d1-4e9e-ad42-b28aab54a395": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Recomendación de Mascotas"
         },
         "91d7768c-2c1c-4b4b-bb3d-b7646f8144d6": {
           "tips": [
@@ -11401,7 +11479,11 @@
         "aedb156c-9f9c-4214-94aa-a664ce875b23": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Recomendación de Mascotas"
+        },
+        "757e3c3a-8354-4b41-9b54-ad138d99c341": {
+          "progression_name": "Recomendación de Mascotas"
         },
         "819a4c17-f05f-4298-9cfc-1cb2c0b00f5d": {
           "tips": [
@@ -11412,6 +11494,9 @@
           "tips": [
             null
           ]
+        },
+        "5c385108-484c-44cb-b688-858fc00e41df": {
+          "progression_name": "Añadiendo Nuevas Pantallas"
         },
         "209eff96-d559-411e-b8cf-bd6a84923473": {
           "tips": [
@@ -11453,6 +11538,9 @@
             null
           ]
         },
+        "02eaa4ce-ab4c-485c-bb2d-08cebd8c5e17": {
+          "progression_name": "Modelo Safari"
+        },
         "221c0911-a3eb-4409-be91-e665b43e3fc9": {
           "tips": [
             null
@@ -11469,15 +11557,36 @@
             null
           ]
         },
+        "f0652a6f-7460-4715-90e1-1a022ca38631": {
+          "progression_name": "Aplicación Safari"
+        },
+        "6837e50f-be66-4db0-a31a-fff75d03b12b": {
+          "name": "Sistema de Alerta al Conductor"
+        },
+        "87b65d20-bf70-4db3-ae6f-2333f970ad8c": {
+          "progression_name": "Recomendador de Granizados"
+        },
+        "1d2520a0-dcb3-41e9-b121-7bf0b221a87a": {
+          "progression_name": "Sistema de Alerta al Conductor"
+        },
+        "29dce9c5-577d-4e2c-9d4b-b8bf0e4b18e8": {
+          "progression_name": "Sistema de Alerta al Conductor"
+        },
         "4e10be5f-60ad-4bae-913d-7a157e519447": {
           "tips": [
             null
           ]
         },
+        "9749fdb5-91ad-41b8-9b83-5198ab37cc38": {
+          "progression_name": "Tú Eliges: Mejora tu Aplicación"
+        },
         "c5595f82-fa56-4a48-a7f6-65b97947a7e9": {
           "tips": [
             null
           ]
+        },
+        "77b2cc22-6c49-4ad9-8a76-a3e5cf4502ec": {
+          "progression_name": "Entrenar un Modelo en el Laboratorio de Inteligencia Artificial"
         },
         "4efb646c-4ce2-45f5-bb76-f444af86a9b4": {
           "tips": [
@@ -11488,6 +11597,9 @@
           "tips": [
             null
           ]
+        },
+        "e046ddd1-110a-4a23-8f5a-76f6ac86fe48": {
+          "progression_name": "Crear una Aplicación en el Laboratorio de Aplicaciones"
         },
         "489ed446-aa78-47e3-b9f2-30bc9164d6c3": {
           "name": "Reflexión",
@@ -11513,6 +11625,9 @@
             null
           ]
         },
+        "8ae2778f-e311-4131-9116-8a2cb6ee5512": {
+          "progression_name": "Crear un Formulario de Google"
+        },
         "0fac2a39-1a1e-4c53-a3eb-ef5ababb25f4": {
           "tips": [
             null
@@ -11525,17 +11640,25 @@
           ]
         },
         "bb917641-be8e-41f9-8ba5-bad758aeb8d5": {
-          "name": "Encuesta"
+          "name": "Encuesta",
+          "progression_name": "Encuesta de Kim"
         },
         "9f17132f-2c2e-4f16-bead-88b852b9e33f": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Datos de la Encuesta de Kim"
         },
         "3c4c7d3e-338a-4934-bc9c-b9e01d0f14cd": {
           "tips": [
             null
           ]
+        },
+        "1223d000-8832-4645-b9ec-3a7563068eb1": {
+          "progression_name": "Laboratorio de IA y Datos de Kim"
+        },
+        "4ca8fcb7-141b-4201-976c-2bafbae0f7a7": {
+          "progression_name": "Datos de la Encuesta de Isaac"
         },
         "7f4a57cb-7221-40f4-a60a-2026a13bcba2": {
           "tips": [
@@ -11546,7 +11669,11 @@
           "tips": [
             null,
             null
-          ]
+          ],
+          "progression_name": "Laboratorio de IA y Datos de Isaac"
+        },
+        "8bc19694-99fb-4360-a3ac-2f7b9ff83365": {
+          "progression_name": "Bases de Datos de Club"
         },
         "0644a5d2-d3ae-4dea-8777-47a522955b21": {
           "tips": [
@@ -11558,15 +11685,28 @@
             null
           ]
         },
+        "920cf048-b5d3-4033-8705-25e47ba99238": {
+          "progression_name": "Bases de Datos Alternativas"
+        },
         "8da670fc-d91b-438b-af07-2227156fdbcd": {
           "tips": [
             null
           ]
         },
+        "373c20f4-965e-4cd1-9a60-6fbb186da8c9": {
+          "progression_name": "Importa tu Modelo"
+        },
+        "f2a40f03-0400-4522-b5d6-8349034c6ebb": {
+          "progression_name": "Añadir una Pantalla de Bienvenida"
+        },
+        "dfa4b1ec-4f9f-4ec1-9c42-613c82405096": {
+          "progression_name": "Personaliza tu Aplicación"
+        },
         "1b28522d-bf63-4f09-94a2-a80833819a38": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Revisa tu Aplicación"
         },
         "f1aefb0a-3a33-499b-9ea6-fc842ba895de": {
           "name": "Calentamiento"
@@ -11604,7 +11744,8 @@
         "dc5dddbb-40bf-41e0-be7e-51b41edf1337": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Diseñar una aplicación de IA - Laboratorio de Inteligencia Artificial"
         },
         "065f7419-b028-4610-b0c4-671f2ec86590": {
           "name": "Actividad de cierre"
@@ -11615,7 +11756,8 @@
         "4af3f898-21e4-4ed3-bbc6-ca4686c46f7a": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Diseñar una aplicación de IA - Laboratorio de Aplicaciones"
         },
         "2df922c9-a79a-4e9f-a4e5-003cee501451": {
           "name": "Actividad de cierre"
@@ -11873,7 +12015,8 @@
         "233defe7-9977-4539-8a42-7e146979db0e": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Ejemplos de Aplicaciones para el Bienestar"
         },
         "f5bad206-6147-4a6c-af88-bf15c41f6469": {
           "tips": [
@@ -11934,6 +12077,9 @@
           "tips": [
             null
           ]
+        },
+        "761b498b-6ec2-4956-bd8f-b23e497644a5": {
+          "progression_name": "Ejemplos de Aplicaciones"
         },
         "7fd85c65-ad1b-4f7d-a93d-eed09e89386c": {
           "tips": [
@@ -12006,8 +12152,11 @@
             null
           ]
         },
+        "5d7ed2d7-0498-45a5-8969-679ad3abcad6": {
+          "progression_name": "Vídeo: Introducción al Modo de Diseño"
+        },
         "ff254aeb-ed49-4b8f-83b5-1bbfbc1eb7c8": {
-          "progression_name": "Construir una Pantalla"
+          "progression_name": "Crear una Pantalla"
         },
         "e259d4f1-45b8-4d26-9ddd-5e4a146ac9e6": {
           "progression_name": "Terminar una pantalla"
@@ -12034,7 +12183,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Proyecto de aplicación: diseño de pantalla"
+          "progression_name": "Proyecto de Aplicación: Diseño de Pantalla"
         },
         "311288e0-9ddf-4681-a8f2-31ae7d196423": {
           "tips": [
@@ -12053,7 +12202,7 @@
           ]
         },
         "ed8ac962-30bc-457d-aee3-6965176fd6e4": {
-          "progression_name": "Añadiendo las Pantallas"
+          "progression_name": "Añadiendo Pantallas"
         },
         "af502a23-0afa-4a37-b4e2-8ca110bd9ef6": {
           "progression_name": "Sucesos y pantallas de enlace"
@@ -12191,10 +12340,19 @@
           ],
           "progression_name": "Instrucciones para la encuesta fin de curso"
         },
+        "217451ea-61fa-4c54-a5f4-46e39614e303": {
+          "name": "Actualización de las Propiedades de los Elementos de la Interfaz de Usuario",
+          "description": "**Mostrar:** Muestra a los estudiantes esta imagen de ejemplo\n\n<img alt=\"\" src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/diamond.png\" style=\"max-width: 200px;\">"
+        },
         "2bddbd31-7cae-4867-96fd-f8ba2f18b6c8": {
+          "description": "**Comenta:** ¿Cómo describirías a otra persona la forma de realizar esta pantalla? ¿Qué detalles específicos necesitaría saber sobre cada elemento de diseño?",
           "tips": [
-            null
+            "El objetivo de esta explicación es preparar a los alumnos para que piensen en las _propiedades_ de varios elementos de diseño, que aprenderán a cambiar con el código más adelante en esta lección. Puedes pedir a los alumnos que piensen en una conversación similar que tuvimos en la Unidad 2 cuando intentamos describir el aspecto de una página web, o en las propiedades de un sprite de la Unidad 3"
           ]
+        },
+        "24a1d5e0-6c71-4032-8878-c5d9816ffed7": {
+          "name": "Diseñando con setProperty()",
+          "description": "**Transición:** Dirígete a Code Studio"
         },
         "f14cc941-af61-4deb-8c16-be730ded1849": {
           "tips": [
@@ -12212,65 +12370,113 @@
           "progression_name": "Ejemplo de máquina de emociones"
         },
         "12af028a-bc38-49f4-8fda-8cd49963e102": {
-          "progression_name": "Crear una app"
+          "progression_name": "Creando una Aplicación"
         },
         "053cf5c9-1dd1-4da7-8fca-82dd5780c4b0": {
+          "description": "**Compartir:** El último nivel de esta lección permite a los estudiantes personalizar y presentar una aplicación \"Máquina de Emociones\". Si hay tiempo, permite a los estudiantes compartir sus programas.",
           "tips": [
             null
           ]
+        },
+        "bade991b-454c-4df5-99c5-2f2daa1b7569": {
+          "name": "Reflexión sobre la Unidad 4",
+          "description": "**Pregunta:** Piensa en la aplicación que has desarrollado como prototipo en la Unidad 4. Sabiendo lo que sabes sobre el uso de [\\`setProperty()\\`(#fff176)](/docs/applab/setProperty/) para cambiar los elementos de la interfaz de usuario, ¿cómo podrías cambiar el prototipo de tu aplicación?"
         },
         "8cb231b2-ab63-4868-a949-bc91e701ea7d": {
+          "description": "**Debatir:** Haz que la clase comparta los tipos de cosas que se les ocurrieron. Comprueba si la clase puede idear algunos tipos amplios de características que no eran posibles, o que eran engorrosas, para hacerlas sólo con pantallas.",
           "tips": [
-            null
+            "**Objetivo:** Esta explicación pretende aclarar a los estudiantes _porqué_ estamos cambiando los elementos de la interfaz de usuario con código, y cómo podría permitirles resolver los problemas que surgieron en la Unidad 4. A partir de este momento, los alumnos tendrán que tomar decisiones razonadas sobre cuándo utilizar pantallas separadas en un programa y cuándo actualizar elementos con código."
           ]
+        },
+        "d09a2948-520e-4728-80a5-65c8d7d8084b": {
+          "name": "Inspección de la Placa",
+          "description": "**Distribuye:** Reparte una placa y un cable USB a cada pareja de estudiantes. Avisa a los alumnos de que aún no deben conectar las placas.\n\n\\*\\*Pide a las parejas que dediquen un minuto a examinar la placa, centrándose en los detalles. ¿Qué crees que hace (o podría hacer) esta placa y por qué?\n\n\\*\\*Comparte: Pide a los grupos que compartan sus ideas con el resto del grupo, anotándolas en la pizarra. Anima a los alumnos a que apoyen sus ideas con evidencias de la revisión de la placa, pero no te preocupes por asegurar la corrección en este punto. A medida que los alumnos avanzan en la unidad, pueden volver a consultar esta lista y perfeccionarla."
         },
         "dafc849e-b1f0-4767-aa97-69090169177e": {
+          "name": "Conectando la Placa",
+          "description": "**Transición:** Pide a los alumnos que conecten sus placas y se dirijan a [la página de configuración del Maker Toolkit](//studio.code.org/maker/setup) para confirmar que el software se ha configurado correctamente.",
           "tips": [
-            null
+            "Asegúrate de que todos los alumnos son capaces de configurar sus tarjetas correctamente.  Si tienen problemas, anímales a trabajar con sus compañeros para resolver el problema con la ayuda de la página de configuración.  Los alumnos deben ser capaces de leer la página y seguir las instrucciones por sí mismos.  Si no es así, ayúdales a seguir el proceso, pero anímales a solucionar sus propias placas en las siguientes lecciones."
           ]
         },
+        "a0ed3723-a361-4988-ae6a-3b9db7e7b151": {
+          "name": "Programando el Hardware"
+        },
         "9fc2aec4-9f01-4726-82a7-306e613d936e": {
+          "description": "**Preguntas a Tener en Cuenta con el Vídeo:**\n\n-   ¿Cuál es la diferencia entre hardware y software?\n-   ¿Qué hace el sistema operativo de un ordenador?",
           "tips": [
-            null
+            "**Objetivo:**\nEl objetivo de este debate es destacar la diferencia entre el hardware y el software. Los alumnos deben entender que el hardware es la parte física del ordenador, como los chips y los cables, y el software son los programas que se ejecutan en el ordenador. El sistema operativo del ordenador permite que todo el software del ordenador se ejecute al mismo tiempo, decidiendo cómo se compartirán los diferentes recursos de hardware."
           ],
           "progression_name": "Hardware y software"
         },
         "1890c047-5983-4093-99a8-08fcb099c0e0": {
           "tips": [
-            null
+            "**Nivel 7**\nPuedes utilizar este nivel como evaluación formativa para los alumnos. Haz clic dentro del nivel para ver una rúbrica y dejar comentarios a tus alumnos"
           ],
           "progression_name": "Usando los LED"
         },
         "bc4c9c62-accc-4be6-a733-2a6acf678ec7": {
           "tips": [
-            null
+            "**Nivel 12**\nPuedes utilizar este nivel como evaluación formativa para los alumnos. Haz clic dentro del nivel para ver una rúbrica y dejar comentarios a tus alumnos"
           ],
           "progression_name": "Aplicaciones LED"
         },
+        "17576a21-f913-4be4-ab40-9ed327c21d9d": {
+          "name": "Qué hay en una Placa",
+          "description": "**Diario:** Pide a los alumnos que reflexionen sobre su introducción al Circuit Playground. ¿Qué pensaban que era en una primera inspección? ¿Cómo cambiaron esas expectativas después de haber programado la placa?"
+        },
         "b297e101-f4cd-4ddd-ae0f-42e87ed683d0": {
+          "name": "Comparación de Métodos de Entrada",
+          "description": "**Debatir:** Ayer escribimos algunas aplicaciones que aceptaban la entrada de un usuario, pero ¿cómo sabía el programa _cuando_ debía aceptar la entrada?",
           "tips": [
-            null
+            "**Objetivo:** Esta es una pregunta muy amplia y, como tal, puede ir en varias direcciones. Si tus alumnos tienen dificultades, anímales a pensar en programas específicos que hayan escrito en las unidades 3 y 4."
           ]
+        },
+        "2fc3f7ac-0989-467b-aa8f-81c6af820b2d": {
+          "description": "**Mostrar:** Abre el apartado de Code Studio para este nivel. Para cada una de las aplicaciones de ejemplo, pide a la clase que identifique:\n\n1.  ¿De dónde viene la entrada? (por ejemplo, el teclado, el ratón, etc.)\n2.  ¿Qué valor de entrada busca el programa?\n3.  ¿Cómo responderá el programa a la entrada?"
         },
         "0904effb-8684-4f4b-8bbf-795b9787b83e": {
           "progression_name": "Ejemplos de entrada"
         },
+        "613ed0af-5688-4f04-af6e-592da4a422bb": {
+          "description": "**Pregunta:** Plantea a la clase las siguientes preguntas, anotando las respuestas en la pizarra. El objetivo en este momento no es responder a las preguntas que surjan, sino registrarlas para poder ver cómo se siente la clase después de la lección.\n\n-   ¿Cómo enfocan las diferentes aplicaciones que hemos visto la recogida de datos, de forma similar o diferente?\n-   ¿Qué forma tiene más sentido para ti?\n-   ¿Qué forma tiene menos sentido?\n-   ¿Qué preguntas tienes sobre la forma en que estos programas reciben la información?"
+        },
         "5037ffb9-a7e8-4abc-81cc-e72d58b5e31c": {
-          "name": "Entrada sin conexión"
+          "name": "Entrada sin conexión",
+          "description": "En la actividad anterior hemos explorado varios tipos de entrada, pero ¿cómo procesan realmente nuestros programas esa entrada? Como clase, y en pequeños grupos, vamos a simular cómo se reciben las entradas tanto en el Laboratorio de Juegos como en el Laboratorio de Aplicaciones."
+        },
+        "b8c2aa6e-35e0-4821-af92-2e7086fe1c9e": {
+          "description": "**Agrupa:** Coloca a los alumnos en grupos de 4\n\n**Distribuye:** Reparte una copia de la guía de actividades y la mitad de una baraja de cartas a cada grupo (no es necesario que la baraja esté perfectamente dividida, pero debe incluir cartas rojas y negras en cada mitad). La guía de actividades incluye cuatro páginas de roles diferentes, impresas por delante y por detrás.\n\n**Modelo:** Elige un grupo para que represente la actividad ante la clase.\n\n#### Entradas y eventos\n\nEl objetivo de esta actividad es ayudar a los estudiantes a entender mejor cómo funcionan los eventos y cómo el uso de eventos difiere del modelo de entrada que utilizaron en el Laboratorio de Juegos. En grupos de cuatro, los estudiantes representarán los dos enfoques diferentes para recibir la entrada. Al final de la actividad, los estudiantes deben entender que el bloque [\\`onEvent\\`(#fff176)](/docs/applab/onEvent/) establece una entrada para vigilar los eventos en segundo plano, lo que permite el manejo de la entrada sin pedir explícitamente cada entrada para un valor constantemente. Los roles para esta actividad son:\n\n**Programa:** El Programa lee el código en voz alta y realiza las acciones dictadas por las entradas.\n**Entradas 1-3:** Las entradas sacan cartas del mazo, que representan sus valores de entrada cambiantes.\n\n#### Versión A: Pedir entradas"
         },
         "c932e879-ed85-4226-b025-a1dbb22da379": {
+          "description": "Esta primera versión representa el enfoque del Laboratorio de Juegos para la toma de datos. En este supuesto, el **Programa** pide explícitamente un valor a cada entrada cada vez que se ejecuta el bucle de dibujo.",
           "tips": [
-            null
+            "Los programas de las dos versiones de esta actividad son muy sencillos a propósito, para que los alumnos puedan centrarse en los procesos que implica cada método de entrada. Si tus alumnos captan las ideas con rapidez, considera la posibilidad de proporcionarles algunos programas de ejemplo más detallados para que profundicen en su comprensión. En particular, colocar las entradas o los eventos en un orden diferente y anidar las condicionales puede ser útil para revelar los conceptos erróneos."
           ]
+        },
+        "035d8bc9-2de2-4e5a-87b3-1c2442f01e34": {
+          "description": "**Reglas para la Versión A:**\n\n-   El **Programa** lee cada línea de código en voz alta.\n-   Al principio de cada bucle de robo, cada **Entrada** roba una nueva carta del mazo. Esto representa el estado actual de esa entrada.\n-   Cada vez que el **Programa** llega a un comando de comprobación de entradas (`entradaUna()`, `entradaDos()`, o `entradaTres()`), el **Programa** pide ver esa carta de entrada.\n-   Si el valor de la carta mostrada coincide con la condicional asociada, el **Programa** realiza la(s) acción(es) dentro de la condicional.\n\nDespués de que los grupos hayan ejecutado el programa unas cuantas veces y parezcan entender cómo funciona, haz que cambien los papeles para que cada alumno tenga la oportunidad de ser el **Programa**.\n\n#### Versión B: Eventos de Entrada\n\nEsta vez, en lugar de pedir constantemente una entrada en un bucle, el **Programa** asignará a cada **Entrada** un Evento para que lo observe. En el contexto de esta actividad, un Evento es una carta roja o negra, pero en un programa ese Evento podría ser un clic en un botón, el movimiento del ratón, la pulsación de una tecla, o más. Este es un modelo simplificado de la forma en que se maneja la entrada en el Laboratorio de Aplicaciones.\n\n**Reglas para la Versión B:**\n\n-   Cada **Entrada** saca una carta del mazo a un ritmo de aproximadamente una por segundo.\n-   El **Programa** lee cada línea de código en voz alta.\n-   Cuando el **Programa** llega a un comando [\\`onEvent\\`(#fff176)](/docs/applab/onEvent/), le dicen a la **Entrada** especificada qué Evento debe esperar, y cuál debe ser la Respuesta.\n-   Cuando se le asigna un Evento, la **Entrada** anota los detalles en su hoja de _Eventos a Vigilar_.\n-   Cada vez que una **Entrada** roba una carta, comprueba si coincide con uno de los Eventos de su hoja. Si lo hace, le dicen al **Programa** que ejecute la Respuesta.\n\nHay algunas simplificaciones importantes que se hacen en este modelo para minimizar el número de roles y reglas:\n\n-   Este modelo implica que las Entradas están realmente pendientes de los Eventos por sí mismas. En realidad, un Manejador de Eventos que se ejecuta en segundo plano está pendiente del evento especificado.\n-   En este modelo la **Entrada** le dice al **Programa** qué acciones debe ejecutar. En realidad, cuando un Manejador de Eventos es activado, el Programa va a esa porción de su código y ejecuta todo en la función."
+        },
+        "1bc5d31f-53aa-4add-9e2e-2fa69287df4b": {
+          "name": "Informe de Actividades",
+          "description": "**Debatir:** Volviendo a los comentarios recogidos en la actividad de calentamiento, ¿qué cosas están más claras después de haber realizado la actividad? ¿Tienes alguna pregunta nueva?"
         },
         "4c3af8fe-b972-410f-a839-00f38e6a51ce": {
           "name": "Reflexión",
+          "description": "**Diario:** ¿Cuál es la diferencia entre la forma en que el Laboratorio de Juegos y el Laboratorio de Aplicaciones manejan las entradas?",
           "tips": [
-            null
+            "Los alumnos pueden tener diferentes formas de explicar las diferencias, pero el modelo de bucle de dibujo del Laboratorio de Juegos funciona secuencialmente, con cada línea de código ejecutada una después de la otra, y el código del bucle de dibujo ejecutado una y otra vez en secuencia.  Las entradas sólo se comprueban cuando se ejecuta esa línea de código.   El modelo de eventos del Laboratorio de Aplicaciones comprueba continuamente las entradas una vez que se crea un manejador de eventos."
           ]
         },
+        "5f73a5a3-c6bd-424f-b8a8-89fa0bc9ca56": {
+          "name": "Inspección de la Placa: Entradas",
+          "description": "**Distribuye:** Reparte una placa y un cable USB a cada pareja de estudiantes. Haz saber a los estudiantes que aún no deben conectar las placas.\n\n**Pregunta:** Pide a las parejas que dediquen un minuto a examinar la placa, centrándose en los posibles dispositivos de entrada. Basándose en lo que ya saben sobre esta tarjeta, ¿cómo creen que podrían utilizarla para obtener información?\n\n**Compartir:** Pida a los grupos que compartan sus ideas con todo el grupo, llevando un registro de las ideas en la pizarra. Insta a los alumnos a que apoyen sus ideas con pruebas de la revisión de la placa, pero no te preocupes por asegurar la exactitud en este momento."
+        },
+        "1d21d7f0-f853-4045-9db8-760e1c215afb": {
+          "name": "Obteniendo Entradas de la Placa"
+        },
         "42897a7c-47b8-426e-9d2f-c9177a06433e": {
-          "progression_name": "Eventos del tablero"
+          "progression_name": "Eventos de la Placa"
         },
         "70584163-7483-4f54-b414-11925175ca74": {
           "progression_name": "Usando la instrucción \"Switch\""
@@ -12278,14 +12484,27 @@
         "15e99a5a-e49e-47de-8eb1-f01b08a46a42": {
           "progression_name": "El Zumbador"
         },
+        "1184f2a5-021b-42e7-ba86-75ac8ffcc8ad": {
+          "progression_name": "Desafío Extra: Efectos de Sonido"
+        },
         "7091d49a-c4ac-4c04-aaa4-290efb0ee705": {
+          "description": "**Diario 3-2-1:**\n\n1.  ¿Cuáles son los tres tipos de eventos de la placa que has visto hasta ahora?\n2.  Describe dos situaciones diferentes y cómo necesitarían dos eventos **diferentes**.\n3.  ¿Cuál es otro evento que aún no has aprendido, pero crees que podría existir?",
           "tips": [
-            null
+            "Los alumnos deben elegir razonablemente cuándo un evento de la placa puede ser mejor que otro.  Es posible que quieras mantener un breve debate en clase antes o después de este diario para destacar las ventajas y desventajas de cada tipo de evento. "
           ]
+        },
+        "56f18b73-0f80-45aa-9af2-5abb0b14fd5e": {
+          "description": "**Repaso:** Pide a los alumnos que piensen en los diferentes tipos de información que pudieron obtener de la placa en la última lección (por ejemplo, pulsaciones de botones, estado de las palancas, etc.)"
+        },
+        "66c35b89-8cbd-456e-bddb-9e88ed218309": {
+          "description": "Hasta ahora hemos visto muchas formas de obtener información de nuestro Circuit Playground.  Hoy vamos a ver más formas de obtener información de la pantalla de nuestra aplicación."
+        },
+        "7679f996-c745-45c4-b413-aac4eeb2a9ae": {
+          "description": "Envía a los alumnos a Code Studio."
         },
         "2224615d-c083-4694-b797-4b3c8e8d84da": {
           "tips": [
-            null
+            "**Nivel 5** \nPuedes utilizar este nivel como evaluación formativa para los alumnos. Pulsa dentro del nivel para ver una rúbrica y dejar comentarios a tus alumnos"
           ],
           "progression_name": "Obtener propiedades"
         },
@@ -12298,15 +12517,31 @@
         "a7dd4853-b8c3-44d2-a03b-f5e5e23ff0ac": {
           "progression_name": "Motocicleta"
         },
+        "c7ee1edc-3c31-4a6a-a814-1bc69360e6fe": {
+          "progression_name": "Desafío Extra"
+        },
         "d0e85c72-53c1-4429-91ab-3d160fc10b20": {
+          "description": "**Pregunta del Diario:** Hasta ahora, has visto varios tipos diferentes de entrada, algunos desde la pantalla y otros desde el Circuit Playground.  Elige un tipo de entrada y responde a las siguientes preguntas sobre ella.",
           "tips": [
-            null
+            "Para esta pregunta, puedes \"descifrar\" las respuestas asignando a diferentes estudiantes o a diferentes grupos un tipo de entrada y respondiendo a las preguntas sobre cada tipo.  Las diferentes respuestas se pueden combinar para obtener una referencia de clase sobre los tipos de entrada."
           ]
         },
+        "305135b2-565f-4d86-9597-9aacc1b1d990": {
+          "description": "1.  ¿Qué código necesitas para obtener información de esta entrada?\n2.  ¿Cuál es un ejemplo de cuándo **si** querrías usar esta entrada?\n3.  ¿Cuál es un ejemplo de cuándo **no** querrías usar esta entrada?"
+        },
         "f5a1e7d6-5715-4050-bfed-a5e0663486c4": {
+          "name": "Analógico y Digital",
+          "description": "**Piensa, Empareja, Comparte:** ¿Cómo cuantificarías cada uno de tus cinco sentidos (tacto, gusto, vista, olfato y oído)? Piensa en la unidad anterior y en las distintas formas que se te ocurrieron para codificar datos en un ordenador.",
           "tips": [
-            null
+            "El objetivo es que los alumnos piensen en cómo se puede convertir un valor natural (o analógico) en un formato computable. Anima a los alumnos a reflexionar sobre cuáles pueden ser los límites superior e inferior de cada valor (por ejemplo, ¿hay una cantidad mínima o máxima de sonido?)."
           ]
+        },
+        "9b2fa494-5d70-4f47-967f-f7ede451d439": {
+          "description": "**Vídeo:** ¡Hoy vamos a escribir programas que tienen \"sentidos\" propios! Mostrar [Diferencia entre señales Analógicas y Digitales - Video](https://www.youtube.com/watch?v=RQc_frX50BA)"
+        },
+        "65b2eb73-b2f8-4ee7-ba1d-0d7e78e7f62a": {
+          "name": "Entradas Analógicas",
+          "description": "\\*\\* Distribuye:\\*\\* Reparte los Adafruit Circuit Playgrounds.\n\n**Transición:** Envía a los estudiantes a Code Studio. Hazles saber que hoy experimentarán con unos sensores que detectan señales [v analog/csd/2021] y las convierten en valores [v digital/csd/2021] que pueden ser utilizados por el ordenador."
         },
         "7eb66b7f-6ed3-4590-ac67-725362a38253": {
           "progression_name": "Experimento con sensores"
@@ -12319,11 +12554,23 @@
         },
         "ef9ec42f-f86e-4636-a45b-5da0d208b714": {
           "tips": [
-            null
+            "**Nivel 11**\nPuedes utilizar este nivel como evaluación formativa para los alumnos. Haz clic dentro del nivel para ver una rúbrica y dejar comentarios a tus alumnos"
           ],
           "progression_name": "Sensores para Colores"
         },
+        "1a668f58-e58e-4624-a911-fcfc3188df23": {
+          "progression_name": "Desafío Extra"
+        },
+        "563119d4-41c6-499b-a289-9a6911461c56": {
+          "name": "Sensores por todas partes",
+          "description": "**Diario:** Teniendo en cuenta todos los dispositivos informáticos con los que interactúas habitualmente, identifica todos los posibles sensores analógicos que puedas. ¿Dónde reciben tus dispositivos informáticos una señal que cambia continuamente y la convierten en datos digitales?"
+        },
+        "4016ab65-7533-4351-9967-71b07aeb18f1": {
+          "name": "Juego de Carreras de Emojis",
+          "description": "**Agrupación:** Coloca a los estudiantes en parejas\n\n**Demostración:** Mostrar a los alumnos la demo de la Carrera Emoji, disponible al principio de esta lección.\n\n**Transición:** Envía a los estudiantes a Internet para que prueben el juego por su cuenta. Cada pareja debe ejecutar el juego y seguir las instrucciones en las que se les pide que hagan una lista de los componentes de la placa, los eventos y las variables que consideren necesarios para crear este juego."
+        },
         "dd376cda-c9b9-4bf6-9cd4-be44b1ec632f": {
+          "description": "**Debatir:** Los estudiantes deben haber creado individualmente una lista de componentes de la placa, eventos y funciones que necesitarán para hacer el juego que han practicado. Pide a los alumnos que compartan sus listas con un compañero antes de discutirlas en clase.",
           "tips": [
             null,
             null
@@ -12351,7 +12598,7 @@
         },
         "33168786-d600-4b6c-a947-045b8a466d7c": {
           "tips": [
-            null
+            "**Nivel 12**\nPuedes utilizar este nivel como evaluación formativa para los alumnos. Haz clic dentro del nivel para ver una rúbrica y dejar comentarios a tus alumnos"
           ],
           "progression_name": "Chequeando un Ganador"
         },
@@ -12393,7 +12640,8 @@
           ]
         },
         "81d447de-9abb-4bc8-af49-9d823c30e8cb": {
-          "name": "Arreglos y LED de colores"
+          "name": "Arreglos y LED de colores",
+          "description": "**Transición:** Dirígete a Code Studio"
         },
         "701df007-2fc2-4907-bdae-63ea39ea0649": {
           "tips": [
@@ -12533,6 +12781,9 @@
             null
           ]
         },
+        "57a93004-eeaa-48a5-b81b-6f9b05aedf82": {
+          "progression_name": "Vídeo: Circuitos y Lógica"
+        },
         "4d9d84e9-900f-4816-81fd-b70a1ca43b16": {
           "progression_name": "Circuitos Sencillos"
         },
@@ -12553,7 +12804,7 @@
           ]
         },
         "90ed38ab-3eec-449a-a2dd-dccd4a1aa26d": {
-          "progression_name": "Circuitos de botones"
+          "progression_name": "Circuitos de Pulsadores"
         },
         "672d26f8-cbd5-46ea-8482-d84b0be3e335": {
           "tips": [
@@ -12578,7 +12829,7 @@
           "progression_name": "Pantalla de Usuario"
         },
         "aff65857-e7c8-4c2c-91b8-ea88ac74042c": {
-          "progression_name": "Entrada y salida de la placa"
+          "progression_name": "Entradas y Salidas de la Placa"
         },
         "e94b332f-1746-4ad8-ad48-f3a337b69c2c": {
           "progression_name": "Retoques finales"
@@ -12702,6 +12953,9 @@
             null
           ]
         },
+        "b4133437-14b2-4221-8202-c411f147e13c": {
+          "progression_name": "Widget de Números Binarios"
+        },
         "30ef889b-387b-4dbd-b6bc-96ca25489944": {
           "tips": [
             null
@@ -12732,6 +12986,9 @@
           "tips": [
             null
           ]
+        },
+        "5b070069-8e80-48a8-8a84-435906d67aef": {
+          "progression_name": "Widget de Números Binarios de 8 Bits"
         },
         "38324708-63cb-4738-92c9-af06aed187f7": {
           "tips": [
@@ -12822,6 +13079,9 @@
           "tips": [
             null
           ]
+        },
+        "4668155e-befd-4113-bcad-1c7a7fa245be": {
+          "progression_name": "Datos de la Fiesta de la Pizza"
         },
         "28dfd4cd-0d62-4c35-bed0-d6038adf4813": {
           "tips": [
@@ -12921,17 +13181,24 @@
         "e84d2260-141b-4899-971d-0e0e33eb12d2": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Vídeo: Netflix y Datos"
         },
         "caccc30a-07e9-465a-a077-65788e7b4f1b": {
           "tips": [
             null
           ]
         },
+        "2837e4be-02be-4d45-91a4-2a155bfbb322": {
+          "progression_name": "Vídeo: Waze y Datos"
+        },
         "83b2e7f4-a01c-491f-a3e1-29ac12d01a13": {
           "tips": [
             null
           ]
+        },
+        "35b3c205-5ca5-43fa-b2ef-ee0f6d245722": {
+          "progression_name": "Vídeo: Amazon y Datos"
         },
         "f6b744db-baed-4e9d-bdf4-1f1399bf716a": {
           "tips": [
@@ -12954,12 +13221,17 @@
         "7d58d643-efce-44e7-a3e4-7b3492c72250": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Vídeo: ¿Qué es el Aprendizaje Automático?"
         },
         "f8f9a770-42a2-4c1d-9b51-52f46ff9360d": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Inteligencia Artificial para Océanos: Peces y No Peces"
+        },
+        "037d1080-4d96-41bc-93af-bef5eef2007a": {
+          "progression_name": "Vídeo: Datos de Entrenamiento y Sesgo"
         },
         "914c565c-fb6d-490c-a14a-b289ac56d720": {
           "description": "**Pregunta:** ¿Cómo crees que tus datos de entrenamiento influyeron en los resultados que produjo la Inteligencia Artificial?",
@@ -12972,10 +13244,16 @@
             "Los peces de este aprendizaje se generan aleatoriamente basándose en algunos componentes predefinidos, como bocas, colas, ojos, escamas y aletas, con un color, una forma y un tamaño del cuerpo elegidos al azar. En lugar de mirar los datos de la imagen real, la Inteligencia Artificial está buscando patrones en estos componentes basados en cómo el estudiante clasifica cada pez. Es más probable que etiquete un pez de la misma manera que el estudiante si tiene rasgos que coinciden."
           ]
         },
+        "0644d195-c0b2-4557-9f2c-116b259fe74a": {
+          "progression_name": "Inteligencia Artificial para Océanos: Tipos de Peces"
+        },
         "92b13324-8ae5-4796-9071-694683704daa": {
           "tips": [
             null
           ]
+        },
+        "e67f18c9-668b-44fb-95aa-1908687d9f52": {
+          "progression_name": "Vídeo: Impacto en la Sociedad"
         },
         "7c5c8f29-ab7a-4891-b135-182f4222a591": {
           "tips": [
@@ -13148,7 +13426,8 @@
         "df26b7e2-cb48-40b2-b360-d0e9770b8802": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Vídeo: Introducción a las Variables"
         },
         "a14285ec-28bc-4b44-a63c-204c0034c19f": {
           "tips": [
@@ -13311,6 +13590,18 @@
         "d4865d33-6382-4b57-b532-6949d5621973": {
           "progression_name": "Escenas de sprites"
         },
+        "9a593b91-9cd2-48ff-a733-2943aa535ceb": {
+          "progression_name": "Crea un Fondo"
+        },
+        "853974f1-7e3b-4403-a475-5af28d960115": {
+          "progression_name": "Añadir Sprites"
+        },
+        "c0fc532b-e6eb-4858-af5b-5032cd917616": {
+          "progression_name": "Añadir Texto"
+        },
+        "53f44c86-807a-412c-a436-ed4235537ed4": {
+          "progression_name": "Revisa tu Escena"
+        },
         "fe60d6bf-420e-474d-8b50-0ff252e6c6bf": {
           "tips": [
             null
@@ -13411,6 +13702,27 @@
             null
           ]
         },
+        "d77db66e-6e3a-4e3a-82df-2499a5ad0efd": {
+          "progression_name": "Ejemplo de Escena Animada"
+        },
+        "3b4e9eb3-a29a-432e-b6dd-0c525bfaedf2": {
+          "progression_name": "Planifica tu Escena"
+        },
+        "2e883502-c179-45a9-a313-6ec995831ed2": {
+          "progression_name": "Dibuja un Fondo"
+        },
+        "68f06aee-a50d-4b3e-9323-16f4812eb23a": {
+          "progression_name": "Añadir Sprites"
+        },
+        "6e3a6230-12e7-4b7f-90a7-ec8574647b3b": {
+          "progression_name": "Añadir Texto"
+        },
+        "08bedf45-b2d1-4147-8479-22a9c5f20d51": {
+          "progression_name": "Añadir Movimiento"
+        },
+        "7de39108-1c8b-4602-9afe-cfde5d7f3ed4": {
+          "progression_name": "Revisa tu Escena Animada"
+        },
         "fa1f1ad4-aadd-49d1-9138-887450893813": {
           "tips": [
             null
@@ -13442,6 +13754,9 @@
             null
           ],
           "progression_name": "Video: booleanos"
+        },
+        "6eac26fe-a47a-4dbc-b225-c006efd6c418": {
+          "progression_name": "Comprobación Rápida"
         },
         "ba88e2d6-49b9-4e4b-a34f-3a7804ea1ce5": {
           "progression_name": "Desarrollo de Habilidades"
@@ -13547,10 +13862,14 @@
             null
           ]
         },
+        "00e65ea4-8a6e-408e-bb09-2fcb9f1a27d6": {
+          "progression_name": "Aplicación de Demostración: Tarjeta Interactiva"
+        },
         "4b3c39d2-a62c-43c3-b5ae-048ef270624a": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Crea una Tarjeta Interactiva"
         },
         "1f6b91fb-f2a1-4585-bb33-4ede2232a20d": {
           "progression_name": "Trabajo del proyecto"
@@ -13646,8 +13965,29 @@
             null
           ]
         },
+        "0525516c-cd72-4700-9c7b-36644137ab93": {
+          "progression_name": "Introducción a los Desplazamientos Laterales"
+        },
+        "c62c9fee-1e51-4d9d-b221-915d73af2cd2": {
+          "progression_name": "Dibuja tu Fondo"
+        },
+        "ef36eaf3-2930-44dd-a939-e0e614755352": {
+          "progression_name": "Crea tus Sprites"
+        },
+        "c8d03646-3696-4a48-9ae9-b54fce33300e": {
+          "progression_name": "Controles del Jugador"
+        },
+        "b763e8fd-b51e-4a15-b9be-7d675958d51c": {
+          "progression_name": "Haciendo Bucles"
+        },
         "3d9ddc58-7bda-43a0-8944-fd8c622b3d70": {
           "progression_name": "Interacciones de sprites"
+        },
+        "1ffc10cf-5883-4d6d-915c-2eb055ce8f84": {
+          "progression_name": "Puntuación y Marcador"
+        },
+        "8cdb45e9-b767-4246-b5bc-12648197665d": {
+          "progression_name": "Revisa tu Juego"
         },
         "560aac86-3e4c-411b-be1c-9cc37704fd3f": {
           "tips": [
@@ -13685,6 +14025,9 @@
             null
           ]
         },
+        "da390762-bcc9-47c8-ab06-9bac895ebd00": {
+          "progression_name": "Predicción de Código"
+        },
         "29881c8e-82cb-4886-8e1f-7f101c91bae9": {
           "tips": [
             null
@@ -13720,11 +14063,23 @@
             null
           ]
         },
+        "05331f50-c576-42e0-91ce-00561faee05c": {
+          "progression_name": "Introducción al Juego de Voladores"
+        },
+        "b67bbd2c-2139-48e4-8002-a7f3f048052a": {
+          "progression_name": "Crea tus Sprites"
+        },
+        "91ab7cf4-19a7-4424-b59e-c806057dbb65": {
+          "progression_name": "Controles del Jugador"
+        },
         "a7af5fa7-b9bc-4779-bf77-e349bd07d0f2": {
           "progression_name": "Movimiento de sprites"
         },
         "93c86b2f-aeb2-48d2-b34d-8213761ae09c": {
           "progression_name": "Interacciones de sprites"
+        },
+        "a9203a76-f8c9-4a77-9c8e-0d329d1f9099": {
+          "progression_name": "Revisa tu Juego"
         },
         "40b22769-f206-4725-b2f4-fd3f71c15101": {
           "tips": [
@@ -13752,6 +14107,9 @@
           ],
           "progression_name": "Practica"
         },
+        "46206978-44fa-44f3-a4b3-746a30a86dce": {
+          "progression_name": "Comprobación Rápida"
+        },
         "fa4f0ee7-664c-4e90-b170-12f4cfb45ef5": {
           "tips": [
             null
@@ -13776,8 +14134,17 @@
             null
           ]
         },
+        "655acab5-5605-4833-b201-7d4776773bb5": {
+          "progression_name": "Mismo Juego"
+        },
         "f2e6c88e-bc52-4073-b67d-69a0dda590a7": {
           "progression_name": "Planifica tu Proyecto"
+        },
+        "4a1fbbc7-9baa-4d49-bad8-71ea306857af": {
+          "progression_name": "Configurar Sprites"
+        },
+        "f860c052-f4a5-4925-bed9-78bf6c24605b": {
+          "progression_name": "Controla a tu Jugador"
         },
         "b38b9687-9ab2-490a-8306-5e0655d51863": {
           "progression_name": "Interacciones de sprites"
@@ -13807,7 +14174,7 @@
           "progression_name": "Muestra del juego de salto de plataformas"
         },
         "96fe06b7-2d5b-434f-bb02-bc5e4bb74eaf": {
-          "progression_name": "Crea un salto de plataformas"
+          "progression_name": "Crear un Saltador de Plataformas"
         },
         "b51fe24a-e404-4c6e-9fe1-8916f81f0e85": {
           "progression_name": "Plataforma de Salto - Antecedentes y variables"
@@ -13824,7 +14191,8 @@
         "b29f40dd-4e28-4c22-8aa8-9e387819622c": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Revisión de la Plataforma de Salto"
         },
         "3732107f-02cf-4117-941b-725824574e50": {
           "progression_name": "Desafíos"
@@ -13833,6 +14201,9 @@
           "tips": [
             null
           ]
+        },
+        "204d6831-54a0-4a74-bd1e-a81cfb74475a": {
+          "progression_name": "Ejemplos de Juegos"
         },
         "686b638e-1a29-49cc-8711-191165d251b9": {
           "tips": [
@@ -13844,6 +14215,9 @@
         },
         "f582ab6b-ecf5-438c-9782-e7dbbc1dc1a9": {
           "progression_name": "Proyecto - Sprites e Interacciones"
+        },
+        "3cabd5bc-4a69-4067-abda-7200bf0de085": {
+          "progression_name": "Revisa tu Juego"
         },
         "59ca85ff-b7b0-450d-b354-1c9938c4a615": {
           "tips": [
@@ -13992,22 +14366,30 @@
         "a52b80a3-f6a7-4e24-8347-1eb0be4ccddf": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "App: Selector de Mascotas"
         },
         "e606d7d3-d552-4db3-91b7-c26f98da237c": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "App: Creador de Historias"
         },
         "f1388388-8631-479b-bca9-ffe97206edf8": {
           "tips": [
             null
           ]
         },
+        "29f459d2-a640-4618-9829-6d5adb95cef9": {
+          "progression_name": "App: Aplicación Mejorada para Mascotas"
+        },
         "ce77f101-8880-4264-bf0e-b2d95e40c080": {
           "tips": [
             null
           ]
+        },
+        "658bb176-e81a-441b-9846-7f06edb26bcb": {
+          "progression_name": "App: ¿Es tu cumpleaños?"
         },
         "584f3a53-ab7b-421d-a8a4-bc8c106ead2a": {
           "tips": [
@@ -14019,10 +14401,16 @@
             null
           ]
         },
+        "3136eec5-7ffe-4b31-9cdd-7e988769c3d1": {
+          "progression_name": "App: Parques Nacionales"
+        },
         "fb64c101-5e75-4908-9b31-15d964b4ffa9": {
           "tips": [
             null
           ]
+        },
+        "59635fc9-85ee-4beb-8e84-3db4d473f7d5": {
+          "progression_name": "App: ¿Cuántos Países?"
         },
         "21e51178-7062-468a-b8e1-a9227a0ac5eb": {
           "tips": [
@@ -14033,6 +14421,21 @@
           "tips": [
             null
           ]
+        },
+        "7870b41a-67d4-4e4c-bac2-51df283c64a2": {
+          "progression_name": "App: Mi Cumpleaños Famoso"
+        },
+        "fe0df0f8-e6fb-42c2-82a5-7542d4a4fcde": {
+          "progression_name": "App: Sello de Cuadernos"
+        },
+        "1bf0d6db-f0d5-4473-b861-ca00d265f8a9": {
+          "progression_name": "App: El Dedo más Rápido"
+        },
+        "09785de0-de7c-40a7-afac-9a255151a45d": {
+          "progression_name": "App: Adivina el Número"
+        },
+        "23734edc-d8f1-43ea-b0bc-63a9f745c6bb": {
+          "progression_name": "App: ¿Dónde Debería Vivir?"
         },
         "ed3fc57d-be54-4625-bae7-5cac4680d615": {
           "tips": [
@@ -14054,10 +14457,24 @@
             null
           ]
         },
+        "2000a800-9ea1-4dbd-bb6c-7af93735477d": {
+          "name": "Selector de Ropa",
+          "progression_name": "App: Selector de Ropa"
+        },
+        "33b8468e-5c6c-4acb-b377-dd721dc0904a": {
+          "name": "Buscador de Amigos",
+          "progression_name": "App: Buscador de Amigos"
+        },
+        "028c50a4-a63b-44aa-a686-55512682ee15": {
+          "progression_name": "App: Elige una Película para Niños"
+        },
         "fa03e441-7483-4193-a5f7-20fa4bb081bf": {
           "tips": [
             null
           ]
+        },
+        "0e40d4c1-d45a-4209-989f-30553ca8de8a": {
+          "progression_name": "Vídeo: Modelo IOSP"
         },
         "4cefb9ba-ffbc-40ba-bc37-dae06e608b67": {
           "tips": [
@@ -14343,7 +14760,7 @@
         },
         "579df0b6-aebc-48d8-9ac3-427a2c04e61f": {
           "tips": [
-            null
+            "**Depuración:**\nA medida que los estudiantes comienzan con la depuración, este es un gran momento para hacer hincapié en una cultura positiva en torno a la depuración. Esta es una habilidad central que los estudiantes desarrollarán a lo largo del curso. Se debe insistir en que la depuración es una parte normal del proceso de programación, y que todos los programadores, incluso los expertos, tienen errores. Se puede encontrar más información en la \"Guía de Depuración\" vinculada a la página del plan de estudios de Descubrimientos de Informática en <https://studio.code.org/courses/csd>."
           ],
           "progression_name": "Desafío"
         },
@@ -14368,7 +14785,7 @@
         "ec491dbb-ef99-4e6e-9abf-f1f90c22e838": {
           "name": "Programación de pares",
           "tips": [
-            null
+            "**Programación por Parejas:** La programación por parejas se practica en la educación y en la industria.  Los alumnos que programan en parejas tienen más confianza en sus capacidades y es más probable que sigan estudiando informática. Esta práctica es más eficaz si se introduce pronto y el profesor hace cumplir las reglas para cambiar de pareja.  Puedes leer más sobre la programación en parejas en la guía del plan de estudios vinculada a la página del plan de estudios de Descubrimientos de Informática en <https://studio.code.org/courses/csd>."
           ]
         },
         "8ae3516e-e6e2-4401-afc1-4ddfb1f1312b": {
@@ -14391,12 +14808,14 @@
         "415a1a02-00ce-4eee-9af3-bcddf1369b79": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Comprobación Rápida"
         },
         "f5c13deb-a9a7-4f04-9daa-ec92ec261b02": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Vídeo: Depuración"
         },
         "b9b617ce-f9b9-4d30-90ae-0ecb111821d7": {
           "progression_name": "Practica"
@@ -14416,6 +14835,18 @@
           "tips": [
             null
           ]
+        },
+        "d30c88c0-ef5a-4b8a-9bd0-68123ecf6cb6": {
+          "progression_name": "Revisión: HTML"
+        },
+        "db6b9679-26c9-45e7-9f82-03b3a92d3abf": {
+          "progression_name": "Desafío: Listas"
+        },
+        "f1f2db2f-90f0-454f-a438-ad0ef1d6f27a": {
+          "progression_name": "Programa tu Página"
+        },
+        "b8b06d7c-cb56-4412-85ad-c68fb0953dc0": {
+          "progression_name": "Revisa tu Página"
         },
         "1712fd0b-563c-4ac9-b929-288bce3bbb72": {
           "tips": [
@@ -14448,6 +14879,9 @@
             null
           ]
         },
+        "3da6f5d8-fc89-457f-9466-1f539cb9f55b": {
+          "progression_name": "Ejemplo de Sitio Web"
+        },
         "0fb9d1d3-097c-4ce5-b276-aa71c839c82f": {
           "tips": [
             null
@@ -14458,7 +14892,8 @@
           "tips": [
             null,
             null
-          ]
+          ],
+          "progression_name": "Vídeo: Introducción a CSS - Parte 1"
         },
         "8c1fda37-7107-43e8-92ad-60e7fc6d2d7d": {
           "progression_name": "Desarrollo de Habilidades"
@@ -14466,7 +14901,8 @@
         "bc3aac22-e4eb-4c6f-9b69-60cb02414ac9": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Video: Introducción a CSS - Parte 2"
         },
         "d9a4b1da-84da-40b3-a256-bbd4223652cd": {
           "progression_name": "Desarrollo de Habilidades"
@@ -14505,6 +14941,21 @@
           "tips": [
             null
           ]
+        },
+        "58f32e0f-f519-4eae-9c0c-a5cd428869b2": {
+          "progression_name": "Revisión: CSS"
+        },
+        "f52e5e03-5b2f-4caf-8c69-868f7c2acdbc": {
+          "progression_name": "Desafío: Colores RGB"
+        },
+        "81ab793a-d696-4167-a9db-9258e5f476b4": {
+          "progression_name": "Añade Contenido y Estructura a tu Página"
+        },
+        "5c1f865c-e956-43d3-aac9-e6cf1a18c1b9": {
+          "progression_name": "Añade Estilo a tu Página"
+        },
+        "30535418-4101-4313-b0f2-fb2afdde6b62": {
+          "progression_name": "Revisa tu Página"
         },
         "c48b651f-340a-4ea2-baae-aebee2dc69ff": {
           "name": "Comentarios de los compañeros"
@@ -14589,6 +15040,9 @@
             null
           ]
         },
+        "890f7764-695b-4258-acbb-9b7e29804fc5": {
+          "progression_name": "Ejemplos de Sitios Web Personales"
+        },
         "f694e569-1f2b-40ac-8e46-0439d6b12551": {
           "tips": [
             null
@@ -14608,6 +15062,9 @@
           "tips": [
             null
           ]
+        },
+        "5b7dc4f0-181c-44f8-af21-9dfd8a5edb26": {
+          "progression_name": "Ejemplo de Sitio Web"
         },
         "cbb6abd1-911a-4ea4-b133-78742425ccbc": {
           "progression_name": "Exploración"
@@ -14664,7 +15121,8 @@
         "f82407b3-02da-446b-9c56-6e11c8f2df36": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Vídeo: Publicando tu Sitio Web"
         },
         "21f831a9-7123-4982-b5fb-d37eadd0df25": {
           "progression_name": "Publicar tu sitio web"
@@ -14726,7 +15184,8 @@
         "4e9b0621-b725-4913-8938-757f111a9ce6": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Vídeo: Trabajo en Equipo"
         },
         "43da857d-e2ac-4797-b205-4bc8e5b274c8": {
           "tips": [
@@ -14736,7 +15195,8 @@
         "52a7434e-fca4-48af-9aa8-61086949bb98": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Vídeo: Gestionando los Desacuerdos"
         },
         "4145fe6b-15f3-4528-91b5-726f4cffd9b5": {
           "tips": [
@@ -14758,6 +15218,9 @@
             null
           ]
         },
+        "6a799e5e-d77a-4c80-bdd4-713e6a4d9760": {
+          "progression_name": "Vídeo: Cómo Funciona la Búsqueda"
+        },
         "136308c1-5aa0-4820-afe0-a16252ba6c74": {
           "tips": [
             null
@@ -14770,6 +15233,9 @@
         },
         "287a07a0-cdbc-4680-8733-69515c67c54b": {
           "name": "Clases"
+        },
+        "8d36fb80-6b63-4f51-a57c-76712a9d5d7d": {
+          "progression_name": "Ejemplo de Página Web"
         },
         "39d43b4f-8e5c-4459-9592-b9a44cd41c4d": {
           "progression_name": "Exploración"
@@ -14802,6 +15268,9 @@
             null
           ]
         },
+        "28d6755d-32ea-439a-91b0-a36f90e3dc83": {
+          "progression_name": "Sube tus Imágenes"
+        },
         "754d0467-6e5e-45c8-8692-2fab52c45548": {
           "tips": [
             null
@@ -14827,7 +15296,8 @@
         "34f33cbb-40a2-4d61-aa69-7bf1aa7f4c81": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Añadiendo Páginas"
         },
         "76186510-9804-44d1-8371-4aa2895fc16d": {
           "progression_name": "Desafíos"
@@ -14850,6 +15320,24 @@
             null
           ]
         },
+        "88207ae8-3b7d-4b0d-a2b7-7aeb01525bed": {
+          "progression_name": "Tu Proyecto de Equipo"
+        },
+        "30c8efa1-9c2a-434b-8e72-474a8f38d93e": {
+          "progression_name": "Añadir Contenido y HTML"
+        },
+        "3c67e494-744f-4bc3-8068-56698fcc6c42": {
+          "progression_name": "Comparte tus Páginas"
+        },
+        "61b38059-437b-4b5b-a71d-e94ff04f6ae6": {
+          "progression_name": "Añadir Estilo"
+        },
+        "3db737c5-d81b-44fc-a3b1-6dd08594ce19": {
+          "progression_name": "Comparte tus Hojas de Estilo"
+        },
+        "f6c5624d-14b2-4344-86e9-2a2da40edf31": {
+          "progression_name": "Comprueba Tu Trabajo"
+        },
         "35722166-2159-4038-8c7e-7a6cc0580812": {
           "tips": [
             null
@@ -14858,7 +15346,8 @@
         "aca795d4-18ad-434c-91f8-cc29e3d5a96c": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Incorporar los Comentarios"
         },
         "c11db9e7-9e8e-470f-854b-a56722d138f0": {
           "progression_name": "Reflexión"

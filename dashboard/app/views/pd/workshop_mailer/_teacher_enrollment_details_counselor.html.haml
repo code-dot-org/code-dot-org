@@ -8,24 +8,9 @@
     vertical-align: top;
   }
 
-%p
-  We’re excited to partner with you in our effort to ensure that every student in every school has access to computer
-  science education! If you have any questions or need to request special accommodations, please reach out to your workshop organizer directly:
-  = @workshop.organizer.name
-  at
-  = mail_to(@workshop.organizer.email) + '.'
-
-= render partial: 'workshop_details'
-
 = render partial: 'workshop_logistics'
 
-= render partial: 'workshop_notes'
-
-%p
-  We strongly encourage you to connect with other educators on Twitter
-  = link_to '@TeachCode', 'https://twitter.com/teachcode'
-  for inspiration and great tips to bring computer science to every school. Please note that other workshop attendees may post photos from the workshop to social media. If you don't want your photo taken, make sure the facilitator knows before the workshop
-  begins.
+= render partial: 'accessibility'
 
 = render partial: 'how_to_cancel'
 
@@ -33,3 +18,11 @@
   Thank you,
   %br
   = @workshop.organizer.name
+
+%p
+  P.S. Connect with other educators on Twitter
+  = link_to '@TeachCode', 'https://twitter.com/teachcode', target: "_blank", rel: "noopener noreferrer"
+  for inspiration and great tips on bringing computer science to every school. We encourage you and other workshop attendees to post about your workshop experience on social media, and help
+  = link_to 'spread awareness about computer science.', 'http://bit.ly/38Ivp20', target: "_blank", rel: "noopener noreferrer"
+  However, if you don't want your photo taken, just make sure the facilitator knows before the workshop begins.
+

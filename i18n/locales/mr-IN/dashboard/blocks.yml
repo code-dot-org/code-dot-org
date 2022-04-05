@@ -2,9 +2,12 @@
 mr:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: "{LOCATION} येथे नवीन {ANIMATION_NAME} स्प्राइट बनवा"
       Dancelab_alternateMoves:
         options:
           GROUP:
+            sprites: सर्व
             '"ALIEN"': एलियन
             '"BEAR"': अस्वल
             '"CAT"': मांजरी
@@ -57,6 +60,7 @@ mr:
         text: "{GROUP} नेहेमी {MOVE} {DIR} करतात"
         options:
           GROUP:
+            sprites: सर्व
             '"ALIEN"': एलियन
             '"BEAR"': अस्वल
             '"CAT"': मांजरी
@@ -115,6 +119,7 @@ mr:
         text: "{GROUP} {PROPERTY} ला {VAL} ने बदला"
         options:
           GROUP:
+            sprites: सर्व
             '"ALIEN"': एलियन
             '"BEAR"': अस्वल
             '"CAT"': मांजरी
@@ -137,6 +142,7 @@ mr:
         text: "{GROUP} एकदा {MOVE} {DIR} करतात"
         options:
           GROUP:
+            sprites: सर्व
             '"ALIEN"': एलियन
             '"BEAR"': अस्वल
             '"CAT"': मांजरी
@@ -282,6 +288,7 @@ mr:
         text: jump {GROUP} to {LOCATION}
         options:
           GROUP:
+            sprites: सर्व
             '"ALIEN"': एलियन
             '"BEAR"': अस्वल
             '"CAT"': मांजरी
@@ -303,6 +310,7 @@ mr:
         text: layout {GROUP} as a {FORMAT}
         options:
           GROUP:
+            sprites: सर्व
             '"ALIEN"': एलियन
             '"BEAR"': अस्वल
             '"CAT"': मांजरी
@@ -317,6 +325,7 @@ mr:
           FORMAT:
             '"border"': सीमारेषा
             '"inner"': चौरस च्या आत
+            '"diamond"': हिरा
             '"circle"': वर्तुळ
             '"grid"': ग्रिड
             '"row"': ओळ
@@ -328,12 +337,17 @@ mr:
       Dancelab_makeAnonymousDanceSprite:
         options:
           COSTUME:
+            '"ALIEN"': परग्रहवासी
             '"BEAR"': अस्वल
+            '"CAT"': मांजर
+            '"DOG"': कुत्रा
+            '"DUCK"': बदक
             '"FROG"': बेडूक
             '"MOOSE"': मूस
             '"PINEAPPLE"': अननस
             '"ROBOT"': रोबॉट
             '"SHARK"': शार्क
+            '"UNICORN"': युनिकॉर्न
           LOCATION:
             "{x: 200, y: 100}": वर
             "{x: 200, y: 300}": खाली
@@ -346,12 +360,17 @@ mr:
           {NAME} नावाचे एक नवीन {COSTUME} बनवा
         options:
           COSTUME:
+            '"ALIEN"': परग्रहवासी
             '"BEAR"': अस्वल
+            '"CAT"': मांजर
+            '"DOG"': कुत्रा
+            '"DUCK"': बदक
             '"FROG"': बेडूक
             '"MOOSE"': मूस
             '"PINEAPPLE"': अननस
             '"ROBOT"': रोबॉट
             '"SHARK"': शार्क
+            '"UNICORN"': युनिकॉर्न
           LOCATION:
             "{x: 200, y: 100}": वर
             "{x: 200, y: 300}": खाली
@@ -416,6 +435,7 @@ mr:
           LAYOUT:
             '"border"': सीमारेषा
             '"inner"': चौरस च्या आत
+            '"diamond"': हिरा
             '"circle"': वर्तुळ
             '"grid"': ग्रिड
             '"row"': ओळ
@@ -520,6 +540,7 @@ mr:
         text: set {GROUP} dance speed to {SPEED}
         options:
           GROUP:
+            sprites: सर्व
             '"ALIEN"': एलियन
             '"BEAR"': अस्वल
             '"CAT"': मांजरी
@@ -588,6 +609,7 @@ mr:
         text: set {GROUP} {PROPERTY} to {VAL}
         options:
           GROUP:
+            sprites: सर्व
             '"ALIEN"': एलियन
             '"BEAR"': अस्वल
             '"CAT"': मांजरी
@@ -622,6 +644,7 @@ mr:
         text: "{GROUP} {PROPERTY} ला अनियत करा"
         options:
           GROUP:
+            sprites: सर्व
             '"ALIEN"': एलियन
             '"BEAR"': अस्वल
             '"CAT"': मांजरी
@@ -647,6 +670,7 @@ mr:
         text: set {THIS} tint to {VAL}
         options:
           THIS:
+            sprites: सर्व
             '"ALIEN"': एलियन
             '"BEAR"': अस्वल
             '"CAT"': मांजरी
@@ -662,6 +686,7 @@ mr:
         text: set {THIS} tint to {VAL}
         options:
           THIS:
+            sprites: सर्व
             '"ALIEN"': एलियन
             '"BEAR"': अस्वल
             '"CAT"': मांजरी
@@ -685,6 +710,7 @@ mr:
         text: set {THIS} visibility to {VISIBILITY}
         options:
           THIS:
+            sprites: सर्व
             '"ALIEN"': एलियन
             '"BEAR"': अस्वल
             '"CAT"': मांजरी
@@ -718,6 +744,7 @@ mr:
         text: "{GROUP} begin {PROPERTY} following {RANGE}"
         options:
           GROUP:
+            sprites: सर्व
             '"ALIEN"': एलियन
             '"BEAR"': अस्वल
             '"CAT"': मांजरी
@@ -761,6 +788,7 @@ mr:
         text: "{GROUP} stops {PROPERTY} following {RANGE}"
         options:
           GROUP:
+            sprites: सर्व
             '"ALIEN"': एलियन
             '"BEAR"': अस्वल
             '"CAT"': मांजरी
@@ -790,6 +818,7 @@ mr:
         options:
           STRING:
             '"hearts_colorful"': ह्रदय
+            '"diamond"': हिरा
             '"s"': s
             '"t"': t
             '"u"': u
@@ -893,7 +922,10 @@ mr:
           PROPERTY:
             '"scale"': आकार
             '"rotation"': फिरणे
+            '"x"': x स्थिती
+            '"y"': y स्थिती
             '"direction"': हालचालीची दिशा
+            '"speed"': वेग
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} स्पर्श करते {SPRITE2}"
         options:
@@ -929,6 +961,11 @@ mr:
         text: रेषा काढा {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: एजेस ब्लॉक {SPRITE} ला हलवण्यापासून रोखतात
+      gamelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': सेकंद
+            '"frames"': फ्रेम्स
       gamelab_followingTargets:
         text: पुढील लक्ष्ये
       gamelab_getAllSprites:
@@ -939,8 +976,11 @@ mr:
           PROPERTY:
             '"scale"': आकार
             '"rotation"': फिरणे
+            '"x"': x स्थिती
+            '"y"': y स्थिती
             '"direction"': हालचालीची दिशा
             '"tint"': रंग
+            '"speed"': वेग
       gamelab_getThisSprite:
         text: "{CHOICE} स्प्राइट"
         options:
@@ -1077,7 +1117,10 @@ mr:
           EFFECT:
             '"burst"': फुटणे
             '"pop"': पॉप
+            '"rain"': पाऊस
             '"spiral"': सर्पिलाकार
+      gamelab_makeNewScaledSprite:
+        text: "{LOCATION} येथे नवीन {ANIMATION_NAME} स्प्राइट बनवा"
       gamelab_makeNewSpriteAnon:
         text: "{LOCATION} येथे नवीन {ANIMATION_NAME} स्प्राइट बनवा"
       gamelab_makeNumSprites:
@@ -1131,12 +1174,14 @@ mr:
             "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": पॉप
             "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": चमकणे
             "'sound://category_app/app_button_1.mp3'": बटण
+            "'sound://category_collect/clicky_crunch.mp3'": कुरकुरीत आवाज
             "'sound://category_swish/quick_swing.mp3'": स्विंग
             "'sound://category_nature/summer_night_loop.mp3'": समर नाईट
             "'sound://category_background/ocean_waves.mp3'": ओशियन वेव्स
             "'sound://category_nature/south_carolina_beach_ripple.mp3'": बिच रिप्प्ल
             "'sound://category_pop/bubble_pop_cluster_1.mp3'": बुडबुडा
             "'sound://category_animals/bear.mp3'": अस्वल
+            "'sound://category_animals/cat.mp3'": मांजर
             "'sound://category_animals/cow.mp3'": गाय
             "'sound://category_animals/pig.mp3'": डुक्कर
             "'sound://category_animals/sheep.mp3'": मेंढी
@@ -1147,6 +1192,7 @@ mr:
             "'sound://category_animals/dolphin.mp3'": डॉल्फिन
             "'sound://category_nature/thunderstorm_1.mp3'": थंडरस्टॉर्म
             "'sound://category_animals/chick.mp3'": कोंबडीचे पिल्लू
+            "'sound://category_animals/dog.mp3'": कुत्रा
             "'sound://category_animals/tiger.mp3'": वाघ
             "'sound://category_collect/trill_stings.mp3'": ट्रिल
             "'sound://category_instrumental/harpe_pluck_1.mp3'": हार्प
@@ -1187,6 +1233,8 @@ mr:
         text: स्प्राइट {SPRITE} {BEHAVIOR} थांबवते
       gamelab_removeTint:
         text: "{THIS} मधून रंग काढून टाका "
+      gamelab_repeatForever:
+        text: कायम रिपीट करा
       gamelab_setAnimation:
         text: "{THIS} पोशाख {ANIMATION} मध्ये बदला"
       gamelab_setBackground:
@@ -1195,8 +1243,11 @@ mr:
         text: "{IMG} वर पार्श्वभूमी सेट करा"
         options:
           IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': गुहा
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': शहर
             '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': कंटिन्युअस ग्रास
             '"https://studio.code.org/blockly/media/skins/studio/background.png"': न्यायालय
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': वाळवंट
             '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': डेज़र्ट रोड
             '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': फार्म लँड
             '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': फ्लोटिंग ग्रास
@@ -1208,6 +1259,7 @@ mr:
             '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': कुरण
             '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': पार्क व्यू
             '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': पाइन ट्रीज
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': इंद्रधनुष्य
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': विज्ञान कथा
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': सॉकर फील्ड
             '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': व्यासपीठ
@@ -1218,6 +1270,8 @@ mr:
             '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': टेनिस कोर्ट
             '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': ट्री आयलंड
             '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': भूमिगत
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': पाण्याखाली
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': हिवाळा
             undefined: कुठलेच नाही
       gamelab_setBackgroundImageAs:
         text: "{IMG} वर पार्श्वभूमी सेट करा"
@@ -1227,7 +1281,7 @@ mr:
           SIZE:
             '25': अतिरिक्त लहान
             '50': लहान
-            '75': medium
+            '75': मध्यम
             '100': मोठे
       gamelab_setPrompt:
         text: प्रॉम्प्ट वापरकर्ता {QUESTION} व्हेरिएबल {VAR} साठी
@@ -1239,7 +1293,10 @@ mr:
           PROPERTY:
             '"scale"': आकार
             '"rotation"': फिरणे
+            '"x"': x स्थिती
+            '"y"': y स्थिती
             '"direction"': हालचालीची दिशा
+            '"speed"': वेग
       gamelab_setProp_dropdown:
         text: set {SPRITE} {PROPERTY} to {SIZE}
         options:
@@ -1248,7 +1305,7 @@ mr:
           SIZE:
             '25': अतिरिक्त लहान
             '50': लहान
-            '75': medium
+            '75': मध्यम
             '100': मोठे
       gamelab_setSizes:
         text: set {SPRITE} {PROPERTY} to {N}%
@@ -1406,6 +1463,8 @@ mr:
           PROPERTY:
             '"scale"': आकार
             '"rotation"': फिरणे
+            '"x"': x स्थिती
+            '"y"': y स्थिती
             '"direction"': हालचालीची दिशा
       Mikelab_createNewSprite:
         options:
@@ -1419,18 +1478,24 @@ mr:
           PROPERTY:
             '"scale"': आकार
             '"rotation"': फिरणे
+            '"x"': x स्थिती
+            '"y"': y स्थिती
             '"direction"': हालचालीची दिशा
       Mikelab_groupChangeAnim:
         options:
           SELECT:
+            '"all"': सर्व
             '"this"': हे
       Mikelab_groupChangePropBy:
         options:
           SELECT:
+            '"all"': सर्व
             '"this"': हे
           PROPERTY:
             '"scale"': आकार
             '"rotation"': फिरणे
+            '"x"': x स्थिती
+            '"y"': y स्थिती
             '"direction"': हालचालीची दिशा
       Mikelab_groupCreateNewSprite:
         options:
@@ -1442,6 +1507,7 @@ mr:
       Mikelab_groupDestroy:
         options:
           SELECT:
+            '"all"': सर्व
             '"this"': हे
       Mikelab_groupGetProp:
         options:
@@ -1450,30 +1516,39 @@ mr:
           PROPERTY:
             '"scale"': आकार
             '"rotation"': फिरणे
+            '"x"': x स्थिती
+            '"y"': y स्थिती
             '"direction"': हालचालीची दिशा
       Mikelab_groupRemoveAllBehaviors:
         options:
           SELECT:
+            '"all"': सर्व
             '"this"': हे
       Mikelab_groupRemoveBehaviorSimple:
         options:
           SELECT:
+            '"all"': सर्व
             '"this"': हे
       Mikelab_groupRemoveTint:
         options:
           SELECT:
+            '"all"': सर्व
             '"this"': हे
       Mikelab_groupSetProp:
         options:
           SELECT:
+            '"all"': सर्व
             '"this"': हे
           PROPERTY:
             '"scale"': आकार
             '"rotation"': फिरणे
+            '"x"': x स्थिती
+            '"y"': y स्थिती
             '"direction"': हालचालीची दिशा
       Mikelab_groupSetTint:
         options:
           SELECT:
+            '"all"': सर्व
             '"this"': हे
       Mikelab_hideFish:
         options:
@@ -1520,9 +1595,12 @@ mr:
         text: कोणताही रंग
       Mikelab_removeBehaviorSimple:
         text: स्प्राइट {SPRITE} {BEHAVIOR} थांबवते
+      Mikelab_repeatUntilComplete:
+        text: कायम रिपीट करा
       Mikelab_setBG:
         options:
           BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': शहर
             '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': कंटिन्युअस ग्रास
             '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': डेज़र्ट रोड
             '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': फार्म लँड
@@ -1546,6 +1624,8 @@ mr:
           PROPERTY:
             '"scale"': आकार
             '"rotation"': फिरणे
+            '"x"': x स्थिती
+            '"y"': y स्थिती
             '"direction"': हालचालीची दिशा
       Mikelab_setupOutbreak:
         text: "आऊटब्रेक सेटअप\nलोकसंख्या:{SPRITE2N}\n{TOGGLE}विषाणू  "
@@ -1574,18 +1654,37 @@ mr:
         text: जेव्हा {KEY} दाबली जाते
         options:
           KEY:
+            '"up"': अप ॲरो
+            '"down"': डाऊन ॲरो
+            '"left"': डावा ॲरो
+            '"right"': उजवा ॲरो
+            '"w"': पश्चिम
             '"a"': A
+            '"s"': दक्षिण
             '"d"': D
       Mikelab_whenKeyReleased:
         options:
           KEY:
+            '"up"': अप ॲरो
+            '"down"': डाऊन ॲरो
+            '"left"': डावा ॲरो
+            '"right"': उजवा ॲरो
+            '"w"': पश्चिम
             '"a"': A
+            '"s"': दक्षिण
             '"d"': D
       Mikelab_whenYesNoClicked:
         options:
           KEY:
             '"yes"': होय
             '"no"': नाही
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': अप ॲरो
+            '"down"': डाऊन ॲरो
+            '"left"': डावा ॲरो
+            '"right"': उजवा ॲरो
       Mikelab_xLocationOf:
         text: "{SPRITE} चे x समन्वयक"
       Mikelab_yLocationOf:
@@ -1616,8 +1715,10 @@ mr:
             '"brick"': विट
             '"fire"': आग
             '"flowers"': फुले
+            '"hearts"': हृदये
             '"iceCream"': आईसक्रीम
             '"leaves"': पाने
+            '"rainbow"': इंद्रधनुष्य
             '"stars"': तारे
             '"waves"': लाटा
       Poetry_addLine:
@@ -1636,6 +1737,7 @@ mr:
           EFFECT:
             '"burst"': फुटणे
             '"pop"': पॉप
+            '"rain"': पाऊस
             '"spiral"': सर्पिलाकार
       Poetry_makeNewSpriteAnon:
         text: "{LOCATION} येथे नवीन {ANIMATION_NAME} स्प्राइट बनवा"
@@ -1646,6 +1748,7 @@ mr:
           SOUND:
             '"sound://category_nature/steady_campfire_loop.mp3"': कॅम्प फायर (शेकोटी)
             '"sound://category_nature/forest_woodland_ambience_2.mp3"': जंगल
+            '"sound://category_nature/summer_night_loop.mp3"': रात्र
             '"sound://category_background/ocean_waves.mp3"': महासागर
             '"sound://category_background/rainforest_ambient_sound.mp3"': पर्जन्यवन
             '"sound://category_background/wavering_wind.mp3"': झोपाळू
@@ -1674,7 +1777,9 @@ mr:
             '"confetti"': कॉन्फेटी
             '"darkCircles"': फेडिंग / लुप्त होणे
             '"fadeColors"': फ्रॉस्टेड
+            '"hearts"': हृदये
             '"space"': स्पेस
+            '"rain"': पाऊस
             '"colors"': रंग
             '"stars"': तारे
           PALETTE:
@@ -1683,6 +1788,7 @@ mr:
             '"sunset"': संध्याकाळ
             '"grayscale"': ग्रे
             '"ocean"': महासागर
+            '"rainbow"': इंद्रधनुष्य
             '"roses"': गुलाब
             '"sky"': आकाश
             '"spring"': स्प्रिंग / वसंत ऋतू
@@ -1709,7 +1815,9 @@ mr:
           EFFECT:
             '"bubbles"': फुगे
             '"confetti"': कॉन्फेटी
+            '"hearts"': हृदये
             '"emojis"': हॅपी इमोजी
+            '"rain"': पाऊस
             '"glass"': तुटलेल्या काचा
             '"twinkling"': ट्विंकलिंग
       Poetry_setPrompt:
@@ -1766,6 +1874,12 @@ mr:
             '10': '10'
       Poetry_whenPromptAnswered:
         text: जेव्हा {VAR} ने उत्तर दिले
+      RyanLab_moveForward:
+        text: पुढे जा
+      RyanLab_turnLeft:
+        text: डावीकडे वळा
+      RyanLab_turnRight:
+        text: उजवीकडे वळा
       Vector_randomLocation:
         text: कोणतेही यादृच्छिक स्थान
       aalab_layoutSprites:
@@ -1775,6 +1889,20 @@ mr:
             '"border"': सीमारेषा
             '"row"': ओळ
             '"random"': कोणताही
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': सर्व
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': सर्व
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       aalab_spriteSayChoices:
         text: "{SPRITE} {SPEECH} म्हणा"
       binary_move:
@@ -1808,10 +1936,19 @@ mr:
         text: |-
           जर {TYPE}
           {STATEMENT} वर उभा असेल तर
+        options:
+          TYPE:
+            "'sand'": वाळू
+            "'planksOak'": ओकच्या फळ्या
       craft_ifStandingOnLimit:
         text: |-
           जर {TYPE}
           {STATEMENT} वर उभा असेल तर
+        options:
+          TYPE:
+            "'sand'": वाळू
+      craft_moveForward:
+        text: पुढे जा
       craft_placeBlock:
         text: "{blockType} ठेवा"
       craft_placePrismarine:

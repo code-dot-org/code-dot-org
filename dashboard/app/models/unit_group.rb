@@ -27,11 +27,12 @@ require 'cdo/shared_constants/curriculum/shared_course_constants'
 class UnitGroup < ApplicationRecord
   include SharedCourseConstants
   include Curriculum::CourseTypes
+  include Curriculum::AssignableCourse
   include Rails.application.routes.url_helpers
 
   # Some Courses will have an associated Plc::Course, most will not
   has_one :plc_course, class_name: 'Plc::Course', foreign_key: 'course_id'
-  has_many :default_unit_group_units, -> {where(experiment_name: nil).order('position ASC')}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
+  has_many :default_unit_group_units, -> {where(experiment_name: nil).order(:position)}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
   has_many :default_units, through: :default_unit_group_units, source: :script
   has_many :alternate_unit_group_units, -> {where.not(experiment_name: nil)}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
   has_and_belongs_to_many :resources, join_table: :unit_groups_resources
@@ -359,7 +360,7 @@ class UnitGroup < ApplicationRecord
     [SharedCourseConstants::PUBLISHED_STATE.preview, SharedCourseConstants::PUBLISHED_STATE.stable].include?(published_state)
   end
 
-  def summarize(user = nil, for_edit: false)
+  def summarize(user = nil, for_edit: false, locale_code: nil)
     {
       name: name,
       id: id,
@@ -386,9 +387,10 @@ class UnitGroup < ApplicationRecord
       is_migrated: has_migrated_unit?,
       has_verified_resources: has_verified_resources?,
       has_numbered_units: has_numbered_units?,
-      versions: summarize_versions(user),
+      versions: summarize_versions(user, locale_code),
       show_assign_button: assignable_for_user?(user),
       announcements: announcements,
+      course_offering_id: course_version&.course_offering&.id,
       course_version_id: course_version&.id,
       course_path: link,
       course_offering_edit_path: for_edit && course_version ? edit_course_offering_path(course_version.course_offering.key) : nil
@@ -422,7 +424,7 @@ class UnitGroup < ApplicationRecord
 
   # Returns an array of objects showing the name and version year for all courses
   # sharing the family_name of this course, including this one.
-  def summarize_versions(user = nil)
+  def summarize_versions(user = nil, locale_code = nil)
     return [] unless family_name
 
     # Include launched courses, plus self if not already included

@@ -259,6 +259,10 @@ sq:
           CONDITION:
             '"when"': kur
             '"while"': ndërsa
+      gamelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': sekondat
       gamelab_getProp:
         options:
           PROPERTY:

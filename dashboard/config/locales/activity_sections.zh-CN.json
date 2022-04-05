@@ -748,6 +748,9 @@
           "name": "反射",
           "description": "#### 汇报\n\n要求学生反思当天的活动。关于编程、精灵图、事件，他们学到了什么？\n\n在花了一个小时进行探索之后，他们对计算机科学和编程有什么感觉？\n\n#### 后续步骤\n\n让学生知道，如果他们喜欢今天的活动，他们拥有许多继续编程的选择。访问[CS Connections][0]了解如何将计算机科学整合到其他学科的思路，或进一步阅读我们[为小学提供的课程][1]。"
         },
+        "d6c0f379-8c4b-44a4-a027-b1b0d67a9605": {
+          "progression_name": "建造一个有设计模式的用户界面"
+        },
         "7197ddf8-89bf-4b3a-86d9-1f424a1d1b0a": {
           "progression_name": "响应用户输入"
         },
@@ -990,6 +993,9 @@
         "c0f1c77a-067b-4e32-bf05-b7ba156a844e": {
           "progression_name": "If 语句"
         },
+        "a3444197-2e90-43e4-9719-a7f6112905d0": {
+          "progression_name": "基础条件"
+        },
         "e6c5c748-85ce-4220-b6f8-35da6acb1894": {
           "progression_name": "课程概述"
         },
@@ -1093,6 +1099,9 @@
         },
         "f9b9ae9f-a4d1-4b3f-9b13-e7b489a2ae61": {
           "progression_name": "平台跳线游戏示例"
+        },
+        "7cee437f-0aa0-4131-9d81-d5cac21d1cab": {
+          "progression_name": "建造一个跳跃平台"
         },
         "b7571038-2349-4400-ab68-60be03d899c1": {
           "progression_name": "飞机跳线"
@@ -1232,6 +1241,10 @@
         "49fed7ed-6c8e-458a-94a4-deba343eba59": {
           "progression_name": "电路播放场：彩色LED"
         },
+        "f5090711-0809-42dc-9542-db9db5c0b18e": {
+          "name": "挑战关卡",
+          "progression_name": "挑战关卡"
+        },
         "35734cd2-ff72-4a9d-a076-967d8efd458b": {
           "progression_name": "课程概述"
         },
@@ -1283,6 +1296,9 @@
         },
         "9970bff6-49d5-4c0d-9ce6-4dfd66cdc24a": {
           "progression_name": "课程概述"
+        },
+        "dc7dc8a0-f6d6-46aa-b3d6-ed54ec45d0e8": {
+          "progression_name": "边框输入和输出"
         },
         "0767d56f-4e70-4485-b012-e40fd5a4065f": {
           "name": "反射",
@@ -1358,6 +1374,10 @@
         },
         "053cd782-5fe7-4438-b780-a79fb441d383": {
           "progression_name": "课程概述"
+        },
+        "9608412e-93a7-49c2-bb11-95906561502f": {
+          "name": "蛋糕问卷",
+          "progression_name": "蛋糕问卷"
         },
         "0b21869f-fed5-4d9a-ae12-336c623bf20f": {
           "name": "课程概述",
@@ -1754,6 +1774,9 @@
         "0ce7c02f-f05a-40cf-a5be-87946f72027d": {
           "progression_name": "挑战"
         },
+        "c33397a2-b572-4128-b3a7-d2570f53b4b2": {
+          "progression_name": "JR Hildebrand 的文章简介"
+        },
         "90edce51-da9b-452b-b3ed-ce98481c73a3": {
           "progression_name": "与艺术家的循环"
         },
@@ -1808,6 +1831,9 @@
         "71c84958-5cc4-467d-8c97-f2f63123c47d": {
           "progression_name": "视频"
         },
+        "86a30e40-09ca-4727-9fa0-88adf2bd0ca9": {
+          "progression_name": "JR Hildebrande 的文章简介"
+        },
         "3d6e3902-f624-4b31-8bc9-254f1716ac62": {
           "progression_name": "与艺术家的循环"
         },
@@ -1856,6 +1882,9 @@
         },
         "b53b7eb1-3aab-44fb-bda0-e658142a7093": {
           "progression_name": "挑战"
+        },
+        "0fbde2f6-85b8-4c16-ab14-f2a0980336d2": {
+          "progression_name": "JR Hildebrande 的文章简介"
         },
         "02d3f770-e6ae-4964-8d08-e89f8fca5783": {
           "progression_name": "与艺术家的循环"
@@ -1951,6 +1980,9 @@
         "7292a6ea-9eb1-4775-a680-ad1755ee4e59": {
           "name": "附加课程",
           "progression_name": "附加课程"
+        },
+        "7f146ca9-a234-446d-808a-f0acc1c991e8": {
+          "progression_name": "JR Hildebrand 的文章简介"
         },
         "62eb4fa5-496a-4d2d-ad6a-1618bc2be7f0": {
           "progression_name": "挑战"
@@ -2125,6 +2157,9 @@
         "51e86e72-fda9-4a5d-9f4a-a3dec424039b": {
           "progression_name": "视频：条件表达式"
         },
+        "517a6df3-e41e-461a-8651-cfc1269067ac": {
+          "progression_name": "基础条件"
+        },
         "a9b9fce8-85e2-4551-8072-03cbbb1cfa0e": {
           "progression_name": "If 语句"
         },
@@ -2237,6 +2272,9 @@
         },
         "4ce4928d-f456-4fad-b005-9b9c382a548a": {
           "progression_name": "平台跳线游戏示例"
+        },
+        "35d19875-08f0-421b-8044-60f3264fb51c": {
+          "progression_name": "建造一个跳跃平台"
         },
         "f7375fa1-5558-4b0a-ab1d-1e9041341211": {
           "progression_name": "飞机跳线"
@@ -2362,6 +2400,10 @@
         "48d36d78-2b33-4c2b-835d-71e122111574": {
           "progression_name": "电路播放场：彩色LED"
         },
+        "f6d8d80c-d7df-4fdf-91a4-3f2dd1f7240c": {
+          "name": "挑战关卡",
+          "progression_name": "挑战关卡"
+        },
         "b4751d9c-d441-474e-b57b-14faecc70960": {
           "progression_name": "课程概述"
         },
@@ -2416,6 +2458,9 @@
         },
         "2a2384f0-4484-4c89-ab53-0ad76e3ea3d6": {
           "progression_name": "课程概述"
+        },
+        "818f22f8-26b8-4738-b143-aff923b35b45": {
+          "progression_name": "边框输入和输出"
         },
         "12296f1e-4a27-45e0-b951-597d94b413ab": {
           "name": "反射",
@@ -2580,6 +2625,10 @@
         },
         "7f64afe2-30a0-47d0-8c46-2a6451d392d7": {
           "progression_name": "课程概述"
+        },
+        "50c39425-3842-4145-a778-7b2c59de2164": {
+          "name": "蛋糕问卷",
+          "progression_name": "蛋糕问卷"
         },
         "ed2725a9-55f8-4cc0-8004-c096461fd666": {
           "name": "课程概述",
@@ -2962,6 +3011,9 @@
         "e8435c3f-8689-4689-887f-ea764c3cf6c1": {
           "progression_name": "If 语句"
         },
+        "376e5a15-45d2-4f2f-b204-5a11130eca07": {
+          "progression_name": "基础条件"
+        },
         "88f47fb8-346f-4fba-8ed1-ee4550344298": {
           "name": "自由发挥",
           "progression_name": "自由发挥"
@@ -3003,6 +3055,9 @@
         },
         "10190642-0377-4c55-8765-98079f117209": {
           "progression_name": "课程概述"
+        },
+        "f83be689-77ef-49ee-9088-630893d4d087": {
+          "progression_name": "CSD U3 相互作用的卡片"
         },
         "f72b823d-ca51-4ed1-8d06-1ccf7f0960d6": {
           "name": "反射",
@@ -3100,6 +3155,9 @@
         },
         "9c5d42f3-e87b-4daf-b59a-6347e1db3ef2": {
           "progression_name": "平台跳线游戏示例"
+        },
+        "c0b2cd82-e34b-4bbb-8b26-75b03b5635c9": {
+          "progression_name": "CSD U3 平台介绍"
         },
         "dbcc1dbb-fc04-4c91-a7e3-4b6aae7eb9fe": {
           "progression_name": "飞机跳线"
@@ -3256,6 +3314,9 @@
         "ffe0d2ab-7af9-4415-8af0-48c88e6a0693": {
           "progression_name": "计数循环"
         },
+        "e8c311fc-2914-40b2-92c0-d15195772399": {
+          "progression_name": "CSD：for循环"
+        },
         "2b5209d7-f495-4e26-b2af-8b639c085bca": {
           "progression_name": "计数循环"
         },
@@ -3295,6 +3356,9 @@
         },
         "aed682ed-9861-4d1d-a9f5-21ee3c69d68d": {
           "progression_name": "课程概述"
+        },
+        "b55ac1ef-838d-45e7-9bd6-b334df8c02d5": {
+          "progression_name": "边框输入和输出"
         },
         "6d0332f9-d670-4588-9e96-5975fb480945": {
           "name": "反射",
@@ -3550,6 +3614,10 @@
         "6cbd55ba-116e-493c-8bea-b71096dd0a05": {
           "progression_name": "概览"
         },
+        "6ac2bf23-0b34-4e13-8023-c8c436048d54": {
+          "name": "蛋糕问卷",
+          "progression_name": "蛋糕问卷"
+        },
         "4f744a54-0d8b-49a1-8581-fc05cef356c6": {
           "name": "反射",
           "progression_name": "反射"
@@ -3659,7 +3727,7 @@
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
           "description": "#### 课程铺垫欢迎学生上课，\n\n并简要介绍当天的活动。",
           "tips": [
-            "如果你自己对编程不是很熟悉，介绍《编程一小时》时，可以播放其中一个[启发视频](https://hourofcode.com/promote/resources#videos)。选择一个你认为能够启发学生灵感的视频，并立即分享。对于中级学生，推荐[在此学习编程一小时](https://youtu.be/FC5FbmsH4fw)。"
+            "如果你自己对编程不是很熟悉，介绍《编程一小时》时，可以播放其中一个[启发视频][0]。选择一个你认为能够启发学生灵感的视频，并立即分享。对于中级学生，推荐[在此学习编程一小时][1]。"
           ]
         },
         "d99fc09e-a586-41df-84b2-e552cc4735e3": {
@@ -3672,7 +3740,7 @@
           "description": "你是否了解，计算机科学同样充满创意？实际上，我们可以使用代码进行艺术创作。需要留意的是，代码是一组计算机可以理解的指令。在表达个人创意时，你需要选择所编写的代码，就像选择要使用的油彩颜色一样。今天我们将使用诗歌，激发出创意性的代码。\n\n有人知道什么是诗歌吗？你是否有钟爱的诗篇或诗人？"
         },
         "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
-          "description": "**一起读诗歌：**在课堂上阅读一篇[几篇诗歌](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing)，鉴赏每篇诗歌的意境。鼓励学生分享他们的赏析，即使与其他人有所不同。"
+          "description": "**一起读诗歌：**在课堂上阅读一篇[几篇诗歌][0]，鉴赏每篇诗歌的意境。鼓励学生分享他们的赏析，即使与其他人有所不同。"
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
           "name": "诗歌艺术",
@@ -4861,7 +4929,8 @@
           "name": "介绍"
         },
         "0f1b65c7-e3fe-44d1-a3c7-11b44c96ab5d": {
-          "name": "二进制的手镯"
+          "name": "二进制的手镯",
+          "progression_name": "二进制手链-线下活动"
         },
         "9ef02596-61a9-4eee-b8b5-db290a9721d0": {
           "tips": [
@@ -6040,6 +6109,9 @@
         "fd74ff7a-4b6f-42d4-99ea-63fdf9036656": {
           "name": "反射"
         },
+        "c350027b-7b9e-4782-af88-dc1015043bac": {
+          "progression_name": "做一个超级数字公民"
+        },
         "e8b26a8a-533e-40fc-820c-2c9b5269a1e1": {
           "name": "介绍"
         },
@@ -6317,7 +6389,8 @@
           ]
         },
         "d26ab8fe-dc83-4704-8aba-bd0cdbdd80a4": {
-          "name": "反射"
+          "name": "反射",
+          "progression_name": "check-in 服务"
         },
         "8bdf1f4e-1c20-42bd-a5d5-7217dfa0bd4f": {
           "tips": [
@@ -6434,6 +6507,9 @@
             null
           ]
         },
+        "52e962a0-c40b-49c4-859e-bad1e64068ee": {
+          "progression_name": "图书介绍APP"
+        },
         "73ce1ded-8856-4156-bfc4-c114b2bae063": {
           "tips": [
             null
@@ -6494,6 +6570,9 @@
             null
           ]
         },
+        "2f337322-f504-4ba7-9714-1c178eba4ca9": {
+          "progression_name": "图书介绍器的模型卡片"
+        },
         "db8f4d62-af34-4871-993d-281cacf5ff29": {
           "tips": [
             null
@@ -6539,6 +6618,9 @@
           "tips": [
             null
           ]
+        },
+        "5c385108-484c-44cb-b688-858fc00e41df": {
+          "progression_name": "添加新的屏幕"
         },
         "209eff96-d559-411e-b8cf-bd6a84923473": {
           "tips": [
@@ -6663,6 +6745,9 @@
             null
           ]
         },
+        "1223d000-8832-4645-b9ec-3a7563068eb1": {
+          "progression_name": "AI实验室和Kim的数据"
+        },
         "7f4a57cb-7221-40f4-a60a-2026a13bcba2": {
           "tips": [
             null
@@ -6672,7 +6757,8 @@
           "tips": [
             null,
             null
-          ]
+          ],
+          "progression_name": "AI实验室和Issac的数据"
         },
         "0644a5d2-d3ae-4dea-8777-47a522955b21": {
           "tips": [
@@ -6684,10 +6770,16 @@
             null
           ]
         },
+        "920cf048-b5d3-4033-8705-25e47ba99238": {
+          "progression_name": "备选数据设定"
+        },
         "8da670fc-d91b-438b-af07-2227156fdbcd": {
           "tips": [
             null
           ]
+        },
+        "f2a40f03-0400-4522-b5d6-8349034c6ebb": {
+          "progression_name": "添加欢迎页面"
         },
         "1b28522d-bf63-4f09-94a2-a80833819a38": {
           "tips": [
@@ -7482,6 +7574,9 @@
             null
           ]
         },
+        "45cd46c8-3f06-4b93-8688-a6da5a670734": {
+          "progression_name": "挑战关卡"
+        },
         "78b871d6-dd5f-4ad8-b32b-97df938ae849": {
           "tips": [
             null
@@ -7610,6 +7705,9 @@
             null
           ]
         },
+        "aff65857-e7c8-4c2c-91b8-ea88ac74042c": {
+          "progression_name": "边框输入和输出"
+        },
         "7550d329-92cf-4cd3-b0b5-c918c24f2105": {
           "progression_name": "反射"
         },
@@ -7728,6 +7826,9 @@
             null
           ]
         },
+        "b4133437-14b2-4221-8202-c411f147e13c": {
+          "progression_name": "二进制数组件"
+        },
         "30ef889b-387b-4dbd-b6bc-96ca25489944": {
           "tips": [
             null
@@ -7758,6 +7859,9 @@
           "tips": [
             null
           ]
+        },
+        "5b070069-8e80-48a8-8a84-435906d67aef": {
+          "progression_name": "8比特二进制数组件"
         },
         "38324708-63cb-4738-92c9-af06aed187f7": {
           "tips": [
@@ -7985,7 +8089,8 @@
         "f8f9a770-42a2-4c1d-9b51-52f46ff9360d": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "海洋AI：鱼VS非鱼"
         },
         "914c565c-fb6d-490c-a14a-b289ac56d720": {
           "tips": [
@@ -7996,6 +8101,9 @@
           "tips": [
             null
           ]
+        },
+        "0644d195-c0b2-4557-9f2c-116b259fe74a": {
+          "progression_name": "海洋AI：鱼的种类"
         },
         "92b13324-8ae5-4796-9071-694683704daa": {
           "tips": [
@@ -8309,6 +8417,12 @@
         "d4865d33-6382-4b57-b532-6949d5621973": {
           "progression_name": "精灵图场景"
         },
+        "853974f1-7e3b-4403-a475-5af28d960115": {
+          "progression_name": "添加小精灵"
+        },
+        "c0fc532b-e6eb-4858-af5b-5032cd917616": {
+          "progression_name": "添加文本"
+        },
         "fe60d6bf-420e-474d-8b50-0ff252e6c6bf": {
           "tips": [
             null
@@ -8398,6 +8512,15 @@
           "tips": [
             null
           ]
+        },
+        "68f06aee-a50d-4b3e-9323-16f4812eb23a": {
+          "progression_name": "添加小精灵"
+        },
+        "6e3a6230-12e7-4b7f-90a7-ec8574647b3b": {
+          "progression_name": "添加文本"
+        },
+        "08bedf45-b2d1-4147-8479-22a9c5f20d51": {
+          "progression_name": "添加动作"
         },
         "fa1f1ad4-aadd-49d1-9138-887450893813": {
           "tips": [
@@ -8756,6 +8879,9 @@
         "dd4b1c89-f148-47f2-956f-8fe786a2accb": {
           "progression_name": "平台跳线游戏示例"
         },
+        "96fe06b7-2d5b-434f-bb02-bc5e4bb74eaf": {
+          "progression_name": "建造一个跳跃平台"
+        },
         "b29f40dd-4e28-4c22-8aa8-9e387819622c": {
           "tips": [
             null
@@ -8920,22 +9046,30 @@
         "a52b80a3-f6a7-4e24-8347-1eb0be4ccddf": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "APP：选择宠物"
         },
         "e606d7d3-d552-4db3-91b7-c26f98da237c": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "APP：故事创造"
         },
         "f1388388-8631-479b-bca9-ffe97206edf8": {
           "tips": [
             null
           ]
         },
+        "29f459d2-a640-4618-9829-6d5adb95cef9": {
+          "progression_name": "APP：改进的宠物APP"
+        },
         "ce77f101-8880-4264-bf0e-b2d95e40c080": {
           "tips": [
             null
           ]
+        },
+        "658bb176-e81a-441b-9846-7f06edb26bcb": {
+          "progression_name": "APP：这是你的生日吗？"
         },
         "584f3a53-ab7b-421d-a8a4-bc8c106ead2a": {
           "tips": [
@@ -8947,10 +9081,16 @@
             null
           ]
         },
+        "3136eec5-7ffe-4b31-9cdd-7e988769c3d1": {
+          "progression_name": "APP：国家公园"
+        },
         "fb64c101-5e75-4908-9b31-15d964b4ffa9": {
           "tips": [
             null
           ]
+        },
+        "59635fc9-85ee-4beb-8e84-3db4d473f7d5": {
+          "progression_name": "APP：有多少国家"
         },
         "21e51178-7062-468a-b8e1-a9227a0ac5eb": {
           "tips": [
@@ -8961,6 +9101,21 @@
           "tips": [
             null
           ]
+        },
+        "7870b41a-67d4-4e4c-bac2-51df283c64a2": {
+          "progression_name": "APP：我著名的生日"
+        },
+        "fe0df0f8-e6fb-42c2-82a5-7542d4a4fcde": {
+          "progression_name": "APP：邮票笔记本"
+        },
+        "1bf0d6db-f0d5-4473-b861-ca00d265f8a9": {
+          "progression_name": "APP：最快的手指"
+        },
+        "09785de0-de7c-40a7-afac-9a255151a45d": {
+          "progression_name": "APP：猜数字"
+        },
+        "23734edc-d8f1-43ea-b0bc-63a9f745c6bb": {
+          "progression_name": "APP：我应该住在哪里？"
         },
         "ed3fc57d-be54-4625-bae7-5cac4680d615": {
           "tips": [
@@ -8981,6 +9136,15 @@
           "tips": [
             null
           ]
+        },
+        "2000a800-9ea1-4dbd-bb6c-7af93735477d": {
+          "progression_name": "APP：挑选装备"
+        },
+        "33b8468e-5c6c-4acb-b377-dd721dc0904a": {
+          "progression_name": "APP：朋友搜寻器"
+        },
+        "028c50a4-a63b-44aa-a686-55512682ee15": {
+          "progression_name": "APP：选择一个小朋友的电影"
         },
         "fa03e441-7483-4193-a5f7-20fa4bb081bf": {
           "tips": [
@@ -9336,6 +9500,9 @@
             null
           ]
         },
+        "db6b9679-26c9-45e7-9f82-03b3a92d3abf": {
+          "progression_name": "挑战：列表"
+        },
         "1712fd0b-563c-4ac9-b929-288bce3bbb72": {
           "tips": [
             null
@@ -9418,6 +9585,15 @@
           "tips": [
             null
           ]
+        },
+        "f52e5e03-5b2f-4caf-8c69-868f7c2acdbc": {
+          "progression_name": "挑战：RGB 颜色"
+        },
+        "81ab793a-d696-4167-a9db-9258e5f476b4": {
+          "progression_name": "给你的页面添加目录和结构"
+        },
+        "5c1f865c-e956-43d3-aac9-e6cf1a18c1b9": {
+          "progression_name": "给你的页面添加样式"
         },
         "c48b651f-340a-4ea2-baae-aebee2dc69ff": {
           "name": "同伴反馈"
@@ -9723,7 +9899,8 @@
         "34f33cbb-40a2-4d61-aa69-7bf1aa7f4c81": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "添加页面"
         },
         "76186510-9804-44d1-8371-4aa2895fc16d": {
           "progression_name": "挑战"
@@ -9745,6 +9922,15 @@
           "tips": [
             null
           ]
+        },
+        "30c8efa1-9c2a-434b-8e72-474a8f38d93e": {
+          "progression_name": "添加目录和HTML"
+        },
+        "61b38059-437b-4b5b-a71d-e94ff04f6ae6": {
+          "progression_name": "添加样式"
+        },
+        "f6c5624d-14b2-4344-86e9-2a2da40edf31": {
+          "progression_name": "检查你的工作"
         },
         "35722166-2159-4038-8c7e-7a6cc0580812": {
           "tips": [
@@ -9842,6 +10028,9 @@
         "7f80f442-f41e-48a6-ba87-b2e0f50419ae": {
           "progression_name": "挑战"
         },
+        "b7bc4801-90ce-42d1-bdcd-a4fc38632cff": {
+          "progression_name": "JR Hildebrand 的文章简介"
+        },
         "9e31d39c-d5e4-4226-ae0f-100d92e68d89": {
           "progression_name": "与艺术家的循环"
         },
@@ -9901,6 +10090,9 @@
           "name": "附加课程",
           "progression_name": "附加课程"
         },
+        "11eeb059-ed55-4472-bcc2-95e163a7766d": {
+          "progression_name": "JR Hildebrand 的文章简介"
+        },
         "c523e5e0-fe37-4dd6-a9e6-35cfc26415d3": {
           "progression_name": "挑战"
         },
@@ -9951,6 +10143,9 @@
         },
         "64524570-9c1b-4db9-932b-c23bfbf9bddd": {
           "progression_name": "挑战"
+        },
+        "3d7a5a2e-afda-4120-af55-18212b84ea5c": {
+          "progression_name": "JR Hildebrande 的文章简介"
         },
         "5aff116a-d7c3-428d-9028-9c9b7bee2a17": {
           "progression_name": "与艺术家的循环"
@@ -10062,6 +10257,9 @@
         },
         "54fa7040-6612-4012-b595-1f4745f1479d": {
           "progression_name": "视频"
+        },
+        "d6a223e7-4d93-46e7-91ad-c8ddff5e78e0": {
+          "progression_name": "JR Hildebrande 的文章简介"
         },
         "79475837-62b2-480f-ba33-e964d3342e17": {
           "progression_name": "与艺术家的循环"

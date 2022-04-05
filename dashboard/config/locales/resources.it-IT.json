@@ -10,17 +10,21 @@
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
         "poem_art_celebration/poem-art/2021": {
-          "name": "L'arte della poesia 4 - Celebrazione"
+          "name": "L'arte della poesia 4 - Celebrazione",
+          "type": "Video"
         },
         "poem_art_events/poem-art/2021": {
-          "name": "Celebration 2 - Eventi"
+          "name": "Celebration 2 - Eventi",
+          "type": "Video"
         },
         "poem_art_imagery/poem-art/2021": {
-          "name": "L'arte della poesia 3 - Metafore"
+          "name": "L'arte della poesia 3 - Metafore",
+          "type": "Video"
         },
         "poem_art_introduction/poem-art/2021": {
           "name": "L'arte della poesia 1 - Introduzione",
-          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2"
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2",
+          "type": "Video"
         },
         "csf-artist-intro-video/artist/unversioned": {
           "name": "Introduzione all'artista"
@@ -34,6 +38,12 @@
         "dance-party-playlist/dance/unversioned": {
           "name": "Playlist Spotify (tutte le età)"
         },
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "type": "Video"
+        },
+        "video-text-compression/text-compression/unversioned": {
+          "type": "Video"
+        },
         "dance-party-playlist/dance-extras-2019/unversioned": {
           "name": "Playlist Spotify (tutte le età)"
         },
@@ -41,13 +51,439 @@
           "name": "Playlist Spotify (tutte le età)"
         },
         "ai-ml/oceans/unversioned": {
-          "name": "IA: Apprendimento Automatico (Machine Learning)"
+          "name": "IA: Apprendimento Automatico (Machine Learning)",
+          "type": "Video"
         },
         "ai-societal/oceans/unversioned": {
-          "name": "IA: Ripercussioni sociali"
+          "name": "IA: Ripercussioni sociali",
+          "type": "Video"
         },
         "ai-training/oceans/unversioned": {
-          "name": "IA: Dati di apprendimento e distorsioni"
+          "name": "IA: Dati di apprendimento e distorsioni",
+          "type": "Video"
+        },
+        "lesson_plans/courseb/2018": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/courseb/2018": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/courseb/2018": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/courseb/2018": {
+          "name": "Vocabolario"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/coursea/2018": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/coursea/2018": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/coursea/2018": {
+          "name": "Vocabolario"
+        },
+        "lesson_plans/coursed/2018": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/coursed/2018": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/coursed/2018": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/coursed/2018": {
+          "name": "Vocabolario"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/coursef/2018": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/coursef/2018": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/coursef/2018": {
+          "name": "Vocabolario"
+        },
+        "lesson_plans/express/2018": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/express/2018": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/express/2018": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/express/2018": {
+          "name": "Vocabolario"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/coursee/2018": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/coursee/2018": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/coursee/2018": {
+          "name": "Vocabolario"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/coursec/2018": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/coursec/2018": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/coursec/2018": {
+          "name": "Vocabolario"
+        },
+        "code_introduced_1/csd/2018": {
+          "name": "Code introdotto"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings_2/csd/2018": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum_2/csd/2018": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary_2/csd/2018": {
+          "name": "Vocabolario"
+        },
+        "code_introduced_3/csd/2018": {
+          "name": "Code introdotto"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings_5/csd/2018": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum_5/csd/2018": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary_5/csd/2018": {
+          "name": "Vocabolario"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings_4/csd/2018": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum_4/csd/2018": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary_4/csd/2018": {
+          "name": "Vocabolario"
+        },
+        "code_introduced_2/csd/2018": {
+          "name": "Code introdotto"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings_3/csd/2018": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum_3/csd/2018": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary_3/csd/2018": {
+          "name": "Vocabolario"
+        },
+        "code_introduced/csd/2018": {
+          "name": "Code introdotto"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings_1/csd/2018": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum_1/csd/2018": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary_1/csd/2018": {
+          "name": "Vocabolario"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/csd/2018": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/csd/2018": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/csd/2018": {
+          "name": "Vocabolario"
+        },
+        "curriculum_guide/coursea/2019": {
+          "name": "Guida Curriculum"
+        },
+        "lesson_plans/coursea/2019": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/coursea/2019": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/coursea/2019": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/coursea/2019": {
+          "name": "Vocabolario"
+        },
+        "curriculum_guide/courseb/2019": {
+          "name": "Guida Curriculum"
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/courseb/2019": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/courseb/2019": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/courseb/2019": {
+          "name": "Vocabolario"
+        },
+        "curriculum_guide/coursed/2019": {
+          "name": "Guida Curriculum"
+        },
+        "lesson_plans/coursed/2019": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/coursed/2019": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/coursed/2019": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/coursed/2019": {
+          "name": "Vocabolario"
+        },
+        "curriculum_guide/coursef/2019": {
+          "name": "Guida Curriculum"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/coursef/2019": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/coursef/2019": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/coursef/2019": {
+          "name": "Vocabolario"
+        },
+        "curriculum_guide/coursee/2019": {
+          "name": "Guida Curriculum"
+        },
+        "lesson_plans/coursee/2019": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/coursee/2019": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/coursee/2019": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/coursee/2019": {
+          "name": "Vocabolario"
+        },
+        "lesson_plans/express/2019": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/express/2019": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/express/2019": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/express/2019": {
+          "name": "Vocabolario"
+        },
+        "curriculum_guide/coursec/2019": {
+          "name": "Guida Curriculum"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/coursec/2019": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/coursec/2019": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/coursec/2019": {
+          "name": "Vocabolario"
+        },
+        "teacher_forum/csd/2019": {
+          "name": "Forum dell'insegnante"
+        },
+        "code_introduced_1/csd/2019": {
+          "name": "Code introdotto"
+        },
+        "lesson_plans_2/csd/2019": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings_2/csd/2019": {
+          "name": "Funzioni Standard"
+        },
+        "vocabulary_2/csd/2019": {
+          "name": "Vocabolario"
+        },
+        "code_introduced_3/csd/2019": {
+          "name": "Code introdotto"
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings_5/csd/2019": {
+          "name": "Funzioni Standard"
+        },
+        "vocabulary_5/csd/2019": {
+          "name": "Vocabolario"
+        },
+        "code_introduced_2/csd/2019": {
+          "name": "Code introdotto"
+        },
+        "lesson_plans_3/csd/2019": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings_3/csd/2019": {
+          "name": "Funzioni Standard"
+        },
+        "vocabulary_3/csd/2019": {
+          "name": "Vocabolario"
+        },
+        "lesson_plans_4/csd/2019": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings_4/csd/2019": {
+          "name": "Funzioni Standard"
+        },
+        "vocabulary_4/csd/2019": {
+          "name": "Vocabolario"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/csd/2019": {
+          "name": "Funzioni Standard"
+        },
+        "vocabulary/csd/2019": {
+          "name": "Vocabolario"
+        },
+        "code_introduced/csd/2019": {
+          "name": "Code introdotto"
+        },
+        "lesson_plans_1/csd/2019": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings_1/csd/2019": {
+          "name": "Funzioni Standard"
+        },
+        "vocabulary_1/csd/2019": {
+          "name": "Vocabolario"
+        },
+        "code_introduced_1/csd/2017": {
+          "name": "Code introdotto"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings_2/csd/2017": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum_2/csd/2017": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary_2/csd/2017": {
+          "name": "Vocabolario"
+        },
+        "code_introduced_3/csd/2017": {
+          "name": "Code introdotto"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings_5/csd/2017": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum_5/csd/2017": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary_5/csd/2017": {
+          "name": "Vocabolario"
+        },
+        "code_introduced/csd/2017": {
+          "name": "Code introdotto"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings_1/csd/2017": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum_1/csd/2017": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary_1/csd/2017": {
+          "name": "Vocabolario"
+        },
+        "lesson_plans/csd/2017": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/csd/2017": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/csd/2017": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/csd/2017": {
+          "name": "Vocabolario"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings_4/csd/2017": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum_4/csd/2017": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary_4/csd/2017": {
+          "name": "Vocabolario"
+        },
+        "code_introduced_2/csd/2017": {
+          "name": "Code introdotto"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings_3/csd/2017": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum_3/csd/2017": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary_3/csd/2017": {
+          "name": "Vocabolario"
         },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "Elenco di poesie",
@@ -62,7 +498,8 @@
         },
         "introducing_sprite_lab_1/coursef/2021": {
           "name": "Introduzione al Laboratorio dei Personaggi",
-          "url": "https://youtu.be/yd-9xZ275dM"
+          "url": "https://youtu.be/yd-9xZ275dM",
+          "type": "Video"
         },
         "exploring_apps_1/coursef/2021": {
           "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview"
@@ -85,7 +522,8 @@
         },
         "the_power_of_words_the_power_of_words/coursef/2021": {
           "name": "Il potere delle parole: il potere delle parole\t",
-          "url": "https://www.commonsense.org/education/videos/the-power-of-words"
+          "url": "https://www.commonsense.org/education/videos/the-power-of-words",
+          "type": "Video"
         },
         "the_power_of_words_words_can_hurt/coursef/2021": {
           "name": "Il potere delle parole: le parole possono ferire",
@@ -130,7 +568,8 @@
         },
         "pause_and_think_online/coursef/2021": {
           "name": "Fermati e pensa online",
-          "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s"
+          "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s",
+          "type": "Video"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "Divertiti usando i cicli con contatore",
@@ -154,7 +593,8 @@
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
           "name": "Divertiti usando i cicli con contatore",
-          "url": "https://docs.google.com/document/d/1iyfroULEOlaLH52MY9PUwUHPk9R6jAMn0rbjlwNtCWs/edit"
+          "url": "https://docs.google.com/document/d/1iyfroULEOlaLH52MY9PUwUHPk9R6jAMn0rbjlwNtCWs/edit",
+          "type": "Valutazione"
         },
         "course-cf-blockly-blocks/coursef/2021": {
           "name": "Blocchi Blockly tradizionali (Corsi C-F)",
@@ -165,13 +605,16 @@
           "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit"
         },
         "ai-ml/coursef/2021": {
-          "name": "IA: Apprendimento Automatico (Machine Learning)"
+          "name": "IA: Apprendimento Automatico (Machine Learning)",
+          "type": "Video"
         },
         "ai-training/coursef/2021": {
-          "name": "IA: Dati di apprendimento e distorsioni"
+          "name": "IA: Dati di apprendimento e distorsioni",
+          "type": "Video"
         },
         "ai-societal/coursef/2021": {
-          "name": "IA: Ripercussioni sociali"
+          "name": "IA: Ripercussioni sociali",
+          "type": "Video"
         },
         "unplugged-video-internet/coursef/2021": {
           "name": "Internet",
@@ -183,7 +626,8 @@
         },
         "csf-internet-assessment/coursef/2021": {
           "name": "Internet",
-          "url": "https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit"
+          "url": "https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit",
+          "type": "Valutazione"
         },
         "assessment-answer-internet/coursef/2021": {
           "name": "Internet",
@@ -311,7 +755,8 @@
         },
         "wiggles_-_gonoodle/courseb/2021": {
           "name": "Wiggles - GoNoodle",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Video"
         },
         "20_20_20_rule/courseb/2021": {
           "name": "Regola 20/20/20",
@@ -335,7 +780,8 @@
         },
         "unspotted_bugs/courseb/2021": {
           "name": "Quei fastidiosi insetti nascosti",
-          "url": "https://youtu.be/rah3DYlp5nQ"
+          "url": "https://youtu.be/rah3DYlp5nQ",
+          "type": "Video"
         },
         "unplugged-video-getting-loopy/courseb/2021": {
           "name": "Diventare ripetitivi",
@@ -347,7 +793,8 @@
         },
         "csf-getting-loopy-assessment/courseb/2021": {
           "name": "Diventare ripetitivi",
-          "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit"
+          "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit",
+          "type": "Valutazione"
         },
         "assessment-answer-getting-loopy/courseb/2021": {
           "name": "Diventare ripetitivi",
@@ -359,7 +806,8 @@
         },
         "common-sense-media-pause-think/courseb/2021": {
           "name": "Fermati e pensa online",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "the-right-app-scenarios/courseb/2021": {
           "name": "Gli scenari giusti per le app",
@@ -367,11 +815,13 @@
         },
         "unplugged-video-big-event/courseb/2021": {
           "name": "Il grande evento",
-          "url": "https://youtu.be/u0WV9shCoak"
+          "url": "https://youtu.be/u0WV9shCoak",
+          "type": "Video"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "Il grande evento",
-          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "Valutazione"
         },
         "assessment-answer-big-event/courseb/2021": {
           "name": "Il grande evento",
@@ -459,11 +909,13 @@
         },
         "wiggles-go_noodle/coursea/2021": {
           "name": "Wiggles-Go Noodle",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Video"
         },
         "how_to_make_a_class_section_on_code_org/coursea/2021": {
           "name": "Guida introduttiva: creazione di una sezione di classe",
-          "url": "https://www.youtube.com/watch?v=4Wugxc80fNU"
+          "url": "https://www.youtube.com/watch?v=4Wugxc80fNU",
+          "type": "Video"
         },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "Mappe felici",
@@ -495,11 +947,13 @@
         },
         "wiggles_-_gonoodle/coursea/2021": {
           "name": "Wiggles - GoNoodle",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Video"
         },
         "csf_debugging_k1_blocks/coursea/2021": {
           "name": "Debug con il pulsante Step",
-          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4"
+          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4",
+          "type": "Video"
         },
         "feeling_faces_emotion_image/coursea/2021": {
           "name": "Feeling Faces Emozione",
@@ -527,7 +981,8 @@
         },
         "pair-programming/coursea/2021": {
           "name": "Programmazione in coppia",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video"
         },
         "feeling_faces_emotion_image_2/coursea/2021": {
           "name": "Feeling Faces Emozione",
@@ -539,7 +994,8 @@
         },
         "common-sense-media-pause-think/coursea/2021": {
           "name": "Fermati e pensa online",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "feeling_faces_emotion_image_3/coursea/2021": {
           "name": "Feeling Faces Emozione",
@@ -555,7 +1011,8 @@
         },
         "csf-the-big-event-assessment/coursea/2021": {
           "name": "Il grande evento",
-          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "Valutazione"
         },
         "assessment-answer-big-event/coursea/2021": {
           "name": "Il grande evento",
@@ -671,7 +1128,8 @@
         },
         "pair-programming-vid/coursec/2021": {
           "name": "Programmazione in coppia",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video"
         },
         "csf-lesson-recommend/coursec/2021": {
           "name": "Suggerimenti per le principali attività dei corsi di Fondamenti di informatica",
@@ -705,7 +1163,8 @@
         },
         "csf-the-big-event-assessment/coursec/2021": {
           "name": "Il grande evento",
-          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "Valutazione"
         },
         "assessment-answer-big-event/coursec/2021": {
           "name": "Il grande evento",
@@ -717,7 +1176,8 @@
         },
         "pause_and_think_online/coursec/2021": {
           "name": "Fermati e pensa online",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "open-ended_programming_levels/coursec/2021": {
           "name": "Livelli di programmazione aperti",
@@ -749,7 +1209,8 @@
         },
         "csf-binary-bracelets-assessment/coursec/2021": {
           "name": "Braccialetti binari",
-          "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit"
+          "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit",
+          "type": "Valutazione"
         },
         "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "Braccialetti binari",
@@ -853,7 +1314,8 @@
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
           "name": "Programmazione su carta a quadretti",
-          "url": "https://docs.google.com/document/d/1uXNP-9nYnLOeAkh_E8UFzl9Rrpy0rwjVAQVamgdd6XQ/edit"
+          "url": "https://docs.google.com/document/d/1uXNP-9nYnLOeAkh_E8UFzl9Rrpy0rwjVAQVamgdd6XQ/edit",
+          "type": "Valutazione"
         },
         "assessment-answer-graph-paper/coursed/2021": {
           "name": "Programmazione su carta a quadretti",
@@ -896,7 +1358,8 @@
         },
         "pause_and_think_online/coursed/2021": {
           "name": "Fermati e pensa online",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "open-ended_programming_levels/coursed/2021": {
           "name": "Livelli di programmazione aperti",
@@ -927,7 +1390,8 @@
         },
         "pause_and_think_online_1/coursed/2021": {
           "name": "Fermati e pensa online",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Istruzioni condizionali con le carte da gioco",
@@ -943,7 +1407,8 @@
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
           "name": "Istruzioni condizionali con le carte da gioco",
-          "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit"
+          "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit",
+          "type": "Valutazione"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
           "name": "Istruzioni condizionali con le carte da gioco",
@@ -1007,17 +1472,20 @@
         },
         "pair_programming/express/2021": {
           "name": "Programmazione in coppia",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video"
         },
         "unplugged_blocks_courses_c-f_/express/2021": {
           "name": "Blocchi scollegati (Corsi C-F)",
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "artist_introduction/express/2021": {
-          "name": "Introduzione all'artista"
+          "name": "Introduzione all'artista",
+          "type": "Video"
         },
         "turns_angles/express/2021": {
-          "name": "Curve e angoli"
+          "name": "Curve e angoli",
+          "type": "Video"
         },
         "turns_angles_1/express/2021": {
           "name": "Curve e angoli",
@@ -1045,7 +1513,8 @@
         },
         "pause_and_think_online/express/2021": {
           "name": "Fermati e pensa online",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "dance-party-project-guide/express/2021": {
           "name": "Guida al progetto Dance Party",
@@ -1060,7 +1529,8 @@
         },
         "pair_programming_video/express/2021": {
           "name": "Video di programmazione di coppia",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video"
         },
         "unplugged_blocks_courses_c-f__1/express/2021": {
           "name": "Blocchi scollegati (Corsi C-F)",
@@ -1127,15 +1597,18 @@
         },
         "20_20_20_rule/pre-express/2021": {
           "name": "Regola 20/20/20",
-          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
+          "type": "Video"
         },
         "wiggles_-_go_noodle/pre-express/2021": {
           "name": "Wiggles",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Video"
         },
         "common-sense-media-pause-think/pre-express/2021": {
           "name": "Fermati e pensa online",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "csta_standards_mapping/pre-express/2021": {
           "name": "Mappatura standard CSTA",
@@ -1162,13 +1635,15 @@
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "common-sense-media-pause-think/coursee/2021": {
-          "name": "Fermati e pensa online"
+          "name": "Fermati e pensa online",
+          "type": "Video"
         },
         "digital-sharing-lesson/coursee/2021": {
           "name": "Piano di lavoro della lezione - Condivisione digitale"
         },
         "digital-sharing-video/coursee/2021": {
-          "name": "Etica della condivisione digitale (video)"
+          "name": "Etica della condivisione digitale (video)",
+          "type": "Video"
         },
         "csf-turns-angles-doc/coursee/2021": {
           "name": "Curve e angoli",
@@ -1187,7 +1662,8 @@
           "name": "Funzioni - Composizione di canzoni"
         },
         "csf-songwriting-assessment/coursee/2021": {
-          "name": "Funzioni - Composizione di canzoni"
+          "name": "Funzioni - Composizione di canzoni",
+          "type": "Valutazione"
         },
         "assessment-answer-songwriting/coursee/2021": {
           "name": "Funzioni - Composizione di canzoni"
@@ -1255,23 +1731,65 @@
           "name": "Modifiche alla lezione virtuale",
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
         },
+        "ai_what_is_machine_learning_/csd/2021": {
+          "type": "Video"
+        },
         "seeing_ai/csd/2021": {
-          "name": "Vedere l'IA"
+          "name": "Vedere l'IA",
+          "type": "Video"
+        },
+        "finding_patterns_in_data/csd/2021": {
+          "type": "Video"
         },
         "introduction_to_ai_lab/csd/2021": {
           "name": "Lezione 6"
         },
         "introduction_to_ai_lab_1/csd/2021": {
-          "name": "Lezione 6"
+          "name": "Lezione 6",
+          "type": "Video"
+        },
+        "training_and_testing_in_ai_lab/csd/2021": {
+          "type": "Video"
         },
         "ai_training_data_bias/csd/2021": {
-          "name": "IA: Dati di apprendimento e distorsioni"
+          "name": "IA: Dati di apprendimento e distorsioni",
+          "type": "Video"
+        },
+        "model_cards_in_ai_lab/csd/2021": {
+          "type": "Video"
+        },
+        "if-statements_in_app_lab/csd/2021": {
+          "type": "Video"
+        },
+        "numerical_data_in_ai_lab_2/csd/2021": {
+          "type": "Video"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
+          "type": "Video"
         },
         "survey_planning/csd/2021": {
           "name": "Progettare la Raccolta dei Dati"
         },
+        "cleaning_survey_data/csd/2021": {
+          "type": "Video"
+        },
+        "view_and_download_survey_data/csd/2021": {
+          "type": "Video"
+        },
+        "the-design-thinking-process/csd/2021": {
+          "type": "Video"
+        },
+        "computer-science-practices/csd/2021": {
+          "type": "Riflessione"
+        },
         "design_mode/csd/2021": {
           "name": "Design Mode"
+        },
+        "whats-for-lunch-testing/csd/2021": {
+          "type": "Video"
+        },
+        "intro_to_design_mode/csd/2021": {
+          "type": "Video"
         },
         "design_mode_1/csd/2021": {
           "name": "Design Mode"
@@ -1283,13 +1801,18 @@
           "name": "Numeri Casuali"
         },
         "how_computers_word_hardware_software/csd/2021": {
-          "name": "Come Funzionano i Computer: Hardware e Software"
+          "name": "Come Funzionano i Computer: Hardware e Software",
+          "type": "Video"
+        },
+        "analog-digital-video/csd/2021": {
+          "type": "Video"
         },
         "functions_2/csd/2021": {
           "name": "Funzioni"
         },
         "introduction_to_arrays/csd/2021": {
-          "name": "Introduzione agli array"
+          "name": "Introduzione agli array",
+          "type": "Video"
         },
         "arrays/csd/2021": {
           "name": "Insiemi"
@@ -1298,7 +1821,8 @@
           "name": "Riprodurre Note"
         },
         "loops_in_app_lab/csd/2021": {
-          "name": "Cicli con contatore"
+          "name": "Cicli con contatore",
+          "type": "Video"
         },
         "for_loops/csd/2021": {
           "name": "Cicli con contatore"
@@ -1307,13 +1831,42 @@
           "name": "Eventi Accelerometro"
         },
         "circuits-logic-video/csd/2021": {
-          "name": "Come Funzionano i Computer: Circuiti e Logica"
+          "name": "Come Funzionano i Computer: Circuiti e Logica",
+          "type": "Video"
+        },
+        "how-computers-work-data-and-binary/csd/2021": {
+          "type": "Video"
+        },
+        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
+          "type": "Video"
+        },
+        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
+          "type": "Video"
+        },
+        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
+          "type": "Video"
+        },
+        "video_impact_on_society/csd/2021": {
+          "type": "Video"
         },
         "video_machine_learning/csd/2021": {
-          "name": "Video: Cos'è l'Apprendimento Automatico (Machine Learning)"
+          "name": "Video: Cos'è l'Apprendimento Automatico (Machine Learning)",
+          "type": "Video"
+        },
+        "video_training_data_and_bias/csd/2021": {
+          "type": "Video"
+        },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "Valutazioni dei parigrado"
         },
         "drawing-shapes-exemplar-2020/csd/2021": {
           "name": "Disegnare Forme"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2021": {
+          "type": "Video"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2021": {
+          "type": "Video"
         },
         "drawing_shapes/csd/2021": {
           "name": "Disegnare Forme"
@@ -1324,6 +1877,9 @@
         "shapes_and_parameters/csd/2021": {
           "name": "Forme e Parametri"
         },
+        "introduction-to-variables/csd/2021": {
+          "type": "Video"
+        },
         "naming_variables/csd/2021": {
           "name": "Nominare le Variabili"
         },
@@ -1333,23 +1889,43 @@
         "random_numbers/csd/2021": {
           "name": "Numeri Casuali"
         },
+        "introduction_to_sprites/csd/2021": {
+          "type": "Video"
+        },
         "the_animation_tab/csd/2021": {
-          "name": "The Animation Tab"
+          "name": "The Animation Tab",
+          "type": "Video"
         },
         "sprites_1/csd/2021": {
           "name": "Personaggi"
         },
+        "youtube-flipbook/csd/2021": {
+          "type": "Video"
+        },
+        "introduction_to_the_draw_loop/csd/2021": {
+          "type": "Video"
+        },
+        "animating-sprites/csd/2021": {
+          "type": "Video"
+        },
         "boolean_expressions/csd/2021": {
-          "name": "Espressioni Booleane"
+          "name": "Espressioni Booleane",
+          "type": "Video"
         },
         "conditional_statements/csd/2021": {
-          "name": "Istruzioni Condizionali"
+          "name": "Istruzioni Condizionali",
+          "type": "Video"
         },
         "if_else_statements/csd/2021": {
-          "name": "Dichiarazioni Se/altrimenti"
+          "name": "Dichiarazioni Se/altrimenti",
+          "type": "Video"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "Valutazioni dei parigrado"
         },
         "velocity_1/csd/2021": {
-          "name": "Velocità"
+          "name": "Velocità",
+          "type": "Video"
         },
         "velocity_2/csd/2021": {
           "name": "Velocità"
@@ -1373,10 +1949,14 @@
           "name": "Gioco del Volantino"
         },
         "calling_and_defining_functions/csd/2021": {
-          "name": "Funzioni"
+          "name": "Funzioni",
+          "type": "Video"
         },
         "functions_1/csd/2021": {
           "name": "Funzioni"
+        },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "Valutazioni dei parigrado"
         },
         "teacher_forum_1/csd/2021": {
           "name": "Forum dell'insegnante"
@@ -1384,11 +1964,35 @@
         "what-is-a-computer-2020/csd/2021": {
           "name": "Cos'è un Computer?"
         },
+        "what-is-a-computer-1-2-3/csd/2021": {
+          "type": "Video"
+        },
+        "what-do-computers-do/csd/2021": {
+          "type": "Video"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "type": "Valutazioni dei parigrado"
+        },
         "html_tags/csd/2021": {
           "name": "Tag HTML"
         },
+        "intro_to_web_lab_part_2/csd/2021": {
+          "type": "Video"
+        },
+        "video_intro_to_web_lab_part_1/csd/2021": {
+          "type": "Video"
+        },
+        "video_pair_programming/csd/2021": {
+          "type": "Video"
+        },
         "headings_and_paragraphs/csd/2021": {
           "name": "Intestazioni e Paragrafi"
+        },
+        "video_debugging/csd/2021": {
+          "type": "Video"
+        },
+        "html-web-page/csd/2021": {
+          "type": "Valutazioni dei parigrado"
         },
         "lists/csd/2021": {
           "name": "Liste"
@@ -1397,13 +2001,151 @@
           "name": "Orme digitali"
         },
         "intro_to_css_-_part_1/csd/2021": {
-          "name": "Introduzione a CSS - Parte 1"
+          "name": "Introduzione a CSS - Parte 1",
+          "type": "Video"
         },
         "intro_to_css_-_part_2/csd/2021": {
-          "name": "Introduzione a CSS - Parte 2"
+          "name": "Introduzione a CSS - Parte 2",
+          "type": "Video"
+        },
+        "your-personal-style-1/csd/2021": {
+          "type": "Valutazioni dei parigrado"
+        },
+        "creative-commons-video/csd/2021": {
+          "type": "Video"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "Valutazioni dei parigrado"
         },
         "publishing_your_website/csd/2021": {
-          "name": "Pubblicare il tuo sito web"
+          "name": "Pubblicare il tuo sito web",
+          "type": "Video"
+        },
+        "teamwork-dealing-with-disagreement/csd/2021": {
+          "type": "Video"
+        },
+        "how-teamwork-works/csd/2021": {
+          "type": "Video"
+        },
+        "how-search-works-video/csd/2021": {
+          "type": "Video"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "type": "Valutazioni dei parigrado"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/pre-express/2020": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/pre-express/2020": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/pre-express/2020": {
+          "name": "Vocabolario"
+        },
+        "lesson_plans/express/2020": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/express/2020": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/express/2020": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/express/2020": {
+          "name": "Vocabolario"
+        },
+        "curriculum_guide/courseb/2020": {
+          "name": "Guida Curriculum"
+        },
+        "lesson_plans/courseb/2020": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/courseb/2020": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/courseb/2020": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/courseb/2020": {
+          "name": "Vocabolario"
+        },
+        "curriculum_guide/coursed/2020": {
+          "name": "Guida Curriculum"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/coursed/2020": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/coursed/2020": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/coursed/2020": {
+          "name": "Vocabolario"
+        },
+        "curriculum_guide/coursec/2020": {
+          "name": "Guida Curriculum"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/coursec/2020": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/coursec/2020": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/coursec/2020": {
+          "name": "Vocabolario"
+        },
+        "curriculum_guide/coursee/2020": {
+          "name": "Guida Curriculum"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/coursee/2020": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/coursee/2020": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/coursee/2020": {
+          "name": "Vocabolario"
+        },
+        "curriculum_guide/coursea/2020": {
+          "name": "Guida Curriculum"
+        },
+        "lesson_plans/coursea/2020": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/coursea/2020": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/coursea/2020": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/coursea/2020": {
+          "name": "Vocabolario"
+        },
+        "curriculum_guide/coursef/2020": {
+          "name": "Guida Curriculum"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/coursef/2020": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/coursef/2020": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/coursef/2020": {
+          "name": "Vocabolario"
         }
       }
     }

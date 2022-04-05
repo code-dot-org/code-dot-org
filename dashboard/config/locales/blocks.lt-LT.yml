@@ -204,6 +204,10 @@ lt:
           CONDITION:
             '"when"': kada
             '"while"': kol
+      gamelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': sekundes
       gamelab_getProp:
         options:
           PROPERTY:

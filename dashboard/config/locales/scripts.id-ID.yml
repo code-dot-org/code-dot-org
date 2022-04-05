@@ -1352,8 +1352,6 @@ id:
               name: Penutupan
         equity-pd:
           lessons:
-            Code.org Equity PD:
-              name: Code.org Equity PD
             Necessary Background:
               name: Latar belakang dibutuhkan
         science-PD2:
@@ -4074,6 +4072,7 @@ id:
                 Pada akhir puzzle, Murid berkesempatan menyesuaikan permainan mereka
                 dengan berbagai kecepatan dan suara.
           student_description: Pilih tim Anda dan buat permainan basket
+          name: bola basket
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -5173,6 +5172,7 @@ id:
                 Pada akhir puzzle, Murid berkesempatan menyesuaikan permainan mereka
                 dengan berbagai kecepatan dan suara.
           student_description: Padu dan padankan lintas olahraga
+          name: olahraga
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -9310,6 +9310,7 @@ id:
                 untuk bermain pada level bermain gratis di bagian akhir.
           student_description: Minecraft hadir kembali dengan aktivitas baru untuk
             Hour of Code! Ikuti petualangan melintasi dunia Minecraft dengan code.
+          name: pahlawan
         applab-intro-staging:
           title: Pengenalan Penyiapan App Lab
           lessons:
@@ -13424,6 +13425,7 @@ id:
                 ini membutuhkan suara karena alatnya dibuat untuk merespon musik.
           student_description: Buat code pesta dansa Anda sendiri untuk dibagikan
             ke teman-teman Anda!
+          name: dansa
         frozen-2018-test-b:
           title: Script Frozen Baru
           lessons:
@@ -13450,6 +13452,7 @@ id:
           student_description: Minecraft hadir kembali dengan aktivitas yang serba
             baru! Gunakan kreativitas dan keterampilan pemecahan masalah untuk mengeksplorasi
             dan membangun dunia bawah air dengan code.
+          name: Akuatik
         sconyers:
           title: Tempat Bermain Tracey
           lessons:
@@ -19568,7 +19571,7 @@ id:
             Anda!
           lessons:
             Dance Party:
-              name: Pesta Tari
+              name: Pesta Dansa (2019)
               description_student: Dalam pelajaran ini, siswa dari semua jenjang usia
                 mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan
                 yang aman dan mendukung. Pelajaran ini telah dirancang untuk siswa
@@ -24684,6 +24687,8 @@ id:
               name: AI for Oceans
             visualizing:
               name: Membayangkan data
+            intro-categorical:
+              name: Pengantar Lab AI
             CSP Tester:
               name: CSP Tester
         outbreak:
@@ -28328,6 +28333,8 @@ id:
             waktu dan pertimbangan Anda.
         aiml-2021:
           lessons:
+            lesson5:
+              name: Pengantar Lab AI
             lesson-22:
               name: Merancang Pengumpulan Data
           lesson_groups:
@@ -28335,6 +28342,8 @@ id:
               display_name: Survei
         csd7-2021:
           lessons:
+            Introduction to AI Lab:
+              name: Pengantar Lab AI
             Survey Planning:
               name: Merancang Pengumpulan Data
             CS Discoveries Post-Course Survey:
@@ -28566,8 +28575,7 @@ id:
           title: '"Halo, dunia!"'
         csa-self-paced-pl:
           lessons:
-            Navigating the Code.org learning platform:
-              name: Menjelajahi platform pembelajaran Code.org
+            Navigating the Codeorg learning platform:
               description_teacher: |-
                 **Anda akan belajar cara:**
 
@@ -30184,7 +30192,7 @@ id:
                 murid akan diberi kesempatan membuat gambar mereka sendiri menggunakan
                 loop.
               key: Adegan Laut dengan Loop
-            The Big Event Jr.:
+            The Big Event Jr:
               name: The Big Event Jr.
               description_student: Gerak dan teriak ketika guru Anda menekan tombol
                 pada remote raksasa.
@@ -30928,7 +30936,7 @@ id:
                 Lalu murid melatih empati dan kreativitas untuk membuat sketsa aplikasi
                 telepon pintar sendiri yang memenuhi kebutuhan seorang pengguna lagi.
               key: Aplikasi yang Tepat
-            The Big Event Jr.:
+            The Big Event Jr:
               name: The Big Event Jr.
               description_student: Gerak atau teriak ketika guru Anda menekan tombol
                 pada remote raksasa.
@@ -31056,7 +31064,7 @@ id:
             Putting a STOP to Online Meanness:
               name: MENGHENTIKAN Kejahatan Online
               key: MENGHENTIKAN Kejahatan Online
-            My Robotic Friends Jr.:
+            My Robotic Friends Jr:
               name: Teman Robot Saya Jr.
               description_student: Dalam pelajaran ini, Anda menganggap seolah-olah
                 teman kelas Anda adalah robot dan memprogram mereka untuk membuat
@@ -31105,7 +31113,7 @@ id:
                 untuk menyelesaikan gambar di layar. Tahapan Artis ini akan mempersilakan
                 murid membuat gambar-gambar yang semakin kompleks menggunakan blok
                 baru seperti `move forward by 100 pixels` dan `turn right by 90 degrees`.
-            My Loopy Robotic Friends Jr.:
+            My Loopy Robotic Friends Jr:
               name: Teman-teman Robot Saya yang Mengulang-ulang Jr.
               description_student: Dalam pelajaran ini, Anda akan memprogram teman
                 sekelas lagi, tetapi dengan menggunakan loop Anda akan dapat memecahkan
@@ -32213,6 +32221,8 @@ id:
           lessons:
             lesson-9:
               name: Loop
+            lesson-21:
+              name: Konsol
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
@@ -32262,10 +32272,19 @@ id:
           lessons:
             lesson-5:
               name: Unit 2 Penilaian
+            lesson-6:
+              name: variabel
+            lesson-16:
+              name: Konsol
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: For Loop
+            lesson-16:
+              name: Konsol
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
@@ -32388,3 +32407,369 @@ id:
               display_name: Konten
             lessonGroup-5:
               display_name: Sandbox
+        coursef-2022-pilot:
+          lessons:
+            The Power of Words:
+              name: Kekuatan kata-Kata
+              description_student: Bullying tidak pernah baik-baik saja. Pelajaran
+                ini akan mengajarkan anda tentang apa yang bisa dan tidak apa-apa
+                untuk mengatakan secara online.
+              key: Kekuatan kata-Kata
+            Introducing Sprite Lab:
+              name: Memperkenalkan Sprite Lab
+              key: Memperkenalkan Sprite Lab
+            Making Sprites:
+              name: Membuat Sprite
+              key: Membuat Sprite
+            Sprites in Action:
+              name: Sprite tengah Beraksi
+              key: Sprite tengah Beraksi
+            'Mini-Project: Virtual Pet':
+              name: 'Mini-Project: Piaraan Virtual'
+              description_student: Dalam pelajaran ini, murid akan membuat Virtual
+                Pet interaktif yang terlihat dan berperilaku sesuai keinginan mereka.
+                Murid akan menggunakan tool "Costumes" di Sprite Lab untuk menyesuaikan
+                penampilan hewan piaraan. Mereka kemudian menggunakan event, perilaku,
+                dan konsep lain yang sudah dipelajari untuk membuat hewan piaraan
+                tersebut hidup sendiri!
+              description_teacher: Dalam pelajaran ini, murid akan membuat Virtual
+                Pet interaktif yang terlihat dan berperilaku sesuai keinginan mereka.
+                Murid akan menggunakan tool "Costumes" di Sprite Lab untuk menyesuaikan
+                penampilan hewan piaraan. Mereka kemudian menggunakan event, perilaku,
+                dan konsep lain yang sudah dipelajari untuk membuat hewan piaraan
+                tersebut hidup sendiri!
+              key: 'Mini-Project: Piaraan Virtual'
+            'Mini-Project: User Input Programs':
+              name: 'Mini-Project: Program Input Pengguna'
+              key: 'Mini-Project: Program Input Pengguna'
+            Simulating Experiments:
+              name: Melakukan Simulasi Eksperimen
+              description_student: Lakukan simulasi di komputer dan lakukan eksperimen
+                dengan mengubah variable.
+              description_teacher: Dengan melakukan simulasi sederhana di Sprite Lab,
+                murid akan merasakan cara menggunakan komputasi untuk mengumpulkan
+                data yang dapat mengidentifikasi tren atau pola. Setelah melakukan
+                simulasi beberapa kali, murid berkesempatan membuat prediksi bahwa
+                perubahan variable dalam simulasi dapat memengaruhi hasil, dan kemudian
+                menguji hipotesis tersebut.
+              key: Melakukan Simulasi Eksperimen
+            AI For Oceans:
+              name: AI for Oceans
+              key: AI for Oceans
+            The Internet:
+              name: Internet
+              description_student: Pernah bertanya-tanya bagaimana informasi melintasi
+                internet? Bukan sulap! Pelajaran ini akan mengajari Anda dasar-dasar
+                cara kerja internet.
+              description_teacher: Meskipun banyak orang menggunakan internet setiap
+                hari, tidak begitu banyak yang tahu cara kerjanya. Dalam pelajaran
+                ini, murid berpura-pura akan menyusuri internet, sambil terus belajar
+                tentang koneksi, URL, Alamat IP, dan DNS.
+              key: Internet
+            End of Course Project:
+              name: Proyek Akhir Kursus
+              description_student: Proyek sebesar ini pasti menyita waktu dan banyak
+                perencanaan. Cari inspirasi, susun rencana, dan kerahkan kreativitas
+                Anda!
+              key: Proyek Akhir Kursus
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Kewarganegaraaan Digital
+            ramp_up:
+              display_name: Sprites
+            lessonGroup-8:
+              display_name: variabel
+            end_of_course_project:
+              display_name: Proyek Akhir Kursus
+          description_audience: 'Usia: 9-13'
+          description_short: Pelajari seluruh konsep dalam dasar dasar ilmu komputer
+            dan buat seni, cerita atau permainan anda sendiri.
+        csa6-2022:
+          lessons:
+            Documenting Program Code:
+              description_student: Proyek yang Anda kembangkan sepanjang kursus telah
+                melecut banyak kreativitas dalam komunitas! Neighborhood Lit Fest
+                akan diadakan untuk memamerkan berbagai cerita, skrip, lirik lagu,
+                surat, dan puisi kreatif. Neighborhood Lit Fest Project adalah sebuah
+                proyek besar yang Anda kerjakan di sepanjang unit dan strategi manajemen
+                proyek membantu mengatur dan menyusun pekerjaan Anda. Anda mengeksplorasi
+                strategi untuk menulis dan menyusun code agar teknisi perangkat lunak
+                lain dapat dengan mudah memahami dan menggunakan alat Java untuk membuat
+                dokumentasi program.
+              description_teacher: Murid diperkenalkan dengan Neighborhood Lit Fest
+                Project lalu mengevaluasi persyaratan dan contoh untuk mengidentifikasi
+                pertanyaan dan fitur utama. Sebelum mengerjakan proyek, murid memperluas
+                pemahaman tentang struktur program dan memberi komentar dengan mengidentifikasi
+                praktik terbaik serta mengeksplorasi penggunaan Javadocs untuk membuat
+                dokumentasi program.
+            Exploring Integer and Double Objects:
+              description_student: Anda membuat objek `Integer` dan `Double` untuk
+                merepresentasikan nilai primitif `int` dan `double` sebagai nilai
+                referensi. Dengan menggunakan metode di kelas `Integer` dan `Double`,
+                Anda mengembalikan nilai yang disimpan oleh dua objek ini sebagai
+                nilai primitif. Anda juga mengeksplorasi nilai minimum dan maksimum
+                untuk integer guna menghindari kesalahan parah sebelum merencanakan
+                tugas yang perlu Anda selesaikan untuk Neighborhood Lit Fest Project.
+              description_teacher: Murid membuat objek `Integer` dan `Double` untuk
+                merepresentasikan nilai primitif `int` dan `double` sebagai nilai
+                referensi. Dengan menggunakan metode di kelas `Integer` dan `Double`,
+                murid mengembalikan nilai yang disimpan oleh dua objek ini sebagai
+                nilai primitif. Murid juga mengeksplorasi nilai minimum dan maksimum
+                untuk integer guna menghindari kesalahan parah sebelum merencanakan
+                tugas yang perlu mereka selesaikan untuk Neighborhood Lit Fest Project.
+            Using ArrayLists to Store Data:
+              description_student: Ketika bekerja menggunakan larik dan daftar, terkadang
+                kita menemui masalah, yaitu jumlah elemen tidak diketahui atau ukuran
+                daftar terus-menerus berubah. Dalam pelajaran ini, Anda belajar tentang
+                `ArrayList` dan mengidentifikasi contoh-contoh skenario yang struktur
+                datanya lebih tepat.
+              description_teacher: Murid membuat `ArrayList` untuk menyimpan nilai
+                `int` dan `double`. Murid membedakan antara `ArrayList` dan larik
+                satu dimensi untuk menentukan struktur data yang paling cocok untuk
+                suatu skenario. Murid menambahkan elemen ke `ArrayList` dan mempelajari
+                cara autoboxing berkonversi antara nilai primitif dan wrapper class
+                saat murid bekerja dengan data yang tersimpan.
+            Working with ArrayList Data:
+              description_student: Anda menggunakan dua metode `ArrayList`, yaitu
+                `get()` dan `set()`, untuk mengambil dan memodifikasi elemen lalu
+                belajar tentang metode `String`, yaitu `length()`, untuk menghitung
+                jumlah karakter dalam objek `String`. Anda menerapkan algorithm standar
+                yang dikembangkan menggunakan larik 1D dan 2D untuk memodifikasi elemen
+                dalam `ArrayList`. Anda mempelajari cara autoboxing melakukan konversi
+                antara nilai primitif dan wrapper class saat mereka bekerja dengan
+                data yang tersimpan dalam `ArrayList`.
+              description_teacher: Murid bekerja menggunakan metode `get()` dan `set()`
+                untuk mengambil dan memodifikasi elemen dalam `ArrayList` dan belajar
+                tentang metode `String`, yaitu `length()` untuk mengembalikan jumlah
+                karakter dalam objek `String`. Mereka menerapkan algorithm standar
+                yang dikembangkan menggunakan larik 1D dan 2D untuk memodifikasi elemen
+                dalam `ArrayList`. Murid mempelajari cara autoboxing melakukan konversi
+                antara nilai primitif dan wrapper class saat mereka bekerja dengan
+                data yang tersimpan dalam `ArrayList`.
+            Storing Objects in an ArrayList:
+              description_student: Sejauh ini, Anda sudah membuat `ArrayList` untuk
+                menyimpan `Integer`, `Double`, dan `String`. Seperti halnya larik
+                1D dan 2D, Anda juga dapat menyimpan objek yang Anda buat dalam `ArrayList`.
+                Dalam pelajaran ini, Anda membuat `ArrayList` objek untuk menerapkan
+                algorithm standar yang sudah digunakan sepanjang tahun untuk bekerja
+                menggunakan data yang tersimpan dalam daftar ini.
+              description_teacher: Murid membuat `ArrayList` untuk menyimpan objek
+                dan belajar tentang jenis-jenis generik dalam Java. Murid menerapkan
+                algorithm yang sudah dipelajari menggunakan larik satu dimensi pada
+                `ArrayList` untuk menemukan nilai minimum dan maksimum, menghitung
+                jumlah total dan rata-rata, atau menemukan elemen-elemen yang memenuhi
+                kriteria spesifik.
+            Removing Data from an ArrayList:
+              description_student: Anda mengeksplorasi fungsionalitas metode `remove()`
+                dalam kelas `ArrayList` dan mengidentifikasi kesalahan potensial ketika
+                berusaha menghapus item saat menyilang daftar. Dalam prosesnya, Anda
+                menyadari kapan suatu `ArrayList` itu sangat cocok untuk suatu skenario
+                atau masalah.
+              description_teacher: Murid mengeksplorasi fungsionalitas metode `remove()`
+                dalam kelas `ArrayList` dan mengidentifikasi kesalahan potensial ketika
+                berusaha menghapus item saat menyilang daftar. Murid menyadari kapan
+                suatu `ArrayList` itu sangat cocok untuk suatu skenario atau masalah.
+            Using String Methods:
+              description_student: Anda mengeksplorasi struktur `String` dan ingat
+                bahwa `String` adalah objek. Anda menggunakan metode `indexOf()` dan
+                `substring()` untuk mencari substring di dalam `String` dan membuat
+                objek `String` baru dari `String` yang sudah ada.
+              description_teacher: Murid mengeksplorasi struktur `String` dan ingat
+                bahwa `String` adalah objek. Murid menggunakan metode `indexOf()`
+                dan `substring()` untuk mencari substring di dalam `String` dan membuat
+                objek `String` baru dari `String` yang sudah ada.
+            Comparing Strings:
+              description_student: Anda bereksplorasi menggunakan `compareTo()` untuk
+                mengetahui apakah urutan `String` adalah alfabetis. Anda kemudian
+                menggarap Neighborhood Lit Fest Project, dengan fokus khusus pada
+                tugas yang Anda miliki di Project Planning Board.
+              description_teacher: Murid bereksplorasi menggunakan `compareTo()` untuk
+                mengetahui apakah urutan `String` adalah alfabetis. Murid kemudian
+                menggarap Neighborhood Lit Fest Project, dengan fokus khusus pada
+                tugas yang mereka miliki di Project Planning Board.
+            Solving Problems with Strings:
+              description_student: 'Anda menggabungkan pengetahuan tentang algorithm
+                standar dengan `String` untuk mengetahui apakah `String` berupa palindrom.
+                Anda kemudian ikut serta dalam sesi masukan rekan sekelas dan menilai
+                kemajuan Anda pada Neighborhood Lit Fest Project. '
+              description_teacher: Murid menggabungkan pengetahuan tentang algorithm
+                standar dengan `String` untuk mengetahui apakah `String` berupa palindrom.
+                Murid kemudian ikut serta dalam sesi masukan rekan sekelas dan menilai
+                kemajuan mereka pada Neighborhood Lit Fest Project.
+            Solving Problems with ArrayLists:
+              description_student: Anda menerapkan algorithm standar yang Anda tulis
+                untuk larik 1D dan 2D pada `ArrayList`. Anda menerapkan algorithm
+                standar baru untuk mendapatkan digit individual dari suatu integer
+                sebelum memodifikasi dan menerapkan algorithm sebelumnya untuk menukar
+                elemen, menghapus duplikat, atau menemukan elemen yang memenuhi kriteria
+                spesifik di Neighborhood Lit Fest Project.
+              description_teacher: Murid menerapkan algorithm standar yang mereka
+                tulis untuk larik 1D dan 2D pada `ArrayList`. Murid menerapkan algorithm
+                standar baru untuk mendapatkan digit individual dari suatu integer
+                sebelum memodifikasi dan menerapkan algorithm sebelumnya untuk menukar
+                elemen, menghapus duplikat, atau menemukan elemen yang memenuhi kriteria
+                spesifik di Neighborhood Lit Fest Project.
+            Neighborhood Lit Fest Project - Day 1:
+              name: Neighborhood Lit Fest Project - Hari 1
+              description_student: Anda terus mengembangkan Neighborhood Lit Fest
+                Project untuk membuat cerita, puisi, lagu, atau bentuk karya sastra
+                lain berdasarkan analisis terhadap karya penulis atau seniman favorit
+                Anda. Mula-mula Anda melakukan penilaian diri atas karya Anda untuk
+                mengevaluasi kemajuan Anda dalam menyelesaikan persyaratan proyek,
+                lalu menulis kriteria penerimaan untuk suatu fitur dalam proyek Anda
+                yang akan diuji oleh rekan sekelas. Anda menggunakan penilaian diri
+                dan masukan rekan sekelas untuk memprioritaskan tugas yang masih tersisa
+                dan melanjutkan pengembangan proyek Anda.
+              description_teacher: Murid terus mengembangkan Neighborhood Lit Fest
+                Project untuk membuat cerita, puisi, lagu, atau bentuk karya sastra
+                lain berdasarkan analisis terhadap karya penulis atau seniman favorit
+                mereka. Mula-mula murid melakukan penilaian diri atas karya mereka
+                untuk mengevaluasi kemajuan mereka dalam menyelesaikan persyaratan
+                proyek, lalu menulis kriteria penerimaan untuk suatu fitur dalam proyek
+                mereka yang akan diuji oleh rekan sekelas. Murid menggunakan penilaian
+                diri dan masukan rekan sekelas untuk memprioritaskan tugas yang masih
+                tersisa dan melanjutkan pengembangan proyek mereka.
+              key: Neighborhood Lit Fest Project - Hari 1
+            Neighborhood Lit Fest Project - Day 2:
+              name: Neighborhood Lit Fest Project - Hari 2
+              description_student: Dalam pelajaran sebelumnya, Anda melakukan penilaian
+                diri dan menulis kriteria penerimaan untuk proyek Anda. Dalam pelajaran
+                ini, Anda mendapatkan masukan rekan sekelas untuk mengidentifikasi
+                sisa tugas yang harus diselesaikan dan melanjutkan pengembangan Neighborhood
+                Lit Fest Project.
+              description_teacher: Dalam pelajaran sebelumnya, murid melakukan penilaian
+                diri dan menulis kriteria penerimaan untuk proyek mereka. Murid mendapatkan
+                masukan rekan sekelas dalam pelajaran ini untuk mengidentifikasi sisa
+                tugas yang harus diselesaikan dan melanjutkan pengembangan Neighborhood
+                Lit Fest Project.
+              key: Neighborhood Lit Fest Project - Hari 2
+            Neighborhood Lit Fest Project - Day 3:
+              name: Neighborhood Lit Fest Project - Hari 3
+              description_student: Anda melakukan revisi dan pembaruan final berdasarkan
+                tinjauan code dan Project Planning Board. Anda membagikan Neighborhood
+                Lit Fest Project kepada rekan sekelas. Anda kemudian merayakan keberhasilan
+                ini dan menyelesaikan refleksi terakhir terhadap proses pengembangan.
+              description_teacher: Murid melakukan revisi dan pembaruan final berdasarkan
+                tinjauan code dan Project Planning Board. Murid membagikan Neighborhood
+                Lit Fest Project kepada rekan sekelas. Murid kemudian merayakan keberhasilan
+                ini dan menyelesaikan refleksi terakhir terhadap proses pengembangan.
+              key: Neighborhood Lit Fest Project - Hari 3
+            Assessment Day:
+              name: Hari Penilaian
+              description_student: Dalam unit ini, Anda menggunakan `ArrayList` untuk
+                menyimpan data program dan membedakan antara kapan harus menggunakan
+                larik 1D dan larik 2D dengan `ArrayList`. Anda mengeksplorasi manfaat
+                dan fungsionalitas `ArrayList` untuk memecahkan masalah yang melibatkan
+                data angka dan data objek. Anda menggunakan metode dalam kelas `String`
+                untuk menganalisis dan memproses teks yang diperoleh dari pengguna
+                dan input file. Di sepanjang unit ini, Anda menulis dokumentasi program
+                menggunakan komentar satu baris, komentar beberapa baris, dan komentar
+                Javadoc untuk membuat dokumentasi API. Dalam prosesnya, Anda mengidentifikasi
+                dan mendokumentasikan prakondisi dan pascakondisi objek dan metode.
+                Sekarang, Anda mengevaluasi pencapaian tujuan pembelajaran unit dan
+                kecakapan dalam penilaian pilihan ganda.
+              description_teacher: Dalam unit ini, murid menggunakan `ArrayList` untuk
+                menyimpan data program dan membedakan antara kapan harus menggunakan
+                larik 1D dan larik 2D dengan `ArrayList`. Murid mengeksplorasi manfaat
+                dan fungsionalitas `ArrayList` untuk memecahkan masalah yang melibatkan
+                data angka dan data objek. Murid menggunakan metode dalam kelas `String`
+                untuk menganalisis dan memproses teks yang diperoleh dari pengguna
+                dan input file. Di sepanjang unit ini, murid menulis dokumentasi program
+                menggunakan komentar satu baris, komentar beberapa baris, dan komentar
+                Javadoc untuk membuat dokumentasi API. Dalam prosesnya, murid mengidentifikasi
+                dan mendokumentasikan prakondisi dan pascakondisi objek dan metode.
+                Sekarang, murid mengevaluasi pencapaian tujuan pembelajaran unit dan
+                kecakapan dalam penilaian pilihan ganda.
+              key: Hari Penilaian
+            lesson-1:
+              key: pelajaran ke-1
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-5:
+              display_name: Sandbox
+        csa7-2022:
+          lessons:
+            Assessment Day:
+              name: Hari Penilaian
+              key: Hari Penilaian
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-5:
+              display_name: Sandbox
+        csa8-2022:
+          lessons:
+            Assessment Day:
+              name: Hari Penilaian
+              key: Hari Penilaian
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-5:
+              display_name: Sandbox
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Selamat Datang
+            lesson-9:
+              name: Perencanaan Pelajaran
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: variabel
+            lesson-15:
+              name: Unit 2 Penilaian
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+        k5-onlinepd-2022:
+          lessons:
+            Getting Started:
+              name: Dapat Dimulai
+              key: Dapat Dimulai
+            Sequencing:
+              name: Urutan
+              key: Urutan
+            Loops:
+              name: Loop
+              key: Loop
+            Events:
+              name: kegiatan
+              key: kegiatan
+            Conditionals:
+              name: Kondisi
+              key: Kondisi
+            Functions:
+              name: fungsi
+              key: fungsi
+            Variables:
+              name: variabel
+              key: variabel
+            For Loops:
+              name: For Loop
+              key: For Loop
+            End of Course projects:
+              name: Proyek Akhir-Kursus
+              key: Proyek Akhir-Kursus
+            Reviewing your reflections:
+              name: Meninjau kembali renungan Anda
+              key: Meninjau kembali renungan Anda
+            Welcome to "Teaching Computer Science Fundamentals":
+              key: Selamat Datang di "Mengajarkan Dasar-Dasar Ilmu Komputer"
+            Lesson Planning:
+              key: Perencanaan Pelajaran
+            Next steps:
+              key: Langkah berikutnya
+        vpl-csd2-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Komputasi Fisik
+        vpl-csd3-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Komputasi Fisik
+        hello-world-csc:
+          title: Halo Dunia
+        csd-playground:
+          name: csd-playground

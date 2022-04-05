@@ -28,7 +28,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2022-02-28 18:15:55 UTC",
+    "serialized_at": "2022-03-30 19:55:18 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1341,8 +1341,19 @@
       }
     },
     {
-      "key": "2a745cfc-130d-40b2-a8ef-7872868b743c",
+      "key": "59b87cc3-62bd-4c61-a8de-bd9ce6827b12",
       "position": 3,
+      "properties": {
+        "description": "####Vaocabulary\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n\n- **Sprite** - A graphic on the screen with a location, size, and appearance.\n- **User** - Someone who uses an object, including software and hardware."
+      },
+      "seeding_key": {
+        "activity_section.key": "59b87cc3-62bd-4c61-a8de-bd9ce6827b12",
+        "lesson_activity.key": "37c1790c-e4c7-4ea1-96f4-6b10205d37b2"
+      }
+    },
+    {
+      "key": "2a745cfc-130d-40b2-a8ef-7872868b743c",
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show next slide\n\n**Do This:**  Using the lesson slides or a whiteboard, show students a T-chart labeled “Favorite apps and games” on the left and “Why we like them” on the right. After modeling with one example, have students suggest their own additions to the list. As students explain why they like a particular app, restate their ideas and focus on *choices*, and times when the user gets to *choose* how they play or use it. Move on when students are seeing the connection that people prefer to be able to make choices."
       },
@@ -1353,7 +1364,7 @@
     },
     {
       "key": "cded4c01-1aa0-4a11-8264-e33b263d619a",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "When apps and games are made, they are designed with a user in mind. The user is you, or whoever will be using and playing with the app. Creators have ideas about how their apps should be used, but it is up to the user to make the choices!\nToday we are going to explore how (and why) app and game makers let us make choices.",
         "remarks": true
@@ -1365,7 +1376,7 @@
     },
     {
       "key": "6e762e8e-4b37-45e4-bcb3-a53a7d535f63",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “User Choices” slide\n\n**Discuss:** For each app, ask students what choice the app developers are giving to the user. Why would they include that choice?\n\n**Goal:** In their discussion, students should be including specific choices that the user gets to make, as well as what the apps are about. For example, Talk Box lets users choose an avatar or digital representation of themselves. This choice is a good thing because it helps the user feel like the app is really for them.\n",
         "tips": [
@@ -1382,7 +1393,7 @@
     },
     {
       "key": "e5814403-e13e-40fb-9878-930491734f7f",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "We can see that in all of these apps, the user gets to make choices about how they use it. These choices might motivate more people to want to use the app.",
         "remarks": true
@@ -1573,10 +1584,32 @@
       "key": "193e445d-6cec-4bc3-bfd0-9524b864bd64",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Ant and Dragonfly Scene” slide\n\n**Do this:** Using the lesson warm up slides, or this [sample project](https://studio.code.org/projects/spritelab/i1-YKJAmtlLMi54FJRIVNnWR_yLy-xRpmUAKcIAlaa0/view), show students the animation of the ant and dragonfly.\n\n**Discuss:** \n* _How would you describe this sprite scene?_\n* _If you wanted someone to create this scene for you on a computer, what instructions would they need?_\n\n**Discussion goal:** Students should identify both sprites in this project, describe their behaviors (movements), and also notice the background.\nGive students time to brainstorm ideas. If they aren’t sure what to say, clarify that you are just asking them to state observations about what they see.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Instructions” slide\n\nNext, show the actual code used for this project and invite students to attempt to read through it.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** \n* _What is the same or different about our instructions and this code?_\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Ant and Dragonfly Scene” slide\n\n**Do this:** Using the lesson warm up slides, or this [sample project](https://studio.code.org/projects/spritelab/i1-YKJAmtlLMi54FJRIVNnWR_yLy-xRpmUAKcIAlaa0/view), show students the animation of the ant and dragonfly.\n\n**Discuss:** \n* _How would you describe this sprite scene?_\n* _If you wanted someone to create this scene for you on a computer, what instructions would they need?_\n\n**Discussion goal:** Students should identify both sprites in this project, describe their behaviors (movements), and also notice the background.\nGive students time to brainstorm ideas. If they aren’t sure what to say, clarify that you are just asking them to state observations about what they see.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Instructions” slide\n\nNext, show the actual code used for this project and invite students to attempt to read through it.\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "193e445d-6cec-4bc3-bfd0-9524b864bd64",
+        "lesson_activity.key": "26e68907-178c-4697-ba2e-86e1ce78db1d"
+      }
+    },
+    {
+      "key": "83e579b9-164c-4047-bf6b-0a48207a7b00",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** \n* _What is the same or different about our instructions and this code?_\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "83e579b9-164c-4047-bf6b-0a48207a7b00",
+        "lesson_activity.key": "26e68907-178c-4697-ba2e-86e1ce78db1d"
+      }
+    },
+    {
+      "key": "908650e1-1939-41c4-b7a9-21d6c5a78c13",
+      "position": 5,
+      "properties": {
+        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n- **Algorithm** - A list of steps to complete a task.\n- **Behavior** - An action in Sprite Lab that a sprite performs continuously until it’s told to stop.\n- **Program** - An algorithm that has been coded into something that can be run by a machine.\n- **Sprite** - A graphic on the screen with a location, size, and appearance.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "908650e1-1939-41c4-b7a9-21d6c5a78c13",
         "lesson_activity.key": "26e68907-178c-4697-ba2e-86e1ce78db1d"
       }
     },
@@ -1748,6 +1781,17 @@
       }
     },
     {
+      "key": "9c2d73f2-c104-47fa-aaef-5322e03ce766",
+      "position": 5,
+      "properties": {
+        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Algorithm** - A list of steps to complete a task.\n- **Event** - An action that causes something to happen."
+      },
+      "seeding_key": {
+        "activity_section.key": "9c2d73f2-c104-47fa-aaef-5322e03ce766",
+        "lesson_activity.key": "d078afbb-41ef-4f2f-a70b-823fea48018c"
+      }
+    },
+    {
       "key": "60c9780b-5aa1-4070-8456-edc1880652a1",
       "position": 1,
       "properties": {
@@ -1854,7 +1898,7 @@
       "key": "4e19d062-0c5b-4eb6-aa93-6504fc2f4631",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Review:** Ask students questions about events and behaviors. \n\n* _Do you remember what an event is?_\n\n* _Do you remember what a behavior is?_\n\n* _Can you remember some of the behaviors you have used ? What do they do?_\n    - \"patrolling\"\n    - \"jittering\"\n    - \"spinning right/left\" \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n\nRevisit _events_ and _behaviors_ in programming. Additionally, introduce the Sprite Lab \"Costumes\" tool that allows students to draw their own costumes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 1 - Exploration” slide\n\n**Display:** Begin by showing Level 1 of today's lesson to your students. \n\n**Think/Pair:** Ask students to predict what will happen when the code is run, and to discuss with their neighbors. Run the code, and discuss the outcome.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 2 - Skill Building” slide\n\n**Display:** Show Level 2. Briefly demonstrate how to do the following: \n\n- Navigate between the _Code_ and _Costumes_ tabs. \n- Draw a costume. \n- Choose a costume from the costume library.\n- Change the virtual pet's sprite's costume to a custom one.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Review:** Ask students questions about events and behaviors. \n\n* _Do you remember what an event is?_\n\n* _Do you remember what a behavior is?_\n\n* _Can you remember some of the behaviors you have used ? What do they do?_\n    - \"patrolling\"\n    - \"jittering\"\n    - \"spinning right/left\" \n\n####Vocabulary\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n\n- **Behavior** - An action in Sprite Lab that a sprite performs continuously until it’s told to stop.\n\n- **Event** - An action that causes something to happen.\nRevisit _events_ and _behaviors_ in programming. Additionally, introduce the Sprite Lab \"Costumes\" tool that allows students to draw their own costumes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 1 - Exploration” slide\n\n**Display:** Begin by showing Level 1 of today's lesson to your students. \n\n**Think/Pair:** Ask students to predict what will happen when the code is run, and to discuss with their neighbors. Run the code, and discuss the outcome.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 2 - Skill Building” slide\n\n**Display:** Show Level 2. Briefly demonstrate how to do the following: \n\n- Navigate between the _Code_ and _Costumes_ tabs. \n- Draw a costume. \n- Choose a costume from the costume library.\n- Change the virtual pet's sprite's costume to a custom one.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2042,11 +2086,22 @@
       }
     },
     {
+      "key": "98081b8d-eca5-443a-a95e-499d424884ad",
+      "position": 8,
+      "properties": {
+        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n- **Variable** - A label for a piece of information used in a program."
+      },
+      "seeding_key": {
+        "activity_section.key": "98081b8d-eca5-443a-a95e-499d424884ad",
+        "lesson_activity.key": "28c00291-9d46-489c-951c-947da63fe902"
+      }
+    },
+    {
       "key": "34fca026-2e5d-4b45-886a-dc0523d712b4",
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Unplugged Variables in Envelopes” video\n",
-        "name": "Create Your Own Story (20 mins)"
+        "name": "Create Your Own Story "
       },
       "seeding_key": {
         "activity_section.key": "34fca026-2e5d-4b45-886a-dc0523d712b4",
@@ -2250,8 +2305,19 @@
       }
     },
     {
-      "key": "2f4da98e-da53-405e-9e34-604a60679394",
+      "key": "a9aabae8-0153-4d95-95d3-40836d0c29b8",
       "position": 2,
+      "properties": {
+        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n- **Prompt** - A message on the computer screen that waits for input from the user.\n- **Variable** - A label for a piece of information used in a program."
+      },
+      "seeding_key": {
+        "activity_section.key": "a9aabae8-0153-4d95-95d3-40836d0c29b8",
+        "lesson_activity.key": "f5f46bf1-b5c2-4bf2-b7b8-ac46b37624de"
+      }
+    },
+    {
+      "key": "2f4da98e-da53-405e-9e34-604a60679394",
+      "position": 3,
       "properties": {
         "description": "At the end of the last lesson, we were looking at the similarities between blank space stories and apps that ask a user for input. \nWhen a message on the computer screen is waiting for your input we call that a prompt. \nWhen a user types into a prompt, it’s like the computer is storing the information in a container.\nThe variable's label tells us what kind of information to expect.\nToday we are going to learn the code to create a prompt in Sprite Lab.",
         "remarks": true
@@ -2362,7 +2428,7 @@
       "key": "24e7fa10-2938-4fc4-9bf6-f0395fd15936",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**\n* _How do sprites, behaviors, events, and text work?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Review” slide\n\n**Do This:** Using the lesson slides, review the concepts that students have explored so far in the course: sprites, behaviors, events, and text. Finally, review how prompts and variables work. \n\n####Prediction\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Predict” slide\n\n**Do This:** Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them. You can also edit this code with your class in this standalone [\"sandbox\"](https://studio.code.org/levels/27300) level.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**\n* _How do sprites, behaviors, events, and text work?_\n\n####Vocabulary\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Input** - The information computers get from users.\n- **Prompt** - A message on the computer screen that waits for input from the user.\n- **Variable** - A label for a piece of information used in a program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Review” slide\n\n**Do This:** Using the lesson slides, review the concepts that students have explored so far in the course: sprites, behaviors, events, and text. Finally, review how prompts and variables work. \n\n####Prediction\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Predict” slide\n\n**Do This:** Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them. You can also edit this code with your class in this standalone [\"sandbox\"](https://studio.code.org/levels/27300) level.",
         "name": "Review",
         "progression_name": "Prediction",
         "tips": [
@@ -2952,6 +3018,17 @@
       }
     },
     {
+      "key": "ca43d6b0-ce40-405e-ae10-ed053c6bc865",
+      "position": 2,
+      "properties": {
+        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n\n- **Models and Simulations** - a program which replicates or mimics key features of a real world event in order to investigate its behavior without the cost, time, or danger of running an experiment in real life."
+      },
+      "seeding_key": {
+        "activity_section.key": "ca43d6b0-ce40-405e-ae10-ed053c6bc865",
+        "lesson_activity.key": "7a2652c4-2fdd-44fa-bb70-dc276419b5e4"
+      }
+    },
+    {
       "key": "4790873a-6b65-4352-b762-7fea452f78a5",
       "position": 1,
       "properties": {
@@ -3020,6 +3097,17 @@
       },
       "seeding_key": {
         "activity_section.key": "9f597905-2575-40f5-bb3a-a66b45308a58",
+        "lesson_activity.key": "726dac56-444a-470f-af93-6d8e59b9c43a"
+      }
+    },
+    {
+      "key": "a6871aab-06cf-4fe4-8367-982aeab9daff",
+      "position": 2,
+      "properties": {
+        "description": "####Vocabulary\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n\n- **Event** - An action that causes something to happen.\n\n- **Models and Simulations** - a program which replicates or mimics key features of a real world event in order to investigate its behavior without the cost, time, or danger of running an experiment in real life. \n\n**Do This:** Review the vocabulary, **models and simulations** with students, by building off of the previous lesson. A simulation is a computer model of a process or system.\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "a6871aab-06cf-4fe4-8367-982aeab9daff",
         "lesson_activity.key": "726dac56-444a-470f-af93-6d8e59b9c43a"
       }
     },
@@ -3186,19 +3274,8 @@
       }
     },
     {
-      "key": "21383ac9-29e4-457f-b6d7-4fcec7ae3f7e",
-      "position": 15,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n\n**Do This:** Review the vocabulary, **models and simulations** with students, by building off of the previous lesson. A simulation is a computer model of a process or system.\n\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "21383ac9-29e4-457f-b6d7-4fcec7ae3f7e",
-        "lesson_activity.key": "3ccc84b6-6b6c-4131-b2be-9e1faa84c812"
-      }
-    },
-    {
       "key": "a080fd4c-0a46-4c8c-83c3-2b628fe0fa69",
-      "position": 16,
+      "position": 15,
       "properties": {
         "description": "*Today, we will make a place like Monster Town come alive by writing some code.* \n\n*In this simulation, you’re going to use sprites to represent the different monsters. The sprites will have different costumes to tell us things like whether they are sick or healthy. You’ll also use behaviors to get the monsters moving.* \n\n*Finally, you’ll use events to change the costume of a sprite when two sprites touch on this screen. This will represent one monster passing the virus to another. You will make predictions about what will happen to the neighbors of Monster Town, and help them get healthy again!* ",
         "remarks": true
@@ -3210,7 +3287,7 @@
     },
     {
       "key": "093456fa-f3d7-4747-8b81-61188e42c1d9",
-      "position": 17,
+      "position": 16,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Outbreak Simulator: Introduction” video\n\n",
         "progression_name": "Video: Outbreak Simulator: Introduction",
@@ -3228,7 +3305,7 @@
     },
     {
       "key": "364fd5e2-742f-447a-ab75-95f8a819d5e5",
-      "position": 18,
+      "position": 17,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 3 - Creating a Simulation” slide\n\n**Do This:** Transition students to their computers, and have them begin following the instructions for each level in the skill building section. If students finish this section early, they can continue experimenting with their code in Level 7 until the class is ready to move on.",
         "progression_name": "Skill Building"
@@ -3240,7 +3317,7 @@
     },
     {
       "key": "dfab9c42-54fe-4be8-a79c-11dde122e374",
-      "position": 19,
+      "position": 18,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Outbreak Simulator: Events” video",
         "progression_name": "Video: Outbreak Simulator: Events"
@@ -3252,7 +3329,7 @@
     },
     {
       "key": "f2e09234-ef3c-4c2b-83eb-2d053f8f4161",
-      "position": 20,
+      "position": 19,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 5-7 - Skill Building” slide\n",
         "progression_name": "Skill Building"
@@ -3264,7 +3341,7 @@
     },
     {
       "key": "5aafc298-2f03-4b22-b21c-be1afd6d2e19",
-      "position": 21,
+      "position": 20,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Outbreak Simulator: Think Like a Scientist” video\n\n**Do This:** Bring the class back together to watch *Outbreak Simulator: Thinking Like a Scientist.* Use the ideas in level 9 to discuss the video and help frame the rest of the lesson.",
         "progression_name": "Video: Outbreak Simulator: Thinking Like a Scientist"
@@ -3276,7 +3353,7 @@
     },
     {
       "key": "63642504-d1f8-49da-9881-33adb5942d45",
-      "position": 22,
+      "position": 21,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 9 - Reset and Replay!” slide"
       },
@@ -3287,7 +3364,7 @@
     },
     {
       "key": "c5e6577d-d9fc-4dc6-a6c0-5c6dcf4b47bf",
-      "position": 23,
+      "position": 22,
       "properties": {
         "description": "*Even when you write the code yourself, it's impossible to know exactly what will happen when you press run. The monsters wander randomly, so you don't know if the virus will spread fast or slow. Whenever you change your code, make sure to run your simulation more than once. Things won't happen the same way twice!*",
         "remarks": true
@@ -3299,7 +3376,7 @@
     },
     {
       "key": "5d2cda01-3f8f-4a1f-9d89-7a76ff2f11b9",
-      "position": 24,
+      "position": 23,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Collecting Data” slide"
       },
@@ -3310,7 +3387,7 @@
     },
     {
       "key": "b833795f-d196-4892-bd24-2193cde74760",
-      "position": 25,
+      "position": 24,
       "properties": {
         "description": "*Try writing down your observations as you run your simulation. You can count the number of monsters that get sick or use a timer to see how fast things happen. For example, how long does it usually take for all monsters to get sick if none have masks?*",
         "remarks": true
@@ -3322,7 +3399,7 @@
     },
     {
       "key": "4ad05269-850e-46c1-91aa-92ad637c6a75",
-      "position": 26,
+      "position": 25,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Making Predictions” slide"
       },
@@ -3333,7 +3410,7 @@
     },
     {
       "key": "6fe134ee-e3b0-4156-bf31-a993a967e169",
-      "position": 27,
+      "position": 26,
       "properties": {
         "description": "*If you understand your model, you can use it to make predictions. You can even change how your simulation runs and guess what will happen differently. For example:*\n* _What would happen if there were twice as many monsters?_\n* _What would happen if the monsters moved at half the speed?_\n",
         "remarks": true
@@ -3345,7 +3422,7 @@
     },
     {
       "key": "c4073c17-8b4e-42ed-8745-cc86e3fbd461",
-      "position": 28,
+      "position": 27,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Is Monster Town like the real world?” slide"
       },
@@ -3356,7 +3433,7 @@
     },
     {
       "key": "14f39125-147c-4899-ab47-e18f6b045104",
-      "position": 29,
+      "position": 28,
       "properties": {
         "description": "*There is a limit to how realistic any model can get.*\n* _What does your outbreak simulation have in common with real world virus outbreaks?_\n* _What are the differences? When you finish this activity, discuss these questions with teachers or your family!_\n",
         "remarks": true
@@ -3368,7 +3445,7 @@
     },
     {
       "key": "8bca8054-a930-4008-b448-9bcb0bcda11b",
-      "position": 30,
+      "position": 29,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “What else can we model?” slide"
       },
@@ -3379,7 +3456,7 @@
     },
     {
       "key": "f40a0b3b-4faf-49d1-bd60-ff357261195b",
-      "position": 31,
+      "position": 30,
       "properties": {
         "description": "*You have already created a working model of the outbreak at Monster Town. What are the things your simulation can't do or show that you wish it could? Press continue to keep going and learn to model even more:*\n* _Increasing the number of monsters in the simulation_\n* _Helping monsters recover from the virus_\n* _Probability, immunity, vaccines, and more!_\n\n*You can also share your simulation model with others, or share a message about what you think we can do to help keep others healthy when a virus comes to town.*\n",
         "remarks": true
@@ -3391,7 +3468,7 @@
     },
     {
       "key": "666e2edf-94d1-40d6-b2ee-bb09c5eef7c5",
-      "position": 32,
+      "position": 31,
       "properties": {
         "progression_name": "Learning from Simulations"
       },
@@ -3402,7 +3479,7 @@
     },
     {
       "key": "760328dc-0e3a-4869-aafe-cb7518c0b631",
-      "position": 33,
+      "position": 32,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 10-12 - Mini-Project” slide\n\n**Do this:** Transition students back to their computers, and have them work through the remaining levels. Some of these levels offer optional challenges. Encourage students to read the instructions carefully and to experiment with their simulations.",
         "progression_name": "Mini-Project: Outbreak Simulator"
@@ -3414,7 +3491,7 @@
     },
     {
       "key": "1caa4df8-4410-4b7f-9659-7c0c8d7dda2d",
-      "position": 34,
+      "position": 33,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Outbreak Simulator: Free Play” video\n",
         "progression_name": "Video: Outbreak Simulator: Free Play"
@@ -3426,7 +3503,7 @@
     },
     {
       "key": "6812a3f1-ad9a-40e6-897c-1b7d909ea1e2",
-      "position": 35,
+      "position": 34,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 14 - Mini-Project” slide",
         "progression_name": "Mini-Project: Outbreak Simulator"
@@ -3480,6 +3557,17 @@
       },
       "seeding_key": {
         "activity_section.key": "0d41a7b4-2d87-4ac6-85a1-4ddfb5f0c934",
+        "lesson_activity.key": "219b63dc-535b-4ae3-9ea0-b7d0e6240065"
+      }
+    },
+    {
+      "key": "ab301b82-3a0d-423e-b1ec-b31810961c77",
+      "position": 2,
+      "properties": {
+        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n- **Machine Learning** - How computers recognize patterns and make decisions without being explicitly programmed."
+      },
+      "seeding_key": {
+        "activity_section.key": "ab301b82-3a0d-423e-b1ec-b31810961c77",
         "lesson_activity.key": "219b63dc-535b-4ae3-9ea0-b7d0e6240065"
       }
     },
@@ -3651,7 +3739,7 @@
       "key": "428b7e6e-321d-4b39-a555-41f9c8a02bc5",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect**:\n* _How does the Internet help connect us to other people?_\n\n####Vocabulary:\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Key Vocabulary” slide\n\nThis lesson has several new and important words:\n\n - **IP Address** - *Say it with me: I-P Add-ress.*\n\nA number assigned to any item that is connected to the Internet\n\n - **DNS (Domain Name Service)** - *Say it with me: D-N-S.* \n\nThe service that translates URLs to IP addresses\n\n - **URL (Universal Resource Locator)** - *Say it with me: U-R-L.* \n\nAn easy-to-remember address for calling a web page (like www.code.org)\n\n - **Internet** - *Say it with me: In-ter-net.* \n\nA group of computers and servers that are connected to each other\n\n - **Servers** - *Say it with me: Ser-vers.* \n\nComputers that exist only to provide things to others",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect**:\n* _How does the Internet help connect us to other people?_\n\n####Vocabulary:\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Key Vocabulary” slide\n\nThis lesson has several new and important words:\n\n - **IP Address** - A number assigned to any item that is connected to the Internet\n\n - **DNS (Domain Name Service)** - The service that translates URLs to IP addresses\n\n - **URL (Universal Resource Locator)** - An easy-to-remember address for calling a web page (like www.code.org)\n\n - **Internet** - A group of computers and servers that are connected to each other\n\n - **Servers** - Computers that exist only to provide things to others",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -3679,7 +3767,7 @@
       "key": "94e00ea5-6582-4477-ba29-998e55dabf13",
       "position": 3,
       "properties": {
-        "description": "A connection that uses light to transmit information\n\n - **Wi-Fi** - *Say it with me: Wye-Fye.* \n\nA wireless method of sending information using radio waves\n\n - **DSL/Cable** - *Say it with me: D-S-L / Cay-bl.*\n\nA method of sending information using telephone or television cables\n\n - **Packets** - *Say it with me: Pack-ets.* \n\nSmall chunks of information that have been carefully formed from larger chunks of information"
+        "description": "A connection that uses light to transmit information\n\n - **Wi-Fi** - A wireless method of sending information using radio waves\n\n - **DSL/Cable** - A method of sending information using telephone or television cables\n\n - **Packets** - Small chunks of information that have been carefully formed from larger chunks of information"
       },
       "seeding_key": {
         "activity_section.key": "94e00ea5-6582-4477-ba29-998e55dabf13",
@@ -3845,7 +3933,7 @@
       "key": "dbe1c511-97c4-46c5-9e58-c2e538d694a5",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** \n\nToday, you'll start the final lesson of the unit, in which you will design and code your own project. \n\n* _Before you start, what are three skills or qualities that you think will be important as you complete this project?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “End of Course Project” slide\n\n**Goal:** This part of the process is an exploration.  Students will sit down with a stage full of example projects to remix and learn.  Not only will this give students an idea of what is possible, it will also help them see the limitations of the tool.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Day 1 - Explore” slide\n\nGive students a day to play with and remix the projects found on Code Studio. Have them use their journals (or notebook paper) to keep track of thoughts and ideas as they go.\n\nThis activity should be done in the same pairs/groups that will be working on projects together over the next several lessons.\n\nMake sure your class understands that they will be spending the next several weeks working with projects of their own, so they should pay close attention to how these programs were written, as well as the concepts that they use.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 1 - Example Projects” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** \n\nToday, you'll start the final lesson of the unit, in which you will design and code your own project. \n\n* _Before you start, what are three skills or qualities that you think will be important as you complete this project?_\n\n####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n\n- **Define** - Figure out the details of the problems that you are trying to solve.\n- **Prepare** - Research, plan, and acquire materials for the activity you are about to do.\n- **Reflect** - Carefully think back on something with the intention of improving the outcome in the future.\n- **Try** - Attempt to do something.\n",
         "name": "Explore"
       },
       "seeding_key": {
@@ -3854,8 +3942,19 @@
       }
     },
     {
-      "key": "8a4df263-6cfb-4b3d-8b07-cb0281e76a40",
+      "key": "437eb095-57bd-4eda-8475-db13195dee78",
       "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “End of Course Project” slide\n\n**Goal:** This part of the process is an exploration.  Students will sit down with a stage full of example projects to remix and learn.  Not only will this give students an idea of what is possible, it will also help them see the limitations of the tool.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Day 1 - Explore” slide\n\nGive students a day to play with and remix the projects found on Code Studio. Have them use their journals (or notebook paper) to keep track of thoughts and ideas as they go.\n\nThis activity should be done in the same pairs/groups that will be working on projects together over the next several lessons.\n\nMake sure your class understands that they will be spending the next several weeks working with projects of their own, so they should pay close attention to how these programs were written, as well as the concepts that they use.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 1 - Example Projects” slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "437eb095-57bd-4eda-8475-db13195dee78",
+        "lesson_activity.key": "ea1a94e2-1f7c-40e3-8464-57aebf8b3ab0"
+      }
+    },
+    {
+      "key": "8a4df263-6cfb-4b3d-8b07-cb0281e76a40",
+      "position": 3,
       "properties": {
         "progression_name": "Example projects"
       },
@@ -3866,7 +3965,7 @@
     },
     {
       "key": "2c1a7a91-4783-46d4-88e9-09a2b4cf3a52",
-      "position": 3,
+      "position": 4,
       "properties": {
         "progression_name": "Create your project"
       },

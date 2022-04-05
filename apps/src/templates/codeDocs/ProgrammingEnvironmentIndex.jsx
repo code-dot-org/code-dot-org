@@ -21,7 +21,7 @@ export function ProgrammingEnvironmentCard({programmingEnvironment}) {
       <Button
         __useDeprecatedTag
         color={Button.Orange}
-        href={`/docs/${programmingEnvironment.name}`}
+        href={programmingEnvironment.showPath}
         text={i18n.viewCodeDocs()}
       />
     </div>
@@ -51,7 +51,8 @@ const ProgrammingEnvironmentShape = PropTypes.shape({
   name: PropTypes.string.isRequired,
   title: PropTypes.string,
   descriotion: PropTypes.string,
-  imageUrl: PropTypes.string
+  imageUrl: PropTypes.string,
+  showPath: PropTypes.string.isRequired
 });
 
 ProgrammingEnvironmentIndex.propTypes = {
