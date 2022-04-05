@@ -1,6 +1,6 @@
 name 'CSA U3L7-L4_2022'
 display_name 'Using Polymorphism'
-description 'level description here'
+description 'Create 1D arrays to store objects and access the subclass versions of methods.'
 
 sublevels
 level 'CSA U3L7-L4a_2022'

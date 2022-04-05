@@ -67,7 +67,7 @@ Scenario: Abuse reports block a project for other viewers
   Given I create a student named "Creator"
   And I make a "applab" project named "Regular Project"
   And I click selector ".project_share"
-  And I wait until element "#sharing-input" is visible
+  And I wait until element "#sharing-dialog-copy-button" is visible
   And I save the share URL
   Then I sign out
 
@@ -98,7 +98,7 @@ Scenario: Projects made by project validators are protected from abuse reports
   And I give user "Project Validator" project validator permission
   And I make a "applab" project named "Protected Project"
   And I click selector ".project_share"
-  And I wait until element "#sharing-input" is visible
+  And I wait until element "#sharing-dialog-copy-button" is visible
   And I save the share URL
   Then I sign out
 

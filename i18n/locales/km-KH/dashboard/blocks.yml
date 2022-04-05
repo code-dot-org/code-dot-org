@@ -253,6 +253,10 @@ km:
           CONDITION:
             '"when"': នៅ​ពេល
             '"while"': នៅ​ពេល
+      gamelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': វិ​នាទី
       gamelab_getProp:
         options:
           PROPERTY:

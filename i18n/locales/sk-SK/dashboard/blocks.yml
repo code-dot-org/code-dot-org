@@ -2,6 +2,8 @@
 sk:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: vytvor novú postavu {ANIMATION_NAME} na {LOCATION}
       Dancelab_alternateMoves:
         text: |-
           {GROUP} striedať každé {N} takty
@@ -1057,6 +1059,12 @@ sk:
         text: nakresli čiaru {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: okraje blokujú pohyb {SPRITE}
+      gamelab_everySeconds:
+        text: 'opakuj každé {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': sekundy
+            '"frames"': snímky
       gamelab_followingTargets:
         text: nasledujúce ciele
       gamelab_getAllSprites:
@@ -1210,6 +1218,8 @@ sk:
             '"pop"': pop
             '"rain"': dážď
             '"spiral"': špirála
+      gamelab_makeNewScaledSprite:
+        text: vytvor novú postavu {ANIMATION_NAME} na {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: vytvor novú postavu {ANIMATION_NAME} na {LOCATION}
       gamelab_makeNumSprites:

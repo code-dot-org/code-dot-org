@@ -168,7 +168,7 @@ namespace :seed do
     :deprecated_blockly_levels,
     :custom_levels,
     :dsls,
-    :programming_expressions,
+    :code_docs,
     :blocks,
     :standards,
     :shared_blockly_functions,
@@ -303,9 +303,10 @@ namespace :seed do
     Standard.seed_all
   end
 
-  timed_task programming_expressions: :environment do
+  timed_task code_docs: :environment do
     ProgrammingEnvironment.seed_all
     ProgrammingExpression.seed_all
+    ProgrammingClass.seed_all
   end
 
   # Seeds the data in school_districts

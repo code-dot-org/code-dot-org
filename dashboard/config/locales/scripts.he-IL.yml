@@ -951,6 +951,8 @@ he:
           lesson_groups:
             required:
               display_name: סקירה
+        basketball:
+          name: כדורסל
         csd2-2017:
           lesson_groups:
             csd2_1:
@@ -1100,6 +1102,8 @@ he:
           lessons:
             Hour of Code 2013:
               name: שעת קוד 2013
+        sports:
+          name: ספורט
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -2937,7 +2941,7 @@ he:
           description: קודדו מסיבת ריקודים משלכם ושתפו עם חברים!
           lessons:
             Dance Party:
-              name: מסיבת ריקודים
+              name: מסיבת ריקודים (2019)
           student_description: קודדו מסיבת ריקודים משלכם ושתפו עם חברים!
         k5-onlinepd-2019:
           lesson_groups:
@@ -4462,6 +4466,10 @@ he:
           lessons:
             lesson-6:
               name: משתנים
+        csa3-2022:
+          lessons:
+            lesson-5:
+              name: בשביל לולאות
         cs4all-invasive-species:
           lessons:
             lesson-12:

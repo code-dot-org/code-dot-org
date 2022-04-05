@@ -31622,11 +31622,11 @@ en:
             lesson-1:
               name: FRQ Practice
               description_student: |-
-                **How will I use what I know about classes and objects to answer a Free Response Question?**
+                **How will I use what I know about 1D arrays to answer a Free Response Question?**
 
                 You practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. You apply decomposition and annotation strategies to identify the key components of the problem and validate your solutions using Scoring Guidelines.
               description_teacher: |-
-                **How will I use what I know about classes and objects to answer a Free Response Question?**
+                **How will I use what I know about 1D arrays to answer a Free Response Question?**
 
                 Students practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.
             lesson-2:
@@ -33360,7 +33360,7 @@ en:
               description_student: "**You will:**\n\n* Discuss questions that came up during the asynchronous time. \n* Reflect on the content introduced in the asynchronous activities. \n* Share ideas with the cohort. "
               description_teacher: "**Overview:**\nIn this session, participants will have the opportunity to debrief the activities completed as a part of the asynchronous portion of this workshop. \n\n**Participants will:**\n\n* Discuss questions that came up during the asynchronous time. \n* Reflect on the content introduced in the asynchronous activities. \n* Share ideas with the cohort. \n\n**Suggested time:** 15 minutes"
             lesson-7:
-              name: TLO 1 - Unit 3 Lesson 3
+              name: TLO 1 - Unit 3 Lesson 3 - delete
               description_student: |-
                 **You will:**
 
@@ -33369,7 +33369,7 @@ en:
                 * Discuss the connection between learning objectives and lesson activities in the CS Discoveries curriculum.
               description_teacher: "**Overview:**\nDuring this role play activity, participants will engage in Unit 3 Lesson 3: Drawing in Game Lab. This lesson will provide participants with an introduction to positioning shapes on the screen in Game Lab. This TLO lesson will also highlight the connection between lesson learning objectives and lesson activities in the CS Discoveries curriculum. \n\n**Participants will:**\n\n* Engage in Unit 3 Lesson 3 while playing the role of the student.\n* Reflect on your experience as a student engaging in the lesson.\n* Discuss the connection between learning objectives and lesson activities in the CS Discoveries curriculum.\n\n**Suggested time:** 60 minutes"
             lesson-8:
-              name: TLO 2 - Unit 3 Lesson 4
+              name: TLO 2 - Unit 3 Lesson 4 - delete
               description_student: |-
                 **You will:**
 
@@ -33395,6 +33395,28 @@ en:
               name: Access to CS
               description_student: "**You will:**\n\n* Define access, diversity, and inclusion. \n* Explore CS access data.\n\n**Suggested time:** 30 minutes"
               description_teacher: "**Overview:**\nThis series of asynchronous activities are intended to prepare participants for the synchronous session focused on understanding context on Day 3 of the workshop. Participants will explore local CS access data and reflect on who has access to CS in their state. \n\n**Participants will:**\n\n* Define access, diversity, and inclusion. \n* Explore CS access data.\n\n**Suggested time:** 30 minutes"
+            Headings:
+              name: Model Lesson 3 - Unit 2 Lesson 3
+              description_student: "**You will:**\n\n* Engage in Unit 2 Lesson 3 while playing the role of the student. \n* Reflect on your experience as a student engaging in the lesson.\n* Discuss the structure of programming lessons in the CS Discoveries curriculum."
+              description_teacher: "**Overview:**\nDuring this role play activity, participants will engage in Unit 2 Lesson 3: Headings. This lesson will provide participants with an introduction to HTML heading tags. This model lesson will also highlight the structure of programming lesions throughout the CS Discoveries curriculum. \n\n**Participants will:**\n\n* Engage in Unit 2 Lesson 3 while playing the role of the student. \n* Reflect on your experience as a student engaging in the lesson.\n* Discuss the structure of programming lessons in the CS Discoveries curriculum.\n\n**Suggested time:** 60 minutes"
+            Drawing in Game Lab:
+              name: TLO 1 - Unit 3 Lesson 3
+              description_student: |-
+                **You will:**
+
+                * Engage in Unit 3 Lesson 3 while playing the role of the student.
+                * Reflect on your experience as a student engaging in the lesson.
+                * Discuss the connection between learning objectives and lesson activities in the CS Discoveries curriculum.
+              description_teacher: "**Overview:**\nDuring this role play activity, participants will engage in Unit 3 Lesson 3: Drawing in Game Lab. This lesson will provide participants with an introduction to positioning shapes on the screen in Game Lab. This TLO lesson will also highlight the connection between lesson learning objectives and lesson activities in the CS Discoveries curriculum. \n\n**Participants will:**\n\n* Engage in Unit 3 Lesson 3 while playing the role of the student.\n* Reflect on your experience as a student engaging in the lesson.\n* Discuss the connection between learning objectives and lesson activities in the CS Discoveries curriculum.\n\n**Suggested time:** 60 minutes"
+            Shapes and Parameters:
+              name: TLO 2 - Unit 3 Lesson 4
+              description_student: |-
+                **You will:**
+
+                * Engage in Unit 3 Lesson 4 while playing the role of the student.
+                * Reflect on your experience as a student engaging in the lesson.
+                * Discuss the importance of ongoing feedback for students while they are engaging in a CS Discoveries lesson.
+              description_teacher: "**Overview:**\nDuring this role play activity, participants will engage in Unit 3 Lesson 4: Shapes and Parameters. This lesson will provide participants with the opportunity to practice manipulating the width and height of shapes drawn in Game Lab. This TLO lesson will also highlight the importance of ongoing feedback for students while they are engaging in a CS Discoveries lesson. rt. \n\n**Participants will:**\n\n* Engage in Unit 3 Lesson 4 while playing the role of the student.\n* Reflect on your experience as a student engaging in the lesson.\n* Discuss the importance of ongoing feedback for students while they are engaging in a CS Discoveries lesson.\n\n**Suggested time:** 60 minutes"
           lesson_groups:
             lessonGroup-2:
               display_name: Synchronous Part 1
@@ -33421,7 +33443,7 @@ en:
               description_student: "**You will:**\n\n* Identify systemic barriers that limit access, diversity, and inclusion in CS education. \n* List strategies for gathering data about access, diversity, and inclusion in CS within your/their school and classroom. \n* Define unconscious bias.\n* Reflect on your beliefs around who should have access to CS education. "
               description_teacher: "**Overview:**\nThis session opens with a discussion around systemic barriers that limit access, diversity, and inclusion in CS education. The conversation then expands on the reflections around understanding self and context to include uncovering unconscious biases that exist as a result of identity markers of self and others. Participants will be asked to reflect on ways in which their own unconscious biases might impact their view on who belongs in CS. They will also be challenged to name the responsibility they will claim in ensuring all students feel like they belong in CS. \n\n**Participants will:**\n\n* Identify systemic barriers that limit access, diversity, and inclusion in CS education. \n* List strategies for gathering data about access, diversity, and inclusion in CS within your/their school and classroom. \n* Define unconscious bias.\n* Reflect on your beliefs around who should have access to CS education. \n\n\n**Suggested time:** 60 minutes"
             lesson-3:
-              name: TLO 3 - Unit 4 Lesson 3
+              name: TLO 3 - Unit 4 Lesson 3 - delete
               description_student: |-
                 **You will:**
 
@@ -33438,7 +33460,7 @@ en:
               description_student: "**You will:**\n\n* Discuss questions that came up during the asynchronous time. \n* Reflect on the content introduced in the asynchronous activities. \n* Share ideas with the cohort. "
               description_teacher: "**Overview:**\nIn this session, participants will have the opportunity to debrief the activities completed as a part of the asynchronous portion of this workshop. \n\n**Participants will:**\n\n* Discuss questions that came up during the asynchronous time. \n* Reflect on the content introduced in the asynchronous activities. \n* Share ideas with the cohort.  \n\n**Suggested time:** 15 minutes"
             lesson-6:
-              name: TLO 4 - Unit 5 Lesson 1
+              name: TLO 4 - Unit 5 Lesson 1 - delete
               description_student: |-
                 **You will:**
 
@@ -33447,7 +33469,7 @@ en:
                 * Discuss the importance of group work in the CS Discoveries curriculum.
               description_teacher: "**Overview:**\nDuring this role play activity, participants will engage in Unit 5 Lesson 1: Representation Matters. This lesson will provide participants with an overview of what data is and how it is used to solve problems. This TLO lesson will also highlight the importance of group work in the CS Discoveries curriculum. \n\n**Participants will:**\n\n* Engage in Unit 5 Lesson 1 while playing the role of the student.\n* Reflect on your experience as a student engaging in the lesson.\n* Discuss the importance of group work in the CS Discoveries curriculum.\n\n**Suggested time:** 60 minutes"
             lesson-7:
-              name: TLO 5 - Unit 5 Lesson 9
+              name: TLO 5 - Unit 5 Lesson 9 - delete
               description_student: |-
                 **You will:**
 
@@ -33463,6 +33485,33 @@ en:
               name: Barriers and Opportunities
               description_student: "**You will:**\n\n* Identify barriers in your/their classroom, school, and/or teaching practice that limit access, diversity, and inclusion in CS education. \n* Determine which of these barriers you have the power to influence. \n* Identify concrete and reasonable strategies to address the barriers you have the power to influence. \n\n**Suggested time:** 60 minutes"
               description_teacher: "**Overview:**\nThese asynchronous activities will prompt participants to reflect on their role in expanding access, diversity, and inclusion in CS education. Participants will be asked to identify aspects of access, diversity, and inclusion in CS education that they have the power to control. They will then go further to articulate concrete steps they can take in the next 30, 60, and 90 days to impact equity CS in their areas of control. \n\n**Participants will:**\n\n* Identify barriers in your/their classroom, school, and/or teaching practice that limit access, diversity, and inclusion in CS education. \n* Determine which of these barriers you have the power to influence. \n* Identify concrete and reasonable strategies to address the barriers you have the power to influence. \n\n**Suggested time:** 60 minutes"
+            User Centered Design   Define and Prepare:
+              name: TLO 3 - Unit 4 Lesson 3
+              description_student: |-
+                **You will:**
+
+                * Engage in Unit 4 Lesson 3 while playing the role of the student.
+                * Reflect on your experience as a student engaging in the lesson.
+                * Discuss the role of teamwork and collaboration in the CS Discoveries curriculum.
+              description_teacher: "**Overview:**\nDuring this role play activity, participants will engage in Unit 4 Lesson 3: User-Centered Design - Define and Prepare. In this lesson, participants will focus on creating a design and reflecting on how well your design meets the needs of users. This TLO lesson will also highlight the role of teamwork and collaboration in the CS Discoveries curriculum. \n\n**Participants will:**\n\n* Engage in Unit 4 Lesson 3 while playing the role of the student.\n* Reflect on your experience as a student engaging in the lesson.\n* Discuss the role of teamwork and collaboration in the CS Discoveries curriculum.\n\n\n**Suggested time:** 60 minutes"
+            Representation Matters:
+              name: TLO 4 - Unit 5 Lesson 1
+              description_student: |-
+                **You will:**
+
+                * Engage in Unit 5 Lesson 1 while playing the role of the student.
+                * Reflect on your experience as a student engaging in the lesson.
+                * Discuss the importance of group work in the CS Discoveries curriculum.
+              description_teacher: "**Overview:**\nDuring this role play activity, participants will engage in Unit 5 Lesson 1: Representation Matters. This lesson will provide participants with an overview of what data is and how it is used to solve problems. This TLO lesson will also highlight the importance of group work in the CS Discoveries curriculum. \n\n**Participants will:**\n\n* Engage in Unit 5 Lesson 1 while playing the role of the student.\n* Reflect on your experience as a student engaging in the lesson.\n* Discuss the importance of group work in the CS Discoveries curriculum.\n\n**Suggested time:** 60 minutes"
+            Problem Solving and Data:
+              name: TLO 5 - Unit 5 Lesson 9
+              description_student: |-
+                **You will:**
+
+                * Engage in Unit 5 Lesson 9 while playing the role of the student.
+                * Reflect on your experience as a student engaging in the lesson.
+                * Discuss the role of class discussion in the CS Discoveries curriculum.
+              description_teacher: "**Overview:**\nDuring this role play activity, participants will engage in Unit 5 Lesson 9: Problem Solving and Data. In this lesson, participants will see how the problem solving process can be tailored to deal with data problems. This TLO lesson will also highlight the role of class discussion in the CS Discoveries curriculum. \n\n**Participants will:**\n\n* Engage in Unit 5 Lesson 9 while playing the role of the student.\n* Reflect on your experience as a student engaging in the lesson.\n* Discuss the role of class discussion in the CS Discoveries curriculum.\n\n**Suggested time:** 60 minutes"
           lesson_groups:
             lessonGroup-2:
               display_name: Synchronous Part 1
@@ -33519,7 +33568,7 @@ en:
               description_student: "**You will:**\n\n* Get an orientation for the day. \n* Review gots and needs. \n* Experience a Circuit Playground demonstration."
               description_teacher: "**Overview:**\nThis session serves as an introduction to Day 4. The session also includes a demonstration of the Circuit Playground used in Unit 6 of CS Discoveries.  \n\n**Participants will:**\n\n* Get an orientation for the day. \n* Review gots and needs. \n* Experience a Circuit Playground demonstration.\n\n**Suggested time:** 15 minutes"
             lesson-5:
-              name: TLO 6 - Unit 6 Leson 3
+              name: TLO 6 - Unit 6 Lesson 3 - delete
               description_student: "**You will:**\n\n* Engage in Unit 6 Lesson 3 while playing the role of the student.\n* Reflect on your experience as a student engaging in the lesson.\n* Share ideas for managing classroom sets of hardware. "
               description_teacher: "**Overview:**\nDuring this role play activity, participants will engage in Unit 6 Lesson 3: Updating Screen Elements. In this lesson, participants explore how to use events to update elements on the screen in App Lab. During the TLO debrief, participants will share ideas for managing classroom sets of hardware. \n\n**Participants will:**\n\n* Engage in Unit 6 Lesson 3 while playing the role of the student.\n* Reflect on your experience as a student engaging in the lesson.\n* Share ideas for managing classroom sets of hardware. \n\n**Suggested time:** 60 minutes"
             lesson-6:
@@ -33556,6 +33605,13 @@ en:
               name: Wrap Up
               description_student: "**You will:**\n\n* Get an introduction to the asynchronous activities. \n* Reflect on gots and needs. "
               description_teacher: "**Overview:**\nIn this session, participants will reflect on what they have gotten out of the day along with what they still need from the workshop experience. \n\n**Participants will:**\n\n* Get an introduction to the asynchronous activities. \n* Reflect on gots and needs. \n\n**Suggested time:** 5 minutes"
+            Updating Screen Elements:
+              name: Updating Screen Elements
+              description_student: In this lesson, you will start to build apps that allow for lots of user interaction and functionality
+              description_teacher: |-
+                Students should already be familiar with programming in App Lab, specifically using Design Mode to create screen elements and using `onEvent` blocks to create button click events. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the `setProperty()` and `setText()` blocks that allow users to change the properties and content of various UI elements. In this lesson students explore how they can use events to update elements on the screen
+
+                **Question of the Day:** How can you update design elements of an app?
           lesson_groups:
             lessonGroup-2:
               display_name: Synchronous Part 1
@@ -33945,11 +34001,11 @@ en:
               description_student: 
               description_teacher: 
             lesson-2:
-              name: Apply the design process to the development of a paper prototype
-              description_student: 
-              description_teacher: 
+              name: Use a paper prototype
+              description_student: "**You will:**\n\n* Use a paper prototype to test the design of an app.\n* Explore where and how students will use paper prototypes throughout The Design Process unit. \n\n**Suggested time:** 25 minutes"
+              description_teacher: "**You will:**\n\n* Use a paper prototype to test the design of an app.\n* Explore where and how students will use paper prototypes throughout The Design Process unit. \n\n**Suggested time:** 25 minutes"
             lesson-3:
-              name: Explore design mode and events in App Lab
+              name: Build a digital prototype in App Lab
               description_student: 
               description_teacher: 
             lesson-4:
@@ -33960,7 +34016,9 @@ en:
               name: Unit wrap up
               description_student: 
               description_teacher: 
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Preparing to Teach the Design Process
           name: vpl-csd4-ci-pilot-2022
           title: " Module 4: Preparing to Teach The Design Process"
           description_audience: ''
@@ -34047,7 +34105,83 @@ en:
               name: Unit wrap up
               description_student: 
               description_teacher: 
-          lesson_groups: {}
+            Introduction to AI and machine learning:
+              name: Introduction to AI and machine learning
+              description_student: |-
+                **You will:**
+
+                * Get an introduction to artificial intelligence and machine learning.
+                * Get a preview of the first week of the AI and Machine Learning unit content.
+
+                **Suggested time:** 25 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Get an introduction to artificial intelligence and machine learning.
+                * Get a preview of the first week of the AI and Machine Learning unit content.
+
+                **Suggested time:** 25 minutes
+            Train a machine learning model:
+              name: Train a machine learning model
+              description_student: |-
+                **You will:**
+
+                * Train a machine learning model using AI Lab.
+
+                **Suggested time:** 35 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Train a machine learning model using AI Lab.
+
+                **Suggested time:** 35 minutes
+            Engage with machine learning apps:
+              name: Engage with machine learning apps
+              description_student: |-
+                **You will:**
+
+                * Engage with machine learning apps in App Lab.
+
+                **Suggested time:** 20 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Engage with machine learning apps in App Lab.
+
+                **Suggested time:** 20 minutes
+            Consider real world implications:
+              name: Consider real world implications
+              description_student: |-
+                **You will:**
+
+                * Consider real-world implications of AI and machine learning.
+
+                **Suggested time:** 20 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Consider real-world implications of AI and machine learning.
+
+                **Suggested time:** 20 minutes
+            Unit wrap up:
+              name: Unit wrap up
+              description_student: |-
+                **You will:**
+
+                * Explore end of chapter projects.
+                * Make a plan for implementing the unit with your students.
+
+                **Suggested time:** 20 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Explore end of chapter projects.
+                * Make a plan for implementing the unit with your students.
+
+                **Suggested time:** 20 minutes
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Teaching AI and machine learning
           name: vpl-csd7-ci-pilot-2022
           title: 'Module 7: Preparing to Teach AI and Machine Learning'
           description_audience: ''
@@ -34093,10 +34227,18 @@ en:
           lessons:
             lesson-1:
               name: 'Hello World CSC '
+              description_student: 
+              description_teacher: 
             lesson-2:
               name: 'Ecosystems: Interactions, Energy & Dynamics'
             lesson-3:
               name: Biological Evolution
+              description_student: 
+              description_teacher: 
+            Hello World CSC:
+              name: Hello World CSC
+              description_student: In this lesson, you will learn to create and animate sprites and make them interactive using events.
+              description_teacher: 'In this **skill-building** lesson, students will learn to create and animate sprites and make them interactive using events. '
           lesson_groups: {}
           name: csc-pilot-2022-ecosystems
           title: ''
@@ -34112,8 +34254,14 @@ en:
               name: My Time Capsule Story
             lesson-3:
               name: Coding My Time Capsule
+              description_student: 
+              description_teacher: 
             lesson-4:
               name: Gallery Walk
+            Poem Art:
+              name: Poem Art
+              description_student: 'Poetry is making art with words. Add visual effects and images to your own animated poem. '
+              description_teacher: "In this CS and ELA integrated lesson for new coders, students will animate a poem with code to illustrate the mood of a poem. Students will read and detect the mood of a poem. They will then find corresponding effects and images to help illustrate the poem's mood. Finally, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n"
           lesson_groups: {}
           name: csc-pilot-2022-timecapsule
           title: ''
@@ -34127,6 +34275,8 @@ en:
               name: Native American Star Quilts
             lesson-2:
               name: Getting Started with The Artist
+              description_student: 
+              description_teacher: 
             lesson-3:
               name: Code Your Star Quilt
           lesson_groups: {}
@@ -34144,6 +34294,10 @@ en:
               name: Code Your Fable
             lesson-3:
               name: Share Your Fable
+            Hello World CSC:
+              name: Hello World CSC
+              description_student: In this lesson, you will learn to create and animate sprites and make them interactive using events.
+              description_teacher: 'In this **skill-building** lesson, students will learn to create and animate sprites and make them interactive using events. '
           lesson_groups: {}
           name: csc-pilot-2022-fables
           title: ''
@@ -34447,6 +34601,7 @@ en:
           student_description: " In Unit 2, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.  "
           description_short: "  Learn to build your own web site in Web Lab."
           description_audience: ''
+          name: csd2-2022
         csd3-2022:
           lessons:
             Programming for Entertainment:

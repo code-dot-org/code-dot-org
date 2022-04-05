@@ -42,6 +42,7 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
   end
 
   test 'data is passed down to docs show page if using studio code docs' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
     DCDO.expects(:get).at_least_once
     DCDO.expects(:get).with('use-studio-code-docs', false).returns(true).at_least_once
 
@@ -61,6 +62,7 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
   end
 
   test 'page is proxied to docs show page if not using studio code docs' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
     DCDO.expects(:get).with('use-studio-code-docs', false).returns(false).at_least_once
 
     programming_environment = create :programming_environment, name: 'weblab'
@@ -78,6 +80,7 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
   end
 
   test 'page is not proxied to docs index if using studio code docs' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
     DCDO.expects(:get).at_least_once
     DCDO.expects(:get).with('use-studio-code-docs', false).returns(true).at_least_once
 
@@ -91,6 +94,7 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
   end
 
   test 'page is proxied to docs index page if not using studio code docs' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
     DCDO.expects(:get).with('use-studio-code-docs', false).returns(false).at_least_once
     create :programming_environment
 

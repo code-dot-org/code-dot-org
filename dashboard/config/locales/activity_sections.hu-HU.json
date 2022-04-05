@@ -2299,7 +2299,7 @@
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
           "description": "#### Színpadra állítás\n\nÜdvözöld a tanulókat az osztályban, és ismertesd a napi tevékenységet.",
           "tips": [
-            "A Kódolás órája bevezetésének egyik módja, ha nem nagyon ismered a kódolást, hogy bemutatod az egyik [ösztönző videónkat](https://hourofcode.com/promote/resources#videos). Válaszd ki azt, amelyikről úgy gondolod, hogy diákjaid inspirálónak találják, és oszd meg most. A középiskolások számára a [Itt a kódolás órája](https://youtu.be/FC5FbmsH4fw) című videót javasoljuk."
+            "A Kódolás órája bevezetésének egyik módja, ha nem nagyon ismered a kódolást, hogy bemutatod az egyik [ösztönző videónkat][0]. Válaszd ki azt, amelyikről úgy gondolod, hogy diákjaid inspirálónak találják, és oszd meg most. A középiskolások számára a [Itt a kódolás órája][1] című videót javasoljuk."
           ]
         },
         "d99fc09e-a586-41df-84b2-e552cc4735e3": {
@@ -2312,7 +2312,7 @@
           "description": "Tudtad, hogy az informatika nagyon kreatív tud lenni? Valójában kóddal művészetet is létre lehet hozni. Emlékeztetőül: a kód olyan utasítások összessége, amelyeket a számítógép képes megérteni. Ahogyan a festék színeinek kiválasztása, úgy a kód megírása is lehetőséget adhat a kreativitásod kifejezésére! \n\nMa a költészetet fogjuk használni a kreatív kódolás ösztönzésére. Tudja valaki, mi az a költészet? Van kedvenc verse vagy költője? "
         },
         "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
-          "description": "\\*\\* Olvassatok együtt verset:\\*\\* Olvassatok el együtt [néhány verset](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing), és gyakoroljátok az egyes versek hangulatának szavakba foglalását. Bátorítsd a tanulókat, hogy osszák meg értelmezésüket, még akkor is, ha az eltér valaki másétól."
+          "description": "\\*\\* Olvassatok együtt verset:\\*\\* Olvassatok el együtt [néhány verset][0], és gyakoroljátok az egyes versek hangulatának szavakba foglalását. Bátorítsd a tanulókat, hogy osszák meg értelmezésüket, még akkor is, ha az eltér valaki másétól."
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
           "name": "Versművészet",
