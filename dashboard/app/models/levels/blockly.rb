@@ -807,7 +807,6 @@ class Blockly < Level
       end
     end
 
-    # Explicitly check for title tags even if they are not the desired type.
     block_xml.xpath(".//#{tag}[@name=\"VAR\"]").each do |parameter|
       next unless parameter.content == I18n.t('behaviors.this_sprite', locale: :en)
       parameter.content = I18n.t('behaviors.this_sprite')
