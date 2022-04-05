@@ -3299,6 +3299,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
       exampleSolutions: config.exampleSolutions,
       isViewingAsInstructorInTraining: config.isViewingAsInstructorInTraining,
       isBackgroundMusicLevel: !!config.isBackgroundMusicLevel,
+      isBackgroundMusicMuted: !!config.muteMusic,
       canHaveFeedbackReviewState: config.canHaveFeedbackReviewState,
       ttsShortInstructionsUrl: level.ttsShortInstructionsUrl,
       ttsLongInstructionsUrl: level.ttsLongInstructionsUrl,

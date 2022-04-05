@@ -18,6 +18,7 @@ import {
   setInstructionsMaxHeightNeeded,
   setInstructionsRenderedHeight,
   setAllowInstructionsResize,
+  setMuteMusic,
   getDynamicInstructions
 } from '../../redux/instructions';
 import color from '../../util/color';
@@ -36,6 +37,9 @@ import TopInstructionsHeader from './TopInstructionsHeader';
 import {Z_INDEX as OVERLAY_Z_INDEX} from '../Overlay';
 import Button from '../Button';
 import i18n from '@cdo/locale';
+import cookies from 'js-cookie';
+
+const MUTE_MUSIC = 'mute_music';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -101,6 +105,8 @@ class TopInstructions extends Component {
     isBlockly: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
     isBackgroundMusicLevel: PropTypes.bool.isRequired,
+    isBackgroundMusicMuted: PropTypes.bool.isRequired,
+    setMuteMusic: PropTypes.func.isRequired,
     mainStyle: PropTypes.object,
     containerStyle: PropTypes.object,
     resizable: PropTypes.bool,
@@ -445,6 +451,9 @@ class TopInstructions extends Component {
   };
 
   handleMuteMusicTabClick = () => {
+    this.isBackgroundMusicMuted = !this.isBackgroundMusicMuted;
+    this.setMuteMusic(this.isBackgroundMusicMuted);
+    cookies.set(MUTE_MUSIC, 'true', {expires: 30, path: '/'});
     const record = {
       study: 'mute-music',
       event: 'mute-toggle'
@@ -584,6 +593,7 @@ class TopInstructions extends Component {
       teacherMarkdown,
       isCollapsed,
       isBackgroundMusicLevel,
+      isBackgroundMusicMuted,
       user,
       mainStyle,
       containerStyle,
@@ -673,6 +683,7 @@ class TopInstructions extends Component {
       isEmbedView,
       isCollapsed,
       isBackgroundMusicLevel,
+      isBackgroundMusicMuted,
       dynamicInstructions,
       dynamicInstructionsKey
     };
@@ -694,6 +705,7 @@ class TopInstructions extends Component {
           displayReviewTab={displayReviewTab}
           isViewingAsTeacher={this.isViewingAsTeacher}
           isBackgroundMusicLevel={isBackgroundMusicLevel}
+          isBackgroundMusicMuted={isBackgroundMusicMuted}
           fetchingData={fetchingData}
           handleDocumentationClick={this.handleDocumentationClick}
           handleInstructionTabClick={() =>
@@ -894,6 +906,7 @@ export default connect(
     shortInstructions: state.instructions.shortInstructions,
     isRtl: state.isRtl,
     isBackgroundMusicLevel: !!state.pageConstants.isBackgroundMusicLevel,
+    //isBackgroundMusicMuted: Where do I get this from?,
     dynamicInstructions: getDynamicInstructions(state.instructions),
     dynamicInstructionsKey: state.instructions.dynamicInstructionsKey,
     overlayVisible: state.instructions.overlayVisible,
@@ -916,6 +929,9 @@ export default connect(
     },
     setAllowInstructionsResize(allowResize) {
       dispatch(setAllowInstructionsResize(allowResize));
+    },
+    setMuteMusic(isMuted) {
+      dispatch(setMuteMusic(isMuted));
     }
   }),
   null,
