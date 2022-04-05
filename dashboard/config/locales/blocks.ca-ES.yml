@@ -731,6 +731,11 @@ ca:
           CONDITION:
             '"when"': quan
             '"while"': mentres
+      gamelab_everySeconds:
+        text: 'cada {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': segons
       gamelab_getProp:
         options:
           PROPERTY:

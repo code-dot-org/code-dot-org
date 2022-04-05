@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csd6-pilot",
-    "serialized_at": "2022-03-22 16:08:36 UTC",
+    "serialized_at": "2022-04-01 16:05:52 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -4416,18 +4416,6 @@
       },
       "seeding_key": {
         "activity_section.key": "9802dee1-e434-455d-8717-55fff09ae737",
-        "lesson_activity.key": "a8d91d04-87b3-4b87-a1cb-039bbeb1c286"
-      }
-    },
-    {
-      "key": "a0dbc38a-06ad-4f0a-8085-3b8e4bcd5b1a",
-      "position": 3,
-      "properties": {
-        "description": "If this is the last unit of CS Discoveries that you are teaching, also have students take the end-of-course survey. See the [CSD Instructions resource](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/edit?usp=sharing) for more information about the End-of-Course survey and how to assign and see the results. ",
-        "name": "End of Course Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "a0dbc38a-06ad-4f0a-8085-3b8e4bcd5b1a",
         "lesson_activity.key": "a8d91d04-87b3-4b87-a1cb-039bbeb1c286"
       }
     },
@@ -10001,7 +9989,7 @@
     },
     {
       "name": "Functions",
-      "url": "https://docs.google.com/presentation/d/1fDzBxID3Zye50GJxANGDS10COe8LGzRHZH4xEpK1cfk/copy",
+      "url": "https://docs.google.com/presentation/d/1qpTbQAOB7LoPT-rW5wuzRWhRNMkrVfpHi-Wr6yiwMuU/copy",
       "key": "functions",
       "properties": {
         "audience": "Teacher",
@@ -10028,7 +10016,8 @@
       "url": "https://youtu.be/5UMKeMPCa7E",
       "key": "functions_with_parameters",
       "properties": {
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "functions_with_parameters"
@@ -10108,7 +10097,7 @@
     },
     {
       "name": "Mini-Project: Interactive Art",
-      "url": "https://docs.google.com/presentation/d/1qpTbQAOB7LoPT-rW5wuzRWhRNMkrVfpHi-Wr6yiwMuU/copy",
+      "url": "https://docs.google.com/presentation/d/1fDzBxID3Zye50GJxANGDS10COe8LGzRHZH4xEpK1cfk/copy",
       "key": "mini-project_interactive_art",
       "properties": {
         "audience": "Teacher",
@@ -10145,38 +10134,15 @@
     },
     {
       "name": "Peer Review - Prototype an Innovation",
-      "url": "https://docs.google.com/document/d/1g9mDgXX5iaf2rhvR7nCLAmgMzKNNXRlIbExlBym3ILM/view",
+      "url": "https://docs.google.com/document/d/1a7kngoybDZ4ZF6UeGEXjbfXzMynnfCxgaqJcsdc3YRc/view",
       "key": "peer_review_-_prototype_an_innovation",
       "properties": {
         "audience": "Student",
+        "download_url": "https://docs.google.com/document/d/1a7kngoybDZ4ZF6UeGEXjbfXzMynnfCxgaqJcsdc3YRc/export?format=pdf",
         "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "peer_review_-_prototype_an_innovation"
-      }
-    },
-    {
-      "name": "Peer Review 1",
-      "url": "https://docs.google.com/document/d/1hCLS30HEvP3YNDdvCYRuWfBa5mao7msUIcY6iopaKbg",
-      "key": "peer_review_1",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "peer_review_1"
-      }
-    },
-    {
-      "name": "Peer Review 2",
-      "url": "https://docs.google.com/document/d/1ZwH5a11o-P0w6cvCjhjNpGWiA655M3raz56M2PyyAn0",
-      "key": "peer_review_2",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "peer_review_2"
       }
     },
     {
@@ -10316,10 +10282,11 @@
     },
     {
       "name": "Prototype an Innovation",
-      "url": "https://docs.google.com/document/d/1ntDcMNR6vwir8PRNphj9Vo32uUGCK8UetSMTs9bdjzY/edit",
+      "url": "https://docs.google.com/document/d/1txsg24iWQjTuw-I1gHOMdrf7dqiSjXrHoWOGlBtF-Hg/edit#",
       "key": "prototype_an_innovation",
       "properties": {
         "audience": "Student",
+        "download_url": "https://docs.google.com/document/d/1txsg24iWQjTuw-I1gHOMdrf7dqiSjXrHoWOGlBtF-Hg/export?format=pdf",
         "include_in_pdf": true,
         "type": "Rubric"
       },
@@ -10329,10 +10296,11 @@
     },
     {
       "name": "Prototype an Innovation - Student Checklist",
-      "url": "https://docs.google.com/document/d/1PkarqOeVEuHi24QFVuYsEy3EY5WPmi3pbmKjOB161EM/edit",
+      "url": "https://docs.google.com/document/d/1ifmTs7Xjlyk1jQUwYsrTny9OJK4kjCCfCgqsYHTNzX4/view",
       "key": "prototype_an_innovation_-_student_checklist",
       "properties": {
         "audience": "Student",
+        "download_url": "https://docs.google.com/document/d/1ifmTs7Xjlyk1jQUwYsrTny9OJK4kjCCfCgqsYHTNzX4/export?format=pdf",
         "include_in_pdf": true
       },
       "seeding_key": {
@@ -10341,15 +10309,52 @@
     },
     {
       "name": "Prototype an Innovation",
-      "url": "https://docs.google.com/document/d/14fdmAmOJpOJw6KXielJAws1wf2AWEnSqQnZueUC6GvM/edit",
+      "url": "https://docs.google.com/document/d/1j3snUDbEsv13M-sab6SXtwpHdUx6ilXS7BzUR2xnnk8/view",
       "key": "prototype_an_innovation_1",
       "properties": {
         "audience": "Student",
+        "download_url": "https://docs.google.com/document/d/1j3snUDbEsv13M-sab6SXtwpHdUx6ilXS7BzUR2xnnk8/export?format=pdf",
         "include_in_pdf": true,
-        "type": "Project Guide"
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "prototype_an_innovation_1"
+      }
+    },
+    {
+      "name": "Prototype an Innovation Example 1",
+      "url": "https://docs.google.com/document/d/1lujGcifyqK4lNZzeCMQaZ68EL90qx0tc5z6Q9pZHl1c/edit",
+      "key": "prototype_an_innovation_example_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "prototype_an_innovation_example_1"
+      }
+    },
+    {
+      "name": "Prototype an Innovation Example 2",
+      "url": "https://docs.google.com/document/d/1IfD9qlxTNGIsY3cgspUKtN3g2K93EZLGaUczG-Y00Dk/edit",
+      "key": "prototype_an_innovation_example_2",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "prototype_an_innovation_example_2"
+      }
+    },
+    {
+      "name": "Prototype an Innovation Example 3",
+      "url": "https://docs.google.com/document/d/1somgJ2TOLqsV5zFe0BgQtC29Mv3ignYsa34zf4PI_VU/edit",
+      "key": "prototype_an_innovation_example_3",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "prototype_an_innovation_example_3"
       }
     },
     {
@@ -10400,18 +10405,6 @@
       },
       "seeding_key": {
         "resource.key": "rubric_-_on-the-go_app"
-      }
-    },
-    {
-      "name": "Sample Marked Rubrics",
-      "url": "https://docs.google.com/document/d/1DLFzMQSYnRei9JzBDl_c-Moz4AczcUGwU9dtxvyjagc/edit",
-      "key": "sample_marked_rubrics",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "sample_marked_rubrics"
       }
     },
     {
@@ -10756,18 +10749,6 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Prototype an Innovation",
-        "resource.key": "peer_review_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Prototype an Innovation",
-        "resource.key": "peer_review_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Prototype an Innovation",
         "resource.key": "project_prototype_an_innovation"
       }
     },
@@ -10792,7 +10773,19 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Prototype an Innovation",
-        "resource.key": "sample_marked_rubrics"
+        "resource.key": "prototype_an_innovation_example_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Prototype an Innovation",
+        "resource.key": "prototype_an_innovation_example_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Prototype an Innovation",
+        "resource.key": "prototype_an_innovation_example_3"
       }
     },
     {

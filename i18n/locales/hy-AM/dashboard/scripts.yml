@@ -921,6 +921,8 @@ hy:
               display_name: պարունակություն
             practice:
               display_name: Ուսուցիչի փորձեր
+        basketball:
+          name: basketball
         csd2-2017:
           lessons:
             Lists:
@@ -3013,6 +3015,9 @@ hy:
             lessonGroup-2:
               display_name: պարունակություն
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: For Loops
           lesson_groups:
             lessonGroup-2:
               display_name: պարունակություն

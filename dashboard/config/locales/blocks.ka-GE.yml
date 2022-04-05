@@ -448,6 +448,10 @@ ka:
           CONDITION:
             '"when"': როდის
             '"while"': სანამ
+      gamelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': წამები
       gamelab_getProp:
         options:
           PROPERTY:

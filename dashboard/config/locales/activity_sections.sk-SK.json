@@ -268,7 +268,7 @@
         },
         "199e20e7-a0e1-4eff-a830-4984a3fa4ce6": {
           "tips": [
-            null
+            "Nestrácajte priveľa času s predstavovaním aktivity, ktorú ste pre žiakov v rámci Hodiny kódu pripravili. Najmä pre mladších žiakov je ideálne čo najskôr sa pustiť do práce. Ak na začiatku strávite príliš veľa času vysvetľovaním alebo výkladom, žiakom tým môžete pokaziť zábavu z aktivity – a práve zábava je predsa to, o čo nám ide!"
           ]
         },
         "9aba0e85-a709-43f5-8cfb-251671159b3a": {
@@ -654,28 +654,61 @@
         },
         "9475b0bd-6a58-4318-b3e5-0d77cfe5a35d": {
           "tips": [
-            null
+            "V prípade potreby uveďte niektoré fakty o internete:\n\n-   Internet nie je vo svojej podstate bezpečný. \n-   Pakety putujúce cez internet prechádzajú mnohými smerovačmi, z ktorých každý môže patriť rôznym ľuďom alebo organizáciám.\n-   Preto by sme mali predpokladať, že všetky informácie, ktoré putujú cez internet, sú verejné, ako keby boli napísané na pohľadnici a poslané poštou. "
           ]
+        },
+        "75673a5f-7781-4876-8d91-9157f53161c2": {
+          "description": "Utajenie je dôležitou súčasťou nášho života, a to vo veľkých i malých rozmeroch. Keďže naše životy sa čoraz viac odohrávajú na internete, chceme si byť istí, že dokážeme zachovať súkromie našich informácií a určiť, kto má prístup k privilegovaným informáciám. \n\nDigitálny obchod, podnikanie, vládne operácie a dokonca aj sociálne siete sa spoliehajú na našu schopnosť zabrániť tomu, aby sa informácie dostali do nesprávnych rúk.\n\nPotrebujeme spôsob, ako posielať tajné správy..."
+        },
+        "281279d4-2b9b-48f4-b0fa-cb7017a86c91": {
+          "name": "Klasické šifrovanie - Cézarova šifra",
+          "description": "**Súvislosti:**\n\n\\*Mnohé z myšlienok, ktoré používame na zachovanie tajomstiev v digitálnom veku, sú oveľa staršie ako internet.  Proces kódovania jednoduchej textovej správy nejakým tajným spôsobom sa nazýva **šifrovanie\\***. \n\nNapríklad v rímskych časoch Július Cézar údajne šifroval správy svojim vojakom a generálom pomocou jednoduchého abecedného posunu - každý znak bol zašifrovaný tak, že sa nahradil znakom, ktorý bol v abecede o určitý pevne stanovený počet písmen ďalej.\\_\n\n\\*V dôsledku toho sa abecedný posun často označuje ako **Cézarovej šifra**.\\*\n\n**Úloha:** \n\n-   Táto správa bola zašifrovaná pomocou Cézarovej šifry („abecedného posunu“).\n-   Uvidíme, ako dlho vám bude trvať **dešifrovanie tejto správy** (nezabudnite, že ide len o abecedný posun):"
         },
         "b4a270c7-538c-4278-a88e-d074a04fafb4": {
           "tips": [
-            null
+            "Odolajte pokušeniu dať žiakom nástroj alebo pomôcku na rozlúštenie tohto posolstva - to príde v ďalšej časti hodiny! Čiastočne tu ide o to, že je to možné aj bez nástrojov.  S nástrojmi sa to stáva triviálnym, ako uvidíme ďalej.\n\nAk majú študenti problém začať, tu je niekoľko návrhov stratégií:\n\n-   Nájdite malé slovo a skúste abecedné posuny, kým nebude jasné, že ide o anglické slovo.\n-   Nezabudnite, že písmená nie sú náhodne nahradené - abeceda je len posunutá.\n-   Keď nájdete veľkosť posunu, zvyšok už pôjde ľahko.\t\t  "
           ]
+        },
+        "9c5bb1fb-a5dc-4857-89fe-b24f3d0ab8bb": {
+          "description": "_Zobrazte alebo napíšte na tabuľu_\n\n    \tCVVMN I OHSRGT MNQNEZN\n\n-   **Dajte študentom približne 3 až 5 minút** na rozlúštenie správy.\n    -   _ODPOVEĎ: „PIZZA V BUFETE ZADARMO“ - abeceda A - Z je posunutá o 13 znakov._\n\n**Zhrnutie:**\n\n-   V prípade tejto jednoduchej techniky šifrovania trvalo rozlúštenie krátkej správy len niekoľko minút.\n-   Čo keby bola správa dlhšia, ALE mali by ste na pomoc výpočtový nástroj!"
         },
         "be8fc72a-c35b-403e-9063-5cb6af4c5b28": {
           "tips": [
-            null
+            "Ak by ste chceli, aby si vaši žiaci prečítali niečo o **historickej kryptografii** a lúštení šifier, pozrite si kapitolu „Substitution Ciphers and Frequency Analaysis“ (Substitučné šifry a frekvenčná analýza) v [Blown to Bits, kapitola 5 - Reading (Čítanie)](http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf) str. 165 až 169."
           ]
+        },
+        "529245c0-b1fc-416b-aee4-77f322d85c58": {
+          "description": "V tomto súbore aktivít žiaci použijú dve rôzne verzie jednoduchého widgetu v programe Code Studio na „prelomenie“ správ zašifrovaných substitučnými šiframi vrátane abecedného posunu a náhodnej substitúcie.\n\n![](https://code.org/curriculum/docs/csp/code-studio-icon.png) **Prechod na Code Studio**: [Šifrovacie widgety v Code Studio](https://studio.code.org/s/hoc-encryption)"
+        },
+        "3e14940a-f236-48f0-bb1b-17cfad462b20": {
+          "name": "Časť 1 - Prelomenie Cézarovej šifry",
+          "description": "-   Povedzte žiakom, nech kliknú na prvý (z dvoch) šifrovacích nástrojov v Code Studiu pre túto lekciu.  Je označený ako „Alphabetic Shift Widget“ (Widget abecedného posunu)."
         },
         "4e04bf40-bae8-413b-a7f9-e62dc83d808e": {
           "tips": [
-            null
+            "Neponáhľajte sa, ale ani sa nezdržujte lúštením Cézarových šifier. Prezentácia a lúštenie Cézarovej šifry by mali ísť **pomerne rýchlo**.\n\n**Widget** je celkom jednoznačný. Nechajte žiakov, aby sami prišli na to, ako ho používať.\n\nCieľom je poukázať na lúštenie šifier pomocou výpočtových nástrojov a začať používať niektoré bežné výrazy.\n\nPomerne rýchlo by ste mali prejsť k lúšteniu náhodnej substitúcie."
           ]
+        },
+        "19da6882-e123-46c0-a3e6-d51cdfbfb524": {
+          "description": "Pokyny k tejto aktivite sú jednoduché – nie je k dispozícii žiadny návod:\n\n-   Rozdeľte žiakov do dvojíc.\n\n**Cieľ:** Vyberte správu zašifrovanú pomocou Cézarovej šifry a použite priložený widget na jej „prelomenie“. \n\n-   Experimentujte s nástrojom - klikajte na veci, prehrabávajte sa v nich, zisťujte, čo robia.\n-   **Vyberte si jednu zo správ v rozbaľovacej ponuke a pokúste sa ju prelomiť** pomocou nástroja.\n-   Ak chcete, zadajte vlastnú správu, zašifrujte ju a požiadajte priateľa, aby ju dešifroval.\n\n**Dajte žiakom asi 5 minút** na to, aby sa zoznámili s nástrojom a rozlúštili niekoľko správ.\n\n-   S pomocou nástroja je prelomenie abecedného posunu triviálne.\n-   Keď sa vám podarí jedno, na ďalšie stačí len niekoľko sekúnd.\n\n**Nepovinné - pauza a rekapitulácia:**\n\nV Code studio sa nachádza stránka s rekapituláciou pojmov (šifrovanie, dešifrovanie, prelomenie, šifra, Cézarova šifra) a zadaním ďalšieho problému.\n\nAk chcete, môžete si tu dať pauzu, aby ste si zopakovali pojmy, alebo môžete nechať žiakov pokračovať (pozrite si časť 2 aktivity nižšie)."
+        },
+        "41c7a442-e5f1-4440-ad9a-d892d852fa3f": {
+          "name": "Časť 2 - Prelomenie šifry s náhodnou substitúciou",
+          "description": "Po zopakovaní prvej aktivity sa presvedčte, že **žiaci pochopili nasledujúce skutočnosti, než budú pokračovať:**\n\n-   _Prelomenie Cézarovej šifry je jednoduché... triviálne s výpočtovým nástrojom, aký sme použili._\n-   _Nasledujúcim krokom je šifru o niečo sťažiť..._\n\n**Nová úloha:**\n\n-   \\*Čo keby sme namiesto posúvania celej abecedy mapovali každé písmeno abecedy na náhodné iné písmeno abecedy? To sa nazýva **šifra s náhodnou substitúciou.\\***\n\n-   \\* **Nová verzia widgetu**, ktorú uvidíte, je sofistikovanejšia verzia šifrovacieho nástroja, ktorá vám zobrazí veľa rôznych vecí.\\*\n\n-   **Ale čo to robí, je trochu záhadou!** Poďme sa na to pozrieť..."
         },
         "7219d891-31ac-454e-8060-eb84a3a0d1df": {
           "tips": [
-            null
+            "\\*\\* PRIPOMIENKA: Zavádzanie nástrojov na základe objavovania v skratke:\\*\\*\n\n-   Nechajte žiakov zoznámiť sa s nástrojom bez zbytočného alebo žiadneho úvodu\n-   Dajte žiakom pracujúcim vo dvojici určitý čas (približne 5 minút) na to, aby sa v nástroji porozhliadli a zistili, či dokážu prísť na to, čo robí a nerobí - zvyčajne to môže byť prezentované ako záhada, ktorú stojí za to preskúmať\n-   Požiadajte skupinu, aby informovala o tom, čo zistila\n-   Učiteľ následne doplní prípadné medzery alebo vysvetlí, ako nástroj funguje\n\nTento widget, rovnako ako všetky ostatné, sú určené ako nástroj na učenie. Nemôžete ho pokaziť, takže odporúčame, aby ste nechali žiakov hrať sa a skúmať, ako nástroje fungujú.\n\nTieto metódy zavádzania nástrojov na základe objavovania boli odskúšané v rámci profesionálneho rozvoja a osvedčili sa učiteľom, ktorí používajú tento učebný program. Táto metóda je účinná z niekoľkých dôvodov, ale celkovo žiaci považujú tento prístup za pútavejší a zábavnejší a majú tendenciu byť vnímavejší a motivovanejší počúvať vysvetlenia o tom, ako nástroj funguje, keď sa sami pokúsia „vyriešiť záhadu“."
           ]
+        },
+        "66d1a328-68c1-4006-b013-4d42e91c7360": {
+          "description": "-   Nechajte študentov kliknúť na ďalšiu bublinu, aby si pozreli verziu widgetu s frekvenčnou analýzou.  (Mala by vyzerať ako obrazovka znázornená nižšie).\n\n**Cieľ:** nechajte žiakov **5 až 10** minút skúmať, či dokážu odhaliť, čo im nástroj ukazuje a umožňuje.  \n\nÚlohy stanovené pre žiakov v Code Studio sú tieto:\n\n-   Zistite, čo sa deje v tejto novej verzii nástroja.\n-   Aké informácie sa vám zobrazujú?\n-   Zistite, čo vám nástroj umožňuje robiť\n-   Ako zvyčajne: nemôžete ho pokaziť.  Takže môžete na veci klikať, hrabať sa v nich.\n-   Ak na to prídete, možno sa vám podarí rozlúštiť správu zakódovanú s náhodnou substitúciou.\n\n![](csp/U4L05-freqanalysis-screencap.png)\n\n-   **Po chvíli skúmania zas spojte sily** a vysvetlite si, čo je to za nástroj a ako funguje.\n\n-   Ak je to potrebné\\*\\*, upozornite žiakov, že v ďalšej úrovni v Code Studio (v tej, ktorá nasleduje po nástroji frekvenčnej analýzy) je trochu do istej miery vysvetlené, ako frekvenčná analýza funguje, a je tu niekoľko návrhov stratégií, ako začať. \n\n**Dajte žiakom približne 15 až 20 minút na rozlúštenie jednej zo správ.**\n\n-   Keď ju dokončia, sú tam ďalšie, ktoré si môžu vyskúšať.  \n-   Študenti môžu zadať vlastné správy, vykonať náhodnú zámenu na ich zašifrovanie, potom skopírovať/vložiť zašifrovanú verziu a zistiť, či ju kamarát dokáže rozlúštiť. \n-   Pomocou tohto nástroja je možné stať sa v lúštení týchto správ celkom zdatným."
+        },
+        "87dc9b80-1d14-4b71-b281-d2c67bba67a4": {
+          "progression_name": "Prelomenie Cézarovej šifry"
+        },
+        "eaccf571-0358-4756-b0c7-2349901065d4": {
+          "progression_name": "Rekapitulácia terminológie"
         },
         "38ff7ecd-0a0f-4332-802c-cfa62c64beb5": {
           "name": "Video: Šifrovanie a verejné kľúče",
@@ -683,16 +716,24 @@
         },
         "c6e4a8c3-e36b-4a1f-9620-d892af9535f3": {
           "tips": [
-            null
+            "Vo videu sú zopakované viaceré body, ktoré odzneli v tejto lekcii.\n\nNa záver sa presvedčte, či žiaci:\n\n**pochopili vzťah medzi kryptografickými kľúčmi a heslami.**\n\n-   _Kľúč_ je vstup do šifrovacieho algoritmu.  Heslo je v podstate tá istá vec.\n\n**pochopili, prečo používanie dlhších hesiel sťažuje ich uhádnutie.**\n\n-   Dlhšie heslá zvyšujú počet možných kľúčov, čím sa **výpočtovo sťažuje** uhádnutie kľúča.\t"
           ]
         },
         "a09a8861-0c7d-433f-9fd6-d10220a44624": {
-          "name": "Video: Šifrovanie a verejné kľúče"
+          "name": "Video: Šifrovanie a verejné kľúče",
+          "description": "-   Ukážte [Internet: Šifrovanie a verejné kľúče - Video](https://www.youtube.com/watch?v=ZghMPWGXexs)\n\nO tomto videu by ste mali vedieť:\n\n-   **0:00 až 4:11** sa zaoberá Cézarovou a Vigenerovou šifrou a vysvetľuje, prečo je ťažké ich prelomiť \n-   **Po 4:11**... vysvetľuje rozdiel medzi šifrovaním, ktoré používa _symetrické_ a _asymetrické_ kľúče, čo **súvisí s materiálom o šifrovaní s verejným kľúčom** a je určené ako náhľad/upútavka na modernejšie techniky šifrovania."
+        },
+        "fc172d97-57ec-446d-bd3b-fd4f79aad8bf": {
+          "name": "Diskusia",
+          "description": "V rámci zhrnutia **sa chceme zamerať na tieto hlavné body:**\n\n-   Šifrovanie je nevyhnutné pre každodenný život a aktivity\n-   „Sila“ šifrovania súvisí s tým, ako ľahko je možné správu prelomiť za predpokladu, že útočník pozná techniku, ale nie presný „kľúč“\n-   Šifra s náhodnou substitúciou je veľmi ľahko prelomiteľná ručne, hoci to môže trvať určitý čas a skúšanie.\n-   Ak sa však použijú pomocné výpočtové nástroje, šifru s náhodnou substitúciou môže aj začiatočník prelomiť v priebehu niekoľkých minút.\n-   Šifry s jednoduchou substitúciou umožňujú nahliadnuť do šifrovacích algoritmov, ale ako sme videli, výrazne pokrivkávajú, keď si potenciálny útočník pomáha výpočtovými nástrojmi... Musíme byť dôvtipnejší.\n-   Ak chceme vybudovať bezpečný internet, budeme musieť vyvinúť nástroje a protokoly, ktoré dokážu odolať obrovskej výpočtovej sile moderných počítačov.\n\nTu je niekoľko podnetov na zamyslenie, ktoré môžete použiť na uzavretie hodiny a ako pomôcku na zdôraznenie vyššie uvedených bodov.  Vyberte si jednu alebo viaceré.\n\n**Podnety:**\n\n\\*\\* O čo ľahšie je prelomiť Cézarovu šifru ako šifru s náhodnou substitúciou?  Dokážete to vyjadriť číslom?\n\n-   _Pri Cézarovej šifre existuje len 25 možných spôsobov posunu abecedy.  V najhoršom prípade stačí vyskúšať 25 rôznych možností.  Šifra s náhodnou substitúciou má OMNOHO viac možností (26 faktoriál = 4x10 <sup>26</sup> možností).  Ako sme sa však dozvedeli, pomocou frekvenčnej analýzy sa môžeme vyhnúť tomu, aby sme všetky museli skúšať naslepo._\n\n\\*\\*Bolo ťažké prelomiť šifru s náhodnou substitúciou? Trvalo to dlhšie, ako ste si mysleli, alebo kratšie? Prečo?\n\n-   _Výpočtové nástroje pomáhajú ľuďom pri implementácii šifrovacích, dešifrovacích a lúštiacich algoritmov. Inými slovami, používanie počítača mení rýchlosť a zložitosť typov šifrovania, ktoré môžeme uskutočniť, ale zvyšuje aj našu schopnosť prelomiť alebo obísť šifrovanie._\n\n**Každá šifra je algoritmus** na transformáciu jednoduchého textu na šifrový text.  A čo opačný postup? Dokážete napísať algoritmus na prelomenie Cézarovej šifry? A čo šifra s náhodnou substitúciou?\\*\\*\n\n-   _Algoritmus na prelomenie Cézarovej šifry je celkom jednoduchý – pre každý možný abecedný posun vyskúšaj, či získaš zmysluplné slová._\n-   Algoritmus na prelomenie šifry s náhodnou substitúciou je zložitejší a náročnejší.  Nemusí existovať jediná odpoveď, ale premýšľaním o tom si uvedomíte, aké zložité je kodifikovať ľudskú inteligenciu a intuíciu na vykonávanie niečoho, ako je frekvenčná analýza, do procesu, ktorý môže stroj dodržiavať. Pravdepodobne si to vyžaduje určitý ľudský zásah, čo je zaujímavý postreh.\\_\n\n**Prehľad terminológie – túto príležitosť môžete využiť na zopakovanie novej slovnej zásoby zavedenej v aktivite a na zodpovedanie otázok, s ktorými sa žiaci mohli stretnúť počas aktivity.**\n\n-   Definície pojmov kryptografia, šifrovanie, dešifrovanie, prelomenie/prelomenie šifry, šifra atď."
         },
         "c694a6e6-b265-4802-bfca-bbc9180c8407": {
           "tips": [
-            null
+            "Žiaci by mali byť nabádaní, aby sa počas vypĺňania pracovného listu rozprávali so svojím partnerom. Otázky sú pomerne jednoduché a ide skôr o to, aby otázky slúžili ako pomôcka pri čítaní, než aby čo najrýchlejšie našli všetky odpovede."
           ]
+        },
+        "cec5b790-610d-4bb9-8868-a71c39f63329": {
+          "description": "**Prečítajte si Blown to Bits**\n\n-   Prečítajte si str. 165-169 z [Blown to Bits, kapitola 5](http://www.bitsbook.com/wp-content/uploads/2008/12/chapter5.pdf)\n-   Odpovedzte na otázky uvedené v sprievodcovi čítaním a v pracovnom liste [Sprievodca čítaním k šifrovaniu](https://docs.google.com/document/d/1Adxoscvs8sf6ieEvoe8-5RfH542CvoCupb5t9ZiB1No/).\t\t\n\n**Ďalšie z Blown to Bits**\n\n-   V predchádzajúcich častiach kapitoly 5 knihy Blown to Bits sa spomína význam a kontroverzie týkajúce sa šifrovania po 11. septembri. Toto čítanie môže byť užitočným nástrojom na ďalšie predstavenie vplyvu kryptografie na mnohé aspekty moderného života.\n\n-   Požiadajte žiakov, aby si prezreli históriu svojho surfovania po internete a vypočítali, aké percento z neho približne vykonávajú s predpokladom, že je \"súkromné\". Majú nejaký spôsob, ako sa uistiť, že to tak je? Existujú nejaké webové stránky, ktoré navštevujú a pri ktorých sa cítia istejšie, čo sa týka dôvernosti ich návštevnosti, ako pri iných? Je ich tento záver opodstatnený?"
         },
         "c4d6d315-bb5c-47d7-bc5e-f5fce2e4ae67": {
           "name": "Príprava",
@@ -4870,7 +4911,7 @@
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
           "description": "#### Príprava\n\nPrivítajte žiakov v triede a predstavte dnešnú aktivitu.",
           "tips": [
-            "Ak sa v programovaní veľmi nevyznáte, jedným zo spôsobov, ako žiakom predstaviť Hodinu kódu, je prehrať im jedno z [našich inšpiratívnych videí](https://hourofcode.com/promote/resources#videos). Vyberte video, ktoré bude podľa vás pre žiakov inšpiratívne, a prehrajte im ho. Pre žiakov v stredných ročníkoch odporúčame video [Hodina kódu je tu](https://youtu.be/FC5FbmsH4fw)."
+            "Ak sa v programovaní veľmi nevyznáte, jedným zo spôsobov, ako žiakom predstaviť Hodinu kódu, je prehrať im jedno z [našich inšpiratívnych videí][0]. Vyberte video, ktoré bude podľa vás pre žiakov inšpiratívne, a prehrajte im ho. Pre žiakov v stredných ročníkoch odporúčame video [Hodina kódu je tu][1]."
           ]
         },
         "d99fc09e-a586-41df-84b2-e552cc4735e3": {
@@ -4883,7 +4924,7 @@
           "description": "Vedeli ste, že počítačová veda môže byť veľmi kreatívna? V skutočnosti môžete vytvárať umenie pomocou programovania. Pripomíname, že počítačový kód je súbor inštrukcií, ktorým počítač rozumie. Rovnako ako výber farieb na použitie, aj výber kódu, ktorý napíšete, môže byť príležitosťou na vyjadrenie vašej kreativity! \n\nNa inšpirovanie nášho dnešného kreatívneho programovania použijeme poéziu. Vie niekto, čo je to poézia? Máte obľúbenú báseň alebo básnika? "
         },
         "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
-          "description": "**Čítajte spolu poéziu:** Prečítajte si [niekoľko básní](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) spolu ako trieda a precvičte si pomenovanie nálady každej básne. Povzbudzujte žiakov, aby sa podelili o svoj výklad, aj keď sa líši od výkladu niekoho iného. "
+          "description": "**Čítajte spolu poéziu:** Prečítajte si [niekoľko básní][0] spolu ako trieda a precvičte si pomenovanie nálady každej básne. Povzbudzujte žiakov, aby sa podelili o svoj výklad, aj keď sa líši od výkladu niekoho iného. "
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
           "name": "Básnické umenie",

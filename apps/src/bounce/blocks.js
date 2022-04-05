@@ -7,7 +7,7 @@
 var msg = require('./locale');
 
 var generateSetterCode = function(ctx, name) {
-  var value = ctx.getTitleValue('VALUE');
+  var value = ctx.getFieldValue('VALUE');
   if (value === 'random') {
     var allValues = ctx.VALUES.slice(1).map(function(item) {
       return item[1];
@@ -260,7 +260,7 @@ exports.install = function(blockly, blockInstallOptions) {
       "Bounce.playSound('block_id_" +
       this.id +
       "', '" +
-      this.getTitleValue('SOUND') +
+      this.getFieldValue('SOUND') +
       "');\n"
     );
   };

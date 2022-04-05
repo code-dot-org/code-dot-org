@@ -73,6 +73,8 @@ mk:
           lessons:
             Lists:
               name: Листи
+        aquatic:
+          name: водно
         cspplayground:
           lesson_groups:
             csp_variables:

@@ -97,6 +97,8 @@ class ReferenceGuide < ApplicationRecord
 
   def summarize_for_show
     {
+      key: key,
+      parent_reference_guide_key: parent_reference_guide_key,
       display_name: display_name,
       content: content
     }

@@ -394,7 +394,7 @@ class StorageApps
   end
 
   def self.table
-    PEGASUS_DB[:storage_apps]
+    DASHBOARD_DB[:projects]
   end
 
   private

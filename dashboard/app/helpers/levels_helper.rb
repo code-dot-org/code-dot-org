@@ -45,8 +45,8 @@ module LevelsHelper
     url_from_path(build_script_level_path(script_level, params))
   end
 
-  def url_from_path(path)
-    CDO.studio_url(path)
+  def url_from_path(path, scheme = '')
+    CDO.studio_url(path, scheme)
   end
 
   def readonly_view_options
@@ -187,15 +187,17 @@ module LevelsHelper
     # - For levels with contained levels, the outer level is read-only and does
     #   not write to the channel. (We currently do not support inner levels that
     #   are channel-backed.)
-    # - In edit_blocks and edit_exemplar mode, the source code is saved as a level property and
+    # - In edit_blocks mode, the source code is saved as a level property and
     #   is not written to the channel.
-    #
-    # Note that Javalab requires a channel if Javabuilder needs to access assets.
-    level_requires_channel = @level.is_a?(Javalab) ||
-        (@level.channel_backed? &&
+    level_requires_channel = (@level.channel_backed? &&
           !@level.try(:contained_levels).present? &&
           params[:action] != 'edit_blocks')
-    level_requires_channel = false if @is_editing_exemplar
+    # Javalab requires a channel if Javabuilder needs to access project-specific assets,
+    # or if we want to access a project's code from S3.
+    # Two special cases are when we edit and view Javalab exemplar code,
+    # where we load the exemplar code from the level definition, edit it locally in Javalab,
+    # and pass the edited code directly to Javabuilder.
+    level_requires_channel = !@is_editing_exemplar && !@is_viewing_exemplar if @level.is_a?(Javalab)
 
     # If the level is cached, the channel is loaded client-side in loadApp.js
     if level_requires_channel && !@public_caching
