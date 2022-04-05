@@ -58,7 +58,7 @@ export default function CourseOfferingEditor(props) {
         Display Name
         <input
           type="text"
-          defaultValue={courseOffering.display_name}
+          value={courseOffering.display_name}
           style={styles.input}
           onChange={e => updateCourseOffering('display_name', e.target.value)}
         />
@@ -93,7 +93,7 @@ export default function CourseOfferingEditor(props) {
         </HelpTip>
         <input
           type="checkbox"
-          defaultChecked={courseOffering.is_featured}
+          checked={courseOffering.is_featured}
           style={styles.checkbox}
           onChange={e => updateCourseOffering('is_featured', e.target.checked)}
         />
@@ -109,7 +109,7 @@ export default function CourseOfferingEditor(props) {
         </HelpTip>
         <input
           type="checkbox"
-          defaultChecked={courseOffering.assignable}
+          checked={courseOffering.assignable}
           style={styles.checkbox}
           onChange={e => updateCourseOffering('assignable', e.target.checked)}
         />

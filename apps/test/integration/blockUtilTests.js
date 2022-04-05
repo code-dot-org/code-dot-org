@@ -16,7 +16,7 @@ describe('blockUtils', function() {
     assert(Blockly.mainBlockSpace.getBlockCount() === 0);
     var newBlock = blockUtils.domStringToBlock(blockXMLString);
     assert(Blockly.mainBlockSpace.getBlockCount() === 1);
-    assert(newBlock.getTitleValue('NUM') === '10');
+    assert(newBlock.getFieldValue('NUM') === '10');
     assert(newBlock.getTitles().length === 1);
   });
 
