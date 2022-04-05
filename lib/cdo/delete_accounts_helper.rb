@@ -1,5 +1,5 @@
 require_relative '../../shared/middleware/helpers/storage_id'
-require_relative '../../shared/middleware/helpers/storage_apps'
+require_relative '../../shared/middleware/helpers/projects'
 require 'cdo/aws/s3'
 require 'cdo/db'
 
@@ -35,14 +35,14 @@ class DeleteAccountsHelper
 
     @log.puts "Deleting project backed progress"
 
-    project_ids = StorageApps.table.where(storage_id: user.user_storage_id).map(:id)
+    project_ids = Projects.table.where(storage_id: user.user_storage_id).map(:id)
     channel_count = project_ids.count
     encrypted_channel_ids = project_ids.map do |project_id|
       storage_encrypt_channel_id user.user_storage_id, project_id
     end
 
     # Clear potential PII from user's channels
-    StorageApps.table.
+    Projects.table.
       where(id: project_ids).
       update(value: nil, updated_ip: '', updated_at: Time.now)
 
