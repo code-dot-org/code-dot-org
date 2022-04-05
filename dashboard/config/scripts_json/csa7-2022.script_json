@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-02-26 00:33:20 UTC",
+    "serialized_at": "2022-03-11 20:36:39 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -3672,6 +3672,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L1-L1_2022"
+        ],
         "progression": "Title Sequence Project Exemplars"
       },
       "bonus": false,
@@ -3694,6 +3697,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L1-L2_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3716,6 +3722,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L1_2022"
+        ],
         "progression": "Predict: Actual and Formal Parameters"
       },
       "bonus": false,
@@ -3738,6 +3747,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L2_2022"
+        ],
         "progression": "Void and Non-Void Methods"
       },
       "bonus": false,
@@ -3760,6 +3772,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L3_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3782,6 +3797,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L1_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3804,6 +3822,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L1_2022"
+        ],
         "progression": "Predict: Overloaded Methods"
       },
       "bonus": false,
@@ -3826,6 +3847,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L2_2022"
+        ],
         "progression": "Writing Overloaded Methods"
       },
       "bonus": false,
@@ -3848,6 +3872,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L3_2022"
+        ],
         "progression": "Writing Overloaded Methods"
       },
       "bonus": false,
@@ -3870,6 +3897,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L4_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3892,6 +3922,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L1_2022"
+        ],
         "progression": "Predict: Accessing Private Methods"
       },
       "bonus": false,
@@ -3914,6 +3947,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L2_2022"
+        ],
         "progression": "Predict: Accessing Private Methods"
       },
       "bonus": false,
@@ -3936,6 +3972,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L3_2022"
+        ],
         "progression": "Predict: Accessing Private Methods"
       },
       "bonus": false,
@@ -3958,6 +3997,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L4_2022"
+        ],
         "progression": "Predict: Accessing Private Methods"
       },
       "bonus": false,
@@ -3980,6 +4022,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L5_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4002,6 +4047,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L6-L1_2022"
+        ],
         "progression": "Predict: Calling Overridden Methods"
       },
       "bonus": false,
@@ -4024,6 +4072,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L6-L2_2022"
+        ],
         "progression": "Overriding Methods"
       },
       "bonus": false,
@@ -4046,6 +4097,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L6-L3_2022"
+        ],
         "progression": "Overriding Methods"
       },
       "bonus": false,
@@ -4068,6 +4122,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L6-L4_2022"
+        ],
         "progression": "Overriding Methods"
       },
       "bonus": false,
@@ -4090,6 +4147,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L6-L5_2022"
+        ],
         "progression": "Sentinel Values"
       },
       "bonus": false,
@@ -4112,6 +4172,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L6-L6_2022"
+        ],
         "progression": "Sentinel Values"
       },
       "bonus": false,
@@ -4134,6 +4197,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L6-L7_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4156,6 +4222,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L7-L1_2022"
+        ],
         "progression": "Title Sequence Project"
       },
       "bonus": false,
@@ -4178,6 +4247,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L7-L2_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4200,6 +4272,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L8-L1_2022"
+        ],
         "progression": "Recursive Painting"
       },
       "bonus": false,
@@ -4222,6 +4297,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L8-L2_2022"
+        ],
         "progression": "Recursive Painting"
       },
       "bonus": false,
@@ -4244,6 +4322,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L8-L3_2022"
+        ],
         "progression": "Recursive Painting"
       },
       "bonus": false,
@@ -4266,6 +4347,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L8-L4_2022"
+        ],
         "progression": "Title Sequence Project"
       },
       "bonus": false,
@@ -4288,6 +4372,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L8-L5_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4310,6 +4397,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L9-L1_2022"
+        ],
         "progression": "Predict: Recursive Strings"
       },
       "bonus": false,
@@ -4332,6 +4422,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L9-L2_2022"
+        ],
         "progression": "Predict: Tracing Recursive Methods"
       },
       "bonus": false,
@@ -4354,6 +4447,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L9-L3_2022"
+        ],
         "progression": "Predict: Tracing Recursive Methods"
       },
       "bonus": false,
@@ -4376,6 +4472,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L9-L4_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4398,6 +4497,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L10-L1_2022"
+        ],
         "progression": "Exploring and Testing Software"
       },
       "bonus": false,
@@ -4420,6 +4522,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L10-L2_2022"
+        ],
         "progression": "Title Sequence Project"
       },
       "bonus": false,
@@ -4442,6 +4547,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L10-L3_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4464,6 +4572,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L11-L1_2022"
+        ],
         "progression": "Title Sequence Project"
       },
       "bonus": false,
@@ -4486,6 +4597,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L12-L1_2022"
+        ],
         "progression": "Title Sequence Project"
       },
       "bonus": false,
@@ -4508,6 +4622,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L13-L1_2022"
+        ],
         "progression": "Title Sequence Project"
       },
       "bonus": false,
@@ -4530,6 +4647,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L14-L1_2022"
+        ],
         "progression": "Post-FRQ Survey"
       },
       "bonus": false,
@@ -4552,6 +4672,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L14-L2_2022"
+        ],
         "progression": "Post-FRQ Survey"
       },
       "bonus": false,
@@ -4574,6 +4697,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L14-L3_2022"
+        ],
         "progression": "Post-FRQ Survey"
       },
       "bonus": false,
@@ -4596,6 +4722,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L14-L4_2022"
+        ],
         "progression": "Post-FRQ Survey"
       },
       "bonus": false,
@@ -4618,6 +4747,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L14-L5_2022"
+        ],
         "progression": "Post-FRQ Survey"
       },
       "bonus": false,
@@ -4640,6 +4772,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L14-L6_2022"
+        ],
         "progression": "Post-FRQ Survey"
       },
       "bonus": false,
@@ -4662,6 +4797,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 7 Pilot Assessment 2021_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4683,6 +4821,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Pilot Survey Unit 7_2022"
+        ],
         "progression": "Unit 7 Pilot Survey"
       },
       "bonus": false,
@@ -4705,6 +4846,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Java Lab Sandbox_2022"
+        ],
         "progression": "Java Lab"
       },
       "bonus": false,
@@ -4727,6 +4871,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Neighborhood Sandbox_2022"
+        ],
         "progression": "The Neighborhood"
       },
       "bonus": false,
@@ -4749,6 +4896,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Theater Sandbox_2022"
+        ],
         "progression": "The Theater"
       },
       "bonus": false,
@@ -4771,6 +4921,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Playground Sandbox_2022"
+        ],
         "progression": "The Playground"
       },
       "bonus": false,
@@ -6356,7 +6509,7 @@
     {
       "key": "method_decomposition",
       "word": "Method Decomposition",
-      "definition": "The process of breaking down a larger problem into smaller subproblems, which are then written as methods",
+      "definition": "the process of breaking a problem down into smaller parts to write methods for each part",
       "properties": {
       },
       "seeding_key": {
@@ -6426,7 +6579,7 @@
     {
       "key": "sentinel_value",
       "word": "Sentinel Value",
-      "definition": "Determines when to end a loop",
+      "definition": "a special value used to notify the program to stop accepting input",
       "properties": {
       },
       "seeding_key": {

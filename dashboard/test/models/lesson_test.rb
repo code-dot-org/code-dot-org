@@ -806,7 +806,7 @@ class LessonTest < ActiveSupport::TestCase
 
     assert_equal(
       new_lesson.start_url,
-      "http://test-studio.code.org/s/#{new_script.name}/lockable/1/levels/1"
+      CDO.studio_url("/s/#{new_script.name}/lockable/1/levels/1", CDO.default_scheme)
     )
   end
 
@@ -818,7 +818,7 @@ class LessonTest < ActiveSupport::TestCase
 
     assert_equal(
       new_lesson.start_url,
-      "http://test-studio.code.org/s/#{new_script.name}/lessons/1/levels/1"
+      CDO.studio_url("/s/#{new_script.name}/lessons/1/levels/1", CDO.default_scheme)
     )
   end
 
@@ -1051,6 +1051,14 @@ class LessonTest < ActiveSupport::TestCase
       assert_equal @destination_script, copied_lesson.script
       assert_equal [destination_resource], copied_lesson.resources
       assert_equal [destination_vocab], copied_lesson.vocabularies
+    end
+
+    test "dots are stripped from cloned lesson key" do
+      @destination_script.expects(:write_script_json).once
+      Script.expects(:merge_and_write_i18n).once
+      @original_lesson.update!(name: 'Problem.Lesson.')
+      copied_lesson = @original_lesson.copy_to_unit(@destination_script)
+      assert_equal 'ProblemLesson', copied_lesson.key
     end
 
     test "can clone lesson another script in the same course version" do

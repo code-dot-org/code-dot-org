@@ -10,34 +10,12 @@
       "is_migrated": true,
       "project_sharing": true,
       "student_detail_progress_view": true,
-      "teacher_resources": [
-        [
-          "lessonPlans",
-          "https://curriculum.code.org/csp/unit1/"
-        ],
-        [
-          "teacherForum",
-          "https://forum.code.org/c/csp1"
-        ],
-        [
-          "vocabulary",
-          "https://curriculum.code.org/csp/unit1/vocab/"
-        ],
-        [
-          "standardMappings",
-          "https://curriculum.code.org/csp/unit1/standards/"
-        ],
-        [
-          "professionalLearning",
-          "https://studio.code.org/s/csp1-support"
-        ]
-      ],
       "use_legacy_lesson_plans": true,
       "version_year": "2017"
     },
     "new_name": "csp1-2017",
     "family_name": "csp1",
-    "serialized_at": "2021-11-22 17:07:07 UTC",
+    "serialized_at": "2022-03-22 21:16:28 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3274,7 +3252,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_socialBelonging_intervention",
+        "level.key": "csp_socialBelonging_control",
         "script_level.level_keys": [
           "csp_socialBelonging_control",
           "csp_socialBelonging_intervention"
@@ -3287,7 +3265,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_socialBelonging_control",
+        "level.key": "csp_socialBelonging_intervention",
         "script_level.level_keys": [
           "csp_socialBelonging_control",
           "csp_socialBelonging_intervention"
@@ -4200,7 +4178,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_affirmation_intervention",
+        "level.key": "csp_affirmation_control",
         "script_level.level_keys": [
           "csp_affirmation_control",
           "csp_affirmation_intervention"
@@ -4213,7 +4191,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_affirmation_control",
+        "level.key": "csp_affirmation_intervention",
         "script_level.level_keys": [
           "csp_affirmation_control",
           "csp_affirmation_intervention"
@@ -4262,13 +4240,96 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "Lesson Plans",
+      "url": "https://curriculum.code.org/csp/unit1/",
+      "key": "lesson_plans_2",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_plans_2"
+      }
+    },
+    {
+      "name": "Professional Learning",
+      "url": "https://studio.code.org/s/csp1-support",
+      "key": "professional_learning",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "professional_learning"
+      }
+    },
+    {
+      "name": "Standard Mappings",
+      "url": "https://curriculum.code.org/csp/unit1/standards/",
+      "key": "standard_mappings_2",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "standard_mappings_2"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csp1",
+      "key": "teacher_forum_1",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum_1"
+      }
+    },
+    {
+      "name": "Vocabulary",
+      "url": "https://curriculum.code.org/csp/unit1/vocab/",
+      "key": "vocabulary",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "vocabulary"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "lesson_plans_2",
+        "script.name": "csp1-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "professional_learning",
+        "script.name": "csp1-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "standard_mappings_2",
+        "script.name": "csp1-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum_1",
+        "script.name": "csp1-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "vocabulary",
+        "script.name": "csp1-2017"
+      }
+    }
   ],
   "scripts_student_resources": [
 

@@ -7,7 +7,7 @@
 var msg = require('./locale');
 
 var generateSetterCode = function(ctx, name) {
-  var value = ctx.getTitleValue('VALUE');
+  var value = ctx.getFieldValue('VALUE');
   if (value === 'random') {
     var allValues = ctx.VALUES.slice(1).map(function(item) {
       return item[1];
@@ -29,8 +29,8 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block to handle event when the Left arrow button is pressed.
     helpUrl: '',
     init: function() {
-      this.setHSV(140, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(msg.whenLeft());
+      Blockly.cdoUtils.setHSV(this, 140, 1.0, 0.74);
+      this.appendDummyInput().appendField(msg.whenLeft());
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(msg.whenLeftTooltip());
@@ -46,8 +46,8 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block to handle event when the Right arrow button is pressed.
     helpUrl: '',
     init: function() {
-      this.setHSV(140, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(msg.whenRight());
+      Blockly.cdoUtils.setHSV(this, 140, 1.0, 0.74);
+      this.appendDummyInput().appendField(msg.whenRight());
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(msg.whenRightTooltip());
@@ -63,8 +63,8 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block to handle event when the Up arrow button is pressed.
     helpUrl: '',
     init: function() {
-      this.setHSV(140, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(msg.whenUp());
+      Blockly.cdoUtils.setHSV(this, 140, 1.0, 0.74);
+      this.appendDummyInput().appendField(msg.whenUp());
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(msg.whenUpTooltip());
@@ -80,8 +80,8 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block to handle event when the Down arrow button is pressed.
     helpUrl: '',
     init: function() {
-      this.setHSV(140, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(msg.whenDown());
+      Blockly.cdoUtils.setHSV(this, 140, 1.0, 0.74);
+      this.appendDummyInput().appendField(msg.whenDown());
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(msg.whenDownTooltip());
@@ -97,8 +97,8 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block to handle event when a wall/ball collision occurs.
     helpUrl: '',
     init: function() {
-      this.setHSV(140, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(msg.whenWallCollided());
+      Blockly.cdoUtils.setHSV(this, 140, 1.0, 0.74);
+      this.appendDummyInput().appendField(msg.whenWallCollided());
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(msg.whenWallCollidedTooltip());
@@ -114,8 +114,8 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block to handle event when a ball enters a goal.
     helpUrl: '',
     init: function() {
-      this.setHSV(140, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(msg.whenBallInGoal());
+      Blockly.cdoUtils.setHSV(this, 140, 1.0, 0.74);
+      this.appendDummyInput().appendField(msg.whenBallInGoal());
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(msg.whenBallInGoalTooltip());
@@ -131,8 +131,8 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block to handle event when a ball misses the paddle.
     helpUrl: '',
     init: function() {
-      this.setHSV(140, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(skin.blockMsgs.paddleMiss);
+      Blockly.cdoUtils.setHSV(this, 140, 1.0, 0.74);
+      this.appendDummyInput().appendField(skin.blockMsgs.paddleMiss);
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(msg.whenBallMissesPaddleTooltip());
@@ -148,8 +148,8 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block to handle event when a wall collision occurs.
     helpUrl: '',
     init: function() {
-      this.setHSV(140, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(skin.blockMsgs.paddleCollide);
+      Blockly.cdoUtils.setHSV(this, 140, 1.0, 0.74);
+      this.appendDummyInput().appendField(skin.blockMsgs.paddleCollide);
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(skin.blockMsgs.paddleCollideTooltip);
@@ -165,8 +165,8 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for moving left.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(msg.moveLeft());
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      this.appendDummyInput().appendField(msg.moveLeft());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.moveLeftTooltip());
@@ -182,8 +182,8 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for moving right.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(msg.moveRight());
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      this.appendDummyInput().appendField(msg.moveRight());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.moveRightTooltip());
@@ -199,8 +199,8 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for moving up.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(msg.moveUp());
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      this.appendDummyInput().appendField(msg.moveUp());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.moveUpTooltip());
@@ -216,8 +216,8 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for moving down.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(msg.moveDown());
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      this.appendDummyInput().appendField(msg.moveDown());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.moveDownTooltip());
@@ -233,8 +233,8 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for playing sound.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      this.appendDummyInput().appendField(
         new blockly.FieldDropdown(this.SOUNDS),
         'SOUND'
       );
@@ -260,7 +260,7 @@ exports.install = function(blockly, blockInstallOptions) {
       "Bounce.playSound('block_id_" +
       this.id +
       "', '" +
-      this.getTitleValue('SOUND') +
+      this.getFieldValue('SOUND') +
       "');\n"
     );
   };
@@ -269,8 +269,8 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for incrementing the player's score.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(msg.incrementPlayerScore());
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      this.appendDummyInput().appendField(msg.incrementPlayerScore());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.incrementPlayerScoreTooltip());
@@ -286,8 +286,8 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for incrementing the opponent's score.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(msg.incrementOpponentScore());
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      this.appendDummyInput().appendField(msg.incrementOpponentScore());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.incrementOpponentScoreTooltip());
@@ -303,8 +303,8 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for bouncing a ball.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(msg.bounceBall());
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      this.appendDummyInput().appendField(msg.bounceBall());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.bounceBallTooltip());
@@ -320,8 +320,8 @@ exports.install = function(blockly, blockInstallOptions) {
     // Block for launching a ball.
     helpUrl: '',
     init: function() {
-      this.setHSV(184, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(skin.blockMsgs.launchBall);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      this.appendDummyInput().appendField(skin.blockMsgs.launchBall);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(skin.blockMsgs.launchBallTooltip);
@@ -340,8 +340,8 @@ exports.install = function(blockly, blockInstallOptions) {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[3][1]); // default to normal
 
-      this.setHSV(184, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      this.appendDummyInput().appendField(dropdown, 'VALUE');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.setBallSpeedTooltip());
@@ -368,8 +368,8 @@ exports.install = function(blockly, blockInstallOptions) {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[3][1]); // default to normal
 
-      this.setHSV(184, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      this.appendDummyInput().appendField(dropdown, 'VALUE');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(skin.blockMsgs.paddleSpeedTooltip);
@@ -398,8 +398,8 @@ exports.install = function(blockly, blockInstallOptions) {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]); // default to hardcourt
 
-      this.setHSV(312, 0.32, 0.62);
-      this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+      Blockly.cdoUtils.setHSV(this, 312, 0.32, 0.62);
+      this.appendDummyInput().appendField(dropdown, 'VALUE');
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -433,8 +433,8 @@ exports.install = function(blockly, blockInstallOptions) {
         dropdown.setValue(this.VALUES[14][1]);
       }
 
-      this.setHSV(184, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
+      this.appendDummyInput().appendField(dropdown, 'VALUE');
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -459,8 +459,8 @@ exports.install = function(blockly, blockInstallOptions) {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]); // default to hardcourt
 
-      this.setHSV(312, 0.32, 0.62);
-      this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+      Blockly.cdoUtils.setHSV(this, 312, 0.32, 0.62);
+      this.appendDummyInput().appendField(dropdown, 'VALUE');
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -485,8 +485,8 @@ exports.install = function(blockly, blockInstallOptions) {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]); // default to hardcourt
 
-      this.setHSV(312, 0.32, 0.62);
-      this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+      Blockly.cdoUtils.setHSV(this, 312, 0.32, 0.62);
+      this.appendDummyInput().appendField(dropdown, 'VALUE');
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -515,10 +515,10 @@ exports.install = function(blockly, blockInstallOptions) {
         dropdown.setValue(this.VALUES[1][1]);
       }
 
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       this.appendDummyInput()
-        .appendTitle(skin.blockMsgs.setPaddle)
-        .appendTitle(dropdown, 'VALUE');
+        .appendField(skin.blockMsgs.setPaddle)
+        .appendField(dropdown, 'VALUE');
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);

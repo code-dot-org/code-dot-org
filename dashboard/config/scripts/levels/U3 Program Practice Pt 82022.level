@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-01-06T20:02:32.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -19,7 +15,7 @@
     },
     "embed": "false",
     "instructions_important": "false",
-    "long_instructions": "# Do This\r\n\r\nRun this program to see how it works. Then add code to the app to make the \"Excited\" button work.\r\n\r\n* Pick a song, image, and text to show when the button is clicked\r\n* Make sure only the \"Excited\" button has a thick border when it's clicked\r\n* You can use the code for the other buttons for ideas on how to write the code",
+    "long_instructions": "# Do This\r\n\r\nRun this program to see how it works. Then add code to the app to make the \"Excited\" button work.\r\n\r\n* Pick a song, image, and text to show when the button is clicked\r\n* Make sure only the \"Excited\" button has a thick border when it's clicked\r\n* You can use the code for the other buttons for ideas on how to write the code\r\n",
     "submittable": "false",
     "start_blocks": "// Button to update screen to excited image, text, and song\r\nonEvent(\"calmButton\", \"click\", function( ) {\r\n  setProperty(\"calmButton\",\"border-width\",2);\r\n  setProperty(\"tiredButton\",\"border-width\",0);\r\n  setProperty(\"excitedButton\",\"border-width\",0);\r\n\r\n  setProperty(\"mainImage\",\"image\",\"https://cdn.pixabay.com/photo/2015/10/30/20/13/sunrise-1014712_960_720.jpg\");\r\n  setProperty(\"mainText\",\"text\",\"Your mind is clear. Breathe deeply and enjoy the calm.\");\r\n  stopSound();\r\n  playSound(\"sound://category_loops/stabilizing_breath_loop1.mp3\", true);\r\n});\r\n\r\n// Button to update screen to tired image, text, and song\r\nonEvent(\"tiredButton\", \"click\", function( ) {\r\n  setProperty(\"tiredButton\",\"border-width\",2);\r\n  setProperty(\"calmButton\",\"border-width\",0);\r\n  setProperty(\"excitedButton\",\"border-width\",0);\r\n\r\n  setProperty(\"mainImage\",\"image\",\"https://cdn.pixabay.com/photo/2016/03/27/20/51/bed-1284238_960_720.jpg\");\r\n  setProperty(\"mainText\",\"text\",\"Let yourself rest and save your energy.\");\r\n  stopSound();\r\n  playSound(\"sound://category_loops/vibrant_game_harping_down_forever_loop_1.mp3\", false);\r\n});\r\n",
     "never_autoplay_video": "true",
@@ -52,11 +48,18 @@
     "name_suffix": "2022",
     "video_key": "csd_debugging",
     "ai_enabled": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "display_name": "Mood Minder App",
+    "bubble_choice_description": "Run this program to see how it works. Then add code to the app to make all the buttons work.\r\n\r\n",
+    "thumbnail_url": "https://images.code.org/f3e7cb1d7a71bce644008416a9eb97c6-image-1647323879885.52.47 PM.png"
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-01-06T20:02:32.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:02:32.059+00:00\",\"changed\":[\"cloned from \\\"U3 Program Practice Pt 8_2021\\\"\"],\"cloned_from\":\"U3 Program Practice Pt 8_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:02:32.059+00:00\",\"changed\":[\"cloned from \\\"U3 Program Practice Pt 8_2021\\\"\"],\"cloned_from\":\"U3 Program Practice Pt 8_2021\"},{\"changed_at\":\"2022-03-15 05:58:22 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

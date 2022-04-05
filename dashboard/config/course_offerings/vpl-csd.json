@@ -1,6 +1,7 @@
 {
   "key": "vpl-csd",
-  "display_name": "vpl-csd",
-  "category": "other",
-  "is_featured": false
+  "display_name": "CS Discoveries Virtual Professional Learning",
+  "category": "pl_virtual",
+  "is_featured": false,
+  "assignable": true
 }

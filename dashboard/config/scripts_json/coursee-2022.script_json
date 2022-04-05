@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2022-02-25 20:07:06 UTC",
+    "serialized_at": "2022-03-30 21:11:10 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1452,7 +1452,8 @@
       "key": "669b4c4b-acd6-42be-a74b-326176efa14b",
       "position": 4,
       "properties": {
-        "name": "Day 4 - Revise Your Project (45 minutes)"
+        "duration": 45,
+        "name": "Day 4 - Revise Your Project"
       },
       "seeding_key": {
         "lesson_activity.key": "669b4c4b-acd6-42be-a74b-326176efa14b",
@@ -1629,6 +1630,17 @@
       }
     },
     {
+      "key": "41244c64-de49-47a8-a227-ffac166959f4",
+      "position": 2,
+      "properties": {
+        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Vocabulary\" slide\n\nBefore heading into the Main Activity, introduce or review today's lesson vocabulary.\n- **Behavior** - An action that a sprite performs continuously until it’s told to stop.\n\n- **Sprite** - A graphic on the screen with a location, size, and appearance.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "41244c64-de49-47a8-a227-ffac166959f4",
+        "lesson_activity.key": "4d2e3a7b-6f10-4ae8-a150-38c094379da1"
+      }
+    },
+    {
       "key": "9a18adb7-3bfe-410d-89dc-79ccde9c3419",
       "position": 1,
       "properties": {
@@ -1649,7 +1661,7 @@
       "key": "f3f9ef44-d791-497c-83b3-5cc54a98e3f8",
       "position": 2,
       "properties": {
-        "description": "- *What blocks would we need to connect to make the tumbleweed spin?*\n- _What would happen if we told the sprite to begin two behaviors at once?_\n- _Will the sprite ever stop these behaviors on its own?_\n- _If we want the sprite to stop a behavior when we click it, how might we do that?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Vocabulary\" slide\n\nBefore heading into the Main Activity, introduce or review today's lesson vocabulary."
+        "description": "- *What blocks would we need to connect to make the tumbleweed spin?*\n- _What would happen if we told the sprite to begin two behaviors at once?_\n- _Will the sprite ever stop these behaviors on its own?_\n- _If we want the sprite to stop a behavior when we click it, how might we do that?_\n\n"
       },
       "seeding_key": {
         "activity_section.key": "f3f9ef44-d791-497c-83b3-5cc54a98e3f8",
@@ -1784,7 +1796,7 @@
       "key": "c348bc71-c908-4f5f-8ebe-b5dcd92cd4dc",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “A Series of Events” slide\n\nLet’s see if we can find a pattern here:\n* When you flip a switch, the lights turn on.\n* When you tap on a device, an app starts.\n* When the alarm goes off, you get out of bed.\n* When (event), (action).\n\nIn computer science, events cause other actions to happen. Our new vocabulary word today is event. Normally when we hear “event” we think of:\n* Field trip\n* Competition\n* Birthday Party\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “A Series of Events” slide\n\nLet’s see if we can find a pattern here:\n* When you flip a switch, the lights turn on.\n* When you tap on a device, an app starts.\n* When the alarm goes off, you get out of bed.\n* When (event), (action).\n\nIn computer science, events cause other actions to happen. Our new vocabulary word today is event. Normally when we hear “event” we think of:\n* Field trip\n* Competition\n* Birthday Party\n\n####Vocabulary\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\nIn Computer Science, events cause other actions to happen.\n\n- **Event** - An action that causes something to happen",
         "name": "A Series of Events"
       },
       "seeding_key": {
@@ -2057,6 +2069,17 @@
       }
     },
     {
+      "key": "f6fe01a0-0ae6-4928-b5eb-711f8eb4d884",
+      "position": 2,
+      "properties": {
+        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n- **Loop** - The action of doing something over and over again.\n- **Repeat** - To do something again."
+      },
+      "seeding_key": {
+        "activity_section.key": "f6fe01a0-0ae6-4928-b5eb-711f8eb4d884",
+        "lesson_activity.key": "ca73e49f-ddae-48b1-88b4-99adf0c7d092"
+      }
+    },
+    {
       "key": "11131345-98a9-4474-8782-c0d97fe84206",
       "position": 1,
       "properties": {
@@ -2181,6 +2204,17 @@
       },
       "seeding_key": {
         "activity_section.key": "83e6c37d-1cc1-49b9-b208-79567063fb20",
+        "lesson_activity.key": "f063bf55-a69c-43d8-aacf-9bf5fdc6e5b2"
+      }
+    },
+    {
+      "key": "c40866a4-83af-4fd6-b268-250902bf7f0c",
+      "position": 2,
+      "properties": {
+        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide.\n- **Loop** - The action of doing something over and over again.\n- **Repeat** - To do something again.\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "c40866a4-83af-4fd6-b268-250902bf7f0c",
         "lesson_activity.key": "f063bf55-a69c-43d8-aacf-9bf5fdc6e5b2"
       }
     },
@@ -2331,11 +2365,22 @@
       "key": "0242f01c-8a92-4d38-9d15-93132d346a76",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _Think back to the previous lesson: \nFancy Shapes Using Nested Loops_\n* _If you were to teach nested loops to a friend, what would you say to help them understand?_\n\n**Do This**: If there's time, give an introduction to the main characters of today's puzzles, _Anna_ and _Elsa_ from _\"Frozen\"_. Give the class the sisters' backstory if the class doesn't already know it. To build excitement, tell the class they will be using nested loops to make some fantastic drawings with _Anna_ and _Elsa's_ ice skates!",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _Think back to the previous lesson: \nFancy Shapes Using Nested Loops_\n* _If you were to teach nested loops to a friend, what would you say to help them understand?_\n\n",
         "name": "Introduction\r"
       },
       "seeding_key": {
         "activity_section.key": "0242f01c-8a92-4d38-9d15-93132d346a76",
+        "lesson_activity.key": "ddea6cb3-a9cd-4715-9026-d36bf966b753"
+      }
+    },
+    {
+      "key": "e98d8362-4b91-4cc4-b62d-cda67d7013ec",
+      "position": 2,
+      "properties": {
+        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Loop** - The action of doing something over and over again.\n- **Repeat** - To do something again.\n\n**Do This**: If there's time, give an introduction to the main characters of today's puzzles, _Anna_ and _Elsa_ from _\"Frozen\"_. Give the class the sisters' backstory if the class doesn't already know it. To build excitement, tell the class they will be using nested loops to make some fantastic drawings with _Anna_ and _Elsa's_ ice skates!"
+      },
+      "seeding_key": {
+        "activity_section.key": "e98d8362-4b91-4cc4-b62d-cda67d7013ec",
         "lesson_activity.key": "ddea6cb3-a9cd-4715-9026-d36bf966b753"
       }
     },
@@ -2391,7 +2436,7 @@
       "key": "b6db9c2f-2e77-42e0-bc68-93d8f8e9b4b4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _What is the chorus to your favorite song?_\n\n####Vocabulary\n\nThis lesson has one new and important word:\n\n - **Function** - Say it with me: Func-shun \n\nA piece of code that you can call over and over again.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _What is the chorus to your favorite song?_\n\n####Vocabulary\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\nThis lesson has one new and important word:\n\n - **Function** - A piece of code that you can call over and over again.",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -2590,6 +2635,17 @@
       }
     },
     {
+      "key": "4f0d000b-5d6e-46ab-949c-e7218c87b9d4",
+      "position": 2,
+      "properties": {
+        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Function** - A piece of code that you can call over and over again."
+      },
+      "seeding_key": {
+        "activity_section.key": "4f0d000b-5d6e-46ab-949c-e7218c87b9d4",
+        "lesson_activity.key": "29e0563f-459b-4d33-8100-3677a52b69d0"
+      }
+    },
+    {
       "key": "60cd3205-b7f2-4ab6-b83a-eaf75942b728",
       "position": 1,
       "properties": {
@@ -2757,11 +2813,33 @@
       }
     },
     {
-      "key": "81a714a2-bfdb-4e01-a393-3b887eb5b555",
+      "key": "73440a78-9446-4eb3-859e-35c77ce9f79a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _Think back to the Songwriting lesson: When writing a song, when should you use a function?_\n\nAsk the class to think back to \"Functions Unplugged: Songwriting\" and recall what a function is. Open a discussion about when to use a function when writing a song.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Using Functions” slide\n\nTell the class that there are two main components to using functions.\n\n1. **The Declaration**: Function declarations are what create a function. In a function declaration, you fill in the function with code and you give the function a name. You must declare a function before you can use it.\n\n2. **The Call**:\n\tFunction calls are what makes the program run the code in the function. To call a function, you place the name of the function in your program. Make sure your function is properly defined before calling it in your program.\n    \nThe class can use songwriting as an example to understand these two components. In the unplugged activity, the function containing the lyrics to the chorus was named \"chorus\". When we first made this function, we circled the lyrics that would go in the function. Once we named the function, we could read through the lyrics and replace the repeated chorus lyrics with a function call to \"chorus\".\n\nContinue the conversation until students have a basic understanding of functions being declared and called. If students don't get to this point, make sure to do one of the bridging activities before moving into the Code.org puzzles.",
-        "name": "Introduction\r"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _Think back to the Songwriting lesson: When writing a song, when should you use a function?_",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "73440a78-9446-4eb3-859e-35c77ce9f79a",
+        "lesson_activity.key": "7fef7c1f-99e3-4375-9440-2e0b2dc05349"
+      }
+    },
+    {
+      "key": "30852e3f-e1e0-433f-92a5-fe1e8780f11e",
+      "position": 2,
+      "properties": {
+        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Function** - A piece of code that you can call over and over again."
+      },
+      "seeding_key": {
+        "activity_section.key": "30852e3f-e1e0-433f-92a5-fe1e8780f11e",
+        "lesson_activity.key": "7fef7c1f-99e3-4375-9440-2e0b2dc05349"
+      }
+    },
+    {
+      "key": "81a714a2-bfdb-4e01-a393-3b887eb5b555",
+      "position": 3,
+      "properties": {
+        "description": "\n\nAsk the class to think back to \"Functions Unplugged: Songwriting\" and recall what a function is. Open a discussion about when to use a function when writing a song.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Using Functions” slide\n\nTell the class that there are two main components to using functions.\n\n1. **The Declaration**: Function declarations are what create a function. In a function declaration, you fill in the function with code and you give the function a name. You must declare a function before you can use it.\n\n2. **The Call**:\n\tFunction calls are what makes the program run the code in the function. To call a function, you place the name of the function in your program. Make sure your function is properly defined before calling it in your program.\n    \nThe class can use songwriting as an example to understand these two components. In the unplugged activity, the function containing the lyrics to the chorus was named \"chorus\". When we first made this function, we circled the lyrics that would go in the function. Once we named the function, we could read through the lyrics and replace the repeated chorus lyrics with a function call to \"chorus\".\n\nContinue the conversation until students have a basic understanding of functions being declared and called. If students don't get to this point, make sure to do one of the bridging activities before moving into the Code.org puzzles."
       },
       "seeding_key": {
         "activity_section.key": "81a714a2-bfdb-4e01-a393-3b887eb5b555",
@@ -2985,7 +3063,7 @@
       "key": "7538f281-8565-4235-a3f1-a40a2679d73d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _When might you use a conditional in your code?_ \n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Vocabulary\" slide\n\n**Do This**: Tell students they will be using conditionals to solve this problem on Code.org. Give the definition of:\n\n - **Condition**: A statement that a program checks to see if it is true or false. If true, an action is taken. Otherwise, the action is ignored.\n - **Conditionals**: Statements that only run under certain conditions.\n\nOpen up a discussion of when you might use a conditional in your code.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _When might you use a conditional in your code?_ \n\nOpen up a discussion of when you might use a conditional in your code.\n \n####Vocabulary\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Vocabulary\" slide\n\n**Do This**: Tell students they will be using conditionals to solve this problem on Code.org. Give the definition of:\n\n - **Condition**: A statement that a program checks to see if it is true or false. If true, an action is taken. Otherwise, the action is ignored.\n - **Conditionals**: Statements that only run under certain conditions.\n- **While Loop** - A loop that continues to repeat while a condition is true.\n\n",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -3143,6 +3221,17 @@
       }
     },
     {
+      "key": "0ea072c4-8a86-4897-b124-2c4ddad95b6c",
+      "position": 2,
+      "properties": {
+        "description": "####Vocabulary\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Vocabulary\" slide\n\n- **Conditionals** - Statements that only run under certain conditions.\n- **Function** - A piece of code that you can easily call over and over again."
+      },
+      "seeding_key": {
+        "activity_section.key": "0ea072c4-8a86-4897-b124-2c4ddad95b6c",
+        "lesson_activity.key": "8587af1b-82c6-44bb-aee2-1500f125d768"
+      }
+    },
+    {
       "key": "64c2a884-631f-45d1-b192-29788fe3e807",
       "position": 1,
       "properties": {
@@ -3290,6 +3379,17 @@
       }
     },
     {
+      "key": "b78cb84f-32dd-4cb6-ad90-ff1dcc136e71",
+      "position": 3,
+      "properties": {
+        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Copyright** - the exclusive legal right to print, publish, perform, film, or record literary, artistic, or musical material, and to authorize others to do the same.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "b78cb84f-32dd-4cb6-ad90-ff1dcc136e71",
+        "lesson_activity.key": "74d92853-37dc-4cd5-9d69-087420e81160"
+      }
+    },
+    {
       "key": "90986348-020e-4b00-b92f-ba4160018feb",
       "position": 1,
       "properties": {
@@ -3397,11 +3497,33 @@
       }
     },
     {
-      "key": "5605c699-7bc3-4d0e-b7fd-f50cb86f79e8",
+      "key": "b032e6b2-4dfd-431c-a938-06a8bd4a8056",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n* _Today, you'll start the final lesson of the unit, in which you will design and code your own project._\n* _Before you start, what are three skills or qualities that you think will be important as you complete this project?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “End of Course” slide\n\n**Say**: You’re going to be designing a project using Sprite Lab, Artist, or Frozen. If you choose Sprite Lab, you will show that you know: sprites, behaviors, and events. If you choose Artist or Frozen, you will show that you know: loops, nested loops, and functions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Day 1: Explore” slide\n\nGoal: This part of the process is an exploration.  Students will sit down with a stage full of example projects to remix and learn.  Not only will this give students an idea of what is possible, it will also help them see the limitations of the tool.\n\nGive students a day to play with and remix the example projects found in the lesson. Have them use their journals (or notebook paper) to keep track of thoughts and ideas as they go.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Example Projects” slide\n\nThis activity should be done in the same pairs/groups that will be working on projects together over the next several lessons.\n\nMake sure your class understands that they will be working with projects of their own, so they should pay close attention to how these programs were written, as well as the concepts that they use.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n* _Today, you'll start the final lesson of the unit, in which you will design and code your own project._\n* _Before you start, what are three skills or qualities that you think will be important as you complete this project?_",
         "name": "Explore"
+      },
+      "seeding_key": {
+        "activity_section.key": "b032e6b2-4dfd-431c-a938-06a8bd4a8056",
+        "lesson_activity.key": "03e20d6a-151e-4f7c-8455-81945f0789b6"
+      }
+    },
+    {
+      "key": "5cc0c390-e063-48ea-bedc-7c289fa7ef2a",
+      "position": 2,
+      "properties": {
+        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Define** - Figure out the details of the problems that you are trying to solve.\n- **Prepare** - Research, plan, and acquire materials for the activity you are about to do.\n- **Reflect** - Carefully think back on something with the intention of improving the outcome in the future.\n- **Try** - Attempt to do something."
+      },
+      "seeding_key": {
+        "activity_section.key": "5cc0c390-e063-48ea-bedc-7c289fa7ef2a",
+        "lesson_activity.key": "03e20d6a-151e-4f7c-8455-81945f0789b6"
+      }
+    },
+    {
+      "key": "5605c699-7bc3-4d0e-b7fd-f50cb86f79e8",
+      "position": 3,
+      "properties": {
+        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “End of Course” slide\n\n**Say**: You’re going to be designing a project using Sprite Lab, Artist, or Frozen. If you choose Sprite Lab, you will show that you know: sprites, behaviors, and events. If you choose Artist or Frozen, you will show that you know: loops, nested loops, and functions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Day 1: Explore” slide\n\nGoal: This part of the process is an exploration.  Students will sit down with a stage full of example projects to remix and learn.  Not only will this give students an idea of what is possible, it will also help them see the limitations of the tool.\n\nGive students a day to play with and remix the example projects found in the lesson. Have them use their journals (or notebook paper) to keep track of thoughts and ideas as they go.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Example Projects” slide\n\nThis activity should be done in the same pairs/groups that will be working on projects together over the next several lessons.\n\nMake sure your class understands that they will be working with projects of their own, so they should pay close attention to how these programs were written, as well as the concepts that they use."
       },
       "seeding_key": {
         "activity_section.key": "5605c699-7bc3-4d0e-b7fd-f50cb86f79e8",
@@ -3410,7 +3532,7 @@
     },
     {
       "key": "8c2b4d58-a189-4531-bc7c-bfcb4bce7ca8",
-      "position": 2,
+      "position": 4,
       "properties": {
         "progression_name": "Example Projects"
       },
@@ -3421,7 +3543,7 @@
     },
     {
       "key": "e43bfad4-b411-4e0d-a59c-2e4764fd9c65",
-      "position": 3,
+      "position": 5,
       "properties": {
         "progression_name": "Create your project"
       },

@@ -181,9 +181,9 @@ class Lesson < ApplicationRecord
   # page, and the lesson plan pdf as a backup.
   def start_url
     if script_levels.first
-      return url_from_path(build_script_level_path(script_levels.first))
+      return url_from_path(build_script_level_path(script_levels.first), CDO.default_scheme)
     elsif script.include_student_lesson_plans && script.is_migrated
-      return url_from_path(script_lesson_student_path(script, self))
+      return url_from_path(script_lesson_student_path(script, self), CDO.default_scheme)
     elsif student_lesson_plan_pdf_url
       return student_lesson_plan_pdf_url
     end
@@ -354,12 +354,16 @@ class Lesson < ApplicationRecord
     ScriptConfig.hoc_scripts.include?(script.name) ? lesson_path(id: id) : script_lesson_path(script, self)
   end
 
+  def total_lesson_duration
+    lesson_activities.map(&:summarize).sum {|activity| activity[:duration] || 0}
+  end
+
   def summarize_for_calendar
     {
       id: id,
       lessonNumber: relative_position,
       title: localized_title,
-      duration: lesson_activities.map(&:summarize).sum {|activity| activity[:duration] || 0},
+      duration: total_lesson_duration,
       assessment: !!assessment,
       unplugged: unplugged,
       url: script_lesson_path(script, self)
@@ -433,6 +437,7 @@ class Lesson < ApplicationRecord
       position: relative_position,
       lockable: lockable,
       key: key,
+      duration: total_lesson_duration,
       displayName: localized_name_for_lesson_show,
       overview: render_property(:overview),
       announcements: announcements,
@@ -728,7 +733,10 @@ class Lesson < ApplicationRecord
     lessons = Lesson.eager_load(script: :course_version).
       where("scripts.properties -> '$.curriculum_umbrella' = ?", script.curriculum_umbrella).
       where(key: key).
-      order("scripts.properties -> '$.version_year'", 'scripts.name')
+      # This SQL string is not at risk for injection vulnerabilites because
+      # it's not actually using any user-provided values, just
+      # levelbuilder-defined ones, so it's safe to wrap in Arel.sql
+      order(Arel.sql("scripts.properties -> '$.version_year'"), 'scripts.name')
     lessons - [self]
   end
 
@@ -772,7 +780,8 @@ class Lesson < ApplicationRecord
     raise 'Destination unit and lesson must be in a course version' if destination_unit.get_course_version.nil?
 
     copied_lesson = dup
-    copied_lesson.key = copied_lesson.name
+    # scripts.en.yml cannot handle the '.' character in key names
+    copied_lesson.key = copied_lesson.name.delete('.')
     copied_lesson.script_id = destination_unit.id
 
     destination_lesson_group = destination_unit.lesson_groups.last

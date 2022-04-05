@@ -16,6 +16,13 @@ class TestController < ApplicationController
     head :ok
   end
 
+  def facilitator_access
+    return unless (user = current_user)
+    user.permission = UserPermission::FACILITATOR
+    user.save!
+    head :ok
+  end
+
   def enroll_in_plc_course
     return unless (user = current_user)
     unit_group = UnitGroup.find_by(name: 'All The PLC Things')
@@ -33,6 +40,37 @@ class TestController < ApplicationController
         unit_assignment.plc_course_unit.plc_learning_modules.find_by(module_type: Plc::LearningModule::PRACTICE_MODULE)
       ]
     )
+  end
+
+  def create_student_section_assigned_to_script
+    return unless (user = current_user)
+    script = Script.find_by_name(params.require(:script_name))
+
+    Section.create!(name: "New Section", user: user, script: script, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    head :ok
+  end
+
+  def assign_course_and_unit_as_student
+    return unless (user = current_user)
+    script = Script.find_by_name(params.require(:script_name))
+    course = UnitGroup.find_by_name(params.require(:course_name))
+
+    name = "Fake User"
+    email = "user#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
+    password = name + "password"
+    attributes = {
+      name: name,
+      email: email,
+      password: password,
+      user_type: "teacher",
+      age: "21+"
+    }
+    fake_user = User.create!(attributes)
+
+    section = Section.create(name: "New Section", user: fake_user, script_id: script.id, course_id: course.id)
+    section.students << user
+    section.save!
+    head :ok
   end
 
   def assign_script_as_student

@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2022-02-28 18:35:23 UTC",
+    "serialized_at": "2022-03-11 12:08:34 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
