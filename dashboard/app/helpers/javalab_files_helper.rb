@@ -70,9 +70,6 @@ module JavalabFilesHelper
   # If the level doesn't have a maze, that field will not be present.
   def self.get_project_files_with_override_validation(channel_id, level_id, validation)
     all_files = get_project_files(channel_id, level_id)
-    unless all_files["validation"]
-      all_files["validation"] = {}
-    end
     all_files["validation"] = {source: validation}.to_json
     all_files
   end

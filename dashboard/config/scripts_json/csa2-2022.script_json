@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-24 12:02:08 UTC",
+    "serialized_at": "2022-04-04 16:04:43 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -316,10 +316,11 @@
       "key": "lesson-5",
       "name": "Unit 2 Assessment",
       "absolute_position": 15,
-      "lockable": false,
+      "lockable": true,
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
+        "assessment": true,
         "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
         "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource",
         "student_overview": "Assess your progress through the Unit 2 Assessment."
@@ -1418,7 +1419,7 @@
       "key": "9bf2754a-5ec7-4964-b760-4b7a86379cf0",
       "position": 5,
       "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.3\n* Topic Questions 1.4\n* Topic Questions 2.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.3\n* Topic Questions 1.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "name": "AP Classroom Topic Questions"
       },
       "seeding_key": {
@@ -1662,6 +1663,18 @@
       }
     },
     {
+      "key": "43bc5d3f-4e76-4ad6-a001-aa02506d245f",
+      "position": 4,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "activity_section.key": "43bc5d3f-4e76-4ad6-a001-aa02506d245f",
+        "lesson_activity.key": "2e3c40ad-d9b4-462a-9b94-acfcf48ce3d1"
+      }
+    },
+    {
       "key": "c7f7332f-eb42-4ef9-a0f6-32ef845d04c7",
       "position": 1,
       "properties": {
@@ -1851,7 +1864,7 @@
       "key": "17afc55b-d5b9-4904-8ddd-74d5eeaec04d",
       "position": 5,
       "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.2\n* Topic Questions 5.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "name": "AP Classroom Topic Questions"
       },
       "seeding_key": {
@@ -1904,10 +1917,27 @@
       }
     },
     {
-      "key": "578c7cfd-c028-47d1-96ec-8ea39b1f0dd1",
+      "key": "a4ec562c-05ed-416e-9b18-a041c59cae38",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *application program interface (API)* and *library*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the `java.util` package and the `Scanner` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Creating a Scanner Object*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *application program interface (API)* and *library*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the `java.util` package and the `Scanner` class.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The term *package* was introduced in Unit 1 Lesson 3 when The Neighborhood was introduced. Ask students to recall the meaning of *package* and how The Neighborhood consists of classes that can be imported and used."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a4ec562c-05ed-416e-9b18-a041c59cae38",
+        "lesson_activity.key": "73e5db0d-c2c9-42ef-87e2-f60e11d00c6b"
+      }
+    },
+    {
+      "key": "578c7cfd-c028-47d1-96ec-8ea39b1f0dd1",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Creating a Scanner Object*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict: Getting User Input"
       },
       "seeding_key": {
@@ -1917,7 +1947,7 @@
     },
     {
       "key": "a784f712-b6f9-4c74-be5c-aee8e4d9dac3",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that a user can input values into the program. Students may wonder what other methods are in the `Scanner` class for getting user input."
       },
@@ -1928,7 +1958,7 @@
     },
     {
       "key": "1e78bcd2-9857-435a-90f9-d925e43b4228",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "The `Scanner` class has several methods for obtaining input based on the type of data we want to get from the user. Let's look at some of the methods that we will use today.",
         "remarks": true
@@ -1940,7 +1970,7 @@
     },
     {
       "key": "db8fb864-47b4-4022-819a-da241668ec1f",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Scanner Class Methods*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *What are some ways you could use these methods in your programs?*\n\n**Discussion Goal:** Students suggest types of information they could obtain from a user, such as asking how much paint a `Painter` object should start with or a flavor for a `Dessert` object.",
         "tips": [
@@ -1957,7 +1987,7 @@
     },
     {
       "key": "f8797801-0679-495d-824d-3b47d4abf696",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate common errors using `Scanner` class methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define `null` and `NullPointerException`."
       },
@@ -1968,7 +1998,7 @@
     },
     {
       "key": "d8f2d2bb-33e8-4aa5-8b9f-272ccde70828",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "The methods we saw in the video earlier are not the only methods available in the `Scanner` class. We can refer to the documentation for the `Scanner` class to see what methods it has and how to use them.",
         "duration": "15",
@@ -1982,7 +2012,7 @@
     },
     {
       "key": "55930d62-5967-421a-a7be-1def044d7878",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to access documentation in Java Lab.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students debug a program on Level 2 with a `NullPointer` exception, then continue to Level 3 to complete a choice level to create and use a `Scanner` object to obtain user input.",
         "progression_name": "Getting User Input"
@@ -2044,7 +2074,7 @@
       "key": "d8f7c0c2-30fb-4585-ae23-b553c85997c5",
       "position": 5,
       "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.2\n* Topic Questions 5.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
         "name": "AP Classroom Topic Questions"
       },
       "seeding_key": {
@@ -2094,7 +2124,7 @@
       "key": "2cc6621d-a7b0-46e3-8077-839b77cc7096",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review inheritance, efficiency, and redundant code.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review inheritance, efficiency, and redundant code.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2140,7 +2170,7 @@
       "key": "1e4c398e-1c83-4d14-b0d6-819c5b24f37b",
       "position": 5,
       "properties": {
-        "description": "**Do This:** Explain refactoring and discuss the example:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Two classes with redundant code\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Refactored using inheritance\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the code segments and the redundant code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *To refactor code is to improve the readability, reusability, or structure of program code without altering its functionality. Using inheritance, how can we refactor the code to follow the DRY principle?*\n\n**Discussion Goal:** Students note that the classes have the same instance variables and method. Students suggest refactoring the code to create a superclass and subclass so the instance variables and method are shared.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the refactored code segment and identify the superclass and subclasses.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted. ",
         "duration": "10",
         "name": "Refactoring Code",
         "progression_name": "Investigate: Superclasses and Subclasses"
@@ -2645,7 +2675,7 @@
       "key": "6c8a8390-272a-4adc-bb58-91920719d8a0",
       "position": 6,
       "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.4\n* Topic Questions 5.5\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.4\n* Topic Questions 3.1\n* Topic Questions 5.5\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "name": "AP Classroom Topic Questions"
       },
       "seeding_key": {
@@ -2832,7 +2862,7 @@
       "key": "ad87ec22-7fad-4dc7-800e-05427e087055",
       "position": 5,
       "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 9.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.6\n* Topic Questions 9.7\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "name": "AP Classroom Topic Questions"
       },
       "seeding_key": {
@@ -3578,7 +3608,8 @@
       "key": "edf6f69f-4dd2-421f-b2ad-7b37827bedf3",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Unit 2 Assessment on Code Studio."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Unit 2 Assessment on Code Studio.",
+        "progression_name": "Unit 2 Assessment"
       },
       "seeding_key": {
         "activity_section.key": "edf6f69f-4dd2-421f-b2ad-7b37827bedf3",
@@ -4866,6 +4897,28 @@
       "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Unit 2 Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Unit 2 Assessment 2022"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-2022",
+        "activity_section.key": "edf6f69f-4dd2-421f-b2ad-7b37827bedf3"
+      },
+      "level_keys": [
+        "CSA Unit 2 Assessment 2022"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 1,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4887,7 +4940,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4912,7 +4965,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5528,6 +5581,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA Unit 2 Assessment 2022",
+        "script_level.level_keys": [
+          "CSA Unit 2 Assessment 2022"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-2022",
+        "activity_section.key": "edf6f69f-4dd2-421f-b2ad-7b37827bedf3"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA 2022 Console Sandbox",
         "script_level.level_keys": [
           "CSA 2022 Console Sandbox"
@@ -5610,6 +5675,18 @@
       },
       "seeding_key": {
         "resource.key": "_key_store_management_project_planning_guide"
+      }
+    },
+    {
+      "name": "[KEY] U2L10 Extra Practice",
+      "url": "https://docs.google.com/document/d/1V6RzkOVfNI_fqFH0LEjYR_yNHFbPuS3jaH6Hf28eZQQ/edit?usp=sharing",
+      "key": "_key_u2l10_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u2l10_extra_practice"
       }
     },
     {
@@ -5706,6 +5783,18 @@
       },
       "seeding_key": {
         "resource.key": "_key_u2l8_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U2L9 Extra Practice",
+      "url": "https://docs.google.com/document/d/15q80JedF448in_yPCzzuDX7fCGdNdmpIEnhwQD-X31w/edit?usp=sharing",
+      "key": "_key_u2l9_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u2l9_extra_practice"
       }
     },
     {
@@ -5850,6 +5939,18 @@
       }
     },
     {
+      "name": "U2L10 Extra Practice",
+      "url": "https://docs.google.com/document/d/1xYvqBsOIfRxiGILRvDK-YeQBo_NXLl3rG--HtGBpdMo/edit?usp=sharing",
+      "key": "u2l10_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l10_extra_practice"
+      }
+    },
+    {
       "name": "U2L1 Extra Practice",
       "url": "https://docs.google.com/document/d/1e_iaBTTV0srizdsC0oNzjgECyKMl9aLILm9TW6Qbobs/edit?usp=sharing",
       "key": "u2l1_extra_practice",
@@ -5943,6 +6044,18 @@
       },
       "seeding_key": {
         "resource.key": "u2l8_extra_practice"
+      }
+    },
+    {
+      "name": "U2L9 Extra Practice",
+      "url": "https://docs.google.com/document/d/1LV_u-HF6wafh6Wa-wB40Sr68RZKdwsF74ePCo8L5JM8/edit?usp=sharing",
+      "key": "u2l9_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u2l9_extra_practice"
       }
     },
     {
@@ -6088,6 +6201,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-14",
+        "resource.key": "_key_u2l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
         "resource.key": "cs_bingo_cards_1"
       }
     },
@@ -6095,6 +6214,12 @@
       "seeding_key": {
         "lesson.key": "lesson-14",
         "resource.key": "cs_bingo_definitions_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "u2l9_extra_practice"
       }
     },
     {
@@ -6112,7 +6237,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-15",
+        "resource.key": "_key_u2l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
         "resource.key": "diagramming_scope"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "u2l10_extra_practice"
       }
     },
     {
@@ -6475,7 +6612,7 @@
     {
       "key": "dry_principle",
       "word": "DRY principle",
-      "definition": "a software development principle that stands \"Don't Repeat Yourself\" which aims to reduce repetition in code",
+      "definition": "a software development principle that stands for \"Don't Repeat Yourself\" which aims to reduce repetition in code",
       "properties": {
       },
       "seeding_key": {

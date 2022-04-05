@@ -310,7 +310,7 @@ function installBoolean(blockly, generator, gensym) {
   ];
 
   generator.functional_boolean = function() {
-    return this.getTitleValue('VAL') === 'true';
+    return this.getFieldValue('VAL') === 'true';
   };
 }
 
@@ -340,7 +340,7 @@ function installMathNumber(blockly, generator, gensym) {
   };
 
   generator.functional_math_number = function() {
-    return +this.getTitleValue('NUM');
+    return +this.getFieldValue('NUM');
   };
 
   blockly.Blocks.functional_math_number_dropdown = {
@@ -385,7 +385,7 @@ function installString(blockly, generator) {
   };
 
   generator.functional_string = function() {
-    return blockly.JavaScript.quote_(this.getTitleValue('VAL'));
+    return blockly.JavaScript.quote_(this.getFieldValue('VAL'));
   };
 }
 

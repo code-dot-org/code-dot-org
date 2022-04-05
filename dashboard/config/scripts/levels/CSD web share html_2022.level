@@ -1,0 +1,37 @@
+<Weblab>
+  <config><![CDATA[{
+  "game_id": 58,
+  "created_at": "2022-03-30T23:33:35.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "instructions_important": "false",
+    "project_template_level_name": "CSD Web Multi-page Template_2022",
+    "hide_share_and_remix": "false",
+    "submittable": "false",
+    "parent_level_id": 22994,
+    "name_suffix": "_2022",
+    "long_instructions": "# Share Your Content and HTML\r\n\r\nShare your web page with your teammates, and copy and paste the code for their pages into your project.\r\n\r\n# Do This\r\n* \"Share\" your page, and give the link to your teammates.\r\n* Get the \"Share\" link from each of your teammates and click the \"View Code\" link at the bottom of the screen.\r\n* Copy the HTML from your teammates' pages into your project.\r\n* Copy and paste the correct navigation bar onto each page.\r\n* Check that all of the links and images work correctly.\r\n\r\n",
+    "reference_links": [
+      "/docs/concepts/html/hyperlinks/",
+      "/docs/concepts/css/classes/",
+      "/docs/concepts/css/layout-properties/",
+      "/docs/concepts/css/body-styling/",
+      "/docs/concepts/html/images-in-html/",
+      "/docs/concepts/other/creative-commons-search/",
+      "/docs/concepts/css/style-sheets/",
+      "/docs/concepts/css/text-properties/",
+      "/docs/concepts/html/formatting-html/",
+      "/docs/concepts/html/lists/",
+      "/docs/concepts/html/headings-and-paragraphs/",
+      "/docs/concepts/html/html-tags/"
+    ],
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "validation_enabled": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2022-03-30T23:33:35.258+00:00\",\"changed\":[\"cloned from \\\"CSD web share html_2021\\\"\"],\"cloned_from\":\"CSD web share html_2021\"}]"
+}]]></config>
+</Weblab>

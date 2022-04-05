@@ -2,21 +2,25 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "project_template_level_name": "CSA U3L3-L3a PBT_2022",
-    "long_instructions": "##In someclass.java:\r\n\r\nThe x class has a method printArray() that is intended to print the elements in its instance variable x. In the method printArray(),\r\n\r\n1. Write a for loop to traverse the 1D array and print each element to the console.\r\n\r\n##In MyConsole.java:\r\n\r\n2. Call the printArray() method on the x object to test your method.",
+    "long_instructions": "The `TexasWeather`(#e7e8ea) class has instance variables for the name of the city and a 1D array containing temperatures for the specified city.\r\n\r\n##In TexasWeather.java:\r\n\r\nWrite the method `printTemperatures()`(#e7e8ea) to print the values in its instance variable `temperatures`(#e7e8ea). In the method `printTemperatures()`(#e7e8ea),\r\n\r\n1. Write a `for`(#e7e8ea) loop to traverse the `temperatures`(#e7e8ea) array and print each value to the console.\r\n\r\n##In MyConsole.java:\r\n\r\n2. Call the `printTemperatures()`(#e7e8ea) method on the `dfw`(#e7e8ea) object.\r\n\r\n::: details [**Show Me How**]\r\nA `for`(#e7e8ea) loop uses the following syntax:\r\n  \r\n  ```\r\n  for (int variableName = startingValue; condition; variableName_change) {\r\n    // code to execute\r\n  }\r\n  ```\r\n\r\nBe sure to change `variableName`(#e7e8ea) to a name you can easily identify, such as `index`(#e7e8ea), and set the `startingValue`(#e7e8ea) to the value you want to start the loop.\r\n\r\nWrite a Boolean expression to establish the condition that the loop should continue.\r\n\r\nChange the `variableName`(#e7e8ea) by some value, like increasing by `1`(#e7e8ea) each time.\r\n:::",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
-    "csa_view_mode": "console"
+    "csa_view_mode": "console",
+    "display_name": "Daily Temperatures",
+    "bubble_choice_description": "Use a for loop to print the daily temperatures stored in a 1D array.",
+    "thumbnail_url": "https://images.code.org/07f352265475de7414b4b6b05adaf482-image-1648558812658.png",
+    "encrypted_exemplar_sources": "jrRNHcOowRx22njbDNzE6K10Ex1m7JwmHnodMo3x9M0+CgfX8Ais/YC50TLU\nFkjKGEGMn8zHvi2DOIOK/CNz1RhobGEA8h3UXInhZjiWtfUG6mRKm79Yr2IW\n4m6ZRkTiNZtOTDp5tIrc827Z6LcJKYnputAZ0GqdY3fYt0u5A4ALlASybmUs\nh/0mXqj9hh36WRT2fzNJZemMY9NesjDMUoz4Fv5E7KCdeNtWQ1TGplu38Y0I\n6CbTZaOCGoo4bP9Ny4WmE1+QiY/ibc5QcsgV4NzDsnNHQRPMIrEiatAUnlgj\ncHRFU9nVdtM/iIM3T/iRqK2m34GWvWo5FLmCC3tPaPue2uoOAcasBx3hHd59\nW/6fqt/ueFkBYVHvWCMfri/I10ZcfT2EyuwhO5gJd3JFcYuqkOqzggbF0tZX\n7rBqPNzpv+vAcC1jCYi90FyasiUsIGzZjlviEKr2rX/6AFkjP51a2Gn3kuGz\nB0KD00BMY4r7O15/TWopaHcEgHD+bFx7i9uRFsss7z+kdEFToJoIKu7qvxy7\nULFzbQteYhysrc5HK6DdSSyQIaY9Oz0Zf+kiiOt7aA53+/bTBJSmHJt5rtAe\n6sdU/9b3zeNy8VkU+pp9jDpRqpuhbbTqFGdDyM9xtTmjBWuaiLHxw2Bz2X19\nN6Prou3uWjZO5UwEtipMT8atDuweHypGeb08PFb1kx+trgLNjgi9x2n8/yKK\nb/NMvh8+yImueFfJdJ2AqGo3OL7grf1Kv+i4j6ZDPJI7Fi9SmxJH8t+TQdZE\n9oxgsnqLQrD/gJDtfYs/VckoA0W0js1LTfeQ6eESvkBYooTsXoVpM/IpqLU+\nlorufxihosAXbI9BA3p9hMbQfpAHXHTbfeFUsvDqPyey+CDKnkK7Bv9BwAm6\nNADePlXyDaEiEHT0zfyn5by0vzDOiiJtSOh0Hqv3hSe4Jg2qrJwR7ZlcY1Xj\nDYv6CA/57Z8Dd5TJKI9UkbEMwMlVwA4A7kqvWgJSXcMvp8pshzs+r0x0DqGO\nvHVnlOjTcdkkEPXs6tZzlYIlw0wqaqLM86giwpX2cJNj68G37PgExkHkz/fy\nrUeqqhEZKGll4OkrHPJJGHhROTtQDV9LD2IU3sPEh8v3gtvomA1Z2LcZ6T2M\nnLT6UJHPN+toZYL/mU2cpBAfqAomoKdljhPo4jaSLfD4uAGnG6Nt058wZtnz\nn25FmItR17uHphba1/x8pwB1mU0/KEvcyhIBfd4cddrONIyB3ZTnMdkpnFE8\n/SxfY0pLpxko2+ij6TIATKBMvK/f80Nfpgtn5BK/LRQ7rjZXl0SUs9H1WYa7\nQ+xRGlYiE0SY6JRIGF1VcaVRq+9g1FPIXDjcXWDWrf52DX/3UQT+1FKZQDSe\nYUrjlhbL8F3sLiZphMT4Y12MSVOYkHETrPSx0+0HKnQXUEsHj0i9t4ebJTrk\nqwPtsOOTRzznFTrAxllI2mYSFo/c5qaIQsLFjAcMNFinZmAu7MISKexKm+1u\nh7ZPVeKt+h0FZ0T+NdCCWnrWNpe6zQyoF/kA9QWfCy+U3SNNVJO7kFuhHDAf\nrkw4bau+c5Uw7Wk68f2v+QdCbeHyTOPXBGhb3oS/96hF0kZxyRJOl6jat/Dp\nMg==\n",
+    "encrypted_examples": [
+
+    ]
   },
   "game_id": 68,
   "published": true,
   "created_at": "2022-03-25T00:16:09.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-03-25 00:16:19 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-25 00:16:19 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 00:13:45 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 12:59:33 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 13:01:59 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 13:02:58 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 13:03:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

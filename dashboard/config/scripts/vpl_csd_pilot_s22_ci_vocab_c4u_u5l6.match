@@ -1,0 +1,19 @@
+name 'VPL-CSD-PILOT-S22-CI-vocab-c4u-U5L6'
+title 'Check for understanding'
+description 'Match the correct description to each term.'
+height'65'
+
+
+question 'Decode'
+answer 'to change how information is represented so that it can be read by a person'
+
+question 'Encode'
+answer 'to change how information is represented so that it can be read by a computer'
+
+question 'Binary System'
+answer 'a way of representing information using only two options'
+
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

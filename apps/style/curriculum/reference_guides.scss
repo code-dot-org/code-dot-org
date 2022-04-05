@@ -1,4 +1,11 @@
 @import 'color';
+@import 'font';
+
+.page-content {
+  display: flex;
+  gap: 10%;
+  width: 100%;
+}
 
 .page-actions {
   display: flex;
@@ -30,4 +37,49 @@
 
 .input {
   display: block;
+}
+
+.nav-bar {
+  margin-right: 5px;
+  min-width: 150px;
+  font-size: 14px;
+  font-family: $gotham-extra-bold;
+
+  .category {
+    padding-left: 10px;
+    width: 150px;
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    &.open {
+      height: auto;
+    }
+
+    .title {
+      padding: 16px 0px;
+      display: block;
+      color: $dimgray;
+    }
+    &.open .title {
+      color: $white;
+    }
+
+    .nav-link {
+      background-color: $white;
+      padding: 8px;
+      border-bottom: 2px solid $lightest_gray;
+    }
+
+    .link {
+      color: $light_gray;
+    }
+    .active .link {
+      color: $light_teal;
+    }
+    .link:hover {
+      color: $lightish_teal;
+    }
+  }
 }

@@ -1,6 +1,7 @@
 {
   "key": "self-paced-pl-csa",
-  "display_name": "self-paced-pl-csa",
-  "category": "other",
-  "is_featured": false
+  "display_name": "CSA Getting Started Modules",
+  "category": "pl_self_paced",
+  "is_featured": false,
+  "assignable": true
 }

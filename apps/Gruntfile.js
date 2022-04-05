@@ -648,6 +648,10 @@ describe('entry tests', () => {
     'levels/editors/_studio':
       './src/sites/studio/pages/levels/editors/_studio.js',
     'libraries/edit': './src/sites/studio/pages/libraries/edit.js',
+    'programming_classes/new':
+      './src/sites/studio/pages/programming_classes/new.js',
+    'programming_classes/edit':
+      './src/sites/studio/pages/programming_classes/edit.js',
     'programming_environments/new':
       './src/sites/studio/pages/programming_environments/new.js',
     'programming_environments/edit':

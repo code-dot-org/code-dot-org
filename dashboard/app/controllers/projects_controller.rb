@@ -149,6 +149,9 @@ class ProjectsController < ApplicationController
     },
     poetry_hoc: {
       name: 'New Poetry HOC Project'
+    },
+    thebadguys: {
+      name: 'New The Bad Guys Project'
     }
   }.with_indifferent_access.freeze
 
@@ -168,27 +171,23 @@ class ProjectsController < ApplicationController
   end
 
   def project_and_featured_project_fields
-    storage_apps_fields = prefix_storage_app_fields(%w(id___id storage_id___storage_id value___value project_type___project_type published_at___published_at))
-
-    featured_projects_fields = [
+    [
+      :projects__id___id,
+      :projects__storage_id___storage_id,
+      :projects__value___value,
+      :projects__project_type___project_type,
+      :projects__published_at___published_at,
       :featured_projects__featured_at___featured_at,
       :featured_projects__unfeatured_at___unfeatured_at,
       :featured_projects__topic___topic
     ]
-
-    storage_apps_fields.concat(featured_projects_fields)
-  end
-
-  def prefix_storage_app_fields(field_names)
-    table_name = "storage_apps"
-    field_names.map {|field_name| "#{table_name}__#{field_name}".to_sym}
   end
 
   def combine_projects_and_featured_projects_data
-    storage_apps = "#{CDO.pegasus_db_name}__storage_apps".to_sym
+    projects = "#{CDO.dashboard_db_name}__projects".to_sym
     project_featured_project_combo_data = DASHBOARD_DB[:featured_projects].
       select(*project_and_featured_project_fields).
-      join(storage_apps, id: :storage_app_id, state: 'active').all
+      join(projects, id: :storage_app_id, state: 'active').all
     extract_data_for_tables(project_featured_project_combo_data)
   end
 

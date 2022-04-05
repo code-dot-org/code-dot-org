@@ -1,6 +1,7 @@
 {
   "key": "alltheselfpacedplthings",
   "display_name": "All the Self Paced PL Things",
-  "category": "other",
-  "is_featured": false
+  "category": "pl_other",
+  "is_featured": false,
+  "assignable": true
 }

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_17_180504) do
+ActiveRecord::Schema.define(version: 2022_03_25_185859) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -395,6 +395,7 @@ ActiveRecord::Schema.define(version: 2022_03_17_180504) do
     t.datetime "updated_at", null: false
     t.string "category", default: "other", null: false
     t.boolean "is_featured", default: false, null: false
+    t.boolean "assignable", default: true, null: false
     t.index ["key"], name: "index_course_offerings_on_key", unique: true
   end
 
@@ -1421,6 +1422,25 @@ ActiveRecord::Schema.define(version: 2022_03_17_180504) do
     t.datetime "updated_at", null: false
     t.index ["storage_app_id", "object_version_id"], name: "index_project_versions_on_storage_app_id_and_object_version_id", unique: true
     t.index ["storage_app_id"], name: "index_project_versions_on_storage_app_id"
+  end
+
+  create_table "projects", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.integer "storage_id"
+    t.text "value", limit: 16777215
+    t.datetime "updated_at", null: false
+    t.string "updated_ip", limit: 39, null: false
+    t.string "state", limit: 50, default: "active", null: false
+    t.datetime "created_at"
+    t.integer "abuse_score"
+    t.string "project_type"
+    t.datetime "published_at"
+    t.boolean "standalone", default: true
+    t.integer "remix_parent_id"
+    t.boolean "skip_content_moderation"
+    t.index ["project_type"], name: "storage_apps_project_type_index"
+    t.index ["published_at"], name: "storage_apps_published_at_index"
+    t.index ["standalone"], name: "storage_apps_standalone_index"
+    t.index ["storage_id"], name: "storage_apps_storage_id_index"
   end
 
   create_table "puzzle_ratings", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
