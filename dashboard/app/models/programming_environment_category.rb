@@ -18,6 +18,7 @@
 #
 class ProgrammingEnvironmentCategory < ApplicationRecord
   belongs_to :programming_environment
+  has_many :programming_classes
   has_many :programming_expressions
 
   KEY_CHAR_RE = /[a-z_]/
@@ -52,7 +53,7 @@ class ProgrammingEnvironmentCategory < ApplicationRecord
       key: key,
       name: name,
       color: color,
-      programmingExpressions: programming_expressions.map(&:serialize_for_environment_show)
+      programmingExpressions: programming_classes.map(&:summarize_for_navigation) + programming_expressions.map(&:summarize_for_navigation)
     }
   end
 

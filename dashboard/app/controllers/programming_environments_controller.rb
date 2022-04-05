@@ -68,7 +68,7 @@ class ProgrammingEnvironmentsController < ApplicationController
 
   def show
     return head :forbidden unless can?(:read, @programming_environment)
-    @programming_environment_categories = @programming_environment.categories.select {|c| c.programming_expressions.count > 0}.map(&:summarize_for_environment_show)
+    @programming_environment_categories = @programming_environment.categories.select {|c| c.programming_expressions.count > 0 || c.programming_classes.count > 0}.map(&:summarize_for_environment_show)
   end
 
   def docs_show
