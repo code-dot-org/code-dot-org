@@ -264,9 +264,9 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
             "match_correct" => 1,
             "match_count" => 3,
             "submitted" => true,
-            "timestamp" => user_level[:updated_at].to_datetime,
+            "timestamp" => user_level[:updated_at].to_datetime.as_json,
             "level_results" => [
-              {"student_result" => "This is a free response", "status" => "", "type" => "FreeResponse"},
+              {"type" => "FreeResponse", "student_result" => "This is a free response", "status" => ""},
               {"type" => "Multi", "student_result" => [0], "status" => "correct",},
               {"type" => "Multi", "student_result" => [1], "status" => "incorrect",},
               {"type" => "Multi", "student_result" => [], "status" => "unsubmitted",},
