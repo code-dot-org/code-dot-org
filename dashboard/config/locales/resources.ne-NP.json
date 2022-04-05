@@ -2,6 +2,102 @@
   "ne-NP": {
     "data": {
       "resources": {
+        "lesson_plans/courseb/2018": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans/coursed/2018": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans/express/2018": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans/coursea/2019": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans/coursed/2019": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans/coursee/2019": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans/express/2019": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans_2/csd/2019": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans_3/csd/2019": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans_4/csd/2019": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans_1/csd/2019": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans/csd/2017": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "Lesson Plans"
+        },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "For Loop Fun"
         },
@@ -247,6 +343,30 @@
         },
         "website-for-a-purpose/csd/2021": {
           "type": "Peer Review"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans/express/2020": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans/courseb/2020": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans/coursea/2020": {
+          "name": "Lesson Plans"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "Lesson Plans"
         }
       }
     }

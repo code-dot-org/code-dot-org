@@ -349,6 +349,9 @@ bn:
         mc:
           title: মাইনক্র্যাফট এক ঘণ্টার কোড
           description: স্টিভ বা অ্যালেক্স কে মাইনক্রাফটের এই দুনিয়ায় অভিযানের নিয়ে যেতে কোড ব্লকগুলি ব্যবহার করুন।
+          lessons:
+            Hour of Code 2015:
+              name: মাইনক্র্যাফট এক ঘণ্টার কোড
           student_description: স্টিভ বা অ্যালেক্স কে মাইনক্রাফটের এই দুনিয়ায় অভিযানের নিয়ে যেতে কোড ব্লকগুলি ব্যবহার করুন।
         ScienceP3OLPT3:
           lessons:
@@ -1929,6 +1932,10 @@ bn:
           lessons:
             lesson-6:
               name: চলকগুলো
+        csa3-2022:
+          lessons:
+            lesson-5:
+              name: ফর লুপ
         cs4all-invasive-species:
           lessons:
             lesson-12:

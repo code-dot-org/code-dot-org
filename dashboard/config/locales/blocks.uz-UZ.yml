@@ -2,6 +2,8 @@
 uz:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: " {LOCATION} da yangi {ANIMATION_NAME} sprayt yaratish"
       Dancelab_alternateMoves:
         text: " {MOVE1} va {MOVE2} orasida {GROUP} harakatlar guruhi har {N} o'lchovda
           almashadi"
@@ -1032,6 +1034,12 @@ uz:
         text: sudranuvchan
       gamelab_edgesDisplace:
         text: chegaralar {SPRITE} harakatini bloklagan
+      gamelab_everySeconds:
+        text: har {N} {UNIT} takrorlash
+        options:
+          UNIT:
+            '"seconds"': soniyalar
+            '"frames"': freymlar
       gamelab_getAllSprites:
         text: barcha spraytlar
       gamelab_getProp:
@@ -1177,6 +1185,8 @@ uz:
         options:
           EFFECT:
             '"rain"': yomg‘ir
+      gamelab_makeNewScaledSprite:
+        text: " {LOCATION} da yangi {ANIMATION_NAME} sprayt yaratish"
       gamelab_makeNewSpriteAnon:
         text: " {LOCATION} da yangi {ANIMATION_NAME} sprayt yaratish"
       gamelab_makeNumSprites:

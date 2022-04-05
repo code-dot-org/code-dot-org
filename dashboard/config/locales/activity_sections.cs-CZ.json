@@ -1414,7 +1414,7 @@
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
           "description": "#### Příprava scény\n\nPřivítejte studenty na hodině a představte dnešní aktivitu.",
           "tips": [
-            "Jednou z možností, jak představit Hodinu kódu, pokud sami nemáte s kódováním dostatečnou zkušenost, je ukázat jedno z [našich inspiračních videí](https://hourofcode.com/promote/resources#videos). Vyberte takové, o kterém si myslíte, že bude vaše studenty inspirovat a sdílejte ho nyní s nimi. Pro žáky na úrovni druhého stupně základní školy doporučujeme video [Je tady Hodina kódu](https://youtu.be/FC5FbmsH4fw)."
+            "Jednou z možností, jak představit Hodinu kódu, pokud sami nemáte s kódováním dostatečnou zkušenost, je ukázat jedno z [našich inspiračních videí][0]. Vyberte takové, o kterém si myslíte, že bude vaše studenty inspirovat a sdílejte ho nyní s nimi. Pro žáky na úrovni druhého stupně základní školy doporučujeme video [Je tady Hodina kódu][1]."
           ]
         },
         "d99fc09e-a586-41df-84b2-e552cc4735e3": {
@@ -1427,7 +1427,7 @@
           "description": "Věděli jste, že informatika může být velmi kreativní? Dokonce můžete kódováním vytvářet umění. Připomínáme, že kód je soubor instrukcí, které počítač dokáže chápat. To, jaký kód napíšete, může být příležitostí k vyjádření vaší kreativity! Je to podobné, jako když si při malování vybíráte, jaké použijete barvy. \n\nDnes budeme jako inspiraci vašeho kreativního programování používat poezii. Ví někdo, co je to poezie? Máte nějakou oblíbenou báseň nebo básníka? "
         },
         "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
-          "description": "**Čtěte poezii společně:** Přečtěte si jako třída společně [několik básní](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) a procvičujte si určování atmosféry každé básně. Povzbuďte studenty, aby se podělili o svou interpretaci, i když se bude lišit od interpretace někoho jiného. "
+          "description": "**Čtěte poezii společně:** Přečtěte si jako třída společně [několik básní][0] a procvičujte si určování atmosféry každé básně. Povzbuďte studenty, aby se podělili o svou interpretaci, i když se bude lišit od interpretace někoho jiného. "
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
           "name": "Básnické umění",

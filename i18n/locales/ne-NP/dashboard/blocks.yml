@@ -470,6 +470,11 @@ ne:
           CONDITION:
             '"when"': when
             '"while"': while
+      gamelab_everySeconds:
+        text: प्रत्येक {N} {UNIT}  दोहो¥याउनुहोस्
+        options:
+          UNIT:
+            '"seconds"': seconds
       gamelab_getProp:
         options:
           PROPERTY:

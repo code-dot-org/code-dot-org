@@ -2,6 +2,8 @@
 nl:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: nieuwe {ANIMATION_NAME} sprite maken op {LOCATION}
       Dancelab_alternateMoves:
         text: |-
           {GROUP} wissel om de {N}
@@ -1024,6 +1026,12 @@ nl:
         text: Lijn tekenen {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: randen blok {SPRITE} van verplaatsen
+      gamelab_everySeconds:
+        text: 'elke {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': seconden
+            '"frames"': frames
       gamelab_followingTargets:
         text: Doelen volgen
       gamelab_getAllSprites:
@@ -1174,6 +1182,8 @@ nl:
           EFFECT:
             '"pop"': pop
             '"rain"': regen
+      gamelab_makeNewScaledSprite:
+        text: nieuwe {ANIMATION_NAME} sprite maken op {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: nieuwe {ANIMATION_NAME} sprite maken op {LOCATION}
       gamelab_makeNumSprites:
