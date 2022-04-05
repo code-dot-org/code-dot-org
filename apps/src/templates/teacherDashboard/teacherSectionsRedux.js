@@ -1248,9 +1248,7 @@ export const sectionFromServerSection = serverSection => ({
   courseVersionId: serverSection.course_version_id,
   unitId: serverSection.unit_id,
   courseId: serverSection.course_id,
-  scriptId: serverSection.script
-    ? serverSection.script.id
-    : serverSection.script_id || null,
+  scriptId: serverSection.script_id,
   hidden: serverSection.hidden,
   isAssigned: serverSection.isAssigned,
   restrictSection: serverSection.restrict_section,
@@ -1294,7 +1292,7 @@ export function serverSectionFromSection(section) {
     course_version_id: section.courseVersionId,
     unit_id: section.unitId,
     course_id: section.courseId,
-    script: section.scriptId ? {id: section.scriptId} : undefined,
+    script: section.scriptId,
     restrict_section: section.restrictSection
   };
 }
