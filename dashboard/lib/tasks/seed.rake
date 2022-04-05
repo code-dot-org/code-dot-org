@@ -295,7 +295,7 @@ namespace :seed do
       CourseOffering.seed_record("test/ui/config/course_offerings/#{course_offering_name}.json")
     end
   end
-  
+
   timed_task reference_guides: :environment do
     ReferenceGuide.seed_all
   end
