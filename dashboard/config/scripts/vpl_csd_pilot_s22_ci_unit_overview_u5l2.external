@@ -15,22 +15,23 @@ markdown <<MARKDOWN
 
 ## 
 
-## Update with a unit specific image then remove this text
-
-<img src="https://images.code.org/c5c29ed5d000cd99987c8e829da3aa3b-image-1634828701624.gif" alt="Image of AI bot moving through the steps: choose a dataset, prepare data, train AI model, assess results"  style="padding-left: 120px; height: 250px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/724114701273062794e7c5ff7e7da34e-image-1648877617804.JPG" alt="Images of a bike in pixels, ASCII letters and binary number representations 1,2,4,8"  style="padding-left: 120px; height: 250px; clear: both; margin: 0 20px 20px 0;">
 
 
 ### **Implementation guidance** 
 
-* ##### Complete Unit 1, Unit 2, Unit 3 and Unit 4 before starting this unit
+* ##### Complete Unit 1 before starting this unit
+
+* ##### This unit could be swapped out with Unit 7 - see the  <a href="https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview" target="blank" rel="noopener noreferrer"> Implementation Guide </a> for more information on this option
  
 * ##### You can learn about the <a href="https://studio.code.org/courses/csd-2021" target="blank" rel="noopener noreferrer"> Problem Solving Process with Data </a> on p. 43 <a href="https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/edit?usp=sharing" target="blank" rel="noopener noreferrer"> </a>
 
 * ##### You can view the full <a href="https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/edit?usp=sharing" target="blank" rel="noopener noreferrer">Curriculum Guide</a> and <a href="https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/edit?usp=sharing" target="blank" rel="noopener noreferrer">Implementation Guide</a> for more information about this unit. 
 
 ### **Suggested time to complete the unit:** 4 weeks 
-##### The suggested time is based on 225 instructional minutes per week. Visit the <a href="https://studio.code.org/s/csd5-2022" target="blank" rel="noopener noreferrer">Unit Overview Page</a> and use the unit calendar to adjust the instructional minutes to reflect the time you have with your students each week. 
+##### The suggested time is based on 225 instructional minutes per week. Visit the <a href="https://studio.code.org/s/csd5-2022" target="blank" rel="noopener noreferrer">Unit Overview Page</a> and use the unit calendar to adjust the instructional minutes to reflect the time you have with your students each week
 
 <div style="clear:both"/>
+
 
 MARKDOWN

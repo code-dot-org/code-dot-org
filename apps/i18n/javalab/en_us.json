@@ -15,6 +15,7 @@
   "clearConsole": "Clear Console",
   "classroomBlocked": "Your section has run their code too many times and has been locked. Ask your teacher to contact support@code.org to unlock your section.",
   "classNotFound": "Error: one or more of your Java files are missing a class definition.",
+  "commentProfanityFound": "Your comment contains inappropriate language, so it will not be saved. Please update your comment to remove the {wordCount, plural, one {word} other {words}} \"{words}\".",
   "commentUpdateError": "There was an error processing your request, please try again.",
   "commit": "Commit",
   "commitAndSave": "Commit & Save",

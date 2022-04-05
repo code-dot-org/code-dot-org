@@ -2,6 +2,8 @@
 en:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: make new {ANIMATION_NAME} sprite at {LOCATION}
       Dancelab_alternateMoves:
         text: "{GROUP} alternate every {N} measures \nbetween {MOVE1} and {MOVE2}"
         options:
@@ -1249,6 +1251,8 @@ en:
             '"pop"': pop
             '"rain"': rain
             '"spiral"': spiral
+      gamelab_makeNewScaledSprite:
+        text: make new {ANIMATION_NAME} sprite at {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: make new {ANIMATION_NAME} sprite at {LOCATION}
       gamelab_makeNumSprites:
