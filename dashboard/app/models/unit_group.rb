@@ -419,7 +419,9 @@ class UnitGroup < ApplicationRecord
   def summarize_course_versions(user = nil, locale_code = 'en-us')
     return {} unless user
 
-    course_version&.course_offering&.course_versions&.select {|cv| cv.course_assignable?(user) || (cv.launched? && cv.can_view_version?(user))}&.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
+    all_course_versions = course_version&.course_offering&.course_versions
+    course_versions_for_user = all_course_versions&.select {|cv| cv.course_assignable?(user) || (cv.launched? && cv.can_view_version?(user))}
+    course_versions_for_user&.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
   # Returns an array of objects showing the name and version year for all courses
