@@ -792,7 +792,6 @@ class Blockly < Level
   end
 
   def localize_behaviors(block_xml)
-    puts block_xml
     tag = Blockly.field_or_title(block_xml)
     block_xml.xpath("//block[@type=\"behavior_definition\"]").each do |behavior|
       mutation = behavior.at_xpath('./mutation')
