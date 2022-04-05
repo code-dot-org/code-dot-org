@@ -3,5 +3,11 @@ export function setHSV(block, h, s, v) {
 }
 
 export function getBlockFields(block) {
-  return block.getTitles();
+  let fields = [];
+  block.inputList.forEach(input => {
+    input.fieldRow.forEach(field => {
+      fields.push(field);
+    });
+  });
+  return fields;
 }
