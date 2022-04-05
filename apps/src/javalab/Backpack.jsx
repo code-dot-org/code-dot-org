@@ -12,6 +12,8 @@ import {makeEnum} from '@cdo/apps/utils';
 import JavalabDialog from './JavalabDialog';
 import {PaneButton} from '@cdo/apps/templates/PaneHeader';
 import prettier from 'prettier';
+import javaPrettier from 'prettier-plugin-java/dist';
+import {sourceTextUpdated} from './javalabRedux';
 
 const Dialog = makeEnum('IMPORT_WARNING', 'IMPORT_ERROR');
 
@@ -26,7 +28,8 @@ class Backpack extends Component {
     onImport: PropTypes.func.isRequired,
     // populated by redux
     backpackApi: PropTypes.object,
-    sources: PropTypes.object
+    sources: PropTypes.object,
+    sourceTextUpdated: PropTypes.func
   };
 
   state = {
@@ -56,12 +59,14 @@ class Backpack extends Component {
   };
 
   handleImport = () => {
-    console.log(prettier);
-    const formattedText = prettier.format(this.props.sources['Game.java'], {
-      parser: 'java',
-      tabWidth: 2
-    });
-    console.log(formattedText);
+    const {selectedFiles} = this.state;
+    if (selectedFiles.length > 0) {
+      this.validateAndImportFiles(
+        this.importFiles,
+        this.showImportWarning,
+        this.showImportError
+      );
+    }
   };
 
   importFiles = selectedFiles => {
@@ -131,12 +136,11 @@ class Backpack extends Component {
   };
 
   toggleDropdown = () => {
-    console.log(prettier);
-    const formattedText = prettier.format(this.props.sources['Game.java'], {
-      parser: 'java',
-      tabWidth: 2
-    });
-    console.log(formattedText);
+    if (this.state.dropdownOpen) {
+      this.collapseDropdown();
+    } else {
+      this.expandDropdown();
+    }
   };
 
   onFileListLoadError = () => {
@@ -424,7 +428,13 @@ const styles = {
 };
 
 export const UnconnectedBackpack = Backpack;
-export default connect(state => ({
-  backpackApi: state.javalab.backpackApi,
-  sources: state.javalab.sources
-}))(onClickOutside(Radium(UnconnectedBackpack)));
+export default connect(
+  state => ({
+    backpackApi: state.javalab.backpackApi,
+    sources: state.javalab.sources
+  }),
+  dispatch => ({
+    sourceTextUpdated: (filename, text) =>
+      dispatch(sourceTextUpdated(filename, text))
+  })
+)(onClickOutside(Radium(UnconnectedBackpack)));

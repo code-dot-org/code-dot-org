@@ -38,6 +38,8 @@ import {CompileStatus} from './constants';
 import {makeEnum} from '@cdo/apps/utils';
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
 import VersionHistoryWithCommits from '@cdo/apps/templates/VersionHistoryWithCommits';
+import prettier from 'prettier';
+import javaPrettier from 'prettier-plugin-java/dist';
 
 const MIN_HEIGHT = 100;
 // This is the height of the "editor" header and the file tabs combined
@@ -501,20 +503,34 @@ class JavalabEditor extends React.Component {
   }
 
   onImportFile(filename, fileContents) {
+    console.log(prettier);
+    console.log(this.props.sources['Game.java']);
+    const formattedText = prettier.format(
+      this.props.sources['Game.java'].text,
+      {
+        parser: 'java',
+        tabWidth: 2,
+        plugins: [javaPrettier]
+      }
+    );
+    console.log(formattedText);
+    // this.props.sourceTextUpdated('Game.java', formattedText);
+
     const {fileMetadata} = this.state;
     // If filename already exists in sources, replace file contents.
     // Otherwise, create a new file.
-    if (Object.keys(this.props.sources).includes(filename)) {
+    if (Object.keys(this.props.sources).includes('Game.java')) {
       // find editor for filename and overwrite contents of that editor
       let editorKey = null;
-      for (const key in fileMetadata) {
-        if (fileMetadata[key] === filename) {
-          editorKey = key;
-        }
-      }
-      const editor = this.editors[editorKey];
+      // for (const key in fileMetadata) {
+      //   if (fileMetadata[key] === filename) {
+      //     editorKey = key;
+      //   }
+      // }
+      console.log(this.editors);
+      const editor = this.editors['file-0'];
       editor.dispatch({
-        changes: {from: 0, to: editor.state.doc.length, insert: fileContents}
+        changes: {from: 0, to: editor.state.doc.length, insert: formattedText}
       });
       this.props.setSource(filename, fileContents);
     } else {
