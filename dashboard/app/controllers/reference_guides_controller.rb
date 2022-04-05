@@ -1,7 +1,7 @@
 class ReferenceGuidesController < ApplicationController
   include CurriculumHelper
   before_action :find_reference_guide, only: [:show, :update, :edit, :destroy]
-  before_action :find_reference_guides, only: [:edit, :edit_all]
+  before_action :find_reference_guides, only: [:show, :edit, :edit_all]
   before_action :require_levelbuilder_mode_or_test_env, except: [:show]
   authorize_resource id_param: :key
 
