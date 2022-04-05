@@ -110,12 +110,27 @@ def hoc_get_locale_code
 end
 
 # code.org and hourofcode.com's /learn pages call this to translate tutorial's languages attribute
-def hoc_language(lang_codes_str)
+def hoc_language(lang_codes_str, language = nil)
   return '' unless lang_codes_str
 
   # Convert language codes to array and get the translated string
   language_codes = lang_codes_str.split(',')
-  language_codes.map {|code| hoc_s(code.downcase)}.select {|code| code}.join ", "
+
+  lang_names = language_codes.map do |code|
+    code = code.strip.downcase
+    next if code.empty?
+
+    # Find the code in language codes and locale codes
+    language_translation = hoc_s("language_code.#{code}", language: language)
+    if language_translation.start_with?('translation missing')
+      locale_translation = hoc_s("locale_code.#{code}", language: language)
+      locale_translation.start_with?('translation missing') ? code : locale_translation
+    else
+      language_translation
+    end
+  end
+
+  lang_names.compact.join(", ")
 end
 
 def hoc_uri(uri)
