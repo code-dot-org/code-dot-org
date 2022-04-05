@@ -56,10 +56,16 @@ class ProgrammingClass < ApplicationRecord
 
   def self.seed_record(file_path)
     properties = properties_from_file(file_path, File.read(file_path))
-    record = ProgrammingClass.find_or_initialize_by(key: properties[:key], programming_environment_id: properties[:programming_environment_id])
-    record.assign_attributes(properties)
-    record.save! if record.changed?
-    record.id
+    programming_class = ProgrammingClass.find_or_initialize_by(key: properties[:key], programming_environment_id: properties[:programming_environment_id])
+    programming_class.assign_attributes(properties.except(:methods))
+    programming_class.save! if programming_class.changed?
+    programming_class.programming_methods =
+      properties[:methods].map do |method_config|
+        method = ProgrammingMethod.find_or_initialize_by(programming_class_id: programming_class.id, key: method_config['key'])
+        method.update! method_config
+        method
+      end
+    programming_class.id
   end
 
   def file_path
@@ -71,6 +77,7 @@ class ProgrammingClass < ApplicationRecord
       category_key: programming_environment_category&.key
     }.merge(attributes.except('id', 'programming_environment_id', 'programming_environment_category_id', 'created_at', 'updated_at').sort.to_h)
     serialization[:methods] = programming_methods.map(&:serialize)
+    serialization
   end
 
   def write_serialization
