@@ -1292,7 +1292,7 @@ export function serverSectionFromSection(section) {
     course_version_id: section.courseVersionId,
     unit_id: section.unitId,
     course_id: section.courseId,
-    script: section.scriptId,
+    script_id: section.scriptId,
     restrict_section: section.restrictSection
   };
 }
