@@ -1750,16 +1750,16 @@ a.download-video {
     }
 
     .user-type-desc {
-      text-align: left;
+      text-align: start;
       margin-top: 10px;
       margin-left: 5px;
       margin-right: 5px;
     }
 
     .user-type-abilities-unordered-list {
-      text-align: left;
+      text-align: start;
       width: 85%;
-      margin-right: 10%;
+      margin-inline-start: 10%;
     }
   }
 
