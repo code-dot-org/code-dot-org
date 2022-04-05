@@ -532,7 +532,7 @@ export default class CoreLibrary {
     }
   }
 
-  everySecondsEvent(inputEvent) {
+  everyIntervalEvent(inputEvent) {
     if (inputEvent.args.unit === 'seconds') {
       const previousTime = inputEvent.previousTime || 0;
       const worldTime = this.getSecondsSinceReset();
@@ -543,7 +543,7 @@ export default class CoreLibrary {
       // the time matches the event argument)
       if (moddedWorldTime === 0 && previousTime !== 0) {
         // Call callback with no extra args
-        this.eventLog.push(`atTime: ${inputEvent.args.n}`);
+        this.eventLog.push(`everyInterval: ${inputEvent.args.n}`);
         return [{}];
       }
     } else if (inputEvent.args.unit === 'frames') {
@@ -552,7 +552,7 @@ export default class CoreLibrary {
       let moddedWorldFrames = worldFrames % inputEvent.args.n;
       if (moddedWorldFrames === 0) {
         // Call callback with no extra args
-        this.eventLog.push(`atTime: ${inputEvent.args.n}`);
+        this.eventLog.push(`everyInterval: ${inputEvent.args.n}`);
         return [{}];
       }
     }
@@ -719,8 +719,8 @@ export default class CoreLibrary {
         return this.atTimeEvent(inputEvent);
       case 'collectData':
         return this.collectDataEvent(inputEvent);
-      case 'everySeconds':
-        return this.everySecondsEvent(inputEvent);
+      case 'everyInterval':
+        return this.everyIntervalEvent(inputEvent);
       case 'repeatForever':
         return this.repeatForeverEvent(inputEvent);
       case 'whenpress':

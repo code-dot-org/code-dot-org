@@ -17,8 +17,8 @@ export const commands = {
     this.addEvent('collectData', {}, callback);
   },
 
-  everySeconds(n, unit, callback) {
-    this.addEvent('everySeconds', {n, unit}, callback);
+  everyInterval(n, unit, callback) {
+    this.addEvent('everyInterval', {n, unit}, callback);
   },
 
   keyPressed(condition, key, callback) {
