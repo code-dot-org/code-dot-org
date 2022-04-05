@@ -16,6 +16,17 @@ module MultipleDatabasesTransitionHelper
         else
           use_database_pool route => :persistent
         end
+        around_action(:gatekeeper_controlled_reader_override, only: route)
+      end
+    end
+
+    def gatekeeper_controlled_reader_override
+      if Gatekeeper.allows('reader_connection_override', where: {route: action_name}, default: false)
+        MultipleDatabasesTransitionHelper.use_writer_connection do
+          yield
+        end
+      else
+        yield
       end
     end
 
