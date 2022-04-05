@@ -1,0 +1,15 @@
+- content_for(:head) do
+  = tag 'meta', name: 'description', content: @programming_class.syntax
+%script{src: webpack_asset_path('js/programming_classes/show.js'),
+  data: {programmingClass: @programming_class.summarize_for_show.to_json, programmingEnvironmentTitle: (@programming_class.programming_environment.title || @programming_class.programming_environment.name).to_json, categoriesForNavigation: @programming_environment_categories.to_json, currentCategoryKey: @programming_class.programming_environment_category&.key&.to_json}}
+
+#show-container
+
+- if can? :edit, @programming_class
+  = render layout: 'shared/extra_links' do
+    %strong= @programming_class.name
+    %ul
+      - if Rails.application.config.levelbuilder_mode
+        %li= link_to 'Edit', edit_programming_class_path(@programming_class)
+      - else
+        %li= link_to 'View on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", programming_environment_programming_class_path(@programming_class.programming_environment.name, @programming_class.key)).to_s

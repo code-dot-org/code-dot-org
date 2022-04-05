@@ -110,6 +110,31 @@ class ProgrammingClass < ApplicationRecord
     }
   end
 
+  def summarize_for_show
+    {
+      id: id,
+      key: key,
+      name: name,
+      content: content,
+      examples: parsed_examples,
+      fields: parsed_fields,
+      tips: tips,
+      syntax: syntax,
+      external_documentation: external_documentation,
+      categoryKey: programming_environment_category&.key || '',
+      category: programming_environment_category&.name || ''
+    }
+  end
+
+  def summarize_for_navigation
+    {
+      key: key,
+      name: name,
+      syntax: syntax,
+      link: "/programming_classes/#{id}"
+    }
+  end
+
   private
 
   def parsed_examples
