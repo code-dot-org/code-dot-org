@@ -10,16 +10,13 @@ module MultipleDatabasesTransitionHelper
   module ControllerFilter
     extend ActiveSupport::Concern
     class_methods do
-      # Use the read replica connection for the specified route. Optionally,
-      # also allow the endpoint to be selectively disabled by a gatekeeper
-      # flag.
-      def use_reader_connection_for_route(route, gatekeeper_controlled: false)
+      def use_reader_connection_for_route(route)
         if MultipleDatabasesTransitionHelper.transitioned?
           around_action :connect_to_reader, only: route
         else
           use_database_pool route => :persistent
         end
-        around_action(:gatekeeper_controlled_reader_override, only: route) if gatekeeper_controlled
+        around_action(:gatekeeper_controlled_reader_override, only: route)
       end
     end
 
