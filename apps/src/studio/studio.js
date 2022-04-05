@@ -2252,6 +2252,8 @@ Studio.init = function(config) {
     showInstructions();
   };
 
+  config.level.levelTracks = levelTracks;
+
   config.afterInject = function() {
     // Connect up arrow button event handlers
     for (var btn in ArrowIds) {

@@ -221,6 +221,7 @@ Craft.init = function(config) {
   config.skin.smallStaticAvatar = character.smallStaticAvatar;
   config.skin.failureAvatar = character.failureAvatar;
   config.skin.winAvatar = character.winAvatar;
+  config.level.levelTracks = levelTracks;
 
   var levelConfig = config.level;
   var specialLevelType = levelConfig.specialLevelType;
@@ -429,8 +430,7 @@ Craft.init = function(config) {
 
   // Push initial level properties into the Redux store
   studioApp().setPageConstants(config, {
-    isMinecraft: true,
-    isBackgroundMusicLevel: true
+    isMinecraft: true
   });
 
   ReactDOM.render(

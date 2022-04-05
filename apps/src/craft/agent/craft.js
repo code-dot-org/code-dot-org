@@ -180,6 +180,7 @@ export default class Craft {
       MEDIA_URL + 'Sliced_Parts/Agent_Neutral.png';
     config.skin.failureAvatar = MEDIA_URL + 'Sliced_Parts/Agent_Fail.png';
     config.skin.winAvatar = MEDIA_URL + 'Sliced_Parts/Agent_Success.png';
+    config.level.levelTracks = levelTracks;
 
     const onMount = function() {
       studioApp().init(
@@ -370,7 +371,6 @@ export default class Craft {
     // Push initial level properties into the Redux store
     studioApp().setPageConstants(config, {
       isMinecraft: true,
-      isBackgroundMusicLevel: true,
       hideRunButton: config.level.specialLevelType === 'agentSpawn'
     });
 
