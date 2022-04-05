@@ -68,6 +68,7 @@ class CourseVersion < ApplicationRecord
   delegate :has_editor_experiment?, to: :content_root, allow_nil: true
   delegate :can_be_instructor?, to: :content_root, allow_nil: true
   delegate :course_assignable?, to: :content_root, allow_nil: true
+  delegate :can_view_version?, to: :content_root, allow_nil: true
 
   # Seeding method for creating / updating / deleting the CourseVersion for the given
   # potential content root, i.e. a Script or UnitGroup.
