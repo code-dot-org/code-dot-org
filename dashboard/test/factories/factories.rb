@@ -1002,6 +1002,12 @@ FactoryGirl.define do
     sequence(:key) {|n| "programming-class-#{n}"}
   end
 
+  factory :programming_method do
+    association :programming_class
+    sequence(:name) {|n| "programming method #{n}"}
+    sequence(:key) {|n| "programming-method-#{n}"}
+  end
+
   factory :callout do
     sequence(:element_id) {|n| "#pageElement#{n}"}
     localization_key 'drag_blocks'

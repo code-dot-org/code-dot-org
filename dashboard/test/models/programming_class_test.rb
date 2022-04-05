@@ -17,6 +17,25 @@ class ProgrammingClassTest < ActiveSupport::TestCase
     assert_equal category, new_programming_class.programming_environment_category
   end
 
+  test "can serialize and seed programming class with methods" do
+    programming_environment = create :programming_environment
+    category = create :programming_environment_category, programming_environment: programming_environment, name: 'World', color: '#ABCDEF'
+    programming_class = create :programming_class, key: 'myExp', examples: '[myexamples]', content: 'some content', programming_environment_id: programming_environment.id, programming_environment_category_id: category.id
+    create :programming_method, programming_class: programming_class
+    create :programming_method, programming_class: programming_class
+    serialization = programming_class.serialize
+    previous_programming_class = programming_class.freeze
+    programming_class.destroy!
+
+    File.stubs(:read).returns(serialization.to_json)
+
+    new_class_id = ProgrammingClass.seed_record("config/programming_classes/#{programming_environment.name}/file.json")
+    new_programming_class = ProgrammingClass.find(new_class_id)
+    assert_equal previous_programming_class.attributes.except('id', 'created_at', 'updated_at'), new_programming_class.attributes.except('id', 'created_at', 'updated_at')
+    assert_equal category, new_programming_class.programming_environment_category
+    assert_equal 2, new_programming_class.programming_methods.count
+  end
+
   test "seed_all adds, updates, and removes programming classes" do
     programming_environment = create :programming_environment
     category = create :programming_environment_category, programming_environment: programming_environment, name: 'World', color: '#ABCDEF'

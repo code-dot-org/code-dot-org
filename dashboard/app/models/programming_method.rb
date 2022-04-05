@@ -35,9 +35,10 @@ class ProgrammingMethod < ApplicationRecord
   end
 
   def self.sanitize_key(str)
-    str.strip.downcase.chars.map do |character|
+    str = str.tr('(', ' ').tr(')', ' ').strip
+    str.downcase.chars.map do |character|
       KEY_CHAR_RE.match(character) ? character : '_'
-    end.join.gsub(/_+/, '_')
+    end.join.gsub(/_+/, '-')
   end
 
   def serialize
