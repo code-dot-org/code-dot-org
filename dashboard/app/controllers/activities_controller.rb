@@ -62,10 +62,9 @@ class ActivitiesController < ApplicationController
       end
 
       unless share_failure || ActivityConstants.skipped?(params[:new_result].to_i)
-        # This route is configured to use the read connection. When configured
-        # that way using SeamlessDatabasePool, this write is automatically
-        # caught and sent to the writer; but when using ActiveRecord, it needs
-        # to be handled explicitly.
+        # Explicitly use the writer connection to make this write call. This
+        # isn't necessary as long as we're still using SeamlessDatabasePool,
+        # but will be once we update to Rails 6
         MultipleDatabasesTransitionHelper.use_writer_connection do
           @level_source = LevelSource.find_identical_or_create(
             @level,
