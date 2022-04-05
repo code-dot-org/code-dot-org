@@ -338,6 +338,8 @@ ur:
           lessons:
             Teacher Dashboard:
               name: ٹیچر کا ڈیش بورڈ
+        basketball:
+          name: باسکٹ بال
         hoc-encryption:
           lessons:
             Simple Encryption:
@@ -406,6 +408,8 @@ ur:
           lessons:
             Envelope Variables:
               name: لفافہ متغیرات
+        sports:
+          name: کھیل
         csp5-support:
           description: |-
             #### **یہ کورس اس کورس کے ورژن سے وابستہ ہے جو اب مزید معاونت یافتہ نہیں ہے۔ ہمارے سب سے موجودہ نصاب دیکھنے کے لیے ہمارا کورسز کا عمومی جائزہ صفحہ (<https://studio.code.org/courses>) ملاحظہ کریں۔**
@@ -566,6 +570,7 @@ ur:
                 انہیں ایک گھنٹے تک پہیلیاں کے ذریعے کام کرنے میں بہت مزہ آئے گا۔ ہائی
                 اسکول کے طلباء زیادہ تر ٹیوٹوریل کو ختم کریں گے اور آخر میں مفت کھیل
                 کی سطح پر کھیلنے کے لیے ان کے پاس کچھ وقت ہوگا۔
+          name: ہیرو
         course-e-2018:
           lessons:
             Loops in Artist:
@@ -644,6 +649,7 @@ ur:
                 ہے۔ یہ سبق ہر عمر کے سیکھنے والوں کے لیے ڈیزائن کیا گیا ہے لیکن اسے
                 میں پڑھنے کی ضرورت ہوتی ہے۔ اس سرگرمی کے لیے آواز کی ضرورت ہوتی ہے
                 کیونکہ یہ ٹول موسیقی کا جواب دینے کے لیے بنایا گیا تھا۔
+          name: رقص کرنا
         aquatic:
           lessons:
             Aquatic:
@@ -654,6 +660,7 @@ ur:
                 انہیں ایک گھنٹے تک پہیلیاں کے ذریعے کام کرنے میں بہت مزہ آئے گا۔ ہائی
                 اسکول کے طلباء زیادہ تر ٹیوٹوریل کو ختم کریں گے اور آخر میں مفت کھیل
                 کی سطح پر کھیلنے کے لیے ان کے پاس کچھ وقت ہوگا۔
+          name: آبی
         dance--draft:
           lessons:
             Dance Party:
@@ -864,7 +871,6 @@ ur:
         dance-2019:
           lessons:
             Dance Party:
-              name: ڈانس پارٹی
               description_student: اس سبق میں، ہر عمر کے سیکھنے والوں کو ایک محفوظ،
                 معاون ماحول میں کوڈنگ اور کمپیوٹر سائنس کے ساتھ تعارفی تجربہ ملتا
                 ہے۔ یہ سبق ہر عمر کے سیکھنے والوں کے لیے ڈیزائن کیا گیا ہے لیکن اسے
@@ -1597,8 +1603,7 @@ ur:
               display_name: ڈیمو اور وسائل
         csa-self-paced-pl:
           lessons:
-            Navigating the Code.org learning platform:
-              name: سیکھنے کے پلیٹ فارم Code.org کے استعمال کا طریقہ
+            Navigating the Codeorg learning platform:
               description_teacher: |-
                 **آپ سیکھیں گے کہ کیسے:**
 
@@ -3008,6 +3013,8 @@ ur:
               name: جاوا لیب
             lesson-9:
               name: لوپس
+            lesson-21:
+              name: کنسول
         pre-express-2022:
           lesson_groups:
             csf_loops:
@@ -3018,6 +3025,12 @@ ur:
           lessons:
             lesson-6:
               name: متغیرات
+            lesson-16:
+              name: کنسول
+        csa3-2022:
+          lessons:
+            lesson-16:
+              name: کنسول
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -3355,3 +3368,5 @@ ur:
             Variables:
               name: متغیرات
               key: متغیرات
+        hello-world-csc:
+          title: ہیلو ورلڈ

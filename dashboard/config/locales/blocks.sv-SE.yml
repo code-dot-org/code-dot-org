@@ -2,6 +2,8 @@
 sv:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: skapa nya {ANIMATION_NAME} sprite vid {LOCATION}
       Dancelab_alternateMoves:
         text: "{GROUP} växla varje {N} takter \nmellan {MOVE1} och {MOVE2}"
         options:
@@ -1037,6 +1039,12 @@ sv:
         text: rita linje {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: kanter blockera {SPRITE} från att flytta
+      gamelab_everySeconds:
+        text: 'varje {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': sekunder
+            '"frames"': ramar
       gamelab_followingTargets:
         text: följ mål
       gamelab_getAllSprites:
@@ -1190,6 +1198,8 @@ sv:
             '"pop"': pop
             '"rain"': regn
             '"spiral"': spiral
+      gamelab_makeNewScaledSprite:
+        text: skapa nya {ANIMATION_NAME} sprite vid {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: skapa nya {ANIMATION_NAME} sprite vid {LOCATION}
       gamelab_makeNumSprites:

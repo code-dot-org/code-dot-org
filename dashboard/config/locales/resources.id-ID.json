@@ -34,6 +34,429 @@
         "ai-training/oceans/unversioned": {
           "type": "Video"
         },
+        "lesson_plans/courseb/2018": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/courseb/2018": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/courseb/2018": {
+          "name": "Forum guru"
+        },
+        "vocabulary/courseb/2018": {
+          "name": "Kosakata"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/coursea/2018": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/coursea/2018": {
+          "name": "Forum guru"
+        },
+        "vocabulary/coursea/2018": {
+          "name": "Kosakata"
+        },
+        "lesson_plans/coursed/2018": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/coursed/2018": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/coursed/2018": {
+          "name": "Forum guru"
+        },
+        "vocabulary/coursed/2018": {
+          "name": "Kosakata"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/coursef/2018": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/coursef/2018": {
+          "name": "Forum guru"
+        },
+        "vocabulary/coursef/2018": {
+          "name": "Kosakata"
+        },
+        "lesson_plans/express/2018": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/express/2018": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/express/2018": {
+          "name": "Forum guru"
+        },
+        "vocabulary/express/2018": {
+          "name": "Kosakata"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/coursee/2018": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/coursee/2018": {
+          "name": "Forum guru"
+        },
+        "vocabulary/coursee/2018": {
+          "name": "Kosakata"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/coursec/2018": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/coursec/2018": {
+          "name": "Forum guru"
+        },
+        "vocabulary/coursec/2018": {
+          "name": "Kosakata"
+        },
+        "code_introduced_1/csd/2018": {
+          "name": "Kode Diperkenalkan"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings_2/csd/2018": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum_2/csd/2018": {
+          "name": "Forum guru"
+        },
+        "vocabulary_2/csd/2018": {
+          "name": "Kosakata"
+        },
+        "code_introduced_3/csd/2018": {
+          "name": "Kode Diperkenalkan"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings_5/csd/2018": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum_5/csd/2018": {
+          "name": "Forum guru"
+        },
+        "vocabulary_5/csd/2018": {
+          "name": "Kosakata"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings_4/csd/2018": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum_4/csd/2018": {
+          "name": "Forum guru"
+        },
+        "vocabulary_4/csd/2018": {
+          "name": "Kosakata"
+        },
+        "code_introduced_2/csd/2018": {
+          "name": "Kode Diperkenalkan"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings_3/csd/2018": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum_3/csd/2018": {
+          "name": "Forum guru"
+        },
+        "vocabulary_3/csd/2018": {
+          "name": "Kosakata"
+        },
+        "code_introduced/csd/2018": {
+          "name": "Kode Diperkenalkan"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings_1/csd/2018": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum_1/csd/2018": {
+          "name": "Forum guru"
+        },
+        "vocabulary_1/csd/2018": {
+          "name": "Kosakata"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/csd/2018": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/csd/2018": {
+          "name": "Forum guru"
+        },
+        "vocabulary/csd/2018": {
+          "name": "Kosakata"
+        },
+        "curriculum_guide/coursea/2019": {
+          "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/coursea/2019": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/coursea/2019": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/coursea/2019": {
+          "name": "Forum guru"
+        },
+        "vocabulary/coursea/2019": {
+          "name": "Kosakata"
+        },
+        "curriculum_guide/courseb/2019": {
+          "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/courseb/2019": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/courseb/2019": {
+          "name": "Forum guru"
+        },
+        "vocabulary/courseb/2019": {
+          "name": "Kosakata"
+        },
+        "curriculum_guide/coursed/2019": {
+          "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/coursed/2019": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/coursed/2019": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/coursed/2019": {
+          "name": "Forum guru"
+        },
+        "vocabulary/coursed/2019": {
+          "name": "Kosakata"
+        },
+        "curriculum_guide/coursef/2019": {
+          "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/coursef/2019": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/coursef/2019": {
+          "name": "Forum guru"
+        },
+        "vocabulary/coursef/2019": {
+          "name": "Kosakata"
+        },
+        "curriculum_guide/coursee/2019": {
+          "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/coursee/2019": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/coursee/2019": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/coursee/2019": {
+          "name": "Forum guru"
+        },
+        "vocabulary/coursee/2019": {
+          "name": "Kosakata"
+        },
+        "lesson_plans/express/2019": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/express/2019": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/express/2019": {
+          "name": "Forum guru"
+        },
+        "vocabulary/express/2019": {
+          "name": "Kosakata"
+        },
+        "curriculum_guide/coursec/2019": {
+          "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/coursec/2019": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/coursec/2019": {
+          "name": "Forum guru"
+        },
+        "vocabulary/coursec/2019": {
+          "name": "Kosakata"
+        },
+        "teacher_forum/csd/2019": {
+          "name": "Forum guru"
+        },
+        "code_introduced_1/csd/2019": {
+          "name": "Kode Diperkenalkan"
+        },
+        "lesson_plans_2/csd/2019": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings_2/csd/2019": {
+          "name": "Standar pemetaan"
+        },
+        "vocabulary_2/csd/2019": {
+          "name": "Kosakata"
+        },
+        "code_introduced_3/csd/2019": {
+          "name": "Kode Diperkenalkan"
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings_5/csd/2019": {
+          "name": "Standar pemetaan"
+        },
+        "vocabulary_5/csd/2019": {
+          "name": "Kosakata"
+        },
+        "code_introduced_2/csd/2019": {
+          "name": "Kode Diperkenalkan"
+        },
+        "lesson_plans_3/csd/2019": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings_3/csd/2019": {
+          "name": "Standar pemetaan"
+        },
+        "vocabulary_3/csd/2019": {
+          "name": "Kosakata"
+        },
+        "lesson_plans_4/csd/2019": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings_4/csd/2019": {
+          "name": "Standar pemetaan"
+        },
+        "vocabulary_4/csd/2019": {
+          "name": "Kosakata"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/csd/2019": {
+          "name": "Standar pemetaan"
+        },
+        "vocabulary/csd/2019": {
+          "name": "Kosakata"
+        },
+        "code_introduced/csd/2019": {
+          "name": "Kode Diperkenalkan"
+        },
+        "lesson_plans_1/csd/2019": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings_1/csd/2019": {
+          "name": "Standar pemetaan"
+        },
+        "vocabulary_1/csd/2019": {
+          "name": "Kosakata"
+        },
+        "code_introduced_1/csd/2017": {
+          "name": "Kode Diperkenalkan"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings_2/csd/2017": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum_2/csd/2017": {
+          "name": "Forum guru"
+        },
+        "vocabulary_2/csd/2017": {
+          "name": "Kosakata"
+        },
+        "code_introduced_3/csd/2017": {
+          "name": "Kode Diperkenalkan"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings_5/csd/2017": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum_5/csd/2017": {
+          "name": "Forum guru"
+        },
+        "vocabulary_5/csd/2017": {
+          "name": "Kosakata"
+        },
+        "code_introduced/csd/2017": {
+          "name": "Kode Diperkenalkan"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings_1/csd/2017": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum_1/csd/2017": {
+          "name": "Forum guru"
+        },
+        "vocabulary_1/csd/2017": {
+          "name": "Kosakata"
+        },
+        "lesson_plans/csd/2017": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/csd/2017": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/csd/2017": {
+          "name": "Forum guru"
+        },
+        "vocabulary/csd/2017": {
+          "name": "Kosakata"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings_4/csd/2017": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum_4/csd/2017": {
+          "name": "Forum guru"
+        },
+        "vocabulary_4/csd/2017": {
+          "name": "Kosakata"
+        },
+        "code_introduced_2/csd/2017": {
+          "name": "Kode Diperkenalkan"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings_3/csd/2017": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum_3/csd/2017": {
+          "name": "Forum guru"
+        },
+        "vocabulary_3/csd/2017": {
+          "name": "Kosakata"
+        },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "Daftar Puisi",
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
@@ -363,7 +786,8 @@
         },
         "unplugged-video-big-event/courseb/2021": {
           "name": "Acara besar",
-          "url": "https://youtu.be/u0WV9shCoak"
+          "url": "https://youtu.be/u0WV9shCoak",
+          "type": "Video"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "Acara besar",
@@ -1751,6 +2175,120 @@
         },
         "website-for-a-purpose-reflect/csd/2021": {
           "type": "Panduan Proyek"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/pre-express/2020": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/pre-express/2020": {
+          "name": "Forum guru"
+        },
+        "vocabulary/pre-express/2020": {
+          "name": "Kosakata"
+        },
+        "lesson_plans/express/2020": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/express/2020": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/express/2020": {
+          "name": "Forum guru"
+        },
+        "vocabulary/express/2020": {
+          "name": "Kosakata"
+        },
+        "curriculum_guide/courseb/2020": {
+          "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/courseb/2020": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/courseb/2020": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/courseb/2020": {
+          "name": "Forum guru"
+        },
+        "vocabulary/courseb/2020": {
+          "name": "Kosakata"
+        },
+        "curriculum_guide/coursed/2020": {
+          "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/coursed/2020": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/coursed/2020": {
+          "name": "Forum guru"
+        },
+        "vocabulary/coursed/2020": {
+          "name": "Kosakata"
+        },
+        "curriculum_guide/coursec/2020": {
+          "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/coursec/2020": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/coursec/2020": {
+          "name": "Forum guru"
+        },
+        "vocabulary/coursec/2020": {
+          "name": "Kosakata"
+        },
+        "curriculum_guide/coursee/2020": {
+          "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/coursee/2020": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/coursee/2020": {
+          "name": "Forum guru"
+        },
+        "vocabulary/coursee/2020": {
+          "name": "Kosakata"
+        },
+        "curriculum_guide/coursea/2020": {
+          "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/coursea/2020": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/coursea/2020": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/coursea/2020": {
+          "name": "Forum guru"
+        },
+        "vocabulary/coursea/2020": {
+          "name": "Kosakata"
+        },
+        "curriculum_guide/coursef/2020": {
+          "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/coursef/2020": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/coursef/2020": {
+          "name": "Forum guru"
+        },
+        "vocabulary/coursef/2020": {
+          "name": "Kosakata"
         }
       }
     }

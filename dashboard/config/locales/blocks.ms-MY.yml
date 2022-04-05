@@ -2,6 +2,8 @@
 ms:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: membuat baru {ANIMATION_NAME} bidadari {LOCATION}
       Dancelab_alternateMoves:
         text: "{GROUP} berselang-seli setiap {N} corak berirama \nantara {MOVE1} dan
           {MOVE2}"
@@ -549,7 +551,6 @@ ms:
             '"fireworks"': Bunga Api
             '"flowers"': Bunga
             '"growing_stars"': Bintang yang Semakin Meningkat
-            '"higher_power"': Kuasa yang lebih tinggi
             '"swirl"': Hypno
             '"kaleidoscope"': Kaleidoskop
             '"lasers"': Lantai Menari Laser
@@ -1042,6 +1043,12 @@ ms:
         text: lukis garisan {COLOR} {LOC1} {LOC2}
       gamelab_edgesDisplace:
         text: tepi blok {SPRITE} dari bergerak
+      gamelab_everySeconds:
+        text: 'ulangi setiap {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': saat
+            '"frames"': bingkai
       gamelab_followingTargets:
         text: mengikut sasaran
       gamelab_getAllSprites:
@@ -1195,6 +1202,8 @@ ms:
             '"pop"': pop
             '"rain"': hujan
             '"spiral"': lingkaran
+      gamelab_makeNewScaledSprite:
+        text: membuat baru {ANIMATION_NAME} bidadari {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: membuat baru {ANIMATION_NAME} bidadari {LOCATION}
       gamelab_makeNumSprites:

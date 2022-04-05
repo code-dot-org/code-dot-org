@@ -2,6 +2,8 @@
 he:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: צור דמות {ANIMATION_NAME} חדשה ב {LOCATION}
       Dancelab_alternateMoves:
         text: "{GROUP} מחליפים כל {N} תיבות \nבין {MOVE1} ל{MOVE2}"
         options:
@@ -1041,6 +1043,11 @@ he:
         text: ניתנת לגרירה
       gamelab_edgesDisplace:
         text: המסגרת חוסמת את {SPRITE} מלזוז
+      gamelab_everySeconds:
+        text: 'כל {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': שניות
       gamelab_getAllSprites:
         text: כל הדמויות
       gamelab_getProp:
@@ -1173,6 +1180,8 @@ he:
             '"pop"': קפיצה
             '"rain"': גשום
             '"spiral"': ספירלה
+      gamelab_makeNewScaledSprite:
+        text: צור דמות {ANIMATION_NAME} חדשה ב {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: צור דמות {ANIMATION_NAME} חדשה ב {LOCATION}
       gamelab_makeNumSprites:

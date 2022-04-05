@@ -11,7 +11,7 @@ Feature: Help and Tips Map Link
     And I wait until ".editor-column" contains text "Circuit Playground"
     When I click selector "a:contains(Circuit Playground)"
     And I wait until element ".instructions-container" is visible
-    And I switch to the iframe "iframe.instructions-container"
+    And I switch to the first iframe
     And I wait for 1 seconds
     And I wait until element ".documentation-ui-test" is visible
     And I wait until ".content" contains text "Circuit Playground"
