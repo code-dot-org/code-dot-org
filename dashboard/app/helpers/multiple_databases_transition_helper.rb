@@ -10,12 +10,23 @@ module MultipleDatabasesTransitionHelper
   module ControllerFilter
     extend ActiveSupport::Concern
     class_methods do
-      def use_reader_connection_for_route(route)
+      def use_reader_connection_for_route(route, gatekeeper_controlled: false)
         if MultipleDatabasesTransitionHelper.transitioned?
           around_action :connect_to_reader, only: route
         else
           use_database_pool route => :persistent
         end
+        around_action(:gatekeeper_controlled_read_override, only: route) if gatekeeper_controlled
+      end
+    end
+
+    def gatekeeper_controlled_read_override
+      if Gatekeeper.allows('reader_connection_for_route_override', where: action_name, default: false)
+        MultipleDatabasesTransitionHelper.use_writer_connection do
+          yield
+        end
+      else
+        yield
       end
     end
 
