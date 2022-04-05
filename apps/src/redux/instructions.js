@@ -32,6 +32,7 @@ const SET_TTS_AUTOPLAY_ENABLED_FOR_LEVEL =
   'instructions/SET_TTS_AUTOPLAY_ENABLED_FOR_LEVEL';
 const SET_CODE_REVIEW_ENABLED_FOR_LEVEL =
   'instructions/SET_CODE_REVIEW_ENABLED_FOR_LEVEL';
+const SET_MUTE_MUSIC = 'instructions/SET_MUTE_MUSIC';
 
 /**
  * Some scenarios:
@@ -152,6 +153,13 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       renderedHeight: Math.min(action.maxAvailableHeight, state.renderedHeight),
       expandedHeight: Math.min(action.maxAvailableHeight, state.expandedHeight)
     });
+  }
+
+  if (action.type === SET_MUTE_MUSIC) {
+    return {
+      ...state,
+      muteMusic: action.muteMusic
+    };
   }
 
   if (action.type === SET_ALLOW_INSTRUCTIONS_RESIZE) {
@@ -279,6 +287,11 @@ export const setInstructionsMaxHeightAvailable = height => ({
 export const setAllowInstructionsResize = allowResize => ({
   type: SET_ALLOW_INSTRUCTIONS_RESIZE,
   allowResize
+});
+
+export const setMuteMusic = isMuted => ({
+  type: SET_MUTE_MUSIC,
+  isMuted
 });
 
 export const setHasAuthoredHints = hasAuthoredHints => ({

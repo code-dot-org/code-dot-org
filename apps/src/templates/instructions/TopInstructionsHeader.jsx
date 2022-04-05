@@ -22,6 +22,7 @@ function TopInstructionsHeader(props) {
     displayReviewTab,
     isViewingAsTeacher,
     isBackgroundMusicLevel,
+    //isBackgroundMusicMuted,
     fetchingData,
     handleDocumentationClick,
     handleInstructionTabClick,
@@ -164,6 +165,7 @@ function TopInstructionsHeader(props) {
               onClick={handleMuteMusicTabClick}
               style={{float: 'right'}}
             >
+              isBackgroundMusicMuted ? {i18n.backgroundMusicOn()} :
               {i18n.backgroundMusicOff()}
             </button>
           )}
@@ -262,6 +264,7 @@ TopInstructionsHeader.propTypes = {
   displayReviewTab: PropTypes.bool,
   isViewingAsTeacher: PropTypes.bool,
   isBackgroundMusicLevel: PropTypes.bool.isRequired,
+  isBackgroundMusicMuted: PropTypes.bool.isRequired,
   fetchingData: PropTypes.bool,
   handleDocumentationClick: PropTypes.func.isRequired,
   handleInstructionTabClick: PropTypes.func.isRequired,
