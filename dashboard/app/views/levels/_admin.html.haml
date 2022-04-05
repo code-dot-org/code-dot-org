@@ -103,21 +103,21 @@
       %br/
       Project info:
       %ul
-        - owner_storage_id, storage_app_id = storage_decrypt_channel_id(params[:channel_id]) rescue [nil, nil]
-        - sources_link = "https://s3.console.aws.amazon.com/s3/buckets/#{CDO.sources_s3_bucket}/#{CDO.sources_s3_directory}/#{owner_storage_id}/#{storage_app_id}/"
-        - assets_link = "https://s3.console.aws.amazon.com/s3/buckets/#{CDO.assets_s3_bucket}/#{CDO.assets_s3_directory}/#{owner_storage_id}/#{storage_app_id}/"
-        - animations_link = "https://s3.console.aws.amazon.com/s3/buckets/#{CDO.animations_s3_bucket}/#{CDO.animations_s3_directory}/#{owner_storage_id}/#{storage_app_id}/"
-        - files_link = "https://s3.console.aws.amazon.com/s3/buckets/#{CDO.files_s3_bucket}/#{CDO.files_s3_directory}/#{owner_storage_id}/#{storage_app_id}/"
+        - owner_storage_id, project_id = storage_decrypt_channel_id(params[:channel_id]) rescue [nil, nil]
+        - sources_link = "https://s3.console.aws.amazon.com/s3/buckets/#{CDO.sources_s3_bucket}/#{CDO.sources_s3_directory}/#{owner_storage_id}/#{project_id}/"
+        - assets_link = "https://s3.console.aws.amazon.com/s3/buckets/#{CDO.assets_s3_bucket}/#{CDO.assets_s3_directory}/#{owner_storage_id}/#{project_id}/"
+        - animations_link = "https://s3.console.aws.amazon.com/s3/buckets/#{CDO.animations_s3_bucket}/#{CDO.animations_s3_directory}/#{owner_storage_id}/#{project_id}/"
+        - files_link = "https://s3.console.aws.amazon.com/s3/buckets/#{CDO.files_s3_bucket}/#{CDO.files_s3_directory}/#{owner_storage_id}/#{project_id}/"
 
         %li= "project owner: #{User.find_channel_owner(params[:channel_id]).try(:username)}"
         %li= "owner storage id: #{owner_storage_id}"
-        %li= "storage app id: #{storage_app_id}"
-        - exists = FeaturedProject.exists?(:storage_app_id => storage_app_id)
+        %li= "project id: #{project_id}"
+        - exists = FeaturedProject.exists?(:project_id => project_id)
         - if exists
-          - project = FeaturedProject.find_by storage_app_id: storage_app_id
+          - project = FeaturedProject.find_by project_id: project_id
           - currently_featured = project.unfeatured_at == nil && project.featured_at != nil
-        - storage_apps = StorageApps.new(get_storage_id)
-        - content_moderation_disabled = storage_apps.content_moderation_disabled?(params[:channel_id])
+        - project = Projects.new(get_storage_id)
+        - content_moderation_disabled = project.content_moderation_disabled?(params[:channel_id])
         %li
           S3 links:
           = link_to 'sources', sources_link, target: '_blank'
@@ -127,7 +127,7 @@
             = link_to 'animations', animations_link, target: '_blank'
           - elsif @level.is_a? Weblab
             = link_to 'files', files_link, target: '_blank'
-        - remix_ancestry = StorageApps.remix_ancestry(params[:channel_id], depth: 5)
+        - remix_ancestry = Projects.remix_ancestry(params[:channel_id], depth: 5)
         - if remix_ancestry.empty?
           %li Not a remix.
         - else
