@@ -11,6 +11,7 @@ import {DisplayTheme} from './DisplayTheme';
 import {makeEnum} from '@cdo/apps/utils';
 import JavalabDialog from './JavalabDialog';
 import {PaneButton} from '@cdo/apps/templates/PaneHeader';
+import prettier from 'prettier';
 
 const Dialog = makeEnum('IMPORT_WARNING', 'IMPORT_ERROR');
 
@@ -55,14 +56,12 @@ class Backpack extends Component {
   };
 
   handleImport = () => {
-    const {selectedFiles} = this.state;
-    if (selectedFiles.length > 0) {
-      this.validateAndImportFiles(
-        this.importFiles,
-        this.showImportWarning,
-        this.showImportError
-      );
-    }
+    console.log(prettier);
+    const formattedText = prettier.format(this.props.sources['Game.java'], {
+      parser: 'java',
+      tabWidth: 2
+    });
+    console.log(formattedText);
   };
 
   importFiles = selectedFiles => {
@@ -132,11 +131,12 @@ class Backpack extends Component {
   };
 
   toggleDropdown = () => {
-    if (this.state.dropdownOpen) {
-      this.collapseDropdown();
-    } else {
-      this.expandDropdown();
-    }
+    console.log(prettier);
+    const formattedText = prettier.format(this.props.sources['Game.java'], {
+      parser: 'java',
+      tabWidth: 2
+    });
+    console.log(formattedText);
   };
 
   onFileListLoadError = () => {
