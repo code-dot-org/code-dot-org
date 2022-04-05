@@ -62,10 +62,16 @@ class ActivitiesController < ApplicationController
       end
 
       unless share_failure || ActivityConstants.skipped?(params[:new_result].to_i)
-        @level_source = LevelSource.find_identical_or_create(
-          @level,
-          params[:program].strip_utf8mb4
-        )
+        # This route is configured to use the read connection. When configured
+        # that way using SeamlessDatabasePool, this write is automatically
+        # caught and sent to the writer; but when using ActiveRecord, it needs
+        # to be handled explicitly.
+        MultipleDatabasesTransitionHelper.use_writer_connection do
+          @level_source = LevelSource.find_identical_or_create(
+            @level,
+            params[:program].strip_utf8mb4
+          )
+        end
         if share_filtering_error
           FirehoseClient.instance.put_record(
             :analysis,
