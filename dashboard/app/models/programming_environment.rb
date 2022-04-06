@@ -117,7 +117,7 @@ class ProgrammingEnvironment < ApplicationRecord
       title: title,
       description: description,
       projectUrl: project_url,
-      categories: categories.select {|c| c.programming_expressions.count > 0}.map(&:summarize_for_environment_show)
+      categories: categories.select {|c| c.programming_expressions.count > 0 || c.programming_classes.count > 0}.map(&:summarize_for_environment_show)
     }
   end
 
