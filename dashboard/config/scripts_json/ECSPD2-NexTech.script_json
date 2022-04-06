@@ -4,12 +4,14 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "is_course": true,
       "is_migrated": true,
-      "professional_learning_course": "ECS Support Legacy"
+      "professional_learning_course": "ECS Support Legacy",
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-11-22 19:55:39 UTC",
+    "family_name": "ECSPD2-NexTech",
+    "serialized_at": "2022-04-06 02:47:34 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

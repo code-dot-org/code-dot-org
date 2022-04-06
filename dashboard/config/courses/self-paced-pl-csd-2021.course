@@ -11,6 +11,7 @@
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
+    "family_name": "self-paced-pl-csd-2021",
     "has_verified_resources": true,
     "version_year": "2021"
   },

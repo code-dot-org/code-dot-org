@@ -4,14 +4,16 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "is_course": true,
       "is_migrated": true,
       "peer_reviews_to_complete": 6,
       "professional_learning_course": "CS Principles Deeper Learning 2019 - 2020",
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-11-22 19:56:49 UTC",
+    "family_name": "dlp19-csp-mod-w1",
+    "serialized_at": "2022-04-06 02:49:15 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "plc_reviewer",

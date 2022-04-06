@@ -4,12 +4,14 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "is_course": true,
       "is_migrated": true,
-      "professional_learning_course": "2021 CS Discoveries Deeper Learning"
+      "professional_learning_course": "2021 CS Discoveries Deeper Learning",
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-11-22 19:57:44 UTC",
+    "family_name": "dlp21-csd-overview",
+    "serialized_at": "2022-04-06 02:50:18 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "plc_reviewer",
