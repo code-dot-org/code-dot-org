@@ -988,7 +988,7 @@ describe('teacherSectionsRedux', () => {
       code: 'PMTKVH',
       lesson_extras: false,
       pairing_allowed: true,
-      script: null,
+      script_id: null,
       course_id: 29,
       createdAt: createdAt,
       studentCount: 10,

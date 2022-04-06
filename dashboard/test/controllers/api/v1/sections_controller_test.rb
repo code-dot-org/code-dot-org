@@ -626,24 +626,19 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  [CSP_COURSE_NAME].each do |existing_unit_group_name|
-    test "can create with both a course id and a script id - #{existing_unit_group_name}" do
-      existing_unit_group = UnitGroup.find_by(name: existing_unit_group_name)
-      CourseOffering.add_course_offering(existing_unit_group)
-
-      sign_in @teacher
-      post :create, params: {
-        login_type: Section::LOGIN_TYPE_EMAIL,
-        participant_type: 'student',
-        course_version_id: existing_unit_group.course_version.id,
-        unit_id: @csp_script.id,
-      }
-
-      assert_equal existing_unit_group.id, returned_json['course_id']
-      assert_equal existing_unit_group, returned_section.unit_group
-      assert_equal @csp_script.id, returned_json['script']['id']
-      assert_equal @csp_script, returned_section.script
-    end
+  test "can create with both a course id and a script id" do
+    sign_in @teacher
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      participant_type: 'student',
+      course_version_id: @csp_unit_group.course_version.id,
+      unit_id: @csp_script.id,
+    }
+    assert_response :success
+    assert_equal @csp_unit_group.id, returned_json['course_id']
+    assert_equal @csp_unit_group, returned_section.unit_group
+    assert_equal @csp_script.id, returned_json['script']['id']
+    assert_equal @csp_script, returned_section.script
   end
 
   test 'creating a section with a script assigns the script to the creating user' do
@@ -828,7 +823,9 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       id: section.id,
       course_version_id: 1,
     }
+    section.reload
     assert_response :bad_request
+    assert_nil section.course_id
   end
 
   test "update: script_id is not updated if invalid" do

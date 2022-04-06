@@ -2,7 +2,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
   before_action :get_course_and_unit, only: [:create, :update]
-  load_and_authorize_resource except: [:join, :leave, :membership, :create, :update, :require_captcha]
+  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :update, :require_captcha]
 
   skip_before_action :verify_authenticity_token, only: [:update_sharing_disabled, :update]
 
@@ -172,7 +172,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   def valid_course_offerings
     return head :forbidden unless current_user
 
-    course_offerings = CourseOffering.assignable_course_offerings_info(current_user)
+    course_offerings = CourseOffering.assignable_course_offerings_info(current_user, request.locale)
     render json: course_offerings
   end
 
