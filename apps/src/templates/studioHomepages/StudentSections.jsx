@@ -14,7 +14,7 @@ export default class StudentSections extends Component {
   static propTypes = {
     initialSections: PropTypes.array.isRequired,
     isTeacher: PropTypes.bool,
-    isPLSections: PropTypes.bool
+    isPlSections: PropTypes.bool
   };
 
   constructor(props) {
@@ -49,7 +49,7 @@ export default class StudentSections extends Component {
   };
 
   render() {
-    const {isTeacher, isPLSections} = this.props;
+    const {isTeacher, isPlSections} = this.props;
     const {
       sections,
       action,
@@ -59,8 +59,9 @@ export default class StudentSections extends Component {
       sectionCapacity,
       viewHidden
     } = this.state;
+
     const heading = isTeacher
-      ? isPLSections
+      ? isPlSections
         ? i18n.plSectionsJoined()
         : i18n.sectionsJoined()
       : i18n.sectionsTitle();
