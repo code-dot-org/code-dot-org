@@ -37,6 +37,9 @@ export default function ProgrammingMethodEditor({initialProgrammingMethod}) {
   if (remainingProgrammingMethod.examples) {
     remainingProgrammingMethod.examples.forEach(e => (e.key = createUuid()));
   }
+  if (remainingProgrammingMethod.parameters) {
+    remainingProgrammingMethod.parameters.forEach(p => (p.key = createUuid()));
+  }
   const [
     programmingMethod,
     updateProgrammingMethod,
