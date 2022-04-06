@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-04 12:11:55 UTC",
+    "serialized_at": "2022-04-05 13:48:30 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -317,7 +317,7 @@
       "key": "lesson-2",
       "name": "Unit 3 Assessment",
       "absolute_position": 15,
-      "lockable": false,
+      "lockable": true,
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
@@ -3634,7 +3634,8 @@
       "key": "c949777e-205c-4a3c-a5a2-414910e17daa",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Unit 3 Assessment on Code Studio."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Unit 3 Assessment on Code Studio.",
+        "progression_name": "Unit 3 Assessment"
       },
       "seeding_key": {
         "activity_section.key": "c949777e-205c-4a3c-a5a2-414910e17daa",
@@ -5097,6 +5098,28 @@
       "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Unit 3 Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Unit 3 Assessment 2022"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2022",
+        "activity_section.key": "c949777e-205c-4a3c-a5a2-414910e17daa"
+      },
+      "level_keys": [
+        "CSA Unit 3 Assessment 2022"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 1,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -5118,7 +5141,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5143,7 +5166,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5839,6 +5862,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa3-2022",
         "activity_section.key": "a9c6b159-6f10-4fab-a56d-cdfc3cbc0242"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Unit 3 Assessment 2022",
+        "script_level.level_keys": [
+          "CSA Unit 3 Assessment 2022"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2022",
+        "activity_section.key": "c949777e-205c-4a3c-a5a2-414910e17daa"
       }
     },
     {
