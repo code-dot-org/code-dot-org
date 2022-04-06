@@ -68,6 +68,7 @@ const sections = [
     tts_autoplay_enabled: false,
     pairing_allowed: true,
     sharing_disabled: false,
+    script_id: null,
     course_id: 29,
     createdAt: createdAt,
     studentCount: 10,
