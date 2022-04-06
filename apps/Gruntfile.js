@@ -350,6 +350,10 @@ describe('entry tests', () => {
             'style/curriculum/reference_guides.scss'
           ],
           [
+            'build/package/css/curriculum_navigation.css',
+            'style/curriculum/navigation.scss'
+          ],
+          [
             'build/package/css/levelbuilder.css',
             'style/code-studio/levelbuilder.scss'
           ],
