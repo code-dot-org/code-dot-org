@@ -465,6 +465,7 @@ describe('teacherSectionsRedux', () => {
   describe('setSections', () => {
     const startState = reducer(
       initialState,
+      setValidAssignments(validCourses, validScripts),
       setCourseOfferings(courseOfferings)
     );
 
@@ -703,6 +704,7 @@ describe('teacherSectionsRedux', () => {
     it('switching script assignment updates lesson extras value to default value if no lesson extras value passed', () => {
       let state = reducer(
         editingNewSectionState,
+        setValidAssignments(validCourses, validScripts),
         setCourseOfferings(courseOfferings)
       );
       state = reducer(
@@ -718,6 +720,7 @@ describe('teacherSectionsRedux', () => {
     it('switching script assignment and passing lesson extras value results in lesson extras being set to the passed value', () => {
       let state = reducer(
         editingNewSectionState,
+        setValidAssignments(validCourses, validScripts),
         setCourseOfferings(courseOfferings)
       );
       state = reducer(
@@ -1251,6 +1254,41 @@ describe('teacherSectionsRedux', () => {
 
       return promise.then(() => {
         expect(state().availableParticipantTypes).to.have.length(2);
+      });
+    });
+
+    it('sets validAssignments from server responses', () => {
+      const promise = store.dispatch(asyncLoadSectionData());
+      expect(state().validAssignments).to.deep.equal({});
+
+      expect(server.requests).to.have.length(5);
+      server.respondWith('GET', '/dashboardapi/sections', successResponse());
+      server.respondWith(
+        'GET',
+        '/dashboardapi/courses',
+        successResponse(validCourses)
+      );
+      server.respondWith(
+        'GET',
+        '/dashboardapi/sections/valid_scripts',
+        successResponse(validScripts)
+      );
+      server.respondWith(
+        'GET',
+        '/dashboardapi/sections/valid_course_offerings',
+        successResponse(courseOfferings)
+      );
+      server.respondWith(
+        'GET',
+        '/dashboardapi/sections/available_participant_types',
+        successResponse({availableParticipantTypes: ['student', 'teacher']})
+      );
+      server.respond();
+
+      return promise.then(() => {
+        expect(Object.keys(state().validAssignments)).to.have.length(
+          validCourses.length + validScripts.length
+        );
       });
     });
 
