@@ -580,7 +580,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      course_version_id: existing_unit_group.course_version.id,
+      course_version_id: @csp_unit_group.course_version.id,
       unit_id: @csp_script.id,
     }
     assert_response :success
