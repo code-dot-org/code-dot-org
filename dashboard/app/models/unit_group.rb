@@ -426,14 +426,14 @@ class UnitGroup < ApplicationRecord
     versions = courses.
       select {|c| c.family_name == family_name}.
       map do |c|
-      {
-        name: c.name,
-        version_year: c.version_year,
-        version_title: c.localized_version_title,
-        can_view_version: c.can_view_version?(user),
-        is_stable: c.stable?
-      }
-    end
+        {
+          name: c.name,
+          version_year: c.version_year,
+          version_title: c.localized_version_title,
+          can_view_version: c.can_view_version?(user),
+          is_stable: c.stable?
+        }
+      end
 
     versions.sort_by {|info| info[:version_year]}.reverse
   end
