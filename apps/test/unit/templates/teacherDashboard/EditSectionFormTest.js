@@ -4,6 +4,8 @@ import {assert} from '../../../util/reconfiguredChai';
 import {UnconnectedEditSectionForm as EditSectionForm} from '@cdo/apps/templates/teacherDashboard/EditSectionForm';
 import {
   courseOfferings,
+  assignmentFamilies,
+  validAssignments,
   testSection,
   noStudentsSection
 } from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
@@ -18,6 +20,8 @@ describe('EditSectionForm', () => {
         handleClose={() => {}}
         editSectionProperties={() => {}}
         courseOfferings={courseOfferings}
+        validAssignments={validAssignments}
+        assignmentFamilies={assignmentFamilies}
         sections={{}}
         section={testSection}
         isSaveInProgress={false}
@@ -54,6 +58,8 @@ describe('EditSectionForm', () => {
         handleClose={() => {}}
         editSectionProperties={() => {}}
         courseOfferings={courseOfferings}
+        validAssignments={validAssignments}
+        assignmentFamilies={assignmentFamilies}
         sections={{}}
         section={noStudentsSection}
         isSaveInProgress={false}
@@ -90,6 +96,8 @@ describe('EditSectionForm', () => {
         handleClose={() => {}}
         editSectionProperties={() => {}}
         courseOfferings={courseOfferings}
+        validAssignments={validAssignments}
+        assignmentFamilies={assignmentFamilies}
         sections={{}}
         section={{...testSection, loginType: SectionLoginType.picture}}
         isSaveInProgress={false}
@@ -126,6 +134,8 @@ describe('EditSectionForm', () => {
         handleClose={() => {}}
         editSectionProperties={() => {}}
         courseOfferings={courseOfferings}
+        validAssignments={validAssignments}
+        assignmentFamilies={assignmentFamilies}
         sections={{}}
         section={{...noStudentsSection, loginType: SectionLoginType.picture}}
         isSaveInProgress={false}
@@ -162,6 +172,8 @@ describe('EditSectionForm', () => {
         handleClose={() => {}}
         editSectionProperties={() => {}}
         courseOfferings={courseOfferings}
+        validAssignments={validAssignments}
+        assignmentFamilies={assignmentFamilies}
         sections={{}}
         section={{
           ...testSection,
@@ -186,6 +198,8 @@ describe('EditSectionForm', () => {
         handleClose={() => {}}
         editSectionProperties={() => {}}
         courseOfferings={courseOfferings}
+        validAssignments={validAssignments}
+        assignmentFamilies={assignmentFamilies}
         sections={{}}
         section={{
           ...noStudentsSection,
@@ -210,6 +224,8 @@ describe('EditSectionForm', () => {
         handleClose={() => {}}
         editSectionProperties={() => {}}
         courseOfferings={courseOfferings}
+        validAssignments={validAssignments}
+        assignmentFamilies={assignmentFamilies}
         sections={{}}
         section={{...testSection, loginType: SectionLoginType.google_classroom}}
         isSaveInProgress={false}
@@ -231,6 +247,8 @@ describe('EditSectionForm', () => {
         handleClose={() => {}}
         editSectionProperties={() => {}}
         courseOfferings={courseOfferings}
+        validAssignments={validAssignments}
+        assignmentFamilies={assignmentFamilies}
         sections={{}}
         section={{
           ...noStudentsSection,
@@ -255,6 +273,8 @@ describe('EditSectionForm', () => {
         handleClose={() => {}}
         editSectionProperties={() => {}}
         courseOfferings={courseOfferings}
+        validAssignments={validAssignments}
+        assignmentFamilies={assignmentFamilies}
         sections={{}}
         section={{...testSection, loginType: SectionLoginType.clever}}
         isSaveInProgress={false}
@@ -276,6 +296,8 @@ describe('EditSectionForm', () => {
         handleClose={() => {}}
         editSectionProperties={() => {}}
         courseOfferings={courseOfferings}
+        validAssignments={validAssignments}
+        assignmentFamilies={assignmentFamilies}
         sections={{}}
         section={{...noStudentsSection, loginType: SectionLoginType.clever}}
         isSaveInProgress={false}
@@ -299,6 +321,8 @@ describe('EditSectionForm', () => {
         handleClose={() => {}}
         editSectionProperties={() => {}}
         courseOfferings={courseOfferings}
+        validAssignments={validAssignments}
+        assignmentFamilies={assignmentFamilies}
         sections={{}}
         section={{...noStudentsSection, loginType: SectionLoginType.clever}}
         isSaveInProgress={false}
@@ -322,6 +346,8 @@ describe('EditSectionForm', () => {
         handleClose={() => {}}
         editSectionProperties={() => {}}
         courseOfferings={courseOfferings}
+        validAssignments={validAssignments}
+        assignmentFamilies={assignmentFamilies}
         sections={{}}
         section={{...noStudentsSection, loginType: SectionLoginType.clever}}
         isSaveInProgress={false}
@@ -344,6 +370,8 @@ describe('EditSectionForm', () => {
         handleClose={() => {}}
         editSectionProperties={() => {}}
         courseOfferings={courseOfferings}
+        validAssignments={validAssignments}
+        assignmentFamilies={assignmentFamilies}
         sections={{}}
         section={{...noStudentsSection, loginType: SectionLoginType.clever}}
         isSaveInProgress={false}
@@ -366,6 +394,8 @@ describe('EditSectionForm', () => {
         handleClose={() => {}}
         editSectionProperties={() => {}}
         courseOfferings={courseOfferings}
+        validAssignments={validAssignments}
+        assignmentFamilies={assignmentFamilies}
         sections={{}}
         section={{...noStudentsSection, loginType: SectionLoginType.clever}}
         isSaveInProgress={false}

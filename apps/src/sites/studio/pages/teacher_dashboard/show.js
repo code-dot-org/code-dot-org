@@ -12,6 +12,7 @@ import teacherSections, {
   setSections,
   selectSection,
   setRosterProvider,
+  setValidAssignments,
   setCourseOfferings,
   setShowLockSectionField, // DCDO Flag - show/hide Lock Section field
   setStudentsForCurrentSection
@@ -66,6 +67,7 @@ $(document).ready(function() {
   store.dispatch(setStudentsForCurrentSection(section.id, section.students));
   store.dispatch(setRosterProvider(section.login_type));
   store.dispatch(setLoginType(section.login_type));
+  store.dispatch(setValidAssignments(validCourses, validScripts));
   store.dispatch(setCourseOfferings(validCourseOfferings));
   store.dispatch(setLocaleCode(localeCode));
 
