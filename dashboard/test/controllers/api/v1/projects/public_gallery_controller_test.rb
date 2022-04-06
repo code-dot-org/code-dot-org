@@ -21,7 +21,7 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
     # return 1 applab project for initial DB request, then an empty set
     # for all subsequent db requests. Subsequent requests are only expected
     # when 'all' project types are requested.
-    StorageApps.stubs(:table).returns(db_result(stub_projects)).then.returns(db_result([]))
+    Projects.stubs(:table).returns(db_result(stub_projects)).then.returns(db_result([]))
   end
 
   test_user_gets_response_for(

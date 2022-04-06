@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-28 13:01:14 UTC",
+    "serialized_at": "2022-04-05 16:23:01 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -290,13 +290,29 @@
 
   ],
   "resources": [
-
+    {
+      "name": "Unit 4 Overview",
+      "url": "https://docs.google.com/document/d/1q5lcfSPiZvc7TI2rkdcF5mCK3arJk2yg119LRLsrzLg/edit?usp=sharing",
+      "key": "unit_4_overview",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_4_overview"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "unit_4_overview",
+        "script.name": "csa4-2022"
+      }
+    }
   ],
   "scripts_student_resources": [
 
