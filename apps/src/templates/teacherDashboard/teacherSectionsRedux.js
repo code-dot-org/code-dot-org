@@ -413,6 +413,7 @@ export const asyncLoadSectionData = id => dispatch => {
         availableParticipantTypes,
         students
       ]) => {
+        dispatch(setValidAssignments(validCourses, validScripts));
         dispatch(setCourseOfferings(validCourseOfferings));
         dispatch(
           setAvailableParticipantTypes(
