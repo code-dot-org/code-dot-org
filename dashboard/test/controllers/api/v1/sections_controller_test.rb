@@ -491,7 +491,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       login_type: Section::LOGIN_TYPE_EMAIL,
       course_version_id: @beta_unit_group.course_version.id,
     }
-    assert_response :bad_request
+    assert_response :forbidden
   end
 
   test 'pilot teacher can assign the pilot course' do
@@ -771,7 +771,9 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       course_version_id: @beta_unit_group.course_version.id,
       unit_id: 1,
     }
+    section.reload
     assert_response :forbidden
+    assert_nil section.script_id
   end
 
   test "update: hidden script is unhidden when assigned" do

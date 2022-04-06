@@ -136,7 +136,9 @@ module Pd
 
     LABEL_OVERRIDES = {
       program: "Which professional learning program would you like to join for the #{YEAR} school year?",
-      cs_how_many_minutes: 'How many minutes will your class last?'
+      cs_how_many_minutes: 'How many minutes per day is one class section?',
+      cs_how_many_days_per_week: 'How many days per week will this course be offered to one section of students?',
+      cs_how_many_weeks_per_year: 'How many weeks during the year will this course be taught to one section of students?',
     }.freeze
 
     CSV_LABELS = {
@@ -166,8 +168,9 @@ module Pd
         program: LABEL_OVERRIDES[:program],
         csd_which_grades: "To which grades does your school plan to offer CS Discoveries in the #{YEAR} school year?",
         csp_which_grades: "To which grades does your school plan to offer CS Principles in the #{YEAR} school year?",
-        cs_how_many_minutes: "How many minutes will your CS program class last?",
-        cs_how_many_days_per_week: "How many days per week will your CS program class be offered to one section of students?",
+        cs_how_many_minutes: 'How many minutes per day is one class section?',
+        cs_how_many_days_per_week: 'How many days per week will this course be offered to one section of students?',
+        cs_how_many_weeks_per_year: 'How many weeks during the year will this course be taught to one section of students?',
         cs_total_course_hours: "Total course hours",
         replace_existing: "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
         replace_which_course: "Which existing course or curriculum will this CS program replace? Mark all that apply.",
