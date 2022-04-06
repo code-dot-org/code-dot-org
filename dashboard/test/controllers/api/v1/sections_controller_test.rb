@@ -471,7 +471,6 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   [CSP_COURSE_NAME, CSP_COURSE_SOFT_LAUNCHED_NAME].each do |existing_unit_group_name|
     test "can create with a course as course version but no unit selected - #{existing_unit_group_name}" do
       existing_unit_group = UnitGroup.find_by(name: existing_unit_group_name)
-      CourseOffering.add_course_offering(existing_unit_group)
 
       sign_in @teacher
       post :create, params: {
@@ -486,12 +485,11 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     end
   end
 
-  # Check this
   test 'cannot assign an invalid course version id' do
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      course_version_id: -1,
+      course_version_id: @beta_unit_group.course_version.id,
     }
     assert_response :bad_request
   end
