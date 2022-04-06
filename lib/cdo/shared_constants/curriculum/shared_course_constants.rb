@@ -69,7 +69,7 @@ module SharedCourseConstants
     math: 'Math',
     twenty_hour: '20-hour',
     other: 'Other',
-    pl_self_paced: 'Self Paced Professional Learning',
+    pl_self_paced: 'Self-Paced Professional Learning',
     pl_virtual: 'Virtual Professional Learning',
     pl_other: 'Other Professional Learning'
   ).freeze
