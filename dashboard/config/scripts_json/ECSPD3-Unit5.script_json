@@ -4,14 +4,12 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "is_course": true,
       "is_migrated": true,
-      "professional_learning_course": "ECS Support Legacy",
-      "version_year": "unversioned"
+      "professional_learning_course": "ECS Support Legacy"
     },
     "new_name": null,
-    "family_name": "ECSPD3-Unit5",
-    "serialized_at": "2022-04-06 02:47:38 UTC",
+    "family_name": null,
+    "serialized_at": "2021-11-22 19:55:40 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

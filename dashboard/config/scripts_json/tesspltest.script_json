@@ -4,14 +4,12 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "is_course": true,
       "is_migrated": true,
-      "professional_learning_course": "Tess test course",
-      "version_year": "unversioned"
+      "professional_learning_course": "Tess test course"
     },
     "new_name": null,
-    "family_name": "tesspltest",
-    "serialized_at": "2022-04-06 02:50:19 UTC",
+    "family_name": null,
+    "serialized_at": "2021-12-07 23:14:09 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -98,9 +96,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "tess self paced pl app lab"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -122,9 +117,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Tess - self paced PL AI"
-        ]
       },
       "bonus": false,
       "seeding_key": {

@@ -5,14 +5,12 @@
     "login_required": false,
     "properties": {
       "curriculum_umbrella": "CSA",
-      "is_course": true,
       "is_migrated": true,
-      "student_detail_progress_view": true,
-      "version_year": "unversioned"
+      "student_detail_progress_view": true
     },
     "new_name": null,
-    "family_name": "csa-preview",
-    "serialized_at": "2022-04-06 02:54:14 UTC",
+    "family_name": null,
+    "serialized_at": "2022-03-03 17:34:56 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -194,9 +192,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA Neighborhood Overview"
-        ],
         "progression": "Overview and Demo"
       },
       "bonus": false,
@@ -219,9 +214,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA Neighborhood AC Demo"
-        ],
         "progression": "Overview and Demo"
       },
       "bonus": false,
@@ -244,9 +236,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA Unit 1 Project - Student Example 2"
-        ],
         "progression": "Student Projects"
       },
       "bonus": false,
@@ -269,9 +258,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA Unit 1 Project - Student Example 3"
-        ],
         "progression": "Student Projects"
       },
       "bonus": false,
@@ -294,9 +280,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA Theater Overview"
-        ],
         "progression": "Overview and Demo"
       },
       "bonus": false,
@@ -319,9 +302,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA Theater AC Demo"
-        ],
         "progression": "Overview and Demo"
       },
       "bonus": false,
@@ -344,9 +324,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA Unit 3 Project Examples"
-        ],
         "progression": "Student Projects"
       },
       "bonus": false,
@@ -369,9 +346,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA Playground Overview"
-        ],
         "progression": "Overview and Demo"
       },
       "bonus": false,
@@ -394,9 +368,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA Playground AC Demo"
-        ],
         "progression": "Overview and Demo"
       },
       "bonus": false,
@@ -419,9 +390,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA Unit 4 Project Examples"
-        ],
         "progression": "Student Projects"
       },
       "bonus": false,

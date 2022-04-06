@@ -5,14 +5,12 @@
     "login_required": false,
     "properties": {
       "hideable_lessons": true,
-      "is_course": true,
       "is_migrated": true,
-      "pilot_experiment": "haikubot-pilot",
-      "version_year": "unversioned"
+      "pilot_experiment": "haikubot-pilot"
     },
     "new_name": null,
-    "family_name": "haikubot-pilot",
-    "serialized_at": "2022-04-06 02:50:03 UTC",
+    "family_name": null,
+    "serialized_at": "2021-11-22 19:57:34 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
