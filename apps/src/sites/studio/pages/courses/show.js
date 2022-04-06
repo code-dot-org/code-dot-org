@@ -68,7 +68,7 @@ function showCourseOverview() {
     store.dispatch(initializeHiddenScripts(scriptData.hidden_scripts));
   }
 
-  const versions = courseSummary.versions;
+  const versions = courseSummary.course_versions;
 
   const announcements = courseSummary.announcements;
   if (announcements) {
