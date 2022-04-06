@@ -1093,6 +1093,11 @@ class ScriptTest < ActiveSupport::TestCase
     )
     CourseOffering.add_course_offering(foo19)
 
+    versions = foo17.summarize[:versions]
+    assert_equal 2, versions.length
+    assert_equal 'foo-2018', versions[0][:name]
+    assert_equal 'foo-2017', versions[1][:name]
+
     versions = foo17.summarize(true, teacher)[:versions]
     assert_equal 2, versions.length
     assert_equal 'foo-2018', versions[0][:name]

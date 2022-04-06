@@ -606,7 +606,9 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal 'unit1', summary[:scripts][0][:name]
     assert_equal 'unit1-description', summary[:scripts][0][:description]
 
-    assert_equal 1, summary[:course_versions].keys.length
+    assert_equal 1, summary[:versions].length
+    assert_equal 'my-unit-group', summary[:versions].first[:name]
+    assert_equal '1999', summary[:versions].first[:version_year]
 
     assert_equal 1, summary[:course_versions].keys.length
 
