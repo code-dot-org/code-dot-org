@@ -37,7 +37,7 @@
             %span#playtext= I18n.t(entry[:text])
       - elsif entry[:type] == "video_thumbnail"
         .video_thumbnail
-          = view :display_video_thumbnail, thumbnail_only: true, id: "mainvideo", video_code: entry[:youtube_id], image_url: entry[:image_url], play_button: 'center', facebook: {u: entry[:facebook]}, twitter: nil, letterbox: "false", download_path: entry[:download_path]
+          = view :display_video_thumbnail, thumbnail_only: true, id: "mainvideo", video_code: entry[:youtube_id], image_url: entry[:image_url], play_button: 'center', letterbox: "false"
       - elsif entry[:type] == "text"
         .text{dir: "auto"}
           = I18n.t(entry[:text])

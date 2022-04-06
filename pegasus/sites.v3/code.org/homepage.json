@@ -17,10 +17,7 @@
           "type": "video_thumbnail",
           "image_url": "/images/marketing/homepage-thebadguys-video-thumbnail.png",
           "text": "homepage_action_text_codevideo",
-          "youtube_id": "6gauCnbXxnQ",
-          "download_path": "//videos.code.org/social/what-most-schools-dont-teach.mp4",
-          "facebook": "https://www.facebook.com/Code.org/videos/10100689712053311/",
-          "twitter": "Anybody can learn computer science, starting with an #HourOfCode. https://twitter.com/codeorg/status/828716370053304321"
+          "youtube_id": "6gauCnbXxnQ"
         },
         {
           "type": "text",

@@ -439,8 +439,8 @@ class Homepage
       {
         video_code: video[:youtube_id],
         download_path: video[:download_path],
-        facebook: {u: video[:facebook]},
-        twitter: {related: 'codeorg', text: video[:twitter]}
+        facebook: video[:facebook] ? {u: video[:facebook]} : nil,
+        twitter: video[:twitter] ? {related: 'codeorg', text: video[:twitter]} : nil
       }
     else
       nil
