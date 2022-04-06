@@ -1075,18 +1075,6 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal([], json_response)
   end
 
-  test "valid_scripts: returns 403 'Forbidden' when not signed in" do
-    get :valid_scripts
-    assert_response :forbidden
-  end
-
-  test "valid_scripts: returns scripts for any signed in user" do
-    user = create(:user)
-    sign_in user
-    get :valid_scripts
-    assert_response :success
-  end
-
   test "require_captcha: returns 403 'Forbidden' when not signed in" do
     get :require_captcha
     assert_response :forbidden
