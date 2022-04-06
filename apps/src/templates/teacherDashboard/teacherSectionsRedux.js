@@ -829,6 +829,12 @@ export default function teacherSections(state = initialState, action) {
       }
     }
 
+    // PL Sections must use email logins
+    const participantTypeSettings = {};
+    if (action.props.loginType && action.props.loginType !== 'email') {
+      participantTypeSettings.participantType = 'student';
+    }
+
     const lessonExtraSettings = {};
     if (action.props.unitId && action.props.lessonExtras === undefined) {
       lessonExtraSettings.lessonExtras = true;
@@ -845,6 +851,7 @@ export default function teacherSections(state = initialState, action) {
         ...state.sectionBeingEdited,
         ...lessonExtraSettings,
         ...ttsAutoplayEnabledSettings,
+        ...participantTypeSettings,
         ...action.props
       }
     };

@@ -159,6 +159,57 @@ export const joinedSections = [
   }
 ];
 
+export const joinedPlSections = [
+  {
+    id: 11,
+    name: 'Period 1',
+    teacherName: 'Ms. Frizzle',
+    linkToProgress: progressUrl,
+    assignedTitle: 'PL Course 1',
+    linkToAssigned: 'https://studio.code.org/s/course1',
+    numberOfStudents: 1,
+    linkToStudents: manageStudentsUrl,
+    code: 'ClassOneCode'
+  },
+  {
+    id: 12,
+    name: 'Period 2',
+    teacherName: 'Ms. Frizzle',
+    linkToProgress: progressUrl,
+    assignedTitle: 'PL Course 2',
+    linkToAssigned: 'https://studio.code.org/s/course2',
+    currentUnitTitle: 'Unit 3',
+    linkToCurrentUnit: 'https://studio.code.org/s/course2-unit3',
+    numberOfStudents: 2,
+    linkToStudents: manageStudentsUrl,
+    code: 'ClassTwoCode'
+  },
+  {
+    id: 13,
+    name: 'Period 3 (Google Classroom)',
+    teacherName: 'Ms. Frizzle',
+    linkToProgress: progressUrl,
+    assignedTitle: 'PL Course 3',
+    linkToAssigned: 'https://studio.code.org/s/course3',
+    numberOfStudents: 3,
+    linkToStudents: manageStudentsUrl,
+    login_type: 'google_classroom',
+    code: 'DoNotShowThis'
+  },
+  {
+    id: 14,
+    name: 'Period 4 (Clever)',
+    teacherName: 'Ms. Frizzle',
+    linkToProgress: progressUrl,
+    assignedTitle: 'PL Course 4',
+    linkToAssigned: 'https://studio.code.org/s/course4',
+    numberOfStudents: 4,
+    linkToStudents: manageStudentsUrl,
+    login_type: 'clever',
+    code: 'OrThisEither'
+  }
+];
+
 export const topCourse = {
   assignableName: 'Course 1',
   lessonName: 'Lesson 3: Learn to drag and drop',

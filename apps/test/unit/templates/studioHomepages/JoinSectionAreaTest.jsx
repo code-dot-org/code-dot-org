@@ -2,6 +2,7 @@ import {expect} from '../../../util/reconfiguredChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
+import {joinedSections} from './homepagesTestData';
 
 const DEFAULT_PROPS = {
   initialJoinedPlSections: [],
@@ -12,7 +13,10 @@ const DEFAULT_PROPS = {
 describe('JoinSectionArea', () => {
   it('shows student sections if has joined student sections', () => {
     const wrapper = shallow(
-      <JoinSectionArea {...DEFAULT_PROPS} initialJoinedStudentSections={[]} />
+      <JoinSectionArea
+        {...DEFAULT_PROPS}
+        initialJoinedStudentSections={joinedSections}
+      />
     );
     expect(wrapper.find('JoinSection').length).to.equal(1);
     expect(wrapper.find('StudentSections').length).to.equal(1);
