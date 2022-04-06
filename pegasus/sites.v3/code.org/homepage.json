@@ -8,7 +8,8 @@
       "dcdo": "thebadguys-promotion",
       "class": "vertical-stack",
       "desktopImage": "/images/marketing/homepage-thebadguys-background.jpg",
-      "mobileImage": "/images/marketing/homepage-thebadguys-background.jpg",
+      "leftBar": "/images/marketing/homepage-thebadguys-left.png",
+      "rightBar": "/images/marketing/homepage-thebadguys-right.png",
       "actions": [
         {
           "type": "image",

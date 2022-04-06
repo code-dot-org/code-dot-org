@@ -114,7 +114,7 @@ body.modal-open .supreme-container{
 
 #homepage #actions {
   position: relative;
-  padding: 0px 20px 20px 20px;
+  padding: 20px;
 }
 
 @media screen and (max-width: 970px) {
@@ -662,8 +662,8 @@ body.modal-open .supreme-container{
 }
 
 #homepage .vertical-stack .image {
-  max-width: 120px;
-  margin-bottom: 10px;
+  max-width: 400px;
+  margin-bottom: 20px;
 }
 
 #homepage .vertical-stack .video_thumbnail {
@@ -677,5 +677,6 @@ body.modal-open .supreme-container{
   line-height: 1.5em;
   padding-bottom: 0px;
   font-family: 'Gotham 4r', sans-serif;
-  padding-top: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }

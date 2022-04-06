@@ -4,6 +4,7 @@
   heroes_arranged, hero_display_time = Homepage.get_heroes_arranged(request)
   actions = Homepage.get_actions(request)
   action_buttons_css_class = Homepage.get_action_buttons_css_class()
+  num_columns = Homepage.get_num_columns()
 
 - main_actions = capture_haml do
   - if show_single_hero == "changeworld"
@@ -77,8 +78,17 @@
         = view :mobile_header_responsive
 
   - if show_single_hero
-    #actions
-      = main_actions
+    - if num_columns == 3
+      - extra_images = Homepage.get_outer_column_images()
+      #actions{style: "padding: 0px"}
+        #bars{style: "display: flex; max-width: 1680px; margin: 0 auto;"}
+          .col-33.tablet-feature{style: "align-items: stretch; background-image: url(#{extra_images[:left_image]}); background-position: 100% 100%; background-size: contain; background-repeat: no-repeat"}
+          .col-33{style: "z-index: 1; padding-top: 0px; padding-bottom: 40px"}
+            = main_actions
+          .col-33.tablet-feature{style: "align-items: stretch; background-image: url(#{extra_images[:right_image]}); background-position: 0% 100%; background-size: contain; background-repeat: no-repeat"}
+    - else
+      #actions
+        = main_actions
 
   #caption_container.container_responsive
     - unless show_single_hero
