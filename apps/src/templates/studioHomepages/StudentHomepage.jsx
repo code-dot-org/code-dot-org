@@ -76,7 +76,7 @@ export default class StudentHomepage extends Component {
             canViewFullList={true}
             canViewAdvancedTools={canViewAdvancedTools}
           />
-          <JoinSectionArea joinedStudentSections={sections} />
+          <JoinSectionArea initialJoinedStudentSections={sections} />
         </div>
       </div>
     );

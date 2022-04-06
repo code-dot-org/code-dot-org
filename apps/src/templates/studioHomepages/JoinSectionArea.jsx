@@ -73,7 +73,7 @@ export default function JoinSectionArea({
           updateSections={setJoinedStudentSections}
         />
       )}
-      {joinedPlSections?.length > 0 && (
+      {joinedPlSections?.length > 0 && isTeacher && (
         <StudentSections
           sections={joinedPlSections}
           isTeacher={isTeacher}
