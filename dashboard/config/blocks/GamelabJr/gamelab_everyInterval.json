@@ -1,13 +1,12 @@
 {
   "category": "Events",
   "config": {
-    "func": "everySeconds",
+    "func": "everyInterval",
     "blockText": "repeat every {N} {UNIT} ",
     "args": [
       {
         "name": "N",
-        "type": "ClampedNumber(0.1,)",
-        "field": true
+        "type": "ClampedNumber(0.1,)"
       },
       {
         "name": "UNIT",
@@ -23,11 +22,11 @@
         ]
       }
     ],
-    "eventLoopBlock": true,
+    "eventBlock": true,
     "color": [
-      322,
-      0.9,
-      0.95
+      140,
+      1,
+      0.74
     ]
   }
 }
