@@ -7,6 +7,7 @@ import {KeyCodes} from '@cdo/apps/constants';
 import {selectors} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {PromptType} from '../redux/spritelabInput';
 import {animationSourceUrl} from '../redux/animationList';
+
 class SpritelabInput extends React.Component {
   static propTypes = {
     animationList: shapes.AnimationList.isRequired,
@@ -68,7 +69,7 @@ class SpritelabInput extends React.Component {
         animationData.sourceUrl ||
         // If custom animation, generate URL from animations API
         animationSourceUrl(animationKey, animationData, this.props.channelId);
-      spriteMap[`image_${animation[1].name}`] = url;
+      spriteMap[`image_${animationData.name}`] = url;
     });
     return spriteMap;
   });
