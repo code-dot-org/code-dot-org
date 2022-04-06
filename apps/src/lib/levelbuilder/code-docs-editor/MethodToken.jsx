@@ -31,14 +31,5 @@ const styles = {
     border: `1px solid ${color.bootstrap_border_color}`,
     borderRadius: 4,
     margin: 0
-  },
-  selectInput: {
-    boxSizing: 'border-box',
-    padding: '4px 6px',
-    color: '#555',
-    border: `1px solid ${color.bootstrap_border_color}`,
-    borderRadius: 4,
-    marginBottom: 0,
-    marginLeft: 5
   }
 };
