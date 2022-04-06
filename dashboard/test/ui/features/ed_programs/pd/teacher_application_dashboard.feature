@@ -1,11 +1,10 @@
 @dashboard_db_access
 @eyes
-#  [MEG] TODO: Remove experiment flag once launched
 Feature: Teacher Application Dashboard
 
   Scenario: View summary of all apps, apps in a course, detail view of one app, and cohort view of accepted apps
     Given I am a workshop administrator with some applications of each type and status
-    And I am on "http://studio.code.org/pd/application_dashboard/summary?enableExperiments=teacher-application-saving-reopening"
+    And I am on "http://studio.code.org/pd/application_dashboard/summary"
     Then I wait until element "table#summary-csa-teachers" is visible
     And I open my eyes to test "Teacher Application Dashboard"
     And I see no difference for "Admin Summary View"
