@@ -35,6 +35,7 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
    * all of the available blocks.
    */
   getToolboxType() {
+    console.log('calling deprecated getToolboxType');
     if (this.flyout_) {
       return ToolboxType.UNCATEGORIZED;
     } else if (this.toolbox_) {
@@ -55,7 +56,9 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
     this.trashcan = new Blockly.Trashcan(this);
     var svgTrashcan = this.trashcan.createDom();
 
-    switch (this.getToolboxType()) {
+    const toolboxType = this.getToolboxType();
+    console.log('cdoWorkspaceSvg/addTrashcan: ', toolboxType);
+    switch (toolboxType) {
       case ToolboxType.UNCATEGORIZED: {
         const trashcanHolder = Blockly.utils.dom.createSvgElement('svg', {
           id: 'trashcanHolder',
@@ -90,6 +93,7 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
     return super.getAllBlocks().filter(block => !block.disabled);
   }
   getToolboxWidth() {
+    console.log('calling deprecated getToolboxWidth');
     const metrics = this.getMetrics();
     switch (this.getToolboxType()) {
       case ToolboxType.CATEGORIZED:
@@ -107,8 +111,9 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
 
   resize() {
     super.resize();
-
-    if (this.getToolboxType() === ToolboxType.UNCATEGORIZED) {
+    const toolboxType = this.getToolboxType();
+    console.log('cdoWokspaceSvg/resize: ', toolboxType);
+    if (toolboxType === ToolboxType.UNCATEGORIZED) {
       this.flyout_.resize();
     }
   }

@@ -230,7 +230,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
       return block.getTitles();
     },
     getToolboxWidth: function() {
-      return Blockly.mainBlockSpaceEditor.getToolboxWidth();
+      const toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
+      console.log('cdoBlocklyWrapper/cdoUtils/getToolboxWidth: ', toolboxWidth);
+      return toolboxWidth;
     },
     setHSV: function(block, h, s, v) {
       block.setHSV(h, s, v);

@@ -11,6 +11,7 @@ export function getBlockFields(block) {
 }
 
 export function getToolboxType() {
+  console.log('calling new cdoUtils/getToolboxType');
   const workspace = Blockly.getMainWorkspace();
   if (workspace.flyout_) {
     return ToolboxType.UNCATEGORIZED;
@@ -22,9 +23,12 @@ export function getToolboxType() {
 }
 
 export function getToolboxWidth() {
+  console.log('calling new cdoUtils/getToolboxWidth');
   const workspace = Blockly.getMainWorkspace();
   const metrics = workspace.getMetrics();
-  switch (getToolboxType()) {
+  const toolboxType = getToolboxType();
+  console.log('new cdoUtils/getToolboxWdith: ', toolboxType);
+  switch (toolboxType) {
     case ToolboxType.CATEGORIZED:
       return metrics.toolboxWidth;
     case ToolboxType.UNCATEGORIZED:

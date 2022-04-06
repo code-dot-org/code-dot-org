@@ -91,6 +91,7 @@ export default class VerticalFlyout extends GoogleBlockly.VerticalFlyout {
     }
     this.reflowInternal_();
     const toolboxWidth = this.targetWorkspace.getToolboxWidth();
+    console.log(`cdoVerticalFlyout: width is ${toolboxWidth}`);
     document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
   }
 }

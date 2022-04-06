@@ -112,7 +112,9 @@ export default class CdoTrashcan extends GoogleBlockly.Trashcan {
     }
 
     let toolboxWidth;
-    switch (this.workspace_.getToolboxType()) {
+    const toolboxType = this.workspace_.getToolboxType();
+    console.log('cdoTrashcan: ', toolboxType);
+    switch (toolboxType) {
       case ToolboxType.CATEGORIZED:
         toolboxWidth = this.workspace_.toolbox_.width_;
         break;
