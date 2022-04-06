@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-30 14:23:04 UTC",
+    "serialized_at": "2022-04-05 14:18:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -316,10 +316,11 @@
       "key": "lesson-5",
       "name": "Unit 2 Assessment",
       "absolute_position": 15,
-      "lockable": false,
+      "lockable": true,
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
+        "assessment": true,
         "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
         "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource",
         "student_overview": "Assess your progress through the Unit 2 Assessment."
@@ -3607,7 +3608,8 @@
       "key": "edf6f69f-4dd2-421f-b2ad-7b37827bedf3",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Unit 2 Assessment on Code Studio."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Unit 2 Assessment on Code Studio.",
+        "progression_name": "Unit 2 Assessment"
       },
       "seeding_key": {
         "activity_section.key": "edf6f69f-4dd2-421f-b2ad-7b37827bedf3",
@@ -4895,6 +4897,31 @@
       "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA Unit 2 Assessment 2022"
+        ],
+        "progression": "Unit 2 Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Unit 2 Assessment 2022"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-2022",
+        "activity_section.key": "edf6f69f-4dd2-421f-b2ad-7b37827bedf3"
+      },
+      "level_keys": [
+        "CSA Unit 2 Assessment 2022"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 1,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4916,7 +4943,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4941,7 +4968,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5553,6 +5580,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa2-2022",
         "activity_section.key": "311ede3b-cae0-4cee-aafe-bcf18a013a9d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Unit 2 Assessment 2022",
+        "script_level.level_keys": [
+          "CSA Unit 2 Assessment 2022"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-2022",
+        "activity_section.key": "edf6f69f-4dd2-421f-b2ad-7b37827bedf3"
       }
     },
     {
@@ -6526,7 +6565,7 @@
     {
       "key": "compound_assignment_operator",
       "word": "compound assignment operator",
-      "definition": "shortcut syntax ( `+=` , `-=` , `*=` , `/=` , `%=` ) to perform an operation (`+` , `-` , `*` , `/` , or `%` ) on both operands and store the result into the operand on the left",
+      "definition": "shortcut syntax ( `+=` , `-=` , `*=` , `/=` , `%=` ) to perform an operation (`+` , `-` , `*` , `/` , or `%` ) on both operands and store the result into the variable on the left",
       "properties": {
       },
       "seeding_key": {

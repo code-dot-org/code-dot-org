@@ -42,6 +42,7 @@ module ViewOptionsHelper
     :blocklyVersion,
     :disallowed_html_tags,
     :backpack_channel,
+    :backpack_enabled,
     :level_requires_channel,
     :reduce_channel_updates,
   )
