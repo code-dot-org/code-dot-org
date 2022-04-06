@@ -226,11 +226,14 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.Block.prototype.getTitleValue;
 
   blocklyWrapper.cdoUtils = {
-    setHSV: function(block, h, s, v) {
-      block.setHSV(h, s, v);
-    },
     getBlockFields: function(block) {
       return block.getTitles();
+    },
+    getToolboxWidth: function() {
+      return Blockly.mainBlockSpaceEditor.getToolboxWidth();
+    },
+    setHSV: function(block, h, s, v) {
+      block.setHSV(h, s, v);
     }
   };
   return blocklyWrapper;
