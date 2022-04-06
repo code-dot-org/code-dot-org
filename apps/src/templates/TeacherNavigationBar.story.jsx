@@ -8,9 +8,9 @@ export default storybook => {
     allowConsoleWarnings();
   }
 
-  return storybook.storiesOf('NavigationBar', module).addStoryTable([
+  return storybook.storiesOf('TeacherNavigationBar', module).addStoryTable([
     {
-      name: 'Navigation Bar',
+      name: 'Teacher Navigation Bar',
       description: 'Navigation Bar used on Teacher Dashboard',
       story: () => (
         <Router>
