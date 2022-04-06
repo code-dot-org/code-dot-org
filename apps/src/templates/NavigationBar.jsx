@@ -43,10 +43,27 @@ export const NavigationCategory = ({
       }}
       className={classNames({category: true, open: isOpen})}
     >
-      <span className="title" onClick={() => setIsOpen(!isOpen)}>
+      <span
+        className="title"
+        tabIndex="0"
+        role="button"
+        onClick={() => setIsOpen(!isOpen)}
+        onKeyDown={e => {
+          if ([' ', 'Enter', 'Spacebar'].includes(e.key)) {
+            setIsOpen(!isOpen);
+          }
+        }}
+      >
         {name}
       </span>
-      {children}
+      <div
+        className={classNames({
+          'doc-links': true,
+          open: isOpen
+        })}
+      >
+        {children}
+      </div>
     </div>
   );
 };
