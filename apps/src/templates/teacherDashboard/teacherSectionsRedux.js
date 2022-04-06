@@ -886,10 +886,10 @@ export default function teacherSections(state = initialState, action) {
       ...section
     };
 
-    let newStudentSectionIds = newSections
+    let newStudentSectionIds = Object.values(newSections)
       ?.filter(section => section.participantType === 'student')
       .map(section => section.id);
-    let newPlSectionIds = newSections
+    let newPlSectionIds = Object.values(newSections)
       ?.filter(section => section.participantType !== 'student')
       .map(section => section.id);
 
