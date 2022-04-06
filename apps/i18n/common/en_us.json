@@ -1009,6 +1009,7 @@
   "joinSectionAsk": "Tell your students to create their own accounts and join your section at: ",
   "joinSectionDescription": "Join a teacher's section by entering their Section Code.",
   "joinSectionPlaceholder": "Section Code (ABCDEF)",
+  "joinSectionTeacherDescription": "Join an instructor's section by entering their Section Code.",
   "joinCommunity": "Visit the forum",
   "joinText": "join",
   "joinTextTooltip": "Create a piece of text by joining together multiple items.",

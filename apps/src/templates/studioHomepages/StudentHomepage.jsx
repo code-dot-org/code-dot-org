@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
 import SpecialAnnouncement from './SpecialAnnouncement';
 import RecentCourses from './RecentCourses';
-import StudentSections from './StudentSections';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
 import shapes from './shapes';
@@ -12,6 +11,7 @@ import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 import $ from 'jquery';
+import JoinSectionArea from './JoinSectionArea';
 
 export default class StudentHomepage extends Component {
   static propTypes = {
@@ -76,7 +76,7 @@ export default class StudentHomepage extends Component {
             canViewFullList={true}
             canViewAdvancedTools={canViewAdvancedTools}
           />
-          <StudentSections initialSections={sections} />
+          <JoinSectionArea joinedStudentSections={sections} />
         </div>
       </div>
     );

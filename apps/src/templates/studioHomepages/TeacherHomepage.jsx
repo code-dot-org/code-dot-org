@@ -7,7 +7,6 @@ import Notification from '../Notification';
 import MarketingAnnouncementBanner from './MarketingAnnouncementBanner';
 import RecentCourses from './RecentCourses';
 import TeacherSections from './TeacherSections';
-import StudentSections from './StudentSections';
 import TeacherResources from './TeacherResources';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import shapes from './shapes';
@@ -19,6 +18,7 @@ import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
 import {beginGoogleImportRosterFlow} from '../teacherDashboard/teacherSectionsRedux';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import Button from '@cdo/apps/templates/Button';
+import JoinSectionArea from './JoinSectionArea';
 
 export const UnconnectedTeacherHomepage = ({
   announcement,
@@ -255,17 +255,11 @@ export const UnconnectedTeacherHomepage = ({
           canViewFullList={true}
           canViewAdvancedTools={canViewAdvancedTools}
         />
-        <StudentSections
-          initialSections={joinedStudentSections}
+        <JoinSectionArea
+          initialJoinedStudentSections={joinedStudentSections}
+          initialJoinedPlSections={joinedPlSections}
           isTeacher={true}
         />
-        {joinedPlSections?.length > 0 && (
-          <StudentSections
-            initialSections={joinedPlSections}
-            isTeacher={true}
-            isPlSections={true}
-          />
-        )}
       </div>
     </div>
   );

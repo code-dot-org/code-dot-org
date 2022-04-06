@@ -3,44 +3,25 @@ import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import ContentContainer from '../ContentContainer';
 import Button from '@cdo/apps/templates/Button';
-import JoinSection from './JoinSection';
-import JoinSectionNotifications from './JoinSectionNotifications';
 import SectionsAsStudentTable from './SectionsAsStudentTable';
 import color from '@cdo/apps/util/color';
 import styleConstants from '@cdo/apps/styleConstants';
 
 export default class StudentSections extends Component {
-  // isTeacher will be set false for teachers who are seeing this as a student in another teacher's section.
   static propTypes = {
-    initialSections: PropTypes.array.isRequired,
+    sections: PropTypes.array.isRequired,
     isTeacher: PropTypes.bool,
-    isPlSections: PropTypes.bool
+    isPlSections: PropTypes.bool,
+    updateSectionsResult: PropTypes.func.isRequired,
+    updateSections: PropTypes.func.isRequired
   };
 
   constructor(props) {
     super(props);
     this.state = {
-      sections: props.initialSections,
-      action: null,
-      result: null,
-      resultName: null,
-      resultId: null,
-      sectionCapacity: null,
       viewHidden: false
     };
   }
-
-  updateSections = sections => this.setState({sections});
-
-  updateSectionsResult = (action, result, name, id, sectionCapacity = null) => {
-    this.setState({
-      action: action,
-      result: result,
-      resultName: name,
-      resultId: id,
-      sectionCapacity: sectionCapacity
-    });
-  };
 
   toggleViewHidden = () => {
     this.setState({
@@ -49,16 +30,8 @@ export default class StudentSections extends Component {
   };
 
   render() {
-    const {isTeacher, isPlSections} = this.props;
-    const {
-      sections,
-      action,
-      result,
-      resultName,
-      resultId,
-      sectionCapacity,
-      viewHidden
-    } = this.state;
+    const {isTeacher, isPlSections, sections} = this.props;
+    const {viewHidden} = this.state;
 
     const heading = isTeacher
       ? isPlSections
@@ -100,19 +73,12 @@ export default class StudentSections extends Component {
 
     return (
       <ContentContainer heading={heading} description={description}>
-        <JoinSectionNotifications
-          action={action}
-          result={result}
-          name={resultName}
-          id={resultId}
-          sectionCapacity={sectionCapacity}
-        />
         {liveSections.length > 0 && (
           <SectionsAsStudentTable
             sections={liveSections}
             canLeave={!!isTeacher}
-            updateSections={this.updateSections}
-            updateSectionsResult={this.updateSectionsResult}
+            updateSections={this.props.updateSections}
+            updateSectionsResult={this.props.updateSectionsResult}
           />
         )}
         {archivedSections.length > 0 && (
@@ -142,18 +108,13 @@ export default class StudentSections extends Component {
                 <SectionsAsStudentTable
                   sections={archivedSections}
                   canLeave={!!isTeacher}
-                  updateSections={this.updateSections}
-                  updateSectionsResult={this.updateSectionsResult}
+                  updateSections={this.props.updateSections}
+                  updateSectionsResult={this.props.updateSectionsResult}
                 />
               </div>
             )}
           </div>
         )}
-        <JoinSection
-          enrolledInASection={liveSections.length > 0}
-          updateSections={this.updateSections}
-          updateSectionsResult={this.updateSectionsResult}
-        />
       </ContentContainer>
     );
   }
