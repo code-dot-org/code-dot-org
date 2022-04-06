@@ -661,22 +661,37 @@ body.modal-open .supreme-container{
   margin: 0 auto;
 }
 
+  @media screen and (max-width: 512px){
+    #homepage .vertical-stack {
+      padding: 0 1em;
+    }
+  }
+
 #homepage .vertical-stack .image {
-  max-width: 400px;
+  max-width: 100px;
   margin-bottom: 20px;
 }
 
+#homepage .vertical-stack .thumbnail-wrapper{
+  width: 100%;
+}
+
 #homepage .vertical-stack .video_thumbnail {
-  width: 300px;
+  width: 100%;
   margin: 0 auto;
 }
 
 #homepage .vertical-stack .text {
-  color: white;
-  font-size: 16px;
-  line-height: 1.5em;
+  color: black;
+  font-size: 1.25em;
+  line-height: 1.4em;
   padding-bottom: 0px;
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: 'Gotham 5r', sans-serif;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+#homepage .vertical-stack .herohocbutton{
+  background: black !important;
+  border-color: black !important;
 }
