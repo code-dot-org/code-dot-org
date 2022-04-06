@@ -1006,7 +1006,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal '2018', course_versions.values[1][:version_year]
   end
 
-  test 'summarize_course_versions' do
+  test 'summarize course_versions for teacher' do
     foo16 = create(
       :script, name: 'foo-2016', family_name: 'foo', version_year: '2016', is_course: true,
       published_state: SharedCourseConstants::PUBLISHED_STATE.stable
