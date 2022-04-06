@@ -22,7 +22,7 @@ cron-pii:
 - dashboard.peer_reviews
 - dashboard.circuit_playground_discount_applications
 - dashboard.circuit_playground_discount_codes
-- dashboard.storage_apps
+- dashboard.projects
 - dashboard.foorm_%
 cron:
 - dashboard.experiments
@@ -75,7 +75,7 @@ cron:
 - dashboard.stages_standards
 - dashboard.standard_categories
 - dashboard.frameworks
-- dashboard.user_storage_ids
+- dashboard.user_project_storage_ids
 cron-user-hierarchy:
 - dashboard.users:
     remove_column:
