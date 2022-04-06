@@ -9,7 +9,6 @@
     {
       "name": "Example 1",
       "description": "Change a sprite's size when you click it.\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/Hs2C7nuYKpQGGkbeU0EvoMzCHih3IKM8-Np2UpmlV2Y",
       "image": null,
       "app_display_type": "embedAppWithCode",
@@ -18,7 +17,6 @@
     {
       "name": "Example 2",
       "description": "Change a moving sprite's direction when you click it.\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/S0L65q-fmjNMkGe38EShJnuU3XzC9OJb-UfPRvxDEvU",
       "image": null,
       "app_display_type": "embedAppWithCode",

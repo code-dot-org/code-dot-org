@@ -34,5 +34,5 @@
     }
   ],
   "short_description": "Turns the specified colorLED on.",
-  "syntax": "on"
+  "syntax": "colorLeds[index].on()"
 }

@@ -38,8 +38,12 @@
       "description": "The direction angle of the movement of each sprite relative to 0 angle which is to the right. If the direction angle is not supplied, the current direction angle is maintained. If the direction angle is not supplied and there is no current velocity, the current rotation angle used for the direction angle."
     }
   ],
+  "parameters": [
+    "speed",
+    "angle"
+  ],
   "return_value": "No return value. Changes output in the display after drawSprites() is called.",
   "short_description": "Set the speed and direction of every sprite in the group. ",
-  "syntax": "setSpeedAndDirectionEach(speed, angle)",
+  "syntax": "group.setSpeedAndDirectionEach(speed, angle)",
   "tips": "- Groups of sprites all have the same functions and you use the dot notation (combining the name of the group, followed by a dot, with the function name) to call the function for that group of sprites.\r\n- Any changes to the properties of a sprite will not be seen until after `drawSprites()` is called."
 }

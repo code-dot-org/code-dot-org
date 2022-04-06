@@ -51,7 +51,8 @@ class JavalabConsole extends React.Component {
     displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)),
     isPhotoPrompterOpen: PropTypes.bool,
     closePhotoPrompter: PropTypes.func,
-    photoPrompterPromptText: PropTypes.string
+    photoPrompterPromptText: PropTypes.string,
+    shouldJumpToInput: PropTypes.bool
   };
 
   state = {
@@ -183,7 +184,10 @@ class JavalabConsole extends React.Component {
   };
 
   onLogsClick = () => {
-    this.inputRef.focus();
+    // only jump to input if the program is currently in run or test mode.
+    if (this.props.shouldJumpToInput) {
+      this.inputRef.focus();
+    }
   };
 
   render() {
@@ -243,7 +247,8 @@ export default connect(
     consoleLogs: state.javalab.consoleLogs,
     displayTheme: state.javalab.displayTheme,
     isPhotoPrompterOpen: state.javalab.isPhotoPrompterOpen,
-    photoPrompterPromptText: state.javalab.photoPrompterPromptText
+    photoPrompterPromptText: state.javalab.photoPrompterPromptText,
+    shouldJumpToInput: state.javalab.isRunning || state.javalab.isTesting
   }),
   dispatch => ({
     appendInputLog: log => dispatch(appendInputLog(log)),

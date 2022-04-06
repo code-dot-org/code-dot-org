@@ -9,7 +9,7 @@ class ReviewableProjectsController < ApplicationController
   def create
     @reviewable_project = ReviewableProject.where(
       user_id: @project_owner.id,
-      storage_app_id: @storage_app_id,
+      project_id: @project_id,
       script_id: params[:script_id],
       level_id: params[:level_id]
     ).first_or_initialize
@@ -34,7 +34,7 @@ class ReviewableProjectsController < ApplicationController
   def reviewable_status
     @reviewable_project = ReviewableProject.where(
       user_id: @project_owner.id,
-      storage_app_id: @storage_app_id,
+      project_id: @project_id,
       script_id: params[:script_id],
       level_id: params[:level_id]
     ).first
@@ -62,22 +62,13 @@ class ReviewableProjectsController < ApplicationController
   end
 
   def for_level
-    peer_user_ids = if DCDO.get('code_review_groups_enabled', false)
-                      current_user.
-                        code_review_groups.
-                        map(&:members).
-                        flatten.
-                        map(&:follower).
-                        pluck(:student_user_id).
-                        select {|student_user_id| current_user.id != student_user_id}
-                    else
-                      current_user.
-                        sections_as_student.
-                        map(&:followers).
-                        flatten.
-                        pluck(:student_user_id).
-                        select {|student_user_id| current_user.id != student_user_id}
-                    end
+    peer_user_ids = current_user.
+      code_review_groups.
+      map(&:members).
+      flatten.
+      map(&:follower).
+      pluck(:student_user_id).
+      select {|student_user_id| current_user.id != student_user_id}
 
     peers_ready_for_review = ReviewableProject.where(
       user_id: peer_user_ids,
@@ -90,7 +81,7 @@ class ReviewableProjectsController < ApplicationController
 
   def decrypt_channel_id
     # TO DO: handle errors in decrypting, or can't find user
-    @storage_id, @storage_app_id = storage_decrypt_channel_id(params[:channel_id])
+    @storage_id, @project_id = storage_decrypt_channel_id(params[:channel_id])
     @project_owner = User.find_by(id: user_id_for_storage_id(@storage_id))
   end
 end

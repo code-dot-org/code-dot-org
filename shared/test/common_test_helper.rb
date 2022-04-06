@@ -40,12 +40,7 @@ VCR.configure do |c|
 end
 
 # Truncate database tables to ensure repeatable tests.
-PEGASUS_TEST_TABLES = %w(storage_apps user_storage_ids).freeze
-PEGASUS_TEST_TABLES.each do |table|
-  PEGASUS_DB[table.to_sym].truncate
-end.freeze
-
-DASHBOARD_TEST_TABLES = %w(channel_tokens).freeze
+DASHBOARD_TEST_TABLES = %w(channel_tokens user_project_storage_ids projects).freeze
 DASHBOARD_TEST_TABLES.each do |table|
   DASHBOARD_DB[table.to_sym].truncate
 end.freeze
@@ -82,7 +77,9 @@ module SetupTest
 
     VCR.use_cassette(cassette_name, record: record_mode) do
       PEGASUS_DB.transaction(rollback: :always) do
-        AWS::S3.stub(:random, proc {random.bytes(16).unpack('H*')[0]}, &block)
+        DASHBOARD_DB.transaction(rollback: :always) do
+          AWS::S3.stub(:random, proc {random.bytes(16).unpack('H*')[0]}, &block)
+        end
       end
     end
 
@@ -92,9 +89,6 @@ module SetupTest
     AWS::S3.s3 = nil
 
     # Reset AUTO_INCREMENT, since it is unaffected by transaction rollback.
-    PEGASUS_TEST_TABLES.each do |table|
-      PEGASUS_DB.execute("ALTER TABLE `#{table}` AUTO_INCREMENT = 1")
-    end
     DASHBOARD_TEST_TABLES.each do |table|
       DASHBOARD_DB.execute("ALTER TABLE `#{table}` AUTO_INCREMENT = 1")
     end

@@ -33,6 +33,7 @@ module SetupI18nStringUrlTracker
     super
     stub_firehose
     stub_dcdo(true)
+    I18n.backend.store_translations(I18n.default_locale, {'string': {'key': 'a valid string'}})
   end
 
   def teardown
@@ -292,6 +293,14 @@ class TestI18nStringUrlTracker < Minitest::Test
     I18nStringUrlTracker.instance.send(:flush)
     assert_equal %w(test test2), @firehose_records&.map {|x| x[:source]}
   end
+
+  def test_log_given_unknown_string_key_should_not_be_logged
+    unstub_firehose
+    FirehoseClient.instance.expects(:put_record).never
+    test_record = {url: 'https://studio.code.org/s/outbreak', source: 'test', string_key: 'invalid_key', scope: [], separator: '.'}
+    I18nStringUrlTracker.instance.log(test_record[:url], test_record[:source], test_record[:string_key], test_record[:scope], test_record[:separator])
+    I18nStringUrlTracker.instance.send(:flush)
+  end
 end
 
 require 'minitest/benchmark'
@@ -302,7 +311,10 @@ class BenchI18nStringUrlTracker < Minitest::Benchmark
     [1, 1, 1_000, 1_000, 2_000, 5_000, 10_000]
   end
 
+  # Tests that the tracker's performance scales linearly as the data increases.
+  # This tests is skipped because we found it to be flaky when running on our build servers.
   def bench_linear_performance
+    skip 'test is flaky when running on build servers'
     assert_performance_linear(0.95) do |n|
       n.times {|m| I18nStringUrlTracker.instance.log(n.to_s, m.to_s, m.to_s, [], '.')}
     end

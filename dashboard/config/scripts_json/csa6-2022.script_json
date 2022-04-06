@@ -1,0 +1,322 @@
+{
+  "script": {
+    "name": "csa6-2022",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "curriculum_umbrella": "CSA",
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
+      "show_calendar": true,
+      "student_detail_progress_view": true,
+      "weekly_instructional_minutes": 225
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2022-04-05 13:52:32 UTC",
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "csa6-2022"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Content"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-2022"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Show What You Know"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa6-2022"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Project Planning",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-2022"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Integer and Double Objects",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-2022"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "ArrayLists",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-2022"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Manipulating Elements",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-2022"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Lists of Objects",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-2022"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Removing Elements",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-2022"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "String Methods",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-2022"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Comparing Strings",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-2022"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "String Algorithms",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-2022"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "ArrayList Algorithms",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-2022"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "Natural Language Processing Project – Day 1",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa6-2022"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "Natural Language Processing Project – Day 2",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa6-2022"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "Natural Language Processing Project – Day 3",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa6-2022"
+      }
+    },
+    {
+      "key": "lesson-14",
+      "name": "FRQ Practice",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa6-2022"
+      }
+    },
+    {
+      "key": "lesson-15",
+      "name": "Unit 6 Assessment",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa6-2022"
+      }
+    }
+  ],
+  "lesson_activities": [
+
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+
+  ],
+  "levels_script_levels": [
+
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

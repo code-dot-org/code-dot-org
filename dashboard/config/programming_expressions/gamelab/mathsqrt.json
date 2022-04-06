@@ -8,7 +8,6 @@
     {
       "name": "",
       "description": "var t = Math.sqrt(16);\r\nconsole.log(t);",
-      "code": "```\n\n```",
       "app": "",
       "image": null,
       "app_display_type": "codeFromCodeField",
@@ -25,5 +24,5 @@
   ],
   "return_value": "A number that is the square root of x",
   "short_description": "\nTakes the square root of x.",
-  "syntax": "Math.sqrt"
+  "syntax": "Math.sqrt(x);"
 }

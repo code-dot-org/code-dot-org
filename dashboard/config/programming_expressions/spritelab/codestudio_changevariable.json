@@ -9,7 +9,6 @@
     {
       "name": "Example 1",
       "description": "Read and run this code to see how changing a variable works. \r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/1a6fRf_SwggrgSl36aV6CmjZp25HjIHQcd7EBeBpOUM",
       "image": null,
       "app_display_type": "embedAppWithCode",
@@ -18,7 +17,6 @@
     {
       "name": "Example 2",
       "description": "These chicks spread quickly! Each time a chick is clicked, it increases the number of new chicks made by 2.\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/prPARy1fpC6i75fqzJeAfOiCoFyjTUs5X3alTbVKnQw",
       "image": null,
       "app_display_type": "embedAppWithCode",

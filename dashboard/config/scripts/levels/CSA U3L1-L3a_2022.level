@@ -1,0 +1,28 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "A social media analyst wants to create a list of the number of Twitter followers for Beyonce, Stephen Curry, Lena Waithe, Glory Edim, and Kezia Williams (in order).\r\n\r\n##In MyConsole.java:\r\n\r\n1. Declare and initialize an `int`(#e7e8ea) array called `twitterFollowers`(#e7e8ea) using an initializer list that contains the following values:\r\n\r\n```\r\n15360340, 13716022, 189690, 53274, 4625\r\n```\r\n\r\n2. Print the length of the `twitterFollowers`(#e7e8ea) array.\r\n\r\n***Curious about this dataset?*** *Learn more about it [**here**](https://interactives.theroot.com/root-100-2019/)!*\r\n\r\n::: details [**Show Me How**]\r\nA 1D array is declared and initialized with an initializer list using the following syntax:\r\n  \r\n  ```\r\n  dataType[] variableName = {value1, value2, . . . };\r\n  ```\r\n\r\nBe sure to replace `dataType`(#e7e8ea) with the type of data the array will store. The `variableName`(#e7e8ea) should be the name of the array. Inside the curly braces ( `{ }`(#e7e8ea) ), list the values the array will store.\r\n:::",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "display_name": "Twitter Followers",
+    "bubble_choice_description": "Create a 1D array to store the number of Twitter followers each user has.",
+    "thumbnail_url": "https://images.code.org/af9302ce0059f1572d8ff047ef429243-image-1648484465356.png",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    // TO DO #1: Declare and initialize a 1D array.\n\n\n    // TO DO #2: Print the length of the array.\n\n    \n  }\n}",
+        "isVisible": true
+      }
+    },
+    "encrypted_exemplar_sources": "HM0H7Z3L+CTAPTxDu6u7zslyjM60me7VHOAdpgMoPI51XZX+8fjW8UQD53+T\niPozhTT8rNsSoZFYDe9hC/SJ2VyAYQK4EMqBosySJFiOYfI0eS/CoUA7xqoC\n0Do1Y0jx0fR+h1RWtPeXzX8fc3BidPCeaM6BV4ds+OaT/T5PxMtZPl0EW7em\nenKkfHuBpL617GNttjge1qjHKaKSC6g+l3yrjkfJCEfKCaMvYTm1r0h1pxDL\nUD/VTy1PsW83Aokax6x1/J5jvy6uFj4hAdO+wiXdU64gBrTbaMw2XqDEtz59\nBGcIOHRWWoouJFpJ8Pr6SuKDa2MuZl/ltE5kitPNsdePQeEuX4GiLVZrnVoc\nejNjgJf/LZAQKU1ORAX+B7FGYoUQae1e1IMy/mB225WUDdRGfXT+KOJbx9o3\nrGsqNBGBvcpV8RXpLXDWtolvmPE0FmYhNGEDoRYwNuzBy80yBTCb4hgyDxdt\nrCtMWpvNZX+MRBK/cmnB+D9DODkc1bAVdr9D1qL+4B0s9kArGo/doA==\n"
+  },
+  "game_id": 68,
+  "created_at": "2022-03-24T23:55:59.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-03-24 23:56:01 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 16:21:17 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 16:23:07 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 16:25:00 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 16:25:45 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

@@ -58,7 +58,17 @@ class CourseVersion < ApplicationRecord
   # accessing them via course version. In the future, these fields will be moved
   # into the course version itself.
 
-  delegate :name, to: :content_root
+  delegate :name, to: :content_root, allow_nil: true
+  delegate :pl_course?, to: :content_root, allow_nil: true
+  delegate :stable?, to: :content_root, allow_nil: true
+  delegate :launched?, to: :content_root, allow_nil: true
+  delegate :in_development?, to: :content_root, allow_nil: true
+  delegate :pilot?, to: :content_root, allow_nil: true
+  delegate :has_pilot_experiment?, to: :content_root, allow_nil: true
+  delegate :has_editor_experiment?, to: :content_root, allow_nil: true
+  delegate :can_be_instructor?, to: :content_root, allow_nil: true
+  delegate :course_assignable?, to: :content_root, allow_nil: true
+  delegate :can_view_version?, to: :content_root, allow_nil: true
 
   # Seeding method for creating / updating / deleting the CourseVersion for the given
   # potential content root, i.e. a Script or UnitGroup.
@@ -129,5 +139,34 @@ class CourseVersion < ApplicationRecord
     Rails.cache.fetch("course_version/course_offering_keys/#{content_root_type}", force: !should_cache?) do
       CourseVersion.includes(:course_offering).where(content_root_type: content_root_type).map {|cv| cv.course_offering&.key}.compact.uniq.sort
     end
+  end
+
+  def recommended?(locale_code = 'en-us')
+    return false unless stable?
+    return true if course_offering.course_versions.length == 1
+
+    family_name = course_offering.key
+    latest_stable_version = content_root_type == 'UnitGroup' ? UnitGroup.latest_stable_version(family_name) : Script.latest_stable_version(family_name, locale: locale_code)
+
+    latest_stable_version == content_root
+  end
+
+  def summarize_for_assignment_dropdown(user, locale_code)
+    [
+      id,
+      {
+        id: id,
+        key: key,
+        version_year: content_root_type == 'UnitGroup' ? content_root.localized_version_title : display_name,
+        content_root_id: content_root.id,
+        name: content_root.localized_title,
+        path: content_root.link,
+        type: content_root_type,
+        is_stable: stable?,
+        is_recommended: recommended?(locale_code),
+        locales: content_root_type == 'UnitGroup' ? ['English'] : content_root.supported_locale_names,
+        units: units.select {|u| u.course_assignable?(user)}.map(&:summarize_for_assignment_dropdown).to_h
+      }
+    ]
   end
 end

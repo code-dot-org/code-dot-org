@@ -9,7 +9,6 @@
     {
       "name": "Example 1",
       "description": "Whenever the bee touches the bear, the bear will say “Ouch!”\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/esT0EyIw1JqODNYrz-yRdLgSknzKNJ3LqbRwhiN7L3U",
       "image": null,
       "app_display_type": "embedAppWithCode",
@@ -18,7 +17,6 @@
     {
       "name": "Example 2",
       "description": "While the bubble sprite is touching the soap sprite, it will grow bigger. When the bubble touches a rock sprite, it will “pop” and return to its original size.\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/kIs4wCurYo36UilsU2r8oaWvecP97NfGy6dLWBZy_WQ",
       "image": null,
       "app_display_type": "embedAppWithCode",

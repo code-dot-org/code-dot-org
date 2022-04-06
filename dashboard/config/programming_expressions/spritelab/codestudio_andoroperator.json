@@ -9,7 +9,6 @@
     {
       "name": "Example 1",
       "description": "These animals want to swap size. Press the spacebar to help them determine if they succeeded. \r\n(The code checks to see if the cow and the hippo are their desired sizes.)",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/ALo9mONq6hLDKK4wlONdwn8ix9O6GmwO8stpZtVU_J4",
       "image": null,
       "app_display_type": "embedAppWithCode",
@@ -18,7 +17,6 @@
     {
       "name": "Example 2",
       "description": "This program checks if the pink alien or the yellow alien can guess the same number as the green alien. If either one gets it right, they celebrate. Press “g” to make them guess.\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/eZNGi36tMBiNgAE0HJSYdTupGfY5VRyVM810PW4bkFY",
       "image": null,
       "app_display_type": "embedAppWithCode",

@@ -9,7 +9,6 @@
     {
       "name": "Example 1",
       "description": "Each sprite is set to a different size.",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/LLivCo_Re1h4pHsRFRnS2L68tpF6RFPfinwb_dAyu2w",
       "image": null,
       "app_display_type": "embedAppWithCode",
@@ -18,7 +17,6 @@
     {
       "name": "Example 2",
       "description": "Each sprite is set to a different rotation.",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/Ems0tkcP45ZIBWpmWwCNkMabLNrQorCCiXlN7hOJVLI",
       "image": null,
       "app_display_type": "embedAppWithCode",
