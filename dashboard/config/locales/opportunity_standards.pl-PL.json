@@ -1,0 +1,14 @@
+{
+  "pl-PL": {
+    "data": {
+      "opportunity_standards": {
+        "ngss/K-2-ETS1-1": {
+          "description": "Zadawaj pytania, dokonuj obserwacji oraz zbieraj informacje na temat sytuacji, którą ludzie chcą zmienić, aby zdefiniować prosty problem, który można rozwiązać przez opracowanie nowego albo udoskonalonego obiektu lub narzędzia."
+        },
+        "ngss/K-2-ETS1-2": {
+          "description": "Opracuj prosty szkic, rysunek lub model fizyczny, aby zilustrować, w jaki sposób kształt obiektu pomaga mu funkcjonować zgodnie z potrzebami, aby rozwiązać dany problem."
+        }
+      }
+    }
+  }
+}

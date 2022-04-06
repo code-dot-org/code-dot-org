@@ -1277,6 +1277,10 @@ es:
     tu docente a qué unidad deberías estar asignado.
   no_script_access_teacher: No tienes acceso a esta unidad. Si crees que debes tenerlo,
     por favor escribe a support@code.org para que podamos solucionar el problema.
+  no_level_access_student: No tienes acceso a este nivel. Por favor, pregunta a tu
+    profesor en qué nivel deberías estar.
+  no_level_access_teacher: No tienes acceso a este nivel. Si crees que deberías tener
+    acceso a este nivel, escribe a support@code.org para que podamos resolver la situación.
   return_unit_overview: Ir al resumen de la unidad
   return_course_overview: Ir al resumen del curso
   view_all_units: Ver todas las unidades
@@ -1380,7 +1384,7 @@ es:
         other: 'Otros:'
       workshop_course:
         csf_af: Fundamentos de Ciencias de la Computación (cursos A-F)
-        csf_express: Fundamentos de Ciencias de la Computación (Pre-Exprés o Exprés)
+        csf_express: Fundamentos de Informática (Pre-Exprés o Exprés)
         csd: Descubrimientos de Ciencias de la Computación
         csp: Principios de Ciencias de la Computación
         not_applicable: No aplicable

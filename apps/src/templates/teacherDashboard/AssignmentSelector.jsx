@@ -2,7 +2,12 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import _ from 'lodash';
 import i18n from '@cdo/locale';
-import {sectionShape, assignmentShape, assignmentFamilyShape} from './shapes';
+import {
+  sectionShape,
+  assignmentShape,
+  assignmentFamilyShape,
+  assignmentCourseOfferingShape
+} from './shapes';
 import {assignmentId, assignmentFamilyFields} from './teacherSectionsRedux';
 import AssignmentVersionSelector, {
   setRecommendedAndSelectedVersions
@@ -12,6 +17,21 @@ const noAssignment = assignmentId(null, null);
 //Additional valid option in dropdown - no associated course
 const decideLater = '__decideLater__';
 const isValidAssignment = id => id !== noAssignment && id !== decideLater;
+
+export const getCourseOfferingsByCategory = courseOfferings => {
+  let orderedCourseOfferings = _.orderBy(courseOfferings, 'display_name');
+  orderedCourseOfferings = _.orderBy(
+    orderedCourseOfferings,
+    'is_featured',
+    'desc'
+  );
+  const courseOfferingsByCategories = _.groupBy(
+    orderedCourseOfferings,
+    'category'
+  );
+
+  return courseOfferingsByCategories;
+};
 
 const hasAssignmentFamily = (assignmentFamilies, assignment) =>
   assignment &&
@@ -53,6 +73,8 @@ export default class AssignmentSelector extends Component {
     section: sectionShape,
     assignments: PropTypes.objectOf(assignmentShape).isRequired,
     assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
+    courseOfferings: PropTypes.objectOf(assignmentCourseOfferingShape)
+      .isRequired,
     chooseLaterOption: PropTypes.bool,
     dropdownStyle: PropTypes.object,
     onChange: PropTypes.func,
@@ -98,6 +120,14 @@ export default class AssignmentSelector extends Component {
 
     const {section, assignments} = props;
 
+    const selectedCourseOfferingId = section?.courseOfferingId
+      ? section.courseOfferingId
+      : noAssignment;
+    const selectedCourseVersionId = section?.courseVersionId
+      ? section.courseVersionId
+      : noAssignment;
+    const selectedUnitId = section?.unitId ? section.unitId : noAssignment;
+
     let selectedAssignmentFamily,
       versions,
       selectedPrimaryId,
@@ -124,6 +154,9 @@ export default class AssignmentSelector extends Component {
     }
 
     this.state = {
+      selectedCourseOfferingId,
+      selectedCourseVersionId,
+      selectedUnitId,
       selectedAssignmentFamily,
       versions: versions || [],
       selectedPrimaryId,

@@ -5,9 +5,457 @@
         "list_of_poems/poem-art/2021": {
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
+        "poem_art_celebration/poem-art/2021": {
+          "type": "Video"
+        },
+        "poem_art_events/poem-art/2021": {
+          "type": "Video"
+        },
+        "poem_art_imagery/poem-art/2021": {
+          "type": "Video"
+        },
         "poem_art_introduction/poem-art/2021": {
           "name": "Seni Puisi 1 - Pengantar",
-          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2"
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2",
+          "type": "Video"
+        },
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "type": "Video"
+        },
+        "video-text-compression/text-compression/unversioned": {
+          "type": "Video"
+        },
+        "ai-ml/oceans/unversioned": {
+          "type": "Video"
+        },
+        "ai-societal/oceans/unversioned": {
+          "type": "Video"
+        },
+        "ai-training/oceans/unversioned": {
+          "type": "Video"
+        },
+        "lesson_plans/courseb/2018": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/courseb/2018": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/courseb/2018": {
+          "name": "Forum guru"
+        },
+        "vocabulary/courseb/2018": {
+          "name": "Kosakata"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/coursea/2018": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/coursea/2018": {
+          "name": "Forum guru"
+        },
+        "vocabulary/coursea/2018": {
+          "name": "Kosakata"
+        },
+        "lesson_plans/coursed/2018": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/coursed/2018": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/coursed/2018": {
+          "name": "Forum guru"
+        },
+        "vocabulary/coursed/2018": {
+          "name": "Kosakata"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/coursef/2018": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/coursef/2018": {
+          "name": "Forum guru"
+        },
+        "vocabulary/coursef/2018": {
+          "name": "Kosakata"
+        },
+        "lesson_plans/express/2018": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/express/2018": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/express/2018": {
+          "name": "Forum guru"
+        },
+        "vocabulary/express/2018": {
+          "name": "Kosakata"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/coursee/2018": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/coursee/2018": {
+          "name": "Forum guru"
+        },
+        "vocabulary/coursee/2018": {
+          "name": "Kosakata"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/coursec/2018": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/coursec/2018": {
+          "name": "Forum guru"
+        },
+        "vocabulary/coursec/2018": {
+          "name": "Kosakata"
+        },
+        "code_introduced_1/csd/2018": {
+          "name": "Kode Diperkenalkan"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings_2/csd/2018": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum_2/csd/2018": {
+          "name": "Forum guru"
+        },
+        "vocabulary_2/csd/2018": {
+          "name": "Kosakata"
+        },
+        "code_introduced_3/csd/2018": {
+          "name": "Kode Diperkenalkan"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings_5/csd/2018": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum_5/csd/2018": {
+          "name": "Forum guru"
+        },
+        "vocabulary_5/csd/2018": {
+          "name": "Kosakata"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings_4/csd/2018": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum_4/csd/2018": {
+          "name": "Forum guru"
+        },
+        "vocabulary_4/csd/2018": {
+          "name": "Kosakata"
+        },
+        "code_introduced_2/csd/2018": {
+          "name": "Kode Diperkenalkan"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings_3/csd/2018": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum_3/csd/2018": {
+          "name": "Forum guru"
+        },
+        "vocabulary_3/csd/2018": {
+          "name": "Kosakata"
+        },
+        "code_introduced/csd/2018": {
+          "name": "Kode Diperkenalkan"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings_1/csd/2018": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum_1/csd/2018": {
+          "name": "Forum guru"
+        },
+        "vocabulary_1/csd/2018": {
+          "name": "Kosakata"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/csd/2018": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/csd/2018": {
+          "name": "Forum guru"
+        },
+        "vocabulary/csd/2018": {
+          "name": "Kosakata"
+        },
+        "curriculum_guide/coursea/2019": {
+          "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/coursea/2019": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/coursea/2019": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/coursea/2019": {
+          "name": "Forum guru"
+        },
+        "vocabulary/coursea/2019": {
+          "name": "Kosakata"
+        },
+        "curriculum_guide/courseb/2019": {
+          "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/courseb/2019": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/courseb/2019": {
+          "name": "Forum guru"
+        },
+        "vocabulary/courseb/2019": {
+          "name": "Kosakata"
+        },
+        "curriculum_guide/coursed/2019": {
+          "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/coursed/2019": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/coursed/2019": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/coursed/2019": {
+          "name": "Forum guru"
+        },
+        "vocabulary/coursed/2019": {
+          "name": "Kosakata"
+        },
+        "curriculum_guide/coursef/2019": {
+          "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/coursef/2019": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/coursef/2019": {
+          "name": "Forum guru"
+        },
+        "vocabulary/coursef/2019": {
+          "name": "Kosakata"
+        },
+        "curriculum_guide/coursee/2019": {
+          "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/coursee/2019": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/coursee/2019": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/coursee/2019": {
+          "name": "Forum guru"
+        },
+        "vocabulary/coursee/2019": {
+          "name": "Kosakata"
+        },
+        "lesson_plans/express/2019": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/express/2019": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/express/2019": {
+          "name": "Forum guru"
+        },
+        "vocabulary/express/2019": {
+          "name": "Kosakata"
+        },
+        "curriculum_guide/coursec/2019": {
+          "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/coursec/2019": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/coursec/2019": {
+          "name": "Forum guru"
+        },
+        "vocabulary/coursec/2019": {
+          "name": "Kosakata"
+        },
+        "teacher_forum/csd/2019": {
+          "name": "Forum guru"
+        },
+        "code_introduced_1/csd/2019": {
+          "name": "Kode Diperkenalkan"
+        },
+        "lesson_plans_2/csd/2019": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings_2/csd/2019": {
+          "name": "Standar pemetaan"
+        },
+        "vocabulary_2/csd/2019": {
+          "name": "Kosakata"
+        },
+        "code_introduced_3/csd/2019": {
+          "name": "Kode Diperkenalkan"
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings_5/csd/2019": {
+          "name": "Standar pemetaan"
+        },
+        "vocabulary_5/csd/2019": {
+          "name": "Kosakata"
+        },
+        "code_introduced_2/csd/2019": {
+          "name": "Kode Diperkenalkan"
+        },
+        "lesson_plans_3/csd/2019": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings_3/csd/2019": {
+          "name": "Standar pemetaan"
+        },
+        "vocabulary_3/csd/2019": {
+          "name": "Kosakata"
+        },
+        "lesson_plans_4/csd/2019": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings_4/csd/2019": {
+          "name": "Standar pemetaan"
+        },
+        "vocabulary_4/csd/2019": {
+          "name": "Kosakata"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/csd/2019": {
+          "name": "Standar pemetaan"
+        },
+        "vocabulary/csd/2019": {
+          "name": "Kosakata"
+        },
+        "code_introduced/csd/2019": {
+          "name": "Kode Diperkenalkan"
+        },
+        "lesson_plans_1/csd/2019": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings_1/csd/2019": {
+          "name": "Standar pemetaan"
+        },
+        "vocabulary_1/csd/2019": {
+          "name": "Kosakata"
+        },
+        "code_introduced_1/csd/2017": {
+          "name": "Kode Diperkenalkan"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings_2/csd/2017": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum_2/csd/2017": {
+          "name": "Forum guru"
+        },
+        "vocabulary_2/csd/2017": {
+          "name": "Kosakata"
+        },
+        "code_introduced_3/csd/2017": {
+          "name": "Kode Diperkenalkan"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings_5/csd/2017": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum_5/csd/2017": {
+          "name": "Forum guru"
+        },
+        "vocabulary_5/csd/2017": {
+          "name": "Kosakata"
+        },
+        "code_introduced/csd/2017": {
+          "name": "Kode Diperkenalkan"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings_1/csd/2017": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum_1/csd/2017": {
+          "name": "Forum guru"
+        },
+        "vocabulary_1/csd/2017": {
+          "name": "Kosakata"
+        },
+        "lesson_plans/csd/2017": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/csd/2017": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/csd/2017": {
+          "name": "Forum guru"
+        },
+        "vocabulary/csd/2017": {
+          "name": "Kosakata"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings_4/csd/2017": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum_4/csd/2017": {
+          "name": "Forum guru"
+        },
+        "vocabulary_4/csd/2017": {
+          "name": "Kosakata"
+        },
+        "code_introduced_2/csd/2017": {
+          "name": "Kode Diperkenalkan"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings_3/csd/2017": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum_3/csd/2017": {
+          "name": "Forum guru"
+        },
+        "vocabulary_3/csd/2017": {
+          "name": "Kosakata"
         },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "Daftar Puisi",
@@ -23,7 +471,8 @@
         },
         "introducing_sprite_lab_1/coursef/2021": {
           "name": "Memperkenalkan Sprite Lab",
-          "url": "https://youtu.be/yd-9xZ275dM"
+          "url": "https://youtu.be/yd-9xZ275dM",
+          "type": "Video"
         },
         "exploring_apps_1/coursef/2021": {
           "name": "Jelajahi aplikasi",
@@ -47,7 +496,8 @@
         },
         "the_power_of_words_the_power_of_words/coursef/2021": {
           "name": "Kekuatan Kata-Kata: Kekuatan Kata-Kata",
-          "url": "https://www.commonsense.org/education/videos/the-power-of-words"
+          "url": "https://www.commonsense.org/education/videos/the-power-of-words",
+          "type": "Video"
         },
         "the_power_of_words_words_can_hurt/coursef/2021": {
           "name": "Kekuatan Kata-Kata: Kata-Kata Bisa Menyakiti",
@@ -92,7 +542,8 @@
         },
         "pause_and_think_online/coursef/2021": {
           "name": "Jeda dan Berpikir Online",
-          "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s"
+          "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s",
+          "type": "Video"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "Untuk Loop Fun",
@@ -116,7 +567,8 @@
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
           "name": "Untuk Loop Fun",
-          "url": "https://docs.google.com/document/d/1iyfroULEOlaLH52MY9PUwUHPk9R6jAMn0rbjlwNtCWs/edit"
+          "url": "https://docs.google.com/document/d/1iyfroULEOlaLH52MY9PUwUHPk9R6jAMn0rbjlwNtCWs/edit",
+          "type": "Penilaian"
         },
         "course-cf-blockly-blocks/coursef/2021": {
           "name": " Blok Unplugged (Kursus C-F)",
@@ -125,6 +577,15 @@
         "running-simulations/coursef/2021": {
           "name": "Menjalankan Simulasi",
           "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit"
+        },
+        "ai-ml/coursef/2021": {
+          "type": "Video"
+        },
+        "ai-training/coursef/2021": {
+          "type": "Video"
+        },
+        "ai-societal/coursef/2021": {
+          "type": "Video"
         },
         "unplugged-video-internet/coursef/2021": {
           "name": "Internet",
@@ -136,7 +597,8 @@
         },
         "csf-internet-assessment/coursef/2021": {
           "name": "Internet",
-          "url": "https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit"
+          "url": "https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit",
+          "type": "Penilaian"
         },
         "assessment-answer-internet/coursef/2021": {
           "name": "Internet",
@@ -264,7 +726,8 @@
         },
         "wiggles_-_gonoodle/courseb/2021": {
           "name": "Wiggle - GoNoodle",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Video"
         },
         "20_20_20_rule/courseb/2021": {
           "name": "Aturan 20/20/20",
@@ -288,7 +751,8 @@
         },
         "unspotted_bugs/courseb/2021": {
           "name": "Bug Tak Terlihat",
-          "url": "https://youtu.be/rah3DYlp5nQ"
+          "url": "https://youtu.be/rah3DYlp5nQ",
+          "type": "Video"
         },
         "unplugged-video-getting-loopy/courseb/2021": {
           "name": "Dapat berulang-ulang",
@@ -300,7 +764,8 @@
         },
         "csf-getting-loopy-assessment/courseb/2021": {
           "name": "Dapat berulang-ulang",
-          "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit"
+          "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit",
+          "type": "Penilaian"
         },
         "assessment-answer-getting-loopy/courseb/2021": {
           "name": "Dapat berulang-ulang",
@@ -312,7 +777,8 @@
         },
         "common-sense-media-pause-think/courseb/2021": {
           "name": "Jeda dan Berpikir Online",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "the-right-app-scenarios/courseb/2021": {
           "name": "Skenario Aplikasi yang Tepat",
@@ -320,11 +786,13 @@
         },
         "unplugged-video-big-event/courseb/2021": {
           "name": "Acara besar",
-          "url": "https://youtu.be/u0WV9shCoak"
+          "url": "https://youtu.be/u0WV9shCoak",
+          "type": "Video"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "Acara besar",
-          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "Penilaian"
         },
         "assessment-answer-big-event/courseb/2021": {
           "name": "Acara besar",
@@ -412,11 +880,13 @@
         },
         "wiggles-go_noodle/coursea/2021": {
           "name": "Wiggle-Go Noodle",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Video"
         },
         "how_to_make_a_class_section_on_code_org/coursea/2021": {
           "name": "Memulai - Membuat Sesi Kelas",
-          "url": "https://www.youtube.com/watch?v=4Wugxc80fNU"
+          "url": "https://www.youtube.com/watch?v=4Wugxc80fNU",
+          "type": "Video"
         },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "Pemetaan bahagia",
@@ -448,11 +918,13 @@
         },
         "wiggles_-_gonoodle/coursea/2021": {
           "name": "Wiggle - GoNoodle",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Video"
         },
         "csf_debugging_k1_blocks/coursea/2021": {
           "name": "Debugging Dengan Tombol Step",
-          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4"
+          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4",
+          "type": "Video"
         },
         "feeling_faces_emotion_image/coursea/2021": {
           "name": "Perasaan Wajah Emosi Gambar",
@@ -480,7 +952,8 @@
         },
         "pair-programming/coursea/2021": {
           "name": "Pair-Programming",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video"
         },
         "feeling_faces_emotion_image_2/coursea/2021": {
           "name": "Perasaan Wajah Emosi Gambar",
@@ -492,7 +965,8 @@
         },
         "common-sense-media-pause-think/coursea/2021": {
           "name": "Jeda dan Berpikir Online",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "feeling_faces_emotion_image_3/coursea/2021": {
           "name": "Perasaan Wajah Emosi Gambar",
@@ -508,7 +982,8 @@
         },
         "csf-the-big-event-assessment/coursea/2021": {
           "name": "Acara besar",
-          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "Penilaian"
         },
         "assessment-answer-big-event/coursea/2021": {
           "name": "Acara besar",
@@ -624,7 +1099,8 @@
         },
         "pair-programming-vid/coursec/2021": {
           "name": "Pair Programming",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video"
         },
         "csf-lesson-recommend/coursec/2021": {
           "name": "Kiat Aktivitas Utama CS Fundamentals",
@@ -651,7 +1127,8 @@
         },
         "csf-the-big-event-assessment/coursec/2021": {
           "name": "Acara besar",
-          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "Penilaian"
         },
         "assessment-answer-big-event/coursec/2021": {
           "name": "Acara besar",
@@ -663,7 +1140,8 @@
         },
         "pause_and_think_online/coursec/2021": {
           "name": "Jeda dan Berpikir Online",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "open-ended_programming_levels/coursec/2021": {
           "name": "Level Pemrograman Terbuka",
@@ -695,7 +1173,8 @@
         },
         "csf-binary-bracelets-assessment/coursec/2021": {
           "name": "Gelang biner",
-          "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit"
+          "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit",
+          "type": "Penilaian"
         },
         "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "Gelang biner",
@@ -799,7 +1278,8 @@
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
           "name": "Pemrograman grafis diatas kertas",
-          "url": "https://docs.google.com/document/d/1uXNP-9nYnLOeAkh_E8UFzl9Rrpy0rwjVAQVamgdd6XQ/edit"
+          "url": "https://docs.google.com/document/d/1uXNP-9nYnLOeAkh_E8UFzl9Rrpy0rwjVAQVamgdd6XQ/edit",
+          "type": "Penilaian"
         },
         "assessment-answer-graph-paper/coursed/2021": {
           "name": "Pemrograman grafis diatas kertas",
@@ -842,7 +1322,8 @@
         },
         "pause_and_think_online/coursed/2021": {
           "name": "Jeda dan Berpikir Online",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "open-ended_programming_levels/coursed/2021": {
           "name": "Level Pemrograman Terbuka",
@@ -869,7 +1350,8 @@
         },
         "pause_and_think_online_1/coursed/2021": {
           "name": "Jeda dan Berpikir Online",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Bersyarat dengan kartu",
@@ -885,7 +1367,8 @@
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
           "name": "Bersyarat dengan kartu",
-          "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit"
+          "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit",
+          "type": "Penilaian"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
           "name": "Bersyarat dengan kartu",
@@ -897,7 +1380,8 @@
         },
         "course-d-project-planning-guide-1/coursed/2021": {
           "name": "Panduan Perencanaan Proyek Akhir Kursus CSF Kursus D",
-          "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing",
+          "type": "Panduan Proyek"
         },
         "csta_standards_mapping/coursed/2021": {
           "name": "Pemetaan Standar CSTA",
@@ -949,11 +1433,18 @@
         },
         "pair_programming/express/2021": {
           "name": "Pair Programming",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video"
         },
         "unplugged_blocks_courses_c-f_/express/2021": {
           "name": "Blok Unplugged (Kursus C-F)",
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "artist_introduction/express/2021": {
+          "type": "Video"
+        },
+        "turns_angles/express/2021": {
+          "type": "Video"
         },
         "turns_angles_1/express/2021": {
           "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
@@ -980,7 +1471,8 @@
         },
         "pause_and_think_online/express/2021": {
           "name": "Jeda dan Berpikir Online",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "dance-party-project-guide/express/2021": {
           "name": "Panduan Proyek Pesta Dansa",
@@ -992,7 +1484,8 @@
         },
         "pair_programming_video/express/2021": {
           "name": "Video Pair Programming",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video"
         },
         "unplugged_blocks_courses_c-f__1/express/2021": {
           "name": "Blok Unplugged (Kursus C-F)",
@@ -1023,7 +1516,8 @@
         },
         "csf-express-end-of-course-project-planning-guide/express/2021": {
           "name": "Panduan Perencanaan Proyek Akhir Kursus CSF Express",
-          "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing",
+          "type": "Panduan Proyek"
         },
         "rubric-csf-final-projects/express/2021": {
           "name": "Tugas Akhir CS Fundamentals",
@@ -1059,15 +1553,18 @@
         },
         "20_20_20_rule/pre-express/2021": {
           "name": "Aturan 20/20/20",
-          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
+          "type": "Video"
         },
         "wiggles_-_go_noodle/pre-express/2021": {
           "name": "Wiggle - Go Noodle",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Video"
         },
         "common-sense-media-pause-think/pre-express/2021": {
           "name": "Jeda dan Berpikir Online",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "csta_standards_mapping/pre-express/2021": {
           "name": "Pemetaan Standar CSTA",
@@ -1126,7 +1623,8 @@
         },
         "common-sense-media-pause-think/coursee/2021": {
           "name": "Jeda dan Berpikir Online",
-          "url": "https://youtu.be/X_duZ-1LApg"
+          "url": "https://youtu.be/X_duZ-1LApg",
+          "type": "Video"
         },
         "about_me_planning_guide/coursee/2021": {
           "name": "Panduan Perencanaan Tentang Saya",
@@ -1138,7 +1636,8 @@
         },
         "digital-sharing-video/coursee/2021": {
           "name": "Etika Berbagi Digital (Video)",
-          "url": "https://www.youtube.com/watch?v=o_oDsBeBxko"
+          "url": "https://www.youtube.com/watch?v=o_oDsBeBxko",
+          "type": "Video"
         },
         "csf-turns-angles-doc/coursee/2021": {
           "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
@@ -1157,7 +1656,8 @@
         },
         "csf-songwriting-assessment/coursee/2021": {
           "name": "Functions Unplugged: Menulis Lagu",
-          "url": "https://docs.google.com/document/d/1rtEJBrVNR2R09wAETeJTJLm6QENJGDujJ0HJc1mZBSA/edit"
+          "url": "https://docs.google.com/document/d/1rtEJBrVNR2R09wAETeJTJLm6QENJGDujJ0HJc1mZBSA/edit",
+          "type": "Penilaian"
         },
         "assessment-answer-songwriting/coursee/2021": {
           "name": "Functions Unplugged: Menulis Lagu",
@@ -1239,11 +1739,56 @@
           "name": "Modifikasi Pelajaran Virtual",
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
         },
+        "ai_what_is_machine_learning_/csd/2021": {
+          "type": "Video"
+        },
         "seeing_ai/csd/2021": {
-          "name": "Melihat AI"
+          "name": "Melihat AI",
+          "type": "Video"
+        },
+        "finding_patterns_in_data/csd/2021": {
+          "type": "Video"
+        },
+        "introduction_to_ai_lab/csd/2021": {
+          "name": "Pengantar Lab AI"
+        },
+        "introduction_to_ai_lab_1/csd/2021": {
+          "name": "Pengantar Lab AI",
+          "type": "Video"
+        },
+        "training_and_testing_in_ai_lab/csd/2021": {
+          "type": "Video"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "type": "Video"
+        },
+        "model_cards_in_ai_lab/csd/2021": {
+          "name": "Model kartu di Lab AI",
+          "type": "Video"
+        },
+        "if-statements_in_app_lab/csd/2021": {
+          "type": "Video"
+        },
+        "numerical_data_in_ai_lab_2/csd/2021": {
+          "type": "Video"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
+          "type": "Video"
         },
         "survey_planning/csd/2021": {
           "name": "Merancang Pengumpulan Data"
+        },
+        "cleaning_survey_data/csd/2021": {
+          "type": "Video"
+        },
+        "view_and_download_survey_data/csd/2021": {
+          "type": "Video"
+        },
+        "the-design-thinking-process/csd/2021": {
+          "type": "Video"
+        },
+        "computer-science-practices/csd/2021": {
+          "type": "Bayangan"
         },
         "paper-prototypes/csd/2021": {
           "name": "Prototipe Kertas"
@@ -1256,6 +1801,12 @@
         },
         "design_mode/csd/2021": {
           "name": "Mode desain"
+        },
+        "whats-for-lunch-testing/csd/2021": {
+          "type": "Video"
+        },
+        "intro_to_design_mode/csd/2021": {
+          "type": "Video"
         },
         "design_mode_1/csd/2021": {
           "name": "Mode desain"
@@ -1276,7 +1827,8 @@
           "name": "Perancangan Layar dengan Kode"
         },
         "how_computers_word_hardware_software/csd/2021": {
-          "name": "Cara Kerja Komputer: Perangkat Keras & Perangkat Lunak"
+          "name": "Cara Kerja Komputer: Perangkat Keras & Perangkat Lunak",
+          "type": "Video"
         },
         "board_events/csd/2021": {
           "name": "Event Papan"
@@ -1284,11 +1836,18 @@
         "physical_input/csd/2021": {
           "name": "Input Fisik"
         },
+        "analog-digital-video/csd/2021": {
+          "type": "Video"
+        },
+        "emoji-race-guide/csd/2021": {
+          "type": "Panduan Proyek"
+        },
         "functions_2/csd/2021": {
           "name": "fungsi"
         },
         "introduction_to_arrays/csd/2021": {
-          "name": "Pengenalan Array"
+          "name": "Pengenalan Array",
+          "type": "Video"
         },
         "arrays/csd/2021": {
           "name": "Array"
@@ -1297,7 +1856,8 @@
           "name": "Catatan Permainan"
         },
         "loops_in_app_lab/csd/2021": {
-          "name": "For Loop"
+          "name": "For Loop",
+          "type": "Video"
         },
         "for_loops/csd/2021": {
           "name": "For Loop"
@@ -1306,13 +1866,21 @@
           "name": "Accelerometer Event"
         },
         "circuits-logic-video/csd/2021": {
-          "name": "Cara Kerja Komputer: Sirkuit & Logika"
+          "name": "Cara Kerja Komputer: Sirkuit & Logika",
+          "type": "Video"
+        },
+        "physical-prototyping-project/csd/2021": {
+          "type": "Panduan Proyek"
+        },
+        "planning-your-innovation/csd/2021": {
+          "type": "Panduan Proyek"
         },
         "representing-information-1/csd/2021": {
           "name": "Menunjukkan informasi"
         },
         "how-computers-work-data-and-binary/csd/2021": {
-          "name": "Binary dan Data"
+          "name": "Binary dan Data",
+          "type": "Video"
         },
         "representing-numbers-exemplar-2019/csd/2021": {
           "name": "Merepresentasikan Angka"
@@ -1344,41 +1912,93 @@
         "automating-data-decisions-1/csd/2021": {
           "name": "Mengotomatisasi Data Keputusan"
         },
+        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
+          "type": "Video"
+        },
+        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
+          "type": "Video"
+        },
+        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
+          "type": "Video"
+        },
         "data-in-the-real-world-exemplar-2019/csd/2021": {
           "name": "Data di Dunia Nyata"
         },
         "data-in-the-real-world/csd/2021": {
           "name": "Data di Dunia Nyata"
         },
+        "video_impact_on_society/csd/2021": {
+          "type": "Video"
+        },
         "video_machine_learning/csd/2021": {
-          "name": "Video: Pembelajaran Mesin"
+          "name": "Video: Pembelajaran Mesin",
+          "type": "Video"
+        },
+        "video_training_data_and_bias/csd/2021": {
+          "type": "Video"
+        },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "Penelaahan Sejawat"
+        },
+        "solve-a-data-problem/csd/2021": {
+          "type": "Panduan Proyek"
+        },
+        "drawing_in_game_lab_-_part_1/csd/2021": {
+          "type": "Video"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2021": {
+          "type": "Video"
+        },
+        "introduction-to-variables/csd/2021": {
+          "type": "Video"
         },
         "variables_1/csd/2021": {
           "name": "variabel"
         },
+        "introduction_to_sprites/csd/2021": {
+          "type": "Video"
+        },
         "the_animation_tab/csd/2021": {
-          "name": "Tab Animasi"
+          "name": "Tab Animasi",
+          "type": "Video"
         },
         "sprites_1/csd/2021": {
           "name": "Sprites"
+        },
+        "youtube-flipbook/csd/2021": {
+          "type": "Video"
+        },
+        "introduction_to_the_draw_loop/csd/2021": {
+          "type": "Video"
         },
         "the_draw_loop/csd/2021": {
           "name": "Draw Loop"
         },
         "animating-sprites/csd/2021": {
-          "name": "Gerakan Sprite"
+          "name": "Gerakan Sprite",
+          "type": "Video"
         },
         "boolean_expressions/csd/2021": {
-          "name": "Ekspresi Boolean"
+          "name": "Ekspresi Boolean",
+          "type": "Video"
         },
         "conditional_statements/csd/2021": {
-          "name": "Pernyataan Kondisional"
+          "name": "Pernyataan Kondisional",
+          "type": "Video"
         },
         "if_else_statements/csd/2021": {
-          "name": "Pernyataan If/Else"
+          "name": "Pernyataan If/Else",
+          "type": "Video"
+        },
+        "interactive-card-project-guide-2019/csd/2021": {
+          "type": "Panduan Proyek"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "type": "Penelaahan Sejawat"
         },
         "velocity_1/csd/2021": {
-          "name": "Percepatan"
+          "name": "Percepatan",
+          "type": "Video"
         },
         "velocity_2/csd/2021": {
           "name": "Percepatan"
@@ -1393,7 +2013,8 @@
           "name": "Side Scroller"
         },
         "side-scroller/csd/2021": {
-          "name": "Side Scroller"
+          "name": "Side Scroller",
+          "type": "Panduan Proyek"
         },
         "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
           "name": "Percepatan dan Pola Tandingan"
@@ -1402,13 +2023,21 @@
           "name": "Flyer Game"
         },
         "flyer-game/csd/2021": {
-          "name": "Flyer Game"
+          "name": "Flyer Game",
+          "type": "Panduan Proyek"
         },
         "calling_and_defining_functions/csd/2021": {
-          "name": "fungsi"
+          "name": "fungsi",
+          "type": "Video"
         },
         "functions_1/csd/2021": {
           "name": "fungsi"
+        },
+        "make-your-own-game/csd/2021": {
+          "type": "Panduan Proyek"
+        },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "Penelaahan Sejawat"
         },
         "teacher_forum_1/csd/2021": {
           "name": "Forum guru"
@@ -1416,17 +2045,24 @@
         "what-is-a-computer-2020/csd/2021": {
           "name": "Apa itu Komputer?"
         },
+        "what-is-a-computer-1-2-3/csd/2021": {
+          "type": "Video"
+        },
         "input-and-output-2020/csd/2021": {
           "name": "Input dan Output"
         },
         "input-and-output-1/csd/2021": {
           "name": "Input dan Output"
         },
+        "what-do-computers-do/csd/2021": {
+          "type": "Video"
+        },
         "app-proposal-project/csd/2021": {
           "name": "Aplikasi dan Pemecahan Masalah"
         },
         "apps-and-problem-solving-peer-review-2019/csd/2021": {
-          "name": "Aplikasi dan Pemecahan Masalah"
+          "name": "Aplikasi dan Pemecahan Masalah",
+          "type": "Penelaahan Sejawat"
         },
         "apps_and_problem_solving/csd/2021": {
           "name": "Aplikasi dan Pemecahan Masalah"
@@ -1434,11 +2070,27 @@
         "html_tags/csd/2021": {
           "name": "Tag HTML"
         },
+        "intro_to_web_lab_part_2/csd/2021": {
+          "type": "Video"
+        },
+        "video_intro_to_web_lab_part_1/csd/2021": {
+          "type": "Video"
+        },
         "video_pair_programming/csd/2021": {
-          "name": "Video: Pair Programming"
+          "name": "Video: Pair Programming",
+          "type": "Video"
         },
         "headings_and_paragraphs/csd/2021": {
           "name": "Heading dan Paragrap"
+        },
+        "video_debugging/csd/2021": {
+          "type": "Video"
+        },
+        "html-web-page/csd/2021": {
+          "type": "Penelaahan Sejawat"
+        },
+        "html-page/csd/2021": {
+          "type": "Panduan Proyek"
         },
         "formatting_html/csd/2021": {
           "name": "Format HTML"
@@ -1456,10 +2108,21 @@
           "name": "Social Sleuth"
         },
         "intro_to_css_-_part_1/csd/2021": {
-          "name": "Pengantar CSS - Bagian 1"
+          "name": "Pengantar CSS - Bagian 1",
+          "type": "Video"
         },
         "intro_to_css_-_part_2/csd/2021": {
-          "name": "Pengantar CSS - Bagian 2"
+          "name": "Pengantar CSS - Bagian 2",
+          "type": "Video"
+        },
+        "your-personal-style-1/csd/2021": {
+          "type": "Penelaahan Sejawat"
+        },
+        "your-personal-style/csd/2021": {
+          "type": "Panduan Proyek"
+        },
+        "creative-commons-video/csd/2021": {
+          "type": "Video"
         },
         "creative_commons_search/csd/2021": {
           "name": "Karya kreatif"
@@ -1470,8 +2133,18 @@
         "layout-properties/csd/2021": {
           "name": "Layout property"
         },
+        "person-web-page-prepare/csd/2021": {
+          "type": "Panduan Proyek"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "Penelaahan Sejawat"
+        },
+        "person-web-page-reflect/csd/2021": {
+          "type": "Panduan Proyek"
+        },
         "publishing_your_website/csd/2021": {
-          "name": "Sedang diterbitkan situs web"
+          "name": "Sedang diterbitkan situs web",
+          "type": "Video"
         },
         "websites-for-a-purpose-2020/csd/2021": {
           "name": "Situs Web untuk suatu Tujuan"
@@ -1479,11 +2152,143 @@
         "websites-for-a-purpose/csd/2021": {
           "name": "Situs Web untuk suatu Tujuan"
         },
+        "teamwork-dealing-with-disagreement/csd/2021": {
+          "type": "Video"
+        },
+        "how-teamwork-works/csd/2021": {
+          "type": "Video"
+        },
+        "how-search-works-video/csd/2021": {
+          "type": "Video"
+        },
         "classes/csd/2021": {
           "name": "Kelas"
         },
+        "plan-a-multi-page-website/csd/2021": {
+          "type": "Panduan Proyek"
+        },
         "hyperlinks/csd/2021": {
           "name": "Tautan"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "type": "Penelaahan Sejawat"
+        },
+        "website-for-a-purpose-reflect/csd/2021": {
+          "type": "Panduan Proyek"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/pre-express/2020": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/pre-express/2020": {
+          "name": "Forum guru"
+        },
+        "vocabulary/pre-express/2020": {
+          "name": "Kosakata"
+        },
+        "lesson_plans/express/2020": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/express/2020": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/express/2020": {
+          "name": "Forum guru"
+        },
+        "vocabulary/express/2020": {
+          "name": "Kosakata"
+        },
+        "curriculum_guide/courseb/2020": {
+          "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/courseb/2020": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/courseb/2020": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/courseb/2020": {
+          "name": "Forum guru"
+        },
+        "vocabulary/courseb/2020": {
+          "name": "Kosakata"
+        },
+        "curriculum_guide/coursed/2020": {
+          "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/coursed/2020": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/coursed/2020": {
+          "name": "Forum guru"
+        },
+        "vocabulary/coursed/2020": {
+          "name": "Kosakata"
+        },
+        "curriculum_guide/coursec/2020": {
+          "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/coursec/2020": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/coursec/2020": {
+          "name": "Forum guru"
+        },
+        "vocabulary/coursec/2020": {
+          "name": "Kosakata"
+        },
+        "curriculum_guide/coursee/2020": {
+          "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/coursee/2020": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/coursee/2020": {
+          "name": "Forum guru"
+        },
+        "vocabulary/coursee/2020": {
+          "name": "Kosakata"
+        },
+        "curriculum_guide/coursea/2020": {
+          "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/coursea/2020": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/coursea/2020": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/coursea/2020": {
+          "name": "Forum guru"
+        },
+        "vocabulary/coursea/2020": {
+          "name": "Kosakata"
+        },
+        "curriculum_guide/coursef/2020": {
+          "name": "Panduan Kurikulum"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "Rencana Pelajaran"
+        },
+        "standard_mappings/coursef/2020": {
+          "name": "Standar pemetaan"
+        },
+        "teacher_forum/coursef/2020": {
+          "name": "Forum guru"
+        },
+        "vocabulary/coursef/2020": {
+          "name": "Kosakata"
         }
       }
     }

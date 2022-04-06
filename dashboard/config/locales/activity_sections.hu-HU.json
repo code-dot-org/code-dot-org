@@ -191,7 +191,7 @@
           "name": "A Kódolás óráján túl"
         },
         "60ef9fd2-9e42-48d9-a4ed-793f00a83bee": {
-          "description": "_Ezzel a tevékenységgel egy interaktív világot fogtok létrehozni vicces karakterekkel, úgynevezett manókkal. A manók szövege beszédbuborékokban jelenik meg, ahogyan azt egy képregényben vagy grafikus regényben lehet látni, és megtanuljátok azt is, hogy amikor ti vagy más rákattint egy figurára, akkor ők automatikusan reagáljanak._\n\n\\_ Ma „kódot” fogtok írni, ami nem jelent mást, mint olyan utasításokat, amelyeket a számítógép megért. Amikor történetet írtok, alaposan át kell gondolni, milyen szavakat használtok. Amikor kódot írtok, alaposan át kell gondolni, milyen utasításokat adtok a számítógépnek.",
+          "description": "_Ezzel a tevékenységgel egy interaktív világot fogtok létrehozni vicces karakterekkel, úgynevezett sprite-okkal. A sprite-ok szövege beszédbuborékokban jelenik meg, ahogyan azt egy képregényben vagy grafikus regényben lehet látni, és megtanuljátok azt is, hogy amikor ti vagy más rákattint egy figurára, akkor ők automatikusan reagáljanak._\n\n\\_ Ma „kódot” fogtok írni, ami nem jelent mást, mint olyan utasításokat, amelyeket a számítógép megért. Amikor történetet írtok, alaposan át kell gondolni, milyen szavakat használtok. Amikor kódot írtok, alaposan át kell gondolni, milyen utasításokat adtok a számítógépnek.",
           "tips": [
             "A Kódolás órájára nem érdemes sokat készülni, vagy hosszú bevezést mondani. Különösen a fiatal tanulók esetében a legjobb gyorsan belevágni."
           ]
@@ -204,10 +204,10 @@
           "progression_name": "Helló világ"
         },
         "3e2a74f4-d574-42fd-9bf3-5b319526299a": {
-          "description": "Ha egy csoport vagy egy diák hamarabb végez, bátorítsa őket, hogy folytassák a projekt építését az utolsó szinten. Ha a diákok nem tudják, hogy mit kell még tenniük, kérdésekkel segítheti őket:\n\n-   Milyen más manókat tudnátok még hozzáadni a projekthez?\n-   Átnéztétek már a jelmeztárat, vagy kipróbáltátok, hogy saját manójelmezt rajzoljatok?\n-   Mit mondhatnának még a manóitok?\n-   Mit csináljanak a manóitok, amikor rákattintotok?\n-   Kérje meg a diákokat, hogy osszák meg ötleteiket, tanuljanak egymástól. A [code.org/learn](https://code.org/learn) oldalon kipróbálhatnak egy másik leckét is."
+          "description": "Ha egy csoport vagy egy diák hamarabb végez, bátorítsa őket, hogy folytassák a projekt építését az utolsó szinten. Ha a diákok nem tudják, hogy mit kell még tenniük, kérdésekkel segítheti őket:\n\n-   Milyen más sprite-okat tudnátok még hozzáadni a projekthez?\n-   Átnéztétek már a jelmeztárat, vagy kipróbáltátok, hogy saját sprite-jelmezt rajzoljatok?\n-   Mit mondhatnának még a sprite-jaitok?\n-   Mit csináljanak a sprite-ok, amikor rákattintotok?\n-   Kérje meg a diákokat, hogy osszák meg ötleteiket, tanuljanak egymástól. A [code.org/learn](https://code.org/learn) oldalon kipróbálhatnak egy másik leckét is."
         },
         "f95b4eed-639e-483e-bef7-ead9abf4808e": {
-          "description": "#### Összefoglaló értékelés\n\nKérje meg a tanulókat, hogy gondolják végig, mi is történt azon a napon. Mit tanultak a kódolásról? A manókról? Az eseményekről?\n\nMit gondolnak a számítástechnikáról és a kódolásról egy órányi foglalkozás után?\n\n#### Következő lépések\n\nMondja el a diákoknak, hogy ha tetszett nekik a mai tevékenység, számos lehetőségük van a kódolás folytatására. Látogasson el a [CS Connections](https://code.org/educate/csc) oldalra, ahol ötleteket talál arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni, vagy nézze meg a [Képzések általános iskolák számára](https://code.org/educate/curriculum/elementary-school) kiadványunkat."
+          "description": "#### Összefoglaló értékelés\n\nKérje meg a tanulókat, hogy gondolják végig, mi is történt azon a napon. Mit tanultak a kódolásról? A sprite-okról? Az eseményekről?\n\nMit gondolnak a számítástechnikáról és a kódolásról egy órányi foglalkozás után?\n\n#### Következő lépések\n\nMondja el a diákoknak, hogy ha tetszett nekik a mai tevékenység, számos lehetőségük van a kódolás folytatására. Látogasson el a [CS Connections](https://code.org/educate/csc) oldalra, ahol ötleteket talál arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni, vagy nézze meg a [Képzések általános iskolák számára](https://code.org/educate/curriculum/elementary-school) kiadványunkat."
         },
         "6b51b4f1-5b1d-4b29-af25-c48d716a2d22": {
           "tips": [
@@ -260,7 +260,7 @@
           ]
         },
         "6e3db575-9d35-4bad-b17b-37c9dda2bd7f": {
-          "description": "_Ezzel a tevékenységgel egy interaktív világot fogtok létrehozni vicces karakterekkel, úgynevezett manókkal. A manók szövege beszédbuborékokban jelenik meg, ahogyan azt egy képregényben vagy grafikus regényben lehet látni, és megtanuljátok azt is, hogy amikor ti vagy más rákattint egy figurára, akkor ők automatikusan reagáljanak._\n\n\\_ Ma „kódot” fogtok írni, ami nem jelent mást, mint olyan utasításokat, amelyeket a számítógép megért. Amikor történetet írtok, alaposan át kell gondolni, milyen szavakat használtok. Amikor kódot írtok, alaposan át kell gondolni, milyen utasításokat adtok a számítógépnek.",
+          "description": "_Ezzel a tevékenységgel egy interaktív világot fogtok létrehozni vicces karakterekkel, úgynevezett sprite-okkal. A sprite-ok szövege beszédbuborékokban jelenik meg, ahogyan azt egy képregényben vagy grafikus regényben lehet látni, és megtanuljátok azt is, hogy amikor ti vagy más rákattint egy figurára, akkor ők automatikusan reagáljanak._\n\n\\_ Ma „kódot” fogtok írni, ami nem jelent mást, mint olyan utasításokat, amelyeket a számítógép megért. Amikor történetet írtok, alaposan át kell gondolni, milyen szavakat használtok. Amikor kódot írtok, alaposan át kell gondolni, milyen utasításokat adtok a számítógépnek.",
           "tips": [
             "A Kódolás órájára nem érdemes sokat készülni, vagy hosszú bevezést mondani. Különösen a fiatal tanulók esetében a legjobb gyorsan belevágni."
           ]
@@ -273,10 +273,10 @@
           "progression_name": "Helló világ"
         },
         "8341212e-8528-4ad8-9c02-22066467054b": {
-          "description": "Ha egy csoport vagy egy diák hamarabb végez, bátorítsa őket, hogy folytassák a projekt építését az utolsó szinten. Ha a diákok nem tudják, hogy mit kell még tenniük, kérdésekkel segítheti őket:\n\n-   Milyen más manókat tudnátok még hozzáadni a projekthez?\n-   Átnéztétek már a jelmeztárat, vagy kipróbáltátok, hogy saját manójelmezt rajzoljatok?\n-   Mit mondhatnának még a manóitok?\n-   Mit csináljanak a manóitok, amikor rákattintotok?\n-   Kérje meg a diákokat, hogy osszák meg ötleteiket, tanuljanak egymástól. A [code.org/learn](https://code.org/learn) oldalon kipróbálhatnak egy másik leckét is."
+          "description": "Ha egy csoport vagy egy diák hamarabb végez, bátorítsa őket, hogy folytassák a projekt építését az utolsó szinten. Ha a diákok nem tudják, hogy mit kell még tenniük, kérdésekkel segítheti őket:\n\n-   Milyen más sprite-okat tudnátok még hozzáadni a projekthez?\n-   Átnéztétek már a jelmeztárat, vagy kipróbáltátok, hogy saját sprite-jelmezt rajzoljatok?\n-   Mit mondhatnának még a sprite-jaitok?\n-   Mit csináljanak a sprite-ok, amikor rákattintotok?\n-   Kérje meg a diákokat, hogy osszák meg ötleteiket, tanuljanak egymástól. A [code.org/learn](https://code.org/learn) oldalon kipróbálhatnak egy másik leckét is."
         },
         "656eee11-dc6d-428e-8849-6e4b31dc8c81": {
-          "description": "#### Összefoglaló értékelés\n\nKérje meg a tanulókat, hogy gondolják végig, mi is történt azon a napon. Mit tanultak a kódolásról? A manókról? Az eseményekről?\n\nMit gondolnak a számítástechnikáról és a kódolásról egy órányi foglalkozás után?\n\n#### Következő lépések\n\nMondja el a diákoknak, hogy ha tetszett nekik a mai tevékenység, számos lehetőségük van a kódolás folytatására. Látogasson el a [CS Connections](https://code.org/educate/csc) oldalra, ahol ötleteket talál arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni, vagy nézze meg a [Képzések általános iskolák számára](https://code.org/educate/curriculum/elementary-school) kiadványunkat."
+          "description": "#### Összefoglaló értékelés\n\nKérje meg a tanulókat, hogy gondolják végig, mi is történt azon a napon. Mit tanultak a kódolásról? A sprite-okról? Az eseményekről?\n\nMit gondolnak a számítástechnikáról és a kódolásról egy órányi foglalkozás után?\n\n#### Következő lépések\n\nMondja el a diákoknak, hogy ha tetszett nekik a mai tevékenység, számos lehetőségük van a kódolás folytatására. Látogasson el a [CS Connections](https://code.org/educate/csc) oldalra, ahol ötleteket talál arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni, vagy nézze meg a [Képzések általános iskolák számára](https://code.org/educate/curriculum/elementary-school) kiadványunkat."
         },
         "5396c200-526e-4dd4-86dc-eefe7b52ec03": {
           "name": "Bevezető"
@@ -338,7 +338,7 @@
           ]
         },
         "fbf618cf-ac1f-4cf9-b1e4-884ab667042f": {
-          "description": "_Ezzel a tevékenységgel egy interaktív világot fogtok létrehozni vicces karakterekkel, úgynevezett manókkal. A manók szövege beszédbuborékokban jelenik meg, ahogyan azt egy képregényben vagy grafikus regényben lehet látni, és megtanuljátok azt is, hogy amikor ti vagy más rákattint egy figurára, akkor ők automatikusan reagáljanak._\n\n\\_ Ma „kódot” fogtok írni, ami nem jelent mást, mint olyan utasításokat, amelyeket a számítógép megért. Amikor történetet írtok, alaposan át kell gondolni, milyen szavakat használtok. Amikor kódot írtok, alaposan át kell gondolni, milyen utasításokat adtok a számítógépnek.",
+          "description": "_Ezzel a tevékenységgel egy interaktív világot fogtok létrehozni vicces karakterekkel, úgynevezett sprite-okkal. A sprite-ok szövege beszédbuborékokban jelenik meg, ahogyan azt egy képregényben vagy grafikus regényben lehet látni, és megtanuljátok azt is, hogy amikor ti vagy más rákattint egy figurára, akkor ők automatikusan reagáljanak._\n\n\\_ Ma „kódot” fogtok írni, ami nem jelent mást, mint olyan utasításokat, amelyeket a számítógép megért. Amikor történetet írtok, alaposan át kell gondolni, milyen szavakat használtok. Amikor kódot írtok, alaposan át kell gondolni, milyen utasításokat adtok a számítógépnek.",
           "tips": [
             "A Kódolás órájára nem érdemes sokat készülni, vagy hosszú bevezést mondani. Különösen a fiatal tanulók esetében a legjobb gyorsan belevágni."
           ]
@@ -351,10 +351,10 @@
           "progression_name": "Helló világ"
         },
         "05ad915a-32e0-4799-90a2-2a53efb937f1": {
-          "description": "Ha egy csoport vagy egy diák hamarabb végez, bátorítsa őket, hogy folytassák a projekt építését az utolsó szinten. Ha a diákok nem tudják, hogy mit kell még tenniük, kérdésekkel segítheti őket:\n\n-   Milyen más manókat tudnátok még hozzáadni a projekthez?\n-   Átnéztétek már a jelmeztárat, vagy kipróbáltátok, hogy saját manójelmezt rajzoljatok?\n-   Mit mondhatnának még a manóitok?\n-   Mit csináljanak a manóitok, amikor rákattintotok?\n-   Kérje meg a diákokat, hogy osszák meg ötleteiket, tanuljanak egymástól. A [code.org/learn](https://code.org/learn) oldalon kipróbálhatnak egy másik leckét is."
+          "description": "Ha egy csoport vagy egy diák hamarabb végez, bátorítsa őket, hogy folytassák a projekt építését az utolsó szinten. Ha a diákok nem tudják, hogy mit kell még tenniük, kérdésekkel segítheti őket:\n\n-   Milyen más sprite-okat tudnátok még hozzáadni a projekthez?\n-   Átnéztétek már a jelmeztárat, vagy kipróbáltátok, hogy saját sprite-jelmezt rajzoljatok?\n-   Mit mondhatnának még a sprite-jaitok?\n-   Mit csináljanak a sprite-ok, amikor rákattintotok?\n-   Kérje meg a diákokat, hogy osszák meg ötleteiket, tanuljanak egymástól. A [code.org/learn](https://code.org/learn) oldalon kipróbálhatnak egy másik leckét is."
         },
         "d5d3f8eb-f17e-4f26-88a8-ca6422ed7a1f": {
-          "description": "#### Összefoglaló értékelés\n\nKérje meg a tanulókat, hogy gondolják végig, mi is történt azon a napon. Mit tanultak a kódolásról? A manókról? Az eseményekről?\n\nMit gondolnak a számítástechnikáról és a kódolásról egy órányi foglalkozás után?\n\n#### Következő lépések\n\nMondja el a diákoknak, hogy ha tetszett nekik a mai tevékenység, számos lehetőségük van a kódolás folytatására. Látogasson el a [CS Connections](https://code.org/educate/csc) oldalra, ahol ötleteket talál arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni, vagy nézze meg a [Képzések általános iskolák számára](https://code.org/educate/curriculum/elementary-school) kiadványunkat."
+          "description": "#### Összefoglaló értékelés\n\nKérje meg a tanulókat, hogy gondolják végig, mi is történt azon a napon. Mit tanultak a kódolásról? A sprite-okról? Az eseményekről?\n\nMit gondolnak a számítástechnikáról és a kódolásról egy órányi foglalkozás után?\n\n#### Következő lépések\n\nMondja el a diákoknak, hogy ha tetszett nekik a mai tevékenység, számos lehetőségük van a kódolás folytatására. Látogasson el a [CS Connections](https://code.org/educate/csc) oldalra, ahol ötleteket talál arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni, vagy nézze meg a [Képzések általános iskolák számára](https://code.org/educate/curriculum/elementary-school) kiadványunkat."
         },
         "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
           "tips": [
@@ -423,7 +423,7 @@
           "progression_name": "Tervező mód"
         },
         "a254a62b-95af-4c05-8d1a-e3f7e54ef798": {
-          "description": "_Ezzel a tevékenységgel egy interaktív világot fogtok létrehozni vicces karakterekkel, úgynevezett manókkal. A manók szövege beszédbuborékokban jelenik meg, ahogyan azt egy képregényben vagy grafikus regényben lehet látni, és megtanuljátok azt is, hogy amikor ti vagy más rákattint egy figurára, akkor ők automatikusan reagáljanak._\n\n\\_ Ma „kódot” fogtok írni, ami nem jelent mást, mint olyan utasításokat, amelyeket a számítógép megért. Amikor történetet írtok, alaposan át kell gondolni, milyen szavakat használtok. Amikor kódot írtok, alaposan át kell gondolni, milyen utasításokat adtok a számítógépnek.",
+          "description": "_Ezzel a tevékenységgel egy interaktív világot fogtok létrehozni vicces karakterekkel, úgynevezett sprite-okkal. A sprite-ok szövege beszédbuborékokban jelenik meg, ahogyan azt egy képregényben vagy grafikus regényben lehet látni, és megtanuljátok azt is, hogy amikor ti vagy más rákattint egy figurára, akkor ők automatikusan reagáljanak._\n\n\\_ Ma „kódot” fogtok írni, ami nem jelent mást, mint olyan utasításokat, amelyeket a számítógép megért. Amikor történetet írtok, alaposan át kell gondolni, milyen szavakat használtok. Amikor kódot írtok, alaposan át kell gondolni, milyen utasításokat adtok a számítógépnek.",
           "tips": [
             "A Kódolás órájára nem érdemes sokat készülni, vagy hosszú bevezést mondani. Különösen a fiatal tanulók esetében a legjobb gyorsan belevágni."
           ]
@@ -436,10 +436,10 @@
           "progression_name": "Helló világ"
         },
         "77cef9f9-1949-455b-a0bd-f2cbc4a32986": {
-          "description": "Ha egy csoport vagy egy diák hamarabb végez, bátorítsa őket, hogy folytassák a projekt építését az utolsó szinten. Ha a diákok nem tudják, hogy mit kell még tenniük, kérdésekkel segítheti őket:\n\n-   Milyen más manókat tudnátok még hozzáadni a projekthez?\n-   Átnéztétek már a jelmeztárat, vagy kipróbáltátok, hogy saját manójelmezt rajzoljatok?\n-   Mit mondhatnának még a manóitok?\n-   Mit csináljanak a manóitok, amikor rákattintotok?\n-   Kérje meg a diákokat, hogy osszák meg ötleteiket, tanuljanak egymástól. A [code.org/learn](https://code.org/learn) oldalon kipróbálhatnak egy másik leckét is."
+          "description": "Ha egy csoport vagy egy diák hamarabb végez, bátorítsa őket, hogy folytassák a projekt építését az utolsó szinten. Ha a diákok nem tudják, hogy mit kell még tenniük, kérdésekkel segítheti őket:\n\n-   Milyen más sprite-okat tudnátok még hozzáadni a projekthez?\n-   Átnéztétek már a jelmeztárat, vagy kipróbáltátok, hogy saját sprite-jelmezt rajzoljatok?\n-   Mit mondhatnának még a sprite-jaitok?\n-   Mit csináljanak a sprite-ok, amikor rákattintotok?\n-   Kérje meg a diákokat, hogy osszák meg ötleteiket, tanuljanak egymástól. A [code.org/learn](https://code.org/learn) oldalon kipróbálhatnak egy másik leckét is."
         },
         "ec905c64-2e80-49d0-8da3-7d75ed8d0693": {
-          "description": "#### Összefoglaló értékelés\n\nKérje meg a tanulókat, hogy gondolják végig, mi is történt azon a napon. Mit tanultak a kódolásról? A manókról? Az eseményekről?\n\nMit gondolnak a számítástechnikáról és a kódolásról egy órányi foglalkozás után?\n\n#### Következő lépések\n\nMondja el a diákoknak, hogy ha tetszett nekik a mai tevékenység, számos lehetőségük van a kódolás folytatására. Látogasson el a [CS Connections](https://code.org/educate/csc) oldalra, ahol ötleteket talál arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni, vagy nézze meg a [Képzések általános iskolák számára](https://code.org/educate/curriculum/elementary-school) kiadványunkat."
+          "description": "#### Összefoglaló értékelés\n\nKérje meg a tanulókat, hogy gondolják végig, mi is történt azon a napon. Mit tanultak a kódolásról? A sprite-okról? Az eseményekről?\n\nMit gondolnak a számítástechnikáról és a kódolásról egy órányi foglalkozás után?\n\n#### Következő lépések\n\nMondja el a diákoknak, hogy ha tetszett nekik a mai tevékenység, számos lehetőségük van a kódolás folytatására. Látogasson el a [CS Connections](https://code.org/educate/csc) oldalra, ahol ötleteket talál arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni, vagy nézze meg a [Képzések általános iskolák számára](https://code.org/educate/curriculum/elementary-school) kiadványunkat."
         },
         "88f6ccc1-0efa-4c60-985c-971a235d5645": {
           "tips": [
@@ -609,7 +609,7 @@
           "name": "Fő tevékenység (új)"
         },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
-          "description": "_Ezzel a tevékenységgel egy interaktív világot fogtok létrehozni vicces karakterekkel, úgynevezett manókkal. A manók szövege beszédbuborékokban jelenik meg, ahogyan azt egy képregényben vagy grafikus regényben lehet látni, és megtanuljátok azt is, hogy amikor ti vagy más rákattint egy figurára, akkor ők automatikusan reagáljanak._\n\n\\_ Ma „kódot” fogtok írni, ami nem jelent mást, mint olyan utasításokat, amelyeket a számítógép megért. Amikor történetet írtok, alaposan át kell gondolni, milyen szavakat használtok. Amikor kódot írtok, alaposan át kell gondolni, milyen utasításokat adtok a számítógépnek.",
+          "description": "_Ezzel a tevékenységgel egy interaktív világot fogtok létrehozni vicces karakterekkel, úgynevezett sprite-okkal. A sprite-ok szövege beszédbuborékokban jelenik meg, ahogyan azt egy képregényben vagy grafikus regényben lehet látni, és megtanuljátok azt is, hogy amikor ti vagy más rákattint egy figurára, akkor ők automatikusan reagáljanak._\n\n\\_ Ma „kódot” fogtok írni, ami nem jelent mást, mint olyan utasításokat, amelyeket a számítógép megért. Amikor történetet írtok, alaposan át kell gondolni, milyen szavakat használtok. Amikor kódot írtok, alaposan át kell gondolni, milyen utasításokat adtok a számítógépnek.",
           "tips": [
             "A Kódolás órájára nem érdemes sokat készülni, vagy hosszú bevezést mondani. Különösen a fiatal tanulók esetében a legjobb gyorsan belevágni."
           ]
@@ -621,10 +621,10 @@
           "name": "Helló világ"
         },
         "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
-          "description": "Ha egy csoport vagy egy diák hamarabb végez, bátorítsa őket, hogy folytassák a projekt építését az utolsó szinten. Ha a diákok nem tudják, hogy mit kell még tenniük, kérdésekkel segítheti őket:\n\n-   Milyen más manókat tudnátok még hozzáadni a projekthez?\n-   Átnéztétek már a jelmeztárat, vagy kipróbáltátok, hogy saját manójelmezt rajzoljatok?\n-   Mit mondhatnának még a manóitok?\n-   Mit csináljanak a manóitok, amikor rákattintotok?\n-   Kérje meg a diákokat, hogy osszák meg ötleteiket, tanuljanak egymástól. A [code.org/learn][0] oldalon kipróbálhatnak egy másik leckét is."
+          "description": "Ha egy csoport vagy egy diák hamarabb végez, bátorítsa őket, hogy folytassák a projekt építését az utolsó szinten. Ha a diákok nem tudják, hogy mit kell még tenniük, kérdésekkel segítheti őket:\n\n-   Milyen más sprite-okat tudnátok még hozzáadni a projekthez?\n-   Átnéztétek már a jelmeztárat, vagy kipróbáltátok, hogy saját sprite-jelmezt rajzoljatok?\n-   Mit mondhatnának még a sprite-jaitok?\n-   Mit csináljanak a sprite-ok, amikor rákattintotok?\n-   Kérje meg a diákokat, hogy osszák meg ötleteiket, tanuljanak egymástól. A [code.org/learn][0] oldalon kipróbálhatnak egy másik leckét is."
         },
         "b68a11cc-930a-4803-beca-1d4f49ede378": {
-          "description": "#### Összefoglaló értékelés\n\nKérje meg a tanulókat, hogy gondolják végig, mi is történt azon a napon. Mit tanultak a kódolásról? A manókról? Az eseményekről?\n\nMit gondolnak a számítástechnikáról és a kódolásról egy órányi foglalkozás után?\n\n#### Következő lépések\n\nMondja el a diákoknak, hogy ha tetszett nekik a mai tevékenység, számos lehetőségük van a kódolás folytatására. Látogasson el a [CS Connections][0] oldalra, ahol ötleteket talál arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni, vagy nézze meg a [Képzések általános iskolák számára][1] kiadványunkat."
+          "description": "#### Összefoglaló értékelés\n\nKérje meg a tanulókat, hogy gondolják végig, mi is történt azon a napon. Mit tanultak a kódolásról? A sprite-okról? Az eseményekről?\n\nMit gondolnak a számítástechnikáról és a kódolásról egy órányi foglalkozás után?\n\n#### Következő lépések\n\nMondja el a diákoknak, hogy ha tetszett nekik a mai tevékenység, számos lehetőségük van a kódolás folytatására. Látogasson el a [CS Connections][0] oldalra, ahol ötleteket talál arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni, vagy nézze meg a [Képzések általános iskolák számára][1] kiadványunkat."
         },
         "23e04aed-1959-463f-bdd4-1398b64e398a": {
           "progression_name": "Inspiráció!"
@@ -2299,7 +2299,7 @@
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
           "description": "#### Színpadra állítás\n\nÜdvözöld a tanulókat az osztályban, és ismertesd a napi tevékenységet.",
           "tips": [
-            "A Kódolás órája bevezetésének egyik módja, ha nem nagyon ismered a kódolást, hogy bemutatod az egyik [ösztönző videónkat](https://hourofcode.com/promote/resources#videos). Válaszd ki azt, amelyikről úgy gondolod, hogy diákjaid inspirálónak találják, és oszd meg most. A középiskolások számára a [Itt a kódolás órája](https://youtu.be/FC5FbmsH4fw) című videót javasoljuk."
+            "A Kódolás órája bevezetésének egyik módja, ha nem nagyon ismered a kódolást, hogy bemutatod az egyik [ösztönző videónkat][0]. Válaszd ki azt, amelyikről úgy gondolod, hogy diákjaid inspirálónak találják, és oszd meg most. A középiskolások számára a [Itt a kódolás órája][1] című videót javasoljuk."
           ]
         },
         "d99fc09e-a586-41df-84b2-e552cc4735e3": {
@@ -2312,7 +2312,7 @@
           "description": "Tudtad, hogy az informatika nagyon kreatív tud lenni? Valójában kóddal művészetet is létre lehet hozni. Emlékeztetőül: a kód olyan utasítások összessége, amelyeket a számítógép képes megérteni. Ahogyan a festék színeinek kiválasztása, úgy a kód megírása is lehetőséget adhat a kreativitásod kifejezésére! \n\nMa a költészetet fogjuk használni a kreatív kódolás ösztönzésére. Tudja valaki, mi az a költészet? Van kedvenc verse vagy költője? "
         },
         "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
-          "description": "\\*\\* Olvassatok együtt verset:\\*\\* Olvassatok el együtt [néhány verset](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing), és gyakoroljátok az egyes versek hangulatának szavakba foglalását. Bátorítsd a tanulókat, hogy osszák meg értelmezésüket, még akkor is, ha az eltér valaki másétól."
+          "description": "\\*\\* Olvassatok együtt verset:\\*\\* Olvassatok el együtt [néhány verset][0], és gyakoroljátok az egyes versek hangulatának szavakba foglalását. Bátorítsd a tanulókat, hogy osszák meg értelmezésüket, még akkor is, ha az eltér valaki másétól."
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
           "name": "Versművészet",

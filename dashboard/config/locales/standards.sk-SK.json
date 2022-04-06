@@ -1,0 +1,20 @@
+{
+  "sk-SK": {
+    "data": {
+      "standards": {
+        "csp2021/IOC-2.B.5": {
+          "description": "Šifrovanie je proces kódovania údajov s cieľom zabrániť neoprávnenému prístupu k nim. Dekódovanie je proces dekódovania údajov. Dva bežné prístupy k šifrovaniu sú: ●       Šifrovanie so symetrickým kľúčom zahŕňa jeden kľúč na šifrovanie aj dešifrovanie. ●       Šifrovanie s verejným kľúčom spája verejný kľúč na šifrovanie a súkromný kľúč na dešifrovanie. Odosielateľ nepotrebuje súkromný kľúč príjemcu na zašifrovanie správy, ale súkromný kľúč príjemcu je potrebný na dešifrovanie správy. VYHLÁSENIE O VYLÚČENÍ(EKIOC-2.B.5): Špecifické matematické postupy šifrovania a dešifrovania sú mimo rozsahu tohto kurzu a skúšky AP."
+        },
+        "csta/3A-NI-06": {
+          "description": "Odporúčanie bezpečnostných opatrení na riešenie rôznych scenárov na základe faktorov, ako sú účinnosť, uskutočniteľnosť a etické dôsledky."
+        },
+        "csta/3A-NI-07": {
+          "description": "Porovnajte rôzne bezpečnostné opatrenia a zvážte kompromisy medzi použiteľnosťou a bezpečnosťou počítačového systému."
+        },
+        "csta/3B-NI-04": {
+          "description": "Porovnajte spôsoby, akými vývojári softvéru chránia zariadenia a informácie pred neoprávneným prístupom."
+        }
+      }
+    }
+  }
+}

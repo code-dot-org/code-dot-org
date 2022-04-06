@@ -333,13 +333,13 @@
           "name": "Başlamaq"
         },
         "544fd00b-84f3-47e4-9e02-cb27a6cfbbca": {
-          "name": "Fəaliyyət (30-45 dəqiqə)"
+          "name": "Fəaliyyət"
         },
         "e12c8da3-986d-488b-bed5-a7bb9e95e393": {
           "name": "Səviyyələr"
         },
         "2f9c446a-0802-48b0-91ff-a7df9fe4afe2": {
-          "name": "Yekunlaşdır (5 dəqiqə)"
+          "name": "Yekun"
         },
         "1a4d5cec-bd30-41f9-8012-4f16018769f9": {
           "name": "Qiymətləndirmə (2 dəqiqə)"
@@ -354,7 +354,7 @@
           "name": "Başlamaq"
         },
         "82dec89b-f375-4238-a251-ffae17c2dfd1": {
-          "name": "Fəaliyyət (30-45 dəqiqə)"
+          "name": "Fəaliyyət"
         },
         "a25c23cd-4e73-4a82-882f-7cc0a9fdfeb4": {
           "name": "Səviyyələr"
@@ -366,7 +366,7 @@
           "name": "Virala gedin"
         },
         "7afb9d6e-2c07-44d2-8504-90df0cecc778": {
-          "name": "Qiymətləndirmə (2 dəqiqə)"
+          "name": "Yoxlama"
         },
         "160cbd69-f567-4fb4-9623-0e69ecec9b3a": {
           "name": "Fəaliyyət"
@@ -3200,6 +3200,9 @@
         "3eaf76e0-6c2e-4565-acd8-cef7f0cb5121": {
           "name": "Yekun"
         },
+        "fbda7646-9395-471f-8749-694fd9cd30da": {
+          "name": "Araşdırın: Problem nədir?"
+        },
         "86dafe20-4778-4665-94eb-cf837951259b": {
           "name": "Əlavə təlim"
         },
@@ -3762,10 +3765,10 @@
           "name": "Yekun"
         },
         "235b3b14-975a-43b6-93bc-d386b857fd6b": {
-          "name": "Başlayaq (5 dəqiqə)"
+          "name": "Başlanğıc"
         },
         "fd06b4db-e3d4-491b-9372-af9a05dc2bb7": {
-          "name": "Fəaliyyət (30-45 dəqiqə)"
+          "name": "Fəaliyyət"
         },
         "e96a358f-201b-4474-8950-90dd94426aff": {
           "name": "Yekun"
@@ -4850,6 +4853,9 @@
         "06f4dccb-71cc-4afb-907e-2ee69be55359": {
           "name": "Yekun"
         },
+        "d07bf4d7-6a25-4ff6-9d01-adea55e214a3": {
+          "name": "Texniki Quraşdırma"
+        },
         "b58f7f0f-78a4-4965-8f0d-9512076d5e0f": {
           "name": "Fəaliyyət"
         },
@@ -4898,17 +4904,26 @@
         "73080877-a97f-4bdc-a8b7-4210cf0f40c7": {
           "name": "Əlavə təlim"
         },
+        "287570f9-42d3-434a-a1df-6482860fc1df": {
+          "name": "Texniki Quraşdırma"
+        },
         "a6b60e0a-6bb5-4967-bc4c-eabd863ab97c": {
           "name": "Fəaliyyət"
         },
         "3288a325-7eb2-47c6-bbc4-9eb0c1686045": {
           "name": "Yekun"
         },
+        "de8c2b38-c4ff-458f-8356-f650c7b58436": {
+          "name": "Texniki Quraşdırma"
+        },
         "98ffa01e-f262-4df2-bcca-a7f669b80fec": {
           "name": "Fəaliyyət"
         },
         "bc72b27d-760e-4e23-aa40-d8141b949e20": {
           "name": "Yekun"
+        },
+        "83123736-f2a8-4fdc-97c7-5ed673d1b2d1": {
+          "name": "Texniki Quraşdırma"
         },
         "fd95bfe8-a008-4994-a874-ff3f1ba81d58": {
           "name": "Fəaliyyət"

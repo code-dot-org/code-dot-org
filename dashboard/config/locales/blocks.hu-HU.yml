@@ -2,6 +2,8 @@
 hu:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: új {ANIMATION_NAME} szereplő {LOCATION} helyen
       Dancelab_alternateMoves:
         text: "{GROUP} váltakozik {N} ütemenként \n{MOVE1} és {MOVE2} között"
         options:
@@ -1038,6 +1040,12 @@ hu:
         text: vonal húzása {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: szélek megakadályozzák {SPRITE} mozgását
+      gamelab_everySeconds:
+        text: 'ismételd meg minden {N} {UNIT} után '
+        options:
+          UNIT:
+            '"seconds"': másodperc
+            '"frames"': keretek
       gamelab_followingTargets:
         text: célpontok követése
       gamelab_getAllSprites:
@@ -1184,13 +1192,15 @@ hu:
       gamelab_location_picker:
         text: "{LOCATION}"
       gamelab_makeBurst:
-        text: "{EFFECT} effekt lérehozása a(z) {NUM} {ANIMATION_NAME} manókkal"
+        text: "{EFFECT} effekt lérehozása a(z) {NUM} {ANIMATION_NAME} sprite-okkal"
         options:
           EFFECT:
             '"burst"': robbanás
             '"pop"': pukkanás
             '"rain"': esős
             '"spiral"': spirál
+      gamelab_makeNewScaledSprite:
+        text: új {ANIMATION_NAME} szereplő {LOCATION} helyen
       gamelab_makeNewSpriteAnon:
         text: új {ANIMATION_NAME} szereplő {LOCATION} helyen
       gamelab_makeNumSprites:
@@ -1213,7 +1223,7 @@ hu:
       gamelab_mouseLocation:
         text: egér helye
       gamelab_moveBackward:
-        text: vidd {SPRITE} manót {DISTANCE} képponttal vissza
+        text: vidd {SPRITE} sprite-ot {DISTANCE} képponttal vissza
       gamelab_moveForward:
         text: "{SPRITE} lépj {DISTANCE} képpontot előre"
       gamelab_moveInDirection:
@@ -1356,7 +1366,7 @@ hu:
       gamelab_setBackgroundImageAs:
         text: háttér beállítása {IMG}
       gamelab_setDefaultSpriteSize:
-        text: új manó készítése szokásosról {SIZE} méretben
+        text: új sprite készítése szokásosról {SIZE} méretben
         options:
           SIZE:
             '25': nagyon kicsi
@@ -1433,11 +1443,11 @@ hu:
       gamelab_startGliding:
         text: "{SPRITE} kezd siklani"
       gamelab_stopAvoiding:
-        text: "{SPRITE} abbahagyja más manók elkerülését"
+        text: "{SPRITE} abbahagyja más sprite-ok elkerülését"
       gamelab_stopCollectingData:
         text: adatgyűjtés befejezése
       gamelab_stopFollowing:
-        text: "{SPRITE} abbahagyja más manók követését"
+        text: "{SPRITE} abbahagyja más sprite-ok követését"
       gamelab_stopGliding:
         text: "{SPRITE} befejezi a siklást"
       gamelab_subjectSpritePointer:
@@ -1872,7 +1882,7 @@ hu:
       Poetry_hideText:
         text: szöveg elrejtése
       Poetry_makeBurst:
-        text: "{EFFECT} effekt lérehozása a(z) {NUM} {ANIMATION_NAME} manókkal"
+        text: "{EFFECT} effekt lérehozása a(z) {NUM} {ANIMATION_NAME} sprite-okkal"
         options:
           EFFECT:
             '"burst"': robbanás

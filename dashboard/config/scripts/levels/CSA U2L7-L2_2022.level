@@ -1,0 +1,20 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "CSA U2L7 PBT_2022",
+    "long_instructions": "##Getting Started\r\n1. Import `Dessert.java`(#e7e8ea) from the ![Backpack](https://images.code.org/b17feeef2e8db2a98abdb4a5860c5c61-image-1642175705297.png)\r\n\r\n*Don't have it or it doesn't work? That's ok! Just copy and paste the code from [**here**](http://studio.code.org/s/csa-backpack-2022/lessons/2/levels/2).*\r\n\r\n##In Dessert.java:\r\n\r\n2. Write an accessor method to return the value stored in the `flavor`(#e7e8ea) instance variable.\r\n\r\n3. Write an accessor method to return the value stored in the `price`(#e7e8ea) instance variable.\r\n\r\n::: details [**Show Me How**]\r\nAn accessor method uses the following syntax:\r\n\r\n  ```\r\n  public dataType getInstanceVariable() {\r\n     return instanceVariable;\r\n  }\r\n  ```\r\n\r\nMake sure the `dataType`(#e7e8ea) matches the data type of the instance variable.\r\n:::",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "encrypted_examples": "mZB7BNRoUfVP+xe/M7KOnuvdOgK/ZEEXUmzYMFb5QmYsMFo36jxA2RCtrX7n\nXFtFejC1yOH02cTiOPbPz67qMafUtTgspgrFjJ1Rz4hOkX0=\n"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-03-06T18:13:40.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2022-03-06 18:13:43 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-06 18:21:25 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-06 19:51:37 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-08 14:32:27 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

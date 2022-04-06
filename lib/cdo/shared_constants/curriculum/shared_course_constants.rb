@@ -6,7 +6,9 @@ module SharedCourseConstants
       pilot: "pilot",
       beta: "beta",
       preview: "preview",
-      stable: "stable"
+      stable: "stable",
+      sunsetting: "sunsetting",
+      deprecated: "deprecated"
     }
   ).freeze
 
@@ -45,7 +47,14 @@ module SharedCourseConstants
       CSP: 'CSP',
       CSA: 'CSA',
       CSC: 'CSC',
-      HOC: 'HOC'
+      HOC: 'HOC',
+      CSA_self_paced_pl: 'CSA Self Paced PL',
+      CSP_self_paced_pl: 'CSP Self Paced PL',
+      CSD_self_paced_pl: 'CSD Self Paced PL',
+      CSF_self_paced_pl: 'CSF Self Paced PL',
+      CSP_virtual_pl: 'CSP Virtual PL',
+      CSD_virtual_pl: 'CSD Virtual PL',
+      student_self_paced: 'Student Self Paced Courses'
     }
   ).freeze
 
@@ -59,6 +68,9 @@ module SharedCourseConstants
     csf_international: 'CS Fundamentals International',
     math: 'Math',
     twenty_hour: '20-hour',
-    other: 'Other'
+    other: 'Other',
+    pl_self_paced: 'Self-Paced Professional Learning',
+    pl_virtual: 'Virtual Professional Learning',
+    pl_other: 'Other Professional Learning'
   ).freeze
 end

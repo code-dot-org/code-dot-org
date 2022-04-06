@@ -33,7 +33,7 @@ const backgroundSprite = {
     }
   }
 };
-
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
 describe('SpriteLab', () => {
   setExternalGlobals();
 
@@ -53,11 +53,11 @@ describe('SpriteLab', () => {
     });
     afterEach(() => document.body.removeChild(container));
 
-    let studioApp;
+    let mockStudioApp;
     beforeEach(() => {
       registerReducers({...commonReducers, ...reducers});
       instance = new SpriteLab();
-      studioApp = {
+      mockStudioApp = {
         setCheckForEmptyBlocks: sinon.spy(),
         showRateLimitAlert: sinon.spy(),
         setPageConstants: sinon.spy(),
@@ -74,7 +74,7 @@ describe('SpriteLab', () => {
     describe('After being injected with a studioApp instance', () => {
       let muteSpy;
       beforeEach(() => {
-        instance.injectStudioApp(studioApp);
+        instance.injectStudioApp(mockStudioApp);
         registerReducers({...commonReducers, ...reducers});
         instance.areAnimationsReady_ = sinon.stub().returns(true);
         instance.p5Wrapper = sinon.spy();
@@ -159,6 +159,31 @@ describe('SpriteLab', () => {
           backgroundSprite
         );
         expect(resultingAnimations.orderedKeys.length).to.be.equal(1);
+      });
+
+      describe('reactToExecutionError', () => {
+        let alertSpy;
+        beforeEach(() => {
+          alertSpy = sinon.stub(studioApp(), 'displayWorkspaceAlert');
+          sinon.stub(instance, 'getMsg').returns({
+            workspaceAlertError: () => 'translated string'
+          });
+        });
+
+        afterEach(() => {
+          alertSpy.restore();
+          instance.getMsg.restore();
+        });
+
+        it('displays a workspace alert if there is an executionError message', () => {
+          instance.reactToExecutionError('test string');
+          expect(alertSpy).to.have.been.calledOnce;
+        });
+
+        it('does nothing if there is no executionError message', () => {
+          instance.reactToExecutionError(undefined);
+          expect(alertSpy).to.not.have.been.called;
+        });
       });
 
       describe('dispatching Blockly events', () => {

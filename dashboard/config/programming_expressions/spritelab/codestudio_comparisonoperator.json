@@ -9,7 +9,6 @@
     {
       "name": "Example 1",
       "description": "This fish is only afraid of bears whose size is greater than 90. Press space to make a bear appear and see what the fish does.\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/39MEJaf-I87aQsJZjxy7aq0XTgjTTwrNVBGPqQE-R0c",
       "image": null,
       "app_display_type": "embedAppWithCode",
@@ -18,7 +17,6 @@
     {
       "name": "Example 2",
       "description": "Click on the gold coin, and the green critter will guess a random number between 1 and 25. If the green critter guesses a number that is higher than the one the princess critter was thinking of, he will get her gold coin!\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/sOXRJcZJe-z5xSkg_AapcMIhbU1JkjzNUm4Zu4rKRbA",
       "image": null,
       "app_display_type": "embedAppWithCode",

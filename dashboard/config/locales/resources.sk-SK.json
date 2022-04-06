@@ -3,47 +3,507 @@
     "data": {
       "resources": {
         "dance-party-playlist/dance-extras/unversioned": {
-          "name": "Zoznam skladieb na Spotify (pre všetky vekové kategórie)"
+          "name": "Zoznam skladieb na Spotify (pre všetky vekové kategórie)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "list_of_poems/poem-art/2021": {
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
+        "poem_art_celebration/poem-art/2021": {
+          "type": "Video"
+        },
+        "poem_art_events/poem-art/2021": {
+          "type": "Video"
+        },
+        "poem_art_imagery/poem-art/2021": {
+          "type": "Video"
+        },
         "poem_art_introduction/poem-art/2021": {
           "name": "Úvod - Umenie básne 1",
-          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2"
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2",
+          "type": "Video"
         },
         "csf-artist-intro-video/artist/unversioned": {
-          "name": "Predstavenie Umelca"
+          "name": "Predstavenie Umelca",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
+          "type": "Video pre žiakov"
         },
         "csf-turns-angles-doc/artist/unversioned": {
-          "name": "Otočky a uhly"
+          "name": "Otáčanie a uhly",
+          "url": "https://drive.google.com/open?id=1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4",
+          "type": "Podklady pre žiakov"
         },
         "csf-turns-angles-video/artist/unversioned": {
-          "name": "Otočky a uhly"
+          "name": "Otáčanie a uhly",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
+          "type": "Video pre žiakov"
         },
         "dance-party-playlist/dance/unversioned": {
-          "name": "Zoznam skladieb na Spotify (pre všetky vekové kategórie)"
+          "name": "Zoznam skladieb na Spotify (pre všetky vekové kategórie)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "Šifrovanie a verejné kľúče",
+          "url": "https://youtu.be/ZghMPWGXexs",
+          "type": "Video"
+        },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "Šifrovacie widgety v Code Studiu",
+          "url": "https://studio.code.org/s/hoc-encryption"
         },
         "video-text-compression/text-compression/unversioned": {
-          "name": "Video: Kompresia textu s Aloe Blaccom"
+          "name": "Video: Kompresia textu s Aloe Blaccom",
+          "type": "Video"
         },
         "events-in-bounce-how-do-they-happen/sports/unversioned": {
-          "name": "Udalosti v Bounce – Ako fungujú? "
+          "name": "Udalosti v Bounce – Ako fungujú? ",
+          "type": "Prezentácia"
         },
         "events-in-bounce-how-do-they-happen/basketball/unversioned": {
-          "name": "Udalosti v Bounce – Ako fungujú? "
+          "name": "Udalosti v Bounce – Ako fungujú? ",
+          "type": "Prezentácia"
         },
         "dance-party-playlist/dance-extras-2019/unversioned": {
-          "name": "Zoznam skladieb na Spotify (pre všetky vekové kategórie)"
+          "name": "Zoznam skladieb na Spotify (pre všetky vekové kategórie)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "dance-party-playlist/dance-2019/unversioned": {
-          "name": "Zoznam skladieb na Spotify (pre všetky vekové kategórie)"
+          "name": "Zoznam skladieb na Spotify (pre všetky vekové kategórie)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "ai-ml/oceans/unversioned": {
+          "type": "Video"
         },
         "ai-societal/oceans/unversioned": {
-          "name": "Umelá inteligencia: Vplyv na spoločnosť"
+          "name": "Umelá inteligencia: Vplyv na spoločnosť",
+          "type": "Video"
         },
         "ai-training/oceans/unversioned": {
-          "name": "Umelá inteligencia: Trénovacie dáta a skreslenie"
+          "name": "Umelá inteligencia: Trénovacie dáta a skreslenie",
+          "type": "Video"
+        },
+        "lesson_plans/courseb/2018": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/courseb/2018": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/courseb/2018": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/courseb/2018": {
+          "name": "Slovník"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/coursea/2018": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/coursea/2018": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/coursea/2018": {
+          "name": "Slovník"
+        },
+        "lesson_plans/coursed/2018": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/coursed/2018": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/coursed/2018": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/coursed/2018": {
+          "name": "Slovník"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/coursef/2018": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/coursef/2018": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/coursef/2018": {
+          "name": "Slovník"
+        },
+        "lesson_plans/express/2018": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/express/2018": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/express/2018": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/express/2018": {
+          "name": "Slovník"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/coursee/2018": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/coursee/2018": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/coursee/2018": {
+          "name": "Slovník"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/coursec/2018": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/coursec/2018": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/coursec/2018": {
+          "name": "Slovník"
+        },
+        "code_introduced_1/csd/2018": {
+          "name": "Vyberte si triedu"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings_2/csd/2018": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum_2/csd/2018": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary_2/csd/2018": {
+          "name": "Slovník"
+        },
+        "code_introduced_3/csd/2018": {
+          "name": "Vyberte si triedu"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings_5/csd/2018": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum_5/csd/2018": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary_5/csd/2018": {
+          "name": "Slovník"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings_4/csd/2018": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum_4/csd/2018": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary_4/csd/2018": {
+          "name": "Slovník"
+        },
+        "code_introduced_2/csd/2018": {
+          "name": "Vyberte si triedu"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings_3/csd/2018": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum_3/csd/2018": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary_3/csd/2018": {
+          "name": "Slovník"
+        },
+        "code_introduced/csd/2018": {
+          "name": "Vyberte si triedu"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings_1/csd/2018": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum_1/csd/2018": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary_1/csd/2018": {
+          "name": "Slovník"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/csd/2018": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/csd/2018": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/csd/2018": {
+          "name": "Slovník"
+        },
+        "curriculum_guide/coursea/2019": {
+          "name": "Sprievodca osnovami"
+        },
+        "lesson_plans/coursea/2019": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/coursea/2019": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/coursea/2019": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/coursea/2019": {
+          "name": "Slovník"
+        },
+        "curriculum_guide/courseb/2019": {
+          "name": "Sprievodca osnovami"
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/courseb/2019": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/courseb/2019": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/courseb/2019": {
+          "name": "Slovník"
+        },
+        "curriculum_guide/coursed/2019": {
+          "name": "Sprievodca osnovami"
+        },
+        "lesson_plans/coursed/2019": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/coursed/2019": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/coursed/2019": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/coursed/2019": {
+          "name": "Slovník"
+        },
+        "curriculum_guide/coursef/2019": {
+          "name": "Sprievodca osnovami"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/coursef/2019": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/coursef/2019": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/coursef/2019": {
+          "name": "Slovník"
+        },
+        "curriculum_guide/coursee/2019": {
+          "name": "Sprievodca osnovami"
+        },
+        "lesson_plans/coursee/2019": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/coursee/2019": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/coursee/2019": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/coursee/2019": {
+          "name": "Slovník"
+        },
+        "lesson_plans/express/2019": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/express/2019": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/express/2019": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/express/2019": {
+          "name": "Slovník"
+        },
+        "curriculum_guide/coursec/2019": {
+          "name": "Sprievodca osnovami"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/coursec/2019": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/coursec/2019": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/coursec/2019": {
+          "name": "Slovník"
+        },
+        "teacher_forum/csd/2019": {
+          "name": "Fórum učiteľov"
+        },
+        "code_introduced_1/csd/2019": {
+          "name": "Vyberte si triedu"
+        },
+        "lesson_plans_2/csd/2019": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings_2/csd/2019": {
+          "name": "Mapovanie na štandardy"
+        },
+        "vocabulary_2/csd/2019": {
+          "name": "Slovník"
+        },
+        "code_introduced_3/csd/2019": {
+          "name": "Vyberte si triedu"
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings_5/csd/2019": {
+          "name": "Mapovanie na štandardy"
+        },
+        "vocabulary_5/csd/2019": {
+          "name": "Slovník"
+        },
+        "code_introduced_2/csd/2019": {
+          "name": "Vyberte si triedu"
+        },
+        "lesson_plans_3/csd/2019": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings_3/csd/2019": {
+          "name": "Mapovanie na štandardy"
+        },
+        "vocabulary_3/csd/2019": {
+          "name": "Slovník"
+        },
+        "lesson_plans_4/csd/2019": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings_4/csd/2019": {
+          "name": "Mapovanie na štandardy"
+        },
+        "vocabulary_4/csd/2019": {
+          "name": "Slovník"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/csd/2019": {
+          "name": "Mapovanie na štandardy"
+        },
+        "vocabulary/csd/2019": {
+          "name": "Slovník"
+        },
+        "code_introduced/csd/2019": {
+          "name": "Vyberte si triedu"
+        },
+        "lesson_plans_1/csd/2019": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings_1/csd/2019": {
+          "name": "Mapovanie na štandardy"
+        },
+        "vocabulary_1/csd/2019": {
+          "name": "Slovník"
+        },
+        "code_introduced_1/csd/2017": {
+          "name": "Vyberte si triedu"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings_2/csd/2017": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum_2/csd/2017": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary_2/csd/2017": {
+          "name": "Slovník"
+        },
+        "code_introduced_3/csd/2017": {
+          "name": "Vyberte si triedu"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings_5/csd/2017": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum_5/csd/2017": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary_5/csd/2017": {
+          "name": "Slovník"
+        },
+        "code_introduced/csd/2017": {
+          "name": "Vyberte si triedu"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings_1/csd/2017": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum_1/csd/2017": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary_1/csd/2017": {
+          "name": "Slovník"
+        },
+        "lesson_plans/csd/2017": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/csd/2017": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/csd/2017": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/csd/2017": {
+          "name": "Slovník"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings_4/csd/2017": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum_4/csd/2017": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary_4/csd/2017": {
+          "name": "Slovník"
+        },
+        "code_introduced_2/csd/2017": {
+          "name": "Vyberte si triedu"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings_3/csd/2017": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum_3/csd/2017": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary_3/csd/2017": {
+          "name": "Slovník"
         },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "Zoznam básní",
@@ -59,7 +519,8 @@
         },
         "introducing_sprite_lab_1/coursef/2021": {
           "name": "Predstavenie Sprite Labu",
-          "url": "https://youtu.be/yd-9xZ275dM"
+          "url": "https://youtu.be/yd-9xZ275dM",
+          "type": "Video"
         },
         "exploring_apps_1/coursef/2021": {
           "name": "Preskúmanie aplikácií",
@@ -82,7 +543,8 @@
         },
         "the_power_of_words_the_power_of_words/coursef/2021": {
           "name": "Objav silu slov: Objav silu slov\t",
-          "url": "https://www.commonsense.org/education/videos/the-power-of-words"
+          "url": "https://www.commonsense.org/education/videos/the-power-of-words",
+          "type": "Video"
         },
         "the_power_of_words_words_can_hurt/coursef/2021": {
           "name": "Objav silu slov: Slová dokážu ublížiť",
@@ -130,7 +592,8 @@
         },
         "pause_and_think_online/coursef/2021": {
           "name": "Mysli celým telom, keď si online",
-          "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s"
+          "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s",
+          "type": "Video"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "Zábava s cyklami \"for\"",
@@ -154,7 +617,8 @@
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
           "name": "Zábava s cyklami \"for\"",
-          "url": "https://docs.google.com/document/d/1iyfroULEOlaLH52MY9PUwUHPk9R6jAMn0rbjlwNtCWs/edit"
+          "url": "https://docs.google.com/document/d/1iyfroULEOlaLH52MY9PUwUHPk9R6jAMn0rbjlwNtCWs/edit",
+          "type": "Hodnotenie"
         },
         "course-cf-blockly-blocks/coursef/2021": {
           "name": " Bloky na použitie bez počítača (kurzy C – F)",
@@ -164,11 +628,16 @@
           "name": "Vytváranie simulácií",
           "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit"
         },
+        "ai-ml/coursef/2021": {
+          "type": "Video"
+        },
         "ai-training/coursef/2021": {
-          "name": "Umelá inteligencia: Trénovacie dáta a skreslenie"
+          "name": "Umelá inteligencia: Trénovacie dáta a skreslenie",
+          "type": "Video"
         },
         "ai-societal/coursef/2021": {
-          "name": "Umelá inteligencia: Vplyv na spoločnosť"
+          "name": "Umelá inteligencia: Vplyv na spoločnosť",
+          "type": "Video"
         },
         "unplugged-video-internet/coursef/2021": {
           "name": "Internet",
@@ -180,7 +649,8 @@
         },
         "csf-internet-assessment/coursef/2021": {
           "name": "Internet",
-          "url": "https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit"
+          "url": "https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit",
+          "type": "Hodnotenie"
         },
         "assessment-answer-internet/coursef/2021": {
           "name": "Internet",
@@ -252,7 +722,8 @@
         },
         "digital-trails-lesson-slides/courseb/2021": {
           "name": "Digitálne stopy: prezentácia k lekcii",
-          "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit"
+          "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit",
+          "type": "Prezentácia"
         },
         "digital-trails-follow-the-digital-trail/courseb/2021": {
           "name": "Digitálne stopy: Sleduj digitálnu stopu",
@@ -260,11 +731,13 @@
         },
         "digital-trails-digital-trail-squares/courseb/2021": {
           "name": "Digitálne stopy: štvorce digitálnych stôp",
-          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit"
+          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit",
+          "type": "Podklady pre žiakov"
         },
         "digital-trails-animal-tracks/courseb/2021": {
           "name": "Digitálne stopy: Stopy zvieratiek",
-          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/"
+          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/",
+          "type": "Podklady pre žiakov"
         },
         "mimi-activity/courseb/2021": {
           "name": "Pohni sa, pohni sa",
@@ -304,11 +777,13 @@
         },
         "pair-programming-vid/courseb/2021": {
           "name": "Programovanie v páre",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video pre žiakov"
         },
         "wiggles_-_gonoodle/courseb/2021": {
           "name": "Keď sú žiaci neposední – GoNoodle",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Video"
         },
         "20_20_20_rule/courseb/2021": {
           "name": "Pravidlo 20/20/20",
@@ -332,7 +807,8 @@
         },
         "unspotted_bugs/courseb/2021": {
           "name": "Príbeh o hľadaní chrobákov a chýb",
-          "url": "https://youtu.be/rah3DYlp5nQ"
+          "url": "https://youtu.be/rah3DYlp5nQ",
+          "type": "Video"
         },
         "unplugged-video-getting-loopy/courseb/2021": {
           "name": "Cykly sa zacykľujú",
@@ -344,7 +820,8 @@
         },
         "csf-getting-loopy-assessment/courseb/2021": {
           "name": "Cykly sa zacykľujú",
-          "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit"
+          "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit",
+          "type": "Hodnotenie"
         },
         "assessment-answer-getting-loopy/courseb/2021": {
           "name": "Cykly sa zacykľujú",
@@ -356,19 +833,23 @@
         },
         "common-sense-media-pause-think/courseb/2021": {
           "name": "Mysli celým telom, keď si online",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "the-right-app-scenarios/courseb/2021": {
           "name": "Vhodná aplikácia – situácie",
-          "url": "https://docs.google.com/presentation/d/1WzO71WwSTbn2XhkWjG3tvD7vnQbsCSb58rhSBpurQjw/edit#slide=id.g45fb8e6318_0_0"
+          "url": "https://docs.google.com/presentation/d/1WzO71WwSTbn2XhkWjG3tvD7vnQbsCSb58rhSBpurQjw/edit#slide=id.g45fb8e6318_0_0",
+          "type": "Prezentácia"
         },
         "unplugged-video-big-event/courseb/2021": {
           "name": "Veľká udalosť",
-          "url": "https://youtu.be/u0WV9shCoak"
+          "url": "https://youtu.be/u0WV9shCoak",
+          "type": "Video"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "Veľká udalosť",
-          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "Hodnotenie"
         },
         "assessment-answer-big-event/courseb/2021": {
           "name": "Veľká udalosť",
@@ -432,7 +913,8 @@
         },
         "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
           "name": "Bezpečnosť v mojej online štvrti: Prezentácia z lekcie",
-          "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit"
+          "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit",
+          "type": "Prezentácia"
         },
         "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
           "name": "Bezpečnosť v mojej online štvrti: Moja online štvrť",
@@ -444,11 +926,13 @@
         },
         "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
           "name": "Bezpečnosť v mojej online štvrti: Chvíľa na zamyslenie",
-          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
+          "type": "Podklady pre žiakov"
         },
         "pair-programming-vid/coursea/2021": {
           "name": "Programovanie v páre",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video pre žiakov"
         },
         "20_20_20_rule/coursea/2021": {
           "name": "Pravidlo 20/20/20",
@@ -456,11 +940,13 @@
         },
         "wiggles-go_noodle/coursea/2021": {
           "name": "Keď sú žiaci neposední – GoNoodle",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Video"
         },
         "how_to_make_a_class_section_on_code_org/coursea/2021": {
           "name": "Začíname - Vytváranie sekcie triedy",
-          "url": "https://www.youtube.com/watch?v=4Wugxc80fNU"
+          "url": "https://www.youtube.com/watch?v=4Wugxc80fNU",
+          "type": "Video"
         },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "Veselé mapy",
@@ -492,11 +978,13 @@
         },
         "wiggles_-_gonoodle/coursea/2021": {
           "name": "Keď sú žiaci neposední – GoNoodle",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Video"
         },
         "csf_debugging_k1_blocks/coursea/2021": {
           "name": "Ladenie pomocou tlačidla Krok",
-          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4"
+          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4",
+          "type": "Video"
         },
         "feeling_faces_emotion_image/coursea/2021": {
           "name": "Obrázok so smajlíkmi na vyjadrenie pocitov",
@@ -524,7 +1012,8 @@
         },
         "pair-programming/coursea/2021": {
           "name": "Párové programovanie",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video"
         },
         "feeling_faces_emotion_image_2/coursea/2021": {
           "name": "Obrázok so smajlíkmi na vyjadrenie pocitov",
@@ -536,7 +1025,8 @@
         },
         "common-sense-media-pause-think/coursea/2021": {
           "name": "Mysli celým telom, keď si online",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "feeling_faces_emotion_image_3/coursea/2021": {
           "name": "Obrázok so smajlíkmi na vyjadrenie pocitov",
@@ -552,7 +1042,8 @@
         },
         "csf-the-big-event-assessment/coursea/2021": {
           "name": "Veľká udalosť",
-          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "Hodnotenie"
         },
         "assessment-answer-big-event/coursea/2021": {
           "name": "Veľká udalosť",
@@ -632,11 +1123,13 @@
         },
         "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
           "name": "STOP zákernosti na internete: Prezentácia k lekcii",
-          "url": "https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit"
+          "url": "https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit",
+          "type": "Prezentácia"
         },
         "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
           "name": "STOP zákernosti na internete: STOP zákernosti na internete",
-          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing",
+          "type": "Podklady pre žiakov"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "Moji robotickí kamaráti",
@@ -668,7 +1161,8 @@
         },
         "pair-programming-vid/coursec/2021": {
           "name": "Programovanie v páre",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video"
         },
         "csf-lesson-recommend/coursec/2021": {
           "name": "Základy informatiky – tipy k hlavnej aktivite",
@@ -683,14 +1177,19 @@
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "csf-artist-intro-video/coursec/2021": {
-          "name": "Predstavenie Umelca"
+          "name": "Predstavenie Umelca",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
+          "type": "Video pre žiakov"
         },
         "csf-turns-angles-video/coursec/2021": {
-          "name": "Otočky a uhly"
+          "name": "Otáčanie a uhly",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
+          "type": "Video pre žiakov"
         },
         "csf-turns-angles-doc/coursec/2021": {
-          "name": "Otočky a uhly",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "name": "Otáčanie a uhly",
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "Podklady pre žiakov"
         },
         "feeling_faces_emotion_image/coursec/2021": {
           "name": "Obrázok so smajlíkmi na vyjadrenie pocitov",
@@ -702,7 +1201,8 @@
         },
         "csf-the-big-event-assessment/coursec/2021": {
           "name": "Veľká udalosť",
-          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
+          "type": "Hodnotenie"
         },
         "assessment-answer-big-event/coursec/2021": {
           "name": "Veľká udalosť",
@@ -714,7 +1214,8 @@
         },
         "pause_and_think_online/coursec/2021": {
           "name": "Mysli celým telom, keď si online",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "open-ended_programming_levels/coursec/2021": {
           "name": "Úrovne na otvorené programovanie",
@@ -730,7 +1231,8 @@
         },
         "csf-bit-byte-video/coursec/2021": {
           "name": "Bity a bajty",
-          "url": "https://www.youtube.com/watch?v=35vkaO_SgzI&feature=youtu.be"
+          "url": "https://www.youtube.com/watch?v=35vkaO_SgzI&feature=youtu.be",
+          "type": "Video pre žiakov"
         },
         "unplugged-video-binary-bracelets/coursec/2021": {
           "name": "Binárne náramky",
@@ -746,7 +1248,8 @@
         },
         "csf-binary-bracelets-assessment/coursec/2021": {
           "name": "Binárne náramky",
-          "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit"
+          "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit",
+          "type": "Hodnotenie"
         },
         "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "Binárne náramky",
@@ -850,7 +1353,8 @@
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
           "name": "Programovanie na štvorčekový papier",
-          "url": "https://docs.google.com/document/d/1uXNP-9nYnLOeAkh_E8UFzl9Rrpy0rwjVAQVamgdd6XQ/edit"
+          "url": "https://docs.google.com/document/d/1uXNP-9nYnLOeAkh_E8UFzl9Rrpy0rwjVAQVamgdd6XQ/edit",
+          "type": "Hodnotenie"
         },
         "assessment-answer-graph-paper/coursed/2021": {
           "name": "Programovanie na štvorčekový papier",
@@ -858,7 +1362,8 @@
         },
         "pair-programming-vid/coursed/2021": {
           "name": "Programovanie v páre",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video pre žiakov"
         },
         "relay-programming-assessment-answer-key/coursed/2021": {
           "name": "Štafetové programovanie",
@@ -894,7 +1399,8 @@
         },
         "pause_and_think_online/coursed/2021": {
           "name": "Mysli celým telom, keď si online",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "open-ended_programming_levels/coursed/2021": {
           "name": "Úrovne na otvorené programovanie",
@@ -909,7 +1415,8 @@
           "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
         },
         "dance-party-playlist/coursed/2021": {
-          "name": "Zoznam skladieb na Spotify (pre všetky vekové kategórie)"
+          "name": "Zoznam skladieb na Spotify (pre všetky vekové kategórie)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "dance_party_unplugged/coursed/2021": {
           "name": "Tanečná párty: bez počítača",
@@ -925,7 +1432,8 @@
         },
         "pause_and_think_online_1/coursed/2021": {
           "name": "Mysli celým telom, keď si online",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Podmienky s kartami",
@@ -941,7 +1449,8 @@
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
           "name": "Podmienky s kartami",
-          "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit"
+          "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit",
+          "type": "Hodnotenie"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
           "name": "Podmienky s kartami",
@@ -1005,20 +1514,25 @@
         },
         "pair_programming/express/2021": {
           "name": "Programovanie v páre",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video"
         },
         "unplugged_blocks_courses_c-f_/express/2021": {
           "name": "Bloky na použitie bez počítača (kurzy C – F)",
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "artist_introduction/express/2021": {
-          "name": "Predstavenie Umelca"
+          "name": "Predstavenie Umelca",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
+          "type": "Video"
         },
         "turns_angles/express/2021": {
-          "name": "Otočky a uhly"
+          "name": "Otáčanie a uhly",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
+          "type": "Video"
         },
         "turns_angles_1/express/2021": {
-          "name": "Otočky a uhly",
+          "name": "Otáčanie a uhly",
           "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
         },
         "swimming_fish_teacher_sandbox/express/2021": {
@@ -1041,14 +1555,16 @@
         },
         "pause_and_think_online/express/2021": {
           "name": "Mysli celým telom, keď si online",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "dance-party-project-guide/express/2021": {
           "name": "Tanečná párty – sprievodca projektom",
           "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
         },
         "dance-party-playlist/express/2021": {
-          "name": "Zoznam skladieb na Spotify (pre všetky vekové kategórie)"
+          "name": "Zoznam skladieb na Spotify (pre všetky vekové kategórie)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "open-ended_programming_levels/express/2021": {
           "name": "Úrovne na otvorené programovanie",
@@ -1056,7 +1572,8 @@
         },
         "pair_programming_video/express/2021": {
           "name": "Video „Párové programovanie“",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video"
         },
         "unplugged_blocks_courses_c-f__1/express/2021": {
           "name": "Bloky na použitie bez počítača (kurzy C – F)",
@@ -1084,7 +1601,8 @@
         },
         "variables_video/express/2021": {
           "name": "Premenné",
-          "url": "https://youtu.be/DI7DprN4FtE"
+          "url": "https://youtu.be/DI7DprN4FtE",
+          "type": "Video pre žiakov"
         },
         "csf-express-end-of-course-project-planning-guide/express/2021": {
           "name": "Základy informatiky: expresný kurz – Sprievodca plánovaním záverečného projektu v expresnom kurze",
@@ -1112,7 +1630,8 @@
         },
         "pair-programming-vid/pre-express/2021": {
           "name": "Programovanie v páre",
-          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "Video pre žiakov"
         },
         "class-section-video/pre-express/2021": {
           "name": "Ako na Code.org vytvoriť triedu",
@@ -1124,15 +1643,18 @@
         },
         "20_20_20_rule/pre-express/2021": {
           "name": "Pravidlo 20/20/20",
-          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
+          "type": "Video"
         },
         "wiggles_-_go_noodle/pre-express/2021": {
           "name": "Keď sú žiaci neposední – GoNoodle",
-          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+          "type": "Video"
         },
         "common-sense-media-pause-think/pre-express/2021": {
           "name": "Mysli celým telom, keď si online",
-          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "Video"
         },
         "csta_standards_mapping/pre-express/2021": {
           "name": "Mapovanie štandardov CSTA",
@@ -1171,15 +1693,18 @@
         },
         "private-and-personal-information-lesson-slides/coursee/2021": {
           "name": "Súkromné a osobné informácie: prezentácia k lekcii",
-          "url": "https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit"
+          "url": "https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit",
+          "type": "Prezentácia"
         },
         "private-and-personal-information-private-and-personal-information/coursee/2021": {
           "name": "Súkromné a osobné informácie: Súkromné a osobné informácie",
-          "url": "https://www.commonsense.org/education/videos/private-and-personal-information"
+          "url": "https://www.commonsense.org/education/videos/private-and-personal-information",
+          "type": "Video pre žiakov"
         },
         "private-and-personal-information-exit-ticket/coursee/2021": {
-          "name": "Súkromné a osobné informácie: výstupný test",
-          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit"
+          "name": "Súkromné a osobné informácie: výstupný lístok",
+          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit",
+          "type": "Podklady pre žiakov"
         },
         "private-and-personal-information-lesson-quiz/coursee/2021": {
           "name": "Súkromné a osobné informácie: kvíz pre lekciu",
@@ -1191,7 +1716,8 @@
         },
         "common-sense-media-pause-think/coursee/2021": {
           "name": "Mysli celým telom, keď si online",
-          "url": "https://youtu.be/X_duZ-1LApg"
+          "url": "https://youtu.be/X_duZ-1LApg",
+          "type": "Video"
         },
         "about_me_planning_guide/coursee/2021": {
           "name": "O mne: sprievodca plánovaním",
@@ -1203,14 +1729,18 @@
         },
         "digital-sharing-video/coursee/2021": {
           "name": "Etiketa digitálneho zdieľania (video)",
-          "url": "https://www.youtube.com/watch?v=o_oDsBeBxko"
+          "url": "https://www.youtube.com/watch?v=o_oDsBeBxko",
+          "type": "Video"
         },
         "csf-turns-angles-doc/coursee/2021": {
-          "name": "Otočky a uhly",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "name": "Otáčanie a uhly",
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "Podklady pre žiakov"
         },
         "csf-turns-angles-video/coursee/2021": {
-          "name": "Otočky a uhly"
+          "name": "Otáčanie a uhly",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
+          "type": "Video pre žiakov"
         },
         "unplugged-video-songwriting-functions/coursee/2021": {
           "name": "Písanie pesničiek s funkciami",
@@ -1226,7 +1756,8 @@
         },
         "csf-songwriting-assessment/coursee/2021": {
           "name": "Funkcie bez počítača: Písanie pesničiek",
-          "url": "https://docs.google.com/document/d/1rtEJBrVNR2R09wAETeJTJLm6QENJGDujJ0HJc1mZBSA/edit"
+          "url": "https://docs.google.com/document/d/1rtEJBrVNR2R09wAETeJTJLm6QENJGDujJ0HJc1mZBSA/edit",
+          "type": "Hodnotenie"
         },
         "assessment-answer-songwriting/coursee/2021": {
           "name": "Funkcie bez počítača: Písanie pesničiek",
@@ -1308,14 +1839,55 @@
           "name": "Úpravy virtuálnych lekcií",
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
         },
+        "ai_what_is_machine_learning_/csd/2021": {
+          "type": "Video"
+        },
+        "seeing_ai/csd/2021": {
+          "type": "Video"
+        },
+        "finding_patterns_in_data/csd/2021": {
+          "type": "Video"
+        },
         "introduction_to_ai_lab/csd/2021": {
           "name": "Úvod do UI Labu"
         },
         "introduction_to_ai_lab_1/csd/2021": {
-          "name": "Úvod do UI Labu"
+          "name": "Úvod do UI Labu",
+          "type": "Video"
+        },
+        "training_and_testing_in_ai_lab/csd/2021": {
+          "type": "Video"
         },
         "ai_training_data_bias/csd/2021": {
-          "name": "Umelá inteligencia: Trénovacie dáta a skreslenie"
+          "name": "Umelá inteligencia: Trénovacie dáta a skreslenie",
+          "type": "Video"
+        },
+        "model_cards_in_ai_lab/csd/2021": {
+          "type": "Video"
+        },
+        "if-statements_in_app_lab/csd/2021": {
+          "type": "Video"
+        },
+        "numerical_data_in_ai_lab_2/csd/2021": {
+          "type": "Video"
+        },
+        "ai_ethics_research_reflection/csd/2021": {
+          "type": "Podklady pre žiakov"
+        },
+        "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
+          "type": "Video"
+        },
+        "cleaning_survey_data/csd/2021": {
+          "type": "Video"
+        },
+        "view_and_download_survey_data/csd/2021": {
+          "type": "Video"
+        },
+        "the-design-thinking-process/csd/2021": {
+          "type": "Video"
+        },
+        "computer-science-practices/csd/2021": {
+          "type": "Reflexia"
         },
         "design_mode/csd/2021": {
           "name": "Dizajnový mód"
@@ -1323,8 +1895,12 @@
         "design_mode_elements/csd/2021": {
           "name": "Prvky dizajnového módu"
         },
+        "whats-for-lunch-testing/csd/2021": {
+          "type": "Video"
+        },
         "intro_to_design_mode/csd/2021": {
-          "name": "Úvod do dizajnového módu"
+          "name": "Úvod do dizajnového módu",
+          "type": "Video"
         },
         "design_mode_1/csd/2021": {
           "name": "Dizajnový mód"
@@ -1332,11 +1908,18 @@
         "design_mode_elements_1/csd/2021": {
           "name": "Prvky dizajnového módu"
         },
+        "app-presentation-template/csd/2021": {
+          "type": "Prezentácia"
+        },
         "teacher_forum/csd/2021": {
           "name": "Fórum učiteľov"
         },
         "how_computers_word_hardware_software/csd/2021": {
-          "name": "Ako pracujú počítače: Hardvér a softvér"
+          "name": "Ako pracujú počítače: Hardvér a softvér",
+          "type": "Video"
+        },
+        "analog-digital-video/csd/2021": {
+          "type": "Video"
         },
         "booleans_and_comparison_operators_1/csd/2021": {
           "name": "Logické výrazy a porovnávacie znamienka"
@@ -1345,7 +1928,8 @@
           "name": "Funkcie"
         },
         "introduction_to_arrays/csd/2021": {
-          "name": "Úvod do zoskupení"
+          "name": "Úvod do zoskupení",
+          "type": "Video"
         },
         "arrays/csd/2021": {
           "name": "Rady"
@@ -1354,34 +1938,65 @@
           "name": "Hranie nôt"
         },
         "loops_in_app_lab/csd/2021": {
-          "name": "Cykly \"For\""
+          "name": "Cykly \"Pre\"",
+          "type": "Video"
         },
         "for_loops/csd/2021": {
-          "name": "Cykly \"For\""
+          "name": "Cykly \"Pre\""
         },
         "accelerometer_events/csd/2021": {
           "name": "Udalosti s akcelerometrom"
         },
         "circuits-logic-video/csd/2021": {
-          "name": "Ako pracujú počítače: Obvody a logika"
+          "name": "Ako pracujú počítače: Obvody a logika",
+          "type": "Video"
+        },
+        "how-computers-work-data-and-binary/csd/2021": {
+          "type": "Video"
+        },
+        "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
+          "type": "Video"
+        },
+        "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
+          "type": "Video"
+        },
+        "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
+          "type": "Video"
+        },
+        "video_impact_on_society/csd/2021": {
+          "type": "Video"
         },
         "video_machine_learning/csd/2021": {
-          "name": "Video: Strojové učenie"
+          "name": "Video: Strojové učenie",
+          "type": "Video"
+        },
+        "video_training_data_and_bias/csd/2021": {
+          "type": "Video"
+        },
+        "make-a-recommendation-peer-review-2019/csd/2021": {
+          "type": "Recenzia"
         },
         "drawing_in_game_lab_-_part_1/csd/2021": {
-          "name": "Video: Kreslenie v Game Labe - 1. časť"
+          "name": "Video: Kreslenie v Game Labe - 1. časť",
+          "type": "Video"
         },
         "drawing_in_game_lab_-_part_2/csd/2021": {
-          "name": "Video: Kreslenie v Game Labe - 2. časť"
+          "name": "Video: Kreslenie v Game Labe - 2. časť",
+          "type": "Video"
         },
         "introduction-to-variables/csd/2021": {
-          "name": "Predstavenie premenných"
+          "name": "Predstavenie premenných",
+          "type": "Video"
         },
         "variables_1/csd/2021": {
           "name": "Premenné"
         },
+        "introduction_to_sprites/csd/2021": {
+          "type": "Video"
+        },
         "the_animation_tab/csd/2021": {
-          "name": "Záložka s animáciami"
+          "name": "Záložka s animáciami",
+          "type": "Video"
         },
         "sprites_1/csd/2021": {
           "name": "Objekt \"sprite\""
@@ -1389,17 +2004,26 @@
         "sprite_properties/csd/2021": {
           "name": "Vlastnosti postáv"
         },
+        "youtube-flipbook/csd/2021": {
+          "type": "Video"
+        },
+        "introduction_to_the_draw_loop/csd/2021": {
+          "type": "Video"
+        },
         "the_draw_loop/csd/2021": {
           "name": "Cyklus kreslenia"
         },
         "animating-sprites/csd/2021": {
-          "name": "Pohyb \"sprite\" objektu"
+          "name": "Pohyb \"sprite\" objektu",
+          "type": "Video"
         },
         "boolean_expressions/csd/2021": {
-          "name": "Logické výrazy"
+          "name": "Logické výrazy",
+          "type": "Video"
         },
         "conditional_statements/csd/2021": {
-          "name": "Podmienkové výroky"
+          "name": "Podmienkové výroky",
+          "type": "Video"
         },
         "booleans_and_comparison_operators/csd/2021": {
           "name": "Logické výrazy a porovnávacie znamienka"
@@ -1408,7 +2032,8 @@
           "name": "Výroky \"If-Else\""
         },
         "if_else_statements/csd/2021": {
-          "name": "Podmienkové výroky (if/else)"
+          "name": "Podmienkové výroky (if/else)",
+          "type": "Video"
         },
         "interactive-card-exemplar-2020/csd/2021": {
           "name": "Interaktívna pohľadnica"
@@ -1417,13 +2042,15 @@
           "name": "Interaktívna pohľadnica"
         },
         "interactive-card-1-2-3-4/csd/2021": {
-          "name": "Interaktívna pohľadnica"
+          "name": "Interaktívna pohľadnica",
+          "type": "Recenzia"
         },
         "interactive_card/csd/2021": {
           "name": "Interaktívna pohľadnica"
         },
         "velocity_1/csd/2021": {
-          "name": "Rýchlosť"
+          "name": "Rýchlosť",
+          "type": "Video"
         },
         "velocity_2/csd/2021": {
           "name": "Rýchlosť"
@@ -1447,10 +2074,14 @@
           "name": "Lietajúca hra"
         },
         "calling_and_defining_functions/csd/2021": {
-          "name": "Funkcie"
+          "name": "Funkcie",
+          "type": "Video"
         },
         "functions_1/csd/2021": {
           "name": "Funkcie"
+        },
+        "make-your-own-game-1-2-3/csd/2021": {
+          "type": "Recenzia"
         },
         "teacher_forum_1/csd/2021": {
           "name": "Fórum učiteľov"
@@ -1458,20 +2089,42 @@
         "what-is-a-computer-2020/csd/2021": {
           "name": "Čo je počítač?"
         },
+        "what-is-a-computer-1-2-3/csd/2021": {
+          "type": "Video"
+        },
         "input-and-output-2020/csd/2021": {
           "name": "Vstup a Výstup"
         },
         "input-and-output-1/csd/2021": {
           "name": "Vstup a Výstup"
         },
+        "what-do-computers-do/csd/2021": {
+          "type": "Video"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "type": "Recenzia"
+        },
         "html_tags/csd/2021": {
           "name": "HTML tag-y"
         },
+        "intro_to_web_lab_part_2/csd/2021": {
+          "type": "Video"
+        },
+        "video_intro_to_web_lab_part_1/csd/2021": {
+          "type": "Video"
+        },
         "video_pair_programming/csd/2021": {
-          "name": "Video: Párové programovanie"
+          "name": "Video: Párové programovanie",
+          "type": "Video"
         },
         "headings_and_paragraphs/csd/2021": {
           "name": "Nadpisy a odseky "
+        },
+        "video_debugging/csd/2021": {
+          "type": "Video"
+        },
+        "html-web-page/csd/2021": {
+          "type": "Recenzia"
         },
         "lists/csd/2021": {
           "name": "Zoznamy"
@@ -1480,13 +2133,151 @@
           "name": "Digitálna stopa"
         },
         "intro_to_css_-_part_1/csd/2021": {
-          "name": "Úvod do CSS - časť 1"
+          "name": "Úvod do CSS - časť 1",
+          "type": "Video"
         },
         "intro_to_css_-_part_2/csd/2021": {
-          "name": "Úvod do CSS - časť 2"
+          "name": "Úvod do CSS - časť 2",
+          "type": "Video"
+        },
+        "your-personal-style-1/csd/2021": {
+          "type": "Recenzia"
+        },
+        "creative-commons-video/csd/2021": {
+          "type": "Video"
+        },
+        "personal-web-page-1/csd/2021": {
+          "type": "Recenzia"
         },
         "publishing_your_website/csd/2021": {
-          "name": "Publikovanie tvojej webstránky"
+          "name": "Publikovanie tvojej webstránky",
+          "type": "Video"
+        },
+        "teamwork-dealing-with-disagreement/csd/2021": {
+          "type": "Video"
+        },
+        "how-teamwork-works/csd/2021": {
+          "type": "Video"
+        },
+        "how-search-works-video/csd/2021": {
+          "type": "Video"
+        },
+        "website-for-a-purpose/csd/2021": {
+          "type": "Recenzia"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/pre-express/2020": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/pre-express/2020": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/pre-express/2020": {
+          "name": "Slovník"
+        },
+        "lesson_plans/express/2020": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/express/2020": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/express/2020": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/express/2020": {
+          "name": "Slovník"
+        },
+        "curriculum_guide/courseb/2020": {
+          "name": "Sprievodca osnovami"
+        },
+        "lesson_plans/courseb/2020": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/courseb/2020": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/courseb/2020": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/courseb/2020": {
+          "name": "Slovník"
+        },
+        "curriculum_guide/coursed/2020": {
+          "name": "Sprievodca osnovami"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/coursed/2020": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/coursed/2020": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/coursed/2020": {
+          "name": "Slovník"
+        },
+        "curriculum_guide/coursec/2020": {
+          "name": "Sprievodca osnovami"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/coursec/2020": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/coursec/2020": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/coursec/2020": {
+          "name": "Slovník"
+        },
+        "curriculum_guide/coursee/2020": {
+          "name": "Sprievodca osnovami"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/coursee/2020": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/coursee/2020": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/coursee/2020": {
+          "name": "Slovník"
+        },
+        "curriculum_guide/coursea/2020": {
+          "name": "Sprievodca osnovami"
+        },
+        "lesson_plans/coursea/2020": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/coursea/2020": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/coursea/2020": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/coursea/2020": {
+          "name": "Slovník"
+        },
+        "curriculum_guide/coursef/2020": {
+          "name": "Sprievodca osnovami"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/coursef/2020": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/coursef/2020": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/coursef/2020": {
+          "name": "Slovník"
         }
       }
     }

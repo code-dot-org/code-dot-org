@@ -7,10 +7,11 @@ import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWith
 import Button from '@cdo/apps/templates/Button';
 import UploadImageDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/UploadImageDialog';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import {navigateToHref} from '@cdo/apps/utils';
 
-const EDITOR_TYPES = ['blockly', 'droplet', 'text'];
+const EDITOR_LANGUAGES = ['blockly', 'droplet', 'html/css', 'java'];
 
 const useProgrammingEnvironment = initialProgrammingEnvironment => {
   const [programmingEnvironment, setProgrammingEnvironment] = useState(
@@ -56,6 +57,7 @@ export default function ProgrammingEnvironmentEditor({
 }) {
   const {
     name,
+    showPath,
     ...remainingProgrammingEnvironment
   } = initialProgrammingEnvironment;
   const [
@@ -68,7 +70,7 @@ export default function ProgrammingEnvironmentEditor({
   const [lastUpdated, setLastUpdated] = useState(null);
   const [error, setError] = useState(null);
 
-  const save = () => {
+  const save = (e, shouldCloseAfterSave) => {
     if (isSaving) {
       return;
     }
@@ -84,16 +86,20 @@ export default function ProgrammingEnvironmentEditor({
       .then(response => {
         setIsSaving(false);
         if (response.ok) {
-          setLastUpdated(Date.now());
-          setError(null);
           return response.json();
         } else {
-          throw new Error(error.statusText);
+          throw new Error(response.statusText);
         }
       })
       .then(json => {
-        delete json.name;
-        setProgrammingEnvironment(json);
+        if (shouldCloseAfterSave) {
+          navigateToHref(showPath);
+        } else {
+          setLastUpdated(Date.now());
+          setError(null);
+          delete json.name;
+          setProgrammingEnvironment(json);
+        }
       })
       .catch(error => {
         setIsSaving(false);
@@ -121,21 +127,52 @@ export default function ProgrammingEnvironmentEditor({
         <input value={name} style={styles.textInput} readOnly />
       </label>
       <label>
+        Published
+        <HelpTip>
+          If checked, this programming environment will appear on /docs and all
+          pages will be accessible. If unchecked, only levelbuilders will be
+          able to access the pages.
+        </HelpTip>
+        <input
+          checked={programmingEnvironment.published}
+          onChange={e =>
+            updateProgrammingEnvironment('published', e.target.checked)
+          }
+          type="checkbox"
+          style={styles.checkboxInput}
+        />
+      </label>
+      <label>
         How should this document render?
         <select
-          value={programmingEnvironment.editorType || EDITOR_TYPES[0]}
+          value={programmingEnvironment.editorLanguage || EDITOR_LANGUAGES[0]}
           onChange={e =>
-            updateProgrammingEnvironment('editorType', e.target.value)
+            updateProgrammingEnvironment('editorLanguage', e.target.value)
           }
           style={styles.selectInput}
         >
-          {EDITOR_TYPES.map(type => (
+          {EDITOR_LANGUAGES.map(type => (
             <option key={type} value={type}>
               {type}
             </option>
           ))}
         </select>
       </label>
+      {programmingEnvironment.editorLanguage === 'blockly' && (
+        <label>
+          Block Pool Name
+          <HelpTip>
+            The block pool that will be used to show embedded blocks.{' '}
+          </HelpTip>
+          <input
+            value={programmingEnvironment.blockPoolName || ''}
+            onChange={e =>
+              updateProgrammingEnvironment('blockPoolName', e.target.value)
+            }
+            style={styles.textInput}
+          />
+        </label>
+      )}
       <label>
         Project URL
         <input
@@ -181,7 +218,7 @@ export default function ProgrammingEnvironmentEditor({
         isSaving={isSaving}
         lastSaved={lastUpdated}
         error={error}
-        handleView={() => navigateToHref('/')}
+        handleView={() => navigateToHref(showPath)}
       />
       <UploadImageDialog
         isOpen={uploadImageDialogOpen}
@@ -225,5 +262,8 @@ const styles = {
     borderRadius: 4,
     marginBottom: 0,
     height: 25
+  },
+  checkboxInput: {
+    margin: '0px 4px'
   }
 };

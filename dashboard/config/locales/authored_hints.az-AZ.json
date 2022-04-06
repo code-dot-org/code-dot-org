@@ -1437,8 +1437,7 @@
           "mc_7_c": "Bir \"təkrarlama\" döngəsinin içərisinə birdən çox blok qoya bilərsən."
         },
         "Overworld Powered Minecart_2021": {
-          "mc_13_b": "Kodunu qısaltmaq üçün \"təkrarla\" döngələrindən istifadə et. ",
-          "mc_13_a": "Dayandığınız meydançaya rels çəkmək üçün “rels yerləşdirin” istifadə edin."
+          "mc_13_b": "Kodunu qısaltmaq üçün \"təkrarla\" döngələrindən istifadə et. "
         },
         "Underground Avoiding Lava_2021": {
           "mc_11_a": "Bütün kodlar lavanı yoxlamaq və onunla məşğul olmaq üçün yerindədir. Sənə tək lazım olan hərəkət etmək üçün bir blok əlavə etməkdir.",
@@ -1450,13 +1449,7 @@
           "mc_12_c": "Lava boşluqlarını yoxlamaq üçün `əgər` ifadəsini istifadə et, sonra qırıq daşları qoy. "
         },
         "Underground Iron_2021": {
-          "mc_10_a": "Dəmir bloklar məşəlin arxasındakı ləkəli boşluqlardır! Oraya necə gedəcəksən?",
           "mc_10_c": "Səhv etməkdən qorxma! Tapmacanı həll etməsən də, nə olduğunu görmək üçün kodu işlədin.."
-        },
-        "Underground Mining Coal_2021": {
-          "mc_9_b": "Divardakı qara ləkələr kömürdür! Kömür çıxarmaq üçün 'bloku qır' dan istifadə et.",
-          "mc_9_c": "Dayandığın yerə məşəl qoymaq üçün \"məşəl qoy\" dan istifadə et. ",
-          "mc_9_a": "Doğru yoldasınızmı? 'Bloku məhv et' qarşınızdakı bloku minalayır."
         },
         "courseA_collector_loops_challenge2": {
           "courseA_collector_loops_challenge2_b": "Bunu həll etmək üçün yalnız 1 blokdan istifadə etməlisiniz.",
@@ -2142,35 +2135,10 @@
           "courseB_collector_loops2_a": "Hər hansı bir xəzinə toplamadan əvvəl hərəkət etməlisiniz. ",
           "courseB_collector_loops2_b": "Xəzinə ilə bir yerə çatdıqda, onu almaq üçün [bloklu blok] [0] blokundan istifadə edin. "
         },
-        "courseB_collector_loops3_2021": {
-          "courseB_collector_prog3_a": "Xəzinənizi toplamaq üçün [bloklu blok] [0] blokundan istifadə etməyə çalışın. ",
-          "courseB_collector_prog3_b": "Bir döngənin içərisinə birdən çox blok qoya biləcəyini unutma."
-        },
         "courseB_collector_loops4_2021": {
-          "courseB_collector_loops4_a": "İşlərin səhv getdiyini anlamaq üçün addım düyməsini istifadə etməyə çalışın.",
           "courseB_collector_loops4_b": "Laurelin nə qədər irəli getdiyini dəyişdirmək üçün döngənin neçə dəfə işlədiyini dəyişdirin.",
+          "courseB_collector_loops4_a": "İşlərin səhv getdiyini anlamaq üçün addım düyməsini istifadə etməyə çalışın.",
           "courseB_collector_loops4_c": "Laurel, \"təkrar\" [bloklu blok] [0] döngəsini bitirdikdən sonra aşağı gəzməli və xəzinəni toplamalıdır! "
-        },
-        "courseB_collector_loops5_2021": {
-          "courseB_collector_loops5_a": "İşi yerinə yetirmək üçün birdən çox döngə istifadə edin. ",
-          "courseB_collector_loops5_b": "Nə baş verdiyini görmək üçün kodu bir neçə dəfə işə salın. "
-        },
-        "courseB_collector_loops6_2021": {
-          "courseB_collector_loops6_a": "İşlərin haradan getdiyini anlamırsınız? Proqramınızı bir blokdan keçmək üçün \"Addım\" düyməsini istifadə edin. ",
-          "courseB_collector_loops6_b": "\"3\" düyməsini basaraq və fərqli bir nömrə seçərək təkrar döngənin neçə dəfə işlədiyini dəyişə bilərsiniz. ",
-          "courseB_collector_loops6_c": "Bu tapmacanı həll etmək üçün 3 \"təkrar\" döngədən istifadə etmək istəyəcəksiniz.",
-          "courseB_collector_loops6_d": "Qarışıqsınızsa, bu tapmacanı 3 hissəyə bölməyə çalışın. "
-        },
-        "courseB_collector_loops7_2021": {
-          "courseB_collector_loops7_a": "Tapmacada çətinlik çəkirsinizsə, onu anlamağa kömək etmək üçün kağıza çəkməyə çalışın. ",
-          "courseB_collector_loops7_b": "Bu tapmacanı həll etmək üçün 3 təkrar döngəyə ehtiyacınız olacaq və sonunda əlavə xəzinəni unutmayın! "
-        },
-        "courseB_collector_loops8_2021": {
-          "courseB_collector_loops8_challenge_a": "Döngələri hara qoyacağını anlaya bilmirsən? Kodu kağız üzərində addım-addım yazmağa çalış və nümunə axtar."
-        },
-        "courseB_collector_loops9_2021": {
-          "courseB_collector_loops9_a": "Bu çox çətin görünür? Daha asan hiss edilməsi üçün 3 kiçik problemə bölün. ",
-          "courseB_collector_loops9_b": "Bu həll üçün bir-birinin ardınca 3 təkrar edən döngəyə ehtiyacınız olacaq."
         },
         "courseB_iceage_loops10_2021": {
           "courseB_iceage_loops10_a": "Qırıq buzlara diqqət yetirin! Scrat suya düşəcək! ",
@@ -2408,7 +2376,8 @@
         },
         "courseC_maze_debugging5_2021": {
           "courseC_maze_debugging5_c": "Açılan düyməni basaraq dönmə blokunun istiqamətini dəyişə bilərsiniz.",
-          "courseC_maze_debugging5_a": "Artıq iş yerində çoxlu faydalı bloklar var. Hamısını silməyin!\n\nKeçmək və kodun harada səhv getdiyini anlamaq üçün \"Addım\" düyməsini istifadə edin."
+          "courseC_maze_debugging5_a": "Artıq iş yerində çoxlu faydalı bloklar var. Hamısını silməyin!\n\nKeçmək və kodun harada səhv getdiyini anlamaq üçün \"Addım\" düyməsini istifadə edin.",
+          "courseC_maze_debugging5_b": "Scrat'in nə etməli olduğunu özünüzə yüksək səslə təkrar edin. Çalışma bölgəsindəki kod ilə eynidirmi? Nə səhvdir?"
         },
         "courseC_maze_debugging_challenge1": {
           "courseC_maze_debugging_challenge1_a": "Sol və ya sağ?Bu səndən asılıdır!",
@@ -3320,13 +3289,6 @@
           "courseA_playLab_events2_a": "İti nəsə deməyə məcbur edən bir blok axtarın.",
           "courseA_playLab_events2_b": "Bu tapmacanı tamamlamaq üçün lazım olan kod budur:\n\"Blockly\"blok[0]"
         },
-        "courseA_playLab_events4_2021": {
-          "courseA_playLab_events4_a": "Jorge'nin sağa doğru hərəkət etməsini təmin etməyiniz üçün lazım olan hadisə bloku budur:\n\"Blockly\"blok[0]",
-          "courseA_playLab_events4_b": "Bu tapmacanı tamamlamaq üçün lazım olacaq kod budur:\n\"Blockly\"blok[0]"
-        },
-        "courseA_playLab_events7_2021": {
-          "courseA_playLab_events7_a": "Oyunçular toqquşanda nə olacağını idarə etmək üçün bu blokdan istifadə edin."
-        },
         "courseA_playlab_events_challenge2": {
           "courseA_playlab_events_challenge2_a": "Quşu oxumağa məcbur edə bilərsən.\n\"Blockly\"blok[0]"
         },
@@ -3390,19 +3352,9 @@
         "courseB_artist_loops3_2021": {
           "courseB_artist_loops3_b": "Sənətçi bu xətti çəkmək üçün cənuba hərəkət etmək istəyəcək."
         },
-        "courseB_artist_loops7_2021": {
-          "courseB_artist_loops7_a": "Bu problem bir -birinin ardınca \\*\\* 4 \\*\\* döngədən  istifadə edir!"
-        },
         "courseB_artist_loops9_2021": {
           "courseB_artist_loops9_a": "Unutmayın ki, tullanma blokları  xətt çəkmədən hərəkət etmək üçün istifadə edilə bilər.",
           "courseB_artist_loops9_b": "Bu tapmacanı həll etmək üçün W blokundan istifadə etmək istəyəcəksiniz."
-        },
-        "courseB_collector_loops10_2021": {
-          "courseB_collector_loops10_b": "Hərəkətləri bir kağızın aşağısına yazmağa və nümunə axtarmağa çalışın."
-        },
-        "courseB_collector_loops_challenge2a_2021": {
-          "courseB_collector_loops_challenge2a_a": "Bir şey yolunda getməsə, onu düzəltməyə çalışın. Təslim olmayın!",
-          "courseB_collector_loops_challenge2a_b": "Labirintdən keçmək üçün bu varianta baxın. Təkrar edə biləcəyiniz bir nümunə görürsünüzmü?"
         },
         "courseB_maze_seq1_2018": {
           "courseB_maze_seq1_a": "Scratı hərəkət etdirmək üçün blokları <xml><block type=\"when_run\"/></xml> blokuna birləşdirin!"
@@ -3434,26 +3386,10 @@
           "courseB_maze_seq8_b": "Bu tapmacanı həll etməyin birdən çox yolu var. ",
           "courseB_maze_seq8_c": "Hansı yola gedəcəyini bilmirsən? Bu yolu yoxla!"
         },
-        "courseB_playlab_events3_2021": {
-          "courseB_playlab_events3_a": "Bu hadisə əlavə etmək üçün istifadə etməli olduğunuz blokdur:\n\"Blockly\"blok[0]",
-          "courseB_playlab_events3_b": "Daisy-nin əhvalını dəyişdirmək üçün lazım olan blok budur:\n\"Blockly\"blok[0]"
-        },
-        "courseB_playlab_events4_2021": {
-          "courseB_playlab_events4_a": "Sol oxu idarə edən hadisə budur:\n\"Blockly\"blok[0]",
-          "courseB_playlab_events4_b": "Cəngavəri sola hərəkət etdirən blok budur.\n\"Blockly\"blok[0]"
-        },
-        "courseB_playlab_events5_2021": {
-          "courseB_playlab_events5_a": "Bu sağ oxu idarə edən hadisə blokudur:\n\"Blockly\"blok[0]",
-          "courseB_playlab_events5_b": "Cəngavərin qaçmağa məcbur edən  blok budur.\n\"Blockly\"blok[0]"
-        },
-        "courseB_playlab_events6_2021": {
-          "courseB_playlab_events6_a": "Bu hadisə bloklarına ehtiyacınız olacaq:\n\"Blockly\"blok[0]",
-          "courseB_playlab_events6_c": "Keçmək üçün bütün bayraqları əldə edin!"
-        },
         "courseB_playlab_events7_2021": {
-          "courseB_playlab_events7_a": "Bu hadisə blokuna ehtiyacınız olacaq:\n\"Blockly\"blok[0]",
           "courseB_playlab_events7_b": "Səsi oynatmaq üçün lazım olan blok budur.\n\"Blockly\"blok[0]",
-          "courseB_playlab_events7_c": "Cəngavəri yox etmək üçün lazım olan blok budur:\n\"Blockly\"blok[0]"
+          "courseB_playlab_events7_c": "Cəngavəri yox etmək üçün lazım olan blok budur:\n\"Blockly\"blok[0]",
+          "courseB_playlab_events7_a": "Bu hadisə blokuna ehtiyacınız olacaq:\n\"Blockly\"blok[0]"
         },
         "courseB_playlab_events_challenge1_2021": {
           "courseB_playlab_events_challenge1_a": "\"▼\" düyməsini basdığınız zaman digər heyvanların aşağı hərəkət etməsini təmin edin.\n\"Blockly\"blok[0]",
@@ -3591,7 +3527,8 @@
           "courseC_maze_debugging4_b": "Dönüşlərdən biri də Scrat -ı yanlış istiqamətə yönəltməkdir. Hansını olduğunu anlaya bilərsən?"
         },
         "courseC_maze_debugging6_2021": {
-          "courseC_maze_debugging6_a": "-   Scrat nə etməlidir?\n-   Scrat nə edir?\n-   Bu sizə nə deyir?"
+          "courseC_maze_debugging6_a": "-   Scrat nə etməlidir?\n-   Scrat nə edir?\n-   Bu sizə nə deyir?",
+          "courseC_maze_debugging6_b": "Birinci səhvi tapdıqdan, kodu təmizləməyə davam edin və digər səhvləri axtarın.\n\nProqram işləyənə qədər buna davam edin! "
         },
         "courseC_maze_debugging7_2021": {
           "courseC_maze_debugging7_a": "-   Birinci addımda hər şey yolundadırmı?\n-   Bəs ikinci addımda?\n-   Səhv haradadır?",
@@ -4856,6 +4793,64 @@
         },
         "helloworld_retro_click": {
           "hw_click_sprites": "Proqram işləyərkən spritlərə klikləyin."
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playLab_events4_a": "Jorge'nin sağa doğru hərəkət etməsini təmin etməyiniz üçün lazım olan hadisə bloku budur:\n\"Blockly\"blok[0]",
+          "courseA_playLab_events4_b": "Bu tapmacanı tamamlamaq üçün lazım olacaq kod budur:\n\"Blockly\"blok[0]"
+        },
+        "courseA_playLab_events7_2021": {
+          "courseA_playLab_events7_a": "Oyunçular toqquşanda nə olacağını idarə etmək üçün bu blokdan istifadə edin."
+        },
+        "courseB_artist_loops7_2021": {
+          "courseB_artist_loops7_a": "Bu problem bir -birinin ardınca \\*\\* 4 \\*\\* döngədən  istifadə edir!"
+        },
+        "courseB_collector_loops10_2021": {
+          "courseB_collector_loops10_b": "Hərəkətləri bir kağızın aşağısına yazmağa və nümunə axtarmağa çalışın."
+        },
+        "courseB_collector_loops3_2021": {
+          "courseB_collector_prog3_a": "Xəzinənizi toplamaq üçün [bloklu blok] [0] blokundan istifadə etməyə çalışın. ",
+          "courseB_collector_prog3_b": "Bir döngənin içərisinə birdən çox blok qoya biləcəyini unutma."
+        },
+        "courseB_collector_loops5_2021": {
+          "courseB_collector_loops5_a": "İşi yerinə yetirmək üçün birdən çox döngə istifadə edin. ",
+          "courseB_collector_loops5_b": "Nə baş verdiyini görmək üçün kodu bir neçə dəfə işə salın. "
+        },
+        "courseB_collector_loops6_2021": {
+          "courseB_collector_loops6_a": "İşlərin haradan getdiyini anlamırsınız? Proqramınızı bir blokdan keçmək üçün \"Addım\" düyməsini istifadə edin. ",
+          "courseB_collector_loops6_b": "\"3\" düyməsini basaraq və fərqli bir nömrə seçərək təkrar döngənin neçə dəfə işlədiyini dəyişə bilərsiniz. ",
+          "courseB_collector_loops6_c": "Bu tapmacanı həll etmək üçün 3 \"təkrar\" döngədən istifadə etmək istəyəcəksiniz.",
+          "courseB_collector_loops6_d": "Qarışıqsınızsa, bu tapmacanı 3 hissəyə bölməyə çalışın. "
+        },
+        "courseB_collector_loops7_2021": {
+          "courseB_collector_loops7_a": "Tapmacada çətinlik çəkirsinizsə, onu anlamağa kömək etmək üçün kağıza çəkməyə çalışın. ",
+          "courseB_collector_loops7_b": "Bu tapmacanı həll etmək üçün 3 təkrar döngəyə ehtiyacınız olacaq və sonunda əlavə xəzinəni unutmayın! "
+        },
+        "courseB_collector_loops8_2021": {
+          "courseB_collector_loops8_challenge_a": "Döngələri hara qoyacağını anlaya bilmirsən? Kodu kağız üzərində addım-addım yazmağa çalış və nümunə axtar."
+        },
+        "courseB_collector_loops9_2021": {
+          "courseB_collector_loops9_a": "Bu çox çətin görünür? Daha asan hiss edilməsi üçün 3 kiçik problemə bölün. ",
+          "courseB_collector_loops9_b": "Bu həll üçün bir-birinin ardınca 3 təkrar edən döngəyə ehtiyacınız olacaq."
+        },
+        "courseB_collector_loops_challenge2a_2021": {
+          "courseB_collector_loops_challenge2a_a": "Bir şey yolunda getməsə, onu düzəltməyə çalışın. Təslim olmayın!",
+          "courseB_collector_loops_challenge2a_b": "Labirintdən keçmək üçün bu varianta baxın. Təkrar edə biləcəyiniz bir nümunə görürsünüzmü?"
+        },
+        "courseB_playlab_events3_2021": {
+          "courseB_playlab_events3_a": "Bu hadisə əlavə etmək üçün istifadə etməli olduğunuz blokdur:\n\"Blockly\"blok[0]",
+          "courseB_playlab_events3_b": "Daisy-nin əhvalını dəyişdirmək üçün lazım olan blok budur:\n\"Blockly\"blok[0]"
+        },
+        "courseB_playlab_events4_2021": {
+          "courseB_playlab_events4_a": "Sol oxu idarə edən hadisə budur:\n\"Blockly\"blok[0]",
+          "courseB_playlab_events4_b": "Cəngavəri sola hərəkət etdirən blok budur.\n\"Blockly\"blok[0]"
+        },
+        "courseB_playlab_events5_2021": {
+          "courseB_playlab_events5_a": "Bu sağ oxu idarə edən hadisə blokudur:\n\"Blockly\"blok[0]",
+          "courseB_playlab_events5_b": "Cəngavərin qaçmağa məcbur edən  blok budur.\n\"Blockly\"blok[0]"
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "Bu hadisə bloklarına ehtiyacınız olacaq:\n\"Blockly\"blok[0]",
+          "courseB_playlab_events6_c": "Keçmək üçün bütün bayraqları əldə edin!"
         }
       }
     }

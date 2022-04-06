@@ -2,6 +2,8 @@
 el:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: δημιουργία νέων {ANIMATION_NAME} Σπράιτ σε {LOCATION}
       Dancelab_alternateMoves:
         text: "{GROUP} εναλλαγή κάθε {N} μέτρα \nμεταξύ {MOVE1} και {MOVE2}"
         options:
@@ -1013,6 +1015,11 @@ el:
         text: είναι συρόμενο
       gamelab_edgesDisplace:
         text: τουβλάκι ακμών {SPRITE} από το να κινηθεί
+      gamelab_everySeconds:
+        text: 'κάθε {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': δευτερόλεπτα
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1146,6 +1153,8 @@ el:
         options:
           EFFECT:
             '"rain"': βροχή
+      gamelab_makeNewScaledSprite:
+        text: δημιουργία νέων {ANIMATION_NAME} Σπράιτ σε {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: δημιουργία νέων {ANIMATION_NAME} Σπράιτ σε {LOCATION}
       gamelab_makeProjectile:
@@ -1202,6 +1211,7 @@ el:
         options:
           BEHAVIOR:
             new Behavior(moving_with_arrow_keys, []): μετακίνηση με τα πλήκτρα βέλους
+            new Behavior(driving_with_arrow_keys, []): μετακίνηση με τα πλήκτρα βέλους
             draggable(): είναι συρόμενο
       gamelab_pointInDirection:
         text: στρίψε το {SPRITE} {DIRECTION}
@@ -1716,10 +1726,14 @@ el:
       Poetry_startBehavior:
         options:
           BEHAVIOR:
+            '"growing"': αυξάνεται
+            '"shrinking"': συρρικνώνεται
             '"swimming_left_and_right"': κολύμβηση
       Poetry_stopBehavior:
         options:
           BEHAVIOR:
+            '"growing"': αυξάνεται
+            '"shrinking"': συρρικνώνεται
             '"swimming_left_and_right"': κολύμβηση
       Poetry_whenLineShows:
         options:

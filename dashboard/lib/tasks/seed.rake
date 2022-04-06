@@ -69,7 +69,8 @@ namespace :seed do
     'ui-test-script-in-course-2017',
     'ui-test-script-in-course-2019',
     'ui-test-versioned-script-2017',
-    'ui-test-versioned-script-2019'
+    'ui-test-versioned-script-2019',
+    'ui-test-csa-family-script'
   ].map {|script| "test/ui/config/scripts_json/#{script}.script_json"}.freeze
   UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + [
     '20-hour',
@@ -167,7 +168,7 @@ namespace :seed do
     :deprecated_blockly_levels,
     :custom_levels,
     :dsls,
-    :programming_expressions,
+    :code_docs,
     :blocks,
     :standards,
     :shared_blockly_functions,
@@ -289,6 +290,16 @@ namespace :seed do
     CourseOffering.seed_all
   end
 
+  timed_task course_offerings_ui_tests: :environment do
+    %w(ui-test-course ui-test-csa-family-script).each do |course_offering_name|
+      CourseOffering.seed_record("test/ui/config/course_offerings/#{course_offering_name}.json")
+    end
+  end
+
+  timed_task reference_guides: :environment do
+    ReferenceGuide.seed_all
+  end
+
   # Seeds Standards
   timed_task standards: :environment do
     Framework.seed_all
@@ -296,9 +307,10 @@ namespace :seed do
     Standard.seed_all
   end
 
-  timed_task programming_expressions: :environment do
+  timed_task code_docs: :environment do
     ProgrammingEnvironment.seed_all
     ProgrammingExpression.seed_all
+    ProgrammingClass.seed_all
   end
 
   # Seeds the data in school_districts
@@ -441,8 +453,8 @@ namespace :seed do
     sh('mysqldump -u root -B dashboard_test > db/ui_test_data.sql')
   end
 
-  FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools, :foorms].freeze
-  UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :donor_schools].freeze
+  FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools, :foorms].freeze
+  UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_ui_tests, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :donor_schools].freeze
   DEFAULT_SEED_TASKS = [:adhoc, :test].include?(rack_env) ? UI_TEST_SEED_TASKS : FULL_SEED_TASKS
 
   desc "seed the data needed for this type of environment by default"

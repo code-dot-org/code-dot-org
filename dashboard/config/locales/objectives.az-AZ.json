@@ -35,6 +35,9 @@
         "6da037be-d0be-4f41-a1e5-10b24a247190": {
           "description": "Mətndə məcazi və hərfi dili vurğula"
         },
+        "a9a73475-1d3a-4bc3-900b-3f481596d1b5": {
+          "description": "Vaxt təyin edilmiş hadisələrə cavab verən proqramlar inkişaf etdirin."
+        },
         "6394fdc5-50c3-423e-8135-a64594824db3": {
           "description": "\"Kodlaşdırma\" və \"kompüter elmini\" müəyyənləşdirin"
         },
@@ -275,6 +278,9 @@
         "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
           "description": "Sprite və hadisələrdən istifadə edərək interaktiv animasiya yaradın."
         },
+        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
+          "description": "Vaxt təyin edilmiş hadisələrə cavab verən proqramlar inkişaf etdirin."
+        },
         "1e1c0724-7d86-4304-a73b-6f083be036fc": {
           "description": "Şeirin əhval-ruhiyyəsinin dəyişməsini təsvir edin."
         },
@@ -292,6 +298,9 @@
         },
         "d67e0be9-d618-464a-9f80-4549d63a2e03": {
           "description": "Çalışan kompüter proqramında spritləri müəyyən edin."
+        },
+        "bb1cd9aa-a1b9-47e3-bc85-58e65e75b380": {
+          "description": "Vaxt təyin edilmiş hadisələrə cavab verən proqramlar inkişaf etdirin."
         },
         "7a7f6249-ea7c-40df-a0a6-e4a3f5c61d9f": {
           "description": "İstifadəçi girişinə cavab verən proqramlar hazırlayın."
@@ -587,6 +596,12 @@
         "14389c2c-96ea-4be1-8347-46e7d19dd1ff": {
           "description": "Uzun təlimatlar ardıcıllığını ən böyük təkrarlana bilən ardıcıllığa bölün."
         },
+        "dfde2f15-333a-4ca0-942e-eb7642ea3239": {
+          "description": "Komanda yoldaşlarının gördüyü işləri yoxlayın."
+        },
+        "2d84b5eb-70d6-4f6d-88c5-7838a4983a78": {
+          "description": "Verilən kodu oxu və başa düş."
+        },
         "3b4a2468-e182-4060-861f-2a922730445b": {
           "description": "Giriş hadisələri ilə əlaqəli hərəkətləri müəyyənləşdirin."
         },
@@ -649,6 +664,9 @@
         },
         "6ba64af5-a4d3-4473-b004-166dfdc6bd71": {
           "description": "Hadisələrdən istifadə edərək interaktiv animasiya yaradın."
+        },
+        "d9604b08-064f-43e3-83ac-d3a91f321627": {
+          "description": "Vaxt təyin edilmiş hadisələrə cavab verən proqramlar inkişaf etdirin."
         },
         "422b4e75-8ff9-4f2e-b4f8-e6f1fdea3969": {
           "description": "İstifadəçi girişinə cavab verən proqramlar hazırlayın."
@@ -793,6 +811,18 @@
         },
         "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
           "description": "İnsan qərəzinin maşın öyrənməsində necə rol oynaması ilə bağlı səbəb."
+        },
+        "1a3a0395-0d25-44f7-9d47-e1c7700c3507": {
+          "description": "Məsələnin müxtəlif həll yollarını müəyyənləşdirin."
+        },
+        "30d66e3d-96aa-4b8e-adb5-6f112d41f16d": {
+          "description": "Məsələnin müxtəlif həll yollarını müəyyənləşdirin."
+        },
+        "9f5e8294-cf6c-4f28-9f8f-1c0c869a69be": {
+          "description": "Məsələnin müxtəlif həll yollarını müəyyənləşdirin."
+        },
+        "1829ce9e-4e7e-451f-898e-692c3abb5ad6": {
+          "description": "Məsələnin müxtəlif həll yollarını müəyyənləşdirin."
         }
       }
     }

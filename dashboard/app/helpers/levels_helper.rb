@@ -45,8 +45,8 @@ module LevelsHelper
     url_from_path(build_script_level_path(script_level, params))
   end
 
-  def url_from_path(path)
-    "#{root_url.chomp('/')}#{path}"
+  def url_from_path(path, scheme = '')
+    CDO.studio_url(path, scheme)
   end
 
   def readonly_view_options
@@ -189,13 +189,15 @@ module LevelsHelper
     #   are channel-backed.)
     # - In edit_blocks mode, the source code is saved as a level property and
     #   is not written to the channel.
-    #
-    # Note that Javalab requires a channel to _execute_ the code on Javabuilder
-    # so it always needs a channel, regardless of whether it will be written to.
-    level_requires_channel = @level.is_a?(Javalab) ||
-        (@level.channel_backed? &&
+    level_requires_channel = (@level.channel_backed? &&
           !@level.try(:contained_levels).present? &&
           params[:action] != 'edit_blocks')
+    # Javalab requires a channel if Javabuilder needs to access project-specific assets,
+    # or if we want to access a project's code from S3.
+    # Two special cases are when we edit and view Javalab exemplar code,
+    # where we load the exemplar code from the level definition, edit it locally in Javalab,
+    # and pass the edited code directly to Javabuilder.
+    level_requires_channel = !@is_editing_exemplar && !@is_viewing_exemplar if @level.is_a?(Javalab)
 
     # If the level is cached, the channel is loaded client-side in loadApp.js
     if level_requires_channel && !@public_caching
@@ -214,8 +216,15 @@ module LevelsHelper
       server_project_level_id: @level.project_template_level.try(:id)
     )
 
-    # For levels with a backpack option (currently all Javalab), get the backpack channel token if it exists
-    if @level.is_a?(Javalab) && (@user || current_user)
+    # Enable backpack for levels with a backpack option (currently all non-standalone Javalab),
+    # and get the backpack channel token if it exists
+    backpack_enabled = !!(@level.is_a?(Javalab) &&
+      (ProjectsController::STANDALONE_PROJECTS["javalab"]["name"] != @level.name) &&
+      (@user || current_user))
+
+    view_options(backpack_enabled: backpack_enabled)
+
+    if backpack_enabled
       user_id = @user&.id || current_user&.id
       backpack = Backpack.find_by_user_id(user_id)
       view_options(backpack_channel: backpack&.channel)
@@ -363,6 +372,7 @@ module LevelsHelper
       @app_options[:experiments] =
         Experiment.get_all_enabled(user: current_user, section: section, script: @script).pluck(:name)
       @app_options[:usingTextModePref] = !!current_user.using_text_mode
+      @app_options[:muteMusic] = !!current_user.mute_music
       @app_options[:displayTheme] = current_user.display_theme
       @app_options[:userSharingDisabled] = current_user.sharing_disabled?
     end

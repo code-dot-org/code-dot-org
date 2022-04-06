@@ -1,0 +1,11 @@
+name 'CSA U3 Assessment 2022 q03'
+
+wrong 'wrong'
+right 'right'
+wrong 'wrong'
+wrong 'wrong'
+wrong 'wrong'
+
+markdown <<MARKDOWN
+question
+MARKDOWN
