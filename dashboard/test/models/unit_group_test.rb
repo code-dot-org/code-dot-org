@@ -610,6 +610,8 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal 'my-unit-group', summary[:versions].first[:name]
     assert_equal '1999', summary[:versions].first[:version_year]
 
+    assert_equal 1, summary[:course_versions].keys.length
+
     # make sure we dont have lesson info
     assert_nil summary[:scripts][0][:lessons]
     assert_nil summary[:scripts][0][:lessonDescriptions]
