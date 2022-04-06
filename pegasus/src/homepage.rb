@@ -185,6 +185,24 @@ class Homepage
     end
   end
 
+  def self.get_num_columns
+    custom_banner = get_announcement_for_page("homepage")
+    if custom_banner && custom_banner["leftBar"] && custom_banner["rightBar"]
+      return 3
+    end
+
+    1
+  end
+
+  def self.get_outer_column_images
+    custom_banner = get_announcement_for_page("homepage")
+    if custom_banner && custom_banner["leftBar"] && custom_banner["rightBar"]
+      return {left_image: custom_banner["leftBar"], right_image: custom_banner["rightBar"]}
+    end
+
+    nil
+  end
+
   def self.get_actions(request)
     # Show a Latin American specific video to users browsing in Spanish or
     # Portuguese to promote LATAM HOC.
@@ -466,9 +484,7 @@ class Homepage
     custom_banner = get_announcement_for_page("homepage")
     if custom_banner
       heroes_arranged =
-        [{centering: "50% 100%", textposition: "bottom", items: custom_banner["items"], image: custom_banner["desktopImage"], classname: "desktop-feature"}]
-      heroes_arranged <<
-        {centering: "50% 100%", textposition: "bottom", items: custom_banner["items"], image: custom_banner["mobileImage"], classname: "mobile-feature"}
+        [{centering: "50% 100%", textposition: "bottom", items: custom_banner["items"], image: custom_banner["desktopImage"]}]
     elsif show_single_hero(request) == "changeworld"
       heroes_arranged = hero_changeworld
     else
