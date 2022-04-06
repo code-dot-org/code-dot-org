@@ -1008,6 +1008,66 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal '2017', versions[1][:version_title]
   end
 
+  test 'summarize_course_versions' do
+    foo16 = create(
+      :script, name: 'foo-2016', family_name: 'foo', version_year: '2016', is_course: true,
+      published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    )
+    CourseOffering.add_course_offering(foo16)
+    foo17 = create(
+      :script, name: 'foo-2017', family_name: 'foo', version_year: '2017', is_course: true,
+      published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    )
+    CourseOffering.add_course_offering(foo17)
+    foo18 = create(
+      :script, name: 'foo-2018', family_name: 'foo', version_year: '2018', is_course: true,
+      published_state: SharedCourseConstants::PUBLISHED_STATE.preview
+    )
+    CourseOffering.add_course_offering(foo18)
+    foo19 = create(
+      :script, name: 'foo-2019', family_name: 'foo', version_year: '2019', is_course: true,
+      published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    )
+    CourseOffering.add_course_offering(foo19)
+
+    [foo16, foo17, foo18, foo19].each do |s|
+      summary = s.summarize_course_versions(create(:teacher))
+      assert_equal ["foo-2016", "foo-2017", "foo-2018"], summary.values.map {|h| h[:name]}
+      assert_equal [true, true, false], summary.values.map {|h| h[:is_stable]}
+      assert_equal [false, true, false], summary.values.map {|h| h[:is_recommended]}
+    end
+  end
+
+  test 'summarize_course_versions for student' do
+    foo16 = create(
+      :script, name: 'foo-2016', family_name: 'foo', version_year: '2016', is_course: true,
+      published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    )
+    CourseOffering.add_course_offering(foo16)
+    foo17 = create(
+      :script, name: 'foo-2017', family_name: 'foo', version_year: '2017', is_course: true,
+      published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    )
+    CourseOffering.add_course_offering(foo17)
+    foo18 = create(
+      :script, name: 'foo-2018', family_name: 'foo', version_year: '2018', is_course: true,
+      published_state: SharedCourseConstants::PUBLISHED_STATE.preview
+    )
+    CourseOffering.add_course_offering(foo18)
+    foo19 = create(
+      :script, name: 'foo-2019', family_name: 'foo', version_year: '2019', is_course: true,
+      published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    )
+    CourseOffering.add_course_offering(foo19)
+
+    [foo17, foo18, foo19].each do |s|
+      summary = s.summarize_course_versions(create(:student))
+      assert_equal ["foo-2017"], summary.values.map {|h| h[:name]}
+      assert_equal [true], summary.values.map {|h| h[:is_stable]}
+      assert_equal [true], summary.values.map {|h| h[:is_recommended]}
+    end
+  end
+
   test 'summarize excludes unlaunched versions' do
     foo17 = create(
       :script, name: 'foo-2017', family_name: 'foo', version_year: '2017', is_course: true,
@@ -1038,23 +1098,24 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'summarize includes show assign button' do
     unit = create(:script, name: 'script', published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
+    teacher = create(:teacher)
 
-    # No user, show_assign_button set to nil
-    assert_nil unit.summarize[:show_assign_button]
+    # No user, show_assign_button set to false
+    refute unit.summarize[:show_assign_button]
 
     # Teacher should be able to assign a launched unit.
     assert_equal SharedCourseConstants::PUBLISHED_STATE.preview, unit.summarize[:publishedState]
-    assert_equal true, unit.summarize(true, create(:teacher))[:show_assign_button]
+    assert unit.summarize(true, teacher)[:show_assign_button]
 
     # Teacher should not be able to assign a unlaunched script.
     hidden_unit = create(:script, name: 'unassignable-hidden', published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
     assert_equal SharedCourseConstants::PUBLISHED_STATE.beta, hidden_unit.summarize[:publishedState]
-    assert_equal false, hidden_unit.summarize(true, create(:teacher))[:show_assign_button]
+    refute hidden_unit.summarize(true, teacher)[:show_assign_button]
 
     # Student should not be able to assign a unit,
     # regardless of visibility.
     assert_equal SharedCourseConstants::PUBLISHED_STATE.preview, unit.summarize[:publishedState]
-    assert_nil unit.summarize(true, create(:student))[:show_assign_button]
+    refute unit.summarize(true, create(:student))[:show_assign_button]
   end
 
   test 'summarize includes bonus levels for lessons if include_bonus_levels and include_lessons are true' do
