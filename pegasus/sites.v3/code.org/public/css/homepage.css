@@ -692,7 +692,12 @@ body.modal-open .supreme-container{
   font-size: 1.25em;
   line-height: 1.4em;
   padding-bottom: 0px;
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: 'Gotham 4r', sans-serif;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+#homepage .vertical-stack .text strong {
+  font-family: 'Gotham 5r', sans-serif;
+  font-weight: normal;
 }
