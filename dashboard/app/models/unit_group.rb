@@ -414,6 +414,16 @@ class UnitGroup < ApplicationRecord
     }
   end
 
+  # Returns summary object of all the course versions that an instructor can
+  # assign or all the launched versions a participant can view
+  def summarize_course_versions(user = nil, locale_code = 'en-us')
+    return {} unless user
+
+    all_course_versions = course_version&.course_offering&.course_versions
+    course_versions_for_user = all_course_versions&.select {|cv| cv.course_assignable?(user) || (cv.launched? && cv.can_view_version?(user))}
+    course_versions_for_user&.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
+  end
+
   # Returns an array of objects showing the name and version year for all courses
   # sharing the family_name of this course, including this one.
   def summarize_versions(user = nil, locale_code = nil)
@@ -436,16 +446,6 @@ class UnitGroup < ApplicationRecord
       end
 
     versions.sort_by {|info| info[:version_year]}.reverse
-  end
-
-  # Returns summary object of all the course versions that an instructor can
-  # assign or all the launched versions a participant can view
-  def summarize_course_versions(user = nil, locale_code = 'en-us')
-    return {} unless user
-
-    all_course_versions = course_version&.course_offering&.course_versions
-    course_versions_for_user = all_course_versions&.select {|cv| cv.course_assignable?(user) || (cv.launched? && cv.can_view_version?(user))}
-    course_versions_for_user&.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
   # If a user has no experiments enabled, return the default set of units.
