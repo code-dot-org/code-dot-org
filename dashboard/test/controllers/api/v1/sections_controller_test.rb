@@ -491,11 +491,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       login_type: Section::LOGIN_TYPE_EMAIL,
       course_id: @beta_unit_group.id, # Not CSP or CSD
     }
-    assert_response :success
-    # TODO: Better to fail here?
-
-    assert_nil returned_json['course_id']
-    assert_nil returned_section.unit_group
+    assert_response :forbidden
   end
 
   test 'pilot teacher can assign the pilot course id' do
@@ -523,11 +519,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       login_type: Section::LOGIN_TYPE_EMAIL,
       course_id: pilot_unit_group.id
     }
-    assert_response :success
-    # TODO: Better to fail here?
-
-    assert_nil returned_json['course_id']
-    assert_nil returned_section.unit_group
+    assert_response :forbidden
   end
 
   test 'pilot teacher can assign pilot script' do
@@ -538,7 +530,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in pilot_teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      script: {id: pilot_script.id}
+      script_id: pilot_script.id
     }
     assert_response :success
 
@@ -553,20 +545,16 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      script: {id: pilot_script.id}
+      script_id: pilot_script.id
     }
-    assert_response :success
-    # TODO: Better to fail here?
-
-    assert_nil returned_json['script']['id']
-    assert_nil returned_section.script
+    assert_response :forbidden
   end
 
   test 'can create with a script id but no course id' do
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      script: {id: @script.id},
+      script_id: @script.id,
     }
 
     assert_equal @script.id, returned_json['script']['id']
@@ -579,34 +567,23 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      script: {id: 'MALYON'}, # Script IDs are numeric
+      script_id: 'MALYON', # Script IDs are numeric
     }
-    assert_response :success
-    # TODO: Better to fail here?
-
-    assert_nil returned_json['script']['id']
-    assert_nil returned_section.script
-    assert_nil returned_json['course_id']
-    assert_nil returned_section.unit_group
+    assert_response :forbidden
   end
 
-  [CSP_COURSE_NAME, CSP_COURSE_SOFT_LAUNCHED_NAME].each do |existing_unit_group_name|
-    test "can create with both a course id and a script id - #{existing_unit_group_name}" do
-      existing_unit_group = UnitGroup.find_by(name: existing_unit_group_name)
-      CourseOffering.add_course_offering(existing_unit_group)
-
-      sign_in @teacher
-      post :create, params: {
-        login_type: Section::LOGIN_TYPE_EMAIL,
-        course_id: existing_unit_group.id,
-        script: {id: @csp_script.id},
-      }
-
-      assert_equal existing_unit_group.id, returned_json['course_id']
-      assert_equal existing_unit_group, returned_section.unit_group
-      assert_equal @csp_script.id, returned_json['script']['id']
-      assert_equal @csp_script, returned_section.script
-    end
+  test "can create with both a course id and a script id" do
+    sign_in @teacher
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      course_id: @csp_unit_group.id,
+      script_id: @csp_script.id,
+    }
+    assert_response :success
+    assert_equal @csp_unit_group.id, returned_json['course_id']
+    assert_equal @csp_unit_group, returned_section.unit_group
+    assert_equal @csp_script.id, returned_json['script']['id']
+    assert_equal @csp_script, returned_section.script
   end
 
   test 'creating a section with a script assigns the script to the creating user' do
@@ -618,7 +595,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      script: {id: @script.id},
+      script_id: @script.id,
     }
     assert_response :success
     assert_includes teacher.scripts, @csp_script
@@ -634,7 +611,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
-      script: {id: @script.id},
+      script_id: @script.id,
     }
     assert_response :success
     assert_equal 1, teacher.scripts.size
@@ -780,7 +757,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       course_id: 1,
     }
     section.reload
-    assert_response :success
+    assert_response :forbidden
     assert_nil section.course_id
   end
 
@@ -795,7 +772,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       script_id: 1,
     }
     section.reload
-    assert_response :success
+    assert_response :forbidden
     assert_nil section.script_id
   end
 
@@ -815,7 +792,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in other_teacher
     post :update, params: {
       id: @section.id,
-      course_id: @beta_unit_group.id,
+      course_id: @csp_unit_group.id,
     }
     assert_response :forbidden
   end
@@ -847,7 +824,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     section = create(:section, user: @teacher, script_id: @script_in_preview_state.id)
     post :update, params: {
       id: section.id,
-      course_id: @beta_unit_group.id,
+      course_id: @csp_unit_group.id,
       script_id: @script.id
     }
     assert_response 400
@@ -879,18 +856,6 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     }
 
     assert_not_nil UserScript.find_by(script: @script, user: student)
-  end
-
-  test "update: can set script from nested script param" do
-    sign_in @teacher
-    section = create(:section, user: @teacher, script_id: @script_in_preview_state.id)
-    post :update, as: :json, params: {
-      id: section.id,
-      script: {id: @script.id}
-    }
-    assert_response :success
-    section.reload
-    assert_equal(@script.id, section.script_id)
   end
 
   test 'logged out cannot delete a section' do
