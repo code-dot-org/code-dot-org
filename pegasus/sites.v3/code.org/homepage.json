@@ -7,7 +7,8 @@
     "thebadguys": {
       "dcdo": "thebadguys-promotion",
       "class": "vertical-stack",
-      "desktopImage": "/images/marketing/homepage-thebadguys-background-composite.jpg",
+      "desktopImage": "/images/marketing/homepage-thebadguys-background.jpg",
+      "mobileImage": "/images/marketing/homepage-thebadguys-background.jpg",
       "actions": [
         {
           "type": "image",
@@ -26,7 +27,7 @@
         {
           "type": "cta_button_solid_yellow",
           "text": "homepage_action_text_try_it",
-          "url": "/coldplay"
+          "url": "/thebadguys"
         }
       ]
     }
