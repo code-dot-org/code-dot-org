@@ -28,7 +28,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2022-03-30 19:55:18 UTC",
+    "serialized_at": "2022-04-05 21:47:38 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1344,7 +1344,7 @@
       "key": "59b87cc3-62bd-4c61-a8de-bd9ce6827b12",
       "position": 3,
       "properties": {
-        "description": "####Vaocabulary\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n\n- **Sprite** - A graphic on the screen with a location, size, and appearance.\n- **User** - Someone who uses an object, including software and hardware."
+        "description": "####Vocabulary\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n\n- **Sprite** - A graphic on the screen with a location, size, and appearance.\n- **User** - Someone who uses an object, including software and hardware."
       },
       "seeding_key": {
         "activity_section.key": "59b87cc3-62bd-4c61-a8de-bd9ce6827b12",
@@ -1693,32 +1693,8 @@
       }
     },
     {
-      "key": "5e1d361c-4925-48b4-b00a-d92b6d5e612d",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide",
-        "name": "Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "5e1d361c-4925-48b4-b00a-d92b6d5e612d",
-        "lesson_activity.key": "72b43692-65aa-4f97-8559-0025506a2724"
-      }
-    },
-    {
-      "key": "14059e50-3b52-4236-963a-0a20385f7f95",
-      "position": 2,
-      "properties": {
-        "description": "Today you learned how to write code to create programs in Sprite Lab. \n\n**Program** - An algorithm that has been coded into something that can be run by a machine.\n\n**Algorithm** - A list of steps to complete a task.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "14059e50-3b52-4236-963a-0a20385f7f95",
-        "lesson_activity.key": "72b43692-65aa-4f97-8559-0025506a2724"
-      }
-    },
-    {
       "key": "7613a586-15db-4675-9453-17fc920521e8",
-      "position": 3,
+      "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Reflect:**\n* _What advice would you have for a friend who is interested in creating their own programs in Sprite Lab?_\n\n",
         "name": "Reflect"
@@ -1898,7 +1874,7 @@
       "key": "4e19d062-0c5b-4eb6-aa93-6504fc2f4631",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Review:** Ask students questions about events and behaviors. \n\n* _Do you remember what an event is?_\n\n* _Do you remember what a behavior is?_\n\n* _Can you remember some of the behaviors you have used ? What do they do?_\n    - \"patrolling\"\n    - \"jittering\"\n    - \"spinning right/left\" \n\n####Vocabulary\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n\n- **Behavior** - An action in Sprite Lab that a sprite performs continuously until it’s told to stop.\n\n- **Event** - An action that causes something to happen.\nRevisit _events_ and _behaviors_ in programming. Additionally, introduce the Sprite Lab \"Costumes\" tool that allows students to draw their own costumes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 1 - Exploration” slide\n\n**Display:** Begin by showing Level 1 of today's lesson to your students. \n\n**Think/Pair:** Ask students to predict what will happen when the code is run, and to discuss with their neighbors. Run the code, and discuss the outcome.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 2 - Skill Building” slide\n\n**Display:** Show Level 2. Briefly demonstrate how to do the following: \n\n- Navigate between the _Code_ and _Costumes_ tabs. \n- Draw a costume. \n- Choose a costume from the costume library.\n- Change the virtual pet's sprite's costume to a custom one.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Review:** Ask students questions about events and behaviors. \n\n* _Do you remember what an event is?_\n\n* _Do you remember what a behavior is?_\n\n* _Can you remember some of the behaviors you have used ? What do they do?_\n    - \"patrolling\"\n    - \"jittering\"\n    - \"spinning right/left\" \n\n####Vocabulary\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n\n- **Behavior** - An action in Sprite Lab that a sprite performs continuously until it’s told to stop.\n\n- **Event** - An action that causes something to happen.\n\n**Do This**: Revisit _events_ and _behaviors_ in programming. Additionally, introduce the Sprite Lab \"Costumes\" tool that allows students to draw their own costumes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 1 - Exploration” slide\n\n**Display:** Begin by showing Level 1 of today's lesson to your students. \n\n**Think/Pair:** Ask students to predict what will happen when the code is run, and to discuss with their neighbors. Run the code, and discuss the outcome.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 2 - Skill Building” slide\n\n**Display:** Show Level 2. Briefly demonstrate how to do the following: \n\n- Navigate between the _Code_ and _Costumes_ tabs. \n- Draw a costume. \n- Choose a costume from the costume library.\n- Change the virtual pet's sprite's costume to a custom one.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2077,7 +2053,7 @@
       "key": "4f9d6a34-1d60-46f7-889e-9daf2ce34a6a",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Blank Space Story: Party Games” slide\n\n**Do This:**\n- Prepare the envelopes marked “adjective”, “object”, “body part”, and “number”. \n- Repeat the game above with the second story. This time you can begin with the labels before showing the story to build more suspense. The animations in the lesson slides are already set up to help facilitate this.\n\n\n####(Optional) Role Play Extension\n\nA connection can be made between the volunteers and the idea of an app having a “user”. In this analogy, your role as the teacher has been like the computer. You will request and store the information from the \"users\" and then work out how to put the story together. To involve more students and have them act out this model, assign roles:\n\n_Computers:_ Pass out and collect envelopes. Open each envelope as the story is being read to check for the values being stored.\n\n_Users:_ Submit the words needed to complete the story.\n\n_Reader:_ Read the finished story out loud.\n\n\n####Debrief\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n* _How is writing a blank space story different from writing a normal story?_\n\n**Discuss:** How is writing a blank space story different from writing a normal story?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Blank Space Story: Party Games” slide\n\n**Do This:**\n- Prepare the envelopes marked “adjective”, “object”, “body part”, and “number”. \n- Repeat the game above with the second story. This time you can begin with the labels before showing the story to build more suspense. The animations in the lesson slides are already set up to help facilitate this.\n\n\n####(Optional) Role Play Extension\n\nA connection can be made between the volunteers and the idea of an app having a “user”. In this analogy, your role as the teacher has been like the computer. You will request and store the information from the \"users\" and then work out how to put the story together. To involve more students and have them act out this model, assign roles:\n\n_Computers:_ Pass out and collect envelopes. Open each envelope as the story is being read to check for the values being stored.\n\n_Users:_ Submit the words needed to complete the story.\n\n_Reader:_ Read the finished story out loud.\n\n\n####Debrief\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _How is writing a blank space story different from writing a normal story?_",
         "name": "Party Games"
       },
       "seeding_key": {
@@ -2296,7 +2272,7 @@
       "key": "5a9e0899-a7ba-4cf6-b5ac-55bdb00e070b",
       "position": 1,
       "properties": {
-        "description": "**Do This:** Remind students what they did last class or ask them to share. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**\n* _How did we use variables in our \nBlank Space Stories?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Prompts” slide\n\n**Discuss:** How do computer programs ask us for information?\n\n**Discussion Goal:** Students should think about their own experiences as users and times when a computer asks them for information. There are lots of ways to input information into a computer, but focus on ideas where something is typed into a prompt for now.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Variables” slide\n",
+        "description": "**Do This:** Remind students what they did last class or ask them to share. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**\n* _How did we use variables in our \nBlank Space Stories?_\n\n",
         "name": "Review"
       },
       "seeding_key": {
@@ -2316,8 +2292,19 @@
       }
     },
     {
-      "key": "2f4da98e-da53-405e-9e34-604a60679394",
+      "key": "33d9aec7-0e17-4715-abf6-e30e992a8ac6",
       "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Prompts” slide\n\n**Discuss:** How do computer programs ask us for information?\n\n**Discussion Goal:** Students should think about their own experiences as users and times when a computer asks them for information. There are lots of ways to input information into a computer, but focus on ideas where something is typed into a prompt for now.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Variables” slide\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "33d9aec7-0e17-4715-abf6-e30e992a8ac6",
+        "lesson_activity.key": "f5f46bf1-b5c2-4bf2-b7b8-ac46b37624de"
+      }
+    },
+    {
+      "key": "2f4da98e-da53-405e-9e34-604a60679394",
+      "position": 4,
       "properties": {
         "description": "At the end of the last lesson, we were looking at the similarities between blank space stories and apps that ask a user for input. \nWhen a message on the computer screen is waiting for your input we call that a prompt. \nWhen a user types into a prompt, it’s like the computer is storing the information in a container.\nThe variable's label tells us what kind of information to expect.\nToday we are going to learn the code to create a prompt in Sprite Lab.",
         "remarks": true
@@ -3736,14 +3723,14 @@
       }
     },
     {
-      "key": "428b7e6e-321d-4b39-a555-41f9c8a02bc5",
+      "key": "dccf8fb4-16ee-4237-a39f-70cfce02b8fa",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect**:\n* _How does the Internet help connect us to other people?_\n\n####Vocabulary:\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Key Vocabulary” slide\n\nThis lesson has several new and important words:\n\n - **IP Address** - A number assigned to any item that is connected to the Internet\n\n - **DNS (Domain Name Service)** - The service that translates URLs to IP addresses\n\n - **URL (Universal Resource Locator)** - An easy-to-remember address for calling a web page (like www.code.org)\n\n - **Internet** - A group of computers and servers that are connected to each other\n\n - **Servers** - Computers that exist only to provide things to others",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect**: _How does the Internet help connect us to other people?_\n",
         "name": "Introduction"
       },
       "seeding_key": {
-        "activity_section.key": "428b7e6e-321d-4b39-a555-41f9c8a02bc5",
+        "activity_section.key": "dccf8fb4-16ee-4237-a39f-70cfce02b8fa",
         "lesson_activity.key": "dcda139f-212f-4822-ab04-b47be1bd2f52"
       }
     },
@@ -3751,10 +3738,11 @@
       "key": "c8387b79-a4b3-476a-a2d4-4a42036f44c2",
       "position": 2,
       "properties": {
+        "description": "####Vocabulary:\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Key Vocabulary” slide\n\n\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "A quick preview is all you need here. These words will all be explained as part of the lesson, so it would be far less confusing to do a brief intro to the words as a \"see if you can spot these during the day\" type of heads-up.\n\n - **Fiber Optic Cable** - *Say it with me: Fye-ber Op-tic Cay-bl*\n"
+            "markdown": "A quick preview is all you need here. These words will all be explained as part of the lesson, so it would be far less confusing to do a brief intro to the words as a \"see if you can spot these during the day\" type of heads-up.\n\n\n"
           }
         ]
       },
@@ -3764,10 +3752,20 @@
       }
     },
     {
-      "key": "94e00ea5-6582-4477-ba29-998e55dabf13",
+      "key": "428b7e6e-321d-4b39-a555-41f9c8a02bc5",
       "position": 3,
       "properties": {
-        "description": "A connection that uses light to transmit information\n\n - **Wi-Fi** - A wireless method of sending information using radio waves\n\n - **DSL/Cable** - A method of sending information using telephone or television cables\n\n - **Packets** - Small chunks of information that have been carefully formed from larger chunks of information"
+        "description": "\n\n\nThis lesson has several new and important words:\n\n\n\n - **IP Address** - A number assigned to any item that is connected to the Internet\n\n - **DNS (Domain Name Service)** - The service that translates URLs to IP addresses\n\n - **URL (Universal Resource Locator)** - An easy-to-remember address for calling a web page (like www.code.org)\n\n - **Internet** - A group of computers and servers that are connected to each other\n\n - **Servers** - Computers that exist only to provide things to others\n\n - **Fiber Optic Cable** - A connection that uses light to transmit information\n - **Wi-Fi** - A wireless method of sending information using radio waves\n\n - **DSL/Cable** - A method of sending information using telephone or television cables\n\n - **Packets** - Small chunks of information that have been carefully formed from larger chunks of information"
+      },
+      "seeding_key": {
+        "activity_section.key": "428b7e6e-321d-4b39-a555-41f9c8a02bc5",
+        "lesson_activity.key": "dcda139f-212f-4822-ab04-b47be1bd2f52"
+      }
+    },
+    {
+      "key": "94e00ea5-6582-4477-ba29-998e55dabf13",
+      "position": 4,
+      "properties": {
       },
       "seeding_key": {
         "activity_section.key": "94e00ea5-6582-4477-ba29-998e55dabf13",
@@ -3776,7 +3774,7 @@
     },
     {
       "key": "6b504c7a-42f6-4914-95b5-5e6157ace053",
-      "position": 4,
+      "position": 5,
       "properties": {
         "tips": [
           {
@@ -3792,7 +3790,7 @@
     },
     {
       "key": "b786c2f0-38ab-45c8-a5f6-d465f50c64f4",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "\n####Getting the Message\n\n- It's quite likely that your students are aware of what the internet is, but they may not really understand what the internet does.\n\t- **Ask:** _What is the internet?_\n\t- _Is the internet a public place or a private place?_\n\t- (Truthfully, many people think it can be both, but it should be viewed as a public space no matter what settings you think you've mastered.)\n\t- _How does information get from place to place?_\n- _Let's say that I want to look at the webpage for Code.org. What do you suppose the process would be like for me to send a message to request that page?_\n\t- _What do I do as a user?_\n\t- _What do you think happens inside the internet?_\n\nSending a message over the internet is a lot like sending a message through the mail...if every letter we sent required thousands of envelopes!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Packets” slide\n\nEvery message we send through the internet gets chopped up and each piece is wrapped in its own version of an envelope. We call those packets. Packets are specially formed chunks of information that are able to easily flow through any of the internet's channels.\n\nSometimes, a few of those packets will get lost, because the internet is a crazy place. In that case, the packets need to be resent, and the whole message has to get put on hold until they arrive.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Servers” slide\n\n_Where do you think those packets are headed?_\n\n- Even if you're sending messages to another person, they first have to go to at least one server.\n\t- A server is a special computer that is supposed to be always on and ready to send and receive information.\n\t- Every website has a server.\n\t- Even email goes through servers.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “IP Addresses” slide \n\nServers don't have names like you and I do. They're actually addressed using numbers. These numbers are called IP addresses, and they look a little strange.\n\n- For example: One of Code.org's IP addresses used to be 54.243.71.82\n\t- (Please be sure to check this out in advance. Most IP addresses change from time to time and they are then reused for other sites.)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “DSL, Cable, Fiber Optic, or WiFi” slide\n\nThere are many ways to reach the internet from your house, school, or place of business.\n\n- You can connect directly using a cable (that might be DSL, Cable, or Fiber Optic)\n- Or you can connect using radio waves over the air through Wi-Fi.\n\nDirect connections are most reliable, but they can be inconvenient.\n\n- *Can you figure out why?*\n\t- (You have to be attached to a cable!)\n\nWi-Fi connections are super convenient, but the aren't always reliable.\n\n- *Can you figure out why not?*\n\t- (Radio waves bounce all over the place and can get lost.)"
       },
@@ -3803,7 +3801,7 @@
     },
     {
       "key": "a77afdbe-59e9-4cf5-a08a-d4786beecea5",
-      "position": 6,
+      "position": 7,
       "properties": {
         "tips": [
           {
@@ -3819,7 +3817,7 @@
     },
     {
       "key": "3e0d26b1-1d67-4f8c-82dd-7d7fe0934b12",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “IP Addresses & DNS” video\n\nSo, if you're used to sending information to URLs (like www.code.org) and the servers actually have IP addresses for names (like 54.243.71.82) how does the Internet change from one to the other? That's what the DNS is for. The DNS (Domain Name Server) has tables that allow the system to go back and forth between URLs and IP addresses. If the Domain Name Servers ever stopped working, it would shut down the internet as we know it!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Create a DNS Table” slide\n\nWith that said, let's try to understand what the DNS does by making a little DNS table ourselves.\n\nPull out a piece of paper and draw a grid similar to that in the internet activity:\n\nSample of DNS Table:\n\n| #  | URL  | IP Address |\n| ------------- | ------------- | ------------- |\n| 1  | &nbsp;&nbsp;&nbsp;code.org&nbsp;&nbsp;&nbsp;  | &nbsp;&nbsp;54.243.71.82&nbsp;&nbsp;  |\n| 2  |   |   |\n| 3  |   |   |\n| 4  |   |   |\n| 5  |   |   |\n\n\n<br/>First, we need to fill in this table.\n\n- Survey the class for their favorite websites and write the URLs in the left column\n- Use a site like ***get-site-ip.com** to find the IP addresses for those sites and write them in the corresponding rows of the right column.\n\nNow let's take this DNS Table and pretend to send messages through the internet!"
       },
