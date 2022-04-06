@@ -491,7 +491,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       login_type: Section::LOGIN_TYPE_EMAIL,
       course_id: @beta_unit_group.id, # Not CSP or CSD
     }
-    assert_response :bad_request
+    assert_response :forbidden
   end
 
   test 'pilot teacher can assign the pilot course id' do
@@ -519,7 +519,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       login_type: Section::LOGIN_TYPE_EMAIL,
       course_id: pilot_unit_group.id
     }
-    assert_response :bad_request
+    assert_response :forbidden
   end
 
   test 'pilot teacher can assign pilot script' do
@@ -547,7 +547,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       login_type: Section::LOGIN_TYPE_EMAIL,
       script_id: pilot_script.id
     }
-    assert_response :bad_request
+    assert_response :forbidden
   end
 
   test 'can create with a script id but no course id' do
@@ -569,7 +569,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       login_type: Section::LOGIN_TYPE_EMAIL,
       script_id: 'MALYON', # Script IDs are numeric
     }
-    assert_response :bad_request
+    assert_response :forbidden
   end
 
   test "can create with both a course id and a script id" do
@@ -757,7 +757,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       course_id: 1,
     }
     section.reload
-    assert_response :bad_request
+    assert_response :forbidden
     assert_nil section.course_id
   end
 
@@ -772,7 +772,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       script_id: 1,
     }
     section.reload
-    assert_response :bad_request
+    assert_response :forbidden
     assert_nil section.script_id
   end
 
