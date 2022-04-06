@@ -3,7 +3,6 @@ import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
 import OwnedSectionsTable from './OwnedSectionsTable';
 import teacherSections, {
-  setValidAssignments,
   setCourseOfferings,
   setSections
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -96,76 +95,6 @@ const serverSections = [
   }
 ];
 
-const validCourses = [
-  {
-    id: 29,
-    name: 'CS Discoveries',
-    script_name: 'csd',
-    category: 'Full Courses',
-    position: 1,
-    category_priority: 0
-  },
-  {
-    id: 30,
-    name: 'CS Principles',
-    script_name: 'csp',
-    category: 'Full Courses',
-    position: 0,
-    category_priority: 0
-  }
-];
-
-const validScripts = [
-  {
-    id: 1,
-    name: 'Accelerated Course',
-    script_name: '20-hour',
-    category: 'CS Fundamentals International',
-    position: 0,
-    category_priority: 3
-  },
-  {
-    id: 2,
-    name: 'Hour of Code *',
-    script_name: 'Hour of Code',
-    category: 'Hour of Code',
-    position: 1,
-    category_priority: 2
-  },
-  {
-    id: 3,
-    name: 'edit-code *',
-    script_name: 'edit-code',
-    category: 'other',
-    position: null,
-    category_priority: 15
-  },
-  {
-    id: 4,
-    name: 'events *',
-    script_name: 'events',
-    category: 'other',
-    position: null,
-    category_priority: 15
-  },
-  {
-    id: 36,
-    name: 'Course 3',
-    script_name: 'course3',
-    category: 'CS Fundamentals',
-    position: 3,
-    category_priority: 3
-  },
-  {
-    id: 46,
-    name: 'Infinity Play Lab',
-    script_name: 'infinity',
-    category: 'Hour of Code',
-    position: 12,
-    category_priority: 2
-  }
-];
-
 export default storybook => {
   storybook
     .storiesOf('OwnedSectionsTable (teacher dashboard)', module)
@@ -174,7 +103,6 @@ export default storybook => {
         name: 'section table',
         story: () => {
           const store = createStore(combineReducers({teacherSections}));
-          store.dispatch(setValidAssignments(validCourses, validScripts));
           store.dispatch(setCourseOfferings(courseOfferings));
           store.dispatch(setSections(serverSections));
           return (
