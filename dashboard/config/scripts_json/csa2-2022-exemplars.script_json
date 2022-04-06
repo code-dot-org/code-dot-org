@@ -4,13 +4,11 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "is_course": true,
-      "is_migrated": true,
-      "version_year": "unversioned"
+      "is_migrated": true
     },
     "new_name": null,
-    "family_name": "csa2-2022-exemplars",
-    "serialized_at": "2022-04-06 02:54:15 UTC",
+    "family_name": null,
+    "serialized_at": "2022-03-08 14:48:06 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -613,9 +611,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L1-L1 Placeholder_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -637,9 +632,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L1-L2 Exemplar_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -661,9 +653,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L1-L3 Exemplar_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -685,9 +674,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L1-L4 Placeholder_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -709,9 +695,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L2-L1 Placeholder_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -733,9 +716,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L3-L1 Placeholder_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -757,9 +737,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L3-L2 Placeholder_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -781,9 +758,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L4-L1 Exemplar_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -805,9 +779,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L4-L2 Exemplar_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -829,9 +800,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L4-L3 Exemplar_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -853,9 +821,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L4-L4 Placeholder_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -877,9 +842,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L5-L1 Exemplar_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -901,9 +863,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L5-L2 Exemplar_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -925,9 +884,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L5-L3 Placeholder_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -949,9 +905,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L6-L1 Exemplar_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -973,9 +926,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L6-L2 Exemplar_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -997,9 +947,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L6-L3 CR Placeholder_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1021,9 +968,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L6-L4 Placeholder_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1045,9 +989,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L7-L1 Placeholder_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1069,9 +1010,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L7-L2 Exemplar_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1093,9 +1031,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L7-L3 Exemplar_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1117,9 +1052,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L7-L4 Exemplar_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1141,9 +1073,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L7-L5 Exemplar_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1165,9 +1094,6 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L7-L6 Placeholder_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1189,9 +1115,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L8-L1 Exemplar_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1213,9 +1136,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L8-L2 Exemplar_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1237,9 +1157,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L8-L3 Exemplar_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1261,9 +1178,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L8-L4 Placeholder_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1285,9 +1199,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L9-L1 Placeholder_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1309,9 +1220,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L9-L2 Exemplar_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1333,9 +1241,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L9-L3 Exemplar_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1357,9 +1262,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L9-L4 Exemplar_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1381,9 +1283,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L9-L5 Placeholder_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1405,9 +1304,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L0-L1 Placeholder_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1429,9 +1325,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L10-L2 Exemplar_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1453,9 +1346,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L10-L3 Placeholder_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1477,9 +1367,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L11-L1 Exemplar_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1501,9 +1388,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L12-L1 Exemplar_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1525,9 +1409,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L12-L2 CR Placeholder_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1549,9 +1430,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L13-L1 Exemplar_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {

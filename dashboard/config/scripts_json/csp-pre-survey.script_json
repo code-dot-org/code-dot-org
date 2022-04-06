@@ -6,13 +6,11 @@
     "properties": {
       "curriculum_umbrella": "CSP",
       "hideable_lessons": true,
-      "is_course": true,
-      "is_migrated": true,
-      "version_year": "unversioned"
+      "is_migrated": true
     },
     "new_name": null,
-    "family_name": "csp-pre-survey",
-    "serialized_at": "2022-04-06 02:48:44 UTC",
+    "family_name": null,
+    "serialized_at": "2022-03-09 20:40:47 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

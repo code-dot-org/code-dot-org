@@ -4,13 +4,11 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_course": true,
-      "is_migrated": true,
-      "version_year": "unversioned"
+      "is_migrated": true
     },
     "new_name": null,
-    "family_name": "new-f",
-    "serialized_at": "2022-04-06 02:49:38 UTC",
+    "family_name": null,
+    "serialized_at": "2021-11-22 19:57:08 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -8035,19 +8033,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_IceAge_1",
-        "script_level.level_keys": [
-          "courseF_IceAge_1",
-          "iceage_hello1"
-        ],
-        "lesson.key": "Ice Age Play Lab",
-        "lesson_group.key": "csf_f_2",
-        "script.name": "new-f",
-        "activity_section.key": "6f4efc48-255f-4d9b-914f-75b428113567"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "iceage_hello1",
         "script_level.level_keys": [
           "courseF_IceAge_1",
@@ -8061,10 +8046,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_IceAge_2",
+        "level.key": "courseF_IceAge_1",
         "script_level.level_keys": [
-          "courseF_IceAge_2",
-          "iceage_hello2"
+          "courseF_IceAge_1",
+          "iceage_hello1"
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "csf_f_2",
@@ -8087,10 +8072,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_IceAge_3",
+        "level.key": "courseF_IceAge_2",
         "script_level.level_keys": [
-          "courseF_IceAge_3",
-          "iceage_move_to_flag"
+          "courseF_IceAge_2",
+          "iceage_hello2"
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "csf_f_2",
@@ -8113,7 +8098,20 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_IceAge_4",
+        "level.key": "courseF_IceAge_3",
+        "script_level.level_keys": [
+          "courseF_IceAge_3",
+          "iceage_move_to_flag"
+        ],
+        "lesson.key": "Ice Age Play Lab",
+        "lesson_group.key": "csf_f_2",
+        "script.name": "new-f",
+        "activity_section.key": "6f4efc48-255f-4d9b-914f-75b428113567"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iceage_move_to_actor",
         "script_level.level_keys": [
           "courseF_IceAge_4",
           "iceage_move_to_actor"
@@ -8126,7 +8124,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "iceage_move_to_actor",
+        "level.key": "courseF_IceAge_4",
         "script_level.level_keys": [
           "courseF_IceAge_4",
           "iceage_move_to_actor"
@@ -8151,7 +8149,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_IceAge_5",
+        "level.key": "iceage_repeat",
         "script_level.level_keys": [
           "courseF_IceAge_5",
           "iceage_repeat"
@@ -8164,7 +8162,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "iceage_repeat",
+        "level.key": "courseF_IceAge_5",
         "script_level.level_keys": [
           "courseF_IceAge_5",
           "iceage_repeat"
@@ -8189,19 +8187,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_IceAge_6",
-        "script_level.level_keys": [
-          "courseF_IceAge_6",
-          "iceage_click_hello"
-        ],
-        "lesson.key": "Ice Age Play Lab",
-        "lesson_group.key": "csf_f_2",
-        "script.name": "new-f",
-        "activity_section.key": "6f4efc48-255f-4d9b-914f-75b428113567"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "iceage_click_hello",
         "script_level.level_keys": [
           "courseF_IceAge_6",
@@ -8215,10 +8200,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_IceAge_7",
+        "level.key": "courseF_IceAge_6",
         "script_level.level_keys": [
-          "courseF_IceAge_7",
-          "iceage_move_events"
+          "courseF_IceAge_6",
+          "iceage_click_hello"
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "csf_f_2",
@@ -8241,10 +8226,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_IceAge_8",
+        "level.key": "courseF_IceAge_7",
         "script_level.level_keys": [
-          "courseF_IceAge_8",
-          "iceage_sound_and_points"
+          "courseF_IceAge_7",
+          "iceage_move_events"
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "csf_f_2",
@@ -8267,10 +8252,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_IceAge_9",
+        "level.key": "courseF_IceAge_8",
         "script_level.level_keys": [
-          "courseF_IceAge_9",
-          "iceage_warn_ice_age"
+          "courseF_IceAge_8",
+          "iceage_sound_and_points"
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "csf_f_2",
@@ -8293,10 +8278,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_IceAge_10",
+        "level.key": "courseF_IceAge_9",
         "script_level.level_keys": [
-          "courseF_IceAge_10",
-          "iceage_throw_hearts"
+          "courseF_IceAge_9",
+          "iceage_warn_ice_age"
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "csf_f_2",
@@ -8319,7 +8304,20 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_IceAge_11",
+        "level.key": "courseF_IceAge_10",
+        "script_level.level_keys": [
+          "courseF_IceAge_10",
+          "iceage_throw_hearts"
+        ],
+        "lesson.key": "Ice Age Play Lab",
+        "lesson_group.key": "csf_f_2",
+        "script.name": "new-f",
+        "activity_section.key": "6f4efc48-255f-4d9b-914f-75b428113567"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "iceage_free_play",
         "script_level.level_keys": [
           "courseF_IceAge_11",
           "iceage_free_play"
@@ -8332,7 +8330,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "iceage_free_play",
+        "level.key": "courseF_IceAge_11",
         "script_level.level_keys": [
           "courseF_IceAge_11",
           "iceage_free_play"

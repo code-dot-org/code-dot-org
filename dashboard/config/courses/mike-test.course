@@ -8,9 +8,7 @@
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
-    "family_name": "mike-test",
-    "has_numbered_units": true,
-    "version_year": "unversioned"
+    "has_numbered_units": true
   },
   "resources": [
 
