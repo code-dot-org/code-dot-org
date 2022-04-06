@@ -114,7 +114,7 @@ body.modal-open .supreme-container{
 
 #homepage #actions {
   position: relative;
-  padding: 20px;
+  padding: 0px 20px 20px 20px;
 }
 
 @media screen and (max-width: 970px) {
@@ -656,6 +656,16 @@ body.modal-open .supreme-container{
 
 /* Custom styling for a vertical-stack hero layout. */
 
+#homepage .vertical-stack {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#homepage .vertical-stack .image {
+  max-width: 120px;
+  margin-bottom: 10px;
+}
+
 #homepage .vertical-stack .video_thumbnail {
   width: 300px;
   margin: 0 auto;
@@ -663,15 +673,9 @@ body.modal-open .supreme-container{
 
 #homepage .vertical-stack .text {
   color: white;
-  font-size: 24px;
+  font-size: 16px;
   line-height: 1.5em;
   padding-bottom: 0px;
   font-family: 'Gotham 4r', sans-serif;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-#homepage .vertical-stack .image {
-  max-width: 600px;
-  margin-bottom: 20px;
+  padding-top: 10px;
 }
