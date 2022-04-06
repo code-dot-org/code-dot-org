@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-04 16:04:43 UTC",
+    "serialized_at": "2022-04-05 14:18:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4899,6 +4899,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 2 Assessment 2022"
+        ],
         "progression": "Unit 2 Assessment"
       },
       "bonus": false,
@@ -6562,7 +6565,7 @@
     {
       "key": "compound_assignment_operator",
       "word": "compound assignment operator",
-      "definition": "shortcut syntax ( `+=` , `-=` , `*=` , `/=` , `%=` ) to perform an operation (`+` , `-` , `*` , `/` , or `%` ) on both operands and store the result into the operand on the left",
+      "definition": "shortcut syntax ( `+=` , `-=` , `*=` , `/=` , `%=` ) to perform an operation (`+` , `-` , `*` , `/` , or `%` ) on both operands and store the result into the variable on the left",
       "properties": {
       },
       "seeding_key": {
