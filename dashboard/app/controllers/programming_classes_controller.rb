@@ -36,7 +36,7 @@ class ProgrammingClassesController < ApplicationController
     if programming_class_params[:methods]
       @programming_class.programming_methods = programming_class_params[:methods].each_with_index.map do |method_params, i|
         if method_params['id']
-          method = ProgrammingMethod.find(method_params.id)
+          method = ProgrammingMethod.find(method_params['id'])
           method.update!(method_params.merge(position: i))
           method
         else
@@ -66,7 +66,7 @@ class ProgrammingClassesController < ApplicationController
       :tips,
       examples: [:name, :description, :code, :app, :image, :app_display_type, :embed_app_with_code_height],
       fields: [:name, :type, :description],
-      methods: [:name, :content]
+      methods: [:id, :name]
     )
     transformed_params[:examples] = transformed_params[:examples].to_json if transformed_params[:examples]
     transformed_params[:fields] = transformed_params[:fields].to_json if transformed_params[:fields]
