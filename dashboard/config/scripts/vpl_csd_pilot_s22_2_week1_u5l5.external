@@ -3,8 +3,6 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-### <a href="https://levelbuilder-studio.code.org/s/vpl-csd2-ci-pilot-2022/lessons/1/levels/2" target="blank" rel="noopener noreferrer">Example Level</a> - remove when complete
-
 # Lessons 1 - 5 
 
 ##### Review the lesson overviews from the first five lessons. Summarize the key learning from the first five lessons and connect this to the learning throughout the unit. Highlight how the start of the unit sets students up for success later in the unit. 
@@ -19,12 +17,10 @@ markdown <<MARKDOWN
 
 ##### Click the dropdown arrows below to view lesson overviews.
 
-### Update image for each level with an image from the unit - remove these instructions
-
 <details>
 <summary><strong>Lesson 1: Representation Matters</strong></summary>
 
-<img src="https://images.code.org/512405163ce36cfa828fd317ce450a51-image-1635957729663.39.36 AM.png" alt="Image of a green door game app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+<img src="https://images.code.org/6ec652419a8aaf6e863a47ff63672d92-image-1648862654700.JPG" alt="Image of different foods" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
 **Question of the Day:** How does data affect decisions we make every day?
 
@@ -44,7 +40,7 @@ In the first lesson of the data unit, students get an overview of what data is a
 <details>
 <summary><strong>Lesson 2: Patterns and Representation</strong></summary>
 
-<img src="https://images.code.org/512405163ce36cfa828fd317ce450a51-image-1635957729663.39.36 AM.png" alt="Image of a green door game app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+<img src="https://images.code.org/345cc575be2d73e417dbea79d6b02b8c-image-1648862692009.JPG" alt="Images of animals for data representation" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
 **Question of the Day:** How can we create a system for representing information?
 
@@ -63,7 +59,7 @@ In this lesson students create their own system for representing information. Th
 <details>
 <summary><strong>Lesson 3: ASCII and Binary Representation</strong></summary>
 
-<img src="https://images.code.org/512405163ce36cfa828fd317ce450a51-image-1635957729663.39.36 AM.png" alt="Image of a green door game app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+<img src="https://images.code.org/ef62d086c9771dc1ce8281029814e3a4-image-1648862717169.JPG" alt="Image of ASCII sheet" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
 **Question of the Day:** What system do computers use to represent letters and words?
 
@@ -82,7 +78,7 @@ In this lesson students learn to use their first binary system for encoding info
 <details>
 <summary><strong>Lesson 4: Representing Images</strong></summary>
 
-<img src="https://images.code.org/512405163ce36cfa828fd317ce450a51-image-1635957729663.39.36 AM.png" alt="Image of a green door game app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+<img src="https://images.code.org/7f8a34a15cac60ddc8039462b6467678-image-1648862746144.JPG" alt="Image of binary smiley face" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
 **Question of the Day:** What system do computers use to represent images?
 
@@ -101,7 +97,7 @@ In this lesson students learn how computers represent images. To begin the lesso
 <details>
 <summary><strong>Lesson 5: Representing Numbers</strong></summary>
 
-<img src="https://images.code.org/512405163ce36cfa828fd317ce450a51-image-1635957729663.39.36 AM.png" alt="Image of a green door game app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+<img src="https://images.code.org/32dcc5d95c74f89694b643a4e5563e59-image-1648862768302.JPG" alt="Image of binary app" width="200px" style="float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
 **Question of the Day:** What system do computers use to represent numbers?
 
@@ -116,5 +112,6 @@ In this lesson, students learn about the binary number system. With a set of car
 </details>
 
 <div style="clear:both"/>
+
 
 MARKDOWN
