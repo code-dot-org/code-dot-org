@@ -301,6 +301,20 @@ class TestI18nStringUrlTracker < Minitest::Test
     I18nStringUrlTracker.instance.log(test_record[:url], test_record[:source], test_record[:string_key], test_record[:scope], test_record[:separator])
     I18nStringUrlTracker.instance.send(:flush)
   end
+
+  def test_string_key_exists
+    custom_i18n = {
+      simple_string: "hello",
+      interpolated_string: "unit %{n}"
+    }
+    I18n.backend.store_translations I18n.default_locale, custom_i18n
+
+    assert_equal false, I18nStringUrlTracker.string_key_exists?(nil)
+    assert_equal false, I18nStringUrlTracker.string_key_exists?('')
+    assert_equal false, I18nStringUrlTracker.string_key_exists?('invalid_string_key')
+    assert_equal true, I18nStringUrlTracker.string_key_exists?('simple_string')
+    assert_equal true, I18nStringUrlTracker.string_key_exists?('interpolated_string')
+  end
 end
 
 require 'minitest/benchmark'
