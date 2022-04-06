@@ -21,6 +21,7 @@ import {setExternalGlobals} from '../../../util/testUtils';
 import 'script-loader!@code-dot-org/p5.play/examples/lib/p5';
 import 'script-loader!@code-dot-org/p5.play/lib/p5.play';
 import loadSpritelab from '@cdo/apps/sites/studio/pages/init/loadSpritelab';
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
 
 const backgroundSprite = {
   orderedKeys: ['44c5937d-c5c0-4676-bd0c-f7a86e99dd98'],
@@ -33,7 +34,7 @@ const backgroundSprite = {
     }
   }
 };
-import {singleton as studioApp} from '@cdo/apps/StudioApp';
+
 describe('SpriteLab', () => {
   setExternalGlobals();
 
