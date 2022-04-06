@@ -260,6 +260,8 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   end
 
   def get_course_and_unit
+    return head :forbidden if current_user.nil?
+
     if params[:course_version_id]
       course_version = CourseVersion.find_by_id(params[:course_version_id])
       return head :bad_request unless course_version
