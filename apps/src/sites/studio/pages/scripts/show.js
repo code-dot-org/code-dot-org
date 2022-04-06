@@ -125,7 +125,7 @@ function initPage() {
         showScriptVersionWarning={scriptData.show_script_version_warning}
         showRedirectWarning={scriptData.show_redirect_warning}
         redirectScriptUrl={scriptData.redirect_script_url}
-        versions={scriptData.versions}
+        versions={scriptData.course_versions}
         courseName={scriptData.course_name}
         showAssignButton={scriptData.show_assign_button}
         userId={scriptData.user_id}

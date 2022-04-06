@@ -590,7 +590,7 @@ class UnitGroupTest < ActiveSupport::TestCase
                   :family_name, :version_year, :published_state, :instruction_type, :instructor_audience, :participant_audience,
                   :pilot_experiment, :description_short, :description_student,
                   :description_teacher, :version_title, :scripts, :teacher_resources, :migrated_teacher_resources,
-                  :student_resources, :is_migrated, :has_verified_resources, :has_numbered_units, :versions, :course_versions, :show_assign_button,
+                  :student_resources, :is_migrated, :has_verified_resources, :has_numbered_units, :course_versions, :show_assign_button,
                   :announcements, :course_offering_id, :course_version_id, :course_path, :course_offering_edit_path], summary.keys
     assert_equal 'my-unit-group', summary[:name]
     assert_equal 'my-unit-group-title', summary[:title]
@@ -606,7 +606,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal 'unit1', summary[:scripts][0][:name]
     assert_equal 'unit1-description', summary[:scripts][0][:description]
 
-    assert_equal 1, summary[:versions].keys.length
+    assert_equal 1, summary[:course_versions].keys.length
 
     # make sure we dont have lesson info
     assert_nil summary[:scripts][0][:lessons]
