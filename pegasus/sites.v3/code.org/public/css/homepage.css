@@ -386,6 +386,12 @@ body.modal-open .supreme-container{
   border-color: lightgrey;
 }
 
+#homepage #actions .herohocbutton-solid-black {
+  color: white;
+  background-color: black;
+  border-color: black;
+}
+
 #homepage #actions .herohocbutton-hollow-white {
   background-color: initial;
   border-color: white;
@@ -689,9 +695,4 @@ body.modal-open .supreme-container{
   font-family: 'Gotham 5r', sans-serif;
   padding-top: 20px;
   padding-bottom: 20px;
-}
-
-#homepage .vertical-stack .herohocbutton{
-  background: black !important;
-  border-color: black !important;
 }
