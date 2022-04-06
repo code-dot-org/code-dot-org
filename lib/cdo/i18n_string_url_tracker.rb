@@ -69,7 +69,7 @@ class I18nStringUrlTracker
     # Return if DCDO flag is unset, or we get incomplete info
     return unless DCDO.get(I18N_STRING_TRACKING_DCDO_KEY, false)
     return unless url && source
-    return unless string_key_exists? string_key
+    return unless self.class.string_key_exists? string_key
 
     # Skip URLs we are not interested in.
     return unless allowed(url)
