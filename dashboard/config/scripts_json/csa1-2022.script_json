@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-01 19:27:48 UTC",
+    "serialized_at": "2022-04-05 13:54:34 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5598,6 +5598,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3-L0_2022"
+        ],
         "progression": "Investigate: The Painter"
       },
       "bonus": false,
@@ -7120,6 +7123,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 1 Assessment 2022"
+        ],
         "progression": "Unit 1 Assessment"
       },
       "bonus": false,
