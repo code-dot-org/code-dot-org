@@ -13,6 +13,11 @@ def add_course_offering_for_all
     next if script.family_name && script.version_year && script.is_course
 
     temp_script_name = script.name.downcase.tr('_ ', '-')
+    existing_co = CourseOffering.find_by(key: temp_script_name)
+    while existing_co
+      temp_script_name += "-1"
+      existing_co = CourseOffering.find_by(key: temp_script_name)
+    end
     script.family_name = temp_script_name unless script.family_name
     script.version_year = "unversioned" unless script.version_year
     script.is_course = true
@@ -28,6 +33,11 @@ def add_course_offering_for_all
     next if ug.family_name && ug.version_year
 
     temp_ug_name = ug.name.downcase.tr('_ ', '-')
+    existing_co = CourseOffering.find_by(key: temp_ug_name)
+    while existing_co
+      temp_ug_name += "-1"
+      existing_co = CourseOffering.find_by(key: temp_ug_name)
+    end
     ug.family_name =  temp_ug_name unless ug.family_name
     ug.version_year = "unversioned" unless ug.version_year
 
