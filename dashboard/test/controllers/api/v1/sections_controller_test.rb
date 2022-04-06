@@ -858,18 +858,6 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_not_nil UserScript.find_by(script: @script, user: student)
   end
 
-  test "update: can set script from nested script param" do
-    sign_in @teacher
-    section = create(:section, user: @teacher, script_id: @script_in_preview_state.id)
-    post :update, as: :json, params: {
-      id: section.id,
-      script_id: @script.id
-    }
-    assert_response :success
-    section.reload
-    assert_equal(@script.id, section.script_id)
-  end
-
   test 'logged out cannot delete a section' do
     delete :destroy, params: {id: @section.id}
     assert_response :forbidden
