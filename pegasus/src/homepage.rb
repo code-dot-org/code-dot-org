@@ -187,7 +187,7 @@ class Homepage
 
   def self.get_num_columns
     custom_banner = get_announcement_for_page("homepage")
-    if custom_banner && custom_banner["leftBar"] && custom_banner["rightBar"]
+    if custom_banner && custom_banner["leftImage"] && custom_banner["rightImage"]
       return 3
     end
 
@@ -196,8 +196,8 @@ class Homepage
 
   def self.get_outer_column_images
     custom_banner = get_announcement_for_page("homepage")
-    if custom_banner && custom_banner["leftBar"] && custom_banner["rightBar"]
-      return {left_image: custom_banner["leftBar"], right_image: custom_banner["rightBar"]}
+    if custom_banner && custom_banner["leftImage"] && custom_banner["rightImage"]
+      return {left_image: custom_banner["leftImage"], right_image: custom_banner["rightImage"]}
     end
 
     nil
