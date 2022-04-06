@@ -266,7 +266,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     script_id = params[:script_id]
 
     if script_id
-      return head :bad_request unless Script.valid_unit_id?(current_user, script_id)
+      return head :forbidden unless Script.valid_unit_id?(current_user, script_id)
       @unit = Script.get_from_cache(script_id)
       return head :bad_request if @unit.nil?
       # If given a course and script, make sure the script is in that course
@@ -275,7 +275,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
       course_id ||= @unit.unit_group.try(:id)
       @course = UnitGroup.get_from_cache(course_id) if course_id
     elsif course_id
-      return head :bad_request unless UnitGroup.valid_course_id?(course_id, current_user)
+      return head :forbidden unless UnitGroup.valid_course_id?(course_id, current_user)
       @course = UnitGroup.get_from_cache(params[:course_id].to_i)
     end
   end
