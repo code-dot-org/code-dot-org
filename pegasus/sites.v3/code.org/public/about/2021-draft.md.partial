@@ -265,9 +265,9 @@ The table below shows the total cost breakdown of our headline achievements sinc
 
 
 <h2 class="purple-block">Our generous donors</h2>
-Code.org® is dedicated to the vision that every student in every school should have the opportunity to learn computer science. We are supported by philanthropic donations from corporations, foundations, and generous individuals. Code.org is a public 501c3. All donations to Code.org are tax-deductible.
+Code.org® is dedicated to the vision that every student in every school should have the opportunity to learn computer science. We are supported by a dynamic community of corporate, institutional, and individual donors. Code.org is a public 501(c)(3) non-profit organization. All charitable contributions to Code.org are tax-deductible to the extent permitted by law.
 
-Code.org gratefully acknowledges the following supporters who have made generous commitments of $1,000 and above to support Code.org's fiscal year 2021 (January 1, 2021 - December 31, 2021). If you have any questions, please contact the Office of Development at <a href="mailto:giving@code.org">giving@code.org</a> or (206) 593-5521.
+Code.org gratefully acknowledges the following supporters who have made generous commitments of $1,000 and above to support Code.org's fiscal year 2021 (January 1, 2021 - December 31, 2021). For more information or to learn how to partner with Code.org, please contact the Office of Development at <giving@code.org> or (206) 593-5521.
 
 <h2>Platinum Supporters ($3,000,000+)</h2>
   <table class="donors featured">
@@ -322,7 +322,7 @@ Code.org gratefully acknowledges the following supporters who have made generous
         <th width="50%"><strong>Individual Supporters</strong></th>
       </tr>
       <tr>
-        <th colspan="2" class="sub">$500,000+ Silver</th>
+        <th colspan="2" class="sub">$500,000+</th>
       </tr>
       <tr>
         <td>Atlassian Foundation International</td>
@@ -364,7 +364,7 @@ Code.org gratefully acknowledges the following supporters who have made generous
         <td>Anonymous (2)</td>
       </tr>
       <tr>
-        <th colspan="2" class="sub">$100,000+ Bronze</th>
+        <th colspan="2" class="sub">$100,000+</th>
       </tr>
       <tr>
         <td>Accenture</td>
@@ -430,7 +430,7 @@ Code.org gratefully acknowledges the following supporters who have made generous
         <td>&nbsp;</td>
       </tr>
       <tr>
-        <th colspan="2" class="sub">$25,000+ Supporters</th>
+        <th colspan="2" class="sub">$25,000+</th>
       </tr>
       <tr>
         <td>Deel, Inc.</td>
