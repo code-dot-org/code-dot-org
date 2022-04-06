@@ -13,13 +13,15 @@
           "visibility": "Teacher-only"
         }
       ],
+      "is_course": true,
       "is_migrated": true,
       "professional_learning_course": "CSP Support",
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-11-22 19:56:40 UTC",
+    "family_name": "csp5-support",
+    "serialized_at": "2022-04-06 02:48:54 UTC",
     "published_state": "deprecated",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

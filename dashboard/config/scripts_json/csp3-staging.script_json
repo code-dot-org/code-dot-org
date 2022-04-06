@@ -7,12 +7,14 @@
       "curriculum_umbrella": "CSP",
       "has_verified_resources": true,
       "hideable_lessons": true,
+      "is_course": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-11-22 19:56:35 UTC",
+    "family_name": "csp3-staging",
+    "serialized_at": "2022-04-06 02:48:49 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -4460,7 +4462,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_affirmation_control_3",
+        "level.key": "csp_affirmation_intervention_3",
         "script_level.level_keys": [
           "csp_affirmation_control_3",
           "csp_affirmation_intervention_3"
@@ -4473,7 +4475,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_affirmation_intervention_3",
+        "level.key": "csp_affirmation_control_3",
         "script_level.level_keys": [
           "csp_affirmation_control_3",
           "csp_affirmation_intervention_3"

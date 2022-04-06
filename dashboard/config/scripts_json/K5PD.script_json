@@ -13,12 +13,14 @@
           "visibility": "Teacher and student"
         }
       ],
+      "is_course": true,
       "is_migrated": true,
-      "professional_learning_course": "K5 Support"
+      "professional_learning_course": "K5 Support",
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-11-22 19:55:41 UTC",
+    "family_name": "K5PD",
+    "serialized_at": "2022-04-06 02:47:40 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
