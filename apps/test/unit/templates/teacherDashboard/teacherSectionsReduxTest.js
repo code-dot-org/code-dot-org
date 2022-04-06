@@ -68,7 +68,7 @@ const sections = [
     tts_autoplay_enabled: false,
     pairing_allowed: true,
     sharing_disabled: false,
-    script: null,
+    script_id: null,
     course_id: 29,
     createdAt: createdAt,
     studentCount: 10,
@@ -87,10 +87,7 @@ const sections = [
     tts_autoplay_enabled: false,
     pairing_allowed: true,
     sharing_disabled: false,
-    script: {
-      id: 36,
-      name: 'course3'
-    },
+    script_id: 36,
     course_id: null,
     createdAt: createdAt,
     studentCount: 1,
@@ -109,10 +106,7 @@ const sections = [
     tts_autoplay_enabled: false,
     pairing_allowed: false,
     sharing_disabled: false,
-    script: {
-      id: 112,
-      name: 'csp1-2017'
-    },
+    script_id: 112,
     course_id: 29,
     createdAt: createdAt,
     studentCount: 0,
@@ -585,7 +579,7 @@ describe('teacherSectionsRedux', () => {
   });
 
   describe('beginEditingSection', () => {
-    it('populates sectionBeingEdited is no section provided', () => {
+    it('populates sectionBeingEdited if no section provided', () => {
       assert.isNull(initialState.sectionBeingEdited);
       const state = reducer(initialState, beginEditingSection());
       assert.deepEqual(state.sectionBeingEdited, {
@@ -601,6 +595,9 @@ describe('teacherSectionsRedux', () => {
         studentCount: 0,
         code: '',
         courseId: null,
+        courseOfferingId: null,
+        courseVersionId: null,
+        unitId: null,
         scriptId: null,
         hidden: false,
         isAssigned: undefined,
@@ -945,7 +942,7 @@ describe('teacherSectionsRedux', () => {
           courseOfferingId: undefined,
           courseVersionId: undefined,
           unitId: undefined,
-          scriptId: null,
+          scriptId: undefined,
           createdAt: createdAt,
           hidden: false,
           isAssigned: undefined,
@@ -1343,7 +1340,7 @@ describe('teacherSectionsRedux', () => {
       code: 'PMTKVH',
       lesson_extras: false,
       pairing_allowed: true,
-      script: null,
+      script_id: null,
       course_id: 29,
       createdAt: createdAt,
       studentCount: 10,
@@ -1387,10 +1384,7 @@ describe('teacherSectionsRedux', () => {
 
       const sectionWithScript = sectionFromServerSection({
         ...serverSection,
-        script: {
-          id: 1,
-          name: 'Accelerated Course'
-        }
+        script_id: 1
       });
       assert.strictEqual(sectionWithScript.scriptId, 1);
     });
@@ -1413,7 +1407,7 @@ describe('teacherSectionsRedux', () => {
       serverSection: {
         ...sections[1],
         course_id: null,
-        script: null
+        script_id: null
       }
     });
     const stateWithInvalidScriptAssignment = reducer(stateWithSections, {
@@ -1422,7 +1416,7 @@ describe('teacherSectionsRedux', () => {
       serverSection: {
         ...sections[1],
         course_id: null,
-        script: {id: 35, name: 'netsim'}
+        script_id: 35
       }
     });
     const stateWithInvalidCourseAssignment = reducer(stateWithSections, {
@@ -1431,7 +1425,7 @@ describe('teacherSectionsRedux', () => {
       serverSection: {
         ...sections[1],
         course_id: 9999,
-        script: null
+        script_id: null
       }
     });
 
