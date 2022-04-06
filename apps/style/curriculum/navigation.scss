@@ -28,6 +28,14 @@
       color: $white;
     }
 
+    .doc-links {
+      display: none;
+    }
+
+    &.open .doc-links {
+      display: block;
+    }
+
     .nav-link {
       background-color: $white;
       padding: 8px;
