@@ -322,9 +322,9 @@ const styles = {
       backgroundColor: color.teal
     },
     [NotificationType.bullhorn]: {
-      borderColor: color.teal,
-      color: color.teal,
-      backgroundColor: color.teal
+      borderColor: color.red,
+      color: color.red,
+      backgroundColor: color.red
     },
     [NotificationType.feedback]: {
       borderColor: color.purple,
