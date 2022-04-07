@@ -2,7 +2,9 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import {assert, expect} from '../../../util/reconfiguredChai';
-import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
+import AssignmentSelector, {
+  getCourseOfferingsByCategory
+} from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
 import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
 const defaultProps = {
@@ -135,6 +137,33 @@ const hiddenSectionProps = {
 };
 
 describe('AssignmentSelector', () => {
+  it('getCourseOfferingsByCategory gets the right course offerings', () => {
+    let courseOfferingsByCategory = getCourseOfferingsByCategory(
+      defaultProps.courseOfferings
+    );
+
+    assert.deepEqual(Object.keys(courseOfferingsByCategory), [
+      'hoc',
+      'full_course',
+      'csf',
+      'self_paced_pl',
+      'virtual_pl'
+    ]);
+    assert.deepEqual(
+      courseOfferingsByCategory['full_course'].map(s => s.display_name),
+      ['Computer Science A', 'Computer Science Discoveries']
+    );
+    // Hello World and Poem Art at featured so they show up before non-featured
+    assert.deepEqual(
+      courseOfferingsByCategory['hoc'].map(s => s.display_name),
+      ['Hello World', 'Poem Art', 'Artist', 'Flappy']
+    );
+    assert.deepEqual(
+      courseOfferingsByCategory['csf'].map(s => s.display_name),
+      ['Course A']
+    );
+  });
+
   it('defaults to one dropdown, no selection when no section is provided', () => {
     const wrapper = shallow(
       <AssignmentSelector {...defaultProps} section={null} />
@@ -514,7 +543,7 @@ describe('AssignmentSelector', () => {
 
     it('disables the primary dropdown', () => {
       const firstDropdown = wrapper.find('select').at(0);
-      expect(firstDropdown).to.have.prop('disabled', true);
+      expect(firstDropdown.props().disabled).to.equal(true);
     });
 
     it('disables the secondary dropdown', () => {
@@ -523,7 +552,7 @@ describe('AssignmentSelector', () => {
         .at(0)
         .simulate('change', {target: {value: 'csd'}});
       const secondDropdown = wrapper.find('select').at(1);
-      expect(secondDropdown).to.have.prop('disabled', true);
+      expect(secondDropdown.props().disabled).to.equal(true);
     });
   });
 });
