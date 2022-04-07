@@ -20698,7 +20698,7 @@ en:
               key: Algorithms Solve Problems
               name: Algorithms Solve Problems
               description_student: Learn how computer scientists think about problems and the way different algorithms can be designed to solve them.
-              description_teacher: Students will complete two exploratory activities that introduce the concept of a problem and an algorithm. In the first students answer a series of questions about birthdates and names of their classmates. They then discuss the similarities and differences between the problems. In the second activity students are given six different algorithms and must analyze them to determine which they think are the same or different. At the end of the lesson they are introduced to the formal definitions of a problem and an algorithm.
+              description_teacher: Students will complete two exploratory activities that introduce the concept of a problem and an algorithm. In the first students answer a series of questions about birthdates and names of their classmates. They then discuss the similarities and differences between the problems. In the second activity students are given six different algorithms and must analyze them to determine which they think are the same or different. At the end of the lesson they are introduced to the formal definitions of a problem and an algorithm. <a href="studio.code.org/s/csp6-2021">CSP Unit 6</a>
             Algorithm Efficiency:
               key: Algorithm Efficiency
               name: Algorithm Efficiency
@@ -33770,7 +33770,7 @@ en:
             lesson-5:
               name: Preparing for the Year
               description_student: "**You will:**\n\n* Create your class sections in Code Studio. \n* Assign content to your class sections. \n* Prepare for the first day of class. \n\n**Suggested time:** 60 minutes"
-              description_teacher: "**Overview:**\nThese asynchronous activities will walk participants through the steps of creating a class section in Code Studio. Participants will also be promoted to make a plan for getting their students set up in Code Studio. The goal is for participants to feel ready for the first day of class. \n\n**Participants will:**\n\n* Create your class sections in Code Studio. \n* Assign content to your class sections. \n* Prepare for the first day of class. \n\n**Suggested time:** 60 minutes"
+              description_teacher: "**Overview:**\nThese asynchronous activities will walk participants through the steps of creating a class section in Code Studio. Participants will also be promoted to make a plan for getting their students set up in Code Studio. The goal is for participants to feel ready for the first day of class. \n\n**Participants will:**\n\n* Create their class sections in Code Studio. \n* Assign content to their class sections. \n* Prepare for the first day of class. \n\n**Suggested time:** 60 minutes"
             lesson-6:
               name: Asynchronous Debrief
               description_student: "**You will:**\n\n* Discuss questions that came up during the asynchronous time. \n* Reflect on the content introduced in the asynchronous activities. \n* Share ideas with the cohort. "

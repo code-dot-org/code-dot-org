@@ -175,7 +175,6 @@ class FilesTest < FilesApiTestBase
     DCDO.stubs(:get).with('disallowed_html_tags', []).returns(['script', 'meta[http-equiv]'])
     DCDO.stubs(:get).with('s3_timeout', 15).returns(15)
     DCDO.stubs(:get).with('s3_slow_request', 15).returns(15)
-    DCDO.stubs(:get).with('user_storage_ids_in_dashboard', false).returns(false)
 
     filename = 'index.html'
     # The below HTML is valid/invalid in WebLab projects only. Other project types do not
