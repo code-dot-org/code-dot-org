@@ -297,11 +297,11 @@ class ProgrammingExpression < ApplicationRecord
     # As there's no (current) problem with an expression not having a category,
     # stop there. It won't appear in navigation but will still be valid
     new_category = nil
-    if new_category_key.blank?
+    if new_category_key
+      new_category = new_env.categories.find_by_key(new_category_key)
+    else
       new_category ||= new_env.categories.find_by_key(programming_environment_category&.key)
       new_category ||= new_env.categories.find_by_name(programming_environment_category&.name)
-    else
-      new_category = new_env.categories.find_by_key(new_category_key)
     end
 
     new_exp = dup

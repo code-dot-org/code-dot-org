@@ -14,7 +14,7 @@ class ProgrammingExpressionsController < ApplicationController
       {id: env.id, name: env.name, title: env.title, published: env.published, editPath: edit_programming_environment_path(env.name)}
     end
     @all_categories = ProgrammingEnvironmentCategory.all.map do |cat|
-      {id: cat.id, key: cat.key, envId: cat.programming_environment.id, envName: cat.programming_environment.name, name: cat.name, formattedName: "#{cat.programming_environment.title}:#{cat.name}"}
+      {id: cat.id, key: cat.key, environmentId: cat.programming_environment.id, environmentName: cat.programming_environment.name, name: cat.name, formattedName: cat.name_with_environment}
     end
   end
 
@@ -124,7 +124,7 @@ class ProgrammingExpressionsController < ApplicationController
     end
   end
 
-  # POST /programming_expression/:id/clone
+  # POST /programming_expressions/:id/clone
   def clone
     return render :not_found unless @programming_expression
     return render(status: not_acceptable, plain: 'Must provide destination programming environment') unless params[:destinationProgrammingEnvironmentName]
