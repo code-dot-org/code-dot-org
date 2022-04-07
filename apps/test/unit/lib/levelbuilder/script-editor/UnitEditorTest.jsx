@@ -554,8 +554,8 @@ describe('UnitEditor', () => {
       $.ajax.restore();
     });
 
-    it('does not shows error when moving standalone unit out of in development if professional learning course', () => {
-      sinon.stub($, 'ajax');
+    it('saves successfully when moving standalone unit out of in development if professional learning course', () => {
+      sinon.stub(window, 'confirm').callsFake(() => true);
       const wrapper = createWrapper({initialIsCourse: false, hasCourse: false});
 
       const unitEditor = wrapper.find('UnitEditor');
@@ -564,6 +564,14 @@ describe('UnitEditor', () => {
         professionalLearningCourse: 'new-pl-course'
       });
 
+      let returnData = {scriptPath: '/s/test-unit'};
+      let server = sinon.fakeServer.create();
+      server.respondWith('PUT', `/s/1`, [
+        200,
+        {'Content-Type': 'application/json'},
+        JSON.stringify(returnData)
+      ]);
+
       const saveBar = wrapper.find('SaveBar');
 
       const saveAndKeepEditingButton = saveBar.find('button').at(1);
@@ -571,23 +579,24 @@ describe('UnitEditor', () => {
         .true;
       saveAndKeepEditingButton.simulate('click');
 
-      //UPDate away from errors
-      expect($.ajax).to.not.have.been.called;
+      // check the the spinner is showing
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
+      expect(unitEditor.state().isSaving).to.equal(true);
 
+      clock = sinon.useFakeTimers(new Date('2020-12-01'));
+      const expectedLastSaved = Date.now();
+      server.respond();
+      clock.tick(50);
+
+      unitEditor.update();
+      expect(utils.navigateToHref).to.not.have.been.called;
       expect(unitEditor.state().isSaving).to.equal(false);
-      expect(unitEditor.state().error).to.equal(
-        'Standalone units that are not in development must be a standalone unit with family name and version year.'
-      );
-
-      expect(
-        wrapper
-          .find('.saveBar')
-          .contains(
-            'Error Saving: Standalone units that are not in development must be a standalone unit with family name and version year.'
-          )
-      ).to.be.true;
-
-      $.ajax.restore();
+      expect(unitEditor.state().lastSaved).to.equal(expectedLastSaved);
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
+      //check that last saved message is showing
+      expect(wrapper.find('.lastSavedMessage').length).to.equal(1);
+      server.restore();
+      window.confirm.restore();
     });
 
     it('shows error when family name is set but version year is not', () => {
