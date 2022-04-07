@@ -75,8 +75,8 @@ class CoursesAToF extends Component {
 const LegacyCSFNotification = () => (
   <NotificationResponsive
     type="bullhorn"
-    notice={i18n.courseBlocksLegacyNotificationSupportEndedHeading()}
-    details={i18n.courseBlocksLegacyNotificationSupportEndedBody()}
+    notice={i18n.courseBlocksLegacyNotificationHeading()}
+    details={i18n.courseBlocksLegacyNotificationBody()}
     detailsLinkText={i18n.courseBlocksLegacyNotificationDetailsLinkText()}
     detailsLink={pegasus('/educate/curriculum/csf-transition-guide')}
     detailsLinkNewWindow={true}
