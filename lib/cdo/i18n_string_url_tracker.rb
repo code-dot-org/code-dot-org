@@ -69,7 +69,7 @@ class I18nStringUrlTracker
     # Return if DCDO flag is unset, or we get incomplete info
     return unless DCDO.get(I18N_STRING_TRACKING_DCDO_KEY, false)
     return unless url && source
-    return unless self.class.string_key_exists? string_key
+    return unless self.class.string_key_exists? string_key, scope
 
     # Skip URLs we are not interested in.
     return unless allowed(url)
@@ -90,11 +90,29 @@ class I18nStringUrlTracker
     add_to_buffer(normalized_key, logged_url, source, string_key.to_s, stringified_scope, separator)
   end
 
-  def self.string_key_exists?(string_key)
+  def self.string_key_exists?(string_key, scope = nil)
     # By default, I18n.exists? returns true if the input key is nil,
     # but raises exception if the key is an empty string.
     return false if string_key.nil? || string_key.empty?
-    I18n.exists? string_key, locale: I18n.default_locale
+
+    if scope.nil? || scope.empty?
+      I18n.exists? string_key, locale: I18n.default_locale
+    else
+      options = {
+        locale: I18n.default_locale,
+        scope: scope,
+        # choose potential separators for the scope
+        smart: true,
+        # don't report error if there is unused interpolation pattern in the translation
+        safe_interpolation: false,
+        # don't track string translation request
+        tracking: false,
+        # raise error if translation is missing
+        raise: true
+      }
+      source_string = I18n.t(string_key, **options) rescue nil
+      !source_string.nil?
+    end
   end
 
   private
