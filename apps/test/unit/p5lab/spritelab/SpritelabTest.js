@@ -151,7 +151,7 @@ describe('SpriteLab', () => {
           orderedKeys: ['2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2'],
           propsByKey: {
             '2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2': {
-              name: 'cave'
+              name: 'bee'
             }
           }
         };
