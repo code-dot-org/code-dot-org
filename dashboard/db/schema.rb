@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_25_185859) do
+ActiveRecord::Schema.define(version: 2022_04_07_200052) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1411,6 +1411,7 @@ ActiveRecord::Schema.define(version: 2022_03_25_185859) do
     t.string "external_link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "overloaded_by"
     t.index ["key", "programming_class_id"], name: "index_programming_methods_on_key_and_programming_class_id", unique: true
   end
 
