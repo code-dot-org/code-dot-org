@@ -215,3 +215,6 @@ Resources:
             Id: Backup
             Prefix: ''
             Status: Enabled
+            # Objects deleted from source will NOT be deleted from destination
+            DeleteMarkerReplication:
+              Status: Disabled
