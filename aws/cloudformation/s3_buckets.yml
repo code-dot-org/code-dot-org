@@ -211,7 +211,7 @@ Resources:
               Bucket: arn:aws:s3:::cdo-backup-offsite
               AccessControlTranslation:
                 Owner: Destination
-              StorageClass: STANDARD
+              StorageClass: STANDARD_IA
             Id: Backup
             Prefix: ''
             Status: Enabled
