@@ -228,6 +228,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.cdoUtils = {
     setHSV: function(block, h, s, v) {
       block.setHSV(h, s, v);
+    },
+    getBlockFields: function(block) {
+      return block.getTitles();
     }
   };
   return blocklyWrapper;
