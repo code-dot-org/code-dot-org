@@ -1618,10 +1618,7 @@ applabCommands.openUrl = function(opts) {
         hostname = hostname.slice(protocol.length);
       }
     });
-    if (
-      hostname.startsWith('studio.code.org') ||
-      hostname.startsWith('code.org')
-    ) {
+    if (['studio.code.org', 'code.org'].includes(hostname)) {
       if (opts.url.startsWith('http')) {
         window.open(opts.url);
       } else {
