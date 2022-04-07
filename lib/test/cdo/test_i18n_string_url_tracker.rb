@@ -305,15 +305,24 @@ class TestI18nStringUrlTracker < Minitest::Test
   def test_string_key_exists
     custom_i18n = {
       simple_string: "hello",
-      interpolated_string: "unit %{n}"
+      interpolated_string: "unit %{n}",
+      parent_key: {
+        child_key: 'test'
+      }
     }
     I18n.backend.store_translations I18n.default_locale, custom_i18n
 
     assert_equal false, I18nStringUrlTracker.string_key_exists?(nil)
     assert_equal false, I18nStringUrlTracker.string_key_exists?('')
     assert_equal false, I18nStringUrlTracker.string_key_exists?('invalid_string_key')
+
     assert_equal true, I18nStringUrlTracker.string_key_exists?('simple_string')
     assert_equal true, I18nStringUrlTracker.string_key_exists?('interpolated_string')
+
+    assert_equal true, I18nStringUrlTracker.string_key_exists?('parent_key.child_key')
+    assert_equal true, I18nStringUrlTracker.string_key_exists?('child_key', 'parent_key')
+    assert_equal true, I18nStringUrlTracker.string_key_exists?('child_key', ['parent_key'])
+    assert_equal false, I18nStringUrlTracker.string_key_exists?('invalid_child_key', ['parent_key'])
   end
 end
 
