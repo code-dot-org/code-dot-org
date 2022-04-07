@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import color from '@cdo/apps/util/color';
 
-export default function MethodToken({method, updateMethod}) {
+export default function MethodNameEditor({method, updateMethod}) {
   return (
     <div>
       <label>
@@ -17,7 +17,7 @@ export default function MethodToken({method, updateMethod}) {
   );
 }
 
-MethodToken.propTypes = {
+MethodNameEditor.propTypes = {
   method: PropTypes.object.isRequired,
   updateMethod: PropTypes.func.isRequired
 };
