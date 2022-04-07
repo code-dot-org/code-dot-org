@@ -26,7 +26,7 @@
           "text": "homepage_thebadguys_body"
         },
         {
-          "type": "cta_button_solid_yellow",
+          "type": "cta_button_solid_black",
           "text": "homepage_action_text_try_it",
           "url": "/thebadguys"
         }
