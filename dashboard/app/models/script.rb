@@ -380,17 +380,6 @@ class Script < ApplicationRecord
     end
   end
 
-  # @param user [User]
-  # @returns [Boolean] Whether the user can assign this unit.
-  # Users should only be able to assign one of their valid units.
-  # This includes the units that are assignable for everyone as well
-  # as unit that might be assignable based on users permissions
-  def assignable_for_user?(user)
-    if user&.teacher?
-      Script.valid_unit_id?(user, id)
-    end
-  end
-
   # @param [User] user
   # @param script_id [String] id of the unit we're checking the validity of
   # @return [Boolean] Whether this is a valid unit ID
@@ -1515,11 +1504,12 @@ class Script < ApplicationRecord
       show_course_unit_version_warning: !unit_group&.has_dismissed_version_warning?(user) && has_older_course_progress,
       show_script_version_warning: !user_unit&.version_warning_dismissed && !has_older_course_progress && has_older_unit_progress,
       versions: summarize_versions(user, locale_code),
+      course_versions: summarize_course_versions(user, locale_code),
       supported_locales: supported_locales,
       section_hidden_unit_info: section_hidden_unit_info(user),
       pilot_experiment: get_pilot_experiment,
       editor_experiment: editor_experiment,
-      show_assign_button: assignable_for_user?(user),
+      show_assign_button: course_assignable?(user),
       project_sharing: project_sharing,
       curriculum_umbrella: curriculum_umbrella,
       family_name: family_name,
@@ -1678,6 +1668,19 @@ class Script < ApplicationRecord
     data = summarize_i18n_for_edit(include_lessons)
     data[:title] = title_for_display
     data
+  end
+
+  # Returns summary object of all the course versions that an instructor can
+  # assign or all the launched versions a participant can view. 'course_assignable'
+  # will always return false for participants so they will fall into the second check for
+  # launched and can_view_version?. For instructors if course_assignable? is false then
+  # launched will also be false.
+  def summarize_course_versions(user = nil, locale_code = 'en-us')
+    return {} if unit_group
+
+    all_course_versions = course_version&.course_offering&.course_versions
+    course_versions_for_user = all_course_versions&.select {|cv| cv.course_assignable?(user) || (cv.launched? && cv.can_view_version?(user, locale: locale_code))}
+    course_versions_for_user&.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
   # Returns an array of objects showing the name and version year for all units

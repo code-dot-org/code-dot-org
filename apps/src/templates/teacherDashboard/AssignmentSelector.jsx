@@ -18,6 +18,21 @@ const noAssignment = assignmentId(null, null);
 const decideLater = '__decideLater__';
 const isValidAssignment = id => id !== noAssignment && id !== decideLater;
 
+export const getCourseOfferingsByCategory = courseOfferings => {
+  let orderedCourseOfferings = _.orderBy(courseOfferings, 'display_name');
+  orderedCourseOfferings = _.orderBy(
+    orderedCourseOfferings,
+    'is_featured',
+    'desc'
+  );
+  const courseOfferingsByCategories = _.groupBy(
+    orderedCourseOfferings,
+    'category'
+  );
+
+  return courseOfferingsByCategories;
+};
+
 const hasAssignmentFamily = (assignmentFamilies, assignment) =>
   assignment &&
   assignmentFamilies.some(
@@ -105,6 +120,14 @@ export default class AssignmentSelector extends Component {
 
     const {section, assignments} = props;
 
+    const selectedCourseOfferingId = section?.courseOfferingId
+      ? section.courseOfferingId
+      : noAssignment;
+    const selectedCourseVersionId = section?.courseVersionId
+      ? section.courseVersionId
+      : noAssignment;
+    const selectedUnitId = section?.unitId ? section.unitId : noAssignment;
+
     let selectedAssignmentFamily,
       versions,
       selectedPrimaryId,
@@ -131,6 +154,9 @@ export default class AssignmentSelector extends Component {
     }
 
     this.state = {
+      selectedCourseOfferingId,
+      selectedCourseVersionId,
+      selectedUnitId,
       selectedAssignmentFamily,
       versions: versions || [],
       selectedPrimaryId,
