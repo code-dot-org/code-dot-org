@@ -34,6 +34,10 @@ class ProgrammingMethod < ApplicationRecord
     self.key = key
   end
 
+  # Sanitize a string so that it conforms to key requirements
+  # We're using KEY_CHAR_RE from CurriculumHelper here except that paranthesis
+  # should have special handling. So, for example, turnLeft() should be turnleft
+  # and moveForward(int n) should be moveforward-int-n
   def self.sanitize_key(str)
     str = str.tr('(', ' ').tr(')', ' ').strip
     str.downcase.chars.map do |character|
