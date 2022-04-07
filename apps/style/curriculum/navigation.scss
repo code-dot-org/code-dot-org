@@ -3,13 +3,13 @@
 
 .nav-bar {
   margin-right: 5px;
-  min-width: 150px;
+  min-width: 200px;
   font-size: 14px;
   font-family: $gotham-extra-bold;
 
   .category {
     padding-left: 10px;
-    width: 150px;
+    width: 200px;
     height: 48px;
     display: flex;
     flex-direction: column;
@@ -40,6 +40,7 @@
       background-color: $white;
       padding: 8px;
       border-bottom: 2px solid $lightest_gray;
+      overflow-wrap: break-word;
     }
 
     .link {
