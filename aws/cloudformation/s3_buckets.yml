@@ -2,6 +2,11 @@ AWSTemplateFormatVersion: 2010-09-09
 Description: "S3 Buckets"
 Parameters:
   DeveloperAccount:
+    Description: AWS Account ID of the Developer Account
+    Type: String
+    NoEcho: true
+  OffsiteAccount:
+    Description: AWS Account ID of the Offsite Account
     Type: String
     NoEcho: true
 Resources:
@@ -185,3 +190,28 @@ Resources:
               {
                 AWS: [!Sub "arn:aws:iam::${DeveloperAccount}:role/DroneWorker"],
               }
+
+  OnsiteBackupBucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Retain
+    Properties:
+      BucketName: "cdo-backup"
+      VersioningConfiguration:
+        Status: "Enabled"
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      ReplicationConfiguration:
+        Role: !Sub arn:aws:iam::${AWS::AccountId}:role/s3BackupReplicationRole
+        Rules:
+          - Destination:
+              Account: !Ref OffsiteAccount
+              Bucket: arn:aws:s3:::cdo-backup-offsite
+              AccessControlTranslation:
+                Owner: Destination
+              StorageClass: STANDARD
+            Id: Backup
+            Prefix: ''
+            Status: Enabled

@@ -1,0 +1,46 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: "Offsite CDO Resources"
+
+Parameters:
+  OnsiteProdBackupRoleArn:
+    Type: String
+
+Resources:
+  OffsiteBackupBucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Retain
+    Properties:
+      BucketName: "cdo-backup-offsite-demo"
+      VersioningConfiguration:
+        Status: "Enabled"
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+
+  OffsiteBackupBucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref OffsiteBackupBucket
+      PolicyDocument:
+        Version: '2012-10-17'
+        Id: PolicyForDestinationBucket
+        Statement:
+          - Sid: Permissions on objects
+            Effect: Allow
+            Principal:
+              AWS: !Ref OnsiteProdBackupRoleArn
+            Action:
+              - s3:ReplicateDelete
+              - s3:ReplicateObject
+            Resource: !Sub ${OffsiteBackupBucket.Arn}/*
+          - Sid: Permissions on bucket
+            Effect: Allow
+            Principal:
+              AWS: !Ref OnsiteProdBackupRoleArn
+            Action:
+              - s3:List*
+              - s3:GetBucketVersioning
+              - s3:PutBucketVersioning
+            Resource: !Sub ${OffsiteBackupBucket.Arn}/*
