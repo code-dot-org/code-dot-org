@@ -40,7 +40,7 @@ class ProgrammingClassesController < ApplicationController
           method.update!(method_params.merge(position: i))
           method
         else
-          ProgrammingMethod.create!(method_params.merge(programming_class_id: @programming_class.id, position: 1))
+          ProgrammingMethod.create!(method_params.merge(programming_class_id: @programming_class.id, position: i))
         end
       end
     end
