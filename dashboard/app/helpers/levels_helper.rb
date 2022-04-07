@@ -367,14 +367,7 @@ module LevelsHelper
         end
       if section && section.first_activity_at.nil?
         section.first_activity_at = DateTime.now
-        # app_options is sometimes referenced from
-        # endpoints that are being redirected to the read
-        # connection (ScriptLevel#show, for example), so
-        # make sure that we're using the write connection
-        # here.
-        MultipleDatabasesTransitionHelper.use_writer_connection do
-          section.save(validate: false)
-        end
+        section.save(validate: false)
       end
       @app_options[:experiments] =
         Experiment.get_all_enabled(user: current_user, section: section, script: @script).pluck(:name)
