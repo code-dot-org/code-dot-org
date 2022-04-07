@@ -81,13 +81,14 @@ describe('UnitEditor', () => {
       initialProjectSharing: false,
       initialLocales: [],
       isMigrated: false,
-      initialPublishedState: PublishedState.beta,
+      initialPublishedState: PublishedState.in_development,
       initialInstructionType: InstructionType.teacher_led,
       initialInstructorAudience: InstructorAudience.teacher,
       initialParticipantAudience: ParticipantAudience.student,
       hasCourse: false,
       scriptPath: '/s/test-unit',
-      allowMajorCurriculumChanges: true
+      allowMajorCurriculumChanges: true,
+      initialProfessionalLearningCourse: ''
     };
   });
 
@@ -135,10 +136,14 @@ describe('UnitEditor', () => {
 
     it('disables changing student facing lesson plan checkbox when not allowed to make major curriculum changes', () => {
       const wrapper = createWrapper({
-        allowMajorCurriculumChanges: false,
-        isMigrated: true
+        initialPublishedState: 'stable',
+        isMigrated: true,
+        initialUseLegacyLessonPlans: false
       });
 
+      expect(
+        wrapper.find('.student-facing-lesson-plan-checkbox').length
+      ).to.equal(1);
       expect(
         wrapper.find('.student-facing-lesson-plan-checkbox').props().disabled
       ).to.equal(true);
@@ -511,6 +516,74 @@ describe('UnitEditor', () => {
           .find('.saveBar')
           .contains(
             'Error Saving: Please set both version year and family name.'
+          )
+      ).to.be.true;
+
+      $.ajax.restore();
+    });
+
+    it('shows error when moving standalone unit out of in development if not supplied all standalone unit information', () => {
+      sinon.stub($, 'ajax');
+      const wrapper = createWrapper({initialIsCourse: false, hasCourse: false});
+
+      const unitEditor = wrapper.find('UnitEditor');
+      unitEditor.setState({publishedState: 'beta'});
+
+      const saveBar = wrapper.find('SaveBar');
+
+      const saveAndKeepEditingButton = saveBar.find('button').at(1);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
+      saveAndKeepEditingButton.simulate('click');
+
+      expect($.ajax).to.not.have.been.called;
+
+      expect(unitEditor.state().isSaving).to.equal(false);
+      expect(unitEditor.state().error).to.equal(
+        'Standalone units that are not in development must be a standalone unit with family name and version year.'
+      );
+
+      expect(
+        wrapper
+          .find('.saveBar')
+          .contains(
+            'Error Saving: Standalone units that are not in development must be a standalone unit with family name and version year.'
+          )
+      ).to.be.true;
+
+      $.ajax.restore();
+    });
+
+    it('does not shows error when moving standalone unit out of in development if professional learning course', () => {
+      sinon.stub($, 'ajax');
+      const wrapper = createWrapper({initialIsCourse: false, hasCourse: false});
+
+      const unitEditor = wrapper.find('UnitEditor');
+      unitEditor.setState({
+        publishedState: 'beta',
+        professionalLearningCourse: 'new-pl-course'
+      });
+
+      const saveBar = wrapper.find('SaveBar');
+
+      const saveAndKeepEditingButton = saveBar.find('button').at(1);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
+      saveAndKeepEditingButton.simulate('click');
+
+      //UPDate away from errors
+      expect($.ajax).to.not.have.been.called;
+
+      expect(unitEditor.state().isSaving).to.equal(false);
+      expect(unitEditor.state().error).to.equal(
+        'Standalone units that are not in development must be a standalone unit with family name and version year.'
+      );
+
+      expect(
+        wrapper
+          .find('.saveBar')
+          .contains(
+            'Error Saving: Standalone units that are not in development must be a standalone unit with family name and version year.'
           )
       ).to.be.true;
 
