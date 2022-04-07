@@ -55,6 +55,10 @@ html[dir= 'rtl']  .left-tutorial{
   color: black;
 }
 
+.specific-tutorial-heading em {
+  font-family: 'Gotham 5i', sans-serif;
+}
+
 .tutorial-promo-container button {
   max-width: 100%;
   white-space: nowrap;
