@@ -98,6 +98,7 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
       course_course_name: @reference_guide.course_offering_version
     }
     assert_response :redirect
+    assert_redirected_to "/courses/#{@reference_guide_subcategory.course_offering_version}/guides/#{@reference_guide_subcategory.key}"
   end
 
   test_user_gets_response_for :show, params: -> {{course_course_name: @reference_guide.course_offering_version, key: 'unknown_ref_guide'}}, user: :student, response: :not_found
