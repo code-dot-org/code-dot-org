@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: "Offsite CDO Resources"
+Resources:
+  LogsBucket:
+    Type: "AWS::S3::Bucket"
+    Properties:
+      BucketName: "cdo-logs-offsite"
+      VersioningConfiguration:
+        Status: "Enabled"
+  OffsiteBackupBucket:
+    Type: "AWS::S3::Bucket"
+    Properties:
+      BucketName: "cdo-backup-offsite"
+      VersioningConfiguration:
+        Status: "Enabled"
+      LoggingConfiguration:
+        DestinationBucketName: !Ref LogsBucket
+        LogFilePrefix: "s3/cdo-backup-offsite"
