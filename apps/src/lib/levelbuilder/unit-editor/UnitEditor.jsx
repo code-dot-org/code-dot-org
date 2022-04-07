@@ -246,6 +246,7 @@ class UnitEditor extends React.Component {
       return;
     } else if (
       !this.props.hasCourse &&
+      this.state.professionalLearningCourse === '' &&
       this.state.publishedState !== PublishedState.in_development &&
       (!this.state.isCourse ||
         this.state.versionYear === '' ||
