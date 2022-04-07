@@ -9,6 +9,8 @@ def add_course_offering_for_all
 
   Script.all.each do |script|
     next if script.unit_group
+    next if script.old_professional_learning_course?
+    next if script.published_state == "in_development"
 
     next if script.family_name && script.version_year && script.is_course
 
