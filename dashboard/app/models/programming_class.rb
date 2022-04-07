@@ -59,6 +59,7 @@ class ProgrammingClass < ApplicationRecord
     programming_class = ProgrammingClass.find_or_initialize_by(key: properties[:key], programming_environment_id: properties[:programming_environment_id])
     programming_class.assign_attributes(properties.except(:methods))
     programming_class.save! if programming_class.changed?
+    # Now iterate through the method configs and create/update those entries
     programming_class.programming_methods =
       properties[:methods].map do |method_config|
         method = ProgrammingMethod.find_or_initialize_by(programming_class_id: programming_class.id, key: method_config['key'])
