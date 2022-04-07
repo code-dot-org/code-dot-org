@@ -8,6 +8,7 @@ import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {EditorState} from '@codemirror/state';
 import {EditorView} from '@codemirror/view';
 import TextAreaWithCode from '@cdo/apps/templates/instructions/codeReview/TextAreaWithCode';
+import TextAreaWithCodeButton from '@cdo/apps/templates/instructions/codeReview/TextAreaWithCodeButton';
 // import CodeMirror from 'codemirror';
 // import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 
@@ -84,6 +85,7 @@ export default class CommentEditor extends Component {
             fontFamily: '"Gotham 5r", sans-serif'
           }}
         />
+        <TextAreaWithCodeButton />
         <TextAreaWithCode />
         <textarea
           className="code-review-comment-input"
