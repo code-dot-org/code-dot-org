@@ -42,7 +42,7 @@
           = view :display_video_thumbnail, thumbnail_only: true, id: "mainvideo", video_code: entry[:youtube_id], image_url: entry[:image_url], play_button: 'center', letterbox: "false"
       - elsif entry[:type] == "text"
         .text{dir: "auto"}
-          != I18n.t(entry[:text], markdown: :inline)
+          != I18n.t(entry[:text], markdown: true)
       - elsif entry[:type] == "image"
         %img.image{src: entry[:url]}
       - elsif entry[:type] == "cta_link_white"
