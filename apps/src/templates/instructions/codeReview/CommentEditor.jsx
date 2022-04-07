@@ -5,6 +5,11 @@ import javalabMsg from '@cdo/javalab/locale';
 import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import {EditorState} from '@codemirror/state';
+import {EditorView} from '@codemirror/view';
+import TextAreaWithCode from '@cdo/apps/templates/instructions/codeReview/TextAreaWithCode';
+// import CodeMirror from 'codemirror';
+// import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 
 export default class CommentEditor extends Component {
   static propTypes = {
@@ -17,6 +22,16 @@ export default class CommentEditor extends Component {
   };
 
   state = {comment: ''};
+
+  componentDidMount() {
+    this.codeMirror = new EditorView({
+      state: EditorState.create({
+        doc: 'temp',
+        extensions: []
+      }),
+      parent: this.codeMirror
+    });
+  }
 
   commentChanged = event => {
     this.props.onCommentUpdate();
@@ -62,6 +77,14 @@ export default class CommentEditor extends Component {
 
     return (
       <div>
+        <div
+          ref={el => (this.codeMirror = el)}
+          style={{
+            border: '1px solid blue',
+            fontFamily: '"Gotham 5r", sans-serif'
+          }}
+        />
+        <TextAreaWithCode />
         <textarea
           className="code-review-comment-input"
           style={{width: '100%', boxSizing: 'border-box'}}
