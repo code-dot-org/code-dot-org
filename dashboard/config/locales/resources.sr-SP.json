@@ -14,6 +14,138 @@
           "name": "Cкретања и углови",
           "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
+        "lesson_plans/courseb/2018": {
+          "name": "План лекција"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "План лекција"
+        },
+        "lesson_plans/coursed/2018": {
+          "name": "План лекција"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "План лекција"
+        },
+        "lesson_plans/express/2018": {
+          "name": "План лекција"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "План лекција"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "План лекција"
+        },
+        "code_introduced_1/csd/2018": {
+          "name": "Код представљен"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "План лекција"
+        },
+        "code_introduced_3/csd/2018": {
+          "name": "Код представљен"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "План лекција"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "План лекција"
+        },
+        "code_introduced_2/csd/2018": {
+          "name": "Код представљен"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "План лекција"
+        },
+        "code_introduced/csd/2018": {
+          "name": "Код представљен"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "План лекција"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "План лекција"
+        },
+        "lesson_plans/coursea/2019": {
+          "name": "План лекција"
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "План лекција"
+        },
+        "lesson_plans/coursed/2019": {
+          "name": "План лекција"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "План лекција"
+        },
+        "lesson_plans/coursee/2019": {
+          "name": "План лекција"
+        },
+        "lesson_plans/express/2019": {
+          "name": "План лекција"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "План лекција"
+        },
+        "code_introduced_1/csd/2019": {
+          "name": "Код представљен"
+        },
+        "lesson_plans_2/csd/2019": {
+          "name": "План лекција"
+        },
+        "code_introduced_3/csd/2019": {
+          "name": "Код представљен"
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "План лекција"
+        },
+        "code_introduced_2/csd/2019": {
+          "name": "Код представљен"
+        },
+        "lesson_plans_3/csd/2019": {
+          "name": "План лекција"
+        },
+        "lesson_plans_4/csd/2019": {
+          "name": "План лекција"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "План лекција"
+        },
+        "code_introduced/csd/2019": {
+          "name": "Код представљен"
+        },
+        "lesson_plans_1/csd/2019": {
+          "name": "План лекција"
+        },
+        "code_introduced_1/csd/2017": {
+          "name": "Код представљен"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "План лекција"
+        },
+        "code_introduced_3/csd/2017": {
+          "name": "Код представљен"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "План лекција"
+        },
+        "code_introduced/csd/2017": {
+          "name": "Код представљен"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "План лекција"
+        },
+        "lesson_plans/csd/2017": {
+          "name": "План лекција"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "План лекција"
+        },
+        "code_introduced_2/csd/2017": {
+          "name": "Код представљен"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "План лекција"
+        },
         "unplugged-video-internet/coursef/2021": {
           "name": "Интернет"
         },
@@ -243,6 +375,30 @@
         },
         "lists/csd/2021": {
           "name": "Листе"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "План лекција"
+        },
+        "lesson_plans/express/2020": {
+          "name": "План лекција"
+        },
+        "lesson_plans/courseb/2020": {
+          "name": "План лекција"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "План лекција"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "План лекција"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "План лекција"
+        },
+        "lesson_plans/coursea/2020": {
+          "name": "План лекција"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "План лекција"
         }
       }
     }

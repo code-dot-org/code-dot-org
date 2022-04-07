@@ -983,19 +983,13 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
       .click(window.dashboard.popupWindow);
   }
 
-  var sharingInput = sharingDiv.querySelector('#sharing-input');
-  if (sharingInput) {
-    dom.addClickTouchEvent(sharingInput, function() {
-      sharingInput.focus();
-      sharingInput.select();
-      sharingInput.setSelectionRange(0, 9999);
-    });
-    var sharingInputCopyButton = sharingDiv.querySelector(
-      '#sharing-input-copy-button'
-    );
-    dom.addClickTouchEvent(sharingInputCopyButton, function() {
+  var sharingCopyButton = sharingDiv.querySelector(
+    '#sharing-dialog-copy-button'
+  );
+  if (sharingCopyButton) {
+    dom.addClickTouchEvent(sharingCopyButton, function() {
       copyToClipboard(options.shareLink, () => {
-        sharingInputCopyButton.className = 'sharing-input-copy-button-shared';
+        sharingCopyButton.className = 'sharing-dialog-copy-button-shared';
       });
     });
   }
@@ -1432,7 +1426,7 @@ FeedbackUtils.prototype.checkForEmptyContainerBlockFailure_ = function() {
     const emptyBlockInfo = emptyBlock.getProcedureInfo();
     const findUsages = block =>
       block.type === emptyBlockInfo.callType &&
-      block.getTitleValue('NAME') === emptyBlockInfo.name;
+      block.getFieldValue('NAME') === emptyBlockInfo.name;
 
     if (Blockly.mainBlockSpace.getAllUsedBlocks().filter(findUsages).length) {
       return TestResults.EMPTY_FUNCTION_BLOCK_FAIL;
@@ -1853,8 +1847,8 @@ FeedbackUtils.prototype.createModalDialog = function(options) {
  */
 FeedbackUtils.prototype.hasQuestionMarksInNumberField = function() {
   return Blockly.mainBlockSpace.getAllUsedBlocks().some(function(block) {
-    return block.getTitles().some(function(title) {
-      return title.value_ === '???' || title.text_ === '???';
+    return Blockly.cdoUtils.getBlockFields(block).some(function(field) {
+      return field.value_ === '???' || field.text_ === '???';
     });
   });
 };
@@ -1877,7 +1871,7 @@ FeedbackUtils.prototype.hasUnusedParam_ = function() {
             (block.type === 'parameters_get' ||
               block.type === 'functional_parameters_get' ||
               block.type === 'variables_get') &&
-            block.getTitleValue('VAR') === paramName
+            block.getFieldValue('VAR') === paramName
           );
         });
       })
@@ -1912,7 +1906,7 @@ FeedbackUtils.prototype.hasUnusedFunction_ = function() {
   var userDefs = [];
   var callBlocks = {};
   Blockly.mainBlockSpace.getAllUsedBlocks().forEach(function(block) {
-    var name = block.getTitleValue('NAME');
+    var name = block.getFieldValue('NAME');
     if (/^procedures_def/.test(block.type) && block.userCreated) {
       userDefs.push(name);
     } else if (/^procedures_call/.test(block.type)) {

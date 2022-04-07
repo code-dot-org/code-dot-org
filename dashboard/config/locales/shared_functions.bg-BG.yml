@@ -1,1 +1,21 @@
---- {}
+---
+bg:
+  data:
+    shared_functions:
+      driving with arrow keys: движение с стрелките
+      fluttering: пърхане
+      growing: растене
+      moving east: движение на изток
+      moving east and looping: движение на изток и циклене
+      moving north: движение на север
+      moving north and looping: движение на север и циклене
+      moving south: движение на юг
+      moving south and looping: движение на юг и циклене
+      moving west: движение на запад
+      moving west and looping: движение на запад и циклене
+      moving with arrow keys: местене със стрелките
+      patrolling: патрулиране
+      shrinking: смаляване
+      spinning left: въртене наляво
+      spinning right: въртене надясно
+      wandering: блуждаейки

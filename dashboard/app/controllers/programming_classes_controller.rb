@@ -13,6 +13,7 @@ class ProgrammingClassesController < ApplicationController
     end
     programming_class = ProgrammingClass.new(key: params[:key], name: params[:key], programming_environment_id: params[:programming_environment_id])
     if programming_class.save
+      programming_class.write_serialization
       redirect_to edit_programming_class_url(programming_class)
     else
       render :not_acceptable, json: programming_class.errors
@@ -34,6 +35,7 @@ class ProgrammingClassesController < ApplicationController
     @programming_class.programming_environment_category_id = programming_environment_category&.id
     begin
       @programming_class.save! if @programming_class.changed?
+      @programming_class.write_serialization
       render json: @programming_class.summarize_for_edit.to_json
     rescue ActiveRecord::RecordInvalid => e
       render(status: :not_acceptable, plain: e.message)

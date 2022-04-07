@@ -216,7 +216,10 @@ function removeNullValues(key, val) {
  * the server
  * @param {number} sectionId
  * @param {number} courseId
- * @param {number} scriptId
+ * @param {number} courseOfferingId
+ * @param {number} courseVersionId
+ * @param {number} unitId
+ * @param {string} pageType
  */
 export const assignToSection = (
   sectionId,
@@ -247,6 +250,8 @@ export const assignToSection = (
     dispatch(
       editSectionProperties({
         courseId: courseId,
+        courseOfferingId: courseOfferingId,
+        courseVersionId: courseVersionId,
         scriptId: unitId
       })
     );
@@ -265,7 +270,14 @@ export const unassignSection = (sectionId, location) => (
 ) => {
   dispatch(beginEditingSection(sectionId, true));
   const {initialCourseId, initialUnitId} = getState().teacherSections;
-  dispatch(editSectionProperties({courseId: '', scriptId: ''}));
+  dispatch(
+    editSectionProperties({
+      courseId: null,
+      courseOfferingId: null,
+      courseVersionId: null,
+      scriptId: null
+    })
+  );
   firehoseClient.putRecord(
     {
       study: 'assignment',
@@ -552,7 +564,7 @@ const initialState = {
   // with options like "CSD", "Course A", or "Frozen". See the
   // assignmentFamilyShape PropType.
   assignmentFamilies: [],
-  // Object of assignable course offerings to populate the assignment dropdown
+  // Array of course offerings, to populate the assignment dropdown
   // with options like "CSD", "Course A", or "Frozen". See the
   // assignmentCourseOfferingShape PropType.
   courseOfferings: {},
@@ -606,6 +618,9 @@ function newSectionData(id, loginType) {
     studentCount: 0,
     code: '',
     courseId: null,
+    courseOfferingId: null,
+    courseVersionId: null,
+    unitId: null,
     scriptId: null,
     hidden: false,
     isAssigned: undefined,
@@ -875,6 +890,8 @@ export default function teacherSections(state = initialState, action) {
       ...state,
       initialCourseId: initialSectionData.courseId,
       initialUnitId: initialSectionData.scriptId,
+      initialCourseOfferingId: initialSectionData.courseOfferingId,
+      initialCourseVersionId: initialSectionData.courseVersionId,
       initialLoginType: initialSectionData.loginType,
       sectionBeingEdited: initialSectionData,
       showSectionEditDialog: !action.silent
@@ -975,6 +992,12 @@ export default function teacherSections(state = initialState, action) {
     }
     if (section.courseId !== state.initialCourseId) {
       assignmentData.course_id = section.courseId;
+    }
+    if (section.courseOfferingId !== state.initialCourseOfferingId) {
+      assignmentData.course_offering_id = section.courseOfferingId;
+    }
+    if (section.courseVersionId !== state.initialCourseVersionId) {
+      assignmentData.course_version_id = section.courseVersionId;
     }
     if (
       // If either of these is not undefined, then assignment changed and should be logged
@@ -1248,9 +1271,7 @@ export const sectionFromServerSection = serverSection => ({
   courseVersionId: serverSection.course_version_id,
   unitId: serverSection.unit_id,
   courseId: serverSection.course_id,
-  scriptId: serverSection.script
-    ? serverSection.script.id
-    : serverSection.script_id || null,
+  scriptId: serverSection.script_id,
   hidden: serverSection.hidden,
   isAssigned: serverSection.isAssigned,
   restrictSection: serverSection.restrict_section,
@@ -1294,7 +1315,7 @@ export function serverSectionFromSection(section) {
     course_version_id: section.courseVersionId,
     unit_id: section.unitId,
     course_id: section.courseId,
-    script: section.scriptId ? {id: section.scriptId} : undefined,
+    script_id: section.scriptId,
     restrict_section: section.restrictSection
   };
 }

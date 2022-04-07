@@ -2,6 +2,8 @@
 ja:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: 新しくする {ANIMATION_NAME} スプライト {LOCATION}
       Dancelab_alternateMoves:
         text: |-
           {GROUP} は {MOVE1} と {MOVE2}
@@ -556,7 +558,6 @@ ja:
             '"fireworks"': 花火
             '"flowers"': フラワー
             '"growing_stars"': 成長する星
-            '"higher_power"': より高いパワー
             '"swirl"': ヒプノ
             '"kaleidoscope"': 万華鏡
             '"lasers"': レーザーのダンスフロア
@@ -1063,6 +1064,12 @@ ja:
         text: 線を描く {COLOR} {LOC1} {LOC2}
       gamelab_edgesDisplace:
         text: エッジ ブロック {SPRITE} 移動から
+      gamelab_everySeconds:
+        text: "{N} ごとに{UNIT} を繰り返します "
+        options:
+          UNIT:
+            '"seconds"': 秒
+            '"frames"': フレーム
       gamelab_followingTargets:
         text: ターゲットの後を追う
       gamelab_getAllSprites:
@@ -1217,6 +1224,8 @@ ja:
             '"pop"': ポップ
             '"rain"': 雨
             '"spiral"': スパイラル
+      gamelab_makeNewScaledSprite:
+        text: 新しくする {ANIMATION_NAME} スプライト {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: 新しくする {ANIMATION_NAME} スプライト {LOCATION}
       gamelab_makeNumSprites:

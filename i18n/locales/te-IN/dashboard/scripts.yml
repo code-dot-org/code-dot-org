@@ -26,6 +26,7 @@ te:
           lessons:
             Dance Party:
               name: డాన్స్ పార్టీ
+          name: డాన్స్
         dance--draft:
           lessons:
             Dance Party:
@@ -69,10 +70,6 @@ te:
           lesson_groups:
             csf_events:
               display_name: ఈవెంట్లు
-        dance-2019:
-          lessons:
-            Dance Party:
-              name: డాన్స్ పార్టీ
         k5-onlinepd-2019:
           lessons:
             Events:

@@ -6,15 +6,30 @@
     "hide_share_and_remix": "false",
     "submittable": "false",
     "csa_view_mode": "console",
-    "encrypted_examples": [
-
-    ]
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    FileReader myFileReader = new FileReader(\"catbreeds.txt\");\n    String[] catBreeds = myFileReader.readText(67);\n\n    Cats myCats = new Cats(catBreeds);\n    myCats.printCatBreeds();\n\n    // TO DO #2: Call the reverse() method to reverse the array.\n\n\n    // TO DO #3: Call the printCatBreeds() method to print the array.\n    \n    \n  }\n}",
+        "isVisible": true
+      },
+      "FileReader.java": {
+        "text": "import java.util.Scanner;\nimport java.io.File;\nimport java.io.FileNotFoundException;\n\n/*\n * Reads data from a file\n */\npublic class FileReader {\n  private Scanner input;  // The Scanner object for reading the data\n\n  /*\n   * Constructor to create a FileReader object with\n   * a specified filename\n   */\n  public FileReader(String newFileName) {\n    File newFile = new File(newFileName);\n    input = null;\n\n    createScanner(newFile);\n  }\n\n  /*\n   * Creates the input object with the specified file\n   * or notifies the user that the file is not found\n   */\n  public void createScanner(File newFile) {\n    try {\n      input = new Scanner(newFile);\n    } catch (FileNotFoundException error) {\n      System.out.println(\"File not found.\");\n    }\n  }\n\n  /*\n   * Creates a new File object from the specified filename\n   * and updates the input object with the new file\n   */\n  public void changeFile(String filename) {\n    File newFile = new File(filename);\n    createScanner(newFile);\n  }\n\n  /*\n   * Reads numValues integers from a file into\n   * an int 1D array and returns the array\n   */\n  public int[] readNumbers(int numValues) {\n    int[] values = new int[numValues];\n\n    for (int index = 0; index < values.length; index++) {\n      if (input.hasNextInt()) {\n        values[index] = input.nextInt();\n      }\n    }\n\n    input.close();\n    return values;\n  }\n\n  /*\n   * Reads numValues Strings from a file into\n   * an String 1D array and returns the array\n   */\n  public String[] readText(int numValues) {\n    String[] text = new String[numValues];\n\n    for (int index = 0; index < text.length; index++) {\n      if (input.hasNextLine()) {\n        text[index] = input.nextLine();\n      }\n    }\n\n    input.close();\n    return text;\n  }\n\n}",
+        "isVisible": true
+      },
+      "Cats.java": {
+        "text": "/*\n * Processes cat breeds in a String array\n */\npublic class Cats {\n\n  private String[] catBreeds;   // The 1D array of cat breeds\n\n  /*\n   * Constructor to create a NationalParks object with\n   * a specified list of park names\n   */\n  public Cats(String[] catBreeds) {\n    this.catBreeds = catBreeds;\n  }\n\n  /*\n   * Prints the names of the parks in the catBreeds array\n   */\n  public void printCatBreeds() {\n    for (String cat : catBreeds) {\n      System.out.println(cat);\n    }\n  }\n\n  /*\n   * Reverses the catBreeds array\n   */\n  public void reverse() {\n    // TO DO #1: Reverse the elements in the catBreeds array.\n\n\n    \n  }\n  \n}",
+        "isVisible": true
+      },
+      "catbreeds.txt": {
+        "text": "York Chocolate\nTurkish Van\nTurkish Angora\nToyger\nTonkinese\nSphynx\nSomali\nSnowshoe\nSingapura\nSiberian\nSiamese\nSelkirk Rex\nScottish Fold\nSavannah\nRussian Blue\nRagdoll\nRagamuffin\nPixie-bob\nPersian\nOriental\nOcicat\nNorwegian Forest Cat\nNebelung\nMunchkin\nManx\nMalayan\nMaine Coon\nLaPerm\nKurilian\nKorat\nKhao Manee\nJavanese\nJapanese Bobtail\nHimalayan\nHavana Brown\nExotic Shorthair\nEuropean Burmese\nEgyptian Mau\nDragon Li\nDonskoy\nDevon Rex\nCyprus\nCymric\nCornish Rex\nColorpoint Shorthair\nCheetoh\nChausie\nChartreux\nChantilly-Tiffany\nCalifornia Spangled\nBurmilla\nBurmese\nBritish Shorthair\nBritish Longhair\nBombay\nBirman\nBengal\nBambino\nBalinese\nAustralian Mist\nArabian Mau\nAmerican Wirehair\nAmerican Shorthair\nAmerican Curl\nAmerican Bobtail\nAegean\nAbyssinian",
+        "isVisible": true
+      }
+    }
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-03-25T13:04:39.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-03-25T13:04:39.473+00:00\",\"changed\":[\"cloned from \\\"CSA U3L9-L4c PBT_2022\\\"\"],\"cloned_from\":\"CSA U3L9-L4c PBT_2022\"},{\"changed_at\":\"2022-03-25 13:04:42 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-03-25T13:04:39.473+00:00\",\"changed\":[\"cloned from \\\"CSA U3L9-L4c PBT_2022\\\"\"],\"cloned_from\":\"CSA U3L9-L4c PBT_2022\"},{\"changed_at\":\"2022-03-25 13:04:42 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 16:25:25 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 19:04:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 19:04:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 19:21:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

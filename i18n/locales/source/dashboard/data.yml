@@ -671,6 +671,7 @@ en:
         PL_overview_CSP: What is Computer Science Principles?
         PL_CSP_EIPMOverview: Guide to EIPM Lessons
         tesstest: Tesstes
+        CSA-PL-debugging-temp: Introduction to Debugging in Java Lab - temp
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

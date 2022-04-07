@@ -245,7 +245,7 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   generator.harvester_ifAtCrop = function() {
-    var argument = `Maze.at${this.getTitleValue('LOC')}('block_id_${this.id}')`;
+    var argument = `Maze.at${this.getFieldValue('LOC')}('block_id_${this.id}')`;
     var branch = generator.statementToCode(this, 'DO');
     var code = `if (${argument}) {\n${branch}}\n`;
     return code;
@@ -269,7 +269,7 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   generator.harvester_ifAtCropElse = function() {
-    var argument = `Maze.at${this.getTitleValue('LOC')}('block_id_${this.id}')`;
+    var argument = `Maze.at${this.getFieldValue('LOC')}('block_id_${this.id}')`;
     var doCode = generator.statementToCode(this, 'DO');
     var elseCode = generator.statementToCode(this, 'ELSE');
     var code = `if (${argument}) {\n${doCode}} else {\n${elseCode}}\n`;
@@ -295,7 +295,7 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   generator.harvester_untilAtCrop = function() {
-    var atCrop = `Maze.at${this.getTitleValue('LOC')}('block_id_${this.id}')`;
+    var atCrop = `Maze.at${this.getFieldValue('LOC')}('block_id_${this.id}')`;
     var branch = generator.statementToCode(this, 'DO');
     branch = Blockly.getInfiniteLoopTrap() + branch;
     var code = `while (!${atCrop}) {\n${branch}}\n`;
@@ -319,7 +319,7 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   generator.harvester_ifHasCrop = function() {
-    var argument = `Maze.has${this.getTitleValue('LOC')}('block_id_${
+    var argument = `Maze.has${this.getFieldValue('LOC')}('block_id_${
       this.id
     }')`;
     var branch = generator.statementToCode(this, 'DO');
@@ -345,7 +345,7 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   generator.harvester_ifHasCropElse = function() {
-    var argument = `Maze.has${this.getTitleValue('LOC')}('block_id_${
+    var argument = `Maze.has${this.getFieldValue('LOC')}('block_id_${
       this.id
     }')`;
     var doCode = generator.statementToCode(this, 'DO');
@@ -371,7 +371,7 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   generator.harvester_whileHasCrop = function() {
-    var argument = `Maze.has${this.getTitleValue('LOC')}('block_id_${
+    var argument = `Maze.has${this.getFieldValue('LOC')}('block_id_${
       this.id
     }')`;
     var branch = generator.statementToCode(this, 'DO');
@@ -397,7 +397,7 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   generator.harvester_untilHasCrop = function() {
-    var argument = `Maze.has${this.getTitleValue('LOC')}('block_id_${
+    var argument = `Maze.has${this.getFieldValue('LOC')}('block_id_${
       this.id
     }')`;
     var branch = generator.statementToCode(this, 'DO');

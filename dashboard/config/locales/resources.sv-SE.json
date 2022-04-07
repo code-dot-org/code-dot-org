@@ -56,6 +56,102 @@
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Video"
         },
+        "lesson_plans/courseb/2018": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans/coursed/2018": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans/express/2018": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans/coursea/2019": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans/coursed/2019": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans/coursee/2019": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans/express/2019": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans_2/csd/2019": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans_3/csd/2019": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans_4/csd/2019": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans_1/csd/2019": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans/csd/2017": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "Lektionsplan"
+        },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "Lista över dikter",
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
@@ -250,7 +346,8 @@
         },
         "unplugged-video-big-event/courseb/2021": {
           "name": "Den stora händelsen",
-          "url": "https://youtu.be/u0WV9shCoak"
+          "url": "https://youtu.be/u0WV9shCoak",
+          "type": "Video"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "Den stora händelsen"
@@ -1656,6 +1753,30 @@
         },
         "all_vocabulary_3/csd/2021": {
           "url": "/s/csd2-2021/vocab"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans/express/2020": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans/courseb/2020": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans/coursea/2020": {
+          "name": "Lektionsplan"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "Lektionsplan"
         }
       }
     }

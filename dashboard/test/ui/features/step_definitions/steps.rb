@@ -125,11 +125,6 @@ When /^I switch to the first iframe$/ do
   @browser.switch_to.frame @browser.find_element(tag_name: 'iframe')
 end
 
-When /^I switch to the iframe "([^"]*)"$/ do |iframe_selector|
-  $default_window = @browser.window_handle
-  @browser.switch_to.frame @browser.find_element(:css, iframe_selector)
-end
-
 # Can switch out of iframe content
 When /^I switch to the default content$/ do
   @browser.switch_to.default_content
@@ -636,7 +631,7 @@ Then /^I wait to see a congrats dialog with title containing "((?:[^"\\]|\\.)*)"
 end
 
 Then /^I reopen the congrats dialog unless I see the sharing input/ do
-  next if @browser.execute_script("return $('#sharing-input').length > 0;")
+  next if @browser.execute_script("return $('#sharing-dialog-copy-button').length > 0;")
   puts "reopening congrats dialog"
   individual_steps %{
     And I press "again-button"

@@ -6,15 +6,26 @@
     "hide_share_and_remix": "false",
     "submittable": "false",
     "csa_view_mode": "console",
-    "encrypted_examples": [
-
-    ]
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    // TO DO: Read the files you need into 1D arrays and create an InternetAccess object with the arrays.\n\n\n    \n\n    // TO DO: Call the methods you write to provide the information to the user.\n\n\n    \n    \n  }\n}",
+        "isVisible": true
+      },
+      "FileReader.java": {
+        "text": "import java.util.Scanner;\nimport java.io.File;\nimport java.io.FileNotFoundException;\n\n/*\n * Reads data from a file\n */\npublic class FileReader {\n  private Scanner input;  // The Scanner object for reading the data\n\n  /*\n   * Constructor to create a FileReader object with\n   * a specified filename\n   */\n  public FileReader(String newFileName) {\n    File newFile = new File(newFileName);\n    input = null;\n\n    createScanner(newFile);\n  }\n\n  /*\n   * Creates the input object with the specified file\n   * or notifies the user that the file is not found\n   */\n  public void createScanner(File newFile) {\n    try {\n      input = new Scanner(newFile);\n    } catch (FileNotFoundException error) {\n      System.out.println(\"File not found.\");\n    }\n  }\n\n  /*\n   * Creates a new File object from the specified filename\n   * and updates the input object with the new file\n   */\n  public void changeFile(String filename) {\n    File newFile = new File(filename);\n    createScanner(newFile);\n  }\n\n  /*\n   * Reads numValues integers from a file into\n   * an int 1D array and returns the array\n   */\n  public int[] readNumbers(int numValues) {\n    int[] values = new int[numValues];\n\n    for (int index = 0; index < values.length; index++) {\n      if (input.hasNextInt()) {\n        values[index] = input.nextInt();\n      }\n    }\n\n    input.close();\n    return values;\n  }\n\n  /*\n   * Reads numValues doubles from a file into\n   * an double 1D array and returns the array\n   */\n  public double[] readDoubles(int numValues) {\n    double[] values = new double[numValues];\n\n    for (int index = 0; index < values.length; index++) {\n      if (input.hasNextDouble()) {\n        values[index] = input.nextDouble();\n      }\n    }\n\n    input.close();\n    return values;\n  }\n\n  /*\n   * Reads numValues Strings from a file into\n   * an String 1D array and returns the array\n   */\n  public String[] readText(int numValues) {\n    String[] text = new String[numValues];\n\n    for (int index = 0; index < text.length; index++) {\n      if (input.hasNextLine()) {\n        text[index] = input.nextLine();\n      }\n    }\n\n    input.close();\n    return text;\n  }\n\n}",
+        "isVisible": true
+      },
+      "InternetAccess.java": {
+        "text": "/*\n * Processes and analyzes data about Internet access in different countries\n */\npublic class InternetAccess {\n\n  // TO DO: Declare instance variables for the arrays you need.\n\n\n  \n  // TO DO: Write a constructor to initialize the instance variables.\n\n  \n\n  // TO DO: Write your methods to find the information you need about your data.\n\n\n\n  \n  \n}",
+        "isVisible": true
+      }
+    }
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-03-25T13:26:28.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-03-25T13:26:28.639+00:00\",\"changed\":[\"cloned from \\\"CSA U3 Data for Social Good Project B PBT_2022\\\"\"],\"cloned_from\":\"CSA U3 Data for Social Good Project B PBT_2022\"},{\"changed_at\":\"2022-03-25 13:26:31 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-03-25T13:26:28.639+00:00\",\"changed\":[\"cloned from \\\"CSA U3 Data for Social Good Project B PBT_2022\\\"\"],\"cloned_from\":\"CSA U3 Data for Social Good Project B PBT_2022\"},{\"changed_at\":\"2022-03-25 13:26:31 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 23:53:01 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 23:55:05 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 23:55:05 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

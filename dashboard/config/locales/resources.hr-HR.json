@@ -24,6 +24,102 @@
         "ai-ml/oceans/unversioned": {
           "name": "AI: Strojno učenje"
         },
+        "lesson_plans/courseb/2018": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans/coursed/2018": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans/express/2018": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans/coursea/2019": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans/coursed/2019": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans/coursee/2019": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans/express/2019": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans_2/csd/2019": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans_3/csd/2019": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans_4/csd/2019": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans_1/csd/2019": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans/csd/2017": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "Nastavni plan"
+        },
         "sprite_lab_documentation/coursef/2021": {
           "name": "Dokumentacija za Lab likova"
         },
@@ -284,6 +380,30 @@
         },
         "lists/csd/2021": {
           "name": "Liste"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans/express/2020": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans/courseb/2020": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans/coursea/2020": {
+          "name": "Nastavni plan"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "Nastavni plan"
         }
       }
     }

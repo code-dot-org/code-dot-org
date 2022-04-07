@@ -56,7 +56,6 @@ class Level < ApplicationRecord
   validate :validate_game, on: [:create, :update]
 
   after_save :write_custom_level_file
-  after_save :update_key_list
   after_destroy :delete_custom_level_file
 
   accepts_nested_attributes_for :level_concept_difficulty, update_only: true
@@ -128,16 +127,6 @@ class Level < ApplicationRecord
   def specified_autoplay_video
     @@specified_autoplay_video ||= {}
     @@specified_autoplay_video[video_key + ":" + I18n.locale.to_s] ||= Video.current_locale.find_by_key(video_key) unless video_key.nil?
-  end
-
-  def self.key_list
-    @@all_level_keys ||= Level.all.map {|l| [l.id, l.key]}.to_h
-    @@all_level_keys
-  end
-
-  def update_key_list
-    @@all_level_keys ||= nil
-    @@all_level_keys[id] = key if @@all_level_keys
   end
 
   def summarize_concepts

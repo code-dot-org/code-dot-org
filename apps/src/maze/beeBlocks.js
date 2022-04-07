@@ -177,7 +177,7 @@ function addIfFlowerHive(blockly, generator) {
   generator.bee_ifFlower = function() {
     // Generate JavaScript for 'if' conditional if we're at a flower/hive
     var argument =
-      'Maze.' + this.getTitleValue('LOC') + "('block_id_" + this.id + "')";
+      'Maze.' + this.getFieldValue('LOC') + "('block_id_" + this.id + "')";
     var branch = generator.statementToCode(this, 'DO');
     var code = 'if (' + argument + ') {\n' + branch + '}\n';
     return code;
@@ -217,7 +217,7 @@ function addIfElseFlowerHive(blockly, generator) {
   generator.bee_ifElseFlower = function() {
     // Generate JavaScript for 'if' conditional if we're at a flower/hive
     var argument =
-      'Maze.' + this.getTitleValue('LOC') + "('block_id_" + this.id + "')";
+      'Maze.' + this.getFieldValue('LOC') + "('block_id_" + this.id + "')";
     var branch0 = generator.statementToCode(this, 'DO');
     var branch1 = generator.statementToCode(this, 'ELSE');
     var code =
@@ -312,7 +312,7 @@ function addConditionalComparisonBlock(blockly, generator, name, type, arg1) {
       this.setNextStatement(true);
 
       this.setTooltip(function() {
-        var op = self.getTitleValue('OP');
+        var op = self.getFieldValue('OP');
         return TOOLTIPS[op];
       });
     }
@@ -323,9 +323,9 @@ function addConditionalComparisonBlock(blockly, generator, name, type, arg1) {
   generator[name] = function() {
     // Generate JavaScript for 'if' conditional if we're at a flower/hive
     var argument1 =
-      'Maze.' + this.getTitleValue('ARG1') + "('block_id_" + this.id + "')";
-    var operator = this.getTitleValue('OP');
-    var argument2 = this.getTitleValue('ARG2');
+      'Maze.' + this.getFieldValue('ARG1') + "('block_id_" + this.id + "')";
+    var operator = this.getFieldValue('OP');
+    var argument2 = this.getFieldValue('ARG2');
     var branch0 = generator.statementToCode(this, 'DO');
     var elseBlock = '';
     if (type === 'ifelse') {

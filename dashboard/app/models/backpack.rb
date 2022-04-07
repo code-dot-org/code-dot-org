@@ -16,19 +16,23 @@
 class Backpack < ApplicationRecord
   belongs_to :user
 
+  # The projects table used to be named storage_apps. This column has not been renamed
+  # to reflect the new table name, so an alias is used to clarify which table this ID maps to.
+  alias_attribute :project_id, :storage_app_id
+
   def self.find_or_create(user_id, ip)
     backpack = find_by_user_id(user_id)
     unless backpack
-      # Create a storage app for this user's backpack
-      storage_app = StorageApps.new(storage_id_for_user_id(user_id))
-      encrypted_id = storage_app.create({'hidden': true}, ip: ip, type: 'backpack')
-      _, storage_app_id = storage_decrypt_channel_id(encrypted_id)
-      backpack = create!(user_id: user_id, storage_app_id: storage_app_id)
+      # Create a project for this user's backpack
+      project = Projects.new(storage_id_for_user_id(user_id))
+      encrypted_id = project.create({'hidden': true}, ip: ip, type: 'backpack')
+      _, project_id = storage_decrypt_channel_id(encrypted_id)
+      backpack = create!(user_id: user_id, project_id: project_id)
     end
     backpack
   end
 
   def channel
-    storage_encrypt_channel_id(storage_id_for_user_id(user_id), storage_app_id)
+    storage_encrypt_channel_id(storage_id_for_user_id(user_id), project_id)
   end
 end

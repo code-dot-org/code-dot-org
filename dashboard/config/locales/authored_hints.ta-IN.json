@@ -231,7 +231,7 @@
         },
         "CourseF_outbreak3": {
           "hint1": "அரக்கர்களின் முகமூடிகளை வழங்க, ```நிகழ்வைக் கிளிக் செய்யும் போது`` ஆடை மாற்ற``` தொகுதியைப் பயன்படுத்தவும்:",
-          "hint2": "இந்த நிலைக்கான புதிய குறியீடு இப்படி இருக்க வேண்டும்:\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+          "hint2": "இந்த நிலைக்கான புதிய குறியீடு இப்படி இருக்க வேண்டும்:\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak4": {
           "challenge": "## கூடுதல் சவாலை எதிர்பார்க்கிறீர்களா?\n\nஅரக்கர்களை வேகமாக அல்லது மெதுவாக நகர்த்தவும் செய்யலாம்.\n\n1.  இந்த தொகுதியில் `திருத்து` என்பதைக் கிளிக் செய்க <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  இந்த தொகுதியில் எண்ணிக்கையை அதிகரிக்கவும் குறைக்கவும்:\n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\nஅரக்கர்களை மெதுவாக நகர்த்துவதற்கு, `0.5` அல்லது`0.25` போன்ற தசம எண்ணைத் தேர்வுசெய்க. அவற்றை வேகமாக நகர்த்த, 1 ஐ விட அதிகமான எண்ணைத் தேர்வுசெய்க."
@@ -901,7 +901,7 @@
         },
         "courseB_starWars_prog8_2021": {
           "courseB_starWars_prog8_a": "நீங்கள் ஏற்கனவே பயணித்த இடங்களின் தொகுப்பிற்கு திரும்பிச் செல்வது சரி.",
-          "courseB_starWars_prog8_b": "நீங்கள் உள்ளே வைத்த குறியீட்டிற்கு என்ன நடக்கிறது என்பதைக் காண `மீண்டும்` தொகுதியைப் பயன்படுத்த முயற்சிக்கவும்.\n\n[blockly block] [0]"
+          "courseB_starWars_prog8_b": "நீங்கள் உள்ளே வைத்த குறியீட்டிற்கு என்ன நடக்கிறது என்பதைக் காண `மீண்டும்` தொகுதியைப் பயன்படுத்த முயற்சிக்கவும்."
         },
         "courseB_starWars_prog9": {
           "courseB_starWars_prog9_a": "தவறு செய்ய பயப்பட வேண்டாம்! நீங்கள் இன்னும் புதிரை தீர்க்கவில்லை என்றாலும், என்ன நடக்கிறது என்பதைக் காண குறியீட்டை இயக்கவும்.",
@@ -926,7 +926,7 @@
         "courseB_starWars_prog9_2021": {
           "courseB_starWars_prog9_a": "தவறு செய்ய பயப்பட வேண்டாம்! நீங்கள் இன்னும் புதிரை தீர்க்கவில்லை என்றாலும், என்ன நடக்கிறது என்பதைக் காண குறியீட்டை இயக்கவும்.",
           "courseB_starWars_prog9_b": "இந்த புதிரை தீர்க்க பல வழிகள் உள்ளன.",
-          "courseB_starWars_prog9_c": "ஒரு `மீண்டும்`  [blockly block] [0] வளையத்தை இங்கு உதவ முடியுமா?"
+          "courseB_starWars_prog9_c": "ஒரு `மீண்டும்` [தடுக்கப்பட்ட தடுப்பு] [0] வளையத்தை இங்கு உதவ முடியுமா?"
         },
         "courseC_starWars_loops1": {
           "courseC_starWars_loops1_a": "பிபி -8 ஸ்கிராப் மெட்டல் மீது உருளும் போது அவர் அதை தானாக எடுப்பார்.",
@@ -1253,11 +1253,11 @@
           "courseA_collector_loops8_c": "நீங்கள் ஒரு நேரத்தில் குறியீட்டின் ஒரு பகுதியை எழுதலாம் என்பதை நினைவில் கொள்ளுங்கள், பின்னர் நீங்கள் அங்கிருந்து எங்கு செல்ல வேண்டும் என்பதை அறிய \"Run\" என்பதை அழுத்தவும்."
         },
         "courseB_Scrat_ramp1_2021": {
-          "1": "ஸ்க்ராட் நீங்கள் விரும்பியதைச் செய்யவில்லை எனில், இரண்டு தொகுதிகளும் ஒன்றாகக் கிளிக் செய்யப்பட்டுள்ளன என்பதை உறுதிசெய்து, மீண்டும் \"Run\" என்பதைக் கிளிக் செய்க.",
-          "2": "தவறு செய்ய பயப்பட வேண்டாம்! ஏதாவது முயற்சி செய்யுங்கள், அது வேலை செய்யவில்லை என்றால், வேறு ஏதாவது முயற்சிக்கவும்!"
+          "1": "நீங்கள் விரும்புவதை ஸ்க்ராட் செய்யவில்லை என்றால், இரண்டு தொகுதிகளும் முழுமையாக ஒன்றாக கிளிக் செய்யப்பட்டுள்ளதா என்பதை உறுதிசெய்து, மீண்டும் \"Run\" என்பதைக் கிளிக் செய்யவும்",
+          "2": "தவறு செய்ய பயப்பட வேண்டாம்! ஏதாவது முயற்சி செய்யுங்கள், அது வேலை செய்யவில்லை என்றால், வேறு ஏதாவது முயற்சி செய்யுங்கள்!"
         },
         "courseB_Scrat_ramp2_2021": {
-          "1": "உங்கள் குறியீடு இப்படி இருக்க வேண்டும்:\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "உங்கள் குறியீடு இப்படி இருக்க வேண்டும்:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp3a_2021": {
           "1": "உங்கள் குறியீடு இப்படி இருக்க வேண்டும்:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -1339,7 +1339,7 @@
           "courseA_harvester_loops9_c": "அனைத்து சோளங்களையும் எடுக்க இந்த வழியைப் பின்பற்றவும்."
         },
         "courseA_maze_seq10_2021": {
-          "courseA_maze_seq10_a": "உங்களுக்கு சிக்கல் இருந்தால், முதலில் ஒரு துண்டு காகிதத்தில் படிகளை எழுத முயற்சிக்கவும்",
+          "courseA_maze_seq10_a": "உங்களுக்கு சிக்கல் இருந்தால், முதலில் ஒரு துண்டு காகிதத்தில் படிகளை எழுத முயற்சிக்கவும்.",
           "courseA_maze_seq10_b": "இந்த புதிர் தீர்க்க நீங்கள் 3 வெவ்வேறு திசைகளில் செல்ல வேண்டும்."
         },
         "courseA_maze_seq13_2021": {
@@ -1348,19 +1348,19 @@
           "courseA_maze_seq13_c": "இவை <xml><block type=\"maze_moveNorth\"/></xml>\n\n<xml><block type=\"maze_moveEast\"/></xml>\n\n blocks கள் பன்றிக்கு அருகில் செல்ல உதவும்."
         },
         "courseA_maze_seq1_2021": {
-          "courseA_maze_seq1_a": "பறவையை நகர்த்துவதில் சிக்கல் இருந்தால், <xml>\n  <block type=\"when_run\"/>\n</xml> கீழ் தொகுதிகள் பிடுங்கப்பட்டுள்ளதா என்பதை உறுதிப்படுத்தவும்.",
+          "courseA_maze_seq1_a": "பறவையை நகர்த்துவதில் சிக்கல் இருந்தால்,<xml>\n  <block type=\"when_run\"/>\n</xml>கள் பிடுங்கப்பட்டுள்ளதா என்பதை உறுதிப்படுத்தவும்.",
           "courseA_maze_seq1_b": "பறவை பன்றிக்குச் செல்ல 3 முறை மேற்கு நோக்கி நகர வேண்டும். இந்தத் தொகுதியைப் பயன்படுத்தவும்:\n\n<xml><block type=\"maze_moveWest\"/></xml>"
         },
         "courseA_maze_seq5_2021": {
           "1": "ஒரு தீர்வைக் கண்டுபிடிக்க காகிதத்தில் படிகளை எழுத முயற்சிக்கவும்!",
-          "2": "இந்த தொகுதியை நீங்கள் பயன்படுத்த வேண்டும்:"
+          "2": "இந்த தொகுதியை நீங்கள் பயன்படுத்த வேண்டும்:\n\n<xml><block type=\"maze_moveSouth\"/></xml>"
         },
         "courseA_maze_seq5a_2021": {
           "1": "படிகளை உரக்கச் சொல்லுங்கள், பதிலைக் கண்டுபிடிக்க இது உங்களுக்கு உதவுமா என்று பாருங்கள்."
         },
         "courseA_maze_seq6_2021": {
           "courseA_maze_seq6_a": "உங்கள் இறுதி குறியீடு 3 இயக்கத் தொகுதிகளைக் கொண்டிருக்க வேண்டும்.",
-          "courseA_maze_seq6_b": "நீங்கள் சிக்கிக்கொண்டால், புதிரை 2 பகுதிகளாக தீர்க்க முயற்சி செய்யுங்கள், மூலையில் ஒரு பகுதி மற்றும் மூலையில் ஒரு பகுதி."
+          "courseA_maze_seq6_b": "நீங்கள் சிக்கிக்கொண்டால், புதிரை 2 பகுதிகளாக தீர்க்க முயற்சி செய்யுங்கள், மூலையில் ஒரு பகுதி மற்றும் மூலையில் ஒரு பகுதி"
         },
         "courseA_maze_seq8_2021": {
           "courseA_maze_seq8_a": "நீங்கள் சிக்கிக்கொண்டால், பறவை எப்படி நகர வேண்டும் என்பதை அறிய காகிதத்தில் படத்தை வரைய முயற்சிக்கவும்."
@@ -1378,7 +1378,7 @@
           "1": "உங்கள் குறியீடு இப்படி இருக்க வேண்டும்:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseB_Scrat_ramp5a_2021": {
-          "1": "உங்கள் குறியீடு இப்படி இருக்க வேண்டும்:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "1": "உங்கள் குறியீடு இப்படி இருக்க வேண்டும்:"
         },
         "courseC19_playLab_EOC1_2021": {
           "courseE_playLab_scaffold1_a": "`நடிகர் 1 ஆக அமைக்கப்பட்டாரா ??? மேடையில் ஒரு நடிகரைச் சேர்க்க image` block ஐப் பயன்படுத்தலாம்.",
@@ -1746,7 +1746,7 @@
           "courseB_collector_loops1_a": "<xml><block type=\"collector_collect_simplified\"/></xml> நீங்கள் புதையலின் மேல் நிற்கும்போது அதை எடுக்கப் பயன்படுத்தலாம்."
         },
         "courseB_collector_loops2_2021": {
-          "courseB_collector_loops2_a": "நீங்கள் எந்த புதையலையும் சேகரிக்கும் முன் நீங்கள் நகர வேண்டும்.",
+          "courseB_collector_loops2_a": "எந்தவொரு புதையலையும் சேகரிப்பதற்கு முன்பு நீங்கள் செல்ல வேண்டும்.",
           "courseB_collector_loops2_b": "நீங்கள் புதையல் உள்ள இடத்தை அடைந்ததும், அதை எடுக்க <xml><block type=\"collector_collect\"/></xml> block ஐப் பயன்படுத்தவும்."
         },
         "courseB_collector_loops3_2021": {
@@ -2200,7 +2200,7 @@
           "courseD_bee_conditionals_challenge1_b": "இந்த புதிரில், ஒவ்வொரு இடத்திலும் ஒரு பூ, ஒரு தேன் சீப்பு அல்லது எதுவும் இருக்க முடியாது. அதாவது, ஒவ்வொரு சதுரத்திலும் உங்களின் `if/else` நிபந்தனையை மீண்டும் செய்யலாம். "
         },
         "courseD_bee_conditionals_challenge2_2021": {
-          "courseD_bee_conditionals_challenge1_b": "`if at flower` தொகுதிகள் போல், தேனீ ஒரு பூவில் இருந்தால் மட்டுமே `while Nectar > 0` உள்ளே இருக்கும் குறியீடு இயங்கும். வித்தியாசம் என்னவென்றால், அமிர்தம் இல்லாத வரை உள்ளே உள்ள குறியீடு மீண்டும் மீண்டும் இயங்கும். இந்த வடிவத்தை முயற்சிக்கவும்:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "`if at flower` தொகுதிகள் போல், தேனீ ஒரு பூவில் இருந்தால் மட்டுமே `while Nectar > 0` உள்ளே இருக்கும் குறியீடு இயங்கும். வித்தியாசம் என்னவென்றால், அமிர்தம் இல்லாத வரை உள்ளே உள்ள குறியீடு மீண்டும் மீண்டும் இயங்கும். இந்த வடிவத்தை முயற்சிக்கவும்:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_nestedLoops1_2021": {
           "courseD_bee_nestedLoops1_a": "வேலை செய்யவில்லை? வரிக்கு வரி என்ன நடக்கிறது என்பதைப் பார்க்க, \"படி\" பொத்தானைப் பயன்படுத்தி முயற்சிக்கவும்.",

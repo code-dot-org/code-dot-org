@@ -182,7 +182,31 @@ exports.load = function(assetUrl, id) {
       'smallRhombusLightBlue',
       'smallRhombusBlue',
       'smallRhombusPurple',
-      'smallRhombusMagenta'
+      'smallRhombusMagenta',
+      'smallRhombusMaroon45',
+      'smallRhombusRed45',
+      'smallRhombusOrange45',
+      'smallRhombusYellow45',
+      'smallRhombusGreen45',
+      'smallRhombusCyan45',
+      'smallRhombusLightBlue45',
+      'smallRhombusBlue45',
+      'smallRhombusPurple45',
+      'smallRhombusMagenta45',
+      'smallRhombusMaroon30',
+      'smallRhombusRed30',
+      'smallRhombusOrange30',
+      'smallRhombusYellow30',
+      'smallRhombusGreen30',
+      'smallRhombusCyan30',
+      'smallRhombusLightBlue30',
+      'smallRhombusBlue30',
+      'smallRhombusPurple30',
+      'smallRhombusMagenta30',
+      'hexagonYellow',
+      'triangleGreen',
+      'squareOrange',
+      'trapezoidRed'
     ];
 
     var mapping = {};

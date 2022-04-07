@@ -2,6 +2,8 @@
 da:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: dan en ny {ANIMATION_NAME} figur på {LOCATION}
       Dancelab_alternateMoves:
         text: "\"{GROUP} skift hver {N} takter \nmellem {MOVE1} og {MOVE2}\""
         options:
@@ -1027,6 +1029,11 @@ da:
         text: kan flyttes
       gamelab_edgesDisplace:
         text: kant brik {SPRITE} fra flytning
+      gamelab_everySeconds:
+        text: 'gentag hver {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': sekunder
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1154,6 +1161,8 @@ da:
         options:
           EFFECT:
             '"rain"': regn
+      gamelab_makeNewScaledSprite:
+        text: dan en ny {ANIMATION_NAME} figur på {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: dan en ny {ANIMATION_NAME} figur på {LOCATION}
       gamelab_makeProjectile:

@@ -15,8 +15,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-28 23:57:42 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-04-05 13:48:30 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -303,9 +303,9 @@
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
-        "overview": "**How will I use what I know about classes and objects to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
+        "overview": "**How will I use what I know about 1D arrays to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
         "preparation": "* Print copies of the TicketTracker FRQ Graphic Organizer (one for each student)\n* Print copies of the TicketTracker FRQ handout (one for each student)\n* Print copies of the TicketTracker FRQ Scoring Guidelines (one for each student)\n* (Optional) Gather blue, orange, and pink colored pencils or markers for each student",
-        "student_overview": "**How will I use what I know about classes and objects to answer a Free Response Question?**\n\nYou practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. You apply decomposition and annotation strategies to identify the key components of the problem and validate your solutions using Scoring Guidelines."
+        "student_overview": "**How will I use what I know about 1D arrays to answer a Free Response Question?**\n\nYou practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. You apply decomposition and annotation strategies to identify the key components of the problem and validate your solutions using Scoring Guidelines."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -317,7 +317,7 @@
       "key": "lesson-2",
       "name": "Unit 3 Assessment",
       "absolute_position": 15,
-      "lockable": false,
+      "lockable": true,
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
@@ -760,7 +760,7 @@
       "key": "c270690e-89d1-47dd-b000-9c59105306aa",
       "position": 2,
       "properties": {
-        "duration": 30,
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -2997,7 +2997,8 @@
       "key": "670d777a-62e7-4cf6-9086-a12caed25743",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on Level 4."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on Level 4.",
+        "progression_name": "Code Review: Finding Duplicates"
       },
       "seeding_key": {
         "activity_section.key": "670d777a-62e7-4cf6-9086-a12caed25743",
@@ -3140,7 +3141,7 @@
       "key": "28d55100-c0aa-4e2b-adaf-c541696a2502",
       "position": 4,
       "properties": {
-        "description": "**Do This:** Introduce the user scenarios for the project:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Streaming music customer, veterinary student, technology non-profit manager\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Healthcare data scientist, agricultural activist, advertising specialist",
+        "description": "**Do This:** Introduce the user scenarios for the project:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Streaming music customer, avian veterinary student, technology non-profit manager\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Community activist, advertising specialist, choose your own",
         "tips": [
           {
             "type": "teachingTip",
@@ -3633,7 +3634,8 @@
       "key": "c949777e-205c-4a3c-a5a2-414910e17daa",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Unit 3 Assessment on Code Studio."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Unit 3 Assessment on Code Studio.",
+        "progression_name": "Unit 3 Assessment"
       },
       "seeding_key": {
         "activity_section.key": "c949777e-205c-4a3c-a5a2-414910e17daa",
@@ -4946,6 +4948,31 @@
       "chapter": 51,
       "position": 4,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U3L10-L4 CR_2022"
+        ],
+        "progression": "Code Review: Finding Duplicates"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L10-L4 CR_2022"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2022",
+        "activity_section.key": "670d777a-62e7-4cf6-9086-a12caed25743"
+      },
+      "level_keys": [
+        "CSA U3L10-L4 CR_2022"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 5,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -4968,7 +4995,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4993,7 +5020,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5018,7 +5045,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5043,7 +5070,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5068,7 +5095,29 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Unit 3 Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Unit 3 Assessment 2022"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2022",
+        "activity_section.key": "c949777e-205c-4a3c-a5a2-414910e17daa"
+      },
+      "level_keys": [
+        "CSA Unit 3 Assessment 2022"
+      ]
+    },
+    {
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5092,7 +5141,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5117,7 +5166,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 60,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5745,6 +5794,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U3L10-L4 CR_2022",
+        "script_level.level_keys": [
+          "CSA U3L10-L4 CR_2022"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-2022",
+        "activity_section.key": "670d777a-62e7-4cf6-9086-a12caed25743"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U3L10-L5_2022",
         "script_level.level_keys": [
           "CSA U3L10-L5_2022"
@@ -5801,6 +5862,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa3-2022",
         "activity_section.key": "a9c6b159-6f10-4fab-a56d-cdfc3cbc0242"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Unit 3 Assessment 2022",
+        "script_level.level_keys": [
+          "CSA Unit 3 Assessment 2022"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2022",
+        "activity_section.key": "c949777e-205c-4a3c-a5a2-414910e17daa"
       }
     },
     {

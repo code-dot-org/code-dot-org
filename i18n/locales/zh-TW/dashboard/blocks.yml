@@ -2,6 +2,8 @@
 zh-TW:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: 角色 創建一個新的 {ANIMATION_NAME} 定位到 {LOCATION}
       Dancelab_alternateMoves:
         text: |-
           群組 {GROUP} 每 {N} 小節交替
@@ -1068,6 +1070,12 @@ zh-TW:
         text: 畫線{COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: 角色 {SPRITE} 碰到邊緣就停止
+      gamelab_everySeconds:
+        text: '每隔 {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': 秒
+            '"frames"': 頁框
       gamelab_followingTargets:
         text: 跟隨目標
       gamelab_getAllSprites:
@@ -1220,6 +1228,8 @@ zh-TW:
           EFFECT:
             '"pop"': 爆破
             '"rain"': 下雨
+      gamelab_makeNewScaledSprite:
+        text: 角色 創建一個新的 {ANIMATION_NAME} 定位到 {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: 角色 創建一個新的 {ANIMATION_NAME} 定位到 {LOCATION}
       gamelab_makeNumSprites:

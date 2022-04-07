@@ -913,7 +913,7 @@
           "definition": "Un personaje en la pantalla con propiedades que describen su ubicación, movimiento y apariencia. "
         },
         "dot_notation/csd/2021": {
-          "word": "Dot notation (Notación de puntos)",
+          "word": "Notación de puntos",
           "definition": "La forma en la que las propiedades de las sprites se utilizan en el Game Lab. Conectando a la sprite y a sus propiedades mediante un punto."
         },
         "condition/csd/2021": {

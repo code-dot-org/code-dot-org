@@ -559,13 +559,56 @@
           "": "Blok ini tidak mempunyai nombor padanya. Anda boleh menggunakan seberapa banyak yang anda mahu!"
         },
         "courseD_maze_ramp3_2021": {
-          "courseC_maze_programming3_2": "Anda boleh menyeret blok tambahan ke kotak alatan untuk membuang blok tersebut."
+          "courseC_maze_programming3_2": "Anda boleh menyeret blok tambahan ke kotak alatan untuk membuang blok tersebut.",
+          "stone_block_2": "Blok kelabu tidak boleh dibuang."
         },
         "courseD_maze_ramp5_2021": {
           "": "Blok ini tidak mempunyai nombor padanya. Anda boleh menggunakan seberapa banyak yang anda mahu!"
         },
         "express_maze_debugging9_2021": {
           "express_maze_debugging9_2019_1": "Seret blok dari kotak alatan ke dalam ruang kerja anda."
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "Kami telah meletakkan beberapa blok di sini untuk membantu anda bermula"
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Kod ini akan mula membina rumah anda. Bolehkah anda menyiapkan rumah itu?"
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Ulangi tindakan dengan meletakkan blok di sini"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "Kod ini akan memeriksa lahar, bolehkah anda tambahkan perintah untuk bergerak ke hadapan?"
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "Bawa pelakon ke bendera ini untuk bergerak kepada tahap seterusnya."
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_callout1": "Gunakan blok ini apabila Waddles dan Chomp bersentuhan!"
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge1_1": "Blok ini membolehkan anda menggerakkan pelakon ke bahagian ruang permainan berbeza."
+        },
+        "courseC_artist_loops1a_2021": {
+          "jumpto_callout": "Blok ini sangat penting untuk projek ini. Pastikan ia digunakan!"
+        },
+        "courseC_artist_loops1b_2021": {
+          "sticker2": "Tambahkan ini ke bahagian tengah atur cara anda."
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "Anda boleh memperlahankan atur cara anda di sini."
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "Nombor empat pada labu memberitahu anda bahawa terdapat empat labu yang tersedia untuk dikutip."
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "Anda hanya mempunyai satu daripada blok ini yang tersedia dalam teka-teki ini."
+        },
+        "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "Ingat, periksa untuk melihat jika SETIAP awan mempunyai BUNGA. Anda tidak perlu memeriksa sarang lebah langsung."
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "Cuba melangkah melalui kod anda satu blok pada satu masa."
         }
       }
     }

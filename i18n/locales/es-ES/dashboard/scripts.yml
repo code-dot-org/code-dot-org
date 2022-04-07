@@ -1374,8 +1374,6 @@ es:
           description: Cómo dirigir un debate sobre la igualdad en un Desarrollo Profesional de Code.org
           description_short: Cómo dirigir un debate sobre la igualdad en un Desarrollo Profesional de Code.org
           lessons:
-            Code.org Equity PD:
-              name: Desarrollo profesional de Code.org en condiciones de igualdad
             Necessary Background:
               name: Experiencia necesaria
           student_description: Cómo dirigir un debate sobre la igualdad en un Desarrollo Profesional de Code.org
@@ -1955,6 +1953,7 @@ es:
               description_student: En esta lección, alumnos de todas las edades tienen una experiencia de iniciación a la codificación y la informática en un entorno seguro y de apoyo. Esta lección funciona bien para cualquier estudiante con edad suficiente para leer (más de 6 años). Los estudiantes más jóvenes probablemente no terminarán el tutorial, pero se divertirán mucho trabajando con los rompecabezas durante una hora. Los estudiantes de secundaria terminarán en su mayoría el tutorial y tendrán algo de tiempo para jugar en el nivel de juego libre al final.
               description_teacher: En esta lección, alumnos de todas las edades tienen una experiencia de iniciación a la codificación y la informática en un entorno seguro y de apoyo. Esta lección funciona bien para cualquier estudiante con edad suficiente para leer (más de 6 años). Los estudiantes más jóvenes probablemente no terminarán el tutorial, pero se divertirán mucho trabajando con los rompecabezas durante una hora. Los estudiantes de secundaria terminarán en su mayoría el tutorial y tendrán algo de tiempo para jugar en el nivel de juego libre al final.
           student_description: Utiliza bloques de código para llevar a Steve o Alex en una aventura a través del mundo de Minecraft.
+          name: mc
         oceans:
           title: Inteligencia Artificial para Océanos
           description: Aprende cómo IA y el aprendizaje automático se pueden usar para abordar problemas del mundo.
@@ -3907,6 +3906,7 @@ es:
               description_student: "¿Has pensado que alguna vez puedes jugar videojuegos en tu colegio? ¡En esta lección, podrás hacer tu propio juego!"
               description_teacher: En esta actividad en línea, los alumnos aprenderán qué son los eventos y cómo los utilizan los ordenadores en programas como los videojuegos. Los estudiantes trabajarán a través de rompecabezas haciendo que el programa reaccione a los eventos (como los botones de flecha que se presionan.) Al final del rompecabezas, los estudiantes tendrán la oportunidad de personalizar su juego con diferentes velocidades y sonidos.
           student_description: Elije un equipo y crea un juego de basquetbol
+          name: baloncesto
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -4519,6 +4519,7 @@ es:
               description_student: "¿Has pensado que alguna vez puedes jugar videojuegos en tu colegio? ¡En esta lección, podrás hacer tu propio juego!"
               description_teacher: En esta actividad en línea, los alumnos aprenderán qué son los eventos y cómo los utilizan los ordenadores en programas como los videojuegos. Los estudiantes trabajarán a través de rompecabezas haciendo que el programa reaccione a los eventos (como los botones de flecha que se presionan.) Al final del rompecabezas, los estudiantes tendrán la oportunidad de personalizar su juego con diferentes velocidades y sonidos.
           student_description: Multideporte
+          name: deportes
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -7331,6 +7332,7 @@ es:
               description_student: 'En esta lección, alumnos de todas las edades tienen una experiencia de iniciación a la codificación y la informática en un entorno seguro y de apoyo. '
               description_teacher: En esta lección, alumnos de todas las edades tienen una experiencia de iniciación a la codificación y la informática en un entorno seguro y de apoyo. Esta lección funciona bien para cualquier estudiante con edad suficiente para leer (más de 6 años). Los estudiantes más jóvenes probablemente no terminarán el tutorial, pero se divertirán mucho trabajando con los rompecabezas durante una hora. Los estudiantes de secundaria terminarán en su mayoría el tutorial y tendrán algo de tiempo para jugar en el nivel de juego libre al final.
           student_description: "¡Minecraft vuelve a la Hora del Código con una nueva actividad! Viaja a través de Minecraft con código."
+          name: héroe
         applab-intro-staging:
           title: Introducción a la preparación del Laboratorio de aplicaciones
           lessons:
@@ -9763,6 +9765,7 @@ es:
               description_student: En esta lección, los estudiantes de todas las edades obtienen una experiencia introductoria con la programación y las ciencias de la computación en un entorno seguro y que les brinda apoyo. Esta lección ha sido diseñada para estudiantes de todas las edades, pero requiere lectura. Esta actividad requiere de sonido ya que la herramienta fue creada para responder a la música.
               description_teacher: En esta lección, los estudiantes de todas las edades obtienen una experiencia introductoria con la programación y las ciencias de la computación en un entorno seguro y que les brinda apoyo. Esta lección ha sido diseñada para estudiantes de todas las edades, pero requiere lectura. Esta actividad requiere de sonido ya que la herramienta fue creada para responder a la música.
           student_description: "¡Programa tu propio baile para compartirlo con tus amigos!"
+          name: baile
         frozen-2018-test-b:
           title: Nuevo guión de Frozen
           lessons:
@@ -9778,6 +9781,7 @@ es:
               description_student: 'En esta lección, alumnos de todas las edades tienen una experiencia de iniciación a la codificación y la informática en un entorno seguro y de apoyo. '
               description_teacher: En esta lección, alumnos de todas las edades tienen una experiencia de iniciación a la codificación y la informática en un entorno seguro y de apoyo. Esta lección funciona bien para cualquier estudiante con edad suficiente para leer (más de 6 años). Los estudiantes más jóvenes probablemente no terminarán el tutorial, pero se divertirán mucho trabajando con los rompecabezas durante una hora. Los estudiantes de secundaria terminarán en su mayoría el tutorial y tendrán algo de tiempo para jugar en el nivel de juego libre al final.
           student_description: "¡Minecraft está de vuelta con una nueva actividad! Usa tu creatividad y tu capacidad de resolver problemas para explorar y construir mundos acuáticos a través del código."
+          name: acuático
         sconyers:
           title: Playground de Tracey
           lessons:
@@ -13526,7 +13530,7 @@ es:
           description: "¡Programa tu propio baile para compartirlo con tus amigos!"
           lessons:
             Dance Party:
-              name: Fiesta de Baile
+              name: Fiesta de baile (remix 2019)
               description_student: En esta lección, los estudiantes de todas las edades obtienen una experiencia introductoria con la programación y las ciencias de la computación en un entorno seguro y que les brinda apoyo. Esta lección ha sido diseñada para estudiantes de todas las edades, pero requiere lectura. Esta actividad requiere de sonido ya que la herramienta fue creada para responder a la música.
               description_teacher: En esta lección, los estudiantes de todas las edades obtienen una experiencia introductoria con la programación y las ciencias de la computación en un entorno seguro y que les brinda apoyo. Esta lección ha sido diseñada para estudiantes de todas las edades, pero requiere lectura. Esta actividad requiere de sonido ya que la herramienta fue creada para responder a la música.
           student_description: "¡Programa tu propio baile para compartirlo con tus amigos!"
@@ -16912,8 +16916,6 @@ es:
               name: USAR Programas (Sólo Laboratorio de Aplicaciones )
             MODIFY Programs:
               name: MODIFICAR Programas (AppLab -> Widget -> AppLab)
-            Does Code.org Like Your Dog?:
-              name: "¿Le gusta a Code.org tu perro?"
             dog:
               name: "¿Le gusta a Code.org tu perro?"
             AI for Oceans:
@@ -21218,7 +21220,7 @@ es:
               name: Módulo 1
             Getting Started:
               name: Primeros pasos
-            What is Code.org:
+            What is Codeorg:
               name: "¿Qué es Code.org?"
             Addressing Implementation Approaches and Barriers:
               name: Enfoques de Aplicación y Obstáculos
@@ -22765,8 +22767,7 @@ es:
           title: '"¡Hola, mundo!"'
         csa-self-paced-pl:
           lessons:
-            Navigating the Code.org learning platform:
-              name: " Navegando por la plataforma de aprendizaje Code.org"
+            Navigating the Codeorg learning platform:
               description_teacher: |-
                 **Aprenderás cómo:**
 
@@ -25094,7 +25095,7 @@ es:
               description_student: Usa bucles y patrones para finalizar las imágenes.
               description_teacher: En cuanto a los bucles, los estudiantes aprenden a dibujar imágenes mediante bucles de secuencias simples de instrucciones. En la actividad conectada anterior, los bucles se utilizaron para recorrer un laberinto y recoger el tesoro. Aquí los bucles crean patrones. Al final de esta etapa, los estudiantes tendrán la oportunidad de crear sus propias imágenes mediante bucles.
               key: Escena del océano con bucles
-            The Big Event Jr.:
+            The Big Event Jr:
               name: El Gran Evento Jr.
               description_student: Muévete y grita cuando tus docentes presionen los botones de un control remoto gigante.
               description_teacher: Los eventos son una excelente manera de agregar variedad a un algoritmo ya escrito. Son muy útiles si tu objetivo es que el programa responda al usuario exactamente cuando éste quiere.
@@ -25911,7 +25912,7 @@ es:
               description_student: Esboza tu propia aplicación para smartphone.
               description_teacher: En esta lección, los estudiantes reconocen que las ciencias de la computación pueden ayudar a las personas en la vida real. Primero, los estudiantes se identifican con varios usuarios ficticios de smartphones para ayudarlos a encontrar la “aplicación correcta” que se adapte a sus necesidades. Luego, los estudiantes ejercitan la empatía y la creatividad para esbozar una aplicación para smartphone que responda a las necesidades de otro usuario.
               key: La aplicación correcta
-            The Big Event Jr.:
+            The Big Event Jr:
               name: El Gran Evento Jr.
               description_student: Muévete o grita cuando tu docente presione los botones de un control remoto gigante.
               description_teacher: Los eventos son una excelente manera de agregar variedad a un algoritmo ya escrito. Son muy útiles si tu objetivo es que el programa responda al usuario exactamente cuando éste quiere.
@@ -26004,7 +26005,7 @@ es:
 
                 Internet está lleno de todo tipo de personas interesantes, pero a veces, algunas de ellas pueden ser malintencionadas. Con este juego de rol, ayuda a tus alumnos a entender por qué a menudo es más fácil ser malvado en línea que en persona, y cómo lidiar con la maldad en línea cuando la ven.
               key: Poner un STOP a la maldad en Internet
-            My Robotic Friends Jr.:
+            My Robotic Friends Jr:
               name: Mis amigos robóticos Jr.
               description_student: En esta lección, harás de cuenta que tus compañeros de clase son robots y los programarás para crear patrones de tazas apiladas.
               description_teacher: Mediante un conjunto de símbolos en lugar de código, los estudiantes diseñarán algoritmos para indicar a un "robot" que apile tazas en diferentes patrones. Los estudiantes se turnarán para cumplir el rol del robot y responderán únicamente al algoritmo definido por sus compañeros. Este segmento enseña a los estudiantes la conexión entre los símbolos y las acciones, la diferencia entre un algoritmo y un programa, y lo valiosa que es la depuración.
@@ -26025,7 +26026,7 @@ es:
               name: Crear arte con código
               description_student: Programa el Artista para crear imágenes hermosas.
               description_teacher: En esta lección, los estudiantes tomarán control del Artista para completar los dibujos en pantalla. En esta etapa del Artista, los estudiantes podrán crear imágenes de mayor complejidad mediante nuevos bloques, tales como como `avanzar 100 pixeles` y `girar 90 grados a la derecha`.
-            My Loopy Robotic Friends Jr.:
+            My Loopy Robotic Friends Jr:
               name: Mis amigos robóticos y repetitivos Jr.
               description_student: En esta lección, volverás a programar a tus compañeros de clase. Al usar bucles, podrás resolver problemas más grandes y más complicados.
               description_teacher: En base a la actividad inicial "Mis amigos robóticos", los estudiantes abordan diseños más grandes y complicados. Para programar sus "robots" con el objetivo de que completen estos diseños más grandes, los estudiantes deberán identificar patrones repetidos en sus instrucciones que podrían reemplazarse con un bucle.
@@ -27151,6 +27152,10 @@ es:
               name: Evaluación de la Unidad 1
               description_student: Enhorabuena, has completado tu primera unidad. Evalúa tu progreso a través de la Evaluación de la Unidad 1.
               description_teacher: Los alumnos realizan una evaluación de opción múltiple que abarca los temas de la unidad.
+            lesson-21:
+              name: Consola
+            lesson-22:
+              name: Clases y Objetos
           lesson_groups:
             lessonGroup-2:
               display_name: Contenido
@@ -27238,6 +27243,10 @@ es:
               name: Imprimiendo Objetos
             lesson-15:
               name: Ámbito
+            lesson-16:
+              name: Consola
+            lesson-17:
+              name: Clases y Objetos
           lesson_groups:
             lessonGroup-2:
               display_name: Contenido
@@ -27251,6 +27260,14 @@ es:
               name: Práctica de FRQ
             lesson-2:
               name: Evaluación de la Unidad 3
+            lesson-5:
+              name: Bucles Para
+            lesson-12:
+              name: Búsqueda de Duplicados
+            lesson-16:
+              name: Consola
+            lesson-17:
+              name: Clases y Objetos
           lesson_groups:
             lessonGroup-2:
               display_name: Contenido
@@ -27450,6 +27467,7 @@ es:
 
                 **Tiempo sugerido:** 15 minutos
           name: autodidáctico-pl-csa2-2022
+          title: 'Módulo 2: Navegando por Code.org'
         self-paced-pl-csa3-2022:
           lessons:
             lesson-1:
@@ -28220,6 +28238,12 @@ es:
           lessons:
             lesson-1:
               name: Bienvenidos
+            lesson-4:
+              name: Resumen de los Descubrimientos de la Informática
+            lesson-9:
+              name: Planificación de lecciones
+            lesson-10:
+              name: El papel del profesor
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -28240,6 +28264,8 @@ es:
               name: Métodos Mutadores
             lesson-9:
               name: Imprimiendo Objetos
+            lesson-10:
+              name: Ámbito
             lesson-11:
               name: 'El Barrio: Proyecto de Gestión de Tiendas - Día 1'
             lesson-12:
@@ -28329,3 +28355,15 @@ es:
           student_description: "¡Bienvenido al curso gratuito en línea  para educadores de Code.org sobre Conceptos Básicos de Informática!"
           description_short: "¡Bienvenido al curso en línea gratuito para educadores, a su propio ritmo, de Code.org para iniciarse en los Conceptos Básicos de Informática!"
           description_audience: "¡Bienvenido al curso en línea gratuito para educadores, a su propio ritmo, de Code.org para iniciarse en los Conceptos Básicos de Informática!"
+        vpl-csd2-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Computación física
+        vpl-csd3-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Computación física
+        hello-world-csc:
+          title: Hola Mundo
+        csd-playground:
+          name: csd-playground

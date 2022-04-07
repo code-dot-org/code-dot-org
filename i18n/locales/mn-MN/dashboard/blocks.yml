@@ -2,6 +2,8 @@
 mn:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: шинэ {ANIMATION_NAME} шидтэнг {LOCATION} руу аваачих
       Dancelab_alternateMoves:
         text: "{GROUP}-н төстэй бүр {N} арга хэмжээ \n{MOVE1} ба {MOVE2}-н хоорондох"
         options:
@@ -1011,6 +1013,11 @@ mn:
         text: татаж болохуйц
       gamelab_edgesDisplace:
         text: захууд {SPRITE}-г хөдлөхөөс сэргийлж байна
+      gamelab_everySeconds:
+        text: "{N} {UNIT} бүрийг давтах "
+        options:
+          UNIT:
+            '"seconds"': секундууд
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1142,6 +1149,8 @@ mn:
         options:
           EFFECT:
             '"rain"': бороотой
+      gamelab_makeNewScaledSprite:
+        text: шинэ {ANIMATION_NAME} шидтэнг {LOCATION} руу аваачих
       gamelab_makeNewSpriteAnon:
         text: шинэ {ANIMATION_NAME} шидтэнг {LOCATION} руу аваачих
       gamelab_makeProjectile:

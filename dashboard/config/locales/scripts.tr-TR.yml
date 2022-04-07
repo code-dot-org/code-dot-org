@@ -1339,8 +1339,6 @@ tr:
           student_description: 'Aşama 2 Çevrimiçi: Karma Yaz Eğitimi'
         equity-pd:
           lessons:
-            Code.org Equity PD:
-              name: Code.org'da Profesyonel Gelişim ile Eşitliği Sağlama
             Necessary Background:
               name: Gerekli altyapı
         science-PD2:
@@ -4020,6 +4018,7 @@ tr:
                 Bulmacanın sonunda, öğrencilerin, oyunlarında farklı hızları ve sesleri
                 kullanabilecekleri fırsatları olacak.
           student_description: Takımınızı seçin ve bir basketbol oyunu oynayın
+          name: basketbol
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -5066,6 +5065,7 @@ tr:
                 Bulmacanın sonunda, öğrencilerin, oyunlarında farklı hızları ve sesleri
                 kullanabilecekleri fırsatları olacak.
           student_description: Kendi sporunu kodla
+          name: spor dalları
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -9039,6 +9039,7 @@ tr:
                 oynamak için biraz zamanları olacaktır.
           student_description: Minecraft Kodlama Saati için yepyeni bir faaliyetle
             geri döndü. Kodlamayla Minecraft’ta bir gezintiye çıkın
+          name: Kahraman
         applab-intro-staging:
           title: Uygulama Laboratuarı Hazırlama'ya Giriş
           lessons:
@@ -12908,6 +12909,7 @@ tr:
                 Bu ders her yaştan öğrenci için tasarlanmıştır, ancak okumayı gerektirir.
                 Araç müziğe yanıt vermek üzere tasarlandığından, bu etkinlik ses gerektirir.
           student_description: Kendi dans partinizi kodlayın ve arkadaşlarınızla paylaşın!
+          name: dans
         frozen-2018-test-b:
           title: Yeni Frozen Komut Dosyası
           lessons:
@@ -12933,6 +12935,7 @@ tr:
           student_description: Minecraft yeni bir etkinlik ile için geri döndü. Yaratıcılığını
             ve problem çözme becerilerini kullanarak su altı dünyalarını bu kod ile
             keşfet ve inşa et.
+          name: suda yaşayan
         sconyers:
           title: Tracey'nin Oyun Alanı
           lessons:
@@ -18652,7 +18655,7 @@ tr:
           description: Kendi dans partinizi kodlayın ve arkadaşlarınızla paylaşın!
           lessons:
             Dance Party:
-              name: Dans Partisi
+              name: Dans Partisi (2019)
               description_student: Bu derste, her yaştan öğrenci, güvenli ve destekleyici
                 bir ortamda kodlama ve bilgisayar bilimlerine giriş deneyimi kazanır.
                 Bu ders her yaştan öğrenci için tasarlanmıştır, ancak okumayı gerektirir.
@@ -27049,8 +27052,7 @@ tr:
           title: Merhaba, dünya!
         csa-self-paced-pl:
           lessons:
-            Navigating the Code.org learning platform:
-              name: "  Code.org öğrenme platformunda gezinme"
+            Navigating the Codeorg learning platform:
               description_teacher: |-
                 **Öğrenme hedefleri:**
 
@@ -28679,7 +28681,7 @@ tr:
                 öğrencilere döngüler kullanarak kendi görüntülerini oluşturma imkanı
                 verilecek.
               key: Sanatçıların Döngüleri
-            The Big Event Jr.:
+            The Big Event Jr:
               name: Büyük Olay Jr.
               description_student: Öğretmenleriniz uzaktan düğmelere bastığında hareket
                 edip seslenin.
@@ -29402,7 +29404,7 @@ tr:
                 yönlendiren kendi akıllı telefon uygulamalarının taslağını çizmek
                 için empati ve yaratıcılığını geliştirir.
               key: Doğru Uygulama
-            The Big Event Jr.:
+            The Big Event Jr:
               name: Büyük Olay Jr.
               description_student: Öğretmeniniz uzaktan düğmelere bastığında hareket
                 edin veya seslenin.
@@ -29533,7 +29535,7 @@ tr:
               description_student: Bu derste, kötülüğün ne olduğunu ve bununla çevrimiçi
                 ortamda karşılaşırsanız ne yapacağınızı öğreneceksiniz.
               key: Çevrimiçi Kötülüğe bir DUR deme
-            My Robotic Friends Jr.:
+            My Robotic Friends Jr:
               description_student: Bu derste, sınıf arkadaşlarınız robotmuş gibi davranacaksınız
                 ve istiflenmiş kupa desenleri oluşturmaları için onları programlayacaksınız.
               description_teacher: Kod yerine bir dizi sembol kullanarak öğrenciler,
@@ -29577,7 +29579,7 @@ tr:
                 '100 piksel ileri hareket et' ve '90 derece sağa dön' gibi yeni blokları
                 kullanarak giderek artan karmaşıklıkta resimleri oluşturmasına olanak
                 sağlayacaktır.
-            My Loopy Robotic Friends Jr.:
+            My Loopy Robotic Friends Jr:
               description_student: Bu derste, yine sınıf arkadaşlarınızı programlayacaksınız
                 ancak döngüler kullanarak daha büyük ve daha karmaşık problemleri
                 çözebileceksiniz.
@@ -30711,6 +30713,8 @@ tr:
           lessons:
             lesson-9:
               name: Döngüler
+            lesson-21:
+              name: Konsol
           lesson_groups:
             lessonGroup-2:
               display_name: İçerik
@@ -30762,10 +30766,17 @@ tr:
               name: Ünite 2 Değerlendirme
             lesson-6:
               name: Değişkenler
+            lesson-16:
+              name: Konsol
           lesson_groups:
             lessonGroup-2:
               display_name: İçerik
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: For Döngüleri
+            lesson-16:
+              name: Konsol
           lesson_groups:
             lessonGroup-2:
               display_name: İçerik
@@ -31219,6 +31230,8 @@ tr:
           lessons:
             lesson-1:
               name: Hoşgeldiniz
+            lesson-9:
+              name: Ders Planlanması
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -31266,3 +31279,13 @@ tr:
               key: Ders Planlanması
             Next steps:
               key: Sonraki adımlar
+        vpl-csd2-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Fiziksel Bilişim
+        vpl-csd3-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Fiziksel Bilişim
+        hello-world-csc:
+          title: Merhaba Dünya

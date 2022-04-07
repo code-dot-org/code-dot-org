@@ -1251,6 +1251,7 @@ ru:
             для решения мировых проблем.
           lessons:
             Oceans:
+              name: AI для океанов
               description_student: 'Краткое содержание урока: сначала ученики классифицируют
                 объекты либо как "рыбу", либо как" не рыбу", чтобы попытаться удалить
                 мусор из океана. Затем учащиеся должны будут расширить свой набор
@@ -1889,6 +1890,7 @@ ru:
                 заключение ученики смогут индивидуализировать свою игру, задавая различные
                 скорости и звуки.
           student_description: Выбери свою команду и создай игру в баскетбол
+          name: баскетбол
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -2180,6 +2182,7 @@ ru:
                 заключение ученики смогут индивидуализировать свою игру, задавая различные
                 скорости и звуки.
           student_description: Сочетай разные виды спорта
+          name: виды спорта
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -3624,6 +3627,7 @@ ru:
                 некоторое время для самостоятельной игры."
           student_description: Возвращение Minecraft с новыми возможностями на «Час
             кода»! Путешествие по миру программирования с Minecraft.
+          name: герой
         applab-intro-staging:
           lessons:
             Intro to App Lab:
@@ -4798,6 +4802,7 @@ ru:
                 всех возрастов, но он требует умения читать. Занятие требует использования
                 звука, так как назначение этого инструмента — реагировать на музыку.
           student_description: Создавайте свой собственный танец и делитесь им с друзьями.
+          name: танец
         frozen-2018-test-b:
           lessons:
             Artist:
@@ -4817,6 +4822,7 @@ ru:
                 удовольствия, работая с головоломками в течение часа. Ученики старших
                 классов в большинстве завершат работу с уроком и получат в конце урока
                 некоторое время для самостоятельной игры."
+          name: водный мир
         sconyers:
           lessons:
             Linking Screens:
@@ -6291,7 +6297,6 @@ ru:
           description: Создавайте свой собственный танец и делитесь им с друзьями.
           lessons:
             Dance Party:
-              name: Танцевальная вечеринка
               description_student: В ходе этого урока учащиеся всех возрастов получают
                 начальный опыт написания кода и изучения информатики в безопасной
                 и обеспечивающей поддержку среде. Этот урок предназначен для учащихся
@@ -8909,8 +8914,7 @@ ru:
           title: '"Привет, мир!"'
         csa-self-paced-pl:
           lessons:
-            Navigating the Code.org learning platform:
-              name: " Навигация по обучающей платформе Code.org"
+            Navigating the Codeorg learning platform:
               description_teacher: |-
                 **Вы узнаете, как:**
 
@@ -10802,6 +10806,8 @@ ru:
               name: Java Lab
             lesson-9:
               name: Циклы
+            lesson-21:
+              name: Консоль
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
@@ -10839,10 +10845,17 @@ ru:
           lessons:
             lesson-6:
               name: Переменные
+            lesson-16:
+              name: Консоль
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: Циклы с параметром
+            lesson-16:
+              name: Консоль
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
@@ -11257,6 +11270,8 @@ ru:
           lessons:
             lesson-1:
               name: Добро пожаловать
+            lesson-9:
+              name: Планирование урока
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -11292,3 +11307,5 @@ ru:
               key: Циклы с параметром
             Lesson Planning:
               key: Планирование урока
+        hello-world-csc:
+          title: Привет, мир

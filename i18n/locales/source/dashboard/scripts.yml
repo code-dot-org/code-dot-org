@@ -185,6 +185,7 @@ en:
               description_teacher: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
           description_audience: ''
           student_description: Create a story or make a game with Play Lab!
+          name: playlab
         artist:
           title: Artist
           description: Draw cool pictures and designs with the Artist!
@@ -196,6 +197,8 @@ en:
               description_student: Create beautiful images by programming the Artist.
               description_teacher: In this lesson, students will take control of the Artist to complete drawings on the screen. This Artist stage will allow students to create images of increasing complexity using programming blocks like `move forward by 100 pixels` and `turn right by 90 degrees`.
           student_description: Draw cool pictures and designs with the Artist!
+          name: artist
+          description_audience: ''
         hourofcode:
           title: Classic Maze
           description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
@@ -208,6 +211,7 @@ en:
               description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for young learners, ages 4-10, but can be adapted for older learners using the differentiation suggestions provided.
               description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for young learners, ages 4-10, but can be adapted for older learners using the differentiation suggestions provided.
           student_description: Try the basics of computer science with characters from Angry Birds, Plants vs. Zombies, and Scrat from Ice Age!
+          name: hourofcode
         frozen:
           title: Code with Anna and Elsa
           description: Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
@@ -219,6 +223,8 @@ en:
               description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners in the middle grades, ages 10-13, but can be adapted for younger or older learners using the differentiation suggestions provided. Students should have a basic understanding of simple geometry and drawing angles.
               description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners in the middle grades, ages 10-13, but can be adapted for younger or older learners using the differentiation suggestions provided. Students should have a basic understanding of simple geometry and drawing angles.
           student_description: Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
+          name: frozen
+          description_audience: ''
         course4:
           title: Course 4
           description: Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
@@ -374,6 +380,8 @@ en:
               description_student: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.
               description_teacher: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
           student_description: Use Play Lab to create a story or game starring Disney Infinity characters.
+          name: infinity
+          description_audience: ''
         algebrademo:
           title: Algebra Demo
           description: A handful of puzzles to demonstrate the environment and programming language used in Code.org CS in Algebra
@@ -565,6 +573,7 @@ en:
               description_student: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
               description_teacher: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
           student_description: Wanna write your own game in less than 10 minutes? Try our Flappy Code tutorial!
+          name: flappy
         jigsaw:
           title: Jigsaw
           description: Try our Jigsaw tutorial.
@@ -577,6 +586,7 @@ en:
               description_student: Click and drag to finish the puzzles.
               description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
           student_description: Try our Jigsaw tutorial.
+          name: jigsaw
         step:
           title: Step
           description: Step tutorial
@@ -721,6 +731,7 @@ en:
               description_student: 'At some point we reach a physical limit of how fast we can send bits and if we want to send a large amount of information faster, we have to find a way to represent the same information with fewer bits - we must compress the data.  '
               description_teacher: "At some point we reach a physical limit of how fast we can send bits and if we want to send a large amount of information faster, we have to find a way to represent the same information with fewer bits - we must **compress** the data. In this lesson, students will use the Text Compression Widget to compress segments of English text by looking for patterns and substituting symbols for larger patterns of text.\r\n"
           student_description: Compress text by identifying repeated patterns.
+          name: text-compression
         CSPPD:
           title: Computer Science Principles PD
           description: 'Phase 1: Online Introduction for CSP'
@@ -1485,7 +1496,7 @@ en:
           description_audience: ''
           lesson_groups: {}
           lessons:
-            Code.org Equity PD:
+            Codeorg Equity PD:
               name: Code.org Equity PD
             Necessary Background:
               name: Necessary Background
@@ -2010,6 +2021,7 @@ en:
               description_student: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.
               description_teacher: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
           student_description: Create a story or make a game with Ice Age Play Lab!
+          name: iceage
         CSPPD3-Unit3:
           title: 'Computer Science Principles: Unit 3 PD'
           description: Online Exploration of CSP Unit 3
@@ -2096,6 +2108,7 @@ en:
               description_teacher: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
           description_audience: ''
           student_description: Create a story or make a game with Gumball Play Lab!
+          name: gumball
         starwars:
           title: 'Star Wars: Building a Galaxy With Code (Javascript)'
           description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
@@ -2111,6 +2124,7 @@ en:
 
                 A [Blockly version](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) is also available and recommended for students on mobile devices without keyboards, younger students, and international students.
           student_description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          name: starwars
         starwarsblocks:
           title: 'Star Wars: Building a Galaxy With Code (Blockly)'
           description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
@@ -2126,6 +2140,7 @@ en:
 
                 A [JavaScript](s/starwars) version is also available. For older students on computers, learning JavaScript can be fun and provide an additional challenge. Note that JavaScript syntax is not translated and for the first Hour of Code, the translated blocks found here provide a better introduction. This version of the tutorial is also great if you have some students in your class who have already learned some coding. It is recommended for ages 11+.
           student_description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
+          name: starwarsblocks
         mc:
           title: Minecraft Hour of Code
           description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
@@ -2134,10 +2149,11 @@ en:
           lesson_groups: {}
           lessons:
             Hour of Code 2015:
-              name: 'Minecraft: Adventurer'
+              name: Minecraft Hour of Code
               description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
               description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
           student_description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
+          name: mc
         oceans:
           title: AI for Oceans
           description: Learn how AI and machine learning can be used to address world problems.
@@ -2146,10 +2162,11 @@ en:
           lesson_groups: {}
           lessons:
             Oceans:
-              name: Oceans
+              name: AI for Oceans
               description_student: First students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
               description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. First, students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
           student_description: Learn how AI and machine learning can be used to address world problems.
+          name: oceans
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
           description: Online Exploration of CSP Unit 3-- Lesson Challenges
@@ -4219,6 +4236,7 @@ en:
               description_student: Ever wish you could play video games in school? In this lesson, you will get to make your own!
               description_teacher: In this online activity, students will learn what events are, and how computers use them in programs like video games. Students will work through puzzles making the program react to events (like arrow buttons being pressed.) At the end of the puzzle, students will have the opportunity to customize their game with different speeds and sounds.
           student_description: Choose your team and make a basketball game
+          name: basketball
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -4235,6 +4253,7 @@ en:
               description_student: In this lesson, students are introduced to the need for encryption and simple techniques for breaking (or cracking) secret messages.  Students try their own hand at cracking a message encoded with the classic Caesar cipher and also a Random Substitution Cipher.  Students should become well-acquainted with idea that in an age of powerful computational tools, techniques of encryption will need to be more sophisticated.  The most important aspect of this lesson is to understand how and why encryption plays a role in all of our lives every day on the Internet, and that making good encryption is not trivial.  Students will get their feet wet with understanding the considerations that must go into making strong encryption in the face of powerful computational tools that can be used to crack it. The need for secrecy when sending bits over the Internet is important for anyone using the Internet.
               description_teacher: In this lesson, students are introduced to the need for encryption and simple techniques for breaking (or cracking) secret messages.  Students try their own hand at cracking a message encoded with the classic Caesar cipher and also a Random Substitution Cipher.  Students should become well-acquainted with idea that in an age of powerful computational tools, techniques of encryption will need to be more sophisticated.  The most important aspect of this lesson is to understand how and why encryption plays a role in all of our lives every day on the Internet, and that making good encryption is not trivial.  Students will get their feet wet with understanding the considerations that must go into making strong encryption in the face of powerful computational tools that can be used to crack it. The need for secrecy when sending bits over the Internet is important for anyone using the Internet.
           student_description: In this lesson, students are introduced to the need for encryption and simple techniques for breaking (or cracking) secret messages.
+          name: hoc-encryption
         csd2-2017:
           title: CSD Unit 2 - Web Development ('17-'18)
           description_audience: ''
@@ -4501,10 +4520,11 @@ en:
           lesson_groups: {}
           lessons:
             Minecraft Hour of Code Designer:
-              name: 'Minecraft: Designer'
+              name: Minecraft Hour of Code Designer
               description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
               description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
           student_description: Program animals and other Minecraft creatures in your own version of Minecraft.
+          name: minecraft
         flappy-impact-study:
           title: Flappy Code with Survey
           description_audience: ''
@@ -4845,6 +4865,7 @@ en:
               description_student: Ever wish you could play video games in school? In this lesson, you will get to make your own!
               description_teacher: In this online activity, students will learn what events are, and how computers use them in programs like video games. Students will work through puzzles making the program react to events (like arrow buttons being pressed.) At the end of the puzzle, students will have the opportunity to customize their game with different speeds and sounds.
           student_description: Mix and match across sports
+          name: sports
         2016_sciencePD-phase2b:
           title: ''
           description_audience: ''
@@ -7205,6 +7226,7 @@ en:
             'Lesson 1: App Lab Intro':
               name: 'Lesson 1: App Lab Intro'
           student_description: Create your own app in JavaScript using either block based programming or text. If you've already done some programming with blocks, take your skills to the next level.
+          name: applab-intro
         e-f-ramp:
           title: Course E & F Ramp
           description_audience: ''
@@ -7900,6 +7922,7 @@ en:
               description_student: 'In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. '
               description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
           student_description: Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.
+          name: hero
         applab-intro-staging:
           title: Intro to App Lab Staging
           description_audience: ''
@@ -10932,6 +10955,7 @@ en:
               description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
               description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
           student_description: Code your own dance party to share with your friends!
+          name: dance
         frozen-2018-test-b:
           title: New Frozen Script
           description: ''
@@ -10956,6 +10980,7 @@ en:
               description_student: 'In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. '
               description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
           student_description: Minecraft is back with a brand new activity! Use your creativity and problem solving skills to explore and build underwater worlds with code.
+          name: aquatic
         sconyers:
           title: Tracey's Playground
           description_audience: ''
@@ -11072,6 +11097,7 @@ en:
               description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
               description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
           student_description: Go beyond the first hour with extended project ideas.
+          name: dance-extras
         coursef-2019:
           title: Course F (2019)
           description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
@@ -15317,10 +15343,11 @@ en:
           lesson_groups: {}
           lessons:
             Dance Party:
-              name: Dance Party
+              name: Dance Party (2019)
               description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
               description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
           student_description: Code your own dance party to share with your friends!
+          name: dance-2019
         k5-onlinepd-2019:
           title: Teaching Computer Science Fundamentals (2019)
           description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course!
@@ -15440,10 +15467,11 @@ en:
           lesson_groups: {}
           lessons:
             Dance Party - Go Further:
-              name: Keep on Dancing
+              name: Keep on Dancing (2019)
               description_student: 'Learners of all ages continue an introductory experience with coding and computer science in a safe, supportive environment. '
               description_teacher: In this lesson, learners of all ages continue their experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
           student_description: Go beyond the first hour with extended project ideas.
+          name: dance-extras-2019
         csp10-pilot:
           title: Cybersecurity and Global Impacts
           description_audience: ''
@@ -18921,8 +18949,6 @@ en:
               name: USE Programs (AppLab Only)
             MODIFY Programs:
               name: MODIFY Programs (AppLab -> Widget -> AppLab)
-            Does Code.org Like Your Dog?:
-              name: Does Code.org Like Your Dog?
             dog:
               name: Does Code.org Like Your Dog?
             AI for Oceans:
@@ -19045,7 +19071,7 @@ en:
             Outbreak:
               name: Coding a Simulation
               description_student: A virus has come to Monster Town! Learn to create a virus simulator and help the monsters get back to being healthy.
-              description_teacher: 'This lesson combines **skill-building** around events with a **mini-project** where students get to build their own computer simulation in Sprite Lab. Students will study the simulation to understand how quickly a virus can spread and what can be done to slow it down. '
+              description_teacher: 'In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson combines **skill-building** around events with a **mini-project** where students get to build their own computer simulation in Sprite Lab. Students will study the simulation to understand how quickly a virus can spread and what can be done to slow it down. '
           lesson_groups:
             outbreak:
               display_name: Outbreak Simulation
@@ -23313,7 +23339,7 @@ en:
               name: Module 1
             Getting Started:
               name: Getting Started
-            What is Code.org:
+            What is Codeorg:
               name: What is Code.org?
             Addressing Implementation Approaches and Barriers:
               name: Implementation Approaches and Barriers
@@ -25697,7 +25723,7 @@ en:
           student_description: ''
         csa-self-paced-pl:
           lessons:
-            Navigating the Code.org learning platform:
+            Navigating the Codeorg learning platform:
               name: " Navigating Code.org learning platform"
               description_student: 
               description_teacher: |-
@@ -27033,7 +27059,7 @@ en:
             lesson-1:
               name: 'Dance Party: Unplugged'
               description_student: 'Have a class dance party to learn about events. '
-              description_teacher: Students will learn that events are a useful way to control when an action happens, and can even be used to make make multiple things act in sync. In programming, you can use events to respond to a user controlling it (like pressing buttons or clicking the mouse). Events can make your program more interesting and interactive.
+              description_teacher: In this lesson, learners of all ages get an introductory experience with computer science in a safe, supportive, and unplugged environment. This lesson has been designed for learners of all ages. Students will learn that events are a useful way to control when an action happens, and can even be used to make make multiple things act in sync. In programming, you can use events to respond to a user controlling it (like pressing buttons or clicking the mouse). Events can make your program more interesting and interactive.
           lesson_groups: {}
           name: dance-unplugged
           title: Hour of Code - Dance Party - Unplugged
@@ -28146,7 +28172,7 @@ en:
             lesson-2:
               name: 'Project: Human Device Interaction'
               description_student: 
-              description_teacher: 
+              description_teacher: 'In this project, students create an app that controls the Circuit Playground so it interacts with the physical environment around it, similar to many smart phone apps that are used to control devices in a house or car or school. Students use physical materials to help design their physical device, then create an app that lets the user interact with the physical device or change settings. '
             lesson-3:
               name: 'Mini-Project: Interactive Art'
               description_student: Create a piece of interactive artwork using a Circuit Playground and physical materials
@@ -28853,7 +28879,7 @@ en:
               description_student: Use loops and patterns to finish the images.
               description_teacher: In this **skill-building** lesson, students learn to draw images by looping simple sequences of instructions. Here, loops are creating patterns. At the end of this lesson, students will create their own images.
               key: Ocean Scene with Loops
-            The Big Event Jr.:
+            The Big Event Jr:
               name: The Big Event Jr.
               description_student: Move and shout when your teachers presses buttons on a giant remote.
               description_teacher: In this **context-setting** lesson, the class will experience the concept of events through a game where they move or shout when you press buttons on a giant remote.
@@ -29679,7 +29705,7 @@ en:
               description_student: Sketch your own smartphone app.
               description_teacher: In this **exploratory** lesson, students empathize with several fictional smartphone users to help them find the “right app” that addresses their needs.
               key: The Right App
-            The Big Event Jr.:
+            The Big Event Jr:
               name: The Big Event Jr.
               description_student: Move or shout when your teacher presses buttons on a giant remote.
               description_teacher: In this **context-setting** lesson, the class will experience the concept of events through a game where they move or shout when you press buttons on a giant remote.
@@ -29772,7 +29798,7 @@ en:
 
                 The internet is filled with all kinds of interesting people, but sometimes, some of them can be mean to each other. With this role play, help your students understand why it's often easier to be mean online than in person, and how to deal with online meanness when they see it.
               key: Putting a STOP to Online Meanness
-            My Robotic Friends Jr.:
+            My Robotic Friends Jr:
               name: My Robotic Friends Jr.
               description_student: In this lesson, you'll pretend your classmates are robots and program them to build patterns of stacked cups.
               description_teacher: In this **context-setting** lessons, students will use a set of symbols to instruct a "robot" to stack cups in different patterns. Students will take turns participating as the robot, responding only to the algorithm defined by their peers.
@@ -29793,7 +29819,7 @@ en:
               name: Creating Art with Code
               description_student: Create beautiful images by programming the Artist.
               description_teacher: In this **skill-building** lesson, students will take control of the Artist to complete drawings on the screen.
-            My Loopy Robotic Friends Jr.:
+            My Loopy Robotic Friends Jr:
               name: My Loopy Robotic Friends Jr.
               description_student: In this lesson, you'll program your classmates again, but using loops you'll be able to solve bigger and more complicated problems.
               description_teacher: 'This **context-setting** lesson builds on the initial "My Robotic Friends" activity, featuring larger and more complicated designs. '
@@ -31038,11 +31064,21 @@ en:
               name: Unit 1 Assessment
               description_student: Congratulations, you completed your first unit! Assess your progress through the Unit 1 Assessment.
               description_teacher: Students complete a multiple-choice assessment that covers the unit topics.
+            lesson-21:
+              name: Console
+              description_student: 
+              description_teacher: 
+            lesson-22:
+              name: The Neighborhood
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
             lessonGroup-3:
               display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Sandboxes
           name: csa1-2022
           title: Object-Oriented Programming ('22-'23)
           description_audience: ''
@@ -31170,11 +31206,11 @@ en:
               description_student: |-
                 **How can I store values so I can reuse them?**
 
-                You learned about the `boolean` data type to represent a `true` or `false` value in the previous unit. In this lesson, you expand your knowledge of data types to learn about the `int` and `double` types and differentiate between primitive and reference variables. You use manipulatives to explore how variables are declared, initialized, and used as you write and trace code segments and identify the current value stored in a variable.
+                You learned about the `boolean` data type to represent a `true` or `false` value in the previous unit. In this lesson, you expand your knowledge of data types to learn about the `int` and `double` types and differentiate between primitive and reference variables. You explore how variables are declared, initialized, and used as you write and modify code segments and identify the current value stored in a variable.
               description_teacher: |-
                 **How can I store values so I can reuse them?**
 
-                Students expand their knowledge of data types to learn about the `int` and `double` types and differentiate between primitive and reference variables. Students use manipulatives to explore how variables are declared, initialized, and used as they write and trace code segments and identify the current value stored in a variable.
+                Students expand their knowledge of data types to learn about the `int` and `double` types and differentiate between primitive and reference variables. Students explore how variables are declared, initialized, and used as they write and modify code segments and identify the current value stored in a variable.
             lesson-7:
               name: Operators and Expressions
               description_student: |-
@@ -31210,11 +31246,11 @@ en:
               description_student: |-
                 **How do I get input from the user?**
 
-                In this lesson, you learn to obtain user input using the `Scanner` class. You incorporate user input to decide the starting values of `Dessert` objects. In the process, you discover the `NullPointerException`, its cause, and strategies for debugging this error.
+                In this lesson, you learn to obtain user input using the `Scanner` class. You also discover the `NullPointerException`, its cause, and strategies for debugging this error.
               description_teacher: |-
                 **How do I get input from the user?**
 
-                Students learn how to obtain user input using the `Scanner` class. As students create `Dessert` objects based on user input, they discover the `NullPointerException`, its cause, and strategies for debugging this error.
+                Students learn how to obtain user input using the `Scanner` class. Additionally, they discover the `NullPointerException`, its cause, and strategies for debugging this error.
             lesson-11:
               name: Class Hierarchies
               description_student: |-
@@ -31256,7 +31292,7 @@ en:
 
                 Students have learned to obtain information about an object using its accessor methods. In this lesson, students discover the need for an easier way to get the state of an object. Students revisit the `Object` class and learn how to override its `toString()` method to display object information to the console. Students also learn to format output using escape sequences and concatenating instance variables and `String`s.
             lesson-15:
-              name: Scope
+              name: Scope and this
               description_student: |-
                 **How does the scope of a variable impact its accessibility and use?**
 
@@ -31265,11 +31301,21 @@ en:
                 **How does the scope of a variable impact its accessibility and use?**
 
                 Students explore the scope of variables in a program and discover that the local variable is used when it has the same name as an instance variable. Students learn to use the `this` keyword to refer to the current object in constructors and methods.
+            lesson-16:
+              name: Console
+              description_student: 
+              description_teacher: 
+            lesson-17:
+              name: The Neighborhood
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
             lessonGroup-3:
               display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Sandboxes
           name: csa2-2022
           title: Class Structure and Design ('22-'23)
           description_audience: ''
@@ -31282,17 +31328,53 @@ en:
               name: FRQ Practice
             lesson-2:
               name: Unit 3 Assessment
+            lesson-3:
+              name: One-Dimensional (1D) Arrays
+            lesson-4:
+              name: Array Elements
+            lesson-5:
+              name: For Loops
+            lesson-6:
+              name: Array Algorithms
+            lesson-7:
+              name: Enhanced For Loops
+            lesson-8:
+              name: Static Variables and Constants
+            lesson-9:
+              name: Polymorphism
+            lesson-10:
+              name: Finding Pairs
+            lesson-11:
+              name: Reversing Arrays
+            lesson-12:
+              name: Finding Duplicates
+            lesson-13:
+              name: Data for Social Good Project – Day 1
+            lesson-14:
+              name: Data for Social Good Project – Day 2
+            lesson-15:
+              name: Data for Social Good Project – Day 3
+            lesson-16:
+              name: Console
+              description_student: 
+              description_teacher: 
+            lesson-17:
+              name: The Neighborhood
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
             lessonGroup-3:
               display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Sandboxes
           name: csa3-2022
           title: Arrays and Algorithms ('22-'23)
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: "This unit introduces students to data structures to store primitive values and object references. Students use one-dimensional (1D) arrays to represent lists of data while expanding their knowledge of loops and conditionals to analyze and process data in a 1D array. Students learn to use `for` loops to traverse arrays and discover that an algorithm involving loops can be implemented with either a `for` loop or a `while` loop. Throughout the unit, students develop and modify standard algorithms to find and manipulate elements in a 1D array while also discovering the concept of polymorphism when traversing arrays of objects. As part of the planning process, students identify the preconditions and postconditions that an algorithm must satisfy. Additionally, students learn to use the `static` and `final` keywords to create static variables to represent values shared with all classes and constants to represent values that cannot be changed.\n\n### AP Classroom Personal Progress Checks\n\nTo assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**][0] page. You can find instructions and video demonstrations to do this on [**AP Central**][1].\n\nThe following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:\n\n-   Personal Progress Check 4\n-   Personal Progress Check 6\n\n**_Note:_** _Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units._"
+          student_description: This unit introduces you to data structures to store primitive values and object references. You use one-dimensional (1D) arrays to represent lists of data while expanding your knowledge of loops and conditionals to analyze and process data in a 1D array. You learn to use `for` loops to traverse arrays and discover that an algorithm involving loops can be implemented with either a `for` loop or a `while` loop. Throughout the unit, you develop and modify standard algorithms to find and manipulate elements in a 1D array while also discovering the concept of polymorphism when traversing arrays of objects. As part of the planning process, you identify the preconditions and postconditions that an algorithm must satisfy. Additionally, you learn to use the `static` and `final` keywords to create static variables to represent values shared with all classes and constants to represent values that cannot be changed.
         tessplayground:
           lessons:
             Conditionals and Debugging:
@@ -31542,10 +31624,14 @@ en:
           description: ''
           student_description: ''
         pltess:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Tess lesson 2
+            lesson-2:
+              name: lesson 3
           lesson_groups:
             lessonGroup-2:
-              display_name: course
+              display_name: Tess lesson
           name: pltess
           title: ''
           description_audience: ''
@@ -31560,14 +31646,14 @@ en:
             lesson-1:
               name: Welcome to Code.org
               description_student: |-
-                You will:
+                **You will:**
 
                 * Get an introduction to Code.org.
                 * Learn how to engage in these professional learning modules.
 
                 **Estimated time:** 20 minutes
               description_teacher: |
-                You will:
+                **You will:**
 
                 * Get an introduction to Code.org.
                 * Learn how to engage in these professional learning modules.
@@ -31575,15 +31661,35 @@ en:
                 **Estimated time:** 20 minutes
             lesson-2:
               name: Get to know Computer Science A
-              description_student: "You will:\n\n* Get an introduction to the AP Computer Science A course\n* Learn Code.org’s curricular approach to CSA \n\n**Estimated time:** 40 minutes\n"
-              description_teacher: "You will:\n\n* Get an introduction to the AP Computer Science A course\n* Learn Code.org’s curricular approach to CSA \n\n**Estimated time:** 40 minutes\n"
+              description_student: "**You will:**\n\n* Get an introduction to the AP Computer Science A course\n* Learn Code.org’s curricular approach to CSA \n\n**Estimated time:** 40 minutes\n"
+              description_teacher: "**You will:**\n\n* Get an introduction to the AP Computer Science A course\n* Learn Code.org’s curricular approach to CSA \n\n**Estimated time:** 40 minutes\n"
           lesson_groups: {}
           name: self-paced-pl-csa1-2022
-          title: 'Unit 1 - Module 1: Welcome'
+          title: 'Module 1: Welcome'
           description_audience: ''
           description_short: ''
-          description: "This module is a short introduction to both Code.org and professional learning modules. \n\n**You will:**\n\n-   Get an introduction to Code.org and CS Principles.\n-   Learn how to engage in professional learning modules.\n\n**Suggested Time:** 10 minutes"
-          student_description: ''
+          description: |-
+            This module is for anyone using these professional learning modules for CSA.
+
+            **You will:**
+
+            -   Get an introduction to Code.org.
+            -   Learn how to engage in these professional learning modules.
+            -   Get an introduction to the AP Computer Science A course
+            -   Learn Code.org’s curricular approach to CSA
+
+            **Estimated Time:** 60 minutes
+          student_description: |-
+            This module is for anyone using these professional learning modules for CSA.
+
+            **You will:**
+
+            -   Get an introduction to Code.org.
+            -   Learn how to engage in these professional learning modules.
+            -   Get an introduction to the AP Computer Science A course
+            -   Learn Code.org’s curricular approach to CSA
+
+            **Estimated Time:** 60 minutes
         self-paced-pl-csa2-2022:
           lessons:
             lesson-1:
@@ -31594,14 +31700,14 @@ en:
                 * Navigate the Code.org website and teacher tools.
                 * Set up a classroom section.
 
-                **Suggested time:** 30 minutes
+                **Estimated time:** 30 minutes
               description_teacher: |-
                 **You will:**
 
                 * Navigate the Code.org website and teacher tools.
                 * Set up a classroom section.
 
-                **Suggested time:** 30 minutes
+                **Estimated time:** 30 minutes
             lesson-2:
               name: Navigating lesson plans and resources
               description_student: |-
@@ -31609,13 +31715,13 @@ en:
 
                 * Locate and use course lesson plans and teacher resources.
 
-                **Suggested time:** 25 minutes
+                **Estimated time:** 25 minutes
               description_teacher: |-
                 **You will:**
 
                 * Locate and use course lesson plans and teacher resources.
 
-                **Suggested time:** 25 minutes
+                **Estimated time:** 25 minutes
             lesson-3:
               name: Navigating Support
               description_student: |-
@@ -31623,37 +31729,155 @@ en:
 
                 * Learn how to access support while teaching the course.
 
-                **Suggested time:** 15 minutes
+                **Estimated time:** 15 minutes
               description_teacher: |-
                 **You will:**
 
                 * Learn how to access support while teaching the course.
 
-                **Suggested time:** 15 minutes
+                **Estimated time:** 15 minutes
           lesson_groups: {}
           name: self-paced-pl-csa2-2022
-          title: ''
+          title: 'Module 2: Navigating Code.org'
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: "This module is intended for teachers who are new to Code.org and the Code.org platform. \n\n**You will:**\n\n-   Navigate the Code.org website and teacher tools.\n-   Set up a classroom section.\n-   Locate and use course lesson plans and teacher resources.\n-   Learn how to access support while teaching the course.\n\n**Estimated Time:** 70 minutes"
+          student_description: |-
+            This module is intended for teachers who are new to Code.org and the Code.org platform.
+
+            **You will:**
+
+            -   Navigate the Code.org website and teacher tools.
+            -   Set up a classroom section.
+            -   Locate and use course lesson plans and teacher resources.
+            -   Learn how to access support while teaching the course.
+
+            **Estimated Time:** 70 minutes
         self-paced-pl-csa3-2022:
           lessons:
             lesson-1:
               name: Introduction to JavaLab
               description_student: 
-              description_teacher: 
+              description_teacher: |-
+                **You will:**
+
+                * Create a new file in the Java Lab IDE
+                * Name Java files using conventions for naming
+                * Learn the basics of Java syntax
+                * Print information to the console
+
+                **Estimated time:** 60 minutes
             lesson-2:
-              name: Using variables in Java
-              description_student: 
-              description_teacher: 
+              name: Variables in Java
+              description_student: |-
+                **You will:**
+
+                * Describe the different primitive data types covered in the AP subset
+                * Declare and initialize variables
+                * Use the assignment operator and compound assignment operators
+                * Use variables in arithmetic operations
+                * Print variables and text to the console
+
+                **Estimated time:** 90 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Describe the different primitive data types covered in the AP subset
+                * Declare and initialize variables
+                * Use the assignment operator and compound assignment operators
+                * Use variables in arithmetic operations
+                * Print variables and text to the console
+
+                **Estimated time:** 90 minutes
+            lesson-3:
+              name: If statements in Java
+              description_student: |-
+                **You will:**
+
+                * Evaluate boolean expressions
+                * Write and read if, if-else, if-else-if-else statements
+                * Describe the difference between the assignment operator and the comparison operator
+
+                **Estimated time:** 90 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Evaluate boolean expressions
+                * Write and read if, if-else, if-else-if-else statements
+                * Describe the difference between the assignment operator and the comparison operator
+
+                **Estimated time:** 90 minutes
+            lesson-4:
+              name: Loops in Java
+              description_student: |-
+                **You will:**
+
+                * Read, write, and debug for loops in Java
+
+                **Estimated time:** 90 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Read, write, and debug for loops in Java
+
+                **Estimated time:** 90 minutes
+            lesson-5:
+              name: Arrays in Java
+              description_student: |-
+                **You will:**
+
+                * Declare and initialize a 1D array of primitive data types
+                * Access and modify elements in an array
+                * Traverse an array
+
+                **Estimated time:** 120 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Declare and initialize a 1D array of primitive data types
+                * Access and modify elements in an array
+                * Traverse an array
+
+                **Estimated time:** 120 minutes
           lesson_groups: {}
           name: self-paced-pl-csa3-2022
-          title: Support for text-based programming
+          title: 'Module 3: Support for text-based programming'
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            This module is for any teacher who is experienced in using variables, conditionals, loops and arrays in other programming languages, but is new to Java.
+
+            **You will:**
+
+            -   Create a new file in the Java Lab IDE
+            -   Become familiar with the basics of Java syntax
+            -   Declare and initialize variables
+            -   Use variables in arithmetic operations
+            -   Print variables and text to the console
+            -   Write and read if, if-else, if-else-if-else statements
+            -   Read, write, and debug for loops in Java
+            -   Declare and  initialize a 1D array of primitive data types
+            -   Access and modify elements in arrays
+            -   Traverse arrays
+
+            **Estimated Time:** 7.5 hours
+          student_description: |-
+            This module is for any teacher who is experienced in using variables, conditionals, loops and arrays in other programming languages, but is new to Java.
+
+            **You will:**
+
+            -   Create a new file in the Java Lab IDE
+            -   Become familiar with the basics of Java syntax
+            -   Declare and initialize variables
+            -   Use variables in arithmetic operations
+            -   Print variables and text to the console
+            -   Write and read if, if-else, if-else-if-else statements
+            -   Read, write, and debug for loops in Java
+            -   Declare and  initialize a 1D array of primitive data types
+            -   Access and modify elements in arrays
+            -   Traverse arrays
+
+            **Estimated Time:** 7.5 hours
         csa7-pilot-extra:
           lessons:
             Writing Methods to Satisfy Conditions:
@@ -32561,8 +32785,8 @@ en:
           lessons:
             lesson-1:
               name: Welcome
-              description_student: 
-              description_teacher: 
+              description_student: "**You will:**\n* Have the opportunity to introduce yourself and meet other workshop participants.\n* Get an overview of the workshop experience.\n* Enroll in the workshop section to access the workshop materials. \n\n"
+              description_teacher: "**Overview:**\nThis session serves as both a welcome to the workshop experience and an opportunity to begin getting to know the workshop cohort. \n\n**Participants will:**\n\n* Have the opportunity to introduce yourself and meet other workshop participants.\n* Get an overview of the workshop experience.\n* Enroll in the workshop section to access the workshop materials. \n\n**Suggested time:** 30 minutes"
             lesson-2:
               name: Equity in CS
               description_student: This appears for participants / students
@@ -32571,6 +32795,40 @@ en:
               name: Model Lesson 1 - Unit 1 Lesson 2
               description_student: 
               description_teacher: 
+            lesson-4:
+              name: Overview of CS Discoveries
+              description_student: |-
+                **You will:**
+                * Gain a high-level understanding of the CS Discoveries curriculum.
+
+                **Suggested time:** 40 minutes
+              description_teacher: |-
+                **Participants will:**
+                * Gain a high-level understanding of the CS Discoveries curriculum.
+
+                **Suggested time:** 40 minutes
+            lesson-5:
+              name: Asynchronous Debrief
+            lesson-6:
+              name: Model Lesson 2 - Unit 2 Lesson 2
+            lesson-7:
+              name: Identity
+            lesson-8:
+              name: Lesson Assignment
+            lesson-9:
+              name: Lesson Planning
+            lesson-10:
+              name: The role of the teacher
+              description_student: |-
+                **You will:**
+                * Consider your role as the teacher in a CS Discoveries classroom.
+
+                **Suggested time:** 20 minutes
+              description_teacher: |-
+                **Participants will:**
+                * Consider their role as the teacher in a CS Discoveries classroom.
+
+                **Suggested time:** 20 minutes
           lesson_groups:
             lessonGroup-2:
               display_name: Synchronous Part 1
@@ -32593,9 +32851,13 @@ en:
               description_student: 
               description_teacher: 
             lesson-2:
-              name: TLO 1
+              name: Model Lesson 3 - Unit 2 Lesson 3
               description_student: 
               description_teacher: 
+            lesson-3:
+              name: TLO 1 - Unit 3 Lesson 3
+            lesson-4:
+              name: TLO 2 - Unit 3 Lesson 4
           lesson_groups:
             lessonGroup-2:
               display_name: Synchronous Part 1
@@ -32632,8 +32894,38 @@ en:
           lessons:
             lesson-1:
               name: "[TEMPLATE] Introduction to..."
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **You will:**
+
+                * Get an introduction to code.org's ___________ unit.
+                * Get a preview of the first week of the ________ unit content.
+
+                **Suggested time:** 15 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Get an introduction to code.org's ___________ unit.
+                * Get a preview of the first week of the ________ unit content.
+
+                **Suggested time:** 15 minutes
+            lesson-2:
+              name: "[TEMPLATE] Unit Wrap Up"
+              description_student: "**You will:**\n\n* Explore end of chapter projects. \n\n**Suggested time:** 10 minutes"
+              description_teacher: "**You will:**\n\n* Explore end of chapter projects. \n\n**Suggested time:** 10 minutes"
+            lesson-3:
+              name: "[TEMPLATE] Content lessons"
+              description_student: |-
+                **You will:**
+
+                * Insert lesson objectives.
+
+                **Suggested time:** ____ minutes
+              description_teacher: |-
+                **You will:**
+
+                * Insert lesson objectives.
+
+                **Suggested time:** ____ minutes
           lesson_groups:
             lessonGroup-2:
               display_name: Synchronous Part 1
@@ -32856,3 +33148,162 @@ en:
           student_description: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
           description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
           description_audience: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
+        vpl-csd1-ci-pilot-2022:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd1-ci-pilot-2022
+          title: 'Module 1: Preparing to Teach Problem Solving and Computing'
+          description_audience: ''
+          description_short: ''
+          description: "This professional learning module is designed to help you prepare to teach Code.org's Problem Solving and Computing unit. \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to Problem Solving and Computing.\n-   Practice key concepts included in the unit.\n-   Explore end of chapter projects.\n\n**Suggested time:** 30 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Problem Solving and Computing unit. \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to Problem Solving and Computing.\n-   Practice key concepts included in the unit.\n-   Explore end of chapter projects.\n\n**Suggested time:** 30 minutes"
+        vpl-csd2-ci-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Introduction to Web Development
+              description_student: |-
+                **You will:**
+
+                * Get an introduction to code.org's Web Development unit.
+                * Get a preview of the first week of the Web Development unit content.
+
+                **Suggested time:** 10 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Get an introduction to code.org's Web Development unit.
+                * Get a preview of the first week of the Web Development unit content.
+
+                **Suggested time:** 10 minutes
+            lesson-2:
+              name: Build a website with HTML
+              description_student: "**You will:**\n\n* Get an introduction to using Web Lab.\n* Add structure to a web page using HML. \n* Add images to a web page. \n\n**Suggested time:** 30 minutes"
+              description_teacher: "**You will:**\n\n* Get an introduction to using Web Lab.\n* Add structure to a web page using HML. \n* Add images to a web page. \n\n**Suggested time:** 30 minutes"
+            lesson-3:
+              name: Style a website with CSS
+              description_student: |-
+                **You will:**
+
+                * Style the text of a web page using CSS.
+                * Link a CSS style sheet to the web page index.
+                * Explore additional properties to style elements on a web page.
+
+                **Suggested time:** 25 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Style the text of a web page using CSS.
+                * Link a CSS style sheet to the web page index.
+                * Explore additional properties to style elements on a web page.
+
+                **Suggested time:** 25 minutes
+            lesson-4:
+              name: Consider roles and responsibilities related to digital media
+              description_student: |-
+                **You will:**
+
+                * Explore the ways in which students will work to understand their role and responsibilities as both creators and consumers of digital media.
+
+                **Suggested time:** 15 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Explore the ways in which students will work to understand their role and responsibilities as both creators and consumers of digital media.
+
+                **Suggested time:** 15 minutes
+            lesson-5:
+              name: Unit wrap up
+              description_student: "**You will:**\n\n* Explore end of chapter projects. \n\n**Suggested time:** 10 minutes"
+              description_teacher: "**You will:**\n\n* Explore end of chapter projects. \n\n**Suggested time:** 10 minutes"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Teaching Web Development
+          name: vpl-csd2-ci-pilot-2022
+          title: 'Module 2: Preparing to Teach Web Development'
+          description_audience: ''
+          description_short: ''
+          description: "This professional learning module is designed to help you prepare to teach Code.org's Web Development unit. \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to Web Development.\n-   Practice key concepts included in the unit.\n-   Engage with Web Lab.\n-   Explore end of chapter projects.\n\n**Suggested time:** 90 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Web Development unit. \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to Web Development.\n-   Practice key concepts included in the unit.\n-   Engage with Web Lab.\n-   Explore end of chapter projects.\n\n**Suggested time:** 90 minutes"
+        vpl-csd3-ci-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Introduction to Interactive Animations and Games
+            lesson-2:
+              name: Create a scene
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Aniumate an interactive card
+            lesson-4:
+              name: Explore game design
+            lesson-5:
+              name: Unit wrap up
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Preparing to Teach Interactive Animations and Games
+          name: vpl-csd3-ci-pilot-2022
+          title: 'Module 3: Preparing to Teach Interactive Animations and Games '
+          description_audience: ''
+          description_short: ''
+          description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to Interactive Animations and Games.\n-   Practice key concepts included in the unit.\n-   Engage with Game Lab.\n-   Explore end of chapter projects.\n\n**Suggested time:** 90 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to Interactive Animations and Games.\n-   Practice key concepts included in the unit.\n-   Engage with Game Lab.\n-   Explore end of chapter projects.\n\n**Suggested time:** 90 minutes"
+        vpl-csd4-ci-pilot-2022:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd4-ci-pilot-2022
+          title: " Module 4: Preparing to Teach The Design Process"
+          description_audience: ''
+          description_short: ''
+          description: "This professional learning module is designed to help you prepare to teach Code.org's Design Process unit. \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to The Design Process.\n-   Practice key concepts included in the unit.\n-   Engage with App Lab.\n-   Explore end of chapter projects.\n\n**Suggested time:** 90 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Design Process unit. \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to The Design Process.\n-   Practice key concepts included in the unit.\n-   Engage with App Lab.\n-   Explore end of chapter projects.\n\n**Suggested time:** 90 minutes"
+        vpl-csd5-ci-pilot-2022:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd5-ci-pilot-2022
+          title: 'Module 5: Preparing to Teach Data and Society'
+          description_audience: ''
+          description_short: ''
+          description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to Data and Society.\n-   Practice key concepts included in the unit.\n-   Explore end of chapter projects.\n\n**Suggested time:** 90 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to Data and Society.\n-   Practice key concepts included in the unit.\n-   Explore end of chapter projects.\n\n**Suggested time:** 90 minutes"
+        vpl-csd6-ci-pilot-2022:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd6-ci-pilot-2022
+          title: 'Module 6: Preparing to Teach Physical Computing'
+          description_audience: ''
+          description_short: ''
+          description: "This professional learning module is designed to help you prepare to teach Code.org's Physical Computing unit. \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to Physical Computing.\n-   Practice key concepts included in the unit.\n-   Engage with the maker app.\n-   Explore end of chapter projects.\n\n**Suggested time:** 90 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Physical Computing unit. \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to Physical Computing.\n-   Practice key concepts included in the unit.\n-   Engage with the maker app.\n-   Explore end of chapter projects.\n\n**Suggested time:** 90 minutes"
+        vpl-csd7-ci-pilot-2022:
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd7-ci-pilot-2022
+          title: 'Module 7: Preparing to Teach AI and Machine Learning'
+          description_audience: ''
+          description_short: ''
+          description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit. \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to AI and Machine Learning.\n-   Practice key concepts included in the unit.\n-   Engage with AI Lab and App Lab.\n-   Explore end of chapter projects.\n-   Make a plan for implementing the unit with your students.\n\n**Suggested time:** 120 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's AI and Machine Learning unit. \n\n**In this professional learning module, you will:**\n\n-   Get an introduction to AI and Machine Learning.\n-   Practice key concepts included in the unit.\n-   Engage with AI Lab and App Lab.\n-   Explore end of chapter projects.\n-   Make a plan for implementing the unit with your students.\n\n**Suggested time:** 120 minutes"
+        hello-world-csc:
+          lessons:
+            lesson-1:
+              name: Hello World CSC
+          lesson_groups: {}
+          name: hello-world-csc
+          title: Hello World
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csd-playground:
+          lessons:
+            lesson-1:
+              name: Level Updates
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: csd-playground
+          title: CSD Playground
+          description_audience: Curriculum Writers
+          description_short: For staging updates to lessons or levels between curriculum versions
+          description: For staging updates to lessons or levels between curriculum versions
+          student_description: ''

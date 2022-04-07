@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csd-playground",
-    "serialized_at": "2022-03-29 19:12:35 UTC",
+    "serialized_at": "2022-04-05 19:19:46 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -131,6 +131,32 @@
       },
       "seeding_key": {
         "lesson_activity.key": "cdba95c2-afc7-424b-a894-5bfa81c6a4bd",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "99532bc1-35e4-4a75-bd35-437e4d8f0df4",
+      "position": 6,
+      "properties": {
+        "name": "CSD U6L8.3"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "99532bc1-35e4-4a75-bd35-437e4d8f0df4",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground"
+      }
+    },
+    {
+      "key": "d12637c4-eb13-421b-ba75-c3100d524738",
+      "position": 7,
+      "properties": {
+        "name": "CSD U6L13"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d12637c4-eb13-421b-ba75-c3100d524738",
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
         "script.name": "csd-playground"
@@ -277,6 +303,30 @@
       "seeding_key": {
         "activity_section.key": "a59eba24-d43c-45ee-9833-6e0efdefa3b3",
         "lesson_activity.key": "cdba95c2-afc7-424b-a894-5bfa81c6a4bd"
+      }
+    },
+    {
+      "key": "cc2feacd-11e1-433e-911f-b5e058d118e8",
+      "position": 1,
+      "properties": {
+        "description": "These levels will replace CSD U6L8.3 ([Link Here](https://levelbuilder-studio.code.org/s/csd6-pilot-2022/lessons/8/levels/3) - but update when clone to `csd6-2022`). It splits this level into two levels connected as a project level. The first level is just editing the code for the dropdown, the second level is going to design mode to add new options",
+        "progression_name": "CSD U6L8.3"
+      },
+      "seeding_key": {
+        "activity_section.key": "cc2feacd-11e1-433e-911f-b5e058d118e8",
+        "lesson_activity.key": "99532bc1-35e4-4a75-bd35-437e4d8f0df4"
+      }
+    },
+    {
+      "key": "9fcc00a0-ed1f-48b9-9409-28423318d70d",
+      "position": 1,
+      "properties": {
+        "description": "These levels will replace the sequence of levels 5 and 6.\n\nCurrently: 5 is video, 6 is predict.\n\nNew: 5 is predict, 6 is video, 7 is skill building (see below)",
+        "progression_name": "CSD U6L13"
+      },
+      "seeding_key": {
+        "activity_section.key": "9fcc00a0-ed1f-48b9-9409-28423318d70d",
+        "lesson_activity.key": "d12637c4-eb13-421b-ba75-c3100d524738"
       }
     },
     {
@@ -600,6 +650,122 @@
       "level_keys": [
         "CSD U4 App Lab Events Video"
       ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB2.1_2022"
+        ],
+        "progression": "CSD U6L8.3"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Screen Inputs - SB2.1_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "cc2feacd-11e1-433e-911f-b5e058d118e8"
+      },
+      "level_keys": [
+        "CSD U6 - Screen Inputs - SB2.1_2022"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB2.2_2022"
+        ],
+        "progression": "CSD U6L8.3"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Screen Inputs - SB2.2_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "cc2feacd-11e1-433e-911f-b5e058d118e8"
+      },
+      "level_keys": [
+        "CSD U6 - Screen Inputs - SB2.2_2022"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "CSD U6L13"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Music - SB2.1_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9fcc00a0-ed1f-48b9-9409-28423318d70d"
+      },
+      "level_keys": [
+        "CSD U6 - Music - SB2.1_2022"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "CSD U6L13"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Music - ArrayVideo_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9fcc00a0-ed1f-48b9-9409-28423318d70d"
+      },
+      "level_keys": [
+        "CSD U6 - Music - ArrayVideo_2022"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "CSD U6L13"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Music - SB2.2_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9fcc00a0-ed1f-48b9-9409-28423318d70d"
+      },
+      "level_keys": [
+        "CSD U6 - Music - SB2.2_2022"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -673,6 +839,66 @@
         "lesson_group.key": "",
         "script.name": "csd-playground",
         "activity_section.key": "a59eba24-d43c-45ee-9833-6e0efdefa3b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Screen Inputs - SB2.1_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Screen Inputs - SB2.1_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "cc2feacd-11e1-433e-911f-b5e058d118e8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Screen Inputs - SB2.2_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Screen Inputs - SB2.2_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "cc2feacd-11e1-433e-911f-b5e058d118e8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Music - SB2.1_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Music - SB2.1_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9fcc00a0-ed1f-48b9-9409-28423318d70d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Music - ArrayVideo_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Music - ArrayVideo_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9fcc00a0-ed1f-48b9-9409-28423318d70d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Music - SB2.2_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Music - SB2.2_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd-playground",
+        "activity_section.key": "9fcc00a0-ed1f-48b9-9409-28423318d70d"
       }
     }
   ],

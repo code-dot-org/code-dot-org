@@ -3,15 +3,16 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Insert lesson title
+# Build a digital prototype in App Lab
 
 ##### In the next section of this professional learning module, you will....
 
 ## You will:
 
-* ##### Insert lesson objective.
+* ##### Use design mode in App Lab to create a digital prototype.
+* ##### Create events that detect and respond to user input.
 
-### **Suggested time:** _____ minutes
+### **Suggested time:** 40 minutes
 
 ## Let's keep learning! 
 

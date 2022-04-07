@@ -1542,29 +1542,6 @@
         "courseB_maze_seq_challenge2_2021": {
           "courseB_maze_seq_challenge2_a": "Du trenger ikke legge til eller fjerne blokker for å løse denne oppgaven.",
           "courseB_maze_seq_challenge2_b": "Omroker blokkene og ta trappetrinn ruten"
-        },
-        "courseB_Scrat_ramp1_2021": {
-          "1": "Hvis Scrat ikke gjør det du vil, være forsikret om at begge blokkene er fullstendig sammenklikket, så klikk \"Kjør\" igjen",
-          "2": "Ikke vær redd for å gjøre en feil! Prøv noe, hvis det ikke fungerer, prøv noe annet!"
-        },
-        "courseB_Scrat_ramp2_2021": {
-          "1": "Koden din skal se slik ut:\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
-        },
-        "courseB_Scrat_ramp3a_2021": {
-          "1": "Koden din skal se slik ut:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
-        },
-        "courseB_Scrat_ramp3b_2021": {
-          "1": "Koden din skal se slik ut:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
-        },
-        "courseB_Scrat_ramp4a_2021": {
-          "1": "Koden din skal se slik ut:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
-        },
-        "courseB_Scrat_ramp5a_2021": {
-          "1": "Koden din skal se slik ut:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
-        },
-        "courseB_starWars_prog1_2021": {
-          "courseB_starWars_prog1_a": "Prøv å legg til en lokk om gangen, så klikk \"Kjør\" for å se hva som skjer.",
-          "courseB_starWars_prog1_b": "Du vil bevege deg øst for å løse denne oppgaven. Hvor langt må du bevege deg?"
         }
       }
     }

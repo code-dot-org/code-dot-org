@@ -102,5 +102,8 @@
   "csd6-projects": "csd6-projects",
   "coursef-2022-pilot": "coursef-2022-pilot",
   "vpl-csd-summer-pilot": "vpl-csd-summer-pilot",
-  "csa-async": "csa-async"
+  "csa-async": "csa-async",
+  "self-paced-pl-csa": "self-paced-pl-csa",
+  "hello-world-csc": "hello-world-csc",
+  "vpl-csd-summer-pilot-ci": "vpl-csd-summer-pilot-ci"
 }

@@ -112,4 +112,9 @@ function withFakeServer({courses = [], sections = []} = {}) {
     '/dashboardapi/sections/valid_scripts',
     successResponse([])
   );
+  server.respondWith(
+    'GET',
+    '/dashboardapi/sections/valid_course_offerings',
+    successResponse([])
+  );
 }

@@ -2,6 +2,8 @@
 id:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: buat sprite {ANIMATION_NAME} baru di {LOCATION}
       Dancelab_alternateMoves:
         text: |-
           {GROUP} berganti setiap {N}
@@ -1063,6 +1065,12 @@ id:
         text: gambar garis {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: tepi blok {SPRITE} dari bergerak
+      gamelab_everySeconds:
+        text: 'ulangi setiap {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': detik
+            '"frames"': frame
       gamelab_followingTargets:
         text: mengikuti target
       gamelab_getAllSprites:
@@ -1216,6 +1224,8 @@ id:
             '"burst"': letupan
             '"pop"': meletup
             '"rain"': hujan
+      gamelab_makeNewScaledSprite:
+        text: buat sprite {ANIMATION_NAME} baru di {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: buat sprite {ANIMATION_NAME} baru di {LOCATION}
       gamelab_makeNumSprites:

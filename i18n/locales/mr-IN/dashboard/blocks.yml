@@ -2,6 +2,8 @@
 mr:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: "{LOCATION} येथे नवीन {ANIMATION_NAME} स्प्राइट बनवा"
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -959,6 +961,11 @@ mr:
         text: रेषा काढा {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: एजेस ब्लॉक {SPRITE} ला हलवण्यापासून रोखतात
+      gamelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': सेकंद
+            '"frames"': फ्रेम्स
       gamelab_followingTargets:
         text: पुढील लक्ष्ये
       gamelab_getAllSprites:
@@ -1112,6 +1119,8 @@ mr:
             '"pop"': पॉप
             '"rain"': पाऊस
             '"spiral"': सर्पिलाकार
+      gamelab_makeNewScaledSprite:
+        text: "{LOCATION} येथे नवीन {ANIMATION_NAME} स्प्राइट बनवा"
       gamelab_makeNewSpriteAnon:
         text: "{LOCATION} येथे नवीन {ANIMATION_NAME} स्प्राइट बनवा"
       gamelab_makeNumSprites:

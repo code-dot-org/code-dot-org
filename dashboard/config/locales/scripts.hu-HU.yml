@@ -957,6 +957,7 @@ hu:
           title: AI óceánok
           lessons:
             Oceans:
+              name: AI óceánok
               description_teacher: Ebben a leckében a tanulók, korosztálytól függetlenül,
                 egy biztonságos, támogató környezetben ismerkednek meg a kódolással
                 és az informatikával. Először a diákok szemetet próbálnak eltávolítani
@@ -1449,6 +1450,7 @@ hu:
           description: Válaszd ki a csapatodat, majd készíts egy kosárlabda játékot
           student_description: Válaszd ki a csapatodat, majd készíts egy kosárlabda
             játékot
+          name: kosárlabda
         hoc-encryption:
           lessons:
             Simple Encryption:
@@ -1627,6 +1629,7 @@ hu:
           description_short: Kombinálj össze különböző sportágakat
           description: Kombinálj össze különböző sportágakat
           student_description: Kombinálj össze különböző sportágakat
+          name: sportok
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -2219,6 +2222,7 @@ hu:
                 is lesz egy kis szabad játékra.
           student_description: A Minecraft egy vadonatúj programmal tér vissza a Kódolás
             Órájára! Utazz végig a Minecraft világán kódok segítségével.
+          name: hős
         csp-explore-2017:
           lesson_groups:
             cspSurvey:
@@ -2783,6 +2787,7 @@ hu:
                 de olvasni tudni kell. Ehhez az aktivitáshoz hang is kell, mivel az
                 eszköz úgy lett megépítve, hogy reagáljon a zenére.
           student_description: Kódold le saját táncos bulidat, és oszd meg az ismerőseiddel!
+          name: tánc
         frozen-2018-test-b:
           lessons:
             Artist:
@@ -2802,6 +2807,7 @@ hu:
                 egy órán keresztül rejtvényekkel foglalkoznak. Középiskolás diákok
                 valószínűleg elvégzik a tananyagot, és az óra végén még némi szabadidejük
                 is lesz egy kis szabad játékra.
+          name: vízi
         dance--draft:
           lessons:
             Dance Party:
@@ -3594,7 +3600,6 @@ hu:
           description: Kódold le saját táncos bulidat, és oszd meg az ismerőseiddel!
           lessons:
             Dance Party:
-              name: Táncos buli
               description_student: Ebben a leckében a tanulók, korosztálytól függetlenül,
                 egy biztonságos, támogató környezetben ismerkednek meg a kódolással
                 és az informatikával. Ez a lecke valamennyi korosztály számára készült,
@@ -5042,8 +5047,7 @@ hu:
           title: '"Helló, világ!"'
         csa-self-paced-pl:
           lessons:
-            Navigating the Code.org learning platform:
-              name: " Navigálás a Code.org platformon"
+            Navigating the Codeorg learning platform:
               description_teacher: |-
                 **Megtanulja a hogyant:**
 
@@ -6681,6 +6685,8 @@ hu:
           lessons:
             lesson-9:
               name: hurkok
+            lesson-21:
+              name: Konzol
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
@@ -6698,10 +6704,17 @@ hu:
           lessons:
             lesson-6:
               name: változók
+            lesson-16:
+              name: Konzol
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: Számláló ciklusok
+            lesson-16:
+              name: Konzol
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
@@ -7076,3 +7089,5 @@ hu:
             For Loops:
               name: Számláló ciklusok
               key: Számláló ciklusok
+        hello-world-csc:
+          title: Helló világ

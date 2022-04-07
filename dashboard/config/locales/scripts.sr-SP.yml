@@ -2494,6 +2494,10 @@ sr:
           lessons:
             lesson-6:
               name: Променљиве
+        csa3-2022:
+          lessons:
+            lesson-5:
+              name: Бројачке петље
         cs4all-invasive-species:
           lessons:
             lesson-12:

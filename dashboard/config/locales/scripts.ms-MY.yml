@@ -436,6 +436,7 @@ ms:
           title: Jam Kod Minecraft
           lessons:
             Hour of Code 2015:
+              name: Jam Kod Minecraft
               description_student: Dalam pelajaran ini, pelajar dari semua peringkat
                 umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer
                 dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi
@@ -458,6 +459,7 @@ ms:
           title: Kecerdasan Buatan (AI) untuk Lautan
           lessons:
             Oceans:
+              name: Kecerdasan Buatan (AI) untuk Lautan
               description_student: 'Rumusan Tutorial: Pelajar pertama mengklasifikasikan
                 objek sebagai sama ada "ikan" atau "bukan ikan" sebagai usaha untuk
                 mengaut sampah keluar dari lautan. Kemudian, pelajar akan perlu mengembangkan
@@ -655,6 +657,7 @@ ms:
                 (seperti butang anak panah ditekan.) Pada akhir teka-teki, pelajar
                 akan mempunyai peluang menyesuaikan permainan mereka dengan kelajuan
                 dan suara yang berbeza.
+          name: bola keranjang
         hoc-encryption:
           lessons:
             Simple Encryption:
@@ -932,6 +935,7 @@ ms:
                 (seperti butang anak panah ditekan.) Pada akhir teka-teki, pelajar
                 akan mempunyai peluang menyesuaikan permainan mereka dengan kelajuan
                 dan suara yang berbeza.
+          name: sukan
         2016_sciencePD-phase2b:
           lessons:
             Wrap-Up:
@@ -2425,6 +2429,7 @@ ms:
                 percuma pada penghujungnya.
           student_description: Minecraft kembali untuk Jam Kod dengan aktiviti baharu!
             Perjalanan merentasi Minecraft dengan kod.
+          name: hero
         applab-intro-staging:
           lessons:
             Intro to App Lab:
@@ -3520,6 +3525,7 @@ ms:
                 balas kepada muzik.
           student_description: Kod majlis tari-menari anda sendiri untuk berkongsi
             dengan rakan anda!
+          name: menari
         frozen-2018-test-b:
           title: Skrip Frozen Baharu
           lessons:
@@ -3539,6 +3545,7 @@ ms:
                 satu jam. Pelajar sekolah menengah kebanyakannya akan menghabiskan
                 tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan
                 percuma pada penghujungnya.
+          name: akuatik
         dance--draft:
           lessons:
             Dance Party:
@@ -5389,7 +5396,6 @@ ms:
             rakan anda!
           lessons:
             Dance Party:
-              name: Majlis Tari-Menari
               description_student: Dalam pelajaran ini, pelajar dari semua peringkat
                 umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer
                 dalam persekitaran yang selamat dan menyokong. Pelajaran ini telah
@@ -8906,8 +8912,7 @@ ms:
               display_name: Demo dan Sumber
         csa-self-paced-pl:
           lessons:
-            Navigating the Code.org learning platform:
-              name: " Menavigasi platform pembelajaran Code.org"
+            Navigating the Codeorg learning platform:
               description_teacher: |-
                 **Anda akan belajar cara untuk:**
 
@@ -10535,7 +10540,7 @@ ms:
               name: Pemandangan Lautan dengan Gelung
               description_student: Gunakan gelung dan corak untuk menyiapkan imej.
               key: Pemandangan Lautan dengan Gelung
-            The Big Event Jr.:
+            The Big Event Jr:
               name: Jr. Peristiwa Besar
               description_student: Bergerak dan berteriak apabila guru anda menekan
                 butang pada alat kawalan jauh gergasi.
@@ -10951,7 +10956,7 @@ ms:
               description_student: Gunakan corak dan gelung untuk menyiapkan imej.
             The Right App:
               description_student: Lakarkan aplikasi telefon pintar anda sendiri.
-            The Big Event Jr.:
+            The Big Event Jr:
               name: Jr. Peristiwa Besar
               description_student: Bergerak atau berteriak apabila guru anda menekan
                 butang pada alat kawalan jauh gergasi.
@@ -11055,7 +11060,7 @@ ms:
 
                 Internet dipenuhi dengan semua jenis individu yang menarik, tetapi kadang-kadang, sebilangan daripada mereka boleh menjadi zalim antara satu sama lain. Dengan peranan ini, bantu pelajar anda memahami sebab lebih mudah bersikap zalim dalam talian daripada bersemuka dan cara menangani kekejian dalam talian apabila mereka melihatnya.
               key: MENGHENTIKAN Kekejian Dalam Talian
-            My Robotic Friends Jr.:
+            My Robotic Friends Jr:
               name: Rakan Robotik Junior Saya
               description_student: Dalam pelajaran ini, anda akan berpura-pura yang
                 rakan sekelas anda ialah robot dan mengatur cara mereka untuk membina
@@ -11086,7 +11091,7 @@ ms:
               description_student: Cipta imej yang cantik dengan mengatur cara Artis.
               description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar
                 akan mengawal Artis bagi melengkapkan lukisan pada skrin.
-            My Loopy Robotic Friends Jr.:
+            My Loopy Robotic Friends Jr:
               name: Rakan Robotik Bergelung Junior Saya
               description_student: Dalam pelajaran ini, anda akan mengatur cara rakan
                 sekelas anda sekali lagi, tetapi dengan menggunakan gelung, anda akan
@@ -11825,6 +11830,8 @@ ms:
               name: Java Lab
             lesson-9:
               name: Gelung
+            lesson-21:
+              name: Konsol
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
@@ -11871,6 +11878,12 @@ ms:
           lessons:
             lesson-6:
               name: Pembolehubah
+            lesson-16:
+              name: Konsol
+        csa3-2022:
+          lessons:
+            lesson-16:
+              name: Konsol
         tessplayground:
           name: tessplayground
         cs4all-invasive-species:
@@ -12337,3 +12350,5 @@ ms:
             Variables:
               name: Pembolehubah
               key: Pembolehubah
+        hello-world-csc:
+          title: Helo Dunia

@@ -43,7 +43,13 @@
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "Šifrovanie a verejné kľúče",
+          "url": "https://youtu.be/ZghMPWGXexs",
           "type": "Video"
+        },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "Šifrovacie widgety v Code Studiu",
+          "url": "https://studio.code.org/s/hoc-encryption"
         },
         "video-text-compression/text-compression/unversioned": {
           "name": "Video: Kompresia textu s Aloe Blaccom",
@@ -75,6 +81,429 @@
         "ai-training/oceans/unversioned": {
           "name": "Umelá inteligencia: Trénovacie dáta a skreslenie",
           "type": "Video"
+        },
+        "lesson_plans/courseb/2018": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/courseb/2018": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/courseb/2018": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/courseb/2018": {
+          "name": "Slovník"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/coursea/2018": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/coursea/2018": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/coursea/2018": {
+          "name": "Slovník"
+        },
+        "lesson_plans/coursed/2018": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/coursed/2018": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/coursed/2018": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/coursed/2018": {
+          "name": "Slovník"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/coursef/2018": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/coursef/2018": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/coursef/2018": {
+          "name": "Slovník"
+        },
+        "lesson_plans/express/2018": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/express/2018": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/express/2018": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/express/2018": {
+          "name": "Slovník"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/coursee/2018": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/coursee/2018": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/coursee/2018": {
+          "name": "Slovník"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/coursec/2018": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/coursec/2018": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/coursec/2018": {
+          "name": "Slovník"
+        },
+        "code_introduced_1/csd/2018": {
+          "name": "Vyberte si triedu"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings_2/csd/2018": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum_2/csd/2018": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary_2/csd/2018": {
+          "name": "Slovník"
+        },
+        "code_introduced_3/csd/2018": {
+          "name": "Vyberte si triedu"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings_5/csd/2018": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum_5/csd/2018": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary_5/csd/2018": {
+          "name": "Slovník"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings_4/csd/2018": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum_4/csd/2018": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary_4/csd/2018": {
+          "name": "Slovník"
+        },
+        "code_introduced_2/csd/2018": {
+          "name": "Vyberte si triedu"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings_3/csd/2018": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum_3/csd/2018": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary_3/csd/2018": {
+          "name": "Slovník"
+        },
+        "code_introduced/csd/2018": {
+          "name": "Vyberte si triedu"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings_1/csd/2018": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum_1/csd/2018": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary_1/csd/2018": {
+          "name": "Slovník"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/csd/2018": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/csd/2018": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/csd/2018": {
+          "name": "Slovník"
+        },
+        "curriculum_guide/coursea/2019": {
+          "name": "Sprievodca osnovami"
+        },
+        "lesson_plans/coursea/2019": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/coursea/2019": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/coursea/2019": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/coursea/2019": {
+          "name": "Slovník"
+        },
+        "curriculum_guide/courseb/2019": {
+          "name": "Sprievodca osnovami"
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/courseb/2019": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/courseb/2019": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/courseb/2019": {
+          "name": "Slovník"
+        },
+        "curriculum_guide/coursed/2019": {
+          "name": "Sprievodca osnovami"
+        },
+        "lesson_plans/coursed/2019": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/coursed/2019": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/coursed/2019": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/coursed/2019": {
+          "name": "Slovník"
+        },
+        "curriculum_guide/coursef/2019": {
+          "name": "Sprievodca osnovami"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/coursef/2019": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/coursef/2019": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/coursef/2019": {
+          "name": "Slovník"
+        },
+        "curriculum_guide/coursee/2019": {
+          "name": "Sprievodca osnovami"
+        },
+        "lesson_plans/coursee/2019": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/coursee/2019": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/coursee/2019": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/coursee/2019": {
+          "name": "Slovník"
+        },
+        "lesson_plans/express/2019": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/express/2019": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/express/2019": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/express/2019": {
+          "name": "Slovník"
+        },
+        "curriculum_guide/coursec/2019": {
+          "name": "Sprievodca osnovami"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/coursec/2019": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/coursec/2019": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/coursec/2019": {
+          "name": "Slovník"
+        },
+        "teacher_forum/csd/2019": {
+          "name": "Fórum učiteľov"
+        },
+        "code_introduced_1/csd/2019": {
+          "name": "Vyberte si triedu"
+        },
+        "lesson_plans_2/csd/2019": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings_2/csd/2019": {
+          "name": "Mapovanie na štandardy"
+        },
+        "vocabulary_2/csd/2019": {
+          "name": "Slovník"
+        },
+        "code_introduced_3/csd/2019": {
+          "name": "Vyberte si triedu"
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings_5/csd/2019": {
+          "name": "Mapovanie na štandardy"
+        },
+        "vocabulary_5/csd/2019": {
+          "name": "Slovník"
+        },
+        "code_introduced_2/csd/2019": {
+          "name": "Vyberte si triedu"
+        },
+        "lesson_plans_3/csd/2019": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings_3/csd/2019": {
+          "name": "Mapovanie na štandardy"
+        },
+        "vocabulary_3/csd/2019": {
+          "name": "Slovník"
+        },
+        "lesson_plans_4/csd/2019": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings_4/csd/2019": {
+          "name": "Mapovanie na štandardy"
+        },
+        "vocabulary_4/csd/2019": {
+          "name": "Slovník"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/csd/2019": {
+          "name": "Mapovanie na štandardy"
+        },
+        "vocabulary/csd/2019": {
+          "name": "Slovník"
+        },
+        "code_introduced/csd/2019": {
+          "name": "Vyberte si triedu"
+        },
+        "lesson_plans_1/csd/2019": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings_1/csd/2019": {
+          "name": "Mapovanie na štandardy"
+        },
+        "vocabulary_1/csd/2019": {
+          "name": "Slovník"
+        },
+        "code_introduced_1/csd/2017": {
+          "name": "Vyberte si triedu"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings_2/csd/2017": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum_2/csd/2017": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary_2/csd/2017": {
+          "name": "Slovník"
+        },
+        "code_introduced_3/csd/2017": {
+          "name": "Vyberte si triedu"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings_5/csd/2017": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum_5/csd/2017": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary_5/csd/2017": {
+          "name": "Slovník"
+        },
+        "code_introduced/csd/2017": {
+          "name": "Vyberte si triedu"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings_1/csd/2017": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum_1/csd/2017": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary_1/csd/2017": {
+          "name": "Slovník"
+        },
+        "lesson_plans/csd/2017": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/csd/2017": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/csd/2017": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/csd/2017": {
+          "name": "Slovník"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings_4/csd/2017": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum_4/csd/2017": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary_4/csd/2017": {
+          "name": "Slovník"
+        },
+        "code_introduced_2/csd/2017": {
+          "name": "Vyberte si triedu"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings_3/csd/2017": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum_3/csd/2017": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary_3/csd/2017": {
+          "name": "Slovník"
         },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "Zoznam básní",
@@ -414,7 +843,8 @@
         },
         "unplugged-video-big-event/courseb/2021": {
           "name": "Veľká udalosť",
-          "url": "https://youtu.be/u0WV9shCoak"
+          "url": "https://youtu.be/u0WV9shCoak",
+          "type": "Video"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "Veľká udalosť",
@@ -1734,6 +2164,120 @@
         },
         "website-for-a-purpose/csd/2021": {
           "type": "Recenzia"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/pre-express/2020": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/pre-express/2020": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/pre-express/2020": {
+          "name": "Slovník"
+        },
+        "lesson_plans/express/2020": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/express/2020": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/express/2020": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/express/2020": {
+          "name": "Slovník"
+        },
+        "curriculum_guide/courseb/2020": {
+          "name": "Sprievodca osnovami"
+        },
+        "lesson_plans/courseb/2020": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/courseb/2020": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/courseb/2020": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/courseb/2020": {
+          "name": "Slovník"
+        },
+        "curriculum_guide/coursed/2020": {
+          "name": "Sprievodca osnovami"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/coursed/2020": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/coursed/2020": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/coursed/2020": {
+          "name": "Slovník"
+        },
+        "curriculum_guide/coursec/2020": {
+          "name": "Sprievodca osnovami"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/coursec/2020": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/coursec/2020": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/coursec/2020": {
+          "name": "Slovník"
+        },
+        "curriculum_guide/coursee/2020": {
+          "name": "Sprievodca osnovami"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/coursee/2020": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/coursee/2020": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/coursee/2020": {
+          "name": "Slovník"
+        },
+        "curriculum_guide/coursea/2020": {
+          "name": "Sprievodca osnovami"
+        },
+        "lesson_plans/coursea/2020": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/coursea/2020": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/coursea/2020": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/coursea/2020": {
+          "name": "Slovník"
+        },
+        "curriculum_guide/coursef/2020": {
+          "name": "Sprievodca osnovami"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "Plány hodín"
+        },
+        "standard_mappings/coursef/2020": {
+          "name": "Mapovanie na štandardy"
+        },
+        "teacher_forum/coursef/2020": {
+          "name": "Fórum učiteľov"
+        },
+        "vocabulary/coursef/2020": {
+          "name": "Slovník"
         }
       }
     }

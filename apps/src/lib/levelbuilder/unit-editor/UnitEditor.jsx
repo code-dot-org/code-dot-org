@@ -245,6 +245,20 @@ class UnitEditor extends React.Component {
       });
       return;
     } else if (
+      !this.props.hasCourse &&
+      this.state.professionalLearningCourse === '' &&
+      this.state.publishedState !== PublishedState.in_development &&
+      (!this.state.isCourse ||
+        this.state.versionYear === '' ||
+        this.state.familyName === '')
+    ) {
+      this.setState({
+        isSaving: false,
+        error:
+          'Standalone units that are not in development must be a standalone unit with family name and version year.'
+      });
+      return;
+    } else if (
       this.state.isCourse &&
       ((this.state.versionYear !== '' && this.state.familyName === '') ||
         (this.state.versionYear === '' && this.state.familyName !== ''))
