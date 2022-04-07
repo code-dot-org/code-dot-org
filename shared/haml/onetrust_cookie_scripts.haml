@@ -1,9 +1,0 @@
--# OneTrust Cookies Consent Notice scripts for code.org
-- if rack_env?(:production)
-  %script{src: 'https://cdn.cookielaw.org/scripttemplates/otSDKStub.js', type: 'text/javascript', charset: 'UTF-8', 'data-domain-script' => '27cca70a-7db3-4852-9ef0-a6660fd0977d'}
-- else
-  %script{src: 'https://cdn.cookielaw.org/consent/27cca70a-7db3-4852-9ef0-a6660fd0977d-test/OtAutoBlock.js', type: 'text/javascript'}
-  %script{src: 'https://cdn.cookielaw.org/scripttemplates/otSDKStub.js', type: 'text/javascript', charset: 'UTF-8', 'data-domain-script' => '27cca70a-7db3-4852-9ef0-a6660fd0977d-test'}
-
-:javascript
-  function OptanonWrapper() { }

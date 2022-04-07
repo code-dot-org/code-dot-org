@@ -37,9 +37,7 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
 
     show_data = css_select('script[data-referenceguide]').first.attribute('data-referenceguide').to_s
 
-    reference_guide = create :reference_guide
-
-    assert_equal reference_guide.summarize_for_show.to_json, show_data
+    assert_equal @reference_guide.summarize_for_show.to_json, show_data
   end
 
   test 'data is passed to edit_all page' do

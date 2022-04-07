@@ -222,10 +222,15 @@ function initializeBlocklyWrapper(blocklyInstance) {
   // Code.org's old Blockly fork uses title in place of all field tags.
   blocklyWrapper.Input.prototype.appendField =
     blocklyWrapper.Input.prototype.appendTitle;
+  blocklyWrapper.Block.prototype.getFieldValue =
+    blocklyWrapper.Block.prototype.getTitleValue;
 
   blocklyWrapper.cdoUtils = {
     setHSV: function(block, h, s, v) {
       block.setHSV(h, s, v);
+    },
+    getBlockFields: function(block) {
+      return block.getTitles();
     }
   };
   return blocklyWrapper;

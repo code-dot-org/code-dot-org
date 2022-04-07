@@ -715,7 +715,7 @@ const STANDARD_INPUT_TYPES = {
         .appendField(dropdown, inputConfig.name);
     },
     generateCode(block, inputConfig) {
-      let code = block.getTitleValue(inputConfig.name);
+      let code = block.getFieldValue(inputConfig.name);
       if (
         inputConfig.type === Blockly.BlockValueType.STRING &&
         !code.startsWith('"') &&
@@ -733,7 +733,7 @@ const STANDARD_INPUT_TYPES = {
       block.getVars = function() {
         return {
           [Blockly.Variables.DEFAULT_CATEGORY]: [
-            block.getTitleValue(inputConfig.name)
+            block.getFieldValue(inputConfig.name)
           ]
         };
       };
@@ -741,14 +741,14 @@ const STANDARD_INPUT_TYPES = {
       // The following functions make sure that the variable naming/renaming options work for this block
       block.renameVar = function(oldName, newName) {
         if (
-          Blockly.Names.equals(oldName, block.getTitleValue(inputConfig.name))
+          Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
         ) {
           block.setTitleValue(newName, inputConfig.name);
         }
       };
       block.removeVar = function(oldName) {
         if (
-          Blockly.Names.equals(oldName, block.getTitleValue(inputConfig.name))
+          Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
         ) {
           block.dispose(true, true);
         }
@@ -768,7 +768,7 @@ const STANDARD_INPUT_TYPES = {
     },
     generateCode(block, inputConfig) {
       return Blockly.JavaScript.translateVarName(
-        block.getTitleValue(inputConfig.name)
+        block.getFieldValue(inputConfig.name)
       );
     }
   },
@@ -784,7 +784,7 @@ const STANDARD_INPUT_TYPES = {
         .appendField(field, inputConfig.name);
     },
     generateCode(block, inputConfig) {
-      let code = block.getTitleValue(inputConfig.name);
+      let code = block.getFieldValue(inputConfig.name);
       if (inputConfig.type === Blockly.BlockValueType.STRING) {
         // Wraps the value in quotes, and escapes quotes/newlines
         code = JSON.stringify(code);
