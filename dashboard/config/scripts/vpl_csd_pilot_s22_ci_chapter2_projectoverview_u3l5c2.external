@@ -3,25 +3,21 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-### <a href="https://levelbuilder-studio.code.org/s/vpl-csd2-ci-pilot-2022/lessons/5/levels/2" target="blank" rel="noopener noreferrer">Example Level</a> - remove when complete
-
-# Chapter 2 project: Insert project title here
+# Chapter 2 project: Design a Game
 
 ## Project overview
 
-##### Add project overview 
+##### Chapter 2 of the Web Development unit concludes with a multi-lesson project where students will use the skills they have learned throughout the unit to design and create a game. Students begin brainstorming the purpose for their personal game in Lesson 25 and then look at sample games to define what their game will look like, while applying the problem solving process to the development of their game. They enter the prepare phase in Lesson 26 where they determine what backgrounds, variables, sprites, and functions their game will have. The project concludes in Lesson 27 where students create their games and engage in a structured peer feedback process.
 
 ## Sample student projects
 
-### Add sample projects and delete these instructions
-
 ##### Click the images below to view the sample projects in a new tab.
 
-<div style="float: left; text-align:center;"><strong>Recycling Club</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhBiffg8HpOk2lRx1kd5sgaw" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin: 25px;" src="https://images.code.org/5b0044bfd92d44c97cd74d82f1933daa-image-1565630578147.png" width="250px"; alt="Image of recycling club web page"></a></div>
+<div style="float: left; text-align:center;"><strong>Bunny Hop</strong><br /><a href="https://studio.code.org/s/csd-playground/lessons/1/levels/1/sublevel/1" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin: 25px;" src="https://images.code.org/a4f2cf37f7817c9ba9187f3222324d0b-image-1649284625303.JPG" width="250px"; alt="Image of recycling club web page"></a></div>
 
-<div style="float: left; text-align:center;"><strong>Musical Instruments</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhMuNKEOTdyH5PPeUpDimEeY" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin: 25px;" src="https://images.code.org/82323a78b17b69101dd6e98a6a21c55c-image-1565630573896.png" width="250px" alt="Immage of musical insrumentss web page"></a></div>
+<div style="float: left; text-align:center;"><strong>Alien Soccer</strong><br /><a href="https://studio.code.org/s/csd-playground/lessons/1/levels/1/sublevel/3" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin: 25px;" src="https://images.code.org/d58d5b89203a416847e380ad179fb2bd-image-1649284670540.JPG" width="250px" alt="Immage of musical insrumentss web page"></a></div>
 
-<div style="float: left; text-align:center;"><strong>My Trip</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhHHDE0tb28ed-9-scxvFYE0" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin: 25px;" src="https://images.code.org/51b787b6a25663e092b3f55e051e9a94-image-1565630570417.png" width="250px" alt="Image of trip web page"></a></div>
+<div style="float: left; text-align:center;"><strong>Out Race the Squid</strong><br /><a href="https://studio.code.org/s/csd-playground/lessons/1/levels/1/sublevel/7" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin: 25px;" src="https://images.code.org/7bb0b115dc30c00eb769a23291ec209c-image-1649284744131.JPG" width="250px" alt="Image of trip web page"></a></div>
 
 
 <div style="clear:both"/>
@@ -34,10 +30,10 @@ markdown <<MARKDOWN
 
 ### Update links below and delete these instructions
 
-* ##### <a href="https://studio.code.org/s/csd2-2022/lessons/13" target="blank" rel="noopener noreferrer" >Lesson Plan</a>  
-* ##### <a href="https://docs.google.com/document/d/1J8BV9ekJXvT8-KzWkzc8_XOTam5BFzZ42A_0ZaUXoww/view" target="blank" rel="noopener noreferrer" >Project guide</a> 
-* ##### <a href="https://docs.google.com/document/d/1pL93fCFPGSxOo9nCmU3bfAw2m2MhY7B9nG-k-IT28Lo/view" target="blank" rel="noopener noreferrer" >Student checklist</a> 
-* ##### <a href="https://docs.google.com/document/d/1xDnK38-eItsz7ccg4OctJjBuy7svd3yBXF9tTvDpGo0/view" target="blank" rel="noopener noreferrer" >Project rubric</a> 
+* ##### <a href="https://studio.code.org/s/csd3-2021/lessons/27" target="blank" rel="noopener noreferrer" >Lesson Plan</a>  
+* ##### <a href="https://docs.google.com/document/d/1SBye25XfdnytxCrc6a_OtpcS02YsT99nyJ9Vjwp_zeo/view" target="blank" rel="noopener noreferrer" >Project Guide</a> 
+* ##### <a href="https://docs.google.com/document/d/1jb78pFMe-X5YOtTEXQY2yLJ97mdOLPFTP7fmb3g1Or8/view" target="blank" rel="noopener noreferrer" >Student Checklist</a> 
+* ##### <a href="https://docs.google.com/document/d/1-gMdyPFGe5Z0kCmQ2sNgLAf8ivZ-edXYJBhsSjqprEg/edit" target="blank" rel="noopener noreferrer" >Project Rubric</a> 
 
 
 MARKDOWN
