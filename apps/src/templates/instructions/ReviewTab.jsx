@@ -26,6 +26,7 @@ class ReviewTab extends Component {
     codeReviewEnabled: PropTypes.bool,
     viewAsCodeReviewer: PropTypes.bool.isRequired,
     viewAsTeacher: PropTypes.bool,
+    userType: PropTypes.string,
     channelId: PropTypes.string,
     serverLevelId: PropTypes.number,
     serverScriptId: PropTypes.number
@@ -62,10 +63,17 @@ class ReviewTab extends Component {
     navigateToHref(this.generateLevelUrlWithCodeReviewParam());
   };
 
-  generateLevelUrlWithCodeReviewParam = () =>
-    currentLocation().origin +
-    currentLocation().pathname +
-    `?${VIEWING_CODE_REVIEW_URL_PARAM}=true`;
+  generateLevelUrlWithCodeReviewParam = () => {
+    let url =
+      currentLocation().origin +
+      currentLocation().pathname +
+      `?${VIEWING_CODE_REVIEW_URL_PARAM}=true`;
+    if (this.props.userType === 'teacher' && !this.props.viewAsTeacher) {
+      console.log('true');
+      url += `&viewAs=Participant`;
+    }
+    return url;
+  };
 
   componentDidMount() {
     this.loadReviewData();
@@ -454,6 +462,7 @@ export default connect(state => ({
   codeReviewEnabled: state.instructions.codeReviewEnabledForLevel,
   viewAsCodeReviewer: state.pageConstants.isCodeReviewing,
   viewAsTeacher: state.viewAs === ViewType.Instructor,
+  userType: state.currentUser.userType,
   channelId: state.pageConstants.channelId,
   serverLevelId: state.pageConstants.serverLevelId,
   serverScriptId: state.pageConstants.serverScriptId
