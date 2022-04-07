@@ -308,7 +308,10 @@ class TestI18nStringUrlTracker < Minitest::Test
       interpolated_string: "unit %{n}",
       parent_key: {
         child_key: 'test'
-      }
+      },
+      # Value can be a hash.
+      # See https://guides.rubyonrails.org/i18n.html#pluralization
+      'number.format': {separator: ".", delimiter: ","}
     }
     I18n.backend.store_translations I18n.default_locale, custom_i18n
 
@@ -323,6 +326,8 @@ class TestI18nStringUrlTracker < Minitest::Test
     assert_equal true, I18nStringUrlTracker.string_key_exists?('child_key', 'parent_key')
     assert_equal true, I18nStringUrlTracker.string_key_exists?('child_key', ['parent_key'])
     assert_equal false, I18nStringUrlTracker.string_key_exists?('invalid_child_key', ['parent_key'])
+
+    assert_equal true, I18nStringUrlTracker.string_key_exists?('number.format')
   end
 end
 
