@@ -29,7 +29,7 @@
     },
     "new_name": null,
     "family_name": "coursef-2022-pilot",
-    "serialized_at": "2022-04-05 21:47:35 UTC",
+    "serialized_at": "2022-04-06 16:24:23 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1855,34 +1855,10 @@
       }
     },
     {
-      "key": "c1140804-a3f7-4079-87b7-d98ffa56b637",
+      "key": "15cf3a36-0d62-4290-b7c2-dea896e60d30",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Wrap-Up” slide",
-        "name": "Reflection"
-      },
-      "seeding_key": {
-        "activity_section.key": "c1140804-a3f7-4079-87b7-d98ffa56b637",
-        "lesson_activity.key": "cda0c0ab-8269-402e-ae93-33d4c776a78a"
-      }
-    },
-    {
-      "key": "71dfd3ed-ddff-4190-8882-97252e942ba7",
-      "position": 2,
-      "properties": {
-        "description": "Today you learned to create programs that change over time using events. \n\n**Event** - An action that causes something to happen.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "71dfd3ed-ddff-4190-8882-97252e942ba7",
-        "lesson_activity.key": "cda0c0ab-8269-402e-ae93-33d4c776a78a"
-      }
-    },
-    {
-      "key": "15cf3a36-0d62-4290-b7c2-dea896e60d30",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show next slide\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"How do events work?\" slide\n"
       },
       "seeding_key": {
         "activity_section.key": "15cf3a36-0d62-4290-b7c2-dea896e60d30",
@@ -1891,7 +1867,7 @@
     },
     {
       "key": "3566e4b5-e96e-4a63-a77e-7eb5e0501361",
-      "position": 4,
+      "position": 2,
       "properties": {
         "description": "How do events work?\n\n1. The user presses a key on the keyboard.\n2. The keyboard sends a signal to the computer.\n3. The computer makes a decision based on the code.\n4. The computer updates the display.",
         "remarks": true
@@ -1903,9 +1879,9 @@
     },
     {
       "key": "2b474525-e079-4540-9aa9-d781c46fb290",
-      "position": 5,
+      "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** \nArrow keys are one way to make a program more interactive. \n* _What other ways could we give a user control over what happens in an app or game?_\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** \n_Arrow keys are one way to make a program more interactive._\n\n* _What other ways could we give a user control over what happens in an app or game?_\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.",
         "name": "Reflect"
       },
       "seeding_key": {
@@ -1917,7 +1893,7 @@
       "key": "ab5fa58f-f1d8-420a-be1c-ad3c410a0ba6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Review:** \n\n* _Do you remember what an event is?_\n\n* _Do you remember what a behavior is?_\n\n* _Can you remember some of the behaviors you have used? What do they do?_\n    - _\"patrolling\"_\n    - _\"jittering\"_\n    - _\"spinning right/left\"_ \n\n####Vocabulary\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n\n- **Behavior** - An action in Sprite Lab that a sprite performs continuously until it’s told to stop.\n\n- **Event** - An action that causes something to happen.\n\n**Do This**: Revisit _events_ and _behaviors_ in programming. Additionally, introduce the Sprite Lab \"Costumes\" tool that allows students to draw their own costumes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 1 - Exploration” slide\n\n**Display:** Begin by showing Level 1 of today's lesson to your students. \n\n**Think/Pair:** Ask students to predict what will happen when the code is run, and to discuss with their neighbors. Run the code, and discuss the outcome.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 2 - Skill Building” slide\n\n**Display:** Show Level 2. Briefly demonstrate how to do the following: \n\n- Navigate between the _Code_ and _Costumes_ tabs. \n- Draw a costume. \n- Choose a costume from the costume library.\n- Change the virtual pet's sprite's costume to a custom one.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Review:** \n\n* _Do you remember what an event is?_\n\n* _Do you remember what a behavior is?_\n\n* _Can you remember some of the behaviors you have used? What do they do?_\n    - _\"patrolling\"_\n    - _\"jittering\"_\n    - _\"spinning right/left\"_ \n\n####Vocabulary\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n\n- **Behavior** - An action in Sprite Lab that a sprite performs continuously until it’s told to stop.\n- **Event** - An action that causes something to happen.\n\n**Do This**: Revisit _events_ and _behaviors_ in programming. Additionally, introduce the Sprite Lab \"Costumes\" tool that allows students to draw their own costumes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 1 - Exploration” slide\n\n**Display:** Begin by showing Level 1 of today's lesson to your students. \n\n**Think/Pair:** Ask students to predict what will happen when the code is run, and to discuss with their neighbors. Run the code, and discuss the outcome.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 2 - Skill Building” slide\n\n**Display:** Show Level 2. Briefly demonstrate how to do the following: \n\n- Navigate between the _Code_ and _Costumes_ tabs. \n- Draw a costume. \n- Choose a costume from the costume library.\n- Change the virtual pet's sprite's costume to a custom one.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2108,7 +2084,7 @@
       "key": "085f68e9-248b-47d0-bf54-7b5c13861d78",
       "position": 8,
       "properties": {
-        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n- **Variable** - A label for a piece of information used in a program."
+        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\nThe blank spaces in these stories work like containers for information. Each container also has a label.\n\nIn computer science, we call this a variable.\n\n- **Variable** - A label for a piece of information used in a program."
       },
       "seeding_key": {
         "activity_section.key": "085f68e9-248b-47d0-bf54-7b5c13861d78",
@@ -2187,7 +2163,7 @@
       "key": "a0ef9c3a-7422-489d-8cfc-3ae8aa8376a7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Blank Space Stories Wrap-Up” slide\n\n**Do this:** Summarize the rules of blank space stories once more with the class. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Blank Space Stories Wrap-Up” slide\n\n**Do this:** Summarize the rules of blank space stories once more with the class. \n\n\n",
         "name": "Introducing Variables"
       },
       "seeding_key": {
@@ -2196,20 +2172,8 @@
       }
     },
     {
-      "key": "90101494-a1fb-43b9-b331-405fefc0427e",
-      "position": 2,
-      "properties": {
-        "description": "\n*The blank spaces in these stories work like containers for information. Each container also has a label.  In computer science, when you create a label for a piece of information in your program, it's called a* ***variable***.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "90101494-a1fb-43b9-b331-405fefc0427e",
-        "lesson_activity.key": "fcaac2d6-c201-4fe2-b921-58ca9c55c78b"
-      }
-    },
-    {
       "key": "518519b6-2f8b-4310-9d7d-582bde027691",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide"
       },
@@ -2220,7 +2184,7 @@
     },
     {
       "key": "bbdd4901-533c-410d-a08c-cbc627aac066",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "*These apps are all asking the user to provide some information. How does this relate to today's activity?*\n",
         "remarks": true
@@ -2232,7 +2196,7 @@
     },
     {
       "key": "a063dcd4-385b-440b-bc55-fab06ce96de6",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Variables” slide\n\n\n\n\n\n\n"
       },
@@ -2243,7 +2207,7 @@
     },
     {
       "key": "8b7e073a-7838-4fe9-b988-a90426719183",
-      "position": 6,
+      "position": 5,
       "properties": {
         "description": "\n*Information is stored in the computer's memory with variables. Each variable has a label that tells us what kind of information to expect. When the computer needs that information later, it looks for the label of the variable.*\n",
         "remarks": true
@@ -2255,7 +2219,7 @@
     },
     {
       "key": "dfb5ab2d-2034-4eb1-9fca-06d99212a61d",
-      "position": 7,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next “Variables” slide"
       },
@@ -2266,7 +2230,7 @@
     },
     {
       "key": "535d96ea-0ed2-493e-b0da-6ddde840aa7b",
-      "position": 8,
+      "position": 7,
       "properties": {
         "description": "*Whether you're storing objects in a box, words in an envelope, or information in a variable, it's important to use good labels, so you don't get confused later.*\n\n*When a user types into a prompt, it’s like the computer stores the information in a container. The variable label tells us what kind of information to expect.*",
         "remarks": true
@@ -2278,7 +2242,7 @@
     },
     {
       "key": "414db3dd-e587-44e3-bd5e-1f1575d21f51",
-      "position": 9,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide"
       },
@@ -2289,7 +2253,7 @@
     },
     {
       "key": "a7935028-0d52-41b4-adc8-deb00454aa2a",
-      "position": 10,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _How do you think blank space stories relate to learning computer science?_\n\n\n\n",
         "name": "Reflection"
@@ -2421,7 +2385,7 @@
       "key": "cd8c6f4e-1432-49d4-a24d-c7bca7f874b0",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Do This:** Use the lesson slides to review the vocabulary for this lesson. Be sure that students can recall from the lesson where they saw each of these concepts. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Wrap-Up Summary” slide\n",
+        "description": "**Do This:** Use the lesson slides to review the vocabulary for this lesson. Be sure that students can recall from the lesson where they saw each of these concepts. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Wrap-Up Summary” slide\n",
         "name": "Review"
       },
       "seeding_key": {
@@ -3322,7 +3286,7 @@
       "key": "d694e770-8a1a-40e8-b637-2c716707733c",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n\n**Do This:** Review the vocabulary, **models and simulations** with students, by building off of the previous lesson. A simulation is a computer model of a process or system.\n\n"
+        "description": "**Do This:** Review the vocabulary, **models and simulations** with students, by building off of the previous lesson. A simulation is a computer model of a process or system.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "d694e770-8a1a-40e8-b637-2c716707733c",
