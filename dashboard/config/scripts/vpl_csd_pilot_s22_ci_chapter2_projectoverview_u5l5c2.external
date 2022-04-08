@@ -3,17 +3,15 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-### <a href="https://levelbuilder-studio.code.org/s/vpl-csd2-ci-pilot-2022/lessons/5/levels/2" target="blank" rel="noopener noreferrer">Example Level</a> - remove when complete
-
-# Chapter 2 project: Insert project title here
+# Chapter 2 project: Make a Recommendation
 
 ## Project overview
 
-##### Add project overview 
+##### Chapter 2 of the Data and Society unit concludes with students designing a recommendation engine based on data that they collect and analyze from their classmates. Students start by looking at an example of a recommendation app, which should inspire them to choose what they want to help the user to make, what data they need to give the recommendation, create a survey, and collect information about their classmates' choices. They then interpret the data and use what they have learned to create the recommendation algorithm. Last, they use their algorithms to make recommendations to a few classmates.The project concludes with students performing a peer review and making any necessary updates to their projects before preparing a presentation to the class.
 
 ## Sample student projects
 
-### Add sample projects and delete these instructions
+### Only thing left to do is add sample projects and delete these instructions
 
 ##### Click the images below to view the sample projects in a new tab.
 
@@ -32,12 +30,10 @@ markdown <<MARKDOWN
 
 ## Project resources
 
-### Update links below and delete these instructions
-
-* ##### <a href="https://studio.code.org/s/csd2-2022/lessons/13" target="blank" rel="noopener noreferrer" >Lesson Plan</a>  
-* ##### <a href="https://docs.google.com/document/d/1J8BV9ekJXvT8-KzWkzc8_XOTam5BFzZ42A_0ZaUXoww/view" target="blank" rel="noopener noreferrer" >Project guide</a> 
-* ##### <a href="https://docs.google.com/document/d/1pL93fCFPGSxOo9nCmU3bfAw2m2MhY7B9nG-k-IT28Lo/view" target="blank" rel="noopener noreferrer" >Student checklist</a> 
-* ##### <a href="https://docs.google.com/document/d/1xDnK38-eItsz7ccg4OctJjBuy7svd3yBXF9tTvDpGo0/view" target="blank" rel="noopener noreferrer" >Project rubric</a> 
+* ##### <a href="https://studio.code.org/s/csd5-2021/lessons/16" target="blank" rel="noopener noreferrer" >Lesson Plan</a>  
+* ##### <a href="https://docs.google.com/document/d/1pKeFH1OkWzfg3MFTPCezhK_r4p8xu7QUkPKSf5vV41c/view" target="blank" rel="noopener noreferrer" >Project Guide</a> 
+* ##### <a href="https://docs.google.com/document/d/1E_k-oOdK8c7CuN1TcR5GWomeAGXvXfafgzLHda1w6J4/view" target="blank" rel="noopener noreferrer" >Student Checklist</a> 
+* ##### <a href="https://docs.google.com/document/d/1cx4byvEDUduu9iPdtpRLzrPAvMBwPVRdgKxVeptvJCs/view" target="blank" rel="noopener noreferrer" >Project Rubric</a> 
 
 
 MARKDOWN

@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-pilot-2022-timecapsule",
-    "serialized_at": "2022-04-04 16:55:29 UTC",
+    "serialized_at": "2022-04-07 22:13:42 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -144,6 +144,7 @@
       "key": "e39bf613-7840-4fba-8492-56bc11f94377",
       "position": 1,
       "properties": {
+        "name": "Main Activity "
       },
       "seeding_key": {
         "lesson_activity.key": "e39bf613-7840-4fba-8492-56bc11f94377",
@@ -346,6 +347,8 @@
       "key": "586b3f3d-2a24-4ff1-b604-7f15be178d9c",
       "position": 1,
       "properties": {
+        "name": "Code Your Own Time Capsule",
+        "progression_name": "Free Play "
       },
       "seeding_key": {
         "activity_section.key": "586b3f3d-2a24-4ff1-b604-7f15be178d9c",
@@ -585,11 +588,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Free Play "
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc_timecapsule_poetry_intro"
+          "timecapsule_freeplay"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -597,70 +601,7 @@
         "activity_section.key": "586b3f3d-2a24-4ff1-b604-7f15be178d9c"
       },
       "level_keys": [
-        "csc_timecapsule_poetry_intro"
-      ]
-    },
-    {
-      "chapter": 11,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_timecapsule_poetry_sprites"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-2022-timecapsule",
-        "activity_section.key": "586b3f3d-2a24-4ff1-b604-7f15be178d9c"
-      },
-      "level_keys": [
-        "csc_timecapsule_poetry_sprites"
-      ]
-    },
-    {
-      "chapter": 12,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_timecapsule_poetry_colors"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-2022-timecapsule",
-        "activity_section.key": "586b3f3d-2a24-4ff1-b604-7f15be178d9c"
-      },
-      "level_keys": [
-        "csc_timecapsule_poetry_colors"
-      ]
-    },
-    {
-      "chapter": 13,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc_timecapsule_poetry_background"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-2022-timecapsule",
-        "activity_section.key": "586b3f3d-2a24-4ff1-b604-7f15be178d9c"
-      },
-      "level_keys": [
-        "csc_timecapsule_poetry_background"
+        "timecapsule_freeplay"
       ]
     }
   ],
@@ -775,45 +716,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc_timecapsule_poetry_intro",
+        "level.key": "timecapsule_freeplay",
         "script_level.level_keys": [
-          "csc_timecapsule_poetry_intro"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-2022-timecapsule",
-        "activity_section.key": "586b3f3d-2a24-4ff1-b604-7f15be178d9c"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_timecapsule_poetry_sprites",
-        "script_level.level_keys": [
-          "csc_timecapsule_poetry_sprites"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-2022-timecapsule",
-        "activity_section.key": "586b3f3d-2a24-4ff1-b604-7f15be178d9c"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_timecapsule_poetry_colors",
-        "script_level.level_keys": [
-          "csc_timecapsule_poetry_colors"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-2022-timecapsule",
-        "activity_section.key": "586b3f3d-2a24-4ff1-b604-7f15be178d9c"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc_timecapsule_poetry_background",
-        "script_level.level_keys": [
-          "csc_timecapsule_poetry_background"
+          "timecapsule_freeplay"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
