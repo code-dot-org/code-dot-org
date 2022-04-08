@@ -18,7 +18,8 @@ export const commands = {
   },
 
   everyInterval(n, unit, callback) {
-    this.addEvent('everyInterval', {n, unit}, callback);
+    let roundedValue = Math.round(n);
+    this.addEvent('everyInterval', {n: roundedValue, unit}, callback);
   },
 
   keyPressed(condition, key, callback) {
