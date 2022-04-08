@@ -28111,6 +28111,19 @@ indexes:
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: script_levels
+    name: index_script_levels_on_activity_section_id
+    unique: false
+    columns:
+    - activity_section_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: script_levels
     name: index_script_levels_on_script_id
     unique: false
     columns:
@@ -28128,19 +28141,6 @@ indexes:
     unique: false
     columns:
     - stage_id
-    lengths: {}
-    orders: {}
-    opclasses: {}
-    where: 
-    type: 
-    using: :btree
-    comment: 
-  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: script_levels
-    name: index_script_levels_on_activity_section_id
-    unique: false
-    columns:
-    - activity_section_id
     lengths: {}
     orders: {}
     opclasses: {}
@@ -29289,5 +29289,5 @@ database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter
   version:
   - 5
   - 7
-  - 37
-  full_version_string: 5.7.37
+  - 12
+  full_version_string: 5.7.12
