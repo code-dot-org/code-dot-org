@@ -1438,7 +1438,7 @@ ActiveRecord::Schema.define(version: 2022_04_07_200052) do
     t.boolean "standalone", default: true
     t.integer "remix_parent_id"
     t.boolean "skip_content_moderation"
-    t.index ["project_type"], name: "storage_apps_project_type_index"
+    t.index ["project_type"], name: "storage_apps_project_type_index", length: 191
     t.index ["published_at"], name: "storage_apps_published_at_index"
     t.index ["standalone"], name: "storage_apps_standalone_index"
     t.index ["storage_id"], name: "storage_apps_storage_id_index"
