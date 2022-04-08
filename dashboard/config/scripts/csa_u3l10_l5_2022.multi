@@ -8,10 +8,10 @@ wrong '12'
 right '15'
 
 markdown <<MARKDOWN
-How many times is the string "Like my Status!" printed as a result of executing the code segment?
+How many times is the string `"Like my Status!"` printed as a result of executing the code segment?
 ```
-for (int n = 0; n <= 4; n++){
-   for (int k = 3; k > 0; k--){
+for (int n = 0; n <= 4; n++) {
+   for (int k = 3; k > 0; k--) {
       System.out.println("Like my Status!");
    }
 }
