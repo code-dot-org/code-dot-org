@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-27 22:18:43 UTC",
+    "serialized_at": "2022-04-06 18:38:14 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -119,7 +119,7 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "**Overview:**\nThese asynchronous activities will walk participants through the steps of creating a class section in Code Studio. Participants will also be promoted to make a plan for getting their students set up in Code Studio. The goal is for participants to feel ready for the first day of class. \n\n**Participants will:**\n\n* Create your class sections in Code Studio. \n* Assign content to your class sections. \n* Prepare for the first day of class. \n\n**Suggested time:** 60 minutes",
+        "overview": "**Overview:**\nThese asynchronous activities will walk participants through the steps of creating a class section in Code Studio. Participants will also be promoted to make a plan for getting their students set up in Code Studio. The goal is for participants to feel ready for the first day of class. \n\n**Participants will:**\n\n* Create their class sections in Code Studio. \n* Assign content to their class sections. \n* Prepare for the first day of class. \n\n**Suggested time:** 60 minutes",
         "student_overview": "**You will:**\n\n* Create your class sections in Code Studio. \n* Assign content to your class sections. \n* Prepare for the first day of class. \n\n**Suggested time:** 60 minutes"
       },
       "seeding_key": {
@@ -301,9 +301,32 @@
       "key": "7c189f9d-9aa7-4b7a-bb5f-2f4b52f8422e",
       "position": 1,
       "properties": {
+        "progression_name": "Set up your class sections"
       },
       "seeding_key": {
         "activity_section.key": "7c189f9d-9aa7-4b7a-bb5f-2f4b52f8422e",
+        "lesson_activity.key": "40cb45be-646c-42ba-93ec-1d40ada947e2"
+      }
+    },
+    {
+      "key": "3f45fa00-9775-490c-8f45-521c64a45e5e",
+      "position": 2,
+      "properties": {
+        "progression_name": "Assign content to your class sections"
+      },
+      "seeding_key": {
+        "activity_section.key": "3f45fa00-9775-490c-8f45-521c64a45e5e",
+        "lesson_activity.key": "40cb45be-646c-42ba-93ec-1d40ada947e2"
+      }
+    },
+    {
+      "key": "465869aa-2987-4443-b436-633b23f4514e",
+      "position": 3,
+      "properties": {
+        "progression_name": "Prepare for the first day of class"
+      },
+      "seeding_key": {
+        "activity_section.key": "465869aa-2987-4443-b436-633b23f4514e",
         "lesson_activity.key": "40cb45be-646c-42ba-93ec-1d40ada947e2"
       }
     },
@@ -339,10 +362,212 @@
     }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Set up your class sections"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ClassSection-vid"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd5-summer-pilot-2022",
+        "activity_section.key": "7c189f9d-9aa7-4b7a-bb5f-2f4b52f8422e"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-ClassSection-vid"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Set up your class sections"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Task-ClassSection"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd5-summer-pilot-2022",
+        "activity_section.key": "7c189f9d-9aa7-4b7a-bb5f-2f4b52f8422e"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-Task-ClassSection"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Assign content to your class sections"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-overview-assignContent"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd5-summer-pilot-2022",
+        "activity_section.key": "3f45fa00-9775-490c-8f45-521c64a45e5e"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-overview-assignContent"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Assign content to your class sections"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-task-assignContent"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd5-summer-pilot-2022",
+        "activity_section.key": "3f45fa00-9775-490c-8f45-521c64a45e5e"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-task-assignContent"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Prepare for the first day of class"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-overview-addingStudents"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd5-summer-pilot-2022",
+        "activity_section.key": "465869aa-2987-4443-b436-633b23f4514e"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-overview-addingStudents"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Prepare for the first day of class"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-task-PrepareForDay1"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd5-summer-pilot-2022",
+        "activity_section.key": "465869aa-2987-4443-b436-633b23f4514e"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-task-PrepareForDay1"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-ClassSection-vid",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ClassSection-vid"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd5-summer-pilot-2022",
+        "activity_section.key": "7c189f9d-9aa7-4b7a-bb5f-2f4b52f8422e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-Task-ClassSection",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Task-ClassSection"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd5-summer-pilot-2022",
+        "activity_section.key": "7c189f9d-9aa7-4b7a-bb5f-2f4b52f8422e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-overview-assignContent",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-overview-assignContent"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd5-summer-pilot-2022",
+        "activity_section.key": "3f45fa00-9775-490c-8f45-521c64a45e5e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-task-assignContent",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-task-assignContent"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd5-summer-pilot-2022",
+        "activity_section.key": "3f45fa00-9775-490c-8f45-521c64a45e5e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-overview-addingStudents",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-overview-addingStudents"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd5-summer-pilot-2022",
+        "activity_section.key": "465869aa-2987-4443-b436-633b23f4514e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-task-PrepareForDay1",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-task-PrepareForDay1"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd5-summer-pilot-2022",
+        "activity_section.key": "465869aa-2987-4443-b436-633b23f4514e"
+      }
+    }
   ],
   "resources": [
     {

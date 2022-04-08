@@ -26,20 +26,20 @@ const customInputTypes = {
       block.getVars = function() {
         return {
           [Blockly.BlockValueType.SPRITE]: [
-            block.getTitleValue(inputConfig.name)
+            block.getFieldValue(inputConfig.name)
           ]
         };
       };
       block.renameVar = function(oldName, newName) {
         if (
-          Blockly.Names.equals(oldName, block.getTitleValue(inputConfig.name))
+          Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
         ) {
           block.setTitleValue(newName, inputConfig.name);
         }
       };
       block.removeVar = function(oldName) {
         if (
-          Blockly.Names.equals(oldName, block.getTitleValue(inputConfig.name))
+          Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
         ) {
           block.dispose(true, true);
         }
@@ -66,7 +66,7 @@ const customInputTypes = {
         );
     },
     generateCode(block, arg) {
-      return `'${block.getTitleValue(arg.name)}'`;
+      return `'${block.getFieldValue(arg.name)}'`;
     }
   },
   limitedColourPicker: {
@@ -83,7 +83,7 @@ const customInputTypes = {
         );
     },
     generateCode(block, arg) {
-      return `'${block.getTitleValue(arg.name)}'`;
+      return `'${block.getFieldValue(arg.name)}'`;
     }
   }
 };
@@ -146,7 +146,7 @@ export default {
         );
       },
       renameVar: function(oldName, newName) {
-        if (Blockly.Names.equals(oldName, this.getTitleValue('VAR'))) {
+        if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
           this.setTitleValue(newName, 'VAR');
         }
       },
@@ -154,7 +154,7 @@ export default {
     };
     generator.sprite_variables_get = function() {
       return [
-        `'${this.getTitleValue('VAR')}'`,
+        `'${this.getFieldValue('VAR')}'`,
         Blockly.JavaScript.ORDER_ATOMIC
       ];
     };
@@ -215,7 +215,7 @@ export default {
 
       openEditor(e) {
         e.stopPropagation();
-        behaviorEditor.openEditorForFunction(this, this.getTitleValue('VAR'));
+        behaviorEditor.openEditorForFunction(this, this.getFieldValue('VAR'));
       },
 
       getVars() {
@@ -225,19 +225,19 @@ export default {
       },
 
       renameVar(oldName, newName) {
-        if (Blockly.Names.equals(oldName, this.getTitleValue('VAR'))) {
+        if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
           this.setTitleValue(newName, 'VAR');
         }
       },
 
       renameProcedure(oldName, newName) {
-        if (Blockly.Names.equals(oldName, this.getTitleValue('VAR'))) {
+        if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
           this.setTitleValue(newName, 'VAR');
         }
       },
 
       getCallName() {
-        return this.getTitleValue('VAR');
+        return this.getFieldValue('VAR');
       },
 
       setProcedureParameters(paramNames, paramIds, typeNames) {
@@ -283,7 +283,7 @@ export default {
 
     generator.gamelab_behavior_get = function() {
       const name = Blockly.JavaScript.variableDB_.getName(
-        this.getTitleValue('VAR'),
+        this.getFieldValue('VAR'),
         Blockly.Procedures.NAME_TYPE
       );
       const extraArgs = [];
@@ -311,7 +311,7 @@ export default {
         overrides: {
           getVars(category) {
             return {
-              Behavior: [this.getTitleValue('NAME')]
+              Behavior: [this.getFieldValue('NAME')]
             };
           },
           callType_: 'gamelab_behavior_get'

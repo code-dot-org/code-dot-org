@@ -85,6 +85,14 @@ class ProgrammingEnvironment < ApplicationRecord
     File.delete(file_path) if File.exist?(file_path)
   end
 
+  def studio_documentation_path
+    if DCDO.get('use-studio-code-docs', false) && ['applab', 'gamelab', 'spritelab', 'weblab'].include?(name)
+      "/docs/#{name}"
+    else
+      programming_environment_path(name)
+    end
+  end
+
   def summarize_for_lesson_edit
     {id: id, name: name}
   end
@@ -119,7 +127,7 @@ class ProgrammingEnvironment < ApplicationRecord
       title: title,
       imageUrl: image_url,
       description: description,
-      showPath: programming_environment_path(name)
+      showPath: studio_documentation_path
     }
   end
 end

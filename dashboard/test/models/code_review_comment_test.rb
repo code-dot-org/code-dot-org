@@ -4,7 +4,7 @@ class CodeReviewCommentTest < ActiveSupport::TestCase
   setup_all do
     @project_level_id = 12
     @project_script_id = 34
-    @project_storage_app_id = 56
+    @project_id = 56
   end
 
   test 'must have a non-nil comment' do
@@ -65,7 +65,7 @@ class CodeReviewCommentTest < ActiveSupport::TestCase
     reviewer_follower = create :follower, section: section, student_user: reviewer
     create :reviewable_project,
       user_id: project_owner.id,
-      storage_app_id: @project_storage_app_id,
+      project_id: @project_id,
       level_id: @project_level_id,
       script_id: @project_script_id
 
@@ -73,7 +73,7 @@ class CodeReviewCommentTest < ActiveSupport::TestCase
     create :code_review_group_member, follower: project_owner_follower, code_review_group: code_review_group
     create :code_review_group_member, follower: reviewer_follower, code_review_group: code_review_group
 
-    assert CodeReviewComment.user_can_review_project?(project_owner, reviewer, @project_storage_app_id, @project_level_id, @project_script_id)
+    assert CodeReviewComment.user_can_review_project?(project_owner, reviewer, @project_id, @project_level_id, @project_script_id)
   end
 
   test 'cannot review peers project if there is no reviewable project' do
@@ -82,7 +82,7 @@ class CodeReviewCommentTest < ActiveSupport::TestCase
     section = create :section, code_review_expires_at: Time.now.utc + 1.day
     create :follower, section: section, student_user: project_owner
     create :follower, section: section, student_user: reviewer
-    refute CodeReviewComment.user_can_review_project?(project_owner, reviewer, @project_storage_app_id, @project_level_id, @project_script_id)
+    refute CodeReviewComment.user_can_review_project?(project_owner, reviewer, @project_id, @project_level_id, @project_script_id)
   end
 
   test 'cannot review peers project if code_review is disabled and students are in same code review group' do
@@ -93,14 +93,14 @@ class CodeReviewCommentTest < ActiveSupport::TestCase
     reviewer_follower = create :follower, section: section, student_user: reviewer
     create :reviewable_project,
       user_id: project_owner.id,
-      storage_app_id: @project_storage_app_id,
+      project_id: @project_id,
       level_id: @project_level_id,
       script_id: @project_script_id
     code_review_group = create :code_review_group, section: section
     create :code_review_group_member, follower: project_owner_follower, code_review_group: code_review_group
     create :code_review_group_member, follower: reviewer_follower, code_review_group: code_review_group
 
-    refute CodeReviewComment.user_can_review_project?(project_owner, reviewer, @project_storage_app_id, @project_level_id, @project_script_id)
+    refute CodeReviewComment.user_can_review_project?(project_owner, reviewer, @project_id, @project_level_id, @project_script_id)
   end
 
   test 'cannot review project of student in a different section even if both in code review groups' do
@@ -112,7 +112,7 @@ class CodeReviewCommentTest < ActiveSupport::TestCase
     reviewer_follower = create :follower, section: reviewer_section, student_user: reviewer
     create :reviewable_project,
       user_id: project_owner.id,
-      storage_app_id: @project_storage_app_id,
+      project_id: @project_id,
       level_id: @project_level_id,
       script_id: @project_script_id
 
@@ -121,6 +121,6 @@ class CodeReviewCommentTest < ActiveSupport::TestCase
     create :code_review_group_member, follower: project_owner_follower, code_review_group: project_owner_code_review_group
     create :code_review_group_member, follower: reviewer_follower, code_review_group: reviewer_code_review_group
 
-    refute CodeReviewComment.user_can_review_project?(project_owner, reviewer, @project_storage_app_id, @project_level_id, @project_script_id)
+    refute CodeReviewComment.user_can_review_project?(project_owner, reviewer, @project_id, @project_level_id, @project_script_id)
   end
 end

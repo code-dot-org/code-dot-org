@@ -589,7 +589,7 @@ function installCreateASnowflakeDropdown(blockly, generator, gensym) {
   };
 
   generator.create_snowflake_dropdown = function() {
-    var type = this.getTitleValue('TYPE');
+    var type = this.getFieldValue('TYPE');
     return "Turtle.drawSnowflake('" + type + "', 'block_id_" + this.id + "');";
   };
 }
