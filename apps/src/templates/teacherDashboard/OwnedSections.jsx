@@ -98,7 +98,11 @@ class OwnedSections extends React.Component {
     const visibleSectionIds = _.without(sectionIds, ...hiddenSectionIds);
 
     return (
-      <div className="uitest-owned-sections">
+      <div
+        className={
+          isPlSections ? 'uitest-owned-pl-sections' : 'uitest-owned-sections'
+        }
+      >
         <SetUpSections hasSections={hasSections} isPlSections={isPlSections} />
         {hasSections && (
           <div>
