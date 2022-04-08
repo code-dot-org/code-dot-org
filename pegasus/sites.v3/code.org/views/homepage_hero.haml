@@ -3,6 +3,8 @@
   show_single_hero = Homepage.show_single_hero(request)
   heroes_arranged, hero_display_time = Homepage.get_heroes_arranged(request)
   actions = Homepage.get_actions(request)
+  action_buttons_css_class = Homepage.get_action_buttons_css_class()
+  num_columns = Homepage.get_num_columns()
 
 - main_actions = capture_haml do
   - if show_single_hero == "changeworld"
@@ -10,16 +12,16 @@
       = hoc_s(:hoc2019_header_line1_mobile)
     .hero-message-line2{style: "color: white; font-size: 28px; line-height: 28px; padding-bottom: 80px; font-family: 'Gotham 5r', sans-serif", dir: "auto"}
       = hoc_s(:hoc2019_header_line2_mobile)
-  - elsif show_single_hero == "custom"
+  - elsif show_single_hero == "custom" && heroes_arranged[0][:items]&.length
     .hero-messages{style: "padding-top: 60px; padding-bottom: 20px"}
-      - heroes_arranged[0][:items].map do |item|
+      - heroes_arranged[0][:items]&.map do |item|
         - if item["type"] == "text"
           .hero-message-line{style: "color: white; font-size: 24px; line-height: 1.5em; padding-bottom: 0px; font-family: 'Gotham 4r', sans-serif", dir: "auto"}
             = I18n.t(item["text"])
         - elsif item["type"] == "image"
           %img{src: item["url"], style: "width: 100%; max-width: 600px; margin-bottom: 20px"}
 
-  .action_buttons
+  %div{class: action_buttons_css_class}
     - actions.each do |entry|
       - if ["cta_button", "cta_button_solid_white", "cta_button_hollow_white", "cta_button_solid_yellow", "cta_button_solid_grey"].include? entry[:type]
         .action
@@ -34,10 +36,19 @@
           %button.clicktag.herohocbutton#hero-video{onclick: "return showVideo_mainvideo();"}
             %img.video-play-icon{src: "/shared/images/fit-48/play-button.png"}
             %span#playtext= I18n.t(entry[:text])
+      - elsif entry[:type] == "video_thumbnail"
+        .video_thumbnail
+          = view :display_video_thumbnail, thumbnail_only: true, id: "mainvideo", video_code: entry[:youtube_id], image_url: entry[:image_url], play_button: 'center', letterbox: "false"
+      - elsif entry[:type] == "text"
+        .text{dir: "auto"}
+          = I18n.t(entry[:text])
+      - elsif entry[:type] == "image"
+        %img.image{src: entry[:url]}
       - elsif entry[:type] == "cta_link_white"
         %a.herohocbutton.herolink-white{href: entry[:href]}
           %i.fa{class: entry[:icon_class]}
           %span= entry[:plain_text]
+      
 
   .clear{style: "clear: both"}
 
@@ -67,8 +78,17 @@
         = view :mobile_header_responsive
 
   - if show_single_hero
-    #actions
-      = main_actions
+    - if num_columns == 3
+      - extra_images = Homepage.get_outer_column_images()
+      #actions{style: "padding: 0px"}
+        #bars{style: "display: flex; max-width: 1680px; margin: 0 auto;"}
+          .col-33.tablet-feature{style: "align-items: stretch; background-image: url(#{extra_images[:left_image]}); background-position: 100% 100%; background-size: contain; background-repeat: no-repeat"}
+          .col-33{style: "z-index: 1; padding-top: 0px; padding-bottom: 40px"}
+            = main_actions
+          .col-33.tablet-feature{style: "align-items: stretch; background-image: url(#{extra_images[:right_image]}); background-position: 0% 100%; background-size: contain; background-repeat: no-repeat"}
+    - else
+      #actions
+        = main_actions
 
   #caption_container.container_responsive
     - unless show_single_hero

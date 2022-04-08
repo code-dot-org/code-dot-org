@@ -69,7 +69,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     authorize! :manage, section
 
     # Can't update participant_type once it is set
-    return head :bad_request if params[:participant_type]
+    return head :forbidden if !params[:participant_type].nil_or_empty? && params[:participant_type] != section.participant_type
 
     # Unhide unit for this section before assigning
     section.toggle_hidden_script @unit, false if @unit

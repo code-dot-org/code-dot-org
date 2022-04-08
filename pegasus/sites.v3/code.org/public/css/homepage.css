@@ -653,3 +653,30 @@ body.modal-open .supreme-container{
   text-align: center;
   padding: 10px;
 }
+
+/* Custom styling for a vertical-stack hero layout. */
+
+#homepage .vertical-stack {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#homepage .vertical-stack .image {
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+#homepage .vertical-stack .video_thumbnail {
+  width: 300px;
+  margin: 0 auto;
+}
+
+#homepage .vertical-stack .text {
+  color: white;
+  font-size: 16px;
+  line-height: 1.5em;
+  padding-bottom: 0px;
+  font-family: 'Gotham 4r', sans-serif;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

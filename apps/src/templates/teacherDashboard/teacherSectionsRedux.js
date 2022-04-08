@@ -1206,7 +1206,6 @@ export const sectionFromServerSection = serverSection => ({
   courseVersionId: serverSection.course_version_id,
   unitId: serverSection.unit_id,
   courseId: serverSection.course_id,
-  participantType: serverSection.participant_type,
   hidden: serverSection.hidden,
   isAssigned: serverSection.isAssigned,
   restrictSection: serverSection.restrict_section,
@@ -1214,7 +1213,8 @@ export const sectionFromServerSection = serverSection => ({
   codeReviewExpiresAt: serverSection.code_review_expires_at
     ? Date.parse(serverSection.code_review_expires_at)
     : null,
-  isAssignedCSA: serverSection.is_assigned_csa
+  isAssignedCSA: serverSection.is_assigned_csa,
+  participantType: serverSection.participant_type
 });
 
 /**
@@ -1250,8 +1250,8 @@ export function serverSectionFromSection(section) {
     course_version_id: section.courseVersionId,
     unit_id: section.unitId,
     course_id: section.courseId,
-    participant_type: section.participantType,
-    restrict_section: section.restrictSection
+    restrict_section: section.restrictSection,
+    participant_type: section.participantType
   };
 }
 

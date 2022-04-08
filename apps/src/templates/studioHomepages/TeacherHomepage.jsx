@@ -145,7 +145,6 @@ export const UnconnectedTeacherHomepage = ({
 
   const showDonorBanner = isEnglish && donorBannerName;
 
-  // [MEG] TODO: Once experiment is complete, modify buttonUrl not to use experiment
   return (
     <div>
       <HeaderBanner
@@ -185,7 +184,7 @@ export const UnconnectedTeacherHomepage = ({
             descriptionText="Finish applying for our Professional Learning Program"
             buttonText="Finish Application"
             buttonColor={Button.ButtonColor.orange}
-            buttonUrl="/pd/application/teacher?enableExperiments=teacher-application-saving-reopening"
+            buttonUrl="/pd/application/teacher"
             solidBorder={true}
           />
         )}
@@ -195,7 +194,7 @@ export const UnconnectedTeacherHomepage = ({
             descriptionText="Your Regional Partner has requested updates to your Professional Learning Application."
             buttonText="Return to Application"
             buttonColor={Button.ButtonColor.orange}
-            buttonUrl="/pd/application/teacher?enableExperiments=teacher-application-saving-reopening"
+            buttonUrl="/pd/application/teacher"
             solidBorder={true}
           />
         )}

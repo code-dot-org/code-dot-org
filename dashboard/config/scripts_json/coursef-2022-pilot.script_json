@@ -29,7 +29,7 @@
     },
     "new_name": null,
     "family_name": "coursef-2022-pilot",
-    "serialized_at": "2022-03-22 18:16:58 UTC",
+    "serialized_at": "2022-04-05 21:47:35 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1346,8 +1346,19 @@
       }
     },
     {
-      "key": "d59c8d19-eab5-4a84-95d0-b9f20aa19607",
+      "key": "54702a91-d015-4fe5-8c09-c554cd7f1396",
       "position": 3,
+      "properties": {
+        "description": "####Vocabulary\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n\n- **Sprite** - A graphic on the screen with a location, size, and appearance.\n- **User** - Someone who uses an object, including software and hardware."
+      },
+      "seeding_key": {
+        "activity_section.key": "54702a91-d015-4fe5-8c09-c554cd7f1396",
+        "lesson_activity.key": "e8e5cdfe-3310-4568-94d1-9d1d09dad5d7"
+      }
+    },
+    {
+      "key": "d59c8d19-eab5-4a84-95d0-b9f20aa19607",
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show next slide\n\n**Do This:**  Using the lesson slides or a whiteboard, show students a T-chart labeled “Favorite apps and games” on the left and “Why we like them” on the right. After modeling with one example, have students suggest their own additions to the list. As students explain why they like a particular app, restate their ideas and focus on *choices*, and times when the user gets to *choose* how they play or use it. Move on when students are seeing the connection that people prefer to be able to make choices."
       },
@@ -1358,7 +1369,7 @@
     },
     {
       "key": "0d36b639-6c7c-43b3-ac40-b4681ddd886b",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "When apps and games are made, they are designed with a user in mind. The user is you, or whoever will be using and playing with the app. Creators have ideas about how their apps should be used, but it is up to the user to make the choices!\nToday we are going to explore how (and why) app and game makers let us make choices.",
         "remarks": true
@@ -1370,7 +1381,7 @@
     },
     {
       "key": "16fa5965-ec3b-426c-9729-6fce1d7d0780",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “User Choices” slide\n\n**Discuss:** For each app, ask students what choice the app developers are giving to the user. Why would they include that choice?\n\n**Goal:** In their discussion, students should be including specific choices that the user gets to make, as well as what the apps are about. For example, Talk Box lets users choose an avatar or digital representation of themselves. This choice is a good thing because it helps the user feel like the app is really for them.\n",
         "tips": [
@@ -1387,7 +1398,7 @@
     },
     {
       "key": "de0bf2b4-27a3-4030-a314-55fe1227fdfe",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "We can see that in all of these apps, the user gets to make choices about how they use it. These choices might motivate more people to want to use the app.",
         "remarks": true
@@ -1586,6 +1597,17 @@
       }
     },
     {
+      "key": "35c5f87a-0227-4912-82d2-c33a2e6557dc",
+      "position": 4,
+      "properties": {
+        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n- **Algorithm** - A list of steps to complete a task.\n- **Behavior** - An action in Sprite Lab that a sprite performs continuously until it’s told to stop.\n- **Program** - An algorithm that has been coded into something that can be run by a machine.\n- **Sprite** - A graphic on the screen with a location, size, and appearance.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "35c5f87a-0227-4912-82d2-c33a2e6557dc",
+        "lesson_activity.key": "6cec496a-bd20-4bbe-a9c2-65c3fdf9ff5b"
+      }
+    },
+    {
       "key": "b271c686-75f6-42ce-bf24-c96b476d5e46",
       "position": 1,
       "properties": {
@@ -1755,6 +1777,17 @@
       }
     },
     {
+      "key": "e219ac64-fb19-4191-8faa-807f81e52f7d",
+      "position": 5,
+      "properties": {
+        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Algorithm** - A list of steps to complete a task.\n- **Event** - An action that causes something to happen."
+      },
+      "seeding_key": {
+        "activity_section.key": "e219ac64-fb19-4191-8faa-807f81e52f7d",
+        "lesson_activity.key": "4f655225-f0f2-4335-8043-1cf5bd184e33"
+      }
+    },
+    {
       "key": "01fe5701-5a45-4869-9271-a4425f79f96f",
       "position": 1,
       "properties": {
@@ -1884,7 +1917,7 @@
       "key": "ab5fa58f-f1d8-420a-be1c-ad3c410a0ba6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Review:** \n\n* _Do you remember what an event is?_\n\n* _Do you remember what a behavior is?_\n\n* _Can you remember some of the behaviors you have used? What do they do?_\n    - _\"patrolling\"_\n    - _\"jittering\"_\n    - _\"spinning right/left\"_ \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n\nRevisit _events_ and _behaviors_ in programming. Additionally, introduce the Sprite Lab \"Costumes\" tool that allows students to draw their own costumes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 1 - Exploration” slide\n\n**Display:** Begin by showing Level 1 of today's lesson to your students. \n\n**Think/Pair:** Ask students to predict what will happen when the code is run, and to discuss with their neighbors. Run the code, and discuss the outcome.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 2 - Skill Building” slide\n\n**Display:** Show Level 2. Briefly demonstrate how to do the following: \n\n- Navigate between the _Code_ and _Costumes_ tabs. \n- Draw a costume. \n- Choose a costume from the costume library.\n- Change the virtual pet's sprite's costume to a custom one.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Review:** \n\n* _Do you remember what an event is?_\n\n* _Do you remember what a behavior is?_\n\n* _Can you remember some of the behaviors you have used? What do they do?_\n    - _\"patrolling\"_\n    - _\"jittering\"_\n    - _\"spinning right/left\"_ \n\n####Vocabulary\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n\n- **Behavior** - An action in Sprite Lab that a sprite performs continuously until it’s told to stop.\n\n- **Event** - An action that causes something to happen.\n\n**Do This**: Revisit _events_ and _behaviors_ in programming. Additionally, introduce the Sprite Lab \"Costumes\" tool that allows students to draw their own costumes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 1 - Exploration” slide\n\n**Display:** Begin by showing Level 1 of today's lesson to your students. \n\n**Think/Pair:** Ask students to predict what will happen when the code is run, and to discuss with their neighbors. Run the code, and discuss the outcome.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 2 - Skill Building” slide\n\n**Display:** Show Level 2. Briefly demonstrate how to do the following: \n\n- Navigate between the _Code_ and _Costumes_ tabs. \n- Draw a costume. \n- Choose a costume from the costume library.\n- Change the virtual pet's sprite's costume to a custom one.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2068,6 +2101,17 @@
       },
       "seeding_key": {
         "activity_section.key": "85ef0302-caf2-40d2-91bc-ffbdf3e0533e",
+        "lesson_activity.key": "5e7ab614-99f5-490e-8860-706282566821"
+      }
+    },
+    {
+      "key": "085f68e9-248b-47d0-bf54-7b5c13861d78",
+      "position": 8,
+      "properties": {
+        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n- **Variable** - A label for a piece of information used in a program."
+      },
+      "seeding_key": {
+        "activity_section.key": "085f68e9-248b-47d0-bf54-7b5c13861d78",
         "lesson_activity.key": "5e7ab614-99f5-490e-8860-706282566821"
       }
     },
@@ -2270,7 +2314,7 @@
       "key": "43054004-5e7d-49a1-a99a-6da1f53ec97e",
       "position": 1,
       "properties": {
-        "description": "**Do This:** Remind students what they did last class or ask them to share. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _How did we use variables in our \nBlank Space Stories?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Prompts” slide\n\n**Discuss:** How do computer programs ask us for information?\n\n**Discussion Goal:** Students should think about their own experiences as users and times when a computer asks them for information. There are lots of ways to input information into a computer, but focus on ideas where something is typed into a prompt for now.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Variables” slide\n",
+        "description": "**Do This:** Remind students what they did last class or ask them to share. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _How did we use variables in our \nBlank Space Stories?_\n\n",
         "name": "Review"
       },
       "seeding_key": {
@@ -2279,8 +2323,30 @@
       }
     },
     {
-      "key": "65e68a4b-2b50-4bba-9742-35f3e385bbe9",
+      "key": "ee6d8c24-c780-4840-b79d-fd144c305362",
       "position": 2,
+      "properties": {
+        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n- **Prompt** - A message on the computer screen that waits for input from the user.\n- **Variable** - A label for a piece of information used in a program."
+      },
+      "seeding_key": {
+        "activity_section.key": "ee6d8c24-c780-4840-b79d-fd144c305362",
+        "lesson_activity.key": "45490d0f-53dc-4674-a9ed-0f342fc3f1d5"
+      }
+    },
+    {
+      "key": "498edf57-fad7-46dc-a82e-095052c73dcc",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Prompts” slide\n\n**Discuss:** How do computer programs ask us for information?\n\n**Discussion Goal:** Students should think about their own experiences as users and times when a computer asks them for information. There are lots of ways to input information into a computer, but focus on ideas where something is typed into a prompt for now.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Variables” slide\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "498edf57-fad7-46dc-a82e-095052c73dcc",
+        "lesson_activity.key": "45490d0f-53dc-4674-a9ed-0f342fc3f1d5"
+      }
+    },
+    {
+      "key": "65e68a4b-2b50-4bba-9742-35f3e385bbe9",
+      "position": 4,
       "properties": {
         "description": "At the end of the last lesson, we were looking at the similarities between blank space stories and apps that ask a user for input. \nWhen a message on the computer screen is waiting for your input we call that a prompt. \nWhen a user types into a prompt, it’s like the computer is storing the information in a container.\nThe variable's label tells us what kind of information to expect.\nToday we are going to learn the code to create a prompt in Sprite Lab.",
         "remarks": true
@@ -2391,7 +2457,7 @@
       "key": "110774cf-28f2-4562-afe8-570492140c12",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _How do sprites, behaviors, events, and text work?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Review” slide\n\n**Do This:** Using the lesson slides, review the concepts that students have explored so far in the course: sprites, behaviors, events, and text. Finally, review how prompts and variables work. \n\n####Prediction\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Predict” slide\n\n**Do This:** Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them. You can also edit this code with your class in this standalone [\"sandbox\"](https://studio.code.org/levels/27300) level.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _How do sprites, behaviors, events, and text work?_\n####Vocabulary\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Input** - The information computers get from users.\n- **Prompt** - A message on the computer screen that waits for input from the user.\n- **Variable** - A label for a piece of information used in a program.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Review” slide\n\n**Do This:** Using the lesson slides, review the concepts that students have explored so far in the course: sprites, behaviors, events, and text. Finally, review how prompts and variables work. \n\n####Prediction\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Predict” slide\n\n**Do This:** Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them. You can also edit this code with your class in this standalone [\"sandbox\"](https://studio.code.org/levels/27300) level.",
         "name": "Review",
         "progression_name": "Prediction",
         "tips": [
@@ -2997,6 +3063,17 @@
       }
     },
     {
+      "key": "618a5ae5-5e1e-43d8-88eb-020d098569a0",
+      "position": 2,
+      "properties": {
+        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n\n- **Models and Simulations** - a program which replicates or mimics key features of a real world event in order to investigate its behavior without the cost, time, or danger of running an experiment in real life."
+      },
+      "seeding_key": {
+        "activity_section.key": "618a5ae5-5e1e-43d8-88eb-020d098569a0",
+        "lesson_activity.key": "2fc3d41c-1049-4b55-a05e-6ffb855dd477"
+      }
+    },
+    {
       "key": "43607bc0-493d-4d0e-acdb-1b7fbca22db6",
       "position": 1,
       "properties": {
@@ -3065,6 +3142,17 @@
       },
       "seeding_key": {
         "activity_section.key": "32ef3f08-8bce-46c0-927a-44c8e3326db0",
+        "lesson_activity.key": "fce50818-2c1e-421e-aaa4-186f7440bd6f"
+      }
+    },
+    {
+      "key": "1ae3d9aa-0ca7-4f7a-a23b-fb38dedf83c6",
+      "position": 2,
+      "properties": {
+        "description": "####Vocabulary\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n\n- **Event** - An action that causes something to happen.\n\n- **Models and Simulations** - a program which replicates or mimics key features of a real world event in order to investigate its behavior without the cost, time, or danger of running an experiment in real life. \n\n**Do This:** Review the vocabulary, **models and simulations** with students, by building off of the previous lesson. A simulation is a computer model of a process or system."
+      },
+      "seeding_key": {
+        "activity_section.key": "1ae3d9aa-0ca7-4f7a-a23b-fb38dedf83c6",
         "lesson_activity.key": "fce50818-2c1e-421e-aaa4-186f7440bd6f"
       }
     },
@@ -3529,6 +3617,17 @@
       }
     },
     {
+      "key": "6ae46193-0786-411a-a5c3-98e4c4e70f61",
+      "position": 2,
+      "properties": {
+        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n- **Machine Learning** - How computers recognize patterns and make decisions without being explicitly programmed."
+      },
+      "seeding_key": {
+        "activity_section.key": "6ae46193-0786-411a-a5c3-98e4c4e70f61",
+        "lesson_activity.key": "52ef8ce6-46a7-4cad-b913-e3a11dd458fc"
+      }
+    },
+    {
       "key": "b9ec48e3-8ea6-40ce-bd15-70d49034c5d9",
       "position": 1,
       "properties": {
@@ -3708,7 +3807,7 @@
       "key": "c2dac7d5-dae4-4bb2-a61f-0012206950ee",
       "position": 2,
       "properties": {
-        "description": "####Vocabulary:\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Key Vocabulary” slide"
+        "description": "####Vocabulary:\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Key Vocabulary” slide\n"
       },
       "seeding_key": {
         "activity_section.key": "c2dac7d5-dae4-4bb2-a61f-0012206950ee",
@@ -3735,7 +3834,7 @@
       "key": "12ad2422-9939-4f41-9101-ce53f5c10ec0",
       "position": 4,
       "properties": {
-        "description": "This lesson has several new and important words:\n\n - **IP Address** - *Say it with me: I-P Add-ress.*\n\nA number assigned to any item that is connected to the Internet\n\n - **DNS (Domain Name Service)** - *Say it with me: D-N-S.* \n\nThe service that translates URLs to IP addresses\n\n - **URL (Universal Resource Locator)** - *Say it with me: U-R-L.* \n\nAn easy-to-remember address for calling a web page (like www.code.org)\n\n - **Internet** - *Say it with me: In-ter-net.* \n\nA group of computers and servers that are connected to each other\n\n - **Servers** - *Say it with me: Ser-vers.* \n\nComputers that exist only to provide things to others \n\n- **Fiber Optic Cable** - *Say it with me: Fye-ber Op-tic Cay-bl*\n\nA connection that uses light to transmit information\n\n - **Wi-Fi** - *Say it with me: Wye-Fye.* \n\nA wireless method of sending information using radio waves\n\n - **DSL/Cable** - *Say it with me: D-S-L / Cay-bl.*\n\nA method of sending information using telephone or television cables\n\n - **Packets** - *Say it with me: Pack-ets.* \n\nSmall chunks of information that have been carefully formed from larger chunks of information"
+        "description": "This lesson has several new and important words:\n\n\n - **IP Address** - A number assigned to any item that is connected to the Internet\n\n - **DNS (Domain Name Service)** - The service that translates URLs to IP addresses\n\n - **URL (Universal Resource Locator)** - An easy-to-remember address for calling a web page (like www.code.org)\n\n - **Internet** - A group of computers and servers that are connected to each other\n\n - **Servers** - Computers that exist only to provide things to others\n\n - **Fiber Optic Cable** - A connection that uses light to transmit information\n - **Wi-Fi** - A wireless method of sending information using radio waves\n\n - **DSL/Cable** - A method of sending information using telephone or television cables\n\n - **Packets** - Small chunks of information that have been carefully formed from larger chunks of information"
       },
       "seeding_key": {
         "activity_section.key": "12ad2422-9939-4f41-9101-ce53f5c10ec0",
@@ -3901,7 +4000,7 @@
       "key": "4a54784f-3018-4f27-8f7a-053af4275c80",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** _Today, you'll start the final lesson of the unit, in which you will design and code your own project._\n\n_Before you start, what are three skills or qualities that you think will be important as you complete this project?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “End of Course Project” slide\n\n**Goal:** This part of the process is an exploration.  Students will sit down with a stage full of example projects to remix and learn.  Not only will this give students an idea of what is possible, it will also help them see the limitations of the tool.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Day 1 - Explore” slide\n\nGive students a day to play with and remix the projects found on Code Studio. Have them use their journals (or notebook paper) to keep track of thoughts and ideas as they go.\n\nThis activity should be done in the same pairs/groups that will be working on projects together over the next several lessons.\n\nMake sure your class understands that they will be spending the next several weeks working with projects of their own, so they should pay close attention to how these programs were written, as well as the concepts that they use.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 1 - Example Projects” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** _Today, you'll start the final lesson of the unit, in which you will design and code your own project._\n\n- _Before you start, what are three skills or qualities that you think will be important as you complete this project?_\n\n####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n\n- **Define** - Figure out the details of the problems that you are trying to solve.\n- **Prepare** - Research, plan, and acquire materials for the activity you are about to do.\n- **Reflect** - Carefully think back on something with the intention of improving the outcome in the future.\n- **Try** - Attempt to do something.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “End of Course Project” slide\n\n**Goal:** This part of the process is an exploration.  Students will sit down with a stage full of example projects to remix and learn.  Not only will this give students an idea of what is possible, it will also help them see the limitations of the tool.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Day 1 - Explore” slide\n\nGive students a day to play with and remix the projects found on Code Studio. Have them use their journals (or notebook paper) to keep track of thoughts and ideas as they go.\n\nThis activity should be done in the same pairs/groups that will be working on projects together over the next several lessons.\n\nMake sure your class understands that they will be spending the next several weeks working with projects of their own, so they should pay close attention to how these programs were written, as well as the concepts that they use.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 1 - Example Projects” slide",
         "name": "Explore"
       },
       "seeding_key": {

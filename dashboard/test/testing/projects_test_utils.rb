@@ -1,17 +1,17 @@
-require_relative '../../../shared/middleware/helpers/storage_apps'
+require_relative '../../../shared/middleware/helpers/projects'
 require_relative '../../../shared/middleware/helpers/storage_id'
 
-# Tools that help test storage apps
+# Tools that help test projects
 # To be included in any dashboard test that needs them.
-module StorageAppsTestUtils
+module ProjectsTestUtils
   # @param [User] owner - may be nil for anonymous channel
   def with_channel_for(owner)
     with_storage_id_for owner do |storage_id|
-      encrypted_channel_id = StorageApps.new(storage_id).create({projectType: 'applab'}, ip: 123)
-      _, storage_app_id = storage_decrypt_channel_id encrypted_channel_id
-      yield storage_app_id, storage_id
+      encrypted_channel_id = Projects.new(storage_id).create({projectType: 'applab'}, ip: 123)
+      _, project_id = storage_decrypt_channel_id encrypted_channel_id
+      yield project_id, storage_id
     ensure
-      storage_apps.where(id: storage_app_id).delete if storage_app_id
+      projects_table.where(id: project_id).delete if project_id
     end
   end
 
@@ -35,7 +35,7 @@ module StorageAppsTestUtils
     with_channel_for(nil, &block)
   end
 
-  def storage_apps
-    StorageApps.table
+  def projects_table
+    Projects.table
   end
 end
