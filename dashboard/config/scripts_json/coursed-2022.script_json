@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2022-04-05 22:17:57 UTC",
+    "serialized_at": "2022-04-07 21:20:41 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -6035,6 +6035,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2022_lessonextra10a"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -6057,6 +6060,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2022_lessonextra10b"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -6926,6 +6932,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Minecraft_LessonExtra13a"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -6948,6 +6957,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Minecraft_LessonExtra13b"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -7346,6 +7358,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_2022LessonExtra14a"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -7368,6 +7383,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_2022_LessonExtra14b"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -7741,6 +7759,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_2022LessonExtra15a"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -7763,6 +7784,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_2022_LessonExtra15b"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -8061,6 +8085,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_2022LessonExtra16a"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -8083,6 +8110,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_2022_LessonExtra16b"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -10170,15 +10200,46 @@
   ],
   "resources": [
     {
-      "name": "2021 Change Log",
-      "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
-      "key": "2021_change_log",
+      "name": "2022 Change Log",
+      "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview",
+      "key": "2022_change_log",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "2021_change_log"
+        "resource.key": "2022_change_log"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/coursed-2022/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/coursed-2022/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/coursed-2022/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
       }
     },
     {
@@ -10270,18 +10331,6 @@
       }
     },
     {
-      "name": "Course Vocabulary",
-      "url": "https://studio.code.org/s/coursed-2021/vocab",
-      "key": "course_vocabulary",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "course_vocabulary"
-      }
-    },
-    {
       "name": "Cross-Curricular Extension Activities",
       "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
       "key": "cross-curricular_extension_activities",
@@ -10320,24 +10369,10 @@
       }
     },
     {
-      "name": "CSTA Standards Mapping",
-      "url": "https://studio.code.org/s/coursed-2021/standards",
-      "key": "csta_standards_mapping",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "csta_standards_mapping"
-      }
-    },
-    {
       "name": "Curriculum Guide",
-      "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
+      "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview",
       "key": "curriculum_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "curriculum_guide"
@@ -11143,7 +11178,25 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "2021_change_log",
+        "resource.key": "2022_change_log",
+        "script.name": "coursed-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "coursed-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "coursed-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
         "script.name": "coursed-2022"
       }
     },
@@ -11155,19 +11208,7 @@
     },
     {
       "seeding_key": {
-        "resource.key": "course_vocabulary",
-        "script.name": "coursed-2022"
-      }
-    },
-    {
-      "seeding_key": {
         "resource.key": "cross-curricular_extension_activities",
-        "script.name": "coursed-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csta_standards_mapping",
         "script.name": "coursed-2022"
       }
     },
