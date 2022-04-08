@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import PaneHeader, {PaneButton} from '@cdo/apps/templates/PaneHeader';
 import InstructionsTab from '@cdo/apps/templates/instructions/InstructionsTab';
+import BackgroundMusicMuteButton from '@cdo/apps/templates/instructions/BackgroundMusicMuteButton';
 import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
 import InlineAudio from '@cdo/apps/templates/instructions/InlineAudio';
 import {TabType} from './TopInstructions';
@@ -159,15 +160,10 @@ function TopInstructionsHeader(props) {
               />
             )}
           {isBackgroundMusicLevel && (
-            <button
-              type="button"
-              className="uitest-backgroundMusicTab"
-              onClick={handleMuteMusicTabClick}
-              style={{float: 'right'}}
-            >
-              isBackgroundMusicMuted ? {i18n.backgroundMusicOn()} :
-              {i18n.backgroundMusicOff()}
-            </button>
+            <BackgroundMusicMuteButton
+              isMinecraft={isMinecraft}
+              handleMuteMusicTabClick={handleMuteMusicTabClick}
+            />
           )}
         </div>
         {/* For CSF contained levels we use the same collapse function as CSD/CSP*/}
