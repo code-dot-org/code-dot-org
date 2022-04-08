@@ -51,7 +51,7 @@ describe('AddSectionDialog', () => {
     };
   });
 
-  it('available participant types has a length of 1 audience is set to that participant type', () => {
+  it('when available participant types has a length of 1 - audience is set to that participant type', () => {
     shallow(<AddSectionDialog {...defaultProps} />);
     expect(setParticipantType).to.have.been.calledWith('student');
   });
