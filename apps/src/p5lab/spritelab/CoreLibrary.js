@@ -535,13 +535,24 @@ export default class CoreLibrary {
   everyIntervalEvent(inputEvent) {
     if (inputEvent.args.unit === 'seconds') {
       const previousTime = inputEvent.previousTime || 0;
+      const previousModdedTime = inputEvent.previousModdedTime || 0;
       const worldTime = this.getSecondsSinceReset();
       // Repeat every n seconds
       const moddedWorldTime = worldTime % inputEvent.args.n;
-      inputEvent.previousTime = moddedWorldTime;
+      inputEvent.previousTime = worldTime;
+      inputEvent.previousModdedTime = moddedWorldTime;
+
+      // Case where n is 1, so we want to repeat every second, but only the first tick in each second.
+      const singleSecondInterval =
+        inputEvent.args.n === 1 && previousTime !== worldTime;
+
       // There are many ticks per second, but we only want to fire the event once (on the first tick where
       // the time matches the event argument)
-      if (moddedWorldTime === 0 && previousTime !== 0) {
+      // Determine if the current time is on the interval
+      if (
+        (moddedWorldTime === 0 && previousModdedTime !== 0) ||
+        singleSecondInterval
+      ) {
         // Call callback with no extra args
         this.eventLog.push(`everyInterval: ${inputEvent.args.n}`);
         return [{}];
