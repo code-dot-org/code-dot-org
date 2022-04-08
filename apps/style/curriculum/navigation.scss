@@ -22,18 +22,6 @@
     .title {
       padding: 16px 0px;
       display: block;
-      color: $dimgray;
-    }
-    &.open .title {
-      color: $white;
-    }
-
-    .doc-links {
-      display: none;
-    }
-
-    &.open .doc-links {
-      display: block;
     }
 
     .nav-link {
@@ -41,8 +29,12 @@
       padding: 8px;
       border-bottom: 2px solid $lightest_gray;
       overflow-wrap: break-word;
+      display: none;
     }
 
+    &.open .nav-link {
+      display: block;
+    }
     .link {
       color: $light_gray;
     }

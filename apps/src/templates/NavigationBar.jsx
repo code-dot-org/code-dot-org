@@ -33,15 +33,25 @@ export const NavigationCategory = ({
   name,
   color = colorUtil.teal,
   initialIsOpen = false,
+  useColorWhenClosed = false,
   children
 }) => {
   const [isOpen, setIsOpen] = useState(initialIsOpen || false);
+  const backgroundColor =
+    useColorWhenClosed || isOpen ? color : colorUtil.lightest_gray;
+  const textColor =
+    useColorWhenClosed || !isOpen ? colorUtil.dimgray : colorUtil.white;
   return (
     <div
       style={{
-        backgroundColor: isOpen ? color : colorUtil.lightest_gray
+        backgroundColor,
+        color: textColor
       }}
-      className={classNames({category: true, open: isOpen})}
+      className={classNames({
+        category: true,
+        open: isOpen,
+        'transition-color': isOpen && !useColorWhenClosed
+      })}
     >
       <span
         className="title"
@@ -56,20 +66,14 @@ export const NavigationCategory = ({
       >
         {name}
       </span>
-      <div
-        className={classNames({
-          'doc-links': true,
-          open: isOpen
-        })}
-      >
-        {children}
-      </div>
+      {children}
     </div>
   );
 };
 NavigationCategory.propTypes = {
   name: PropTypes.string.isRequired,
   color: PropTypes.string,
+  useColorWhenClosed: PropTypes.bool,
   initialIsOpen: PropTypes.bool,
   children: PropTypes.node
 };

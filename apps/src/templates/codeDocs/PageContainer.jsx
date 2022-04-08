@@ -23,7 +23,7 @@ export default function PageContainer({
         })}
       </h1>
       <div
-        style={{display: 'flex', gap: 10, width: '100%'}}
+        style={{display: 'flex', gap: 25, width: '100%'}}
         className="page-content"
       >
         <NavigationBar initialCategoryKey={currentCategoryKey}>
@@ -33,6 +33,7 @@ export default function PageContainer({
               name={category.name}
               color={category.color}
               initialIsOpen={category.key === currentCategoryKey}
+              useColorWhenClosed
             >
               {category.programmingExpressions.map(doc => (
                 <NavigationItem
