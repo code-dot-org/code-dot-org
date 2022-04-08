@@ -1,0 +1,18 @@
+name 'CSA U4L2-L5_2022'
+title 'Check for Understanding'
+
+wrong 'wrong'
+right 'right'
+wrong 'wrong'
+wrong 'wrong'
+wrong 'wrong'
+
+markdown <<MARKDOWN
+Assume `dessert1` and `dessert2` are object references. The following code segment is run and returns `true`.
+
+```
+dessert1 == dessert2;
+```
+
+What assumptions can be made about `dessert1` and `dessert2`?
+MARKDOWN
