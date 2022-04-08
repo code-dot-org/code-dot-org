@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-pilot-2022-starquilts",
-    "serialized_at": "2022-04-05 14:21:06 UTC",
+    "serialized_at": "2022-04-07 23:50:06 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -144,14 +144,11 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc-starquilts-comments"
-        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc-starquilts-comments"
+          "csc-starquilts-comment"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -159,7 +156,7 @@
         "activity_section.key": "e9af003a-b874-4e0e-849d-5f7f274b9670"
       },
       "level_keys": [
-        "csc-starquilts-comments"
+        "csc-starquilts-comment"
       ]
     },
     {
@@ -168,14 +165,11 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc-starquilts-first-point"
-        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc-starquilts-first-point"
+          "csc-starquilts-row1"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -183,7 +177,7 @@
         "activity_section.key": "e9af003a-b874-4e0e-849d-5f7f274b9670"
       },
       "level_keys": [
-        "csc-starquilts-first-point"
+        "csc-starquilts-row1"
       ]
     },
     {
@@ -192,14 +186,11 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc-starquilts-second-point"
-        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc-starquilts-second-point"
+          "csc-starquilts-row2"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -207,7 +198,7 @@
         "activity_section.key": "e9af003a-b874-4e0e-849d-5f7f274b9670"
       },
       "level_keys": [
-        "csc-starquilts-second-point"
+        "csc-starquilts-row2"
       ]
     },
     {
@@ -220,7 +211,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc-starquilts-third-point"
+          "csc-starquilts-row3"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -228,16 +219,16 @@
         "activity_section.key": "e9af003a-b874-4e0e-849d-5f7f274b9670"
       },
       "level_keys": [
-        "csc-starquilts-third-point"
+        "csc-starquilts-row3"
       ]
     }
   ],
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "csc-starquilts-comments",
+        "level.key": "csc-starquilts-comment",
         "script_level.level_keys": [
-          "csc-starquilts-comments"
+          "csc-starquilts-comment"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -247,9 +238,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc-starquilts-first-point",
+        "level.key": "csc-starquilts-row1",
         "script_level.level_keys": [
-          "csc-starquilts-first-point"
+          "csc-starquilts-row1"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -259,9 +250,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc-starquilts-second-point",
+        "level.key": "csc-starquilts-row2",
         "script_level.level_keys": [
-          "csc-starquilts-second-point"
+          "csc-starquilts-row2"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -271,9 +262,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc-starquilts-third-point",
+        "level.key": "csc-starquilts-row3",
         "script_level.level_keys": [
-          "csc-starquilts-third-point"
+          "csc-starquilts-row3"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
