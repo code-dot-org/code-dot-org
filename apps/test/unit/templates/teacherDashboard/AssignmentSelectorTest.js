@@ -133,10 +133,11 @@ describe('AssignmentSelector', () => {
   it('shows all course offerings in first dropdown with blank option', () => {
     const wrapper = shallow(<AssignmentSelector {...defaultProps} />);
     assert.equal(wrapper.find('select').length, 1);
-    assert.equal(wrapper.find('option').length, 8);
+    assert.equal(wrapper.find('option').length, 9);
 
     assert.deepEqual(wrapper.find('option').map(option => option.text()), [
       '',
+      'Decide later',
       'Computer Science A',
       'Computer Science Discoveries',
       'Course A',
