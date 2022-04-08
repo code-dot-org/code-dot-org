@@ -616,6 +616,7 @@ function newSectionData(id, loginType) {
     ttsAutoplayEnabled: false,
     sharingDisabled: false,
     studentCount: 0,
+    participantType: 'student',
     code: '',
     courseId: null,
     courseOfferingId: null,
