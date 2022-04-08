@@ -10,14 +10,10 @@
   .category {
     padding-left: 10px;
     width: 200px;
-    height: 48px;
+    height: auto;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-
-    &.open {
-      height: auto;
-    }
 
     .title {
       padding: 16px 0px;
