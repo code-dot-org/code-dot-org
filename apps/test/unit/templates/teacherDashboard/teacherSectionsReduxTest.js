@@ -68,8 +68,9 @@ const sections = [
     tts_autoplay_enabled: false,
     pairing_allowed: true,
     sharing_disabled: false,
-    script_id: null,
-    course_id: 29,
+    course_offering_id: 2,
+    course_version_id: 3,
+    unit_id: null,
     createdAt: createdAt,
     studentCount: 10,
     hidden: false,
@@ -87,8 +88,9 @@ const sections = [
     tts_autoplay_enabled: false,
     pairing_allowed: true,
     sharing_disabled: false,
-    script_id: 36,
-    course_id: null,
+    course_offering_id: 1,
+    course_version_id: 1,
+    unit_id: null,
     createdAt: createdAt,
     studentCount: 1,
     hidden: false,
@@ -106,8 +108,9 @@ const sections = [
     tts_autoplay_enabled: false,
     pairing_allowed: false,
     sharing_disabled: false,
-    script_id: 112,
-    course_id: 29,
+    course_offering_id: 3,
+    course_version_id: 5,
+    unit_id: 7,
     createdAt: createdAt,
     studentCount: 0,
     hidden: false,
@@ -598,7 +601,6 @@ describe('teacherSectionsRedux', () => {
         courseOfferingId: null,
         courseVersionId: null,
         unitId: null,
-        scriptId: null,
         hidden: false,
         isAssigned: undefined,
         restrictSection: false
@@ -620,10 +622,10 @@ describe('teacherSectionsRedux', () => {
         ttsAutoplayEnabled: false,
         pairingAllowed: true,
         sharingDisabled: false,
-        scriptId: 36,
-        courseId: null,
-        courseOfferingId: undefined,
-        courseVersionId: undefined,
+        courseOfferingId: 1,
+        courseVersionId: 1,
+        unitId: null,
+        courseId: undefined,
         createdAt: createdAt,
         studentCount: 1,
         hidden: false,
@@ -631,8 +633,7 @@ describe('teacherSectionsRedux', () => {
         restrictSection: false,
         postMilestoneDisabled: false,
         codeReviewExpiresAt: null,
-        isAssignedCSA: undefined,
-        unitId: undefined
+        isAssignedCSA: undefined
       });
     });
   });
@@ -708,11 +709,11 @@ describe('teacherSectionsRedux', () => {
       );
       state = reducer(
         state,
-        editSectionProperties({scriptId: 1, lessonExtras: false})
+        editSectionProperties({unitId: 1, lessonExtras: false})
       );
       expect(state.sectionBeingEdited.lessonExtras).to.equal(false);
 
-      state = reducer(state, editSectionProperties({scriptId: 36}));
+      state = reducer(state, editSectionProperties({unitId: 36}));
       expect(state.sectionBeingEdited.lessonExtras).to.equal(true);
     });
 
@@ -724,23 +725,23 @@ describe('teacherSectionsRedux', () => {
       );
       state = reducer(
         state,
-        editSectionProperties({scriptId: 1, lessonExtras: false})
+        editSectionProperties({unitId: 1, lessonExtras: false})
       );
       expect(state.sectionBeingEdited.lessonExtras).to.equal(false);
 
       state = reducer(
         state,
-        editSectionProperties({scriptId: 36, lessonExtras: true})
+        editSectionProperties({unitId: 36, lessonExtras: true})
       );
       expect(state.sectionBeingEdited.lessonExtras).to.equal(true);
     });
 
     it('when updating script assignment for a section, ttsAutoplayEnabled defaults to false if no value provided', () => {
       let state = editingNewSectionState;
-      state = reducer(state, editSectionProperties({scriptId: 2}));
+      state = reducer(state, editSectionProperties({unitId: 2}));
       expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);
 
-      state = reducer(state, editSectionProperties({scriptId: 37}));
+      state = reducer(state, editSectionProperties({unitId: 37}));
       expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);
     });
 
@@ -748,13 +749,13 @@ describe('teacherSectionsRedux', () => {
       let state = editingNewSectionState;
       state = reducer(
         state,
-        editSectionProperties({scriptId: 2, ttsAutoplayEnabled: true})
+        editSectionProperties({unitId: 2, ttsAutoplayEnabled: true})
       );
       expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(true);
 
       state = reducer(
         state,
-        editSectionProperties({scriptId: 37, ttsAutoplayEnabled: false})
+        editSectionProperties({unitId: 37, ttsAutoplayEnabled: false})
       );
       expect(state.sectionBeingEdited.ttsAutoplayEnabled).to.equal(false);
     });
@@ -784,15 +785,13 @@ describe('teacherSectionsRedux', () => {
       pairing_allowed: true,
       student_count: 0,
       code: 'BCDFGH',
-      courseId: null,
-      courseOfferingId: undefined,
-      courseVersionId: undefined,
-      scriptId: null,
+      courseOfferingId: null,
+      courseVersionId: null,
+      unitId: null,
       createdAt: createdAt,
       hidden: false,
       restrict_section: false,
-      post_milestone_disabled: false,
-      unitId: undefined
+      post_milestone_disabled: false
     };
 
     function successResponse(customProps = {}) {
@@ -938,11 +937,10 @@ describe('teacherSectionsRedux', () => {
           sharingDisabled: undefined,
           studentCount: undefined,
           code: 'BCDFGH',
-          courseId: undefined,
           courseOfferingId: undefined,
           courseVersionId: undefined,
           unitId: undefined,
-          scriptId: undefined,
+          courseId: undefined,
           createdAt: createdAt,
           hidden: false,
           isAssigned: undefined,
@@ -1002,7 +1000,8 @@ describe('teacherSectionsRedux', () => {
       student_count: 0,
       code: 'BCDFGH',
       course_id: null,
-      script_id: null,
+      course_offering_id: null,
+      course_version_id: null,
       hidden: false,
       restrict_section: false,
       post_milestone_disabled: false
@@ -1295,7 +1294,7 @@ describe('teacherSectionsRedux', () => {
 
     it('sets students from server responses', () => {
       const promise = store.dispatch(asyncLoadSectionData('id'));
-      expect(state().validAssignments).to.deep.equal({});
+      expect(state().courseOfferings).to.deep.equal({});
 
       expect(server.requests).to.have.length(6);
       server.respondWith('GET', '/dashboardapi/sections', successResponse());
@@ -1378,17 +1377,6 @@ describe('teacherSectionsRedux', () => {
       );
     });
 
-    it('maps from a script object to a script_id', () => {
-      const sectionWithoutScript = sectionFromServerSection(serverSection);
-      assert.strictEqual(sectionWithoutScript.scriptId, null);
-
-      const sectionWithScript = sectionFromServerSection({
-        ...serverSection,
-        script_id: 1
-      });
-      assert.strictEqual(sectionWithScript.scriptId, 1);
-    });
-
     it('sets student count', () => {
       const section = sectionFromServerSection(serverSection);
       assert.equal(section.studentCount, 10);
@@ -1398,7 +1386,7 @@ describe('teacherSectionsRedux', () => {
   describe('assignmentNames/assignmentPaths', () => {
     const stateWithAssigns = reducer(
       initialState,
-      setValidAssignments(validCourses, validScripts)
+      setCourseOfferings(courseOfferings)
     );
     const stateWithSections = reducer(stateWithAssigns, setSections(sections));
     const stateWithUnassignedSection = reducer(stateWithSections, {
@@ -1406,40 +1394,45 @@ describe('teacherSectionsRedux', () => {
       sectionId: '12',
       serverSection: {
         ...sections[1],
-        course_id: null,
-        script_id: null
+        course_offering_id: null,
+        course_version_id: null,
+        unit_id: null
       }
     });
-    const stateWithInvalidScriptAssignment = reducer(stateWithSections, {
+    const stateWithInvalidUnitAssignment = reducer(stateWithSections, {
       type: EDIT_SECTION_SUCCESS,
       sectionId: '12',
       serverSection: {
         ...sections[1],
-        course_id: null,
-        script_id: 35
+        course_offering_id: 2,
+        course_version_id: 3,
+        unit_id: 9999
       }
     });
-    const stateWithInvalidCourseAssignment = reducer(stateWithSections, {
-      type: EDIT_SECTION_SUCCESS,
-      sectionId: '12',
-      serverSection: {
-        ...sections[1],
-        course_id: 9999,
-        script_id: null
+    const stateWithInvalidCourseOfferingAssignment = reducer(
+      stateWithSections,
+      {
+        type: EDIT_SECTION_SUCCESS,
+        sectionId: '12',
+        serverSection: {
+          ...sections[1],
+          course_offering_id: 9999,
+          course_version_id: 9999,
+          unit_id: null
+        }
       }
-    });
+    );
 
     const assignedSection = stateWithUnassignedSection.sections['11'];
     const unassignedSection = stateWithUnassignedSection.sections['12'];
     const assignedSectionWithUnit = stateWithUnassignedSection.sections['307'];
-    const invalidScriptSection =
-      stateWithInvalidScriptAssignment.sections['12'];
+    const invalidScriptSection = stateWithInvalidUnitAssignment.sections['12'];
     const invalidCourseSection =
-      stateWithInvalidCourseAssignment.sections['12'];
+      stateWithInvalidCourseOfferingAssignment.sections['12'];
 
     it('assignmentNames returns the name if the section is assigned a course/script', () => {
       const names = assignmentNames(
-        stateWithUnassignedSection.validAssignments,
+        stateWithUnassignedSection.courseOfferings,
         assignedSection
       );
       assert.deepEqual(names, ['CS Discoveries 2017']);
@@ -1447,31 +1440,31 @@ describe('teacherSectionsRedux', () => {
 
     it('assignmentNames returns the names of course and script if assigned both', () => {
       const names = assignmentNames(
-        stateWithUnassignedSection.validAssignments,
+        stateWithUnassignedSection.courseOfferings,
         assignedSectionWithUnit
       );
-      assert.deepEqual(names, ['CS Discoveries 2017', 'Unit 1: The Internet']);
+      assert.deepEqual(names, ['CS A', 'Unit 1']);
     });
 
     it('assignmentName returns empty array if unassigned', () => {
       const names = assignmentNames(
-        stateWithUnassignedSection.validAssignments,
+        stateWithUnassignedSection.courseOfferings,
         unassignedSection
       );
       assert.deepEqual(names, []);
     });
 
-    it('assignmentName returns empty array if assigned script is not a valid assignment', () => {
+    it('assignmentName returns just the course if assigned unit is not a valid assignment', () => {
       const names = assignmentNames(
-        stateWithInvalidScriptAssignment.validAssignments,
+        stateWithInvalidUnitAssignment.courseOfferings,
         invalidScriptSection
       );
-      assert.deepEqual(names, []);
+      assert.deepEqual(names, ['CS Discoveries 2017']);
     });
 
     it('assignmentName returns empty array if assigned course is not a valid assignment', () => {
       const names = assignmentNames(
-        stateWithInvalidCourseAssignment.validAssignments,
+        stateWithInvalidCourseOfferingAssignment.courseOfferings,
         invalidCourseSection
       );
       assert.deepEqual(names, []);
@@ -1479,7 +1472,7 @@ describe('teacherSectionsRedux', () => {
 
     it('assignmentPaths returns the path if the section is assigned a course/script', () => {
       const paths = assignmentPaths(
-        stateWithUnassignedSection.validAssignments,
+        stateWithUnassignedSection.courseOfferings,
         assignedSection
       );
       assert.deepEqual(paths, ['/courses/csd-2017']);
@@ -1487,10 +1480,10 @@ describe('teacherSectionsRedux', () => {
 
     it('assignmentPaths returns the paths of course and script if assigned both', () => {
       const paths = assignmentPaths(
-        stateWithUnassignedSection.validAssignments,
+        stateWithUnassignedSection.courseOfferings,
         assignedSectionWithUnit
       );
-      assert.deepEqual(paths, ['/courses/csd-2017', '/s/csp1-2017']);
+      assert.deepEqual(paths, ['/courses/csa-2022', '/s/csa1-2022']);
     });
 
     it('assignmentPaths returns empty array if unassigned', () => {
@@ -1503,15 +1496,15 @@ describe('teacherSectionsRedux', () => {
 
     it('assignmentPaths returns empty array if assigned script is not a valid assignment', () => {
       const paths = assignmentPaths(
-        stateWithInvalidScriptAssignment,
+        stateWithInvalidUnitAssignment,
         invalidScriptSection
       );
       assert.deepEqual(paths, []);
     });
 
-    it('assignmentPaths returns empty array if assigned course is not a valid assignment', () => {
+    it('assignmentPaths returns empty array if assigned course offering and course version is not a valid assignment', () => {
       const paths = assignmentPaths(
-        stateWithInvalidCourseAssignment,
+        stateWithInvalidCourseOfferingAssignment,
         invalidCourseSection
       );
       assert.deepEqual(paths, []);
@@ -2035,10 +2028,7 @@ describe('teacherSectionsRedux', () => {
   describe('getSectionRows', () => {
     it('returns appropriate section data', () => {
       const sectionState = reducer(initialState, setSections(sections));
-      const state = reducer(
-        sectionState,
-        setValidAssignments(validCourses, validScripts)
-      );
+      const state = reducer(sectionState, setCourseOfferings(courseOfferings));
 
       const data = getSectionRows({teacherSections: state}, [11, 12]);
       const expected = [
@@ -2063,8 +2053,8 @@ describe('teacherSectionsRedux', () => {
           grade: '11',
           providerManaged: false,
           hidden: false,
-          assignmentNames: ['Course 3'],
-          assignmentPaths: ['/s/course3']
+          assignmentNames: ['Course A'],
+          assignmentPaths: ['/s/coursea-2017']
         }
       ];
       assert.deepEqual(data, expected);
