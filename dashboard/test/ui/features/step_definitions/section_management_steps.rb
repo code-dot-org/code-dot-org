@@ -1,8 +1,7 @@
 # Helper steps for creating and managing sections
 
 And /^I create a new student section( and go home)?$/ do |home|
-  # TODO(dani): Once end point is set up to take participant type param update this to participant_type: student
-  section = JSON.parse(browser_request(url: '/dashboardapi/sections', method: 'POST', body: {login_type: 'email'}))
+  section = JSON.parse(browser_request(url: '/dashboardapi/sections', method: 'POST', body: {login_type: 'email', participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student}))
   section_code = section['code']
   @section_url = "http://studio.code.org/join/#{section_code}"
   navigate_to replace_hostname('http://studio.code.org') if home
@@ -79,7 +78,7 @@ And(/^I create a(n authorized)? teacher-associated( under-13)? student named "([
   # enroll in a plc course as a way of becoming an authorized teacher
   steps 'And I am enrolled in a plc course' if authorized
 
-  section = JSON.parse(browser_request(url: '/dashboardapi/sections', method: 'POST', body: {login_type: 'email'}))
+  section = JSON.parse(browser_request(url: '/dashboardapi/sections', method: 'POST', body: {login_type: 'email', participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student}))
   section_code = section['code']
   @section_url = "http://studio.code.org/join/#{section_code}"
   create_user(name, url: "/join/#{section_code}", code: 200, age: under_13 ? '10' : '16')

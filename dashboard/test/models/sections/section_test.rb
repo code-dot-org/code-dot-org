@@ -7,7 +7,7 @@ class SectionTest < ActiveSupport::TestCase
     @teacher = create :teacher
     @section = create :section, teacher: @teacher
 
-    @default_attrs = {user: @teacher, name: 'test-section'}
+    @default_attrs = {user: @teacher, name: 'test-section', participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student}
   end
 
   test "sections are soft-deleted" do
