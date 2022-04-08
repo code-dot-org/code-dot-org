@@ -46,23 +46,18 @@ export default class StartNewProject extends React.Component {
       ? DEFAULT_PROJECT_TYPES_ADVANCED
       : DEFAULT_PROJECT_TYPES_BASIC;
 
-    const OPEN_ENDED_PROJECT_TYPES = [
-      'spritelab',
-      'dance',
-      'poetry',
-      'thebadguys'
-    ];
+    const OPEN_ENDED = ['spritelab', 'dance', 'poetry', 'thebadguys'];
 
-    const DRAWING_PROJECT_TYPES = ['artist', 'frozen'];
+    const DRAWING = ['artist', 'frozen'];
 
-    const MINECRAFT_PROJECT_TYPES = [
+    const MINECRAFT = [
       'minecraft_adventurer',
       'minecraft_designer',
       'minecraft_hero',
       'minecraft_aquatic'
     ];
 
-    const GAMES_AND_EVENTS_PROJECT_TYPES = [
+    const GAMES_AND_EVENTS = [
       'flappy',
       'starwarsblocks',
       'bounce',
@@ -70,13 +65,13 @@ export default class StartNewProject extends React.Component {
       'basketball'
     ];
 
-    const PLAYLAB_PROJECT_TYPES = ['playlab', 'infinity', 'gumball', 'iceage'];
+    const PLAYLAB = ['playlab', 'infinity', 'gumball', 'iceage'];
 
-    const ADVANCED_PROJECT_TYPES = ['applab', 'gamelab', 'weblab', 'starwars'];
+    const ADVANCED_TOOLS = ['applab', 'gamelab', 'weblab', 'starwars'];
 
-    const PREREADER_PROJECT_TYPES = ['playlab_k1', 'artist_k1'];
+    const PREREADER = ['playlab_k1', 'artist_k1'];
 
-    const MATH_PROJECT_TYPES = ['calc', 'eval'];
+    const MATH = ['calc', 'eval'];
 
     return (
       <div>
@@ -101,38 +96,38 @@ export default class StartNewProject extends React.Component {
           <div>
             <NewProjectButtons
               description={i18n.projectGroupOpenEnded()}
-              projectTypes={OPEN_ENDED_PROJECT_TYPES}
+              projectTypes={OPEN_ENDED}
             />
             <NewProjectButtons
               description={i18n.projectGroupArtist()}
-              projectTypes={DRAWING_PROJECT_TYPES}
+              projectTypes={DRAWING}
             />
             <NewProjectButtons
               description={i18n.projectGroupMinecraft()}
-              projectTypes={MINECRAFT_PROJECT_TYPES}
+              projectTypes={MINECRAFT}
             />
             <NewProjectButtons
               description={i18n.projectGroupEvents()}
-              projectTypes={GAMES_AND_EVENTS_PROJECT_TYPES}
+              projectTypes={GAMES_AND_EVENTS}
             />
             {canViewAdvancedTools && (
               <NewProjectButtons
                 description={i18n.projectGroupAdvancedTools()}
-                projectTypes={ADVANCED_PROJECT_TYPES}
+                projectTypes={ADVANCED_TOOLS}
               />
             )}
             <NewProjectButtons
               description={i18n.projectGroupPlaylab()}
-              projectTypes={PLAYLAB_PROJECT_TYPES}
+              projectTypes={PLAYLAB}
             />
             <NewProjectButtons
               description={i18n.projectGroupPreReader()}
-              projectTypes={PREREADER_PROJECT_TYPES}
+              projectTypes={PREREADER}
             />
             {canViewAdvancedTools && (
               <NewProjectButtons
                 description={i18n.projectGroupMath()}
-                projectTypes={MATH_PROJECT_TYPES}
+                projectTypes={MATH}
               />
             )}
           </div>
