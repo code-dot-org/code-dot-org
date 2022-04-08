@@ -77,7 +77,7 @@
             {
               "type": "matrix",
               "name": "cs_community_important",
-              "title": "How much to you agree or disagree with the following statements about the leaders and community members in your area? (Check one in each row.) \n",
+              "title": "How much do you agree or disagree with the following statements about the leaders and community members in your area? (Check one in each row.) \n",
               "columns": [
                 {
                   "value": "0",
