@@ -50,7 +50,6 @@ const importUrlByProvider = {
 const SET_COURSE_OFFERINGS = 'teacherDashboard/SET_COURSE_OFFERINGS';
 const SET_AVAILABLE_PARTICIPANT_TYPES =
   'teacherDashboard/SET_AVAILABLE_PARTICIPANT_TYPES';
-const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
 const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
 const SET_PAGE_TYPE = 'teacherDashboard/SET_PAGE_TYPE';
 
@@ -120,11 +119,6 @@ export const setAuthProviders = providers => ({
 export const setRosterProvider = rosterProvider => ({
   type: SET_ROSTER_PROVIDER,
   rosterProvider
-});
-export const setValidAssignments = (validCourses, validScripts) => ({
-  type: SET_VALID_ASSIGNMENTS,
-  validCourses,
-  validScripts
 });
 export const setCourseOfferings = courseOfferings => ({
   type: SET_COURSE_OFFERINGS,
@@ -404,8 +398,6 @@ export const asyncLoadSectionData = id => dispatch => {
   dispatch({type: ASYNC_LOAD_BEGIN});
   let apis = [
     '/dashboardapi/sections',
-    `/dashboardapi/courses`,
-    '/dashboardapi/sections/valid_scripts',
     '/dashboardapi/sections/valid_course_offerings',
     '/dashboardapi/sections/available_participant_types'
   ];
@@ -417,13 +409,10 @@ export const asyncLoadSectionData = id => dispatch => {
     .then(
       ([
         sections,
-        validCourses,
-        validScripts,
         validCourseOfferings,
         availableParticipantTypes,
         students
       ]) => {
-        dispatch(setValidAssignments(validCourses, validScripts));
         dispatch(setCourseOfferings(validCourseOfferings));
         dispatch(
           setAvailableParticipantTypes(
@@ -557,12 +546,6 @@ const initialState = {
   providers: [],
   sectionIds: [],
   selectedSectionId: NO_SECTION,
-  // A map from assignmentId to assignment (see assignmentShape PropType).
-  validAssignments: {},
-  // Array of assignment families, to populate the assignment family dropdown
-  // with options like "CSD", "Course A", or "Frozen". See the
-  // assignmentFamilyShape PropType.
-  assignmentFamilies: [],
   // Array of course offerings, to populate the assignment dropdown
   // with options like "CSD", "Course A", or "Frozen". See the
   // assignmentCourseOfferingShape PropType.
@@ -626,15 +609,6 @@ function newSectionData(id, loginType) {
   };
 }
 
-// Fields to copy from the assignmentInfo when creating an assignmentFamily.
-export const assignmentFamilyFields = [
-  'category_priority',
-  'category',
-  'position',
-  'assignment_family_title',
-  'assignment_family_name'
-];
-
 // Maps authentication provider to OAuthSectionTypes for ease of comparison
 // (i.e., Google auth is 'google_oauth2' but the section type is 'google_classroom').
 export const mapProviderToSectionType = provider => {
@@ -667,81 +641,6 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       courseOfferings: action.courseOfferings
-    };
-  }
-
-  if (action.type === SET_VALID_ASSIGNMENTS) {
-    const validAssignments = {};
-    const assignmentFamilyMap = {};
-
-    // Array of assignment ids of units which belong to any valid courses.
-    let secondaryAssignmentIds = [];
-
-    // NOTE: We depend elsewhere on the order of our keys in validAssignments
-    action.validCourses.forEach(course => {
-      const assignId = assignmentId(course.id, null);
-      const scriptAssignIds = (course.script_ids || []).map(scriptId =>
-        assignmentId(null, scriptId)
-      );
-      validAssignments[assignId] = {
-        ..._.omit(course, 'script_ids'),
-        courseId: course.id,
-        scriptId: null,
-        scriptAssignIds,
-        assignId,
-        path: `/courses/${course.script_name}`
-      };
-
-      // Make sure each assignment family is only added once.
-      const familyName = course.assignment_family_name;
-      if (familyName && !assignmentFamilyMap[familyName]) {
-        assignmentFamilyMap[familyName] = _.pick(
-          course,
-          assignmentFamilyFields
-        );
-      }
-
-      secondaryAssignmentIds.push(...scriptAssignIds);
-    });
-    secondaryAssignmentIds = _.uniq(secondaryAssignmentIds);
-
-    action.validScripts.forEach(unit => {
-      const assignId = assignmentId(null, unit.id);
-
-      // Put each unit in its own assignment family with the default version
-      // year, unless those values were provided by the server.
-      const assignmentFamilyName =
-        unit.assignment_family_name || unit.script_name;
-      const assignmentFamilyTitle = unit.assignment_family_title || unit.name;
-      validAssignments[assignId] = {
-        ...unit,
-        courseId: null,
-        scriptId: unit.id,
-        assignId,
-        path: `/s/${unit.script_name}`,
-        assignment_family_name: assignmentFamilyName,
-        version_year: unit.version_year,
-        version_title: unit.version_title
-      };
-
-      // Do not add assignment families for units belonging to courses. To assign
-      // them, one must first select the corresponding course from the assignment
-      // family dropdown, and then select the unit from the secondary dropdown.
-      if (!secondaryAssignmentIds.includes(assignId)) {
-        if (!assignmentFamilyMap[assignmentFamilyName]) {
-          assignmentFamilyMap[assignmentFamilyName] = {
-            ..._.pick(unit, assignmentFamilyFields),
-            assignment_family_title: assignmentFamilyTitle,
-            assignment_family_name: assignmentFamilyName
-          };
-        }
-      }
-    });
-
-    return {
-      ...state,
-      validAssignments,
-      assignmentFamilies: _.values(assignmentFamilyMap)
     };
   }
 
@@ -1132,8 +1031,6 @@ export default function teacherSections(state = initialState, action) {
 }
 
 // Helpers and Selectors
-
-export const assignmentId = (courseId, scriptId) => `${courseId}_${scriptId}`;
 
 function getRoot(state) {
   return state.teacherSections; // Global knowledge eww.

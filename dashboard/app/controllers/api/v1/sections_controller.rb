@@ -2,7 +2,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
   before_action :get_course_and_unit, only: [:create, :update]
-  load_and_authorize_resource except: [:join, :leave, :membership, :valid_scripts, :valid_course_offerings, :create, :update, :require_captcha]
+  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :update, :require_captcha]
 
   skip_before_action :verify_authenticity_token, only: [:update_sharing_disabled, :update]
 
@@ -161,14 +161,6 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   def membership
     return head :forbidden unless current_user
     render json: current_user.sections_as_student, each_serializer: Api::V1::SectionNameAndIdSerializer
-  end
-
-  # GET /api/v1/sections/valid_scripts
-  def valid_scripts
-    return head :forbidden unless current_user
-
-    scripts = Script.valid_scripts(current_user).map(&:assignable_info)
-    render json: scripts
   end
 
   # GET /api/v1/sections/valid_course_offerings

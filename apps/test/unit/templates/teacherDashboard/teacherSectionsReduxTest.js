@@ -11,7 +11,6 @@ import reducer, {
   setAuthProviders,
   setRosterProvider,
   setCourseOfferings,
-  setValidAssignments,
   setSections,
   selectSection,
   removeSection,
@@ -21,7 +20,6 @@ import reducer, {
   finishEditingSection,
   editSectionLoginType,
   asyncLoadSectionData,
-  assignmentId,
   assignmentNames,
   assignmentPaths,
   sectionFromServerSection,
@@ -119,134 +117,6 @@ const sections = [
   }
 ];
 
-const validCourses = [
-  {
-    id: 29,
-    name: 'CS Discoveries 2017',
-    script_name: 'csd-2017',
-    category: 'Full Courses',
-    position: 1,
-    category_priority: 0,
-    assignment_family_title: 'CS Discoveries',
-    assignment_family_name: 'csd',
-    version_year: '2017'
-  },
-  {
-    id: 30,
-    name: 'CS Principles 2017',
-    script_name: 'csp-2017',
-    category: 'Full Courses',
-    position: 0,
-    category_priority: 0,
-    script_ids: [112, 113],
-    assignment_family_title: 'CS Principles',
-    assignment_family_name: 'csp',
-    version_year: '2017'
-  },
-  {
-    id: 31,
-    name: 'CS X 2017',
-    script_name: 'csx-2017',
-    category: 'Full Courses',
-    position: 2,
-    category_priority: 0,
-    assignment_family_title: 'CS X',
-    version_year: '2017'
-  }
-];
-
-const validScripts = [
-  {
-    id: 1,
-    name: 'Accelerated Course',
-    script_name: '20-hour',
-    category: 'CS Fundamentals International',
-    position: 0,
-    category_priority: 3
-  },
-  {
-    id: 2,
-    name: 'Hour of Code *',
-    script_name: 'Hour of Code',
-    category: 'Hour of Code',
-    position: 1,
-    category_priority: 2
-  },
-  {
-    id: 3,
-    name: 'edit-code *',
-    script_name: 'edit-code',
-    category: 'other',
-    position: null,
-    category_priority: 15
-  },
-  {
-    id: 4,
-    name: 'events *',
-    script_name: 'events',
-    category: 'other',
-    position: null,
-    category_priority: 15
-  },
-  {
-    id: 36,
-    name: 'Course 3',
-    script_name: 'course3',
-    category: 'other',
-    position: null,
-    category_priority: 3,
-    lesson_extras_available: true
-  },
-  {
-    id: 112,
-    name: 'Unit 1: The Internet',
-    script_name: 'csp1-2017',
-    category: "'16-'17 CS Principles",
-    position: 0,
-    category_priority: 7
-  },
-  {
-    id: 113,
-    name: 'Unit 2: Digital Information',
-    script_name: 'csp2-2017',
-    category: "'16-'17 CS Principles",
-    position: 1,
-    category_priority: 7
-  },
-  {
-    id: 208,
-    name: 'Course A (2018)',
-    script_name: 'coursea-2018',
-    category: 'CS Fundamentals (2018)',
-    position: 0,
-    category_priority: 4,
-    assignment_family_title: 'Course A',
-    assignment_family_name: 'coursea',
-    version_year: '2018'
-  },
-  {
-    id: 209,
-    name: 'Course A (2017)',
-    script_name: 'coursea-2017',
-    category: 'CS Fundamentals (2017)',
-    position: 0,
-    category_priority: 4,
-    assignment_family_title: 'Course A',
-    assignment_family_name: 'coursea',
-    version_year: '2017',
-    is_stable: true
-  },
-  {
-    id: 37,
-    name: 'Express Course',
-    script_name: 'express-2018',
-    category: 'other',
-    position: null,
-    category_priority: 3,
-    lesson_extras_available: true
-  }
-];
-
 const students = [
   {
     id: 1,
@@ -310,162 +180,9 @@ describe('teacherSectionsRedux', () => {
     });
   });
 
-  describe('setValidAssignments', () => {
-    const action = setValidAssignments(validCourses, validScripts);
-    const nextState = reducer(initialState, action);
-
-    it('combines validCourse and scripts into an object keyed by assignId', () => {
-      assert.equal(
-        Object.keys(nextState.validAssignments).length,
-        validCourses.length + validScripts.length
-      );
-    });
-
-    it('adds courseId/scriptId/assignId to courses', () => {
-      const assignId = assignmentId(validCourses[0].id, null);
-      assert.strictEqual(nextState.validAssignments[assignId].courseId, 29);
-      assert.strictEqual(nextState.validAssignments[assignId].scriptId, null);
-      assert.strictEqual(
-        nextState.validAssignments[assignId].assignId,
-        assignId
-      );
-    });
-
-    it('adds courseId/scriptId/assignId to scripts', () => {
-      const assignId = assignmentId(null, validScripts[0].id);
-      assert.strictEqual(nextState.validAssignments[assignId].courseId, null);
-      assert.strictEqual(nextState.validAssignments[assignId].scriptId, 1);
-      assert.strictEqual(
-        nextState.validAssignments[assignId].assignId,
-        assignId
-      );
-    });
-
-    it('adds path to courses', () => {
-      const assignId = assignmentId(validCourses[0].id, null);
-      assert.strictEqual(
-        nextState.validAssignments[assignId].path,
-        '/courses/csd-2017'
-      );
-    });
-
-    it('adds path to scripts', () => {
-      const assignId = assignmentId(null, validScripts[0].id);
-      assert.strictEqual(
-        nextState.validAssignments[assignId].path,
-        '/s/20-hour'
-      );
-    });
-
-    it('adds scriptAssignIds for a course', () => {
-      const assignId = assignmentId(validCourses[1].id, null);
-      assert.deepEqual(nextState.validAssignments[assignId].scriptAssignIds, [
-        assignmentId(null, 112),
-        assignmentId(null, 113)
-      ]);
-    });
-
-    it('adds assignmentFamily for a course', () => {
-      const assignmentFamilies = nextState.assignmentFamilies;
-      ['csd', 'csp'].forEach(courseName => {
-        assert(
-          assignmentFamilies.find(
-            af => af.assignment_family_name === courseName
-          )
-        );
-      });
-    });
-
-    it('infer assignment family and version for a script not in a course', () => {
-      const {assignmentFamilies, validAssignments} = nextState;
-      const courselessScript = validScripts[0];
-      assert(
-        assignmentFamilies.find(
-          af => af.assignment_family_name === courselessScript.script_name
-        )
-      );
-
-      const assignId = assignmentId(null, courselessScript.id);
-      const assignment = validAssignments[assignId];
-      assert.equal('Accelerated Course', assignment.name);
-      assert.equal('20-hour', assignment.assignment_family_name);
-      assert.equal(undefined, assignment.version_year);
-    });
-
-    it('sets assignment family, version and is_stable from validScripts for a script not in a course', () => {
-      const {assignmentFamilies, validAssignments} = nextState;
-      assert(
-        assignmentFamilies.find(af => af.assignment_family_name === 'coursea')
-      );
-
-      let assignId = assignmentId(null, validScripts[7].id);
-      let assignment = validAssignments[assignId];
-      assert.equal('Course A (2018)', assignment.name);
-      assert.equal('coursea', assignment.assignment_family_name);
-      assert.equal('2018', assignment.version_year);
-      assert(!assignment.is_stable);
-
-      assignId = assignmentId(null, validScripts[8].id);
-      assignment = validAssignments[assignId];
-      assert.equal('Course A (2017)', assignment.name);
-      assert.equal('coursea', assignment.assignment_family_name);
-      assert.equal('2017', assignment.version_year);
-      assert.equal(true, assignment.is_stable);
-    });
-
-    it('does not add assignmentFamily for a script that is in a course', () => {
-      const assignmentFamilies = nextState.assignmentFamilies;
-      const scriptInCourse = validScripts[4];
-      assert(
-        assignmentFamilies.find(
-          af => af.assignment_family_name === scriptInCourse.script_name
-        )
-      );
-    });
-
-    it('only adds assignmentFamily for courses with family name', () => {
-      assert(
-        nextState.assignmentFamilies.find(
-          af => af.assignment_family_title === 'CS Principles'
-        )
-      );
-      assert.isUndefined(
-        nextState.assignmentFamilies.find(
-          af => af.assignment_family_title === 'CS X'
-        )
-      );
-    });
-
-    it('adds assignmentFamily for standalone unit with non-2017 version year', () => {
-      const scripts = validScripts.concat([
-        {
-          id: 37,
-          name: 'CS Et Cetera 2021',
-          script_name: 'csetc-2021',
-          category: 'other',
-          position: null,
-          category_priority: 3,
-          assignment_family_title: 'CS Et Cetera',
-          assignment_family_name: 'csetc',
-          version_year: '2021'
-        }
-      ]);
-
-      const action = setValidAssignments(validCourses, scripts);
-      const nextState = reducer(initialState, action);
-
-      assert(
-        nextState.assignmentFamilies.find(
-          af => af.assignment_family_title === 'CS Et Cetera'
-        )
-      );
-    });
-  });
-
   describe('setSections', () => {
     const startState = reducer(
       initialState,
-      setValidAssignments(validCourses, validScripts),
       setCourseOfferings(courseOfferings)
     );
 
@@ -704,7 +421,6 @@ describe('teacherSectionsRedux', () => {
     it('switching script assignment updates lesson extras value to default value if no lesson extras value passed', () => {
       let state = reducer(
         editingNewSectionState,
-        setValidAssignments(validCourses, validScripts),
         setCourseOfferings(courseOfferings)
       );
       state = reducer(
@@ -720,7 +436,6 @@ describe('teacherSectionsRedux', () => {
     it('switching script assignment and passing lesson extras value results in lesson extras being set to the passed value', () => {
       let state = reducer(
         editingNewSectionState,
-        setValidAssignments(validCourses, validScripts),
         setCourseOfferings(courseOfferings)
       );
       state = reducer(
@@ -1109,14 +824,8 @@ describe('teacherSectionsRedux', () => {
     it('sets asyncLoadComplete to true after success responses', () => {
       const promise = store.dispatch(asyncLoadSectionData('id'));
 
-      expect(server.requests).to.have.length(6);
+      expect(server.requests).to.have.length(4);
       server.respondWith('GET', '/dashboardapi/sections', successResponse());
-      server.respondWith('GET', '/dashboardapi/courses', successResponse());
-      server.respondWith(
-        'GET',
-        '/dashboardapi/sections/valid_scripts',
-        successResponse()
-      );
       server.respondWith(
         'GET',
         '/dashboardapi/sections/valid_course_offerings',
@@ -1160,17 +869,11 @@ describe('teacherSectionsRedux', () => {
       const promise = store.dispatch(asyncLoadSectionData());
       expect(state().sections).to.deep.equal({});
 
-      expect(server.requests).to.have.length(5);
+      expect(server.requests).to.have.length(3);
       server.respondWith(
         'GET',
         '/dashboardapi/sections',
         successResponse(sections)
-      );
-      server.respondWith('GET', '/dashboardapi/courses', successResponse());
-      server.respondWith(
-        'GET',
-        '/dashboardapi/sections/valid_scripts',
-        successResponse()
       );
       server.respondWith(
         'GET',
@@ -1193,18 +896,8 @@ describe('teacherSectionsRedux', () => {
       const promise = store.dispatch(asyncLoadSectionData());
       expect(state().courseOfferings).to.deep.equal({});
 
-      expect(server.requests).to.have.length(5);
+      expect(server.requests).to.have.length(3);
       server.respondWith('GET', '/dashboardapi/sections', successResponse());
-      server.respondWith(
-        'GET',
-        '/dashboardapi/courses',
-        successResponse(validCourses)
-      );
-      server.respondWith(
-        'GET',
-        '/dashboardapi/sections/valid_scripts',
-        successResponse(validScripts)
-      );
       server.respondWith(
         'GET',
         '/dashboardapi/sections/valid_course_offerings',
@@ -1228,18 +921,8 @@ describe('teacherSectionsRedux', () => {
       const promise = store.dispatch(asyncLoadSectionData());
       expect(state().courseOfferings).to.deep.equal({});
 
-      expect(server.requests).to.have.length(5);
+      expect(server.requests).to.have.length(3);
       server.respondWith('GET', '/dashboardapi/sections', successResponse());
-      server.respondWith(
-        'GET',
-        '/dashboardapi/courses',
-        successResponse(validCourses)
-      );
-      server.respondWith(
-        'GET',
-        '/dashboardapi/sections/valid_scripts',
-        successResponse(validScripts)
-      );
       server.respondWith(
         'GET',
         '/dashboardapi/sections/valid_course_offerings',
@@ -1257,53 +940,12 @@ describe('teacherSectionsRedux', () => {
       });
     });
 
-    it('sets validAssignments from server responses', () => {
-      const promise = store.dispatch(asyncLoadSectionData());
-      expect(state().validAssignments).to.deep.equal({});
-
-      expect(server.requests).to.have.length(5);
-      server.respondWith('GET', '/dashboardapi/sections', successResponse());
-      server.respondWith(
-        'GET',
-        '/dashboardapi/courses',
-        successResponse(validCourses)
-      );
-      server.respondWith(
-        'GET',
-        '/dashboardapi/sections/valid_scripts',
-        successResponse(validScripts)
-      );
-      server.respondWith(
-        'GET',
-        '/dashboardapi/sections/valid_course_offerings',
-        successResponse(courseOfferings)
-      );
-      server.respondWith(
-        'GET',
-        '/dashboardapi/sections/available_participant_types',
-        successResponse({availableParticipantTypes: ['student', 'teacher']})
-      );
-      server.respond();
-
-      return promise.then(() => {
-        expect(Object.keys(state().validAssignments)).to.have.length(
-          validCourses.length + validScripts.length
-        );
-      });
-    });
-
     it('sets students from server responses', () => {
       const promise = store.dispatch(asyncLoadSectionData('id'));
       expect(state().courseOfferings).to.deep.equal({});
 
-      expect(server.requests).to.have.length(6);
+      expect(server.requests).to.have.length(4);
       server.respondWith('GET', '/dashboardapi/sections', successResponse());
-      server.respondWith('GET', '/dashboardapi/courses', successResponse());
-      server.respondWith(
-        'GET',
-        '/dashboardapi/sections/valid_scripts',
-        successResponse()
-      );
       server.respondWith(
         'GET',
         '/dashboardapi/sections/valid_course_offerings',
@@ -1721,10 +1363,9 @@ describe('teacherSectionsRedux', () => {
         successResponse({})
       );
       server.respondWith('GET', '/dashboardapi/sections', successResponse([]));
-      server.respondWith('GET', '/dashboardapi/courses', successResponse([]));
       server.respondWith(
         'GET',
-        '/dashboardapi/sections/valid_scripts',
+        '/dashboardapi/sections/valid_course_offerings',
         successResponse([])
       );
       server.respondWith(
@@ -1828,21 +1469,15 @@ describe('teacherSectionsRedux', () => {
         importOrUpdateRoster(TEST_COURSE_ID, TEST_COURSE_NAME)
       );
       return expect(promise).to.be.fulfilled.then(() => {
-        expect(server.requests).to.have.length(6);
+        expect(server.requests).to.have.length(4);
         expect(server.requests[1].method).to.equal('GET');
         expect(server.requests[1].url).to.equal('/dashboardapi/sections');
         expect(server.requests[2].method).to.equal('GET');
-        expect(server.requests[2].url).to.equal('/dashboardapi/courses');
-        expect(server.requests[3].method).to.equal('GET');
-        expect(server.requests[3].url).to.equal(
-          '/dashboardapi/sections/valid_scripts'
-        );
-        expect(server.requests[4].method).to.equal('GET');
-        expect(server.requests[4].url).to.equal(
+        expect(server.requests[2].url).to.equal(
           '/dashboardapi/sections/valid_course_offerings'
         );
-        expect(server.requests[5].method).to.equal('GET');
-        expect(server.requests[5].url).to.equal(
+        expect(server.requests[3].method).to.equal('GET');
+        expect(server.requests[3].url).to.equal(
           '/dashboardapi/sections/available_participant_types'
         );
         expect(Object.keys(getState().teacherSections.sections)).to.have.length(
