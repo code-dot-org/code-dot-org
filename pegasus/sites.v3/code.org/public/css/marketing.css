@@ -11,22 +11,16 @@ h2.purple-block{
   border-radius: 10px 10px 0 0;
 }
 
-figure img{
-  width: 100%;
+figcaption {
+  font-size: .875em;
+  margin-top: 1em;
+  line-height: 1.4;
 }
-
-  figcaption {
-    font-size: .875em;
-    margin-top: 1em;
-    line-height: 1.4;
-  }
   
 .centerspot {
-  text-align: center; 
-  padding: 2em; 
+  text-align:center; 
+  padding:30px 
 }
-
-
 
 /* columns */
 .column-container { margin: 20px 0;}
@@ -130,8 +124,7 @@ table.donors th {
 
   table.donors td {
     border: 0;
-    padding: 4px 16px;
-    line-height: 1.2;
+    padding: 0 16px;
   }
 
 .bythenumbers th {background:#5b6770; padding: 7px 15px; border-top-color: #5b6770;  border-bottom-color: #5b6770;  border-left-color: #5b6770; border-right-color: #5b6770;}
@@ -165,10 +158,6 @@ hr.bhm-border {  border:none;  height:5px;  background-image: url('../images/bhm
   .bhm-banner h2 {font-size:23px;}
   .callout-quote {font-size:18px}
   h2.highlight { background-position-y: 4px; }
-  .centerspot{
-    padding: 2em 0;
-    margin: 0 auto;
-  }
 }
 
 @media only screen and (max-width: 960px) {

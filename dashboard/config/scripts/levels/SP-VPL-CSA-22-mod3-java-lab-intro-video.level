@@ -16,7 +16,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-03-15T16:57:16.959+00:00\",\"changed\":[\"cloned from \\\"Computer Science is Changing Everything_2021\\\"\"],\"cloned_from\":\"Computer Science is Changing Everything_2021\"},{\"changed_at\":\"2022-03-15 16:58:24 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-17 17:41:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-17 17:42:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-04-04 20:18:23 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-03-15T16:57:16.959+00:00\",\"changed\":[\"cloned from \\\"Computer Science is Changing Everything_2021\\\"\"],\"cloned_from\":\"Computer Science is Changing Everything_2021\"},{\"changed_at\":\"2022-03-15 16:58:24 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-17 17:41:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-17 17:42:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

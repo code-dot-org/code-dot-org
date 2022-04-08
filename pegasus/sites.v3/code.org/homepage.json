@@ -1,34 +1,35 @@
 {
   "pages": {
-    "homepage": ["thebadguys"]
+    "homepage": "thebadguys"
   },
 
   "banners": {
     "thebadguys": {
       "dcdo": "thebadguys-promotion",
-      "class": "vertical-stack",
       "desktopImage": "/images/marketing/homepage-thebadguys-background.jpg",
-      "leftImage": "/images/marketing/homepage-thebadguys-left.png",
-      "rightImage": "/images/marketing/homepage-thebadguys-right.png",
-      "actions": [
+      "items": [
         {
           "type": "image",
           "url": "/images/marketing/homepage-thebadguys-logo.png"
         },
         {
-          "type": "video_thumbnail",
-          "image_url": "/images/marketing/homepage-thebadguys-video-thumbnail.png",
-          "text": "homepage_action_text_codevideo",
-          "youtube_id": "6gauCnbXxnQ"
-        },
-        {
           "type": "text",
           "text": "homepage_thebadguys_body"
+        }
+      ],
+      "actions": [
+        {
+          "text": "homepage_action_text_try_it",
+          "url": "/coldplay",
+          "type": "cta_button_solid_yellow"
         },
         {
-          "type": "cta_button_solid_yellow",
-          "text": "homepage_action_text_try_it",
-          "url": "/thebadguys"
+          "text": "homepage_action_text_codevideo",
+          "type": "video",
+          "youtube_id": "6gauCnbXxnQ",
+          "download_path": "//videos.code.org/social/what-most-schools-dont-teach.mp4",
+          "facebook": "https://www.facebook.com/Code.org/videos/10100689712053311/",
+          "twitter": "Anybody can learn computer science, starting with an #HourOfCode. https://twitter.com/codeorg/status/828716370053304321"
         }
       ]
     }

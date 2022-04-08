@@ -1847,8 +1847,8 @@ FeedbackUtils.prototype.createModalDialog = function(options) {
  */
 FeedbackUtils.prototype.hasQuestionMarksInNumberField = function() {
   return Blockly.mainBlockSpace.getAllUsedBlocks().some(function(block) {
-    return Blockly.cdoUtils.getBlockFields(block).some(function(field) {
-      return field.value_ === '???' || field.text_ === '???';
+    return block.getTitles().some(function(title) {
+      return title.value_ === '???' || title.text_ === '???';
     });
   });
 };

@@ -233,13 +233,13 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     ]
 
     # create user_level for level_group
-    level_group_user_level = create :user_level, user: @student_1, best_result: 100, script: script, level: level1, submitted: true
+    user_level = create :user_level, user: @student_1, best_result: 100, script: script, level: level1, submitted: true
 
     # create user_levels for sublevels
     student_answers.each do |level_and_answer|
       level, answer = level_and_answer
       level_source = create :level_source, level: level, data: answer
-      create :user_level, user: @student_1, script: script, level: level, level_source: level_source
+      user_level = create :user_level, user: @student_1, script: script, level: level, level_source: level_source
     end
 
     # Call the controller method.
@@ -264,7 +264,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
             "match_correct" => 1,
             "match_count" => 3,
             "submitted" => true,
-            "timestamp" => level_group_user_level[:updated_at],
+            "timestamp" => user_level[:updated_at],
             "level_results" => [
               {"student_result" => "This is a free response", "status" => "", "type" => "FreeResponse"},
               {"type" => "Multi", "student_result" => [0], "status" => "correct",},

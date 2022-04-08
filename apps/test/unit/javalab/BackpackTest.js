@@ -18,10 +18,9 @@ describe('Java Lab Backpack Test', () => {
     backpackApiStub.hasBackpack.returns(true);
     defaultProps = {
       displayTheme: DisplayTheme.DARK,
-      isButtonDisabled: false,
+      isDisabled: false,
       onImport: () => {},
-      backpackApi: backpackApiStub,
-      backpackEnabled: true
+      backpackApi: backpackApiStub
     };
   });
 
@@ -125,12 +124,5 @@ describe('Java Lab Backpack Test', () => {
 
     const state = wrapper.instance().state;
     expect(state.openDialog).to.equal(null);
-  });
-
-  it('renders nothing if backpack is disabled', () => {
-    const wrapper = shallow(
-      <Backpack {...defaultProps} backpackEnabled={false} />
-    );
-    expect(wrapper.isEmptyRender()).to.be.true;
   });
 });

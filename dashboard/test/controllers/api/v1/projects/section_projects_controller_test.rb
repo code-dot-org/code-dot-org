@@ -37,7 +37,7 @@ class Api::V1::Projects::SectionProjectsControllerTest < ActionController::TestC
     other_student_project = {id: 44, value: other_student_project_value}
 
     ProjectsList.stubs(:get_storage_ids_by_user_ids).returns({@student.id => STUDENT_STORAGE_ID})
-    Projects.any_instance.stubs(:get_active_projects).returns([student_project, hidden_project, other_student_project])
+    StorageApps.any_instance.stubs(:get_active_projects).returns([student_project, hidden_project, other_student_project])
   end
 
   test_user_gets_response_for(

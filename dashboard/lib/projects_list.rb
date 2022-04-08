@@ -33,7 +33,7 @@ module ProjectsList
     def fetch_personal_projects(user_id)
       personal_projects_list = []
       storage_id = storage_id_for_user_id(user_id)
-      Projects.new(storage_id).get_active_projects.each do |project|
+      StorageApps.new(storage_id).get_active_projects.each do |project|
         channel_id = storage_encrypt_channel_id(storage_id, project[:id])
         project_data = get_project_row_data(project, channel_id, nil, true)
         personal_projects_list << project_data if project_data
@@ -50,9 +50,9 @@ module ProjectsList
       personal_projects_list = []
       storage_id = storage_id_for_user_id(user_id)
 
-      projects_query = Projects.new(storage_id).get_projects_with_state(state: state, order: Sequel.desc(:updated_at))
+      storage_apps_query = StorageApps.new(storage_id).get_projects_with_state(state: state, order: Sequel.desc(:updated_at))
 
-      projects_query.each do |project|
+      storage_apps_query.each do |project|
         channel_id = storage_encrypt_channel_id(storage_id, project[:id])
         project_data = get_project_row_data(project, channel_id, nil, true)
         personal_projects_list << project_data if project_data
@@ -71,7 +71,7 @@ module ProjectsList
         student_storage_ids = get_storage_ids_by_user_ids(section_students.pluck(:id))
         section_students.each do |student|
           next unless student_storage_id = student_storage_ids[student.id]
-          Projects.new(student_storage_id).get_active_projects.each do |project|
+          StorageApps.new(student_storage_id).get_active_projects.each do |project|
             # The channel id stored in the project's value field may not be reliable
             # when apps are remixed, so recompute the channel id.
             channel_id = storage_encrypt_channel_id(student_storage_id, project[:id])
@@ -147,7 +147,7 @@ module ProjectsList
       [].tap do |projects_list_data|
         user_storage_ids = get_user_ids_by_storage_ids(section_users.pluck(:id))
         user_storage_id_list = user_storage_ids.keys
-        Projects.table.
+        StorageApps.table.
           where(storage_id: user_storage_id_list, state: 'active').
           where(project_type: project_types).
           where("value->'$.libraryName' IS NOT NULL").
@@ -184,7 +184,7 @@ module ProjectsList
 
       updated_library_channels = []
 
-      Projects.get_by_ids(project_ids).each do |project|
+      StorageApps.get_by_ids(project_ids).each do |project|
         library = libraries.find {|lib| lib['project_id'] == project[:id]}
         project_value = JSON.parse(project[:value])
         next unless library && project_value['latestLibraryVersion']
@@ -239,7 +239,7 @@ module ProjectsList
         data_for_featured_project_card = {
           "channel" => channel,
           "name" => project_details_value['name'],
-          "thumbnailUrl" =>  Projects.make_thumbnail_url_cacheable(project_details_value['thumbnailUrl']),
+          "thumbnailUrl" =>  StorageApps.make_thumbnail_url_cacheable(project_details_value['thumbnailUrl']),
           "type" => project_details[:project_type],
           "publishedAt" => project_details[:published_at],
           "studentName" => UserHelpers.initial(project_details[:name]),
@@ -323,7 +323,7 @@ module ProjectsList
       {}.tap do |projects|
         project_groups.map do |project_group|
           project_types = PUBLISHED_PROJECT_TYPE_GROUPS[project_group]
-          projects[project_group] = Projects.table.
+          projects[project_group] = StorageApps.table.
             select(*project_and_user_fields).
             join(user_project_storage_ids, id: :storage_id).
             join(users, id: :user_id).
@@ -338,9 +338,9 @@ module ProjectsList
     end
 
     # Extracts published project data from a row that is a join of the
-    # projects and user tables.
+    # storage_apps and user tables.
     #
-    # @param [hash] the join of projects and user tables for a published project.
+    # @param [hash] the join of storage_apps and user tables for a published project.
     #  See project_and_user_fields for which fields it contains.
     # @returns [hash, nil] containing fields relevant to the published project or
     #  nil when the user has sharing_disabled = true for App Lab, Game Lab and Sprite Lab.
@@ -348,7 +348,7 @@ module ProjectsList
       return nil if get_sharing_disabled_from_properties(project_and_user[:properties]) && ADVANCED_PROJECT_TYPES.include?(project_and_user[:project_type])
       return nil if project_and_user[:abuse_score] > 0
       channel_id = storage_encrypt_channel_id(project_and_user[:storage_id], project_and_user[:id])
-      Projects.get_published_project_data(project_and_user, channel_id).merge(
+      StorageApps.get_published_project_data(project_and_user, channel_id).merge(
         {
           # For privacy reasons, include only the first initial of the student's name.
           studentName: UserHelpers.initial(project_and_user[:name]),

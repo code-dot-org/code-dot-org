@@ -12,17 +12,17 @@ describe('blockUtils', function() {
 
   it('can create a block from XML', function() {
     var blockXMLString =
-      '<block type="math_number"><field name="NUM">10</field></block>';
+      '<block type="math_number"><title name="NUM">10</title></block>';
     assert(Blockly.mainBlockSpace.getBlockCount() === 0);
     var newBlock = blockUtils.domStringToBlock(blockXMLString);
     assert(Blockly.mainBlockSpace.getBlockCount() === 1);
     assert(newBlock.getFieldValue('NUM') === '10');
-    assert(Blockly.cdoUtils.getBlockFields(newBlock).length === 1);
+    assert(newBlock.getTitles().length === 1);
   });
 
   it('can create a block from XML and remove it from the workspace', function() {
     var blockXMLString =
-      '<block type="math_number"><field name="NUM">10</field></block>';
+      '<block type="math_number"><title name="NUM">10</title></block>';
     assert(Blockly.mainBlockSpace.getBlockCount() === 0);
     var newBlock = blockUtils.domStringToBlock(blockXMLString);
     assert(Blockly.mainBlockSpace.getBlockCount() === 1);
@@ -38,33 +38,33 @@ describe('requiredBlockUtils', function() {
 
   it('can recognize matching titles in blocks', function() {
     var blockUserString =
-      '<block type="math_number"><field name="NUM">10</field></block>';
+      '<block type="math_number"><title name="NUM">10</title></block>';
     var blockUser = blockUtils.domStringToBlock(blockUserString);
     var blockRequiredString =
-      '<block type="math_number"><field name="NUM">10</field></block>';
+      '<block type="math_number"><title name="NUM">10</title></block>';
     var blockRequired = blockUtils.domStringToBlock(blockRequiredString);
-    assert(Blockly.cdoUtils.getBlockFields(blockUser).length === 1);
-    assert(Blockly.cdoUtils.getBlockFields(blockRequired).length === 1);
-    assert(requiredBlockUtils.blockFieldsMatch(blockUser, blockRequired));
+    assert(blockUser.getTitles().length === 1);
+    assert(blockRequired.getTitles().length === 1);
+    assert(requiredBlockUtils.blockTitlesMatch(blockUser, blockRequired));
   });
 
   it('can recognize non-matching titles in blocks', function() {
     var blockUser = blockUtils.domStringToBlock(
-      '<block type="block_with_3_titles"><field name="A">10</field></block>'
+      '<block type="block_with_3_titles"><title name="A">10</title></block>'
     );
     var blockRequired = blockUtils.domStringToBlock(
-      '<block type="block_with_3_titles"><field name="A">11</field></block>'
+      '<block type="block_with_3_titles"><title name="A">11</title></block>'
     );
-    assert(!requiredBlockUtils.blockFieldsMatch(blockUser, blockRequired));
+    assert(!requiredBlockUtils.blockTitlesMatch(blockUser, blockRequired));
     assert(!requiredBlockUtils.blocksMatch(blockUser, blockRequired));
   });
 
   it('can recognize matching entire blocks', function() {
     var blockUser = blockUtils.domStringToBlock(
-      '<block type="block_with_3_titles"><field name="A">10</field></block>'
+      '<block type="block_with_3_titles"><title name="A">10</title></block>'
     );
     var blockRequired = blockUtils.domStringToBlock(
-      '<block type="block_with_3_titles"><field name="A">10</field></block>'
+      '<block type="block_with_3_titles"><title name="A">10</title></block>'
     );
     assert(requiredBlockUtils.blocksMatch(blockUser, blockRequired));
   });
@@ -74,48 +74,48 @@ describe('requiredBlockUtils', function() {
       '<block type="logic_boolean"></block>'
     );
     var blockRequired = blockUtils.domStringToBlock(
-      '<block type="block_with_3_titles"><field name="A">10</field></block>'
+      '<block type="block_with_3_titles"><title name="A">10</title></block>'
     );
     assert(!requiredBlockUtils.blocksMatch(blockUser, blockRequired));
   });
 
   it('can recognize matching titles in blocks with multiple titles', function() {
     var blockUser = blockUtils.domStringToBlock(
-      '<block type="block_with_3_titles"><field name="A">1</field><field name="B">2</field><field name="C">3</field></block>'
+      '<block type="block_with_3_titles"><title name="A">1</title><title name="B">2</title><title name="C">3</title></block>'
     );
     var blockRequired = blockUtils.domStringToBlock(
-      '<block type="block_with_3_titles"><field name="C">3</field><field name="B">2</field><field name="A">1</field></block>'
+      '<block type="block_with_3_titles"><title name="C">3</title><title name="B">2</title><title name="A">1</title></block>'
     );
-    assert(requiredBlockUtils.blockFieldsMatch(blockUser, blockRequired));
+    assert(requiredBlockUtils.blockTitlesMatch(blockUser, blockRequired));
   });
 
   it('can recognize mis-matching titles in blocks with differing Aber of titles', function() {
     var blockUser = blockUtils.domStringToBlock(
-      '<block type="block_with_3_titles"><field name="A">1</field></block>'
+      '<block type="block_with_3_titles"><title name="A">1</title></block>'
     );
     var blockRequired = blockUtils.domStringToBlock(
-      '<block type="block_with_3_titles"><field name="A">1</field><field name="B">2</field><field name="C">3</field></block>'
+      '<block type="block_with_3_titles"><title name="A">1</title><title name="B">2</title><title name="C">3</title></block>'
     );
-    assert(!requiredBlockUtils.blockFieldsMatch(blockUser, blockRequired));
-    assert(!requiredBlockUtils.blockFieldsMatch(blockRequired, blockUser));
+    assert(!requiredBlockUtils.blockTitlesMatch(blockUser, blockRequired));
+    assert(!requiredBlockUtils.blockTitlesMatch(blockRequired, blockUser));
   });
 
   it('can recognize mis-matching titles in with multiple titles', function() {
     var blockUser = blockUtils.domStringToBlock(
-      '<block type="block_with_3_titles"><field name="A">1</field><field name="B">2</field></block>'
+      '<block type="block_with_3_titles"><title name="A">1</title><title name="B">2</title></block>'
     );
     var blockRequired = blockUtils.domStringToBlock(
-      '<block type="block_with_3_titles"><field name="A">2</field><field name="B">1</field></block>'
+      '<block type="block_with_3_titles"><title name="A">2</title><title name="B">1</title></block>'
     );
-    assert(!requiredBlockUtils.blockFieldsMatch(blockUser, blockRequired));
+    assert(!requiredBlockUtils.blockTitlesMatch(blockUser, blockRequired));
   });
 
   it('can recognize matching blocks with mismatched ignored attributes', function() {
     var blockUser = parseElement(
-      '<block type="block_with_3_titles" deletable="false"><field name="A">1</field><field name="B">2</field></block>'
+      '<block type="block_with_3_titles" deletable="false"><title name="A">1</title><title name="B">2</title></block>'
     );
     var blockRequired = parseElement(
-      '<block type="block_with_3_titles"><field name="A">1</field><field name="B">2</field></block>'
+      '<block type="block_with_3_titles"><title name="A">1</title><title name="B">2</title></block>'
     );
     assert(
       requiredBlockUtils.elementsEquivalent(
@@ -128,10 +128,10 @@ describe('requiredBlockUtils', function() {
 
   it('can recognize non-matching blocks with mismatched ignorarable attributes', function() {
     var blockUser = parseElement(
-      '<block type="block_with_3_titles" inputcount="3"><field name="A">1</field><field name="B">2</field></block>'
+      '<block type="block_with_3_titles" inputcount="3"><title name="A">1</title><title name="B">2</title></block>'
     );
     var blockRequired = parseElement(
-      '<block type="block_with_3_titles" inputcount="2"><field name="A">1</field><field name="B">2</field></block>'
+      '<block type="block_with_3_titles" inputcount="2"><title name="A">1</title><title name="B">2</title></block>'
     );
     assert.isFalse(
       requiredBlockUtils.elementsEquivalent(
@@ -144,10 +144,10 @@ describe('requiredBlockUtils', function() {
 
   it('can recognize matching blocks with mismatched ignored ignorarable attributes', function() {
     var blockUser = parseElement(
-      '<block type="block_with_3_titles" inputcount="3"><field name="A">1</field><field name="B">2</field></block>'
+      '<block type="block_with_3_titles" inputcount="3"><title name="A">1</title><title name="B">2</title></block>'
     );
     var blockRequired = parseElement(
-      '<block type="block_with_3_titles" inputcount="???"><field name="A">1</field><field name="B">2</field></block>'
+      '<block type="block_with_3_titles" inputcount="???"><title name="A">1</title><title name="B">2</title></block>'
     );
     assert(
       requiredBlockUtils.elementsEquivalent(
@@ -160,7 +160,7 @@ describe('requiredBlockUtils', function() {
 
   it('can recognize matching blocks with unspecified children', function() {
     var blockUser = parseElement(
-      '<block type="block_with_3_titles" inputcount="2"><field name="A">1</field><field name="B">2</field></block>'
+      '<block type="block_with_3_titles" inputcount="2"><title name="A">1</title><title name="B">2</title></block>'
     );
     var blockRequired = parseElement(
       '<block type="block_with_3_titles" inputcount="???"></block>'
@@ -176,10 +176,10 @@ describe('requiredBlockUtils', function() {
 
   it('can recognize non-matching blocks with specified children', function() {
     var blockUser = parseElement(
-      '<block type="block_with_3_titles" inputcount="2"><field name="A">1</field><field name="B">2</field></block>'
+      '<block type="block_with_3_titles" inputcount="2"><title name="A">1</title><title name="B">2</title></block>'
     );
     var blockRequired = parseElement(
-      '<block type="block_with_3_titles" inputcount="2"><field name="A">2</field><field name="B">2</field></block>'
+      '<block type="block_with_3_titles" inputcount="2"><title name="A">2</title><title name="B">2</title></block>'
     );
     assert.isFalse(
       requiredBlockUtils.elementsEquivalent(
@@ -195,7 +195,7 @@ describe('requiredBlockUtils', function() {
       '<block type="block_with_3_titles" inputcount="2"></block>'
     );
     var blockRequired = parseElement(
-      '<block type="block_with_3_titles" inputcount="2"><field name="A">2</field><field name="B">2</field></block>'
+      '<block type="block_with_3_titles" inputcount="2"><title name="A">2</title><title name="B">2</title></block>'
     );
     assert.isFalse(
       requiredBlockUtils.elementsEquivalent(

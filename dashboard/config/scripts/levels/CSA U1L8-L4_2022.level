@@ -350,17 +350,14 @@
         }
       ]
     ],
-    "long_instructions": "##Import from the Backpack\r\n\r\nNow let's import your `PainterPlus`(#e7e8ea) class to this program.\r\n\r\n1. Click the **Backpack** button in the upper-left corner of the **Editor**.\r\n\r\n2. Check the `PainterPlus.java`(#e7e8ea) file, then click the **Import** button.",
-    "project_template_level_name": "CSA U1L8 PBT_2022",
-    "encrypted_examples": [
-
-    ]
+    "long_instructions": "Find the features listed under the **Committing Code and the Backpack** heading of the Good Habits of Software Engineers Scavenger Hunt on the Unit 1 Guide.",
+    "project_template_level_name": "CSA U1L8 PBT_2022"
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-02-15T18:30:26.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-02-15T18:30:26.265+00:00\",\"changed\":[\"cloned from \\\"CSA U1L8-L3_2022\\\"\"],\"cloned_from\":\"CSA U1L8-L3_2022\"},{\"changed_at\":\"2022-02-15 18:30:42 +0000\",\"changed\":[\"serialized_maze\",\"project_template_level_name\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-15 18:31:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-15 18:37:24 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-15 18:45:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-15 18:45:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-01 18:03:38 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-02-15T18:30:26.265+00:00\",\"changed\":[\"cloned from \\\"CSA U1L8-L3_2022\\\"\"],\"cloned_from\":\"CSA U1L8-L3_2022\"},{\"changed_at\":\"2022-02-15 18:30:42 +0000\",\"changed\":[\"serialized_maze\",\"project_template_level_name\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-15 18:31:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-15 18:37:24 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-15 18:45:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-15 18:45:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

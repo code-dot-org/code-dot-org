@@ -62,15 +62,10 @@ class ActivitiesController < ApplicationController
       end
 
       unless share_failure || ActivityConstants.skipped?(params[:new_result].to_i)
-        # Explicitly use the writer connection to make this write call. This
-        # isn't necessary as long as we're still using SeamlessDatabasePool,
-        # but will be once we update to Rails 6
-        MultipleDatabasesTransitionHelper.use_writer_connection do
-          @level_source = LevelSource.find_identical_or_create(
-            @level,
-            params[:program].strip_utf8mb4
-          )
-        end
+        @level_source = LevelSource.find_identical_or_create(
+          @level,
+          params[:program].strip_utf8mb4
+        )
         if share_filtering_error
           FirehoseClient.instance.put_record(
             :analysis,
@@ -110,15 +105,13 @@ class ActivitiesController < ApplicationController
       params[:lines] = MAX_LINES_OF_CODE if params[:lines] > MAX_LINES_OF_CODE
     end
 
-    MultipleDatabasesTransitionHelper.use_writer_connection do
-      @level_source_image = find_or_create_level_source_image(params[:image], @level_source)
+    @level_source_image = find_or_create_level_source_image(params[:image], @level_source)
 
-      @new_level_completed = false
-      if current_user
-        track_progress_for_user if @script_level
-      else
-        track_progress_in_session
-      end
+    @new_level_completed = false
+    if current_user
+      track_progress_for_user if @script_level
+    else
+      track_progress_in_session
     end
 
     total_lines = if current_user && current_user.total_lines

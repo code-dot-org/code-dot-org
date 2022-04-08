@@ -350,7 +350,7 @@
         }
       ]
     ],
-    "long_instructions": "##In MyNeighborhood.java:\r\n\r\n1. Instantiate a `PainterPlus`(#e7e8ea) object called `myPainterPlus`(#e7e8ea).\r\n\r\n::: details [**Show Me How**]\r\nAn object is instantiated using the following syntax:\r\n  \r\n  ```\r\n  ClassName objectName = new ClassName();\r\n  ```\r\n\r\nBe sure to replace `ClassName`(#e7e8ea) with the name of the class and `objectName`(#e7e8ea) with the name of the object.\r\n:::",
+    "long_instructions": "##In MyNeighborhood.java:\r\n\r\n1. Instantiate a `PainterPlus`(#e7e8ea) object called `myPainterPlus`(#e7e8ea).\r\n\r\n::: details [**Show Me How**]\r\nAn object is instantiated using the following syntax:\r\n  \r\n  ```\r\n  ClassName variableName = new ClassName();\r\n  ```\r\n\r\nBe sure to replace `ClassName`(#e7e8ea) with the name of the class and `variableName`(#e7e8ea) with the name of the reference variable.\r\n:::",
     "project_template_level_name": "CSA U1L6 PBT_2022",
     "teacher_markdown": "Refer students to their notes on the Unit 1 Guide to help them write their code.",
     "encrypted_examples": "mZB7BNRoUfVP+xe/M7KOnuvdOgK/ZEEXUmzYMFb5QmYHI6sX2RM4mPoHWEs6\nenQyw5VjlqKJ/2GumIUKRxrn+mpLMNpsqIO+OHSiv+F4ec0=\n"
@@ -360,6 +360,6 @@
   "created_at": "2022-02-15T14:58:59.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-02-15T14:58:59.041+00:00\",\"changed\":[\"cloned from \\\"CSA U1L6-L2_2022\\\"\"],\"cloned_from\":\"CSA U1L6-L2_2022\"},{\"changed_at\":\"2022-02-15 15:00:48 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-03 13:41:58 +0000\",\"changed\":[\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-01 16:35:22 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-02-15T14:58:59.041+00:00\",\"changed\":[\"cloned from \\\"CSA U1L6-L2_2022\\\"\"],\"cloned_from\":\"CSA U1L6-L2_2022\"},{\"changed_at\":\"2022-02-15 15:00:48 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-03 13:41:58 +0000\",\"changed\":[\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

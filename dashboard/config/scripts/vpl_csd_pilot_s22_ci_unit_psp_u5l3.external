@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# The problem solving process with data
+# The problem solving process with Data
 
 ##### The Problem Solving Process is a tool for structured problem solving that is woven throughout the entire course to promote student growth and development. The Data and Society unit uses the problem solving process with data. 
 
@@ -11,8 +11,9 @@ markdown <<MARKDOWN
 
 ## Define
 
+## Update with image from the problem solving section of the curriculum guide (starts on page 38) - Then delete these instruction.
 
-<img src="https://images.code.org/8f22c742ad79b9e00e9a09212ac8b221-image-1648878005917.JPG"  alt="Image of problem solving process with data" style="float: right; height: 350px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/0dd1fcc01da9976cdcb100d92c998393-image-1647994716343.png" style="float: right; height: 350px; clear: both; margin: 0 20px 20px 0;">
 
 * ##### Decide what problem you are trying to solve or what question you are trying to answer
 * ##### Make sure you understand your target audience (it could be you!) and what specifically it needs
@@ -34,6 +35,4 @@ markdown <<MARKDOWN
 ## Reflect
 * ##### Review what you’ve learned about your question or problem
 * ##### Decide if what you’ve learned has solved your problem and allows you to make a decision, or if you’ll need to go back to one of the previous steps
-
-
 MARKDOWN

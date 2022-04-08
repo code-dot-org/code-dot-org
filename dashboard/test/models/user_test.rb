@@ -1,10 +1,10 @@
 require 'test_helper'
 require 'testing/includes_metrics'
-require 'testing/projects_test_utils'
+require 'testing/storage_apps_test_utils'
 require 'timecop'
 
 class UserTest < ActiveSupport::TestCase
-  include ProjectsTestUtils
+  include StorageAppsTestUtils
   self.use_transactional_test_case = true
 
   setup_all do
@@ -3178,24 +3178,24 @@ class UserTest < ActiveSupport::TestCase
         with_channel_for student do |channel_id_b|
           # Student deleted channel_id_a a day before they were deleted
           # so we don't expect it to be restored when we undelete them.
-          projects_table.where(id: channel_id_a).update state: 'deleted', updated_at: Time.now
-          assert_equal 'deleted', projects_table.where(id: channel_id_a).first[:state]
-          assert_equal 'active', projects_table.where(id: channel_id_b).first[:state]
+          storage_apps.where(id: channel_id_a).update state: 'deleted', updated_at: Time.now
+          assert_equal 'deleted', storage_apps.where(id: channel_id_a).first[:state]
+          assert_equal 'active', storage_apps.where(id: channel_id_b).first[:state]
 
           Timecop.travel 1.day
 
           # Soft-deleting the student also soft-deletes their projects
           student.destroy
-          assert_equal 'deleted', projects_table.where(id: channel_id_a).first[:state]
-          assert_equal 'deleted', projects_table.where(id: channel_id_b).first[:state]
+          assert_equal 'deleted', storage_apps.where(id: channel_id_a).first[:state]
+          assert_equal 'deleted', storage_apps.where(id: channel_id_b).first[:state]
 
           Timecop.travel 1.day
 
           # Restoring the student only restores projects that were deleted along
           # with the student
           student.undestroy
-          assert_equal 'deleted', projects_table.where(id: channel_id_a).first[:state]
-          assert_equal 'active', projects_table.where(id: channel_id_b).first[:state]
+          assert_equal 'deleted', storage_apps.where(id: channel_id_a).first[:state]
+          assert_equal 'active', storage_apps.where(id: channel_id_b).first[:state]
         end
       end
     end
@@ -4469,16 +4469,16 @@ class UserTest < ActiveSupport::TestCase
 
   test 'find_channel_owner finds channel owner' do
     student = create :student
-    with_channel_for student do |project_id, storage_id|
-      encrypted_channel_id = storage_encrypt_channel_id storage_id, project_id
+    with_channel_for student do |storage_app_id, storage_id|
+      encrypted_channel_id = storage_encrypt_channel_id storage_id, storage_app_id
       result = User.find_channel_owner encrypted_channel_id
       assert_equal student, result
     end
   end
 
   test 'find_channel_owner returns nil for channel with no owner' do
-    with_anonymous_channel do |project_id, storage_id|
-      encrypted_channel_id = storage_encrypt_channel_id storage_id, project_id
+    with_anonymous_channel do |storage_app_id, storage_id|
+      encrypted_channel_id = storage_encrypt_channel_id storage_id, storage_app_id
       result = User.find_channel_owner encrypted_channel_id
       assert_nil result
     end

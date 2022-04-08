@@ -9,12 +9,12 @@
 require_relative '../../config/environment'
 
 to_delete = []
-DASHBOARD_DB[:projects].where(state: 'active').paged_each do |row|
+PEGASUS_DB[:storage_apps].where(state: 'active').paged_each do |row|
   JSON.parse row[:value]
 rescue JSON::ParserError
   to_delete << row[:id]
   puts row[:id]
 end
 
-modified = DASHBOARD_DB[:projects].where(id: to_delete).update(state: 'deleted')
+modified = PEGASUS_DB[:storage_apps].where(id: to_delete).update(state: 'deleted')
 puts "Marked #{modified} channels as 'deleted'"

@@ -2345,8 +2345,8 @@ class User < ApplicationRecord
   private def soft_delete_channels
     return unless user_storage_id
 
-    project = Projects.new(user_storage_id)
-    project_ids = project.get_all_project_ids
+    user_storage_apps = StorageApps.new(user_storage_id)
+    project_ids = user_storage_apps.get_all_storage_app_ids
 
     # Unfeature any featured projects owned by the user
     FeaturedProject.
@@ -2354,8 +2354,8 @@ class User < ApplicationRecord
       where.not(featured_at: nil).
       update_all(unfeatured_at: Time.now)
 
-    # Soft-delete all of the user's projects
-    project.soft_delete_all
+    # Soft-delete all of the user's storage_apps
+    user_storage_apps.soft_delete_all
   end
 
   def user_storage_id
@@ -2374,7 +2374,7 @@ class User < ApplicationRecord
     # Paranoia documentation at https://github.com/rubysherpas/paranoia#usage.
     result = restore(recursive: true, recovery_window: 5.minutes)
     deleted_time = soft_delete_time - 5.minutes
-    Projects.new(user_storage_id).restore_if_deleted_after(deleted_time) if user_storage_id
+    StorageApps.new(user_storage_id).restore_if_deleted_after(deleted_time) if user_storage_id
     result
   end
 

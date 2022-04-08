@@ -104,8 +104,7 @@ class JavalabEditor extends React.Component {
     displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)),
     height: PropTypes.number,
     isEditingStartSources: PropTypes.bool,
-    isReadOnlyWorkspace: PropTypes.bool.isRequired,
-    backpackEnabled: PropTypes.bool
+    isReadOnlyWorkspace: PropTypes.bool.isRequired
   };
 
   constructor(props) {
@@ -602,8 +601,7 @@ class JavalabEditor extends React.Component {
       showProjectTemplateWorkspaceIcon,
       height,
       isProjectTemplateLevel,
-      handleClearPuzzle,
-      backpackEnabled
+      handleClearPuzzle
     } = this.props;
 
     let menuStyle = {
@@ -634,16 +632,14 @@ class JavalabEditor extends React.Component {
             leftJustified
             isDisabled={isReadOnlyWorkspace}
           />
-          {backpackEnabled && (
-            <PaneSection style={styles.backpackSection}>
-              <Backpack
-                id={'javalab-editor-backpack'}
-                displayTheme={displayTheme}
-                isButtonDisabled={isReadOnlyWorkspace}
-                onImport={this.onImportFile}
-              />
-            </PaneSection>
-          )}
+          <PaneSection style={styles.backpackSection}>
+            <Backpack
+              id={'javalab-editor-backpack'}
+              displayTheme={displayTheme}
+              isDisabled={isReadOnlyWorkspace}
+              onImport={this.onImportFile}
+            />
+          </PaneSection>
           <PaneButton
             id="data-mode-versions-header"
             iconClass="fa fa-clock-o"
@@ -862,8 +858,7 @@ export default connect(
     validation: state.javalab.validation,
     displayTheme: state.javalab.displayTheme,
     isEditingStartSources: state.pageConstants.isEditingStartSources,
-    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
-    backpackEnabled: state.javalab.backpackEnabled
+    isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace
   }),
   dispatch => ({
     setSource: (filename, source) => dispatch(setSource(filename, source)),

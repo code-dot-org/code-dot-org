@@ -39,7 +39,6 @@ require 'cdo/safe_names'
 class Section < ApplicationRecord
   include SerializedProperties
   include SharedConstants
-  include SharedCourseConstants
   self.inheritance_column = :login_type
 
   class << self
@@ -344,11 +343,11 @@ class Section < ApplicationRecord
       tts_autoplay_enabled: tts_autoplay_enabled,
       sharing_disabled: sharing_disabled?,
       login_type: login_type,
-      participant_type: participant_type,
       course_offering_id: unit_group ? unit_group&.course_version&.course_offering&.id : script&.course_version&.course_offering&.id,
       course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
       unit_id: unit_group ? script_id : nil,
       course_id: course_id,
+      participant_type: participant_type,
       script: {
         id: script_id,
         name: script.try(:name),

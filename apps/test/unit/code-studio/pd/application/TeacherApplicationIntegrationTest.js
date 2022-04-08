@@ -44,7 +44,9 @@ describe('TeacherApplication', () => {
   });
 
   it('Sends firehose event on initialization, save, and submit', () => {
-    const teacherApp = mount(<TeacherApplication {...defaultProps} />);
+    const teacherApp = mount(
+      <TeacherApplication {...defaultProps} allowPartialSaving />
+    );
     const formControllerProps = teacherApp.find('FormController').props();
     sinon.assert.calledOnce(firehoseClient.putRecord);
 

@@ -83,7 +83,7 @@ end
 # Because it will create fake data, it should not be run on prod (or if it is,
 # you need to be sure to clean up after yourself).
 def create_discount_eligible_section(teacher, section_name = 'Discount Eligible Section')
-  section = Section.create!(name: section_name, user_id: teacher.id, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+  section = Section.create!(name: section_name, user_id: teacher.id)
   csd2 = Script.get_from_cache('csd2')
   csd3 = Script.get_from_cache('csd3')
 

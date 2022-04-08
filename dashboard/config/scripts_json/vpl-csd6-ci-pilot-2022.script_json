@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-01 22:21:42 UTC",
+    "serialized_at": "2022-03-30 23:14:14 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -256,9 +256,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-pilot-S22-CI-Unit_PSP-U6L3"
-        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -273,50 +270,6 @@
       },
       "level_keys": [
         "VPL-CSD-pilot-S22-CI-Unit_PSP-U6L3"
-      ]
-    },
-    {
-      "chapter": 3,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Unit Overview"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "VPL-CSD-pilot-S22-2-week1-U6L5-good"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "vpl-csd6-ci-pilot-2022",
-        "activity_section.key": "31188655-102a-45a2-9f96-52bcc7157dee"
-      },
-      "level_keys": [
-        "VPL-CSD-pilot-S22-2-week1-U6L5-good"
-      ]
-    },
-    {
-      "chapter": 4,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "Unit Overview"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-CI-vocab-c4u-U6L6"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "vpl-csd6-ci-pilot-2022",
-        "activity_section.key": "31188655-102a-45a2-9f96-52bcc7157dee"
-      },
-      "level_keys": [
-        "VPL-CSD-PILOT-S22-CI-vocab-c4u-U6L6"
       ]
     }
   ],
@@ -338,30 +291,6 @@
         "level.key": "VPL-CSD-pilot-S22-CI-Unit_PSP-U6L3",
         "script_level.level_keys": [
           "VPL-CSD-pilot-S22-CI-Unit_PSP-U6L3"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "vpl-csd6-ci-pilot-2022",
-        "activity_section.key": "31188655-102a-45a2-9f96-52bcc7157dee"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "VPL-CSD-pilot-S22-2-week1-U6L5-good",
-        "script_level.level_keys": [
-          "VPL-CSD-pilot-S22-2-week1-U6L5-good"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "vpl-csd6-ci-pilot-2022",
-        "activity_section.key": "31188655-102a-45a2-9f96-52bcc7157dee"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "VPL-CSD-PILOT-S22-CI-vocab-c4u-U6L6",
-        "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-CI-vocab-c4u-U6L6"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

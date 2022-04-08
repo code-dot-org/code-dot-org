@@ -6,12 +6,7 @@
 - width ||= '100%'
 - play_button ||= 'center' # 'center' or 'caption' or 'none'
 - letterbox ||= 'true'
-- image_url ||= nil
-- if image_url
-  - image = image_url
-- else 
-  - image = letterbox == 'true' ? "//i.ytimg.com/vi/#{video_code}/0.jpg" : "//i.ytimg.com/vi/#{video_code}/mqdefault.jpg"
-- thumbnail_only ||= false
+- image = letterbox == 'true' ? "//i.ytimg.com/vi/#{video_code}/0.jpg" : "//i.ytimg.com/vi/#{video_code}/mqdefault.jpg"
 
 :scss
   .videothumbnail {
@@ -83,5 +78,4 @@
     %img.play{:src => "/shared/images/play-button.png", :alt => "play button"}
     .video_caption_link= caption
 
-- unless thumbnail_only
-  = view :display_video_lightbox, id: id, video_code: video_code, facebook: facebook, twitter: twitter, download_filename: download_filename, download_path: download_path
+= view :display_video_lightbox, id: id, video_code: video_code, facebook: facebook, twitter: twitter, download_filename: download_filename, download_path: download_path

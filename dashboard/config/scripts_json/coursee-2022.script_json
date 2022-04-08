@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2022-04-05 18:38:21 UTC",
+    "serialized_at": "2022-03-30 21:11:10 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2436,7 +2436,7 @@
       "key": "b6db9c2f-2e77-42e0-bc68-93d8f8e9b4b4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _What is the chorus to your favorite song?_\n\n####Vocabulary\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\nThis lesson has one new and important word:\n\n - **Function** - A piece of code that you can call over and over again.\n\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _What is the chorus to your favorite song?_\n\n####Vocabulary\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\nThis lesson has one new and important word:\n\n - **Function** - A piece of code that you can call over and over again.",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -2828,7 +2828,7 @@
       "key": "30852e3f-e1e0-433f-92a5-fe1e8780f11e",
       "position": 2,
       "properties": {
-        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Function** - A piece of code that you can call over and over again.\n\n- **Declare a Function** - Fill in a function with code and give the function a name.\n\n- **Call a Function** - Using the name of the function to tell the computer to run the code written in the function.\n"
+        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Function** - A piece of code that you can call over and over again."
       },
       "seeding_key": {
         "activity_section.key": "30852e3f-e1e0-433f-92a5-fe1e8780f11e",
@@ -3063,7 +3063,7 @@
       "key": "7538f281-8565-4235-a3f1-a40a2679d73d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _When might you use a conditional in your code?_ \n\nOpen up a discussion of when you might use a conditional in your code.\n \n####Vocabulary\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Vocabulary\" slide and \"Vocabulary (cont.)\" slide\n\n**Do This**: Tell students they will be using conditionals to solve this problem on Code.org. Give the definition of:\n\n - **Condition**: A statement that a program checks to see if it is true or false. If true, an action is taken. Otherwise, the action is ignored.\n - **Conditionals**: Statements that only run under certain conditions.\n- **While Loop** - A loop that continues to repeat while a condition is true.\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _When might you use a conditional in your code?_ \n\nOpen up a discussion of when you might use a conditional in your code.\n \n####Vocabulary\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Vocabulary\" slide\n\n**Do This**: Tell students they will be using conditionals to solve this problem on Code.org. Give the definition of:\n\n - **Condition**: A statement that a program checks to see if it is true or false. If true, an action is taken. Otherwise, the action is ignored.\n - **Conditionals**: Statements that only run under certain conditions.\n- **While Loop** - A loop that continues to repeat while a condition is true.\n\n",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -3224,7 +3224,7 @@
       "key": "0ea072c4-8a86-4897-b124-2c4ddad95b6c",
       "position": 2,
       "properties": {
-        "description": "####Vocabulary\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Vocabulary\" slide\n\n- **Conditionals** - Statements that only run under certain conditions.\n- **Function** - A piece of code that you can call over and over again."
+        "description": "####Vocabulary\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Vocabulary\" slide\n\n- **Conditionals** - Statements that only run under certain conditions.\n- **Function** - A piece of code that you can easily call over and over again."
       },
       "seeding_key": {
         "activity_section.key": "0ea072c4-8a86-4897-b124-2c4ddad95b6c",
@@ -10006,19 +10006,9 @@
       }
     },
     {
-      "key": "call_a_function",
-      "word": "Call a Function",
-      "definition": "Using the name of the function to tell the computer to run the code written in the function.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "call_a_function"
-      }
-    },
-    {
       "key": "condition",
       "word": "Condition",
-      "definition": "A statement that a program checks to see if it is true or false. If true, an action is taken. Otherwise, the action is ignored.",
+      "definition": "Something a program checks to see if it is true before allowing an action.",
       "properties": {
       },
       "seeding_key": {
@@ -10046,16 +10036,6 @@
       }
     },
     {
-      "key": "declare_a_function",
-      "word": "Declare a Function",
-      "definition": "Fill in a function with code and give the function a name.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "declare_a_function"
-      }
-    },
-    {
       "key": "define",
       "word": "Define",
       "definition": "Figure out the details of the problems that you are trying to solve",
@@ -10068,7 +10048,7 @@
     {
       "key": "function",
       "word": "Function",
-      "definition": "A piece of code that you can call over and over again.",
+      "definition": "A piece of code that you can easily call over and over again.",
       "properties": {
       },
       "seeding_key": {
@@ -10235,18 +10215,6 @@
       "seeding_key": {
         "lesson.key": "Functions in Minecraft",
         "vocabulary.key": "function"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions with Artist",
-        "vocabulary.key": "call_a_function"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions with Artist",
-        "vocabulary.key": "declare_a_function"
       }
     },
     {

@@ -16,8 +16,7 @@ answer 'definition 3'
 question 'Term 4'
 answer 'definition 4'
 
-question 'Term 5'
-answer 'definition 5'
+
 
 teacher_markdown <<MARKDOWN
 

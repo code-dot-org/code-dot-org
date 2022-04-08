@@ -21,7 +21,7 @@ describe('TeacherApplication', () => {
     const parsedData = JSON.parse(savedFormData);
     const schoolId = '5';
     const teacherApplication = isolateComponent(
-      <TeacherApplication {...defaultProps} />
+      <TeacherApplication {...defaultProps} allowPartialSaving />
     );
 
     it('has no initial data if there is nothing in session storage, no school id, and no form data', () => {

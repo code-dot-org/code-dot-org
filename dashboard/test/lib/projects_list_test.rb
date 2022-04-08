@@ -88,7 +88,7 @@ class ProjectsListTest < ActionController::TestCase
       birthday: 13.years.ago.to_datetime,
       abuse_score: 0
     }
-    Projects.stubs(:get_published_project_data).returns({})
+    StorageApps.stubs(:get_published_project_data).returns({})
     refute_nil ProjectsList.send(:get_published_project_and_user_data, project_and_user)
   end
 
@@ -101,7 +101,7 @@ class ProjectsListTest < ActionController::TestCase
       birthday: 13.years.ago.to_datetime,
       abuse_score: 0
     }
-    Projects.stubs(:get_published_project_data).returns({})
+    StorageApps.stubs(:get_published_project_data).returns({})
     refute_nil ProjectsList.send(:get_published_project_and_user_data, project_and_user)
   end
 
@@ -135,8 +135,8 @@ class ProjectsListTest < ActionController::TestCase
         abuse_score: 0
       }
     ]
-    Projects.stubs(:table).returns(db_result(stub_projects))
-    Projects.stubs(:get_published_project_data).returns({})
+    StorageApps.stubs(:table).returns(db_result(stub_projects))
+    StorageApps.stubs(:get_published_project_data).returns({})
     assert_equal 2, ProjectsList.send(:fetch_published_project_types, ['applab'], limit: 4)['applab'].length
   end
 
@@ -170,8 +170,8 @@ class ProjectsListTest < ActionController::TestCase
         abuse_score: 0
       }
     ]
-    Projects.stubs(:table).returns(db_result(stub_projects))
-    Projects.stubs(:get_published_project_data).returns({})
+    StorageApps.stubs(:table).returns(db_result(stub_projects))
+    StorageApps.stubs(:get_published_project_data).returns({})
     assert_equal 3, ProjectsList.send(:fetch_published_project_types, ['dance'], limit: 4)['dance'].length
   end
 
@@ -205,8 +205,8 @@ class ProjectsListTest < ActionController::TestCase
         abuse_score: -50
       }
     ]
-    Projects.stubs(:table).returns(db_result(stub_projects))
-    Projects.stubs(:get_published_project_data).returns({})
+    StorageApps.stubs(:table).returns(db_result(stub_projects))
+    StorageApps.stubs(:get_published_project_data).returns({})
     assert_equal 2, ProjectsList.send(:fetch_published_project_types, ['applab'], limit: 4)['applab'].length
   end
 
@@ -232,7 +232,7 @@ class ProjectsListTest < ActionController::TestCase
     fake_project = fake_project_featured_project_user_combo_data.first
 
     assert_equal JSON.parse(fake_project_value)["name"], returned_project["name"]
-    assert_equal Projects.make_thumbnail_url_cacheable(JSON.parse(fake_project_value)["thumbnailUrl"]), returned_project["thumbnailUrl"]
+    assert_equal StorageApps.make_thumbnail_url_cacheable(JSON.parse(fake_project_value)["thumbnailUrl"]), returned_project["thumbnailUrl"]
     assert_equal fake_project[:project_type], returned_project["type"]
     assert_equal fake_project[:published_at], returned_project["publishedAt"]
     assert_equal UserHelpers.initial(fake_project[:name]),
@@ -325,9 +325,9 @@ class ProjectsListTest < ActionController::TestCase
     section = Section.new([student], teacher, 321, 'sectionName', teacher.id)
 
     ProjectsList.stubs(:get_user_ids_by_storage_ids).returns(stub_users)
-    Projects.stubs(:table).returns(library_db_result(stub_projects))
+    StorageApps.stubs(:table).returns(library_db_result(stub_projects))
 
-    Projects.stubs(:get_published_project_data).returns({})
+    StorageApps.stubs(:get_published_project_data).returns({})
     lib_response = ProjectsList.send(:fetch_section_libraries, section)
     assert_equal 2, lib_response.length
     assert_equal applab_lib_name, lib_response[0][:name]
@@ -363,9 +363,9 @@ class ProjectsListTest < ActionController::TestCase
     section = Section.new([section_participant], section_owner, 321, 'sectionName', section_owner.id)
 
     ProjectsList.stubs(:get_user_ids_by_storage_ids).returns(stub_users)
-    Projects.stubs(:table).returns(library_db_result(stub_projects))
+    StorageApps.stubs(:table).returns(library_db_result(stub_projects))
 
-    Projects.stubs(:get_published_project_data).returns({})
+    StorageApps.stubs(:get_published_project_data).returns({})
     lib_response = ProjectsList.send(:fetch_section_libraries, section)
     assert_equal 1, lib_response.length
     assert_equal applab_lib_name, lib_response[0][:name]
@@ -409,9 +409,9 @@ class ProjectsListTest < ActionController::TestCase
     section = Section.new([], teacher, 321, 'sectionName', teacher.id)
 
     ProjectsList.stubs(:get_user_ids_by_storage_ids).returns(stub_users)
-    Projects.stubs(:table).returns(library_db_result(stub_projects))
+    StorageApps.stubs(:table).returns(library_db_result(stub_projects))
 
-    Projects.stubs(:get_published_project_data).returns({})
+    StorageApps.stubs(:get_published_project_data).returns({})
     lib_response = ProjectsList.send(:fetch_section_libraries, section)
     assert_equal 1, lib_response.length
     assert_equal shared_lib_name, lib_response[0][:name]
@@ -441,7 +441,7 @@ class ProjectsListTest < ActionController::TestCase
       }
     ]
 
-    Projects.stubs(:table).returns(stub(where: stub_projects))
+    StorageApps.stubs(:table).returns(stub(where: stub_projects))
 
     updated_channel_ids = ProjectsList.fetch_updated_library_channels(libraries)
     assert_equal [updated_channel_id], updated_channel_ids

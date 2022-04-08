@@ -1,11 +1,11 @@
 name 'CSA U3L4-L5_2022'
 title 'Check for Understanding'
 
-right 'The method determines whether the array `nums` contains all even numbers.'
-wrong 'The method determines whether the array `nums` contains no even numbers.'
-wrong 'The method determines whether the array `nums` has an even length.'
-wrong 'The method determines whether the first element of array `nums` is even.'
-wrong 'The method determines whether the last element of array `nums` is even.'
+wrong 'wrong answer'
+wrong 'wrong answer'
+right 'right answer'
+wrong 'wrong answer'
+wrong 'wrong answer'
 
 markdown <<MARKDOWN
 What is the purpose of the following method?

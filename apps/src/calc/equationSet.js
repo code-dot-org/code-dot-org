@@ -358,7 +358,7 @@ EquationSet.getEquationFromBlock = function(block) {
     case 'functional_pow':
     case 'functional_sqrt':
     case 'functional_squared':
-      var operation = Blockly.cdoUtils.getBlockFields(block)[0].getValue();
+      var operation = block.getTitles()[0].getValue();
       // some of these have 1 arg, others 2
       var argNames = ['ARG1'];
       if (block.getInput('ARG2')) {

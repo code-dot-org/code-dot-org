@@ -26,12 +26,12 @@ MAX_LEVEL_ID = 27369
 MAX_SCRIPT_ID = 3192
 MAX_LEVEL_SOURCE_ID = 1388006336
 MAX_USER_SCRIPT_ID = 139640482
-MAX_PROJECTS_ID = 444183673
+MAX_STORAGE_APPS_ID = 444183673
 MAX_USER_STORAGE_ID = 296919242
 MAX_HOC_ACTIVITY_ID = 1211366424
 MAX_AUTH_OPTION_ID = 26118801
 LEVEL_SOURCE_DATA = [[<xml><block type="craft_whenNight" deletable="false"><statement name="DO"><block type="craft_spawnEntity"><title name="TYPE">zombie</title><title name="DIRECTION">up</title></block></statement></block><block type="craft_zombieSpawnedTouchedClickedDay" deletable="false"><statement name="WHEN_SPAWNED"><block type="craft_wait"><title name="TYPE">0.4</title><next><block type="craft_spawnEntity"><title name="TYPE">zombie</title><title name="DIRECTION">up</title></block></next></block></statement><statement name="WHEN_TOUCHED"><block type="craft_wait"><title name="TYPE">2.0</title><next><block type="craft_attack"><next><block type="craft_moveToward"><title name="TYPE">Player</title></block></next></block></next></block></statement><statement name="WHEN_USED"><block type="craft_flashEntity"><next><block type="craft_destroyEntity"></block></next></block></statement><statement name="WHEN_DAY"><block type="craft_destroyEntity"></block></statement></block></xml>]]
-PROJECTS_VALUE = [[{\"hidden\":true,\"createdAt\":\"2019-09-22T04:05:08.511+00:00\",\"updatedAt\":\"2019-09-22T04:05:08.511+00:00\"}]]
+STORAGE_APPS_VALUE = [[{\"hidden\":true,\"createdAt\":\"2019-09-22T04:05:08.511+00:00\",\"updatedAt\":\"2019-09-22T04:05:08.511+00:00\"}]]
 
 function init_query_templates()
   -- TODO: read_queries are currently not used 
@@ -109,7 +109,7 @@ function init_query_templates()
       qps = 571.23,
       query = [[
         SELECT *
-        FROM dashboard_production.user_project_storage_ids
+        FROM pegasus.user_storage_ids
         WHERE (`user_id` = $userId)
         LIMIT 1
       ]]
@@ -144,9 +144,9 @@ function init_query_templates()
     {
       qps = 8.82,
       query = [[
-        UPDATE dashboard_production.projects
-        SET `value` = '$projectsValue', `updated_at` = '$date', `updated_ip` = '71.80.212.17'
-        WHERE ((`id` = $projectId) AND (`state` != 'deleted'))
+        UPDATE pegasus.storage_apps
+        SET `value` = '$storageAppsValue', `updated_at` = '$date', `updated_ip` = '71.80.212.17'
+        WHERE ((`id` = $storageAppId) AND (`state` != 'deleted'))
       ]]
     },
     {
@@ -216,9 +216,9 @@ function init_query_templates()
     {
       qps = 201.21,
       query = [[
-        UPDATE dashboard_production.projects
-        SET `value` = '$projectsValue', `updated_at` = '$date', `updated_ip` = '24.86.5.86', `project_type` = 'spritelab'
-        WHERE ((`id` = $projectId) AND (`state` != 'deleted'))
+        UPDATE pegasus.storage_apps
+        SET `value` = '$storageAppsValue', `updated_at` = '$date', `updated_ip` = '24.86.5.86', `project_type` = 'spritelab'
+        WHERE ((`id` = $storageAppId) AND (`state` != 'deleted'))
       ]]
     },
     {
@@ -248,9 +248,9 @@ function init_query_templates()
     {
       qps = 18.44,
       query = [[
-        INSERT INTO dashboard_production.projects
+        INSERT INTO pegasus.storage_apps
         (`storage_id`, `value`, `created_at`, `updated_at`, `updated_ip`, `abuse_score`, `project_type`, `published_at`, `remix_parent_id`, `skip_content_moderation`, `standalone`)
-        VALUES (92938404, '$projectsValue', '$date', '$date', '14.229.194.186', 0, NULL, NULL, NULL, 0, 0)
+        VALUES (92938404, '$storageAppsValue', '$date', '$date', '14.229.194.186', 0, NULL, NULL, NULL, 0, 0)
       ]]
     },
     {
@@ -274,13 +274,13 @@ function init_query_templates()
       query = [[
         INSERT INTO dashboard_production.channel_tokens
         (`storage_app_id`, `level_id`, `created_at`, `updated_at`, `storage_id`)
-        VALUES ($projectId, $levelId, '$date', '$date', $userStorageId)
+        VALUES ($storageAppId, $levelId, '$date', '$date', $userStorageId)
       ]]
     },
     {
       qps = 15.16,
       query = [[
-        INSERT INTO dashboard_production.user_project_storage_ids (`user_id`) VALUES (NULL)
+        INSERT INTO pegasus.user_storage_ids (`user_id`) VALUES (NULL)
       ]]
     },
   }
@@ -326,8 +326,8 @@ function event()
     userLevelId = math.random(1, MAX_USER_LEVEL_ID),
     date = os.date("%Y-%m-%d %H:%M:%S", os.time()),
     levelSourceData = LEVEL_SOURCE_DATA,
-    projectsValue = PROJECTS_VALUE,
-    projectId = math.random(1, MAX_PROJECTS_ID),
+    storageAppsValue = STORAGE_APPS_VALUE,
+    storageAppId = math.random(1, MAX_STORAGE_APPS_ID),
     userStorageId = math.random(1, MAX_USER_STORAGE_ID),
     userScriptId = math.random(1, MAX_USER_SCRIPT_ID),
     session = sysbench.rand.string(string.rep("@", sysbench.rand.special(36, 36))), -- Random string of length 36

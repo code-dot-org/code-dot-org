@@ -16,26 +16,8 @@ export default function CommitDialogBody({
   files,
   notes,
   onToggleFile,
-  onChangeNotes,
-  showSaveToBackpackSection
+  onChangeNotes
 }) {
-  const renderSaveToBackpackSection = () => (
-    <>
-      <div style={{...styles.bold, ...styles.filesHeader}}>
-        {i18n.saveToBackpack()}
-      </div>
-      {files.map(file => {
-        return (
-          <CommitDialogFileRow
-            file={file}
-            onToggleFile={onToggleFile}
-            key={file.name}
-          />
-        );
-      })}
-    </>
-  );
-
   return (
     <div>
       <label htmlFor="commit-notes" style={{...styles.bold, ...styles.notes}}>
@@ -48,7 +30,18 @@ export default function CommitDialogBody({
         style={styles.textarea}
         value={notes}
       />
-      {showSaveToBackpackSection && renderSaveToBackpackSection()}
+      <div style={{...styles.bold, ...styles.filesHeader}}>
+        {i18n.saveToBackpack()}
+      </div>
+      {files.map(file => {
+        return (
+          <CommitDialogFileRow
+            file={file}
+            onToggleFile={onToggleFile}
+            key={file.name}
+          />
+        );
+      })}
     </div>
   );
 }
@@ -57,8 +50,7 @@ CommitDialogBody.propTypes = {
   files: PropTypes.arrayOf(PropTypes.shape(fileShape)).isRequired,
   notes: PropTypes.string,
   onToggleFile: PropTypes.func.isRequired,
-  onChangeNotes: PropTypes.func.isRequired,
-  showSaveToBackpackSection: PropTypes.bool
+  onChangeNotes: PropTypes.func.isRequired
 };
 
 const styles = {

@@ -3,16 +3,16 @@ require_relative './storage_id'
 require_relative './profanity_privacy_helper'
 
 #
-# Projects
+# StorageApps
 #
-class Projects
+class StorageApps
   class NotFound < Sinatra::NotFound
   end
 
   def initialize(storage_id)
     @storage_id = storage_id
 
-    @table = Projects.table
+    @table = StorageApps.table
   end
 
   def create(value, ip:, type: nil, published_at: nil, remix_parent_id: nil, standalone: true)
@@ -36,10 +36,10 @@ class Projects
   end
 
   def delete(channel_id)
-    owner, project_id = storage_decrypt_channel_id(channel_id)
+    owner, storage_app_id = storage_decrypt_channel_id(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
 
-    delete_count = @table.where(id: project_id).update(state: 'deleted')
+    delete_count = @table.where(id: storage_app_id).update(state: 'deleted')
     raise NotFound, "channel `#{channel_id}` not found" if delete_count == 0
 
     # TODO: Delete all storage associated with this channel (e.g. properties and tables and assets)
@@ -48,18 +48,18 @@ class Projects
   end
 
   def restore(channel_id)
-    owner, project_id = storage_decrypt_channel_id(channel_id)
+    owner, storage_app_id = storage_decrypt_channel_id(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
 
-    update_count = @table.where(id: project_id).update(state: 'active')
+    update_count = @table.where(id: storage_app_id).update(state: 'active')
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
 
     true
   end
 
   def get(channel_id)
-    owner, project_id = storage_decrypt_channel_id(channel_id)
-    row = @table.where(id: project_id).exclude(state: 'deleted').first
+    owner, storage_app_id = storage_decrypt_channel_id(channel_id)
+    row = @table.where(id: storage_app_id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
 
     # For some apps, if it was created by a signed out user, we don't want anyone
@@ -76,15 +76,15 @@ class Projects
       raise NotFound, "channel `#{channel_id}` not shareable" if anonymous_age_restricted_apps.include? project_type
     end
 
-    Projects.merged_row_value(row, channel_id: channel_id, is_owner: owner == @storage_id)
+    StorageApps.merged_row_value(row, channel_id: channel_id, is_owner: owner == @storage_id)
   end
 
   def update(channel_id, value, ip_address, project_type: nil, locale: 'en')
-    owner, project_id = storage_decrypt_channel_id(channel_id)
+    owner, storage_app_id = storage_decrypt_channel_id(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
 
     new_name = value['name']
-    project = @table.where(id: project_id).first
+    project = @table.where(id: storage_app_id).first
     old_name = JSON.parse(project[:value])['name']
     if new_name != old_name
       share_failure = title_profanity_privacy_violation(new_name, locale)
@@ -98,7 +98,7 @@ class Projects
       updated_ip: ip_address,
     }
     row[:project_type] = project_type if project_type
-    update_count = @table.where(id: project_id).exclude(state: 'deleted').update(row)
+    update_count = @table.where(id: storage_app_id).exclude(state: 'deleted').update(row)
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
 
     # We can't include :created_at here without an extra DB query. Most consumers won't need :created_at during updates, so omit it.
@@ -106,17 +106,17 @@ class Projects
   end
 
   def publish(channel_id, type, user)
-    owner, project_id = storage_decrypt_channel_id(channel_id)
+    owner, storage_app_id = storage_decrypt_channel_id(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
     row = {
       project_type: type,
       published_at: DateTime.now,
     }
-    update_count = @table.where(id: project_id).exclude(state: 'deleted').update(row)
+    update_count = @table.where(id: storage_app_id).exclude(state: 'deleted').update(row)
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
 
-    project = @table.where(id: project_id).first
-    Projects.get_published_project_data(project, channel_id).merge(
+    project = @table.where(id: storage_app_id).first
+    StorageApps.get_published_project_data(project, channel_id).merge(
       # For privacy reasons, include only the first initial of the student's name.
       studentName: user && UserHelpers.initial(user[:name]),
       studentAgeRange: user && UserHelpers.age_range_from_birthday(user[:birthday]),
@@ -124,11 +124,11 @@ class Projects
   end
 
   def get_active_projects
-    Projects.table.where(storage_id: @storage_id, state: 'active')
+    StorageApps.table.where(storage_id: @storage_id, state: 'active')
   end
 
   def get_projects_with_state(state: 'active', order: nil)
-    query = Projects.table.where(storage_id: @storage_id, state: state)
+    query = StorageApps.table.where(storage_id: @storage_id, state: state)
 
     if order.present?
       query.order(order)
@@ -137,16 +137,16 @@ class Projects
     query
   end
 
-  # Returns an array of all ids for projects with storage id = @storage_id
-  def get_all_project_ids
-    Projects.table.
+  # Returns an array of all ids for storage apps with storage id = @storage_id
+  def get_all_storage_app_ids
+    StorageApps.table.
       where(storage_id: @storage_id).
       map(:id)
   end
 
-  # Soft-delete all of the projects for user with storage id @storage_id
+  # Soft-delete all of the storage apps for user with storage id @storage_id
   def soft_delete_all
-    Projects.table.
+    StorageApps.table.
       where(storage_id: @storage_id).
       exclude(state: 'deleted').
       update(state: 'deleted', updated_at: Time.now)
@@ -154,19 +154,19 @@ class Projects
 
   # Restores all of this user's projects that were soft-deleted after the given time
   def restore_if_deleted_after(deleted_time)
-    Projects.table.
+    StorageApps.table.
       where(storage_id: @storage_id, state: 'deleted').
       where(Sequel.lit('updated_at >= ?', deleted_time.localtime)).
       update(state: 'active', updated_at: Time.now)
   end
 
-  # extracts published project data from a project (aka projects table row).
+  # extracts published project data from a project (aka storage_apps table row).
   def self.get_published_project_data(project, channel_id)
     project_value = JSON.parse(project[:value])
     {
       channel: channel_id,
       name: project_value['name'],
-      thumbnailUrl: Projects.make_thumbnail_url_cacheable(project_value['thumbnailUrl']),
+      thumbnailUrl: StorageApps.make_thumbnail_url_cacheable(project_value['thumbnailUrl']),
       # Note that we are using the new :project_type field rather than extracting
       # it from :value. :project_type might not be present in unpublished projects.
       type: project[:project_type],
@@ -180,18 +180,18 @@ class Projects
   end
 
   def unpublish(channel_id)
-    owner, project_id = storage_decrypt_channel_id(channel_id)
+    owner, storage_app_id = storage_decrypt_channel_id(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
     row = {
       published_at: nil,
     }
-    update_count = @table.where(id: project_id).exclude(state: 'deleted').update(row)
+    update_count = @table.where(id: storage_app_id).exclude(state: 'deleted').update(row)
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
   end
 
   # Determine if the current user can view the project
   def get_sharing_disabled(channel_id, current_user_id)
-    owner_storage_id, project_id = storage_decrypt_channel_id(channel_id)
+    owner_storage_id, storage_app_id = storage_decrypt_channel_id(channel_id)
     owner_user_id = user_id_for_storage_id(owner_storage_id)
 
     # Sharing of a project is not disabled for the project owner
@@ -202,7 +202,7 @@ class Projects
     elsif teaches_student?(owner_user_id, current_user_id)
       return false
     elsif get_user_sharing_disabled(owner_user_id)
-      !users_paired_on_level?(project_id, current_user_id, owner_user_id, owner_storage_id)
+      !users_paired_on_level?(storage_app_id, current_user_id, owner_user_id, owner_storage_id)
     else
       return false
     end
@@ -211,9 +211,9 @@ class Projects
     true
   end
 
-  def users_paired_on_level?(project_id, current_user_id, owner_user_id, owner_storage_id)
+  def users_paired_on_level?(storage_app_id, current_user_id, owner_user_id, owner_storage_id)
     channel_tokens_table = DASHBOARD_DB[:channel_tokens]
-    level_id_row = channel_tokens_table.where(storage_app_id: project_id, storage_id: owner_storage_id).first
+    level_id_row = channel_tokens_table.where(storage_app_id: storage_app_id, storage_id: owner_storage_id).first
     return false if level_id_row.nil?
     level_id = level_id_row[:level_id]
 
@@ -229,26 +229,26 @@ class Projects
   end
 
   def increment_abuse(channel_id, amount = 10)
-    _owner, project_id = storage_decrypt_channel_id(channel_id)
+    _owner, storage_app_id = storage_decrypt_channel_id(channel_id)
 
-    row = @table.where(id: project_id).exclude(state: 'deleted').first
+    row = @table.where(id: storage_app_id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
 
     new_score = row[:abuse_score] + (JSON.parse(row[:value])['frozen'] ? 0 : amount)
 
-    update_count = @table.where(id: project_id).exclude(state: 'deleted').update({abuse_score: new_score})
+    update_count = @table.where(id: storage_app_id).exclude(state: 'deleted').update({abuse_score: new_score})
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
 
     new_score
   end
 
   def reset_abuse(channel_id)
-    _owner, project_id = storage_decrypt_channel_id(channel_id)
+    _owner, storage_app_id = storage_decrypt_channel_id(channel_id)
 
-    row = @table.where(id: project_id).exclude(state: 'deleted').first
+    row = @table.where(id: storage_app_id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
 
-    update_count = @table.where(id: project_id).exclude(state: 'deleted').update({abuse_score: 0})
+    update_count = @table.where(id: storage_app_id).exclude(state: 'deleted').update({abuse_score: 0})
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
 
     0
@@ -264,9 +264,9 @@ class Projects
   end
 
   def content_moderation_disabled?(channel_id)
-    _owner, project_id = storage_decrypt_channel_id(channel_id)
+    _owner, storage_app_id = storage_decrypt_channel_id(channel_id)
 
-    row = @table.where(id: project_id).exclude(state: 'deleted').first
+    row = @table.where(id: storage_app_id).exclude(state: 'deleted').first
     return false unless row
 
     row[:skip_content_moderation]
@@ -282,9 +282,9 @@ class Projects
   # value for content_moderation_disabled.
   #
   def set_content_moderation(channel_id, disable)
-    _owner, project_id = storage_decrypt_channel_id(channel_id)
+    _owner, storage_app_id = storage_decrypt_channel_id(channel_id)
     rows_changed = @table.
-      where(id: project_id).
+      where(id: storage_app_id).
       exclude(state: 'deleted').
       update({skip_content_moderation: disable})
     raise NotFound, "channel `#{channel_id}` not found" unless rows_changed > 0
@@ -296,7 +296,7 @@ class Projects
     @table.where(storage_id: @storage_id).exclude(state: 'deleted').map do |row|
       channel_id = storage_encrypt_channel_id(row[:storage_id], row[:id])
       begin
-        Projects.merged_row_value(
+        StorageApps.merged_row_value(
           row,
           channel_id: channel_id,
           is_owner: row[:storage_id] == @storage_id
@@ -370,10 +370,10 @@ class Projects
   #
   def self.remix_ancestry(channel_id, depth: 1)
     [].tap do |ancestors|
-      _, project_id = storage_decrypt_channel_id(channel_id)
-      next_row = Projects.table.where(id: project_id).first
+      _, storage_app_id = storage_decrypt_channel_id(channel_id)
+      next_row = StorageApps.table.where(id: storage_app_id).first
       while next_row&.[](:remix_parent_id)
-        next_row = Projects.table.where(id: next_row[:remix_parent_id]).first
+        next_row = StorageApps.table.where(id: next_row[:remix_parent_id]).first
         ancestors.push storage_encrypt_channel_id(next_row[:storage_id], next_row[:id]) if next_row
         break if ancestors.size >= depth
       end
@@ -383,14 +383,14 @@ class Projects
   end
 
   def self.get_abuse(channel_id)
-    _, project_id = storage_decrypt_channel_id(channel_id)
-    project_info = Projects.table.where(id: project_id).first
+    _, storage_app_id = storage_decrypt_channel_id(channel_id)
+    project_info = StorageApps.table.where(id: storage_app_id).first
     project_info[:abuse_score]
   end
 
-  # Returns projects with id in ids
+  # Returns storage apps with id in ids
   def self.get_by_ids(ids)
-    Projects.table.where(id: ids)
+    StorageApps.table.where(id: ids)
   end
 
   def self.table
@@ -404,7 +404,7 @@ class Projects
   # need to do this because the project type is usually part of the URL,
   # but for a few APIs this is needed.
   #
-  # @param [Hash] row - A projects merged row value as returned by
+  # @param [Hash] row - A storage_apps merged row value as returned by
   #   `merged_row_value` or `get`.
   # @returns [String] The discovered project type, or 'unknown' if the type
   #   can't be determined with given information.
@@ -412,7 +412,7 @@ class Projects
   def project_type_from_merged_row(row)
     # We can derive channel project type from a few places.
     #
-    # 1. The `project_type` column in the projects table.
+    # 1. The `project_type` column in the storage_apps table.
     #    This is often NULL for "hidden" levels, which includes project-backed
     #    script levels.
     return row[:projectType] if row[:projectType]

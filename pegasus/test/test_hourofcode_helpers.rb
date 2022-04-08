@@ -1,5 +1,4 @@
 require_relative './test_helper'
-require_relative '../helpers/hourofcode_helpers'
 require 'webmock/minitest'
 require 'geocoder'
 
@@ -83,56 +82,5 @@ class HourOfCodeHelpersTest < Minitest::Test
     header 'X_FORWARDED_FOR', "#{cloudfront_ip}, #{local_load_balancer}"
     response = get '/xyz'
     assert_equal 'http://hourofcode.com/us/xyz', response.headers['Location']
-  end
-
-  def test_get_language_names_in_english
-    sources = {
-      language_code: {
-        en: 'English'
-      },
-      locale_code: {
-        "es-es": "Spanish (Spain)"
-      }
-    }
-    I18n.backend.store_translations I18n.default_locale, sources
-
-    assert_equal sources[:language_code][:en], hoc_language('en', I18n.default_locale)
-    assert_equal sources[:language_code][:en], hoc_language('EN', I18n.default_locale)
-
-    assert_equal sources[:locale_code][:'es-es'], hoc_language('es-es', I18n.default_locale)
-    assert_equal sources[:locale_code][:'es-es'], hoc_language('ES-ES', I18n.default_locale)
-
-    expected_result = "#{sources[:locale_code][:'es-es']}, #{sources[:language_code][:en]}"
-    assert_equal expected_result, hoc_language(' es-es, en ', I18n.default_locale)
-    assert_equal expected_result, hoc_language(' ES-ES, EN ', I18n.default_locale)
-
-    invalid_language_code = 'xx-yy'
-    assert_equal invalid_language_code, hoc_language(invalid_language_code, I18n.default_locale)
-  end
-
-  def test_get_translated_language_names
-    test_locale = :"te-ST"
-    translations = {
-      language_code: {
-        en: 'Inglesa'
-      },
-      locale_code: {
-        "es-es": "Español (España)"
-      }
-    }
-    I18n.enforce_available_locales = false
-    I18n.backend.store_translations test_locale, translations
-
-    assert_equal translations[:language_code][:en], hoc_language('en', test_locale)
-    assert_equal translations[:language_code][:en], hoc_language('EN', test_locale)
-
-    assert_equal translations[:locale_code][:'es-es'], hoc_language('es-es', test_locale)
-    assert_equal translations[:locale_code][:'es-es'], hoc_language('ES-ES', test_locale)
-    expected_result = "#{translations[:locale_code][:'es-es']}, #{translations[:language_code][:en]}"
-    assert_equal expected_result, hoc_language(' es-es, en ', test_locale)
-    assert_equal expected_result, hoc_language(' ES-ES, EN ', test_locale)
-
-    invalid_language_code = 'xx-yy'
-    assert_equal invalid_language_code, hoc_language(invalid_language_code, test_locale)
   end
 end

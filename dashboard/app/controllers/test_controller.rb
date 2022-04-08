@@ -67,7 +67,7 @@ class TestController < ApplicationController
     }
     fake_user = User.create!(attributes)
 
-    section = Section.create(name: "New Section", user: fake_user, script_id: script.id, course_id: course.id, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    section = Section.create(name: "New Section", user: fake_user, script_id: script.id, course_id: course.id)
     section.students << user
     section.save!
     head :ok
@@ -89,7 +89,7 @@ class TestController < ApplicationController
     }
     fake_user = User.create!(attributes)
 
-    section = Section.create(name: "New Section", user: fake_user, script: script, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    section = Section.create(name: "New Section", user: fake_user, script: script)
     section.students << user
     section.save!
     head :ok

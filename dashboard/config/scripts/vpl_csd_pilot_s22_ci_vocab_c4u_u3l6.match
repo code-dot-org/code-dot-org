@@ -1,19 +1,22 @@
 name 'VPL-CSD-PILOT-S22-CI-vocab-c4u-U3L6'
 title 'Check for understanding'
 description 'Match the correct description to each term.'
-height'75'
+height'65'
 
-question 'Paramter '
-answer 'A first or early model of a product that allows you to test assumptions before developing a final version.'
+
+question 'Parameter '
+answer 'definition 1'
 
 question 'Variable'
-answer 'The visual elements of a program through which a user controls or communicates with the application. Often abbreviated UI.'
+answer 'definition 2'
 
-question 'Sprite '
-answer 'A first or early model of a product that allows you to test assumptions before developing a final version.'
+question 'Sprite'
+answer 'definition 3'
 
 question 'Counter Pattern'
-answer 'A first or early model of a product that allows you to test assumptions before developing a final version.'
+answer 'definition 4'
+
+
 
 teacher_markdown <<MARKDOWN
 

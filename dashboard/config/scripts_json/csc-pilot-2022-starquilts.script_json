@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-pilot-2022-starquilts",
-    "serialized_at": "2022-04-05 14:21:06 UTC",
+    "serialized_at": "2022-03-29 20:52:44 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -80,207 +80,16 @@
     }
   ],
   "lesson_activities": [
-    {
-      "key": "182debfe-1909-48a1-baa5-9fd4623afeb9",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "182debfe-1909-48a1-baa5-9fd4623afeb9",
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-2022-starquilts"
-      }
-    },
-    {
-      "key": "c94ce2ac-fa37-4254-8a71-3b756b826ba0",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "c94ce2ac-fa37-4254-8a71-3b756b826ba0",
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-2022-starquilts"
-      }
-    }
+
   ],
   "activity_sections": [
-    {
-      "key": "a63fe886-f192-4ae2-80f4-9aff5510c817",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "a63fe886-f192-4ae2-80f4-9aff5510c817",
-        "lesson_activity.key": "182debfe-1909-48a1-baa5-9fd4623afeb9"
-      }
-    },
-    {
-      "key": "e9af003a-b874-4e0e-849d-5f7f274b9670",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "e9af003a-b874-4e0e-849d-5f7f274b9670",
-        "lesson_activity.key": "c94ce2ac-fa37-4254-8a71-3b756b826ba0"
-      }
-    },
-    {
-      "key": "defde4a1-a6c3-41f3-ba02-1ff54f10806f",
-      "position": 2,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "defde4a1-a6c3-41f3-ba02-1ff54f10806f",
-        "lesson_activity.key": "c94ce2ac-fa37-4254-8a71-3b756b826ba0"
-      }
-    }
+
   ],
   "script_levels": [
-    {
-      "chapter": 1,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc-starquilts-comments"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc-starquilts-comments"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "e9af003a-b874-4e0e-849d-5f7f274b9670"
-      },
-      "level_keys": [
-        "csc-starquilts-comments"
-      ]
-    },
-    {
-      "chapter": 2,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc-starquilts-first-point"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc-starquilts-first-point"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "e9af003a-b874-4e0e-849d-5f7f274b9670"
-      },
-      "level_keys": [
-        "csc-starquilts-first-point"
-      ]
-    },
-    {
-      "chapter": 3,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csc-starquilts-second-point"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc-starquilts-second-point"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "e9af003a-b874-4e0e-849d-5f7f274b9670"
-      },
-      "level_keys": [
-        "csc-starquilts-second-point"
-      ]
-    },
-    {
-      "chapter": 4,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc-starquilts-third-point"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "e9af003a-b874-4e0e-849d-5f7f274b9670"
-      },
-      "level_keys": [
-        "csc-starquilts-third-point"
-      ]
-    }
+
   ],
   "levels_script_levels": [
-    {
-      "seeding_key": {
-        "level.key": "csc-starquilts-comments",
-        "script_level.level_keys": [
-          "csc-starquilts-comments"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "e9af003a-b874-4e0e-849d-5f7f274b9670"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc-starquilts-first-point",
-        "script_level.level_keys": [
-          "csc-starquilts-first-point"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "e9af003a-b874-4e0e-849d-5f7f274b9670"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc-starquilts-second-point",
-        "script_level.level_keys": [
-          "csc-starquilts-second-point"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "e9af003a-b874-4e0e-849d-5f7f274b9670"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc-starquilts-third-point",
-        "script_level.level_keys": [
-          "csc-starquilts-third-point"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "e9af003a-b874-4e0e-849d-5f7f274b9670"
-      }
-    }
+
   ],
   "resources": [
 

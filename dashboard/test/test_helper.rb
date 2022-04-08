@@ -635,15 +635,15 @@ def with_locale(locale)
   end
 end
 
-# Mock Projects to generate random tokens
-class Projects
+# Mock StorageApps to generate random tokens
+class StorageApps
   def initialize(storage_id)
     @storage_id = storage_id
   end
 
   def create(_, _)
-    project_id = SecureRandom.random_number(100000)
-    storage_encrypt_channel_id(@storage_id, project_id)
+    storage_app_id = SecureRandom.random_number(100000)
+    storage_encrypt_channel_id(@storage_id, storage_app_id)
   end
 
   def most_recent(_)

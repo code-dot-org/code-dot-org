@@ -216,15 +216,8 @@ module LevelsHelper
       server_project_level_id: @level.project_template_level.try(:id)
     )
 
-    # Enable backpack for levels with a backpack option (currently all non-standalone Javalab),
-    # and get the backpack channel token if it exists
-    backpack_enabled = !!(@level.is_a?(Javalab) &&
-      (ProjectsController::STANDALONE_PROJECTS["javalab"]["name"] != @level.name) &&
-      (@user || current_user))
-
-    view_options(backpack_enabled: backpack_enabled)
-
-    if backpack_enabled
+    # For levels with a backpack option (currently all Javalab), get the backpack channel token if it exists
+    if @level.is_a?(Javalab) && (@user || current_user)
       user_id = @user&.id || current_user&.id
       backpack = Backpack.find_by_user_id(user_id)
       view_options(backpack_channel: backpack&.channel)

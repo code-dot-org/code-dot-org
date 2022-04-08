@@ -14,5 +14,5 @@ function setSizeAll_dropdown(scale) {
   setProp({costume: "foxington"}, "scale", 223 * scale);
   setProp({costume: "luggins"}, "scale", 215 * scale);
   setProp({costume: "fluffit"}, "scale", 217 * scale);
-  setProp({costume: "car_group"}, "scale", 300 * scale);
+  setProp({costume: "car_group"}, "150", 100 * scale);
 }

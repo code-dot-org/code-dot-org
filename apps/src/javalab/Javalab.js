@@ -18,8 +18,7 @@ import javalab, {
   setDisableFinishButton,
   setIsTesting,
   openPhotoPrompter,
-  closePhotoPrompter,
-  setBackpackEnabled
+  closePhotoPrompter
 } from './javalabRedux';
 import playground from './playground/playgroundRedux';
 import {TestResults} from '@cdo/apps/constants';
@@ -271,14 +270,9 @@ Javalab.prototype.init = function(config) {
   // Dispatches a redux update of display theme
   getStore().dispatch(setDisplayTheme(this.displayTheme));
 
-  const backpackEnabled = !!config.backpackEnabled;
-  getStore().dispatch(setBackpackEnabled(backpackEnabled));
-
-  if (backpackEnabled) {
-    getStore().dispatch(
-      setBackpackApi(new BackpackClientApi(config.backpackChannel))
-    );
-  }
+  getStore().dispatch(
+    setBackpackApi(new BackpackClientApi(config.backpackChannel))
+  );
 
   getStore().dispatch(
     setDisableFinishButton(

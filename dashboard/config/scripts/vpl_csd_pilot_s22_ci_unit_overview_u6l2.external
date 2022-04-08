@@ -15,21 +15,15 @@ markdown <<MARKDOWN
 
 ## 
 
-<img src="https://images.code.org/e78e4d2060dd3092f19834442770799e-image-1648879294294.JPG" alt="Image of app asking the user what colors to display on a small circuit board"  style="padding-left: 120px; height: 250px; clear: both; margin: 0 20px 20px 0;">
+## Update with a unit specific image then remove this text
 
-<img src="https://images.code.org/23b0c0fba77d686d247d41e79f932f68-image-1648881074935.png" alt="Image of a small circuit board"  style="padding-left: 120px; height: 250px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/c5c29ed5d000cd99987c8e829da3aa3b-image-1634828701624.gif" alt="Image of AI bot moving through the steps: choose a dataset, prepare data, train AI model, assess results"  style="padding-left: 120px; height: 250px; clear: both; margin: 0 20px 20px 0;">
+
 
 ### **Implementation guidance** 
 
-* ##### Complete Unit 1 Chapter 1 before starting this unit
-
-* ##### This unit assumes students have completed Unit 3 Chapter 1 and all of Unit 4. Students without this background may struggle in this unit.
-
-* ##### This unit requires students to have access to Circuit Playground's - <a href="https://code.org/circuitplayground" target="blank" rel="noopener noreferrer"> click here </a> for more information about using Circuit Playground's in your classroom
-
-* ##### This unit could be swapped out with Unit 7 - see the <a href="https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview" target="blank" rel="noopener noreferrer"> Implementation Guide  </a> for more information on this option
-
-* ##### Guidance for how to support students in programming levels and differentiate tasks are available in the <a href="https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit?usp=sharing" target="blank" rel="noopener noreferrer"> Debugging Guide</a> and <a href="https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/edit?usp=sharing" target="blank" rel="noopener noreferrer">Differentiation Guide</a>
+* ##### Complete Unit 1, Unit 2, Unit 3, Unit 4 and Unit 5 before starting this unit
+* ##### Guidance for how to support students in programming levels and differentiate tasks are available in the <a href="https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit?usp=sharing" target="blank" rel="noopener noreferrer">Debugging Guide</a> and <a href="https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/edit?usp=sharing" target="blank" rel="noopener noreferrer">Differentiation Guide</a>
  
  * ##### You can learn more about the Maker App environment on p. 32 - <a href="https://studio.code.org/courses/csd-2021" target="blank" rel="noopener noreferrer"> Learning Tools <a href="https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/edit?usp=sharing" target="blank" rel="noopener noreferrer"> </a>
 
@@ -41,6 +35,8 @@ markdown <<MARKDOWN
 ##### The suggested time is based on 225 instructional minutes per week. Visit the <a href="https://studio.code.org/s/csd6-2022" target="blank" rel="noopener noreferrer">Unit Overview Page</a> and use the unit calendar to adjust the instructional minutes to reflect the time you have with your students each week. 
 
 <div style="clear:both"/>
+
+
 
 
 MARKDOWN

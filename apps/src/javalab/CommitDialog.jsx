@@ -24,20 +24,18 @@ export class UnconnectedCommitDialog extends React.Component {
   };
 
   componentDidMount() {
-    if (this.props.backpackEnabled) {
-      this.updateBackpackFileList();
-    }
+    this.updateBackpackFileList();
   }
 
   // Get updated backpack file list every time we open the modal
   componentDidUpdate(prevProps) {
-    if (this.props.backpackEnabled && this.props.isOpen && !prevProps.isOpen) {
+    if (this.props.isOpen && !prevProps.isOpen) {
       this.updateBackpackFileList();
     }
   }
 
   updateBackpackFileList() {
-    if (this.props.backpackEnabled && this.props.backpackApi.hasBackpack()) {
+    if (this.props.backpackApi.hasBackpack()) {
       this.props.backpackApi.getFileList(
         () => this.setState({hasBackpackLoadError: true}),
         filenames => this.setState({existingBackpackFiles: filenames})
@@ -114,9 +112,7 @@ export class UnconnectedCommitDialog extends React.Component {
 
   commitAndSaveToBackpack = () => {
     this.saveCommit();
-    if (this.props.backpackEnabled) {
-      this.saveToBackpack();
-    }
+    this.saveToBackpack();
   };
 
   getConflictingBackpackFiles = () => {
@@ -245,7 +241,6 @@ export class UnconnectedCommitDialog extends React.Component {
             notes={commitNotes}
             onToggleFile={this.toggleFileToBackpack}
             onChangeNotes={this.updateNotes}
-            showSaveToBackpackSection={this.props.backpackEnabled}
           />
         }
         renderFooter={this.renderFooter}
@@ -263,8 +258,7 @@ UnconnectedCommitDialog.propTypes = {
   handleCommit: PropTypes.func.isRequired,
   // populated by redux
   sources: PropTypes.object,
-  backpackApi: PropTypes.object,
-  backpackEnabled: PropTypes.bool
+  backpackApi: PropTypes.object
 };
 
 const styles = {
@@ -302,6 +296,5 @@ const styles = {
 
 export default connect(state => ({
   sources: state.javalab.sources,
-  backpackApi: state.javalab.backpackApi,
-  backpackEnabled: state.javalab.backpackEnabled
+  backpackApi: state.javalab.backpackApi
 }))(UnconnectedCommitDialog);

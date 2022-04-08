@@ -407,10 +407,7 @@ class UnitGroup < ApplicationRecord
   end
 
   # Returns summary object of all the course versions that an instructor can
-  # assign or all the launched versions a participant can view. 'course_assignable'
-  # will always return false for participants so they will fall into the second check for
-  # launched and can_view_version?. For instructors if course_assignable? is false then
-  # launched will also be false.
+  # assign or all the launched versions a participant can view
   def summarize_course_versions(user = nil, locale_code = 'en-us')
     return {} unless user
 
