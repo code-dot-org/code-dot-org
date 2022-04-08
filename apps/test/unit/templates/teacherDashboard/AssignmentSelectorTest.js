@@ -8,7 +8,6 @@ import AssignmentSelector, {
 import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
 const defaultProps = {
-  localeCode: 'en-US',
   courseOfferings: courseOfferings,
   section: {
     id: 11,
@@ -243,15 +242,8 @@ describe('AssignmentSelector', () => {
   });
 
   describe('the "Decide later" option', () => {
-    let wrapper;
-
-    beforeEach(() => {
-      wrapper = shallow(
-        <AssignmentSelector {...defaultProps} chooseLaterOption />
-      );
-    });
-
     it('shows up after the blank option and before the others', () => {
+      let wrapper = shallow(<AssignmentSelector {...defaultProps} />);
       assert.equal(wrapper.find('select').length, 1);
       assert.equal(wrapper.find('option').length, 9);
       assert.deepEqual(wrapper.find('option').map(option => option.text()), [
@@ -268,6 +260,7 @@ describe('AssignmentSelector', () => {
     });
 
     it('means selecting nothing', () => {
+      let wrapper = shallow(<AssignmentSelector {...defaultProps} />);
       wrapper
         .find('select')
         .at(0)
