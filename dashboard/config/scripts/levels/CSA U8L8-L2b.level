@@ -32,13 +32,22 @@
     },
     "display_name": "Connect Four",
     "bubble_choice_description": "Check if there are matching elements in a row in this Connect Four game.",
-    "thumbnail_url": "https://images.code.org/2da61da319031a760c8564ab99e75dbb-image-1641581648510.gif"
+    "thumbnail_url": "https://images.code.org/2da61da319031a760c8564ab99e75dbb-image-1641581648510.gif",
+    "starter_assets": {
+      "background.png": "d8fa1954-9b1d-40fe-8d48-708ac9b82c1e.png",
+      "connectfour-01.png": "39500337-6e31-4280-a0ab-dc408532918a.png",
+      "dropbutton.png": "c6c4d508-663f-4233-ada9-ca68c3f413d3.png",
+      "greendot.png": "7791f179-0518-44d7-a4f4-2ed0bb82edee.png",
+      "purpledot.png": "cfe2a223-c833-42a5-9029-326d922b7dea.png",
+      "title.png": "77097b51-da36-4678-8681-8a4bcc038c6c.png",
+      "whitedot.png": "df54a6b1-03cd-4cce-8376-0ed355752f88.png"
+    }
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2021-12-12T15:56:46.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2021-12-12 15:56:58 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-05 21:39:58 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-07 18:50:24 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-07 18:51:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-07 18:51:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-07 18:51:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-07 19:11:17 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2021-12-12 15:56:58 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-05 21:39:58 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-07 18:50:24 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-07 18:51:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-07 18:51:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-07 18:51:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-07 19:11:17 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-08 15:40:48 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
