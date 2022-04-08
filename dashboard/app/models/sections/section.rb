@@ -39,6 +39,7 @@ require 'cdo/safe_names'
 class Section < ApplicationRecord
   include SerializedProperties
   include SharedConstants
+  include SharedCourseConstants
   self.inheritance_column = :login_type
 
   class << self
@@ -89,7 +90,7 @@ class Section < ApplicationRecord
   # PL courses which are run with adults should be set up with teacher accounts so they must use
   # email logins
   def pl_sections_must_use_email_logins
-    if participant_type != SharedCourseConstants::PARTICIPANT_AUDIENCE.student && login_type != LOGIN_TYPE_EMAIL
+    if pl_section? && login_type != LOGIN_TYPE_EMAIL
       errors.add(:login_type, 'must be email for professional learning sections.')
     end
   end
@@ -101,6 +102,10 @@ class Section < ApplicationRecord
     if participant_type_changed? && persisted?
       errors.add(:participant_type, "can not be update once set.")
     end
+  end
+
+  def pl_section?
+    participant_type != SharedCourseConstants::PARTICIPANT_AUDIENCE.student
   end
 
   serialized_attrs %w(code_review_expires_at)
@@ -135,6 +140,10 @@ class Section < ApplicationRecord
 
   def self.valid_login_type?(type)
     LOGIN_TYPES.include? type
+  end
+
+  def self.valid_participant_type?(type)
+    SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values.include? type
   end
 
   def self.valid_grade?(grade)
@@ -335,6 +344,7 @@ class Section < ApplicationRecord
       tts_autoplay_enabled: tts_autoplay_enabled,
       sharing_disabled: sharing_disabled?,
       login_type: login_type,
+      participant_type: participant_type,
       course_offering_id: unit_group ? unit_group&.course_version&.course_offering&.id : script&.course_version&.course_offering&.id,
       course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
       unit_id: unit_group ? script_id : nil,

@@ -38,12 +38,14 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     # Once this has been done, endpoint can use CanCan load_and_authorize_resource
     # rather than manually authorizing (above)
     return head :bad_request unless Section.valid_login_type? params[:login_type]
+    return head :bad_request unless Section.valid_participant_type? params[:participant_type]
 
     section = Section.create(
       {
         user_id: current_user.id,
         name: params[:name].present? ? params[:name].to_s : I18n.t('sections.default_name', default: 'Untitled Section'),
         login_type: params[:login_type],
+        participant_type: params[:participant_type],
         grade: Section.valid_grade?(params[:grade].to_s) ? params[:grade].to_s : nil,
         script_id: @unit&.id,
         course_id: @course&.id,
@@ -65,6 +67,9 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   def update
     section = Section.find(params[:id])
     authorize! :manage, section
+
+    # Can't update participant_type once it is set
+    return head :forbidden if !params[:participant_type].nil_or_empty? && params[:participant_type] != section.participant_type
 
     # Unhide unit for this section before assigning
     section.toggle_hidden_script @unit, false if @unit
