@@ -4,12 +4,14 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "is_course": true,
       "is_migrated": true,
-      "pilot_experiment": "csd-noaccess"
+      "pilot_experiment": "csd-noaccess",
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-11-22 19:56:20 UTC",
+    "family_name": "csd2-projects-temp",
+    "serialized_at": "2022-04-08 15:41:00 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
