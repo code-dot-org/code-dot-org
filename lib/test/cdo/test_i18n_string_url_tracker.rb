@@ -33,7 +33,20 @@ module SetupI18nStringUrlTracker
     super
     stub_firehose
     stub_dcdo(true)
-    I18n.backend.store_translations(I18n.default_locale, {'string': {'key': 'a valid string'}})
+
+    custom_i18n = {
+      string: {
+        key: 'string1'
+      },
+      test: {
+        keys: {
+          string: {
+            key: 'string2'
+          }
+        }
+      }
+    }
+    I18n.backend.store_translations I18n.default_locale, custom_i18n
   end
 
   def teardown
