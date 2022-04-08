@@ -23,13 +23,14 @@
 
   %div{class: action_buttons_css_class}
     - actions.each do |entry|
-      - if ["cta_button", "cta_button_solid_white", "cta_button_hollow_white", "cta_button_solid_yellow", "cta_button_solid_grey"].include? entry[:type]
+      - if ["cta_button", "cta_button_solid_white", "cta_button_hollow_white", "cta_button_solid_yellow", "cta_button_solid_grey", "cta_button_solid_black"].include? entry[:type]
         .action
           %a.linktag#hero-hoc{href: entry[:url]}
             - extra_class = "herohocbutton-solid-white" if entry[:type] == "cta_button_solid_white"
             - extra_class = "herohocbutton-hollow-white" if entry[:type] == "cta_button_hollow_white"
             - extra_class = "herohocbutton-solid-yellow" if entry[:type] == "cta_button_solid_yellow"
             - extra_class = "herohocbutton-solid-grey" if entry[:type] == "cta_button_solid_grey"
+            - extra_class = "herohocbutton-solid-black" if entry[:type] == "cta_button_solid_black"
             %button.herohocbutton{class: extra_class}= I18n.t(entry[:text])
       - elsif entry[:type] == "video"
         .action
@@ -41,7 +42,7 @@
           = view :display_video_thumbnail, thumbnail_only: true, id: "mainvideo", video_code: entry[:youtube_id], image_url: entry[:image_url], play_button: 'center', letterbox: "false"
       - elsif entry[:type] == "text"
         .text{dir: "auto"}
-          = I18n.t(entry[:text])
+          != I18n.t(entry[:text], markdown: true)
       - elsif entry[:type] == "image"
         %img.image{src: entry[:url]}
       - elsif entry[:type] == "cta_link_white"
