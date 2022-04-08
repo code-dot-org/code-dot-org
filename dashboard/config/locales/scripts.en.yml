@@ -31907,8 +31907,18 @@ en:
           lessons:
             lesson-1:
               name: FRQ Practice
+              description_student: |-
+                **How will I use what I know about 1D arrays and conditionals to answer a Free Response Question?**
+
+                You practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. You apply decomposition and annotation strategies to identify the key components of the problem and validate your solutions using Scoring Guidelines.
+              description_teacher: |-
+                **How will I use what I know about 1D arrays and conditionals to answer a Free Response Question?**
+
+                Students practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.
             lesson-2:
               name: Unit 4 Assessment
+              description_student: Assess your progress through the Unit 4 Assessment.
+              description_teacher: Students complete a multiple-choice assessment that covers the unit topics.
             lesson-3:
               name: The Theater
             lesson-4:
@@ -31931,10 +31941,34 @@ en:
               name: Multi-Selection Statements
             lesson-13:
               name: Abstract Data Art Project – Day 1
+              description_student: |-
+                **What story or message do I want to convey about my data?**
+
+                For this project, you use the skills you have developed throughout this unit to analyze data from a text file for a topic that you are interested in or meaningful to you. You use the data you chose in a previous lesson to identify the patterns and message you want to convey visually using The Theater. After brainstorming and planning, you develop your program.
+              description_teacher: |-
+                **What story or message do I want to convey about my data?**
+
+                For this project, students use the skills they have developed throughout this unit to analyze data from a text file for a topic they are interested in or meaningful to them. Students use the data they chose in a previous lesson to identify the patterns and message they want to convey visually using The Theater. After brainstorming and planning, students develop their programs.
             lesson-14:
               name: Abstract Data Art Project – Day 2
+              description_student: |-
+                **How will I implement my plans to create my program?**
+
+                You have now planned your visuals and algorithms to convey a story about your chosen dataset. You continue developing your project to implement algorithms to analyze the data and visually portray your findings and results. You reinforce software development skills and processes as you participate in a code review to give and use feedback as you develop your program.
+              description_teacher: |-
+                **How will I implement my plans to create my program?**
+
+                Students planned their visuals and algorithms to convey a story about their chosen dataset. Students continue to develop their projects to implement algorithms to analyze the data and portray the findings and results visually. Students reinforce software development skills and processes as they participate in a code review to give and use feedback as they develop their program.
             lesson-15:
               name: Abstract Data Art Project – Day 3
+              description_student: |-
+                **How is my growth as a software engineer reflected in my project?**
+
+                You participated in a code review at the end of the previous lesson to give and receive feedback to identify areas of improvement and fixes for problems you encountered. Consider this feedback as you finalize development in this lesson. You then share your final project with your peers to celebrate your success.
+              description_teacher: |-
+                **How is my growth as a software engineer reflected in my project?**
+
+                Students conducted code reviews at the end of the previous lesson to give and receive feedback that assists in identifying areas of improvement and fixes for problems they encountered. At this stage of the project, students consider this feedback as they finalize development in this lesson. Students share their final projects with their peers to celebrate their successes.
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -35526,9 +35560,120 @@ en:
                 In this lesson students get their first opportunity to write programs that use the Circuit Playground. After first inspecting the board visually and hypothesizing possible functionalities, students move online where they will learn to write applications that control an LED and use a buzzer to make sounds. By combining App Lab screens with the Circuit Playgrounds, students can gradually start to integrate elements of the board as an output device while relying on App Lab for user input.
 
                 **Question of the Day:** What outputs can I control on the circuit playground?
+            Updating Screen Elements:
+              name: Updating Screen Elements
+              description_student: In this lesson, you will start to build apps that allow for lots of user interaction and functionality
+              description_teacher: |-
+                Students should already be familiar with programming in App Lab, specifically using Design Mode to create screen elements and using `onEvent` blocks to create button click events. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the `setProperty()` and `setText()` blocks that allow users to change the properties and content of various UI elements. In this lesson students explore how they can use events to update elements on the screen
+
+                **Question of the Day:** How can you update design elements of an app?
+            Board Events:
+              name: Board Events
+              description_student: In this lesson, you will learn how to use the Circuit Playground's hardware buttons and switch which will give the Circuit Playground input.
+              description_teacher: |-
+                This lesson transitions students from considering the Circuit Playground as strictly an output device and instead introduces the buttons and toggle switches as tools for input. Starting with the hardware buttons and switch, students learn to use [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/), analogously to [`onEvent()`(#fff176)](/docs/applab/onEvent/), in order to take input from their Circuit Playgrounds.
+
+                **Question of the Day:** How can the user interact with the circuit playground for input?
+            Variables and If Statements:
+              name: Variables and If Statements
+              description_student: Learn to make more complex programs that keep track of information and make decisions, using variables and if-statements.
+              description_teacher: |-
+                In this lesson, students are introduced to variables, the counter pattern, and if-statements. Students will use these concepts in the context of programming the circuit playground and creating more complex input/output behaviors, such as counting the number of button presses before having the circuit playground make a noise. The concepts in this lesson are used to make more complex and fulfilling apps in future lessons, and students may need to refer back to the videos and examples in this lesson as they continue to master these concepts.
+
+                **Question of the Day:** How can I create more complex programs that keep track of information and make decisions?
+            'Mini-Project: On-The-Go App':
+              name: 'Mini-Project: On-The-Go App'
+              description_student: Create an app that uses the Circuit Playground to collect data, then has an app to analyze the data that was collected
+              description_teacher: |-
+                In this mini-project, students will create an app that uses the Circuit Playground to collect data, then has an app to analyze the data that was collected. This is similar to citizen science or step-tracking apps that students may be familiar with. Students will use variables and events to collect data from the circuit playground, then use if-statements to make decisions or recommendations based on the data they collect.
+
+                **Question of the Day:** How can I use events and variables to create an app that collects and analyzes data?
+            Color LEDs:
+              name: Color LEDs
+              description_student: In this lesson, you will learn how to access and control the colored LEDs on the Circuit Playground.
+              description_teacher: |-
+                In this lesson, students learn how to use the 10 color LEDs on the Circuit Playground. Students will control the color and intensity of each LED, then use what they have learned to program light patterns to create a light show on their Circuit Playground.
+
+                **Question of the Day:** How can you use the colored LEDs in an app?
+            Getting Screen Inputs:
+              name: Getting Screen Inputs
+              description_student: In this lesson, you will learn how to use design elements like textboxes or dropdowns to get user input from the screen
+              description_teacher: |-
+                Students learn to use several new design elements - text inputs, dropdowns, and sliders - so they can get user input from the screen of their apps. This lesson also introduces students to the getProperty and getText blocks, which allow them to access their user input in their code. Students first practice using these tools to determine what the user has input in various user interface elements. Students later use getProperty and setProperty together with the counter pattern to make elements move across the screen. A new event trigger, change, is also introduced to represent when a dropdown or slider changes values.
+
+                **Question of the Day:** How can we use the app screen for user input?
+            Combining Inputs and Outputs:
+              name: Combining Inputs and Outputs
+              description_student: Combine inputs and outputs from the screen and Circuit Playground to make complex apps
+              description_teacher: |-
+                In this lesson, students combine inputs and outputs across both the circuit playground and the app screen. For example, students may use dropdowns or sliders to make the LEDs on the circuit playground change. Or, students may use the buttons on the circuit playground to update elements on the screen. This lesson also extends how students use variables and if-statements to make more complex decisions based on user input. There are no new coding commands or circuit playground features in this lesson, but students are combining many elements from previous lessons in new ways.
+
+                **Question of the Day:** How can I use inputs and outputs from both the circuit playground and the app screen?
+            'Project: Human Device Interaction':
+              name: 'Project: Human Device Interaction'
+              description_student: 
+              description_teacher: 'In this project, students create an app that controls the Circuit Playground so it interacts with the physical environment around it, similar to many smart phone apps that are used to control devices in a house or car or school. Students use physical materials to help design their physical device, then create an app that lets the user interact with the physical device or change settings. '
+            Board Sensors:
+              name: Board Sensors
+              description_student: 'Explore the sensors on the Circuit Playground and write programs that respond to the environment.
+
+'
+              description_teacher: |-
+                In this lesson, students explore how the three sensors (sound, light, and temperature) can be used to write programs that respond to changes in the environment. The use of these sensors marks a transition in terms of how users interact with a program. By using sensors as an input, the user of an app doesn't have to directly interact with it at all or may interact without actually realizing they are doing so.
+
+                **Question of the Day:** How can I use sensors to detect changes in the environment?
+            Accelerometer:
+              name: Accelerometer
+              description_student: 'In this lesson, you will explore the accelerometer and its capabilities. '
+              description_teacher: |-
+                In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications.
+
+                **Question of the Day:** How can I use the accelerometer to create apps?
+            Making Music:
+              name: Making Music
+              description_student: 'In this lesson, you will use the Circuit Playground’s buzzer feature to its full extent by producing sounds, notes, and songs. '
+              description_teacher: |-
+                In this lesson students will use the buzzer to its full extent by producing sounds, notes, and songs with the buzzer. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of notes. Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together. Once students are able to play notes on the buzzer, they use arrays to hold and play sequences of notes, forming simple songs.
+
+                **Question of the Day:** How can I use the buzzer to play musical notes or songs?
+            Functions:
+              name: Functions
+              description_student: 'In this lesson, you will learn how to create and call functions, then learn how to use parameters to make functions useful across many different situations
+
+'
+              description_teacher: |-
+                This lesson introduces students to functions as way to organize and group repeated blocks of code together, such as changing all of the LEDs to red or blue. Then, students learn how to use parameters in their functions as a way to generalize behaviors to work for different contexts - for example, changing all the LEDs to a certain color rather than always changing them red or blue. Students will use these concepts in future lessons, and it may be necessary to return to this lesson to reference the resources and videos.
+
+                **Question of the Day:** How can I use functions to organize and simplify my code?
+            'Mini-Project: Interactive Art':
+              name: 'Mini-Project: Interactive Art'
+              description_student: Create a piece of interactive artwork using a Circuit Playground and physical materials
+              description_teacher: In this lesson, students create a piece of interactive artwork using the sensors on the Circuit Playground and physical materials. Students explore how the Circuit Playground can augment physical materials to create an interactive experience. This project does not use the App Lab screen except to help with debugging - otherwise, users only interact with the physical artwork itself.
+            Physical Outputs and LEDs:
+              name: Physical Outputs and LEDs
+              description_student: 'In this lesson, you will learn to use wires to create devices with external LEDs and add code to control these lights.
+
+'
+              description_teacher: |-
+                In this lesson, students learn how to attach external LEDs to their circuit playground and use code to light up these LEDs. This allows students to create more flexible devices that mimic real-world products. This lesson requires several external materials, as well as safety protocols to ensure students don’t accidentally damage their circuit playground.
+
+                **Question of the Day:** How can I use external LEDs to create physical prototypes?
+            Physical Inputs and Buttons:
+              name: Physical Inputs and Buttons
+              description_student: Learn how to connect external wires to create input events when the wires touch, simulating a button press
+              description_teacher: |-
+                In this lesson, students learn how to connect external wires to create input events when the wires touch, simulating a button press. Students learn to use code to recognize these external button events to make changes to their app. This allows students to create more flexible devices that mimic real-world products. This lesson requires several external materials, as well as safety protocols to ensure students don’t accidentally damage their circuit playground.
+
+                **Question of the Day:** How can I use external buttons to create physical prototypes?
+            Project - Prototype an Innovation:
+              name: Project - Prototype an Innovation
+              description_student: 'In this final project, you will be challenged to develop and test a prototype for a device that interacts with the physical world through various types of input and output and allows for interesting and unique user interactions. '
+              description_teacher: 'In this final project for the course, students team to develop and test a prototype for an innovative computing device based on the Circuit Playground. Using the inputs and outputs available on the board, groups will create programs that allow for interesting and unique user interactions. '
           lesson_groups:
             lessonGroup-2:
               display_name: Chapter 1
+            lessonGroup-3:
+              display_name: Chapter 2
           name: csd6-2022
           title: Physical Computing
           description_audience: ''
