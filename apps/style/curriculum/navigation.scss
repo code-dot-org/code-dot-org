@@ -24,8 +24,9 @@
       background-color: $white;
       padding: 8px;
       border-bottom: 2px solid $lightest_gray;
-      overflow-wrap: break-word;
       display: none;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     &.open .nav-link {
