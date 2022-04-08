@@ -386,6 +386,12 @@ body.modal-open .supreme-container{
   border-color: lightgrey;
 }
 
+#homepage #actions .herohocbutton-solid-black {
+  color: white;
+  background-color: black;
+  border-color: black;
+}
+
 #homepage #actions .herohocbutton-hollow-white {
   background-color: initial;
   border-color: white;
@@ -652,4 +658,46 @@ body.modal-open .supreme-container{
 .below_hero_announcement {
   text-align: center;
   padding: 10px;
+}
+
+/* Custom styling for a vertical-stack hero layout. */
+
+#homepage .vertical-stack {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+  @media screen and (max-width: 512px){
+    #homepage .vertical-stack {
+      padding: 0 1em;
+    }
+  }
+
+#homepage .vertical-stack .image {
+  max-width: 100px;
+  margin-bottom: 20px;
+}
+
+#homepage .vertical-stack .thumbnail-wrapper{
+  width: 100%;
+}
+
+#homepage .vertical-stack .video_thumbnail {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#homepage .vertical-stack .text {
+  color: black;
+  font-size: 1.25em;
+  line-height: 1.4em;
+  padding-bottom: 0px;
+  font-family: 'Gotham 4r', sans-serif;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#homepage .vertical-stack .text strong {
+  font-family: 'Gotham 5r', sans-serif;
+  font-weight: normal;
 }

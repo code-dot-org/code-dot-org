@@ -42,11 +42,11 @@ class TestController < ApplicationController
     )
   end
 
-  def create_section_assigned_to_script
+  def create_student_section_assigned_to_script
     return unless (user = current_user)
     script = Script.find_by_name(params.require(:script_name))
 
-    Section.create!(name: "New Section", user: user, script: script)
+    Section.create!(name: "New Section", user: user, script: script, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
     head :ok
   end
 

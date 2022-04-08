@@ -62,7 +62,16 @@ Dashboard::Application.routes.draw do
 
   get 'redirected_url', to: 'redirect_proxy#get', format: false
 
-  get 'docs/', to: 'curriculum_proxy#get_doc_landing'
+  # We moved code docs off of curriculum builder in spring 2022.
+  # In that move, we wanted to preserve the previous /docs routes for these
+  # pages. However, there are a lot of other /docs URLs that did not move over
+  # so we're allow-listing the four IDEs that lived on curriculum builder to be
+  # served by ProgrammingEnvironmentsController and ProgrammingExpressionsController,
+  # with the rest falling back to the old proxying logic.
+  get 'docs/', to: 'programming_environments#docs_index'
+  get 'docs/:programming_environment_name', to: 'programming_environments#docs_show', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/}
+  get 'docs/:programming_environment_name/:programming_expression_key', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/, programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/}, to: 'programming_expressions#docs_show'
+  get 'docs/:programming_environment_name/:programming_expression_key/index.html', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/, programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/}, to: 'programming_expressions#docs_show'
   get 'docs/*path', to: 'curriculum_proxy#get_doc'
   get 'curriculum/*path', to: 'curriculum_proxy#get_curriculum'
 

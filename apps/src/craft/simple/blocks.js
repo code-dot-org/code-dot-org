@@ -101,7 +101,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   blockly.getGenerator().craft_turn = function() {
     // Generate JavaScript for turning left or right.
-    var dir = this.getTitleValue('DIR');
+    var dir = this.getFieldValue('DIR');
     var methodCall = dir === 'left' ? 'turnLeft' : 'turnRight';
     return methodCall + "('block_id_" + this.id + "');\n";
   };
@@ -159,7 +159,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   blockly.getGenerator().craft_ifBlockAhead = function() {
     var innerCode = blockly.getGenerator().statementToCode(this, 'DO');
-    var blockType = this.getTitleValue('TYPE');
+    var blockType = this.getFieldValue('TYPE');
     return (
       'ifBlockAhead("' +
       blockType +
@@ -212,7 +212,7 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   blockly.getGenerator().craft_placeBlock = function() {
-    var blockType = this.getTitleValue('TYPE');
+    var blockType = this.getFieldValue('TYPE');
     return 'placeBlock("' + blockType + '", \'block_id_' + this.id + "');\n";
   };
 
@@ -278,7 +278,7 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   blockly.getGenerator().craft_placeBlockAhead = function() {
-    var blockType = this.getTitleValue('TYPE');
+    var blockType = this.getFieldValue('TYPE');
     return (
       'placeBlockAhead("' + blockType + '", \'block_id_' + this.id + "');\n"
     );
