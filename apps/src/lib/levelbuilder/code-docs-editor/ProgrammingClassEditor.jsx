@@ -85,6 +85,7 @@ export default function ProgrammingClassEditor({
         }
       })
       .catch(error => {
+        setIsSaving(false);
         setError(error.responseText);
       });
   };
