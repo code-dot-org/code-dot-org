@@ -99,6 +99,11 @@ export default class ProjectCard extends React.Component {
               />
             </div>
           )}
+          {isPersonalGallery && projectData.type && (
+            <div style={styles.lastEdit}>
+              {i18n.projectType()}:&nbsp; {projectData.type}
+            </div>
+          )}
         </div>
       </div>
     );
