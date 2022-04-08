@@ -89,13 +89,10 @@ class Blockly < Level
   # DCDO key for turning this feature on or off.
   BLOCKLY_I18N_IN_TEXT_DCDO_KEY = 'blockly_i18n_in_text'.freeze
 
-  def self.field_or_title(xml_doc, enforce = true)
+  def self.field_or_title(xml_doc)
     num_fields = xml_doc.xpath('//field').count
     num_titles = xml_doc.xpath('//title').count
-    # An optional parameter allows this error to be ignored.
-    if enforce
-      raise "unexpected error: XML contains both field and title elements" if num_fields > 0 && num_titles > 0
-    end
+    raise "unexpected error: XML contains both field and title elements" if num_fields > 0 && num_titles > 0
     return "field" unless num_fields == 0
     "title"
   end
@@ -796,7 +793,7 @@ class Blockly < Level
   end
 
   def localize_behaviors(block_xml)
-    tag = Blockly.field_or_title(block_xml, false)
+    tag = Blockly.field_or_title(block_xml)
     block_xml.xpath("//block[@type=\"behavior_definition\"]").each do |behavior|
       mutation = behavior.at_xpath('./mutation')
       mutation.xpath('./arg').each do |arg|
@@ -810,8 +807,7 @@ class Blockly < Level
       end
     end
 
-    # Explicitly check for title tags even if they are not the desired type.
-    block_xml.xpath(".//#{tag}|//title[@name=\"VAR\"]").each do |parameter|
+    block_xml.xpath(".//#{tag}[@name=\"VAR\"]").each do |parameter|
       next unless parameter.content == I18n.t('behaviors.this_sprite', locale: :en)
       parameter.content = I18n.t('behaviors.this_sprite')
     end
