@@ -1609,15 +1609,23 @@ function filterUrl(urlToCheck) {
 
 applabCommands.openUrl = function(opts) {
   if (apiValidateType(opts, 'openUrl', 'url', opts.url, 'string')) {
-    // Studio and code.org links are immediately opened, other links are filtered
-    // Remove protocol from url string if present
+    // studio.code.org and code.org links are immediately opened.
+    // Other links are filtered.
+
     let hostname = opts.url;
+    // First, remove protocol from url string, if present.
     let protocols = ['https://', 'http://', 'www.'];
     protocols.forEach(protocol => {
       if (hostname.startsWith(protocol)) {
         hostname = hostname.slice(protocol.length);
       }
     });
+    // Second, remove path from url string, if present.
+    const pathIndex = hostname.indexOf('/');
+    if (pathIndex !== -1) {
+      hostname = hostname.substr(0, pathIndex);
+    }
+
     if (['studio.code.org', 'code.org'].includes(hostname)) {
       if (opts.url.startsWith('http')) {
         window.open(opts.url);
