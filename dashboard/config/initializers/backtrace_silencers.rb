@@ -18,6 +18,8 @@ silenced = [
   /NOT conditions will no longer behave as NOR in Rails 6.1. To continue using NOR conditions, NOT each condition individually/,
   /Rails 6.1 will return Content-Type header without modification/,
   /update_attributes!? is deprecated and will be removed from Rails 6.1/,
+  /Initialization autoloaded the constants/,
+  /Class level methods will no longer inherit scoping/,
 ]
 
 silenced_expr = Regexp.new(silenced.join('|'))
