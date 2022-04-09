@@ -127,8 +127,6 @@ class SectionProgress extends Component {
       levelDataInitialized && scriptData.hasStandards;
     const standardsStyle =
       currentView === ViewType.STANDARDS ? styles.show : styles.hide;
-
-    console.log(courseVersionsWithProgress);
     return (
       <div>
         <div style={styles.topRowContainer}>
