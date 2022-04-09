@@ -60,6 +60,7 @@ const sections = [
     location: '/v2/sections/11',
     name: 'My Section',
     login_type: 'picture',
+    participantType: 'student',
     grade: '2',
     code: 'PMTKVH',
     lesson_extras: false,
@@ -80,6 +81,7 @@ const sections = [
     location: '/v2/sections/12',
     name: 'My Other Section',
     login_type: 'picture',
+    participantType: 'student',
     grade: '11',
     code: 'DWGMFX',
     lesson_extras: false,
@@ -100,6 +102,7 @@ const sections = [
     location: '/v2/sections/307',
     name: 'My Third Section',
     login_type: 'email',
+    participantType: 'student',
     grade: '10',
     code: 'WGYXTR',
     lesson_extras: true,
@@ -307,6 +310,7 @@ describe('teacherSectionsRedux', () => {
         name: '',
         loginType: undefined,
         grade: '',
+        participantType: null,
         providerManaged: false,
         lessonExtras: true,
         ttsAutoplayEnabled: false,
@@ -333,6 +337,7 @@ describe('teacherSectionsRedux', () => {
         name: 'My Other Section',
         loginType: 'picture',
         grade: '11',
+        participantType: 'student',
         providerManaged: false,
         code: 'DWGMFX',
         lessonExtras: false,
@@ -630,7 +635,8 @@ describe('teacherSectionsRedux', () => {
         successResponse({
           name: 'Aquarius PM Block 2',
           login_type: 'picture',
-          grade: '3'
+          grade: '3',
+          participantType: 'student'
         })
       );
 
@@ -645,6 +651,7 @@ describe('teacherSectionsRedux', () => {
           name: 'Aquarius PM Block 2',
           loginType: 'picture',
           grade: '3',
+          participantType: 'student',
           providerManaged: false,
           lessonExtras: false,
           ttsAutoplayEnabled: false,
@@ -1370,8 +1377,8 @@ describe('teacherSectionsRedux', () => {
       );
       server.respondWith(
         'GET',
-        '/dashboardapi/sections/valid_course_offerings',
-        successResponse([])
+        '/dashboardapi/sections/available_participant_types',
+        successResponse({availableParticipantTypes: ['student']})
       );
       server.respondWith(
         'GET',

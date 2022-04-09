@@ -4,15 +4,32 @@ import _ from 'lodash';
 import i18n from '@cdo/locale';
 import {sectionShape, assignmentCourseOfferingShape} from './shapes';
 import AssignmentVersionSelector from './AssignmentVersionSelector';
-import {CourseOfferingCategories} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {
+  CourseOfferingCategories,
+  ParticipantAudience
+} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
 const noAssignment = '__noAssignment__';
 //Additional valid option in dropdown - no associated course
 const decideLater = '__decideLater__';
 const isValidAssignment = id => id !== noAssignment && id !== decideLater;
 
-export const getCourseOfferingsByCategory = courseOfferings => {
-  let orderedCourseOfferings = _.orderBy(courseOfferings, 'display_name');
+const participantTypesByAudience = {
+  student: ['student'],
+  teacher: ['student', 'teacher'],
+  facilitator: ['student', 'teacher', 'facilitator']
+};
+
+export const getCourseOfferingsByCategory = (
+  courseOfferings,
+  participantType
+) => {
+  const filterCourseOfferings = _.filter(courseOfferings, function(offering) {
+    return participantTypesByAudience[participantType].includes(
+      offering.participant_audience
+    );
+  });
+  let orderedCourseOfferings = _.orderBy(filterCourseOfferings, 'display_name');
   orderedCourseOfferings = _.orderBy(
     orderedCourseOfferings,
     'is_featured',
@@ -40,7 +57,9 @@ export default class AssignmentSelector extends Component {
     onChange: PropTypes.func,
     disabled: PropTypes.bool,
     localeCode: PropTypes.string,
-    isNewSection: PropTypes.bool
+    isNewSection: PropTypes.bool,
+    participantType: PropTypes.oneOf(Object.keys(ParticipantAudience))
+      .isRequired
   };
 
   constructor(props) {
@@ -197,7 +216,12 @@ export default class AssignmentSelector extends Component {
   };
 
   render() {
-    const {dropdownStyle, disabled, courseOfferings} = this.props;
+    const {
+      dropdownStyle,
+      disabled,
+      courseOfferings,
+      participantType
+    } = this.props;
     const {
       selectedCourseOfferingId,
       selectedCourseVersionId,
@@ -205,7 +229,8 @@ export default class AssignmentSelector extends Component {
     } = this.state;
 
     const courseOfferingsByCategories = getCourseOfferingsByCategory(
-      courseOfferings
+      courseOfferings,
+      participantType
     );
 
     const selectedCourseOffering = courseOfferings[selectedCourseOfferingId];

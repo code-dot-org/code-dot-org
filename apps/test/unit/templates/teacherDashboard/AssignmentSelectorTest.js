@@ -18,6 +18,7 @@ const defaultProps = {
     lessonExtras: false,
     ttsAutoplayEnabled: false,
     pairingAllowed: false,
+    participantType: 'student',
     studentCount: 0,
     code: 'asdf',
     courseOfferingId: null,
@@ -36,6 +37,7 @@ const hiddenSectionProps = {
     lessonExtras: false,
     ttsAutoplayEnabled: false,
     pairingAllowed: false,
+    participantType: 'student',
     studentCount: 0,
     code: 'asdf',
     courseOfferingId: 2,
@@ -45,9 +47,36 @@ const hiddenSectionProps = {
 };
 
 describe('AssignmentSelector', () => {
-  it('getCourseOfferingsByCategory gets the right course offerings', () => {
+  it('getCourseOfferingsByCategory gets the right course offerings for student', () => {
     let courseOfferingsByCategory = getCourseOfferingsByCategory(
-      defaultProps.courseOfferings
+      defaultProps.courseOfferings,
+      'student'
+    );
+
+    assert.deepEqual(Object.keys(courseOfferingsByCategory), [
+      'hoc',
+      'full_course',
+      'csf'
+    ]);
+    assert.deepEqual(
+      courseOfferingsByCategory['full_course'].map(s => s.display_name),
+      ['Computer Science A', 'Computer Science Discoveries']
+    );
+    // Hello World and Poem Art at featured so they show up before non-featured
+    assert.deepEqual(
+      courseOfferingsByCategory['hoc'].map(s => s.display_name),
+      ['Hello World', 'Poem Art', 'Artist', 'Flappy']
+    );
+    assert.deepEqual(
+      courseOfferingsByCategory['csf'].map(s => s.display_name),
+      ['Course A']
+    );
+  });
+
+  it('getCourseOfferingsByCategory gets the right course offerings for teacher', () => {
+    let courseOfferingsByCategory = getCourseOfferingsByCategory(
+      defaultProps.courseOfferings,
+      'teacher'
     );
 
     assert.deepEqual(Object.keys(courseOfferingsByCategory), [
@@ -69,6 +98,14 @@ describe('AssignmentSelector', () => {
     assert.deepEqual(
       courseOfferingsByCategory['csf'].map(s => s.display_name),
       ['Course A']
+    );
+    assert.deepEqual(
+      courseOfferingsByCategory['self_paced_pl'].map(s => s.display_name),
+      ['Self Paced PL CSP']
+    );
+    assert.deepEqual(
+      courseOfferingsByCategory['virtual_pl'].map(s => s.display_name),
+      ['Virtual PL CSP']
     );
   });
 
