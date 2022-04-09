@@ -152,10 +152,6 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     }
   end
 
-  def student_script_ids
-    render json: {studentScriptIds: @section.student_script_ids}
-  end
-
   # GET /api/v1/sections/membership
   # Get the set of sections that the current user is enrolled in.
   def membership
