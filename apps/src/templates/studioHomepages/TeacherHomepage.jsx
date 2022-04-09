@@ -7,7 +7,7 @@ import Notification from '../Notification';
 import MarketingAnnouncementBanner from './MarketingAnnouncementBanner';
 import RecentCourses from './RecentCourses';
 import TeacherSections from './TeacherSections';
-import JoinSectionArea from './JoinSectionArea';
+import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
 import TeacherResources from './TeacherResources';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import shapes from './shapes';
