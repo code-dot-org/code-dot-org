@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
 import SpecialAnnouncement from './SpecialAnnouncement';
 import RecentCourses from './RecentCourses';
-import JoinSectionArea from './JoinSectionArea';
+import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
 import shapes from './shapes';
