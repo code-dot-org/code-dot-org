@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import OrderableList from './OrderableList';
 import ExampleEditor from './ExampleEditor';
 import FieldEditor from './FieldEditor';
+import MethodNameEditor from './MethodNameEditor';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
@@ -20,25 +21,19 @@ function useProgrammingClass(initialProgrammingClass) {
     setProgrammingClass({...programmingClass, [key]: value});
   }
 
-  return [programmingClass, updateProgrammingClass];
+  return [programmingClass, updateProgrammingClass, setProgrammingClass];
 }
 
 function renderExampleEditor(example, updateFunc) {
-  return (
-    <ExampleEditor
-      example={example}
-      updateExample={(key, value) => updateFunc(key, value)}
-    />
-  );
+  return <ExampleEditor example={example} updateExample={updateFunc} />;
 }
 
 function renderFieldEditor(field, updateFunc) {
-  return (
-    <FieldEditor
-      field={field}
-      updateField={(key, value) => updateFunc(key, value)}
-    />
-  );
+  return <FieldEditor field={field} updateField={updateFunc} />;
+}
+
+function renderMethodNameEditor(method, updateFunc) {
+  return <MethodNameEditor method={method} updateMethod={updateFunc} />;
 }
 
 export default function ProgrammingClassEditor({
@@ -49,9 +44,11 @@ export default function ProgrammingClassEditor({
   const {id, key, ...remainingProgrammingClass} = initialProgrammingClass;
   remainingProgrammingClass.examples.forEach(e => (e.key = createUuid()));
   remainingProgrammingClass.fields.forEach(f => (f.key = createUuid()));
-  const [programmingClass, updateProgrammingClass] = useProgrammingClass(
-    remainingProgrammingClass
-  );
+  const [
+    programmingClass,
+    updateProgrammingClass,
+    setProgrammingClass
+  ] = useProgrammingClass(remainingProgrammingClass);
   const [isSaving, setIsSaving] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
   const [error, setError] = useState(null);
@@ -72,15 +69,19 @@ export default function ProgrammingClassEditor({
       .then(response => {
         setIsSaving(false);
         if (response.ok) {
-          if (shouldCloseAfterSave) {
-            // TODO: update this when we have a show page for classes
-            navigateToHref('/');
-          } else {
-            setLastUpdated(Date.now());
-            setError(null);
-          }
+          return response.json();
         } else {
-          setError(response.statusText);
+          throw new Error(response.statusText);
+        }
+      })
+      .then(json => {
+        if (shouldCloseAfterSave) {
+          // TODO: update this when we have a show page for classes
+          navigateToHref('/');
+        } else {
+          setLastUpdated(Date.now());
+          setError(null);
+          setProgrammingClass(json);
         }
       })
       .catch(error => {
@@ -190,6 +191,14 @@ export default function ProgrammingClassEditor({
           renderItem={renderFieldEditor}
         />
       </CollapsibleEditorSection>
+      <CollapsibleEditorSection title="Methods" collapsed>
+        <OrderableList
+          list={programmingClass.methods || []}
+          setList={list => updateProgrammingClass('methods', list)}
+          addButtonText="Add Another Method"
+          renderItem={renderMethodNameEditor}
+        />
+      </CollapsibleEditorSection>
       <SaveBar
         handleSave={save}
         isSaving={isSaving}
@@ -210,7 +219,9 @@ const programmingClassShape = PropTypes.shape({
   content: PropTypes.string,
   syntax: PropTypes.string,
   tips: PropTypes.string,
-  examples: PropTypes.arrayOf(PropTypes.object)
+  examples: PropTypes.arrayOf(PropTypes.object),
+  fields: PropTypes.arrayOf(PropTypes.object),
+  methods: PropTypes.arrayOf(PropTypes.object)
 });
 
 ProgrammingClassEditor.propTypes = {
