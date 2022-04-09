@@ -348,7 +348,6 @@ class Section < ApplicationRecord
       course_offering_id: unit_group ? unit_group&.course_version&.course_offering&.id : script&.course_version&.course_offering&.id,
       course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
       unit_id: unit_group ? script_id : nil,
-      script_id: script_id,
       course_id: course_id,
       script: {
         id: script_id,

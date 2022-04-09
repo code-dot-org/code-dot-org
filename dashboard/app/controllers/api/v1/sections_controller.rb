@@ -2,7 +2,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
   before_action :get_course_and_unit, only: [:create, :update]
-  load_and_authorize_resource except: [:join, :leave, :membership, :valid_scripts, :valid_course_offerings, :create, :update, :require_captcha]
+  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :update, :require_captcha]
 
   skip_before_action :verify_authenticity_token, only: [:update_sharing_disabled, :update]
 
@@ -168,14 +168,6 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     render json: current_user.sections_as_student, each_serializer: Api::V1::SectionNameAndIdSerializer
   end
 
-  # GET /api/v1/sections/valid_scripts
-  def valid_scripts
-    return head :forbidden unless current_user
-
-    scripts = Script.valid_scripts(current_user).map(&:assignable_info)
-    render json: scripts
-  end
-
   # GET /api/v1/sections/valid_course_offerings
   def valid_course_offerings
     return head :forbidden unless current_user
@@ -267,21 +259,26 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   def get_course_and_unit
     return head :forbidden if current_user.nil?
 
-    course_id = params[:course_id]
-    script_id = params[:script_id]
+    if params[:course_version_id]
+      course_version = CourseVersion.find_by_id(params[:course_version_id])
+      return head :bad_request unless course_version
 
-    if script_id
-      return head :forbidden unless Script.valid_unit_id?(current_user, script_id)
-      @unit = Script.get_from_cache(script_id)
-      return head :bad_request if @unit.nil?
-      # If given a course and script, make sure the script is in that course
-      return head :bad_request if course_id && course_id.to_i != @unit.unit_group.try(:id)
-      # If script has a course and no course_id was provided, use default course
-      course_id ||= @unit.unit_group.try(:id)
-      @course = UnitGroup.get_from_cache(course_id) if course_id
-    elsif course_id
-      return head :forbidden unless UnitGroup.valid_course_id?(course_id, current_user)
-      @course = UnitGroup.get_from_cache(params[:course_id].to_i)
+      if course_version.content_root_type == 'UnitGroup'
+        course_id = course_version.content_root_id
+        @course = UnitGroup.get_from_cache(course_id)
+        return head :bad_request unless @course
+        return head :forbidden unless @course.course_assignable?(current_user)
+        @unit = params[:unit_id] ? Script.get_from_cache(params[:unit_id]) : nil
+        return head :bad_request if @unit && @course.id != @unit.unit_group.try(:id)
+      elsif course_version.content_root_type == 'Script'
+        unit_id = course_version.content_root_id
+        @unit = Script.get_from_cache(unit_id)
+        return head :bad_request unless @unit
+        return head :forbidden unless @unit.course_assignable?(current_user)
+      end
+    else
+      # Should not get a unit_id unless also get a course version which is course
+      return head :bad_request if params[:unit_id]
     end
   end
 end

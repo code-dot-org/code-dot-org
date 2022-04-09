@@ -351,6 +351,21 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert_equal CourseOffering.assignable_course_offerings_info(@levelbuilder).keys.sort, expected_course_offering_info
   end
 
+  test 'in assignable course offerings summary display names of course offerings include star if they are not launched' do
+    expected_course_offering_names = [
+      @unit_group.course_version.course_offering.display_name,
+      @unit_teacher_to_students.course_version.course_offering.display_name,
+      @pilot_unit.course_version.course_offering.display_name + " *",
+      @partner_unit.course_version.course_offering.display_name + " *",
+      @pilot_pl_unit.course_version.course_offering.display_name + " *",
+      @in_development_unit.course_version.course_offering.display_name + " *",
+      @beta_unit.course_version.course_offering.display_name + " *",
+      @unit_facilitator_to_teacher.course_version.course_offering.display_name
+    ].sort
+
+    assert_equal CourseOffering.assignable_course_offerings_info(@levelbuilder).values.map {|co| co[:display_name]}.sort, expected_course_offering_names
+  end
+
   test 'get assignable course offerings for pilot teacher should return offerings where pilot teacher can be instructor' do
     expected_course_offering_info = [
       @unit_group.course_version.course_offering.id,
