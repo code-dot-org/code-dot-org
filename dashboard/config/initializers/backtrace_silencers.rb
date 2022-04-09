@@ -20,6 +20,8 @@ silenced = [
   /update_attributes!? is deprecated and will be removed from Rails 6.1/,
   /Initialization autoloaded the constants/,
   /Class level methods will no longer inherit scoping/,
+  /ActionView::Base instances should be constructed with a lookup context, assignments, and a controller/,
+  /ActionView::Base instances must implement `compiled_method_container`/,
 ]
 
 silenced_expr = Regexp.new(silenced.join('|'))
