@@ -393,12 +393,13 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_nil returned_section.grade
   end
 
-  test "cannot create section without participant type" do
+  test "create section without participant type defaults to student" do
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL
     }
-    assert_response :bad_request
+    assert_response :success
+    assert_equal returned_section.participant_type, 'student'
   end
 
   test 'cannot pass an invalid grade' do
@@ -780,17 +781,6 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     section.reload
     assert_response :success
     assert_nil section.course_id
-  end
-
-  test "update: fails if try to change participant_type" do
-    sign_in @teacher
-    section = create(:section, user: @teacher, course_id: nil, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
-
-    post :update, params: {
-      id: section.id,
-      participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
-    }
-    assert_response :forbidden
   end
 
   test "update: fails if course version is not provided and unit is" do
