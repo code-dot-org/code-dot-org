@@ -1,56 +1,112 @@
 import {assert} from '../../util/reconfiguredChai';
 import unitSelection, {
-  setValidScripts,
   setScriptId,
   getSelectedScriptName,
   getSelectedScriptDescription
 } from '@cdo/apps/redux/unitSelectionRedux';
 
-const fakeValidScripts = [
-  {
-    category: 'category1',
-    category_priority: 1,
-    id: 456,
-    name: 'Script Name',
-    position: 23,
-    description: 'Description of Script'
+const fakeCourseVersionsWithProgress = {
+  1: {
+    id: 1,
+    key: '2017',
+    version_year: '2017',
+    content_root_id: 1,
+    name: 'Course A',
+    path: '/s/coursea-2017',
+    type: 'Script',
+    is_stable: true,
+    is_recommended: false,
+    locales: ['العربية', 'Čeština', 'Deutsch', 'English'],
+    units: {
+      1: {
+        id: 1,
+        key: 'coursea-2017',
+        name: 'Course A',
+        path: '/s/coursea-2017',
+        lesson_extras_available: true,
+        position: null
+      }
+    }
   },
-  {
-    category: 'csp',
-    category_priority: 1,
-    id: 300,
-    name: 'csp1',
-    position: 23,
-    description: 'CSP Unit 1'
+  2: {
+    id: 2,
+    key: '2018',
+    version_year: '2018',
+    content_root_id: 2,
+    name: 'Course A',
+    path: '/s/coursea-2018',
+    type: 'Script',
+    is_stable: true,
+    is_recommended: true,
+    locales: ['English', 'Italiano', 'Slovenčina'],
+    units: {
+      2: {
+        id: 2,
+        key: 'coursea-2018',
+        name: 'Course A (2018)',
+        path: '/s/coursea-2018',
+        lesson_extras_available: true,
+        position: null
+      }
+    }
   },
-  {
-    // Use a different category to make sure we aren't relying on it to group
-    // units within courses.
-    category: 'other csp',
-    category_priority: 1,
-    id: 301,
-    name: 'csp2',
-    position: 23,
-    description: 'CSP Unit 2'
+  4: {
+    id: 4,
+    key: '2018',
+    version_year: "'18-'19",
+    content_root_id: 51,
+    name: 'CS Discoveries 2018',
+    path: '/courses/csd-2018',
+    type: 'UnitGroup',
+    is_stable: true,
+    is_recommended: true,
+    locales: [],
+    units: {
+      5: {
+        id: 5,
+        key: 'csd1-2018',
+        name: 'Unit 1',
+        path: '/s/csd1-2018',
+        lesson_extras_available: false,
+        text_to_speech_enabled: false,
+        position: 1
+      },
+      6: {
+        id: 6,
+        key: 'csd2-2018',
+        name: 'Unit 2',
+        path: '/s/csd2-2018',
+        lesson_extras_available: false,
+        text_to_speech_enabled: false,
+        position: 2
+      }
+    }
   },
-  // Include Express Course to use as default if needed
-  {
-    category: 'CS Fundamentals',
-    category_priority: 1,
-    id: 182,
-    name: 'Corso Rapido',
-    position: 6,
-    script_name: 'express-2017',
-    description: 'CSF Spanish Course'
+  6: {
+    id: 6,
+    key: 'unversioned',
+    version_year: 'unversioned',
+    content_root_id: 9,
+    name: 'Flappy',
+    path: '/s/flappy',
+    type: 'Script',
+    is_stable: true,
+    is_recommended: false,
+    locales: [],
+    units: {
+      9: {
+        id: 9,
+        key: 'flappy',
+        name: 'Flappy',
+        path: '/s/flappy',
+        lesson_extras_available: false,
+        text_to_speech_enabled: false,
+        position: null,
+        description: 'Make a flappy game!'
+      }
+    }
   }
-];
-
-const fakeValidCourses = [
-  {
-    id: 99,
-    script_ids: [300, 301]
-  }
-];
+};
 
 describe('unitSelectionRedux', () => {
   const initialState = unitSelection(undefined, {});
@@ -60,23 +116,17 @@ describe('unitSelectionRedux', () => {
       const state = {
         unitSelection: {
           scriptId: 2,
-          validScripts: [
-            {id: 1, script_name: 'Wrong script!'},
-            {id: 2, script_name: 'Right script!'}
-          ]
+          courseVersionsWithProgress: fakeCourseVersionsWithProgress
         }
       };
-      assert.equal(getSelectedScriptName(state), 'Right script!');
+      assert.equal(getSelectedScriptName(state), 'Course A (2018)');
     });
 
     it('returns null if no script is selected', () => {
       const state = {
         unitSelection: {
           scriptId: null,
-          validScripts: [
-            {id: 1, script_name: 'Wrong script!'},
-            {id: 2, script_name: 'Right script!'}
-          ]
+          courseVersionsWithProgress: fakeCourseVersionsWithProgress
         }
       };
       assert.equal(getSelectedScriptName(state), null);
@@ -87,18 +137,18 @@ describe('unitSelectionRedux', () => {
     it('returns the script description of the selected script', () => {
       const state = {
         unitSelection: {
-          scriptId: 182,
-          validScripts: fakeValidScripts
+          scriptId: 9,
+          courseVersionsWithProgress: fakeCourseVersionsWithProgress
         }
       };
-      assert.equal(getSelectedScriptDescription(state), 'CSF Spanish Course');
+      assert.equal(getSelectedScriptDescription(state), 'Make a flappy game!');
     });
 
     it('returns null if no script is selected', () => {
       const state = {
         unitSelection: {
           scriptId: null,
-          validScripts: fakeValidScripts
+          courseVersionsWithProgress: fakeCourseVersionsWithProgress
         }
       };
       assert.equal(getSelectedScriptDescription(state), null);
@@ -110,98 +160,6 @@ describe('unitSelectionRedux', () => {
       const action = setScriptId(130);
       const nextState = unitSelection(initialState, action);
       assert.deepEqual(nextState.scriptId, 130);
-    });
-  });
-
-  describe('setValidScripts', () => {
-    it('does not override already assigned scriptId', () => {
-      const studentScriptIds = [];
-      const validCourses = [];
-      const action = setValidScripts(
-        fakeValidScripts,
-        studentScriptIds,
-        validCourses
-      );
-      const nextState = unitSelection(
-        {
-          ...initialState,
-          scriptId: 100
-        },
-        action
-      );
-      assert.deepEqual(nextState.scriptId, 100);
-    });
-
-    it('includes express-2017 if nothing assigned and no progress', () => {
-      const studentScriptIds = [];
-      const validCourses = [];
-      const action = setValidScripts(
-        fakeValidScripts,
-        studentScriptIds,
-        validCourses
-      );
-      const nextState = unitSelection(initialState, action);
-      assert.deepEqual(
-        nextState.validScripts,
-        fakeValidScripts.filter(script => script.script_name === 'express-2017')
-      );
-    });
-
-    it('filters validScripts to those included in studentScriptIds', () => {
-      const studentScriptIds = [456];
-      const validCourses = [];
-      const action = setValidScripts(
-        fakeValidScripts,
-        studentScriptIds,
-        validCourses
-      );
-      const nextState = unitSelection(initialState, action);
-      assert.deepEqual(
-        nextState.validScripts,
-        fakeValidScripts.filter(script => script.id === 456)
-      );
-    });
-
-    it('includes other course units when filtering validScripts', () => {
-      const studentScriptIds = [300];
-      const validCourses = fakeValidCourses;
-      const action = setValidScripts(
-        fakeValidScripts,
-        studentScriptIds,
-        validCourses
-      );
-      const nextState = unitSelection(initialState, action);
-      const expectedScripts = [fakeValidScripts[1], fakeValidScripts[2]];
-      assert.deepEqual(expectedScripts, nextState.validScripts);
-    });
-
-    it('includes units of the assigned course when filtering validScripts if course_id provided', () => {
-      const studentScriptIds = [];
-      const validCourses = fakeValidCourses;
-      const assignedCourseId = 99;
-      const action = setValidScripts(
-        fakeValidScripts,
-        studentScriptIds,
-        validCourses,
-        {course_id: assignedCourseId}
-      );
-      const nextState = unitSelection(initialState, action);
-      const expectedScripts = [fakeValidScripts[1], fakeValidScripts[2]];
-      assert.deepEqual(expectedScripts, nextState.validScripts);
-    });
-
-    it('includes units of the assigned course when filtering validScripts if script_id of a script for course provided', () => {
-      const studentScriptIds = [];
-      const validCourses = fakeValidCourses;
-      const action = setValidScripts(
-        fakeValidScripts,
-        studentScriptIds,
-        validCourses,
-        {script: {id: 300}}
-      );
-      const nextState = unitSelection(initialState, action);
-      const expectedScripts = [fakeValidScripts[1], fakeValidScripts[2]];
-      assert.deepEqual(expectedScripts, nextState.validScripts);
     });
   });
 });

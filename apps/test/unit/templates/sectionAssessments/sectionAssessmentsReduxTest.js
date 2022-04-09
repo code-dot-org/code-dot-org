@@ -186,7 +186,7 @@ describe('sectionAssessmentsRedux', () => {
       const rootState = {
         unitSelection: {
           scriptId: 123,
-          validScripts: [{id: 123, script_name: 'learn-cs'}]
+          courseVersionsWithProgress: {123: {}}
         },
         sectionAssessments: {
           ...initialState,
@@ -218,7 +218,7 @@ describe('sectionAssessmentsRedux', () => {
       const rootState = {
         unitSelection: {
           scriptId: 123,
-          validScripts: [{id: 123, script_name: 'csp8-2011'}]
+          courseVersionsWithProgress: {123: {}}
         },
         sectionAssessments: {
           ...initialState,
@@ -731,7 +731,7 @@ describe('sectionAssessmentsRedux', () => {
           ...rootState,
           unitSelection: {
             scriptId: 2,
-            validScripts: [{id: 2, script_name: 'csd8-2011'}]
+            courseVersionsWithProgress: {2: {}}
           }
         };
         const result = isCurrentScriptCSD(state);
@@ -743,7 +743,7 @@ describe('sectionAssessmentsRedux', () => {
           ...rootState,
           unitSelection: {
             scriptId: 2,
-            validScripts: [{id: 2, script_name: 'learn-cs'}]
+            courseVersionsWithProgress: {2: {}}
           }
         };
         const result = isCurrentScriptCSD(state);
@@ -757,7 +757,7 @@ describe('sectionAssessmentsRedux', () => {
           ...rootState,
           unitSelection: {
             scriptId: 2,
-            validScripts: [{id: 2, script_name: 'csp8-2011'}]
+            courseVersionsWithProgress: {2: {}}
           }
         };
         const result = doesCurrentCourseUseFeedback(state);
@@ -769,7 +769,7 @@ describe('sectionAssessmentsRedux', () => {
           ...rootState,
           unitSelection: {
             scriptId: 2,
-            validScripts: [{id: 2, script_name: 'learn-cs'}]
+            courseVersionsWithProgress: {2: {}}
           }
         };
         const result = doesCurrentCourseUseFeedback(state);

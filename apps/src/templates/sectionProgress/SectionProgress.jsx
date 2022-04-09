@@ -16,13 +16,11 @@ import {
 } from './sectionProgressRedux';
 import {loadScriptProgress} from './sectionProgressLoader';
 import {ViewType, scriptDataPropType} from './sectionProgressConstants';
-import {
-  setScriptId,
-  validScriptPropType
-} from '@cdo/apps/redux/unitSelectionRedux';
+import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import firehoseClient from '../../lib/util/firehose';
 import ProgressViewHeader from './ProgressViewHeader';
 import logToCloud from '@cdo/apps/logToCloud';
+import {assignmentCourseVersionShape} from '../teacherDashboard/shapes';
 
 /**
  * Given a particular section, this component owns figuring out which script to
@@ -35,7 +33,8 @@ class SectionProgress extends Component {
     //Provided by redux
     scriptId: PropTypes.number,
     sectionId: PropTypes.number,
-    validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
+    courseVersionsWithProgress: PropTypes.objectOf(assignmentCourseVersionShape)
+      .isRequired,
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     setCurrentView: PropTypes.func.isRequired,
     scriptData: scriptDataPropType,
@@ -116,7 +115,7 @@ class SectionProgress extends Component {
 
   render() {
     const {
-      validScripts,
+      courseVersionsWithProgress,
       currentView,
       scriptId,
       scriptData,
@@ -128,6 +127,8 @@ class SectionProgress extends Component {
       levelDataInitialized && scriptData.hasStandards;
     const standardsStyle =
       currentView === ViewType.STANDARDS ? styles.show : styles.hide;
+
+    console.log(courseVersionsWithProgress);
     return (
       <div>
         <div style={styles.topRowContainer}>
@@ -136,7 +137,7 @@ class SectionProgress extends Component {
               {i18n.selectACourse()}
             </div>
             <UnitSelector
-              validScripts={validScripts}
+              courseVersionsWithProgress={courseVersionsWithProgress}
               scriptId={scriptId}
               onChange={this.onChangeScript}
             />
@@ -220,7 +221,7 @@ export default connect(
   state => ({
     scriptId: state.unitSelection.scriptId,
     sectionId: state.teacherSections.selectedSectionId,
-    validScripts: state.unitSelection.validScripts,
+    courseVersionsWithProgress: state.unitSelection.courseVersionsWithProgress,
     currentView: state.sectionProgress.currentView,
     scriptData: getCurrentUnitData(state),
     isLoadingProgress: state.sectionProgress.isLoadingProgress,

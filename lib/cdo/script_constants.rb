@@ -371,32 +371,6 @@ module ScriptConstants
     end
   end
 
-  # Sections can be assigned to both courses and scripts. We want to make sure
-  # we give teacher dashboard the same information for both sets of assignables.
-  # We also expect to be in a mixed world for a time where this info is asked for
-  # both by dashboard and pegasus, and we want to keep that in sync. We accomplish
-  # most of that through this shared method, leaving it to dashboard/pegasus
-  # to take care of translating name/cateogry (with the unfortunate effect that
-  # we could have two different translations).
-  # @param course_or_script [Course|Script] A row object from either our courses
-  #   or scripts dashboard db tables.
-  # @param hidden [Boolean] True if the passed in item is hidden
-  # @return {AssignableInfo} without strings translated
-  def self.assignable_info(course_or_script)
-    name = ScriptConstants.teacher_dashboard_name(course_or_script[:name])
-    first_category = ScriptConstants.categories(course_or_script[:name])[0] ||
-        OTHER_CATEGORY_NAME
-    {
-      id: course_or_script[:id],
-      name: name,
-      # Would better be called something like assignable_name
-      script_name: course_or_script[:name],
-      category: first_category,
-      position: ScriptConstants.position_in_category(course_or_script[:name], first_category),
-      category_priority: ScriptConstants.category_priority(first_category),
-    }
-  end
-
   CSF_COURSE_PATTERNS = [/^(course[a-f])-([0-9]+)$/, /^(express)-([0-9]+)$/, /^(pre-express)-([0-9]+)$/]
 
   def self.has_congrats_page?(script)
