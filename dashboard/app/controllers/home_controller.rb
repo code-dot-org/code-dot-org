@@ -121,7 +121,9 @@ class HomeController < ApplicationController
     @force_school_info_confirmation_dialog = params[:forceSchoolInfoConfirmationDialog]
     @force_school_info_interstitial = params[:forceSchoolInfoInterstitial]
 
-    student_sections = current_user.sections_as_student.map(&:summarize_without_students)
+    sections_as_student = current_user.sections_as_student
+    student_sections = sections_as_student.select {|s| !s.pl_section?}.map(&:summarize_without_students)
+    pl_sections = sections_as_student.select(&:pl_section?).map(&:summarize_without_students)
 
     # Students and teachers will receive a @top_course for their primary
     # script, so we don't want to include that script (if it exists) in the
@@ -181,7 +183,8 @@ class HomeController < ApplicationController
 
       @homepage_data[:isTeacher] = true
       @homepage_data[:hocLaunch] = DCDO.get('hoc_launch', CDO.default_hoc_launch)
-      @homepage_data[:joined_sections] = student_sections
+      @homepage_data[:joined_student_sections] = student_sections
+      @homepage_data[:joined_pl_sections] = pl_sections
       @homepage_data[:announcement] = DCDO.get('announcement_override', nil)
       @homepage_data[:hiddenScripts] = current_user.get_hidden_script_ids
       @homepage_data[:showCensusBanner] = show_census_banner
