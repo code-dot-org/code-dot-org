@@ -342,35 +342,6 @@ module ScriptConstants
     return CATEGORIES[category].include? script
   end
 
-  def self.categories(script)
-    CATEGORIES.select {|_, scripts| scripts.include? script}.
-        map {|category, _| category.to_s}
-  end
-
-  def self.position_in_category(script, category)
-    CATEGORIES[category.to_sym] ? CATEGORIES[category.to_sym].find_index(script) : nil
-  end
-
-  def self.category_priority(category)
-    if category == OTHER_CATEGORY_NAME
-      CATEGORIES.keys.length # 'other' goes at the end
-    else
-      CATEGORIES.keys.find_index(category.to_sym)
-    end
-  end
-
-  def self.teacher_dashboard_name(script)
-    if script == MINECRAFT_NAME
-      MINECRAFT_TEACHER_DASHBOARD_NAME
-    elsif script == MINECRAFT_DESIGNER_NAME
-      MINECRAFT_DESIGNER_TEACHER_DASHBOARD_NAME
-    elsif script == HOC_NAME
-      HOC_TEACHER_DASHBOARD_NAME
-    else
-      script
-    end
-  end
-
   CSF_COURSE_PATTERNS = [/^(course[a-f])-([0-9]+)$/, /^(express)-([0-9]+)$/, /^(pre-express)-([0-9]+)$/]
 
   def self.has_congrats_page?(script)

@@ -41,31 +41,6 @@ class ScriptConstantsTest < Minitest::Test
     refute ScriptConstants.unit_in_category?(:hoc, ScriptConstants::COURSE4_NAME)
   end
 
-  def test_category
-    assert_equal ['hoc'], ScriptConstants.categories(ScriptConstants::HOC_NAME)
-    assert_equal ['hoc'], ScriptConstants.categories(ScriptConstants::STARWARS_NAME)
-    assert_equal ['hoc', 'flappy'], ScriptConstants.categories(ScriptConstants::FLAPPY_NAME)
-    assert_equal ['csf_international'], ScriptConstants.categories(ScriptConstants::COURSE1_NAME)
-    assert_equal ['csp'], ScriptConstants.categories(ScriptConstants::CSP_UNIT1_NAME)
-  end
-
-  def test_category_index
-    assert_equal 0, ScriptConstants.position_in_category(ScriptConstants::CSP_UNIT1_NAME, :csp)
-    assert_equal 1, ScriptConstants.position_in_category(ScriptConstants::CSP_UNIT2_NAME, :csp)
-    assert_equal 2, ScriptConstants.position_in_category(ScriptConstants::CSP_UNIT3_NAME, :csp)
-    assert_equal 3, ScriptConstants.position_in_category(ScriptConstants::CSP_UNIT4_NAME, :csp)
-    assert_equal 4, ScriptConstants.position_in_category(ScriptConstants::CSP_UNIT5_NAME, :csp)
-    assert_equal 5, ScriptConstants.position_in_category(ScriptConstants::CSP_UNIT6_NAME, :csp)
-
-    assert_nil ScriptConstants.position_in_category('script', :not_a_category)
-    assert_nil ScriptConstants.position_in_category('not a script', :csp)
-  end
-
-  def test_category_priority
-    assert_equal 8, ScriptConstants.category_priority(:csf_international)
-    assert_equal 10, ScriptConstants.category_priority(:research_studies)
-  end
-
   def test_congrats_page
     %w(
       coursea-2019
