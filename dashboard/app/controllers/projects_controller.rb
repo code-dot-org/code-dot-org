@@ -242,7 +242,7 @@ class ProjectsController < ApplicationController
   def load
     return if redirect_under_13_without_tos_teacher(@level)
     if current_user
-      channel = StorageApps.new(storage_id_for_current_user).most_recent(params[:key])
+      channel = Projects.new(storage_id_for_current_user).most_recent(params[:key])
       if channel
         redirect_to action: 'edit', channel_id: channel
         return
@@ -256,7 +256,7 @@ class ProjectsController < ApplicationController
     return if redirect_under_13_without_tos_teacher(@level)
     channel = ChannelToken.create_channel(
       request.ip,
-      StorageApps.new(get_storage_id),
+      Projects.new(get_storage_id),
       data: initial_data,
       type: params[:key]
     )
@@ -338,7 +338,7 @@ class ProjectsController < ApplicationController
     end
 
     begin
-      _, storage_app_id = storage_decrypt_channel_id(params[:channel_id]) if params[:channel_id]
+      _, project_id = storage_decrypt_channel_id(params[:channel_id]) if params[:channel_id]
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       # continue as normal, as we only use this value for stats.
     end
@@ -348,8 +348,8 @@ class ProjectsController < ApplicationController
       {
         study: 'project-views',
         event: project_view_event_type(iframe_embed, sharing),
-        # allow cross-referencing with the storage_apps table.
-        project_id: storage_app_id,
+        # allow cross-referencing with the projects table.
+        project_id: project_id,
         # make it easier to group by project_type.
         data_string: params[:key],
         data_json: {
@@ -379,7 +379,7 @@ class ProjectsController < ApplicationController
     project_type = params[:key]
     new_channel_id = ChannelToken.create_channel(
       request.ip,
-      StorageApps.new(get_storage_id),
+      Projects.new(get_storage_id),
       src: src_channel_id,
       type: project_type,
       remix_parent_id: remix_parent_id,
@@ -416,14 +416,14 @@ class ProjectsController < ApplicationController
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       return head :bad_request
     end
-    storage_app = StorageApps.new(get_storage_id)
-    src_data = storage_app.get(src_channel_id)
+    project = Projects.new(get_storage_id)
+    src_data = project.get(src_channel_id)
     data = initial_data
     data['name'] = "Exported: #{src_data['name']}"
     data['hidden'] = true
     new_channel_id = ChannelToken.create_channel(
       request.ip,
-      storage_app,
+      project,
       data: data,
       type: params[:key],
       remix_parent_id: remix_parent_id,

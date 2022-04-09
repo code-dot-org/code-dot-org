@@ -371,7 +371,7 @@ class UnitGroup < ApplicationRecord
       is_migrated: has_migrated_unit?,
       has_verified_resources: has_verified_resources?,
       has_numbered_units: has_numbered_units?,
-      versions: summarize_versions(user, locale_code),
+      course_versions: summarize_course_versions(user, locale_code),
       show_assign_button: course_assignable?(user),
       announcements: announcements,
       course_offering_id: course_version&.course_offering&.id,
@@ -407,11 +407,16 @@ class UnitGroup < ApplicationRecord
   end
 
   # Returns summary object of all the course versions that an instructor can
-  # assign or all the launched versions a participant can view
-  def summarize_versions(user = nil, locale_code = nil)
+  # assign or all the launched versions a participant can view. 'course_assignable'
+  # will always return false for participants so they will fall into the second check for
+  # launched and can_view_version?. For instructors if course_assignable? is false then
+  # launched will also be false.
+  def summarize_course_versions(user = nil, locale_code = 'en-us')
     return {} unless user
 
-    course_version&.course_offering&.course_versions&.select {|cv| cv.course_assignable?(user) || (cv.launched? && cv.can_view_version?(user))}&.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
+    all_course_versions = course_version&.course_offering&.course_versions
+    course_versions_for_user = all_course_versions&.select {|cv| cv.course_assignable?(user) || (cv.launched? && cv.can_view_version?(user))}
+    course_versions_for_user&.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
   # If a user has no experiments enabled, return the default set of units.

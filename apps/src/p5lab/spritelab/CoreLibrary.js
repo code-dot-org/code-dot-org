@@ -532,6 +532,45 @@ export default class CoreLibrary {
     }
   }
 
+  everyIntervalEvent(inputEvent) {
+    if (inputEvent.args.unit === 'seconds') {
+      const previousTime = inputEvent.previousTime || 0;
+      const previousModdedTime = inputEvent.previousModdedTime || 0;
+      const worldTime = this.getSecondsSinceReset();
+      // Repeat every n seconds
+      const moddedWorldTime = worldTime % inputEvent.args.n;
+      inputEvent.previousTime = worldTime;
+      inputEvent.previousModdedTime = moddedWorldTime;
+
+      // Case where n is 1, so we want to repeat every second, but only the first tick in each second.
+      const singleSecondInterval =
+        inputEvent.args.n === 1 && previousTime !== worldTime;
+
+      // There are many ticks per second, but we only want to fire the event once (on the first tick where
+      // the time matches the event argument)
+      // Determine if the current time is on the interval
+      if (
+        (moddedWorldTime === 0 && previousModdedTime !== 0) ||
+        singleSecondInterval
+      ) {
+        // Call callback with no extra args
+        this.eventLog.push(`everyInterval: ${inputEvent.args.n}`);
+        return [{}];
+      }
+    } else if (inputEvent.args.unit === 'frames') {
+      const worldFrames = this.getFramesSinceReset();
+      // Repeat every n frames
+      let moddedWorldFrames = worldFrames % inputEvent.args.n;
+      if (moddedWorldFrames === 0) {
+        // Call callback with no extra args
+        this.eventLog.push(`everyInterval: ${inputEvent.args.n}`);
+        return [{}];
+      }
+    }
+    // Don't call callback
+    return [];
+  }
+
   repeatForeverEvent(inputEvent) {
     // No condition to check, just always call callback with no extra args
     return [{}];
@@ -691,6 +730,8 @@ export default class CoreLibrary {
         return this.atTimeEvent(inputEvent);
       case 'collectData':
         return this.collectDataEvent(inputEvent);
+      case 'everyInterval':
+        return this.everyIntervalEvent(inputEvent);
       case 'repeatForever':
         return this.repeatForeverEvent(inputEvent);
       case 'whenpress':

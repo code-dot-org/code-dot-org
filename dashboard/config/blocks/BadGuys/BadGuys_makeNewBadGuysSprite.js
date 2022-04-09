@@ -35,7 +35,7 @@ function makeNewBadGuysSprite(costume,location) {
       size = 217;
       break;
     case 'car_group':
-      size = 150;
+      size = 300;
       break;
     default:
       size = 100;

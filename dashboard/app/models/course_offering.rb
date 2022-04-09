@@ -118,7 +118,7 @@ class CourseOffering < ApplicationRecord
       id,
       {
         id: id,
-        display_name: localized_display_name,
+        display_name: any_versions_launched? ? localized_display_name : localized_display_name + ' *',
         category: category,
         is_featured: is_featured?,
         participant_audience: course_versions.first.content_root.participant_audience,

@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2022-03-31 19:52:29 UTC",
+    "serialized_at": "2022-04-07 21:20:41 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -926,7 +926,6 @@
       "key": "cdab872c-b226-4099-93d2-17e3a0f47ca1",
       "position": 4,
       "properties": {
-        "name": "Assessment (2 minutes)"
       },
       "seeding_key": {
         "lesson_activity.key": "cdab872c-b226-4099-93d2-17e3a0f47ca1",
@@ -2561,7 +2560,9 @@
       "key": "2c20e776-eba9-4b67-b0f1-f539ddcccf13",
       "position": 1,
       "properties": {
-        "description": "Ask students to add their “Whip Around” sticky notes or note cards to your \"Computer Science\" mind map on their way out the door. Try to populate the board with lots of great ideas about what CS is and why it matters."
+        "description": "Ask students to add their “Whip Around” sticky notes or note cards to your \"Computer Science\" mind map on their way out the door. Try to populate the board with lots of great ideas about what CS is and why it matters.",
+        "duration": "2",
+        "name": "Optional Assessment"
       },
       "seeding_key": {
         "activity_section.key": "2c20e776-eba9-4b67-b0f1-f539ddcccf13",
@@ -2689,7 +2690,8 @@
       "key": "e26c0781-e8ca-4864-ab22-1af5ce60b1f4",
       "position": 7,
       "properties": {
-        "description": "####Lesson Extras\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras” slide"
+        "description": "####Lesson Extras\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras” slide",
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "e26c0781-e8ca-4864-ab22-1af5ce60b1f4",
@@ -2857,7 +2859,8 @@
       "key": "3315af90-e8ff-4568-813e-2b743e90bf30",
       "position": 8,
       "properties": {
-        "description": "####Lesson Extras\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras” slide"
+        "description": "####Lesson Extras\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras” slide",
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "3315af90-e8ff-4568-813e-2b743e90bf30",
@@ -2999,7 +3002,8 @@
       "key": "791b5b99-593d-4287-ab93-a9970d63744e",
       "position": 9,
       "properties": {
-        "description": "####Lesson Extras\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 14-15 - Lesson Extras” slide"
+        "description": "####Lesson Extras\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras” slide",
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "791b5b99-593d-4287-ab93-a9970d63744e",
@@ -3273,7 +3277,8 @@
       "key": "3ea15706-caac-499b-aef5-a7210f291bfc",
       "position": 10,
       "properties": {
-        "description": "####Lesson Extras\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras slide"
+        "description": "####Lesson Extras\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras slide",
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "3ea15706-caac-499b-aef5-a7210f291bfc",
@@ -3462,7 +3467,8 @@
       "key": "3edea7b4-3cb0-44c0-8705-5e2f51f2802d",
       "position": 11,
       "properties": {
-        "description": "####Lesson Extras\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras slide"
+        "description": "####Lesson Extras\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras slide",
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "3edea7b4-3cb0-44c0-8705-5e2f51f2802d",
@@ -3639,7 +3645,8 @@
       "key": "3694bab1-5f1b-411a-8170-601003b9d32c",
       "position": 10,
       "properties": {
-        "description": "####Lesson Extras\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras slide"
+        "description": "####Lesson Extras\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras slide",
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "3694bab1-5f1b-411a-8170-601003b9d32c",
@@ -3781,7 +3788,8 @@
       "key": "baf8f43c-6977-4f51-a3c6-3b571a735941",
       "position": 8,
       "properties": {
-        "description": "####Lesson Extras\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras slide"
+        "description": "####Lesson Extras\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras\" slide",
+        "progression_name": "Lesson Extras"
       },
       "seeding_key": {
         "activity_section.key": "baf8f43c-6977-4f51-a3c6-3b571a735941",
@@ -5697,6 +5705,56 @@
     },
     {
       "chapter": 70,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2022_lessonextra1"
+        ],
+        "progression": "Lesson Extras"
+      },
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2022_lessonextra1"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2022",
+        "activity_section.key": "e26c0781-e8ca-4864-ab22-1af5ce60b1f4"
+      },
+      "level_keys": [
+        "CourseD_Dance_2022_lessonextra1"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 14,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2022_lessonextra"
+        ],
+        "progression": "Lesson Extras"
+      },
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2022_lessonextra"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2022",
+        "activity_section.key": "e26c0781-e8ca-4864-ab22-1af5ce60b1f4"
+      },
+      "level_keys": [
+        "CourseD_Dance_2022_lessonextra"
+      ]
+    },
+    {
+      "chapter": 72,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5721,7 +5779,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 73,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5746,7 +5804,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 74,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5771,7 +5829,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 75,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5796,7 +5854,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 76,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5821,7 +5879,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 77,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5846,7 +5904,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 78,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -5871,7 +5929,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 79,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -5896,7 +5954,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 80,
       "position": 9,
       "activity_section_position": 5,
       "assessment": false,
@@ -5921,7 +5979,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 81,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -5947,7 +6005,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 82,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -5972,7 +6030,57 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 83,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2022_lessonextra10a"
+        ],
+        "progression": "Lesson Extras"
+      },
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2022_lessonextra10a"
+        ],
+        "lesson.key": "Drawing Shapes with Loops",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2022",
+        "activity_section.key": "3315af90-e8ff-4568-813e-2b743e90bf30"
+      },
+      "level_keys": [
+        "CourseD_Dance_2022_lessonextra10a"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 13,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2022_lessonextra10b"
+        ],
+        "progression": "Lesson Extras"
+      },
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2022_lessonextra10b"
+        ],
+        "lesson.key": "Drawing Shapes with Loops",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2022",
+        "activity_section.key": "3315af90-e8ff-4568-813e-2b743e90bf30"
+      },
+      "level_keys": [
+        "CourseD_Dance_2022_lessonextra10b"
+      ]
+    },
+    {
+      "chapter": 85,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5997,7 +6105,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 86,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6022,7 +6130,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 87,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6047,7 +6155,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 88,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6072,7 +6180,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 89,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6097,7 +6205,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 90,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6122,7 +6230,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 91,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -6147,7 +6255,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 92,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -6172,7 +6280,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 93,
       "position": 9,
       "activity_section_position": 5,
       "assessment": false,
@@ -6197,7 +6305,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 94,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -6223,7 +6331,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 95,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -6248,7 +6356,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 96,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -6273,7 +6381,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 97,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -6298,14 +6406,15 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 98,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "courseD_harvester_nested_loops_challenge12022"
-        ]
+        ],
+        "progression": "Lesson Extras"
       },
       "bonus": true,
       "seeding_key": {
@@ -6322,14 +6431,15 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 99,
       "position": 15,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "courseD_collector_nested_loops_challenge22022"
-        ]
+        ],
+        "progression": "Lesson Extras"
       },
       "bonus": true,
       "seeding_key": {
@@ -6346,7 +6456,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 100,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6371,7 +6481,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 101,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6396,7 +6506,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 102,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6420,7 +6530,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 103,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6444,7 +6554,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 104,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6468,7 +6578,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 105,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -6492,7 +6602,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 106,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -6516,7 +6626,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 107,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -6541,7 +6651,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 108,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -6566,7 +6676,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 109,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -6591,7 +6701,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 110,
       "position": 10,
       "activity_section_position": 4,
       "assessment": false,
@@ -6616,7 +6726,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 111,
       "position": 11,
       "activity_section_position": 5,
       "assessment": false,
@@ -6641,7 +6751,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 112,
       "position": 12,
       "activity_section_position": 6,
       "assessment": false,
@@ -6666,7 +6776,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 113,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -6690,7 +6800,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 114,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -6716,7 +6826,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 115,
       "position": 15,
       "activity_section_position": 2,
       "assessment": false,
@@ -6742,7 +6852,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 116,
       "position": 16,
       "activity_section_position": 3,
       "assessment": false,
@@ -6767,7 +6877,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 117,
       "position": 17,
       "activity_section_position": 1,
       "assessment": false,
@@ -6792,7 +6902,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 118,
       "position": 18,
       "activity_section_position": 1,
       "assessment": false,
@@ -6817,7 +6927,57 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 119,
+      "position": 19,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Minecraft_LessonExtra13a"
+        ],
+        "progression": "Lesson Extras"
+      },
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Minecraft_LessonExtra13a"
+        ],
+        "lesson.key": "Looking Ahead with Minecraft",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2022",
+        "activity_section.key": "3ea15706-caac-499b-aef5-a7210f291bfc"
+      },
+      "level_keys": [
+        "CourseD_Minecraft_LessonExtra13a"
+      ]
+    },
+    {
+      "chapter": 120,
+      "position": 20,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Minecraft_LessonExtra13b"
+        ],
+        "progression": "Lesson Extras"
+      },
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Minecraft_LessonExtra13b"
+        ],
+        "lesson.key": "Looking Ahead with Minecraft",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2022",
+        "activity_section.key": "3ea15706-caac-499b-aef5-a7210f291bfc"
+      },
+      "level_keys": [
+        "CourseD_Minecraft_LessonExtra13b"
+      ]
+    },
+    {
+      "chapter": 121,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6842,7 +7002,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 122,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6867,7 +7027,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 123,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6892,7 +7052,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 124,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -6917,7 +7077,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 125,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -6942,7 +7102,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 126,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -6967,7 +7127,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 127,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -6992,7 +7152,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 128,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -7017,7 +7177,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 129,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7042,7 +7202,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 130,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -7067,7 +7227,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 131,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -7093,7 +7253,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 132,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -7118,7 +7278,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 133,
       "position": 13,
       "activity_section_position": 2,
       "assessment": false,
@@ -7143,7 +7303,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 134,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -7168,7 +7328,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 135,
       "position": 15,
       "activity_section_position": 2,
       "assessment": false,
@@ -7193,7 +7353,57 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 136,
+      "position": 16,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_2022LessonExtra14a"
+        ],
+        "progression": "Lesson Extras"
+      },
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_2022LessonExtra14a"
+        ],
+        "lesson.key": "If/Else with Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2022",
+        "activity_section.key": "3edea7b4-3cb0-44c0-8705-5e2f51f2802d"
+      },
+      "level_keys": [
+        "CourseD_2022LessonExtra14a"
+      ]
+    },
+    {
+      "chapter": 137,
+      "position": 17,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_2022_LessonExtra14b"
+        ],
+        "progression": "Lesson Extras"
+      },
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_2022_LessonExtra14b"
+        ],
+        "lesson.key": "If/Else with Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2022",
+        "activity_section.key": "3edea7b4-3cb0-44c0-8705-5e2f51f2802d"
+      },
+      "level_keys": [
+        "CourseD_2022_LessonExtra14b"
+      ]
+    },
+    {
+      "chapter": 138,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7218,7 +7428,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 139,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7243,7 +7453,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 140,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -7268,7 +7478,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 141,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -7293,7 +7503,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 142,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7318,7 +7528,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 143,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7343,7 +7553,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 144,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -7368,7 +7578,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 145,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -7393,7 +7603,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 146,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
@@ -7418,7 +7628,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 147,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -7444,7 +7654,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 148,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -7469,7 +7679,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 149,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -7494,7 +7704,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 150,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -7519,7 +7729,7 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 151,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -7544,7 +7754,57 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 152,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_2022LessonExtra15a"
+        ],
+        "progression": "Lesson Extras"
+      },
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_2022LessonExtra15a"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2022",
+        "activity_section.key": "3694bab1-5f1b-411a-8170-601003b9d32c"
+      },
+      "level_keys": [
+        "CourseD_2022LessonExtra15a"
+      ]
+    },
+    {
+      "chapter": 153,
+      "position": 16,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_2022_LessonExtra15b"
+        ],
+        "progression": "Lesson Extras"
+      },
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_2022_LessonExtra15b"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2022",
+        "activity_section.key": "3694bab1-5f1b-411a-8170-601003b9d32c"
+      },
+      "level_keys": [
+        "CourseD_2022_LessonExtra15b"
+      ]
+    },
+    {
+      "chapter": 154,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7569,7 +7829,7 @@
       ]
     },
     {
-      "chapter": 145,
+      "chapter": 155,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7594,7 +7854,7 @@
       ]
     },
     {
-      "chapter": 146,
+      "chapter": 156,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7619,7 +7879,7 @@
       ]
     },
     {
-      "chapter": 147,
+      "chapter": 157,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -7644,7 +7904,7 @@
       ]
     },
     {
-      "chapter": 148,
+      "chapter": 158,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -7669,7 +7929,7 @@
       ]
     },
     {
-      "chapter": 149,
+      "chapter": 159,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -7694,7 +7954,7 @@
       ]
     },
     {
-      "chapter": 150,
+      "chapter": 160,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -7719,7 +7979,7 @@
       ]
     },
     {
-      "chapter": 151,
+      "chapter": 161,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -7744,7 +8004,7 @@
       ]
     },
     {
-      "chapter": 152,
+      "chapter": 162,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7770,7 +8030,7 @@
       ]
     },
     {
-      "chapter": 153,
+      "chapter": 163,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -7795,7 +8055,7 @@
       ]
     },
     {
-      "chapter": 154,
+      "chapter": 164,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -7820,7 +8080,57 @@
       ]
     },
     {
-      "chapter": 155,
+      "chapter": 165,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_2022LessonExtra16a"
+        ],
+        "progression": "Lesson Extras"
+      },
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_2022LessonExtra16a"
+        ],
+        "lesson.key": "Until Loops in Maze",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2022",
+        "activity_section.key": "baf8f43c-6977-4f51-a3c6-3b571a735941"
+      },
+      "level_keys": [
+        "CourseD_2022LessonExtra16a"
+      ]
+    },
+    {
+      "chapter": 166,
+      "position": 13,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_2022_LessonExtra16b"
+        ],
+        "progression": "Lesson Extras"
+      },
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_2022_LessonExtra16b"
+        ],
+        "lesson.key": "Until Loops in Maze",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2022",
+        "activity_section.key": "baf8f43c-6977-4f51-a3c6-3b571a735941"
+      },
+      "level_keys": [
+        "CourseD_2022_LessonExtra16b"
+      ]
+    },
+    {
+      "chapter": 167,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7845,7 +8155,7 @@
       ]
     },
     {
-      "chapter": 156,
+      "chapter": 168,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8701,6 +9011,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "CourseD_Dance_2022_lessonextra1",
+        "script_level.level_keys": [
+          "CourseD_Dance_2022_lessonextra1"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2022",
+        "activity_section.key": "e26c0781-e8ca-4864-ab22-1af5ce60b1f4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2022_lessonextra",
+        "script_level.level_keys": [
+          "CourseD_Dance_2022_lessonextra"
+        ],
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2022",
+        "activity_section.key": "e26c0781-e8ca-4864-ab22-1af5ce60b1f4"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "ramp_video_artistIntro2022",
         "script_level.level_keys": [
           "ramp_video_artistIntro2022"
@@ -8829,6 +9163,30 @@
         "lesson_group.key": "csf_loops",
         "script.name": "coursed-2022",
         "activity_section.key": "3f3774e2-c8fa-4318-9e6e-d58f6983e746"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2022_lessonextra10a",
+        "script_level.level_keys": [
+          "CourseD_Dance_2022_lessonextra10a"
+        ],
+        "lesson.key": "Drawing Shapes with Loops",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2022",
+        "activity_section.key": "3315af90-e8ff-4568-813e-2b743e90bf30"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2022_lessonextra10b",
+        "script_level.level_keys": [
+          "CourseD_Dance_2022_lessonextra10b"
+        ],
+        "lesson.key": "Drawing Shapes with Loops",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursed-2022",
+        "activity_section.key": "3315af90-e8ff-4568-813e-2b743e90bf30"
       }
     },
     {
@@ -9241,6 +9599,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "CourseD_Minecraft_LessonExtra13a",
+        "script_level.level_keys": [
+          "CourseD_Minecraft_LessonExtra13a"
+        ],
+        "lesson.key": "Looking Ahead with Minecraft",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2022",
+        "activity_section.key": "3ea15706-caac-499b-aef5-a7210f291bfc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Minecraft_LessonExtra13b",
+        "script_level.level_keys": [
+          "CourseD_Minecraft_LessonExtra13b"
+        ],
+        "lesson.key": "Looking Ahead with Minecraft",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2022",
+        "activity_section.key": "3ea15706-caac-499b-aef5-a7210f291bfc"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "courseD_bee_conditionalsVid12022",
         "script_level.level_keys": [
           "courseD_bee_conditionalsVid12022"
@@ -9421,6 +9803,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "CourseD_2022LessonExtra14a",
+        "script_level.level_keys": [
+          "CourseD_2022LessonExtra14a"
+        ],
+        "lesson.key": "If/Else with Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2022",
+        "activity_section.key": "3edea7b4-3cb0-44c0-8705-5e2f51f2802d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_2022_LessonExtra14b",
+        "script_level.level_keys": [
+          "CourseD_2022_LessonExtra14b"
+        ],
+        "lesson.key": "If/Else with Bee",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2022",
+        "activity_section.key": "3edea7b4-3cb0-44c0-8705-5e2f51f2802d"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "courseD_farmer_while12022",
         "script_level.level_keys": [
           "courseD_farmer_while12022"
@@ -9589,6 +9995,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "CourseD_2022LessonExtra15a",
+        "script_level.level_keys": [
+          "CourseD_2022LessonExtra15a"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2022",
+        "activity_section.key": "3694bab1-5f1b-411a-8170-601003b9d32c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_2022_LessonExtra15b",
+        "script_level.level_keys": [
+          "CourseD_2022_LessonExtra15b"
+        ],
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2022",
+        "activity_section.key": "3694bab1-5f1b-411a-8170-601003b9d32c"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "courseD_maze_until12022",
         "script_level.level_keys": [
           "courseD_maze_until12022"
@@ -9721,6 +10151,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "CourseD_2022LessonExtra16a",
+        "script_level.level_keys": [
+          "CourseD_2022LessonExtra16a"
+        ],
+        "lesson.key": "Until Loops in Maze",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2022",
+        "activity_section.key": "baf8f43c-6977-4f51-a3c6-3b571a735941"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_2022_LessonExtra16b",
+        "script_level.level_keys": [
+          "CourseD_2022_LessonExtra16b"
+        ],
+        "lesson.key": "Until Loops in Maze",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2022",
+        "activity_section.key": "baf8f43c-6977-4f51-a3c6-3b571a735941"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "courseD_EOC_examples2022",
         "script_level.level_keys": [
           "courseD_EOC_examples2022"
@@ -9746,15 +10200,46 @@
   ],
   "resources": [
     {
-      "name": "2021 Change Log",
-      "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
-      "key": "2021_change_log",
+      "name": "2022 Change Log",
+      "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview",
+      "key": "2022_change_log",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "2021_change_log"
+        "resource.key": "2022_change_log"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/coursed-2022/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/coursed-2022/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/coursed-2022/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
       }
     },
     {
@@ -9846,18 +10331,6 @@
       }
     },
     {
-      "name": "Course Vocabulary",
-      "url": "https://studio.code.org/s/coursed-2021/vocab",
-      "key": "course_vocabulary",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "course_vocabulary"
-      }
-    },
-    {
       "name": "Cross-Curricular Extension Activities",
       "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
       "key": "cross-curricular_extension_activities",
@@ -9896,24 +10369,10 @@
       }
     },
     {
-      "name": "CSTA Standards Mapping",
-      "url": "https://studio.code.org/s/coursed-2021/standards",
-      "key": "csta_standards_mapping",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "csta_standards_mapping"
-      }
-    },
-    {
       "name": "Curriculum Guide",
-      "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
+      "url": "https://docs.google.com/document/d/12j5IkeGEWeAmWnZY9krbNSo8oKOKT5nIQGUH5J7Si80/preview",
       "key": "curriculum_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "curriculum_guide"
@@ -10295,6 +10754,18 @@
       }
     },
     {
+      "name": "Sample Level Solutions",
+      "url": "https://docs.google.com/document/d/1XNOBi1OrHlRQbQCiaCV9MPHeAQhQDDr34wjlAd3qatw/template/preview",
+      "key": "sample_level_solutions",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "sample_level_solutions"
+      }
+    },
+    {
       "name": "Spotify Playlist (all ages)",
       "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw",
       "key": "spotify_playlist_all_ages_",
@@ -10359,6 +10830,12 @@
       "seeding_key": {
         "lesson.key": "Build a Star Wars Game",
         "resource.key": "pause_and_think_online"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Star Wars Game",
+        "resource.key": "sample_level_solutions"
       }
     },
     {
@@ -10701,7 +11178,25 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "2021_change_log",
+        "resource.key": "2022_change_log",
+        "script.name": "coursed-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "coursed-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "coursed-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
         "script.name": "coursed-2022"
       }
     },
@@ -10713,19 +11208,7 @@
     },
     {
       "seeding_key": {
-        "resource.key": "course_vocabulary",
-        "script.name": "coursed-2022"
-      }
-    },
-    {
-      "seeding_key": {
         "resource.key": "cross-curricular_extension_activities",
-        "script.name": "coursed-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csta_standards_mapping",
         "script.name": "coursed-2022"
       }
     },

@@ -292,7 +292,7 @@ Dashboard::Application.routes.draw do
 
   get '/course/:course_name', to: redirect('/courses/%{course_name}')
   get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
-  # this route uses course_course_name to match generated routes below that are nested within courses
+  # these routes use course_course_name to match generated routes below that are nested within courses
   get '/courses/:course_course_name/guides/edit', to: 'reference_guides#edit_all', as: :edit_all_reference_guides
 
   resources :courses, param: 'course_name' do
@@ -304,7 +304,7 @@ Dashboard::Application.routes.draw do
       get 'get_rollup_resources'
     end
 
-    resources :reference_guides, only: [:show, :update, :destroy], param: 'key', path: 'guides' do
+    resources :reference_guides, only: [:show, :update, :destroy, :index], param: 'key', path: 'guides' do
       member do
         get 'edit'
       end

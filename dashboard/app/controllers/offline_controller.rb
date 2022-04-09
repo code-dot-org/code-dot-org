@@ -5,6 +5,8 @@ class OfflineController < ApplicationController
     redirect_to "/home"
   end
 
+  # Needed, otherwise Rails will reject requests due to CSRF
+  skip_before_action :verify_authenticity_token, only: :offline_service_worker
   # Responds with the offline-service-worker.js or .js.map files.
   def offline_service_worker
     filename = ActiveStorage::Filename.new(params[:file]).sanitized
@@ -20,10 +22,11 @@ class OfflineController < ApplicationController
     # Load fonts distributed by dashboard
     font_paths = Dir.glob('*.*', base: 'public/fonts').map {|path| "/assets/#{path}"}
 
+    level_paths = (1..13).map {|n| "/s/express-2021/lessons/1/levels/#{n}"}
+
     render json: {
       files: [
         "/s/express-2021/lessons/1/manifest.webmanifest",
-        "/s/express-2021/lessons/1/levels/2",
         helpers.asset_path("application.js"),
         webpack_asset_path("js/webpack-runtime.js"),
         webpack_asset_path("js/essential.js"),
@@ -59,7 +62,7 @@ class OfflineController < ApplicationController
         helpers.asset_path("blockly/media/1x1.gif"),
         '/favicon.ico',
         '/shared/css/hamburger.css'
-      ].concat(bird_asset_paths, font_paths)
+      ].concat(bird_asset_paths, font_paths, level_paths)
     }
   end
 

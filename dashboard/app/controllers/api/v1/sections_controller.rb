@@ -2,7 +2,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
   before_action :get_course_and_unit, only: [:create, :update]
-  load_and_authorize_resource except: [:join, :leave, :membership, :create, :update, :require_captcha]
+  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :update, :require_captcha]
 
   skip_before_action :verify_authenticity_token, only: [:update_sharing_disabled, :update]
 
@@ -252,6 +252,8 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   end
 
   def get_course_and_unit
+    return head :forbidden if current_user.nil?
+
     if params[:course_version_id]
       course_version = CourseVersion.find_by_id(params[:course_version_id])
       return head :bad_request unless course_version
