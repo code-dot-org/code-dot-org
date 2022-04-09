@@ -1,9 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedTeacherSections as TeacherSections} from '@cdo/apps/templates/studioHomepages/TeacherSections';
-import ContentContainer from '@cdo/apps/templates/ContentContainer';
-import OwnedSections from '@cdo/apps/templates/teacherDashboard/OwnedSections';
 
 describe('TeacherSections', () => {
   const defaultProps = {
@@ -12,10 +10,7 @@ describe('TeacherSections', () => {
 
   it('renders an OwnedSections component', () => {
     const wrapper = shallow(<TeacherSections {...defaultProps} />);
-    expect(wrapper).to.containMatchingElement(
-      <ContentContainer heading="Classroom Sections">
-        <OwnedSections />
-      </ContentContainer>
-    );
+    expect(wrapper.find('ContentContainer').length).to.equal(2);
+    expect(wrapper.find('OwnedSections').length).to.equal(2);
   });
 });

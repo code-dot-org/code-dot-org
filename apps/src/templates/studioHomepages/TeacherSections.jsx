@@ -22,6 +22,9 @@ class TeacherSections extends Component {
         <ContentContainer heading={i18n.sectionsTitle()}>
           <OwnedSections />
         </ContentContainer>
+        <ContentContainer heading={i18n.plSectionsTitle()}>
+          <OwnedSections isPlSections={true} />
+        </ContentContainer>
       </div>
     );
   }

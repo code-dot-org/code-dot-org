@@ -8,14 +8,19 @@ import BorderedCallToAction from './BorderedCallToAction';
 class SetUpSections extends Component {
   static propTypes = {
     beginEditingSection: PropTypes.func.isRequired,
-    hasSections: PropTypes.bool
+    hasSections: PropTypes.bool,
+    isPlSections: PropTypes.bool
   };
 
   // Wrapped to avoid passing event args
   beginEditingSection = () => this.props.beginEditingSection();
 
   render() {
-    const headingText = this.props.hasSections
+    const headingText = this.props.isPlSections
+      ? this.props.hasSections
+        ? i18n.newSectionPlAdd()
+        : i18n.setUpProfessionalLearning()
+      : this.props.hasSections
       ? i18n.newSectionAdd()
       : i18n.setUpClassroom();
 
@@ -23,7 +28,11 @@ class SetUpSections extends Component {
       <BorderedCallToAction
         type="sections"
         headingText={headingText}
-        descriptionText={i18n.createNewClassroom()}
+        descriptionText={
+          this.props.isPlSections
+            ? i18n.createNewPlSection()
+            : i18n.createNewClassroom()
+        }
         buttonText={i18n.createSection()}
         className="uitest-set-up-sections"
         buttonClass="uitest-newsection"
