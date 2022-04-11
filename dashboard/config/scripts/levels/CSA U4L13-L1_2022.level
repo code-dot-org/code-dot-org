@@ -1,0 +1,22 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "CSA U4 Abstract Data Art Project PBT_2022",
+    "long_instructions": "project instructions",
+    "mini_rubric": "false",
+    "submittable": "true",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "encrypted_examples": [
+
+    ]
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-04-07T18:01:43.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2022-04-07T18:01:43.742+00:00\",\"changed\":[\"cloned from \\\"CSA U4L12-L2 CR_2022\\\"\"],\"cloned_from\":\"CSA U4L12-L2 CR_2022\"},{\"changed_at\":\"2022-04-07 18:01:53 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>
