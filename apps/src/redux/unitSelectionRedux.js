@@ -54,7 +54,11 @@ export default function unitSelection(state = initialState, action) {
   if (action.type === SET_COURSE_VERSIONS) {
     return {
       ...state,
-      courseVersionsWithProgress: action.courseVersionsWithProgress
+      courseVersionsWithProgress: action.courseVersionsWithProgress,
+      scriptId:
+        state.scriptId === null
+          ? Object.keys(action.courseVersionsWithProgress)[0]
+          : state.scriptId
     };
   }
 
