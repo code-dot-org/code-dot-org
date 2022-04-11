@@ -38,9 +38,11 @@ export default class DetailView extends React.Component {
       course !== this.props.route.course ||
       application_type.toLowerCase() !== this.props.route.viewType
     ) {
-      this.context.router.replace(
-        `/${course}_${application_type.toLowerCase()}s/${applicationId}`
-      );
+      const pathToApplication = course
+        ? `/${course}_${application_type.toLowerCase()}s/${applicationId}`
+        : `/incomplete_applications/${applicationId}`;
+
+      this.context.router.replace(pathToApplication);
     }
   };
 
