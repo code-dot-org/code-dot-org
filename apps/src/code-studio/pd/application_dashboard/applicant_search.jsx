@@ -71,7 +71,7 @@ export default class ApplicantSearch extends React.Component {
               {this.state.results.map(r => {
                 const pathToApplication = r.course
                   ? `/${r.course}_${r.application_type}s/${r.id}`
-                  : `/${r.id}`;
+                  : `/incomplete_applications/${r.id}`;
                 return (
                   <li key={r.id}>
                     <Link to={pathToApplication}>
