@@ -43,6 +43,55 @@ module GitHub
     end
   end
 
+  # Creates a new branch with the given name based on the base_branch branch and
+  # merges the given commit into it. If all goes well, pushes the new branch to GitHub.
+  # Note: assumes it is run from an environment with a git worktree called
+  # deploy-management-repo.
+  # @param [String] branch_name The name of the branch to create.
+  # @param [String] commit The the commit that will be merged in. Can either be a sha or
+  #                        a branch name.
+  # @param [String] base_branch The name of the branch that changes will be merged into.
+  def create_branch_from_commit(branch_name, commit, base_branch)
+    # check out a new branch based on base_branch and merge the commit into it
+    system [
+      'cd ~/deploy-management-repo',
+      'git fetch',
+      "git checkout -b #{branch_name} #{base_branch}",
+      "git merge #{commit} --no-edit"
+    ].join(' && ')
+
+    # check for conflicts
+    conflicts = `git ls-files -u | wc -l`.to_i
+    if conflicts > 0
+      # if there are conflicts, abort the merge and cleanup
+      system [
+        'git merge --abort',
+        "git checkout #{base_branch}",
+        "git branch -D #{branch_name}"
+      ].join(' && ')
+      return false
+    else
+      # otherwise, push the new branch!
+      system "git push origin #{branch_name}"
+      return true
+    end
+  end
+
+  # Deletes a branch with the given name, both locally and on GitHub.
+  # Note: assumes it is run from an environment with a git worktree called
+  # deploy-management-repo.
+  # @param [String] branch_name The name of the branch to delete.
+  # @param [String] base_branch A branch that can be checked out while deleting branch_name.
+  def self.delete_branch(branch_name, base_branch)
+    system [
+      'cd ~/deploy-management-repo',
+      # you can't delete a branch that you are on, so checking out something else
+      "git checkout #{base_branch}",
+      "git branch -D #{branch_name}",
+      "git push origin --delete #{branch_name}"
+    ].join(' && ')
+  end
+
   # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/PullRequests.html#create_pull_request-instance_method
   # @param base [String] The base branch of the requested pull request.
   # @param head [String] The head branch of the requested pull request.
