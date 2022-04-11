@@ -5,7 +5,7 @@ import {
   NavigationBar,
   NavigationCategory,
   NavigationItem
-} from './NavigationBar';
+} from '@cdo/apps/templates/NavigationBar';
 import {organizeReferenceGuides} from '@cdo/apps/util/referenceGuideHelpers';
 
 const baseUrl = window.location.href
