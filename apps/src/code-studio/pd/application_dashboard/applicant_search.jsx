@@ -83,7 +83,6 @@ export default class ApplicantSearch extends React.Component {
                   </Link>
                 </li>
               ))}
-              )}
             </ul>
           )}
         </FormGroup>
