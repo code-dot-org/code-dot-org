@@ -126,32 +126,40 @@ export default class ApplicationDashboard extends React.Component {
                   <Route
                     key={`detail_${i}`}
                     path={`${path}/(:applicationId)`}
-                    breadcrumbs={[
-                      {name: DASHBOARD_COURSES[path].name, path: path},
-                      {name: 'Application Details', path: ''}
-                    ]}
+                    breadcrumbs={
+                      path === 'incomplete_applications'
+                        ? [{name: 'Application Details', path: ''}]
+                        : [
+                            {name: DASHBOARD_COURSES[path].name, path: path},
+                            {name: 'Application Details', path: ''}
+                          ]
+                    }
                     component={DetailView}
                     viewType={DASHBOARD_COURSES[path].type}
                     course={DASHBOARD_COURSES[path].course}
                   />,
-                  <Route
-                    key={`quick_view_${i}`}
-                    path={path}
-                    breadcrumbs={DASHBOARD_COURSES[path].name}
-                    component={QuickView}
-                    applicationType={DASHBOARD_COURSES[path].name}
-                    viewType={DASHBOARD_COURSES[path].type}
-                    role={path}
-                  />,
-                  <Route
-                    key={`cohort_view_${i}`}
-                    path={`${path}_cohort`}
-                    breadcrumbs={cohort_path_name}
-                    component={CohortView}
-                    applicationType={cohort_path_name}
-                    viewType={DASHBOARD_COURSES[path].type}
-                    role={path}
-                  />
+                  path !== 'incomplete_applications' && (
+                    <Route
+                      key={`quick_view_${i}`}
+                      path={path}
+                      breadcrumbs={DASHBOARD_COURSES[path].name}
+                      component={QuickView}
+                      applicationType={DASHBOARD_COURSES[path].name}
+                      viewType={DASHBOARD_COURSES[path].type}
+                      role={path}
+                    />
+                  ),
+                  path !== 'incomplete_applications' && (
+                    <Route
+                      key={`cohort_view_${i}`}
+                      path={`${path}_cohort`}
+                      breadcrumbs={cohort_path_name}
+                      component={CohortView}
+                      applicationType={cohort_path_name}
+                      viewType={DASHBOARD_COURSES[path].type}
+                      role={path}
+                    />
+                  )
                 ];
               })
             )}
