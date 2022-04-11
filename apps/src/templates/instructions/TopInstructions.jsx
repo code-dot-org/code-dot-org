@@ -18,7 +18,6 @@ import {
   setInstructionsMaxHeightNeeded,
   setInstructionsRenderedHeight,
   setAllowInstructionsResize,
-  setMuteMusic,
   getDynamicInstructions
 } from '../../redux/instructions';
 import color from '../../util/color';
@@ -37,9 +36,6 @@ import TopInstructionsHeader from './TopInstructionsHeader';
 import {Z_INDEX as OVERLAY_Z_INDEX} from '../Overlay';
 import Button from '../Button';
 import i18n from '@cdo/locale';
-import cookies from 'js-cookie';
-
-const MUTE_MUSIC = 'mute_music';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -450,17 +446,6 @@ class TopInstructions extends Component {
     this.recordEvent('click-help-and-tips-tab');
   };
 
-  handleMuteMusicTabClick = () => {
-    this.isBackgroundMusicMuted = !this.isBackgroundMusicMuted;
-    this.setMuteMusic(this.isBackgroundMusicMuted);
-    cookies.set(MUTE_MUSIC, 'true', {expires: 30, path: '/'});
-    const record = {
-      study: 'mute-music',
-      event: 'mute-toggle'
-    };
-    firehoseClient.putRecord(record);
-  };
-
   handleCommentTabClick = () => {
     this.scrollToTopOfTab();
     // Only increment visit count if user is switching from another tab to the
@@ -718,7 +703,6 @@ class TopInstructions extends Component {
           }
           handleReviewTabClick={() => this.handleTabClick(TabType.REVIEW)}
           handleTeacherOnlyTabClick={this.handleTeacherOnlyTabClick}
-          handleMuteMusicTabClick={this.handleMuteMusicTabClick}
           collapsible={this.props.collapsible}
           handleClickCollapser={this.handleClickCollapser}
           {...passThroughHeaderProps}
@@ -929,9 +913,6 @@ export default connect(
     },
     setAllowInstructionsResize(allowResize) {
       dispatch(setAllowInstructionsResize(allowResize));
-    },
-    setMuteMusic(isMuted) {
-      dispatch(setMuteMusic(isMuted));
     }
   }),
   null,

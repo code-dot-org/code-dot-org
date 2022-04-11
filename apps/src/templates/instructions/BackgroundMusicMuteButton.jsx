@@ -3,8 +3,37 @@ import color from '../../util/color';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import cookies from 'js-cookie';
+import {setMuteMusic} from '@cdo/apps/templates/currentUserRedux';
+import UserPreferences from '../lib/util/UserPreferences';
 
-function BackgroundMusicMuteButton({isMinecraft, handleMuteMusicTabClick}) {
+const MUTE_MUSIC = 'mute_music';
+
+function BackgroundMusicMuteButton({isMinecraft}) {
+  const updateMuteMusic = isBackgroundMusicMuted => {
+    new UserPreferences()
+      .setMuteMusic(isBackgroundMusicMuted)
+      .then(isBackgroundMusicMuted => {
+        this.setMuteMusic(isBackgroundMusicMuted);
+      })
+      .catch(result => {
+        // do some sort of something so we know it didn't work
+      });
+  };
+
+  const handleMuteMusicTabClick = () => {
+    this.isBackgroundMusicMuted = !this.isBackgroundMusicMuted;
+    updateMuteMusic(this.isBackgroundMusicMuted);
+    cookies.set(MUTE_MUSIC, 'true', {expires: 30, path: '/'});
+
+    const record = {
+      study: 'mute-music',
+      event: 'mute-toggle'
+    };
+    firehoseClient.putRecord(record);
+  };
+
   return (
     <button
       type="button"
@@ -20,10 +49,9 @@ function BackgroundMusicMuteButton({isMinecraft, handleMuteMusicTabClick}) {
 
 BackgroundMusicMuteButton.propTypes = {
   isMinecraft: PropTypes.bool.isRequired,
-  handleMuteMusicTabClick: PropTypes.func.isRequired,
 
   // from redux
-  BackgroundMusicIsMuted: PropTypes.bool.isRequired
+  isBackgroundMusicMuted: PropTypes.bool.isRequired
 };
 
 export const styles = {
@@ -36,6 +64,14 @@ export const craftStyle = {
 };
 
 export const UnconnectedBackgroundMusicMuteButton = BackgroundMusicMuteButton;
-export default connect((state, ownProps) => ({
-  BackgroundMusicIsMuted: state.BackgroundMusicIsMuted
-}))(BackgroundMusicMuteButton);
+
+export default connect(
+  state => ({
+    isBackgroundMusicMuted: state.isBackgroundMusicMuted
+  }),
+  dispatch => ({
+    setMuteMusic(isMuted) {
+      dispatch(setMuteMusic(isMuted));
+    }
+  })
+)(BackgroundMusicMuteButton);
