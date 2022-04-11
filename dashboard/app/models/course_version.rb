@@ -152,12 +152,12 @@ class CourseVersion < ApplicationRecord
     latest_stable_version == content_root
   end
 
-  def self.course_versions_with_student_progress(student_unit_ids)
-    CourseVersion.all.select {|cv| cv.has_student_progress?(student_unit_ids)}
+  def self.course_versions_with_student_progress(student_unit_ids, user)
+    CourseVersion.all.select {|cv| cv.has_student_progress?(student_unit_ids) && cv.course_assignable?(user)}
   end
 
   def self.course_versions_with_student_progress_info(user, student_unit_ids, locale_code = 'en-us')
-    course_versions_with_student_progress(student_unit_ids).map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
+    course_versions_with_student_progress(student_unit_ids, user).map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
   def summarize_for_assignment_dropdown(user, locale_code)
