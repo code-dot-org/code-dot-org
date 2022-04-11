@@ -9,6 +9,7 @@ import {
 } from 'react-bootstrap';
 import $ from 'jquery';
 import {Link} from 'react-router';
+import {getPathToApplication} from '@cdo/apps/code-studio/pd/application_dashboard/pathToApplicationHelper';
 
 export default class ApplicantSearch extends React.Component {
   constructor(props) {
@@ -68,19 +69,21 @@ export default class ApplicantSearch extends React.Component {
           )}
           {this.state.results.length > 0 && (
             <ul>
-              {this.state.results.map(r => {
-                const pathToApplication = r.course
-                  ? `/${r.course}_${r.application_type}s/${r.id}`
-                  : `/incomplete_applications/${r.id}`;
-                return (
-                  <li key={r.id}>
-                    <Link to={pathToApplication}>
-                      {r.course} {r.application_type.toLowerCase()} application
-                      id {r.id}
-                    </Link>
-                  </li>
-                );
-              })}
+              {this.state.results.map(r => (
+                <li key={r.id}>
+                  <Link
+                    to={getPathToApplication(
+                      r.course,
+                      r.application_type,
+                      r.id
+                    )}
+                  >
+                    {r.course} {r.application_type.toLowerCase()} application id{' '}
+                    {r.id}
+                  </Link>
+                </li>
+              ))}
+              )}
             </ul>
           )}
         </FormGroup>
