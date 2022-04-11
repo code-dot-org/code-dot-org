@@ -125,5 +125,10 @@ class ProgrammingClassesControllerTest < ActionController::TestCase
     test_user_gets_response_for :update, params: -> {@update_params}, user: :student, response: :forbidden
     test_user_gets_response_for :update, params: -> {@update_params}, user: :teacher, response: :forbidden
     test_user_gets_response_for :update, params: -> {@update_params}, user: :levelbuilder, response: :success
+
+    test_user_gets_response_for :show, params: -> {{id: @programming_class.id}}, user: nil, response: :success
+    test_user_gets_response_for :show, params: -> {{id: @programming_class.id}}, user: :student, response: :success
+    test_user_gets_response_for :show, params: -> {{id: @programming_class.id}}, user: :teacher, response: :success
+    test_user_gets_response_for :show, params: -> {{id: @programming_class.id}}, user: :levelbuilder, response: :success
   end
 end

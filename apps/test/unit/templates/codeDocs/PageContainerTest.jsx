@@ -11,14 +11,12 @@ describe('PageContainer', () => {
           {
             key: 'world',
             name: 'World',
-            programmingExpressions: [
-              {key: 'width', name: 'Width', link: '/docs/ide/width'}
-            ]
+            docs: [{key: 'width', name: 'Width', link: '/docs/ide/width'}]
           },
           {
             key: 'sprites',
             name: 'Sprites',
-            programmingExpressions: [
+            docs: [
               {key: 'height', name: 'Sprite.Height', link: '/docs/ide/height'}
             ]
           }
