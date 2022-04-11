@@ -55,7 +55,7 @@ class ProgrammingClassesController < ApplicationController
 
   def show
     return render :not_found unless @programming_class
-    @programming_environment_categories = @programming_class.programming_environment.categories.select {|c| c.programming_expressions.count > 0 || c.programming_classes.count > 0}.map(&:summarize_for_environment_show)
+    @programming_environment_categories = @programming_class.programming_environment.categories_for_navigation
   end
 
   private
