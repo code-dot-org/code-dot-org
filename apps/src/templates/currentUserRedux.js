@@ -6,6 +6,7 @@ const SET_USER_TYPE = 'currentUser/SET_USER_TYPE';
 const SET_HAS_SEEN_STANDARDS_REPORT =
   'currentUser/SET_HAS_SEEN_STANDARDS_REPORT';
 const SET_INITIAL_DATA = 'currentUser/SET_INITIAL_DATA';
+const SET_MUTE_MUSIC = 'currentUser/SET_MUTE_MUSIC';
 
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
 
@@ -30,6 +31,10 @@ export const setUserType = (userType, under13) => ({
 export const setInitialData = serverUser => ({
   type: SET_INITIAL_DATA,
   serverUser
+});
+export const setMuteMutic = isBackgroundMusicMuted => ({
+  type: SET_MUTE_MUSIC,
+  isBackgroundMusicMuted
 });
 
 const initialState = {
@@ -70,7 +75,6 @@ export default function currentUser(state = initialState, action) {
       under13: action.under13
     };
   }
-
   if (action.type === SET_INITIAL_DATA) {
     const {id, username, user_type, under_13} = action.serverUser;
     return {
@@ -79,6 +83,12 @@ export default function currentUser(state = initialState, action) {
       userName: username,
       userType: user_type,
       under13: under_13
+    };
+  }
+  if (action.type === SET_MUTE_MUSIC) {
+    return {
+      ...state,
+      isBackgroundMusicMuted: action.isBackgroundMusicMuted
     };
   }
 

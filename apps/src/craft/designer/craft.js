@@ -238,6 +238,12 @@ Craft.init = function(config) {
     config.level.dayNightCycleTime ? 100 : levelTracks.length > 1 ? 7500 : null
   );
 
+  studioApp().stopBackgroundMusic = this.stopBackgroundMusic.bind(this);
+
+  Craft.stopBackgroundMusic = function() {
+    Craft.musicController.stop();
+  };
+
   // Play music when the instructions are shown
   Craft.beginBackgroundMusic = function() {
     Sounds.getSingleton().whenAudioUnlocked(function() {

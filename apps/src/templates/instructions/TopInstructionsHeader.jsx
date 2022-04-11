@@ -33,7 +33,6 @@ function TopInstructionsHeader(props) {
     handleReviewTabClick,
     handleTeacherOnlyTabClick,
     handleClickCollapser,
-    handleMuteMusicTabClick,
     isMinecraft,
     dynamicInstructions,
     ttsLongInstructionsUrl,
@@ -160,10 +159,7 @@ function TopInstructionsHeader(props) {
               />
             )}
           {isBackgroundMusicLevel && (
-            <BackgroundMusicMuteButton
-              isMinecraft={isMinecraft}
-              handleMuteMusicTabClick={handleMuteMusicTabClick}
-            />
+            <BackgroundMusicMuteButton isMinecraft={isMinecraft} />
           )}
         </div>
         {/* For CSF contained levels we use the same collapse function as CSD/CSP*/}
@@ -270,7 +266,6 @@ TopInstructionsHeader.propTypes = {
   handleReviewTabClick: PropTypes.func.isRequired,
   handleTeacherOnlyTabClick: PropTypes.func.isRequired,
   handleClickCollapser: PropTypes.func.isRequired,
-  handleMuteMusicTabClick: PropTypes.func.isRequired,
   isMinecraft: PropTypes.bool.isRequired,
   dynamicInstructions: PropTypes.object,
   ttsLongInstructionsUrl: PropTypes.string,

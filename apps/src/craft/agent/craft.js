@@ -175,6 +175,12 @@ export default class Craft {
       levelTracks.length > 1 ? 7500 : null
     );
 
+    studioApp().stopBackgroundMusic = this.stopBackgroundMusic.bind(this);
+
+    Craft.stopBackgroundMusic = function() {
+      Craft.musicController.stop();
+    };
+
     config.skin.staticAvatar = MEDIA_URL + 'Sliced_Parts/Agent_Neutral.png';
     config.skin.smallStaticAvatar =
       MEDIA_URL + 'Sliced_Parts/Agent_Neutral.png';
