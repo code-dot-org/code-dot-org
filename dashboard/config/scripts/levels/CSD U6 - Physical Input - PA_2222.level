@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-08T17:11:47.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -94,13 +90,17 @@
     "start_blocks": "var score = 0;\r\n//1) Create three button variables on pins \"A0\", \"A1\", and \"A7\"\r\n\r\n//2) Use three onBoardEvent() blocks to detect when each of your buttons is \"down\"\r\n\r\n//3) When the user presses one of the animal buttons, increase their score\r\n",
     "display_name": "Whack-A-Mole",
     "bubble_choice_description": "Create an app that simulates a whack-a-mole game, where you press 3 external buttons to earn points",
-    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L17/practice/C.png",
+    "thumbnail_url": "https://images.code.org/de73a7386535d1d98703fc3e1b2dbd7c-image-1649455884333.png",
     "encrypted_examples": "vO22JaALwU73KAF13xb9TaoHQtaNGhh+YhBNIS0XmXJje+n3J0Ga4n+G5MCX\nc2s9Tf9CEdqdAhEHHwoHcWJ6rQ==\n",
     "preload_asset_list": null
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-04-08T17:11:47.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-08T17:11:47.657+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Input - PA_2022\\\"\"],\"cloned_from\":\"CSD U6 - Physical Input - PA_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-08T17:11:47.657+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Input - PA_2022\\\"\"],\"cloned_from\":\"CSD U6 - Physical Input - PA_2022\"},{\"changed_at\":\"2022-04-08 22:54:20 +0000\",\"changed\":[\"code_functions\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

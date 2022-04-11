@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-08T16:52:41.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -51,7 +47,7 @@
     "long_instructions": "<img src=\"https://images.code.org/a07b3130a5effc22efdd36a3400c8b7b-image-1634321815292.PNG\" style=\"float:right; height: 400px; margin: 10px;\" />\r\n\r\n# Recreate an App Using Code\r\n\r\nWithout using Design Mode and only using [`setProperty()`(#fff176)](/docs/applab/setProperty/) blocks, recreate the app on the right.\r\n\r\n## Additional Information\r\n\r\n* The image of Hedy Lamarr is from Pixabay. You can use this link in your code: `https://cdn.pixabay.com/photo/2013/07/13/09/36/hedy-lamarr-155765_960_720.png`\r\n* You can change the color of the icons using the `icon-color` property\r\n* The color of the background is `gold`",
     "parent_level_id": 20595,
     "name_suffix": "_2222",
-    "mini_rubric": "true",
+    "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",
     "libraries_enabled": "false",
@@ -68,11 +64,18 @@
     "rubric_performance_level_4": "The app has not been updated to match the picture",
     "encrypted_examples": "+xxrPjDQHvOdSfpT6w80Prkrwrq0kh/UjC8Ll3N+z6ke7uvcvm3/6oZg8s3N\nNZ12jDz/7NhtkKr6uSL1a3+EGA==\n",
     "start_blocks": "//Add code to setProperty() blocks to recreate the app on the right\r\n//the screen background, the description label, image of Hedy Lamarr, bluetooth image, wifi image",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "display_name": "Recreate an App",
+    "bubble_choice_description": "Without using Design Mode, recreate the design of an app using setProperty and setText blocks",
+    "thumbnail_url": "https://images.code.org/a07b3130a5effc22efdd36a3400c8b7b-image-1634321815292.PNG"
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-04-08T16:52:41.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-08T16:52:41.027+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Outputs - A_2022\\\"\"],\"cloned_from\":\"CSD U6 - Screen Outputs - A_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-08T16:52:41.027+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Outputs - A_2022\\\"\"],\"cloned_from\":\"CSD U6 - Screen Outputs - A_2022\"},{\"changed_at\":\"2022-04-08 18:28:29 +0000\",\"changed\":[\"code_functions\",\"mini_rubric\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

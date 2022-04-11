@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-08T17:11:13.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -84,13 +80,17 @@
     "start_blocks": "//1) Create an LED variable on pin \"A6\"\r\n\r\nonBoardEvent(lightSensor, \"data\", function() {\r\n  //2) If the room is dark: turn on the LED\r\n  \r\n  //3) If the room is bright: turn off the LED\r\n  \r\n});\r\n",
     "display_name": "LEDs and Sensors",
     "bubble_choice_description": "Simulate a night light by using the light sensor to turn on or off an external LED",
-    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L16/practice/C.png",
+    "thumbnail_url": "https://images.code.org/de73a7386535d1d98703fc3e1b2dbd7c-image-1649455884333.png",
     "encrypted_examples": "k1YBdnGpbp518bvAm4MksAqivd3hB6bDvsq2MENp5p22UIiB+6vGNlld+zUZ\nA8YBijIIu7ukDDfS8PpZIqJfgg==\n",
     "preload_asset_list": null
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-04-08T17:11:13.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-08T17:11:13.390+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Output - PC_2022\\\"\"],\"cloned_from\":\"CSD U6 - Physical Output - PC_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-08T17:11:13.390+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Output - PC_2022\\\"\"],\"cloned_from\":\"CSD U6 - Physical Output - PC_2022\"},{\"changed_at\":\"2022-04-08 22:52:09 +0000\",\"changed\":[\"code_functions\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-08T17:06:10.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -100,16 +96,20 @@
     "libraries_enabled": "false",
     "ai_enabled": "false",
     "display_name": "Colors and Sensors",
-    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L11/challenge/B.png",
+    "thumbnail_url": "https://images.code.org/c23af495b29aa1d39d9f0803dabc6f70-image-1649455860507.png",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
     "start_blocks": "lightSensor.setScale(0, 255);\r\n//1) Set the soundSensor scale to a range of values between 0 and 255\r\n\r\nonBoardEvent(lightSensor, \"data\", function() {\r\n  var lightVal = lightSensor.value;\r\n  //2) Create a variable for the soundSensor value\r\n  //3) Create a variable for the tempSensor value\r\n\r\n  //4) Update the background color of the screen\r\n  setProperty(\"screen1\", \"background-color\", rgb(lightVal, 255, 255));\r\n});\r\n\r\n\r\n",
     "bubble_choice_description": "Create an app where the background color reacts to the light, sound, and temperature sensors",
     "encrypted_examples": "kmDaWesv+fkHj4rWVobgKUMjr+Hw6E5ohr1dLrd+pigy31NykB1QSs41FMdK\nQVwz1uD6lAtq27RDvG8RuYjyuw==\n",
     "preload_asset_list": null
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-04-08T17:06:10.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-08T17:06:10.814+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - CB_2022\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - CB_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-08T17:06:10.814+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - CB_2022\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - CB_2022\"},{\"changed_at\":\"2022-04-08 22:43:31 +0000\",\"changed\":[\"code_functions\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
