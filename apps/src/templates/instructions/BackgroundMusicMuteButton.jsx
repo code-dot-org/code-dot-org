@@ -10,7 +10,7 @@ function BackgroundMusicMuteButton({isMinecraft, handleMuteMusicTabClick}) {
       type="button"
       className="uitest-backgroundMusicTab"
       onClick={handleMuteMusicTabClick}
-      style={{float: 'right'}}
+      style={[styles, isMinecraft && craftStyle]}
     >
       isBackgroundMusicMuted ? {i18n.backgroundMusicOn()} :
       {i18n.backgroundMusicOff()}
@@ -27,9 +27,12 @@ BackgroundMusicMuteButton.propTypes = {
 };
 
 export const styles = {
-  lightRow: {
-    backgroundColor: color.table_light_row
-  }
+  backgroundColor: color.table_light_row
+};
+
+export const craftStyle = {
+  color: color.white,
+  backgroundColor: '#3b3b3b'
 };
 
 export const UnconnectedBackgroundMusicMuteButton = BackgroundMusicMuteButton;
