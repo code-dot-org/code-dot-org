@@ -61,6 +61,29 @@ class ProgrammingClassesControllerTest < ActionController::TestCase
     assert_equal [{name: 'field 1', type: 'int'}].to_json, programming_class.fields
   end
 
+  test 'can create programming methods when updating programming class' do
+    sign_in @levelbuilder
+    File.expects(:write).once
+
+    programming_class = create :programming_class, programming_environment: @programming_environment
+    category = create :programming_environment_category, programming_environment: @programming_environment
+
+    post :update, params: {
+      id: programming_class.id,
+      key: programming_class.key,
+      name: 'new name',
+      categoryKey: category.key,
+      fields: [{name: 'field 1', type: 'int'}],
+      methods: [{name: 'method1'}, {name: 'method2', description: 'description'}]
+    }
+    assert_response :ok
+    programming_class.reload
+
+    assert_equal 'new name', programming_class.name
+    assert_equal category, programming_class.programming_environment_category
+    assert_equal 2, programming_class.programming_methods.count
+  end
+
   test 'data is passed down to edit page' do
     sign_in @levelbuilder
 
