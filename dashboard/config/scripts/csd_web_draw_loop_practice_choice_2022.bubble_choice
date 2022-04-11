@@ -5,5 +5,4 @@ description 'Try out using the draw loop with these activities.'
 sublevels
 level 'CSD U3 Draw Loop Plugged wiggle sprite rotation_2022'
 level 'CSD games draw debug blurry_2022'
-level 'CSD games draw debug afterimage_2022'
 level 'CSD games draw debug not moving_2022'

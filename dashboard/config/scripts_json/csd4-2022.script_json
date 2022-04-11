@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-30 23:46:33 UTC",
+    "serialized_at": "2022-04-08 17:33:58 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -4764,17 +4764,23 @@
       }
     },
     {
-      "key": "59bb3ddc-28e7-4257-9245-68d4d48bf3d2",
+      "key": "17a2215c-52ce-485c-a518-493e2d778803",
       "position": 1,
       "properties": {
+        "description": "**Video:** Show students the Events in App Lab video",
+        "progression_name": "Video: Events in App Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "17a2215c-52ce-485c-a518-493e2d778803",
+        "lesson_activity.key": "4c606841-1658-4523-a9e3-71c3df7fe9ee"
+      }
+    },
+    {
+      "key": "59bb3ddc-28e7-4257-9245-68d4d48bf3d2",
+      "position": 2,
+      "properties": {
         "description": "**Code Studio:** Have students log into their computers and open Code Studio. If you’ve used Pair Programming in previous units, consider having students use it throughout these levels.",
-        "name": "Events in App Lab\r",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Video Review:** The second half of the video from Lesson 14 is a good guide for what students will be completing today. You may decide to re-watch just the second half where Caley creates a new screen and adds an event to the screen, since this is what students will be completing today.\n\n"
-          }
-        ]
+        "name": "Events in App Lab\r"
       },
       "seeding_key": {
         "activity_section.key": "59bb3ddc-28e7-4257-9245-68d4d48bf3d2",
@@ -4783,7 +4789,7 @@
     },
     {
       "key": "18fa3b5b-05e0-44ed-bfb4-609b70d19e3d",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "Adding Screens"
       },
@@ -4794,7 +4800,7 @@
     },
     {
       "key": "9837555a-7b3b-4049-8cb3-548d950f07c8",
-      "position": 3,
+      "position": 4,
       "properties": {
         "progression_name": "Events and Linking Screens"
       },
@@ -4805,7 +4811,7 @@
     },
     {
       "key": "ffb6dca0-51dc-496b-be6d-23848ea67eec",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "**Circulate:** Monitor students as they complete the levels in Code Studio. As they progress through the bubbles, they should be adding to the Recycle Finder app from previous lessons. Students will spend most of the class completing these levels. As teams start to finish up, begin to transition to the next stage of this activity"
       },
@@ -4816,7 +4822,7 @@
     },
     {
       "key": "09e148c4-90e3-4c4a-946f-6f815d5c7583",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "A key part of adding events to your app was having different screens to link to. Today we learned one way to do that is by importing other screens. We will be doing this same process with your teammates - importing their screens into your app. To prepare for this, we need to plan how we will share our projects with each other.",
         "remarks": true
@@ -4828,7 +4834,7 @@
     },
     {
       "key": "8c8a34d0-bee7-482d-bf82-099f4be13b69",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "**Do This:** Have students discuss as a group how they will share their screen’s import URLs with each other. They should decide on a plan that they will implement tomorrow.",
         "name": "Preparing for Screen Import\r",
@@ -5896,6 +5902,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U4Ch1_2022"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -5918,6 +5927,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-apps for good-1_2022"
+        ],
         "progression": "Sample Apps for Good"
       },
       "bonus": false,
@@ -5940,6 +5952,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-apps for good-2_2022"
+        ],
         "progression": "Sample Apps for Good"
       },
       "bonus": false,
@@ -5962,6 +5977,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-apps for good-3_2022"
+        ],
         "progression": "Sample Apps for Good"
       },
       "bonus": false,
@@ -5984,6 +6002,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-1_2022"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -6006,6 +6027,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-2_2022"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -6028,6 +6052,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-3_2022"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -6050,6 +6077,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-4_2022"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -6072,6 +6102,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-5_2022"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -6094,6 +6127,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-6_2022"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -6121,7 +6157,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSDU4 Design Mode Video_2022"
+          "CSD U4 App Lab Design Mode Video"
         ],
         "lesson.key": "Design Mode in App Lab",
         "lesson_group.key": "csd4_2",
@@ -6129,7 +6165,7 @@
         "activity_section.key": "f09b7694-1ba5-4e04-89a4-e9bac566fd23"
       },
       "level_keys": [
-        "CSDU4 Design Mode Video_2022"
+        "CSD U4 App Lab Design Mode Video"
       ]
     },
     {
@@ -6138,6 +6174,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 1_2022"
+        ],
         "progression": "Build a Screen"
       },
       "bonus": false,
@@ -6160,6 +6199,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 2_2022"
+        ],
         "progression": "Build a Screen"
       },
       "bonus": false,
@@ -6182,6 +6224,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 3_2022"
+        ],
         "progression": "Build a Screen"
       },
       "bonus": false,
@@ -6204,6 +6249,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 4_2022"
+        ],
         "progression": "Build a Screen"
       },
       "bonus": false,
@@ -6226,6 +6274,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 5_2022"
+        ],
         "progression": "Finish a Screen"
       },
       "bonus": false,
@@ -6248,6 +6299,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 6_2022"
+        ],
         "progression": "Finish a Screen"
       },
       "bonus": false,
@@ -6270,6 +6324,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 7_2022"
+        ],
         "progression": "Finish a Screen"
       },
       "bonus": false,
@@ -6292,6 +6349,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Design a Screen for your App_2022"
+        ],
         "progression": "Design a Screen for your App"
       },
       "bonus": false,
@@ -6314,6 +6374,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4 - Design Mode Project_2022"
+        ],
         "progression": "App Project: Screen Design"
       },
       "bonus": false,
@@ -6336,6 +6399,31 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Video: Events in App Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U4 App Lab Events Video"
+        ],
+        "lesson.key": "Events in AppLab",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-2022",
+        "activity_section.key": "17a2215c-52ce-485c-a518-493e2d778803"
+      },
+      "level_keys": [
+        "CSD U4 App Lab Events Video"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 Model Program 1_2022"
+        ],
         "progression": "Adding Screens"
       },
       "bonus": false,
@@ -6353,11 +6441,14 @@
       ]
     },
     {
-      "chapter": 22,
-      "position": 2,
+      "chapter": 23,
+      "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 1.5_2022"
+        ],
         "progression": "Adding Screens"
       },
       "bonus": false,
@@ -6375,11 +6466,14 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 3,
+      "chapter": 24,
+      "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 2_2022"
+        ],
         "progression": "Adding Screens"
       },
       "bonus": false,
@@ -6397,11 +6491,14 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 4,
+      "chapter": 25,
+      "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 2.5_2022"
+        ],
         "progression": "Adding Screens"
       },
       "bonus": false,
@@ -6419,11 +6516,14 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 5,
+      "chapter": 26,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 3_2022"
+        ],
         "progression": "Events and Linking Screens"
       },
       "bonus": false,
@@ -6441,11 +6541,14 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 6,
+      "chapter": 27,
+      "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 4_2022"
+        ],
         "progression": "Events and Linking Screens"
       },
       "bonus": false,
@@ -6463,11 +6566,14 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 7,
+      "chapter": 28,
+      "position": 8,
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 5_2022"
+        ],
         "progression": "Events and Linking Screens"
       },
       "bonus": false,
@@ -6485,11 +6591,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Project Import_2022"
+        ],
         "progression": "Combining Projects"
       },
       "bonus": false,
@@ -6507,11 +6616,14 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSDU4 Project Events_2022"
+        ],
         "progression": "Combining Projects"
       },
       "bonus": false,
@@ -6529,11 +6641,14 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Project Bug Feature_2022"
+        ],
         "progression": "Updating Your Prototype"
       },
       "bonus": false,
@@ -6551,11 +6666,14 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U4Ch2_2022"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -6573,11 +6691,14 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD User Centered Design Post-Project Test_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6594,11 +6715,14 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-post-survey-markdown-with-link-to-survey_2022"
+        ],
         "progression": "Post-Course Survey Instructions"
       },
       "bonus": false,
@@ -6739,9 +6863,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSDU4 Design Mode Video_2022",
+        "level.key": "CSD U4 App Lab Design Mode Video",
         "script_level.level_keys": [
-          "CSDU4 Design Mode Video_2022"
+          "CSD U4 App Lab Design Mode Video"
         ],
         "lesson.key": "Design Mode in App Lab",
         "lesson_group.key": "csd4_2",
@@ -6855,6 +6979,18 @@
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2022",
         "activity_section.key": "cde127b3-29f9-466b-ac1b-8c0a7842c83c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U4 App Lab Events Video",
+        "script_level.level_keys": [
+          "CSD U4 App Lab Events Video"
+        ],
+        "lesson.key": "Events in AppLab",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-2022",
+        "activity_section.key": "17a2215c-52ce-485c-a518-493e2d778803"
       }
     },
     {
