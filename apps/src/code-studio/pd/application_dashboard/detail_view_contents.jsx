@@ -898,6 +898,7 @@ export class DetailViewContents extends React.Component {
 
     let scoringDropdowns = [];
     if (
+      this.props.applicationData.course &&
       this.scoreableQuestions[
         `criteriaScoreQuestions${_.startCase(
           this.props.applicationData.course
