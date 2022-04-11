@@ -13,6 +13,7 @@ import React from 'react';
 import ApplicationLoader from './application_loader';
 import DetailViewContents from './detail_view_contents';
 import {CourseKeyMap} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {getPathToApplication} from '@cdo/apps/code-studio/pd/application_dashboard/pathToApplicationHelper';
 
 export default class DetailView extends React.Component {
   static propTypes = {
@@ -39,11 +40,9 @@ export default class DetailView extends React.Component {
       course !== this.props.route.course ||
       application_type.toLowerCase() !== this.props.route.viewType
     ) {
-      const pathToApplication = course
-        ? `/${course}_${application_type.toLowerCase()}s/${applicationId}`
-        : `/incomplete_applications/${applicationId}`;
-
-      this.context.router.replace(pathToApplication);
+      this.context.router.replace(
+        getPathToApplication(course, application_type, applicationId)
+      );
     }
   };
 
