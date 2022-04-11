@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-08T17:03:06.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -97,13 +93,17 @@
     "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><button id=\"led0Button\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 60px; width: 70px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 30px; top: 65px;\">LED 0</button><button id=\"led1Button\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 60px; width: 70px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 125px; top: 65px;\">LED 1</button><button id=\"led2Button\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 60px; width: 70px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 220px; top: 65px;\">LED 2</button><button id=\"led3Button\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 60px; width: 70px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 30px; top: 170px;\">LED 3</button><button id=\"led4Button\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 60px; width: 70px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 125px; top: 170px;\">LED 4</button><button id=\"led5Button\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 60px; width: 70px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 220px; top: 170px;\">LED 5</button><button id=\"led6Button\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 60px; width: 70px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 30px; top: 275px;\">LED 6</button><button id=\"led7Button\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 60px; width: 70px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 125px; top: 275px;\">LED 7</button><button id=\"led8Button\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 60px; width: 70px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 220px; top: 275px;\">LED 8</button><button id=\"led9Button\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 60px; width: 70px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 125px; top: 365px;\">LED 9</button></div></div>",
     "display_name": "Individual Lights",
     "bubble_choice_description": "Use buttons to control individual LED lights",
-    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L7/practice/B.png",
+    "thumbnail_url": "https://images.code.org/da0c9ca0d59f9bd0a46fc31e1e248192-image-1649456230074.png",
     "encrypted_examples": "hnZ9LplvrTzUMQwUNkKAohxbpkSGVuUJgVwpVfbAzYPpH/iZYRSAMofVRDbV\nuE6RLW+XxHS+w+WuVg2MZWh39A==\n",
     "preload_asset_list": null
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-04-08T17:03:06.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-08T17:03:06.278+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Color LEDs - PracB_2022\\\"\"],\"cloned_from\":\"CSD U6 - Color LEDs - PracB_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-08T17:03:06.278+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Color LEDs - PracB_2022\\\"\"],\"cloned_from\":\"CSD U6 - Color LEDs - PracB_2022\"},{\"changed_at\":\"2022-04-08 22:17:20 +0000\",\"changed\":[\"code_functions\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

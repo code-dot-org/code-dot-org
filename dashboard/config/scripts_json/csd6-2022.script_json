@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-08 17:38:22 UTC",
+    "serialized_at": "2022-04-08 21:11:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -50,6 +50,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-2022"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csd6-2022"
       }
     }
@@ -407,6 +419,36 @@
       "seeding_key": {
         "lesson.key": "Project - Prototype an Innovation",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-2022"
+      }
+    },
+    {
+      "key": "Post-Project Test",
+      "name": "Post-Project Test",
+      "absolute_position": 19,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Post-Project Test",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-2022"
+      }
+    },
+    {
+      "key": "CS Discoveries Post-Course Survey",
+      "name": "CS Discoveries Post-Course Survey",
+      "absolute_position": 20,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 19,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CS Discoveries Post-Course Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csd6-2022"
       }
     }
@@ -1454,6 +1496,31 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd6-2022"
       }
+    },
+    {
+      "key": "327b9376-0b76-407f-bfa7-74ad4b9b02f9",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "327b9376-0b76-407f-bfa7-74ad4b9b02f9",
+        "lesson.key": "Post-Project Test",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-2022"
+      }
+    },
+    {
+      "key": "e1b5f2d7-0bd2-494a-91ac-1d0352b319c4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e1b5f2d7-0bd2-494a-91ac-1d0352b319c4",
+        "lesson.key": "CS Discoveries Post-Course Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2022"
+      }
     }
   ],
   "activity_sections": [
@@ -1554,11 +1621,22 @@
       }
     },
     {
-      "key": "2dbb3f17-5edb-49a8-b708-217c7b7cf44d",
+      "key": "13ee0ecb-e6d4-4a11-8411-97a428c9af98",
       "position": 1,
       "properties": {
-        "description": "**Journal:** What was the most surprising, cool, or impressive thing that you found in your research? If you could develop an innovation of your own, what would it be?",
-        "name": "Journaling\r"
+        "description": "**Video:** Show the Circuits and Innovations video in the slides to tie together all of the innovations students have researched today.",
+        "name": "Journaling"
+      },
+      "seeding_key": {
+        "activity_section.key": "13ee0ecb-e6d4-4a11-8411-97a428c9af98",
+        "lesson_activity.key": "06b6ba05-a742-4e06-833f-a556469fc364"
+      }
+    },
+    {
+      "key": "2dbb3f17-5edb-49a8-b708-217c7b7cf44d",
+      "position": 2,
+      "properties": {
+        "description": "**Journal:** What was the most surprising, cool, or impressive thing that you found in your research? If you could develop an innovation of your own, what would it be?"
       },
       "seeding_key": {
         "activity_section.key": "2dbb3f17-5edb-49a8-b708-217c7b7cf44d",
@@ -2808,6 +2886,17 @@
       },
       "seeding_key": {
         "activity_section.key": "a127db7e-9480-43f6-a260-ca9ea29fbc20",
+        "lesson_activity.key": "533692d3-a914-4927-a542-a4b86b99c79e"
+      }
+    },
+    {
+      "key": "b553a3ff-e3b7-4f8f-a9b6-7712e1feef36",
+      "position": 8,
+      "properties": {
+        "description": "**Video:** Show students the Input / Output video in the slides"
+      },
+      "seeding_key": {
+        "activity_section.key": "b553a3ff-e3b7-4f8f-a9b6-7712e1feef36",
         "lesson_activity.key": "533692d3-a914-4927-a542-a4b86b99c79e"
       }
     },
@@ -4467,6 +4556,33 @@
         "activity_section.key": "63fb9446-ee5a-4307-9b52-3b1d8a03d302",
         "lesson_activity.key": "d2ff5f5a-875d-4524-8930-d7e45545b0c2"
       }
+    },
+    {
+      "key": "e41370fd-1381-4824-ba96-868e905ab25f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e41370fd-1381-4824-ba96-868e905ab25f",
+        "lesson_activity.key": "327b9376-0b76-407f-bfa7-74ad4b9b02f9"
+      }
+    },
+    {
+      "key": "f5938c84-3ccf-4d55-a619-0f17a395dedf",
+      "position": 1,
+      "properties": {
+        "progression_name": "Post-Course Survey Instructions",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This level appears at the end of every unit. **Please have your students complete this survey at the end of their final unit!** Students only need to take the survey once at the end of the course.\n\n* The results are vital for us (code.org) to sustain our courses and make improvements.\n* There will be a teacher survey as well where you can provide your own input. You will be notified via email about the teacher survey.\n\n**Instructions for Unlocking the Survey for Students:** [[google doc](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/view)] [[pdf](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/export?format=pdf)]\n\nIf students click the link and see an error message about the survey being locked, please follow the steps in the instructions above to unlock the survey for students.\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f5938c84-3ccf-4d55-a619-0f17a395dedf",
+        "lesson_activity.key": "e1b5f2d7-0bd2-494a-91ac-1d0352b319c4"
+      }
     }
   ],
   "script_levels": [
@@ -4910,7 +5026,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U6 - Screen Outputs - A_2222"
+          "CSD U6 - Screen Outputs - ChalB_2222"
         ],
         "lesson.key": "Updating Screen Elements",
         "lesson_group.key": "lessonGroup-2",
@@ -4918,7 +5034,7 @@
         "activity_section.key": "04b6ab50-104f-420b-9e70-8da663144a51"
       },
       "level_keys": [
-        "CSD U6 - Screen Outputs - A_2222"
+        "CSD U6 - Screen Outputs - ChalB_2222"
       ]
     },
     {
@@ -7633,6 +7749,49 @@
       "level_keys": [
         "CSD U6 - Physical Innovations - Review_2222"
       ]
+    },
+    {
+      "chapter": 144,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD Physical Computing Post-Project Test_2022"
+        ],
+        "lesson.key": "Post-Project Test",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-2022",
+        "activity_section.key": "e41370fd-1381-4824-ba96-868e905ab25f"
+      },
+      "level_keys": [
+        "CSD Physical Computing Post-Project Test_2022"
+      ]
+    },
+    {
+      "chapter": 145,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Post-Course Survey Instructions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-post-survey-markdown-with-link-to-survey_2022"
+        ],
+        "lesson.key": "CS Discoveries Post-Course Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2022",
+        "activity_section.key": "f5938c84-3ccf-4d55-a619-0f17a395dedf"
+      },
+      "level_keys": [
+        "csd-post-survey-markdown-with-link-to-survey_2022"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -7854,9 +8013,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U6 - Screen Outputs - A_2222",
+        "level.key": "CSD U6 - Screen Outputs - ChalB_2222",
         "script_level.level_keys": [
-          "CSD U6 - Screen Outputs - A_2222"
+          "CSD U6 - Screen Outputs - ChalB_2222"
         ],
         "lesson.key": "Updating Screen Elements",
         "lesson_group.key": "lessonGroup-2",
@@ -9350,6 +9509,30 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd6-2022",
         "activity_section.key": "5be532a8-3a04-478b-8840-962b2c499894"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Physical Computing Post-Project Test_2022",
+        "script_level.level_keys": [
+          "CSD Physical Computing Post-Project Test_2022"
+        ],
+        "lesson.key": "Post-Project Test",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-2022",
+        "activity_section.key": "e41370fd-1381-4824-ba96-868e905ab25f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-post-survey-markdown-with-link-to-survey_2022",
+        "script_level.level_keys": [
+          "csd-post-survey-markdown-with-link-to-survey_2022"
+        ],
+        "lesson.key": "CS Discoveries Post-Course Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6-2022",
+        "activity_section.key": "f5938c84-3ccf-4d55-a619-0f17a395dedf"
       }
     }
   ],

@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-08T17:11:47.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -100,12 +96,19 @@
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
     "display_name": "Conductive Materials",
     "bubble_choice_description": "Explore what other materials can be used to create buttons, like paper clips or aluminum foil",
-    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L17/practice/D.png",
-    "preload_asset_list": null
+    "thumbnail_url": "https://images.code.org/de73a7386535d1d98703fc3e1b2dbd7c-image-1649455884333.png",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-04-08T17:11:47.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-08T17:11:47.843+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Input - PD_2022\\\"\"],\"cloned_from\":\"CSD U6 - Physical Input - PD_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-08T17:11:47.843+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Input - PD_2022\\\"\"],\"cloned_from\":\"CSD U6 - Physical Input - PD_2022\"},{\"changed_at\":\"2022-04-08 22:54:25 +0000\",\"changed\":[\"code_functions\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2022-04-07 20:58:26 UTC",
+    "serialized_at": "2022-04-08 18:43:41 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -12947,6 +12947,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_predict_express"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -12969,6 +12972,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_predict2_express"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -12991,6 +12997,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_set_express"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -13013,6 +13022,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_change_express"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -13035,6 +13047,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_click_express"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -13057,6 +13072,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_explore_express"
+        ],
         "progression": "Exploration: Clicker Game"
       },
       "bonus": false,
@@ -13079,6 +13097,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_sprites_express"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -13101,6 +13122,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_remove_express"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -13123,6 +13147,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_variable_express"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -13145,6 +13172,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_score_express"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -13167,6 +13197,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_finish_express"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -18524,6 +18557,39 @@
   ],
   "resources": [
     {
+      "name": "All Resources",
+      "url": "/s/express-2022/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/express-2022/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/express-2022/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
       "name": "Artist Introduction",
       "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
       "key": "artist_introduction",
@@ -18533,18 +18599,6 @@
       },
       "seeding_key": {
         "resource.key": "artist_introduction"
-      }
-    },
-    {
-      "name": "Course Vocabulary\t",
-      "url": "https://studio.code.org/s/express-2021/vocab",
-      "key": "course_vocabulary",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "course_vocabulary"
       }
     },
     {
@@ -18570,18 +18624,6 @@
       },
       "seeding_key": {
         "resource.key": "csf_express_end_of_course_project_planning_guide"
-      }
-    },
-    {
-      "name": "CSTA Standards Mapping",
-      "url": "https://studio.code.org/s/express-2021/standards",
-      "key": "csta_standards_mapping",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "csta_standards_mapping"
       }
     },
     {
@@ -18989,13 +19031,19 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "course_vocabulary",
+        "resource.key": "all_resources",
         "script.name": "express-2022"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "csta_standards_mapping",
+        "resource.key": "all_standards",
+        "script.name": "express-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
         "script.name": "express-2022"
       }
     },
