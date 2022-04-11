@@ -68,7 +68,7 @@ export class DetailViewContents extends React.Component {
     applicationId: PropTypes.string.isRequired,
     applicationData: PropTypes.shape({
       course: PropTypes.oneOf(Object.values(CourseKeyMap)),
-      course_name: PropTypes.string.isRequired,
+      course_name: PropTypes.string,
       regional_partner_name: PropTypes.string,
       update_emails_sent_by_system: PropTypes.bool,
       regional_partner_id: PropTypes.number,
@@ -455,7 +455,10 @@ export class DetailViewContents extends React.Component {
     return (
       <DetailViewWorkshopAssignmentResponse
         question="Summer Workshop"
-        courseName={this.props.applicationData.course_name}
+        courseName={
+          this.props.applicationData.course_name ||
+          'Course TBD (Incomplete Application)'
+        }
         subjectType="summer"
         year={parseInt(
           this.props.applicationData.application_year.split('-')[0],

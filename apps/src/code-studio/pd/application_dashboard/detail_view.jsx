@@ -5,6 +5,7 @@
  *        /csp_facilitators/(:applicationId)
  *        /csp_teachers/(:applicationId)
  *        /csa_teachers/(:applicationId)
+ *        /incomplete_applications/(:applicationId)
  */
 
 import PropTypes from 'prop-types';
@@ -20,7 +21,7 @@ export default class DetailView extends React.Component {
     }).isRequired,
     route: PropTypes.shape({
       viewType: PropTypes.oneOf(['teacher', 'facilitator']),
-      course: PropTypes.oneOf(Object.values(CourseKeyMap))
+      course: PropTypes.oneOf([...Object.values(CourseKeyMap), 'course_tbd'])
     })
   };
 

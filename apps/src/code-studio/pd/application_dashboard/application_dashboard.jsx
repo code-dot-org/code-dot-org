@@ -59,6 +59,11 @@ export const DASHBOARD_COURSES = {
     type: 'teacher',
     name: 'Computer Science A Teacher Applications',
     course: 'csa'
+  },
+  incomplete_applications: {
+    type: 'teacher',
+    name: 'Incomplete Teacher Applications',
+    course: 'course_tbd'
   }
 };
 
