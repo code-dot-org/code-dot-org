@@ -68,14 +68,14 @@ class ProgrammingEnvironmentsController < ApplicationController
 
   def show
     return head :forbidden unless can?(:read, @programming_environment)
-    @programming_environment_categories = @programming_environment.categories.select {|c| c.programming_expressions.count > 0 || c.programming_classes.count > 0}.map(&:summarize_for_environment_show)
+    @programming_environment_categories = @programming_environment.categories_for_navigation
   end
 
   def docs_show
     if DCDO.get('use-studio-code-docs', false)
       @programming_environment = ProgrammingEnvironment.find_by_name(params[:programming_environment_name])
       return render :not_found unless @programming_environment
-      @programming_environment_categories = @programming_environment.categories.select {|c| c.programming_expressions.count > 0}.map(&:summarize_for_environment_show)
+      @programming_environment_categories = @programming_environment.categories_for_navigation
       render :show
     else
       render_proxied_url(
