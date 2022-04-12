@@ -2,12 +2,21 @@ import {assert} from '../../util/reconfiguredChai';
 import unitSelection, {
   setScriptId,
   getSelectedScriptName,
-  getSelectedScriptDescription
+  getSelectedScriptDescription,
+  setCourseVersionsWithProgress
 } from '@cdo/apps/redux/unitSelectionRedux';
 import {fakeCourseVersionsWithProgress} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
 describe('unitSelectionRedux', () => {
   const initialState = unitSelection(undefined, {});
+
+  it('if no scriptId then defaults to first unit of first course version', () => {
+    const action = setCourseVersionsWithProgress(
+      fakeCourseVersionsWithProgress
+    );
+    const nextState = unitSelection(initialState, action);
+    assert.deepEqual(nextState.scriptId, '1');
+  });
 
   describe('getSelectedScriptName', () => {
     it('returns the script name of the selected script', () => {
