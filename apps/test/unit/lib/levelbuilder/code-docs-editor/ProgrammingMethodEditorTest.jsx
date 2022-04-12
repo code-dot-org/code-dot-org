@@ -142,6 +142,18 @@ describe('ProgrammingMethodEditor', () => {
       </Provider>
     );
 
+    // Change name
+    wrapper
+      .find('input')
+      .at(0)
+      .simulate('change', {target: {value: 'PainterClass'}});
+
+    // Change external documentation
+    wrapper
+      .find('input')
+      .at(2)
+      .simulate('change', {target: {value: 'fakedocumentation.url'}});
+
     fetchSpy.returns(Promise.resolve({ok: true}));
     const saveBar = wrapper.find('SaveBar');
 
@@ -163,12 +175,12 @@ describe('ProgrammingMethodEditor', () => {
         'parameters'
       ].sort()
     );
-    expect(fetchCallBody.name).to.equal('Painter');
+    expect(fetchCallBody.name).to.equal('PainterClass');
     expect(fetchCallBody.content).to.equal(
       'This is a longer description of the code.'
     );
     expect(fetchCallBody.externalDocumentation).to.equal(
-      'developer.mozilla.org'
+      'fakedocumentation.url'
     );
     expect(fetchCallBody.syntax).to.equal('Painter()');
     expect(fetchCallBody.examples[0].name).to.equal('example 1');
