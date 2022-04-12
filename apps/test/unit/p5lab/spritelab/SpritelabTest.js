@@ -288,7 +288,7 @@ describe('loadSpriteLab', () => {
     });
   });
 
-  it('use defaultSprites from S3 when fetch succeeds', () => {
+  describe('when fetch succeeds', () => {
     let fetchedSprites = {
       orderedKeys: ['123456'],
       propsByKey: {
@@ -298,22 +298,29 @@ describe('loadSpriteLab', () => {
         }
       }
     };
-
     let fetchResponse = new window.Response(JSON.stringify(fetchedSprites), {
       status: 200,
       headers: {'Content-type': 'application/json'}
     });
+    let fetchStub;
 
-    let fetchStub = sinon.stub(window, 'fetch');
-    fetchStub.onCall(0).returns(Promise.resolve(fetchResponse));
+    before(() => {
+      fetchStub = sinon.stub(window, 'fetch');
+      fetchStub.onCall(0).returns(Promise.resolve(fetchResponse));
+    });
+    after(() => {
+      fetchStub.restore();
+    });
 
-    return loadSpritelab({baseUrl: 'test.url'}).then(spritelab => {
-      let defaultAnimations = spritelab.defaultAnimations;
-      expect(defaultAnimations.orderedKeys.length).to.equal(1);
-      let firstSpriteKey = defaultAnimations.orderedKeys[0];
-      expect(defaultAnimations.propsByKey[firstSpriteKey].name).to.equal(
-        'fruit'
-      );
+    it('use defaultSprites from S3', () => {
+      return loadSpritelab({baseUrl: 'test.url'}).then(spritelab => {
+        let defaultAnimations = spritelab.defaultAnimations;
+        expect(defaultAnimations.orderedKeys.length).to.equal(1);
+        let firstSpriteKey = defaultAnimations.orderedKeys[0];
+        expect(defaultAnimations.propsByKey[firstSpriteKey].name).to.equal(
+          'fruit'
+        );
+      });
     });
   });
 });
