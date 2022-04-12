@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-10 16:16:06 UTC",
+    "serialized_at": "2022-04-11 12:41:18 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -7154,7 +7154,7 @@
     {
       "key": "traverse",
       "word": "traverse",
-      "definition": "to process each element from the first to the last",
+      "definition": "to access elements in a data structure one by one",
       "properties": {
       },
       "seeding_key": {
