@@ -433,6 +433,10 @@ StudioApp.prototype.init = function(config) {
     config.loadAudio();
   }
 
+  if (config.stopMusic) {
+    this.stopMusic = config.stopMusic;
+  }
+
   if (this.editCode) {
     this.handleEditCode_(config);
   }
@@ -3347,6 +3351,7 @@ StudioApp.prototype.setPageConstants = function(config, appSpecificConstants) {
   getStore().dispatch(setPageConstants(combined));
 
   const instructionsConstants = determineInstructionsConstants(config);
+  console.log('here');
   getStore().dispatch(setInstructionsConstants(instructionsConstants));
 };
 

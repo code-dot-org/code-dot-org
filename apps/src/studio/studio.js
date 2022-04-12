@@ -2244,6 +2244,15 @@ Studio.init = function(config) {
     Studio.musicController.preload();
   };
 
+  config.stopMusic = function() {
+    Studio.musicController.stop();
+    console.log('stop music');
+  };
+
+  config.startMusic = function() {
+    console.log('start music');
+  };
+
   // Add a post-video hook to start the background music, if available.
   config.level.afterVideoBeforeInstructionsFn = showInstructions => {
     Sounds.getSingleton().whenAudioUnlocked(() =>
@@ -2388,6 +2397,7 @@ Studio.init = function(config) {
     appSpecificConstants.smallStaticAvatar = config.skin.blankAvatar;
     appSpecificConstants.failureAvatar = config.skin.blankAvatar;
   }
+  console.log('config in studio.js');
   studioApp().setPageConstants(config, appSpecificConstants);
   var isRtl = getStore().getState().isRtl;
   var visualizationColumn = (
