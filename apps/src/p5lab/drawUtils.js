@@ -24,15 +24,15 @@ export function getTextWidth(p5, text, size) {
 
 /**
  * Draw a speech bubble - a P5 shape comprised of a rectangle
- * with a triangle at the bottom. The x/y values will be the
+ * with a tail at the bottom. The x/y values will be the
  * bottom center of the bubble body, including the height added
- * by the triangle. With the default config values, the triangle
+ * by the tail. With the default config values, the tail
  * will have a size of 10 and align to the center of the bubble body.
- * Other passed config values allow the triangle to be adjusted,
+ * Other passed config values allow the tail to be adjusted,
  * such as when a sprite is close to the edge of the app canvas.
  *
- * Note: The bubble body and triangle stroke outlines will overlap if the width:triangleSize
- * ratio is too low (e.g., the width is too narrow and triangle is too large). Consider
+ * Note: The bubble body and tail stroke outlines will overlap if the width:tailSize
+ * ratio is too low (e.g., the width is too narrow and tail is too large). Consider
  * setting a minimum width or calculating a ratio greater than 5:1 (not exact; just a starting
  * point).
  *
@@ -41,9 +41,9 @@ export function getTextWidth(p5, text, size) {
  * @param {Number} y
  * @param {Number} width
  * @param {Number} height
- * @param {Number} config.triangleSize
- * @param {Number} config.triangleTipX
- * @param {Number} config.rectangleCornerRadius
+ * @param {Number} config.tailSize
+ * @param {Number} config.tailTipX
+ * @param {Number} config.padding
  * @param {String} config.fill
  * @param {Number} config.strokeWeight
  * @param {Number} config.stroke
@@ -56,37 +56,42 @@ export function speechBubble(
   width,
   height,
   {
-    triangleSize = 10,
-    triangleTipX = x,
-    rectangleCornerRadius = 8,
+    tailSize = 10,
+    tailTipX = x,
+    padding = 8,
     fill = 'white',
     strokeWeight = 2,
     stroke = 'gray'
-  } = {}
+  } = {},
+  style
 ) {
   const minX = x - width / 2;
-  const minY = y - height - triangleSize;
-  const maxY = y - triangleSize;
+  const minY = y - height - tailSize;
+  const maxY = y - tailSize;
+  const tailMidX = (tailTipX + (minX + width / 2)) / 2;
+  const tailBottomX = (tailTipX + tailMidX) / 2;
 
   p5.push();
   p5.stroke(stroke);
   p5.strokeWeight(strokeWeight);
   p5.fill(fill);
-  p5.beginShape();
-  p5.rect(minX, minY, width, height, rectangleCornerRadius);
+  p5.rect(minX, minY, width, height, padding);
   p5.stroke(fill);
-  p5.triangle(
-    triangleTipX - triangleSize,
-    maxY,
-    triangleTipX,
-    maxY,
-    triangleTipX,
-    y
-  );
-  p5.stroke(stroke);
-  p5.line(triangleTipX, maxY, triangleTipX, y);
-  p5.line(triangleTipX, y, triangleTipX - triangleSize - 1, maxY);
-  p5.endShape(p5.CLOSE);
+  switch (style) {
+    case 'think':
+      p5.ellipse(tailMidX, maxY, tailSize);
+      p5.stroke(stroke);
+      p5.arc(tailMidX, maxY, tailSize, tailSize, 0, 180);
+      p5.ellipse(tailBottomX, maxY + tailSize, tailSize / 2);
+      break;
+    case 'say':
+    default:
+      p5.triangle(tailTipX - tailSize, maxY, tailTipX, maxY, tailTipX, y);
+      p5.stroke(stroke);
+      p5.line(tailTipX, maxY, tailTipX, y);
+      p5.line(tailTipX, y, tailTipX - tailSize - 1, maxY);
+      break;
+  }
   p5.pop();
 
   return {minX, minY};
