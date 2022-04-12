@@ -121,9 +121,8 @@ class HomeController < ApplicationController
     @force_school_info_confirmation_dialog = params[:forceSchoolInfoConfirmationDialog]
     @force_school_info_interstitial = params[:forceSchoolInfoInterstitial]
 
-    sections_as_student = current_user.sections_as_student
-    student_sections = sections_as_student.select {|s| !s.pl_section?}.map(&:summarize_without_students)
-    pl_sections = sections_as_student.select(&:pl_section?).map(&:summarize_without_students)
+    student_sections = sections_as_student_participant.map(&:summarize_without_students)
+    pl_sections = sections_as_pl_participant.map(&:summarize_without_students)
 
     # Students and teachers will receive a @top_course for their primary
     # script, so we don't want to include that script (if it exists) in the
