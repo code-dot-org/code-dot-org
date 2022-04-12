@@ -3,11 +3,9 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-### <a href="https://levelbuilder-studio.code.org/s/vpl-csd2-ci-pilot-2022/lessons/1/levels/1" target="blank" rel="noopener noreferrer">Example Level</a> - remove when complete
-
 # Teaching Problem Solving and Computing
 
-##### Welcome! This professional learning module is designed help you prepare to teach Code.org's _____ unit. 
+##### Welcome! This professional learning module is designed help you prepare to teach Code.org's Problem Solving and Computingl unit. 
 
 ### Update picture to an image from the unit - delete these instructions. 
 
@@ -16,7 +14,7 @@ markdown <<MARKDOWN
 
 ## In this module, you will:
 
-* ##### Get an introduction to _______.
+* ##### Get an introduction to Problem Solving and Computing.
 * ##### Practice key concepts included in the unit.
 * ##### Engage with _______ Lab.
 * ##### Explore end of chapter projects.
