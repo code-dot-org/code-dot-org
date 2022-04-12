@@ -20,7 +20,7 @@ describe('OwnedSections', () => {
     const wrapper = shallow(
       <OwnedSections {...defaultProps} studentSectionIds={[]} />
     );
-    expect(wrapper.find('SetUpSections').length).to.equal(1);
+    expect(wrapper.find('Connect(SetUpSections)').length).to.equal(1);
   });
 
   it('renders spinner when sections have not yet loaded', () => {
@@ -111,6 +111,6 @@ describe('OwnedSections', () => {
       />
     );
     expect(spy).not.to.have.been.called;
-    expect(wrapper.find('SetUpSections').length).to.equal(1);
+    expect(wrapper.find('Connect(SetUpSections)').length).to.equal(1);
   });
 });

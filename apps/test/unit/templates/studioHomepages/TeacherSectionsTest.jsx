@@ -10,7 +10,7 @@ describe('TeacherSections', () => {
 
   it('renders an OwnedSections component', () => {
     const wrapper = shallow(<TeacherSections {...defaultProps} />);
-    expect(wrapper.find('ContentContainer').length).to.equal(2);
-    expect(wrapper.find('OwnedSections').length).to.equal(2);
+    expect(wrapper.find('Connect(ContentContainer)').length).to.equal(2);
+    expect(wrapper.find('Connect(OwnedSections)').length).to.equal(2);
   });
 });
