@@ -2,7 +2,7 @@ import {expect} from '../../../util/reconfiguredChai';
 import React from 'react';
 import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
 import {joinedSections, joinedPlSections} from './homepagesTestData';
-import {isolateComponent} from 'isolate-react';
+import {shallow} from 'enzyme';
 
 const defaultProps = {
   initialJoinedPlSections: [],
@@ -12,26 +12,26 @@ const defaultProps = {
 
 describe('JoinSectionArea', () => {
   it('shows student sections if has joined student sections', () => {
-    const wrapper = isolateComponent(
+    const wrapper = shallow(
       <JoinSectionArea
         {...defaultProps}
         initialJoinedStudentSections={joinedSections}
       />
     );
-    expect(wrapper.findAll('JoinSection').length).to.equal(1);
-    expect(wrapper.findAll('StudentSections').length).to.equal(1);
-    expect(wrapper.findAll('StudentSections').props.isTeacher).to.equal(false);
+    expect(wrapper.find('Connect(JoinSection)').length).to.equal(1);
+    expect(wrapper.find('StudentSections').length).to.equal(1);
+    expect(wrapper.find('StudentSections').props().isTeacher).to.equal(false);
   });
   it('shows participant sections for pl if has joined pl sections', () => {
-    const wrapper = isolateComponent(
+    const wrapper = shallow(
       <JoinSectionArea
         {...defaultProps}
         isTeacher={true}
         initialJoinedPlSections={joinedPlSections}
       />
     );
-    expect(wrapper.findAll('JoinSection').length).to.equal(1);
-    expect(wrapper.findAll('StudentSections').length).to.equal(1);
-    expect(wrapper.findAll('StudentSections').props.isTeacher).to.equal(true);
+    expect(wrapper.find('Connect(JoinSection)').length).to.equal(1);
+    expect(wrapper.find('StudentSections').length).to.equal(1);
+    expect(wrapper.find('StudentSections').props().isTeacher).to.equal(true);
   });
 });
