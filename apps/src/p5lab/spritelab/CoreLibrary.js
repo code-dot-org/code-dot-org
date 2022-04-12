@@ -85,16 +85,17 @@ export default class CoreLibrary {
       return;
     }
 
-    this.speechBubbles.forEach(({text, sprite}) => {
+    this.speechBubbles.forEach(({text, sprite, style}) => {
       this.drawSpeechBubble(
         text,
         sprite.x,
-        sprite.y - Math.round(sprite.getScaledHeight() / 2)
+        sprite.y - Math.round(sprite.getScaledHeight() / 2),
+        style
       );
     });
   }
 
-  drawSpeechBubble(text, x, y) {
+  drawSpeechBubble(text, x, y, style) {
     const padding = 8;
     if (typeof text === 'number') {
       text = text.toString();
@@ -131,34 +132,40 @@ export default class CoreLibrary {
     width = Math.max(width, 50);
     const height = lines.length * textSize + padding * 2;
 
-    let triangleSize = 10;
-    let triangleTipX = x;
-    // The number of pixels used to create the rounded corners of the speech bubble:
-    const rectangleCornerRadius = 8;
+    let tailSize = 10;
+    let tailTipX = x;
 
     // For the calculations below, keep in mind that x and y are located at the horizontal center and the top of the sprite, respectively.
     // In other words, x and y indicate the default position of the bubble's triangular tip.
     y = Math.min(y, APP_HEIGHT);
     const spriteX = x;
-    if (y - height - triangleSize < 1) {
-      triangleSize = Math.max(1, y - height);
-      y = height + triangleSize;
+    if (y - height - tailSize < 1) {
+      tailSize = Math.max(1, y - height);
+      y = height + tailSize;
     }
     if (spriteX - width / 2 < 1) {
-      triangleTipX = Math.max(spriteX, rectangleCornerRadius + triangleSize);
+      tailTipX = Math.max(spriteX, padding + tailSize);
       x = width / 2;
     }
     if (spriteX + width / 2 > APP_WIDTH) {
-      triangleTipX = Math.min(spriteX, APP_WIDTH - rectangleCornerRadius);
+      tailTipX = Math.min(spriteX, APP_WIDTH - padding);
       x = APP_WIDTH - width / 2;
     }
 
     // Draw bubble.
-    const {minY} = drawUtils.speechBubble(this.p5, x, y, width, height, {
-      triangleSize,
-      triangleTipX,
-      rectangleCornerRadius
-    });
+    const {minY} = drawUtils.speechBubble(
+      this.p5,
+      x,
+      y,
+      width,
+      height,
+      {
+        tailSize,
+        tailTipX,
+        padding
+      },
+      style
+    );
 
     // Draw text within bubble.
     drawUtils.multilineText(this.p5, lines, x, minY + padding, textSize, {
@@ -166,7 +173,7 @@ export default class CoreLibrary {
     });
   }
 
-  addSpeechBubble(sprite, text, seconds = null) {
+  addSpeechBubble(sprite, text, seconds = null, style = 'say') {
     // Sprites can only have one speech bubble at a time so first filter out
     // any existing speech bubbles for this sprite
     this.removeSpeechBubblesForSprite(sprite);
@@ -179,7 +186,8 @@ export default class CoreLibrary {
       sprite,
       text,
       removeAt,
-      renderFrame: this.currentFrame()
+      renderFrame: this.currentFrame(),
+      style
     });
     return id;
   }

@@ -2,7 +2,7 @@
   "category": "Sprites",
   "config": {
     "func": "spriteSayTime",
-    "blockText": "{SPRITE}say{TEXT1}for{NUM}seconds",
+    "blockText": "{SPRITE}{STYLE}{TEXT1}for{NUM}seconds",
     "args": [
       {
         "name": "SPRITE",
@@ -16,6 +16,19 @@
         "name": "NUM",
         "type": "Number",
         "field": false
+      },
+      {
+        "name": "STYLE",
+        "options": [
+          [
+            "say",
+            "\"say\""
+          ],
+          [
+            "think",
+            "\"think\""
+          ]
+        ]
       }
     ]
   }
