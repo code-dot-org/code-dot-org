@@ -2,15 +2,6 @@ require_relative '../../lib/cdo/script_constants'
 require 'minitest/autorun'
 
 class ScriptConstantsTest < Minitest::Test
-  def test_name_constant
-    assert_equal 'starwars', ScriptConstants::STARWARS_NAME
-    assert_equal 'starwarsblocks', ScriptConstants::STARWARS_BLOCKS_NAME
-    assert_equal 'mc', ScriptConstants::MINECRAFT_NAME
-    assert_equal 'hourofcode', ScriptConstants::HOC_NAME
-    assert_equal 'frozen', ScriptConstants::FROZEN_NAME
-    assert_equal 'flappy', ScriptConstants::FLAPPY_NAME
-  end
-
   def test_congrats_page
     %w(
       coursea-2019
