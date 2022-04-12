@@ -25,7 +25,7 @@ class SetUpSections extends Component {
         headingText={headingText}
         descriptionText={i18n.createNewClassroom()}
         buttonText={i18n.createSection()}
-        className={'uitest-set-up-sections'}
+        className="uitest-set-up-sections"
         buttonClass="uitest-newsection"
         onClick={this.beginEditingSection}
         solidBorder={this.props.hasSections}
