@@ -38,10 +38,11 @@
     "long_instructions": "Keep your code organized by always using the comment block first. Type in “Row 1” into the comment block.",
     "validation_enabled": "false",
     "enable_download_image": "false",
+    "authored_hints": "[]",
     "encrypted_examples": [
 
     ],
-    "authored_hints": "[]",
+    "project_template_level_name": "csc-starquilts-template",
     "preload_asset_list": null
   },
   "game_id": 23,
@@ -50,7 +51,7 @@
   "level_num": "custom",
   "user_id": 20,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-05T12:16:34.363+00:00\",\"changed\":[\"cloned from \\\"Standalone_Artist_1\\\"\"],\"cloned_from\":\"Standalone_Artist_1\"},{\"changed_at\":\"2022-04-05 12:20:05 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"short_instructions\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-05 12:22:06 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-05 12:27:52 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-04-05T12:16:34.363+00:00\",\"changed\":[\"cloned from \\\"Standalone_Artist_1\\\"\"],\"cloned_from\":\"Standalone_Artist_1\"},{\"changed_at\":\"2022-04-05 12:20:05 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"short_instructions\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-05 12:22:06 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-05 12:27:52 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-07 22:22:57 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-07 22:52:57 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

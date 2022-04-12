@@ -1,0 +1,20 @@
+name 'CSA U4L7-L6_2022'
+title 'Check for Understanding'
+
+wrong 'wrong'
+right 'right'
+wrong 'wrong'
+wrong 'wrong'
+wrong 'wrong'
+
+markdown <<MARKDOWN
+Consider the following method, which is intended to calculate and return the square root of the absolute value of a given `double`.
+
+```
+public double figureItOut(double myDouble) {
+   return /* missing code */
+}
+```
+
+Which of the following can replace `/* missing code */` so the method will work as intended?
+MARKDOWN

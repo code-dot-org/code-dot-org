@@ -178,7 +178,7 @@
     "encrypted": "false",
     "encrypted_examples": "XTUGcq7a+GSe7qdedrH6OKTqrFChPHNZ8N0xP0aed75maCHO0L8qUSThILjL\npR2URURq9rK1UNqBXaHiZ2g+5A==\n",
     "embed": "true",
-    "display_name": "Example E",
+    "display_name": "Example C",
     "mini_rubric": "false",
     "thumbnail_url": "https://images.code.org/830b47fb2be2f985c24e41aaf792336d-image-1647985813820.png",
     "submittable": "false",
@@ -205,7 +205,7 @@
   "created_at": "2022-03-22T21:49:43.000Z",
   "level_num": "custom",
   "user_id": 14639,
-  "audit_log": "[{\"changed_at\":\"2022-03-22T21:49:43.331+00:00\",\"changed\":[\"cloned from \\\"CSD U3 - Design a Game 1 - Example4_2022\\\"\"],\"cloned_from\":\"CSD U3 - Design a Game 1 - Example4_2022\"},{\"changed_at\":\"2022-03-22 21:51:06 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"display_name\",\"thumbnail_url\",\"start_blocks\",\"start_animations\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-22T21:49:43.331+00:00\",\"changed\":[\"cloned from \\\"CSD U3 - Design a Game 1 - Example4_2022\\\"\"],\"cloned_from\":\"CSD U3 - Design a Game 1 - Example4_2022\"},{\"changed_at\":\"2022-03-22 21:51:06 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"display_name\",\"thumbnail_url\",\"start_blocks\",\"start_animations\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-04-08 17:20:10 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"display_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>
