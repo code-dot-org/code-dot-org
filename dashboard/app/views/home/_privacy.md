@@ -4,9 +4,9 @@
 <br />
 <br />
 
-Date of Last Revision: November 11, 2021
+Date of Last Revision: April 2022
 
-You can review the previous Privacy Policy [here](https://code.org/privacy-jul2021).
+You can review the previous Privacy Policy [here](https://code.org/privacy-nov2021).
 
 ## About Code.org
 Code.org® is a US-based charitable nonprofit dedicated to expanding access to computer science in schools and increasing participation by young women and students from other underrepresented groups. Our vision is that every student in every school has the opportunity to learn computer science.
@@ -131,15 +131,9 @@ In certain situations, we may obtain information, including Personal Information
 ### Technical Information
 To provide a personalized learning and high-quality experience for our Users, we may use various technologies that automatically record certain technical information from the User’s browser or device, including browser language settings, standard log files, web beacons, or pixel tags. This technical information may include Internet Protocol (IP) address, browser type, internet service provider (ISP), referring or exit pages, click stream data, operating system, and the dates and times the User visited the Services. This information assists us in providing the Services and understanding how our Users are using the Services.
 
-To assess information about use of our Services, we use various technological tools. For example, whether or not a User is a registered member, we may send one or more cookies to the User’s browser when they visit our Services. We may use:
+To assess information about use of our Services, we use various technological tools. For example, whether or not a User is a registered member, we may send one or more cookies to the User’s browser when they visit our Services. For more information, see the [Code.org Cookie Notice](https://code.org/cookies).
 
-* Essential cookies: these ensure the Services work properly for Users. As one example, when a User authenticates and logs in, thanks to essential cookies they aren’t prompted to re-enter their password on every single page they visit during their browsing session.
-* Functional cookies: these help us personalize the Services and make it faster or more user-friendly. For example, thanks to functional cookies the Services may remember the device’s language setting (e.g., English, Spanish, etc).
-* Analytical cookies: these are used to collect technical information to help us optimize the Services and our courses. For example, thanks to analytical cookies, we can identify which lessons are most popular among students.
-
-Code.org may use both session cookies and persistent cookies. A session cookie disappears automatically after the User closes their browser. A persistent cookie remains after the browser is closed and may be used by the browser on subsequent visits to the Services. You can, however, remove a persistent cookie at any time. Please review your web browser Help file, Tools menu, or other similar menu options to learn the proper way to modify your cookie settings, or visit [www.allaboutcookies.org](http://www.allaboutcookies.org/). Please note that without cookies you will not have access to certain capabilities and features on the Services.
-
-A pixel tag (also known as a “clear GIF” or “web beacon”) is a tiny image – typically just one pixel – that can be placed on a Web page or in an email to tell us when the recipient has displayed that page or opened that email. We may allow third-party service providers to place and read their own cookies, pixel tags, and similar technologies to collect information through the Services to perform the service we’ve requested. This technical information is collected directly and automatically by these third parties.
+We may also use pixel tags (also known as “clear GIFs” or “web beacons”), which are tiny images – typically just one pixel – that can be placed on a Web page or in an email to tell us when the recipient has displayed that page or opened that email. We may allow third-party service providers to place and read their own cookies, pixel tags, and similar technologies to collect information through the Services to perform the service we’ve requested. This technical information is collected directly and automatically by these third parties.
 
 ### Custom Content
 Student and Teacher profiles cannot be customized with a photo.
