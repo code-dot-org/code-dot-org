@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_25_185859) do
+ActiveRecord::Schema.define(version: 2022_04_08_173143) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1411,6 +1411,7 @@ ActiveRecord::Schema.define(version: 2022_03_25_185859) do
     t.string "external_link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "overloaded_by"
     t.index ["key", "programming_class_id"], name: "index_programming_methods_on_key_and_programming_class_id", unique: true
   end
 
@@ -1437,7 +1438,7 @@ ActiveRecord::Schema.define(version: 2022_03_25_185859) do
     t.boolean "standalone", default: true
     t.integer "remix_parent_id"
     t.boolean "skip_content_moderation"
-    t.index ["project_type"], name: "storage_apps_project_type_index"
+    t.index ["project_type"], name: "storage_apps_project_type_index", length: 191
     t.index ["published_at"], name: "storage_apps_published_at_index"
     t.index ["standalone"], name: "storage_apps_standalone_index"
     t.index ["storage_id"], name: "storage_apps_storage_id_index"
