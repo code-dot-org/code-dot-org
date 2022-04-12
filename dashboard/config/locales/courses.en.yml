@@ -200,8 +200,8 @@ en:
         vpl-csd-summer-pilot-2022:
           title: 'CS Discoveries Virtual Summer Workshop '
           description_short: ''
-          description_student: ''
-          description_teacher: ''
+          description_student: "**You will:**\n\n* Prepare to teach CS Discoveries.\n* Practice key concepts in the CS Discoveries curriculum.\n* Grow in your understanding of equitable CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
+          description_teacher: "**Participants will:**\n\n* Prepare to teach CS Discoveries.\n* Practice key concepts in the CS Discoveries curriculum.\n* Grow in your understanding of equitable CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
           version_title: ''
         csa-async-2022:
           title: Getting Started Modules CSA
