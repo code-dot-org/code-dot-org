@@ -52,6 +52,7 @@ export default function initPage(unitEditorData) {
         name={unitEditorData.script.name}
         i18nData={unitEditorData.i18n}
         initialPublishedState={scriptData.publishedState}
+        initialUnitPublishedState={scriptData.unitPublishedState}
         initialInstructionType={scriptData.instructionType}
         initialInstructorAudience={scriptData.instructorAudience}
         initialParticipantAudience={scriptData.participantAudience}

@@ -1470,6 +1470,7 @@ class Script < ApplicationRecord
       studentDescription: Services::MarkdownPreprocessor.process(localized_student_description),
       course_id: unit_group.try(:id),
       publishedState: get_published_state,
+      unitPublishedState: unit_group ? published_state : nil,
       instructionType: get_instruction_type,
       instructorAudience: get_instructor_audience,
       participantAudience: get_participant_audience,
