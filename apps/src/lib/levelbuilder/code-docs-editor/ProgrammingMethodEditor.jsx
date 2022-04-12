@@ -16,11 +16,15 @@ function useProgrammingMethod(initialProgrammingMethod) {
     initialProgrammingMethod
   );
 
-  function updateProgrammingMethod(key, value) {
+  function setProgrammingMethodProperty(key, value) {
     setProgrammingMethod({...programmingMethod, [key]: value});
   }
 
-  return [programmingMethod, updateProgrammingMethod, setProgrammingMethod];
+  return [
+    programmingMethod,
+    setProgrammingMethodProperty,
+    setProgrammingMethod
+  ];
 }
 
 function renderExampleEditor(example, updateFunc) {
@@ -42,7 +46,7 @@ export default function ProgrammingMethodEditor({initialProgrammingMethod}) {
   }
   const [
     programmingMethod,
-    updateProgrammingMethod,
+    setProgrammingMethodProperty,
     setProgrammingMethod
   ] = useProgrammingMethod(remainingProgrammingMethod);
   const [isSaving, setIsSaving] = useState(false);
@@ -101,7 +105,7 @@ export default function ProgrammingMethodEditor({initialProgrammingMethod}) {
         Display Name
         <input
           value={programmingMethod.name}
-          onChange={e => updateProgrammingMethod('name', e.target.value)}
+          onChange={e => setProgrammingMethodProperty('name', e.target.value)}
           style={styles.textInput}
         />
       </label>
@@ -116,7 +120,10 @@ export default function ProgrammingMethodEditor({initialProgrammingMethod}) {
           <input
             value={programmingMethod.externalDocumentation}
             onChange={e =>
-              updateProgrammingMethod('externalDocumentation', e.target.value)
+              setProgrammingMethodProperty(
+                'externalDocumentation',
+                e.target.value
+              )
             }
             style={styles.textInput}
           />
@@ -125,7 +132,7 @@ export default function ProgrammingMethodEditor({initialProgrammingMethod}) {
           markdown={programmingMethod.content}
           label={'Content'}
           handleMarkdownChange={e =>
-            updateProgrammingMethod('content', e.target.value)
+            setProgrammingMethodProperty('content', e.target.value)
           }
           features={markdownEditorFeatures}
         />
@@ -135,7 +142,7 @@ export default function ProgrammingMethodEditor({initialProgrammingMethod}) {
           markdown={programmingMethod.syntax}
           label={'Syntax'}
           handleMarkdownChange={e =>
-            updateProgrammingMethod('syntax', e.target.value)
+            setProgrammingMethodProperty('syntax', e.target.value)
           }
           features={markdownEditorFeatures}
         />
@@ -143,7 +150,7 @@ export default function ProgrammingMethodEditor({initialProgrammingMethod}) {
       <CollapsibleEditorSection title="Parameters" collapsed>
         <OrderableList
           list={programmingMethod.parameters || []}
-          setList={list => updateProgrammingMethod('parameters', list)}
+          setList={list => setProgrammingMethodProperty('parameters', list)}
           addButtonText="Add Another Parameter"
           renderItem={renderParameterEditor}
         />
@@ -151,7 +158,7 @@ export default function ProgrammingMethodEditor({initialProgrammingMethod}) {
       <CollapsibleEditorSection title="Examples" collapsed>
         <OrderableList
           list={programmingMethod.examples || []}
-          setList={list => updateProgrammingMethod('examples', list)}
+          setList={list => setProgrammingMethodProperty('examples', list)}
           addButtonText="Add Another Example"
           renderItem={renderExampleEditor}
         />
