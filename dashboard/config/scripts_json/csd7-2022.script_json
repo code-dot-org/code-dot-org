@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-07 23:46:25 UTC",
+    "serialized_at": "2022-04-12 04:03:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -10994,10 +10994,11 @@
     },
     {
       "name": "AI Code of Ethics",
-      "url": "https://docs.google.com/presentation/d/1jpT_cSs45ZwAz7NMYTn6vhefu3ImndFWfGubS_5wkGw/copy",
+      "url": "https://docs.google.com/presentation/d/1jpT_cSs45ZwAz7NMYTn6vhefu3ImndFWfGubS_5wkGw/template/preview",
       "key": "ai_code_of_ethics",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1jpT_cSs45ZwAz7NMYTn6vhefu3ImndFWfGubS_5wkGw/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11125,10 +11126,11 @@
     },
     {
       "name": "Classification Models",
-      "url": "https://docs.google.com/presentation/d/1f5PG9ASPlRlXNM7gBMOribyQaYpVAaVW9EXWjtrqk1c/copy",
+      "url": "https://docs.google.com/presentation/d/1f5PG9ASPlRlXNM7gBMOribyQaYpVAaVW9EXWjtrqk1c/template/preview",
       "key": "classification_models_1",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1f5PG9ASPlRlXNM7gBMOribyQaYpVAaVW9EXWjtrqk1c/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11198,10 +11200,11 @@
     },
     {
       "name": "Creating an App",
-      "url": "https://docs.google.com/presentation/d/1D6EZitkNOVznhERKFHT1uD0DCVa8aOvengtVf2C2LDQ/copy",
+      "url": "https://docs.google.com/presentation/d/1D6EZitkNOVznhERKFHT1uD0DCVa8aOvengtVf2C2LDQ/template/preview",
       "key": "creating_an_app",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1D6EZitkNOVznhERKFHT1uD0DCVa8aOvengtVf2C2LDQ/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11254,10 +11257,11 @@
     },
     {
       "name": "Customizing Apps",
-      "url": "https://docs.google.com/presentation/d/1EaYhIdYec-meNd2rrDnqrM76CYxNU54WDghIb0PCLks/copy",
+      "url": "https://docs.google.com/presentation/d/1EaYhIdYec-meNd2rrDnqrM76CYxNU54WDghIb0PCLks/template/preview",
       "key": "customizing_apps",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1EaYhIdYec-meNd2rrDnqrM76CYxNU54WDghIb0PCLks/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11266,10 +11270,11 @@
     },
     {
       "name": "Design an AI App",
-      "url": "https://docs.google.com/presentation/d/1VOiSzm2soXCy2PhOHfgxiuqmwtKJJrxGQ6xhJlwPfCY/copy",
+      "url": "https://docs.google.com/presentation/d/1VOiSzm2soXCy2PhOHfgxiuqmwtKJJrxGQ6xhJlwPfCY/template/preview",
       "key": "design_an_ai_app",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1VOiSzm2soXCy2PhOHfgxiuqmwtKJJrxGQ6xhJlwPfCY/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11396,10 +11401,11 @@
     },
     {
       "name": "Importing Models in App Lab",
-      "url": "https://docs.google.com/presentation/d/1gkngAaMoJdp-8q2S9zomxHukJcdChkxtC38EA4dWvc0/copy",
+      "url": "https://docs.google.com/presentation/d/1gkngAaMoJdp-8q2S9zomxHukJcdChkxtC38EA4dWvc0/template/preview",
       "key": "importing_models_in_app_lab",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1gkngAaMoJdp-8q2S9zomxHukJcdChkxtC38EA4dWvc0/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11408,10 +11414,11 @@
     },
     {
       "name": "Innovations in AI",
-      "url": "https://docs.google.com/presentation/d/1JqvABbuAj3LiCxZQw91KuesvIxlJdXxU5iOabI-FjrM/edit",
+      "url": "https://docs.google.com/presentation/d/1JqvABbuAj3LiCxZQw91KuesvIxlJdXxU5iOabI-FjrM/template/preview",
       "key": "innovations_in_ai",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1JqvABbuAj3LiCxZQw91KuesvIxlJdXxU5iOabI-FjrM/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11443,10 +11450,11 @@
     },
     {
       "name": "Introduction to AI Lab",
-      "url": "https://docs.google.com/presentation/d/1lxgUDjozD9CF0Nv5n9sWmdguEp3lFX9k90cN-NGQnms/copy",
+      "url": "https://docs.google.com/presentation/d/1lxgUDjozD9CF0Nv5n9sWmdguEp3lFX9k90cN-NGQnms/template/preview",
       "key": "introduction_to_ai_lab",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1lxgUDjozD9CF0Nv5n9sWmdguEp3lFX9k90cN-NGQnms/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11467,10 +11475,11 @@
     },
     {
       "name": "Introduction to Machine Learning",
-      "url": "https://docs.google.com/presentation/d/1uT4weLbovBliCfxnkCERfjXWlWWRAYiJQ7brwfYP22U/copy",
+      "url": "https://docs.google.com/presentation/d/1uT4weLbovBliCfxnkCERfjXWlWWRAYiJQ7brwfYP22U/template/preview",
       "key": "introduction_to_machine_learning",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1uT4weLbovBliCfxnkCERfjXWlWWRAYiJQ7brwfYP22U/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11490,10 +11499,11 @@
     },
     {
       "name": "Issue Statements",
-      "url": "https://docs.google.com/presentation/d/11vB9jz1WAIcz2NFEJNMrl5IT87DfVfEPWgTxHG2_7Z4/copy",
+      "url": "https://docs.google.com/presentation/d/11vB9jz1WAIcz2NFEJNMrl5IT87DfVfEPWgTxHG2_7Z4/template/preview",
       "key": "issue_statements",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/11vB9jz1WAIcz2NFEJNMrl5IT87DfVfEPWgTxHG2_7Z4/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11513,10 +11523,11 @@
     },
     {
       "name": "Make a Machine Learning App",
-      "url": "https://docs.google.com/presentation/d/1SDcwI7zrjM9G6H8ncufxiJXBZoozWk7SwvKl_GOMle4/copy",
+      "url": "https://docs.google.com/presentation/d/1SDcwI7zrjM9G6H8ncufxiJXBZoozWk7SwvKl_GOMle4/template/preview",
       "key": "make_a_machine_learning_app",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1SDcwI7zrjM9G6H8ncufxiJXBZoozWk7SwvKl_GOMle4/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11549,10 +11560,11 @@
     },
     {
       "name": "Model Cards",
-      "url": "https://docs.google.com/presentation/d/1KLPpUnpn_gu5KqS0S5rVAjr3pqv6kBSeZ3V7ngydz4E/copy",
+      "url": "https://docs.google.com/presentation/d/1KLPpUnpn_gu5KqS0S5rVAjr3pqv6kBSeZ3V7ngydz4E/template/preview",
       "key": "model_cards",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1KLPpUnpn_gu5KqS0S5rVAjr3pqv6kBSeZ3V7ngydz4E/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11586,10 +11598,11 @@
     },
     {
       "name": "Model Cards in App Lab",
-      "url": "https://docs.google.com/presentation/d/1q_9LV_tmFEEqwCMuMo77heheFEyhATwMWYyVg6tn2HE/copy",
+      "url": "https://docs.google.com/presentation/d/1q_9LV_tmFEEqwCMuMo77heheFEyhATwMWYyVg6tn2HE/template/preview",
       "key": "model_cards_in_app_lab",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1q_9LV_tmFEEqwCMuMo77heheFEyhATwMWYyVg6tn2HE/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11611,10 +11624,11 @@
     },
     {
       "name": "Numerical Data in AI Lab",
-      "url": "https://docs.google.com/presentation/d/1lDwfSAfjllPGMuJgo7bJmrJWSUJsidsTLw4Tz67zfyQ/edit",
+      "url": "https://docs.google.com/presentation/d/1lDwfSAfjllPGMuJgo7bJmrJWSUJsidsTLw4Tz67zfyQ/template/preview",
       "key": "numerical_data_in_ai_lab",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1lDwfSAfjllPGMuJgo7bJmrJWSUJsidsTLw4Tz67zfyQ/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11648,10 +11662,11 @@
     },
     {
       "name": "Numerical Models",
-      "url": "https://docs.google.com/presentation/d/1lKn_IQjmALHkAS7B1iJzFfg5DXIexbgJQOhjJ2F0wpM/edit",
+      "url": "https://docs.google.com/presentation/d/1lKn_IQjmALHkAS7B1iJzFfg5DXIexbgJQOhjJ2F0wpM/template/preview",
       "key": "numerical_models",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1lKn_IQjmALHkAS7B1iJzFfg5DXIexbgJQOhjJ2F0wpM/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11672,10 +11687,11 @@
     },
     {
       "name": "Patterns in Data",
-      "url": "https://docs.google.com/presentation/d/1FabWi7tB1SI-YjqiPPfgU3Yljb3lJpoD1mFRmzUJiI8/copy",
+      "url": "https://docs.google.com/presentation/d/1FabWi7tB1SI-YjqiPPfgU3Yljb3lJpoD1mFRmzUJiI8/template/preview",
       "key": "patterns_in_data",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1FabWi7tB1SI-YjqiPPfgU3Yljb3lJpoD1mFRmzUJiI8/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11697,10 +11713,11 @@
     },
     {
       "name": "Saving Models in AI Lab",
-      "url": "https://docs.google.com/presentation/d/1M9dxiG9GmZfoYxe2QYE7nQs3vs9T1knh0qxA9tOTtf8/copy",
+      "url": "https://docs.google.com/presentation/d/1M9dxiG9GmZfoYxe2QYE7nQs3vs9T1knh0qxA9tOTtf8/template/preview",
       "key": "saving_models_in_ai_lab",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1M9dxiG9GmZfoYxe2QYE7nQs3vs9T1knh0qxA9tOTtf8/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11757,10 +11774,11 @@
     },
     {
       "name": "Survey Data in AI Lab",
-      "url": "https://docs.google.com/presentation/d/1DhTshRLCTnVkQHEkpThwedSXL5NEXKtjwATlQIJk33w/copy",
+      "url": "https://docs.google.com/presentation/d/1DhTshRLCTnVkQHEkpThwedSXL5NEXKtjwATlQIJk33w/template/preview",
       "key": "survey_data_in_ai_lab",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1DhTshRLCTnVkQHEkpThwedSXL5NEXKtjwATlQIJk33w/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11769,10 +11787,11 @@
     },
     {
       "name": "Survey Planning",
-      "url": "https://docs.google.com/presentation/d/1OOvhcw8TjjItSk8j40LauRLaKicLb2uNb-OCSs6fyX4/copy",
+      "url": "https://docs.google.com/presentation/d/1OOvhcw8TjjItSk8j40LauRLaKicLb2uNb-OCSs6fyX4/template/preview",
       "key": "survey_planning",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1OOvhcw8TjjItSk8j40LauRLaKicLb2uNb-OCSs6fyX4/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11829,10 +11848,11 @@
     },
     {
       "name": "Troubleshooting Models",
-      "url": "https://docs.google.com/presentation/d/1LUkDD4PMefznEJh27EZruk6V8343JrYBpMZ3ThjmcLA/copy",
+      "url": "https://docs.google.com/presentation/d/1LUkDD4PMefznEJh27EZruk6V8343JrYBpMZ3ThjmcLA/template/preview",
       "key": "troubleshooting_models",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1LUkDD4PMefznEJh27EZruk6V8343JrYBpMZ3ThjmcLA/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11853,10 +11873,11 @@
     },
     {
       "name": "Types of Machine Learning",
-      "url": "https://docs.google.com/presentation/d/1FwOsAQW3y0eQ7NwdUitWwXbj74egitdSdrHGnSxXuOg/copy",
+      "url": "https://docs.google.com/presentation/d/1FwOsAQW3y0eQ7NwdUitWwXbj74egitdSdrHGnSxXuOg/template/preview",
       "key": "types_of_machine_learning",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1FwOsAQW3y0eQ7NwdUitWwXbj74egitdSdrHGnSxXuOg/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {

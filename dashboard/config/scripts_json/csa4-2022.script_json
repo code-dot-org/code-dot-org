@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-10 16:15:33 UTC",
+    "serialized_at": "2022-04-11 15:58:57 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -1011,10 +1011,27 @@
       }
     },
     {
-      "key": "73f5f172-4ac7-4bd2-8044-e98896d8dcae",
+      "key": "ab859349-d198-4725-aaae-c9a6b69414ec",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the program creates a `Scene` object and calls methods to draw shapes and images and play sounds. Students may wonder if they can extend the `Scene` class like they extended the `Painter` class or what types of programs they could create using The Theater.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Investigating The Theater handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to access the documentation for The Theater and complete the Investigating The Theater handout.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the program creates a `Scene` object and calls methods to draw shapes and images and play sounds. Students may wonder if they can extend the `Scene` class like they extended the `Painter` class or what types of programs they could create using The Theater.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Investigating The Theater handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the `Theater` and `Scene` classes.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Ask students to identify the attributes and behaviors of each class.\n\nStudents may wonder why the `Theater` class is `final` and why its methods have the keyword `static` in their method signatures. Have students recall what the `final` and `static` keywords meant for static variables and constants in the previous unit. Point out that this means that they cannot create a `Theater` object but can call its methods using the dot operator the same way they accessed static variables in the previous unit. Final classes and static methods are covered in more detail in a later lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ab859349-d198-4725-aaae-c9a6b69414ec",
+        "lesson_activity.key": "12f9fb31-9de0-4bfa-a13b-ffdf0581d39f"
+      }
+    },
+    {
+      "key": "73f5f172-4ac7-4bd2-8044-e98896d8dcae",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to access the documentation for The Theater and complete the Investigating The Theater handout.",
         "progression_name": "The Theater Classes and Methods"
       },
       "seeding_key": {
@@ -1024,7 +1041,7 @@
     },
     {
       "key": "334812f6-9215-457c-85a6-18792b7250fb",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "**Do This:** Click through the animated slides to introduce the classes and methods in The Theater:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `Scene` class\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `drawImage()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The methods to draw shapes\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `playSound()` and `playNote()` methods\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `pause()` method"
       },
@@ -1035,7 +1052,7 @@
     },
     {
       "key": "50358716-1b53-4e5f-91be-0d7dc05a7d68",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "The Theater allows you to create many types of visuals and animations, as well as play and manipulate sounds. Let's practice using some of the methods in The Theater!",
         "duration": "15",
@@ -1049,7 +1066,7 @@
     },
     {
       "key": "e549591f-ba56-402e-b670-ed21fbb68d8a",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to complete Levels 3, 4, and 5. Students complete choice levels to draw images, draw shapes, and play sounds.",
         "progression_name": "Exploring The Theater"
@@ -3535,6 +3552,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L1_2022"
+        ],
         "progression": "Investigate: The Theater"
       },
       "bonus": false,
@@ -3557,6 +3577,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L2_2022"
+        ],
         "progression": "The Theater Classes and Methods"
       },
       "bonus": false,
@@ -3579,6 +3602,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L3_2022"
+        ],
         "progression": "Exploring The Theater"
       },
       "bonus": false,
@@ -3601,6 +3627,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L4_2022"
+        ],
         "progression": "Exploring The Theater"
       },
       "bonus": false,
@@ -3623,6 +3652,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L5_2022"
+        ],
         "progression": "Exploring The Theater"
       },
       "bonus": false,
@@ -3645,6 +3677,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L6_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3667,6 +3702,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L1_2022"
+        ],
         "progression": "Investigate: Comparing Objects"
       },
       "bonus": false,
@@ -3689,6 +3727,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L2_2022"
+        ],
         "progression": "Investigate: Object Equality"
       },
       "bonus": false,
@@ -3711,6 +3752,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L3_2022"
+        ],
         "progression": "Overriding the equals() Method"
       },
       "bonus": false,
@@ -3733,6 +3777,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L4_2022"
+        ],
         "progression": "Overriding the equals() Method"
       },
       "bonus": false,
@@ -3755,6 +3802,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L5_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3777,6 +3827,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L1_2022"
+        ],
         "progression": "Investigate: Nested if Statements"
       },
       "bonus": false,
@@ -3799,6 +3852,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L2_2022"
+        ],
         "progression": "Using Nested if Statements"
       },
       "bonus": false,
@@ -3821,6 +3877,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L3_2022"
+        ],
         "progression": "Using Nested if Statements"
       },
       "bonus": false,
@@ -3843,6 +3902,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L4_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3865,6 +3927,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L4-L1_2022"
+        ],
         "progression": "Investigate: Logical Operators"
       },
       "bonus": false,
@@ -3887,6 +3952,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L4-L2_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3909,6 +3977,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L1_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3931,6 +4002,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L1_2022"
+        ],
         "progression": "Investigate: Static Methods"
       },
       "bonus": false,
@@ -3953,6 +4027,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L2_2022"
+        ],
         "progression": "Using Static Methods"
       },
       "bonus": false,
@@ -3975,6 +4052,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L3_2022"
+        ],
         "progression": "Using Static Methods"
       },
       "bonus": false,
@@ -3997,6 +4077,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L4_2022"
+        ],
         "progression": "Using Static Methods"
       },
       "bonus": false,
@@ -4019,6 +4102,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L5 CR_2022"
+        ],
         "progression": "Code Review: Using Static Methods"
       },
       "bonus": false,
@@ -4041,6 +4127,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L6_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4063,6 +4152,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L1_2022"
+        ],
         "progression": "Investigate: The Math Class"
       },
       "bonus": false,
@@ -4085,6 +4177,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L2_2022"
+        ],
         "progression": "Using Math Class Methods"
       },
       "bonus": false,
@@ -4107,6 +4202,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L3_2022"
+        ],
         "progression": "Using Math Class Methods"
       },
       "bonus": false,
@@ -4129,6 +4227,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L4_2022"
+        ],
         "progression": "Using Math Class Methods"
       },
       "bonus": false,
@@ -4151,6 +4252,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L5_2022"
+        ],
         "progression": "Using Math Class Methods"
       },
       "bonus": false,
@@ -4173,6 +4277,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L6_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4195,6 +4302,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L1_2022"
+        ],
         "progression": "Investigate: Casting"
       },
       "bonus": false,
@@ -4217,6 +4327,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L2_2022"
+        ],
         "progression": "Investigate: Division and Printing"
       },
       "bonus": false,
@@ -4239,6 +4352,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L3_2022"
+        ],
         "progression": "Investigate: Rounding"
       },
       "bonus": false,
@@ -4261,6 +4377,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L4_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4283,6 +4402,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L9-L1_2022"
+        ],
         "progression": "Predict: Random Numbers"
       },
       "bonus": false,
@@ -4305,6 +4427,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L9-L2_2022"
+        ],
         "progression": "Investigate: Generating Random Numbers"
       },
       "bonus": false,
@@ -4327,6 +4452,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L9-L3_2022"
+        ],
         "progression": "Using Random Numbers"
       },
       "bonus": false,
@@ -4349,6 +4477,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L9-L4_2022"
+        ],
         "progression": "Using Random Numbers"
       },
       "bonus": false,
@@ -4371,6 +4502,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L9-L5 CR_2022"
+        ],
         "progression": "Code Review: Using Random Numbers"
       },
       "bonus": false,
@@ -4393,6 +4527,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L9-L6_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4415,6 +4552,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L1_2022"
+        ],
         "progression": "Investigate: Multi-Selection Statements"
       },
       "bonus": false,
@@ -4437,6 +4577,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L2_2022"
+        ],
         "progression": "Using Multi-Selection Statements"
       },
       "bonus": false,
@@ -4459,6 +4602,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L3_2022"
+        ],
         "progression": "Using Multi-Selection Statements"
       },
       "bonus": false,
@@ -4481,6 +4627,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L4_2022"
+        ],
         "progression": "Finding Patterns in Data"
       },
       "bonus": false,
@@ -4503,6 +4652,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L5_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4525,6 +4677,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L11-L1_2022"
+        ],
         "progression": "Abstract Data Art Project"
       },
       "bonus": false,
@@ -4547,6 +4702,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L12-L1_2022"
+        ],
         "progression": "Abstract Data Art Project"
       },
       "bonus": false,
@@ -4569,6 +4727,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L12-L2 CR_2022"
+        ],
         "progression": "Code Review: Abstract Data Art Project"
       },
       "bonus": false,
@@ -4591,6 +4752,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L13-L1_2022"
+        ],
         "progression": "Abstract Data Art Project"
       },
       "bonus": false,
@@ -4613,6 +4777,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 4 Assessment 2022"
+        ],
         "progression": "Unit 4 Assessment"
       },
       "bonus": false,
