@@ -194,6 +194,7 @@ class ProgrammingExpression < ApplicationRecord
 
   def summarize_for_show
     {
+      id: id,
       name: name,
       blockName: block_name,
       category: programming_environment_category&.name,
@@ -223,6 +224,7 @@ class ProgrammingExpression < ApplicationRecord
 
   def serialize_for_environment_show
     {
+      id: id,
       key: key,
       name: name,
       blockName: block_name,
