@@ -18,8 +18,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-15 06:03:45 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-04-12 17:45:29 UTC",
+    "published_state": "preview",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -3328,6 +3328,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3L7 Choice"
+        ],
         "progression": "Choice Level"
       },
       "bonus": false,

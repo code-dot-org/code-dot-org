@@ -18,8 +18,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-30 16:56:04 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-04-12 17:45:30 UTC",
+    "published_state": "preview",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -2658,7 +2658,7 @@
       "position": 9,
       "properties": {
         "description": "* Level 11 Students do a quick practice with the MOD operator.",
-        "progression_name": "Putting It Together"
+        "progression_name": "MOD Practice"
       },
       "seeding_key": {
         "activity_section.key": "1a077d04-b1b0-4445-9213-44ea53c64b88",
@@ -5018,12 +5018,15 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Putting It Together"
+        "level_keys": [
+          "U7 Param Return Practice MOD2022"
+        ],
+        "progression": "MOD Practice"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSP U4L7 Choice"
+          "U7 Param Return Practice MOD2022"
         ],
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
@@ -5031,7 +5034,7 @@
         "activity_section.key": "1a077d04-b1b0-4445-9213-44ea53c64b88"
       },
       "level_keys": [
-        "CSP U4L7 Choice"
+        "U7 Param Return Practice MOD2022"
       ]
     },
     {
@@ -6402,9 +6405,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSP U4L7 Choice",
+        "level.key": "U7 Param Return Practice MOD2022",
         "script_level.level_keys": [
-          "CSP U4L7 Choice"
+          "U7 Param Return Practice MOD2022"
         ],
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",

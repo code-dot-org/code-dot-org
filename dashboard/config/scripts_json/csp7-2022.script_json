@@ -17,8 +17,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-08 21:42:17 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-04-12 17:45:32 UTC",
+    "published_state": "preview",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -1306,17 +1306,6 @@
       },
       "seeding_key": {
         "activity_section.key": "686de70e-c037-4f9b-867f-7d57773f4f7e",
-        "lesson_activity.key": "ea399cc0-0f37-4ca4-b28a-70d1ee239f4e"
-      }
-    },
-    {
-      "key": "a9d411d0-6756-44b1-a9a9-86d717a14c95",
-      "position": 8,
-      "properties": {
-        "progression_name": "Managing Complexity"
-      },
-      "seeding_key": {
-        "activity_section.key": "a9d411d0-6756-44b1-a9a9-86d717a14c95",
         "lesson_activity.key": "ea399cc0-0f37-4ca4-b28a-70d1ee239f4e"
       }
     },
@@ -2613,12 +2602,15 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Practice Part 52022"
+        ],
         "progression": "console.log Practice"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSP U7L3 Console Choice"
+          "U7 Param Return Practice Part 52022"
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
@@ -2626,7 +2618,7 @@
         "activity_section.key": "9f76f5bc-04d2-4fb8-982f-a6db9346207c"
       },
       "level_keys": [
-        "CSP U7L3 Console Choice"
+        "U7 Param Return Practice Part 52022"
       ]
     },
     {
@@ -2708,28 +2700,6 @@
       "chapter": 13,
       "position": 9,
       "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Managing Complexity"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSP U7L3 App Choice"
-        ],
-        "lesson.key": "Parameters and Return Practice",
-        "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2022",
-        "activity_section.key": "a9d411d0-6756-44b1-a9a9-86d717a14c95"
-      },
-      "level_keys": [
-        "CSP U7L3 App Choice"
-      ]
-    },
-    {
-      "chapter": 14,
-      "position": 10,
-      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -2752,7 +2722,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2777,7 +2747,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -2802,7 +2772,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2827,7 +2797,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -2852,7 +2822,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2877,7 +2847,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 19,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2902,7 +2872,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 20,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -2927,7 +2897,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2952,7 +2922,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2977,7 +2947,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 23,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3002,7 +2972,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 24,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -3027,7 +2997,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 25,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -3052,7 +3022,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 26,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -3077,7 +3047,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3102,7 +3072,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3127,7 +3097,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 29,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3152,7 +3122,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3177,7 +3147,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3301,9 +3271,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSP U7L3 Console Choice",
+        "level.key": "U7 Param Return Practice Part 52022",
         "script_level.level_keys": [
-          "CSP U7L3 Console Choice"
+          "U7 Param Return Practice Part 52022"
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
@@ -3345,18 +3315,6 @@
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2022",
         "activity_section.key": "17f61ab7-570b-42ab-857f-a74c04bb9b21"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSP U7L3 App Choice",
-        "script_level.level_keys": [
-          "CSP U7L3 App Choice"
-        ],
-        "lesson.key": "Parameters and Return Practice",
-        "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2022",
-        "activity_section.key": "a9d411d0-6756-44b1-a9a9-86d717a14c95"
       }
     },
     {
