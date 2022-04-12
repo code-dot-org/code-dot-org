@@ -18,23 +18,6 @@ import {
 
 const serverSections = taughtSections.map(serverSectionFromSection);
 
-const serverCourses = [
-  {
-    id: 49,
-    name: 'Play Lab',
-    category: 'Hour of Code',
-    category_priority: 2,
-    script_name: 'playlab'
-  },
-  {
-    id: 50,
-    name: 'CSP Unit 2 - Digital Information',
-    category: 'CSP',
-    category_priority: 1,
-    script_name: 'csp2'
-  }
-];
-
 export default storybook => {
   return storybook
     .storiesOf('Homepages/Teachers/TeacherHomepage', module)
@@ -66,7 +49,7 @@ export default storybook => {
         description:
           'Teacher Homepage - teacher has course progress, but does not have sections',
         story: () => {
-          withFakeServer({courses: serverCourses});
+          withFakeServer();
           registerReducers({teacherSections});
           const store = createStoreWithReducers();
           return (
@@ -109,7 +92,7 @@ export default storybook => {
         description:
           'Teacher Homepage - teacher does have course progress, and does have sections',
         story: () => {
-          withFakeServer({courses: serverCourses, sections: serverSections});
+          withFakeServer({sections: serverSections});
           registerReducers({teacherSections});
           const store = createStoreWithReducers();
           return (
@@ -131,7 +114,7 @@ export default storybook => {
         description:
           'Teacher Homepage - teacher does have course progress, and does have sections they own and sections in which they are a student',
         story: () => {
-          withFakeServer({courses: serverCourses, sections: serverSections});
+          withFakeServer({sections: serverSections});
           registerReducers({teacherSections});
           const store = createStoreWithReducers();
           return (
@@ -153,7 +136,7 @@ export default storybook => {
         description:
           'Teacher Homepage - teacher does have course progress in both student and pl courses, and does have sections they own and sections in which they are a student',
         story: () => {
-          withFakeServer({courses: serverCourses, sections: serverSections});
+          withFakeServer({sections: serverSections});
           registerReducers({teacherSections});
           const store = createStoreWithReducers();
           return (

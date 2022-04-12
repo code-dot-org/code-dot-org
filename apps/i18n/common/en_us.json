@@ -1312,6 +1312,7 @@
   "noStudentsInSection": "There are no other students in this section.",
   "exceededPairProgrammingMax": "You cannot pair with more than 4 people.",
   "noPersonalProjects": "You currently have no projects. Click on one of the buttons above to start a project.",
+  "noProgressSection": "Your section doesn't have any student progress! Click **Edit Section Details** above to assign a course to your section.",
   "noSectionDialogHeader": "Why don't {classroom} sections have Section Codes?",
   "noSectionDialogBody": "{classroom} sections' lists of students reflect your externally-managed {classroom} roster. In order to add or remove a student from this section, please first add or remove them from the corresponding classroom in {classroom}, then click the \"Sync Students from {classroom}\" button in the top left corner of the Manage Students tab.",
   "noTablesInProject": "You have no tables in your project. Try adding one from the Data Library.",

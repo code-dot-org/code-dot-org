@@ -97,7 +97,6 @@ Dashboard::Application.routes.draw do
         post 'join'
         post 'leave'
         post 'update_sharing_disabled'
-        get 'student_script_ids'
         get 'code_review_groups'
         post 'code_review_groups', to: 'sections#set_code_review_groups'
         post 'code_review_enabled', to: 'sections#set_code_review_enabled'

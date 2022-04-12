@@ -1,9 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {
-  setScriptId,
-  validScriptPropType
-} from '@cdo/apps/redux/unitSelectionRedux';
+import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import {
   asyncLoadAssessments,
   getCurrentScriptAssessmentList,
@@ -36,6 +33,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {CSVLink} from 'react-csv';
 import FeedbackDownload from './FeedbackDownload';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {assignmentCourseVersionShape} from '../teacherDashboard/shapes';
 
 const CSV_ASSESSMENT_HEADERS = [
   {label: i18n.name(), key: 'studentName'},
@@ -60,7 +58,8 @@ class SectionAssessments extends Component {
     // provided by redux
     sectionId: PropTypes.number.isRequired,
     isLoading: PropTypes.bool.isRequired,
-    validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
+    courseVersionsWithProgress: PropTypes.objectOf(assignmentCourseVersionShape)
+      .isRequired,
     assessmentList: PropTypes.array.isRequired,
     scriptId: PropTypes.number,
     assessmentId: PropTypes.number,
@@ -182,7 +181,7 @@ class SectionAssessments extends Component {
   render() {
     const {
       sectionName,
-      validScripts,
+      courseVersionsWithProgress,
       scriptId,
       assessmentList,
       assessmentId,
@@ -205,7 +204,7 @@ class SectionAssessments extends Component {
               {i18n.selectACourse()}
             </div>
             <UnitSelector
-              validScripts={validScripts}
+              courseVersionsWithProgress={courseVersionsWithProgress}
               scriptId={scriptId}
               onChange={this.onSelectScript}
             />
@@ -369,7 +368,7 @@ export default connect(
   state => ({
     sectionId: state.teacherSections.selectedSectionId,
     isLoading: !!state.sectionAssessments.isLoading,
-    validScripts: state.unitSelection.validScripts,
+    courseVersionsWithProgress: state.unitSelection.courseVersionsWithProgress,
     assessmentList: getCurrentScriptAssessmentList(state),
     scriptId: state.unitSelection.scriptId,
     assessmentId: state.sectionAssessments.assessmentId,
