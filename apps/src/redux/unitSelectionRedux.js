@@ -60,7 +60,7 @@ export default function unitSelection(state = initialState, action) {
       ...state,
       courseVersionsWithProgress: action.courseVersionsWithProgress,
       scriptId:
-        state.scriptId === null
+        state.scriptId === null && firstCourseVersion
           ? Object.keys(firstCourseVersion.units)[0]
           : state.scriptId
     };

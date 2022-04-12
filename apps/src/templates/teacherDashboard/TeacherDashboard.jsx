@@ -116,6 +116,16 @@ class TeacherDashboard extends Component {
               component={props => <EmptySection sectionId={sectionId} />}
             />
           )}
+          <Route
+            path={TeacherDashboardPath.projects}
+            component={props => (
+              <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
+            )}
+          />
+          <Route
+            path={TeacherDashboardPath.stats}
+            component={props => <StatsTableWithData />}
+          />
           {Object.keys(courseVersionsWithProgress).length === 0 && (
             <Route
               component={() => (
@@ -138,16 +148,6 @@ class TeacherDashboard extends Component {
             component={props => (
               <SectionAssessments sectionName={sectionName} />
             )}
-          />
-          <Route
-            path={TeacherDashboardPath.projects}
-            component={props => (
-              <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
-            )}
-          />
-          <Route
-            path={TeacherDashboardPath.stats}
-            component={props => <StatsTableWithData />}
           />
         </Switch>
       </div>
