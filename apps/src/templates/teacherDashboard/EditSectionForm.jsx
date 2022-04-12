@@ -214,7 +214,6 @@ class EditSectionForm extends Component {
             onChange={ids => editSectionProperties(ids)}
             courseOfferings={courseOfferings}
             disabled={isSaveInProgress}
-            localeCode={localeCode}
             isNewSection={isNewSection}
             participantType={participantType}
           />
@@ -375,7 +374,6 @@ const AssignmentField = ({
   onChange,
   courseOfferings,
   disabled,
-  localeCode,
   isNewSection,
   participantType
 }) => (
@@ -386,10 +384,8 @@ const AssignmentField = ({
       section={section}
       onChange={ids => onChange(ids)}
       courseOfferings={courseOfferings}
-      chooseLaterOption={true}
       dropdownStyle={style.dropdown}
       disabled={disabled}
-      localeCode={localeCode}
       isNewSection={isNewSection}
       participantType={participantType}
     />
@@ -400,7 +396,6 @@ AssignmentField.propTypes = {
   onChange: PropTypes.func.isRequired,
   courseOfferings: PropTypes.objectOf(assignmentCourseOfferingShape).isRequired,
   disabled: PropTypes.bool,
-  localeCode: PropTypes.string,
   isNewSection: PropTypes.bool,
   participantType: PropTypes.oneOf(Object.keys(ParticipantAudience)).isRequired
 };

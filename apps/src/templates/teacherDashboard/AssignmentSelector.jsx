@@ -52,11 +52,9 @@ export default class AssignmentSelector extends Component {
     section: sectionShape,
     courseOfferings: PropTypes.objectOf(assignmentCourseOfferingShape)
       .isRequired,
-    chooseLaterOption: PropTypes.bool,
     dropdownStyle: PropTypes.object,
     onChange: PropTypes.func,
     disabled: PropTypes.bool,
-    localeCode: PropTypes.string,
     isNewSection: PropTypes.bool,
     participantType: PropTypes.oneOf(Object.keys(ParticipantAudience))
       .isRequired
@@ -266,11 +264,9 @@ export default class AssignmentSelector extends Component {
             disabled={disabled}
           >
             <option key="default" />
-            {this.props.chooseLaterOption && (
-              <option key="later" value={decideLater}>
-                {i18n.decideLater()}
-              </option>
-            )}
+            <option key="later" value={decideLater}>
+              {i18n.decideLater()}
+            </option>
             {filteredCategories.map(category => (
               <optgroup
                 key={category}
