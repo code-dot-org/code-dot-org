@@ -43,6 +43,7 @@ const initialState = {
   userType: 'unknown',
   signInState: SignInState.Unknown,
   hasSeenStandardsReportInfo: false,
+  isBackgroundMusicMuted: false,
   // Setting default under13 value to true to err on the side of caution for age-restricted content.
   under13: true
 };
@@ -75,20 +76,21 @@ export default function currentUser(state = initialState, action) {
       under13: action.under13
     };
   }
+  if (action.type === SET_MUTE_MUSIC) {
+    return {
+      ...state,
+      isBackgroundMusicMuted: action.isBackgroundMusicMuted
+    };
+  }
   if (action.type === SET_INITIAL_DATA) {
-    const {id, username, user_type, under_13} = action.serverUser;
+    const {id, username, user_type, mute_music, under_13} = action.serverUser;
     return {
       ...state,
       userId: id,
       userName: username,
       userType: user_type,
+      isBackgroundMusicMuted: mute_music,
       under13: under_13
-    };
-  }
-  if (action.type === SET_MUTE_MUSIC) {
-    return {
-      ...state,
-      isBackgroundMusicMuted: action.isBackgroundMusicMuted
     };
   }
 

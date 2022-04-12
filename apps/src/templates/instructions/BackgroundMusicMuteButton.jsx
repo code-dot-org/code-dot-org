@@ -6,25 +6,24 @@ import {connect} from 'react-redux';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import cookies from 'js-cookie';
 import {setMuteMusic} from '@cdo/apps/templates/currentUserRedux';
-import UserPreferences from '../lib/util/UserPreferences';
+import UserPreferences from '../../lib/util/UserPreferences';
 
 const MUTE_MUSIC = 'mute_music';
 
-function BackgroundMusicMuteButton({isMinecraft}) {
+function BackgroundMusicMuteButton({isMinecraft, isBackgroundMusicMuted}) {
   const updateMuteMusic = isBackgroundMusicMuted => {
-    new UserPreferences()
-      .setMuteMusic(isBackgroundMusicMuted)
-      .then(isBackgroundMusicMuted => {
-        this.setMuteMusic(isBackgroundMusicMuted);
-      })
-      .catch(result => {
-        // do some sort of something so we know it didn't work
-      });
+    var currentMuteValue = isBackgroundMusicMuted;
+    new UserPreferences().setMuteMusic(isBackgroundMusicMuted);
+    if (isBackgroundMusicMuted !== currentMuteValue) {
+      setMuteMusic(isBackgroundMusicMuted);
+    }
+    // find a way to catch an error if we get one
+    // and to re-render this so the button is the new text
   };
 
   const handleMuteMusicTabClick = () => {
-    this.isBackgroundMusicMuted = !this.isBackgroundMusicMuted;
-    updateMuteMusic(this.isBackgroundMusicMuted);
+    isBackgroundMusicMuted = !isBackgroundMusicMuted;
+    updateMuteMusic(isBackgroundMusicMuted);
     cookies.set(MUTE_MUSIC, 'true', {expires: 30, path: '/'});
 
     const record = {
@@ -34,15 +33,21 @@ function BackgroundMusicMuteButton({isMinecraft}) {
     firehoseClient.putRecord(record);
   };
 
+  const displayText = () => {
+    console.log(isBackgroundMusicMuted);
+    return isBackgroundMusicMuted
+      ? i18n.backgroundMusicOn()
+      : i18n.backgroundMusicOff();
+  };
+
   return (
     <button
       type="button"
       className="uitest-backgroundMusicTab"
       onClick={handleMuteMusicTabClick}
-      style={[styles, isMinecraft && craftStyle]}
+      style={{...styles, ...(isMinecraft ? craftStyle : {})}}
     >
-      isBackgroundMusicMuted ? {i18n.backgroundMusicOn()} :
-      {i18n.backgroundMusicOff()}
+      {displayText()}
     </button>
   );
 }
@@ -55,7 +60,9 @@ BackgroundMusicMuteButton.propTypes = {
 };
 
 export const styles = {
-  backgroundColor: color.table_light_row
+  backgroundColor: color.table_light_row,
+  fontSize: 'small',
+  float: 'right'
 };
 
 export const craftStyle = {
@@ -67,11 +74,11 @@ export const UnconnectedBackgroundMusicMuteButton = BackgroundMusicMuteButton;
 
 export default connect(
   state => ({
-    isBackgroundMusicMuted: state.isBackgroundMusicMuted
+    isBackgroundMusicMuted: state.currentUser.isBackgroundMusicMuted
   }),
   dispatch => ({
-    setMuteMusic(isMuted) {
-      dispatch(setMuteMusic(isMuted));
+    setMuteMusic(isBackgroundMusicMuted) {
+      dispatch(setMuteMusic(isBackgroundMusicMuted));
     }
   })
 )(BackgroundMusicMuteButton);
