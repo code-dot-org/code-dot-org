@@ -4,6 +4,11 @@ import ProgrammingEnvironmentsTable from './ProgrammingEnvironmentsTable';
 import ProgrammingExpressionsTable from './ProgrammingExpressionsTable';
 import {TextLink} from '@dsco_/link';
 
+/*
+ * A component that holds multiple sub-components and allows switching between
+ * them. As of April 2021, it holds a table of programming environments and a
+ * table of programming expressions.
+ */
 export default function AllCodeDocs({programmingEnvironments, allCategories}) {
   const [ideSelected, setIdeSelected] = useState(true);
   const ideSelectButtonStyle = {
@@ -55,7 +60,6 @@ export default function AllCodeDocs({programmingEnvironments, allCategories}) {
         </div>
       </div>
       <div>
-        {' '}
         <ProgrammingExpressionsTable
           allProgrammingEnvironments={programmingEnvironments}
           allCategories={allCategories}
