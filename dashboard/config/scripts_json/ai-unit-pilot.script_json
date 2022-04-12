@@ -6,6 +6,7 @@
     "properties": {
       "curriculum_path": "https://curriculum.code.org/ai-unit-pilot/ai-unit/{LESSON}",
       "hideable_lessons": true,
+      "is_course": true,
       "is_migrated": true,
       "pilot_experiment": "ai-unit-pilot",
       "teacher_resources": [
@@ -22,11 +23,12 @@
           "https://curriculum.code.org/ai-unit-pilot/ai-unit/standards"
         ]
       ],
-      "use_legacy_lesson_plans": true
+      "use_legacy_lesson_plans": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-11-22 19:57:33 UTC",
+    "family_name": "ai-unit-pilot",
+    "serialized_at": "2022-04-08 15:41:06 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

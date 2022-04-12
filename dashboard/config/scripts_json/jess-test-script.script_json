@@ -5,6 +5,7 @@
     "login_required": false,
     "properties": {
       "hideable_lessons": true,
+      "is_course": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
       "teacher_resources": [
@@ -24,11 +25,12 @@
           "professionalLearning",
           "https://studio.code.org/my-professional-learning"
         ]
-      ]
+      ],
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-11-22 19:57:03 UTC",
+    "family_name": "jess-test-script-1",
+    "serialized_at": "2022-04-08 15:41:01 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

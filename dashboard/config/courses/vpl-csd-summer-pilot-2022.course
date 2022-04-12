@@ -17,7 +17,17 @@
     "version_year": "2022"
   },
   "resources": [
-
+    {
+      "name": "Interactive Activities for Virtual Workshops",
+      "url": "https://docs.google.com/presentation/d/1fEVS_6rbO0vIgupdpv1nY82UMi1ORbhsgHmw9tWbBuM/edit?usp=sharing",
+      "key": "interactive_activities_for_virtual_workshops",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "interactive_activities_for_virtual_workshops"
+      }
+    }
   ],
   "student_resources": [
 

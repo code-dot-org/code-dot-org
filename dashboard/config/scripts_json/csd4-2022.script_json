@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-30 23:46:33 UTC",
+    "serialized_at": "2022-04-12 02:41:13 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -114,7 +114,7 @@
     },
     {
       "key": "User Centered Design   Define and Prepare",
-      "name": "User Centered Design   Define and Prepare",
+      "name": "User Centered Design - Define and Prepare",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -135,7 +135,7 @@
     },
     {
       "key": "User Centered Design   Try and Reflect",
-      "name": "User Centered Design   Try and Reflect",
+      "name": "User Centered Design - Try and Reflect",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -387,7 +387,7 @@
     },
     {
       "key": "Events in AppLab",
-      "name": "Events in AppLab",
+      "name": "Events in App Lab",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
@@ -4764,17 +4764,23 @@
       }
     },
     {
-      "key": "59bb3ddc-28e7-4257-9245-68d4d48bf3d2",
+      "key": "17a2215c-52ce-485c-a518-493e2d778803",
       "position": 1,
       "properties": {
+        "description": "**Video:** Show students the Events in App Lab video",
+        "progression_name": "Video: Events in App Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "17a2215c-52ce-485c-a518-493e2d778803",
+        "lesson_activity.key": "4c606841-1658-4523-a9e3-71c3df7fe9ee"
+      }
+    },
+    {
+      "key": "59bb3ddc-28e7-4257-9245-68d4d48bf3d2",
+      "position": 2,
+      "properties": {
         "description": "**Code Studio:** Have students log into their computers and open Code Studio. If you’ve used Pair Programming in previous units, consider having students use it throughout these levels.",
-        "name": "Events in App Lab\r",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Video Review:** The second half of the video from Lesson 14 is a good guide for what students will be completing today. You may decide to re-watch just the second half where Caley creates a new screen and adds an event to the screen, since this is what students will be completing today.\n\n"
-          }
-        ]
+        "name": "Events in App Lab\r"
       },
       "seeding_key": {
         "activity_section.key": "59bb3ddc-28e7-4257-9245-68d4d48bf3d2",
@@ -4783,7 +4789,7 @@
     },
     {
       "key": "18fa3b5b-05e0-44ed-bfb4-609b70d19e3d",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "Adding Screens"
       },
@@ -4794,7 +4800,7 @@
     },
     {
       "key": "9837555a-7b3b-4049-8cb3-548d950f07c8",
-      "position": 3,
+      "position": 4,
       "properties": {
         "progression_name": "Events and Linking Screens"
       },
@@ -4805,7 +4811,7 @@
     },
     {
       "key": "ffb6dca0-51dc-496b-be6d-23848ea67eec",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "**Circulate:** Monitor students as they complete the levels in Code Studio. As they progress through the bubbles, they should be adding to the Recycle Finder app from previous lessons. Students will spend most of the class completing these levels. As teams start to finish up, begin to transition to the next stage of this activity"
       },
@@ -4816,7 +4822,7 @@
     },
     {
       "key": "09e148c4-90e3-4c4a-946f-6f815d5c7583",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "A key part of adding events to your app was having different screens to link to. Today we learned one way to do that is by importing other screens. We will be doing this same process with your teammates - importing their screens into your app. To prepare for this, we need to plan how we will share our projects with each other.",
         "remarks": true
@@ -4828,7 +4834,7 @@
     },
     {
       "key": "8c8a34d0-bee7-482d-bf82-099f4be13b69",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "**Do This:** Have students discuss as a group how they will share their screen’s import URLs with each other. They should decide on a plan that they will implement tomorrow.",
         "name": "Preparing for Screen Import\r",
@@ -5896,6 +5902,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U4Ch1_2022"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -5918,6 +5927,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-apps for good-1_2022"
+        ],
         "progression": "Sample Apps for Good"
       },
       "bonus": false,
@@ -5940,6 +5952,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-apps for good-2_2022"
+        ],
         "progression": "Sample Apps for Good"
       },
       "bonus": false,
@@ -5962,6 +5977,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-apps for good-3_2022"
+        ],
         "progression": "Sample Apps for Good"
       },
       "bonus": false,
@@ -5984,6 +6002,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-1_2022"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -6006,6 +6027,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-2_2022"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -6028,6 +6052,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-3_2022"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -6050,6 +6077,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-4_2022"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -6072,6 +6102,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-5_2022"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -6094,6 +6127,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-6_2022"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -6116,12 +6152,15 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4 App Lab Design Mode Video"
+        ],
         "progression": "Video: Intro to Design Mode"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSDU4 Design Mode Video_2022"
+          "CSD U4 App Lab Design Mode Video"
         ],
         "lesson.key": "Design Mode in App Lab",
         "lesson_group.key": "csd4_2",
@@ -6129,7 +6168,7 @@
         "activity_section.key": "f09b7694-1ba5-4e04-89a4-e9bac566fd23"
       },
       "level_keys": [
-        "CSDU4 Design Mode Video_2022"
+        "CSD U4 App Lab Design Mode Video"
       ]
     },
     {
@@ -6138,6 +6177,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 1_2022"
+        ],
         "progression": "Build a Screen"
       },
       "bonus": false,
@@ -6160,6 +6202,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 2_2022"
+        ],
         "progression": "Build a Screen"
       },
       "bonus": false,
@@ -6182,6 +6227,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 3_2022"
+        ],
         "progression": "Build a Screen"
       },
       "bonus": false,
@@ -6204,6 +6252,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 4_2022"
+        ],
         "progression": "Build a Screen"
       },
       "bonus": false,
@@ -6226,6 +6277,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 5_2022"
+        ],
         "progression": "Finish a Screen"
       },
       "bonus": false,
@@ -6248,6 +6302,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 6_2022"
+        ],
         "progression": "Finish a Screen"
       },
       "bonus": false,
@@ -6270,6 +6327,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 7_2022"
+        ],
         "progression": "Finish a Screen"
       },
       "bonus": false,
@@ -6292,6 +6352,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Design a Screen for your App_2022"
+        ],
         "progression": "Design a Screen for your App"
       },
       "bonus": false,
@@ -6314,6 +6377,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4 - Design Mode Project_2022"
+        ],
         "progression": "App Project: Screen Design"
       },
       "bonus": false,
@@ -6336,6 +6402,34 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4 App Lab Events Video"
+        ],
+        "progression": "Video: Events in App Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U4 App Lab Events Video"
+        ],
+        "lesson.key": "Events in AppLab",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-2022",
+        "activity_section.key": "17a2215c-52ce-485c-a518-493e2d778803"
+      },
+      "level_keys": [
+        "CSD U4 App Lab Events Video"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4 Model Program 1_2022"
+        ],
         "progression": "Adding Screens"
       },
       "bonus": false,
@@ -6353,11 +6447,14 @@
       ]
     },
     {
-      "chapter": 22,
-      "position": 2,
+      "chapter": 23,
+      "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 1.5_2022"
+        ],
         "progression": "Adding Screens"
       },
       "bonus": false,
@@ -6375,11 +6472,14 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 3,
+      "chapter": 24,
+      "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 2_2022"
+        ],
         "progression": "Adding Screens"
       },
       "bonus": false,
@@ -6397,11 +6497,14 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 4,
+      "chapter": 25,
+      "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 2.5_2022"
+        ],
         "progression": "Adding Screens"
       },
       "bonus": false,
@@ -6419,11 +6522,14 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 5,
+      "chapter": 26,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 3_2022"
+        ],
         "progression": "Events and Linking Screens"
       },
       "bonus": false,
@@ -6441,11 +6547,14 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 6,
+      "chapter": 27,
+      "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 4_2022"
+        ],
         "progression": "Events and Linking Screens"
       },
       "bonus": false,
@@ -6463,11 +6572,14 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 7,
+      "chapter": 28,
+      "position": 8,
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 5_2022"
+        ],
         "progression": "Events and Linking Screens"
       },
       "bonus": false,
@@ -6485,11 +6597,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Project Import_2022"
+        ],
         "progression": "Combining Projects"
       },
       "bonus": false,
@@ -6507,11 +6622,14 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSDU4 Project Events_2022"
+        ],
         "progression": "Combining Projects"
       },
       "bonus": false,
@@ -6529,11 +6647,14 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Project Bug Feature_2022"
+        ],
         "progression": "Updating Your Prototype"
       },
       "bonus": false,
@@ -6551,11 +6672,14 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U4Ch2_2022"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -6573,11 +6697,14 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD User Centered Design Post-Project Test_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6594,11 +6721,14 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-post-survey-markdown-with-link-to-survey_2022"
+        ],
         "progression": "Post-Course Survey Instructions"
       },
       "bonus": false,
@@ -6739,9 +6869,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSDU4 Design Mode Video_2022",
+        "level.key": "CSD U4 App Lab Design Mode Video",
         "script_level.level_keys": [
-          "CSDU4 Design Mode Video_2022"
+          "CSD U4 App Lab Design Mode Video"
         ],
         "lesson.key": "Design Mode in App Lab",
         "lesson_group.key": "csd4_2",
@@ -6855,6 +6985,18 @@
         "lesson_group.key": "csd4_2",
         "script.name": "csd4-2022",
         "activity_section.key": "cde127b3-29f9-466b-ac1b-8c0a7842c83c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U4 App Lab Events Video",
+        "script_level.level_keys": [
+          "CSD U4 App Lab Events Video"
+        ],
+        "lesson.key": "Events in AppLab",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-2022",
+        "activity_section.key": "17a2215c-52ce-485c-a518-493e2d778803"
       }
     },
     {
@@ -7159,6 +7301,45 @@
       }
     },
     {
+      "name": "Bugs and Features",
+      "url": "https://docs.google.com/presentation/d/1aqSy1HsbHv96k0sohHO4QXtvc9TKXgw4RuxLxInS83c/template/preview",
+      "key": "bugs_and_features_2",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1aqSy1HsbHv96k0sohHO4QXtvc9TKXgw4RuxLxInS83c/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "bugs_and_features_2"
+      }
+    },
+    {
+      "name": "Build a Digital Prototype",
+      "url": "https://docs.google.com/presentation/d/1inVHDiAa4wJR4Qns4hrZMiYSEj52sVFu9MzyA6Ka2b4/template/preview",
+      "key": "build_a_digital_prototype",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1inVHDiAa4wJR4Qns4hrZMiYSEj52sVFu9MzyA6Ka2b4/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "build_a_digital_prototype"
+      }
+    },
+    {
+      "name": "Build a Paper Prototype",
+      "url": "https://docs.google.com/presentation/d/1kIW07fEjIHYaVJMSJHzzE7t-yP28i17LMDNTDXW-_QE/template/preview",
+      "key": "build_a_paper_prototype",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1kIW07fEjIHYaVJMSJHzzE7t-yP28i17LMDNTDXW-_QE/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "build_a_paper_prototype"
+      }
+    },
+    {
       "name": "Changing Screens",
       "url": "https://drive.google.com/file/d/1d9yygBuMPaCOPP3fraA3oacuy_RD9iNB/view?usp=sharing",
       "key": "changing_screens",
@@ -7218,18 +7399,6 @@
       }
     },
     {
-      "name": "CSD Unit 4 - The Design Process",
-      "url": "https://docs.google.com/presentation/d/1aM1QmHeYJTx1V-Puzinc4Jp8gpae7ZArLW1Y1sI3CYY/copy",
-      "key": "csd_unit_4_-_the_design_process",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csd_unit_4_-_the_design_process"
-      }
-    },
-    {
       "name": "Design Mode",
       "url": "https://drive.google.com/file/d/1WvW6pkUseGiXOg3TgeNAFPg-VwK65gjN/view?usp=sharing",
       "key": "design_mode",
@@ -7251,6 +7420,32 @@
       },
       "seeding_key": {
         "resource.key": "design_mode_elements"
+      }
+    },
+    {
+      "name": "Design Mode in App Lab",
+      "url": "https://docs.google.com/presentation/d/1VNAMEUcb0YlIc2K55m0vDQ0pcQsyR1-qMj7KK3jEFoE/template/preview",
+      "key": "design_mode_in_app_lab",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1VNAMEUcb0YlIc2K55m0vDQ0pcQsyR1-qMj7KK3jEFoE/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "design_mode_in_app_lab"
+      }
+    },
+    {
+      "name": "Designing Apps for Good",
+      "url": "https://docs.google.com/presentation/d/1fv2d8Yz1C6FLAbfNgkiLTUIVFA4y36LtCJPg7wEAl0g/template/preview",
+      "key": "designing_apps_for_good",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1fv2d8Yz1C6FLAbfNgkiLTUIVFA4y36LtCJPg7wEAl0g/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "designing_apps_for_good"
       }
     },
     {
@@ -7279,6 +7474,19 @@
       }
     },
     {
+      "name": "Designing With Empathy",
+      "url": "https://docs.google.com/presentation/d/1s9vpxiLYllhLWHKuc3qAdxa2sDiXXdKkvrueqt6HSOw/template/preview",
+      "key": "designing_with_empathy_2",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1s9vpxiLYllhLWHKuc3qAdxa2sDiXXdKkvrueqt6HSOw/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "designing_with_empathy_2"
+      }
+    },
+    {
       "name": "Digital Prototype User Testing",
       "url": "https://docs.google.com/document/d/1hdfiToUH-GACjesuIOIQB_C9FYqS-HjAHkGc5ju1kN0/view",
       "key": "digital_prototype_user_testing",
@@ -7289,6 +7497,19 @@
       },
       "seeding_key": {
         "resource.key": "digital_prototype_user_testing"
+      }
+    },
+    {
+      "name": "Events in App Lab",
+      "url": "https://docs.google.com/presentation/d/14LfGwdAAFjihgzVgM7-mdcI-7vOc0t9jkx2Ye4Kxz2o/template/preview",
+      "key": "events_in_app_lab",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/14LfGwdAAFjihgzVgM7-mdcI-7vOc0t9jkx2Ye4Kxz2o/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "events_in_app_lab"
       }
     },
     {
@@ -7342,6 +7563,45 @@
       }
     },
     {
+      "name": "Exploring UI Elements",
+      "url": "https://docs.google.com/presentation/d/1XzaHRhdzKoyN31BTm1YGKyqz79tqkwqTSMH0NBrjuGQ/template/preview",
+      "key": "exploring_ui_elements",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1XzaHRhdzKoyN31BTm1YGKyqz79tqkwqTSMH0NBrjuGQ/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "exploring_ui_elements"
+      }
+    },
+    {
+      "name": "Feedback and Testing",
+      "url": "https://docs.google.com/presentation/d/1ue45wTN7Pyrw7REzpWxRGEXHx5iHJufxkbXCl-AEAK4/template/preview",
+      "key": "feedback_and_testing",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1ue45wTN7Pyrw7REzpWxRGEXHx5iHJufxkbXCl-AEAK4/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "feedback_and_testing"
+      }
+    },
+    {
+      "name": "Identifying User Needs",
+      "url": "https://docs.google.com/presentation/d/1uUYOtoHbyogDelyndW62CAnWbT1XfwZk5LzBilDmDcU/template/preview",
+      "key": "identifying_user_needs",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1uUYOtoHbyogDelyndW62CAnWbT1XfwZk5LzBilDmDcU/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "identifying_user_needs"
+      }
+    },
+    {
       "name": "Importing Screens",
       "url": "https://drive.google.com/file/d/1eMuKUTAUEPx26x6S7NgldhZ7GMv1DJ-D/view?usp=sharing",
       "key": "importing_screens",
@@ -7392,6 +7652,19 @@
       }
     },
     {
+      "name": "Linking Prototype Screens",
+      "url": "https://docs.google.com/presentation/d/15eMpmSL0ax0PlxR43B6f4SZnTCVMuAPYSqdF1B5pfLs/template/preview",
+      "key": "linking_prototype_screens",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/15eMpmSL0ax0PlxR43B6f4SZnTCVMuAPYSqdF1B5pfLs/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "linking_prototype_screens"
+      }
+    },
+    {
       "name": "Market Research",
       "url": "https://docs.google.com/document/d/1xROZ51ntcX11OmXXfB46slca_ViqIjmOrAydkytVWdw/edit",
       "key": "market_research",
@@ -7414,6 +7687,19 @@
       },
       "seeding_key": {
         "resource.key": "market_research_1"
+      }
+    },
+    {
+      "name": "Market Research",
+      "url": "https://docs.google.com/presentation/d/1YYQ_C5g5FWaxAuObWxrjwviifT05OITJ-Qtk5kx7L7w/template/preview",
+      "key": "market_research_2",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1YYQ_C5g5FWaxAuObWxrjwviifT05OITJ-Qtk5kx7L7w/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "market_research_2"
       }
     },
     {
@@ -7628,6 +7914,32 @@
       }
     },
     {
+      "name": "Project - App Presentation",
+      "url": "https://docs.google.com/presentation/d/1HQL-haoplogL1hsJ3HxcauxaFMEX8adHx5P_HPgofP4/template/preview",
+      "key": "project_-_app_presentation",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1HQL-haoplogL1hsJ3HxcauxaFMEX8adHx5P_HPgofP4/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "project_-_app_presentation"
+      }
+    },
+    {
+      "name": "Project - Paper Prototype",
+      "url": "https://docs.google.com/presentation/d/1NL9v5Q9SMG-zBqyPcXZ45GcCOTWbe-y0tcBFh2QozfE/template/preview",
+      "key": "project_-_paper_prototype",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1NL9v5Q9SMG-zBqyPcXZ45GcCOTWbe-y0tcBFh2QozfE/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "project_-_paper_prototype"
+      }
+    },
+    {
       "name": "Prototype Feedback",
       "url": "https://docs.google.com/document/d/1DzoLUATK8k1lyr_TLhR4mJ5UHLhrZN6-sLRay0tLX4Q/edit?usp=sharing",
       "key": "prototype_feedback",
@@ -7638,6 +7950,19 @@
       },
       "seeding_key": {
         "resource.key": "prototype_feedback"
+      }
+    },
+    {
+      "name": "Prototype Testing",
+      "url": "https://docs.google.com/presentation/d/1VfsZUR6ZmM7i3isylpi4SapxbdpgDNMwn2HtLShxfhM/template/preview",
+      "key": "prototype_testing",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1VfsZUR6ZmM7i3isylpi4SapxbdpgDNMwn2HtLShxfhM/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "prototype_testing"
       }
     },
     {
@@ -7775,6 +8100,19 @@
       }
     },
     {
+      "name": "Testing the App",
+      "url": "https://docs.google.com/presentation/d/154WuEouQoWATs6C_ntttmyiU5NkmhmIRnIPgklq0vqE/template/preview",
+      "key": "testing_the_app",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/154WuEouQoWATs6C_ntttmyiU5NkmhmIRnIPgklq0vqE/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "testing_the_app"
+      }
+    },
+    {
       "name": "The Design Thinking Process",
       "url": "https://www.youtube.com/watch?v=_r0VX-aU_T8",
       "key": "the_design_thinking_process",
@@ -7784,6 +8122,19 @@
       },
       "seeding_key": {
         "resource.key": "the_design_thinking_process"
+      }
+    },
+    {
+      "name": "Understanding Your User",
+      "url": "https://docs.google.com/presentation/d/1HPHUwHJOwCaPu7ziBMgmritDV51qleFOR3xKNn-MbZs/template/preview",
+      "key": "understanding_your_user",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1HPHUwHJOwCaPu7ziBMgmritDV51qleFOR3xKNn-MbZs/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "understanding_your_user"
       }
     },
     {
@@ -7797,6 +8148,45 @@
       },
       "seeding_key": {
         "resource.key": "updating_your_prototype"
+      }
+    },
+    {
+      "name": "Updating Your Prototype",
+      "url": "https://docs.google.com/presentation/d/1qSXkRxs0VX1VC76b5Ligma15vMuNRfo4kwiE-q0N9IQ/template/preview",
+      "key": "updating_your_prototype_1",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1qSXkRxs0VX1VC76b5Ligma15vMuNRfo4kwiE-q0N9IQ/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "updating_your_prototype_1"
+      }
+    },
+    {
+      "name": "User Centered Design - Define and Prepare",
+      "url": "https://docs.google.com/presentation/d/1ip41nls-8EppwUGy_MrW7zbph3phpTh_vE_0-TGkY4M/template/preview",
+      "key": "user_centered_design_-_define_and_prepare",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1ip41nls-8EppwUGy_MrW7zbph3phpTh_vE_0-TGkY4M/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "user_centered_design_-_define_and_prepare"
+      }
+    },
+    {
+      "name": "User Centered Design - Try and Reflect",
+      "url": "https://docs.google.com/presentation/d/1mMMkro2m6M8NDeV6ptmvWY1Zf6wJ-7EoL86bx4TKSRI/template/preview",
+      "key": "user_centered_design_-_try_and_reflect",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1mMMkro2m6M8NDeV6ptmvWY1Zf6wJ-7EoL86bx4TKSRI/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "user_centered_design_-_try_and_reflect"
       }
     },
     {
@@ -7860,6 +8250,19 @@
       },
       "seeding_key": {
         "resource.key": "user_interface_screens"
+      }
+    },
+    {
+      "name": "User Interfaces",
+      "url": "https://docs.google.com/presentation/d/142Y1kcwN0zMRgUWgEGFdFuUzCrZceSHFamG3KiaXSbg/template/preview",
+      "key": "user_interfaces",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/142Y1kcwN0zMRgUWgEGFdFuUzCrZceSHFamG3KiaXSbg/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "user_interfaces"
       }
     },
     {
@@ -7955,13 +8358,13 @@
     {
       "seeding_key": {
         "lesson.key": "Bugs and Features",
-        "resource.key": "csd_unit_4_-_the_design_process"
+        "resource.key": "bugs_and_features_2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Build a Digital Prototype",
-        "resource.key": "csd_unit_4_-_the_design_process"
+        "resource.key": "build_a_digital_prototype"
       }
     },
     {
@@ -7973,7 +8376,7 @@
     {
       "seeding_key": {
         "lesson.key": "Build a Paper Prototype",
-        "resource.key": "csd_unit_4_-_the_design_process"
+        "resource.key": "build_a_paper_prototype"
       }
     },
     {
@@ -8009,12 +8412,6 @@
     {
       "seeding_key": {
         "lesson.key": "Design Mode in App Lab",
-        "resource.key": "csd_unit_4_-_the_design_process"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Design Mode in App Lab",
         "resource.key": "design_mode"
       }
     },
@@ -8022,6 +8419,12 @@
       "seeding_key": {
         "lesson.key": "Design Mode in App Lab",
         "resource.key": "design_mode_elements"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Design Mode in App Lab",
+        "resource.key": "design_mode_in_app_lab"
       }
     },
     {
@@ -8063,19 +8466,13 @@
     {
       "seeding_key": {
         "lesson.key": "Designing Apps for Good",
-        "resource.key": "csd_unit_4_-_the_design_process"
+        "resource.key": "designing_apps_for_good"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Designing Apps for Good",
         "resource.key": "example_apps_for_good"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Designing With Empathy",
-        "resource.key": "csd_unit_4_-_the_design_process"
       }
     },
     {
@@ -8093,19 +8490,19 @@
     {
       "seeding_key": {
         "lesson.key": "Designing With Empathy",
+        "resource.key": "designing_with_empathy_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing With Empathy",
         "resource.key": "problem_solving_process_with_empathy"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Events in AppLab",
-        "resource.key": "csd_unit_4_-_the_design_process"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Exploring UI Elements",
-        "resource.key": "csd_unit_4_-_the_design_process"
+        "resource.key": "events_in_app_lab"
       }
     },
     {
@@ -8122,8 +8519,14 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Exploring UI Elements",
+        "resource.key": "exploring_ui_elements"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Feedback and Testing",
-        "resource.key": "csd_unit_4_-_the_design_process"
+        "resource.key": "feedback_and_testing"
       }
     },
     {
@@ -8153,13 +8556,13 @@
     {
       "seeding_key": {
         "lesson.key": "Identifying User Needs",
-        "resource.key": "csd_unit_4_-_the_design_process"
+        "resource.key": "example_user_interviews"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Identifying User Needs",
-        "resource.key": "example_user_interviews"
+        "resource.key": "identifying_user_needs"
       }
     },
     {
@@ -8177,13 +8580,13 @@
     {
       "seeding_key": {
         "lesson.key": "Linking Prototype Screens",
-        "resource.key": "csd_unit_4_-_the_design_process"
+        "resource.key": "importing_screens"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Linking Prototype Screens",
-        "resource.key": "importing_screens"
+        "resource.key": "linking_prototype_screens"
       }
     },
     {
@@ -8201,12 +8604,6 @@
     {
       "seeding_key": {
         "lesson.key": "Market Research",
-        "resource.key": "csd_unit_4_-_the_design_process"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Market Research",
         "resource.key": "market_research"
       }
     },
@@ -8214,6 +8611,12 @@
       "seeding_key": {
         "lesson.key": "Market Research",
         "resource.key": "market_research_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Market Research",
+        "resource.key": "market_research_2"
       }
     },
     {
@@ -8249,12 +8652,6 @@
     {
       "seeding_key": {
         "lesson.key": "Project - App Presentation",
-        "resource.key": "csd_unit_4_-_the_design_process"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - App Presentation",
         "resource.key": "peer_review_1"
       }
     },
@@ -8267,6 +8664,12 @@
     {
       "seeding_key": {
         "lesson.key": "Project - App Presentation",
+        "resource.key": "project_-_app_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - App Presentation",
         "resource.key": "sample_marked_rubrics_2"
       }
     },
@@ -8274,12 +8677,6 @@
       "seeding_key": {
         "lesson.key": "Project - Paper Prototype",
         "resource.key": "computer_science_practices"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Paper Prototype",
-        "resource.key": "csd_unit_4_-_the_design_process"
       }
     },
     {
@@ -8303,13 +8700,13 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Paper Prototype",
-        "resource.key": "sample_marked_rubrics_1"
+        "resource.key": "project_-_paper_prototype"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Prototype Testing",
-        "resource.key": "csd_unit_4_-_the_design_process"
+        "lesson.key": "Project - Paper Prototype",
+        "resource.key": "sample_marked_rubrics_1"
       }
     },
     {
@@ -8322,6 +8719,12 @@
       "seeding_key": {
         "lesson.key": "Prototype Testing",
         "resource.key": "paper_prototype_user_testing_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Prototype Testing",
+        "resource.key": "prototype_testing"
       }
     },
     {
@@ -8345,25 +8748,19 @@
     {
       "seeding_key": {
         "lesson.key": "Testing the App",
-        "resource.key": "csd_unit_4_-_the_design_process"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Testing the App",
         "resource.key": "digital_prototype_user_testing"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Testing the App",
-        "resource.key": "user_test_cases"
+        "resource.key": "testing_the_app"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Understanding Your User",
-        "resource.key": "csd_unit_4_-_the_design_process"
+        "lesson.key": "Testing the App",
+        "resource.key": "user_test_cases"
       }
     },
     {
@@ -8422,8 +8819,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Updating Your Prototype",
-        "resource.key": "csd_unit_4_-_the_design_process"
+        "lesson.key": "Understanding Your User",
+        "resource.key": "understanding_your_user"
       }
     },
     {
@@ -8434,14 +8831,20 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "User Centered Design   Define and Prepare",
-        "resource.key": "csd_unit_4_-_the_design_process"
+        "lesson.key": "Updating Your Prototype",
+        "resource.key": "updating_your_prototype_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "User Centered Design   Define and Prepare",
         "resource.key": "the_design_thinking_process"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "User Centered Design   Define and Prepare",
+        "resource.key": "user_centered_design_-_define_and_prepare"
       }
     },
     {
@@ -8459,7 +8862,7 @@
     {
       "seeding_key": {
         "lesson.key": "User Centered Design   Try and Reflect",
-        "resource.key": "csd_unit_4_-_the_design_process"
+        "resource.key": "user_centered_design_-_try_and_reflect"
       }
     },
     {
@@ -8477,13 +8880,13 @@
     {
       "seeding_key": {
         "lesson.key": "User Interfaces",
-        "resource.key": "csd_unit_4_-_the_design_process"
+        "resource.key": "user_interface_screens"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "User Interfaces",
-        "resource.key": "user_interface_screens"
+        "resource.key": "user_interfaces"
       }
     },
     {
