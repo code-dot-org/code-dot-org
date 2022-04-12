@@ -10,7 +10,7 @@ import i18n from '@cdo/locale';
 export default function JoinSectionArea({
   initialJoinedPlSections,
   initialJoinedStudentSections,
-  isTeacher
+  isTeacher = false
 }) {
   const [sectionResults, setSectionResults] = useState({
     action: null,
