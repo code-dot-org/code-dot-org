@@ -32,6 +32,7 @@ import {
 } from '@cdo/apps/templates/arrowDisplayRedux';
 import PlayerSelectionDialog from '@cdo/apps/craft/PlayerSelectionDialog';
 import reducers from '@cdo/apps/craft/redux';
+import cookies from 'js-cookie';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -172,14 +173,15 @@ export default class Craft {
         return config.skin.assetUrl(`music/${filename}`);
       },
       levelTracks,
-      levelTracks.length > 1 ? 7500 : null
+      levelTracks.length > 1 ? 7500 : null,
+      Craft.level.muteMusic || cookies.get('mute_music') === 'true'
     );
-
-    studioApp().stopBackgroundMusic = this.stopBackgroundMusic.bind(this);
 
     Craft.stopBackgroundMusic = function() {
       Craft.musicController.stop();
     };
+
+    studioApp().stopBackgroundMusic = this.stopBackgroundMusic.bind(this);
 
     config.skin.staticAvatar = MEDIA_URL + 'Sliced_Parts/Agent_Neutral.png';
     config.skin.smallStaticAvatar =

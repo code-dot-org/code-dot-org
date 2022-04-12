@@ -101,8 +101,6 @@ class TopInstructions extends Component {
     isBlockly: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
     isBackgroundMusicLevel: PropTypes.bool.isRequired,
-    isBackgroundMusicMuted: PropTypes.bool.isRequired,
-    setMuteMusic: PropTypes.func.isRequired,
     mainStyle: PropTypes.object,
     containerStyle: PropTypes.object,
     resizable: PropTypes.bool,
@@ -578,7 +576,6 @@ class TopInstructions extends Component {
       teacherMarkdown,
       isCollapsed,
       isBackgroundMusicLevel,
-      isBackgroundMusicMuted,
       user,
       mainStyle,
       containerStyle,
@@ -668,7 +665,6 @@ class TopInstructions extends Component {
       isEmbedView,
       isCollapsed,
       isBackgroundMusicLevel,
-      isBackgroundMusicMuted,
       dynamicInstructions,
       dynamicInstructionsKey
     };
@@ -690,7 +686,6 @@ class TopInstructions extends Component {
           displayReviewTab={displayReviewTab}
           isViewingAsTeacher={this.isViewingAsTeacher}
           isBackgroundMusicLevel={isBackgroundMusicLevel}
-          isBackgroundMusicMuted={isBackgroundMusicMuted}
           fetchingData={fetchingData}
           handleDocumentationClick={this.handleDocumentationClick}
           handleInstructionTabClick={() =>
@@ -890,7 +885,6 @@ export default connect(
     shortInstructions: state.instructions.shortInstructions,
     isRtl: state.isRtl,
     isBackgroundMusicLevel: !!state.pageConstants.isBackgroundMusicLevel,
-    //isBackgroundMusicMuted: Where do I get this from?,
     dynamicInstructions: getDynamicInstructions(state.instructions),
     dynamicInstructionsKey: state.instructions.dynamicInstructionsKey,
     overlayVisible: state.instructions.overlayVisible,

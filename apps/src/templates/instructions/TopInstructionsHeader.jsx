@@ -23,7 +23,6 @@ function TopInstructionsHeader(props) {
     displayReviewTab,
     isViewingAsTeacher,
     isBackgroundMusicLevel,
-    //isBackgroundMusicMuted,
     fetchingData,
     handleDocumentationClick,
     handleInstructionTabClick,
@@ -158,10 +157,10 @@ function TopInstructionsHeader(props) {
                 isRtl={isRtl}
               />
             )}
-          {isBackgroundMusicLevel && (
-            <BackgroundMusicMuteButton isMinecraft={isMinecraft} />
-          )}
         </div>
+        {isBackgroundMusicLevel && (
+          <BackgroundMusicMuteButton isMinecraft={isMinecraft} />
+        )}
         {/* For CSF contained levels we use the same collapse function as CSD/CSP*/}
         {collapsible &&
           !isEmbedView &&
@@ -256,7 +255,6 @@ TopInstructionsHeader.propTypes = {
   displayReviewTab: PropTypes.bool,
   isViewingAsTeacher: PropTypes.bool,
   isBackgroundMusicLevel: PropTypes.bool.isRequired,
-  isBackgroundMusicMuted: PropTypes.bool.isRequired,
   fetchingData: PropTypes.bool,
   handleDocumentationClick: PropTypes.func.isRequired,
   handleInstructionTabClick: PropTypes.func.isRequired,

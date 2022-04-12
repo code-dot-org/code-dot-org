@@ -25,6 +25,7 @@ import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import PlayerSelectionDialog from '@cdo/apps/craft/PlayerSelectionDialog';
 import reducers from '@cdo/apps/craft/redux';
+import cookies from 'js-cookie';
 
 var MEDIA_URL = '/blockly/media/craft/';
 
@@ -174,14 +175,15 @@ Craft.init = function(config) {
       return config.skin.assetUrl(`music/${filename}`);
     },
     levelTracks,
-    levelTracks.length > 1 ? 7500 : null
+    levelTracks.length > 1 ? 7500 : null,
+    Craft.level.muteMusic || cookies.get('mute_music') === 'true'
   );
-
-  studioApp().stopBackgroundMusic = this.stopBackgroundMusic.bind(this);
 
   Craft.stopBackgroundMusic = function() {
     Craft.musicController.stop();
   };
+
+  studioApp().stopBackgroundMusic = this.stopBackgroundMusic.bind(this);
 
   // Play music when the instructions are shown
   Craft.beginBackgroundMusic = function() {

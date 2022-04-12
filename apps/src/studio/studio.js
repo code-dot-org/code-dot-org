@@ -64,8 +64,6 @@ import {
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
 
-const muteMusic = 'mute_music';
-
 var Direction = constants.Direction;
 var CardinalDirections = constants.CardinalDirections;
 var NextTurn = constants.NextTurn;
@@ -2205,14 +2203,14 @@ Studio.init = function(config) {
     skin.assetUrl,
     levelTracks,
     undefined,
-    config.level.muteMusic || cookies.get(muteMusic) === 'true'
+    config.level.muteMusic || cookies.get('mute_music') === 'true'
   );
-
-  studioApp().stopBackgroundMusic = this.stopBackgroundMusic.bind(this);
 
   Studio.stopBackgroundMusic = function() {
     Studio.musicController.stop();
   };
+
+  studioApp().stopBackgroundMusic = this.stopBackgroundMusic.bind(this);
 
   /**
    * Defines the set of possible movement sound effects for each playlab actor.

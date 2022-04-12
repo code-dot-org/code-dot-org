@@ -1426,6 +1426,10 @@ class User < ApplicationRecord
     age.nil? || age.to_i < 13
   end
 
+  def mute_music?
+    !!mute_music
+  end
+
   def generate_username
     # skip an expensive db query if the name is not valid anyway. we can't depend on validations being run
     return if name.blank? || name.utf8mb4? || (email && email.utf8mb4?)
