@@ -1024,34 +1024,6 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  test 'anonymous user cannot access student_script_ids' do
-    get :student_script_ids, params: {id: @section_with_script.id}
-    assert_response :forbidden
-  end
-
-  test 'teacher can access student_script_ids' do
-    sign_in @teacher
-
-    get :student_script_ids, params: {id: @section_with_script.id}
-    assert_response :success
-    ids = JSON.parse(@response.body)
-    assert_equal({'studentScriptIds' => [@script_in_preview_state.id]}, ids)
-
-    # make sure we include other scripts which the student has progress in
-    create(:user_script, user: @student_with_script, script: @script)
-
-    get :student_script_ids, params: {id: @section_with_script.id}
-    assert_response :success
-    ids = JSON.parse(@response.body)
-    assert_equal({'studentScriptIds' => [@script.id, @script_in_preview_state.id]}, ids)
-  end
-
-  test 'student cannot access student_script_ids' do
-    sign_in @student_with_script
-    get :student_script_ids, params: {id: @section_with_script.id}
-    assert_response :forbidden
-  end
-
   test "available_participant_types: returns forbidden if no user" do
     get :available_participant_types
     assert_response :forbidden
