@@ -4,8 +4,8 @@ require File.expand_path('../../../pegasus/src/env', __FILE__)
 require src_dir 'database'
 require 'optparse'
 
-# To run: bin/oneoff/drop_temp_views_from_pegasus.rb
-# To revert: bin/oneoff/drop_temp_views_from_pegasus.rb --revert
+# To run: bin/oneoff/drop_temp_views_from_pegasus
+# To revert: bin/oneoff/drop_temp_views_from_pegasus --revert
 
 # Parse options
 options = {
@@ -52,6 +52,7 @@ def revert_drop_temp_views_from_pegasus
   pegasus_storage_apps = "#{CDO.pegasus_db_name}__storage_apps".to_sym
   pegasus_user_storage_ids = "#{CDO.pegasus_db_name}__user_storage_ids".to_sym
   dashboard_projects = "#{CDO.dashboard_db_name}__projects".to_sym
+  dashboard_user_project_storage_ids = "#{CDO.dashboard_db_name}__user_project_storage_ids".to_sym
 
   puts "Creating view pegasus.storage_apps"
   DB.create_view(pegasus_storage_apps, DB[dashboard_projects].select_all)
