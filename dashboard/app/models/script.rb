@@ -313,20 +313,12 @@ class Script < ApplicationRecord
     Script.get_from_cache(Script::STARWARS_NAME)
   end
 
-  def self.frozen_unit
-    Script.get_from_cache(Script::FROZEN_NAME)
-  end
-
   def self.course1_unit
     Script.get_from_cache(Script::COURSE1_NAME)
   end
 
   def self.flappy_unit
     Script.get_from_cache(Script::FLAPPY_NAME)
-  end
-
-  def self.artist_unit
-    Script.get_from_cache(Script::ARTIST_NAME)
   end
 
   def self.maker_units(user)
@@ -837,21 +829,8 @@ class Script < ApplicationRecord
 
   def k5_course?
     return false if twenty_hour?
-    k5_csc_course = [
-      Script::POETRY_2021_NAME,
-      Script::AI_ETHICS_2021_NAME,
-      Script::COUNTING_CSC_2021_NAME,
-      Script::EXPLORE_DATA_1_2021_NAME,
-      Script::SPELLING_BEE_2021_NAME
-    ].include?(name)
-    hoc_course = [
-      Script::POEM_ART_2021_NAME,
-      Script::HELLO_WORLD_FOOD_2021_NAME,
-      Script::HELLO_WORLD_ANIMALS_2021_NAME,
-      Script::HELLO_WORLD_EMOJI_2021_NAME,
-      Script::HELLO_WORLD_RETRO_2021_NAME
-    ].include?(name)
-    csf? || k5_csc_course || hoc_course
+
+    csf? || csc? || Script.unit_in_category?('hoc', name)
   end
 
   def csf?
@@ -871,17 +850,13 @@ class Script < ApplicationRecord
   end
 
   def csc?
-    under_curriculum_umbrella?('CSC')
+    Script.unit_in_category?('csc', name)
   end
 
   # TODO: (Dani) Update to use new course types framework.
   # Currently this grouping is used to determine whether the script should have # a custom end-of-lesson experience.
   def middle_high?
     csd? || csp? || csa?
-  end
-
-  def hour_of_code?
-    under_curriculum_umbrella?('HOC')
   end
 
   def get_script_level_by_id(script_level_id)
