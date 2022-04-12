@@ -67,4 +67,8 @@ class ProgrammingEnvironmentCategory < ApplicationRecord
       KEY_CHAR_RE.match(character) ? character : '_'
     end.join.gsub(/_+/, '_')
   end
+
+  def name_with_environment
+    "#{programming_environment.title}:#{name}"
+  end
 end
