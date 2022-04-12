@@ -8,8 +8,20 @@ describe('PageContainer', () => {
     const wrapper = shallow(
       <PageContainer
         categoriesForNavigation={[
-          {key: 'world', name: 'World'},
-          {key: 'sprites', name: 'Sprites'}
+          {
+            key: 'world',
+            name: 'World',
+            programmingExpressions: [
+              {key: 'width', name: 'Width', link: '/docs/ide/width'}
+            ]
+          },
+          {
+            key: 'sprites',
+            name: 'Sprites',
+            programmingExpressions: [
+              {key: 'height', name: 'Sprite.Height', link: '/docs/ide/height'}
+            ]
+          }
         ]}
         programmingEnvironmentTitle="IDE Lab"
       >
@@ -25,10 +37,22 @@ describe('PageContainer', () => {
     ).to.be.true;
     expect(wrapper.find('NavigationBar').length).to.equal(1);
     expect(
+      wrapper.find('NavigationBar').find('NavigationCategory').length
+    ).to.equal(2);
+    expect(
       wrapper
         .find('NavigationBar')
-        .first()
-        .props().categoriesForNavigation.length
-    ).to.equal(2);
+        .find('NavigationCategory')
+        .at(0)
+        .find('NavigationItem').length
+    ).to.equal(1);
+
+    expect(
+      wrapper
+        .find('NavigationBar')
+        .find('NavigationCategory')
+        .at(1)
+        .find('NavigationItem').length
+    ).to.equal(1);
   });
 });

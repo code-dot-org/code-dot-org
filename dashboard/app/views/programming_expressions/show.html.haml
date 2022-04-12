@@ -1,4 +1,5 @@
 //%script{src: webpack_asset_path('js/googleblockly.js')}
+%link{href: asset_path('css/curriculum_navigation.css'), rel: 'stylesheet', type: 'text/css'}
 - content_for(:head) do
   = tag 'meta', name: 'description', content: @programming_expression.syntax
 %script{src: webpack_asset_path('js/blockly.js')}
