@@ -35090,11 +35090,11 @@ en:
               description_teacher: "**Question of the Day: How can we make sure a product is meeting the needs of a user?**\r\n\r\nDesigners need to understand their users' needs in order to create useful products.  This lesson encourages students to think about how to design for another person by role-playing as someone else using a user profile and reacting as that user to a series of products.  Each student is assigned a user profile describing a person, which they then use to choose appropriate products, critique product design, and suggest improvements to design.\r\n"
               key: Understanding Your User
             User Centered Design   Define and Prepare:
-              name: User Centered Design   Define and Prepare
+              name: User Centered Design - Define and Prepare
               description_student: "**Question of the Day: How can we design for people other than ourselves?**\n\nIn this lesson, you will use the design process to come up with ideas for smart clothing. "
               description_teacher: "**Question of the Day: How can we design for people other than ourselves?**\r\n\r\nThis is the first part of a two-day lesson where students are guided through an abbreviated version of the design process they will be seeing throughout this unit. This lesson focuses on the Define and Prepare steps of the process. Students first brainstorm a list of potential users of smart clothing. As a class, they then group these ideas into broad categories and each group will choose one category of user. Groups repeat this process to brainstorm needs or concerns of their user, eventually categorizing these needs and choosing one to focus on. In the next lesson, students will complete the Try and Reflect steps of the design process.\r\n"
             User Centered Design   Try and Reflect:
-              name: User Centered Design   Try and Reflect
+              name: User Centered Design - Try and Reflect
               description_student: "**Question of the Day: How can we design a product to meet a user's needs?**\n\nIn this lesson, you will continue to work on designing a piece of smart clothing, using the specific needs and concerns you brainstormed. "
               description_teacher: "**Question of the Day: How can we design a product to meet a user's needs?**\r\n \r\nThis is the second part of a two-day lesson where students are guided through an abbreviated version of the design process they will be seeing throughout this unit. Yesterday students completed the Define and Prepare steps of the design process. Today, they complete the Try and Reflect portions. Students continue their work from yesterday by designing a piece of smart clothing, using the specific needs and concerns they brainstormed to guide their decision making. Students have a chance to share their decision-making process and get feedback on how well their product addresses the user needs they selected.\r\n"
             User Interfaces:
@@ -35177,7 +35177,7 @@ en:
                 Having collaboratively developed a paper prototype for their apps, groups now divide and conquer to begin work on an interactive digital version based on the paper prototype. Using the drag-and-drop design mode of App Lab, students individually work through a progression of skill-building levels to learn how to build digital versions of a paper prototype. From there, each group member builds out at least one page of their app in App Lab, to be later combined into a single app.
               key: Build a Digital Prototype
             Events in AppLab:
-              name: Events in AppLab
+              name: Events in App Lab
               description_student: "**Question of the Day: How can I use events to create an app?**\n\nIn this lesson, you will combine the screens each team member built into a single app and learn how to program events so that you can navigate between your screens. "
               description_teacher: "**Question of the Day: How can I use events to create an app?**\n \nIn this lesson, students learn how to add screens to their apps, how to import screens created by other students, and how to program events to navigate between screens. Students learn basic event-driven programming by building up the model app that they started in the previous lesson. At the end of the lesson, students make a plan for how they will stay organized when importing each other’s screens in tomorrow’s lesson.\n"
             Linking Prototype Screens:
@@ -35336,7 +35336,7 @@ en:
 
                 In this lesson students design a structure to represent their perfect day using the binary representation systems they've learned in this chapter. Students will first write a short description of their perfect day and then review with a partner to identify the key pieces of information they think a computer could capture. As a class students will decide how a punch card of bytes of information will be interpreted to represent those pieces of information. Students will then use the ASCII, binary number, and image formats they have learned to represent their perfect days. Students then trade punch cards and try to decode what the other student's perfect day is like. The lesson ends with a reflection.
             Problem Solving and Data:
-              name: Problem Solving and Data
+              name: Problem Solving With Data
               description_student: |-
                 **Question of the Day: How can we use data to solve problems in our community?**
 
