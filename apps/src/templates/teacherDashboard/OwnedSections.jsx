@@ -17,7 +17,6 @@ import color from '@cdo/apps/util/color';
 import styleConstants from '@cdo/apps/styleConstants';
 import AddSectionDialog from './AddSectionDialog';
 import EditSectionDialog from './EditSectionDialog';
-import SetUpSections from '../studioHomepages/SetUpSections';
 import {recordOpenEditSectionDetails} from './sectionHelpers';
 import experiments from '@cdo/apps/util/experiments';
 import {recordImpression} from './impressionHelpers';
@@ -104,7 +103,6 @@ class OwnedSections extends React.Component {
           isPlSections ? 'uitest-owned-pl-sections' : 'uitest-owned-sections'
         }
       >
-        <SetUpSections hasSections={hasSections} isPlSections={isPlSections} />
         {hasSections && (
           <div>
             {visibleSectionIds.length > 0 && (
