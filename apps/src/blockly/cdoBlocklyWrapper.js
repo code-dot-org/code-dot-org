@@ -231,6 +231,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     },
     getBlockFields: function(block) {
       return block.getTitles();
+    },
+    isWorkspaceReadOnly: function(workspace) {
+      return workspace.isReadOnly();
     }
   };
   return blocklyWrapper;
