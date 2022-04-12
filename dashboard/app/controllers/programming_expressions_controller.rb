@@ -7,6 +7,17 @@ class ProgrammingExpressionsController < ApplicationController
   before_action :set_expression_by_keys, only: [:show_by_keys, :docs_show]
   load_and_authorize_resource
 
+  before_action :require_levelbuilder_mode_or_test_env, except: [:search, :show, :show_by_keys]
+
+  def index
+    @programming_environments = ProgrammingEnvironment.all.map do |env|
+      {id: env.id, name: env.name, title: env.title, published: env.published, editPath: edit_programming_environment_path(env.name)}
+    end
+    @all_categories = ProgrammingEnvironmentCategory.all.map do |cat|
+      {id: cat.id, key: cat.key, environmentId: cat.programming_environment.id, environmentName: cat.programming_environment.name, name: cat.name, formattedName: cat.name_with_environment}
+    end
+  end
+
   # GET /programming_expressions/get_filtered_expressions
   # Possible filters:
   # - programmingEnvironmentId
