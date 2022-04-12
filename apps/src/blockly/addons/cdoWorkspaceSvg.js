@@ -101,10 +101,6 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
     }
   }
 
-  isReadOnly() {
-    return false; // TODO - used for feedback
-  }
-
   resize() {
     super.resize();
 
