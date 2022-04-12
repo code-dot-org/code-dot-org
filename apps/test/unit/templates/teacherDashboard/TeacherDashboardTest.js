@@ -17,7 +17,7 @@ const DEFAULT_PROPS = {
 describe('TeacherDashboard', () => {
   it('renders TeacherDashboardHeader', () => {
     const wrapper = shallow(<TeacherDashboard {...DEFAULT_PROPS} />);
-    expect(wrapper.find('Connect(TeacherDashboardHeader)')).to.exist;
+    expect(wrapper.find('Connect(TeacherDashboardHeader)').length).to.equal(1);
   });
 
   it('does not render TeacherDashboardHeader on /login_info', () => {
@@ -25,7 +25,7 @@ describe('TeacherDashboard', () => {
     const wrapper = shallow(
       <TeacherDashboard {...DEFAULT_PROPS} location={location} />
     );
-    expect(wrapper.find('Connect(TeacherDashboardHeader)')).to.not.exist;
+    expect(wrapper.find('Connect(TeacherDashboardHeader)').length).to.equal(0);
   });
 
   it('does not render TeacherDashboardHeader on /standards_report', () => {
@@ -33,7 +33,7 @@ describe('TeacherDashboard', () => {
     const wrapper = shallow(
       <TeacherDashboard {...DEFAULT_PROPS} location={location} />
     );
-    expect(wrapper.find('Connect(TeacherDashboardHeader)')).to.not.exist;
+    expect(wrapper.find('Connect(TeacherDashboardHeader)').length).to.equal(0);
   });
 
   it('defaults to progress tab if no tab provided in route', () => {
@@ -77,6 +77,21 @@ describe('TeacherDashboard', () => {
     );
     expect(wrapper.instance().props.location.pathname).to.equal(
       '/manage_students'
+    );
+  });
+
+  it('shows pick a course message if there is no student progress', () => {
+    const location = {pathname: '/progress'};
+    const wrapper = shallow(
+      <TeacherDashboard
+        {...DEFAULT_PROPS}
+        location={location}
+        courseVersionsWithProgress={{}}
+      />
+    );
+    expect(wrapper.find('SafeMarkdown').length).to.equal(1);
+    expect(wrapper.find('SafeMarkdown').props().markdown).to.equal(
+      "Your section doesn't have any student progress! Click **Edit Section Details** above to assign a course to your section."
     );
   });
 });
