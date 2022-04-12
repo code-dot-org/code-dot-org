@@ -133,8 +133,8 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     end
     render json: {
       sections: current_user.sections_as_student.map(&:summarize_without_students),
-      studentSections: current_user.sections_as_student.select {|s| !s.pl_section?}.map(&:summarize_without_students),
-      plSections: current_user.sections_as_student.select(&:pl_section?).map(&:summarize_without_students),
+      studentSections: current_user.sections_as_student_participant.map(&:summarize_without_students),
+      plSections: current_user.sections_as_pl_participant.map(&:summarize_without_students),
       result: result
     }
   end
@@ -145,8 +145,8 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     @section.remove_student(current_user, @follower, {notify: true})
     render json: {
       sections: current_user.sections_as_student.map(&:summarize_without_students),
-      studentSections: current_user.sections_as_student.select {|s| !s.pl_section?}.map(&:summarize_without_students),
-      plSections: current_user.sections_as_student.select(&:pl_section?).map(&:summarize_without_students),
+      studentSections: current_user.sections_as_student_participant.map(&:summarize_without_students),
+      plSections: current_user.sections_as_pl_participant.map(&:summarize_without_students),
       result: "success"
     }
   end
