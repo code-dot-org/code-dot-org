@@ -183,13 +183,13 @@ class CertificateImage
   end
 
   def self.hoc_course?(course)
-    hoc_course = ScriptConstants.unit_in_category?(:hoc, course)
+    hoc_course = Script.unit_in_category?('hoc', course)
     hoc_course ||= tutorial_codes.any? {|code| code == course}
     hoc_course
   end
 
   def self.prefilled_title_course?(course)
-    hoc_course?(course) || ScriptConstants.unit_in_category?(:twenty_hour, course)
+    hoc_course?(course) || Script.unit_in_category?('twenty_hour', course)
   end
 
   # Specify a fallback certificate title for a given non-HoC course ID. As of HoC
@@ -232,7 +232,7 @@ class CertificateImage
       else
         'hour_of_code_certificate.jpg'
       end
-    elsif ScriptConstants.unit_in_category?(:twenty_hour, course)
+    elsif Script.unit_in_category?('twenty_hour', course)
       '20hours_certificate.jpg'
     else
       'blank_certificate.png'

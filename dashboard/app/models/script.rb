@@ -806,6 +806,10 @@ class Script < ApplicationRecord
     name
   end
 
+  def self.unit_in_category?(category, script)
+    return Script.get_from_cache(script).course_version.course_offering.category == category
+  end
+
   # Legacy levels have different video and title logic in LevelsHelper.
   def legacy_curriculum?
     [
@@ -819,19 +823,19 @@ class Script < ApplicationRecord
   end
 
   def twenty_hour?
-    ScriptConstants.unit_in_category?(:twenty_hour, name)
+    Script.unit_in_category?('twenty_hour', name)
   end
 
   def hoc?
-    ScriptConstants.unit_in_category?(:hoc, name)
+    Script.unit_in_category?('hoc', name)
   end
 
   def flappy?
-    ScriptConstants.unit_in_category?(:flappy, name)
+    name === 'flappy'
   end
 
   def csf_international?
-    ScriptConstants.unit_in_category?(:csf_international, name)
+    Script.unit_in_category?('csf_international', name)
   end
 
   def self.unit_names_by_curriculum_umbrella(curriculum_umbrella)
