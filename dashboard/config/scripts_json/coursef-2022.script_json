@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2022-04-08 15:24:23 UTC",
+    "serialized_at": "2022-04-11 20:08:51 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -8289,7 +8289,7 @@
     },
     {
       "name": "Virtual Lesson Modifications",
-      "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/preview",
+      "url": "https://docs.google.com/document/d/10v_thWkO0aJNWsCFtv_bpVbiIy-meYs_vbUiHi-ZCH0/preview",
       "key": "virtual_lesson_modifications",
       "properties": {
       },
