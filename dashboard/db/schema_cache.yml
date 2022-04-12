@@ -27750,19 +27750,6 @@ indexes:
     comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: projects
-    name: storage_apps_project_type_index
-    unique: false
-    columns:
-    - project_type
-    lengths: {}
-    orders: {}
-    opclasses: {}
-    where: 
-    type: 
-    using: :btree
-    comment: 
-  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: projects
     name: storage_apps_published_at_index
     unique: false
     columns:
@@ -27781,6 +27768,19 @@ indexes:
     columns:
     - standalone
     lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: projects
+    name: storage_apps_project_type_index
+    unique: false
+    columns:
+    - project_type
+    lengths: 191
     orders: {}
     opclasses: {}
     where: 
@@ -29300,7 +29300,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20220407200052
+version: 20220408173143
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 5

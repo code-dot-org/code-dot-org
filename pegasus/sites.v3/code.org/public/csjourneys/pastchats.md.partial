@@ -126,8 +126,6 @@ social:
   <p>Learn about how solutions architect Olawale Oladehin is helping to build the Internet of Things - and hosting Twitch streams!</p>
 </div>
 
-<div style="clear: both"></div>
-
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   <a href="https://code.zoom.us/rec/play/kIvRYVMSbjTlS0R135aJipNeBxbg6Vv1taAVDeVb3IVoBXwRMZuQjhuRFa-VNSg5Wy8UVJF4fcZ15BFV.p4zxH_sHQW5GLwBU" target="_blank">
     <img src="/images/csjourneys/ilm-yt.png" style="max-width:100%" alt="Making Star Wars click to view">
@@ -135,6 +133,8 @@ social:
   <p>Hear how Cristiane Maia and Ini Oladosu use technology to help make movies and TV shows, including the many worlds of Star Wars.</p>
   <p><i>Due to legal constraints, we are only able to offer this recording on demand on Zoom. You will need to register using your name and email address to access.</i></p>
 </div>
+
+<div style="clear: both"></div>
 
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney4 }}
