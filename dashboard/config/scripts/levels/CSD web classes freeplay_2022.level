@@ -1,11 +1,7 @@
 <Weblab>
   <config><![CDATA[{
-  "game_id": 58,
-  "created_at": "2022-03-30T23:33:18.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
-    "long_instructions": "# Free Play\r\n\r\nUse your new knowledge to create a new page styled with classes.",
+    "long_instructions": "# Add CSS to your Personal Webpage\r\n\r\nUse your new knowledge to add to the Personal Web Page project you created in the Personal Webpage Project. The webpage you created for that lesson has been transferred below - add some CSS classes to your webpage!",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "parent_level_id": 23260,
@@ -25,14 +21,23 @@
     "map_reference": "/docs/concepts/css/classes/",
     "submittable": "false",
     "encrypted": "false",
-    "display_name": "Free Play",
+    "display_name": "Add to your Web Page!",
     "mini_rubric": "false",
-    "bubble_choice_description": "Make a web page using the new code.",
+    "bubble_choice_description": "Use your new knowledge to add to the Personal Web Page project you created",
     "start_sources": "{\r\n  \"files\": [\r\n    {\"name\": \"style.css\",\r\n     \"data\": \"\\r\\n\"\r\n     },\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html>\\r\\n<html>\\r\\n  <head>\\r\\n  <\\/head>\\r\\n  <body>\\r\\n    \\r\\n  <\\/body>\\r\\n<\\/html>\"\r\n    }\r\n  ]\r\n}",
-    "thumbnail_url": "https://images.code.org/43720c5e1c8367e30b7f1a2f8ef06af7-image-1562867963667.JPG"
+    "thumbnail_url": "https://images.code.org/43720c5e1c8367e30b7f1a2f8ef06af7-image-1562867963667.JPG",
+    "encrypted_examples": [
+
+    ],
+    "project_template_level_name": "CSD U2 Project Template_2022",
+    "validation_enabled": "false"
   },
+  "game_id": 58,
   "published": true,
+  "created_at": "2022-03-30T23:33:18.000Z",
+  "level_num": "custom",
+  "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-03-30T23:33:18.101+00:00\",\"changed\":[\"cloned from \\\"CSD web classes freeplay_2021\\\"\"],\"cloned_from\":\"CSD web classes freeplay_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-30T23:33:18.101+00:00\",\"changed\":[\"cloned from \\\"CSD web classes freeplay_2021\\\"\"],\"cloned_from\":\"CSD web classes freeplay_2021\"},{\"changed_at\":\"2022-04-08 20:43:09 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Weblab>

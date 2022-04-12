@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-05 13:48:30 UTC",
+    "serialized_at": "2022-04-10 16:16:06 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -72,7 +72,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "**How can I store multiple related values without creating multiple variables?**\n\nStudents have used variables to store literal values and references to objects. Software engineers often need to store multiple values of the same type in a program. In this lesson, students learn how to use one-dimensional (1D) arrays to store multiple values that can be referenced with one variable. Students practice creating arrays using the `new` keyword and with initializer lists and obtaining the size of the array.",
-        "preparation": "* Print copies of the Exploring 1D Arrays handout (one for each pair of students)",
+        "preparation": "* Print copies of the Unit 3 Guide (one for each student)\n* Print copies of the Exploring 1D Arrays handout (one for each pair of students)",
         "student_overview": "**How can I store multiple related values without creating multiple variables?**\n\nYou have used variables to store literal values and references to objects. Software engineers often need to store multiple values of the same type in a program. In this lesson, you learn how to use one-dimensional (1D) arrays to store multiple values that can be referenced with one variable. You practice creating arrays using the `new` keyword and with initializer lists and obtaining the size of the array."
       },
       "seeding_key": {
@@ -5100,6 +5100,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 3 Assessment 2022"
+        ],
         "progression": "Unit 3 Assessment"
       },
       "bonus": false,
