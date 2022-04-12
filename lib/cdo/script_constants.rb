@@ -339,7 +339,7 @@ module ScriptConstants
   ].freeze
 
   def self.unit_in_category?(category, script)
-    return CATEGORIES[category].include? script
+    return Script.get_from_cache(script).course_version.course_offering.category == category
   end
 
   def self.categories(script)
@@ -401,7 +401,7 @@ module ScriptConstants
 
   def self.has_congrats_page?(script)
     script == ACCELERATED_NAME ||
-      ScriptConstants.unit_in_category?(:csf_international, script) ||
+      Script.unit_in_category?('csf_international', script) ||
       CSF_COURSE_PATTERNS.map {|r| r =~ script}.any?
   end
 
