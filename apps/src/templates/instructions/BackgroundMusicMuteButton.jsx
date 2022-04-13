@@ -26,9 +26,16 @@ function BackgroundMusicMuteButton({isMinecraft, isBackgroundMusicMuted}) {
     updateMuteMusic(isBackgroundMusicMuted);
     cookies.set(MUTE_MUSIC, 'true', {expires: 30, path: '/'});
 
+    const labType = isMinecraft ? 'Minecraft' : 'Starwars';
+    const muteLabel = isBackgroundMusicMuted ? 'mute' : 'unmute';
+
     const record = {
       study: 'mute-music',
-      event: 'mute-toggle'
+      event: 'mute-toggle',
+      data_json: JSON.stringify({
+        labType: labType,
+        muteLabel: muteLabel
+      })
     };
     firehoseClient.putRecord(record);
   };

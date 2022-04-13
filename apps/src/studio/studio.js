@@ -2210,7 +2210,12 @@ Studio.init = function(config) {
     Studio.musicController.stop();
   };
 
+  Studio.startBackgroundMusic = function() {
+    Studio.musicController.play();
+  };
+
   studioApp().stopBackgroundMusic = this.stopBackgroundMusic.bind(this);
+  studioApp().startBackgroundMusic = this.startBackgroundMusic.bind(this);
 
   /**
    * Defines the set of possible movement sound effects for each playlab actor.
