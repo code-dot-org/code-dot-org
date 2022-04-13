@@ -45,6 +45,8 @@ class UnitEditor extends React.Component {
     i18nData: PropTypes.object.isRequired,
     initialPublishedState: PropTypes.oneOf(Object.values(PublishedState))
       .isRequired,
+    //Published state of units in a course can we set to be different than the course overall.
+    //We only use this field for units in a course
     initialUnitPublishedState: PropTypes.oneOf(Object.values(PublishedState)),
     initialInstructionType: PropTypes.oneOf(Object.values(InstructionType))
       .isRequired,
