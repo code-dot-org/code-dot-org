@@ -20,7 +20,6 @@ import EditSectionDialog from './EditSectionDialog';
 import {recordOpenEditSectionDetails} from './sectionHelpers';
 import experiments from '@cdo/apps/util/experiments';
 import {recordImpression} from './impressionHelpers';
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 
 class OwnedSections extends React.Component {
   static propTypes = {
@@ -31,7 +30,6 @@ class OwnedSections extends React.Component {
     studentSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     hiddenPlSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     hiddenStudentSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
-    asyncLoadComplete: PropTypes.bool.isRequired,
     beginEditingSection: PropTypes.func.isRequired
   };
 
@@ -79,14 +77,9 @@ class OwnedSections extends React.Component {
       isPlSections,
       studentSectionIds,
       hiddenPlSectionIds,
-      hiddenStudentSectionIds,
-      asyncLoadComplete
+      hiddenStudentSectionIds
     } = this.props;
     const {viewHidden} = this.state;
-
-    if (!asyncLoadComplete) {
-      return <Spinner size="large" style={styles.spinner} />;
-    }
 
     let sectionIds = isPlSections ? plSectionIds : studentSectionIds;
 
@@ -105,12 +98,11 @@ class OwnedSections extends React.Component {
       >
         {hasSections && (
           <div>
-            {visibleSectionIds.length > 0 && (
-              <OwnedSectionsTable
-                sectionIds={visibleSectionIds}
-                onEdit={this.onEditSection}
-              />
-            )}
+            <OwnedSectionsTable
+              isPlSections={isPlSections}
+              sectionIds={visibleSectionIds}
+              onEdit={this.onEditSection}
+            />
             <div style={styles.buttonContainer}>
               {hiddenSectionIds.length > 0 && (
                 <Button
@@ -136,6 +128,7 @@ class OwnedSections extends React.Component {
                   {i18n.archivedSectionsTeacherDescription()}
                 </div>
                 <OwnedSectionsTable
+                  isPlSections={isPlSections}
                   sectionIds={hiddenSectionIds}
                   onEdit={this.onEditSection}
                 />
@@ -172,9 +165,6 @@ const styles = {
     lineHeight: '22px',
     paddingBottom: 10,
     color: color.charcoal
-  },
-  spinner: {
-    marginTop: '10px'
   }
 };
 export const UnconnectedOwnedSections = OwnedSections;
@@ -184,8 +174,7 @@ export default connect(
     studentSectionIds: state.teacherSections.studentSectionIds,
     plSectionIds: state.teacherSections.plSectionIds,
     hiddenPlSectionIds: hiddenPlSectionIds(state),
-    hiddenStudentSectionIds: hiddenStudentSectionIds(state),
-    asyncLoadComplete: state.teacherSections.asyncLoadComplete
+    hiddenStudentSectionIds: hiddenStudentSectionIds(state)
   }),
   {
     beginEditingSection

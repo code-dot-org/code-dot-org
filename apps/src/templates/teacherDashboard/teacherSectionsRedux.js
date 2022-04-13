@@ -1161,6 +1161,7 @@ export function getSectionRows(state, sectionIds) {
       'loginType',
       'studentCount',
       'code',
+      'participantType',
       'grade',
       'providerManaged',
       'hidden'
