@@ -45,6 +45,26 @@ const hiddenSectionProps = {
   }
 };
 
+const newSectionProps = {
+  courseOfferings: courseOfferings,
+  section: {
+    id: -1,
+    name: '',
+    lessonExtras: true,
+    pairingAllowed: true,
+    ttsAutoplayEnabled: false,
+    loginType: 'word',
+    code: 'ikfs',
+    studentCount: 0,
+    providerManaged: false,
+    participantType: 'student',
+    unitId: null,
+    courseOfferingId: null,
+    courseVersionId: null,
+    courseId: null
+  }
+};
+
 describe('AssignmentSelector', () => {
   it('getCourseOfferingsByCategory gets the right course offerings for student', () => {
     let courseOfferingsByCategory = getCourseOfferingsByCategory(
@@ -119,9 +139,7 @@ describe('AssignmentSelector', () => {
   });
 
   it('defaults to just course offering dropdown with no selection when no section is provided', () => {
-    const wrapper = shallow(
-      <AssignmentSelector {...defaultProps} section={null} />
-    );
+    const wrapper = shallow(<AssignmentSelector {...newSectionProps} />);
     assert.equal(wrapper.find('select').length, 1);
     assert.equal(wrapper.find('select').value, undefined);
     assert.deepEqual(wrapper.instance().getSelectedAssignment(), {
@@ -132,9 +150,7 @@ describe('AssignmentSelector', () => {
   });
 
   it('unit dropdown defaults to first unit when picking new course offering and course version', () => {
-    const wrapper = shallow(
-      <AssignmentSelector {...defaultProps} section={null} />
-    );
+    const wrapper = shallow(<AssignmentSelector {...newSectionProps} />);
     wrapper
       .find('select')
       .at(0)

@@ -4,10 +4,7 @@ import _ from 'lodash';
 import i18n from '@cdo/locale';
 import {sectionShape, assignmentCourseOfferingShape} from './shapes';
 import AssignmentVersionSelector from './AssignmentVersionSelector';
-import {
-  CourseOfferingCategories,
-  ParticipantAudience
-} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {CourseOfferingCategories} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
 const noAssignment = '__noAssignment__';
 //Additional valid option in dropdown - no associated course
@@ -55,9 +52,7 @@ export default class AssignmentSelector extends Component {
     dropdownStyle: PropTypes.object,
     onChange: PropTypes.func,
     disabled: PropTypes.bool,
-    isNewSection: PropTypes.bool,
-    participantType: PropTypes.oneOf(Object.keys(ParticipantAudience))
-      .isRequired
+    isNewSection: PropTypes.bool
   };
 
   constructor(props) {
@@ -214,12 +209,7 @@ export default class AssignmentSelector extends Component {
   };
 
   render() {
-    const {
-      dropdownStyle,
-      disabled,
-      courseOfferings,
-      participantType
-    } = this.props;
+    const {dropdownStyle, disabled, courseOfferings, section} = this.props;
     const {
       selectedCourseOfferingId,
       selectedCourseVersionId,
@@ -228,7 +218,7 @@ export default class AssignmentSelector extends Component {
 
     const courseOfferingsByCategories = getCourseOfferingsByCategory(
       courseOfferings,
-      participantType
+      section.participantType
     );
 
     const selectedCourseOffering = courseOfferings[selectedCourseOfferingId];

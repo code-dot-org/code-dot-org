@@ -27,7 +27,6 @@ import {
   StudentGradeLevels
 } from '@cdo/apps/util/sharedConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
 /**
  * UI for editing section details: Name, grade, assigned course, etc.
@@ -37,8 +36,6 @@ class EditSectionForm extends Component {
     title: PropTypes.string.isRequired,
     //Whether the user is adding a brand new section or editing an existing one.
     isNewSection: PropTypes.bool,
-    participantType: PropTypes.oneOf(Object.keys(ParticipantAudience))
-      .isRequired,
 
     //Comes from redux
     initialUnitId: PropTypes.number,
@@ -138,7 +135,6 @@ class EditSectionForm extends Component {
       section,
       title,
       courseOfferings,
-      participantType,
       isSaveInProgress,
       editSectionProperties,
       handleClose,
@@ -215,7 +211,6 @@ class EditSectionForm extends Component {
             courseOfferings={courseOfferings}
             disabled={isSaveInProgress}
             isNewSection={isNewSection}
-            participantType={participantType}
           />
           {assignedUnitLessonExtrasAvailable && (
             <LessonExtrasField
@@ -374,8 +369,7 @@ const AssignmentField = ({
   onChange,
   courseOfferings,
   disabled,
-  isNewSection,
-  participantType
+  isNewSection
 }) => (
   <div>
     <FieldName>{i18n.course()}</FieldName>
@@ -387,7 +381,6 @@ const AssignmentField = ({
       dropdownStyle={style.dropdown}
       disabled={disabled}
       isNewSection={isNewSection}
-      participantType={participantType}
     />
   </div>
 );
@@ -396,8 +389,7 @@ AssignmentField.propTypes = {
   onChange: PropTypes.func.isRequired,
   courseOfferings: PropTypes.objectOf(assignmentCourseOfferingShape).isRequired,
   disabled: PropTypes.bool,
-  isNewSection: PropTypes.bool,
-  participantType: PropTypes.oneOf(Object.keys(ParticipantAudience)).isRequired
+  isNewSection: PropTypes.bool
 };
 
 const LessonExtrasField = ({value, onChange, disabled}) => (
