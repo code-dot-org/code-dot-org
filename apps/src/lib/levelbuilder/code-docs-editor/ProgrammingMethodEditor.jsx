@@ -12,18 +12,36 @@ import $ from 'jquery';
 import color from '@cdo/apps/util/color';
 
 function useProgrammingMethod(initialProgrammingMethod) {
-  const [programmingMethod, setProgrammingMethod] = useState(
-    initialProgrammingMethod
+  const initializeProgrammingMethod = programmingMethod => {
+    const copiedMethod = {...programmingMethod};
+    // We remove id and key from state as they should not be modified
+    delete copiedMethod.id;
+    delete copiedMethod.key;
+    if (copiedMethod.examples) {
+      copiedMethod.examples.forEach(e => (e.key = createUuid()));
+    }
+    if (copiedMethod.parameters) {
+      copiedMethod.parameters.forEach(p => (p.key = createUuid()));
+    }
+    return copiedMethod;
+  };
+
+  const [programmingMethod, setProgrammingMethod] = useState(() =>
+    initializeProgrammingMethod(initialProgrammingMethod)
   );
 
-  function setProgrammingMethodProperty(key, value) {
+  const setProgrammingMethodProperty = (key, value) => {
     setProgrammingMethod({...programmingMethod, [key]: value});
-  }
+  };
+
+  const resetProgrammingMethod = newProgrammingMethod => {
+    setProgrammingMethod(initializeProgrammingMethod(newProgrammingMethod));
+  };
 
   return [
     programmingMethod,
     setProgrammingMethodProperty,
-    setProgrammingMethod
+    resetProgrammingMethod
   ];
 }
 
@@ -36,19 +54,11 @@ function renderParameterEditor(parameter, updateFunc) {
 }
 
 export default function ProgrammingMethodEditor({initialProgrammingMethod}) {
-  // We don't want to update id or key
-  const {id, key, ...remainingProgrammingMethod} = initialProgrammingMethod;
-  if (remainingProgrammingMethod.examples) {
-    remainingProgrammingMethod.examples.forEach(e => (e.key = createUuid()));
-  }
-  if (remainingProgrammingMethod.parameters) {
-    remainingProgrammingMethod.parameters.forEach(p => (p.key = createUuid()));
-  }
   const [
     programmingMethod,
     setProgrammingMethodProperty,
-    setProgrammingMethod
-  ] = useProgrammingMethod(remainingProgrammingMethod);
+    resetProgrammingMethod
+  ] = useProgrammingMethod(initialProgrammingMethod);
   const [isSaving, setIsSaving] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
   const [error, setError] = useState(null);
@@ -58,7 +68,7 @@ export default function ProgrammingMethodEditor({initialProgrammingMethod}) {
       return;
     }
     setIsSaving(true);
-    fetch(`/programming_methods/${id}`, {
+    fetch(`/programming_methods/${initialProgrammingMethod.id}`, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json',
@@ -81,7 +91,7 @@ export default function ProgrammingMethodEditor({initialProgrammingMethod}) {
         } else {
           setLastUpdated(Date.now());
           setError(null);
-          setProgrammingMethod(json);
+          resetProgrammingMethod(json);
         }
       })
       .catch(error => {
@@ -111,7 +121,11 @@ export default function ProgrammingMethodEditor({initialProgrammingMethod}) {
       </label>
       <label>
         Key (Used in URLs)
-        <input value={key} readOnly style={styles.textInput} />
+        <input
+          value={initialProgrammingMethod.key}
+          readOnly
+          style={styles.textInput}
+        />
       </label>
       <CollapsibleEditorSection title="Documentation" collapsed>
         <label>
