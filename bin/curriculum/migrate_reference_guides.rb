@@ -33,10 +33,11 @@ require_rails_env
 
 # course_name: 'csp-2022'
 def migrate_course_reference_guides(course_name)
-  course_version_id = UnitGroup.find_by_name(course_name).course_version.id
+  unit_group = UnitGroup.find_by_name(course_name)
+  course_version_id = unit_group.course_version.id
 
   # if we need to handle pilots, add alternate_unit_groups
-  levels = UnitGroup.find_by_name(course_name).default_units.flat_map(&:all_descendant_levels)
+  levels = unit_group.default_units.flat_map(&:all_descendant_levels)
 
   levels.each do |level|
     # help and tips
@@ -53,10 +54,11 @@ def migrate_course_reference_guides(course_name)
 end
 
 def unmigrate_course_reference_guides(course_name)
-  course_version_id = UnitGroup.find_by_name(course_name).course_version.id
+  unit_group = UnitGroup.find_by_name(course_name)
+  course_version_id = unit_group.course_version.id
 
   # if we need to handle pilots, add alternate_unit_groups
-  levels = UnitGroup.find_by_name(course_name).default_units.flat_map(&:all_descendant_levels)
+  levels = unit_group.default_units.flat_map(&:all_descendant_levels)
 
   levels.each do |level|
     # help and tips
@@ -94,7 +96,7 @@ def convert_concept_map_url_to_ref_guide_url(url, course_name, course_version_id
   new_url
 end
 
-# doesn't perfectly uncovert, can't tell if there's an index.html at the end
+# doesn't perfectly unconvert, can't tell if there's an index.html at the end
 def convert_ref_guide_url_to_concept_map_url(url, course_version_id)
   return url unless url&.start_with? '/courses'
   key = /^\/courses\/.+\/guides\/(.+)/.match(url)[1]
