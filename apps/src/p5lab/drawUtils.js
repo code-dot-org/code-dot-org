@@ -68,8 +68,8 @@ export function speechBubble(
   const minX = x - width / 2;
   const minY = y - height - tailSize;
   const maxY = y - tailSize;
-  const tailMidX = (tailTipX + (minX + width / 2)) / 2;
-  const tailBottomX = (tailTipX + tailMidX) / 2;
+  const tailTopX = (tailTipX + (minX + width / 2)) / 2;
+  const tailBottomX = (tailTipX + tailTopX) / 2;
 
   p5.push();
   p5.stroke(stroke);
@@ -79,10 +79,7 @@ export function speechBubble(
     case 'think':
       // Thought bubbles have more-rounded corners, and trailing bubbles.
       p5.rect(minX, minY, width, height, padding * 3);
-      p5.stroke(fill);
-      p5.ellipse(tailMidX, maxY, tailSize);
-      p5.stroke(stroke);
-      p5.arc(tailMidX, maxY, tailSize, tailSize, 0, 180);
+      p5.ellipse(tailTopX, maxY, tailSize);
       p5.ellipse(tailBottomX, maxY + tailSize, tailSize / 2);
       break;
     case 'say':
