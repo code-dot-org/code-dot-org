@@ -31,13 +31,19 @@ end
 
 require_rails_env
 
+# get course version and associated levels from either a unit group or standalone script
+def find_matching_course_version_and_levels(course_name)
+  matching_unit_group = UnitGroup.find_by_name(course_name)
+  # if we need to handle pilots, add alternate_unit_groups
+  return [matching_unit_group.course_version.id, matching_unit_group.default_units.flat_map(&:all_descendant_levels)] if matching_unit_group
+  matching_standalone_course = Script.find_by_name(course_name)
+  return [matching_standalone_course.course_version.id, matching_standalone_course.all_descendant_levels] if matching_standalone_course&.is_course
+  return [nil, nil]
+end
+
 # course_name: 'csp-2022'
 def migrate_course_reference_guides(course_name)
-  unit_group = UnitGroup.find_by_name(course_name)
-  course_version_id = unit_group.course_version.id
-
-  # if we need to handle pilots, add alternate_unit_groups
-  levels = unit_group.default_units.flat_map(&:all_descendant_levels)
+  course_version_id, levels = find_matching_course_version_and_levels(course_name)
 
   levels.each do |level|
     # help and tips
@@ -54,11 +60,7 @@ def migrate_course_reference_guides(course_name)
 end
 
 def unmigrate_course_reference_guides(course_name)
-  unit_group = UnitGroup.find_by_name(course_name)
-  course_version_id = unit_group.course_version.id
-
-  # if we need to handle pilots, add alternate_unit_groups
-  levels = unit_group.default_units.flat_map(&:all_descendant_levels)
+  course_version_id, levels = find_matching_course_version_and_levels(course_name)
 
   levels.each do |level|
     # help and tips
