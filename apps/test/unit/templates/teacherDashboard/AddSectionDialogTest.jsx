@@ -32,7 +32,7 @@ describe('AddSectionDialog', () => {
         ttsAutoplayEnabled: false,
         sharingDisabled: false,
         studentCount: 0,
-        audience: null,
+        participantType: null,
         code: '',
         courseId: null,
         courseOfferingId: null,
@@ -51,11 +51,6 @@ describe('AddSectionDialog', () => {
     };
   });
 
-  it('when available participant types has a length of 1 - audience is set to that participant type', () => {
-    shallow(<AddSectionDialog {...defaultProps} />);
-    expect(setParticipantType).to.have.been.calledWith('student');
-  });
-
   it('if login type is set but audience has not shows audience picker', () => {
     let sectionWithLoginType = _.cloneDeep(defaultProps.section);
     sectionWithLoginType.loginType = 'word';
@@ -69,13 +64,13 @@ describe('AddSectionDialog', () => {
     );
     expect(wrapper.find('LoginTypePicker').length).to.equal(0);
     expect(wrapper.find('ParticipantTypePicker').length).to.equal(1);
-    expect(wrapper.find('EditSectionForm').length).to.equal(0);
+    expect(wrapper.find('Connect(EditSectionForm)').length).to.equal(0);
   });
 
   it('once login type and audience are set EditSectionForm shows', () => {
     let sectionWithLoginAndParticipantType = _.cloneDeep(defaultProps.section);
     sectionWithLoginAndParticipantType.loginType = 'word';
-    sectionWithLoginAndParticipantType.audience = 'student';
+    sectionWithLoginAndParticipantType.participantType = 'student';
 
     const wrapper = shallow(
       <AddSectionDialog
@@ -85,6 +80,6 @@ describe('AddSectionDialog', () => {
     );
     expect(wrapper.find('LoginTypePicker').length).to.equal(0);
     expect(wrapper.find('ParticipantTypePicker').length).to.equal(0);
-    expect(wrapper.find('EditSectionForm').length).to.equal(1);
+    expect(wrapper.find('Connect(EditSectionForm)').length).to.equal(1);
   });
 });
