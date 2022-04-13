@@ -1,5 +1,5 @@
 import React from 'react';
-import {FormGroup} from 'react-bootstrap';
+import {Button, FormGroup} from 'react-bootstrap';
 
 export default function PetitionForm() {
   return (
@@ -46,6 +46,9 @@ export default function PetitionForm() {
               )}
             </select>
           </div>
+          <Button bsStyle="primary" key="submit" id="submit" type="submit">
+            I agree
+          </Button>
         </FormGroup>
       </form>
     </>
