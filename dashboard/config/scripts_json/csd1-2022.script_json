@@ -4,6 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "Supports to Teach CS Discoveries",
+          "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
+          "link": "https://code.org/educate/professional-development-online",
+          "type": "information",
+          "visibility": "Teacher-only"
+        }
+      ],
       "curriculum_umbrella": "CSD",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -18,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-11 16:55:40 UTC",
+    "serialized_at": "2022-04-12 20:46:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5260,6 +5269,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD Student End of Unit Survey - Unit 1_2022"
+        ],
         "progression": "End-of-Unit Survey"
       },
       "bonus": false,
@@ -5282,6 +5294,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U1Ch2_2022"
+        ],
         "progression": "Old Reflection (Delete Later)"
       },
       "bonus": false,
@@ -5579,6 +5594,39 @@
   ],
   "resources": [
     {
+      "name": "All Resources",
+      "url": "/s/csd1-2022/resources",
+      "key": "all_resources_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_5"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csd1-2022/standards",
+      "key": "all_standards_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_5"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csd1-2022/vocab",
+      "key": "all_vocabulary_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_5"
+      }
+    },
+    {
       "name": "Aluminum Boats",
       "url": "https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit",
       "key": "aluminum_boats",
@@ -5792,11 +5840,9 @@
     },
     {
       "name": "CSD Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview",
+      "url": "https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview",
       "key": "csd_curriculum_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csd_curriculum_guide"
@@ -5804,11 +5850,9 @@
     },
     {
       "name": "CSD Implementation Guide",
-      "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
+      "url": "https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview",
       "key": "csd_implementation_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csd_implementation_guide"
@@ -6201,39 +6245,6 @@
       },
       "seeding_key": {
         "resource.key": "the_problem_solving_process_1"
-      }
-    },
-    {
-      "name": "Unit 1 Resources",
-      "url": "/s/csd1-2021/resources",
-      "key": "unit_1_resources",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "unit_1_resources"
-      }
-    },
-    {
-      "name": "Unit 1 Standards",
-      "url": "/s/csd1-2021/standards",
-      "key": "unit_1_standards",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "unit_1_standards"
-      }
-    },
-    {
-      "name": "Unit 1 Vocabulary",
-      "url": "/s/csd1-2021/vocab",
-      "key": "unit_1_vocabulary",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "unit_1_vocabulary"
       }
     },
     {
@@ -6649,6 +6660,24 @@
   "scripts_resources": [
     {
       "seeding_key": {
+        "resource.key": "all_resources_5",
+        "script.name": "csd1-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_5",
+        "script.name": "csd1-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_5",
+        "script.name": "csd1-2022"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "csd_curriculum_guide",
         "script.name": "csd1-2022"
       }
@@ -6662,24 +6691,6 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
-        "script.name": "csd1-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "unit_1_resources",
-        "script.name": "csd1-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "unit_1_standards",
-        "script.name": "csd1-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "unit_1_vocabulary",
         "script.name": "csd1-2022"
       }
     }
