@@ -5,6 +5,7 @@ import {
   MICROBIT_PID,
   MICROBIT_VID
 } from '../portScanning';
+import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
 
 export const BOARD_TYPE = {
   CLASSIC: 'classic',
@@ -18,17 +19,8 @@ export const BOARD_TYPE = {
 export function detectBoardTypeFromPort(port) {
   let boardType = BOARD_TYPE.OTHER;
   if (port) {
-    let vendorId;
-    let productId;
-    if (isWebSerialPort(port)) {
-      // WebSerial ports have a getInfo function
-      const portInfo = port.getInfo();
-      vendorId = portInfo.usbVendorId;
-      productId = portInfo.usbProductId;
-    } else {
-      vendorId = parseInt(port.vendorId, 16);
-      productId = parseInt(port.productId, 16);
-    }
+    let vendorId = port.vendorId;
+    let productId = port.productId;
     if (vendorId === ADAFRUIT_VID && productId === CIRCUIT_PLAYGROUND_PID) {
       boardType = BOARD_TYPE.CLASSIC;
     } else if (
@@ -47,8 +39,7 @@ export function detectBoardTypeFromPort(port) {
  * Determines whether the serial port is WebSerial Port. Otherwise, port is assumed to be Node SerialPort.
  */
 export function isWebSerialPort(port) {
-  // The WebSerial API includes a getInfo function on the port. This function is not present for Node SerialPort.
-  return port && !!port.getInfo;
+  return port instanceof WebSerialPortWrapper;
 }
 
 /** @const {number} serial port transfer rate */
