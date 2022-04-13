@@ -1,8 +1,18 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import color from '@cdo/apps/util/color';
+import {Link} from '@dsco_/link';
 
 export default function MethodNameEditor({method, updateMethod}) {
+  const editLink = (
+    <>
+      Go to{' '}
+      <Link href={`/programming_methods/${method.id}/edit`} openInNewTab>
+        the method's edit page
+      </Link>{' '}
+      to edit.
+    </>
+  );
   return (
     <div>
       <label>
@@ -13,6 +23,7 @@ export default function MethodNameEditor({method, updateMethod}) {
           style={styles.textInput}
         />
       </label>
+      <div>{method.id ? editLink : 'Save page to generate edit link.'}</div>
     </div>
   );
 }
