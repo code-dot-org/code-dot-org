@@ -9,7 +9,6 @@ import {
   UnconnectedOwnedSectionsTable as OwnedSectionsTable,
   sectionLinkFormatter,
   courseLinkFormatter,
-  gradeFormatter,
   loginInfoFormatter,
   studentsFormatter,
   COLUMNS
@@ -327,16 +326,6 @@ describe('OwnedSectionsTable', () => {
       const loginCol = shallow(loginInfoFormatter(null, {rowData}));
       const link = loginCol.prop('href');
       assert.equal(link, '/teacher_dashboard/sections/2/login_info');
-    });
-
-    it('gradeFormatter has grade text', () => {
-      const rowData = sectionRowData[0];
-      const gradeCol = shallow(gradeFormatter(null, {rowData}));
-      const text = gradeCol
-        .find('div')
-        .at(0)
-        .text();
-      assert.equal('5', text);
     });
 
     it('courseLinkFormatter provides links to course information and section information', () => {

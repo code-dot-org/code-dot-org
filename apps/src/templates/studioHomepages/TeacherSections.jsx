@@ -6,6 +6,7 @@ import ContentContainer from '../ContentContainer';
 import OwnedSections from '../teacherDashboard/OwnedSections';
 import {asyncLoadSectionData} from '../teacherDashboard/teacherSectionsRedux';
 import SetUpSections from './SetUpSections';
+import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 
 class TeacherSections extends Component {
   static propTypes = {
@@ -24,16 +25,22 @@ class TeacherSections extends Component {
     const hasSections =
       this.props.studentSectionIds?.length > 0 ||
       this.props.plSectionIds?.length > 0;
+
     return (
       <div id="classroom-sections">
-        {this.props.asyncLoadComplete && (
-          <ContentContainer heading={i18n.createSection()}>
+        <ContentContainer heading={i18n.createSection()}>
+          {this.props.asyncLoadComplete && (
             <SetUpSections hasSections={hasSections} />
+          )}
+          {!this.props.asyncLoadComplete && (
+            <Spinner size="large" style={styles.spinner} />
+          )}
+        </ContentContainer>
+        {this.props.studentSectionIds?.length > 0 && (
+          <ContentContainer heading={i18n.sectionsTitle()}>
+            <OwnedSections />
           </ContentContainer>
         )}
-        <ContentContainer heading={i18n.sectionsTitle()}>
-          <OwnedSections />
-        </ContentContainer>
         {this.props.plSectionIds?.length > 0 && (
           <ContentContainer heading={i18n.plSectionsTitle()}>
             <OwnedSections isPlSections={true} />
@@ -54,3 +61,9 @@ export default connect(
     asyncLoadSectionData
   }
 )(TeacherSections);
+
+const styles = {
+  spinner: {
+    marginTop: '10px'
+  }
+};
