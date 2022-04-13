@@ -6,19 +6,6 @@ import FieldsTable from './FieldsTable';
 import i18n from '@cdo/locale';
 
 export default function ProgrammingClassOverview({programmingClass}) {
-  const getColor = () => {
-    const color = programmingClass.color;
-    if (!color) {
-      return null;
-    }
-    // Spritelab passes down its color in HSL format, whereas other labs use hex color
-    if (typeof color === 'string') {
-      return color;
-    } else {
-      return `hsl(${color[0]},${color[1] * 100}%, ${color[2] * 100}%)`;
-    }
-  };
-
   return (
     <div style={{width: '100%'}}>
       <h1>{programmingClass.name}</h1>
@@ -27,7 +14,7 @@ export default function ProgrammingClassOverview({programmingClass}) {
           <strong>{`${i18n.category()}:`}</strong>
           <span
             style={{
-              backgroundColor: getColor(),
+              backgroundColor: programmingClass.color,
               marginLeft: 10,
               padding: '5px 10px'
             }}
