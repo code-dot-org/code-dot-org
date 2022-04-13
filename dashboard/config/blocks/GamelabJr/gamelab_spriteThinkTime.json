@@ -1,8 +1,8 @@
 {
   "category": "Sprites",
   "config": {
-    "func": "spriteSayTime",
-    "blockText": "{SPRITE}say{TEXT1}for{NUM}seconds",
+    "func": "spriteThinkTime",
+    "blockText": "{SPRITE}think{TEXT1}for{NUM}seconds",
     "args": [
       {
         "name": "SPRITE",
