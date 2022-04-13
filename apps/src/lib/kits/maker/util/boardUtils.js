@@ -50,3 +50,6 @@ export function isWebSerialPort(port) {
   // The WebSerial API includes a getInfo function on the port. This function is not present for Node SerialPort.
   return port && !!port.getInfo;
 }
+
+/** @const {number} serial port transfer rate */
+export const SERIAL_BAUD = 57600;
