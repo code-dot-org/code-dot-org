@@ -2,10 +2,14 @@ import {EventEmitter} from 'events';
 import {SERIAL_BAUD} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 
 export default class WebSerialPortWrapper extends EventEmitter {
-  constructor() {
+  constructor(port) {
     super();
-    this.port = null;
+    this.port = port;
     this.portOpen = false;
+
+    const portInfo = port.getInfo();
+    this.vendorId = portInfo.usbVendorId;
+    this.productId = portInfo.usbProductId;
   }
 
   // Return a list of available ports
@@ -15,12 +19,11 @@ export default class WebSerialPortWrapper extends EventEmitter {
 
   // Opens and returns a connection to the serial port referenced by the path. Returned port can
   // used to read and write.
-  async open(port) {
+  async open() {
     if (this.portOpen) {
       throw new Error(`Requested port is already open.`);
     }
-    this.port = port;
-    await port.open({baudRate: SERIAL_BAUD});
+    await this.port.open({baudRate: SERIAL_BAUD});
     this.portOpen = true;
   }
 }

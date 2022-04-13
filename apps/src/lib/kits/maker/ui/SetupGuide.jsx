@@ -29,6 +29,7 @@ import {
   MICROBIT_PID,
   MICROBIT_VID
 } from '../portScanning';
+import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
 
 const DOWNLOAD_PREFIX = 'https://downloads.code.org/maker/';
 const WINDOWS = 'windows';
@@ -89,7 +90,10 @@ export default class SetupGuide extends React.Component {
       );
     }
 
-    this.setupChecker = new SetupChecker(webSerialPort);
+    let wrappedPort = webSerialPort
+      ? new WebSerialPortWrapper(webSerialPort)
+      : null;
+    this.setupChecker = new SetupChecker(wrappedPort);
 
     if (isCodeOrgBrowser() || isChromeOS() || isWebSerial) {
       return <SetupChecklist setupChecker={this.setupChecker} />;
