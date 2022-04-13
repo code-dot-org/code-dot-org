@@ -2,6 +2,7 @@ class ProgrammingMethodsController < ApplicationController
   load_and_authorize_resource
 
   def edit
+    @overload_options = @programming_method.programming_class.programming_methods.select {|m| m.overloaded_by.blank? && m.id != @programming_method.id}.map {|m| {key: m.key, name: m.name}}
   end
 
   def update
@@ -25,6 +26,7 @@ class ProgrammingMethodsController < ApplicationController
       :content,
       :syntax,
       :tips,
+      :overloaded_by,
       examples: [:name, :description, :code, :app, :image, :app_display_type, :embed_app_with_code_height],
       parameters: [:name, :type, :required, :description]
     )

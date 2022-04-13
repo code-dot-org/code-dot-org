@@ -30,6 +30,7 @@ class ProgrammingMethod < ApplicationRecord
   before_validation :generate_key, on: :create
   validates_uniqueness_of :key, scope: :programming_class_id, case_sensitive: false
   validate :validate_key_format
+  validate :validate_overload
 
   def generate_key
     return key if key
@@ -61,7 +62,9 @@ class ProgrammingMethod < ApplicationRecord
       parameters: parsed_parameters,
       examples: parsed_examples,
       syntax: syntax,
-      external_link: external_link
+      externalLink: external_link,
+      canHaveOverload: !programming_class.programming_methods.any? {|m| m.overloaded_by == key},
+      overloadedBy: overloaded_by
     }
   end
 
@@ -73,5 +76,17 @@ class ProgrammingMethod < ApplicationRecord
 
   def parsed_examples
     examples.blank? ? [] : JSON.parse(examples)
+  end
+
+  def validate_overload
+    # No overload is always valid
+    return true unless overloaded_by
+    # Can't overload self
+    return false if overloaded_by == key
+    overload = ProgrammingMethod.find_by(programming_class_id: programming_class_id, key: overloaded_by)
+    return false unless overload
+    # To avoid a cycle, the method pointed to cannot point to another method
+    return false unless overload.overloaded_by.blank?
+    return true
   end
 end
