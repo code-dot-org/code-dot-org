@@ -31,7 +31,10 @@ class _TableWrapper extends React.Component {
         }}
       >
         <SectionProgressToggle />
-        <ProgressTableView currentView={this.props.currentView} />
+        <ProgressTableView
+          currentView={this.props.currentView}
+          scriptData={{}}
+        />
       </div>
     );
   }
