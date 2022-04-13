@@ -1,16 +1,21 @@
 import React, {useRef, useState} from 'react';
+import './codeReviewStyles.scss';
 
 const TextAreaWithCodeButton = () => {
   const textArea = useRef(null);
   const [isCodeMode, setIsCodeMode] = useState(false);
+
+  // TODO
+  // 1. Ability to add a code block - not only to the end
+  // 2. Create a placeholder, there's an article here: https://answerly.io/blog/add-a-placeholder-to-a-contenteditable-div-with-css/#:~:text=But%20when%20we're%20building,to%20start%20writing%20some%20code!
+  // 3. Typing ``` takes you in and out of code mode and hides ```
 
   const onClickCodeToggle = () => {
     if (isCodeMode) {
       textArea.current.innerHTML = textArea.current.innerHTML + '<br/>';
       setIsCodeMode(false);
     } else {
-      const codeBlock =
-        '<br/><div style="background:#e7e8ea; font-family: monospace;">&nbsp;</div>';
+      const codeBlock = '<br/><div class="text-area-code"></div>';
       textArea.current.innerHTML = textArea.current.innerHTML + codeBlock;
       setIsCodeMode(true);
     }
@@ -28,12 +33,28 @@ const TextAreaWithCodeButton = () => {
     selection.addRange(range);
   };
 
+  const onClickTextArea = e => {
+    setIsCodeMode(e.target.classList.contains('text-area-code'));
+  };
+
+  const onSubmit = () => {
+    console.log(textArea.current.innerHTML);
+  };
+
   return (
     <div style={styles.wrapper}>
       <button type="button" onClick={onClickCodeToggle}>
         Code Toggle
       </button>
-      <div contentEditable="true" ref={textArea} style={styles.editor}>
+      <button type="button" onClick={onSubmit}>
+        Submit
+      </button>
+      <div
+        contentEditable="true"
+        ref={textArea}
+        style={styles.editor}
+        onClick={onClickTextArea}
+      >
         With button
       </div>
     </div>
