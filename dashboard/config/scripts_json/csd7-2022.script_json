@@ -4,6 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "Supports to Teach AI and Machine Learning",
+          "details": "If you are interested in teaching this course, we recommend completing the free AI and Machine Learning Self Paced Professional Learning module. The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.",
+          "link": "https://studio.code.org/s/self-paced-pl-csd5-2021",
+          "type": "information",
+          "visibility": "Teacher-only"
+        }
+      ],
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -17,7 +26,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-07 23:46:25 UTC",
+    "serialized_at": "2022-04-12 23:34:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -796,19 +805,6 @@
       }
     },
     {
-      "key": "2f72cf77-eb74-4fcc-a75f-63a40c7cb8ab",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "2f72cf77-eb74-4fcc-a75f-63a40c7cb8ab",
-        "lesson.key": "Classification Models",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd7-2022"
-      }
-    },
-    {
       "key": "61f7872e-28fa-4031-a325-c067b40dd315",
       "position": 1,
       "properties": {
@@ -955,18 +951,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "ca6de9ec-3d29-4715-91ab-b194642f4890",
-        "lesson.key": "Model Cards",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd7-2022"
-      }
-    },
-    {
-      "key": "a6d5aa83-2ad9-4f64-a15e-6bd14301c5db",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "a6d5aa83-2ad9-4f64-a15e-6bd14301c5db",
         "lesson.key": "Model Cards",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd7-2022"
@@ -1357,18 +1341,6 @@
       }
     },
     {
-      "key": "2e1d94dc-73b0-472c-8dd3-a8162d998278",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "2e1d94dc-73b0-472c-8dd3-a8162d998278",
-        "lesson.key": "Mini-Project: Make a Machine Learning App",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd7-2022"
-      }
-    },
-    {
       "key": "1fea0616-f2de-4f97-b0d1-9849df75414d",
       "position": 1,
       "properties": {
@@ -1570,19 +1542,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "7af9f631-6538-41b1-a8e8-b4aa192e4244",
-        "lesson.key": "Troubleshooting Models",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd7-2022"
-      }
-    },
-    {
-      "key": "8e0bf95d-1a5e-4677-82bf-a8d38f54dd0f",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "8e0bf95d-1a5e-4677-82bf-a8d38f54dd0f",
         "lesson.key": "Troubleshooting Models",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd7-2022"
@@ -3421,23 +3380,12 @@
       "key": "5a99a50f-2c76-4914-a466-2e8c07b1156b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _If you were to break down what we did today into steps for a computer to follow, how would you describe those steps?_\n\n**Discussion Goal:** This prompt bridges today’s lesson to tomorrow’s, where a computer will be doing most of this work behind-the-scenes. Read through student responses to see how well they understood the process of today. Answers could be as simple as:\n\n- Graph the data\n- Draw a line to separate the data into zones\n- When new data comes, see which zone it lands in to make a decision",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _If you were to break down the process we went through today to create a model and use it into steps for a computer to follow, how would you describe those steps?_\n\n**Discussion Goal:** This prompt bridges today’s lesson to tomorrow’s, where a computer will be doing most of this work behind-the-scenes. Read through student responses to see how well they understood the process of today. Answers could be as simple as:\n\n- Graph the data\n- Draw a line to separate the data into zones\n- When new data comes, see which zone it lands in to make a decision",
         "name": "Journal\r"
       },
       "seeding_key": {
         "activity_section.key": "5a99a50f-2c76-4914-a466-2e8c07b1156b",
         "lesson_activity.key": "9e7449d4-b399-44e8-8042-369659e49fac"
-      }
-    },
-    {
-      "key": "6f05b8fe-fef2-4e75-99ed-68abe573e4d6",
-      "position": 1,
-      "properties": {
-        "description": "Find a typo? Were some of the directions unclear? Have a suggestion for how to improve the flow of this lesson? **We'd love to hear it!** Please use the links below to provide feedback on this lesson.\n\n- [**Report a Typo / Bug / Unclear Directions**](https://support.code.org/hc/en-us/requests/new?description=Typo%20in%20AI%20Unit%20lesson%205%20studio.code.org/s/aiml-2021/lessons/5)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLScn0GnenXYbUilTul8PIlcOUpnoqr-s7IB0RLyyk4TQcgatXA/viewform)"
-      },
-      "seeding_key": {
-        "activity_section.key": "6f05b8fe-fef2-4e75-99ed-68abe573e4d6",
-        "lesson_activity.key": "2f72cf77-eb74-4fcc-a75f-63a40c7cb8ab"
       }
     },
     {
@@ -3592,7 +3540,7 @@
       "key": "5f3fc63f-1b69-4c63-9503-69acceb95d5f",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the [r introduction_to_ai_lab/csd/2022] (5:25) video as a class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the  (5:25) video as a class.\n[r introduction_to_ai_lab_1/csd/2022]",
         "tips": [
           {
             "type": "teachingTip",
@@ -3625,7 +3573,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Widget Fluency:** For now, focus on helping students become fluent with AI Lab by making sure they can click columns and buttons, focus on appropriate panels, and navigate between screens. Students can also get help by reading the instructions, which update with each panel, or using the Help and Tips section to read help documents or re-watch the video.\n\n**Iterating on Features:** Students should remain in this same level and not press the Continue button until told to do so. This represents how students will typically use AI Lab with more complex datasets - training multiple models in the same level and comparing accuracy, rather than training a model just once and continuing."
+            "markdown": "**Widget Fluency:** For now, focus on helping students become fluent with AI Lab by making sure they can click columns and buttons, focus on appropriate panels, and navigate between screens. Students can also get help by reading the instructions, which update with each panel, or using the Help and Tips section to read help documents or re-watch the video.\n\n**Iterating on Features:** Students should remain in this same level and not press the Continue button until told to do so. This represents how students will typically use AI Lab with more complex datasets - training multiple models in the same level and comparing accuracy, rather than training a model just once and continuing.\n\n**Do We Really Need AI For This?** No - probably not for this particular problem. However, this exercise helps students become fluent with the flow of AI Lab while still cross-referencing with a visual dataset to confirm their understanding. This exercise also surfaces some important problems that will be important throughout the unit, such as when too much conflicting data can confuse AI Bot and lower accuracy or when AI Bot _thinks_ it knows something with high accuracy but with features that are not practical in the real-world."
           }
         ]
       },
@@ -3638,7 +3586,7 @@
       "key": "812574f8-99f1-4fd6-92dd-4af47a78efb7",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _This model is trained only on colors and is 90% accurate. What would happen if we tried to use this model in the real-world? Do you think it would be just as accurate?\n_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _This model is trained only on colors and is 90% accurate. What would happen if we tried to use this model in the real-world? Do you think it would be just as accurate?_"
       },
       "seeding_key": {
         "activity_section.key": "812574f8-99f1-4fd6-92dd-4af47a78efb7",
@@ -4384,7 +4332,13 @@
       "key": "42bd5517-9551-4ce8-a01e-6f9af21d8a48",
       "position": 18,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Have students turn to the back of their activity guide and display the slides with the overview:\n\n_Even though we discovered bias in our original model, there is still a need to help nurses and medical professionals in the ER. Several other companies have created medical priority models that can be used to replace the biased one that we discovered. They’ve also sent along the Model Cards for us to evaluate. Looking at these model cards, can we find a model that we would recommend to the hospital to help decide medical priority?_\n\n**Do This:** Have students continue to Levels 3-5 in Code Studio. Each level has a model card that students can evaluate. Students should progress through each level independently, evaluating each model card and recording their recommendation on their activity guide."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Have students turn to the back of their activity guide and display the slides with the overview:\n\n_Even though we discovered bias in our original model, there is still a need to help nurses and medical professionals in the ER. Several other companies have created medical priority models that can be used to replace the biased one that we discovered. They’ve also sent along the Model Cards for us to evaluate. Looking at these model cards, can we find a model that we would recommend to the hospital to help decide medical priority?_\n\n**Do This:** Have students continue to Levels 3-5 in Code Studio. Each level has a model card that students can evaluate. Students should progress through each level independently, evaluating each model card and recording their recommendation on their activity guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Stations:** Instead of having students examine the model cards in Code Studio, you could consider creating a stations activity where each model card is printed around the room. Students would still complete the activity guide, but can choose which model card to examine and move around the room while doing so."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "42bd5517-9551-4ce8-a01e-6f9af21d8a48",
@@ -4417,7 +4371,13 @@
       "key": "1bc3d3fb-c8f4-432c-99b3-1524c9d35a97",
       "position": 21,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Out:** Have students share their recommendations for each model. Encourage students to talk to each other and provide different justifications as to why a model should or shouldn't be recommended. Let students know there is a spot on the bottom of the activity guide to reflect, and they have permission to change their minds based on what they hear from their peers."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Out:** Have students share their recommendations for each model. Encourage students to talk to each other and provide different justifications as to why a model should or shouldn't be recommended. Let students know there is a spot on the bottom of the activity guide to reflect, and they have permission to change their minds based on what they hear from their peers.",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**Real-World Connection:** These example model cards are exaggerated for pedagogical purposes, but similar phenomena can bee seen in this article: [Hundreds of AI tools have been built to catch covid. None of them helped](https://www.technologyreview.com/2021/07/30/1030329/machine-learning-ai-failed-covid-hospital-diagnosis-pandemic). A few relevant quotes from the article are:\n\n- \"Many unwittingly used a data set that contained chest scans of children who did not have covid as their examples of what non-covid cases looked like. But as a result, the AIs learned to identify kids, not covid.\"\n- \"In yet other cases, some AIs were found to be picking up on the text font that certain hospitals used to label the scans. As a result, fonts from hospitals with more serious caseloads became predictors of covid risk.\"\n\nAs an extension of this lesson, you may choose to share this article with students. However, the article is not intended for a middle-school audience, so additional scaffolds and supports may be necessary to support student understanding and connecting back to today's lesson."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "1bc3d3fb-c8f4-432c-99b3-1524c9d35a97",
@@ -4428,7 +4388,7 @@
       "key": "f4ad1985-2f50-4053-88a6-c35c42660390",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _After listening to the explanations from other students in your class, did you change your mind about any of your recommendations above? Why or why not?_\n\nThis prompt is provided on the bottom of the activity guide that students were using in class. Students can respond based on the class discussion that occurred. It's okay for students to not change their minds, especially if they noticed several of the flaws in the models above while completing the activity.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _If you could offer guidance to these companies training machine learning models, what advice would you give them to help create useful and unbiased machine learning models?_\n\nThis prompt is provided on the bottom of the activity guide that students were using in class. Students should reflect on the reasons why these models weren't great fits for the hospitals and translate that into advice. Some suggestions might include:\n- Avoid demographic information in your model to help avoid bias\n- Make sure the data represents the community that will be using the model\n- Make sure enough data is collected to ensure it is accurate",
         "name": "Journal\r",
         "tips": [
           {
@@ -4440,18 +4400,6 @@
       "seeding_key": {
         "activity_section.key": "f4ad1985-2f50-4053-88a6-c35c42660390",
         "lesson_activity.key": "ca6de9ec-3d29-4715-91ab-b194642f4890"
-      }
-    },
-    {
-      "key": "2de72799-4c5d-4f80-be3c-4345df2af845",
-      "position": 1,
-      "properties": {
-        "description": "Find a typo? Were some of the directions unclear? Have a suggestion for how to improve the flow of this lesson? **We'd love to hear it!** Please use the links below to provide feedback on this lesson.\n\n- [**Report a Typo / Bug / Unclear Directions**](https://support.code.org/hc/en-us/requests/new?description=Typo%20in%20AI%20Unit%20lesson%208%20studio.code.org/s/aiml-2021/lessons/8)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSdNKtz6dqsiOK8eM5IVN675CyjW7dOX4dgU1CLttyCgqVwZOA/viewform?usp=sf_link)",
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "activity_section.key": "2de72799-4c5d-4f80-be3c-4345df2af845",
-        "lesson_activity.key": "a6d5aa83-2ad9-4f64-a15e-6bd14301c5db"
       }
     },
     {
@@ -4563,7 +4511,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Selecting a Label:** This is the first time students can choose the label for their model. The process is identical to selecting features, but be aware that some students may be initially surprised by this extra step in the process.  Students can access a resource in the Help and Tips section of Code Studio that explains how to select a label in AI Lab\n\n**Revisiting Past Screens:** Let students know it’s okay to go back and revisit past screens to improve their model or make different decisions - this is an important part of the process and something students should practice in this level. Students may find themselves starting to move fluently between the testing, feature, and label screens as they refine and improve their machine learning model.\n\n**Level 2 - Where Are The Tables?** In level 2, students predict the type of animal that they are looking at (like mammal, reptile, etc). This column has too many possible values, and so many data visualization tables won't appear. This is intentional, since it challenges students to use feature iteration and the Previous Results screens intentionally to find features that work. They need to trust that, if there are patterns in the data, AI Bot will find them and produce an accurate model even when there's too much data to visualize. This also prepares students for more realistic examples where there are typically more than 4 or 5 values for a feature."
+            "markdown": "**Selecting a Label:** This is the first time students can choose the label for their model. The process is identical to selecting features, but be aware that some students may be initially surprised by this extra step in the process.  Students can access a resource in the Help and Tips section of Code Studio that explains how to select a label in AI Lab\n\n**Revisiting Past Screens:** Let students know it’s okay to go back and revisit past screens to improve their model or make different decisions - this is an important part of the process and something students should practice in this level. Students may find themselves starting to move fluently between the testing, feature, and label screens as they refine and improve their machine learning model.\n\n**Level 2 - Where Are The Tables?** In level 2, students predict the type of animal that they are looking at (like mammal, reptile, etc). This column has too many possible values, and so many data visualization tables won't appear. This is intentional, since it challenges students to use feature iteration and the Previous Results screens intentionally to find features that work. They need to trust that, if there are patterns in the data, AI Bot will find them and produce an accurate model even when there's too much data to visualize. This also prepares students for more realistic examples where there are typically more than 4 or 5 values for a feature.\n\n**Accuracy and Data Representation**: Students may be able to discover some curious combinations that give 100% accuracy. This may be because the particular features they chose are not well represented in the dataset - for example, only 8 out of the 100 animals are considered Venomous. This could lead to inflated accuracy, especially if those animals are not well represented in the testing set. If you notice students training models like this, ask them to thoroughly test their models and compare the results to their real-world experiences to make sure the model matches reality. Remind them that just because a model has high accuracy on its testing data doesn't mean it will have high accuracy in the real world."
           }
         ]
       },
@@ -4605,7 +4553,13 @@
       "key": "8fb15f05-d003-4a04-8cf3-d5962e8ae1f9",
       "position": 8,
       "properties": {
-        "progression_name": "Importing Your Model"
+        "progression_name": "Importing Your Model",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Design Elements Off the Screen**:  Depending on the number of features that your students use in their model, some of their design elements may appear off of the screen. This tends to happen when using more than 6 features in a model.\n\nThis particular problem is addressed in later lessons, but if students encounter it here, there are two strategies you can use to help students fix this:\n\n**Strategy #1: Make New Elements.** Students can use design mode to drag out new elements to use in their app. They may also decide to move the elements to different screens to help make the app easier to use. After adding these new design mode elements, students will need to update their code to use the new elements as well.\n\n**Strategy #2: Reposition Elements.** Even though the elements are off the screen, you can use Design Mode to manually select them and re-position them so they are on the screen. This involves changing the y-position property to 0 so it is on the screen, and then re-arranging the element like you would normally."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "8fb15f05-d003-4a04-8cf3-d5962e8ae1f9",
@@ -5672,7 +5626,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**80% Accuracy:** Students may struggle to find a model that is at least 80% accurate. This is by design, so they can really experiment with which features to use in their model. One example that will satisfy these requirements is a model using the features [trees, overgrowthPercent, antelopes, temperature].\n\n**Order Matters:** Students may discover that the order they select their features can sometimes matter - for example, choosing \"peppers, fried chicken\" may end up with different accuracy than \"fried chicken, peppers\". This is not a vital topic for using AI Lab fluently, and happens more often in these early levels because of the smaller dataset sizes. If students ask, one way to think about it is that the first feature represents how AI Bot first tries to separate the data before continuing on to the other features. Therefore: the stronger the relationship is with the first feature you pick, the stronger the patterns AI Bot will find."
+            "markdown": "**80% Accuracy:** Students may struggle to find a model that is at least 80% accurate. This is by design, so they can really experiment with which features to use in their model. One example that will satisfy these requirements is a model using the features [trees, overgrowthPercent, antelopes, temperature].\n\n**Order Matters:** Students may discover that the order they select their features can sometimes matter - for example, choosing \"temperature, antelopes\" may end up with different accuracy than \"antelopes, temperature\". This is not a vital topic for using AI Lab fluently, and happens more often in these early levels because of the smaller dataset sizes. If students ask, one way to think about it is that the first feature represents how AI Bot first tries to separate the data before continuing on to the other features. Therefore: the stronger the relationship is with the first feature you pick, the stronger the patterns AI Bot will find."
           },
           {
             "type": "assessmentOpportunity",
@@ -5793,7 +5747,13 @@
       "key": "4322eab8-e9e7-4df5-a2bd-076c47737f1c",
       "position": 2,
       "properties": {
-        "progression_name": "Raspado Recommender"
+        "progression_name": "Raspado Recommender",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Design Elements Off the Screen**: This level prepares students for a situation they may encounter in their chapter project: having so many features that the design elements appear off the screen. This tends to happen when using more than 6 features in a model. If students encounter this in later levels, referring them back to this level can be useful to remind students how to problem-solve and rearrange the elements on the s creen."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4322eab8-e9e7-4df5-a2bd-076c47737f1c",
@@ -6210,7 +6170,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Design Elements Off the Screen**:  Depending on the number of features that your students use in their model, some of their design elements may appear off of the screen. This tends to happen when using more than 6 features in a model.\n\nThere are two strategies you can use to help students fix this:\n\n**Strategy #1: Make New Elements.** Students can use design mode to drag out new elements to use in their app. They may also decide to move the elements to different screens to help make the app easier to use. After adding these new design mode elements, students will need to update their code to use the new elements as well. Students can refer to [Lesson 13](../11), especially level 1, as an example of how to update their code to fix this problem.\n\n**Strategy #2: Reposition Elements.** Even though the elements are off the screen, you can use Design Mode to manually select them and re-position them so they are on the screen. This involves changing the y-position property to 0 so it is on the screen, and then re-arranging the element like you would normally."
+            "markdown": "**Design Elements Off the Screen**:  Depending on the number of features that your students use in their model, some of their design elements may appear off of the screen. This tends to happen when using more than 6 features in a model.\n\nThere are two strategies you can use to help students fix this:\n\n**Strategy #1: Make New Elements.** Students can use design mode to drag out new elements to use in their app. They may also decide to move the elements to different screens to help make the app easier to use. After adding these new design mode elements, students will need to update their code to use the new elements as well. Students can refer to [Lesson 13](../13), especially level 1, as an example of how to update their code to fix this problem.\n\n**Strategy #2: Reposition Elements.** Even though the elements are off the screen, you can use Design Mode to manually select them and re-position them so they are on the screen. This involves changing the y-position property to 0 so it is on the screen, and then re-arranging the element like you would normally."
           }
         ]
       },
@@ -6254,8 +6214,20 @@
       }
     },
     {
-      "key": "b436503e-9da5-42d9-b82b-ffd4344044ec",
+      "key": "ff053302-162f-4845-96d0-e9004d617308",
       "position": 2,
+      "properties": {
+        "description": "If this is the last lesson students will be completing in this unit, consider showing the [Why AI Matters](https://www.youtube.com/watch?v=dWRnCXbUDgA) video as the final act of this unit. This video acts as a call-to-action for students to stay informed and get involved in AI efforts in their life, especially since the field needs diverse perspectives (like those of your students!)",
+        "name": "(Optional) Why AI Matters"
+      },
+      "seeding_key": {
+        "activity_section.key": "ff053302-162f-4845-96d0-e9004d617308",
+        "lesson_activity.key": "8316a78e-a092-4d3c-8972-c622c27ca4ca"
+      }
+    },
+    {
+      "key": "b436503e-9da5-42d9-b82b-ffd4344044ec",
+      "position": 3,
       "properties": {
         "description": "Send students to Code Studio to complete their reflection on their attitudes toward computer science. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey. Some questions are the same as the pre-survey at the start of the unit, which can show student growth or changes in student attitudes towards computer science.",
         "name": "Reflection",
@@ -6264,18 +6236,6 @@
       "seeding_key": {
         "activity_section.key": "b436503e-9da5-42d9-b82b-ffd4344044ec",
         "lesson_activity.key": "8316a78e-a092-4d3c-8972-c622c27ca4ca"
-      }
-    },
-    {
-      "key": "b22cef9a-c3d2-497f-b2c9-5c410f11b5f7",
-      "position": 1,
-      "properties": {
-        "description": "Find a typo? Were some of the directions unclear? Have a suggestion for how to improve the flow of this lesson? **We'd love to hear it!** Please use the links below to provide feedback on this lesson.\n\n- [**Report a Typo / Bug / Unclear Directions**](https://support.code.org/hc/en-us/requests/new?description=Typo%20in%20AI%20Unit%20lesson%2015%20studio.code.org/s/aiml-2021/lessons/15)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfEyeKgI44PRh1cHQ7Jbfb_0o5i0i8vTaOCvoWQMCNyK8DMXw/viewform?usp=sf_link)",
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "activity_section.key": "b22cef9a-c3d2-497f-b2c9-5c410f11b5f7",
-        "lesson_activity.key": "2e1d94dc-73b0-472c-8dd3-a8162d998278"
       }
     },
     {
@@ -6866,7 +6826,13 @@
       "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Send students to Code Studio. In the first level, they will click a link to make a copy of a Google Form. Students will need their own Google Account to create a copy of the form.",
-        "progression_name": "Create a Google Form"
+        "progression_name": "Create a Google Form",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Creating a Copy:** Students need to create a copy of this form. Unlike other Google documents, students cannot make a copy while viewing the form directly and requesting access to the form won't allow them to make a copy. Instead, students need to click the specific link on the Code Studio page to be prompted to make their own copy of the form."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "247783a6-f9ee-44e8-9954-6a58a7017c4b",
@@ -7531,7 +7497,7 @@
       "key": "24a2399c-35b3-4651-be99-972a14d5531a",
       "position": 13,
       "properties": {
-        "description": "One strategy Isaac could try is to look back at his initial brainstorm ideas and see if there are any other apps he might be able to make that could still address this issue. Even though Isaac may not be able to collect his own data, he may be able to use someone else’s data to help solve his problem.",
+        "description": "Since Isaac's initial plan didn't work out, one strategy he could try is to look back at his initial brainstorm ideas and see if there are any other apps he might be able to make that could still address this issue. Even though Isaac may not be able to collect his own data, he may be able to use someone else’s data to help solve his problem.",
         "remarks": true
       },
       "seeding_key": {
@@ -7555,7 +7521,7 @@
       "key": "707532a8-680b-4d3e-9d3f-61f5fd8360a3",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Isaac has found another dataset of student surveys that he thinks he can use to create the Loneliness Score app from his brainstorm. Choose one of the datasets to investigate and see if you can create an accurate model to predict how lonely someone might be."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Isaac has found some additional student survey datasets from a public website that he thinks he can use to create the Loneliness Score app from his brainstorm. Isaac has already selected \"Loneliness\" as the label, but each dataset has different features he could choose from (like music or movies). Choose one of the datasets to investigate and see if you can create an accurate model to predict how lonely someone might be."
       },
       "seeding_key": {
         "activity_section.key": "707532a8-680b-4d3e-9d3f-61f5fd8360a3",
@@ -7612,17 +7578,6 @@
       "seeding_key": {
         "activity_section.key": "f6c77a46-8086-4fb4-b2f7-d1fb83c2f7a7",
         "lesson_activity.key": "7af9f631-6538-41b1-a8e8-b4aa192e4244"
-      }
-    },
-    {
-      "key": "61c29b2a-034e-4d55-9e84-d7294a3d6bd3",
-      "position": 1,
-      "properties": {
-        "description": "Find a typo? Were some of the directions unclear? Have a suggestion for how to improve the flow of this lesson? **We'd love to hear it!** Please use the links below to provide feedback on this lesson.\n\n- [**Report a Typo / Bug / Unclear Directions**](https://support.code.org/hc/en-us/requests/new?description=Typo%20in%20AI%20Unit%20lesson%2019%20studio.code.org/s/aiml-2021/lessons/19)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSciGk-KmoV0NRCPLplbG9_r5k5Q4fZPd_15lRqtZFDdb47bCw/viewform?usp=sf_link)"
-      },
-      "seeding_key": {
-        "activity_section.key": "61c29b2a-034e-4d55-9e84-d7294a3d6bd3",
-        "lesson_activity.key": "8e0bf95d-1a5e-4677-82bf-a8d38f54dd0f"
       }
     },
     {
@@ -7719,7 +7674,13 @@
       "key": "bc909d4d-f7fd-4bc3-8caa-d366201d395f",
       "position": 5,
       "properties": {
-        "progression_name": "Customize Your App"
+        "progression_name": "Customize Your App",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Supporting Students:** These levels are similar to similar customizations students completed in previous lessons. If students get stuck, consider referring them to these previous lessons:\n- Adding multiple screens for each feature: [Lesson 13 - Customizing Apps](./../13/levels/2)\n- Adding multiple screens for the resulting prediction: [Lesson 10 - Model Cards in App Lab](./../10/levels/5)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "bc909d4d-f7fd-4bc3-8caa-d366201d395f",
@@ -10994,10 +10955,11 @@
     },
     {
       "name": "AI Code of Ethics",
-      "url": "https://docs.google.com/presentation/d/1jpT_cSs45ZwAz7NMYTn6vhefu3ImndFWfGubS_5wkGw/copy",
+      "url": "https://docs.google.com/presentation/d/1jpT_cSs45ZwAz7NMYTn6vhefu3ImndFWfGubS_5wkGw/template/preview",
       "key": "ai_code_of_ethics",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1jpT_cSs45ZwAz7NMYTn6vhefu3ImndFWfGubS_5wkGw/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11057,7 +11019,7 @@
     },
     {
       "name": "All Code",
-      "url": "/s/csd7-2021/code",
+      "url": "/s/csd7-2022/code",
       "key": "all_code_3",
       "properties": {
         "is_rollup": true
@@ -11068,7 +11030,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/csd7-2021/resources",
+      "url": "/s/csd7-2022/resources",
       "key": "all_resources_4",
       "properties": {
         "is_rollup": true
@@ -11079,7 +11041,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/csd7-2021/standards",
+      "url": "/s/csd7-2022/standards",
       "key": "all_standards_4",
       "properties": {
         "is_rollup": true
@@ -11090,7 +11052,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/csd7-2021/vocab",
+      "url": "/s/csd7-2022/vocab",
       "key": "all_vocabulary_4",
       "properties": {
         "is_rollup": true
@@ -11125,10 +11087,11 @@
     },
     {
       "name": "Classification Models",
-      "url": "https://docs.google.com/presentation/d/1f5PG9ASPlRlXNM7gBMOribyQaYpVAaVW9EXWjtrqk1c/copy",
+      "url": "https://docs.google.com/presentation/d/1f5PG9ASPlRlXNM7gBMOribyQaYpVAaVW9EXWjtrqk1c/template/preview",
       "key": "classification_models_1",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1f5PG9ASPlRlXNM7gBMOribyQaYpVAaVW9EXWjtrqk1c/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11150,7 +11113,7 @@
     },
     {
       "name": "Cleaning Survey Data",
-      "url": "https://www.youtube.com/watch?v=w8w-AosDcN8",
+      "url": "https://www.youtube.com/watch?v=NBTYgU71Jgw",
       "key": "cleaning_survey_data",
       "properties": {
         "audience": "Student",
@@ -11197,11 +11160,24 @@
       }
     },
     {
+      "name": "Creating a Survey in Google Forms",
+      "url": "https://www.youtube.com/watch?v=Ot6eXUYb3P0",
+      "key": "creating_a_survey_in_google_forms",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "creating_a_survey_in_google_forms"
+      }
+    },
+    {
       "name": "Creating an App",
-      "url": "https://docs.google.com/presentation/d/1D6EZitkNOVznhERKFHT1uD0DCVa8aOvengtVf2C2LDQ/copy",
+      "url": "https://docs.google.com/presentation/d/1D6EZitkNOVznhERKFHT1uD0DCVa8aOvengtVf2C2LDQ/template/preview",
       "key": "creating_an_app",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1D6EZitkNOVznhERKFHT1uD0DCVa8aOvengtVf2C2LDQ/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11210,11 +11186,9 @@
     },
     {
       "name": "CSD Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview",
+      "url": "https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview",
       "key": "csd_curriculum_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csd_curriculum_guide"
@@ -11242,11 +11216,9 @@
     },
     {
       "name": "CSD Implementation Guide",
-      "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
+      "url": "https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview",
       "key": "csd_implementation_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csd_implementation_guide"
@@ -11254,10 +11226,11 @@
     },
     {
       "name": "Customizing Apps",
-      "url": "https://docs.google.com/presentation/d/1EaYhIdYec-meNd2rrDnqrM76CYxNU54WDghIb0PCLks/copy",
+      "url": "https://docs.google.com/presentation/d/1EaYhIdYec-meNd2rrDnqrM76CYxNU54WDghIb0PCLks/template/preview",
       "key": "customizing_apps",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1EaYhIdYec-meNd2rrDnqrM76CYxNU54WDghIb0PCLks/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11266,10 +11239,11 @@
     },
     {
       "name": "Design an AI App",
-      "url": "https://docs.google.com/presentation/d/1VOiSzm2soXCy2PhOHfgxiuqmwtKJJrxGQ6xhJlwPfCY/copy",
+      "url": "https://docs.google.com/presentation/d/1VOiSzm2soXCy2PhOHfgxiuqmwtKJJrxGQ6xhJlwPfCY/template/preview",
       "key": "design_an_ai_app",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1VOiSzm2soXCy2PhOHfgxiuqmwtKJJrxGQ6xhJlwPfCY/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11347,7 +11321,7 @@
     },
     {
       "name": "Finding Patterns in Data",
-      "url": "https://www.youtube.com/watch?v=yTsspi6AQag",
+      "url": "https://www.youtube.com/watch?v=edFO0bdpoHY",
       "key": "finding_patterns_in_data",
       "properties": {
         "audience": "Student",
@@ -11396,10 +11370,11 @@
     },
     {
       "name": "Importing Models in App Lab",
-      "url": "https://docs.google.com/presentation/d/1gkngAaMoJdp-8q2S9zomxHukJcdChkxtC38EA4dWvc0/copy",
+      "url": "https://docs.google.com/presentation/d/1gkngAaMoJdp-8q2S9zomxHukJcdChkxtC38EA4dWvc0/template/preview",
       "key": "importing_models_in_app_lab",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1gkngAaMoJdp-8q2S9zomxHukJcdChkxtC38EA4dWvc0/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11408,10 +11383,11 @@
     },
     {
       "name": "Innovations in AI",
-      "url": "https://docs.google.com/presentation/d/1JqvABbuAj3LiCxZQw91KuesvIxlJdXxU5iOabI-FjrM/edit",
+      "url": "https://docs.google.com/presentation/d/1JqvABbuAj3LiCxZQw91KuesvIxlJdXxU5iOabI-FjrM/template/preview",
       "key": "innovations_in_ai",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1JqvABbuAj3LiCxZQw91KuesvIxlJdXxU5iOabI-FjrM/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11443,10 +11419,11 @@
     },
     {
       "name": "Introduction to AI Lab",
-      "url": "https://docs.google.com/presentation/d/1lxgUDjozD9CF0Nv5n9sWmdguEp3lFX9k90cN-NGQnms/copy",
+      "url": "https://docs.google.com/presentation/d/1lxgUDjozD9CF0Nv5n9sWmdguEp3lFX9k90cN-NGQnms/template/preview",
       "key": "introduction_to_ai_lab",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1lxgUDjozD9CF0Nv5n9sWmdguEp3lFX9k90cN-NGQnms/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11455,7 +11432,7 @@
     },
     {
       "name": "Introduction to AI Lab",
-      "url": "https://www.youtube.com/watch?v=bs3slynHTvc",
+      "url": "https://www.youtube.com/watch?v=bGJ05vdI3xA",
       "key": "introduction_to_ai_lab_1",
       "properties": {
         "audience": "Student",
@@ -11467,10 +11444,11 @@
     },
     {
       "name": "Introduction to Machine Learning",
-      "url": "https://docs.google.com/presentation/d/1uT4weLbovBliCfxnkCERfjXWlWWRAYiJQ7brwfYP22U/copy",
+      "url": "https://docs.google.com/presentation/d/1uT4weLbovBliCfxnkCERfjXWlWWRAYiJQ7brwfYP22U/template/preview",
       "key": "introduction_to_machine_learning",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1uT4weLbovBliCfxnkCERfjXWlWWRAYiJQ7brwfYP22U/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11490,10 +11468,11 @@
     },
     {
       "name": "Issue Statements",
-      "url": "https://docs.google.com/presentation/d/11vB9jz1WAIcz2NFEJNMrl5IT87DfVfEPWgTxHG2_7Z4/copy",
+      "url": "https://docs.google.com/presentation/d/11vB9jz1WAIcz2NFEJNMrl5IT87DfVfEPWgTxHG2_7Z4/template/preview",
       "key": "issue_statements",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/11vB9jz1WAIcz2NFEJNMrl5IT87DfVfEPWgTxHG2_7Z4/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11513,10 +11492,11 @@
     },
     {
       "name": "Make a Machine Learning App",
-      "url": "https://docs.google.com/presentation/d/1SDcwI7zrjM9G6H8ncufxiJXBZoozWk7SwvKl_GOMle4/copy",
+      "url": "https://docs.google.com/presentation/d/1SDcwI7zrjM9G6H8ncufxiJXBZoozWk7SwvKl_GOMle4/template/preview",
       "key": "make_a_machine_learning_app",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1SDcwI7zrjM9G6H8ncufxiJXBZoozWk7SwvKl_GOMle4/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11549,10 +11529,11 @@
     },
     {
       "name": "Model Cards",
-      "url": "https://docs.google.com/presentation/d/1KLPpUnpn_gu5KqS0S5rVAjr3pqv6kBSeZ3V7ngydz4E/copy",
+      "url": "https://docs.google.com/presentation/d/1gA1VmDOMUzEwsrPLOwZQm6wN3a1uUQozRDuPCTqQFhA/template/preview",
       "key": "model_cards",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1gA1VmDOMUzEwsrPLOwZQm6wN3a1uUQozRDuPCTqQFhA/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11561,7 +11542,7 @@
     },
     {
       "name": "Model Cards",
-      "url": "https://docs.google.com/document/d/1vdmL2UnG7KaMMenq5UsnsC4wbkuQZVP1OxVuT5WJvk0/edit#",
+      "url": "https://docs.google.com/document/d/1I_y5dKeUe-84ao5B5yKqnMXVskx96h-H4TijVqiPs3A/view",
       "key": "model_cards_1",
       "properties": {
         "audience": "Student",
@@ -11574,7 +11555,7 @@
     },
     {
       "name": "Model Cards in AI Lab",
-      "url": "https://www.youtube.com/watch?v=_iAGDFmZhYI",
+      "url": "https://www.youtube.com/watch?v=tz_ptkv0NxA",
       "key": "model_cards_in_ai_lab",
       "properties": {
         "audience": "Student",
@@ -11586,10 +11567,11 @@
     },
     {
       "name": "Model Cards in App Lab",
-      "url": "https://docs.google.com/presentation/d/1q_9LV_tmFEEqwCMuMo77heheFEyhATwMWYyVg6tn2HE/copy",
+      "url": "https://docs.google.com/presentation/d/1q_9LV_tmFEEqwCMuMo77heheFEyhATwMWYyVg6tn2HE/template/preview",
       "key": "model_cards_in_app_lab",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1q_9LV_tmFEEqwCMuMo77heheFEyhATwMWYyVg6tn2HE/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11611,10 +11593,11 @@
     },
     {
       "name": "Numerical Data in AI Lab",
-      "url": "https://docs.google.com/presentation/d/1lDwfSAfjllPGMuJgo7bJmrJWSUJsidsTLw4Tz67zfyQ/edit",
+      "url": "https://docs.google.com/presentation/d/1lDwfSAfjllPGMuJgo7bJmrJWSUJsidsTLw4Tz67zfyQ/template/preview",
       "key": "numerical_data_in_ai_lab",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1lDwfSAfjllPGMuJgo7bJmrJWSUJsidsTLw4Tz67zfyQ/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11636,7 +11619,7 @@
     },
     {
       "name": "Numerical Data in AI Lab",
-      "url": "https://www.youtube.com/watch?v=Po4i_EtpDWI",
+      "url": "https://www.youtube.com/watch?v=a4JH1D_D7s4",
       "key": "numerical_data_in_ai_lab_2",
       "properties": {
         "audience": "Student",
@@ -11648,10 +11631,11 @@
     },
     {
       "name": "Numerical Models",
-      "url": "https://docs.google.com/presentation/d/1lKn_IQjmALHkAS7B1iJzFfg5DXIexbgJQOhjJ2F0wpM/edit",
+      "url": "https://docs.google.com/presentation/d/1lKn_IQjmALHkAS7B1iJzFfg5DXIexbgJQOhjJ2F0wpM/template/preview",
       "key": "numerical_models",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1lKn_IQjmALHkAS7B1iJzFfg5DXIexbgJQOhjJ2F0wpM/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11672,10 +11656,11 @@
     },
     {
       "name": "Patterns in Data",
-      "url": "https://docs.google.com/presentation/d/1FabWi7tB1SI-YjqiPPfgU3Yljb3lJpoD1mFRmzUJiI8/copy",
+      "url": "https://docs.google.com/presentation/d/1FabWi7tB1SI-YjqiPPfgU3Yljb3lJpoD1mFRmzUJiI8/template/preview",
       "key": "patterns_in_data",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1FabWi7tB1SI-YjqiPPfgU3Yljb3lJpoD1mFRmzUJiI8/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11697,10 +11682,11 @@
     },
     {
       "name": "Saving Models in AI Lab",
-      "url": "https://docs.google.com/presentation/d/1M9dxiG9GmZfoYxe2QYE7nQs3vs9T1knh0qxA9tOTtf8/copy",
+      "url": "https://docs.google.com/presentation/d/1M9dxiG9GmZfoYxe2QYE7nQs3vs9T1knh0qxA9tOTtf8/template/preview",
       "key": "saving_models_in_ai_lab",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1M9dxiG9GmZfoYxe2QYE7nQs3vs9T1knh0qxA9tOTtf8/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11757,10 +11743,11 @@
     },
     {
       "name": "Survey Data in AI Lab",
-      "url": "https://docs.google.com/presentation/d/1DhTshRLCTnVkQHEkpThwedSXL5NEXKtjwATlQIJk33w/copy",
+      "url": "https://docs.google.com/presentation/d/1DhTshRLCTnVkQHEkpThwedSXL5NEXKtjwATlQIJk33w/template/preview",
       "key": "survey_data_in_ai_lab",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1DhTshRLCTnVkQHEkpThwedSXL5NEXKtjwATlQIJk33w/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11769,10 +11756,11 @@
     },
     {
       "name": "Survey Planning",
-      "url": "https://docs.google.com/presentation/d/1OOvhcw8TjjItSk8j40LauRLaKicLb2uNb-OCSs6fyX4/copy",
+      "url": "https://docs.google.com/presentation/d/1OOvhcw8TjjItSk8j40LauRLaKicLb2uNb-OCSs6fyX4/template/preview",
       "key": "survey_planning",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1OOvhcw8TjjItSk8j40LauRLaKicLb2uNb-OCSs6fyX4/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11817,7 +11805,7 @@
     },
     {
       "name": "Training and Testing in AI Lab",
-      "url": "https://www.youtube.com/watch?v=Pm70TO--ee4",
+      "url": "https://www.youtube.com/watch?v=HcCtdaiMWPQ",
       "key": "training_and_testing_in_ai_lab",
       "properties": {
         "audience": "Student",
@@ -11829,10 +11817,11 @@
     },
     {
       "name": "Troubleshooting Models",
-      "url": "https://docs.google.com/presentation/d/1LUkDD4PMefznEJh27EZruk6V8343JrYBpMZ3ThjmcLA/copy",
+      "url": "https://docs.google.com/presentation/d/1LUkDD4PMefznEJh27EZruk6V8343JrYBpMZ3ThjmcLA/template/preview",
       "key": "troubleshooting_models",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1LUkDD4PMefznEJh27EZruk6V8343JrYBpMZ3ThjmcLA/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11853,10 +11842,11 @@
     },
     {
       "name": "Types of Machine Learning",
-      "url": "https://docs.google.com/presentation/d/1FwOsAQW3y0eQ7NwdUitWwXbj74egitdSdrHGnSxXuOg/copy",
+      "url": "https://docs.google.com/presentation/d/1FwOsAQW3y0eQ7NwdUitWwXbj74egitdSdrHGnSxXuOg/template/preview",
       "key": "types_of_machine_learning",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1FwOsAQW3y0eQ7NwdUitWwXbj74egitdSdrHGnSxXuOg/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11914,7 +11904,7 @@
     },
     {
       "name": "View and Download Survey Data",
-      "url": "https://www.youtube.com/watch?v=J0Avopx7FpM",
+      "url": "https://www.youtube.com/watch?v=orn4dpcIiCk",
       "key": "view_and_download_survey_data",
       "properties": {
         "audience": "Student",
@@ -12400,6 +12390,12 @@
       "seeding_key": {
         "lesson.key": "Survey Planning",
         "resource.key": "creating_a_survey"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Survey Planning",
+        "resource.key": "creating_a_survey_in_google_forms"
       }
     },
     {

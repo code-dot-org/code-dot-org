@@ -3,22 +3,18 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-### <a href="https://levelbuilder-studio.code.org/s/vpl-csd2-ci-pilot-2022/lessons/1/levels/1" target="blank" rel="noopener noreferrer">Example Level</a> - remove when complete
-
 # Teaching The Design Process
 
-##### Welcome! This professional learning module is designed help you prepare to teach Code.org's _____ unit. 
-
-### Update picture to an image from the unit - delete these instructions. 
+##### Welcome! This professional learning module is designed help you prepare to teach Code.org's Design Unit unit. 
 
 <img src="https://images.code.org/9374a9a4d503ee081b175432b3194909-image-1649311354473.JPG" alt="Image of Bunny Hop Game Collecting Carrots" style="border-radius:0px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
 
 
 ## In this module, you will:
 
-* ##### Get an introduction to _______.
+* ##### Get an introduction to The Design Unit.
 * ##### Practice key concepts included in the unit.
-* ##### Engage with _______ Lab.
+* ##### Engage with App Lab.
 * ##### Explore end of chapter projects.
 
 
