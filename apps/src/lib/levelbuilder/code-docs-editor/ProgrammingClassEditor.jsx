@@ -13,15 +13,33 @@ import $ from 'jquery';
 import color from '@cdo/apps/util/color';
 
 function useProgrammingClass(initialProgrammingClass) {
-  const [programmingClass, setProgrammingClass] = useState(
-    initialProgrammingClass
+  const initializeProgrammingClass = programmingClass => {
+    const copiedClass = {...programmingClass};
+    // We remove id and key from state as they should not be modified
+    delete copiedClass.id;
+    delete copiedClass.key;
+    if (copiedClass.examples) {
+      copiedClass.examples.forEach(e => (e.key = createUuid()));
+    }
+    if (copiedClass.fields) {
+      copiedClass.fields.forEach(p => (p.key = createUuid()));
+    }
+    return copiedClass;
+  };
+
+  const [programmingClass, setProgrammingClass] = useState(() =>
+    initializeProgrammingClass(initialProgrammingClass)
   );
 
-  function updateProgrammingClass(key, value) {
+  const updateProgrammingClass = (key, value) => {
     setProgrammingClass({...programmingClass, [key]: value});
-  }
+  };
 
-  return [programmingClass, updateProgrammingClass, setProgrammingClass];
+  const resetProgrammingClass = newProgrammingClass => {
+    setProgrammingClass(initializeProgrammingClass(newProgrammingClass));
+  };
+
+  return [programmingClass, updateProgrammingClass, resetProgrammingClass];
 }
 
 function renderExampleEditor(example, updateFunc) {
@@ -40,15 +58,11 @@ export default function ProgrammingClassEditor({
   initialProgrammingClass,
   environmentCategories
 }) {
-  // We don't want to update id or key
-  const {id, key, ...remainingProgrammingClass} = initialProgrammingClass;
-  remainingProgrammingClass.examples.forEach(e => (e.key = createUuid()));
-  remainingProgrammingClass.fields.forEach(f => (f.key = createUuid()));
   const [
     programmingClass,
     updateProgrammingClass,
-    setProgrammingClass
-  ] = useProgrammingClass(remainingProgrammingClass);
+    resetProgrammingClass
+  ] = useProgrammingClass(initialProgrammingClass);
   const [isSaving, setIsSaving] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
   const [error, setError] = useState(null);
@@ -58,7 +72,7 @@ export default function ProgrammingClassEditor({
       return;
     }
     setIsSaving(true);
-    fetch(`/programming_classes/${id}`, {
+    fetch(`/programming_classes/${initialProgrammingClass.id}`, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json',
@@ -81,7 +95,7 @@ export default function ProgrammingClassEditor({
         } else {
           setLastUpdated(Date.now());
           setError(null);
-          setProgrammingClass(json);
+          resetProgrammingClass(json);
         }
       })
       .catch(error => {
@@ -96,7 +110,7 @@ export default function ProgrammingClassEditor({
 
   return (
     <div>
-      <h1>{`Editing Class "${key}"`}</h1>
+      <h1>{`Editing Class "${initialProgrammingClass.key}"`}</h1>
       <h2>
         This feature is in development. Please continue to use curriculum
         builder to edit code documentation.
@@ -111,7 +125,11 @@ export default function ProgrammingClassEditor({
       </label>
       <label>
         Key (Used in URLs)
-        <input value={key} readOnly style={styles.textInput} />
+        <input
+          value={initialProgrammingClass.key}
+          readOnly
+          style={styles.textInput}
+        />
       </label>
       <label>
         Category

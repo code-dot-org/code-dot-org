@@ -13,15 +13,29 @@ import $ from 'jquery';
 import color from '@cdo/apps/util/color';
 
 function useProgrammingExpression(initialProgrammingExpression) {
-  const [programmingExpression, setProgrammingExpression] = useState(
-    initialProgrammingExpression
+  const initializeProgrammingExpression = programmingExpression => {
+    const copiedExpression = {...programmingExpression};
+    // We remove id and key from state as they should not be modified
+    delete copiedExpression.id;
+    delete copiedExpression.key;
+    if (copiedExpression.examples) {
+      copiedExpression.examples.forEach(e => (e.key = createUuid()));
+    }
+    if (copiedExpression.parameters) {
+      copiedExpression.parameters.forEach(p => (p.key = createUuid()));
+    }
+    return copiedExpression;
+  };
+
+  const [programmingExpression, setProgrammingExpression] = useState(() =>
+    initializeProgrammingExpression(initialProgrammingExpression)
   );
 
-  function updateProgrammingExpression(key, value) {
+  const setProgrammingExpressionProperty = (key, value) => {
     setProgrammingExpression({...programmingExpression, [key]: value});
-  }
+  };
 
-  return [programmingExpression, updateProgrammingExpression];
+  return [programmingExpression, setProgrammingExpressionProperty];
 }
 
 function renderParameterEditor(param, updateFunc) {
@@ -47,21 +61,10 @@ export default function ProgrammingExpressionEditor({
   environmentCategories,
   videoOptions
 }) {
-  // We don't want to update id or key
-  const {
-    id,
-    key,
-    showPath,
-    ...remainingProgrammingExpression
-  } = initialProgrammingExpression;
-  remainingProgrammingExpression.parameters.forEach(
-    p => (p.key = createUuid())
-  );
-  remainingProgrammingExpression.examples.forEach(e => (e.key = createUuid()));
   const [
     programmingExpression,
     updateProgrammingExpression
-  ] = useProgrammingExpression(remainingProgrammingExpression);
+  ] = useProgrammingExpression(initialProgrammingExpression);
   const [isSaving, setIsSaving] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
   const [error, setError] = useState(null);
@@ -71,7 +74,7 @@ export default function ProgrammingExpressionEditor({
       return;
     }
     setIsSaving(true);
-    fetch(`/programming_expressions/${id}`, {
+    fetch(`/programming_expressions/${initialProgrammingExpression.id}`, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json',
@@ -83,7 +86,7 @@ export default function ProgrammingExpressionEditor({
         setIsSaving(false);
         if (response.ok) {
           if (shouldCloseAfterSave) {
-            navigateToHref(showPath);
+            navigateToHref(initialProgrammingExpression.showPath);
           } else {
             setLastUpdated(Date.now());
             setError(null);
@@ -104,7 +107,7 @@ export default function ProgrammingExpressionEditor({
 
   return (
     <div>
-      <h1>{`Editing ${key}`}</h1>
+      <h1>{`Editing ${initialProgrammingExpression.key}`}</h1>
       <h2>
         This feature is in development. Please continue to use curriculum
         builder to edit code documentation.
@@ -119,7 +122,11 @@ export default function ProgrammingExpressionEditor({
       </label>
       <label>
         Key (Used in URLs)
-        <input value={key} readOnly style={styles.textInput} />
+        <input
+          value={initialProgrammingExpression.key}
+          readOnly
+          style={styles.textInput}
+        />
       </label>
       <label>
         Category
@@ -268,7 +275,7 @@ export default function ProgrammingExpressionEditor({
         isSaving={isSaving}
         lastSaved={lastUpdated}
         error={error}
-        handleView={() => navigateToHref(showPath)}
+        handleView={() => navigateToHref(initialProgrammingExpression.showPath)}
       />
     </div>
   );
