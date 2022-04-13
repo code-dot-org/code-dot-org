@@ -664,10 +664,14 @@ describe('entry tests', () => {
       './src/sites/studio/pages/programming_expressions/new.js',
     'programming_expressions/edit':
       './src/sites/studio/pages/programming_expressions/edit.js',
+    'programming_methods/edit':
+      './src/sites/studio/pages/programming_methods/edit.js',
     'reference_guides/edit':
       './src/sites/studio/pages/reference_guides/edit.js',
     'reference_guides/edit_all':
       './src/sites/studio/pages/reference_guides/edit_all.js',
+    'programming_expressions/index':
+      './src/sites/studio/pages/programming_expressions/index.js',
     'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
     'scripts/new': './src/sites/studio/pages/scripts/new.js',
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',

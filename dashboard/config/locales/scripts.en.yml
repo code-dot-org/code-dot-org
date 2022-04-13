@@ -29682,11 +29682,12 @@ en:
           lesson_groups:
             csp_unit3_2020:
               display_name: 'Unit 3: Intro to App Design'
-          title: Intro to App Design ('21-'22)
+          title: Intro to App Design ('22-'23)
           description: This unit is an introduction to programming and app design with a heavy focus on important skills like debugging, pair programming, and user testing. Learn how to design user interfaces and write event-driven programs in App Lab and then design a project that teaches your classmates about a topic of your choosing.
           student_description: This unit is an introduction to programming and app design with a heavy focus on important skills like debugging, pair programming, and user testing. Learn how to design user interfaces and write event-driven programs in App Lab and then design a project that teaches your classmates about a topic of your choosing.
           description_short: Design your first app and learn how programmers collaborate and interact with users to build the best possible solutions to problems.
           description_audience: ''
+          name: csp3-2022
         csp4-2022:
           lessons:
             Variables Explore:
@@ -34537,6 +34538,8 @@ en:
               name: Code Your Fable
             lesson-3:
               name: Share Your Fable
+              description_student: 
+              description_teacher: 
             Hello World CSC:
               name: Hello World CSC
               description_student: In this lesson, you will learn to create and animate sprites and make them interactive using events.
@@ -34678,11 +34681,12 @@ en:
               display_name: 'Chapter 2: Computers and Problem Solving'
             csd1_3:
               display_name: Alternate Lessons
-          title: Problem Solving and Computing ('21-'22)
-          description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing. \n\n**Implementation Guidance for Unit 1**\n- Unit 1 Chapter 1 should be completed before any other unit in CS Discoveries\n- Alternate lessons are provided for some lessons in Unit 1, depending on your classroom context\n- You can view the full [Curriculum Guide](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) and [Implementation Guide](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview) for more information about this unit\n"
+          title: Problem Solving and Computing ('22-'23)
+          description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing. \n\n**Implementation Guidance for Problem Solving and Computing**\n- The first chapter of this unit should be completed before any other unit in CS Discoveries\n- Alternate lessons are provided for some lessons in this unit, depending on your classroom context\n- You can view the full [Curriculum Guide](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview) and [Implementation Guide](https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview) for more information about this unit\n"
           student_description: "Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.\r\n"
           description_short: "  Learn how humans work with computers to solve problems."
           description_audience: ''
+          name: csd1-2022
         csd2-2022:
           lessons:
             Exploring Web Pages:
@@ -34839,9 +34843,16 @@ en:
               display_name: 'Chapter 2: Multi-page Websites'
             cspSurvey:
               display_name: Survey
-          title: Web Development ('21-'22)
-          description: " In Unit 2, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.   \n\n**Implementation Guidance for Unit 2**\n- Complete Unit 1 Chapter 1 before starting this unit\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Debugging Guide](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview) and [Differentiation Guide](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)\n- You can view the full [Curriculum Guide](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) and [Implementation Guide](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview) for more information about this unit"
-          student_description: " In Unit 2, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.  "
+          title: Web Development ('22-'23)
+          description: |-
+            In Web Development, students are empowered to create and share content on their own web pages. They begin by thinking about the role of the web and how it can be used as a medium for creative expression. As students develop their pages and begin to see themselves as programmers, they are encouraged to think critically about the impact of sharing information online and how to be more critical consumers of content. They are also introduced to problem solving as it relates to programming while they learn valuable skills such as debugging, using resources, and teamwork. At the conclusion of the unit, students will have created a personal website they can publish and share.
+
+
+            **Implementation Guidance for Web Development**
+            - Complete the first three lessons of the Problem Solving and Computing unit before starting
+            - Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) and [Differentiation Guide](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)
+            - You can view the full [Curriculum Guide](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview) and [Implementation Guide](https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview) for more information about this unit
+          student_description: " In this unit, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.  "
           description_short: "  Learn to build your own web site in Web Lab."
           description_audience: ''
           name: csd2-2022
@@ -35063,18 +35074,18 @@ en:
               display_name: 'Chapter 2: Building Games'
             cspSurvey:
               display_name: Survey
-          title: Interactive Animations and Games ('21-'22)
-          description: |2-
-             In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program.
+          title: Interactive Animations and Games ('22-'23)
+          description: |-
+            In the Interactive Animations and Games unit, students create programmatic images, animations, interactive art, and games. Starting off with simple, primitive shapes and building up to more sophisticated sprite-based games, students become familiar with the programming concepts and the design process computer scientists use daily. They then learn how these simpler constructs can be combined to create more complex programs. In the final project, students develop a personalized, interactive program.
 
-            **Implementation Guidance for Unit 3**
-            - Complete Unit 1 Chapter 1 before starting this unit
-            - Chapter 1 of this unit is a pre-requisite for Unit 6
-            - Guidance for how to support students in programming levels and differentiate tasks are available in the [Debugging Guide](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview) and [Differentiation Guide](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)
-            - You can view the full [Curriculum Guide](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) and [Implementation Guide](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview) for more information about this unit
-          student_description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
+            **Implementation Guidance for Interactive Animations and Games**
+            - Complete the first three lessons of the Problem Solving and Computing unit before starting
+            - Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) and [Differentiation Guide](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)
+            - You can view the full [Curriculum Guide](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview) and [Implementation Guide](https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview) for more information about this unit
+          student_description: " In this unit, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
           description_short: " Learn to program animations, interactive art, and games in Game Lab."
           description_audience: ''
+          name: csd3-2022
         csd4-2022:
           lessons:
             Designing With Empathy:
@@ -35262,17 +35273,17 @@ en:
               display_name: 'Chapter 2: App Prototyping'
             cspSurvey:
               display_name: Survey
-          title: The Design Process ('21-'22)
+          title: The Design Process ('22-'23)
           description: |-
-            Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
+            The Design Process unit transitions students from thinking about computer science as a tool to solve their own problems towards considering the broader social impacts of computing. Through a series of design challenges, students are asked to consider and understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which students have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test their solutions with real users to get feedback and drive further iteration.
 
-            **Implementation Guidance for Unit 4**
-            - Complete Unit 1 Chapter 1 before starting this unit
-            - This unit is a pre-requisite for Unit 6 and Unit 7
-            - You can view the full [Curriculum Guide](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) and [Implementation Guide](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview) for more information about this unit
-          student_description: Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
+            **Implementation Guidance for The Design Process**
+            - Complete the first three lessons of the Problem Solving and Computing unit before starting
+            - You can view the full [Curriculum Guide](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview) and [Implementation Guide](https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview) for more information about this unit
+          student_description: This unit introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
           description_short: "  Learn how to design a program that meets the needs of your users."
           description_audience: ''
+          name: csd4-2022
         csd5-2022:
           lessons:
             Representation Matters:
@@ -35415,17 +35426,17 @@ en:
               display_name: 'Chapter 2: Solving Data Problems'
             cspSurvey:
               display_name: Survey
-          title: Data and Society ('21-'22)
+          title: Data and Society ('22-'23)
           description: |-
-            Unit 5 is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of your choosing.
+            The Data and Society unit is about the importance of using data to solve problems and it highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter, students learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. In the final project, students gather their own data and use it to develop an automated solution to a problem.
 
-            **Implementation Guidance for Unit 5**
-            - Complete Unit 1 Chapter 1 before starting this unit
-            - This unit could be swapped out with Unit 7 - see the [Implementation Guide](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview) for more information on this option
-            - You can view the full [Curriculum Guide](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) for more information about this unit
-          student_description: Unit 5 is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of your choosing.
+            **Implementation Guidance for Data and Society**
+            - Complete the first three lessons of the Problem Solving and Computing unit before starting
+            - You can view the full [Curriculum Guide](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview) and [Implementation Guide](https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview) for more information about this unit
+          student_description: This unit is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of your choosing.
           description_short: Learn how people use computers to solve data problems.
           description_audience: ''
+          name: csd5-2022
         csd7-2022:
           lessons:
             Introduction to Machine Learning:
@@ -35616,19 +35627,19 @@ en:
               display_name: Chapter 2 - Design a Machine Learning App
             lessonGroup-4:
               display_name: Survey
-          title: AI and Machine Learning
+          title: AI and Machine Learning ('22-'23)
           description: |-
-            Unit 7 is a hands-on introduction to developing a machine learning model with tabular data. Students explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.
+            This unit is a hands-on introduction to developing a machine learning model with tabular data. Students explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.
 
-            **Implementation guidance for Unit 7**
+            **Implementation guidance for the AI and Machine Learning Unit**
 
-            - Complete Unit 1 Chapter 1 before starting this unit
-            - This unit assumes students are familiar with App Lab, specifically using Design Mode to create a user interface and using Events to change the screen when clicking a button. [Click Here](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview) to learn more about recommendations for introducing students to App Lab before this unit.
-            - This is an optional unit that can be used in place of another CSD unit - see the [Implementation Guide](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview) for more information
-            - You can view the full [Curriculum Guide](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) for more information about this unit
+            - Complete the first three lessons of the Problem Solving and Computing unit before starting
+            - This unit assumes students are familiar with App Lab, specifically using Design Mode to create a user interface and using Events to change the screen when clicking a button. This can be accomplished by having students complete the [App Lab Hour of Code](https://studio.code.org/s/applab-intro/reset) before starting this unit.
+            - Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) and [Differentiation Guide](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)
+            - You can view the full [Curriculum Guide](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview) and [Implementation Guide](https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview) for more information about this unit
 
             **Professional Development:** If you are interested in teaching this course, we recommend completing the free [AI/ML Self-Paced Professional Development Module](https://studio.code.org/s/self-paced-pl-csd5-2021). The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.
-          student_description: Unit 7 is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop your own machine learning projects around real-world data. The unit culminates with designing your own machine learning app to solve a personally relevant problem.
+          student_description: This unit is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop your own machine learning projects around real-world data. The unit culminates with designing your own machine learning app to solve a personally relevant problem.
           description_short: ''
           description_audience: ''
           name: csd7-2022
@@ -35769,26 +35780,25 @@ en:
               description_teacher: 
           lesson_groups:
             lessonGroup-2:
-              display_name: Chapter 1
+              display_name: 'Chapter 1: Inputs and Outputs'
             lessonGroup-3:
-              display_name: Chapter 2
+              display_name: 'Chapter 2: Building Physical Prototypes'
             lessonGroup-4:
               display_name: Survey
           name: csd6-2022
-          title: Physical Computing
+          title: Physical Computing ('22-'23)
           description_audience: ''
           description_short: Learn to program with physical devices.
           description: |-
-            Unit 6 explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
+            In the Physical Computing unit, students explore the role of physical devices in computing. Using App Lab and Adafruit’s Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.
 
-            **Implementation Guidance for Unit 6**
-            - Complete Unit 1 Chapter 1 before starting this unit
-            - This unit assumes students have completed Unit 3 Chapter 1 and all of Unit 4. Students without this background may struggle in this unit.
+            **Implementation Guidance for Physical Computing**
+            - Complete the first three lessons of the Problem Solving and Computing unit before starting
+            - This unit assumes students are familiar with App Lab, specifically using Design Mode to create a user interface and using Events to change the screen when clicking a button. This can be accomplished by having students complete the [App Lab Hour of Code](https://studio.code.org/s/applab-intro/reset) before starting this unit.
             - This unit requires students to have access to Circuit Playground's - [click here](https://code.org/circuitplayground) for more information about using Circuit Playground's in your classroom
-            - This unit could be swapped out with Unit 7 - see the [Implementation Guide](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview) for more information on this option
-            - Guidance for how to support students in programming levels and differentiate tasks are available in the [Debugging Guide](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview) and [Differentiation Guide](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)
-            - You can view the full [Curriculum Guide](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) for more information about this unit
-          student_description: Unit 6 explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
+            - Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) and [Differentiation Guide](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)
+            - You can view the full [Curriculum Guide](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview) and [Implementation Guide](https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview) for more information about this unit
+          student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
         csd-post-survey-2022:
           lessons:
             Post-Course Survey:
