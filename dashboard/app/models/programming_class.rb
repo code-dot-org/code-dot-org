@@ -105,7 +105,7 @@ class ProgrammingClass < ApplicationRecord
       methods: programming_methods,
       tips: tips || '',
       syntax: syntax || '',
-      external_documentation: external_documentation || '',
+      externalDocumentation: external_documentation || '',
       categoryKey: programming_environment_category&.key || ''
     }
   end
@@ -120,7 +120,7 @@ class ProgrammingClass < ApplicationRecord
       fields: parsed_fields,
       tips: tips,
       syntax: syntax,
-      external_documentation: external_documentation,
+      externalDocumentation: external_documentation,
       categoryKey: programming_environment_category&.key || '',
       color: programming_environment_category&.color || '',
       category: programming_environment_category&.name || ''
