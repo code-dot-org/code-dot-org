@@ -11,73 +11,18 @@ module MultipleDatabasesTransitionHelper
     extend ActiveSupport::Concern
     class_methods do
       def use_reader_connection_for_route(route)
-        if MultipleDatabasesTransitionHelper.transitioned?
-          around_action :connect_to_reader, only: route
-        else
-          use_database_pool route => :persistent
-        end
-        around_action(:gatekeeper_controlled_reader_override, only: route)
-      end
-    end
-
-    def gatekeeper_controlled_reader_override
-      if Gatekeeper.allows('reader_connection_override', where: {route: action_name}, default: false)
-        MultipleDatabasesTransitionHelper.use_writer_connection do
-          yield
-        end
-      else
-        yield
+        around_action :connect_to_reader, only: route
       end
     end
 
     def connect_to_reader
-      ActiveRecord::Base.connected_to(role: :reading) do
+      if Gatekeeper.allows('reader_connection_override', where: {route: action_name}, default: false)
         yield
+      else
+        ActiveRecord::Base.connected_to(role: :reading) do
+          yield
+        end
       end
-    end
-  end
-
-  # Provide a new `use_writer_connection` method to replace our existing use of
-  # `use_master_connection` with the entirely-equivalent ActiveRecord
-  # implementation.
-  def self.use_writer_connection
-    if MultipleDatabasesTransitionHelper.transitioned?
-      ActiveRecord::Base.connected_to(role: :writing) do
-        yield
-      end
-    else
-      SeamlessDatabasePool.use_master_connection do
-        yield
-      end
-    end
-  end
-
-  # Provide a new `use_reader_connection` method to replace our existing use of
-  # `use_persistent_read_connection` with the entirely-equivalent ActiveRecord
-  # implementation.
-  def self.use_reader_connection
-    if MultipleDatabasesTransitionHelper.transitioned?
-      ActiveRecord::Base.connected_to(role: :reading) do
-        yield
-      end
-    else
-      SeamlessDatabasePool.use_persistent_read_connection do
-        yield
-      end
-    end
-  end
-
-  # Whether we are still on the old version (false, pre-transition) or the new
-  # version (true, post-transition). Hardcoded to the known versions for
-  # resiliency and narrow focus.
-  def self.transitioned?
-    case Rails.version
-    when "5.2.4.4"
-      false
-    when "6.0.4.1"
-      true
-    else
-      raise "unknown Rails version #{Rails.version.inspect}"
     end
   end
 

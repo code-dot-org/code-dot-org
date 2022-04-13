@@ -13,7 +13,7 @@ class AdminReportsController < ApplicationController
   end
 
   def level_answers
-    MultipleDatabasesTransitionHelper.use_reader_connection do
+    ActiveRecord::Base.connected_to(role: :reading) do
       @headers = ['Level ID', 'User Email', 'Data']
       @responses = {}
       @response_limit = 100
