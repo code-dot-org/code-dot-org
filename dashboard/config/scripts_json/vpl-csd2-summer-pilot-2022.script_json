@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-11 18:29:43 UTC",
+    "serialized_at": "2022-04-12 21:15:08 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2154,6 +2154,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-ProgessAndFeedback-vid"
+        ],
         "progression": "Progress and feedback tools"
       },
       "bonus": false,
@@ -2176,6 +2179,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-progress-c4u"
+        ],
         "progression": "Progress and feedback tools"
       },
       "bonus": false,
@@ -2198,6 +2204,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-feedback-c4u"
+        ],
         "progression": "Progress and feedback tools"
       },
       "bonus": false,
@@ -2220,6 +2229,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-Assessment-CSD-PILOT"
+        ],
         "progression": "Assessment in CS Discoveries"
       },
       "bonus": false,
@@ -2242,6 +2254,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-AssessmentPlan"
+        ],
         "progression": "Assessment in CS Discoveries"
       },
       "bonus": false,
@@ -2264,6 +2279,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod4-Task-Assessment"
+        ],
         "progression": "Assessment in CS Discoveries"
       },
       "bonus": false,
@@ -2278,6 +2296,111 @@
       },
       "level_keys": [
         "SP-VPL-21-mod4-Task-Assessment"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-SP-VPL-21-mod4-AssessmentPlan"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd2-summer-pilot-2022",
+        "activity_section.key": "3fc9fe88-f239-4480-abdd-f6c583f3d852"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-SP-VPL-21-mod4-AssessmentPlan"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-SP-access-overview"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd2-summer-pilot-2022",
+        "activity_section.key": "3fc9fe88-f239-4480-abdd-f6c583f3d852"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-SP-access-overview"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-SP-access-roleOfTheTeacher"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd2-summer-pilot-2022",
+        "activity_section.key": "3fc9fe88-f239-4480-abdd-f6c583f3d852"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-SP-access-roleOfTheTeacher"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-SP-VPL-21-mod4-Task-Assessment"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd2-summer-pilot-2022",
+        "activity_section.key": "3fc9fe88-f239-4480-abdd-f6c583f3d852"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-SP-VPL-21-mod4-Task-Assessment"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-SP-VPL-21-mod4-landscape of CS"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd2-summer-pilot-2022",
+        "activity_section.key": "3fc9fe88-f239-4480-abdd-f6c583f3d852"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-SP-VPL-21-mod4-landscape of CS"
       ]
     }
   ],
@@ -2736,6 +2859,66 @@
         "lesson_group.key": "lessonGroup-5",
         "script.name": "vpl-csd2-summer-pilot-2022",
         "activity_section.key": "74fdf792-cf24-447b-b2eb-e228c20899f9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-SP-VPL-21-mod4-AssessmentPlan",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-SP-VPL-21-mod4-AssessmentPlan"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd2-summer-pilot-2022",
+        "activity_section.key": "3fc9fe88-f239-4480-abdd-f6c583f3d852"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-SP-access-overview",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-SP-access-overview"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd2-summer-pilot-2022",
+        "activity_section.key": "3fc9fe88-f239-4480-abdd-f6c583f3d852"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-SP-access-roleOfTheTeacher",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-SP-access-roleOfTheTeacher"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd2-summer-pilot-2022",
+        "activity_section.key": "3fc9fe88-f239-4480-abdd-f6c583f3d852"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-SP-VPL-21-mod4-Task-Assessment",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-SP-VPL-21-mod4-Task-Assessment"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd2-summer-pilot-2022",
+        "activity_section.key": "3fc9fe88-f239-4480-abdd-f6c583f3d852"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-SP-VPL-21-mod4-landscape of CS",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-SP-VPL-21-mod4-landscape of CS"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd2-summer-pilot-2022",
+        "activity_section.key": "3fc9fe88-f239-4480-abdd-f6c583f3d852"
       }
     }
   ],
