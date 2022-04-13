@@ -314,7 +314,7 @@ class UnitEditor extends React.Component {
       description: this.state.description,
       student_description: this.state.studentDescription,
       announcements: JSON.stringify(this.state.announcements),
-      published_state: this.state.hasCourse
+      published_state: this.props.hasCourse
         ? this.state.unitPublishedState
         : this.state.publishedState,
       instruction_type: this.state.instructionType,

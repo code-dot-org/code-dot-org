@@ -1470,7 +1470,6 @@ class Script < ApplicationRecord
       studentDescription: Services::MarkdownPreprocessor.process(localized_student_description),
       course_id: unit_group.try(:id),
       publishedState: get_published_state,
-      unitPublishedState: unit_group ? published_state : nil,
       instructionType: get_instruction_type,
       instructorAudience: get_instructor_audience,
       participantAudience: get_participant_audience,
@@ -1558,6 +1557,8 @@ class Script < ApplicationRecord
     summary = summarize(include_lessons)
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_unit_edit)
     summary[:courseOfferingEditPath] = edit_course_offering_path(course_version.course_offering.key) if course_version
+    summary[:coursePublishedState] = unit_group ? unit_group.published_state : published_state
+    summary[:unitPublishedState] = unit_group ? published_state : nil
     summary
   end
 
