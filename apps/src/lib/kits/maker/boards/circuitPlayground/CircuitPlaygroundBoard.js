@@ -417,11 +417,11 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * @param {Object} port
    * @return {Promise<SerialPort>}
    */
-  static async openSerialPortWebSerial(port) {
-    await port.open();
-
-    this.createPendingQueue(port);
-    return port;
+  static openSerialPortWebSerial(port) {
+    return port.open().then(() => {
+      this.createPendingQueue(port);
+      return port;
+    });
   }
 
   // Creates a queue on the port to store pending buffers

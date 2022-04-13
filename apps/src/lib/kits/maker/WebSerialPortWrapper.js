@@ -17,13 +17,14 @@ export default class WebSerialPortWrapper extends EventEmitter {
     // TODO - not sure if this is used in Maker Toolkit yet
   }
 
-  // Opens and returns a connection to the serial port referenced by the path. Returned port can
-  // used to read and write.
-  async open() {
+  // Opens and returns a promise that resolves to a connection to the serial
+  // port. Returned port can used to read and write.
+  open() {
     if (this.portOpen) {
       throw new Error(`Requested port is already open.`);
     }
-    await this.port.open({baudRate: SERIAL_BAUD});
-    this.portOpen = true;
+    return this.port.open({baudRate: SERIAL_BAUD}).then(() => {
+      this.portOpen = true;
+    });
   }
 }
