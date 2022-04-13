@@ -122,21 +122,7 @@ describe('ProgrammingClassOverview', () => {
     );
   });
 
-  it('uses hsl color if array is provided for color', () => {
-    const wrapper = shallow(
-      <ProgrammingClassOverview
-        programmingClass={{
-          ...defaultProgrammingClass,
-          color: [355, '.7', '.7']
-        }}
-      />
-    );
-    expect(wrapper.find('span').props().style.backgroundColor).to.equal(
-      'hsl(355,70%, 70%)'
-    );
-  });
-
-  it('uses hex color if string is provided for color', () => {
+  it('uses color if color is provided', () => {
     const wrapper = shallow(
       <ProgrammingClassOverview
         programmingClass={{
