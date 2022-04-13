@@ -33,7 +33,7 @@ export default function ProgrammingClassOverview({programmingClass}) {
       )}
       {programmingClass.examples?.length > 0 && (
         <div>
-          <h2>Examples</h2>
+          <h2>{i18n.examples()}</h2>
           {programmingClass.examples.map((example, idx) => (
             <Example
               key={idx}
@@ -75,7 +75,7 @@ export default function ProgrammingClassOverview({programmingClass}) {
       )}
       {programmingClass.fields?.length > 0 && (
         <div>
-          <h2>Fields</h2>
+          <h2>{i18n.fields()}</h2>
           <FieldsTable fields={programmingClass.fields} />
         </div>
       )}
