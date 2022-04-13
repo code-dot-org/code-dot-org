@@ -111,10 +111,17 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     result = @section.add_student current_user
     # add_student returns 'failure' when id of current user is owner of @section
     if result == 'failure'
-      render json: {
-        result: 'section_owned'
-      }, status: :bad_request
-      return
+      if @section.user_id == current_user.id
+        render json: {
+          result: 'section_owned'
+        }, status: :bad_request
+        return
+      else
+        render json: {
+          result: 'cant_be_participant'
+        }, status: :forbidden
+        return
+      end
     end
     # add_student returns 'full' when @section has or will have 500 followers
     if result == 'full'
