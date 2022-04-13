@@ -56,8 +56,10 @@ social:
         <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Join Snap team members for an interactive session on the future of Augmented Reality (AR) through an in-depth look at Snap's Lens Studio and Spectacles.</div>
         <a class="linktag" id="snap-trip" href="https://snapchat.zoom.us/webinar/register/WN_vhLtZn_0Q1SO9TJhHgl6TA" target="_blank"><button>View details</button></a>
   </div>
+  </div>
+<p style="padding-left:15px; padding-right:15px"><i>As part of this CS Journeys experience, Snap is giving away a pair of Snap Spectacles to 25 registered classrooms! (Recipients selected at random.)</i></p>
 </div>
-</div>
+
 
 
 <div class="col-33" style="padding-bottom:15px">
@@ -130,20 +132,6 @@ social:
 <p>In these weekly conversations, give your students the opportunity to hear from a diverse group of people using computer science to bring music to our lives, create exciting new virtual reality worlds, and more! Conversations last 20-30 minutes, with live closed captioning available. Recordings will be made available a day or two after each event. To view recordings of past events, <a  class="linktag" id="past chats" href="https://code.org/csjourneys/pastchats" target="_blank">click here</a>.</p>
 <p><strong>Note that clicking any of the "View details" buttons below will take you to Eventbrite.com.</strong></p>
 <br>
-
-<div class="col-33" style="padding-bottom:15px">
-  <div class="tutorial-tile" style="padding-right:20px">
-      <a class="linktag" id="snapchat-chat" href="https://www.eventbrite.com/e/252182493627" target="_blank">
-        <img class="tutorial-tile-img" src="/images/csjourneys/myjourney-snapchat.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="My Journey Chat Bertrand Saint-Preux of Snapchat">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-        <div class="smalltext" style="color: #00adbc; text-align: left"><strong>Fri, April 8 at 1 pm EDT</strong></div>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Creating an inclusive camera at Snapchat</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Hear about a Snapchat Product Lead’s journey from building a jukebox app to creating an inclusive camera that works well for everyone, regardless of their skin tone, culture, beauty standards, or ability. <i>For grades 6-12</i>.</div>
-        <a class="linktag" id="snapchat-chat" href="https://www.eventbrite.com/e/252182493627" target="_blank"><button>View details</button></a>
-  </div>
-</div>
-</div>
 
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">

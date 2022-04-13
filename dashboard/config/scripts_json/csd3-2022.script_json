@@ -4,6 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "Supports to Teach CS Discoveries",
+          "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
+          "link": "https://code.org/educate/professional-development-online",
+          "type": "information",
+          "visibility": "Teacher-only"
+        }
+      ],
       "curriculum_umbrella": "CSD",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -18,8 +27,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-30 23:43:22 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-04-12 20:56:41 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -5389,7 +5398,7 @@
       "position": 4,
       "properties": {
         "description": "**Transition:** Once students have completed their planning sheet, it's time to head to the Code.org website. The short level sequence asks students to complete each element of their project.",
-        "name": " Levels: Implementing Interactive Card (Level 2 - 7)"
+        "name": "Implementing Interactive Card (Level 2 - 7)"
       },
       "seeding_key": {
         "activity_section.key": "cb1ab56b-9c53-4c57-8de4-a618898990ee",
@@ -7612,6 +7621,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Entertainment Sample 4_2022"
+        ],
         "progression": "Sample Programs"
       },
       "bonus": false,
@@ -7634,6 +7646,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Entertainment Sample 3_2022"
+        ],
         "progression": "Sample Programs"
       },
       "bonus": false,
@@ -7656,6 +7671,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Entertainment Sample 1_2022"
+        ],
         "progression": "Sample Programs"
       },
       "bonus": false,
@@ -7678,6 +7696,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Entertainment Sample 2_2022"
+        ],
         "progression": "Sample Programs"
       },
       "bonus": false,
@@ -7700,6 +7721,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Plotting Shapes Shape Lab_2022"
+        ],
         "progression": "Drawing Shapes"
       },
       "bonus": false,
@@ -7722,6 +7746,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 rect_2022"
+        ],
         "progression": "Introduction to Game Lab"
       },
       "bonus": false,
@@ -7744,6 +7771,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Drawing in Game Lab 1_2022"
+        ],
         "progression": "Video: Drawing in Game Lab - Part 1"
       },
       "bonus": false,
@@ -7766,6 +7796,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Drawing Squares to Corners_2022"
+        ],
         "progression": "Using the Grid"
       },
       "bonus": false,
@@ -7788,6 +7821,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Drawing in Game Lab 2_2022"
+        ],
         "progression": "Video: Drawing in Game Lab - Part 2"
       },
       "bonus": false,
@@ -7810,6 +7846,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 fill_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7832,6 +7871,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 sequence_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7854,6 +7896,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 ellipse_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7876,6 +7921,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 drawing practice choice_2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -7898,6 +7946,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 debug_2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -7920,6 +7971,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 drawing challenges_2022"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -7942,6 +7996,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random Taller Rectangle_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7964,6 +8021,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random Ellipse Behind_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7986,6 +8046,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random background_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8008,6 +8071,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random background2_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8030,6 +8096,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random Debug Grass_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8052,6 +8121,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games parameters practice_2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -8074,6 +8146,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random Debug Cloud_2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -8096,6 +8171,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Parameters challenge_2022"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -8118,6 +8196,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables Predict Where X_2022"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -8140,6 +8221,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Variables - Part 1_2022"
+        ],
         "progression": "Video: Introduction to Variables"
       },
       "bonus": false,
@@ -8162,6 +8246,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables Predict Where XY_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8184,6 +8271,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables naming rules v2_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8206,6 +8296,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables Draw Poppy_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8228,6 +8321,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games variables practice_2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -8250,6 +8346,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables assessment_2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -8272,6 +8371,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games variables challenge_2022"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -8294,6 +8396,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random random ellipse_2022"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -8316,6 +8421,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random random ellipse2_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8338,6 +8446,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables random with assignment_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8360,6 +8471,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables random reassign_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8382,6 +8496,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games random practice_2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -8404,6 +8521,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random rainbow snake_2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -8426,6 +8546,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games random challenge_2022"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -8448,6 +8571,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites Exploration_2022"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -8470,6 +8596,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Sprites in Game Lab_2022"
+        ],
         "progression": "Video: Introduction to Sprites"
       },
       "bonus": false,
@@ -8492,6 +8621,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro sprites_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8514,6 +8646,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro debug_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8536,6 +8671,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites anitab 1_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8558,6 +8696,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Animation Tab_2022"
+        ],
         "progression": "Video: The Animation Tab"
       },
       "bonus": false,
@@ -8580,6 +8721,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites sequencing_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8600,14 +8744,17 @@
       "chapter": 46,
       "position": 8,
       "activity_section_position": 2,
-      "assessment": true,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 drawSprites placement match_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U3 drawSprites placement match_2019_pilot_2022"
+          "CSD U3 drawSprites placement match_2022"
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
@@ -8615,7 +8762,7 @@
         "activity_section.key": "2e9880cf-89f3-43ae-9c97-f6cf3b433745"
       },
       "level_keys": [
-        "CSD U3 drawSprites placement match_2019_pilot_2022"
+        "CSD U3 drawSprites placement match_2022"
       ]
     },
     {
@@ -8624,6 +8771,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Sprites practice_2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -8646,6 +8796,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites assessment_2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -8668,6 +8821,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Sprites Challenges_2022"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -8690,6 +8846,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games properties predict_2022"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -8712,6 +8871,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games properties xy_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8734,6 +8896,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games properties new_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8756,6 +8921,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Properties practice_2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -8778,6 +8946,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD Games properties assessment_2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -8800,6 +8971,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Properties challenge_2022"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -8822,6 +8996,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web text explore_2022"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -8844,6 +9021,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites text_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8866,6 +9046,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web text size_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8888,6 +9071,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web text practice choice_2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -8910,6 +9096,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD web text assessment_2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -8932,6 +9121,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web text challenge choice_2022"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -8954,6 +9146,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Scene Example_2022"
+        ],
         "progression": "Sprite Scenes"
       },
       "bonus": false,
@@ -8976,6 +9171,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites scene drawing_2022"
+        ],
         "progression": "Create a Background"
       },
       "bonus": false,
@@ -8998,6 +9196,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites scene sprites_2022"
+        ],
         "progression": "Add Sprites"
       },
       "bonus": false,
@@ -9020,6 +9221,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites scene text_2022"
+        ],
         "progression": "Add Text"
       },
       "bonus": false,
@@ -9042,6 +9246,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites scene challenge_2022"
+        ],
         "progression": "Review Your Scene"
       },
       "bonus": false,
@@ -9064,6 +9271,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Introduction to the Draw Loop_2022"
+        ],
         "progression": "Video: Introduction to the Draw Loop"
       },
       "bonus": false,
@@ -9086,6 +9296,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged predict 1_2022"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -9108,6 +9321,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged orange and green_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9130,6 +9346,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged predict 2_2022"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -9152,6 +9371,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 dancing alien_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9174,6 +9396,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged wiggle sprite x_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9196,6 +9421,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web draw loop practice choice_2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -9218,6 +9446,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged wiggle sprite y_2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -9240,6 +9471,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web draw loop challenge choice_2022"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -9262,6 +9496,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - Simple Counter Predict_2022"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -9284,6 +9521,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Animating Sprite Movement_2022"
+        ],
         "progression": "Video: Sprite Movement"
       },
       "bonus": false,
@@ -9306,6 +9546,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprite Movement Right_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9328,6 +9571,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprite Movement Left_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9350,6 +9596,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Diagonal Movement_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9372,6 +9621,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprite Movement Predict_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9394,6 +9646,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web movement practice choice_2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -9416,6 +9671,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Movement Fish_2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -9438,6 +9696,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web movement challenge choice_2022"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -9460,6 +9721,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web project animated example_2022"
+        ],
         "progression": "Example Animated Scene"
       },
       "bonus": false,
@@ -9482,6 +9746,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web project animated plan_2022"
+        ],
         "progression": "Plan Your Scene"
       },
       "bonus": false,
@@ -9504,6 +9771,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web project animated background_2022"
+        ],
         "progression": "Draw a Background"
       },
       "bonus": false,
@@ -9526,6 +9796,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web project animated sprites_2022"
+        ],
         "progression": "Add Sprites"
       },
       "bonus": false,
@@ -9548,6 +9821,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web project animated text_2022"
+        ],
         "progression": "Add Text"
       },
       "bonus": false,
@@ -9570,6 +9846,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web project animated movement_2022"
+        ],
         "progression": "Add Movement"
       },
       "bonus": false,
@@ -9592,6 +9871,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web project animated review_2022"
+        ],
         "progression": "Review Your Animated Scene"
       },
       "bonus": false,
@@ -9614,6 +9896,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Boolean Predict_2022"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -9636,6 +9921,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - Booleans Video_2022"
+        ],
         "progression": "Video: Booleans"
       },
       "bonus": false,
@@ -9658,6 +9946,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - conditionals - Matching_2018_2019_pilot_2022"
+        ],
         "progression": "Quick Check"
       },
       "bonus": false,
@@ -9680,6 +9971,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - conditionals - transition_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9702,6 +9996,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - conditionals - first conditional_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9724,6 +10021,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd U3 conditional statements video_2022"
+        ],
         "progression": "Video: Conditional Statements"
       },
       "bonus": false,
@@ -9746,6 +10046,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Conditionals Apple 2_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9768,6 +10071,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web conditionals practice choice_2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -9790,6 +10096,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD web conditionals assessment_2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -9812,6 +10121,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web conditionals challenge choice_2022"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -9834,6 +10146,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Keypress Boolean_2022"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -9856,6 +10171,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 keydown conditional_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9878,6 +10196,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 UP_ARROW_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9900,6 +10221,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Input Gears_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -9922,6 +10246,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web keyboard practice choice_2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -9944,6 +10271,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Direction Arrows_2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -9966,6 +10296,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web keyboard challenge choice_2022"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -9988,6 +10321,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 if else predict_2022"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -10010,6 +10346,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - Conditionals Video_2022"
+        ],
         "progression": "Video: If/Else Statements"
       },
       "bonus": false,
@@ -10032,6 +10371,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Else_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -10054,6 +10396,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games mousedown intro_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -10076,6 +10421,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - complex - mouse down_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -10098,6 +10446,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 If Else_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -10120,6 +10471,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web mouse practice choice_2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -10142,6 +10496,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD web mouse assessment_2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -10164,6 +10521,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web mouse challenge choice_2022"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -10186,6 +10546,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card Exemplar_2022"
+        ],
         "progression": "Demo App: Interactive Card"
       },
       "bonus": false,
@@ -10208,12 +10571,15 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - Interactive Card - ExampleChoice_2022"
+        ],
         "progression": "Make an Interactive Card"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U3 Card Examples_2018_2019_pilot_2022"
+          "CSD U3 - Interactive Card - ExampleChoice_2022"
         ],
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
@@ -10221,7 +10587,7 @@
         "activity_section.key": "c0090e7c-168b-4591-9c94-d636a0033dbe"
       },
       "level_keys": [
-        "CSD U3 Card Examples_2018_2019_pilot_2022"
+        "CSD U3 - Interactive Card - ExampleChoice_2022"
       ]
     },
     {
@@ -10230,6 +10596,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card Background_2022"
+        ],
         "progression": "Project Work"
       },
       "bonus": false,
@@ -10252,6 +10621,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card Sprites_2022"
+        ],
         "progression": "Project Work"
       },
       "bonus": false,
@@ -10274,6 +10646,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card User Input_2022"
+        ],
         "progression": "Project Work"
       },
       "bonus": false,
@@ -10296,6 +10671,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card Other Conditionals_2022"
+        ],
         "progression": "Project Work"
       },
       "bonus": false,
@@ -10318,6 +10696,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card Final_2022"
+        ],
         "progression": "Project Work"
       },
       "bonus": false,
@@ -10340,6 +10721,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2022"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -10362,6 +10746,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction velocityX_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -10384,6 +10771,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Sprite Velocity_2022"
+        ],
         "progression": "Video: Velocity"
       },
       "bonus": false,
@@ -10406,6 +10796,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction velocityY_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -10428,6 +10821,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction rotation_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -10450,6 +10846,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction rotation control_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -10472,6 +10871,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction velocityX if-statements_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -10494,6 +10896,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games velocity tennis_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -10516,6 +10921,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games velocity practice choice_2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -10538,6 +10946,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction velocityX control_2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -10560,6 +10971,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games velocity challenge choice_2022"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -10582,6 +10996,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions car intro_2022"
+        ],
         "progression": "Sample Game"
       },
       "bonus": false,
@@ -10604,6 +11021,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions build isTouching_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -10626,6 +11046,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions isTouching intro_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -10648,6 +11071,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions egg_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -10670,6 +11096,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions debug isTouching_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -10692,6 +11121,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games istouching practice choice_2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -10714,6 +11146,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions horse_2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -10736,6 +11171,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games istouching challenge choice_2022"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -10758,6 +11196,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games side scroller demo_2022"
+        ],
         "progression": "Intro to Side Scrollers"
       },
       "bonus": false,
@@ -10780,6 +11221,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games sidescroll background_2022"
+        ],
         "progression": "Draw Your Background"
       },
       "bonus": false,
@@ -10802,6 +11246,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction tumbleweed_2022"
+        ],
         "progression": "Create Your Sprites"
       },
       "bonus": false,
@@ -10824,6 +11271,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction jump_2022"
+        ],
         "progression": "Player Controls"
       },
       "bonus": false,
@@ -10846,6 +11296,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction looping_2022"
+        ],
         "progression": "Looping"
       },
       "bonus": false,
@@ -10868,6 +11321,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions sidescroll2_2022"
+        ],
         "progression": "Sprite Interactions"
       },
       "bonus": false,
@@ -10890,6 +11346,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions scoreboard_2022"
+        ],
         "progression": "Scoring & Scoreboard"
       },
       "bonus": false,
@@ -10912,6 +11371,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games sidescroll review_2022"
+        ],
         "progression": "Review Your Game"
       },
       "bonus": false,
@@ -10934,6 +11396,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Complex Movement counter prediction gamelab_2022"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -10956,6 +11421,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction accelerateX_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -10978,6 +11446,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction accelerateY_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -11000,6 +11471,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction decelerateX_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -11022,6 +11496,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games movement2 practice choice_2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -11044,6 +11521,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction decelerateY_2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -11066,6 +11546,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games movement2 challenge choice_2022"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -11088,6 +11571,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions predict set velocity code_2022"
+        ],
         "progression": "Code Prediction"
       },
       "bonus": false,
@@ -11110,6 +11596,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions displace x_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -11132,6 +11621,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions displace y_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -11154,6 +11646,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions displace intro_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -11176,6 +11671,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions try blocks_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -11198,6 +11696,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games collisions practice choice_2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -11220,6 +11721,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD games collisions assessment_2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -11242,6 +11746,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games collisions challenge choice_2022"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -11264,6 +11771,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games flyer demo_2022"
+        ],
         "progression": "Intro to Flyer Game"
       },
       "bonus": false,
@@ -11286,6 +11796,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction add coin_2022"
+        ],
         "progression": "Make Your Sprites"
       },
       "bonus": false,
@@ -11308,6 +11821,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction jumping_2022"
+        ],
         "progression": "Player Controls"
       },
       "bonus": false,
@@ -11330,6 +11846,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction left right counter_2022"
+        ],
         "progression": "Player Controls"
       },
       "bonus": false,
@@ -11352,6 +11871,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction left right counter 2_2022"
+        ],
         "progression": "Player Controls"
       },
       "bonus": false,
@@ -11374,6 +11896,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions flyman add obstacles_2022"
+        ],
         "progression": "Sprite Movement"
       },
       "bonus": false,
@@ -11396,6 +11921,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction reset coin_2022"
+        ],
         "progression": "Sprite Interactions"
       },
       "bonus": false,
@@ -11418,6 +11946,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions flyman bounceOff_2022"
+        ],
         "progression": "Review Your Game"
       },
       "bonus": false,
@@ -11440,6 +11971,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 function video_2022"
+        ],
         "progression": "Video: Functions"
       },
       "bonus": false,
@@ -11462,6 +11996,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Call Function_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -11484,6 +12021,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Order Functions_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -11506,6 +12046,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Prediction Order of Create_2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -11528,6 +12071,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games functions practice choice_2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -11550,6 +12096,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD games functions assessment FR_2022"
+        ],
         "progression": "Quick Check"
       },
       "bonus": false,
@@ -11572,6 +12121,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Write Reset_2022"
+        ],
         "progression": "Collector Game"
       },
       "bonus": false,
@@ -11594,6 +12146,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Add IsTouching_2022"
+        ],
         "progression": "Collector Game"
       },
       "bonus": false,
@@ -11616,6 +12171,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Add Change Background_2022"
+        ],
         "progression": "Collector Game"
       },
       "bonus": false,
@@ -11638,6 +12196,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games functions challenge choice_2022"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -11660,6 +12221,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti Play Defender_2022"
+        ],
         "progression": "Same Game"
       },
       "bonus": false,
@@ -11682,6 +12246,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2022"
+        ],
         "progression": "Plan Your Project"
       },
       "bonus": false,
@@ -11704,6 +12271,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender animate cake enemies_2022"
+        ],
         "progression": "Set Up Sprites"
       },
       "bonus": false,
@@ -11726,6 +12296,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender enemies move_2022"
+        ],
         "progression": "Set Up Sprites"
       },
       "bonus": false,
@@ -11748,6 +12321,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender move player_2022"
+        ],
         "progression": "Control Your Player"
       },
       "bonus": false,
@@ -11770,6 +12346,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender move up down_2022"
+        ],
         "progression": "Control Your Player"
       },
       "bonus": false,
@@ -11792,6 +12371,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender animate player_2022"
+        ],
         "progression": "Control Your Player"
       },
       "bonus": false,
@@ -11814,6 +12396,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender enemies touch cake_2022"
+        ],
         "progression": "Sprite Interactions"
       },
       "bonus": false,
@@ -11836,6 +12421,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender enemies touch cake sprite2_2022"
+        ],
         "progression": "Sprite Interactions"
       },
       "bonus": false,
@@ -11858,6 +12446,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender create set enemies_2022"
+        ],
         "progression": "Sprite Interactions"
       },
       "bonus": false,
@@ -11880,6 +12471,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender displace enemies_2022"
+        ],
         "progression": "Sprite Interactions"
       },
       "bonus": false,
@@ -11902,6 +12496,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender touch water_2022"
+        ],
         "progression": "Sprite Interactions"
       },
       "bonus": false,
@@ -11924,6 +12521,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games cake challenge choice_2022"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -11946,6 +12546,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform sample1_2022"
+        ],
         "progression": "Sample Platform Jumper Game"
       },
       "bonus": false,
@@ -11968,6 +12571,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform intro_2018_2019_pilot_2022"
+        ],
         "progression": "Build a Platform Jumper"
       },
       "bonus": false,
@@ -11990,6 +12596,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform background1_2022"
+        ],
         "progression": "Platform Jumper - Background and Variables"
       },
       "bonus": false,
@@ -12012,6 +12621,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform variable1_2022"
+        ],
         "progression": "Platform Jumper - Background and Variables"
       },
       "bonus": false,
@@ -12034,6 +12646,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform background2_2022"
+        ],
         "progression": "Platform Jumper - Background and Variables"
       },
       "bonus": false,
@@ -12056,6 +12671,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform scoreboard_2022"
+        ],
         "progression": "Platform Jumper - Background and Variables"
       },
       "bonus": false,
@@ -12078,6 +12696,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform platform1_2022"
+        ],
         "progression": "Platform Jumper - Platforms"
       },
       "bonus": false,
@@ -12100,6 +12721,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform platform2_2022"
+        ],
         "progression": "Platform Jumper - Platforms"
       },
       "bonus": false,
@@ -12122,6 +12746,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform platform3_2022"
+        ],
         "progression": "Platform Jumper - Platforms"
       },
       "bonus": false,
@@ -12144,6 +12771,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform items1_2022"
+        ],
         "progression": "Platform Jumper - Items"
       },
       "bonus": false,
@@ -12166,6 +12796,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform items2_2022"
+        ],
         "progression": "Platform Jumper - Items"
       },
       "bonus": false,
@@ -12188,6 +12821,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform items3_2022"
+        ],
         "progression": "Platform Jumper - Items"
       },
       "bonus": false,
@@ -12210,6 +12846,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform player1_2022"
+        ],
         "progression": "Platform Jumper - Player"
       },
       "bonus": false,
@@ -12232,6 +12871,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform player2_2022"
+        ],
         "progression": "Platform Jumper - Player"
       },
       "bonus": false,
@@ -12254,6 +12896,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform player3_2022"
+        ],
         "progression": "Platform Jumper - Player"
       },
       "bonus": false,
@@ -12276,6 +12921,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform player4_2022"
+        ],
         "progression": "Platform Jumper - Player"
       },
       "bonus": false,
@@ -12298,6 +12946,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform review_2022"
+        ],
         "progression": "Platform Jumper Review"
       },
       "bonus": false,
@@ -12320,50 +12971,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Challenges"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U3 platform sample2_2022"
+        "level_keys": [
+          "CSD games platform challenge choice_2022"
         ],
-        "lesson.key": "Using the Game Design Process",
-        "lesson_group.key": "csd3_2",
-        "script.name": "csd3-2022",
-        "activity_section.key": "c87e787e-1579-4250-80f8-6e8e434a3a2e"
-      },
-      "level_keys": [
-        "CSD U3 platform sample2_2022"
-      ]
-    },
-    {
-      "chapter": 216,
-      "position": 19,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Challenges"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U3 platform sample3_2022"
-        ],
-        "lesson.key": "Using the Game Design Process",
-        "lesson_group.key": "csd3_2",
-        "script.name": "csd3-2022",
-        "activity_section.key": "c87e787e-1579-4250-80f8-6e8e434a3a2e"
-      },
-      "level_keys": [
-        "CSD U3 platform sample3_2022"
-      ]
-    },
-    {
-      "chapter": 217,
-      "position": 20,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
         "progression": "Challenges"
       },
       "bonus": false,
@@ -12381,17 +12991,20 @@
       ]
     },
     {
-      "chapter": 218,
+      "chapter": 216,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - Design a Game 1 - ExampleChoice_2022"
+        ],
         "progression": "Sample Games"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U3 game intro_2018_2019_pilot_2022"
+          "CSD U3 - Design a Game 1 - ExampleChoice_2022"
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
@@ -12399,15 +13012,18 @@
         "activity_section.key": "2f874f2f-5f9e-4d5a-a84f-61151378280c"
       },
       "level_keys": [
-        "CSD U3 game intro_2018_2019_pilot_2022"
+        "CSD U3 - Design a Game 1 - ExampleChoice_2022"
       ]
     },
     {
-      "chapter": 219,
+      "chapter": 217,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game variables_2022"
+        ],
         "progression": "Project - Background and Variables"
       },
       "bonus": false,
@@ -12425,11 +13041,14 @@
       ]
     },
     {
-      "chapter": 220,
+      "chapter": 218,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game backgrounds_2022"
+        ],
         "progression": "Project - Background and Variables"
       },
       "bonus": false,
@@ -12447,11 +13066,14 @@
       ]
     },
     {
-      "chapter": 221,
+      "chapter": 219,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game display boards_2022"
+        ],
         "progression": "Project - Background and Variables"
       },
       "bonus": false,
@@ -12469,11 +13091,14 @@
       ]
     },
     {
-      "chapter": 222,
+      "chapter": 220,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game choose background_2022"
+        ],
         "progression": "Project - Background and Variables"
       },
       "bonus": false,
@@ -12491,11 +13116,14 @@
       ]
     },
     {
-      "chapter": 223,
+      "chapter": 221,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game animations_2022"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
       "bonus": false,
@@ -12513,11 +13141,14 @@
       ]
     },
     {
-      "chapter": 224,
+      "chapter": 222,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game create sprites_2022"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
       "bonus": false,
@@ -12535,11 +13166,14 @@
       ]
     },
     {
-      "chapter": 225,
+      "chapter": 223,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game sprite movement_2022"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
       "bonus": false,
@@ -12557,11 +13191,14 @@
       ]
     },
     {
-      "chapter": 226,
+      "chapter": 224,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game user controls_2022"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
       "bonus": false,
@@ -12579,11 +13216,14 @@
       ]
     },
     {
-      "chapter": 227,
+      "chapter": 225,
       "position": 10,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game interactions_2022"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
       "bonus": false,
@@ -12601,11 +13241,14 @@
       ]
     },
     {
-      "chapter": 228,
+      "chapter": 226,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games project review_2022"
+        ],
         "progression": "Review Your Game"
       },
       "bonus": false,
@@ -12623,11 +13266,14 @@
       ]
     },
     {
-      "chapter": 229,
+      "chapter": 227,
       "position": 12,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2022"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -12645,11 +13291,14 @@
       ]
     },
     {
-      "chapter": 230,
+      "chapter": 228,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD Interactive Animations and Games Post-Project Test_pilot_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -12666,11 +13315,14 @@
       ]
     },
     {
-      "chapter": 231,
+      "chapter": 229,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-post-survey-markdown-with-link-to-survey_2022"
+        ],
         "progression": "Post-Course Survey Instructions"
       },
       "bonus": false,
@@ -13231,9 +13883,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U3 drawSprites placement match_2019_pilot_2022",
+        "level.key": "CSD U3 drawSprites placement match_2022",
         "script_level.level_keys": [
-          "CSD U3 drawSprites placement match_2019_pilot_2022"
+          "CSD U3 drawSprites placement match_2022"
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "csd3_1",
@@ -14107,9 +14759,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U3 Card Examples_2018_2019_pilot_2022",
+        "level.key": "CSD U3 - Interactive Card - ExampleChoice_2022",
         "script_level.level_keys": [
-          "CSD U3 Card Examples_2018_2019_pilot_2022"
+          "CSD U3 - Interactive Card - ExampleChoice_2022"
         ],
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "csd3_1",
@@ -15259,30 +15911,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U3 platform sample2_2022",
-        "script_level.level_keys": [
-          "CSD U3 platform sample2_2022"
-        ],
-        "lesson.key": "Using the Game Design Process",
-        "lesson_group.key": "csd3_2",
-        "script.name": "csd3-2022",
-        "activity_section.key": "c87e787e-1579-4250-80f8-6e8e434a3a2e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD U3 platform sample3_2022",
-        "script_level.level_keys": [
-          "CSD U3 platform sample3_2022"
-        ],
-        "lesson.key": "Using the Game Design Process",
-        "lesson_group.key": "csd3_2",
-        "script.name": "csd3-2022",
-        "activity_section.key": "c87e787e-1579-4250-80f8-6e8e434a3a2e"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "CSD games platform challenge choice_2022",
         "script_level.level_keys": [
           "CSD games platform challenge choice_2022"
@@ -15295,9 +15923,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U3 game intro_2018_2019_pilot_2022",
+        "level.key": "CSD U3 - Design a Game 1 - ExampleChoice_2022",
         "script_level.level_keys": [
-          "CSD U3 game intro_2018_2019_pilot_2022"
+          "CSD U3 - Design a Game 1 - ExampleChoice_2022"
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
@@ -15465,7 +16093,7 @@
   "resources": [
     {
       "name": "All Code",
-      "url": "/s/csd3-2021/code",
+      "url": "/s/csd3-2022/code",
       "key": "all_code_1",
       "properties": {
         "is_rollup": true
@@ -15476,7 +16104,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/csd3-2021/resources",
+      "url": "/s/csd3-2022/resources",
       "key": "all_resources_1",
       "properties": {
         "is_rollup": true
@@ -15487,7 +16115,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/csd3-2021/standards",
+      "url": "/s/csd3-2022/standards",
       "key": "all_standards_1",
       "properties": {
         "is_rollup": true
@@ -15498,7 +16126,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/csd3-2021/vocab",
+      "url": "/s/csd3-2022/vocab",
       "key": "all_vocabulary_1",
       "properties": {
         "is_rollup": true
@@ -15620,6 +16248,19 @@
       }
     },
     {
+      "name": "Collision Detection",
+      "url": "https://docs.google.com/presentation/d/18hXKoENm4jVJnHFYRQGtPwF6LvL-0Ag5RS1VmGY7KB4/template/preview",
+      "key": "collision_detection_2",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/18hXKoENm4jVJnHFYRQGtPwF6LvL-0Ag5RS1VmGY7KB4/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "collision_detection_2"
+      }
+    },
+    {
       "name": "Collision Detection (Version A)",
       "url": "https://docs.google.com/document/d/18RKLr5ZwCX5OOpzpnQuekQMpas7JreTcQxL1TyCnv7o/",
       "key": "collision_detection_version_a_",
@@ -15643,6 +16284,32 @@
       },
       "seeding_key": {
         "resource.key": "collision_detection_version_b_"
+      }
+    },
+    {
+      "name": "Collisions",
+      "url": "https://docs.google.com/presentation/d/1kV9Yh1CsEdUElUh_dxPi2zhxJ2APzLidZ4NplaLMZSY/template/preview",
+      "key": "collisions",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1kV9Yh1CsEdUElUh_dxPi2zhxJ2APzLidZ4NplaLMZSY/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "collisions"
+      }
+    },
+    {
+      "name": "Complex Sprite Movement",
+      "url": "https://docs.google.com/presentation/d/1NzaQeQLXoFMEn_F0M0npuGCIK29pOtMhyw-pZXRM39Y/template/preview",
+      "key": "complex_sprite_movement",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1NzaQeQLXoFMEn_F0M0npuGCIK29pOtMhyw-pZXRM39Y/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "complex_sprite_movement"
       }
     },
     {
@@ -15672,6 +16339,19 @@
       }
     },
     {
+      "name": "Conditionals",
+      "url": "https://docs.google.com/presentation/d/12j4KMKOvDBSz5B5ekePOBcogSglhpK9QnDf3egXv3gc/template/preview",
+      "key": "conditionals",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/12j4KMKOvDBSz5B5ekePOBcogSglhpK9QnDf3egXv3gc/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "conditionals"
+      }
+    },
+    {
       "name": "CS in Entertainment",
       "url": "https://docs.google.com/document/d/110oPOgyPaeWt1_9_UEaw5T_7cCG_xgPDhwkTF2J47j8/edit",
       "key": "cs_in_entertainment",
@@ -15698,11 +16378,9 @@
     },
     {
       "name": "CSD Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview",
+      "url": "https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview",
       "key": "csd_curriculum_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csd_curriculum_guide"
@@ -15730,26 +16408,22 @@
     },
     {
       "name": "CSD Implementation Guide",
-      "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
+      "url": "https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview",
       "key": "csd_implementation_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csd_implementation_guide"
       }
     },
     {
-      "name": "CSD Unit 3 - Interactive Animations and Games",
-      "url": "https://docs.google.com/presentation/d/1I66LrxwPZPiGX3d7PhIYZbTfp0_-qnmAK41Q-hMb6hI/copy",
-      "key": "csd_unit_3_-_interactive_animations_and_games",
+      "name": "CSD Programming Levels Guide",
+      "url": "https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview",
+      "key": "csd_programming_levels_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+        "resource.key": "csd_programming_levels_guide"
       }
     },
     {
@@ -15762,6 +16436,19 @@
       },
       "seeding_key": {
         "resource.key": "defender_game"
+      }
+    },
+    {
+      "name": "Drawing in Game Lab",
+      "url": "https://docs.google.com/presentation/d/1Qh85JcZquHSfK2LB0-80ZH4u4e3kZ7Lrr4BiCeihtn0/template/preview",
+      "key": "drawing_in_game_lab",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1Qh85JcZquHSfK2LB0-80ZH4u4e3kZ7Lrr4BiCeihtn0/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "drawing_in_game_lab"
       }
     },
     {
@@ -15928,6 +16615,19 @@
       }
     },
     {
+      "name": "Functions",
+      "url": "https://docs.google.com/presentation/d/1-JfCo6XxlfLrZKjXJxM0Ht33upVKfD6SmpD-BRwLDH8/template/preview",
+      "key": "functions_4",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1-JfCo6XxlfLrZKjXJxM0Ht33upVKfD6SmpD-BRwLDH8/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "functions_4"
+      }
+    },
+    {
       "name": "If-Else Statements",
       "url": "https://drive.google.com/file/d/1_RzGKuxpESYxpD__X3RdeTm89pTYcfB4/view?usp=sharing",
       "key": "if-else_statements",
@@ -16079,6 +16779,19 @@
       }
     },
     {
+      "name": "Keyboard Input",
+      "url": "https://docs.google.com/presentation/d/1HeJu3AlM-SdJr4uEBFewFeRCol-znx2nbiwLTyhDhA8/template/preview",
+      "key": "keyboard_input",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1HeJu3AlM-SdJr4uEBFewFeRCol-znx2nbiwLTyhDhA8/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "keyboard_input"
+      }
+    },
+    {
       "name": "Make Your Own Game ",
       "url": "https://docs.google.com/document/d/1T4Br-iQAhFnuoey6QvhdYRQ7X0uPKwjAhlalAQf8Bxc/edit?usp=sharing",
       "key": "make_your_own_game",
@@ -16154,6 +16867,58 @@
       }
     },
     {
+      "name": "Mini-Project - Animation",
+      "url": "https://docs.google.com/presentation/d/1B2gxt50rpnKHN-qJAq7uXEd2-kTKP0giuxOghbQDhBE/template/preview",
+      "key": "mini-project_-_animation",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1B2gxt50rpnKHN-qJAq7uXEd2-kTKP0giuxOghbQDhBE/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mini-project_-_animation"
+      }
+    },
+    {
+      "name": "Mini-Project - Captioned Scenes",
+      "url": "https://docs.google.com/presentation/d/1zG2Bj7D464w9WGfERlWNC5XWHOKERckb4ukmDYTXes4/template/preview",
+      "key": "mini-project_-_captioned_scenes",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1zG2Bj7D464w9WGfERlWNC5XWHOKERckb4ukmDYTXes4/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mini-project_-_captioned_scenes"
+      }
+    },
+    {
+      "name": "Mini-Project - Flyer Game",
+      "url": "https://docs.google.com/presentation/d/1lxbBZRbjJ-Wf7E1huZtkmttU5JANc30Cbu9frXjZViM/template/preview",
+      "key": "mini-project_-_flyer_game",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1lxbBZRbjJ-Wf7E1huZtkmttU5JANc30Cbu9frXjZViM/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mini-project_-_flyer_game"
+      }
+    },
+    {
+      "name": "Mini-Project - Side Scroller",
+      "url": "https://docs.google.com/presentation/d/1yPyD4Bm81g6fskDKvVe-wI7QXbwqIlbCjjdtZVcpNQ8/template/preview",
+      "key": "mini-project_-_side_scroller",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1yPyD4Bm81g6fskDKvVe-wI7QXbwqIlbCjjdtZVcpNQ8/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mini-project_-_side_scroller"
+      }
+    },
+    {
       "name": "Mini-Project Guide - Side Scroller",
       "url": "https://docs.google.com/document/d/12l12aUIFwlB4yXtZOlfCsi8XU3sDbzruAE-FAA14-20/edit?usp=sharing",
       "key": "mini-project_guide_-_side_scroller",
@@ -16175,6 +16940,19 @@
       },
       "seeding_key": {
         "resource.key": "mini_project_-_captioned_scenes"
+      }
+    },
+    {
+      "name": "Mouse Input",
+      "url": "https://docs.google.com/presentation/d/1fEiGXNsuyjePx5irkx3KehMWvpM4i07EqQMfCw2DUDg/template/preview",
+      "key": "mouse_input",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1fEiGXNsuyjePx5irkx3KehMWvpM4i07EqQMfCw2DUDg/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mouse_input"
       }
     },
     {
@@ -16207,10 +16985,63 @@
       "key": "planning_your_platform_game_1",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "planning_your_platform_game_1"
+      }
+    },
+    {
+      "name": "Plotting Shapes",
+      "url": "https://docs.google.com/presentation/d/1B64fDQpLf4iuqXIEYYTjoPsNlt4MQ7hHElllX_5y61g/template/preview",
+      "key": "plotting_shapes",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1B64fDQpLf4iuqXIEYYTjoPsNlt4MQ7hHElllX_5y61g/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "plotting_shapes"
+      }
+    },
+    {
+      "name": "Programming for Entertainment",
+      "url": "https://docs.google.com/presentation/d/1ojnEhKkUISTCWmf6i_Y5eObbOdocNSrtAjhiWYZVSNU/template/preview",
+      "key": "programming_for_entertainment",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1ojnEhKkUISTCWmf6i_Y5eObbOdocNSrtAjhiWYZVSNU/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "programming_for_entertainment"
+      }
+    },
+    {
+      "name": "Project - Design a Game",
+      "url": "https://docs.google.com/presentation/d/19RjrkgFvRil27D0Lx8SIt3OuJfR03THe8uwtGl6oYyE/template/preview",
+      "key": "project_-_design_a_game",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/19RjrkgFvRil27D0Lx8SIt3OuJfR03THe8uwtGl6oYyE/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "project_-_design_a_game"
+      }
+    },
+    {
+      "name": "Project - Interactive Card",
+      "url": "https://docs.google.com/presentation/d/18rn-AvzgOqgmvH1QN7JtUCInvpVqlqUD_ZOQNivdI6E/template/preview",
+      "key": "project_-_interactive_card",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/18rn-AvzgOqgmvH1QN7JtUCInvpVqlqUD_ZOQNivdI6E/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "project_-_interactive_card"
       }
     },
     {
@@ -16234,6 +17065,19 @@
       },
       "seeding_key": {
         "resource.key": "random_numbers"
+      }
+    },
+    {
+      "name": "Random Numbers",
+      "url": "https://docs.google.com/presentation/d/1t9ZZ3YGM6S1Hbsc4kR5sMnS9v1FQzXQOa4DH7Ajk8B0/template/preview",
+      "key": "random_numbers_2",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1t9ZZ3YGM6S1Hbsc4kR5sMnS9v1FQzXQOa4DH7Ajk8B0/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "random_numbers_2"
       }
     },
     {
@@ -16261,19 +17105,6 @@
     },
     {
       "name": "Shapes and Parameters",
-      "url": "https://studio.code.org/docs/concepts/game-lab/shapes-and-parameters/",
-      "key": "shapes_and_parameters",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://drive.google.com/a/code.org/uc?id=1qjYMu7Kvs-sKyAVGM2c_6NK3S6_Lo7Pm&export=download",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "shapes_and_parameters"
-      }
-    },
-    {
-      "name": "Shapes and Parameters",
       "url": "https://drive.google.com/file/d/1uEZ_gMcXJOCd41k6uTKlxsVVWEVrFikj/view?usp=sharing",
       "key": "shapes_and_parameters_1",
       "properties": {
@@ -16282,6 +17113,19 @@
       },
       "seeding_key": {
         "resource.key": "shapes_and_parameters_1"
+      }
+    },
+    {
+      "name": "Shapes and Parameters",
+      "url": "https://docs.google.com/presentation/d/1vulpd2DiwK8IiBHbnNuBh-yCVuVkEA18miL8T5IO-5c/template/preview",
+      "key": "shapes_and_parameters_2",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1vulpd2DiwK8IiBHbnNuBh-yCVuVkEA18miL8T5IO-5c/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "shapes_and_parameters_2"
       }
     },
     {
@@ -16324,6 +17168,19 @@
       }
     },
     {
+      "name": "Sprite Movement",
+      "url": "https://docs.google.com/presentation/d/1GJ3WTHH0YxThk8L1MCGGmwmGy4l7MnWA1WCI7dqUO1k/template/preview",
+      "key": "sprite_movement_1",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1GJ3WTHH0YxThk8L1MCGGmwmGy4l7MnWA1WCI7dqUO1k/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "sprite_movement_1"
+      }
+    },
+    {
       "name": "Sprite Properties",
       "url": "https://drive.google.com/file/d/1E4UZKHRQM0erDbb-rPTRbRVpj7IquA3p/view?usp=sharing",
       "key": "sprite_properties",
@@ -16333,6 +17190,19 @@
       },
       "seeding_key": {
         "resource.key": "sprite_properties"
+      }
+    },
+    {
+      "name": "Sprite Properties",
+      "url": "https://docs.google.com/presentation/d/1R9Q8LGRUtlVZrF88Pp7dL9SNVH5QESkvutI8IV3gQnk/template/preview",
+      "key": "sprite_properties_1",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1R9Q8LGRUtlVZrF88Pp7dL9SNVH5QESkvutI8IV3gQnk/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "sprite_properties_1"
       }
     },
     {
@@ -16361,14 +17231,40 @@
       }
     },
     {
+      "name": "Sprites",
+      "url": "https://docs.google.com/presentation/d/1F5Gj9yQ05yLciHdVkl-sCFKRAgw0bC54X8Y6AfPGW2w/template/preview",
+      "key": "sprites_1",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1F5Gj9yQ05yLciHdVkl-sCFKRAgw0bC54X8Y6AfPGW2w/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "sprites_1"
+      }
+    },
+    {
       "name": "Teacher Forum",
-      "url": "https://forum.code.org/c/csd3",
-      "key": "teacher_forum_1",
+      "url": "https://forum.code.org/c/csd",
+      "key": "teacher_forum",
       "properties": {
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "teacher_forum_1"
+        "resource.key": "teacher_forum"
+      }
+    },
+    {
+      "name": "Text",
+      "url": "https://docs.google.com/presentation/d/1wsO6S1upq95nJ-3vKjaHQ1_E2JaBkoGpP4Fw2tfCu4k/template/preview",
+      "key": "text",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1wsO6S1upq95nJ-3vKjaHQ1_E2JaBkoGpP4Fw2tfCu4k/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "text"
       }
     },
     {
@@ -16409,6 +17305,45 @@
       }
     },
     {
+      "name": "The Draw Loop",
+      "url": "https://docs.google.com/presentation/d/1RKKRxUGfN2VL9aGxL9CjG559JI1p_wVlO_mTrs4Pj2k/template/preview",
+      "key": "the_draw_loop_1",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1RKKRxUGfN2VL9aGxL9CjG559JI1p_wVlO_mTrs4Pj2k/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "the_draw_loop_1"
+      }
+    },
+    {
+      "name": "The Game Design Process",
+      "url": "https://docs.google.com/presentation/d/1gpsv_LnfAgi4Y75vqtxEEhu2T_YDppwwAuykpij_q0o/template/preview",
+      "key": "the_game_design_process",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1gpsv_LnfAgi4Y75vqtxEEhu2T_YDppwwAuykpij_q0o/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "the_game_design_process"
+      }
+    },
+    {
+      "name": "Using the Game Design Process",
+      "url": "https://docs.google.com/presentation/d/1Syp3ZczSh23DZ8kfFp_nGTRzCvnKY0cy-aQjCHMbztM/template/preview",
+      "key": "using_the_game_design_process",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1Syp3ZczSh23DZ8kfFp_nGTRzCvnKY0cy-aQjCHMbztM/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "using_the_game_design_process"
+      }
+    },
+    {
       "name": "Variables",
       "url": "https://drive.google.com/file/d/1SRUFCpI8bvsX4pRECNUl0R2ZBrA0TocN/view",
       "key": "variables",
@@ -16418,6 +17353,19 @@
       },
       "seeding_key": {
         "resource.key": "variables"
+      }
+    },
+    {
+      "name": "Variables",
+      "url": "https://docs.google.com/presentation/d/1F8sBblNjZqI-Q7XndJNuvBIWh2KeJF4rqieUMUpGArU/template/preview",
+      "key": "variables_3",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1F8sBblNjZqI-Q7XndJNuvBIWh2KeJF4rqieUMUpGArU/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "variables_3"
       }
     },
     {
@@ -16443,6 +17391,19 @@
       },
       "seeding_key": {
         "resource.key": "velocity_1"
+      }
+    },
+    {
+      "name": "Velocity",
+      "url": "https://docs.google.com/presentation/d/1QdsutY-BjyXtBBQblLiEuiURHWGY3MYV_BkhVc7bglE/template/preview",
+      "key": "velocity_2",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1QdsutY-BjyXtBBQblLiEuiURHWGY3MYV_BkhVc7bglE/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "velocity_2"
       }
     },
     {
@@ -16474,6 +17435,12 @@
     {
       "seeding_key": {
         "lesson.key": "Collision Detection",
+        "resource.key": "collision_detection_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Collision Detection",
         "resource.key": "collision_detection_version_a_"
       }
     },
@@ -16485,20 +17452,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Collision Detection",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Collisions",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+        "resource.key": "collisions"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Complex Sprite Movement",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+        "resource.key": "complex_sprite_movement"
       }
     },
     {
@@ -16528,7 +17489,7 @@
     {
       "seeding_key": {
         "lesson.key": "Conditionals",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+        "resource.key": "conditionals"
       }
     },
     {
@@ -16540,7 +17501,7 @@
     {
       "seeding_key": {
         "lesson.key": "Drawing in Game Lab",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+        "resource.key": "drawing_in_game_lab"
       }
     },
     {
@@ -16564,12 +17525,6 @@
     {
       "seeding_key": {
         "lesson.key": "Functions",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions",
         "resource.key": "functions"
       }
     },
@@ -16581,8 +17536,14 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Functions",
+        "resource.key": "functions_4"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Keyboard Input",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+        "resource.key": "keyboard_input"
       }
     },
     {
@@ -16606,7 +17567,7 @@
     {
       "seeding_key": {
         "lesson.key": "Mini-Project - Animation",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+        "resource.key": "mini-project_-_animation"
       }
     },
     {
@@ -16618,7 +17579,7 @@
     {
       "seeding_key": {
         "lesson.key": "Mini-Project - Captioned Scenes",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+        "resource.key": "mini-project_-_captioned_scenes"
       }
     },
     {
@@ -16631,12 +17592,6 @@
       "seeding_key": {
         "lesson.key": "Mini-Project - Captioned Scenes",
         "resource.key": "sprite_scene_planning"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project - Flyer Game",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
@@ -16659,8 +17614,14 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Mini-Project - Flyer Game",
+        "resource.key": "mini-project_-_flyer_game"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Mini-Project - Side Scroller",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+        "resource.key": "mini-project_-_side_scroller"
       }
     },
     {
@@ -16684,12 +17645,6 @@
     {
       "seeding_key": {
         "lesson.key": "Mouse Input",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mouse Input",
         "resource.key": "if-else_statements"
       }
     },
@@ -16701,8 +17656,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Plotting Shapes",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+        "lesson.key": "Mouse Input",
+        "resource.key": "mouse_input"
       }
     },
     {
@@ -16726,6 +17681,12 @@
     {
       "seeding_key": {
         "lesson.key": "Plotting Shapes",
+        "resource.key": "plotting_shapes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Plotting Shapes",
         "resource.key": "sample_shape_drawing"
       }
     },
@@ -16744,19 +17705,13 @@
     {
       "seeding_key": {
         "lesson.key": "Programming for Entertainment",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+        "resource.key": "programming_for_entertainment"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Design a Game",
         "resource.key": "computer_science_practices"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Design a Game",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
       }
     },
     {
@@ -16803,14 +17758,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Interactive Card",
-        "resource.key": "computer_science_practices"
+        "lesson.key": "Project - Design a Game",
+        "resource.key": "project_-_design_a_game"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Interactive Card",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+        "resource.key": "computer_science_practices"
       }
     },
     {
@@ -16857,8 +17812,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Random Numbers",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+        "lesson.key": "Project - Interactive Card",
+        "resource.key": "project_-_interactive_card"
       }
     },
     {
@@ -16869,14 +17824,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Shapes and Parameters",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Shapes and Parameters",
-        "resource.key": "shapes_and_parameters"
+        "lesson.key": "Random Numbers",
+        "resource.key": "random_numbers_2"
       }
     },
     {
@@ -16887,8 +17836,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Sprite Movement",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+        "lesson.key": "Shapes and Parameters",
+        "resource.key": "shapes_and_parameters_2"
       }
     },
     {
@@ -16900,13 +17849,13 @@
     {
       "seeding_key": {
         "lesson.key": "Sprite Movement",
-        "resource.key": "the_counter_pattern"
+        "resource.key": "sprite_movement_1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Sprite Properties",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+        "lesson.key": "Sprite Movement",
+        "resource.key": "the_counter_pattern"
       }
     },
     {
@@ -16917,14 +17866,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Sprites",
-        "resource.key": "animation_tab"
+        "lesson.key": "Sprite Properties",
+        "resource.key": "sprite_properties_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Sprites",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+        "resource.key": "animation_tab"
       }
     },
     {
@@ -16942,19 +17891,19 @@
     {
       "seeding_key": {
         "lesson.key": "Sprites",
+        "resource.key": "sprites_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprites",
         "resource.key": "the_animation_tab"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Text",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Draw Loop",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+        "resource.key": "text"
       }
     },
     {
@@ -16989,8 +17938,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "The Game Design Process",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+        "lesson.key": "The Draw Loop",
+        "resource.key": "the_draw_loop_1"
       }
     },
     {
@@ -17001,8 +17950,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Using the Game Design Process",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+        "lesson.key": "The Game Design Process",
+        "resource.key": "the_game_design_process"
       }
     },
     {
@@ -17019,8 +17968,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Variables",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+        "lesson.key": "Using the Game Design Process",
+        "resource.key": "using_the_game_design_process"
       }
     },
     {
@@ -17043,8 +17992,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Velocity",
-        "resource.key": "csd_unit_3_-_interactive_animations_and_games"
+        "lesson.key": "Variables",
+        "resource.key": "variables_3"
       }
     },
     {
@@ -17057,6 +18006,12 @@
       "seeding_key": {
         "lesson.key": "Velocity",
         "resource.key": "velocity_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Velocity",
+        "resource.key": "velocity_2"
       }
     }
   ],
@@ -17111,7 +18066,13 @@
     },
     {
       "seeding_key": {
-        "resource.key": "teacher_forum_1",
+        "resource.key": "csd_programming_levels_guide",
+        "script.name": "csd3-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
         "script.name": "csd3-2022"
       }
     }

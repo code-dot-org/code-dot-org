@@ -31,6 +31,12 @@ social:
 <a id="recordings"></a>
 
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
+  {{ myjourney16 }}
+  <h3><strong>Creating an inclusive camera at Snapchat</strong></h3>
+  <p>Hear about a Snapchat Product Lead’s journey from building a jukebox app to creating an inclusive camera that works well for everyone, regardless of their skin tone, culture, beauty standards, or ability.</p>
+</div>
+
+<div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney15 }}
   <h3><strong>Making interactive art with technology</strong></h3>
   <p>Learn how a creative engineer at Meow Wolf helps to build interactive art installations that immerse visitors in mind-blowing new worlds with the intersection of art and engineering.</p>
@@ -44,13 +50,13 @@ social:
   <p><i>Due to legal constraints, we are only able to offer this recording on demand on Zoom. You will need to register using your name and email address to access.</i></p>
 </div>
 
+<div style="clear: both"></div>
+
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney14 }}
   <h3><strong>Using computer science to keep people safe</strong></h3>
   <p>Hear from Richard Nelson, V, a mechanical engineer at Motorola Solutions who plays a crucial role in ensuring public safety.</p>
 </div>
-
-<div style="clear: both"></div>
 
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney13 }}
@@ -64,13 +70,13 @@ social:
   <p>How can virtual reality experiences reinvent how people work, play, and communicate?  Find out as we talk to a technical program manager at Meta Quest.</p>
 </div>
 
+<div style="clear: both"></div>
+
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney11 }}
   <h3><strong>Behind the scenes at Code.org</strong></h3>
   <p>Hear about the career path that led a non-computer science major to become a Product Manager at Code.org and how she creates fun tools used in classrooms around the world.</p>
 </div>
-
-<div style="clear: both"></div>
 
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney10 }}
@@ -84,6 +90,8 @@ social:
   <p>Hear from NASA scientists Kim Arcand and Rutu Das about their career journeys and how they use data science to build 3D models of the universe.</p>
 </div>
 
+<div style="clear: both"></div>
+
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   <a href="https://code.zoom.us/rec/play/09veMf1354wOxNcJxSMPqmGgf6qh3vTdvIaSGHTpeyik4_59etRQXEIuPbAQwSzKiYAIMkXpqSRGHO_L.ym6IZsLcInwcxQAG" target="_blank">
     <img src="/images/csjourneys/patrick-lucey-yt.png" style="max-width:100%" alt="Artifical intelligence and sports click to view">
@@ -91,8 +99,6 @@ social:
   <h3><strong>Artificial intelligence and sports</strong></h3>
   <p>Learn how Patrick Lucey, a former semi-pro soccer player, uses data and AI to help athletes and teams improve their performance. <i>Only available as a Zoom recording.</i></p>
 </div>
-
-<div style="clear: both"></div>
 
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney5 }}
@@ -106,21 +112,19 @@ social:
   <p>Learn how Roblox designer Genevieve Johnson uses the platform to empower students to pursue careers as entrepreneurs, engineers, and designers.</p>
 </div>
 
+<div style="clear: both"></div>
+
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney9 }}
   <h3><strong>Art + Tech</strong></h3>
   <p>Learn how Tomas Garcia and Joel Ferree make space for artists to explore the intersections of art and emerging technologies at the Los Angeles County Museum of Art.</p>
 </div>
 
-<div style="clear: both"></div>
-
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney6 }}
   <h3><strong>Building the Internet of Things</strong></h3>
   <p>Learn about how solutions architect Olawale Oladehin is helping to build the Internet of Things - and hosting Twitch streams!</p>
 </div>
-
-<div style="clear: both"></div>
 
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   <a href="https://code.zoom.us/rec/play/kIvRYVMSbjTlS0R135aJipNeBxbg6Vv1taAVDeVb3IVoBXwRMZuQjhuRFa-VNSg5Wy8UVJF4fcZ15BFV.p4zxH_sHQW5GLwBU" target="_blank">
@@ -129,6 +133,8 @@ social:
   <p>Hear how Cristiane Maia and Ini Oladosu use technology to help make movies and TV shows, including the many worlds of Star Wars.</p>
   <p><i>Due to legal constraints, we are only able to offer this recording on demand on Zoom. You will need to register using your name and email address to access.</i></p>
 </div>
+
+<div style="clear: both"></div>
 
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney4 }}

@@ -350,6 +350,10 @@ describe('entry tests', () => {
             'style/curriculum/reference_guides.scss'
           ],
           [
+            'build/package/css/curriculum_navigation.css',
+            'style/curriculum/navigation.scss'
+          ],
+          [
             'build/package/css/levelbuilder.css',
             'style/code-studio/levelbuilder.scss'
           ],
@@ -664,6 +668,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/reference_guides/edit.js',
     'reference_guides/edit_all':
       './src/sites/studio/pages/reference_guides/edit_all.js',
+    'programming_expressions/index':
+      './src/sites/studio/pages/programming_expressions/index.js',
     'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
     'scripts/new': './src/sites/studio/pages/scripts/new.js',
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
