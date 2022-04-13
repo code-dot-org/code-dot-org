@@ -78,13 +78,13 @@ export default class CommentEditor extends Component {
 
     return (
       <div>
-        <div
+        {/* <div
           ref={el => (this.codeMirror = el)}
           style={{
             border: '1px solid blue',
             fontFamily: '"Gotham 5r", sans-serif'
           }}
-        />
+        /> */}
         <TextAreaWithCodeButton />
         <TextAreaWithCode />
         <textarea
