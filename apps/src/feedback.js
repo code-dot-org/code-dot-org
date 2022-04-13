@@ -1495,7 +1495,7 @@ FeedbackUtils.prototype.getUserBlocks_ = function() {
     // If Blockly is in readOnly mode, then all blocks are uneditable
     // so this filter would be useless. Ignore uneditable blocks only if
     // Blockly is in edit mode.
-    if (!Blockly.mainBlockSpace.isReadOnly()) {
+    if (!Blockly.cdoUtils.isWorkspaceReadOnly(Blockly.mainBlockSpace)) {
       blockValid = blockValid && block.isEditable();
     }
     return blockValid;
