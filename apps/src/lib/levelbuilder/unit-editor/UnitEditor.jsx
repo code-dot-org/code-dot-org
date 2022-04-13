@@ -294,8 +294,8 @@ class UnitEditor extends React.Component {
       this.state.unitPublishedState !== this.props.initialUnitPublishedState
     ) {
       const msg =
-        'It looks like you are updating the published state of this unit. ' +
-        'Are you sure you want to update the published state? ';
+        'It looks like you are hiding this unit. ' +
+        'Are you sure you want to hide this unit? ';
       if (!window.confirm(msg)) {
         this.setState({
           isSaving: false,
