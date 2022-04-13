@@ -1,4 +1,5 @@
 import React from 'react';
+import PetitionForm from './PetitionForm';
 
 export default function PetitionSignUp() {
   return (
@@ -8,6 +9,7 @@ export default function PetitionSignUp() {
           "Every student in every school should have the opportunity to learn
           computer science"
         </h1>
+        <PetitionForm />
       </div>
     </>
   );
@@ -15,10 +17,12 @@ export default function PetitionSignUp() {
 
 const styles = {
   block: {
+    display: 'flex',
+    flexFlow: 'row wrap',
     textAlign: 'center',
     backgroundColor: 'white',
     padding: '10px 0px',
-    display: 'block'
+    flex: '1 100%'
   },
   message: {
     fontFamily: '"Gotham 5r", sans-serif',
