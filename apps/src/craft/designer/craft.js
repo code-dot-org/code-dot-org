@@ -244,7 +244,12 @@ Craft.init = function(config) {
     Craft.musicController.stop();
   };
 
+  Craft.startBackgroundMusic = function() {
+    Craft.beginBackgroundMusic();
+  };
+
   studioApp().stopBackgroundMusic = this.stopBackgroundMusic.bind(this);
+  studioApp().startBackgroundMusic = this.startBackgroundMusic.bind(this);
 
   // Play music when the instructions are shown
   Craft.beginBackgroundMusic = function() {

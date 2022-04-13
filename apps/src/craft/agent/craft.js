@@ -181,7 +181,12 @@ export default class Craft {
       Craft.musicController.stop();
     };
 
+    Craft.startBackgroundMusic = function() {
+      Craft.beginBackgroundMusic();
+    };
+
     studioApp().stopBackgroundMusic = this.stopBackgroundMusic.bind(this);
+    studioApp().startBackgroundMusic = this.startBackgroundMusic.bind(this);
 
     config.skin.staticAvatar = MEDIA_URL + 'Sliced_Parts/Agent_Neutral.png';
     config.skin.smallStaticAvatar =

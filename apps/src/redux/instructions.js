@@ -74,7 +74,9 @@ const instructionsInitialState = {
   overlayVisible: false,
   levelVideos: [],
   mapReference: undefined,
-  referenceLinks: []
+  referenceLinks: [],
+  stopBackgroundMusic: undefined,
+  startBackgroundMusic: undefined
 };
 
 export default function reducer(state = {...instructionsInitialState}, action) {
@@ -93,7 +95,9 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       teacherMarkdown,
       levelVideos,
       mapReference,
-      referenceLinks
+      referenceLinks,
+      stopBackgroundMusic,
+      startBackgroundMusic
     } = action;
     let isCollapsed = state.isCollapsed;
     if (!longInstructions && !hasContainedLevels) {
@@ -112,7 +116,9 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       isCollapsed,
       levelVideos,
       mapReference,
-      referenceLinks
+      referenceLinks,
+      stopBackgroundMusic,
+      startBackgroundMusic
     });
   }
 
@@ -237,7 +243,9 @@ export const setInstructionsConstants = ({
   teacherMarkdown,
   levelVideos,
   mapReference,
-  referenceLinks
+  referenceLinks,
+  stopBackgroundMusic,
+  startBackgroundMusic
 }) => ({
   type: SET_CONSTANTS,
   noInstructionsWhenCollapsed,
@@ -250,7 +258,9 @@ export const setInstructionsConstants = ({
   teacherMarkdown,
   levelVideos,
   mapReference,
-  referenceLinks
+  referenceLinks,
+  stopBackgroundMusic,
+  startBackgroundMusic
 });
 
 export const setInstructionsRenderedHeight = height => ({
@@ -387,7 +397,9 @@ export const determineInstructionsConstants = config => {
     level,
     noInstructionsWhenCollapsed,
     hasContainedLevels,
-    teacherMarkdown
+    teacherMarkdown,
+    stopBackgroundMusic,
+    startBackgroundMusic
   } = config;
 
   const {
@@ -478,7 +490,9 @@ export const determineInstructionsConstants = config => {
     hasContainedLevels,
     levelVideos,
     mapReference,
-    referenceLinks
+    referenceLinks,
+    stopBackgroundMusic,
+    startBackgroundMusic
   };
 };
 
