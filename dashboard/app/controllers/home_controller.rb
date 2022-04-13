@@ -121,6 +121,8 @@ class HomeController < ApplicationController
     @force_school_info_confirmation_dialog = params[:forceSchoolInfoConfirmationDialog]
     @force_school_info_interstitial = params[:forceSchoolInfoInterstitial]
 
+    student_sections = current_user.sections_as_student.map(&:summarize_without_students)
+
     # Students and teachers will receive a @top_course for their primary
     # script, so we don't want to include that script (if it exists) in the
     # regular lists of recent scripts.
