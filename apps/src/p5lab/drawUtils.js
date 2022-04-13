@@ -75,10 +75,11 @@ export function speechBubble(
   p5.stroke(stroke);
   p5.strokeWeight(strokeWeight);
   p5.fill(fill);
-  p5.rect(minX, minY, width, height, padding);
-  p5.stroke(fill);
   switch (style) {
     case 'think':
+      // Thought bubbles have more-rounded corners, and trailing bubbles.
+      p5.rect(minX, minY, width, height, padding * 3);
+      p5.stroke(fill);
       p5.ellipse(tailMidX, maxY, tailSize);
       p5.stroke(stroke);
       p5.arc(tailMidX, maxY, tailSize, tailSize, 0, 180);
@@ -86,6 +87,9 @@ export function speechBubble(
       break;
     case 'say':
     default:
+      // Speech bubbles have less-rounded corners and triangular tails.
+      p5.rect(minX, minY, width, height, padding);
+      p5.stroke(fill);
       p5.triangle(tailTipX - tailSize, maxY, tailTipX, maxY, tailTipX, y);
       p5.stroke(stroke);
       p5.line(tailTipX, maxY, tailTipX, y);
@@ -153,7 +157,6 @@ export function validationBar(
   p5.push();
   p5.noStroke();
   p5.fill(color);
-  p5.beginShape();
   p5.rect(x, y, width, height);
   p5.pop();
 }
