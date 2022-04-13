@@ -45,8 +45,7 @@ class UnitEditor extends React.Component {
     i18nData: PropTypes.object.isRequired,
     initialPublishedState: PropTypes.oneOf(Object.values(PublishedState))
       .isRequired,
-    initialUnitPublishedState: PropTypes.oneOf(Object.values(PublishedState))
-      .isRequired,
+    initialUnitPublishedState: PropTypes.oneOf(Object.values(PublishedState)),
     initialInstructionType: PropTypes.oneOf(Object.values(InstructionType))
       .isRequired,
     initialInstructorAudience: PropTypes.oneOf(
@@ -747,6 +746,7 @@ class UnitEditor extends React.Component {
                     <label>
                       Hide this unit within this course
                       <input
+                        className={'unit-test-hide-unit-in-course'}
                         type="checkbox"
                         checked={
                           this.state.unitPublishedState ===
