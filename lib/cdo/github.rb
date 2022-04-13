@@ -52,13 +52,16 @@ module GitHub
   #                        a branch name.
   # @param [String] base_branch The name of the branch that changes will be merged into.
   def self.create_branch_from_commit(branch_name, commit, base_branch)
-    # check out a new branch based on base_branch and merge the commit into it
-    system [
+    # check out a new branch based on base_branch
+    created_branch = system [
       'cd ~/deploy-management-repo',
       'git fetch',
       "git checkout -b #{branch_name} #{base_branch}",
-      "git merge #{commit} --no-edit"
     ].join(' && ')
+    return false unless created_branch
+
+    # merge the commit into the branch
+    system "git merge #{commit} --no-edit"
 
     # check for conflicts
     conflicts = `git ls-files -u | wc -l`.to_i
