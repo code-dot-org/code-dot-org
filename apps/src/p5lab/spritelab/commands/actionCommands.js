@@ -255,12 +255,16 @@ export const commands = {
     addSpriteSpeechBubble(this, spriteArg, text, 4 /* seconds */, 'say');
   },
 
-  spriteSayTime(spriteArg, text, seconds, style) {
-    addSpriteSpeechBubble(this, spriteArg, text, seconds, style);
+  spriteSayTime(spriteArg, text, seconds) {
+    addSpriteSpeechBubble(this, spriteArg, text, seconds, 'say');
   },
 
   spriteThink(spriteArg, text) {
     addSpriteSpeechBubble(this, spriteArg, text, 4 /* seconds */, 'think');
+  },
+
+  spriteThinkTime(spriteArg, text, seconds) {
+    addSpriteSpeechBubble(this, spriteArg, text, seconds, 'think');
   },
 
   removeTint(spriteArg) {
