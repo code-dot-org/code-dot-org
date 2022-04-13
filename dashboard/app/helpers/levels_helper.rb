@@ -372,7 +372,7 @@ module LevelsHelper
         # connection (ScriptLevel#show, for example), so
         # make sure that we're using the write connection
         # here.
-        MultipleDatabasesTransitionHelper.use_writer_connection do
+        ActiveRecord::Base.connected_to(role: :writing) do
           section.save(validate: false)
         end
       end
