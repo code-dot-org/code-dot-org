@@ -51,7 +51,7 @@ module GitHub
   # @param [String] commit The the commit that will be merged in. Can either be a sha or
   #                        a branch name.
   # @param [String] base_branch The name of the branch that changes will be merged into.
-  def create_branch_from_commit(branch_name, commit, base_branch)
+  def self.create_branch_from_commit(branch_name, commit, base_branch)
     # check out a new branch based on base_branch and merge the commit into it
     system [
       'cd ~/deploy-management-repo',
