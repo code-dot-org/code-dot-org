@@ -10,6 +10,8 @@ export default class WebSerialPortWrapper extends EventEmitter {
     const portInfo = port.getInfo();
     this.vendorId = portInfo.usbVendorId;
     this.productId = portInfo.usbProductId;
+
+    this.writer = null;
   }
 
   // Return a list of available ports
@@ -19,12 +21,27 @@ export default class WebSerialPortWrapper extends EventEmitter {
 
   // Opens and returns a promise that resolves to a connection to the serial
   // port. Returned port can used to read and write.
-  open() {
+  async open() {
     if (this.portOpen) {
       throw new Error(`Requested port is already open.`);
     }
-    return this.port.open({baudRate: SERIAL_BAUD}).then(() => {
-      this.portOpen = true;
-    });
+
+    Promise.resolve()
+      .then(() => {
+        //this.port = serialPort;
+        return this.port.open({baudRate: SERIAL_BAUD});
+      })
+      .then(() => (this.writer = this.port.writable.getWriter()))
+      .then(() => {
+        this.portOpen = true;
+        this.emit('open');
+      });
+  }
+
+  write(buffer, encoding, callback) {
+    if (!this.portOpen) {
+      throw new Error('Requested port cannot be written to until it is open');
+    }
+    return this.writer.write(buffer).then(() => callback());
   }
 }
