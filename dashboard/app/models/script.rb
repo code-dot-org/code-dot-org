@@ -1557,6 +1557,8 @@ class Script < ApplicationRecord
     summary = summarize(include_lessons)
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_unit_edit)
     summary[:courseOfferingEditPath] = edit_course_offering_path(course_version.course_offering.key) if course_version
+    summary[:coursePublishedState] = unit_group ? unit_group.published_state : published_state
+    summary[:unitPublishedState] = unit_group ? published_state : nil
     summary
   end
 
