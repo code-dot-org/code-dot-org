@@ -209,16 +209,16 @@ Craft.init = function(config) {
     Craft.level.muteMusic || cookies.get('mute_music') === 'true'
   );
 
-  Craft.stopBackgroundMusic = function() {
+  config.stopBackgroundMusic = function() {
     Craft.musicController.stop();
   };
 
-  Craft.startBackgroundMusic = function() {
+  config.startBackgroundMusic = function() {
     Craft.beginBackgroundMusic();
   };
 
-  studioApp().stopBackgroundMusic = this.stopBackgroundMusic.bind(this);
-  studioApp().startBackgroundMusic = this.startBackgroundMusic.bind(this);
+  //studioApp().stopBackgroundMusic = this.stopBackgroundMusic.bind(this);
+  //studioApp().startBackgroundMusic = this.startBackgroundMusic.bind(this);
 
   // Play music when the instructions are shown
   Craft.beginBackgroundMusic = function() {

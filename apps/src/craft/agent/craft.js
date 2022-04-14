@@ -177,16 +177,16 @@ export default class Craft {
       Craft.level.muteMusic || cookies.get('mute_music') === 'true'
     );
 
-    Craft.stopBackgroundMusic = function() {
+    config.stopBackgroundMusic = function() {
       Craft.musicController.stop();
     };
 
-    Craft.startBackgroundMusic = function() {
+    config.startBackgroundMusic = function() {
       Craft.beginBackgroundMusic();
     };
 
-    studioApp().stopBackgroundMusic = this.stopBackgroundMusic.bind(this);
-    studioApp().startBackgroundMusic = this.startBackgroundMusic.bind(this);
+    //studioApp().stopBackgroundMusic = this.stopBackgroundMusic.bind(this);
+    //studioApp().startBackgroundMusic = this.startBackgroundMusic.bind(this);
 
     config.skin.staticAvatar = MEDIA_URL + 'Sliced_Parts/Agent_Neutral.png';
     config.skin.smallStaticAvatar =

@@ -7,6 +7,10 @@ import {getStore} from '../../redux';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import cookies from 'js-cookie';
 import {setMuteMusic} from '@cdo/apps/templates/currentUserRedux';
+import {
+  startBackgroundMusic,
+  stopBackgroundMusic
+} from '@cdo/apps/redux/instructions';
 import UserPreferences from '../../lib/util/UserPreferences';
 
 const MUTE_MUSIC = 'mute_music';
@@ -22,6 +26,10 @@ function BackgroundMusicMuteButton({isMinecraft, isBackgroundMusicMuted}) {
 
   const handleMuteMusicTabClick = () => {
     isBackgroundMusicMuted = !isBackgroundMusicMuted;
+    //isBackgroundMusicMuted
+    //  ? getStore().dispatch(stopBackgroundMusic())
+    //  : getStore().dispatch(startBackgroundMusic());
+
     updateMuteMusic(isBackgroundMusicMuted);
     cookies.set(MUTE_MUSIC, 'true', {expires: 30, path: '/'});
 
@@ -87,6 +95,12 @@ export default connect(
   dispatch => ({
     setMuteMusic(isBackgroundMusicMuted) {
       dispatch(setMuteMusic(isBackgroundMusicMuted));
+    },
+    startBackgroundMusic() {
+      dispatch(startBackgroundMusic());
+    },
+    stopBackgroundMusic() {
+      dispatch(stopBackgroundMusic());
     }
   })
 )(BackgroundMusicMuteButton);
