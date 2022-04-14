@@ -1154,7 +1154,6 @@ export function getVisibleSections(state) {
  */
 export function getSectionRows(state, sectionIds) {
   const {sections, courseOfferings} = getRoot(state);
-  console.log(sections);
   return sectionIds.map(id => ({
     ..._.pick(sections[id], [
       'id',
