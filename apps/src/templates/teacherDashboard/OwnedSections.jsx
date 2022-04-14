@@ -156,4 +156,4 @@ export default connect(
   {
     beginEditingSection
   }
-)(UnconnectedOwnedSections);
+)(OwnedSections);
