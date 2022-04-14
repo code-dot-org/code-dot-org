@@ -1,3 +1,5 @@
+-# this page is being moved to dashboard. pass the new url to the js entry point,
+-# which can use a js experiment to decide whether to redirect to the new url.
 - studio_redirect_url = CDO.studio_url("/congrats?s=#{Base64.urlsafe_encode64(course)}")
 %script{type: 'text/javascript', src: webpack_asset_path('js/code.org/views/csf_congrats.js'), 'data': {studio_redirect_url: studio_redirect_url}}
 
