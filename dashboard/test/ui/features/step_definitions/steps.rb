@@ -125,11 +125,6 @@ When /^I switch to the first iframe$/ do
   @browser.switch_to.frame @browser.find_element(tag_name: 'iframe')
 end
 
-When /^I switch to the iframe "([^"]*)"$/ do |iframe_selector|
-  $default_window = @browser.window_handle
-  @browser.switch_to.frame @browser.find_element(:css, iframe_selector)
-end
-
 # Can switch out of iframe content
 When /^I switch to the default content$/ do
   @browser.switch_to.default_content
