@@ -2,11 +2,11 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import {sections} from './fakeSectionUtils';
-import StudentSections from '@cdo/apps/templates/studioHomepages/StudentSections';
+import ParticipantSections from '@cdo/apps/templates/studioHomepages/ParticipantSections';
 import SectionsAsStudentTable from '@cdo/apps/templates/studioHomepages/SectionsAsStudentTable';
 import sinon from 'sinon';
 
-describe('StudentSections', () => {
+describe('ParticipantSections', () => {
   let defaultProps, updateSections, updateSectionsResult;
   beforeEach(() => {
     updateSectionsResult = sinon.spy();
@@ -22,14 +22,14 @@ describe('StudentSections', () => {
 
   it('does not render a SectionsAsStudentTable when not enrolled in any sections', () => {
     const wrapper = shallow(
-      <StudentSections {...defaultProps} sections={[]} />
+      <ParticipantSections {...defaultProps} sections={[]} />
     );
     expect(wrapper.find(SectionsAsStudentTable).length).to.equal(0);
   });
 
   it('renders a SectionsAsStudentTable when enrolled in one or more sections', () => {
     const wrapper = shallow(
-      <StudentSections {...defaultProps} sections={sections} />
+      <ParticipantSections {...defaultProps} sections={sections} />
     );
     expect(wrapper.find(SectionsAsStudentTable).length).to.equal(1);
   });

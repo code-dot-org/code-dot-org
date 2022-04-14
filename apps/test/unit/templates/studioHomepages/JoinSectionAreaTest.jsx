@@ -19,8 +19,10 @@ describe('JoinSectionArea', () => {
       />
     );
     expect(wrapper.find('Connect(JoinSection)').length).to.equal(1);
-    expect(wrapper.find('StudentSections').length).to.equal(1);
-    expect(wrapper.find('StudentSections').props().isTeacher).to.equal(false);
+    expect(wrapper.find('ParticipantSections').length).to.equal(1);
+    expect(wrapper.find('ParticipantSections').props().isTeacher).to.equal(
+      false
+    );
   });
   it('shows participant sections for pl if has joined pl sections', () => {
     const wrapper = shallow(
@@ -31,7 +33,9 @@ describe('JoinSectionArea', () => {
       />
     );
     expect(wrapper.find('Connect(JoinSection)').length).to.equal(1);
-    expect(wrapper.find('StudentSections').length).to.equal(1);
-    expect(wrapper.find('StudentSections').props().isTeacher).to.equal(true);
+    expect(wrapper.find('ParticipantSections').length).to.equal(1);
+    expect(wrapper.find('ParticipantSections').props().isTeacher).to.equal(
+      true
+    );
   });
 });
