@@ -337,7 +337,7 @@ describe('teacherSectionsRedux', () => {
         name: 'My Other Section',
         loginType: 'picture',
         grade: '11',
-        participantType: undefined,
+        participantType: 'student',
         providerManaged: false,
         code: 'DWGMFX',
         lessonExtras: false,
