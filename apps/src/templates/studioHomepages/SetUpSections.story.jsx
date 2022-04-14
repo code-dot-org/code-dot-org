@@ -14,7 +14,6 @@ export default storybook =>
           <SetUpSections
             beginEditingSection={action('beginEditingSection')}
             hasSections={false}
-            isPlSections={false}
           />
         )
       },
@@ -25,29 +24,6 @@ export default storybook =>
           <SetUpSections
             beginEditingSection={action('beginEditingSection')}
             hasSections={true}
-            isPlSections={false}
-          />
-        )
-      },
-      {
-        name: 'Set Up Message for PL Sections - no sections yet',
-        description: `Information box if the teacher doesn't have any sections yet`,
-        story: () => (
-          <SetUpSections
-            beginEditingSection={action('beginEditingSection')}
-            hasSections={false}
-            isPlSections={true}
-          />
-        )
-      },
-      {
-        name: 'Set Up Message for PL Sections - already has section',
-        description: `Information box if the teacher does have sections already`,
-        story: () => (
-          <SetUpSections
-            beginEditingSection={action('beginEditingSection')}
-            hasSections={true}
-            isPlSections={true}
           />
         )
       }
