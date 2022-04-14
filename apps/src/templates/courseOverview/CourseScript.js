@@ -18,6 +18,13 @@ import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherS
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
+//TODO: put this in a place where it can be shared
+const participantTypesByAudience = {
+  student: ['student'],
+  teacher: ['student', 'teacher'],
+  facilitator: ['student', 'teacher', 'facilitator']
+};
+
 class CourseScript extends Component {
   static propTypes = {
     title: PropTypes.string,
@@ -29,6 +36,7 @@ class CourseScript extends Component {
     description: PropTypes.string,
     assignedSectionId: PropTypes.number,
     showAssignButton: PropTypes.bool,
+    courseParticipantAudience: PropTypes.string,
     // redux provided
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     selectedSectionId: PropTypes.number,
@@ -71,7 +79,8 @@ class CourseScript extends Component {
       courseOfferingId,
       courseVersionId,
       sectionsForDropdown,
-      showAssignButton
+      showAssignButton,
+      courseParticipantAudience
     } = this.props;
 
     const isHidden = isScriptHiddenForSection(
@@ -94,6 +103,10 @@ class CourseScript extends Component {
       selectedSection &&
       selectedSection.unitId === id;
     const isAssigned = assignedToStudent || assignedByTeacher;
+
+    const courseCanBeAssignedToSection = participantTypesByAudience[
+      selectedSection.participantType
+    ].includes(courseParticipantAudience);
 
     return (
       <div
@@ -130,7 +143,8 @@ class CourseScript extends Component {
             {!isAssigned &&
               viewAs === ViewType.Instructor &&
               showAssignButton &&
-              selectedSection && (
+              selectedSection &&
+              courseCanBeAssignedToSection && (
                 <AssignButton
                   sectionId={selectedSection.id}
                   scriptId={id}

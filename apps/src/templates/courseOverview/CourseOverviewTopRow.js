@@ -17,7 +17,8 @@ export default class CourseOverviewTopRow extends Component {
     studentResources: PropTypes.arrayOf(migratedResourceShape),
     showAssignButton: PropTypes.bool,
     useMigratedResources: PropTypes.bool.isRequired,
-    isInstructor: PropTypes.bool
+    isInstructor: PropTypes.bool,
+    courseParticipantAudience: PropTypes.string
   };
 
   render() {
@@ -31,7 +32,8 @@ export default class CourseOverviewTopRow extends Component {
       showAssignButton,
       sectionsForDropdown,
       useMigratedResources,
-      isInstructor
+      isInstructor,
+      courseParticipantAudience
     } = this.props;
 
     return (
@@ -54,6 +56,7 @@ export default class CourseOverviewTopRow extends Component {
             buttonLocationAnalytics={'course-overview-top'}
             courseOfferingId={courseOfferingId}
             courseVersionId={courseVersionId}
+            courseParticipantAudience={courseParticipantAudience}
           />
         )}
         {!isInstructor && studentResources && studentResources.length > 0 && (

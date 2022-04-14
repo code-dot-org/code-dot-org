@@ -141,6 +141,7 @@ function initPage() {
         }
         isCsdOrCsp={scriptData.isCsd || scriptData.isCsp}
         completedLessonNumber={completedLessonNumber}
+        courseParticipantAudience={scriptData.participantAudience}
       />
     </Provider>,
     mountPoint

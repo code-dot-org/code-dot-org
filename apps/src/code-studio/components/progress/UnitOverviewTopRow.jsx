@@ -42,6 +42,7 @@ class UnitOverviewTopRow extends React.Component {
     scriptResourcesPdfUrl: PropTypes.string,
     courseOfferingId: PropTypes.number,
     courseVersionId: PropTypes.number,
+    courseParticipantAudience: PropTypes.string,
 
     // redux provided
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
@@ -122,7 +123,8 @@ class UnitOverviewTopRow extends React.Component {
       unitCompleted,
       hasPerLevelResults,
       courseOfferingId,
-      courseVersionId
+      courseVersionId,
+      courseParticipantAudience
     } = this.props;
 
     const useMigratedTeacherResources = isMigrated && !teacherResources.length;
@@ -226,6 +228,7 @@ class UnitOverviewTopRow extends React.Component {
             scriptId={scriptId}
             forceReload={true}
             buttonLocationAnalytics={'unit-overview-top'}
+            courseParticipantAudience={courseParticipantAudience}
           />
         )}
         <div style={isRtl ? styles.left : styles.right}>

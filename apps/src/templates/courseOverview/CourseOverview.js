@@ -62,6 +62,7 @@ class CourseOverview extends Component {
     redirectToCourseUrl: PropTypes.string,
     showAssignButton: PropTypes.bool,
     userId: PropTypes.number,
+    courseParticipantAudience: PropTypes.string,
     // Redux
     announcements: PropTypes.arrayOf(announcementShape),
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
@@ -138,7 +139,8 @@ class CourseOverview extends Component {
       showAssignButton,
       userId,
       isSignedIn,
-      useMigratedResources
+      useMigratedResources,
+      courseParticipantAudience
     } = this.props;
 
     const showNotification =
@@ -222,6 +224,7 @@ class CourseOverview extends Component {
             showAssignButton={showAssignButton}
             useMigratedResources={useMigratedResources}
             isInstructor={viewAs === ViewType.Instructor}
+            courseParticipantAudience={courseParticipantAudience}
           />
         </div>
         {scripts.map((script, index) => (
@@ -236,6 +239,7 @@ class CourseOverview extends Component {
             courseOfferingId={courseOfferingId}
             courseVersionId={courseVersionId}
             showAssignButton={showAssignButton}
+            courseParticipantAudience={courseParticipantAudience}
           />
         ))}
       </div>
