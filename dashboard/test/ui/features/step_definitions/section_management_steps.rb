@@ -137,7 +137,7 @@ When /^I press the new section button$/ do
 end
 
 Then /^I should see the new section dialog$/ do
-  steps 'Then I see ".modal"'
+  steps 'Then I wait until element ".modal" is visible'
 end
 
 When /^I select (picture|word|email) login$/ do |login_type|
