@@ -32,7 +32,8 @@ const SET_TTS_AUTOPLAY_ENABLED_FOR_LEVEL =
   'instructions/SET_TTS_AUTOPLAY_ENABLED_FOR_LEVEL';
 const SET_CODE_REVIEW_ENABLED_FOR_LEVEL =
   'instructions/SET_CODE_REVIEW_ENABLED_FOR_LEVEL';
-const SET_MUTE_MUSIC = 'instructions/SET_MUTE_MUSIC';
+const UNMUTE_BACKGROUND_MUSIC = 'instructions/UNMUTE_BACKGROUND_MUSIC';
+const MUTE_BACKGROUND_MUSIC = 'instruction/MUTE_BACKGROUND_MUSIC';
 
 /**
  * Some scenarios:
@@ -75,8 +76,8 @@ const instructionsInitialState = {
   levelVideos: [],
   mapReference: undefined,
   referenceLinks: [],
-  stopBackgroundMusic: undefined,
-  startBackgroundMusic: undefined
+  muteBackgroundMusic: undefined,
+  unmuteBackgroundMusic: undefined
 };
 
 export default function reducer(state = {...instructionsInitialState}, action) {
@@ -96,8 +97,8 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       levelVideos,
       mapReference,
       referenceLinks,
-      stopBackgroundMusic,
-      startBackgroundMusic
+      muteBackgroundMusic,
+      unmuteBackgroundMusic
     } = action;
     let isCollapsed = state.isCollapsed;
     if (!longInstructions && !hasContainedLevels) {
@@ -117,8 +118,8 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       levelVideos,
       mapReference,
       referenceLinks,
-      stopBackgroundMusic,
-      startBackgroundMusic
+      muteBackgroundMusic,
+      unmuteBackgroundMusic
     });
   }
 
@@ -161,10 +162,17 @@ export default function reducer(state = {...instructionsInitialState}, action) {
     });
   }
 
-  if (action.type === SET_MUTE_MUSIC) {
+  if (action.type === UNMUTE_BACKGROUND_MUSIC) {
+    state.unmuteBackgroundMusic();
     return {
-      ...state,
-      muteMusic: action.muteMusic
+      ...state
+    };
+  }
+
+  if (action.type === MUTE_BACKGROUND_MUSIC) {
+    state.muteBackgroundMusic();
+    return {
+      ...state
     };
   }
 
@@ -244,8 +252,8 @@ export const setInstructionsConstants = ({
   levelVideos,
   mapReference,
   referenceLinks,
-  stopBackgroundMusic,
-  startBackgroundMusic
+  muteBackgroundMusic,
+  unmuteBackgroundMusic
 }) => ({
   type: SET_CONSTANTS,
   noInstructionsWhenCollapsed,
@@ -259,8 +267,8 @@ export const setInstructionsConstants = ({
   levelVideos,
   mapReference,
   referenceLinks,
-  stopBackgroundMusic,
-  startBackgroundMusic
+  muteBackgroundMusic,
+  unmuteBackgroundMusic
 });
 
 export const setInstructionsRenderedHeight = height => ({
@@ -299,9 +307,12 @@ export const setAllowInstructionsResize = allowResize => ({
   allowResize
 });
 
-export const setMuteMusic = isMuted => ({
-  type: SET_MUTE_MUSIC,
-  isMuted
+export const callUnmuteBackgroundMusic = () => ({
+  type: UNMUTE_BACKGROUND_MUSIC
+});
+
+export const callMuteBackgroundMusic = () => ({
+  type: MUTE_BACKGROUND_MUSIC
 });
 
 export const setHasAuthoredHints = hasAuthoredHints => ({
@@ -398,8 +409,8 @@ export const determineInstructionsConstants = config => {
     noInstructionsWhenCollapsed,
     hasContainedLevels,
     teacherMarkdown,
-    stopBackgroundMusic,
-    startBackgroundMusic
+    muteBackgroundMusic,
+    unmuteBackgroundMusic
   } = config;
 
   const {
@@ -491,8 +502,8 @@ export const determineInstructionsConstants = config => {
     levelVideos,
     mapReference,
     referenceLinks,
-    stopBackgroundMusic,
-    startBackgroundMusic
+    muteBackgroundMusic,
+    unmuteBackgroundMusic
   };
 };
 

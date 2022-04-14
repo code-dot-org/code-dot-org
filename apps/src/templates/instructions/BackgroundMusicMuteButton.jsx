@@ -8,8 +8,8 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import cookies from 'js-cookie';
 import {setMuteMusic} from '@cdo/apps/templates/currentUserRedux';
 import {
-  startBackgroundMusic,
-  stopBackgroundMusic
+  callUnmuteBackgroundMusic,
+  callMuteBackgroundMusic
 } from '@cdo/apps/redux/instructions';
 import UserPreferences from '../../lib/util/UserPreferences';
 
@@ -26,12 +26,17 @@ function BackgroundMusicMuteButton({isMinecraft, isBackgroundMusicMuted}) {
 
   const handleMuteMusicTabClick = () => {
     isBackgroundMusicMuted = !isBackgroundMusicMuted;
-    //isBackgroundMusicMuted
-    //  ? getStore().dispatch(stopBackgroundMusic())
-    //  : getStore().dispatch(startBackgroundMusic());
-
     updateMuteMusic(isBackgroundMusicMuted);
-    cookies.set(MUTE_MUSIC, 'true', {expires: 30, path: '/'});
+
+    // Stop or start the music immediately
+    isBackgroundMusicMuted
+      ? getStore().dispatch(callMuteBackgroundMusic())
+      : getStore().dispatch(callUnmuteBackgroundMusic());
+
+    // Set or remove the cookie
+    isBackgroundMusicMuted
+      ? cookies.set(MUTE_MUSIC, 'true', {expires: 30, path: '/'})
+      : cookies.remove(MUTE_MUSIC, {path: '/'});
 
     const labType = isMinecraft ? 'Minecraft' : 'Starwars';
     const muteLabel = isBackgroundMusicMuted ? 'mute' : 'unmute';
@@ -96,11 +101,11 @@ export default connect(
     setMuteMusic(isBackgroundMusicMuted) {
       dispatch(setMuteMusic(isBackgroundMusicMuted));
     },
-    startBackgroundMusic() {
-      dispatch(startBackgroundMusic());
+    unmuteBackgroundMusic() {
+      dispatch(callUnmuteBackgroundMusic());
     },
-    stopBackgroundMusic() {
-      dispatch(stopBackgroundMusic());
+    muteBackgroundMusic() {
+      dispatch(callMuteBackgroundMusic());
     }
   })
 )(BackgroundMusicMuteButton);

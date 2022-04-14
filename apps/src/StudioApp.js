@@ -433,12 +433,12 @@ StudioApp.prototype.init = function(config) {
     config.loadAudio();
   }
 
-  if (config.stopBackgroundMusic) {
-    this.stopBackgroundMusic = config.stopBackgroundMusic;
+  if (config.muteBackgroundMusic) {
+    this.muteBackgroundMusic = config.muteBackgroundMusic;
   }
 
-  if (config.startBackgroundMusic) {
-    this.startBackgroundMusic = config.startBackgroundMusic;
+  if (config.unmuteBackgroundMusic) {
+    this.unmuteBackgroundMusic = config.unmuteBackgroundMusic;
   }
 
   if (this.editCode) {
