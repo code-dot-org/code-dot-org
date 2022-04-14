@@ -12,6 +12,7 @@ export default class WebSerialPortWrapper extends EventEmitter {
     this.productId = portInfo.usbProductId;
 
     this.writer = null;
+    this.reader = null;
   }
 
   // Return a list of available ports
@@ -19,8 +20,7 @@ export default class WebSerialPortWrapper extends EventEmitter {
     // TODO - not sure if this is used in Maker Toolkit yet
   }
 
-  // Opens and returns a promise that resolves to a connection to the serial
-  // port. Returned port can used to read and write.
+  // Opens the serial port and starts reading from port.
   async open() {
     if (this.portOpen) {
       throw new Error(`Requested port is already open.`);
@@ -28,13 +28,26 @@ export default class WebSerialPortWrapper extends EventEmitter {
 
     Promise.resolve()
       .then(() => {
-        //this.port = serialPort;
         return this.port.open({baudRate: SERIAL_BAUD});
       })
-      .then(() => (this.writer = this.port.writable.getWriter()))
       .then(() => {
+        this.writer = this.port.writable.getWriter();
+        this.reader = this.port.readable.getReader();
+      })
+      .then(async () => {
         this.portOpen = true;
         this.emit('open');
+        while (this.port.readable.locked) {
+          try {
+            const {value, done} = await this.reader.read();
+            if (done) {
+              break;
+            }
+            this.emit('data', Buffer.from(value));
+          } catch (e) {
+            console.error(e);
+          }
+        }
       });
   }
 
