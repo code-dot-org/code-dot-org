@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useRef, useEffect} from 'react';
 import {Editor} from '@toast-ui/react-editor';
 import '@toast-ui/editor/dist/toastui-editor.css';
 
@@ -17,7 +17,21 @@ const ToastExampleTextArea = () => {
       initialEditType="wysiwyg"
       useCommandShortcut={true}
       hideModeSwitch={true}
-      toolbarItems={[['code', 'codeblock']]}
+      toolbarItems={[
+        [
+          'code',
+          'codeblock',
+          {
+            // custom code block button
+            name: 'codeblock',
+            className: 'codeblock',
+            command: 'codeBlock',
+            tooltip: 'Insert CodeBlock',
+            state: 'codeBlock',
+            text: 'Code'
+          }
+        ]
+      ]}
       ref={textArea}
       onChange={onChange}
     />
