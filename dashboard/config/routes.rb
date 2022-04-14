@@ -341,7 +341,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :programming_classes, only: [:new, :create, :edit, :update, :show]
+  resources :programming_classes, only: [:new, :create, :edit, :update]
 
   resources :programming_expressions, only: [:index, :new, :create, :edit, :update, :show, :destroy] do
     collection do

@@ -97,7 +97,7 @@ class ProgrammingExpressionsController < ApplicationController
       @programming_expression = ProgrammingExpression.find(params[:id])
       return render :not_found unless @programming_expression
       return head :forbidden unless can?(:read, @programming_expression)
-      @programming_environment_categories = @programming_expression.programming_environment.categories_for_navigation
+      @programming_environment_categories = @programming_expression.programming_environment.categories.select {|c| c.programming_expressions.count > 0}.map(&:summarize_for_environment_show)
     else
       render :not_found
     end
@@ -106,7 +106,7 @@ class ProgrammingExpressionsController < ApplicationController
   def show_by_keys
     return render :not_found unless @programming_expression
     if params[:programming_environment_name] && params[:programming_expression_key]
-      @programming_environment_categories = @programming_expression.programming_environment.categories_for_navigation
+      @programming_environment_categories = @programming_expression.programming_environment.categories.select {|c| c.programming_expressions.count > 0}.map(&:summarize_for_environment_show)
       return render :show
     end
     render :not_found
@@ -137,7 +137,7 @@ class ProgrammingExpressionsController < ApplicationController
   def docs_show
     if DCDO.get('use-studio-code-docs', false)
       return render :not_found unless @programming_expression
-      @programming_environment_categories = @programming_expression.programming_environment.categories_for_navigation
+      @programming_environment_categories = @programming_expression.programming_environment.categories.select {|c| c.programming_expressions.count > 0}.map(&:summarize_for_environment_show)
       return render :show
     end
     render_proxied_url(
