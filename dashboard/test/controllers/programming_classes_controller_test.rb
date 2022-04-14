@@ -129,8 +129,6 @@ class ProgrammingClassesControllerTest < ActionController::TestCase
       File.stubs(:write)
       programming_environment = create :programming_environment
       @programming_class = create :programming_class, programming_environment: programming_environment
-      unpublished_programming_environment = create :programming_environment, published: false
-      @unpublished_programming_class = create :programming_class, programming_environment: unpublished_programming_environment
 
       @update_params = {id: @programming_class.id, name: 'new name'}
     end
@@ -154,15 +152,5 @@ class ProgrammingClassesControllerTest < ActionController::TestCase
     test_user_gets_response_for :update, params: -> {@update_params}, user: :student, response: :forbidden
     test_user_gets_response_for :update, params: -> {@update_params}, user: :teacher, response: :forbidden
     test_user_gets_response_for :update, params: -> {@update_params}, user: :levelbuilder, response: :success
-
-    test_user_gets_response_for :show, params: -> {{id: @programming_class.id}}, user: nil, response: :success
-    test_user_gets_response_for :show, params: -> {{id: @programming_class.id}}, user: :student, response: :success
-    test_user_gets_response_for :show, params: -> {{id: @programming_class.id}}, user: :teacher, response: :success
-    test_user_gets_response_for :show, params: -> {{id: @programming_class.id}}, user: :levelbuilder, response: :success
-
-    test_user_gets_response_for :show, params: -> {{id: @unpublished_programming_class.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in', name: 'test_signed_out_calling_get_show_for_unpublished_class_should_receive_redirect'
-    test_user_gets_response_for :show, params: -> {{id: @unpublished_programming_class.id}}, user: :student, response: :forbidden, name: 'test_student_calling_get_show_for_unpublished_class_should_receive_forbidden'
-    test_user_gets_response_for :show, params: -> {{id: @unpublished_programming_class.id}}, user: :teacher, response: :forbidden, name: 'test_teacher_calling_get_show_for_unpublished_class_should_receive_forbidden'
-    test_user_gets_response_for :show, params: -> {{id: @unpublished_programming_class.id}}, user: :levelbuilder, response: :success, name: 'test_levelbuilder_calling_get_show_for_unpublished_class_should_receive_success'
   end
 end
