@@ -7,8 +7,6 @@ class ProgrammingExpressionsController < ApplicationController
   before_action :set_expression_by_keys, only: [:show_by_keys, :docs_show]
   load_and_authorize_resource
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:search, :show, :show_by_keys]
-
   def index
     @programming_environments = ProgrammingEnvironment.all.map do |env|
       {id: env.id, name: env.name, title: env.title, published: env.published, editPath: edit_programming_environment_path(env.name)}
