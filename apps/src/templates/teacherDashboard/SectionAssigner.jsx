@@ -8,6 +8,12 @@ import AssignButton from '@cdo/apps/templates/AssignButton';
 import UnassignSectionButton from '@cdo/apps/templates/UnassignSectionButton';
 import {selectSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
+const participantTypesByAudience = {
+  student: ['student'],
+  teacher: ['student', 'teacher'],
+  facilitator: ['student', 'teacher', 'facilitator']
+};
+
 class SectionAssigner extends Component {
   static propTypes = {
     sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
@@ -18,6 +24,8 @@ class SectionAssigner extends Component {
     scriptId: PropTypes.number,
     forceReload: PropTypes.bool,
     buttonLocationAnalytics: PropTypes.string,
+    courseParticipantAudience: PropTypes.string,
+
     // Redux provided
     selectSection: PropTypes.func.isRequired,
     selectedSectionId: PropTypes.number,
@@ -39,11 +47,16 @@ class SectionAssigner extends Component {
       selectedSectionId,
       forceReload,
       assignmentName,
-      buttonLocationAnalytics
+      buttonLocationAnalytics,
+      courseParticipantAudience
     } = this.props;
     const selectedSection = sections.find(
       section => section.id === selectedSectionId
     );
+
+    const courseCanBeAssignedToSection = participantTypesByAudience[
+      selectedSection.participantType
+    ].includes(courseParticipantAudience);
 
     return (
       <div style={styles.section}>
@@ -66,7 +79,8 @@ class SectionAssigner extends Component {
           )}
           {selectedSection &&
             !selectedSection.isAssigned &&
-            showAssignButton && (
+            showAssignButton &&
+            courseCanBeAssignedToSection && (
               <AssignButton
                 sectionId={selectedSection.id}
                 courseOfferingId={courseOfferingId}

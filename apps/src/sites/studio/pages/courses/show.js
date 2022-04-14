@@ -115,6 +115,7 @@ function showCourseOverview() {
         useMigratedResources={
           courseSummary.is_migrated && !teacherResources.length
         }
+        courseParticipantAudience={courseSummary.participant_audience}
       />
     </Provider>,
     document.getElementById('course_overview')
