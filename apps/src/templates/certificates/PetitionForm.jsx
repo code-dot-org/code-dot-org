@@ -10,27 +10,27 @@ export default function PetitionForm() {
             id="name"
             placeholder="Name"
             type="text"
-            style={styles.input}
+            style={{...styles.field, ...styles.input}}
           />
           <FormControl
             id="email"
             placeholder="Email"
             type="text"
-            style={styles.input}
+            style={{...styles.field, ...styles.input}}
           />
           <FormControl
             id="zip-or-country"
             placeholder="ZIP code or country"
             type="number"
-            style={styles.input}
+            style={{...styles.field, ...styles.input}}
           />
           <span style={styles.label}>
             Age
             <FormControl
               id="age"
               componentClass="select"
-              placeholder="-"
-              style={styles.input}
+              placeholder="df - df"
+              style={{...styles.field, ...styles.dropdown}}
             >
               {[1, 2, 3].map((age, index) => (
                 <option key={index} value={age}>
@@ -45,7 +45,7 @@ export default function PetitionForm() {
               id="profession"
               componentClass="select"
               placeholder="- Select -"
-              style={styles.input}
+              style={{...styles.field, ...styles.dropdown}}
             >
               {['- Select -', 'Student', 'Parent', 'Educator'].map(
                 (profession, index) => (
@@ -75,15 +75,20 @@ const styles = {
     fontSize: '14px',
     color: 'rgb(91,103,112)'
   },
-  input: {
+  field: {
     justifyContent: 'space-between',
     backgroundColor: 'rgb(226,228,227)',
     color: 'rgb(89, 89, 89, 89)',
     fontFamily: '"Gotham 4r", sans-serif',
-    width: '160px',
     margin: '10px',
     padding: '5px',
     fontSize: '14px',
     lineHeight: '22px'
+  },
+  input: {
+    width: '160px'
+  },
+  dropdown: {
+    width: '100px'
   }
 };
