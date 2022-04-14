@@ -27,8 +27,8 @@ social:
 <hr class="bhm-border"/>
 <div class="column-container" style="margin-top: 35px;">
  <div class="col-50" style="padding-top: 40px;">
-   {{ vid_change_the_voice }} 
- </div>  
+   {{ vid_change_the_voice }}
+ </div>
 <div class="col-50" style="padding-left:20px;">
   <h2 class="bhm-heading" style="margin-top:0;">Change the Face of Computer Science</h2>
   <p>Code.org is celebrating Black History Month by lifting up Black voices on the importance of computer science. We need to provide Black students more opportunity and inspiration to learn and take part in defining the future of technology and our society. Please watch this video with the students in your life and join us in our celebration and our mission!</p>
@@ -46,7 +46,7 @@ social:
 
 <hr class="bhm-border"/>
 <a id="bhm-panel"></a>
-<div class="rounded-box bp3">  
+<div class="rounded-box bp3">
   <h2 class="bhm-heading">Panel: Recruiting Black teachers and students into CS</h2>
   <div class="column-container">
     <div class="col-66">
@@ -59,7 +59,7 @@ social:
     <p style="color:#7665a0">Sign up to receive information on how to tune in, and other Code.org updates.</p>
     <iframe src="http://go.pardot.com/l/153401/2021-02-02/p1svmj" width="100%" height="300" type="text/html" frameborder="0" allowTransparency="true" style="overflow:hidden"></iframe>
     </div>
-  </div>  
+  </div>
   <!--<p>Join us on <a href>zoom</a> or stream on <a href>YouTube</a>.</p>-->
   <h3 style="margin-bottom:25px">Featuring:</h3>
   <div class="column-container">
@@ -112,7 +112,7 @@ social:
     </a>
     <div class="rounded-info">
       <h3 class="rounded-info-h" >Clarence "Skip" Ellis</h3>
-      <p class="smalltext" >First African-American to earn a Ph.D. in Computer Science. A pioneer in groupware and technology that enables real-time collaborative editing of documents.  
+      <p class="smalltext" >First African-American to earn a Ph.D. in Computer Science. A pioneer in groupware and technology that enables real-time collaborative editing of documents.
 </p>
     </div>
   </div>
@@ -210,9 +210,9 @@ social:
 <div class="column-container blackstudentdata" >
   <div class="col-50">
     <h3>Black students have less access to CS</h3>
-    <div class="color-block bp0" style="text-align:middle"><img src="/images/bhm/bhm-graph3.png" alt="Black students, along with Hispanic/Latinx students, and Native American students are less likely to attend a school that teaches a foundational computer science course" >
+    <div class="color-block bp0" style="text-align:middle"><img src="/images/bhm/bhm-graph3.png" alt="Black students, along with Hispanic/Latino/Latina students, and Native American students are less likely to attend a school that teaches a foundational computer science course" >
     </div>
-    <p>However, Black students, along with Hispanic/Latinx students, and Native American students are less likely to attend a school that teaches a foundational computer science course. <a href="https://advocacy.code.org/2020_state_of_cs.pdf" target="_blank">Source</a></p>
+    <p>However, Black students, along with Hispanic/Latino/Latina students, and Native American students are less likely to attend a school that teaches a foundational computer science course. <a href="https://advocacy.code.org/2020_state_of_cs.pdf" target="_blank">Source</a></p>
   </div>
   <div class="col-50">
   <h3>Black students are underrepresented in CS</h3>
