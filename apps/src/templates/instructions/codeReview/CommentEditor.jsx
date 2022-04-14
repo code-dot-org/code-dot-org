@@ -9,6 +9,8 @@ import {EditorState} from '@codemirror/state';
 import {EditorView} from '@codemirror/view';
 import TextAreaWithCode from '@cdo/apps/templates/instructions/codeReview/TextAreaWithCode';
 import TextAreaWithCodeButton from '@cdo/apps/templates/instructions/codeReview/TextAreaWithCodeButton';
+import SlateExampleTextArea from '@cdo/apps/templates/instructions/codeReview/SlateExampleTextArea';
+import ToastExampleTextArea from '@cdo/apps/templates/instructions/codeReview/ToastExampleTextArea';
 // import CodeMirror from 'codemirror';
 // import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 
@@ -85,8 +87,10 @@ export default class CommentEditor extends Component {
             fontFamily: '"Gotham 5r", sans-serif'
           }}
         /> */}
-        <TextAreaWithCodeButton />
-        <TextAreaWithCode />
+        <ToastExampleTextArea />
+        <SlateExampleTextArea />
+        {/* <TextAreaWithCodeButton />
+        <TextAreaWithCode /> */}
         <textarea
           className="code-review-comment-input"
           style={{width: '100%', boxSizing: 'border-box'}}
