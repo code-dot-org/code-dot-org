@@ -13,7 +13,6 @@ And /^I create a new student section named "([^"]*)" assigned to "([^"]*)" versi
     When I press the new section button
     Then I should see the new section dialog
     When I select email login
-    When I select student participant type
     Then I wait to see "#uitest-section-name"
     And I press keys "#{section_name}" for element "#uitest-section-name"
     Then I wait to see "#uitest-assignment-family"
@@ -52,7 +51,6 @@ And /^I create a new student section with course "([^"]*)", version "([^"]*)"(?:
     Then I should see the new section dialog
 
     When I select email login
-    When I select student participant type
     Then I wait to see "#uitest-assignment-family"
 
     When I select the "#{assignment_family}" option in dropdown "uitest-assignment-family"
