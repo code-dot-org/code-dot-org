@@ -8,6 +8,8 @@ describe('TeacherSections', () => {
     asyncLoadSectionData: () => {},
     studentSectionIds: [],
     plSectionIds: [],
+    hiddenPlSectionIds: [],
+    hiddenStudentSectionIds: [],
     asyncLoadComplete: true
   };
 
@@ -28,7 +30,7 @@ describe('TeacherSections', () => {
   it('renders create section area if done loading', () => {
     const wrapper = shallow(<TeacherSections {...defaultProps} />);
     expect(wrapper.find('Connect(ContentContainer)').length).to.equal(1);
-    expect(wrapper.find('Connect(SetupSections)').length).to.equal(1);
+    expect(wrapper.find('Connect(SetUpSections)').length).to.equal(1);
     expect(wrapper.find('Connect(OwnedSections)').length).to.equal(0);
   });
 
