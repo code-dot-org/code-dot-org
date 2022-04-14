@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-08 21:42:17 UTC",
+    "serialized_at": "2022-04-13 17:05:42 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2613,6 +2613,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U7L3 Console Choice"
+        ],
         "progression": "console.log Practice"
       },
       "bonus": false,
@@ -2710,6 +2713,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U7L3 App Choice"
+        ],
         "progression": "Managing Complexity"
       },
       "bonus": false,
