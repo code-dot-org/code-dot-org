@@ -35,7 +35,7 @@ export default function PageContainer({
               initialIsOpen={category.key === currentCategoryKey}
               useColorWhenClosed
             >
-              {category.programmingExpressions.map(doc => (
+              {category.docs.map(doc => (
                 <NavigationItem
                   key={doc.key}
                   text={doc.name}
