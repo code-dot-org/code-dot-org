@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Task: Explore CS access and diversity data
+# Task: Explore CS access data
 
 ##### **Step 1:** <a href="https://advocacy.code.org/stateofcs" target="blank" >Click here</a> to access the 2021 State of Computer Science Education report. 
 ##### **Step 2:** Click on the "Pick a State Handout" and elect your state. 
