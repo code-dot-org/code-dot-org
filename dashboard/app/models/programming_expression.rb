@@ -222,7 +222,7 @@ class ProgrammingExpression < ApplicationRecord
     }
   end
 
-  def summarize_for_navigation
+  def serialize_for_environment_show
     {
       id: id,
       key: key,

@@ -18,13 +18,13 @@ describe('ProgrammingEnvironmentOverview', () => {
           key: 'world',
           name: 'World',
           color: '#acacd2',
-          docs: []
+          programmingExpressions: []
         },
         {
           key: 'sprites',
           name: 'Sprites',
           color: '#df9299',
-          docs: []
+          programmingExpressions: []
         }
       ]
     };
@@ -79,7 +79,7 @@ describe('CategorySection', () => {
           key: 'world',
           name: 'World',
           color: '#FFFFFF',
-          docs: [
+          programmingExpressions: [
             {
               key: 'location_picker'
             },
