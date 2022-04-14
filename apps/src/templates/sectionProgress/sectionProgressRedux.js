@@ -140,5 +140,7 @@ export const jumpToLessonDetails = lessonOfInterest => {
  * @returns {scriptDataPropType} object containing metadata about the unit structure
  */
 export const getCurrentUnitData = state => {
+  console.log(state.sectionProgress.unitDataByUnit);
+  console.log(state.unitSelection.scriptId);
   return state.sectionProgress.unitDataByUnit[state.unitSelection.scriptId];
 };
