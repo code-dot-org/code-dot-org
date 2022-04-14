@@ -1,7 +1,7 @@
 import React from 'react';
 import PetitionForm from './PetitionForm';
 
-export default function PetitionSignUp() {
+export default function PetitionCallToAction() {
   return (
     <>
       <div id="petition-block" style={styles.block}>
