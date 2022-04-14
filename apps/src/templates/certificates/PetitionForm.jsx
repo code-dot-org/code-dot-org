@@ -24,7 +24,7 @@ export default function PetitionForm() {
             type="number"
             style={styles.input}
           />
-          <div>
+          <span style={styles.label}>
             Age
             <FormControl
               id="age"
@@ -38,8 +38,8 @@ export default function PetitionForm() {
                 </option>
               ))}
             </FormControl>
-          </div>
-          <div>
+          </span>
+          <span style={styles.label}>
             I am a
             <FormControl
               id="profession"
@@ -55,7 +55,7 @@ export default function PetitionForm() {
                 )
               )}
             </FormControl>
-          </div>
+          </span>
           <Button bsStyle="primary" key="submit" id="submit" type="submit">
             I agree
           </Button>
@@ -68,6 +68,11 @@ export default function PetitionForm() {
 const styles = {
   form: {
     flex: '1 100%'
+  },
+  label: {
+    whiteSpace: 'nowrap',
+    fontFamily: '"Gotham 4r", sans-serif',
+    fontSize: '14px'
   },
   input: {
     justifyContent: 'space-between',
