@@ -1,42 +1,52 @@
 import React from 'react';
-import {Button, FormGroup} from 'react-bootstrap';
+import {Button, FormControl, FormGroup, Form} from 'react-bootstrap';
 
 export default function PetitionForm() {
   return (
     <>
-      <form id="petition-form" style={styles.form}>
-        <FormGroup>
-          <input
+      <Form inline id="petition-form" style={styles.form}>
+        <FormGroup controlId="petitionForm">
+          <FormControl
             id="name"
             placeholder="Name"
             type="text"
             style={styles.input}
           />
-          <input
+          <FormControl
             id="email"
             placeholder="Email"
             type="text"
             style={styles.input}
           />
-          <input
+          <FormControl
             id="zip-or-country"
             placeholder="ZIP code or country"
             type="number"
             style={styles.input}
           />
-          <div id="age">
+          <div>
             Age
-            <select defaultValue="-" style={styles.input}>
-              {['-', 1, 2, 3].map((age, index) => (
+            <FormControl
+              id="age"
+              componentClass="select"
+              placeholder="-"
+              style={styles.input}
+            >
+              {[1, 2, 3].map((age, index) => (
                 <option key={index} value={age}>
                   {age}
                 </option>
               ))}
-            </select>
+            </FormControl>
           </div>
-          <div id="profession">
+          <div>
             I am a
-            <select defaultValue="- Select -" style={styles.input}>
+            <FormControl
+              id="profession"
+              componentClass="select"
+              placeholder="- Select -"
+              style={styles.input}
+            >
               {['- Select -', 'Student', 'Parent', 'Educator'].map(
                 (profession, index) => (
                   <option key={index} value={profession}>
@@ -44,13 +54,13 @@ export default function PetitionForm() {
                   </option>
                 )
               )}
-            </select>
+            </FormControl>
           </div>
           <Button bsStyle="primary" key="submit" id="submit" type="submit">
             I agree
           </Button>
         </FormGroup>
-      </form>
+      </Form>
     </>
   );
 }
