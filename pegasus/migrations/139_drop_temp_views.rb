@@ -4,8 +4,27 @@ Sequel.migration do
     pegasus_user_storage_ids = "#{CDO.pegasus_db_name}__user_storage_ids".to_sym
 
     unless [:production].include?(rack_env)
-      DB.drop_view(pegasus_storage_apps)
-      DB.drop_view(pegasus_user_storage_ids)
+      begin
+        DB.drop_view(pegasus_storage_apps)
+      rescue Sequel::DatabaseError => e
+        is_unknown_table_error = e.message.include? "Unknown table"
+        if is_unknown_table_error
+          CDO.log.warn "Temporary view for storage apps doesn't exist"
+        else
+          raise e
+        end
+      end
+
+      begin
+        DB.drop_view(pegasus_user_storage_ids)
+      rescue Sequel::DatabaseError => e
+        is_unknown_table_error = e.message.include? "Unknown table"
+        if is_unknown_table_error
+          CDO.log.warn "Temporary view for user_storage_ids doesn't exist"
+        else
+          raise e
+        end
+      end
     end
   end
 
