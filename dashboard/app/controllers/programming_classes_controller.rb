@@ -34,7 +34,7 @@ class ProgrammingClassesController < ApplicationController
     programming_environment_category = @programming_class.programming_environment.categories.find_by_key(programming_class_params[:category_key])
     @programming_class.programming_environment_category_id = programming_environment_category&.id
     if programming_class_params[:methods]
-      programming_class_params[:methods].each_with_index.map do |method_params, i|
+      @programming_class.programming_methods = programming_class_params[:methods].each_with_index.map do |method_params, i|
         if method_params['id']
           method = ProgrammingMethod.find(method_params['id'])
           method.update!(method_params.merge(position: i))
