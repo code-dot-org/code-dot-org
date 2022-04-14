@@ -30,12 +30,14 @@ const defaultProps = {
   selectedSectionId: 11,
   hiddenLessonState: unhiddenState,
   hasNoSections: true,
+  courseParticipantAudience: 'student',
   toggleHiddenScript: () => {},
   sectionsForDropdown: [
     {
       name: 'Section 11',
       id: 11,
-      isAssigned: false
+      isAssigned: false,
+      participantType: 'student'
     }
   ]
 };
