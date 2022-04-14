@@ -32,7 +32,7 @@ export const setInitialData = serverUser => ({
   type: SET_INITIAL_DATA,
   serverUser
 });
-export const setMuteMutic = isBackgroundMusicMuted => ({
+export const setMuteMusic = isBackgroundMusicMuted => ({
   type: SET_MUTE_MUSIC,
   isBackgroundMusicMuted
 });

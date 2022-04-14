@@ -3,6 +3,7 @@ import color from '../../util/color';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
+import {getStore} from '../../redux';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import cookies from 'js-cookie';
 import {setMuteMusic} from '@cdo/apps/templates/currentUserRedux';
@@ -12,11 +13,9 @@ const MUTE_MUSIC = 'mute_music';
 
 function BackgroundMusicMuteButton({isMinecraft, isBackgroundMusicMuted}) {
   const updateMuteMusic = isBackgroundMusicMuted => {
-    var currentMuteValue = isBackgroundMusicMuted;
     new UserPreferences().setMuteMusic(isBackgroundMusicMuted);
-    if (isBackgroundMusicMuted !== currentMuteValue) {
-      setMuteMusic(isBackgroundMusicMuted);
-    }
+    getStore().dispatch(setMuteMusic(isBackgroundMusicMuted));
+
     // find a way to catch an error if we get one
     // and to re-render this so the button is the new text
   };
@@ -41,7 +40,6 @@ function BackgroundMusicMuteButton({isMinecraft, isBackgroundMusicMuted}) {
   };
 
   const displayText = () => {
-    console.log(isBackgroundMusicMuted);
     return isBackgroundMusicMuted
       ? i18n.backgroundMusicOn()
       : i18n.backgroundMusicOff();
@@ -68,13 +66,16 @@ BackgroundMusicMuteButton.propTypes = {
 
 export const styles = {
   backgroundColor: color.table_light_row,
+  color: 'rgb(118, 101, 160)',
   fontSize: 'small',
-  float: 'right'
+  fontWeight: 'bolder',
+  float: 'right',
+  padding: '2px 4px 2px 4px',
+  margin: '2px'
 };
 
 export const craftStyle = {
-  color: color.white,
-  backgroundColor: '#3b3b3b'
+  backgroundColor: '#F2F2F2'
 };
 
 export const UnconnectedBackgroundMusicMuteButton = BackgroundMusicMuteButton;
