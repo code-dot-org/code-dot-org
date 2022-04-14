@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-12 20:46:59 UTC",
+    "serialized_at": "2022-04-13 17:25:42 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3336,7 +3336,13 @@
       "properties": {
         "description": "**Question of the Day:  How can the IOSP model help us to design an app that solves a problem?**\n\n\n\n**Reflect:** Students reflect on the following question in their journals:\n\n* What are you most proud of in your project?\n\nSend students to Code Studio to complete their reflection on their attitudes toward computer science.  Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
         "name": "Reflection\r",
-        "progression_name": "End-of-Unit Survey"
+        "progression_name": "End-of-Unit Survey",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teacher End-Of-Unit Surveys:** While your students complete the survey, we would appreciate you completing a **5-question** teacher survey\n\n## Click Here for Teacher Survey\n(Note: The survey link does not currently work - it will become available at the start of the school year)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "3258b13a-0f05-4f62-bf07-38aca3a745db",
