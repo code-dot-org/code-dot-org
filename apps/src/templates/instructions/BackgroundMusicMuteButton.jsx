@@ -3,25 +3,24 @@ import color from '../../util/color';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
-import {getStore} from '../../redux';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import cookies from 'js-cookie';
 import {setMuteMusic} from '@cdo/apps/templates/currentUserRedux';
-import {
-  callUnmuteBackgroundMusic,
-  callMuteBackgroundMusic
-} from '@cdo/apps/redux/instructions';
 import UserPreferences from '../../lib/util/UserPreferences';
 
 const MUTE_MUSIC = 'mute_music';
 
-function BackgroundMusicMuteButton({isMinecraft, isBackgroundMusicMuted}) {
+function BackgroundMusicMuteButton({
+  isMinecraft,
+  isBackgroundMusicMuted,
+  setMuteMusic,
+  muteBackgroundMusic,
+  unmuteBackgroundMusic
+}) {
   const updateMuteMusic = isBackgroundMusicMuted => {
     new UserPreferences().setMuteMusic(isBackgroundMusicMuted);
-    getStore().dispatch(setMuteMusic(isBackgroundMusicMuted));
-
-    // find a way to catch an error if we get one
-    // and to re-render this so the button is the new text
+    setMuteMusic(isBackgroundMusicMuted);
   };
 
   const handleMuteMusicTabClick = () => {
@@ -29,9 +28,7 @@ function BackgroundMusicMuteButton({isMinecraft, isBackgroundMusicMuted}) {
     updateMuteMusic(isBackgroundMusicMuted);
 
     // Stop or start the music immediately
-    isBackgroundMusicMuted
-      ? getStore().dispatch(callMuteBackgroundMusic())
-      : getStore().dispatch(callUnmuteBackgroundMusic());
+    isBackgroundMusicMuted ? muteBackgroundMusic() : unmuteBackgroundMusic();
 
     // Set or remove the cookie
     isBackgroundMusicMuted
@@ -54,8 +51,12 @@ function BackgroundMusicMuteButton({isMinecraft, isBackgroundMusicMuted}) {
 
   const displayText = () => {
     return isBackgroundMusicMuted
-      ? i18n.backgroundMusicOn()
-      : i18n.backgroundMusicOff();
+      ? i18n.backgroundMusicOff()
+      : i18n.backgroundMusicOn();
+  };
+
+  const displayIcon = () => {
+    return isBackgroundMusicMuted ? 'music-slash' : 'music';
   };
 
   return (
@@ -65,6 +66,7 @@ function BackgroundMusicMuteButton({isMinecraft, isBackgroundMusicMuted}) {
       onClick={handleMuteMusicTabClick}
       style={{...styles, ...(isMinecraft ? craftStyle : {})}}
     >
+      {<FontAwesome icon={displayIcon()} />}
       {displayText()}
     </button>
   );
@@ -74,7 +76,10 @@ BackgroundMusicMuteButton.propTypes = {
   isMinecraft: PropTypes.bool.isRequired,
 
   // from redux
-  isBackgroundMusicMuted: PropTypes.bool.isRequired
+  setMuteMusic: PropTypes.func.isRequired,
+  isBackgroundMusicMuted: PropTypes.bool.isRequired,
+  muteBackgroundMusic: PropTypes.func.isRequired,
+  unmuteBackgroundMusic: PropTypes.func.isRequired
 };
 
 export const styles = {
@@ -95,17 +100,13 @@ export const UnconnectedBackgroundMusicMuteButton = BackgroundMusicMuteButton;
 
 export default connect(
   state => ({
-    isBackgroundMusicMuted: state.currentUser.isBackgroundMusicMuted
+    isBackgroundMusicMuted: state.currentUser.isBackgroundMusicMuted,
+    muteBackgroundMusic: state.instructions.muteBackgroundMusic,
+    unmuteBackgroundMusic: state.instructions.unmuteBackgroundMusic
   }),
   dispatch => ({
     setMuteMusic(isBackgroundMusicMuted) {
       dispatch(setMuteMusic(isBackgroundMusicMuted));
-    },
-    unmuteBackgroundMusic() {
-      dispatch(callUnmuteBackgroundMusic());
-    },
-    muteBackgroundMusic() {
-      dispatch(callMuteBackgroundMusic());
     }
   })
 )(BackgroundMusicMuteButton);
