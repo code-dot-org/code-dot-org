@@ -25,6 +25,7 @@ const styles = {
     flex: '1 100%'
   },
   message: {
+    flex: '1 100%',
     fontFamily: '"Gotham 5r", sans-serif',
     color: 'rgb(91,103,112)',
     fontSize: '22px',

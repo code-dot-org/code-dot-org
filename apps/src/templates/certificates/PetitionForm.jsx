@@ -72,7 +72,8 @@ const styles = {
   label: {
     whiteSpace: 'nowrap',
     fontFamily: '"Gotham 4r", sans-serif',
-    fontSize: '14px'
+    fontSize: '14px',
+    color: 'rgb(91,103,112)'
   },
   input: {
     justifyContent: 'space-between',
