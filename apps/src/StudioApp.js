@@ -999,10 +999,8 @@ StudioApp.prototype.reset = function(shouldPlayOpeningAnimation) {
  */
 StudioApp.prototype.runButtonClick = function() {};
 
-/**
- * Override to change behavior.
- */
 StudioApp.prototype.stopBackgroundMusic = function() {};
+StudioApp.prototype.startBackgroundMusic = function() {};
 
 StudioApp.prototype.addChangeHandler = function(newHandler) {
   if (!this.changeHandlers) {
