@@ -79,19 +79,4 @@ describe('TeacherDashboard', () => {
       '/manage_students'
     );
   });
-
-  it('shows pick a course message if there is no student progress', () => {
-    const location = {pathname: '/progress'};
-    const wrapper = shallow(
-      <TeacherDashboard
-        {...DEFAULT_PROPS}
-        location={location}
-        courseVersionsWithProgress={{}}
-      />
-    );
-    expect(wrapper.find('SafeMarkdown').length).to.equal(1);
-    expect(wrapper.find('SafeMarkdown').props().markdown).to.equal(
-      "Your section doesn't have any student progress! Click **Edit Section Details** above to assign a course to your section."
-    );
-  });
 });
