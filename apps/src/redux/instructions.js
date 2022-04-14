@@ -32,8 +32,6 @@ const SET_TTS_AUTOPLAY_ENABLED_FOR_LEVEL =
   'instructions/SET_TTS_AUTOPLAY_ENABLED_FOR_LEVEL';
 const SET_CODE_REVIEW_ENABLED_FOR_LEVEL =
   'instructions/SET_CODE_REVIEW_ENABLED_FOR_LEVEL';
-const UNMUTE_BACKGROUND_MUSIC = 'instructions/UNMUTE_BACKGROUND_MUSIC';
-const MUTE_BACKGROUND_MUSIC = 'instruction/MUTE_BACKGROUND_MUSIC';
 
 /**
  * Some scenarios:
@@ -76,8 +74,8 @@ const instructionsInitialState = {
   levelVideos: [],
   mapReference: undefined,
   referenceLinks: [],
-  muteBackgroundMusic: undefined,
-  unmuteBackgroundMusic: undefined
+  muteBackgroundMusic: () => {},
+  unmuteBackgroundMusic: () => {}
 };
 
 export default function reducer(state = {...instructionsInitialState}, action) {
@@ -160,20 +158,6 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       renderedHeight: Math.min(action.maxAvailableHeight, state.renderedHeight),
       expandedHeight: Math.min(action.maxAvailableHeight, state.expandedHeight)
     });
-  }
-
-  if (action.type === UNMUTE_BACKGROUND_MUSIC) {
-    state.unmuteBackgroundMusic();
-    return {
-      ...state
-    };
-  }
-
-  if (action.type === MUTE_BACKGROUND_MUSIC) {
-    state.muteBackgroundMusic();
-    return {
-      ...state
-    };
   }
 
   if (action.type === SET_ALLOW_INSTRUCTIONS_RESIZE) {
@@ -305,14 +289,6 @@ export const setInstructionsMaxHeightAvailable = height => ({
 export const setAllowInstructionsResize = allowResize => ({
   type: SET_ALLOW_INSTRUCTIONS_RESIZE,
   allowResize
-});
-
-export const callUnmuteBackgroundMusic = () => ({
-  type: UNMUTE_BACKGROUND_MUSIC
-});
-
-export const callMuteBackgroundMusic = () => ({
-  type: MUTE_BACKGROUND_MUSIC
 });
 
 export const setHasAuthoredHints = hasAuthoredHints => ({
