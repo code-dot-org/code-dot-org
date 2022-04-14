@@ -222,6 +222,9 @@ class BubbleChoice < DSLDefined
       if new_sublevel.is_a? BubbleChoice
         raise "BubbleChoice level #{name.dump} cannot contain BubbleChoice level #{new_sublevel.name.dump}"
       end
+      if new_sublevel.is_a? LevelGroup
+        raise "BubbleChoice level #{name.dump} cannot contain LevelGroup level #{new_sublevel.name.dump}"
+      end
       ParentLevelsChildLevel.create!(
         child_level: new_sublevel,
         kind: ParentLevelsChildLevel::SUBLEVEL,

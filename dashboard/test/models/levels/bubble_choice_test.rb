@@ -430,4 +430,12 @@ DSL
     end
     assert_includes e.message, 'cannot contain BubbleChoice level'
   end
+
+  test 'bubble choice level cannot contain level group' do
+    level_group = create :level_group
+    e = assert_raises do
+      create :bubble_choice_level, sublevels: [level_group]
+    end
+    assert_includes e.message, 'cannot contain LevelGroup level'
+  end
 end
