@@ -69,6 +69,7 @@ class CourseVersion < ApplicationRecord
   delegate :can_be_instructor?, to: :content_root, allow_nil: true
   delegate :course_assignable?, to: :content_root, allow_nil: true
   delegate :can_view_version?, to: :content_root, allow_nil: true
+  delegate :has_student_progress?, to: :content_root, allow_nil: true
 
   # Seeding method for creating / updating / deleting the CourseVersion for the given
   # potential content root, i.e. a Script or UnitGroup.
@@ -151,6 +152,14 @@ class CourseVersion < ApplicationRecord
     latest_stable_version == content_root
   end
 
+  def self.course_versions_with_student_progress(student_unit_ids, user)
+    CourseVersion.all.select {|cv| cv.has_student_progress?(student_unit_ids) && cv.course_assignable?(user)}
+  end
+
+  def self.course_versions_with_student_progress_info(user, student_unit_ids, locale_code = 'en-us')
+    course_versions_with_student_progress(student_unit_ids, user).map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
+  end
+
   def summarize_for_assignment_dropdown(user, locale_code)
     [
       id,
@@ -159,7 +168,7 @@ class CourseVersion < ApplicationRecord
         key: key,
         version_year: content_root_type == 'UnitGroup' ? content_root.localized_version_title : display_name,
         content_root_id: content_root.id,
-        name: content_root.localized_title,
+        name: content_root.launched? ? content_root.localized_title : content_root.localized_title + ' *',
         path: content_root.link,
         type: content_root_type,
         is_stable: stable?,

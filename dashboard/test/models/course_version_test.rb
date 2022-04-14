@@ -1,6 +1,156 @@
 require 'test_helper'
 
 class CourseVersionTest < ActiveSupport::TestCase
+  setup_all do
+    @student = create :student
+    @teacher = create :teacher
+    @facilitator = create :facilitator
+    @universal_instructor = create :universal_instructor
+    @plc_reviewer = create :plc_reviewer
+    @levelbuilder = create :levelbuilder
+
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
+
+    @unit_teacher_to_students = create(:script, name: 'unit-teacher-to-student2', family_name: 'family-2', version_year: '1991', is_course: true, published_state: 'stable')
+    CourseOffering.add_course_offering(@unit_teacher_to_students)
+    @unit_teacher_to_students2 = create(:script, name: 'unit-teacher-to-student3', family_name: 'family-2', version_year: '1992', is_course: true, published_state: 'stable')
+    CourseOffering.add_course_offering(@unit_teacher_to_students2)
+    @unit_facilitator_to_teacher = create(:script, name: 'unit-facilitator-to-teacher2', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, family_name: 'family-3', version_year: '1991', is_course: true, published_state: 'stable')
+    CourseOffering.add_course_offering(@unit_facilitator_to_teacher)
+
+    @beta_unit = create(:script, name: 'beta-unit', family_name: 'beta', version_year: '1991', is_course: true, published_state: 'beta')
+    CourseOffering.add_course_offering(@beta_unit)
+
+    @in_development_unit = create(:script, name: 'in-development-unit2', family_name: 'development', version_year: '1991', is_course: true, published_state: 'in_development')
+    CourseOffering.add_course_offering(@in_development_unit)
+  end
+
+  setup do
+    @unit_group = create(:unit_group, name: 'course-instructed-by-teacher2', family_name: 'family-1', version_year: '1991', published_state: 'stable')
+    @unit_in_course = create(:script, name: 'unit-in-teacher-instructed-course2', instructor_audience: nil, participant_audience: nil, instruction_type: nil, published_state: nil)
+    create(:unit_group_unit, script: @unit_in_course, unit_group: @unit_group, position: 1)
+    @unit_in_course.reload
+    @unit_group.reload
+    CourseOffering.add_course_offering(@unit_group)
+
+    @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+    @pilot_unit = create :script, pilot_experiment: 'my-experiment', family_name: 'family-4', version_year: '1991', is_course: true, published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
+    CourseOffering.add_course_offering(@pilot_unit)
+
+    @pilot_instructor = create :facilitator, pilot_experiment: 'my-pl-experiment'
+    @pilot_pl_unit = create :script, pilot_experiment: 'my-pl-experiment', family_name: 'family-5', version_year: '1991', is_course: true, published_state: SharedCourseConstants::PUBLISHED_STATE.pilot, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    CourseOffering.add_course_offering(@pilot_pl_unit)
+
+    @partner = create :teacher, pilot_experiment: 'my-editor-experiment', editor_experiment: 'ed-experiment'
+    @partner_unit = create :script, pilot_experiment: 'my-editor-experiment', editor_experiment: 'ed-experiment', family_name: 'family-11', version_year: '1991', is_course: true, published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
+    CourseOffering.add_course_offering(@partner_unit)
+  end
+  test 'get course versions with student progress for student should return no versions' do
+    assert_equal CourseVersion.course_versions_with_student_progress([], @student).length, 0
+  end
+
+  test 'get course versions with student progress for levelbuilder should return all versions where followers in section have progress' do
+    expected_course_version_info = [
+      @unit_group.course_version.id,
+      @unit_teacher_to_students.course_version.id,
+      @pilot_unit.course_version.id,
+      @partner_unit.course_version.id,
+      @pilot_pl_unit.course_version.id,
+      @in_development_unit.course_version.id,
+      @beta_unit.course_version.id,
+      @unit_facilitator_to_teacher.course_version.id
+    ].sort
+
+    student_unit_ids = [
+      @unit_group.id,
+      @unit_teacher_to_students.id,
+      @pilot_unit.id,
+      @partner_unit.id,
+      @pilot_pl_unit.id,
+      @in_development_unit.id,
+      @beta_unit.id,
+      @unit_facilitator_to_teacher.id
+    ]
+
+    assert_equal CourseVersion.course_versions_with_student_progress_info(@levelbuilder, student_unit_ids).keys.sort, expected_course_version_info
+  end
+
+  test 'in course versions with progress summary display names of course version include star if they are not launched' do
+    expected_course_version_names = [
+      @unit_group.course_version.display_name,
+      @unit_teacher_to_students.course_version.display_name,
+      @pilot_unit.course_version.display_name + " *",
+      @partner_unit.course_version.display_name + " *",
+      @pilot_pl_unit.course_version.display_name + " *",
+      @in_development_unit.course_version.display_name + " *",
+      @beta_unit.course_version.display_name + " *",
+      @unit_facilitator_to_teacher.course_version.display_name
+    ].sort
+
+    student_unit_ids = [
+      @unit_group.id,
+      @unit_teacher_to_students.id,
+      @pilot_unit.id,
+      @partner_unit.id,
+      @pilot_pl_unit.id,
+      @in_development_unit.id,
+      @beta_unit.id,
+      @unit_facilitator_to_teacher.id
+    ]
+
+    assert_equal CourseVersion.course_versions_with_student_progress_info(@levelbuilder, student_unit_ids).values.map {|co| co[:display_name]}.sort, expected_course_version_names
+  end
+
+  test 'get course versions with student progress for pilot teacher should return versions where pilot teacher can be instructor' do
+    expected_course_version_info = [
+      @pilot_unit.course_version.id
+    ].sort
+
+    assert_equal CourseVersion.course_versions_with_student_progress_info(@pilot_teacher, [@pilot_unit.id]).keys.sort, expected_course_version_info
+  end
+
+  test 'get course versions with student progress for teacher should only return versions where they can be the instructor' do
+    expected_course_version_info = [
+      @unit_group.course_version.id,
+      @unit_teacher_to_students.course_version.id
+    ].sort
+
+    student_unit_ids = [
+      @unit_group.id,
+      @unit_teacher_to_students.id,
+      @unit_facilitator_to_teacher.id
+    ]
+
+    assert_equal CourseVersion.course_versions_with_student_progress_info(@teacher, student_unit_ids).keys.sort, expected_course_version_info
+  end
+
+  test 'get course versions with student progress for facilitator should return all versions, amd units where facilitator can be instructor and followers in section have progress' do
+    expected_course_version_info = [
+      @unit_group.course_version.id,
+      @unit_teacher_to_students.course_version.id,
+      @unit_facilitator_to_teacher.course_version.id
+    ].sort
+
+    student_unit_ids = [
+      @unit_group.id,
+      @unit_teacher_to_students.id,
+      @unit_facilitator_to_teacher.id
+    ]
+
+    assignable_course_versions = CourseVersion.course_versions_with_student_progress_info(@facilitator, student_unit_ids)
+
+    assert_equal assignable_course_versions.keys.sort, expected_course_version_info
+
+    unit_group_units = assignable_course_versions[@unit_group.course_version.id][:units]
+    assert_equal unit_group_units.keys, [@unit_in_course.id]
+
+    teacher_to_student_units = assignable_course_versions[@unit_teacher_to_students.course_version.id][:units]
+    assert_equal teacher_to_student_units.keys, [@unit_teacher_to_students.id, @unit_teacher_to_students2.id]
+
+    facilitator_to_teacher_units = assignable_course_versions[@unit_facilitator_to_teacher.course_version.id][:units]
+    assert_equal facilitator_to_teacher_units.keys, [@unit_facilitator_to_teacher.id]
+  end
+
   test "course version associations" do
     course_version = create :course_version
     assert_instance_of UnitGroup, course_version.content_root
