@@ -433,6 +433,14 @@ StudioApp.prototype.init = function(config) {
     config.loadAudio();
   }
 
+  if (config.stopBackgroundMusic) {
+    this.stopBackgroundMusic = config.stopBackgroundMusic;
+  }
+
+  if (config.startBackgroundMusic) {
+    this.startBackgroundMusic = config.startBackgroundMusic;
+  }
+
   if (this.editCode) {
     this.handleEditCode_(config);
   }
@@ -998,9 +1006,6 @@ StudioApp.prototype.reset = function(shouldPlayOpeningAnimation) {
  * Override to change run behavior.
  */
 StudioApp.prototype.runButtonClick = function() {};
-
-StudioApp.prototype.stopBackgroundMusic = function() {};
-StudioApp.prototype.startBackgroundMusic = function() {};
 
 StudioApp.prototype.addChangeHandler = function(newHandler) {
   if (!this.changeHandlers) {

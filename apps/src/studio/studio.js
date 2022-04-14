@@ -2206,16 +2206,16 @@ Studio.init = function(config) {
     config.level.muteMusic || cookies.get('mute_music') === 'true'
   );
 
-  Studio.stopBackgroundMusic = function() {
+  config.stopBackgroundMusic = function() {
     Studio.musicController.stop();
   };
 
-  Studio.startBackgroundMusic = function() {
+  config.startBackgroundMusic = function() {
     Studio.musicController.play();
   };
 
-  studioApp().stopBackgroundMusic = this.stopBackgroundMusic.bind(this);
-  studioApp().startBackgroundMusic = this.startBackgroundMusic.bind(this);
+  //studioApp().stopBackgroundMusic = this.stopBackgroundMusic.bind(this);
+  //studioApp().startBackgroundMusic = this.startBackgroundMusic.bind(this);
 
   /**
    * Defines the set of possible movement sound effects for each playlab actor.
