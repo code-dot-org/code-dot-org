@@ -1,5 +1,6 @@
 import React from 'react';
 import {Button, FormControl, FormGroup, Form} from 'react-bootstrap';
+import {range} from 'lodash';
 
 export default function PetitionForm() {
   return (
@@ -29,10 +30,9 @@ export default function PetitionForm() {
             <FormControl
               id="age"
               componentClass="select"
-              placeholder="df - df"
               style={{...styles.field, ...styles.dropdown}}
             >
-              {[1, 2, 3].map((age, index) => (
+              {['-', ...range(1, 101)].map((age, index) => (
                 <option key={index} value={age}>
                   {age}
                 </option>
@@ -44,19 +44,29 @@ export default function PetitionForm() {
             <FormControl
               id="profession"
               componentClass="select"
-              placeholder="- Select -"
               style={{...styles.field, ...styles.dropdown}}
             >
-              {['- Select -', 'Student', 'Parent', 'Educator'].map(
-                (profession, index) => (
-                  <option key={index} value={profession}>
-                    {profession}
-                  </option>
-                )
-              )}
+              {[
+                '- Select -',
+                'Student',
+                'Parent',
+                'Educator',
+                'Software Engineer',
+                'None of the Above'
+              ].map((profession, index) => (
+                <option key={index} value={profession}>
+                  {profession}
+                </option>
+              ))}
             </FormControl>
           </span>
-          <Button bsStyle="primary" key="submit" id="submit" type="submit">
+          <Button
+            style={styles.button}
+            bsStyle="primary"
+            key="submit"
+            id="submit"
+            type="submit"
+          >
             I agree
           </Button>
         </FormGroup>
