@@ -7,7 +7,6 @@
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
-      "pilot_experiment": "20-21-virtual-AYW-CSP",
       "student_detail_progress_view": true,
       "teacher_resources": [
         [
@@ -28,10 +27,10 @@
     "new_name": null,
     "family_name": "vpl-csp",
     "serialized_at": "2022-04-08 15:41:08 UTC",
-    "published_state": "pilot",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instructor_audience": "facilitator",
+    "participant_audience": "teacher",
     "seeding_key": {
       "script.name": "vpl-csp-2021"
     }

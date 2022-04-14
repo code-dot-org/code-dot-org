@@ -23,7 +23,7 @@
     "new_name": null,
     "family_name": "self-paced-pl-csd5",
     "serialized_at": "2022-03-31 15:10:07 UTC",
-    "published_state": "beta",
+    "published_state": "stable",
     "instruction_type": "self_paced",
     "instructor_audience": "universal_instructor",
     "participant_audience": "teacher",
