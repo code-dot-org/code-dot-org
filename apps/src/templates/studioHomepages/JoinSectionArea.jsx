@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import JoinSectionNotifications from './JoinSectionNotifications';
 import JoinSection from './JoinSection';
-import StudentSections from './StudentSections';
+import ParticipantSections from './ParticipantSections';
 import shapes from './shapes';
 import ContentContainer from '../ContentContainer';
 import i18n from '@cdo/locale';
@@ -66,7 +66,7 @@ export default function JoinSectionArea({
         isTeacher={isTeacher}
       />
       {joinedStudentSections?.length > 0 && (
-        <StudentSections
+        <ParticipantSections
           sections={joinedStudentSections}
           isTeacher={isTeacher}
           updateSectionsResult={updateSectionsResult}
@@ -74,7 +74,7 @@ export default function JoinSectionArea({
         />
       )}
       {joinedPlSections?.length > 0 && isTeacher && (
-        <StudentSections
+        <ParticipantSections
           sections={joinedPlSections}
           isTeacher={isTeacher}
           isPlSections={true}

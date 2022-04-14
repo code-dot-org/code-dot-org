@@ -7,7 +7,7 @@ import SectionsAsStudentTable from './SectionsAsStudentTable';
 import color from '@cdo/apps/util/color';
 import styleConstants from '@cdo/apps/styleConstants';
 
-export default class StudentSections extends Component {
+export default class ParticipantSections extends Component {
   static propTypes = {
     sections: PropTypes.array.isRequired,
     isTeacher: PropTypes.bool,
