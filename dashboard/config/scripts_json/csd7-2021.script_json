@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-11 12:08:36 UTC",
+    "serialized_at": "2022-04-13 21:23:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -12882,6 +12882,16 @@
       }
     },
     {
+      "key": "516ee8d7-e5f6-41c3-a27e-a6a22c67e3e2",
+      "properties": {
+        "description": "Create a machine learning model using a real-world dataset"
+      },
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Make a Machine Learning App",
+        "objective.key": "516ee8d7-e5f6-41c3-a27e-a6a22c67e3e2"
+      }
+    },
+    {
       "key": "554a2d22-308b-4e01-be9d-b8bd9287a065",
       "properties": {
         "description": "Look for patterns in data to help make a decision"
@@ -13079,6 +13089,16 @@
       "seeding_key": {
         "lesson.key": "Customizing Apps",
         "objective.key": "e7f59f67-a615-43b9-acc3-39dc2ebda34a"
+      }
+    },
+    {
+      "key": "eca7e19d-20f2-41f4-a1eb-9d90257b7f24",
+      "properties": {
+        "description": "Create an app that uses a machine learning model"
+      },
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Make a Machine Learning App",
+        "objective.key": "eca7e19d-20f2-41f4-a1eb-9d90257b7f24"
       }
     },
     {
