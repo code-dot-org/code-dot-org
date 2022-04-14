@@ -1770,6 +1770,14 @@ class User < ApplicationRecord
     user_course_data + user_script_data
   end
 
+  def sections_as_student_participant
+    sections_as_student.select {|s| !s.pl_section?}
+  end
+
+  def sections_as_pl_participant
+    sections_as_student.select(&:pl_section?)
+  end
+
   def all_sections
     sections_as_teacher = student? ? [] : sections.to_a
     sections_as_teacher.concat(sections_as_student).uniq
