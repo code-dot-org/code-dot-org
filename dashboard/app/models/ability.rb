@@ -85,11 +85,11 @@ class Ability
     can [:read], ProgrammingClass do |programming_class|
       can? :read, programming_class.programming_environment
     end
-    cannot :index, ProgrammingExpression
 
     can [:read, :show_by_keys, :docs_show], ProgrammingExpression do |expression|
       can? :read, expression.programming_environment
     end
+    cannot :index, ProgrammingExpression
 
     if user.persisted?
       can :manage, user
