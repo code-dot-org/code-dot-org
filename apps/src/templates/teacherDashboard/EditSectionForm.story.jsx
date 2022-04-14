@@ -57,8 +57,11 @@ export default storybook => {
         handleClose={action('handleClose')}
         editSectionProperties={action('editSectionProperties')}
         courseOfferings={courseOfferings}
-        sections={{participantType: 'student'}}
-        section={testSection}
+        sections={{}}
+        section={{
+          ...testSection,
+          participantType: 'student'
+        }}
         isSaveInProgress={true}
         hiddenLessonState={{}}
         updateHiddenScript={() => {}}
