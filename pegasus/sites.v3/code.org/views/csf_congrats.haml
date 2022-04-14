@@ -1,3 +1,6 @@
+- studio_redirect_url = CDO.studio_url("/congrats?s=#{Base64.urlsafe_encode64(course)}")
+%script{type: 'text/javascript', src: webpack_asset_path('js/code.org/views/csf_congrats.js'), 'data': {studio_redirect_url: studio_redirect_url}}
+
 %script{type: "text/javascript", src: "/js/csf-congrats.js"}
 %link{:href=>"/shared/css/course-blocks.css", :type=>"text/css", :rel=>"stylesheet"}
 
