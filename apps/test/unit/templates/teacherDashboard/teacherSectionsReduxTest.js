@@ -1379,8 +1379,8 @@ describe('teacherSectionsRedux', () => {
       );
       server.respondWith(
         'GET',
-        '/dashboardapi/sections/valid_course_offerings',
-        successResponse([])
+        '/dashboardapi/sections/available_participant_types',
+        successResponse({availableParticipantTypes: ['student']})
       );
       server.respondWith(
         'GET',

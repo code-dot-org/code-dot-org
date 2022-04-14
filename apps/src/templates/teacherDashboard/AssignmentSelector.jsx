@@ -11,8 +11,22 @@ const noAssignment = '__noAssignment__';
 const decideLater = '__decideLater__';
 const isValidAssignment = id => id !== noAssignment && id !== decideLater;
 
-export const getCourseOfferingsByCategory = courseOfferings => {
-  let orderedCourseOfferings = _.orderBy(courseOfferings, 'display_name');
+const participantTypesByAudience = {
+  student: ['student'],
+  teacher: ['student', 'teacher'],
+  facilitator: ['student', 'teacher', 'facilitator']
+};
+
+export const getCourseOfferingsByCategory = (
+  courseOfferings,
+  participantType
+) => {
+  const filterCourseOfferings = _.filter(courseOfferings, function(offering) {
+    return participantTypesByAudience[participantType].includes(
+      offering.participant_audience
+    );
+  });
+  let orderedCourseOfferings = _.orderBy(filterCourseOfferings, 'display_name');
   orderedCourseOfferings = _.orderBy(
     orderedCourseOfferings,
     'is_featured',
@@ -195,7 +209,7 @@ export default class AssignmentSelector extends Component {
   };
 
   render() {
-    const {dropdownStyle, disabled, courseOfferings} = this.props;
+    const {dropdownStyle, disabled, courseOfferings, section} = this.props;
     const {
       selectedCourseOfferingId,
       selectedCourseVersionId,
@@ -203,7 +217,8 @@ export default class AssignmentSelector extends Component {
     } = this.state;
 
     const courseOfferingsByCategories = getCourseOfferingsByCategory(
-      courseOfferings
+      courseOfferings,
+      section.participantType
     );
 
     const selectedCourseOffering = courseOfferings[selectedCourseOfferingId];
