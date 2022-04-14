@@ -1,34 +1,16 @@
 import React from 'react';
-import sinon from 'sinon';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedOwnedSections as OwnedSections} from '@cdo/apps/templates/teacherDashboard/OwnedSections';
 
 const defaultProps = {
-  studentSectionIds: [11, 12, 13],
-  plSectionIds: [],
-  hiddenPlSectionIds: [],
-  hiddenStudentSectionIds: [],
-  asyncLoadComplete: true,
+  sectionIds: [11, 12, 13],
+  hiddenSectionIds: [],
   beginEditingSection: () => {},
-  beginImportRosterFlow: () => {},
   isPlSections: false
 };
 
 describe('OwnedSections', () => {
-  it('renders SetUpSections when no sections have been created', () => {
-    const wrapper = shallow(
-      <OwnedSections {...defaultProps} studentSectionIds={[]} />
-    );
-    expect(wrapper.find('Connect(SetUpSections)').length).to.equal(1);
-  });
-
-  it('renders spinner when sections have not yet loaded', () => {
-    const props = {...defaultProps, asyncLoadComplete: false};
-    const wrapper = shallow(<OwnedSections {...props} />);
-    expect(wrapper.find('Spinner').length).to.equal(1);
-  });
-
   it('renders a OwnedSectionsTable with no extra button if no archived sections', () => {
     const wrapper = shallow(<OwnedSections {...defaultProps} />);
     expect(wrapper.find('Connect(OwnedSectionsTable)').length).to.equal(1);
@@ -36,9 +18,9 @@ describe('OwnedSections', () => {
     expect(wrapper.find('Button').length).to.equal(0);
   });
 
-  it('renders a OwnedSectionsTable with view button if archived student sections', () => {
+  it('renders a OwnedSectionsTable with view button if archived sections', () => {
     const wrapper = shallow(
-      <OwnedSections {...defaultProps} hiddenStudentSectionIds={[13]} />
+      <OwnedSections {...defaultProps} hiddenSectionIds={[13]} />
     );
     expect(wrapper.find('Connect(OwnedSectionsTable)').length).to.equal(1);
     // Button to view hidden (notification not counted)
@@ -54,7 +36,7 @@ describe('OwnedSections', () => {
 
   it('renders two OwnedSectionsTables if view archived sections clicked', () => {
     const wrapper = shallow(
-      <OwnedSections {...defaultProps} hiddenStudentSectionIds={[13]} />
+      <OwnedSections {...defaultProps} hiddenSectionIds={[13]} />
     );
     wrapper
       .find('Button')
@@ -83,7 +65,7 @@ describe('OwnedSections', () => {
 
   it('renders just unhidden SectionsAsStudentTable if hide sections clicked', () => {
     const wrapper = shallow(
-      <OwnedSections {...defaultProps} hiddenStudentSectionIds={[13]} />
+      <OwnedSections {...defaultProps} hiddenSectionIds={[13]} />
     );
     // Show archived sections
     wrapper
@@ -99,18 +81,5 @@ describe('OwnedSections', () => {
     expect(
       wrapper.find('Connect(OwnedSectionsTable)').props().sectionIds
     ).to.deep.equal([11, 12]);
-  });
-
-  it('renders a SetUpSections about adding a new section', () => {
-    const spy = sinon.spy();
-    const wrapper = shallow(
-      <OwnedSections
-        {...defaultProps}
-        sectionIds={[1, 2, 3]}
-        beginEditingSection={spy}
-      />
-    );
-    expect(spy).not.to.have.been.called;
-    expect(wrapper.find('Connect(SetUpSections)').length).to.equal(1);
   });
 });

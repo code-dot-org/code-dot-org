@@ -4,7 +4,11 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import ContentContainer from '../ContentContainer';
 import OwnedSections from '../teacherDashboard/OwnedSections';
-import {asyncLoadSectionData} from '../teacherDashboard/teacherSectionsRedux';
+import {
+  asyncLoadSectionData,
+  hiddenPlSectionIds,
+  hiddenStudentSectionIds
+} from '../teacherDashboard/teacherSectionsRedux';
 import SetUpSections from './SetUpSections';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 
@@ -14,6 +18,8 @@ class TeacherSections extends Component {
     asyncLoadSectionData: PropTypes.func.isRequired,
     studentSectionIds: PropTypes.array,
     plSectionIds: PropTypes.array,
+    hiddenPlSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
+    hiddenStudentSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     asyncLoadComplete: PropTypes.bool
   };
 
@@ -22,6 +28,13 @@ class TeacherSections extends Component {
   }
 
   render() {
+    const {
+      plSectionIds,
+      studentSectionIds,
+      hiddenPlSectionIds,
+      hiddenStudentSectionIds
+    } = this.props;
+
     const hasSections =
       this.props.studentSectionIds?.length > 0 ||
       this.props.plSectionIds?.length > 0;
@@ -38,12 +51,19 @@ class TeacherSections extends Component {
         </ContentContainer>
         {this.props.studentSectionIds?.length > 0 && (
           <ContentContainer heading={i18n.sectionsTitle()}>
-            <OwnedSections />
+            <OwnedSections
+              sectionIds={studentSectionIds}
+              hiddenSectionIds={hiddenStudentSectionIds}
+            />
           </ContentContainer>
         )}
         {this.props.plSectionIds?.length > 0 && (
           <ContentContainer heading={i18n.plSectionsTitle()}>
-            <OwnedSections isPlSections={true} />
+            <OwnedSections
+              isPlSections={true}
+              sectionIds={plSectionIds}
+              hiddenSectionIds={hiddenPlSectionIds}
+            />
           </ContentContainer>
         )}
       </div>
@@ -55,6 +75,8 @@ export default connect(
   state => ({
     studentSectionIds: state.teacherSections.studentSectionIds,
     plSectionIds: state.teacherSections.plSectionIds,
+    hiddenPlSectionIds: hiddenPlSectionIds(state),
+    hiddenStudentSectionIds: hiddenStudentSectionIds(state),
     asyncLoadComplete: state.teacherSections.asyncLoadComplete
   }),
   {
