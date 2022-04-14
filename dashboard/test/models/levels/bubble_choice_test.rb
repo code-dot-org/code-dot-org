@@ -422,4 +422,12 @@ DSL
     assert_equal [@sublevel1], bubble_choice.sublevels
     assert_equal [contained_level, @sublevel1], bubble_choice.child_levels.to_a
   end
+
+  test 'bubble choice cannot contain another bubble choice level' do
+    bubble_choice = create :bubble_choice_level
+    e = assert_raises do
+      create :bubble_choice_level, sublevels: [bubble_choice]
+    end
+    assert_includes e.message, 'cannot contain BubbleChoice level'
+  end
 end
