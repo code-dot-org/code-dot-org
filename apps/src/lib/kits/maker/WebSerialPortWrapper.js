@@ -7,9 +7,11 @@ export default class WebSerialPortWrapper extends EventEmitter {
     this.port = port;
     this.portOpen = false;
 
-    const portInfo = port.getInfo();
-    this.vendorId = portInfo.usbVendorId;
-    this.productId = portInfo.usbProductId;
+    if (port) {
+      const portInfo = port.getInfo();
+      this.vendorId = portInfo.usbVendorId;
+      this.productId = portInfo.usbProductId;
+    }
 
     this.writer = null;
     this.reader = null;
