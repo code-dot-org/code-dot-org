@@ -63,7 +63,7 @@ class ProgrammingClass < ApplicationRecord
     programming_class.programming_methods =
       properties[:methods].map do |method_config|
         method = ProgrammingMethod.find_or_initialize_by(programming_class_id: programming_class.id, key: method_config['key'])
-        method.update! method_config
+        method.update!(method_config, seed_in_progress: true)
         method
       end
     programming_class.id

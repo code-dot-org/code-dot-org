@@ -46,4 +46,11 @@ class ProgrammingMethodTest < ActiveSupport::TestCase
     overload_programming_method = build :programming_method, programming_class: programming_class, overloaded_by: programming_method.key
     assert overload_programming_method.valid?
   end
+
+  test "validation is not run when being seeded" do
+    programming_method = create :programming_method
+    programming_method.overloaded_by = programming_method.key
+    programming_method.seed_in_progress = true
+    assert programming_method.valid?
+  end
 end
