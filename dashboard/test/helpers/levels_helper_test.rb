@@ -309,7 +309,7 @@ class LevelsHelperTest < ActionView::TestCase
 
   test "app_options sets level_requires_channel to false if level is channel backed with contained levels" do
     @level = create :applab
-    contained_level = create :level
+    contained_level = create :multi
     @level.update(contained_level_names: [contained_level.name])
     assert_equal false, app_options['levelRequiresChannel']
   end
@@ -322,7 +322,7 @@ class LevelsHelperTest < ActionView::TestCase
 
   test "app_options sets level_requires_channel to true for Javalab with contained levels" do
     @level = create :javalab
-    contained_level = create :level
+    contained_level = create :multi
     @level.update(contained_level_names: [contained_level.name])
     @controller.stubs(:params).returns({action: 'edit_blocks'})
     assert_equal true, app_options['levelRequiresChannel']
