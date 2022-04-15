@@ -1,17 +1,10 @@
-name 'VPL-CSD-PILOT-S22-SP-VPL-21-mod4-landscape of CS'
+name 'VPL-CSD-PILOT-S22-SP-VPL-21-mod3-landscape of CS'
 title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
 # Landscape of K-12 Computer Science Education in the US
 ##### Below is a <a href="http://csedu.gallup.com/home.aspx" target="blank" rel="noopener noreferrer">series of reports</a> from Gallup and Google describes the landscape of computer science education across the United States.
-
-## Task: 
-1. Read the information below.
-2. Select one statistic that stands out to you.
-3. Be prepared to share and discuss your reason for your selection with a small group during the asynchronous session tomorrow. 
-
- <hr style="clear:both">
 
 ## <a href="https://services.google.com/fh/files/misc/computer-science-education-in-us-k12schools-2020-report.pdf" target="blank" rel="noopener noreferrer">Current Perspectives and Continuing Challenges in Computer Science Education in U.S. K-12 Schools (2020)</a> 
 * 69% of parents/guardians say it is important or very important for their child to learn computer science. 78% of Black parents say it is important or very important (compared to 67% of Hispanic/Latino/Latina parents and 68% of white parents).
