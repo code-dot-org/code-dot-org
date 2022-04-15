@@ -83,5 +83,5 @@ export const UnconnectedProgressBoxForLessonNumber = ProgressBoxForLessonNumber;
 
 export default connect(state => ({
   sectionId: state.teacherSections.selectedSectionId,
-  scriptId: state.unitSelection.scriptId
+  scriptId: state.unitSelection.unitId
 }))(ProgressBoxForLessonNumber);

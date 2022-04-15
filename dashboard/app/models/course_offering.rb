@@ -94,6 +94,18 @@ class CourseOffering < ApplicationRecord
     course_versions.any? {|cv| cv.content_root.is_a?(Script) && cv.has_editor_experiment?(user)}
   end
 
+  def any_version_has_student_progress?(student_unit_ids)
+    course_versions.any? {|cv| cv.has_student_progress?(student_unit_ids)}
+  end
+
+  def self.course_offerings_with_student_progress(student_unit_ids, user)
+    CourseOffering.all.select {|co| co.any_version_has_student_progress?(student_unit_ids) && co.can_be_assigned?(user)}
+  end
+
+  def self.course_offerings_with_student_progress_info(user, student_unit_ids, locale_code = 'en-us')
+    course_offerings_with_student_progress(student_unit_ids, user).map {|co| co.summarize_for_unit_selector(user, student_unit_ids, locale_code)}.to_h
+  end
+
   def self.assignable_course_offerings(user)
     CourseOffering.all.select {|co| co.can_be_assigned?(user)}
   end
@@ -111,6 +123,20 @@ class CourseOffering < ApplicationRecord
     return true if user.permission?(UserPermission::LEVELBUILDER)
 
     false
+  end
+
+  def summarize_for_unit_selector(user, student_unit_ids, locale_code)
+    [
+      id,
+      {
+        id: id,
+        display_name: any_versions_launched? ? localized_display_name : localized_display_name + ' *',
+        category: category,
+        is_featured: is_featured?,
+        participant_audience: course_versions.first.content_root.participant_audience,
+        course_versions: course_versions.select {|cv| cv.has_student_progress?(student_unit_ids) && cv.course_assignable?(user)}.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
+      }
+    ]
   end
 
   def summarize_for_assignment_dropdown(user, locale_code)

@@ -7,7 +7,11 @@ export const SET_SCRIPT = 'unitSelection/SET_SCRIPT';
 export const SET_COURSE_VERSIONS = 'unitSelection/SET_COURSE_VERSIONS';
 
 // Action creators
-export const setScriptId = scriptId => ({type: SET_SCRIPT, scriptId});
+export const setCourseSelection = (
+  courseOfferingId,
+  courseVersionId,
+  unitId
+) => ({type: SET_SCRIPT, courseOfferingId, courseVersionId, unitId});
 export const setCourseVersionsWithProgress = courseVersionsWithProgress => ({
   type: SET_COURSE_VERSIONS,
   courseVersionsWithProgress
@@ -15,19 +19,15 @@ export const setCourseVersionsWithProgress = courseVersionsWithProgress => ({
 
 // Selectors
 const getSelectedUnit = state => {
-  const scriptId = state.unitSelection.scriptId;
-  if (!scriptId) {
+  const unitId = state.unitSelection.unitId;
+  if (!unitId) {
     return null;
   }
 
-  const versions = Object.values(
-    state.unitSelection.courseVersionsWithProgress
-  );
-  let script;
-  versions.forEach(version => {
-    script = Object.values(version.units).find(unit => scriptId === unit.id);
-  });
-  return script;
+  const offering =
+    state.unitSelection.courseVersionsWithProgress[state.courseOfferingId];
+  const version = offering?.course_versions[state.courseVersionId];
+  return version?.units[state.unitId];
 };
 
 export const getSelectedScriptName = state => {
@@ -46,30 +46,39 @@ export const getSelectedScriptDescription = state => {
 
 // Initial state of unitSelectionRedux
 const initialState = {
-  scriptId: null,
+  courseOfferingId: null,
+  courseVersionId: null,
+  unitId: null,
   courseVersionsWithProgress: {}
 };
 
 export default function unitSelection(state = initialState, action) {
   if (action.type === SET_COURSE_VERSIONS) {
-    let firstCourseVersion = Object.values(
+    let firstCourseOffering = Object.values(
       action.courseVersionsWithProgress
+    )[0];
+    let firstCourseVersion = Object.values(
+      firstCourseOffering.course_versions
     )[0];
 
     return {
       ...state,
       courseVersionsWithProgress: action.courseVersionsWithProgress,
-      scriptId:
-        state.scriptId === null && firstCourseVersion
+      courseOfferingId: firstCourseOffering.id,
+      courseVersionId: firstCourseVersion.id,
+      unitId:
+        state.unitId === null && firstCourseOffering && firstCourseVersion
           ? Object.keys(firstCourseVersion.units)[0]
-          : state.scriptId
+          : state.unitId
     };
   }
 
   if (action.type === SET_SCRIPT) {
     return {
       ...state,
-      scriptId: action.scriptId
+      courseOfferingId: action.courseOfferingId,
+      courseVersionId: action.courseVersionId,
+      unitId: action.unitId
     };
   }
 

@@ -388,17 +388,15 @@ export default connect(
     scriptData: getCurrentUnitData(state),
     lessonProgressByStudent:
       state.sectionProgress.studentLessonProgressByUnit[
-        state.unitSelection.scriptId
+        state.unitSelection.unitId
       ],
     levelProgressByStudent:
       state.sectionProgress.studentLevelProgressByUnit[
-        state.unitSelection.scriptId
+        state.unitSelection.unitId
       ],
     lessonOfInterest: state.sectionProgress.lessonOfInterest,
     studentTimestamps:
-      state.sectionProgress.studentLastUpdateByUnit[
-        state.unitSelection.scriptId
-      ],
+      state.sectionProgress.studentLastUpdateByUnit[state.unitSelection.unitId],
     localeCode: state.locales.localeCode
   }),
   dispatch => ({

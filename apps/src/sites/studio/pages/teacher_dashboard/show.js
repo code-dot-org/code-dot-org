@@ -27,7 +27,7 @@ import currentUser, {
 } from '@cdo/apps/templates/currentUserRedux';
 import {
   setCourseVersionsWithProgress,
-  setScriptId
+  setCourseSelection
 } from '../../../../redux/unitSelectionRedux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 
@@ -74,11 +74,13 @@ $(document).ready(function() {
     store.dispatch(setShowSharingColumn(true));
   }
 
-  // Default the scriptId to the script assigned to the section
-  const defaultScriptId = section.script ? section.script.id : null;
-  if (defaultScriptId) {
-    store.dispatch(setScriptId(defaultScriptId));
-  }
+  store.dispatch(
+    setCourseSelection(
+      section.course_offering_id,
+      section.course_version_id,
+      section.script.id
+    )
+  );
 
   store.dispatch(setCourseVersionsWithProgress(courseVersionsWithProgress));
 

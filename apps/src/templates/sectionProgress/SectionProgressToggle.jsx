@@ -92,7 +92,7 @@ export default connect(
   state => ({
     currentView: state.sectionProgress.currentView,
     sectionId: state.teacherSections.selectedSectionId,
-    scriptId: state.unitSelection.scriptId
+    scriptId: state.unitSelection.unitId
   }),
   dispatch => ({
     setCurrentView(viewType) {

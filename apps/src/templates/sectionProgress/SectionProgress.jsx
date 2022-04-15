@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import UnitSelector from './UnitSelector';
+import NewUnitSelector from '@cdo/apps/templates/teacherDashboard/NewUnitSelector';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
 import StandardsView from '@cdo/apps/templates/sectionProgress/standards/StandardsView';
@@ -16,7 +16,7 @@ import {
 } from './sectionProgressRedux';
 import {loadScriptProgress} from './sectionProgressLoader';
 import {ViewType, scriptDataPropType} from './sectionProgressConstants';
-import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
+import {setCourseSelection} from '@cdo/apps/redux/unitSelectionRedux';
 import firehoseClient from '../../lib/util/firehose';
 import ProgressViewHeader from './ProgressViewHeader';
 import logToCloud from '@cdo/apps/logToCloud';
@@ -31,14 +31,16 @@ import {assignmentCourseVersionShape} from '../teacherDashboard/shapes';
 class SectionProgress extends Component {
   static propTypes = {
     //Provided by redux
-    scriptId: PropTypes.number,
+    courseOfferingId: PropTypes.number,
+    courseVersionId: PropTypes.number,
+    unitId: PropTypes.number,
     sectionId: PropTypes.number,
     courseVersionsWithProgress: PropTypes.objectOf(assignmentCourseVersionShape)
       .isRequired,
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     setCurrentView: PropTypes.func.isRequired,
     scriptData: scriptDataPropType,
-    setScriptId: PropTypes.func.isRequired,
+    setCourseSelection: PropTypes.func.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
     isLoadingProgress: PropTypes.bool.isRequired,
     isRefreshingProgress: PropTypes.bool,
@@ -54,7 +56,7 @@ class SectionProgress extends Component {
   }
 
   componentDidMount() {
-    loadScriptProgress(this.props.scriptId, this.props.sectionId);
+    loadScriptProgress(this.props.unitId, this.props.sectionId);
   }
 
   componentDidUpdate() {
@@ -63,20 +65,24 @@ class SectionProgress extends Component {
         logToCloud.PageAction.SectionProgressRenderedWithData,
         {
           sectionId: this.props.sectionId,
-          scriptId: this.props.scriptId
+          scriptId: this.props.unitId
         }
       );
       this.setState({reportedInitialRender: true});
     }
   }
 
-  onChangeScript = scriptId => {
-    this.props.setScriptId(scriptId);
-    loadScriptProgress(scriptId, this.props.sectionId);
+  onChangeScript = courseInformation => {
+    this.props.setCourseSelection(
+      courseInformation.courseOfferingId,
+      courseInformation.courseVersionId,
+      courseInformation.unitId
+    );
+    loadScriptProgress(courseInformation.unitId, this.props.sectionId);
 
     this.recordEvent('change_script', {
-      old_script_id: this.props.scriptId,
-      new_script_id: scriptId
+      old_script_id: this.props.unitId,
+      new_script_id: courseInformation.unitId
     });
   };
 
@@ -84,13 +90,13 @@ class SectionProgress extends Component {
     this.props.setLessonOfInterest(lessonOfInterest);
 
     this.recordEvent('jump_to_lesson', {
-      script_id: this.props.scriptId,
+      script_id: this.props.unitId,
       stage_id: this.props.scriptData.lessons[lessonOfInterest].id
     });
   };
 
   navigateToScript = () => {
-    this.recordEvent('go_to_script', {script_id: this.props.scriptId});
+    this.recordEvent('go_to_script', {script_id: this.props.unitId});
   };
 
   recordEvent = (eventName, dataJson = {}) => {
@@ -117,7 +123,9 @@ class SectionProgress extends Component {
     const {
       courseVersionsWithProgress,
       currentView,
-      scriptId,
+      courseOfferingId,
+      courseVersionId,
+      unitId,
       scriptData,
       showStandardsIntroDialog
     } = this.props;
@@ -131,12 +139,11 @@ class SectionProgress extends Component {
       <div>
         <div style={styles.topRowContainer}>
           <div>
-            <div style={{...h3Style, ...styles.heading}}>
-              {i18n.selectACourse()}
-            </div>
-            <UnitSelector
-              courseVersionsWithProgress={courseVersionsWithProgress}
-              scriptId={scriptId}
+            <NewUnitSelector
+              courseOfferings={courseVersionsWithProgress}
+              courseOfferingId={courseOfferingId}
+              courseVersionId={courseVersionId}
+              unitId={unitId}
               onChange={this.onChangeScript}
             />
           </div>
@@ -217,7 +224,9 @@ export const UnconnectedSectionProgress = SectionProgress;
 
 export default connect(
   state => ({
-    scriptId: state.unitSelection.scriptId,
+    courseOfferingId: state.unitSelection.courseOfferingId,
+    courseVersionId: state.unitSelection.courseVersionId,
+    unitId: state.unitSelection.unitId,
     sectionId: state.teacherSections.selectedSectionId,
     courseVersionsWithProgress: state.unitSelection.courseVersionsWithProgress,
     currentView: state.sectionProgress.currentView,
@@ -227,8 +236,8 @@ export default connect(
     showStandardsIntroDialog: !state.currentUser.hasSeenStandardsReportInfo
   }),
   dispatch => ({
-    setScriptId(scriptId) {
-      dispatch(setScriptId(scriptId));
+    setCourseSelection(courseOfferingId, courseVersionId, unitId) {
+      dispatch(setCourseSelection(courseOfferingId, courseVersionId, unitId));
     },
     setLessonOfInterest(lessonOfInterest) {
       dispatch(setLessonOfInterest(lessonOfInterest));

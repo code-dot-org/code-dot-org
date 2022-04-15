@@ -182,7 +182,7 @@ export default connect(
   state => ({
     sectionId: state.teacherSections.selectedSectionId,
     courseVersionsWithProgress: state.unitSelection.courseVersionsWithProgress,
-    scriptId: state.unitSelection.scriptId,
+    scriptId: state.unitSelection.unitId,
     scriptName: getSelectedScriptName(state)
   }),
   dispatch => ({

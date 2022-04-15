@@ -95,13 +95,12 @@ export default function sectionStandardsProgress(state = initialState, action) {
 
 function getLessonsForCurrentScript(state) {
   if (
-    state.unitSelection.scriptId &&
+    state.unitSelection.unitId &&
     state.sectionProgress.unitDataByUnit &&
-    state.sectionProgress.unitDataByUnit[state.unitSelection.scriptId]
+    state.sectionProgress.unitDataByUnit[state.unitSelection.unitId]
   ) {
     const lessons =
-      state.sectionProgress.unitDataByUnit[state.unitSelection.scriptId]
-        .lessons;
+      state.sectionProgress.unitDataByUnit[state.unitSelection.unitId].lessons;
     return lessons;
   }
 }
@@ -149,10 +148,7 @@ export function getUnpluggedLessonsForScript(state) {
 
 export function getNumberLessonsCompleted(state) {
   let lessonsCompleted = 0;
-  const lessons = getLessonsForCurrentScript(
-    state,
-    state.unitSelection.scriptId
-  );
+  const lessons = getLessonsForCurrentScript(state, state.unitSelection.unitId);
 
   if (lessons) {
     lessons.forEach(lesson => {
@@ -170,10 +166,7 @@ export function getNumberLessonsCompleted(state) {
 
 export function getNumberLessonsInScript(state) {
   let numLessons = 0;
-  const lessons = getLessonsForCurrentScript(
-    state,
-    state.unitSelection.scriptId
-  );
+  const lessons = getLessonsForCurrentScript(state, state.unitSelection.unitId);
 
   if (lessons) {
     numLessons = lessons.length;
@@ -183,10 +176,7 @@ export function getNumberLessonsInScript(state) {
 
 export const lessonsByStandard = state => {
   let lessonsByStandardId = {};
-  const lessons = getLessonsForCurrentScript(
-    state,
-    state.unitSelection.scriptId
-  );
+  const lessons = getLessonsForCurrentScript(state, state.unitSelection.unitId);
 
   if (lessons && state.sectionStandardsProgress.standardsData) {
     const standards = state.sectionStandardsProgress.standardsData;
@@ -225,7 +215,7 @@ export const lessonsByStandard = state => {
 };
 
 export function getLessonCompletionStatus(state, lessonId) {
-  const scriptId = state.unitSelection.scriptId;
+  const scriptId = state.unitSelection.unitId;
   const lessons = getLessonsForCurrentScript(state, scriptId);
   if (lessons) {
     const lesson = _.find(lessons, ['id', lessonId]);
@@ -296,16 +286,16 @@ export function getPluggedLessonCompletionStatus(state, lesson) {
   let completionByLesson = {};
 
   if (
-    state.unitSelection.scriptId &&
+    state.unitSelection.unitId &&
     state.sectionProgress.unitDataByUnit &&
     state.sectionProgress.studentLevelProgressByUnit &&
     state.sectionProgress.studentLevelProgressByUnit[
-      state.unitSelection.scriptId
+      state.unitSelection.unitId
     ] &&
     state.teacherSections.sections &&
     state.teacherSections.selectedSectionId
   ) {
-    const scriptId = state.unitSelection.scriptId;
+    const scriptId = state.unitSelection.unitId;
     const numberStudentsInSection =
       state.teacherSections.sections[state.teacherSections.selectedSectionId]
         .studentCount;

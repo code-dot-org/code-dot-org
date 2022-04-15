@@ -206,7 +206,7 @@ export const UnconnectedStandardsReport = StandardsReport;
 
 export default connect(
   state => ({
-    scriptId: state.unitSelection.scriptId,
+    scriptId: state.unitSelection.unitId,
     sectionId: state.teacherSections.selectedSectionId,
     scriptData: getCurrentUnitData(state),
     scriptFriendlyName: getSelectedScriptFriendlyName(state),

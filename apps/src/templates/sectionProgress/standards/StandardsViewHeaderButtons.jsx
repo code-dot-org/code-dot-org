@@ -204,7 +204,7 @@ export const UnconnectedStandardsViewHeaderButtons = StandardsViewHeaderButtons;
 
 export default connect(
   state => ({
-    scriptId: state.unitSelection.scriptId,
+    scriptId: state.unitSelection.unitId,
     selectedLessons: state.sectionStandardsProgress.selectedLessons,
     unpluggedLessons: getUnpluggedLessonsForScript(state)
   }),

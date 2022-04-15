@@ -125,7 +125,7 @@ export const jumpToLessonDetails = lessonOfInterest => {
           section_id: state.teacherSections.selectedSectionId,
           old_view: ViewType.SUMMARY,
           new_view: ViewType.DETAIL,
-          script_id: state.unitSelection.scriptId
+          script_id: state.unitSelection.unitId
         })
       },
       {includeUserId: true}
@@ -141,6 +141,6 @@ export const jumpToLessonDetails = lessonOfInterest => {
  */
 export const getCurrentUnitData = state => {
   console.log(state.sectionProgress.unitDataByUnit);
-  console.log(state.unitSelection.scriptId);
-  return state.sectionProgress.unitDataByUnit[state.unitSelection.scriptId];
+  console.log(state.unitSelection.unitId);
+  return state.sectionProgress.unitDataByUnit[state.unitSelection.unitId];
 };

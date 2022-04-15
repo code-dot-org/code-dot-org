@@ -133,7 +133,7 @@ export default connect(
     unpluggedLessonList: getUnpluggedLessonsForScript(state),
     selectedLessons: state.sectionStandardsProgress.selectedLessons,
     sectionId: state.teacherSections.selectedSectionId,
-    scriptId: state.unitSelection.scriptId
+    scriptId: state.unitSelection.unitId
   }),
   dispatch => ({
     setSelectedLessons(selected) {

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import _ from 'lodash';
 import i18n from '@cdo/locale';
-import {sectionShape, assignmentCourseOfferingShape} from './shapes';
+import {assignmentCourseOfferingShape} from './shapes';
 import AssignmentVersionSelector from './AssignmentVersionSelector';
 import {CourseOfferingCategories} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
@@ -30,28 +30,29 @@ export const getCourseOfferingsByCategory = courseOfferings => {
  * This component displays a dropdown of courses/scripts, with each of these
  * grouped and ordered appropriately.
  */
-export default class AssignmentSelector extends Component {
+export default class NewUnitSelector extends Component {
   static propTypes = {
-    section: sectionShape,
+    courseOfferingId: PropTypes.number,
+    courseVersionId: PropTypes.number,
+    unitId: PropTypes.number,
     courseOfferings: PropTypes.objectOf(assignmentCourseOfferingShape)
       .isRequired,
     dropdownStyle: PropTypes.object,
-    onChange: PropTypes.func,
-    disabled: PropTypes.bool
+    onChange: PropTypes.func
   };
 
   constructor(props) {
     super(props);
 
-    const {section} = props;
+    const {courseOfferingId, courseVersionId, unitId} = props;
 
-    const selectedCourseOfferingId = section?.courseOfferingId
-      ? section.courseOfferingId
+    const selectedCourseOfferingId = courseOfferingId
+      ? courseOfferingId
       : noAssignment;
-    const selectedCourseVersionId = section?.courseVersionId
-      ? section.courseVersionId
+    const selectedCourseVersionId = courseVersionId
+      ? courseVersionId
       : noAssignment;
-    const selectedUnitId = section?.unitId ? section.unitId : noAssignment;
+    const selectedUnitId = unitId ? unitId : noAssignment;
 
     this.state = {
       selectedCourseOfferingId,
@@ -114,7 +115,7 @@ export default class AssignmentSelector extends Component {
               _.orderBy(courseVersions[courseVersionId].units, 'position')
             )
           : null;
-        const firstUnitId = units?.length > 1 ? units[0].id : noAssignment;
+        const firstUnitId = units?.length > 0 ? units[0].id : noAssignment;
 
         this.setState(
           {
@@ -194,7 +195,7 @@ export default class AssignmentSelector extends Component {
   };
 
   render() {
-    const {dropdownStyle, disabled, courseOfferings} = this.props;
+    const {dropdownStyle, courseOfferings} = this.props;
     const {
       selectedCourseOfferingId,
       selectedCourseVersionId,
@@ -235,12 +236,8 @@ export default class AssignmentSelector extends Component {
             value={selectedCourseOfferingId}
             onChange={this.onChangeCourseOffering}
             style={dropdownStyle}
-            disabled={disabled}
           >
-            <option key="default" />
-            <option key="later" value={decideLater}>
-              {i18n.decideLater()}
-            </option>
+            <option key="default" value={noAssignment} />
             {filteredCategories.map(category => (
               <optgroup
                 key={category}
@@ -264,22 +261,18 @@ export default class AssignmentSelector extends Component {
               selectedCourseVersionId={selectedCourseVersionId}
               courseVersions={selectedCourseOffering?.course_versions}
               onChangeVersion={this.onChangeCourseVersion}
-              disabled={disabled}
             />
           )}
         {selectedCourseVersionId !== 0 &&
           orderedUnits &&
           Object.entries(orderedUnits).length > 1 && (
-            <div style={styles.secondary}>
-              <div style={styles.dropdownLabel}>
-                {i18n.assignmentSelectorUnit()}
-              </div>
+            <div>
+              <div style={styles.dropdownLabel}>{i18n.selectAUnit()}</div>
               <select
                 id="uitest-secondary-assignment"
                 value={selectedUnitId}
                 onChange={this.onChangeUnit}
                 style={dropdownStyle}
-                disabled={disabled}
               >
                 {Object.values(orderedUnits).map(unit => (
                   <option key={unit.id} value={unit.id}>
@@ -300,9 +293,6 @@ const styles = {
     display: 'inline-block',
     marginTop: 4,
     marginRight: 6
-  },
-  secondary: {
-    marginTop: 6
   },
   dropdownLabel: {
     fontFamily: '"Gotham 5r", sans-serif'

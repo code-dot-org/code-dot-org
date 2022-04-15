@@ -370,7 +370,7 @@ export default connect(
     isLoading: !!state.sectionAssessments.isLoading,
     courseVersionsWithProgress: state.unitSelection.courseVersionsWithProgress,
     assessmentList: getCurrentScriptAssessmentList(state),
-    scriptId: state.unitSelection.scriptId,
+    scriptId: state.unitSelection.unitId,
     assessmentId: state.sectionAssessments.assessmentId,
     isCurrentAssessmentSurvey: isCurrentAssessmentSurvey(state),
     totalStudentSubmissions: countSubmissionsForCurrentAssessment(state),
