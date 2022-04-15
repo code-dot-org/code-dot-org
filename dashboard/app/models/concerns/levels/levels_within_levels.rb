@@ -152,7 +152,7 @@ module Levels
       levels_child_levels.contained.destroy_all
       Level.where(name: contained_level_names).each do |contained_level|
         unless ['Multi', 'FreeResponse'].include? contained_level.type
-          raise "cannot add contained level of type #{contained_level.type.dump}"
+          raise "cannot add contained level of type #{contained_level.type}"
         end
         ParentLevelsChildLevel.create!(
           child_level: contained_level,
