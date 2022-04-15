@@ -1,7 +1,8 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedTeacherDashboard as TeacherDashboard} from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
+import {fakeCourseVersionsWithProgress} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
 const DEFAULT_PROPS = {
   studioUrlPrefix: 'https://studio.code.org',
@@ -9,13 +10,14 @@ const DEFAULT_PROPS = {
   sectionId: 1,
   sectionName: 'My Section',
   location: {},
-  studentCount: 5
+  studentCount: 5,
+  courseVersionsWithProgress: fakeCourseVersionsWithProgress
 };
 
 describe('TeacherDashboard', () => {
   it('renders TeacherDashboardHeader', () => {
     const wrapper = shallow(<TeacherDashboard {...DEFAULT_PROPS} />);
-    expect(wrapper.find('Connect(TeacherDashboardHeader)')).to.exist;
+    expect(wrapper.find('Connect(TeacherDashboardHeader)').length).to.equal(1);
   });
 
   it('does not render TeacherDashboardHeader on /login_info', () => {
@@ -23,7 +25,7 @@ describe('TeacherDashboard', () => {
     const wrapper = shallow(
       <TeacherDashboard {...DEFAULT_PROPS} location={location} />
     );
-    expect(wrapper.find('Connect(TeacherDashboardHeader)')).to.not.exist;
+    expect(wrapper.find('Connect(TeacherDashboardHeader)').length).to.equal(0);
   });
 
   it('does not render TeacherDashboardHeader on /standards_report', () => {
@@ -31,7 +33,7 @@ describe('TeacherDashboard', () => {
     const wrapper = shallow(
       <TeacherDashboard {...DEFAULT_PROPS} location={location} />
     );
-    expect(wrapper.find('Connect(TeacherDashboardHeader)')).to.not.exist;
+    expect(wrapper.find('Connect(TeacherDashboardHeader)').length).to.equal(0);
   });
 
   it('defaults to progress tab if no tab provided in route', () => {

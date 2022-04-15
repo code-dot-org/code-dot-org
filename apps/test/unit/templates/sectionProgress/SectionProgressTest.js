@@ -28,7 +28,7 @@ describe('SectionProgress', () => {
         script: {id: 123},
         students: studentData
       },
-      validScripts: [],
+      courseVersionsWithProgress: {},
       currentView: ViewType.SUMMARY,
       scriptData: {
         id: 123,
