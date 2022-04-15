@@ -31,7 +31,12 @@ FieldGroup.propTypes = {
 
 const PetitionForm = () => (
   <>
-    <Form inline id="petition-form" style={styles.form}>
+    <Form
+      inline
+      id="petition-form"
+      className="petition_form"
+      style={styles.form}
+    >
       <FieldGroup id="name" placeholder="Name" type="text" />
       <FieldGroup id="email" placeholder="Email" type="text" />
       <FieldGroup
@@ -62,7 +67,7 @@ const PetitionForm = () => (
         ))}
       </FieldGroup>
       <Button
-        style={styles.element}
+        className="go_button"
         bsStyle="primary"
         key="submit"
         id="submit"
