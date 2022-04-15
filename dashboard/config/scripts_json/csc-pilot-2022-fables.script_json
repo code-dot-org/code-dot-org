@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csc-pilot-2022-fables",
-    "serialized_at": "2022-04-12 16:34:36 UTC",
+    "serialized_at": "2022-04-14 08:36:02 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -690,6 +690,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_fablesv2_choice"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -703,6 +706,111 @@
       },
       "level_keys": [
         "csc_fablesv2_choice"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_fablesv2_DIY_Set_Scene"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "92f6470b-4f52-4c81-b882-02a3de9fc8f0"
+      },
+      "level_keys": [
+        "csc_fablesv2_DIY_Set_Scene"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_fablesv2_DIY_Dialogue"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "92f6470b-4f52-4c81-b882-02a3de9fc8f0"
+      },
+      "level_keys": [
+        "csc_fablesv2_DIY_Dialogue"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_fablesv2_predict_parent"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "92f6470b-4f52-4c81-b882-02a3de9fc8f0"
+      },
+      "level_keys": [
+        "csc_fablesv2_predict_parent"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_fablesv2_DIY_Interactions"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "92f6470b-4f52-4c81-b882-02a3de9fc8f0"
+      },
+      "level_keys": [
+        "csc_fablesv2_DIY_Interactions"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_fablesv2_DIY_Freeplay"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "92f6470b-4f52-4c81-b882-02a3de9fc8f0"
+      },
+      "level_keys": [
+        "csc_fablesv2_DIY_Freeplay"
       ]
     }
   ],
@@ -892,6 +1000,66 @@
         "level.key": "csc_fablesv2_choice",
         "script_level.level_keys": [
           "csc_fablesv2_choice"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "92f6470b-4f52-4c81-b882-02a3de9fc8f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_fablesv2_DIY_Set_Scene",
+        "script_level.level_keys": [
+          "csc_fablesv2_DIY_Set_Scene"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "92f6470b-4f52-4c81-b882-02a3de9fc8f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_fablesv2_DIY_Dialogue",
+        "script_level.level_keys": [
+          "csc_fablesv2_DIY_Dialogue"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "92f6470b-4f52-4c81-b882-02a3de9fc8f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_fablesv2_predict_parent",
+        "script_level.level_keys": [
+          "csc_fablesv2_predict_parent"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "92f6470b-4f52-4c81-b882-02a3de9fc8f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_fablesv2_DIY_Interactions",
+        "script_level.level_keys": [
+          "csc_fablesv2_DIY_Interactions"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "92f6470b-4f52-4c81-b882-02a3de9fc8f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_fablesv2_DIY_Freeplay",
+        "script_level.level_keys": [
+          "csc_fablesv2_DIY_Freeplay"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
