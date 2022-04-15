@@ -342,7 +342,7 @@ Dashboard::Application.routes.draw do
 
   resources :programming_classes, only: [:new, :create, :edit, :update]
 
-  resources :programming_expressions, only: [:new, :create, :edit, :update, :show, :destroy] do
+  resources :programming_expressions, only: [:index, :new, :create, :edit, :update, :show, :destroy] do
     collection do
       get :search
       get :get_filtered_expressions
@@ -359,6 +359,8 @@ Dashboard::Application.routes.draw do
       end
     end
   end
+
+  resources :programming_methods, only: [:edit, :update]
 
   resources :standards, only: [] do
     collection do
