@@ -104,9 +104,11 @@ class CourseScript extends Component {
       selectedSection.unitId === id;
     const isAssigned = assignedToStudent || assignedByTeacher;
 
-    const courseCanBeAssignedToSection = participantTypesByAudience[
-      selectedSection.participantType
-    ].includes(courseParticipantAudience);
+    const courseCanBeAssignedToSection =
+      selectedSection &&
+      participantTypesByAudience[selectedSection.participantType].includes(
+        courseParticipantAudience
+      );
 
     return (
       <div

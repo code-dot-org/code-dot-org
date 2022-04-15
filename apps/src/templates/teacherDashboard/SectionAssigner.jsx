@@ -54,9 +54,11 @@ class SectionAssigner extends Component {
       section => section.id === selectedSectionId
     );
 
-    const courseCanBeAssignedToSection = participantTypesByAudience[
-      selectedSection.participantType
-    ].includes(courseParticipantAudience);
+    const courseCanBeAssignedToSection =
+      selectedSection &&
+      participantTypesByAudience[selectedSection.participantType].includes(
+        courseParticipantAudience
+      );
 
     return (
       <div style={styles.section}>
