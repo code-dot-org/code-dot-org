@@ -173,6 +173,7 @@ module Levels
       return if project_template_level_name.blank?
       template_level = Level.find_by_name!(project_template_level_name)
       raise 'level cannot be its own project template level' if template_level == self
+      raise "template level type #{template_level.type} does not match level type #{type}" unless template_level.type == type
       ParentLevelsChildLevel.create!(
         child_level: template_level,
         kind: ParentLevelsChildLevel::PROJECT_TEMPLATE,
