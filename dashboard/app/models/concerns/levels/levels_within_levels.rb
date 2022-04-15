@@ -45,6 +45,7 @@ module Levels
       before_validation :sanitize_contained_level_names
       after_save :setup_contained_levels
       after_save :setup_project_template_level
+      validate :validate_contained_level_type
     end
 
     class_methods do
@@ -151,9 +152,6 @@ module Levels
       # otherwise, update contained levels to match
       levels_child_levels.contained.destroy_all
       Level.where(name: contained_level_names).each do |contained_level|
-        unless ['Multi', 'FreeResponse'].include? contained_level.type
-          raise "cannot add contained level of type #{contained_level.type}"
-        end
         ParentLevelsChildLevel.create!(
           child_level: contained_level,
           kind: ParentLevelsChildLevel::CONTAINED,
@@ -177,6 +175,17 @@ module Levels
         kind: ParentLevelsChildLevel::PROJECT_TEMPLATE,
         parent_level: self
       )
+    end
+
+    def validate_contained_level_type
+      return unless contained_level_names.present?
+      return if properties['contained_level_names'] == properties_was&.[]('contained_level_names')
+
+      Level.where(name: contained_level_names).each do |contained_level|
+        unless ['Multi', 'FreeResponse'].include? contained_level.type
+          errors.add(:contained_level_names, "cannot add contained level of type #{contained_level.type}")
+        end
+      end
     end
   end
 end
