@@ -18,8 +18,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-30 16:56:04 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-04-14 20:59:31 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -3796,6 +3796,17 @@
       }
     },
     {
+      "key": "d0d5910f-95e9-49a2-84f0-ce02efd1ec30",
+      "position": 4,
+      "properties": {
+        "progression_name": "End-of-Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "d0d5910f-95e9-49a2-84f0-ce02efd1ec30",
+        "lesson_activity.key": "0fa89c3d-e239-4f17-9760-3510fd4b0f8a"
+      }
+    },
+    {
       "key": "b79dc500-0b23-452e-8395-1a387150c56c",
       "position": 1,
       "properties": {
@@ -5018,6 +5029,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L7 Choice"
+        ],
         "progression": "Putting It Together"
       },
       "bonus": false,
@@ -5516,14 +5530,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "U4 L10 Making Functions Practice2022"
+          "CSP U4L10 Choice"
         ],
         "progression": "When to Declare Functions"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U4 L10 Making Functions Practice2022"
+          "CSP U4L10 Choice"
         ],
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
@@ -5531,7 +5545,7 @@
         "activity_section.key": "c3a04233-a047-4b4a-a594-d6c9097c67d8"
       },
       "level_keys": [
-        "U4 L10 Making Functions Practice2022"
+        "CSP U4L10 Choice"
       ]
     },
     {
@@ -5811,6 +5825,28 @@
     },
     {
       "chapter": 80,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End-of-Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csp4-2022"
+        ],
+        "lesson.key": "Project   Decision Maker App Part 3",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2022",
+        "activity_section.key": "d0d5910f-95e9-49a2-84f0-ce02efd1ec30"
+      },
+      "level_keys": [
+        "Student End of Unit Survey_csp4-2022"
+      ]
+    },
+    {
+      "chapter": 81,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6642,9 +6678,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "U4 L10 Making Functions Practice2022",
+        "level.key": "CSP U4L10 Choice",
         "script_level.level_keys": [
-          "U4 L10 Making Functions Practice2022"
+          "CSP U4L10 Choice"
         ],
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
@@ -6782,6 +6818,18 @@
         "lesson_group.key": "csp_project",
         "script.name": "csp4-2022",
         "activity_section.key": "b38b6711-5968-445b-839a-d71b15476b5a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Student End of Unit Survey_csp4-2022",
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csp4-2022"
+        ],
+        "lesson.key": "Project   Decision Maker App Part 3",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2022",
+        "activity_section.key": "d0d5910f-95e9-49a2-84f0-ce02efd1ec30"
       }
     },
     {

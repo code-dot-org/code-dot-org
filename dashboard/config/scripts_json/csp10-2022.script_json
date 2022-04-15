@@ -18,8 +18,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-11 17:47:47 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-04-14 21:18:03 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -2938,6 +2938,17 @@
       }
     },
     {
+      "key": "0d549e84-59c8-4cbe-ac60-cea5418e8306",
+      "position": 5,
+      "properties": {
+        "progression_name": "End-of-Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "0d549e84-59c8-4cbe-ac60-cea5418e8306",
+        "lesson_activity.key": "ba0980a2-a784-4e16-9931-03a4abce776c"
+      }
+    },
+    {
       "key": "504e4bc3-f3aa-4b84-9453-aef66563f359",
       "position": 1,
       "properties": {
@@ -3285,6 +3296,28 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "End-of-Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csp10-2022"
+        ],
+        "lesson.key": "Project   Innovation Simulation Part 7",
+        "lesson_group.key": "csp_unit10_2020",
+        "script.name": "csp10-2022",
+        "activity_section.key": "0d549e84-59c8-4cbe-ac60-cea5418e8306"
+      },
+      "level_keys": [
+        "Student End of Unit Survey_csp10-2022"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
         "level_keys": [
           "CSP 20-21 Unit 10 Assessment2022"
         ],
@@ -3448,6 +3481,18 @@
         "lesson_group.key": "csp_unit10_2020",
         "script.name": "csp10-2022",
         "activity_section.key": "b580292f-e4b8-4d3b-9818-760f8c1a6f87"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Student End of Unit Survey_csp10-2022",
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csp10-2022"
+        ],
+        "lesson.key": "Project   Innovation Simulation Part 7",
+        "lesson_group.key": "csp_unit10_2020",
+        "script.name": "csp10-2022",
+        "activity_section.key": "0d549e84-59c8-4cbe-ac60-cea5418e8306"
       }
     },
     {
