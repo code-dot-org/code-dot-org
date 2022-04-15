@@ -1123,6 +1123,7 @@ FactoryGirl.define do
 
   factory :level_group, class: LevelGroup do
     game {create(:game, app: "level_group")}
+    sequence(:name) {|n| "Level_Group_Level_#{n}"}
     transient do
       title 'title'
       submittable false
