@@ -1,5 +1,64 @@
 import GoogleBlockly from 'blockly/core';
 
+/**
+ * Adds a copy command to the block context menu.
+ */
+const registerBlockCopyToStorage = function() {
+  const copyToStorageOption = {
+    displayText: function() {
+      if (Blockly.Msg['CROSS_TAB_COPY']) {
+        return Blockly.Msg['CROSS_TAB_COPY'];
+      }
+      return 'Copy';
+    },
+    preconditionFn: function(scope) {
+      return 'enabled';
+    },
+    callback: function(scope) {
+      const blockText = Blockly.Xml.domToPrettyText(
+        Blockly.Xml.blockToDom(scope.block)
+      );
+      localStorage.setItem('blocklyStash', blockText);
+    },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,
+    id: 'blockCopyToStorage',
+    weight: 0
+  };
+  GoogleBlockly.ContextMenuRegistry.registry.register(copyToStorageOption);
+};
+
+/**
+ * Adds a paste command to the block context menu.
+ */
+const registerBlockPasteFromStorage = function() {
+  const pasteFromStorageOption = {
+    displayText: function() {
+      if (Blockly.Msg['CROSS_TAB_PASTE']) {
+        return Blockly.Msg['CROSS_TAB_PASTE'];
+      }
+      return 'Paste';
+    },
+    preconditionFn: function(scope) {
+      const copyData = localStorage.getItem('blocklyStash');
+      if (copyData) {
+        return 'enabled';
+      }
+      return 'disabled';
+    },
+    callback: function(scope) {
+      const blockText = localStorage.getItem('blocklyStash');
+      Blockly.Xml.domToBlockSpace(
+        Blockly.mainBlockSpace,
+        Blockly.Xml.textToDom(`<xml>${blockText}</xml>`)
+      );
+    },
+    scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
+    id: 'blockPasteFromStorage',
+    weight: 0
+  };
+  GoogleBlockly.ContextMenuRegistry.registry.register(pasteFromStorageOption);
+};
+
 const registerDeletable = function() {
   const deletableOption = {
     displayText: function(scope) {
@@ -129,6 +188,8 @@ const registerUnshadow = function() {
 };
 
 const registerAllContextMenuItems = function() {
+  registerBlockCopyToStorage();
+  registerBlockPasteFromStorage();
   registerDeletable();
   registerMovable();
   registerEditable();
