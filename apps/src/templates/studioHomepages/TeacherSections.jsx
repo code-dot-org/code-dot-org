@@ -11,6 +11,9 @@ import {
 } from '../teacherDashboard/teacherSectionsRedux';
 import SetUpSections from './SetUpSections';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import EditSectionDialog from '../teacherDashboard/EditSectionDialog';
+import RosterDialog from '../teacherDashboard/RosterDialog';
+import AddSectionDialog from '../teacherDashboard/AddSectionDialog';
 
 class TeacherSections extends Component {
   static propTypes = {
@@ -66,6 +69,9 @@ class TeacherSections extends Component {
             />
           </ContentContainer>
         )}
+        <RosterDialog />
+        <AddSectionDialog />
+        <EditSectionDialog />
       </div>
     );
   }

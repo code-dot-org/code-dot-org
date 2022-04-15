@@ -5,14 +5,11 @@ import React from 'react';
 import {connect} from 'react-redux';
 import _ from 'lodash';
 import OwnedSectionsTable from './OwnedSectionsTable';
-import RosterDialog from './RosterDialog';
 import Button from '@cdo/apps/templates/Button';
 import {beginEditingSection} from './teacherSectionsRedux';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import styleConstants from '@cdo/apps/styleConstants';
-import AddSectionDialog from './AddSectionDialog';
-import EditSectionDialog from './EditSectionDialog';
 import {recordOpenEditSectionDetails} from './sectionHelpers';
 import experiments from '@cdo/apps/util/experiments';
 import {recordImpression} from './impressionHelpers';
@@ -118,9 +115,6 @@ class OwnedSections extends React.Component {
             )}
           </div>
         )}
-        <RosterDialog />
-        <AddSectionDialog />
-        <EditSectionDialog />
       </div>
     );
   }
