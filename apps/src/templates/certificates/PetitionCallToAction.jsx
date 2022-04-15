@@ -6,9 +6,12 @@ export default function PetitionCallToAction() {
     <>
       <div id="petition-block" style={styles.block}>
         <h1 id="petition-message" style={styles.message}>
-          "Every student in every school should have the opportunity to learn
-          computer science"
+          Every student in every school should have the opportunity to learn
+          computer science
         </h1>
+        <h2 id="sign-message" style={styles.sign}>
+          If you agree, sign your name and join our mailing list.
+        </h2>
         <PetitionForm />
       </div>
     </>
@@ -29,6 +32,15 @@ const styles = {
     fontFamily: '"Gotham 5r", sans-serif',
     color: 'rgb(91,103,112)',
     fontSize: '22px',
-    lineHeight: '28px'
+    lineHeight: '28px',
+    margin: '0px'
+  },
+  sign: {
+    flex: '1 100%',
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: 'rgb(91,103,112)',
+    fontSize: '18px',
+    lineHeight: '20px',
+    margin: '10px 0px 10px 0px'
   }
 };
