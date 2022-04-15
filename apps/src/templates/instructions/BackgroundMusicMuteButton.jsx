@@ -1,9 +1,8 @@
 import React from 'react';
-import color from '../../util/color';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {PaneButton} from '@cdo/apps/templates/PaneHeader';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import cookies from 'js-cookie';
 import {setMuteMusic} from '@cdo/apps/templates/currentUserRedux';
@@ -13,6 +12,7 @@ const MUTE_MUSIC = 'mute_music';
 
 function BackgroundMusicMuteButton({
   isMinecraft,
+  isRtl,
   isBackgroundMusicMuted,
   setMuteMusic,
   muteBackgroundMusic,
@@ -49,31 +49,33 @@ function BackgroundMusicMuteButton({
     firehoseClient.putRecord(record);
   };
 
-  const displayText = () => {
-    return isBackgroundMusicMuted
-      ? i18n.backgroundMusicOff()
-      : i18n.backgroundMusicOn();
-  };
-
-  const displayIcon = () => {
-    return isBackgroundMusicMuted ? 'music-slash' : 'music';
-  };
-
   return (
-    <button
-      type="button"
-      className="uitest-backgroundMusicTab"
+    <PaneButton
+      id="mute-music-button-instructions"
+      headerHasFocus={true}
+      iconClass={isBackgroundMusicMuted ? 'fa fa-volume-off' : 'fa fa-music'}
+      label={
+        isBackgroundMusicMuted
+          ? i18n.backgroundMusicOff()
+          : i18n.backgroundMusicOn()
+      }
+      isRtl={isRtl}
+      isMinecraft={isMinecraft}
       onClick={handleMuteMusicTabClick}
-      style={{...styles, ...(isMinecraft ? craftStyle : {})}}
-    >
-      {<FontAwesome icon={displayIcon()} />}
-      {displayText()}
-    </button>
+      style={{
+        ...(!isMinecraft
+          ? isBackgroundMusicMuted
+            ? styles.musicOff
+            : styles.musicOn
+          : {})
+      }}
+    />
   );
 }
 
 BackgroundMusicMuteButton.propTypes = {
   isMinecraft: PropTypes.bool.isRequired,
+  isRtl: PropTypes.bool.isRequired,
 
   // from redux
   setMuteMusic: PropTypes.func.isRequired,
@@ -83,17 +85,14 @@ BackgroundMusicMuteButton.propTypes = {
 };
 
 export const styles = {
-  backgroundColor: color.table_light_row,
-  color: 'rgb(118, 101, 160)',
-  fontSize: 'small',
-  fontWeight: 'bolder',
-  float: 'right',
-  padding: '2px 4px 2px 4px',
-  margin: '2px'
-};
-
-export const craftStyle = {
-  backgroundColor: '#F2F2F2'
+  musicOn: {
+    color: 'rgb(118, 101, 160)',
+    backgroundColor: 'rgb(255, 255, 255)'
+  },
+  musicOff: {
+    color: 'rgb(255, 255, 255)',
+    backgroundColor: 'rgb(166, 155, 193)'
+  }
 };
 
 export const UnconnectedBackgroundMusicMuteButton = BackgroundMusicMuteButton;
