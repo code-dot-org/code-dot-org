@@ -43,7 +43,7 @@ export function getTextWidth(p5, text, size) {
  * @param {Number} height
  * @param {Number} config.tailSize
  * @param {Number} config.tailTipX
- * @param {Number} config.padding
+ * @param {Number} config.radius
  * @param {String} config.fill
  * @param {Number} config.strokeWeight
  * @param {Number} config.stroke
@@ -58,34 +58,37 @@ export function speechBubble(
   {
     tailSize = 10,
     tailTipX = x,
-    padding = 8,
+    radius = 8,
     fill = 'white',
     strokeWeight = 2,
     stroke = 'gray'
   } = {},
-  style
+  bubbleType
 ) {
   const minX = x - width / 2;
   const minY = y - height - tailSize;
   const maxY = y - tailSize;
+  // The two ellipses that make up the tail can move in relation to the
+  // speech bubble based upon the sprite's X position. We take move the
+  // bubbles from the expected center position to somewhere closer to the
+  // sprite, if the sprite is near the side edges of the canvas.
   const tailTopX = (tailTipX + (minX + width / 2)) / 2;
   const tailBottomX = (tailTipX + tailTopX) / 2;
-
   p5.push();
   p5.stroke(stroke);
   p5.strokeWeight(strokeWeight);
   p5.fill(fill);
-  switch (style) {
+  switch (bubbleType) {
     case 'think':
       // Thought bubbles have more-rounded corners, and trailing bubbles.
-      p5.rect(minX, minY, width, height, padding * 3);
+      p5.rect(minX, minY, width, height, radius * 3);
       p5.ellipse(tailTopX, maxY, tailSize);
       p5.ellipse(tailBottomX, maxY + tailSize, tailSize / 2);
       break;
     case 'say':
     default:
       // Speech bubbles have less-rounded corners and triangular tails.
-      p5.rect(minX, minY, width, height, padding);
+      p5.rect(minX, minY, width, height, radius);
       p5.stroke(fill);
       p5.triangle(tailTipX - tailSize, maxY, tailTipX, maxY, tailTipX, y);
       p5.stroke(stroke);
