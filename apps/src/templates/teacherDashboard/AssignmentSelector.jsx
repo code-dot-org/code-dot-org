@@ -237,7 +237,7 @@ export default class AssignmentSelector extends Component {
             style={dropdownStyle}
             disabled={disabled}
           >
-            <option key="default" />
+            <option key="default" value={noAssignment} />
             <option key="later" value={decideLater}>
               {i18n.decideLater()}
             </option>
