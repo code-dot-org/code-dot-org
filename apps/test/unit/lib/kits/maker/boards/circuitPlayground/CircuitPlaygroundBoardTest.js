@@ -16,6 +16,7 @@ import experiments from '@cdo/apps/util/experiments';
 import ChromeSerialPort from 'chrome-serialport';
 import {CIRCUIT_PLAYGROUND_PORTS} from '../../sampleSerialPorts';
 import {BOARD_TYPE} from '@cdo/apps/lib/kits/maker/util/boardUtils';
+import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
 
 // Polyfill node process.hrtime for the browser, which gets used by johnny-five
 process.hrtime = require('browser-process-hrtime');
@@ -428,6 +429,29 @@ describe('CircuitPlaygroundBoard', () => {
         vendorId: '0x239A',
         productId: '0x8018'
       };
+      return board.connectToFirmware().then(() => {
+        expect(board.boardType_).to.equal(BOARD_TYPE.EXPRESS);
+      });
+    });
+  });
+
+  describe(`connectToFirmware() with WebSerial`, () => {
+    let wrappedPort;
+    beforeEach(() => {
+      wrappedPort = new WebSerialPortWrapper();
+      board = new CircuitPlaygroundBoard(wrappedPort);
+      board.port_.vendorId = '0x239A';
+    });
+
+    it('does not set the boardType for classic boards', () => {
+      board.port_.productId = '0x8011';
+      return board.connectToFirmware().then(() => {
+        expect(board.boardType_).to.equal(BOARD_TYPE.CLASSIC);
+      });
+    });
+
+    it('sets the boardType for express boards', () => {
+      board.port_.productId = '0x8018';
       return board.connectToFirmware().then(() => {
         expect(board.boardType_).to.equal(BOARD_TYPE.EXPRESS);
       });

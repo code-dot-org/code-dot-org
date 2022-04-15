@@ -19,8 +19,8 @@ export const BOARD_TYPE = {
 export function detectBoardTypeFromPort(port) {
   let boardType = BOARD_TYPE.OTHER;
   if (port) {
-    let vendorId = port.vendorId;
-    let productId = port.productId;
+    const vendorId = port.vendorId ? parseInt(port.vendorId, 16) : null;
+    const productId = port.productId ? parseInt(port.productId, 16) : null;
     if (vendorId === ADAFRUIT_VID && productId === CIRCUIT_PLAYGROUND_PID) {
       boardType = BOARD_TYPE.CLASSIC;
     } else if (
