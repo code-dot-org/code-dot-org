@@ -219,11 +219,8 @@ class BubbleChoice < DSLDefined
     # otherwise, update sublevels to match
     levels_child_levels.sublevel.destroy_all
     Level.where(name: sublevel_names).each do |new_sublevel|
-      if new_sublevel.is_a? BubbleChoice
-        raise "BubbleChoice level #{name.dump} cannot contain BubbleChoice level #{new_sublevel.name.dump}"
-      end
-      if new_sublevel.is_a? LevelGroup
-        raise "BubbleChoice level #{name.dump} cannot contain LevelGroup level #{new_sublevel.name.dump}"
+      if new_sublevel.is_a?(BubbleChoice) ||  new_sublevel.is_a?(LevelGroup)
+        raise "BubbleChoice level #{name.dump} cannot contain #{new_sublevel.class.name} level #{new_sublevel.name.dump}"
       end
       ParentLevelsChildLevel.create!(
         child_level: new_sublevel,
