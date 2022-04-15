@@ -1403,6 +1403,7 @@
   "participantTypeTeacherTitle": "Teachers",
   "participantTypeFacilitatorDescription": "Section For Facilitators",
   "participantTypeFacilitatorTitle": "Facilitators",
+  "participants": "Participants",
   "partner": "Partner: {partner}",
   "password": "Password",
   "passwordConfirmation": "Password confirmation",
