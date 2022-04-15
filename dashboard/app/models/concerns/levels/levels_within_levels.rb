@@ -172,6 +172,7 @@ module Levels
       levels_child_levels.project_template.destroy_all
       return if project_template_level_name.blank?
       template_level = Level.find_by_name!(project_template_level_name)
+      raise 'level cannot be its own project template level' if template_level == self
       ParentLevelsChildLevel.create!(
         child_level: template_level,
         kind: ParentLevelsChildLevel::PROJECT_TEMPLATE,

@@ -104,14 +104,6 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
     assert_equal [child1, child2, child3], parent.child_levels
   end
 
-  test 'all_descendant_levels works on self-referential project template levels' do
-    level_name = 'project-template-level'
-    level = create :level, name: level_name, properties: {project_template_level_name: level_name}
-    assert_equal level, level.project_template_level
-
-    assert_equal [], level.all_descendant_levels, 'omit self from descendant levels'
-  end
-
   test 'setup contained levels' do
     level = create :level
     assert_equal [], level.child_levels.contained
@@ -183,5 +175,13 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
 
     real_level.update!(project_template_level_name: nil)
     assert_nil real_level.project_template_level
+  end
+
+  test 'level cannot be its own project template level' do
+    level = create :level
+    e = assert_raises do
+      level.update!(project_template_level_name: level.name)
+    end
+    assert_includes e.message, 'level cannot be its own project template level'
   end
 end
