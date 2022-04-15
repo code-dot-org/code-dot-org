@@ -7,7 +7,7 @@ export default function initializeBlocklyXml(blocklyWrapper) {
   blocklyWrapper.Xml.originalBlockToDom = blocklyWrapper.Xml.blockToDom;
   blocklyWrapper.Xml.blockToDom = function(block) {
     const blockXml = blocklyWrapper.Xml.originalBlockToDom(block);
-    if (block.canDisconnectFromParent_ === false) {
+    if (!block.canDisconnectFromParent_) {
       blockXml.setAttribute('can_disconnect_from_parent', false);
     }
     return blockXml;
