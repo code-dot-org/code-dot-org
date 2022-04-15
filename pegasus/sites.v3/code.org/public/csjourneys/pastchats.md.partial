@@ -31,6 +31,12 @@ social:
 <a id="recordings"></a>
 
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
+  {{ myjourney17 }}
+  <h3><strong>Improving user experiences in healthcare</strong></h3>
+  <p>Hear from a self-taught web developer about how his contributions at Greenway Health make access to healthcare information more user-friendly.</p>
+</div>
+
+<div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney16 }}
   <h3><strong>Creating an inclusive camera at Snapchat</strong></h3>
   <p>Hear about a Snapchat Product Lead’s journey from building a jukebox app to creating an inclusive camera that works well for everyone, regardless of their skin tone, culture, beauty standards, or ability.</p>
@@ -42,6 +48,8 @@ social:
   <p>Learn how a creative engineer at Meow Wolf helps to build interactive art installations that immerse visitors in mind-blowing new worlds with the intersection of art and engineering.</p>
 </div>
 
+<div style="clear: both"></div>
+
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   <a href="https://code.zoom.us/rec/play/h5l0dtXgmDO4BWCRwJvLq_9tSJBD3wRuIgCaXTF_qK68R-OIEe3JRA9hvRJISN6ttBbMW3aynY12vE0r.z3y6UMg8hnyhDfK4" target="_blank">
     <img src="/images/csjourneys/ilm3-youtube.png" style="max-width:100%" alt="Creating Visual Effects for Star Wars click to view">
@@ -49,8 +57,6 @@ social:
   <p>Hear from Allison Moon, a pipeline technical director with ILM and Lucasfilm who helps create visual effects for movies such as Star Wars: The Last Jedi. </p>
   <p><i>Due to legal constraints, we are only able to offer this recording on demand on Zoom. You will need to register using your name and email address to access.</i></p>
 </div>
-
-<div style="clear: both"></div>
 
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney14 }}
@@ -64,13 +70,13 @@ social:
   <p>Learn how Christopher Lopez, a security analyst with Tanium, helps organizations protect their networks from cybersecurity threats.</p>
 </div>
 
+<div style="clear: both"></div>
+
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney12 }}
   <h3><strong>Exploring the world of virtual reality</strong></h3>
   <p>How can virtual reality experiences reinvent how people work, play, and communicate?  Find out as we talk to a technical program manager at Meta Quest.</p>
 </div>
-
-<div style="clear: both"></div>
 
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney11 }}
@@ -84,13 +90,13 @@ social:
   <p>Hear about the career path that led two software engineers to Spotify and how each plays a different role in helping to bring music to our lives.</p>
 </div>
 
+<div style="clear: both"></div>
+
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney3 }}
   <h3><strong>Building models of the universe</strong></h3>
   <p>Hear from NASA scientists Kim Arcand and Rutu Das about their career journeys and how they use data science to build 3D models of the universe.</p>
 </div>
-
-<div style="clear: both"></div>
 
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   <a href="https://code.zoom.us/rec/play/09veMf1354wOxNcJxSMPqmGgf6qh3vTdvIaSGHTpeyik4_59etRQXEIuPbAQwSzKiYAIMkXpqSRGHO_L.ym6IZsLcInwcxQAG" target="_blank">
@@ -106,13 +112,13 @@ social:
   <p>Learn how Eva Moscat and Anna Elzer are helping build software for robots and designing learning experiences that inspire the next generation of technologists.</p>
 </div>
 
+<div style="clear: both"></div>
+
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney8 }}
   <h3><strong>Using Roblox to empower students</strong></h3>
   <p>Learn how Roblox designer Genevieve Johnson uses the platform to empower students to pursue careers as entrepreneurs, engineers, and designers.</p>
 </div>
-
-<div style="clear: both"></div>
 
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney9 }}
