@@ -82,12 +82,12 @@ describe('UnitEditor', () => {
       initialLocales: [],
       isMigrated: false,
       initialPublishedState: PublishedState.in_development,
+      initialUnitPublishedState: null,
       initialInstructionType: InstructionType.teacher_led,
       initialInstructorAudience: InstructorAudience.teacher,
       initialParticipantAudience: ParticipantAudience.student,
       hasCourse: false,
       scriptPath: '/s/test-unit',
-      allowMajorCurriculumChanges: true,
       initialProfessionalLearningCourse: ''
     };
   });
@@ -115,6 +115,48 @@ describe('UnitEditor', () => {
     it('shows publishing editor if hasCourse is false', () => {
       const wrapper = createWrapper({hasCourse: false});
       assert.equal(wrapper.find('CourseVersionPublishingEditor').length, 1);
+    });
+
+    it('shows hide this unit in course if hasCourse and course is not in development', () => {
+      const wrapper = createWrapper({
+        hasCourse: true,
+        initialPublishedState: 'pilot'
+      });
+      assert.equal(wrapper.find('.unit-test-hide-unit-in-course').length, 1);
+    });
+
+    it('does not show hide this unit in course if does not have course', () => {
+      const wrapper = createWrapper({
+        hasCourse: false,
+        initialPublishedState: 'pilot'
+      });
+      assert.equal(wrapper.find('.unit-test-hide-unit-in-course').length, 0);
+    });
+
+    it('does not show hide this unit in course if course is in development', () => {
+      const wrapper = createWrapper({
+        hasCourse: true,
+        initialPublishedState: 'in_development'
+      });
+      assert.equal(wrapper.find('.unit-test-hide-unit-in-course').length, 0);
+    });
+
+    it('clicking hide unit checkbox updates unit published state', () => {
+      const wrapper = createWrapper({
+        hasCourse: true,
+        initialPublishedState: 'pilot',
+        initialUnitPublishedState: 'in_development'
+      });
+      assert.equal(wrapper.find('.unit-test-hide-unit-in-course').length, 1);
+      assert.equal(
+        wrapper.find('.unit-test-hide-unit-in-course').props().checked,
+        true
+      );
+      wrapper.find('.unit-test-hide-unit-in-course').simulate('change');
+      assert.equal(
+        wrapper.find('.unit-test-hide-unit-in-course').props().checked,
+        false
+      );
     });
 
     it('uses new unit editor for migrated unit', () => {
@@ -147,6 +189,22 @@ describe('UnitEditor', () => {
       expect(
         wrapper.find('.student-facing-lesson-plan-checkbox').props().disabled
       ).to.equal(true);
+    });
+
+    it('allows changing student facing lesson plan checkbox when allowed to make major curriculum changes to hidden unit', () => {
+      const wrapper = createWrapper({
+        initialPublishedState: 'stable',
+        initialUnitPublishedState: 'in_development',
+        isMigrated: true,
+        initialUseLegacyLessonPlans: false
+      });
+
+      expect(
+        wrapper.find('.student-facing-lesson-plan-checkbox').length
+      ).to.equal(1);
+      expect(
+        wrapper.find('.student-facing-lesson-plan-checkbox').props().disabled
+      ).to.equal(false);
     });
 
     describe('Teacher Resources', () => {

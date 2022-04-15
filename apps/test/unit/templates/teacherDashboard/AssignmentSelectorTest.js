@@ -199,6 +199,15 @@ describe('AssignmentSelector', () => {
       unitId: 5
     });
 
+    assert.equal(
+      wrapper
+        .find('select')
+        .at(0)
+        .find('option')
+        .at(0)
+        .props().value,
+      '__noAssignment__'
+    );
     wrapper
       .find('select')
       .at(0)

@@ -14,11 +14,11 @@ module ReadReplicaHelper
         Gatekeeper.allows('dashboard_read_replica')
       end
 
-      def lookup_connection_handler(handler_key)
+      def connected_to(database: nil, role: nil, prevent_writes: false, &blk)
         if read_replica?
-          super(handler_key)
+          super
         else
-          super(ActiveRecord::Base.writing_role)
+          super(database: database, role: :writing, prevent_writes: prevent_writes, &blk)
         end
       end
     end
