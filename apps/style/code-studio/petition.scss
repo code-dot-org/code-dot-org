@@ -1,10 +1,12 @@
-#petition_message {
+.petition_message {
   font-size: 21px;
   line-height: 28px;
   font-family: 'Gotham 5r', sans-serif;
+  flex: 1 100%;
+  color: #5B6770;
 }
 
-#petition_form .desktop-feature {
+.petition_form {
   font-size: 12px;
   line-height: 18px;
   color: #dcdcdc;
@@ -40,7 +42,7 @@
   margin-bottom: 10px;
 }
 
-#gobutton {
+.go_button {
   min-width: 100px;
   margin-top: 0px;
   margin-bottom: 10px;
