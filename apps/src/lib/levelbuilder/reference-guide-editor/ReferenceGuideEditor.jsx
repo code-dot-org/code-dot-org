@@ -109,7 +109,7 @@ export default function ReferenceGuideEditor(props) {
           setReferenceGuide({...referenceGuide, content: e.target.value})
         }
         markdown={referenceGuide.content || ''}
-        features={{imageUpload: true}}
+        features={{imageUpload: true, programmingExpression: true}}
       />
       <SaveBar
         handleSave={save}
