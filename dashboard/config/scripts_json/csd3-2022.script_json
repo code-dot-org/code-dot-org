@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-12 20:56:41 UTC",
+    "serialized_at": "2022-04-14 20:53:46 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -7556,7 +7556,7 @@
       "properties": {
         "description": "Send students to Code Studio to complete their reflection on their attitudes toward computer science.  Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
         "name": "Reflect\r",
-        "progression_name": "Reflection"
+        "progression_name": "End-Of-Unit Survey"
       },
       "seeding_key": {
         "activity_section.key": "574e77dd-d6f7-4d59-80db-f24e54851aa1",
@@ -13271,15 +13271,12 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2022"
-        ],
-        "progression": "Reflection"
+        "progression": "End-Of-Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2022"
+          "Student End of Unit Survey_csd3-2022"
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
@@ -13287,7 +13284,7 @@
         "activity_section.key": "574e77dd-d6f7-4d59-80db-f24e54851aa1"
       },
       "level_keys": [
-        "csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2022"
+        "Student End of Unit Survey_csd3-2022"
       ]
     },
     {
@@ -16055,9 +16052,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2022",
+        "level.key": "Student End of Unit Survey_csd3-2022",
         "script_level.level_keys": [
-          "csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2022"
+          "Student End of Unit Survey_csd3-2022"
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",

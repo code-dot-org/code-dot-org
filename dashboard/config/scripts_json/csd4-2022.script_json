@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-12 20:57:00 UTC",
+    "serialized_at": "2022-04-14 20:55:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5822,7 +5822,7 @@
       "position": 1,
       "properties": {
         "description": "**Code Studio:** Have students log into Code Studio and complete their reflection on their attitudes toward computer science.  Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.\n\n",
-        "progression_name": "Reflection"
+        "progression_name": "End-Of-Survey"
       },
       "seeding_key": {
         "activity_section.key": "1fdbfa90-7ada-4d4d-b4e6-1828a81c606b",
@@ -6686,15 +6686,12 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "csd-pulse-check-survey-1-levelgroup U4Ch2_2022"
-        ],
-        "progression": "Reflection"
+        "progression": "End-Of-Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csd-pulse-check-survey-1-levelgroup U4Ch2_2022"
+          "Student End of Unit Survey_csd4-2022"
         ],
         "lesson.key": "Project - App Presentation",
         "lesson_group.key": "csd4_2",
@@ -6702,7 +6699,7 @@
         "activity_section.key": "1fdbfa90-7ada-4d4d-b4e6-1828a81c606b"
       },
       "level_keys": [
-        "csd-pulse-check-survey-1-levelgroup U4Ch2_2022"
+        "Student End of Unit Survey_csd4-2022"
       ]
     },
     {
@@ -7130,9 +7127,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csd-pulse-check-survey-1-levelgroup U4Ch2_2022",
+        "level.key": "Student End of Unit Survey_csd4-2022",
         "script_level.level_keys": [
-          "csd-pulse-check-survey-1-levelgroup U4Ch2_2022"
+          "Student End of Unit Survey_csd4-2022"
         ],
         "lesson.key": "Project - App Presentation",
         "lesson_group.key": "csd4_2",
@@ -7518,6 +7515,18 @@
       }
     },
     {
+      "name": "Events in App Lab",
+      "url": "https://youtu.be/npa2r4t6y2A",
+      "key": "events_in_app_lab_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "events_in_app_lab_1"
+      }
+    },
+    {
       "name": "Example Apps for Good",
       "url": "https://docs.google.com/document/d/1kCuDUhTJb7Vcrv_pzvA4yL79WyZn_7PorV-F-gTxBuk/edit",
       "key": "example_apps_for_good",
@@ -7645,11 +7654,10 @@
     },
     {
       "name": "Intro to Design Mode",
-      "url": "https://youtu.be/tAtvWkYBUoU",
+      "url": "https://youtu.be/jiX1dST2PCw",
       "key": "intro_to_design_mode",
       "properties": {
         "audience": "Student",
-        "download_url": "https://videos.code.org/2015/csp/applab/design.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -8508,6 +8516,12 @@
       "seeding_key": {
         "lesson.key": "Events in AppLab",
         "resource.key": "events_in_app_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in AppLab",
+        "resource.key": "events_in_app_lab_1"
       }
     },
     {

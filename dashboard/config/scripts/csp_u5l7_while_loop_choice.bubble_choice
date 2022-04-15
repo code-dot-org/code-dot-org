@@ -1,5 +1,6 @@
 name 'CSP U5L7 While Loop Choice'
 display_name 'Practice with While Loops'
+description 'Use while loops to make programs'
 
 sublevels
 level 'U5 Loops Practice While Choice A'
