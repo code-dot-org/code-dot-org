@@ -18,6 +18,9 @@ function useProgrammingExpression(initialProgrammingExpression) {
     // We remove id and key from state as they should not be modified
     delete copiedExpression.id;
     delete copiedExpression.key;
+    // Examples and parameters don't have obvious unique identifiers so adding
+    // some here. These are required by React when we transform these lists
+    // into sets of components.
     if (copiedExpression.examples) {
       copiedExpression.examples.forEach(e => (e.key = createUuid()));
     }
@@ -63,7 +66,7 @@ export default function ProgrammingExpressionEditor({
 }) {
   const [
     programmingExpression,
-    updateProgrammingExpression
+    setProgrammingExpressionProperty
   ] = useProgrammingExpression(initialProgrammingExpression);
   const [isSaving, setIsSaving] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
@@ -116,7 +119,9 @@ export default function ProgrammingExpressionEditor({
         Display Name
         <input
           value={programmingExpression.name}
-          onChange={e => updateProgrammingExpression('name', e.target.value)}
+          onChange={e =>
+            setProgrammingExpressionProperty('name', e.target.value)
+          }
           style={styles.textInput}
         />
       </label>
@@ -133,7 +138,7 @@ export default function ProgrammingExpressionEditor({
         <select
           value={programmingExpression.categoryKey}
           onChange={e =>
-            updateProgrammingExpression('categoryKey', e.target.value)
+            setProgrammingExpressionProperty('categoryKey', e.target.value)
           }
           style={styles.selectInput}
         >
@@ -157,7 +162,7 @@ export default function ProgrammingExpressionEditor({
           <input
             value={programmingExpression.blockName}
             onChange={e =>
-              updateProgrammingExpression('blockName', e.target.value)
+              setProgrammingExpressionProperty('blockName', e.target.value)
             }
             style={styles.textInput}
           />
@@ -168,7 +173,7 @@ export default function ProgrammingExpressionEditor({
         <select
           value={programmingExpression.videoKey || ''}
           onChange={e =>
-            updateProgrammingExpression('videoKey', e.target.value)
+            setProgrammingExpressionProperty('videoKey', e.target.value)
           }
           style={styles.selectInput}
         >
@@ -182,7 +187,7 @@ export default function ProgrammingExpressionEditor({
       </label>
       <ImageInput
         updateImageUrl={imgUrl =>
-          updateProgrammingExpression('imageUrl', imgUrl)
+          setProgrammingExpressionProperty('imageUrl', imgUrl)
         }
         imageUrl={programmingExpression.imageUrl}
       />
@@ -191,7 +196,7 @@ export default function ProgrammingExpressionEditor({
         <textarea
           value={programmingExpression.shortDescription}
           onChange={e =>
-            updateProgrammingExpression('shortDescription', e.target.value)
+            setProgrammingExpressionProperty('shortDescription', e.target.value)
           }
           style={styles.textInput}
         />
@@ -203,7 +208,7 @@ export default function ProgrammingExpressionEditor({
           <input
             value={programmingExpression.externalDocumentation}
             onChange={e =>
-              updateProgrammingExpression(
+              setProgrammingExpressionProperty(
                 'externalDocumentation',
                 e.target.value
               )
@@ -215,7 +220,7 @@ export default function ProgrammingExpressionEditor({
           markdown={programmingExpression.content}
           label={'Content'}
           handleMarkdownChange={e =>
-            updateProgrammingExpression('content', e.target.value)
+            setProgrammingExpressionProperty('content', e.target.value)
           }
           features={markdownEditorFeatures}
         />
@@ -225,7 +230,7 @@ export default function ProgrammingExpressionEditor({
           markdown={programmingExpression.syntax}
           label={'Syntax'}
           handleMarkdownChange={e =>
-            updateProgrammingExpression('syntax', e.target.value)
+            setProgrammingExpressionProperty('syntax', e.target.value)
           }
           features={markdownEditorFeatures}
         />
@@ -237,7 +242,7 @@ export default function ProgrammingExpressionEditor({
           <textarea
             value={programmingExpression.returnValue}
             onChange={e =>
-              updateProgrammingExpression('returnValue', e.target.value)
+              setProgrammingExpressionProperty('returnValue', e.target.value)
             }
             style={styles.textInput}
           />
@@ -248,7 +253,7 @@ export default function ProgrammingExpressionEditor({
           markdown={programmingExpression.tips}
           label={'Tips'}
           handleMarkdownChange={e =>
-            updateProgrammingExpression('tips', e.target.value)
+            setProgrammingExpressionProperty('tips', e.target.value)
           }
           features={markdownEditorFeatures}
           helpTip="List of tips for using this code documentation"
@@ -257,7 +262,7 @@ export default function ProgrammingExpressionEditor({
       <CollapsibleEditorSection title="Parameters" collapsed>
         <OrderableList
           list={programmingExpression.parameters}
-          setList={list => updateProgrammingExpression('parameters', list)}
+          setList={list => setProgrammingExpressionProperty('parameters', list)}
           addButtonText="Add Another Parameter"
           renderItem={renderParameterEditor}
         />
@@ -265,7 +270,7 @@ export default function ProgrammingExpressionEditor({
       <CollapsibleEditorSection title="Examples" collapsed>
         <OrderableList
           list={programmingExpression.examples || []}
-          setList={list => updateProgrammingExpression('examples', list)}
+          setList={list => setProgrammingExpressionProperty('examples', list)}
           addButtonText="Add Another Example"
           renderItem={renderExampleEditor}
         />

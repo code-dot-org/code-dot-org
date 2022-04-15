@@ -18,6 +18,9 @@ function useProgrammingClass(initialProgrammingClass) {
     // We remove id and key from state as they should not be modified
     delete copiedClass.id;
     delete copiedClass.key;
+    // Examples and fields don't have obvious unique identifiers so adding
+    // some here. These are required by React when we transform these lists
+    // into sets of components.
     if (copiedClass.examples) {
       copiedClass.examples.forEach(e => (e.key = createUuid()));
     }
@@ -31,7 +34,7 @@ function useProgrammingClass(initialProgrammingClass) {
     initializeProgrammingClass(initialProgrammingClass)
   );
 
-  const updateProgrammingClass = (key, value) => {
+  const setProgrammingClassProperty = (key, value) => {
     setProgrammingClass({...programmingClass, [key]: value});
   };
 
@@ -39,7 +42,7 @@ function useProgrammingClass(initialProgrammingClass) {
     setProgrammingClass(initializeProgrammingClass(newProgrammingClass));
   };
 
-  return [programmingClass, updateProgrammingClass, resetProgrammingClass];
+  return [programmingClass, setProgrammingClassProperty, resetProgrammingClass];
 }
 
 function renderExampleEditor(example, updateFunc) {
@@ -60,7 +63,7 @@ export default function ProgrammingClassEditor({
 }) {
   const [
     programmingClass,
-    updateProgrammingClass,
+    setProgrammingClassProperty,
     resetProgrammingClass
   ] = useProgrammingClass(initialProgrammingClass);
   const [isSaving, setIsSaving] = useState(false);
@@ -119,7 +122,7 @@ export default function ProgrammingClassEditor({
         Display Name
         <input
           value={programmingClass.name}
-          onChange={e => updateProgrammingClass('name', e.target.value)}
+          onChange={e => setProgrammingClassProperty('name', e.target.value)}
           style={styles.textInput}
         />
       </label>
@@ -135,7 +138,9 @@ export default function ProgrammingClassEditor({
         Category
         <select
           value={programmingClass.categoryKey}
-          onChange={e => updateProgrammingClass('categoryKey', e.target.value)}
+          onChange={e =>
+            setProgrammingClassProperty('categoryKey', e.target.value)
+          }
           style={styles.selectInput}
         >
           <option key="none" value={''}>
@@ -158,7 +163,10 @@ export default function ProgrammingClassEditor({
           <input
             value={programmingClass.externalDocumentation}
             onChange={e =>
-              updateProgrammingClass('externalDocumentation', e.target.value)
+              setProgrammingClassProperty(
+                'externalDocumentation',
+                e.target.value
+              )
             }
             style={styles.textInput}
           />
@@ -167,7 +175,7 @@ export default function ProgrammingClassEditor({
           markdown={programmingClass.content}
           label={'Content'}
           handleMarkdownChange={e =>
-            updateProgrammingClass('content', e.target.value)
+            setProgrammingClassProperty('content', e.target.value)
           }
           features={markdownEditorFeatures}
         />
@@ -177,7 +185,7 @@ export default function ProgrammingClassEditor({
           markdown={programmingClass.syntax}
           label={'Syntax'}
           handleMarkdownChange={e =>
-            updateProgrammingClass('syntax', e.target.value)
+            setProgrammingClassProperty('syntax', e.target.value)
           }
           features={markdownEditorFeatures}
         />
@@ -187,7 +195,7 @@ export default function ProgrammingClassEditor({
           markdown={programmingClass.tips}
           label={'Tips'}
           handleMarkdownChange={e =>
-            updateProgrammingClass('tips', e.target.value)
+            setProgrammingClassProperty('tips', e.target.value)
           }
           features={markdownEditorFeatures}
           helpTip="List of tips for using this code documentation"
@@ -196,7 +204,7 @@ export default function ProgrammingClassEditor({
       <CollapsibleEditorSection title="Examples" collapsed>
         <OrderableList
           list={programmingClass.examples || []}
-          setList={list => updateProgrammingClass('examples', list)}
+          setList={list => setProgrammingClassProperty('examples', list)}
           addButtonText="Add Another Example"
           renderItem={renderExampleEditor}
         />
@@ -204,7 +212,7 @@ export default function ProgrammingClassEditor({
       <CollapsibleEditorSection title="Fields" collapsed>
         <OrderableList
           list={programmingClass.fields || []}
-          setList={list => updateProgrammingClass('fields', list)}
+          setList={list => setProgrammingClassProperty('fields', list)}
           addButtonText="Add Another Field"
           renderItem={renderFieldEditor}
         />
@@ -212,7 +220,7 @@ export default function ProgrammingClassEditor({
       <CollapsibleEditorSection title="Methods" collapsed>
         <OrderableList
           list={programmingClass.methods || []}
-          setList={list => updateProgrammingClass('methods', list)}
+          setList={list => setProgrammingClassProperty('methods', list)}
           addButtonText="Add Another Method"
           renderItem={renderMethodNameEditor}
         />
