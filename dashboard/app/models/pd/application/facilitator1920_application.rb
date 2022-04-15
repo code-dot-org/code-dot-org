@@ -171,7 +171,7 @@ module Pd::Application
 
     # @override
     # Filter out extraneous answers, based on selected program (course)
-    def self.filtered_labels(course, status = 'unreviewed')
+    def self.filtered_labels(course)
       raise "Invalid course #{course}" unless VALID_COURSES.include?(course)
       FILTERED_LABELS[course]
     end

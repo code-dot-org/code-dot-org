@@ -14,8 +14,7 @@ const DEFAULT_PROPS = {
   plCourses,
   topPlCourse,
   isEnglish: true,
-  joinedStudentSections: [],
-  joinedPlSections: [],
+  joinedSections: [],
   ncesSchoolId: 'school-id',
   schoolYear: 2021,
   showCensusBanner: false,
@@ -206,9 +205,9 @@ describe('TeacherHomepage', () => {
     assert(wrapper.find('TeacherResources').exists());
   });
 
-  it('renders a JoinSectionArea component', () => {
+  it('renders a StudentSections component', () => {
     const wrapper = setUp();
-    assert(wrapper.find('JoinSectionArea').exists());
+    assert(wrapper.find('StudentSections').exists());
   });
 
   it('renders ProjectWidgetWithData component', () => {

@@ -1,5 +1,9 @@
 <Applab>
   <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2022-04-08T17:05:45.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -234,18 +238,14 @@
     "libraries_enabled": "false",
     "validation_enabled": "false",
     "ai_enabled": "false",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": [
+      "CSD U6 - Sensors - PEmbed_2222"
+    ],
+    "preload_asset_list": null
   },
-  "game_id": 41,
   "published": true,
-  "created_at": "2022-04-08T17:05:45.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-08T17:05:45.061+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - P_2022\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - P_2022\"},{\"changed_at\":\"2022-04-13 21:39:54 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-08T17:05:45.061+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - P_2022\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - P_2022\"}]"
 }]]></config>
   <blocks/>
 </Applab>

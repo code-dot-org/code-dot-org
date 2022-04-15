@@ -84,33 +84,6 @@ class ProgrammingClassesControllerTest < ActionController::TestCase
     assert_equal 2, programming_class.programming_methods.count
   end
 
-  test 'can update and destroy programming methods when updating programming class' do
-    sign_in @levelbuilder
-    File.expects(:write).once
-
-    programming_class = create :programming_class, programming_environment: @programming_environment
-    category = create :programming_environment_category, programming_environment: @programming_environment
-    method_to_update = create :programming_method, programming_class: programming_class
-    method_to_destroy = create :programming_method, programming_class: programming_class
-
-    post :update, params: {
-      id: programming_class.id,
-      key: programming_class.key,
-      name: 'new name',
-      categoryKey: category.key,
-      fields: [{name: 'field 1', type: 'int'}],
-      methods: [{id: method_to_update.id, name: 'updated name'}]
-    }
-    assert_response :ok
-    programming_class.reload
-
-    assert_equal 'new name', programming_class.name
-    assert_equal category, programming_class.programming_environment_category
-    assert_equal 1, programming_class.programming_methods.count
-    assert_equal 'updated name', programming_class.programming_methods.first.name
-    assert_nil ProgrammingMethod.find_by_id(method_to_destroy.id)
-  end
-
   test 'data is passed down to edit page' do
     sign_in @levelbuilder
 

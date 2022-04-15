@@ -4204,17 +4204,13 @@ class UserTest < ActiveSupport::TestCase
     user = create :user
     level = create :level
     script = create :script
+    user_level_1 = create :user_level, user: user, level: level, script: script, updated_at: 1.day.ago
+    user_level_2 = create :user_level, user: user, level: level, script: script, updated_at: 1.day.ago
+    user_level_3 = create :user_level, user: user, level: level, script: script, updated_at: 1.day.ago
 
-    # Freeze time to ensure all the user levels have the same updated_at timestamp
-    Timecop.freeze do
-      user_level_1 = create :user_level, user: user, level: level, script: script, updated_at: 1.day.ago
-      user_level_2 = create :user_level, user: user, level: level, script: script, updated_at: 1.day.ago
-      user_level_3 = create :user_level, user: user, level: level, script: script, updated_at: 1.day.ago
+    result = User.index_user_levels_by_level_id([user_level_1, user_level_2, user_level_3])
 
-      result = User.index_user_levels_by_level_id([user_level_1, user_level_2, user_level_3])
-
-      assert_equal({level.id => user_level_1}, result)
-    end
+    assert_equal({level.id => user_level_1}, result)
   end
 
   test 'find_by_email_or_hashed_email returns nil when no user is found' do

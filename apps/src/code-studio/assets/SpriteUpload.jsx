@@ -270,15 +270,6 @@ export default class SpriteUpload extends React.Component {
               />
             </label>
           </div>
-          {spriteAvailability === SpriteLocation.level && (
-            <div>
-              <label>Type:</label>
-              <select onChange={this.handleCategoryChange}>
-                <option value="">Sprite Costume</option>
-                <option value="backgrounds">Background</option>
-              </select>
-            </div>
-          )}
           {spriteAvailability === SpriteLocation.library && (
             <div>
               <label>Category:</label>

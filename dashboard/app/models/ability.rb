@@ -84,7 +84,6 @@ class Ability
     can [:read, :show_by_keys, :docs_show], ProgrammingExpression do |expression|
       can? :read, expression.programming_environment
     end
-    cannot :index, ProgrammingExpression
 
     can [:docs_index, :docs_show], ProgrammingEnvironment do |environment|
       can? :read, environment
@@ -365,7 +364,6 @@ class Ability
         ProgrammingClass,
         ProgrammingEnvironment,
         ProgrammingExpression,
-        ProgrammingMethod,
         ReferenceGuide,
         CourseOffering,
         UnitGroup,

@@ -8,18 +8,18 @@
     "hide_share_and_remix": "false",
     "submittable": "false",
     "csa_view_mode": "console",
-    "display_name": "User Story D",
-    "bubble_choice_description": "As a community activist, I'd like to identify high needs communities who may be experiencing food shortages so that I can focus my team's work.",
-    "thumbnail_url": "https://images.code.org/566e3a0f80b5618e49d13f28ce894e90-image-1648762713406.png",
     "encrypted_examples": [
 
-    ]
+    ],
+    "display_name": "User Story D",
+    "bubble_choice_description": "As a community activist, I'd like to identify high needs communities who may be experiencing food shortages so that I focus my team's work.",
+    "thumbnail_url": "https://images.code.org/566e3a0f80b5618e49d13f28ce894e90-image-1648762713406.png"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2022-03-25T13:47:48.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-03-25T13:47:48.229+00:00\",\"changed\":[\"cloned from \\\"CSA U3L12-L1d_2022\\\"\"],\"cloned_from\":\"CSA U3L12-L1d_2022\"},{\"changed_at\":\"2022-03-25 13:48:51 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-25 13:49:08 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 22:19:36 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-13 00:03:17 +0000\",\"changed\":[\"bubble_choice_description\",\"contained_level_names\"],\"changed_by_id\":18413,\"changed_by_email\":\"joshua.joyner@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-25T13:47:48.229+00:00\",\"changed\":[\"cloned from \\\"CSA U3L12-L1d_2022\\\"\"],\"cloned_from\":\"CSA U3L12-L1d_2022\"},{\"changed_at\":\"2022-03-25 13:48:51 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-25 13:49:08 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 22:19:36 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

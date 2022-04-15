@@ -285,7 +285,7 @@ class SectionTest < ActiveSupport::TestCase
     section_with_teacher_participants = build :section, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
     assert_does_not_create(Follower) do
       add_student_return = section_with_teacher_participants.add_student @student
-      assert_equal Section::ADD_STUDENT_FORBIDDEN, add_student_return
+      assert_equal Section::ADD_STUDENT_FAILURE, add_student_return
     end
   end
 

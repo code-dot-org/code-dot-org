@@ -296,11 +296,6 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
       @clone_params = {id: @programming_expression.id, destinationProgrammingEnvironmentName: destination_programming_environment.name}
     end
 
-    test_user_gets_response_for :index, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-    test_user_gets_response_for :index, user: :student, response: :forbidden
-    test_user_gets_response_for :index, user: :teacher, response: :forbidden
-    test_user_gets_response_for :index, user: :levelbuilder, response: :success
-
     test_user_gets_response_for :new, user: nil, response: :redirect, redirected_to: '/users/sign_in'
     test_user_gets_response_for :new, user: :student, response: :forbidden
     test_user_gets_response_for :new, user: :teacher, response: :forbidden

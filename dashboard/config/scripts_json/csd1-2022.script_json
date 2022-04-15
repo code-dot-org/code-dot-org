@@ -4,15 +4,6 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "announcements": [
-        {
-          "notice": "Supports to Teach CS Discoveries",
-          "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
-          "link": "https://code.org/educate/professional-development-online",
-          "type": "information",
-          "visibility": "Teacher-only"
-        }
-      ],
       "curriculum_umbrella": "CSD",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -27,8 +18,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-13 17:25:42 UTC",
-    "published_state": null,
+    "serialized_at": "2022-04-10 03:19:50 UTC",
+    "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -3336,27 +3327,10 @@
       "properties": {
         "description": "**Question of the Day:  How can the IOSP model help us to design an app that solves a problem?**\n\n\n\n**Reflect:** Students reflect on the following question in their journals:\n\n* What are you most proud of in your project?\n\nSend students to Code Studio to complete their reflection on their attitudes toward computer science.  Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
         "name": "Reflection\r",
-        "progression_name": "End-of-Unit Survey",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Teacher End-Of-Unit Surveys:** While your students complete the survey, we would appreciate you completing a **5-question** teacher survey\n\n## Click Here for Teacher Survey\n(Note: The survey link does not currently work - it will become available at the start of the school year)"
-          }
-        ]
+        "progression_name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "3258b13a-0f05-4f62-bf07-38aca3a745db",
-        "lesson_activity.key": "e228135e-7cba-44db-93d4-93ed63ec0cfc"
-      }
-    },
-    {
-      "key": "f8b3b5af-9f93-49b7-a6c4-42afad60a668",
-      "position": 2,
-      "properties": {
-        "progression_name": "Old Reflection (Delete Later)"
-      },
-      "seeding_key": {
-        "activity_section.key": "f8b3b5af-9f93-49b7-a6c4-42afad60a668",
         "lesson_activity.key": "e228135e-7cba-44db-93d4-93ed63ec0cfc"
       }
     },
@@ -5276,14 +5250,14 @@
       "assessment": true,
       "properties": {
         "level_keys": [
-          "CSD Student End of Unit Survey - Unit 1_2022"
+          "csd-pulse-check-survey-1-levelgroup U1Ch2_2022"
         ],
-        "progression": "End-of-Unit Survey"
+        "progression": "Reflection"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD Student End of Unit Survey - Unit 1_2022"
+          "csd-pulse-check-survey-1-levelgroup U1Ch2_2022"
         ],
         "lesson.key": "Project - Propose an App",
         "lesson_group.key": "csd1_2",
@@ -5291,36 +5265,11 @@
         "activity_section.key": "3258b13a-0f05-4f62-bf07-38aca3a745db"
       },
       "level_keys": [
-        "CSD Student End of Unit Survey - Unit 1_2022"
-      ]
-    },
-    {
-      "chapter": 20,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "csd-pulse-check-survey-1-levelgroup U1Ch2_2022"
-        ],
-        "progression": "Old Reflection (Delete Later)"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csd-pulse-check-survey-1-levelgroup U1Ch2_2022"
-        ],
-        "lesson.key": "Project - Propose an App",
-        "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2022",
-        "activity_section.key": "f8b3b5af-9f93-49b7-a6c4-42afad60a668"
-      },
-      "level_keys": [
         "csd-pulse-check-survey-1-levelgroup U1Ch2_2022"
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5563,18 +5512,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD Student End of Unit Survey - Unit 1_2022",
-        "script_level.level_keys": [
-          "CSD Student End of Unit Survey - Unit 1_2022"
-        ],
-        "lesson.key": "Project - Propose an App",
-        "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2022",
-        "activity_section.key": "3258b13a-0f05-4f62-bf07-38aca3a745db"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "csd-pulse-check-survey-1-levelgroup U1Ch2_2022",
         "script_level.level_keys": [
           "csd-pulse-check-survey-1-levelgroup U1Ch2_2022"
@@ -5582,7 +5519,7 @@
         "lesson.key": "Project - Propose an App",
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-2022",
-        "activity_section.key": "f8b3b5af-9f93-49b7-a6c4-42afad60a668"
+        "activity_section.key": "3258b13a-0f05-4f62-bf07-38aca3a745db"
       }
     },
     {
@@ -5599,39 +5536,6 @@
     }
   ],
   "resources": [
-    {
-      "name": "All Resources",
-      "url": "/s/csd1-2022/resources",
-      "key": "all_resources_5",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_resources_5"
-      }
-    },
-    {
-      "name": "All Standards",
-      "url": "/s/csd1-2022/standards",
-      "key": "all_standards_5",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_standards_5"
-      }
-    },
-    {
-      "name": "All Vocabulary",
-      "url": "/s/csd1-2022/vocab",
-      "key": "all_vocabulary_5",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_vocabulary_5"
-      }
-    },
     {
       "name": "Aluminum Boats",
       "url": "https://docs.google.com/document/d/1qHsuBxLTbCCUwjkUDKP0WywF249kx3s4aLeJyYR2Byo/edit",
@@ -5846,9 +5750,11 @@
     },
     {
       "name": "CSD Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview",
+      "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview",
       "key": "csd_curriculum_guide",
       "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csd_curriculum_guide"
@@ -5856,9 +5762,11 @@
     },
     {
       "name": "CSD Implementation Guide",
-      "url": "https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview",
+      "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
       "key": "csd_implementation_guide",
       "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csd_implementation_guide"
@@ -6251,6 +6159,39 @@
       },
       "seeding_key": {
         "resource.key": "the_problem_solving_process_1"
+      }
+    },
+    {
+      "name": "Unit 1 Resources",
+      "url": "/s/csd1-2021/resources",
+      "key": "unit_1_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_resources"
+      }
+    },
+    {
+      "name": "Unit 1 Standards",
+      "url": "/s/csd1-2021/standards",
+      "key": "unit_1_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_standards"
+      }
+    },
+    {
+      "name": "Unit 1 Vocabulary",
+      "url": "/s/csd1-2021/vocab",
+      "key": "unit_1_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_vocabulary"
       }
     },
     {
@@ -6666,24 +6607,6 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_resources_5",
-        "script.name": "csd1-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_standards_5",
-        "script.name": "csd1-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_vocabulary_5",
-        "script.name": "csd1-2022"
-      }
-    },
-    {
-      "seeding_key": {
         "resource.key": "csd_curriculum_guide",
         "script.name": "csd1-2022"
       }
@@ -6697,6 +6620,24 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
+        "script.name": "csd1-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_1_resources",
+        "script.name": "csd1-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_1_standards",
+        "script.name": "csd1-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_1_vocabulary",
         "script.name": "csd1-2022"
       }
     }

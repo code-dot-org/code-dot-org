@@ -1,5 +1,9 @@
 <Applab>
   <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2022-01-06T20:05:59.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -59,13 +63,9 @@
     "ai_enabled": "false",
     "preload_asset_list": null
   },
-  "game_id": 41,
   "published": true,
-  "created_at": "2022-01-06T20:05:59.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:05:59.005+00:00\",\"changed\":[\"cloned from \\\"U5 L03 Lists Practice 10_2021\\\"\"],\"cloned_from\":\"U5 L03 Lists Practice 10_2021\"},{\"changed_at\":\"2022-04-13 23:52:45 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:05:59.005+00:00\",\"changed\":[\"cloned from \\\"U5 L03 Lists Practice 10_2021\\\"\"],\"cloned_from\":\"U5 L03 Lists Practice 10_2021\"}]"
 }]]></config>
   <blocks/>
 </Applab>

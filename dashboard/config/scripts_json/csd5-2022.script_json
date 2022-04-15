@@ -4,15 +4,6 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "announcements": [
-        {
-          "notice": "Supports to Teach CS Discoveries",
-          "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
-          "link": "https://code.org/educate/professional-development-online",
-          "type": "information",
-          "visibility": "Teacher-only"
-        }
-      ],
       "curriculum_umbrella": "CSD",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -27,8 +18,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-12 20:57:38 UTC",
-    "published_state": null,
+    "serialized_at": "2022-03-30 23:47:59 UTC",
+    "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -246,7 +237,7 @@
     },
     {
       "key": "Problem Solving and Data",
-      "name": "Problem Solving With Data",
+      "name": "Problem Solving and Data",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -4718,9 +4709,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U5 black white images pixelation_2022"
-        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -4743,9 +4731,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U5 black white images pixelation 2_2022"
-        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -4768,9 +4753,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U5 black white images pixelation 3_2022"
-        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -4793,9 +4775,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U5 black white images pixelation 4_2022"
-        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -4818,9 +4797,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U5 black white images pixelation 5_2022"
-        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -4843,9 +4819,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U5 binary widget_2022"
-        ],
         "progression": "Binary Number Widget"
       },
       "bonus": false,
@@ -4868,9 +4841,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U5 binary video_2022"
-        ],
         "progression": "Binary and Data"
       },
       "bonus": false,
@@ -4893,9 +4863,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U5 binary 8 bits_2022"
-        ],
         "progression": "8-Bit Binary Number Widget"
       },
       "bonus": false,
@@ -4918,9 +4885,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "csd-pulse-check-survey-1-levelgroup U5Ch1_2022"
-        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4943,9 +4907,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U5 Pizza_2022"
-        ],
         "progression": "Pizza Party Data"
       },
       "bonus": false,
@@ -4968,9 +4929,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U5 Netflix Data Video_2022"
-        ],
         "progression": "Video: Netflix and Data"
       },
       "bonus": false,
@@ -4993,9 +4951,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U5 Waze Data Video_2022"
-        ],
         "progression": "Video: Waze and Data"
       },
       "bonus": false,
@@ -5018,9 +4973,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U5 Amazon Data Video_2022"
-        ],
         "progression": "Video: Amazon and Data"
       },
       "bonus": false,
@@ -5043,9 +4995,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Oceans_Video_Machine_Learning_2022"
-        ],
         "progression": "Video: What is Machine Learning?"
       },
       "bonus": false,
@@ -5068,9 +5017,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Oceans_FishVTrash_2022"
-        ],
         "progression": "AI for Oceans: Fish vs Not Fish"
       },
       "bonus": false,
@@ -5093,9 +5039,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Oceans_CreaturesVTrashDemo_2022"
-        ],
         "progression": "AI for Oceans: Fish vs Not Fish"
       },
       "bonus": false,
@@ -5118,9 +5061,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Oceans_CreaturesVTrash_2022"
-        ],
         "progression": "AI for Oceans: Fish vs Not Fish"
       },
       "bonus": false,
@@ -5143,9 +5083,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Oceans_Video_Training_Data_2022"
-        ],
         "progression": "Video: Training Data and Bias"
       },
       "bonus": false,
@@ -5168,9 +5105,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Oceans_Short_2022"
-        ],
         "progression": "AI for Oceans: Types of Fish"
       },
       "bonus": false,
@@ -5193,9 +5127,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Oceans_Long_2022"
-        ],
         "progression": "AI for Oceans: Types of Fish"
       },
       "bonus": false,
@@ -5218,9 +5149,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Oceans_Video_Societal_Implications_2022"
-        ],
         "progression": "Video: Impact on Society"
       },
       "bonus": false,
@@ -5243,9 +5171,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csd u5 recommender sample_2022"
-        ],
         "progression": "Sample App"
       },
       "bonus": false,
@@ -5268,9 +5193,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "csd-pulse-check-survey-1-levelgroup U5Ch2_2022"
-        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -5293,9 +5215,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSD U5 test_2022"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5317,9 +5236,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csd-post-survey-markdown-with-link-to-survey_2022"
-        ],
         "progression": "Post-Course Survey Instructions"
       },
       "bonus": false,
@@ -5655,7 +5571,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/csd5-2022/resources",
+      "url": "/s/csd5-2021/resources",
       "key": "all_resources_3",
       "properties": {
         "is_rollup": true
@@ -5666,7 +5582,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/csd5-2022/standards",
+      "url": "/s/csd5-2021/standards",
       "key": "all_standards_3",
       "properties": {
         "is_rollup": true
@@ -5677,7 +5593,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/csd5-2022/vocab",
+      "url": "/s/csd5-2021/vocab",
       "key": "all_vocabulary_3",
       "properties": {
         "is_rollup": true
@@ -5721,19 +5637,6 @@
       },
       "seeding_key": {
         "resource.key": "ascii"
-      }
-    },
-    {
-      "name": "ASCII and Binary Representation",
-      "url": "https://docs.google.com/presentation/d/1RkUjU8jpW0RvQnCvfTs3COAE_uNyNvOmEAtUJVeTZQ4/template/preview",
-      "key": "ascii_and_binary_representation",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1RkUjU8jpW0RvQnCvfTs3COAE_uNyNvOmEAtUJVeTZQ4/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "ascii_and_binary_representation"
       }
     },
     {
@@ -5826,19 +5729,6 @@
       }
     },
     {
-      "name": "Automating Data Decisions",
-      "url": "https://docs.google.com/presentation/d/18aJ0c9BIjs9nr1ydoQJ_cZyhNCjYAWC39G0EqhWNKMg/template/preview",
-      "key": "automating_data_decisions_3",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/18aJ0c9BIjs9nr1ydoQJ_cZyhNCjYAWC39G0EqhWNKMg/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "automating_data_decisions_3"
-      }
-    },
-    {
       "name": "Binary and Data",
       "url": "https://www.youtube.com/watch?v=USCBCmwMCDA",
       "key": "binary_and_data",
@@ -5849,19 +5739,6 @@
       },
       "seeding_key": {
         "resource.key": "binary_and_data"
-      }
-    },
-    {
-      "name": "Combining Representations",
-      "url": "https://docs.google.com/presentation/d/1TzUBqU1Scd4cNDOoWL7H1cp4ZkwgdikDv0GDZ6BrCHU/template/preview",
-      "key": "combining_representations",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1TzUBqU1Scd4cNDOoWL7H1cp4ZkwgdikDv0GDZ6BrCHU/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "combining_representations"
       }
     },
     {
@@ -5927,19 +5804,6 @@
       }
     },
     {
-      "name": "Create a Representation",
-      "url": "https://docs.google.com/presentation/d/1aDAxxW4hJKJ5b00hchThqKTnGCh2-G6WMI5lwwH_cVg/template/preview",
-      "key": "create_a_representation_3",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1aDAxxW4hJKJ5b00hchThqKTnGCh2-G6WMI5lwwH_cVg/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "create_a_representation_3"
-      }
-    },
-    {
       "name": "Create a Representation Marked Rubrics",
       "url": "https://docs.google.com/document/d/1ln_KKQGsghLvPZv2dtM2fKrrXk8LDVYKQ7ap_hWR0B8/view",
       "key": "create_a_representation_marked_rubrics",
@@ -5953,9 +5817,11 @@
     },
     {
       "name": "CSD Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview",
+      "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview",
       "key": "csd_curriculum_guide",
       "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csd_curriculum_guide"
@@ -5973,25 +5839,26 @@
     },
     {
       "name": "CSD Implementation Guide",
-      "url": "https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview",
+      "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
       "key": "csd_implementation_guide",
       "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csd_implementation_guide"
       }
     },
     {
-      "name": "Data and Machine Learning",
-      "url": "https://docs.google.com/presentation/d/14lUkQ6joXUgyRT2iw4P_KE3v1bscdWQObZcjmcxugpo/template/preview",
-      "key": "data_and_machine_learning",
+      "name": "CSD Unit 5 - Data & Society",
+      "url": "https://docs.google.com/presentation/d/1qAf-Nt78JMDtvqh837cyP8dtudTv5o2AvAsWiUH2YJs/copy",
+      "key": "csd_unit_5_-_data_society",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/14lUkQ6joXUgyRT2iw4P_KE3v1bscdWQObZcjmcxugpo/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "data_and_machine_learning"
+        "resource.key": "csd_unit_5_-_data_society"
       }
     },
     {
@@ -6058,19 +5925,6 @@
       }
     },
     {
-      "name": "Interpreting Data",
-      "url": "https://docs.google.com/presentation/d/1v7F4D-nm_apBEDkN6yFWW7xgPu2wmknE_mndqtYhRQQ/template/preview",
-      "key": "interpreting_data_3",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1v7F4D-nm_apBEDkN6yFWW7xgPu2wmknE_mndqtYhRQQ/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "interpreting_data_3"
-      }
-    },
-    {
       "name": "Keeping Data Secret",
       "url": "https://docs.google.com/document/d/123IEPPRvhk18oW4hGQE1cRh8Ab5Kl-YvJHQ1udl6oks/edit",
       "key": "keeping_data_secret",
@@ -6080,19 +5934,6 @@
       },
       "seeding_key": {
         "resource.key": "keeping_data_secret"
-      }
-    },
-    {
-      "name": "Keeping Data Secret",
-      "url": "https://docs.google.com/presentation/d/1jlUXZObY3Wn7zdPxoKK67CTMZx1XIA1LE6KrRH3dRog/template/preview",
-      "key": "keeping_data_secret_1",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1jlUXZObY3Wn7zdPxoKK67CTMZx1XIA1LE6KrRH3dRog/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "keeping_data_secret_1"
       }
     },
     {
@@ -6172,19 +6013,6 @@
       }
     },
     {
-      "name": "Making Decisions with Data",
-      "url": "https://docs.google.com/presentation/d/1UdNc4EdI2ReMx_YTH8C8OmpIsW9JLLJmcL3c6IJenek/template/preview",
-      "key": "making_decisions_with_data_2",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1UdNc4EdI2ReMx_YTH8C8OmpIsW9JLLJmcL3c6IJenek/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "making_decisions_with_data_2"
-      }
-    },
-    {
       "name": "Meals Data",
       "url": "https://docs.google.com/document/d/1nVUNkvIqz4sQjXnr52eBd17Pmi61Ir2aTH6ulVnco9o/edit",
       "key": "meals_data",
@@ -6260,19 +6088,6 @@
       }
     },
     {
-      "name": "Patterns and Representation",
-      "url": "https://docs.google.com/presentation/d/1Ama35jAILCQPxztIx1hGd3WqQ3hqww6XF4sqy46P8Ek/template/preview",
-      "key": "patterns_and_representation",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1Ama35jAILCQPxztIx1hGd3WqQ3hqww6XF4sqy46P8Ek/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "patterns_and_representation"
-      }
-    },
-    {
       "name": "Peer Review Exemplar 1 ",
       "url": "https://docs.google.com/document/d/1D4W-8H1hbNDOk-KNNJ9UgfLjEyn8oNx9fuiKca57Twc/edit",
       "key": "peer_review_exemplar_1",
@@ -6309,19 +6124,6 @@
       }
     },
     {
-      "name": "Problem Solving With Data",
-      "url": "https://docs.google.com/presentation/d/1MqElc0dCl444dBaoyd0K07Pfh4vI66RXR8fGWbUKp2Y/template/preview",
-      "key": "problem_solving_and_data",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1MqElc0dCl444dBaoyd0K07Pfh4vI66RXR8fGWbUKp2Y/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "problem_solving_and_data"
-      }
-    },
-    {
       "name": "Problem Solving Process with Data",
       "url": "https://docs.google.com/document/d/1EW18C1XT1qLzXY8XnU1Ryo5QJE2tfmaGE08Y6C5zYo8/edit#heading=h.55w5y6g4xe8d",
       "key": "problem_solving_process_with_data",
@@ -6332,19 +6134,6 @@
       },
       "seeding_key": {
         "resource.key": "problem_solving_process_with_data"
-      }
-    },
-    {
-      "name": "Problem Solving with Big Data",
-      "url": "https://docs.google.com/presentation/d/1TcG6n5nGAlyOh2HdNGWQZIlotSrw0JnS5Wtn1woWJQ8/template/preview",
-      "key": "problem_solving_with_big_data",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1TcG6n5nGAlyOh2HdNGWQZIlotSrw0JnS5Wtn1woWJQ8/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "problem_solving_with_big_data"
       }
     },
     {
@@ -6370,19 +6159,6 @@
       },
       "seeding_key": {
         "resource.key": "problem_solving_with_data_1"
-      }
-    },
-    {
-      "name": "Project - Make a Recommendation",
-      "url": "https://docs.google.com/presentation/d/16-v5kY6RGcqBypNTCen96fIXdWJ-vXEcD7hd2cbjx9g/template/preview",
-      "key": "project_-_make_a_recommendation",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/16-v5kY6RGcqBypNTCen96fIXdWJ-vXEcD7hd2cbjx9g/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "project_-_make_a_recommendation"
       }
     },
     {
@@ -6420,32 +6196,6 @@
       },
       "seeding_key": {
         "resource.key": "representation_matters_1"
-      }
-    },
-    {
-      "name": "Representation Matters",
-      "url": "https://docs.google.com/presentation/d/1U3NpxfpC3QU7RlLSIu8nZ1Wt97s1Xu2eYs5LDcWPAEY/template/preview",
-      "key": "representation_matters_2",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1U3NpxfpC3QU7RlLSIu8nZ1Wt97s1Xu2eYs5LDcWPAEY/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "representation_matters_2"
-      }
-    },
-    {
-      "name": "Representing Images",
-      "url": "https://docs.google.com/presentation/d/10kCN7bCRPQg7iCLaiBR2AuozysxS7mVBaNdNf_nwgEc/template/preview",
-      "key": "representing_images",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/10kCN7bCRPQg7iCLaiBR2AuozysxS7mVBaNdNf_nwgEc/export?format=pdf",
-        "type": "Rubric"
-      },
-      "seeding_key": {
-        "resource.key": "representing_images"
       }
     },
     {
@@ -6495,19 +6245,6 @@
       },
       "seeding_key": {
         "resource.key": "representing_numbers"
-      }
-    },
-    {
-      "name": "Representing Numbers",
-      "url": "https://docs.google.com/presentation/d/1FSXepS9tbm9aukEjRu7xg7BE7QHzohKq_cqNUjQtATE/template/preview",
-      "key": "representing_numbers_1",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1FSXepS9tbm9aukEjRu7xg7BE7QHzohKq_cqNUjQtATE/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "representing_numbers_1"
       }
     },
     {
@@ -6562,19 +6299,6 @@
       }
     },
     {
-      "name": "Structuring Data",
-      "url": "https://docs.google.com/presentation/d/1DTCT62Z2-r7EEuLCSFmX4ZMla5iP5Ckk4rzeO74iJ1c/template/preview",
-      "key": "structuring_data_1",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1DTCT62Z2-r7EEuLCSFmX4ZMla5iP5Ckk4rzeO74iJ1c/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "structuring_data_1"
-      }
-    },
-    {
       "name": "Structuring Data 2021",
       "url": "https://docs.google.com/document/d/1edTTFHTHp4uxIi1CrHvvfEfFCZacCB5BXNfL1uaBf-E/view",
       "key": "structuring_data_2021",
@@ -6596,6 +6320,18 @@
       },
       "seeding_key": {
         "resource.key": "teacher_forum"
+      }
+    },
+    {
+      "name": "Unit 5 Data & Society",
+      "url": "https://docs.google.com/presentation/u/1/d/1wmd-2sdaEdePFms8frZUQm1sRuJSLvH40gqXv7-KLfY/copy",
+      "key": "unit_5_data_society",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "unit_5_data_society"
       }
     },
     {
@@ -6661,12 +6397,6 @@
     {
       "seeding_key": {
         "lesson.key": "ASCII and Binary Representation",
-        "resource.key": "ascii_and_binary_representation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "ASCII and Binary Representation",
         "resource.key": "ascii_challenges"
       }
     },
@@ -6680,6 +6410,12 @@
       "seeding_key": {
         "lesson.key": "ASCII and Binary Representation",
         "resource.key": "ascii_text"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "ASCII and Binary Representation",
+        "resource.key": "csd_unit_5_-_data_society"
       }
     },
     {
@@ -6703,7 +6439,7 @@
     {
       "seeding_key": {
         "lesson.key": "Automating Data Decisions",
-        "resource.key": "automating_data_decisions_3"
+        "resource.key": "csd_unit_5_-_data_society"
       }
     },
     {
@@ -6721,7 +6457,7 @@
     {
       "seeding_key": {
         "lesson.key": "Combining Representations",
-        "resource.key": "combining_representations"
+        "resource.key": "csd_unit_5_-_data_society"
       }
     },
     {
@@ -6763,19 +6499,19 @@
     {
       "seeding_key": {
         "lesson.key": "Create a Representation",
-        "resource.key": "create_a_representation_3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Create a Representation",
         "resource.key": "create_a_representation_marked_rubrics"
       }
     },
     {
       "seeding_key": {
+        "lesson.key": "Create a Representation",
+        "resource.key": "unit_5_data_society"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Data and Machine Learning",
-        "resource.key": "data_and_machine_learning"
+        "resource.key": "csd_unit_5_-_data_society"
       }
     },
     {
@@ -6799,6 +6535,12 @@
     {
       "seeding_key": {
         "lesson.key": "Interpreting Data",
+        "resource.key": "csd_unit_5_-_data_society"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Interpreting Data",
         "resource.key": "interpreting_data"
       }
     },
@@ -6816,20 +6558,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Interpreting Data",
-        "resource.key": "interpreting_data_3"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Keeping Data Secret",
         "resource.key": "keeping_data_secret"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Keeping Data Secret",
-        "resource.key": "keeping_data_secret_1"
       }
     },
     {
@@ -6852,6 +6582,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Keeping Data Secret",
+        "resource.key": "unit_5_data_society"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Decisions with Data",
+        "resource.key": "csd_unit_5_-_data_society"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Making Decisions with Data",
         "resource.key": "making_decisions_with_data"
       }
@@ -6860,12 +6602,6 @@
       "seeding_key": {
         "lesson.key": "Making Decisions with Data",
         "resource.key": "making_decisions_with_data_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Making Decisions with Data",
-        "resource.key": "making_decisions_with_data_2"
       }
     },
     {
@@ -6883,7 +6619,7 @@
     {
       "seeding_key": {
         "lesson.key": "Patterns and Representation",
-        "resource.key": "patterns_and_representation"
+        "resource.key": "csd_unit_5_-_data_society"
       }
     },
     {
@@ -6907,7 +6643,7 @@
     {
       "seeding_key": {
         "lesson.key": "Problem Solving and Data",
-        "resource.key": "problem_solving_and_data"
+        "resource.key": "csd_unit_5_-_data_society"
       }
     },
     {
@@ -6931,6 +6667,12 @@
     {
       "seeding_key": {
         "lesson.key": "Problem Solving with Big Data",
+        "resource.key": "csd_unit_5_-_data_society"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Problem Solving with Big Data",
         "resource.key": "data_in_the_real_world"
       }
     },
@@ -6944,12 +6686,6 @@
       "seeding_key": {
         "lesson.key": "Problem Solving with Big Data",
         "resource.key": "netflix_and_data"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Problem Solving with Big Data",
-        "resource.key": "problem_solving_with_big_data"
       }
     },
     {
@@ -7003,12 +6739,6 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Make a Recommendation",
-        "resource.key": "project_-_make_a_recommendation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Make a Recommendation",
         "resource.key": "project_guide_exemplar_1"
       }
     },
@@ -7016,6 +6746,18 @@
       "seeding_key": {
         "lesson.key": "Project - Make a Recommendation",
         "resource.key": "sample_marked_rubrics_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Recommendation",
+        "resource.key": "unit_5_data_society"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Representation Matters",
+        "resource.key": "csd_unit_5_-_data_society"
       }
     },
     {
@@ -7038,20 +6780,20 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Representation Matters",
-        "resource.key": "representation_matters_2"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Representing Images",
-        "resource.key": "representing_images"
+        "resource.key": "csd_unit_5_-_data_society"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Representing Numbers",
         "resource.key": "binary_and_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Representing Numbers",
+        "resource.key": "csd_unit_5_-_data_society"
       }
     },
     {
@@ -7075,25 +6817,19 @@
     {
       "seeding_key": {
         "lesson.key": "Representing Numbers",
-        "resource.key": "representing_numbers_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Representing Numbers",
         "resource.key": "representing_numbers_2021"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Structuring Data",
-        "resource.key": "structuring_data"
+        "resource.key": "csd_unit_5_-_data_society"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Structuring Data",
-        "resource.key": "structuring_data_1"
+        "resource.key": "structuring_data"
       }
     },
     {

@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-11 14:10:57 UTC",
+    "serialized_at": "2022-04-05 13:54:34 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4238,31 +4238,8 @@
       }
     },
     {
-      "key": "52a06a99-92bd-4c78-bfbe-d45ac3820acf",
-      "position": 6,
-      "properties": {
-        "description": "When painting patterns and murals, we need a way to set the amount of paint a `Painter` object has so we don't have to collect a lot of paint from multiple paint buckets.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "52a06a99-92bd-4c78-bfbe-d45ac3820acf",
-        "lesson_activity.key": "851323ef-96d0-426c-bb4d-d84a54f75da3"
-      }
-    },
-    {
-      "key": "6b73bc58-35f9-4f15-83f5-d168a2849c46",
-      "position": 7,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce and explain the `setPaint()` method."
-      },
-      "seeding_key": {
-        "activity_section.key": "6b73bc58-35f9-4f15-83f5-d168a2849c46",
-        "lesson_activity.key": "851323ef-96d0-426c-bb4d-d84a54f75da3"
-      }
-    },
-    {
       "key": "5bbf833a-1acb-45b3-a817-dfe89878183c",
-      "position": 8,
+      "position": 6,
       "properties": {
         "description": "Use your UML diagram, pseudocode, and notes to create the `PatternPainter` class. After writing the class, create a mural of your pattern.",
         "duration": "15",
@@ -4276,7 +4253,7 @@
     },
     {
       "key": "c7835f51-b42e-4080-ba41-e4c84ef7e070",
-      "position": 9,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to complete Levels 1, 2, and 3. Students complete a Check for Understanding on Level 1, then continue to Level 2 to write the `PatternPainter` class. Students create a mural with their `PatternPainter` class on Level 3.",
         "progression_name": "PatternPainter"
@@ -4288,7 +4265,7 @@
     },
     {
       "key": "313591cb-a0b3-41e6-9fc9-5f7013817b8c",
-      "position": 10,
+      "position": 8,
       "properties": {
         "description": "This is a good time to commit our code and save our `PatternPainter` class to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
         "remarks": true
@@ -4300,7 +4277,7 @@
     },
     {
       "key": "ab1d0557-8aba-4d6a-8964-1c82a816afda",
-      "position": 11,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving the `PatternPainter` class to the Backpack."
       },
@@ -4311,7 +4288,7 @@
     },
     {
       "key": "7165a128-21b1-424b-8ca9-e3e46884d990",
-      "position": 12,
+      "position": 10,
       "properties": {
         "description": "When we write new code, getting feedback from our peers is helpful to make sure we have met the requirements of the problem efficiently.",
         "remarks": true
@@ -4323,7 +4300,7 @@
     },
     {
       "key": "4b28c683-7217-4a57-94c2-2a5d7f902435",
-      "position": 13,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on their program on Level 4.",
         "progression_name": "Code Review: PatternPainter"

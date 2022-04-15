@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2022-04-13 21:25:58 UTC",
+    "serialized_at": "2022-03-11 12:08:34 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -12786,16 +12786,6 @@
       }
     },
     {
-      "key": "2dfd2497-81b1-41b1-8224-64c2d4118c40",
-      "properties": {
-        "description": "Create a machine learning model using a real-world dataset"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-18",
-        "objective.key": "2dfd2497-81b1-41b1-8224-64c2d4118c40"
-      }
-    },
-    {
       "key": "316092e7-641f-433f-837c-db12e34accfd",
       "properties": {
         "description": "Describe the differences between supervised and unsupervised learning."
@@ -12933,16 +12923,6 @@
       "seeding_key": {
         "lesson.key": "lesson9",
         "objective.key": "9dd5b6eb-e1cd-4dae-8bf6-77fb08ba9d59"
-      }
-    },
-    {
-      "key": "b619b215-4403-423d-85c5-93f5c51f2769",
-      "properties": {
-        "description": "Create an app that uses a machine learning model"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-18",
-        "objective.key": "b619b215-4403-423d-85c5-93f5c51f2769"
       }
     },
     {

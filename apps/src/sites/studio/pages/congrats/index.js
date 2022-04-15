@@ -27,7 +27,7 @@ $(document).ready(function() {
   let tutorial = '';
   try {
     const params = queryString.parse(window.location.search);
-    certificateId = params['i'] && params['i'].replace(/[^a-z0-9_]/g, '');
+    certificateId = params['i'].replace(/[^a-z0-9_]/g, '');
     tutorial = atob(params['s']).replace(/[^A-Za-z0-9_\- ]/g, '');
   } catch (e) {}
 

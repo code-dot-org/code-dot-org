@@ -242,7 +242,7 @@ module Pd::Application
       answer
     end
 
-    def self.filtered_labels(course, status = 'unreviewed')
+    def self.filtered_labels(course)
       raise 'Abstract method must be overridden in inheriting class'
     end
 
@@ -268,7 +268,7 @@ module Pd::Application
             hash[field_name] = self.class.answer_with_additional_text hash, field_name, option, additional_text_field_name
             hash.delete additional_text_field_name
           end
-        end.slice(*(self.class.filtered_labels(course, status).keys + self.class.additional_labels).uniq)
+        end.slice(*(self.class.filtered_labels(course).keys + self.class.additional_labels).uniq)
       end
     end
 

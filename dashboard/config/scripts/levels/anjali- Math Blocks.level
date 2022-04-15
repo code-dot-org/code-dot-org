@@ -1,5 +1,9 @@
 <GamelabJr>
   <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2020-10-13T21:01:23.000Z",
+  "level_num": "custom",
+  "user_id": 886,
   "properties": {
     "encrypted": "false",
     "skin": "gamelab",
@@ -16,6 +20,10 @@
     "hide_custom_blocks": true,
     "all_animations_single_frame": "true",
     "use_modal_function_editor": "true",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
     "embed": "false",
     "instructions_important": "false",
     "never_autoplay_video": "false",
@@ -29,101 +37,78 @@
     "expand_debugger": "false",
     "debugger_disabled": "false",
     "start_in_animation_tab": "false",
-    "mini_toolbox": "false",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
-    "hide_pause_button": "false"
+    "mini_toolbox": "false"
   },
-  "game_id": 64,
   "published": true,
-  "created_at": "2020-10-13T21:01:23.000Z",
-  "level_num": "custom",
-  "user_id": 886,
-  "audit_log": "[{\"changed_at\":\"2020-10-13 21:01:52 +0000\",\"changed\":[\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":886,\"changed_by_email\":\"anjali+labs@code.org\"},{\"changed_at\":\"2020-10-13 21:02:51 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\",\"toolbox_blocks\"],\"changed_by_id\":886,\"changed_by_email\":\"anjali+labs@code.org\"},{\"changed_at\":\"2020-10-13 21:06:24 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\",\"toolbox_blocks\"],\"changed_by_id\":886,\"changed_by_email\":\"anjali+labs@code.org\"},{\"changed_at\":\"2020-10-13 21:09:14 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\",\"toolbox_blocks\",\"start_blocks\"],\"changed_by_id\":886,\"changed_by_email\":\"anjali+labs@code.org\"},{\"changed_at\":\"2020-10-13 21:11:25 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\",\"toolbox_blocks\",\"start_blocks\"],\"changed_by_id\":886,\"changed_by_email\":\"anjali+labs@code.org\"},{\"changed_at\":\"2020-10-13 21:13:02 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\",\"toolbox_blocks\",\"start_blocks\"],\"changed_by_id\":886,\"changed_by_email\":\"anjali+labs@code.org\"},{\"changed_at\":\"2020-10-13 21:17:23 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\",\"toolbox_blocks\",\"start_blocks\"],\"changed_by_id\":886,\"changed_by_email\":\"anjali+labs@code.org\"},{\"changed_at\":\"2022-04-13 19:26:30 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-04-13 19:35:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-04-13 19:37:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
-  "level_concept_difficulty": {
-  }
+  "audit_log": "[{\"changed_at\":\"2020-10-13 21:01:52 +0000\",\"changed\":[\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":886,\"changed_by_email\":\"anjali+labs@code.org\"},{\"changed_at\":\"2020-10-13 21:02:51 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\",\"toolbox_blocks\"],\"changed_by_id\":886,\"changed_by_email\":\"anjali+labs@code.org\"},{\"changed_at\":\"2020-10-13 21:06:24 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\",\"toolbox_blocks\"],\"changed_by_id\":886,\"changed_by_email\":\"anjali+labs@code.org\"},{\"changed_at\":\"2020-10-13 21:09:14 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\",\"toolbox_blocks\",\"start_blocks\"],\"changed_by_id\":886,\"changed_by_email\":\"anjali+labs@code.org\"},{\"changed_at\":\"2020-10-13 21:11:25 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\",\"toolbox_blocks\",\"start_blocks\"],\"changed_by_id\":886,\"changed_by_email\":\"anjali+labs@code.org\"},{\"changed_at\":\"2020-10-13 21:13:02 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\",\"toolbox_blocks\",\"start_blocks\"],\"changed_by_id\":886,\"changed_by_email\":\"anjali+labs@code.org\"},{\"changed_at\":\"2020-10-13 21:17:23 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\",\"toolbox_blocks\",\"start_blocks\"],\"changed_by_id\":886,\"changed_by_email\":\"anjali+labs@code.org\"}]"
 }]]></config>
   <blocks>
     <start_blocks>
-      <block type="when_run" deletable="false">
-        <next>
-          <block type="variables_set">
-            <field name="VAR">title</field>
-            <value name="VALUE">
-              <block type="text">
-                <field name="TEXT">Hello!</field>
-              </block>
-            </value>
-            <next>
-              <block type="gamelab_showTitleScreen">
-                <value name="TITLE">
-                  <block type="variables_get">
-                    <field name="VAR">title</field>
-                  </block>
-                </value>
-                <value name="SUBTITLE">
-                  <block type="text">
-                    <field name="TEXT"/>
-                  </block>
-                </value>
-              </block>
-            </next>
-          </block>
-        </next>
-      </block>
+      <xml>
+        <block type="when_run" deletable="false">
+          <next>
+            <block type="gamelab_makeNewSpriteAnon">
+              <title name="ANIMATION_NAME">"purple bunny"</title>
+              <value name="LOCATION">
+                <block type="gamelab_location_picker">
+                  <title name="LOCATION">{"x":200,"y":200}</title>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
+      </xml>
     </start_blocks>
     <toolbox_blocks>
       <xml>
         <category name="Sprites">
           <block type="gamelab_makeNewSpriteAnon">
-            <field name="ANIMATION_NAME">"purple bunny"</field>
+            <title name="ANIMATION_NAME">"purple bunny"</title>
             <value name="LOCATION">
               <block type="gamelab_location_picker">
-                <field name="LOCATION">{"x":200,"y":200}</field>
+                <title name="LOCATION">{"x":200,"y":200}</title>
               </block>
             </value>
           </block>
           <block type="gamelab_allSpritesWithAnimation">
-            <field name="ANIMATION">"purple bunny"</field>
+            <title name="ANIMATION">"purple bunny"</title>
           </block>
           <block type="gamelab_destroy">
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <title name="ANIMATION">"purple bunny"</title>
               </block>
             </value>
           </block>
           <block type="gamelab_setAnimation">
-            <field name="ANIMATION">"brown bunny"</field>
+            <title name="ANIMATION">"brown bunny"</title>
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <title name="ANIMATION">"purple bunny"</title>
               </block>
             </value>
           </block>
           <block type="gamelab_createNewSprite">
-            <field name="NAME">mySprite</field>
-            <field name="COSTUME">"bear"</field>
+            <title name="NAME">mySprite</title>
+            <title name="COSTUME">"bear"</title>
             <value name="LOCATION">
               <block type="gamelab_location_picker">
-                <field name="LOCATION">{"x":200,"y":200}</field>
+                <title name="LOCATION">{"x":200,"y":200}</title>
               </block>
             </value>
           </block>
           <block type="sprite_variables_get">
-            <field name="VAR">mySprite</field>
+            <title name="VAR">mySprite</title>
           </block>
           <block type="gamelab_getThisSprite">
-            <field name="CHOICE">"this"</field>
+            <title name="CHOICE">"this"</title>
           </block>
           <block type="gamelab_getAllSprites"/>
           <block type="gamelab_getProp">
-            <field name="PROPERTY">"scale"</field>
+            <title name="PROPERTY">"scale"</title>
             <value name="SPRITE">
               <block type="sprite_variables_get">
-                <field name="VAR">mySprite</field>
+                <title name="VAR">mySprite</title>
               </block>
             </value>
           </block>
@@ -132,86 +117,86 @@
           <block type="gamelab_setTint">
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <title name="ANIMATION">"purple bunny"</title>
               </block>
             </value>
             <value name="COLOR">
               <block type="colour_picker">
-                <field name="COLOUR">#ff0000</field>
+                <title name="COLOUR">#ff0000</title>
               </block>
             </value>
           </block>
           <block type="gamelab_removeTint">
             <value name="THIS">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <title name="ANIMATION">"purple bunny"</title>
               </block>
             </value>
           </block>
           <block type="gamelab_moveInDirection">
-            <field name="DIRECTION">"North"</field>
+            <title name="DIRECTION">"North"</title>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <title name="ANIMATION">"purple bunny"</title>
               </block>
             </value>
             <value name="DISTANCE">
               <block type="math_number">
-                <field name="NUM">10</field>
+                <title name="NUM">10</title>
               </block>
             </value>
           </block>
           <block type="gamelab_turn">
-            <field name="DIRECTION">"right"</field>
+            <title name="DIRECTION">"right"</title>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <title name="ANIMATION">"purple bunny"</title>
               </block>
             </value>
             <value name="N">
               <block type="math_number">
-                <field name="NUM">90</field>
+                <title name="NUM">90</title>
               </block>
             </value>
           </block>
           <block type="gamelab_mirrorSprite">
-            <field name="DIRECTION">"right"</field>
+            <title name="DIRECTION">"right"</title>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <title name="ANIMATION">"purple bunny"</title>
               </block>
             </value>
           </block>
           <block type="gamelab_setProp">
-            <field name="PROPERTY">"scale"</field>
+            <title name="PROPERTY">"scale"</title>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <title name="ANIMATION">"purple bunny"</title>
               </block>
             </value>
             <value name="VAL">
               <block type="math_number">
-                <field name="NUM">50</field>
+                <title name="NUM">50</title>
               </block>
             </value>
           </block>
           <block type="gamelab_changePropBy">
-            <field name="PROPERTY">"scale"</field>
+            <title name="PROPERTY">"scale"</title>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <title name="ANIMATION">"purple bunny"</title>
               </block>
             </value>
             <value name="VAL">
               <block type="math_number">
-                <field name="NUM">10</field>
+                <title name="NUM">10</title>
               </block>
             </value>
           </block>
           <block type="gamelab_jumpTo">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <title name="ANIMATION">"purple bunny"</title>
               </block>
             </value>
             <value name="LOCATION">
@@ -221,31 +206,31 @@
           <block type="gamelab_moveForward">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <title name="ANIMATION">"purple bunny"</title>
               </block>
             </value>
             <value name="DISTANCE">
               <block type="math_number">
-                <field name="NUM">10</field>
+                <title name="NUM">10</title>
               </block>
             </value>
           </block>
           <block type="gamelab_moveToward">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <title name="ANIMATION">"purple bunny"</title>
               </block>
             </value>
             <value name="DISTANCE">
               <block type="math_number">
-                <field name="NUM">10</field>
+                <title name="NUM">10</title>
               </block>
             </value>
             <value name="TARGET">
               <block type="gamelab_locationOf">
                 <value name="SPRITE">
                   <block type="sprite_variables_get">
-                    <field name="VAR">mySprite</field>
+                    <title name="VAR">mySprite</title>
                   </block>
                 </value>
               </block>
@@ -254,54 +239,54 @@
           <block type="gamelab_edgesDisplace">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <title name="ANIMATION">"purple bunny"</title>
               </block>
             </value>
           </block>
           <block type="gamelab_bounceOff">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <title name="ANIMATION">"purple bunny"</title>
               </block>
             </value>
             <value name="TARGET">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"carrot"</field>
+                <title name="ANIMATION">"carrot"</title>
               </block>
             </value>
           </block>
         </category>
         <category name="Events">
           <block type="gamelab_keyPressed">
-            <field name="CONDITION">"when"</field>
-            <field name="KEY">"up"</field>
+            <title name="CONDITION">"when"</title>
+            <title name="KEY">"up"</title>
           </block>
           <block type="gamelab_spriteClicked">
-            <field name="CONDITION">"when"</field>
+            <title name="CONDITION">"when"</title>
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <title name="ANIMATION">"purple bunny"</title>
               </block>
             </value>
           </block>
           <block type="gamelab_checkTouching">
-            <field name="CONDITION">"when"</field>
+            <title name="CONDITION">"when"</title>
             <value name="SPRITE1">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <title name="ANIMATION">"purple bunny"</title>
               </block>
             </value>
             <value name="SPRITE2">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"carrot"</field>
+                <title name="ANIMATION">"carrot"</title>
               </block>
             </value>
           </block>
           <block type="gamelab_atTime">
-            <field name="UNIT">"seconds"</field>
+            <title name="UNIT">"seconds"</title>
             <value name="N">
               <block type="math_number">
-                <field name="NUM">3</field>
+                <title name="NUM">3</title>
               </block>
             </value>
           </block>
@@ -310,347 +295,258 @@
           <block type="controls_repeat_ext">
             <value name="TIMES">
               <block type="math_number">
-                <field name="NUM">10</field>
+                <title name="NUM">10</title>
               </block>
             </value>
           </block>
           <block type="controls_for">
-            <field name="VAR">counter</field>
+            <title name="VAR">counter</title>
             <value name="FROM">
               <block type="math_number">
-                <field name="NUM">1</field>
+                <title name="NUM">1</title>
               </block>
             </value>
             <value name="TO">
               <block type="math_number">
-                <field name="NUM">10</field>
+                <title name="NUM">10</title>
               </block>
             </value>
             <value name="BY">
               <block type="math_number">
-                <field name="NUM">1</field>
+                <title name="NUM">1</title>
               </block>
             </value>
           </block>
         </category>
         <category name="Variables" custom="VARIABLE">
           <block type="math_change">
-            <field name="VAR">i</field>
+            <title name="VAR">i</title>
             <value name="DELTA">
               <block type="math_number">
-                <field name="NUM">1</field>
+                <title name="NUM">1</title>
               </block>
             </value>
           </block>
         </category>
         <category name="Math">
           <block type="math_arithmetic">
-            <field name="OP">ADD</field>
+            <title name="OP">ADD</title>
             <value name="A">
               <block type="math_number">
-                <field name="NUM">0</field>
+                <title name="NUM">0</title>
               </block>
             </value>
             <value name="B">
               <block type="math_number">
-                <field name="NUM">0</field>
+                <title name="NUM">0</title>
               </block>
             </value>
           </block>
           <block type="math_random_int">
             <value name="FROM">
               <block type="math_number">
-                <field name="NUM">1</field>
+                <title name="NUM">1</title>
               </block>
             </value>
             <value name="TO">
               <block type="math_number">
-                <field name="NUM">100</field>
+                <title name="NUM">100</title>
               </block>
             </value>
           </block>
           <block type="math_number">
-            <field name="NUM">0</field>
+            <title name="NUM">0</title>
           </block>
           <block type="gamelab_countByAnimation">
             <value name="SPRITE">
               <block type="gamelab_allSpritesWithAnimation">
-                <field name="ANIMATION">"purple bunny"</field>
+                <title name="ANIMATION">"purple bunny"</title>
               </block>
             </value>
           </block>
           <block type="gamelab_getTime">
-            <field name="UNIT">"seconds"</field>
+            <title name="UNIT">"seconds"</title>
           </block>
         </category>
         <category name="Logic">
           <block type="controls_if">
             <value name="IF0">
               <block type="logic_compare">
-                <field name="OP">EQ</field>
+                <title name="OP">EQ</title>
               </block>
             </value>
           </block>
           <block type="logic_compare">
-            <field name="OP">EQ</field>
+            <title name="OP">EQ</title>
           </block>
           <block type="logic_operation">
-            <field name="OP">AND</field>
+            <title name="OP">AND</title>
           </block>
           <block type="logic_boolean">
-            <field name="BOOL">TRUE</field>
+            <title name="BOOL">TRUE</title>
           </block>
           <block type="gamelab_isTouchingEdges">
             <value name="SPRITE">
               <block type="sprite_variables_get">
-                <field name="VAR">mySprite</field>
+                <title name="VAR">mySprite</title>
               </block>
             </value>
           </block>
           <block type="gamelab_isKeyPressed">
-            <field name="KEY">"up"</field>
+            <title name="KEY">"up"</title>
           </block>
         </category>
         <category name="Text">
           <block type="gamelab_printText">
             <value name="TEXT">
               <block type="text">
-                <field name="TEXT"/>
+                <title name="TEXT"/>
               </block>
             </value>
           </block>
           <block type="text">
-            <field name="TEXT"/>
+            <title name="TEXT"/>
           </block>
-          <block type="text_join_simple" inputcount="2">
-            <value name="ADD0">
-              <block type="text">
-                <field name="TEXT"/>
-              </block>
-            </value>
-            <value name="ADD1">
-              <block type="text">
-                <field name="TEXT"/>
-              </block>
-            </value>
-          </block>
+          <block type="text_join_simple" inputcount="2"/>
           <block type="gamelab_showTitleScreen">
             <value name="TITLE">
               <block type="text">
-                <field name="TEXT"/>
+                <title name="TEXT"/>
               </block>
             </value>
             <value name="SUBTITLE">
               <block type="text">
-                <field name="TEXT"/>
+                <title name="TEXT"/>
               </block>
             </value>
           </block>
           <block type="gamelab_hideTitleScreen"/>
         </category>
         <category name="BLOCKLY MATH BLOCKS">
-          <block type="math_number">
-            <field name="NUM">0</field>
-          </block>
-          <block type="math_arithmetic">
-            <field name="OP">ADD</field>
-            <value name="A">
-              <block type="math_number">
-                <field name="NUM">0</field>
-              </block>
-            </value>
-            <value name="B">
-              <block type="math_number">
-                <field name="NUM">0</field>
-              </block>
-            </value>
-          </block>
-          <block type="math_single">
-            <field name="OP">ROOT</field>
-            <value name="NUM">
-              <block type="math_number">
-                <field name="NUM">0</field>
-              </block>
-            </value>
-          </block>
-          <block type="math_trig">
-            <field name="OP">SIN</field>
-            <value name="NUM">
-              <block type="math_number">
-                <field name="NUM">0</field>
-              </block>
-            </value>
-          </block>
-          <block type="math_constant">
-            <field name="CONSTANT">PI</field>
-          </block>
-          <block type="math_number_property">
-            <mutation divisor_input="false"/>
-            <field name="PROPERTY">EVEN</field>
-            <value name="NUMBER_TO_CHECK">
-              <block type="math_number">
-                <field name="NUM">0</field>
-              </block>
-            </value>
-          </block>
+          <block type="math_number"/>
+          <block type="math_arithmetic"/>
+          <block type="math_single"/>
+          <block type="math_trig"/>
+          <block type="math_constant"/>
+          <block type="math_number_property"/>
           <block type="math_change">
-            <field name="VAR">j</field>
             <value name="DELTA">
               <block type="math_number">
-                <field name="NUM">1</field>
+                <title name="NUM">1</title>
               </block>
             </value>
           </block>
-          <block type="math_round">
-            <field name="OP">ROUND</field>
-            <value name="NUM">
-              <block type="math_number">
-                <field name="NUM">0</field>
-              </block>
-            </value>
-          </block>
-          <block type="math_modulo">
-            <value name="DIVIDEND">
-              <block type="math_number">
-                <field name="NUM">0</field>
-              </block>
-            </value>
-            <value name="DIVISOR">
-              <block type="math_number">
-                <field name="NUM">0</field>
-              </block>
-            </value>
-          </block>
+          <block type="math_round"/>
+          <block type="math_on_list"/>
+          <block type="math_modulo"/>
           <block type="math_constrain">
-            <value name="VALUE">
-              <block type="math_number">
-                <field name="NUM">0</field>
-              </block>
-            </value>
             <value name="LOW">
               <block type="math_number">
-                <field name="NUM">1</field>
+                <title name="NUM">1</title>
               </block>
             </value>
             <value name="HIGH">
               <block type="math_number">
-                <field name="NUM">100</field>
+                <title name="NUM">100</title>
               </block>
             </value>
           </block>
           <block type="math_random_int">
             <value name="FROM">
               <block type="math_number">
-                <field name="NUM">1</field>
+                <title name="NUM">1</title>
               </block>
             </value>
             <value name="TO">
               <block type="math_number">
-                <field name="NUM">100</field>
+                <title name="NUM">100</title>
               </block>
             </value>
           </block>
           <block type="math_random_float"/>
         </category>
+        <category name="BLOCKLY LOGIC BLOCKS">
+          <block type="controls_if"/>
+          <block type="logic_compare"/>
+          <block type="logic_operation"/>
+          <block type="logic_negate"/>
+          <block type="logic_boolean"/>
+          <block type="logic_null"/>
+          <block type="logic_ternary"/>
+        </category>
         <category name="BLOCKLY TEXT BLOCKS">
-          <block type="text">
-            <field name="TEXT"/>
-          </block>
-          <block type="text_join">
-            <mutation items="2"/>
-            <value name="ADD0">
-              <block type="text">
-                <field name="TEXT"/>
-              </block>
-            </value>
-            <value name="ADD1">
-              <block type="text">
-                <field name="TEXT"/>
-              </block>
-            </value>
-          </block>
+          <block type="text"/>
+          <block type="text_join"/>
           <block type="text_append">
-            <field name="VAR">k</field>
             <value name="TEXT">
-              <block type="text">
-                <field name="TEXT"/>
-              </block>
+              <block type="text"/>
             </value>
           </block>
-          <block type="text_length">
-            <value name="VALUE">
-              <block type="text">
-                <field name="TEXT"/>
-              </block>
-            </value>
-          </block>
-          <block type="text_isEmpty">
-            <value name="VALUE">
-              <block type="text">
-                <field name="TEXT"/>
-              </block>
-            </value>
-          </block>
+          <block type="text_length"/>
+          <block type="text_isEmpty"/>
           <block type="text_indexOf">
-            <field name="END">FIRST</field>
             <value name="VALUE">
               <block type="variables_get">
-                <field name="VAR">text</field>
-              </block>
-            </value>
-            <value name="FIND">
-              <block type="text">
-                <field name="TEXT"/>
+                <title name="VAR">text</title>
               </block>
             </value>
           </block>
           <block type="text_charAt">
-            <mutation at="true"/>
-            <field name="WHERE">FROM_START</field>
             <value name="VALUE">
               <block type="variables_get">
-                <field name="VAR">text</field>
-              </block>
-            </value>
-            <value name="AT">
-              <block type="math_number">
-                <field name="NUM">0</field>
+                <title name="VAR">text</title>
               </block>
             </value>
           </block>
           <block type="text_getSubstring">
-            <mutation at1="true" at2="true"/>
-            <field name="WHERE1">FROM_START</field>
-            <field name="WHERE2">FROM_START</field>
             <value name="STRING">
               <block type="variables_get">
-                <field name="VAR">text</field>
-              </block>
-            </value>
-            <value name="AT1">
-              <block type="math_number">
-                <field name="NUM">0</field>
-              </block>
-            </value>
-            <value name="AT2">
-              <block type="math_number">
-                <field name="NUM">0</field>
+                <title name="VAR">text</title>
               </block>
             </value>
           </block>
-          <block type="text_changeCase">
-            <field name="CASE">UPPERCASE</field>
-            <value name="TEXT">
-              <block type="text">
-                <field name="TEXT"/>
+          <block type="text_changeCase"/>
+          <block type="text_trim"/>
+          <block type="text_print"/>
+          <block type="text_prompt"/>
+        </category>
+        <category name="BLOCKLY LIST BLOCKS">
+          <block type="lists_create_empty"/>
+          <block type="lists_create_with"/>
+          <block type="lists_repeat">
+            <value name="NUM">
+              <block type="math_number">
+                <title name="NUM">5</title>
               </block>
             </value>
           </block>
-          <block type="text_trim">
-            <field name="MODE">BOTH</field>
-            <value name="TEXT">
-              <block type="text">
-                <field name="TEXT"/>
+          <block type="lists_length"/>
+          <block type="lists_isEmpty"/>
+          <block type="lists_indexOf">
+            <value name="VALUE">
+              <block type="variables_get">
+                <title name="VAR">list</title>
+              </block>
+            </value>
+          </block>
+          <block type="lists_getIndex">
+            <value name="VALUE">
+              <block type="variables_get">
+                <title name="VAR">list</title>
+              </block>
+            </value>
+          </block>
+          <block type="lists_setIndex">
+            <value name="LIST">
+              <block type="variables_get">
+                <title name="VAR">list</title>
+              </block>
+            </value>
+          </block>
+          <block type="lists_getSublist">
+            <value name="LIST">
+              <block type="variables_get">
+                <title name="VAR">list</title>
               </block>
             </value>
           </block>

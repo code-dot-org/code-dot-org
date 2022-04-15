@@ -3,7 +3,7 @@
   "properties": {
     "encrypted": "false",
     "project_template_level_name": "CSA U4 Abstract Data Art Project PBT_2022",
-    "long_instructions": "##Abstract Data Art Project\r\n\r\n1. Make revisions to your project using the feedback you received and your self-assessment.\r\n\r\n2. Finish developing your abstract data art.\r\n\r\n3. Submit your project when you have finished!",
+    "long_instructions": "project instructions",
     "mini_rubric": "false",
     "submittable": "true",
     "hide_share_and_remix": "false",
@@ -17,6 +17,6 @@
   "created_at": "2022-04-07T18:01:43.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-04-07T18:01:43.742+00:00\",\"changed\":[\"cloned from \\\"CSA U4L12-L2 CR_2022\\\"\"],\"cloned_from\":\"CSA U4L12-L2 CR_2022\"},{\"changed_at\":\"2022-04-07 18:01:53 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-11 16:48:37 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-07T18:01:43.742+00:00\",\"changed\":[\"cloned from \\\"CSA U4L12-L2 CR_2022\\\"\"],\"cloned_from\":\"CSA U4L12-L2 CR_2022\"},{\"changed_at\":\"2022-04-07 18:01:53 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

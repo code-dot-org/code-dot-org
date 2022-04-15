@@ -8,13 +8,15 @@
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
     "project_template_level_name": "CSA U2L1 PBT_2022",
-    "encrypted_exemplar_sources": "HM0H7Z3L+CTAPTxDu6u7zslyjM60me7VHOAdpgMoPI6uX3LsI1RCRXjZ2WKl\nsCE2L4V/mAI/M2eau7braieN9vmchucKSU6IGe2X9mYqzesu/f6fJpO1Vkzt\nyuo8L5iJJ6ED3Kpo4/575Lb2tiNX8bWdj8Y/nYt0804u6l9kyXbImZ8eYVh6\nl9URLPa/cVROhmwpBmpGaoKmg1rdtGvP1GwL6qiTvmsVAHg3OfeLSrjw0tyM\nwGP701QlN+tVWZomdQdDosfTDr5jldaeBIk/cYGEflGLmLjgc59tiTq6mt33\n0ydiVzyjSF/rUYiVvK2iRjlX2KU+rNw1gz2EcqZuyTyPACUgvyMzvvYSz1aJ\n96lEm5KVJEnnTDay64JQvFD7Re/nxSJc0wkyVvrRf2jVDU7qwp2MdXl0G1Eo\nnElrxUXtHNWckXdi6+6Lvg7PZaVM60RKvpwLBSKdFLuAXYY74pKwHtUJBm+I\nY2RRrFQBHJ+ncdhze5/lJcAyhYR6QFvU1IVT1ORV90BQAOvFYiroztDQixMt\n2SEAmHdKWSrjw85zWuYuC8xMDZKSilw8HqqRGIZT5Eu1AgMSQHNryGq7ShVo\nT+24pRNPiIUaLPtFyjw75dtM3aFwEq0saAyXxPeZYEDMiEwoZijaqJaK05/z\neBGpvXJ3LM3DVw0W0zav8712XoDThty3en/A0qgbKnacMCo6o4hZAuQ7HWUq\nXrKFphDn4EVObvM71pSxGJHHSCBn1lqub+7rkhig6K6oALV1LQrFlkpRlJhy\nFXz9ptPAUIltQNClmLMryC4WUeTZDQwsC0bbhNLG2P/q4yhc4pyiMqNrWapf\nvMNwAPE5225dNnhA3NsfA2QrywIZJuFocb23DU8JVkO98I/6Yo8cPs2XnIZs\nflyVw8YHag7oMim+yf0bo4JEPYkapd6+NfzTkkqTeSPkELF/qckxA/N9m1Pb\nMwWRTUbwZxwnDYzecJwTyZsKCUzxzP7asG1irqQUhlVnXr0++bARREq50T7Y\ngNVUzsmWSDBBi89uL0Cz1FizbNfbEiVp/qfNQMLDh5yMVHRky3UNXO4dk+K8\nUYWJAj4ARJnUVNDon4F+PtBQNcDNLvTXcuLt1SRQiTGylKi0Q+HdXMjzJaqF\n1wwoGJESwfdb4TTjbJw7E0n9gIRsO8H+2wLPnZl3HtBuvGt4wpVEFzLlC0A7\nfp08eU1xpjhhUHq+0R14QgpP3Z6ATwQjsW0D/t5B2nQ1/3jhwJrFfeCcy20=\n"
+    "encrypted_examples": [
+
+    ]
   },
   "game_id": 68,
+  "published": true,
   "created_at": "2022-03-12T01:02:41.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-03-12T01:02:41.044+00:00\",\"changed\":[\"cloned from \\\"CSA U2L1-L3_2022\\\"\"],\"cloned_from\":\"CSA U2L1-L3_2022\"},{\"changed_at\":\"2022-03-12 01:03:01 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-11 12:45:06 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-12T01:02:41.044+00:00\",\"changed\":[\"cloned from \\\"CSA U2L1-L3_2022\\\"\"],\"cloned_from\":\"CSA U2L1-L3_2022\"},{\"changed_at\":\"2022-03-12 01:03:01 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

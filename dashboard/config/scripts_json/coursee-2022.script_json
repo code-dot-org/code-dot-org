@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2022-04-11 20:18:45 UTC",
+    "serialized_at": "2022-04-08 21:20:35 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -4597,9 +4597,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ramp_artist_loops52022"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4622,9 +4619,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CourseE_Artist_Practice_2022"
-        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4822,9 +4816,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_artist_nestedLoops102022"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4847,9 +4838,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CourseE_Lesson_7_Artist_Practice_2022"
-        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5822,9 +5810,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CourseE_Lesson_11_Artist_Practice_2022"
-        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -9226,9 +9211,11 @@
     },
     {
       "name": "Virtual Lesson Modifications",
-      "url": "https://docs.google.com/document/d/1WDr-KRGUThXMzL1ppDIkbueQrJfF0lwrwFhEsO6ET5s/view",
+      "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit",
       "key": "virtual_lesson_modifications",
       "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "virtual_lesson_modifications"

@@ -23,7 +23,7 @@ class SectionsAsStudentTable extends React.Component {
       url: `/api/v1/sections/${sectionCode}/leave`,
       dataType: 'json'
     }).done(data => {
-      this.props.updateSections(data.studentSections, data.plSections);
+      this.props.updateSections(data.sections);
       this.props.updateSectionsResult(
         'leave',
         data.result,

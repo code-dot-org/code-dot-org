@@ -1740,26 +1740,28 @@ a.download-video {
     color: $selectUserTypeButtonTextColor;
     border-radius: 15px;
     border-color: $selectUserTypeButtonBorderColor;
-    display: flex;
-    flex-direction: column;
 
     .user-type-name {
-      width: 100%;
+      position: absolute;
+      left: 35%;
+      top: 20px;
       text-align: center;
-      margin-top: 10px;
     }
 
     .user-type-desc {
-      text-align: start;
-      margin-top: 10px;
+      position: absolute;
+      top: 55px;
+      text-align: left;
       margin-left: 5px;
       margin-right: 5px;
     }
 
     .user-type-abilities-unordered-list {
-      text-align: start;
-      width: 85%;
-      margin-inline-start: 10%;
+      position: absolute;
+      text-align: left;
+      margin-left: 30px;
+      margin-right: 5px;
+      top: 100px;
     }
   }
 

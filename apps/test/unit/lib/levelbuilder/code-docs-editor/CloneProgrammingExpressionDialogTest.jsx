@@ -35,17 +35,17 @@ describe('CloneFormDialog', () => {
       ],
       categoriesForSelect: [
         {
-          environmentName: 'spritelab',
+          envName: 'spritelab',
           key: 'math',
           formattedName: 'Spritelab: Math'
         },
         {
-          environmentName: 'applab',
+          envName: 'applab',
           key: 'uicontrols',
           formattedName: 'App Lab: UI Controls'
         },
         {
-          environmentName: 'gamelab',
+          envName: 'gamelab',
           key: 'sprites',
           formattedName: 'Game Lab: Sprites'
         }
@@ -149,17 +149,17 @@ describe('CloneProgrammingExpressionDialog integration test', () => {
         ]}
         categoriesForSelect={[
           {
-            environmentName: 'spritelab',
+            envName: 'spritelab',
             key: 'math',
             formattedName: 'Spritelab: Math'
           },
           {
-            environmentName: 'applab',
+            envName: 'applab',
             key: 'uicontrols',
             formattedName: 'App Lab: UI Controls'
           },
           {
-            environmentName: 'gamelab',
+            envName: 'gamelab',
             key: 'sprites',
             formattedName: 'Game Lab: Sprites'
           }

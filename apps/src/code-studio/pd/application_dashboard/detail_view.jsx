@@ -5,7 +5,6 @@
  *        /csp_facilitators/(:applicationId)
  *        /csp_teachers/(:applicationId)
  *        /csa_teachers/(:applicationId)
- *        /incomplete_applications/(:applicationId)
  */
 
 import PropTypes from 'prop-types';
@@ -13,7 +12,6 @@ import React from 'react';
 import ApplicationLoader from './application_loader';
 import DetailViewContents from './detail_view_contents';
 import {CourseKeyMap} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-import {getPathToApplication} from '@cdo/apps/code-studio/pd/application_dashboard/pathToApplicationHelper';
 
 export default class DetailView extends React.Component {
   static propTypes = {
@@ -22,7 +20,7 @@ export default class DetailView extends React.Component {
     }).isRequired,
     route: PropTypes.shape({
       viewType: PropTypes.oneOf(['teacher', 'facilitator']),
-      course: PropTypes.oneOf([...Object.values(CourseKeyMap), 'course_tbd'])
+      course: PropTypes.oneOf(Object.values(CourseKeyMap))
     })
   };
 
@@ -41,7 +39,7 @@ export default class DetailView extends React.Component {
       application_type.toLowerCase() !== this.props.route.viewType
     ) {
       this.context.router.replace(
-        getPathToApplication(course, application_type, applicationId)
+        `/${course}_${application_type.toLowerCase()}s/${applicationId}`
       );
     }
   };

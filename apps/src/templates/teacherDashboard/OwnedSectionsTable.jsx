@@ -28,11 +28,6 @@ export const COLUMNS = {
   EDIT_DELETE: 6
 };
 
-const participantNames = {
-  facilitator: i18n.participantTypeFacilitatorTitle(),
-  teacher: i18n.participantTypeTeacherTitle()
-};
-
 // Cell formatters for sortable OwnedSectionsTable.
 export const sectionLinkFormatter = function(name, {rowData}) {
   return (
@@ -77,6 +72,10 @@ export const courseLinkFormatter = function(course, {rowData}) {
       )}
     </div>
   );
+};
+
+export const gradeFormatter = function(grade, {rowData}) {
+  return <div>{rowData.grade}</div>;
 };
 
 export const loginInfoFormatter = function(loginType, {rowData}) {
@@ -139,7 +138,6 @@ class OwnedSectionsTable extends Component {
   static propTypes = {
     sectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     onEdit: PropTypes.func.isRequired,
-    isPlSections: PropTypes.bool,
 
     //Provided by redux
     sectionRows: PropTypes.arrayOf(sortableSectionShape).isRequired,
@@ -158,7 +156,7 @@ class OwnedSectionsTable extends Component {
   determineSorter = (data, activeColumn, directionArray) => {
     // If we are sorting on grade
     const gradeCol = COLUMNS.GRADE.toString();
-    if (this.state.sortingColumns[gradeCol] && !this.props.isPlSections) {
+    if (this.state.sortingColumns[gradeCol]) {
       const mult = directionArray[0] === 'asc' ? 1 : -1;
       return sortBy(data, function(obj) {
         return mult * StudentGradeLevels.concat(null).indexOf(obj.grade);
@@ -166,16 +164,6 @@ class OwnedSectionsTable extends Component {
     } else {
       return orderBy(data, activeColumn, directionArray);
     }
-  };
-
-  gradeFormatter = (grade, {rowData}) => {
-    return (
-      <div>
-        {this.props.isPlSections
-          ? participantNames[rowData.participantType]
-          : rowData.grade}
-      </div>
-    );
   };
 
   actionCellFormatter = (temp, {rowData}) => {
@@ -237,19 +225,17 @@ class OwnedSectionsTable extends Component {
         }
       },
       {
-        property: this.props.isPlSections ? 'participantType' : 'grade',
+        property: 'grade',
         header: {
-          label: this.props.isPlSections ? i18n.participants() : i18n.grade(),
+          label: i18n.grade(),
           props: {
-            className: this.props.isPlSections
-              ? 'uitest-participant-type-header'
-              : 'uitest-grade-header',
+            className: 'uitest-grade-header',
             style: tableLayoutStyles.headerCell
           },
           transforms: [sortable]
         },
         cell: {
-          formatters: [this.gradeFormatter],
+          formatters: [gradeFormatter],
           props: {style: colStyle}
         }
       },

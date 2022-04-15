@@ -9,7 +9,6 @@ import {
 } from 'react-bootstrap';
 import $ from 'jquery';
 import {Link} from 'react-router';
-import {getPathToApplication} from '@cdo/apps/code-studio/pd/application_dashboard/pathToApplicationHelper';
 
 export default class ApplicantSearch extends React.Component {
   constructor(props) {
@@ -71,13 +70,7 @@ export default class ApplicantSearch extends React.Component {
             <ul>
               {this.state.results.map(r => (
                 <li key={r.id}>
-                  <Link
-                    to={getPathToApplication(
-                      r.course,
-                      r.application_type,
-                      r.id
-                    )}
-                  >
+                  <Link to={`/${r.course}_${r.application_type}s/${r.id}`}>
                     {r.course} {r.application_type.toLowerCase()} application id{' '}
                     {r.id}
                   </Link>

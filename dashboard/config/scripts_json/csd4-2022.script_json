@@ -4,15 +4,6 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "announcements": [
-        {
-          "notice": "Supports to Teach CS Discoveries",
-          "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
-          "link": "https://code.org/educate/professional-development-online",
-          "type": "information",
-          "visibility": "Teacher-only"
-        }
-      ],
       "curriculum_umbrella": "CSD",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -27,8 +18,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-12 20:57:00 UTC",
-    "published_state": null,
+    "serialized_at": "2022-04-08 17:33:58 UTC",
+    "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -123,7 +114,7 @@
     },
     {
       "key": "User Centered Design   Define and Prepare",
-      "name": "User Centered Design - Define and Prepare",
+      "name": "User Centered Design   Define and Prepare",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -144,7 +135,7 @@
     },
     {
       "key": "User Centered Design   Try and Reflect",
-      "name": "User Centered Design - Try and Reflect",
+      "name": "User Centered Design   Try and Reflect",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -396,7 +387,7 @@
     },
     {
       "key": "Events in AppLab",
-      "name": "Events in App Lab",
+      "name": "Events in AppLab",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
@@ -6161,9 +6152,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U4 App Lab Design Mode Video"
-        ],
         "progression": "Video: Intro to Design Mode"
       },
       "bonus": false,
@@ -6411,9 +6399,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U4 App Lab Events Video"
-        ],
         "progression": "Video: Events in App Lab"
       },
       "bonus": false,
@@ -7168,7 +7153,7 @@
   "resources": [
     {
       "name": "All Code",
-      "url": "/s/csd4-2022/code",
+      "url": "/s/csd4-2021/code",
       "key": "all_code_2",
       "properties": {
         "is_rollup": true
@@ -7179,7 +7164,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/csd4-2022/resources",
+      "url": "/s/csd4-2021/resources",
       "key": "all_resources_2",
       "properties": {
         "is_rollup": true
@@ -7190,7 +7175,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/csd4-2022/standards",
+      "url": "/s/csd4-2021/standards",
       "key": "all_standards_2",
       "properties": {
         "is_rollup": true
@@ -7201,7 +7186,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/csd4-2022/vocab",
+      "url": "/s/csd4-2021/vocab",
       "key": "all_vocabulary_2",
       "properties": {
         "is_rollup": true
@@ -7310,45 +7295,6 @@
       }
     },
     {
-      "name": "Bugs and Features",
-      "url": "https://docs.google.com/presentation/d/1aqSy1HsbHv96k0sohHO4QXtvc9TKXgw4RuxLxInS83c/template/preview",
-      "key": "bugs_and_features_2",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1aqSy1HsbHv96k0sohHO4QXtvc9TKXgw4RuxLxInS83c/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "bugs_and_features_2"
-      }
-    },
-    {
-      "name": "Build a Digital Prototype",
-      "url": "https://docs.google.com/presentation/d/1inVHDiAa4wJR4Qns4hrZMiYSEj52sVFu9MzyA6Ka2b4/template/preview",
-      "key": "build_a_digital_prototype",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1inVHDiAa4wJR4Qns4hrZMiYSEj52sVFu9MzyA6Ka2b4/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "build_a_digital_prototype"
-      }
-    },
-    {
-      "name": "Build a Paper Prototype",
-      "url": "https://docs.google.com/presentation/d/1kIW07fEjIHYaVJMSJHzzE7t-yP28i17LMDNTDXW-_QE/template/preview",
-      "key": "build_a_paper_prototype",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1kIW07fEjIHYaVJMSJHzzE7t-yP28i17LMDNTDXW-_QE/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "build_a_paper_prototype"
-      }
-    },
-    {
       "name": "Changing Screens",
       "url": "https://drive.google.com/file/d/1d9yygBuMPaCOPP3fraA3oacuy_RD9iNB/view?usp=sharing",
       "key": "changing_screens",
@@ -7375,9 +7321,11 @@
     },
     {
       "name": "CSD Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview",
+      "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview",
       "key": "csd_curriculum_guide",
       "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csd_curriculum_guide"
@@ -7395,12 +7343,26 @@
     },
     {
       "name": "CSD Implementation Guide",
-      "url": "https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview",
+      "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
       "key": "csd_implementation_guide",
       "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csd_implementation_guide"
+      }
+    },
+    {
+      "name": "CSD Unit 4 - The Design Process",
+      "url": "https://docs.google.com/presentation/d/1aM1QmHeYJTx1V-Puzinc4Jp8gpae7ZArLW1Y1sI3CYY/copy",
+      "key": "csd_unit_4_-_the_design_process",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csd_unit_4_-_the_design_process"
       }
     },
     {
@@ -7425,32 +7387,6 @@
       },
       "seeding_key": {
         "resource.key": "design_mode_elements"
-      }
-    },
-    {
-      "name": "Design Mode in App Lab",
-      "url": "https://docs.google.com/presentation/d/1VNAMEUcb0YlIc2K55m0vDQ0pcQsyR1-qMj7KK3jEFoE/template/preview",
-      "key": "design_mode_in_app_lab",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1VNAMEUcb0YlIc2K55m0vDQ0pcQsyR1-qMj7KK3jEFoE/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "design_mode_in_app_lab"
-      }
-    },
-    {
-      "name": "Designing Apps for Good",
-      "url": "https://docs.google.com/presentation/d/1fv2d8Yz1C6FLAbfNgkiLTUIVFA4y36LtCJPg7wEAl0g/template/preview",
-      "key": "designing_apps_for_good",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1fv2d8Yz1C6FLAbfNgkiLTUIVFA4y36LtCJPg7wEAl0g/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "designing_apps_for_good"
       }
     },
     {
@@ -7479,19 +7415,6 @@
       }
     },
     {
-      "name": "Designing With Empathy",
-      "url": "https://docs.google.com/presentation/d/1s9vpxiLYllhLWHKuc3qAdxa2sDiXXdKkvrueqt6HSOw/template/preview",
-      "key": "designing_with_empathy_2",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1s9vpxiLYllhLWHKuc3qAdxa2sDiXXdKkvrueqt6HSOw/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "designing_with_empathy_2"
-      }
-    },
-    {
       "name": "Digital Prototype User Testing",
       "url": "https://docs.google.com/document/d/1hdfiToUH-GACjesuIOIQB_C9FYqS-HjAHkGc5ju1kN0/view",
       "key": "digital_prototype_user_testing",
@@ -7502,19 +7425,6 @@
       },
       "seeding_key": {
         "resource.key": "digital_prototype_user_testing"
-      }
-    },
-    {
-      "name": "Events in App Lab",
-      "url": "https://docs.google.com/presentation/d/14LfGwdAAFjihgzVgM7-mdcI-7vOc0t9jkx2Ye4Kxz2o/template/preview",
-      "key": "events_in_app_lab",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/14LfGwdAAFjihgzVgM7-mdcI-7vOc0t9jkx2Ye4Kxz2o/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "events_in_app_lab"
       }
     },
     {
@@ -7568,45 +7478,6 @@
       }
     },
     {
-      "name": "Exploring UI Elements",
-      "url": "https://docs.google.com/presentation/d/1XzaHRhdzKoyN31BTm1YGKyqz79tqkwqTSMH0NBrjuGQ/template/preview",
-      "key": "exploring_ui_elements",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1XzaHRhdzKoyN31BTm1YGKyqz79tqkwqTSMH0NBrjuGQ/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "exploring_ui_elements"
-      }
-    },
-    {
-      "name": "Feedback and Testing",
-      "url": "https://docs.google.com/presentation/d/1ue45wTN7Pyrw7REzpWxRGEXHx5iHJufxkbXCl-AEAK4/template/preview",
-      "key": "feedback_and_testing",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1ue45wTN7Pyrw7REzpWxRGEXHx5iHJufxkbXCl-AEAK4/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "feedback_and_testing"
-      }
-    },
-    {
-      "name": "Identifying User Needs",
-      "url": "https://docs.google.com/presentation/d/1uUYOtoHbyogDelyndW62CAnWbT1XfwZk5LzBilDmDcU/template/preview",
-      "key": "identifying_user_needs",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1uUYOtoHbyogDelyndW62CAnWbT1XfwZk5LzBilDmDcU/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "identifying_user_needs"
-      }
-    },
-    {
       "name": "Importing Screens",
       "url": "https://drive.google.com/file/d/1eMuKUTAUEPx26x6S7NgldhZ7GMv1DJ-D/view?usp=sharing",
       "key": "importing_screens",
@@ -7657,19 +7528,6 @@
       }
     },
     {
-      "name": "Linking Prototype Screens",
-      "url": "https://docs.google.com/presentation/d/15eMpmSL0ax0PlxR43B6f4SZnTCVMuAPYSqdF1B5pfLs/template/preview",
-      "key": "linking_prototype_screens",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/15eMpmSL0ax0PlxR43B6f4SZnTCVMuAPYSqdF1B5pfLs/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "linking_prototype_screens"
-      }
-    },
-    {
       "name": "Market Research",
       "url": "https://docs.google.com/document/d/1xROZ51ntcX11OmXXfB46slca_ViqIjmOrAydkytVWdw/edit",
       "key": "market_research",
@@ -7692,19 +7550,6 @@
       },
       "seeding_key": {
         "resource.key": "market_research_1"
-      }
-    },
-    {
-      "name": "Market Research",
-      "url": "https://docs.google.com/presentation/d/1YYQ_C5g5FWaxAuObWxrjwviifT05OITJ-Qtk5kx7L7w/template/preview",
-      "key": "market_research_2",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1YYQ_C5g5FWaxAuObWxrjwviifT05OITJ-Qtk5kx7L7w/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "market_research_2"
       }
     },
     {
@@ -7919,32 +7764,6 @@
       }
     },
     {
-      "name": "Project - App Presentation",
-      "url": "https://docs.google.com/presentation/d/1HQL-haoplogL1hsJ3HxcauxaFMEX8adHx5P_HPgofP4/template/preview",
-      "key": "project_-_app_presentation",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1HQL-haoplogL1hsJ3HxcauxaFMEX8adHx5P_HPgofP4/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "project_-_app_presentation"
-      }
-    },
-    {
-      "name": "Project - Paper Prototype",
-      "url": "https://docs.google.com/presentation/d/1NL9v5Q9SMG-zBqyPcXZ45GcCOTWbe-y0tcBFh2QozfE/template/preview",
-      "key": "project_-_paper_prototype",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1NL9v5Q9SMG-zBqyPcXZ45GcCOTWbe-y0tcBFh2QozfE/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "project_-_paper_prototype"
-      }
-    },
-    {
       "name": "Prototype Feedback",
       "url": "https://docs.google.com/document/d/1DzoLUATK8k1lyr_TLhR4mJ5UHLhrZN6-sLRay0tLX4Q/edit?usp=sharing",
       "key": "prototype_feedback",
@@ -7955,19 +7774,6 @@
       },
       "seeding_key": {
         "resource.key": "prototype_feedback"
-      }
-    },
-    {
-      "name": "Prototype Testing",
-      "url": "https://docs.google.com/presentation/d/1VfsZUR6ZmM7i3isylpi4SapxbdpgDNMwn2HtLShxfhM/template/preview",
-      "key": "prototype_testing",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1VfsZUR6ZmM7i3isylpi4SapxbdpgDNMwn2HtLShxfhM/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "prototype_testing"
       }
     },
     {
@@ -8105,19 +7911,6 @@
       }
     },
     {
-      "name": "Testing the App",
-      "url": "https://docs.google.com/presentation/d/154WuEouQoWATs6C_ntttmyiU5NkmhmIRnIPgklq0vqE/template/preview",
-      "key": "testing_the_app",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/154WuEouQoWATs6C_ntttmyiU5NkmhmIRnIPgklq0vqE/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "testing_the_app"
-      }
-    },
-    {
       "name": "The Design Thinking Process",
       "url": "https://www.youtube.com/watch?v=_r0VX-aU_T8",
       "key": "the_design_thinking_process",
@@ -8127,19 +7920,6 @@
       },
       "seeding_key": {
         "resource.key": "the_design_thinking_process"
-      }
-    },
-    {
-      "name": "Understanding Your User",
-      "url": "https://docs.google.com/presentation/d/1HPHUwHJOwCaPu7ziBMgmritDV51qleFOR3xKNn-MbZs/template/preview",
-      "key": "understanding_your_user",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1HPHUwHJOwCaPu7ziBMgmritDV51qleFOR3xKNn-MbZs/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "understanding_your_user"
       }
     },
     {
@@ -8153,45 +7933,6 @@
       },
       "seeding_key": {
         "resource.key": "updating_your_prototype"
-      }
-    },
-    {
-      "name": "Updating Your Prototype",
-      "url": "https://docs.google.com/presentation/d/1qSXkRxs0VX1VC76b5Ligma15vMuNRfo4kwiE-q0N9IQ/template/preview",
-      "key": "updating_your_prototype_1",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1qSXkRxs0VX1VC76b5Ligma15vMuNRfo4kwiE-q0N9IQ/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "updating_your_prototype_1"
-      }
-    },
-    {
-      "name": "User Centered Design - Define and Prepare",
-      "url": "https://docs.google.com/presentation/d/1ip41nls-8EppwUGy_MrW7zbph3phpTh_vE_0-TGkY4M/template/preview",
-      "key": "user_centered_design_-_define_and_prepare",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1ip41nls-8EppwUGy_MrW7zbph3phpTh_vE_0-TGkY4M/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "user_centered_design_-_define_and_prepare"
-      }
-    },
-    {
-      "name": "User Centered Design - Try and Reflect",
-      "url": "https://docs.google.com/presentation/d/1mMMkro2m6M8NDeV6ptmvWY1Zf6wJ-7EoL86bx4TKSRI/template/preview",
-      "key": "user_centered_design_-_try_and_reflect",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1mMMkro2m6M8NDeV6ptmvWY1Zf6wJ-7EoL86bx4TKSRI/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "user_centered_design_-_try_and_reflect"
       }
     },
     {
@@ -8255,19 +7996,6 @@
       },
       "seeding_key": {
         "resource.key": "user_interface_screens"
-      }
-    },
-    {
-      "name": "User Interfaces",
-      "url": "https://docs.google.com/presentation/d/142Y1kcwN0zMRgUWgEGFdFuUzCrZceSHFamG3KiaXSbg/template/preview",
-      "key": "user_interfaces",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/142Y1kcwN0zMRgUWgEGFdFuUzCrZceSHFamG3KiaXSbg/export?format=pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "user_interfaces"
       }
     },
     {
@@ -8363,13 +8091,13 @@
     {
       "seeding_key": {
         "lesson.key": "Bugs and Features",
-        "resource.key": "bugs_and_features_2"
+        "resource.key": "csd_unit_4_-_the_design_process"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Build a Digital Prototype",
-        "resource.key": "build_a_digital_prototype"
+        "resource.key": "csd_unit_4_-_the_design_process"
       }
     },
     {
@@ -8381,7 +8109,7 @@
     {
       "seeding_key": {
         "lesson.key": "Build a Paper Prototype",
-        "resource.key": "build_a_paper_prototype"
+        "resource.key": "csd_unit_4_-_the_design_process"
       }
     },
     {
@@ -8417,6 +8145,12 @@
     {
       "seeding_key": {
         "lesson.key": "Design Mode in App Lab",
+        "resource.key": "csd_unit_4_-_the_design_process"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Design Mode in App Lab",
         "resource.key": "design_mode"
       }
     },
@@ -8424,12 +8158,6 @@
       "seeding_key": {
         "lesson.key": "Design Mode in App Lab",
         "resource.key": "design_mode_elements"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Design Mode in App Lab",
-        "resource.key": "design_mode_in_app_lab"
       }
     },
     {
@@ -8471,13 +8199,19 @@
     {
       "seeding_key": {
         "lesson.key": "Designing Apps for Good",
-        "resource.key": "designing_apps_for_good"
+        "resource.key": "csd_unit_4_-_the_design_process"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Designing Apps for Good",
         "resource.key": "example_apps_for_good"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing With Empathy",
+        "resource.key": "csd_unit_4_-_the_design_process"
       }
     },
     {
@@ -8495,19 +8229,19 @@
     {
       "seeding_key": {
         "lesson.key": "Designing With Empathy",
-        "resource.key": "designing_with_empathy_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Designing With Empathy",
         "resource.key": "problem_solving_process_with_empathy"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Events in AppLab",
-        "resource.key": "events_in_app_lab"
+        "resource.key": "csd_unit_4_-_the_design_process"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Exploring UI Elements",
+        "resource.key": "csd_unit_4_-_the_design_process"
       }
     },
     {
@@ -8524,14 +8258,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Exploring UI Elements",
-        "resource.key": "exploring_ui_elements"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Feedback and Testing",
-        "resource.key": "feedback_and_testing"
+        "resource.key": "csd_unit_4_-_the_design_process"
       }
     },
     {
@@ -8561,13 +8289,13 @@
     {
       "seeding_key": {
         "lesson.key": "Identifying User Needs",
-        "resource.key": "example_user_interviews"
+        "resource.key": "csd_unit_4_-_the_design_process"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Identifying User Needs",
-        "resource.key": "identifying_user_needs"
+        "resource.key": "example_user_interviews"
       }
     },
     {
@@ -8585,13 +8313,13 @@
     {
       "seeding_key": {
         "lesson.key": "Linking Prototype Screens",
-        "resource.key": "importing_screens"
+        "resource.key": "csd_unit_4_-_the_design_process"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Linking Prototype Screens",
-        "resource.key": "linking_prototype_screens"
+        "resource.key": "importing_screens"
       }
     },
     {
@@ -8609,6 +8337,12 @@
     {
       "seeding_key": {
         "lesson.key": "Market Research",
+        "resource.key": "csd_unit_4_-_the_design_process"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Market Research",
         "resource.key": "market_research"
       }
     },
@@ -8616,12 +8350,6 @@
       "seeding_key": {
         "lesson.key": "Market Research",
         "resource.key": "market_research_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Market Research",
-        "resource.key": "market_research_2"
       }
     },
     {
@@ -8657,6 +8385,12 @@
     {
       "seeding_key": {
         "lesson.key": "Project - App Presentation",
+        "resource.key": "csd_unit_4_-_the_design_process"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - App Presentation",
         "resource.key": "peer_review_1"
       }
     },
@@ -8669,12 +8403,6 @@
     {
       "seeding_key": {
         "lesson.key": "Project - App Presentation",
-        "resource.key": "project_-_app_presentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - App Presentation",
         "resource.key": "sample_marked_rubrics_2"
       }
     },
@@ -8682,6 +8410,12 @@
       "seeding_key": {
         "lesson.key": "Project - Paper Prototype",
         "resource.key": "computer_science_practices"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Paper Prototype",
+        "resource.key": "csd_unit_4_-_the_design_process"
       }
     },
     {
@@ -8705,13 +8439,13 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Paper Prototype",
-        "resource.key": "project_-_paper_prototype"
+        "resource.key": "sample_marked_rubrics_1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Project - Paper Prototype",
-        "resource.key": "sample_marked_rubrics_1"
+        "lesson.key": "Prototype Testing",
+        "resource.key": "csd_unit_4_-_the_design_process"
       }
     },
     {
@@ -8724,12 +8458,6 @@
       "seeding_key": {
         "lesson.key": "Prototype Testing",
         "resource.key": "paper_prototype_user_testing_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Prototype Testing",
-        "resource.key": "prototype_testing"
       }
     },
     {
@@ -8753,19 +8481,25 @@
     {
       "seeding_key": {
         "lesson.key": "Testing the App",
+        "resource.key": "csd_unit_4_-_the_design_process"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Testing the App",
         "resource.key": "digital_prototype_user_testing"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Testing the App",
-        "resource.key": "testing_the_app"
+        "resource.key": "user_test_cases"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Testing the App",
-        "resource.key": "user_test_cases"
+        "lesson.key": "Understanding Your User",
+        "resource.key": "csd_unit_4_-_the_design_process"
       }
     },
     {
@@ -8824,8 +8558,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Understanding Your User",
-        "resource.key": "understanding_your_user"
+        "lesson.key": "Updating Your Prototype",
+        "resource.key": "csd_unit_4_-_the_design_process"
       }
     },
     {
@@ -8836,20 +8570,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Updating Your Prototype",
-        "resource.key": "updating_your_prototype_1"
+        "lesson.key": "User Centered Design   Define and Prepare",
+        "resource.key": "csd_unit_4_-_the_design_process"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "User Centered Design   Define and Prepare",
         "resource.key": "the_design_thinking_process"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Centered Design   Define and Prepare",
-        "resource.key": "user_centered_design_-_define_and_prepare"
       }
     },
     {
@@ -8867,7 +8595,7 @@
     {
       "seeding_key": {
         "lesson.key": "User Centered Design   Try and Reflect",
-        "resource.key": "user_centered_design_-_try_and_reflect"
+        "resource.key": "csd_unit_4_-_the_design_process"
       }
     },
     {
@@ -8885,13 +8613,13 @@
     {
       "seeding_key": {
         "lesson.key": "User Interfaces",
-        "resource.key": "user_interface_screens"
+        "resource.key": "csd_unit_4_-_the_design_process"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "User Interfaces",
-        "resource.key": "user_interfaces"
+        "resource.key": "user_interface_screens"
       }
     },
     {

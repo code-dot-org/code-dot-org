@@ -116,13 +116,6 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
       }, status: :bad_request
       return
     end
-    # add_student returns 'forbidden' when user can not be participant in section
-    if result == 'forbidden'
-      render json: {
-        result: 'cant_be_participant'
-      }, status: :forbidden
-      return
-    end
     # add_student returns 'full' when @section has or will have 500 followers
     if result == 'full'
       render json: {
@@ -140,8 +133,6 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     end
     render json: {
       sections: current_user.sections_as_student.map(&:summarize_without_students),
-      studentSections: current_user.sections_as_student_participant.map(&:summarize_without_students),
-      plSections: current_user.sections_as_pl_participant.map(&:summarize_without_students),
       result: result
     }
   end
@@ -152,8 +143,6 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     @section.remove_student(current_user, @follower, {notify: true})
     render json: {
       sections: current_user.sections_as_student.map(&:summarize_without_students),
-      studentSections: current_user.sections_as_student_participant.map(&:summarize_without_students),
-      plSections: current_user.sections_as_pl_participant.map(&:summarize_without_students),
       result: "success"
     }
   end

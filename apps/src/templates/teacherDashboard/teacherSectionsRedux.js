@@ -546,8 +546,6 @@ const initialState = {
   // for consistency and ease of comparison).
   providers: [],
   sectionIds: [],
-  studentSectionIds: [],
-  plSectionIds: [],
   selectedSectionId: NO_SECTION,
   // Array of course offerings, to populate the assignment dropdown
   // with options like "CSD", "Course A", or "Frozen". See the
@@ -694,24 +692,13 @@ export default function teacherSections(state = initialState, action) {
       }
     });
 
-    let sectionIds = _.uniq(
-      state.sectionIds.concat(sections.map(section => section.id))
-    );
-
-    const studentSectionIds = sections
-      .filter(section => section.participantType === 'student')
-      .map(section => section.id);
-    const plSectionIds = sections
-      .filter(section => section.participantType !== 'student')
-      .map(section => section.id);
-
     return {
       ...state,
       sectionsAreLoaded: true,
       selectedSectionId,
-      sectionIds: sectionIds,
-      studentSectionIds: studentSectionIds,
-      plSectionIds: plSectionIds,
+      sectionIds: _.uniq(
+        state.sectionIds.concat(sections.map(section => section.id))
+      ),
       sections: {
         ...state.sections,
         ..._.keyBy(sections, 'id')
@@ -749,8 +736,6 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       sectionIds: _.without(state.sectionIds, sectionId),
-      studentSectionIds: _.without(state.studentSectionIds, sectionId),
-      plSectionIds: _.without(state.plSectionIds, sectionId),
       sections: _.omit(state.sections, sectionId)
     };
   }
@@ -887,19 +872,6 @@ export default function teacherSections(state = initialState, action) {
       }
     }
 
-    const newSections = _.omit(state.sections, oldSectionId);
-    newSections[section.id] = {
-      ...state.sections[section.id],
-      ...section
-    };
-
-    const newStudentSectionIds = Object.values(newSections)
-      .filter(section => section.participantType === 'student')
-      .map(section => section.id);
-    const newPlSectionIds = Object.values(newSections)
-      .filter(section => section.participantType !== 'student')
-      .map(section => section.id);
-
     if (section.loginType !== state.initialLoginType) {
       firehoseClient.putRecord(
         {
@@ -956,9 +928,15 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       sectionIds: newSectionIds,
-      sections: newSections,
-      studentSectionIds: newStudentSectionIds,
-      plSectionIds: newPlSectionIds,
+      sections: {
+        // When updating a persisted section, omitting oldSectionId is still fine
+        // because we're adding it back on the next line
+        ..._.omit(state.sections, oldSectionId),
+        [section.id]: {
+          ...state.sections[section.id],
+          ...section
+        }
+      },
       sectionBeingEdited: null,
       saveInProgress: false
     };
@@ -1172,7 +1150,6 @@ export function getSectionRows(state, sectionIds) {
       'loginType',
       'studentCount',
       'code',
-      'participantType',
       'grade',
       'providerManaged',
       'hidden'
@@ -1368,30 +1345,6 @@ export const sortSectionsList = sectionsList =>
 export function hiddenSectionIds(state) {
   state = getRoot(state);
   return state.sectionIds.filter(id => state.sections[id].hidden);
-}
-
-/**
- * @param {object} state - Full state of redux tree
- */
-export function hiddenStudentSectionIds(state) {
-  state = getRoot(state);
-  return state.sectionIds.filter(
-    id =>
-      state.sections[id].hidden &&
-      state.sections[id].participantType === 'student'
-  );
-}
-
-/**
- * @param {object} state - Full state of redux tree
- */
-export function hiddenPlSectionIds(state) {
-  state = getRoot(state);
-  return state.sectionIds.filter(
-    id =>
-      state.sections[id].hidden &&
-      state.sections[id].participantType !== 'student'
-  );
 }
 
 export const studentShape = PropTypes.shape({

@@ -25,38 +25,38 @@
         },
         {
           "tileType": 1,
-          "value": 0,
-          "assetId": 0
+          "value": 40,
+          "assetId": 303
         },
         {
           "tileType": 1,
-          "value": 0,
-          "assetId": 0
+          "value": 40,
+          "assetId": 303
         },
         {
           "tileType": 1,
-          "value": 0,
-          "assetId": 0
+          "value": 40,
+          "assetId": 303
         },
         {
           "tileType": 1,
-          "value": 0,
-          "assetId": 0
+          "value": 40,
+          "assetId": 303
         },
         {
           "tileType": 1,
-          "value": 0,
-          "assetId": 0
+          "value": 40,
+          "assetId": 303
         },
         {
           "tileType": 1,
-          "value": 0,
-          "assetId": 0
+          "value": 40,
+          "assetId": 303
         },
         {
           "tileType": 1,
-          "value": 0,
-          "assetId": 0
+          "value": 40,
+          "assetId": 303
         },
         {
           "tileType": 1,
@@ -1332,13 +1332,13 @@
     ],
     "project_template_level_name": "CSA U1L14 PBT_2022",
     "long_instructions": "##Getting Started\r\n1. Import `PainterPlus.java`(#e7e8ea) from the ![Backpack](https://images.code.org/b17feeef2e8db2a98abdb4a5860c5c61-image-1642175705297.png)\r\n\r\n*Don't have it or it doesn't work? That's ok! Just copy and paste the code from [**here**](http://studio.code.org/s/csa-backpack-2022/lessons/1/levels/6).*\r\n\r\n##Create the BackgroundPainter Class:\r\n\r\n2. Create a new Java file called `BackgroundPainter.java`(#e7e8ea).\r\n\r\n##In BackgroundPainter.java:\r\n\r\n3. Import The Neighborhood package on the first line using `import org.code.neighborhood.Painter;`(#e7e8ea)\r\n\r\n4. Write the class header for the `BackgroundPainter`(#e7e8ea) class.\r\n\r\n**Note:** Don't forget to extend the `PainterPlus`(#e7e8ea) class!\r\n\r\n5. Write the constructor signature for the `BackgroundPainter` class.\r\n\r\n6. Inside the constructor, call `super()` to call the superclass constructor.\r\n\r\n7. Write your method to create your background that you planned on your [**BackgroundPainter**](https://docs.google.com/presentation/d/1pXY2fWO02cuZSuP6BKkjmJg5Rj-kksvdeeKSiEuGlpo/edit?usp=sharing) handout.\r\n\r\n![](https://images.code.org/1aba154c125e27c5d3ff4c897d98284b-image-1646322867447.gif)\r\n\r\n::: details [**Show Me How**]\r\nA subclass uses the following syntax:\r\n  \r\n  ```\r\n  public class Subclass extends SuperClass {\r\n  \r\n     public Subclass() {\r\n        super();\r\n     }\r\n  }\r\n  ```\r\n\r\nBe sure to replace `Subclass`(#e7e8ea) with the name of the subclass and `SuperClass`(#e7e8ea) with the name of the superclass.\r\n:::",
-    "encrypted_exemplar_sources": "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\nKSid\n"
+    "encrypted_examples": "FbsCZrMxC5FHjbOSeeJoXvAtSWe1qbZ2J2eStIapXaCQEvgHRhaFEQntl+YS\nDAKVlDFx6gef2jufpi4qeEu5gIisjl/OxJmMOqszk5O9IvU=\n"
   },
   "game_id": 68,
+  "published": true,
   "created_at": "2022-02-18T14:35:47.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-02-18T14:35:47.768+00:00\",\"changed\":[\"cloned from \\\"CSA U1L13-L2_2022\\\"\"],\"cloned_from\":\"CSA U1L13-L2_2022\"},{\"changed_at\":\"2022-02-18 14:36:45 +0000\",\"changed\":[\"serialized_maze\",\"project_template_level_name\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-18 14:47:49 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-18 14:49:11 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-18 15:26:47 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-18 15:29:15 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-18 16:09:36 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-18 17:04:07 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-25 23:07:16 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-03 14:08:45 +0000\",\"changed\":[\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-03 15:55:00 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-11 14:25:32 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-11 14:25:50 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-11 14:26:45 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-11 14:29:50 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-02-18T14:35:47.768+00:00\",\"changed\":[\"cloned from \\\"CSA U1L13-L2_2022\\\"\"],\"cloned_from\":\"CSA U1L13-L2_2022\"},{\"changed_at\":\"2022-02-18 14:36:45 +0000\",\"changed\":[\"serialized_maze\",\"project_template_level_name\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-18 14:47:49 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-18 14:49:11 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-18 15:26:47 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-18 15:29:15 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-18 16:09:36 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-18 17:04:07 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-25 23:07:16 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-03 14:08:45 +0000\",\"changed\":[\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-03 15:55:00 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

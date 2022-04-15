@@ -49,27 +49,4 @@ class ProgrammingMethod < ApplicationRecord
   def serialize
     attributes.except('id', 'programming_class_id', 'created_at', 'updated_at')
   end
-
-  def summarize_for_edit
-    {
-      id: id,
-      key: key,
-      name: name,
-      content: content,
-      parameters: parsed_parameters,
-      examples: parsed_examples,
-      syntax: syntax,
-      external_link: external_link
-    }
-  end
-
-  private
-
-  def parsed_parameters
-    parameters.blank? ? [] : JSON.parse(parameters)
-  end
-
-  def parsed_examples
-    examples.blank? ? [] : JSON.parse(examples)
-  end
 end

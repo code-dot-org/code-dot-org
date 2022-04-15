@@ -56,10 +56,8 @@ social:
         <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Join Snap team members for an interactive session on the future of Augmented Reality (AR) through an in-depth look at Snap's Lens Studio and Spectacles.</div>
         <a class="linktag" id="snap-trip" href="https://snapchat.zoom.us/webinar/register/WN_vhLtZn_0Q1SO9TJhHgl6TA" target="_blank"><button>View details</button></a>
   </div>
-  </div>
-<p style="padding-left:15px; padding-right:15px"><i>As part of this CS Journeys experience, Snap is giving away a pair of Snap Spectacles to 25 registered classrooms! (Recipients selected at random.)</i></p>
 </div>
-
+</div>
 
 
 <div class="col-33" style="padding-bottom:15px">
@@ -129,29 +127,45 @@ social:
 
 <a id="chats">
 <h2 style="margin-top:25px">My Journey Chats</h2>
-<p>Spring class chats have now concluded. Check out a few of our past chats below, or to view all past events, <a  class="linktag" id="past chats" href="https://code.org/csjourneys/pastchats" target="_blank">click here</a>.</p>
+<p>In these weekly conversations, give your students the opportunity to hear from a diverse group of people using computer science to bring music to our lives, create exciting new virtual reality worlds, and more! Conversations last 20-30 minutes, with live closed captioning available. Recordings will be made available a day or two after each event. To view recordings of past events, <a  class="linktag" id="past chats" href="https://code.org/csjourneys/pastchats" target="_blank">click here</a>.</p>
+<p><strong>Note that clicking any of the "View details" buttons below will take you to Eventbrite.com.</strong></p>
 <br>
 
-<a id="recordings"></a>
-
-<div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
-  {{ myjourney14 }}
-  <h3><strong>Using computer science to keep people safe</strong></h3>
-  <p>Hear from Richard Nelson, V, a mechanical engineer at Motorola Solutions who plays a crucial role in ensuring public safety.</p>
+<div class="col-33" style="padding-bottom:15px">
+  <div class="tutorial-tile" style="padding-right:20px">
+      <a class="linktag" id="greenwayhealth-chat" href="https://www.eventbrite.com/e/277186250537" target="_blank">
+        <img class="tutorial-tile-img" src="/images/csjourneys/myjourney-greenwayhealth2.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="My Journey Chat with Kevin Schriver of Greenway Health">
+      </a>
+    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
+        <div class="smalltext" style="color: #00adbc; text-align: left"><strong>Wednesday, April 13 at 2 pm EDT</strong></div>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Improving user experiences in healthcare</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Hear from a self-taught web developer about how his contributions at Greenway Health make access to healthcare information more user-friendly. <i>For grades K-5</i>.</div>
+		<br>
+		<a class="linktag" id="greenwayhealth-chat" href="https://www.eventbrite.com/e/277186250537" target="_blank"><button>View details</button></a>
+  </div>
+</div>
 </div>
 
-<div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
-  {{ myjourney5 }}
-  <h3><strong>Building robots</strong></h3>
+<div class="col-33" style="padding-bottom:15px; padding-right:20px; text-align:center">
+  <div class="col-100" style="padding:25px; border: 1px solid #0094ca; border-bottom: none; border-radius:15px 15px 0 0; text-align: center">
+    <h2 style="margin-top:10px; margin-bottom:10px; color:#0094ca">Teacher Guides</h2>
+    <p>To learn more about key takeaways for students and suggestions for planning, view the Teacher Guide that’s most appropriate to you.</p>
+  </div>
+  <div class="col-50" style="padding:25px; background-color: #7665a0; border: 1px solid #7665a0">
+    <a class="linktag" id="chat-guide-k5" href="https://staging.code.org/files/csjourneys/classchats-guide-k5.pdf" target="_blank"><h3 style="margin-top:0; color:#ffffff"><strong><br>For K-5 Classrooms<br><br></strong></h3></a>
+  </div>
+  <div class="col-50" style="padding:25px; background-color: #00adbc; border: 1px solid #00adbc; border-left:none">
+    <a class="linktag" id="chat-guide-612" href="https://staging.code.org/files/csjourneys/classchats-guide-middlehigh.pdf" target="_blank"><h3 style="margin-top:0; color:#ffffff"><strong>For Middle and High School Classrooms</strong></h3></a>
+  </div>
+  <div class="col-100" style="padding:25px; padding-top:170px; padding-bottom:17px; border: 1px solid #0094ca; border-radius: 0 0 15px 15px; text-align: center">
+    <br>
+    <br>
+    <p>To view recordings of past events, <a  class="linktag" id="pastchats" href="https://code.org/csjourneys/pastchats" target="_blank">click here</a>.</p>
+  </div>
+  <div style="clear: both"></div>
   <br>
-  <p>Learn how Eva Moscat and Anna Elzer are helping build software for robots and designing learning experiences that inspire the next generation of technologists.</p>
 </div>
-
-<div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
-  {{ myjourney13 }}
-  <h3><strong>How to outsmart a malicious hacker</strong></h3>
-  <p>Learn how Christopher Lopez, a security analyst with Tanium, helps organizations protect their networks from cybersecurity threats.</p>
-</div>
-
 
 <div style="clear: both; margin-bottom: 20px"></div>
+
+<p>To view all the Spring 2022 My Journey chats, <a href="https://www.eventbrite.com/o/codeorg-33962316631" target="_blank">click here</a>. (Note this link will take you to Eventbrite.com)</p>

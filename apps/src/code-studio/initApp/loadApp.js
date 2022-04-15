@@ -446,7 +446,7 @@ const sourceHandler = {
       let appOptions = getAppOptions();
       if (window.Blockly && Blockly.mainBlockSpace) {
         // If we're readOnly, source hasn't changed at all
-        source = Blockly.cdoUtils.isWorkspaceReadOnly(Blockly.mainBlockSpace)
+        source = Blockly.mainBlockSpace.isReadOnly()
           ? currentLevelSource
           : Blockly.Xml.domToText(
               Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace)

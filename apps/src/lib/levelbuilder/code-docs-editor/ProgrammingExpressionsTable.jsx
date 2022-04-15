@@ -122,10 +122,10 @@ export default function ProgrammingExpressionsTable({
     } else {
       setCategoriesAvailableForSelect(
         allCategories.filter(
-          cat => String(cat.environmentId) === String(newSelectedEnvironment)
+          cat => String(cat.envId) === String(newSelectedEnvironment)
         )
       );
-      if (String(selectedCategory.environmentId) !== newSelectedEnvironment) {
+      if (String(selectedCategory.envId) !== newSelectedEnvironment) {
         setSelectedCategory(DEFAULT_VALUE);
       }
     }
@@ -232,11 +232,7 @@ export default function ProgrammingExpressionsTable({
             categoriesForSelect={allCategories}
             onClose={() => {
               setItemToClone(null);
-              fetchExpressions(
-                selectedEnvironment,
-                selectedCategory,
-                currentPage
-              );
+              fetchExpressions();
             }}
           />
         )}

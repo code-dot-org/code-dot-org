@@ -1080,7 +1080,7 @@ exports.createJsWrapperBlockCreator = function(
           (!window.appOptions || window.appOptions.level.miniToolbox)
         ) {
           var toggle = new Blockly.FieldIcon('+');
-          if (Blockly.cdoUtils.isWorkspaceReadOnly(this.blockSpace)) {
+          if (this.blockSpace.isReadOnly()) {
             toggle.setReadOnly();
           }
 
@@ -1093,7 +1093,7 @@ exports.createJsWrapperBlockCreator = function(
           this.isMiniFlyoutOpen = false;
           // On button click, open/close the horizontal flyout, toggle button text between +/-, and re-render the block.
           Blockly.bindEvent_(toggle.fieldGroup_, 'mousedown', this, () => {
-            if (Blockly.cdoUtils.isWorkspaceReadOnly(this.blockSpace)) {
+            if (this.blockSpace.isReadOnly()) {
               return;
             }
 

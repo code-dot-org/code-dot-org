@@ -13,7 +13,6 @@ import {
   topPlCourse,
   topCourse,
   taughtSections,
-  joinedPlSections,
   joinedSections
 } from '../../../test/unit/templates/studioHomepages/homepagesTestData';
 
@@ -37,8 +36,7 @@ export default storybook => {
                 announcements={[announcement]}
                 courses={[]}
                 plCourses={[]}
-                joinedStudentSections={[]}
-                joinedPlSections={[]}
+                joinedSections={[]}
                 isEnglish={true}
                 showCensusBanner={false}
               />
@@ -60,8 +58,7 @@ export default storybook => {
                 announcements={[announcement]}
                 topCourse={topCourse}
                 courses={courses}
-                joinedStudentSections={[]}
-                joinedPlSections={[]}
+                joinedSections={[]}
                 isEnglish={true}
                 showCensusBanner={false}
               />
@@ -82,8 +79,7 @@ export default storybook => {
               <TeacherHomepage
                 announcements={[announcement]}
                 courses={[]}
-                joinedStudentSections={[]}
-                joinedPlSections={[]}
+                joinedSections={[]}
                 isEnglish={true}
                 showCensusBanner={false}
               />
@@ -105,8 +101,7 @@ export default storybook => {
                 announcements={[announcement]}
                 courses={courses}
                 topCourse={topCourse}
-                joinedStudentSections={[]}
-                joinedPlSections={[]}
+                joinedSections={[]}
                 isEnglish={true}
                 showCensusBanner={false}
               />
@@ -115,7 +110,7 @@ export default storybook => {
         }
       },
       {
-        name: 'Teacher Homepage - courses, sections and joinedStudentSections',
+        name: 'Teacher Homepage - courses, sections and joinedSections',
         description:
           'Teacher Homepage - teacher does have course progress, and does have sections they own and sections in which they are a student',
         story: () => {
@@ -128,8 +123,7 @@ export default storybook => {
                 announcements={[announcement]}
                 courses={courses}
                 topCourse={topCourse}
-                joinedStudentSections={joinedSections}
-                joinedPlSections={[]}
+                joinedSections={joinedSections}
                 isEnglish={true}
                 showCensusBanner={false}
               />
@@ -138,7 +132,7 @@ export default storybook => {
         }
       },
       {
-        name: 'Teacher Homepage - courses, sections and joinedStudentSections',
+        name: 'Teacher Homepage - courses, sections and joinedSections',
         description:
           'Teacher Homepage - teacher does have course progress in both student and pl courses, and does have sections they own and sections in which they are a student',
         story: () => {
@@ -153,33 +147,7 @@ export default storybook => {
                 topCourse={topCourse}
                 plCourses={plCourses}
                 topPlCourse={topPlCourse}
-                joinedStudentSections={joinedSections}
-                joinedPlSections={[]}
-                isEnglish={true}
-                showCensusBanner={false}
-              />
-            </Provider>
-          );
-        }
-      },
-      {
-        name: 'Teacher Homepage - courses, sections and joinedPlSections',
-        description:
-          'Teacher Homepage - teacher does have course progress in both student and pl courses, and does have sections they own and sections in which they are a student',
-        story: () => {
-          withFakeServer({courses: serverCourses, sections: serverSections});
-          registerReducers({teacherSections});
-          const store = createStoreWithReducers();
-          return (
-            <Provider store={store}>
-              <TeacherHomepage
-                announcements={[announcement]}
-                courses={courses}
-                topCourse={topCourse}
-                plCourses={plCourses}
-                topPlCourse={topPlCourse}
-                joinedStudentSections={[]}
-                joinedPlSections={joinedPlSections}
+                joinedSections={joinedSections}
                 isEnglish={true}
                 showCensusBanner={false}
               />

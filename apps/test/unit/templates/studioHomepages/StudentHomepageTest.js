@@ -3,6 +3,7 @@ import {assert} from 'chai';
 import {shallow} from 'enzyme';
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
 import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
+import StudentSections from '@cdo/apps/templates/studioHomepages/StudentSections';
 import {courses, topCourse, joinedSections} from './homepagesTestData';
 import Notification from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
@@ -49,11 +50,11 @@ describe('StudentHomepage', () => {
     assert(wrapper.find('ProjectWidgetWithData').exists());
   });
 
-  it('shows a JoinSectionArea component', () => {
+  it('shows a StudentSections component', () => {
     const wrapper = shallow(<StudentHomepage {...TEST_PROPS} />);
-    const joinSectionArea = wrapper.find('JoinSectionArea');
-    assert.deepEqual(joinSectionArea.props(), {
-      initialJoinedStudentSections: joinedSections
+    const studentSections = wrapper.find(StudentSections);
+    assert.deepEqual(studentSections.props(), {
+      initialSections: joinedSections
     });
   });
 

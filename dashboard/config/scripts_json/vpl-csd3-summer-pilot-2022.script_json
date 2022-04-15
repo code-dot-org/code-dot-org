@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-13 15:15:12 UTC",
+    "serialized_at": "2022-04-01 20:58:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -80,7 +80,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "**Overview:**\nThis session serves as both an introduction to Day 3 and a space to debrief the asynchronous work from Day 2.\n\n**Participants will:**\n\n* Get an orientation for the day.\n* Review gots and needs. \n* Debrief asynchronous work. \n\n**Suggested time:** 15 minutes",
+        "overview": "**Overview:**\nThis session serves as both an introduction to Day 3 and a space to debrief the asynchronous work from Day 2\n\n**Participants will:**\n\n* Get an orientation for the day.\n* Review gots and needs. \n* Debrief asynchronous work. \n\n**Suggested time:** 15 minutes",
         "student_overview": "**You will:**\n\n* Get an orientation for the day.\n* Review gots and needs. \n* Debrief asynchronous work. "
       },
       "seeding_key": {
@@ -1316,7 +1316,6 @@
       "key": "cf6ccccb-461a-47ed-9cc4-6a29ddd32220",
       "position": 1,
       "properties": {
-        "progression_name": "Wrap up"
       },
       "seeding_key": {
         "activity_section.key": "cf6ccccb-461a-47ed-9cc4-6a29ddd32220",
@@ -1325,42 +1324,10 @@
     }
   ],
   "script_levels": [
-    {
-      "chapter": 1,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Wrap up"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-SP-VPL-21-mod3-async2-WrapUp"
-        ],
-        "lesson.key": "lesson-9",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "vpl-csd3-summer-pilot-2022",
-        "activity_section.key": "cf6ccccb-461a-47ed-9cc4-6a29ddd32220"
-      },
-      "level_keys": [
-        "VPL-CSD-PILOT-S22-SP-VPL-21-mod3-async2-WrapUp"
-      ]
-    }
+
   ],
   "levels_script_levels": [
-    {
-      "seeding_key": {
-        "level.key": "VPL-CSD-PILOT-S22-SP-VPL-21-mod3-async2-WrapUp",
-        "script_level.level_keys": [
-          "VPL-CSD-PILOT-S22-SP-VPL-21-mod3-async2-WrapUp"
-        ],
-        "lesson.key": "lesson-9",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "vpl-csd3-summer-pilot-2022",
-        "activity_section.key": "cf6ccccb-461a-47ed-9cc4-6a29ddd32220"
-      }
-    }
+
   ],
   "resources": [
     {

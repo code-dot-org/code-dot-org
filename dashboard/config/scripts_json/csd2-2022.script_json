@@ -4,15 +4,6 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "announcements": [
-        {
-          "notice": "Supports to Teach CS Discoveries",
-          "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
-          "link": "https://code.org/educate/professional-development-online",
-          "type": "information",
-          "visibility": "Teacher-only"
-        }
-      ],
       "curriculum_umbrella": "CSD",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -27,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-12 20:55:38 UTC",
+    "serialized_at": "2022-04-10 03:42:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -9615,7 +9606,7 @@
   "resources": [
     {
       "name": "All Code",
-      "url": "/s/csd2-2022/code",
+      "url": "/s/csd2-2021/code",
       "key": "all_code",
       "properties": {
         "is_rollup": true
@@ -9626,7 +9617,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/csd2-2022/resources",
+      "url": "/s/csd2-2021/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -9637,7 +9628,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/csd2-2022/standards",
+      "url": "/s/csd2-2021/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -9648,7 +9639,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/csd2-2022/vocab",
+      "url": "/s/csd2-2021/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true
@@ -9720,9 +9711,11 @@
     },
     {
       "name": "CSD Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview",
+      "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview",
       "key": "csd_curriculum_guide",
       "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csd_curriculum_guide"
@@ -9750,22 +9743,14 @@
     },
     {
       "name": "CSD Implementation Guide",
-      "url": "https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview",
+      "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
       "key": "csd_implementation_guide",
       "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csd_implementation_guide"
-      }
-    },
-    {
-      "name": "CSD Programming Levels Guide",
-      "url": "https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview",
-      "key": "csd_programming_levels_guide",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_programming_levels_guide"
       }
     },
     {
@@ -11478,12 +11463,6 @@
     {
       "seeding_key": {
         "resource.key": "csd_implementation_guide",
-        "script.name": "csd2-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_programming_levels_guide",
         "script.name": "csd2-2022"
       }
     },

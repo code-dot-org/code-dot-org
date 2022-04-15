@@ -21,7 +21,7 @@ describe('the level builder page init script', () => {
         lessons: [],
         is_migrated: false,
         scriptPath: '/s/test-script',
-        coursePublishedState: 'beta',
+        publishedState: 'beta',
         instructionType: 'teacher_led',
         instructorAudience: 'teacher',
         participantAudience: 'student'

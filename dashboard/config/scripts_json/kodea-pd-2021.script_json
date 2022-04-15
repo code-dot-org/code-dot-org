@@ -4,15 +4,13 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "is_course": true,
       "is_migrated": true,
       "pilot_experiment": "csf-online-pd-kodea",
-      "professional_learning_course": "K5 Support",
-      "version_year": "2021"
+      "professional_learning_course": "K5 Support"
     },
     "new_name": null,
-    "family_name": "kodea-pd-2021",
-    "serialized_at": "2022-04-13 19:50:30 UTC",
+    "family_name": null,
+    "serialized_at": "2021-11-22 19:57:34 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
