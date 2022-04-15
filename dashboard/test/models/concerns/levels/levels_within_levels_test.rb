@@ -184,4 +184,14 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
     end
     assert_includes e.message, 'level cannot be its own project template level'
   end
+
+  test 'template level type must match level type' do
+    applab = create :applab
+    gamelab = create :gamelab
+
+    e = assert_raises do
+      applab.update!(project_template_level_name: gamelab.name)
+    end
+    assert_includes e.message, 'template level type Gamelab does not match level type Applab'
+  end
 end
