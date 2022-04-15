@@ -99,7 +99,8 @@ export default function ProgrammingExpressionEditor({
   };
 
   const markdownEditorFeatures = {
-    imageUpload: true
+    imageUpload: true,
+    programmingExpression: true
   };
 
   return (

@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-13 17:01:56 UTC",
+    "serialized_at": "2022-04-14 20:52:37 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2326,6 +2326,17 @@
       }
     },
     {
+      "key": "4c135163-f656-4aa7-9fe6-55359b23cc9c",
+      "position": 4,
+      "properties": {
+        "progression_name": "End-of-Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "4c135163-f656-4aa7-9fe6-55359b23cc9c",
+        "lesson_activity.key": "cb2f26d6-60de-40f0-af3f-e0367b6850be"
+      }
+    },
+    {
       "key": "c32d3dc0-1576-4bf2-8edc-00c5d6544602",
       "position": 1,
       "properties": {
@@ -2747,6 +2758,28 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "End-of-Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csp2-2022"
+        ],
+        "lesson.key": "Project   Internet Dilemmas Part 2",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2022",
+        "activity_section.key": "4c135163-f656-4aa7-9fe6-55359b23cc9c"
+      },
+      "level_keys": [
+        "Student End of Unit Survey_csp2-2022"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
         "level_keys": [
           "CSP Unit 2 MC Assessment 2022"
         ],
@@ -2946,6 +2979,18 @@
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2022",
         "activity_section.key": "62af1210-61fd-44a7-848c-c0e7485864e6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Student End of Unit Survey_csp2-2022",
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csp2-2022"
+        ],
+        "lesson.key": "Project   Internet Dilemmas Part 2",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2022",
+        "activity_section.key": "4c135163-f656-4aa7-9fe6-55359b23cc9c"
       }
     },
     {
