@@ -1,0 +1,7 @@
+name 'csc_ecosystems_multiple_choice_child_3'
+question 'Which of the following answers is NOT TRUE about the effect of overfishing on the ocean ecosystem?'
+wrong 'If there are enough fish then they eat algae and keep the water and coral clean. ', feedback: 'Incorrect.'
+wrong 'If the fish disappear then the algae may take over and make the water dirty.', feedback: 'Incorrect.'
+right 'If humans overfish then the ocean ecosystem will be more balanced.', feedback: 'Correct!'
+wrong 'If humans overfish then the ocean ecosystem may become unbalanced.', feedback: 'Incorrect.'
+

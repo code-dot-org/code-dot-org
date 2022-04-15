@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-13 17:06:46 UTC",
+    "serialized_at": "2022-04-14 21:16:09 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2295,6 +2295,17 @@
       }
     },
     {
+      "key": "fe5102bf-3032-4e8a-ad74-9bb3b8537bd3",
+      "position": 2,
+      "properties": {
+        "progression_name": "End-of-Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "fe5102bf-3032-4e8a-ad74-9bb3b8537bd3",
+        "lesson_activity.key": "c4a0c016-231a-4a7e-aa42-2bde07170391"
+      }
+    },
+    {
       "key": "ce4a956a-f89b-49cb-ba28-f00d12f78cb2",
       "position": 1,
       "properties": {
@@ -2987,6 +2998,28 @@
     },
     {
       "chapter": 27,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End-of-Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csp9-2022"
+        ],
+        "lesson.key": "Project   Tell a Data Story Part 2",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2022",
+        "activity_section.key": "fe5102bf-3032-4e8a-ad74-9bb3b8537bd3"
+      },
+      "level_keys": [
+        "Student End of Unit Survey_csp9-2022"
+      ]
+    },
+    {
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3321,6 +3354,18 @@
         "lesson_group.key": "csp_unit9_2020",
         "script.name": "csp9-2022",
         "activity_section.key": "df63367d-773b-46a5-b0a7-3166eb9bfe56"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Student End of Unit Survey_csp9-2022",
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csp9-2022"
+        ],
+        "lesson.key": "Project   Tell a Data Story Part 2",
+        "lesson_group.key": "csp_unit9_2020",
+        "script.name": "csp9-2022",
+        "activity_section.key": "fe5102bf-3032-4e8a-ad74-9bb3b8537bd3"
       }
     },
     {

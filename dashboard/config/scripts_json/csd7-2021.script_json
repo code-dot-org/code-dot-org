@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-13 21:23:50 UTC",
+    "serialized_at": "2022-04-14 13:32:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3084,7 +3084,7 @@
       "key": "1fb18042-bbe6-4e8d-89e3-070a0154f66e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _If you could add another question to the show survey, what question would you ask? Why do you think that question would be helpful in deciding a shoe?_\r\n\r\nHave students journal individually, then share with a partner. If time remains, invite a few students to share with the class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _If you could add another question to the shoe survey, what question would you ask? Why do you think that question would be helpful in deciding a shoe?_\n\nHave students journal individually, then share with a partner. If time remains, invite a few students to share with the class.",
         "name": "Journal\r"
       },
       "seeding_key": {
