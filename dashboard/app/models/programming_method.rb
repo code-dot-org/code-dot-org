@@ -80,13 +80,20 @@ class ProgrammingMethod < ApplicationRecord
 
   def validate_overload
     # No overload is always valid
-    return true unless overloaded_by
-    # Can't overload self
-    return false if overloaded_by == key
+    return unless overloaded_by
+    if overloaded_by == key
+      errors.add(:overloaded_by, "Cannot overload self")
+      return
+    end
+    if ProgrammingMethod.where(programming_class_id: programming_class_id, overloaded_by: key).count > 0
+      errors.add(:overloaded_by, "Cannot have overload if another method overloads it")
+      return
+    end
     overload = ProgrammingMethod.find_by(programming_class_id: programming_class_id, key: overloaded_by)
-    return false unless overload
-    # To avoid a cycle, the method pointed to cannot point to another method
-    return false unless overload.overloaded_by.blank?
-    return true
+    if overload
+      errors.add(:overloaded_by, "Overloaded method cannot have overload") unless overload.overloaded_by.blank?
+    else
+      errors.add(:overloaded_by, "Overload method must exist")
+    end
   end
 end
