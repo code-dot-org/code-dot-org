@@ -22,6 +22,9 @@ import {isChrome, gtChrome33, isCodeOrgBrowser} from './util/browserChecks';
 import MicroBitBoard from './boards/microBit/MicroBitBoard';
 import project from '../../../code-studio/initApp/project';
 import {MB_API} from './boards/microBit/MicroBitConstants';
+import experiments from '@cdo/apps/util/experiments';
+import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
+import {WEB_SERIAL_FILTERS} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 
 // Re-export some modules so consumers only need this 'toolkit' module
 export {dropletConfig, configMicrobit, configCircuitPlayground, MakerError};
@@ -165,9 +168,18 @@ function getBoard() {
     if (project.getMakerAPIs() === MB_API) {
       return findPortWithViableDevice().then(port => new MicroBitBoard(port));
     } else {
-      return findPortWithViableDevice().then(
-        port => new CircuitPlaygroundBoard(port)
-      );
+      if (experiments.isEnabled('webserial')) {
+        return navigator.serial
+          .requestPort({filters: WEB_SERIAL_FILTERS})
+          .then(port => {
+            let wrappedPort = new WebSerialPortWrapper(port);
+            return new CircuitPlaygroundBoard(wrappedPort);
+          });
+      } else {
+        return findPortWithViableDevice().then(
+          port => new CircuitPlaygroundBoard(port)
+        );
+      }
     }
   }
 }
