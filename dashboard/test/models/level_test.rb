@@ -929,13 +929,23 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'clone with suffix copies contained levels' do
-    contained_level_1 = create :level, name: 'contained level 1', type: 'FreeResponse'
-    contained_level_2 = create :level, name: 'contained level 2'
+    contained_level_1 = create :free_response, name: 'contained level 1'
+    multi_dsl_text = <<~DSL
+      name 'contained level 2'
+      title 'Multiple Choice'
+      question 'What is your favorite color?'
+      wrong 'Red'
+      right 'Blue'
+    DSL
+    contained_level_2 = create :multi, name: 'contained level 2'
+    Multi.any_instance.stubs(:dsl_text).returns(multi_dsl_text)
+    File.stubs(:write)
 
     # level 1 has 1 contained level
 
     level_1 = create :level, name: 'level 1'
     level_1.contained_level_names = [contained_level_1.name]
+    level_1.save!
     level_1_copy = level_1.clone_with_suffix('_copy')
 
     refute_nil level_1_copy.contained_levels
@@ -951,6 +961,7 @@ class LevelTest < ActiveSupport::TestCase
       contained_level_1.name,
       contained_level_2.name
     ]
+    level_2.save!
     level_2_copy = level_2.clone_with_suffix('_copy')
     contained_level_2_copy = Level.find_by_name('contained level 2_copy')
     refute_nil level_2_copy.contained_levels
@@ -1209,11 +1220,12 @@ class LevelTest < ActiveSupport::TestCase
   test "get_level_for_progress returns the first contained level if the level has contained levels" do
     student = create :student
 
-    contained_level_1 = create :free_response, name: 'contained level 1', type: 'FreeResponse'
-    contained_level_2 = create :level, name: 'contained level 2'
+    contained_level_1 = create :free_response, name: 'contained level 1'
+    contained_level_2 = create :multi, name: 'contained level 2'
 
     level = create :level, name: 'level 1'
     level.contained_level_names = [contained_level_1.name, contained_level_2.name]
+    level.save!
     script_level = create :script_level, levels: [level]
 
     level_for_progress = level.get_level_for_progress(student, script_level.script)
@@ -1226,7 +1238,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test "can_have_feedback_review_state? returns false if the level has contained levels" do
-    contained_level = create :level
+    contained_level = create :multi
     level_with_contained = create :level, contained_level_names: [contained_level.name]
 
     assert_not level_with_contained.can_have_feedback_review_state?
