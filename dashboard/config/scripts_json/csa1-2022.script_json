@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-11 14:10:57 UTC",
+    "serialized_at": "2022-04-14 14:43:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2934,7 +2934,7 @@
       "key": "bb1861ab-f679-4fbe-9b27-c19642d9a304",
       "position": 5,
       "properties": {
-        "description": "The `Painter` class doesn't have a method to turn right. Now that we have a `PainterPlus` class that extends the `Painter` class.",
+        "description": "The `Painter` class doesn't have a method to turn right. Now we have a `PainterPlus` class that extends the `Painter` class.",
         "duration": "20",
         "name": "Turning Right in The Neighborhood",
         "remarks": true
