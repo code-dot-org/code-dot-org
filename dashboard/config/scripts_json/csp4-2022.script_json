@@ -18,8 +18,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-30 16:56:04 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-04-13 23:54:14 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -5018,6 +5018,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L7 Choice"
+        ],
         "progression": "Putting It Together"
       },
       "bonus": false,
@@ -5515,15 +5518,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 L10 Making Functions Practice2022"
-        ],
         "progression": "When to Declare Functions"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U4 L10 Making Functions Practice2022"
+          "CSP U4L10 Choice"
         ],
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
@@ -5531,7 +5531,7 @@
         "activity_section.key": "c3a04233-a047-4b4a-a594-d6c9097c67d8"
       },
       "level_keys": [
-        "U4 L10 Making Functions Practice2022"
+        "CSP U4L10 Choice"
       ]
     },
     {
@@ -6642,9 +6642,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "U4 L10 Making Functions Practice2022",
+        "level.key": "CSP U4L10 Choice",
         "script_level.level_keys": [
-          "U4 L10 Making Functions Practice2022"
+          "CSP U4L10 Choice"
         ],
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",

@@ -218,7 +218,7 @@ module Pd::Application
       end
     end
 
-    def self.filtered_labels(course)
+    def self.filtered_labels(course, status = 'unreviewed')
       ALL_LABELS
     end
 
