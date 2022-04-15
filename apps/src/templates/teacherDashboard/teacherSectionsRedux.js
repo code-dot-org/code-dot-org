@@ -698,10 +698,10 @@ export default function teacherSections(state = initialState, action) {
       state.sectionIds.concat(sections.map(section => section.id))
     );
 
-    let studentSectionIds = sections
+    const studentSectionIds = sections
       .filter(section => section.participantType === 'student')
       .map(section => section.id);
-    let plSectionIds = sections
+    const plSectionIds = sections
       .filter(section => section.participantType !== 'student')
       .map(section => section.id);
 
@@ -887,17 +887,17 @@ export default function teacherSections(state = initialState, action) {
       }
     }
 
-    let newSections = _.omit(state.sections, oldSectionId);
+    const newSections = _.omit(state.sections, oldSectionId);
     newSections[section.id] = {
       ...state.sections[section.id],
       ...section
     };
 
-    let newStudentSectionIds = Object.values(newSections)
-      ?.filter(section => section.participantType === 'student')
+    const newStudentSectionIds = Object.values(newSections)
+      .filter(section => section.participantType === 'student')
       .map(section => section.id);
-    let newPlSectionIds = Object.values(newSections)
-      ?.filter(section => section.participantType !== 'student')
+    const newPlSectionIds = Object.values(newSections)
+      .filter(section => section.participantType !== 'student')
       .map(section => section.id);
 
     if (section.loginType !== state.initialLoginType) {
