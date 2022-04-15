@@ -26,6 +26,7 @@ describe('EditSectionForm', () => {
         assignedUnitName="script name"
         assignedUnitLessonExtrasAvailable={false}
         assignedUnitTextToSpeechEnabled={false}
+        participantType={'student'}
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -62,6 +63,7 @@ describe('EditSectionForm', () => {
         assignedUnitName="script name"
         assignedUnitLessonExtrasAvailable={false}
         assignedUnitTextToSpeechEnabled={false}
+        participantType={'student'}
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -98,6 +100,7 @@ describe('EditSectionForm', () => {
         assignedUnitName="script name"
         assignedUnitLessonExtrasAvailable={false}
         assignedUnitTextToSpeechEnabled={false}
+        participantType={'student'}
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -134,6 +137,7 @@ describe('EditSectionForm', () => {
         assignedUnitName="script name"
         assignedUnitLessonExtrasAvailable={false}
         assignedUnitTextToSpeechEnabled={false}
+        participantType={'student'}
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -173,6 +177,7 @@ describe('EditSectionForm', () => {
         assignedUnitName="script name"
         assignedUnitLessonExtrasAvailable={false}
         assignedUnitTextToSpeechEnabled={false}
+        participantType={'student'}
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -197,6 +202,7 @@ describe('EditSectionForm', () => {
         assignedUnitName="script name"
         assignedUnitTextToSpeechEnabled={false}
         assignedUnitLessonExtrasAvailable={false}
+        participantType={'student'}
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -218,6 +224,7 @@ describe('EditSectionForm', () => {
         assignedUnitName="script name"
         assignedUnitTextToSpeechEnabled={false}
         assignedUnitLessonExtrasAvailable={false}
+        participantType={'student'}
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -242,6 +249,7 @@ describe('EditSectionForm', () => {
         assignedUnitName="script name"
         assignedUnitTextToSpeechEnabled={false}
         assignedUnitLessonExtrasAvailable={false}
+        participantType={'student'}
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -263,6 +271,7 @@ describe('EditSectionForm', () => {
         assignedUnitName="script name"
         assignedUnitLessonExtrasAvailable={false}
         assignedUnitTextToSpeechEnabled={false}
+        participantType={'student'}
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -284,6 +293,7 @@ describe('EditSectionForm', () => {
         assignedUnitName="script name"
         assignedUnitLessonExtrasAvailable={false}
         assignedUnitTextToSpeechEnabled={false}
+        participantType={'student'}
       />
     );
     const loginTypeField = wrapper.find('LoginTypeField');
@@ -307,6 +317,7 @@ describe('EditSectionForm', () => {
         assignedUnitName="script name"
         assignedUnitLessonExtrasAvailable={false}
         assignedUnitTextToSpeechEnabled={false}
+        participantType={'student'}
       />
     );
     const ttsAutoplayField = wrapper.find('TtsAutoplayField');
@@ -330,6 +341,7 @@ describe('EditSectionForm', () => {
         assignedUnitName="script name"
         assignedUnitLessonExtrasAvailable={false}
         assignedUnitTextToSpeechEnabled={true}
+        participantType={'student'}
       />
     );
     const ttsAutoplayField = wrapper.find('TtsAutoplayField');
@@ -352,6 +364,7 @@ describe('EditSectionForm', () => {
         assignedUnitName="script name"
         assignedUnitLessonExtrasAvailable={false}
         assignedUnitTextToSpeechEnabled={false}
+        participantType={'student'}
       />
     );
     const lessonExtrasField = wrapper.find('LessonExtrasField');
@@ -374,6 +387,7 @@ describe('EditSectionForm', () => {
         assignedUnitName="script name"
         assignedUnitLessonExtrasAvailable={true}
         assignedUnitTextToSpeechEnabled={false}
+        participantType={'student'}
       />
     );
     const lessonExtrasField = wrapper.find('LessonExtrasField');

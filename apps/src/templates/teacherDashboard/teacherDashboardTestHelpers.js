@@ -227,6 +227,7 @@ export const courseOfferings = {
     display_name: 'Hello World',
     category: 'hoc',
     is_featured: true,
+    participant_audience: 'student',
     course_versions: {
       7: {
         id: 7,
@@ -257,6 +258,7 @@ export const courseOfferings = {
     display_name: 'Poem Art',
     category: 'hoc',
     is_featured: true,
+    participant_audience: 'student',
     course_versions: {
       8: {
         id: 8,

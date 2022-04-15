@@ -144,6 +144,10 @@ When /^I select (picture|word|email) login$/ do |login_type|
   steps %Q{When I press the first ".uitest-#{login_type}Login" element}
 end
 
+When /^I select (student|teacher|facilitator) participant type$/ do |participant_type|
+  steps %Q{When I press the first ".uitest-#{participant_type}-type" element}
+end
+
 When /^I press the save button to create a new section$/ do
   steps 'When I press the first ".uitest-saveButton" element'
 end

@@ -14,6 +14,7 @@ const USER_EDITABLE_SECTION_PROPS = [
   'loginType',
   'lessonExtras',
   'pairingAllowed',
+  'participantType',
   'ttsAutoplayEnabled',
   'participantType',
   'courseId',
@@ -583,16 +584,15 @@ const initialState = {
 };
 /**
  * Generate shape for new section
- * @param id
- * @param loginType
+ * @param participantType
  * @returns {sectionShape}
  */
 
-function newSectionData(id, loginType) {
+function newSectionData(participantType) {
   return {
-    id: id,
+    id: PENDING_NEW_SECTION_ID,
     name: '',
-    loginType: loginType,
+    loginType: undefined,
     grade: '',
     providerManaged: false,
     lessonExtras: true,
@@ -600,7 +600,7 @@ function newSectionData(id, loginType) {
     ttsAutoplayEnabled: false,
     sharingDisabled: false,
     studentCount: 0,
-    participantType: 'student',
+    participantType: participantType,
     code: '',
     courseId: null,
     courseOfferingId: null,
@@ -796,9 +796,13 @@ export default function teacherSections(state = initialState, action) {
   }
 
   if (action.type === EDIT_SECTION_BEGIN) {
+    const initialParticipantType =
+      state.availableParticipantTypes.length === 1
+        ? state.availableParticipantTypes[0]
+        : undefined;
     const initialSectionData = action.sectionId
       ? {...state.sections[action.sectionId]}
-      : newSectionData(PENDING_NEW_SECTION_ID, undefined);
+      : newSectionData(initialParticipantType);
     return {
       ...state,
       initialCourseId: initialSectionData.courseId,
@@ -824,6 +828,11 @@ export default function teacherSections(state = initialState, action) {
         throw new Error(`Cannot edit property ${key}; it's not allowed.`);
       }
     }
+    // PL Sections must use email logins
+    const participantTypeSettings = {};
+    if (action.props.loginType && action.props.loginType !== 'email') {
+      participantTypeSettings.participantType = 'student';
+    }
 
     const lessonExtraSettings = {};
     if (action.props.unitId && action.props.lessonExtras === undefined) {
@@ -841,6 +850,7 @@ export default function teacherSections(state = initialState, action) {
         ...state.sectionBeingEdited,
         ...lessonExtraSettings,
         ...ttsAutoplayEnabledSettings,
+        ...participantTypeSettings,
         ...action.props
       }
     };
