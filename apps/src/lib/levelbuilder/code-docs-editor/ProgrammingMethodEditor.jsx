@@ -17,6 +17,9 @@ function useProgrammingMethod(initialProgrammingMethod) {
     // We remove id and key from state as they should not be modified
     delete copiedMethod.id;
     delete copiedMethod.key;
+    // Examples and parameters don't have obvious unique identifiers so adding
+    // some here. These are required by React when we transform these lists
+    // into sets of components.
     if (copiedMethod.examples) {
       copiedMethod.examples.forEach(e => (e.key = createUuid()));
     }
