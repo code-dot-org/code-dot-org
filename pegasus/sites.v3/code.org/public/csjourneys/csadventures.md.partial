@@ -53,7 +53,7 @@ social:
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
         <div class="smalltext" style="color: #00adbc; text-align: left"><strong>May 6 at 1pm EDT</strong></div>
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Explore the world of Augmented Reality (AR) with Snap</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Join Snap team members for an interactive session on the future of Augmented Reality (AR) through an in-depth look at Snap's Lens Studio and Spectacles.</div>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Join Snap team members for a 45-minute interactive session on the future of Augmented Reality (AR) through an in-depth look at Snap's Lens Studio and Spectacles.</div>
         <a class="linktag" id="snap-trip" href="https://snapchat.zoom.us/webinar/register/WN_vhLtZn_0Q1SO9TJhHgl6TA" target="_blank"><button>View details</button></a>
   </div>
   </div>
@@ -79,20 +79,6 @@ social:
 
 <div style="clear: both; margin-bottom: 20px"></div>
 
-
-<div class="col-33" style="padding-bottom:15px">
-  <div class="tutorial-tile" style="padding-right:20px">
-      <a class="linktag" id="nasa-trip" href="https://chandra.si.edu/fieldtrip/" target="_blank">
-        <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/nasa-trip2.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Chandra X-Ray Observatory">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-        <div class="smalltext" style="color: #00adbc; text-align: left"><strong>One tour per week</strong></div>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Explore the universe with NASA's Chandra X-ray Observatory</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Tour NASA’s Chandra X-ray Observatory as we investigate hot regions of the Universe, from black holes to exploding stars!</div>
-       <a class="linktag" id="nasa-trip" href="https://chandra.si.edu/fieldtrip/" target="_blank"><button>View details</button></a>
-  </div>
-</div>
-</div>
 
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
