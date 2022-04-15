@@ -53,6 +53,11 @@ class ProgrammingClassesController < ApplicationController
     end
   end
 
+  def show
+    return render :not_found unless @programming_class
+    @programming_environment_categories = @programming_class.programming_environment.categories_for_navigation
+  end
+
   private
 
   def programming_class_params
