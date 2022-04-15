@@ -12,9 +12,15 @@ function move(coreLibrary, spriteArg, distance) {
   });
 }
 
-function addSpriteSpeechBubble(coreLibrary, spriteArg, text, seconds, style) {
+function addSpriteSpeechBubble(
+  coreLibrary,
+  spriteArg,
+  text,
+  seconds,
+  bubbleType
+) {
   coreLibrary.getSpriteArray(spriteArg)?.forEach(sprite => {
-    coreLibrary.addSpeechBubble(sprite, text, seconds, style);
+    coreLibrary.addSpeechBubble(sprite, text, seconds, bubbleType);
   });
 }
 

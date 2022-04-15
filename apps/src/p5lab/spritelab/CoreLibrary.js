@@ -85,17 +85,17 @@ export default class CoreLibrary {
       return;
     }
 
-    this.speechBubbles.forEach(({text, sprite, style}) => {
+    this.speechBubbles.forEach(({text, sprite, bubbleType}) => {
       this.drawSpeechBubble(
         text,
         sprite.x,
         sprite.y - Math.round(sprite.getScaledHeight() / 2),
-        style
+        bubbleType
       );
     });
   }
 
-  drawSpeechBubble(text, x, y, style) {
+  drawSpeechBubble(text, x, y, bubbleType) {
     const padding = 8;
     if (typeof text === 'number') {
       text = text.toString();
@@ -131,6 +131,7 @@ export default class CoreLibrary {
       drawUtils.getTextWidth(this.p5, longestLine, textSize) + padding * 2;
     width = Math.max(width, 50);
     const height = lines.length * textSize + padding * 2;
+    const radius = padding;
 
     let tailSize = 10;
     let tailTipX = x;
@@ -144,11 +145,11 @@ export default class CoreLibrary {
       y = height + tailSize;
     }
     if (spriteX - width / 2 < 1) {
-      tailTipX = Math.max(spriteX, padding + tailSize);
+      tailTipX = Math.max(spriteX, radius + tailSize);
       x = width / 2;
     }
     if (spriteX + width / 2 > APP_WIDTH) {
-      tailTipX = Math.min(spriteX, APP_WIDTH - padding);
+      tailTipX = Math.min(spriteX, APP_WIDTH - radius);
       x = APP_WIDTH - width / 2;
     }
 
@@ -162,9 +163,9 @@ export default class CoreLibrary {
       {
         tailSize,
         tailTipX,
-        padding
+        radius
       },
-      style
+      bubbleType
     );
 
     // Draw text within bubble.
@@ -173,7 +174,7 @@ export default class CoreLibrary {
     });
   }
 
-  addSpeechBubble(sprite, text, seconds = null, style = 'say') {
+  addSpeechBubble(sprite, text, seconds = null, bubbleType = 'say') {
     // Sprites can only have one speech bubble at a time so first filter out
     // any existing speech bubbles for this sprite
     this.removeSpeechBubblesForSprite(sprite);
@@ -187,7 +188,7 @@ export default class CoreLibrary {
       text,
       removeAt,
       renderFrame: this.currentFrame(),
-      style
+      bubbleType
     });
     return id;
   }
