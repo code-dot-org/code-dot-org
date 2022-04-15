@@ -15,12 +15,15 @@
   margin-top: -5px;
 }
 
-#petition_sign_message {
+.petition_sign_message {
   font-size: 18px;
   line-height: 20px;
   font-weight: 400;
   margin-top: 10px;
   margin-bottom: 20px;
+  flex: 1 100%;
+  font-family: 'Gotham 4r', sans-serif;
+  color: #5B6770;
 }
 
 #email_error, #age_error, #no_error {

@@ -9,7 +9,7 @@ export default function PetitionCallToAction() {
           Every student in every school should have the opportunity to learn
           computer science
         </h1>
-        <h2 id="sign-message" style={styles.sign}>
+        <h2 id="sign-message" className="petition_sign_message">
           If you agree, sign your name and join our mailing list.
         </h2>
         <PetitionForm />
@@ -26,13 +26,5 @@ const styles = {
     backgroundColor: 'white',
     padding: '10px 0px',
     flex: '1 100%'
-  },
-  sign: {
-    flex: '1 100%',
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: 'rgb(91,103,112)',
-    fontSize: '18px',
-    lineHeight: '20px',
-    margin: '10px 0px 10px 0px'
   }
 };
