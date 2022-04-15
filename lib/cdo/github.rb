@@ -51,23 +51,25 @@ module GitHub
   # @param [String] commit The the commit that will be merged in. Can either be a sha or
   #                        a branch name.
   # @param [String] base_branch The name of the branch that changes will be merged into.
-  def self.create_branch_from_commit(branch_name, commit, base_branch)
+  def self.create_branch_from_commit(branch_name:, commit:, base_branch:)
     # check out a new branch based on base_branch
+    prefix_command = 'cd ~/deploy-management-repo'
     created_branch = system [
-      'cd ~/deploy-management-repo',
+      prefix_command,
       'git fetch',
       "git checkout -b #{branch_name} #{base_branch}",
     ].join(' && ')
     return false unless created_branch
 
     # merge the commit into the branch
-    system "git merge #{commit} --no-edit"
+    system "#{prefix_command} && git merge #{commit} --no-edit"
 
     # check for conflicts
-    conflicts = `git ls-files -u | wc -l`.to_i
+    conflicts = `#{prefix_command} && git ls-files -u | wc -l`.to_i
     if conflicts > 0
       # if there are conflicts, abort the merge and cleanup
       system [
+        prefix_command,
         'git merge --abort',
         "git checkout #{base_branch}",
         "git branch -D #{branch_name}"
@@ -75,7 +77,7 @@ module GitHub
       return false
     else
       # otherwise, push the new branch!
-      system "git push origin #{branch_name}"
+      system "#{prefix_command} && git push origin #{branch_name}"
       return true
     end
   end
@@ -85,7 +87,7 @@ module GitHub
   # deploy-management-repo.
   # @param [String] branch_name The name of the branch to delete.
   # @param [String] base_branch A branch that can be checked out while deleting branch_name.
-  def self.delete_branch(branch_name, base_branch)
+  def self.delete_branch(branch_name:, base_branch:)
     system [
       'cd ~/deploy-management-repo',
       # you can't delete a branch that you are on, so checking out something else
