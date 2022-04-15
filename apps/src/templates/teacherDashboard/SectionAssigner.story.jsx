@@ -13,6 +13,7 @@ export default storybook => {
             selectedSectionId={fakeTeacherSectionsForDropdown[0].id}
             sections={fakeTeacherSectionsForDropdown}
             selectSection={action('selectSection')}
+            courseParticipantAudience={'student'}
           />
         </div>
       )

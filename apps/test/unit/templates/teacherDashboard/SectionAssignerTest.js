@@ -1,5 +1,5 @@
 import React from 'react';
-import {mount, shallow} from 'enzyme';
+import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedSectionAssigner as SectionAssigner} from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import {fakeTeacherSectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/sectionAssignmentTestHelper';
@@ -12,17 +12,18 @@ describe('SectionAssigner', () => {
     selectedSectionId: unassignedSection.id,
     sections: fakeTeacherSectionsForDropdown,
     selectSection: () => {},
-    showAssignButton: false
+    showAssignButton: false,
+    courseParticipantAudience: 'student'
   };
 
   it('renders a TeacherSectionSelector', () => {
-    const wrapper = mount(<SectionAssigner {...defaultProps} />);
+    const wrapper = shallow(<SectionAssigner {...defaultProps} />);
 
     expect(wrapper.find('TeacherSectionSelector').exists()).to.be.true;
   });
 
   it('does not render an AssignButton if showAssignButton is false', () => {
-    const wrapper = mount(<SectionAssigner {...defaultProps} />);
+    const wrapper = shallow(<SectionAssigner {...defaultProps} />);
 
     expect(wrapper.find('AssignButton').exists()).to.be.false;
   });
