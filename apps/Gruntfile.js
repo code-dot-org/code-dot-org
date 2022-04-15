@@ -363,6 +363,7 @@ describe('entry tests', () => {
           ],
           ['build/package/css/plc.css', 'style/code-studio/plc.scss'],
           ['build/package/css/pd.css', 'style/code-studio/pd.scss'],
+          ['build/package/css/petition.css', 'style/code-studio/petition.scss'],
           [
             'build/package/css/publicKeyCryptography.css',
             'style/publicKeyCryptography/publicKeyCryptography.scss'

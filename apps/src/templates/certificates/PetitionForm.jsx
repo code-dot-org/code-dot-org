@@ -4,12 +4,13 @@ import {range, assign} from 'lodash';
 import PropTypes from 'prop-types';
 
 const FieldGroup = ({id, label, help, componentClass, children, ...props}) => {
-  const fieldStyle = assign(styles.elementText, styles.field, styles.dropdown);
+  const fieldStyle = assign(styles.elementText, styles.field);
   return (
     <FormGroup style={styles.element} controlId={id}>
       {label && <span style={styles.label}>{label}</span>}
       <FormControl
         componentClass={componentClass}
+        className={componentClass === 'select' ? 'dropdown' : 'grey_input'}
         style={fieldStyle}
         {...props}
       >
@@ -96,13 +97,6 @@ const styles = {
   field: {
     color: 'rgb(89, 89, 89, 89)',
     backgroundColor: 'rgb(226,228,227)'
-  },
-  input: {
-    width: '160px'
-  },
-  dropdown: {
-    width: '120px',
-    marginLeft: '4px'
   },
   help: {
     whiteSpace: 'nowrap',
