@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-13 17:06:12 UTC",
+    "serialized_at": "2022-04-14 21:13:33 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -982,6 +982,17 @@
         "activity_section.key": "a9a5a5e8-e951-42d8-94f7-23677386b881",
         "lesson_activity.key": "949222d2-924e-4c8d-bf79-d91e3c1a07fb"
       }
+    },
+    {
+      "key": "7eee5415-5ec6-49fc-af4d-85d7fc447450",
+      "position": 3,
+      "properties": {
+        "progression_name": "End-of-Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "7eee5415-5ec6-49fc-af4d-85d7fc447450",
+        "lesson_activity.key": "949222d2-924e-4c8d-bf79-d91e3c1a07fb"
+      }
     }
   ],
   "script_levels": [
@@ -1034,6 +1045,28 @@
       "level_keys": [
         "Create PT Workspace 20202022"
       ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End-of-Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csp8-2022"
+        ],
+        "lesson.key": "Create PT - Complete the Task (12 hrs)",
+        "lesson_group.key": "",
+        "script.name": "csp8-2022",
+        "activity_section.key": "7eee5415-5ec6-49fc-af4d-85d7fc447450"
+      },
+      "level_keys": [
+        "Student End of Unit Survey_csp8-2022"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -1059,6 +1092,18 @@
         "lesson_group.key": "",
         "script.name": "csp8-2022",
         "activity_section.key": "b4da0180-87a0-4743-9ad7-a8a15d35ac10"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Student End of Unit Survey_csp8-2022",
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csp8-2022"
+        ],
+        "lesson.key": "Create PT - Complete the Task (12 hrs)",
+        "lesson_group.key": "",
+        "script.name": "csp8-2022",
+        "activity_section.key": "7eee5415-5ec6-49fc-af4d-85d7fc447450"
       }
     }
   ],

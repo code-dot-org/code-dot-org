@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-11 12:41:18 UTC",
+    "serialized_at": "2022-04-14 21:01:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3445,7 +3445,7 @@
       "key": "b67823cd-bb2c-4fd9-93c0-1cee2b526ce5",
       "position": 3,
       "properties": {
-        "description": "Congratulations! You have completed your store management project for this unit. Let's show off our work through a Gallery Walk so you can share your work with your classmates.",
+        "description": "Congratulations! You have completed your data for social good project for this unit. Let's show off our work through a Gallery Walk so you can share your work with your classmates.",
         "duration": "15",
         "name": "Peer Presentations",
         "remarks": true
@@ -7092,6 +7092,16 @@
       }
     },
     {
+      "key": "off_by_one_error",
+      "word": "off-by-one error",
+      "definition": "an error that occurs when we try to access an index value that is greater than the length of the array",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "off_by_one_error"
+      }
+    },
+    {
       "key": "one_dimensional_d_array",
       "word": "one-dimensional (1D) array",
       "definition": "a data structure that holds multiple values of the same data type",
@@ -7163,6 +7173,12 @@
     }
   ],
   "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "off_by_one_error"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "lesson-10",
