@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-12 20:59:39 UTC",
+    "serialized_at": "2022-04-14 21:01:28 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2412,6 +2412,17 @@
       }
     },
     {
+      "key": "5bda7493-3353-4026-b9a4-ee2f426cb554",
+      "position": 3,
+      "properties": {
+        "progression_name": "End-of-Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "5bda7493-3353-4026-b9a4-ee2f426cb554",
+        "lesson_activity.key": "ecb9d7d2-b866-4196-ae3c-bca49d38ed69"
+      }
+    },
+    {
       "key": "a0bfb9b3-81bd-417b-b06d-d2322d573c15",
       "position": 1,
       "properties": {
@@ -3474,6 +3485,28 @@
     },
     {
       "chapter": 40,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End-of-Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csp3-2022"
+        ],
+        "lesson.key": "Project   Designing an App Part 5",
+        "lesson_group.key": "csp_unit3_2020",
+        "script.name": "csp3-2022",
+        "activity_section.key": "5bda7493-3353-4026-b9a4-ee2f426cb554"
+      },
+      "level_keys": [
+        "Student End of Unit Survey_csp3-2022"
+      ]
+    },
+    {
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3964,6 +3997,18 @@
         "lesson_group.key": "csp_unit3_2020",
         "script.name": "csp3-2022",
         "activity_section.key": "04a96338-f7cb-4639-b3de-1e3d97cf4b07"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Student End of Unit Survey_csp3-2022",
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csp3-2022"
+        ],
+        "lesson.key": "Project   Designing an App Part 5",
+        "lesson_group.key": "csp_unit3_2020",
+        "script.name": "csp3-2022",
+        "activity_section.key": "5bda7493-3353-4026-b9a4-ee2f426cb554"
       }
     },
     {
