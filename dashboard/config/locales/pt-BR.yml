@@ -203,8 +203,15 @@ pt:
     user_type_button: Atualizar Tipo de Conta
     user_type_label: Tipo de conta
     user_type_student: Estudante
+    user_type_student_desc: 'Explore todos os nossos curso e atividades, e mais:'
     user_type_student_ability_1: Salvar seu progresso e projetos
+    user_type_student_ability_2: Participe de uma seção na sala de aula do seu professor
     user_type_teacher: Professor
+    user_type_teacher_desc: 'Tudo a que os alunos têm acesso, e mais:'
+    user_type_teacher_ability_1: Crie seções de salas de aula
+    user_type_teacher_ability_2: Passe trabalho para os alunos e monitore seu desempenho
+    user_type_teacher_ability_3: Inscreva-se em uma aprendizagem profissional
+    user_type_teacher_ability_4: Interaja no nosso fórum de professores
     field_is_required: é obrigatório
     accept_terms: Você precisa aceitar para criar uma conta.
     error: Ocorreu um erro.

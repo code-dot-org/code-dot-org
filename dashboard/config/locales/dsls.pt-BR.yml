@@ -10877,7 +10877,7 @@ pt-BR:
         markdown: |-
           #Minha Vizinhança Online
 
-          ##Como você vai com segurança à lugares online?
+          ##Como usar a internet com segurança ?
       express_EOC_2021:
         description: Você alcançou o final do Curso E! Escolha um projeto para criar.
       grade2_multi_collector_A_predict1_2021:
@@ -11256,3 +11256,15 @@ pt-BR:
         title: Pesquisa rápida do CS Discoveries!
       csd-pulse-check-survey-1-levelgroup U6Ch2_2021:
         title: Pesquisa rápida do CS Discoveries!
+      aiml-ch1-pulse-survey_2021:
+        title: Pesquisa Rápida sobre IA e Aprendizado de Máquina!
+      aiml-intro-pulse-survey_2021:
+        title: Pesquisa Rápida sobre IA e Aprendizado de Máquina!
+      courseAB_EOC_2021:
+        description: Você chegou na última lição! Escolha um projeto para criar.
+        display_name: Projeto de Fim do Curso
+      ml-models-shoe survey:
+        markdown: |
+          ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
+
+          ## [Clique Aqui](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) para responder a pesquisa sobre o Recomendador de Sapatos
