@@ -1,0 +1,20 @@
+{
+  "fa-IR": {
+    "data": {
+      "parent_category": {
+        "csp2021/IOC-2": {
+          "description": ""
+        },
+        "csp2021/DAT-1": {
+          "description": ""
+        },
+        "ngss/ETS": {
+          "description": ""
+        },
+        "ai4k12-2021/BI-3": {
+          "description": ""
+        }
+      }
+    }
+  }
+}
