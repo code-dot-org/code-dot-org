@@ -2,6 +2,9 @@
   "cs-CZ": {
     "data": {
       "resources": {
+        "dance-party-playlist/dance-extras/unversioned": {
+          "name": "Seznam na Spotify (pro každý věk)"
+        },
         "list_of_poems/poem-art/2021": {
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
@@ -28,11 +31,20 @@
         "csf-turns-angles-video/artist/unversioned": {
           "name": "Zatáčky a úhly"
         },
+        "dance-party-playlist/dance/unversioned": {
+          "name": "Seznam na Spotify (pro každý věk)"
+        },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
           "type": "Video"
         },
         "video-text-compression/text-compression/unversioned": {
           "type": "Video"
+        },
+        "dance-party-playlist/dance-extras-2019/unversioned": {
+          "name": "Seznam na Spotify (pro každý věk)"
+        },
+        "dance-party-playlist/dance-2019/unversioned": {
+          "name": "Seznam na Spotify (pro každý věk)"
         },
         "ai-ml/oceans/unversioned": {
           "name": "Umělá inteligence: strojové učení",
@@ -1364,6 +1376,9 @@
           "name": "Průvodce projektem taneční párty",
           "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
         },
+        "dance-party-playlist/coursed/2021": {
+          "name": "Seznam na Spotify (pro každý věk)"
+        },
         "dance_party_unplugged/coursed/2021": {
           "name": "Taneční večírek: bez připojení",
           "url": "https://curriculum.code.org/hoc/unplugged/4/"
@@ -1506,6 +1521,9 @@
         "dance-party-project-guide/express/2021": {
           "name": "Průvodce projektem taneční párty",
           "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
+        },
+        "dance-party-playlist/express/2021": {
+          "name": "Seznam na Spotify (pro každý věk)"
         },
         "open-ended_programming_levels/express/2021": {
           "name": "Otevřené úrovně programování",
@@ -1854,6 +1872,13 @@
         "teacher_forum/csd/2021": {
           "name": "Fórum učitelů"
         },
+        "internet-of-things-video/csd/2021": {
+          "type": "Video"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "Informatika mění vše",
+          "type": "Video"
+        },
         "random_numbers_1/csd/2021": {
           "name": "Náhodná čísla"
         },
@@ -2006,6 +2031,9 @@
         },
         "teacher_forum_1/csd/2021": {
           "name": "Fórum učitelů"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "type": "Video"
         },
         "what-is-a-computer-1-2-3/csd/2021": {
           "type": "Video"
