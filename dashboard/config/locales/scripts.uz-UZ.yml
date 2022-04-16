@@ -28559,6 +28559,8 @@ uz:
               description_teacher: This lesson will help illustrate how variables
                 can make programs more powerful by allowing values to change while
                 the code is running.
+            "[New] Counting with Variables":
+              name: Oʻzgaruvchilar bilan sanash
           lesson_groups:
             csf_sequencing:
               display_name: Sequencing
@@ -29267,6 +29269,11 @@ uz:
             'Lesson 11: Assessment Day':
               key: '11-dars: Baholash kuni'
               name: Baholash kuni
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Survey
         csp8-2022:
           lessons:
             Create PT - Complete the Task:
@@ -30073,6 +30080,8 @@ uz:
                 qaramay, ko'pchilik uning qanday ishlashini bilmaydi. Ushbu darsda
                 talabalar ulanishlar, URL manzillari, IP-manzillar va DNS haqida ma'lumot
                 olish davomida o'zlarini Internetda aylanib yurgandek his qilishadi.
+            "[New] Counting with Variables":
+              name: Oʻzgaruvchilar bilan sanash
           lesson_groups:
             ramp_up:
               display_name: Spraytlar
@@ -30099,36 +30108,113 @@ uz:
             Learn to Drag and Drop:
               key: Drag&Drop - Olib ko‘chirishni o‘rganish
               name: Drag&Drop - Olib ko‘chirishni o‘rganish
+              description_student: Click and drag to finish the puzzles.
+              description_teacher: Bu dars o‘quvchilarga ular kompyuter laboratoriyalariga
+                kirganda nima kutishi kerakligi haqida o‘rgatadi. U ularga laboratoriya
+                qonun-qoidalarini tanishtirish kabi qisqacha muhokama bilan boshlanadi,
+                shunda ularda onlayin boshqotirmalarni yechishda kompyuterdan foydalanishda
+                o‘sish kuzatiladi.
             Sequencing with Scrat:
               key: Sequencing with Scrat
               name: Sequencing with Scrat
+              description_student: Program Scrat to reach the acorn.
+              description_teacher: Using Scrat from the Ice Age franchise, students
+                will develop sequential algorithms to move a squirrel character from
+                one side of a maze to the acorn at the other side. To do this they
+                will stack code blocks together in a linear sequence.
             Programming with Angry Birds:
               key: Jahldor qushlar bilan dasturlash
               name: Jahldor qushlar bilan dasturlash
+              description_teacher: Using characters from the Ice Age, students will
+                develop sequential algorithms to move Scrat from one side of a maze
+                to the acorn at the other side. To do this they will stack code blocks
+                together in a linear sequence, making them move straight, turn left,
+                or turn right.
             Programming with Rey and BB-8:
               key: Rey va BB-8 bilan dasturlash
               name: Rey va BB-8 bilan dasturlash
+              description_teacher: Ushbu darsda talabalar o'zlarining yangi dasturlash
+                qobiliyatlaridan yanada murakkab usullarda BB-8 bilan murakkab kursni
+                o'tish uchun foydalanadilar.
             Programming with Harvester:
               key: Terimchi bilan dasturlash
               name: Terimchi bilan dasturlash
+              description_student: Terimchiga yo‘lida sabzavotlarni yig‘ib olishiga
+                yordam bering.
+              description_teacher: Talabalar Terimchi (Harvester) muhitida o‘rgangan
+                dasturlash tushunchalariga murojaat qiladilar. Endi, shunchaki obrazni
+                maqsadiga yetkazish o‘rniga, talabalar biron yangi bo‘limdan foydalanib
+                hosilni yig‘ishi kerak bo‘ladi. Talabalar algoritmlar ketma-ketligi
+                bo‘yicha mahoratlarini oshirishda davom etadilar va debug qilish jarayonidan
+                foydalanishni boshlashadi.
             Loops with Scrat:
               key: Loops with Scrat
               name: Loops with Scrat
+              description_student: Help Scrat cover more ground using loops.
             Loops with Laurel:
               key: Laurel bilan sikllar
               name: Laurel bilan sikllar
+              description_teacher: Bu darsda, talabalar sikllar tushunchasini o‘rganishda
+                davom etishadi. Mana bu yerda, Laurel the Adventurer ochiq g‘ordagi
+                xazinani yig‘ishda sikllardan foydalanadi. Uning sayohati davomida
+                unga yordam berish uchun yangi 'get treasure' bo‘limi tanishtiriladi.
             Ocean Scene with Loops:
               key: Sikllar bilan okean manzarasi
               name: Sikllar bilan okean manzarasi
+              description_student: Use loops and patterns to finish the images.
+              description_teacher: Sikllar mavzusiga qaytgan holda, talabalar ko‘rsatmalarning
+                oddiy ketma-ketligini takrorlash orqali rasmlar chizishni o‘rganishadi.
+                Kompyuter bilan o‘tilgan oldingi darsda, sikllar labirintdan o‘tish
+                va xazinani yig‘ish uchun foydalanilgan edi. Bu yerda, sikllar yordamida
+                shakllar yaratilyapti. Bu bosqichning oxirida, talabalarga sikllardan
+                foydalanib o‘z rasmlarini yaratish imkoniyati beriladi.
             Drawing Gardens with Loops:
               key: Drawing Gardens with Loops
               name: Drawing Gardens with Loops
+              description_student: Use patterns and loops to finish the images.
+              description_teacher: Sikllarga qaytadigan bo‘lsak, talabalar ko‘rsatmalarning
+                oddiy ketma-ketligini takrorlash orqali rasm chizishni o‘rganishadi.
+                Oldingi onlayn darsda, sikllar labirintni kesib o‘tish va xazina to‘plash
+                uchun ishlatilgan. Bu yerda talabalar sikllardan ko‘rinishlar yaratishda
+                foydalanishadi. Bu bosqichning oxirida, talabalarga sikllardan foydalanib
+                o‘zlarining shaxsiy rasmlarini yaratish imkoniyati beriladi.
             On the Move with Events:
               key: Hodisalar bilan harakatda
               name: Hodisalar bilan harakatda
+              description_student: O'z o'yiningiz yoki hikoyangizni yarating!
+              description_teacher: Bu onlayn mashg‘ulotda, o‘quvchilar Play Labdagi
+                hodisalardan qanday foydalanishni o‘rganish va ular animatsiyalashtirilgan
+                o‘yinlar yaratishda o‘rgangan kod yozish mahoratlaridan foydalanish
+                imkoniyatiga ega bo‘ladilar. Ijod qilish va Play Labda o‘z hikoyangizni
+                yaratish vaqti keldi!
             A Royal Battle with Events:
               key: A Royal Battle with Events
               name: A Royal Battle with Events
+              description_student: Use events to create a story or make an interactive
+                game.
+              description_teacher: Bu onlayn mashg‘ulotda, talabalarda Play Labda
+                hodisalardan qanday foydalanishni o‘rganish va animatsiyalashtirilgan
+                o‘yin yaratish uchun ular o‘rgangan barcha kod yozish mahoratlariga
+                murojaat qilish imkoniyati mavjud. Yaratuvchan bo‘lish vaqti keldi
+                va Play Labda biron o‘yin yarating!
+            Programming in with Angry Birds:
+              key: Jahldor qushlar bilan dasturlash
+              name: Jahldor qushlar bilan dasturlash
+              description_teacher: Using characters from the Ice Age, students will
+                develop sequential algorithms to move Scrat from one side of a maze
+                to the acorn at the other side. To do this they will stack code blocks
+                together in a linear sequence, making them move straight, turn left,
+                or turn right.
+            Programming in Harvester:
+              name: Terimchi bilan dasturlash
+              description_student: Terimchiga yo‘lida sabzavotlarni yig‘ib olishiga
+                yordam bering.
+              description_teacher: Talabalar Terimchi (Harvester) muhitida o‘rgangan
+                dasturlash tushunchalariga murojaat qiladilar. Endi, shunchaki obrazni
+                maqsadiga yetkazish o‘rniga, talabalar biron yangi bo‘limdan foydalanib
+                hosilni yig‘ishi kerak bo‘ladi. Talabalar algoritmlar ketma-ketligi
+                bo‘yicha mahoratlarini oshirishda davom etadilar va debug qilish jarayonidan
+                foydalanishni boshlashadi.
           lesson_groups:
             csf_sequencing:
               display_name: Sequencing
@@ -30136,6 +30222,20 @@ uz:
               display_name: Sikllar
             csf_events:
               display_name: Hodisalar
+          description_audience: 'Yosh: 4-8'
+          description_short: 'Kichik yoshdagi o''quvchilar uchun informatika faniga
+            kirish: bolalar bog''chasi va birinchi sinf uchun o''quv kurslarimizning
+            eng saralarini birlashtiradi.'
+          description: Quyidagi darslarni bor g‘ayratingiz bilan uringan holda kompyuter
+            fanini o‘rganing! Kompyuter dasturlarini yaratishni, muammolarni hal qilish
+            ko‘nikmalarini rivojlantirishni va qiziqarli muammolarni hal qilishni
+            o‘rganing! Do‘stlaringiz, oilangiz va o‘qituvchilaringiz bilan ulashish
+            uchun o‘yinlar va ijodiy loyihalar qiling.
+          student_description: Quyidagi darslarni bor g‘ayratingiz bilan uringan holda
+            kompyuter fanini o‘rganing! Kompyuter dasturlarini yaratishni, muammolarni
+            hal qilish ko‘nikmalarini rivojlantirishni va qiziqarli muammolarni hal
+            qilishni o‘rganing! Do‘stlaringiz, oilangiz va o‘qituvchilaringiz bilan
+            ulashish uchun o‘yinlar va ijodiy loyihalar qiling.
         csa2-2022:
           lessons:
             lesson-5:
@@ -30313,6 +30413,8 @@ uz:
             Assessment Day:
               name: Baholash kuni
               key: Baholash kuni
+            lesson-6:
+              name: Intellectual Property
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
@@ -30328,8 +30430,32 @@ uz:
           lessons:
             lesson-1:
               name: Xush kelibsiz
-            lesson-9:
+            lesson-11:
+              name: Wrap Up
+        vpl-csd2-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Xush kelibsiz
+            lesson-3:
               name: Darsni rejalashtirish
+            lesson-9:
+              name: Wrap Up
+        vpl-csd3-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Xush kelibsiz
+            lesson-8:
+              name: Wrap Up
+        vpl-csd4-summer-pilot-2022:
+          lessons:
+            lesson-4:
+              name: Xush kelibsiz
+            lesson-14:
+              name: Wrap Up
+        vpl-csd5-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Xush kelibsiz
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -30367,6 +30493,10 @@ uz:
               key: For sikllari
             Lesson Planning:
               key: Darsni rejalashtirish
+        vpl-csd1-ci-pilot-2022:
+          lessons:
+            lesson-4:
+              name: Jismoniy hisoblash
         vpl-csd2-ci-pilot-2022:
           lessons:
             lesson-5:
@@ -30375,3 +30505,673 @@ uz:
           lessons:
             lesson-5:
               name: Jismoniy hisoblash
+        vpl-csd4-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Jismoniy hisoblash
+        vpl-csd5-ci-pilot-2022:
+          lessons:
+            lesson-4:
+              name: Ma'lumotlar va jamiyat
+            lesson-5:
+              name: Jismoniy hisoblash
+        vpl-csd6-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Jismoniy hisoblash
+        vpl-csd7-ci-pilot-2022:
+          lessons:
+            lesson-3:
+              name: The Design Process
+            lesson-4:
+              name: Ma'lumotlar va jamiyat
+            lesson-5:
+              name: Jismoniy hisoblash
+            Engage with machine learning apps:
+              name: The Design Process
+            Consider real world implications:
+              name: Ma'lumotlar va jamiyat
+            Unit wrap up:
+              name: Jismoniy hisoblash
+        csd-playground:
+          lessons:
+            Innovations in Computing:
+              name: Innovations in Computing
+              description_teacher: Ushbu kursning yakuniy bo'limini boshlash uchun
+                talabalar hisoblashdagi qiziqarli yangiliklar bo'yicha bir necha tadqiqotlar
+                olib boradilar. Ushbu dars o'quvchilarga turli xil hisoblash shakllari
+                omillari (kompyuter qanday ko'rinishini) va hisoblash ta'sirida bo'lgan
+                sohalarni ochib beradi. Keyinchalik ushbu bo'limda talabalar o'zlarining
+                jismoniy hisoblash moslamalarini ishlab chiqishda ushbu darsda duch
+                kelgan qurilmalarni qayta ko'rib chiqadilar.\*
+        csd1-2022:
+          lessons:
+            CS Discoveries Pre-survey:
+              name: CS Discoveries Pre-survey
+              key: CS Discoveries Pre-survey
+            Intro to Problem Solving:
+              name: Intro to Problem Solving
+              key: Intro to Problem Solving
+            The Problem Solving Process:
+              name: Muammoni yechish jarayoni
+              description_teacher: "**Question of the Day: Turli xil muammolarni hal
+                qilishda qanday oddiy qadamlarni qo‘llashimiz mumkin?**\\\r\n\\\r\nUshbu
+                darsda o‘quvchilar yil davomida foydalanadigan, Define - Prepare -
+                Try - Reflect (aniqlang - tayyorlang - sinab ko‘ring - aks ettiring)
+                muammolarni hal qilish jarayoni bilan tanishadilar. Dars o‘quvchilardan
+                kundalik hayotda duch keladigan har xil muammolar haqida aqliy hujum
+                qilish bilan boshlanadi. So‘ngra o‘quvchilarga muammoni hal qilishning
+                to‘rtta bosqichi ko‘rsatiladi va ushbu mavhum qadamlarni muammolarni
+                hal qilishning haqiqiy tajribalari bilan bog‘lash uchun birgalikda
+                harakat qilishadi. Dastlab o‘quvchilar ushbu bosqichlarni avvalgi
+                darsdagi alyuminiy qayiqlari muammosi bilan, so‘ngra ular yaxshi yechadigan
+                muammo, keyin hal qilishda yaxshilashmoqchi bo‘lgan muammo bilan bog‘lashadi.
+                Dars yakunida sinf o‘quvchilari butun yil davomida ishlatiladigan
+                afishalarni joylashtirish uchun har bir qadam uchun odatda foydali
+                strategiyalar ro‘yxatini to‘playdilar."
+              key: Muammoni yechish jarayoni
+            Exploring Problem Solving:
+              name: Exploring Problem Solving
+              key: Exploring Problem Solving
+            What is a Computer?:
+              name: Kompyuter nima?
+              description_teacher: "**Kun savoli: Kompyuter nima?**\\\r\n\\\r\nUshbu
+                darsda o‘quvchilar kompyuterning oldindan ta'rifini ishlab chiqadilar.
+                Darsni boshlash uchun sinf kompyuter uchun mumkin bo‘lgan ta'riflarni
+                o‘ylab topadi va ushbu aqliy hujum natijalarini doskaga joylashtiradi.
+                Keyin o‘quvchilar guruhlarga bo‘linib, rasmlarni plakat qog‘ozga \"bu
+                kompyuter\" yoki \"bu kompyuter emas\" deb saralashadi. Guruhlar o‘z
+                plakatlarini xona atrofida joylashtiradilar va eng qiyin toifalarni
+                tanlash sabablarini qisqacha tushuntiradilar. Keyin o‘qituvchi kompyuterning
+                ta'rifini kiritadi va o‘quvchilarga yangi ta'rifga ko‘ra plakatlarini
+                qayta ko‘rib chiqishga imkon beradi.\\\r"
+              key: Kompyuter nima?
+            Input and Output:
+              name: Input and Output
+              description_teacher: "**Question of the Day: How do computers use input
+                and output to get and give the information that they need to solve
+                problems?**\\\r\n\\\r\nUshbu darsda o‘quvchilar kompyuterlar qanday
+                qilib kirish va chiqish orqali foydalanuvchiga ma'lumot olishi va
+                berishini ko‘rib chiqadilar. O‘quvchilar avval \"tafakkur muammosini\"
+                hal qilish uchun qanday ma'lumot kerakligini o‘ylab ko‘rishadi, so‘ngra
+                ushbu ma'lumotdan foydalanib, tavsiya berishadi. Keyin ular ushbu
+                jarayonga kirish va chiqishlarni aniqlaydilar. Keyinchalik, o‘quvchilar
+                xuddi shu jarayonda ishtirok etadigan dasturni ko‘rib chiqadilar va
+                ushbu dastur qanday ma'lumotlarni kiritish va chiqarishini aniqlaydilar.
+                Va nihoyat, ular kompyuterlar muammolarni yechishda foydalanishi mumkin
+                bo‘lgan boshqa kirish va chiqish turlarini ko‘rib chiqadilar."
+              key: Input and Output
+            Processing:
+              name: Processing
+              description_teacher: "**Kun savoli: Kompyuterlar ma'lumotni qanday ishlashlari
+                mumkin?**\\\r\n\\\r\nUshbu dars o‘quvchilarni to‘rtta keng tarqalgan
+                jarayon turlari bilan tanishtiradi: agar/keyin (shart operatori),
+                to‘g‘ri kelganini aniqlash (qidirish), sanash va taqqoslash. Dastlab
+                o‘quvchilar bir nechta namunaviy dasturlar orqali ishlov berish turlari
+                bilan tanishadilar. Keyin har birida qanday jarayon turlarini aniqlash
+                uchun qo‘shimcha dasturlarni tekshirishadi. Keyin ular o‘zlarining
+                dasturlari haqida o‘ylashadi va qaysi jarayondan foydalanishni hal
+                qilishadi. Va nihoyat, o‘quvchilar foydali bo‘lishi mumkin bo‘lgan,
+                ammo asosiy darsga kiritilmagan boshqa jarayon turlarini o‘ylab topishadi."
+              key: Processing
+            Storage:
+              name: Storage
+              description_teacher: "**Question of the Day: Why is storage an important
+                part of the computing process?**\\\r\n\\\r\nUshbu dars bo‘limdagi
+                hisoblash modelining yakuniy komponenti saqlash bilan tanishtiradi.
+                \"Outfit picker\" dasturini sinab ko‘rganingizdan so‘ng, o‘quvchilar
+                ilova har safar ishga tushirilgandan keyin qanday ma'lumotlarni saqlash
+                kerakligini muhokama qilishadi. Keyin ular bir qator dasturlarni ko‘rib
+                chiqadilar va qanday ma'lumotlarni saqlash kerakligi to‘g‘risida ko‘rsatmalar
+                yaratish uchun qanday saqlanishi to‘g‘risidagi qarorlaridan foydalanadilar.
+                Keyin ular ushbu bobndagi hisoblash modelining to‘rt komponentini
+                ko‘rib chiqadilar: kiritish, chiqarish, saqlash va qayta ishlash.
+                Bundan so‘ng ular qaysi qismlarni \"kompyuter\" deb tasniflash kerakligi
+                haqidagi qarorlarini qabul qilishdan oldin bobni boshidan boshlab
+                qayta ko‘rib chiqish uchun so‘nggi imkoniyatga ega bo‘ladirlar. Dars
+                o‘quvchilar o‘zlarining ilova g‘oyalari va qanday qilib xotiradan
+                foydalanish mumkinligini aks ettirish bilan yakunlanadi."
+              key: Storage
+            Project - Propose an App:
+              name: Project - Propose an App
+              description_teacher: "\\*\\*Kun savoli: IOSP modeli qanday qilib muammoni
+                hal qiladigan dasturni ishlab chiqishda bizga yordam berishi mumkin?
+                \\*\\*\\\r\n\\\r\nMuammoni hal qilish jarayoni va kompyuterning kiritish/chiqarish/saqlash/qayta
+                ishlash (IOSP) modelini o‘rganish uchun xulosa qilishga o‘quvchilar
+                haqiqiy dunyo muammosini hal qilish uchun mo‘ljallangan dastur taklif
+                qilishadi. Ushbu loyiha bir necha kun davomida amalga oshiriladi va
+                natijada o‘quvchilar sinfdoshlariga o‘zlarining ilova xususiyatlarini
+                yoritib beruvchi plakat yaratadilar. Loyiha bo‘yicha qo‘llanma o‘quvchilar
+                uchun bosqichma-bosqich ko‘rsatmalar beradi va ularning fikrlarini
+                tartibga solishda yordam beradi. Loyiha juftlik bilan bajarilishi
+                uchun mo‘ljallangan, ammo uni yakka tartibda bajarish ham mumkin."
+              key: Project - Propose an App
+            Post-Project Test:
+              name: Loyiha yakuniy testi
+              key: Loyiha yakuniy testi
+          lesson_groups:
+            cspSurvey:
+              display_name: Survey
+            csd1_1:
+              display_name: 'Chapter 1: The Problem Solving Process'
+            csd1_2:
+              display_name: 'Chapter 2: Computers and Problem Solving'
+          title: Muammolarni yechish va hisoblash ('21-'22)
+          description_short: "  Learn how humans work with computers to solve problems."
+        csd2-2022:
+          lessons:
+            Intro to HTML:
+              name: Intro to HTML
+              key: Intro to HTML
+            Headings:
+              name: Headings
+              key: Headings
+            Digital Footprint:
+              name: Digital Footprint
+              key: Digital Footprint
+            Styling Text with CSS:
+              name: Styling Text with CSS
+              description_teacher: "**Kun savoli: Veb-sahifadagi matn stilini qanday
+                sozlash mumkin?**\\\r\n\\\r\nUshbu dars CSS ni sahifadagi elementlarni
+                uslublash usuli sifatida tanishtiradi. O‘quvchilar CSS qoidalari uchun
+                asosiy sintaksisni o‘rganadilar va keyin HTML matn elementlariga ta'sir
+                qiluvchi xususiyatlarni o‘rganadilar. Oxirgi bosqichda o‘quvchilar
+                matn elementlari uslublari to‘g‘risida o‘rgangan narsalarini shaxsiy
+                veb-sahifalarida qo‘llaydilar. "
+              key: Styling Text with CSS
+            'Mini-Project: Your Personal Style':
+              description_teacher: "**Shaxsiy stilni ifodalash uchun qanday qilib
+                veb-sahifalardan foydalanishimiz mumkin?** \\\r \n\\\r \nUshbu ixtiyoriy
+                mini-loyihada o‘quvchilar o‘zlari tanlagan mavzu bo‘yicha o‘z uslubidagi
+                veb-sahifalarini yaratishda o‘rganganlaridan foydalanadilar. Dars
+                o‘quvchilar o‘rgangan CSS-ni takrorlash bilan boshlanadi. Keyin ular
+                o‘zlarining loyihalarini veb-sahifani loyihalashtirishdan va uni amalga
+                oshirish uchun qaysi xususiyatlardan foydalanishni aniqlashdan boshlashadi.
+                Keyin veb-sahifalarini Web Labda yaratadilar va sinf bilan bo‘lishadilar.
+                Rasmiy fikr almashish jarayonida qatnashgandan so‘ng, ular o‘zlarining
+                veb-saytlarida o‘zlarining jarayonlari haqida o‘ylashdan va saytning
+                o‘zi va ularning dizayni va aks ettirishidan oldin yakuniy o‘zgarishlarni
+                amalga oshiradilar. Ushbu loyiha sinfning rejalashtirish ehtiyojlariga
+                qarab bir kunda bajarilishi yoki bir necha kun davomida kengaytirilishi
+                mumkin."
+            Intellectual Property:
+              name: Intellectual Property
+              description_teacher: "**Kun savoli: Odamlar bir-birining kontentidan
+                foydalanganda qanday qoidalar ularning huquqlarini himoya qiladi?**\\\r\n\\\r\nBoshqalarga
+                o‘z ishlaridan qanday foydalanishga ruxsat berish kerakligi to‘g‘risida
+                shaxsiy fikrlarini muhokama qilishdan boshlab, sinf ijodkorlar va
+                ijodiy tarkib foydalanuvchilari uchun mualliflik huquqining maqsadi
+                va rolini o‘rganadi. Keyin ular mualliflik huquqi bilan bog‘liq muammolarni
+                hal qilish uchun turli xil Creative Commons litsenziyalarini o‘rganadigan
+                faoliyatga o‘tadilar. "
+              key: Intellectual Property
+            Using Images:
+              description_teacher: "Qanday qilib biz o‘z veb-saytimizga hammaning
+                huquqlarini hurmat qilgan tarzda rasmlarni qo‘shishimiz mumkin?\\*\\*\\\r
+                \n\\\r \nO‘quvchilar darsni veb-saytlaridagi rasmlardan foydalanishning
+                axloqiy oqibatlarini, xususan intellektual mulk nuqtai nazaridan tushunish
+                bilan boshlashadi. Keyin ular veb-sahifalariga \\<img> teg va rasm
+                manbalarini qanday qilib mos keltirish kerakligini o‘rganadilar."
+            Websites for Expression:
+              description_teacher: "**Kun savoli: O'zimizni ko'rsatish uchun veb-saytlardan
+                qanday foydalana olamiz?**\\\r\n\\\r\nUshbu darsda o‘quvchilar veb-saytlarni
+                shaxsiy ifodalash vositasi sifatida ishlatish usullarini o‘rganadilar
+                va shaxsiy veb-saytga qo‘shmoqchi bo‘lgan mavzular va qiziqishlar
+                ro‘yxatini ishlab chiqdilar. Darsni boshlash uchun o‘quvchilar odamlar
+                o‘zlarining qiziqishlari va g‘oyalarini ifoda etadigan va o‘rtoqlashadigan
+                turli usullarni o‘ylab topadilar. Nihoyat talabalar aqliy hujum o'tkazib,
+                shaxsiy veb-saytga qo'shish mumkin bo'lgan mavzular va qiziqishlar
+                ro'yxati bilan o'rtoqlashadilar."
+            Styling Elements with CSS:
+              name: Styling Elements with CSS
+              description_teacher: "**Kun savoli: Sahifa rasm va qatlamlariga stil
+                qanday beriladi?**\\\r\n\\\r\nUshbu dars CSS uslubi xususiyatlari
+                bilan tanishishni davom ettiradi, bu safar ko‘proq matnli bo‘lmagan
+                elementlarga e'tibor qaratadi. O‘quvchilar ushbu veb-saytdagi yangi
+                CSS uslublarini o‘rganishadi va o‘zgartiradilar va sahifaga o‘z uslublarini
+                qo‘shadilar. So‘ng o‘quvchilar shaxsiy veb-saytlarini yanada mukammallashtirish
+                uchun CSS-ning yangi xususiyatlari haqidagi bilimlarini qo‘llaydilar."
+              key: Styling Elements with CSS
+            Your Web Page - Prepare:
+              name: Veb-sahifangiz - Tayyorlanish
+              description_teacher: "**Kun savoli: Veb-sahifalarimizni yaratish uchun
+                nimalarni tayyorlashimiz kerak?** \\\r \n\\\r \nUshbu darsda o‘quvchilar
+                veb-sahifasi qanday elementlar va uslubga ega bo‘lishiga qaror qilib,
+                muammolarni yechish jarayonining \"tayyorlash\" bosqichida qatnashadilar.
+                Ular o‘zlarining veb-sahifalarini yaratishda kerak bo‘ladigan turli
+                xil HTML, CSS va raqamli fuqarolik bo‘yicha ko‘rsatmalarni o‘rganishdan
+                boshlaydilar. Keyin ular o‘zlarining sahifalarini tasvirlab, eskizlarini
+                chizishadi, ular o‘zlari qaror qilgan tartib va ​​dizaynni olish uchun
+                foydalanadigan teglar va uslublarni sanab o‘tadilar. Keyin o‘z sahifalariga
+                kerak bo‘lgan rasmlarni topish va yuklab olish uchun onlayn harakat
+                qiladilar. Keyinchalik, ular o‘zlarining rejalari veb-sayt nima uchun
+                mo‘ljallanganligini bajarishini ta'minlashi haqida o‘ylashadi."
+              key: Veb-sahifangiz - Tayyorlanish
+            Project - Personal Web Page:
+              name: Loyiha - Shaxsiy veb-sahifa
+              description_teacher: "**Kun savoli: Veb-sahifalarni yaratishda qanday
+                ko‘nikma va amaliyotlar yordam beradi?**\\\r\n\\\r\nO‘zlarining debug
+                jarayonlarini tezda ko‘rib chiqqandan so‘ng, o‘quvchilar avvalgi darslarda
+                ma'lumotnoma sifatida loyiha qo‘llanmalari orqali rejalashtirgan sahifalarini
+                yaratish uchun internetga kirishadi. O‘zlarining sahifalarini tugatgandan
+                so‘ng, ular jarayon haqida qisqacha mulohaza yuritadilar, sahifaning
+                afzalliklari va nima qanday qayta aloqa bo‘lishini xohlashlarini aytishadi.
+                Keyin ular sahifalarni yakuniy tahrir qilishdan oldin o‘zaro tuzilgan
+                fikr-mulohazalar jarayonida qatnashadilar. Keyinchalik, ular muvaffaqiyatli
+                bo‘lishlariga yordam bergan ko‘nikmalar va amaliyotlar haqida fikr
+                yuritishadi."
+              key: Loyiha - Shaxsiy veb-sahifa
+            Websites for a Purpose:
+              description_teacher: "**Kun savoli: Odamlar veb-sayt yaratishining sabablari
+                nimada?**\\\r\n\\\r\n\\\r\nUshbu darsda o‘quvchilar odamlarning veb-saytlarini
+                yaratishning turli sabablarini o‘rganishadi. Dastlab ular veb-saytlarga
+                tashrif buyurishining turli sabablarini o‘ylashadi, so‘ngra ma'lum
+                bir muammoni hal qilish uchun yaratilgan veb-saytlarni tekshiradilar.
+                Ushbu veb-saytlar yaratuvchilar uchun qanday turli xil maqsadlarda
+                xizmat qilishi mumkinligi to‘g‘risida qaror qabul qilgandan so‘ng,
+                ular veb-sayt bilan hal qilish mumkin bo‘lgan muammo haqida o‘ylashni
+                boshlaydilar. Dars oxirida o‘quvchilar bobdagi loyihalarida qatnashadigan
+                guruhlarni tuzadilar."
+            Team Problem Solving:
+              name: Jamoada muammoni hal qilish
+              description_teacher: "**Kun savoli: Qanday qilib birgalikda ishlab ajoyib
+                jamoa shakllantirishimiz mumkin?**\\\r\n\\\r\nQanday qilib birgalikda
+                ishlab ajoyib jamoa shakllantirishimiz mumkin?\\*\\*\\\r \\\r O‘quvchilar
+                birgalikda guruh me'yorlarini belgilashadi va veb-saytlarida qanday
+                xususiyatlarga ega bo‘lishi haqida aqliy hujum qiladilar. O‘quvchilar
+                har xil turdagi kontekstlarda ba'zi mashhur jamoalar haqida fikr yuritish
+                bilan boshlashadi, so‘ngra jamoalarni muvaffaqiyatga erishtirish haqida
+                fikr yuritadi. Keyin ular o‘z jamoalariga kirib, o‘zaro qanday aloqada
+                bo‘lishlari va o‘z loyihalarida muvaffaqiyatga erishish rejasini tuzadilar.
+                Shundan so‘ng, jamoalar o‘zlarining veb-saytlari loyihalari bo‘yicha
+                g‘oyalarni boshlashadi."
+              key: Jamoada muammoni hal qilish
+            Sources and Research:
+              description_teacher: "**Kun savoli: Internetda qanday qilib kerakli
+                va ishonchli ma'lumotlarni topishimiz mumkin?**\\\r \n\\\r\nUshbu
+                dars Internetda kerakli va ishonchli ma'lumotlarni qanday topish kerakligini
+                o‘z ichiga oladi. Qidiruv tizimlarning qanday ishlashiga oid videofilmni
+                ko‘rib chiqib muhokama qilgandan so‘ng, o‘quvchilar o‘z saytlariga
+                tegishli ma'lumotlarni qidirishadi, so‘ngra saytlarni ishonchliligi
+                uchun tahlil qilib, o‘z veb-saytlaridan qaysi biriga mos kelishini
+                hal qilishadi."
+            CSS Classes:
+              name: CSS sinflari
+              description_teacher: "**Kun savoli: Bir xil turdagi elementlar uchun
+                qanday qilib har xil uslublarni yaratishimiz mumkin?**\\\r \n\\\r
+                \nUshbu dars veb-dasturchilarga o‘zlari xohlagan elementlar guruhlarini
+                boshqa elementlardan farqli ravishda foydalanishga imkon beradigan
+                klasslarni joriy etish orqali o‘quvchilarga CSS bilimlarini oshiradi.
+                O‘quvchilar avval turli sahifalardagi darslarni tekshiradilar va o‘zgartiradilar,
+                so‘ngra o‘z klasslarini yaratadilar va ulardan foydalanib, sahifalarining
+                ko‘rinishini yaxshiroq nazorat qiladilar. Keyin ular ushbu bilimni
+                o‘zlarining veb-saytlarini takomillashtirish uchun qanday ishlatishlari
+                haqida o‘ylashadi."
+              key: CSS sinflari
+            Post-Project Test:
+              name: Loyiha yakuniy testi
+              key: Loyiha yakuniy testi
+            CS Discoveries Post-Course Survey:
+              name: CS Discoveries Post-Course Survey
+            'Websites for Expression ':
+              key: 'Websites for Expression '
+              description_teacher: "**Kun savoli: O'zimizni ko'rsatish uchun veb-saytlardan
+                qanday foydalana olamiz?**\\\r\n\\\r\nUshbu darsda o‘quvchilar veb-saytlarni
+                shaxsiy ifodalash vositasi sifatida ishlatish usullarini o‘rganadilar
+                va shaxsiy veb-saytga qo‘shmoqchi bo‘lgan mavzular va qiziqishlar
+                ro‘yxatini ishlab chiqdilar. Darsni boshlash uchun o‘quvchilar odamlar
+                o‘zlarining qiziqishlari va g‘oyalarini ifoda etadigan va o‘rtoqlashadigan
+                turli usullarni o‘ylab topadilar. Nihoyat talabalar aqliy hujum o'tkazib,
+                shaxsiy veb-saytga qo'shish mumkin bo'lgan mavzular va qiziqishlar
+                ro'yxati bilan o'rtoqlashadilar."
+            lesson-1:
+              name: CS Discoveries Post-Course Survey
+          lesson_groups:
+            cspSurvey:
+              display_name: Survey
+          student_description: 'Unit 2 bo‘limida siz o‘zingizning veb-sahifalaringizda
+            kontentni yaratish va almashishni o‘rganasiz. Dunyo bilan qanday tarkibni
+            baham ko‘rishni xohlaganingizdan so‘ng, siz HTML va CSSdan foydalangan
+            holda sahifalaringizni qanday tuzish va stil berishni o‘rganasiz. Shuningdek,
+            siz debug va izoh berish kabi qimmatli dasturiy ko‘nikmalar bilan ishlaysiz. '
+          description_short: "  Learn to build your own web site in Web Lab."
+        csd3-2022:
+          lessons:
+            Programming for Entertainment:
+              name: Programming for Entertainment
+              key: Programming for Entertainment
+            Plotting Shapes:
+              name: Plotting Shapes
+              key: Plotting Shapes
+            Drawing in Game Lab:
+              name: Drawing in Game Lab
+              description_teacher: "\\*\\*O‘quvchilar ushbu laboratoriyada Game Lab
+                dasturlash muhiti bilan tanishadilar va undan ekrandagi shakllarni
+                joylashtirish uchun foydalanishni boshlaydilar. Ular ketma-ketlik
+                va debug asoslarini hamda bir nechta oddiy buyruqlarni o‘rganadilar.
+                Dars yakunida o‘quvchilar avvalgi darsda rasm chizish vositasi bilan
+                yaratgan rasmlar singari rasmlarni dasturlash imkoniyatiga ega bo‘ladilar."
+              key: Drawing in Game Lab
+            Variables:
+              name: O‘zgaruvchilar
+              key: O‘zgaruvchilar
+            Random Numbers:
+              name: Tasodifiy sonlar
+              key: Tasodifiy sonlar
+            Sprites:
+              name: Spraytlar
+              key: Spraytlar
+            Sprite Properties:
+              name: Sprait hususiyatlari
+              key: Sprait hususiyatlari
+            Text:
+              name: Matn
+              key: Matn
+            The Draw Loop:
+              description_teacher: "**Question of the Day: Game Lab - o‘yin laboratoriyasida
+                rasmlarimizni qanday qilib jonlantirishimiz mumkin?**\\\r\n\\\r\nUshbu
+                darsda o‘quvchilar Game Labda dasturlashning asosiy paradigmalaridan
+                biri bo‘lgan chizish sikli bilan tanishadilar. Darsni boshlash uchun
+                o‘quvchilar bir nechta haqiqiy flipbukni (harakatlanuvchi rasmlar
+                ketma-ketligi kitobchasini) ko‘rib chiqishadi, chunki turli xil tasvirlarga
+                ega bo‘lgan ko‘plab rasmlar harakatlanish taassurotini yaratadi. So‘ngra
+                o‘quvchilar videoni tomosha qilishadi, qanday qilib Game Labdagi chizish
+                sikli o‘z dasturlarida xuddi shunday taassurotni yaratishga yordam
+                berishini ko‘rib chiqishadi. O‘quvchilar chizilgan siklni tasodifiy
+                sonlar bilan birlashtirib, ba'zi oddiy animatsiyalarni nuqta bilan,
+                so‘ngra spraytlar bilan boshqaradilar. "
+            Sprite Movement:
+              name: Sprite Movement
+              key: Sprite Movement
+            Conditionals:
+              name: Shartli bayonotlar
+              key: Shartli bayonotlar
+            Keyboard Input:
+              name: Keyboard Input
+              key: Keyboard Input
+            Mouse Input:
+              name: Sichqon orqali kiritish
+              key: Sichqon orqali kiritish
+            Project - Interactive Card:
+              name: Project - Interactive Card
+              key: Project - Interactive Card
+            Velocity:
+              name: Tezlik
+              description_teacher: "**Question of the Day:  How can programming languages
+                hide complicated patterns so that it is easier to program?**\\\r\n\\\r\nSpraytlarni
+                ko‘chirish uchun hisoblovchi naqshdan qanday foydalanilganligi haqida
+                qisqacha ma'lumotdan so‘ng, dastur dasturlarning murakkabligini boshqarishda
+                yordam berish uchun sinfga ushbu naqshlarni bitta blokda yashirish
+                g‘oyasi aytiladi. Keyinchalik ular to‘g‘ridan-to‘g‘ri sprayt tezligini
+                o‘rnatadigan yangi bloklarni sinab ko‘rish uchun Code Studioga yo‘l
+                olishadi va spraytlarida yanada murakkab xatti-harakatlarni kodlashning
+                turli usullarini ko‘rib chiqadilar."
+              key: Tezlik
+            Complex Sprite Movement:
+              name: Complex Sprite Movement
+              key: Complex Sprite Movement
+            Collisions:
+              name: Collisions
+              key: Collisions
+            Functions:
+              name: Funksiyalar
+              description_teacher: "**Question of the Day: How can programmers use
+                functions to create their own abstractions?**\\\r\n\\\r\nO‘quvchilar
+                o‘z kodlarini tartibga solish, uni yanada o‘qishga oson qilish va
+                takrorlangan kod bloklarini olib tashlash uchun funksiyalarni yaratishni
+                o‘rganadilar. O‘quvchilar avval Game Labda qanday yangi bloklarni
+                xohlashlarini va ushbu bloklar ichida qanday kod bo‘lishi kerakligini
+                o‘ylashadi. Keyinchalik o‘quvchilar Game Labda funksiyalarni yaratishni
+                o‘rganadilar. Ular kodlarning uzun bloklarini chizish davridan olib
+                tashlash va takrorlangan kod qismlarini bitta funksiyaga almashtirish
+                uchun funksiyalardan foydalanadilar."
+              key: Funksiyalar
+            The Game Design Process:
+              name: The Game Design Process
+              key: The Game Design Process
+            Using the Game Design Process:
+              name: Using the Game Design Process
+              key: Using the Game Design Process
+            Project - Design a Game:
+              name: Project - Design a Game
+              key: Project - Design a Game
+            Post-Project Test:
+              name: Loyiha yakuniy testi
+              key: Loyiha yakuniy testi
+            CS Discoveries Post-Course Survey:
+              name: CS Discoveries Post-Course Survey
+            'Mini-Project: Animation':
+              key: 'Mini-loyiha: Animatsiya'
+            'Mini-Project: Side Scroller':
+              key: 'Mini-loyiha: Yon skroller'
+            lesson-1:
+              name: CS Discoveries Post-Course Survey
+          lesson_groups:
+            csd3_1:
+              display_name: 'Chapter 1: Images and Animations'
+            csd3_2:
+              display_name: 'Chapter 2: Building Games'
+            cspSurvey:
+              display_name: Survey
+          student_description: Unit 3 bo'limida siz Game Labda animatsiyalar, interaktiv
+            san'at va o‘yinlarni dasturlashtirasiz. Oddiy shakllardan boshlang va
+            kompyuter olimlari har kuni foydalanadigan dizayn dasturlari bilan bir
+            xil dasturiy tushunchalardan foydalanib, spraytga asoslangan yanada murakkab
+            animatsiyalar va o‘yinlarni yarating. Yakuniy loyihada siz shaxsiylashtirilgan,
+            interaktiv dasturni ishlab chiqasiz.
+          description_short: " Learn to program animations, interactive art, and games
+            in Game Lab."
+        csd4-2022:
+          lessons:
+            Understanding Your User:
+              name: Understanding Your User
+              key: Understanding Your User
+            User Interfaces:
+              name: User Interfaces
+              key: User Interfaces
+            Feedback and Testing:
+              name: Feedback and Testing
+              key: Feedback and Testing
+            Identifying User Needs:
+              name: Identifying User Needs
+              key: Identifying User Needs
+            Project - Paper Prototype:
+              name: Project - Paper Prototype
+              key: Project - Paper Prototype
+            Designing Apps for Good:
+              name: Designing Apps for Good
+              key: Designing Apps for Good
+            Market Research:
+              name: Market Research
+              key: Market Research
+            Prototype Testing:
+              name: Prototype Testing
+              key: Prototype Testing
+            Testing the App:
+              name: Testing the App
+              key: Testing the App
+            Project - App Presentation:
+              name: Project - App Presentation
+              key: Project - App Presentation
+            Post-Project Test:
+              name: Loyiha yakuniy testi
+              key: Loyiha yakuniy testi
+            CS Discoveries Post-Course Survey:
+              name: CS Discoveries Post-Course Survey
+              key: CS Discoveries Post-Course Survey
+            Analysis of Design:
+              key: Analysis of Design
+            Paper Prototypes:
+              key: Paper Prototypes
+            Digital Design:
+              key: Digital Design
+            Linking Screens:
+              key: Linking Screens
+          lesson_groups:
+            csd4_1:
+              display_name: 'Chapter 1: User Centered Design'
+            csd4_2:
+              display_name: 'Chapter 2: App Prototyping'
+            cspSurvey:
+              display_name: Survey
+          student_description: Unit 4 introduces the broader social impacts of computing.
+            Through a series of design challenges, you will learn how to better understand
+            the needs of others while developing a solution to a problem. The second
+            half of the unit consists of an iterative team project, during which teams
+            have the opportunity to identify a need that they care about, prototype
+            solutions both on paper and in App Lab, and test solutions with real users
+            to get feedback and drive further iteration.
+          description_short: "  Learn how to design a program that meets the needs
+            of your users."
+        csd5-2022:
+          lessons:
+            Representation Matters:
+              name: Representation Matters
+              key: Representation Matters
+            Patterns and Representation:
+              name: Patterns and Representation
+              key: Patterns and Representation
+            ASCII and Binary Representation:
+              name: ASCII and Binary Representation
+              key: ASCII and Binary Representation
+            Representing Images:
+              name: Representing Images
+              key: Representing Images
+            Representing Numbers:
+              name: Representing Numbers
+              key: Representing Numbers
+            Combining Representations:
+              name: Combining Representations
+              key: Combining Representations
+            Keeping Data Secret:
+              name: Keeping Data Secret
+              key: Keeping Data Secret
+            Problem Solving and Data:
+              name: Problem Solving and Data
+              key: Problem Solving and Data
+            Structuring Data:
+              name: Structuring Data
+              key: Structuring Data
+            Interpreting Data:
+              name: Interpreting Data
+              key: Interpreting Data
+            Making Decisions with Data:
+              name: Making Decisions with Data
+              key: Making Decisions with Data
+            Automating Data Decisions:
+              name: Automating Data Decisions
+              key: Automating Data Decisions
+            Problem Solving with Big Data:
+              name: Problem Solving with Big Data
+              key: Problem Solving with Big Data
+            Post-Project Test:
+              name: Loyiha yakuniy testi
+              key: Loyiha yakuniy testi
+            CS Discoveries Post-Course Survey:
+              name: CS Discoveries Post-Course Survey
+              key: CS Discoveries Post-Course Survey
+            Project - Create a Representation:
+              key: Project - Create a Representation
+          lesson_groups:
+            csd5_1:
+              display_name: 'Chapter 1: Representing Information'
+            csd5_2:
+              display_name: 'Chapter 2: Solving Data Problems'
+            cspSurvey:
+              display_name: Survey
+          student_description: 5-bo‘lim ma'lumotlarning muammolarni hal qilishdagi
+            ahamiyati haqida va bu jarayonda kompyuterlarning qanday yordam berishini
+            ko‘rsatib beradi. Birinchi bobda kompyuterda ma'lumotlarni aks ettirish
+            uchun foydalaniladigan turli xil tizimlar va ulardan foydalanish natijasida
+            yuzaga keladigan qiyinchiliklar va almashinuvlar ko‘rib chiqilgan. Ikkinchi
+            bobda siz ma'lumotlar to‘plamlari muammolarni hal qilishda qanday foydalanilishini
+            va kompyuterlar ushbu jarayonning bosqichlarini avtomatlashtirishda qanday
+            yordam berishini bilib olasiz. Ma'lumotlar muammosini hal qilish jarayonini
+            siz tanlagan sohaga qanday tatbiq etish mumkinligini ko‘rib chiqish bilan
+            bob yakunlanadi.
+          description_short: Learn how people use computers to solve data problems.
+        csd7-2022:
+          lessons:
+            Introduction to AI Lab:
+              name: 6-dars
+              key: 6-dars
+            AI Code of Ethics:
+              description_student: Kichik guruhlarda talabalar o'zlari tanlagan Sun'iy
+                Intellekt (AI) sohasidagi axloqiy tuzoqlarni ochib beradigan maqolalar
+                va videofilmlardan foydalangan holda tadqiqot olib boradilar. Shundan
+                so'ng, har bir guruh o'zlari tanlagan sohaga tegishli kamida bitta
+                yechimga yo'naltirilgan tamoyilni ishlab chiqadi. Keyinchalik ushbu
+                tamoyillar sun'iy intellektni yaratuvchilar va qonun chiqaruvchilar
+                hamma joyda ishlatishi uchun "Bizning sun'iy intellekt kodeksimiz"
+                (masalan, slayd taqdimoti, hujjat yoki veb-sahifa) resursiga jamlanadi.
+              description_teacher: Kichik guruhlarda talabalar o'zlari tanlagan Sun'iy
+                Intellekt (AI) sohasidagi axloqiy tuzoqlarni ochib beradigan maqolalar
+                va videofilmlardan foydalangan holda tadqiqot olib boradilar. Shundan
+                so'ng, har bir guruh o'zlari tanlagan sohaga tegishli kamida bitta
+                yechimga yo'naltirilgan tamoyilni ishlab chiqadi. Keyinchalik ushbu
+                tamoyillar sun'iy intellektni yaratuvchilar va qonun chiqaruvchilar
+                hamma joyda ishlatishi uchun "Bizning sun'iy intellekt kodeksimiz"
+                (masalan, slayd taqdimoti, hujjat yoki veb-sahifa) resursiga jamlanadi.
+            Survey Planning:
+              name: Designing Data Collection
+              description_teacher: |-
+                Bu o'quvchilarni yakuniy loyihaga tayyorlaydigan besh kunlik darslar ketma-ketligidagi ikkinchi dars. Bu darsda talabalar boshqa o'quvchilar jamoasi o'z maktabidagi klublar asosida klub tavsiya etuvchi dastur yaratmoqchi ekanliklarini bilib oladilar. Talabalar ushbu ishga yordam berish uchun qaysi savollar eng foydali bo'lishini o'ylashadi, so'ng so'rovnoma tuzish uchun Google Form shablonidan foydalanishni o'rganadilar. Talabalarning ushbu darsda qilgan qadamlari, talabalarning yakuniy loyihada bajaradigan qadamlari bilan bir xil.
+
+                \*\* Kun savoli: \*\* Qanday qilib men mashinalar o'rganishi (ML) ilovasiga ma'lumot to'plash uchun so'rovnoma tuzishim mumkin?
+              key: Designing Data Collection
+            CS Discoveries Post-Course Survey:
+              name: CS Discoveries Post-Course Survey
+              key: CS Discoveries Post-Course Survey
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Survey
+        csd6-2022:
+          lessons:
+            Innovations in Computing:
+              name: Innovations in Computing
+              description_teacher: Ushbu kursning yakuniy bo'limini boshlash uchun
+                talabalar hisoblashdagi qiziqarli yangiliklar bo'yicha bir necha tadqiqotlar
+                olib boradilar. Ushbu dars o'quvchilarga turli xil hisoblash shakllari
+                omillari (kompyuter qanday ko'rinishini) va hisoblash ta'sirida bo'lgan
+                sohalarni ochib beradi. Keyinchalik ushbu bo'limda talabalar o'zlarining
+                jismoniy hisoblash moslamalarini ishlab chiqishda ushbu darsda duch
+                kelgan qurilmalarni qayta ko'rib chiqadilar.\*
+            The Circuit Playground:
+              name: The Circuit Playground
+            Board Events:
+              name: Board Events
+            Color LEDs:
+              name: LED ranglar
+            Accelerometer:
+              name: Accelerometer
+              description_teacher: Ushbu darsda o‘quvchilar akselerometr va uning
+                imkoniyatlarini o‘rganadilar. Ular uning voqealari va xususiyatlari
+                bilan tanishadilar, shuningdek, ular hayotdagi dasturlarda uchratgan
+                bo‘lishi mumkin bo‘lgan akselerometrdan foydalangan holda bir nechta
+                dasturlarni yaratadilar.
+            Functions:
+              name: Funksiyalar
+            Project - Prototype an Innovation:
+              description_teacher: Kursning ushbu yakuniy loyihasida o‘quvchilar jamoasi
+                sxema maydonchasi asosida innovatsion hisoblash moslamasining prototipini
+                ishlab chiqish va sinovdan o‘tkazadilar. Doskada mavjud bo‘lgan kirish
+                va chiqishlardan foydalangan holda, guruhlar foydalanuvchilarning
+                qiziqarli va o‘ziga xos o‘zaro ta'sirini ta'minlaydigan dasturlarni
+                yaratadilar.
+            Post-Project Test:
+              name: Loyiha yakuniy testi
+            CS Discoveries Post-Course Survey:
+              name: CS Discoveries Post-Course Survey
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Chapter 2: Building Physical Prototypes'
+            lessonGroup-4:
+              display_name: Survey
+          description_short: Learn to program with physical devices.
+        csd-post-survey-2022:
+          lessons:
+            Post-Course Survey:
+              name: Post-Course Survey
+          title: CS Discoveries Post-Course Survey
+        csp-post-survey-2022:
+          title: CS Principles Post-Course Survey
