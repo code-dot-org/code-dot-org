@@ -1105,7 +1105,7 @@
         "courseC_starWars_loops8_dani": {
           "course_starWars_loops8_a": "या समस्येचा छोट्या भागांमध्ये विचार करण्याचा प्रयत्न करा. वेळ घ्या. तुम्ही पहिल्याच प्रयत्नात सोडवण्याची गरज नाही!",
           "course_starWars_loops8_b": "या कोड्याच्या पहिल्या भागाचा जिना पायरी कोडे असा विचार करा. तुम्ही ते पूर्वी कसे सोडवले आहे?",
-          "course_starWars_loops8_c": "हा मार्ग पहा.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+          "course_starWars_loops8_c": "हा मार्ग पहा.\n\n[][0]"
         },
         "courseC_starWars_loops9": {
           "course_starWars_loops9_b": "तुम्ही `repeat` लूपमध्ये एकापेक्षा जास्त ब्लॉक्स वापरू शकता. ",
@@ -2342,7 +2342,7 @@
           "hello_world_background": "तुम्ही `क्लिक केल्यावर` इव्हेंट ब्लॉकखाली `सेट बॅकग्राउंड` ब्लॉक कनेक्ट करून पार्श्वभूमी बदलू शकता:\n\n\\[ब्लॉकली ब्लॉक[0]"
         },
         "helloworld_food_behaviors": {
-          "storyboard_behavior_example": "_टीप:_ स्प्राईटला वर्तन देण्यासाठी, तुम्हाला 'स्प्राईट बिगिन्स' ब्लॉक वापरणे आवश्यक आहे, जसे की 'उजवीकडे फिरणे'.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"face_burger_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+          "storyboard_behavior_example": "_टीप:_ स्प्राईटला वर्तन देण्यासाठी, तुम्हाला 'स्प्राईट बिगिन्स' ब्लॉक वापरणे आवश्यक आहे, जसे की 'उजवीकडे फिरणे'.\n\n\\[ब्लॉकली ब्लॉक[0]"
         },
         "helloworld_food_click": {
           "hw_no_changes": "तुम्हाला या स्तरावरील कोणताही कोड बदलण्याची आवश्यकता नाही.",
@@ -2374,7 +2374,7 @@
           "storyboard_behavior_example": "_टीप:_ स्प्राईटला वर्तन देण्यासाठी, तुम्हाला 'स्प्राईट बिगिन्स' ब्लॉक वापरणे आवश्यक आहे, जसे की 'उजवीकडे फिरणे'.\n\n\\[ब्लॉकली ब्लॉक[0]"
         },
         "helloworld_retro_click": {
-          "hw_click_sprites": "प्रोग्राम चालू असताना स्प्राइट्सवर क्लिक करा.",
+          "hw_click_sprites": "प्रोग्रॅम चालू असताना स्प्राईट्सवर क्लिक करा.",
           "hw_no_changes": "तुम्हाला या स्तरावरील कोणताही कोड बदलण्याची आवश्यकता नाही."
         },
         "helloworld_retro_costumes": {

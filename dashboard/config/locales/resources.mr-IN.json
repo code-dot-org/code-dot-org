@@ -1710,6 +1710,13 @@
         "teacher_forum/csd/2021": {
           "name": "शिक्षक फोरम"
         },
+        "internet-of-things-video/csd/2021": {
+          "type": "व्हिडीओ"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "संगणक शास्त्रामुळे सगळे काही बदलत आहे",
+          "type": "व्हिडीओ"
+        },
         "how_computers_word_hardware_software/csd/2021": {
           "type": "व्हिडीओ"
         },
@@ -1822,6 +1829,9 @@
         },
         "teacher_forum_1/csd/2021": {
           "name": "शिक्षक फोरम"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "type": "व्हिडीओ"
         },
         "what-is-a-computer-1-2-3/csd/2021": {
           "type": "व्हिडीओ"
