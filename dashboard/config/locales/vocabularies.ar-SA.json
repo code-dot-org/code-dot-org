@@ -68,6 +68,7 @@
           "definition": "سلسلة من الخطوات التي تم تكويدها في شيء يمكن تشغيله من خلال ماكينة."
         },
         "code/flappy/unversioned": {
+          "word": "الكود",
           "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
         },
         "debugging/flappy/unversioned": {
@@ -167,8 +168,29 @@
           "word": "الحلقات",
           "definition": "عملية فعل شيء مرارًا وتكرارًا."
         },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "شفرة قيصر",
+          "definition": "تقنية للتشفير تستبدل حروف الأبجدية بعد إزاحتها عددًا من الأحرف"
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "شفرة",
+          "definition": "مصطلح عام لتقنية (أو خوارزمية) تؤدي التشفير."
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "فكّ التشفير",
+          "definition": "عندما تحاول فك تشفير رسالة سرية دون معرفة جميع تفاصيل التشفير، فإنك تحاول \"كسر\" التشفير."
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "فك التشفير",
+          "definition": "عملية تعكس التشفير، فتأخذ رسالة سرية وتعيد إنتاج نصها الأصلي"
+        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "التشفير"
+          "word": "التشفير",
+          "definition": "عملية ترميز الرسائل لإبقائها سرية، بحيث لا يقرأها إلا الأطراف \"المصرح لهم\" بذلك."
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "شفرة الاستبدال العشوائية",
+          "definition": "تقنية تشفير تقوم بربط كل حرف من الأبجدية بأحرف أخرى تم اختيارها عشوائيًا من الأبجدية."
         },
         "code/starwars/unversioned": {
           "definition": " ( v)  لكتابة الكود، أو لكتابة التعليمات للحاسوب"
@@ -215,7 +237,8 @@
           "definition": "خوارزمية تم ترميزها إلى شيء يمكن تشغيله بواسطة جهاز."
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "الضغط بدون فقدان البيانات"
+          "word": "الضغط بدون فقدان البيانات",
+          "definition": "خوارزمية ضغط بيانات تسمح بإعادة إنشاء البيانات الأصلية بشكل مثالي من البيانات المضغوطة. تُستخدم في الغالب لضغط النص (مثل ضغط بتنسيق .zip)"
         },
         "event/outbreak/unversioned": {
           "word": "الحدث",

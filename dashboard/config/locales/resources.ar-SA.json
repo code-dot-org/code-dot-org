@@ -28,7 +28,8 @@
           "type": "فيديو الطالب"
         },
         "csf-turns-angles-doc/artist/unversioned": {
-          "name": "لفات وزوايا"
+          "name": "لفات وزوايا",
+          "type": "نشرة الطالب"
         },
         "csf-turns-angles-video/artist/unversioned": {
           "name": "لفات وزوايا",
@@ -38,9 +39,28 @@
           "name": "Spotify Playlist (كل الأعمار)"
         },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "التشفير والمفاتيح العامة",
           "type": "فيديو"
         },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "عنصر واجهة شفرة في Code Studio"
+        },
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "name": "دليل النشاط - ضغط النص"
+        },
+        "activity-recap-decode-this-message/text-compression/unversioned": {
+          "name": "ملخص النشاط - فك شفرة هذه الرسالة",
+          "type": "ملخص النشاط"
+        },
+        "decode-this-message/text-compression/unversioned": {
+          "name": "فك شفرة هذه الرسالة"
+        },
+        "textcompressioncodestudio/text-compression/unversioned": {
+          "name": "عنصر واجهة ضغط النص على Code Studio",
+          "type": "عنصر الواجهة"
+        },
         "video-text-compression/text-compression/unversioned": {
+          "name": "فيديو: ضغط النص مع آلو بلاك",
           "type": "فيديو"
         },
         "dance-party-playlist/dance-extras-2019/unversioned": {
@@ -541,7 +561,11 @@
         "variables_blank_space_stories/coursef/2021": {
           "type": "شرائح"
         },
+        "blank_space_stories_-_worksheet/coursef/2021": {
+          "name": "قصة مساحة فارغة"
+        },
         "blank_space_stories/coursef/2021": {
+          "name": "قصة مساحة فارغة",
           "type": "الحل النموذجي"
         },
         "text_and_prompts/coursef/2021": {
@@ -686,11 +710,13 @@
         },
         "digital-trails-digital-trail-squares/courseb/2021": {
           "name": "المسارات الرقمية: مربعات المسار الرقمي",
-          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit"
+          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit",
+          "type": "نشرة الطالب"
         },
         "digital-trails-animal-tracks/courseb/2021": {
           "name": "المسارات الرقمية: مسارات الحيوانات",
-          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/"
+          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/",
+          "type": "نشرة الطالب"
         },
         "mimi-activity/courseb/2021": {
           "name": "حرّكها، حرّكها",
@@ -905,7 +931,8 @@
         },
         "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
           "name": "الأمان في عالمي الافتراضي: لحظة \"توقف وفكر\"!",
-          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
+          "type": "نشرة الطالب"
         },
         "pair-programming-vid/coursea/2021": {
           "name": "البرمجة الزوجية",
@@ -1137,7 +1164,8 @@
         },
         "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
           "name": "وضع حد للدناءة علي الانترنت: أوقف الدناءة على الانترنت",
-          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing",
+          "type": "نشرة الطالب"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "أصدقائي من الروبوت",
@@ -1201,7 +1229,8 @@
         },
         "csf-turns-angles-doc/coursec/2021": {
           "name": "لفات وزوايا",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "نشرة الطالب"
         },
         "feeling_faces_emotion_image/coursec/2021": {
           "name": "صورة مشاعر الوجوه",
@@ -1764,7 +1793,8 @@
         },
         "private-and-personal-information-exit-ticket/coursee/2021": {
           "name": "المعلومات الخاصة والشخصية: تذكرة الخروج",
-          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit"
+          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit",
+          "type": "نشرة الطالب"
         },
         "private-and-personal-information-lesson-quiz/coursee/2021": {
           "name": "المعلومات الخاصة والشخصية: اختبار قصير",
@@ -1798,7 +1828,8 @@
         },
         "csf-turns-angles-doc/coursee/2021": {
           "name": "لفات وزوايا",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "نشرة الطالب"
         },
         "csf-turns-angles-video/coursee/2021": {
           "name": "لفات وزوايا",
@@ -2031,6 +2062,9 @@
         "ai_code_of_ethics/csd/2021": {
           "type": "شرائح"
         },
+        "ai_ethics_research_reflection/csd/2021": {
+          "type": "نشرة الطالب"
+        },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "type": "فيديو"
         },
@@ -2155,6 +2189,19 @@
         "teacher_forum/csd/2021": {
           "name": "منتدى المعلم"
         },
+        "computing-innovations/csd/2021": {
+          "name": "ابتكارات الحوسبة"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "فيديو"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "علم الحاسوب غيّر كل شيء",
+          "type": "فيديو"
+        },
+        "csd_unit_6_-_physical_computing/csd/2021": {
+          "type": "شرائح"
+        },
         "designing_screens_with_code/csd/2021": {
           "name": "تصميم الشاشات باستخدام الكود",
           "type": "مصدر"
@@ -2164,9 +2211,6 @@
         },
         "responding_to_user_input_1/csd/2021": {
           "type": "مصدر"
-        },
-        "csd_unit_6_-_physical_computing/csd/2021": {
-          "type": "شرائح"
         },
         "how_computers_word_hardware_software/csd/2021": {
           "name": "كيف تعمل أجهزة الحاسوب: الأجهزة والبرامج",
@@ -2260,6 +2304,15 @@
         },
         "unit-5-data-society/csd/2021": {
           "type": "شرائح"
+        },
+        "representation-matters-exemplar-2019/csd/2021": {
+          "name": "مسائل التمثيل"
+        },
+        "meals-data-resource-2019/csd/2021": {
+          "type": "مصدر"
+        },
+        "representation-matters/csd/2021": {
+          "name": "مسائل التمثيل"
         },
         "representing-information-1/csd/2021": {
           "name": "تمثيل المعلومات"
@@ -2484,6 +2537,19 @@
         "csd_unit_1_-_problem_solving_and_computing/csd/2021": {
           "type": "شرائح"
         },
+        "problem-solving-process-exemplar-2020/csd/2021": {
+          "name": "عملية حل المشكلات"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "name": "عملية حل المشكلات",
+          "type": "فيديو"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "عملية حل المشكلات"
+        },
+        "problem-solving-process/csd/2021": {
+          "name": "عملية حل المشكلات"
+        },
         "solving-problems-exemplar-2020/csd/2021": {
           "type": "الحل النموذجي"
         },
@@ -2517,6 +2583,12 @@
         },
         "solving-problems-tangrams-2020/csd/2021": {
           "type": "مصدر"
+        },
+        "exploring-web-pages-exemplar-2020/csd/2021": {
+          "name": "استكشاف صفحات الويب"
+        },
+        "exploring-web-pages/csd/2021": {
+          "name": "استكشاف صفحات الويب"
         },
         "csd_unit_2_-_web_development/csd/2021": {
           "type": "شرائح"
