@@ -1,29 +1,172 @@
 bg:
   data:
     progressions:
+      '"If/Else" with the Bee': '"Ако/Иначе" в Пчелата'
+      Add Movement: Добавяне на Движение
+      Add Sprites: Добавяне на Спрайт
+      Add Style: Добавяне на Стил
+      Add Style to Your Page: Добавяне на Стил към Вашата Страница
+      Add Text: Добавяне на Текст
+      Add a Welcome Screen: Добавяне на Начален Екран
+      'App: Choose a Kid''s Movie': 'Приложение: Изберете Детско Филмче'
+      'App: Friend Finder': 'Приложение: Намерете Приятел'
+      'App: Guess the Number': 'Приложение: Познайте Числото'
+      'App: How Many Countries': 'Приложение: Колко Страни'
+      'App: Is It Your Birthday?': 'Приложение: Рожденият Ти Ден Ли Е?'
+      'App: My Famous Birthday': 'Приложение: Моят Известен Рожден Ден'
+      'App: National Parks': 'Приложение: Национални Паркове'
+      'App: Outfit Picker': 'Приложение: Избиране На Облекло'
+      'App: Pet Chooser': 'Приложение: Избиране На Домашен Любимец'
+      'App: Story Creator': 'Приложение: Създаване На Истории'
+      'App: The Fastest Finger': 'Приложение: Най-бързият Пръст'
+      'App: Where Should I Live?': 'Приложение: Къде Да Живея?'
       Artist Project: Проект "Художник"
       'Artist: Variables': 'Художник: променливи'
       Assessment: Оценка
+      Basic Conditionals: Базови Условия
+      Be a Super Digital Citizen: Бъди Супер Дигитален Гражданин
+      Begin planning your project: Започнете планирането на Вашия проект
+      Begin planning your project_2018: Започнете планирането на вашия проект_2018
       Binary Numbers: Бинарни числа
+      Challenge: Предизвикателство
+      Challenges: Предизвикателства
+      Change: Промяна
+      Check Your Work: Проверете Работата Си
+      Checking for a Winner: Проверяване за Победител
+      'Choice Levels: Customize Your App': 'Нива по Желание: Персонализиране на Приложението си'
+      Choose Your Own Adventure: Избери Твоете Приключение
+      Code Prediction: Предположение На Код
+      Code Your Own Flappy Game: Направете Ваша Flappy Bird Игра
+      Code Your Page: Направете Ваша Страница
+      Collector Game: Колекционерска Игра
+      Collisions: Сблъсъци
+      Collisions in Games: Сблъсъци в Игри
+      Color LEDs: Цветни LEDs
+      Combining Projects: Комбиниране на Проекти
+      Combining Representations: Комбиниране на Представяния
+      Conditionals with Cards - Unplugged Activity: Условия с Карти - Изключена Дейност
+      'Conditionals: If Statements': 'Условия: If Условия'
+      Control Your Player: Контролирай Своя Играч
+      Create a Google Form: Създай Google формуляр
+      Create a Story: Създай История
+      Create an App in App Lab: Създай Приложение в App Lab
+      Create your project: Създай свой проект
+      Customize: Персонализирай
+      Customize Your App: Персонализирай Своето Приложение
+      Data Visualization: Визуализиране на Данни
       Debugging: Отстраняване на грешки
       Design Mode: Режим на проектиране
+      Design Your Game: Проектирай Играта Си
+      Design Your Prototype: Проектирай Своя Прототип
+      Design a Screen for your App: Проектирай Екран за твоето Приложение
+      Design an AI App - AI Lab: Проектирай AI приложение -  AI Lab
+      Design an AI App - App Lab: Проектирай AI приложение -  App Lab
+      Designing for Accessibility: Проектиране за Достъпност
+      Digital Sharing - Unplugged Activity: Дигитално Споделяна - Изключена Дейност
+      Draw Your Background: Нарисувай Свой Фон
+      Draw a Background: Нарисувай Фон
       Drawing: Рисуване
+      Driver Alert System: Система За Предупреждение на Шофъор
+      Escape Room Example: Примерен Escape Room
       Events: Събития
       Example: Пример
+      Example Animated Scene: Примерни Анимирани Сцени
+      Example App Types: Примерни Типове Приложения
+      'Example App: Zoo Classification': 'Примерно Приложение: Зоологическа Класификация'
+      Example Apps: Примерни Приложения
+      Example Projects: Примерни Проекти
+      Example projects: Примерни проекти
+      Expanding Your Website: Разширение на Твоя Уебсайт
+      Experiment with Web Lab: Експериментиране с Web Lab
+      Exploration: Изследване
+      'Exploration: For Loops': 'Изследване: For Цикли'
+      'Exploration: Rikki''s Poster': 'Изследване: Постера на Рики'
+      'Exploration: Sample Apps': 'Изследване: Примерни Приложения'
+      'Exploration: Sample Programs': 'Изследване: Примерни Програми'
+      'Exploration: Sample Project': 'Изследване: Примерен Проект'
+      Find the Wizard: Намери Магъосника
+      Finish the Prototype: Завърши Прототипа
+      Fonts and Style: Шрифтове и Стилове
       For Loops: За циклите
       Free Play: Свободна игра
       Functions: Функции
       Functions with Parameters: Функции с параметри
+      Guess The Number: Познай Числото
+      Headings: Заглавия
+      Ice Age Loops: Ледена Епоха Цикли
+      Images and Sounds: Изображения и Звуци
+      Intro to For Loops: Въведение в For Цикли
+      Intro to Side Scrollers: Въведение в Side Scrollers
+      Intro to Sprites: Въведение в Спрайтове
+      Intro to Variables: Въведение в Променливи
+      Iteration and Parameters: Итерации и Параметри
+      Keep On Dancing!: Продължавай да танцуваш!
+      Keeping Data Secret: Пазене на Тайни Данни
       Lesson Extras: Допълнителни екстри
       Levels: Нива
+      Light Show: Светлинно Шоу
       Lists: Списъци
+      Loops with the Artist: Цикли с Артиста
+      Make Your Sprites: Направи Свои Спрайтове
+      Make a Prediction: Направи Преположение
+      Make an Interactive Card: Създай Интерактивна Картичка
+      Make it Interactive: Направи го Интерактивно
+      Making Scenes: Създаване на Сцени
+      Making Songs: Създаване на Песни
+      Making Sounds: Създаване на Звуци
+      Making an Interactive Card: Създаване на Интерактивна Картичка
       Measures: Измерване
       'Minecraft: Hero''s Journey': 'Minecraft: Пътуването на героя'
+      'Mini-Project: About Me': 'Мини-Проект: За Мен'
+      'Mini-Project: Alien Dance Moves': 'Мини-Проект: Извънземни Танцови Стъпки'
+      'Mini-Project: Alien Dance Party': 'Мини-Проект: Извънзмено Танцово Парти'
+      'Mini-Project: Create a Virtual Pet': 'Мини-Проект: Създай Виртуален Домашен Любимец'
+      'Mini-Project: Royal Battle': 'Мини-Проект: Царска Битка'
+      "Mini-Project: Snowflake #1": "Мини-Проект: Снежинка #1"
+      "Mini-Project: Snowflake #2": "Мини-Проект: Снежинка #1"
+      'Mini-Project: Swimming Fish': 'Мини-Проект: Плуващи Риби'
+      'Mini-Project: Swimming Fish (continued)': 'Мини-Проект: Плуващи Риби (продължение)'
+      'Mini-Project: Virtual Pet': 'Мини-Проект: Виртуален Домашен Любимец'
+      'Mini-project: Chase Game': 'Мини-проект: Игра на Гоненица'
+      'Mini-project: Flappy Game': 'Мини-проект: Flappy'
+      'Mini-project: Interactive Poster': 'Мини-проект: Интерактивен Постер'
+      'Mini-project: Jorge the Dog': 'Мини-проект: Хорхе Кучето'
+      'Mini-project: Sticker Art': 'Мини-проект: Стикер Изкуство'
+      'Mini-project: Sticker Design': 'Мини-проект: Стикер Дизайн'
+      More Parameters: Повече Параметри
+      Motorcycle: Мотоциклет
+      My Robotic Friends - Unplugged Activity: Моите Роботи Приятели
+      New Shapes: Нови Форми
+      Orientation: Ориентация
       Overview: Общ преглед
+      'Overview: Design Mode': 'Преглед: Режим на Дизайн'
+      'Overview: If Statements': 'Преглед: Ако Условия'
+      'Overview: Images': 'Преглед: Изображения'
+      'Overview: onEvent': 'Преглед: наСъбитие'
+      'Overview: setPosition': 'Преглед: задайПозиция'
       Pair Programming: Програмиране по двойки
+      Pet Recommender: Препоръчител за Домашни Любимци
+      Pizza Party Data: Пица Парти Данни
+      Pizza Recommendations: Препоръки за Пица
+      Project Guide: Проектен Пътеводител
       Properties: Свойства
-      Reflection: Рефлексия
+      Publishing Your Website: Публикуване на Твоя Уебсайт
+      Quick Check: Бърза Проверка
+      Recognizing Fish: Разпознаване на Риби
+      Recognizing Shapes: Разпознаване на Фигури
+      Reflection: Отражение
+      Repeat Unit Statements: Повтаряй Докато Условия
+      Repeat Until Statements: Повтаряй Докато Условия
       Review: Преглед
+      Review Your Animated Scene: Прегледай Своята Анимирана Сцена
+      Review Your App: Прегледай Своето Приложение
+      Review Your Game: Прегледай Своята Игра
+      Review Your Page: Прегледай Своята Страница
+      Review Your Scene: Прегледай Своята Сцена
+      'Review: CSS': 'Преглед: CSS'
+      'Review: HTML': 'Преглед: HTML'
+      Same Game: Същата Игра
+      Sprite Lab Project: Sprite Lab Проект
       Sprite Properties: Свойства на Спрайта
       Text Compression: Компресия на текста
       The Animation Tab: Раздел "Анимация"

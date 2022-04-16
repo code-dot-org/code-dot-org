@@ -2,6 +2,22 @@
 bg:
   data:
     blocks:
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': средно
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': средно
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -743,6 +759,8 @@ bg:
             new Behavior(spinning_right, []): въртене надясно
             new Behavior(spinning_left, []): въртене наляво
             new Behavior(fluttering, []): пърхане
+            new Behavior(jittering, []): треперене
+            new Behavior(wobbling, []): люлеене
             new Behavior(wandering, []): блуждаейки
             new Behavior(patrolling, []): патрулиране
             new Behavior(moving_west_and_looping, []): движение на запад и циклене
@@ -753,7 +771,7 @@ bg:
         text: "{COSTUME}"
       gamelab_draggable:
         text: може да се мести
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'всеки {N} {UNIT} '
         options:
           UNIT:
@@ -1212,21 +1230,25 @@ bg:
           BEHAVIOR:
             '"fluttering"': пърхане
             '"growing"': растене
+            '"jittering"': треперене
             '"shrinking"': смаляване
             '"spinning_left"': въртене наляво
             '"spinning_right"': въртене надясно
             '"swimming_left_and_right"': плуване
             '"wandering"': блуждаейки
+            '"wobbling"': люлеене
       Poetry_stopBehavior:
         options:
           BEHAVIOR:
             '"fluttering"': пърхане
             '"growing"': растене
+            '"jittering"': треперене
             '"shrinking"': смаляване
             '"spinning_left"': въртене наляво
             '"spinning_right"': въртене надясно
             '"swimming_left_and_right"': плуване
             '"wandering"': блуждаейки
+            '"wobbling"': люлеене
       Poetry_whenLineShows:
         options:
           'N':
