@@ -168,7 +168,15 @@ fr:
     user_type_button: "Mise à jour du type de compte"
     user_type_label: "Type de compte"
     user_type_student: "Élève"
+    user_type_student_desc: "Découvrez tous nos cours et activités et bien d'autres :"
+    user_type_student_ability_1: "Sauvegardez vos progrès et vos projets"
+    user_type_student_ability_2: "Rejoignez la section de classe de votre professeur"
     user_type_teacher: "Professeur"
+    user_type_teacher_desc: "Tout ce dont les étudiants ont accès et bien d'autres :"
+    user_type_teacher_ability_1: "Créer des sections de classe"
+    user_type_teacher_ability_2: "Donner et suivre les devoirs des élèves"
+    user_type_teacher_ability_3: "S'inscrire à une formation professionnelle"
+    user_type_teacher_ability_4: "Intervenez dans notre forum des enseignants"
     field_is_required: "est obligatoire"
     accept_terms: "Vous devez accepter pour créer un compte"
     error: "Une erreur est survenue."
@@ -309,7 +317,7 @@ fr:
   devise:
     registrations:
       user:
-        user_type_change_email_mismatch: "L’adresse e-mail fournie ne correspond pas à l’adresse e-mail pour ce compte"
+        user_type_change_email_mismatch: "L’adresse e-mail fournie ne correspond pas à l’adresse e-mail de ce compte"
         personal_login_created_email: 'Vous vous êtes enregistré avec succès. Vous pouvez désormais vous connecter à votre compte avec votre e-mail et votre mot de passe'
         personal_login_created_username: 'Vous vous êtes enregistré avec succès. Vous pouvez désormais vous connecter à votre compte avec votre nom d''utilisateur (%{username}) et votre mot de passe '
   nav:

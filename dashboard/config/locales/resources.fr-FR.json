@@ -1864,6 +1864,16 @@
         "teacher_forum/csd/2021": {
           "name": "Forum des Enseignants"
         },
+        "computing-innovations/csd/2021": {
+          "name": "Innovations Informatiques"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "Vidéo"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "L'informatique est en Train de Tout Changer",
+          "type": "Vidéo"
+        },
         "designing_screens_with_code/csd/2021": {
           "name": "Dessiner des écrans en codant"
         },
@@ -1948,6 +1958,12 @@
         },
         "planning-your-innovation/csd/2021": {
           "type": "Guide projet"
+        },
+        "representation-matters-exemplar-2019/csd/2021": {
+          "name": "Questions de Représentation"
+        },
+        "representation-matters/csd/2021": {
+          "name": "Questions de Représentation"
         },
         "representing-information-1/csd/2021": {
           "name": "Représenter l'Information"
@@ -2168,6 +2184,19 @@
         "teacher_forum_1/csd/2021": {
           "name": "Forum des Enseignants"
         },
+        "problem-solving-process-exemplar-2020/csd/2021": {
+          "name": "Processus de Résolution De Problème"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "name": "Processus de Résolution De Problème",
+          "type": "Vidéo"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "Le Processus de Résolution de Problèmes"
+        },
+        "problem-solving-process/csd/2021": {
+          "name": "Processus de Résolution De Problème"
+        },
         "what-is-a-computer-2020/csd/2021": {
           "name": "Qu'est ce qu'un Ordinateur ?"
         },
@@ -2193,6 +2222,12 @@
         "apps_and_problem_solving/csd/2021": {
           "name": "Les Applications et La Résolution de Problèmes",
           "type": "Rubrique"
+        },
+        "exploring-web-pages-exemplar-2020/csd/2021": {
+          "name": "Explorer des Pages Web"
+        },
+        "exploring-web-pages/csd/2021": {
+          "name": "Explorer des Pages Web"
         },
         "html_tags/csd/2021": {
           "name": "Balises HTML"
