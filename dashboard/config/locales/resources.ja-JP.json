@@ -28,7 +28,8 @@
           "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
         },
         "csf-turns-angles-doc/artist/unversioned": {
-          "name": "回転と角度"
+          "name": "回転と角度",
+          "type": "学生用資料"
         },
         "csf-turns-angles-video/artist/unversioned": {
           "name": "回転と角度",
@@ -39,9 +40,28 @@
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "暗号化と公開鍵",
           "type": "ビデオ"
         },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "Code Studioの暗号化ウィジェット"
+        },
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "name": "アクティビティガイド-テキスト圧縮"
+        },
+        "activity-recap-decode-this-message/text-compression/unversioned": {
+          "name": "アクティビティのまとめ-このメッセージをデコードする",
+          "type": "アクティビティのまとめ"
+        },
+        "decode-this-message/text-compression/unversioned": {
+          "name": "このメッセージをデコード"
+        },
+        "textcompressioncodestudio/text-compression/unversioned": {
+          "name": "Code Studioのテキスト圧縮ウィジェット",
+          "type": "ウィジェット"
+        },
         "video-text-compression/text-compression/unversioned": {
+          "name": "ビデオ：Aloe Blaccによるテキスト圧縮",
           "type": "ビデオ"
         },
         "events-in-bounce-how-do-they-happen/sports/unversioned": {
@@ -727,11 +747,13 @@
         },
         "digital-trails-digital-trail-squares/courseb/2021": {
           "name": "デジタル証跡：デジタル証跡スクエア",
-          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit"
+          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit",
+          "type": "学生用資料"
         },
         "digital-trails-animal-tracks/courseb/2021": {
           "name": "デジタル証跡：動物の足あと",
-          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/"
+          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/",
+          "type": "学生用資料"
         },
         "mimi-activity/courseb/2021": {
           "name": "動かせ！動かせ！",
@@ -917,7 +939,8 @@
         },
         "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
           "name": "オンラインのご近所の安全：たちどまって考える",
-          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
+          "type": "学生用資料"
         },
         "pair-programming-vid/coursea/2021": {
           "name": "ペアプログラミング",
@@ -1116,7 +1139,8 @@
         },
         "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
           "name": "ネット上での意地悪を食い止める：ネット上の意地悪への4つの対策",
-          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing"
+          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing",
+          "type": "学生用資料"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "私のロボットの友だち",
@@ -1173,7 +1197,8 @@
         },
         "csf-turns-angles-doc/coursec/2021": {
           "name": "回転と角度",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "学生用資料"
         },
         "feeling_faces_emotion_image/coursec/2021": {
           "name": "フィーリングフェイス絵文字",
@@ -1687,7 +1712,8 @@
         },
         "private-and-personal-information-exit-ticket/coursee/2021": {
           "name": "プライベート情報および個人情報：退室チケット",
-          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit"
+          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit",
+          "type": "学生用資料"
         },
         "private-and-personal-information-lesson-quiz/coursee/2021": {
           "name": "プライベート情報および個人情報：レッスンスクイズ",
@@ -1717,7 +1743,8 @@
         },
         "csf-turns-angles-doc/coursee/2021": {
           "name": "回転と角度",
-          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit",
+          "type": "学生用資料"
         },
         "csf-turns-angles-video/coursee/2021": {
           "name": "回転と角度",
@@ -1852,6 +1879,9 @@
         "numerical_data_in_ai_lab_2/csd/2021": {
           "type": "ビデオ"
         },
+        "ai_ethics_research_reflection/csd/2021": {
+          "type": "学生用資料"
+        },
         "ethics_ai_equal_access_and_algorithmic_bias/csd/2021": {
           "type": "ビデオ"
         },
@@ -1908,6 +1938,16 @@
         "teacher_forum/csd/2021": {
           "name": "先生用フォーラム"
         },
+        "computing-innovations/csd/2021": {
+          "name": "コンピューティングイノベーション"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "ビデオ"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "コンピューター サイエンスはすべてを変えています",
+          "type": "ビデオ"
+        },
         "how_computers_word_hardware_software/csd/2021": {
           "name": "コンピューターの仕組み：ハードウェア＆ソフトウェア",
           "type": "ビデオ"
@@ -1959,6 +1999,12 @@
         },
         "planning-your-innovation/csd/2021": {
           "type": "プロジェクトガイド"
+        },
+        "representation-matters-exemplar-2019/csd/2021": {
+          "name": "表現が重要"
+        },
+        "representation-matters/csd/2021": {
+          "name": "表現が重要"
         },
         "representing-information-1/csd/2021": {
           "name": "情報の表現"
@@ -2138,6 +2184,19 @@
         "teacher_forum_1/csd/2021": {
           "name": "先生用フォーラム"
         },
+        "problem-solving-process-exemplar-2020/csd/2021": {
+          "name": "問題解決プロセス"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "name": "問題解決プロセス",
+          "type": "ビデオ"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "The Problem Solving Process"
+        },
+        "problem-solving-process/csd/2021": {
+          "name": "問題解決プロセス"
+        },
         "what-is-a-computer-1-2-3/csd/2021": {
           "type": "ビデオ"
         },
@@ -2160,6 +2219,12 @@
         "apps_and_problem_solving/csd/2021": {
           "name": "アプリと問題解決",
           "type": "ルーブリック"
+        },
+        "exploring-web-pages-exemplar-2020/csd/2021": {
+          "name": "ウェブページの探索"
+        },
+        "exploring-web-pages/csd/2021": {
+          "name": "ウェブページの探索"
         },
         "intro_to_web_lab_part_2/csd/2021": {
           "type": "ビデオ"
