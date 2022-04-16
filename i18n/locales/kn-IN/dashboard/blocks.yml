@@ -4,6 +4,22 @@ kn:
     blocks:
       BadGuys_makeNewBadGuysSprite:
         text: "{LOCATION} ನಲ್ಲಿ ಹೊಸ {ANIMATION_NAME} ಸ್ಪ್ರೈಟ್‌ಗಳನ್ನು ಮಾಡಿ"
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': ಹೆಚ್ಚುವರಿ ಸಣ್ಣ
+            '0.75': ಸಣ್ಣ
+            '1.00': ಮಧ್ಯಮ
+            '2.00': ದೊಡ್ಡ
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': ಹೆಚ್ಚುವರಿ ಸಣ್ಣ
+            '0.75': ಸಣ್ಣ
+            '1.00': ಮಧ್ಯಮ
+            '2.00': ದೊಡ್ಡ
+            '3.00': extra large
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -353,7 +369,7 @@ kn:
         text: ಈ ಸಾಲು ಎಳೆಯಿರಿ {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: "{SPRITE} ಇಂದ ಸಾಗುವ ಬ್ಲಾಕ್ ಅಂಚುಗಳು"
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         options:
           UNIT:
             '"seconds"': ಸೆಕೆಂಡುಗಳು
@@ -444,8 +460,6 @@ kn:
             '"pop"': ಪಾಪ್
             '"rain"': ಮಳೆ
             '"spiral"': ಸ್ಪೈರಲ್
-      gamelab_makeNewScaledSprite:
-        text: "{LOCATION} ನಲ್ಲಿ ಹೊಸ {ANIMATION_NAME} ಸ್ಪ್ರೈಟ್‌ಗಳನ್ನು ಮಾಡಿ"
       gamelab_makeNewSpriteAnon:
         text: "{LOCATION} ನಲ್ಲಿ ಹೊಸ {ANIMATION_NAME} ಸ್ಪ್ರೈಟ್‌ಗಳನ್ನು ಮಾಡಿ"
       gamelab_makeNumSprites:
