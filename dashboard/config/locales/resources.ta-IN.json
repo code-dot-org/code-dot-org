@@ -1723,6 +1723,13 @@
         "teacher_forum/csd/2021": {
           "name": "ஆசிரியர் மன்றம்"
         },
+        "internet-of-things-video/csd/2021": {
+          "type": "காணொளி"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "கணினி அறிவியல் எல்லாவற்றையும் மாற்றுகிறது",
+          "type": "காணொளி"
+        },
         "how_computers_word_hardware_software/csd/2021": {
           "type": "காணொளி"
         },
@@ -1842,6 +1849,9 @@
         },
         "teacher_forum_1/csd/2021": {
           "name": "ஆசிரியர் மன்றம்"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "type": "காணொளி"
         },
         "what-is-a-computer-1-2-3/csd/2021": {
           "type": "காணொளி"
