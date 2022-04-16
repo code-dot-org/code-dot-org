@@ -550,6 +550,7 @@
           "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview"
         },
         "making_sprites/coursef/2021": {
+          "name": "Crearea de sprites",
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "sprite_lab_documentation/coursef/2021": {
@@ -1553,6 +1554,7 @@
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "making_sprites/express/2021": {
+          "name": "Crearea de sprites",
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "sprite_lab_documentation_1/express/2021": {
@@ -1916,6 +1918,13 @@
         "teacher_forum/csd/2021": {
           "name": "Forum profesori"
         },
+        "internet-of-things-video/csd/2021": {
+          "type": "Video"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "Știința calculatoarelor schimbă totul",
+          "type": "Video"
+        },
         "how_computers_word_hardware_software/csd/2021": {
           "name": "Cum funcționează calculatoarele: Hardware și Software (aparatură și programe)",
           "type": "Video"
@@ -2065,6 +2074,12 @@
         },
         "teacher_forum_1/csd/2021": {
           "name": "Forum profesori"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "type": "Video"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "Procesul de Rezolvare a Problemei"
         },
         "what-is-a-computer-2020/csd/2021": {
           "name": "Ce Este un Computer?"

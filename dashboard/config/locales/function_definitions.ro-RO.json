@@ -2695,6 +2695,11 @@
           "build long bridge": {
             "name": "construiește un pod lung"
           }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "resetează jocul"
+          }
         }
       }
     }

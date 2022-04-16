@@ -3102,21 +3102,43 @@ ro-RO:
         display_name: Proiect de final de curs
       courseF_events_predict_multi:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Sprite se va roti la dreapta.
+          correct: true
+          feedback: Greșit. Sprite se va și deplasa către est.
+        - text: Sprite se va deplasare către est.
+          correct: true
+          feedback: Greșit. Sprite nu s-a oprit din rotit, așa că va întreprinde ambele
+            acțiuni simultan.
+        - text: Sprite se va roti și se va deplasa în același timp.
+          correct: true
+          feedback: Corect! Ambele comportamente vor avea loc simultan.
+        - text: Sprite se va roti mai întâi și se va deplasa după aceea.
+          correct: true
+          feedback: Greșit. În Laboratorul cu sprites, acțiunile asociate blocurilor
+            conectate se produc imediat după ce acțiunea anterioară s-a încheiat,
+            așa că ambele comportamente se vor produce simultan.
         questions:
-        - {}
+        - text: Citiți codul, apoi faceți o predicție.
       courseF_labels_predict_multi:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: "„O pizza vine imediat!”"
+          correct: true
+          feedback: Greșit. Etichetele variabilelor nu coincid.
+        - text: "„Un prânz vine imediat!”"
+          correct: true
+          feedback: Greșit. Eticheta unei variabile nu este afișată niciodată.
+        - text: "„O mâncare vine imediat!”"
+          correct: true
+          feedback: Greșit. Eticheta unei variabile nu este afișată niciodată.
+        - text: "„Un  vine imediat!”"
+          correct: true
+          feedback: Corect! Etichetele variabilelor nu coincid.
+        - text: Nu se va afișa nimic.
+          correct: true
+          feedback: Greșit. Evenimentul și blocul de imprimare vor funcționa.
         questions:
-        - {}
+        - text: Acest cod poate părea familiar, dar citiți-l cu atenție. Ce se va
+            afișa dacă utilizatorul tastează „pizza”?
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
         - correct: true
@@ -3135,22 +3157,55 @@ ro-RO:
         - {}
       courseF_sprites_predict_multi:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Ambele avioane se vor deplasa un spațiu de-a lungul grilei, apoi se
+            vor opri.
+          correct: true
+          feedback: Greșit. Aceste sprites au „comportamente” care continuă să se
+            desfășoare până când li se spune să se oprească.
+        - text: Ambele avioane se vor deplasa și nu se vor opri.
+          correct: true
+          feedback: Corect! Aceste comportamente le transmit avioanelor să înceapă
+            să se deplaseze și să continue să se deplaseze.
+        - text: Unul dintre avioane se va deplasa primul, iar apoi celălalt avion
+            se va deplasa și el mai târziu.
+          correct: true
+          feedback: Greșit. Fiecare bloc de cod din Laboratorul cu sprites este executat
+            instantaneu după blocul următor.
+        - text: Avioanele se vor prăbuși.
+          correct: true
+          feedback: Greșit. Poziția avioanelor nu le permite să se atingă.
         questions:
-        - {}
+        - text: Citiți codul, apoi faceți o predicție.
       courseF_variables_predict_multi:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: Programul va imprima mesajul „Bună ziua, nume!”
+          correct: true
+          feedback: Greșit. Blocul nume va fi înlocuit cu ceea ce introduci.
+        - text: Programul te va întâmpina cu numele pe care l-ai introdus.
+          correct: true
+          feedback: Corect! Datele introduse vor fi utilizate în locul blocului nume.
+        - text: Sprite își va schimba dimensiunile.
+          correct: true
+          feedback: Greșit. Pe ecran va fi afișat text.
+        - text: Calculatorul va pune o altă întrebare.
+          correct: true
+          feedback: Greșit. Se pune o singură întrebare, la începutul programului.
         questions:
-        - {}
+        - text: 'Acest program îți permite să răspunzi la o întrebare tastând răspunsul
+            cu ajutorul tastaturii. Blocul `print` afișează textul pe ecran. Fă o
+            predicție: ce se va întâmpla după ce răspunzi la întrebare?'
       courseF_variables_stop:
         content1: descrierea aici
+        markdown: '# Stop!## Sigur sunteți gata să mergeți mai departe? La nivelul
+          următor, veți începe să scrieți codul pentru proiectul vostru. Această etapă
+          se desfășoară bine dacă aveți deja un plan.Planul finalizat trebuie să includă
+          următoarele:<img src="https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png"
+          style="float:left; height:70px; padding:10px"/>* Tipul de proiect pe care
+          îl creați. De exemplu, o felicitare, un chatbot sau o poveste cu spații
+          necompletate.* O listă de întrebări pe care le veți pune utilizatorului.*
+          Alte texte pe care le veți afișa pe ecran.* O descriere sau un desen al
+          sprites de care veți avea nevoie (și comportamentele acestora).Dacă nu sunteți
+          siguri că sunteți pregătiți să treceți mai departe, consultați-vă cu profesorul!'
       coursee_prediction_artistfunction2_2021:
         answers:
         - correct: true
@@ -3343,3 +3398,118 @@ ro-RO:
         - correct: true
         questions:
         - {}
+      EnvelopeVariables-Unplugged_2021_2:
+        markdown: "# Povești cu spații necompletateÎn această lecție, veți învăța
+          să folosiți și să scrieți povestiri cu spații necompletate. Urmăriți acest
+          clip video pentru a afla care este legătura dintre acestea și știința calculatoarelor."
+      PowerOfWords-Unplugged_2020:
+        markdown: "# Puterea cuvintelor## Ce ar trebui să faceți atunci când cineva
+          folosește un limbaj răutăcios sau jignitor pe internet?"
+      PowerOfWords-Unplugged_2021:
+        markdown: "# Puterea cuvintelor## Ce ar trebui să faceți atunci când cineva
+          folosește un limbaj răutăcios sau jignitor pe internet?"
+      courseF_events_freeplay:
+        description: Acum puteți folosi ceea ce ați învățat pentru a vă îmbunătăți
+          proiectul! Continuați să adăugați elemente la program sau începeți unul
+          nou!
+        display_name: Evenimente - Joc liber
+      courseF_events_practice:
+        description: V-ați descurcat foarte bine până acum! Alegeți următoarea activitate.
+          Realizați cât de multe puteți. Continuați să exersați cu evenimentele!
+        display_name: Exerciții practice cu evenimente
+        teacher_markdown: "# Choice Level OverviewPrin intermediul nivelurilor opționale,
+          elevii au acces la un meniu cu niveluri suplimentare pe care trebuie să
+          le finalizeze. Elevii trebuie să finalizeze cel puțin unul dintre sub-nivelurile
+          din această secțiune, dar pot parcurge oricâte niveluri doresc (sau oricâte
+          doriți dvs.).Puteți folosi descrierile de mai jos pentru a-i ajuta pe elevi
+          să facă selecții proprii sau să stabilească nivelul așteptărilor cu privire
+          la numărul de sub-niveluri pe care ar trebui să le finalizeze.|&nbsp; &nbsp;
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Decolare!|Să învățăm să
+          zburăm|Să ne rostogolim|Să ne micșorăm și să ne mărim|Umflă peștele!|Pinguin
+          pus pe fugă||-|-|-|-|-|-|-|| ***Tip*** |**Recapitulare**|**Depanare**|**Depanare**|**Depanare**|**Conținut
+          opțional**|**Conținut opțional**| ***Concept***|*evenimente, comportamente*|*evenimente,
+          comportamente*|*evenimente, comportamente*|*evenimente, comportamente*|*evenimente
+          when/while*|*evenimente when/while*|"
+      courseF_intro_apps:
+        description: Bine ați venit la Noțiuni de bază de ȘC! Toate aceste proiecte
+          au fost create cu Laboratorul cu sprites. Încercați-le acum pentru a vedea
+          ce puteți face. La sfârșitul acestui curs, veți putea să creați propriile
+          proiecte ca acestea... și multe altele!
+        display_name: Aplicații realizate cu Laboratorul cu sprites
+        teacher_markdown: "# Prezentarea generală a nivelurilor opționalePrin intermediul
+          nivelurilor opționale, elevii au acces la un meniu cu niveluri suplimentare
+          pe care trebuie să le finalizeze. Elevii trebuie să finalizeze cel puțin
+          unul dintre sub-nivelurile din această secțiune, dar pot parcurge oricâte
+          niveluri doresc (sau oricâte doriți dvs.).După ce fac alegeri aici, elevii
+          sunt redirecționați către exemple de aplicații pe care le pot explora. Această
+          activitate trebuie să fie coordonată cu fișa de lucru Explorarea aplicațiilor,
+          care poate fi găsită în [plan de lecție].(.././)."
+      courseF_sprites_freeplay:
+        description: Este rândul vostru să creați tot ce vreți! Ce fel de proiect
+          veți crea?
+        display_name: Sprites - Joc liber
+      courseF_sprites_practice:
+        description: V-ați descurcat foarte bine până acum! Alegeți următoarea activitate.
+          Realizați cât de multe puteți. Continuați să exersați cu sprites și cu comportamentele!
+        display_name: Exerciții practice cu Sprites
+        teacher_markdown: "# Choice Level OverviewPrin intermediul nivelurilor opționale,
+          elevii au acces la un meniu cu niveluri suplimentare pe care trebuie să
+          le finalizeze. Elevii trebuie să finalizeze cel puțin unul dintre sub-nivelurile
+          din această secțiune, dar pot parcurge oricâte niveluri doresc (sau oricâte
+          doriți dvs.).Puteți folosi descrierile de mai jos pentru a-i ajuta pe elevi
+          să facă selecții proprii sau să stabilească nivelul așteptărilor cu privire
+          la numărul de sub-niveluri pe care ar trebui să le finalizeze.|&nbsp; &nbsp;
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Scenă din deșert|Redimensionați
+          fructul.|Animați o navă cu vele|O zi cu briză||-|-|-|-|-|| ***Tip*** |**Recapitulare**|**Recapitulare**|**Recapitulare**|**Recapitulare**||
+          ***Concept***|*sprites, locuri*|*sprites, proprietăți*|*sprites, locuri,
+          comportamente*|*comportamente*|"
+      courseF_text_practice:
+        description: V-ați descurcat foarte bine până acum! Alegeți următoarea activitate.
+          Realizați cât de multe puteți. Continuați să exersați cu texte și prompturi!
+        display_name: Activități practice cu text și prompturi
+        teacher_markdown: "# Choice Level OverviewPrin intermediul nivelurilor opționale,
+          elevii au acces la un meniu cu niveluri suplimentare pe care trebuie să
+          le finalizeze. Elevii trebuie să finalizeze cel puțin unul dintre sub-nivelurile
+          din această secțiune, dar pot parcurge oricâte niveluri doresc (sau oricâte
+          doriți dvs.).Puteți folosi descrierile de mai jos pentru a-i ajuta pe elevi
+          să facă selecții proprii sau să stabilească nivelul așteptărilor cu privire
+          la numărul de sub-niveluri pe care ar trebui să le finalizeze.|&nbsp; &nbsp;
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Folosirea Speech for Text|Texte
+          din prompturi|Numiți robotul!|Etichete cu variabile|Text mare|Subiecte pentru
+          culori|Începem de la zero||-|-|-|-|-|-|-|-|| ***Tip*** |**Recapitulare**|**Depanare**|**Depanare**|**Depanare**|**Conținut
+          opțional**|**Conținut opțional**|**Joc liber**| ***Concept***|*block imprimare,
+          evenimente*|*subiecte, evenimente*|*adăugarea de spații*|*corespondența
+          etichetelor cu variabile*|*blocuri de ecran de titlu*|*stocarea culorilor*|*fără
+          conținut nou*"
+      courseF_variables_projects:
+        description: Veți crea fie o felicitare, fie un chatbot, fie o poveste cu
+          spații necompletate. Dacă ați terminat deja \"Partea 1\" a proiectului,
+          treceți la \"Partea 2\".
+        display_name: Alegeți un proiect
+        teacher_markdown: "# Prezentarea generală a nivelurilor opționalePrin intermediul
+          nivelurilor opționale, elevii au acces la un meniu cu niveluri suplimentare
+          pe care trebuie să le finalizeze. Elevii trebuie să finalizeze cel puțin
+          unul dintre sub-nivelurile din această secțiune, dar se recomandă să-i încurajați
+          să finalizeze **două** niveluri pentru același proiect.Este posibil ca elevii
+          să aibă nevoie de instrucțiuni foarte clare pentru a înțelege cum să navigheze
+          printre opțiuni. Pentru fiecare dintre alegeri există două subniveluri.
+          Pentru a începe, elevii trebuie să aleagă unul dintre nivelurile marcate
+          „Partea 1”. După ce termină acel nivel, aceștia trebuie să revină în această
+          secțiune și să selecteze „Partea 2” a *aceluiași* proiect. În primul nivel
+          al fiecărei alegeri, elevii vor primi feedback pe măsură ce combină componentele
+          de bază ale proiectului. Cel de-al doilea nivel este de tip „joc liber”,
+          iar aici elevii pot să aducă orice modificări codului scris de ei."
+      courseF_variables_samples:
+        description: Veți crea fie o felicitare, fie un chatbot, fie o poveste cu
+          spații necompletate. Înainte de a începe, explorați proiectele de mai jos
+          pentru a vedea ce doriți să creați. Apăsați \"Terminare\" când sunteți gata
+          să începeți să planificați propriul program.
+        display_name: Explorare - Exemple de programe
+        teacher_markdown: "# Prezentarea generală a nivelurilor opționalePrin intermediul
+          nivelurilor opționale, elevii au acces la un meniu cu niveluri suplimentare
+          pe care trebuie să le finalizeze. Elevii trebuie să finalizeze cel puțin
+          unul dintre sub-nivelurile din această secțiune, dar pot parcurge oricâte
+          niveluri doresc (sau oricâte doriți dvs.).Elevii trebuie să analizeze cu
+          atenție aceste proiecte înainte de a se hotărî asupra proiectului pe care
+          vor să-l creeze. Puteți să le analizați împreună în clasă sau să le cereți
+          elevilor să le exploreze pe cont propriu."

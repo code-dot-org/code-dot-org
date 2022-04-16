@@ -1417,7 +1417,8 @@
           ]
         },
         "5d09fa3e-63ce-4142-ac59-d893889ce78d": {
-          "description": "#### Nivelurile 2-4 - Antrenează AI pentru a curăța oceanul\n\nElevii pot lucra la nivelurile 2-4 singuri sau cu un partener. Pentru a programa Inteligența Artificială, utilizați butoanele pentru a eticheta o imagine fie „pește”, fie „nu pește”. Fiecare imagine și etichetă devine parte a datelor utilizate pentru a antrena Inteligența Artificială să o facă singură. Odată antrenată Inteligența Artificială va încerca să eticheteze singură 100 de imagini noi, apoi să prezinte o selecție despre care a stabilit că are cea mai mare probabilitate de a fi „pește” pe baza pregătirii sale. Elevii care etichetează în mod constant lucrurile corect ar trebui să vadă un ocean plin de diferite tipuri de creaturi marine, fără multe (sau orice) alte obiecte."
+          "description": "#### Nivelurile 2-4 - Antrenează AI pentru a curăța oceanul\n\nElevii pot lucra la nivelurile 2-4 singuri sau cu un partener. Pentru a programa Inteligența Artificială, utilizați butoanele pentru a eticheta o imagine fie „pește”, fie „nu pește”. Fiecare imagine și etichetă devine parte a datelor utilizate pentru a antrena Inteligența Artificială să o facă singură. Odată antrenată Inteligența Artificială va încerca să eticheteze singură 100 de imagini noi, apoi să prezinte o selecție despre care a stabilit că are cea mai mare probabilitate de a fi „pește” pe baza pregătirii sale. Elevii care etichetează în mod constant lucrurile corect ar trebui să vadă un ocean plin de diferite tipuri de creaturi marine, fără multe (sau orice) alte obiecte.",
+          "progression_name": "Antrenează o IA pentru Curățarea Oceanului"
         },
         "917bb837-8f93-4a92-86dc-ed60980f680b": {
           "description": "#### Nivelul 5 - Date de antrenament și părtinire\n\n**Partajare rapidă:** Cât de bine s-a descurcat Inteligența Artificială? Cum crezi că a decis ce să includă în ocean?",
@@ -1469,9 +1470,6 @@
         "2a0e6d6d-f8b2-4f88-86e2-1b4c8c2ee300": {
           "name": "Exemplul 2: Utilizarea vizualizării Informațiilor pentru a îmbunătăți modelul",
           "description": "Adăugarea mai multor date pentru antrenament nu numai că modifică rezultatele, ci și datele afișate în vizualizarea Informațiilor. Uneori, graficul de rezultate afișat poate clarifica de ce rezultatele nu corespund așteptărilor.\n\nSă luăm în considerare un elev care dorește să pregătească IA pentru a recunoaște un pește **„furios”**.\nEi vor dori să realizeze acest lucru selectând orice pește cu sprâncene îndreptate spre interior și guri încruntate. Ei vor eticheta un pește drept „furios” dacă are o combinație a acestor trăsături:\n\n| Ochi „furios”: ![](https://curriculum.code.org/media/uploads/eyes11.png)![](https://curriculum.code.org/media/uploads/eyes17.png) Gură „furioasă”: ![](https://curriculum.code.org/media/uploads/mouth11.png)![](https://curriculum.code.org/media/uploads/mouth9.png)![](https://curriculum.code.org/media/uploads/mouth12.png)![](https://curriculum.code.org/media/uploads/mouth6.png) |\n| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n\nPoate IA să-ți dai seama ce face elevul fără a fi programată în mod explicit? Depinde de câte date de antrenament furnizează elevul și de calitatea datelor din set.\n\n| Pește „furios” - antrenament: 30                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Pește „furios” - antrenament: 200                                          |\n| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |\n| <img src=\"https://curriculum.code.org/media/uploads/30_foyL4uc.png\" width=\"4000\">                                                                                                                                                                                                                                                                                                                                                                                                      | <img src=\"https://curriculum.code.org/media/uploads/200.png\" width=\"4000\"> |\n| _Aici putem observa că IA a preluat imediat pe „ochi” ca fiind cea mai importantă trăsătură, dar urmată îndeaproape de „culoare”, nu „gură”. Există câțiva pești violet în imaginea din stânga care au guri diferite de ceea ce vizează elevul. Poate că mulți dintre peștii „furioși” pe care elevul i-a selectat inițial erau violet? O modalitate de a îmbunătăți modelul ar fi să continuați antrenamentul până când câțiva pești violet „nu supărați” au fost etichetați corect._ | _Rezultate sunt mult îmbunătățite după un antrenament suplimentar._        |"
-        },
-        "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
-          "name": "Pregătire"
         },
         "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
           "name": "Activitate Principală (Vechi)"
@@ -1527,6 +1525,9 @@
         },
         "59c2bc8f-30d3-47e5-a5c7-1ad0bb4f022b": {
           "progression_name": "Funcţii"
+        },
+        "d34707f5-3e1c-4448-b0e4-254a116ac2b7": {
+          "progression_name": "Jocul Colecționarul"
         },
         "d6ed872d-76c1-4f17-a785-1279a9ad0a59": {
           "name": "Reflecţie",
@@ -1790,6 +1791,9 @@
         "5b940af6-d4a1-44a8-b849-05fb591c9c9d": {
           "progression_name": "Funcţii"
         },
+        "49c1d6b1-5bbb-41aa-a6a5-ab66992bbf72": {
+          "progression_name": "Jocul Colecționarul"
+        },
         "a93b675e-fb6a-430e-86e6-ffbe77fea72e": {
           "name": "Reflecţie",
           "progression_name": "Reflecţie"
@@ -1835,6 +1839,10 @@
         "40a3f261-c8e8-4724-83fd-10c3f539083f": {
           "name": "Reflecţie",
           "progression_name": "Reflecţie"
+        },
+        "8044f0e5-2eee-425f-b124-6f80494e5b23": {
+          "name": "Video: Procesul de Rezolvare a Problemei",
+          "progression_name": "Video: Procesul de Rezolvare a Problemei"
         },
         "3e5ddb5c-d0e4-4022-becc-08bffeec64b2": {
           "name": "Video: Ce face calculatorul, calculator?",
@@ -1937,6 +1945,9 @@
         },
         "6ab5af14-9b04-48d9-8ca9-8f6f99ebd20b": {
           "progression_name": "Funcţii"
+        },
+        "f650608e-baa7-49b7-a4e9-2f0b12af0d4f": {
+          "progression_name": "Jocul Colecționarul"
         },
         "887f45bd-2611-4441-860d-ac358b2e0d04": {
           "name": "Joc la liber",
@@ -2176,6 +2187,7 @@
           "description": "**Faceți acest lucru:** Folosind diapozitivele cu elemente pregătitoare ale lecției sau acest [exemplu de proiect](https://studio.code.org/projects/spritelab/i1-YKJAmtlLMi54FJRIVNnWR_yLy-xRpmUAKcIAlaa0/view), arătați-le elevilor animația cu furnica și libelula.**Discutați:** _Cum ați descrie această scenă cu sprites?Dacă vreți ca cineva să creeze această scenă pentru voi pe computer, de ce instrucțiuni ar avea nevoie?_**Obiectiv de discuție:** Elevii trebuie să identifice ambii sprites din acest proiect, să descrie comportamentele (mișcările) acestora și să remarce și fundalul.Acordați-le timp elevilor, pentru ca aceștia să se gândească la idei. Dacă nu sunt siguri de ceea ce vor să spună, spuneți-le că le cereți doar să formuleze observații cu privire la ceea ce văd.Apoi arătați-le codul real utilizat pentru acest proiect și invitați-i să încerce să-l citească.**Reflectați:** Prin ce aseamănă și prin ce se diferențiază instrucțiunile noastre de acest cod?"
         },
         "d0b548d1-7ce0-46f1-98c6-2f83efb996c7": {
+          "name": "Crearea de sprites",
           "description": "#### Predicție (3 minute)**Faceți acest lucru:** Cereți-le elevilor să citească codul furnizat și să facă o predicție cu privire la ce se va întâmpla. După ce ați apăsat „Rulare”, acordați-le timp elevilor să reflecteze cu privire la orice lucru pe care l-au considerat interesant sau care i-a surprins.",
           "tips": [
             "În cadrul puzzle-urilor de tip predicție, elevii sunt rugați să citească un program care le-a fost pus la dispoziție și să răspundă la o întrebare despre acesta. Trebuie să se răspundă la întrebare înainte ca elevul să poată apăsa butonul „Rulare”. Deși puteți folosi aceste întrebări ca o formă de evaluare, rețineți că acestea se află frecvent la începutul unei lecții, fiind o modalitate de a-i încuraja pe elevi să pună întrebări înainte de a li se arăta cum funcționează ceva nou."
@@ -2296,6 +2308,7 @@
           "description": "**Faceți acest lucru:** Distribuiți și colectați plicurile marcate cu „obiect”, „lichid” și „număr”. Odată colectate, nu le deschideți și începeți să citiți povestea. Când ajungeți la fiecare spațiu necompletat, deschideți plicul și citiți cuvântul."
         },
         "437d0e58-a47c-4ea2-8125-501e4c0b154f": {
+          "name": "Jocuri de petrecere",
           "description": "**Faceți acest lucru:**-   Pregătiți plicurile marcate cu „adjectiv”, „obiect”, „parte a corpului” și „număr”.-   Repetați jocul de mai sus cu cea de-a doua poveste. De data aceasta puteți începe cu etichetele înainte de a prezenta povestea, pentru a crea suspans. Animațiile din diapozitivele lecției sunt deja configurate pentru a face acest lucru.#### (Opțional) Joc de roluriSe poate face o legătură între voluntari și ideea că o aplicație are un „utilizator”. În această analogie, rolul dvs., ca profesor, este asemănător cu cel al unui computer. Veți solicita și stoca informațiile de la „utilizatori”, iar apoi veți încerca să refaceți povestea. Pentru a implica mai mulți elevi și a-i pune să redea acest model, atribuiți roluri:_Computere:_ Distribuiți și colectați plicurile. Deschideți fiecare plic în timp ce se citește povestea pentru a verifica valorile stocate._Utilizatori:_ Transmiteți cuvintele necesare pentru a completa povestea._Cititor:_ Citiți cu voce tare povestea terminată.#### Discuție**Discutați:** Prin ce se deosebește redactarea unei povești cu spații necompletate de redactarea unei povești obișnuite?"
         },
         "fefc9dd6-ed1d-411b-ae3e-75a95da347b9": {
@@ -4625,6 +4638,7 @@
           "description": "**Faceți acest lucru:** Folosind diapozitivele cu elemente pregătitoare ale lecției sau acest [exemplu de proiect](https://studio.code.org/projects/spritelab/i1-YKJAmtlLMi54FJRIVNnWR_yLy-xRpmUAKcIAlaa0/view), arătați-le elevilor animația cu furnica și libelula.**Discutați:** _Cum ați descrie această scenă cu sprites?Dacă vreți ca cineva să creeze această scenă pentru voi pe computer, de ce instrucțiuni ar avea nevoie?_**Obiectiv de discuție:** Elevii trebuie să identifice ambii sprites din acest proiect, să descrie comportamentele (mișcările) acestora și să remarce și fundalul.Acordați-le timp elevilor, pentru ca aceștia să se gândească la idei. Dacă nu sunt siguri de ceea ce vor să spună, spuneți-le că le cereți doar să formuleze observații cu privire la ceea ce văd.Apoi arătați-le codul real utilizat pentru acest proiect și invitați-i să încerce să-l citească.**Reflectați:** Prin ce aseamănă și prin ce se diferențiază instrucțiunile noastre de acest cod?"
         },
         "ff19466f-a215-4f8f-b83a-4a289e985f0f": {
+          "name": "Crearea de sprites",
           "description": "#### Predicție (3 minute)**Faceți acest lucru:** Cereți-le elevilor să citească codul furnizat și să facă o predicție cu privire la ce se va întâmpla. După ce ați apăsat „Rulare”, acordați-le timp elevilor să reflecteze cu privire la orice lucru pe care l-au considerat interesant sau care i-a surprins.",
           "tips": [
             "În cadrul puzzle-urilor de tip predicție, elevii sunt rugați să citească un program care le-a fost pus la dispoziție și să răspundă la o întrebare despre acesta. Trebuie să se răspundă la întrebare înainte ca elevul să poată apăsa butonul „Rulare”. Deși puteți folosi aceste întrebări ca o formă de evaluare, rețineți că acestea se află frecvent la începutul unei lecții, fiind o modalitate de a-i încuraja pe elevi să pună întrebări înainte de a li se arăta cum funcționează ceva nou."
@@ -5554,7 +5568,7 @@
           ]
         },
         "a0c0c4ee-7e5a-4f4f-a085-49ea2a791169": {
-          "description": "#### Partajare etică**Activitate:** Cereți-le elevilor să se ridice în picioare. Începeți să citiți lista de modalități de creare de conținut de mai jos. Spuneți-le elevilor să se așeze imediat ce pot răspunde „Da” la una dintre întrebări.-   _Ați făcut vreodată o filmare video (cu o cameră foto, telefon, iPad sau calculator) și l-ați trimis unui membru al familiei sau l-ați postat online?_-   _Ați făcut o fotografie și ați trimis-o unui membru al familiei sau ați postat-o pe internet?_-   _Ați conceput o creație artistică pe care ați partajat-o cu familia și prietenii?_-   _Ai compus un cântecel pentru a vă face prietenii să râdă? Sau un cântecel trist pentru a-i face să plângă?_-   _Ați scris o poezie pentru mama sau tata, de ziua lor?_Continuați să puneți întrebări similare până când toată clasa stă jos.**Discutați:**-   _Cum v-ați simțit când ați produs ceva creativ?_-   _Cum v-ați simțit când ați partajat creația cu alte persoane?_-   _Cum vă simțiți atunci când vedeți sau ascultați creațiile altora?_Încurajați toate răspunsurile.Ajutați-i pe elevi să simtă bucuria de a crea ceva. Această activitate poate fi dificilă, dar aduce extrem de multă bucurie și satisfacție. Este amuzant să partajăm ceea ce creăm, iar aceasta ne poate încuraja să dăm dovadă de și mai multă creativitate și să creăm opere de artă în continuare. Pe măsură ce creștem, avem din ce în ce mai multe oportunități de a partaja creațiile și de a explora mediile și arta pe care au creat-o alți oameni. Trebuie să ne asigurăm că dăm dovadă întotdeauna de corectitudine atunci când folosim arta și creațiile altora.**Spuneți:** Amintiți-vă că drepturile de autor protejează toate tipurile de creații, astfel încât artiștii/creatorii să poată fi plătiți pentru efortul depus. Aici sunt include lucrările literare originale (povestiri), operele de artă, fotografiile, materialele audio, imaginile, muzica, versurile cântecelor, chiar și mâzgălelile desenate pe șervețel la prânz. Nu contează dacă au fost create de un artist celebru sau de voi. Atunci când creați o lucrare originală, voi decideți cine poate:*-   \\_să realizeze copii ale acesteia*-   _să distribuie copiiale acesteia_-   _să expună sau să intepreteze lucrarea în public_-   _să creeze lucrări derivate (de exemplu, ecranizarea unei cărți)_Aceste drepturi sunt acordate artiștilor și creatorilor pentru a-i încuraja să creeze și alte opere.**\\*Reflectați:** Invitați-i pe elevi să se gândească la momentul în care s-au așezat pentru prima dată atunci când le-ați pus întrebări despre creațiile artistice. Informați-i că au creat o lucrare originală care este protejată din punct de vedere legal. Felicitări!\\*\\*Lucrați în perechi: \\*\\*-   \\_Cum puteți ști dacă o creație este protejată de drepturi de autor?_-   \\\\_Cercul © înseamnă copyright și indică existența drepturilor de autor, dar protecția drepturilor de autor există chiar și fără acest simbol. Creatorii sunt proprietarii operelor lor, cu excepția cazului în care o vând altcuiva.-   \\_Unde ai văzut simbolul copyright-ului?_-   \\\\_În cărți, în filme, pe imagini, postere etc.**Partajați:** Încurajați-i pe elevi să partajeze răspunsurile lor cu restul clasei.**Demonstrați:** Arătați-le elevilor cum să deseneze un simbol al drepturilor de autor și să scrie anul lângă el. Atunci când creați ceva, creația voastră este automat protejată de drepturile de autor, chiar și fără simbolul de copyright.**Discutați:**-   \\_Cum vă simțiți când partajați lucrurile cu altcineva?\\*-   _Cum vă simțiți când cineva vă ia lucrurile și le partajează cu alții fără permisiunea voastră?_Aceleași principii de respect și corectitudine se aplică atunci când partajăm online munca noastră sau a altcuiva.\\_"
+          "description": "#### Partajare etică**Activitate:** Cereți-le elevilor să se ridice în picioare. Începeți să citiți lista de modalități de creare de conținut de mai jos. Spuneți-le elevilor să se așeze imediat ce pot răspunde „Da” la una dintre întrebări.-   _Ați făcut vreodată o filmare video (cu o cameră foto, telefon, iPad sau calculator) și l-ați trimis unui membru al familiei sau l-ați postat online?_-   _Ați făcut o fotografie și ați trimis-o unui membru al familiei sau ați postat-o pe internet?_-   _Ați conceput o creație artistică pe care ați partajat-o cu familia și prietenii?_-   _Ai compus un cântecel pentru a vă face prietenii să râdă? Sau un cântecel trist pentru a-i face să plângă?_-   _Ați scris o poezie pentru mama sau tata, de ziua lor?_Continuați să puneți întrebări similare până când toată clasa stă jos.**Discutați:**-   _Cum v-ați simțit când ați produs ceva creativ?_-   _Cum v-ați simțit când ați partajat creația cu alte persoane?_-   _Cum vă simțiți atunci când vedeți sau ascultați creațiile altora?_Încurajați toate răspunsurile.Ajutați-i pe elevi să simtă bucuria de a crea ceva. Această activitate poate fi dificilă, dar aduce extrem de multă bucurie și satisfacție. Este amuzant să partajăm ceea ce creăm, iar aceasta ne poate încuraja să dăm dovadă de și mai multă creativitate și să creăm opere de artă în continuare. Pe măsură ce creștem, avem din ce în ce mai multe oportunități de a partaja creațiile și de a explora mediile și arta pe care au creat-o alți oameni. Trebuie să ne asigurăm că dăm dovadă întotdeauna de corectitudine atunci când folosim arta și creațiile altora.**Spuneți:** Amintiți-vă că drepturile de autor protejează toate tipurile de creații, astfel încât artiștii/creatorii să poată fi plătiți pentru efortul depus. Aici sunt include lucrările literare originale (povestiri), operele de artă, fotografiile, materialele audio, imaginile, muzica, versurile cântecelor, chiar și mâzgălelile desenate pe șervețel la prânz. Nu contează dacă au fost create de un artist celebru sau de voi. Atunci când creați o lucrare originală, voi decideți cine poate:*-   \\_să realizeze copii ale acesteia*-   _să distribuie copiiale acesteia_-   _să expună sau să intepreteze lucrarea în public_-   _să creeze lucrări derivate (de exemplu, ecranizarea unei cărți)_Aceste drepturi sunt acordate artiștilor și creatorilor pentru a-i încuraja să creeze și alte opere.**\\*Reflectați:** Invitați-i pe elevi să se gândească la momentul în care s-au așezat pentru prima dată atunci când le-ați pus întrebări despre creațiile artistice. Informați-i că au creat o lucrare originală care este protejată din punct de vedere legal. Felicitări!\\*\\*Lucrați în perechi: \\*\\*-   \\_Cum puteți ști dacă o creație este protejată de drepturi de autor?*-   \\*Cercul © înseamnă copyright și indică existența drepturilor de autor, dar protecția drepturilor de autor există chiar și fără acest simbol. Creatorii sunt proprietarii operelor lor, cu excepția cazului în care o vând altcuiva.-   \\_Unde ai văzut simbolul copyright-ului?*-   *În cărți, în filme, pe imagini, postere etc.**Partajați:** Încurajați-i pe elevi să partajeze răspunsurile lor cu restul clasei.**Demonstrați:** Arătați-le elevilor cum să deseneze un simbol al drepturilor de autor și să scrie anul lângă el. Atunci când creați ceva, creația voastră este automat protejată de drepturile de autor, chiar și fără simbolul de copyright.**Discutați:**-   \\_Cum vă simțiți când partajați lucrurile cu altcineva?*-   _Cum vă simțiți când cineva vă ia lucrurile și le partajează cu alții fără permisiunea voastră?_Aceleași principii de respect și corectitudine se aplică atunci când partajăm online munca noastră sau a altcuiva.\\_"
         },
         "2bab17fa-7a64-4ae1-a9c3-30d942674dd1": {
           "description": "#### Să partajăm sau să nu partajăm?**Demonstrați:** Arătați creația instructorului: imagine, cântec, poveste, video, rețetă.**Urmăriți:** Invitați-i pe elevi să urmărească clipul video **\\*Principiile etice ale partajării digitale** (1 minut).*Este posibil să fie nevoie să-l redați de 2-3 ori.**Obiectivul discuției:**### Nu e OK să partajezi-   \\_Ați transferat vreodată melodii pe playerul MP3 al unui prieten? Este această acțiune OK?*-   *Dacă este un cântec pe care îl auziți la radio, acesta este cel mai probabil protejat de drepturi de autor și NU este OK să îl partajați, să îl copiați și să îl oferiți altcuiva.-   \\_Ce se întâmplă dacă un prieten vă invită la el acasă pentru a urmări un film care tocmai a apărut pe DVD? Acesta este unul dintre filmele voastre preferate. Vreți să-l aveți pe telefon, ca să-l puteți urmări oricând. Așa că scoateți telefonul și înregistrați filmul. Este acesta un mod corect de a obține o copie a filmului?-   \\_Nu. Nu este OK să distribuim/copiem. De ce? Pentru că nu avem dreptul de a face o copie și de a o oferi altcuiva.-   \\_Cum altfel putem obține o copie autorizată (legală) a filmului pe telefon?-   \\_iTunes sau Amazon vând filme în mod legal.### E OK să partajezi-   \\_Eu am creat asta. Asta înseamnă că este creația și proprietatea mea. Cred că o voi partaja. Voi folosi telefonul (iPad-ul, aparatul foto etc.) pentru a face o fotografie. Cred că o voi distribui pe blogul meu, unde aș putea face bani din publicitate, pe [site-ul ales de voi]. Este OK?-   \\_Da, este OK să partajați creația, pentru că vă aparține, ați făcut-o, deci dețineți drepturile de autor.-   \\_Dar un cântec compus de mine? Pot să-l distribui? . . . Cine decide?*-   _„Corect, așa este, eu sunt cel care decide.”_-   *Ce se va întâmpla când îl voi partaja?-   \\_Înregistrați răspunsurile: „Este amuzant, . . . . Voi primi multe aprecieri” ... ... „Alte persoane vor dori să îl folosească pentru mashup-uri.”-   \\_Să zicem că ai făcut un desen pe care vrei să-l vinzi la o expoziție de artă organizată la școală. Banii obținuți în urma vânzării vor fi folosiți pentru a cumpăra cărți noi pentru bibliotecă. Este aceasta o acțiune pozitivă de partajare... este etică?-   \\_Da.*-   _De ce este o acțiune OK?_-   \\_Înregistrați răspunsurile: „Este creația ta!”, „Tu ai făcut-o. Îți aparține. Poți alege să o partajezi.”"
@@ -6314,6 +6328,26 @@
             null
           ]
         },
+        "a6722c40-2f55-4b5c-8ffa-f9e3982f232b": {
+          "tips": [
+            null
+          ]
+        },
+        "0aae65e7-d504-4b63-9b0e-f9145959ac27": {
+          "tips": [
+            null
+          ]
+        },
+        "0ffa0382-8df9-42a1-8f6b-62612e26f301": {
+          "tips": [
+            null
+          ]
+        },
+        "0158f751-e444-4cd5-ae72-c6daa9d0f859": {
+          "tips": [
+            null
+          ]
+        },
         "7c0f6057-1b87-4d67-a58d-c511e59b2e62": {
           "tips": [
             null
@@ -6821,6 +6855,24 @@
             null
           ]
         },
+        "d34d3ef7-b3ad-41de-8b49-c7460f8b1450": {
+          "tips": [
+            null
+          ]
+        },
+        "9c23f514-e5e6-45f4-9038-c8c68e26c041": {
+          "name": "Fi inspirat"
+        },
+        "9e9ce748-fed7-4391-a28d-6c9e5da3cf27": {
+          "tips": [
+            null
+          ]
+        },
+        "fe954bee-319a-49ec-a2d1-033dd539a59b": {
+          "tips": [
+            null
+          ]
+        },
         "2bddbd31-7cae-4867-96fd-f8ba2f18b6c8": {
           "tips": [
             null
@@ -7089,6 +7141,39 @@
           ]
         },
         "a237ce6e-b99e-4117-afee-b384cfd9fc4f": {
+          "tips": [
+            null
+          ]
+        },
+        "322ad615-5d42-4b54-ab60-5d7b7d36e277": {
+          "tips": [
+            null
+          ]
+        },
+        "3e097460-3cde-4714-ba16-61de8a8439ac": {
+          "tips": [
+            null
+          ]
+        },
+        "cf324018-6258-4c8b-98e8-f5de7f3cec14": {
+          "tips": [
+            null
+          ]
+        },
+        "617e101b-5c13-40e7-be75-6a4626bebe3e": {
+          "tips": [
+            null
+          ]
+        },
+        "e94772c1-7ac5-4e4f-b9b3-021ba4b36ef5": {
+          "tips": [
+            null
+          ]
+        },
+        "c670c339-5f6d-475c-b6cf-ad8a35c2d8a2": {
+          "name": "Reflecţie"
+        },
+        "0d5d0634-6b05-4c47-b187-594dfd30d625": {
           "tips": [
             null
           ]
@@ -7504,6 +7589,21 @@
           "progression_name": "Reflecţie"
         },
         "ec94d489-2b99-408d-bcce-782db2cdba44": {
+          "tips": [
+            null
+          ]
+        },
+        "2e17eccc-2343-4bde-849c-eaf270f343f8": {
+          "tips": [
+            null
+          ]
+        },
+        "f348d317-252e-4581-b489-fe1bbe700f67": {
+          "tips": [
+            null
+          ]
+        },
+        "caeb42d3-998b-49fd-99ec-4c36e013206f": {
           "tips": [
             null
           ]
@@ -8022,7 +8122,8 @@
         "fa4f0ee7-664c-4e90-b170-12f4cfb45ef5": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Jocul Colecționarul"
         },
         "3dfe6414-c583-4af9-a55d-7da0d06783ef": {
           "tips": [
@@ -8135,6 +8236,39 @@
           "name": "Reflecție"
         },
         "82378234-dc3a-4578-a458-e237d6b9b729": {
+          "tips": [
+            null
+          ]
+        },
+        "fabada45-479f-44d4-bc2d-dbeb8a8e7abd": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "23f003b6-2c1b-4e88-a343-f77714a50d89": {
+          "name": "Procesul de Rezolvare a Problemei",
+          "tips": [
+            null
+          ],
+          "progression_name": "Video: Procesul de Rezolvare a Problemei"
+        },
+        "f3ad86f7-7c83-415c-aa5a-a276d6186faa": {
+          "tips": [
+            null
+          ]
+        },
+        "e3e59454-f8cc-47ef-a206-23e55cf74c89": {
+          "tips": [
+            null
+          ]
+        },
+        "971b5c08-a61d-400c-a1ff-8ac3139a3c7c": {
+          "tips": [
+            null
+          ]
+        },
+        "03418848-4f2d-4f45-8f25-38012b191a2a": {
           "tips": [
             null
           ]
@@ -8508,6 +8642,21 @@
           ]
         },
         "ab4371e8-c868-4587-9f32-2a0f857b910d": {
+          "tips": [
+            null
+          ]
+        },
+        "c55d809b-5128-4cba-82bf-3bf0e51aec06": {
+          "tips": [
+            null
+          ]
+        },
+        "1265c20c-95ab-4c34-b8fc-b3532b088415": {
+          "tips": [
+            null
+          ]
+        },
+        "c1050c6d-1379-4f81-ab69-6f00bbfb363a": {
           "tips": [
             null
           ]
