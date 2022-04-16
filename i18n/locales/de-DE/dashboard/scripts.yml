@@ -173,6 +173,7 @@ de:
               name: Spielelabor
               description_student: In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Programmierung und Informatik. Diese Lektion hat zwei verschiedene Versionen.
           student_description: Erstelle eine Geschichte oder ein Spiel mit Play Lab!
+          name: Spielelabor PlayLab
         artist:
           title: Künstler
           description: Zeichne coole Bilder und Designs mit dem Künstler!
@@ -183,6 +184,7 @@ de:
               description_student: Erstelle schöne Bilder durch die Programmierung des Zeichners.
               description_teacher: In dieser Lektion übernehmen die SchülerInnen die Kontrolle über den Künstler, um Zeichnungen auf dem Bildschirm fertigzustellen. In dieser Phase mit dem Künstler können die SchülerInnen Bilder von zunehmender Komplexität erstellen, indem sie neue Bausteine wie "100 Pixel vorwärts" und "90 Grad nach rechts drehen" verwenden.
           student_description: Zeichne coole Bilder und Designs mit dem Künstler!
+          name: Künstler
         hourofcode:
           title: Klassisches Labyrinth
           description: Lerne die Grundlagen der Informatik kennen – mit Figuren aus Angry Birds, Plants vs. Zombies, und mit Scrat aus Ice Age!
@@ -345,6 +347,7 @@ de:
               name: Disney Infinity Spielelabor
               description_student: In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Programmierung und Informatik. Diese Lektion hat zwei verschiedene Versionen.
           student_description: Verwende das Spielelabor, um eine Geschichte oder ein Spiel mit den Disney Infinity Figuren zu erstellen.
+          name: Infinity
         algebrademo:
           lessons:
             Defining Simple Functions:
@@ -520,6 +523,7 @@ de:
               description_student: Klicken und ziehen Sie, um die Aufgaben fertigzustellen.
               description_teacher: Diese Lektion gibt den SchülerInnen eine Vorstellung davon, was sie erwartet, wenn sie ins Computerlabor gehen. Sie beginnt mit einer kurzen Diskussion, in der sie in das richtige Verhalten im Computer-Labors eingeführt werden, dann werden sie einen Computer benutzen, um Aufgaben im Internet zu lösen.
           student_description: Testen Sie unser Puzzle-Tutorial.
+          name: Puzzle
         step:
           title: Schritt
           description: Schritt-für-Schritt-Anleitung
@@ -1250,6 +1254,8 @@ de:
           student_description: 'Phase 2 Online: Gemischtes Sommerstudium'
         equity-pd:
           lessons:
+            Codeorg Equity PD:
+              name: Code.org Equity Datenschutzerklärung
             Necessary Background:
               name: Erforderlicher Hintergrund
         science-PD2:
@@ -1617,6 +1623,7 @@ de:
               name: Ice Age Spielelabor
               description_student: In dieser Lektion machen Schülerinnen und Schülern aller Altersstufen in einer sicheren und unterstützenden Umgebung erste Erfahrungen mit der Programmierung und Informatik. Diese Lektion hat zwei verschiedene Versionen.
           student_description: Erstelle eine Geschichte oder ein Spiel mit dem Spielelabor!
+          name: Eiszeit
         CSPPD3-Unit3:
           lessons:
             Challenge Overview:
@@ -1724,6 +1731,7 @@ de:
               name: Meere
               description_teacher: In dieser Lektion machen Schülerinnen und Schüler aller Altersgruppen in einer sicheren, unterstützenden Umgebung erste Erfahrung mit Programmierung und Informatik. Zunächst klassifizieren die Schüler Objekte als "Fisch" oder "nicht Fisch", um zu versuchen, Müll aus dem Meer zu entfernen. Anschließend müssen sie ihren Übungsdatensatz erweitern und andere Meeresbewohner einbeziehen, die ins Wasser gehören. Im zweiten Teil der Übung wählen die Schülerinnen und Schüler ihre eigenen Beschriftungen aus, die sie auf Bilder von zufällig generierten Fischen anwenden. Diese Übungsdaten nutzt ein maschinelles Lernmodell, das dann in der Lage sein sollte, neue Bilder selbständig zu beschriften.
           student_description: Lerne, wie KI und maschinelles Lernen zur Lösung von Weltproblemen eingesetzt werden können.
+          name: Ozeane
         CSPPD3-Unit3-pt2:
           lessons:
             Challenge Overview:
@@ -18369,6 +18377,7 @@ de:
         csa-self-paced-pl:
           lessons:
             Navigating the Codeorg learning platform:
+              name: " Navigation in der Lernplattform Code.org"
               description_teacher: |-
                 **Sie lernen Folgendes:**
 
@@ -18745,6 +18754,7 @@ de:
             lesson-20: {}
             Circuits and Physical Prototypes:
               description_teacher: Bei der Vorbereitung des Abschlussprojekts zu diesem Kapitel lernen die SchülerInnen, wie man einen Prototyp eines physischen Objekts entwickelt, das einen Circuit Playground enthält. Anhand eines modellierten Leitfadens zur Projektplanung lernen die SchülerInnen, wie man ein paar einfache Schaltkreise verdrahtet und Prototypen baut, die das beabsichtigte Design eines Produkts vermitteln können, wobei billige und leicht verfügbare Materialien wie Karton und Klebeband verwendet werden.
+            lesson-21: {}
           lesson_groups:
             lessonGroup-3:
               display_name: Vorlagen
@@ -19815,6 +19825,7 @@ de:
             'Lesson 14: Assessment Day':
               key: 'Lektion 14: Bewertungstag'
               name: Prüfungstag
+            EOU Student Facting Survey - [Course]: {}
           lesson_groups:
             cspSurvey:
               display_name: Umfrage
@@ -19848,6 +19859,7 @@ de:
             'Lesson 9: Assessment Day':
               key: 'Lektion 9: Bewertungstag'
               name: Prüfungstag
+            EOU Student Facting Survey - [Course]: {}
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Lektion 2: Das Internet'
@@ -19880,6 +19892,7 @@ de:
             'Lesson 11: Assessment Day':
               key: 'Lektion 11: Bewertungstag'
               name: Prüfungstag
+            EOU Student Facting Survey - [Course]: {}
           lesson_groups:
             csp_unit3_2020:
               display_name: 'Lerneinheit 3: Einführung in das App Design '
@@ -19928,6 +19941,7 @@ de:
             'Lesson 15: Assessment Day':
               key: 'Lektion 15: Bewertungstag'
               name: Prüfungstag
+            EOU Student Facting Survey - [Course]: {}
           lesson_groups:
             csp_variables:
               display_name: Variablen
@@ -19990,6 +20004,7 @@ de:
             'Lesson 18: Assessment Day':
               key: 'Lektion 18: Bewertungstag'
               name: Prüfungstag
+            EOU Student Facting Survey - [Course]: {}
           lesson_groups:
             csp_lists:
               display_name: Listen
@@ -20266,6 +20281,7 @@ de:
             'Lesson 6: Assessment Day':
               key: 'Lektion 6: Bewertungstag'
               name: Prüfungstag
+            EOU Student Facting Survey - [Course]: {}
           lesson_groups:
             csp_unit6_2020:
               display_name: 'Lerneinheit 6: Algorithmen'
@@ -20303,11 +20319,16 @@ de:
             'Lesson 11: Assessment Day':
               key: 'Lektion 11: Bewertungstag'
               name: Prüfungstag
+            CS Principles Post-Course Survey:
+              name: Befragung zu „Grundsätze der Informatik“ nach dem Kurs
+            EOU Student Facting Survey - [Course]: {}
           lesson_groups:
             csp_parameters_return_values:
               display_name: Parameter und Rückgabewerte
             csp_libraries:
               display_name: Bibliotheken
+            lessonGroup-3:
+              display_name: Umfrage
         csp8-2022:
           lessons:
             Create PT - Review the Task:
@@ -20318,6 +20339,7 @@ de:
               key: PT erstellen - Einen Plan erstellen
             Create PT - Complete the Task:
               key: PT erstellen - Aufgabe abschließen
+            EOU Student Facting Survey - [Course]: {}
         csp9-2022:
           lessons:
             Learning from Data:
@@ -20352,6 +20374,7 @@ de:
             'Lesson 9: Assessment Day':
               key: 'Lektion 9: Bewertungstag'
               name: Prüfungstag
+            EOU Student Facting Survey - [Course]: {}
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Lektion 9: Daten'
@@ -20400,6 +20423,7 @@ de:
             'Lesson 14: Unit Assessment Day':
               key: 'Lektion 14: Tag der Bewertung der Lerneinheit'
               name: Prüfungstag
+            EOU Student Facting Survey - [Course]: {}
           lesson_groups:
             csp_unit10_2020:
               display_name: 'Lerneinheit 10: Cybersicherheit und globale Auswirkungen'
@@ -20820,41 +20844,69 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
+            lessonGroup-4:
+              display_name: Sandboxen
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
               key: Erlerne Drag und Drop
               name: Erlerne Drag und Drop
+              description_student: Klicken und ziehen Sie, um die Aufgaben fertigzustellen.
+              description_teacher: Diese Lektion gibt den SchülerInnen eine Vorstellung davon, was sie erwartet, wenn sie ins Computerlabor gehen. Sie beginnt mit einer kurzen Diskussion, in der sie in das richtige Verhalten im Computer-Labors eingeführt werden, dann werden sie einen Computer benutzen, um Aufgaben im Internet zu lösen.
             Sequencing with Scrat:
               key: Sequenzen mit Scrat
               name: Sequenzen mit Scrat
+              description_student: Programmieren Sie Scrat, dass er die Eichel erreicht.
+              description_teacher: Diese Lektion gibt den SchülerInnen eine Vorstellung davon, was sie erwartet, wenn sie ins Computerlabor gehen. Sie beginnt mit einer kurzen Diskussion, in der sie in das richtige Verhalten im Computer-Labors eingeführt werden, dann werden sie einen Computer benutzen, um Aufgaben im Internet zu lösen.
             Programming with Angry Birds:
               key: Programmieren mit Angry Birds
               name: Programmieren mit Angry Birds
+              description_teacher: Unter Verwendung von Charakteren aus Ice Age entwickeln die SchülerInnen sequentielle Algorithmen, um Scrat von einer Seite eines Labyrinths zur Eichel auf der anderen Seite zu bewegen. Dazu ordne sie Codebausteinen in einer linearen Abfolge an, so dass sie sich gerade bewegen, nach links oder rechts drehen.
             Programming with Rey and BB-8:
               key: Programmieren mit Rey und BB-8
               name: Programmieren mit Rey und BB-8
+              description_teacher: In dieser Lektion werden die SchülerInnen ihre neu gewonnenen Programmierkenntnisse auf kompliziertere Weise einsetzen, um einen kniffligen Kurs mit BB-8 zu navigieren.
             Programming with Harvester:
               key: Programmieren mit der Erntearbeiterin
               name: Programmieren mit der Erntearbeiterin
+              description_student: Hilf der Erntearbeiterin, Gemüse entlang eines Weges zu ernten.
+              description_teacher: Die SchülerInnen wenden die erlernten Programmierkonzepte auf die Harvester-Umgebung an. Anstatt die Figur nur an ein Ziel zu bringen, sollen die SchülerInnen nun mit einem neuen Baustein Mais sammeln. Die SchülerInnen werden weiterhin Kenntnisse für die Verwendung mit sequentiellen Algorithmen entwickeln und mit dem Debugging-Verfahren beginnen.
             Loops with Scrat:
               key: Schleifen mit Scrat
               name: Schleifen mit Scrat
+              description_student: Helfen Sie Scrat, mehr Boden mit Hilfe von Schleifen abzuarbeiten.
             Loops with Laurel:
               key: Schleifen mit Laurel
               name: Schleifen mit Laurel
+              description_teacher: In dieser Lektion vertiefen die Schüler das Konzept der Schleifen. Hier sammelt Laurel die Abenteurerin mit Schleifen Schätze in offenen Höhlen. Dann wird ein neuer Block `sammele Schätze` vorgestellt, der Laurel auf ihrer Reise helfen soll.
             Ocean Scene with Loops:
               key: Meeresszene mit Schleifen
               name: Meeresszene mit Schleifen
+              description_student: Verwenden Sie Schleifen und Muster, um die Bilder fertigzustellen.
+              description_teacher: Bei der Wiederaufnahme des Schleifen-Konzepts lernen die SchülerInnen, Bilder zu zeichnen, indem sie einfache Sequenzen von Anweisungen mithilfe von Schleifen wiederholen. In der vorhergehenden Lektion ohne Computer wurden Schleifen verwendet, um ein Labyrinth zu durchqueren und Schätze zu sammeln. Hier erzeugen die Schleifen Muster. Am Ende dieses Levels haben die SchülerInnen die Möglichkeit, ihre eigenen Bilder mit Hilfe von Schleifen zu erstellen.
             Drawing Gardens with Loops:
               key: Gärten mit Schleifen zeichnen
               name: Gärten mit Schleifen zeichnen
+              description_student: Verwenden Sie Muster und Schleifen, um die Bilder fertigzustellen.
+              description_teacher: Bei der Wiederaufnahme des Schleifen-Konzepts lernen die SchülerInnen, Bilder zu zeichnen, indem sie einfache Sequenzen von Anweisungen mithilfe von Schleifen wiederholen. In der vorhergehenden Lektion am Computer wurden Schleifen verwendet, um ein Labyrinth zu durchqueren und Schätze zu sammeln. Hier verwenden die SchülerInnen Schleifen, um Muster zu erzeugen. Am Ende dieses Levels haben Sie die Möglichkeit, eigene Bilder mit Hilfe von Schleifen zu erstellen.
             On the Move with Events:
               key: Aktionen mit Ereignissen
               name: Aktionen mit Ereignissen
+              description_student: Zeit, dein eigenes Spiel oder deine eigene Geschichte zu erstellen!
+              description_teacher: In dieser Online-Aktivität haben die SchülerInnen die Möglichkeit, die Verwendung von Ereignissen im Play Lab zu erlernen und alle bisher gelernten Programmierkenntnissen anzuwenden, um ein animiertes Spiel zu erstellen. Es ist die richtige Gelegenheit, kreativ zu werden und in Play Lab eine Geschichte zu erstellen!
             A Royal Battle with Events:
               key: Royal Battle mit Ereignissen
               name: Royal Battle mit Ereignissen
+              description_student: Verwenden Sie Ereignisse, um eine Geschichte oder ein interaktives Spiel zu erstellen.
+              description_teacher: In dieser Online-Aktivität haben die SchülerInnen die Möglichkeit, die Verwendung von Ereignissen im Play Lab zu erlernen und alle bisher gelernten Programmierkenntnisse anzuwenden, um ein animiertes Spiel zu erstellen. Es ist die richtige Gelegenheit, kreativ zu werden und in Play Lab ein Spiel zu erstellen!
+            Programming in with Angry Birds:
+              name: Programmieren mit Angry Birds
+              description_teacher: Unter Verwendung von Charakteren aus Ice Age entwickeln die SchülerInnen sequentielle Algorithmen, um Scrat von einer Seite eines Labyrinths zur Eichel auf der anderen Seite zu bewegen. Dazu ordne sie Codebausteinen in einer linearen Abfolge an, so dass sie sich gerade bewegen, nach links oder rechts drehen.
+            Programming in Harvester:
+              key: Programmieren mit der Erntearbeiterin
+              name: Programmieren mit der Erntearbeiterin
+              description_student: Hilf der Erntearbeiterin, Gemüse entlang eines Weges zu ernten.
+              description_teacher: Die SchülerInnen wenden die erlernten Programmierkonzepte auf die Harvester-Umgebung an. Anstatt die Figur nur an ein Ziel zu bringen, sollen die SchülerInnen nun mit einem neuen Baustein Mais sammeln. Die SchülerInnen werden weiterhin Kenntnisse für die Verwendung mit sequentiellen Algorithmen entwickeln und mit dem Debugging-Verfahren beginnen.
           lesson_groups:
             csf_sequencing:
               display_name: Sequencing
@@ -20862,6 +20914,10 @@ de:
               display_name: Schleifen
             csf_events:
               display_name: Ereignisse
+          description_audience: 'Alter: 4-8'
+          description_short: 'Eine Einführung in die Informatik für Leseanfänger: Kombiniert das Beste aus unseren Kursen für die Vorschule und für Erstklässler.'
+          description: Lernen Sie Informatik, indem Sie die folgenden Lektionen in Ihrem eigenen Tempo testen! Lernen Sie, Computerprogramme zu erstellen, Fähigkeiten für Problemlösungen zu entwickeln und lustige Aufgaben zu bewältigen! Erstellen Sie Spiele und kreative Projekte, die Sie mit Freunden, Familie und Lehrern teilen können.
+          student_description: Lernen Sie Informatik, indem Sie die folgenden Lektionen in Ihrem eigenen Tempo testen! Lernen Sie, Computerprogramme zu erstellen, Fähigkeiten für Problemlösungen zu entwickeln und lustige Aufgaben zu bewältigen! Erstellen Sie Spiele und kreative Projekte, die Sie mit Freunden, Familie und Lehrern teilen können.
         csa2-2022:
           lessons:
             lesson-5:
@@ -20874,16 +20930,42 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
+            lessonGroup-4:
+              display_name: Sandboxen
         csa3-2022:
           lessons:
+            lesson-3:
+              name: Eindimensionale (1D) Arrays
+            lesson-4:
+              name: Array-Elemente
             lesson-5:
               name: Schleifen mit dem Wiederhol-Block
+            lesson-6:
+              name: Array-Algorithmen
+            lesson-7:
+              name: Verbesserte For-Schleifen
+            lesson-8:
+              name: Statische Variablen und Konstanten
+            lesson-9:
+              name: Polymorphie
+            lesson-10:
+              name: Mehr Array-Algorithmen
+            lesson-11:
+              name: Umkehrung von Arrays
+            lesson-13:
+              name: Info zum Projekt Social Good – 1. Tag
+            lesson-14:
+              name: Info zum Projekt Social Good – 2. Tag
+            lesson-15:
+              name: Info zum Projekt Social Good – 3. Tag
             lesson-16:
               name: Konsole
             lesson-17: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
+            lessonGroup-4:
+              display_name: Sandboxen
         tessplayground: {}
         cs4all-invasive-species:
           lessons:
@@ -20923,6 +21005,10 @@ de:
           lessons:
             lesson-2:
               name: Lerneinheit 5 Bewertung
+            lesson-4: {}
+            lesson-7:
+              name: Verbesserte For-Schleifen
+            lesson-8: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -20954,7 +21040,10 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
-        pltess: {}
+        pltess:
+          lessons:
+            lesson-2:
+              name: Lektion 3
         self-paced-pl-csa1-2022:
           lessons:
             lesson-1:
@@ -20963,6 +21052,56 @@ de:
         self-paced-pl-csa3-2022:
           lessons:
             lesson-1: {}
+            lesson-3:
+              name: If-Anweisungen in Java
+              description_student: |-
+                **Aktivitäten:**
+
+                -   Boolesche Ausdrücke beurteilen
+                -   Anweisungen wie if, if-else, if-else-if-else schreiben und lesen
+                -   Beschreibung der Unterschiede zwischen Zuweisungsoperator und dem Vergleichsoperator
+
+                **Dauer voraussichtlich:** 90 Minuten
+              description_teacher: |-
+                **Aktivitäten:**
+
+                -   Boolesche Ausdrücke beurteilen
+                -   Anweisungen wie if, if-else, if-else-if-else schreiben und lesen
+                -   Beschreibung der Unterschiede zwischen Zuweisungsoperator und dem Vergleichsoperator
+
+                **Dauer voraussichtlich:** 90 Minuten
+            lesson-4:
+              name: Schleifen in Java
+              description_student: |-
+                **Aktivitäten:**
+
+                -   Java-Schleifen lesen, schreiben und beheben
+
+                **Voraussichtliche Dauer:** 90 Minuten
+              description_teacher: |-
+                **Aktivitäten:**
+
+                -   Java-Schleifen lesen, schreiben und beheben
+
+                **Voraussichtliche Dauer:** 90 Minuten
+            lesson-5:
+              name: Arrays in Java
+              description_student: |-
+                **Aktivitäten:**
+
+                -   Deklarieren und Initialisieren eines 1D-Arrays von primitiven Datentypen
+                -   Aufrufen und Modifizieren von Elementen in einem Array
+                -   Durchlaufen eines Arrays
+
+                **Voraussichtliche Dauer:** 120 Minuten
+              description_teacher: |-
+                **Aktivitäten:**
+
+                -   Deklarieren und Initialisieren eines 1D-Arrays von primitiven Datentypen
+                -   Aufrufen und Modifizieren von Elementen in einem Array
+                -   Durchlaufen eines Arrays
+
+                **Voraussichtliche Dauer:** 120 Minuten
         csa7-pilot-extra:
           lessons:
             Assessment Day:
@@ -21201,6 +21340,8 @@ de:
             The Neighborhood: {}
             The Theater: {}
             The Playground: {}
+            lesson-6:
+              name: Geistiges Eigentum
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -21233,16 +21374,86 @@ de:
           lessons:
             lesson-1:
               name: Willkommen
-            lesson-3: {}
-            lesson-9:
-              name: Unterrichtsplanung
+            lesson-4:
+              description_student: |-
+                **Aktivität:**
+
+                -   Sie erhalten ein umfassendes Verständnis des Lehrplans von CS Discoveries.
+              description_teacher: "**Überblick:**\nDiese asynchronen Aktivitäten geben den Teilnehmern einen allgemeinen Überblick über den Lehrplan von CS Discoveries, einen Überblick über die Kursinhalte und Werkzeuge, über die Struktur des Kurses und eine Vorschau auf den Problemlösungsprozess im Rahmen des Kurses wird. \n\n**Aktivitäten der Teilnehmer:**\n\n-   Überblick über den Lehrplan von CS Discoveries. \n\n**Geschätzte Dauer:** 40 Minuten"
+            lesson-5:
+              name: Asynchroner Überblick
+            lesson-6:
+              name: Modell Lektion 2 – Einheit 2 Lektion 2
+            lesson-7:
+              name: Identität
+            lesson-8:
+              name: Aufgaben der Lektion
+            lesson-10:
+              description_student: |-
+                **Aktivitäten:**
+
+                -   Reflexion über die Gestaltung Ihrer Rolle als Lehrkraft im CS Discoveries-Unterricht.
+              description_teacher: "**Überblick:**\nDiese asynchronen Aktivitäten sind eine Einführung in die Rolle des Lehrers als führender Schüler. Die Teilnehmer werden aufgefordert, darüber nachzudenken, wie ihre CS-Erfahrungen und Überzeugungen ihre Rolle als Lehrkraft im CS-Unterricht beeinflussen. Diese Reflexion bereitet die Teilnehmer auf die Identitätssitzung im weiteren Verlauf des Workshops vor. \n\n**Aktivitäten der Teilnehmer:**\n\n-   Reflexion über Ihre Rolle als Lehrkraft im CS Discoveries-Unterricht. \n\n**Geschätzte Zeit:** 20 Minuten"
+            lesson-11:
+              name: Zusammenfassung
+            Intro to HTML:
+              name: Modell Lektion 2 – Einheit 2 Lektion 2
         vpl-csd2-summer-pilot-2022:
           lessons:
-            lesson-1: {}
-            lesson-2: {}
-        vpl-csd3-summer-pilot-2022: {}
-        vpl-csd4-summer-pilot-2022: {}
-        vpl-csd5-summer-pilot-2022: {}
+            lesson-1:
+              name: Willkommen
+            lesson-3:
+              name: Unterrichtsplanung
+            lesson-4:
+              name: Asynch Vorb
+            lesson-6:
+              name: Asynchroner Überblick
+            lesson-9:
+              name: Zusammenfassung
+        vpl-csd3-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Willkommen
+            lesson-5:
+              name: Asynchroner Überblick
+            lesson-8:
+              name: Zusammenfassung
+        vpl-csd4-summer-pilot-2022:
+          lessons:
+            lesson-2:
+              name: "[TEMPLATE] Zusammenfassung"
+              description_student: "**Aktivitäten:**\n\n-   Erkunden Sie die Projekte am Ende des Kapitels. \n\n**Geschätzte Dauer:** 10 Minuten"
+              description_teacher: "**Aktivitäten:**\n\n-   Erkunden Sie die Projekte am Ende des Kapitels. \n\n**Geschätzte Dauer:** 10 Minuten"
+            lesson-3:
+              name: "[TEMPLATE] Inhaltliche Lektionen"
+              description_student: |-
+                **Aktivitäten:**
+
+                -   Einfügen der Objekte der Lektion.
+
+                **Geschätzte Dauer:** \_\_\_\_ Minuten
+              description_teacher: |-
+                **Aktivitäten:**
+
+                -   Einfügen der Objekte der Lektion.
+
+                **Geschätzte Dauer:** \_\_\_\_ Minuten
+            lesson-4:
+              name: Willkommen
+            lesson-7:
+              name: Asynch Vorb
+            lesson-11:
+              name: Asynchroner Überblick
+            lesson-14:
+              name: Zusammenfassung
+        vpl-csd5-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: Willkommen
+            lesson-4:
+              name: Asynch Vorb
+            lesson-6:
+              name: Asynchroner Überblick
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -21312,22 +21523,603 @@ de:
             Implementation Approaches and Barriers: {}
             Next steps:
               key: Nächste Schritte
-        vpl-csd1-ci-pilot-2022: {}
+        vpl-csd1-ci-pilot-2022:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4:
+              name: Physische Datenverarbeitung
+          title: 'Modul 1: Vorbereitung auf den Unterricht Problemlösung und Informatik'
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"Problemlösung und Informatik\" vor. \n\n**Aktivitäten in diesem professionellen Lernmodul:**\n\n– Sie erhalten eine Einführung in das Problemlösen und die Informatik.\n– Sie üben die wichtigsten Konzepte der Unterrichtseinheit.\n– Sie erkunden die Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 30 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"Problemlösung und Informatik\" vor. \n\n**Aktivitäten in diesem professionellen Lernmodul:**\n\n– Sie erhalten eine Einführung in das Problemlösen und die Informatik.\n– Sie üben die wichtigsten Konzepte der Unterrichtseinheit.\n– Sie erkunden die Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 30 Minuten"
         vpl-csd2-ci-pilot-2022:
           lessons:
+            lesson-1:
+              name: Einführung in die Webentwicklung
+              description_student: |-
+                **Aktivitäten:**
+
+                -   Sie werden in die Web-Entwicklungseinheit von code.org eingeführt.
+                -   Sie erleben in einer Vorschau die erste Woche der Webentwicklungsstunde.
+
+                **Geschätzte Dauer:** 10 Minuten
+              description_teacher: |-
+                **Aktivitäten:**
+
+                -   Sie werden in die Web-Entwicklungseinheit von code.org eingeführt.
+                -   Sie erleben in einer Vorschau die erste Woche der Webentwicklungsstunde.
+
+                **Geschätzte Dauer:** 10 Minuten
+            lesson-2:
+              name: Erstellen einer Website mit HTML
+              description_student: "**Aktivitäten:**\n\n-   Einführung in die Verwendung von Web Lab.\n-   Hinzufügen von Strukturen zu einer Webseite mit HML. \n-   Einfügen von Bildern in eine Webseite. \n\n**Geschätzte Dauer:** 30 Minuten"
+              description_teacher: "**Aktivitäten:**\n\n-   Einführung in die Verwendung von Web Lab.\n-   Hinzufügen von Strukturen zu einer Webseite mit HML. \n-   Einfügen von Bildern in eine Webseite. \n\n**Geschätzte Dauer:** 30 Minuten"
+            lesson-3:
+              name: Gestaltung einer Website mit CSS
+              description_student: |-
+                **Aktivitäten:**
+
+                -   Gestalten des Textes einer Webseite mit CSS.
+                -   Verknüpfung eines CSS-Stylesheets mit dem Index einer Webseite.
+                -   Sie erkunden weitere Eigenschaften zur Gestaltung von Elementen auf einer Webseite.
+
+                **Geschätzte Dauer:** 25 Minuten
+              description_teacher: |-
+                **Aktivitäten:**
+
+                -   Gestalten des Textes einer Webseite mit CSS.
+                -   Verknüpfung eines CSS-Stylesheets mit dem Index einer Webseite.
+                -   Sie erkunden weitere Eigenschaften zur Gestaltung von Elementen auf einer Webseite.
+
+                **Geschätzte Dauer:** 25 Minuten
+            lesson-4:
+              name: Aspekte der Rollen und Verantwortlichkeiten in Bezug auf digitale Medien
+              description_student: |-
+                **Aktivitäten:**
+
+                -   Erkunden Sie, wie die Schüler ihre Rolle und Verantwortung als Schöpfer und Konsumenten digitaler Medien am besten lernen.
+
+                **Geschätzte Dauer:** 15 Minuten
+              description_teacher: |-
+                **Aktivitäten:**
+
+                -   Erkunden Sie, wie die Schüler ihre Rolle und Verantwortung als Schöpfer und Konsumenten digitaler Medien am besten lernen.
+
+                **Geschätzte Dauer:** 15 Minuten
             lesson-5:
               name: Physische Datenverarbeitung
+              description_student: "**Aktivitäten:**\n\n-   Erkunden Sie die Projekte am Ende des Kapitels. \n\n**Geschätzte Dauer:** 10 Minuten"
+              description_teacher: "**Aktivitäten:**\n\n-   Erkunden Sie die Projekte am Ende des Kapitels. \n\n**Geschätzte Dauer:** 10 Minuten"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Webentwicklung unterrichten
+          title: 'Modul 2: Vorbereitung auf das Unterrichten der Webentwicklung'
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf die Code.org-Stunde Webentwicklung vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in die Webentwicklung.\n– Üben der wichtigsten Konzepte der Lerneinheit.\n– Beschäftigung mit Web Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich auf die Code.org-Stunde Webentwicklung vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in die Webentwicklung.\n– Üben der wichtigsten Konzepte der Lerneinheit.\n– Beschäftigung mit Web Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90 Minuten"
         vpl-csd3-ci-pilot-2022:
           lessons:
-            lesson-2: {}
+            lesson-1:
+              name: Einführung in interaktive Animationen und Spiele
+            lesson-2:
+              name: Erstellen einer Szene
+            lesson-3:
+              name: Animieren einer Szene mit Sprites
+            lesson-4:
+              name: Erkunden des Spiel-Designs
             lesson-5:
               name: Physische Datenverarbeitung
-        vpl-csd4-ci-pilot-2022: {}
-        vpl-csd5-ci-pilot-2022: {}
-        vpl-csd6-ci-pilot-2022: {}
-        vpl-csd7-ci-pilot-2022: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vorbereitung auf das Unterrichten von interaktiven Animationen und Spielen
+          title: 'Modul 3: Vorbereitung auf das Unterrichten von interaktiven Animationen und Spielen '
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde Interaktive Animationen und Spiele vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in interaktive Animationen und Spiele.\n– Üben der wichtigsten Konzepte der Unterrichtseinheit.\n– Beschäftigung mit Game Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde Interaktive Animationen und Spiele vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in interaktive Animationen und Spiele.\n– Üben der wichtigsten Konzepte der Unterrichtseinheit.\n– Beschäftigung mit Game Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+        vpl-csd4-ci-pilot-2022:
+          lessons:
+            lesson-1: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5:
+              name: Physische Datenverarbeitung
+          title: " Modul 4: Vorbereitung auf das Unterrichten des Design-Prozesses"
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"Design-Prozess\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Eine Einführung in den Designprozess.\n– Üben der wichtigsten Konzepte der Einheit.\n– Beschäftigung mit App Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"Design-Prozess\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Eine Einführung in den Designprozess.\n– Üben der wichtigsten Konzepte der Einheit.\n– Beschäftigung mit App Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90 Minuten"
+        vpl-csd5-ci-pilot-2022:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4:
+              name: Daten und Gesellschaft
+            lesson-5:
+              name: Physische Datenverarbeitung
+          title: 'Modul 5: Vorbereitung auf den Unterricht Daten und Gesellschaft'
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"Daten und Gesellschaft\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in das Thema \"Daten und Gesellschaft.\n– Üben der wichtigsten Konzepte der Stunde.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"Daten und Gesellschaft\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in das Thema \"Daten und Gesellschaft.\n– Üben der wichtigsten Konzepte der Stunde.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90 Minuten"
+        vpl-csd6-ci-pilot-2022:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5:
+              name: Physische Datenverarbeitung
+          title: 'Modul 6: Vorbereitung auf das Unterrichten der physischen Informatik'
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf die Code.org-Stunde \"Physische Informatik\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in die physische Informatik.\n– Üben der wichtigsten Konzepte der Einheit.\n– Beschäftigung mit der Hersteller-App.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich auf die Code.org-Stunde \"Physische Informatik\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in die physische Informatik.\n– Üben der wichtigsten Konzepte der Einheit.\n– Beschäftigung mit der Hersteller-App.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 90 Minuten"
+        vpl-csd7-ci-pilot-2022:
+          lessons:
+            lesson-1: {}
+            lesson-2:
+              name: Interaktive Animationen und Spiele
+            lesson-3:
+              name: Der Entwurfsprozess
+            lesson-4:
+              name: Daten und Gesellschaft
+            lesson-5:
+              name: Physische Datenverarbeitung
+            Introduction to AI and machine learning:
+              name: Webentwicklung
+            Train a machine learning model:
+              name: Interaktive Animationen und Spiele
+            Engage with machine learning apps:
+              name: Der Entwurfsprozess
+            Consider real world implications:
+              name: Daten und Gesellschaft
+            Unit wrap up:
+              name: Physische Datenverarbeitung
+          title: 'Modul 7: Vorbereitung auf den Unterricht KI und maschinelles Lernen'
+          description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"KI und maschinelles Lernen\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in KI und maschinelles Lernen.\n– Üben der wichtigsten Konzepte der Einheit.\n– Beschäftigung mit AI Lab und App Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
+          student_description: "In diesem professionellen Lernmodul bereiten Sie sich auf den Unterricht der Code.org-Stunde \"KI und maschinelles Lernen\" vor. \n\n**Aktivitäten dieses professionellen Lernmoduls:**\n\n– Einführung in KI und maschinelles Lernen.\n– Üben der wichtigsten Konzepte der Einheit.\n– Beschäftigung mit AI Lab und App Lab.\n– Erkunden der Projekte am Ende des Kapitels.\n\n**Geschätzte Dauer:** 120 Minuten"
         hello-world-csc:
+          lessons:
+            lesson-1:
+              name: Hallo Welt CSC
           title: Hallo Welt
         csd-playground:
           lessons:
+            lesson-1:
+              name: Level-Aktualisierungen
+            Innovations in Computing:
+              name: Innovationen in der Datenverarbeitung
+              description_teacher: Zum Auftakt der letzten Lerneinheit dieses Kurses werden die SchülerInnen einige Untersuchungen zu interessanten Innovationen im Bereich der Informatik durchführen. In dieser Lektion werden die SchülerInnen mit einer größeren Vielfalt von Formfaktoren für Computer (wie ein Computer aussieht) und Bereichen konfrontiert, die von Computern beeinflusst werden. Später in dieser Lektion werden die SchülerInnen sich noch einmal mit Geräten auseinandersetzen, die sie in dieser Lektion kennengelernt haben, während sie ihre eigenen physischen Computergeräte entwickeln.
+          title: CSD Playground
+          description_audience: Lehrpan-Autoren
+          description_short: Für die Bereitstellung von Aktualisierungen der Lektionen oder Stufen zwischen Lehrplanversionen
+          description: Für die Bereitstellung von Aktualisierungen der Lektionen oder Stufen zwischen Lehrplanversionen
+        csc-pilot-2022-ecosystems:
+          lessons:
             lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            Hello World CSC:
+              name: Hallo Welt CSC
+        csc-pilot-2022-timecapsule:
+          lessons:
+            lesson-3: {}
+            Poem Art:
+              name: Dichtkunst
+              description_teacher: 'In dieser integrierten CS- und ELA-Stunde animieren die jungen Programmierer ein Gedicht, um die Stimmung des Gedichts zu illustrieren. Sie lesen und erfassen die Stimmung des Gedichts. Sie suchen nach passenden Effekten und Bilder, die diese Stimmung ausdrücken. Schließlich illustrieren sie mit Ereignissen (Code) Stimmungswechsel oder animiere die Einführung neuer Bilder in einem Gedicht.  '
+        csc-pilot-2022-starquilts:
+          lessons:
+            lesson-2: {}
+            lesson-3: {}
+        csc-pilot-2022-fables:
+          lessons:
+            lesson-3: {}
+            Hello World CSC:
+              name: Hallo Welt CSC
+        csd1-2022:
+          lessons:
+            CS Discoveries Pre-survey:
+              name: Grundsätze der Informatik Befragung vor dem Kurs
+              key: Grundsätze der Informatik Befragung vor dem Kurs
+            Intro to Problem Solving:
+              name: Einführung in die Problemlösung
+              key: Einführung in die Problemlösung
+            The Problem Solving Process:
+              name: Der Problemlösungsprozess
+              key: Der Problemlösungsprozess
+            Exploring Problem Solving:
+              name: Problemlösung erforschen
+              key: Problemlösung erforschen
+            What is a Computer?:
+              name: Was ist ein Computer?
+              description_teacher: "**Frage des Tages: Was ist ein Computer?**\\\\r \n\\\\r \nIn dieser Lektion erarbeiten die SchülerInnen eine vorläufige Definition eines Computers. Zu Beginn der Lektion macht die Klasse ein Brainstorming über mögliche Definitionen, was ein Computer ist, und stellt die Ergebnisse dieser Überlegungen auf der Tafel dar. Als nächstes sortieren die SchülerInnen in Gruppen Bilder auf Posterpapier in die Kategorien \"ist ein Computer\" oder \"ist kein Computer\". Die Gruppen stellen dann ihre Plakate auf erläutern kurz ihre Begründungen für die Wahl einiger ihrer schwierigsten Kategorisierungen. Der Lehrer/die Lehrerin stellt dann eine Definition des Computers vor und lässt die Gruppen ihre Plakate entsprechend der neuen Definition zu überarbeiten.\\\\r"
+              key: Was ist ein Computer?
+            Input and Output:
+              name: Input und Output
+              key: Input und Output
+            Processing:
+              name: Verarbeitung
+              description_teacher: |-
+                **Frage des Tages: Auf welche unterschiedliche Arten können Computer Informationen verarbeiten?**\\r
+                \\r
+                Diese Lektion stellt den SchülerInnen vier gängige Arten der Verarbeitung vor: wenn/dann (Bedingungen), Suche nach einer Übereinstimmung (Suche), Zählen und Vergleichen. Die SchülerInnen lernen die Arten der Verarbeitung zunächst anhand mehrerer Beispiel-Apps kennen. Dann untersuchen sie weitere Apps, um festzustellen, welche Verarbeitungsarten dort jeweils verwendet werden. Dann denken sie sich ihre eigene App aus und entscheiden, welche Arten der Verarbeitung sie benötigen würde, um zu funktionieren. Schließlich führen die SchülerInnen ein Brainstorming zu anderen Verarbeitungsarten durch, die zwar nützlich sein könnten, aber nicht in der Hauptlektion besprochen wurden.
+              key: Verarbeitung
+            Storage:
+              name: Speicher
+              key: Speicher
+            Project - Propose an App:
+              name: Projekt - Eine App vorschlagen
+              description_teacher: "**Frage des Tages: Wie kann uns das IOSP-Modell dabei helfen, eine App zu entwerfen, die ein Problem löst?**\\\\r \n\\\\r \nZum Abschluss ihrer Untersuchung zum Problemlösungsprozess und das Input-/Output-/Speicher-/Prozessmodell eines Computers schlagen die SchülerInnen eine App vor, die ein Problem aus der Praxis lösen soll. Dieses Projekt erstreckt sich über mehrere Tage. Dabei werden die SchülerInnen ein Poster erstellen, das die Funktionen ihrer Anwendung hervorhebt und das sie ihren KlassenkameradInnen präsentieren. Ein Projektleitfaden bietet den SchülerInnen schrittweise Anleitungen und hilft ihnen, ihre Gedanken zu ordnen. Das Projekt ist so konzipiert, dass es zu zweit durchgeführt wird, kann aber auch auch einzeln abgeschlossen werden."
+              key: Projekt - Eine App vorschlagen
+            Post-Project Test:
+              name: Test nach dem Projekt
+              key: Test nach dem Projekt
+            Intro to Problem Solving - Newspaper Table (Alternate Lesson 1):
+              name: Einführung in das Lösen von Problemen - Zeitungstisch (Alternative Lektion 1)
+              key: Einführung in das Lösen von Problemen - Zeitungstisch (Alternative Lektion 1)
+            Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1):
+              name: Einführung in das Lösen von Problemen - Spaghetti-Brücke (Alternative Lektion 1)
+              key: Einführung in das Lösen von Problemen - Spaghetti-Brücke (Alternative Lektion 1)
+            Intro to Problem Solving - Paper Tower (Alternate Lesson 1):
+              name: Einführung in das Lösen von Problemen - Papierturm (Alternative Lektion 1)
+              key: Einführung in das Lösen von Problemen - Papierturm (Alternative Lektion 1)
+            Exploring Problem Solving - Animals Theme (Alternate Lesson 3):
+              name: Erkunden des Problemlösens - Thema Tiere (Alternative Lektion 3)
+              key: Erkunden des Problemlösens - Thema Tiere (Alternative Lektion 3)
+            Exploring Problem Solving - Games Theme (Alternate Lesson 3):
+              name: Erkunden des Problemlösens - Thema Spiele (Alternative Lektion 3)
+              key: Erkunden des Problemlösens - Thema Spiele (Alternative Lektion 3)
+          lesson_groups:
+            cspSurvey:
+              display_name: Umfrage
+            csd1_1:
+              display_name: 'Kapitel 1: Der Problemlösungsprozess'
+            csd1_2:
+              display_name: 'Kapitel 2: Computer und Problemlösung'
+            csd1_3:
+              display_name: Alternate Lessons (alternative Lerneinheiten)
+          description_short: Erfahren Sie, wie Menschen mit Computern arbeiten, um Probleme zu lösen.
+        csd2-2022:
+          lessons:
+            Exploring Web Pages:
+              name: Erkundung von Webseiten
+              key: Erkundung von Webseiten
+            Intro to HTML:
+              name: Einführung in HTML
+              key: Einführung in HTML
+            Headings:
+              name: Überschriften
+              key: Überschriften
+            'Mini-Project: HTML Web Page':
+              name: 'Mini-Projekt: HTML-Webseite'
+              key: 'Mini-Projekt: HTML-Webseite'
+            Digital Footprint:
+              name: Digitaler Fußabdruck
+              key: Digitaler Fußabdruck
+            Styling Text with CSS:
+              name: Text mit CSS formatieren
+              description_teacher: "**Frage des Tages: Wie können wir den Textstil auf einer Webseite ändern?**\\\\r\n\\\\r \nDiese Lektion stellt CSS als eine Möglichkeit vor, Elemente auf der Seite zu stilisieren. Die Schülerinnen lernen die grundlegende Syntax für CSS-Regelsätze kennen und untersuchen dann die Eigenschaften, die HTML-Textelemente beeinflussen. Sie arbeiten an einer HTML-Seite über Guinness-Weltrekordhalter und fügen der bereitgestellten Seite ihren eigenen Stil hinzu."
+              key: Text mit CSS formatieren
+            'Mini-Project: Your Personal Style':
+              name: 'Mini-Projekt: Ihr persönlicher Stil'
+              key: 'Mini-Projekt: Ihr persönlicher Stil'
+            Intellectual Property:
+              name: Geistiges Eigentum
+              key: Geistiges Eigentum
+            Styling Elements with CSS:
+              name: Stilelemente mit CSS gestalten
+              description_teacher: "**Frage des Tages: Wie können wir die Bilder und Layouts unserer Seiten stylen?**\\\\r \n\\\\r \nIn dieser Lektion wird die Einführung in CSS-Style-Eigenschaften fortgesetzt, wobei der Schwerpunkt hier mehr auf Nicht-Text-Elementen liegt. Die SchülerInnen beginnen diese Lektion mit einem Blick auf eine Website über Desserts dieser Welt. Sie untersuchen und verändern die neuen CSS-Stile auf dieser Website und fügen der Seite ihre eigenen Stilelemente hinzu. Nach der Arbeit an der Seite \"Desserts\" wenden die SchülerInnen ihr Wissen über die neuen CSS-Eigenschaften an."
+              key: Stilelemente mit CSS gestalten
+            Your Web Page - Prepare:
+              name: Ihre Webseite - Vorbereiten
+              key: Ihre Webseite - Vorbereiten
+            Team Problem Solving:
+              name: Problemlösung im Team
+              key: Problemlösung im Team
+            Sources and Research:
+              name: Quellen und Forschung
+              key: Quellen und Forschung
+            CSS Classes:
+              name: CSS-Klassen
+              key: CSS-Klassen
+            Linking Pages:
+              name: Verknüpfe Seiten
+              key: Verknüpfe Seiten
+            Project - Website for a Purpose:
+              name: Projekt - Website für einen Zweck
+              key: Projekt - Website für einen Zweck
+            Peer Review and Final Touches:
+              name: Beurteilung durch SchulkollegInnen und letzter Schliff
+              key: Beurteilung durch SchulkollegInnen und letzter Schliff
+            Post-Project Test:
+              name: Test nach dem Projekt
+              key: Test nach dem Projekt
+            CS Discoveries Post-Course Survey:
+              name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+            'Websites for Expression ':
+              key: Websites für den Ausdruck
+            Planning a Multi-page Website:
+              key: Planen einer Website mit mehreren Seiten
+            lesson-1:
+              key: Lektion-1
+              name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+            EOU Student Facting Survey - [Course]: {}
+          lesson_groups:
+            cspSurvey:
+              display_name: Umfrage
+          student_description: In Lerneinheit 2 lernen Sie, wie Sie Inhalte auf Ihren eigenen Webseiten erstellen und veröffentlichen können. Nachdem Sie entschieden haben, welche Inhalte Sie mit der Welt teilen möchten, lernen Sie, wie Sie Ihre Seiten mit HTML und CSS strukturieren und gestalten können. Außerdem üben Sie wertvolle Programmierkenntnisse, wie z. B. Fehlerbehebung/Debugging, Verwendung von Ressourcen und Teamarbeit.
+          description_short: Lernen Sie, Ihre eigene Website in Web Lab zu erstellen.
+        csd3-2022:
+          lessons:
+            Programming for Entertainment:
+              name: Programmieren zur Unterhaltung
+              key: Programmieren zur Unterhaltung
+            Plotting Shapes:
+              name: Formen plotten
+              key: Formen plotten
+            Drawing in Game Lab:
+              name: Zeichnen im Game Lab
+              description_teacher: "**Frage des Tages: Wie können wir einem Computer mitteilen, wie er Formen auf dem Bildschirm zeichnen soll?**\\\\r \n\\\\r Die SchülerInnen werden in Game Lab, die Programmierumgebung für diese Lerneinheit, eingeführt und beginnen, sie zu benutzen, um Formen auf dem Bildschirm zu positionieren. Sie lernen die Grundlagen des Sequenzierens und Debuggens sowie einige einfache Befehle kennen. Am Ende der Lektion sind die SchülerInnen in der Lage, Bilder zu programmieren, wie sie sie in der vorhergehenden Lektion mit dem Zeichenwerkzeug erstellt haben."
+              key: Zeichnen im Game Lab
+            Variables:
+              name: Variablen
+              key: Variablen
+            Random Numbers:
+              name: Zufällige Zahlen
+              key: Zufällige Zahlen
+            Sprites:
+              name: Sprites
+              key: Sprites
+            Sprite Properties:
+              name: Sprite Eigenschaften
+              key: Sprite Eigenschaften
+            Text:
+              name: Text
+              key: Text
+            The Draw Loop:
+              name: Die Zieh-Schleife
+              description_teacher: "**\\*Frage des Tages: Wie können wir unsere Bilder im Game Lab animieren?**\\\\r \n\\\\r \nIn dieser Lektion werden die SchülerInnen in die Zeichenschleife, eines der zentralen Programmierparadigmen in Game Lab, eingeführt. Zu Beginn der Lektion schauen sich die SchülerInnen einige physische Daumenkinos an, um zu sehen, dass viele Einzelbilder mit unterschiedlichen Bildern den Eindruck von Bewegung erzeugen. Anschließend sehen sich die SchülerInnen ein Video an, in dem erklärt wird, wie die `Zeichen`-Schleife in Game Lab dazu beiträgt, den gleichen Eindruck in ihren Programmen zu erzeugen. Die SchülerInnen kombinieren die `Zeichen`-Schleife mit Zufallszahlen, um einige einfache Animationen mit Punkten und dann mit Sprites zu bearbeiten."
+              key: Die Zieh-Schleife
+            Sprite Movement:
+              name: Sprite-Bewegung
+              key: Sprite-Bewegung
+            Conditionals:
+              name: Bedingungen
+              key: Bedingungen
+            Keyboard Input:
+              name: Tastatureingabe
+              key: Tastatureingabe
+            Mouse Input:
+              name: Input mit der Maus
+              key: Input mit der Maus
+            Project - Interactive Card:
+              name: Projekt - Interaktive Karte
+              key: Projekt - Interaktive Karte
+            Velocity:
+              name: Geschwindigkeit
+              description_teacher: "**Frage des Tages: Wie können Programmiersprachen komplizierte Muster verbergen, um das Programmieren einfacher zu machen?**\\\\r \n\\\\r \nNach einem kurzen Überblick darüber, wie Zählermuster verwendet werden, um Sprites zu bewegen, wird der Klasse das Konzept vorgestellt, wie man diese Muster in einem einzigen Baustein verbirgt. Anschließend arbeiten die Schüler mit Code Studio, um neue Bausteine zu testen, die die Geschwindigkeit eines Sprites unmittelbar bestimmen. Dann betrachten sie verschiedene Möglichkeiten, wie sie komplexere Behaviors in ihren Sprites codieren können."
+              key: Geschwindigkeit
+            Collision Detection:
+              name: Kollisions-Entdeckung
+              key: Kollisions-Entdeckung
+            Complex Sprite Movement:
+              name: Komplexe Sprite-Bewegung
+              key: Komplexe Sprite-Bewegung
+            Collisions:
+              name: Kollisionen
+              description_teacher: "**Frage des Tages: Wie entwickeln Programmierer Abstraktionen, um weitere Abstraktionen zu programmieren?**\\\\r\n\\\\r\nIn diese Stunde programmieren die Schülerinnen und Schüler neue Interaktionsformen ihrer Sprites. Nach einem kurzen Rückblick, wie sie den Baustein [`isTouching`(#f78183)](/docs/gamelab/isTouching/) verwenden, spielen die Schülerinnen und Schüler im Brainstorming die Möglichkeiten durch, wie die Sprites noch interagieren könnten. Dann verwenden sie [`isTouching`(#f78183)](/docs/gamelab/isTouching/), um ein Sprite mit einem anderen Sprite über den Bildschirm zu schieben und üben vier Kollisionsbausteine ([`collide`(#f78183)](/docs/gamelab/collide/), [`displace`(#f78183)](/docs/gamelab/displace/), [`bounce`(#f78183)](/docs/gamelab/bounce/) und [`bounceOff`(#f78183)](/docs/gamelab/bounceOff/))."
+              key: Kollisionen
+            Functions:
+              name: Funktionen
+              description_teacher: "**Frage des Tages: Wie können Programmierer Funktionen verwenden, um ihre eigenen Abstraktionen zu erstellen?**\\\\r\n\\\\r \nDie SchülerInnen lernen, wie man Funktionen erstellt, um ihren Code zu organisieren, ihn lesbarer zu machen und wiederholte Codeblöcke zu entfernen. Die SchülerInnen denken zunächst darüber nach, welche Art neuer Bausteine sie gerne in Game Lab hätten und welchen Code diese Bausteine enthalten würden. Danach lernen sie, wie sie Funktionen in Game Lab erstellen können. Sie werden Funktionen verwenden, um lange Codebausteine aus ihrer Zeichenschleife zu entfernen und wiederholte Bestandteile des Codes durch eine einzige Funktion zu ersetzen."
+              key: Funktionen
+            The Game Design Process:
+              name: Der Prozess eines Spielentwurfs
+              key: Der Prozess eines Spielentwurfs
+            Using the Game Design Process:
+              name: Verwendung des Prozesses eines Spielentwurfs
+              key: Verwendung des Prozesses eines Spielentwurfs
+            Project - Design a Game:
+              name: Projekt Ein Spiel erstellen
+              key: Projekt Ein Spiel erstellen
+            Post-Project Test:
+              name: Test nach dem Projekt
+              key: Test nach dem Projekt
+            CS Discoveries Post-Course Survey:
+              name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+            'Mini-Project: Captioned Scenes':
+              key: 'Mini-Projekt: Szenen mit Untertiteln'
+            'Mini-Project: Animation':
+              key: 'Mini-Projekt: Animation'
+            'Mini-Project: Side Scroller':
+              key: 'Mini-Projekt: Side-Scroller'
+            'Mini-Project: Flyer Game':
+              key: 'Mini-Projekt: Flyer-Spiel'
+            lesson-1:
+              key: Lektion-1
+              name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+            EOU Student Facting Survey - [Course]: {}
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapitel 1: Bilder und Animationen'
+            csd3_2:
+              display_name: 'Kapitel 2: Erstellen von Spielen'
+            cspSurvey:
+              display_name: Umfrage
+          student_description: In Lerneinheit 3 arbeiten Sie bei der Programmierung von Animationen, interaktiver Kunst und Spielen im Game Lab mit Ihrer Programmiererfahrung. Die Lerneinheit beginnt mit einfachen Formen und baut auf anspruchsvollere spritebasierte Spiele auf, wobei dieselben Programmierkonzepte und der Designprozess eingesetzt werden, die Informatiker täglich verwenden. Beim dem abschließenden Projekt entwickeln Sie ein personalisiertes, interaktives Programm.
+        csd4-2022:
+          lessons:
+            Understanding Your User:
+              name: Den Benutzer verstehen
+              key: Den Benutzer verstehen
+            User Interfaces:
+              name: Benutzeroberflächen
+              key: Benutzeroberflächen
+            Feedback and Testing:
+              name: Feedback und Tests
+              key: Feedback und Tests
+            Identifying User Needs:
+              name: Identifizieren von Benutzerbedürfnissen
+              key: Identifizieren von Benutzerbedürfnissen
+            Project - Paper Prototype:
+              name: Projekt - Papier-Prototyp
+              key: Projekt - Papier-Prototyp
+            Designing Apps for Good:
+              name: Apps für gute Zwecke entwickeln
+              key: Apps für gute Zwecke entwickeln
+            Market Research:
+              name: Marktforschung
+              key: Marktforschung
+            Prototype Testing:
+              name: Testen von Prototypen
+              key: Testen von Prototypen
+            Testing the App:
+              name: Testen der App
+              key: Testen der App
+            Project - App Presentation:
+              name: Projekt - App-Präsentation
+              key: Projekt - App-Präsentation
+            Post-Project Test:
+              name: Test nach dem Projekt
+              key: Test nach dem Projekt
+            CS Discoveries Post-Course Survey:
+              name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+              key: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+            Analysis of Design:
+              key: Analyse der Planung
+            Paper Prototypes:
+              key: Papier-Prototypen
+            Digital Design:
+              key: Digitaler Entwurf
+            Linking Screens:
+              key: Verknüpfung der Bildschirme
+            EOU Student Facting Survey - [Course]: {}
+          lesson_groups:
+            csd4_1:
+              display_name: 'Kapitel 1: Benutzerzentriertes Design'
+            csd4_2:
+              display_name: 'Kapitel 2: App Prototyping'
+            cspSurvey:
+              display_name: Umfrage
+          student_description: Die Lerneinheit 4 stellt die breiteren sozialen Auswirkungen der Informatik vor. Anhand einer Reihe von Design-Aufgaben lernen Sie, wie Sie die Bedürfnisse anderer besser verstehen und gleichzeitig eine Lösung für ein Problem entwickeln können. Die zweite Hälfte der Lerneinheit besteht aus einem iterativen Teamprojekt, bei dem die Teams die Möglichkeit haben, einen Bedarf zu identifizieren, der ihnen am Herzen liegt, Lösungen sowohl auf Papier als auch im App-Lab prototypisch zu entwickeln und Lösungen mit realen Benutzern zu testen, um Feedback zu erhalten und die Iteration weiter voranzutreiben.
+          description_short: Lernen Sie, wie Sie ein Programm entwerfen, das den Bedürfnissen Ihrer Benutzer entspricht.
+        csd5-2022:
+          lessons:
+            Representation Matters:
+              name: Darstellung ist wichtig
+              key: Darstellung ist wichtig
+            Patterns and Representation:
+              name: Muster und Darstellung
+              key: Muster und Darstellung
+            ASCII and Binary Representation:
+              name: ASCII- und Binärdarstellung
+              key: ASCII- und Binärdarstellung
+            Representing Images:
+              name: Darstellen von Bildern
+              key: Darstellen von Bildern
+            Representing Numbers:
+              name: Zahlendarstellung
+              key: Zahlendarstellung
+            Combining Representations:
+              name: Kombinieren von Darstellungen
+              key: Kombinieren von Darstellungen
+            Keeping Data Secret:
+              name: Daten geheim halten
+              key: Daten geheim halten
+            Problem Solving and Data:
+              name: Problemlösung und Daten
+              key: Problemlösung und Daten
+            Structuring Data:
+              name: Daten strukturieren
+              key: Daten strukturieren
+            Interpreting Data:
+              name: Daten interpretieren
+              key: Daten interpretieren
+            Making Decisions with Data:
+              name: Entscheidungen mit Daten
+              key: Entscheidungen mit Daten
+            Automating Data Decisions:
+              name: Automatisierung von Datenentscheidungen
+              key: Automatisierung von Datenentscheidungen
+            Problem Solving with Big Data:
+              name: Problemlösung mit Big Data
+              key: Problemlösung mit Big Data
+            Post-Project Test:
+              name: Test nach dem Projekt
+              key: Test nach dem Projekt
+            CS Discoveries Post-Course Survey:
+              name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+              key: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+            Project - Create a Representation:
+              key: Projekt - Erstellen einer Darstellung
+            EOU Student Facting Survey - [Course]: {}
+          lesson_groups:
+            csd5_1:
+              display_name: 'Kapitel 1: Darstellung von Informationen'
+            csd5_2:
+              display_name: 'Kapitel 2: Datenprobleme lösen'
+            cspSurvey:
+              display_name: Umfrage
+          student_description: Lerneinheit 5 befasst sich mit der Bedeutung von Daten bei der Lösung von Problemen und erklärt, wie Computer dabei helfen können. Das erste Kapitel befasst sich mit verschiedenen Systemen, die zur Darstellung von Informationen in einem Computer verwendet werden, sowie mit den Aufgaben und Kompromissen, die mit ihrer Verwendung einhergehen. Im zweiten Kapitel erfahren Sie, wie Datensammlungen zur Lösung von Problemen verwendet werden und wie Computer dabei helfen, die Schritte dieses Prozesses zu automatisieren. Das Kapitel schließt mit der Überlegung, wie ein Problemlösungsprozess für Daten in einem Bereich Ihrer Wahl eingesetzt werden kann.
+          description_short: Erfahren Sie, wie Menschen Computer verwenden, um Datenprobleme zu lösen.
+        csd7-2022:
+          lessons:
+            Numerical Models:
+              description_teacher: |-
+                In dieser Lektion nehmen die Schüler an einer Offline-Übung teil, die einen Zombie-Ausbruch simuliert. Die Schüler müssen anhand der Daten aus einer Nachbarstadt vorhersagen, in welchen Stadtteilen es die wenigsten Zombies gibt. Die Schüler verwenden Ähnlichkeitsstufen und Durchschnittswerte, um Vorhersagen über die Anzahl der Zombies an einem bestimmten Ort zu treffen. Anschließend werden die Schüler gerettet und können ihre Vorhersagen mit den tatsächlichen Zahlen vergleichen, um zu erörtern, wie genau die numerischen Daten im Vergleich zu den Daten der Kategorie sind.
+
+                **Frage des Tages:** Wie lernen Computer, auf der Basis numerischer Daten Vorhersagen zu erstellen?
+            Survey Planning:
+              name: Entwurf einer Datenerhebung
+              key: Entwurf einer Datenerhebung
+            CS Discoveries Post-Course Survey:
+              name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+              key: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+            Similarity Models:
+              description_teacher: |-
+                In dieser Lektion nehmen die Schüler an einer Offline-Übung teil, die einen Zombie-Ausbruch simuliert. Die Schüler müssen anhand der Daten aus einer Nachbarstadt vorhersagen, in welchen Stadtteilen es die wenigsten Zombies gibt. Die Schüler verwenden Ähnlichkeitsstufen und Durchschnittswerte, um Vorhersagen über die Anzahl der Zombies an einem bestimmten Ort zu treffen. Anschließend werden die Schüler gerettet und können ihre Vorhersagen mit den tatsächlichen Zahlen vergleichen, um zu erörtern, wie genau die numerischen Daten im Vergleich zu den Daten der Kategorie sind.
+
+                **Frage des Tages:** Wie lernen Computer, auf der Basis numerischer Daten Vorhersagen zu erstellen?
+            EOU Student Facting Survey - [Course]: {}
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Umfrage
+        csd6-2022:
+          lessons:
+            Innovations in Computing:
+              name: Innovationen in der Datenverarbeitung
+              description_teacher: Zum Auftakt der letzten Lerneinheit dieses Kurses werden die SchülerInnen einige Untersuchungen zu interessanten Innovationen im Bereich der Informatik durchführen. In dieser Lektion werden die SchülerInnen mit einer größeren Vielfalt von Formfaktoren für Computer (wie ein Computer aussieht) und Bereichen konfrontiert, die von Computern beeinflusst werden. Später in dieser Lektion werden die SchülerInnen sich noch einmal mit Geräten auseinandersetzen, die sie in dieser Lektion kennengelernt haben, während sie ihre eigenen physischen Computergeräte entwickeln.
+            The Circuit Playground:
+              name: Der Circuit Playground
+            Board Events:
+              name: Platinen-Ereignisse
+            Color LEDs:
+              name: Farbige LEDs
+            Combining Inputs and Outputs:
+              name: Kombinieren von Eingaben
+            'Project: Human Device Interaction': {}
+            Accelerometer:
+              name: Beschleunigungssensor
+              description_teacher: In dieser Lektion werden die SchülerInnen den Beschleunigungsmesser und seine Möglichkeiten erkunden. Sie machen sich mit seinen Ereignissen und Eigenschaften vertraut und erstellen mehrere Programme unter Verwendung des Beschleunigungsmessers, die denen ähneln, die sie wahrscheinlich schon in realen Apps gesehen haben.
+            Making Music:
+              name: Musik machen
+            Functions:
+              name: Funktionen
+            Project - Prototype an Innovation:
+              description_teacher: In diesem Abschlussprojekt für den Kurs entwickeln und testen die SchülerInnen gemeinsam einen Prototyp für ein innovatives Computergerät, das auf dem Circuit Playground basiert. Unter Verwendung der auf der Platine verfügbaren In- und Outputs werden sie in Gruppenarbeit Programme erstellen, die interessante und einzigartige Benutzerinteraktionen ermöglichen.
+            Post-Project Test:
+              name: Test nach dem Projekt
+            CS Discoveries Post-Course Survey:
+              name: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+            EOU Student Facting Survey - [Course]: {}
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Chapter 2: Aufbau von physischen Prototypen'
+            lessonGroup-4:
+              display_name: Umfrage
+          description_short: Programmieren mit Geräten lernen.
+        csd-post-survey-2022:
+          lessons:
+            Post-Course Survey:
+              name: "(Post-Course Survey) Überprüfung nach dem Kurs"
+          title: Befragung zu „Erkenntnissen aus der Informatik“ nach dem Kurs
+          description: Diese Einheit enthält die Umfrage zu „Erkenntnisse aus der Informatik“ nach dem Kurs. Diese Einheit kann den zugewiesen werden, wenn die SchülerInnen ihre letzte Einheit in Erkenntnisse aus der Informatik abgeschlossen haben.
+          student_description: Diese Einheit enthält einen Fragebogen, den ihr ausfüllen könnt, wenn deine Klasse mit den Einheiten von Erkenntnisse aus der Informatik fertig ist. Euer Lehrer/euer Lehrerin wird euch sagen, wann es Zeit ist, diese Umfrage zu beantworten.
+        csp-post-survey-2022:
+          lessons:
+            Course Survey: {}
+          title: Befragung zu „Grundsätze der Informatik“ nach dem Kurs
