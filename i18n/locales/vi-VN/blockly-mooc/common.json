@@ -787,6 +787,8 @@
   "parent": "Cha mẹ",
   "parents": "Phụ Huynh",
   "parentsAndStudents": "Phụ huynh và học sinh",
+  "participantTypeStudentTitle": "Học sinh",
+  "participantTypeTeacherTitle": "Giáo viên",
   "password": "Mật khẩu",
   "passwordConfirmation": "Xác nhận mật khẩu",
   "perfect": "hoàn hảo",
