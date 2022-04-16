@@ -4,7 +4,7 @@ import PetitionForm from './PetitionForm';
 export default function PetitionCallToAction() {
   return (
     <>
-      <div id="petition-block" style={styles.block}>
+      <div id="petition-block" className="petition_block">
         <h1 id="petition-message" className="petition_message">
           Every student in every school should have the opportunity to learn
           computer science
@@ -17,14 +17,3 @@ export default function PetitionCallToAction() {
     </>
   );
 }
-
-const styles = {
-  block: {
-    display: 'flex',
-    flexFlow: 'row wrap',
-    textAlign: 'center',
-    backgroundColor: 'white',
-    padding: '10px 0px',
-    flex: '1 100%'
-  }
-};

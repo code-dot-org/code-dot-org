@@ -6,13 +6,24 @@
   color: #5B6770;
 }
 
+.petition_block {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  background-color: white;
+  padding: 10px 0;
+  flex: 1 100%;
+}
+
 .petition_form {
   font-size: 12px;
   line-height: 18px;
   color: #dcdcdc;
   text-align: left;
-  margin-left: 15px;
-  margin-top: -5px;
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1 100%;
+  justify-content: space-around;
 }
 
 .petition_sign_message {
@@ -31,23 +42,39 @@
   font-family: 'Gotham 7r', sans-serif; display: none;
 }
 
-.grey_input {
-  width: 160px;
-  height: 34px;
-  margin-bottom: 10px;
-}
-
-.dropdown {
-  width: 100px;
-  height: 34px;
+input.field, select.field {
+  margin: 0 0 0 0;
   background-color: #e2e4e3;
   color: #595959;
-  margin-bottom: 10px;
+}
+
+input.grey_input {
+  width: 160px;
+}
+
+select.dropdown {
+  width: 100px;
+}
+
+.dropdown_label {
+  margin: 0 4px 0 0;
+  white-space: nowrap;
+  color: #5B6770;
+  width: 100px;
+  font-size: 14px;
+  vertical-align: middle;
 }
 
 .go_button {
   min-width: 100px;
-  margin-top: 0px;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
   font-family: 'Gotham 5r', sans-serif;
+}
+
+.help {
+  white-space: nowrap;
+  font-size: 12px;
+  line-height: 18px;
+  color: rgb(91,103,112);
+  margin-left: 10px
 }
