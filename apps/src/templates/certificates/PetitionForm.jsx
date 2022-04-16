@@ -5,12 +5,7 @@ import {range} from 'lodash';
 
 const PetitionForm = () => (
   <>
-    <Form
-      inline
-      id="petition-form"
-      className="petition_form"
-      style={styles.form}
-    >
+    <Form inline id="petition-form" className="petition_form">
       <FieldGroup id="name" placeholder="Name" type="text" />
       <FieldGroup id="email" placeholder="Email" type="text" />
       <FieldGroup
@@ -52,38 +47,5 @@ const PetitionForm = () => (
     </Form>
   </>
 );
-
-const styles = {
-  form: {
-    display: 'flex',
-    flexFlow: 'row wrap',
-    flex: '1 100%',
-    justifyContent: 'space-around'
-  },
-  element: {
-    margin: '10px',
-    padding: '5px'
-  },
-  elementText: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    fontSize: '14px'
-  },
-  label: {
-    whiteSpace: 'nowrap',
-    color: 'rgb(91,103,112)',
-    width: '100px'
-  },
-  field: {
-    color: 'rgb(89, 89, 89, 89)',
-    backgroundColor: 'rgb(226,228,227)'
-  },
-  help: {
-    whiteSpace: 'nowrap',
-    fontSize: '12px',
-    lineHeight: '18px',
-    color: 'rgb(91,103,112)',
-    marginLeft: '10px'
-  }
-};
 
 export default PetitionForm;
