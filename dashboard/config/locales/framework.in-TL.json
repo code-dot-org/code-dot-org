@@ -1,0 +1,32 @@
+{
+  "in-TL": {
+    "data": {
+      "framework": {
+        "ccela": {
+          "name": "crwdns2912128:0crwdne2912128:0"
+        },
+        "csta": {
+          "name": "crwdns2910838:0crwdne2910838:0"
+        },
+        "ccmath": {
+          "name": "crwdns2911136:0crwdne2911136:0"
+        },
+        "csta2011": {
+          "name": "crwdns2912184:0crwdne2912184:0"
+        },
+        "iste": {
+          "name": "crwdns2912224:0crwdne2912224:0"
+        },
+        "csp2021": {
+          "name": "crwdns2911062:0crwdne2911062:0"
+        },
+        "ngss": {
+          "name": "crwdns2908686:0crwdne2908686:0"
+        },
+        "ai4k12-2021": {
+          "name": "crwdns2912790:0crwdne2912790:0"
+        }
+      }
+    }
+  }
+}
