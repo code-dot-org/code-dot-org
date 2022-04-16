@@ -632,6 +632,9 @@ es:
         PL_overview_CSP: '¿Qué son los Principios de la Informática?'
         PL_CSP_EIPMOverview: Guía de Lecciones de EIPM
         tesstest: Prueba Tess
+        CSA-PL-debugging-temp: Introducción a la Depuración en Laboratorio Java - temp
+        csd_u6_circuit_playground: Computación física
+        csd_u6_input_output: Entrada y salida
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque
