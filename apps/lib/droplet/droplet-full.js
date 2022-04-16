@@ -13019,7 +13019,7 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         }
         if (!known || known.anyobj) {
           return this.jsSocketAndMark(indentDepth, node.object, depth + 1);
-        } else if (known && this.opts.createSlotForKnownBlock) {
+        } else if (known && this.opts.createSocketForKnownBlock) {
           return this.jsSocketAndMark(indentDepth, node.object, depth + 1, NEVER_PAREN);
         }
         break;
