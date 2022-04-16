@@ -3,6 +3,7 @@ import color from './util/color';
 import {singleton as studioApp} from './StudioApp';
 import {globalFunctions} from './dropletUtilsGlobalFunctions';
 import dontMarshalApi from './dontMarshalApi';
+import experiments from '@cdo/apps/util/experiments';
 
 /**
  * @name DropletBlock
@@ -987,7 +988,10 @@ export function generateDropletModeOptions(config) {
     },
     lockZeroParamFunctions: config.level.lockZeroParamFunctions,
     lockFunctionDropIntoKnownParams: config.lockFunctionDropIntoKnownParams,
-    paramButtonsForUnknownFunctions: true
+    paramButtonsForUnknownFunctions: true,
+    createSlotForKnownBlock: experiments.isEnabled(
+      experiments.DROPLET_CREATE_SLOT_FOR_KNOWN_BLOCK
+    )
   };
 }
 
