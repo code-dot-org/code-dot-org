@@ -7584,7 +7584,7 @@
         "courseC_starWars_loops8_dani": {
           "course_starWars_loops8_a": "इससमस्याकेबारेमेंछोटेभागोंमेंसोचनेकीकोशिशकरें।पूरासमयलें।आपकेलिएइसेपहलीबारमेंहीहलजरूरीनहींहै!",
           "course_starWars_loops8_b": "आधासमयइससमस्याकोसीढीकेस्टेपकेतौरपरसोचें।आपनेपहलेउसेकैसेहलकियाथा?",
-          "course_starWars_loops8_c": "इसरास्तेपरएकनज़रडालें।\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+          "course_starWars_loops8_c": "इसरास्तेपरएकनज़रडालें।\n\n[][0]"
         },
         "courseC_starWars_loops9_2021": {
           "course_starWars_loops9_b": "आप `दोहराएं` लूप के अंदर एक से अधिक ब्लॉक रख सकते हैं।",
@@ -7724,7 +7724,7 @@
           "courseD_bee_conditionals4_hintVid1": "क्याशुरुआतकरनेमेंमददकीजरूरतहै?वीडियोदेखें!",
           "courseD_bee_conditionals4_a": "आपतबभीप्रत्येकस्थानसेइसतरहव्यवहारकरसकतेहैंकिमानोइसपरबादलहो,चाहेआपपूरारास्तादेखसकतेहों।",
           "courseD_bee_conditionals4_b": "मधुरसकेप्रत्येकस्थानकोदेखनेकेलिएअपनीलूपकेअंदर`इफ`स्टेटमेंटकाउपयोगकरें।",
-          "courseD_bee_conditionals4_c": "<xml><block type=\"maze_untilBlocked\"/></xml>blockब्लॉककाउपयोगकरतेहुए,आपकोआगेकीओरमूवकरकेफूलकोदेखें।यदिवहांफूलहै,तोमधुमक्खीकोक्याकरनाचाहिए?",
+          "courseD_bee_conditionals4_c": "[blocklyblock][0]blockब्लॉककाउपयोगकरतेहुए,आपकोआगेकीओरमूवकरकेफूलकोदेखें।यदिवहांफूलहै,तोमधुमक्खीकोक्याकरनाचाहिए?",
           "courseD_bee_conditionals4_hintVid2": "इसपहेलीकोहलकरनेमेंमददकेलिएयहवीडियोदेखें।"
         },
         "courseD_bee_conditionals5_dani": {
@@ -7969,7 +7969,7 @@
         },
         "courseE_artist_functions2_dani": {
           "courseD_artist_functions2_b": "जो फंक्शन आप लिखें, उसमें आपका पूरा प्रोग्राम शामिल नहीं होना चाहिए, केवल आंशिक होना चाहिए, जो 100 पिक्सल की भुजाओं वाला वर्ग खींचता हो",
-          "courseD_artist_functions2_c": "`जब चलाएं` ब्लॉक के अंतर्गत अपने फंक्शन को \"बोलने” के लिए हरा `वर्ग खींचें` ब्लॉक का उपयोग करें। अन्यथा, आपके फंक्शन में कोड नहीं चलेगा।\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
+          "courseD_artist_functions2_c": "`जब चलाएं` ब्लॉक के अंतर्गत अपने फंक्शन को \"बोलने” के लिए हरा `वर्ग खींचें` ब्लॉक का उपयोग करें। अन्यथा, आपके फंक्शन में कोड नहीं चलेगा।\n\n[blockly block][0]",
           "courseD_artist_functions2_a": "आपके प्रोग्राम को यह करना चाहिए:\n\n-   फंक्शन का उपयोग\n-   100 + 75 पिक्सल आगे की ओर मूव करना\n-   फंक्शन का उपयोग"
         },
         "courseE_artist_functions3_dani": {
@@ -8628,7 +8628,7 @@
           "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
         },
         "helloworld_animals_backgrounds": {
-          "hello_world_background": "आप 'बैकग्राउंड सेट करें' ब्लॉक को 'क्लिक करने पर' इवेंट ब्लॉक के अंतर्गत सेट कर के बैकग्राउंड को बदल सकते हैं:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_background": "आप 'बैकग्राउंड सेट करें' ब्लॉक को 'क्लिक करने पर' इवेंट ब्लॉक के अंतर्गत सेट कर के बैकग्राउंड को बदल सकते हैं:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient\\_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_animals_behaviors": {
           "storyboard_behavior_example": "_नोट:_ स्प्राइट को एक स्वाभाव देने के लिए, आपको 'स्पिनिंग राईट' के जैसा एक ग्रीन स्वाभाव ब्लॉक को 'स्प्राइट शुरू हो रहा है' ब्लॉक के साथ इस्तेमाल करने होगा.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"cuteanimals_rooster_hello\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
@@ -8637,10 +8637,10 @@
           "hw_no_changes": "इस लेवल में आपको कोई भी कोड बदलने की जरुरत नहीं है. "
         },
         "helloworld_animals_costumes": {
-          "hello_world_costumes": "'कॉस्टयूम बदलें' ब्लॉक को 'क्लिक करने पर' इवेंट ब्लॉक के अंतर्गत रखने की कोशिश करें.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"\"cuteanimals_goat_hello\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_costumes": "'कॉस्टयूम बदलें' ब्लॉक को 'क्लिक करने पर' इवेंट ब्लॉक के अंतर्गत रखने की कोशिश करें.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n        <value name=\"THIS\">\n          \\<block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"\"cuteanimals_goat_hello\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_animals_events": {
-          "hello_world_click": "'क्लिक करने पर' इवेंट ब्लॉक के अन्दर 'बोलिए' ब्लॉक को कनेक्ट करें:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, ocean!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+          "hello_world_click": "'क्लिक करने पर' इवेंट ब्लॉक के अन्दर 'बोलिए' ब्लॉक को कनेक्ट करें:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, ocean!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"cuteanimals\\_seahorse\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "helloworld_animals_location": {
           "location_pin_hint": "स्प्राइट के लोकेशन को बदलने के लिए, लोकेशन प्लोच्क पर पिन को क्लिक करें, और फिर आप जहाँ इसे ले जाना चाहते हैं वहां क्लिक करें.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
@@ -8652,7 +8652,7 @@
           "hello-world-first-solution-bear": "बेयर के बोलने के लिए कोड के ब्लॉक्स को कुछ इस तरह कनेक्ट करें:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_bear\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_bear\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
         "helloworld_animals_sizes": {
-          "storyboard_setProp": "एक बार स्प्राइट का साइज़ सेट करने के लिए, आप इस ब्लॉक का इस्तेमाल कर सकते हैं:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_tiger\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_setProp": "एक बार स्प्राइट का साइज़ सेट करने के लिए, आप इस ब्लॉक का इस्तेमाल कर सकते हैं:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_tiger\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        \\<block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
           "storyboard_changePropBy": "अगर आप स्प्राइट के साइज़ को बार बार बदलना चाहते हैं (इवेंट के साथ), तो इस ब्लॉक का इस्तेमाल करें:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_cheetah_hello\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_emoji_backgrounds": {
@@ -8709,7 +8709,7 @@
           "storyboard_changePropBy": "अगर आप स्प्राइट के साइज़ को बार बार बदलना चाहते हैं (इवेंट के साथ), तो इस ब्लॉक का इस्तेमाल करें:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_retro_backgrounds": {
-          "hello_world_background": "आप 'बैकग्राउंड सेट करें' ब्लॉक को 'क्लिक करने पर' इवेंट ब्लॉक के अंतर्गत सेट कर के बैकग्राउंड को बदल सकते हैं:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retroship_21\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"background_landscape11_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_background": "आप 'बैकग्राउंड सेट करें' ब्लॉक को 'क्लिक करने पर' इवेंट ब्लॉक के अंतर्गत सेट कर के बैकग्राउंड को बदल सकते हैं:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retroship_21\"</title>\n      </block>\n    </value>\n    <next>\n      \\<block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"background_landscape11_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_retro_behaviors": {
           "storyboard_behavior_example": "_नोट:_ स्प्राइट को एक स्वाभाव देने के लिए, आपको 'स्पिनिंग राईट' के जैसा एक ग्रीन स्वाभाव ब्लॉक को 'स्प्राइट शुरू हो रहा है' ब्लॉक के साथ इस्तेमाल करने होगा.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"retrocreature_09_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
@@ -8727,7 +8727,7 @@
           "location_pin_hint": "स्प्राइट के लोकेशन को बदलने के लिए, लोकेशन प्लोच्क पर पिन को क्लिक करें, और फिर आप जहाँ इसे ले जाना चाहते हैं वहां क्लिक करें.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_retro_multi": {
-          "storyboard_costume": "हर स्प्राइट के लिए कॉस्टयूम को मैच करना आवश्यक है.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_16\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_costume": "हर स्प्राइट के लिए कॉस्टयूम को मैच करना आवश्यक है.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature\\_16\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_retro_say": {
           "hello-world-first-solution-retrocreature": "प्राणी को कुछ बोलते हुए देखने के लिए, कोड के ब्लॉक को इस तरह से कनेक्ट करें:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"retrocreature_18_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_18_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
@@ -8737,8 +8737,8 @@
           "hw_retro_changePropBy": "अगर आप स्प्राइट के साइज़ को बार बार बदलना चाहते हैं (इवेंट के साथ), तो इस ब्लॉक का इस्तेमाल करें:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "poetry_hoc_addSprites": {
-          "location_hint": "प्रत्येक स्प्राइट का एक **लोकेशन** होता है। आप इस ब्लॉक के ऊपर बने पिन पर क्लिक करके लोकेशन सेट कर सकते हैं: \n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   लोकेशन ब्लॉक के ऊपर पिन ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) पर क्लिक करें फिर स्क्रीन पर अपने स्प्राइट के लिए नया पोजीशन चुनें.\n-   अंत में \"रन\" बटन दबाएँ.",
-          "remove_hint": "आप एक निश्चित पंक्ति संख्या पर एक स्प्राइट निकाल सकते हैं। आप इसकी जगह लेने के लिए एक नया स्प्राइट जोड़ सकते हैं:  \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
+          "location_hint": "प्रत्येक स्प्राइट का एक **लोकेशन** होता है। आप इस ब्लॉक के ऊपर बने पिन पर क्लिक करके लोकेशन सेट कर सकते हैं: \n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling\\_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   लोकेशन ब्लॉक के ऊपर पिन ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) पर क्लिक करें फिर स्क्रीन पर अपने स्प्राइट के लिए नया पोजीशन चुनें.\n-   अंत में \"रन\" बटन दबाएँ.",
+          "remove_hint": "आप एक निश्चित पंक्ति संख्या पर एक स्प्राइट निकाल सकते हैं। आप इसकी जगह लेने के लिए एक नया स्प्राइट जोड़ सकते हैं:  \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next>\\<block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night\\_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_backgroundEffects": {
           "add_background_effect": "दिए गए ब्लॉक के जैसा एक बैकग्राउंड ब्लॉक खोजें:\n<xml><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"colors\"</title><title name=\"PALETTE\">\"sunrise\"</title></block></xml>\n\nऔर इसके जैसा एक टेक्स्ट इफ़ेक्ट ब्लॉक खोजें: \n\n<xml><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#000099</title></block></value></block></xml>\n\nइन ब्लॉक्स को अपने वर्कस्पेस में 'रन करने पर' ब्लॉक के अंतर्गत कनेक्ट करें.",
@@ -8750,20 +8750,47 @@
           "more_events_hint": "आप अपने प्रोग्राम में एक से अधिक ईवेंट का इस्तेमाल कर सकते हैं। कविता में नई पंक्तियों का मिलान करने के लिए अलग-अलग इफ़ेक्ट वाली दो इवेंट का इस्तेमाल करने का प्रयास करें। \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">2</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"starburst\"</title></block></next></block></xml>\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"bubbles\"</title></block></next></block></xml>"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound_hint": "ब्लॉक खोजें:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_background/typewriter.mp3\"</title></block></next></block></xml>\nया यह ब्लॉक: \n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nइसे अपने वर्कस्पेस में `रन करने पर` ब्लॉक के अंतर्गत कनेक्ट करें.",
-          "more_code": "आपके द्वारा चुने गए साउंड के साथ आगे बढ़ने के लिए अधिक इफ़ेक्ट और रंग जोड़ें। \n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>"
+          "poetry_sound_hint": "ब्लॉक खोजें:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category\\_background/typewriter.mp3\"</title></block></next></block></xml>\nया यह ब्लॉक: \n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nइसे अपने वर्कस्पेस में `रन करने पर` ब्लॉक के अंतर्गत कनेक्ट करें.",
+          "more_code": "आपके द्वारा चुने गए साउंड के साथ आगे बढ़ने के लिए अधिक इफ़ेक्ट और रंग जोड़ें। \n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next>\\<block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteBehaviors": {
-          "add_behavior": "अपने कोड में एक `स्प्राइट शुरू होता है` ब्लॉक जोड़ें। सुनिश्चित करें कि आपने पहले से ही वह स्प्राइट बना लिया है जिसमें व्यवहार आप डाल रहे हैं। \n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next><block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
+          "add_behavior": "अपने कोड में एक `स्प्राइट शुरू होता है` ब्लॉक जोड़ें। सुनिश्चित करें कि आपने पहले से ही वह स्प्राइट बना लिया है जिसमें व्यवहार आप डाल रहे हैं। \n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next>\\<block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
         },
         "poetry_hoc_spriteSizes": {
-          "size hint": "इस ब्लॉक को ढूंढें और `150` पर क्लिक करें .\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nक्या होगा जब संख्या `25`हो? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+          "size hint": "इस ब्लॉक को ढूंढें और `150` पर क्लिक करें .\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nक्या होगा जब संख्या `25`हो? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean\\_wave\"</title><title name=\"VAL\">25</title></block></xml>"
         },
         "New Minecraft Hero Project": {
           "MC_HOC_2017_13_Cole_a": "एजेंट से कुछ पुल बनवाने का प्रयास करें ताकि एलेक्स या स्टीव मानचित्र के किनारों से आगे घूम पाएं।"
         },
         "helloworld_food_say": {
           "hello-world-first-solution-pizza": "पिज़्ज़ा को कुछ कहने के लिए, कोड के ब्लॉक इस तरह से कनेक्ट करें:"
+        },
+        "CourseE_HOC 2018 Level_10": {
+          "voyage_aquatic_10a": "क्या आपको **समुद्री लालटेनें** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) दिखाई दे रही हैं? आप समुद्री स्मारक तक पहुंचने के लिए उनके साथ सापेक्ष का उपयोग कैसे कर सकते हैं?"
+        },
+        "CourseE_HOC 2018 Level_10_2020": {
+          "voyage_aquatic_10a": "क्या आपको **समुद्री लालटेनें** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) दिखाई दे रही हैं? आप समुद्री स्मारक तक पहुंचने के लिए उनके साथ सापेक्ष का उपयोग कैसे कर सकते हैं?"
+        },
+        "CourseE_HOC 2018 Level_7a": {
+          "aquatic7": "आप सही मोड़ों में अपनी मदद के लिए यदि रास्ता है ब्लॉक का उपयोग कर सकते हैं।"
+        },
+        "CourseE_HOC 2018 Level_7a_2020": {
+          "aquatic7": "आप सही मोड़ों में अपनी मदद के लिए यदि रास्ता है ब्लॉक का उपयोग कर सकते हैं।"
+        },
+        "CourseE_HOC 2018 Level_9b": {
+          "voyage_aquatic_9a": "क्या आपको लाल और नीले मूंगा ब्लॉक्स दिखाई दे रहे हैं? चट्टान तक दाएं और बाएं मुड़ने के लिए गाइड पोस्टों के तौर पर उनका उपयोग करें।"
+        },
+        "CourseE_HOC 2018 Level_9b_2020": {
+          "voyage_aquatic_9a": "क्या आपको लाल और नीले मूंगा ब्लॉक्स दिखाई दे रहे हैं? चट्टान तक दाएं और बाएं मुड़ने के लिए गाइड पोस्टों के तौर पर उनका उपयोग करें।"
+        },
+        "HOC 2018 Level_10": {
+          "voyage_aquatic_10a": "क्या आपको **समुद्री लालटेनें** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png) दिखाई दे रही हैं? आप समुद्री स्मारक तक पहुंचने के लिए उनके साथ सापेक्ष का उपयोग कैसे कर सकते हैं?"
+        },
+        "HOC 2018 Level_7a": {
+          "aquatic7": "आप सही मोड़ों में अपनी मदद के लिए यदि रास्ता है ब्लॉक का उपयोग कर सकते हैं।"
+        },
+        "HOC 2018 Level_9b": {
+          "voyage_aquatic_9a": "क्या आपको लाल और नीले मूंगा ब्लॉक्स दिखाई दे रहे हैं? चट्टान तक दाएं और बाएं मुड़ने के लिए गाइड पोस्टों के तौर पर उनका उपयोग करें।"
         }
       }
     }
