@@ -3261,3 +3261,24 @@ lt:
             For Loops:
               name: Kartojimas
               key: Kartojimas
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Kintamieji
+              key: Kintamieji
+            Text:
+              name: Tekstas
+              key: Tekstas
+            Conditionals:
+              name: Sąlyginiai sakiniai
+              key: Sąlyginiai sakiniai
+            Velocity:
+              name: Greitis
+              key: Greitis
+            Functions:
+              name: Komandų kūrimas
+              key: Komandų kūrimas
+        csd6-2022:
+          lessons:
+            Functions:
+              name: Komandų kūrimas
