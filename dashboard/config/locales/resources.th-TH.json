@@ -1818,6 +1818,13 @@
         "teacher_forum/csd/2021": {
           "name": "ฟอรัมผู้สอน"
         },
+        "internet-of-things-video/csd/2021": {
+          "type": "วิดีโอ"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "วิทยาการคอมพิวเตอร์กำลังเปลี่ยนแปลงทุกสรรพสิ่ง",
+          "type": "วิดีโอ"
+        },
         "how_computers_word_hardware_software/csd/2021": {
           "type": "วิดีโอ"
         },
@@ -1940,6 +1947,9 @@
         },
         "teacher_forum_1/csd/2021": {
           "name": "ฟอรัมผู้สอน"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "type": "วิดีโอ"
         },
         "what-is-a-computer-1-2-3/csd/2021": {
           "type": "วิดีโอ"
