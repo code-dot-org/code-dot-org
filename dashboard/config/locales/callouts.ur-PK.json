@@ -352,7 +352,7 @@
           "pin": "پن"
         },
         "helloworld_emoji_say": {
-          "hello_world_say": "سپرائٹ سے باتے کہلوانے کے لیے اس بلاک کو استعمال کریں۔",
+          "hello_world_say": "سپرائٹ سے کچھ کہلوانے کے لیے اس بلاک کو استعمال کریں۔",
           "hello_world_make_sprite": "سپرائٹ بنانے کے لیے اس بلاک کو استعمال کریں۔"
         },
         "helloworld_food_backgrounds": {
