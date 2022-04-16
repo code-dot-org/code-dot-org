@@ -37,6 +37,9 @@
         "b2879d66-a5c6-4127-afe0-c5df430b8f30": {
           "name": "Langkah berikutnya"
         },
+        "2c451b2f-6820-47bb-94e0-966633757f93": {
+          "description": "Mintalah siswa untuk menambahkan catatan tempel “Whip Around” mereka atau kartu catatan ke peta pikiran \"Ilmu Komputer\" Anda saat mereka keluar dari ruangan. Cobalah memuat papan dengan berbagai gagasan hebat tentang apakah CS itu dan mengapa itu penting."
+        },
         "33f43c10-0c86-45d3-9e95-eebe75e72ac0": {
           "name": "Setelah Satu Jam Kode"
         },
@@ -207,6 +210,9 @@
         "3596cc47-e661-4d00-943e-ed858c4f6f5d": {
           "name": "Langkah berikutnya"
         },
+        "144b447f-1c5d-413b-a08c-65dda905a706": {
+          "description": "Mintalah siswa untuk menambahkan catatan tempel “Whip Around” mereka atau kartu catatan ke peta pikiran \"Ilmu Komputer\" Anda saat mereka keluar dari ruangan. Cobalah memuat papan dengan berbagai gagasan hebat tentang apakah CS itu dan mengapa itu penting."
+        },
         "3a8c30ae-50bb-4a85-99d8-b62c9f7e1bbf": {
           "name": "Setelah Satu Jam Kode"
         },
@@ -296,6 +302,9 @@
         },
         "456b1d51-129d-43ff-aab9-727995464e36": {
           "name": "Langkah berikutnya"
+        },
+        "0600e9df-03bd-4d61-9876-7516a87c2d30": {
+          "description": "Mintalah siswa untuk menambahkan catatan tempel “Whip Around” mereka atau kartu catatan ke peta pikiran \"Ilmu Komputer\" Anda saat mereka keluar dari ruangan. Cobalah memuat papan dengan berbagai gagasan hebat tentang apakah CS itu dan mengapa itu penting."
         },
         "6e3db575-9d35-4bad-b17b-37c9dda2bd7f": {
           "tips": [
@@ -421,6 +430,9 @@
         "57e403d7-a8be-47fc-bb97-1a068e2469ed": {
           "name": "Setelah Satu Jam Kode"
         },
+        "d0f5c55b-b19c-418c-8dc6-f87a80e08f45": {
+          "description": "Mintalah siswa untuk menambahkan catatan tempel “Whip Around” mereka atau kartu catatan ke peta pikiran \"Ilmu Komputer\" Anda saat mereka keluar dari ruangan. Cobalah memuat papan dengan berbagai gagasan hebat tentang apakah CS itu dan mengapa itu penting."
+        },
         "a16594a7-8312-4ac3-87c8-fd2d5d6e5bfb": {
           "name": "Pendahuluan"
         },
@@ -518,6 +530,9 @@
         "5ec42aed-0b79-49f8-bd64-0716e60498a4": {
           "name": "Setelah Satu Jam Kode"
         },
+        "b0fff664-80cc-4318-b031-edf88ad1aebc": {
+          "description": "Mintalah siswa untuk menambahkan catatan tempel “Whip Around” mereka atau kartu catatan ke peta pikiran \"Ilmu Komputer\" Anda saat mereka keluar dari ruangan. Cobalah memuat papan dengan berbagai gagasan hebat tentang apakah CS itu dan mengapa itu penting."
+        },
         "f5f6ef34-367d-424d-af63-a8a04c146c34": {
           "tips": [
             null
@@ -533,6 +548,9 @@
         },
         "789f83b4-45b7-4145-9d8c-e2a2429efec2": {
           "progression_name": "Widget: Kompresi Teks"
+        },
+        "17878891-5c24-412b-b385-35b54fdaeb11": {
+          "description": "**Dunia Nyata: Kompresi Zip**\n\n-   Lakukan eksperimen dengan zip menggunakan file teks dengan berbagai konten.  Apakah hasil untuk file kecil sebagus untuk file besar? (Di Macs, di Finder pilih “get info” tentang file untuk melihat jumlah aktual byte dalam file, karena tampilan Finder akan menunjukkan 4KB untuk sembarang file yang kurang dari angka itu.)\n    -   Peringatan: hasil mungkin berbeda-beda.  Zip sangat efektif untuk teks, tetapi mungkin tidak bisa mengecilkan file lain dengan baik karena file-file tersebut sudah terkompres atau tidak memiliki jenis pola \"embedded\" yang sama dengan yang dimiliki oleh dokumen teks.\n\n**Tantangan:  Telitilah algorithm LZW**\n\n-   Kompresi .zip didasarkan pada [LZW Compression Scheme](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch)\n\n-   Meskipun ide di balik alat kompresi teks sama dengan algorithm LZW (zip), pelacakan jalur kompresi dan dekompresi sedikit berat.  Pembelajaran lebih jauh tentang LZW dan apa yang terjadi dalam proses algorithm ini akan menjadi proyek perpanjangan yang sangat bagus bagi sebagian murid."
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
           "name": "Pendahuluan"
@@ -573,6 +591,9 @@
           "tips": [
             null
           ]
+        },
+        "03d9b77b-8370-4525-b5ba-d1e198c4bc96": {
+          "description": "#### Ajak Saya Keluar Main Permainan Bola\n\nAjak murid keluar untuk memainkan permainan bola tertentu. Terus pantau event dan tindakan. Sebagai contoh, tidak mendribble bola dalam permainan basket menyebabkan pelanggaran dan tim lain mendapatkan bolanya. Dalam sepak bola, menendang bola keluar garis lapangan menyebabkan tim lain bisa menendang bola masuk. Memasukkan bola ke gawang menghasilkan poin! Buat lebih banyak event lagi jika murid Anda sudah paham dan benar-benar menyukainya. Suruh semua murid meneriakkan \"Yeee\" ketika kapten salah satu tim mencetak poin. Suruh semua murid rebah ke tanah dan berguling-guling jika ada murid yang mencetak dua gol secara beruntun!"
         },
         "6874de98-8778-447b-8453-0138809b2c7e": {
           "tips": [
@@ -650,6 +671,9 @@
         "0dffb367-12f3-485a-bcde-cf4e789baed9": {
           "name": "Langkah berikutnya"
         },
+        "7905508e-c354-4909-93eb-38e2e9ef5661": {
+          "description": "Mintalah siswa untuk menambahkan catatan tempel “Whip Around” mereka atau kartu catatan ke peta pikiran \"Ilmu Komputer\" Anda saat mereka keluar dari ruangan. Cobalah memuat papan dengan berbagai gagasan hebat tentang apakah CS itu dan mengapa itu penting."
+        },
         "bf5697ad-2b9a-4960-b5a7-98a1d3fa9ac1": {
           "tips": [
             null
@@ -668,6 +692,9 @@
         "34bd90ee-f836-4e48-a793-b97fee0d99c8": {
           "name": "Langkah berikutnya"
         },
+        "e4e53ed4-18d2-4b17-9566-e08ccc20a4f3": {
+          "description": "Mintalah siswa untuk menambahkan catatan tempel “Whip Around” mereka atau kartu catatan ke peta pikiran \"Ilmu Komputer\" Anda saat mereka keluar dari ruangan. Cobalah memuat papan dengan berbagai gagasan hebat tentang apakah CS itu dan mengapa itu penting."
+        },
         "54b95e4d-58b7-4551-9782-7ce134f4e457": {
           "tips": [
             null
@@ -679,6 +706,9 @@
           "tips": [
             null
           ]
+        },
+        "5d09fa3e-63ce-4142-ac59-d893889ce78d": {
+          "progression_name": "Latih AI untuk Membersihkan Lautan"
         },
         "917bb837-8f93-4a92-86dc-ed60980f680b": {
           "progression_name": "AI: Data & Bias Pelatihan - Video"
@@ -829,6 +859,13 @@
         "bcae00ac-4d05-444e-bfb3-77d3463c259d": {
           "name": "Kursus E Proyek Sprite Lab",
           "progression_name": "Kursus E Proyek Sprite Lab"
+        },
+        "f573a627-ebb0-443a-a0a1-6b4b64c933d5": {
+          "progression_name": "Mengeksplorasi CS dalam Hiburan"
+        },
+        "6e6ad22a-99d2-434c-abab-b6d4a6962027": {
+          "name": "Program-Program Contoh",
+          "progression_name": "Program-Program Contoh"
         },
         "b44b4f32-2417-442d-812d-10bba9a6edc0": {
           "progression_name": "Menggambar"
@@ -2414,6 +2451,13 @@
           "name": "Proyek",
           "progression_name": "Proyek"
         },
+        "b13e1818-6495-44cb-97f3-69ea42c9ce0b": {
+          "progression_name": "Mengeksplorasi CS dalam Hiburan"
+        },
+        "68f4881c-e3a6-4fb1-bb42-6bfce254e6b9": {
+          "name": "Program-Program Contoh",
+          "progression_name": "Program-Program Contoh"
+        },
         "9c9cd7c5-d796-4eaa-9788-f6235478e387": {
           "progression_name": "Menggambar"
         },
@@ -2584,6 +2628,23 @@
         "a93b675e-fb6a-430e-86e6-ffbe77fea72e": {
           "name": "Bayangan",
           "progression_name": "Bayangan"
+        },
+        "edb1b531-f884-4cdb-8763-205ccb5ccfb9": {
+          "name": "Riset Inovasi",
+          "progression_name": "Riset Inovasi"
+        },
+        "dc82808d-bac6-4e90-9047-694410f3090c": {
+          "progression_name": "Mengatur Properti"
+        },
+        "22d81b4c-d781-4955-816b-5db96efe24ce": {
+          "progression_name": "Perancangan Layar dengan Kode"
+        },
+        "9dda00cc-e51b-48f2-b2a2-d38f5175571b": {
+          "progression_name": "Event dan Properti"
+        },
+        "e63385fd-2aa7-4253-9322-e5872437dac3": {
+          "name": "Membuat Aplikasi",
+          "progression_name": "Membuat Aplikasi"
         },
         "a5137285-e816-46c8-b7d3-d0b37dc9ae64": {
           "progression_name": "Menggunakan LED"
@@ -2830,6 +2891,10 @@
           "name": "Bayangan",
           "progression_name": "Bayangan"
         },
+        "8044f0e5-2eee-425f-b124-6f80494e5b23": {
+          "name": "Video: proses pemecahan masalah",
+          "progression_name": "Video: proses pemecahan masalah"
+        },
         "3e5ddb5c-d0e4-4022-becc-08bffeec64b2": {
           "name": "Apa yang menbuat sebuah komputer, sebuah komputer?",
           "progression_name": "Apa yang menbuat sebuah komputer, sebuah komputer?"
@@ -2837,6 +2902,14 @@
         "3abf4793-4d90-45c7-a47e-3e44a09581eb": {
           "name": "Bayangan",
           "progression_name": "Bayangan"
+        },
+        "1509e490-4f28-4bc4-9303-c5c156208213": {
+          "name": "Situs Web Teratas",
+          "progression_name": "Situs Web Teratas"
+        },
+        "0cc1b631-05c8-4129-b2e9-65f02c303d16": {
+          "name": "Contoh Situs Web Pribadi",
+          "progression_name": "Contoh Situs Web Pribadi"
         },
         "b5c36c8d-8c3c-4b22-b17f-08e8aec0a2ed": {
           "progression_name": "Eksperimen dengan Web Lab"
@@ -3100,6 +3173,13 @@
           "name": "Persiapkan presentasi Anda",
           "progression_name": "Persiapkan presentasi Anda"
         },
+        "ab7d99c8-e849-41ff-a55b-b66d48e1f5d1": {
+          "progression_name": "Mengeksplorasi CS dalam Hiburan"
+        },
+        "9dbf54b0-360f-45d9-a44e-cee20a3765fb": {
+          "name": "Program-Program Contoh",
+          "progression_name": "Program-Program Contoh"
+        },
         "2af454bc-9b55-4205-b0fd-247af66b3d13": {
           "progression_name": "Menggambar"
         },
@@ -3324,6 +3404,10 @@
           "name": "Bayangan",
           "progression_name": "Bayangan"
         },
+        "82524fd8-6d75-46e4-9cb3-719ff43e17da": {
+          "name": "Riset Inovasi",
+          "progression_name": "Riset Inovasi"
+        },
         "315aae6b-d273-42e5-bb70-ed9ee8e6b526": {
           "progression_name": "Perancangan Layar dengan Kode"
         },
@@ -3508,6 +3592,10 @@
           "name": "Bayangan",
           "progression_name": "Bayangan"
         },
+        "68e9b02b-4cbe-479b-a935-5dbe004f1e73": {
+          "name": "Situs Web Teratas",
+          "progression_name": "Situs Web Teratas"
+        },
         "114b3fc3-3b32-4fb0-808b-aa1649d75999": {
           "name": "Contoh Situs Web Pribadi",
           "progression_name": "Contoh Situs Web Pribadi"
@@ -3671,6 +3759,10 @@
         "dec8e91e-820f-47ce-928c-c6c4cc3da0b8": {
           "name": "Bayangan",
           "progression_name": "Bayangan"
+        },
+        "d6cca48b-d77f-47f8-b769-779bcf9b2874": {
+          "name": "Unit 5 Pelajaran 1 Ikhtisar",
+          "progression_name": "Unit 5 Pelajaran 1 Ikhtisar"
         },
         "f3b6cfe0-5520-47a1-9eef-38bbecffeb2b": {
           "name": "Merepresentasikan Gambar",
@@ -6484,7 +6576,8 @@
           "name": "Bayangan"
         },
         "9c113356-76b9-4324-b22f-e35ce5a49216": {
-          "name": "Penilaian"
+          "name": "Penilaian",
+          "description": "Mintalah siswa untuk menambahkan catatan tempel “Whip Around” mereka atau kartu catatan ke peta pikiran \"Ilmu Komputer\" Anda saat mereka keluar dari ruangan. Cobalah memuat papan dengan berbagai gagasan hebat tentang apakah CS itu dan mengapa itu penting."
         },
         "18fe5772-b05d-4e30-ada7-28d06b1bdf5d": {
           "name": "Kesempatan Lintas Kurikulum",
@@ -9285,6 +9378,26 @@
           ],
           "progression_name": "Instruksi Survei Pascakursus"
         },
+        "a6722c40-2f55-4b5c-8ffa-f9e3982f232b": {
+          "tips": [
+            null
+          ]
+        },
+        "0aae65e7-d504-4b63-9b0e-f9145959ac27": {
+          "tips": [
+            null
+          ]
+        },
+        "0ffa0382-8df9-42a1-8f6b-62612e26f301": {
+          "tips": [
+            null
+          ]
+        },
+        "0158f751-e444-4cd5-ae72-c6daa9d0f859": {
+          "tips": [
+            null
+          ]
+        },
         "7c0f6057-1b87-4d67-a58d-c511e59b2e62": {
           "tips": [
             null
@@ -9830,6 +9943,28 @@
           ],
           "progression_name": "Instruksi Survei Pascakursus"
         },
+        "d34d3ef7-b3ad-41de-8b49-c7460f8b1450": {
+          "tips": [
+            null
+          ]
+        },
+        "9c23f514-e5e6-45f4-9038-c8c68e26c041": {
+          "name": "Terinspirasi"
+        },
+        "ecaf188e-1d18-4418-9881-296b1f090f2e": {
+          "name": "Riset Inovasi"
+        },
+        "9e9ce748-fed7-4391-a28d-6c9e5da3cf27": {
+          "tips": [
+            null
+          ]
+        },
+        "fe954bee-319a-49ec-a2d1-033dd539a59b": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Riset Inovasi"
+        },
         "2bddbd31-7cae-4867-96fd-f8ba2f18b6c8": {
           "tips": [
             null
@@ -10214,6 +10349,39 @@
             null
           ],
           "progression_name": "Instruksi Survei Pascakursus"
+        },
+        "322ad615-5d42-4b54-ab60-5d7b7d36e277": {
+          "tips": [
+            null
+          ]
+        },
+        "3e097460-3cde-4714-ba16-61de8a8439ac": {
+          "tips": [
+            null
+          ]
+        },
+        "cf324018-6258-4c8b-98e8-f5de7f3cec14": {
+          "tips": [
+            null
+          ]
+        },
+        "617e101b-5c13-40e7-be75-6a4626bebe3e": {
+          "tips": [
+            null
+          ]
+        },
+        "e94772c1-7ac5-4e4f-b9b3-021ba4b36ef5": {
+          "tips": [
+            null
+          ]
+        },
+        "c670c339-5f6d-475c-b6cf-ad8a35c2d8a2": {
+          "name": "Bayangan"
+        },
+        "0d5d0634-6b05-4c47-b187-594dfd30d625": {
+          "tips": [
+            null
+          ]
         },
         "c80549fe-fb7e-4eef-ba30-247264bf0e1f": {
           "tips": [
@@ -10631,6 +10799,24 @@
             null
           ],
           "progression_name": "Instruksi Survei Pascakursus"
+        },
+        "2e17eccc-2343-4bde-849c-eaf270f343f8": {
+          "tips": [
+            null
+          ]
+        },
+        "f348d317-252e-4581-b489-fe1bbe700f67": {
+          "tips": [
+            null
+          ]
+        },
+        "caeb42d3-998b-49fd-99ec-4c36e013206f": {
+          "tips": [
+            null
+          ]
+        },
+        "1d9fcb2e-5d45-47f4-b834-65c714a78452": {
+          "progression_name": "Program-Program Contoh"
         },
         "31ee2243-fd15-45ab-a0d7-80c2c97d88c7": {
           "tips": [
@@ -11491,6 +11677,39 @@
             null
           ]
         },
+        "fabada45-479f-44d4-bc2d-dbeb8a8e7abd": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "23f003b6-2c1b-4e88-a343-f77714a50d89": {
+          "name": "Proses Pemecahan Masalah",
+          "tips": [
+            null
+          ],
+          "progression_name": "Video: proses pemecahan masalah"
+        },
+        "f3ad86f7-7c83-415c-aa5a-a276d6186faa": {
+          "tips": [
+            null
+          ]
+        },
+        "e3e59454-f8cc-47ef-a206-23e55cf74c89": {
+          "tips": [
+            null
+          ]
+        },
+        "971b5c08-a61d-400c-a1ff-8ac3139a3c7c": {
+          "tips": [
+            null
+          ]
+        },
+        "03418848-4f2d-4f45-8f25-38012b191a2a": {
+          "tips": [
+            null
+          ]
+        },
         "10aec291-0c45-453c-8609-5386783ff20e": {
           "tips": [
             null
@@ -11866,6 +12085,22 @@
           ]
         },
         "ab4371e8-c868-4587-9f32-2a0f857b910d": {
+          "tips": [
+            null
+          ]
+        },
+        "c55d809b-5128-4cba-82bf-3bf0e51aec06": {
+          "tips": [
+            null
+          ]
+        },
+        "1265c20c-95ab-4c34-b8fc-b3532b088415": {
+          "name": "Mengeksplorasi Situs Web",
+          "tips": [
+            null
+          ]
+        },
+        "c1050c6d-1379-4f81-ab69-6f00bbfb363a": {
           "tips": [
             null
           ]
