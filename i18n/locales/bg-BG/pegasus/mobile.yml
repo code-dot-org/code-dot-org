@@ -1326,6 +1326,8 @@
   header_report_bug: "Съобщи за бъгове"
   header_legal_privacy: "Защита на личните данни"
   header_legal_tos: "Термини"
+  header_tutorials: "Уроци"
+  header_documentation: "Документация"
   user_header_label: "Здравейте %{username}"
   user_header_team: "Екип"
   user_header_settings: "Моят акаунт"
@@ -1344,6 +1346,8 @@
   hero_name: 'Minecraft: Пътуването на героя'
   applab_tile_start_tutorial: "Старт"
   aquatic_name: 'Minecraft: Подводното пътешествие'
+  account_sign_up_email_opt_in: "Можем ли да ви изпращаме обновления на нашите курсове, локални  възможности или други новини свързани с компютърните науки? (горе-долу веднъж на месец)"
+  account_sign_up_child_accept_terms: "Потвърждавам, че имам разрешение от родител или настойник да използвам услугите на Code.org."
   hoc_overview_start_tutorial: "Старт"
   hoc_overview_more_resources: "За повече ресурси за взаимодействие с вашата отдалечена класна стая, вижте нашето ръководство за хостване на [виртуален Hour of Code](https://hourofcode.com/us/how-to/virtual). За ученици с ограничена или никаква техника или свързаност, споделете този пакет от [достъпни Hour of Code дейности](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)."
   hoc2018_creativity_create: "Създай"

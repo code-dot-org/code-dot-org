@@ -16,7 +16,7 @@
   n_have_learned_an_hoc: "<h1>Probieren Sie eine</h1><h2>Hour of Code</h2><h3># mal genutzt</h3>"
   try_hoc_num_served: "<h1>Versuche eine</h1><h2>Hour of Code</h2><h3>%{num} die angeboten wird</h3>"
   try_hoc_num_served_markdown: |-
-    # Veruche eine
+    # Versuche eine
 
     ## Hour of Code
 
@@ -38,7 +38,7 @@
   submit: "Absenden"
   twentyhours_heading: "Testen Sie unseren Kurs \"Einführung in die Informatik\""
   twentyhours_text: "Sie haben Ihre erste „Hour of Code“ beendet? Lernen Sie in diesem Folgekurs weitere Informatik- und Programmierkonzepte."
-  og_title: 'Jedes Kind verdient eine Gelegenheit'
+  og_title: 'Code.org: Jeder kann lernen'
   og_title_soon: "Stunde des Codes kommt bald"
   og_title_here: "Die Stunde des Codes ist gekommen!"
   og_description: "In jeder Schule sollten Schüler die Gelegenheit erhalten, Informatik zu lernen."
