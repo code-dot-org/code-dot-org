@@ -2,6 +2,9 @@
   "fil-PH": {
     "data": {
       "resources": {
+        "dance-party-playlist/dance-extras/unversioned": {
+          "name": "Spotify Playlist (lahat ng edad)"
+        },
         "poem_art_celebration/poem-art/2021": {
           "type": "Video"
         },
@@ -16,11 +19,20 @@
           "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2",
           "type": "Video"
         },
+        "dance-party-playlist/dance/unversioned": {
+          "name": "Spotify Playlist (lahat ng edad)"
+        },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
           "type": "Video"
         },
         "video-text-compression/text-compression/unversioned": {
           "type": "Video"
+        },
+        "dance-party-playlist/dance-extras-2019/unversioned": {
+          "name": "Spotify Playlist (lahat ng edad)"
+        },
+        "dance-party-playlist/dance-2019/unversioned": {
+          "name": "Spotify Playlist (lahat ng edad)"
         },
         "ai-ml/oceans/unversioned": {
           "type": "Video"
@@ -736,6 +748,9 @@
         "pause_and_think_online/coursed/2021": {
           "type": "Video"
         },
+        "dance-party-playlist/coursed/2021": {
+          "name": "Spotify Playlist (lahat ng edad)"
+        },
         "pause_and_think_online_1/coursed/2021": {
           "type": "Video"
         },
@@ -780,6 +795,9 @@
         },
         "pause_and_think_online/express/2021": {
           "type": "Video"
+        },
+        "dance-party-playlist/express/2021": {
+          "name": "Spotify Playlist (lahat ng edad)"
         },
         "pair_programming_video/express/2021": {
           "type": "Video"
@@ -916,6 +934,15 @@
         "teacher_forum/csd/2021": {
           "name": "Pagtitipon ng Guro"
         },
+        "computing-innovations/csd/2021": {
+          "name": "Pag-compute na mga Pagbabago"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "Video"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "type": "Video"
+        },
         "designing_screens_with_code/csd/2021": {
           "name": "Pagdidisenyo ng mga Screen gamit ang Code"
         },
@@ -958,6 +985,12 @@
         },
         "prototype-an-innovation-1/csd/2021": {
           "type": "Rubric"
+        },
+        "representation-matters-exemplar-2019/csd/2021": {
+          "name": "Ang Representasyon ay Mahalaga"
+        },
+        "representation-matters/csd/2021": {
+          "name": "Ang Representasyon ay Mahalaga"
         },
         "representing-information-1/csd/2021": {
           "name": "Pagrepresenta ng Impormasyon"
@@ -1110,6 +1143,12 @@
         },
         "teacher_forum_1/csd/2021": {
           "name": "Pagtitipon ng Guro"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "type": "Video"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "Ang Proseso ng Pagtuklas ng Problema"
         },
         "what-is-a-computer-2020/csd/2021": {
           "name": "Ano ang isang Kompyuter?"
