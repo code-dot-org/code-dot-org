@@ -4,7 +4,8 @@
     referenceGuide: @reference_guide.summarize_for_edit.to_json,
     referenceGuides: @reference_guides.to_json,
     updateUrl: @update_url.to_json,
-    editAllUrl: @edit_all_url.to_json
+    editAllUrl: @edit_all_url.to_json,
+    levelSearchingInfo: {programmingEnvironments: ProgrammingEnvironment.all.map(&:summarize_for_lesson_edit)}.to_json
   }}
 
 #show-container
