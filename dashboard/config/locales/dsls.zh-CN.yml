@@ -9802,3 +9802,83 @@ zh-CN:
         title: 计算机科学发现快速问卷！
       csd-pulse-check-survey-1-levelgroup U6Ch2_2021:
         title: 计算机科学发现快速问卷！
+      CSD U3 drawing practice choice_2021:
+        display_name: 练习
+      CSD web draw loop practice choice_2021:
+        display_name: 练习
+      CSD web movement practice choice_2021:
+        display_name: 练习
+      CSD web text practice choice_2021:
+        display_name: 练习
+      CSDU6 Innovation_2021:
+        markdown: |-
+          # 创新研究
+
+          选择下列话题中的一个来调查。在你所选择类别的领域里，你会想要找到有关最新的创新计算设备相关的信息
+
+          ## 可穿戴技术
+          可穿戴技术包含可被用户穿在身上的任意类型的计算机，包括嵌入在衣服里和戴在身上的设备。很多可穿戴设备，例如智能计步器，可能会和“健康和安全”重叠，这个设备既是可穿戴_也_可以提升人们的健康和安全。
+
+          ## 健康和安全
+          广义的定义包括消费者技术（用于提升健康和安全的）和专业技术（医生或专业人士所使用的）
+
+          ## 农业
+          农业可能不是那么显著的话题，但是技术创新对于农业有着巨大的影响。其中包括将计算机引入现存的农业设备，使用传感器和机器人监控农作物、通过分析数据提升效率和可持续性。
+
+          ## 制造业
+          在快速原型设计、工业机器人、自动化等领域所带来的优势，对于工业品的生产起着主要的作用。无论是技术应用在小规模低成本制造（例如3D打印和激光切割），还是工厂作业中的计算机整合，这里发生着很多相关领域的研究。
+
+          ## 艺术和设计
+          艺术表达和计算的交融能够产生令人深刻和意想不到的结果。你可能很少能找到商业化的艺术和设计类产品，但是你可能会发现大量家庭作品，事实上这些作品都是在用的计算设备来表达创新。
+
+          ## 智能家居
+          拥有一个能理解人类甚至能预测你需求的房间的梦想，比以往任何时刻都来得更近了。无论是通过语音精确控制，还是使用传感器监控某个条件变化，智能家居设备能够照顾任意数量的设备或重复指派任务给房间。
+
+          # 研究注意事项
+
+          当研究你的主题设备时，始终注意一下重点：
+
+          * 关注基于软件程序解决问题的硬件上
+          * 关注最近的创新
+          * 跟随你的兴趣
+
+          # 开始你的研究
+
+          请你的老师推荐一些网站来开启你的研究，你也可以使用上面的一些关键词在互联网上找到一些相关的想法。比如，考虑寻找各种人资助创新想法的网站（比如Kickstarter和Indiegogo）来看看那些还没有完全落地的产品。
+        teacher_markdown: |-
+          下面是一些学生们开始做研究时所使用的的网站。我们不直接提供这些网站给学生，因为有时候这些网站会被地区性的屏蔽程序所封禁，或者最新的值得调研的创新并不适合中学。**我们强烈建议你检查每一个网站，确认是否有不合适的内容，确保在教室加载的网站都是适合分享给学生的。**
+
+          作为起始点使用以下网站列表，我们推荐提供一个研究网站的数字化列表给学生。这样的话既能包含下面的网站，也能包含任何你自己发现的更多资源。
+
+          ### 可穿戴技术
+
+          * [Wareable.com](https://www.wareable.com/)
+
+          ### 健康与安全
+
+          * [Modern Healthcare](http://www.modernhealthcare.com/section/medical-devices)
+          * [Medstartr](http://www.medstartr.com/)
+
+          ### 农业
+
+          * [National Institute of Food and Agriculture](https://nifa.usda.gov/topic/agriculture-technology)
+          * [Farm Industry News](http://www.farmindustrynews.com/technology)
+
+          ### 制造业
+
+          * [Industry Week](https://www.industryweek.com/technology-and-iiot)
+          * [3D Printing](https://3dprinting.com/)
+
+          ### 艺术与设计
+
+          * [ArtFab](http://artfab.art.cmu.edu/)
+          * [Instructables](http://www.instructables.com/tag/type-id/category-technology/)
+
+          ### 智能家居
+
+          * [CNet](https://www.cnet.com/smart-home/)
+          * [IoT Evolution](http://www.iotevolutionworld.com/smart-home/)
+      ml-club app-choice parent:
+        display_name: 自定义你的应用
+      ml-intro app lab-book recommender 5-2021:
+        display_name: 自定义你的应用
