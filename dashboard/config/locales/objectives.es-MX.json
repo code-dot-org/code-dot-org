@@ -1340,6 +1340,30 @@
         "f574312e-c0f6-4d4c-a52a-10e2874d55ba": {
           "description": "Explorar las características de una pieza de programa de forma independiente."
         },
+        "80e00862-0fe7-44a4-9e0c-785e6674f0e5": {
+          "description": "Describir las características necesarias de un sistema para representar la información."
+        },
+        "19b5be99-7f7e-42e1-9ce4-6e53d7361d35": {
+          "description": "Crear y utilizar un sistema para representar información."
+        },
+        "6ad62a76-15c2-4ee6-812b-89426ccbaf53": {
+          "description": "Definir un sistema binario como uno que utiliza dos estados posibles para representar información."
+        },
+        "314c3d2c-32d4-4b31-a7b7-bc848001a0ef": {
+          "description": "Utilizar el sistema ASCII para codificar y decodificar texto su propio sistema binario"
+        },
+        "a4a38d49-6a85-4c4e-9e9f-b589bc00b61a": {
+          "description": "Crear y manipular patrones binarios para representar imágenes en blanco y negro"
+        },
+        "607265dd-c7c2-4ef7-bb9d-ea8026f769e3": {
+          "description": "Describir características comunes de los sistemas utilizados para representar información en binario"
+        },
+        "3a37860e-7f85-4921-a622-4c0435783261": {
+          "description": "Utilizar un sistema binario para representar números."
+        },
+        "bddab4e2-74ad-4394-8180-11dde4ab88f9": {
+          "description": "Extender un sistema de representación basado en patrones."
+        },
         "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
           "description": "Entrena y prueba un modelo de aprendizaje automático."
         },
@@ -1503,31 +1527,31 @@
           "description": "Seleccionar las entradas y salidas utilizadas para realizar tareas informáticas cotidianas"
         },
         "372ca368-9509-4398-b84c-21ac4c890a1d": {
-          "description": "Explique el papel que desempeñan la entrada y la salida cuando se utilizan computadoras para resolver problemas de información"
+          "description": "Explique el papel que desempeñan la entrada y la salida cuando se utilizan computadoras para resolver problemas de información."
         },
         "36878c76-5f41-4efb-bba1-e9ca4a2e32fa": {
           "description": "Definir procesamiento como el trabajo realizado (posiblemente por una computadora) para convertir una entrada en una salida"
         },
         "dd98dbf4-2b0d-4d8b-be4e-4807c06de0a0": {
-          "description": "Identificar varios tipos comunes de procesamiento utilizados en la informática"
+          "description": "Identificar varios tipos comunes de procesamiento utilizados en la informática."
         },
         "434ebdb0-40d0-4a29-bcfb-635ade18fb5e": {
-          "description": "Determinar qué tipos de procesamiento son adecuados para un problema informático específico"
+          "description": "Determinar qué tipos de procesamiento son adecuados para un problema informático específico."
         },
         "eecfc6b0-93e7-4a6f-bdc2-fcfe306a3407": {
           "description": "Determinar qué información de un problema computacional debe ser almacenada para su uso posterior"
         },
         "f8ceacee-8c38-4d94-a2f3-35ee71d8b382": {
-          "description": "Identificar las directrices respecto a la información que debe y no debe almacenarse como parte del proceso computacional"
+          "description": "Identificar las directrices respecto a la información que debe y no debe almacenarse como parte del proceso computacional."
         },
         "30f1b582-38d8-402b-83da-c8a7cba4b2aa": {
-          "description": "Utilizar el modelo de entrada-salida-almacenamiento-procesamiento para describir un proceso computacional"
+          "description": "Utilizar el modelo de entrada-salida-almacenamiento-procesamiento para describir un proceso computacional."
         },
         "e543e22d-8270-4eb9-81ad-6de8d5455d59": {
           "description": "Identificar y definir un problema que pueda ser resuelto con la computación"
         },
         "6fa18746-fa9c-4ace-a0e3-fc7936899b64": {
-          "description": "Diseñar una aplicación que incluya la entrada, salida, almacenamiento, y procesamiento de información para resolver el problema"
+          "description": "Diseñar una aplicación que incluya la entrada, salida, almacenamiento y procesamiento de información para resolver el problema"
         },
         "5caf913a-779e-4174-9e9f-b6a87756263e": {
           "description": "Dar e incorporar opiniones de sus pares para mejorar un artefacto computacional"
@@ -1571,8 +1595,11 @@
         "1e8b24b5-f8b6-46a6-b0b1-aba1633a02f0": {
           "description": "Evalúe que tan bien definido está un problema y utilice estrategias para definirlo con más precisión"
         },
+        "d8ec162b-7a19-496b-8f90-2ffb596be6a7": {
+          "description": "Identificar las razones por las que las personas crean sitios web"
+        },
         "a3d13dc7-ae60-458e-aefc-0e6399f6b074": {
-          "description": "Explicar que el HMTL es una herramienta que permite a un programador comunicar la forma en la que el contenido de una página debe estructurarse"
+          "description": "Explicar que el HTML es una herramienta que permite a un programador comunicar la forma en la que el contenido de una página debe estructurarse"
         },
         "0227f8e9-e8ad-40b5-bc8f-ea0fae00241a": {
           "description": "Escribir un documento HTLM simple, utilizando etiquetas de apertura y cierre para estructurar el contenido"

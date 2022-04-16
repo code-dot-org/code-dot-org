@@ -497,7 +497,7 @@ es-MX:
         csd_gamelab_booleans: Expresiones booleanas
         csd_gamelab_conditional_statements: Sentencias condicionales
         csd_gamelab_if_else: Sentencias `si/si no`
-        CSF_SpriteLabIntro_CDEF: Esto es Laboratorio de sprites
+        CSF_SpriteLabIntro_CDEF: Esto es Laboratorio de Sprite
         CSF_Spritelab_MakeSprite_CDEF: Cómo crear un sprite en el Laboratorio de sprites
         CDEF_Video_SpritesInAction: Sprites en acción
         CSF_SpriteLab_SpritesInAction_CDEF: Sprites en acción
@@ -533,7 +533,7 @@ es-MX:
         csd_problem_solving_process: El proceso de resolución de problemas
         CSF_Going_Places_Safely: Mi barrio en línea
         CSF_SpriteLab_Intro_v2: Presentamos el Laboratorio de sprites
-        CSF_Spritelab_MakeSprite_v2: Cómo crear un sprite
+        CSF_Spritelab_MakeSprite_v2: Cómo Crear un Sprite
         CSF_SpriteLab_SpritesInAction_v2: Sprites en acción
         csd_debugging: Depuración
         csd_applab_designmode_short: Modo de diseño del Laboratorio de aplicaciones
@@ -632,6 +632,9 @@ es-MX:
         PL_overview_CSP: '¿Qué son los Principios de la Informática?'
         PL_CSP_EIPMOverview: Guía de Lecciones de EIPM
         tesstest: Prueba Tess
+        CSA-PL-debugging-temp: Introducción a la Depuración en Laboratorio Java - temp
+        csd_u6_circuit_playground: Computación física
+        csd_u6_input_output: Entrada y salida
     callout:
       text:
         drag_blocks: Arrastra un bloque "mover" y colócalo debajo del otro bloque
@@ -707,6 +710,6 @@ es-MX:
         craft_drag_block_callout: Arrastra un bloque "avanzar" y acóplalo bajo otro bloque.
         craft_callout_preplaced: Hemos colocado algunos bloques para que empieces.
         craft_inside_repeat: Coloca bloques aquí para repetir acciones.
-        craft_callout_preplaced_house: Este código empezará a construir tu casa. ¿Puedes acabarlo?
+        craft_callout_preplaced_house: Este código comenzará a construir tu casa. ¿Puedes terminarlo?
         craft_what_is_iron: '¡Extrae este hierro!'
         craft_callout_moveforward: Este código comprobará si hay lava. ¿Puedes añadir un comando para avanzar?

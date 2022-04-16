@@ -7506,116 +7506,117 @@ es-MX:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
-          feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
-            obtener néctar solamente si hay una flor debajo de la nube.
-        - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        - text: La abeja ira a la nube y tratará de recoger néctar sólo si hay una
             flor debajo.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
-            néctar solamente si hay una flor debajo de la nube.
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
         - text: No lo sé.
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
         questions:
         - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
-            Si hay una flor, la abeja necesitará obtener el néctar una vez. Si no
-            hay una flor, la abeja no debería hacer nada. Observa el siguiente código
+            Si hay una flor, la abeja tendría que recoger néctar una vez. Si no hay
+            una flor, la abeja no debería hacer nada. Observa el siguiente código
             con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
-          feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
-            obtener néctar solamente si hay una flor debajo de la nube.
-        - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        - text: La abeja ira a la nube y tratará de recoger néctar sólo si hay una
             flor debajo.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
-            néctar solamente si hay una flor debajo de la nube.
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
         - text: No lo sé.
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
         questions:
         - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
-            Si hay una flor, la abeja necesitará obtener el néctar una vez. Si no
-            hay una flor, la abeja no debería hacer nada. Observa el siguiente código
+            Si hay una flor, la abeja tendría que recoger néctar una vez. Si no hay
+            una flor, la abeja no debería hacer nada. Observa el siguiente código
             con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
-          feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
-            obtener néctar solamente si hay una flor debajo de la nube.
-        - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        - text: La abeja ira a la nube y tratará de recoger néctar sólo si hay una
             flor debajo.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
-            néctar solamente si hay una flor debajo de la nube.
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
         - text: No lo sé.
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
         questions:
         - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
-            Si hay una flor, la abeja necesitará obtener el néctar una vez. Si no
-            hay una flor, la abeja no debería hacer nada. Observa el siguiente código
+            Si hay una flor, la abeja tendría que recoger néctar una vez. Si no hay
+            una flor, la abeja no debería hacer nada. Observa el siguiente código
             con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
       courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
-          feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
-            obtener néctar solamente si hay una flor debajo de la nube.
-        - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        - text: La abeja ira a la nube y tratará de recoger néctar sólo si hay una
             flor debajo.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
-            néctar solamente si hay una flor debajo de la nube.
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
         - text: No lo sé.
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
         questions:
         - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
-            Si hay una flor, la abeja necesitará obtener el néctar una vez. Si no
-            hay una flor, la abeja no debería hacer nada. Observa el siguiente código
+            Si hay una flor, la abeja tendría que recoger néctar una vez. Si no hay
+            una flor, la abeja no debería hacer nada. Observa el siguiente código
             con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
       courseD_multi_bee_conditionals1_predict1_copy:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
-          feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
-            obtener néctar solamente si hay una flor debajo de la nube.
-        - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        - text: La abeja ira a la nube y tratará de recoger néctar sólo si hay una
             flor debajo.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
-            néctar solamente si hay una flor debajo de la nube.
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
         - text: No lo sé.
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
         questions:
         - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
-            Si hay una flor, la abeja necesitará obtener el néctar una vez. Si no
-            hay una flor, la abeja no debería hacer nada. Observa el siguiente código
+            Si hay una flor, la abeja tendría que recoger néctar una vez. Si no hay
+            una flor, la abeja no debería hacer nada. Observa el siguiente código
             con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - text: La abeja obtendrá el néctar de cada flor, y la miel, de cada panal.
           correct: true
           feedback: "¡Correcto!"
-        - text: La abeja tratará de obtener el néctar de las flores y del panal.
+        - text: La abeja tratará de obtener el néctar tanto de las flores como del
+            panal.
           feedback: Incorrecto. El bloque `si en la flor` permite a la abeja tomar
             el néctar de cada flor y la miel de cada panal.
-        - text: La abeja tratará de obtener la miel de las flores y del panal.
+        - text: La abeja tratará de obtener miel tanto de las flores como del panal.
           feedback: Incorrecto. Incorrecto. El bloque 'si hay flor' permite a la abeja
             tomar néctar de cada flor y miel de cada panal..
         - text: No lo sé.
@@ -7630,10 +7631,11 @@ es-MX:
         - text: La abeja obtendrá el néctar de cada flor, y la miel, de cada panal.
           correct: true
           feedback: "¡Correcto!"
-        - text: La abeja tratará de obtener el néctar de las flores y del panal.
+        - text: La abeja tratará de obtener el néctar tanto de las flores como del
+            panal.
           feedback: Incorrecto. El bloque `si en la flor` permite a la abeja tomar
             el néctar de cada flor y la miel de cada panal.
-        - text: La abeja tratará de obtener la miel de las flores y del panal.
+        - text: La abeja tratará de obtener miel tanto de las flores como del panal.
           feedback: Incorrecto. Incorrecto. El bloque 'si hay flor' permite a la abeja
             tomar néctar de cada flor y miel de cada panal..
         - text: No lo sé.
@@ -7648,12 +7650,13 @@ es-MX:
         - text: La abeja recogerá néctar de cada flor y hará miel en cada panal.
           correct: true
           feedback: "¡Correcto!"
-        - text: La abeja tratará de obtener el néctar de las flores y del panal.
-          feedback: Incorrecto. El bloque ´si en una flor´ le permite a la abeja recoger
-            néctar en cada flor y hacer miel en cada panal.
-        - text: La abeja tratará de obtener la miel de las flores y del panal.
-          feedback: Incorrecto. Incorrecto. El bloque ´si en una flor´ le permite
-            a la abeja recoger néctar en cada flor y hacer miel en cada panal.
+        - text: La abeja tratará de obtener el néctar tanto de las flores como del
+            panal.
+          feedback: Incorrecto. El bloque 'si hay flor' permitirá a la abeja recoger
+            nectar de cada flor y miel de cada panal.
+        - text: La abeja tratará de obtener miel tanto de las flores como del panal.
+          feedback: Incorrecto. Incorrecto. El bloque ´si hay flor´ le permite a la
+            abeja recoger néctar en cada flor y hacer miel en cada panal.
         - text: No lo sé.
           feedback: El bloque ´si en una flor´ le permite a la abeja recoger néctar
             en cada flor y hacer miel en cada panal.
@@ -7666,12 +7669,13 @@ es-MX:
         - text: La abeja recogerá néctar de cada flor y hará miel en cada panal.
           correct: true
           feedback: "¡Correcto!"
-        - text: La abeja tratará de obtener el néctar de las flores y del panal.
-          feedback: Incorrecto. El bloque ´si en una flor´ le permite a la abeja recoger
-            néctar en cada flor y hacer miel en cada panal.
-        - text: La abeja tratará de obtener la miel de las flores y del panal.
-          feedback: Incorrecto. Incorrecto. El bloque ´si en una flor´ le permite
-            a la abeja recoger néctar en cada flor y hacer miel en cada panal.
+        - text: La abeja tratará de obtener el néctar tanto de las flores como del
+            panal.
+          feedback: Incorrecto. El bloque 'si hay flor' permitirá a la abeja recoger
+            nectar de cada flor y miel de cada panal.
+        - text: La abeja tratará de obtener miel tanto de las flores como del panal.
+          feedback: Incorrecto. Incorrecto. El bloque ´si hay flor´ le permite a la
+            abeja recoger néctar en cada flor y hacer miel en cada panal.
         - text: No lo sé.
           feedback: El bloque ´si en una flor´ le permite a la abeja recoger néctar
             en cada flor y hacer miel en cada panal.
@@ -7958,74 +7962,74 @@ es-MX:
       courseD_multi_farmer_while10_predict2:
         answers:
         - text: Nada. Este código solo nivelará el suelo.
-          feedback: Incorrecto. No existe un código para limpiar la tierra de la pila.
+          feedback: Incorrecto. No existe un código para eliminar tierra de la pila.
         - text: Este código dejará la pila completamente intacta.
           correct: true
           feedback: "¡Correcto!"
-        - text: Este código dejará los orificios completamente intactos.
-          feedback: Incorrecto. El bucle `mientras` podrá manejar cualquier tamaño
-            de bucle, pero no existe un código para limpiar la tierra de la pila.
+        - text: Este código dejará los hoyos completamente intactos.
+          feedback: Incorrecto. El bucle (loop) `mientras` podrá manejar cualquier
+            tamaño de bucle (loop), pero no existe un código para eliminar la tierra
+            de la pila.
         - text: No lo sé.
           feedback: El bucle `mientras` podrá manejar cualquier tamaño de bucle, pero
             no existe un código para limpiar la tierra de la pila.
         questions:
-        - text: Observa el código siguiente con atención. ¿Qué quedará al final de
-            este desafío?
+        - text: Mira bien el código siguiente. ¿Qué quedará al final de este rompecabezas?
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - text: Nada. Este código solo nivelará el suelo.
-          feedback: Incorrecto. No existe un código para limpiar la tierra de la pila.
+          feedback: Incorrecto. No existe un código para eliminar tierra de la pila.
         - text: Este código dejará la pila completamente intacta.
           correct: true
           feedback: "¡Correcto!"
-        - text: Este código dejará los orificios completamente intactos.
-          feedback: Incorrecto. El bucle `mientras` podrá manejar cualquier tamaño
-            de bucle, pero no existe un código para limpiar la tierra de la pila.
+        - text: Este código dejará los hoyos completamente intactos.
+          feedback: Incorrecto. El bucle (loop) `mientras` podrá manejar cualquier
+            tamaño de bucle (loop), pero no existe un código para eliminar la tierra
+            de la pila.
         - text: No lo sé.
           feedback: El bucle `mientras` podrá manejar cualquier tamaño de bucle, pero
             no existe un código para limpiar la tierra de la pila.
         questions:
-        - text: Observa el código siguiente con atención. ¿Qué quedará al final de
-            este desafío?
+        - text: Mira bien el código siguiente. ¿Qué quedará al final de este rompecabezas?
       courseD_multi_farmer_while10_predict2_2018_2019:
         answers:
         - text: Nada. Este código solo nivelará el suelo.
-          feedback: Incorrecto. No existe un código para limpiar la tierra de la pila.
+          feedback: Incorrecto. No existe un código para eliminar tierra de la pila.
         - text: Este código dejará la pila completamente intacta.
           correct: true
           feedback: "¡Correcto!"
-        - text: Este código dejará los orificios completamente intactos.
-          feedback: Incorrecto. El bucle `mientras` podrá manejar cualquier tamaño
-            de bucle, pero no existe un código para limpiar la tierra de la pila.
+        - text: Este código dejará los hoyos completamente intactos.
+          feedback: Incorrecto. El bucle (loop) `mientras` podrá manejar cualquier
+            tamaño de bucle (loop), pero no existe un código para eliminar la tierra
+            de la pila.
         - text: No lo sé.
           feedback: El bucle `mientras` podrá manejar cualquier tamaño de bucle, pero
             no existe un código para limpiar la tierra de la pila.
         questions:
-        - text: Observa el código siguiente con atención. ¿Qué quedará al final de
-            este desafío?
+        - text: Mira bien el código siguiente. ¿Qué quedará al final de este rompecabezas?
       courseD_multi_farmer_while10_predict2_2018_2019_2020:
         answers:
         - text: Nada. Este código solo nivelará el suelo.
-          feedback: Incorrecto. No existe un código para limpiar la tierra de la pila.
+          feedback: Incorrecto. No existe un código para eliminar tierra de la pila.
         - text: Este código dejará la pila completamente intacta.
           correct: true
           feedback: "¡Correcto!"
-        - text: Este código dejará los orificios completamente intactos.
-          feedback: Incorrecto. El bucle `mientras` podrá manejar cualquier tamaño
-            de bucle, pero no existe un código para limpiar la tierra de la pila.
+        - text: Este código dejará los hoyos completamente intactos.
+          feedback: Incorrecto. El bucle (loop) `mientras` podrá manejar cualquier
+            tamaño de bucle (loop), pero no existe un código para eliminar la tierra
+            de la pila.
         - text: No lo sé.
           feedback: El bucle `mientras` podrá manejar cualquier tamaño de bucle, pero
             no existe un código para limpiar la tierra de la pila.
         questions:
-        - text: Observa el código siguiente con atención. ¿Qué quedará al final de
-            este desafío?
+        - text: Mira bien el código siguiente. ¿Qué quedará al final de este rompecabezas?
       courseD_multi_farmer_while4_predict1:
         answers:
         - text: No sucederá nada.
-          feedback: Incorrecto. La granjera removerá la tierra mientras exista una
+          feedback: Incorrecto. La granjera eliminará la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
-        - text: La granjera nunca dejará de quitar la tierra.
-          feedback: Incorrecto. La granjera removerá la tierra mientras exista una
+        - text: La granjera nunca dejará de quitar tierra.
+          feedback: Incorrecto. La granjera eliminará la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
         - text: La granjera quitará la tierra mientras exista una pila, y luego se
             detendrá cuando la pila desaparezca.
@@ -8040,10 +8044,10 @@ es-MX:
       courseD_multi_farmer_while4_predict1_2018:
         answers:
         - text: No sucederá nada.
-          feedback: Incorrecto. La granjera removerá la tierra mientras exista una
+          feedback: Incorrecto. La granjera eliminará la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
-        - text: La granjera nunca dejará de quitar la tierra.
-          feedback: Incorrecto. La granjera removerá la tierra mientras exista una
+        - text: La granjera nunca dejará de quitar tierra.
+          feedback: Incorrecto. La granjera eliminará la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
         - text: La granjera quitará la tierra mientras exista una pila, y luego se
             detendrá cuando la pila desaparezca.
@@ -8058,10 +8062,10 @@ es-MX:
       courseD_multi_farmer_while4_predict1_2018_2019:
         answers:
         - text: No sucederá nada.
-          feedback: Incorrecto. La granjera removerá la tierra mientras exista una
+          feedback: Incorrecto. La granjera eliminará la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
-        - text: La granjera nunca dejará de quitar la tierra.
-          feedback: Incorrecto. La granjera removerá la tierra mientras exista una
+        - text: La granjera nunca dejará de quitar tierra.
+          feedback: Incorrecto. La granjera eliminará la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
         - text: La granjera quitará la tierra mientras exista una pila, y luego se
             detendrá cuando la pila desaparezca.
@@ -8076,10 +8080,10 @@ es-MX:
       courseD_multi_farmer_while4_predict1_2018_2019_2020:
         answers:
         - text: No sucederá nada.
-          feedback: Incorrecto. La granjera removerá la tierra mientras exista una
+          feedback: Incorrecto. La granjera eliminará la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
-        - text: La granjera nunca dejará de quitar la tierra.
-          feedback: Incorrecto. La granjera removerá la tierra mientras exista una
+        - text: La granjera nunca dejará de quitar tierra.
+          feedback: Incorrecto. La granjera eliminará la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
         - text: La granjera quitará la tierra mientras exista una pila, y luego se
             detendrá cuando la pila desaparezca.
@@ -8111,61 +8115,64 @@ es-MX:
             clic en "Ejecutar"?
       courseD_multi_maze_until10_predict2_2018:
         answers:
-        - text: El zombie pasará el camino correcto, y no dejará de ir y venir.
+        - text: El zombie se pasará del camino correcto y terminará yendo hacia adelante
+            y hacia atrás para siempre.
           correct: true
           feedback: "¡Correcto!"
         - text: El zombie llegará al girasol.
-          feedback: Incorrecto. El zombie pasará el camino correcto, y no dejará de
-            ir y venir.
+          feedback: Incorrecto. El zombie se pasará del camino correcto y terminará
+            yendo hacia adelante y hacia atrás para siempre.
         - text: El zombie girará a la derecha en el primer camino y dará vueltas en
             círculos sin parar.
-          feedback: Incorrecto. El zombie pasará el camino correcto, y no dejará de
-            ir y venir.
+          feedback: Incorrecto. El zombie se pasará del camino correcto y terminará
+            yendo hacia adelante y hacia atrás para siempre.
         - text: No lo sé.
-          feedback: En este código, el zombie pasará el camino correcto, y no dejará
-            de ir y venir.
+          feedback: En este código, el zombie se pasará del camino correcto y terminará
+            yendo hacia adelante y hacia atrás para siempre.
         questions:
         - text: Observa el siguiente código con atención. ¿Qué sucederá luego de hacer
             clic en "Ejecutar"?
       courseD_multi_maze_until10_predict2_2018_2019:
         answers:
-        - text: El zombie pasará el camino correcto, y no dejará de ir y venir.
+        - text: El zombie se pasará del camino correcto y terminará yendo hacia adelante
+            y hacia atrás para siempre.
           correct: true
           feedback: "¡Correcto!"
         - text: El zombie llegará al girasol.
-          feedback: Incorrecto. El zombie pasará el camino correcto, y no dejará de
-            ir y venir.
+          feedback: Incorrecto. El zombie se pasará del camino correcto y terminará
+            yendo hacia adelante y hacia atrás para siempre.
         - text: El zombie girará a la derecha en el primer camino y dará vueltas en
             círculos sin parar.
-          feedback: Incorrecto. El zombie pasará el camino correcto, y no dejará de
-            ir y venir.
+          feedback: Incorrecto. El zombie se pasará del camino correcto y terminará
+            yendo hacia adelante y hacia atrás para siempre.
         - text: No lo sé.
-          feedback: En este código, el zombie pasará el camino correcto, y no dejará
-            de ir y venir.
+          feedback: En este código, el zombie se pasará del camino correcto y terminará
+            yendo hacia adelante y hacia atrás para siempre.
         questions:
         - text: Observa el siguiente código con atención. ¿Qué sucederá luego de hacer
             clic en "Ejecutar"?
       courseD_multi_maze_until10_predict2_2018_2019_2020:
         answers:
-        - text: El zombie pasará el camino correcto, y no dejará de ir y venir.
+        - text: El zombie se pasará del camino correcto y terminará yendo hacia adelante
+            y hacia atrás para siempre.
           correct: true
           feedback: "¡Correcto!"
         - text: El zombie llegará al girasol.
-          feedback: Incorrecto. El zombie pasará el camino correcto, y no dejará de
-            ir y venir.
+          feedback: Incorrecto. El zombie se pasará del camino correcto y terminará
+            yendo hacia adelante y hacia atrás para siempre.
         - text: El zombie girará a la derecha en el primer camino y dará vueltas en
             círculos sin parar.
-          feedback: Incorrecto. El zombie pasará el camino correcto, y no dejará de
-            ir y venir.
+          feedback: Incorrecto. El zombie se pasará del camino correcto y terminará
+            yendo hacia adelante y hacia atrás para siempre.
         - text: No lo sé.
-          feedback: En este código, el zombie pasará el camino correcto, y no dejará
-            de ir y venir.
+          feedback: En este código, el zombie se pasará del camino correcto y terminará
+            yendo hacia adelante y hacia atrás para siempre.
         questions:
         - text: Observa el siguiente código con atención. ¿Qué sucederá luego de hacer
             clic en "Ejecutar"?
       courseD_multi_maze_until2_predict1:
         answers:
-        - text: El pájaro no se moverá en lo absoluto.
+        - text: El pájaro no se moverá.
           feedback: Incorrecto. En este código, el pájaro avanza mientras haya un
             camino, y luego gira a la izquierda. ¡Seguirá haciendo esto hasta llegar
             al cerdo!
@@ -8184,7 +8191,7 @@ es-MX:
             hagas clic en "Ejecutar"?
       courseD_multi_maze_until2_predict1_2018:
         answers:
-        - text: El pájaro no se moverá en lo absoluto.
+        - text: El pájaro no se moverá.
           feedback: Incorrecto. En este código, el pájaro avanza mientras haya un
             camino, y luego gira a la izquierda. ¡Seguirá haciendo esto hasta llegar
             al cerdo!
@@ -8203,7 +8210,7 @@ es-MX:
             hagas clic en "Ejecutar"?
       courseD_multi_maze_until2_predict1_2018_2019:
         answers:
-        - text: El pájaro no se moverá en lo absoluto.
+        - text: El pájaro no se moverá.
           feedback: Incorrecto. En este código, el pájaro avanza mientras haya un
             camino, y luego gira a la izquierda. ¡Seguirá haciendo esto hasta llegar
             al cerdo!
@@ -8222,7 +8229,7 @@ es-MX:
             hagas clic en "Ejecutar"?
       courseD_multi_maze_until2_predict1_2018_2019_2020:
         answers:
-        - text: El pájaro no se moverá en lo absoluto.
+        - text: El pájaro no se moverá.
           feedback: Incorrecto. En este código, el pájaro avanza mientras haya un
             camino, y luego gira a la izquierda. ¡Seguirá haciendo esto hasta llegar
             al cerdo!
@@ -8919,15 +8926,15 @@ es-MX:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
-          feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
-            obtener néctar solamente si hay una flor debajo de la nube.
-        - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        - text: La abeja ira a la nube y tratará de recoger néctar sólo si hay una
             flor debajo.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
-            néctar solamente si hay una flor debajo de la nube.
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
         - text: No lo sé.
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
@@ -8943,11 +8950,12 @@ es-MX:
         - text: La abeja recogerá el néctar de cada flor; de lo contrario, hará miel.
           correct: true
           feedback: "¡Correcto!"
-        - text: La abeja tratará de obtener el néctar de las flores y del panal.
+        - text: La abeja tratará de obtener el néctar tanto de las flores como del
+            panal.
           feedback: Incorrecto. El bloque `si en la flor` permite a la abeja obtener
             el néctar de cada flor y hacer la miel si no hay una flor (y, por lo tanto,
             hay un panal).
-        - text: La abeja tratará de obtener la miel de las flores y del panal.
+        - text: La abeja tratará de obtener miel tanto de las flores como del panal.
           feedback: Incorrecto. Incorrecto. El bloque `si en la flor` permite a la
             abeja obtener el néctar de cada flor y la miel de cada panal.
         - text: No lo sé.
@@ -11811,22 +11819,22 @@ es-MX:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
-          feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
-            obtener néctar solamente si hay una flor debajo de la nube.
-        - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
+        - text: La abeja ira a la nube y tratará de recoger néctar sólo si hay una
             flor debajo.
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
-          feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
-            néctar solamente si hay una flor debajo de la nube.
+          feedback: Incorrecto. El bloque 'si hay flor' asegura que la abeja intentará
+            recoger néctar solamente si hay una flor debajo de la nube.
         - text: No lo sé.
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
         questions:
         - text: La nube bloquea la vista. Podría haber una flor debajo de esta nube.
-            Si hay una flor, la abeja necesitará obtener el néctar una vez. Si no
-            hay una flor, la abeja no debería hacer nada. Observa el siguiente código
+            Si hay una flor, la abeja tendría que recoger néctar una vez. Si no hay
+            una flor, la abeja no debería hacer nada. Observa el siguiente código
             con atención. ¿Qué crees que sucederá si haces clic en "Ejecutar"?
       courseD_multi_bee_conditionals7_predict2_2021:
         answers:
@@ -11992,15 +12000,15 @@ es-MX:
         - text: El alien empezará a patrullar de derecha a izquierda.
           feedback: Incorrecto. El alien comenzará a moverse hacia arriba y hacia
             abajo en la pantalla.
-        - text: El alien empezará a moverse hacia arriba y hacia abajo en la pantalla.
+        - text: El alien comenzará a moverse hacia arriba y hacia abajo en la pantalla.
           correct: true
           feedback: "¡Correcto!"
         - text: El alien desaparecerá de la parte superior de la pantalla.
           feedback: Incorrecto. El alien azul comenzará a moverse hacia arriba y hacia
             abajo en la pantalla.
         questions:
-        - text: Fíjate bien en el código de abajo. ¿Qué ocurrirá después de hacer
-            clic en el alienígena?
+        - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
+            clic en el alien?
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: La granjera recogerá dos calabazas.
@@ -12052,14 +12060,14 @@ es-MX:
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - text: No sucederá nada.
-          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
-        - text: La planta rodadora flotará hasta la parte superior de la pantalla
-          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
-        - text: La planta rodadora comenzará a caer
+          feedback: Incorrecto. El pez dorado comenzará a dar vueltas
+        - text: El pez dorado flotará hasta la parte superior de la pantalla
+          feedback: Incorrecto. El pez dorado comenzará a dar vueltas
+        - text: " El pez dorado comenzará a dar vueltas"
           correct: true
           feedback: "¡Correcto!"
-        - text: La planta rodadora se encenderá y apagará.
-          feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
+        - text: El pez dorado se encenderá y apagará.
+          feedback: Incorrecto. El pez dorado comenzará a dar vueltas
         questions:
         - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
             clic en "Ejecutar"?
@@ -12623,6 +12631,26 @@ es-MX:
           Una vez que hayas acordado un tipo de juego con tu compañero, rellena la Guía del Proyecto con los fondos, variables, sprites y funciones que necesitarás para hacer el juego.  Pasarás los siguientes niveles creando tu juego.
       CSD U3 platform intro_2018_2019_pilot_2021:
         content1: descripción aquí
+        markdown: |
+          # Construir un Salto de Plataforma
+
+          A medida que construyas tu salto de plataforma, utilizarás el proceso de resolución de problemas.
+
+          ## Definir
+
+          El problema está claramente definido para este juego, porque ya has visto una versión de ejemplo.  Sin embargo, es posible que quieras hacer algunos cambios.   Asegúrate de que las nuevas características de tu juego están claramente definidas.
+
+          ## Preparar
+
+          Antes de empezar a codificar, tienes que rellenar una guía de proyecto.  Te preparará y hará que la codificación sea mucho más fácil.
+
+          ## Probar
+
+          Probarás tu plan cuando empieces a codificar.  No te olvides de todos tus recursos, como la documentación y la pestaña de ayuda y consejos, cuando empieces a codificar.
+
+          ## Reflexionar
+
+          Después de terminar tu proyecto, querrás reflexionar sobre si tu juego ha resultado como habías planeado, y sobre las formas en que podrías mejorar tu proceso para la próxima vez.
       CSD U5 test_2021:
         title: Datos y Sociedad Prueba Fin de Proyecto
       CSD U6 LED create intro_2021:
@@ -12720,7 +12748,7 @@ es-MX:
         description: |2-
 
           Haz el Tuyo Propio
-          Acabas de recorrer el plan de otra persona para crear un juego, así que ahora es el momento de hacer el tuyo propio. ¿Qué características o retos adicionales quieres crear?
+          Acabas de recorrer el plan de otra persona para crear un juego, así que ahora es el momento de hacer el tuyo propio. ¿Qué funciones o desafíos adicionales quieres crear?
       CSD games functions practice choice_2021:
         display_name: Funciones Practicar
         description: Practica el uso de las funciones y aprende más sobre lo que las
@@ -13016,6 +13044,7 @@ es-MX:
       ml-models in applab-choice parent:
         description: Prueba lo que has aprendido en una o varias de las siguientes
           actividades.
+        display_name: 'Práctica de Tarjeta Modelo '
       CSD CSS project RGB_2021:
         description: Comprueba cómo puedes conseguir aún más colores utilizando los
           códigos RGB.
@@ -13175,3 +13204,81 @@ es-MX:
         description: Practica la entrada de teclado y el uso del bloque if/else con
           estas actividades.
         display_name: Entrada de Ratón y Práctica de If/else
+      aiml-ch1-pulse-survey_2021:
+        title: "¡Encuesta rápida sobre Inteligencia Artificial y Aprendizaje Automático!"
+      aiml-intro-pulse-survey_2021:
+        title: "¡Encuesta rápida sobre Inteligencia Artificial y Aprendizaje Automático!"
+      aiml-pulse-check-survey-1-levelgroup Ch2_2021:
+        title: "¡Encuesta Rápida de Informática!"
+      ml-customize apps-practice choice-2021:
+        display_name: Practica Personalizando tus Aplicaciones
+      ml-good data-isaac data:
+        markdown: |
+          ![](https://images.code.org/4f85627c74a140b1b09599a5095622ff-image-1624988925067.png)
+
+          ## [Pulsa Aquí](https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy) para crear una copia de los datos de Isaac
+      ml-good data-kim data:
+        markdown: |
+          ![](https://images.code.org/af7558eeafd15ef5e9f2fad0a6446c6a-image-1624987665106.png)
+
+          ## [Pulsa Aquí](https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy) para crear una copia de los datos de Kim
+      ml-good data-kim survey:
+        markdown: |
+          ![](https://images.code.org/47cb3494b3c90dcc443e373d58b54c6b-image-1624987469212.png)
+
+          ## [Pulsa Aquí](https://docs.google.com/forms/d/e/1FAIpQLSftxAAvDCXCoPMfzOgYTVYIrVESYYhNfVP-I83eVu9CXFKr-g/viewform) para responder a la encuesta de Kim
+      ml-model card-medical-1-2021:
+        markdown: |
+          # Recomendador Sala de Urgencias V1
+
+          Pulsa en la tarjeta modelo para ampliarla y ver una versión más grande
+
+          <a href="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" target="_blank"><img src="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-2-2021:
+        markdown: |
+          # Prioridad en la Sala de Urgencias de Auroras Boreales
+
+          Pulsa en la tarjeta modelo para ampliarla y ver una versión más grande
+
+          <a href="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" target="_blank">
+          <img src="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" target="_blank">
+          <img src="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" width="45%" style="float:right; margin: 2px"></a>
+
+          ![]()
+      ml-model card-medical-3-2021:
+        markdown: |
+          # Recomendador Médico con Inteligencia Artificial
+
+          Pulsa en la ficha del modelo para ampliarla y ver una versión más grande
+
+          <a href="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" target="_blank">
+          <img src="https://images.code.org/c5180010138ee3104705580dd2ff63c4-image-1625084861215.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" target="_blank">
+          <img src="https://images.code.org/dee6c18af60a6c7e56fc29d5bd249853-image-1625084891350.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-models-shoe survey:
+        markdown: |
+          ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
+
+          ## [Pulsa aquí](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) para realizar la Encuesta de Recomendación de Calzado
+      ml-plan survey-copy form:
+        markdown: |
+          # Copia un Formulario de Google
+
+          ## [Pulsa Aquí](https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy) para crear la copia de una plantilla de encuesta que utilizaremos hoy
+      ml-use model card-pet model card-2021:
+        markdown: |+
+          # Tarjeta Modelo del Recomendador de Mascotas
+
+          **Con un compañero:** ¿Cómo puedes diferenciar las características categóricas de las numéricas en la tarjeta modelo?
+
+          <a href="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" target="_blank"><img src="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" target="_blank"><img src="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" width="45%" style="float:right; margin: 2px"></a>
+
+      ml-use models applab-practice choice-2021:
+        display_name: Practica con Modelos en el Laboratorio de Aplicaciones
