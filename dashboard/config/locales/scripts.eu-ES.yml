@@ -2770,6 +2770,10 @@ eu:
               name: Arazketa
             lesson-19:
               name: Arazketa
+        csa4-2022:
+          lessons:
+            lesson-11:
+              name: Ausazkoa
         csa1-2022-exemplars:
           lessons:
             lesson-9:
@@ -2808,3 +2812,27 @@ eu:
             For Loops:
               name: For begiztak
               key: For begiztak
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Aldagaiak
+              key: Aldagaiak
+            Sprite Properties:
+              name: Sprite-n Propietateak
+              key: Sprite-n Propietateak
+            Text:
+              name: Testua
+              key: Testua
+            Conditionals:
+              name: Baldintzak
+              key: Baldintzak
+            Velocity:
+              name: Abiadura
+              key: Abiadura
+            Functions:
+              name: Funtzioak
+              key: Funtzioak
+        csd6-2022:
+          lessons:
+            Functions:
+              name: Funtzioak
