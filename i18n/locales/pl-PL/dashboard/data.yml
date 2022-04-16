@@ -632,6 +632,8 @@ pl:
         PL_CSP_EIPMOverview: Przewodnik po lekcjach EIPM
         tesstest: Testy
         CSA-PL-debugging-temp: Wprowadzenie do debugowania w Java Lab — temp
+        csd_u6_circuit_playground: Oiczenia fizyczne
+        csd_u6_input_output: Wejście i Wyjście
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku

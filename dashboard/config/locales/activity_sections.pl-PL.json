@@ -3,7 +3,8 @@
     "data": {
       "activity_sections": {
         "a83aa93a-e382-4a7a-80dd-651e7b10976e": {
-          "name": "Wstęp"
+          "name": "Wstęp",
+          "description": "#### Ustawianie sceny\n\nPowitaj uczniów na zajęciach i krótko przedstaw plan dnia. Pamiętaj, aby powiedzieć uczniom, by nie spieszyli się i eksperymentowali."
         },
         "a7790fa7-eacb-4851-8f98-3f236bd70fac": {
           "tips": [
@@ -478,10 +479,16 @@
             null
           ]
         },
+        "3e14940a-f236-48f0-bb1b-17cfad462b20": {
+          "name": "Część 1 - Złam szyfr Cezara"
+        },
         "4e04bf40-bae8-413b-a7f9-e62dc83d808e": {
           "tips": [
             null
           ]
+        },
+        "41c7a442-e5f1-4440-ad9a-d892d852fa3f": {
+          "name": "Część 2 - Złam szyfr losowego podstawienia"
         },
         "7219d891-31ac-454e-8060-eb84a3a0d1df": {
           "tips": [
@@ -511,6 +518,12 @@
           "tips": [
             null
           ]
+        },
+        "a09a8861-0c7d-433f-9fd6-d10220a44624": {
+          "name": "Film: Szyfrowanie i klucze publiczne"
+        },
+        "fc172d97-57ec-446d-bd3b-fd4f79aad8bf": {
+          "name": "Dyskusja"
         },
         "c694a6e6-b265-4802-bfca-bbc9180c8407": {
           "tips": [
@@ -699,6 +712,9 @@
         "b0fff664-80cc-4318-b031-edf88ad1aebc": {
           "description": "Poproś uczniów, aby dodali swoje karteczki samoprzylepne \"Notatki\" lub karty z notatkami do Twojej mapy myśli \"Informatyka\" wychodząc po zajęciach. Spróbuj zapełnić planszę wieloma pomysłami na temat tego, czym jest informatyka i dlaczego ma takie znaczenie."
         },
+        "2596c914-8e1c-4c92-b66c-9062e2a778c2": {
+          "name": "Rozgrzewka"
+        },
         "f5f6ef34-367d-424d-af63-a8a04c146c34": {
           "tips": [
             null
@@ -714,6 +730,9 @@
         },
         "789f83b4-45b7-4145-9d8c-e2a2429efec2": {
           "progression_name": "Widget: Kompresja tekstu"
+        },
+        "17878891-5c24-412b-b385-35b54fdaeb11": {
+          "description": "**Realny świat: Kompresja zip**\n\n-   Poeksperymentuj z zipem używając plików tekstowych o różnej treści. Czy wyniki w przypadku małych plików są równie dobre, jak w przypadku dużych plików? (na komputerach  Macs, w programie Finder znajdź \"uzyskaj informację\" dla pliku, aby zobaczyć rzeczywistą liczbę bitów w pliku, ponieważ ekran w programie Finder pokaże 4KB w przypadku dowolnego pliku, który jest od tego mniejszy.)\n    -   Ostrzeżenie: wyniki mogą się różnić.  Zip sprawdza się bardzo dobrze w przypadku tekstu, ale może nie kompresować zbyt dobrze innych plików, ponieważ są one już skompresowane albo nie mają wbudowanych wzorców tego samego rodzaju, jak dokumenty tekstowe.\n\n**Wyzwanie:  Zbadaj algorytm LZW**\n\n-   podstawą kompresji .zip jest [Metoda kompresji LZW](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch)\n\n-   Wprawdzie pomysł leżący u podstaw narzędzia kompresji tekstu jest podobny do algorytmu LZW (zip), śledzenie ścieżki kompresji i dekompresji może stanowić pewne wyzwanie.   Zdobywanie dalszej wiedzy na temat LZW oraz tego co dzieje się w toku tego algorytmu  byłoby wspaniałym rozszerzeniem projektu dla pewnych osób."
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
           "name": "Wstęp",
@@ -777,6 +796,9 @@
             null
           ]
         },
+        "03d9b77b-8370-4525-b5ba-d1e198c4bc96": {
+          "description": "#### Zabierz mnie na mecz\n\nZabierz uczniów na zewnątrz, aby zagrać w jakąś grę w piłkę. Śledź zdarzenia i działania. Na przykład niekozłowanie w koszykówce prowadzi do błędu kroków i piłkę przejmuje drużyna przeciwna. W piłce nożnej wykopanie piłki poza granice boiska prowadzi do wrzutu piłki przez drużynę przeciwną. Trafienie piłką do celu prowadzi do zdobycia punktu! Utwórz więcej zdarzeń jeśli chcą tego Twoi uczniowie. Niech wszyscy uczniowie krzykną \"Yippee\", gdy kapitan jednego z zespołów zdobędzie punkt. Niech każdy padnie na ziemię i przeturla się, jeśli uczeń strzeli dwa gole pod rząd!"
+        },
         "6874de98-8778-447b-8453-0138809b2c7e": {
           "tips": [
             null
@@ -827,6 +849,9 @@
             null
           ]
         },
+        "16f14f63-53a6-4f79-b6cf-8aa9f3b22e69": {
+          "description": "Jaki jest twój ulubiony sposób na bycie kreatywnym?"
+        },
         "faf90391-c01a-42d3-b79c-0becac0a50d2": {
           "name": "Ogólne wsparcie"
         },
@@ -869,10 +894,14 @@
           "name": "Świętuj"
         },
         "0dffb367-12f3-485a-bcde-cf4e789baed9": {
-          "name": "Następne Kroki"
+          "name": "Następne Kroki",
+          "description": "Poinformuj uczniów, że jeśli podobała im się dzisiejsza aktywność, mają wiele możliwości kontynuowania programowania. Zachęć uczniów do odwiedzenia strony [code.org/learn](http://code.org/learn) w celu uzyskania listy opcji lub, jeśli planujesz inne dodatkowe ćwiczenia, które nastąpią, powiedz uczniom, co będzie dalej w Twojej klasie."
         },
         "7905508e-c354-4909-93eb-38e2e9ef5661": {
           "description": "Poproś uczniów, aby dodali swoje karteczki samoprzylepne \"Notatki\" lub karty z notatkami do Twojej mapy myśli \"Informatyka\" wychodząc po zajęciach. Spróbuj zapełnić planszę wieloma pomysłami na temat tego, czym jest informatyka i dlaczego ma takie znaczenie."
+        },
+        "4587cdae-c2ce-4d5f-9540-063b6383388d": {
+          "description": "#### Poza Godziną Kodowania\n\nPo zakończeniu Godziny Kodowania istnieje wiele sposobów na kontynuowanie nauczania informatyki w klasach K-5. Oto kilka pomysłów:\n\n-   Prowadzić kursy [Podstawy informatyki w Code Studio](http://code.org/educate/k5). Te sześć kursów jest przeznaczonych dla młodych uczniów. Uczniowie przechodzą przez serię łamigłówek, które uczą ich kodowania, a nauczyciele mają dostęp do angażujących planów lekcji, które pomagają ożywić naukę. Code.org oferuje bezpłatny rozwój zawodowy na bazie tych kursów, online lub osobiście.\n-   Odwiedź stronę [Możesz uczyć informatyki](https://studio.code.org/courses?view=teacher), aby uzyskać więcej propozycji kursów.\n-   Zaproś eksperta ds. informatyki, aby porozmawiał z klasą o jego pracy. Nie znasz lokalnych informatyków? Skontaktuj się z wolontariuszem na naszej [mapa wolontariatu](https://code.org/volunteer/local)."
         },
         "bf5697ad-2b9a-4960-b5a7-98a1d3fa9ac1": {
           "tips": [
@@ -886,6 +915,9 @@
         },
         "6c36cec6-95a3-4b8e-87d1-d9f01bc99638": {
           "name": "Ogólne wsparcie"
+        },
+        "d737dd0e-b1aa-47df-b9a2-620d324f9c10": {
+          "name": "Poziom po poziomie"
         },
         "79a5c039-7ca6-41bb-acb5-ec5e0e29b122": {
           "tips": [
@@ -922,6 +954,9 @@
         "917bb837-8f93-4a92-86dc-ed60980f680b": {
           "progression_name": "AI: dane treningowe i stronniczość — Film"
         },
+        "6403e073-cdd0-46e8-9e02-f336a51baf91": {
+          "description": "#### Poziom 6 - Stosując dane treningowe"
+        },
         "7b664ff9-4e73-4d47-b54e-f2963900fa2a": {
           "tips": [
             null
@@ -933,6 +968,15 @@
         },
         "a47af864-6d0d-441c-98ea-6e50d036c415": {
           "progression_name": "Naucz AI nowego słowa"
+        },
+        "bb046ecc-a5f6-4ac9-a43c-a071589e04c9": {
+          "description": "Na ekranie wyników końcowych można wyświetlić wizualizację modelu uczenia maszynowego sztucznej inteligencji, klikając ![](https://curriculum.code.org/media/uploads/info.png)."
+        },
+        "be0995b2-b12f-45ee-9047-8261719fcd56": {
+          "name": "Przykład 1: Trening oparty na jednej cesze (kształt ciała)"
+        },
+        "2a0e6d6d-f8b2-4f88-86e2-1b4c8c2ee300": {
+          "name": "Przykład 2: Używanie widoku Informacji do ulepszania modelu"
         },
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Rozgrzewka"
@@ -1107,6 +1151,16 @@
         "6fcca4d5-550e-479c-8da6-6212384d1e0b": {
           "name": "Przygotuj się do prezentacji\\_2018",
           "progression_name": "Przygotuj się do prezentacji\\_2018"
+        },
+        "6f0c4f43-6167-42df-b2f8-717a5ecc23d1": {
+          "progression_name": "Przegląd lekcji"
+        },
+        "f573a627-ebb0-443a-a0a1-6b4b64c933d5": {
+          "progression_name": "Odkrywanie informatyki w rozrywce"
+        },
+        "6e6ad22a-99d2-434c-abab-b6d4a6962027": {
+          "name": "Przykładowe Programy",
+          "progression_name": "Przykładowe Programy"
         },
         "80638f32-a3e0-46c4-99fa-74d740d9ff1d": {
           "progression_name": "Przegląd lekcji"
@@ -2932,6 +2986,19 @@
           "name": "Projekt",
           "progression_name": "Projekt"
         },
+        "5b798399-282e-49fa-b6ff-49a267c2a88e": {
+          "progression_name": "Przegląd lekcji"
+        },
+        "b13e1818-6495-44cb-97f3-69ea42c9ce0b": {
+          "progression_name": "Odkrywanie informatyki w rozrywce"
+        },
+        "68f4881c-e3a6-4fb1-bb42-6bfce254e6b9": {
+          "name": "Przykładowe Programy",
+          "progression_name": "Przykładowe Programy"
+        },
+        "bb6a2b90-0730-48ab-b10d-325b0f37b6af": {
+          "progression_name": "Przegląd lekcji"
+        },
         "31ea1300-575e-4f67-9fba-ffccd705a373": {
           "progression_name": "Przegląd lekcji"
         },
@@ -3165,6 +3232,26 @@
           "name": "Refleksja",
           "progression_name": "Refleksja"
         },
+        "f3b83c25-457b-49e0-97bb-b6cf01729b96": {
+          "progression_name": "Przegląd lekcji"
+        },
+        "edb1b531-f884-4cdb-8763-205ccb5ccfb9": {
+          "name": "Innowacyjne badania",
+          "progression_name": "Innowacyjne badania"
+        },
+        "e8d8ba0c-067a-4b05-afac-49467b70d19a": {
+          "progression_name": "Przegląd lekcji"
+        },
+        "dc82808d-bac6-4e90-9047-694410f3090c": {
+          "progression_name": "Ustawianie Właściwości"
+        },
+        "9dda00cc-e51b-48f2-b2a2-d38f5175571b": {
+          "progression_name": "Zdarzenia i Właściwości"
+        },
+        "e63385fd-2aa7-4253-9322-e5872437dac3": {
+          "name": "Tworzenie aplikacji",
+          "progression_name": "Tworzenie aplikacji"
+        },
         "5dd1bd9a-be39-46a3-aea2-9ec7b6961490": {
           "progression_name": "Przegląd lekcji"
         },
@@ -3372,6 +3459,14 @@
           "name": "Refleksja",
           "progression_name": "Refleksja"
         },
+        "718cfc6c-7248-4776-8567-743b410346fe": {
+          "name": "Przegląd lekcji",
+          "progression_name": "Przegląd lekcji"
+        },
+        "32c6086e-831b-4619-bdee-ba1148a43543": {
+          "name": "Przegląd lekcji",
+          "progression_name": "Przegląd lekcji"
+        },
         "0bd68424-df94-4120-9a38-b4bbdc1c9491": {
           "name": "Przegląd lekcji",
           "progression_name": "Przegląd lekcji"
@@ -3460,6 +3555,14 @@
           "name": "Refleksja",
           "progression_name": "Refleksja"
         },
+        "bffba681-eb9e-4dc3-8f57-893671e6c2c1": {
+          "name": "Przegląd lekcji",
+          "progression_name": "Przegląd lekcji"
+        },
+        "6f338ea8-0c2f-46bb-ad95-dc6541ff1cf9": {
+          "name": "Przegląd lekcji",
+          "progression_name": "Przegląd lekcji"
+        },
         "a17f73b3-11f1-499b-873e-0543c661ec9b": {
           "name": "Przegląd lekcji",
           "progression_name": "Przegląd lekcji"
@@ -3542,6 +3645,13 @@
           "name": "Przegląd lekcji",
           "progression_name": "Przegląd lekcji"
         },
+        "4baf3e55-b479-405e-acfb-99bc0b8c9912": {
+          "progression_name": "Przegląd lekcji"
+        },
+        "8044f0e5-2eee-425f-b124-6f80494e5b23": {
+          "name": "Nagranie: Proces Rozwiązywania Problemów",
+          "progression_name": "Nagranie: Proces Rozwiązywania Problemów"
+        },
         "11df93d2-fda9-467b-bb01-71f213fe5346": {
           "name": "Przegląd lekcji",
           "progression_name": "Przegląd lekcji"
@@ -3571,6 +3681,20 @@
         "3abf4793-4d90-45c7-a47e-3e44a09581eb": {
           "name": "Refleksja",
           "progression_name": "Refleksja"
+        },
+        "ad55ae28-5794-4f0d-8970-dafde8dd2281": {
+          "progression_name": "Przegląd lekcji"
+        },
+        "1509e490-4f28-4bc4-9303-c5c156208213": {
+          "name": "Top Strony",
+          "progression_name": "Top Strony"
+        },
+        "7d345d9c-3308-4a84-b288-512e51e57815": {
+          "progression_name": "Przegląd lekcji"
+        },
+        "0cc1b631-05c8-4129-b2e9-65f02c303d16": {
+          "name": "Przykładowe osobiste strony internetowe",
+          "progression_name": "Przykładowe osobiste strony internetowe"
         },
         "f00dd0ff-7a04-4e7f-b6ca-3c7a96143f2c": {
           "progression_name": "Przegląd lekcji"
@@ -3843,6 +3967,19 @@
         "5ccce1a2-deb4-444d-ae0b-2aab8d25f5d9": {
           "name": "Przygotuj się do prezentacji",
           "progression_name": "Przygotuj się do prezentacji"
+        },
+        "ceaeda39-02d6-4007-83fb-f037c707389c": {
+          "progression_name": "Przegląd lekcji"
+        },
+        "ab7d99c8-e849-41ff-a55b-b66d48e1f5d1": {
+          "progression_name": "Odkrywanie informatyki w rozrywce"
+        },
+        "9dbf54b0-360f-45d9-a44e-cee20a3765fb": {
+          "name": "Przykładowe Programy",
+          "progression_name": "Przykładowe Programy"
+        },
+        "c6e24cc7-63f3-4893-95d6-7f4974b6214e": {
+          "progression_name": "Przegląd lekcji"
         },
         "74674f27-4080-468a-b72c-5eedcd9b0148": {
           "progression_name": "Przegląd lekcji"
@@ -4130,6 +4267,13 @@
           "name": "Refleksja",
           "progression_name": "Refleksja"
         },
+        "3e00297e-2875-4c9e-bbaa-0fea483933a1": {
+          "progression_name": "Przegląd lekcji"
+        },
+        "82524fd8-6d75-46e4-9cb3-719ff43e17da": {
+          "name": "Innowacyjne badania",
+          "progression_name": "Innowacyjne badania"
+        },
         "9788e225-92b9-4d11-8bc7-987573ba1b45": {
           "progression_name": "Przegląd lekcji"
         },
@@ -4356,6 +4500,13 @@
           "name": "Refleksja",
           "progression_name": "Refleksja"
         },
+        "51ac2647-90fe-443e-a77b-48132f4b7680": {
+          "progression_name": "Przegląd lekcji"
+        },
+        "68e9b02b-4cbe-479b-a935-5dbe004f1e73": {
+          "name": "Top Strony",
+          "progression_name": "Top Strony"
+        },
         "812cc4f7-4fec-46e3-900b-807efdf05bda": {
           "progression_name": "Przegląd lekcji"
         },
@@ -4567,6 +4718,10 @@
           "name": "Refleksja",
           "progression_name": "Refleksja"
         },
+        "d6cca48b-d77f-47f8-b769-779bcf9b2874": {
+          "name": "Jednostka 5 Lekcja 1 Omówienie",
+          "progression_name": "Jednostka 5 Lekcja 1 Omówienie"
+        },
         "f27d38b3-9892-47dd-8bdb-e1442286128d": {
           "name": "Przegląd lekcji",
           "progression_name": "Przegląd lekcji"
@@ -4648,6 +4803,10 @@
         "4f744a54-0d8b-49a1-8581-fc05cef356c6": {
           "name": "Refleksja",
           "progression_name": "Refleksja"
+        },
+        "f2b5d0ac-98f0-4ad6-8cba-c70d2053fac6": {
+          "name": "Przegląd lekcji",
+          "progression_name": "Przegląd lekcji"
         },
         "9f01af5f-25ad-4296-beaf-a93d5604daa7": {
           "name": "Przegląd lekcji",
@@ -10169,6 +10328,29 @@
           ],
           "progression_name": "Instrukcje do ankiety końcowej"
         },
+        "a6722c40-2f55-4b5c-8ffa-f9e3982f232b": {
+          "tips": [
+            null
+          ]
+        },
+        "0aae65e7-d504-4b63-9b0e-f9145959ac27": {
+          "tips": [
+            null
+          ]
+        },
+        "0ffa0382-8df9-42a1-8f6b-62612e26f301": {
+          "tips": [
+            null
+          ]
+        },
+        "0158f751-e444-4cd5-ae72-c6daa9d0f859": {
+          "tips": [
+            null
+          ]
+        },
+        "3fe573d7-2c09-4e1c-ae7e-d4029f905d35": {
+          "name": "Dziennik"
+        },
         "bffb7609-21c3-4e03-b16a-e4753c421cbc": {
           "name": "Dziennik"
         },
@@ -10819,6 +11001,28 @@
           ],
           "progression_name": "Instrukcje do ankiety końcowej"
         },
+        "d34d3ef7-b3ad-41de-8b49-c7460f8b1450": {
+          "tips": [
+            null
+          ]
+        },
+        "9c23f514-e5e6-45f4-9038-c8c68e26c041": {
+          "name": "Zainspiruj się"
+        },
+        "ecaf188e-1d18-4418-9881-296b1f090f2e": {
+          "name": "Innowacyjne badania"
+        },
+        "9e9ce748-fed7-4391-a28d-6c9e5da3cf27": {
+          "tips": [
+            null
+          ]
+        },
+        "fe954bee-319a-49ec-a2d1-033dd539a59b": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Innowacyjne badania"
+        },
         "2bddbd31-7cae-4867-96fd-f8ba2f18b6c8": {
           "tips": [
             null
@@ -11211,6 +11415,43 @@
             null
           ],
           "progression_name": "Instrukcje do ankiety końcowej"
+        },
+        "322ad615-5d42-4b54-ab60-5d7b7d36e277": {
+          "name": "Dziennik",
+          "tips": [
+            null
+          ]
+        },
+        "3e097460-3cde-4714-ba16-61de8a8439ac": {
+          "tips": [
+            null
+          ]
+        },
+        "cf324018-6258-4c8b-98e8-f5de7f3cec14": {
+          "tips": [
+            null
+          ]
+        },
+        "617e101b-5c13-40e7-be75-6a4626bebe3e": {
+          "tips": [
+            null
+          ]
+        },
+        "e94772c1-7ac5-4e4f-b9b3-021ba4b36ef5": {
+          "tips": [
+            null
+          ]
+        },
+        "c670c339-5f6d-475c-b6cf-ad8a35c2d8a2": {
+          "name": "Refleksja"
+        },
+        "0d5d0634-6b05-4c47-b187-594dfd30d625": {
+          "tips": [
+            null
+          ]
+        },
+        "a050b814-d2e2-4a84-8fee-d1320e9bb9ea": {
+          "name": "Dziennik"
         },
         "a8a0cd51-12b0-4c58-8d16-b4b4778d2719": {
           "name": "Dziennik"
@@ -11688,6 +11929,24 @@
             null
           ],
           "progression_name": "Instrukcje do ankiety końcowej"
+        },
+        "2e17eccc-2343-4bde-849c-eaf270f343f8": {
+          "tips": [
+            null
+          ]
+        },
+        "f348d317-252e-4581-b489-fe1bbe700f67": {
+          "tips": [
+            null
+          ]
+        },
+        "caeb42d3-998b-49fd-99ec-4c36e013206f": {
+          "tips": [
+            null
+          ]
+        },
+        "1d9fcb2e-5d45-47f4-b834-65c714a78452": {
+          "progression_name": "Przykładowe Programy"
         },
         "31ee2243-fd15-45ab-a0d7-80c2c97d88c7": {
           "tips": [
@@ -12592,6 +12851,39 @@
             null
           ]
         },
+        "fabada45-479f-44d4-bc2d-dbeb8a8e7abd": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "23f003b6-2c1b-4e88-a343-f77714a50d89": {
+          "name": "Proces rozwiązywania problemów",
+          "tips": [
+            null
+          ],
+          "progression_name": "Nagranie: Proces Rozwiązywania Problemów"
+        },
+        "f3ad86f7-7c83-415c-aa5a-a276d6186faa": {
+          "tips": [
+            null
+          ]
+        },
+        "e3e59454-f8cc-47ef-a206-23e55cf74c89": {
+          "tips": [
+            null
+          ]
+        },
+        "971b5c08-a61d-400c-a1ff-8ac3139a3c7c": {
+          "tips": [
+            null
+          ]
+        },
+        "03418848-4f2d-4f45-8f25-38012b191a2a": {
+          "tips": [
+            null
+          ]
+        },
         "10aec291-0c45-453c-8609-5386783ff20e": {
           "tips": [
             null
@@ -12971,6 +13263,22 @@
           ]
         },
         "ab4371e8-c868-4587-9f32-2a0f857b910d": {
+          "tips": [
+            null
+          ]
+        },
+        "c55d809b-5128-4cba-82bf-3bf0e51aec06": {
+          "tips": [
+            null
+          ]
+        },
+        "1265c20c-95ab-4c34-b8fc-b3532b088415": {
+          "name": "Odkrywanie stron",
+          "tips": [
+            null
+          ]
+        },
+        "c1050c6d-1379-4f81-ab69-6f00bbfb363a": {
           "tips": [
             null
           ]

@@ -1793,7 +1793,7 @@
           "visualizationResizeBar": "Przeciągnij 3 kropki, aby zmienić rozmiar obszaru gry. "
         },
         "helloworld_animals_backgrounds": {
-          "hw_background_location": "Znajdź blok tła tutaj."
+          "hw_background_location": "Użyj tego bloku, aby ustawić nowe tło."
         },
         "helloworld_animals_behaviors": {
           "hello_world_behavior_blocks": "Użyj tego bloku z jednym z poniższych zachowań."
@@ -1822,7 +1822,7 @@
           "hello_world_new": "Nowy blok!"
         },
         "helloworld_emoji_backgrounds": {
-          "hw_background_location": "Znajdź blok tła tutaj."
+          "hw_background_location": "Użyj tego bloku, aby ustawić nowe tło."
         },
         "helloworld_emoji_behaviors": {
           "hello_world_behavior_blocks": "Użyj tego bloku z jednym z poniższych zachowań."
@@ -1851,7 +1851,7 @@
           "hello_world_new": "Nowy blok!"
         },
         "helloworld_food_backgrounds": {
-          "hw_background_location": "Znajdź blok tła tutaj."
+          "hw_background_location": "Użyj tego bloku, aby ustawić nowe tło."
         },
         "helloworld_food_behaviors": {
           "hello_world_behavior_blocks": "Użyj tego bloku z jednym z poniższych zachowań."
