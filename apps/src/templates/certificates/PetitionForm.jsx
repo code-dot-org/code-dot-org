@@ -1,33 +1,7 @@
 import React from 'react';
-import {Button, FormControl, FormGroup, Form, HelpBlock} from 'react-bootstrap';
-import {range, assign} from 'lodash';
-import PropTypes from 'prop-types';
-
-const FieldGroup = ({id, label, help, componentClass, children, ...props}) => {
-  const fieldStyle = assign(styles.elementText, styles.field);
-  return (
-    <FormGroup style={styles.element} controlId={id}>
-      {label && <span style={styles.label}>{label}</span>}
-      <FormControl
-        componentClass={componentClass}
-        className={componentClass === 'select' ? 'dropdown' : 'grey_input'}
-        style={fieldStyle}
-        {...props}
-      >
-        {children}
-      </FormControl>
-      {help && <HelpBlock style={styles.help}>{help}</HelpBlock>}
-    </FormGroup>
-  );
-};
-
-FieldGroup.propTypes = {
-  id: PropTypes.string.isRequired,
-  label: PropTypes.string,
-  help: PropTypes.string,
-  children: PropTypes.node,
-  componentClass: PropTypes.string
-};
+import {Button, Form} from 'react-bootstrap';
+import FieldGroup from './FieldGroup';
+import {range} from 'lodash';
 
 const PetitionForm = () => (
   <>
