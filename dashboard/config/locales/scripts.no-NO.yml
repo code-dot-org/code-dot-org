@@ -3968,6 +3968,10 @@
               display_name: Løkker
             csf_events:
               display_name: Hendelser
+        csp7-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Undersøkelse
         csp9-2022:
           lesson_groups:
             csp_unit9_2020:
@@ -4142,3 +4146,71 @@
             For Loops:
               name: For-løkker
               key: For-løkker
+        csd1-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Undersøkelse
+            csd1_1:
+              display_name: 'Kapittel 1: Problemløsingsprosessen'
+            csd1_2:
+              display_name: 'Kapittel 2: Datamaskiner og problemløsning'
+        csd2-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Undersøkelse
+        csd3-2022:
+          lessons:
+            Variables:
+              name: Variabler
+              key: Variabler
+            Sprite Properties:
+              name: Figuregenskaper
+              key: Figuregenskaper
+            Text:
+              name: tekst
+              key: tekst
+            Conditionals:
+              name: Betingelser
+              key: Betingelser
+            Velocity:
+              name: Hastighet
+              key: Hastighet
+            Functions:
+              name: Funksjoner
+              key: Funksjoner
+          lesson_groups:
+            csd3_1:
+              display_name: 'Kapittel 1: Bilder og animasjoner'
+            csd3_2:
+              display_name: 'Kapittel 2: Bygge spill'
+            cspSurvey:
+              display_name: Undersøkelse
+        csd4-2022:
+          lesson_groups:
+            csd4_1:
+              display_name: 'Kapittel 1: Bruke sentrert design'
+            csd4_2:
+              display_name: 'Kapittel 2: Prototyping av app'
+            cspSurvey:
+              display_name: Undersøkelse
+        csd5-2022:
+          lesson_groups:
+            csd5_1:
+              display_name: 'Kapittel 1: Representerer informasjon'
+            csd5_2:
+              display_name: 'Kapittel 2: Problemløsing med data'
+            cspSurvey:
+              display_name: Undersøkelse
+        csd7-2022:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Undersøkelse
+        csd6-2022:
+          lessons:
+            Functions:
+              name: Funksjoner
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapittel 2: Bygge fysiske prototyper'
+            lessonGroup-4:
+              display_name: Undersøkelse
