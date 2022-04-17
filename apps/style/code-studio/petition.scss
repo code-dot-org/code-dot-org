@@ -4,6 +4,7 @@
   font-family: 'Gotham 5r', sans-serif;
   flex: 1 100%;
   color: #5B6770;
+  margin: 0;
 }
 
 .petition_block {
@@ -52,8 +53,16 @@ input.grey_input {
   width: 160px;
 }
 
+span.grey_input {
+  width: 165px;
+}
+
 select.dropdown {
   width: 100px;
+}
+
+span.dropdown {
+  width: 130px;
 }
 
 .dropdown_label {
@@ -68,13 +77,19 @@ select.dropdown {
 .go_button {
   min-width: 100px;
   margin: 0 0 10px 0;
+  padding: 4px 12px;
+  height: 30px;
   font-family: 'Gotham 5r', sans-serif;
 }
 
-.help {
-  white-space: nowrap;
+.help, a {
   font-size: 12px;
   line-height: 18px;
   color: rgb(91,103,112);
-  margin-left: 10px
+  margin: 10px 0 0 0;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(91,103,112);
 }
