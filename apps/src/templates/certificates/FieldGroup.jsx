@@ -17,7 +17,16 @@ const FieldGroup = ({id, label, help, componentClass, children, ...props}) => {
       >
         {children}
       </FormControl>
-      {help && <HelpBlock className="help">{help}</HelpBlock>}
+      {help && (
+        <HelpBlock
+          className={classNames(
+            'help',
+            componentClass === 'select' ? 'dropdown' : 'grey_input'
+          )}
+        >
+          {help}
+        </HelpBlock>
+      )}
     </FormGroup>
   );
 };
