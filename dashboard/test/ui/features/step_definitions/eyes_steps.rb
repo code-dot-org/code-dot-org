@@ -31,6 +31,8 @@ When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
   # Default stitch mode can be customized for each checkpoint in the I See No Difference step.
   @eyes.stitch_mode = Applitools::STITCH_MODE[:css]
 
+  @eyes.send_dom = false
+
   @eyes.open(config)
 end
 
