@@ -159,7 +159,11 @@ function TopInstructionsHeader(props) {
             )}
         </div>
         {isBackgroundMusicLevel && (
-          <BackgroundMusicMuteButton isMinecraft={isMinecraft} isRtl={isRtl} />
+          <BackgroundMusicMuteButton
+            className="uitest-mute-music-button"
+            isMinecraft={isMinecraft}
+            isRtl={isRtl}
+          />
         )}
         {/* For CSF contained levels we use the same collapse function as CSD/CSP*/}
         {collapsible &&

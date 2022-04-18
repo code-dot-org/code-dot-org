@@ -105,6 +105,13 @@ describe('TopInstructionsHeader', () => {
     expect(wrapper.find('.uitest-feedback')).to.have.length(0);
   });
 
+  it('does not show mute button when isBackgroundMusicLevel is false', () => {
+    const wrapper = setUp({
+      isBackgroundMusicLevel: false
+    });
+    expect(wrapper.find('.uitest-mute-music-button')).to.have.length(0);
+  });
+
   it('shows mute button when isBackgroundMusicLevel is true', () => {
     const wrapper = setUp({
       isBackgroundMusicLevel: true
