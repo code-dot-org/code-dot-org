@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-14 21:01:04 UTC",
+    "serialized_at": "2022-04-15 19:05:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3395,7 +3395,7 @@
       "key": "754816a1-d970-43f3-b462-ba09f9d3ea45",
       "position": 1,
       "properties": {
-        "description": "We are almost done with our first project! You should be proud of what you have accomplished in this unit and this project.",
+        "description": "We are almost done with our project! You should be proud of what you have accomplished in this unit and this project.",
         "name": "Reflecting on Your Progress",
         "remarks": true
       },
