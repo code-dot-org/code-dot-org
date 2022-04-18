@@ -11,45 +11,45 @@ class ProgrammingMethodTest < ActiveSupport::TestCase
     assert_equal 'pickup-int-num', programming_method.key
   end
 
-  test 'validates overloaded_by is not self' do
+  test 'validates overload_of is not self' do
     programming_method = create :programming_method
-    programming_method.overloaded_by = programming_method.key
+    programming_method.overload_of = programming_method.key
     refute programming_method.valid?
   end
 
-  test "validates overloaded_by points to an existing programming method" do
+  test "validates overload_of points to an existing programming method" do
     programming_method = create :programming_method
-    programming_method.overloaded_by = 'non-existinant key'
+    programming_method.overload_of = 'non-existinant key'
     refute programming_method.valid?
   end
 
-  test "validates overloaded_by cannot point to a method that has an overload" do
+  test "validates overload_of cannot point to a method that has an overload" do
     programming_class = create :programming_class
     programming_method1 = create :programming_method, programming_class: programming_class
-    programming_method2 = create :programming_method, programming_class: programming_class, overloaded_by: programming_method1.key
-    programming_method1.overloaded_by = programming_method2.key
+    programming_method2 = create :programming_method, programming_class: programming_class, overload_of: programming_method1.key
+    programming_method1.overload_of = programming_method2.key
     refute programming_method1.valid?
   end
 
-  test "validate overloaded_by cannot be set if another method point to it" do
+  test "validate overload_of cannot be set if another method point to it" do
     programming_class = create :programming_class
     programming_method1 = create :programming_method, programming_class: programming_class
-    create :programming_method, programming_class: programming_class, overloaded_by: programming_method1.key
+    create :programming_method, programming_class: programming_class, overload_of: programming_method1.key
     programming_method3 = create :programming_method, programming_class: programming_class
-    programming_method1.overloaded_by = programming_method3.key
+    programming_method1.overload_of = programming_method3.key
     refute programming_method1.valid?
   end
 
-  test "valid overloaded_by validates successfully" do
+  test "valid overload_of validates successfully" do
     programming_class = create :programming_class
     programming_method = create :programming_method, programming_class: programming_class
-    overload_programming_method = build :programming_method, programming_class: programming_class, overloaded_by: programming_method.key
+    overload_programming_method = build :programming_method, programming_class: programming_class, overload_of: programming_method.key
     assert overload_programming_method.valid?
   end
 
   test "validation is not run when being seeded" do
     programming_method = create :programming_method
-    programming_method.overloaded_by = programming_method.key
+    programming_method.overload_of = programming_method.key
     programming_method.seed_in_progress = true
     assert programming_method.valid?
   end
