@@ -148,6 +148,17 @@ class ProgrammingClass < ApplicationRecord
   end
 
   def summarize_programming_methods
-    programming_methods.map(&:summarize_for_show)
+    methods = {}
+    programming_methods.each do |m|
+      next unless m.overload_of.blank?
+      obj = m.summarize_for_show
+      obj[:overloads] = []
+      methods[m.key] = obj
+    end
+    programming_methods.each do |m|
+      next if m.overload_of.blank?
+      methods[m.overload_of][:overloads] += [m.summarize_for_show]
+    end
+    methods.values
   end
 end
