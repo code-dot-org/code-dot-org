@@ -33858,8 +33858,8 @@ en:
               name: Lesson Assignment
             lesson-9:
               name: Explore a Lesson
-              description_student: "**You will:**\n\n* Explore the lesson plan and additional resources for your/their assigned TLO lesson.\n* Complete the activities from your/their assigned TLO lesson. \n\n**Suggested time:** 60 minutes"
-              description_teacher: "**Overview:**\nThis activity is an opportunity for participants to both explore a lesson plan for a CS Discoveries lesson and begin to familiarize themselves with the content of their TLO lesson.\n\n**Participants will:**\n\n* Explore the lesson plan and additional resources for your/their assigned TLO lesson.\n* Complete the activities from your/their assigned TLO lesson. \n\n**Suggested time:** 60 minutes"
+              description_student: "**You will:**\n\n* Explore the lesson plan and additional resources for your assigned TLO lesson.\n* Complete the activities from your assigned TLO lesson. \n\n**Suggested time:** 60 minutes"
+              description_teacher: "**Overview:**\nThis activity is an opportunity for participants to both explore a lesson plan for a CS Discoveries lesson and begin to familiarize themselves with the content of their TLO lesson.\n\n**Participants will:**\n\n* Explore the lesson plan and additional resources for their assigned TLO lesson.\n* Complete the activities from their assigned TLO lesson. \n\n**Suggested time:** 60 minutes"
             lesson-10:
               name: The role of the teacher
               description_student: |
@@ -33905,8 +33905,8 @@ en:
               description_teacher: "**Overview:**\nDuring this role play activity, participants will engage in Unit 2 Lesson 3: Headings. This lesson will provide participants with an introduction to HTML heading tags. This model lesson will also highlight the structure of programming lesions throughout the CS Discoveries curriculum. \n\n**Participants will:**\n\n* Engage in Unit 2 Lesson 3 while playing the role of the student. \n* Reflect on your experience as a student engaging in the lesson.\n* Discuss the structure of programming lessons in the CS Discoveries curriculum.\n\n**Suggested time:** 60 minutes"
             lesson-3:
               name: Lesson Planning
-              description_student: "**You will:**\n\n* Create a plan for teaching your/their TLO lesson ensuring that all group members have a role. \n* Consider contingency plans if the lesson goes longer or shorter than expected.\n* Decide if and when breakout rooms will be used and communicate that plan to the producer. \n\n**Suggested time:** 60 minutes"
-              description_teacher: "**Overview:**\nDuring this time, participants will create a plan for teaching their TLO lesson. While planning, teachers should consider contingency plans if the lesson goes longer or shorter than expected.  \n\n**Participants will:**\n\n* Create a plan for teaching your/their TLO lesson ensuring that all group members have a role. \n* Consider contingency plans if the lesson goes longer or shorter than expected.\n* Decide if and when breakout rooms will be used and communicate that plan to the producer. \n\n**Suggested time:** 60 minutes"
+              description_student: "**You will:**\n\n* Create a plan for teaching your TLO lesson ensuring that all group members have a role. \n* Consider contingency plans if the lesson goes longer or shorter than expected.\n* Decide if and when breakout rooms will be used and communicate that plan to the producer. \n\n**Suggested time:** 60 minutes"
+              description_teacher: "**Overview:**\nDuring this time, participants will create a plan for teaching their TLO lesson. While planning, teachers should consider contingency plans if the lesson goes longer or shorter than expected.  \n\n**Participants will:**\n\n* Create a plan for teaching their TLO lesson ensuring that all group members have a role. \n* Consider contingency plans if the lesson goes longer or shorter than expected.\n* Decide if and when breakout rooms will be used and communicate that plan to the producer. \n\n**Suggested time:** 60 minutes"
             lesson-4:
               name: Async Prep
             lesson-5:

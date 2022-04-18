@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-14 21:01:28 UTC",
+    "serialized_at": "2022-04-15 23:34:03 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1778,7 +1778,7 @@
       "key": "a7e76456-377b-411f-910b-b075e8c31b16",
       "position": 2,
       "properties": {
-        "description": "**Display:** If possible in your room, display the Code Studio levels at the front of the class.\n\n**Level 1:** Have students work on the three tasks for a few minutes. Circulate the room making sure that pairs are actually discussing the prompt and are collaborating to modify the program. Once it seems all groups have had a chance to do this bring the class together.\n\n**Discuss:** Have students share the results of their discussions with the class. You do not need to use formal vocabulary yet, but make sure all students are seeing the same things.\n\n* Code is running one line at a time.\n* Strings need to go in quotes. Numbers do not need to.\n* Yellow highlighting shows you which line of code is running in either block or text mode.\n* The turtle slider changes the speed at which the code runs. At full speed (all the way to the right) there is no longer any highlighting.\n\n**Level 2:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Once again have students share the results of their discussions and modifications with the room. Here are some good points to draw out if they don't come up naturally in the discussion.\n\n* [`console.log`(#BB77C7)](/docs/applab/console.log/) prints text in the Debug Console\n* [`setProperty`(#fff176)](/docs/applab/setProperty/) changes the properties of elements on the screen. These should be familiar from using Design Mode.\n* [`console.log`(#BB77C7)](/docs/applab/console.log/) needs one input while [`setProperty`(#fff176)](/docs/applab/setProperty/) needs three\n* Hovering over a block in the toolbox helps you know what kind of information to put in each input.\n\n**Level 3:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Once again have students share the results of their discussions and modifications with the room. Here are some good points to draw out if they don't come up naturally in the discussion.\n\n* [`onEvent`(#fff176)](/docs/applab/onEvent/) makes the program respond to the user. You can add code inside of it that will only run when something happens.\n* Changing the second input changes the type of interaction that will make the code inside the [`onEvent`(#fff176)](/docs/applab/onEvent/) run. \n* Code outside the [`onEvent`(#fff176)](/docs/applab/onEvent/) runs right away. Code inside an [`onEvent`(#fff176)](/docs/applab/onEvent/) will only run when the event happens.\n* Even if code is after an [`onEvent`(#fff176)](/docs/applab/onEvent/), it will run first if it's outside of any [`onEvent`(#fff176)](/docs/applab/onEvent/)\n\n**Level 4:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Have students share the results of their discussion and anything else they noticed. Here are good points to draw out.\n\n* [`playSound`(#fff176)](/docs/applab/playSound/) will play a sound you pick from the Sound Library\n*  Lines that start with ` // ` are called comments and don't actually run. They just help you understand your code.\n\n**Level 5:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Have students share the results of their discussion and anything else they noticed. Here are good points to draw out.\n\n* Random number chooses a new random number each time, between the high and low value given\n* [`onEvent`(#fff176)](/docs/applab/onEvent/) takes many different event types, not just `\"mouseOver\"` and `\"click\"`. Depending on the situation different ones make more sense."
+        "description": "**Display:** If possible in your room, display the Code Studio levels at the front of the class.\n\n**Level 1:** Have students work on the three tasks for a few minutes. Circulate the room making sure that pairs are actually discussing the prompt and are collaborating to modify the program. Once it seems all groups have had a chance to do this bring the class together.\n\n**Discuss:** Have students share the results of their discussions with the class. You do not need to use formal vocabulary yet, but make sure all students are seeing the same things.\n\n* Code is running one line at a time.\n* Strings need to go in quotes. Numbers do not need to.\n* Yellow highlighting shows you which line of code is running in either block or text mode.\n* The turtle slider changes the speed at which the code runs. At full speed (all the way to the right) there is no longer any highlighting.\n\n**Level 2:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Once again have students share the results of their discussions and modifications with the room. Here are some good points to draw out if they don't come up naturally in the discussion.\n\n* [`console.log`(#BB77C7)](/docs/applab/console.log/) prints text in the Debug Console\n* [`setProperty`(#fff176)](/docs/applab/setProperty/) changes the properties of elements on the screen. These should be familiar from using Design Mode.\n* [`console.log`(#BB77C7)](/docs/applab/console.log/) needs one input while [`setProperty`(#fff176)](/docs/applab/setProperty/) needs three\n* Hovering over a block in the toolbox helps you know what kind of information to put in each input.\n\n**Level 3:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Once again have students share the results of their discussions and modifications with the room. Here are some good points to draw out if they don't come up naturally in the discussion.\n\n* [`onEvent`(#fff176)](/docs/applab/onEvent/) makes the program respond to the user. You can add code inside of it that will only run when something happens.\n* Changing the second input changes the type of interaction that will make the code inside the [`onEvent`(#fff176)](/docs/applab/onEvent/) run. \n* Code outside the [`onEvent`(#fff176)](/docs/applab/onEvent/) runs right away. Code inside an [`onEvent`(#fff176)](/docs/applab/onEvent/) will only run when the event happens.\n* Even if code is after an [`onEvent`(#fff176)](/docs/applab/onEvent/), it will run first if it's outside of any [`onEvent`(#fff176)](/docs/applab/onEvent/)\n\n**Level 4:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Have students share the results of their discussion and anything else they noticed. Here are good points to draw out.\n\n* [`setScreen(screenId)`(#fff176)](/docs/applab/setScreen/) inside an [`onEvent`(#fff176)](/docs/applab/onEvent/) allows the user to navigate between app screens.\n\n**Level 5:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Have students share the results of their discussion and anything else they noticed. Here are good points to draw out.\n\n* [`playSound`(#fff176)](/docs/applab/playSound/) will play a sound you pick from the Sound Library\n*  Lines that start with ` // ` are called comments and don't actually run. They just help you understand your code.\n\n**Level 6:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Have students share the results of their discussion and anything else they noticed. Here are good points to draw out.\n\n* Random number chooses a new random number each time, between the high and low value given\n* [`onEvent`(#fff176)](/docs/applab/onEvent/) takes many different event types, not just `\"mouseOver\"` and `\"click\"`. Depending on the situation different ones make more sense."
       },
       "seeding_key": {
         "activity_section.key": "a7e76456-377b-411f-910b-b075e8c31b16",
@@ -3164,6 +3164,28 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Code Investigation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U3 Program Investigate Event-Driven setScreen2022"
+        ],
+        "lesson.key": "Intro to Programming",
+        "lesson_group.key": "csp_unit3_2020",
+        "script.name": "csp3-2022",
+        "activity_section.key": "f670d490-335b-45f1-9081-4c2aed2e42fd"
+      },
+      "level_keys": [
+        "U3 Program Investigate Event-Driven setScreen2022"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "U3 Program Investigate Event-Driven 22022"
         ],
@@ -3184,9 +3206,9 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 5,
-      "activity_section_position": 5,
+      "chapter": 29,
+      "position": 6,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3209,8 +3231,8 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 6,
+      "chapter": 30,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -3234,7 +3256,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3259,7 +3281,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3284,7 +3306,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -3309,7 +3331,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -3334,7 +3356,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -3359,7 +3381,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -3384,7 +3406,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3409,7 +3431,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3434,7 +3456,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3459,7 +3481,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3484,11 +3506,14 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csp3-2022"
+        ],
         "progression": "End-of-Unit Survey"
       },
       "bonus": false,
@@ -3506,7 +3531,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3836,6 +3861,18 @@
         "level.key": "U3 Program Investigate Event-Driven 12022",
         "script_level.level_keys": [
           "U3 Program Investigate Event-Driven 12022"
+        ],
+        "lesson.key": "Intro to Programming",
+        "lesson_group.key": "csp_unit3_2020",
+        "script.name": "csp3-2022",
+        "activity_section.key": "f670d490-335b-45f1-9081-4c2aed2e42fd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U3 Program Investigate Event-Driven setScreen2022",
+        "script_level.level_keys": [
+          "U3 Program Investigate Event-Driven setScreen2022"
         ],
         "lesson.key": "Intro to Programming",
         "lesson_group.key": "csp_unit3_2020",
