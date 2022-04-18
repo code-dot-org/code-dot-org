@@ -194,4 +194,23 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
     end
     assert_includes e.message, 'template level type Gamelab does not match level type Applab'
   end
+
+  test 'project template level cannot have its own project template level' do
+    project_backed_level = create :level, name: 'project backed'
+    template_level = create :level
+    project_backed_level.project_template_level_name = template_level.name
+    project_backed_level.save!
+
+    parent_level = create :level
+    e = assert_raises do
+      parent_level.update!(project_template_level_name: project_backed_level.name)
+    end
+    assert_includes e.message, 'the project template level you have selected already has its own project template level'
+
+    template_template_level = create :level
+    e = assert_raises do
+      template_level.update!(project_template_level_name: template_template_level.name)
+    end
+    assert_includes e.message, 'this level is already a project template level of another level'
+  end
 end
