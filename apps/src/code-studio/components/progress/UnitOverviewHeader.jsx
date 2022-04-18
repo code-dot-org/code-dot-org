@@ -24,6 +24,16 @@ import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/Ve
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const SCRIPT_OVERVIEW_WIDTH = 1100;
+// Scripts that users will be warned are outdated and have been succeeded by others.
+// This object in the form of {scriptName : description of warning}.
+const OUTDATED_SCRIPT_NAMES_AND_DESC = {
+  course1: 'aaa',
+  course2: 'bbb',
+  course3: 'ccc',
+  course4: 'ddd',
+  '20-hour': 'eee',
+  algebra: 'fff'
+};
 
 /**
  * This component takes some of the HAML generated content on the script overview
@@ -120,6 +130,11 @@ class UnitOverviewHeader extends Component {
       showRedirectWarning &&
       !dismissedRedirectWarning(courseName || scriptName);
 
+    // Get if the user is using an outdated script
+    const displayOutdatedCourseWarning = Object.keys(
+      OUTDATED_SCRIPT_NAMES_AND_DESC
+    ).includes(scriptName);
+
     let versionWarningDetails;
     if (showCourseUnitVersionWarning) {
       versionWarningDetails = i18n.wrongUnitVersionWarningDetails();
@@ -160,6 +175,15 @@ class UnitOverviewHeader extends Component {
         {userId && <StudentFeedbackNotification studentId={userId} />}
         {displayVerifiedResources && (
           <VerifiedResourcesNotification width={SCRIPT_OVERVIEW_WIDTH} />
+        )}
+        {displayOutdatedCourseWarning && (
+          <Notification
+            type={NotificationType.warning}
+            notice={'title of warning'}
+            details={'description of warning'}
+            dismissible={true}
+            width={SCRIPT_OVERVIEW_WIDTH}
+          />
         )}
         {displayVersionWarning && (
           <Notification
