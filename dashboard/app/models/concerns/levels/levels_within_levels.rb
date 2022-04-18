@@ -45,7 +45,6 @@ module Levels
       before_validation :sanitize_contained_level_names
       after_save :setup_contained_levels
       after_save :setup_project_template_level
-      validate :validate_contained_level_type
     end
 
     class_methods do
@@ -152,29 +151,15 @@ module Levels
       # otherwise, update contained levels to match
       levels_child_levels.contained.destroy_all
       Level.where(name: contained_level_names).each do |contained_level|
+        unless ['Multi', 'FreeResponse'].include? contained_level.type
+          raise "cannot add contained level of type #{contained_level.type}"
+        end
         ParentLevelsChildLevel.create!(
           child_level: contained_level,
           kind: ParentLevelsChildLevel::CONTAINED,
           parent_level: self,
           position: contained_level_names.index(contained_level.name)
         )
-      end
-    end
-
-    def validate_contained_level_type
-      # prevent these checks from running during seeding in most environments.
-      # this is needed for performance, but also because some of these checks
-      # will fail when seeding from scratch, because a contained level might not
-      # yet have been seeded at the time the containing level is seeded.
-      return unless Rails.application.config.levelbuilder_mode
-
-      return unless contained_level_names.present?
-      return if properties['contained_level_names'] == properties_was&.[]('contained_level_names')
-
-      Level.where(name: contained_level_names).each do |contained_level|
-        unless ['Multi', 'FreeResponse'].include? contained_level.type
-          errors.add(:contained_level_names, "cannot add contained level of type #{contained_level.type}")
-        end
       end
     end
 
