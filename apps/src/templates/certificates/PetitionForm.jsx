@@ -16,7 +16,7 @@ const PetitionForm = () => (
       <FieldGroup
         id="zip-or-country"
         placeholder="ZIP code or country"
-        type="number"
+        type="text"
         help="Enter country if outside the United States"
       />
       <FieldGroup

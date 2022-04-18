@@ -9,14 +9,15 @@
 
 .petition_block {
   display: flex;
-  flex-flow: row wrap;
-  text-align: center;
+  flex-flow: column wrap;
   background-color: white;
   padding: 10px 0;
   flex: 1 100%;
+  align-items: center;
 }
 
 .petition_form {
+  width: 970px;
   font-size: 12px;
   line-height: 18px;
   color: #dcdcdc;
@@ -38,19 +39,16 @@
   color: #5B6770;
 }
 
-#email_error, #age_error, #no_error {
-  color: #ff8000;
-  font-family: 'Gotham 7r', sans-serif; display: none;
-}
-
 input.field, select.field {
-  margin: 0 0 0 0;
+  margin: 0;
   background-color: #e2e4e3;
   color: #595959;
 }
 
 input.grey_input {
-  width: 160px;
+  width: 150px;
+  padding: 5px;
+  border: 0;
 }
 
 span.grey_input {
@@ -58,7 +56,9 @@ span.grey_input {
 }
 
 select.dropdown {
-  width: 100px;
+  width: 93px;
+  padding: 5px;
+  border-width: 1px;
 }
 
 span.dropdown {
@@ -66,7 +66,7 @@ span.dropdown {
 }
 
 .dropdown_label {
-  margin: 0 4px 0 0;
+  margin: 0 4px 0px 0;
   white-space: nowrap;
   color: #5B6770;
   width: 100px;
@@ -76,7 +76,7 @@ span.dropdown {
 
 .go_button {
   min-width: 100px;
-  margin: 0 0 10px 0;
+  margin: 0;
   padding: 4px 12px;
   height: 30px;
   font-family: 'Gotham 5r', sans-serif;
