@@ -11,6 +11,7 @@ import UserPreferences from '../../lib/util/UserPreferences';
 const MUTE_MUSIC = 'mute_music';
 
 function BackgroundMusicMuteButton({
+  className,
   isMinecraft,
   isRtl,
   isBackgroundMusicMuted,
@@ -51,7 +52,7 @@ function BackgroundMusicMuteButton({
 
   return (
     <PaneButton
-      id="uitest-mute-music-button"
+      id={className}
       headerHasFocus={true}
       iconClass={isBackgroundMusicMuted ? 'fa fa-volume-off' : 'fa fa-music'}
       label={
@@ -74,6 +75,7 @@ function BackgroundMusicMuteButton({
 }
 
 BackgroundMusicMuteButton.propTypes = {
+  className: PropTypes.string.isRequired,
   isMinecraft: PropTypes.bool.isRequired,
   isRtl: PropTypes.bool.isRequired,
 
