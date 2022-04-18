@@ -1,6 +1,6 @@
 @import 'font';
 
-.petition_block {
+.petition-block {
   width: 970px;
   display: flex;
   flex-flow: column wrap;
@@ -9,7 +9,7 @@
   padding: 10px;
 }
 
-.petition_message {
+.petition-message {
   margin: 0;
   font-size: 21px;
   line-height: 28px;
@@ -17,7 +17,7 @@
   color: #5B6770;
 }
 
-.petition_sign_message {
+.petition-sign-message {
   font-size: 18px;
   line-height: 20px;
   font-weight: 400;
@@ -26,7 +26,7 @@
   color: #5B6770;
 }
 
-.petition_form {
+.petition-form {
   font-size: 12px;
   line-height: 18px;
   color: #dcdcdc;
@@ -60,7 +60,7 @@ span.dropdown {
   width: 130px;
 }
 
-.dropdown_label {
+.dropdown-label {
   margin: 0 4px 0 0;
   color: #5B6770;
   width: 100px;
@@ -68,7 +68,7 @@ span.dropdown {
   vertical-align: middle;
 }
 
-.go_button {
+.petition-button {
   min-width: 100px;
   margin: 0;
   padding: 4px 12px;
@@ -86,15 +86,15 @@ span.dropdown {
 
 // Mobile and anything less than 970px
 @media screen and (max-width: 969px) {
-  .petition_block {
+  .petition-block {
     width: auto;
   }
 
-  .petition_sign_message {
+  .petition-sign-message {
     margin-bottom: 10px;
   }
 
-  .petition_form {
+  .petition-form {
     flex-flow: column wrap;
     align-items: center;
   }
@@ -103,7 +103,7 @@ span.dropdown {
     margin: 0;
   }
 
-  .go_button {
+  .petition-button {
     margin: 10px 0 0 0;
   }
 
