@@ -161,6 +161,17 @@ module Levels
       end
     end
 
+    def validate_contained_level_type
+      return unless contained_level_names.present?
+      return if properties['contained_level_names'] == properties_was&.[]('contained_level_names')
+
+      Level.where(name: contained_level_names).each do |contained_level|
+        unless ['Multi', 'FreeResponse'].include? contained_level.type
+          errors.add(:contained_level_names, "cannot add contained level of type #{contained_level.type}")
+        end
+      end
+    end
+
     def setup_project_template_level
       # if we already have a project template level which matches the specified
       # name, do nothing.
@@ -175,17 +186,6 @@ module Levels
         kind: ParentLevelsChildLevel::PROJECT_TEMPLATE,
         parent_level: self
       )
-    end
-
-    def validate_contained_level_type
-      return unless contained_level_names.present?
-      return if properties['contained_level_names'] == properties_was&.[]('contained_level_names')
-
-      Level.where(name: contained_level_names).each do |contained_level|
-        unless ['Multi', 'FreeResponse'].include? contained_level.type
-          errors.add(:contained_level_names, "cannot add contained level of type #{contained_level.type}")
-        end
-      end
     end
   end
 end
