@@ -19,7 +19,7 @@ describe('ProgrammingMethodEditor', () => {
       syntax: 'getPaint()()',
       examples: [{name: 'example 1'}],
       parameters: [{name: 'parameter 1'}],
-      overloadedBy: null,
+      overloadOf: null,
       canHaveOverload: false
     };
     fetchSpy = sinon.stub(window, 'fetch');
@@ -61,51 +61,45 @@ describe('ProgrammingMethodEditor', () => {
     ).to.be.true;
   });
 
-  it(
-    ('uses overloadOptions for overload dropdown if canHaveOverload is true',
-    () => {
-      const wrapper = shallow(
-        <ProgrammingMethodEditor
-          initialProgrammingMethod={{
-            ...initialProgrammingMethod,
-            canHaveOverload: true
-          }}
-          overloadOptions={[
-            {key: 'droppaint', name: 'dropPaint()'},
-            {key: 'turnleft', name: 'turnLeft'}
-          ]}
-        />
-      );
+  it('uses overloadOptions for overload dropdown if canHaveOverload is true', () => {
+    const wrapper = shallow(
+      <ProgrammingMethodEditor
+        initialProgrammingMethod={{
+          ...initialProgrammingMethod,
+          canHaveOverload: true
+        }}
+        overloadOptions={[
+          {key: 'droppaint', name: 'dropPaint()'},
+          {key: 'turnleft', name: 'turnLeft'}
+        ]}
+      />
+    );
 
-      const overloadSelector = wrapper.find('select');
-      expect(overloadSelector.find('option').length).to.equal(3);
-      expect(overloadSelector.find('option').map(o => o.value)).to.eql([
-        '',
-        'droppaint',
-        'turnleft'
-      ]);
-    })
-  );
+    const overloadSelector = wrapper.find('select');
+    expect(overloadSelector.find('option').length).to.equal(3);
+    expect(overloadSelector.find('option').map(o => o.props().value)).to.eql([
+      '',
+      'droppaint',
+      'turnleft'
+    ]);
+  });
 
-  it(
-    ('hides overload dropdown if canHaveOverload is false',
-    () => {
-      const wrapper = shallow(
-        <ProgrammingMethodEditor
-          initialProgrammingMethod={{
-            ...initialProgrammingMethod,
-            canHaveOverload: false
-          }}
-          overloadOptions={[
-            {key: 'droppaint', name: 'dropPaint()'},
-            {key: 'turnleft', name: 'turnLeft'}
-          ]}
-        />
-      );
+  it('hides overload dropdown if canHaveOverload is false', () => {
+    const wrapper = shallow(
+      <ProgrammingMethodEditor
+        initialProgrammingMethod={{
+          ...initialProgrammingMethod,
+          canHaveOverload: false
+        }}
+        overloadOptions={[
+          {key: 'droppaint', name: 'dropPaint()'},
+          {key: 'turnleft', name: 'turnLeft'}
+        ]}
+      />
+    );
 
-      expect(wrapper.find('select').length).to.equal(0);
-    })
-  );
+    expect(wrapper.find('select').length).to.equal(0);
+  });
 
   it('displays initial values in input fields in documentation section', () => {
     const wrapper = shallow(
@@ -200,7 +194,7 @@ describe('ProgrammingMethodEditor', () => {
     wrapper
       .find('input')
       .at(0)
-      .simulate('change', {target: {value: 'getPaint()Class'}});
+      .simulate('change', {target: {value: 'PainterClass'}});
 
     // Change external documentation
     wrapper
@@ -222,7 +216,7 @@ describe('ProgrammingMethodEditor', () => {
     expect(Object.keys(fetchCallBody).sort()).to.eql(
       [
         'name',
-        'overloadedBy',
+        'overloadOf',
         'canHaveOverload',
         'content',
         'externalLink',
@@ -231,7 +225,7 @@ describe('ProgrammingMethodEditor', () => {
         'parameters'
       ].sort()
     );
-    expect(fetchCallBody.name).to.equal('getPaint()Class');
+    expect(fetchCallBody.name).to.equal('PainterClass');
     expect(fetchCallBody.content).to.equal(
       'This is a longer description of the code.'
     );

@@ -68,8 +68,8 @@ class ProgrammingMethod < ApplicationRecord
       examples: parsed_examples,
       syntax: syntax,
       externalLink: external_link,
-      canHaveOverload: !programming_class.programming_methods.any? {|m| m.overloaded_by == key},
-      overloadedBy: overloaded_by
+      canHaveOverload: !programming_class.programming_methods.any? {|m| m.overload_of == key},
+      overloadOf: overload_of
     }
   end
 
@@ -85,20 +85,20 @@ class ProgrammingMethod < ApplicationRecord
 
   def validate_overload
     # No overload is always valid
-    return unless overloaded_by
-    if overloaded_by == key
-      errors.add(:overloaded_by, "Cannot overload self")
+    return if overload_of.blank?
+    if overload_of == key
+      errors.add(:overload_of, "Cannot overload self")
       return
     end
-    if ProgrammingMethod.where(programming_class_id: programming_class_id, overloaded_by: key).count > 0
-      errors.add(:overloaded_by, "Cannot have overload if another method overloads it")
+    if ProgrammingMethod.where(programming_class_id: programming_class_id, overload_of: key).count > 0
+      errors.add(:overload_of, "Cannot have overload if another method overloads it")
       return
     end
-    overload = ProgrammingMethod.find_by(programming_class_id: programming_class_id, key: overloaded_by)
+    overload = ProgrammingMethod.find_by(programming_class_id: programming_class_id, key: overload_of)
     if overload
-      errors.add(:overloaded_by, "Overloaded method cannot have overload") unless overload.overloaded_by.blank?
+      errors.add(:overload_of, "Overloaded method cannot have overload") unless overload.overload_of.blank?
     else
-      errors.add(:overloaded_by, "Overload method must exist")
+      errors.add(:overload_of, "Overload method must exist")
     end
   end
 end

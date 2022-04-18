@@ -137,9 +137,9 @@ export default function ProgrammingMethodEditor({
         <label>
           Overload Of
           <select
-            value={programmingMethod.overloadedBy || ''}
+            value={programmingMethod.overloadOf || ''}
             onChange={e =>
-              setProgrammingMethodProperty('overloadedBy', e.target.value)
+              setProgrammingMethodProperty('overloadOf', e.target.value)
             }
           >
             <option value="">None</option>
