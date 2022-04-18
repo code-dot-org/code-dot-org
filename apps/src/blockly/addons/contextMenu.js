@@ -9,7 +9,11 @@ const registerBlockCopyToStorage = function() {
       return 'Copy';
     },
     preconditionFn: function(scope) {
-      return 'enabled';
+      if (scope.block.isDeletable() && scope.block.isMovable()) {
+        return 'enabled';
+      } else {
+        return 'disabled';
+      }
     },
     callback: function(scope) {
       const copyData = Blockly.Xml.domToPrettyText(
