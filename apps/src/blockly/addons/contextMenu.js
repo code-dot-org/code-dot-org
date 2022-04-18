@@ -6,19 +6,16 @@ import GoogleBlockly from 'blockly/core';
 const registerBlockCopyToStorage = function() {
   const copyToStorageOption = {
     displayText: function() {
-      if (Blockly.Msg['CROSS_TAB_COPY']) {
-        return Blockly.Msg['CROSS_TAB_COPY'];
-      }
       return 'Copy';
     },
     preconditionFn: function(scope) {
       return 'enabled';
     },
     callback: function(scope) {
-      const blockText = Blockly.Xml.domToPrettyText(
+      const copyData = Blockly.Xml.domToPrettyText(
         Blockly.Xml.blockToDom(scope.block)
       );
-      localStorage.setItem('blocklyStash', blockText);
+      localStorage.setItem('blocklyStash', copyData);
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.BLOCK,
     id: 'blockCopyToStorage',
@@ -33,9 +30,6 @@ const registerBlockCopyToStorage = function() {
 const registerBlockPasteFromStorage = function() {
   const pasteFromStorageOption = {
     displayText: function() {
-      if (Blockly.Msg['CROSS_TAB_PASTE']) {
-        return Blockly.Msg['CROSS_TAB_PASTE'];
-      }
       return 'Paste';
     },
     preconditionFn: function(scope) {
@@ -46,10 +40,10 @@ const registerBlockPasteFromStorage = function() {
       return 'disabled';
     },
     callback: function(scope) {
-      const blockText = localStorage.getItem('blocklyStash');
+      const copyData = localStorage.getItem('blocklyStash');
       Blockly.Xml.domToBlockSpace(
         Blockly.mainBlockSpace,
-        Blockly.Xml.textToDom(`<xml>${blockText}</xml>`)
+        Blockly.Xml.textToDom(`<xml>${copyData}</xml>`)
       );
     },
     scopeType: GoogleBlockly.ContextMenuRegistry.ScopeType.WORKSPACE,
