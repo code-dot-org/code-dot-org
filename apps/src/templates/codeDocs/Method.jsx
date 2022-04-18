@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import Example from './Example';
 import ParametersTable from './ParametersTable';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import i18n from '@cdo/locale';
+import color from '@cdo/apps/util/color';
 
 export function StandaloneMethod({method, programmingEnvironmentName}) {
   return (
@@ -33,10 +35,38 @@ export function StandaloneMethod({method, programmingEnvironmentName}) {
   );
 }
 
+export function MethodOverloads({overloads, programmingEnvironmentName}) {
+  const [isOpen, setIsOpen] = useState(true);
+  const icon = isOpen ? 'caret-down' : 'caret-up';
+  return (
+    <div>
+      <div style={styles.overloadHeader} onClick={() => setIsOpen(!isOpen)}>
+        <FontAwesome icon={icon} /> Overloads
+      </div>
+      {isOpen && (
+        <div style={styles.overloadBox}>
+          {overloads.map(overload => (
+            <StandaloneMethod
+              method={overload}
+              programmingEnvironmentName={programmingEnvironmentName}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function Method({method, programmingEnvironmentName}) {
   return (
     <div style={styles.container}>
       <StandaloneMethod method={method} />
+      {method.overloads?.length > 0 && (
+        <MethodOverloads
+          overloads={method.overloads}
+          programmingEnvironmentName={programmingEnvironmentName}
+        />
+      )}
     </div>
   );
 }
@@ -47,11 +77,17 @@ const methodShape = PropTypes.shape({
   syntax: PropTypes.string,
   content: PropTypes.string,
   parameters: PropTypes.arrayOf(PropTypes.object),
-  examples: PropTypes.arrayOf(PropTypes.object)
+  examples: PropTypes.arrayOf(PropTypes.object),
+  overloads: PropTypes.arrayOf(methodShape)
 });
 
 StandaloneMethod.propTypes = {
   method: methodShape.isRequired,
+  programmingEnvironmentName: PropTypes.string
+};
+
+MethodOverloads.propTypes = {
+  overloads: PropTypes.arrayOf(methodShape),
   programmingEnvironmentName: PropTypes.string
 };
 
@@ -63,9 +99,27 @@ Method.propTypes = {
 const styles = {
   container: {
     borderStyle: 'solid',
+    borderColor: color.lighter_gray,
     borderWidth: 1,
     borderRadius: 5,
     padding: 5,
     marginBottom: 10
+  },
+  overloadHeader: {
+    backgroundColor: color.lightest_gray,
+    borderStyle: 'solid',
+    borderColor: color.lighter_gray,
+    borderWidth: 1,
+    borderRadius: '5px 5px 0px 0px',
+    padding: 5,
+    marginTop: 15,
+    fontSize: 20
+  },
+  overloadBox: {
+    borderStyle: 'hidden solid solid solid',
+    borderColor: color.lighter_gray,
+    borderWidth: 1,
+    borderRadius: '0px 0px 5px 5px',
+    padding: 3
   }
 };
