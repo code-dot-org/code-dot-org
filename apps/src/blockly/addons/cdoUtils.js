@@ -15,3 +15,11 @@ export function getBlockFields(block) {
 export function isWorkspaceReadOnly(workspace) {
   return false; // TODO - used for feedback
 }
+
+export function blockLimitExceeded() {
+  return false;
+}
+
+export function getBlockLimit(blockType) {
+  return 0;
+}

@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-13 15:15:12 UTC",
+    "serialized_at": "2022-04-18 06:29:09 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -91,14 +91,14 @@
     },
     {
       "key": "lesson-2",
-      "name": "Context and Bias",
+      "name": "Barriers and Opportunities",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**Overview:**\nThis session opens with a discussion around systemic barriers that limit access, diversity, and inclusion in CS education. The conversation then expands on the reflections around understanding self and context to include uncovering unconscious biases that exist as a result of identity markers of self and others. Participants will be asked to reflect on ways in which their own unconscious biases might impact their view on who belongs in CS. They will also be challenged to name the responsibility they will claim in ensuring all students feel like they belong in CS. \n\n**Participants will:**\n\n* Identify systemic barriers that limit access, diversity, and inclusion in CS education. \n* List strategies for gathering data about access, diversity, and inclusion in CS within your/their school and classroom. \n* Define unconscious bias.\n* Reflect on your beliefs around who should have access to CS education. \n\n\n**Suggested time:** 60 minutes",
-        "student_overview": "**You will:**\n\n* Identify systemic barriers that limit access, diversity, and inclusion in CS education. \n* List strategies for gathering data about access, diversity, and inclusion in CS within your/their school and classroom. \n* Define unconscious bias.\n* Reflect on your beliefs around who should have access to CS education. "
+        "overview": "**Overview:**\nThis session opens with a discussion around systemic barriers that limit access, diversity, and inclusion in CS education. The conversation then prompts participants to reflect on their role in reducing barriers to access, diversity, and inclusion in CS education. \n\n**Participants will:**\n\n* Identify systemic barriers that limit access, diversity, and inclusion in CS education. \n* Identify barriers in their classroom, school, and/or teaching practice that limit access, diversity, and/or inclusion in CS education. \n* Determine which of these barriers they have the power to influence. \n* Identify concrete and reasonable strategies to address the barriers they have the power to influence. \n\n**Suggested time:** 60 minutes",
+        "student_overview": "**You will:**\n\n* Identify systemic barriers that limit access, diversity, and inclusion in CS education. \n* Identify barriers in your classroom, school, and/or teaching practice that limit access, diversity, and/or inclusion in CS education. \n* Determine which of these barriers you have the power to influence. \n* Identify concrete and reasonable strategies to address the barriers you have the power to influence. "
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -452,6 +452,7 @@
       "key": "1388a2b1-f752-4c99-90e0-0247ab64ee4c",
       "position": 1,
       "properties": {
+        "progression_name": "CS Landscape"
       },
       "seeding_key": {
         "activity_section.key": "1388a2b1-f752-4c99-90e0-0247ab64ee4c",
@@ -778,6 +779,7 @@
       "key": "d0769d90-3619-48b0-81d1-60b77986f59f",
       "position": 1,
       "properties": {
+        "progression_name": "Overview"
       },
       "seeding_key": {
         "activity_section.key": "d0769d90-3619-48b0-81d1-60b77986f59f",
@@ -1313,8 +1315,19 @@
       }
     },
     {
-      "key": "cf6ccccb-461a-47ed-9cc4-6a29ddd32220",
+      "key": "d5ba8ead-8925-40fd-a7e0-98ff1b40bd3c",
       "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "d5ba8ead-8925-40fd-a7e0-98ff1b40bd3c",
+        "lesson_activity.key": "4bb8b56c-7f9f-4651-9fa5-d70f6db0a7b3"
+      }
+    },
+    {
+      "key": "cf6ccccb-461a-47ed-9cc4-6a29ddd32220",
+      "position": 2,
       "properties": {
         "progression_name": "Wrap up"
       },
@@ -1331,6 +1344,78 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-SP-VPL-21-mod3-landscape of CS"
+        ],
+        "progression": "CS Landscape"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-SP-VPL-21-mod3-landscape of CS"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "1388a2b1-f752-4c99-90e0-0247ab64ee4c"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-SP-VPL-21-mod3-landscape of CS"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-asyncOverview-mod3-lesson4"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "d0769d90-3619-48b0-81d1-60b77986f59f"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-asyncOverview-mod3-lesson4"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-asyncOverview-mod3-lesson9"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "d5ba8ead-8925-40fd-a7e0-98ff1b40bd3c"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-asyncOverview-mod3-lesson9"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-SP-VPL-21-mod3-async2-WrapUp"
+        ],
         "progression": "Wrap up"
       },
       "bonus": false,
@@ -1349,6 +1434,42 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-SP-VPL-21-mod3-landscape of CS",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-SP-VPL-21-mod3-landscape of CS"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "1388a2b1-f752-4c99-90e0-0247ab64ee4c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-asyncOverview-mod3-lesson4",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-asyncOverview-mod3-lesson4"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "d0769d90-3619-48b0-81d1-60b77986f59f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-asyncOverview-mod3-lesson9",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-asyncOverview-mod3-lesson9"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd3-summer-pilot-2022",
+        "activity_section.key": "d5ba8ead-8925-40fd-a7e0-98ff1b40bd3c"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "VPL-CSD-PILOT-S22-SP-VPL-21-mod3-async2-WrapUp",

@@ -5,26 +5,22 @@ import React from 'react';
 import {connect} from 'react-redux';
 import _ from 'lodash';
 import OwnedSectionsTable from './OwnedSectionsTable';
-import RosterDialog from './RosterDialog';
 import Button from '@cdo/apps/templates/Button';
-import {hiddenSectionIds, beginEditingSection} from './teacherSectionsRedux';
+import {beginEditingSection} from './teacherSectionsRedux';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import styleConstants from '@cdo/apps/styleConstants';
-import AddSectionDialog from './AddSectionDialog';
-import EditSectionDialog from './EditSectionDialog';
-import SetUpSections from '../studioHomepages/SetUpSections';
 import {recordOpenEditSectionDetails} from './sectionHelpers';
 import experiments from '@cdo/apps/util/experiments';
 import {recordImpression} from './impressionHelpers';
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 
 class OwnedSections extends React.Component {
   static propTypes = {
-    // redux provided
+    isPlSections: PropTypes.bool,
     sectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     hiddenSectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
-    asyncLoadComplete: PropTypes.bool.isRequired,
+
+    // redux provided
     beginEditingSection: PropTypes.func.isRequired
   };
 
@@ -67,27 +63,25 @@ class OwnedSections extends React.Component {
   };
 
   render() {
-    const {sectionIds, hiddenSectionIds, asyncLoadComplete} = this.props;
+    const {isPlSections, sectionIds, hiddenSectionIds} = this.props;
     const {viewHidden} = this.state;
-
-    if (!asyncLoadComplete) {
-      return <Spinner size="large" style={styles.spinner} />;
-    }
 
     const hasSections = sectionIds.length > 0;
     const visibleSectionIds = _.without(sectionIds, ...hiddenSectionIds);
 
     return (
-      <div className="uitest-owned-sections">
-        <SetUpSections hasSections={hasSections} />
+      <div
+        className={
+          isPlSections ? 'uitest-owned-pl-sections' : 'uitest-owned-sections'
+        }
+      >
         {hasSections && (
           <div>
-            {visibleSectionIds.length > 0 && (
-              <OwnedSectionsTable
-                sectionIds={visibleSectionIds}
-                onEdit={this.onEditSection}
-              />
-            )}
+            <OwnedSectionsTable
+              isPlSections={isPlSections}
+              sectionIds={visibleSectionIds}
+              onEdit={this.onEditSection}
+            />
             <div style={styles.buttonContainer}>
               {hiddenSectionIds.length > 0 && (
                 <Button
@@ -113,6 +107,7 @@ class OwnedSections extends React.Component {
                   {i18n.archivedSectionsTeacherDescription()}
                 </div>
                 <OwnedSectionsTable
+                  isPlSections={isPlSections}
                   sectionIds={hiddenSectionIds}
                   onEdit={this.onEditSection}
                 />
@@ -120,9 +115,6 @@ class OwnedSections extends React.Component {
             )}
           </div>
         )}
-        <RosterDialog />
-        <AddSectionDialog />
-        <EditSectionDialog />
       </div>
     );
   }
@@ -149,19 +141,12 @@ const styles = {
     lineHeight: '22px',
     paddingBottom: 10,
     color: color.charcoal
-  },
-  spinner: {
-    marginTop: '10px'
   }
 };
 export const UnconnectedOwnedSections = OwnedSections;
 
 export default connect(
-  state => ({
-    sectionIds: state.teacherSections.sectionIds,
-    hiddenSectionIds: hiddenSectionIds(state),
-    asyncLoadComplete: state.teacherSections.asyncLoadComplete
-  }),
+  () => ({}),
   {
     beginEditingSection
   }
