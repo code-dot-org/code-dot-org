@@ -169,12 +169,21 @@ function getBoard() {
       return findPortWithViableDevice().then(port => new MicroBitBoard(port));
     } else {
       if (experiments.isEnabled('webserial')) {
-        return navigator.serial
-          .requestPort({filters: WEB_SERIAL_FILTERS})
-          .then(port => {
+        return navigator.serial.getPorts().then(ports => {
+          // No previously connected port. Query user to select port.
+          if (!ports.length) {
+            return navigator.serial
+              .requestPort({filters: WEB_SERIAL_FILTERS})
+              .then(port => {
+                let wrappedPort = new WebSerialPortWrapper(port);
+                return new CircuitPlaygroundBoard(wrappedPort);
+              });
+          } else {
+            let port = ports[0];
             let wrappedPort = new WebSerialPortWrapper(port);
             return new CircuitPlaygroundBoard(wrappedPort);
-          });
+          }
+        });
       } else {
         return findPortWithViableDevice().then(
           port => new CircuitPlaygroundBoard(port)
