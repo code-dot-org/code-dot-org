@@ -33,7 +33,7 @@ const PetitionForm = () => (
       </FieldGroup>
       <FieldGroup id="profession" label="I am a" componentClass="select">
         {[
-          '- Select -',
+          '-',
           'Student',
           'Parent',
           'Educator',
