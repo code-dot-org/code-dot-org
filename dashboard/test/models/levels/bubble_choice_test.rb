@@ -346,7 +346,7 @@ DSL
     student = create :student
 
     sublevel1 = create :level, name: 'choice_1', display_name: 'Choice 1!', thumbnail_url: 'some-fake.url/kittens.png', bubble_choice_description: 'Choose me!'
-    sublevel1_contained_level = create :level, name: 'sublevel contained level'
+    sublevel1_contained_level = create :level, name: 'Choice 1 contained'
     sublevel1.contained_level_names = [sublevel1_contained_level.name]
 
     sublevel2 = create :level, name: 'choice_2', short_instructions: 'A short instruction'
