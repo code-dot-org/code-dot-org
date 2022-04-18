@@ -2,5 +2,9 @@ comment: off
 coverage:
   range: 50..80
   status:
-    project: off
-    patch: off
+    project:
+      default:
+        informational: true
+    patch:
+      default:
+        informational: true
