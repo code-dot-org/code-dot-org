@@ -8,7 +8,6 @@ const blockCopyToStorageShortcut = function() {
   const copyShortcut = {
     name: 'copy',
     preconditionFn: function(workspace) {
-      console.log(GoogleBlockly.Gesture);
       return (
         !workspace.options.readOnly &&
         !GoogleBlockly.Gesture.inProgress() &&
@@ -132,7 +131,6 @@ const blockPasteFromStorageShortcut = function() {
   const pasteShortcut = {
     name: 'paste',
     preconditionFn: function(workspace) {
-      console.log(localStorage.getItem('blocklyStash'));
       if (workspace.options.readOnly || GoogleBlockly.Gesture.inProgress()) {
         return false;
       }
