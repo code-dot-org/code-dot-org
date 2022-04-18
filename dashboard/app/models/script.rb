@@ -1817,7 +1817,7 @@ class Script < ApplicationRecord
     nil
   end
 
-  def has_student_progress?(student_unit_ids)
+  def included_in_units?(unit_ids)
     student_unit_ids.include? id
   end
 
