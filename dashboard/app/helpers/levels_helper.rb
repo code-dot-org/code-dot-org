@@ -351,6 +351,7 @@ module LevelsHelper
       @app_options[:level][:levelVideos] = @level.related_videos.map(&:summarize)
       @app_options[:level][:mapReference] = @level.map_reference
       @app_options[:level][:referenceLinks] = @level.reference_links
+      @app_options[:level][:documentationCategory] = get_documentation_category
 
       if (@user || current_user) && @script
         @app_options[:level][:isStarted] = level_started?(@level, @script, @user || current_user)
@@ -1019,6 +1020,15 @@ module LevelsHelper
       POST_MILESTONE_MODE.all
     else
       POST_MILESTONE_MODE.final_level_only
+    end
+  end
+
+  def get_documentation_category
+    case @level.game
+    when Game.javalab
+      "javalab"
+    else
+      nil
     end
   end
 end
