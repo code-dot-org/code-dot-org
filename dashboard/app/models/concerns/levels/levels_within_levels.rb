@@ -162,6 +162,12 @@ module Levels
     end
 
     def validate_contained_level_type
+      # prevent these checks from running during seeding in most environments.
+      # this is needed for performance, but also because some of these checks
+      # will fail when seeding from scratch, because a contained level might not
+      # yet have been seeded at the time the containing level is seeded.
+      return unless Rails.application.config.levelbuilder_mode
+
       return unless contained_level_names.present?
       return if properties['contained_level_names'] == properties_was&.[]('contained_level_names')
 
