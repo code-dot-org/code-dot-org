@@ -131,8 +131,11 @@ class LevelsWithinLevelsTest < ActiveSupport::TestCase
     # can remove
     level.update!(contained_level_names: [])
     assert_equal [], level.reload.child_levels.contained
+  end
 
-    # cannot add contained levels of other types
+  test 'cannot add contained levels of other types in levelbuilder mode' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    level = create :level
     bogus_contained = create :match
     refute level.update(contained_level_names: [bogus_contained.name])
     assert_includes level.errors.full_messages.first, 'cannot add contained level of type Match'
