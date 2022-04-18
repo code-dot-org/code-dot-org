@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-15 01:20:13 UTC",
+    "serialized_at": "2022-04-15 19:06:54 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2992,7 +2992,7 @@
       "key": "7b94d062-4de1-48d9-91b2-32f33d1e7d5f",
       "position": 1,
       "properties": {
-        "description": "We are almost done with our first project! You should be proud of what you have accomplished in this unit and this project.",
+        "description": "We are almost done with our project! You should be proud of what you have accomplished in this unit and this project.",
         "name": "Reflecting on Your Progress",
         "remarks": true
       },
@@ -3308,6 +3308,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L1-L1_2022"
+        ],
         "progression": "Natural Language Processing Project Examples"
       },
       "bonus": false,
@@ -3330,6 +3333,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L1-L2_2022"
+        ],
         "progression": "Documenting Program Code"
       },
       "bonus": false,
@@ -3352,6 +3358,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L1-L3v2_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3374,6 +3383,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L1_2022"
+        ],
         "progression": "Investigate: Integer and Double Objects"
       },
       "bonus": false,
@@ -3396,6 +3408,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L2_2022"
+        ],
         "progression": "Using Wrapper Classes"
       },
       "bonus": false,
@@ -3418,6 +3433,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L3_2022"
+        ],
         "progression": "Using Wrapper Classes"
       },
       "bonus": false,
@@ -3440,6 +3458,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L4_2022"
+        ],
         "progression": "Using Wrapper Classes"
       },
       "bonus": false,
@@ -3462,6 +3483,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L5v2_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3484,6 +3508,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L1_2022"
+        ],
         "progression": "Investigate: ArrayLists"
       },
       "bonus": false,
@@ -3506,6 +3533,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L2v2_2022"
+        ],
         "progression": "Using ArrayLists"
       },
       "bonus": false,
@@ -3528,6 +3558,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L3_2022"
+        ],
         "progression": "Using ArrayLists"
       },
       "bonus": false,
@@ -3550,6 +3583,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L4v2_2022"
+        ],
         "progression": "Using ArrayLists"
       },
       "bonus": false,
@@ -3572,6 +3608,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L5v2_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3594,6 +3633,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L1_2022"
+        ],
         "progression": "Investigate: Working with ArrayList Data"
       },
       "bonus": false,
@@ -3616,6 +3658,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L2v2_2022"
+        ],
         "progression": "Changing Values in an ArrayList"
       },
       "bonus": false,
@@ -3638,6 +3683,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L3v2_2022"
+        ],
         "progression": "Changing Values in an ArrayList"
       },
       "bonus": false,
@@ -3660,6 +3708,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L4v2_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3682,6 +3733,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L1_2022"
+        ],
         "progression": "Investigate: ArrayList of Objects"
       },
       "bonus": false,
@@ -3704,6 +3758,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L2v2_2022"
+        ],
         "progression": "ArrayLists of Objects"
       },
       "bonus": false,
@@ -3726,6 +3783,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L3v2_2022"
+        ],
         "progression": "ArrayLists of Objects"
       },
       "bonus": false,
@@ -3748,6 +3808,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L4 CR_2022"
+        ],
         "progression": "Code Review: ArrayLists of Objects"
       },
       "bonus": false,
@@ -3770,6 +3833,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L5_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3792,6 +3858,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L1_2022"
+        ],
         "progression": "Investigate: Removing Values"
       },
       "bonus": false,
@@ -3814,6 +3883,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L2_2022"
+        ],
         "progression": "Predict: Using an Enhanced For Loop"
       },
       "bonus": false,
@@ -3836,6 +3908,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L3_2022"
+        ],
         "progression": "Investigate: Removing with an Enhanced For Loop"
       },
       "bonus": false,
@@ -3858,6 +3933,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L4_2022"
+        ],
         "progression": "Removing Values from an ArrayList"
       },
       "bonus": false,
@@ -3880,6 +3958,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L5_2022"
+        ],
         "progression": "Removing Values from an ArrayList"
       },
       "bonus": false,
@@ -3902,6 +3983,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L6v2_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3924,6 +4008,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L1_2022"
+        ],
         "progression": "Investigate: String Methods"
       },
       "bonus": false,
@@ -3946,6 +4033,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L2v2_2022"
+        ],
         "progression": "Keywords and Parts-of-Speech"
       },
       "bonus": false,
@@ -3968,6 +4058,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L3v2_2022"
+        ],
         "progression": "Keywords and Parts-of-Speech"
       },
       "bonus": false,
@@ -3990,6 +4083,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L4v2_2022"
+        ],
         "progression": "Keywords and Parts-of-Speech"
       },
       "bonus": false,
@@ -4012,6 +4108,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L5v2_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4034,6 +4133,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L1_2022"
+        ],
         "progression": "Investigate: Comparing Strings"
       },
       "bonus": false,
@@ -4056,6 +4158,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L2_2022"
+        ],
         "progression": "Sorting Strings"
       },
       "bonus": false,
@@ -4078,6 +4183,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L3_2022"
+        ],
         "progression": "Sorting Strings"
       },
       "bonus": false,
@@ -4100,6 +4208,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L4v2_2022"
+        ],
         "progression": "Sorting Strings"
       },
       "bonus": false,
@@ -4122,6 +4233,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L5v2_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4144,6 +4258,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L1v2_2022"
+        ],
         "progression": "String Algorithms"
       },
       "bonus": false,
@@ -4166,6 +4283,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L2_2022"
+        ],
         "progression": "String Algorithms"
       },
       "bonus": false,
@@ -4188,6 +4308,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L3v2_2022"
+        ],
         "progression": "String Algorithms"
       },
       "bonus": false,
@@ -4210,6 +4333,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L4 CR_2022"
+        ],
         "progression": "Code Review: String Algorithms"
       },
       "bonus": false,
@@ -4232,6 +4358,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L5_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4254,6 +4383,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L10-L1_2022"
+        ],
         "progression": "Investigate: Obtaining Individual Digits"
       },
       "bonus": false,
@@ -4276,6 +4408,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L10-L2v2_2022"
+        ],
         "progression": "Finding the Sentiment Value"
       },
       "bonus": false,
@@ -4298,6 +4433,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L10-L3v2_2022"
+        ],
         "progression": "Finding the Sentiment Value"
       },
       "bonus": false,
@@ -4320,6 +4458,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L10-L4 CR_2022"
+        ],
         "progression": "Code Review: Finding the Sentiment Value"
       },
       "bonus": false,
@@ -4342,6 +4483,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L10-L5_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4364,6 +4508,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L11-L1_2022"
+        ],
         "progression": "Natural Language Processing Project"
       },
       "bonus": false,
@@ -4386,6 +4533,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L12-L1_2022"
+        ],
         "progression": "Natural Language Processing Project"
       },
       "bonus": false,
@@ -4408,6 +4558,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L12-L2 CR_2022"
+        ],
         "progression": "Code Review: Natural Language Processing Project"
       },
       "bonus": false,
@@ -4430,6 +4583,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L13-L1_2022"
+        ],
         "progression": "Natural Language Processing Project"
       },
       "bonus": false,
@@ -4452,6 +4608,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 6 Assessment 2022"
+        ],
         "progression": "Unit 6 Assessment"
       },
       "bonus": false,

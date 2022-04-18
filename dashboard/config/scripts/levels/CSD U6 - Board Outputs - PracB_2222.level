@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-07T23:49:46.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -77,13 +73,17 @@
     },
     "display_name": "Debugging!",
     "bubble_choice_description": "Help fix the bug in the code!",
-    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L2/practice/B.png",
+    "thumbnail_url": "https://images.code.org/32eb687cf9a74c1c5e7ac5a5d66a7214-image-1650058384531.png",
     "encrypted_examples": "0DCME/nFJ4JOqPyreavqU+PrNIp2p6uhByNFeNRfIz13lJcnsjoqTfN16adM\n3bpemv55MB40uHeF/T/11f24WQ==\n",
     "preload_asset_list": null
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-04-07T23:49:46.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-07T23:49:46.323+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - PracB_2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - PracB_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-07T23:49:46.323+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - PracB_2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - PracB_2022\"},{\"changed_at\":\"2022-04-15 21:33:15 +0000\",\"changed\":[\"code_functions\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

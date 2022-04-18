@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-07 06:40:23 UTC",
+    "serialized_at": "2022-04-15 22:29:26 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -205,6 +205,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U1"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -277,6 +280,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-U1L5"
+        ],
         "progression": "Explore the first week of curriculum"
       },
       "bonus": false,
@@ -299,6 +305,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-vocab-c4u-U1L6"
+        ],
         "progression": "Explore the first week of curriculum"
       },
       "bonus": false,
@@ -313,6 +322,27 @@
       },
       "level_keys": [
         "VPL-CSD-PILOT-S22-CI-vocab-c4u-U1L6"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD What Makes a Computer a Computer Video_2022"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd1-ci-pilot-2022",
+        "activity_section.key": "5c9853d0-de30-4c85-84f7-2ef4d2801550"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD What Makes a Computer a Computer Video_2022"
       ]
     }
   ],
@@ -375,6 +405,18 @@
         "lesson_group.key": "",
         "script.name": "vpl-csd1-ci-pilot-2022",
         "activity_section.key": "6d63c390-0b37-482e-93ab-70d76a90aa09"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD What Makes a Computer a Computer Video_2022",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD What Makes a Computer a Computer Video_2022"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd1-ci-pilot-2022",
+        "activity_section.key": "5c9853d0-de30-4c85-84f7-2ef4d2801550"
       }
     }
   ],
