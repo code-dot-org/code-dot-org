@@ -5,13 +5,14 @@ import {connect} from 'react-redux';
 import {PaneButton} from '@cdo/apps/templates/PaneHeader';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import cookies from 'js-cookie';
-import {setMuteMusic} from '@cdo/apps/templates/currentUserRedux';
+import {setMuteMusic, SignInState} from '@cdo/apps/templates/currentUserRedux';
 import UserPreferences from '../../lib/util/UserPreferences';
 
 const MUTE_MUSIC = 'mute_music';
 
 function BackgroundMusicMuteButton({
   className,
+  signedIn,
   isMinecraft,
   isRtl,
   isBackgroundMusicMuted,
@@ -20,7 +21,7 @@ function BackgroundMusicMuteButton({
   unmuteBackgroundMusic
 }) {
   const updateMuteMusic = isBackgroundMusicMuted => {
-    new UserPreferences().setMuteMusic(isBackgroundMusicMuted);
+    signedIn ? new UserPreferences().setMuteMusic(isBackgroundMusicMuted) : {};
     setMuteMusic(isBackgroundMusicMuted);
   };
 
@@ -76,6 +77,7 @@ function BackgroundMusicMuteButton({
 
 BackgroundMusicMuteButton.propTypes = {
   className: PropTypes.string.isRequired,
+  signedIn: PropTypes.bool.isRequired,
   isMinecraft: PropTypes.bool.isRequired,
   isRtl: PropTypes.bool.isRequired,
 
@@ -102,6 +104,7 @@ export const UnconnectedBackgroundMusicMuteButton = BackgroundMusicMuteButton;
 export default connect(
   state => ({
     isBackgroundMusicMuted: state.currentUser.isBackgroundMusicMuted,
+    signedIn: state.currentUser.signInState === SignInState.SignedIn,
     muteBackgroundMusic: state.instructions.muteBackgroundMusic,
     unmuteBackgroundMusic: state.instructions.unmuteBackgroundMusic
   }),
