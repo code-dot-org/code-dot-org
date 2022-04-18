@@ -1247,6 +1247,7 @@
   "mapsToCSTAStandards": "Maps to [CSTA Standards]({cstaLink})",
   "matchQuestionsOverview": "Match questions overview ({numSubmissions} / {numStudents} students)",
   "matchStudentOverview": "Match questions overview ({studentName})",
+  "methods": "Methods",
   "middleCenter": "middle center",
   "middleLeft": "middle left",
   "middleRight": "middle right",

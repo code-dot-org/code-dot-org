@@ -65,6 +65,19 @@ class ProgrammingMethod < ApplicationRecord
     }
   end
 
+  def summarize_for_show
+    {
+      id: id,
+      key: key,
+      name: name,
+      content: content,
+      parameters: parsed_parameters,
+      examples: parsed_examples,
+      syntax: syntax,
+      external_link: external_link
+    }
+  end
+
   private
 
   def parsed_parameters
