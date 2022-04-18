@@ -5,7 +5,7 @@ import {range} from 'lodash';
 
 const PetitionForm = () => (
   <>
-    <Form inline id="petition-form" className="petition_form">
+    <Form inline id="petition-form" className="petition-form">
       <FieldGroup id="name" placeholder="Name" type="text" />
       <FieldGroup
         id="email"
@@ -47,7 +47,7 @@ const PetitionForm = () => (
         ))}
       </FieldGroup>
       <Button
-        className="go_button"
+        className="petition-button"
         bsStyle="primary"
         key="submit"
         id="submit"

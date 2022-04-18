@@ -6,7 +6,7 @@ import React from 'react';
 const FieldGroup = ({id, label, help, componentClass, children, ...props}) => {
   return (
     <FormGroup controlId={id}>
-      {label && <span className="dropdown_label">{label}</span>}
+      {label && <span className="dropdown-label">{label}</span>}
       <FormControl
         componentClass={componentClass}
         className={classNames(
