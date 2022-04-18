@@ -170,7 +170,7 @@ MusicController.prototype.preload = function() {
 };
 
 MusicController.prototype.setMuteMusic = function(isBackgroundMusicMuted) {
-  this.muteMusic = isBackgroundMusicMuted;
+  this.muteMusic_ = isBackgroundMusicMuted;
 };
 
 /**
