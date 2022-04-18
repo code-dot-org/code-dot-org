@@ -32,6 +32,7 @@ const descriptionFormatter = description => {
 };
 
 export default function ParametersTable({parameters}) {
+  console.log(parameters);
   const columns = [
     {
       property: 'name',

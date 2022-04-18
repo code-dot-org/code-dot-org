@@ -123,7 +123,8 @@ class ProgrammingClass < ApplicationRecord
       externalDocumentation: external_documentation,
       categoryKey: programming_environment_category&.key || '',
       color: programming_environment_category&.color || '',
-      category: programming_environment_category&.name || ''
+      category: programming_environment_category&.name || '',
+      methods: summarize_programming_methods
     }
   end
 
@@ -144,5 +145,9 @@ class ProgrammingClass < ApplicationRecord
 
   def parsed_fields
     fields.blank? ? [] : JSON.parse(fields)
+  end
+
+  def summarize_programming_methods
+    programming_methods.map(&:summarize_for_show)
   end
 end
