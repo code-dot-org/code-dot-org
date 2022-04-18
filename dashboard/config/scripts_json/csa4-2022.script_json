@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-11 15:58:57 UTC",
+    "serialized_at": "2022-04-15 19:06:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3226,7 +3226,7 @@
       "key": "3bb969f3-319c-4709-950e-982c43ef8e4b",
       "position": 1,
       "properties": {
-        "description": "We are almost done with our first project! You should be proud of what you have accomplished in this unit and this project.",
+        "description": "We are almost done with our project! You should be proud of what you have accomplished in this unit and this project.",
         "name": "Reflecting on Your Progress",
         "remarks": true
       },
@@ -3276,7 +3276,7 @@
       "key": "3cf247da-df27-424a-96da-ddedf91ed66e",
       "position": 3,
       "properties": {
-        "description": "Congratulations! You have completed your store management project for this unit. Let's show off our work through a Gallery Walk so you can share your work with your classmates.",
+        "description": "Congratulations! You have completed your abstract data art project for this unit. Let's show off our work through a Gallery Walk so you can share your work with your classmates.",
         "duration": "15",
         "name": "Peer Presentations",
         "remarks": true

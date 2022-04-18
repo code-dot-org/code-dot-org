@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-13 16:57:07 UTC",
+    "serialized_at": "2022-04-14 20:45:58 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4107,6 +4107,17 @@
       }
     },
     {
+      "key": "31082714-e682-482a-a0c4-8c1ca60b4b07",
+      "position": 4,
+      "properties": {
+        "progression_name": "End-Of-Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "31082714-e682-482a-a0c4-8c1ca60b4b07",
+        "lesson_activity.key": "6b3a39ea-89c9-448b-a125-fa532c918562"
+      }
+    },
+    {
       "key": "06860162-d4d7-4f85-9b25-703bedcd8927",
       "position": 1,
       "properties": {
@@ -5198,6 +5209,28 @@
     },
     {
       "chapter": 43,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End-Of-Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csp1-2022"
+        ],
+        "lesson.key": "Project   Digital Information Dilemmas Part 2",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2022",
+        "activity_section.key": "31082714-e682-482a-a0c4-8c1ca60b4b07"
+      },
+      "level_keys": [
+        "Student End of Unit Survey_csp1-2022"
+      ]
+    },
+    {
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5725,6 +5758,18 @@
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2022",
         "activity_section.key": "238d7359-c055-497c-9b76-5d31cf2d11a4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Student End of Unit Survey_csp1-2022",
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csp1-2022"
+        ],
+        "lesson.key": "Project   Digital Information Dilemmas Part 2",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2022",
+        "activity_section.key": "31082714-e682-482a-a0c4-8c1ca60b4b07"
       }
     },
     {

@@ -343,6 +343,7 @@ describe('entry tests', () => {
           ['build/package/css/courses.css', 'style/curriculum/courses.scss'],
           ['build/package/css/scripts.css', 'style/curriculum/scripts.scss'],
           ['build/package/css/lessons.css', 'style/curriculum/lessons.scss'],
+          ['build/package/css/markdown.css', 'style/curriculum/markdown.scss'],
           ['build/package/css/levels.css', 'style/curriculum/levels.scss'],
           ['build/package/css/rollups.css', 'style/curriculum/rollups.scss'],
           [
@@ -704,6 +705,8 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/public/yourschool.js',
     'code.org/public/yourschool/thankyou':
       './src/sites/code.org/pages/public/yourschool/thankyou.js',
+    'code.org/views/csf_congrats':
+      './src/sites/code.org/pages/views/csf_congrats.js',
     'code.org/views/regional_partner_search':
       './src/sites/code.org/pages/views/regional_partner_search.js',
     'code.org/views/share_privacy':
