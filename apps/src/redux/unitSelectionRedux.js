@@ -56,13 +56,14 @@ export default function unitSelection(state = initialState, action) {
       action.courseVersionsWithProgress
     )[0];
 
+    const firstUnit = firstCourseVersion
+      ? Object.keys(firstCourseVersion.units)[0]
+      : null;
+
     return {
       ...state,
       courseVersionsWithProgress: action.courseVersionsWithProgress,
-      scriptId:
-        state.scriptId === null && firstCourseVersion
-          ? Object.keys(firstCourseVersion.units)[0]
-          : state.scriptId
+      scriptId: state.scriptId === null ? firstUnit : state.scriptId
     };
   }
 

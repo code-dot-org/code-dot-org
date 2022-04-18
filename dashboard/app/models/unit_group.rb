@@ -362,7 +362,7 @@ class UnitGroup < ApplicationRecord
     }
   end
 
-  def has_student_progress?(student_unit_ids)
+  def included_in_units?(unit_ids)
     default_units.any? {|unit| student_unit_ids.include? unit.id}
   end
 

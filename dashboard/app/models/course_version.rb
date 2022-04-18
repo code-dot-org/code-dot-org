@@ -69,7 +69,7 @@ class CourseVersion < ApplicationRecord
   delegate :can_be_instructor?, to: :content_root, allow_nil: true
   delegate :course_assignable?, to: :content_root, allow_nil: true
   delegate :can_view_version?, to: :content_root, allow_nil: true
-  delegate :has_student_progress?, to: :content_root, allow_nil: true
+  delegate :included_in_units?, to: :content_root, allow_nil: true
 
   # Seeding method for creating / updating / deleting the CourseVersion for the given
   # potential content root, i.e. a Script or UnitGroup.
@@ -152,12 +152,12 @@ class CourseVersion < ApplicationRecord
     latest_stable_version == content_root
   end
 
-  def self.course_versions_with_student_progress(student_unit_ids, user)
-    CourseVersion.all.select {|cv| cv.has_student_progress?(student_unit_ids) && cv.course_assignable?(user)}
+  def self.course_versions_with_units(unit_ids, user)
+    CourseVersion.all.select {|cv| cv.included_in_units?(unit_ids) && cv.course_assignable?(user)}
   end
 
-  def self.course_versions_with_student_progress_info(user, student_unit_ids, locale_code = 'en-us')
-    course_versions_with_student_progress(student_unit_ids, user).map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
+  def self.course_versions_with_units_info(user, unit_ids, locale_code = 'en-us')
+    course_versions_with_units(unit_ids, user).map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
   def summarize_for_assignment_dropdown(user, locale_code)
