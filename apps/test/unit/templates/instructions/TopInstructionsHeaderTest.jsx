@@ -17,6 +17,7 @@ const DEFAULT_PROPS = {
   levelHasRubric: false,
   isViewingAsTeacher: false,
   isViewingAsInstructorInTraining: false,
+  isBackgroundMusicLevel: false,
   fetchingData: false,
   handleDocumentationClick: () => {},
   handleInstructionTabClick: () => {},
@@ -102,6 +103,13 @@ describe('TopInstructionsHeader', () => {
       tabSelected: TabType.COMMENTS
     });
     expect(wrapper.find('.uitest-feedback')).to.have.length(0);
+  });
+
+  it('shows mute button when isBackgroundMusicLevel is true', () => {
+    const wrapper = setUp({
+      isBackgroundMusicLevel: true
+    });
+    expect(wrapper.find('.uitest-mute-music-button')).to.have.length(1);
   });
 
   it('on the resources tab selects the resources tab', () => {

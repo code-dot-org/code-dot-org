@@ -51,7 +51,7 @@ function BackgroundMusicMuteButton({
 
   return (
     <PaneButton
-      id="mute-music-button-instructions"
+      id="uitest-mute-music-button"
       headerHasFocus={true}
       iconClass={isBackgroundMusicMuted ? 'fa fa-volume-off' : 'fa fa-music'}
       label={
