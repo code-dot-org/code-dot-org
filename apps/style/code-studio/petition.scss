@@ -1,3 +1,5 @@
+@import 'font';
+
 .petition_block {
   width: 970px;
   display: flex;
@@ -11,7 +13,7 @@
   margin: 0;
   font-size: 21px;
   line-height: 28px;
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: $gotham-bold;
   color: #5B6770;
 }
 
@@ -20,7 +22,7 @@
   line-height: 20px;
   font-weight: 400;
   margin: 10px 0 20px 0;
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: $gotham-regular;
   color: #5B6770;
 }
 
@@ -71,18 +73,14 @@ span.dropdown {
   margin: 0;
   padding: 4px 12px;
   height: 30px;
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: $gotham-bold;
 }
 
-.help, a {
+.help, .help a, .help a:hover {
   font-size: 12px;
   line-height: 18px;
   margin: 10px 0 0 0;
   text-decoration: none;
-  color: #5B6770;
-}
-
-a:hover {
   color: #5B6770;
 }
 
