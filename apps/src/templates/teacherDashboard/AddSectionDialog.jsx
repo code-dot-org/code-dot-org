@@ -55,21 +55,21 @@ class AddSectionDialog extends Component {
         uncloseable
       >
         <PadAndCenter>
-          {!loginType && (
+          {!participantType && (
+            <ParticipantTypePicker
+              title={title}
+              setParticipantType={setParticipantType}
+              handleCancel={handleCancel}
+              availableParticipantTypes={availableParticipantTypes}
+            />
+          )}
+          {!loginType && participantType && (
             <LoginTypePicker
               title={title}
               handleImportOpen={beginImportRosterFlow}
               setRosterProvider={setRosterProvider}
               setLoginType={setLoginType}
               handleCancel={handleCancel}
-            />
-          )}
-          {loginType && !participantType && (
-            <ParticipantTypePicker
-              title={title}
-              setParticipantType={setParticipantType}
-              handleCancel={handleCancel}
-              availableParticipantTypes={availableParticipantTypes}
             />
           )}
           {loginType && participantType && (

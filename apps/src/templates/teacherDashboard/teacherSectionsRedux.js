@@ -4,6 +4,8 @@ import {reload} from '@cdo/apps/utils';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import PropTypes from 'prop-types';
+import {SectionLoginType} from '../../util/sharedConstants';
+import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -337,30 +339,6 @@ export const submitEditingSection = (dispatch, getState) => {
   });
 };
 
-/**
- * Submit staged section changes to the server.
- * Closes UI and updates section table on success.
- */
-export const finishEditingSection = () => (dispatch, getState) => {
-  const state = getState().teacherSections;
-  const section = state.sectionBeingEdited;
-  return new Promise((resolve, reject) => {
-    submitEditingSection(dispatch, getState)
-      .done(result => {
-        dispatch({
-          type: EDIT_SECTION_SUCCESS,
-          sectionId: section.id,
-          serverSection: result
-        });
-        resolve(result);
-      })
-      .fail((jqXhr, status) => {
-        dispatch({type: EDIT_SECTION_FAILURE});
-        reject(status);
-      });
-  });
-};
-
 export const reloadAfterEditingSection = () => (dispatch, getState) => {
   const state = getState().teacherSections;
   const section = state.sectionBeingEdited;
@@ -382,15 +360,28 @@ export const reloadAfterEditingSection = () => (dispatch, getState) => {
 };
 
 /**
- * Change the login type of the given section.
- * @param {number} sectionId
- * @param {SectionLoginType} loginType
- * @return {function():Promise}
+ * Submit staged section changes to the server.
+ * Closes UI and updates section table on success.
  */
-export const editSectionLoginType = (sectionId, loginType) => dispatch => {
-  dispatch(beginEditingSection(sectionId));
-  dispatch(editSectionProperties({loginType}));
-  return dispatch(finishEditingSection());
+export const finishEditingSection = () => (dispatch, getState) => {
+  const state = getState().teacherSections;
+  const section = state.sectionBeingEdited;
+  return new Promise((resolve, reject) => {
+    submitEditingSection(dispatch, getState)
+      .done(result => {
+        dispatch({
+          type: EDIT_SECTION_SUCCESS,
+          sectionId: section.id,
+          serverSection: result
+        });
+        resolve(result);
+        reload();
+      })
+      .fail((jqXhr, status) => {
+        dispatch({type: EDIT_SECTION_FAILURE});
+        reject(status);
+      });
+  });
 };
 
 export const asyncLoadSectionData = id => dispatch => {
@@ -699,10 +690,14 @@ export default function teacherSections(state = initialState, action) {
     );
 
     const studentSectionIds = sections
-      .filter(section => section.participantType === 'student')
+      .filter(
+        section => section.participantType === ParticipantAudience.student
+      )
       .map(section => section.id);
     const plSectionIds = sections
-      .filter(section => section.participantType !== 'student')
+      .filter(
+        section => section.participantType !== ParticipantAudience.student
+      )
       .map(section => section.id);
 
     return {
@@ -828,10 +823,14 @@ export default function teacherSections(state = initialState, action) {
         throw new Error(`Cannot edit property ${key}; it's not allowed.`);
       }
     }
+
     // PL Sections must use email logins
-    const participantTypeSettings = {};
-    if (action.props.loginType && action.props.loginType !== 'email') {
-      participantTypeSettings.participantType = 'student';
+    const loginTypeSettings = {};
+    if (
+      action.props.participantType &&
+      action.props.participantType !== ParticipantAudience.student
+    ) {
+      loginTypeSettings.loginType = SectionLoginType.email;
     }
 
     const lessonExtraSettings = {};
@@ -850,7 +849,7 @@ export default function teacherSections(state = initialState, action) {
         ...state.sectionBeingEdited,
         ...lessonExtraSettings,
         ...ttsAutoplayEnabledSettings,
-        ...participantTypeSettings,
+        ...loginTypeSettings,
         ...action.props
       }
     };
@@ -893,10 +892,14 @@ export default function teacherSections(state = initialState, action) {
     };
 
     const newStudentSectionIds = Object.values(newSections)
-      .filter(section => section.participantType === 'student')
+      .filter(
+        section => section.participantType === ParticipantAudience.student
+      )
       .map(section => section.id);
     const newPlSectionIds = Object.values(newSections)
-      .filter(section => section.participantType !== 'student')
+      .filter(
+        section => section.participantType !== ParticipantAudience.student
+      )
       .map(section => section.id);
 
     if (section.loginType !== state.initialLoginType) {
@@ -1377,7 +1380,7 @@ export function hiddenStudentSectionIds(state) {
   return state.sectionIds.filter(
     id =>
       state.sections[id].hidden &&
-      state.sections[id].participantType === 'student'
+      state.sections[id].participantType === ParticipantAudience.student
   );
 }
 
@@ -1389,7 +1392,7 @@ export function hiddenPlSectionIds(state) {
   return state.sectionIds.filter(
     id =>
       state.sections[id].hidden &&
-      state.sections[id].participantType !== 'student'
+      state.sections[id].participantType !== ParticipantAudience.student
   );
 }
 
