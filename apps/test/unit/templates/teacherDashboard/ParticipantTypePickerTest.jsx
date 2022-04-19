@@ -40,6 +40,6 @@ describe('ParticipantTypePicker', () => {
       .find('ParticipantTypeCard')
       .at(0)
       .simulate('click');
-    expect(setParticipantType).to.have.been.calledWith('student');
+    expect(setParticipantType).to.have.been.calledOnce;
   });
 });
