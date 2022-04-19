@@ -36,9 +36,9 @@ export default class UnitSelector extends Component {
           style={dropdownStyles.dropdown}
           id="uitest-course-dropdown"
         >
-          {Object.values(courseVersionsWithProgress).map(version => (
-            <optgroup key={version.id} label={version.name}>
-              {Object.values(version.units).map(unit => (
+          {courseVersionsWithProgress.map((version, index) => (
+            <optgroup key={index} label={version.display_name}>
+              {version.units.map(unit => (
                 <option key={unit.id} value={unit.id}>
                   {unit.name}
                 </option>

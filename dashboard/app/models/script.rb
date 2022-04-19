@@ -1818,7 +1818,16 @@ class Script < ApplicationRecord
   end
 
   def included_in_units?(unit_ids)
-    student_unit_ids.include? id
+    unit_ids.include? id
+  end
+
+  def summarize_for_unit_selector
+    {
+      id: id,
+      version_year: version_year,
+      name: launched? ? localized_title : localized_title + " *",
+      position: unit_group_units&.first&.position
+    }
   end
 
   def summarize_for_assignment_dropdown

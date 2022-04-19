@@ -152,12 +152,23 @@ class CourseVersion < ApplicationRecord
     latest_stable_version == content_root
   end
 
-  def self.course_versions_with_units(unit_ids, user)
-    CourseVersion.all.select {|cv| cv.included_in_units?(unit_ids) && cv.course_assignable?(user)}
+  def self.course_versions_for_unit_selector(unit_ids, user)
+    CourseOffering.single_unit_course_offerings_containing_units_info(unit_ids, user).concat(CourseVersion.unit_group_course_versions_with_units_info(unit_ids, user)).sort_by{|c| c[:display_name]}
   end
 
-  def self.course_versions_with_units_info(user, unit_ids, locale_code = 'en-us')
-    course_versions_with_units(unit_ids, user).map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
+  def self.unit_group_course_versions_with_units(unit_ids, user)
+    CourseVersion.all.select {|cv| cv.included_in_units?(unit_ids) && cv.course_assignable?(user) && cv.content_root_type == 'UnitGroup'}
+  end
+
+  def self.unit_group_course_versions_with_units_info(unit_ids, user)
+    unit_group_course_versions_with_units(unit_ids, user).map {|cv| cv.summarize_for_unit_selector(user)}
+  end
+
+  def summarize_for_unit_selector(user)
+    {
+      display_name: content_root.launched? ? content_root.localized_title : content_root.localized_title + ' *',
+      units: units.select {|u| u.course_assignable?(user)}.map(&:summarize_for_unit_selector).sort_by {|u| u[:position]}
+    }
   end
 
   def summarize_for_assignment_dropdown(user, locale_code)
