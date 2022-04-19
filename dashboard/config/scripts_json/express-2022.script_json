@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2022-04-08 18:43:41 UTC",
+    "serialized_at": "2022-04-19 03:04:52 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -12947,15 +12947,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_variables2_predict_express"
-        ],
         "progression": "Prediction"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_variables2_predict_express"
+          "courseF_variables2_predict_-2022-2"
         ],
         "lesson.key": "[New] Counting with Variables",
         "lesson_group.key": "csf_variables",
@@ -12963,7 +12960,7 @@
         "activity_section.key": "b2d87065-8954-443d-a9be-bb206b411b24"
       },
       "level_keys": [
-        "courseF_variables2_predict_express"
+        "courseF_variables2_predict_-2022-2"
       ]
     },
     {
@@ -12972,15 +12969,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_variables2_predict2_express"
-        ],
         "progression": "Prediction"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_variables2_predict2_express"
+          "courseF_variables2_predict2_-2022-2"
         ],
         "lesson.key": "[New] Counting with Variables",
         "lesson_group.key": "csf_variables",
@@ -12988,7 +12982,7 @@
         "activity_section.key": "b2d87065-8954-443d-a9be-bb206b411b24"
       },
       "level_keys": [
-        "courseF_variables2_predict2_express"
+        "courseF_variables2_predict2_-2022-2"
       ]
     },
     {
@@ -12997,15 +12991,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_variables2_set_express"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_variables2_set_express"
+          "courseF_variables2_set_-2022-2"
         ],
         "lesson.key": "[New] Counting with Variables",
         "lesson_group.key": "csf_variables",
@@ -13013,7 +13004,7 @@
         "activity_section.key": "93c42114-b7e6-4d21-9e93-0760e125a7b9"
       },
       "level_keys": [
-        "courseF_variables2_set_express"
+        "courseF_variables2_set_-2022-2"
       ]
     },
     {
@@ -13022,15 +13013,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_variables2_change_express"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_variables2_change_express"
+          "courseF_variables2_change_-2022-2"
         ],
         "lesson.key": "[New] Counting with Variables",
         "lesson_group.key": "csf_variables",
@@ -13038,7 +13026,7 @@
         "activity_section.key": "93c42114-b7e6-4d21-9e93-0760e125a7b9"
       },
       "level_keys": [
-        "courseF_variables2_change_express"
+        "courseF_variables2_change_-2022-2"
       ]
     },
     {
@@ -13047,15 +13035,12 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_variables2_click_express"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_variables2_click_express"
+          "courseF_variables2_click_-2022-2"
         ],
         "lesson.key": "[New] Counting with Variables",
         "lesson_group.key": "csf_variables",
@@ -13063,7 +13048,7 @@
         "activity_section.key": "93c42114-b7e6-4d21-9e93-0760e125a7b9"
       },
       "level_keys": [
-        "courseF_variables2_click_express"
+        "courseF_variables2_click_-2022-2"
       ]
     },
     {
@@ -13072,15 +13057,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_clicker_explore_express"
-        ],
         "progression": "Exploration: Clicker Game"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_clicker_explore_express"
+          "courseF_clicker_explore_-2022-2"
         ],
         "lesson.key": "[New] Counting with Variables",
         "lesson_group.key": "csf_variables",
@@ -13088,7 +13070,7 @@
         "activity_section.key": "a88f91f8-569f-40db-a8f8-700323940f53"
       },
       "level_keys": [
-        "courseF_clicker_explore_express"
+        "courseF_clicker_explore_-2022-2"
       ]
     },
     {
@@ -13097,15 +13079,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_clicker_sprites_express"
-        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_clicker_sprites_express"
+          "courseF_clicker_sprites_-2022-2"
         ],
         "lesson.key": "[New] Counting with Variables",
         "lesson_group.key": "csf_variables",
@@ -13113,7 +13092,7 @@
         "activity_section.key": "92b27a47-c534-4671-afd1-23a3586897c9"
       },
       "level_keys": [
-        "courseF_clicker_sprites_express"
+        "courseF_clicker_sprites_-2022-2"
       ]
     },
     {
@@ -13122,15 +13101,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_clicker_remove_express"
-        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_clicker_remove_express"
+          "courseF_clicker_remove_-2022-2"
         ],
         "lesson.key": "[New] Counting with Variables",
         "lesson_group.key": "csf_variables",
@@ -13138,7 +13114,7 @@
         "activity_section.key": "92b27a47-c534-4671-afd1-23a3586897c9"
       },
       "level_keys": [
-        "courseF_clicker_remove_express"
+        "courseF_clicker_remove_-2022-2"
       ]
     },
     {
@@ -13147,15 +13123,12 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_clicker_variable_express"
-        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_clicker_variable_express"
+          "courseF_clicker_variable_-2022-2"
         ],
         "lesson.key": "[New] Counting with Variables",
         "lesson_group.key": "csf_variables",
@@ -13163,7 +13136,7 @@
         "activity_section.key": "92b27a47-c534-4671-afd1-23a3586897c9"
       },
       "level_keys": [
-        "courseF_clicker_variable_express"
+        "courseF_clicker_variable_-2022-2"
       ]
     },
     {
@@ -13172,15 +13145,12 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_clicker_score_express"
-        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_clicker_score_express"
+          "courseF_clicker_score_-2022-2"
         ],
         "lesson.key": "[New] Counting with Variables",
         "lesson_group.key": "csf_variables",
@@ -13188,7 +13158,7 @@
         "activity_section.key": "92b27a47-c534-4671-afd1-23a3586897c9"
       },
       "level_keys": [
-        "courseF_clicker_score_express"
+        "courseF_clicker_score_-2022-2"
       ]
     },
     {
@@ -13197,15 +13167,12 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_clicker_finish_express"
-        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_clicker_finish_express"
+          "courseF_clicker_finish_-2022-2"
         ],
         "lesson.key": "[New] Counting with Variables",
         "lesson_group.key": "csf_variables",
@@ -13213,7 +13180,7 @@
         "activity_section.key": "92b27a47-c534-4671-afd1-23a3586897c9"
       },
       "level_keys": [
-        "courseF_clicker_finish_express"
+        "courseF_clicker_finish_-2022-2"
       ]
     },
     {
@@ -17896,9 +17863,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_variables2_predict_express",
+        "level.key": "courseF_variables2_predict_-2022-2",
         "script_level.level_keys": [
-          "courseF_variables2_predict_express"
+          "courseF_variables2_predict_-2022-2"
         ],
         "lesson.key": "[New] Counting with Variables",
         "lesson_group.key": "csf_variables",
@@ -17908,9 +17875,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_variables2_predict2_express",
+        "level.key": "courseF_variables2_predict2_-2022-2",
         "script_level.level_keys": [
-          "courseF_variables2_predict2_express"
+          "courseF_variables2_predict2_-2022-2"
         ],
         "lesson.key": "[New] Counting with Variables",
         "lesson_group.key": "csf_variables",
@@ -17920,9 +17887,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_variables2_set_express",
+        "level.key": "courseF_variables2_set_-2022-2",
         "script_level.level_keys": [
-          "courseF_variables2_set_express"
+          "courseF_variables2_set_-2022-2"
         ],
         "lesson.key": "[New] Counting with Variables",
         "lesson_group.key": "csf_variables",
@@ -17932,9 +17899,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_variables2_change_express",
+        "level.key": "courseF_variables2_change_-2022-2",
         "script_level.level_keys": [
-          "courseF_variables2_change_express"
+          "courseF_variables2_change_-2022-2"
         ],
         "lesson.key": "[New] Counting with Variables",
         "lesson_group.key": "csf_variables",
@@ -17944,9 +17911,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_variables2_click_express",
+        "level.key": "courseF_variables2_click_-2022-2",
         "script_level.level_keys": [
-          "courseF_variables2_click_express"
+          "courseF_variables2_click_-2022-2"
         ],
         "lesson.key": "[New] Counting with Variables",
         "lesson_group.key": "csf_variables",
@@ -17956,9 +17923,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_clicker_explore_express",
+        "level.key": "courseF_clicker_explore_-2022-2",
         "script_level.level_keys": [
-          "courseF_clicker_explore_express"
+          "courseF_clicker_explore_-2022-2"
         ],
         "lesson.key": "[New] Counting with Variables",
         "lesson_group.key": "csf_variables",
@@ -17968,9 +17935,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_clicker_sprites_express",
+        "level.key": "courseF_clicker_sprites_-2022-2",
         "script_level.level_keys": [
-          "courseF_clicker_sprites_express"
+          "courseF_clicker_sprites_-2022-2"
         ],
         "lesson.key": "[New] Counting with Variables",
         "lesson_group.key": "csf_variables",
@@ -17980,9 +17947,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_clicker_remove_express",
+        "level.key": "courseF_clicker_remove_-2022-2",
         "script_level.level_keys": [
-          "courseF_clicker_remove_express"
+          "courseF_clicker_remove_-2022-2"
         ],
         "lesson.key": "[New] Counting with Variables",
         "lesson_group.key": "csf_variables",
@@ -17992,9 +17959,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_clicker_variable_express",
+        "level.key": "courseF_clicker_variable_-2022-2",
         "script_level.level_keys": [
-          "courseF_clicker_variable_express"
+          "courseF_clicker_variable_-2022-2"
         ],
         "lesson.key": "[New] Counting with Variables",
         "lesson_group.key": "csf_variables",
@@ -18004,9 +17971,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_clicker_score_express",
+        "level.key": "courseF_clicker_score_-2022-2",
         "script_level.level_keys": [
-          "courseF_clicker_score_express"
+          "courseF_clicker_score_-2022-2"
         ],
         "lesson.key": "[New] Counting with Variables",
         "lesson_group.key": "csf_variables",
@@ -18016,9 +17983,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_clicker_finish_express",
+        "level.key": "courseF_clicker_finish_-2022-2",
         "script_level.level_keys": [
-          "courseF_clicker_finish_express"
+          "courseF_clicker_finish_-2022-2"
         ],
         "lesson.key": "[New] Counting with Variables",
         "lesson_group.key": "csf_variables",

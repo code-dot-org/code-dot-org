@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-08T16:53:45.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -76,15 +72,19 @@
     "palette_category_at_start": "Circuit",
     "display_name": "Morse Code Simulator",
     "bubble_choice_description": "Use buttons and buzzing frequencies to simulate Morse Code",
-    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L4/practice/D.png",
+    "thumbnail_url": "https://images.code.org/f2146896978bc640a0a118a87749527b-image-1650059215913.png",
     "start_blocks": "//1) When the left button is pressed, play a short buzz\r\n\r\n//2) When the right button is pressed, play a long buzz",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
     "encrypted_examples": "5KyRa4FfTWmwbzUv8VxbZSyf+fOkFX5G0CgnnkAB6zmMiuNEOdsOzcR/abmM\n79o20kmi+Gwa+WxtIx6BkIGcwA==\n",
     "preload_asset_list": null
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-04-08T16:53:45.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-08T16:53:45.658+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Inputs - PracD_2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Inputs - PracD_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-08T16:53:45.658+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Inputs - PracD_2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Inputs - PracD_2022\"},{\"changed_at\":\"2022-04-15 21:47:13 +0000\",\"changed\":[\"code_functions\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
