@@ -15,7 +15,6 @@ import {
   getSelectedScriptName
 } from '@cdo/apps/redux/unitSelectionRedux';
 import {loadTextResponsesFromServer} from '@cdo/apps/templates/textResponses/textReponsesDataApi';
-import {assignmentCourseVersionShape} from '../teacherDashboard/shapes';
 
 const CSV_HEADERS = [
   {label: i18n.name(), key: 'studentName'},
@@ -144,8 +143,7 @@ function TextResponses({
 TextResponses.propTypes = {
   // Provided by redux.
   sectionId: PropTypes.number.isRequired,
-  coursesWithProgress: PropTypes.objectOf(assignmentCourseVersionShape)
-    .isRequired,
+  coursesWithProgress: PropTypes.array.isRequired,
   scriptId: PropTypes.number,
   scriptName: PropTypes.string,
   setScriptId: PropTypes.func.isRequired

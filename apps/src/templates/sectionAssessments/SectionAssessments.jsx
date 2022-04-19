@@ -33,7 +33,6 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {CSVLink} from 'react-csv';
 import FeedbackDownload from './FeedbackDownload';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {assignmentCourseVersionShape} from '../teacherDashboard/shapes';
 
 const CSV_ASSESSMENT_HEADERS = [
   {label: i18n.name(), key: 'studentName'},
@@ -58,8 +57,7 @@ class SectionAssessments extends Component {
     // provided by redux
     sectionId: PropTypes.number.isRequired,
     isLoading: PropTypes.bool.isRequired,
-    coursesWithProgress: PropTypes.objectOf(assignmentCourseVersionShape)
-      .isRequired,
+    coursesWithProgress: PropTypes.array.isRequired,
     assessmentList: PropTypes.array.isRequired,
     scriptId: PropTypes.number,
     assessmentId: PropTypes.number,

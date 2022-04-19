@@ -16,7 +16,6 @@ import EmptySection from './EmptySection';
 import _ from 'lodash';
 import firehoseClient from '../../lib/util/firehose';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
-import {assignmentCourseVersionShape} from './shapes';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 
@@ -26,8 +25,7 @@ class TeacherDashboard extends Component {
     sectionId: PropTypes.number.isRequired,
     sectionName: PropTypes.string.isRequired,
     studentCount: PropTypes.number.isRequired,
-    coursesWithProgress: PropTypes.objectOf(assignmentCourseVersionShape)
-      .isRequired,
+    coursesWithProgress: PropTypes.array.isRequired,
 
     // Provided by React router in parent.
     location: PropTypes.object.isRequired

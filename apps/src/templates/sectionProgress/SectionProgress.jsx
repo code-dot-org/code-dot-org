@@ -20,7 +20,6 @@ import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import firehoseClient from '../../lib/util/firehose';
 import ProgressViewHeader from './ProgressViewHeader';
 import logToCloud from '@cdo/apps/logToCloud';
-import {assignmentCourseVersionShape} from '../teacherDashboard/shapes';
 
 /**
  * Given a particular section, this component owns figuring out which script to
@@ -33,8 +32,7 @@ class SectionProgress extends Component {
     //Provided by redux
     scriptId: PropTypes.number,
     sectionId: PropTypes.number,
-    coursesWithProgress: PropTypes.objectOf(assignmentCourseVersionShape)
-      .isRequired,
+    coursesWithProgress: PropTypes.array.isRequired,
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     setCurrentView: PropTypes.func.isRequired,
     scriptData: scriptDataPropType,

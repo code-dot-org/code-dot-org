@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {assignmentCourseVersionShape} from '../teacherDashboard/shapes';
 
 // TODO: Can/should we share any logic with AssignmentSelector?
 
@@ -18,8 +17,7 @@ export const dropdownStyles = {
 
 export default class UnitSelector extends Component {
   static propTypes = {
-    coursesWithProgress: PropTypes.objectOf(assignmentCourseVersionShape)
-      .isRequired,
+    coursesWithProgress: PropTypes.array.isRequired,
     scriptId: PropTypes.number,
     onChange: PropTypes.func.isRequired,
     style: PropTypes.object
