@@ -141,6 +141,7 @@ export default function ProgrammingMethodEditor({
             onChange={e =>
               setProgrammingMethodProperty('overloadOf', e.target.value)
             }
+            style={styles.selectInput}
           >
             <option value="">None</option>
             {overloadOptions.map(option => (
