@@ -4,7 +4,7 @@ import sectionProgress, {
   setLessonOfInterest
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import unitSelection, {
-  setCourseVersionsWithProgress
+  setCoursesWithProgress
 } from '@cdo/apps/redux/unitSelectionRedux';
 import teacherSections, {
   setSections,
@@ -15,7 +15,7 @@ import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import {TestResults} from '@cdo/apps/constants';
 import {lessonProgressForSection} from '@cdo/apps/templates/progress/progressHelpers';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
-import {fakeCourseVersionsWithProgress} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
+import {fakeCoursesWithProgress} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
 export function fakeRowsForStudents(students) {
   const rows = [];
@@ -63,7 +63,7 @@ export function createStore(numStudents, numLessons) {
     addDataByUnit(buildSectionProgress(section.students, scriptData))
   );
   store.dispatch(setLessonOfInterest(0));
-  store.dispatch(setCourseVersionsWithProgress(fakeCourseVersionsWithProgress));
+  store.dispatch(setCoursesWithProgress(fakeCoursesWithProgress));
   return store;
 }
 

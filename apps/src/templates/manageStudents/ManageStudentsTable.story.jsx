@@ -27,7 +27,7 @@ const initialState = {
   },
   unitSelection: {
     scriptId: 22,
-    courseVersionsWithProgress: {
+    coursesWithProgress: {
       11: {
         id: 11,
         name: 'All the Things *',

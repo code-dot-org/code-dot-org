@@ -33,7 +33,7 @@ class SectionProgress extends Component {
     //Provided by redux
     scriptId: PropTypes.number,
     sectionId: PropTypes.number,
-    courseVersionsWithProgress: PropTypes.objectOf(assignmentCourseVersionShape)
+    coursesWithProgress: PropTypes.objectOf(assignmentCourseVersionShape)
       .isRequired,
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     setCurrentView: PropTypes.func.isRequired,
@@ -115,7 +115,7 @@ class SectionProgress extends Component {
 
   render() {
     const {
-      courseVersionsWithProgress,
+      coursesWithProgress,
       currentView,
       scriptId,
       scriptData,
@@ -135,7 +135,7 @@ class SectionProgress extends Component {
               {i18n.selectACourse()}
             </div>
             <UnitSelector
-              courseVersionsWithProgress={courseVersionsWithProgress}
+              coursesWithProgress={coursesWithProgress}
               scriptId={scriptId}
               onChange={this.onChangeScript}
             />
@@ -219,7 +219,7 @@ export default connect(
   state => ({
     scriptId: state.unitSelection.scriptId,
     sectionId: state.teacherSections.selectedSectionId,
-    courseVersionsWithProgress: state.unitSelection.courseVersionsWithProgress,
+    coursesWithProgress: state.unitSelection.coursesWithProgress,
     currentView: state.sectionProgress.currentView,
     scriptData: getCurrentUnitData(state),
     isLoadingProgress: state.sectionProgress.isLoadingProgress,

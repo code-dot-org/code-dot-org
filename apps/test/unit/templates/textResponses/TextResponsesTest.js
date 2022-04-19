@@ -57,7 +57,7 @@ describe('TextResponses', () => {
         wrapper = isolateComponent(
           <TextResponses
             sectionId={2}
-            courseVersionsWithProgress={{}}
+            coursesWithProgress={{}}
             scriptId={1}
             setScriptId={() => {}}
             scriptName="A Script"
@@ -75,7 +75,7 @@ describe('TextResponses', () => {
         wrapper = isolateComponent(
           <TextResponses
             sectionId={2}
-            courseVersionsWithProgress={{}}
+            coursesWithProgress={{}}
             scriptId={1}
             setScriptId={() => {}}
             scriptName="A Script"
@@ -97,7 +97,7 @@ describe('TextResponses', () => {
         wrapper = isolateComponent(
           <TextResponses
             sectionId={2}
-            courseVersionsWithProgress={{}}
+            coursesWithProgress={{}}
             scriptId={1}
             setScriptId={() => {}}
             scriptName="A Script"
@@ -116,7 +116,7 @@ describe('TextResponses', () => {
         wrapper = isolateComponent(
           <TextResponses
             sectionId={2}
-            courseVersionsWithProgress={{}}
+            coursesWithProgress={{}}
             scriptId={1}
             setScriptId={() => {}}
             scriptName="A Script"
@@ -149,7 +149,7 @@ describe('TextResponses', () => {
         wrapper = isolateComponent(
           <TextResponses
             sectionId={2}
-            courseVersionsWithProgress={{}}
+            coursesWithProgress={{}}
             scriptId={1}
             setScriptId={() => {}}
             scriptName="A Script"

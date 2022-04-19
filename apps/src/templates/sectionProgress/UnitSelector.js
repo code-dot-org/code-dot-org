@@ -18,7 +18,7 @@ export const dropdownStyles = {
 
 export default class UnitSelector extends Component {
   static propTypes = {
-    courseVersionsWithProgress: PropTypes.objectOf(assignmentCourseVersionShape)
+    coursesWithProgress: PropTypes.objectOf(assignmentCourseVersionShape)
       .isRequired,
     scriptId: PropTypes.number,
     onChange: PropTypes.func.isRequired,
@@ -26,7 +26,7 @@ export default class UnitSelector extends Component {
   };
 
   render() {
-    const {scriptId, onChange, courseVersionsWithProgress} = this.props;
+    const {scriptId, onChange, coursesWithProgress} = this.props;
 
     return (
       <div>
@@ -36,7 +36,7 @@ export default class UnitSelector extends Component {
           style={dropdownStyles.dropdown}
           id="uitest-course-dropdown"
         >
-          {courseVersionsWithProgress.map((version, index) => (
+          {coursesWithProgress.map((version, index) => (
             <optgroup key={index} label={version.display_name}>
               {version.units.map(unit => (
                 <option key={unit.id} value={unit.id}>
