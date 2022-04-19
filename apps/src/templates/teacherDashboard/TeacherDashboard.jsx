@@ -16,7 +16,6 @@ import EmptySection from './EmptySection';
 import _ from 'lodash';
 import firehoseClient from '../../lib/util/firehose';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
-import {assignmentCourseVersionShape} from './shapes';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 
@@ -26,8 +25,7 @@ class TeacherDashboard extends Component {
     sectionId: PropTypes.number.isRequired,
     sectionName: PropTypes.string.isRequired,
     studentCount: PropTypes.number.isRequired,
-    courseVersionsWithProgress: PropTypes.objectOf(assignmentCourseVersionShape)
-      .isRequired,
+    coursesWithProgress: PropTypes.array.isRequired,
 
     // Provided by React router in parent.
     location: PropTypes.object.isRequired
@@ -61,7 +59,7 @@ class TeacherDashboard extends Component {
       sectionId,
       sectionName,
       studentCount,
-      courseVersionsWithProgress
+      coursesWithProgress
     } = this.props;
 
     // Select a default tab if current path doesn't match one of the paths in our TeacherDashboardPath type.
@@ -126,7 +124,7 @@ class TeacherDashboard extends Component {
             path={TeacherDashboardPath.stats}
             component={props => <StatsTableWithData />}
           />
-          {Object.keys(courseVersionsWithProgress).length === 0 && (
+          {coursesWithProgress.length === 0 && (
             <Route
               component={() => (
                 <div style={styles.text}>

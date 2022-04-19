@@ -1509,6 +1509,8 @@ class Script < ApplicationRecord
     summary = summarize(include_lessons)
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_unit_edit)
     summary[:courseOfferingEditPath] = edit_course_offering_path(course_version.course_offering.key) if course_version
+    summary[:coursePublishedState] = unit_group ? unit_group.published_state : published_state
+    summary[:unitPublishedState] = unit_group ? published_state : nil
     summary
   end
 
@@ -1794,8 +1796,19 @@ class Script < ApplicationRecord
     nil
   end
 
-  def has_student_progress?(student_unit_ids)
-    student_unit_ids.include? id
+  def included_in_units?(unit_ids)
+    unit_ids.include? id
+  end
+
+  def summarize_for_unit_selector
+    {
+      id: id,
+      key: name,
+      version_year: version_year,
+      name: launched? ? localized_title : localized_title + " *",
+      position: unit_group_units&.first&.position,
+      description: localized_description ? Services::MarkdownPreprocessor.process(localized_description) : nil
+    }
   end
 
   def summarize_for_assignment_dropdown
@@ -1803,13 +1816,10 @@ class Script < ApplicationRecord
       id,
       {
         id: id,
-        key: name,
         name: launched? ? localized_title : localized_title + " *",
         path: link,
         lesson_extras_available: lesson_extras_available?,
-        text_to_speech_enabled: text_to_speech_enabled?,
-        position: unit_group_units&.first&.position,
-        description: localized_description ? Services::MarkdownPreprocessor.process(localized_description) : nil
+        text_to_speech_enabled: text_to_speech_enabled?
       }
     ]
   end

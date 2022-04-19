@@ -69,7 +69,7 @@ class CourseVersion < ApplicationRecord
   delegate :can_be_instructor?, to: :content_root, allow_nil: true
   delegate :course_assignable?, to: :content_root, allow_nil: true
   delegate :can_view_version?, to: :content_root, allow_nil: true
-  delegate :has_student_progress?, to: :content_root, allow_nil: true
+  delegate :included_in_units?, to: :content_root, allow_nil: true
 
   # Seeding method for creating / updating / deleting the CourseVersion for the given
   # potential content root, i.e. a Script or UnitGroup.
@@ -152,12 +152,23 @@ class CourseVersion < ApplicationRecord
     latest_stable_version == content_root
   end
 
-  def self.course_versions_with_student_progress(student_unit_ids, user)
-    CourseVersion.all.select {|cv| cv.has_student_progress?(student_unit_ids) && cv.course_assignable?(user)}
+  def self.courses_for_unit_selector(unit_ids, user)
+    CourseOffering.single_unit_course_offerings_containing_units_info(unit_ids, user).concat(CourseVersion.unit_group_course_versions_with_units_info(unit_ids, user)).sort_by {|c| c[:display_name]}
   end
 
-  def self.course_versions_with_student_progress_info(user, student_unit_ids, locale_code = 'en-us')
-    course_versions_with_student_progress(student_unit_ids, user).map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
+  def self.unit_group_course_versions_with_units(unit_ids, user)
+    CourseVersion.all.select {|cv| cv.included_in_units?(unit_ids) && cv.course_assignable?(user) && cv.content_root_type == 'UnitGroup'}
+  end
+
+  def self.unit_group_course_versions_with_units_info(unit_ids, user)
+    unit_group_course_versions_with_units(unit_ids, user).map {|cv| cv.summarize_for_unit_selector(user)}
+  end
+
+  def summarize_for_unit_selector(user)
+    {
+      display_name: content_root.launched? ? content_root.localized_title : content_root.localized_title + ' *',
+      units: units.select {|u| u.course_assignable?(user)}.map(&:summarize_for_unit_selector).sort_by {|u| u[:position]}
+    }
   end
 
   def summarize_for_assignment_dropdown(user, locale_code)
@@ -168,7 +179,7 @@ class CourseVersion < ApplicationRecord
         key: key,
         version_year: content_root_type == 'UnitGroup' ? content_root.localized_version_title : display_name,
         content_root_id: content_root.id,
-        name: content_root.launched? ? content_root.localized_title : content_root.localized_title + ' *',
+        name: content_root.localized_title,
         path: content_root.link,
         type: content_root_type,
         is_stable: stable?,
