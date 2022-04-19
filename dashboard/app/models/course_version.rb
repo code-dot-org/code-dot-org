@@ -152,8 +152,8 @@ class CourseVersion < ApplicationRecord
     latest_stable_version == content_root
   end
 
-  def self.course_versions_for_unit_selector(unit_ids, user)
-    CourseOffering.single_unit_course_offerings_containing_units_info(unit_ids, user).concat(CourseVersion.unit_group_course_versions_with_units_info(unit_ids, user)).sort_by{|c| c[:display_name]}
+  def self.courses_for_unit_selector(unit_ids, user)
+    CourseOffering.single_unit_course_offerings_containing_units_info(unit_ids, user).concat(CourseVersion.unit_group_course_versions_with_units_info(unit_ids, user)).sort_by {|c| c[:display_name]}
   end
 
   def self.unit_group_course_versions_with_units(unit_ids, user)

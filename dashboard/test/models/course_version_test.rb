@@ -72,7 +72,7 @@ class CourseVersionTest < ActiveSupport::TestCase
       @unit_facilitator_to_teacher.id
     ]
 
-    assert_equal CourseVersion.course_versions_for_unit_selector(@levelbuilder, student_unit_ids).keys.sort, expected_course_version_info
+    assert_equal CourseVersion.courses_for_unit_selector(@levelbuilder, student_unit_ids).keys.sort, expected_course_version_info
   end
 
   test 'in course versions with progress summary display names of course version include star if they are not launched' do
@@ -98,7 +98,7 @@ class CourseVersionTest < ActiveSupport::TestCase
       @unit_facilitator_to_teacher.id
     ]
 
-    assert_equal CourseVersion.course_versions_for_unit_selector(@levelbuilder, student_unit_ids).values.map {|co| co[:display_name]}.sort, expected_course_version_names
+    assert_equal CourseVersion.courses_for_unit_selector(@levelbuilder, student_unit_ids).values.map {|co| co[:display_name]}.sort, expected_course_version_names
   end
 
   test 'get course versions with student progress for pilot teacher should return versions where pilot teacher can be instructor' do
@@ -106,7 +106,7 @@ class CourseVersionTest < ActiveSupport::TestCase
       @pilot_unit.course_version.id
     ].sort
 
-    assert_equal CourseVersion.course_versions_for_unit_selector(@pilot_teacher, [@pilot_unit.id]).keys.sort, expected_course_version_info
+    assert_equal CourseVersion.courses_for_unit_selector(@pilot_teacher, [@pilot_unit.id]).keys.sort, expected_course_version_info
   end
 
   test 'get course versions with student progress for teacher should only return versions where they can be the instructor' do
@@ -121,7 +121,7 @@ class CourseVersionTest < ActiveSupport::TestCase
       @unit_facilitator_to_teacher.id
     ]
 
-    assert_equal CourseVersion.course_versions_for_unit_selector(@teacher, student_unit_ids).keys.sort, expected_course_version_info
+    assert_equal CourseVersion.courses_for_unit_selector(@teacher, student_unit_ids).keys.sort, expected_course_version_info
   end
 
   test 'get course versions with student progress for facilitator should return all versions, amd units where facilitator can be instructor and followers in section have progress' do
@@ -137,7 +137,7 @@ class CourseVersionTest < ActiveSupport::TestCase
       @unit_facilitator_to_teacher.id
     ]
 
-    assignable_course_versions = CourseVersion.course_versions_for_unit_selector(@facilitator, student_unit_ids)
+    assignable_course_versions = CourseVersion.courses_for_unit_selector(@facilitator, student_unit_ids)
 
     assert_equal assignable_course_versions.keys.sort, expected_course_version_info
 
