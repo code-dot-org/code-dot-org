@@ -380,13 +380,6 @@ class Script < ApplicationRecord
     end
   end
 
-  # @param [User] user
-  # @param script_id [String] id of the unit we're checking the validity of
-  # @return [Boolean] Whether this is a valid unit ID
-  def self.valid_unit_id?(user, script_id)
-    valid_scripts(user).any? {|script| script[:id] == script_id.to_i}
-  end
-
   # @return [Array<Script>] An array of modern elementary units.
   def self.modern_elementary_courses
     Script::CATEGORIES[:csf].map {|name| Script.get_from_cache(name)}
@@ -1503,7 +1496,6 @@ class Script < ApplicationRecord
       age_13_required: logged_out_age_13_required?,
       show_course_unit_version_warning: !unit_group&.has_dismissed_version_warning?(user) && has_older_course_progress,
       show_script_version_warning: !user_unit&.version_warning_dismissed && !has_older_course_progress && has_older_unit_progress,
-      versions: summarize_versions(user, locale_code),
       course_versions: summarize_course_versions(user, locale_code),
       supported_locales: supported_locales,
       section_hidden_unit_info: section_hidden_unit_info(user),
@@ -1565,6 +1557,8 @@ class Script < ApplicationRecord
     summary = summarize(include_lessons)
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_unit_edit)
     summary[:courseOfferingEditPath] = edit_course_offering_path(course_version.course_offering.key) if course_version
+    summary[:coursePublishedState] = unit_group ? unit_group.published_state : published_state
+    summary[:unitPublishedState] = unit_group ? published_state : nil
     summary
   end
 
@@ -1681,31 +1675,6 @@ class Script < ApplicationRecord
     all_course_versions = course_version&.course_offering&.course_versions
     course_versions_for_user = all_course_versions&.select {|cv| cv.course_assignable?(user) || (cv.launched? && cv.can_view_version?(user, locale: locale_code))}
     course_versions_for_user&.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
-  end
-
-  # Returns an array of objects showing the name and version year for all units
-  # sharing the family_name of this course, including this one.
-  def summarize_versions(user = nil, locale_code = nil)
-    return [] unless family_name
-    return [] unless has_other_versions?
-    return [] unless unit_groups.empty?
-    units = Script.
-      where(family_name: family_name).
-      all.
-      select {|unit| user&.levelbuilder? || unit.launched?}.
-      map do |s|
-      {
-        name: s.name,
-        version_year: s.version_year,
-        version_title: s.version_year,
-        can_view_version: s.can_view_version?(user),
-        is_stable: s.stable?,
-        locales: s.supported_locale_names,
-        locale_codes: s.supported_locales
-      }
-    end
-
-    units.sort_by {|info| info[:version_year]}.reverse
   end
 
   def self.clear_cache

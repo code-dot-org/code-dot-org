@@ -4,6 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "Supports to Teach AI and Machine Learning",
+          "details": "If you are interested in teaching this course, we recommend completing the free AI and Machine Learning Self Paced Professional Learning module. The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.",
+          "link": "https://studio.code.org/s/self-paced-pl-csd5-2021",
+          "type": "information",
+          "visibility": "Teacher-only"
+        }
+      ],
       "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -17,8 +26,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-30 23:50:41 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-04-18 23:55:38 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -576,19 +585,6 @@
       }
     },
     {
-      "key": "e500c4fc-b4df-4672-af1f-eaf3285058b7",
-      "position": 5,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "e500c4fc-b4df-4672-af1f-eaf3285058b7",
-        "lesson.key": "Introduction to Machine Learning",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd7-2022"
-      }
-    },
-    {
       "key": "e6738f2d-2d59-4965-aa83-18f60e92c95d",
       "position": 1,
       "properties": {
@@ -625,19 +621,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "395b9866-58bc-44b4-a8ca-487493f08044",
-        "lesson.key": "Types of Machine Learning",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd7-2022"
-      }
-    },
-    {
-      "key": "c6ec98cd-cecf-4cb2-86e3-2d82c2b6f8d1",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "c6ec98cd-cecf-4cb2-86e3-2d82c2b6f8d1",
         "lesson.key": "Types of Machine Learning",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd7-2022"
@@ -686,19 +669,6 @@
       }
     },
     {
-      "key": "dd763f2e-f129-4b11-b6ee-b7e759e0fd3d",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "dd763f2e-f129-4b11-b6ee-b7e759e0fd3d",
-        "lesson.key": "Innovations in AI",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd7-2022"
-      }
-    },
-    {
       "key": "3ba70d05-0cde-4daa-9fdd-c1f2a7ec4990",
       "position": 1,
       "properties": {
@@ -735,19 +705,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "17952f05-fa90-4740-9cb0-fdfecce6805c",
-        "lesson.key": "Patterns in Data",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd7-2022"
-      }
-    },
-    {
-      "key": "f7cee5ae-2af4-449b-9b92-f5cb46840887",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "f7cee5ae-2af4-449b-9b92-f5cb46840887",
         "lesson.key": "Patterns in Data",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd7-2022"
@@ -796,19 +753,6 @@
       }
     },
     {
-      "key": "2f72cf77-eb74-4fcc-a75f-63a40c7cb8ab",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "2f72cf77-eb74-4fcc-a75f-63a40c7cb8ab",
-        "lesson.key": "Classification Models",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd7-2022"
-      }
-    },
-    {
       "key": "61f7872e-28fa-4031-a325-c067b40dd315",
       "position": 1,
       "properties": {
@@ -845,19 +789,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "2c5ca744-b8b7-4a97-9277-25852da2d255",
-        "lesson.key": "Introduction to AI Lab",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd7-2022"
-      }
-    },
-    {
-      "key": "43834082-bf39-455d-ba99-d4ffcbfd6b10",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "43834082-bf39-455d-ba99-d4ffcbfd6b10",
         "lesson.key": "Introduction to AI Lab",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd7-2022"
@@ -906,19 +837,6 @@
       }
     },
     {
-      "key": "d92436fd-d093-41fc-8b94-a8d0b99fb623",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "d92436fd-d093-41fc-8b94-a8d0b99fb623",
-        "lesson.key": "Importing Models in App Lab",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd7-2022"
-      }
-    },
-    {
       "key": "d2258940-bfb7-4f05-823e-341447471edd",
       "position": 1,
       "properties": {
@@ -955,18 +873,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "ca6de9ec-3d29-4715-91ab-b194642f4890",
-        "lesson.key": "Model Cards",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd7-2022"
-      }
-    },
-    {
-      "key": "a6d5aa83-2ad9-4f64-a15e-6bd14301c5db",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "a6d5aa83-2ad9-4f64-a15e-6bd14301c5db",
         "lesson.key": "Model Cards",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd7-2022"
@@ -1015,19 +921,6 @@
       }
     },
     {
-      "key": "8073f3ab-7012-439f-9095-08c7ac1c3be9",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "8073f3ab-7012-439f-9095-08c7ac1c3be9",
-        "lesson.key": "Saving Models in AI Lab",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd7-2022"
-      }
-    },
-    {
       "key": "dabec012-cf74-4af4-bbb7-4bbcd3880d3c",
       "position": 1,
       "properties": {
@@ -1064,19 +957,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "ac6c443b-e5d8-4138-99a9-a58bc509c651",
-        "lesson.key": "Model Cards in App Lab",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd7-2022"
-      }
-    },
-    {
-      "key": "737fa883-7187-4b4f-b662-a3a4390f5927",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "737fa883-7187-4b4f-b662-a3a4390f5927",
         "lesson.key": "Model Cards in App Lab",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd7-2022"
@@ -1125,19 +1005,6 @@
       }
     },
     {
-      "key": "d014ee58-ec02-41db-8121-f15e9e8249f2",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "d014ee58-ec02-41db-8121-f15e9e8249f2",
-        "lesson.key": "Numerical Models",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd7-2022"
-      }
-    },
-    {
       "key": "2eeb1679-d0c4-47e6-9038-0b6822a8876c",
       "position": 1,
       "properties": {
@@ -1180,19 +1047,6 @@
       }
     },
     {
-      "key": "e65cea5d-ed7e-499e-8025-675feadcec78",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "e65cea5d-ed7e-499e-8025-675feadcec78",
-        "lesson.key": "Numerical Data in AI Lab",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd7-2022"
-      }
-    },
-    {
       "key": "90dc9ffa-1773-4247-b8f2-7b1ef9629c19",
       "position": 1,
       "properties": {
@@ -1229,19 +1083,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "581a8c93-e2cf-4037-b2c1-71f92d47a531",
-        "lesson.key": "Customizing Apps",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd7-2022"
-      }
-    },
-    {
-      "key": "01e842f0-e0ca-451f-95bd-f1e438eda9ae",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "01e842f0-e0ca-451f-95bd-f1e438eda9ae",
         "lesson.key": "Customizing Apps",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd7-2022"
@@ -1303,19 +1144,6 @@
       }
     },
     {
-      "key": "e9d04de7-f171-4462-af47-bb4794f5433b",
-      "position": 5,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "e9d04de7-f171-4462-af47-bb4794f5433b",
-        "lesson.key": "AI Code of Ethics",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd7-2022"
-      }
-    },
-    {
       "key": "34aa1a1a-3574-414f-82bf-991ada5c0625",
       "position": 1,
       "properties": {
@@ -1351,18 +1179,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "8316a78e-a092-4d3c-8972-c622c27ca4ca",
-        "lesson.key": "Mini-Project: Make a Machine Learning App",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd7-2022"
-      }
-    },
-    {
-      "key": "2e1d94dc-73b0-472c-8dd3-a8162d998278",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "2e1d94dc-73b0-472c-8dd3-a8162d998278",
         "lesson.key": "Mini-Project: Make a Machine Learning App",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd7-2022"
@@ -1418,19 +1234,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "1588c50c-eb2b-4cba-a3f8-6f9fa97e2ca8",
-        "lesson.key": "Issue Statements",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd7-2022"
-      }
-    },
-    {
-      "key": "fc81b078-f4b4-4567-b644-9b7bc6660ce1",
-      "position": 5,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "fc81b078-f4b4-4567-b644-9b7bc6660ce1",
         "lesson.key": "Issue Statements",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd7-2022"
@@ -1521,19 +1324,6 @@
       }
     },
     {
-      "key": "398d3b2b-3369-44a1-ba5a-613e5da0280e",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "398d3b2b-3369-44a1-ba5a-613e5da0280e",
-        "lesson.key": "Survey Data in AI Lab",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd7-2022"
-      }
-    },
-    {
       "key": "aaff9866-d420-45f1-86ac-d1fd314368b2",
       "position": 1,
       "properties": {
@@ -1576,19 +1366,6 @@
       }
     },
     {
-      "key": "8e0bf95d-1a5e-4677-82bf-a8d38f54dd0f",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "8e0bf95d-1a5e-4677-82bf-a8d38f54dd0f",
-        "lesson.key": "Troubleshooting Models",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd7-2022"
-      }
-    },
-    {
       "key": "61707bc4-8f60-455e-977c-c728d46517b5",
       "position": 1,
       "properties": {
@@ -1617,27 +1394,14 @@
       }
     },
     {
-      "key": "c68ad549-cb51-4d08-83c9-0dbd268872ec",
+      "key": "056792cd-6ea4-4da4-aded-c92a4bb8389f",
       "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "c68ad549-cb51-4d08-83c9-0dbd268872ec",
-        "lesson.key": "Creating an App",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd7-2022"
-      }
-    },
-    {
-      "key": "bc82c505-8801-4fda-9154-5fc036c5f43e",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "bc82c505-8801-4fda-9154-5fc036c5f43e",
+        "lesson_activity.key": "056792cd-6ea4-4da4-aded-c92a4bb8389f",
         "lesson.key": "Creating an App",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd7-2022"
@@ -1708,19 +1472,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "09a6032e-c755-4dc8-9e89-9aaf0f9bb77e",
-        "lesson.key": "Design an AI App",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd7-2022"
-      }
-    },
-    {
-      "key": "c4253ae5-f767-4ca5-8f6b-a0c69187ab4f",
-      "position": 6,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "c4253ae5-f767-4ca5-8f6b-a0c69187ab4f",
         "lesson.key": "Design an AI App",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd7-2022"
@@ -2100,17 +1851,6 @@
       }
     },
     {
-      "key": "7829fdd1-99f7-4914-9d6a-8ec488d76cd3",
-      "position": 1,
-      "properties": {
-        "description": "Find a typo? Were some of the directions unclear? Have a suggestion for how to improve the flow of this lesson? **We'd love to hear it!** Please use the links below to provide feedback on this lesson.\n\n- [**Report a Typo / Bug / Unclear Directions**](https://support.code.org/hc/en-us/requests/new?description=Typo%20in%20AI%20Unit%20lesson%201%20studio.code.org/s/aiml-2021/lessons/1)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfb7oK-vvnMV2nRlN7h_xp8-P-KGuBxb8iOhmqDrUwZkNBdWg/viewform?usp=sf_link)"
-      },
-      "seeding_key": {
-        "activity_section.key": "7829fdd1-99f7-4914-9d6a-8ec488d76cd3",
-        "lesson_activity.key": "e500c4fc-b4df-4672-af1f-eaf3285058b7"
-      }
-    },
-    {
       "key": "7077c8e1-5038-47f2-b105-0382592d319d",
       "position": 1,
       "properties": {
@@ -2475,17 +2215,6 @@
       }
     },
     {
-      "key": "de550ad9-7d2f-49f8-a5db-9e0f66af276b",
-      "position": 1,
-      "properties": {
-        "description": "Find a typo? Were some of the directions unclear? Have a suggestion for how to improve the flow of this lesson? **We'd love to hear it!** Please use the links below to provide feedback on this lesson.\n\n- [**Report a Typo / Bug / Unclear Directions**](https://support.code.org/hc/en-us/requests/new?description=Typo%20in%20AI%20Unit%20lesson%202%20studio.code.org/s/aiml-2021/lessons/2)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLScJPV6aEUFjxX9vMWFtNhi409RtDZXAAu8dMRZzToLmD4EIDg/viewform?usp=sf_link)"
-      },
-      "seeding_key": {
-        "activity_section.key": "de550ad9-7d2f-49f8-a5db-9e0f66af276b",
-        "lesson_activity.key": "c6ec98cd-cecf-4cb2-86e3-2d82c2b6f8d1"
-      }
-    },
-    {
       "key": "00d52efa-b1c2-4dbd-971f-9ffdf1141458",
       "position": 1,
       "properties": {
@@ -2746,17 +2475,6 @@
       "seeding_key": {
         "activity_section.key": "8d4fd526-e435-485f-809c-8e895f6dce45",
         "lesson_activity.key": "dddcb03a-3b31-42b5-a959-636ae793347e"
-      }
-    },
-    {
-      "key": "53ca7334-a72e-47be-9f6d-c3db058aaaa9",
-      "position": 1,
-      "properties": {
-        "description": "Find a typo? Were some of the directions unclear? Have a suggestion for how to improve the flow of this lesson? **We'd love to hear it!** Please use the links below to provide feedback on this lesson.\n\n- [**Report a Typo / Bug / Unclear Directions**](https://support.code.org/hc/en-us/requests/new?description=Typo%20in%20AI%20Unit%20lesson%203%20studio.code.org/s/aiml-2021/lessons/3)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSe0lypMufIOhhvJmhOIFUMWf-hAgcjuRll4gdgtFvJWtAYbHw/viewform?usp=sf_link)"
-      },
-      "seeding_key": {
-        "activity_section.key": "53ca7334-a72e-47be-9f6d-c3db058aaaa9",
-        "lesson_activity.key": "dd763f2e-f129-4b11-b6ee-b7e759e0fd3d"
       }
     },
     {
@@ -3075,7 +2793,7 @@
       "key": "44d632b9-981c-4e3a-b71b-2af58617bced",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _If you could add another question to the show survey, what question would you ask? Why do you think that question would be helpful in deciding a shoe?_\r\n\r\nHave students journal individually, then share with a partner. If time remains, invite a few students to share with the class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _If you could add another question to the shoe survey, what question would you ask? Why do you think that question would be helpful in deciding a shoe?_\n\nHave students journal individually, then share with a partner. If time remains, invite a few students to share with the class.",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -3092,17 +2810,6 @@
       "seeding_key": {
         "activity_section.key": "31b209ec-4f08-496c-bb12-96eebfa3d66e",
         "lesson_activity.key": "17952f05-fa90-4740-9cb0-fdfecce6805c"
-      }
-    },
-    {
-      "key": "e148fe2a-3d4d-4bfd-a50e-527853e5beb7",
-      "position": 1,
-      "properties": {
-        "description": "Find a typo? Were some of the directions unclear? Have a suggestion for how to improve the flow of this lesson? **We'd love to hear it!** Please use the links below to provide feedback on this lesson.\n\n- [**Report a Typo / Bug / Unclear Directions**](https://support.code.org/hc/en-us/requests/new?description=Typo%20in%20AI%20Unit%20lesson%204%20studio.code.org/s/aiml-2021/lessons/4)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSeXY65WbJ-RORYAPAhgTTIK80A3SKneTVKksry4NyNcrwIvMg/viewform?usp=sf_link)"
-      },
-      "seeding_key": {
-        "activity_section.key": "e148fe2a-3d4d-4bfd-a50e-527853e5beb7",
-        "lesson_activity.key": "f7cee5ae-2af4-449b-9b92-f5cb46840887"
       }
     },
     {
@@ -3421,23 +3128,12 @@
       "key": "5a99a50f-2c76-4914-a466-2e8c07b1156b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _If you were to break down what we did today into steps for a computer to follow, how would you describe those steps?_\n\n**Discussion Goal:** This prompt bridges today’s lesson to tomorrow’s, where a computer will be doing most of this work behind-the-scenes. Read through student responses to see how well they understood the process of today. Answers could be as simple as:\n\n- Graph the data\n- Draw a line to separate the data into zones\n- When new data comes, see which zone it lands in to make a decision",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _If you were to break down the process we went through today to create a model and use it into steps for a computer to follow, how would you describe those steps?_\n\n**Discussion Goal:** This prompt bridges today’s lesson to tomorrow’s, where a computer will be doing most of this work behind-the-scenes. Read through student responses to see how well they understood the process of today. Answers could be as simple as:\n\n- Graph the data\n- Draw a line to separate the data into zones\n- When new data comes, see which zone it lands in to make a decision",
         "name": "Journal\r"
       },
       "seeding_key": {
         "activity_section.key": "5a99a50f-2c76-4914-a466-2e8c07b1156b",
         "lesson_activity.key": "9e7449d4-b399-44e8-8042-369659e49fac"
-      }
-    },
-    {
-      "key": "6f05b8fe-fef2-4e75-99ed-68abe573e4d6",
-      "position": 1,
-      "properties": {
-        "description": "Find a typo? Were some of the directions unclear? Have a suggestion for how to improve the flow of this lesson? **We'd love to hear it!** Please use the links below to provide feedback on this lesson.\n\n- [**Report a Typo / Bug / Unclear Directions**](https://support.code.org/hc/en-us/requests/new?description=Typo%20in%20AI%20Unit%20lesson%205%20studio.code.org/s/aiml-2021/lessons/5)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLScn0GnenXYbUilTul8PIlcOUpnoqr-s7IB0RLyyk4TQcgatXA/viewform)"
-      },
-      "seeding_key": {
-        "activity_section.key": "6f05b8fe-fef2-4e75-99ed-68abe573e4d6",
-        "lesson_activity.key": "2f72cf77-eb74-4fcc-a75f-63a40c7cb8ab"
       }
     },
     {
@@ -3592,7 +3288,7 @@
       "key": "5f3fc63f-1b69-4c63-9503-69acceb95d5f",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the [r introduction_to_ai_lab/csd/2022] (5:25) video as a class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the  (5:25) video as a class.\n[r introduction_to_ai_lab_1/csd/2022]",
         "tips": [
           {
             "type": "teachingTip",
@@ -3625,7 +3321,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Widget Fluency:** For now, focus on helping students become fluent with AI Lab by making sure they can click columns and buttons, focus on appropriate panels, and navigate between screens. Students can also get help by reading the instructions, which update with each panel, or using the Help and Tips section to read help documents or re-watch the video.\n\n**Iterating on Features:** Students should remain in this same level and not press the Continue button until told to do so. This represents how students will typically use AI Lab with more complex datasets - training multiple models in the same level and comparing accuracy, rather than training a model just once and continuing."
+            "markdown": "**Widget Fluency:** For now, focus on helping students become fluent with AI Lab by making sure they can click columns and buttons, focus on appropriate panels, and navigate between screens. Students can also get help by reading the instructions, which update with each panel, or using the Help and Tips section to read help documents or re-watch the video.\n\n**Iterating on Features:** Students should remain in this same level and not press the Continue button until told to do so. This represents how students will typically use AI Lab with more complex datasets - training multiple models in the same level and comparing accuracy, rather than training a model just once and continuing.\n\n**Do We Really Need AI For This?** No - probably not for this particular problem. However, this exercise helps students become fluent with the flow of AI Lab while still cross-referencing with a visual dataset to confirm their understanding. This exercise also surfaces some important problems that will be important throughout the unit, such as when too much conflicting data can confuse AI Bot and lower accuracy or when AI Bot _thinks_ it knows something with high accuracy but with features that are not practical in the real-world."
           }
         ]
       },
@@ -3638,7 +3334,7 @@
       "key": "812574f8-99f1-4fd6-92dd-4af47a78efb7",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _This model is trained only on colors and is 90% accurate. What would happen if we tried to use this model in the real-world? Do you think it would be just as accurate?\n_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _This model is trained only on colors and is 90% accurate. What would happen if we tried to use this model in the real-world? Do you think it would be just as accurate?_"
       },
       "seeding_key": {
         "activity_section.key": "812574f8-99f1-4fd6-92dd-4af47a78efb7",
@@ -3797,17 +3493,6 @@
       }
     },
     {
-      "key": "de1fcb1a-19a0-4c05-94bd-693429cd8090",
-      "position": 1,
-      "properties": {
-        "description": "Find a typo? Were some of the directions unclear? Have a suggestion for how to improve the flow of this lesson? **We'd love to hear it!** Please use the links below to provide feedback on this lesson.\n\n- [**Report a Typo / Bug / Unclear Directions**](https://support.code.org/hc/en-us/requests/new?description=Typo%20in%20AI%20Unit%20lesson%206%20studio.code.org/s/aiml-2021/lessons/6)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSdTkJn9S92FGEpFVRGEE6G2jNw3tr9NuZCwSKHeCkhSs8iIqA/viewform?usp=sf_link)"
-      },
-      "seeding_key": {
-        "activity_section.key": "de1fcb1a-19a0-4c05-94bd-693429cd8090",
-        "lesson_activity.key": "43834082-bf39-455d-ba99-d4ffcbfd6b10"
-      }
-    },
-    {
       "key": "c9d34077-ce2d-447d-9250-5648ae92bc8c",
       "position": 1,
       "properties": {
@@ -3926,7 +3611,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Design Mode Reminder:** If students need a reminder of design mode, you can provide copies of this handout or project it for students: \n\n- [Design Mode](https://drive.google.com/file/d/1WvW6pkUseGiXOg3TgeNAFPg-VwK65gjN/view?usp=sharing)\n- [Design Mode Elements](https://drive.google.com/file/d/1_freDr5sGWMgTKwDH0kFJwkKXjzVCoE_/view?usp=sharing)\n"
+            "markdown": "**Design Mode Reminder:** If students need a reminder of design mode, you can provide copies of this handout or project it for students: \n\n- [Design Mode](https://drive.google.com/file/d/1WvW6pkUseGiXOg3TgeNAFPg-VwK65gjN/view?usp=sharing)\n- [Design Mode Elements](https://drive.google.com/file/d/1_freDr5sGWMgTKwDH0kFJwkKXjzVCoE_/view?usp=sharing)\n\nYou can also show students this video: [Intro to Design Mode](https://youtu.be/jiX1dST2PCw)"
           }
         ]
       },
@@ -3943,7 +3628,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Events Reminder:** If students need a reminder of events in App Lab, you can provide copies of this handout or project it for students: \n\n- [Responding to User Input](https://drive.google.com/file/d/1zTyBx7l2RiRLcB9AjRZZ314PL6kvY_-D/view)\n- [Changing Screens](https://drive.google.com/file/d/1d9yygBuMPaCOPP3fraA3oacuy_RD9iNB/view)\n"
+            "markdown": "**Events Reminder:** If students need a reminder of events in App Lab, you can provide copies of this handout or project it for students: \n\n- [Responding to User Input](https://drive.google.com/file/d/1zTyBx7l2RiRLcB9AjRZZ314PL6kvY_-D/view)\n- [Changing Screens](https://drive.google.com/file/d/1d9yygBuMPaCOPP3fraA3oacuy_RD9iNB/view)\n\nYou can also show students this video: [Events in App Lab](https://youtu.be/npa2r4t6y2A)"
           }
         ]
       },
@@ -4052,7 +3737,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360027667832-Rubrics-in-Code-org-courses)."
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
           }
         ]
       },
@@ -4095,17 +3780,6 @@
       "seeding_key": {
         "activity_section.key": "880bcfe8-398b-4a55-89f0-27c407322832",
         "lesson_activity.key": "2ab8374d-021a-4344-b71f-f74e8c3cf3ce"
-      }
-    },
-    {
-      "key": "f2cf6775-c555-4adc-9ea5-d557e0c99776",
-      "position": 1,
-      "properties": {
-        "description": "Find a typo? Were some of the directions unclear? Have a suggestion for how to improve the flow of this lesson? **We'd love to hear it!** Please use the links below to provide feedback on this lesson.\n\n- [**Report a Typo / Bug / Unclear Directions**](https://support.code.org/hc/en-us/requests/new?description=Typo%20in%20AI%20Unit%20lesson%207%20studio.code.org/s/aiml-2021/lessons/7)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLScSZkjelj_-1fdocN8dVOlUu_jpPHP-AM9fph_aV4IPInEUGQ/viewform?usp=sf_link)"
-      },
-      "seeding_key": {
-        "activity_section.key": "f2cf6775-c555-4adc-9ea5-d557e0c99776",
-        "lesson_activity.key": "d92436fd-d093-41fc-8b94-a8d0b99fb623"
       }
     },
     {
@@ -4384,7 +4058,13 @@
       "key": "42bd5517-9551-4ce8-a01e-6f9af21d8a48",
       "position": 18,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Have students turn to the back of their activity guide and display the slides with the overview:\n\n_Even though we discovered bias in our original model, there is still a need to help nurses and medical professionals in the ER. Several other companies have created medical priority models that can be used to replace the biased one that we discovered. They’ve also sent along the Model Cards for us to evaluate. Looking at these model cards, can we find a model that we would recommend to the hospital to help decide medical priority?_\n\n**Do This:** Have students continue to Levels 3-5 in Code Studio. Each level has a model card that students can evaluate. Students should progress through each level independently, evaluating each model card and recording their recommendation on their activity guide."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Have students turn to the back of their activity guide and display the slides with the overview:\n\n_Even though we discovered bias in our original model, there is still a need to help nurses and medical professionals in the ER. Several other companies have created medical priority models that can be used to replace the biased one that we discovered. They’ve also sent along the Model Cards for us to evaluate. Looking at these model cards, can we find a model that we would recommend to the hospital to help decide medical priority?_\n\n**Do This:** Have students continue to Levels 3-5 in Code Studio. Each level has a model card that students can evaluate. Students should progress through each level independently, evaluating each model card and recording their recommendation on their activity guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Stations:** Instead of having students examine the model cards in Code Studio, you could consider creating a stations activity where each model card is printed around the room. Students would still complete the activity guide, but can choose which model card to examine and move around the room while doing so."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "42bd5517-9551-4ce8-a01e-6f9af21d8a48",
@@ -4417,7 +4097,13 @@
       "key": "1bc3d3fb-c8f4-432c-99b3-1524c9d35a97",
       "position": 21,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Out:** Have students share their recommendations for each model. Encourage students to talk to each other and provide different justifications as to why a model should or shouldn't be recommended. Let students know there is a spot on the bottom of the activity guide to reflect, and they have permission to change their minds based on what they hear from their peers."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Out:** Have students share their recommendations for each model. Encourage students to talk to each other and provide different justifications as to why a model should or shouldn't be recommended. Let students know there is a spot on the bottom of the activity guide to reflect, and they have permission to change their minds based on what they hear from their peers.",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**Real-World Connection:** These example model cards are exaggerated for pedagogical purposes, but similar phenomena can bee seen in this article: [Hundreds of AI tools have been built to catch covid. None of them helped](https://www.technologyreview.com/2021/07/30/1030329/machine-learning-ai-failed-covid-hospital-diagnosis-pandemic). A few relevant quotes from the article are:\n\n- \"Many unwittingly used a data set that contained chest scans of children who did not have covid as their examples of what non-covid cases looked like. But as a result, the AIs learned to identify kids, not covid.\"\n- \"In yet other cases, some AIs were found to be picking up on the text font that certain hospitals used to label the scans. As a result, fonts from hospitals with more serious caseloads became predictors of covid risk.\"\n\nAs an extension of this lesson, you may choose to share this article with students. However, the article is not intended for a middle-school audience, so additional scaffolds and supports may be necessary to support student understanding and connecting back to today's lesson."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "1bc3d3fb-c8f4-432c-99b3-1524c9d35a97",
@@ -4428,7 +4114,7 @@
       "key": "f4ad1985-2f50-4053-88a6-c35c42660390",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _After listening to the explanations from other students in your class, did you change your mind about any of your recommendations above? Why or why not?_\n\nThis prompt is provided on the bottom of the activity guide that students were using in class. Students can respond based on the class discussion that occurred. It's okay for students to not change their minds, especially if they noticed several of the flaws in the models above while completing the activity.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _If you could offer guidance to these companies training machine learning models, what advice would you give them to help create useful and unbiased machine learning models?_\n\nThis prompt is provided on the bottom of the activity guide that students were using in class. Students should reflect on the reasons why these models weren't great fits for the hospitals and translate that into advice. Some suggestions might include:\n- Avoid demographic information in your model to help avoid bias\n- Make sure the data represents the community that will be using the model\n- Make sure enough data is collected to ensure it is accurate",
         "name": "Journal\r",
         "tips": [
           {
@@ -4440,18 +4126,6 @@
       "seeding_key": {
         "activity_section.key": "f4ad1985-2f50-4053-88a6-c35c42660390",
         "lesson_activity.key": "ca6de9ec-3d29-4715-91ab-b194642f4890"
-      }
-    },
-    {
-      "key": "2de72799-4c5d-4f80-be3c-4345df2af845",
-      "position": 1,
-      "properties": {
-        "description": "Find a typo? Were some of the directions unclear? Have a suggestion for how to improve the flow of this lesson? **We'd love to hear it!** Please use the links below to provide feedback on this lesson.\n\n- [**Report a Typo / Bug / Unclear Directions**](https://support.code.org/hc/en-us/requests/new?description=Typo%20in%20AI%20Unit%20lesson%208%20studio.code.org/s/aiml-2021/lessons/8)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSdNKtz6dqsiOK8eM5IVN675CyjW7dOX4dgU1CLttyCgqVwZOA/viewform?usp=sf_link)",
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "activity_section.key": "2de72799-4c5d-4f80-be3c-4345df2af845",
-        "lesson_activity.key": "a6d5aa83-2ad9-4f64-a15e-6bd14301c5db"
       }
     },
     {
@@ -4563,7 +4237,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Selecting a Label:** This is the first time students can choose the label for their model. The process is identical to selecting features, but be aware that some students may be initially surprised by this extra step in the process.  Students can access a resource in the Help and Tips section of Code Studio that explains how to select a label in AI Lab\n\n**Revisiting Past Screens:** Let students know it’s okay to go back and revisit past screens to improve their model or make different decisions - this is an important part of the process and something students should practice in this level. Students may find themselves starting to move fluently between the testing, feature, and label screens as they refine and improve their machine learning model.\n\n**Level 2 - Where Are The Tables?** In level 2, students predict the type of animal that they are looking at (like mammal, reptile, etc). This column has too many possible values, and so many data visualization tables won't appear. This is intentional, since it challenges students to use feature iteration and the Previous Results screens intentionally to find features that work. They need to trust that, if there are patterns in the data, AI Bot will find them and produce an accurate model even when there's too much data to visualize. This also prepares students for more realistic examples where there are typically more than 4 or 5 values for a feature."
+            "markdown": "**Selecting a Label:** This is the first time students can choose the label for their model. The process is identical to selecting features, but be aware that some students may be initially surprised by this extra step in the process.  Students can access a resource in the Help and Tips section of Code Studio that explains how to select a label in AI Lab\n\n**Revisiting Past Screens:** Let students know it’s okay to go back and revisit past screens to improve their model or make different decisions - this is an important part of the process and something students should practice in this level. Students may find themselves starting to move fluently between the testing, feature, and label screens as they refine and improve their machine learning model.\n\n**Level 2 - Where Are The Tables?** In level 2, students predict the type of animal that they are looking at (like mammal, reptile, etc). This column has too many possible values, and so many data visualization tables won't appear. This is intentional, since it challenges students to use feature iteration and the Previous Results screens intentionally to find features that work. They need to trust that, if there are patterns in the data, AI Bot will find them and produce an accurate model even when there's too much data to visualize. This also prepares students for more realistic examples where there are typically more than 4 or 5 values for a feature.\n\n**Accuracy and Data Representation**: Students may be able to discover some curious combinations that give 100% accuracy. This may be because the particular features they chose are not well represented in the dataset - for example, only 8 out of the 100 animals are considered Venomous. This could lead to inflated accuracy, especially if those animals are not well represented in the testing set. If you notice students training models like this, ask them to thoroughly test their models and compare the results to their real-world experiences to make sure the model matches reality. Remind them that just because a model has high accuracy on its testing data doesn't mean it will have high accuracy in the real world."
           }
         ]
       },
@@ -4605,7 +4279,13 @@
       "key": "8fb15f05-d003-4a04-8cf3-d5962e8ae1f9",
       "position": 8,
       "properties": {
-        "progression_name": "Importing Your Model"
+        "progression_name": "Importing Your Model",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Design Elements Off the Screen**:  Depending on the number of features that your students use in their model, some of their design elements may appear off of the screen. This tends to happen when using more than 6 features in a model.\n\nThis particular problem is addressed in later lessons, but if students encounter it here, there are two strategies you can use to help students fix this:\n\n**Strategy #1: Make New Elements.** Students can use design mode to drag out new elements to use in their app. They may also decide to move the elements to different screens to help make the app easier to use. After adding these new design mode elements, students will need to update their code to use the new elements as well.\n\n**Strategy #2: Reposition Elements.** Even though the elements are off the screen, you can use Design Mode to manually select them and re-position them so they are on the screen. This involves changing the y-position property to 0 so it is on the screen, and then re-arranging the element like you would normally."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "8fb15f05-d003-4a04-8cf3-d5962e8ae1f9",
@@ -4644,17 +4324,6 @@
       "seeding_key": {
         "activity_section.key": "0d058bc4-3155-48a3-9a43-bdcd6a701268",
         "lesson_activity.key": "e019f050-cb5e-4ebe-b8ba-df07a20ccc88"
-      }
-    },
-    {
-      "key": "ebc18112-24bb-47bd-8a00-1aacc5dbe108",
-      "position": 1,
-      "properties": {
-        "description": "Find a typo? Were some of the directions unclear? Have a suggestion for how to improve the flow of this lesson? **We'd love to hear it!** Please use the links below to provide feedback on this lesson.\n\n- [**Report a Typo / Bug / Unclear Directions**](https://support.code.org/hc/en-us/requests/new?description=Typo%20in%20AI%20Unit%20lesson%209%20studio.code.org/s/aiml-2021/lessons/9)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLScIuBhnlZn_wlBTqEAoG--w4oIv3vT_UFqRlmeDcdkUb-7PAA/viewform?usp=sf_link)"
-      },
-      "seeding_key": {
-        "activity_section.key": "ebc18112-24bb-47bd-8a00-1aacc5dbe108",
-        "lesson_activity.key": "8073f3ab-7012-439f-9095-08c7ac1c3be9"
       }
     },
     {
@@ -5024,17 +4693,6 @@
       "seeding_key": {
         "activity_section.key": "ceba9f90-8266-4fb0-8f8a-b4c76a251dd5",
         "lesson_activity.key": "ac6c443b-e5d8-4138-99a9-a58bc509c651"
-      }
-    },
-    {
-      "key": "33cb1109-cd15-456d-b5f1-150acf1e39cc",
-      "position": 1,
-      "properties": {
-        "description": "Find a typo? Were some of the directions unclear? Have a suggestion for how to improve the flow of this lesson? **We'd love to hear it!** Please use the links below to provide feedback on this lesson.\n\n- [**Report a Typo / Bug / Unclear Directions**](https://support.code.org/hc/en-us/requests/new?description=Typo%20in%20AI%20Unit%20lesson%2010%20studio.code.org/s/aiml-2021/lessons/10)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLScMAz3-2XCHUBhCgwUxG247oUQid3svdqbIzp4C8JYHTl2qSw/viewform?usp=sf_link)"
-      },
-      "seeding_key": {
-        "activity_section.key": "33cb1109-cd15-456d-b5f1-150acf1e39cc",
-        "lesson_activity.key": "737fa883-7187-4b4f-b662-a3a4390f5927"
       }
     },
     {
@@ -5408,17 +5066,6 @@
       }
     },
     {
-      "key": "c84a2dba-e0cf-46e9-b4c5-dbffe8ab59b0",
-      "position": 1,
-      "properties": {
-        "description": "Find a typo? Were some of the directions unclear? Have a suggestion for how to improve the flow of this lesson? **We'd love to hear it!** Please use the links below to provide feedback on this lesson.\n\n- [**Report a Typo / Bug / Unclear Directions**](https://support.code.org/hc/en-us/requests/new?description=Typo%20in%20AI%20Unit%20lesson%2011%20studio.code.org/s/aiml-2021/lessons/11)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfHnJVL5TLeZ505r7ixBAnf7UAXhfb5yMk01bwQuq025P00VQ/viewform?usp=sf_link)"
-      },
-      "seeding_key": {
-        "activity_section.key": "c84a2dba-e0cf-46e9-b4c5-dbffe8ab59b0",
-        "lesson_activity.key": "d014ee58-ec02-41db-8121-f15e9e8249f2"
-      }
-    },
-    {
       "key": "48946537-7e1a-4b55-9ea6-3a7da44e2cae",
       "position": 1,
       "properties": {
@@ -5672,7 +5319,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**80% Accuracy:** Students may struggle to find a model that is at least 80% accurate. This is by design, so they can really experiment with which features to use in their model. One example that will satisfy these requirements is a model using the features [trees, overgrowthPercent, antelopes, temperature].\n\n**Order Matters:** Students may discover that the order they select their features can sometimes matter - for example, choosing \"peppers, fried chicken\" may end up with different accuracy than \"fried chicken, peppers\". This is not a vital topic for using AI Lab fluently, and happens more often in these early levels because of the smaller dataset sizes. If students ask, one way to think about it is that the first feature represents how AI Bot first tries to separate the data before continuing on to the other features. Therefore: the stronger the relationship is with the first feature you pick, the stronger the patterns AI Bot will find."
+            "markdown": "**80% Accuracy:** Students may struggle to find a model that is at least 80% accurate. This is by design, so they can really experiment with which features to use in their model. One example that will satisfy these requirements is a model using the features [trees, overgrowthPercent, antelopes, temperature].\n\n**Order Matters:** Students may discover that the order they select their features can sometimes matter - for example, choosing \"temperature, antelopes\" may end up with different accuracy than \"antelopes, temperature\". This is not a vital topic for using AI Lab fluently, and happens more often in these early levels because of the smaller dataset sizes. If students ask, one way to think about it is that the first feature represents how AI Bot first tries to separate the data before continuing on to the other features. Therefore: the stronger the relationship is with the first feature you pick, the stronger the patterns AI Bot will find."
           },
           {
             "type": "assessmentOpportunity",
@@ -5718,17 +5365,6 @@
       "seeding_key": {
         "activity_section.key": "8023260d-dd92-4961-bb45-396e7036ca38",
         "lesson_activity.key": "0e0cc7b3-7abf-4771-933c-b9608986eb34"
-      }
-    },
-    {
-      "key": "434902be-b032-4ed2-a357-1adb1804ca76",
-      "position": 1,
-      "properties": {
-        "description": "Find a typo? Were some of the directions unclear? Have a suggestion for how to improve the flow of this lesson? **We'd love to hear it!** Please use the links below to provide feedback on this lesson.\n\n- [**Report a Typo / Bug / Unclear Directions**](https://support.code.org/hc/en-us/requests/new?description=Typo%20in%20AI%20Unit%20lesson%2012%20studio.code.org/s/aiml-2021/lessons/12)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSdGa3U5KvtCMraM_b6BkWgJrbENlo18dotIxkHHnC2z_sz1eA/viewform?usp=sf_link)"
-      },
-      "seeding_key": {
-        "activity_section.key": "434902be-b032-4ed2-a357-1adb1804ca76",
-        "lesson_activity.key": "e65cea5d-ed7e-499e-8025-675feadcec78"
       }
     },
     {
@@ -5793,7 +5429,13 @@
       "key": "4322eab8-e9e7-4df5-a2bd-076c47737f1c",
       "position": 2,
       "properties": {
-        "progression_name": "Raspado Recommender"
+        "progression_name": "Raspado Recommender",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Design Elements Off the Screen**: This level prepares students for a situation they may encounter in their chapter project: having so many features that the design elements appear off the screen. This tends to happen when using more than 6 features in a model. If students encounter this in later levels, referring them back to this level can be useful to remind students how to problem-solve and rearrange the elements on the s creen."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4322eab8-e9e7-4df5-a2bd-076c47737f1c",
@@ -5942,17 +5584,6 @@
       }
     },
     {
-      "key": "1c403bfb-3ffd-4349-950e-34765ddd2f08",
-      "position": 1,
-      "properties": {
-        "description": "Find a typo? Were some of the directions unclear? Have a suggestion for how to improve the flow of this lesson? **We'd love to hear it!** Please use the links below to provide feedback on this lesson.\n\n- [**Report a Typo / Bug / Unclear Directions**](https://support.code.org/hc/en-us/requests/new?description=Typo%20in%20AI%20Unit%20lesson%2013%20studio.code.org/s/aiml-2021/lessons/13)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSdo9UP6hdNCjhjrSz0ai-vdnN12mIZRjQXh7mTRA6hSc5TLRw/viewform?usp=sf_link)"
-      },
-      "seeding_key": {
-        "activity_section.key": "1c403bfb-3ffd-4349-950e-34765ddd2f08",
-        "lesson_activity.key": "01e842f0-e0ca-451f-95bd-f1e438eda9ae"
-      }
-    },
-    {
       "key": "e1dd79db-f57a-47b1-a3f8-7a23780991dd",
       "position": 1,
       "properties": {
@@ -6091,17 +5722,6 @@
       }
     },
     {
-      "key": "90a40aa4-8041-440d-b2ac-b13c70c8e977",
-      "position": 1,
-      "properties": {
-        "description": "Find a typo? Were some of the directions unclear? Have a suggestion for how to improve the flow of this lesson? **We'd love to hear it!** Please use the links below to provide feedback on this lesson.\n\n- [**Report a Typo / Bug / Unclear Directions**](https://support.code.org/hc/en-us/requests/new?description=Typo%20in%20AI%20Unit%20lesson%2014%20studio.code.org/s/aiml-2021/lessons/14)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfIFfJaI3jtQEv4_hdpkj9yvhy1bBNCoySNx5BWcn5nFhyiAA/viewform?usp=sf_link)"
-      },
-      "seeding_key": {
-        "activity_section.key": "90a40aa4-8041-440d-b2ac-b13c70c8e977",
-        "lesson_activity.key": "e9d04de7-f171-4462-af47-bb4794f5433b"
-      }
-    },
-    {
       "key": "57237d92-5953-446d-8fec-776fd8590795",
       "position": 1,
       "properties": {
@@ -6210,7 +5830,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Design Elements Off the Screen**:  Depending on the number of features that your students use in their model, some of their design elements may appear off of the screen. This tends to happen when using more than 6 features in a model.\n\nThere are two strategies you can use to help students fix this:\n\n**Strategy #1: Make New Elements.** Students can use design mode to drag out new elements to use in their app. They may also decide to move the elements to different screens to help make the app easier to use. After adding these new design mode elements, students will need to update their code to use the new elements as well. Students can refer to [Lesson 13](../11), especially level 1, as an example of how to update their code to fix this problem.\n\n**Strategy #2: Reposition Elements.** Even though the elements are off the screen, you can use Design Mode to manually select them and re-position them so they are on the screen. This involves changing the y-position property to 0 so it is on the screen, and then re-arranging the element like you would normally."
+            "markdown": "**Design Elements Off the Screen**:  Depending on the number of features that your students use in their model, some of their design elements may appear off of the screen. This tends to happen when using more than 6 features in a model.\n\nThere are two strategies you can use to help students fix this:\n\n**Strategy #1: Make New Elements.** Students can use design mode to drag out new elements to use in their app. They may also decide to move the elements to different screens to help make the app easier to use. After adding these new design mode elements, students will need to update their code to use the new elements as well. Students can refer to [Lesson 13](../13), especially level 1, as an example of how to update their code to fix this problem.\n\n**Strategy #2: Reposition Elements.** Even though the elements are off the screen, you can use Design Mode to manually select them and re-position them so they are on the screen. This involves changing the y-position property to 0 so it is on the screen, and then re-arranging the element like you would normally."
           }
         ]
       },
@@ -6254,8 +5874,20 @@
       }
     },
     {
-      "key": "b436503e-9da5-42d9-b82b-ffd4344044ec",
+      "key": "ff053302-162f-4845-96d0-e9004d617308",
       "position": 2,
+      "properties": {
+        "description": "If this is the last lesson students will be completing in this unit, consider showing the [Why AI Matters](https://www.youtube.com/watch?v=dWRnCXbUDgA) video as the final act of this unit. This video acts as a call-to-action for students to stay informed and get involved in AI efforts in their life, especially since the field needs diverse perspectives (like those of your students!)",
+        "name": "(Optional) Why AI Matters"
+      },
+      "seeding_key": {
+        "activity_section.key": "ff053302-162f-4845-96d0-e9004d617308",
+        "lesson_activity.key": "8316a78e-a092-4d3c-8972-c622c27ca4ca"
+      }
+    },
+    {
+      "key": "b436503e-9da5-42d9-b82b-ffd4344044ec",
+      "position": 3,
       "properties": {
         "description": "Send students to Code Studio to complete their reflection on their attitudes toward computer science. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey. Some questions are the same as the pre-survey at the start of the unit, which can show student growth or changes in student attitudes towards computer science.",
         "name": "Reflection",
@@ -6264,18 +5896,6 @@
       "seeding_key": {
         "activity_section.key": "b436503e-9da5-42d9-b82b-ffd4344044ec",
         "lesson_activity.key": "8316a78e-a092-4d3c-8972-c622c27ca4ca"
-      }
-    },
-    {
-      "key": "b22cef9a-c3d2-497f-b2c9-5c410f11b5f7",
-      "position": 1,
-      "properties": {
-        "description": "Find a typo? Were some of the directions unclear? Have a suggestion for how to improve the flow of this lesson? **We'd love to hear it!** Please use the links below to provide feedback on this lesson.\n\n- [**Report a Typo / Bug / Unclear Directions**](https://support.code.org/hc/en-us/requests/new?description=Typo%20in%20AI%20Unit%20lesson%2015%20studio.code.org/s/aiml-2021/lessons/15)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfEyeKgI44PRh1cHQ7Jbfb_0o5i0i8vTaOCvoWQMCNyK8DMXw/viewform?usp=sf_link)",
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "activity_section.key": "b22cef9a-c3d2-497f-b2c9-5c410f11b5f7",
-        "lesson_activity.key": "2e1d94dc-73b0-472c-8dd3-a8162d998278"
       }
     },
     {
@@ -6627,17 +6247,6 @@
       }
     },
     {
-      "key": "c6c4872c-2ac3-483d-8704-3818ca5c0424",
-      "position": 1,
-      "properties": {
-        "description": "Find a typo? Were some of the directions unclear? Have a suggestion for how to improve the flow of this lesson? **We'd love to hear it!** Please use the links below to provide feedback on this lesson.\n\n- [**Report a Typo / Bug / Unclear Directions**](https://support.code.org/hc/en-us/requests/new?description=Typo%20in%20AI%20Unit%20lesson%2016%20studio.code.org/s/aiml-2021/lessons/16)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSc0xRXAYTbVGGXEDogZmkB7ITn1INY5n9IFxd9oCIpx25BmmQ/viewform?usp=sf_link)"
-      },
-      "seeding_key": {
-        "activity_section.key": "c6c4872c-2ac3-483d-8704-3818ca5c0424",
-        "lesson_activity.key": "fc81b078-f4b4-4567-b644-9b7bc6660ce1"
-      }
-    },
-    {
       "key": "2a14fe82-0d13-48fd-a475-8071db9d484f",
       "position": 1,
       "properties": {
@@ -6866,7 +6475,13 @@
       "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Send students to Code Studio. In the first level, they will click a link to make a copy of a Google Form. Students will need their own Google Account to create a copy of the form.",
-        "progression_name": "Create a Google Form"
+        "progression_name": "Create a Google Form",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Creating a Copy:** Students need to create a copy of this form. Unlike other Google documents, students cannot make a copy while viewing the form directly and requesting access to the form won't allow them to make a copy. Instead, students need to click the specific link on the Code Studio page to be prompted to make their own copy of the form."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "247783a6-f9ee-44e8-9954-6a58a7017c4b",
@@ -6952,18 +6567,6 @@
       },
       "seeding_key": {
         "activity_section.key": "18f7efc8-0d5c-43ff-a51b-00661b231339",
-        "lesson_activity.key": "2d5cd8b7-8942-4ed8-b545-3ee0def7a87d"
-      }
-    },
-    {
-      "key": "65354a30-725e-4fab-8646-3fea11d48fcf",
-      "position": 3,
-      "properties": {
-        "description": "Find a typo? Were some of the directions unclear? Have a suggestion for how to improve the flow of this lesson? **We'd love to hear it!** Please use the links below to provide feedback on this lesson.\n\n- [**Report a Typo / Bug / Unclear Directions**](https://support.code.org/hc/en-us/requests/new?description=Typo%20in%20AI%20Unit%20lesson%2017%20studio.code.org/s/aiml-2021/lessons/17)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSeZP23oDU7RXRt3_KZeTAMF5nwmheEiLpJDirAN1xIsYwGrmQ/viewform?usp=sf_link)",
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "activity_section.key": "65354a30-725e-4fab-8646-3fea11d48fcf",
         "lesson_activity.key": "2d5cd8b7-8942-4ed8-b545-3ee0def7a87d"
       }
     },
@@ -7315,17 +6918,6 @@
       }
     },
     {
-      "key": "66e3e1ff-e37a-46dc-b112-a0ab3c978988",
-      "position": 1,
-      "properties": {
-        "description": "Find a typo? Were some of the directions unclear? Have a suggestion for how to improve the flow of this lesson? **We'd love to hear it!** Please use the links below to provide feedback on this lesson.\n\n- [**Report a Typo / Bug / Unclear Directions**](https://support.code.org/hc/en-us/requests/new?description=Typo%20in%20AI%20Unit%20lesson%2018%20studio.code.org/s/aiml-2021/lessons/18)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSeyOtiTv2lzK7iaib2adACUMQvCiOvVcbGqyrd-V1_4PhcwMA/viewform?usp=sf_link)"
-      },
-      "seeding_key": {
-        "activity_section.key": "66e3e1ff-e37a-46dc-b112-a0ab3c978988",
-        "lesson_activity.key": "398d3b2b-3369-44a1-ba5a-613e5da0280e"
-      }
-    },
-    {
       "key": "facdc92c-bb56-496c-9a0d-7f483f0d4c52",
       "position": 1,
       "properties": {
@@ -7531,7 +7123,7 @@
       "key": "24a2399c-35b3-4651-be99-972a14d5531a",
       "position": 13,
       "properties": {
-        "description": "One strategy Isaac could try is to look back at his initial brainstorm ideas and see if there are any other apps he might be able to make that could still address this issue. Even though Isaac may not be able to collect his own data, he may be able to use someone else’s data to help solve his problem.",
+        "description": "Since Isaac's initial plan didn't work out, one strategy he could try is to look back at his initial brainstorm ideas and see if there are any other apps he might be able to make that could still address this issue. Even though Isaac may not be able to collect his own data, he may be able to use someone else’s data to help solve his problem.",
         "remarks": true
       },
       "seeding_key": {
@@ -7555,7 +7147,7 @@
       "key": "707532a8-680b-4d3e-9d3f-61f5fd8360a3",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Isaac has found another dataset of student surveys that he thinks he can use to create the Loneliness Score app from his brainstorm. Choose one of the datasets to investigate and see if you can create an accurate model to predict how lonely someone might be."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Isaac has found some additional student survey datasets from a public website that he thinks he can use to create the Loneliness Score app from his brainstorm. Isaac has already selected \"Loneliness\" as the label, but each dataset has different features he could choose from (like music or movies). Choose one of the datasets to investigate and see if you can create an accurate model to predict how lonely someone might be."
       },
       "seeding_key": {
         "activity_section.key": "707532a8-680b-4d3e-9d3f-61f5fd8360a3",
@@ -7612,17 +7204,6 @@
       "seeding_key": {
         "activity_section.key": "f6c77a46-8086-4fb4-b2f7-d1fb83c2f7a7",
         "lesson_activity.key": "7af9f631-6538-41b1-a8e8-b4aa192e4244"
-      }
-    },
-    {
-      "key": "61c29b2a-034e-4d55-9e84-d7294a3d6bd3",
-      "position": 1,
-      "properties": {
-        "description": "Find a typo? Were some of the directions unclear? Have a suggestion for how to improve the flow of this lesson? **We'd love to hear it!** Please use the links below to provide feedback on this lesson.\n\n- [**Report a Typo / Bug / Unclear Directions**](https://support.code.org/hc/en-us/requests/new?description=Typo%20in%20AI%20Unit%20lesson%2019%20studio.code.org/s/aiml-2021/lessons/19)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSciGk-KmoV0NRCPLplbG9_r5k5Q4fZPd_15lRqtZFDdb47bCw/viewform?usp=sf_link)"
-      },
-      "seeding_key": {
-        "activity_section.key": "61c29b2a-034e-4d55-9e84-d7294a3d6bd3",
-        "lesson_activity.key": "8e0bf95d-1a5e-4677-82bf-a8d38f54dd0f"
       }
     },
     {
@@ -7719,7 +7300,13 @@
       "key": "bc909d4d-f7fd-4bc3-8caa-d366201d395f",
       "position": 5,
       "properties": {
-        "progression_name": "Customize Your App"
+        "progression_name": "Customize Your App",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Supporting Students:** These levels are similar to similar customizations students completed in previous lessons. If students get stuck, consider referring them to these previous lessons:\n- Adding multiple screens for each feature: [Lesson 13 - Customizing Apps](./../13/levels/2)\n- Adding multiple screens for the resulting prediction: [Lesson 10 - Model Cards in App Lab](./../10/levels/5)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "bc909d4d-f7fd-4bc3-8caa-d366201d395f",
@@ -7744,24 +7331,15 @@
       }
     },
     {
-      "key": "435b70fd-678c-4f75-b5b8-8fda977a8c55",
+      "key": "d6ee6aea-6b89-488f-b9ea-e3c53aaeedec",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _If you were to create your own machine learning app, what problem would you want it to try and solve?_\n\n**Discussion Goal:** This prompt foreshadows how students will start their project tomorrow, where they will investigate their own problem to solve using a machine learning app. Treat this prompt like a brainstorm, letting students suggest ideas. Use this as a segue into the project tomorrow where students will decide an idea they would like to pursue.",
+        "name": "Journal"
       },
       "seeding_key": {
-        "activity_section.key": "435b70fd-678c-4f75-b5b8-8fda977a8c55",
-        "lesson_activity.key": "c68ad549-cb51-4d08-83c9-0dbd268872ec"
-      }
-    },
-    {
-      "key": "c322ca3b-6c69-44e0-b89d-ab447d6c338f",
-      "position": 1,
-      "properties": {
-        "description": "Find a typo? Were some of the directions unclear? Have a suggestion for how to improve the flow of this lesson? **We'd love to hear it!** Please use the links below to provide feedback on this lesson.\n\n- [**Report a Typo / Bug / Unclear Directions**](https://support.code.org/hc/en-us/requests/new?description=Typo%20in%20AI%20Unit%20lesson%2020%20studio.code.org/s/aiml-2021/lessons/20)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSf8szRCtAoiL5MOLAEN77YWm24hxGm55dXvQZyTQk1myO2K0w/viewform?usp=sf_link)"
-      },
-      "seeding_key": {
-        "activity_section.key": "c322ca3b-6c69-44e0-b89d-ab447d6c338f",
-        "lesson_activity.key": "bc82c505-8801-4fda-9154-5fc036c5f43e"
+        "activity_section.key": "d6ee6aea-6b89-488f-b9ea-e3c53aaeedec",
+        "lesson_activity.key": "056792cd-6ea4-4da4-aded-c92a4bb8389f"
       }
     },
     {
@@ -8093,22 +7671,11 @@
       "properties": {
         "description": "Send students to Code Studio to complete their reflection on their attitudes toward computer science. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
         "name": "Reflection",
-        "progression_name": "Reflection"
+        "progression_name": "End-Of-Unit Survey"
       },
       "seeding_key": {
         "activity_section.key": "5d04c580-a932-46bd-86c4-649793eac948",
         "lesson_activity.key": "09a6032e-c755-4dc8-9e89-9aaf0f9bb77e"
-      }
-    },
-    {
-      "key": "05006599-53b4-4dc1-a30f-94f8da3ea8a4",
-      "position": 1,
-      "properties": {
-        "description": "Find a typo? Were some of the directions unclear? Have a suggestion for how to improve the flow of this lesson? **We'd love to hear it!** Please use the links below to provide feedback on this lesson.\n\n- [**Report a Typo / Bug / Unclear Directions**](https://support.code.org/hc/en-us/requests/new?description=Typo%20in%20AI%20Unit%20lesson%2021%20studio.code.org/s/aiml-2021/lessons/21)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfZJzTzNyInfvlYWJU-siCKs_ocqXwCZ_sq9Q8xgNs9KJOKzA/viewform?usp=sf_link)"
-      },
-      "seeding_key": {
-        "activity_section.key": "05006599-53b4-4dc1-a30f-94f8da3ea8a4",
-        "lesson_activity.key": "c4253ae5-f767-4ca5-8f6b-a0c69187ab4f"
       }
     },
     {
@@ -8136,6 +7703,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_FishVTrash_2022"
+        ],
         "progression": "Recognizing Fish"
       },
       "bonus": false,
@@ -8158,6 +7728,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Short_2022"
+        ],
         "progression": "Recognizing Fish Features"
       },
       "bonus": false,
@@ -8180,6 +7753,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Long_2022"
+        ],
         "progression": "Recognizing Expressions"
       },
       "bonus": false,
@@ -8202,6 +7778,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "aiml-intro-pulse-survey_2022"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -8224,6 +7803,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-L2 unsupervised - 1_2022"
+        ],
         "progression": "Looking for Patterns"
       },
       "bonus": false,
@@ -8246,6 +7828,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-L2 supervised - green glass door_2022"
+        ],
         "progression": "Green Glass Door"
       },
       "bonus": false,
@@ -8268,6 +7853,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models-shoes random_2022"
+        ],
         "progression": "Shoe Recommender"
       },
       "bonus": false,
@@ -8290,6 +7878,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models-shoes decision tree_2022"
+        ],
         "progression": "Improved Shoe Recommender"
       },
       "bonus": false,
@@ -8312,6 +7903,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models-shoe survey_2022"
+        ],
         "progression": "Shoe Recommendation Survey"
       },
       "bonus": false,
@@ -8334,6 +7928,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models-shoes points_2022"
+        ],
         "progression": "Ultimate Shoe Recommender"
       },
       "bonus": false,
@@ -8356,6 +7953,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro ai lab- fruit veggie widget_2022"
+        ],
         "progression": "Fruit and Veggie Explorer"
       },
       "bonus": false,
@@ -8378,6 +7978,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro ai lab-shapes v1_2022"
+        ],
         "progression": "Recognizing Shapes"
       },
       "bonus": false,
@@ -8400,6 +8003,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro categorical-pizza_2022"
+        ],
         "progression": "Pizza Recommendations"
       },
       "bonus": false,
@@ -8422,6 +8028,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro categorical-food choices_2022"
+        ],
         "progression": "You Choose: Restaurant Recommendations"
       },
       "bonus": false,
@@ -8444,6 +8053,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender demo_2022"
+        ],
         "progression": "Book Recommender App"
       },
       "bonus": false,
@@ -8466,6 +8078,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 0_2022"
+        ],
         "progression": "Import a Model"
       },
       "bonus": false,
@@ -8488,6 +8103,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 1_2022"
+        ],
         "progression": "Customize Your App"
       },
       "bonus": false,
@@ -8510,6 +8128,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 2_2022"
+        ],
         "progression": "Customize Your App"
       },
       "bonus": false,
@@ -8532,6 +8153,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 3_2022"
+        ],
         "progression": "Customize Your App"
       },
       "bonus": false,
@@ -8554,6 +8178,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 4_2022"
+        ],
         "progression": "Customize Your App"
       },
       "bonus": false,
@@ -8576,6 +8203,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 5_2022"
+        ],
         "progression": "Choice Levels: Customize Your App"
       },
       "bonus": false,
@@ -8598,6 +8228,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-model card-medical app v2 2021-2_2022"
+        ],
         "progression": "Medical Priority App"
       },
       "bonus": false,
@@ -8620,6 +8253,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-model cards-book recommender model card_2022"
+        ],
         "progression": "Book Recommender Model Card"
       },
       "bonus": false,
@@ -8642,6 +8278,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-model card-medical-1_2022"
+        ],
         "progression": "Medical Dataset Model Cards"
       },
       "bonus": false,
@@ -8664,6 +8303,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-model card-medical-2_2022"
+        ],
         "progression": "Medical Dataset Model Cards"
       },
       "bonus": false,
@@ -8686,6 +8328,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-model card-medical-3_2022"
+        ],
         "progression": "Medical Dataset Model Cards"
       },
       "bonus": false,
@@ -8708,6 +8353,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-data decisions-zoo1_2022"
+        ],
         "progression": "Zoo Predictions"
       },
       "bonus": false,
@@ -8730,6 +8378,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-data decisions-zoo2_2022"
+        ],
         "progression": "Zoo Predictions"
       },
       "bonus": false,
@@ -8752,6 +8403,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-data decisions-zoo3_2022"
+        ],
         "progression": "Zoo Predictions"
       },
       "bonus": false,
@@ -8774,6 +8428,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-data decisions- import app_2022"
+        ],
         "progression": "Importing Your Model"
       },
       "bonus": false,
@@ -8796,6 +8453,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-data decisions- customize app_2022"
+        ],
         "progression": "Customizing Your App"
       },
       "bonus": false,
@@ -8818,6 +8478,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-zoo model embed_2022"
+        ],
         "progression": "Example App: Zoo Classification"
       },
       "bonus": false,
@@ -8840,6 +8503,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example1A_2022"
+        ],
         "progression": "Pet Recommender"
       },
       "bonus": false,
@@ -8862,6 +8528,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-pet model card_2022"
+        ],
         "progression": "Pet Recommender"
       },
       "bonus": false,
@@ -8884,6 +8553,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example1B_2022"
+        ],
         "progression": "Pet Recommender"
       },
       "bonus": false,
@@ -8906,6 +8578,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-screens-2_2022"
+        ],
         "progression": "Adding New Screens"
       },
       "bonus": false,
@@ -8928,6 +8603,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-screens-1_2022"
+        ],
         "progression": "Adding New Screens"
       },
       "bonus": false,
@@ -8950,6 +8628,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-screens-3_2022"
+        ],
         "progression": "Adding New Screens"
       },
       "bonus": false,
@@ -8972,6 +8653,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-choice parent_2022"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -8994,6 +8678,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-zoo assessment_2022"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -9016,6 +8703,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use models applab-practice choice_2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -9038,6 +8728,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ml-numerical ai lab-safari 1_2022"
+        ],
         "progression": "Safari Model"
       },
       "bonus": false,
@@ -9060,6 +8753,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-numerical data- import app_2022"
+        ],
         "progression": "Safari App"
       },
       "bonus": false,
@@ -9082,6 +8778,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-customize-raspado_2022"
+        ],
         "progression": "Raspado Recommender"
       },
       "bonus": false,
@@ -9104,6 +8803,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3A_2022"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -9126,6 +8828,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3_EditA_2022"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -9148,6 +8853,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3_EditB_2022"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -9170,6 +8878,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3_EditC_2022"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -9192,6 +8903,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3C_2022"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -9214,6 +8928,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3D_2022"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -9236,6 +8953,9 @@
       "activity_section_position": 6,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3E_2022"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -9258,6 +8978,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-customize apps-practice choice_2022"
+        ],
         "progression": "You Choose: Improve Your App"
       },
       "bonus": false,
@@ -9280,6 +9003,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-mini project-ai lab 2_2022"
+        ],
         "progression": "Train a Model in AI Lab"
       },
       "bonus": false,
@@ -9302,6 +9028,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-mini project-app lab_2022"
+        ],
         "progression": "Create an App in App Lab"
       },
       "bonus": false,
@@ -9324,6 +9053,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "aiml-ch1-pulse-survey_2022"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -9346,6 +9078,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-plan survey-copy form_2022"
+        ],
         "progression": "Create a Google Form"
       },
       "bonus": false,
@@ -9368,6 +9103,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-good data-kim survey_2022"
+        ],
         "progression": "Kim's Survey"
       },
       "bonus": false,
@@ -9390,6 +9128,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-good data-kim data_2022"
+        ],
         "progression": "Kim's Survey Data"
       },
       "bonus": false,
@@ -9412,6 +9153,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-good data-upload csv_2022"
+        ],
         "progression": "AI Lab and Kim's Data"
       },
       "bonus": false,
@@ -9434,6 +9178,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-good data-isaac data_2022"
+        ],
         "progression": "Isaac's Survey Data"
       },
       "bonus": false,
@@ -9456,6 +9203,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-good data-upload isaac csv_2022"
+        ],
         "progression": "AI Lab and Isaac's Data"
       },
       "bonus": false,
@@ -9478,6 +9228,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-bad data-club investigations_2022"
+        ],
         "progression": "Club Datasets"
       },
       "bonus": false,
@@ -9500,6 +9253,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-bad data-loneliness all_2022"
+        ],
         "progression": "Alternative Datasets"
       },
       "bonus": false,
@@ -9522,6 +9278,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-club app-import model_2022"
+        ],
         "progression": "Import Your Model"
       },
       "bonus": false,
@@ -9544,6 +9303,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-club app-edit text_2022"
+        ],
         "progression": "Import Your Model"
       },
       "bonus": false,
@@ -9566,6 +9328,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-club app-add theme_2022"
+        ],
         "progression": "Import Your Model"
       },
       "bonus": false,
@@ -9588,6 +9353,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-club app-home screen design_2022"
+        ],
         "progression": "Add a Welcome Screen"
       },
       "bonus": false,
@@ -9610,6 +9378,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-club app-home screen event_2022"
+        ],
         "progression": "Add a Welcome Screen"
       },
       "bonus": false,
@@ -9632,6 +9403,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-club app-choice parent_2022"
+        ],
         "progression": "Customize Your App"
       },
       "bonus": false,
@@ -9654,6 +9428,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ml-club app-review submit_2022"
+        ],
         "progression": "Review Your App"
       },
       "bonus": false,
@@ -9676,6 +9453,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-final project-ai lab_2022"
+        ],
         "progression": "Design an AI App - AI Lab"
       },
       "bonus": false,
@@ -9698,6 +9478,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-final project-app lab_2022"
+        ],
         "progression": "Design an AI App - App Lab"
       },
       "bonus": false,
@@ -9720,12 +9503,15 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Reflection"
+        "level_keys": [
+          "Student End of Unit Survey_csd7-2022"
+        ],
+        "progression": "End-Of-Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "aiml-pulse-check-survey-1-levelgroup Ch2_2022"
+          "Student End of Unit Survey_csd7-2022"
         ],
         "lesson.key": "Design an AI App",
         "lesson_group.key": "lessonGroup-3",
@@ -9733,7 +9519,7 @@
         "activity_section.key": "5d04c580-a932-46bd-86c4-649793eac948"
       },
       "level_keys": [
-        "aiml-pulse-check-survey-1-levelgroup Ch2_2022"
+        "Student End of Unit Survey_csd7-2022"
       ]
     },
     {
@@ -9742,6 +9528,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-post-survey-markdown-with-link-to-survey_2022"
+        ],
         "progression": "Post-Course Survey Instructions"
       },
       "bonus": false,
@@ -10626,9 +10415,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "aiml-pulse-check-survey-1-levelgroup Ch2_2022",
+        "level.key": "Student End of Unit Survey_csd7-2022",
         "script_level.level_keys": [
-          "aiml-pulse-check-survey-1-levelgroup Ch2_2022"
+          "Student End of Unit Survey_csd7-2022"
         ],
         "lesson.key": "Design an AI App",
         "lesson_group.key": "lessonGroup-3",
@@ -10772,10 +10561,11 @@
     },
     {
       "name": "AI Code of Ethics",
-      "url": "https://docs.google.com/presentation/d/1jpT_cSs45ZwAz7NMYTn6vhefu3ImndFWfGubS_5wkGw/copy",
+      "url": "https://docs.google.com/presentation/d/1jpT_cSs45ZwAz7NMYTn6vhefu3ImndFWfGubS_5wkGw/template/preview",
       "key": "ai_code_of_ethics",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1jpT_cSs45ZwAz7NMYTn6vhefu3ImndFWfGubS_5wkGw/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -10835,7 +10625,7 @@
     },
     {
       "name": "All Code",
-      "url": "/s/csd7-2021/code",
+      "url": "/s/csd7-2022/code",
       "key": "all_code_3",
       "properties": {
         "is_rollup": true
@@ -10846,7 +10636,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/csd7-2021/resources",
+      "url": "/s/csd7-2022/resources",
       "key": "all_resources_4",
       "properties": {
         "is_rollup": true
@@ -10857,7 +10647,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/csd7-2021/standards",
+      "url": "/s/csd7-2022/standards",
       "key": "all_standards_4",
       "properties": {
         "is_rollup": true
@@ -10868,7 +10658,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/csd7-2021/vocab",
+      "url": "/s/csd7-2022/vocab",
       "key": "all_vocabulary_4",
       "properties": {
         "is_rollup": true
@@ -10903,10 +10693,11 @@
     },
     {
       "name": "Classification Models",
-      "url": "https://docs.google.com/presentation/d/1f5PG9ASPlRlXNM7gBMOribyQaYpVAaVW9EXWjtrqk1c/copy",
+      "url": "https://docs.google.com/presentation/d/1f5PG9ASPlRlXNM7gBMOribyQaYpVAaVW9EXWjtrqk1c/template/preview",
       "key": "classification_models_1",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1f5PG9ASPlRlXNM7gBMOribyQaYpVAaVW9EXWjtrqk1c/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -10928,7 +10719,7 @@
     },
     {
       "name": "Cleaning Survey Data",
-      "url": "https://www.youtube.com/watch?v=w8w-AosDcN8",
+      "url": "https://www.youtube.com/watch?v=NBTYgU71Jgw",
       "key": "cleaning_survey_data",
       "properties": {
         "audience": "Student",
@@ -10975,11 +10766,24 @@
       }
     },
     {
+      "name": "Creating a Survey in Google Forms",
+      "url": "https://www.youtube.com/watch?v=Ot6eXUYb3P0",
+      "key": "creating_a_survey_in_google_forms",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "creating_a_survey_in_google_forms"
+      }
+    },
+    {
       "name": "Creating an App",
-      "url": "https://docs.google.com/presentation/d/1D6EZitkNOVznhERKFHT1uD0DCVa8aOvengtVf2C2LDQ/copy",
+      "url": "https://docs.google.com/presentation/d/1D6EZitkNOVznhERKFHT1uD0DCVa8aOvengtVf2C2LDQ/template/preview",
       "key": "creating_an_app",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1D6EZitkNOVznhERKFHT1uD0DCVa8aOvengtVf2C2LDQ/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -10988,11 +10792,9 @@
     },
     {
       "name": "CSD Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview",
+      "url": "https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview",
       "key": "csd_curriculum_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csd_curriculum_guide"
@@ -11020,11 +10822,9 @@
     },
     {
       "name": "CSD Implementation Guide",
-      "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
+      "url": "https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview",
       "key": "csd_implementation_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csd_implementation_guide"
@@ -11032,10 +10832,11 @@
     },
     {
       "name": "Customizing Apps",
-      "url": "https://docs.google.com/presentation/d/1EaYhIdYec-meNd2rrDnqrM76CYxNU54WDghIb0PCLks/copy",
+      "url": "https://docs.google.com/presentation/d/1EaYhIdYec-meNd2rrDnqrM76CYxNU54WDghIb0PCLks/template/preview",
       "key": "customizing_apps",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1EaYhIdYec-meNd2rrDnqrM76CYxNU54WDghIb0PCLks/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11044,10 +10845,11 @@
     },
     {
       "name": "Design an AI App",
-      "url": "https://docs.google.com/presentation/d/1VOiSzm2soXCy2PhOHfgxiuqmwtKJJrxGQ6xhJlwPfCY/copy",
+      "url": "https://docs.google.com/presentation/d/1VOiSzm2soXCy2PhOHfgxiuqmwtKJJrxGQ6xhJlwPfCY/template/preview",
       "key": "design_an_ai_app",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1VOiSzm2soXCy2PhOHfgxiuqmwtKJJrxGQ6xhJlwPfCY/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11091,6 +10893,18 @@
       }
     },
     {
+      "name": "Events in App Lab",
+      "url": "https://youtu.be/npa2r4t6y2A",
+      "key": "events_in_app_lab_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "events_in_app_lab_1"
+      }
+    },
+    {
       "name": "Exemplar - Design an AI App",
       "url": "https://studio.code.org/projects/applab/9g5u-sqHLP9fU2FGmfhMJcS06nWpXsQt2ApYFb3CNaw",
       "key": "exemplar_-_design_an_ai_app",
@@ -11125,7 +10939,7 @@
     },
     {
       "name": "Finding Patterns in Data",
-      "url": "https://www.youtube.com/watch?v=yTsspi6AQag",
+      "url": "https://www.youtube.com/watch?v=edFO0bdpoHY",
       "key": "finding_patterns_in_data",
       "properties": {
         "audience": "Student",
@@ -11174,10 +10988,11 @@
     },
     {
       "name": "Importing Models in App Lab",
-      "url": "https://docs.google.com/presentation/d/1gkngAaMoJdp-8q2S9zomxHukJcdChkxtC38EA4dWvc0/copy",
+      "url": "https://docs.google.com/presentation/d/1gkngAaMoJdp-8q2S9zomxHukJcdChkxtC38EA4dWvc0/template/preview",
       "key": "importing_models_in_app_lab",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1gkngAaMoJdp-8q2S9zomxHukJcdChkxtC38EA4dWvc0/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11186,10 +11001,11 @@
     },
     {
       "name": "Innovations in AI",
-      "url": "https://docs.google.com/presentation/d/1JqvABbuAj3LiCxZQw91KuesvIxlJdXxU5iOabI-FjrM/edit",
+      "url": "https://docs.google.com/presentation/d/1JqvABbuAj3LiCxZQw91KuesvIxlJdXxU5iOabI-FjrM/template/preview",
       "key": "innovations_in_ai",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1JqvABbuAj3LiCxZQw91KuesvIxlJdXxU5iOabI-FjrM/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11220,11 +11036,24 @@
       }
     },
     {
+      "name": "Intro to Design Mode",
+      "url": "https://youtu.be/jiX1dST2PCw",
+      "key": "intro_to_design_mode",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "intro_to_design_mode"
+      }
+    },
+    {
       "name": "Introduction to AI Lab",
-      "url": "https://docs.google.com/presentation/d/1lxgUDjozD9CF0Nv5n9sWmdguEp3lFX9k90cN-NGQnms/copy",
+      "url": "https://docs.google.com/presentation/d/1lxgUDjozD9CF0Nv5n9sWmdguEp3lFX9k90cN-NGQnms/template/preview",
       "key": "introduction_to_ai_lab",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1lxgUDjozD9CF0Nv5n9sWmdguEp3lFX9k90cN-NGQnms/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11233,7 +11062,7 @@
     },
     {
       "name": "Introduction to AI Lab",
-      "url": "https://www.youtube.com/watch?v=bs3slynHTvc",
+      "url": "https://www.youtube.com/watch?v=bGJ05vdI3xA",
       "key": "introduction_to_ai_lab_1",
       "properties": {
         "audience": "Student",
@@ -11245,10 +11074,11 @@
     },
     {
       "name": "Introduction to Machine Learning",
-      "url": "https://docs.google.com/presentation/d/1uT4weLbovBliCfxnkCERfjXWlWWRAYiJQ7brwfYP22U/copy",
+      "url": "https://docs.google.com/presentation/d/1uT4weLbovBliCfxnkCERfjXWlWWRAYiJQ7brwfYP22U/template/preview",
       "key": "introduction_to_machine_learning",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1uT4weLbovBliCfxnkCERfjXWlWWRAYiJQ7brwfYP22U/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11268,10 +11098,11 @@
     },
     {
       "name": "Issue Statements",
-      "url": "https://docs.google.com/presentation/d/11vB9jz1WAIcz2NFEJNMrl5IT87DfVfEPWgTxHG2_7Z4/copy",
+      "url": "https://docs.google.com/presentation/d/11vB9jz1WAIcz2NFEJNMrl5IT87DfVfEPWgTxHG2_7Z4/template/preview",
       "key": "issue_statements",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/11vB9jz1WAIcz2NFEJNMrl5IT87DfVfEPWgTxHG2_7Z4/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11291,10 +11122,11 @@
     },
     {
       "name": "Make a Machine Learning App",
-      "url": "https://docs.google.com/presentation/d/1SDcwI7zrjM9G6H8ncufxiJXBZoozWk7SwvKl_GOMle4/copy",
+      "url": "https://docs.google.com/presentation/d/1SDcwI7zrjM9G6H8ncufxiJXBZoozWk7SwvKl_GOMle4/template/preview",
       "key": "make_a_machine_learning_app",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1SDcwI7zrjM9G6H8ncufxiJXBZoozWk7SwvKl_GOMle4/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11327,10 +11159,11 @@
     },
     {
       "name": "Model Cards",
-      "url": "https://docs.google.com/presentation/d/1KLPpUnpn_gu5KqS0S5rVAjr3pqv6kBSeZ3V7ngydz4E/copy",
+      "url": "https://docs.google.com/presentation/d/1gA1VmDOMUzEwsrPLOwZQm6wN3a1uUQozRDuPCTqQFhA/template/preview",
       "key": "model_cards",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1gA1VmDOMUzEwsrPLOwZQm6wN3a1uUQozRDuPCTqQFhA/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11339,7 +11172,7 @@
     },
     {
       "name": "Model Cards",
-      "url": "https://docs.google.com/document/d/1vdmL2UnG7KaMMenq5UsnsC4wbkuQZVP1OxVuT5WJvk0/edit#",
+      "url": "https://docs.google.com/document/d/1I_y5dKeUe-84ao5B5yKqnMXVskx96h-H4TijVqiPs3A/view",
       "key": "model_cards_1",
       "properties": {
         "audience": "Student",
@@ -11352,7 +11185,7 @@
     },
     {
       "name": "Model Cards in AI Lab",
-      "url": "https://www.youtube.com/watch?v=_iAGDFmZhYI",
+      "url": "https://www.youtube.com/watch?v=tz_ptkv0NxA",
       "key": "model_cards_in_ai_lab",
       "properties": {
         "audience": "Student",
@@ -11364,10 +11197,11 @@
     },
     {
       "name": "Model Cards in App Lab",
-      "url": "https://docs.google.com/presentation/d/1q_9LV_tmFEEqwCMuMo77heheFEyhATwMWYyVg6tn2HE/copy",
+      "url": "https://docs.google.com/presentation/d/1q_9LV_tmFEEqwCMuMo77heheFEyhATwMWYyVg6tn2HE/template/preview",
       "key": "model_cards_in_app_lab",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1q_9LV_tmFEEqwCMuMo77heheFEyhATwMWYyVg6tn2HE/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11389,10 +11223,11 @@
     },
     {
       "name": "Numerical Data in AI Lab",
-      "url": "https://docs.google.com/presentation/d/1lDwfSAfjllPGMuJgo7bJmrJWSUJsidsTLw4Tz67zfyQ/edit",
+      "url": "https://docs.google.com/presentation/d/1lDwfSAfjllPGMuJgo7bJmrJWSUJsidsTLw4Tz67zfyQ/template/preview",
       "key": "numerical_data_in_ai_lab",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1lDwfSAfjllPGMuJgo7bJmrJWSUJsidsTLw4Tz67zfyQ/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11414,7 +11249,7 @@
     },
     {
       "name": "Numerical Data in AI Lab",
-      "url": "https://www.youtube.com/watch?v=Po4i_EtpDWI",
+      "url": "https://www.youtube.com/watch?v=a4JH1D_D7s4",
       "key": "numerical_data_in_ai_lab_2",
       "properties": {
         "audience": "Student",
@@ -11426,10 +11261,11 @@
     },
     {
       "name": "Numerical Models",
-      "url": "https://docs.google.com/presentation/d/1lKn_IQjmALHkAS7B1iJzFfg5DXIexbgJQOhjJ2F0wpM/edit",
+      "url": "https://docs.google.com/presentation/d/1lKn_IQjmALHkAS7B1iJzFfg5DXIexbgJQOhjJ2F0wpM/template/preview",
       "key": "numerical_models",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1lKn_IQjmALHkAS7B1iJzFfg5DXIexbgJQOhjJ2F0wpM/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11450,10 +11286,11 @@
     },
     {
       "name": "Patterns in Data",
-      "url": "https://docs.google.com/presentation/d/1FabWi7tB1SI-YjqiPPfgU3Yljb3lJpoD1mFRmzUJiI8/copy",
+      "url": "https://docs.google.com/presentation/d/1FabWi7tB1SI-YjqiPPfgU3Yljb3lJpoD1mFRmzUJiI8/template/preview",
       "key": "patterns_in_data",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1FabWi7tB1SI-YjqiPPfgU3Yljb3lJpoD1mFRmzUJiI8/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11475,10 +11312,11 @@
     },
     {
       "name": "Saving Models in AI Lab",
-      "url": "https://docs.google.com/presentation/d/1M9dxiG9GmZfoYxe2QYE7nQs3vs9T1knh0qxA9tOTtf8/copy",
+      "url": "https://docs.google.com/presentation/d/1M9dxiG9GmZfoYxe2QYE7nQs3vs9T1knh0qxA9tOTtf8/template/preview",
       "key": "saving_models_in_ai_lab",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1M9dxiG9GmZfoYxe2QYE7nQs3vs9T1knh0qxA9tOTtf8/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11535,10 +11373,11 @@
     },
     {
       "name": "Survey Data in AI Lab",
-      "url": "https://docs.google.com/presentation/d/1DhTshRLCTnVkQHEkpThwedSXL5NEXKtjwATlQIJk33w/copy",
+      "url": "https://docs.google.com/presentation/d/1DhTshRLCTnVkQHEkpThwedSXL5NEXKtjwATlQIJk33w/template/preview",
       "key": "survey_data_in_ai_lab",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1DhTshRLCTnVkQHEkpThwedSXL5NEXKtjwATlQIJk33w/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11547,10 +11386,11 @@
     },
     {
       "name": "Survey Planning",
-      "url": "https://docs.google.com/presentation/d/1OOvhcw8TjjItSk8j40LauRLaKicLb2uNb-OCSs6fyX4/copy",
+      "url": "https://docs.google.com/presentation/d/1OOvhcw8TjjItSk8j40LauRLaKicLb2uNb-OCSs6fyX4/template/preview",
       "key": "survey_planning",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1OOvhcw8TjjItSk8j40LauRLaKicLb2uNb-OCSs6fyX4/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11595,7 +11435,7 @@
     },
     {
       "name": "Training and Testing in AI Lab",
-      "url": "https://www.youtube.com/watch?v=Pm70TO--ee4",
+      "url": "https://www.youtube.com/watch?v=HcCtdaiMWPQ",
       "key": "training_and_testing_in_ai_lab",
       "properties": {
         "audience": "Student",
@@ -11607,10 +11447,11 @@
     },
     {
       "name": "Troubleshooting Models",
-      "url": "https://docs.google.com/presentation/d/1LUkDD4PMefznEJh27EZruk6V8343JrYBpMZ3ThjmcLA/copy",
+      "url": "https://docs.google.com/presentation/d/1LUkDD4PMefznEJh27EZruk6V8343JrYBpMZ3ThjmcLA/template/preview",
       "key": "troubleshooting_models",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1LUkDD4PMefznEJh27EZruk6V8343JrYBpMZ3ThjmcLA/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11631,10 +11472,11 @@
     },
     {
       "name": "Types of Machine Learning",
-      "url": "https://docs.google.com/presentation/d/1FwOsAQW3y0eQ7NwdUitWwXbj74egitdSdrHGnSxXuOg/copy",
+      "url": "https://docs.google.com/presentation/d/1FwOsAQW3y0eQ7NwdUitWwXbj74egitdSdrHGnSxXuOg/template/preview",
       "key": "types_of_machine_learning",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1FwOsAQW3y0eQ7NwdUitWwXbj74egitdSdrHGnSxXuOg/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -11692,7 +11534,7 @@
     },
     {
       "name": "View and Download Survey Data",
-      "url": "https://www.youtube.com/watch?v=J0Avopx7FpM",
+      "url": "https://www.youtube.com/watch?v=orn4dpcIiCk",
       "key": "view_and_download_survey_data",
       "properties": {
         "audience": "Student",
@@ -11859,6 +11701,12 @@
     {
       "seeding_key": {
         "lesson.key": "Importing Models in App Lab",
+        "resource.key": "events_in_app_lab_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Importing Models in App Lab",
         "resource.key": "importing_a_model_in_app_lab"
       }
     },
@@ -11866,6 +11714,12 @@
       "seeding_key": {
         "lesson.key": "Importing Models in App Lab",
         "resource.key": "importing_models_in_app_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Importing Models in App Lab",
+        "resource.key": "intro_to_design_mode"
       }
     },
     {
@@ -12178,6 +12032,12 @@
       "seeding_key": {
         "lesson.key": "Survey Planning",
         "resource.key": "creating_a_survey"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Survey Planning",
+        "resource.key": "creating_a_survey_in_google_forms"
       }
     },
     {
@@ -12591,6 +12451,16 @@
       }
     },
     {
+      "key": "24ba55d1-52ed-41bf-9e37-bbffa6693159",
+      "properties": {
+        "description": "Create a machine learning model using a real-world dataset"
+      },
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Make a Machine Learning App",
+        "objective.key": "24ba55d1-52ed-41bf-9e37-bbffa6693159"
+      }
+    },
+    {
       "key": "27cd4812-b7a4-4a4c-9de4-635f177e9ee4",
       "properties": {
         "description": "Use data visualizations to find patterns in numerical data"
@@ -12778,6 +12648,16 @@
       "seeding_key": {
         "lesson.key": "Survey Planning",
         "objective.key": "881c3276-338c-4fd2-b700-9a862c27b280"
+      }
+    },
+    {
+      "key": "8b3f7d07-fc2c-4021-b56d-1ce1935a2e98",
+      "properties": {
+        "description": "Create an app that uses a machine learning model"
+      },
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Make a Machine Learning App",
+        "objective.key": "8b3f7d07-fc2c-4021-b56d-1ce1935a2e98"
       }
     },
     {

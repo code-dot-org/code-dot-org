@@ -1,0 +1,22 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "write and call a static method",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "project_template_level_name": "CSA U4L6-L4d PBT_2022",
+    "encrypted_examples": [
+
+    ]
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-04-07T18:19:06.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2022-04-07T18:19:06.923+00:00\",\"changed\":[\"cloned from \\\"CSA U4L6-L5c CR_2022\\\"\"],\"cloned_from\":\"CSA U4L6-L5c CR_2022\"},{\"changed_at\":\"2022-04-07 18:19:15 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>
