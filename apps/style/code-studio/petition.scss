@@ -21,7 +21,7 @@
   font-size: 18px;
   line-height: 20px;
   font-weight: 400;
-  margin: 10px 0 10px 0;
+  margin: 10px 0 2px 0;
   font-family: $gotham-regular;
   color: #5B6770;
 }
@@ -37,9 +37,22 @@
   justify-content: space-around;
 }
 
-.petition-error {
+.petition-space {
   flex: 1 100%;
-  margin: 0 0 10px 0;
+  height: 18px;
+  margin: 0 0 2px 0;
+  color: #FF8000;
+  font-family: $gotham-extra-bold;
+  font-size: 14px;
+  text-align: center;
+}
+
+.petition-error {
+  visibility: visible;
+}
+
+.petition-no-error {
+  visibility: hidden;
 }
 
 input.field, select.field {
