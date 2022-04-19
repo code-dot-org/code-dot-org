@@ -1,7 +1,40 @@
 class ProgrammingExpressionsController < ApplicationController
+  include Rails.application.routes.url_helpers
+  include ProxyHelper
+  EXPIRY_TIME = 30.minutes
+
+  before_action :require_levelbuilder_mode_or_test_env, except: [:search, :show, :show_by_keys, :docs_show]
+  before_action :set_expression_by_keys, only: [:show_by_keys, :docs_show]
   load_and_authorize_resource
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:search, :show, :show_by_keys]
+  def index
+    @programming_environments = ProgrammingEnvironment.all.map do |env|
+      {id: env.id, name: env.name, title: env.title, published: env.published, editPath: edit_programming_environment_path(env.name)}
+    end
+    @all_categories = ProgrammingEnvironmentCategory.all.map do |cat|
+      {id: cat.id, key: cat.key, environmentId: cat.programming_environment.id, environmentName: cat.programming_environment.name, name: cat.name, formattedName: cat.name_with_environment}
+    end
+  end
+
+  # GET /programming_expressions/get_filtered_expressions
+  # Possible filters:
+  # - programmingEnvironmentId
+  # - categoryId
+  # - page (1 indexed)
+  def get_filtered_expressions
+    return render(status: :not_acceptable, json: {error: 'Page is required'}) unless params[:page]
+
+    @programming_expressions = ProgrammingExpression.all
+    @programming_expressions = @programming_expressions.where(programming_environment_id: params[:programmingEnvironmentId]) if params[:programmingEnvironmentId]
+    @programming_expressions = @programming_expressions.where(programming_environment_category_id: params[:categoryId]) if params[:categoryId]
+
+    results_per_page = 20
+    total_expressions = @programming_expressions.length
+    num_pages = (total_expressions / results_per_page.to_f).ceil
+
+    @programming_expressions = @programming_expressions.page(params[:page]).per(results_per_page)
+    render json: {numPages: num_pages, expressions: @programming_expressions.map(&:summarize_for_all_code_docs)}
+  end
 
   # GET /programming_expressions/search
   def search
@@ -64,18 +97,16 @@ class ProgrammingExpressionsController < ApplicationController
       @programming_expression = ProgrammingExpression.find(params[:id])
       return render :not_found unless @programming_expression
       return head :forbidden unless can?(:read, @programming_expression)
-      @programming_environment_categories = @programming_expression.programming_environment.categories.select {|c| c.programming_expressions.count > 0}.map(&:summarize_for_environment_show)
+      @programming_environment_categories = @programming_expression.programming_environment.categories_for_navigation
     else
       render :not_found
     end
   end
 
   def show_by_keys
+    return render :not_found unless @programming_expression
     if params[:programming_environment_name] && params[:programming_expression_key]
-      @programming_expression = ProgrammingEnvironment.find_by_name(params[:programming_environment_name])&.programming_expressions&.find_by_key(params[:programming_expression_key])
-      return render :not_found unless @programming_expression
-      return head :forbidden unless can?(:read, @programming_expression)
-      @programming_environment_categories = @programming_expression.programming_environment.categories.select {|c| c.programming_expressions.count > 0}.map(&:summarize_for_environment_show)
+      @programming_environment_categories = @programming_expression.programming_environment.categories_for_navigation
       return render :show
     end
     render :not_found
@@ -94,13 +125,28 @@ class ProgrammingExpressionsController < ApplicationController
   # POST /programming_expressions/:id/clone
   def clone
     return render :not_found unless @programming_expression
-    return render :not_acceptable unless params[:destinationProgrammingEnvironmentName]
+    return render(status: not_acceptable, plain: 'Must provide destination programming environment') unless params[:destinationProgrammingEnvironmentName]
     begin
       new_exp = @programming_expression.clone_to_programming_environment(params[:destinationProgrammingEnvironmentName], params[:destinationCategoryKey])
       render(status: 200, json: {editUrl: edit_programming_expression_path(new_exp)})
     rescue => err
       render(json: {error: err.message}.to_json, status: :not_acceptable)
     end
+  end
+
+  def docs_show
+    if DCDO.get('use-studio-code-docs', false)
+      return render :not_found unless @programming_expression
+      @programming_environment_categories = @programming_expression.programming_environment.categories_for_navigation
+      return render :show
+    end
+    render_proxied_url(
+      "https://curriculum.code.org/docs/#{params[:programming_environment_name]}/#{params[:programming_expression_key]}/",
+      allowed_content_types: nil,
+      allowed_hostname_suffixes: %w(curriculum.code.org),
+      expiry_time: EXPIRY_TIME,
+      infer_content_type: true
+    )
   end
 
   private
@@ -123,5 +169,9 @@ class ProgrammingExpressionsController < ApplicationController
       examples: [:name, :description, :code, :app, :image, :app_display_type, :embed_app_with_code_height]
     )
     transformed_params
+  end
+
+  def set_expression_by_keys
+    @programming_expression = ProgrammingEnvironment.find_by_name(params[:programming_environment_name])&.programming_expressions&.find_by_key(params[:programming_expression_key])
   end
 end

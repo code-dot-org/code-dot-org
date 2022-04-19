@@ -6,23 +6,16 @@
           "name": "Spotify Playlist (كل الأعمار)"
         },
         "list_of_poems/poem-art/2021": {
-          "name": "",
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
           "type": "شرائح"
         },
         "poem_art_celebration/poem-art/2021": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "poem_art_events/poem-art/2021": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "poem_art_imagery/poem-art/2021": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "poem_art_introduction/poem-art/2021": {
@@ -32,17 +25,13 @@
         },
         "csf-artist-intro-video/artist/unversioned": {
           "name": "تقديم الفنان",
-          "url": "",
           "type": "فيديو الطالب"
         },
         "csf-turns-angles-doc/artist/unversioned": {
-          "name": "لفات وزوايا",
-          "url": "",
-          "type": ""
+          "name": "لفات وزوايا"
         },
         "csf-turns-angles-video/artist/unversioned": {
           "name": "لفات وزوايا",
-          "url": "",
           "type": "فيديو الطالب"
         },
         "dance-party-playlist/dance/unversioned": {
@@ -71,6 +60,429 @@
         "ai-training/oceans/unversioned": {
           "name": "الذكاء الاصطناعي: بيانات التدريب والتحيز",
           "type": "فيديو"
+        },
+        "lesson_plans/courseb/2018": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings/courseb/2018": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum/courseb/2018": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary/courseb/2018": {
+          "name": "المفردات"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings/coursea/2018": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum/coursea/2018": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary/coursea/2018": {
+          "name": "المفردات"
+        },
+        "lesson_plans/coursed/2018": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings/coursed/2018": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum/coursed/2018": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary/coursed/2018": {
+          "name": "المفردات"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings/coursef/2018": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum/coursef/2018": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary/coursef/2018": {
+          "name": "المفردات"
+        },
+        "lesson_plans/express/2018": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings/express/2018": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum/express/2018": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary/express/2018": {
+          "name": "المفردات"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings/coursee/2018": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum/coursee/2018": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary/coursee/2018": {
+          "name": "المفردات"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings/coursec/2018": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum/coursec/2018": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary/coursec/2018": {
+          "name": "المفردات"
+        },
+        "code_introduced_1/csd/2018": {
+          "name": "الكود البرمجي المقدَّم"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings_2/csd/2018": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum_2/csd/2018": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary_2/csd/2018": {
+          "name": "المفردات"
+        },
+        "code_introduced_3/csd/2018": {
+          "name": "الكود البرمجي المقدَّم"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings_5/csd/2018": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum_5/csd/2018": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary_5/csd/2018": {
+          "name": "المفردات"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings_4/csd/2018": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum_4/csd/2018": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary_4/csd/2018": {
+          "name": "المفردات"
+        },
+        "code_introduced_2/csd/2018": {
+          "name": "الكود البرمجي المقدَّم"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings_3/csd/2018": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum_3/csd/2018": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary_3/csd/2018": {
+          "name": "المفردات"
+        },
+        "code_introduced/csd/2018": {
+          "name": "الكود البرمجي المقدَّم"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings_1/csd/2018": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum_1/csd/2018": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary_1/csd/2018": {
+          "name": "المفردات"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings/csd/2018": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum/csd/2018": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary/csd/2018": {
+          "name": "المفردات"
+        },
+        "curriculum_guide/coursea/2019": {
+          "name": "دليل المقرر الدراسي"
+        },
+        "lesson_plans/coursea/2019": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings/coursea/2019": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum/coursea/2019": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary/coursea/2019": {
+          "name": "المفردات"
+        },
+        "curriculum_guide/courseb/2019": {
+          "name": "دليل المقرر الدراسي"
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings/courseb/2019": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum/courseb/2019": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary/courseb/2019": {
+          "name": "المفردات"
+        },
+        "curriculum_guide/coursed/2019": {
+          "name": "دليل المقرر الدراسي"
+        },
+        "lesson_plans/coursed/2019": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings/coursed/2019": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum/coursed/2019": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary/coursed/2019": {
+          "name": "المفردات"
+        },
+        "curriculum_guide/coursef/2019": {
+          "name": "دليل المقرر الدراسي"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings/coursef/2019": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum/coursef/2019": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary/coursef/2019": {
+          "name": "المفردات"
+        },
+        "curriculum_guide/coursee/2019": {
+          "name": "دليل المقرر الدراسي"
+        },
+        "lesson_plans/coursee/2019": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings/coursee/2019": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum/coursee/2019": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary/coursee/2019": {
+          "name": "المفردات"
+        },
+        "lesson_plans/express/2019": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings/express/2019": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum/express/2019": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary/express/2019": {
+          "name": "المفردات"
+        },
+        "curriculum_guide/coursec/2019": {
+          "name": "دليل المقرر الدراسي"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings/coursec/2019": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum/coursec/2019": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary/coursec/2019": {
+          "name": "المفردات"
+        },
+        "teacher_forum/csd/2019": {
+          "name": "منتدى المعلم"
+        },
+        "code_introduced_1/csd/2019": {
+          "name": "الكود البرمجي المقدَّم"
+        },
+        "lesson_plans_2/csd/2019": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings_2/csd/2019": {
+          "name": "تعيينات قياسية"
+        },
+        "vocabulary_2/csd/2019": {
+          "name": "المفردات"
+        },
+        "code_introduced_3/csd/2019": {
+          "name": "الكود البرمجي المقدَّم"
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings_5/csd/2019": {
+          "name": "تعيينات قياسية"
+        },
+        "vocabulary_5/csd/2019": {
+          "name": "المفردات"
+        },
+        "code_introduced_2/csd/2019": {
+          "name": "الكود البرمجي المقدَّم"
+        },
+        "lesson_plans_3/csd/2019": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings_3/csd/2019": {
+          "name": "تعيينات قياسية"
+        },
+        "vocabulary_3/csd/2019": {
+          "name": "المفردات"
+        },
+        "lesson_plans_4/csd/2019": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings_4/csd/2019": {
+          "name": "تعيينات قياسية"
+        },
+        "vocabulary_4/csd/2019": {
+          "name": "المفردات"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings/csd/2019": {
+          "name": "تعيينات قياسية"
+        },
+        "vocabulary/csd/2019": {
+          "name": "المفردات"
+        },
+        "code_introduced/csd/2019": {
+          "name": "الكود البرمجي المقدَّم"
+        },
+        "lesson_plans_1/csd/2019": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings_1/csd/2019": {
+          "name": "تعيينات قياسية"
+        },
+        "vocabulary_1/csd/2019": {
+          "name": "المفردات"
+        },
+        "code_introduced_1/csd/2017": {
+          "name": "الكود البرمجي المقدَّم"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings_2/csd/2017": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum_2/csd/2017": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary_2/csd/2017": {
+          "name": "المفردات"
+        },
+        "code_introduced_3/csd/2017": {
+          "name": "الكود البرمجي المقدَّم"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings_5/csd/2017": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum_5/csd/2017": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary_5/csd/2017": {
+          "name": "المفردات"
+        },
+        "code_introduced/csd/2017": {
+          "name": "الكود البرمجي المقدَّم"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings_1/csd/2017": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum_1/csd/2017": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary_1/csd/2017": {
+          "name": "المفردات"
+        },
+        "lesson_plans/csd/2017": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings/csd/2017": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum/csd/2017": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary/csd/2017": {
+          "name": "المفردات"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings_4/csd/2017": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum_4/csd/2017": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary_4/csd/2017": {
+          "name": "المفردات"
+        },
+        "code_introduced_2/csd/2017": {
+          "name": "الكود البرمجي المقدَّم"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings_3/csd/2017": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum_3/csd/2017": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary_3/csd/2017": {
+          "name": "المفردات"
         },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "قائمة القصائد.",
@@ -401,7 +813,7 @@
         "unplugged-video-big-event/courseb/2021": {
           "name": "الحدث الكبير",
           "url": "https://youtu.be/u0WV9shCoak",
-          "type": "فيديو نشاط"
+          "type": "فيديو"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "الحدث الكبير",
@@ -479,8 +891,7 @@
         },
         "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
           "name": "الأمان في عالمي الافتراضي: شرائح عرض الدرس",
-          "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit",
-          "type": ""
+          "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit"
         },
         "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
           "name": "الأمان في عالمي الافتراضي: عالمي الافتراضي",
@@ -494,8 +905,7 @@
         },
         "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
           "name": "الأمان في عالمي الافتراضي: لحظة \"توقف وفكر\"!",
-          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
-          "type": ""
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
         },
         "pair-programming-vid/coursea/2021": {
           "name": "البرمجة الزوجية",
@@ -693,17 +1103,14 @@
         },
         "implementation_guide/coursea/2021": {
           "name": "دليل التنفيذ",
-          "url": "",
           "type": "مصدر"
         },
         "lesson_type_guide/coursea/2021": {
           "name": "دليل نوع الدرس",
-          "url": "",
           "type": "مصدر"
         },
         "debugging_guide/coursea/2021": {
           "name": "دليل إيجاد وتصحيح الخلل البرمجي",
-          "url": "",
           "type": "مصدر"
         },
         "curriculum_guide_1/coursea/2021": {
@@ -713,12 +1120,10 @@
         },
         "2021_change_log/coursea/2021": {
           "name": "سجل التغيير ٢٠٢١",
-          "url": "",
           "type": "مصدر"
         },
         "teacher_forum_1/coursea/2021": {
           "name": "منتدى المعلم",
-          "url": "",
           "type": "مصدر"
         },
         "virtual_lesson_modifications/coursea/2021": {
@@ -1382,7 +1787,7 @@
           "type": "نشرة"
         },
         "digital-sharing-lesson/coursee/2021": {
-          "name": "خطة درس النشر الالكتروني",
+          "name": "خطة درس النشر الإلكتروني",
           "url": "https://docs.google.com/document/d/1YZCCjahQ9_3jYaCeZU4J4-Y_e7_6xP_XMJ7bNw1au1w/edit?usp=sharing",
           "type": "مصدر"
         },
@@ -1673,14 +2078,10 @@
           "type": "مصدر"
         },
         "csd_curriculum_guide/csd/2021": {
-          "type": "مصدر",
-          "name": "",
-          "url": ""
+          "type": "مصدر"
         },
         "csd_implementation_guide/csd/2021": {
-          "type": "مصدر",
-          "name": "",
-          "url": ""
+          "type": "مصدر"
         },
         "unit-4-the-design-process/csd/2021": {
           "type": "شرائح"
@@ -1698,9 +2099,7 @@
           "type": "مصدر"
         },
         "computer-science-practices/csd/2021": {
-          "type": "تأملات",
-          "name": "",
-          "url": ""
+          "type": "تأملات"
         },
         "paper-prototypes/csd/2021": {
           "name": "النماذج الورقية الأولية"
@@ -1754,8 +2153,7 @@
           "name": "عرض التطبيق"
         },
         "teacher_forum/csd/2021": {
-          "name": "منتدى المعلم",
-          "url": ""
+          "name": "منتدى المعلم"
         },
         "designing_screens_with_code/csd/2021": {
           "name": "تصميم الشاشات باستخدام الكود",
@@ -1861,306 +2259,103 @@
           "type": "مصدر"
         },
         "unit-5-data-society/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "representing-information-1/csd/2021": {
-          "name": "تمثيل المعلومات",
-          "url": "",
-          "type": ""
-        },
-        "representing-information-exemplar-2019/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "animal-shapes/csd/2021": {
-          "name": "",
-          "url": ""
-        },
-        "representing_information_2/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "ascii-exemplar-2019/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "تمثيل المعلومات"
         },
         "ascii-text/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
-        "ascii-challenges/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "ascii_challenges/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "الحل النموذجي"
         },
         "how-computers-work-data-and-binary/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
-        "representing-numbers-2021/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "number-cards-1/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "representing-numbers-exemplar-2019/csd/2021": {
-          "name": "تمثيل الأرقام",
-          "url": "",
-          "type": ""
-        },
-        "number-cards/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "pet-records-exemplar-2019/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "activity-guide-pet-records/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "ascii-to-binary-table/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "تمثيل الأرقام"
         },
         "keeping-data-secret-exemplar-2019/csd/2021": {
-          "name": "الحفاظ على سرية البيانات",
-          "url": "",
-          "type": ""
-        },
-        "keeping-data-secret/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "الحفاظ على سرية البيانات"
         },
         "unit_5_data_society/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
-        "secret_messages_2021/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "medical_records/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "الحل النموذجي"
         },
         "create-a-representation-exemplar-2019/csd/2021": {
-          "name": "المشروع - إنشاء تمثيل",
-          "url": "",
-          "type": ""
+          "name": "المشروع - إنشاء تمثيل"
         },
         "encode-a-thing/csd/2021": {
-          "name": "المشروع - إنشاء تمثيل",
-          "url": ""
+          "name": "المشروع - إنشاء تمثيل"
         },
         "unit_5_data_society_1/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "create_a_representation/csd/2021": {
-          "name": "المشروع - إنشاء تمثيل",
-          "url": "",
-          "type": ""
-        },
-        "create_a_representation_-_student_checklist/csd/2021": {
-          "name": "",
-          "url": ""
-        },
-        "create_a_representation_marked_rubrics/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "problem-solving-with-data-exemplar-2019/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "problem-solving-with-data/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "structuring-data-2021/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "المشروع - إنشاء تمثيل"
         },
         "structuring_data/csd/2021": {
-          "name": "هيكلة البيانات",
-          "url": "",
-          "type": ""
+          "name": "هيكلة البيانات"
         },
         "interpreting-data-exemplar-2019/csd/2021": {
-          "name": "تفسير البيانات",
-          "url": "",
-          "type": ""
+          "name": "تفسير البيانات"
         },
         "interpreting-data/csd/2021": {
-          "name": "تفسير البيانات",
-          "url": "",
-          "type": ""
+          "name": "تفسير البيانات"
         },
         "interpreting-data-1/csd/2021": {
           "name": "تفسير البيانات",
-          "url": "",
           "type": "مصدر"
         },
-        "making-decisions-with-data-exemplar-2019/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "making-decisions-with-data/csd/2021": {
-          "name": "اتخاذ القرارات باستخدام البيانات",
-          "url": "",
-          "type": ""
+          "name": "اتخاذ القرارات باستخدام البيانات"
         },
         "problem-solving-process-with-data/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
         },
         "automating-data-decisions-exemplar-2019/csd/2021": {
-          "name": "أتمتة قرارات البيانات",
-          "url": "",
-          "type": ""
+          "name": "أتمتة قرارات البيانات"
         },
         "data-decisions-resource/csd/2021": {
           "name": "أتمتة قرارات البيانات",
-          "url": "",
           "type": "مصدر"
         },
         "automating-data-decisions-1/csd/2021": {
-          "name": "أتمتة قرارات البيانات",
-          "url": "",
-          "type": ""
+          "name": "أتمتة قرارات البيانات"
         },
         "how-big-data-is-used-in-amazon-recommendation-systems/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "why-are-so-many-drivers-obsessed-with-waze/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "netflix-quick-guide-how-does-netflix-make-tv-show-and-movie-suggestions/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "data-in-the-real-world-exemplar-2019/csd/2021": {
-          "name": "البيانات في العالم الحقيقي",
-          "url": "",
-          "type": ""
+          "name": "البيانات في العالم الحقيقي"
         },
         "data-in-the-real-world/csd/2021": {
-          "name": "البيانات في العالم الحقيقي",
-          "url": "",
-          "type": ""
+          "name": "البيانات في العالم الحقيقي"
         },
         "video_impact_on_society/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "video_machine_learning/csd/2021": {
           "name": "فيديو: التعلم الآلي",
-          "url": "",
           "type": "فيديو"
         },
         "video_training_data_and_bias/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
         "make-a-recommendation-peer-review-2019/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "استعراض النظراء"
         },
-        "make-a-recommendation-1/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "solve-a-data-problem/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "project_guide_exemplar/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "peer_review_exemplar_1/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "peer_review_exemplar_2/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "unit_5_data_society_2/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
-        },
-        "make_a_recommendation_-_student_checklist/csd/2021": {
-          "name": "",
-          "url": ""
-        },
-        "sample_marked_rubrics_3/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "all_resources_5/csd/2021": {
-          "name": "",
-          "url": ""
-        },
-        "all_standards_5/csd/2021": {
-          "name": "",
-          "url": ""
-        },
-        "all_vocabulary_5/csd/2021": {
-          "name": "",
-          "url": ""
-        },
-        "csd_guide_to_using_resources/csd/2021": {
-          "name": "",
-          "url": ""
         },
         "csd_unit_3_-_interactive_animations_and_games/csd/2021": {
           "type": "شرائح"
@@ -2286,193 +2481,42 @@
         "teacher_forum_1/csd/2021": {
           "name": "منتدى المعلم"
         },
-        "aluminum-boats-exemplar-2020/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "aluminum-boats-activity-guide-2020/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "how-to-videos/csd/2021": {
-          "name": "",
-          "url": ""
-        },
         "csd_unit_1_-_problem_solving_and_computing/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "شرائح"
         },
         "solving-problems-exemplar-2020/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "الحل النموذجي"
         },
-        "solving-problems-activity-guide-2020/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "what-is-a-computer-2020/csd/2021": {
-          "name": "ما هو الكمبيوتر؟",
-          "url": "",
-          "type": ""
+          "name": "ما هو الكمبيوتر؟"
         },
         "what-is-a-computer-1-2-3/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
-        },
-        "what-is-a-computer-version-b/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "what-is-a-computer-version-a/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "input-and-output-2020/csd/2021": {
-          "name": "الإدخال والإخراج",
-          "url": "",
-          "type": ""
+          "name": "الإدخال والإخراج"
         },
         "input-and-output-1/csd/2021": {
-          "name": "الإدخال والإخراج",
-          "url": "",
-          "type": ""
-        },
-        "processing-2020/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "apps-with-processing/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
+          "name": "الإدخال والإخراج"
         },
         "what-do-computers-do/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "فيديو"
         },
-        "storage-1/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "storage/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "project-propose-an-app-2020/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "app-proposal-project/csd/2021": {
-          "name": "التطبيقات وحل المشكلات",
-          "url": ""
+          "name": "التطبيقات وحل المشكلات"
         },
         "apps-and-problem-solving-peer-review-2019/csd/2021": {
           "name": "التطبيقات وحل المشكلات",
-          "url": "",
           "type": "استعراض النظراء"
         },
-        "apps-and-problem-solving-marked-rubrics/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "peer_review_exemplar/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
         "apps_and_problem_solving/csd/2021": {
-          "name": "التطبيقات وحل المشكلات",
-          "url": "",
-          "type": ""
+          "name": "التطبيقات وحل المشكلات"
         },
         "apps_and_problem_solving_-_student_checklist/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
-        },
-        "intro-to-problem-solving-newspaper-table-2020/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "build-a-newspaper-table/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "intro-to-problem-solving-spaghetti-bridge-2020/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "spaghetti-bridge-activity-guide/csd/2021": {
-          "name": "",
-          "url": ""
-        },
-        "intro-to-problem-solving-paper-tower-2020/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "paper-planes/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "plane-how-to-videos/csd/2021": {
-          "name": "",
-          "url": ""
-        },
-        "exploring-problem-solving-animal-theme-2020/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
         },
         "solving-problems-tangrams-2020/csd/2021": {
-          "name": "",
-          "url": "",
           "type": "مصدر"
-        },
-        "solving-problems-activity-guide-animal-2020/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "exploring-problem-solving-games-theme-2020/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "solving-problems-activity-guide-game-2020/csd/2021": {
-          "name": "",
-          "url": "",
-          "type": ""
-        },
-        "all_resources/csd/2021": {
-          "name": "",
-          "url": ""
-        },
-        "all_standards/csd/2021": {
-          "name": "",
-          "url": ""
-        },
-        "all_vocabulary/csd/2021": {
-          "name": "",
-          "url": ""
         },
         "csd_unit_2_-_web_development/csd/2021": {
           "type": "شرائح"
@@ -2569,6 +2613,120 @@
         },
         "website-for-a-purpose/csd/2021": {
           "type": "استعراض النظراء"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings/pre-express/2020": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum/pre-express/2020": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary/pre-express/2020": {
+          "name": "المفردات"
+        },
+        "lesson_plans/express/2020": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings/express/2020": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum/express/2020": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary/express/2020": {
+          "name": "المفردات"
+        },
+        "curriculum_guide/courseb/2020": {
+          "name": "دليل المقرر الدراسي"
+        },
+        "lesson_plans/courseb/2020": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings/courseb/2020": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum/courseb/2020": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary/courseb/2020": {
+          "name": "المفردات"
+        },
+        "curriculum_guide/coursed/2020": {
+          "name": "دليل المقرر الدراسي"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings/coursed/2020": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum/coursed/2020": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary/coursed/2020": {
+          "name": "المفردات"
+        },
+        "curriculum_guide/coursec/2020": {
+          "name": "دليل المقرر الدراسي"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings/coursec/2020": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum/coursec/2020": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary/coursec/2020": {
+          "name": "المفردات"
+        },
+        "curriculum_guide/coursee/2020": {
+          "name": "دليل المقرر الدراسي"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings/coursee/2020": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum/coursee/2020": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary/coursee/2020": {
+          "name": "المفردات"
+        },
+        "curriculum_guide/coursea/2020": {
+          "name": "دليل المقرر الدراسي"
+        },
+        "lesson_plans/coursea/2020": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings/coursea/2020": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum/coursea/2020": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary/coursea/2020": {
+          "name": "المفردات"
+        },
+        "curriculum_guide/coursef/2020": {
+          "name": "دليل المقرر الدراسي"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "مخطّطات الدّروس"
+        },
+        "standard_mappings/coursef/2020": {
+          "name": "تعيينات قياسية"
+        },
+        "teacher_forum/coursef/2020": {
+          "name": "منتدى المعلم"
+        },
+        "vocabulary/coursef/2020": {
+          "name": "المفردات"
         }
       }
     }

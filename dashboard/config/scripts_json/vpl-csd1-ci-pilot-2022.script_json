@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-28 04:04:34 UTC",
+    "serialized_at": "2022-04-15 22:29:26 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -149,9 +149,21 @@
       "key": "d8aa1386-a922-49b6-90dd-5a9c975d3208",
       "position": 1,
       "properties": {
+        "progression_name": "Unit Overview"
       },
       "seeding_key": {
         "activity_section.key": "d8aa1386-a922-49b6-90dd-5a9c975d3208",
+        "lesson_activity.key": "8a8fbc25-01dd-4124-b552-2e166efbc22b"
+      }
+    },
+    {
+      "key": "6d63c390-0b37-482e-93ab-70d76a90aa09",
+      "position": 2,
+      "properties": {
+        "progression_name": "Explore the first week of curriculum"
+      },
+      "seeding_key": {
+        "activity_section.key": "6d63c390-0b37-482e-93ab-70d76a90aa09",
         "lesson_activity.key": "8a8fbc25-01dd-4124-b552-2e166efbc22b"
       }
     },
@@ -187,10 +199,226 @@
     }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U1"
+        ],
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd1-ci-pilot-2022",
+        "activity_section.key": "d8aa1386-a922-49b6-90dd-5a9c975d3208"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-ModuleOverview-U1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U1L2"
+        ],
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U1L2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd1-ci-pilot-2022",
+        "activity_section.key": "d8aa1386-a922-49b6-90dd-5a9c975d3208"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-Unit_Overview_U1L2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3"
+        ],
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd1-ci-pilot-2022",
+        "activity_section.key": "d8aa1386-a922-49b6-90dd-5a9c975d3208"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-U1L5"
+        ],
+        "progression": "Explore the first week of curriculum"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-U1L5"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd1-ci-pilot-2022",
+        "activity_section.key": "6d63c390-0b37-482e-93ab-70d76a90aa09"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-2-week1-U1L5"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-vocab-c4u-U1L6"
+        ],
+        "progression": "Explore the first week of curriculum"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-vocab-c4u-U1L6"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd1-ci-pilot-2022",
+        "activity_section.key": "6d63c390-0b37-482e-93ab-70d76a90aa09"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-vocab-c4u-U1L6"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD What Makes a Computer a Computer Video_2022"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd1-ci-pilot-2022",
+        "activity_section.key": "5c9853d0-de30-4c85-84f7-2ef4d2801550"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD What Makes a Computer a Computer Video_2022"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-ModuleOverview-U1",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd1-ci-pilot-2022",
+        "activity_section.key": "d8aa1386-a922-49b6-90dd-5a9c975d3208"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-Unit_Overview_U1L2",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U1L2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd1-ci-pilot-2022",
+        "activity_section.key": "d8aa1386-a922-49b6-90dd-5a9c975d3208"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd1-ci-pilot-2022",
+        "activity_section.key": "d8aa1386-a922-49b6-90dd-5a9c975d3208"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-2-week1-U1L5",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-U1L5"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd1-ci-pilot-2022",
+        "activity_section.key": "6d63c390-0b37-482e-93ab-70d76a90aa09"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-vocab-c4u-U1L6",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-vocab-c4u-U1L6"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd1-ci-pilot-2022",
+        "activity_section.key": "6d63c390-0b37-482e-93ab-70d76a90aa09"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD What Makes a Computer a Computer Video_2022",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD What Makes a Computer a Computer Video_2022"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd1-ci-pilot-2022",
+        "activity_section.key": "5c9853d0-de30-4c85-84f7-2ef4d2801550"
+      }
+    }
   ],
   "resources": [
 

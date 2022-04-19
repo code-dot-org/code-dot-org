@@ -1,6 +1,6 @@
 name 'CSA U3L13-L1_2022'
 display_name 'Data for Social Good Project'
-description 'level description here'
+description 'Choose your user scenario (or create your own!) for your Data for Social Good Project.'
 
 sublevels
 level 'CSA U3L13-L1a_2022'

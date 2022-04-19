@@ -747,6 +747,8 @@ ca:
           lesson_groups:
             required:
               display_name: Vista general
+        basketball:
+          name: bàsquet
         csd2-2017:
           lessons:
             Lists:
@@ -1874,9 +1876,6 @@ ca:
               display_name: Vista general
         dance-2019:
           description: Crea un codi amb la teva pròpia festa amb ball i comparteix-la amb els teus amics!
-          lessons:
-            Dance Party:
-              name: Festa de ball
           student_description: Crea un codi amb la teva pròpia festa amb ball i comparteix-la amb els teus amics!
         k5-onlinepd-2019:
           lessons:
@@ -2641,6 +2640,10 @@ ca:
           lessons:
             lesson-6:
               name: Variables
+        csa3-2022:
+          lessons:
+            lesson-5:
+              name: Per bucles
         cs4all-invasive-species:
           lessons:
             lesson-12:

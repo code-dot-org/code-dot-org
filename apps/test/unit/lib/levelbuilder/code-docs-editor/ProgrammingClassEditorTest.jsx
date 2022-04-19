@@ -20,7 +20,9 @@ describe('ProgrammingClassEditor', () => {
       syntax: 'Painter()',
       returnValue: 'none',
       tips: 'some tips on how to use this class',
-      examples: [{name: 'example 1'}]
+      examples: [{name: 'example 1'}],
+      fields: [{name: 'fields 1'}],
+      methods: [{key: 'method1', name: 'method 1'}]
     };
     defaultProps = {
       initialProgrammingClass,
@@ -138,6 +140,30 @@ describe('ProgrammingClassEditor', () => {
     expect(orderableExampleList.props().list.length).to.equal(1);
   });
 
+  it('displays initial values in input fields in fields section', () => {
+    const wrapper = shallow(<ProgrammingClassEditor {...defaultProps} />);
+    // Fields section
+    const fieldsSection = wrapper.find('CollapsibleEditorSection').at(4);
+    expect(fieldsSection.props().title).to.equal('Fields');
+    const orderableFieldList = fieldsSection.find('OrderableList');
+    expect(orderableFieldList.props().addButtonText).to.equal(
+      'Add Another Field'
+    );
+    expect(orderableFieldList.props().list.length).to.equal(1);
+  });
+
+  it('displays initial values in input methods in methods section', () => {
+    const wrapper = shallow(<ProgrammingClassEditor {...defaultProps} />);
+    // Methods section
+    const methodsSection = wrapper.find('CollapsibleEditorSection').at(5);
+    expect(methodsSection.props().title).to.equal('Methods');
+    const orderableMethodList = methodsSection.find('OrderableList');
+    expect(orderableMethodList.props().addButtonText).to.equal(
+      'Add Another Method'
+    );
+    expect(orderableMethodList.props().list.length).to.equal(1);
+  });
+
   it('attempts to save when save is pressed', () => {
     const store = getStore();
     const wrapper = mount(
@@ -166,7 +192,9 @@ describe('ProgrammingClassEditor', () => {
         'returnValue',
         'syntax',
         'tips',
-        'examples'
+        'examples',
+        'fields',
+        'methods'
       ].sort()
     );
     expect(fetchCallBody.name).to.equal('Painter');

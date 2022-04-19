@@ -1,6 +1,8 @@
 {
   "abortedTestResult": "{className} > {methodName} PRZERWANY",
   "addAComment": "Dodaj komentarz",
+  "authorizerNearLimit": "Uruchomiłeś swój kod zbyt wiele razy w ciągu ostatniej godziny. Masz {attemptsLeft} prób, zanim Twoje konto zostanie trwale zablokowane i nie będziesz mógł uruchomić kodu Java. Odczekaj 15 minut, zanim spróbujesz ponownie.",
+  "authorizerTokenUsed": "Próbujesz ponownie użyć tokena, który już uruchomił Twój kod. Przed ponowną próbą sprawdź, czy jesteś w bezpiecznej sieci. Jeśli uważasz, że ta wiadomość jest błędna, skontaktuj się z support@code.org.",
   "authorLabel": "autor",
   "allFilesCompile": "Kompilacja wszystkich plików! ",
   "backpackFileNameConflictWarning": "Zapisanie spowoduje nadpisanie istniejącego pliku w twoim plecaku",
@@ -11,6 +13,7 @@
   "backpackSaveErrorMessage": "Spróbuj ponownie",
   "cancel": "Anuluj",
   "clearConsole": "Wyczyść konsolę",
+  "classroomBlocked": "Twoja sekcja uruchomiła Twój kod zbyt wiele razy i została zablokowana. Poproś swojego nauczyciela o kontakt z support@code.org, aby odblokować Twoją sekcję.",
   "classNotFound": "Błąd: w co najmniej jednym pliku Java brakuje definicji klasy.",
   "commentUpdateError": "Wystąpił błąd podczas przetwarzania Twojego żądania, spróbuj ponownie.",
   "commit": "Zatwierdź",
@@ -90,10 +93,11 @@
   "markIncomplete": "Oznacz jako nie ukończone",
   "missingFilenameError": "Nazwa Folderu nie może być pusta.",
   "newFile": "Nowy plik",
-  "noMainMethod": "Błąd: Twój program nie zawiera metody głównej. ",
   "noCodeReviewComments": "Tutaj pojawią się komentarze Twojego nauczyciela.",
   "noCodeReviewUntilStudentEditsCode": "Nie możesz zostawiać komentarzy, dopóki właściciel projektu nie zmodyfikuje domyślnego kodu i nie kliknie przycisku Uruchom",
+  "noMainMethod": "Błąd: Twój program nie zawiera metody głównej. ",
   "noOtherReviews": "Żadne inne projekty nie są jeszcze gotowe do przeglądu.",
+  "noTestsFound": "Nie znaleziono testów.",
   "onlyVisibleToYou": "uwagi nauczyciela są widoczne tylko dla Ciebie",
   "programCompleted": "Program zakończony.",
   "refresh": "Odśwież",
@@ -117,5 +121,6 @@
   "teacherLabel": "nauczyciel",
   "togglePeerReviewError": "Błąd podczas włączania/wyłączania wzajemnej oceny, spróbuj ponownie.",
   "unknownError": "Ups. Natrafiliśmy na błąd po naszej stronie. Spróbuj ponownie uruchomić program. Jeśli ten błąd będzie się powtarzał, skontaktuj się z nami pod adresem support@code.org. Pamiętaj o podaniu w wiadomości identyfikatora połączenia {connectionId}.\n{type}",
+  "userBlocked": "Uruchomiłeś kod zbyt wiele razy i Twoje konto zostało zablokowane. Skontaktuj się z support@code.org, aby odblokować swoje konto.",
   "yourPeer": "twój rówieśnik"
 }

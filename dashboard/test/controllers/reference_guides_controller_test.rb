@@ -9,7 +9,10 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
     @levelbuilder = create :levelbuilder
     @unit_group = create :unit_group, family_name: 'bogus-course', version_year: '2022', name: 'bogus-course-2022'
     CourseOffering.add_course_offering(@unit_group)
+    # category
     @reference_guide = create :reference_guide, course_version: @unit_group.course_version
+    # subcategory
+    @reference_guide_subcategory = create :reference_guide, course_version: @unit_group.course_version, parent_reference_guide_key: @reference_guide.key
 
     @in_development_unit_group = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.in_development,
       family_name: 'indev-course', version_year: '2022', name: 'indev-course-2022'
@@ -37,9 +40,7 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
 
     show_data = css_select('script[data-referenceguide]').first.attribute('data-referenceguide').to_s
 
-    reference_guide = create :reference_guide
-
-    assert_equal reference_guide.summarize_for_show.to_json, show_data
+    assert_equal @reference_guide.summarize_for_show.to_json, show_data
   end
 
   test 'data is passed to edit_all page' do
@@ -52,7 +53,7 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
 
     show_data = css_select('script[data-referenceguides]').first.attribute('data-referenceguides').to_s
 
-    assert_equal [@reference_guide.summarize_for_index].to_json, show_data
+    assert_equal [@reference_guide.summarize_for_index, @reference_guide_subcategory.summarize_for_index].to_json, show_data
   end
 
   test 'ref guide is updated through update route' do
@@ -88,6 +89,16 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
     assert_raise ActiveRecord::RecordNotFound do
       editable_reference_guide.reload
     end
+  end
+
+  test 'index redirects to the first guide' do
+    sign_in @levelbuilder
+
+    get :index, params: {
+      course_course_name: @reference_guide.course_offering_version
+    }
+    assert_response :redirect
+    assert_redirected_to "/courses/#{@reference_guide_subcategory.course_offering_version}/guides/#{@reference_guide_subcategory.key}"
   end
 
   test_user_gets_response_for :show, params: -> {{course_course_name: @reference_guide.course_offering_version, key: 'unknown_ref_guide'}}, user: :student, response: :not_found

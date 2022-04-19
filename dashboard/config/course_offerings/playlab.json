@@ -2,5 +2,6 @@
   "key": "playlab",
   "display_name": "Play Lab",
   "category": "hoc",
-  "is_featured": false
+  "is_featured": false,
+  "assignable": true
 }

@@ -1,6 +1,6 @@
 name 'CSA U3L9-L4_2022'
 display_name 'Reversing a 1D Array'
-description 'level description here'
+description 'Reverse 1D arrays for various scenarios.'
 
 sublevels
 level 'CSA U3L9-L4a_2022'

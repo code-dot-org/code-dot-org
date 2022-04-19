@@ -2,6 +2,8 @@
 ga:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: déan sprid nua {ANIMATION_NAME} {LOCATION}
       Dancelab_alternateMoves:
         text: "malartaíodh gach {GROUP} idir {MOVE1} \nagus {MOVE2} gach {N} tomhas"
         options:
@@ -1016,6 +1018,11 @@ ga:
         text: bain {THIS}
       gamelab_edgesDisplace:
         text: cuir cosc ar {SPRITE} bogadh ar an imeall
+      gamelab_everySeconds:
+        text: 'athdhéan gach {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': soicind
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1138,6 +1145,8 @@ ga:
         options:
           EFFECT:
             '"rain"': báisteach
+      gamelab_makeNewScaledSprite:
+        text: déan sprid nua {ANIMATION_NAME} {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: déan sprid nua {ANIMATION_NAME} {LOCATION}
       gamelab_makeProjectile:

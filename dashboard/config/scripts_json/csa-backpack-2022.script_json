@@ -4,11 +4,13 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "is_migrated": true
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2022-03-09 14:06:54 UTC",
+    "family_name": "csa-backpack-2022",
+    "serialized_at": "2022-04-08 15:41:13 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -178,6 +180,28 @@
       }
     },
     {
+      "key": "a854749e-afa6-4bc2-877d-da3d16aa0750",
+      "position": 9,
+      "properties": {
+        "progression_name": "Unit 3 Lesson 3"
+      },
+      "seeding_key": {
+        "activity_section.key": "a854749e-afa6-4bc2-877d-da3d16aa0750",
+        "lesson_activity.key": "058b2e63-6fb1-4a4e-b46d-e6bb8e20cb20"
+      }
+    },
+    {
+      "key": "5899e424-cb83-41b3-848c-61506645fe73",
+      "position": 10,
+      "properties": {
+        "progression_name": "Unit 3 Lesson 6"
+      },
+      "seeding_key": {
+        "activity_section.key": "5899e424-cb83-41b3-848c-61506645fe73",
+        "lesson_activity.key": "058b2e63-6fb1-4a4e-b46d-e6bb8e20cb20"
+      }
+    },
+    {
       "key": "fc9d62f0-0d2c-483c-b108-acaba66dd861",
       "position": 1,
       "properties": {
@@ -229,6 +253,17 @@
       },
       "seeding_key": {
         "activity_section.key": "c572f3b3-f49c-45f9-b49a-25348f266190",
+        "lesson_activity.key": "a04f7dc7-ddd0-49f0-9542-df4f061055b6"
+      }
+    },
+    {
+      "key": "47a5b416-c7e8-42b2-afd7-016a0063be54",
+      "position": 6,
+      "properties": {
+        "progression_name": "Unit 3 Lesson 6"
+      },
+      "seeding_key": {
+        "activity_section.key": "47a5b416-c7e8-42b2-afd7-016a0063be54",
         "lesson_activity.key": "a04f7dc7-ddd0-49f0-9542-df4f061055b6"
       }
     }
@@ -436,6 +471,56 @@
     },
     {
       "chapter": 9,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA UL3 PainterPlus"
+        ],
+        "progression": "Unit 3 Lesson 3"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA UL3 PainterPlus"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "a854749e-afa6-4bc2-877d-da3d16aa0750"
+      },
+      "level_keys": [
+        "CSA UL3 PainterPlus"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U3L6 PainterPlus"
+        ],
+        "progression": "Unit 3 Lesson 6"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L6 PainterPlus"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "5899e424-cb83-41b3-848c-61506645fe73"
+      },
+      "level_keys": [
+        "CSA U3L6 PainterPlus"
+      ]
+    },
+    {
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -460,7 +545,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -485,7 +570,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 13,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -510,7 +595,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 14,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -535,7 +620,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 15,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -557,6 +642,31 @@
       },
       "level_keys": [
         "CSA U2L9 Dessert"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U3L6 Dessert"
+        ],
+        "progression": "Unit 3 Lesson 6"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3L6 Dessert"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "47a5b416-c7e8-42b2-afd7-016a0063be54"
+      },
+      "level_keys": [
+        "CSA U3L6 Dessert"
       ]
     }
   ],
@@ -659,6 +769,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA UL3 PainterPlus",
+        "script_level.level_keys": [
+          "CSA UL3 PainterPlus"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "a854749e-afa6-4bc2-877d-da3d16aa0750"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L6 PainterPlus",
+        "script_level.level_keys": [
+          "CSA U3L6 PainterPlus"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "5899e424-cb83-41b3-848c-61506645fe73"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U2L4 Dessert",
         "script_level.level_keys": [
           "CSA U2L4 Dessert"
@@ -715,6 +849,18 @@
         "lesson_group.key": "",
         "script.name": "csa-backpack-2022",
         "activity_section.key": "c572f3b3-f49c-45f9-b49a-25348f266190"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3L6 Dessert",
+        "script_level.level_keys": [
+          "CSA U3L6 Dessert"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "47a5b416-c7e8-42b2-afd7-016a0063be54"
       }
     }
   ],

@@ -15,10 +15,8 @@ import {
   dismissedRedirectWarning,
   onDismissRedirectWarning
 } from '@cdo/apps/util/dismissVersionRedirect';
-import AssignmentVersionSelector, {
-  setRecommendedAndSelectedVersions
-} from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
-import {assignmentVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import AssignmentVersionSelector from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
+import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -50,7 +48,7 @@ class UnitOverviewHeader extends Component {
     showRedirectWarning: PropTypes.bool,
     showHiddenUnitWarning: PropTypes.bool,
     courseName: PropTypes.string,
-    versions: PropTypes.arrayOf(assignmentVersionShape).isRequired,
+    versions: PropTypes.objectOf(assignmentCourseVersionShape).isRequired,
     userId: PropTypes.number,
 
     // provided by redux
@@ -76,15 +74,11 @@ class UnitOverviewHeader extends Component {
     $('#lesson-heading-extras').appendTo(ReactDOM.findDOMNode(this.protected));
   }
 
-  onChangeVersion = versionYear => {
-    const script = this.props.versions.find(v => v.year === versionYear);
-    if (
-      script &&
-      script.name.length > 0 &&
-      script.name !== this.props.scriptName
-    ) {
+  onChangeVersion = versionId => {
+    const version = this.props.versions[versionId];
+    if (versionId !== this.props.courseVersionId && version) {
       const queryParams = window.location.search || '';
-      window.location.href = `/s/${script.name}${queryParams}`;
+      window.location.href = `${version.path}${queryParams}`;
     }
   };
 
@@ -141,17 +135,6 @@ class UnitOverviewHeader extends Component {
     } else if (showScriptVersionWarning) {
       versionWarningDetails = i18n.wrongCourseVersionWarningDetails();
     }
-
-    // Only display viewable versions in script version dropdown.
-    const filteredVersions = versions.filter(version => version.canViewVersion);
-    const selectedVersion = filteredVersions.find(
-      v => v.name === this.props.scriptName
-    );
-    setRecommendedAndSelectedVersions(
-      filteredVersions,
-      this.props.localeCode,
-      selectedVersion && selectedVersion.year
-    );
 
     return (
       <div>
@@ -222,11 +205,12 @@ class UnitOverviewHeader extends Component {
               <h1 style={styles.title} id="script-title">
                 {unitTitle}
               </h1>
-              {filteredVersions.length > 1 && (
+              {Object.values(versions).length > 1 && (
                 <AssignmentVersionSelector
                   onChangeVersion={this.onChangeVersion}
-                  versions={filteredVersions}
+                  courseVersions={versions}
                   rightJustifiedPopupMenu={true}
+                  selectedCourseVersionId={this.props.courseVersionId}
                 />
               )}
             </div>

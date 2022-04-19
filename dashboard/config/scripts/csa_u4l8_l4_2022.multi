@@ -1,0 +1,18 @@
+name 'CSA U4L8-L4_2022'
+title 'Check for Understanding'
+
+wrong 'wrong'
+right 'right'
+wrong 'wrong'
+wrong 'wrong'
+wrong 'wrong'
+
+markdown <<MARKDOWN
+Which of the following expressions evaluates to `2.0`?
+
+I. `4 / 2`
+
+II. `(double) 4 / 2`
+
+III. `(int) (1.6 + 0.5)`
+MARKDOWN

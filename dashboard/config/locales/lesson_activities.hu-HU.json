@@ -68,14 +68,23 @@
         "e746d53a-16b6-4748-98ce-e04ed834264b": {
           "name": "Összefoglaló"
         },
+        "544fd00b-84f3-47e4-9e02-cb27a6cfbbca": {
+          "name": "Tevékenység"
+        },
         "e12c8da3-986d-488b-bed5-a7bb9e95e393": {
           "name": "Szintek"
         },
         "ee8cbd12-265d-4681-b6c9-05a0a062916d": {
           "name": "Szintek"
         },
+        "82dec89b-f375-4238-a251-ffae17c2dfd1": {
+          "name": "Tevékenység"
+        },
         "a25c23cd-4e73-4a82-882f-7cc0a9fdfeb4": {
           "name": "Szintek"
+        },
+        "7afb9d6e-2c07-44d2-8504-90df0cecc778": {
+          "name": "Értékelés"
         },
         "160cbd69-f567-4fb4-9623-0e69ecec9b3a": {
           "name": "Tevékenység"
@@ -2893,6 +2902,12 @@
         },
         "f5985094-20d7-4316-a052-e7b18a78572e": {
           "name": "Szintek"
+        },
+        "235b3b14-975a-43b6-93bc-d386b857fd6b": {
+          "name": "Első lépések"
+        },
+        "fd06b4db-e3d4-491b-9372-af9a05dc2bb7": {
+          "name": "Tevékenység"
         },
         "544b7b1e-6622-4ce0-b5ed-6c8b8980c832": {
           "name": "Értékelés"

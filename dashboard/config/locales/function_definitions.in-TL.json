@@ -3725,64 +3725,64 @@
         },
         "Course E: Frozen Project_examples_2021": {
           "small flower": {
-            "name": "crwdns2587982:0crwdne2587982:0"
+            "name": "crwdns2585268:0crwdne2585268:0"
           },
           "LOGIC FLOWERS2": {
-            "name": "crwdns2587984:0crwdne2587984:0"
+            "name": "crwdns2585270:0crwdne2585270:0"
           },
           "LOGIC FLOWER": {
-            "name": "crwdns2587986:0crwdne2587986:0"
+            "name": "crwdns2585272:0crwdne2585272:0"
           },
           "LOGIC FLOWERS": {
-            "name": "crwdns2587988:0crwdne2587988:0"
+            "name": "crwdns2585274:0crwdne2585274:0"
           },
           "draw a star": {
-            "name": "crwdns2587990:0crwdne2587990:0",
-            "description": "crwdns2587992:0crwdne2587992:0",
+            "name": "crwdns2585276:0crwdne2585276:0",
+            "description": "crwdns2585278:0crwdne2585278:0",
             "parameters": {
-              "points": "crwdns2587994:0crwdne2587994:0",
-              "length": "crwdns2587996:0crwdne2587996:0"
+              "points": "crwdns2585280:0crwdne2585280:0",
+              "length": "crwdns2585282:0crwdne2585282:0"
             }
           },
           "draw a circle": {
-            "name": "crwdns2587998:0crwdne2587998:0",
-            "description": "crwdns2588000:0crwdne2588000:0",
+            "name": "crwdns2585284:0crwdne2585284:0",
+            "description": "crwdns2585286:0crwdne2585286:0",
             "parameters": {
-              "radius": "crwdns2588002:0crwdne2588002:0"
+              "radius": "crwdns2585288:0crwdne2585288:0"
             }
           },
           "draw a pinwheel": {
-            "name": "crwdns2588004:0crwdne2588004:0",
+            "name": "crwdns2585290:0crwdne2585290:0",
             "parameters": {
-              "sides": "crwdns2588006:0crwdne2588006:0",
-              "length": "crwdns2588008:0crwdne2588008:0",
-              "repeat": "crwdns2588010:0crwdne2588010:0"
+              "sides": "crwdns2585292:0crwdne2585292:0",
+              "length": "crwdns2585294:0crwdne2585294:0",
+              "repeat": "crwdns2585296:0crwdne2585296:0"
             }
           },
           "draw a triangle": {
-            "name": "crwdns2588012:0crwdne2588012:0",
+            "name": "crwdns2585298:0crwdne2585298:0",
             "parameters": {
-              "length": "crwdns2588014:0crwdne2588014:0"
+              "length": "crwdns2585300:0crwdne2585300:0"
             }
           },
           "draw a shape": {
-            "name": "crwdns2588016:0crwdne2588016:0",
+            "name": "crwdns2585302:0crwdne2585302:0",
             "parameters": {
-              "sides": "crwdns2588018:0crwdne2588018:0",
-              "length": "crwdns2588020:0crwdne2588020:0"
+              "sides": "crwdns2585304:0crwdne2585304:0",
+              "length": "crwdns2585306:0crwdne2585306:0"
             }
           },
           "draw a house": {
-            "name": "crwdns2588022:0crwdne2588022:0",
+            "name": "crwdns2585308:0crwdne2585308:0",
             "parameters": {
-              "length": "crwdns2588024:0crwdne2588024:0"
+              "length": "crwdns2585310:0crwdne2585310:0"
             }
           },
           "draw a square": {
-            "name": "crwdns2588026:0crwdne2588026:0",
+            "name": "crwdns2585312:0crwdne2585312:0",
             "parameters": {
-              "length": "crwdns2588028:0crwdne2588028:0",
-              "sides": "crwdns2588030:0crwdne2588030:0"
+              "length": "crwdns2585314:0crwdne2585314:0",
+              "sides": "crwdns2585316:0crwdne2585316:0"
             }
           }
         },
@@ -3943,36 +3943,36 @@
         },
         "Function intro Ryan_2021": {
           "build bridge": {
-            "name": "crwdns2587226:0crwdne2587226:0"
+            "name": "crwdns2583660:0crwdne2583660:0"
           }
         },
         "MC_HOC_2017_07_Cole_2021": {
           "clear path": {
-            "name": "crwdns2587240:0crwdne2587240:0"
+            "name": "crwdns2583674:0crwdne2583674:0"
           }
         },
         "MC_HOC_2017_10_RETRY_2021": {
           "fix long path": {
-            "name": "crwdns2587252:0crwdne2587252:0"
+            "name": "crwdns2583686:0crwdne2583686:0"
           },
           "fix short path": {
-            "name": "crwdns2587254:0crwdne2587254:0"
+            "name": "crwdns2583688:0crwdne2583688:0"
           }
         },
         "MC_HOC_2017_Ali_2021": {
           "build short bridge": {
-            "name": "crwdns2587270:0crwdne2587270:0"
+            "name": "crwdns2583704:0crwdne2583704:0"
           },
           "build long bridge": {
-            "name": "crwdns2587272:0crwdne2587272:0"
+            "name": "crwdns2583706:0crwdne2583706:0"
           }
         },
         "MC_HOC_2017_FP20x20_2021": {
           "function 1": {
-            "name": "crwdns2587282:0crwdne2587282:0"
+            "name": "crwdns2583716:0crwdne2583716:0"
           },
           "function 2": {
-            "name": "crwdns2587284:0crwdne2587284:0"
+            "name": "crwdns2583718:0crwdne2583718:0"
           }
         },
         "courseB_artist_loops_challenge2_2021": {
@@ -3982,18 +3982,18 @@
         },
         "courseC_artist_prog3_2021": {
           "draw flame": {
-            "name": "crwdns2586818:0crwdne2586818:0",
+            "name": "crwdns2580932:0crwdne2580932:0",
             "parameters": {
-              "x": "crwdns2586820:0crwdne2586820:0"
+              "x": "crwdns2580934:0crwdne2580934:0"
             }
           },
           "draw fire": {
-            "name": "crwdns2586822:0crwdne2586822:0"
+            "name": "crwdns2580936:0crwdne2580936:0"
           }
         },
         "courseC_artist_prog4_2021": {
           "booster": {
-            "name": "crwdns2586834:0crwdne2586834:0"
+            "name": "crwdns2580948:0crwdne2580948:0"
           }
         },
         "courseC_data wizard_2021": {
@@ -4003,13 +4003,13 @@
         },
         "courseE_artist_functions10_2021": {
           "do something": {
-            "name": "crwdns2587458:0crwdne2587458:0"
+            "name": "crwdns2583892:0crwdne2583892:0"
           },
           "draw hexagon": {
-            "name": "crwdns2587460:0crwdne2587460:0"
+            "name": "crwdns2583894:0crwdne2583894:0"
           },
           "draw line of hexagons": {
-            "name": "crwdns2587462:0crwdne2587462:0"
+            "name": "crwdns2583896:0crwdne2583896:0"
           }
         },
         "courseE_artist_functions1_dani": {
@@ -4019,10 +4019,10 @@
         },
         "courseE_artist_functions2_2021": {
           "draw a square": {
-            "name": "crwdns2587330:0crwdne2587330:0"
+            "name": "crwdns2583764:0crwdne2583764:0"
           },
           "draw ear stems": {
-            "name": "crwdns2587332:0crwdne2587332:0"
+            "name": "crwdns2583766:0crwdne2583766:0"
           }
         },
         "courseE_artist_functions2_dani": {
@@ -4035,7 +4035,7 @@
         },
         "courseE_artist_functions3_2021": {
           "draw a star": {
-            "name": "crwdns2587338:0crwdne2587338:0"
+            "name": "crwdns2583772:0crwdne2583772:0"
           }
         },
         "courseE_artist_functions4_dani": {
@@ -4045,7 +4045,7 @@
         },
         "courseE_artist_functions5_2021": {
           "draw a star": {
-            "name": "crwdns2587350:0crwdne2587350:0"
+            "name": "crwdns2583784:0crwdne2583784:0"
           }
         },
         "courseE_artist_functions5_dani": {
@@ -4055,106 +4055,106 @@
         },
         "courseE_artist_functions7_2021": {
           "draw a window": {
-            "name": "crwdns2587360:0crwdne2587360:0"
+            "name": "crwdns2583794:0crwdne2583794:0"
           }
         },
         "courseE_artist_functions8_2021": {
           "do something": {
-            "name": "crwdns2587420:0crwdne2587420:0"
+            "name": "crwdns2583854:0crwdne2583854:0"
           },
           "staggered squares": {
-            "name": "crwdns2587422:0crwdne2587422:0"
+            "name": "crwdns2583856:0crwdne2583856:0"
           },
           "draw a line of squares": {
-            "name": "crwdns2587424:0crwdne2587424:0"
+            "name": "crwdns2583858:0crwdne2583858:0"
           },
           "draw square": {
-            "name": "crwdns2587426:0crwdne2587426:0"
+            "name": "crwdns2583860:0crwdne2583860:0"
           }
         },
         "courseE_artist_functions8a_2021": {
           "draw a square": {
-            "name": "crwdns2587368:0crwdne2587368:0"
+            "name": "crwdns2583802:0crwdne2583802:0"
           },
           "do something": {
-            "name": "crwdns2587370:0crwdne2587370:0"
+            "name": "crwdns2583804:0crwdne2583804:0"
           }
         },
         "courseE_artist_functions8b_2021": {
           "draw a line of squares": {
-            "name": "crwdns2587382:0crwdne2587382:0"
+            "name": "crwdns2583816:0crwdne2583816:0"
           },
           "draw square": {
-            "name": "crwdns2587384:0crwdne2587384:0"
+            "name": "crwdns2583818:0crwdne2583818:0"
           },
           "do something": {
-            "name": "crwdns2587386:0crwdne2587386:0"
+            "name": "crwdns2583820:0crwdne2583820:0"
           }
         },
         "courseE_artist_functions8c_2021": {
           "draw a line of squares": {
-            "name": "crwdns2587398:0crwdne2587398:0"
+            "name": "crwdns2583832:0crwdne2583832:0"
           },
           "draw square": {
-            "name": "crwdns2587400:0crwdne2587400:0"
+            "name": "crwdns2583834:0crwdne2583834:0"
           },
           "do something": {
-            "name": "crwdns2587402:0crwdne2587402:0"
+            "name": "crwdns2583836:0crwdne2583836:0"
           },
           "staggered squares": {
-            "name": "crwdns2587404:0crwdne2587404:0"
+            "name": "crwdns2583838:0crwdne2583838:0"
           }
         },
         "courseE_artist_functions9_2021": {
           "do something": {
-            "name": "crwdns2587442:0crwdne2587442:0"
+            "name": "crwdns2583876:0crwdne2583876:0"
           },
           "draw triangle": {
-            "name": "crwdns2587444:0crwdne2587444:0"
+            "name": "crwdns2583878:0crwdne2583878:0"
           },
           "draw line of triangles": {
-            "name": "crwdns2587446:0crwdne2587446:0"
+            "name": "crwdns2583880:0crwdne2583880:0"
           }
         },
         "courseE_artist_functionsProj_2021": {
           "draw hexagon": {
-            "name": "crwdns2587468:0crwdne2587468:0"
+            "name": "crwdns2583934:0crwdne2583934:0"
           },
           "draw line of hexagons": {
-            "name": "crwdns2587470:0crwdne2587470:0"
+            "name": "crwdns2583936:0crwdne2583936:0"
           },
           "staggered squares": {
-            "name": "crwdns2587472:0crwdne2587472:0"
+            "name": "crwdns2583938:0crwdne2583938:0"
           },
           "draw a line of squares": {
-            "name": "crwdns2587474:0crwdne2587474:0"
+            "name": "crwdns2583940:0crwdne2583940:0"
           },
           "draw square": {
-            "name": "crwdns2587476:0crwdne2587476:0"
+            "name": "crwdns2583942:0crwdne2583942:0"
           }
         },
         "courseE_artist_functions_challenge1_2021": {
           "my design": {
-            "name": "crwdns2587490:0crwdne2587490:0"
+            "name": "crwdns2583956:0crwdne2583956:0"
           },
           "do something": {
-            "name": "crwdns2587492:0crwdne2587492:0"
+            "name": "crwdns2583958:0crwdne2583958:0"
           }
         },
         "courseE_artist_functions_challenge2_2021": {
           "my design": {
-            "name": "crwdns2587504:0crwdne2587504:0"
+            "name": "crwdns2583970:0crwdne2583970:0"
           },
           "do something": {
-            "name": "crwdns2587506:0crwdne2587506:0"
+            "name": "crwdns2583972:0crwdne2583972:0"
           }
         },
         "courseE_artist_functions_predict1_2021": {
           "draw a square": {
-            "name": "crwdns2587288:0crwdne2587288:0"
+            "name": "crwdns2583722:0crwdne2583722:0"
           },
           "draw ear stems": {
-            "name": "crwdns2587290:0crwdne2587290:0"
+            "name": "crwdns2583724:0crwdne2583724:0"
           }
         },
         "courseE_artist_functions_predict1_dani": {
@@ -4178,99 +4178,99 @@
         },
         "courseE_farmer_functions10a1_2021": {
           "pick along path": {
-            "name": "crwdns2587770:0crwdne2587770:0"
+            "name": "crwdns2584080:0crwdne2584080:0"
           },
           "check square for corn": {
-            "name": "crwdns2587772:0crwdne2587772:0"
+            "name": "crwdns2584082:0crwdne2584082:0"
           },
           "get all pumpkins": {
-            "name": "crwdns2587774:0crwdne2587774:0"
+            "name": "crwdns2584084:0crwdne2584084:0"
           },
           "pumpkin square": {
-            "name": "crwdns2587776:0crwdne2587776:0"
+            "name": "crwdns2584086:0crwdne2584086:0"
           }
         },
         "courseE_farmer_functions11_predict_2021": {
           "pick along path": {
-            "name": "crwdns2587794:0crwdne2587794:0"
+            "name": "crwdns2584104:0crwdne2584104:0"
           },
           "pumpkin square": {
-            "name": "crwdns2587796:0crwdne2587796:0"
+            "name": "crwdns2584106:0crwdne2584106:0"
           },
           "check square for corn": {
-            "name": "crwdns2587798:0crwdne2587798:0"
+            "name": "crwdns2584108:0crwdne2584108:0"
           },
           "get produce": {
-            "name": "crwdns2587800:0crwdne2587800:0"
+            "name": "crwdns2584110:0crwdne2584110:0"
           },
           "get all pumpkins": {
-            "name": "crwdns2587802:0crwdne2587802:0"
+            "name": "crwdns2584112:0crwdne2584112:0"
           }
         },
         "courseE_farmer_functions13_2021": {
           "pick along path": {
-            "name": "crwdns2587784:0crwdne2587784:0"
+            "name": "crwdns2584094:0crwdne2584094:0"
           },
           "check for corn": {
-            "name": "crwdns2587786:0crwdne2587786:0"
+            "name": "crwdns2584096:0crwdne2584096:0"
           },
           "corn rectangle": {
-            "name": "crwdns2587788:0crwdne2587788:0"
+            "name": "crwdns2584098:0crwdne2584098:0"
           },
           "lettuce stairs": {
-            "name": "crwdns2587790:0crwdne2587790:0"
+            "name": "crwdns2584100:0crwdne2584100:0"
           }
         },
         "courseE_farmer_functions1a_2021": {
           "check square for corn": {
-            "name": "crwdns2587686:0crwdne2587686:0"
+            "name": "crwdns2583994:0crwdne2583994:0"
           }
         },
         "courseE_farmer_functions2b_2021": {
           "check square for corn": {
-            "name": "crwdns2587700:0crwdne2587700:0"
+            "name": "crwdns2584008:0crwdne2584008:0"
           }
         },
         "courseE_farmer_functions2ba_2021": {
           "check square for corn": {
-            "name": "crwdns2587708:0crwdne2587708:0"
+            "name": "crwdns2584016:0crwdne2584016:0"
           },
           "get all pumpkins": {
-            "name": "crwdns2587710:0crwdne2587710:0"
+            "name": "crwdns2584018:0crwdne2584018:0"
           }
         },
         "courseE_farmer_functions3c1_2021": {
           "pick along path": {
-            "name": "crwdns2587728:0crwdne2587728:0"
+            "name": "crwdns2584036:0crwdne2584036:0"
           },
           "check square for corn": {
-            "name": "crwdns2587730:0crwdne2587730:0"
+            "name": "crwdns2584038:0crwdne2584038:0"
           },
           "get all pumpkins": {
-            "name": "crwdns2587732:0crwdne2587732:0"
+            "name": "crwdns2584040:0crwdne2584040:0"
           }
         },
         "courseE_farmer_functions3c_2021": {
           "check square for corn": {
-            "name": "crwdns2587716:0crwdne2587716:0"
+            "name": "crwdns2584024:0crwdne2584024:0"
           },
           "get all pumpkins": {
-            "name": "crwdns2587718:0crwdne2587718:0"
+            "name": "crwdns2584026:0crwdne2584026:0"
           }
         },
         "courseE_farmer_functions7a1_2021": {
           "garden square": {
-            "name": "crwdns2587742:0crwdne2587742:0"
+            "name": "crwdns2584052:0crwdne2584052:0"
           }
         },
         "courseE_farmer_functions8a1_2021": {
           "garden square": {
-            "name": "crwdns2587752:0crwdne2587752:0"
+            "name": "crwdns2584062:0crwdne2584062:0"
           }
         },
         "courseE_farmer_functions9a1_2021": {
           "garden square": {
-            "name": "crwdns2587764:0crwdne2587764:0"
+            "name": "crwdns2584074:0crwdne2584074:0"
           }
         },
         "courseF_apps_collector": {

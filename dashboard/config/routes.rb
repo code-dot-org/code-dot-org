@@ -62,7 +62,16 @@ Dashboard::Application.routes.draw do
 
   get 'redirected_url', to: 'redirect_proxy#get', format: false
 
-  get 'docs/', to: 'curriculum_proxy#get_doc_landing'
+  # We moved code docs off of curriculum builder in spring 2022.
+  # In that move, we wanted to preserve the previous /docs routes for these
+  # pages. However, there are a lot of other /docs URLs that did not move over
+  # so we're allow-listing the four IDEs that lived on curriculum builder to be
+  # served by ProgrammingEnvironmentsController and ProgrammingExpressionsController,
+  # with the rest falling back to the old proxying logic.
+  get 'docs/', to: 'programming_environments#docs_index'
+  get 'docs/:programming_environment_name', to: 'programming_environments#docs_show', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/}
+  get 'docs/:programming_environment_name/:programming_expression_key', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/, programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/}, to: 'programming_expressions#docs_show'
+  get 'docs/:programming_environment_name/:programming_expression_key/index.html', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/, programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/}, to: 'programming_expressions#docs_show'
   get 'docs/*path', to: 'curriculum_proxy#get_doc'
   get 'curriculum/*path', to: 'curriculum_proxy#get_curriculum'
 
@@ -95,8 +104,8 @@ Dashboard::Application.routes.draw do
       end
       collection do
         get 'membership'
-        get 'valid_scripts'
         get 'valid_course_offerings'
+        get 'available_participant_types'
         get 'require_captcha'
       end
     end
@@ -283,7 +292,7 @@ Dashboard::Application.routes.draw do
 
   get '/course/:course_name', to: redirect('/courses/%{course_name}')
   get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
-  # this route uses course_course_name to match generated routes below that are nested within courses
+  # these routes use course_course_name to match generated routes below that are nested within courses
   get '/courses/:course_course_name/guides/edit', to: 'reference_guides#edit_all', as: :edit_all_reference_guides
 
   resources :courses, param: 'course_name' do
@@ -295,7 +304,7 @@ Dashboard::Application.routes.draw do
       get 'get_rollup_resources'
     end
 
-    resources :reference_guides, only: [:show, :update, :destroy], param: 'key', path: 'guides' do
+    resources :reference_guides, only: [:show, :update, :destroy, :index], param: 'key', path: 'guides' do
       member do
         get 'edit'
       end
@@ -332,11 +341,12 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :programming_classes, only: [:new, :create, :edit, :update]
+  resources :programming_classes, only: [:new, :create, :edit, :update, :show]
 
-  resources :programming_expressions, only: [:new, :create, :edit, :update, :show, :destroy] do
+  resources :programming_expressions, only: [:index, :new, :create, :edit, :update, :show, :destroy] do
     collection do
       get :search
+      get :get_filtered_expressions
     end
     member do
       post :clone
@@ -350,6 +360,8 @@ Dashboard::Application.routes.draw do
       end
     end
   end
+
+  resources :programming_methods, only: [:edit, :update]
 
   resources :standards, only: [] do
     collection do
@@ -451,6 +463,10 @@ Dashboard::Application.routes.draw do
 
   # HOC dashboards.
   get '/admin/hoc/students_served', to: 'admin_hoc#students_served', as: 'hoc_students_served'
+
+  # NPS dashboards
+  get '/admin/nps/nps_form', to: 'admin_nps#nps_form', as: 'nps_form'
+  post '/admin/nps/nps_update', to: 'admin_nps#nps_update', as: 'nps_update'
 
   # internal report dashboards
   get '/admin/levels', to: 'admin_reports#level_completions', as: 'level_completions'

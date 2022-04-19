@@ -2,6 +2,8 @@
 ur:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: نیا بنائیں {ANIMATION_NAME} سپریبر {LOCATION}
       Dancelab_alternateMoves:
         text: |-
           {GROUP} ہر {N} پیمائشوں
@@ -1041,6 +1043,12 @@ ur:
         text: خط کھینچ لیں {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: کناروں کو منتقل کرنے سے {SPRITE} بلاک کریں
+      gamelab_everySeconds:
+        text: 'ہر ایک کو دہرائیں {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': سیکنڈز
+            '"frames"': فریمیں
       gamelab_followingTargets:
         text: اہداف کا تعاقب
       gamelab_getAllSprites:
@@ -1193,6 +1201,8 @@ ur:
             '"pop"': پاپ
             '"rain"': بارش
             '"spiral"': پیچ دار
+      gamelab_makeNewScaledSprite:
+        text: نیا بنائیں {ANIMATION_NAME} سپریبر {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: نیا بنائیں {ANIMATION_NAME} سپریبر {LOCATION}
       gamelab_makeNumSprites:

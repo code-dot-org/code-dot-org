@@ -79,6 +79,7 @@ def main(options)
   cb_url_prefix = options.local ? 'http://localhost:8000' : 'http://www.codecurricula.com'
 
   # recursively find all the guides!
+  # guide stack holds [slug, parent key] objects
   guide_stack = [['concepts', nil]]
   guide_key_set = Set[]
   updated_reference_guide_count = 0
@@ -117,9 +118,14 @@ def main(options)
     # don't reuse that key
     guide_key_set.add(unique_key)
 
+    # import children of 'concepts' map as top level guides
+    unique_key = nil if guide['slug'] == 'concepts'
+
     # store the children with their parent key
     guide_stack.concat(guide['children'].map {|child| [child, unique_key]})
 
+    # skip serializing the 'concepts' map
+    next if guide['slug'] == 'concepts'
     next if options.dry_run
 
     reference_guide = ReferenceGuide.find_or_initialize_by(

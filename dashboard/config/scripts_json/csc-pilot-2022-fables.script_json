@@ -1,0 +1,1164 @@
+{
+  "script": {
+    "name": "csc-pilot-2022-fables",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
+    },
+    "new_name": null,
+    "family_name": "csc-pilot-2022-fables",
+    "serialized_at": "2022-04-14 08:36:02 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "csc-pilot-2022-fables"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Hello World CSC",
+      "name": "Hello World CSC",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "In this **skill-building** lesson, students will learn to create and animate sprites and make them interactive using events. ",
+        "preparation": "\n* Play through the puzzles to find any potential problem areas for your class.\n- Use the resources at [CS Connections](https://code.org/educate/csc) to make a plan for more computer science learning after the initial tutorial.",
+        "purpose": "This lesson is intended to prepare students to create simple programming projects in Sprite Lab. With this skill, students could then create projects on any topic, such as another school topic or something personally relevant to them. Visit [CS Connections](https://code.org/educate/csc) for ideas about how to integrate computer science into other subjects.",
+        "student_overview": "In this lesson, you will learn to create and animate sprites and make them interactive using events."
+      },
+      "seeding_key": {
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Code Your Fable",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Share Your Fable",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "6baf5452-5d49-4799-a18c-9263a084488d",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up "
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6baf5452-5d49-4799-a18c-9263a084488d",
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables"
+      }
+    },
+    {
+      "key": "fe26bded-5100-4925-a4d4-ae02e5272e71",
+      "position": 2,
+      "properties": {
+        "duration": 25,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fe26bded-5100-4925-a4d4-ae02e5272e71",
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables"
+      }
+    },
+    {
+      "key": "ad732211-58f5-4e79-9505-7ba503bb2622",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up "
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ad732211-58f5-4e79-9505-7ba503bb2622",
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables"
+      }
+    },
+    {
+      "key": "06bded50-c6ac-4127-9124-423bc53baf0a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "06bded50-c6ac-4127-9124-423bc53baf0a",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "513d94f4-0731-468d-8d46-c309c12868e8",
+      "position": 1,
+      "properties": {
+        "description": "Welcome students to class and very briefly introduce the day’s activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _How do we use sprites in our programs?_",
+        "name": "Setting the Stage "
+      },
+      "seeding_key": {
+        "activity_section.key": "513d94f4-0731-468d-8d46-c309c12868e8",
+        "lesson_activity.key": "6baf5452-5d49-4799-a18c-9263a084488d"
+      }
+    },
+    {
+      "key": "150b937d-4dae-4cca-b830-9ceb02abae08",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “A Series of Events” slide\n\nLet’s see if we can find a pattern here:\n* When you flip a switch, the lights turn on.\n* When you tap on a device, an app starts.\n* When the alarm goes off, you get out of bed.\n* When (event), (action).\n\nIn computer science, events cause other actions to happen. Our new vocabulary word today is event. Normally when we hear “event” we think of:\n* Field trip\n* Competition\n* Birthday Party\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide",
+        "name": "A Series of Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "150b937d-4dae-4cca-b830-9ceb02abae08",
+        "lesson_activity.key": "6baf5452-5d49-4799-a18c-9263a084488d"
+      }
+    },
+    {
+      "key": "341304b8-cde4-43c6-b800-e8fd61e1e826",
+      "position": 3,
+      "properties": {
+        "description": "*We’re learning a new meaning for the word \"event\" today. Let's focus on events that cause other actions to happen like when flipping a switch causes the lights to turn on or pressing a button to make a character in a game move.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "341304b8-cde4-43c6-b800-e8fd61e1e826",
+        "lesson_activity.key": "6baf5452-5d49-4799-a18c-9263a084488d"
+      }
+    },
+    {
+      "key": "a250aa89-76c1-4c25-8366-631f5175dff4",
+      "position": 4,
+      "properties": {
+        "description": "Today, students will work in Sprite Lab, but the events they will be working on will be more like the video games they are used to playing. Events will take the form of actions, such as clicking the screen or two characters running into each other."
+      },
+      "seeding_key": {
+        "activity_section.key": "a250aa89-76c1-4c25-8366-631f5175dff4",
+        "lesson_activity.key": "6baf5452-5d49-4799-a18c-9263a084488d"
+      }
+    },
+    {
+      "key": "3fc80945-a501-47c1-bf07-393e66f4d4a5",
+      "position": 5,
+      "properties": {
+        "description": "*In this activity, you’re going to have fun making an interactive world with fun characters called sprites. You’ll be able to make the sprites say things with speech bubbles as you’d see in a comic or graphic novel, and you’ll learn to make them respond automatically when you or someone else clicks on them.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "3fc80945-a501-47c1-bf07-393e66f4d4a5",
+        "lesson_activity.key": "6baf5452-5d49-4799-a18c-9263a084488d"
+      }
+    },
+    {
+      "key": "48fbf341-5314-40ea-9c01-89a3175b539c",
+      "position": 1,
+      "properties": {
+        "description": "Here are a few tips that should help students regardless of the level they're working on\n\n* **Collaborate with Neighbors:** Encourage students to check in with a neighbor when they're getting stuck. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using [pair programming](https://youtu.be/vgkahOzFH2Q).  \n* **Read the Instructions:** The instructions usually provide helpful tips on how to complete the level. Before giving students the answer, ensure they've carefully looked at the instructions, hints, videos, and any starter code carefully.\n\n\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Stuck? Look for hints:** Each level includes a hint with advice for how to pass a level, including which blocks of code to try out. \n\n* **Take your time and experiment.** The instructions tell students generally what to do, but they should also feel free to try out their own ideas.",
+        "name": "General Support"
+      },
+      "seeding_key": {
+        "activity_section.key": "48fbf341-5314-40ea-9c01-89a3175b539c",
+        "lesson_activity.key": "fe26bded-5100-4925-a4d4-ae02e5272e71"
+      }
+    },
+    {
+      "key": "737ec1a1-0a75-4bb0-baeb-f4da0786a44d",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Welcome to Sprite Lab” video",
+        "name": "Hello World",
+        "progression_name": "Video: Hello World: Welcome to Sprite Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "737ec1a1-0a75-4bb0-baeb-f4da0786a44d",
+        "lesson_activity.key": "fe26bded-5100-4925-a4d4-ae02e5272e71"
+      }
+    },
+    {
+      "key": "66d51d47-57f2-4c01-aec7-b4db6e9287d3",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-5 - Skill Building” slide",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "66d51d47-57f2-4c01-aec7-b4db6e9287d3",
+        "lesson_activity.key": "fe26bded-5100-4925-a4d4-ae02e5272e71"
+      }
+    },
+    {
+      "key": "1295582e-1179-47c5-b54f-ed36430913ba",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Programming with Events” video",
+        "progression_name": "Video: Hello World: Programming with Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "1295582e-1179-47c5-b54f-ed36430913ba",
+        "lesson_activity.key": "fe26bded-5100-4925-a4d4-ae02e5272e71"
+      }
+    },
+    {
+      "key": "08b69c76-ea3d-45fa-b42c-2880ef2d9132",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7-12 - Skill Building” slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "08b69c76-ea3d-45fa-b42c-2880ef2d9132",
+        "lesson_activity.key": "fe26bded-5100-4925-a4d4-ae02e5272e71"
+      }
+    },
+    {
+      "key": "5d40e1cc-72f6-43e4-8517-88dc21a56a2c",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Do What You Want” video",
+        "progression_name": "Video: Hello World: Do What You Want"
+      },
+      "seeding_key": {
+        "activity_section.key": "5d40e1cc-72f6-43e4-8517-88dc21a56a2c",
+        "lesson_activity.key": "fe26bded-5100-4925-a4d4-ae02e5272e71"
+      }
+    },
+    {
+      "key": "eb2ff532-2980-476a-ae50-57efbbfcc701",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 14 - Free Play” slide",
+        "progression_name": "Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "eb2ff532-2980-476a-ae50-57efbbfcc701",
+        "lesson_activity.key": "fe26bded-5100-4925-a4d4-ae02e5272e71"
+      }
+    },
+    {
+      "key": "10a471e4-abfb-42dc-ae0c-0056000903f9",
+      "position": 8,
+      "properties": {
+        "description": "If a group or individual finishes early, encourage them to continue building a project in the last level. If students aren’t sure what else to do, you can prompt them with questions:\n\n- What other sprites could you add to your project?\n- Have you looked through the costume library or tried drawing your own sprite costume?\n- What else could you have your sprites say?\n- What should your sprites do when they are clicked?\n- Invite students to share ideas and to learn from each other. They can also attempt another tutorial by visiting [code.org/learn](https://code.org/learn).\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "10a471e4-abfb-42dc-ae0c-0056000903f9",
+        "lesson_activity.key": "fe26bded-5100-4925-a4d4-ae02e5272e71"
+      }
+    },
+    {
+      "key": "bad5b3c6-555f-4a17-8498-e979f826bb98",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _What did you learn today about sprites?_ \n* _How do events work in your code?_\n",
+        "name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "bad5b3c6-555f-4a17-8498-e979f826bb98",
+        "lesson_activity.key": "ad732211-58f5-4e79-9505-7ba503bb2622"
+      }
+    },
+    {
+      "key": "92f6470b-4f52-4c81-b882-02a3de9fc8f0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "92f6470b-4f52-4c81-b882-02a3de9fc8f0",
+        "lesson_activity.key": "06bded50-c6ac-4127-9124-423bc53baf0a"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "coursee_helloworld_introtosprites_fables"
+        ],
+        "progression": "Video: Hello World: Welcome to Sprite Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "coursee_helloworld_introtosprites_fables"
+        ],
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "737ec1a1-0a75-4bb0-baeb-f4da0786a44d"
+      },
+      "level_keys": [
+        "coursee_helloworld_introtosprites_fables"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "coursee_helloworld_say_fables"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "coursee_helloworld_say_fables"
+        ],
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "66d51d47-57f2-4c01-aec7-b4db6e9287d3"
+      },
+      "level_keys": [
+        "coursee_helloworld_say_fables"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "helloworld_food_location_fables"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_food_location_fables"
+        ],
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "66d51d47-57f2-4c01-aec7-b4db6e9287d3"
+      },
+      "level_keys": [
+        "helloworld_food_location_fables"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "helloworld_food_multi_fables"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_food_multi_fables"
+        ],
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "66d51d47-57f2-4c01-aec7-b4db6e9287d3"
+      },
+      "level_keys": [
+        "helloworld_food_multi_fables"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "helloworld_food_click_fables"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_food_click_fables"
+        ],
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "66d51d47-57f2-4c01-aec7-b4db6e9287d3"
+      },
+      "level_keys": [
+        "helloworld_food_click_fables"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "coursee_helloworld_eventsvideo_fables"
+        ],
+        "progression": "Video: Hello World: Programming with Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "coursee_helloworld_eventsvideo_fables"
+        ],
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "1295582e-1179-47c5-b54f-ed36430913ba"
+      },
+      "level_keys": [
+        "coursee_helloworld_eventsvideo_fables"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "coursee_helloworld_events_fables"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "coursee_helloworld_events_fables"
+        ],
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "08b69c76-ea3d-45fa-b42c-2880ef2d9132"
+      },
+      "level_keys": [
+        "coursee_helloworld_events_fables"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "helloworld_food_backgrounds_fables"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_food_backgrounds_fables"
+        ],
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "08b69c76-ea3d-45fa-b42c-2880ef2d9132"
+      },
+      "level_keys": [
+        "helloworld_food_backgrounds_fables"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "helloworld_food_costumes_fables"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_food_costumes_fables"
+        ],
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "08b69c76-ea3d-45fa-b42c-2880ef2d9132"
+      },
+      "level_keys": [
+        "helloworld_food_costumes_fables"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "helloworld_food_sizes_fables"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_food_sizes_fables"
+        ],
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "08b69c76-ea3d-45fa-b42c-2880ef2d9132"
+      },
+      "level_keys": [
+        "helloworld_food_sizes_fables"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "helloworld_food_behaviors_fables"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_food_behaviors_fables"
+        ],
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "08b69c76-ea3d-45fa-b42c-2880ef2d9132"
+      },
+      "level_keys": [
+        "helloworld_food_behaviors_fables"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gray_csc_helloworld_choice_group_fables"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gray_csc_helloworld_choice_group_fables"
+        ],
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "08b69c76-ea3d-45fa-b42c-2880ef2d9132"
+      },
+      "level_keys": [
+        "gray_csc_helloworld_choice_group_fables"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "helloworld_food_sounds_fables"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_food_sounds_fables"
+        ],
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "08b69c76-ea3d-45fa-b42c-2880ef2d9132"
+      },
+      "level_keys": [
+        "helloworld_food_sounds_fables"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "coursee_helloworld_freeplayvideo_fables"
+        ],
+        "progression": "Video: Hello World: Do What You Want"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "coursee_helloworld_freeplayvideo_fables"
+        ],
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "5d40e1cc-72f6-43e4-8517-88dc21a56a2c"
+      },
+      "level_keys": [
+        "coursee_helloworld_freeplayvideo_fables"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "coursee_helloworld_freeplay_fables"
+        ],
+        "progression": "Free Play"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "coursee_helloworld_freeplay_fables"
+        ],
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "eb2ff532-2980-476a-ae50-57efbbfcc701"
+      },
+      "level_keys": [
+        "coursee_helloworld_freeplay_fables"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_fablesv2_choice"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_fablesv2_choice"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "92f6470b-4f52-4c81-b882-02a3de9fc8f0"
+      },
+      "level_keys": [
+        "csc_fablesv2_choice"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_fablesv2_DIY_Set_Scene"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "92f6470b-4f52-4c81-b882-02a3de9fc8f0"
+      },
+      "level_keys": [
+        "csc_fablesv2_DIY_Set_Scene"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_fablesv2_DIY_Dialogue"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "92f6470b-4f52-4c81-b882-02a3de9fc8f0"
+      },
+      "level_keys": [
+        "csc_fablesv2_DIY_Dialogue"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_fablesv2_predict_parent"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "92f6470b-4f52-4c81-b882-02a3de9fc8f0"
+      },
+      "level_keys": [
+        "csc_fablesv2_predict_parent"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_fablesv2_DIY_Interactions"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "92f6470b-4f52-4c81-b882-02a3de9fc8f0"
+      },
+      "level_keys": [
+        "csc_fablesv2_DIY_Interactions"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_fablesv2_DIY_Freeplay"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "92f6470b-4f52-4c81-b882-02a3de9fc8f0"
+      },
+      "level_keys": [
+        "csc_fablesv2_DIY_Freeplay"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "coursee_helloworld_introtosprites_fables",
+        "script_level.level_keys": [
+          "coursee_helloworld_introtosprites_fables"
+        ],
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "737ec1a1-0a75-4bb0-baeb-f4da0786a44d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "coursee_helloworld_say_fables",
+        "script_level.level_keys": [
+          "coursee_helloworld_say_fables"
+        ],
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "66d51d47-57f2-4c01-aec7-b4db6e9287d3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_food_location_fables",
+        "script_level.level_keys": [
+          "helloworld_food_location_fables"
+        ],
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "66d51d47-57f2-4c01-aec7-b4db6e9287d3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_food_multi_fables",
+        "script_level.level_keys": [
+          "helloworld_food_multi_fables"
+        ],
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "66d51d47-57f2-4c01-aec7-b4db6e9287d3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_food_click_fables",
+        "script_level.level_keys": [
+          "helloworld_food_click_fables"
+        ],
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "66d51d47-57f2-4c01-aec7-b4db6e9287d3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "coursee_helloworld_eventsvideo_fables",
+        "script_level.level_keys": [
+          "coursee_helloworld_eventsvideo_fables"
+        ],
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "1295582e-1179-47c5-b54f-ed36430913ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "coursee_helloworld_events_fables",
+        "script_level.level_keys": [
+          "coursee_helloworld_events_fables"
+        ],
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "08b69c76-ea3d-45fa-b42c-2880ef2d9132"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_food_backgrounds_fables",
+        "script_level.level_keys": [
+          "helloworld_food_backgrounds_fables"
+        ],
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "08b69c76-ea3d-45fa-b42c-2880ef2d9132"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_food_costumes_fables",
+        "script_level.level_keys": [
+          "helloworld_food_costumes_fables"
+        ],
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "08b69c76-ea3d-45fa-b42c-2880ef2d9132"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_food_sizes_fables",
+        "script_level.level_keys": [
+          "helloworld_food_sizes_fables"
+        ],
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "08b69c76-ea3d-45fa-b42c-2880ef2d9132"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_food_behaviors_fables",
+        "script_level.level_keys": [
+          "helloworld_food_behaviors_fables"
+        ],
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "08b69c76-ea3d-45fa-b42c-2880ef2d9132"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gray_csc_helloworld_choice_group_fables",
+        "script_level.level_keys": [
+          "gray_csc_helloworld_choice_group_fables"
+        ],
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "08b69c76-ea3d-45fa-b42c-2880ef2d9132"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_food_sounds_fables",
+        "script_level.level_keys": [
+          "helloworld_food_sounds_fables"
+        ],
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "08b69c76-ea3d-45fa-b42c-2880ef2d9132"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "coursee_helloworld_freeplayvideo_fables",
+        "script_level.level_keys": [
+          "coursee_helloworld_freeplayvideo_fables"
+        ],
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "5d40e1cc-72f6-43e4-8517-88dc21a56a2c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "coursee_helloworld_freeplay_fables",
+        "script_level.level_keys": [
+          "coursee_helloworld_freeplay_fables"
+        ],
+        "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "eb2ff532-2980-476a-ae50-57efbbfcc701"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_fablesv2_choice",
+        "script_level.level_keys": [
+          "csc_fablesv2_choice"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "92f6470b-4f52-4c81-b882-02a3de9fc8f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_fablesv2_DIY_Set_Scene",
+        "script_level.level_keys": [
+          "csc_fablesv2_DIY_Set_Scene"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "92f6470b-4f52-4c81-b882-02a3de9fc8f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_fablesv2_DIY_Dialogue",
+        "script_level.level_keys": [
+          "csc_fablesv2_DIY_Dialogue"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "92f6470b-4f52-4c81-b882-02a3de9fc8f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_fablesv2_predict_parent",
+        "script_level.level_keys": [
+          "csc_fablesv2_predict_parent"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "92f6470b-4f52-4c81-b882-02a3de9fc8f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_fablesv2_DIY_Interactions",
+        "script_level.level_keys": [
+          "csc_fablesv2_DIY_Interactions"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "92f6470b-4f52-4c81-b882-02a3de9fc8f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_fablesv2_DIY_Freeplay",
+        "script_level.level_keys": [
+          "csc_fablesv2_DIY_Freeplay"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-fables",
+        "activity_section.key": "92f6470b-4f52-4c81-b882-02a3de9fc8f0"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "CSC - Hello World - Slides",
+      "url": "https://docs.google.com/presentation/d/1Zt7oK0fuOR8XyKsCjWos3jfifO1uD0KFZfK8cbJulH8/template/preview\t",
+      "key": "csc_-_hello_world_-_slides",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1Zt7oK0fuOR8XyKsCjWos3jfifO1uD0KFZfK8cbJulH8/explore/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csc_-_hello_world_-_slides"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Hello World CSC",
+        "resource.key": "csc_-_hello_world_-_slides"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "6c670882-48a9-4e41-a0ca-f05986817865",
+      "properties": {
+        "description": "Create new sprites and assign them costumes and locations."
+      },
+      "seeding_key": {
+        "lesson.key": "Hello World CSC",
+        "objective.key": "6c670882-48a9-4e41-a0ca-f05986817865"
+      }
+    },
+    {
+      "key": "f9f3ec3b-b208-4976-b6e5-f82c728c83a8",
+      "properties": {
+        "description": "Create an interactive animation using sprites and events."
+      },
+      "seeding_key": {
+        "lesson.key": "Hello World CSC",
+        "objective.key": "f9f3ec3b-b208-4976-b6e5-f82c728c83a8"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Hello World CSC",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Hello World CSC",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-IC-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Hello World CSC",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Hello World CSC",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

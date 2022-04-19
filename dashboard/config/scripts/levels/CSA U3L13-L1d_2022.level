@@ -3,11 +3,14 @@
   "properties": {
     "encrypted": "false",
     "project_template_level_name": "CSA U3 Data for Social Good Project D PBT_2022",
-    "long_instructions": "##Data for Social Good Project\r\n\r\n1. Make revisions to your project using the feedback you received and your self-assessment.\r\n\r\n2. Finish writing your data analysis program.\r\n\r\n3. Submit your project when you have finished!",
+    "long_instructions": "##Data for Social Good Project\r\n\r\n1. Make revisions to your project using the feedback you received and your self-assessment.\r\n\r\n2. Finish writing your data analysis program.\r\n\r\n3. Submit your project when you have finished!\r\n\r\n**User Story D:** As a community activist, I'd like to identify high needs communities who may be experiencing food shortages so that I can focus my team's work.\r\n\r\n**Hint:** To compare two `String`(#e7e8ea)s for equality, you will need to use the `equals()`(#e7e8ea) method instead of the `==`(#e7e8ea) operator. For example:\r\n\r\n```\r\nString first = \"Hello\";\r\nString second = \"Hello\";\r\n\r\nfirst.equals(second);   // returns true\r\n\r\nString third = \"Hello\";\r\nString fourth = \"HELLO\";\r\n\r\nthird.equals(fourth);   // returns false\r\n```\r\n\r\n##Possible Extensions\r\nI would like to know what aspects make a community high risk.",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "submittable": "true",
     "csa_view_mode": "console",
+    "display_name": "User Story D",
+    "bubble_choice_description": "As a community activist, I'd like to identify high needs communities who may be experiencing food shortages so that I can focus my team's work.",
+    "thumbnail_url": "https://images.code.org/566e3a0f80b5618e49d13f28ce894e90-image-1648762713406.png",
     "encrypted_examples": [
 
     ]
@@ -17,6 +20,6 @@
   "created_at": "2022-03-25T13:54:50.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-03-25T13:54:50.872+00:00\",\"changed\":[\"cloned from \\\"CSA U3L12-L2d_2022\\\"\"],\"cloned_from\":\"CSA U3L12-L2d_2022\"},{\"changed_at\":\"2022-03-25 13:56:49 +0000\",\"changed\":[\"long_instructions\",\"submittable\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-25T13:54:50.872+00:00\",\"changed\":[\"cloned from \\\"CSA U3L12-L2d_2022\\\"\"],\"cloned_from\":\"CSA U3L12-L2d_2022\"},{\"changed_at\":\"2022-03-25 13:56:49 +0000\",\"changed\":[\"long_instructions\",\"submittable\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 22:15:37 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 22:40:46 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 23:24:23 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-13 00:03:43 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\",\"contained_level_names\"],\"changed_by_id\":18413,\"changed_by_email\":\"joshua.joyner@code.org\"}]"
 }]]></config>
 </Javalab>

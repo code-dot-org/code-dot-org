@@ -1,7 +1,7 @@
 class ReferenceGuidesController < ApplicationController
   include CurriculumHelper
   before_action :find_reference_guide, only: [:show, :update, :edit, :destroy]
-  before_action :find_reference_guides, only: [:edit, :edit_all]
+  before_action :find_reference_guides, only: [:show, :edit, :edit_all]
   before_action :require_levelbuilder_mode_or_test_env, except: [:show]
   authorize_resource id_param: :key
 
@@ -12,6 +12,17 @@ class ReferenceGuidesController < ApplicationController
 
   # GET /courses/:course_name/guides/:key
   def show
+  end
+
+  # GET /courses/:course_name/guides
+  def index
+    # redirect to the show page for the first guide within a category
+    course_version_id = find_matching_course_version(params[:course_course_name])&.id
+    first_category_key = ReferenceGuide.where(course_version_id: course_version_id, parent_reference_guide_key: nil).
+      order('position').first&.key
+    first_child_key = ReferenceGuide.where(course_version_id: course_version_id, parent_reference_guide_key: first_category_key).
+      order('position').first&.key
+    redirect_to course_reference_guide_path(params[:course_course_name], first_child_key)
   end
 
   # PATCH /courses/:course_name/guides/:key

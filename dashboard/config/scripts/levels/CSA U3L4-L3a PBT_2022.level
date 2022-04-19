@@ -2,19 +2,26 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
-    "csa_view_mode": "console"
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    String[] cropsList = {\"tomatoes\", \"strawberries\", \"carrots\", \"apples\", \"sweet potatoes\"};\n    int[] yieldsList = {968079, 650772, 463819, 394802, 212510};\n\n    CropsStats myCrops = new CropsStats(cropsList, yieldsList);\n\n    System.out.println(\"My crops has a yield of at least 600000: \" + myCrops.hasAtLeast(6000));\n    \n  }\n}",
+        "isVisible": true
+      },
+      "CropsStats.java": {
+        "text": "/*\n * Stores and analyzes the list of\n * crops and their annual yields\n */\npublic class CropsStats {\n\n  private String[] crops;   // The list of crops\n  private int[] yields;      // The yield in hectograms\n\n  /*\n   * Constructor to create a CropsStats object with\n   * specified crops and yields arrays\n   */\n  public CropsStats(String[] crops, int[] yields) {\n    this.crops = crops;\n    this.yields = yields;\n  }\n\n  /*\n   * Checks if yields array contains at least one value\n   * that is greater than valueToFind\n   */\n  public boolean hasAtLeast(int valueToFind) {\n    // TO DO #1: Check if yields array contains at least\n    // one value that is greater than valueToFind.\n\n\n    \n  }\n}",
+        "isVisible": true
+      }
+    }
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-03-25T00:44:28.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-03-25 00:44:31 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-03-25 00:44:31 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 17:13:36 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 17:15:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 17:49:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 19:58:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 20:20:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

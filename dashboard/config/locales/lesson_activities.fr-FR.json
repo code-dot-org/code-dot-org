@@ -348,10 +348,13 @@
           "name": "Pour commencer"
         },
         "544fd00b-84f3-47e4-9e02-cb27a6cfbbca": {
-          "name": "Activité (30-45 minutes)"
+          "name": "Activité"
         },
         "e12c8da3-986d-488b-bed5-a7bb9e95e393": {
           "name": "Niveaux"
+        },
+        "2f9c446a-0802-48b0-91ff-a7df9fe4afe2": {
+          "name": "Conclusion"
         },
         "1a4d5cec-bd30-41f9-8012-4f16018769f9": {
           "name": "Évaluation (2 minutes)"
@@ -366,7 +369,7 @@
           "name": "Pour commencer"
         },
         "82dec89b-f375-4238-a251-ffae17c2dfd1": {
-          "name": "Activité (30-45 minutes)"
+          "name": "Activité"
         },
         "a25c23cd-4e73-4a82-882f-7cc0a9fdfeb4": {
           "name": "Niveaux"
@@ -378,7 +381,7 @@
           "name": "Devenez viral"
         },
         "7afb9d6e-2c07-44d2-8504-90df0cecc778": {
-          "name": "Évaluation (2 minutes)"
+          "name": "Évaluation"
         },
         "a676c281-2f0e-41d3-8e30-dbf6bb8d6dc0": {
           "name": "Warm-up (Séance d’échauffement)"
@@ -4071,10 +4074,10 @@
           "name": "Conclusion"
         },
         "235b3b14-975a-43b6-93bc-d386b857fd6b": {
-          "name": "Démarrer (5 minutes)"
+          "name": "La Mise en Route"
         },
         "fd06b4db-e3d4-491b-9372-af9a05dc2bb7": {
-          "name": "Activité (30-45 minutes)"
+          "name": "Activité"
         },
         "e96a358f-201b-4474-8950-90dd94426aff": {
           "name": "Conclusion"

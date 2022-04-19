@@ -1164,6 +1164,7 @@ sq:
           description_short: Realizo një lojë basketbolli
           description: Realizo një lojë basketbolli
           student_description: Realizo një lojë basketbolli
+          name: basketboll
         csd2-2017:
           lessons:
             Peer Review:
@@ -3272,6 +3273,9 @@ sq:
             lessonGroup-2:
               display_name: Përmbajtja
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: Për Ciklet
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja

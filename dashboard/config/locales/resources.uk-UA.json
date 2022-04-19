@@ -17,6 +17,138 @@
         "poem_art_introduction/poem-art/2021": {
           "name": "Поетичне мистецтво 1 - Вступ"
         },
+        "lesson_plans/courseb/2018": {
+          "name": "Плани уроків"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "Плани уроків"
+        },
+        "lesson_plans/coursed/2018": {
+          "name": "Плани уроків"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "Плани уроків"
+        },
+        "lesson_plans/express/2018": {
+          "name": "Плани уроків"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "Плани уроків"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "Плани уроків"
+        },
+        "code_introduced_1/csd/2018": {
+          "name": "Введений код"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "Плани уроків"
+        },
+        "code_introduced_3/csd/2018": {
+          "name": "Введений код"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "Плани уроків"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "Плани уроків"
+        },
+        "code_introduced_2/csd/2018": {
+          "name": "Введений код"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "Плани уроків"
+        },
+        "code_introduced/csd/2018": {
+          "name": "Введений код"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "Плани уроків"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "Плани уроків"
+        },
+        "lesson_plans/coursea/2019": {
+          "name": "Плани уроків"
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "Плани уроків"
+        },
+        "lesson_plans/coursed/2019": {
+          "name": "Плани уроків"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "Плани уроків"
+        },
+        "lesson_plans/coursee/2019": {
+          "name": "Плани уроків"
+        },
+        "lesson_plans/express/2019": {
+          "name": "Плани уроків"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "Плани уроків"
+        },
+        "code_introduced_1/csd/2019": {
+          "name": "Введений код"
+        },
+        "lesson_plans_2/csd/2019": {
+          "name": "Плани уроків"
+        },
+        "code_introduced_3/csd/2019": {
+          "name": "Введений код"
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "Плани уроків"
+        },
+        "code_introduced_2/csd/2019": {
+          "name": "Введений код"
+        },
+        "lesson_plans_3/csd/2019": {
+          "name": "Плани уроків"
+        },
+        "lesson_plans_4/csd/2019": {
+          "name": "Плани уроків"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "Плани уроків"
+        },
+        "code_introduced/csd/2019": {
+          "name": "Введений код"
+        },
+        "lesson_plans_1/csd/2019": {
+          "name": "Плани уроків"
+        },
+        "code_introduced_1/csd/2017": {
+          "name": "Введений код"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "Плани уроків"
+        },
+        "code_introduced_3/csd/2017": {
+          "name": "Введений код"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "Плани уроків"
+        },
+        "code_introduced/csd/2017": {
+          "name": "Введений код"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "Плани уроків"
+        },
+        "lesson_plans/csd/2017": {
+          "name": "Плани уроків"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "Плани уроків"
+        },
+        "code_introduced_2/csd/2017": {
+          "name": "Введений код"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "Плани уроків"
+        },
         "introducing_sprite_lab/coursef/2021": {
           "name": "Представляємо Лабораторію спрайтів"
         },
@@ -423,6 +555,30 @@
         },
         "website-for-a-purpose/csd/2021": {
           "type": "Рецензування"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "Плани уроків"
+        },
+        "lesson_plans/express/2020": {
+          "name": "Плани уроків"
+        },
+        "lesson_plans/courseb/2020": {
+          "name": "Плани уроків"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "Плани уроків"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "Плани уроків"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "Плани уроків"
+        },
+        "lesson_plans/coursea/2020": {
+          "name": "Плани уроків"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "Плани уроків"
         }
       }
     }

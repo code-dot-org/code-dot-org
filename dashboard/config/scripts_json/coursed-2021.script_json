@@ -12,20 +12,29 @@
       "lesson_extras_available": true,
       "supported_locales": [
         "ar-SA",
+        "cs-CZ",
+        "de-DE",
         "es-ES",
         "es-MX",
         "fr-FR",
+        "hi-IN",
+        "kn-IN",
+        "mr-IN",
+        "ms-MY",
+        "pl-PL",
         "pt-BR",
+        "pt-PT",
         "ro-RO",
         "ru-RU",
-        "sk-SK"
+        "sk-SK",
+        "zh-TW"
       ],
       "tts": true,
       "version_year": "2021"
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2022-03-17 21:00:22 UTC",
+    "serialized_at": "2022-04-11 19:36:54 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -9556,8 +9565,8 @@
       }
     },
     {
-      "name": "Open-ended Programming Levels",
-      "url": "https://docs.google.com/document/d/14qVMrzEOkq7m0gRjtYI8Erb1nGbx_XCz4TSm_d_xCls/view",
+      "name": "Sample Level Solutions",
+      "url": "https://docs.google.com/document/d/1XNOBi1OrHlRQbQCiaCV9MPHeAQhQDDr34wjlAd3qatw/template/preview",
       "key": "open-ended_programming_levels_1",
       "properties": {
         "audience": "Teacher",

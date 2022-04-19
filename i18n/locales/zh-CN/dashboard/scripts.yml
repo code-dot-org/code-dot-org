@@ -1232,8 +1232,6 @@ zh-CN:
           student_description: 第二阶段在线：混合的暑期学习
         equity-pd:
           lessons:
-            Code.org Equity PD:
-              name: Code.org 公平的 PD
             Necessary Background:
               name: 必要的背景
         science-PD2:
@@ -3443,6 +3441,7 @@ zh-CN:
               description_student: 你想过能在学校里玩电脑游戏吗？这堂课里，你能自己做一个！
               description_teacher: 在这个在线活动中，学生们会学习什么是事件，在像游戏一样的程序中计算机如何使用它们。学生们会编程使用交互事件（比如按下方向键）来通过这一关。在这一关结束时，学生们可以通过不同的速度和声音来自定义他们的游戏。
           student_description: 进行一场篮球赛
+          name: 篮球
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -4017,6 +4016,7 @@ zh-CN:
               description_student: 你想过能在学校里玩电脑游戏吗？这堂课里，你能自己做一个！
               description_teacher: 在这个在线活动中，学生们会学习什么是事件，在像游戏一样的程序中计算机如何使用它们。学生们会编程使用交互事件（比如按下方向键）来通过这一关。在这一关结束时，学生们可以通过不同的速度和声音来自定义他们的游戏。
           student_description: 为你自己的运动编写代码
+          name: 运动
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -9122,6 +9122,7 @@ zh-CN:
               description_student: 在本课程中，所有年龄段的学习者都将在一个安全、支持性的环境中获得编码和计算机科学的入门体验。本课是为所有需要阅读的年龄段学习者而设计的。本活动需要有声音，因为这个工具是为响应音乐而构建的。
               description_teacher: 在本课程中，所有年龄段的学习者都将在一个安全、支持性的环境中获得编码和计算机科学的入门体验。本课是为所有需要阅读的年龄段学习者而设计的。本活动需要有声音，因为这个工具是为响应音乐而构建的。
           student_description: 写出你自己的舞会代码，分享给你的朋友们！
+          name: 舞蹈
         frozen-2018-test-b:
           title: 新的冰雪奇缘脚本
           lessons:
@@ -12793,7 +12794,7 @@ zh-CN:
           description: 写出你自己的舞会代码，分享给你的朋友们！
           lessons:
             Dance Party:
-              name: 舞蹈派对
+              name: 舞蹈派对 (2019)
               description_student: 在本课程中，所有年龄段的学习者都将在一个安全、支持性的环境中获得编码和计算机科学的入门体验。本课是为所有需要阅读的年龄段学习者而设计的。本活动需要有声音，因为这个工具是为响应音乐而构建的。
               description_teacher: 在本课程中，所有年龄段的学习者都将在一个安全、支持性的环境中获得编码和计算机科学的入门体验。本课是为所有需要阅读的年龄段学习者而设计的。本活动需要有声音，因为这个工具是为响应音乐而构建的。
           student_description: 写出你自己的舞会代码，分享给你的朋友们！
@@ -17708,8 +17709,7 @@ zh-CN:
           title: '"世界你好!"'
         csa-self-paced-pl:
           lessons:
-            Navigating the Code.org learning platform:
-              name: " Code.org学习平台导航"
+            Navigating the Codeorg learning platform:
               description_teacher: |-
                 **你将学习如何：**
 
@@ -18763,7 +18763,7 @@ zh-CN:
               description_student: 用循环和规律来完成这些图画。
               description_teacher: 回到循环中，学生们学着通过循环简单的序列指令来画图像。在前一个离线课程中，循环被用来遍历迷宫并收集宝藏。在这里，循环会用做创建图案。在这个阶段的最后，学生们有机会用循环创建他们自己的图像。
               key: 艺术家里的循环
-            The Big Event Jr.:
+            The Big Event Jr:
               name: 大事件少儿版。
               description_student: 当老师按下巨大的遥控器时，移动并喊出来。
               description_teacher: 事件是一种很好的方法，来为预先写好的算法增加变化。有时候，你希望你的程序能够精确的响应用户的想法。这就是事件的用途。
@@ -19275,7 +19275,7 @@ zh-CN:
               description_student: 画出自己的智能手机应用程序。
               description_teacher: 这节课让学生们认识到计算机科学可以在现实生活中帮助人们。首先，学生们会感受一些虚构的智能手机用户的情况，来帮助他们找到 “正确的应用” 来解决需要。然后，学生们会练习同理心和创造力来画出自己的智能手机应用来解决另外一位用户的需求。
               key: 正确的应用程序
-            The Big Event Jr.:
+            The Big Event Jr:
               name: 大事件少儿版。
               description_student: 当老师按下巨大的遥控器时，移动或喊出来。
               description_teacher: 事件是一种很好的方法，来为预先写好的算法增加变化。有时候，你希望你的程序能够精确的响应用户的想法。这就是事件的用途。
@@ -19349,7 +19349,7 @@ zh-CN:
           description_audience: 年龄： 5-8
         coursec-2022:
           lessons:
-            My Robotic Friends Jr.:
+            My Robotic Friends Jr:
               description_student: 这节课，会让同学来假装是机器人，并给他们编程序，让他们来完成叠杯子的图案。
               description_teacher: 学生会使用一些符号来代替代码，设计算法来指挥 "机器人" 用不同的方式来堆叠杯子。他们将轮流扮演机器人，仅对同伴定义的算法做出反应。本部分教给学生符号与动作之间的联系，算法与程序之间的区别以及有用的调试技巧。
             Programming with Angry Birds:
@@ -19369,7 +19369,7 @@ zh-CN:
               name: 艺术家里的编程
               description_student: 通过小艺术家编程创造美丽的图画。
               description_teacher: 这节课中，学生们会控制小艺术家来完成画画。小艺术家阶段让学生们用 `向前移动 100 像素` 和 `向右转 90 度` 这样的新模块来创造不断增加难度的图画。
-            My Loopy Robotic Friends Jr.:
+            My Loopy Robotic Friends Jr:
               description_student: 这节课中，还会给同学编程。但能通过循环来解决更大、更复杂的问题。
               description_teacher: 在最开始的 "我的机器人朋友" 活动的基础上，学生们会应对更大、更复杂的图案。为了对他们的 "机器人" 进行编程以完成这些更大的图案，需要在其指令中识别出可被循环代替的重复模式。
             Loops with Rey and BB-8:
@@ -20028,6 +20028,8 @@ zh-CN:
               name: Java实验室
             lesson-9:
               name: 循环
+            lesson-21:
+              name: 控制台
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -20079,10 +20081,17 @@ zh-CN:
               name: 第2单元评估
             lesson-6:
               name: 变量
+            lesson-16:
+              name: 控制台
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: 计数循环
+            lesson-16:
+              name: 控制台
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -20354,6 +20363,8 @@ zh-CN:
           lessons:
             lesson-1:
               name: 欢迎
+            lesson-9:
+              name: 课程计划
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -20401,3 +20412,13 @@ zh-CN:
               key: 课程计划
             Next steps:
               key: 下一步
+        vpl-csd2-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: 物理计算
+        vpl-csd3-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: 物理计算
+        hello-world-csc:
+          title: 你好世界

@@ -1,0 +1,7 @@
+name 'csc_ecosystems_multiple_choice_child_1'
+question 'Read this example code carefully. Predict what the code will do by selecting one of the options below.'
+wrong 'If the number of algae is greater than 8 then change the coral costumes from dirty coral to clean coral. ', feedback: 'Incorrect.'
+wrong 'If the number of algae is less than 8 then change the coral costumes from clean coral to dirty coral. ', feedback: 'Incorrect.'
+right 'If the number of algae is greater than 8 then change the coral costumes from clean coral to dirty coral.', feedback: 'Correct!'
+wrong 'If the number of coral is greater than 8 then change the coral costumes to algae costumes.', feedback: 'Incorrect.'
+

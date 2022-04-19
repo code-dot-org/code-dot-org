@@ -3,7 +3,7 @@
   "name": "sprite.setFrame()",
   "category": "Sprites",
   "category_key": "sprites",
-  "content": "Use the frame number to set the frame for the animation for a sprite.\r\n\r\nUse the Animation tab to load multiple images which make up the frames for a labeled animation for your sprite. By default all frames are displayed one after another in round robin fashion. The speed is set by the slider in the Animation tab. Use `play()` to restart the animation. Use `pause()` to stop the animation.",
+  "content": "Use the frame number to set the frame for the animation for a sprite.\n\nUse the Animation tab to load multiple images which make up the frames for a labeled animation for your sprite. By default all frames are displayed one after another in round robin fashion. The speed is set by the slider in the Animation tab. Use [`sprite.play()`(#f78183)](/docs/gamelab/play/) to restart the animation. Use [`sprite.pause()`(#f78183)](/docs/gamelab/pause/) to stop the animation.",
   "examples": [
     {
       "name": "Happy, Surprised, Sad",

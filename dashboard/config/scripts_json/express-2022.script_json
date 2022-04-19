@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2022-01-24 16:02:11 UTC",
+    "serialized_at": "2022-04-19 03:04:52 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -596,12 +596,31 @@
       }
     },
     {
-      "key": "Using Variables with the Artist",
-      "name": "Using Variables with the Artist",
+      "key": "[New] Counting with Variables",
+      "name": "Counting with Variables",
       "absolute_position": 24,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 24,
+      "properties": {
+        "overview": "In this **skill-building** lesson, students will use variables to track a value that changes over time, like a counter. This lesson also includes a short **mini-project** in which students create a simple game.",
+        "preparation": "Play through the levels and review the **lesson slides**.\n",
+        "purpose": "In previous lessons, students learn to use variables to store data that can be retrieved later. In this lesson, students will begin learning to modify the data stored in a variable. This key understanding of how variables work will also enable them to create more advanced projects.",
+        "student_overview": "You will learn to use variables to make a counter or keep track of a score in a game."
+      },
+      "seeding_key": {
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "csf_variables",
+        "script.name": "express-2022"
+      }
+    },
+    {
+      "key": "Using Variables with the Artist",
+      "name": "Using Variables with the Artist",
+      "absolute_position": 25,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 25,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will explore the creation of repetitive designs using variables in the Artist environment. Students will learn how variables make code easier to write and easier to read. After guided puzzles, students will end in a free play level to show what they have learned and create new designs.",
@@ -618,10 +637,10 @@
     {
       "key": "Variables with the Bee",
       "name": "Variables with the Bee",
-      "absolute_position": 25,
+      "absolute_position": 26,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 25,
+      "relative_position": 26,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **skill-building** lesson will help illustrate how variables can make programs more dynamic by allowing values to change while the code is running.",
@@ -638,10 +657,10 @@
     {
       "key": "For Loops with Bee",
       "name": "For Loops with Bee",
-      "absolute_position": 26,
+      "absolute_position": 27,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 26,
+      "relative_position": 27,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **skill-building** lesson focuses on for loops and using an incrementing variable to solve more complicated puzzles. ",
@@ -658,10 +677,10 @@
     {
       "key": "For Loops with Artist",
       "name": "For Loops with Artist",
-      "absolute_position": 27,
+      "absolute_position": 28,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 27,
+      "relative_position": 28,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students practice “for” loops with Artist. Students will complete puzzles to create complex designs and unique art.",
@@ -678,10 +697,10 @@
     {
       "key": "End of Course Project",
       "name": "End of Course Project",
-      "absolute_position": 28,
+      "absolute_position": 29,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 28,
+      "relative_position": 29,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **project** lesson takes students through the process of designing, developing, and showcasing new projects!",
@@ -1863,6 +1882,48 @@
       "seeding_key": {
         "lesson_activity.key": "d6d2a1c2-abfe-449b-b760-0142d9d7ea44",
         "lesson.key": "Text and Prompts",
+        "lesson_group.key": "csf_variables",
+        "script.name": "express-2022"
+      }
+    },
+    {
+      "key": "9ce3273c-9779-4593-a194-f2587287f9dd",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9ce3273c-9779-4593-a194-f2587287f9dd",
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "csf_variables",
+        "script.name": "express-2022"
+      }
+    },
+    {
+      "key": "c8b3c8c5-84a1-47f0-af8f-f772e1960cc4",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c8b3c8c5-84a1-47f0-af8f-f772e1960cc4",
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "csf_variables",
+        "script.name": "express-2022"
+      }
+    },
+    {
+      "key": "a78e0f46-d88e-4656-91ef-ff25b678d99a",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a78e0f46-d88e-4656-91ef-ff25b678d99a",
+        "lesson.key": "[New] Counting with Variables",
         "lesson_group.key": "csf_variables",
         "script.name": "express-2022"
       }
@@ -4823,6 +4884,184 @@
       "seeding_key": {
         "activity_section.key": "36962720-1371-45ca-a0b0-f2c29c0aee51",
         "lesson_activity.key": "d6d2a1c2-abfe-449b-b760-0142d9d7ea44"
+      }
+    },
+    {
+      "key": "aa72fe0f-492d-4c13-827d-43918664378e",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide\n\n**Discuss**: _Which of the following types of information change over time?_ \n* _Your first name_\n* _Your birthday_\n* _Your height_\n* _Your age_\n* _The temperature outside_\n* _The answer to 2+2_\n* _The capital of our country_\n* _Today’s date_\n* _The score in a game_\n\n**Do This**: Have students discuss which information would change over time and which would not. Some items might generate a larger discussion. For example, it is possible to change your first name or use a nickname. Also, over time, your height will stop changing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _When is it useful to change what is stored in a variable?_\n\n**Discussion goal**: Students should understand that they can create a variable that stores information that either stays the same or changes over time. In a game with points, a variable is responsible for keeping track of a user’s score throughout the game. Typically, this variable starts out being set to 0 and increases by 1 for every point that the user scores. The final score is reported at the end by printing out the variable. \n",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "aa72fe0f-492d-4c13-827d-43918664378e",
+        "lesson_activity.key": "9ce3273c-9779-4593-a194-f2587287f9dd"
+      }
+    },
+    {
+      "key": "bb115604-d0c7-4483-98c0-2d59d04351bb",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The goal of this discussion activity is to get students thinking about storing and modifying information using a variable. Students may recall that in previous lessons they would store information, like a word, by entering it into a prompt. In the next activities, students will learn a new way to store information as well as how to modify that information as a program runs. They should discuss when it would be necessary to change or update a variable over time. \n\nFor the discussion, decide beforehand what strategy will work best for your classroom. Some ideas include: using a T-chart, discussing in pairs or as a class.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bb115604-d0c7-4483-98c0-2d59d04351bb",
+        "lesson_activity.key": "9ce3273c-9779-4593-a194-f2587287f9dd"
+      }
+    },
+    {
+      "key": "b3d0f826-5e87-4ad6-bd1d-5ea404c1ba6c",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "b3d0f826-5e87-4ad6-bd1d-5ea404c1ba6c",
+        "lesson_activity.key": "9ce3273c-9779-4593-a194-f2587287f9dd"
+      }
+    },
+    {
+      "key": "19ee68f8-7ad7-4cc9-bcff-866ac6ed254b",
+      "position": 4,
+      "properties": {
+        "description": "The value stored in a variable can change over time.\n\nWhen we start, our count variable is set to 0. After a few seconds, it increases by 1.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "19ee68f8-7ad7-4cc9-bcff-866ac6ed254b",
+        "lesson_activity.key": "9ce3273c-9779-4593-a194-f2587287f9dd"
+      }
+    },
+    {
+      "key": "d51c423f-e3c0-482f-be51-85c0ea2fac87",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide\n\n**Do this**: Use the lesson slides to review the vocabulary for this lesson. Be sure that students can recall from the lesson where they saw each of these concepts.\n\n\n",
+        "name": "Review"
+      },
+      "seeding_key": {
+        "activity_section.key": "d51c423f-e3c0-482f-be51-85c0ea2fac87",
+        "lesson_activity.key": "9ce3273c-9779-4593-a194-f2587287f9dd"
+      }
+    },
+    {
+      "key": "089b93b5-a7a3-4fb6-849e-44a9e14b4313",
+      "position": 6,
+      "properties": {
+        "description": "When a user enters information into a prompt, the computer stores it with a variable. The prompt can also trigger an event. If the code uses a variable, the computer will look for a matching label to find the stored information.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "089b93b5-a7a3-4fb6-849e-44a9e14b4313",
+        "lesson_activity.key": "9ce3273c-9779-4593-a194-f2587287f9dd"
+      }
+    },
+    {
+      "key": "be0c1c94-6eec-4c10-b90f-59da0ebb1a63",
+      "position": 7,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students shouldn’t be expected to know how variables will be used in this new context right away, so it’s okay to frame these questions as things to consider while they work. \n\nAs students move through the levels in this lesson, they will learn how to set a variable to store a number, then change that number over time. Knowing how to modify a variable’s value is the key to tracking something that changes, like the score in a game.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "be0c1c94-6eec-4c10-b90f-59da0ebb1a63",
+        "lesson_activity.key": "9ce3273c-9779-4593-a194-f2587287f9dd"
+      }
+    },
+    {
+      "key": "78a9627d-1365-414a-b492-8e2e6fe8892c",
+      "position": 1,
+      "properties": {
+        "name": "Counting with Variables"
+      },
+      "seeding_key": {
+        "activity_section.key": "78a9627d-1365-414a-b492-8e2e6fe8892c",
+        "lesson_activity.key": "c8b3c8c5-84a1-47f0-af8f-f772e1960cc4"
+      }
+    },
+    {
+      "key": "b2d87065-8954-443d-a9be-bb206b411b24",
+      "position": 2,
+      "properties": {
+        "description": "####Prediction (3 minutes)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Predict” slide\n\n**Do this**: Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Predict” slide\n\n**Do this**: Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.",
+        "progression_name": "Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "b2d87065-8954-443d-a9be-bb206b411b24",
+        "lesson_activity.key": "c8b3c8c5-84a1-47f0-af8f-f772e1960cc4"
+      }
+    },
+    {
+      "key": "3448e98d-17c0-47c5-a924-ce769b817cd5",
+      "position": 3,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This lesson includes two prediction puzzles: one to bridge what students have already learned and a second one to introduce the new blocks in the lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3448e98d-17c0-47c5-a924-ce769b817cd5",
+        "lesson_activity.key": "c8b3c8c5-84a1-47f0-af8f-f772e1960cc4"
+      }
+    },
+    {
+      "key": "93c42114-b7e6-4d21-9e93-0760e125a7b9",
+      "position": 4,
+      "properties": {
+        "description": "####Skill Building and Exploration (10 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3-5 - Skill Building” slide\n\n**Transition**: Move students to their computers. Encourage students to follow the instructions for each level.\n \n",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "93c42114-b7e6-4d21-9e93-0760e125a7b9",
+        "lesson_activity.key": "c8b3c8c5-84a1-47f0-af8f-f772e1960cc4"
+      }
+    },
+    {
+      "key": "a88f91f8-569f-40db-a8f8-700323940f53",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6 - Exploration” slide",
+        "progression_name": "Exploration: Clicker Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "a88f91f8-569f-40db-a8f8-700323940f53",
+        "lesson_activity.key": "c8b3c8c5-84a1-47f0-af8f-f772e1960cc4"
+      }
+    },
+    {
+      "key": "92b27a47-c534-4671-afd1-23a3586897c9",
+      "position": 6,
+      "properties": {
+        "description": "####Mini-Project (17 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7-11 - Clicker Game” slide\n",
+        "progression_name": "Mini-Project: Clicker Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "92b27a47-c534-4671-afd1-23a3586897c9",
+        "lesson_activity.key": "c8b3c8c5-84a1-47f0-af8f-f772e1960cc4"
+      }
+    },
+    {
+      "key": "b8a87ad4-50ba-433f-8c86-27093af1fafd",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _How did you use variables in your game?_\n\n**Discussion goal**: Students should understand that the variables in their game stored a value that changed over time. A variable’s value can set directly in the code, modified as a user interacts with an app, or input directly such as with a prompt.",
+        "name": "Reflect"
+      },
+      "seeding_key": {
+        "activity_section.key": "b8a87ad4-50ba-433f-8c86-27093af1fafd",
+        "lesson_activity.key": "a78e0f46-d88e-4656-91ef-ff25b678d99a"
       }
     },
     {
@@ -11626,7 +11865,7 @@
       ]
     },
     {
-      "chapter": 271,
+      "chapter": 256,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11651,7 +11890,7 @@
       ]
     },
     {
-      "chapter": 272,
+      "chapter": 257,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -11676,7 +11915,7 @@
       ]
     },
     {
-      "chapter": 273,
+      "chapter": 258,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -11701,7 +11940,7 @@
       ]
     },
     {
-      "chapter": 274,
+      "chapter": 259,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -11726,7 +11965,7 @@
       ]
     },
     {
-      "chapter": 275,
+      "chapter": 260,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -11751,7 +11990,7 @@
       ]
     },
     {
-      "chapter": 276,
+      "chapter": 261,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -11776,7 +12015,7 @@
       ]
     },
     {
-      "chapter": 277,
+      "chapter": 262,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -11801,7 +12040,7 @@
       ]
     },
     {
-      "chapter": 278,
+      "chapter": 263,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -11826,7 +12065,7 @@
       ]
     },
     {
-      "chapter": 279,
+      "chapter": 264,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -11851,7 +12090,7 @@
       ]
     },
     {
-      "chapter": 280,
+      "chapter": 265,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -11876,7 +12115,7 @@
       ]
     },
     {
-      "chapter": 281,
+      "chapter": 266,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -11902,7 +12141,7 @@
       ]
     },
     {
-      "chapter": 282,
+      "chapter": 267,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -11927,7 +12166,7 @@
       ]
     },
     {
-      "chapter": 283,
+      "chapter": 268,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -11952,7 +12191,7 @@
       ]
     },
     {
-      "chapter": 256,
+      "chapter": 269,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -11977,7 +12216,7 @@
       ]
     },
     {
-      "chapter": 257,
+      "chapter": 270,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -12002,7 +12241,7 @@
       ]
     },
     {
-      "chapter": 258,
+      "chapter": 271,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -12027,7 +12266,7 @@
       ]
     },
     {
-      "chapter": 259,
+      "chapter": 272,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -12052,7 +12291,7 @@
       ]
     },
     {
-      "chapter": 260,
+      "chapter": 273,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -12077,7 +12316,7 @@
       ]
     },
     {
-      "chapter": 261,
+      "chapter": 274,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -12102,7 +12341,7 @@
       ]
     },
     {
-      "chapter": 262,
+      "chapter": 275,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -12127,7 +12366,7 @@
       ]
     },
     {
-      "chapter": 263,
+      "chapter": 276,
       "position": 8,
       "activity_section_position": 7,
       "assessment": false,
@@ -12152,7 +12391,7 @@
       ]
     },
     {
-      "chapter": 264,
+      "chapter": 277,
       "position": 9,
       "activity_section_position": 8,
       "assessment": false,
@@ -12177,7 +12416,7 @@
       ]
     },
     {
-      "chapter": 265,
+      "chapter": 278,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -12203,7 +12442,7 @@
       ]
     },
     {
-      "chapter": 266,
+      "chapter": 279,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -12228,7 +12467,7 @@
       ]
     },
     {
-      "chapter": 267,
+      "chapter": 280,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -12253,7 +12492,7 @@
       ]
     },
     {
-      "chapter": 268,
+      "chapter": 281,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -12278,7 +12517,7 @@
       ]
     },
     {
-      "chapter": 269,
+      "chapter": 282,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -12303,7 +12542,7 @@
       ]
     },
     {
-      "chapter": 270,
+      "chapter": 283,
       "position": 15,
       "activity_section_position": 2,
       "assessment": false,
@@ -12708,6 +12947,248 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Prediction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables2_predict_-2022-2"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "csf_variables",
+        "script.name": "express-2022",
+        "activity_section.key": "b2d87065-8954-443d-a9be-bb206b411b24"
+      },
+      "level_keys": [
+        "courseF_variables2_predict_-2022-2"
+      ]
+    },
+    {
+      "chapter": 300,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Prediction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables2_predict2_-2022-2"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "csf_variables",
+        "script.name": "express-2022",
+        "activity_section.key": "b2d87065-8954-443d-a9be-bb206b411b24"
+      },
+      "level_keys": [
+        "courseF_variables2_predict2_-2022-2"
+      ]
+    },
+    {
+      "chapter": 301,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables2_set_-2022-2"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "csf_variables",
+        "script.name": "express-2022",
+        "activity_section.key": "93c42114-b7e6-4d21-9e93-0760e125a7b9"
+      },
+      "level_keys": [
+        "courseF_variables2_set_-2022-2"
+      ]
+    },
+    {
+      "chapter": 302,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables2_change_-2022-2"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "csf_variables",
+        "script.name": "express-2022",
+        "activity_section.key": "93c42114-b7e6-4d21-9e93-0760e125a7b9"
+      },
+      "level_keys": [
+        "courseF_variables2_change_-2022-2"
+      ]
+    },
+    {
+      "chapter": 303,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables2_click_-2022-2"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "csf_variables",
+        "script.name": "express-2022",
+        "activity_section.key": "93c42114-b7e6-4d21-9e93-0760e125a7b9"
+      },
+      "level_keys": [
+        "courseF_variables2_click_-2022-2"
+      ]
+    },
+    {
+      "chapter": 304,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploration: Clicker Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_clicker_explore_-2022-2"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "csf_variables",
+        "script.name": "express-2022",
+        "activity_section.key": "a88f91f8-569f-40db-a8f8-700323940f53"
+      },
+      "level_keys": [
+        "courseF_clicker_explore_-2022-2"
+      ]
+    },
+    {
+      "chapter": 305,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Mini-Project: Clicker Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_clicker_sprites_-2022-2"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "csf_variables",
+        "script.name": "express-2022",
+        "activity_section.key": "92b27a47-c534-4671-afd1-23a3586897c9"
+      },
+      "level_keys": [
+        "courseF_clicker_sprites_-2022-2"
+      ]
+    },
+    {
+      "chapter": 306,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Mini-Project: Clicker Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_clicker_remove_-2022-2"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "csf_variables",
+        "script.name": "express-2022",
+        "activity_section.key": "92b27a47-c534-4671-afd1-23a3586897c9"
+      },
+      "level_keys": [
+        "courseF_clicker_remove_-2022-2"
+      ]
+    },
+    {
+      "chapter": 307,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Mini-Project: Clicker Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_clicker_variable_-2022-2"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "csf_variables",
+        "script.name": "express-2022",
+        "activity_section.key": "92b27a47-c534-4671-afd1-23a3586897c9"
+      },
+      "level_keys": [
+        "courseF_clicker_variable_-2022-2"
+      ]
+    },
+    {
+      "chapter": 308,
+      "position": 10,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Mini-Project: Clicker Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_clicker_score_-2022-2"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "csf_variables",
+        "script.name": "express-2022",
+        "activity_section.key": "92b27a47-c534-4671-afd1-23a3586897c9"
+      },
+      "level_keys": [
+        "courseF_clicker_score_-2022-2"
+      ]
+    },
+    {
+      "chapter": 309,
+      "position": 11,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Mini-Project: Clicker Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_clicker_finish_-2022-2"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "csf_variables",
+        "script.name": "express-2022",
+        "activity_section.key": "92b27a47-c534-4671-afd1-23a3586897c9"
+      },
+      "level_keys": [
+        "courseF_clicker_finish_-2022-2"
+      ]
+    },
+    {
+      "chapter": 310,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "courseF_artist_variables3a_predict12022"
         ],
@@ -12728,7 +13209,7 @@
       ]
     },
     {
-      "chapter": 300,
+      "chapter": 311,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -12753,7 +13234,7 @@
       ]
     },
     {
-      "chapter": 301,
+      "chapter": 312,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -12778,7 +13259,7 @@
       ]
     },
     {
-      "chapter": 302,
+      "chapter": 313,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -12803,7 +13284,7 @@
       ]
     },
     {
-      "chapter": 303,
+      "chapter": 314,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -12828,7 +13309,7 @@
       ]
     },
     {
-      "chapter": 304,
+      "chapter": 315,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -12853,7 +13334,7 @@
       ]
     },
     {
-      "chapter": 305,
+      "chapter": 316,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -12878,7 +13359,7 @@
       ]
     },
     {
-      "chapter": 306,
+      "chapter": 317,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12903,7 +13384,7 @@
       ]
     },
     {
-      "chapter": 307,
+      "chapter": 318,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -12928,7 +13409,7 @@
       ]
     },
     {
-      "chapter": 308,
+      "chapter": 319,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -12953,7 +13434,7 @@
       ]
     },
     {
-      "chapter": 309,
+      "chapter": 320,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -12978,7 +13459,7 @@
       ]
     },
     {
-      "chapter": 310,
+      "chapter": 321,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -13003,7 +13484,7 @@
       ]
     },
     {
-      "chapter": 311,
+      "chapter": 322,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -13028,7 +13509,7 @@
       ]
     },
     {
-      "chapter": 312,
+      "chapter": 323,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -13053,7 +13534,7 @@
       ]
     },
     {
-      "chapter": 313,
+      "chapter": 324,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -13078,7 +13559,7 @@
       ]
     },
     {
-      "chapter": 314,
+      "chapter": 325,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -13103,7 +13584,7 @@
       ]
     },
     {
-      "chapter": 315,
+      "chapter": 326,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -13128,7 +13609,7 @@
       ]
     },
     {
-      "chapter": 316,
+      "chapter": 327,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -13153,7 +13634,7 @@
       ]
     },
     {
-      "chapter": 317,
+      "chapter": 328,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -13178,7 +13659,7 @@
       ]
     },
     {
-      "chapter": 318,
+      "chapter": 329,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -13203,7 +13684,7 @@
       ]
     },
     {
-      "chapter": 319,
+      "chapter": 330,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -13228,7 +13709,7 @@
       ]
     },
     {
-      "chapter": 320,
+      "chapter": 331,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -13253,7 +13734,7 @@
       ]
     },
     {
-      "chapter": 321,
+      "chapter": 332,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -13278,7 +13759,7 @@
       ]
     },
     {
-      "chapter": 322,
+      "chapter": 333,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -13303,7 +13784,7 @@
       ]
     },
     {
-      "chapter": 323,
+      "chapter": 334,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -13328,7 +13809,7 @@
       ]
     },
     {
-      "chapter": 324,
+      "chapter": 335,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -13353,7 +13834,7 @@
       ]
     },
     {
-      "chapter": 325,
+      "chapter": 336,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -13378,7 +13859,7 @@
       ]
     },
     {
-      "chapter": 326,
+      "chapter": 337,
       "position": 11,
       "activity_section_position": 3,
       "assessment": false,
@@ -13403,7 +13884,7 @@
       ]
     },
     {
-      "chapter": 327,
+      "chapter": 338,
       "position": 12,
       "activity_section_position": 4,
       "assessment": false,
@@ -13428,7 +13909,7 @@
       ]
     },
     {
-      "chapter": 328,
+      "chapter": 339,
       "position": 13,
       "activity_section_position": 5,
       "assessment": false,
@@ -13453,7 +13934,7 @@
       ]
     },
     {
-      "chapter": 329,
+      "chapter": 340,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -13478,7 +13959,7 @@
       ]
     },
     {
-      "chapter": 330,
+      "chapter": 341,
       "position": 15,
       "activity_section_position": 2,
       "assessment": false,
@@ -13503,7 +13984,7 @@
       ]
     },
     {
-      "chapter": 331,
+      "chapter": 342,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -13528,7 +14009,7 @@
       ]
     },
     {
-      "chapter": 332,
+      "chapter": 343,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -13553,7 +14034,7 @@
       ]
     },
     {
-      "chapter": 333,
+      "chapter": 344,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -13578,7 +14059,7 @@
       ]
     },
     {
-      "chapter": 334,
+      "chapter": 345,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -13603,7 +14084,7 @@
       ]
     },
     {
-      "chapter": 335,
+      "chapter": 346,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -13628,7 +14109,7 @@
       ]
     },
     {
-      "chapter": 336,
+      "chapter": 347,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -13653,7 +14134,7 @@
       ]
     },
     {
-      "chapter": 337,
+      "chapter": 348,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -13678,7 +14159,7 @@
       ]
     },
     {
-      "chapter": 338,
+      "chapter": 349,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -13703,7 +14184,7 @@
       ]
     },
     {
-      "chapter": 339,
+      "chapter": 350,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -13728,7 +14209,7 @@
       ]
     },
     {
-      "chapter": 340,
+      "chapter": 351,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -13753,7 +14234,7 @@
       ]
     },
     {
-      "chapter": 341,
+      "chapter": 352,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -13778,7 +14259,7 @@
       ]
     },
     {
-      "chapter": 342,
+      "chapter": 353,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -16866,6 +17347,162 @@
     },
     {
       "seeding_key": {
+        "level.key": "courseE_farmer_functions12022",
+        "script_level.level_keys": [
+          "courseE_farmer_functions12022"
+        ],
+        "lesson.key": "Functions with Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2022",
+        "activity_section.key": "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions1a2022",
+        "script_level.level_keys": [
+          "courseE_farmer_functions1a2022"
+        ],
+        "lesson.key": "Functions with Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2022",
+        "activity_section.key": "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions2b2022",
+        "script_level.level_keys": [
+          "courseE_farmer_functions2b2022"
+        ],
+        "lesson.key": "Functions with Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2022",
+        "activity_section.key": "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions2ba2022",
+        "script_level.level_keys": [
+          "courseE_farmer_functions2ba2022"
+        ],
+        "lesson.key": "Functions with Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2022",
+        "activity_section.key": "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions3c2022",
+        "script_level.level_keys": [
+          "courseE_farmer_functions3c2022"
+        ],
+        "lesson.key": "Functions with Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2022",
+        "activity_section.key": "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions3c12022",
+        "script_level.level_keys": [
+          "courseE_farmer_functions3c12022"
+        ],
+        "lesson.key": "Functions with Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2022",
+        "activity_section.key": "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_video_createFunctions22022",
+        "script_level.level_keys": [
+          "courseE_video_createFunctions22022"
+        ],
+        "lesson.key": "Functions with Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2022",
+        "activity_section.key": "a2bdcd68-5873-4a71-82a9-049b343d1e33"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions7a12022",
+        "script_level.level_keys": [
+          "courseE_farmer_functions7a12022"
+        ],
+        "lesson.key": "Functions with Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2022",
+        "activity_section.key": "fe27d175-b9e3-4dfe-9949-bdd2966b2dd4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions8a12022",
+        "script_level.level_keys": [
+          "courseE_farmer_functions8a12022"
+        ],
+        "lesson.key": "Functions with Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2022",
+        "activity_section.key": "fe27d175-b9e3-4dfe-9949-bdd2966b2dd4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions9a12022",
+        "script_level.level_keys": [
+          "courseE_farmer_functions9a12022"
+        ],
+        "lesson.key": "Functions with Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2022",
+        "activity_section.key": "fe27d175-b9e3-4dfe-9949-bdd2966b2dd4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions10a12022",
+        "script_level.level_keys": [
+          "courseE_farmer_functions10a12022"
+        ],
+        "lesson.key": "Functions with Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2022",
+        "activity_section.key": "480098ab-4bb6-4713-bf04-3404e93c9fe3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions132022",
+        "script_level.level_keys": [
+          "courseE_farmer_functions132022"
+        ],
+        "lesson.key": "Functions with Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2022",
+        "activity_section.key": "ff540d41-6f94-4e4e-affd-0d167ab24093"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_farmer_functions11_predict2022",
+        "script_level.level_keys": [
+          "courseE_farmer_functions11_predict2022"
+        ],
+        "lesson.key": "Functions with Harvester",
+        "lesson_group.key": "csf_functions",
+        "script.name": "express-2022",
+        "activity_section.key": "ba634679-9f17-4493-878d-b657dad934a2"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "courseE_artist_functions_predict12022",
         "script_level.level_keys": [
           "courseE_artist_functions_predict12022"
@@ -17046,162 +17683,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_farmer_functions12022",
-        "script_level.level_keys": [
-          "courseE_farmer_functions12022"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_functions",
-        "script.name": "express-2022",
-        "activity_section.key": "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseE_farmer_functions1a2022",
-        "script_level.level_keys": [
-          "courseE_farmer_functions1a2022"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_functions",
-        "script.name": "express-2022",
-        "activity_section.key": "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseE_farmer_functions2b2022",
-        "script_level.level_keys": [
-          "courseE_farmer_functions2b2022"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_functions",
-        "script.name": "express-2022",
-        "activity_section.key": "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseE_farmer_functions2ba2022",
-        "script_level.level_keys": [
-          "courseE_farmer_functions2ba2022"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_functions",
-        "script.name": "express-2022",
-        "activity_section.key": "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseE_farmer_functions3c2022",
-        "script_level.level_keys": [
-          "courseE_farmer_functions3c2022"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_functions",
-        "script.name": "express-2022",
-        "activity_section.key": "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseE_farmer_functions3c12022",
-        "script_level.level_keys": [
-          "courseE_farmer_functions3c12022"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_functions",
-        "script.name": "express-2022",
-        "activity_section.key": "3fe01e47-b3a6-4c39-be65-7bc8a1ca840f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseE_video_createFunctions22022",
-        "script_level.level_keys": [
-          "courseE_video_createFunctions22022"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_functions",
-        "script.name": "express-2022",
-        "activity_section.key": "a2bdcd68-5873-4a71-82a9-049b343d1e33"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseE_farmer_functions7a12022",
-        "script_level.level_keys": [
-          "courseE_farmer_functions7a12022"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_functions",
-        "script.name": "express-2022",
-        "activity_section.key": "fe27d175-b9e3-4dfe-9949-bdd2966b2dd4"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseE_farmer_functions8a12022",
-        "script_level.level_keys": [
-          "courseE_farmer_functions8a12022"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_functions",
-        "script.name": "express-2022",
-        "activity_section.key": "fe27d175-b9e3-4dfe-9949-bdd2966b2dd4"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseE_farmer_functions9a12022",
-        "script_level.level_keys": [
-          "courseE_farmer_functions9a12022"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_functions",
-        "script.name": "express-2022",
-        "activity_section.key": "fe27d175-b9e3-4dfe-9949-bdd2966b2dd4"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseE_farmer_functions10a12022",
-        "script_level.level_keys": [
-          "courseE_farmer_functions10a12022"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_functions",
-        "script.name": "express-2022",
-        "activity_section.key": "480098ab-4bb6-4713-bf04-3404e93c9fe3"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseE_farmer_functions132022",
-        "script_level.level_keys": [
-          "courseE_farmer_functions132022"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_functions",
-        "script.name": "express-2022",
-        "activity_section.key": "ff540d41-6f94-4e4e-affd-0d167ab24093"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseE_farmer_functions11_predict2022",
-        "script_level.level_keys": [
-          "courseE_farmer_functions11_predict2022"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_functions",
-        "script.name": "express-2022",
-        "activity_section.key": "ba634679-9f17-4493-878d-b657dad934a2"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "courseF_variables_predict2022",
         "script_level.level_keys": [
           "courseF_variables_predict2022"
@@ -17378,6 +17859,138 @@
         "lesson_group.key": "csf_variables",
         "script.name": "express-2022",
         "activity_section.key": "2a0713a5-ac91-4352-9d68-df19d415fd97"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables2_predict_-2022-2",
+        "script_level.level_keys": [
+          "courseF_variables2_predict_-2022-2"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "csf_variables",
+        "script.name": "express-2022",
+        "activity_section.key": "b2d87065-8954-443d-a9be-bb206b411b24"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables2_predict2_-2022-2",
+        "script_level.level_keys": [
+          "courseF_variables2_predict2_-2022-2"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "csf_variables",
+        "script.name": "express-2022",
+        "activity_section.key": "b2d87065-8954-443d-a9be-bb206b411b24"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables2_set_-2022-2",
+        "script_level.level_keys": [
+          "courseF_variables2_set_-2022-2"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "csf_variables",
+        "script.name": "express-2022",
+        "activity_section.key": "93c42114-b7e6-4d21-9e93-0760e125a7b9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables2_change_-2022-2",
+        "script_level.level_keys": [
+          "courseF_variables2_change_-2022-2"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "csf_variables",
+        "script.name": "express-2022",
+        "activity_section.key": "93c42114-b7e6-4d21-9e93-0760e125a7b9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables2_click_-2022-2",
+        "script_level.level_keys": [
+          "courseF_variables2_click_-2022-2"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "csf_variables",
+        "script.name": "express-2022",
+        "activity_section.key": "93c42114-b7e6-4d21-9e93-0760e125a7b9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_clicker_explore_-2022-2",
+        "script_level.level_keys": [
+          "courseF_clicker_explore_-2022-2"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "csf_variables",
+        "script.name": "express-2022",
+        "activity_section.key": "a88f91f8-569f-40db-a8f8-700323940f53"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_clicker_sprites_-2022-2",
+        "script_level.level_keys": [
+          "courseF_clicker_sprites_-2022-2"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "csf_variables",
+        "script.name": "express-2022",
+        "activity_section.key": "92b27a47-c534-4671-afd1-23a3586897c9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_clicker_remove_-2022-2",
+        "script_level.level_keys": [
+          "courseF_clicker_remove_-2022-2"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "csf_variables",
+        "script.name": "express-2022",
+        "activity_section.key": "92b27a47-c534-4671-afd1-23a3586897c9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_clicker_variable_-2022-2",
+        "script_level.level_keys": [
+          "courseF_clicker_variable_-2022-2"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "csf_variables",
+        "script.name": "express-2022",
+        "activity_section.key": "92b27a47-c534-4671-afd1-23a3586897c9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_clicker_score_-2022-2",
+        "script_level.level_keys": [
+          "courseF_clicker_score_-2022-2"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "csf_variables",
+        "script.name": "express-2022",
+        "activity_section.key": "92b27a47-c534-4671-afd1-23a3586897c9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_clicker_finish_-2022-2",
+        "script_level.level_keys": [
+          "courseF_clicker_finish_-2022-2"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "csf_variables",
+        "script.name": "express-2022",
+        "activity_section.key": "92b27a47-c534-4671-afd1-23a3586897c9"
       }
     },
     {
@@ -17911,6 +18524,39 @@
   ],
   "resources": [
     {
+      "name": "All Resources",
+      "url": "/s/express-2022/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/express-2022/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/express-2022/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
       "name": "Artist Introduction",
       "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
       "key": "artist_introduction",
@@ -17920,18 +18566,6 @@
       },
       "seeding_key": {
         "resource.key": "artist_introduction"
-      }
-    },
-    {
-      "name": "Course Vocabulary\t",
-      "url": "https://studio.code.org/s/express-2021/vocab",
-      "key": "course_vocabulary",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "course_vocabulary"
       }
     },
     {
@@ -17957,18 +18591,6 @@
       },
       "seeding_key": {
         "resource.key": "csf_express_end_of_course_project_planning_guide"
-      }
-    },
-    {
-      "name": "CSTA Standards Mapping",
-      "url": "https://studio.code.org/s/express-2021/standards",
-      "key": "csta_standards_mapping",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "csta_standards_mapping"
       }
     },
     {
@@ -18376,13 +18998,19 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "course_vocabulary",
+        "resource.key": "all_resources",
         "script.name": "express-2022"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "csta_standards_mapping",
+        "resource.key": "all_standards",
+        "script.name": "express-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
         "script.name": "express-2022"
       }
     },
@@ -19179,6 +19807,16 @@
       }
     },
     {
+      "key": "4d6b0001-0d41-45ae-8061-1c493e6976ee",
+      "properties": {
+        "description": "Create a clicker game in Sprite Lab where sprites can be removed to score points"
+      },
+      "seeding_key": {
+        "lesson.key": "[New] Counting with Variables",
+        "objective.key": "4d6b0001-0d41-45ae-8061-1c493e6976ee"
+      }
+    },
+    {
       "key": "4df8eb31-02ee-4e5d-ae28-368a29da7142",
       "properties": {
         "description": "Examine code to find places where variables can be substituted for specific values."
@@ -19196,6 +19834,16 @@
       "seeding_key": {
         "lesson.key": "End of Course Project",
         "objective.key": "546d4a38-5abb-402c-9e61-bef13a71001d"
+      }
+    },
+    {
+      "key": "54f59612-1695-4ba2-bbf4-c03862b02924",
+      "properties": {
+        "description": "Create a variable that stores information and changes over time"
+      },
+      "seeding_key": {
+        "lesson.key": "[New] Counting with Variables",
+        "objective.key": "54f59612-1695-4ba2-bbf4-c03862b02924"
       }
     },
     {
@@ -20074,6 +20722,20 @@
         "lesson.key": "While Loops in Farmer",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "[New] Counting with Variables",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "[New] Counting with Variables",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
       }
     }
   ],

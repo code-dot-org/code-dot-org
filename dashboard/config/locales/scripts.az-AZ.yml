@@ -3261,6 +3261,7 @@ az:
           lessons:
             Bounce:
               name: Özünün basketbol oyununu yarat
+          name: basketbol
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -3535,6 +3536,7 @@ az:
             Sports:
               name: Özünün idman oyununu kodlaşdır
           student_description: İdman növlərini qarışdırın və uyğunlaşdırın
+          name: idman
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -4719,6 +4721,7 @@ az:
                 səviyyəsində oynamaq üçün bir az vaxt tapacaqlar.
           student_description: Minecraft yeni fəaliyyətlə Kod Saatı üçün geri döndü!
             Kod ilə Minecraft-a səyahət.
+          name: qəhrəman
         csp-explore-2017:
           lesson_groups:
             cspSurvey:
@@ -5837,6 +5840,7 @@ az:
               name: yeni mərhələ
             Dance Party:
               name: Rəqs şənliyi
+          name: rəqs
         frozen-2018-test-b:
           lessons:
             Artist:
@@ -5853,6 +5857,7 @@ az:
                 lakin bir saat ərzində tapmacalarla işləməkdən çox əylənəcəklər. Orta
                 məktəb tələbələri əsasən dərsliyi bitirəcək və sonunda pulsuz oyun
                 səviyyəsində oynamaq üçün bir az vaxt tapacaqlar.
+          name: suda yaşayan
         sconyers:
           lessons:
             Digital Design:
@@ -7299,10 +7304,6 @@ az:
               display_name: Məzmun
             required:
               display_name: Yekun
-        dance-2019:
-          lessons:
-            Dance Party:
-              name: Rəqs şənliyi
         k5-onlinepd-2019:
           description_short: Bu pulsuz, müstəqil onlayn kursla Code.org-un Kompüter
             Elmlərinin Əsaslarından istifadə edərək kompüter elmini necə öyrətməyi
@@ -9338,7 +9339,7 @@ az:
               name: Modul 1
             Getting Started:
               name: Başlanğıc
-            What is Code.org:
+            What is Codeorg:
               name: Code.org nədir?
             Lesson Planning:
               name: Dərs keçmək
@@ -10725,6 +10726,8 @@ az:
               name: Java Lab
             lesson-9:
               name: dövrlər
+            lesson-21:
+              name: Konsol
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
@@ -10753,10 +10756,17 @@ az:
           lessons:
             lesson-6:
               name: dəyişənlər
+            lesson-16:
+              name: Konsol
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: '"For" dövrü'
+            lesson-16:
+              name: Konsol
           lesson_groups:
             lessonGroup-2:
               display_name: Məzmun
@@ -10940,6 +10950,8 @@ az:
           lessons:
             lesson-1:
               name: Xoş gəlmişsiniz
+            lesson-9:
+              name: Dərs Planlaşdırma
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -10987,3 +10999,5 @@ az:
             Next steps:
               key: Növbəti addımlar
               name: Növbəti addımları atmaq
+        hello-world-csc:
+          title: Salam Dünya

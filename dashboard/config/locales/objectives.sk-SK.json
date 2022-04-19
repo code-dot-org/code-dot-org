@@ -131,6 +131,18 @@
         "19f72ae3-7b2b-4028-84e5-8e5e66fcf397": {
           "description": "Identifikovať miesta, kde budú môcť pokračovať v štúdiu informatiky a programovania"
         },
+        "5d9905b6-0dbe-4624-9184-8fa076dad2bb": {
+          "description": "Vysvetlite, prečo je šifrovanie dôležitou súčasťou každodenného života na internete."
+        },
+        "0bd7545d-60d4-4515-8d4e-6c66531e1f7d": {
+          "description": "Prelomiť správu zašifrovanú pomocou Cézarovej šifry použitím widgetu Cézarova šifra"
+        },
+        "3e2039fe-71cf-4966-8421-fbb9a2a9f075": {
+          "description": "Prelomeniť správu zašifrovanú pomocou náhodnej substitúcie použitím widgetu Frekvenčná analýza"
+        },
+        "f6a523a0-0d22-47e5-97b9-6c325a5cecb6": {
+          "description": "Vysvetliť slabé miesta a bezpečnostné nedostatky substitučných šifier"
+        },
         "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
           "description": "Vytvor interaktívnu animáciu pomocou postavičiek a udalostí."
         },

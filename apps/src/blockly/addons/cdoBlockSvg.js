@@ -44,20 +44,6 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
     this.removeUnusedBlockFrame();
   }
 
-  getTitles() {
-    let fields = [];
-    this.inputList.forEach(input => {
-      input.fieldRow.forEach(field => {
-        fields.push(field);
-      });
-    });
-    return fields;
-  }
-
-  getTitleValue(name) {
-    return super.getFieldValue(name);
-  }
-
   isUserVisible() {
     return false; // TODO - used for EXTRA_TOP_BLOCKS_FAIL feedback
   }

@@ -2,6 +2,8 @@
 el:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: δημιουργία νέων {ANIMATION_NAME} Σπράιτ σε {LOCATION}
       Dancelab_alternateMoves:
         text: "{GROUP} εναλλαγή κάθε {N} μέτρα \nμεταξύ {MOVE1} και {MOVE2}"
         options:
@@ -1013,6 +1015,11 @@ el:
         text: είναι συρόμενο
       gamelab_edgesDisplace:
         text: τουβλάκι ακμών {SPRITE} από το να κινηθεί
+      gamelab_everySeconds:
+        text: 'κάθε {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': δευτερόλεπτα
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1146,6 +1153,8 @@ el:
         options:
           EFFECT:
             '"rain"': βροχή
+      gamelab_makeNewScaledSprite:
+        text: δημιουργία νέων {ANIMATION_NAME} Σπράιτ σε {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: δημιουργία νέων {ANIMATION_NAME} Σπράιτ σε {LOCATION}
       gamelab_makeProjectile:

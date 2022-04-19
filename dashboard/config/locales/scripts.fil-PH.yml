@@ -1289,8 +1289,6 @@ fil:
               name: Tapusin na
         equity-pd:
           lessons:
-            Code.org Equity PD:
-              name: Code.org na Industriya PD
             Necessary Background:
               name: Kinakailangang Kaalaman
         science-PD2:
@@ -3960,6 +3958,7 @@ fil:
                 estudyante ay magkakaroon ng pagkakataon na i-customize ang kanilang
                 laro gamit ang iba't ibang mga bilis at mga tunog.
           student_description: Gumawa ng isang basketbol na laro
+          name: basketbol
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -5125,6 +5124,7 @@ fil:
                 estudyante ay magkakaroon ng pagkakataon na i-customize ang kanilang
                 laro gamit ang iba't ibang mga bilis at mga tunog.
           student_description: Maghalo at magtugma sa iba't ibang palakasan
+          name: mga palakasan
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -9423,6 +9423,7 @@ fil:
                 ng ilang oras upang maglaro sa antas ng libreng paglalaro sa dulo.
           student_description: Ang Minecraft ay nagbabalik para sa Oras ng Code na
             may mga bagong gawain! Maglakbay sa Minecraft sa pamamagitan ng code.
+          name: bayani
         applab-intro-staging:
           title: Pambungad sa Staging ng App Lab
           lessons:
@@ -12816,6 +12817,7 @@ fil:
                 ito sa mga mag-aaral sa lahat ng edad ngunit nangangailangan ng pagbabasa.
                 Nangangailangan ang aktibidad na ito ng tunog dahil ginawa ang tool
                 upang tumugon sa musika.
+          name: sayaw
         frozen-2018-test-b:
           lessons:
             Artist:
@@ -12832,6 +12834,7 @@ fil:
                 kasiyahan sa paggawa ng mga puzzle sa loob ng isang oras. Kadalasang
                 tatapusin ng mga estudyante sa high school ang tutorial at magkakaroon
                 ng ilang oras upang maglaro sa antas ng libreng paglalaro sa dulo.
+          name: pantubig
         sconyers:
           lessons:
             Digital Design:
@@ -16735,7 +16738,6 @@ fil:
         dance-2019:
           lessons:
             Dance Party:
-              name: Dance Party
               description_student: Sa araling ito, nakakakuha ng panimulang karanasan
                 sa coding at computer science ang mga mag-aaral sa lahat ng edad sa
                 isang ligtas at sumusuportang kapaligiran. Idinisenyo ang araling
@@ -21047,8 +21049,7 @@ fil:
               display_name: Mga Demo at Mapagkukunan
         csa-self-paced-pl:
           lessons:
-            Navigating the Code.org learning platform:
-              name: Paggamit sa platform ng pag-aaral ng Code.org
+            Navigating the Codeorg learning platform:
               description_teacher: |-
                 **Matututunan mo kung paano:**
 
@@ -22098,7 +22099,7 @@ fil:
                 kayamanan. Dito, ang mga loops ay lilikha ng mga pattern. Sa dulo
                 ng yugtong ito, ang mga estudyante ay bibigyan ng pagkakataong makalikha
                 ng kanilang sariling mga larawan gamit ang mga loop.
-            The Big Event Jr.:
+            The Big Event Jr:
               description_teacher: Ang mga pangyayari ay magandang paraan para magdagdag
                 ng kaibahan sa isang naisulat na na algoritmo. Minsan gusto mo na
                 ang iyong programa ay maaaring tumugon sa mga gumagamit nang eksakto
@@ -22351,7 +22352,7 @@ fil:
               name: Pagiging Loopy
             Loops with Harvester:
               name: Mga Loops sa Harvester
-            The Big Event Jr.:
+            The Big Event Jr:
               description_teacher: Ang mga pangyayari ay magandang paraan para magdagdag
                 ng kaibahan sa isang naisulat na na algoritmo. Minsan gusto mo na
                 ang iyong programa ay maaaring tumugon sa mga gumagamit nang eksakto
@@ -22804,6 +22805,8 @@ fil:
               name: Java Lab
             lesson-9:
               name: Mga loop
+            lesson-21:
+              name: Console
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
@@ -22824,6 +22827,14 @@ fil:
           lessons:
             lesson-6:
               name: Mga variable
+            lesson-16:
+              name: Console
+        csa3-2022:
+          lessons:
+            lesson-5:
+              name: For Loops
+            lesson-16:
+              name: Console
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -23016,3 +23027,5 @@ fil:
             For Loops:
               name: For Loops
               key: For Loops
+        hello-world-csc:
+          title: Hello World

@@ -73,10 +73,10 @@ Make sure everything works locally using the instructions above.
 cd docker/dockerfiles
 ```
 
-Sign in to Docker Hub through the command line
+Sign in to Docker Hub through the command line; when prompted, enter the password found under "access token for docker cli authentication" in the lastpass docker hub notes field
 
 ```
-docker login -u codedotorg -p <access token from lastpass docker hub notes field>
+docker login -u codedotorg
 ```
 
 Build a full image to your local machine

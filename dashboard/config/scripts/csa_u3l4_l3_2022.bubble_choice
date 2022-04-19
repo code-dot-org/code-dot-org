@@ -1,6 +1,6 @@
 name 'CSA U3L4-L3_2022'
 display_name 'Writing Algorithms with Arrays'
-description 'level description here'
+description 'Write algorithms to determine if arrays contain at least one value that meets specific criteria.'
 
 sublevels
 level 'CSA U3L4-L3a_2022'

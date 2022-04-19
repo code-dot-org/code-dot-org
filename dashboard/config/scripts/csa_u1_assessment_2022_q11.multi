@@ -1,0 +1,19 @@
+name 'CSA U1 Assessment 2022 q11'
+
+wrong '0'
+wrong '2'
+wrong '3'
+right '4'
+wrong 'Infinite'
+
+markdown <<MARKDOWN
+Consider the following code segment. 
+
+```
+while(!myPainter.facingWest()) {		
+  myPainter.turnLeft();
+}
+```
+
+What is the most number of times that the `turnLeft()` method would be called?
+MARKDOWN

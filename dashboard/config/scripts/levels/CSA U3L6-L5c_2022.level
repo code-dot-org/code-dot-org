@@ -2,20 +2,34 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
-    "long_instructions": "use a constant and implement algorithm to determine number of elements in a 1D array meet specific criteria",
+    "long_instructions": "The `NetflixStats`(#e7e8ea) class analyzes data about the cost of Netflix subscription fees in different countries and has an instance variable for their subscription fees.\r\n\r\n##In NetflixStats.java:\r\n\r\n1. Declare and initialize a constant `MAX_PRICE`(#e7e8ea) to `12`(#e7e8ea).\r\n\r\nThe method `countUnderMax()`(#e7e8ea) returns the number of countries with subscription fees that are less than or equal to the constant `MAX_PRICE`(#e7e8ea). In the `countUnderMax()`(#e7e8ea) method,\r\n\r\n2. Traverse the instance variable `prices`(#e7e8ea). Count each value that is less than or equal to the constant `MAX_PRICE`(#e7e8ea), then return the count.\r\n\r\n##In MyConsole.java:\r\n\r\n3. Print the result of a call to `countUnderMax()`(#e7e8ea) on the `countryPrices`(#e7e8ea) object.\r\n\r\n**Note:** Use the constant `MAX_PRICE`(#e7e8ea) when displaying the results.\r\n\r\n***Curious about this dataset?*** *Learn more about it [**here**](https://www.kaggle.com/datasets/prasertk/netflix-subscription-price-in-different-countries)!*\r\n\r\n![](https://images.code.org/777463a360fe8b1875e443010a08f79c-image-1648665390761.png)\r\n\r\n::: details [**Show Me How**]\r\nA constant variable uses the following syntax:\r\n  \r\n  ```\r\n  public static dataType VARIABLE_NAME = value;\r\n  ```\r\n:::",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "submittable": "false",
-    "csa_view_mode": "console"
+    "csa_view_mode": "console",
+    "display_name": "Subscription Fees",
+    "bubble_choice_description": "Find the number of countries that have Netflix subscription fees that are less than or equal to a maximum price.",
+    "thumbnail_url": "https://images.code.org/3dc0e87d88d3fbcc31fda946e7c41bef-image-1648663001013.png",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    /*\n     * Prices of a standard Netflix subscription in Canada, Costa Rica,\n     * France, Germany, India, Japan, New Zealand, Peru, United Kingdom,\n     * and United States (in order).\n     */\n    double[] pricesList = {11.87, 12.99, 15.24, 14.67, 6.61, 13.13, 12.53, 8.56, 13.2, 13.99};\n\n    NetflixStats countryPrices = new NetflixStats(pricesList);\n\n    // TO DO #3: Print the result of a call to countUnderMax().\n\n\n    \n  }\n}",
+        "isVisible": true
+      },
+      "NetflixStats.java": {
+        "text": "public class NetflixStats {\n\n  private double[] prices;\n\n  // TO DO #1: Declare and initialize a constant MAX_PRICE.\n\n  \n\n  public NetflixStats(double[] prices) {\n    this.prices = prices;\n  }\n\n  public int countUnderMax() {\n    // TO DO #2: Traverse prices and count the number of\n    // countries with fees less than or equal to MAX_PRICE.\n\n\n    \n  }\n}",
+        "isVisible": true
+      }
+    },
+    "encrypted_exemplar_sources": "jrRNHcOowRx22njbDNzE6K10Ex1m7JwmHnodMo3x9M3iWd2Q1zBpQMJAjMfA\nZwy43KdcrUqITn08QJYuCHhbInqJArGi82S6bHyHySG5UkBAaoFXeaLbd4sK\nHXaNbkLb2/xT9Xi0vK9h/kCw+Yt9furobzhysOxC+B7bDIEvTBdoq6z7Lsge\nGJe/lscnTq7FocI4/SpRUa66BQ3nbbkT+1hjfdTaOw4s5R2yQuJD3e7ZV2lH\nbDKnMeIb2gPX4anf2NXErix0cVU00ZuDqXnKXPLvzN5OqNYL0p/tem/tG/os\nZwAsH+8G2+s79cDOLVQr9C4f4I4T4jpgPSI3CwWObnoQG4OKOkPEtq5c2T8Z\ncejZgxzqY2xE89e1TbeV9qVmNSbuYQdgPeVDj7AvFICcTTGnGx+np2t9u5Z+\nc7IQNehz62E+wtgvTj9cArh6A1b8nrFSkzIlgwBcii1p2dvjiztNkPD+TMpN\nidqF9MbijPxtt+C4IH00X9yFOpYEO4+qdqSLOfsXTjzpDzYDuV8lXECcSZa7\n4SnkdXoUQaypiL8nDxRtsXGvRRntT+MD8GLaI+b/v++5tgZG39DqihZZJEFt\ne66zAFTMLxetwlFdGweO8bCkMIQyrZmxYeIurGRfhMee+mlkZKkFLctsRcLN\nav3ODuPfKXyzfQ/hQKVPUe/G7VWpeqnMXnBHmXACoxwfFG7C37+zuZgXQL4Z\nVN5W86aUT4RyP9mhhDyUzm/h7r55N7NaqYFL+ECGQg926+3O6xHc43RHCGGy\nWymeJFstzZit5+DPqZjPAmg0YLDuot/zUEAqwHlnA2lyLFiWeFWGZA1louc4\nAv7upVuO3C5Dx+Q4C4s2OOsg0B3+LKdVbD397EqqamM0Z0LHPWQ+2M64B/g3\n2DUqX1VdOoqNbo49urhSiYNZv9wpp34kETJwKdDeaLukWHSqeTjXQy25fhuJ\nvnbsTbVFwBNEU8O3CogiBhF/UPa49f2I3FRvZfWcIJ6hMLi0LqKlB3YXOINH\nDoDP7URO4w/N6WFDzP4fzN62Idlx9L9kaiW19WADafjr3l20jcqeznudT435\nS0dNgB1SUM5IjxbXhCwtq+m6CNSTjl0+WQEYpf+ClDvQUx16aveMjfTLyh60\nDk+PW3dTYIE04cBcQIWvNuECtxjZiBM5MkNsS0uxM8ytthmgglRFtvBF2w2W\nGj12ogycGtrVSfK+b00JiEG4xp8oRuyPbry+psvTGwjS7zs5IwJwvNaqJaJQ\nFf8rkjaikJnNDamytmMo9/A8ACdFSSa53Dwm763OPnP/S9+6z8RrA3OmGFuS\nUxyrTXLUHsek2P+BRVmgmkUMa0GNCRJwSPLypAe8T2EyjqG6JhXHo+Mq2QY6\n2NY9KFswtpZC5ZnRK8cPF8T0YIGOALu7GpnDbv9MzPZNPDU+6YWCqaAEELwe\njqdtuFEPoap6/ViRJb4hV4r0YF6hKD8T9bn+8Pb8jPC0SD4wAAIX6SRi4JXe\nuBm8a+nFgfT/KzQPoI3tn3Rqj7s1BqWpUSw0nR3ZObFG6em5QbFUqBQd3a/w\nL5BO2oe8wmr4IFyeZKHmSsyXPZSJkLFOuubKRa+Xsuw/+/BA3tk9agU3AWxg\n2KljJO7yhweOkG1Pq5E0iCOsJkCxrHzy0Pn3QNuHe9vriBPFJWX6xRX42kMw\nxyCTnp0UZSAXtNUMxlbMhiP4iR5PpvK69s8ya+uu3EapIBNsiFSXoLk24PI7\nIXPHII1nQQ==\n",
+    "encrypted_examples": [
+
+    ]
   },
   "game_id": 68,
   "published": true,
   "created_at": "2022-03-25T12:37:35.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-03-25 12:37:37 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-25 12:37:37 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 17:57:17 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 18:18:06 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 18:23:00 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 18:25:07 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 18:30:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 18:31:02 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 18:31:12 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 18:36:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

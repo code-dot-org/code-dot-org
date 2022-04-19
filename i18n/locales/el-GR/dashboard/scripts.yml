@@ -1008,6 +1008,7 @@ el:
           description_short: Φτιάξτε ένα παιχνίδι μπάσκετ
           description: Φτιάξτε ένα παιχνίδι μπάσκετ
           student_description: Φτιάξτε ένα παιχνίδι μπάσκετ
+          name: μπάσκετ
         hoc-encryption:
           lessons:
             Simple Encryption:
@@ -1839,6 +1840,7 @@ el:
           lessons:
             Aquatic:
               name: 'Minecraft: Υδάτινο Ταξίδι'
+          name: θαλάσσιο
         dance--draft:
           lessons:
             Dance Party:
@@ -2413,9 +2415,6 @@ el:
               display_name: Επισκόπηση
         dance-2019:
           description: Δημιουργήστε ένα δικό σας πάρτι χορού για να το μοιραστείτε με τους φίλους σας.
-          lessons:
-            Dance Party:
-              name: Πάρτι Χορού
           student_description: Δημιουργήστε ένα δικό σας πάρτι χορού για να το μοιραστείτε με τους φίλους σας.
         k5-onlinepd-2019:
           lessons:
@@ -3436,6 +3435,10 @@ el:
           lessons:
             lesson-6:
               name: Μεταβλητές
+        csa3-2022:
+          lessons:
+            lesson-5:
+              name: Βρόχοι Για
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -3466,6 +3469,10 @@ el:
               display_name: Χαρακτήρας
             lessonGroup-8:
               display_name: Μεταβλητές
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-9:
+              name: Σχεδιασμός μαθημάτων
         csa2-2022-exemplars:
           lessons:
             lesson-1:

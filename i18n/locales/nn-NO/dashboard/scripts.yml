@@ -1536,6 +1536,7 @@ nn:
           description_short: Lag eit basketballspel
           description: Lag eit basketballspel
           student_description: Lag eit basketballspel
+          name: basketball
         hoc-encryption:
           lessons:
             Simple Encryption:
@@ -3609,9 +3610,6 @@ nn:
               display_name: Oversyn
         dance-2019:
           description: Programmer din egen dansefest du kan dele med vennene dine!
-          lessons:
-            Dance Party:
-              name: Dansefest
           student_description: Programmer din egen dansefest du kan dele med vennene dine!
         k5-onlinepd-2019:
           lesson_groups:
@@ -5056,6 +5054,9 @@ nn:
             lessonGroup-2:
               display_name: Innhald
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: For-løkker
           lesson_groups:
             lessonGroup-2:
               display_name: Innhald

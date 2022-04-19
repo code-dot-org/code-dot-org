@@ -1311,8 +1311,6 @@ zh-TW:
           student_description: 階段 2 暑假的線上混合式學習
         equity-pd:
           lessons:
-            Code.org Equity PD:
-              name: Code.org 公平 PD
             Necessary Background:
               name: 前備知識
         science-PD2:
@@ -1810,6 +1808,7 @@ zh-TW:
               description_student: 在本課堂中，所有年齡的學生都會在安全且充滿支持的環境中，獲得程式編寫與電腦科學的新手體驗。本課堂適用於有能力閱讀的學生（6歲以上）。年齡較小的學生未必會完成教程，但是會在1小時解謎中獲得大量樂趣。大部分高中學生都會完成教程，並會在課堂結束時有一些時間玩自由探索關卡。
               description_teacher: 在本課堂中，所有年齡的學生都會在安全且充滿支持的環境中，獲得程式編寫與電腦科學的新手體驗。本課堂適用於有能力閱讀的學生（6歲以上）。年齡較小的學生未必會完成教程，但是會在1小時解謎中獲得大量樂趣。大部分高中學生都會完成教程，並會在課堂結束時有一些時間玩自由探索關卡。
           student_description: 使用程式積木，幫助 Steve 或 Alex 在 Minecraft 裡完成探險。
+          name: mc
         oceans:
           title: 在海洋中使用的 AI
           description: 瞭解 AI（人工智慧）和機器學習，可以怎樣用來解決全球問題。
@@ -3652,6 +3651,7 @@ zh-TW:
               description_student: 有沒有想過，你可以在學校玩電子遊戲？在本課堂中，你將有機會製作自己的遊戲！
               description_teacher: 在這項線上活動中，學生會學習甚麼是事件（event），以及電腦怎樣在程式（例如電子遊戲）中使用事件。學生會在各種謎題中，讓程式，對事件做出反應（例如按下箭頭按鈕後）。在謎題結束時，學生將有機會以不同的速度與聲音自訂遊戲。
           student_description: 選擇你的球隊，來場籃球比賽
+          name: 籃球
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -4263,6 +4263,7 @@ zh-TW:
               description_student: 有沒有想過，你可以在學校玩電子遊戲？在本課堂中，你將有機會製作自己的遊戲！
               description_teacher: 在這項線上活動中，學生會學習甚麼是事件（event），以及電腦怎樣在程式（例如電子遊戲）中使用事件。學生會在各種謎題中，讓程式，對事件做出反應（例如按下箭頭按鈕後）。在謎題結束時，學生將有機會以不同的速度與聲音自訂遊戲。
           student_description: 搞個混搭的運動遊戲
+          name: 運動
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -7153,6 +7154,7 @@ zh-TW:
               name: Minecraft：英雄之旅
               description_teacher: 在本課堂中，所有年齡的學生都會在安全且充滿支持的環境中，獲得程式編寫與電腦科學的新手體驗。本課堂適用於有能力閱讀的學生（6歲以上）。年齡較小的學生未必會完成教程，但是會在1小時解謎中獲得大量樂趣。大部分高中學生都會完成教程，並會在課堂結束時有一些時間玩自由探索關卡。
           student_description: 全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。
+          name: 英雄
         applab-intro-staging:
           title: App Lab 入門集結
           lessons:
@@ -9681,6 +9683,7 @@ zh-TW:
               description_student: 在本課程中，所有年齡段的學習者都將在一個安全、支持性的環境中獲得編碼和電腦科學的入門體驗。本課是為所有需要閱讀的年齡段學習者而設計的。本活動需要有聲音，因為這個工具是為響應音樂而構建的。
               description_teacher: 在本課程中，所有年齡段的學習者都將在一個安全、支持性的環境中獲得編碼和電腦科學的入門體驗。本課是為所有需要閱讀的年齡段學習者而設計的。本活動需要有聲音，因為這個工具是為響應音樂而構建的。
           student_description: 寫個你自己的舞蹈程式，並分享給朋友們！
+          name: 舞蹈
         frozen-2018-test-b:
           title: 新冰雪奇緣腳本
           lessons:
@@ -9695,6 +9698,7 @@ zh-TW:
               name: 'Minecraft: 水上巡航'
               description_teacher: 在本課堂中，所有年齡的學生都會在安全且充滿支持的環境中，獲得程式編寫與電腦科學的新手體驗。本課堂適用於有能力閱讀的學生（6歲以上）。年齡較小的學生未必會完成教程，但是會在1小時解謎中獲得大量樂趣。大部分高中學生都會完成教程，並會在課堂結束時有一些時間玩自由探索關卡。
           student_description: Minecraft 帶著新活動回來啦！拿出你的創造力和解決問題能力，一同用程式探索與打造水世界。
+          name: 水生
         sconyers:
           title: 翠絲的遊樂場
           lessons:
@@ -13527,7 +13531,7 @@ zh-TW:
           description: 寫個你自己的舞蹈程式，並分享給朋友們！
           lessons:
             Dance Party:
-              name: 舞蹈派對
+              name: 舞蹈派對 2019
               description_student: 在本課程中，所有年齡段的學習者都將在一個安全、支持性的環境中獲得編碼和電腦科學的入門體驗。本課是為所有需要閱讀的年齡段學習者而設計的。本活動需要有聲音，因為這個工具是為響應音樂而構建的。
               description_teacher: 在本課程中，所有年齡段的學習者都將在一個安全、支持性的環境中獲得編碼和電腦科學的入門體驗。本課是為所有需要閱讀的年齡段學習者而設計的。本活動需要有聲音，因為這個工具是為響應音樂而構建的。
           student_description: 寫個你自己的舞蹈程式，並分享給朋友們！
@@ -19238,8 +19242,7 @@ zh-TW:
           title: 你好，世界！
         csa-self-paced-pl:
           lessons:
-            Navigating the Code.org learning platform:
-              name: " Code.org學習平臺導航"
+            Navigating the Codeorg learning platform:
               description_teacher: |-
                 **你將學習如何：**
 
@@ -20396,7 +20399,7 @@ zh-TW:
               description_student: 使用迴圈與模式完成圖像。
               description_teacher: 學生會回到迴圈學習：將一系列簡單指令迴圈，從而繪畫圖像。在前一個插電課堂中，迴圈曾用於穿越迷宮並收集寶物。在這裡，迴圈則用於建立模式。在這個階段結束時，學生將有機會使用迴圈來製作自己的圖像。
               key: 海洋場景與迴圈（Loop）
-            The Big Event Jr.:
+            The Big Event Jr:
               name: 小小大事件
               description_student: 教師按下巨型遙控器的按鈕後，學生便會移動和大叫。
               description_teacher: 事件是很好的方式，在預先編寫好的演算法中增加變化。有時候，你希望自己的程式能夠完全以使用者預期的方式回應使用者。這正是事件之目的。
@@ -20916,7 +20919,7 @@ zh-TW:
               description_student: 製作你自己的智慧型手機應用程式草稿。
               description_teacher: 本課堂會讓學生明白，電腦可協助現實生活中的大眾。首先，學生會理解一些虛構的智慧型手機使用者，以協助他們找出「合適的應用程式」解決他們的需要。然後，學生會練習同理心與創意，製作自己的智慧型手機應用程式草稿，解決下一位使用者的需要。
               key: 合適的應用程式
-            The Big Event Jr.:
+            The Big Event Jr:
               name: 小小大事件
               description_student: 老師按下巨型遙控器的按鈕後，你便會移動或是大叫。
               description_teacher: 事件是很好的方式，在預先編寫好的演算法中增加變化。有時候，你希望自己的程式能夠完全以使用者預期的方式回應使用者。這正是事件之目的。
@@ -20993,7 +20996,7 @@ zh-TW:
           description_audience: 年齡 5-8
         coursec-2022:
           lessons:
-            My Robotic Friends Jr.:
+            My Robotic Friends Jr:
               name: 我的小機器人朋友
               description_student: 在本課堂中，你會假設同學是機器人，然後為他們設計程式，建立杯子堆疊的模式。
               description_teacher: 學生會使用一組符號來代替程式碼，設計演算法指示「機器人」把杯子疊起成不同的模式。學生會輪流扮演機器人，且僅回應同伴定義的演算法。這個部分會教導學生符號和行動關的聯繫、演算法和程式間的分別，以及有用的除錯技巧。
@@ -21017,7 +21020,7 @@ zh-TW:
               description_teacher: 在本課堂中，學生會控制藝術家完成畫面上的圖畫。這個藝術家舞台可讓學生製作越來越複雜的圖像，期間會使用新的積木，例如「move
                 forward by 100 pixels」（向前移動 100 像素）與「turn right by 90 degrees」（向右旋轉
                 90 度）等。
-            My Loopy Robotic Friends Jr.:
+            My Loopy Robotic Friends Jr:
               name: 我的愛迴圈小機器人朋友
               description_student: 在本課堂中，你會再次為同學設計程式，但會使用迴圈（loop），這樣，你便能夠解決更龐大、更複雜的問題。
               description_teacher: 學生會以最初的「我的機器人朋友」活動為基礎，處理更大型且更複雜的設計。為了幫助「機器人」設計程式，以完成這些更大型的設計，學生將需要找出指令裡有哪些重複模式可使用迴圈（loop）取代。
@@ -21705,6 +21708,8 @@ zh-TW:
               name: Java 實驗室
             lesson-9:
               name: 迴圈
+            lesson-21:
+              name: 主控台
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
@@ -21756,10 +21761,17 @@ zh-TW:
               name: 單元 2 評估
             lesson-6:
               name: 變數
+            lesson-16:
+              name: 主控台
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: 計次迴圈（For Loops）
+            lesson-16:
+              name: 主控台
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
@@ -22039,6 +22051,8 @@ zh-TW:
           lessons:
             lesson-1:
               name: 歡迎
+            lesson-9:
+              name: 教學計畫
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -22086,3 +22100,13 @@ zh-TW:
               key: 教學計畫
             Next steps:
               key: 下一步
+        vpl-csd2-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: 實體運算
+        vpl-csd3-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: 實體運算
+        hello-world-csc:
+          title: 你好世界

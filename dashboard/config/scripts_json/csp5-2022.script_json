@@ -18,8 +18,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-06 20:07:03 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-04-18 19:05:09 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -74,6 +74,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "csp_project",
+        "script.name": "csp5-2022"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 5,
+      "properties": {
+        "display_name": "Post-Course Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csp5-2022"
       }
     }
@@ -441,6 +453,21 @@
       "seeding_key": {
         "lesson.key": "Assessment Day",
         "lesson_group.key": "csp_project",
+        "script.name": "csp5-2022"
+      }
+    },
+    {
+      "key": "CS Principles Post-Course Survey",
+      "name": "CS Principles Post-Course Survey",
+      "absolute_position": 19,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 19,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csp5-2022"
       }
     }
@@ -1453,6 +1480,18 @@
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2022"
       }
+    },
+    {
+      "key": "dd359ca7-0849-478a-9034-641423a96af0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dd359ca7-0849-478a-9034-641423a96af0",
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csp5-2022"
+      }
     }
   ],
   "activity_sections": [
@@ -1809,7 +1848,7 @@
       "key": "0cab2889-3cdb-4c9d-9562-d2c0096c81b0",
       "position": 8,
       "properties": {
-        "description": "\n**Levels 8-11 List Operations:** In these levels, students work with list operations: [`appendItem()`(#BB77C7)](/docs/applab/appendItem/), [`removeItem()`(#BB77C7)](/docs/applab/removeItem/), and [`insertItem()`(#BB77C7)](/docs/applab/insertItem/)\n\n* Level 8: Students practice using [`appendItem`(#BB77C7)](/docs/applab/appendItem/) to increase the size of a list\n* Level 9: Students modify a \"Food Diary\" app so that the user can add new elements to a list\n* Level 10: Students practice using [`removeItem`(#BB77C7)](/docs/applab/removeItem/) and [`insertItem`(#BB77C7)](/docs/applab/insertItem/) to modify lists\n* Level 11: Students modify a \"Top Ten Songs\" app so that the user can add new items into the middle of a list while keeping the total length of the list to 10."
+        "description": "\n**Levels 8-11 List Operations:** In these levels, students work with list operations: [`appendItem()`(#BB77C7)](/docs/applab/appendItem/), [`removeItem()`(#BB77C7)](/docs/applab/removeItem/), and [`insertItem()`(#BB77C7)](/docs/applab/insertItem/)\n\n* Level 8: Students practice using [`appendItem`(#BB77C7)](/docs/applab/appendItem/) to increase the size of a list\n* Level 9: Students modify a \"Food Diary\" app so that the user can add new elements to a list\n* Level 10: Students practice using [`removeItem`(#BB77C7)](/docs/applab/removeItem/) and [`insertItem`(#BB77C7)](/docs/applab/insertItem/) to modify lists"
       },
       "seeding_key": {
         "activity_section.key": "0cab2889-3cdb-4c9d-9562-d2c0096c81b0",
@@ -1824,6 +1863,17 @@
       },
       "seeding_key": {
         "activity_section.key": "eb70a056-8eb5-49f3-a6b9-a3102c91e231",
+        "lesson_activity.key": "c287b9e7-93fd-4236-9c55-02f50d101c12"
+      }
+    },
+    {
+      "key": "da689648-cedf-4467-9bd7-26d5f3ca8264",
+      "position": 10,
+      "properties": {
+        "progression_name": "Practice with Lists"
+      },
+      "seeding_key": {
+        "activity_section.key": "da689648-cedf-4467-9bd7-26d5f3ca8264",
         "lesson_activity.key": "c287b9e7-93fd-4236-9c55-02f50d101c12"
       }
     },
@@ -2485,8 +2535,19 @@
       }
     },
     {
-      "key": "19d0f5dd-ed06-4037-8e0d-202e4ea34111",
+      "key": "e3e35d8a-db79-40ff-b835-d45e8c045066",
       "position": 7,
+      "properties": {
+        "progression_name": "Putting It Together"
+      },
+      "seeding_key": {
+        "activity_section.key": "e3e35d8a-db79-40ff-b835-d45e8c045066",
+        "lesson_activity.key": "d7d7069e-0081-4c80-928e-85eef33d8e94"
+      }
+    },
+    {
+      "key": "19d0f5dd-ed06-4037-8e0d-202e4ea34111",
+      "position": 8,
       "properties": {
         "description": "\n**Levels 4-6 For Loop Practice:** Simple [`console.log`(#BB77C7)](/docs/applab/console.log/) levels to practice using for loops.\n\n* Level 4: Students use a for loop to print the numbers 0-99\n* Level 5: Students use a for loop to print a message 100 times\n* Level 6: Students use a for loop to fill an array and print the results"
       },
@@ -2497,7 +2558,7 @@
     },
     {
       "key": "04a6dd9f-2885-4dff-b01c-6337629beb6e",
-      "position": 8,
+      "position": 9,
       "properties": {
         "progression_name": "For Loop Practice"
       },
@@ -2508,7 +2569,7 @@
     },
     {
       "key": "53e2f1a8-61e3-4611-8b66-13d0e9134cfe",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "\n\n**Levels 7-8 Loops and Screen Elements:** In these levels students practice writing programs that modify screen elements with loops. Screen elements have already been designed to have repeated patterns (e.g. \"dice0\", \"dice1\", \"dice2\" ...) that make it possible to write code that modifies every screen element. This is important practice for the Make project in the next lesson.\n\n* Level 7: This level is a simple introduction to using loops to generate a sentence with random font colors and font sizes.\n* Level 8: Students must update a \"Dice Roller\" app that has some working functionality already. All of the different concepts they'll need to use are already in the starter code of this app, but they'll need to think through how to put them together to get the target code behavior."
       },
@@ -2519,7 +2580,7 @@
     },
     {
       "key": "336059f0-9474-4540-9109-a9bf3f3b9156",
-      "position": 10,
+      "position": 11,
       "properties": {
         "progression_name": "Loops and Screen Elements"
       },
@@ -3069,7 +3130,7 @@
       "key": "3e8eef8b-3cb0-43af-b873-10353fc296fa",
       "position": 6,
       "properties": {
-        "description": "In these levels, students use the reduce and filter patterns to finish building an app.\n\n* **Level 7:** Write code for the \"reduce\" pattern to calculate a student's average grade.\n* **Level 8:** Write code to calculate and display the percent of each type of Air Quality Index day.",
+        "description": "* **Level 7:** Choice level where students use the reduce and filter patterns to finish building an app.",
         "name": "App Practice",
         "progression_name": "App Practice"
       },
@@ -3763,6 +3824,17 @@
       }
     },
     {
+      "key": "a2408b08-02d6-40de-8e20-f3f386e7f24e",
+      "position": 5,
+      "properties": {
+        "progression_name": "End-of-Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "a2408b08-02d6-40de-8e20-f3f386e7f24e",
+        "lesson_activity.key": "d467b2f6-63f2-41a0-9758-5a9bfd3aca33"
+      }
+    },
+    {
       "key": "f3103fc1-908c-4c52-8012-bac0d488a201",
       "position": 1,
       "properties": {
@@ -3801,6 +3873,23 @@
         "activity_section.key": "83eb3009-8091-4a7f-9ee6-afb34f7ccd72",
         "lesson_activity.key": "03e87da6-ea51-4cea-ba78-6e4c44621e7b"
       }
+    },
+    {
+      "key": "c90314d9-82c8-4124-8a1b-2d116a23fe82",
+      "position": 1,
+      "properties": {
+        "progression_name": "Post-Course Survey Instructions",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This level appears at the end of every unit. **Please have your students complete this survey at the end of their final unit!** Students only need to take the survey once at the end of the course.\n\n* The results are vital for us (code.org) to sustain our courses and make improvements.\n* There will be a teacher survey as well where you can provide your own input. You will be notified via email about the teacher survey.\n\n**Instructions for Unlocking the Survey for Students:** [[google doc](https://docs.google.com/document/d/1oo-G0h7EKL9kkZvk48PKkSoRMIVCCN1CB57BN5Km-aQ/view)] [[pdf](https://docs.google.com/document/d/1oo-G0h7EKL9kkZvk48PKkSoRMIVCCN1CB57BN5Km-aQ/export?format=pdf)]\n\nIf students click the link and see an error message about the survey being locked, please follow the steps in the instructions above to unlock the survey for students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c90314d9-82c8-4124-8a1b-2d116a23fe82",
+        "lesson_activity.key": "dd359ca7-0849-478a-9034-641423a96af0"
+      }
     }
   ],
   "script_levels": [
@@ -3810,6 +3899,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L01 Introduction to Lists2022"
+        ],
         "progression": "Introduction to Lists"
       },
       "bonus": false,
@@ -3832,6 +3924,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Lists - Part 22022"
+        ],
         "progression": "Introduction to Lists"
       },
       "bonus": false,
@@ -3854,6 +3949,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-20-21-u5-assess-lists2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -3876,6 +3974,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Lists - Part 42022"
+        ],
         "progression": "Accessing Lists"
       },
       "bonus": false,
@@ -3898,6 +3999,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Lists Investigate Outfitly Code2022"
+        ],
         "progression": "Accessing Lists"
       },
       "bonus": false,
@@ -3920,6 +4024,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Lists Investigate Bandly Code2022"
+        ],
         "progression": "Accessing Lists"
       },
       "bonus": false,
@@ -3942,6 +4049,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Lists - Part 32022"
+        ],
         "progression": "Changing Lists"
       },
       "bonus": false,
@@ -3964,6 +4074,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Lists Investigate Partnersly Code2022"
+        ],
         "progression": "Changing Lists"
       },
       "bonus": false,
@@ -3986,6 +4099,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Random List Access Pattern2022"
+        ],
         "progression": "List Patterns"
       },
       "bonus": false,
@@ -4008,6 +4124,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "List Scrolling Pattern2022"
+        ],
         "progression": "List Patterns"
       },
       "bonus": false,
@@ -4030,6 +4149,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice 12022"
+        ],
         "progression": "Setting up Lists"
       },
       "bonus": false,
@@ -4052,6 +4174,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice 22022"
+        ],
         "progression": "Setting up Lists"
       },
       "bonus": false,
@@ -4074,6 +4199,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice 3.752022"
+        ],
         "progression": "Accessing Elements in a List"
       },
       "bonus": false,
@@ -4096,6 +4224,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice 3.52022"
+        ],
         "progression": "Accessing Elements in a List"
       },
       "bonus": false,
@@ -4118,6 +4249,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice 102022"
+        ],
         "progression": "Accessing Elements in a List"
       },
       "bonus": false,
@@ -4140,6 +4274,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice Strings 22022"
+        ],
         "progression": "Strings and Indexes"
       },
       "bonus": false,
@@ -4162,6 +4299,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice Strings 32022"
+        ],
         "progression": "Strings and Indexes"
       },
       "bonus": false,
@@ -4184,6 +4324,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice 42022"
+        ],
         "progression": "List Operations"
       },
       "bonus": false,
@@ -4206,6 +4349,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice 52022"
+        ],
         "progression": "List Operations"
       },
       "bonus": false,
@@ -4228,6 +4374,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice 92022"
+        ],
         "progression": "List Operations"
       },
       "bonus": false,
@@ -4247,23 +4396,26 @@
     {
       "chapter": 21,
       "position": 11,
-      "activity_section_position": 4,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "List Operations"
+        "level_keys": [
+          "CSP U5L3 Choice"
+        ],
+        "progression": "Practice with Lists"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U5 L03 Lists Practice 62022"
+          "CSP U5L3 Choice"
         ],
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2022",
-        "activity_section.key": "eb70a056-8eb5-49f3-a6b9-a3102c91e231"
+        "activity_section.key": "da689648-cedf-4467-9bd7-26d5f3ca8264"
       },
       "level_keys": [
-        "U5 L03 Lists Practice 62022"
+        "CSP U5L3 Choice"
       ]
     },
     {
@@ -4272,6 +4424,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5L3 CFU Lists Psuedocode2022"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -4294,6 +4449,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5L3 CFU Lists Psuedocode 22022"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -4316,6 +4474,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Lists Make Project Sample App 20202022"
+        ],
         "progression": "Try the Reminders App"
       },
       "bonus": false,
@@ -4338,6 +4499,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5 Lists Make Project 20202022"
+        ],
         "progression": "Make the Reminders App"
       },
       "bonus": false,
@@ -4360,6 +4524,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp_applab_loops2022"
+        ],
         "progression": "Introduction to Loops"
       },
       "bonus": false,
@@ -4382,6 +4549,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L5 CSP CFU Looping2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4404,6 +4574,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Investigate Coin Flipper Predict2022"
+        ],
         "progression": "Coin Flipper App"
       },
       "bonus": false,
@@ -4426,6 +4599,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Investigate Coin Flipper2022"
+        ],
         "progression": "Coin Flipper App"
       },
       "bonus": false,
@@ -4448,6 +4624,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Investigate Font Tester2022"
+        ],
         "progression": "Font Tester App"
       },
       "bonus": false,
@@ -4470,6 +4649,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L6 CSP CFU Element Looping2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4492,6 +4674,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Practice Part 12022"
+        ],
         "progression": "While Loop Practice"
       },
       "bonus": false,
@@ -4514,6 +4699,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Practice Part 22022"
+        ],
         "progression": "While Loop Practice"
       },
       "bonus": false,
@@ -4536,6 +4724,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Practice Part 32022"
+        ],
         "progression": "While Loop Practice"
       },
       "bonus": false,
@@ -4558,6 +4749,34 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L7 While Loop Choice"
+        ],
+        "progression": "Putting It Together"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U5L7 While Loop Choice"
+        ],
+        "lesson.key": "Loops Practice",
+        "lesson_group.key": "csp_loops",
+        "script.name": "csp5-2022",
+        "activity_section.key": "e3e35d8a-db79-40ff-b835-d45e8c045066"
+      },
+      "level_keys": [
+        "CSP U5L7 While Loop Choice"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U5 Loops Practice Part 42022"
+        ],
         "progression": "For Loop Practice"
       },
       "bonus": false,
@@ -4575,11 +4794,14 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 5,
+      "chapter": 37,
+      "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Practice Part 52022"
+        ],
         "progression": "For Loop Practice"
       },
       "bonus": false,
@@ -4597,11 +4819,14 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 6,
+      "chapter": 38,
+      "position": 7,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Practice Part 62022"
+        ],
         "progression": "For Loop Practice"
       },
       "bonus": false,
@@ -4619,11 +4844,14 @@
       ]
     },
     {
-      "chapter": 38,
-      "position": 7,
+      "chapter": 39,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Practice Sentence Randomizer2022"
+        ],
         "progression": "Loops and Screen Elements"
       },
       "bonus": false,
@@ -4641,11 +4869,14 @@
       ]
     },
     {
-      "chapter": 39,
-      "position": 8,
+      "chapter": 40,
+      "position": 9,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Practice Dice Roller2022"
+        ],
         "progression": "Loops and Screen Elements"
       },
       "bonus": false,
@@ -4663,11 +4894,14 @@
       ]
     },
     {
-      "chapter": 40,
-      "position": 9,
+      "chapter": 41,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5L7 CFU Loops Psuedocode2022"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -4685,11 +4919,14 @@
       ]
     },
     {
-      "chapter": 41,
-      "position": 10,
+      "chapter": 42,
+      "position": 11,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5L7 CFU Loops Psuedocode 22022"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -4707,11 +4944,14 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Make Wallpaper App Example 20202022"
+        ],
         "progression": "Try the Lock Screen Maker"
       },
       "bonus": false,
@@ -4729,11 +4969,14 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5 Loops Make Wallpaper App 20202022"
+        ],
         "progression": "Make the Lock Screen Maker"
       },
       "bonus": false,
@@ -4751,11 +4994,14 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Processing Lists with Loops2022"
+        ],
         "progression": "Introduction to Traversal"
       },
       "bonus": false,
@@ -4773,11 +5019,14 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5 L09 Traversals Exit Ticket2022"
+        ],
         "progression": "Assessment: Check For Understanding\r"
       },
       "bonus": false,
@@ -4795,11 +5044,14 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Traversals Investigate Mile Tracker Modify2022"
+        ],
         "progression": "Mile Tracker Investigation"
       },
       "bonus": false,
@@ -4817,11 +5069,14 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L10 Traversals Investigate2022"
+        ],
         "progression": "Data Tab Investigation"
       },
       "bonus": false,
@@ -4839,11 +5094,14 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Data Tab in App Lab2022"
+        ],
         "progression": "Data Tab Investigation"
       },
       "bonus": false,
@@ -4861,11 +5119,14 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Traversals Investigate Dog Finder Modify2022"
+        ],
         "progression": "Random Dog Picker Investigation"
       },
       "bonus": false,
@@ -4883,11 +5144,14 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "List Filter Pattern2022"
+        ],
         "progression": "Traversal Patterns"
       },
       "bonus": false,
@@ -4905,11 +5169,14 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "List Reduce Pattern2022"
+        ],
         "progression": "Traversal Patterns"
       },
       "bonus": false,
@@ -4927,11 +5194,14 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U5L10 CFU Traversals2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4949,11 +5219,14 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Traversals Practice Part 32022"
+        ],
         "progression": "Traversal Practice"
       },
       "bonus": false,
@@ -4971,11 +5244,14 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Traversals Practice Part 22022"
+        ],
         "progression": "Traversal Practice"
       },
       "bonus": false,
@@ -4993,11 +5269,14 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Traversals Practice Part 12022"
+        ],
         "progression": "Traversal Practice"
       },
       "bonus": false,
@@ -5015,11 +5294,14 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Traversals Practice Part 42022"
+        ],
         "progression": "Reduce and Filter Practice"
       },
       "bonus": false,
@@ -5037,11 +5319,14 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Traversals Practice Part 52022"
+        ],
         "progression": "Reduce and Filter Practice"
       },
       "bonus": false,
@@ -5059,11 +5344,14 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Traversals Practice Part 62022"
+        ],
         "progression": "Reduce and Filter Practice"
       },
       "bonus": false,
@@ -5081,17 +5369,20 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L11 Traversals App Practice Choice"
+        ],
         "progression": "App Practice"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U5 Traversals Practice Part 72022"
+          "CSP U5L11 Traversals App Practice Choice"
         ],
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
@@ -5099,37 +5390,18 @@
         "activity_section.key": "3e8eef8b-3cb0-43af-b873-10353fc296fa"
       },
       "level_keys": [
-        "U5 Traversals Practice Part 72022"
-      ]
-    },
-    {
-      "chapter": 60,
-      "position": 8,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "App Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U5 Traversals Practice Part 82022"
-        ],
-        "lesson.key": "Traversals Practice",
-        "lesson_group.key": "csp_traversals",
-        "script.name": "csp5-2022",
-        "activity_section.key": "3e8eef8b-3cb0-43af-b873-10353fc296fa"
-      },
-      "level_keys": [
-        "U5 Traversals Practice Part 82022"
+        "CSP U5L11 Traversals App Practice Choice"
       ]
     },
     {
       "chapter": 61,
-      "position": 9,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5L11 CFU For Each Psuedocode2022"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -5152,6 +5424,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Traversals Make Project Sample App 20202022"
+        ],
         "progression": "Try the Random Forecaster App"
       },
       "bonus": false,
@@ -5174,6 +5449,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5 Traversals Make Project 20202022"
+        ],
         "progression": "Make the Random Forecaster App"
       },
       "bonus": false,
@@ -5196,6 +5474,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Hackathon Project Day 22022"
+        ],
         "progression": "Hackathon Project"
       },
       "bonus": false,
@@ -5218,6 +5499,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Hackathon Project Day 32022"
+        ],
         "progression": "Hackathon Project"
       },
       "bonus": false,
@@ -5240,6 +5524,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Hackathon Project Day 42022"
+        ],
         "progression": "Hackathon Project"
       },
       "bonus": false,
@@ -5262,6 +5549,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5 Hackathon Project Day 52022"
+        ],
         "progression": "Hackathon Project"
       },
       "bonus": false,
@@ -5280,10 +5570,38 @@
     },
     {
       "chapter": 68,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csp5-2022"
+        ],
+        "progression": "End-of-Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csp5-2022"
+        ],
+        "lesson.key": "Project   Hackathon Part 5",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp5-2022",
+        "activity_section.key": "a2408b08-02d6-40de-8e20-f3f386e7f24e"
+      },
+      "level_keys": [
+        "Student End of Unit Survey_csp5-2022"
+      ]
+    },
+    {
+      "chapter": 69,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 5 AP-Style Assessment 2022"
+        ],
         "progression": "Unit 5 Exam"
       },
       "bonus": false,
@@ -5298,6 +5616,31 @@
       },
       "level_keys": [
         "CSP Unit 5 AP-Style Assessment 2022"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey_csp5-2022"
+        ],
+        "progression": "Post-Course Survey Instructions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey_csp5-2022"
+        ],
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csp5-2022",
+        "activity_section.key": "c90314d9-82c8-4124-8a1b-2d116a23fe82"
+      },
+      "level_keys": [
+        "csp-post-survey-2021-markdown-with-link-to-survey_csp5-2022"
       ]
     }
   ],
@@ -5544,14 +5887,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "U5 L03 Lists Practice 62022",
+        "level.key": "CSP U5L3 Choice",
         "script_level.level_keys": [
-          "U5 L03 Lists Practice 62022"
+          "CSP U5L3 Choice"
         ],
         "lesson.key": "Lists Practice",
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2022",
-        "activity_section.key": "eb70a056-8eb5-49f3-a6b9-a3102c91e231"
+        "activity_section.key": "da689648-cedf-4467-9bd7-26d5f3ca8264"
       }
     },
     {
@@ -5708,6 +6051,18 @@
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2022",
         "activity_section.key": "7a18e437-3984-4095-aa02-73f40bc090a6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U5L7 While Loop Choice",
+        "script_level.level_keys": [
+          "CSP U5L7 While Loop Choice"
+        ],
+        "lesson.key": "Loops Practice",
+        "lesson_group.key": "csp_loops",
+        "script.name": "csp5-2022",
+        "activity_section.key": "e3e35d8a-db79-40ff-b835-d45e8c045066"
       }
     },
     {
@@ -6000,21 +6355,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "U5 Traversals Practice Part 72022",
+        "level.key": "CSP U5L11 Traversals App Practice Choice",
         "script_level.level_keys": [
-          "U5 Traversals Practice Part 72022"
-        ],
-        "lesson.key": "Traversals Practice",
-        "lesson_group.key": "csp_traversals",
-        "script.name": "csp5-2022",
-        "activity_section.key": "3e8eef8b-3cb0-43af-b873-10353fc296fa"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U5 Traversals Practice Part 82022",
-        "script_level.level_keys": [
-          "U5 Traversals Practice Part 82022"
+          "CSP U5L11 Traversals App Practice Choice"
         ],
         "lesson.key": "Traversals Practice",
         "lesson_group.key": "csp_traversals",
@@ -6108,6 +6451,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "Student End of Unit Survey_csp5-2022",
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csp5-2022"
+        ],
+        "lesson.key": "Project   Hackathon Part 5",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp5-2022",
+        "activity_section.key": "a2408b08-02d6-40de-8e20-f3f386e7f24e"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSP Unit 5 AP-Style Assessment 2022",
         "script_level.level_keys": [
           "CSP Unit 5 AP-Style Assessment 2022"
@@ -6116,6 +6471,18 @@
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2022",
         "activity_section.key": "66e616f3-361e-4a0b-95b7-1262f3ac7c6a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-post-survey-2021-markdown-with-link-to-survey_csp5-2022",
+        "script_level.level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey_csp5-2022"
+        ],
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csp5-2022",
+        "activity_section.key": "c90314d9-82c8-4124-8a1b-2d116a23fe82"
       }
     }
   ],
@@ -6246,10 +6613,11 @@
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
-      "url": "https://docs.google.com/presentation/d/1DABkbjVXjTM7FkPeNN1PavV3BWKsOWFyNksWW4UDdQk/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1va0YG_3b8nc4Uu1hV8L7xkZldDy7WYl19qywGSI-RHc/view",
       "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1va0YG_3b8nc4Uu1hV8L7xkZldDy7WYl19qywGSI-RHc/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {

@@ -2,20 +2,27 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
-    "long_instructions": "##In MyConsole.java:\r\n\r\n1. Convert the while loop to a for loop.",
+    "long_instructions": "##In MyConsole.java:\r\n\r\n1. Convert the `while`(#e7e8ea) loop to a `for`(#e7e8ea) loop.\r\n\r\n::: details [**Show Me How**]\r\nA `for`(#e7e8ea) loop uses the following syntax:\r\n  \r\n  ```\r\n  for (int variableName = startingValue; condition; variableName_change) {\r\n    // code to execute\r\n  }\r\n  ```\r\n\r\nBe sure to change `variableName`(#e7e8ea) to a name you can easily identify, such as `index`(#e7e8ea), and set the `startingValue`(#e7e8ea) to the value you want to start the loop.\r\n\r\nWrite a Boolean expression to establish the condition that the loop should continue.\r\n\r\nChange the `variableName`(#e7e8ea) by some value, like increasing by `1`(#e7e8ea) each time.\r\n:::",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
-    "csa_view_mode": "console"
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    int[] numbers = {2, 4, 6, 8, 10};\n\n    int index = 0;\n\n    while (index < numbers.length) {\n      System.out.println(numbers[index]);\n      index++;\n    }\n\n    \n  }\n}",
+        "isVisible": true
+      }
+    },
+    "encrypted_exemplar_sources": "HM0H7Z3L+CTAPTxDu6u7zslyjM60me7VHOAdpgMoPI40sQlreytpPDUmAUdT\n7Pz+VP8OAAYKFGgmmHiVj9O8+SxEB0x6WWke3u+FiLzz+ISbXVohhAD0jPyH\nkvviShrKoQnBkFZTFvdt2o3+FYtpMThMmJciwfkKN3aoec1JWdYpgzT96T4b\n3/hyEv6yM5YtZAi468CY+XICIM/lJ7ymagryRCVoMBVQ+56qmwBCHFr4gDxL\nKjDHavI2hHgowwcY4WZnIznOBSRNkaSwCTq+RgkWA2N/NaOefrzgletH0/FL\n8E8a1fY0wODLmLl+BbZ3rRRqGUfqPCCl/PlYDWTociFovCs6t0uWjVxH6tFt\nGyeEwjk2Yi7/EKsMWkOCyXaRwjj4n5JSHxyrJSaxPP3yWPjf43BBt+hFoaY3\nzeocc36ci3OXuY6o6kpZYiU+e3YAPIPN4lEalVgluLb794g3/IIujN3NEL9W\nimihV34KqGkXTaLna3uxNE7KkTWvVcsKOVV4hEa/y63j/RcCdb4OwMWzlmD9\nPxyAeHKrA1S+jc9hQCPw6wMbi4oYnrh1XgLV\n",
+    "encrypted_examples": [
+
+    ]
   },
   "game_id": 68,
   "published": true,
   "created_at": "2022-03-25T00:14:17.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-03-25 00:14:20 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-25 00:14:20 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 00:04:05 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 00:04:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 00:05:13 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 00:10:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

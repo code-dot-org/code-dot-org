@@ -2,20 +2,31 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
-    "long_instructions": "##In someclass.java:\r\n\r\nThe x class represents x. It has an instance variable for a 1D array to store x. The method calculatePositiveSum() returns the sum of all positive values in the 1D array. In the calculatePositiveSum() method,\r\n\r\n1. Declare and initialize a variable called sum to 0.\r\n\r\n2. Use an enhanced for loop to traverse the array.\r\n\r\n3. If the value in the array is positive, add the value to sum.\r\n\r\n4. Return the sum.\r\n\r\n##In MyConsole.java:\r\n\r\n5. Call calculatePositiveSum() on the x object to test the method.",
+    "long_instructions": "The `ProfitStats`(#e7e8ea) class analyzes data about store profits and has an instance variable for daily profits.\r\n\r\n##In ProfitStats.java:\r\n\r\nThe method `calculatePositiveSum()`(#e7e8ea) returns the sum of all positive values in a 1D array. In the `calculatePositiveSum()`(#e7e8ea) method,\r\n\r\n1. Declare and initialize a variable called `sum`(#e7e8ea) to `0`(#e7e8ea).\r\n\r\n2. Traverse the instance variable `profits`(#e7e8ea) using an enhanced `for`(#e7e8ea) loop.\r\n\r\n3. If the value is positive, add the value to `sum`(#e7e8ea).\r\n\r\n4. Return the `sum`(#e7e8ea).\r\n\r\n##In MyConsole.java:\r\n\r\n5. Print the result of a call to `calculatePositiveSum()`(#e7e8ea) on the `techProfits`(#e7e8ea) object.\r\n\r\n***Curious about this dataset?*** *Learn more about it [**here**](https://www.kaggle.com/datasets/vivek468/superstore-dataset-final)!*\r\n\r\n::: details [**Show Me How**]\r\nAn enhanced `for`(#e7e8ea) loop uses the following syntax:\r\n  \r\n  ```\r\n  for (dataType variableName : arrayName) {\r\n    // code to execute\r\n  }\r\n  ```\r\n\r\nBe sure to replace `dataType`(#e7e8ea) with the type of data stored in the 1D array. The `variableName`(#e7e8ea) should be a name that is easily recognizable and represents the data stored in the array. The `arrayName`(#e7e8ea) should be the name of the array to traverse.\r\n:::",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "submittable": "false",
-    "csa_view_mode": "console"
+    "csa_view_mode": "console",
+    "display_name": "Profits",
+    "bubble_choice_description": "Calculate the sum of the positive profits made by a store.",
+    "thumbnail_url": "https://images.code.org/45c53e96f44bf4dc9fa12188a7f77b9e-image-1648641307369.png",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    double[] profitsList = {-10.80, -26.88, 17.60, 2.10, 68, 19.73, -11.99, 103.80, 6, 15.24, 236.23, 1.36, -1360};\n\n    ProfitStats techProfits = new ProfitStats(profitsList);\n\n    // TO DO #5: Print the result of a call to calculatePositiveSum() on the techProfits object.\n\n\n\n    \n  }\n}",
+        "isVisible": true
+      },
+      "ProfitStats.java": {
+        "text": "public class ProfitStats {\n\n  private double[] profits;\n\n  public ProfitStats(double[] profits) {\n    this.profits = profits;\n  }\n\n  public double calculatePositiveSum() {\n    // TO DO #1-4: Traverse the profits array using an enhanced\n    // for loop to calculate the sum of the positive values.\n\n\n    \n  }\n  \n}",
+        "isVisible": true
+      }
+    },
+    "encrypted_exemplar_sources": "jrRNHcOowRx22njbDNzE6K10Ex1m7JwmHnodMo3x9M2es4PqxGHVpgVnW9Jl\n+E9YpInvj06IanXAe8i5OedKUjZWQh3ROIk0keZ1JC8D96buyOxpdNMHm+Ld\n5IqpEHxQ1kOViJLCvbzPPmwMz7h6IhxGkCeVmUbfhwtLBQmkq7c+95LhSe2X\nseHq5WGkoQWyQ9cXdE4MY0VhiInT/h9T5crgs6ZYonMLt46xbGqDyv1x/NZd\nUo3UL1PZQyVdkkZb10AwCyWIb+bjwCqdcdl8Wb4nhD1uEHgzFGcaVg9Ak9za\nmpD2pKp/afrjrQeTKxaF/VSrx2YDpOAVR7AZ9y4naSVdEIURyNsMsTUeZOiJ\n/GUohHkPCMwPRXhfsSiv69pb/+rGICv78LUVGRUrVConYd798EuZBJQ5TlCC\naFvf2mNgTaiOdRDyOh3kanzf+bDeXxeYAME60JyducUnd2JaWoEZIktMVLVH\nYVfcnFerRfVOcQq8sQrmyB1jX2u5keffHMid8xcgvcig/omf98+kBjRS50uV\nX4Evp2vZl9RzhVP4Cneks/sS1f36eoQ3yJMzo2xT1hGy0/WkBYyQeEvFXrUn\nHqdltm4K756QClnQJdm5u3YeeXjyr451Lrh/VrPW0UeedC3E+2QFhNyhnzrY\nfLBevtYO3wUesFzm5+wYm2jxAr++hJk/4jwgK3UmMdjzVtE/vGazfmU4dZLP\nvMkA8c1TLpt94/d4gMOuzQJwi0FBaTAL9pIZiO6+aZhJnD5myjjHDOC4Kmpk\nOAhDhiL1LXh3kQ3KQORFAXwAQuCT0T8618LqH04VUIbUEOI2cuU/Xh20XPrx\nBDqWmS/LBmXkCvd73BfEmuhHi7CoWOtJbxk6Y1dL4xvXSBtIxbGFmzwfR3/U\ncb4paEhxU5yC3Q2qSMPb4n3Zj/e8nRuGqlq6Lw4iqC8F0S1YnIKcBbGLUKMM\ncRXFlnEKTUNDpnnFaWnMfYd/5j1jNSJwXyhEwKp7/Lv+9/YQl+AphUhCf4Xa\noKMgoVTF9fkM5MKlNCQ3cwK3f1pfHQIM3hIHuSlJ3Jo5PK8CyK7J8Z8Exxmy\nsyLcrbM9Rc/BM22M+LyIYUjKBlP2r/QKTotfTRpH/IdpEX8uAk3r+wm1N6v/\nvYl99rkUZfgh3n9PY1iWuxvxPAlcgbK44tZMXlSmmAoIlta30e85jjnCG7kp\n/YR/4jGu9QvIpKoTbzJ2MvJzRYVhdCEHfc6jLtyZ4Ogydy1pQJASOPRQGrVp\nturD3yS25wnPoKszvNSuKkZTDE2tJkj891q+6eB3UIXTH+loaxhKPLbY4l1T\nGkZJNTnI6ZeueRR4VRfLQ+7z\n"
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-03-25T12:20:42.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-03-25 12:20:44 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-03-25 12:20:44 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 23:21:51 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 00:24:10 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 11:55:18 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 11:58:40 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 12:00:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-30 12:02:31 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
