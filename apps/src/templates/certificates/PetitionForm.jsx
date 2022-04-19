@@ -1,11 +1,14 @@
 import React from 'react';
-import {Button, Form} from 'react-bootstrap';
+import {Button, Form, Label} from 'react-bootstrap';
 import FieldGroup from './FieldGroup';
 import {range} from 'lodash';
 
 const PetitionForm = () => (
   <>
     <Form inline id="petition-form" className="petition-form">
+      <Label bsStyle="danger" className="petition-error">
+        Warning
+      </Label>
       <FieldGroup id="name" placeholder="Name" type="text" />
       <FieldGroup
         id="email"

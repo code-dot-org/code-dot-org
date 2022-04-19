@@ -21,7 +21,7 @@
   font-size: 18px;
   line-height: 20px;
   font-weight: 400;
-  margin: 10px 0 20px 0;
+  margin: 10px 0 10px 0;
   font-family: $gotham-regular;
   color: #5B6770;
 }
@@ -35,6 +35,11 @@
   flex-flow: row wrap;
   flex: 1 100%;
   justify-content: space-around;
+}
+
+.petition-error {
+  flex: 1 100%;
+  margin: 0 0 10px 0;
 }
 
 input.field, select.field {
