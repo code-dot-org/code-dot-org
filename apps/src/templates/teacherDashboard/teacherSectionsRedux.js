@@ -339,26 +339,6 @@ export const submitEditingSection = (dispatch, getState) => {
   });
 };
 
-export const reloadAfterEditingSection = () => (dispatch, getState) => {
-  const state = getState().teacherSections;
-  const section = state.sectionBeingEdited;
-  return new Promise((resolve, reject) => {
-    submitEditingSection(dispatch, getState)
-      .done(result => {
-        dispatch({
-          type: EDIT_SECTION_SUCCESS,
-          sectionId: section.id,
-          serverSection: result
-        });
-        reload();
-      })
-      .fail((jqXhr, status) => {
-        dispatch({type: EDIT_SECTION_FAILURE});
-        reject(status);
-      });
-  });
-};
-
 /**
  * Submit staged section changes to the server.
  * Closes UI and updates section table on success.
@@ -375,6 +355,26 @@ export const finishEditingSection = () => (dispatch, getState) => {
           serverSection: result
         });
         resolve(result);
+        reload();
+      })
+      .fail((jqXhr, status) => {
+        dispatch({type: EDIT_SECTION_FAILURE});
+        reject(status);
+      });
+  });
+};
+
+export const reloadAfterEditingSection = () => (dispatch, getState) => {
+  const state = getState().teacherSections;
+  const section = state.sectionBeingEdited;
+  return new Promise((resolve, reject) => {
+    submitEditingSection(dispatch, getState)
+      .done(result => {
+        dispatch({
+          type: EDIT_SECTION_SUCCESS,
+          sectionId: section.id,
+          serverSection: result
+        });
         reload();
       })
       .fail((jqXhr, status) => {
