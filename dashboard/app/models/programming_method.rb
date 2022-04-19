@@ -31,9 +31,9 @@ class ProgrammingMethod < ApplicationRecord
   validates_uniqueness_of :key, scope: :programming_class_id, case_sensitive: false
   validate :validate_key_format
 
-  # The validate logic could git a race condition in seeding
+  # The validate logic could hit a race condition in seeding
   # As this should run when the models are updated in levelbuilder,
-  # just kip it for seeding.
+  # just skip it for seeding.
   attr_accessor :seed_in_progress
   validate :validate_overload, unless: :seed_in_progress
 
