@@ -179,8 +179,8 @@ class UnitOverviewHeader extends Component {
         {displayOutdatedCourseWarning && (
           <Notification
             type={NotificationType.warning}
-            notice={'title of warning'}
-            details={'description of warning'}
+            notice={scriptName}
+            details={OUTDATED_SCRIPT_NAMES_AND_DESC[scriptName]}
             dismissible={true}
             width={SCRIPT_OVERVIEW_WIDTH}
           />
