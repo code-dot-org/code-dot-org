@@ -1,8 +1,8 @@
 name 'gray_csc_ecosystems_survival_choice'
 display_name 'Learn More Events!'
-description 'Learn how to use different kinds of events to bring your project to life. 
-
-Choose from the following activities '
+description 'Practice your skills!
+Choose a project that models aquatic animals in groups to practice your coding skills.
+'
 
 sublevels
 level 'csc_ecosystems_survival_choice_dolphins'
