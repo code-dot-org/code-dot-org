@@ -4,7 +4,7 @@ import {reload} from '@cdo/apps/utils';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import PropTypes from 'prop-types';
-import {SectionLoginType} from '../../util/sharedConstants';
+import {SectionLoginType, PlGradeValue} from '../../util/sharedConstants';
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
 /**
@@ -824,13 +824,15 @@ export default function teacherSections(state = initialState, action) {
       }
     }
 
-    // PL Sections must use email logins
+    // PL Sections must use email logins and its grade value should be "pl"
     const loginTypeSettings = {};
+    const gradeSettings = {};
     if (
       action.props.participantType &&
       action.props.participantType !== ParticipantAudience.student
     ) {
       loginTypeSettings.loginType = SectionLoginType.email;
+      gradeSettings.grade = PlGradeValue;
     }
 
     const lessonExtraSettings = {};

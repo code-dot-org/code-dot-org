@@ -82,7 +82,7 @@ class Section < ApplicationRecord
   alias_attribute :lesson_extras, :stage_extras
 
   validates :participant_type, acceptance: {accept: SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values, message: 'must be facilitator, teacher, or student'}
-  validates :grade, acceptance: {accept: SharedConstants::STUDENT_GRADE_LEVELS, message: "must be one of the valid student grades. Expected one of: #{SharedConstants::STUDENT_GRADE_LEVELS}. Got: \"%{value}\"."}
+  validates :grade, acceptance: {accept: SharedConstants::STUDENT_GRADE_LEVELS.concat(PL_GRADE_VALUE), message: "must be one of the valid student grades. Expected one of: #{SharedConstants::STUDENT_GRADE_LEVELS.concat(PL_GRADE_VALUE)}. Got: \"%{value}\"."}
 
   validate :pl_sections_must_use_email_logins
   validate :participant_type_not_changed
@@ -148,7 +148,7 @@ class Section < ApplicationRecord
   end
 
   def self.valid_grade?(grade)
-    SharedConstants::STUDENT_GRADE_LEVELS.include? grade
+    SharedConstants::STUDENT_GRADE_LEVELS.include?(grade) || grade == PL_GRADE_VALUE
   end
 
   # Override default script accessor to use our cache
