@@ -1837,13 +1837,10 @@ class Script < ApplicationRecord
       id,
       {
         id: id,
-        key: name,
         name: launched? ? localized_title : localized_title + " *",
         path: link,
         lesson_extras_available: lesson_extras_available?,
-        text_to_speech_enabled: text_to_speech_enabled?,
-        position: unit_group_units&.first&.position,
-        description: localized_description ? Services::MarkdownPreprocessor.process(localized_description) : nil
+        text_to_speech_enabled: text_to_speech_enabled?
       }
     ]
   end

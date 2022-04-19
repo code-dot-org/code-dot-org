@@ -179,7 +179,7 @@ class CourseVersion < ApplicationRecord
         key: key,
         version_year: content_root_type == 'UnitGroup' ? content_root.localized_version_title : display_name,
         content_root_id: content_root.id,
-        name: content_root.launched? ? content_root.localized_title : content_root.localized_title + ' *',
+        name: content_root.localized_title,
         path: content_root.link,
         type: content_root_type,
         is_stable: stable?,
