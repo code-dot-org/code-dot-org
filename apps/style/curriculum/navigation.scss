@@ -18,6 +18,8 @@
     .title {
       padding: 16px 0px;
       display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .nav-link {

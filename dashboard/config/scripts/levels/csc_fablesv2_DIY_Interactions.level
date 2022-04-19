@@ -62,7 +62,7 @@
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"hw_background_location\",\r\n  \"callout_text\": \"Use this block to set a new background.\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"1\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "instructions_icon": "pizza",
     "validation_code": "//This level requires zValidationHelperFunctions and zHelloWorldValidation\r\nlevel6();",
-    "authored_hints": "[]",
+    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Each sprite should say something when they touch: \\n<xml><block type=\\\"gamelab_checkTouching\\\"><field name=\\\"CONDITION\\\">\\\"when\\\"</field><value name=\\\"SPRITE1\\\"><block type=\\\"gamelab_allSpritesWithAnimation\\\"><field name=\\\"ANIMATION\\\">\\\"hare_2_csc_1\\\"</field></block></value><value name=\\\"SPRITE2\\\"><block type=\\\"gamelab_allSpritesWithAnimation\\\"><field name=\\\"ANIMATION\\\">\\\"tortoise_1_csc_1\\\"</field></block></value><next><block type=\\\"gamelab_spriteSay\\\"><field name=\\\"SPEECH\\\">Still going, slowly. </field><value name=\\\"SPRITE\\\"><block type=\\\"gamelab_allSpritesWithAnimation\\\"><field name=\\\"ANIMATION\\\">\\\"tortoise_1_csc_1\\\"</field></block></value><next><block type=\\\"gamelab_spriteSay\\\"><field name=\\\"SPEECH\\\">This looks like a nice spot to nap.</field><value name=\\\"SPRITE\\\"><block type=\\\"gamelab_allSpritesWithAnimation\\\"><field name=\\\"ANIMATION\\\">\\\"hare_2_csc_1\\\"</field></block></value></block></next></block></next></block></xml>\\n\",\"hint_id\":\"complete_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/57521edadcb2bfb446241121bbffadb5/csc_fablesv2_DIY_Interactions.mp3\"}]",
     "skip_autosave": true,
     "display_name": "Set Your Scene",
     "thumbnail_url": "https://images.code.org/a61f638ee2ea76dc54236483324d7fbc-image-1648496940150.48.45 PM.png",
@@ -78,7 +78,7 @@
   "level_num": "custom",
   "user_id": 182,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-12T17:48:00.500+00:00\",\"changed\":[\"cloned from \\\"csc_fablesv2_DIY_Dialogue\\\"\"],\"cloned_from\":\"csc_fablesv2_DIY_Dialogue\"},{\"changed_at\":\"2022-04-12 17:49:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"short_instructions\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-04-12T17:48:00.500+00:00\",\"changed\":[\"cloned from \\\"csc_fablesv2_DIY_Dialogue\\\"\"],\"cloned_from\":\"csc_fablesv2_DIY_Dialogue\"},{\"changed_at\":\"2022-04-12 17:49:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"short_instructions\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-13 15:54:23 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-13 16:02:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -93,6 +93,9 @@
         <block type="gamelab_setBackgroundImageAs">
           <field name="IMG">"summer_sunrise_landscape_crop_csc_1"</field>
         </block>
+        <block type="gamelab_collectibleBehaviors">
+          <field name="BEHAVIOR">new Behavior(spinning_right, [])</field>
+        </block>
         <block type="gamelab_makeNewSpriteAnon">
           <field name="ANIMATION_NAME">"tortoise_1_csc_1"</field>
           <value name="LOCATION">
@@ -100,6 +103,9 @@
               <field name="LOCATION">{"x":65,"y":347}</field>
             </block>
           </value>
+        </block>
+        <block type="gamelab_playerBehaviors">
+          <field name="BEHAVIOR">new Behavior(moving_with_arrow_keys, [])</field>
         </block>
         <block type="gamelab_makeNewSpriteAnon">
           <field name="ANIMATION_NAME">"hare_2_csc_1"</field>
@@ -109,6 +115,9 @@
             </block>
           </value>
         </block>
+        <block type="gamelab_allSpritesWithAnimation">
+          <field name="ANIMATION">"hare_2_csc_1"</field>
+        </block>
         <block type="gamelab_spriteSay">
           <field name="SPEECH">I'm slow, but I'm steady.</field>
           <value name="SPRITE">
@@ -117,6 +126,15 @@
             </block>
           </value>
         </block>
+        <block type="gamelab_atTime">
+          <field name="UNIT">"seconds"</field>
+          <value name="N">
+            <block type="math_number">
+              <field name="NUM">0</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_destroy"/>
         <block type="gamelab_spriteSay">
           <field name="SPEECH">No one could ever beat me!</field>
           <value name="SPRITE">
@@ -124,6 +142,14 @@
               <field name="ANIMATION">"hare_2_csc_1"</field>
             </block>
           </value>
+        </block>
+        <block type="gamelab_setProp_dropdown">
+          <field name="PROPERTY">"scale"</field>
+          <field name="SIZE">100</field>
+        </block>
+        <block type="gamelab_keyPressed">
+          <field name="CONDITION">"when"</field>
+          <field name="KEY">"up"</field>
         </block>
       </xml>
     </toolbox_blocks>

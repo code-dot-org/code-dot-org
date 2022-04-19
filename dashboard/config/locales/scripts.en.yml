@@ -26955,6 +26955,10 @@ en:
 
 '
               description_teacher: In preparation for this chapter's final project, students will learn how to develop a prototype of a physical object that includes a Circuit Playground. Using a modelled project planning guide, students will learn how to wire a couple of simple circuits and to build prototypes that can communicate the intended design of a product, using cheap and easily found materials such as cardboard and duct tape.
+            lesson-21:
+              name: EOU Student Facting Survey - [Course]
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-3:
               display_name: Templates
@@ -29517,16 +29521,21 @@ en:
               name: Assessment Day
               description_student: Assessment day to conclude the unit.
               description_teacher: 'Students complete a multiple choice assessment which covers the unit topics. '
+            EOU Student Facting Survey - [Course]:
+              name: EOU Student Facting Survey - [Course]
+              description_student: 
+              description_teacher: 
           lesson_groups:
             cspSurvey:
               display_name: Survey
             csp_unit1_2020:
               display_name: 'Unit 1: Digital Information'
-          title: Digital Information ('21-'22)
+          title: Digital Information ('22-'23)
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world's information.
           student_description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world's information.
           description_short: Explore the challenges and impacts of representing information about the world around you in bits.
           description_audience: ''
+          name: csp1-2022
         csp2-2022:
           lessons:
             Welcome to the Internet:
@@ -29590,14 +29599,19 @@ en:
               name: Assessment Day
               description_student: Assessment day to conclude the unit.
               description_teacher: Students complete a multiple choice assessment which covers the unit topics.
+            EOU Student Facting Survey - [Course]:
+              name: EOU Student Facting Survey - [Course]
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Unit 2: The Internet'
-          title: The Internet ('21-'22)
+          title: The Internet ('22-'23)
           description: This unit reveals how the Internet was designed to connect billions of devices and people to one another. Learn how the different protocols of the Internet work and actually build them yourself using the Internet Simulator. Then consider the impacts the Internet has had, both good and bad, on modern life.
           student_description: This unit reveals how the Internet was designed to connect billions of devices and people to one another. Learn how the different protocols of the Internet work and actually build them yourself using the Internet Simulator. Then consider the impacts the Internet has had, both good and bad, on modern life.
           description_short: Build the internet from the ground up using the Internet Simulator.
           description_audience: ''
+          name: csp2-2022
         csp3-2022:
           lessons:
             Introduction to Apps:
@@ -29679,6 +29693,10 @@ en:
               name: Assessment Day
               description_student: Complete your app and share it with classmates before reflecting on the overall process of designing the app.
               description_teacher: 'Students complete the Unit Assessment and then spend the rest of class sharing their projects. '
+            EOU Student Facting Survey - [Course]:
+              name: EOU Student Facting Survey - [Course]
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csp_unit3_2020:
               display_name: 'Unit 3: Intro to App Design'
@@ -29785,6 +29803,10 @@ en:
               name: Assessment Day
               description_student: Assessment day to conclude the unit.
               description_teacher: Students complete a multiple choice assessment which covers the unit topics.
+            EOU Student Facting Survey - [Course]:
+              name: EOU Student Facting Survey - [Course]
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csp_variables:
               display_name: Variables
@@ -29794,11 +29816,12 @@ en:
               display_name: Functions
             csp_project:
               display_name: Project
-          title: Variables, Conditionals, and Functions ('21-'22)
+          title: Variables, Conditionals, and Functions ('22-'23)
           description: This unit explores how variables, conditionals, and functions allow for the design of increasingly complex apps. Learn how to program with these three new concepts through a sequence of collaborative activities. Then build your own decision maker app to share with friends and help them make a decision.
           student_description: This unit explores how variables, conditionals, and functions allow for the design of increasingly complex apps. Learn how to program with these three new concepts through a sequence of collaborative activities. Then build your own decision maker app to share with friends and help them make a decision.
           description_short: Learn how to build apps that store information, make decisions, and keep code organized.
           description_audience: ''
+          name: csp4-2022
         csp5-2022:
           lessons:
             Lists Explore:
@@ -29915,6 +29938,14 @@ en:
               name: Assessment Day
               description_student: Assessment day to conclude the unit.
               description_teacher: Students complete a multiple choice assessment which covers the unit topics.
+            EOU Student Facting Survey - [Course]:
+              name: EOU Student Facting Survey - [Course]
+              description_student: 
+              description_teacher: 
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csp_lists:
               display_name: Lists
@@ -29924,11 +29955,14 @@ en:
               display_name: Traversals
             csp_project:
               display_name: Project
-          title: Lists, Loops, and Traversals ('21-'22)
+            lessonGroup-5:
+              display_name: Post-Course Survey
+          title: Lists, Loops, and Traversals ('22-'23)
           description: This unit introduces lists, loops, and traversals, and explores the way they can be used to build apps that store and process large amounts of information. Learn to program with the data library in App Lab and complete a 5-day hackathon project at the end of the unit where you can design a program about any topic of your choosing.
           student_description: This unit introduces lists, loops, and traversals, and explores the way they can be used to build apps that store and process large amounts of information. Learn to program with the data library in App Lab and complete a 5-day hackathon project at the end of the unit where you can design a program about any topic of your choosing.
           description_short: Learn how to build apps that use lists, loops, and traversals to store and process large amounts of information.
           description_audience: ''
+          name: csp5-2022
         courseb-2022:
           lessons:
             Digital Trails:
@@ -30246,14 +30280,25 @@ en:
               name: Assessment Day
               description_student: Assessment day to conclude the unit.
               description_teacher: Students complete a multiple choice assessment which covers the unit topics.
+            EOU Student Facting Survey - [Course]:
+              name: EOU Student Facting Survey - [Course]
+              description_student: 
+              description_teacher: 
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csp_unit6_2020:
               display_name: 'Unit 6: Algorithms'
-          title: Algorithms ('21-'22)
+            lessonGroup-2:
+              display_name: Post-Course Survey
+          title: Algorithms ('22-'23)
           description: This unit is a quick exploration of how computer scientists design algorithms to solve problems and how they analyze the speed of different algorithms. Learn about the concept of algorithmic efficiency through a variety of hands-on activities and learn how it's being applied in modern computing.
           student_description: This unit is a quick exploration of how computer scientists design algorithms to solve problems and how they analyze the speed of different algorithms. Learn about the concept of algorithmic efficiency through a variety of hands-on activities and learn how it's being applied in modern computing.
           description_short: Design and analyze algorithms to understand how they work and why some are considered better than others.
           description_audience: ''
+          name: csp6-2022
         csp7-2022:
           lessons:
             Parameters and Return Explore:
@@ -30327,16 +30372,27 @@ en:
               name: Assessment Day
               description_student: 'Students complete a multiple choice assessment which covers the unit topics. '
               description_teacher: 'Students complete a multiple choice assessment which covers the unit topics. '
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
+              description_student: 
+              description_teacher: 
+            EOU Student Facting Survey - [Course]:
+              name: EOU Student Facting Survey - [Course]
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csp_parameters_return_values:
               display_name: Parameters and Return Values
             csp_libraries:
               display_name: Libraries
-          title: Parameters, Return, and Libraries ('21-'22)
+            lessonGroup-3:
+              display_name: Post-Course Survey
+          title: Parameters, Return, and Libraries ('22-'23)
           description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
           student_description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
           description_short: Learn how to design clean and reusable code that you can share with a single classmate or the entire world.
           description_audience: ''
+          name: csp7-2022
         csp8-2022:
           lessons:
             Create PT   Review the Task:
@@ -30375,13 +30431,27 @@ en:
               name: Create PT - Complete the Task (12 hrs)
               description_student: 'The lesson includes some final reminders and guidelines for completing the Create PT before officially starting. For a total of 12 class hours, you will work on your project with only types of teacher support allowed (essentially: Advise on process, not ideas).  You may also work with a collaborative partner in *in development of you program* - written responses must be done on your own.'
               description_teacher: "It is finally time for students to take on the Create Performance Task. For a total of 12 class hours, students should work on their projects with only types of teacher support allowed (essentially: Advise on process, don’t influence or evaluate ideas).  Students may also work with a collaborative partner in *in development of their program* - written responses must be done on their own.\r\n\r\nThe lesson includes reminders about how you can interact with students while they are working on their projects, and suggestions about time line. The Create PT requires a minimum of 12 hours of class time.  At the end, students will submit their program code, program video, and written responses through their AP digital portfolio."
-          title: Create PT Prep ('21-'22)
+            EOU Student Facting Survey - [Course]:
+              name: EOU Student Facting Survey - [Course]
+              description_student: 
+              description_teacher: 
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
+              description_student: 
+              description_teacher: 
+          title: Create PT Prep ('22-'23)
           description: "In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.\r\n\r\n"
           student_description: 'In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.
 
 '
           description_short: Practice and complete the Create Performance Task (PT).
           description_audience: ''
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Create PT
+            lessonGroup-3:
+              display_name: Post-Course Survey
+          name: csp8-2022
         csp9-2022:
           lessons:
             Learning from Data:
@@ -30462,14 +30532,25 @@ en:
               name: Assessment Day
               description_student: 'Students complete a multiple choice assessment which covers the unit topics. '
               description_teacher: 'Students complete a multiple choice assessment which covers the unit topics. '
+            EOU Student Facting Survey - [Course]:
+              name: EOU Student Facting Survey - [Course]
+              description_student: 
+              description_teacher: 
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Unit 9: Data'
-          title: Data ('21-'22)
+            lessonGroup-2:
+              display_name: Post-Course Survey
+          title: Data ('22-'23)
           description: 'In this unit learn how data analysis helps turn raw data into useful information about the world. Learn how to use data visualization to find patterns inside of data sets and learn how this data analysis process is being used in contexts like open data or machine learning to help make decisions or learn more about our world. In the unit project, you''ll analyze a dataset of your choosing and present your findings. '
           student_description: 'In this unit learn how data analysis helps turn raw data into useful information about the world. Learn how to use data visualization to find patterns inside of data sets and learn how this data analysis process is being used in contexts like open data or machine learning to help make decisions or learn more about our world. In the unit project, you''ll analyze a dataset of your choosing and present your findings. '
           description_short: Explore and visualize datasets from a wide variety of topics as you hunt for patterns and try to learn more about the world around you.
           description_audience: ''
+          name: csp9-2022
         csp10-2022:
           lessons:
             Project   Innovation Simulation Part 1:
@@ -30574,16 +30655,27 @@ en:
               name: Assessment Day
               description_student: Assessment day to conclude the unit.
               description_teacher: Students complete a multiple choice assessment which covers the unit topics.
+            EOU Student Facting Survey - [Course]:
+              name: EOU Student Facting Survey - [Course]
+              description_student: 
+              description_teacher: 
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csp_unit10_2020:
               display_name: 'Unit 10: Cybersecurity and Global Impacts'
-          title: Cybersecurity and Global Impacts ('21-'22)
+            lessonGroup-2:
+              display_name: Post-Course Survey
+          title: Cybersecurity and Global Impacts ('22-'23)
           description: "In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. Throughout the unit participate in a \"school of the future\" conference in which you and a team make a proposal for how best to improve school life with computing innovations.\n\n"
           student_description: 'In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. Throughout the unit participate in a "school of the future" conference in which you and a team make a proposal for how best to improve school life with computing innovations.
 
 '
           description_short: Research and debate current events at the intersection of data, public policy, law, ethics, and societal impact.
           description_audience: ''
+          name: csp10-2022
         coursed-2022:
           lessons:
             Password Power-Up:
@@ -32084,34 +32176,136 @@ en:
           lessons:
             lesson-1:
               name: FRQ Practice
+              description_student: |-
+                **How will I use what I know about 2D arrays and standard algorithms to answer a Free Response Question?**
+
+                You practice developing solutions to AP CSA FRQs on a mock 2D Arrays FRQ. You apply decomposition and annotation strategies to identify the key components of the problem and validate your solutions using Scoring Guidelines.
+              description_teacher: |-
+                **How will I use what I know about 2D arrays and standard algorithms to answer a Free Response Question?**
+
+                Students practice developing solutions to AP CSA FRQs on a mock 2D Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.
             lesson-2:
               name: Unit 5 Assessment
+              description_student: Assess your progress through the Unit 5 Assessment.
+              description_teacher: Students complete a multiple-choice assessment that covers the unit topics.
             lesson-3:
               name: Two-Dimensional (2D) Arrays
+              description_student: |-
+                **What if the data I need to store is best represented as a table?**
+
+                You have worked with 1D arrays to store primitive values and object references. In this lesson, you explore the structure of a two-dimensional (2D) array and identify similarities and differences between 1D and 2D arrays. You learn to access and modify individual elements by referring to their row and column index values. You then practice declaring and initializing 2D arrays using the `new` keyword and initializer lists and work with the elements stored in the arrays.
+              description_teacher: |-
+                **What if the data I need to store is best represented as a table?**
+
+                Students explore the structure of two-dimensional (2D) arrays and identify similarities and differences between 1D and 2D arrays. Students learn to access and modify individual elements by referring to their row and column index values. Students then practice declaring and initializing 2D arrays using the `new` keyword and initializer lists and work with the elements stored in the arrays.
             lesson-4:
               name: Row-Major Traversal
+              description_student: 
+              description_teacher: 
             lesson-5:
               name: Column-Major Traversal
+              description_student: |-
+                **How do I access elements in a 2D array by column?**
+
+                You learned to use nested loops to traverse a 2D array in row-major order and discovered that standard 1D array algorithms can be applied to 2D arrays. In this lesson, you learn to use nested loops to traverse a 2D array in column-major order and differentiate between column-major and row-major traversals. You identify scenarios that are best for traversing in row-major and column-major order and develop an algorithm to traverse a 2D array in column-major order to find the sum of all values in each column of the array. You then practice applying standard 1D array algorithms to 2D arrays to find information and perform calculations.
+              description_teacher: |-
+                **How do I access elements in a 2D array by column?**
+
+                Students learn to use nested loops to traverse a 2D array in column-major order and differentiate between column-major and row-major traversals. Students identify scenarios that are best for traversing in row-major and column-major order and develop an algorithm to traverse a 2D array in column-major order to find the sum of all values in each column of the array. Students then practice applying standard 1D array algorithms to 2D arrays to find information and perform calculations.
             lesson-6:
-              name: 2D Array Algorithms
+              name: Reverse a 2D Array
+              description_student: |-
+                **How can I apply my algorithm to reverse a 1D array to a 2D array?**
+
+                You have seen how standard 1D array algorithms can be applied to 2D arrays. In this lesson, you revisit the algorithm you developed to reverse a 1D array and plan an algorithm to reverse a 2D array using pseudocode and manipulatives. You then implement your algorithm in Java and practice applying your algorithm to various scenarios.
+              description_teacher: |-
+                **How can I apply my algorithm to reverse a 1D array to a 2D array?**
+
+                Students revisit the algorithm they developed to reverse a 1D array and plan an algorithm to reverse a 2D array using pseudocode and manipulatives. Students then implement their algorithm in Java and practice applying their algorithm to various scenarios.
             lesson-7:
               name: Enhanced For Loops
+              description_student: |-
+                **How can I use enhanced for loops to traverse a 2D array?**
+
+                You used enhanced `for` loops with 1D arrays to access each element from first to last. In this lesson, you revisit enhanced `for` loops to explore how these are used with 2D arrays. In the process, you discover that objects can be modified using an enhanced `for` loop because the loop variable is an alias of the object reference in the array. You explore how enhanced `for` loops can be used with 2D arrays and identify similarities and differences between using enhanced `for` loops with 1D arrays and 2D arrays. You then practice using enhanced `for` loops with 2D arrays.
+              description_teacher: |-
+                **How can I use enhanced for loops to traverse a 2D array?**
+
+                Students revisit enhanced `for` loops to explore how these are used with 2D arrays. In the process, students discover that objects can be modified using an enhanced `for` loop because the loop variable is an alias of the object reference in the array. Students explore how enhanced `for` loops can be used with 2D arrays and identify similarities and differences between using enhanced `for` loops with 1D arrays and 2D arrays. Students then practice using enhanced `for` loops with 2D arrays.
             lesson-8:
               name: Impacts of Programs
+              description_student: 
+              description_teacher: 
             lesson-9:
               name: Images in The Theater
+              description_student: |-
+                **How can I create image filters using The Theater?**
+
+                You may have used or seen image filters in various social media apps or photo editing programs. In this lesson, you apply your knowledge of 2D arrays and object-oriented programming to create image filters using The Theater. You learn how images are made up of pixels and that pixels consist of red, green, and blue color values and explore the `Image` and `Pixel` classes. You write pseudocode to create an image filter that sets a specific color value to zero and then implement your algorithm in Java.
+              description_teacher: |-
+                **How can I create image filters using The Theater?**
+
+                Students apply their knowledge of 2D arrays and object-oriented programming to create image filters using The Theater. Students learn how images are made up of pixels and that pixels consist of red, green, and blue color values and explore the `Image` and `Pixel` classes. Students write pseudocode to create an image filter that sets a specific color value to zero and then implement their algorithm in Java.
             lesson-10:
-              name: Finding Elements
+              name: Modifying Images
+              description_student: |-
+                **How can I modify standard algorithms to create image filters?**
+
+                In this lesson, you practice working with 2D arrays and modifying standard algorithms to create new image filters using The Theater. You explore an example of a new image filter and then write pseudocode to create a grayscale image filter. You implement your algorithm in Java and create additional image filters by modifying `Pixel` objects stored in a 2D array.
+              description_teacher: |-
+                **How can I modify standard algorithms to create image filters?**
+
+                Students practice working with 2D arrays and modifying standard algorithms to create new image filters using The Theater. Students explore an example of a new image filter and then write pseudocode to create a grayscale image filter. Students implement their algorithm in Java and create additional image filters by modifying `Pixel` objects stored in a 2D array.
             lesson-11:
               name: Finding Duplicates
+              description_student: |-
+                **How can I apply a standard 1D array algorithm to find duplicates to a 2D array?**
+
+                You have applied several standard 1D array algorithms to 2D arrays. In this lesson, you revisit the algorithm you developed to find duplicates in a 1D array and plan an algorithm to find duplicates in a 2D array using pseudocode and manipulatives. You then implement your algorithm in Java and practice applying your algorithm to various scenarios.
+              description_teacher: |-
+                **How can I apply a standard 1D array algorithm to find duplicates to a 2D array?**
+
+                Students revisit the algorithm they developed to find duplicate values in a 1D array and plan an algorithm to find duplicates in a 2D array using pseudocode and manipulatives. Students then implement their algorithm in Java and practice applying their algorithm to various scenarios.
             lesson-12:
               name: Shifting a 2D Array
+              description_student: |-
+                **How can I shift the elements in an array?**
+
+                In this lesson, you practice working with 2D arrays and modifying standard algorithms to plan and implement an algorithm to shift a 2D array. You explore how the elements in a 1D array can be shifted and then write pseudocode to modify the algorithm to be applied to a 2D array.
+              description_teacher: |-
+                **How can I shift the elements in an array?**
+
+                Students practice working with 2D arrays and modifying standard algorithms to plan and implement an algorithm to shift a 2D array. Students explore how the elements in a 1D array can be shifted and then write pseudocode to modify the algorithm to be applied to a 2D array.
             lesson-13:
               name: Personal Narrative Project – Day 1
+              description_student: |-
+                **What personal experiences or interests do I want to portray in a collage or animation using images and filters?**
+
+                For this project, you use the skills you have developed throughout this unit to create new image filters to use in a collage or animation that portrays your personal experiences and/or interests. After brainstorming and planning, you develop your program.
+              description_teacher: |-
+                **What personal experiences or interests do I want to portray in a collage or animation using images and filters?**
+
+                For this project, students use the skills they have developed throughout this unit to create new image filters to use in a collage or animation that portrays personal experiences and/or interests. After brainstorming and planning, students develop their programs.
             lesson-14:
               name: Personal Narrative Project – Day 2
+              description_student: |-
+                **How will I implement my plans to create my program?**
+
+                You have now planned your visuals and algorithms to create a collage or animation about your personal experiences and/or interests. You continue developing your project to implement algorithms to create a new image filter and your collage or animation. You reinforce software development skills and processes as you participate in a code review to give and use feedback as you develop your program.
+              description_teacher: |-
+                **How will I implement my plans to create my program?**
+
+                Students planned their visuals and algorithms to create a collage or animation about their personal experiences and/or interests. Students continue to develop their projects to implement algorithms to create a new image filter and their collage or animation. Students reinforce software development skills and processes as they participate in a code review to give and use feedback as they develop their program.
             lesson-15:
               name: Personal Narrative Project – Day 3
+              description_student: |-
+                **How is my growth as a software engineer reflected in my project?**
+
+                You participated in a code review at the end of the previous lesson to give and receive feedback to identify areas of improvement and fixes for problems you encountered. Consider this feedback as you finalize development in this lesson. You then share your final project with your peers to celebrate your success.
+              description_teacher: |-
+                **How is my growth as a software engineer reflected in my project?**
+
+                Students conducted code reviews at the end of the previous lesson to give and receive feedback that assists in identifying areas of improvement and fixes for problems they encountered. At this stage of the project, students consider this feedback as they finalize development in this lesson. Students share their final projects with their peers to celebrate their successes.
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -32121,7 +32315,17 @@ en:
           title: Two-Dimensional Arrays ('22-'23)
           description_audience: ''
           description_short: ''
-          description: This unit expands on data structures introduced in Unit 3 to create tables of data using two-dimensional (2D) arrays. Students identify similarities and differences between 1D and 2D arrays when creating, accessing, and traversing 2D arrays and apply standard algorithms to find and manipulate elements. As students analyze problems involving 2D arrays, they revisit these standard algorithms to determine what code needs to be added or modified and to interact with completed program code. Students apply these concepts to manipulate pixels and in The Theater to create image filters in addition to working with primitive values and various object references. Additionally, students use the programming knowledge and skills they have acquired to consider the impacts of programs on society, economies, and culture.
+          description: |-
+            This unit expands on data structures introduced in Unit 3 to create tables of data using two-dimensional (2D) arrays. Students identify similarities and differences between 1D and 2D arrays when creating, accessing, and traversing 2D arrays and apply standard algorithms to find and manipulate elements. As students analyze problems involving 2D arrays, they revisit these standard algorithms to determine what code needs to be added or modified and to interact with completed program code. Students apply these concepts to manipulate pixels and in The Theater to create image filters in addition to working with primitive values and various object references. Additionally, students use the programming knowledge and skills they have acquired to consider the impacts of programs on society, economies, and culture.
+
+            ### AP Classroom Personal Progress Checks
+            To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org/s/csa6-pilot-facilitator/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
+
+            The following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:
+
+            * Personal Progress Check 8
+
+            ***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.*
           student_description: This unit expands on data structures introduced in Unit 3 to create tables of data using two-dimensional (2D) arrays. You identify similarities and differences between 1D and 2D arrays when creating, accessing, and traversing 2D arrays and apply standard algorithms to find and manipulate elements. As you analyze problems involving 2D arrays, you revisit these standard algorithms to determine what code needs to be added or modified and to interact with completed program code. You apply these concepts to manipulate pixels using The Theater to create image filters in addition to working with primitive values and various object references. Additionally, you use the programming knowledge and skills you have acquired to consider the impacts of programs on society, economies, and culture.
         tess-test-csa:
           lessons:
@@ -33112,36 +33316,148 @@ en:
             lesson-1:
               key: lesson-1
               name: Project Planning
-              description_student: ''
-              description_teacher: ''
+              description_student: |-
+                **How can I identify the requirements and things I need to know to complete a project?**
+
+                Natural language processing is used in many programs and apps that we use every day. In this unit, we will explore some of the techniques and algorithms used in our apps and smart devices to develop our own program that uses natural language processing. You explore strategies for writing and structuring code so other software engineers can easily understand and use a Java tool to create program documentation.
+              description_teacher: |-
+                **How can I identify the requirements and things I need to know to complete a project?**
+
+                Students are introduced to the Natural Language Processing Project and evaluate requirements and examples to identify questions and key features. Before beginning work on the project, students expand their understanding of program structure and comments by identifying best practices and exploring the use of Javadocs to generate program documentation.
             lesson-2:
               name: Integer and Double Objects
+              description_student: |-
+                **Why would I want to represent primitive values as objects?**
+
+                You have worked with integer and decimal values in your programs as `int` and `double` values. In this lesson, you learn how to instantiate `Integer` and `Double` objects to represent `int` and `double` primitive values. Using the methods in the `Integer` and `Double` classes, you return the values these objects store as primitive values. You also explore the minimum and maximum values for integers to avoid overflow errors.
+              description_teacher: |-
+                **Why would I want to represent primitive values as objects?**
+
+                Students construct `Integer` and `Double` objects to represent `int` and `double` primitive values. Using the methods in the `Integer` and `Double` classes, students return the values these objects store as primitive values. Additionally, students explore the minimum and maximum values for integers to avoid overflow errors.
             lesson-3:
               name: ArrayLists
+              description_student: |-
+                **Why would I use an `ArrayList` instead of an array?**
+
+                When working with arrays and lists, we sometimes encounter problems where the number of elements is unknown or the size of the list constantly changes. In this lesson, you explore the `ArrayList` class and learn how to declare and initialize an `ArrayList` and add elements. You identify scenarios where an `ArrayList` is more suitable and differentiate between a dynamic data structure and a static data structure. You then practice creating an `ArrayList` and adding values to the list.
+              description_teacher: |-
+                **Why would I use an `ArrayList` instead of an array?**
+
+                Students explore the `ArrayList` class and learn how to declare and initialize an `ArrayList` and add elements. Students identify scenarios where an `ArrayList` is more suitable and differentiate between a dynamic data structure and a static data structure. Students then practice creating an `ArrayList` and adding values to the list.
             lesson-4:
               name: Manipulating Elements
+              description_student: |-
+                **How am I able to work with the data stored in an `ArrayList`?**
+
+                In this lesson, you use the `ArrayList` methods `get()` and `set()` to retrieve and modify elements and learn about the `String` method `length()` to count the number of characters in a `String` object. You apply the standard algorithms you developed with 1D and 2D arrays to obtain and modify elements in an `ArrayList`.
+              description_teacher: |-
+                **How am I able to work with the data stored in an `ArrayList`?**
+
+                Students work with the `get()` and `set()` methods to retrieve and modify elements in an `ArrayList` and learn about the `String` method `length()` to return the number of characters in a `String` object. They apply the standard algorithms they developed with 1D and 2D arrays to obtain and modify elements in an `ArrayList`.
             lesson-5:
               name: Lists of Objects
+              description_student: |-
+                **Why does an `ArrayList` only store objects?**
+
+                So far, you have created `ArrayList`s to store `Integer`s, `Double`s, and `String`s. Like with 1D and 2D arrays, you can also store other objects that you create in an `ArrayList`. In this lesson, you explore why an `ArrayList` can only store objects and apply standard algorithms to find information and perform calculations with `ArrayList` data.
+              description_teacher: |-
+                **Why does an `ArrayList` only store objects?**
+
+                Students explore generic types in Java and learn why an `ArrayList` can only store objects. Students then practice applying the algorithms they learned with 1D and 2D arrays to `ArrayList`s to find information and perform calculations with `ArrayList` data.
             lesson-6:
               name: Removing Elements
+              description_student: |-
+                **How is removing data from an `ArrayList` different from removing data from an array?**
+
+                In this lesson, you explore the functionality of the `remove()` method in the `ArrayList` class and identify potential errors when attempting to remove items while traversing the list. You learn about stop word removal and practice removing elements from an `ArrayList`.
+              description_teacher: |-
+                **How is removing data from an `ArrayList` different from removing data from an array?**
+
+                Students explore the functionality of the `remove()` method in the `ArrayList` class and identify potential errors when attempting to remove items while traversing the list. Students learn about stop word removal and practice removing elements from an `ArrayList`.
             lesson-7:
               name: String Methods
+              description_student: |-
+                **How can I analyze parts of a `String`?**
+
+                In this lesson, you explore the structure of a `String` and discover the `IndexOutOfBoundsException`. You learn about text segmentation and use the `indexOf()` and `substring()` methods to implement algorithms to break text into words or sentences and apply natural language processing techniques.
+              description_teacher: |-
+                **How can I analyze parts of a `String`?**
+
+                Students explore the structure of a `String` and discover the `IndexOutOfBoundsException`. Students learn about text segmentation and use the `indexOf()` and `substring()` methods to implement algorithms to break text into words or sentences and apply natural language processing techniques.
             lesson-8:
               name: Comparing Strings
+              description_student: |-
+                **How can I determine if a list of `String`s are in alphabetical order?**
+
+                In this lesson, you explore the functionality of the `compareTo()` method then write an algorithm to sort a list of `String`s in alphabetical order. You implement their algorithms in Java and practice using the `compareTo()` method to determine if one `String` comes before another and to sort a list of `String`s in alphabetical order.
+              description_teacher: |-
+                **How can I determine if a list of `String`s are in alphabetical order?**
+
+                Students explore the functionality of the `compareTo()` method then write an algorithm to sort a list of `String`s in alphabetical order. Students implement their algorithms in Java and practice using the `compareTo()` method to determine if one `String` comes before another and to sort a list of `String`s in alphabetical order.
             lesson-9:
               name: String Algorithms
+              description_student: |-
+                **How can I apply standard algorithms to `String`s?**
+
+                In this lesson, you combine your knowledge of standard algorithms and `String`s to write an algorithm check if a `String` is a palindrome. You implement your algorithm in Java, then apply standard algorithms to traverse `String`s to find if one or more substrings has a particular property or to determine the number of substrings that meet specific criteria.
+              description_teacher: |-
+                **How can I apply standard algorithms to `String`s?**
+
+                Students combine their knowledge of standard algorithms and `String`s to write an algorithm to check if a `String` is a palindrome. Students implement their algorithm in Java, then apply standard algorithms to traverse `String`s find if one or more substrings has a particular property or to determine the number of substrings that meet specific criteria.
             lesson-10:
               name: ArrayList Algorithms
+              description_student: |-
+                **How can I modify standard algorithms to implement natural language processing techniques?**
+
+                In this lesson, you explore a new standard algorithm to obtain individual digits from an integer and learn how sentiment values are used in natural language processing. You write an algorithm to find the sentiment value of a word and apply their algorithm to various scenarios to find the overall sentiment value of text.
+              description_teacher: |-
+                **How can I modify standard algorithms to implement natural language processing techniques?**
+
+                Students explore a new standard algorithm to obtain individual digits from an integer and learn how sentiment values are used in natural language processing. Students write an algorithm to find the sentiment value of a word and apply their algorithm to various scenarios to find the overall sentiment value of text.
             lesson-11:
               name: Natural Language Processing Project – Day 1
+              description_student: |-
+                **How will I use natural language processing techniques to analyze, manipulate, or generate text in a program?**
+
+                For this project, you use the skills you have developed throughout this unit to create a program that uses natural language processing techniques to analyze, manipulate, and/or generate text. After brainstorming and planning, you develop your program.
+              description_teacher: |-
+                **How will I use natural language processing techniques to analyze, manipulate, or generate text in a program?**
+
+                For this project, students use the skills they have developed throughout this unit to create a program that uses natural language processing techniques to analyze, manipulate, and/or generate text. After brainstorming and planning, students develop their programs.
             lesson-12:
               name: Natural Language Processing Project – Day 2
+              description_student: |-
+                **How will I implement my plans to create my program?**
+
+                You have now planned your classes and algorithms to create a program that analyzes, manipulates, and/or generates text using natural language processing techniques. You continue developing your project to implement algorithms to analyze text and interact with a user. You reinforce software development skills and processes as you participate in a code review to give and use feedback as you develop your program.
+              description_teacher: |-
+                **How will I implement my plans to create my program?**
+
+                Students planned their classes and algorithms to create a program that analyzes, manipulates, and/or generates text using natural language processing techniques. Students continue to develop their projects to implement algorithms to analyze text and interact with a user. Students reinforce software development skills and processes as they participate in a code review to give and use feedback as they develop their program.
             lesson-13:
               name: Natural Language Processing Project – Day 3
+              description_student: |-
+                **How is my growth as a software engineer reflected in my project?**
+
+                You participated in a code review at the end of the previous lesson to give and receive feedback to identify areas of improvement and fixes for problems you encountered. Consider this feedback as you finalize development in this lesson. You then share your final project with your peers to celebrate your success.
+              description_teacher: |-
+                **How is my growth as a software engineer reflected in my project?**
+
+                Students conducted code reviews at the end of the previous lesson to give and receive feedback that assists in identifying areas of improvement and fixes for problems they encountered. At this stage of the project, students consider this feedback as they finalize development in this lesson. Students share their final projects with their peers to celebrate their successes.
             lesson-14:
               name: FRQ Practice
+              description_student: |-
+                **How will I use what I know about `ArrayList`s and standard algorithms to answer a Free Response Question?**
+
+                You practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. You apply decomposition and annotation strategies to identify the key components of the problem and validate your solutions using Scoring Guidelines.
+              description_teacher: |-
+                **How will I use what I know about `ArrayList`s and standard algorithms to answer a Free Response Question?**
+
+                Students practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.
             lesson-15:
               name: Unit 6 Assessment
+              description_student: Assess your progress through the Unit 6 Assessment.
+              description_teacher: Students complete a multiple-choice assessment that covers the unit topics.
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -33542,8 +33858,8 @@ en:
               name: Lesson Assignment
             lesson-9:
               name: Explore a Lesson
-              description_student: "**You will:**\n\n* Explore the lesson plan and additional resources for your/their assigned TLO lesson.\n* Complete the activities from your/their assigned TLO lesson. \n\n**Suggested time:** 60 minutes"
-              description_teacher: "**Overview:**\nThis activity is an opportunity for participants to both explore a lesson plan for a CS Discoveries lesson and begin to familiarize themselves with the content of their TLO lesson.\n\n**Participants will:**\n\n* Explore the lesson plan and additional resources for your/their assigned TLO lesson.\n* Complete the activities from your/their assigned TLO lesson. \n\n**Suggested time:** 60 minutes"
+              description_student: "**You will:**\n\n* Explore the lesson plan and additional resources for your assigned TLO lesson.\n* Complete the activities from your assigned TLO lesson. \n\n**Suggested time:** 60 minutes"
+              description_teacher: "**Overview:**\nThis activity is an opportunity for participants to both explore a lesson plan for a CS Discoveries lesson and begin to familiarize themselves with the content of their TLO lesson.\n\n**Participants will:**\n\n* Explore the lesson plan and additional resources for their assigned TLO lesson.\n* Complete the activities from their assigned TLO lesson. \n\n**Suggested time:** 60 minutes"
             lesson-10:
               name: The role of the teacher
               description_student: |
@@ -33589,8 +33905,8 @@ en:
               description_teacher: "**Overview:**\nDuring this role play activity, participants will engage in Unit 2 Lesson 3: Headings. This lesson will provide participants with an introduction to HTML heading tags. This model lesson will also highlight the structure of programming lesions throughout the CS Discoveries curriculum. \n\n**Participants will:**\n\n* Engage in Unit 2 Lesson 3 while playing the role of the student. \n* Reflect on your experience as a student engaging in the lesson.\n* Discuss the structure of programming lessons in the CS Discoveries curriculum.\n\n**Suggested time:** 60 minutes"
             lesson-3:
               name: Lesson Planning
-              description_student: "**You will:**\n\n* Create a plan for teaching your/their TLO lesson ensuring that all group members have a role. \n* Consider contingency plans if the lesson goes longer or shorter than expected.\n* Decide if and when breakout rooms will be used and communicate that plan to the producer. \n\n**Suggested time:** 60 minutes"
-              description_teacher: "**Overview:**\nDuring this time, participants will create a plan for teaching their TLO lesson. While planning, teachers should consider contingency plans if the lesson goes longer or shorter than expected.  \n\n**Participants will:**\n\n* Create a plan for teaching your/their TLO lesson ensuring that all group members have a role. \n* Consider contingency plans if the lesson goes longer or shorter than expected.\n* Decide if and when breakout rooms will be used and communicate that plan to the producer. \n\n**Suggested time:** 60 minutes"
+              description_student: "**You will:**\n\n* Create a plan for teaching your TLO lesson ensuring that all group members have a role. \n* Consider contingency plans if the lesson goes longer or shorter than expected.\n* Decide if and when breakout rooms will be used and communicate that plan to the producer. \n\n**Suggested time:** 60 minutes"
+              description_teacher: "**Overview:**\nDuring this time, participants will create a plan for teaching their TLO lesson. While planning, teachers should consider contingency plans if the lesson goes longer or shorter than expected.  \n\n**Participants will:**\n\n* Create a plan for teaching their TLO lesson ensuring that all group members have a role. \n* Consider contingency plans if the lesson goes longer or shorter than expected.\n* Decide if and when breakout rooms will be used and communicate that plan to the producer. \n\n**Suggested time:** 60 minutes"
             lesson-4:
               name: Async Prep
             lesson-5:
@@ -33634,7 +33950,7 @@ en:
                 **Suggested time:** 30 minutes
               description_teacher: "**Overview:**\nThese asynchronous activities introduce participants to the tools and resources available to them in the CS Discoveries curriculum to track student progress, provide students with feedback, and assess student learning. Later in the workshop, participants will make a plan for how they will incorporate ongoing assessment of learning and feedback into. \n\n**Participants will:**\n\n* Get an overview of how to track student progress and provide feedback to students in Code Studio.\n* Explore resources included in the CS Discoveries curriculum related to assessing student learning and providing feedback.\n\n**Suggested time:** 30 minutes"
             lesson-11:
-              name: Access to CS
+              name: Access to CS Education
               description_student: "**You will:**\n\n* Define access, diversity, and inclusion. \n* Explore CS access data.\n\n**Suggested time:** 30 minutes"
               description_teacher: "**Overview:**\nThis series of asynchronous activities are intended to prepare participants for the synchronous session focused on understanding context on Day 3 of the workshop. Participants will explore local CS access data and reflect on who has access to CS in their state. \n\n**Participants will:**\n\n* Define access, diversity, and inclusion. \n* Explore CS access data.\n\n**Suggested time:** 30 minutes"
             Headings:
@@ -33679,11 +33995,11 @@ en:
             lesson-1:
               name: Welcome
               description_student: "**You will:**\n\n* Get an orientation for the day.\n* Review gots and needs. \n* Debrief asynchronous work. "
-              description_teacher: "**Overview:**\nThis session serves as both an introduction to Day 3 and a space to debrief the asynchronous work from Day 2\n\n**Participants will:**\n\n* Get an orientation for the day.\n* Review gots and needs. \n* Debrief asynchronous work. \n\n**Suggested time:** 15 minutes"
+              description_teacher: "**Overview:**\nThis session serves as both an introduction to Day 3 and a space to debrief the asynchronous work from Day 2.\n\n**Participants will:**\n\n* Get an orientation for the day.\n* Review gots and needs. \n* Debrief asynchronous work. \n\n**Suggested time:** 15 minutes"
             lesson-2:
-              name: Context and Bias
-              description_student: "**You will:**\n\n* Identify systemic barriers that limit access, diversity, and inclusion in CS education. \n* List strategies for gathering data about access, diversity, and inclusion in CS within your/their school and classroom. \n* Define unconscious bias.\n* Reflect on your beliefs around who should have access to CS education. "
-              description_teacher: "**Overview:**\nThis session opens with a discussion around systemic barriers that limit access, diversity, and inclusion in CS education. The conversation then expands on the reflections around understanding self and context to include uncovering unconscious biases that exist as a result of identity markers of self and others. Participants will be asked to reflect on ways in which their own unconscious biases might impact their view on who belongs in CS. They will also be challenged to name the responsibility they will claim in ensuring all students feel like they belong in CS. \n\n**Participants will:**\n\n* Identify systemic barriers that limit access, diversity, and inclusion in CS education. \n* List strategies for gathering data about access, diversity, and inclusion in CS within your/their school and classroom. \n* Define unconscious bias.\n* Reflect on your beliefs around who should have access to CS education. \n\n\n**Suggested time:** 60 minutes"
+              name: Barriers and Opportunities
+              description_student: "**You will:**\n\n* Identify systemic barriers that limit access, diversity, and inclusion in CS education. \n* Identify barriers in your classroom, school, and/or teaching practice that limit access, diversity, and/or inclusion in CS education. \n* Determine which of these barriers you have the power to influence. \n* Identify concrete and reasonable strategies to address the barriers you have the power to influence. "
+              description_teacher: "**Overview:**\nThis session opens with a discussion around systemic barriers that limit access, diversity, and inclusion in CS education. The conversation then prompts participants to reflect on their role in reducing barriers to access, diversity, and inclusion in CS education. \n\n**Participants will:**\n\n* Identify systemic barriers that limit access, diversity, and inclusion in CS education. \n* Identify barriers in their classroom, school, and/or teaching practice that limit access, diversity, and/or inclusion in CS education. \n* Determine which of these barriers they have the power to influence. \n* Identify concrete and reasonable strategies to address the barriers they have the power to influence. \n\n**Suggested time:** 60 minutes"
             lesson-3:
               name: TLO 3 - Unit 4 Lesson 3 - delete
               description_student: |-
@@ -34473,6 +34789,8 @@ en:
               description_teacher: 
             lesson-2:
               name: 'Ecosystems: Interactions, Energy & Dynamics'
+              description_student: 
+              description_teacher: 
             lesson-3:
               name: Biological Evolution
               description_student: 
@@ -34836,6 +35154,10 @@ en:
               name: CS Discoveries Post-Course Survey
               description_student: ''
               description_teacher: ''
+            EOU Student Facting Survey - [Course]:
+              name: EOU Student Facting Survey - [Course]
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csd2_1v2:
               display_name: 'Chapter 1: Creating Webpages'
@@ -35067,6 +35389,10 @@ en:
               name: CS Discoveries Post-Course Survey
               description_student: ''
               description_teacher: ''
+            EOU Student Facting Survey - [Course]:
+              name: EOU Student Facting Survey - [Course]
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csd3_1:
               display_name: 'Chapter 1: Images and Animations'
@@ -35266,6 +35592,10 @@ en:
               name: Linking Prototype Screens
               description_student: "**Question of the Day: How can I combine screens to create a complete digital prototype?**\n\nIn this lesson, you will import each teammate's screen into your own app and work independently to add events to your code to link the screens together. "
               description_teacher: "**Question of the Day: How can I combine screens to create a complete digital prototype?**\n \nIn this lesson, teams combine their digital prototype screens into a single app, which they can then link together using code. They share their project’s import URLs with each other, then import each teammate’s screen into their own app. Each student works independently to add events to their code to link the screens together, completing their digital prototype.\n"
+            EOU Student Facting Survey - [Course]:
+              name: EOU Student Facting Survey - [Course]
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csd4_1:
               display_name: 'Chapter 1: User Centered Design'
@@ -35419,6 +35749,10 @@ en:
                 **Question of the Day: How can I represent complex information using binary systems?**
 
                 In this lesson students design a structure to represent their perfect day using the binary representation systems they've learned in this chapter. Students will first write a short description of their perfect day and then review with a partner to identify the key pieces of information they think a computer could capture. As a class students will decide how a punch card of bytes of information will be interpreted to represent those pieces of information. Students will then use the ASCII, binary number, and image formats they have learned to represent their perfect days. Students then trade punch cards and try to decode what the other student's perfect day is like. The lesson ends with a reflection.
+            EOU Student Facting Survey - [Course]:
+              name: EOU Student Facting Survey - [Course]
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csd5_1:
               display_name: 'Chapter 1: Representing Information'
@@ -35620,6 +35954,10 @@ en:
                 In this lesson, students participate in an unplugged activity simulating a zombie outbreak. Students must predict which parts of town have the least amount of zombies using data from a neighboring town. Students will use degrees of similarity and averages to make predictions about the number of zombies at a particular location. Then, students are rescued and get to compare their predictions to the actual numbers as a way to discuss how accuracy is different for numerical data compared to categorical data.
 
                 **Question of the Day:** How do computers learn to make predictions with numerical data?
+            EOU Student Facting Survey - [Course]:
+              name: EOU Student Facting Survey - [Course]
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Chapter 1 - Understanding Machine Learning
@@ -35778,6 +36116,10 @@ en:
               name: CS Discoveries Post-Course Survey
               description_student: 
               description_teacher: 
+            EOU Student Facting Survey - [Course]:
+              name: EOU Student Facting Survey - [Course]
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: 'Chapter 1: Inputs and Outputs'
@@ -35812,3 +36154,19 @@ en:
           description_short: ''
           description: This unit contains the CS Discoveries Post-Course Survey. This unit can be assigned after students complete their final unit in CS Discoveries.
           student_description: This unit contains a survey for when your class is finished with the units in CS Discoveries. Your teacher will tell you when it's time to take this survey.
+        testtess2:
+          lessons: {}
+          lesson_groups: {}
+        csp-post-survey-2022:
+          lessons:
+            Course Survey:
+              name: Course Survey
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: csp-post-survey-2022
+          title: CS Principles Post-Course Survey
+          description_audience: ''
+          description_short: ''
+          description: This unit contains the CS Principles Post-Course Survey.
+          student_description: This unit contains a survey about the CS Principles Course. Your teacher will tell you when it's time to take this survey.

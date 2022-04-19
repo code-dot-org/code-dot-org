@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
 import SpecialAnnouncement from './SpecialAnnouncement';
 import RecentCourses from './RecentCourses';
-import StudentSections from './StudentSections';
+import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
 import shapes from './shapes';
@@ -76,7 +76,7 @@ export default class StudentHomepage extends Component {
             canViewFullList={true}
             canViewAdvancedTools={canViewAdvancedTools}
           />
-          <StudentSections initialSections={sections} />
+          <JoinSectionArea initialJoinedStudentSections={sections} />
         </div>
       </div>
     );
