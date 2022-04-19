@@ -73,7 +73,8 @@ const instructionsInitialState = {
   overlayVisible: false,
   levelVideos: [],
   mapReference: undefined,
-  referenceLinks: []
+  referenceLinks: [],
+  documentationEnvironment: null
 };
 
 export default function reducer(state = {...instructionsInitialState}, action) {
@@ -92,7 +93,8 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       teacherMarkdown,
       levelVideos,
       mapReference,
-      referenceLinks
+      referenceLinks,
+      documentationEnvironment
     } = action;
     let isCollapsed = state.isCollapsed;
     if (!longInstructions && !hasContainedLevels) {
@@ -111,7 +113,8 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       isCollapsed,
       levelVideos,
       mapReference,
-      referenceLinks
+      referenceLinks,
+      documentationEnvironment
     });
   }
 
@@ -229,7 +232,8 @@ export const setInstructionsConstants = ({
   teacherMarkdown,
   levelVideos,
   mapReference,
-  referenceLinks
+  referenceLinks,
+  documentationEnvironment
 }) => ({
   type: SET_CONSTANTS,
   noInstructionsWhenCollapsed,
@@ -242,7 +246,8 @@ export const setInstructionsConstants = ({
   teacherMarkdown,
   levelVideos,
   mapReference,
-  referenceLinks
+  referenceLinks,
+  documentationEnvironment
 });
 
 export const setInstructionsRenderedHeight = height => ({
@@ -367,6 +372,7 @@ export const substituteInstructionImages = (htmlText, substitutions) => {
  * @param {boolean} config.noInstructionsWhenCollapsed
  * @param {boolean} config.hasContainedLevels
  * @param {Object} config.skin.instructions2ImageSubstitutions
+ * @param {string} config.level.documentationEnvironment
  * @returns {Object}
  */
 export const determineInstructionsConstants = config => {
@@ -382,7 +388,8 @@ export const determineInstructionsConstants = config => {
     inputOutputTable,
     levelVideos,
     mapReference,
-    referenceLinks
+    referenceLinks,
+    documentationEnvironment
   } = level;
 
   let {longInstructions, shortInstructions, dynamicInstructions} = level;
@@ -465,7 +472,8 @@ export const determineInstructionsConstants = config => {
     hasContainedLevels,
     levelVideos,
     mapReference,
-    referenceLinks
+    referenceLinks,
+    documentationEnvironment
   };
 };
 
