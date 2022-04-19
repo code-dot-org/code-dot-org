@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-14 22:13:58 UTC",
+    "serialized_at": "2022-04-18 22:26:39 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4015,7 +4015,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Example App:** You may decide to show one of the exemplar apps as an example of what students can create. This can help spark ideas, and give students a model of what to work towards when making their own devices.\n\n**Other Examples:** Interactive art experiences can be found in live shows, museum exhibits, or specialized artistic displays. You may decide to show some other examples to students, such as:\n- [Otherworld](https://otherworldohio.com/), an immersive art installation\n- [Meow Wolf](https://meowwolf.com/), an interactive artist community\n- [iLuminate](https://www.youtube.com/channel/UCPP56EmLKcMhG4Cron9tYKg), a dance troupe that uses electronics in time with their dances"
+            "markdown": "**Example App:** You may decide to show students the exemplar apps and their videos examples of what students can create in this project. This can help spark ideas, and give students a model of what to work towards when making their own devices.\n\n**Other Examples:** Interactive art experiences can be found in live shows, museum exhibits, or specialized artistic displays. You may decide to show some other examples to students, such as:\n- [Otherworld](https://otherworldohio.com/), an immersive art installation\n- [Meow Wolf](https://meowwolf.com/), an interactive artist community\n- [iLuminate](https://www.youtube.com/channel/UCPP56EmLKcMhG4Cron9tYKg), a dance troupe that uses electronics in time with their dances"
           }
         ]
       },
@@ -5656,6 +5656,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - On The Go - ExamplesParent_2022"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -8224,6 +8227,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csd6-2022"
+        ],
         "progression": "End-Of-Unit Survey"
       },
       "bonus": false,

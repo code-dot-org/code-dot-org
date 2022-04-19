@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-15 18:04:34 UTC",
+    "serialized_at": "2022-04-18 23:42:33 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3809,10 +3809,11 @@
     },
     {
       "name": "CSP Unit 7 - Parameters, Return, and Libraries",
-      "url": "https://docs.google.com/presentation/d/1J5SBGz5EXZH1BQu_3FoARNNLadq9osgjr-IrgPuhEsw/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/10yJToYHpOMPFkazfY6Lxh6G_CULAxHyWpVK8OEMJjVo/view",
       "key": "csp_unit_7_-_parameters_return_and_libraries",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/10yJToYHpOMPFkazfY6Lxh6G_CULAxHyWpVK8OEMJjVo/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
