@@ -124,7 +124,7 @@ class TeacherDashboard extends Component {
             path={TeacherDashboardPath.stats}
             component={props => <StatsTableWithData />}
           />
-          {Object.keys(coursesWithProgress).length === 0 && (
+          {coursesWithProgress.length === 0 && (
             <Route
               component={() => (
                 <div style={styles.text}>

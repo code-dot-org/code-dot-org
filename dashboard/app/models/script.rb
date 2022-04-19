@@ -1824,9 +1824,11 @@ class Script < ApplicationRecord
   def summarize_for_unit_selector
     {
       id: id,
+      key: name,
       version_year: version_year,
       name: launched? ? localized_title : localized_title + " *",
-      position: unit_group_units&.first&.position
+      position: unit_group_units&.first&.position,
+      description: localized_description ? Services::MarkdownPreprocessor.process(localized_description) : nil
     }
   end
 

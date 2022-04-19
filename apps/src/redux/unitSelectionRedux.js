@@ -20,10 +20,9 @@ const getSelectedUnit = state => {
     return null;
   }
 
-  const courses = Object.values(state.unitSelection.coursesWithProgress);
   let script;
-  courses.forEach(course => {
-    script = Object.values(course.units).find(unit => scriptId === unit.id);
+  state.unitSelection.coursesWithProgress.forEach(course => {
+    script = course.units.find(unit => scriptId === unit.id);
   });
   return script;
 };
@@ -50,9 +49,9 @@ const initialState = {
 
 export default function unitSelection(state = initialState, action) {
   if (action.type === SET_COURSES) {
-    let firstCourse = Object.values(action.coursesWithProgress)[0];
+    let firstCourse = action.coursesWithProgress[0];
 
-    const firstUnit = firstCourse ? Object.keys(firstCourse.units)[0] : null;
+    const firstUnit = firstCourse ? firstCourse.units[0] : null;
 
     return {
       ...state,
