@@ -1,5 +1,6 @@
 name 'CSP U4L10 Choice'
-display_name 'Putting It Together'
+display_name 'Reduce Repeated Code With Functions'
+description 'Practice writing functions that you call in multiple onEvents to reduce repeated code.'
 
 sublevels
 level 'U4 L10 Making Functions Practice2022'

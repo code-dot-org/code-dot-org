@@ -29942,6 +29942,10 @@ en:
               name: EOU Student Facting Survey - [Course]
               description_student: 
               description_teacher: 
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csp_lists:
               display_name: Lists
@@ -29951,6 +29955,8 @@ en:
               display_name: Traversals
             csp_project:
               display_name: Project
+            lessonGroup-5:
+              display_name: Post-Course Survey
           title: Lists, Loops, and Traversals ('22-'23)
           description: This unit introduces lists, loops, and traversals, and explores the way they can be used to build apps that store and process large amounts of information. Learn to program with the data library in App Lab and complete a 5-day hackathon project at the end of the unit where you can design a program about any topic of your choosing.
           student_description: This unit introduces lists, loops, and traversals, and explores the way they can be used to build apps that store and process large amounts of information. Learn to program with the data library in App Lab and complete a 5-day hackathon project at the end of the unit where you can design a program about any topic of your choosing.
@@ -30278,9 +30284,15 @@ en:
               name: EOU Student Facting Survey - [Course]
               description_student: 
               description_teacher: 
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csp_unit6_2020:
               display_name: 'Unit 6: Algorithms'
+            lessonGroup-2:
+              display_name: Post-Course Survey
           title: Algorithms ('22-'23)
           description: This unit is a quick exploration of how computer scientists design algorithms to solve problems and how they analyze the speed of different algorithms. Learn about the concept of algorithmic efficiency through a variety of hands-on activities and learn how it's being applied in modern computing.
           student_description: This unit is a quick exploration of how computer scientists design algorithms to solve problems and how they analyze the speed of different algorithms. Learn about the concept of algorithmic efficiency through a variety of hands-on activities and learn how it's being applied in modern computing.
@@ -30374,7 +30386,7 @@ en:
             csp_libraries:
               display_name: Libraries
             lessonGroup-3:
-              display_name: Survey
+              display_name: Post-Course Survey
           title: Parameters, Return, and Libraries ('22-'23)
           description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
           student_description: This unit introduces parameters, return, and libraries. Learn how to use these concepts to build new kinds of apps as well as libraries of code that you can share with your classmates. End the unit by designing a library of functions around any topic of your choosing.
@@ -30423,6 +30435,10 @@ en:
               name: EOU Student Facting Survey - [Course]
               description_student: 
               description_teacher: 
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
+              description_student: 
+              description_teacher: 
           title: Create PT Prep ('22-'23)
           description: "In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.\r\n\r\n"
           student_description: 'In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.
@@ -30430,7 +30446,11 @@ en:
 '
           description_short: Practice and complete the Create Performance Task (PT).
           description_audience: ''
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Create PT
+            lessonGroup-3:
+              display_name: Post-Course Survey
           name: csp8-2022
         csp9-2022:
           lessons:
@@ -30516,9 +30536,15 @@ en:
               name: EOU Student Facting Survey - [Course]
               description_student: 
               description_teacher: 
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Unit 9: Data'
+            lessonGroup-2:
+              display_name: Post-Course Survey
           title: Data ('22-'23)
           description: 'In this unit learn how data analysis helps turn raw data into useful information about the world. Learn how to use data visualization to find patterns inside of data sets and learn how this data analysis process is being used in contexts like open data or machine learning to help make decisions or learn more about our world. In the unit project, you''ll analyze a dataset of your choosing and present your findings. '
           student_description: 'In this unit learn how data analysis helps turn raw data into useful information about the world. Learn how to use data visualization to find patterns inside of data sets and learn how this data analysis process is being used in contexts like open data or machine learning to help make decisions or learn more about our world. In the unit project, you''ll analyze a dataset of your choosing and present your findings. '
@@ -30633,9 +30659,15 @@ en:
               name: EOU Student Facting Survey - [Course]
               description_student: 
               description_teacher: 
+            CS Principles Post-Course Survey:
+              name: CS Principles Post-Course Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csp_unit10_2020:
               display_name: 'Unit 10: Cybersecurity and Global Impacts'
+            lessonGroup-2:
+              display_name: Post-Course Survey
           title: Cybersecurity and Global Impacts ('22-'23)
           description: "In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. Throughout the unit participate in a \"school of the future\" conference in which you and a team make a proposal for how best to improve school life with computing innovations.\n\n"
           student_description: 'In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. Throughout the unit participate in a "school of the future" conference in which you and a team make a proposal for how best to improve school life with computing innovations.
@@ -33826,8 +33858,8 @@ en:
               name: Lesson Assignment
             lesson-9:
               name: Explore a Lesson
-              description_student: "**You will:**\n\n* Explore the lesson plan and additional resources for your/their assigned TLO lesson.\n* Complete the activities from your/their assigned TLO lesson. \n\n**Suggested time:** 60 minutes"
-              description_teacher: "**Overview:**\nThis activity is an opportunity for participants to both explore a lesson plan for a CS Discoveries lesson and begin to familiarize themselves with the content of their TLO lesson.\n\n**Participants will:**\n\n* Explore the lesson plan and additional resources for your/their assigned TLO lesson.\n* Complete the activities from your/their assigned TLO lesson. \n\n**Suggested time:** 60 minutes"
+              description_student: "**You will:**\n\n* Explore the lesson plan and additional resources for your assigned TLO lesson.\n* Complete the activities from your assigned TLO lesson. \n\n**Suggested time:** 60 minutes"
+              description_teacher: "**Overview:**\nThis activity is an opportunity for participants to both explore a lesson plan for a CS Discoveries lesson and begin to familiarize themselves with the content of their TLO lesson.\n\n**Participants will:**\n\n* Explore the lesson plan and additional resources for their assigned TLO lesson.\n* Complete the activities from their assigned TLO lesson. \n\n**Suggested time:** 60 minutes"
             lesson-10:
               name: The role of the teacher
               description_student: |
@@ -33873,8 +33905,8 @@ en:
               description_teacher: "**Overview:**\nDuring this role play activity, participants will engage in Unit 2 Lesson 3: Headings. This lesson will provide participants with an introduction to HTML heading tags. This model lesson will also highlight the structure of programming lesions throughout the CS Discoveries curriculum. \n\n**Participants will:**\n\n* Engage in Unit 2 Lesson 3 while playing the role of the student. \n* Reflect on your experience as a student engaging in the lesson.\n* Discuss the structure of programming lessons in the CS Discoveries curriculum.\n\n**Suggested time:** 60 minutes"
             lesson-3:
               name: Lesson Planning
-              description_student: "**You will:**\n\n* Create a plan for teaching your/their TLO lesson ensuring that all group members have a role. \n* Consider contingency plans if the lesson goes longer or shorter than expected.\n* Decide if and when breakout rooms will be used and communicate that plan to the producer. \n\n**Suggested time:** 60 minutes"
-              description_teacher: "**Overview:**\nDuring this time, participants will create a plan for teaching their TLO lesson. While planning, teachers should consider contingency plans if the lesson goes longer or shorter than expected.  \n\n**Participants will:**\n\n* Create a plan for teaching your/their TLO lesson ensuring that all group members have a role. \n* Consider contingency plans if the lesson goes longer or shorter than expected.\n* Decide if and when breakout rooms will be used and communicate that plan to the producer. \n\n**Suggested time:** 60 minutes"
+              description_student: "**You will:**\n\n* Create a plan for teaching your TLO lesson ensuring that all group members have a role. \n* Consider contingency plans if the lesson goes longer or shorter than expected.\n* Decide if and when breakout rooms will be used and communicate that plan to the producer. \n\n**Suggested time:** 60 minutes"
+              description_teacher: "**Overview:**\nDuring this time, participants will create a plan for teaching their TLO lesson. While planning, teachers should consider contingency plans if the lesson goes longer or shorter than expected.  \n\n**Participants will:**\n\n* Create a plan for teaching their TLO lesson ensuring that all group members have a role. \n* Consider contingency plans if the lesson goes longer or shorter than expected.\n* Decide if and when breakout rooms will be used and communicate that plan to the producer. \n\n**Suggested time:** 60 minutes"
             lesson-4:
               name: Async Prep
             lesson-5:
@@ -33965,9 +33997,9 @@ en:
               description_student: "**You will:**\n\n* Get an orientation for the day.\n* Review gots and needs. \n* Debrief asynchronous work. "
               description_teacher: "**Overview:**\nThis session serves as both an introduction to Day 3 and a space to debrief the asynchronous work from Day 2.\n\n**Participants will:**\n\n* Get an orientation for the day.\n* Review gots and needs. \n* Debrief asynchronous work. \n\n**Suggested time:** 15 minutes"
             lesson-2:
-              name: Context and Bias
-              description_student: "**You will:**\n\n* Identify systemic barriers that limit access, diversity, and inclusion in CS education. \n* List strategies for gathering data about access, diversity, and inclusion in CS within your/their school and classroom. \n* Define unconscious bias.\n* Reflect on your beliefs around who should have access to CS education. "
-              description_teacher: "**Overview:**\nThis session opens with a discussion around systemic barriers that limit access, diversity, and inclusion in CS education. The conversation then expands on the reflections around understanding self and context to include uncovering unconscious biases that exist as a result of identity markers of self and others. Participants will be asked to reflect on ways in which their own unconscious biases might impact their view on who belongs in CS. They will also be challenged to name the responsibility they will claim in ensuring all students feel like they belong in CS. \n\n**Participants will:**\n\n* Identify systemic barriers that limit access, diversity, and inclusion in CS education. \n* List strategies for gathering data about access, diversity, and inclusion in CS within your/their school and classroom. \n* Define unconscious bias.\n* Reflect on your beliefs around who should have access to CS education. \n\n\n**Suggested time:** 60 minutes"
+              name: Barriers and Opportunities
+              description_student: "**You will:**\n\n* Identify systemic barriers that limit access, diversity, and inclusion in CS education. \n* Identify barriers in your classroom, school, and/or teaching practice that limit access, diversity, and/or inclusion in CS education. \n* Determine which of these barriers you have the power to influence. \n* Identify concrete and reasonable strategies to address the barriers you have the power to influence. "
+              description_teacher: "**Overview:**\nThis session opens with a discussion around systemic barriers that limit access, diversity, and inclusion in CS education. The conversation then prompts participants to reflect on their role in reducing barriers to access, diversity, and inclusion in CS education. \n\n**Participants will:**\n\n* Identify systemic barriers that limit access, diversity, and inclusion in CS education. \n* Identify barriers in their classroom, school, and/or teaching practice that limit access, diversity, and/or inclusion in CS education. \n* Determine which of these barriers they have the power to influence. \n* Identify concrete and reasonable strategies to address the barriers they have the power to influence. \n\n**Suggested time:** 60 minutes"
             lesson-3:
               name: TLO 3 - Unit 4 Lesson 3 - delete
               description_student: |-
