@@ -6,14 +6,14 @@ import PropTypes from 'prop-types';
  * This is a placeholder for the upcoming "Documentation" tab in Javalab.
  * See related task: https://codedotorg.atlassian.net/browse/CSA-361
  */
-const UnconnectedDocumentationTab = function({documentationCategory}) {
-  return <p>Documentation for {documentationCategory}</p>;
+const UnconnectedDocumentationTab = function({documentationEnvironment}) {
+  return <p>Documentation for {documentationEnvironment}</p>;
 };
 
 UnconnectedDocumentationTab.propTypes = {
-  documentationCategory: PropTypes.string
+  documentationEnvironment: PropTypes.string
 };
 
 export default connect(state => ({
-  documentationCategory: state.instructions.documentationCategory
+  documentationEnvironment: state.instructions.documentationEnvironment
 }))(UnconnectedDocumentationTab);

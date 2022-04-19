@@ -351,7 +351,7 @@ module LevelsHelper
       @app_options[:level][:levelVideos] = @level.related_videos.map(&:summarize)
       @app_options[:level][:mapReference] = @level.map_reference
       @app_options[:level][:referenceLinks] = @level.reference_links
-      @app_options[:level][:documentationCategory] = get_documentation_category
+      @app_options[:level][:documentationEnvironment] = get_documentation_environment
 
       if (@user || current_user) && @script
         @app_options[:level][:isStarted] = level_started?(@level, @script, @user || current_user)
@@ -1023,7 +1023,7 @@ module LevelsHelper
     end
   end
 
-  def get_documentation_category
+  def get_documentation_environment
     case @level.game
     when Game.javalab
       "javalab"
