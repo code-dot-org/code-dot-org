@@ -308,7 +308,7 @@ describe('teacherSectionsRedux', () => {
         name: '',
         loginType: undefined,
         grade: '',
-        participantType: 'student',
+        participantType: undefined,
         providerManaged: false,
         lessonExtras: true,
         ttsAutoplayEnabled: false,
