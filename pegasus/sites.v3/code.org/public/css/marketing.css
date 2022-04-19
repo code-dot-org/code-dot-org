@@ -3,12 +3,22 @@
   padding: 0 20px;
 }
 
+.flex{
+  display: flex;
+  align-items: center;
+}
+
 h2.purple-block{
   background-color: #7665a0; 
   padding: 1em;
   font-size: 24px;
   color: #ffffff;
   border-radius: 10px 10px 0 0;
+}
+  
+.centerspot {
+  text-align: center; 
+  padding: 2em; 
 }
 
 figure img{
@@ -20,13 +30,6 @@ figure img{
     margin-top: 1em;
     line-height: 1.4;
   }
-  
-.centerspot {
-  text-align: center; 
-  padding: 2em; 
-}
-
-
 
 /* columns */
 .column-container { margin: 20px 0;}
@@ -91,6 +94,24 @@ h2.highlight {
   padding-left: 32px;
   min-height: 32px;
   margin: 3em auto .5em;
+}
+
+.ceo-letter{
+  margin-top: 2em
+}
+  .ceo-letter figure{
+    margin: 0 1.5em 0 0;
+    width: 6em;
+  }
+    .ceo-letter figure img{
+      border-radius: 100%;    
+    }
+      .ceo-letter p{
+        margin-bottom: 0;
+      }
+
+.stateofcs-report img{
+  max-width: 225px;
 }
 
 table.donors.featured, 
@@ -162,12 +183,21 @@ hr.bhm-border {  border:none;  height:5px;  background-image: url('../images/bhm
 
 @media screen and (max-width: 600px) and (min-width: 0px) {
   .container_responsive h1 {font-size: 26px;}
+
   .bhm-banner h2 {font-size:23px;}
+
   .callout-quote {font-size:18px}
+
   h2.highlight { background-position-y: 4px; }
+
   .centerspot{
     padding: 2em 0;
     margin: 0 auto;
+  }
+
+  .flex{
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 

@@ -4,6 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "Supports to Teach CS Discoveries",
+          "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
+          "link": "https://code.org/educate/professional-development-online",
+          "type": "information",
+          "visibility": "Teacher-only"
+        }
+      ],
       "curriculum_umbrella": "CSD",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -18,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-01 20:30:46 UTC",
+    "serialized_at": "2022-04-14 20:39:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6115,7 +6124,7 @@
       "properties": {
         "description": "**Distribute:** Hand out one copy of the project reflection **to each student**.\n\n\n\n\nIn the reflection, students will reflect on both the process and the product. They should identify aspects of the page itself that they are proud of, as well as how the group worked together.  They also describe what they have learned in the course of the project.\n\n\n\n\nSend students to Code Studio to complete their reflection on their attitudes toward computer science. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
         "name": "Reflect: Final Reflection\r",
-        "progression_name": "Reflection"
+        "progression_name": "End-Of-Unit Survey"
       },
       "seeding_key": {
         "activity_section.key": "02053aac-92d9-4d70-a1fa-9e82cbb76686",
@@ -8428,15 +8437,12 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot_2022"
-        ],
-        "progression": "Reflection"
+        "progression": "End-Of-Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot_2022"
+          "Student End of Unit Survey_csd2-2022"
         ],
         "lesson.key": "Peer Review and Final Touches",
         "lesson_group.key": "csd2_2v2",
@@ -8444,7 +8450,7 @@
         "activity_section.key": "02053aac-92d9-4d70-a1fa-9e82cbb76686"
       },
       "level_keys": [
-        "csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot_2022"
+        "Student End of Unit Survey_csd2-2022"
       ]
     },
     {
@@ -9568,9 +9574,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot_2022",
+        "level.key": "Student End of Unit Survey_csd2-2022",
         "script_level.level_keys": [
-          "csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot_2022"
+          "Student End of Unit Survey_csd2-2022"
         ],
         "lesson.key": "Peer Review and Final Touches",
         "lesson_group.key": "csd2_2v2",
@@ -9606,7 +9612,7 @@
   "resources": [
     {
       "name": "All Code",
-      "url": "/s/csd2-2021/code",
+      "url": "/s/csd2-2022/code",
       "key": "all_code",
       "properties": {
         "is_rollup": true
@@ -9617,7 +9623,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/csd2-2021/resources",
+      "url": "/s/csd2-2022/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -9628,7 +9634,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/csd2-2021/standards",
+      "url": "/s/csd2-2022/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -9639,7 +9645,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/csd2-2021/vocab",
+      "url": "/s/csd2-2022/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true
@@ -9711,11 +9717,9 @@
     },
     {
       "name": "CSD Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview",
+      "url": "https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview",
       "key": "csd_curriculum_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csd_curriculum_guide"
@@ -9743,26 +9747,35 @@
     },
     {
       "name": "CSD Implementation Guide",
-      "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
+      "url": "https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview",
       "key": "csd_implementation_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csd_implementation_guide"
       }
     },
     {
-      "name": "CSD Unit 2 - Web Development",
-      "url": "https://docs.google.com/presentation/d/1rg7Lf6ahVruRMzmYnZuXZZqLUgqK5ahp53tCIPtl8wc/copy",
-      "key": "csd_unit_2_-_web_development",
+      "name": "CSD Programming Levels Guide",
+      "url": "https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview",
+      "key": "csd_programming_levels_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_programming_levels_guide"
+      }
+    },
+    {
+      "name": "CSS Classes",
+      "url": "https://docs.google.com/presentation/d/1dri4RfbdQypp4Lp0xrWCcyv7imvTithrDFcJA_i4RkM/template/preview",
+      "key": "css_classes",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1dri4RfbdQypp4Lp0xrWCcyv7imvTithrDFcJA_i4RkM/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "csd_unit_2_-_web_development"
+        "resource.key": "css_classes"
       }
     },
     {
@@ -9792,10 +9805,11 @@
     },
     {
       "name": "Digital Footprint",
-      "url": "https://docs.google.com/presentation/d/1nkdM4cDDgzbYSOR9w6vS7QFE1C450-9Kgt1G6G7e7pI/copy",
+      "url": "https://docs.google.com/presentation/d/1cA4I8OgJrqm-Bz8IZFVsPDjj_IkiT4S6vlu54pGKarA/template/preview",
       "key": "digital_footprint",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1cA4I8OgJrqm-Bz8IZFVsPDjj_IkiT4S6vlu54pGKarA/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -9840,6 +9854,19 @@
       }
     },
     {
+      "name": "Exploring Web Pages",
+      "url": "https://docs.google.com/presentation/d/1rNhplmXtb_pkCBQ9PwLE7-Fb30LPr9QDjMbYV5m0L38/template/preview",
+      "key": "exploring_web_pages_2",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1rNhplmXtb_pkCBQ9PwLE7-Fb30LPr9QDjMbYV5m0L38/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "exploring_web_pages_2"
+      }
+    },
+    {
       "name": "Extra Code in Challenge Levels",
       "url": "https://docs.google.com/document/d/1TwY87H6Ul3H2q7nynj-HESE8Bird9KX31Qw7e2cyulI/view",
       "key": "extra_code_in_challenge_levels",
@@ -9861,6 +9888,19 @@
       },
       "seeding_key": {
         "resource.key": "formatting_html"
+      }
+    },
+    {
+      "name": "Headings",
+      "url": "https://docs.google.com/presentation/d/1FKRGMP6kV3oZnz00kQFjLpNEVgyylQ2gFn5jP0qopeE/template/preview",
+      "key": "headings",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1FKRGMP6kV3oZnz00kQFjLpNEVgyylQ2gFn5jP0qopeE/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "headings"
       }
     },
     {
@@ -9898,18 +9938,6 @@
       },
       "seeding_key": {
         "resource.key": "html_web_page"
-      }
-    },
-    {
-      "name": "HTML Web Page",
-      "url": "https://docs.google.com/presentation/d/1nkdM4cDDgzbYSOR9w6vS7QFE1C450-9Kgt1G6G7e7pI/copy",
-      "key": "html_web_page_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "html_web_page_1"
       }
     },
     {
@@ -9963,6 +9991,19 @@
       }
     },
     {
+      "name": "Intellectual Property",
+      "url": "https://docs.google.com/presentation/d/1-pZjNq_Yohai6HgWHZQUydrKU3LwqkENAZwJ-JBiRPM/template/preview",
+      "key": "intellectual_property",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1-pZjNq_Yohai6HgWHZQUydrKU3LwqkENAZwJ-JBiRPM/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "intellectual_property"
+      }
+    },
+    {
       "name": "Internet Scavenger Hunt",
       "url": "https://docs.google.com/document/d/1aDiUc0G3srj0CCaibxdWYfJNpuKK0MygpOz_NYsjKIQ/edit",
       "key": "internet_scavenger_hunt",
@@ -9999,6 +10040,19 @@
       },
       "seeding_key": {
         "resource.key": "intro_to_css_-_part_2"
+      }
+    },
+    {
+      "name": "Intro to HTML",
+      "url": "https://docs.google.com/presentation/d/11PRWsqomAx0svoQg7nZIFNHrw0X9LqPS7kACX6kTMZY/template/preview",
+      "key": "intro_to_html",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/11PRWsqomAx0svoQg7nZIFNHrw0X9LqPS7kACX6kTMZY/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "intro_to_html"
       }
     },
     {
@@ -10052,6 +10106,19 @@
       }
     },
     {
+      "name": "Linking Pages",
+      "url": "https://docs.google.com/presentation/d/15R24kMhA1ows-bPCVV3zk-4G-DQUd1gfUbnSly17kiE/template/preview",
+      "key": "linking_pages",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/15R24kMhA1ows-bPCVV3zk-4G-DQUd1gfUbnSly17kiE/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "linking_pages"
+      }
+    },
+    {
       "name": "Links and Research",
       "url": "https://docs.google.com/document/d/177bKYuaoKu4NsevOGUfvjCtXMVWiHBBZPEMfwT9KKiE",
       "key": "links_and_research",
@@ -10086,6 +10153,32 @@
       },
       "seeding_key": {
         "resource.key": "lists"
+      }
+    },
+    {
+      "name": "Mini-Project: HTML Web Page",
+      "url": "https://docs.google.com/presentation/d/1-EoECfuGk508F5mDynPSIoBs239zCYXyD9RNCESZ0Bw/template/preview",
+      "key": "mini-project_html_web_page",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1-EoECfuGk508F5mDynPSIoBs239zCYXyD9RNCESZ0Bw/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mini-project_html_web_page"
+      }
+    },
+    {
+      "name": "Mini-Project: Your Personal Style",
+      "url": "https://docs.google.com/presentation/d/1LX6NzOZWylOLKPKoPm-SFKdKj6_raNSvQv6MugarH9k/template/preview",
+      "key": "mini-project_your_personal_style",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1LX6NzOZWylOLKPKoPm-SFKdKj6_raNSvQv6MugarH9k/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mini-project_your_personal_style"
       }
     },
     {
@@ -10134,6 +10227,19 @@
       },
       "seeding_key": {
         "resource.key": "peer_review_-_your_personal_style"
+      }
+    },
+    {
+      "name": "Peer Review and Final Touches",
+      "url": "https://docs.google.com/presentation/d/1XouoXPdxXi99eegR5H42vBx_gp9fhx4914QBBPHtHxk/template/preview",
+      "key": "peer_review_and_final_touches",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1XouoXPdxXi99eegR5H42vBx_gp9fhx4914QBBPHtHxk/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "peer_review_and_final_touches"
       }
     },
     {
@@ -10215,6 +10321,19 @@
       }
     },
     {
+      "name": "Planning a Multi-Page Site",
+      "url": "https://docs.google.com/presentation/d/1BPEWmTePdmhX1kiJnyWDOIf0x6pRllvQiv6cNaGpZCU/template/preview",
+      "key": "planning_a_multi-page_site",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1BPEWmTePdmhX1kiJnyWDOIf0x6pRllvQiv6cNaGpZCU/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "planning_a_multi-page_site"
+      }
+    },
+    {
       "name": "Practices Reflection",
       "url": "https://docs.google.com/document/d/1J7Ghd-A6Y6onQq1zQU-VQ0ic2QV0I06x1ejxohX84RU/view",
       "key": "practices_reflection",
@@ -10236,6 +10355,32 @@
       },
       "seeding_key": {
         "resource.key": "practices_reflection_1"
+      }
+    },
+    {
+      "name": "Project - Personal Web Page",
+      "url": "https://docs.google.com/presentation/d/1RaUMZ1CxWmklck8g70oNcZmzUbqOaYFAkRFGR9JdUF8/template/preview",
+      "key": "project_-_personal_web_page",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1RaUMZ1CxWmklck8g70oNcZmzUbqOaYFAkRFGR9JdUF8/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "project_-_personal_web_page"
+      }
+    },
+    {
+      "name": "Project - Website for a Purpose",
+      "url": "https://docs.google.com/presentation/d/1YdcS3687xoe02HW_582S9Qh3nEj6H7SSrJQt-qSb7KE/template/preview",
+      "key": "project_-_website_for_a_purpose",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1YdcS3687xoe02HW_582S9Qh3nEj6H7SSrJQt-qSb7KE/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "project_-_website_for_a_purpose"
       }
     },
     {
@@ -10349,6 +10494,19 @@
       }
     },
     {
+      "name": "Sources and Research",
+      "url": "https://docs.google.com/presentation/d/1xEET7femGEeUi-pN8WmfwEkrRe69gsAEXEl-UZyfamE/template/preview",
+      "key": "sources_and_research",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1xEET7femGEeUi-pN8WmfwEkrRe69gsAEXEl-UZyfamE/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "sources_and_research"
+      }
+    },
+    {
       "name": "Style Sheets",
       "url": "https://drive.google.com/file/d/1va-Va15QP2jyuRnmBRYUQg0ZkQk8PETj/view",
       "key": "style_sheets",
@@ -10358,6 +10516,32 @@
       },
       "seeding_key": {
         "resource.key": "style_sheets"
+      }
+    },
+    {
+      "name": "Styling Elements with CSS",
+      "url": "https://docs.google.com/presentation/d/1zbqMiuqfYAuz21chPD4qt-GceNA0T3wmfyl8SCt4jEs/template/preview",
+      "key": "styling_elements_with_css",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1zbqMiuqfYAuz21chPD4qt-GceNA0T3wmfyl8SCt4jEs/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "styling_elements_with_css"
+      }
+    },
+    {
+      "name": "Styling Text with CSS",
+      "url": "https://docs.google.com/presentation/d/1BtifQt5gCAdI3wyzMpW0sdNdnA-6hVk3rdcNETG1oP0/template/preview",
+      "key": "styling_text_with_css",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1BtifQt5gCAdI3wyzMpW0sdNdnA-6hVk3rdcNETG1oP0/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "styling_text_with_css"
       }
     },
     {
@@ -10372,6 +10556,19 @@
       }
     },
     {
+      "name": "Team Problem Solving",
+      "url": "https://docs.google.com/presentation/d/1BDdQ3ty6ZQSJHgG8Vrg-YHfghggET9xEOEO4_jT6N5E/template/preview",
+      "key": "team_problem_solving",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1BDdQ3ty6ZQSJHgG8Vrg-YHfghggET9xEOEO4_jT6N5E/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "team_problem_solving"
+      }
+    },
+    {
       "name": "Text Properties",
       "url": "https://drive.google.com/file/d/1NoseEakxt9yOSuPbpnLgUu9-_Yso3EOB/view?usp=sharing",
       "key": "text_properties",
@@ -10381,6 +10578,19 @@
       },
       "seeding_key": {
         "resource.key": "text_properties"
+      }
+    },
+    {
+      "name": "Using Images",
+      "url": "https://docs.google.com/presentation/d/1q_u9skUeHGyRM5T9xbXAJBKnbj5-heI-0nsnySZNnEE/template/preview",
+      "key": "using_images",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1q_u9skUeHGyRM5T9xbXAJBKnbj5-heI-0nsnySZNnEE/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "using_images"
       }
     },
     {
@@ -10563,6 +10773,32 @@
       }
     },
     {
+      "name": "Websites for a Purpose",
+      "url": "https://docs.google.com/presentation/d/1MIFVttm0GFmNx58oducL80wvbINe9kxoLxzm3eNgw_o/template/preview",
+      "key": "websites_for_a_purpose_2",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1MIFVttm0GFmNx58oducL80wvbINe9kxoLxzm3eNgw_o/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "websites_for_a_purpose_2"
+      }
+    },
+    {
+      "name": "Websites for Expression",
+      "url": "https://docs.google.com/presentation/d/1xULQRcqeI288kAZoPX0_oeemk5u5VKHc1G0yAGxo9Ao/template/preview",
+      "key": "websites_for_expression",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1xULQRcqeI288kAZoPX0_oeemk5u5VKHc1G0yAGxo9Ao/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "websites_for_expression"
+      }
+    },
+    {
       "name": "Your Personal Style",
       "url": "https://docs.google.com/document/d/1znQdx7gLR3CcKYNnq0TJFPw3lpvfvzxIFa9-gZ_6twQ/edit",
       "key": "your_personal_style",
@@ -10600,6 +10836,19 @@
       "seeding_key": {
         "resource.key": "your_personal_style_2"
       }
+    },
+    {
+      "name": "Your Web Page: Prepare",
+      "url": "https://docs.google.com/presentation/d/1jVpNKzVN4kpLRU-QPYWFiYjLmv4GMZVzmXQV_oMLhws/template/preview",
+      "key": "your_web_page_prepare",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1jVpNKzVN4kpLRU-QPYWFiYjLmv4GMZVzmXQV_oMLhws/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "your_web_page_prepare"
+      }
     }
   ],
   "lessons_resources": [
@@ -10612,7 +10861,7 @@
     {
       "seeding_key": {
         "lesson.key": "CSS Classes",
-        "resource.key": "csd_unit_2_-_web_development"
+        "resource.key": "css_classes"
       }
     },
     {
@@ -10636,12 +10885,6 @@
     {
       "seeding_key": {
         "lesson.key": "Exploring Web Pages",
-        "resource.key": "csd_unit_2_-_web_development"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Exploring Web Pages",
         "resource.key": "exploring_web_pages"
       }
     },
@@ -10653,8 +10896,14 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Exploring Web Pages",
+        "resource.key": "exploring_web_pages_2"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Headings",
-        "resource.key": "csd_unit_2_-_web_development"
+        "resource.key": "headings"
       }
     },
     {
@@ -10684,7 +10933,7 @@
     {
       "seeding_key": {
         "lesson.key": "Intellectual Property",
-        "resource.key": "csd_unit_2_-_web_development"
+        "resource.key": "intellectual_property"
       }
     },
     {
@@ -10702,12 +10951,6 @@
     {
       "seeding_key": {
         "lesson.key": "Intro to HTML",
-        "resource.key": "csd_unit_2_-_web_development"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to HTML",
         "resource.key": "exemplar_text_website"
       }
     },
@@ -10715,6 +10958,12 @@
       "seeding_key": {
         "lesson.key": "Intro to HTML",
         "resource.key": "html_tags"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to HTML",
+        "resource.key": "intro_to_html"
       }
     },
     {
@@ -10732,13 +10981,13 @@
     {
       "seeding_key": {
         "lesson.key": "Linking Pages",
-        "resource.key": "csd_unit_2_-_web_development"
+        "resource.key": "hyperlinks"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Linking Pages",
-        "resource.key": "hyperlinks"
+        "resource.key": "linking_pages"
       }
     },
     {
@@ -10751,12 +11000,6 @@
       "seeding_key": {
         "lesson.key": "Mini-Project: HTML Web Page",
         "resource.key": "html_web_page"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: HTML Web Page",
-        "resource.key": "html_web_page_1"
       }
     },
     {
@@ -10780,6 +11023,12 @@
     {
       "seeding_key": {
         "lesson.key": "Mini-Project: HTML Web Page",
+        "resource.key": "mini-project_html_web_page"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: HTML Web Page",
         "resource.key": "peer_review_-_html_web_page"
       }
     },
@@ -10792,7 +11041,7 @@
     {
       "seeding_key": {
         "lesson.key": "Mini-Project: Your Personal Style",
-        "resource.key": "csd_unit_2_-_web_development"
+        "resource.key": "mini-project_your_personal_style"
       }
     },
     {
@@ -10834,13 +11083,13 @@
     {
       "seeding_key": {
         "lesson.key": "Peer Review and Final Touches",
-        "resource.key": "csd_unit_2_-_web_development"
+        "resource.key": "peer_review_-_final_personal_website"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Peer Review and Final Touches",
-        "resource.key": "peer_review_-_final_personal_website"
+        "resource.key": "peer_review_and_final_touches"
       }
     },
     {
@@ -10882,13 +11131,13 @@
     {
       "seeding_key": {
         "lesson.key": "Planning a Multi-Page Site",
-        "resource.key": "csd_unit_2_-_web_development"
+        "resource.key": "plan_a_multi-page_website"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Planning a Multi-Page Site",
-        "resource.key": "plan_a_multi-page_website"
+        "resource.key": "planning_a_multi-page_site"
       }
     },
     {
@@ -10913,12 +11162,6 @@
       "seeding_key": {
         "lesson.key": "Project - Personal Web Page",
         "resource.key": "computer_science_practices"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Personal Web Page",
-        "resource.key": "csd_unit_2_-_web_development"
       }
     },
     {
@@ -10966,6 +11209,12 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Personal Web Page",
+        "resource.key": "project_-_personal_web_page"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Personal Web Page",
         "resource.key": "project_guide_-_personal_web_page_-_reflect"
       }
     },
@@ -10978,13 +11227,13 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Website for a Purpose",
-        "resource.key": "csd_unit_2_-_web_development"
+        "resource.key": "extra_code_in_challenge_levels"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Project - Website for a Purpose",
-        "resource.key": "extra_code_in_challenge_levels"
+        "resource.key": "project_-_website_for_a_purpose"
       }
     },
     {
@@ -10997,12 +11246,6 @@
       "seeding_key": {
         "lesson.key": "Project - Website for a Purpose",
         "resource.key": "website_for_a_purpose_-_student_checklist"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sources and Research",
-        "resource.key": "csd_unit_2_-_web_development"
       }
     },
     {
@@ -11026,6 +11269,12 @@
     {
       "seeding_key": {
         "lesson.key": "Sources and Research",
+        "resource.key": "sources_and_research"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sources and Research",
         "resource.key": "video_how_search_works"
       }
     },
@@ -11038,19 +11287,13 @@
     {
       "seeding_key": {
         "lesson.key": "Styling Elements with CSS",
-        "resource.key": "csd_unit_2_-_web_development"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
         "resource.key": "layout_properties"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Styling Text with CSS",
-        "resource.key": "csd_unit_2_-_web_development"
+        "lesson.key": "Styling Elements with CSS",
+        "resource.key": "styling_elements_with_css"
       }
     },
     {
@@ -11074,13 +11317,19 @@
     {
       "seeding_key": {
         "lesson.key": "Styling Text with CSS",
+        "resource.key": "styling_text_with_css"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Text with CSS",
         "resource.key": "text_properties"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Team Problem Solving",
-        "resource.key": "csd_unit_2_-_web_development"
+        "resource.key": "team_problem_solving"
       }
     },
     {
@@ -11116,19 +11365,13 @@
     {
       "seeding_key": {
         "lesson.key": "Using Images",
-        "resource.key": "csd_unit_2_-_web_development"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using Images",
         "resource.key": "images_in_html"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Websites for Expression",
-        "resource.key": "csd_unit_2_-_web_development"
+        "lesson.key": "Using Images",
+        "resource.key": "using_images"
       }
     },
     {
@@ -11145,8 +11388,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Websites for a Purpose",
-        "resource.key": "csd_unit_2_-_web_development"
+        "lesson.key": "Websites for Expression",
+        "resource.key": "websites_for_expression"
       }
     },
     {
@@ -11163,8 +11406,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Your Web Page - Prepare",
-        "resource.key": "csd_unit_2_-_web_development"
+        "lesson.key": "Websites for a Purpose",
+        "resource.key": "websites_for_a_purpose_2"
       }
     },
     {
@@ -11177,6 +11420,12 @@
       "seeding_key": {
         "lesson.key": "Your Web Page - Prepare",
         "resource.key": "project_guide_-_personal_web_page_-_prepare"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Your Web Page - Prepare",
+        "resource.key": "your_web_page_prepare"
       }
     }
   ],
@@ -11226,6 +11475,12 @@
     {
       "seeding_key": {
         "resource.key": "csd_implementation_guide",
+        "script.name": "csd2-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_programming_levels_guide",
         "script.name": "csd2-2022"
       }
     },

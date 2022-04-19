@@ -82,6 +82,18 @@
             {
               "value": "mbaritour",
               "text": "Exploring the Deep Bit by Bit with Monterey Bay Aquarium"
+            },
+            {
+              "value": "irobottour",
+              "text": "Going inside the iRobot Cool Stuff Museum"
+            },
+            {
+              "value": "snaptour",
+              "text": "Exploring the world of Augmented Reality (AR) with Snap"
+            },
+            {
+              "value": "alexatour",
+              "text": "Alexa, take me to the moon with NASA and Amazon"
             }
           ]
         },

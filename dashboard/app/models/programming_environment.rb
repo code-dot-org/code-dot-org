@@ -117,7 +117,7 @@ class ProgrammingEnvironment < ApplicationRecord
       title: title,
       description: description,
       projectUrl: project_url,
-      categories: categories.select {|c| c.programming_expressions.count > 0}.map(&:summarize_for_environment_show)
+      categories: categories_for_navigation
     }
   end
 
@@ -129,5 +129,9 @@ class ProgrammingEnvironment < ApplicationRecord
       description: description,
       showPath: studio_documentation_path
     }
+  end
+
+  def categories_for_navigation
+    categories.select(&:should_be_in_navigation?).map(&:summarize_for_navigation)
   end
 end

@@ -7,7 +7,7 @@ class SectionTest < ActiveSupport::TestCase
     @teacher = create :teacher
     @section = create :section, teacher: @teacher
 
-    @default_attrs = {user: @teacher, name: 'test-section'}
+    @default_attrs = {user: @teacher, name: 'test-section', participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student}
   end
 
   test "sections are soft-deleted" do
@@ -285,7 +285,7 @@ class SectionTest < ActiveSupport::TestCase
     section_with_teacher_participants = build :section, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
     assert_does_not_create(Follower) do
       add_student_return = section_with_teacher_participants.add_student @student
-      assert_equal Section::ADD_STUDENT_FAILURE, add_student_return
+      assert_equal Section::ADD_STUDENT_FORBIDDEN, add_student_return
     end
   end
 
@@ -422,10 +422,10 @@ class SectionTest < ActiveSupport::TestCase
         tts_autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
+        participant_type: 'student',
         course_offering_id: unit_group.course_version.course_offering.id,
         course_version_id: unit_group.course_version.id,
         unit_id: nil,
-        script_id: nil,
         course_id: unit_group.id,
         script: {id: nil, name: nil, project_sharing: nil},
         studentCount: 0,
@@ -470,10 +470,10 @@ class SectionTest < ActiveSupport::TestCase
         tts_autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
+        participant_type: 'student',
         course_offering_id: script.course_version.course_offering.id,
         course_version_id: script.course_version.id,
         unit_id: nil,
-        script_id: script.id,
         course_id: nil,
         script: {id: script.id, name: script.name, project_sharing: nil},
         studentCount: 0,
@@ -521,10 +521,10 @@ class SectionTest < ActiveSupport::TestCase
         tts_autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
+        participant_type: 'student',
         course_offering_id: unit_group.course_version.course_offering.id,
         course_version_id: unit_group.course_version.id,
         unit_id: script.id,
-        script_id: script.id,
         course_id: unit_group.id,
         script: {id: script.id, name: script.name, project_sharing: nil},
         studentCount: 0,
@@ -565,10 +565,10 @@ class SectionTest < ActiveSupport::TestCase
         tts_autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
+        participant_type: 'student',
         course_offering_id: nil,
         course_version_id: nil,
         unit_id: nil,
-        script_id: nil,
         course_id: nil,
         script: {id: nil, name: nil, project_sharing: nil},
         studentCount: 0,

@@ -101,10 +101,6 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
     }
   }
 
-  isReadOnly() {
-    return false; // TODO - used for feedback
-  }
-
   resize() {
     super.resize();
 
@@ -116,14 +112,6 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
   setEnableToolbox() {} // TODO - called by StudioApp, not sure whether it's still needed.
   traceOn() {} // TODO
 }
-
-WorkspaceSvg.prototype.blockSpaceEditor = {
-  blockLimits: {
-    blockLimitExceeded: () => false, // TODO
-    getLimit: () => {} // TODO
-  },
-  svgResize: () => {} // TODO
-};
 
 WorkspaceSvg.prototype.events = {
   dispatchEvent: () => {} // TODO
