@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-18 06:15:43 UTC",
+    "serialized_at": "2022-04-19 04:23:53 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -151,7 +151,7 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "**Overview:**\nThese asynchronous activities will provide participants an introduction to the role of the teacher as the lead learner. Participants will be prompted to consider how their experiences and beliefs about CS influence how they see their role as the teacher in a CS classroom. This reflection will prime participants for the identity session later in the workshop. \n\n**Participants will:**\n\n* Consider your/their role as the teacher in the CS Discoveries classroom. \n\n**Suggested time:** 20 minutes",
+        "overview": "**Overview:**\nThese asynchronous activities will provide participants an introduction to the role of the teacher as the lead learner. Participants will be prompted to consider how their experiences and beliefs about CS influence how they see their role as the teacher in a CS classroom. This reflection will prime participants for the identity session later in the workshop. \n\n**Participants will:**\n\n* Consider their role as the teacher in the CS Discoveries classroom. \n\n**Suggested time:** 20 minutes",
         "student_overview": "**You will:**\n* Consider your role as the teacher in a CS Discoveries classroom.\n"
       },
       "seeding_key": {
@@ -1212,8 +1212,19 @@
       }
     },
     {
-      "key": "9d0ad604-ba2a-4a36-8b1d-ea4a121fa15c",
+      "key": "f8349d47-4e7e-4ad1-9aca-902b1e683b3e",
       "position": 2,
+      "properties": {
+        "progression_name": "Exploring Your Lesson Plan & Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "f8349d47-4e7e-4ad1-9aca-902b1e683b3e",
+        "lesson_activity.key": "a24f640d-abcc-4d2a-ab02-8989f7412a47"
+      }
+    },
+    {
+      "key": "9d0ad604-ba2a-4a36-8b1d-ea4a121fa15c",
+      "position": 3,
       "properties": {
         "progression_name": "Wrap up"
       },
@@ -1925,6 +1936,72 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Exploring Your Lesson Plan & Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-Navigating LPs & Resources"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd1-summer-pilot-2022",
+        "activity_section.key": "f8349d47-4e7e-4ad1-9aca-902b1e683b3e"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-Navigating LPs & Resources"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploring Your Lesson Plan & Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-D1L10-ExploreLessonPlan"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd1-summer-pilot-2022",
+        "activity_section.key": "f8349d47-4e7e-4ad1-9aca-902b1e683b3e"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-D1L10-ExploreLessonPlan"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploring Your Lesson Plan & Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-D1L10-NavigatingTeacherResources"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd1-summer-pilot-2022",
+        "activity_section.key": "f8349d47-4e7e-4ad1-9aca-902b1e683b3e"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-D1L10-NavigatingTeacherResources"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "VPL-CSD-PILOT-S22-SP-VPL-21-mod1-async2-WrapUp"
         ],
@@ -2280,6 +2357,42 @@
         "lesson_group.key": "lessonGroup-5",
         "script.name": "vpl-csd1-summer-pilot-2022",
         "activity_section.key": "c36a779e-c928-46f1-8842-874335fc7b84"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-Navigating LPs & Resources",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-Navigating LPs & Resources"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd1-summer-pilot-2022",
+        "activity_section.key": "f8349d47-4e7e-4ad1-9aca-902b1e683b3e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-D1L10-ExploreLessonPlan",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-D1L10-ExploreLessonPlan"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd1-summer-pilot-2022",
+        "activity_section.key": "f8349d47-4e7e-4ad1-9aca-902b1e683b3e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-D1L10-NavigatingTeacherResources",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-D1L10-NavigatingTeacherResources"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "vpl-csd1-summer-pilot-2022",
+        "activity_section.key": "f8349d47-4e7e-4ad1-9aca-902b1e683b3e"
       }
     },
     {

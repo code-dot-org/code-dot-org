@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-14 20:52:37 UTC",
+    "serialized_at": "2022-04-18 19:03:23 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2758,6 +2758,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csp2-2022"
+        ],
         "progression": "End-of-Unit Survey"
       },
       "bonus": false,
@@ -3055,10 +3058,11 @@
     },
     {
       "name": "CSP Unit 2 - The Internet",
-      "url": "https://docs.google.com/presentation/d/1zk7XyygG02tc_DCKQK2K_10XayKoIG-gRwOoRjwFgRg/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1_zu1SnbU6qUkfR16tk6eWHyQzoCrwhUP4IhnHQXCmLE/view",
       "key": "csp_unit_2_-_the_internet",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1_zu1SnbU6qUkfR16tk6eWHyQzoCrwhUP4IhnHQXCmLE/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
