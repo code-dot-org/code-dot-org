@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-14 20:59:31 UTC",
+    "serialized_at": "2022-04-18 19:04:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5829,6 +5829,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csp4-2022"
+        ],
         "progression": "End-of-Unit Survey"
       },
       "bonus": false,
@@ -6970,10 +6973,11 @@
     },
     {
       "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
-      "url": "https://docs.google.com/presentation/d/1a4w7xtUqAs-3jxMdcLiwGayVA9r3x7k27oiVfsApRMs/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/17DOii-3gPXZrNszMyiLnHUt7VhbCULJ9Jddlb_Xss5o/view",
       "key": "csp_unit_4_-_variables_conditionals_and_functions",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/17DOii-3gPXZrNszMyiLnHUt7VhbCULJ9Jddlb_Xss5o/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
