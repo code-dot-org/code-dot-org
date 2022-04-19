@@ -4,7 +4,7 @@ class ProgrammingEnvironmentsController < ApplicationController
 
   before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show, :docs_show, :docs_index]
   before_action :set_programming_environment, except: [:index, :docs_index, :new, :create, :docs_show]
-  authorize_resource
+  authorize_resource except: [:get_summary_by_name]
 
   def index
     @programming_environments = ProgrammingEnvironment.where(published: true).order(:name).map(&:summarize_for_index)
@@ -93,6 +93,12 @@ class ProgrammingEnvironmentsController < ApplicationController
     render(status: 200, plain: "Destroyed #{@programming_environment.name}")
   rescue => e
     render(status: :not_acceptable, plain: e.message)
+  end
+
+  def get_summary_by_name
+    return render :not_found unless @programming_environment
+    programming_environment_categories = @programming_environment.categories_for_get
+    return render json: programming_environment_categories
   end
 
   private

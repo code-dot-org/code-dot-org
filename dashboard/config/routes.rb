@@ -361,6 +361,8 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  get 'get_summary_by_name/:name', to: 'programming_environments#get_summary_by_name'
+
   resources :programming_methods, only: [:edit, :update]
 
   resources :standards, only: [] do

@@ -223,6 +223,18 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
     refute_nil ProgrammingEnvironment.find_by_name('test-environment')
   end
 
+  test 'can get summary by name' do
+    programming_environment = create :programming_environment, name: 'test-environment'
+    programming_category = create :programming_environment_category, name: 'test-category', programming_environment_id: programming_environment.id
+    programming_class = create :programming_class, name: 'test-class', programming_environment_category_id: programming_category.id, programming_environment_id: programming_environment.id
+    get :get_summary_by_name, params: {name: programming_environment.name}
+    assert_response :ok
+    response = JSON.parse(@response.body)
+    assert_equal 1, response.length
+    assert_equal programming_category.name, response[0]["name"]
+    assert_equal programming_class.name, response[0]["docs"][0]["name"]
+  end
+
   class AccessTests < ActionController::TestCase
     setup do
       File.stubs(:write)
