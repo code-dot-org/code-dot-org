@@ -15,6 +15,11 @@ class BubbleChoiceTest < ActiveSupport::TestCase
     sublevels = [@sublevel1, @sublevel2]
     @bubble_choice = create :bubble_choice_level, name: 'bubble_choices', display_name: 'Bubble Choices', description: 'Choose one or more!', sublevels: sublevels
     @script_level = create :script_level, levels: [@bubble_choice]
+
+    @sublevel_with_contained = create :level, name: 'sublevel_with_contained', display_name: 'Sublevel with contained', thumbnail_url: 'some-fake.url/kittens.png', bubble_choice_description: 'Choose me!'
+    @sublevel_contained_level = create :level, name: 'Sublevel contained level'
+    @sublevel_with_contained.contained_level_names = [@sublevel_contained_level.name]
+    @sublevel_with_contained.save!
   end
 
   test 'create_from_level_builder creates level from DSL input' do
@@ -210,36 +215,30 @@ DSL
   test 'summarize_sublevels with sublevel with contained level' do
     student = create :student
 
-    sublevel1 = create :level, name: 'sublevel_1', display_name: 'Choice 1!', thumbnail_url: 'some-fake.url/kittens.png', bubble_choice_description: 'Choose me!'
-    sublevel1_contained_level = create :level, name: 'Sublevel_1 contained level'
-    sublevel1.contained_level_names = [sublevel1_contained_level.name]
-    sublevel1.save!
-
-    sublevel2 = create :level, name: 'sublevel_2', short_instructions: 'A short instruction'
-    bubble_choice = create :bubble_choice_level, name: 'sublevels', display_name: 'Bubble Choices', description: 'Choose one or more!', sublevels: [sublevel1, sublevel2]
+    bubble_choice = create :bubble_choice_level, name: 'sublevels', display_name: 'Bubble Choices', description: 'Choose one or more!', sublevels: [@sublevel_with_contained, @sublevel2]
     script_level = create :script_level, levels: [bubble_choice]
     script = script_level.script
 
-    create :user_level, user: student, level: sublevel1_contained_level, script: script, best_result: 100
-    create :user_level, user: student, level: sublevel2, script: script, best_result: 20
+    create :user_level, user: student, level: @sublevel_contained_level, script: script, best_result: 100
+    create :user_level, user: student, level: @sublevel2, script: script, best_result: 20
 
     sublevel_summary = bubble_choice.summarize_sublevels(script_level: script_level, user_id: student.id)
     expected_summary = [
       {
         # level_id and id are used by different features so keeping both
-        level_id: sublevel1.id.to_s,
-        type: sublevel1.type,
-        name: sublevel1.name,
-        display_name: sublevel1.display_name,
+        level_id: @sublevel_with_contained.id.to_s,
+        type: @sublevel_with_contained.type,
+        name: @sublevel_with_contained.name,
+        display_name: @sublevel_with_contained.display_name,
         contained_levels: [{
-          level_id: sublevel1_contained_level.id.to_s,
+          level_id: @sublevel_contained_level.id.to_s,
           type: "Blockly",
-          name: "Sublevel_1 contained level",
+          name: "Sublevel contained level",
           display_name: nil
         }],
-        id: sublevel1.id.to_s,
-        description: sublevel1.bubble_choice_description,
-        thumbnail_url: sublevel1.thumbnail_url,
+        id: @sublevel_with_contained.id.to_s,
+        description: @sublevel_with_contained.bubble_choice_description,
+        thumbnail_url: @sublevel_with_contained.thumbnail_url,
         position: 1,
         letter: 'a',
         icon: nil,
@@ -250,13 +249,13 @@ DSL
         exampleSolutions: []
       },
       {
-        level_id: sublevel2.id.to_s,
-        type: sublevel2.type,
-        name: sublevel2.name,
-        display_name: sublevel2.name,
-        short_instructions: sublevel2.short_instructions,
-        id: sublevel2.id.to_s,
-        description: sublevel2.bubble_choice_description,
+        level_id: @sublevel2.id.to_s,
+        type: @sublevel2.type,
+        name: @sublevel2.name,
+        display_name: @sublevel2.name,
+        short_instructions: @sublevel2.short_instructions,
+        id: @sublevel2.id.to_s,
+        description: @sublevel2.bubble_choice_description,
         thumbnail_url: nil,
         position: 2,
         letter: 'b',
@@ -345,18 +344,14 @@ DSL
   test 'get_sublevel_for_progress returns level contained within the sublevel with highest best_result for user when there is no teacher feedback' do
     student = create :student
 
-    sublevel1 = create :level, name: 'choice_1', display_name: 'Choice 1!', thumbnail_url: 'some-fake.url/kittens.png', bubble_choice_description: 'Choose me!'
-    sublevel1_contained_level = create :level, name: 'Choice 1 contained'
-    sublevel1.contained_level_names = [sublevel1_contained_level.name]
-
-    sublevel2 = create :level, name: 'choice_2', short_instructions: 'A short instruction'
-    bubble_choice = create :bubble_choice_level, name: 'bubble_choices', display_name: 'Bubble Choices', description: 'Choose one or more!', sublevels: [sublevel1, sublevel2]
+    bubble_choice = create :bubble_choice_level, name: 'Bubble choice with contained', display_name: 'Bubble Choices', description: 'Choose one or more!', sublevels: [@sublevel_with_contained, @sublevel2]
     script_level = create :script_level, levels: [bubble_choice]
+    script = script_level.script
 
-    create :user_level, user: student, level: sublevel1_contained_level, script: script, best_result: 100
-    create :user_level, user: student, level: sublevel2, script: script, best_result: 50
+    create :user_level, user: student, level: @sublevel_contained_level, script: script, best_result: 100
+    create :user_level, user: student, level: @sublevel2, script: script, best_result: 50
 
-    assert_equal sublevel1_contained_level, bubble_choice.get_sublevel_for_progress(student, script_level.script)
+    assert_equal @sublevel_contained_level, bubble_choice.get_sublevel_for_progress(student, script)
   end
 
   test 'get_sublevel_for_progress returns sublevel where the latest feedback has keepWorking review state' do
@@ -512,9 +507,6 @@ DSL
   end
 
   test 'level_for_progress_for_sublevel returns the contained level if it has a contained level' do
-    sublevel = create :level
-    contained_level = create :level, name: 'sublevel contained level'
-    sublevel.contained_level_names = [contained_level.name]
-    assert_equal contained_level, BubbleChoice.level_for_progress_for_sublevel(sublevel)
+    assert_equal @sublevel_contained_level, BubbleChoice.level_for_progress_for_sublevel(@sublevel_with_contained)
   end
 end
