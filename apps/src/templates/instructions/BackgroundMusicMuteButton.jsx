@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
@@ -15,30 +15,48 @@ function BackgroundMusicMuteButton({
   signedIn,
   isMinecraft,
   isRtl,
-  isBackgroundMusicMuted,
+  currentUserBackgroundMusicMuted,
   setMuteMusic,
   muteBackgroundMusic,
   unmuteBackgroundMusic
 }) {
-  const updateMuteMusic = isBackgroundMusicMuted => {
-    signedIn ? new UserPreferences().setMuteMusic(isBackgroundMusicMuted) : {};
-    setMuteMusic(isBackgroundMusicMuted);
+  const initialMuteState = signedIn
+    ? currentUserBackgroundMusicMuted
+    : !!cookies.get(MUTE_MUSIC);
+
+  const [isBackgroundMusicMuted, setIsBackgroundMusicMuted] = useState(
+    initialMuteState
+  );
+
+  const updateMuteMusic = updatedMuteValue => {
+    signedIn ? new UserPreferences().setMuteMusic(updatedMuteValue) : {};
+    setMuteMusic(updatedMuteValue);
   };
 
   const handleMuteMusicTabClick = () => {
-    isBackgroundMusicMuted = !isBackgroundMusicMuted;
-    updateMuteMusic(isBackgroundMusicMuted);
+    const updatedMuteValue = !isBackgroundMusicMuted;
 
-    // Stop or start the music immediately
-    isBackgroundMusicMuted ? muteBackgroundMusic() : unmuteBackgroundMusic();
+    updateMuteMusic(updatedMuteValue);
+    setIsBackgroundMusicMuted(updatedMuteValue);
 
-    // Set or remove the cookie
-    isBackgroundMusicMuted
-      ? cookies.set(MUTE_MUSIC, 'true', {expires: 30, path: '/'})
-      : cookies.remove(MUTE_MUSIC, {path: '/'});
+    /*
+    Depending on the updated value:
+      Stop or start the background music immediately
+      Set or remove the mute cookie
+      Determine the firehose label
+    */
+    var muteLabel;
+    if (updatedMuteValue) {
+      muteBackgroundMusic();
+      cookies.set(MUTE_MUSIC, 'true', {expires: 30, path: '/'});
+      muteLabel = 'mute';
+    } else {
+      unmuteBackgroundMusic();
+      cookies.remove(MUTE_MUSIC, {path: '/'});
+      muteLabel = 'unmute';
+    }
 
     const labType = isMinecraft ? 'Minecraft' : 'Starwars';
-    const muteLabel = isBackgroundMusicMuted ? 'mute' : 'unmute';
 
     const record = {
       study: 'mute-music',
@@ -83,7 +101,7 @@ BackgroundMusicMuteButton.propTypes = {
 
   // from redux
   setMuteMusic: PropTypes.func.isRequired,
-  isBackgroundMusicMuted: PropTypes.bool.isRequired,
+  currentUserBackgroundMusicMuted: PropTypes.bool.isRequired,
   muteBackgroundMusic: PropTypes.func.isRequired,
   unmuteBackgroundMusic: PropTypes.func.isRequired
 };
@@ -103,7 +121,7 @@ export const UnconnectedBackgroundMusicMuteButton = BackgroundMusicMuteButton;
 
 export default connect(
   state => ({
-    isBackgroundMusicMuted: state.currentUser.isBackgroundMusicMuted,
+    currentUserBackgroundMusicMuted: state.currentUser.isBackgroundMusicMuted,
     signedIn: state.currentUser.signInState === SignInState.SignedIn,
     muteBackgroundMusic: state.instructions.muteBackgroundMusic,
     unmuteBackgroundMusic: state.instructions.unmuteBackgroundMusic
