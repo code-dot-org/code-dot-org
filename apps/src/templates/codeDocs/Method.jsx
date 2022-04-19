@@ -40,13 +40,18 @@ export function MethodOverloads({overloads, programmingEnvironmentName}) {
   const icon = isOpen ? 'caret-down' : 'caret-up';
   return (
     <div>
-      <div style={styles.overloadHeader} onClick={() => setIsOpen(!isOpen)}>
-        <FontAwesome icon={icon} /> Overloads
+      <div
+        className="unittest-overloads-header"
+        style={isOpen ? styles.openOverloadHeader : styles.closedOverloadHeader}
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <FontAwesome icon={icon} /> {i18n.overloads()}
       </div>
       {isOpen && (
         <div style={styles.overloadBox}>
           {overloads.map(overload => (
             <StandaloneMethod
+              key={overload.key}
               method={overload}
               programmingEnvironmentName={programmingEnvironmentName}
             />
@@ -78,7 +83,7 @@ const methodShape = PropTypes.shape({
   content: PropTypes.string,
   parameters: PropTypes.arrayOf(PropTypes.object),
   examples: PropTypes.arrayOf(PropTypes.object),
-  overloads: PropTypes.arrayOf(methodShape)
+  overloads: PropTypes.arrayOf(PropTypes.object)
 });
 
 StandaloneMethod.propTypes = {
@@ -105,9 +110,9 @@ const styles = {
     padding: 5,
     marginBottom: 10
   },
-  overloadHeader: {
+  openOverloadHeader: {
     backgroundColor: color.lightest_gray,
-    borderStyle: 'solid',
+    borderStyle: 'solid solid hidden solid',
     borderColor: color.lighter_gray,
     borderWidth: 1,
     borderRadius: '5px 5px 0px 0px',
@@ -115,8 +120,18 @@ const styles = {
     marginTop: 15,
     fontSize: 20
   },
+  closedOverloadHeader: {
+    backgroundColor: color.lightest_gray,
+    borderStyle: 'solid',
+    borderColor: color.lighter_gray,
+    borderWidth: 1,
+    borderRadius: '5px',
+    padding: 5,
+    marginTop: 15,
+    fontSize: 20
+  },
   overloadBox: {
-    borderStyle: 'hidden solid solid solid',
+    borderStyle: 'solid',
     borderColor: color.lighter_gray,
     borderWidth: 1,
     borderRadius: '0px 0px 5px 5px',

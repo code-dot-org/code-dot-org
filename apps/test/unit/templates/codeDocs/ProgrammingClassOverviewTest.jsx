@@ -29,6 +29,16 @@ describe('ProgrammingClassOverview', () => {
           name: 'Example 1',
           description: 'the first example'
         }
+      ],
+      methods: [
+        {
+          key: 'method1',
+          name: 'method1()'
+        },
+        {
+          key: 'method2',
+          name: 'method2()'
+        }
       ]
     };
   });
@@ -44,7 +54,8 @@ describe('ProgrammingClassOverview', () => {
       'Syntax',
       'Tips',
       'Additional Information',
-      'Fields'
+      'Fields',
+      'Methods'
     ]);
 
     expect(
@@ -73,6 +84,8 @@ describe('ProgrammingClassOverview', () => {
     ).to.contain(defaultProgrammingClass.externalDocumentation);
 
     expect(wrapper.text()).to.contain(defaultProgrammingClass.category);
+
+    expect(wrapper.find('Method').length).to.equal(2);
   });
 
   it('hides the examples header if no syntax is provided', () => {
@@ -120,6 +133,15 @@ describe('ProgrammingClassOverview', () => {
     expect(wrapper.find('h2').map(h => h.text())).to.not.include(
       'Additional Information'
     );
+  });
+
+  it('hides the methods headers if no fields are provided', () => {
+    defaultProgrammingClass.methods = [];
+    const wrapper = shallow(
+      <ProgrammingClassOverview programmingClass={defaultProgrammingClass} />
+    );
+    expect(wrapper.find('h2').length).to.be.greaterThan(0);
+    expect(wrapper.find('h2').map(h => h.text())).to.not.include('Methods');
   });
 
   it('uses color if color is provided', () => {
