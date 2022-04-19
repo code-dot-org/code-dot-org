@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-15 00:33:43 UTC",
+    "serialized_at": "2022-04-18 19:05:09 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -74,6 +74,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "csp_project",
+        "script.name": "csp5-2022"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 5,
+      "properties": {
+        "display_name": "Post-Course Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csp5-2022"
       }
     }
@@ -441,6 +453,21 @@
       "seeding_key": {
         "lesson.key": "Assessment Day",
         "lesson_group.key": "csp_project",
+        "script.name": "csp5-2022"
+      }
+    },
+    {
+      "key": "CS Principles Post-Course Survey",
+      "name": "CS Principles Post-Course Survey",
+      "absolute_position": 19,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 19,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csp5-2022"
       }
     }
@@ -1451,6 +1478,18 @@
         "lesson_activity.key": "03e87da6-ea51-4cea-ba78-6e4c44621e7b",
         "lesson.key": "Assessment Day",
         "lesson_group.key": "csp_project",
+        "script.name": "csp5-2022"
+      }
+    },
+    {
+      "key": "dd359ca7-0849-478a-9034-641423a96af0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dd359ca7-0849-478a-9034-641423a96af0",
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csp5-2022"
       }
     }
@@ -3834,6 +3873,23 @@
         "activity_section.key": "83eb3009-8091-4a7f-9ee6-afb34f7ccd72",
         "lesson_activity.key": "03e87da6-ea51-4cea-ba78-6e4c44621e7b"
       }
+    },
+    {
+      "key": "c90314d9-82c8-4124-8a1b-2d116a23fe82",
+      "position": 1,
+      "properties": {
+        "progression_name": "Post-Course Survey Instructions",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This level appears at the end of every unit. **Please have your students complete this survey at the end of their final unit!** Students only need to take the survey once at the end of the course.\n\n* The results are vital for us (code.org) to sustain our courses and make improvements.\n* There will be a teacher survey as well where you can provide your own input. You will be notified via email about the teacher survey.\n\n**Instructions for Unlocking the Survey for Students:** [[google doc](https://docs.google.com/document/d/1oo-G0h7EKL9kkZvk48PKkSoRMIVCCN1CB57BN5Km-aQ/view)] [[pdf](https://docs.google.com/document/d/1oo-G0h7EKL9kkZvk48PKkSoRMIVCCN1CB57BN5Km-aQ/export?format=pdf)]\n\nIf students click the link and see an error message about the survey being locked, please follow the steps in the instructions above to unlock the survey for students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c90314d9-82c8-4124-8a1b-2d116a23fe82",
+        "lesson_activity.key": "dd359ca7-0849-478a-9034-641423a96af0"
+      }
     }
   ],
   "script_levels": [
@@ -4693,6 +4749,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L7 While Loop Choice"
+        ],
         "progression": "Putting It Together"
       },
       "bonus": false,
@@ -5315,6 +5374,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L11 Traversals App Practice Choice"
+        ],
         "progression": "App Practice"
       },
       "bonus": false,
@@ -5512,6 +5574,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csp5-2022"
+        ],
         "progression": "End-of-Unit Survey"
       },
       "bonus": false,
@@ -5551,6 +5616,31 @@
       },
       "level_keys": [
         "CSP Unit 5 AP-Style Assessment 2022"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey_csp5-2022"
+        ],
+        "progression": "Post-Course Survey Instructions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey_csp5-2022"
+        ],
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csp5-2022",
+        "activity_section.key": "c90314d9-82c8-4124-8a1b-2d116a23fe82"
+      },
+      "level_keys": [
+        "csp-post-survey-2021-markdown-with-link-to-survey_csp5-2022"
       ]
     }
   ],
@@ -6382,6 +6472,18 @@
         "script.name": "csp5-2022",
         "activity_section.key": "66e616f3-361e-4a0b-95b7-1262f3ac7c6a"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-post-survey-2021-markdown-with-link-to-survey_csp5-2022",
+        "script_level.level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey_csp5-2022"
+        ],
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csp5-2022",
+        "activity_section.key": "c90314d9-82c8-4124-8a1b-2d116a23fe82"
+      }
     }
   ],
   "resources": [
@@ -6511,10 +6613,11 @@
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
-      "url": "https://docs.google.com/presentation/d/1DABkbjVXjTM7FkPeNN1PavV3BWKsOWFyNksWW4UDdQk/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1va0YG_3b8nc4Uu1hV8L7xkZldDy7WYl19qywGSI-RHc/view",
       "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1va0YG_3b8nc4Uu1hV8L7xkZldDy7WYl19qywGSI-RHc/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {

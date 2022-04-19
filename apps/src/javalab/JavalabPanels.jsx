@@ -106,7 +106,8 @@ class JavalabPanels extends React.Component {
 
     const consoleDesiredHeight = this.props.editorColumnHeight - desiredHeight;
 
-    const consoleHeightMin = 200;
+    // Minimum height fits 3 lines of text
+    const consoleHeightMin = 140;
     const consoleHeightMax = window.innerHeight - 200;
 
     let newHeight = Math.max(
