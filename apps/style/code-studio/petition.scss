@@ -1,0 +1,114 @@
+@import 'font';
+
+.petition-block {
+  width: 970px;
+  display: flex;
+  flex-flow: column wrap;
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+}
+
+.petition-message {
+  margin: 0;
+  font-size: 21px;
+  line-height: 28px;
+  font-family: $gotham-bold;
+  color: #5B6770;
+}
+
+.petition-sign-message {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400;
+  margin: 10px 0 20px 0;
+  font-family: $gotham-regular;
+  color: #5B6770;
+}
+
+.petition-form {
+  font-size: 12px;
+  line-height: 18px;
+  color: #dcdcdc;
+  text-align: left;
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1 100%;
+  justify-content: space-around;
+}
+
+input.field, select.field {
+  background-color: #e2e4e3;
+  color: #595959;
+  padding: 5px;
+  border-width: 1px;
+}
+
+input.grey_input {
+  width: 150px;
+}
+
+span.grey_input {
+  width: 160px;
+}
+
+select.dropdown {
+  width: 93px;
+}
+
+span.dropdown {
+  width: 130px;
+}
+
+.dropdown-label {
+  margin: 0 4px 0 0;
+  color: #5B6770;
+  width: 100px;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.petition-button {
+  min-width: 100px;
+  margin: 0;
+  padding: 4px 12px;
+  height: 30px;
+  font-family: $gotham-bold;
+}
+
+.help, .help a, .help a:hover {
+  font-size: 12px;
+  line-height: 18px;
+  margin: 10px 0 0 0;
+  text-decoration: none;
+  color: #5B6770;
+}
+
+// Mobile and anything less than 970px
+@media screen and (max-width: 969px) {
+  .petition-block {
+    width: auto;
+  }
+
+  .petition-sign-message {
+    margin-bottom: 10px;
+  }
+
+  .petition-form {
+    flex-flow: column wrap;
+    align-items: center;
+  }
+
+  .help, .help a {
+    margin: 0;
+  }
+
+  .petition-button {
+    margin: 10px 0 0 0;
+  }
+
+  .form-group {
+    margin: 10px 0 0 0;
+    width: 160px;
+  }
+}

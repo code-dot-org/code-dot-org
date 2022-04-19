@@ -3,7 +3,7 @@
   "name": "sprite.nextFrame()",
   "category": "Sprites",
   "category_key": "sprites",
-  "content": "Move to the next frame for the animation for a sprite.\r\n\r\nWhen the last frame is displayed and nextFrame() is executed the first frame is disaplyed.\r\n\r\nUse the Animation tab to load multiple images which make up the frames for a labeled animation for your sprite. By default all frames are displayed one after another in round robin fashion. The speed is set by the slider in the Animation tab. Use `play()` to restart the animation. Use `pause()` to stop the animation.",
+  "content": "Move to the next frame for the animation for a sprite.\n\nWhen the last frame is displayed and nextFrame() is executed the first frame is disaplyed.\n\nUse the Animation tab to load multiple images which make up the frames for a labeled animation for your sprite. By default all frames are displayed one after another in round robin fashion. The speed is set by the slider in the Animation tab. Use [`play()`(#f78183)](/docs/gamelab/play/) to restart the animation. Use [`pause`(#f78183)](/docs/gamelab/pause/) to stop the animation.",
   "examples": [
     {
       "name": "Emoji Eyes",

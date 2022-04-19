@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-18 06:36:42 UTC",
+    "serialized_at": "2022-04-19 04:48:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -102,7 +102,7 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "**Overview:**\nDuring this session, participants will make a plan for implementing CS Discoveries with their students. Participants will consider topics such as which units they will teach and when, how they will assess student learning, routines they will establish at the start of the school year, and the steps they will take to promote a culture of inclusion. Collaboration and sharing of ideas are encouraged in this session. \n\n**Participants will:**\n\n* Make a plan for implementing the CS Discoveries curriculum with your students. \n\n**Suggested time:** 60 minutes",
+        "overview": "**Overview:**\nDuring this session, participants will make a plan for implementing CS Discoveries with their students. Participants will consider topics such as which units they will teach and when, how they will assess student learning, routines they will establish at the start of the school year, and the steps they will take to promote a culture of inclusion. Collaboration and sharing of ideas are encouraged in this session. \n\n**Participants will:**\n\n* Make a plan for implementing the CS Discoveries curriculum with their students. \n\n**Suggested time:** 60 minutes",
         "student_overview": "**You will:**\n\n* Make a plan for implementing the CS Discoveries curriculum with your students. "
       },
       "seeding_key": {

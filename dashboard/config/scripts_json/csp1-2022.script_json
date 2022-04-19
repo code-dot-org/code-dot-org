@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-14 20:45:58 UTC",
+    "serialized_at": "2022-04-18 19:02:09 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5213,6 +5213,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csp1-2022"
+        ],
         "progression": "End-Of-Unit Survey"
       },
       "bonus": false,
@@ -5945,10 +5948,11 @@
     },
     {
       "name": "CSP Unit 1 - Digital Information",
-      "url": "https://docs.google.com/presentation/d/1GvzemSaA6WDc1MRkZdLHv6RkmEl3wLEjncW1Gd56F5I/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1KdaxPPMv81LJTvdwQaUnaGBe3-an0HdtpmcpKX5LRY8/view",
       "key": "csp_unit_1_-_digital_information",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1KdaxPPMv81LJTvdwQaUnaGBe3-an0HdtpmcpKX5LRY8/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {

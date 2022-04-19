@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-15 23:34:03 UTC",
+    "serialized_at": "2022-04-18 19:03:51 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3164,6 +3164,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Event-Driven setScreen2022"
+        ],
         "progression": "Code Investigation"
       },
       "bonus": false,
@@ -4123,10 +4126,11 @@
     },
     {
       "name": "CSP Unit 3 - Intro to App Design",
-      "url": "https://docs.google.com/presentation/d/1lAs01DpAfG_i-BG641zLahDQ_P3RrsJWnkdpwwmTTFA/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1A9JhTTjQ4IGsCgO_uStJ1l3EMd9pHJsmMbSMSBjJzMQ/view",
       "key": "csp_unit_3_-_intro_to_app_design",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1A9JhTTjQ4IGsCgO_uStJ1l3EMd9pHJsmMbSMSBjJzMQ/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {

@@ -4,6 +4,22 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "Curriculum Videos",
+          "details": "Some lessons currently do not have links to videos in the lesson plans or slide deck. These videos are in final production and will be linked as soon as these are available.",
+          "link": "",
+          "type": "information",
+          "visibility": "Teacher-only"
+        },
+        {
+          "notice": "More Opportunities for Feedback",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
+          "link": "",
+          "type": "feedback",
+          "visibility": "Teacher-only"
+        }
+      ],
       "curriculum_umbrella": "CSA",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -15,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-15 19:05:25 UTC",
+    "serialized_at": "2022-04-18 22:50:45 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -231,6 +247,7 @@
       "relative_position": 10,
       "properties": {
         "overview": "**How does the scope of a variable impact its accessibility and use?**\n\nStudents explore the scope of variables in a program and discover that the local variable is used when it has the same name as an instance variable. Students learn to use the `this` keyword to refer to the current object in constructors and methods.",
+        "preparation": "* Print copies of the Unit 2 Study Guide (one for each student)",
         "student_overview": "**How does the scope of a variable impact its accessibility and use?**\n\nYou learned about local variables that are used by a constructor or a method. In this lesson, you explore the scope of variables in a program and discover that the local variable is used when it has the same name as an instance variable. You learn to use the `this` keyword to refer to the current object in constructors and methods."
       },
       "seeding_key": {
@@ -2985,7 +3002,7 @@
       "key": "e0d9f41e-f5fb-4875-8b9e-66f5874dcf01",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know week.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Store Management Project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 2 Study Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know week.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Store Management Project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "e0d9f41e-f5fb-4875-8b9e-66f5874dcf01",
@@ -3473,6 +3490,18 @@
       },
       "seeding_key": {
         "activity_section.key": "325d4625-04ef-4902-aa9c-de1f2b9a99f0",
+        "lesson_activity.key": "8314183c-3166-4b2c-bc7a-243bf0e2d810"
+      }
+    },
+    {
+      "key": "4108419f-5861-48f9-9310-316ba196291d",
+      "position": 4,
+      "properties": {
+        "name": "Survey",
+        "progression_name": "Unit 2 Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "4108419f-5861-48f9-9310-316ba196291d",
         "lesson_activity.key": "8314183c-3166-4b2c-bc7a-243bf0e2d810"
       }
     },
@@ -4895,6 +4924,28 @@
     },
     {
       "chapter": 50,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Unit 2 Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csa2-2022"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-2022",
+        "activity_section.key": "4108419f-5861-48f9-9310-316ba196291d"
+      },
+      "level_keys": [
+        "Student End of Unit Survey_csa2-2022"
+      ]
+    },
+    {
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4919,7 +4970,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4943,7 +4994,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4968,7 +5019,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5584,6 +5635,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "Student End of Unit Survey_csa2-2022",
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csa2-2022"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa2-2022",
+        "activity_section.key": "4108419f-5861-48f9-9310-316ba196291d"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA Unit 2 Assessment 2022",
         "script_level.level_keys": [
           "CSA Unit 2 Assessment 2022"
@@ -6098,6 +6161,18 @@
       }
     },
     {
+      "name": "Unit 2 Study Guide",
+      "url": "https://docs.google.com/document/d/1U_rftbSaeWgCtk16mD4ckrQKcQVU4yRlFgFe_OyN18c/edit?usp=sharing",
+      "key": "unit_2_study_guide",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_2_study_guide"
+      }
+    },
+    {
       "name": "Unlocking Assessments",
       "url": "https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys",
       "key": "unlocking_assessments",
@@ -6259,6 +6334,12 @@
       "seeding_key": {
         "lesson.key": "lesson-15",
         "resource.key": "unit_2_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "unit_2_study_guide"
       }
     },
     {
@@ -6433,7 +6514,19 @@
     },
     {
       "seeding_key": {
+        "resource.key": "unit_2_guide",
+        "script.name": "csa2-2022"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "unit_2_overview",
+        "script.name": "csa2-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_2_study_guide",
         "script.name": "csa2-2022"
       }
     }
