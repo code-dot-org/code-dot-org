@@ -3,7 +3,7 @@
   "name": "sprite.setVelocity()",
   "category": "Sprites",
   "category_key": "sprites",
-  "content": "Sets the sprite velocity in both the x and y direction.\r\n\r\nA positive x parameter will move the sprite to the right, a positive y parameter will move the sprite downward. Must be used with the `draw()` function containing a `drawSprites()`. You can also update the velocity of a sprite using `setSpeedAndDirection()` or by updating the sprite properties `velocityX` and `velocityY`. \r\n\r\nThe default velocity is 0 in both x and y directions.",
+  "content": "Sets the sprite velocity in both the x and y direction.\n\nA positive x parameter will move the sprite to the right, a positive y parameter will move the sprite downward. Must be used with the [`draw()`(#fff176)](/docs/gamelab/draw/) function containing a [`drawSprites()`(#fff176)](/docs/gamelab/drawSprites/). You can also update the velocity of a sprite using `setSpeedAndDirection()` or by updating the sprite properties [`sprite.velocityX`(#f78183)](/docs/gamelab/velocityX/) and [`sprite.velocityY`(#f78183)](/docs/gamelab/velocityY/). \n\nThe default velocity is 0 in both x and y directions.",
   "examples": [
     {
       "name": "",
