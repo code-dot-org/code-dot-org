@@ -26,7 +26,7 @@ import currentUser, {
   setCurrentUserHasSeenStandardsReportInfo
 } from '@cdo/apps/templates/currentUserRedux';
 import {
-  setCourseVersionsWithProgress,
+  setCoursesWithProgress,
   setScriptId
 } from '../../../../redux/unitSelectionRedux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
@@ -39,7 +39,7 @@ const {
   validCourseOfferings,
   localeCode,
   hasSeenStandardsReportInfo,
-  courseVersionsWithProgress
+  coursesWithProgress
 } = scriptData;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
@@ -80,7 +80,7 @@ $(document).ready(function() {
     store.dispatch(setScriptId(defaultScriptId));
   }
 
-  store.dispatch(setCourseVersionsWithProgress(courseVersionsWithProgress));
+  store.dispatch(setCoursesWithProgress(coursesWithProgress));
 
   ReactDOM.render(
     <Provider store={store}>
@@ -94,7 +94,7 @@ $(document).ready(function() {
               sectionId={section.id}
               sectionName={section.name}
               studentCount={section.students.length}
-              courseVersionsWithProgress={courseVersionsWithProgress}
+              coursesWithProgress={coursesWithProgress}
             />
           )}
         />

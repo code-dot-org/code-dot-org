@@ -26,7 +26,7 @@ class TeacherDashboard extends Component {
     sectionId: PropTypes.number.isRequired,
     sectionName: PropTypes.string.isRequired,
     studentCount: PropTypes.number.isRequired,
-    courseVersionsWithProgress: PropTypes.objectOf(assignmentCourseVersionShape)
+    coursesWithProgress: PropTypes.objectOf(assignmentCourseVersionShape)
       .isRequired,
 
     // Provided by React router in parent.
@@ -61,7 +61,7 @@ class TeacherDashboard extends Component {
       sectionId,
       sectionName,
       studentCount,
-      courseVersionsWithProgress
+      coursesWithProgress
     } = this.props;
 
     // Select a default tab if current path doesn't match one of the paths in our TeacherDashboardPath type.
@@ -126,7 +126,7 @@ class TeacherDashboard extends Component {
             path={TeacherDashboardPath.stats}
             component={props => <StatsTableWithData />}
           />
-          {Object.keys(courseVersionsWithProgress).length === 0 && (
+          {Object.keys(coursesWithProgress).length === 0 && (
             <Route
               component={() => (
                 <div style={styles.text}>

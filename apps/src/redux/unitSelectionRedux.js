@@ -8,9 +8,9 @@ export const SET_COURSE_VERSIONS = 'unitSelection/SET_COURSE_VERSIONS';
 
 // Action creators
 export const setScriptId = scriptId => ({type: SET_SCRIPT, scriptId});
-export const setCourseVersionsWithProgress = courseVersionsWithProgress => ({
+export const setCoursesWithProgress = coursesWithProgress => ({
   type: SET_COURSE_VERSIONS,
-  courseVersionsWithProgress
+  coursesWithProgress
 });
 
 // Selectors
@@ -20,9 +20,7 @@ const getSelectedUnit = state => {
     return null;
   }
 
-  const versions = Object.values(
-    state.unitSelection.courseVersionsWithProgress
-  );
+  const versions = Object.values(state.unitSelection.coursesWithProgress);
   let script;
   versions.forEach(version => {
     script = Object.values(version.units).find(unit => scriptId === unit.id);
@@ -47,14 +45,12 @@ export const getSelectedScriptDescription = state => {
 // Initial state of unitSelectionRedux
 const initialState = {
   scriptId: null,
-  courseVersionsWithProgress: {}
+  coursesWithProgress: {}
 };
 
 export default function unitSelection(state = initialState, action) {
   if (action.type === SET_COURSE_VERSIONS) {
-    let firstCourseVersion = Object.values(
-      action.courseVersionsWithProgress
-    )[0];
+    let firstCourseVersion = Object.values(action.coursesWithProgress)[0];
 
     const firstUnit = firstCourseVersion
       ? Object.keys(firstCourseVersion.units)[0]
@@ -62,7 +58,7 @@ export default function unitSelection(state = initialState, action) {
 
     return {
       ...state,
-      courseVersionsWithProgress: action.courseVersionsWithProgress,
+      coursesWithProgress: action.coursesWithProgress,
       scriptId: state.scriptId === null ? firstUnit : state.scriptId
     };
   }

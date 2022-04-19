@@ -407,7 +407,7 @@ export const courseOfferings = {
   }
 };
 
-export const fakeCourseVersionsWithProgress = {
+export const fakeCoursesWithProgress = {
   1: {
     id: 1,
     key: '2017',

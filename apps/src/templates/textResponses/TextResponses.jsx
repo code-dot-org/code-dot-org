@@ -28,7 +28,7 @@ const PADDING = 8;
 
 function TextResponses({
   sectionId,
-  courseVersionsWithProgress,
+  coursesWithProgress,
   scriptId,
   scriptName,
   setScriptId
@@ -102,7 +102,7 @@ function TextResponses({
       <div style={styles.unitSelection}>
         <div style={{...h3Style, ...styles.header}}>{i18n.selectACourse()}</div>
         <UnitSelector
-          courseVersionsWithProgress={courseVersionsWithProgress}
+          coursesWithProgress={coursesWithProgress}
           scriptId={scriptId}
           onChange={onChangeScript}
         />
@@ -144,7 +144,7 @@ function TextResponses({
 TextResponses.propTypes = {
   // Provided by redux.
   sectionId: PropTypes.number.isRequired,
-  courseVersionsWithProgress: PropTypes.objectOf(assignmentCourseVersionShape)
+  coursesWithProgress: PropTypes.objectOf(assignmentCourseVersionShape)
     .isRequired,
   scriptId: PropTypes.number,
   scriptName: PropTypes.string,
@@ -181,7 +181,7 @@ export const UnconnectedTextResponses = TextResponses;
 export default connect(
   state => ({
     sectionId: state.teacherSections.selectedSectionId,
-    courseVersionsWithProgress: state.unitSelection.courseVersionsWithProgress,
+    coursesWithProgress: state.unitSelection.coursesWithProgress,
     scriptId: state.unitSelection.scriptId,
     scriptName: getSelectedScriptName(state)
   }),

@@ -58,7 +58,7 @@ class SectionAssessments extends Component {
     // provided by redux
     sectionId: PropTypes.number.isRequired,
     isLoading: PropTypes.bool.isRequired,
-    courseVersionsWithProgress: PropTypes.objectOf(assignmentCourseVersionShape)
+    coursesWithProgress: PropTypes.objectOf(assignmentCourseVersionShape)
       .isRequired,
     assessmentList: PropTypes.array.isRequired,
     scriptId: PropTypes.number,
@@ -181,7 +181,7 @@ class SectionAssessments extends Component {
   render() {
     const {
       sectionName,
-      courseVersionsWithProgress,
+      coursesWithProgress,
       scriptId,
       assessmentList,
       assessmentId,
@@ -204,7 +204,7 @@ class SectionAssessments extends Component {
               {i18n.selectACourse()}
             </div>
             <UnitSelector
-              courseVersionsWithProgress={courseVersionsWithProgress}
+              coursesWithProgress={coursesWithProgress}
               scriptId={scriptId}
               onChange={this.onSelectScript}
             />
@@ -368,7 +368,7 @@ export default connect(
   state => ({
     sectionId: state.teacherSections.selectedSectionId,
     isLoading: !!state.sectionAssessments.isLoading,
-    courseVersionsWithProgress: state.unitSelection.courseVersionsWithProgress,
+    coursesWithProgress: state.unitSelection.coursesWithProgress,
     assessmentList: getCurrentScriptAssessmentList(state),
     scriptId: state.unitSelection.scriptId,
     assessmentId: state.sectionAssessments.assessmentId,
