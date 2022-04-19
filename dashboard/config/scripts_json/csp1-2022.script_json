@@ -17,8 +17,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-06 20:00:12 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-04-13 16:57:07 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -4155,6 +4155,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pre-survey-levelgroup_21_222022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4176,6 +4179,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Computer Science is Changing Everything2022"
+        ],
         "progression": "Computer Science is Changing Everything"
       },
       "bonus": false,
@@ -4198,6 +4204,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp_socialBelonging_control2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4220,6 +4229,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L3 CFU Sending Complex Messages2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4242,6 +4254,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U1L4 CYU32022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4264,6 +4279,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L5 CFU how many bits2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4286,6 +4304,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L5 CFU adding bits2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4308,6 +4329,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L5 CFU bin dec similarities2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4330,6 +4354,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Widget: Binary Odometer2022"
+        ],
         "progression": "Widget: Binary Odometer"
       },
       "bonus": false,
@@ -4352,6 +4379,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L6 CFU beyond odometer2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4374,6 +4404,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L6 CFU representing fractions2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4396,6 +4429,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L8 Reflection Multiple Representations CSP2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4418,6 +4454,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1 L9 Introduction to Pixelation2022"
+        ],
         "progression": "Video: Intro to Pixelation Encoding B&W"
       },
       "bonus": false,
@@ -4440,6 +4479,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation - Make the Letter A2022"
+        ],
         "progression": "Pixelation Widget: B&W"
       },
       "bonus": false,
@@ -4462,6 +4504,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget Fix bit offset2022"
+        ],
         "progression": "Pixelation Widget: B&W"
       },
       "bonus": false,
@@ -4484,6 +4529,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge a2022"
+        ],
         "progression": "Sampling an Analog Image"
       },
       "bonus": false,
@@ -4506,6 +4554,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge B2022"
+        ],
         "progression": "Sampling an Analog Image"
       },
       "bonus": false,
@@ -4528,6 +4579,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge C2022"
+        ],
         "progression": "Sampling an Analog Image"
       },
       "bonus": false,
@@ -4550,6 +4604,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L9 CFU pixel data2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4572,6 +4629,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L9 Multiple Choice Digital Analog2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4594,6 +4654,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L9 CFU Sampling2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4616,6 +4679,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 RGB2022"
+        ],
         "progression": "RGB Color"
       },
       "bonus": false,
@@ -4638,6 +4704,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 12022"
+        ],
         "progression": "Pixelation Widget: Color"
       },
       "bonus": false,
@@ -4660,6 +4729,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 More Shades of Color2022"
+        ],
         "progression": "More Shades of Color"
       },
       "bonus": false,
@@ -4682,6 +4754,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 22022"
+        ],
         "progression": "Pixelation Widget: Color"
       },
       "bonus": false,
@@ -4704,6 +4779,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 32022"
+        ],
         "progression": "Pixelation Widget: Color"
       },
       "bonus": false,
@@ -4726,6 +4804,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1 Sampling Widget2022"
+        ],
         "progression": "Color Sampling Widget"
       },
       "bonus": false,
@@ -4748,6 +4829,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 42022"
+        ],
         "progression": "Pixelation Widget: Color"
       },
       "bonus": false,
@@ -4770,6 +4854,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1 L8 Video: Binary and Data2022"
+        ],
         "progression": "How Computers Work: Binary and Data"
       },
       "bonus": false,
@@ -4792,6 +4879,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L10 Multiple Choice analog vs digital2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4814,6 +4904,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L10 CFU Sampling2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4836,6 +4929,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L11 Widget: Text Compression2022"
+        ],
         "progression": "Widget: Text Compression"
       },
       "bonus": false,
@@ -4858,6 +4954,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1 L11 Text Compression Widget Aloe Blacc2022"
+        ],
         "progression": "Video: Text Compression Widget with Aloe Blacc"
       },
       "bonus": false,
@@ -4880,6 +4979,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 Multiple Choice lossless compression2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4902,6 +5004,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 CFU Compression for Email2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4924,6 +5029,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1 Lossy Compression Widget v12022"
+        ],
         "progression": "Lossy Compression Widget"
       },
       "bonus": false,
@@ -4946,6 +5054,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1 Lossy Compression Widget v22022"
+        ],
         "progression": "Lossy Compression Widget"
       },
       "bonus": false,
@@ -4968,6 +5079,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 CPS CFU Cell Phone2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4990,6 +5104,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L12 CFU Creative Commons2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5011,6 +5128,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L12 CFU Copyright2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5032,6 +5152,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L13 CFU Digital Representation2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -5054,6 +5177,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L14 CSP CFU digital information2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -5076,6 +5202,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 1 AP-Style Assessment 2022"
+        ],
         "progression": "Unit 1 Exam"
       },
       "bonus": false,

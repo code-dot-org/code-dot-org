@@ -18,8 +18,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-01 21:16:27 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-04-13 20:08:47 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -2576,7 +2576,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "To assign questions to students on AP Classroom, once logged in navigate to the Question Bank. Search for the following question:\n\n*benefit of storing call session information*\n\n\n![](https://curriculum.code.org/media/uploads/Annotation-2020-09-04-105017.png)\n\nThen add this question to a quiz like so:\n\n![](https://curriculum.code.org/media/uploads/Annotation-2020-09-04-105009.png)\n\nOnce you have added one question, you'll see that you can easily import the other 4 practice questions into your quiz. \n\n![](https://curriculum.code.org/media/uploads/Annotation-2020-09-04-105024.png)\n\nClick where it says \"5 questions\"\n\n![](https://curriculum.code.org/media/uploads/Annotation-2020-09-04-105037.png)\n\nAnd choose to add all of the questions.\n\n![](https://curriculum.code.org/media/uploads/Annotation-2020-09-04-105031.png)\n\nFollowing this, you can assign the assessment to your students and they can practice the Reading Passage questions. \n"
+            "markdown": "To assign questions to students on [AP Classroom](https://apclassroom.collegeboard.org/103/home), once logged in navigate to the Question Bank. Search for the following question:\n\n*benefit of storing call session information*\n\n\n![](https://curriculum.code.org/media/uploads/Annotation-2020-09-04-105017.png)\n\nThen add this question to a quiz like so:\n\n![](https://curriculum.code.org/media/uploads/Annotation-2020-09-04-105009.png)\n\nOnce you have added one question, you'll see that you can easily import the other 4 practice questions into your quiz. \n\n![](https://curriculum.code.org/media/uploads/Annotation-2020-09-04-105024.png)\n\nClick where it says \"5 questions\"\n\n![](https://curriculum.code.org/media/uploads/Annotation-2020-09-04-105037.png)\n\nAnd choose to add all of the questions.\n\n![](https://curriculum.code.org/media/uploads/Annotation-2020-09-04-105031.png)\n\nFollowing this, you can assign the assessment to your students and they can practice the Reading Passage questions. \n"
           }
         ]
       },

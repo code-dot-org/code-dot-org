@@ -3,17 +3,15 @@ import unitSelection, {
   setScriptId,
   getSelectedScriptName,
   getSelectedScriptDescription,
-  setCourseVersionsWithProgress
+  setCoursesWithProgress
 } from '@cdo/apps/redux/unitSelectionRedux';
-import {fakeCourseVersionsWithProgress} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
+import {fakeCoursesWithProgress} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
 describe('unitSelectionRedux', () => {
   const initialState = unitSelection(undefined, {});
 
   it('if no scriptId then defaults to first unit of first course version', () => {
-    const action = setCourseVersionsWithProgress(
-      fakeCourseVersionsWithProgress
-    );
+    const action = setCoursesWithProgress(fakeCoursesWithProgress);
     const nextState = unitSelection(initialState, action);
     assert.deepEqual(nextState.scriptId, '1');
   });
@@ -23,7 +21,7 @@ describe('unitSelectionRedux', () => {
       const state = {
         unitSelection: {
           scriptId: 9,
-          courseVersionsWithProgress: fakeCourseVersionsWithProgress
+          coursesWithProgress: fakeCoursesWithProgress
         }
       };
       assert.equal(getSelectedScriptName(state), 'flappy');
@@ -33,7 +31,7 @@ describe('unitSelectionRedux', () => {
       const state = {
         unitSelection: {
           scriptId: null,
-          courseVersionsWithProgress: fakeCourseVersionsWithProgress
+          coursesWithProgress: fakeCoursesWithProgress
         }
       };
       assert.equal(getSelectedScriptName(state), null);
@@ -45,7 +43,7 @@ describe('unitSelectionRedux', () => {
       const state = {
         unitSelection: {
           scriptId: 9,
-          courseVersionsWithProgress: fakeCourseVersionsWithProgress
+          coursesWithProgress: fakeCoursesWithProgress
         }
       };
       assert.equal(getSelectedScriptDescription(state), 'Make a flappy game!');
@@ -55,7 +53,7 @@ describe('unitSelectionRedux', () => {
       const state = {
         unitSelection: {
           scriptId: null,
-          courseVersionsWithProgress: fakeCourseVersionsWithProgress
+          coursesWithProgress: fakeCoursesWithProgress
         }
       };
       assert.equal(getSelectedScriptDescription(state), null);
