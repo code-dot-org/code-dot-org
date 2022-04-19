@@ -4,12 +4,12 @@
 
 // Action type constants
 export const SET_SCRIPT = 'unitSelection/SET_SCRIPT';
-export const SET_COURSE_VERSIONS = 'unitSelection/SET_COURSE_VERSIONS';
+export const SET_COURSES = 'unitSelection/SET_COURSES';
 
 // Action creators
 export const setScriptId = scriptId => ({type: SET_SCRIPT, scriptId});
 export const setCoursesWithProgress = coursesWithProgress => ({
-  type: SET_COURSE_VERSIONS,
+  type: SET_COURSES,
   coursesWithProgress
 });
 
@@ -20,10 +20,10 @@ const getSelectedUnit = state => {
     return null;
   }
 
-  const versions = Object.values(state.unitSelection.coursesWithProgress);
+  const courses = Object.values(state.unitSelection.coursesWithProgress);
   let script;
-  versions.forEach(version => {
-    script = Object.values(version.units).find(unit => scriptId === unit.id);
+  courses.forEach(course => {
+    script = Object.values(course.units).find(unit => scriptId === unit.id);
   });
   return script;
 };
@@ -49,12 +49,10 @@ const initialState = {
 };
 
 export default function unitSelection(state = initialState, action) {
-  if (action.type === SET_COURSE_VERSIONS) {
-    let firstCourseVersion = Object.values(action.coursesWithProgress)[0];
+  if (action.type === SET_COURSES) {
+    let firstCourse = Object.values(action.coursesWithProgress)[0];
 
-    const firstUnit = firstCourseVersion
-      ? Object.keys(firstCourseVersion.units)[0]
-      : null;
+    const firstUnit = firstCourse ? Object.keys(firstCourse.units)[0] : null;
 
     return {
       ...state,
