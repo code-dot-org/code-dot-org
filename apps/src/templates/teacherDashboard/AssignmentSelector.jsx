@@ -39,6 +39,7 @@ export const getCourseOfferingsByCategory = (
 
   return courseOfferingsByCategories;
 };
+
 /**
  * This component displays a dropdown of courses/scripts, with each of these
  * grouped and ordered appropriately.
@@ -80,6 +81,7 @@ export default class AssignmentSelector extends Component {
       selectedCourseVersionId,
       selectedUnitId
     } = this.state;
+
     return {
       courseOfferingId: isValidAssignment(selectedCourseOfferingId)
         ? selectedCourseOfferingId
@@ -108,10 +110,13 @@ export default class AssignmentSelector extends Component {
       );
     } else {
       const courseOfferingId = Number(event.target.value);
+
       if (this.state.selectedCourseOfferingId !== courseOfferingId) {
         const courseVersions = this.props.courseOfferings[courseOfferingId]
           ?.course_versions;
+
         let courseVersionId;
+
         if (Object.keys(courseVersions).length === 1) {
           courseVersionId = Object.values(courseVersions)[0].id;
         } else {
@@ -119,12 +124,14 @@ export default class AssignmentSelector extends Component {
             versions => versions.is_recommended
           )?.id;
         }
+
         const units = courseVersionId
           ? Object.values(
               _.orderBy(courseVersions[courseVersionId].units, 'position')
             )
           : null;
         const firstUnitId = units?.length > 1 ? units[0].id : noAssignment;
+
         this.setState(
           {
             selectedCourseOfferingId: courseOfferingId,
@@ -151,6 +158,7 @@ export default class AssignmentSelector extends Component {
       );
     } else {
       const courseVersionId = Number(value);
+
       if (this.state.selectedCourseVersionId !== courseVersionId) {
         const units = Object.values(
           _.orderBy(
