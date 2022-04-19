@@ -5,6 +5,7 @@ import i18n from '@cdo/locale';
 import {sectionShape, assignmentCourseOfferingShape} from './shapes';
 import AssignmentVersionSelector from './AssignmentVersionSelector';
 import {CourseOfferingCategories} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+
 const noAssignment = '__noAssignment__';
 //Additional valid option in dropdown - no associated course
 const decideLater = '__decideLater__';
@@ -35,6 +36,7 @@ export const getCourseOfferingsByCategory = (
     orderedCourseOfferings,
     'category'
   );
+
   return courseOfferingsByCategories;
 };
 /**
@@ -51,9 +53,12 @@ export default class AssignmentSelector extends Component {
     disabled: PropTypes.bool,
     isNewSection: PropTypes.bool
   };
+
   constructor(props) {
     super(props);
+
     const {section} = props;
+
     const selectedCourseOfferingId = section?.courseOfferingId
       ? section.courseOfferingId
       : noAssignment;
@@ -61,12 +66,14 @@ export default class AssignmentSelector extends Component {
       ? section.courseVersionId
       : noAssignment;
     const selectedUnitId = section?.unitId ? section.unitId : noAssignment;
+
     this.state = {
       selectedCourseOfferingId,
       selectedCourseVersionId,
       selectedUnitId
     };
   }
+
   getSelectedAssignment() {
     const {
       selectedCourseOfferingId,
@@ -83,6 +90,7 @@ export default class AssignmentSelector extends Component {
       unitId: isValidAssignment(selectedUnitId) ? selectedUnitId : null
     };
   }
+
   onChangeCourseOffering = event => {
     if (
       (event.target.value === noAssignment &&
@@ -128,6 +136,7 @@ export default class AssignmentSelector extends Component {
       }
     }
   };
+
   onChangeCourseVersion = value => {
     if (
       value === noAssignment &&
@@ -161,6 +170,7 @@ export default class AssignmentSelector extends Component {
       }
     }
   };
+
   onChangeUnit = event => {
     if (
       event.target.value === noAssignment &&
@@ -184,6 +194,7 @@ export default class AssignmentSelector extends Component {
       }
     }
   };
+
   reportChange = () => {
     if (typeof this.props.onChange === 'function') {
       this.props.onChange(this.getSelectedAssignment());
@@ -206,7 +217,9 @@ export default class AssignmentSelector extends Component {
     const selectedCourseOffering = courseOfferings[selectedCourseOfferingId];
     const selectedCourseVersion =
       selectedCourseOffering?.course_versions[selectedCourseVersionId];
+
     const orderedUnits = _.orderBy(selectedCourseVersion?.units, 'position');
+
     /**
      * Filter down the list of all available categories to only the categories
      * where the user has course offerings that they can assign. For example
