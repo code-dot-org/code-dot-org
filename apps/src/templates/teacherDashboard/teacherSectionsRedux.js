@@ -355,7 +355,6 @@ export const finishEditingSection = () => (dispatch, getState) => {
           serverSection: result
         });
         resolve(result);
-        reload();
       })
       .fail((jqXhr, status) => {
         dispatch({type: EDIT_SECTION_FAILURE});
