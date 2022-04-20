@@ -31449,6 +31449,8 @@ en:
               display_name: Show What You Know
             lessonGroup-4:
               display_name: Sandboxes
+            lessonGroup-5:
+              display_name: Survey
           name: csa1-2022
           title: Object-Oriented Programming ('22-'23)
           description_audience: ''
@@ -33621,10 +33623,10 @@ en:
             lessonGroup-3:
               display_name: Show What You Know
             lessonGroup-4:
-              display_name: Pilot Survey
+              display_name: Sandboxes
             lessonGroup-5:
               display_name: Sandbox
-          title: Expanding Software Design
+          title: Method Decomposition and Recursion
           description: |-
             This unit allows students to practice software design and development using the skills they have learned throughout the curriculum while planning and developing a creative coding project to convey a personal interest or story using The Theater. Students use decomposition strategies and object-oriented principles to plan and implement their ideas while ensuring their projects meet specified requirements. In the process, students learn to write `private`, overloaded, and overridden methods and use the `super` keyword in a subclass method to call a superclass method while exploring the functionality of methods and their parameters. Throughout the unit, students practice tracing and writing recursive methods and comparing these methods to iterative solutions. With the knowledge and skills acquired throughout the year, students consider the need for maximizing system reliability as they explore bugs and issues in existing programs.
 
@@ -33772,10 +33774,10 @@ en:
             lessonGroup-3:
               display_name: Show What You Know
             lessonGroup-4:
-              display_name: Pilot Survey
+              display_name: Sandboxes
             lessonGroup-5:
-              display_name: Sandbox
-          title: Giving Objects Life
+              display_name: Survey
+          title: Searching and Sorting
           description: |-
             This unit expands on algorithms students have learned to introduce common approaches to searching and sorting 1D and 2D arrays and `ArrayList`s. In the process, students analyze and compare the efficiencies of these algorithms using statement execution counts and further develop problem-solving skills to decompose complex problems. Throughout the unit, students apply their programming and software engineering skills to plan and develop a creative coding project using the console that incorporates object-oriented design, data structures, and algorithmic thinking. With the knowledge and skills acquired throughout the year, students consider the privacy and security of programs and users.
 
@@ -34855,13 +34857,19 @@ en:
             lesson-2:
               name: Code Your Fable
             lesson-3:
-              name: Share Your Fable
+              name: Code Your Fable
               description_student: 
               description_teacher: 
             Hello World CSC:
               name: Hello World CSC
               description_student: In this lesson, you will learn to create and animate sprites and make them interactive using events.
               description_teacher: 'In this **skill-building** lesson, students will learn to create and animate sprites and make them interactive using events. '
+            lesson-4:
+              name: "[Optional] Introduction to Fables"
+            lesson-5:
+              name: Plan Your Fable
+            lesson-6:
+              name: Share Your Fable
           lesson_groups: {}
           name: csc-pilot-2022-fables
           title: ''
@@ -36157,6 +36165,12 @@ en:
         testtess2:
           lessons: {}
           lesson_groups: {}
+          name: testtess2
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         csp-post-survey-2022:
           lessons:
             Course Survey:
