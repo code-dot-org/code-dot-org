@@ -160,6 +160,10 @@ Then /^I should see the professional learning section table$/ do
   steps 'Then I see ".uitest-owned-pl-sections"'
 end
 
+Then /^I should see the professional learning joined sections table$/ do
+  steps 'Then I see ".ui-test-joined-pl-sections-table"'
+end
+
 Then /^the student section table should have (\d+) rows?$/ do |expected_row_count|
   wait_short_until {steps 'Then I should see the student section table'}
   row_count = @browser.execute_script(<<-SCRIPT)
@@ -172,6 +176,14 @@ Then /^the professional learning section table should have (\d+) rows?$/ do |exp
   wait_short_until {steps 'Then I should see the professional learning section table'}
   row_count = @browser.execute_script(<<-SCRIPT)
     return document.querySelectorAll('.uitest-owned-pl-sections tbody tr').length;
+  SCRIPT
+  expect(row_count.to_i).to eq(expected_row_count.to_i)
+end
+
+Then /^the professional learning joined sections table should have (\d+) rows?$/ do |expected_row_count|
+  wait_short_until {steps 'Then I should see the professional learning joined sections table'}
+  row_count = @browser.execute_script(<<-SCRIPT)
+    return document.querySelectorAll('.ui-test-joined-pl-sections-table tbody tr').length;
   SCRIPT
   expect(row_count.to_i).to eq(expected_row_count.to_i)
 end

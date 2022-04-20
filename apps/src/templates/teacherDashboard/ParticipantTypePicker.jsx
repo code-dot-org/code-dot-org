@@ -42,7 +42,7 @@ export default class ParticipantTypePicker extends Component {
     const {title, setParticipantType, handleCancel} = this.props;
 
     return (
-      <div style={style.container}>
+      <div style={style.container} className="uitest-participant-type-picker">
         <Heading1>{title}</Heading1>
         <Heading2>{i18n.professionalLearningParticipantQuestion()}</Heading2>
         <div style={style.scroll}>
