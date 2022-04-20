@@ -19,6 +19,21 @@ import {
 
 const serverSections = taughtSections.map(serverSectionFromSection);
 
+const serverCourses = [
+  {
+    title: 'Play Lab',
+    link: 's/playlab',
+    description: 'HOC for playlab',
+    name: 'playlab'
+  },
+  {
+    title: 'CSP Unit 2 - Digital Information',
+    link: 's/csp2-2020',
+    description: 'Learning about digital info',
+    name: 'csp2-2020'
+  }
+];
+
 export default storybook => {
   return storybook
     .storiesOf('Homepages/Teachers/TeacherHomepage', module)
@@ -51,7 +66,7 @@ export default storybook => {
         description:
           'Teacher Homepage - teacher has course progress, but does not have sections',
         story: () => {
-          withFakeServer();
+          withFakeServer({courses: serverCourses});
           registerReducers({teacherSections});
           const store = createStoreWithReducers();
           return (
@@ -74,7 +89,7 @@ export default storybook => {
         description:
           'Teacher Homepage - teacher does not have course progress, but does have sections',
         story: () => {
-          withFakeServer({sections: serverSections});
+          withFakeServer({courses: serverCourses, sections: serverSections});
           registerReducers({teacherSections});
           const store = createStoreWithReducers();
           return (
@@ -96,7 +111,7 @@ export default storybook => {
         description:
           'Teacher Homepage - teacher does have course progress, and does have sections',
         story: () => {
-          withFakeServer({sections: serverSections});
+          withFakeServer({courses: serverCourses, sections: serverSections});
           registerReducers({teacherSections});
           const store = createStoreWithReducers();
           return (
@@ -119,7 +134,7 @@ export default storybook => {
         description:
           'Teacher Homepage - teacher does have course progress, and does have sections they own and sections in which they are a student',
         story: () => {
-          withFakeServer({sections: serverSections});
+          withFakeServer({courses: serverCourses, sections: serverSections});
           registerReducers({teacherSections});
           const store = createStoreWithReducers();
           return (
@@ -142,7 +157,7 @@ export default storybook => {
         description:
           'Teacher Homepage - teacher does have course progress in both student and pl courses, and does have sections they own and sections in which they are a student',
         story: () => {
-          withFakeServer({sections: serverSections});
+          withFakeServer({courses: serverCourses, sections: serverSections});
           registerReducers({teacherSections});
           const store = createStoreWithReducers();
           return (
