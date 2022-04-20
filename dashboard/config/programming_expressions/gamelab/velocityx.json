@@ -3,7 +3,7 @@
   "name": "sprite.velocityX",
   "category": "Sprites",
   "category_key": "sprites",
-  "content": "Velocity in the positive x direction of the sprite in pixels per frame.\r\n\r\nA positive value will move the sprite to the right, a negative value will move to the left. Must be used with the `draw()` function containing a `drawSprites()`.\r\n\r\nThe default velocityX is 0. All sprite properties can be both accessed and updated.",
+  "content": "Velocity in the positive x direction of the sprite in pixels per frame.\n\nA positive value will move the sprite to the right, a negative value will move to the left. Must be used with the [`draw() {}`(#fff176)](/docs/gamelab/draw/) function containing a [`drawSprites()`(#fff176)](/docs/gamelab/drawSprites/).\n\nThe default velocityX is 0. All sprite properties can be both accessed and updated.",
   "examples": [
     {
       "name": "Vibration",
@@ -27,5 +27,5 @@
   "return_value": "Velocity in the positive x direction.",
   "short_description": "Velocity in the positive x direction of the sprite in pixels per frame.",
   "syntax": "sprite.velocityX",
-  "tips": "- velocityX can be used similarly to using the \"counter pattern\" on `sprite.x` within the `draw()` function.\r\n- Changing `World.frameRate` will affect the velocityX.\r\n- Sprites all have the same properties and you use the dot notation (combining the name of the sprite, followed by a dot, with the label of the property) to both access and update the property for that sprite.\r\n- Any changes to the properties of a sprite will not be seen until after `drawSprites()` is called."
+  "tips": "- velocityX can be used similarly to using the \"counter pattern\" on [`sprite.x`(#f78183)](/docs/gamelab/x/) within the  [`draw() {}`(#fff176)](/docs/gamelab/draw/) function.\n- Changing [`World.frameRate`(#fff176)](/docs/gamelab/World.frameRate/) will affect the velocityX.\n- Sprites all have the same properties and you use the dot notation (combining the name of the sprite, followed by a dot, with the label of the property) to both access and update the property for that sprite.\n- Any changes to the properties of a sprite will not be seen until after [`drawSprites()`(#fff176)](/docs/gamelab/drawSprites/) is called."
 }
