@@ -2,9 +2,9 @@ class ProgrammingEnvironmentsController < ApplicationController
   include ProxyHelper
   EXPIRY_TIME = 30.minutes
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show, :docs_show, :docs_index]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show, :docs_show, :docs_index, :get_summary_by_name]
   before_action :set_programming_environment, except: [:index, :docs_index, :new, :create, :docs_show]
-  authorize_resource except: [:get_summary_by_name]
+  authorize_resource
 
   def index
     @programming_environments = ProgrammingEnvironment.where(published: true).order(:name).map(&:summarize_for_index)
@@ -97,8 +97,8 @@ class ProgrammingEnvironmentsController < ApplicationController
 
   def get_summary_by_name
     return render :not_found unless @programming_environment
-    programming_environment_categories = @programming_environment.categories_for_get
-    return render json: programming_environment_categories
+    return head :forbidden unless can?(:get_summary_by_name, @programming_environment)
+    return render json: @programming_environment.categories_for_get
   end
 
   private
