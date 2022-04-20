@@ -10,12 +10,12 @@ const NewReferenceGuideForm = props => {
       <RailsAuthenticityToken />
       <h1>New Reference Guide</h1>
       <label>
-        Key
+        Slug
         <HelpTip>
           <p>
-            The reference guide key is used in URLs and cannot be updated once
-            set. A slug can only contain lowercase letters, numbers, and dashes.
-            Also 'new' and 'edit' are reserved.
+            The reference guide slug is used in URLs and cannot be updated once
+            set. A slug can only contain lowercase letters, numbers, and dashes,
+            and 'new' and 'edit' are reserved.
           </p>
         </HelpTip>
         <input className="input" name="key" required />
