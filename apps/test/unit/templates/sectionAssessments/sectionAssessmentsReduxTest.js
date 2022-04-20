@@ -186,13 +186,13 @@ describe('sectionAssessmentsRedux', () => {
       const rootState = {
         unitSelection: {
           scriptId: 123,
-          coursesWithProgress: {
-            321: {
+          coursesWithProgress: [
+            {
               id: 321,
               name: 'fake-name',
-              units: {123: {id: 123, key: 'csf'}}
+              units: [{id: 123, key: 'csf'}]
             }
-          }
+          ]
         },
         sectionAssessments: {
           ...initialState,
@@ -224,13 +224,13 @@ describe('sectionAssessmentsRedux', () => {
       const rootState = {
         unitSelection: {
           scriptId: 123,
-          coursesWithProgress: {
-            321: {
+          coursesWithProgress: [
+            {
               id: 321,
               name: 'fake-name',
-              units: {123: {id: 123, key: 'csd'}}
+              units: [{id: 123, key: 'csd'}]
             }
-          }
+          ]
         },
         sectionAssessments: {
           ...initialState,
@@ -743,9 +743,9 @@ describe('sectionAssessmentsRedux', () => {
           ...rootState,
           unitSelection: {
             scriptId: 2,
-            coursesWithProgress: {
-              321: {id: 321, name: 'fake-name', units: {2: {id: 2, key: 'csd'}}}
-            }
+            coursesWithProgress: [
+              {id: 321, name: 'fake-name', units: [{id: 2, key: 'csd'}]}
+            ]
           }
         };
         const result = isCurrentScriptCSD(state);
@@ -757,9 +757,9 @@ describe('sectionAssessmentsRedux', () => {
           ...rootState,
           unitSelection: {
             scriptId: 2,
-            coursesWithProgress: {
-              321: {id: 321, name: 'fake-name', units: {2: {id: 2, key: 'csf'}}}
-            }
+            coursesWithProgress: [
+              {id: 321, name: 'fake-name', units: [{id: 2, key: 'csf'}]}
+            ]
           }
         };
         const result = isCurrentScriptCSD(state);
@@ -773,9 +773,9 @@ describe('sectionAssessmentsRedux', () => {
           ...rootState,
           unitSelection: {
             scriptId: 2,
-            coursesWithProgress: {
-              321: {id: 321, name: 'fake-name', units: {2: {id: 2, key: 'csd'}}}
-            }
+            coursesWithProgress: [
+              {id: 321, name: 'fake-name', units: [{id: 2, key: 'csd'}]}
+            ]
           }
         };
         const result = doesCurrentCourseUseFeedback(state);
@@ -787,9 +787,9 @@ describe('sectionAssessmentsRedux', () => {
           ...rootState,
           unitSelection: {
             scriptId: 2,
-            coursesWithProgress: {
-              321: {id: 321, name: 'fake-name', units: {2: {id: 2, key: 'csf'}}}
-            }
+            coursesWithProgress: [
+              {id: 321, name: 'fake-name', units: [{id: 2, key: 'csf'}]}
+            ]
           }
         };
         const result = doesCurrentCourseUseFeedback(state);
