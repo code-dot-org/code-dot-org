@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-18 22:50:45 UTC",
+    "serialized_at": "2022-04-19 15:33:02 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -468,7 +468,7 @@
       "key": "70caa8ee-082b-47bc-9efa-d56ce9ca3b89",
       "position": 1,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -482,7 +482,7 @@
       "key": "3ac6dc19-524a-4849-ba00-20bfcf35cc15",
       "position": 2,
       "properties": {
-        "duration": 30,
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -1314,10 +1314,27 @@
       }
     },
     {
-      "key": "2e9b9595-26e9-4099-8cdd-55ba3b89c53b",
+      "key": "a15b67b9-2302-4941-bab0-2b103240b47d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce arithmetic operators.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *Where have you seen operators like these before?*\n* *How did you use these operators?*\n\n**Discussion Goal:** Students recall arithmetic operators used in math class to perform calculations.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce arithmetic operators.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Briefly explain the functionality of each arithmetic operator – addition, subtraction, multiplication, division, and modulus ( `%` ). You do not need to spend time explaining how each of these functions here since these are explored throughout the lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a15b67b9-2302-4941-bab0-2b103240b47d",
+        "lesson_activity.key": "5715602a-044a-4e69-91ff-5462d688ae99"
+      }
+    },
+    {
+      "key": "2e9b9595-26e9-4099-8cdd-55ba3b89c53b",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *Where have you seen operators like these before?*\n* *How did you use these operators?*\n\n**Discussion Goal:** Students recall arithmetic operators used in math class to perform calculations.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict: Evaluating Expressions"
       },
       "seeding_key": {
@@ -1327,7 +1344,7 @@
     },
     {
       "key": "b521f0fa-834e-4d48-836f-51f07ca4d4e4",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that dividing two `int` values results in a whole number. Students may wonder why the decimal portion is lost.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *operand* and *expression*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how the value and type of the operand impact how the expression is evaluated.\n\n**Do This:** Click through the animated slides to demonstrate evaluating expressions and storing the value in a variable.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When processing assignment expressions, evaluate the statement on the right then store the value in the variable on the left.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When evaluating multiple expression statements in a row, the updated value that has been stored in the variable is the value that is used in future expressions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate evaluating dividing two `int` values and define *truncate*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate dividing an `int` and a `double` by `0` and define `ArithmeticException`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate evaluating expressions using the mod ( `%` ) operator.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *When would the mod operator be useful?*\n\n**Discussion Goal:** Students suggest using the mod operator to determine if a number is a multiple of another number. Students note that the mod operator could also determine if a number is even or odd."
       },
@@ -1338,7 +1355,7 @@
     },
     {
       "key": "49d5c727-057b-4be0-828d-9b1824249173",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted. ",
         "duration": "15",
@@ -1352,7 +1369,7 @@
     },
     {
       "key": "47f35057-9a75-471d-8ef2-236f4f985a23",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "**Do This:** Explain the order of operations:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce the order of operations\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Respond to the self-check question\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *compound assignment operator* and demonstrate the examples."
       },
@@ -1363,7 +1380,7 @@
     },
     {
       "key": "181b91f6-63a5-4584-adc2-cff0196124bb",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "The type of the operands impacts how an operator behaves. We used concatenation in the previous unit to combine values with a `String` to print information about the state of a `Painter` object.",
         "remarks": true
@@ -1375,9 +1392,15 @@
     },
     {
       "key": "80481453-4bc2-4eb1-82b0-b9dc0b831d20",
-      "position": 7,
+      "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review concatenation and demonstrate using operators with a `String`."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review concatenation and demonstrate using operators with a `String`.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Point out the space inside the quotation marks with the text `\"Hello\"`. Note that not including the space would display `\"HelloWorld\"` instead of `\"Hello World\"`. Java prints exactly what is given inside quotation marks, so spaces should be included when needed to ensure the proper appearance of printed text."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "80481453-4bc2-4eb1-82b0-b9dc0b831d20",
@@ -1585,7 +1608,7 @@
       "position": 10,
       "properties": {
         "description": "Before writing a class for a program, software engineers identify the attributes of an object to plan the instance variables and methods that they need.",
-        "duration": "15",
+        "duration": "20",
         "name": "Designing an Object",
         "remarks": true
       },
@@ -1615,15 +1638,11 @@
       "key": "775cc692-ef1d-45f3-9dcd-acd92f1f313b",
       "position": 12,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a set of Classes and Objects Manipulatives, several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn.\n\n**Do This:** Click through the animated slides to demonstrate designing a class:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Identify the attributes and behaviors that are needed\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Write the class name and constructor\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Write the methods\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> List the instance variables\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Briefly introduce `private` methods",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a set of Classes and Objects Manipulatives, several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn.\n\n**Do This:** Click through the animated slides to demonstrate designing a class:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Identify the attributes and behaviors that are needed\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> List the instance variables\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Briefly introduce `private` methods\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Write the class name and constructor\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Write the methods",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Gather the Classes and Objects Manipulatives to reuse in upcoming lessons."
-          },
-          {
-            "type": "teachingTip",
-            "markdown": "Students learn about `private` methods in a later unit. Introduce that methods can be `private` but do not spend time explaining what that means or how it works."
+            "markdown": "Students learn about `private` methods in a later unit. Introduce that methods can be `private` but do not spend time explaining what that means or how it works.\n\nYou can choose to demonstrate designing a class using a teacher's set of the manipulatives or to have students follow along using their set of manipulatives."
           }
         ]
       },
@@ -1636,7 +1655,13 @@
       "key": "d065e464-f228-458e-8f92-905c3d1d800d",
       "position": 13,
       "properties": {
-        "description": "**Do This:** Click through the animated slides to demonstrate creating objects from the class:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declaring the reference variable\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Instantiating the object\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Pointing the reference variable to the object\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students use the Classes and Objects Manipulatives to design a class of their choice with examples of objects that could be created from their classes."
+        "description": "**Do This:** Click through the animated slides to demonstrate creating objects from the class:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declaring the reference variable\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Instantiating the object\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Pointing the reference variable to the object\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students use the Classes and Objects Manipulatives to design a class of their choice with examples of objects that could be created from their classes.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Gather the Classes and Objects Manipulatives to reuse in upcoming lessons."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d065e464-f228-458e-8f92-905c3d1d800d",
@@ -1774,7 +1799,7 @@
       "key": "f3e35839-453f-4935-b605-db036c310dd6",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the `Painter` starts at a specific location facing a different location. Students may wonder how to implement this in their `PainterPlus` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *parameterized constructor*, *formal parameter*, and *local variable*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *actual parameter* and *call by value*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *overloaded*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Overloaded Constructors*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *What do you think would happen if we didn't write any constructors in a class?*\n\n**Discussion Goal:** Students may predict that an error might occur or that Java will specify default values for the attributes based on the data types.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the result of not writing any constructors in a class."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the `Painter` starts at a specific location facing a different direction. Students may wonder how to implement this in their `PainterPlus` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *parameterized constructor*, *formal parameter*, and *local variable*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *actual parameter* and *call by value*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *overloaded*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Overloaded Constructors*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *What do you think would happen if we didn't write any constructors in a class?*\n\n**Discussion Goal:** Students may predict that an error might occur or that Java will specify default values for the attributes based on the data types.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the result of not writing any constructors in a class."
       },
       "seeding_key": {
         "activity_section.key": "f3e35839-453f-4935-b605-db036c310dd6",
@@ -1828,14 +1853,8 @@
       "key": "c524dcfe-bef6-4131-a786-f700cddf3fd0",
       "position": 1,
       "properties": {
-        "description": "**Group:** Place students in groups of four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each group a set of Classes and Objects Manipulatives, several sticky notes, small scrap pieces of paper, tape, and rubber bands or yarn.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Four on a Pencil strategy to discuss the prompts.\n* *What would a no-argument constructor look like for the class you designed?*\n* *What would a parameterized constructor look like for the class you designed?*\n\n**Discussion Goal:** Students share ideas about the default values they would set in the no-argument constructor for their objects. Students identify the parameters for the parameterized constructor they would need to define.",
-        "name": "Designing Your Object",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Four on a Pencil strategy is a cooperative learning strategy where each student shares an answer to a prompt n a group of four. When a student wants to share, they place their pencil (or a different object) in the center of the group. The next student then places their pencil in the middle but then must say something like \"*Thank you for sharing, (student's name). I like your idea, but have you thought of this?*\" or \"*I like your answer. I disagree, however, and this is why.*\" These sentence frames help students kindly discuss ideas while supporting and encouraging differences in opinion.\n\nGather the Classes and Objects Manipulatives to reuse in upcoming lessons."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Designate four corners or areas in the classroom for each constructor signature. Have students go to the corner they think is the correct constructor for the constructor call.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the correct constructor signature. Have students work with the students at their corner to develop an explanation for why their corner is correct or incorrect. Ask students to share their explanations with the class.",
+        "name": "Constructor Corners"
       },
       "seeding_key": {
         "activity_section.key": "c524dcfe-bef6-4131-a786-f700cddf3fd0",
@@ -2201,11 +2220,11 @@
       "key": "36c77723-5b84-4136-aa48-9b85221aaa96",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate that a superclass reference can be used to refer to an object of a superclass or subclass type.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate that when a subclass’s constructor does not explicitly call a superclass’s constructor using super, Java inserts a call to the superclass’s no-argument constructor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the `Object` class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate that a superclass reference can be used to refer to an object of a superclass or subclass type.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The `java.lang` package is not accessible in Java Lab for security reasons. Students will receive an error if they attempt to explicitly import the `java.lang` package. Java Lab uses a version of the `java.lang` package with the classes students will need for the course that all programs implicitly import."
+            "markdown": "To help students understand the syntax, ask students guiding questions. For example:\n* *What is the relationship between a superclass and a subclass?*\n* *Since a subclass is more specific than a superclass, can a subclass reference store a superclass object?*"
           }
         ]
       },
@@ -2215,8 +2234,25 @@
       }
     },
     {
-      "key": "79eead4a-4254-4a2b-b44d-e3bb52be9107",
+      "key": "96dbc988-7a58-47ee-9e83-02d670ec7d2b",
       "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate that when a subclass’s constructor does not explicitly call a superclass’s constructor using super, Java inserts a call to the superclass’s no-argument constructor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the `Object` class.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The `java.lang` package is not accessible in Java Lab for security reasons. Students will receive an error if they attempt to explicitly import the `java.lang` package. Java Lab uses a version of the `java.lang` package with the classes students will need for the course that all programs implicitly import."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "96dbc988-7a58-47ee-9e83-02d670ec7d2b",
+        "lesson_activity.key": "548c8508-dd67-46bb-9726-cbd865096d77"
+      }
+    },
+    {
+      "key": "79eead4a-4254-4a2b-b44d-e3bb52be9107",
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio. Students complete a choice level to create a subclass of the `Dessert` class and create objects of their subclasses.",
         "duration": "10",
@@ -2236,7 +2272,7 @@
     },
     {
       "key": "46864d41-5ea4-4cb7-a85e-b8aa6cc1ad53",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "This is a good time to commit our code and save our `Dessert` subclasses to the Backpack.",
         "remarks": true
@@ -2248,7 +2284,7 @@
     },
     {
       "key": "d4519326-4316-48a0-bb4c-c5ea2ea6016f",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving the `Dessert` subclasses to the Backpack.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on Level 4.",
         "progression_name": "Code Review: Refactoring Desserts"
@@ -2335,7 +2371,7 @@
       "key": "38d07eb9-8571-4dc6-a9d9-71adbbb31013",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *What happened when we tried to access `private` data?*\n\n**Discussion Goal:** Students recall that the program gives an error.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *What did we have in the `Painter` class to access its `private` data?*\n* *What can we add to the `Dessert` class to access its `private` data?*\n\n**Discussion Goal:** Students recall the methods in the `Painter` class that obtained information about the state of a `Painter` object, including `getX()`, `getY()`, `getMyPaint()`, and `getDirection()`. Students suggest writing methods in the `Dessert` class to get the instance variables.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *What happened when we tried to access `private` data?*\n\n**Discussion Goal:** Students recall that the program gives an error because `private` instance variables cannot be directly accessed from outside a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *What did we have in the `Painter` class to access its `private` data?*\n* *What can we add to the `Dessert` class to access its `private` data?*\n\n**Discussion Goal:** Students recall the methods in the `Painter` class that obtained information about the state of a `Painter` object, including `getX()`, `getY()`, `getMyPaint()`, and `getDirection()`. Students suggest writing methods in the `Dessert` class to get the instance variables.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4928,6 +4964,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa2-2022"
+        ],
         "progression": "Unit 2 Survey"
       },
       "bonus": false,
@@ -5808,7 +5847,7 @@
       "url": "https://docs.google.com/document/d/1H9x4KXzebFK_4bEiLbIvrff8qNxT48p1B-H4WYmQ69A/edit?usp=sharing",
       "key": "_key_u2l5_extra_practice",
       "properties": {
-        "audience": "Student",
+        "audience": "Verified Teacher",
         "type": "Answer Key"
       },
       "seeding_key": {

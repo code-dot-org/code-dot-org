@@ -31,8 +31,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-18 22:49:59 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-04-19 19:56:59 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -5573,6 +5573,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pre-survey-levelgroup_21_222022_csa-2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -7244,6 +7247,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa1-2022"
+        ],
         "progression": "Unit 1 Survey"
       },
       "bonus": false,

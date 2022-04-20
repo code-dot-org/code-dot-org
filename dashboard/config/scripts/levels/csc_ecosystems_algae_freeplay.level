@@ -21,7 +21,7 @@
     "instructions_important": "false",
     "project_template_level_name": "csc_ecosystems_template",
     "short_instructions": "In a real aquatic ecosystem the algae will keep growing as the fish are eating it. Program the algae to continue to appear.\r\n",
-    "long_instructions": "- What happens if your ecosystem starts with a large number of fish \r\n- What happens if it takes more/less time for the algae to regrow? \r\n- How else can you control how many new algae are growing? \r\n\r\nBonus:\r\nCan you add a second type of fish to your model? \r\n",
+    "long_instructions": "**Change the values (numbers) in your code to modify your simulation. Here are a few ideas to get started…**\r\n\r\n- What happens if your ecosystem starts with a large number of fish \r\n- What happens if it takes more/less time for the algae to regrow? \r\n- How else can you control how many new algae are growing? \r\n\r\n**Bonus:**\r\nCan you add a second type of fish to your model? \r\n",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "never_autoplay_video": "false",
@@ -39,14 +39,15 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "instructions_icon": "crab"
   },
   "game_id": 64,
   "published": true,
   "created_at": "2022-04-14T19:02:17.000Z",
   "level_num": "custom",
   "user_id": 18528,
-  "audit_log": "[{\"changed_at\":\"2022-04-14T19:02:17.131+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_algae_growth\\\"\"],\"cloned_from\":\"csc_ecosystems_algae_growth\"},{\"changed_at\":\"2022-04-14 19:02:48 +0000\",\"changed\":[\"authored_hints\",\"long_instructions\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-04-14T19:02:17.131+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_algae_growth\\\"\"],\"cloned_from\":\"csc_ecosystems_algae_growth\"},{\"changed_at\":\"2022-04-14 19:02:48 +0000\",\"changed\":[\"authored_hints\",\"long_instructions\",\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-19 21:49:40 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-19 21:50:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -420,7 +421,7 @@
     <toolbox_blocks>
       <xml>
         <block type="gamelab_makeNumSprites">
-          <field name="ANIMATION_NAME">"fish_05_1"</field>
+          <field name="ANIMATION_NAME">"fish_05"</field>
           <value name="NUM">
             <block type="math_number">
               <field name="NUM">10</field>
@@ -431,7 +432,7 @@
           <field name="PROPERTY">"scale"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"fish_05_1"</field>
+              <field name="ANIMATION">"fish_05"</field>
             </block>
           </value>
           <value name="VAL">
@@ -443,7 +444,7 @@
         <block type="gamelab_addBehaviorSimple">
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"fish_05_1"</field>
+              <field name="ANIMATION">"fish_05"</field>
             </block>
           </value>
           <value name="BEHAVIOR">
@@ -456,38 +457,16 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE1">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"fish_05_1"</field>
+              <field name="ANIMATION">"fish_05"</field>
             </block>
           </value>
           <value name="SPRITE2">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"underseadeco_34_1"</field>
+              <field name="ANIMATION">"green-sea-plant-2"</field>
             </block>
           </value>
         </block>
-        <block type="gamelab_destroy">
-          <value name="THIS">
-            <block type="gamelab_objectSpritePointer"/>
-          </value>
-        </block>
-        <block type="gamelab_destroy">
-          <value name="THIS">
-            <block type="gamelab_subjectSpritePointer"/>
-          </value>
-        </block>
-        <block type="gamelab_checkTouching">
-          <field name="CONDITION">"when"</field>
-          <value name="SPRITE1">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"fish_05_1"</field>
-            </block>
-          </value>
-          <value name="SPRITE2">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"Screen Shot 2022-03-18 at 2.34.33 PM.jpg_1"</field>
-            </block>
-          </value>
-        </block>
+        <block type="gamelab_destroy"/>
         <block type="controls_if">
           <value name="IF0">
             <block type="logic_compare">
@@ -496,7 +475,7 @@
                 <block type="gamelab_countByAnimation">
                   <value name="SPRITE">
                     <block type="gamelab_allSpritesWithAnimation">
-                      <field name="ANIMATION">"underseadeco_34_1"</field>
+                      <field name="ANIMATION">"green-sea-plant-2"</field>
                     </block>
                   </value>
                 </block>
@@ -510,18 +489,10 @@
           </value>
         </block>
         <block type="gamelab_setAnimation">
-          <field name="ANIMATION">"underseadeco_25_1"</field>
+          <field name="ANIMATION">"red-coral-dead"</field>
           <value name="THIS">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"underseadeco_25_1_copy_1"</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_setAnimation">
-          <field name="ANIMATION">"underseadeco_24_1"</field>
-          <value name="THIS">
-            <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"underseadeco_24_1_copy_1"</field>
+              <field name="ANIMATION">"underseadeco_25"</field>
             </block>
           </value>
         </block>
