@@ -1361,6 +1361,8 @@ class Script < ApplicationRecord
   def self.merge_and_write_i18n(lessons_i18n, unit_name = '', metadata_i18n = {})
     units_yml = File.expand_path("#{Rails.root}/config/locales/scripts.en.yml")
     File.open(units_yml, 'r+') do |file|
+      file.flock(File::LOCK_EX)
+
       data = file.read
       i18n = data.present? ? YAML.load(data) : {}
 
@@ -1377,6 +1379,8 @@ class Script < ApplicationRecord
       file.write(output)
       file.flush
       file.truncate(file.pos)
+    ensure
+      file.flock(File::LOCK_UN)
     end
   end
 
