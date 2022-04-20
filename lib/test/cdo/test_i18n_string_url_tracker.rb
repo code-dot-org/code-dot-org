@@ -1,4 +1,5 @@
 require_relative '../test_helper'
+require 'cdo/i18n_backend'
 require 'cdo/i18n_string_url_tracker'
 require 'active_support/core_ext/numeric/time'
 
@@ -326,6 +327,7 @@ class TestI18nStringUrlTracker < Minitest::Test
       # See https://guides.rubyonrails.org/i18n.html#pluralization
       'number.format' => {'separator' => '.', 'delimiter' => ','}
     }
+    I18n.backend = CDO.i18n_backend
     I18n.backend.store_translations I18n.default_locale, custom_i18n
 
     assert_equal false, I18nStringUrlTracker.string_exists?(nil)
