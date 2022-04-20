@@ -1360,7 +1360,8 @@ class Script < ApplicationRecord
   # 3. Lesson descriptions, which arrive as JSON in metadata_i18n[:stage_descriptions]
   def self.merge_and_write_i18n(lessons_i18n, unit_name = '', metadata_i18n = {})
     units_yml = File.expand_path("#{Rails.root}/config/locales/scripts.en.yml")
-    File.open(units_yml, 'r+') do |file|
+    mode = File.exist?(units_yml) ? 'r+' : 'a+'
+    File.open(units_yml, mode) do |file|
       file.flock(File::LOCK_EX)
 
       data = file.read
