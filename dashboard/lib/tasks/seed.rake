@@ -229,6 +229,8 @@ namespace :seed do
   # explicit execution of "seed:dsls"
   timed_task dsls: :environment do
     DSLDefined.transaction do
+      level_md5s_by_name = Hash[DSLDefined.pluck(:name, :md5)]
+
       # Allow developers to seed just one dsl-defined level, e.g.
       # rake seed:dsls DSL_FILENAME=k-1_Artistloops_multi1.multi
       dsls_glob = ENV['DSL_FILENAME'] ? Dir.glob("config/scripts/**/#{ENV['DSL_FILENAME']}") : DSLS_GLOB
@@ -244,8 +246,11 @@ namespace :seed do
         dsl_class = DSL_TYPES.detect {|type| filename.include?(".#{type.underscore}")}.try(:constantize)
         begin
           contents = File.read(filename)
+          md5 = Digest::MD5.hexdigest(contents)
           data, _i18n = dsl_class.parse(contents, filename)
-          dsl_class.setup data
+          unless md5 == level_md5s_by_name[data[:name]]
+            dsl_class.setup(data, md5)
+          end
         rescue Exception
           puts "Error parsing #{filename}"
           raise

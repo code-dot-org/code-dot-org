@@ -84,11 +84,11 @@ class DSLDefined < Level
     end
   end
 
-  def self.setup(data)
+  def self.setup(data, md5)
     level = find_or_create_by({name: data[:name]})
     level.send(:write_attribute, 'properties', {})
 
-    level.update!(name: data[:name], game_id: Game.find_by(name: to_s).id, properties: data[:properties])
+    level.update!(name: data[:name], game_id: Game.find_by(name: to_s).id, properties: data[:properties], md5: md5)
 
     level
   end
