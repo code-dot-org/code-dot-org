@@ -1,11 +1,40 @@
 name 'CSA U3 Assessment 2022 q07'
 
-wrong 'wrong'
-right 'right'
-wrong 'wrong'
-wrong 'wrong'
-wrong 'wrong'
+wrong '`Shape Shape Shape Shape`'
+right '`Square Triangle Shape Square`'
+wrong '`Square Triangle Triangle Square`'
+wrong '`Square Triangle Square Square`'
+wrong '`Shape Shape Square Shape`'
 
 markdown <<MARKDOWN
-question
+Consider the following two classes.
+
+```
+public class Shape {
+   public void printShape() {
+      System.out.print("Shape ");
+   }
+}
+
+public class Square extends Shape {
+   public void printShape() {
+      System.out.print("Square ");
+   }
+}
+
+public class Triangle extends Shape {
+   public void printShape() {
+      System.out.print("Triangle ");
+   }
+}
+```
+
+What is printed as a result of executing the following code segment?
+
+```
+Shape[] shapes = {new Square(), new Triangle(), new Shape(), new Square()};
+for (int i = 0; i < shapes.length; i++) {
+   shapes[i].printShape();
+}
+```
 MARKDOWN

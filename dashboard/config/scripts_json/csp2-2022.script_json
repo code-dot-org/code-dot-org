@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-18 19:03:23 UTC",
+    "serialized_at": "2022-04-20 04:37:33 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -813,7 +813,7 @@
       "key": "2ee7d005-2fc5-48e6-961d-6bdf0ec4af61",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \r\n**Video:** Play \"What is the Internet\". Stop at 1:30.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n**Video:** Play [\"What is the Internet\"](https://www.youtube.com/watch?v=Dxcc6ycZ73M). Stop at 1:30.",
         "tips": [
           {
             "type": "teachingTip",
