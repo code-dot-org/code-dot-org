@@ -17,7 +17,7 @@ class BubbleChoiceTest < ActiveSupport::TestCase
     @script_level = create :script_level, levels: [@bubble_choice]
 
     @sublevel_with_contained = create :level, name: 'sublevel_with_contained', display_name: 'Sublevel with contained', thumbnail_url: 'some-fake.url/kittens.png', bubble_choice_description: 'Choose me!'
-    @sublevel_contained_level = create :level, name: 'Sublevel contained level'
+    @sublevel_contained_level = create :free_response, name: 'Sublevel contained level'
     @sublevel_with_contained.contained_level_names = [@sublevel_contained_level.name]
     @sublevel_with_contained.save!
   end
@@ -232,7 +232,7 @@ DSL
         display_name: @sublevel_with_contained.display_name,
         contained_levels: [{
           level_id: @sublevel_contained_level.id.to_s,
-          type: "Blockly",
+          type: "FreeResponse",
           name: "Sublevel contained level",
           display_name: nil
         }],
