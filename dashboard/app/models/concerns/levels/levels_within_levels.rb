@@ -172,13 +172,13 @@ module Levels
       levels_child_levels.project_template.destroy_all
       return if project_template_level_name.blank?
       template_level = Level.find_by_name!(project_template_level_name)
-      raise 'level cannot be its own project template level' if template_level == self
-      raise "template level type #{template_level.type} does not match level type #{type}" unless template_level.type == type
+      raise ArgumentError, 'level cannot be its own project template level' if template_level == self
+      raise ArgumentError, "template level type #{template_level.type} does not match level type #{type}" unless template_level.type == type
       if template_level.project_template_level
-        raise 'the project template level you have selected already has its own project template level'
+        raise ArgumentError, 'the project template level you have selected already has its own project template level'
       end
       if parent_levels.project_template.any?
-        raise 'this level is already a project template level of another level'
+        raise ArgumentError, 'this level is already a project template level of another level'
       end
 
       ParentLevelsChildLevel.create!(
