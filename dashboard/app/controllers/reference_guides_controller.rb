@@ -34,6 +34,7 @@ class ReferenceGuidesController < ApplicationController
 
   # DELETE /courses/:course_name/guides/:key
   def destroy
+    @reference_guide.remove_serialization
     @reference_guide.destroy
   end
 
