@@ -98,8 +98,8 @@ class DSLDefined < Level
   end
 
   # Use DSL class to parse string
-  def self.parse(str, filename, name=nil)
-    dsl_class.parse(str, filename, name)
+  def self.parse(str, filename)
+    dsl_class.parse(str, filename)
   end
 
   def self.create_from_level_builder(params, level_params, old_name = nil)
