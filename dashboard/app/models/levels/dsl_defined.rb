@@ -84,7 +84,7 @@ class DSLDefined < Level
     end
   end
 
-  def self.setup(data, md5)
+  def self.setup(data, md5=nil)
     level = find_or_create_by({name: data[:name]})
     level.send(:write_attribute, 'properties', {})
 
@@ -116,7 +116,10 @@ class DSLDefined < Level
         raise "Renaming of DSLDefined levels is not allowed: '#{old_name}' --> '#{data[:name]}'"
       end
 
-      level = setup data
+      # prevent levelbuilder from reseeding this level during the next deploy.
+      md5 = Digest::MD5.hexdigest(text)
+
+      level = setup data, md5
 
       # Save updated level data to external files
       if Rails.application.config.levelbuilder_mode
