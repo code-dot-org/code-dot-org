@@ -243,7 +243,8 @@ namespace :seed do
       dsls_glob.each do |filename|
         dsl_class = DSL_TYPES.detect {|type| filename.include?(".#{type.underscore}")}.try(:constantize)
         begin
-          data, _i18n = dsl_class.parse_file(filename)
+          contents = File.read(filename)
+          data, _i18n = dsl_class.parse(contents, filename)
           dsl_class.setup data
         rescue Exception
           puts "Error parsing #{filename}"
