@@ -6,33 +6,33 @@ import PropTypes from 'prop-types';
  * This is a placeholder for the upcoming "Documentation" tab in Javalab.
  * See related task: https://codedotorg.atlassian.net/browse/CSA-361
  */
-const UnconnectedDocumentationTab = function({documentationEnvironment}) {
-  const [documentation, setDocumentation] = useState(null);
+const UnconnectedDocumentationTab = function({programmingEnvironment}) {
+  // const [documentation, setDocumentation] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [validDocumentationEnvironment, setValidDocumentationEnvironment] = useState(true);
 
   useEffect(() => {
     setIsLoading(true);
-    if (!documentationEnvironment) {
+    if (!programmingEnvironment) {
       setValidDocumentationEnvironment(false);
       setIsLoading(false);
       return;
     }
     $.ajax({
-      url: `/programming_environments/get_summary_by_name/${documentationEnvironment}`,
-      method: 'GET',
+      url: `/programming_environments/get_summary_by_name/${programmingEnvironment}`,
+      method: 'GET'
     }).done((data, _, request) => {
       // TODO: fill in
     });
-  }, [documentationEnvironment]);
+  }, [programmingEnvironment]);
 
-  return <p>Documentation for {documentationEnvironment}</p>;
+  return <p>Documentation for {programmingEnvironment}</p>;
 };
 
 UnconnectedDocumentationTab.propTypes = {
-  documentationEnvironment: PropTypes.string
+  programmingEnvironment: PropTypes.string
 };
 
 export default connect(state => ({
-  documentationEnvironment: state.instructions.documentationEnvironment
+  programmingEnvironment: state.instructions.programmingEnvironment
 }))(UnconnectedDocumentationTab);

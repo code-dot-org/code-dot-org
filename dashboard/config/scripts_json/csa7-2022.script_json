@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-18 21:50:05 UTC",
+    "serialized_at": "2022-04-19 19:59:55 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -3376,6 +3376,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L1-L1_2022"
+        ],
         "progression": "Creative Coding with The Theater Example Projects"
       },
       "bonus": false,
@@ -3398,6 +3401,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L1-L2_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3420,6 +3426,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L1_2022"
+        ],
         "progression": "Investigate: Object References as Parameters"
       },
       "bonus": false,
@@ -3442,6 +3451,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L2_2022"
+        ],
         "progression": "Using Object References as Parameters"
       },
       "bonus": false,
@@ -3464,6 +3476,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L3v2_2022"
+        ],
         "progression": "Using Object References as Parameters"
       },
       "bonus": false,
@@ -3486,6 +3501,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L4_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3508,6 +3526,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L1v2_2022"
+        ],
         "progression": "Predict: Overloaded Methods"
       },
       "bonus": false,
@@ -3530,6 +3551,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L2_2022"
+        ],
         "progression": "Writing Overloaded Methods"
       },
       "bonus": false,
@@ -3552,6 +3576,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L3_2022"
+        ],
         "progression": "Writing Overloaded Methods"
       },
       "bonus": false,
@@ -3574,6 +3601,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L4_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3596,6 +3626,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L1_2022"
+        ],
         "progression": "Investigate: Private Methods"
       },
       "bonus": false,
@@ -3618,6 +3651,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L2_2022"
+        ],
         "progression": "Writing Private Methods"
       },
       "bonus": false,
@@ -3640,6 +3676,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L3v2_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3662,6 +3701,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L1_2022"
+        ],
         "progression": "Investigate: Overriding Methods"
       },
       "bonus": false,
@@ -3684,6 +3726,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L2v2_2022"
+        ],
         "progression": "Overriding Methods"
       },
       "bonus": false,
@@ -3706,6 +3751,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L3_2022"
+        ],
         "progression": "Overriding Methods"
       },
       "bonus": false,
@@ -3728,6 +3776,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L4v2_2022"
+        ],
         "progression": "Overriding Methods"
       },
       "bonus": false,
@@ -3750,6 +3801,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L5 CR_2022"
+        ],
         "progression": "Code Review: Overriding Methods"
       },
       "bonus": false,
@@ -3772,6 +3826,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L6_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3794,6 +3851,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L6-L1v2_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3816,6 +3876,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L7-L1_2022"
+        ],
         "progression": "Creative Coding with The Theater Project"
       },
       "bonus": false,
@@ -3838,6 +3901,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L7-L2v2_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3860,6 +3926,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L8-L1_2022"
+        ],
         "progression": "Investigate: Recursion vs Iteration"
       },
       "bonus": false,
@@ -3882,6 +3951,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L8-L2v2_2022"
+        ],
         "progression": "Converting Iterative Algorithms to Recursion"
       },
       "bonus": false,
@@ -3904,6 +3976,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L8-L3v2_2022"
+        ],
         "progression": "Creative Coding with The Theater Project"
       },
       "bonus": false,
@@ -3926,6 +4001,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L8-L4v2_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3948,6 +4026,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L9-L1_2022"
+        ],
         "progression": "Investigate: Recursive Algorithms"
       },
       "bonus": false,
@@ -3970,6 +4051,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L9-L2_2022"
+        ],
         "progression": "Tracing Recursive Methods"
       },
       "bonus": false,
@@ -3992,6 +4076,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L9-L3v2_2022"
+        ],
         "progression": "Tracing Recursive Methods"
       },
       "bonus": false,
@@ -4014,6 +4101,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L9-L4v2_2022"
+        ],
         "progression": "Code Review: Creative Coding with The Theater Project"
       },
       "bonus": false,
@@ -4036,6 +4126,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L9-L5_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4058,6 +4151,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L10-L1v2_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4080,6 +4176,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L11-L1_2022"
+        ],
         "progression": "Creative Coding with The Theater Project"
       },
       "bonus": false,
@@ -4102,6 +4201,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L11-L2_2022"
+        ],
         "progression": "Code Review: Creative Coding with The Theater Project"
       },
       "bonus": false,
@@ -4124,6 +4226,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L12-L1_2022"
+        ],
         "progression": "Creative Coding with The Theater Project"
       },
       "bonus": false,
@@ -4146,6 +4251,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L12-L2_2022"
+        ],
         "progression": "Code Review: Creative Coding with The Theater Project"
       },
       "bonus": false,
@@ -4168,6 +4276,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L13-L1_2022"
+        ],
         "progression": "Creative Coding with The Theater Project"
       },
       "bonus": false,
@@ -4190,6 +4301,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa7-2022"
+        ],
         "progression": "Unit 7 Survey"
       },
       "bonus": false,
@@ -4212,6 +4326,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 7 Assessment 2022"
+        ],
         "progression": "Unit 7 Assessment"
       },
       "bonus": false,
@@ -4234,6 +4351,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Console Sandbox"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4255,6 +4375,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood Sandbox"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -4277,6 +4400,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -4299,6 +4425,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Theater Sandbox"
+        ]
       },
       "bonus": false,
       "seeding_key": {

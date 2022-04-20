@@ -74,7 +74,7 @@ const instructionsInitialState = {
   levelVideos: [],
   mapReference: undefined,
   referenceLinks: [],
-  documentationEnvironment: null
+  programmingEnvironment: null
 };
 
 export default function reducer(state = {...instructionsInitialState}, action) {
@@ -94,7 +94,7 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       levelVideos,
       mapReference,
       referenceLinks,
-      documentationEnvironment
+      programmingEnvironment
     } = action;
     let isCollapsed = state.isCollapsed;
     if (!longInstructions && !hasContainedLevels) {
@@ -114,7 +114,7 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       levelVideos,
       mapReference,
       referenceLinks,
-      documentationEnvironment
+      programmingEnvironment
     });
   }
 
@@ -233,7 +233,7 @@ export const setInstructionsConstants = ({
   levelVideos,
   mapReference,
   referenceLinks,
-  documentationEnvironment
+  programmingEnvironment
 }) => ({
   type: SET_CONSTANTS,
   noInstructionsWhenCollapsed,
@@ -247,7 +247,7 @@ export const setInstructionsConstants = ({
   levelVideos,
   mapReference,
   referenceLinks,
-  documentationEnvironment
+  programmingEnvironment
 });
 
 export const setInstructionsRenderedHeight = height => ({
@@ -372,7 +372,7 @@ export const substituteInstructionImages = (htmlText, substitutions) => {
  * @param {boolean} config.noInstructionsWhenCollapsed
  * @param {boolean} config.hasContainedLevels
  * @param {Object} config.skin.instructions2ImageSubstitutions
- * @param {string} config.level.documentationEnvironment
+ * @param {string} config.level.programmingEnvironment
  * @returns {Object}
  */
 export const determineInstructionsConstants = config => {
@@ -389,7 +389,7 @@ export const determineInstructionsConstants = config => {
     levelVideos,
     mapReference,
     referenceLinks,
-    documentationEnvironment
+    programmingEnvironment
   } = level;
 
   let {longInstructions, shortInstructions, dynamicInstructions} = level;
@@ -473,7 +473,7 @@ export const determineInstructionsConstants = config => {
     levelVideos,
     mapReference,
     referenceLinks,
-    documentationEnvironment
+    programmingEnvironment
   };
 };
 
