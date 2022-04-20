@@ -29,7 +29,7 @@ To access the element stored at index 0 we would use this:
 topScores[0]
 ```
 
-It is more common to do something with the element once you access it.  For example, to print the element to the screen you would write `System.out.println(“The highest score is “ + topScores[0]);`  This statement would print “The highest score is 98” to the console. 
+It is more common to do something with the element once you access it.  For example, to print the element to the screen you would write `System.out.println("The highest score is " + topScores[0]);`  This statement would print “The highest score is 98” to the console. 
 
 ## Updating elements in an array
 To update elements in an array we use the following syntax:
