@@ -1,5 +1,9 @@
 Feature: Professional learning Sections
   Scenario: Create new professional learning section as levelbuilder
+    Given I create an authorized teacher-associated student named "Sally"
+    When I sign in as "Teacher_Sally" and go home
+    And I get levelbuilder access
+
     # Create section button
     When I see the section set up box
     Then I press the new section button
@@ -27,6 +31,10 @@ Feature: Professional learning Sections
     And the href of selector "a:contains(My Section of Teachers)" contains "/teacher_dashboard/sections/"
 
   Scenario: Create new professional learning section as universal instructor
+    Given I create an authorized teacher-associated student named "Sally"
+    When I sign in as "Teacher_Sally" and go home
+    And I get universal instructor access
+
     # Create section button
     When I see the section set up box
     Then I press the new section button
@@ -54,6 +62,10 @@ Feature: Professional learning Sections
     And the href of selector "a:contains(My Section of Teachers)" contains "/teacher_dashboard/sections/"
 
   Scenario: Create new professional learning section as plc reviewer
+    Given I create an authorized teacher-associated student named "Sally"
+    When I sign in as "Teacher_Sally" and go home
+    And I get plc reviewer access
+
     # Create section button
     When I see the section set up box
     Then I press the new section button
@@ -81,6 +93,10 @@ Feature: Professional learning Sections
     And the href of selector "a:contains(My Section of Teachers)" contains "/teacher_dashboard/sections/"
 
   Scenario: Create new professional learning section as facilitator
+    Given I create an authorized teacher-associated student named "Sally"
+    When I sign in as "Teacher_Sally" and go home
+    And I get facilitator access
+
     # Create section button
     When I see the section set up box
     Then I press the new section button
@@ -108,6 +124,9 @@ Feature: Professional learning Sections
     And the href of selector "a:contains(My Section of Teachers)" contains "/teacher_dashboard/sections/"
 
   Scenario: Teacher can not create professional learning section
+    Given I create an authorized teacher-associated student named "Sally"
+    When I sign in as "Teacher_Sally" and go home
+
     # Create section button
     When I see the section set up box
     Then I press the new section button
@@ -119,6 +138,9 @@ Feature: Professional learning Sections
     And element ".uitest-facilitator-type" is not visible
 
   Scenario: Teacher tries to join professional learning section for teachers
+    Given I create an authorized teacher-associated student named "Sally"
+    When I sign in as "Teacher_Sally" and go home
+
     Given I am a teacher and go home
     And I wait until element "div.ui-test-join-section" is visible
     And I create a new teacher section and go home
@@ -128,6 +150,9 @@ Feature: Professional learning Sections
     # check that the section is added to the joined sections pl table
 
   Scenario: Teacher tries to join professional learning section for facilitators
+    Given I create an authorized teacher-associated student named "Sally"
+    When I sign in as "Teacher_Sally" and go home
+
     Given I am a teacher and go home
     And I wait until element "div.ui-test-join-section" is visible
     And I create a new facilitator section and go home
