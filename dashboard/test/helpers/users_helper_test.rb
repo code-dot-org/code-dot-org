@@ -310,7 +310,7 @@ class UsersHelperTest < ActionView::TestCase
 
     # Create BubbleChoice level with sublevels, script_level, and user_levels.
     sublevel1 = create :level, name: 'choice_1'
-    sublevel1_contained_level = create :level, name: "choice_1 contained"
+    sublevel1_contained_level = create :free_response, name: "choice_1 contained"
     sublevel1.contained_level_names = [sublevel1_contained_level.name]
     sublevel1.save!
 
