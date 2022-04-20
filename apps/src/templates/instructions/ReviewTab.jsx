@@ -427,8 +427,6 @@ class ReviewTab extends Component {
           {codeReviewEnabled && !viewAsTeacher && (
             <>
               <ReviewNavigator
-                onSelectPeer={this.onSelectPeer}
-                onReturnToProject={this.onClickBackToProject}
                 viewPeerList={!viewAsCodeReviewer}
                 loadPeers={this.loadPeers}
               />

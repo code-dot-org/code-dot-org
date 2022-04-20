@@ -42,7 +42,8 @@ class DCDOBase < DynamicConfigBase
     {
       'frontend-i18n-tracking': DCDO.get('frontend-i18n-tracking', false),
       'clearerSignUpUserType': DCDO.get('clearerSignUpUserType', false),
-      'thebadguys-promotion': DCDO.get('thebadguys-promotion', false)
+      'thebadguys-promotion': DCDO.get('thebadguys-promotion', false),
+      'code_review_v2': DCDO.get('code_review_v2', false)
     }
   end
 end

@@ -4,11 +4,11 @@ import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import Button from '@cdo/apps/templates/Button';
 import javalabMsg from '@cdo/javalab/locale';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import {currentLocation, navigateToHref} from '@cdo/apps/utils';
+import {VIEWING_CODE_REVIEW_URL_PARAM} from '@cdo/apps/templates/instructions/ReviewTab';
 
 class ReviewNavigator extends Component {
   static propTypes = {
-    onSelectPeer: PropTypes.func,
-    onReturnToProject: PropTypes.func,
     viewPeerList: PropTypes.bool,
     loadPeers: PropTypes.func
   };
@@ -18,6 +18,25 @@ class ReviewNavigator extends Component {
     loadError: false,
     loadInProgress: false
   };
+
+  onSelectPeer = peer => {
+    if (!peer.id) {
+      return;
+    }
+
+    navigateToHref(
+      this.generateLevelUrlWithCodeReviewParam() + `&user_id=${peer.id}`
+    );
+  };
+
+  onClickBackToProject = () => {
+    navigateToHref(this.generateLevelUrlWithCodeReviewParam());
+  };
+
+  generateLevelUrlWithCodeReviewParam = () =>
+    currentLocation().origin +
+    currentLocation().pathname +
+    `?${VIEWING_CODE_REVIEW_URL_PARAM}=true`;
 
   onDropdownClick = () => {
     this.setState({loadInProgress: true, loadError: false, peers: []});
@@ -33,7 +52,6 @@ class ReviewNavigator extends Component {
   };
 
   getPeerList() {
-    const {onSelectPeer} = this.props;
     const {loadError, peers, loadInProgress} = this.state;
     if (loadInProgress) {
       return [
@@ -59,7 +77,7 @@ class ReviewNavigator extends Component {
         <a
           key={peer.id}
           onClick={() => {
-            onSelectPeer(peer);
+            this.onSelectPeer(peer);
           }}
           className="code-review-peer-link"
         >
@@ -70,7 +88,7 @@ class ReviewNavigator extends Component {
   }
 
   render() {
-    const {onReturnToProject, viewPeerList} = this.props;
+    const {viewPeerList} = this.props;
     return viewPeerList ? (
       <div style={styles.container}>
         <DropdownButton
@@ -89,7 +107,7 @@ class ReviewNavigator extends Component {
         icon={'caret-left'}
         size={Button.ButtonSize.default}
         iconStyle={styles.backToProjectIcon}
-        onClick={onReturnToProject}
+        onClick={this.onClickBackToProject}
         style={styles.backToProjectButton}
       />
     );
