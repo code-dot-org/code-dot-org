@@ -11,9 +11,6 @@ teacher_markdown <<MARKDOWN
 MARKDOWN
 
 markdown <<MARKDOWN
-Consider the following code segment. Which of the following would be the best example of good feedback to give the programmer?
-
-
 Consider the following code segment.  What is the value of `num` after running this code?
 
 ```
