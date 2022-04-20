@@ -97,11 +97,6 @@ class DSLDefined < Level
     "#{self}DSL".constantize
   end
 
-  # Use DSL class to parse file
-  def self.parse_file(filename, name=nil)
-    parse(File.read(filename), filename, name)
-  end
-
   # Use DSL class to parse string
   def self.parse(str, filename, name=nil)
     dsl_class.parse(str, filename, name)
