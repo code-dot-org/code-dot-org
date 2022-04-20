@@ -27,13 +27,13 @@ const initialState = {
   },
   unitSelection: {
     scriptId: 22,
-    coursesWithProgress: {
-      11: {
+    coursesWithProgress: [
+      {
         id: 11,
         name: 'All the Things *',
-        units: {22: {id: 22, key: 'allthethings'}}
+        units: [{id: 22, key: 'allthethings'}]
       }
-    }
+    ]
   }
 };
 
