@@ -1,5 +1,107 @@
 [![Build Status](https://github.com/code-dot-org/ml-activities/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/code-dot-org/ml-activities/actions/workflows/deploy.yml)
 
+
+# AI for Oceans
+
+This is the repo for AI for Oceans from Code.org.
+
+Like the Dance Party repo, it is a standalone repo that is published as an NPM package, and consumed by the main repo.
+
+AI for Oceans was produced for the Hour of Code in 2019.  It provides the student experience for the 5 interactive levels in the AI for Oceans script at https://studio.code.org/s/oceans.
+
+# Design notes
+
+## Modes
+
+These 5 levels are invoked with a "mode" parameter:
+
+### fishvtrash
+
+The user trains the AI to differentiate between fish versus trash, and then examine the results.
+
+### creaturesvtrashdemo
+
+Next, the concept of non-fish sea creatures is introduced to show that AI is only as good as its training.  In this mode, the experience is abbreviated: the user doesn't do training, but rather the mode demonstrates what happens when fish-specific training encounters non-fish.
+
+### creaturesvtrash
+
+In this mode, the user trains the AI again, but this time encountering fish, non-fish creatures, and trash.
+
+### short
+
+In this mode, the user chooses from one of six adjectives and then categorizes fish based on that.  The AI is trained on which fish fit into this arbitrary category or not, and then demonstrates this training.
+
+### long
+
+In this mode, the user chooses from one of fifteen adjectives.  With more subjectivity in this list, the user can explore more subtle implications of training and recognition.
+
+
+Adapted from content at https://code.org/oceans:
+
+Levels 2-4 use a pretrained model provided by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md) project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks) that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over 14 million images hand-annotated with words such as "balloon" or "strawberry". In order to customize this model with the labeled training data the student generates in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning). Each image in the training dataset is fed to MobileNet, as pixels, to obtain a list of annotations that are most likely to apply to it. Then, for a new image, we feed it to MobileNet and compare its resulting list of annotations to those from the training dataset. We classify the new image with the same label (such as "fish" or "not fish") as the images from the training set with the most similar results.
+
+Levels 6-8 use a [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble all of the metadata for the components (such as number of teeth, body shape) into a vector of numbers for each fish. We use these vectors to train the SVM. Based on the training data, the SVM separates the "space" of all possible fish into two parts, which correspond to the classes we are trying to learn (such as "blue" or "not blue").
+
+## Screens
+
+The AI for Oceans script forms a linear narrative structure.  The app is designed to deliver the interactive levels for this script, one mode at a time, with no need to persist data to the browser or server between each level.
+
+The app itself contains a variety of "scenes", with each mode using a different subset.  The scenes are as follows:
+
+### loading
+
+A simple loading screen.
+
+### words
+
+Select adjectives for the short & long modes.
+
+### train
+
+The user trains the AI by choosing one of two options for each item (fish, non-fish sea creatures, trash).
+
+### predict
+
+The user watches AI categorizing items, one at a time.
+
+### pond
+
+The user shows the results of the predictions.  The user can toggle between the matching & non-matching sets.  In short & long, the user can click each item to view additional information about the AI's recognition.
+
+## Graphics & UI
+
+The app uses two layers in the DOM.  Underneath, a canvas provides the background and all the sprites.  On top, a regular DOM uses HTML elements to provide the user interface.
+
+The app is fully responsive by scaling the canvas and also scaling the size of the HTML elements correspondingly.  The UI simply shrinks to match the underlying canvas.  
+
+## Animation
+
+The animation is designed to be be smooth and frame-rate independent.  
+
+The prediction screen notably renders the progression based on the concept of a "current offset in time", making it possible to pause, and even reverse the animation, as well as adjust its the speed.
+
+All items have a simple "bobbing" animation, using out of sync X and Y offsets cycling in a sine loop.
+
+## The Guide
+
+After initial playtests, we identified a need to slow the pacing of the tutorial and tell a clear story.  The solution we adapted was pop-up text boxes with "typing" text, reminiscent of old-school computer games.  
+
+"The Guide" is the implementation of this solution, and was designed to be a simple but flexible system that allowed us to add a variety of text for every step and situation encountered in the tutorial.
+
+Each piece of Guide text is declared, along with the app state needed for it to show, which can even include code for more expressiveness.  
+
+See the implementation at https://github.com/code-dot-org/ml-activities/blob/main/src/oceans/models/guide.js
+
+This simple system enabled the team to add a detailed narrative voice to the script, and allowed a variety of team members to contribute text.
+
+## Common operations
+
+The documentation for common operations for AI Lab is comprehensive and should apply to this project too: https://github.com/code-dot-org/ml-playground#common-operations
+
+
+
+## Getting started
+
 Steps to get up and running:
 
 ```
