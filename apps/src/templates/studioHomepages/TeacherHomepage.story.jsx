@@ -153,7 +153,8 @@ export default storybook => {
         }
       },
       {
-        name: 'Teacher Homepage - courses, sections and joinedStudentSections',
+        name:
+          'Teacher Homepage - student and pl courses, sections, joinedStudentSections',
         description:
           'Teacher Homepage - teacher does have course progress in both student and pl courses, and does have sections they own and sections in which they are a student',
         story: () => {
