@@ -11,7 +11,6 @@ const NewReferenceGuideForm = props => {
       <h1>New Reference Guide</h1>
       <label>
         Key
-        <input name="key" required />
         <HelpTip>
           <p>
             The reference guide key is used in URLs and cannot be updated once
@@ -19,6 +18,7 @@ const NewReferenceGuideForm = props => {
             Also 'new' and 'edit' are reserved.
           </p>
         </HelpTip>
+        <input className="input" name="key" required />
       </label>
       <br />
       <button className="btn btn-primary" type="submit">
