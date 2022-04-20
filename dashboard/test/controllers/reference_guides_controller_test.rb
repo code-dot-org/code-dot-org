@@ -79,6 +79,7 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
     editable_reference_guide = create :reference_guide, course_version: @unit_group.course_version
 
     sign_in @levelbuilder
+    File.expects(:delete).with {|filename, _| filename.to_s.end_with? "#{editable_reference_guide.key}.json"}.once
 
     post :destroy, params: {
       course_course_name: editable_reference_guide.course_offering_version,
