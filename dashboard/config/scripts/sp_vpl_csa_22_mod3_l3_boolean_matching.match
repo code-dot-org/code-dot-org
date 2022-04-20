@@ -5,11 +5,5 @@ height '40'
 question '`num * 2 == num + 15`'
 answer '`true`'
 
-question '`num - 5 <= 10`'
-answer '`true`'
-
-question '`15 < num`'
-answer '`false`'
-
 question '`num % 5 != 0`'
 answer '`false`'
