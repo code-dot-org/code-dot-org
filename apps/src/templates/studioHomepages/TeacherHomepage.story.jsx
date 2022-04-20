@@ -89,7 +89,7 @@ export default storybook => {
         description:
           'Teacher Homepage - teacher does not have course progress, but does have sections',
         story: () => {
-          withFakeServer({courses: serverCourses, sections: serverSections});
+          withFakeServer({sections: serverSections});
           registerReducers({teacherSections});
           const store = createStoreWithReducers();
           return (
