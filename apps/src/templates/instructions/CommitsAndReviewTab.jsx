@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
@@ -20,9 +20,8 @@ const CommitsAndReviewTab = ({
   viewAsTeacher,
   codeReviewEnabled
 }) => {
-  const [loadingReviewData, setLoadingReviewData] = useState(true);
+  const [loadingReviewData, setLoadingReviewData] = useState(false);
 
-  // API should only be passed via props for testing purposes
   const dataApi = new CodeReviewDataApiV2(
     channelId,
     serverLevelId,
