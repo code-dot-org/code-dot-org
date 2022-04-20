@@ -317,14 +317,14 @@ class TestI18nStringUrlTracker < Minitest::Test
 
   def test_string_key_exists
     custom_i18n = {
-      simple_string: "hello",
-      interpolated_string: "unit %{n}",
-      parent_key: {
-        child_key: 'test'
+      'simple_string' => "hello",
+      'interpolated_string' => "unit %{n}",
+      'parent_key' => {
+        'child_key' => 'test'
       },
       # Value can be a hash.
       # See https://guides.rubyonrails.org/i18n.html#pluralization
-      'number.format': {separator: ".", delimiter: ","}
+      'number.format' => {'separator' => '.', 'delimiter' => ','}
     }
     I18n.backend.store_translations I18n.default_locale, custom_i18n
 
