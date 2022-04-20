@@ -106,8 +106,6 @@ class I18nStringUrlTracker
       options = {
         locale: locale,
         scope: scope,
-        # choose potential separators for the scope
-        smart: true,
         # don't report error if there is unused interpolation pattern in the translation
         safe_interpolation: false,
         # don't track string translation request
