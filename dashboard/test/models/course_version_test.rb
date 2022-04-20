@@ -45,24 +45,24 @@ class CourseVersionTest < ActiveSupport::TestCase
     @partner_unit = create :script, pilot_experiment: 'my-editor-experiment', editor_experiment: 'ed-experiment', family_name: 'family-11', version_year: '1991', is_course: true, published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
     CourseOffering.add_course_offering(@partner_unit)
   end
-  test 'get course versions with student progress for student should return no versions' do
-    assert_equal CourseVersion.course_versions_with_units([], @student).length, 0
+  test 'get courses with participant progress for student should return no courses' do
+    assert_equal CourseVersion.courses_for_unit_selector([], @student).length, 0
   end
 
-  test 'get course versions with student progress for levelbuilder should return all versions where followers in section have progress' do
-    expected_course_version_info = [
-      @unit_group.course_version.id,
-      @unit_teacher_to_students.course_version.id,
-      @pilot_unit.course_version.id,
-      @partner_unit.course_version.id,
-      @pilot_pl_unit.course_version.id,
-      @in_development_unit.course_version.id,
-      @beta_unit.course_version.id,
-      @unit_facilitator_to_teacher.course_version.id
+  test 'get courses with participant progress for levelbuilder should return all courses where followers in section have progress' do
+    expected_course_info = [
+      @unit_group.localized_title,
+      @unit_teacher_to_students.course_version.course_offering.display_name,
+      @pilot_unit.course_version.course_offering.display_name + " *",
+      @partner_unit.course_version.course_offering.display_name + " *",
+      @pilot_pl_unit.course_version.course_offering.display_name + " *",
+      @in_development_unit.course_version.course_offering.display_name + " *",
+      @beta_unit.course_version.course_offering.display_name + " *",
+      @unit_facilitator_to_teacher.course_version.course_offering.display_name
     ].sort
 
     student_unit_ids = [
-      @unit_group.id,
+      @unit_in_course.id,
       @unit_teacher_to_students.id,
       @pilot_unit.id,
       @partner_unit.id,
@@ -72,83 +72,57 @@ class CourseVersionTest < ActiveSupport::TestCase
       @unit_facilitator_to_teacher.id
     ]
 
-    assert_equal CourseVersion.courses_for_unit_selector(@levelbuilder, student_unit_ids).keys.sort, expected_course_version_info
+    assert_equal CourseVersion.courses_for_unit_selector(student_unit_ids, @levelbuilder).map {|co| co[:display_name]}.sort, expected_course_info
   end
 
-  test 'in course versions with progress summary display names of course version include star if they are not launched' do
-    expected_course_version_names = [
-      @unit_group.course_version.display_name,
-      @unit_teacher_to_students.course_version.display_name,
-      @pilot_unit.course_version.display_name + " *",
-      @partner_unit.course_version.display_name + " *",
-      @pilot_pl_unit.course_version.display_name + " *",
-      @in_development_unit.course_version.display_name + " *",
-      @beta_unit.course_version.display_name + " *",
-      @unit_facilitator_to_teacher.course_version.display_name
+  test 'get courses with participant progress for pilot teacher should return courses where pilot teacher can be instructor' do
+    expected_course_info = [
+      @pilot_unit.course_version.course_offering.display_name + " *",
+    ].sort
+
+    assert_equal CourseVersion.courses_for_unit_selector([@pilot_unit.id], @pilot_teacher).map {|co| co[:display_name]}.sort, expected_course_info
+  end
+
+  test 'get courses with participant progress for teacher should only return courses where they can be the instructor' do
+    expected_course_info = [
+      @unit_group.localized_title,
+      @unit_teacher_to_students.course_version.course_offering.display_name,
     ].sort
 
     student_unit_ids = [
-      @unit_group.id,
-      @unit_teacher_to_students.id,
-      @pilot_unit.id,
-      @partner_unit.id,
-      @pilot_pl_unit.id,
-      @in_development_unit.id,
-      @beta_unit.id,
-      @unit_facilitator_to_teacher.id
-    ]
-
-    assert_equal CourseVersion.courses_for_unit_selector(@levelbuilder, student_unit_ids).values.map {|co| co[:display_name]}.sort, expected_course_version_names
-  end
-
-  test 'get course versions with student progress for pilot teacher should return versions where pilot teacher can be instructor' do
-    expected_course_version_info = [
-      @pilot_unit.course_version.id
-    ].sort
-
-    assert_equal CourseVersion.courses_for_unit_selector(@pilot_teacher, [@pilot_unit.id]).keys.sort, expected_course_version_info
-  end
-
-  test 'get course versions with student progress for teacher should only return versions where they can be the instructor' do
-    expected_course_version_info = [
-      @unit_group.course_version.id,
-      @unit_teacher_to_students.course_version.id
-    ].sort
-
-    student_unit_ids = [
-      @unit_group.id,
+      @unit_in_course.id,
       @unit_teacher_to_students.id,
       @unit_facilitator_to_teacher.id
     ]
 
-    assert_equal CourseVersion.courses_for_unit_selector(@teacher, student_unit_ids).keys.sort, expected_course_version_info
+    assert_equal CourseVersion.courses_for_unit_selector(student_unit_ids, @teacher).map {|co| co[:display_name]}.sort, expected_course_info
   end
 
-  test 'get course versions with student progress for facilitator should return all versions, amd units where facilitator can be instructor and followers in section have progress' do
-    expected_course_version_info = [
-      @unit_group.course_version.id,
-      @unit_teacher_to_students.course_version.id,
-      @unit_facilitator_to_teacher.course_version.id
+  test 'get courses with participant progress for facilitator should return all courses, amd units where facilitator can be instructor and followers in section have progress' do
+    expected_course_info = [
+      @unit_group.localized_title,
+      @unit_teacher_to_students.course_version.course_offering.display_name,
+      @unit_facilitator_to_teacher.course_version.course_offering.display_name
+    ].sort
+
+    expected_unit_info = [
+      @unit_in_course.localized_title,
+      @unit_teacher_to_students.localized_title,
+      @unit_facilitator_to_teacher.localized_title
     ].sort
 
     student_unit_ids = [
-      @unit_group.id,
+      @unit_in_course.id,
       @unit_teacher_to_students.id,
       @unit_facilitator_to_teacher.id
     ]
 
-    assignable_course_versions = CourseVersion.courses_for_unit_selector(@facilitator, student_unit_ids)
+    courses_with_progress = CourseVersion.courses_for_unit_selector(student_unit_ids, @facilitator)
 
-    assert_equal assignable_course_versions.keys.sort, expected_course_version_info
+    assert_equal courses_with_progress.map {|co| co[:display_name]}.sort, expected_course_info
 
-    unit_group_units = assignable_course_versions[@unit_group.course_version.id][:units]
-    assert_equal unit_group_units.keys, [@unit_in_course.id]
-
-    teacher_to_student_units = assignable_course_versions[@unit_teacher_to_students.course_version.id][:units]
-    assert_equal teacher_to_student_units.keys, [@unit_teacher_to_students.id, @unit_teacher_to_students2.id]
-
-    facilitator_to_teacher_units = assignable_course_versions[@unit_facilitator_to_teacher.course_version.id][:units]
-    assert_equal facilitator_to_teacher_units.keys, [@unit_facilitator_to_teacher.id]
+    unit_names = courses_with_progress.map {|co| co[:units]}.flatten.map {|u| u[:name]}
+    assert_equal unit_names.sort, expected_unit_info
   end
 
   test "course version associations" do
