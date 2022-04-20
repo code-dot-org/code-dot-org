@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-18 22:52:35 UTC",
+    "serialized_at": "2022-04-19 19:02:40 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -141,7 +141,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "**How can logical operators be used to evaluate multiple conditions?**\n\nStudents revisit logical operators to explore the use of the `&&` (and) and `||` (or) operators. Students use truth tables to evaluate Boolean expressions and learn about short-circuited evaluation.",
-        "preparation": "* Print copies of the Truth Tables handout (one for each student)\n* Gather sticky notes or scrap pieces of paper (one for each student)",
+        "preparation": "* Print copies of the Truth Tables handout (one for each student)\n* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up\n* Gather sticky notes or scrap pieces of paper (one for each student)",
         "student_overview": "**How can logical operators be used to evaluate multiple conditions?**\n\nYou have used the NOT ( `!` ) operator to reverse the outcome of a Boolean expression. In this lesson, you explore the use of the AND ( `&&` ) and OR ( `||` ) operators. You learn to use truth tables to evaluate Boolean expressions and the functionality of short-circuited evaluation."
       },
       "seeding_key": {
@@ -4940,6 +4940,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa4-2022"
+        ],
         "progression": "Unit 4 Survey"
       },
       "bonus": false,
@@ -4987,6 +4990,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Console Sandbox"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5008,6 +5014,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood Sandbox"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -5030,6 +5039,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -5052,6 +5064,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Theater Sandbox"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6029,6 +6044,30 @@
       }
     },
     {
+      "name": "CS Bingo Cards",
+      "url": "https://docs.google.com/presentation/d/1JWNIeSVRbgsusc1bQNbmAyoPecSO3nXUvSHpmc03dBY/edit?usp=sharing",
+      "key": "cs_bingo_cards_3",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "cs_bingo_cards_3"
+      }
+    },
+    {
+      "name": "CS Bingo Definitions",
+      "url": "https://docs.google.com/document/d/1fmhxQJWeJQcU-KivDSrWcp4vfi1be43RRmnrDchHnC4/edit?usp=sharing",
+      "key": "cs_bingo_definitions_3",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_bingo_definitions_3"
+      }
+    },
+    {
       "name": "Dataset Summaries",
       "url": "https://docs.google.com/document/d/1wyGaZP_Lc_aC9gjv_7PrUwH5TFy5O2USU3rqFUuKKpA/edit?usp=sharing",
       "key": "dataset_summaries",
@@ -6526,6 +6565,18 @@
       "seeding_key": {
         "lesson.key": "lesson-6",
         "resource.key": "_key_u4l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "cs_bingo_cards_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "cs_bingo_definitions_3"
       }
     },
     {
