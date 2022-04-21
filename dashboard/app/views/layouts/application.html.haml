@@ -1,16 +1,8 @@
 !!! 5
 %html{dir: locale_dir}
   %head
+    = render partial: 'i18n/crowdin_in_context_tool'
     = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'onetrust_cookie_scripts.haml')), type: :haml, locals: {dashboard: true}
-
-    -# The Crowdin In-Context tool (https://crowdin.com/project/codeorg/settings#in-context) allows
-    -# us to view original & translated strings in Crowdin.
-    -# "in-TL" is a pseudo-language locale where the Crowdin strings are stored
-    - if request.locale === "in-TL"
-      :javascript
-        var _jipt = [];
-        _jipt.push(['project', 'codeorg']);
-      %script{type: "text/javascript", src: "//cdn.crowdin.com/jipt/jipt.js"}
     -# Setup variables used by the Offline feature.
     :javascript
       window.OFFLINE_SERVICE_WORKER_PATH =
