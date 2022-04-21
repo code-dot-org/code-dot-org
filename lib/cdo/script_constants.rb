@@ -342,6 +342,11 @@ module ScriptConstants
     return CATEGORIES[category].include? script
   end
 
+  def self.categories(script)
+    CATEGORIES.select {|_, scripts| scripts.include? script}.
+      map {|category, _| category.to_s}
+  end
+
   CSF_COURSE_PATTERNS = [/^(course[a-f])-([0-9]+)$/, /^(express)-([0-9]+)$/, /^(pre-express)-([0-9]+)$/]
 
   def self.has_congrats_page?(script)
