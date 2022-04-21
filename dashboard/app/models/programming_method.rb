@@ -91,12 +91,12 @@ class ProgrammingMethod < ApplicationRecord
       return
     end
     if ProgrammingMethod.where(programming_class_id: programming_class_id, overload_of: key).count > 0
-      errors.add(:overload_of, "Cannot have overload if another method overloads it")
+      errors.add(:overload_of, "This method cannot have non-blank overload_of if another method overloads it")
       return
     end
     overload = ProgrammingMethod.find_by(programming_class_id: programming_class_id, key: overload_of)
     if overload
-      errors.add(:overload_of, "Overloaded method cannot have overload") unless overload.overload_of.blank?
+      errors.add(:overload_of, "Overloaded method cannot have overload_of be non-blank") unless overload.overload_of.blank?
     else
       errors.add(:overload_of, "Overload method must exist")
     end
