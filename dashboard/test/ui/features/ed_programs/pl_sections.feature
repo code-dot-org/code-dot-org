@@ -144,7 +144,6 @@ Feature: Professional learning Sections
     Given I create an authorized teacher-associated student named "Sally"
     When I sign in as "Teacher_Sally" and go home
     And I get universal instructor access
-    And I reload the page
     And I create a new teacher section and go home
 
     Then I create a teacher named "Teacher"
@@ -160,9 +159,7 @@ Feature: Professional learning Sections
     Given I create an authorized teacher-associated student named "Sally"
     When I sign in as "Teacher_Sally" and go home
     And I get universal instructor access
-    And I reload the page
     And I create a new facilitator section and go home
-    Then the professional learning section table should have 1 row
 
     Then I create a teacher named "Teacher"
     And I sign in as "Teacher" and go home
@@ -178,7 +175,6 @@ Feature: Professional learning Sections
     Given I create an authorized teacher-associated student named "Sally"
     When I sign in as "Teacher_Sally" and go home
     And I get universal instructor access
-    And I reload the page
     And I create a new teacher section and go home
 
     Then I create a teacher named "Facilitator"
@@ -196,7 +192,6 @@ Feature: Professional learning Sections
     Given I create an authorized teacher-associated student named "Sally"
     When I sign in as "Teacher_Sally" and go home
     And I get universal instructor access
-    And I reload the page
     And I create a new facilitator section and go home
 
     Then I create a teacher named "Facilitator"
@@ -214,7 +209,6 @@ Feature: Professional learning Sections
     Given I create an authorized teacher-associated student named "Sally"
     When I sign in as "Teacher_Sally" and go home
     And I get universal instructor access
-    And I reload the page
     And I create a new teacher section and go home
 
     Then I create a teacher named "Universal Instructor 2"
@@ -232,7 +226,6 @@ Feature: Professional learning Sections
     Given I create an authorized teacher-associated student named "Sally"
     When I sign in as "Teacher_Sally" and go home
     And I get universal instructor access
-    And I reload the page
     And I create a new facilitator section and go home
 
     Then I create a teacher named "Universal Instructor 2"
