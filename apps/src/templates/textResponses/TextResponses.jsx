@@ -15,7 +15,6 @@ import {
   getSelectedScriptName
 } from '@cdo/apps/redux/unitSelectionRedux';
 import {loadTextResponsesFromServer} from '@cdo/apps/templates/textResponses/textReponsesDataApi';
-import {assignmentCourseVersionShape} from '../teacherDashboard/shapes';
 
 const CSV_HEADERS = [
   {label: i18n.name(), key: 'studentName'},
@@ -28,7 +27,7 @@ const PADDING = 8;
 
 function TextResponses({
   sectionId,
-  courseVersionsWithProgress,
+  coursesWithProgress,
   scriptId,
   scriptName,
   setScriptId
@@ -102,7 +101,7 @@ function TextResponses({
       <div style={styles.unitSelection}>
         <div style={{...h3Style, ...styles.header}}>{i18n.selectACourse()}</div>
         <UnitSelector
-          courseVersionsWithProgress={courseVersionsWithProgress}
+          coursesWithProgress={coursesWithProgress}
           scriptId={scriptId}
           onChange={onChangeScript}
         />
@@ -144,8 +143,7 @@ function TextResponses({
 TextResponses.propTypes = {
   // Provided by redux.
   sectionId: PropTypes.number.isRequired,
-  courseVersionsWithProgress: PropTypes.objectOf(assignmentCourseVersionShape)
-    .isRequired,
+  coursesWithProgress: PropTypes.array.isRequired,
   scriptId: PropTypes.number,
   scriptName: PropTypes.string,
   setScriptId: PropTypes.func.isRequired
@@ -181,7 +179,7 @@ export const UnconnectedTextResponses = TextResponses;
 export default connect(
   state => ({
     sectionId: state.teacherSections.selectedSectionId,
-    courseVersionsWithProgress: state.unitSelection.courseVersionsWithProgress,
+    coursesWithProgress: state.unitSelection.coursesWithProgress,
     scriptId: state.unitSelection.scriptId,
     scriptName: getSelectedScriptName(state)
   }),

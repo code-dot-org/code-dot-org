@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {assignmentCourseVersionShape} from '../teacherDashboard/shapes';
 
 // TODO: Can/should we share any logic with AssignmentSelector?
 
@@ -18,15 +17,14 @@ export const dropdownStyles = {
 
 export default class UnitSelector extends Component {
   static propTypes = {
-    courseVersionsWithProgress: PropTypes.objectOf(assignmentCourseVersionShape)
-      .isRequired,
+    coursesWithProgress: PropTypes.array.isRequired,
     scriptId: PropTypes.number,
     onChange: PropTypes.func.isRequired,
     style: PropTypes.object
   };
 
   render() {
-    const {scriptId, onChange, courseVersionsWithProgress} = this.props;
+    const {scriptId, onChange, coursesWithProgress} = this.props;
 
     return (
       <div>
@@ -36,9 +34,9 @@ export default class UnitSelector extends Component {
           style={dropdownStyles.dropdown}
           id="uitest-course-dropdown"
         >
-          {Object.values(courseVersionsWithProgress).map(version => (
-            <optgroup key={version.id} label={version.name}>
-              {Object.values(version.units).map(unit => (
+          {coursesWithProgress.map((version, index) => (
+            <optgroup key={index} label={version.display_name}>
+              {version.units.map(unit => (
                 <option key={unit.id} value={unit.id}>
                   {unit.name}
                 </option>

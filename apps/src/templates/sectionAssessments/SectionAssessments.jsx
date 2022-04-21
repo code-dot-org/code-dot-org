@@ -33,7 +33,6 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {CSVLink} from 'react-csv';
 import FeedbackDownload from './FeedbackDownload';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {assignmentCourseVersionShape} from '../teacherDashboard/shapes';
 
 const CSV_ASSESSMENT_HEADERS = [
   {label: i18n.name(), key: 'studentName'},
@@ -58,8 +57,7 @@ class SectionAssessments extends Component {
     // provided by redux
     sectionId: PropTypes.number.isRequired,
     isLoading: PropTypes.bool.isRequired,
-    courseVersionsWithProgress: PropTypes.objectOf(assignmentCourseVersionShape)
-      .isRequired,
+    coursesWithProgress: PropTypes.array.isRequired,
     assessmentList: PropTypes.array.isRequired,
     scriptId: PropTypes.number,
     assessmentId: PropTypes.number,
@@ -181,7 +179,7 @@ class SectionAssessments extends Component {
   render() {
     const {
       sectionName,
-      courseVersionsWithProgress,
+      coursesWithProgress,
       scriptId,
       assessmentList,
       assessmentId,
@@ -204,7 +202,7 @@ class SectionAssessments extends Component {
               {i18n.selectACourse()}
             </div>
             <UnitSelector
-              courseVersionsWithProgress={courseVersionsWithProgress}
+              coursesWithProgress={coursesWithProgress}
               scriptId={scriptId}
               onChange={this.onSelectScript}
             />
@@ -368,7 +366,7 @@ export default connect(
   state => ({
     sectionId: state.teacherSections.selectedSectionId,
     isLoading: !!state.sectionAssessments.isLoading,
-    courseVersionsWithProgress: state.unitSelection.courseVersionsWithProgress,
+    coursesWithProgress: state.unitSelection.coursesWithProgress,
     assessmentList: getCurrentScriptAssessmentList(state),
     scriptId: state.unitSelection.scriptId,
     assessmentId: state.sectionAssessments.assessmentId,

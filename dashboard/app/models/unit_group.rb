@@ -362,8 +362,8 @@ class UnitGroup < ApplicationRecord
     }
   end
 
-  def has_student_progress?(student_unit_ids)
-    default_units.any? {|unit| student_unit_ids.include? unit.id}
+  def included_in_units?(unit_ids)
+    default_units.any? {|unit| unit_ids.include? unit.id}
   end
 
   # Returns summary object of all the course versions that an instructor can
