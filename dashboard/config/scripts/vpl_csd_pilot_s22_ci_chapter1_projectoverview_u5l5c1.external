@@ -1,0 +1,38 @@
+name 'VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U5L5C1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Chapter 1 project: Create a Representation
+
+## Project overview
+
+##### Chapter 1 of the Data and Society unit concludes with students designing a structure to represent their perfect day using the binary representation systems. Students start by writing a short description of their perfect day and then review with a partner to identify the key pieces of information they think a computer could capture. Then as a class they decide how a punch card of bytes of information will be interpreted to represent their pieces of information. Finally, students will use the ASCII, binary number, and image formats to represent their perfect days and trade their punch cards to try and decode what the other student's perfect day is like. The project concludes with students reflecting on their encoding and decoding process.
+
+## Sample student projects
+
+### Only thing left to do is add sample projects and delete these instructions
+
+##### Click the images below to view the sample projects in a new tab.
+
+<div style="float: left; text-align:center;"><strong>Recycling Club</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhBiffg8HpOk2lRx1kd5sgaw" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin: 25px;" src="https://images.code.org/5b0044bfd92d44c97cd74d82f1933daa-image-1565630578147.png" width="250px"; alt="Image of recycling club web page"></a></div>
+
+<div style="float: left; text-align:center;"><strong>Musical Instruments</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhMuNKEOTdyH5PPeUpDimEeY" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin: 25px;" src="https://images.code.org/82323a78b17b69101dd6e98a6a21c55c-image-1565630573896.png" width="250px" alt="Immage of musical insrumentss web page"></a></div>
+
+<div style="float: left; text-align:center;"><strong>My Trip</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhHHDE0tb28ed-9-scxvFYE0" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin: 25px;" src="https://images.code.org/51b787b6a25663e092b3f55e051e9a94-image-1565630570417.png" width="250px" alt="Image of trip web page"></a></div>
+
+
+<div style="clear:both"/>
+
+## Pacing recommendation
+
+##### If you are short on time, this project can be used as way to wrap up the unit. This project can also be expanded out to include a student presentation if you have the time available. 
+
+## Project resources
+* ##### <a href="https://studio.code.org/s/csd5-2021/lessons/8" target="blank" rel="noopener noreferrer" >Lesson Plan</a>  
+* ##### <a href="https://docs.google.com/document/d/1DWD0xxNqdoAeusdS2NBQQL_lCGjvx8_uS_tb0Fzvfhw/view" target="blank" rel="noopener noreferrer" >Project Guide</a> 
+* ##### <a href="https://docs.google.com/document/d/1UGYRASWLwE7LulGVyKKKN96_DMUvRzjHbkI5rBqtP2Q/view" target="blank" rel="noopener noreferrer" >Student Checklist</a> 
+* ##### <a href="https://docs.google.com/document/d/1Ndo0YTX76UMcxiY_SQz_CgPyrbux1Vzqi9KcM5-Ijw8/view" target="blank" rel="noopener noreferrer" >Project Rubric</a> 
+
+
+MARKDOWN

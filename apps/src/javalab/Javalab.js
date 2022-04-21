@@ -19,7 +19,7 @@ import javalab, {
   setIsTesting,
   openPhotoPrompter,
   closePhotoPrompter,
-  getSourcesAndValidation
+  setBackpackEnabled
 } from './javalabRedux';
 import playground from './playground/playgroundRedux';
 import {TestResults} from '@cdo/apps/constants';
@@ -86,6 +86,7 @@ Javalab.prototype.init = function(config) {
   this.displayTheme = getDisplayThemeFromString(config.displayTheme);
   this.isStartMode = !!config.level.editBlocks;
   this.isEditingExemplar = !!config.level.isEditingExemplar;
+  this.isViewingExemplar = !!config.level.isViewingExemplar;
   config.makeYourOwn = false;
   config.wireframeShare = true;
   config.noHowItWorks = true;
@@ -221,8 +222,8 @@ Javalab.prototype.init = function(config) {
 
   const startSources = config.level.lastAttempt || config.level.startSources;
   const validation = config.level.validation || {};
-  if (this.isEditingExemplar && config.level.exemplarSources) {
-    // If we're editing an exemplar, set initial sources
+  if (config.level.exemplarSources) {
+    // If we have exemplar sources (either for editing or viewing), set initial sources
     // with the exemplar code saved to the level definition.
     getStore().dispatch(setAllSources(config.level.exemplarSources));
   } else if (
@@ -270,9 +271,14 @@ Javalab.prototype.init = function(config) {
   // Dispatches a redux update of display theme
   getStore().dispatch(setDisplayTheme(this.displayTheme));
 
-  getStore().dispatch(
-    setBackpackApi(new BackpackClientApi(config.backpackChannel))
-  );
+  const backpackEnabled = !!config.backpackEnabled;
+  getStore().dispatch(setBackpackEnabled(backpackEnabled));
+
+  if (backpackEnabled) {
+    getStore().dispatch(
+      setBackpackApi(new BackpackClientApi(config.backpackChannel))
+    );
+  }
 
   getStore().dispatch(
     setDisableFinishButton(
@@ -356,11 +362,6 @@ Javalab.prototype.executeJavabuilder = function(executionType) {
     options.useNeighborhood = true;
   }
 
-  let overrideSources;
-  if (this.isEditingExemplar) {
-    overrideSources = getSources(getStore().getState());
-  }
-
   this.javabuilderConnection = new JavabuilderConnection(
     this.level.javabuilderUrl,
     this.onOutputMessage,
@@ -371,12 +372,29 @@ Javalab.prototype.executeJavabuilder = function(executionType) {
     this.setIsRunning,
     this.setIsTesting,
     executionType,
-    this.level.csaViewMode,
-    overrideSources
+    this.level.csaViewMode
   );
-  project.autosave(() => {
-    this.javabuilderConnection.connectJavabuilder();
-  });
+
+  let connectToJavabuilder;
+  if (this.isEditingExemplar || this.isViewingExemplar) {
+    const overrideSources = getSources(getStore().getState());
+    connectToJavabuilder = () =>
+      this.javabuilderConnection.connectJavabuilderWithOverrideSources(
+        overrideSources
+      );
+  } else if (this.isStartMode && executionType === ExecutionType.TEST) {
+    // we only need to override validation if we are in start mode and running tests.
+    const overrideValidation = getValidation(getStore().getState());
+    connectToJavabuilder = () =>
+      this.javabuilderConnection.connectJavabuilderWithOverrideValidation(
+        overrideValidation
+      );
+  } else {
+    connectToJavabuilder = () =>
+      this.javabuilderConnection.connectJavabuilder();
+  }
+
+  project.autosave(connectToJavabuilder);
   postContainedLevelAttempt(this.studioApp_);
 };
 
@@ -430,11 +448,6 @@ Javalab.prototype.onContinue = function(submit) {
 
 Javalab.prototype.getCode = function() {
   const storeState = getStore().getState();
-  if (this.isStartMode) {
-    // If we are in start mode, get both sources and validation so that
-    // levelbuilders can run validation code.
-    return getSourcesAndValidation(storeState);
-  }
   return getSources(storeState);
 };
 

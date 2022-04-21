@@ -6,7 +6,7 @@ Feature: (Un)Assign on script and course overview pages
 
   Background:
     Given I create a teacher named "Frizzle" and go home
-    And I create a new section named "assigned CSP1" assigned to "Computer Science Principles" version "'17-'18"
+    And I create a new student section named "assigned CSP1" assigned to "Computer Science Principles" version "'17-'18"
     Then the section table should have 1 row
 
   Scenario: Assignment on script and course overview for teacher

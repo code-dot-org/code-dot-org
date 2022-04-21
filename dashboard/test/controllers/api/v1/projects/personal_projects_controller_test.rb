@@ -12,7 +12,7 @@ class Api::V1::Projects::PersonalProjectsControllerTest < ActionDispatch::Integr
     }.to_json
     personal_project = {id: 22, value: personal_project_value}
 
-    StorageApps.any_instance.stubs(:get_active_projects).returns([personal_project])
+    Projects.any_instance.stubs(:get_active_projects).returns([personal_project])
   end
 
   test 'personal projects are correct' do

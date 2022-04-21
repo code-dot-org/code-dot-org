@@ -330,13 +330,13 @@
           "name": "Pierwsze kroki "
         },
         "544fd00b-84f3-47e4-9e02-cb27a6cfbbca": {
-          "name": "Zajęcia (30-45 minut)"
+          "name": "Aktywność"
         },
         "e12c8da3-986d-488b-bed5-a7bb9e95e393": {
           "name": "Poziomy"
         },
         "2f9c446a-0802-48b0-91ff-a7df9fe4afe2": {
-          "name": "Zakończenie (5 minut)"
+          "name": "Zakończenie"
         },
         "42552407-b313-4fc4-9163-e6a8e4a6029d": {
           "name": "Wersja rozszerzona"
@@ -348,7 +348,7 @@
           "name": "Pierwsze kroki "
         },
         "82dec89b-f375-4238-a251-ffae17c2dfd1": {
-          "name": "Zajęcia (30-45 minut)"
+          "name": "Aktywność"
         },
         "a25c23cd-4e73-4a82-882f-7cc0a9fdfeb4": {
           "name": "Poziomy"
@@ -358,6 +358,9 @@
         },
         "4cf19609-58ef-497b-b48d-2b9a0281a490": {
           "name": "Rozpowszechniaj"
+        },
+        "7afb9d6e-2c07-44d2-8504-90df0cecc778": {
+          "name": "Ocena"
         },
         "a676c281-2f0e-41d3-8e30-dbf6bb8d6dc0": {
           "name": "Rozgrzewka"
@@ -4053,10 +4056,10 @@
           "name": "Zakończenie"
         },
         "235b3b14-975a-43b6-93bc-d386b857fd6b": {
-          "name": "Pierwsze kroki (5 minut)"
+          "name": "Pierwsze kroki"
         },
         "fd06b4db-e3d4-491b-9372-af9a05dc2bb7": {
-          "name": "Zajęcia (30-45 minut)"
+          "name": "Aktywność"
         },
         "e96a358f-201b-4474-8950-90dd94426aff": {
           "name": "Zakończenie"

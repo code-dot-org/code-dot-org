@@ -137,7 +137,8 @@ const initialProjectListState = {
   playlab: [],
   artist: [],
   dance: [],
-  poetry: []
+  poetry: [],
+  thebadguys: []
 };
 
 function projectLists(state = initialProjectListState, action) {

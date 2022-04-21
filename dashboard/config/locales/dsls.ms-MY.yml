@@ -2241,23 +2241,34 @@ ms-MY:
         display_name: Akhir Projek Kursus
       courseC_multi_artist_prog6_predict1_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Artis akan melukis segi tiga dengan tiga sisi yang sama.
+          feedback: Salah. Artis melukis segi empat sama.
+        - text: Artis akan melukis garisan tunggal.
+          feedback: Salah. Artis melukis segi empat sama.
+        - text: Artis akan melukis segi empat sama.
+          correct: true
           feedback: Betul!
-        - {}
+        - feedback: Salah. Artis melukis segi empat sama.
         questions:
-        - {}
+        - text: Lihat kod di bawah dengan teliti. Apakah yang akan berlaku apabila
+            anda mengklik "Jalankan"?
       courseC_multi_harvester_loops11_predict1_2021:
         answers:
         - text: '4'
+          feedback: Salah. Petani akan mengutip 4 labu di dalam setiap 3 gelung. 4
+            didarabkan 3 hasilnya ialah 12!
         - text: '12'
           correct: true
           feedback: Betul!
         - text: '15'
+          feedback: Salah. Petani akan mengutip 4 labu di dalam setiap 3 gelung. 4
+            didarabkan 3 hasilnya ialah 12!
         - text: '20'
+          feedback: Salah. Petani akan mengutip 4 labu di dalam setiap 3 gelung. 4
+            didarabkan 3 hasilnya ialah 12!
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Berapa banyak labu yang akan
+            dikutip oleh petani selepas anda mengklik "Jalankan"?
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
         - text: Scrat akan sampai kepada buah oak. Tiada pepijat dalam kod.
@@ -2294,25 +2305,39 @@ ms-MY:
             berlaku apabila anda mengklik "Jalankan"?
       courseC_multi_starWars_predict1_2021:
         answers:
-        - {}
-        - {}
+        - text: BB-8 tidak akan bergerak.
+          feedback: Salah. Blok berulang akan membuatkan BB-8 bergerak ke hadapan
+            sebanyak 5 kali.
+        - text: BB-8 akan bergerak ke satu ruang sahaja
+          feedback: Salah. Blok berulang akan membuatkan BB-8 bergerak ke hadapan
+            sebanyak 5 kali.
         - text: BB-8 akan bergerak 5 kali dan mendapatkan semua logam sekerap
           correct: true
           feedback: Betul!
-        - {}
+        - feedback: Salah. Blok berulang akan membuatkan BB-8 bergerak ke hadapan
+            sebanyak 5 kali.
         questions:
-        - {}
+        - text: Apakah yang anda fikirkan akan berlaku apabila anda mengklik "Jalankan"?
       courseC_multi_starWars_predict2_2021:
         answers:
-        - {}
+        - text: BB-8 akan berjalan terlalu jauh dalam gelung pertama.
+          feedback: Salah. Gelung pertama hanya membenarkan BB-8 bergerak ke hadapan
+            sebanyak 2 ruangan, sedangkan ia perlu bergerak ke hadapan sebanyak 3
+            ruangan.
         - text: BB-8 tidak akan berjalan cukup jauh di dalam gelung pertama untuk
             mendapatkan semua logam sekerap.
           correct: true
           feedback: Betul!
-        - {}
-        - {}
+        - text: BB-8 akan mengumpulkan semua logam sekerap tanpa mengalami masalah.
+          feedback: Salah. Gelung pertama hanya membenarkan BB-8 bergerak ke hadapan
+            sebanyak 2 ruangan, sedangkan ia perlu bergerak ke hadapan sebanyak 3
+            ruangan.
+        - feedback: Salah. Gelung pertama hanya membenarkan BB-8 bergerak ke hadapan
+            sebanyak 2 ruangan, sedangkan ia perlu bergerak ke hadapan sebanyak 3
+            ruangan.
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Apakah yang akan berlaku apabila
+            anda mengklik "Jalankan"?
       courseD_EOC_2021:
         display_name: Akhir Projek Kursus
       courseD_multi_artist_nestedLoops9_predict1_2021:
@@ -2327,13 +2352,25 @@ ms-MY:
         - {}
       courseD_multi_bee_conditionals1_predict1_2021:
         answers:
-        - {}
-        - correct: true
+        - text: 'Lebah akan bergerak ke awan dan cuba mendapatkan nektar, walau apa
+            pun yang berlaku. '
+          feedback: Salah. Blok `jika pada bunga` memberikan jaminan bahawa lebah
+            hanya akan cuba mendapatkan nektar jika terdapat bunga di bawah awan.
+        - text: Lebah akan bergerak ke awan dan hanya cuba mendapatkan nektar jika
+            terdapat bunga di bawah.
+          correct: true
           feedback: Betul!
-        - {}
-        - {}
+        - text: 'Lebah akan bergerak ke awan dan kemudian tidak melakukan apa-apa,
+            walau apa pun yang berlaku. '
+          feedback: Salah. Blok `jika pada bunga` memberikan jaminan bahawa lebah
+            akan cuba mendapatkan nektar jika terdapat bunga di bawah awan.
+        - feedback: Salah. Blok `jika pada bunga` memberikan jaminan bahawa lebah
+            hanya akan cuba mendapatkan nektar jika terdapat bunga di bawah awan.
         questions:
-        - {}
+        - text: Awan menghalang pandangan. Mungkin terdapat bunga di bawah awan ini.
+            Jika terdapat bunga, lebah perlu mengumpul nektar sekali. Jika tiada bunga,
+            lebah tidak boleh melakukan apa-apa. Perhatikan dengan teliti pada kod
+            di bawah. Apakah yang anda fikir akan berlaku selepas anda mengklik "Jalankan"?
       courseD_multi_bee_conditionals1_predict1_dani:
         answers:
         - {}
@@ -2344,32 +2381,56 @@ ms-MY:
         - {}
       courseD_multi_bee_conditionals7_predict2_2021:
         answers:
-        - correct: true
+        - text: Lebah akan dapatkan nektar pada setiap bunga dan buat madu di setiap
+            sarang lebah.
+          correct: true
           feedback: Betul!
-        - {}
-        - {}
-        - {}
+        - feedback: Salah. Blok `jika pada bunga` membolehkan lebah mendapatkan nektar
+            pada setiap bunga dan membuat madu di setiap sarang lebah.
+        - feedback: Salah. Salah. Blok `jika pada bunga` membolehkan lebah mendapatkan
+            nektar pada setiap bunga dan membuat madu di setiap sarang lebah..
+        - feedback: Salah. Salah. Blok `jika pada bunga` membolehkan lebah mendapatkan
+            nektar pada setiap bunga dan membuat madu di setiap sarang lebah..
         questions:
-        - {}
+        - text: 'Lihat dengan teliti kod di bawah. Apakah yang anda fikir akan berlaku
+            selepas anda mengklik "Jalankan"? Perlu diingat: hanya akan terdapat *satu*
+            sarang lebah atau *satu* bunga di belakang setiap awan.'
       courseD_multi_bee_nestedLoops2_predict1_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Lebah akan bergerak ke hadapan dan mendapatkan nektar hanya sekali.
+          feedback: Salah. Lebah menggelung tindakan bergerak ke hadapan dan mengumpul
+            nektar yang bergelung, membolehkan lebah tersebut menyelesaikan teka-teki.
+        - text: Lebah akan mendapat hanya 2 unit nektar.
+          feedback: Salah. Lebah menggelung tindakan bergerak ke hadapan dan mengumpul
+            nektar yang bergelung, membolehkan lebah tersebut menyelesaikan teka-teki.
+        - text: Lebah akan mendapat semua nektar.
+          correct: true
           feedback: Betul!
-        - {}
+        - feedback: Salah. Lebah menggelung tindakan bergerak ke hadapan dan mengumpul
+            nektar yang bergelung, membolehkan lebah tersebut menyelesaikan teka-teki.
         questions:
-        - {}
+        - text: Perhatikan dengan teliti gelung bersarang di bawah. Apakah yang akan
+            berlaku apabila anda mengklik "Jalankan"?
       courseD_multi_bee_nestedLoops9_predict2_2021:
         answers:
         - text: '4'
+          feedback: Salah. Lebah mengumpul 2 nektar dalam gelung bergerak ke hadapan,
+            kemudian 2 nektar dalam gelung ke bawah. Ini semua berlaku di dalam satu
+            lagi gelung sebanyak dua kali. 4 didarabkan dengan 2 ialah 8!
         - text: '8'
           correct: true
           feedback: Betul!
         - text: '10'
+          feedback: Salah. Lebah mengumpul 2 nektar dalam gelung bergerak ke hadapan,
+            kemudian 2 nektar dalam gelung ke bawah. Ini semua berlaku di dalam satu
+            lagi gelung sebanyak dua kali. 4 didarabkan dengan 2 ialah 8!
         - text: '12'
+          feedback: Salah. Lebah mengumpul 2 nektar dalam gelung bergerak ke hadapan,
+            kemudian 2 nektar dalam gelung ke bawah. Ini semua berlaku di dalam satu
+            lagi gelung sebanyak dua kali. 4 didarabkan dengan 2 ialah 8!
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Berapa banyak madu yang akan
+            dibuat oleh lebah apabila anda mengklik "Jalankan"?
       courseD_multi_farmer_condLoops9_predict1_2021:
         answers:
         - {}
@@ -2392,7 +2453,9 @@ ms-MY:
         answers:
         - {}
         - {}
-        - correct: true
+        - text: Petani akan membuang kotoran selagi terdapat longgokan, kemudian berhenti
+            apabila longgokan sudah tiada.
+          correct: true
           feedback: Betul!
         - {}
         questions:
@@ -2416,7 +2479,8 @@ ms-MY:
         - text: Burung itu akan bergerak ke hadapan dan terserempak dengan TNT.
         - {}
         questions:
-        - {}
+        - text: Perhatikan dengan teliti kod di bawah. Apakah yang anda fikirkan akan
+            berlaku apabila anda mengklik "Jalankan"?
       courseE_EOC_2021:
         display_name: Akhir Projek Kursus
         description: Anda telah sampai pada penghujung Kursus E! Pilih projek untuk
@@ -2446,7 +2510,7 @@ ms-MY:
       courseE_prediction_artistFunction1_2021:
         answers:
         - {}
-        - {}
+        - text: Artis akan melukis segi empat sama tunggal.
         - {}
         - correct: true
           feedback: Betul! Fungsi itu dipanggil dua kali dalam atur cara, bersama
@@ -3143,6 +3207,18 @@ ms-MY:
         content1: penerangan di sini
       csf_password_power-up_2021:
         content1: penerangan di sini
+        markdown: |
+          #  Kukuhkan Kata Laluan Anda
+
+          ## Petua Kata Laluan untuk Diingati
+
+          * Mulakan dengan **frasa** yang sukar dilupakan.
+          * Hanya **ibu bapa** anda yang sepatutnya mengetahui kata laluan anda.
+          * Jangan sesekali menggunakan mana-mana maklumat identiti **peribadi** dalam kata laluan anda.
+          * Cipta kata laluan dengan sekurang-kurangnya **lapan** aksara.
+          * Gunakan huruf, nombor dan **simbol** dalam kata laluan anda.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_putting_a_stop_to_online_meanness:
         content1: penerangan di sini
       csf_putting_a_stop_to_online_meanness_2021:
@@ -3294,3 +3370,25 @@ ms-MY:
           # Rakan Robotik Saya
 
           Belajar mengatur cara dengan menulis kod untuk rakan anda!
+      BinaryBracelets-Unplugged_2021:
+        markdown: |
+          # Gelang Binari
+
+          Cipta gelang yang mewakili nama anda dalam sistem yang difahami oleh komputer!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      ConditionalsWithCards-Unplugged_2021:
+        markdown: |
+          # Bersyarat dengan Kad
+
+          Main permainan kad dan cipta peraturan seperti "Jika saya mencabut kad merah, saya dapat mata" dan "Jika saya mencabut kad hitam, anda akan dapat mata."
+      GraphPaperProgramming-Unplugged_2021:
+        markdown: |
+          # Pengaturcaraan Kertas Graf
+
+          Tuliskan algoritma yang boleh digunakan oleh rakan sekelas anda untuk melukis gambar.
+      RelayProgramming-Unplugged_2021:
+        markdown: |
+          # Pengaturcaraan Geganti
+
+          Pecah kepada pasukan dan bekerjasama untuk menulis atur cara yang melukis gambar.

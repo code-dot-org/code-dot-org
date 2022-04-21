@@ -351,13 +351,13 @@
           "name": "Primii pași"
         },
         "544fd00b-84f3-47e4-9e02-cb27a6cfbbca": {
-          "name": "Activitate (30-45 minute)"
+          "name": "Activitate"
         },
         "e12c8da3-986d-488b-bed5-a7bb9e95e393": {
           "name": "Nivele"
         },
         "2f9c446a-0802-48b0-91ff-a7df9fe4afe2": {
-          "name": "Încheiere (5 minute)"
+          "name": "Încheiere"
         },
         "1a4d5cec-bd30-41f9-8012-4f16018769f9": {
           "name": "Evaluare (2 minute)"
@@ -372,7 +372,7 @@
           "name": "Primii pași"
         },
         "82dec89b-f375-4238-a251-ffae17c2dfd1": {
-          "name": "Activitate (30-45 minute)"
+          "name": "Activitate"
         },
         "a25c23cd-4e73-4a82-882f-7cc0a9fdfeb4": {
           "name": "Nivele"
@@ -384,7 +384,7 @@
           "name": "Devino viral"
         },
         "7afb9d6e-2c07-44d2-8504-90df0cecc778": {
-          "name": "Evaluare (2 minute)"
+          "name": "Evaluare"
         },
         "a676c281-2f0e-41d3-8e30-dbf6bb8d6dc0": {
           "name": "Pregătire"
@@ -3890,11 +3890,8 @@
         "0ba4a78d-b13f-442c-90f2-58125ef3ff64": {
           "name": "Încheiere"
         },
-        "235b3b14-975a-43b6-93bc-d386b857fd6b": {
-          "name": "Să începem (5 minute)"
-        },
         "fd06b4db-e3d4-491b-9372-af9a05dc2bb7": {
-          "name": "Activitate (30-45 minute)"
+          "name": "Activitate"
         },
         "e96a358f-201b-4474-8950-90dd94426aff": {
           "name": "Încheiere"

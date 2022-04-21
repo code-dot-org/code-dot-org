@@ -701,7 +701,7 @@ describe('block utils', () => {
           'test'
         );
         const fakeBlock = {
-          getTitleValue: sinon.stub().returns('someVar')
+          getFieldValue: sinon.stub().returns('someVar')
         };
         const code = generator['test_foo'].bind(fakeBlock)();
         expect(code).to.equal('someVar = foo(someVar);\n');
@@ -728,7 +728,7 @@ describe('block utils', () => {
           'test'
         );
         const fakeBlock = {
-          getTitleValue: title =>
+          getFieldValue: title =>
             ({
               NAME1: 'a',
               NAME2: 'b'
@@ -1073,7 +1073,7 @@ describe('block utils', () => {
           'test'
         );
         const fakeBlock = {
-          getTitleValue: () => 7
+          getFieldValue: () => 7
         };
         const code = generator['test_selectOne'].bind(fakeBlock)();
 
@@ -1095,7 +1095,7 @@ describe('block utils', () => {
           'test'
         );
         const fakeBlock = {
-          getTitleValue: () => 42
+          getFieldValue: () => 42
         };
         const code = generator['test_processValue'].bind(fakeBlock)();
 
@@ -1118,7 +1118,7 @@ describe('block utils', () => {
           'test'
         );
         const fakeBlock = {
-          getTitleValue: () => 'some input'
+          getFieldValue: () => 'some input'
         };
         const code = generator['test_processStringValue'].bind(fakeBlock)();
 
@@ -1141,7 +1141,7 @@ describe('block utils', () => {
           'test'
         );
         const fakeBlock = {
-          getTitleValue: () => 'some input with a "quote" in it'
+          getFieldValue: () => 'some input with a "quote" in it'
         };
         const code = generator['test_processAnotherStringValue'].bind(
           fakeBlock

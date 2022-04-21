@@ -1270,8 +1270,6 @@ is:
           student_description: '2.  áfangi á neti: Blandað sumarnám'
         equity-pd:
           lessons:
-            Code.org Equity PD:
-              name: Code.org fagþróun - Sanngirni
             Necessary Background:
               name: Nauðsynlegur bakgrunnur
         science-PD2:
@@ -2859,6 +2857,7 @@ is:
           description_short: Velja lið og búa til körfuboltaleik
           description: Velja lið og búa til körfuboltaleik
           student_description: Velja lið og búa til körfuboltaleik
+          name: körfubolti
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -3087,6 +3086,7 @@ is:
           description_short: Blandaðu saman íþróttum
           description: Blandaðu saman íþróttum
           student_description: Blandaðu saman íþróttum
+          name: íþróttir
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -4072,6 +4072,7 @@ is:
           student_description: |-
             Nú er komið nýtt Minecraft verkefni fyrir Klukkustund kóðunar!
             Ferðist um Minecraft með kóða.
+          name: hetja
         csp-explore-2017:
           lesson_groups:
             csp_ap_2:
@@ -5073,6 +5074,7 @@ is:
               name: nýr áfangi
             Dance Party:
               name: Danspartý
+          name: dans
         frozen-2018-test-b:
           lessons:
             Artist:
@@ -5080,6 +5082,7 @@ is:
         aquatic:
           description_short: Notaðu sköpunargáfuna og hæfileika til að leysa þrautir
             til að kanna og byggja neðansjávarheima með kóða!
+          name: sjávar
         dance--draft:
           lessons:
             Dance Party:
@@ -6413,10 +6416,6 @@ is:
               display_name: Innihald
             required:
               display_name: Yfirlit
-        dance-2019:
-          lessons:
-            Dance Party:
-              name: Danspartý
         k5-onlinepd-2019:
           lesson_groups:
             k5_getting_started:
@@ -8547,6 +8546,8 @@ is:
           lessons:
             lesson-9:
               name: Lykkjur
+            lesson-21:
+              name: Skjár
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
@@ -8569,10 +8570,17 @@ is:
           lessons:
             lesson-6:
               name: Breytur
+            lesson-16:
+              name: Skjár
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: Frá lykkjur
+            lesson-16:
+              name: Skjár
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
@@ -8662,6 +8670,10 @@ is:
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
+        vpl-csd1-summer-pilot-2022:
+          lessons:
+            lesson-9:
+              name: Gerð kennsluáætlana
         csa2-2022-exemplars:
           lessons:
             lesson-1:

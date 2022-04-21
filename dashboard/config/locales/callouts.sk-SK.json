@@ -658,10 +658,10 @@
           "courseA_maze_seq1_1": "Ak potrebuješ nápovedu, klikni na žiarovku!"
         },
         "courseA_maze_seq1_2019": {
-          "courseA_maze_seq1_1": "Ak potrebuješ nápovedu, klikni na žiarovku!"
+          "courseA_maze_seq1_1": "Ak potrebuješ pomôcku, klikni na žiarovku!"
         },
         "courseA_maze_seq1_2020": {
-          "courseA_maze_seq1_1": "Ak potrebuješ nápovedu, klikni na žiarovku!"
+          "courseA_maze_seq1_1": "Ak potrebuješ pomôcku, klikni na žiarovku!"
         },
         "courseA_maze_seq2": {
           "courseA_maze_seqA_callout1": "Použite tlačidlo \"Kroky\" na prejdenie programom krok po kroku. Toto vám pomôže nájsť chybu!"
@@ -748,16 +748,16 @@
           "courseB_collector_loops1_1": "Vidíš v paneli nástrojov nové bloky? Neboj sa, neskôr ti ukážeme, ako ich používať."
         },
         "courseB_maze_seq1": {
-          "courseB_maze_seq1": "Ak potrebuješ nápovedu, klikni na žiarovku!"
+          "courseB_maze_seq1": "Ak potrebuješ pomôcku, klikni na žiarovku!"
         },
         "courseB_maze_seq1_2018": {
           "courseB_maze_seq1": "Ak potrebuješ pomôcku, klikni na žiarovku!"
         },
         "courseB_maze_seq1_2019": {
-          "courseB_maze_seq1": "Ak potrebuješ nápovedu, klikni na žiarovku!"
+          "courseB_maze_seq1": "Ak potrebuješ pomôcku, klikni na žiarovku!"
         },
         "courseB_maze_seq1_2020": {
-          "courseB_maze_seq1": "Ak potrebuješ nápovedu, klikni na žiarovku!"
+          "courseB_maze_seq1": "Ak potrebuješ pomôcku, klikni na žiarovku!"
         },
         "courseB_maze_seq2": {
           "courseB_maze_seq2_callout1": "Použite tlačidlo \"Kroky\" na prejdenie programom krok po kroku. Toto vám pomôže nájsť chybu!"
@@ -1556,7 +1556,7 @@
           "courseC_maze_programming2_1": "Toto je panel nástrojov. Tu nájdete extra bloky pre dokončenie Vaších cvičení."
         },
         "courseA_maze_seq1_2021": {
-          "courseA_maze_seq1_1": "Ak potrebuješ nápovedu, klikni na žiarovku!"
+          "courseA_maze_seq1_1": "Ak potrebuješ pomôcku, klikni na žiarovku!"
         },
         "courseA_playLab_events4_2021": {
           "courseA_playlab_events4_callout1": "Toto je hlásenie"
@@ -1580,7 +1580,7 @@
           "courseB_collector_loops1_1": "Vidíš v paneli nástrojov nové bloky? Neboj sa, neskôr ti ukážeme, ako ich používať."
         },
         "courseB_maze_seq1_2021": {
-          "courseB_maze_seq1": "Ak potrebuješ nápovedu, klikni na žiarovku!"
+          "courseB_maze_seq1": "Ak potrebuješ pomôcku, klikni na žiarovku!"
         },
         "courseB_playlab_events6_2021": {
           "courseB_playlab_events6_a": "Použite zelenú šípku pre zmenu smeru."

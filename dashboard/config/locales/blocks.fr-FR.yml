@@ -2,6 +2,8 @@
 fr:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: faire un nouveau lutin {ANIMATION_NAME} à {LOCATION}
       Dancelab_alternateMoves:
         text: "{GROUP} alterne toutes les {N} mesures entre {MOVE1} et {MOVE2}"
         options:
@@ -1063,6 +1065,12 @@ fr:
         text: tracer la ligne {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: les bords empêchent {SPRITE} de bouger
+      gamelab_everySeconds:
+        text: 'répéter toutes les {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': des secondes
+            '"frames"': cadres
       gamelab_followingTargets:
         text: cibles suivantes
       gamelab_getAllSprites:
@@ -1217,6 +1225,8 @@ fr:
             '"pop"': pop
             '"rain"': pluie
             '"spiral"': spirale
+      gamelab_makeNewScaledSprite:
+        text: faire un nouveau lutin {ANIMATION_NAME} à {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: faire un nouveau lutin {ANIMATION_NAME} à {LOCATION}
       gamelab_makeNumSprites:
@@ -2268,7 +2278,7 @@ fr:
       binary_drawBinScreen:
         text: |-
           dessiner écran
-          {B1}{B2}{B3}{B4}{B5}{B6}123_321  123_321 123_321[B7] 123_321 123_321  123_321 123_321  123_321 123_321 123_321  123_321 123_321 123_321[6][null][7]
+          {B1}{B2}{B3}{B4}{B5}{B6}123_321  123_321 123_321[B7] 123_321 123_321  123_321 123_321  123_321 123_321 123_321  123_321 123_321 123_321[6]{B8}
       binary_drawDec:
         text: dessiner décimale {DEC}
       binary_drawPixelHere:

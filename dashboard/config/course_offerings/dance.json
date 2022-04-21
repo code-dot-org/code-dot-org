@@ -2,5 +2,6 @@
   "key": "dance",
   "display_name": "Dance Party (2018)",
   "category": "hoc",
-  "is_featured": false
+  "is_featured": false,
+  "assignable": true
 }

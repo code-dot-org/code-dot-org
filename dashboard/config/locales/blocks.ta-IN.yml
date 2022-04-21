@@ -2,6 +2,8 @@
 ta:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: புதியதாக்கு {ANIMATION_NAME}ஸ்பிரைட் மணிக்கு {LOCATION}
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -994,6 +996,12 @@ ta:
         text: கோடு வரைக {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: விளிம்புகள் தொகுதி {SPRITE} நகரும் இருந்து
+      gamelab_everySeconds:
+        text: ஒவ்வொன்றையும் திரும்ப செய்யவும் {N} {UNIT}
+        options:
+          UNIT:
+            '"seconds"': விநாடிகள்
+            '"frames"': சட்டங்கள்
       gamelab_followingTargets:
         text: பின்வரும் இலக்குகள்
       gamelab_getAllSprites:
@@ -1147,6 +1155,8 @@ ta:
             '"pop"': பாப்
             '"rain"': மழை
             '"spiral"': சுருள்
+      gamelab_makeNewScaledSprite:
+        text: புதியதாக்கு {ANIMATION_NAME}ஸ்பிரைட் மணிக்கு {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: புதியதாக்கு {ANIMATION_NAME}ஸ்பிரைட் மணிக்கு {LOCATION}
       gamelab_makeNumSprites:

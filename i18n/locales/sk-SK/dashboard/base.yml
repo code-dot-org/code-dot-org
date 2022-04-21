@@ -13,8 +13,8 @@
 sk:
   errors:
     messages:
-      not_saved: 'Opravte prosím nasledujúce chyby:'
-      too_young: 'Tento obsah má vekové obmedzenia a nie je k dispozícii pre mladších študentov.'
+      not_saved: 'Opravte tieto chyby:'
+      too_young: 'Tento obsah má vekové obmedzenia a nie je k dispozícii pre mladších žiakov.'
       teacher_must_accept_terms: 'Tento obsah má vekové obmedzenia a nie je dostupný pre mladších študentov. Požiadaj svojho učiteľa, aby akceptoval nové "Podmienky používania služby" a umožnil ti prístup k tomuto obsahu. Tvoj učiteľ to môže spraviť prihlásením do Code Studia a kliknutím na tlačítko "Prezrieť aktualizované podmienky" v hornej časti domovskej stránky Code Štúdia.'
       pair_programmer: 'Aktuálne pracuješ v páre so študentom, ktorý nemá prístup k tomuto obsahu. Aby si sa sem mohol dostať, zruš párové programovanie a začni odznova.'
   activerecord:

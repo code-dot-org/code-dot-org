@@ -23,9 +23,10 @@ class ProfanityFilter
   # @param [String] text to check for profanity
   # @param [String] language_code a two-character ISO 639-1 language code ('en').
   #   Will also convert a four-character locale code ('en-US').
+  # @param [Hash{word => replacementText}] optional words to replace.
   # @return [String, nil] The first instance of profanity (if any) or nil (if none)
-  def self.find_potential_profanity(text, language_code)
-    expletive = find_potential_profanities(text, language_code)
+  def self.find_potential_profanity(text, language_code, replace_text_list = {})
+    expletive = find_potential_profanities(text, language_code, replace_text_list)
     expletive.is_a?(Array) ? expletive.first : expletive
   end
 
@@ -35,15 +36,22 @@ class ProfanityFilter
   # @param [String] text to check for profanity
   # @param [String] language_code a two-character ISO 639-1 language code ('en').
   #   Will also convert a four-character locale code ('en-US').
+  # @param [Hash{word => replacementText}] optional words to replace.
   # @return [Array<String>, nil] The profanities (if any) or nil (if none)
-  def self.find_potential_profanities(text, language_code)
+  def self.find_potential_profanities(text, language_code, replace_text_list = {})
     language_code = language(language_code)
+
+    # Replace certain words before they are sent to the profanity filter.
+    replace_pattern = replace_text_list.keys.map {|t| "\\b" + t.to_s + "\\b"}.join('|')
+    matcher = Regexp.new replace_pattern, Regexp::IGNORECASE
+    updated_text = text&.gsub(matcher, replace_text_list)
+
     LANGUAGE_SPECIFIC_ALLOWLIST.each do |word, languages|
       next if languages.include? language_code
       r = Regexp.new "\\b#{word}\\b", Regexp::IGNORECASE
-      return [word.to_s] if r =~ text
+      return [word.to_s] if r =~ updated_text
     end
-    WebPurify.find_potential_profanities(text, ['en', language_code])
+    WebPurify.find_potential_profanities(updated_text, ['en', language_code])
   end
 
   # Converts a locale ('en-US') to its language ('en').

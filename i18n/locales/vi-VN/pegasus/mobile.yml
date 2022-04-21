@@ -996,7 +996,7 @@
   header_teach: "Dạy"
   header_stats: "Xem thống kê"
   header_help_us: "Giúp đỡ chúng tôi"
-  header_about: "về chúng tôi"
+  header_about: "Về chúng tôi"
   header_teacher_community: "Cộng đồng giáo viên"
   header_help_support: 'Giúp đỡ và hỗ trợ'
   header_report_bug: "Báo cáo sự cố"
@@ -1150,7 +1150,7 @@
   hoc2021_mc_mee_ai_description: 'Khám phá AI với học viên của bạn và học cách viết code trong Minecraft: Education Edition.'
   footer_powered_by_aws: "Amazon Web Services và biểu tượng “Được hỗ trợ bởi AWS” là các nhãn hiệu của Amazon.com, Inc. hoặc các chi nhánh của Amazon tại Hoa Kỳ và / hoặc các quốc gia khác."
   footer_privacy_policy: "Chính sách bảo mật"
-  footer_about: "về chúng tôi"
+  footer_about: "Về chúng tôi"
   footer_partners: "Đối tác"
   footer_donate: "Quyên góp"
   footer_support: "Trợ giúp và Cộng đồng"

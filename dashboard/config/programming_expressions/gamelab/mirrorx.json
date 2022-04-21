@@ -3,7 +3,7 @@
   "name": "sprite.mirrorX()",
   "category": "Sprites",
   "category_key": "sprites",
-  "content": "Sets the sprite's horizontal mirroring. \r\n\r\nTo mirror the image or animation of a sprite you can either use the Animation tab and create and name each mirror you need, or just use the `mirrorX()` and `mirrorY()` commands.",
+  "content": "Sets the sprite's horizontal mirroring. \n\nTo mirror the image or animation of a sprite you can either use the Animation tab and create and name each mirror you need, or just use the [`mirrorX()`(#f78183)](/docs/gamelab/mirrorX/) and [`mirrorY()`(#f78183)](/docs/gamelab/mirrorY/) commands",
   "examples": [
     {
       "name": "Flipper",

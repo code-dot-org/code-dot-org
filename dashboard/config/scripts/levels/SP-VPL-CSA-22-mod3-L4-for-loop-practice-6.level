@@ -2,23 +2,26 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "**Do this:**\r\n\r\nWrite a for loop that prints the integers 1 to 30, but print `\"Fizz”` if an integer is divisible by 3, `“Buzz”` if an integer is divisible by 5, and `“FizzBuzz”` if an integer is divisible by both 3 and 5.\r\n\r\nFor example, the following will be printed to the console for the values 1 through 10:\r\n\r\n```\r\n1\r\n2\r\nFizz\r\n4 \r\nBuzz\r\nFizz\r\n7\r\n8\r\nFizz\r\nFizzBuzz\r\n```\r\n",
+    "long_instructions": "**Do this:**\r\n\r\nWrite a for loop that prints the integers 1 to 30, but print `\"Fizz”` if an integer is divisible by 3, `“Buzz”` if an integer is divisible by 5, and `“FizzBuzz”` if an integer is divisible by both 3 and 5.\r\n\r\nFor example, the following will be printed to the console for the values 1 through 15:\r\n\r\n```\r\n1\r\n2\r\nFizz\r\n4 \r\nBuzz\r\nFizz\r\n7\r\n8\r\nFizz\r\nBuzz\r\n11\r\nFizz\r\n13\r\n14\r\nFizzBuzz\r\n```\r\n\r\n::: details [**Show Me How**]\r\n\r\nUse a combination of a `for` loop with a conditional statement to accomplish this task.  The syntax for a `for` loop in Java is shown below: \r\n\r\n```\r\nfor (int variableName = startingValue; condition; variableName_change) {\r\n  // code to execute\r\n}\r\n```\r\n:::\r\n\r\n\r\n",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
     "start_sources": {
       "FizzBuzz.java": {
-        "text": "public class FizzBuss{    \n  public static void main(String[] args){\n\n    // TO DO: Write the FizzBuzz program for the values 1 through 30.\n    \n  } \n}",
+        "text": "public class FizzBuzz{    \n  public static void main(String[] args){\n\n    // TO DO: Write the FizzBuzz program for the values 1 through 30.\n    \n  } \n}",
         "isVisible": true
       }
-    }
+    },
+    "encrypted_examples": [
+
+    ]
   },
   "game_id": 68,
+  "published": true,
   "created_at": "2022-03-21T00:56:56.000Z",
   "level_num": "custom",
   "user_id": 977,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-03-21T00:56:56.948+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSA-22-mod3-L3-else-if-practice-1\\\"\"],\"cloned_from\":\"SP-VPL-CSA-22-mod3-L3-else-if-practice-1\"},{\"changed_at\":\"2022-03-21 02:02:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-21 02:04:22 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-21 02:08:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-21T00:56:56.948+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSA-22-mod3-L3-else-if-practice-1\\\"\"],\"cloned_from\":\"SP-VPL-CSA-22-mod3-L3-else-if-practice-1\"},{\"changed_at\":\"2022-03-21 02:02:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-21 02:04:22 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-21 02:08:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-04-19 18:08:55 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-04-19 18:09:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-04-19 18:14:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]"
 }]]></config>
 </Javalab>

@@ -1477,8 +1477,6 @@ pt:
           student_description: 'Fase 2 - on-line: combinado de estudos de verão'
         equity-pd:
           lessons:
-            Code.org Equity PD:
-              name: Code.org igualdade PD
             Necessary Background:
               name: Fundo necessário
         science-PD2:
@@ -4234,6 +4232,7 @@ pt:
                 os alunos terão a oportunidade de personalizar seu jogo com diferentes
                 velocidades e sons.
           student_description: Escolha seu time e faça um jogo de basquete
+          name: bola de basquetebol
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -5297,6 +5296,7 @@ pt:
                 os alunos terão a oportunidade de personalizar seu jogo com diferentes
                 velocidades e sons.
           student_description: Esportes
+          name: esportes
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -9413,6 +9413,7 @@ pt:
                 para se divertirem no nível gratuito de jogos no final.
           student_description: O Minecraft está de volta para a Hora do Código com
             uma nova atividade! Viaje através de Minecraft com código.
+          name: herói
         applab-intro-staging:
           title: Introdução ao armazenamento temporário do App Lab
           lessons:
@@ -13463,6 +13464,7 @@ pt:
                 de todas as idades, mas requer leitura. Esta atividade requer o uso
                 de sons, pois a ferramenta foi desenvolvida para reagir à música.
           student_description: Crie sua própria dança para compartilhar com seus amigos.
+          name: dança
         frozen-2018-test-b:
           title: Novo Scrip Frozen
           lessons:
@@ -13489,6 +13491,7 @@ pt:
           student_description: Minecraft está de volta com uma nova atividade! Use
             sua criatividade e habilidade de resolver problemas para explorar e construir
             mundos submarinos usando código.
+          name: aquático
         sconyers:
           title: Parque da Tracey
           lessons:
@@ -19476,7 +19479,7 @@ pt:
           description: Crie sua própria dança para compartilhar com seus amigos.
           lessons:
             Dance Party:
-              name: Festa dançante
+              name: Festa de dança (2019)
               description_student: Nesta lição, alunos de todas as idades terão uma
                 experiência introdutória com codificação e ciência da computação em
                 um ambiente de apoio seguro. Esta lição foi projetada para alunos
@@ -26731,8 +26734,7 @@ pt:
           title: '"Olá, mundo!"'
         csa-self-paced-pl:
           lessons:
-            Navigating the Code.org learning platform:
-              name: Navegação pela plataforma de aprendizagem Code.org
+            Navigating the Codeorg learning platform:
               description_teacher: "**Você vai aprender a:**\n\n-   Navegar pelo site
                 Code.org e pelas ferramentas para professores. \n\n**Tempo sugerido:**30
                 minutos"
@@ -28406,7 +28408,7 @@ pt:
                 deste nível, os alunos terão a oportunidade de criar as suas próprias
                 imagens usando repetições.
               key: Cena do Oceano com Repetições
-            The Big Event Jr.:
+            The Big Event Jr:
               name: O Grande Evento Jr.
               description_student: Mova-se e grite quando seus professores pressionam
                 botões em um controle remoto gigante.
@@ -29107,7 +29109,7 @@ pt:
                 para desenhar seu próprio aplicativo para smartphone que atenda às
                 necessidades de um usuário adicional.
               key: O aplicativo correto
-            The Big Event Jr.:
+            The Big Event Jr:
               name: O Grande Evento Jr.
               description_student: Mova-se ou grite quando o professor pressionar
                 botões em um controle remoto gigante.
@@ -29225,7 +29227,7 @@ pt:
           description_audience: 'Idades: 5-8'
         coursec-2022:
           lessons:
-            My Robotic Friends Jr.:
+            My Robotic Friends Jr:
               name: Meus Amigos Robôs Jr.
               description_student: Nesta lição, você fingirá que seus colegas de classe
                 são robôs e os programará para criar padrões de copos empilhados.
@@ -29269,7 +29271,7 @@ pt:
                 Artista para concluir os desenhos na tela. Esta etapa do Artista permitirá
                 que os alunos criem imagens de complexidade crescente usando novos
                 blocos como "avançar em 100 pixels" e "virar à direita em 90 graus".
-            My Loopy Robotic Friends Jr.:
+            My Loopy Robotic Friends Jr:
               name: Meus Amigos Robôs Malucos Jr.
               description_student: Nesta lição, você programará seus colegas novamente,
                 mas, usando loops, poderá resolver problemas maiores e mais complicados.
@@ -30313,6 +30315,8 @@ pt:
           lessons:
             lesson-9:
               name: Ciclos
+            lesson-21:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
@@ -30364,10 +30368,17 @@ pt:
               name: Unidade 2 Avaliação
             lesson-6:
               name: Variáveis
+            lesson-16:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: Ciclos "for"
+            lesson-16:
+              name: Console
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
@@ -30788,6 +30799,8 @@ pt:
           lessons:
             lesson-1:
               name: Bem-vindo
+            lesson-9:
+              name: Planejamento de aula
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -30835,3 +30848,13 @@ pt:
               key: Planejamento de aula
             Next steps:
               key: Próximos passos
+        vpl-csd2-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Computação Física
+        vpl-csd3-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Computação Física
+        hello-world-csc:
+          title: Olá Mundo

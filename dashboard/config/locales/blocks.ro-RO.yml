@@ -2,6 +2,8 @@
 ro:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: face noi {ANIMATION_NAME} sprite la {LOCATION}
       Dancelab_alternateMoves:
         text: "{GROUP} alternează fiecare {N} \nmăsuri între {MOVE1} și {MOVE2}"
         options:
@@ -1044,6 +1046,12 @@ ro:
         text: trage o linie {COLOR} {LOC1} {LOC2}
       gamelab_edgesDisplace:
         text: marginile blochează {SPRITE} să se deplaseze
+      gamelab_everySeconds:
+        text: 'la fiecare {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': secunde
+            '"frames"': cadre
       gamelab_followingTargets:
         text: următoarele ținte
       gamelab_getAllSprites:
@@ -1196,6 +1204,8 @@ ro:
             '"pop"': pop
             '"rain"': ploaie
             '"spiral"': spirală
+      gamelab_makeNewScaledSprite:
+        text: face noi {ANIMATION_NAME} sprite la {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: face noi {ANIMATION_NAME} sprite la {LOCATION}
       gamelab_makeNumSprites:

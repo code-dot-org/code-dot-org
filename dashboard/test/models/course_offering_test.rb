@@ -264,12 +264,6 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert @unit_facilitator_to_teacher.course_version.course_offering.can_be_instructor?(@facilitator)
   end
 
-  test 'pl_course? is true if any course versions are pl courses' do
-    refute @unit_teacher_to_students.course_version.course_offering.pl_course?
-    refute @unit_teacher_to_students2.course_version.course_offering.pl_course?
-    assert @unit_facilitator_to_teacher.course_version.course_offering.pl_course?
-  end
-
   test 'any_versions_launched? is true if any course versions have been launched' do
     unit1 = create(:script, name: 'unit1', family_name: 'family-6', version_year: '1991', is_course: true, published_state: 'stable')
     CourseOffering.add_course_offering(unit1)
@@ -306,42 +300,40 @@ class CourseOfferingTest < ActiveSupport::TestCase
     refute unit1.course_version.course_offering.any_versions_in_development?
   end
 
-  test 'assignable? is false if can not be instructor' do
-    refute @unit_teacher_to_students.course_version.course_offering.assignable?(@student)
-    assert @unit_teacher_to_students.course_version.course_offering.assignable?(@teacher)
-
-    refute @unit_facilitator_to_teacher.course_version.course_offering.assignable?(@teacher)
-    assert @unit_facilitator_to_teacher.course_version.course_offering.assignable?(@facilitator)
+  test 'can_be_assigned? is false if its an unassignable course' do
+    unassignable_course_offering = create :course_offering
+    refute unassignable_course_offering.can_be_assigned?(@student)
+    refute unassignable_course_offering.can_be_assigned?(@teacher)
   end
 
-  test 'assignable? is true if has pilot access and any course version is in pilot state' do
-    refute @pilot_unit.course_version.course_offering.assignable?(@teacher)
-    assert @pilot_unit.course_version.course_offering.assignable?(@pilot_teacher)
-    refute @pilot_unit.course_version.course_offering.assignable?(@pilot_instructor)
+  test 'can_be_assigned? is false if can not be instructor' do
+    refute @unit_teacher_to_students.course_version.course_offering.can_be_assigned?(@student)
+    assert @unit_teacher_to_students.course_version.course_offering.can_be_assigned?(@teacher)
 
-    refute @pilot_pl_unit.course_version.course_offering.assignable?(@teacher)
-    refute @pilot_pl_unit.course_version.course_offering.assignable?(@pilot_teacher)
-    assert @pilot_pl_unit.course_version.course_offering.assignable?(@pilot_instructor)
+    refute @unit_facilitator_to_teacher.course_version.course_offering.can_be_assigned?(@teacher)
+    assert @unit_facilitator_to_teacher.course_version.course_offering.can_be_assigned?(@facilitator)
   end
 
-  test 'assignable? is true if any versions in development and user is levelbuilder' do
+  test 'can_be_assigned? is true if has pilot access and any course version is in pilot state' do
+    refute @pilot_unit.course_version.course_offering.can_be_assigned?(@teacher)
+    assert @pilot_unit.course_version.course_offering.can_be_assigned?(@pilot_teacher)
+    refute @pilot_unit.course_version.course_offering.can_be_assigned?(@pilot_instructor)
+
+    refute @pilot_pl_unit.course_version.course_offering.can_be_assigned?(@teacher)
+    refute @pilot_pl_unit.course_version.course_offering.can_be_assigned?(@pilot_teacher)
+    assert @pilot_pl_unit.course_version.course_offering.can_be_assigned?(@pilot_instructor)
+  end
+
+  test 'can_be_assigned? is true if any versions in development and user is levelbuilder' do
     unit1 = create(:script, name: 'unit2', family_name: 'family-10', version_year: '1992', is_course: true, published_state: 'in_development')
     CourseOffering.add_course_offering(unit1)
 
-    refute unit1.course_version.course_offering.assignable?(@teacher)
-    assert unit1.course_version.course_offering.assignable?(@levelbuilder)
-  end
-
-  test 'get assignable pl course offerings for teacher should return no offerings' do
-    assert_equal CourseOffering.assignable_pl_course_offerings(@teacher).length, 0
+    refute unit1.course_version.course_offering.can_be_assigned?(@teacher)
+    assert unit1.course_version.course_offering.can_be_assigned?(@levelbuilder)
   end
 
   test 'get assignable course offerings for student should return no offerings' do
     assert_equal CourseOffering.assignable_course_offerings(@student).length, 0
-  end
-
-  test 'get assignable student course offerings for student should return no offerings' do
-    assert_equal CourseOffering.assignable_student_course_offerings(@student).length, 0
   end
 
   test 'get assignable course offerings for levelbuilder should return all offerings' do
@@ -357,6 +349,21 @@ class CourseOfferingTest < ActiveSupport::TestCase
     ].sort
 
     assert_equal CourseOffering.assignable_course_offerings_info(@levelbuilder).keys.sort, expected_course_offering_info
+  end
+
+  test 'in assignable course offerings summary display names of course offerings include star if they are not launched' do
+    expected_course_offering_names = [
+      @unit_group.course_version.course_offering.display_name,
+      @unit_teacher_to_students.course_version.course_offering.display_name,
+      @pilot_unit.course_version.course_offering.display_name + " *",
+      @partner_unit.course_version.course_offering.display_name + " *",
+      @pilot_pl_unit.course_version.course_offering.display_name + " *",
+      @in_development_unit.course_version.course_offering.display_name + " *",
+      @beta_unit.course_version.course_offering.display_name + " *",
+      @unit_facilitator_to_teacher.course_version.course_offering.display_name
+    ].sort
+
+    assert_equal CourseOffering.assignable_course_offerings_info(@levelbuilder).values.map {|co| co[:display_name]}.sort, expected_course_offering_names
   end
 
   test 'get assignable course offerings for pilot teacher should return offerings where pilot teacher can be instructor' do
@@ -397,21 +404,6 @@ class CourseOfferingTest < ActiveSupport::TestCase
     ].sort
 
     assert_equal CourseOffering.assignable_course_offerings_info(@teacher).keys.sort, expected_course_offering_info
-  end
-
-  test 'get assignable pl course offerings for facilitator should return pl offerings where facilitator can be instructor' do
-    expected_course_offering_info = [@unit_facilitator_to_teacher.course_version.course_offering.id]
-
-    assert_equal CourseOffering.assignable_pl_course_offerings_info(@facilitator).keys, expected_course_offering_info
-  end
-
-  test 'get assignable student course offerings for facilitator should return only student facing offerings' do
-    expected_course_offering_info = [
-      @unit_group.course_version.course_offering.id,
-      @unit_teacher_to_students.course_version.course_offering.id
-    ].sort
-
-    assert_equal CourseOffering.assignable_student_course_offerings_info(@facilitator).keys.sort, expected_course_offering_info
   end
 
   test 'get assignable course offerings for facilitator should return all offerings, versions, amd units where facilitator can be instructor' do

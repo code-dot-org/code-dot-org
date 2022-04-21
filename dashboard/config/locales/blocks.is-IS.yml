@@ -2,6 +2,8 @@
 is:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: aalab búa til nýja {ANIMATION_NAME} veru á stað {LOCATION}
       Dancelab_alternateMoves:
         text: "{GROUP} skipta hverja {N} takta \nmilli {MOVE1} og {MOVE2}"
         options:
@@ -1022,6 +1024,12 @@ is:
         text: er hægt að draga
       gamelab_edgesDisplace:
         text: brúnir hindra {SPRITE} að hreyfast
+      gamelab_everySeconds:
+        text: 'á {N} {UNIT} fresti '
+        options:
+          UNIT:
+            '"seconds"': sekúndur
+            '"frames"': rammar
       gamelab_getAllSprites:
         text: allir kvikar
       gamelab_getProp:
@@ -1169,6 +1177,8 @@ is:
             '"burst"': springa
             '"rain"': regn
             '"spiral"': spírall
+      gamelab_makeNewScaledSprite:
+        text: aalab búa til nýja {ANIMATION_NAME} veru á stað {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: aalab búa til nýja {ANIMATION_NAME} veru á stað {LOCATION}
       gamelab_makeNumSprites:

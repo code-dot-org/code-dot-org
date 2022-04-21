@@ -42,6 +42,7 @@ module ViewOptionsHelper
     :blocklyVersion,
     :disallowed_html_tags,
     :backpack_channel,
+    :backpack_enabled,
     :level_requires_channel,
     :reduce_channel_updates,
   )
@@ -66,6 +67,7 @@ module ViewOptionsHelper
     :toolbox_blocks,
     :edit_blocks,
     :is_editing_exemplar,
+    :is_viewing_exemplar,
     :exemplar_sources,
     :skip_instructions_popup,
     :embed,

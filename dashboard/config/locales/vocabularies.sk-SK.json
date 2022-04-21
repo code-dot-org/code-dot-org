@@ -178,6 +178,29 @@
           "word": "Cykly",
           "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
         },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "Cézarova šifra ",
+          "definition": "technika šifrovania, ktorá posúva abecedu o určitý počet znakov."
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "Šifra",
+          "definition": "všeobecný výraz pre techniku (alebo algoritmus), ktorá vykonáva šifrovanie"
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "Prelomenie šifrovania",
+          "definition": "Keď sa pokúšate dekódovať tajnú správu bez toho, aby ste poznali všetky špecifiká šifry, snažíte sa „prelomiť“ šifrovanie. "
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "Dešifrovanie",
+          "definition": "proces, ktorý zvráti šifrovanie a tajnú správu prevedie späť na pôvodný jednoduchý text."
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "definition": "proces kódovania správ s cieľom udržať ich v tajnosti, aby ich mohli čítať len „oprávnené“ strany."
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "Šifra s náhodnou substitúciou",
+          "definition": "technika šifrovania, ktorá mapuje každé písmeno abecedy na náhodne vybrané iné písmená abecedy."
+        },
         "code/starwars/unversioned": {
           "word": "Kódovanie",
           "definition": "Písanie kódu/písanie inštrukcií pre počítač."

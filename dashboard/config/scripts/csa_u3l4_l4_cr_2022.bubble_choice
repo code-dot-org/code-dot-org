@@ -1,6 +1,6 @@
 name 'CSA U3L4-L4 CR_2022'
 display_name 'Code Review: Writing Array Algorithms'
-description 'level description here'
+description 'Request a code review from your peers.'
 
 sublevels
 level 'CSA U3L4-L4a CR_2022'

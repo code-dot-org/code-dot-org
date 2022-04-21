@@ -1289,8 +1289,6 @@ hi:
               name: समाप्ति
         equity-pd:
           lessons:
-            Code.org Equity PD:
-              name: Code.org इक्विटी PD
             Necessary Background:
               name: जरूरी पृष्ठभूमि
         science-PD2:
@@ -3966,6 +3964,7 @@ hi:
                 पहेली के अंत में, छात्रों के पास अलग-अलग गति और ध्वनि के साथ अपनी
                 गेम को अनुकूलित करने का अवसर होगा।
           student_description: अपनी टीम चुनें और बास्केटबॉल गेम बनाएं
+          name: बास्केटबॉल
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -5038,6 +5037,7 @@ hi:
                 पहेली के अंत में, छात्रों के पास अलग-अलग गति और ध्वनि के साथ अपनी
                 गेम को अनुकूलित करने का अवसर होगा।
           student_description: खेलों में मिलाएं व मिलान करें
+          name: खेल
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -9086,6 +9086,7 @@ hi:
                 उनके पास अंत में फ्री प्ले स्तर पर खेलने के लिए थोड़ा समय भी होगा।
           student_description: Minecraft बिल्कुल नई गतिविधि के साथ आवर ऑफ़ कोड के
             लिए लौट आया है! कोड के साथ Minecraft के माध्यम से सफर।
+          name: हीरो
         applab-intro-staging:
           title: ऐप लैब स्टेजिंग का परिचय
           lessons:
@@ -13147,6 +13148,7 @@ hi:
                 टूल संगीत पर प्रतिक्रिया करने वाला बनाया गया था।
           student_description: अपने दोस्तों के साथ साझा करने के लिए अपनी डांस पार्टी
             को कोड दें!
+          name: नृत्य
         frozen-2018-test-b:
           title: नया फ्रोज़न स्क्रिप्ट
           lessons:
@@ -13172,6 +13174,7 @@ hi:
           student_description: Minecraft बिल्कुल नई गतिविधि के साथ वापस आ गया है!
             कोड के साथ अंतर्जलीय दुनिया की पड़ताल करने और इनका निर्माण करने के लिए
             अपनी रचनात्मकता और सवाल हल करने के कौशलों का उपयोग करें।
+          name: जलचर
         sconyers:
           title: ट्रेसी का प्लेग्राउंड
           lessons:
@@ -19192,7 +19195,6 @@ hi:
             दें!
           lessons:
             Dance Party:
-              name: डांस पार्टी
               description_student: इस पाठ में, हर आयु वर्ग के छात्र सुरक्षित, सहयोग
                 करने वाले वातावरण में कोडिंग और कंप्यूटर साइंस का शुरूआती अनुभव प्राप्त
                 करते हैं। यह पाठ हर आयु वर्ग के छात्रों के लिए तैयार किया गया है परंतु
@@ -26206,8 +26208,7 @@ hi:
           title: '"हेलो, दुनिया!"'
         csa-self-paced-pl:
           lessons:
-            Navigating the Code.org learning platform:
-              name: Code.org लर्निंग प्लेटफॉर्म पर नेविगेट करना
+            Navigating the Codeorg learning platform:
               description_teacher: |-
                 **आप जानेंगे कैसे:**
 
@@ -27808,7 +27809,7 @@ hi:
                 में, छात्रों को लूप्स का उपयोग करते हुए उनके खुद के चित्र बनाने का
                 अवसर दिया जाएगा।
               key: लूप्स के साथ समुद्र का दृश्य
-            The Big Event Jr.:
+            The Big Event Jr:
               name: विशाल इवेंट Jr.
               description_student: जब विशाल रिमोट पर आपके अध्यापक बटन दबाएं तो मूव
                 करें और चिल्लाएं।
@@ -28541,7 +28542,7 @@ hi:
                 और रचनात्मकता का अभ्यास करते हैं, जो एक अतिरिक्त उपयोगकर्ताओं की जरूरतों
                 पर ध्यान देता हो।
               key: सही ऐप
-            The Big Event Jr.:
+            The Big Event Jr:
               name: विशाल इवेंट Jr.
               description_student: जब विशाल रिमोट पर आपका अध्यापक बटन दबाएं तो मूव
                 करें या चिल्लाएं।
@@ -28676,7 +28677,7 @@ hi:
             Putting a STOP to Online Meanness:
               description_student: इस पाठ में, आप घटियापन और इस बारे में सीखेंगे कि
                 जब ऑनलाइन आपका सामना इससे हो तो आपको क्या करना चाहिए।
-            My Robotic Friends Jr.:
+            My Robotic Friends Jr:
               name: मेरे रोबोटिक फ्रेंड्स Jr.
               description_student: इस पाठ में, आप मानेंगे कि उनके सहपाठी रोबोट हैं
                 और उन्हें स्टैक किए कपों का पैटर्न बनाने के लिए प्रोग्राम करेंगे।
@@ -28721,7 +28722,7 @@ hi:
                 के लिए आर्टिस्ट को नियंत्रित करेंगे। आर्टिस्ट चरण से छात्र `100 पिक्सल
                 तक आगे की ओर मूव करें` और `90 डिग्री तक दाएं मुड़ें` जैसे नए ब्लॉक्स
                 का उपयोग करते हुए बढ़ती जटिलता के चित्र बना पाएंगे।
-            My Loopy Robotic Friends Jr.:
+            My Loopy Robotic Friends Jr:
               name: माई लूपी रोबोटिक फ्रेंड्स Jr.
               description_student: इस पाठ में, आप दुबारा अपने सहपाठियों को प्रोग्राम
                 करेंगे, लेकिन लूप्स का उपयोग करते हुए आप अधिक बड़े और अधिक जटिल सवालों
@@ -29839,6 +29840,8 @@ hi:
               name: Java Lab
             lesson-9:
               name: फंदे
+            lesson-21:
+              name: कंसोल
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
@@ -29887,6 +29890,14 @@ hi:
               name: इकाई 2 मूल्यांकन
             lesson-6:
               name: चर
+            lesson-16:
+              name: कंसोल
+        csa3-2022:
+          lessons:
+            lesson-5:
+              name: फॉर लूप्स
+            lesson-16:
+              name: कंसोल
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -30353,6 +30364,8 @@ hi:
           lessons:
             lesson-1:
               name: स्वागत है
+            lesson-9:
+              name: पाठ योजना बनाना
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -30397,3 +30410,13 @@ hi:
               key: पाठ योजना बनाना
             Next steps:
               key: अगले चरण
+        vpl-csd2-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: भौतिक कंप्यूटिंग
+        vpl-csd3-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: भौतिक कंप्यूटिंग
+        hello-world-csc:
+          title: हैलो दुनिया

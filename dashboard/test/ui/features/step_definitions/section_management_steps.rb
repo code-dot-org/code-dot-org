@@ -1,13 +1,13 @@
 # Helper steps for creating and managing sections
 
-And /^I create a new section( and go home)?$/ do |home|
-  section = JSON.parse(browser_request(url: '/dashboardapi/sections', method: 'POST', body: {login_type: 'email'}))
+And /^I create a new student section( and go home)?$/ do |home|
+  section = JSON.parse(browser_request(url: '/dashboardapi/sections', method: 'POST', body: {login_type: 'email', participant_type: 'student'}))
   section_code = section['code']
   @section_url = "http://studio.code.org/join/#{section_code}"
   navigate_to replace_hostname('http://studio.code.org') if home
 end
 
-And /^I create a new section named "([^"]*)" assigned to "([^"]*)" version "([^"]*)"(?: and unit "([^"]*)")?$/ do |section_name, assignment_family, version_year, secondary|
+And /^I create a new student section named "([^"]*)" assigned to "([^"]*)" version "([^"]*)"(?: and unit "([^"]*)")?$/ do |section_name, assignment_family, version_year, secondary|
   individual_steps %Q{
     When I see the section set up box
     When I press the new section button
@@ -36,15 +36,15 @@ And /^I create a new section named "([^"]*)" assigned to "([^"]*)" version "([^"
   }
 end
 
-Given (/^I create a new section assigned to "([^"]*)"$/) do |script_name|
+Given (/^I create a new student section assigned to "([^"]*)"$/) do |script_name|
   browser_request(
-    url: '/api/test/create_section_assigned_to_script',
+    url: '/api/test/create_student_section_assigned_to_script',
     method: 'POST',
     body: {script_name: script_name}
   )
 end
 
-And /^I create a new section with course "([^"]*)", version "([^"]*)"(?: and unit "([^"]*)")?$/ do |assignment_family, version_year, secondary|
+And /^I create a new student section with course "([^"]*)", version "([^"]*)"(?: and unit "([^"]*)")?$/ do |assignment_family, version_year, secondary|
   individual_steps %Q{
     When I see the section set up box
     When I press the new section button
@@ -78,7 +78,7 @@ And(/^I create a(n authorized)? teacher-associated( under-13)? student named "([
   # enroll in a plc course as a way of becoming an authorized teacher
   steps 'And I am enrolled in a plc course' if authorized
 
-  section = JSON.parse(browser_request(url: '/dashboardapi/sections', method: 'POST', body: {login_type: 'email'}))
+  section = JSON.parse(browser_request(url: '/dashboardapi/sections', method: 'POST', body: {login_type: 'email', participant_type: 'student'}))
   section_code = section['code']
   @section_url = "http://studio.code.org/join/#{section_code}"
   create_user(name, url: "/join/#{section_code}", code: 200, age: under_13 ? '10' : '16')

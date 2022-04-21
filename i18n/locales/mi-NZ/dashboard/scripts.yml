@@ -751,6 +751,7 @@ mi:
           description_short: Hangaia tētahi kēmu poitūkohu
           description: Hangaia tētahi kēmu poitūkohu
           student_description: Hangaia tētahi kēmu poitūkohu
+          name: poitūkohu
         csd2-2017:
           lessons:
             Peer Review:
@@ -1832,10 +1833,6 @@ mi:
           lesson_groups:
             content:
               display_name: Ihirangi
-        dance-2019:
-          lessons:
-            Dance Party:
-              name: Te Pāti Kanikani
         k5-onlinepd-2019:
           lessons:
             Loops:
@@ -2611,6 +2608,9 @@ mi:
             lessonGroup-2:
               display_name: Ihirangi
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: Mō Ngā Koromeke
           lesson_groups:
             lessonGroup-2:
               display_name: Ihirangi

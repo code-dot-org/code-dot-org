@@ -2,6 +2,8 @@
 de:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: erstelle neuen {ANIMATION_NAME} Sprite in {LOCATION}
       Dancelab_alternateMoves:
         text: "{GROUP} wechselt jeden {N} Takt \nzwischen {MOVE1} und {MOVE2}"
         options:
@@ -1071,6 +1073,12 @@ de:
         text: Linie ziehen {COLOR} {LOC1} {LOC2}
       gamelab_edgesDisplace:
         text: der Rand hindert {SPRITE} an der Bewegung
+      gamelab_everySeconds:
+        text: 'jede {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': Sekunden
+            '"frames"': Frames
       gamelab_followingTargets:
         text: Ziele folgen
       gamelab_getAllSprites:
@@ -1224,6 +1232,8 @@ de:
             '"pop"': Pop
             '"rain"': Regen
             '"spiral"': Spirale
+      gamelab_makeNewScaledSprite:
+        text: erstelle neuen {ANIMATION_NAME} Sprite in {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: erstelle neuen {ANIMATION_NAME} Sprite in {LOCATION}
       gamelab_makeNumSprites:

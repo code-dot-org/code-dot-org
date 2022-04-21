@@ -1143,8 +1143,6 @@ uz:
               name: Xulosa
         equity-pd:
           lessons:
-            Code.org Equity PD:
-              name: Code.org Equity PD
             Necessary Background:
               name: Necessary Background
         science-PD2:
@@ -3277,6 +3275,7 @@ uz:
               description_student: Maktabda biron marta video o‘ynashni orzu qilganmisiz? Bu darsda, siz shaxsan o‘zingiznikini yaratasiz!
               description_teacher: Bu onlayn mashg‘ulotda, talabalar hodisalar nima ekanligi va komputerlar ularni video o‘yinlar kabi dasturlarda qanday ishlatishi haqida o‘rganishadi. Talabalar hodisalarga (masalan, yo‘nalishli tugmalar bosilganda) javob qaytaradigan qilish uchun boshqotirmalar ustida ishlashadi. Boshqotirmaning oxirida, talabalarda o‘yinlarini turli xil tezlik va tovushlar bilan moslashtirish imkoniyati tug‘iladi.
           student_description: Choose your team and make a basketball game
+          name: basketbol
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -3840,6 +3839,7 @@ uz:
               description_student: Maktabda biron marta video o‘ynashni orzu qilganmisiz? Bu darsda, siz shaxsan o‘zingiznikini yaratasiz!
               description_teacher: Bu onlayn mashg‘ulotda, talabalar hodisalar nima ekanligi va komputerlar ularni video o‘yinlar kabi dasturlarda qanday ishlatishi haqida o‘rganishadi. Talabalar hodisalarga (masalan, yo‘nalishli tugmalar bosilganda) javob qaytaradigan qilish uchun boshqotirmalar ustida ishlashadi. Boshqotirmaning oxirida, talabalarda o‘yinlarini turli xil tezlik va tovushlar bilan moslashtirish imkoniyati tug‘iladi.
           student_description: Mix and match across sports
+          name: sport
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -12190,7 +12190,7 @@ uz:
           description: Do‘stlaringiz bilan ulashish uchun o‘z Raqs bazmingizni dasturlang!
           lessons:
             Dance Party:
-              name: Dance Party
+              name: Raqs bazmi (2019)
           student_description: Do‘stlaringiz bilan ulashish uchun o‘z Raqs bazmingizni dasturlang!
         k5-onlinepd-2019:
           description: Ushbu bepul, o‘z-o‘zini rivojlantirish kursi bilan Code.org ning "Kompyuter savodxonligi asoslari" dan foydalangan holda kompyuter fanlarini qanday o‘qitishni o‘rganing!
@@ -17536,7 +17536,7 @@ uz:
               description_student: Use loops and patterns to finish the images.
               description_teacher: Sikllar mavzusiga qaytgan holda, talabalar ko‘rsatmalarning oddiy ketma-ketligini takrorlash orqali rasmlar chizishni o‘rganishadi. Kompyuter bilan o‘tilgan oldingi darsda, sikllar labirintdan o‘tish va xazinani yig‘ish uchun foydalanilgan edi. Bu yerda, sikllar yordamida shakllar yaratilyapti. Bu bosqichning oxirida, talabalarga sikllardan foydalanib o‘z rasmlarini yaratish imkoniyati beriladi.
               key: Sikllar bilan okean manzarasi
-            The Big Event Jr.:
+            The Big Event Jr:
               name: Katta hodisa Jr.
               description_student: Move and shout when your teachers presses buttons on a giant remote.
               description_teacher: Hodisalar - oldindan yozilgan algoritmga interfaollik qo‘shishning ajoyib usuli. Ba'zan siz dasturingiz foydalanuvchi xohlagan vaqtda unga aniq javob bera olishini xohlaysiz. Hodisalar aynan shu uchun mo‘ljallangan.
@@ -18007,7 +18007,7 @@ uz:
               name: To'g'ri ilova
               description_teacher: Ushbu dars o‘quvchilarga kompyuter fanlari hayotda odamlarga yordam berishi mumkinligini o‘rgatadi. Birinchidan, o‘quvchilar o‘zlarining ehtiyojlarini qondiradigan "to‘g‘ri dastur"ni topishda yordam berish uchun xayolan bir nechta smartfon foydalanuvchilarini tasavvur qilishadi. So‘ngra, o‘quvchilar o‘zlarining smartfon dasturlarini qo‘shimcha ravishda bitta foydalanuvchi ehtiyojlarini qondirish uchun yordam beradilar va ijodkorlikdan foydalanadilar.
               key: To'g'ri ilova
-            The Big Event Jr.:
+            The Big Event Jr:
               name: Katta hodisa Jr.
               description_teacher: Hodisalar - oldindan yozilgan algoritmga interfaollik qo‘shishning ajoyib usuli. Ba'zan siz dasturingiz foydalanuvchi xohlagan vaqtda unga aniq javob bera olishini xohlaysiz. Hodisalar aynan shu uchun mo‘ljallangan.
             'Mini-Project: A Royal Battle with Events':
@@ -18078,7 +18078,7 @@ uz:
           lessons:
             Putting a STOP to Online Meanness:
               description_student: Ushbu darsda siz ma'nosizlik haqida va agar Internetda duch kelganda nima qilish kerakligi haqida bilib olasiz.
-            My Robotic Friends Jr.:
+            My Robotic Friends Jr:
               name: Mening robot do‘stlarim Jr.
               description_student: In this lesson, you'll pretend your classmates are robots and program them to build patterns of stacked cups.
               description_teacher: Kod o‘rniga belgilar to‘plamidan foydalangan holda, talabalar chashkalarni turli xil ko‘rinishlarda taxlaydigan "robot" yasash uchun algoritmlarni dizaynlashtirishadi. Talabalar faqatgina tengdoshlari tomonidan ta’riflangan algoritmlarga javob bergan holda navbatma-navbat robot sifatida qatnashishadi. Bu bo‘lim talabalarga belgilar va harakatlar o‘rtasidagi bog‘liqlikni, biron algoritm va dastur o‘rtasidagi farqni va qimmatli debug qilish mahoratlarini o‘rgatadi.
@@ -18099,7 +18099,7 @@ uz:
               name: Kod bilan san’at yaratish
               description_student: Rassomni dasturlash orqali chiroyli rasmlar yarating.
               description_teacher: Bu darsda talabalar ekrandagi chizmalarni tugatish uchun Rassomni boshqarishadi. Bu Rassom bosqichi talabalarga yangi bo‘limlar, masalan, `move forward by 100 pixels` va `turn right by 90 degrees` kabilardan foydalangan holda yuqori mukammallikdagi rasmlar yaratish imkonini beradi.
-            My Loopy Robotic Friends Jr.:
+            My Loopy Robotic Friends Jr:
               name: Mening sikllashtirilgan robot do‘stlarim Jr.
               description_student: In this lesson, you'll program your classmates again, but using loops you'll be able to solve bigger and more complicated problems.
               description_teacher: '"Mening Robot Do‘stlarim" mashg‘ulotiga asoslangan holda, talabalar kattaroq va yanada mukammalroq dizaynlarni ham yecha olishadi. Bu mukammalroq dizaynlarni yaratish jarayonida o‘z robotlarini dasturlash maqsadida talabalar o‘z ko‘rsatmalaridagi biron sikl bilan almashtirsa bo‘ladigan takrorlanuvchi ko‘rinishlarni aniqlashi kerak bo‘ladi.'
@@ -18723,6 +18723,9 @@ uz:
             lessonGroup-2:
               display_name: Kontent
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: For sikllari
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
@@ -18858,6 +18861,8 @@ uz:
           lessons:
             lesson-1:
               name: Xush kelibsiz
+            lesson-9:
+              name: Darsni rejalashtirish
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -18895,3 +18900,11 @@ uz:
               key: For sikllari
             Lesson Planning:
               key: Darsni rejalashtirish
+        vpl-csd2-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Jismoniy hisoblash
+        vpl-csd3-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Jismoniy hisoblash

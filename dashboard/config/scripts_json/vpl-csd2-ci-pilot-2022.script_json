@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-23 16:57:37 UTC",
+    "serialized_at": "2022-04-07 06:41:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -554,6 +554,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-lesson2-overview"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -832,6 +835,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-sample-mod2-lesson3-overview"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -958,6 +964,9 @@
       "assessment": false,
       "properties": {
         "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD Web Headings Wrong Tag in Rule Set_2021"
+        ],
         "progression": "Style text with CSS"
       },
       "bonus": false,
@@ -1031,6 +1040,9 @@
       "activity_section_position": 8,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-CSS-elements-C4U"
+        ],
         "progression": "Style text with CSS"
       },
       "bonus": false,
@@ -1079,6 +1091,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-StylingElements"
+        ],
         "progression": "Style elements with CSS"
       },
       "bonus": false,

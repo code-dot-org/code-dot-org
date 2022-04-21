@@ -696,7 +696,7 @@ fa:
           description_short: یک جهان ماینکرفتی را از طریق کد کاوش کنید.
           lessons:
             Hour of Code 2015:
-              name: 'ساعت کدنویسی 2015'
+              name: ساعت کدنویسی 2015
           student_description: استفاده از بلوکهای کد برای ماجراجویی استیو یا الکس در ماین کرافت
         ScienceP3OLPT3:
           lessons:
@@ -992,6 +992,8 @@ fa:
           lesson_groups:
             required:
               display_name: بررسی اجمالی
+        basketball:
+          name: بسکتبال
         csd2-2017:
           lessons:
             Lists:
@@ -2091,10 +2093,6 @@ fa:
           lesson_groups:
             required:
               display_name: بررسی اجمالی
-        dance-2019:
-          lessons:
-            Dance Party:
-              name: جشن و رقص
         k5-onlinepd-2019:
           lessons:
             Computer Science Fundamentals:
@@ -2818,6 +2816,10 @@ fa:
           lessons:
             lesson-6:
               name: متغیرها
+        csa3-2022:
+          lessons:
+            lesson-5:
+              name: حلقه های "برای"
         cs4all-invasive-species:
           lessons:
             lesson-12:

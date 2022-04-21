@@ -169,10 +169,10 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.draw_move_by_constant = function() {
     // Generate JavaScript for moving forward or backward the internal number of
     // pixels.
-    var value = window.parseFloat(this.getTitleValue('VALUE')) || 0;
+    var value = window.parseFloat(this.getFieldValue('VALUE')) || 0;
     return (
       'Turtle.' +
-      this.getTitleValue('DIR') +
+      this.getFieldValue('DIR') +
       '(' +
       value +
       ", 'block_id_" +
@@ -223,10 +223,10 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.draw_turn_by_constant_restricted = function() {
     // Generate JavaScript for turning either left or right from among a fixed
     // set of angles.
-    var value = window.parseFloat(this.getTitleValue('VALUE'));
+    var value = window.parseFloat(this.getFieldValue('VALUE'));
     return (
       'Turtle.' +
-      this.getTitleValue('DIR') +
+      this.getFieldValue('DIR') +
       '(' +
       value +
       ", 'block_id_" +
@@ -285,10 +285,10 @@ exports.install = function(blockly, blockInstallOptions) {
 
   generator.draw_turn_by_constant = function() {
     // Generate JavaScript for turning left or right.
-    var value = window.parseFloat(this.getTitleValue('VALUE')) || 0;
+    var value = window.parseFloat(this.getFieldValue('VALUE')) || 0;
     return (
       'Turtle.' +
-      this.getTitleValue('DIR') +
+      this.getFieldValue('DIR') +
       '(' +
       value +
       ", 'block_id_" +
@@ -301,10 +301,10 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.draw_move_inline = function() {
     // Generate JavaScript for moving forward or backward the internal number of
     // pixels.
-    var value = window.parseFloat(this.getTitleValue('VALUE'));
+    var value = window.parseFloat(this.getFieldValue('VALUE'));
     return (
       'Turtle.' +
-      this.getTitleValue('DIR') +
+      this.getFieldValue('DIR') +
       '(' +
       value +
       ", 'block_id_" +
@@ -354,10 +354,10 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.draw_turn_inline_restricted = function() {
     // Generate JavaScript for turning either left or right from among a fixed
     // set of angles.
-    var value = window.parseFloat(this.getTitleValue('VALUE'));
+    var value = window.parseFloat(this.getFieldValue('VALUE'));
     return (
       'Turtle.' +
-      this.getTitleValue('DIR') +
+      this.getFieldValue('DIR') +
       '(' +
       value +
       ", 'block_id_" +
@@ -421,7 +421,7 @@ exports.install = function(blockly, blockInstallOptions) {
   });
 
   generator.point_to = function() {
-    let value = window.parseFloat(this.getTitleValue('DIRECTION')) || 0;
+    let value = window.parseFloat(this.getFieldValue('DIRECTION')) || 0;
     return `Turtle.pointTo(${value}, 'block_id_${this.id}');\n`;
   };
 
@@ -476,16 +476,16 @@ exports.install = function(blockly, blockInstallOptions) {
   });
 
   generator.point_to_by_constant_restricted = function() {
-    let value = window.parseFloat(this.getTitleValue('VALUE'));
+    let value = window.parseFloat(this.getFieldValue('VALUE'));
     return `Turtle.pointTo(${value}, 'block_id_${this.id}');\n`;
   };
 
   generator.draw_turn_inline = function() {
     // Generate JavaScript for turning left or right.
-    var value = window.parseFloat(this.getTitleValue('VALUE'));
+    var value = window.parseFloat(this.getFieldValue('VALUE'));
     return (
       'Turtle.' +
-      this.getTitleValue('DIR') +
+      this.getFieldValue('DIR') +
       '(' +
       value +
       ", 'block_id_" +
@@ -679,7 +679,7 @@ exports.install = function(blockly, blockInstallOptions) {
       this.setTooltip(
         blockly.Msg.CONTROLS_FOR_TOOLTIP.replace(
           '%1',
-          this.getTitleValue('VAR')
+          this.getFieldValue('VAR')
         )
       );
     },
@@ -688,7 +688,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // different locales
     mutationToDom: function() {
       var container = document.createElement('mutation');
-      var counter = this.getTitleValue('VAR');
+      var counter = this.getFieldValue('VAR');
       container.setAttribute('counter', counter);
       return container;
     },
@@ -736,7 +736,7 @@ exports.install = function(blockly, blockInstallOptions) {
       generator.valueToCode(this, 'VALUE', generator.ORDER_NONE) || '0';
     return (
       'Turtle.' +
-      this.getTitleValue('DIR') +
+      this.getFieldValue('DIR') +
       '(' +
       value +
       ", 'block_id_" +
@@ -1015,7 +1015,7 @@ exports.install = function(blockly, blockInstallOptions) {
         var length = directionConfig.defaultLength;
 
         if (hasLengthInput) {
-          length = SimpleMove[this.getTitleValue('length')];
+          length = SimpleMove[this.getFieldValue('length')];
         }
         return (
           'Turtle.' +
@@ -1039,7 +1039,7 @@ exports.install = function(blockly, blockInstallOptions) {
       generator.valueToCode(this, 'VALUE', generator.ORDER_NONE) || '0';
     return (
       'Turtle.' +
-      this.getTitleValue('DIR') +
+      this.getFieldValue('DIR') +
       '(' +
       value +
       ", 'block_id_" +
@@ -1097,10 +1097,10 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.jump_by_constant = function() {
     // Generate JavaScript for moving forward or backward the internal number
     // of pixels without drawing.
-    var value = window.parseFloat(this.getTitleValue('VALUE')) || 0;
+    var value = window.parseFloat(this.getFieldValue('VALUE')) || 0;
     return (
       'Turtle.' +
-      this.getTitleValue('DIR') +
+      this.getFieldValue('DIR') +
       '(' +
       value +
       ", 'block_id_" +
@@ -1134,7 +1134,7 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.jump_to.VALUES = POSITION_VALUES;
 
   generator.jump_to = function() {
-    let value = this.getTitleValue('VALUE');
+    let value = this.getFieldValue('VALUE');
     if (value === RANDOM_VALUE) {
       let possibleValues = this.VALUES.map(item => item[1]).filter(
         item => item !== RANDOM_VALUE
@@ -1179,8 +1179,8 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   generator.jump_to_xy = function() {
-    const xParam = window.parseFloat(this.getTitleValue('XPOS')) || 0;
-    const yParam = window.parseFloat(this.getTitleValue('YPOS')) || 0;
+    const xParam = window.parseFloat(this.getFieldValue('XPOS')) || 0;
+    const yParam = window.parseFloat(this.getFieldValue('YPOS')) || 0;
     return `Turtle.jumpToXY(${xParam}, ${yParam}, 'block_id_${this.id}');\n`;
   };
 
@@ -1221,7 +1221,7 @@ exports.install = function(blockly, blockInstallOptions) {
       generator.valueToCode(this, 'VALUE', generator.ORDER_NONE) || '0';
     return (
       'Turtle.' +
-      this.getTitleValue('DIR') +
+      this.getFieldValue('DIR') +
       '(' +
       value +
       ", 'block_id_" +
@@ -1273,7 +1273,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   generator.draw_width_inline = function() {
     // Generate JavaScript for setting the pen width.
-    var width = this.getTitleValue('WIDTH');
+    var width = this.getFieldValue('WIDTH');
     return 'Turtle.penWidth(' + width + ", 'block_id_" + this.id + "');\n";
   };
 
@@ -1300,7 +1300,7 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.draw_pen = function() {
     // Generate JavaScript for pen up/down.
     return (
-      'Turtle.' + this.getTitleValue('PEN') + "('block_id_" + this.id + "');\n"
+      'Turtle.' + this.getFieldValue('PEN') + "('block_id_" + this.id + "');\n"
     );
   };
 
@@ -1378,7 +1378,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   generator.draw_colour_simple = function() {
     // Generate JavaScript for setting the colour.
-    var colour = this.getTitleValue('COLOUR') || "'#000000'";
+    var colour = this.getFieldValue('COLOUR') || "'#000000'";
     return 'Turtle.penColour("' + colour + '", \'block_id_' + this.id + "');\n";
   };
 
@@ -1401,7 +1401,7 @@ exports.install = function(blockly, blockInstallOptions) {
 
   generator.draw_line_style_pattern = function() {
     // Generate JavaScript for setting the image for a patterned line.
-    var pattern = this.getTitleValue('VALUE') || "'DEFAULT'";
+    var pattern = this.getFieldValue('VALUE') || "'DEFAULT'";
     return (
       'Turtle.penPattern("' + pattern + '", \'block_id_' + this.id + "');\n"
     );
@@ -1453,7 +1453,7 @@ exports.install = function(blockly, blockInstallOptions) {
     // Generate JavaScript for changing turtle visibility.
     return (
       'Turtle.' +
-      this.getTitleValue('VISIBILITY') +
+      this.getFieldValue('VISIBILITY') +
       "('block_id_" +
       this.id +
       "');\n"
@@ -1519,7 +1519,7 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.sticker = generator.turtle_stamp = function() {
     return (
       'Turtle.drawSticker("' +
-      this.getTitleValue('VALUE') +
+      this.getFieldValue('VALUE') +
       '", null, \'block_id_' +
       this.id +
       "');\n"
@@ -1536,7 +1536,7 @@ exports.install = function(blockly, blockInstallOptions) {
       'SIZE',
       Blockly.JavaScript.ORDER_NONE
     );
-    return `Turtle.drawSticker('${this.getTitleValue('VALUE')}',${size},
+    return `Turtle.drawSticker('${this.getFieldValue('VALUE')}',${size},
         'block_id_${this.id}');\n`;
   };
 
@@ -1545,8 +1545,8 @@ exports.install = function(blockly, blockInstallOptions) {
   );
 
   generator.turtle_sticker_with_size_non_param = function() {
-    let size = window.parseFloat(this.getTitleValue('SIZE')) || 0;
-    return `Turtle.drawSticker('${this.getTitleValue('VALUE')}',${size},
+    let size = window.parseFloat(this.getFieldValue('SIZE')) || 0;
+    return `Turtle.drawSticker('${this.getFieldValue('VALUE')}',${size},
         'block_id_${this.id}');\n`;
   };
 
@@ -1607,7 +1607,7 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.shape = function() {
     return (
       'Turtle.drawShape("' +
-      this.getTitleValue('VALUE') +
+      this.getFieldValue('VALUE') +
       '", null, \'block_id_' +
       this.id +
       "');\n"
@@ -1624,7 +1624,7 @@ exports.install = function(blockly, blockInstallOptions) {
       'SIZE',
       Blockly.JavaScript.ORDER_NONE
     );
-    return `Turtle.drawShape('${this.getTitleValue('VALUE')}',${size},
+    return `Turtle.drawShape('${this.getFieldValue('VALUE')}',${size},
         'block_id_${this.id}');\n`;
   };
 
@@ -1633,8 +1633,8 @@ exports.install = function(blockly, blockInstallOptions) {
   );
 
   generator.turtle_shape_with_side_length_non_param = function() {
-    let size = window.parseFloat(this.getTitleValue('SIZE')) || 0;
-    return `Turtle.drawShape('${this.getTitleValue('VALUE')}',${size},
+    let size = window.parseFloat(this.getFieldValue('SIZE')) || 0;
+    return `Turtle.drawShape('${this.getFieldValue('VALUE')}',${size},
         'block_id_${this.id}');\n`;
   };
 
@@ -1658,7 +1658,7 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   generator.turtle_setArtist = function() {
-    return `Turtle.setArtist('${this.getTitleValue('VALUE')}',
+    return `Turtle.setArtist('${this.getFieldValue('VALUE')}',
       'block_id_${this.id}');\n`;
   };
 
