@@ -1,11 +1,9 @@
+import React from 'react';
 import {FormControl, FormGroup, HelpBlock} from 'react-bootstrap';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import React, {useState} from 'react';
 
 const FieldGroup = ({id, label, help, componentClass, children, ...props}) => {
-  const [value, setValue] = useState();
-
   return (
     <FormGroup controlId={id}>
       {label && <span className="dropdown-label">{label}</span>}
@@ -15,8 +13,6 @@ const FieldGroup = ({id, label, help, componentClass, children, ...props}) => {
           'field',
           componentClass === 'select' ? 'dropdown' : 'grey_input'
         )}
-        value={value}
-        onChange={e => setValue(e.target.value)}
         {...props}
       >
         {children}

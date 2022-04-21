@@ -1,75 +1,102 @@
-import React from 'react';
+import React, {useState} from 'react';
 import classNames from 'classnames';
-import {Button, Form} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
 import FieldGroup from './FieldGroup';
 import {range} from 'lodash';
 
-const fields = [
-  <FieldGroup id="name" key="name" placeholder="Name" type="text" />,
-  <FieldGroup
-    id="email"
-    key="email"
-    placeholder="Email"
-    type="text"
-    help="Only used for infrequent updates"
-  />,
-  <FieldGroup
-    id="zip-or-country"
-    key="zip-or-country"
-    placeholder="ZIP code or country"
-    type="text"
-    help="Enter country if outside the United States"
-  />,
-  <FieldGroup
-    id="age"
-    key="age"
-    label="Age"
-    componentClass="select"
-    help={<a href="/privacy">See our privacy practices for children</a>}
-  >
-    {['-', ...range(1, 101)].map((age, index) => (
-      <option key={index} value={age}>
-        {age}
-      </option>
-    ))}
-  </FieldGroup>,
-  <FieldGroup
-    id="profession"
-    key="profession"
-    label="I am a"
-    componentClass="select"
-  >
-    {[
-      '-',
-      'Student',
-      'Parent',
-      'Educator',
-      'School Administrator',
-      'Software Engineer',
-      'None of the Above'
-    ].map((profession, index) => (
-      <option key={index} value={profession}>
-        {profession}
-      </option>
-    ))}
-  </FieldGroup>
-];
-
 const PetitionForm = () => {
-  const hasError = false;
+  const [values, setValues] = useState({});
+
+  const handleChange = event => {
+    event.persist();
+    setValues(values => ({...values, [event.target.name]: event.target.value}));
+  };
+
+  const buildFieldGroup = (
+    id,
+    placeholderOrLabel,
+    helpText,
+    componentClass,
+    children
+  ) => {
+    return componentClass === 'select' ? (
+      <FieldGroup
+        id={id}
+        name={id}
+        key={id}
+        label={placeholderOrLabel}
+        componentClass={componentClass}
+        help={helpText}
+        onChange={handleChange}
+        value={values[id] || ''}
+      >
+        {children}
+      </FieldGroup>
+    ) : (
+      <FieldGroup
+        id={id}
+        name={id}
+        key={id}
+        placeholder={placeholderOrLabel}
+        type={'text'}
+        help={helpText}
+        onChange={handleChange}
+        value={values[id]}
+      />
+    );
+  };
+
+  const hasError = true;
+  const errorMessage = `Please ${JSON.stringify(values)}.`;
 
   return (
     <>
-      <Form inline id="petition-form" className="petition-form">
+      <form id="petition-form" className="petition-form" onSubmit={() => {}}>
         <div
           className={classNames(
             'petition-space',
             hasError ? 'petition-error' : 'petition-no-error'
           )}
         >
-          {/*Warning*/}
+          {errorMessage}
         </div>
-        {fields}
+        {buildFieldGroup('name', 'Name')}
+        {buildFieldGroup('email', 'Email', 'Only used for infrequent updates')}
+        {buildFieldGroup(
+          'zip-or-country',
+          'ZIP code or country',
+          'Enter country if outside the United States'
+        )}
+        {buildFieldGroup(
+          'age',
+          'Age',
+          <a href="/privacy">See our privacy practices for children</a>,
+          'select',
+          ['-', ...range(1, 101)].map((age, index) => (
+            <option key={index} value={age}>
+              {age}
+            </option>
+          ))
+        )}
+        {buildFieldGroup(
+          'profession',
+          'I am a',
+          <a href="/privacy">See our privacy practices for children</a>,
+          'select',
+          [
+            '-',
+            'Student',
+            'Parent',
+            'Educator',
+            'School Administrator',
+            'Software Engineer',
+            'None of the Above'
+          ].map((profession, index) => (
+            <option key={index} value={profession}>
+              {profession}
+            </option>
+          ))
+        )}
         <Button
           className="petition-button"
           bsStyle="primary"
@@ -79,7 +106,7 @@ const PetitionForm = () => {
         >
           I agree
         </Button>
-      </Form>
+      </form>
     </>
   );
 };
