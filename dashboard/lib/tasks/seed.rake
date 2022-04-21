@@ -70,7 +70,9 @@ namespace :seed do
     'ui-test-script-in-course-2019',
     'ui-test-versioned-script-2017',
     'ui-test-versioned-script-2019',
-    'ui-test-csa-family-script'
+    'ui-test-csa-family-script',
+    'ui-test-teacher-pl-course',
+    'ui-test-facilitator-pl-course'
   ].map {|script| "test/ui/config/scripts_json/#{script}.script_json"}.freeze
   UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + [
     '20-hour',
@@ -291,7 +293,7 @@ namespace :seed do
   end
 
   timed_task course_offerings_ui_tests: :environment do
-    %w(ui-test-course ui-test-csa-family-script).each do |course_offering_name|
+    %w(ui-test-course ui-test-csa-family-script ui-test-teacher-pl-course ui-test-facilitator-pl-course).each do |course_offering_name|
       CourseOffering.seed_record("test/ui/config/course_offerings/#{course_offering_name}.json")
     end
   end
