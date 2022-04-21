@@ -43,7 +43,6 @@ MONITORING_GROUPS = {
   'international' => ['International'],
   'learning-platform' => ['Learning Platform'],
   'marketing' => ['Media'],
-  'pdot' => ['PDOT Amy', 'PDOT Desiree', 'PDOT Jess', 'PDOT Rosie', 'PDOT Tawny'],
   'product' => ['Product'],
   'programsnpartners_theluau' => ['PNP'],
   'regional_managers' => ['Outreach'],
