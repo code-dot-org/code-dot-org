@@ -1,5 +1,5 @@
 {
-  "title": "CS Discoveries & CS Principles Facilitator Summit Pre-Survey",
+  "title": "Code.org Facilitator Survey",
   "logoPosition": "right",
   "pages": [
     {
@@ -86,7 +86,7 @@
         {
           "type": "radiogroup",
           "name": "classroom_teacher",
-          "title": "Do you teach CS in a K-12 classroom?",
+          "title": "Do you teach CS, using Code.org curriculum, in a K-12 classroom?",
           "choices": [
             {
               "value": "yes",
@@ -105,10 +105,6 @@
           "title": "Which position best describes your primary professional role?",
           "choices": [
             {
-              "value": "regional_partner",
-              "text": "Affiliated with Code.org's Regional Partner"
-            },
-            {
               "value": "school_support",
               "text": "School-based classroom/teacher support (e.g. Instructional coach, staff development, technology integration, etc.)"
             },
@@ -117,16 +113,8 @@
               "text": "District-level specialist/coach/teacher support"
             },
             {
-              "value": "state_support",
-              "text": "Affiliated to State-level entity"
-            },
-            {
-              "value": "university",
-              "text": "Affiliated to a higher education institution/University"
-            },
-            {
-              "value": "Nonprofit",
-              "text": "Affiliated to a Non-Profit Organization"
+              "value": "regional_partner_staff",
+              "text": "Specialist, coach or manager for a Code.org Regional Partner"
             },
             {
               "value": "retired",
@@ -386,7 +374,7 @@
             },
             {
               "value": "engage_defensive_participants",
-              "text": "Engage with participants who are vocally defensive during conversations about equity in computer science."
+              "text": "Engage with participants who are vocally defensive during challenging discussions."
             }
           ]
         },

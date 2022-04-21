@@ -53,6 +53,12 @@ const RESTRICTED_SECTION = {
   id: 'ABCDEF'
 };
 
+const SPECIAL_PARTICIPANT_TYPE_SECTION = {
+  action: 'join',
+  result: 'cant_be_participant',
+  id: 'ABCDEF'
+};
+
 describe('JoinSectionNotifications', () => {
   it('renders correct component when successfully join a section', () => {
     let wrapper = shallow(<JoinSectionNotifications {...SUCCESSFUL_JOIN} />);
@@ -77,6 +83,16 @@ describe('JoinSectionNotifications', () => {
   it('renders correct component when fail to join section', () => {
     let wrapper = shallow(<JoinSectionNotifications {...FAILED_JOIN} />);
     expect(wrapper.find('JoinSectionFailNotification')).to.have.lengthOf(1);
+    expect(wrapper.find('JoinSectionFullNotification')).to.have.lengthOf(0);
+  });
+
+  it('renders correct component when cant be participant in section', () => {
+    let wrapper = shallow(
+      <JoinSectionNotifications {...SPECIAL_PARTICIPANT_TYPE_SECTION} />
+    );
+    expect(wrapper.find('JoinSectionParticipantNotification')).to.have.lengthOf(
+      1
+    );
     expect(wrapper.find('JoinSectionFullNotification')).to.have.lengthOf(0);
   });
 
