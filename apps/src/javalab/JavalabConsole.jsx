@@ -16,6 +16,7 @@ import PaneHeader, {
   PaneButton
 } from '@cdo/apps/templates/PaneHeader';
 import PhotoSelectionView from './components/PhotoSelectionView';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 /**
  * Set the cursor position to the end of the text content in a div element.
@@ -109,7 +110,7 @@ class JavalabConsole extends React.Component {
       if (index === lines.length - 1) {
         return (
           <div key={index} style={{display: 'flex'}}>
-            {line}
+            <SafeMarkdown markdown={line} />
             <input
               id="console-input"
               type="text"
