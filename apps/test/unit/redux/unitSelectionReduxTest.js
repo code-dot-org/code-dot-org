@@ -13,7 +13,7 @@ describe('unitSelectionRedux', () => {
   it('if no scriptId then defaults to first unit of first course version', () => {
     const action = setCoursesWithProgress(fakeCoursesWithProgress);
     const nextState = unitSelection(initialState, action);
-    assert.deepEqual(nextState.scriptId, '1');
+    assert.deepEqual(nextState.scriptId, 2);
   });
 
   describe('getSelectedScriptName', () => {
