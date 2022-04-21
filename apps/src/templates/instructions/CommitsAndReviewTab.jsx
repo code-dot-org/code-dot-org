@@ -7,6 +7,10 @@ import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import CodeReviewDataApi from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
 import ReviewNavigator from '@cdo/apps/templates/instructions/codeReviewV2/ReviewNavigator';
+import CodeReviewTimelineElement, {
+  codeReviewTimelineElementType
+} from './codeReview/CodeReviewTimelineElement';
+import CodeReviewTimelineCommit from './codeReview/CodeReviewTimelineCommit';
 import Button from '@cdo/apps/templates/Button';
 
 export const VIEWING_CODE_REVIEW_URL_PARAM = 'viewingCodeReview';
@@ -90,6 +94,21 @@ const CommitsAndReviewTab = ({
           />
         </div>
       </div>
+      <CodeReviewTimelineElement type={codeReviewTimelineElementType.CREATED}>
+        <div>Created</div>
+      </CodeReviewTimelineElement>
+      <CodeReviewTimelineElement type={codeReviewTimelineElementType.COMMIT}>
+        <CodeReviewTimelineCommit />
+      </CodeReviewTimelineElement>
+      <CodeReviewTimelineElement type={codeReviewTimelineElementType.COMMIT}>
+        <CodeReviewTimelineCommit />
+      </CodeReviewTimelineElement>
+      <CodeReviewTimelineElement
+        type={codeReviewTimelineElementType.CODE_REVIEW}
+        isLast={true}
+      >
+        <div>Code review</div>
+      </CodeReviewTimelineElement>
     </div>
   );
 };
