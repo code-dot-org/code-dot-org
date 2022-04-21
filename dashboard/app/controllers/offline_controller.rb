@@ -20,7 +20,7 @@ class OfflineController < ApplicationController
     bird_asset_paths = bird_paths.map {|path| helpers.asset_path(path)}
 
     # Load fonts distributed by dashboard
-    font_paths = Dir.glob('*.*', base: 'public/fonts').map {|path| "/assets/#{path}"}
+    font_asset_paths = Dir.glob('*.*', base: 'public/fonts').map {|path| helpers.asset_path(path)}
 
     level_paths = (1..13).map {|n| "/s/express-2021/lessons/1/levels/#{n}"}
 
@@ -62,7 +62,7 @@ class OfflineController < ApplicationController
         helpers.asset_path("blockly/media/1x1.gif"),
         '/favicon.ico',
         '/shared/css/hamburger.css'
-      ].concat(bird_asset_paths, font_paths, level_paths)
+      ].concat(bird_asset_paths, font_asset_paths, level_paths)
     }
   end
 
