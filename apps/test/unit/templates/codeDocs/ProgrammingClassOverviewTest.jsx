@@ -85,7 +85,7 @@ describe('ProgrammingClassOverview', () => {
 
     expect(wrapper.text()).to.contain(defaultProgrammingClass.category);
 
-    expect(wrapper.find('Method').length).to.equal(2);
+    expect(wrapper.find('MethodWithOverloads').length).to.equal(2);
   });
 
   it('hides the examples header if no examples are provided', () => {
