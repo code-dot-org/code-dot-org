@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-08T17:01:36.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "edit_code": true,
@@ -60,14 +56,16 @@
       "/docs/concepts/patterns/counter-patterns-with-event/",
       "/docs/concepts/app-lab/if-statements/"
     ],
-    "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><img src=\"/level_starter_assets/CSD U6 - If Variables - SB6_2022/fire_left.png\" data-canonical-image-url=\"image://fire_left.png\" data-image-type=\"file\" data-object-fit=\"contain\" id=\"leftFire\" style=\"height: 450px; width: 30px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: -10px; top: 4.44089e-16px; margin: 0px;\"><img src=\"/level_starter_assets/CSD U6 - If Variables - SB6_2022/fire_right.png\" data-canonical-image-url=\"image://fire_right.png\" data-image-type=\"file\" data-object-fit=\"contain\" id=\"rightFire\" style=\"height: 450px; width: 30px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 300px; top: 0px; margin: 0px;\"><img data-canonical-image-url=\"image://Breadloaf.png\" data-image-type=\"file\" data-object-fit=\"contain\" id=\"toastImg\" style=\"height: 100px; width: 100px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 100px; top: 175px; margin: 0px;\" data-icon-color=\"#0f31e3\" src=\"/level_starter_assets/CSD U6 - If Variables - SB6_2022/Breadloaf.png\"></div></div>",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><img src=\"/level_starter_assets/CSD U6 - If Variables - SB6_2222/fire_left_v2.png?t=1650477719000\" data-canonical-image-url=\"image://fire_left_v2.png\" data-image-type=\"file\" data-object-fit=\"contain\" id=\"leftFire\" style=\"height: 450px; width: 130px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: -45px; top: -2.22045e-16px; margin: 0px;\"><img src=\"/level_starter_assets/CSD U6 - If Variables - SB6_2222/fire_right_v2.png?t=1650477867000\" data-canonical-image-url=\"image://fire_right_v2.png\" data-image-type=\"file\" data-object-fit=\"contain\" id=\"rightFire\" style=\"height: 500px; width: 135px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 235px; top: -15px; margin: 0px;\"><img data-canonical-image-url=\"image://Breadloaf.png\" data-image-type=\"file\" data-object-fit=\"contain\" id=\"toastImg\" style=\"height: 100px; width: 100px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 100px; top: 175px; margin: 0px;\" data-icon-color=\"#0f31e3\" src=\"/level_starter_assets/CSD U6 - If Variables - SB6_2222/Breadloaf.png\"></div></div>",
     "starter_assets": {
       "Sun.png": "eadd535b-9f72-49c8-95f4-8738eb5fecdb.png",
       "BG-Landscape07 (1).png": "147afb1c-a51b-48d3-b50e-6ec1d5426757.png",
       "fire.png": "b5b6dcf5-b88b-4256-ac85-3b6849010ea7.png",
       "fire_left.png": "1c774f15-4ac6-4577-8ca5-f6bf36b41149.png",
       "fire_right.png": "f66f0e82-cfa6-4c58-aa47-654cf9e198b0.png",
-      "Breadloaf.png": "cfa1add8-b9e3-41eb-bc24-60c5eb2e2aa4.png"
+      "Breadloaf.png": "cfa1add8-b9e3-41eb-bc24-60c5eb2e2aa4.png",
+      "fire_left_v2.png": "df804afe-ede7-43be-a736-6144c532b7fa.png",
+      "fire_right_v2.png": "84b0ddf2-cb20-4e08-b77a-ee9fffb2157d.png"
     },
     "code_functions": {
       "ifBlock": null,
@@ -87,13 +85,17 @@
       "buzzer.frequency": null,
       "onBoardEvent": null
     },
-    "start_blocks": "var xPosition = randomNumber(0, 300);\r\nsetProperty(\"toastImg\", \"x\", xPosition);\r\n\r\nonBoardEvent(buttonL, \"down\", function() {\r\n  xPosition = xPosition - 5;\r\n  setProperty(\"toastImg\", \"x\", xPosition);\r\n  //1) If the toast is too far to the left, play a sound to alert the user\r\n  \r\n});\r\n\r\nonBoardEvent(buttonR, \"down\", function() {\r\n  xPosition = xPosition + 5;\r\n  setProperty(\"toastImg\", \"x\", xPosition);\r\n  //2) If the toast is too far to the right, play a sound to alert the user\r\n  \r\n});\r\n",
+    "start_blocks": "var xPosition = randomNumber(0, 300);\nsetProperty(\"toastImg\", \"x\", xPosition);\n\nonBoardEvent(buttonL, \"down\", function() {\n  xPosition = xPosition - 5;\n  setProperty(\"toastImg\", \"x\", xPosition);\n  //1) If the toast is too far to the left, play a sound to alert the user\n  \n});\n\nonBoardEvent(buttonR, \"down\", function() {\n  xPosition = xPosition + 5;\n  setProperty(\"toastImg\", \"x\", xPosition);\n  //2) If the toast is too far to the right, play a sound to alert the user\n  \n});\n",
     "encrypted_examples": "F4vRfhdYK27T11guWPgcfv4YbDvx69zpA4zc8g3GtS3LEXxu2A0TSOt4IvqP\nTLGSpn4ZUZmM4KYxKvL92aFauA==\n",
     "preload_asset_list": null
   },
+  "game_id": 41,
+  "created_at": "2022-04-08T17:01:36.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-08T17:01:36.172+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - SB6_2022\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - SB6_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-08T17:01:36.172+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - SB6_2022\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - SB6_2022\"},{\"changed_at\":\"2022-04-20 18:32:49 +0000\",\"changed\":[\"start_html\",\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

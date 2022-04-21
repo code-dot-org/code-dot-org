@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-20 04:15:20 UTC",
+    "serialized_at": "2022-04-20 22:42:54 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5016,15 +5016,12 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L12 CFU Creative Commons2022"
-        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U1L12 CFU Creative Commons2022"
+          "U1L11 Multiple Choice Creative Commons2022"
         ],
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "csp_unit1_2020",
@@ -5032,7 +5029,7 @@
         "activity_section.key": "9c633b3e-0860-4f89-baed-8f8222ed9f6e"
       },
       "level_keys": [
-        "U1L12 CFU Creative Commons2022"
+        "U1L11 Multiple Choice Creative Commons2022"
       ]
     },
     {
@@ -5572,9 +5569,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "U1L12 CFU Creative Commons2022",
+        "level.key": "U1L11 Multiple Choice Creative Commons2022",
         "script_level.level_keys": [
-          "U1L12 CFU Creative Commons2022"
+          "U1L11 Multiple Choice Creative Commons2022"
         ],
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "csp_unit1_2020",
