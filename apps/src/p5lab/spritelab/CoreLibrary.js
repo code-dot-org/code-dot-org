@@ -95,7 +95,8 @@ export default class CoreLibrary {
     });
   }
 
-  drawSpeechBubble(text, x, y, bubbleType) {
+  drawSpeechBubble(text, spriteX, spriteY, bubbleType) {
+    //spriteY actually refers to the top of the sprite, rather than the middle.
     const padding = 8;
     if (typeof text === 'number') {
       text = text.toString();
@@ -133,35 +134,35 @@ export default class CoreLibrary {
     const height = lines.length * textSize + padding * 2;
     const radius = padding;
 
-    let tailSize = 10;
-    let tailTipX = x;
+    let tailHeight = 10;
 
     // For the calculations below, keep in mind that x and y are located at the horizontal center and the top of the sprite, respectively.
     // In other words, x and y indicate the default position of the bubble's triangular tip.
-    y = Math.min(y, APP_HEIGHT);
-    const spriteX = x;
-    if (y - height - tailSize < 1) {
-      tailSize = Math.max(1, y - height);
-      y = height + tailSize;
+    let bubbleY = Math.min(spriteY, APP_HEIGHT);
+    let bubbleX = spriteX;
+    let tailTipX = spriteX;
+    if (bubbleY - height - tailHeight < 1) {
+      tailHeight = Math.max(1, bubbleY - height);
+      bubbleY = height + tailHeight;
     }
     if (spriteX - width / 2 < 1) {
-      tailTipX = Math.max(spriteX, radius + tailSize);
-      x = width / 2;
+      tailTipX = Math.max(spriteX, radius + tailHeight);
+      bubbleX = width / 2;
     }
     if (spriteX + width / 2 > APP_WIDTH) {
       tailTipX = Math.min(spriteX, APP_WIDTH - radius);
-      x = APP_WIDTH - width / 2;
+      bubbleX = APP_WIDTH - width / 2;
     }
 
     // Draw bubble.
     const {minY} = drawUtils.speechBubble(
       this.p5,
-      x,
-      y,
+      bubbleX,
+      bubbleY,
       width,
       height,
       {
-        tailSize,
+        tailHeight,
         tailTipX,
         radius
       },
@@ -169,7 +170,7 @@ export default class CoreLibrary {
     );
 
     // Draw text within bubble.
-    drawUtils.multilineText(this.p5, lines, x, minY + padding, textSize, {
+    drawUtils.multilineText(this.p5, lines, bubbleX, minY + padding, textSize, {
       horizontalAlign: this.p5.CENTER
     });
   }
