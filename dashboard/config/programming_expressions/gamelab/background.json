@@ -3,7 +3,7 @@
   "name": "background()",
   "category": "Drawing",
   "category_key": "drawing",
-  "content": "Sets the color used for the background of your game.\r\n\r\nThis function is typically used within draw() to reset the display window at the beginning of each frame.\r\n\r\nThe _color_ parameter can take one of two forms. It can be:\r\n\r\n- The lowercase name of a color inside \" \".  A full list of color names can be found at [W3 Schools - Colors](http://www.w3schools.com/colors/colors_names.asp)\r\n- A call to the `rgb()` command.\r\n\r\nThe default background color is white.",
+  "content": "Sets the color used for the background of your game.\r\n\r\nThis function is typically used within draw() to reset the display window at the beginning of each frame.\r\n\r\nThe _color_ parameter can take one of two forms. It can be:\r\n\r\n- The lowercase name of a color inside \" \".  A full list of color names can be found at [W3 Schools - Colors](http://www.w3schools.com/colors/colors_names.asp)\r\n- A call to the [`rgb()()`(#4dd0e1)](/docs/gamelab/rgb/) command.\r\n\r\nThe default background color is white.",
   "examples": [
     {
       "name": "",
