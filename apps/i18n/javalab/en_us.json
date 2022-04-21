@@ -41,7 +41,6 @@
   "emptyBackpackMessage": "Files saved to your backpack will appear here.",
   "enablePeerReview": "Enable Peer Review",
   "errorJavabuilderConnectionGeneral": "We hit an error connecting to our server. Try again.",
-  "errorJavabuilderConnectionNotAuthorized": "You are not authorized to access Javalab. Do you need to log in or join a section?",
   "errorLoadingClassmates": "There was an error loading the list of your classmates. Please try again.",
   "errorMediaImageLoadError": "There was an error loading the image.",
   "errorNeighborhoodInvalidGrid": "There was an error loading the neighborhood level. Please contact us at support@code.org, and be sure to include the URL to this page in your message.",

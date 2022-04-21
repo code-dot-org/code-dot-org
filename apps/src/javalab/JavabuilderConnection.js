@@ -114,7 +114,7 @@ export default class JavabuilderConnection {
     $.ajax(ajaxPayload)
       .done(result => this.establishWebsocketConnection(result.token))
       .fail(error => {
-        if (error.status === 403 || error.status === 500) {
+        if (error.status === 403) {
           // Send unauthorized message as markdown as some unauthorized messages contain links
           // for further details.
           this.onMarkdownLog(this.getUnauthorizedMessage());
