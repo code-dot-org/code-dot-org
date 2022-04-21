@@ -85,6 +85,10 @@ class JavalabConsole extends React.Component {
     for (const log of this.props.consoleLogs) {
       if (log.type === 'newline') {
         lines[++currentLine] = '';
+      } else if (log.type === 'markdown') {
+        lines[++currentLine] = (
+          <SafeMarkdown markdown={log.text} openExternalLinksInNewTab={true} />
+        );
       } else {
         const text = log.type === 'input' ? log.text + '\n' : log.text;
         const splitText = text.split(/\r?\n/).entries();
@@ -110,7 +114,7 @@ class JavalabConsole extends React.Component {
       if (index === lines.length - 1) {
         return (
           <div key={index} style={{display: 'flex'}}>
-            <SafeMarkdown markdown={line} openExternalLinksInNewTab={true} />
+            {line}
             <input
               id="console-input"
               type="text"

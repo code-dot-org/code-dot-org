@@ -24,7 +24,8 @@ export default class JavabuilderConnection {
     setIsTesting,
     executionType,
     miniAppType,
-    currentUser
+    currentUser,
+    onMarkdownLog
   ) {
     this.channelId = project.getCurrentId();
     this.javabuilderUrl = javabuilderUrl;
@@ -38,6 +39,7 @@ export default class JavabuilderConnection {
     this.executionType = executionType;
     this.miniAppType = miniAppType;
     this.currentUser = currentUser;
+    this.onMarkdownLog = onMarkdownLog;
   }
 
   // Get the access token to connect to javabuilder and then open the websocket connection.
@@ -113,7 +115,9 @@ export default class JavabuilderConnection {
       .done(result => this.establishWebsocketConnection(result.token))
       .fail(error => {
         if (error.status === 403 || error.status === 500) {
-          this.onOutputMessage(this.getUnauthorizedMessage());
+          // Send unauthorized message as markdown as some unauthorized messages contain links
+          // for further details.
+          this.onMarkdownLog(this.getUnauthorizedMessage());
           this.onNewlineMessage();
         } else {
           this.onOutputMessage(javalabMsg.errorJavabuilderConnectionGeneral());
