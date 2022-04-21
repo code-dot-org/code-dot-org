@@ -5,24 +5,24 @@ import FieldGroup from './FieldGroup';
 import {range} from 'lodash';
 
 const fields = [
-  <FieldGroup id="name" name="name" placeholder="Name" type="text" />,
+  <FieldGroup id="name" key="name" placeholder="Name" type="text" />,
   <FieldGroup
     id="email"
-    name="email"
+    key="email"
     placeholder="Email"
     type="text"
     help="Only used for infrequent updates"
   />,
   <FieldGroup
     id="zip-or-country"
-    name="zip-or-country"
+    key="zip-or-country"
     placeholder="ZIP code or country"
     type="text"
     help="Enter country if outside the United States"
   />,
   <FieldGroup
     id="age"
-    name="age"
+    key="age"
     label="Age"
     componentClass="select"
     help={<a href="/privacy">See our privacy practices for children</a>}
@@ -35,7 +35,7 @@ const fields = [
   </FieldGroup>,
   <FieldGroup
     id="profession"
-    name="profession"
+    key="profession"
     label="I am a"
     componentClass="select"
   >
