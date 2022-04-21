@@ -128,51 +128,49 @@ export default class CoreLibrary {
         ? 1
         : -1
     )[0];
-    let bubbleWidth =
-      drawUtils.getTextWidth(this.p5, longestLine, textSize) + padding * 2;
-    bubbleWidth = Math.max(bubbleWidth, 50);
+    const bubbleWidth = Math.max(
+      50,
+      drawUtils.getTextWidth(this.p5, longestLine, textSize) + padding * 2
+    );
     const bubbleHeight = lines.length * textSize + padding * 2;
+
+    const tailHeight = 10;
+    const bubbleY = Math.max(
+      0,
+      Math.min(APP_HEIGHT, spriteY) - bubbleHeight - tailHeight
+    );
+    const bubbleX = Math.max(
+      0,
+      Math.min(APP_WIDTH - bubbleWidth, spriteX - bubbleWidth / 2)
+    );
     const radius = padding;
-
-    let tailHeight = 10;
-
-    // For the calculations below, keep in mind that x and y are located at the horizontal center and the top of the sprite, respectively.
-    // In other words, x and y indicate the default position of the bubble's triangular tip.
-    let bubbleY = Math.min(spriteY, APP_HEIGHT);
-    let bubbleX = spriteX;
-    let tailTipX = spriteX;
-    if (bubbleY - bubbleHeight - tailHeight < 1) {
-      tailHeight = Math.max(1, bubbleY - bubbleHeight);
-      bubbleY = bubbleHeight + tailHeight;
-    }
-    if (spriteX - bubbleWidth / 2 < 1) {
-      tailTipX = Math.max(spriteX, radius + tailHeight);
-      bubbleX = bubbleWidth / 2;
-    }
-    if (spriteX + bubbleWidth / 2 > APP_WIDTH) {
-      tailTipX = Math.min(spriteX, APP_WIDTH - radius);
-      bubbleX = APP_WIDTH - bubbleWidth / 2;
-    }
-
     // Draw bubble.
-    const {minY} = drawUtils.speechBubble(
+    drawUtils.speechBubble(
       this.p5,
       bubbleX,
       bubbleY,
       bubbleWidth,
       bubbleHeight,
+      spriteX,
+      spriteY,
       {
         tailHeight,
-        tailTipX,
         radius
       },
       bubbleType
     );
 
     // Draw text within bubble.
-    drawUtils.multilineText(this.p5, lines, bubbleX, minY + padding, textSize, {
-      horizontalAlign: this.p5.CENTER
-    });
+    drawUtils.multilineText(
+      this.p5,
+      lines,
+      bubbleX + bubbleWidth / 2,
+      bubbleY + padding,
+      textSize,
+      {
+        horizontalAlign: this.p5.CENTER
+      }
+    );
   }
 
   addSpeechBubble(sprite, text, seconds = null, bubbleType = 'say') {
