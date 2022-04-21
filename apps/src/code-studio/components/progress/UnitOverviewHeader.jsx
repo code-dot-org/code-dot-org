@@ -20,17 +20,30 @@ import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard
 import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {pegasus, studio} from '../../../lib/util/urlHelpers';
 
 const SCRIPT_OVERVIEW_WIDTH = 1100;
 // Scripts that users will be warned are outdated and have been succeeded by others.
 // This object in the form of {scriptName : description of warning}.
 const OUTDATED_SCRIPT_NAMES_AND_DESC = {
-  course1: 'aaa',
-  course2: 'bbb',
-  course3: 'ccc',
-  course4: 'ddd',
-  '20-hour': 'eee',
-  algebra: 'fff'
+  course1: i18n.outdatedCourseWarningDescCourses1To4({
+    csFundCourseLink: pegasus('/educate/curriculum/csf')
+  }),
+  course2: i18n.outdatedCourseWarningDescCourses1To4({
+    csFundCourseLink: pegasus('/educate/curriculum/csf')
+  }),
+  course3: i18n.outdatedCourseWarningDescCourses1To4({
+    csFundCourseLink: pegasus('/educate/curriculum/csf')
+  }),
+  course4: i18n.outdatedCourseWarningDescCourses1To4({
+    csFundCourseLink: pegasus('/educate/curriculum/csf')
+  }),
+  '20-hour': i18n.outdatedCourseWarningDescCoursesAccelCourse({
+    expressCourseLink: studio('/s/express-2021')
+  }),
+  algebra: i18n.outdatedCourseWarningDescCoursesCSInAlgebra({
+    bootstrapAlgLink: 'https://www.bootstrapworld.org/materials/algebra/'
+  })
 };
 
 /**
@@ -162,7 +175,7 @@ class UnitOverviewHeader extends Component {
         {displayOutdatedCourseWarning && (
           <Notification
             type={NotificationType.warning}
-            notice={scriptName}
+            notice={i18n.outdatedCourseWarningTitle()}
             details={OUTDATED_SCRIPT_NAMES_AND_DESC[scriptName]}
             dismissible={true}
             width={SCRIPT_OVERVIEW_WIDTH}
