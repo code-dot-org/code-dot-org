@@ -620,7 +620,8 @@ class TopInstructions extends Component {
       isCSF && !hasContainedLevels && tabSelected === TabType.INSTRUCTIONS
         ? styles.csfBody
         : containerStyle || styles.body,
-      isMinecraft && craftStyles.instructionsBody
+      isMinecraft && craftStyles.instructionsBody,
+      tabSelected === TabType.COMMITS_AND_REVIEW && styles.commitAndReview
     ];
 
     // Only display the help tab when there are one or more videos or
@@ -842,6 +843,15 @@ const styles = {
     left: 0,
     right: 0,
     overflow: 'hidden'
+  },
+  commitAndReview: {
+    backgroundColor: color.background_gray,
+    position: 'absolute',
+    top: HEADER_HEIGHT,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    overflowY: 'auto'
   },
   embedView: {
     height: undefined,
