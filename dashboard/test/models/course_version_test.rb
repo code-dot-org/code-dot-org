@@ -11,22 +11,22 @@ class CourseVersionTest < ActiveSupport::TestCase
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
 
-    @unit_teacher_to_students = create(:script, name: 'unit-teacher-to-student22', family_name: 'family-2', version_year: '1991', is_course: true, published_state: 'stable')
+    @unit_teacher_to_students = create(:script, name: 'unit-teacher-to-student22', family_name: 'family-22', version_year: '1991', is_course: true, published_state: 'stable')
     CourseOffering.add_course_offering(@unit_teacher_to_students)
-    @unit_teacher_to_students2 = create(:script, name: 'unit-teacher-to-student32', family_name: 'family-2', version_year: '1992', is_course: true, published_state: 'stable')
+    @unit_teacher_to_students2 = create(:script, name: 'unit-teacher-to-student32', family_name: 'family-22', version_year: '1992', is_course: true, published_state: 'stable')
     CourseOffering.add_course_offering(@unit_teacher_to_students2)
-    @unit_facilitator_to_teacher = create(:script, name: 'unit-facilitator-to-teacher22', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, family_name: 'family-3', version_year: '1991', is_course: true, published_state: 'stable')
+    @unit_facilitator_to_teacher = create(:script, name: 'unit-facilitator-to-teacher22', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, family_name: 'family-32', version_year: '1991', is_course: true, published_state: 'stable')
     CourseOffering.add_course_offering(@unit_facilitator_to_teacher)
 
-    @beta_unit = create(:script, name: 'beta-unit2', family_name: 'beta', version_year: '1991', is_course: true, published_state: 'beta')
+    @beta_unit = create(:script, name: 'beta-unit2', family_name: 'beta2', version_year: '1991', is_course: true, published_state: 'beta')
     CourseOffering.add_course_offering(@beta_unit)
 
-    @in_development_unit = create(:script, name: 'in-development-unit22', family_name: 'development', version_year: '1991', is_course: true, published_state: 'in_development')
+    @in_development_unit = create(:script, name: 'in-development-unit22', family_name: 'development2', version_year: '1991', is_course: true, published_state: 'in_development')
     CourseOffering.add_course_offering(@in_development_unit)
   end
 
   setup do
-    @unit_group = create(:unit_group, name: 'course-instructed-by-teacher22', family_name: 'family-1', version_year: '1991', published_state: 'stable')
+    @unit_group = create(:unit_group, name: 'course-instructed-by-teacher22', family_name: 'family-12', version_year: '1991', published_state: 'stable')
     @unit_in_course = create(:script, name: 'unit-in-teacher-instructed-course22', instructor_audience: nil, participant_audience: nil, instruction_type: nil, published_state: nil)
     create(:unit_group_unit, script: @unit_in_course, unit_group: @unit_group, position: 1)
     @unit_in_course.reload
@@ -34,15 +34,15 @@ class CourseVersionTest < ActiveSupport::TestCase
     CourseOffering.add_course_offering(@unit_group)
 
     @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    @pilot_unit = create :script, pilot_experiment: 'my-experiment', family_name: 'family-4', version_year: '1991', is_course: true, published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
+    @pilot_unit = create :script, pilot_experiment: 'my-experiment', family_name: 'family-42', version_year: '1991', is_course: true, published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
     CourseOffering.add_course_offering(@pilot_unit)
 
     @pilot_instructor = create :facilitator, pilot_experiment: 'my-pl-experiment'
-    @pilot_pl_unit = create :script, pilot_experiment: 'my-pl-experiment', family_name: 'family-5', version_year: '1991', is_course: true, published_state: SharedCourseConstants::PUBLISHED_STATE.pilot, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    @pilot_pl_unit = create :script, pilot_experiment: 'my-pl-experiment', family_name: 'family-52', version_year: '1991', is_course: true, published_state: SharedCourseConstants::PUBLISHED_STATE.pilot, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
     CourseOffering.add_course_offering(@pilot_pl_unit)
 
     @partner = create :teacher, pilot_experiment: 'my-editor-experiment', editor_experiment: 'ed-experiment'
-    @partner_unit = create :script, pilot_experiment: 'my-editor-experiment', editor_experiment: 'ed-experiment', family_name: 'family-11', version_year: '1991', is_course: true, published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
+    @partner_unit = create :script, pilot_experiment: 'my-editor-experiment', editor_experiment: 'ed-experiment', family_name: 'family-112', version_year: '1991', is_course: true, published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
     CourseOffering.add_course_offering(@partner_unit)
   end
   test 'get courses with participant progress for student should return no courses' do
