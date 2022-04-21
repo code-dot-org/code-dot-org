@@ -179,6 +179,12 @@ class SectionTest < ActiveSupport::TestCase
     assert_equal ['Login type must be email for professional learning sections.'], section.errors.full_messages
   end
 
+  test 'pl section must use pl grade' do
+    section = build :section, :teacher_participants, grade: 'Other'
+    refute section.valid?
+    assert_equal ['Grade must be pl for pl section.'], section.errors.full_messages
+  end
+
   test 'can not update participant type' do
     section = create :section, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student
 
