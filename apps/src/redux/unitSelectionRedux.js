@@ -56,7 +56,7 @@ export default function unitSelection(state = initialState, action) {
     return {
       ...state,
       coursesWithProgress: action.coursesWithProgress,
-      scriptId: state.scriptId === null ? firstUnit : state.scriptId
+      scriptId: state.scriptId === null ? firstUnit?.id : state.scriptId
     };
   }
 

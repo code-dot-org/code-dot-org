@@ -151,14 +151,14 @@ function randomReviewState() {
 
 function getScriptData(numLessons) {
   return {
-    id: 1,
+    id: 2,
     csf: true,
     hasStandards: false,
     title: "CSD Unit 3 - Interactive Animations and Games ('20-'21)",
     path: '//localhost-studio.code.org:3000/s/csd3-2020',
     lessons: [
       {
-        script_id: 1,
+        script_id: 2,
         script_name: 'coursea-2020',
         num_script_lessons: 12,
         id: 722,
@@ -194,7 +194,7 @@ function getScriptData(numLessons) {
           'http://localhost-studio.code.org:3000/s/coursea-2020/lessons/1/extras'
       },
       {
-        script_id: 1,
+        script_id: 2,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
         id: 1555,
@@ -304,7 +304,7 @@ function getScriptData(numLessons) {
           'http://localhost-studio.code.org:3000/s/csd3-2020/lessons/1/extras'
       },
       {
-        script_id: 1,
+        script_id: 2,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
         id: 1556,
@@ -329,7 +329,7 @@ function getScriptData(numLessons) {
           'http://localhost-studio.code.org:3000/s/csd3-2020/lessons/2/extras'
       },
       {
-        script_id: 1,
+        script_id: 2,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
         id: 1557,
@@ -593,7 +593,7 @@ function getScriptData(numLessons) {
           'http://localhost-studio.code.org:3000/s/csd3-2020/lessons/3/extras'
       },
       {
-        script_id: 1,
+        script_id: 2,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
         id: 1558,
@@ -813,7 +813,7 @@ function getScriptData(numLessons) {
           'http://localhost-studio.code.org:3000/s/csd3-2020/lessons/4/extras'
       },
       {
-        script_id: 1,
+        script_id: 2,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
         id: 1559,
@@ -1033,7 +1033,7 @@ function getScriptData(numLessons) {
           'http://localhost-studio.code.org:3000/s/csd3-2020/lessons/5/extras'
       },
       {
-        script_id: 1,
+        script_id: 2,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
         id: 1560,
@@ -1239,7 +1239,7 @@ function getScriptData(numLessons) {
           'http://localhost-studio.code.org:3000/s/csd3-2020/lessons/6/extras'
       },
       {
-        script_id: 1,
+        script_id: 2,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
         id: 1561,
@@ -1507,7 +1507,7 @@ function getScriptData(numLessons) {
           'http://localhost-studio.code.org:3000/s/csd3-2020/lessons/7/extras'
       },
       {
-        script_id: 1,
+        script_id: 2,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
         id: 1562,
@@ -1667,7 +1667,7 @@ function getScriptData(numLessons) {
           'http://localhost-studio.code.org:3000/s/csd3-2020/lessons/8/extras'
       },
       {
-        script_id: 1,
+        script_id: 2,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
         id: 1563,
@@ -1843,7 +1843,7 @@ function getScriptData(numLessons) {
           'http://localhost-studio.code.org:3000/s/csd3-2020/lessons/9/extras'
       },
       {
-        script_id: 1,
+        script_id: 2,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
         id: 1564,
@@ -1953,7 +1953,7 @@ function getScriptData(numLessons) {
           'http://localhost-studio.code.org:3000/s/csd3-2020/lessons/10/extras'
       },
       {
-        script_id: 1,
+        script_id: 2,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
         id: 1565,
@@ -2171,7 +2171,7 @@ function getScriptData(numLessons) {
           'http://localhost-studio.code.org:3000/s/csd3-2020/lessons/11/extras'
       },
       {
-        script_id: 1,
+        script_id: 2,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
         id: 1566,
@@ -2389,7 +2389,7 @@ function getScriptData(numLessons) {
           'http://localhost-studio.code.org:3000/s/csd3-2020/lessons/12/extras'
       },
       {
-        script_id: 1,
+        script_id: 2,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
         id: 1567,
@@ -2527,7 +2527,7 @@ function getScriptData(numLessons) {
           'http://localhost-studio.code.org:3000/s/csd3-2020/lessons/13/extras'
       },
       {
-        script_id: 1,
+        script_id: 2,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
         id: 1568,
@@ -2751,7 +2751,7 @@ function getScriptData(numLessons) {
           'http://localhost-studio.code.org:3000/s/csd3-2020/lessons/14/extras'
       },
       {
-        script_id: 1,
+        script_id: 2,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
         id: 1569,
@@ -2941,7 +2941,7 @@ function getScriptData(numLessons) {
           'http://localhost-studio.code.org:3000/s/csd3-2020/lessons/15/extras'
       },
       {
-        script_id: 1,
+        script_id: 2,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
         id: 1570,
@@ -3167,7 +3167,7 @@ function getScriptData(numLessons) {
           'http://localhost-studio.code.org:3000/s/csd3-2020/lessons/16/extras'
       },
       {
-        script_id: 1,
+        script_id: 2,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
         id: 1571,
@@ -3319,7 +3319,7 @@ function getScriptData(numLessons) {
           'http://localhost-studio.code.org:3000/s/csd3-2020/lessons/17/extras'
       },
       {
-        script_id: 1,
+        script_id: 2,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
         id: 1572,
@@ -3535,7 +3535,7 @@ function getScriptData(numLessons) {
           'http://localhost-studio.code.org:3000/s/csd3-2020/lessons/18/extras'
       },
       {
-        script_id: 1,
+        script_id: 2,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
         id: 1573,
@@ -3731,7 +3731,7 @@ function getScriptData(numLessons) {
           'http://localhost-studio.code.org:3000/s/csd3-2020/lessons/19/extras'
       },
       {
-        script_id: 1,
+        script_id: 2,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
         id: 1574,
@@ -3883,7 +3883,7 @@ function getScriptData(numLessons) {
           'http://localhost-studio.code.org:3000/s/csd3-2020/lessons/20/extras'
       },
       {
-        script_id: 1,
+        script_id: 2,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
         id: 1575,
@@ -4065,7 +4065,7 @@ function getScriptData(numLessons) {
           'http://localhost-studio.code.org:3000/s/csd3-2020/lessons/21/extras'
       },
       {
-        script_id: 1,
+        script_id: 2,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
         id: 1576,
@@ -4285,7 +4285,7 @@ function getScriptData(numLessons) {
           'http://localhost-studio.code.org:3000/s/csd3-2020/lessons/22/extras'
       },
       {
-        script_id: 1,
+        script_id: 2,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
         id: 1577,
@@ -4437,7 +4437,7 @@ function getScriptData(numLessons) {
           'http://localhost-studio.code.org:3000/s/csd3-2020/lessons/23/extras'
       },
       {
-        script_id: 1,
+        script_id: 2,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
         id: 1578,
@@ -4669,7 +4669,7 @@ function getScriptData(numLessons) {
           'http://localhost-studio.code.org:3000/s/csd3-2020/lessons/24/extras'
       },
       {
-        script_id: 1,
+        script_id: 2,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
         id: 1579,
@@ -4925,7 +4925,7 @@ function getScriptData(numLessons) {
           'http://localhost-studio.code.org:3000/s/csd3-2020/lessons/25/extras'
       },
       {
-        script_id: 1,
+        script_id: 2,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
         id: 1580,
@@ -5291,7 +5291,7 @@ function getScriptData(numLessons) {
           'http://localhost-studio.code.org:3000/s/csd3-2020/lessons/26/extras'
       },
       {
-        script_id: 1,
+        script_id: 2,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
         id: 1581,
@@ -5499,7 +5499,7 @@ function getScriptData(numLessons) {
           'http://localhost-studio.code.org:3000/s/csd3-2020/lessons/27/extras'
       },
       {
-        script_id: 1,
+        script_id: 2,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
         id: 1582,
@@ -5532,7 +5532,7 @@ function getScriptData(numLessons) {
           'http://localhost-studio.code.org:3000/s/csd3-2020/lessons/1/extras'
       },
       {
-        script_id: 1,
+        script_id: 2,
         script_name: 'csd3-2020',
         num_script_lessons: 29,
         id: 1583,
