@@ -110,7 +110,7 @@ class JavalabConsole extends React.Component {
       if (index === lines.length - 1) {
         return (
           <div key={index} style={{display: 'flex'}}>
-            <SafeMarkdown markdown={line} />
+            <SafeMarkdown markdown={line} openExternalLinksInNewTab={true} />
             <input
               id="console-input"
               type="text"
