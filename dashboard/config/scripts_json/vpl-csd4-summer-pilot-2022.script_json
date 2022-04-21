@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-19 04:43:29 UTC",
+    "serialized_at": "2022-04-20 19:17:47 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -80,8 +80,8 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "**Overview:**\nThis session serves as an introduction to Day 4. The session also includes a demonstration of the Circuit Playground used in Unit 6 of CS Discoveries.  \n\n**Participants will:**\n\n* Get an orientation for the day. \n* Review gots and needs. \n* Experience a Circuit Playground demonstration.\n\n**Suggested time:** 15 minutes",
-        "student_overview": "**You will:**\n\n* Get an orientation for the day. \n* Review gots and needs. \n* Experience a Circuit Playground demonstration."
+        "overview": "**Overview:**\nThis session serves as both an introduction to Day 4 and a space to debrief the asynchronous work from Day 3. \n\n**Participants will:**\n\n* Get an orientation for the day. \n* Review gots and needs. \n* Debrief asynchronous work.\n\n**Suggested time:** 15 minutes",
+        "student_overview": "**You will:**\n\n* Get an orientation for the day. \n* Review gots and needs. \n* Debrief asynchronous work."
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -1505,6 +1505,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_FishVTrash_vpl-summer-pilot-2022"
+        ],
         "progression": "Recognizing Fish"
       },
       "bonus": false,
@@ -1527,6 +1530,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Short_vpl-summer-pilot-2022"
+        ],
         "progression": "Recognizing Fish Features"
       },
       "bonus": false,
@@ -1549,6 +1555,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Long_vpl-summer-pilot-2022"
+        ],
         "progression": "Recognizing Expressions"
       },
       "bonus": false,
@@ -1571,6 +1580,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "aiml-intro-pulse-survey_vpl-summer-pilot-2022"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -1593,6 +1605,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-asyncOverview-mod4-lesson5"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1615,6 +1630,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-asyncOverview-mod4-lesson6"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1637,6 +1655,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-asyncOverview-mod4-lesson7"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
