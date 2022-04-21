@@ -214,6 +214,7 @@ class Section < ApplicationRecord
   # Checks if a user can join a section as a participant by
   # checking if they meet the participant_type for the section
   def can_join_section_as_participant?(user)
+    return true if user.permission?(UserPermission::UNIVERSAL_INSTRUCTOR) || user.permission?(UserPermission::LEVELBUILDER)
     if participant_type == SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
       return user.permission?(UserPermission::FACILITATOR)
     elsif participant_type == SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
