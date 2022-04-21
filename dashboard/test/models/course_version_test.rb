@@ -10,7 +10,9 @@ class CourseVersionTest < ActiveSupport::TestCase
     @levelbuilder = create :levelbuilder
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
+  end
 
+  setup do
     @unit_teacher_to_students = create(:script, name: 'unit-teacher-to-student22', family_name: 'family-22', version_year: '1991', is_course: true, published_state: 'stable')
     CourseOffering.add_course_offering(@unit_teacher_to_students)
     @unit_teacher_to_students2 = create(:script, name: 'unit-teacher-to-student32', family_name: 'family-22', version_year: '1992', is_course: true, published_state: 'stable')
@@ -23,9 +25,7 @@ class CourseVersionTest < ActiveSupport::TestCase
 
     @in_development_unit = create(:script, name: 'in-development-unit22', family_name: 'development2', version_year: '1991', is_course: true, published_state: 'in_development')
     CourseOffering.add_course_offering(@in_development_unit)
-  end
 
-  setup do
     @unit_group = create(:unit_group, name: 'course-instructed-by-teacher22', family_name: 'family-12', version_year: '1991', published_state: 'stable')
     @unit_in_course = create(:script, name: 'unit-in-teacher-instructed-course22', instructor_audience: nil, participant_audience: nil, instruction_type: nil, published_state: nil)
     create(:unit_group_unit, script: @unit_in_course, unit_group: @unit_group, position: 1)
