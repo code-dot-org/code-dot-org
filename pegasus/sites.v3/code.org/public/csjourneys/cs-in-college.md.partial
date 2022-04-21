@@ -88,3 +88,17 @@ social:
 </div>
 
 <div style="clear: both"></div>
+
+<div class="col-40" style="border-radius:5px; padding:10px; margin-bottom:20px">
+  {{ rtc_panel3 }}
+</div>
+<div class="col-60" style="padding:-top:15px; padding-left: 10px">
+  <h3><strong>Overcoming Imposter Syndrome: Building Confidence & Belonging</strong></h3>
+  <p>In our third panel, Rewriting the Code (RTC) college women attending Stanford, Yale, the Universities of Washington, Maryland, and British Columbia share their experiences as computer science majors. Hear about their experiences with tech internships, navigating and overcoming imposter syndrome, and strategies for building confidence and belonging.</p>
+</div>
+
+<div style="clear: both"></div>
+
+
+
+

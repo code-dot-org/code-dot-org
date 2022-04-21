@@ -2,20 +2,27 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
-    "long_instructions": "##In MyConsole.java:\r\n\r\n1. Assign the values to the 1D array.\r\n\r\n2. Print the value at index x.\r\n\r\n3. Change the value at index x to x.",
+    "long_instructions": "The following values represent the grades a student received on daily quizzes given during a week:\r\n\r\n```\r\n85, 97, 82, 79, 95\r\n```\r\n\r\n##In MyConsole.java:\r\n\r\n1. Declare and initialize a 1D array called `grades`(#e7e8ea) that stores the values.\r\n\r\n2. The teacher wants to know the grade the student received on Tuesday. Print the value from `grades`(#e7e8ea) at index `1`(#e7e8ea).\r\n\r\n3. The student retook Thursday's quiz and received a higher score. Change the value at index `3`(#e7e8ea) to `91`(#e7e8ea) and print the value.\r\n\r\n::: details [**Show Me How**]\r\nA 1D array can be declared and initialized with an initializer list using the following syntax:\r\n  \r\n  ```\r\n  dataType[] variableName = {value1, value2, . . . };\r\n  ```\r\n\r\nBe sure to replace `dataType`(#e7e8ea) with the type of data the array will store. The `variableName`(#e7e8ea) should be the name of the array. Inside the curly braces ( `{ }`(#e7e8ea) ), list the values the array will store.\r\n\r\nYou can obtain a value from an array using the following syntax:\r\n\r\n  ```\r\n  variableName[index]\r\n  ```\r\n\r\n`variableName`(#e7e8ea) refers to the name of the array, and `index`(#e7e8ea) refers to the location in the array.\r\n:::",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
-    "csa_view_mode": "console"
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    // TO DO #1: Declare and initialize a 1D array.\n\n\n    // TO DO #2: Print the value at index 1.\n\n\n    // TO DO #3: Change the value at index 3 and print it.\n    \n    \n  }\n}",
+        "isVisible": true
+      }
+    },
+    "display_name": "Student Grades",
+    "bubble_choice_description": "Create and modify a 1D array containing the scores a student received on daily quizzes.",
+    "thumbnail_url": "https://images.code.org/c7e0f316f467b245a2c03a4808808bfa-image-1648509410235.png",
+    "encrypted_exemplar_sources": "HM0H7Z3L+CTAPTxDu6u7zslyjM60me7VHOAdpgMoPI4hK4E39vhHHEajGWEc\nYihfLk+/2qkodWts6gE7bpyMb6Q0fA3T1eCagS+qCiQjWoXPuiOo8GatBqkU\nKc6DzEoErbvBnXsuTWu20OdosftP+B44cObw4Whu4A8w0n484lvhUSn9mH5w\nSx5gJwv/kV7FAkYxE3scXizaz/BcJT7GcstR+JM6fJvbi9ya6RkUjFw2dhw/\nbX/NUNgmatwje6u/4CgJpkb8/AiorG1RD/KR1VAmslcWfTu9vrJ3G7GAr8kb\nPZxz/EeMv6l8UOUzn+HYMnwRiQFcTkpM3PTbLu/b8W1OhypLH9+jUeMBukWu\nW6VTIjG/f0cYgWyNKBVBSYf3MAcvilLo3/X4rnMZa7AwNrlj3xW7J0OcgFWo\nDR7ysNb2cZDu/aQa0bWdBTzr8og0JT6n3++QZ0Ui8UGLKr24Ww7PGb/tMhrU\n0vGrshGdiNH8q6g2OhSXrkXZPBUr1KXq1Fq87vyd4pyi7Ubi2QqL7gkhQj6v\nQUP+UA+dNoMJo+5W+uzMARlwqk8MXO+v89m+U7i4IZWkhXiOpxRTUot0Kp9R\n+h9AQ4z+7anF7xsJupcOzFAc+HIfOsSCKUBsfQFD\n"
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-03-25T00:03:41.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-03-25 00:03:44 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-03-25 00:03:44 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 23:08:07 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 23:17:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 23:19:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 23:20:40 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

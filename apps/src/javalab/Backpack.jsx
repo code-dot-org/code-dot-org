@@ -21,11 +21,12 @@ const Dialog = makeEnum('IMPORT_WARNING', 'IMPORT_ERROR');
 class Backpack extends Component {
   static propTypes = {
     displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)).isRequired,
-    isDisabled: PropTypes.bool.isRequired,
+    isButtonDisabled: PropTypes.bool.isRequired,
     onImport: PropTypes.func.isRequired,
     // populated by redux
     backpackApi: PropTypes.object,
-    sources: PropTypes.object
+    sources: PropTypes.object,
+    backpackEnabled: PropTypes.bool
   };
 
   state = {
@@ -193,7 +194,11 @@ class Backpack extends Component {
   };
 
   render() {
-    const {displayTheme, isDisabled} = this.props;
+    // Display nothing if the backpack feature is disabled
+    if (!this.props.backpackEnabled) {
+      return null;
+    }
+    const {displayTheme, isButtonDisabled} = this.props;
     const {
       dropdownOpen,
       backpackFilenames,
@@ -236,7 +241,7 @@ class Backpack extends Component {
           isRtl={false}
           label={javalabMsg.backpackLabel()}
           leftJustified
-          isDisabled={isDisabled}
+          isDisabled={isButtonDisabled}
           style={{
             ...(dropdownOpen && styles.dropdownOpenButton)
           }}
@@ -426,5 +431,6 @@ const styles = {
 export const UnconnectedBackpack = Backpack;
 export default connect(state => ({
   backpackApi: state.javalab.backpackApi,
-  sources: state.javalab.sources
+  sources: state.javalab.sources,
+  backpackEnabled: state.javalab.backpackEnabled
 }))(onClickOutside(Radium(UnconnectedBackpack)));

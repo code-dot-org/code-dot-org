@@ -31,6 +31,26 @@ social:
 <a id="recordings"></a>
 
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
+  {{ myjourney17 }}
+  <h3><strong>Improving user experiences in healthcare</strong></h3>
+  <p>Hear from a self-taught web developer about how his contributions at Greenway Health make access to healthcare information more user-friendly.</p>
+</div>
+
+<div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
+  {{ myjourney16 }}
+  <h3><strong>Creating an inclusive camera at Snapchat</strong></h3>
+  <p>Hear about a Snapchat Product Lead’s journey from building a jukebox app to creating an inclusive camera that works well for everyone, regardless of their skin tone, culture, beauty standards, or ability.</p>
+</div>
+
+<div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
+  {{ myjourney15 }}
+  <h3><strong>Making interactive art with technology</strong></h3>
+  <p>Learn how a creative engineer at Meow Wolf helps to build interactive art installations that immerse visitors in mind-blowing new worlds with the intersection of art and engineering.</p>
+</div>
+
+<div style="clear: both"></div>
+
+<div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   <a href="https://code.zoom.us/rec/play/h5l0dtXgmDO4BWCRwJvLq_9tSJBD3wRuIgCaXTF_qK68R-OIEe3JRA9hvRJISN6ttBbMW3aynY12vE0r.z3y6UMg8hnyhDfK4" target="_blank">
     <img src="/images/csjourneys/ilm3-youtube.png" style="max-width:100%" alt="Creating Visual Effects for Star Wars click to view">
   </a>  <h3><strong>Creating visual effects for Star Wars</strong></h3>
@@ -78,7 +98,6 @@ social:
   <p>Hear from NASA scientists Kim Arcand and Rutu Das about their career journeys and how they use data science to build 3D models of the universe.</p>
 </div>
 
-
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   <a href="https://code.zoom.us/rec/play/09veMf1354wOxNcJxSMPqmGgf6qh3vTdvIaSGHTpeyik4_59etRQXEIuPbAQwSzKiYAIMkXpqSRGHO_L.ym6IZsLcInwcxQAG" target="_blank">
     <img src="/images/csjourneys/patrick-lucey-yt.png" style="max-width:100%" alt="Artifical intelligence and sports click to view">
@@ -86,7 +105,6 @@ social:
   <h3><strong>Artificial intelligence and sports</strong></h3>
   <p>Learn how Patrick Lucey, a former semi-pro soccer player, uses data and AI to help athletes and teams improve their performance. <i>Only available as a Zoom recording.</i></p>
 </div>
-
 
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney5 }}
@@ -101,7 +119,6 @@ social:
   <h3><strong>Using Roblox to empower students</strong></h3>
   <p>Learn how Roblox designer Genevieve Johnson uses the platform to empower students to pursue careers as entrepreneurs, engineers, and designers.</p>
 </div>
-
 
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney9 }}

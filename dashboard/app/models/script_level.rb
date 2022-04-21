@@ -675,7 +675,23 @@ class ScriptLevel < ApplicationRecord
 
     return [] if !Policies::InlineAnswer.visible_for_script_level?(current_user, self) || CDO.properties_encryption_key.blank?
 
-    if level.try(:examples).present? && (current_user&.verified_instructor? || script&.csf?) # 'solutions' for applab-type levels
+    # exemplar_sources is used by Javalab levels to store level solutions
+    if level.try(:exemplar_sources).present? && current_user&.verified_instructor?
+      if oldest_active_level.is_a? BubbleChoice
+        # If the script level has sublevels, get a link for the sublevel that looks like
+        # /csa1/lessons/6/levels/5/sublevel/1?exemplar=true
+        sublevel_position = oldest_active_level.sublevel_position(level)
+        return [] unless sublevel_position
+
+        path = build_script_level_path(self, {sublevel_position: sublevel_position})
+        level_example_links = [build_exemplar_url(path)]
+      else
+        # Otherwise, exemplar link should look like
+        # csa1/lessons/2/levels/1?exemplar=true
+        path = build_script_level_path(self)
+        level_example_links = [build_exemplar_url(path)]
+      end
+    elsif level.try(:examples).present? && (current_user&.verified_instructor? || script&.csf?) # 'solutions' for applab-type levels
       level_example_links = level.examples.map do |example|
         # We treat Sprite Lab levels as a sub-set of game lab levels right now which breaks their examples solutions
         # as level.game.app gets "gamelab" which makes the examples for sprite lab try to open in game lab.
@@ -697,6 +713,8 @@ class ScriptLevel < ApplicationRecord
         elsif level.is_a?(Studio) # playlab
           send("#{'playlab'}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
         elsif level.is_a?(Javalab)
+          # TO DO: remove this statement after switching over to use new Javalab exemplars
+          # https://codedotorg.atlassian.net/browse/JAVA-525
           example
         else
           send("#{level.game.app}_project_view_projects_url".to_sym, channel_id: example, host: 'studio.code.org', port: 443, protocol: :https)
@@ -719,5 +737,9 @@ class ScriptLevel < ApplicationRecord
     else
       LEVEL_KIND.puzzle
     end
+  end
+
+  def build_exemplar_url(path)
+    CDO.studio_url(path, CDO.default_scheme) + '?exemplar=true'
   end
 end

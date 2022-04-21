@@ -8,7 +8,6 @@ class ApplicationController < ActionController::Base
   include LocaleHelper
   include ApplicationHelper
 
-  include SeamlessDatabasePool::ControllerFilter
   include MultipleDatabasesTransitionHelper::ControllerFilter
 
   # Prevent CSRF attacks by raising an exception.

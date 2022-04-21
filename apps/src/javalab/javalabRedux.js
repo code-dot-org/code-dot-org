@@ -22,6 +22,7 @@ const SET_IS_TESTING = 'javalab/SET_IS_TESTING';
 const SET_CONSOLE_HEIGHT = 'javalab/SET_CONSOLE_HEIGHT';
 const EDITOR_COLUMN_HEIGHT = 'javalab/EDITOR_COLUMN_HEIGHT';
 const SET_BACKPACK_API = 'javalab/SET_BACKPACK_API';
+const SET_BACKPACK_ENABLED = 'javalab/SET_BACKPACK_ENABLED';
 const SET_IS_START_MODE = 'javalab/SET_IS_START_MODE';
 const SET_LEVEL_NAME = 'javalab/SET_LEVEL_NAME';
 const SET_DISABLE_FINISH_BUTTON = 'javalab/SET_DISABLE_FINISH_BUTTON';
@@ -45,6 +46,7 @@ export const initialState = {
   consoleHeight: 200,
   editorColumnHeight: 600,
   backpackApi: null,
+  backpackEnabled: false,
   isStartMode: false,
   levelName: undefined,
   disableFinishButton: false,
@@ -150,6 +152,11 @@ export const setBackpackApi = backpackApi => ({
   backpackApi
 });
 
+export const setBackpackEnabled = backpackEnabled => ({
+  type: SET_BACKPACK_ENABLED,
+  backpackEnabled
+});
+
 export const toggleVisualizationCollapsed = () => ({
   type: TOGGLE_VISUALIZATION_COLLAPSED
 });
@@ -208,16 +215,6 @@ export const getValidation = state => {
     }
   }
   return validation;
-};
-
-export const getSourcesAndValidation = state => {
-  let sources = {};
-  for (let key in state.javalab.sources) {
-    sources[key] = {
-      ...state.javalab.sources[key]
-    };
-  }
-  return sources;
 };
 
 export const setRenderedHeight = height => ({
@@ -404,6 +401,12 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       backpackApi: action.backpackApi
+    };
+  }
+  if (action.type === SET_BACKPACK_ENABLED) {
+    return {
+      ...state,
+      backpackEnabled: action.backpackEnabled
     };
   }
   if (action.type === SET_IS_START_MODE) {

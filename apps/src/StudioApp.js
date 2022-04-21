@@ -2897,7 +2897,7 @@ StudioApp.prototype.getUnfilledFunctionalExample = function() {
       return false;
     }
     var actual = rootBlock.getInputTargetBlock('ACTUAL');
-    return actual && actual.getTitleValue('NAME');
+    return actual && actual.getFieldValue('NAME');
   });
 };
 
@@ -2947,10 +2947,10 @@ StudioApp.prototype.getFunctionWithoutTwoExamples = function() {
       // Only care about functional_examples that have an ACTUAL input (i.e. it's
       // clear which function they're for
       var actual = block.getInputTargetBlock('ACTUAL');
-      return actual && actual.getTitleValue('NAME');
+      return actual && actual.getFieldValue('NAME');
     })
     .map(function(exampleBlock) {
-      return exampleBlock.getInputTargetBlock('ACTUAL').getTitleValue('NAME');
+      return exampleBlock.getInputTargetBlock('ACTUAL').getFieldValue('NAME');
     });
 
   var definitionWithLessThanTwoExamples;
@@ -2984,7 +2984,7 @@ StudioApp.prototype.getUnfilledFunctionalBlockError = function(topLevelType) {
 
   if (unfilled.type === topLevelType) {
     return msg.emptyTopLevelBlock({
-      topLevelBlockName: unfilled.getTitleValue()
+      topLevelBlockName: unfilled.getFieldValue()
     });
   }
 
@@ -3020,7 +3020,7 @@ StudioApp.prototype.checkForFailingExamples = function(failureChecker) {
     if (failure) {
       failingBlockName = exampleBlock
         .getInputTargetBlock('ACTUAL')
-        .getTitleValue('NAME');
+        .getFieldValue('NAME');
     }
   });
   return failingBlockName;

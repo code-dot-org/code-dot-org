@@ -1,0 +1,39 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "submittable": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    FileReader myFileReader = new FileReader(\"teamnames.txt\");\n    String[] teams = myFileReader.readText(30);\n\n    myFileReader.changeFile(\"championshipwins.txt\");\n    int[] wins = myFileReader.readNumbers(30);\n\n    BasketballStats myBasketballStats = new BasketballStats(teams, wins);\n\n    // TO DO #2: Print the result of a call to hasDuplicates().\n\n\n    \n  }\n}",
+        "isVisible": true
+      },
+      "FileReader.java": {
+        "text": "import java.util.Scanner;\nimport java.io.File;\nimport java.io.FileNotFoundException;\n\n/*\n * Reads data from a file\n */\npublic class FileReader {\n  private Scanner input;  // The Scanner object for reading the data\n\n  /*\n   * Constructor to create a FileReader object with\n   * a specified filename\n   */\n  public FileReader(String newFileName) {\n    File newFile = new File(newFileName);\n    input = null;\n\n    createScanner(newFile);\n  }\n\n  /*\n   * Creates the input object with the specified file\n   * or notifies the user that the file is not found\n   */\n  public void createScanner(File newFile) {\n    try {\n      input = new Scanner(newFile);\n    } catch (FileNotFoundException error) {\n      System.out.println(\"File not found.\");\n    }\n  }\n\n  /*\n   * Creates a new File object from the specified filename\n   * and updates the input object with the new file\n   */\n  public void changeFile(String filename) {\n    File newFile = new File(filename);\n    createScanner(newFile);\n  }\n\n  /*\n   * Reads numValues integers from a file into\n   * an int 1D array and returns the array\n   */\n  public int[] readNumbers(int numValues) {\n    int[] values = new int[numValues];\n\n    for (int index = 0; index < values.length; index++) {\n      if (input.hasNextInt()) {\n        values[index] = input.nextInt();\n      }\n    }\n\n    input.close();\n    return values;\n  }\n\n  /*\n   * Reads numValues Strings from a file into\n   * an String 1D array and returns the array\n   */\n  public String[] readText(int numValues) {\n    String[] text = new String[numValues];\n\n    for (int index = 0; index < text.length; index++) {\n      if (input.hasNextLine()) {\n        text[index] = input.nextLine();\n      }\n    }\n\n    input.close();\n    return text;\n  }\n\n}",
+        "isVisible": true
+      },
+      "BasketballStats.java": {
+        "text": "/*\n * Analyzes data about basketball teams\n */\npublic class BasketballStats {\n\n  private String[] teamNames;\n  private int[] championshipWins;\n\n  /*\n   * Constructor to create an BasketballStats object with specified\n   * arrays of team names and their number of championship wins\n   */\n  public BasketballStats(String[] teamNames, int[] championshipWins) {\n    this.teamNames = teamNames;\n    this.championshipWins = championshipWins;\n  }\n\n  /*\n   * Returns true if there are duplicate years in\n   * the championshipWins array, otherwise returns false\n   */\n  public boolean hasDuplicates() {\n    // TO DO #1: Traverse the championshipWins array to determine if there\n    // are duplicate values and return the result.\n\n\n    \n  }\n  \n}",
+        "isVisible": true
+      },
+      "teamnames.txt": {
+        "text": "Boston Celtics\nBrooklyn Nets\nNew York Knicks\nPhiladelphia 76ers\nToronto Raptors\nChicago Bulls\nCleveland Cavaliers\nDetroit Pistons\nIndiana Pacers\nMilwaukee Bucks\nAtlanta Hawks\nCharlotte Hornets\nMiami Heat\nOrlando Magic\nWashington Wizards\nDenver Nuggets\nMinnesota Timberwolves\nOklahoma City Thunder\nPortland Trail Blazers\nUtah Jazz\nGolden State Warriors\nLos Angeles Clippers\nLos Angeles Lakers\nPhoenix Suns\nSacramento Kings\nDallas Mavericks\nHouston Rockets\nMemphis Grizzlies\nNew Orleans Pelicans\nSan Antonio Spurs",
+        "isVisible": true
+      },
+      "championshipwins.txt": {
+        "text": "17\n0\n2\n3\n1\n6\n1\n3\n0\n1\n1\n0\n3\n0\n1\n0\n0\n1\n1\n0\n6\n0\n16\n0\n1\n1\n2\n0\n0\n5",
+        "isVisible": true
+      }
+    }
+  },
+  "game_id": 68,
+  "created_at": "2022-03-25T13:17:57.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-03-25T13:17:57.685+00:00\",\"changed\":[\"cloned from \\\"CSA U3L10-L3a PBT_2022\\\"\"],\"cloned_from\":\"CSA U3L10-L3a PBT_2022\"},{\"changed_at\":\"2022-03-25 13:18:00 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 20:15:54 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-31 20:16:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

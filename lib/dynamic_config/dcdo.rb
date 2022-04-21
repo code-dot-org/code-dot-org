@@ -40,7 +40,9 @@ class DCDOBase < DynamicConfigBase
     # For example:
     # 'my-new-feature': DCDO.get('my-new-feature', false)
     {
-      'frontend-i18n-tracking': DCDO.get('frontend-i18n-tracking', false)
+      'frontend-i18n-tracking': DCDO.get('frontend-i18n-tracking', false),
+      'clearerSignUpUserType': DCDO.get('clearerSignUpUserType', false),
+      'thebadguys-promotion': DCDO.get('thebadguys-promotion', false)
     }
   end
 end

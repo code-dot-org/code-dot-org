@@ -84,13 +84,17 @@ export default function ReferenceGuideEditor(props) {
         <select
           className="input"
           value={referenceGuide.parent_reference_guide_key}
-          onChange={e =>
+          onChange={e => {
+            const value = e.target.value === 'null' ? null : e.target.value;
             setReferenceGuide({
               ...referenceGuide,
-              parent_reference_guide_key: e.target.value
-            })
-          }
+              parent_reference_guide_key: value
+            });
+          }}
         >
+          <option key={'null'} value="null">
+            No parent
+          </option>
           {referenceGuides
             .filter(guide => guide.key !== referenceGuide.key) // don't let a guide parent to itself
             .sort((a, b) => a.key.localeCompare(b.key)) // sort alphabetically
@@ -105,7 +109,7 @@ export default function ReferenceGuideEditor(props) {
           setReferenceGuide({...referenceGuide, content: e.target.value})
         }
         markdown={referenceGuide.content || ''}
-        features={{imageUpload: true}}
+        features={{imageUpload: true, programmingExpression: true}}
       />
       <SaveBar
         handleSave={save}

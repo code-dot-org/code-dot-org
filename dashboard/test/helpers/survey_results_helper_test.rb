@@ -48,6 +48,30 @@ class SurveyResultsHelperTest < ActionView::TestCase
     stubs(:request).returns(stub(location: stub(try: "RD")))
     follower = create :follower, user: @teacher
     follower.student_user.update(age: 10)
-    refute show_diversity_survey? SurveyResult::DIVERSITY_2021
+    assert show_diversity_survey? SurveyResult::DIVERSITY_2022
+  end
+
+  test 'show nps survey' do
+    DCDO.stubs(:get).with('nps_audience', 'none').returns('all')
+    @teacher.update!(created_at: 13.weeks.ago)
+    stubs(:request).returns(stub(location: stub(try: "RD")))
+    stubs(:language).returns "en"
+    assert show_nps_survey?
+    DCDO.unstub(:get)
+  end
+
+  test 'do not show nps survey' do
+    @teacher.update!(created_at: 1.week.ago)
+    refute show_nps_survey?
+  end
+
+  test 'target audience' do
+    DCDO.stubs(:get).with('nps_audience', 'none').returns('all')
+    puts(@teacher.id)
+    assert target_audience? @teacher.id
+    DCDO.unstub(:get)
+    DCDO.stubs(:get).with('nps_audience', 'none').returns('none')
+    refute target_audience? @teacher.id
+    DCDO.unstub(:get)
   end
 end

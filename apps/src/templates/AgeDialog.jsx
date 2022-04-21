@@ -15,9 +15,14 @@ import queryString from 'query-string';
  * a different session storage key here.
  */
 const AGE_DIALOG_SESSION_KEY = 'ad_anon_over13';
+const SONG_FILTER_SESSION_KEY = 'song_filter_on';
 
-export const signedOutOver13 = () => {
+export const ageDialogSelectedOver13 = () => {
   return sessionStorage.getItem(AGE_DIALOG_SESSION_KEY) === 'true';
+};
+
+export const songFilterOn = () => {
+  return sessionStorage.getItem(SONG_FILTER_SESSION_KEY) === 'true';
 };
 
 class AgeDialog extends Component {
@@ -35,10 +40,6 @@ class AgeDialog extends Component {
     storage: window.sessionStorage
   };
 
-  setManualFilter = () => {
-    this.setSessionStorage(false);
-  };
-
   setSessionStorage = over13 => {
     this.props.storage.setItem(AGE_DIALOG_SESSION_KEY, over13);
     this.setState({open: false});
@@ -48,7 +49,8 @@ class AgeDialog extends Component {
     // If the song filter override has been turned on, set session storage
     // Dialog won't render
     if (queryString.parse(window.location.search).songfilter === 'on') {
-      this.setManualFilter();
+      this.props.storage.setItem(SONG_FILTER_SESSION_KEY, true);
+      this.setState({open: false});
     }
   }
 

@@ -1,6 +1,6 @@
 name 'CSA U3L2-L4_2022'
-display_name 'Assign Values to a 1D Array'
-description 'Assign and modify values in a 1D array.'
+display_name 'Changing Values in a 1D Array'
+description 'Create and modify values in 1D arrays.'
 
 sublevels
 level 'CSA U3L2-L4a_2022'

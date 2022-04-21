@@ -7,7 +7,7 @@ Feature: Code Review Eyes
     When I open my eyes to test "Javalab Code Review"
     # Create a section
     Given I create a levelbuilder named "Dumbledore"
-    And I create a new section assigned to "ui-test-csa-family-script"
+    And I create a new student section assigned to "ui-test-csa-family-script"
     And I sign in as "Dumbledore" and go home
     And I save the section url
     And I save the section id from row 0 of the section table

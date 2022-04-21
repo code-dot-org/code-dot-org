@@ -5,8 +5,12 @@ import ReferenceGuideView from '@cdo/apps/templates/referenceGuides/ReferenceGui
 
 $(() => {
   const referenceGuide = getScriptData('referenceGuide');
+  const referenceGuides = getScriptData('referenceGuides');
   ReactDOM.render(
-    <ReferenceGuideView referenceGuide={referenceGuide} />,
+    <ReferenceGuideView
+      referenceGuide={referenceGuide}
+      referenceGuides={referenceGuides}
+    />,
     document.getElementById('show-container')
   );
 });
