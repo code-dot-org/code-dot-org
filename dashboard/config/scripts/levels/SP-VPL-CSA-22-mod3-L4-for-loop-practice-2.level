@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "**Do this:**\r\n\r\nWrite a for loop that prints `“Hello world”` 7 times to the console on different lines.\r\n\r\nAfter running your code you should see this in the console:\r\n```\r\nHello world\r\nHello world\r\nHello world\r\nHello world\r\nHello world\r\nHello world\r\nHello world\r\n```\r\n",
+    "long_instructions": "**Do this:**\r\n\r\nWrite a for loop that prints `“Hello world”` 7 times to the console on different lines.\r\n\r\nAfter running your code you should see this in the console:\r\n```\r\nHello world\r\nHello world\r\nHello world\r\nHello world\r\nHello world\r\nHello world\r\nHello world\r\n```\r\n\r\n::: details [**Show Me How**]\r\n\r\nUse the following syntax:\r\n\r\n```\r\nfor (int variableName = startingValue; condition; variableName_change) {\r\n  // code to execute\r\n}\r\n```\r\n\r\nThere are multiple approaches to this problem. Ultimately, you want the loop to run 7 times.  Consider what you want your starting value to be and how that will influence the condition that will terminate your for loop. \r\n:::\r\n\r\n",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -12,13 +12,16 @@
         "text": "public class HelloWorld{    \n  public static void main(String[] args){\n\n    // TO DO: Write a for loop that prints “Hello world” 7 times to the console on different lines.\n\n    \n  } \n}",
         "isVisible": true
       }
-    }
+    },
+    "encrypted_examples": [
+
+    ]
   },
   "game_id": 68,
+  "published": true,
   "created_at": "2022-03-21T00:55:53.000Z",
   "level_num": "custom",
   "user_id": 977,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-03-21T00:55:53.518+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSA-22-mod3-L3-else-if-practice-1\\\"\"],\"cloned_from\":\"SP-VPL-CSA-22-mod3-L3-else-if-practice-1\"},{\"changed_at\":\"2022-03-21 01:27:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-21 01:28:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-21 01:28:43 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-21T00:55:53.518+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSA-22-mod3-L3-else-if-practice-1\\\"\"],\"cloned_from\":\"SP-VPL-CSA-22-mod3-L3-else-if-practice-1\"},{\"changed_at\":\"2022-03-21 01:27:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-21 01:28:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-21 01:28:43 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-04-19 18:17:59 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-04-19 18:24:10 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]"
 }]]></config>
 </Javalab>

@@ -3,7 +3,7 @@
   "name": "camera.on()",
   "category": "Game Lab",
   "category_key": "game_lab",
-  "content": "Activates the camera. The display area will be drawn according to the camera position and scale until `camera.off()` is called.\r\n\r\nThe camera enables scrolling and zooming for scenes extending beyond the display area. A camera has a position, a zoom factor, and mouse coordinates relative to the view. The camera is automatically created and available for use.",
+  "content": "Activates the camera. The display area will be drawn according to the camera position and scale until [`camera.off()`(#fff176)](/docs/gamelab/camera.off/) is called.\n\nThe camera enables scrolling and zooming for scenes extending beyond the display area. A camera has a position, a zoom factor, and mouse coordinates relative to the view. The camera is automatically created and available for use.",
   "examples": [
     {
       "name": "",

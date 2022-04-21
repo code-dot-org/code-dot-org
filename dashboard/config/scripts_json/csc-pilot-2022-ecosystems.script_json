@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "csc-pilot-2022-ecosystems",
-    "serialized_at": "2022-04-04 12:07:15 UTC",
+    "serialized_at": "2022-04-19 21:58:05 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -123,6 +123,18 @@
       "seeding_key": {
         "lesson_activity.key": "62d3b415-598f-4b42-a486-2af851df7bb0",
         "lesson.key": "Hello World CSC",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-ecosystems"
+      }
+    },
+    {
+      "key": "ad5fdf70-0572-41f8-8cda-d716986a5fdf",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ad5fdf70-0572-41f8-8cda-d716986a5fdf",
+        "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-pilot-2022-ecosystems"
       }
@@ -304,6 +316,26 @@
       "seeding_key": {
         "activity_section.key": "ef5da659-551f-47e7-b09b-364bc0c4c223",
         "lesson_activity.key": "62d3b415-598f-4b42-a486-2af851df7bb0"
+      }
+    },
+    {
+      "key": "37c6c5f7-0093-4bb1-bb08-551734e3603d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "37c6c5f7-0093-4bb1-bb08-551734e3603d",
+        "lesson_activity.key": "ad5fdf70-0572-41f8-8cda-d716986a5fdf"
+      }
+    },
+    {
+      "key": "efc06c7a-6ca1-4126-9988-d03c3edd54ee",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "efc06c7a-6ca1-4126-9988-d03c3edd54ee",
+        "lesson_activity.key": "ad5fdf70-0572-41f8-8cda-d716986a5fdf"
       }
     },
     {
@@ -717,6 +749,243 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "csc_ecosystems_ocean_fish"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_fish"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-ecosystems",
+        "activity_section.key": "37c6c5f7-0093-4bb1-bb08-551734e3603d"
+      },
+      "level_keys": [
+        "csc_ecosystems_ocean_fish"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_boat"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_boat"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-ecosystems",
+        "activity_section.key": "37c6c5f7-0093-4bb1-bb08-551734e3603d"
+      },
+      "level_keys": [
+        "csc_ecosystems_ocean_boat"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_algae"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_algae"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-ecosystems",
+        "activity_section.key": "37c6c5f7-0093-4bb1-bb08-551734e3603d"
+      },
+      "level_keys": [
+        "csc_ecosystems_ocean_algae"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_ecosystems_algae_growth"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_algae_growth"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-ecosystems",
+        "activity_section.key": "37c6c5f7-0093-4bb1-bb08-551734e3603d"
+      },
+      "level_keys": [
+        "csc_ecosystems_algae_growth"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_multiple_choice_1"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_multiple_choice_1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-ecosystems",
+        "activity_section.key": "37c6c5f7-0093-4bb1-bb08-551734e3603d"
+      },
+      "level_keys": [
+        "csc_multiple_choice_1"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_coral"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_coral"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-ecosystems",
+        "activity_section.key": "37c6c5f7-0093-4bb1-bb08-551734e3603d"
+      },
+      "level_keys": [
+        "csc_ecosystems_ocean_coral"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_multiple_choice_2"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_multiple_choice_2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-ecosystems",
+        "activity_section.key": "37c6c5f7-0093-4bb1-bb08-551734e3603d"
+      },
+      "level_keys": [
+        "csc_multiple_choice_2"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_coral_health"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_coral_health"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-ecosystems",
+        "activity_section.key": "37c6c5f7-0093-4bb1-bb08-551734e3603d"
+      },
+      "level_keys": [
+        "csc_ecosystems_ocean_coral_health"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_multiple_choice_3"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-ecosystems",
+        "activity_section.key": "37c6c5f7-0093-4bb1-bb08-551734e3603d"
+      },
+      "level_keys": [
+        "csc_multiple_choice_3"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csc_ecosystems_algae_freeplay"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_algae_freeplay"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-ecosystems",
+        "activity_section.key": "37c6c5f7-0093-4bb1-bb08-551734e3603d"
+      },
+      "level_keys": [
+        "csc_ecosystems_algae_freeplay"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "csc_ecosystems_giraffe_evo"
         ],
         "progression": "Skill Building"
@@ -736,11 +1005,14 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_bunny_adapt"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -758,11 +1030,14 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 28,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_bunny_explain"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -780,11 +1055,14 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 29,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_whale_movement"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -802,11 +1080,14 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 30,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_whale_explain"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -824,11 +1105,14 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 31,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_bugs_selection_counters_one"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -846,11 +1130,14 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 32,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_bugs_selection_counters_two"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -868,11 +1155,14 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 33,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_bugs_selection_explain"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -890,11 +1180,14 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 34,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gray_csc_ecosystems_survival_choice"
+        ],
         "progression": "Choice Level"
       },
       "bonus": false,
@@ -912,11 +1205,14 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 35,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_freeplay"
+        ],
         "progression": "Freeplay"
       },
       "bonus": false,
@@ -1113,6 +1409,126 @@
         "lesson_group.key": "",
         "script.name": "csc-pilot-2022-ecosystems",
         "activity_section.key": "7ff9f1ac-1bf8-4739-879e-e8c08caaed67"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_ocean_fish",
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_fish"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-ecosystems",
+        "activity_section.key": "37c6c5f7-0093-4bb1-bb08-551734e3603d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_ocean_boat",
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_boat"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-ecosystems",
+        "activity_section.key": "37c6c5f7-0093-4bb1-bb08-551734e3603d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_ocean_algae",
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_algae"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-ecosystems",
+        "activity_section.key": "37c6c5f7-0093-4bb1-bb08-551734e3603d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_algae_growth",
+        "script_level.level_keys": [
+          "csc_ecosystems_algae_growth"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-ecosystems",
+        "activity_section.key": "37c6c5f7-0093-4bb1-bb08-551734e3603d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_multiple_choice_1",
+        "script_level.level_keys": [
+          "csc_multiple_choice_1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-ecosystems",
+        "activity_section.key": "37c6c5f7-0093-4bb1-bb08-551734e3603d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_ocean_coral",
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_coral"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-ecosystems",
+        "activity_section.key": "37c6c5f7-0093-4bb1-bb08-551734e3603d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_multiple_choice_2",
+        "script_level.level_keys": [
+          "csc_multiple_choice_2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-ecosystems",
+        "activity_section.key": "37c6c5f7-0093-4bb1-bb08-551734e3603d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_ocean_coral_health",
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_coral_health"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-ecosystems",
+        "activity_section.key": "37c6c5f7-0093-4bb1-bb08-551734e3603d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_multiple_choice_3",
+        "script_level.level_keys": [
+          "csc_multiple_choice_3"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-ecosystems",
+        "activity_section.key": "37c6c5f7-0093-4bb1-bb08-551734e3603d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_algae_freeplay",
+        "script_level.level_keys": [
+          "csc_ecosystems_algae_freeplay"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csc-pilot-2022-ecosystems",
+        "activity_section.key": "37c6c5f7-0093-4bb1-bb08-551734e3603d"
       }
     },
     {
