@@ -29,5 +29,5 @@
   "return_value": "No return value.",
   "short_description": "Sets the lifetime, cycles before sprite self removal, for every sprite in the group.",
   "syntax": "group.setLifetimeEach(lifetime)",
-  "tips": "- Groups of sprites all have the same functions and you use the dot notation (combining the name of the group, followed by a dot, with the function name) to call the function for that group of sprites.\r\n- Any changes to the properties of a sprite will not be seen until after [`drawSprites()()`(#fff176)](/docs/gamelab/drawSprites/) is called."
+  "tips": "- Groups of sprites all have the same functions and you use the dot notation (combining the name of the group, followed by a dot, with the function name) to call the function for that group of sprites.\r\n- Any changes to the properties of a sprite will not be seen until after [`drawSprites()`(#fff176)](/docs/gamelab/drawSprites/) is called."
 }

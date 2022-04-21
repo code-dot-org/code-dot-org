@@ -18,5 +18,5 @@
   "return_value": "The zoom factor of the camera.",
   "short_description": "The zoom factor of the camera.",
   "syntax": "camera.zoom",
-  "tips": "- The display area is 400 pixels x 400 pixels and the upper left corner is (0.0).\r\n- To access or update the camera properties you use the dot notation (camera, followed by a dot, with the label of the property).\r\n- Any changes to the properties of the camera will not be seen until after [`drawSprites()()`(#fff176)](/docs/gamelab/drawSprites/) is called."
+  "tips": "- The display area is 400 pixels x 400 pixels and the upper left corner is (0.0).\r\n- To access or update the camera properties you use the dot notation (camera, followed by a dot, with the label of the property).\r\n- Any changes to the properties of the camera will not be seen until after [`drawSprites()`(#fff176)](/docs/gamelab/drawSprites/) is called."
 }

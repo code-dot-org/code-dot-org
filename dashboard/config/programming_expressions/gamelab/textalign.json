@@ -3,7 +3,7 @@
   "name": "textAlign()",
   "category": "Drawing",
   "category_key": "drawing",
-  "content": "Sets the alignment for drawing text.\r\n\r\nThere are three horizontal (LEFT, CENTER, or RIGHT) and four vertical (TOP, BOTTOM, CENTER, or BASELINE) text alignment options to change where the [`text()()`(#4dd0e1)](/docs/gamelab/text/) is displayed relative to the (x,y) position specified. The default is (x,y) is the bottom left corner of the text (LEFT, BASELINE).\r\n\r\nText that does not fit completely within the display area will not be drawn or seen. Use the fourth and fifth parameters to create a text box to display the text in with automatic line wrapping.",
+  "content": "Sets the alignment for drawing text.\r\n\r\nThere are three horizontal (LEFT, CENTER, or RIGHT) and four vertical (TOP, BOTTOM, CENTER, or BASELINE) text alignment options to change where the [`text()`(#4dd0e1)](/docs/gamelab/text/) is displayed relative to the (x,y) position specified. The default is (x,y) is the bottom left corner of the text (LEFT, BASELINE).\r\n\r\nText that does not fit completely within the display area will not be drawn or seen. Use the fourth and fifth parameters to create a text box to display the text in with automatic line wrapping.",
   "examples": [
     {
       "name": "Vertical Alignments",

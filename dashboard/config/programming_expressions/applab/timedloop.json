@@ -3,7 +3,7 @@
   "name": "timedLoop()",
   "category": "Control",
   "category_key": "control",
-  "content": "Executes the callback function code every time a certain number of milliseconds has elapsed, until stopped using [`stopTimedLoop()()`(#64B5F6)](/docs/applab/stopTimedLoop/).\n\nSome apps need to repeat code using a timed delay, like the mole appearing every 5 seconds or so in \"Whack a Mole\". Other code in your app can be executed while waiting for the next repetition of the loop to start. You can either let the callback function keep running indefinitely until the app is stopped, or use the [`stopTimedLoop()()`(#64B5F6)](/docs/applab/stopTimedLoop/) command to stop all running timed loops. For more advance usage, you can assign the return value of [`timedLoop()()`(#64B5F6)](/docs/applab/timedLoop/) to a variable, which you can then pass to [`stopTimedLoop()()`(#64B5F6)](/docs/applab/stopTimedLoop/) in order to stop only a specific timed loop, ignoring the rest.\n",
+  "content": "Executes the callback function code every time a certain number of milliseconds has elapsed, until stopped using [`stopTimedLoop()`(#64B5F6)](/docs/applab/stopTimedLoop/).\n\nSome apps need to repeat code using a timed delay, like the mole appearing every 5 seconds or so in \"Whack a Mole\". Other code in your app can be executed while waiting for the next repetition of the loop to start. You can either let the callback function keep running indefinitely until the app is stopped, or use the [`stopTimedLoop()`(#64B5F6)](/docs/applab/stopTimedLoop/) command to stop all running timed loops. For more advance usage, you can assign the return value of [`timedLoop()`(#64B5F6)](/docs/applab/timedLoop/) to a variable, which you can then pass to [`stopTimedLoop()`(#64B5F6)](/docs/applab/stopTimedLoop/) in order to stop only a specific timed loop, ignoring the rest.\n",
   "examples": [
     {
       "name": "Ten Timed Moves",
@@ -45,5 +45,5 @@
   "return_value": "Returns a timed loop object which can be passed to `stopTimedLoop()` to stop only a specific loop.",
   "short_description": "Executes the callback function code every time a certain number of milliseconds has elapsed, until stopped using stopTimedLoop().",
   "syntax": "timedLoop(ms, callback)",
-  "tips": "- Use the [`stopTimedLoop()()`(#64B5F6)](/docs/applab/stopTimedLoop/) function to end the timed loop.\r\n- Do not put functions inside a loop that contain timers, like further calls to [`timedLoop()()`(#64B5F6)](/docs/applab/timedLoop/). The loop will not wait for the timer to complete.\r\n- [`timedLoop()()`(#64B5F6)](/docs/applab/timedLoop/) is built on top of the core JavaScript function `setInterval()`"
+  "tips": "- Use the [`stopTimedLoop()`(#64B5F6)](/docs/applab/stopTimedLoop/) function to end the timed loop.\r\n- Do not put functions inside a loop that contain timers, like further calls to [`timedLoop()`(#64B5F6)](/docs/applab/timedLoop/). The loop will not wait for the timer to complete.\r\n- [`timedLoop()`(#64B5F6)](/docs/applab/timedLoop/) is built on top of the core JavaScript function `setInterval()`"
 }

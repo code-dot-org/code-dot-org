@@ -3,7 +3,7 @@
   "name": "colorLeds[i].toggle()",
   "category": "Circuit",
   "category_key": "circuit",
-  "content": "Alternates between turning the color LEDs on and off. \n\nLike [`led.toggle()()`(#f78183)](/docs/applab/led.toggle/), `colorLeds[i].toggle()` changes based on the current state of the LED, like a light switch.\n\nThis method can work as an alternative to `colorLeds[i].on()` and `colorLeds[i].off()` depending on the situation it's being used in. ",
+  "content": "Alternates between turning the color LEDs on and off. \n\nLike [`led.toggle()`(#f78183)](/docs/applab/led.toggle/), `colorLeds[i].toggle()` changes based on the current state of the LED, like a light switch.\n\nThis method can work as an alternative to `colorLeds[i].on()` and `colorLeds[i].off()` depending on the situation it's being used in. ",
   "examples": [
     {
       "name": "",

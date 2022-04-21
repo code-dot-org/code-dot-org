@@ -3,7 +3,7 @@
   "name": "stroke()",
   "category": "Drawing",
   "category_key": "drawing",
-  "content": "Sets the color used to draw lines, points and outline shapes.\r\n\r\nThe stroke color controls the color of lines, points and outline of shapes drawn - [`arc()()`(#4dd0e1)](/docs/gamelab/arc/), [`ellipse()()`(#4dd0e1)](/docs/gamelab/ellipse/), [`rect()`(#f78183)](/docs/applab/rect/), `regularPolygon()`, `shape()`. The fill color for shapes is set using `fill()`. Until you change the stroke, Game Lab will continue to draw with the color that you set.\r\n\r\nThe _color_ parameter can take one of two forms. It can be:\r\n\r\n- The lowercase name of a color inside \" \".  A full list of color names can be found at [W3 Schools - Colors](http://www.w3schools.com/colors/colors_names.asp)\r\n- A call to the `rgb()` command.\r\n\r\nThe default fill color is black.",
+  "content": "Sets the color used to draw lines, points and outline shapes.\r\n\r\nThe stroke color controls the color of lines, points and outline of shapes drawn - [`arc()`(#4dd0e1)](/docs/gamelab/arc/), [`ellipse()`(#4dd0e1)](/docs/gamelab/ellipse/), [`rect()`(#f78183)](/docs/applab/rect/), `regularPolygon()`, `shape()`. The fill color for shapes is set using `fill()`. Until you change the stroke, Game Lab will continue to draw with the color that you set.\r\n\r\nThe _color_ parameter can take one of two forms. It can be:\r\n\r\n- The lowercase name of a color inside \" \".  A full list of color names can be found at [W3 Schools - Colors](http://www.w3schools.com/colors/colors_names.asp)\r\n- A call to the `rgb()` command.\r\n\r\nThe default fill color is black.",
   "examples": [
     {
       "name": "",
@@ -53,5 +53,5 @@
   "return_value": "No return value. Changes future output to the display only.",
   "short_description": "Sets the color used to draw lines, points and outline shapes.",
   "syntax": "stroke(color)",
-  "tips": "- The default stroke is black, the default stroke weight is 1 pixel, and the default fill is gray. Change the width of the line and color of the fill used to draw all subsequent shapes using [`strokeWeight()()`(#4dd0e1)](/docs/gamelab/strokeWeight/) and [`fill()()`(#4dd0e1)](/docs/gamelab/fill/).\r\n- A full list of color names can be found at [W3 Schools - Colors](http://www.w3schools.com/colors/colors_names.asp).\r\n- For more specific color selection, or to randomize color selection, use `rgb()` as a parameter to stroke instead of a color name."
+  "tips": "- The default stroke is black, the default stroke weight is 1 pixel, and the default fill is gray. Change the width of the line and color of the fill used to draw all subsequent shapes using [`strokeWeight()`(#4dd0e1)](/docs/gamelab/strokeWeight/) and [`fill()`(#4dd0e1)](/docs/gamelab/fill/).\r\n- A full list of color names can be found at [W3 Schools - Colors](http://www.w3schools.com/colors/colors_names.asp).\r\n- For more specific color selection, or to randomize color selection, use `rgb()` as a parameter to stroke instead of a color name."
 }

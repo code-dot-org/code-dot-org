@@ -3,7 +3,7 @@
   "name": "buzzer.stop()",
   "category": "Circuit",
   "category_key": "circuit",
-  "content": "Stops the buzzer from playing.\r\n\r\n[`buzzer.stop()()`(#f78183)](/docs/applab/buzzer.stop/) stops the buzzer from playing any sounds, much like how `colorLeds[i].stop()` stops the colorLED(s) from blinking. ",
+  "content": "Stops the buzzer from playing.\r\n\r\n[`buzzer.stop()`(#f78183)](/docs/applab/buzzer.stop/) stops the buzzer from playing any sounds, much like how `colorLeds[i].stop()` stops the colorLED(s) from blinking. ",
   "examples": [
     {
       "name": "",

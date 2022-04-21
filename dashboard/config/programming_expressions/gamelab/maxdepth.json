@@ -3,7 +3,7 @@
   "name": "group.maxDepth()",
   "category": "Groups",
   "category_key": "groups",
-  "content": "Returns the highest depth in a group.\r\n\r\nSprites are drawn, when [`drawSprites()()`(#fff176)](/docs/gamelab/drawSprites/) is executed, in order from lowest depth to highest depth. The sprites drawn later will overlay sprites drawn earlier.",
+  "content": "Returns the highest depth in a group.\r\n\r\nSprites are drawn, when [`drawSprites()`(#fff176)](/docs/gamelab/drawSprites/) is executed, in order from lowest depth to highest depth. The sprites drawn later will overlay sprites drawn earlier.",
   "examples": [
     {
       "name": "",

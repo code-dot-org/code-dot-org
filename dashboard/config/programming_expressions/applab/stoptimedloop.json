@@ -3,7 +3,7 @@
   "name": "stopTimedLoop()",
   "category": "Control",
   "category_key": "control",
-  "content": "Stops any running _Timed Loops_, or a specific one if passed in return value of [`timedLoop()()`(#64B5F6)](/docs/applab/timedLoop/).\n\nSome _Timed Loops_ do not run forever, but need to be stopped at some time (maybe like a countdown, see the first example). [`stopTimedLoop()()`(#64B5F6)](/docs/applab/stopTimedLoop/) allows you to stop timed loops from running, either from within the loop itself or elsewhere in your program.",
+  "content": "Stops any running _Timed Loops_, or a specific one if passed in return value of [`timedLoop()`(#64B5F6)](/docs/applab/timedLoop/).\n\nSome _Timed Loops_ do not run forever, but need to be stopped at some time (maybe like a countdown, see the first example). [`stopTimedLoop()`(#64B5F6)](/docs/applab/stopTimedLoop/) allows you to stop timed loops from running, either from within the loop itself or elsewhere in your program.",
   "examples": [
     {
       "name": "Countdown",
@@ -29,10 +29,10 @@
       "name": "loop",
       "type": "Number",
       "required": false,
-      "description": "The value returned by the [`timedLoop()()`(#64B5F6)](/docs/applab/timedLoop/) function that you want stop. If not included, all running timed loops will stop."
+      "description": "The value returned by the [`timedLoop()`(#64B5F6)](/docs/applab/timedLoop/) function that you want stop. If not included, all running timed loops will stop."
     }
   ],
   "short_description": "Stops any running Timed Loops, or a specific one if passed in return value of timedLoop().",
   "syntax": "stopTimedLoop(loop);",
-  "tips": "- Without a parameter, all running timed loops will be stopped.\r\n- If you want to a specific loop you need to save the value returned by [`timedLoop()()`(#64B5F6)](/docs/applab/timedLoop/), eg `var i = timedLoop(ms, callback);\r\n"
+  "tips": "- Without a parameter, all running timed loops will be stopped.\r\n- If you want to a specific loop you need to save the value returned by [`timedLoop()`(#64B5F6)](/docs/applab/timedLoop/), eg `var i = timedLoop(ms, callback);\r\n"
 }
