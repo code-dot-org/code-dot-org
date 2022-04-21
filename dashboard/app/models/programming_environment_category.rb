@@ -18,6 +18,7 @@
 #
 class ProgrammingEnvironmentCategory < ApplicationRecord
   belongs_to :programming_environment
+  has_many :programming_classes
   has_many :programming_expressions
 
   KEY_CHAR_RE = /[a-z_]/
@@ -47,13 +48,17 @@ class ProgrammingEnvironmentCategory < ApplicationRecord
     }
   end
 
-  def summarize_for_environment_show
+  def summarize_for_navigation
     {
       key: key,
       name: name,
       color: color,
-      programmingExpressions: programming_expressions.map(&:serialize_for_environment_show)
+      docs: programming_classes.map(&:summarize_for_navigation) + programming_expressions.map(&:summarize_for_navigation)
     }
+  end
+
+  def should_be_in_navigation?
+    !programming_classes.empty? || !programming_expressions.empty?
   end
 
   def generate_key
@@ -66,5 +71,9 @@ class ProgrammingEnvironmentCategory < ApplicationRecord
     key.strip.downcase.chars.map do |character|
       KEY_CHAR_RE.match(character) ? character : '_'
     end.join.gsub(/_+/, '_')
+  end
+
+  def name_with_environment
+    "#{programming_environment.title}:#{name}"
   end
 end

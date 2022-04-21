@@ -83,8 +83,11 @@
     "libraries_enabled": "false",
     "encrypted_examples": "CPR1V/BbTxgym977pPLJCNQO6g3jP01gP1H1M2UWmII7LLW54IgBY8+MmE6D\nHYwnyen2lugYxOd64gswk0HcjQ==\n",
     "name_suffix": "2022",
+    "ai_enabled": "false",
     "preload_asset_list": null,
-    "ai_enabled": "false"
+    "display_name": "Longest Word",
+    "bubble_choice_description": "Write a function that returns the longest word from a list of strings.",
+    "thumbnail_url": "https://images.code.org/99fd7e543cdcc66ec8c25bbcdf832629-image-1649368790366.png"
   },
   "game_id": 41,
   "published": true,
@@ -92,7 +95,7 @@
   "level_num": "custom",
   "user_id": 832,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:19:09.256+00:00\",\"changed\":[\"cloned from \\\"U7 Param Return Practice Part 5_2021\\\"\"],\"cloned_from\":\"U7 Param Return Practice Part 5_2021\"},{\"changed_at\":\"2022-01-21 19:03:35 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:19:09.256+00:00\",\"changed\":[\"cloned from \\\"U7 Param Return Practice Part 5_2021\\\"\"],\"cloned_from\":\"U7 Param Return Practice Part 5_2021\"},{\"changed_at\":\"2022-01-21 19:03:35 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-07 22:01:11 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

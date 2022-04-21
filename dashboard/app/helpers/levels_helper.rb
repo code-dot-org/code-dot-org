@@ -351,6 +351,7 @@ module LevelsHelper
       @app_options[:level][:levelVideos] = @level.related_videos.map(&:summarize)
       @app_options[:level][:mapReference] = @level.map_reference
       @app_options[:level][:referenceLinks] = @level.reference_links
+      @app_options[:level][:programmingEnvironment] = get_programming_environment
 
       if (@user || current_user) && @script
         @app_options[:level][:isStarted] = level_started?(@level, @script, @user || current_user)
@@ -367,7 +368,14 @@ module LevelsHelper
         end
       if section && section.first_activity_at.nil?
         section.first_activity_at = DateTime.now
-        section.save(validate: false)
+        # app_options is sometimes referenced from
+        # endpoints that are being redirected to the read
+        # connection (ScriptLevel#show, for example), so
+        # make sure that we're using the write connection
+        # here.
+        MultipleDatabasesTransitionHelper.use_writer_connection do
+          section.save(validate: false)
+        end
       end
       @app_options[:experiments] =
         Experiment.get_all_enabled(user: current_user, section: section, script: @script).pluck(:name)
@@ -1012,6 +1020,19 @@ module LevelsHelper
       POST_MILESTONE_MODE.all
     else
       POST_MILESTONE_MODE.final_level_only
+    end
+  end
+
+  # Get the programming environment for a given level. For now,
+  # getting programming environment information via the level is only
+  # supported by Java Lab, so only Java Lab will return a non-nil value.
+  # This method should return the name of a programming environment, or nil.
+  def get_programming_environment
+    case @level.game
+    when Game.javalab
+      "javalab"
+    else
+      nil
     end
   end
 end
