@@ -19,6 +19,7 @@ class Ability
       Script, # see override below
       Lesson, # see override below
       ScriptLevel, # see override below
+      ProgrammingClass, # see override below
       ProgrammingEnvironment, # see override below
       ProgrammingExpression, # see override below
       ReferenceGuide, # see override below
@@ -81,14 +82,14 @@ class Ability
       environment.published || user.permission?(UserPermission::LEVELBUILDER)
     end
 
+    can [:read], ProgrammingClass do |programming_class|
+      can? :read, programming_class.programming_environment
+    end
+
     can [:read, :show_by_keys, :docs_show], ProgrammingExpression do |expression|
       can? :read, expression.programming_environment
     end
     cannot :index, ProgrammingExpression
-
-    can [:docs_index, :docs_show], ProgrammingEnvironment do |environment|
-      can? :read, environment
-    end
 
     if user.persisted?
       can :manage, user
@@ -105,9 +106,10 @@ class Ability
       can :toggle_resolved, CodeReviewComment, project_owner_id: user.id
       can :destroy, CodeReviewComment do |code_review_comment|
         # Teachers can delete comments on their student's projects,
-        # as well as their own comments.
+        # their own comments anywhere, and comments on their projects.
         code_review_comment.project_owner&.student_of?(user) ||
-          (user.teacher? && user == code_review_comment.commenter)
+          (user.teacher? && user == code_review_comment.commenter) ||
+          (user.teacher? && user == code_review_comment.project_owner)
       end
       can :create,  CodeReviewComment do |_, project_owner, project_id, level_id, script_id|
         CodeReviewComment.user_can_review_project?(project_owner, user, project_id, level_id, script_id)
