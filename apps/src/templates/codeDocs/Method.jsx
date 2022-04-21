@@ -31,6 +31,16 @@ export function StandaloneMethod({method, programmingEnvironmentName}) {
           ))}
         </div>
       )}
+      {!!method.externalLink && (
+        <div>
+          <h4>{i18n.additionalInformationHeader()}</h4>
+          <EnhancedSafeMarkdown
+            markdown={i18n.additionalInformationText({
+              externalLinkUrl: method.externalLink.trim()
+            })}
+          />
+        </div>
+      )}
     </div>
   );
 }
@@ -81,6 +91,7 @@ const methodShape = PropTypes.shape({
   name: PropTypes.string.isRequired,
   syntax: PropTypes.string,
   content: PropTypes.string,
+  externalLink: PropTypes.string,
   parameters: PropTypes.arrayOf(PropTypes.object),
   examples: PropTypes.arrayOf(PropTypes.object),
   overloads: PropTypes.arrayOf(PropTypes.object)
