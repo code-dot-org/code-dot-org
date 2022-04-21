@@ -88,7 +88,7 @@ describe('ProgrammingClassOverview', () => {
     expect(wrapper.find('Method').length).to.equal(2);
   });
 
-  it('hides the examples header if no syntax is provided', () => {
+  it('hides the examples header if no examples are provided', () => {
     delete defaultProgrammingClass.examples;
     const wrapper = shallow(
       <ProgrammingClassOverview programmingClass={defaultProgrammingClass} />
