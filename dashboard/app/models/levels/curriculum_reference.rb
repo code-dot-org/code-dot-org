@@ -30,8 +30,8 @@ class CurriculumReference < Level
   )
 
   validates :reference, format: {
-    with: /\A\/(docs|curriculum)\//,
-    message: "Must begin with /docs or /curriculum",
+    with: /\A\/(docs|curriculum|courses)\//,
+    message: "Must begin with /docs or /curriculum or /courses",
     allow_blank: true
   }
 

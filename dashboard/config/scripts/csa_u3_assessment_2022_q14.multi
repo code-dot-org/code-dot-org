@@ -1,11 +1,19 @@
 name 'CSA U3 Assessment 2022 q14'
 
-wrong 'wrong'
-right 'right'
-wrong 'wrong'
-wrong 'wrong'
-wrong 'wrong'
+wrong '`catpuppyhipporabbitkangaroo`'
+wrong '`cat puppy hippo rabbit kangaroo`'
+wrong '![](https://images.code.org/9d30bf7fc19fb5c6c81b053d617c143d-image-1650378434273.png)'
+wrong '![](https://images.code.org/357b7b59807ff1aee78f2a04b98f1117-image-1650378439774.png)'
+right  '`kangaroo rabbit hippo puppy cat`'
 
 markdown <<MARKDOWN
-question
+What is printed to the console based on the code below?
+
+```
+String[] animals = {"cat", "puppy", "hippo", "rabbit", "kangaroo"};
+
+for(int i = animals.length; i >= 0; i--) {
+  System.out.print(animals[i] + " ");
+}
+```
 MARKDOWN

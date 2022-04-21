@@ -667,7 +667,7 @@ class Level < ApplicationRecord
 
       level
     rescue Exception => e
-      raise e, "Failed to clone #{name} as #{new_name}. Message: #{e.message}"
+      raise e, "Failed to clone #{name} as #{new_name}. Message: #{e.message}", e.backtrace
     end
   end
 

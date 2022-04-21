@@ -4,6 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "Supports to Teach CS Discoveries",
+          "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
+          "link": "https://code.org/educate/professional-development-online",
+          "type": "information",
+          "visibility": "Teacher-only"
+        }
+      ],
       "curriculum_umbrella": "CSD",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -18,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-10 03:42:31 UTC",
+    "serialized_at": "2022-04-14 20:39:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6115,7 +6124,7 @@
       "properties": {
         "description": "**Distribute:** Hand out one copy of the project reflection **to each student**.\n\n\n\n\nIn the reflection, students will reflect on both the process and the product. They should identify aspects of the page itself that they are proud of, as well as how the group worked together.  They also describe what they have learned in the course of the project.\n\n\n\n\nSend students to Code Studio to complete their reflection on their attitudes toward computer science. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
         "name": "Reflect: Final Reflection\r",
-        "progression_name": "Reflection"
+        "progression_name": "End-Of-Unit Survey"
       },
       "seeding_key": {
         "activity_section.key": "02053aac-92d9-4d70-a1fa-9e82cbb76686",
@@ -8428,15 +8437,12 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot_2022"
-        ],
-        "progression": "Reflection"
+        "progression": "End-Of-Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot_2022"
+          "Student End of Unit Survey_csd2-2022"
         ],
         "lesson.key": "Peer Review and Final Touches",
         "lesson_group.key": "csd2_2v2",
@@ -8444,7 +8450,7 @@
         "activity_section.key": "02053aac-92d9-4d70-a1fa-9e82cbb76686"
       },
       "level_keys": [
-        "csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot_2022"
+        "Student End of Unit Survey_csd2-2022"
       ]
     },
     {
@@ -9568,9 +9574,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot_2022",
+        "level.key": "Student End of Unit Survey_csd2-2022",
         "script_level.level_keys": [
-          "csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot_2022"
+          "Student End of Unit Survey_csd2-2022"
         ],
         "lesson.key": "Peer Review and Final Touches",
         "lesson_group.key": "csd2_2v2",
@@ -9606,7 +9612,7 @@
   "resources": [
     {
       "name": "All Code",
-      "url": "/s/csd2-2021/code",
+      "url": "/s/csd2-2022/code",
       "key": "all_code",
       "properties": {
         "is_rollup": true
@@ -9617,7 +9623,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/csd2-2021/resources",
+      "url": "/s/csd2-2022/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -9628,7 +9634,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/csd2-2021/standards",
+      "url": "/s/csd2-2022/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -9639,7 +9645,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/csd2-2021/vocab",
+      "url": "/s/csd2-2022/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true
@@ -9711,11 +9717,9 @@
     },
     {
       "name": "CSD Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview",
+      "url": "https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview",
       "key": "csd_curriculum_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csd_curriculum_guide"
@@ -9743,14 +9747,22 @@
     },
     {
       "name": "CSD Implementation Guide",
-      "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
+      "url": "https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview",
       "key": "csd_implementation_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csd_implementation_guide"
+      }
+    },
+    {
+      "name": "CSD Programming Levels Guide",
+      "url": "https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview",
+      "key": "csd_programming_levels_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_programming_levels_guide"
       }
     },
     {
@@ -11463,6 +11475,12 @@
     {
       "seeding_key": {
         "resource.key": "csd_implementation_guide",
+        "script.name": "csd2-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_programming_levels_guide",
         "script.name": "csd2-2022"
       }
     },
