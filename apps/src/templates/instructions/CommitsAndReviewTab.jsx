@@ -70,6 +70,7 @@ const CommitsAndReviewTab = ({
             <ReviewNavigator
               viewPeerList={!viewAsCodeReviewer}
               loadPeers={loadPeers}
+              dropdownText={javalabMsg.youHaveProjectsToReview()}
             />
           )}
         </div>

@@ -10,7 +10,8 @@ import {VIEWING_CODE_REVIEW_URL_PARAM} from '@cdo/apps/templates/instructions/Re
 class ReviewNavigator extends Component {
   static propTypes = {
     viewPeerList: PropTypes.bool,
-    loadPeers: PropTypes.func
+    loadPeers: PropTypes.func,
+    dropdownText: PropTypes.string
   };
 
   state = {
@@ -88,11 +89,11 @@ class ReviewNavigator extends Component {
   }
 
   render() {
-    const {viewPeerList} = this.props;
+    const {viewPeerList, dropdownText} = this.props;
     return viewPeerList ? (
       <div style={styles.container}>
         <DropdownButton
-          text={javalabMsg.reviewClassmateProject()}
+          text={dropdownText || javalabMsg.reviewClassmateProject()}
           color={Button.ButtonColor.white}
           onClick={this.onDropdownClick}
           className="peer-dropdown-button"
