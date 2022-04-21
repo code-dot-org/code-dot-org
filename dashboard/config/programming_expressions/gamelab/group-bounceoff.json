@@ -3,7 +3,7 @@
   "name": "group.bounceOff",
   "category": "Groups",
   "category_key": "groups",
-  "content": "Makes each sprite in the group bounce off the target when they touch each other. The target keeps moving as before.\r\n\r\nMost games will involve sprites colliding with each other. There are four types of collisions available in Game Lab: `bounce`, `bounceOff`, `collide` and `displace`. These blocks will cause a certain type of interaction between each sprite and its target and must be used within the `draw` function.",
+  "content": "Makes each sprite in the group bounce off the target when they touch each other. The target keeps moving as before.\r\n\r\nMost games will involve sprites colliding with each other. There are four types of collisions available in Game Lab: [`sprite.bounce()`(#f78183)](/docs/gamelab/bounce/), [`sprite.bounceOff()`(#f78183)](/docs/gamelab/bounceOff/), [`sprite.collide()`(#f78183)](/docs/gamelab/collide/) and [`sprite.displace()`(#f78183)](/docs/gamelab/displace/). These blocks will cause a certain type of interaction between each sprite and its target and must be used within the [`function draw() {}`(#fff176)](/docs/gamelab/draw/) function.",
   "examples": [
     {
       "name": "Stay Cool",
@@ -23,5 +23,5 @@
   "return_value": "Boolean true or false. Changes output in the display after the sprites touch and drawSprites() is called.",
   "short_description": "Makes each sprite in the group bounce off the target when they touch each other. The target keeps moving as before.",
   "syntax": "group.bounceOff(target)",
-  "tips": "- All four of the collisions are similar to including an \"if (sprite.isTouching(target))\" in the `draw` function, and then depending on the collision type, updating the sprite and target `velocityX` and `velocityY` properties.\r\n- Only one of the four types of collisions should be specified for each pair of sprites.\r\n- To fine tune your collision detection use `setCollider` to change the shape and size of the collider area and set `debug` to true for the sprites.\r\n- A sprite that is not visible can still collide with other sprites and user mouse interactions."
+  "tips": "- All four of the collisions are similar to including an \"if (sprite.isTouching(target))\" in the [`function draw() {}`(#fff176)](/docs/gamelab/draw/) function, and then depending on the collision type, updating the sprite and target [`sprite.velocityX`(#f78183)](/docs/gamelab/velocityX/) and [`sprite.velocityY`(#f78183)](/docs/gamelab/velocityY/) properties.\r\n- Only one of the four types of collisions should be specified for each pair of sprites.\r\n- To fine tune your collision detection use [`sprite.setCollider()`(#f78183)](/docs/gamelab/setCollider/) to change the shape and size of the collider area and set [`sprite.debug`(#f78183)](/docs/gamelab/debug/) to true for the sprites.\r\n- A sprite that is not visible can still collide with other sprites and user mouse interactions."
 }

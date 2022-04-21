@@ -3,7 +3,7 @@
   "name": "text()",
   "category": "Drawing",
   "category_key": "drawing",
-  "content": "Draws text onto the display positioned at x and y.\r\n\r\nYou are not limited to just drawing shapes and lines in the display, you can also write text. Use `textFont()` and `textSize()` to change the default font, Arial, and the default size, 12 pixels. Use `textAlign()` to change where the text is displayed relative to the (x,y) position specified. The default is that (x,y) is the top left corner of the text.\r\n\r\nText that does not fit completely within the display area will not be drawn or seen. Use the fourth and fifth parameters to create a text box to display the text in with automatic line wrapping.",
+  "content": "Draws text onto the display positioned at x and y.\r\n\r\nYou are not limited to just drawing shapes and lines in the display, you can also write text. Use [`textFont()()`(#4dd0e1)](/docs/gamelab/textFont/) and [`textSize()()`(#4dd0e1)](/docs/gamelab/textSize/) to change the default font, Arial, and the default size, 12 pixels. Use [`textAlign()()`(#4dd0e1)](/docs/gamelab/textAlign/) to change where the text is displayed relative to the (x,y) position specified. The default is that (x,y) is the top left corner of the text.\r\n\r\nText that does not fit completely within the display area will not be drawn or seen. Use the fourth and fifth parameters to create a text box to display the text in with automatic line wrapping.",
   "examples": [
     {
       "name": "Changing color and size",
@@ -73,5 +73,5 @@
   "return_value": "No return value. Outputs to the display only.",
   "short_description": "Draws text onto the display positioned at x and y.",
   "syntax": "text(str, x, y, width, height)",
-  "tips": "- you can also specify `fill()`, `stroke()` and `strokeWeight()` before calling text to change the color and outline used."
+  "tips": "- you can also specify [`fill()()`(#4dd0e1)](/docs/gamelab/fill/), [`stroke()()`(#4dd0e1)](/docs/gamelab/stroke/) and [`strokeWeight()()`(#4dd0e1)](/docs/gamelab/strokeWeight/) before calling text to change the color and outline used."
 }

@@ -3,7 +3,7 @@
   "name": "group.setVelocityXEach()",
   "category": "Groups",
   "category_key": "groups",
-  "content": "Sets the x direction velocity for all the sprites in a group.\r\n\r\nA positive velocity parameter will move the sprite to the right. Must be used with the draw() function containing a `drawSprites()`. You can also update the velocity of each sprite in a group using `setSpeedAndDirectionEach()`, `setVelocityEach()`, `setVelocityYEach()`. \r\n\r\nThe default velocity is 0.",
+  "content": "Sets the x direction velocity for all the sprites in a group.\r\n\r\nA positive velocity parameter will move the sprite to the right. Must be used with the draw() function containing a [`drawSprites()()`(#fff176)](/docs/gamelab/drawSprites/). You can also update the velocity of each sprite in a group using [`group.setSpeedAndDirectionEach()()`(#f78183)](/docs/gamelab/setSpeedAndDirectionEach/), [`group.setVelocityEach()()`(#f78183)](/docs/gamelab/setVelocityEach/), [`group.setVelocityYEach()()`(#f78183)](/docs/gamelab/setVelocityYEach/). \r\n\r\nThe default velocity is 0.",
   "examples": [
     {
       "name": "",
@@ -29,5 +29,5 @@
   "return_value": "No return value. Changes output in the display after drawSprites() is called.",
   "short_description": "Sets the x direction velocity for all the sprites in a group.",
   "syntax": "group.setVelocityXEach(velocity)",
-  "tips": "- Changing World.frameRate will affect the velocity.\r\n- Groups of sprites all have the same functions and you use the dot notation (combining the name of the group, followed by a dot, with the function name) to call the function for that group of sprites.\r\n- Any changes to the properties of a sprite will not be seen until after `drawSprites()` is called.\r\n- If `setColliderEach()` is called for group before it is scaled, the collider is not scaled. But if a group of sprites is first scaled and then the collider set, the scale is also applied to the collider."
+  "tips": "- Changing World.frameRate will affect the velocity.\r\n- Groups of sprites all have the same functions and you use the dot notation (combining the name of the group, followed by a dot, with the function name) to call the function for that group of sprites.\r\n- Any changes to the properties of a sprite will not be seen until after [`drawSprites()()`(#fff176)](/docs/gamelab/drawSprites/) is called.\r\n- If [`group.setColliderEach()()`(#f78183)](/docs/gamelab/setColliderEach/) is called for group before it is scaled, the collider is not scaled. But if a group of sprites is first scaled and then the collider set, the scale is also applied to the collider."
 }

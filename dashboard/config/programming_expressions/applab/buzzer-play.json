@@ -3,7 +3,7 @@
   "name": "buzzer.play()",
   "category": "Circuit",
   "category_key": "circuit",
-  "content": "Play a list of notes with the buzzer.\r\n\r\n`buzzer.play()` is used to play an array of notes one after the other in one go. This can be used to craft actual songs as you can control the tempo (speed of how all of the notes will played) too. ",
+  "content": "Play a list of notes with the buzzer.\r\n\r\n[`buzzer.play()()`(#f78183)](/docs/applab/buzzer.play/) is used to play an array of notes one after the other in one go. This can be used to craft actual songs as you can control the tempo (speed of how all of the notes will played) too. ",
   "palette_params": [
     {
       "name": "notes",

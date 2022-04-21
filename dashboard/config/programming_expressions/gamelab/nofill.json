@@ -3,7 +3,7 @@
   "name": "noFill()",
   "category": "Drawing",
   "category_key": "drawing",
-  "content": "Disables the fill inside shapes. Restore the fill by using the `fill()` command. For shapes, if both `noStroke()` and `noFill()` are run, nothing will be drawn to the screen.",
+  "content": "Disables the fill inside shapes. Restore the fill by using the [`fill()()`(#4dd0e1)](/docs/gamelab/fill/) command. For shapes, if both [`noStroke()()`(#4dd0e1)](/docs/gamelab/noStroke/) and [`noFill()()`(#4dd0e1)](/docs/gamelab/noFill/) are run, nothing will be drawn to the screen.",
   "examples": [
     {
       "name": "",

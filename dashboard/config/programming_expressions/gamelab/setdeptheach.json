@@ -3,7 +3,7 @@
   "name": "group.setDepthEach()",
   "category": "Groups",
   "category_key": "groups",
-  "content": "Set the depth of all the sprites in a group.\r\n\r\nSprites are drawn, when `drawSprites()` is executed, in order from lowest depth to highest depth. The sprites drawn later will overlay sprites drawn earlier.\r\n\r\nIf you assign a sprite to a depth that is already the depth of another sprite, that other sprite, and all other larger depth sprites, have their depths increased by one.",
+  "content": "Set the depth of all the sprites in a group.\r\n\r\nSprites are drawn, when [`drawSprites()()`(#fff176)](/docs/gamelab/drawSprites/) is executed, in order from lowest depth to highest depth. The sprites drawn later will overlay sprites drawn earlier.\r\n\r\nIf you assign a sprite to a depth that is already the depth of another sprite, that other sprite, and all other larger depth sprites, have their depths increased by one.",
   "examples": [
     {
       "name": "",
@@ -21,5 +21,5 @@
   "return_value": "No return value. Changes output in the display after drawSprites() is called.",
   "short_description": "Set the depth of all the sprites in a group.",
   "syntax": "group.setDepthEach(depth)",
-  "tips": "- Groups of sprites all have the same functions and you use the dot notation (combining the name of the group, followed by a dot, with the function name) to call the function for that group of sprites.\r\n- Any changes to the properties of a sprite will not be seen until after `drawSprites()` is called."
+  "tips": "- Groups of sprites all have the same functions and you use the dot notation (combining the name of the group, followed by a dot, with the function name) to call the function for that group of sprites.\r\n- Any changes to the properties of a sprite will not be seen until after [`drawSprites()()`(#fff176)](/docs/gamelab/drawSprites/) is called."
 }

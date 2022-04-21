@@ -3,7 +3,7 @@
   "name": "line()",
   "category": "Drawing",
   "category_key": "drawing",
-  "content": "Draws a straight line between two points.\r\n\r\nUse `stroke()` to color a line and `strokeWeight()` to change it's thickness. A line cannot be filled, therefore the `fill()` function will not affect the color of a line.\r\n\r\nThe default `stroke()` color is black and the default `strokeWeight()` is 1.",
+  "content": "Draws a straight line between two points.\r\n\r\nUse [`stroke()()`(#4dd0e1)](/docs/gamelab/stroke/) to color a line and [`strokeWeight()()`(#4dd0e1)](/docs/gamelab/strokeWeight/) to change it's thickness. A line cannot be filled, therefore the [`fill()()`(#4dd0e1)](/docs/gamelab/fill/) function will not affect the color of a line.\r\n\r\nThe default [`stroke()()`(#4dd0e1)](/docs/gamelab/stroke/) color is black and the default [`strokeWeight()()`(#4dd0e1)](/docs/gamelab/strokeWeight/) is 1.",
   "examples": [
     {
       "name": "",
@@ -71,5 +71,5 @@
   "return_value": "No return value. Outputs to the display only.",
   "short_description": "Draws a straight line between two points.",
   "syntax": "line(x1, y1, x2, y2)",
-  "tips": "- If you're having trouble getting a line to show up, make sure that `noStroke()` hasn't been called, and where you're trying to draw the line fits within the coordinates of the display (400 x 400).\r\n- Anything you draw will overlap previous things you drew. The sequence of drawing statements is usually important.\r\n- The default stroke is black, the default stroke weight is 1 pixel. Change the width and color of subsequent lines using `strokeWeight()` and `stroke()`."
+  "tips": "- If you're having trouble getting a line to show up, make sure that [`noStroke()()`(#4dd0e1)](/docs/gamelab/noStroke/) hasn't been called, and where you're trying to draw the line fits within the coordinates of the display (400 x 400).\r\n- Anything you draw will overlap previous things you drew. The sequence of drawing statements is usually important.\r\n- The default stroke is black, the default stroke weight is 1 pixel. Change the width and color of subsequent lines using [`strokeWeight()()`(#4dd0e1)](/docs/gamelab/strokeWeight/) and [`stroke()()`(#4dd0e1)](/docs/gamelab/stroke/)."
 }

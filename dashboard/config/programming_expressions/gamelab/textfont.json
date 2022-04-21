@@ -3,7 +3,7 @@
   "name": "textFont()",
   "category": "Drawing",
   "category_key": "drawing",
-  "content": "Sets the current font.\r\n\r\nThis font will be used in all subsequent calls to `text()`. The default font is Arial. The parameter must be a string representing a web safe font. See [W3 Schools - Web Safe Fonts](https://www.w3schools.com/cssref/css_websafe_fonts.asp)\r\n\r\nText that does not fit completely within the display area will not be drawn or seen.",
+  "content": "Sets the current font.\r\n\r\nThis font will be used in all subsequent calls to [`text()()`(#4dd0e1)](/docs/gamelab/text/). The default font is Arial. The parameter must be a string representing a web safe font. See [W3 Schools - Web Safe Fonts](https://www.w3schools.com/cssref/css_websafe_fonts.asp)\r\n\r\nText that does not fit completely within the display area will not be drawn or seen.",
   "examples": [
     {
       "name": "",

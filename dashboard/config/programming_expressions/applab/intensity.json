@@ -3,7 +3,7 @@
   "name": "colorLeds[i].intensity()",
   "category": "Circuit",
   "category_key": "circuit",
-  "content": "Changes the brightness of the color LED\r\n\r\nWith `colorLeds[i].intensity()`, you can control how bright or dim you want a colorLED to be with a number. The bigger the number used, the brighter the color LED.\r\n\r\n`.intensity()` works a lot like  `buzzer.frequency` and is just rapidly turning the light on and off, giving the illusion of dimness. \r\n",
+  "content": "Changes the brightness of the color LED\r\n\r\nWith `colorLeds[i].intensity()`, you can control how bright or dim you want a colorLED to be with a number. The bigger the number used, the brighter the color LED.\r\n\r\n`.intensity()` works a lot like  [`buzzer.frequency()`(#f78183)](/docs/applab/buzzer.frequency/) and is just rapidly turning the light on and off, giving the illusion of dimness. \r\n",
   "examples": [
     {
       "name": "Example: Light Dimmer",

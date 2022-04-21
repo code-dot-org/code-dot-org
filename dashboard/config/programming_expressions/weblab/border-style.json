@@ -3,7 +3,7 @@
   "name": "Border Style",
   "category": "CSS Properties",
   "category_key": "css_properties",
-  "content": "#  Border Style\r\n\r\nThe `border-style` property specifies the line style for all four sides of an element's border. It is a shorthand for top, right, bottom, and left border style respectively. When one value is specified, it applies the same border style to all four sides. There are various border style values, such as `solid`, `dashed`, `dotted`, `double`, `groove`, etc.",
+  "content": "#  Border Style\r\n\r\nThe [`Border Style`(#d3e965)](/docs/weblab/border-style/) property specifies the line style for all four sides of an element's border. It is a shorthand for top, right, bottom, and left border style respectively. When one value is specified, it applies the same border style to all four sides. There are various border style values, such as `solid`, `dashed`, `dotted`, `double`, `groove`, etc.",
   "examples": [
     {
       "name": "Dashed Border ",

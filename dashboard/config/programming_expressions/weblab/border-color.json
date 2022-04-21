@@ -3,7 +3,7 @@
   "name": "Border Color",
   "category": "CSS Properties",
   "category_key": "css_properties",
-  "content": "# Border Color\r\nThe `border-color` property specifies the color of an element's four borders. It is a shorthand for choosing  the top, right, bottom, and left border color simultaneously. When one value is specified, it applies the same color to all four sides.",
+  "content": "# Border Color\r\nThe [`Border Color`(#d3e965)](/docs/weblab/border-color/) property specifies the color of an element's four borders. It is a shorthand for choosing  the top, right, bottom, and left border color simultaneously. When one value is specified, it applies the same color to all four sides.",
   "examples": [
     {
       "name": "Red Borders",
@@ -27,5 +27,5 @@
   "external_documentation": "http://www.w3schools.com/cssref/pr_border-color.asp",
   "short_description": "Border Color\nThe border-color property specifies the color of an element's four borders. It is a shorthand for choosing  the top, right, bottom, and left border color simultaneously. When one value is specified, it applies the same color to all four sides.",
   "syntax": "border-color: value;",
-  "tips": "* Always declare the `border-style` property before the `border-color` property."
+  "tips": "* Always declare the [`Border Style`(#d3e965)](/docs/weblab/border-style/) property before the [`Border Color`(#d3e965)](/docs/weblab/border-color/) property."
 }

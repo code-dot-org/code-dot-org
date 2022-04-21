@@ -3,7 +3,7 @@
   "name": "led.blink()",
   "category": "Circuit",
   "category_key": "circuit",
-  "content": "Makes the red LED blink.\r\n\r\n`led.blink` toggles the LED on and off at a rapid or slow pace depending on the interval given. The interval is the time (in milliseconds) between blinks, meaning the bigger the number the slower the pace of the blinks. ",
+  "content": "Makes the red LED blink.\r\n\r\n[`led.blink()`(#f78183)](/docs/applab/led.blink/) toggles the LED on and off at a rapid or slow pace depending on the interval given. The interval is the time (in milliseconds) between blinks, meaning the bigger the number the slower the pace of the blinks. ",
   "examples": [
     {
       "name": "Blink Buttons",

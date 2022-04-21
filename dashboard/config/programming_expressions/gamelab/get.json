@@ -38,5 +38,5 @@
   "return_value": "The sprite at index position i.",
   "short_description": "Gets the sprite at index i of the group.",
   "syntax": "group.get(i)",
-  "tips": "- Groups of sprites all have the same functions and you use the dot notation (combining the name of the group, followed by a dot, with the function name) to call the function for that group of sprites.\r\n- Any changes to the properties of a sprite will not be seen until after `drawSprites()` is called."
+  "tips": "- Groups of sprites all have the same functions and you use the dot notation (combining the name of the group, followed by a dot, with the function name) to call the function for that group of sprites.\r\n- Any changes to the properties of a sprite will not be seen until after [`drawSprites()()`(#fff176)](/docs/gamelab/drawSprites/) is called."
 }

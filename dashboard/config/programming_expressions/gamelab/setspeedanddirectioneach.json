@@ -45,5 +45,5 @@
   "return_value": "No return value. Changes output in the display after drawSprites() is called.",
   "short_description": "Set the speed and direction of every sprite in the group. ",
   "syntax": "group.setSpeedAndDirectionEach(speed, angle)",
-  "tips": "- Groups of sprites all have the same functions and you use the dot notation (combining the name of the group, followed by a dot, with the function name) to call the function for that group of sprites.\r\n- Any changes to the properties of a sprite will not be seen until after `drawSprites()` is called."
+  "tips": "- Groups of sprites all have the same functions and you use the dot notation (combining the name of the group, followed by a dot, with the function name) to call the function for that group of sprites.\r\n- Any changes to the properties of a sprite will not be seen until after [`drawSprites()()`(#fff176)](/docs/gamelab/drawSprites/) is called."
 }

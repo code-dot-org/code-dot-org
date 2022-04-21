@@ -3,7 +3,7 @@
   "name": "Font Size",
   "category": "CSS Properties",
   "category_key": "css_properties",
-  "content": "# Font Size\r\n\r\nThe `font-size` property specifies the size of a font.",
+  "content": "# Font Size\r\n\r\nThe [`Font Size`(#d3e965)](/docs/weblab/font-size/) property specifies the size of a font.",
   "examples": [
     {
       "name": "Changing the Font Size",

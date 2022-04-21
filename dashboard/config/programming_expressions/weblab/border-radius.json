@@ -3,7 +3,7 @@
   "name": "Border Radius",
   "category": "CSS Properties",
   "category_key": "css_properties",
-  "content": "# Border Radius\r\n\r\nThe `border-radius` property specifies the radius of the element's corners; it allows you to add rounded corners to elements. This property can have from one to four values. The four values for each radius are given in the order `top-left`, `top-right`, `bottom-right`, `bottom-left`. When one value is specified, it applies the same radius to all four corners.",
+  "content": "# Border Radius\r\n\r\nThe [`Border Radius`(#d3e965)](/docs/weblab/border-radius/) property specifies the radius of the element's corners; it allows you to add rounded corners to elements. This property can have from one to four values. The four values for each radius are given in the order `top-left`, `top-right`, `bottom-right`, `bottom-left`. When one value is specified, it applies the same radius to all four corners.",
   "examples": [
     {
       "name": "Rounded Corners in Pixels",
@@ -27,5 +27,5 @@
   "external_documentation": "http://www.w3schools.com/cssref/css3_pr_border-radius.asp",
   "short_description": "Border Radius\nThe border-radius property specifies the radius of the element's corners; it allows you to add rounded corners to elements. This property can have from one to four values. The four values for each radius are given in the order top-left, top-right, bottom-right, bottom-left. When one value is specified, it applies the same radius to all four corners.",
   "syntax": "border-radius: value;",
-  "tips": "* You can give any element \"rounded corners\" by applying a `border-radius`.\r\n* The default value is 0.\r\n* The shape of the corners can be defined in pixels or percent. "
+  "tips": "* You can give any element \"rounded corners\" by applying a [`Border Radius`(#d3e965)](/docs/weblab/border-radius/).\r\n* The default value is 0.\r\n* The shape of the corners can be defined in pixels or percent. "
 }

@@ -3,7 +3,7 @@
   "name": "Background Color",
   "category": "CSS Properties",
   "category_key": "css_properties",
-  "content": "# Background Color\r\n\r\nThe `background-color` property specifies the background color of an element. Color values can be defined with HEX, RGB, or color name. ",
+  "content": "# Background Color\r\n\r\nThe [`Background Color`(#d3e965)](/docs/weblab/background-color/) property specifies the background color of an element. Color values can be defined with HEX, RGB, or color name. ",
   "examples": [
     {
       "name": "Background with Color Names",

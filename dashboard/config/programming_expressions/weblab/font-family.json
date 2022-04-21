@@ -3,7 +3,7 @@
   "name": "Font Family",
   "category": "CSS Properties",
   "category_key": "css_properties",
-  "content": "# Font Family\r\nThe `font-family` property specifies the font for an element. There are two types of font family names:\r\n* `family-name` - The name of a `font-family`, like `times`, `courier`, `arial`, etc.\r\n* `generic-family` - The name of a `generic-family`, like `serif`, `sans-serif`, `cursive`, `fantasy`, `monospace`.",
+  "content": "# Font Family\r\nThe [`Font Family`(#d3e965)](/docs/weblab/font-family/) property specifies the font for an element. There are two types of font family names:\r\n* `family-name` - The name of a [`Font Family`(#d3e965)](/docs/weblab/font-family/), like `times`, `courier`, `arial`, etc.\r\n* `generic-family` - The name of a `generic-family`, like `serif`, `sans-serif`, `cursive`, `fantasy`, `monospace`.",
   "examples": [
     {
       "name": "Multiple Font Families",

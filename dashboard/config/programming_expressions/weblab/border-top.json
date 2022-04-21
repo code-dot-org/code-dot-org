@@ -3,7 +3,7 @@
   "name": "Border Top",
   "category": "CSS Properties",
   "category_key": "css_properties",
-  "content": "# Border Top\r\n\r\nThe `border-top` property specifies the width, line style, and color of the top border of an element. It is a shorthand property for setting in one declaration the width, the style, and the color of an element's top border.",
+  "content": "# Border Top\r\n\r\nThe [`Border Top`(#d3e965)](/docs/weblab/border-top/) property specifies the width, line style, and color of the top border of an element. It is a shorthand property for setting in one declaration the width, the style, and the color of an element's top border.",
   "examples": [
     {
       "name": "Border Top Property",
@@ -18,5 +18,5 @@
   "external_documentation": "http://www.w3schools.com/cssref/pr_border-top.asp",
   "short_description": "Border Top\nThe border-top property specifies the width, line style, and color of the top border of an element. It is a shorthand property for setting in one declaration the width, the style, and the color of an element's top border.",
   "syntax": "border-top: border-width border-style border-color;",
-  "tips": "* If `border-style` is not provided, the default is no border.\r\n* If no `border-color` is chosen, the border will match the current text color.\r\n* If `border-width` is not provided, the default is medium."
+  "tips": "* If [`Border Style`(#d3e965)](/docs/weblab/border-style/) is not provided, the default is no border.\r\n* If no [`Border Color`(#d3e965)](/docs/weblab/border-color/) is chosen, the border will match the current text color.\r\n* If [`Border Width`(#d3e965)](/docs/weblab/border-width/) is not provided, the default is medium."
 }

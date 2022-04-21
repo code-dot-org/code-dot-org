@@ -38,5 +38,5 @@
   "return_value": "Boolean true or false.",
   "short_description": "Checks if the sprite is touching the target sprite or any sprite in the target group.",
   "syntax": "sprite.isTouching(target)",
-  "tips": "- To fine tune your collision detection use `setCollider` to change the shape and size of the collider area and set `debug` to true for the sprites."
+  "tips": "- To fine tune your collision detection use [`sprite.setCollider()`(#f78183)](/docs/gamelab/setCollider/) to change the shape and size of the collider area and set [`sprite.debug`(#f78183)](/docs/gamelab/debug/) to true for the sprites."
 }
