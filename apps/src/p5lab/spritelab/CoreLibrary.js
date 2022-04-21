@@ -128,10 +128,10 @@ export default class CoreLibrary {
         ? 1
         : -1
     )[0];
-    let width =
+    let bubbleWidth =
       drawUtils.getTextWidth(this.p5, longestLine, textSize) + padding * 2;
-    width = Math.max(width, 50);
-    const height = lines.length * textSize + padding * 2;
+    bubbleWidth = Math.max(bubbleWidth, 50);
+    const bubbleHeight = lines.length * textSize + padding * 2;
     const radius = padding;
 
     let tailHeight = 10;
@@ -141,17 +141,17 @@ export default class CoreLibrary {
     let bubbleY = Math.min(spriteY, APP_HEIGHT);
     let bubbleX = spriteX;
     let tailTipX = spriteX;
-    if (bubbleY - height - tailHeight < 1) {
-      tailHeight = Math.max(1, bubbleY - height);
-      bubbleY = height + tailHeight;
+    if (bubbleY - bubbleHeight - tailHeight < 1) {
+      tailHeight = Math.max(1, bubbleY - bubbleHeight);
+      bubbleY = bubbleHeight + tailHeight;
     }
-    if (spriteX - width / 2 < 1) {
+    if (spriteX - bubbleWidth / 2 < 1) {
       tailTipX = Math.max(spriteX, radius + tailHeight);
-      bubbleX = width / 2;
+      bubbleX = bubbleWidth / 2;
     }
-    if (spriteX + width / 2 > APP_WIDTH) {
+    if (spriteX + bubbleWidth / 2 > APP_WIDTH) {
       tailTipX = Math.min(spriteX, APP_WIDTH - radius);
-      bubbleX = APP_WIDTH - width / 2;
+      bubbleX = APP_WIDTH - bubbleWidth / 2;
     }
 
     // Draw bubble.
@@ -159,8 +159,8 @@ export default class CoreLibrary {
       this.p5,
       bubbleX,
       bubbleY,
-      width,
-      height,
+      bubbleWidth,
+      bubbleHeight,
       {
         tailHeight,
         tailTipX,

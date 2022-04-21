@@ -51,13 +51,13 @@ export function getTextWidth(p5, text, size) {
  */
 export function speechBubble(
   p5,
-  x,
-  y,
-  width,
-  height,
+  bubbleX,
+  bubbleY,
+  bubbleWidth,
+  bubbleHeight,
   {
     tailSize = 10,
-    tailTipX = x,
+    tailTipX = bubbleX,
     radius = 8,
     fill = 'white',
     strokeWeight = 2,
@@ -65,14 +65,14 @@ export function speechBubble(
   } = {},
   bubbleType
 ) {
-  const minX = x - width / 2;
-  const minY = y - height - tailSize;
-  const maxY = y - tailSize;
+  const minX = bubbleX - bubbleWidth / 2;
+  const minY = bubbleY - bubbleHeight - tailSize;
+  const maxY = bubbleY - tailSize;
   // The two ellipses that make up the tail can move in relation to the
   // speech bubble based upon the sprite's X position. We take move the
   // bubbles from the expected center position to somewhere closer to the
   // sprite, if the sprite is near the side edges of the canvas.
-  const tailTopX = (tailTipX + (minX + width / 2)) / 2;
+  const tailTopX = (tailTipX + (minX + bubbleWidth / 2)) / 2;
   const tailBottomX = (tailTipX + tailTopX) / 2;
   p5.push();
   p5.stroke(stroke);
@@ -81,19 +81,19 @@ export function speechBubble(
   switch (bubbleType) {
     case 'think':
       // Thought bubbles have more-rounded corners, and trailing bubbles.
-      p5.rect(minX, minY, width, height, radius * 3);
+      p5.rect(minX, minY, bubbleWidth, bubbleHeight, radius * 3);
       p5.ellipse(tailTopX, maxY, tailSize);
       p5.ellipse(tailBottomX, maxY + tailSize, tailSize / 2);
       break;
     case 'say':
     default:
       // Speech bubbles have less-rounded corners and triangular tails.
-      p5.rect(minX, minY, width, height, radius);
+      p5.rect(minX, minY, bubbleWidth, bubbleHeight, radius);
       p5.stroke(fill);
-      p5.triangle(tailTipX - tailSize, maxY, tailTipX, maxY, tailTipX, y);
+      p5.triangle(tailTipX - tailSize, maxY, tailTipX, maxY, tailTipX, bubbleY);
       p5.stroke(stroke);
-      p5.line(tailTipX, maxY, tailTipX, y);
-      p5.line(tailTipX, y, tailTipX - tailSize - 1, maxY);
+      p5.line(tailTipX, maxY, tailTipX, bubbleY);
+      p5.line(tailTipX, bubbleY, tailTipX - tailSize - 1, maxY);
       break;
   }
   p5.pop();
