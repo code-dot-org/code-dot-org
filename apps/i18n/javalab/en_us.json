@@ -122,7 +122,7 @@
   "teacherLabel": "teacher",
   "togglePeerReviewError": "Error enabling/disabling peer review, please try again.",
   "unauthorizedJavabuilderConnectionNotLoggedIn": "You need to be logged in to run your code in Java Lab. Log in and try again.",
-  "unauthorizedJavabuilderConnectionTeacher": "To run your code in Java Lab, you need to become \"verified\" or join a CSA section owned by a verified teacher. See [this article](https://support.code.org/hc/en-us/articles/115001550131) to become verified.",
+  "unauthorizedJavabuilderConnectionTeacher": "To run your code in Java Lab, you need to become \"verified\" or join a CSA section owned by a verified teacher. Please see [this article](https://support.code.org/hc/en-us/articles/115001550131) for details on how to become verified.",
   "unauthorizedJavabuilderConnectionStudent": "To run your code in Java Lab, you need to be assigned to a CSA section and your teacher needs to be \"verified.\" Ask your teacher for help and try again. Your teacher can find more details in [this article.](https://support.code.org/hc/en-us/articles/115001550131)",
   "unknownError": "Oops. We hit an error on our side. Try running your program again. If this error continues, contact us at support@code.org. Be sure to include the connection ID {connectionId} in your message.\n{type}",
   "userBlocked": "You have run your code too many times and your account has been locked. Contact support@code.org to unlock your account.",

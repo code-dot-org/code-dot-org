@@ -19,7 +19,8 @@ import javalab, {
   setIsTesting,
   openPhotoPrompter,
   closePhotoPrompter,
-  setBackpackEnabled
+  setBackpackEnabled,
+  appendMarkdownLog
 } from './javalabRedux';
 import playground from './playground/playgroundRedux';
 import {TestResults} from '@cdo/apps/constants';
@@ -373,7 +374,8 @@ Javalab.prototype.executeJavabuilder = function(executionType) {
     this.setIsTesting,
     executionType,
     this.level.csaViewMode,
-    getStore().getState().currentUser
+    getStore().getState().currentUser,
+    this.onMarkdownMessage
   );
 
   let connectToJavabuilder;
@@ -501,6 +503,10 @@ Javalab.prototype.closePhotoPrompter = function() {
 Javalab.prototype.onPhotoPrompterFileSelected = function(photo) {
   // Only pass the selected photo to the mini-app if it supports the photo prompter
   this.miniApp?.onPhotoPrompterFileSelected?.(photo);
+};
+
+Javalab.prototype.onMarkdownMessage = function(message) {
+  getStore().dispatch(appendMarkdownLog(message));
 };
 
 export default Javalab;
