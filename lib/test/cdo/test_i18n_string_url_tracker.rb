@@ -1,4 +1,5 @@
 require_relative '../test_helper'
+require 'cdo/i18n_backend'
 require 'cdo/i18n_string_url_tracker'
 require 'active_support/core_ext/numeric/time'
 
@@ -33,7 +34,20 @@ module SetupI18nStringUrlTracker
     super
     stub_firehose
     stub_dcdo(true)
-    I18n.backend.store_translations(I18n.default_locale, {'string': {'key': 'a valid string'}})
+
+    custom_i18n = {
+      string: {
+        key: 'string1'
+      },
+      test: {
+        keys: {
+          string: {
+            key: 'string2'
+          }
+        }
+      }
+    }
+    I18n.backend.store_translations I18n.default_locale, custom_i18n
   end
 
   def teardown
@@ -300,6 +314,35 @@ class TestI18nStringUrlTracker < Minitest::Test
     test_record = {url: 'https://studio.code.org/s/outbreak', source: 'test', string_key: 'invalid_key', scope: [], separator: '.'}
     I18nStringUrlTracker.instance.log(test_record[:url], test_record[:source], test_record[:string_key], test_record[:scope], test_record[:separator])
     I18nStringUrlTracker.instance.send(:flush)
+  end
+
+  def test_string_key_exists
+    custom_i18n = {
+      'simple_string' => "hello",
+      'interpolated_string' => "unit %{n}",
+      'parent_key' => {
+        'child_key' => 'test'
+      },
+      # Value can be a hash.
+      # See https://guides.rubyonrails.org/i18n.html#pluralization
+      'number.format' => {'separator' => '.', 'delimiter' => ','}
+    }
+    I18n.backend = CDO.i18n_backend
+    I18n.backend.store_translations I18n.default_locale, custom_i18n
+
+    assert_equal false, I18nStringUrlTracker.string_exists?(nil)
+    assert_equal false, I18nStringUrlTracker.string_exists?('')
+    assert_equal false, I18nStringUrlTracker.string_exists?('invalid_string_key')
+
+    assert_equal true, I18nStringUrlTracker.string_exists?('simple_string')
+    assert_equal true, I18nStringUrlTracker.string_exists?('interpolated_string')
+
+    assert_equal true, I18nStringUrlTracker.string_exists?('parent_key.child_key')
+    assert_equal true, I18nStringUrlTracker.string_exists?('child_key', 'parent_key')
+    assert_equal true, I18nStringUrlTracker.string_exists?('child_key', ['parent_key'])
+    assert_equal false, I18nStringUrlTracker.string_exists?('invalid_child_key', ['parent_key'])
+
+    assert_equal true, I18nStringUrlTracker.string_exists?('number.format')
   end
 end
 

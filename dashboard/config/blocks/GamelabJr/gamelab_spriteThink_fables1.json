@@ -1,5 +1,5 @@
 {
-  "category": "Sprites",
+  "category": "CSC",
   "config": {
     "func": "spriteThink_fables1",
     "blockText": "{SPRITE} think {THOUGHT}",
@@ -13,19 +13,23 @@
         "options": [
           [
             "Hmm...",
-            "\"codeValue1\""
+            "\"Hmm...\""
           ],
           [
             "I am hungry, too.",
-            "\"codeValue2\""
+            "\"I am hungry, too.\""
           ],
           [
-            "I'll wait for a bigger goat.",
-            "\"codeValue3\""
+            "I only want the biggest goat.",
+            "\"I only want the biggest goat.\""
           ],
           [
-            "I'm a mean troll.",
-            "\"codeValue4\""
+            "I'm a green troll.",
+            "\"I'm a green troll.\""
+          ],
+          [
+            "No one will cross my bridge.",
+            "\"No one will cross my bridge.\""
           ]
         ]
       }
