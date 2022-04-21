@@ -25,6 +25,28 @@ class ReferenceGuidesController < ApplicationController
     redirect_to course_reference_guide_path(params[:course_course_name], first_child_key)
   end
 
+  # GET /courses/:course_name/guides/new
+  def new
+    @base_url = course_reference_guides_path(params[:course_course_name])
+  end
+
+  # POST /courses/:course_name/guides
+  def create
+    course_version_id = find_matching_course_version(params[:course_course_name])&.id
+    reference_guide = ReferenceGuide.new(
+      key: params[:key],
+      display_name: params[:key],
+      course_version_id: course_version_id,
+      position: 0
+    )
+    if reference_guide.save
+      reference_guide.write_serialization
+      redirect_to edit_course_reference_guide_path(params[:course_course_name], reference_guide.key)
+    else
+      render :not_acceptable, json: reference_guide.errors
+    end
+  end
+
   # PATCH /courses/:course_name/guides/:key
   def update
     @reference_guide.update!(reference_guide_params.except(:key, :course_course_name))
@@ -34,6 +56,7 @@ class ReferenceGuidesController < ApplicationController
 
   # DELETE /courses/:course_name/guides/:key
   def destroy
+    @reference_guide.remove_serialization
     @reference_guide.destroy
   end
 
