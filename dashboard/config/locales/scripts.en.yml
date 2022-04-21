@@ -7879,6 +7879,14 @@ en:
               name: CSP post-survey 2021
               description_student: 
               description_teacher: 
+            CS Principles Pre-survey:
+              name: CSA Pre-Survey Draft
+              description_student: 
+              description_teacher: 
+            Course Survey:
+              name: CSA Post-Course Survey Draft
+              description_student: 
+              description_teacher: 
           student_description: ''
           name: allthesurveys
         k1hoc2017:
@@ -32565,7 +32573,7 @@ en:
         self-paced-pl-csa3-2022:
           lessons:
             lesson-1:
-              name: Introduction to JavaLab
+              name: Introduction to Java Lab
               description_student: 
               description_teacher: |-
                 **You will:**
@@ -34042,9 +34050,26 @@ en:
               description_student: "**You will:**\n\n* Get an introduction to the asynchronous activities. \n* Reflect on gots and needs. \n"
               description_teacher: "**Overview:**\nIn this session, you will reflect on what you have gotten out of the day along with what you still need from the workshop experience.\n\n**Participants will:**\n\n* Get an introduction to the asynchronous activities. \n* Reflect on gots and needs. \n\n\n**Suggested time:** 5 minutes"
             lesson-9:
-              name: Barriers and Opportunities
-              description_student: "**You will:**\n\n* Identify barriers in your/their classroom, school, and/or teaching practice that limit access, diversity, and inclusion in CS education. \n* Determine which of these barriers you have the power to influence. \n* Identify concrete and reasonable strategies to address the barriers you have the power to influence. \n\n**Suggested time:** 60 minutes"
-              description_teacher: "**Overview:**\nThese asynchronous activities will prompt participants to reflect on their role in expanding access, diversity, and inclusion in CS education. Participants will be asked to identify aspects of access, diversity, and inclusion in CS education that they have the power to control. They will then go further to articulate concrete steps they can take in the next 30, 60, and 90 days to impact equity CS in their areas of control. \n\n**Participants will:**\n\n* Identify barriers in your/their classroom, school, and/or teaching practice that limit access, diversity, and inclusion in CS education. \n* Determine which of these barriers you have the power to influence. \n* Identify concrete and reasonable strategies to address the barriers you have the power to influence. \n\n**Suggested time:** 60 minutes"
+              name: Connect with the CS Community
+              description_student: |-
+                **You will:**
+
+                * Explore CS Journeys.
+                * Make a plan for connecting with your local community.
+                * Make a plan for connecting with other CS educators.
+
+                **Suggested time:** 60 minutes
+              description_teacher: |-
+                **Overview:**
+                The goal of these asynchronous activities is for participants to recognize that they are part of something bigger than what is happening just in their own classroom. These activities will prompt participants to expand their idea of community to include both their local community and the national computer science community.
+
+                **Participants will:**
+
+                * Explore CS Journeys.
+                * Make a plan for connecting with their local community.
+                * Make a plan for connecting with other CS educators.
+
+                **Suggested time:** 60 minutes
             User Centered Design   Define and Prepare:
               name: TLO 3 - Unit 4 Lesson 3
               description_student: |-
@@ -34125,8 +34150,8 @@ en:
                 **Suggested time:** ____ minutes
             lesson-4:
               name: Welcome
-              description_student: "**You will:**\n\n* Get an orientation for the day. \n* Review gots and needs. \n* Experience a Circuit Playground demonstration."
-              description_teacher: "**Overview:**\nThis session serves as an introduction to Day 4. The session also includes a demonstration of the Circuit Playground used in Unit 6 of CS Discoveries.  \n\n**Participants will:**\n\n* Get an orientation for the day. \n* Review gots and needs. \n* Experience a Circuit Playground demonstration.\n\n**Suggested time:** 15 minutes"
+              description_student: "**You will:**\n\n* Get an orientation for the day. \n* Review gots and needs. \n* Debrief asynchronous work."
+              description_teacher: "**Overview:**\nThis session serves as both an introduction to Day 4 and a space to debrief the asynchronous work from Day 3. \n\n**Participants will:**\n\n* Get an orientation for the day. \n* Review gots and needs. \n* Debrief asynchronous work.\n\n**Suggested time:** 15 minutes"
             lesson-5:
               name: TLO 6 - Unit 6 Lesson 3 - delete
               description_student: "**You will:**\n\n* Engage in Unit 6 Lesson 3 while playing the role of the student.\n* Reflect on your experience as a student engaging in the lesson.\n* Share ideas for managing classroom sets of hardware. "
@@ -34859,17 +34884,23 @@ en:
             lesson-3:
               name: Share Your Fable
               description_student: 
-              description_teacher: 
+              description_teacher: 'In this lesson, students will use their planning sheets to program two character’s dialogue in order to portray a moral. '
             Hello World CSC:
               name: Hello World CSC
               description_student: In this lesson, you will learn to create and animate sprites and make them interactive using events.
               description_teacher: 'In this **skill-building** lesson, students will learn to create and animate sprites and make them interactive using events. '
             lesson-4:
               name: "[Optional] Introduction to Fables"
+              description_student: 
+              description_teacher: 'Students will review and list the common morals and character traits of fables. In this lesson, students will develop a list of similar themes, topics and patterns of events in traditional literature from different cultures in order to begin writing and coding their own fable. '
             lesson-5:
               name: Plan Your Fable
+              description_student: 
+              description_teacher: 'In this lesson, students will choose their favorite fables to adapt, by picking a moral and two characters from two different fables. Students will begin drafting the characters and drafting the scene they plan to animate. '
             lesson-6:
               name: Share Your Fable
+              description_student: 
+              description_teacher: 'In this lesson, students will have time to reflect on their projects and share them with their peers. Students should work with their peers to debug any errors in their code. They are encouraged to  make connections to peers who have similar problems in their code, how they solved those problems, or see different ways to program. '
           lesson_groups: {}
           name: csc-pilot-2022-fables
           title: ''

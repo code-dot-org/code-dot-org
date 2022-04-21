@@ -31,6 +31,12 @@ class ProgrammingMethod < ApplicationRecord
   validates_uniqueness_of :key, scope: :programming_class_id, case_sensitive: false
   validate :validate_key_format
 
+  # The validate logic could hit a race condition in seeding
+  # As this should run when the models are updated in levelbuilder,
+  # just skip it for seeding.
+  attr_accessor :seed_in_progress
+  validate :validate_overload, unless: :seed_in_progress
+
   def generate_key
     return key if key
     key = ProgrammingMethod.sanitize_key(name)
@@ -61,7 +67,9 @@ class ProgrammingMethod < ApplicationRecord
       parameters: parsed_parameters,
       examples: parsed_examples,
       syntax: syntax,
-      externalLink: external_link
+      externalLink: external_link,
+      canHaveOverload: !programming_class.programming_methods.any? {|m| m.overload_of == key},
+      overloadOf: overload_of
     }
   end
 
@@ -86,5 +94,24 @@ class ProgrammingMethod < ApplicationRecord
 
   def parsed_examples
     examples.blank? ? [] : JSON.parse(examples)
+  end
+
+  def validate_overload
+    # No overload is always valid
+    return if overload_of.blank?
+    if overload_of == key
+      errors.add(:overload_of, "Cannot overload self")
+      return
+    end
+    if ProgrammingMethod.where(programming_class_id: programming_class_id, overload_of: key).count > 0
+      errors.add(:overload_of, "This method cannot have non-blank overload_of if another method overloads it")
+      return
+    end
+    overload = ProgrammingMethod.find_by(programming_class_id: programming_class_id, key: overload_of)
+    if overload
+      errors.add(:overload_of, "Overloaded method cannot have overload_of be non-blank") unless overload.overload_of.blank?
+    else
+      errors.add(:overload_of, "Overload method must exist")
+    end
   end
 end

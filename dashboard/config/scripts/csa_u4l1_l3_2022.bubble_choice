@@ -1,6 +1,6 @@
 name 'CSA U4L1-L3_2022'
-display_name 'Exploring The Theater'
-description 'Practice drawing images in The Theater.'
+display_name 'Drawing Images'
+description 'Create a scene that draws images and play your scene in The Theater.'
 
 sublevels
 level 'CSA U4L1-L3a_2022'
