@@ -1,0 +1,34 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "spriteThink_fables1",
+    "blockText": "{SPRITE} think {THOUGHT}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "THOUGHT",
+        "options": [
+          [
+            "Hmm...",
+            "\"codeValue1\""
+          ],
+          [
+            "I am hungry, too.",
+            "\"codeValue2\""
+          ],
+          [
+            "I'll wait for a bigger goat.",
+            "\"codeValue3\""
+          ],
+          [
+            "I'm a mean troll.",
+            "\"codeValue4\""
+          ]
+        ]
+      }
+    ]
+  }
+}

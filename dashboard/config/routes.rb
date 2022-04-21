@@ -104,7 +104,6 @@ Dashboard::Application.routes.draw do
       end
       collection do
         get 'membership'
-        get 'valid_scripts'
         get 'valid_course_offerings'
         get 'available_participant_types'
         get 'require_captcha'
@@ -293,7 +292,7 @@ Dashboard::Application.routes.draw do
 
   get '/course/:course_name', to: redirect('/courses/%{course_name}')
   get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
-  # this route uses course_course_name to match generated routes below that are nested within courses
+  # these routes use course_course_name to match generated routes below that are nested within courses
   get '/courses/:course_course_name/guides/edit', to: 'reference_guides#edit_all', as: :edit_all_reference_guides
 
   resources :courses, param: 'course_name' do
@@ -305,11 +304,7 @@ Dashboard::Application.routes.draw do
       get 'get_rollup_resources'
     end
 
-    resources :reference_guides, only: [:show, :update, :destroy], param: 'key', path: 'guides' do
-      member do
-        get 'edit'
-      end
-    end
+    resources :reference_guides, param: 'key', path: 'guides'
   end
 
   # CSP 20-21 lockable lessons with lesson plan redirects
@@ -342,9 +337,9 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :programming_classes, only: [:new, :create, :edit, :update]
+  resources :programming_classes, only: [:new, :create, :edit, :update, :show]
 
-  resources :programming_expressions, only: [:new, :create, :edit, :update, :show, :destroy] do
+  resources :programming_expressions, only: [:index, :new, :create, :edit, :update, :show, :destroy] do
     collection do
       get :search
       get :get_filtered_expressions
@@ -361,6 +356,8 @@ Dashboard::Application.routes.draw do
       end
     end
   end
+
+  resources :programming_methods, only: [:edit, :update]
 
   resources :standards, only: [] do
     collection do

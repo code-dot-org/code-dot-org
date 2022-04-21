@@ -25,33 +25,33 @@
         },
         {
           "tileType": 1,
-          "value": 45,
-          "assetId": 303
+          "value": 0,
+          "assetId": 0
         },
         {
           "tileType": 1,
-          "value": 45,
-          "assetId": 303
+          "value": 0,
+          "assetId": 0
         },
         {
           "tileType": 1,
-          "value": 45,
-          "assetId": 303
+          "value": 0,
+          "assetId": 0
         },
         {
           "tileType": 1,
-          "value": 45,
-          "assetId": 303
+          "value": 0,
+          "assetId": 0
         },
         {
           "tileType": 1,
-          "value": 45,
-          "assetId": 303
+          "value": 0,
+          "assetId": 0
         },
         {
           "tileType": 1,
-          "value": 45,
-          "assetId": 303
+          "value": 0,
+          "assetId": 0
         },
         {
           "tileType": 1,
@@ -1332,13 +1332,13 @@
     ],
     "project_template_level_name": "CSA U1L13 PBT_2022",
     "long_instructions": "##In MyNeighborhood.java:\r\n\r\n1. Instantiate a `PatternPainter`(#e7e8ea) object called `myPatternPainter`(#e7e8ea).\r\n\r\n2. Use the `myPatternPainter`(#e7e8ea) object to create a mural of your pattern.\r\n\r\n![](https://images.code.org/d711d884ab1ed8f0bfc36804ed938526-image-1646322526938.gif)",
-    "encrypted_examples": "FbsCZrMxC5FHjbOSeeJoXvAtSWe1qbZ2J2eStIapXaCQEvgHRhaFEQntl+YS\nDAKV97mSPY8nY53E3Gc4yzJKuqixaJ4ZE549cmsos2AwFv4=\n"
+    "encrypted_exemplar_sources": "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\n"
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-02-18T14:29:24.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-02-18T14:29:24.792+00:00\",\"changed\":[\"cloned from \\\"CSA U1L13-L2_2022\\\"\"],\"cloned_from\":\"CSA U1L13-L2_2022\"},{\"changed_at\":\"2022-02-18 14:30:51 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-18 14:46:38 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-03 14:06:36 +0000\",\"changed\":[\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-03 15:49:36 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-01 17:08:11 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-02-18T14:29:24.792+00:00\",\"changed\":[\"cloned from \\\"CSA U1L13-L2_2022\\\"\"],\"cloned_from\":\"CSA U1L13-L2_2022\"},{\"changed_at\":\"2022-02-18 14:30:51 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-18 14:46:38 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-03 14:06:36 +0000\",\"changed\":[\"serialized_maze\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-03 15:49:36 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-01 17:08:11 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-11 14:14:17 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-11 14:15:10 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-11 14:18:24 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-11 14:23:29 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

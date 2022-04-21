@@ -338,22 +338,6 @@ class UnitGroup < ApplicationRecord
     Experiment.any_enabled?(user: user, experiment_names: UnitGroupUnit.experiments)
   end
 
-  # Returns whether the course id is valid, even if it is not "stable" yet.
-  # @param course_id [String] id of the course we're checking the validity of
-  # @return [Boolean] Whether this is a valid course ID
-  def self.valid_course_id?(course_id, user)
-    UnitGroup.valid_courses(user: user).any? {|unit_group| unit_group.id == course_id.to_i}
-  end
-
-  # @param user [User]
-  # @returns [Boolean] Whether the user can assign this course.
-  # Users should only be able to assign one of their valid courses.
-  def assignable_for_user?(user)
-    if user&.teacher?
-      UnitGroup.valid_course_id?(id, user)
-    end
-  end
-
   # A course that the general public can assign. Has been soft or
   # hard launched.
   def launched?
@@ -387,8 +371,8 @@ class UnitGroup < ApplicationRecord
       is_migrated: has_migrated_unit?,
       has_verified_resources: has_verified_resources?,
       has_numbered_units: has_numbered_units?,
-      versions: summarize_versions(user, locale_code),
-      show_assign_button: assignable_for_user?(user),
+      course_versions: summarize_course_versions(user, locale_code),
+      show_assign_button: course_assignable?(user),
       announcements: announcements,
       course_offering_id: course_version&.course_offering&.id,
       course_version_id: course_version&.id,
@@ -422,28 +406,17 @@ class UnitGroup < ApplicationRecord
     }
   end
 
-  # Returns an array of objects showing the name and version year for all courses
-  # sharing the family_name of this course, including this one.
-  def summarize_versions(user = nil, locale_code = nil)
-    return [] unless family_name
+  # Returns summary object of all the course versions that an instructor can
+  # assign or all the launched versions a participant can view. 'course_assignable'
+  # will always return false for participants so they will fall into the second check for
+  # launched and can_view_version?. For instructors if course_assignable? is false then
+  # launched will also be false.
+  def summarize_course_versions(user = nil, locale_code = 'en-us')
+    return {} unless user
 
-    # Include launched courses, plus self if not already included
-    courses = UnitGroup.valid_courses(user: user).clone(freeze: false)
-    courses.append(self) unless courses.any? {|c| c.id == id}
-
-    versions = courses.
-      select {|c| c.family_name == family_name}.
-      map do |c|
-        {
-          name: c.name,
-          version_year: c.version_year,
-          version_title: c.localized_version_title,
-          can_view_version: c.can_view_version?(user),
-          is_stable: c.stable?
-        }
-      end
-
-    versions.sort_by {|info| info[:version_year]}.reverse
+    all_course_versions = course_version&.course_offering&.course_versions
+    course_versions_for_user = all_course_versions&.select {|cv| cv.course_assignable?(user) || (cv.launched? && cv.can_view_version?(user))}
+    course_versions_for_user&.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
   # If a user has no experiments enabled, return the default set of units.

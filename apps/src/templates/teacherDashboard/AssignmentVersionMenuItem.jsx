@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import PopUpMenu from '../../lib/ui/PopUpMenu';
-import {assignmentVersionShape} from './shapes';
+import {assignmentCourseVersionShape} from './shapes';
 import i18n from '@cdo/locale';
 import FontAwesome from './../FontAwesome';
 import color from '../../util/color';
@@ -11,28 +11,31 @@ import _ from 'lodash';
 export default function AssignmentVersionMenuItem(props) {
   // Returns whether we should display this version as english-only.
   const englishOnly = () => {
-    const locales = props.version.locales;
+    const locales = props.courseVersion.locales;
     return (
       locales.length === 0 || (locales.length === 1 && locales[0] === 'English')
     );
   };
 
-  const {version, onClick} = props;
+  const {courseVersion, onClick} = props;
   const tooltipId = _.uniqueId();
+
   return (
     <PopUpMenu.Item onClick={onClick}>
       <div style={style.wrapper}>
         <span style={style.selectedColumn}>
-          {version.isSelected && <FontAwesome icon="check" />}
+          {courseVersion.id === props.selectedCourseVersionId && (
+            <FontAwesome icon="check" />
+          )}
         </span>
         <span style={style.titleColumn} className="assignment-version-title">
-          {version.title}
+          {courseVersion.version_year}
         </span>
         <span style={style.statusColumn}>
-          {version.isRecommended && (
+          {courseVersion.is_recommended && (
             <span style={style.recommended}>{i18n.recommended()}</span>
           )}
-          {!version.isStable && (
+          {!courseVersion.is_stable && (
             <span>
               <FontAwesome
                 icon="exclamation-triangle"
@@ -48,12 +51,14 @@ export default function AssignmentVersionMenuItem(props) {
           {!englishOnly() && (
             <div>
               <span data-tip data-for={tooltipId}>
-                {i18n.numLanguages({numLanguages: version.locales.length})}
+                {i18n.numLanguages({
+                  numLanguages: courseVersion.locales.length
+                })}
                 &nbsp;
                 <FontAwesome icon="info-circle" style={style.infoCircle} />
               </span>
               <ReactTooltip id={tooltipId} place="right">
-                {version.locales.join(', ')}
+                {courseVersion.locales.join(', ')}
               </ReactTooltip>
             </div>
           )}
@@ -64,7 +69,8 @@ export default function AssignmentVersionMenuItem(props) {
 }
 
 AssignmentVersionMenuItem.propTypes = {
-  version: assignmentVersionShape,
+  selectedCourseVersionId: PropTypes.number,
+  courseVersion: assignmentCourseVersionShape,
   onClick: PropTypes.func.isRequired
 };
 
