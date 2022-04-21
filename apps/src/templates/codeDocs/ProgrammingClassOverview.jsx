@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import Example from './Example';
 import FieldsTable from './FieldsTable';
-import Method from './Method';
+import MethodWithOverloads from './MethodWithOverloads';
 import i18n from '@cdo/locale';
 
 export default function ProgrammingClassOverview({programmingClass}) {
@@ -84,7 +84,7 @@ export default function ProgrammingClassOverview({programmingClass}) {
         <div>
           <h2>{i18n.methods()}</h2>
           {programmingClass.methods.map(method => (
-            <Method
+            <MethodWithOverloads
               key={method.key}
               method={method}
               programmingEnvironmentName={

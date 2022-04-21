@@ -1,15 +1,15 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
-import Method, {
-  MethodOverloads,
-  StandaloneMethod
-} from '@cdo/apps/templates/codeDocs/Method';
+import MethodWithOverloads, {
+  MethodOverloadSection,
+  SingleMethod
+} from '@cdo/apps/templates/codeDocs/MethodWithOverloads';
 
-describe('Method', () => {
-  it('shows MethodOverloads if method has overloads', () => {
+describe('MethodWithOverloads', () => {
+  it('shows MethodOverloadSection if method has overloads', () => {
     const wrapper = shallow(
-      <Method
+      <MethodWithOverloads
         method={{
           key: 'method1',
           name: 'method1()',
@@ -21,26 +21,26 @@ describe('Method', () => {
         programmingEnvironmentName="test-environment"
       />
     );
-    expect(wrapper.find('StandaloneMethod').length).to.equal(1);
-    expect(wrapper.find('MethodOverloads').length).to.equal(1);
+    expect(wrapper.find('SingleMethod').length).to.equal(1);
+    expect(wrapper.find('MethodOverloadSection').length).to.equal(1);
   });
 
-  it('does not show MethodOverloads if method doesnt have overloads', () => {
+  it('does not show MethodOverloadSection if method doesnt have overloads', () => {
     const wrapper = shallow(
-      <Method
+      <MethodWithOverloads
         method={{key: 'method1', name: 'method1()', overloads: []}}
         programmingEnvironmentName="test-environment"
       />
     );
-    expect(wrapper.find('StandaloneMethod').length).to.equal(1);
-    expect(wrapper.find('MethodOverloads').length).to.equal(0);
+    expect(wrapper.find('SingleMethod').length).to.equal(1);
+    expect(wrapper.find('MethodOverloadSection').length).to.equal(0);
   });
 });
 
-describe('MethodOverloads', () => {
-  it('creates a StandaloneMethod for each overload', () => {
+describe('MethodOverloadSection', () => {
+  it('creates a SingleMethod for each overload', () => {
     const wrapper = shallow(
-      <MethodOverloads
+      <MethodOverloadSection
         overloads={[
           {key: 'method1-int-i', name: 'method1(int i)'},
           {key: 'method1-string-s', name: 'method1(string s)'}
@@ -49,12 +49,12 @@ describe('MethodOverloads', () => {
       />
     );
     expect(wrapper.text()).to.include('Overloads');
-    expect(wrapper.find('StandaloneMethod').length).to.equal(2);
+    expect(wrapper.find('SingleMethod').length).to.equal(2);
   });
 
   it('hides overloads when collapsed', () => {
     const wrapper = shallow(
-      <MethodOverloads
+      <MethodOverloadSection
         overloads={[
           {key: 'method1-int-i', name: 'method1(int i)'},
           {key: 'method1-string-s', name: 'method1(string s)'}
@@ -66,7 +66,7 @@ describe('MethodOverloads', () => {
 
     // The section starts open
     expect(wrapper.find('FontAwesome').props().icon).to.equal('caret-down');
-    expect(wrapper.find('StandaloneMethod').length).to.equal(2);
+    expect(wrapper.find('SingleMethod').length).to.equal(2);
 
     // Click the header to hide the overloads
     wrapper.find('.unittest-overloads-header').simulate('click');
@@ -74,11 +74,11 @@ describe('MethodOverloads', () => {
 
     // The section should be collapsed
     expect(wrapper.find('FontAwesome').props().icon).to.equal('caret-up');
-    expect(wrapper.find('StandaloneMethod').length).to.equal(0);
+    expect(wrapper.find('SingleMethod').length).to.equal(0);
   });
 });
 
-describe('StandaloneMethod', () => {
+describe('SingleMethod', () => {
   let defaultMethod;
 
   beforeEach(() => {
@@ -106,7 +106,7 @@ describe('StandaloneMethod', () => {
   });
 
   it('shows all sections if all fields are present', () => {
-    const wrapper = shallow(<StandaloneMethod method={defaultMethod} />);
+    const wrapper = shallow(<SingleMethod method={defaultMethod} />);
 
     expect(wrapper.find('h3').text()).to.contain(defaultMethod.name);
     expect(wrapper.find('h4').map(h => h.text())).to.eql([
@@ -139,21 +139,21 @@ describe('StandaloneMethod', () => {
 
   it('hides the examples header if no syntax is provided', () => {
     delete defaultMethod.examples;
-    const wrapper = shallow(<StandaloneMethod method={defaultMethod} />);
+    const wrapper = shallow(<SingleMethod method={defaultMethod} />);
     expect(wrapper.find('h4').length).to.be.greaterThan(0);
     expect(wrapper.find('h4').map(h => h.text())).to.not.include('Examples');
   });
 
   it('hides the syntax header if no syntax is provided', () => {
     delete defaultMethod.syntax;
-    const wrapper = shallow(<StandaloneMethod method={defaultMethod} />);
+    const wrapper = shallow(<SingleMethod method={defaultMethod} />);
     expect(wrapper.find('h4').length).to.be.greaterThan(0);
     expect(wrapper.find('h4').map(h => h.text())).to.not.include('Syntax');
   });
 
   it('hides the additional information header if no external documentation is provided', () => {
     delete defaultMethod.externalLink;
-    const wrapper = shallow(<StandaloneMethod method={defaultMethod} />);
+    const wrapper = shallow(<SingleMethod method={defaultMethod} />);
     expect(wrapper.find('h4').length).to.be.greaterThan(0);
     expect(wrapper.find('h4').map(h => h.text())).to.not.include(
       'Additional Information'

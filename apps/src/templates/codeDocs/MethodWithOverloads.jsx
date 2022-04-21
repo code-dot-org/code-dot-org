@@ -7,9 +7,9 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 
-export function StandaloneMethod({method, programmingEnvironmentName}) {
+export function SingleMethod({method, programmingEnvironmentName, style}) {
   return (
-    <div id={`method-${method.key}`}>
+    <div id={`method-${method.key}`} style={style}>
       <h3>{method.name}</h3>
       {method.syntax && <EnhancedSafeMarkdown markdown={method.syntax} />}
       {method.content && <EnhancedSafeMarkdown markdown={method.content} />}
@@ -45,7 +45,7 @@ export function StandaloneMethod({method, programmingEnvironmentName}) {
   );
 }
 
-export function MethodOverloads({overloads, programmingEnvironmentName}) {
+export function MethodOverloadSection({overloads, programmingEnvironmentName}) {
   const [isOpen, setIsOpen] = useState(true);
   const icon = isOpen ? 'caret-down' : 'caret-up';
   return (
@@ -59,11 +59,19 @@ export function MethodOverloads({overloads, programmingEnvironmentName}) {
       </div>
       {isOpen && (
         <div style={styles.overloadBox}>
-          {overloads.map(overload => (
-            <StandaloneMethod
+          {overloads.map((overload, i) => (
+            <SingleMethod
               key={overload.key}
               method={overload}
               programmingEnvironmentName={programmingEnvironmentName}
+              style={
+                i === overloads.length - 1
+                  ? {}
+                  : {
+                      borderBottom: `1px solid ${color.lighter_gray}`,
+                      paddingBottom: 5
+                    }
+              }
             />
           ))}
         </div>
@@ -72,12 +80,15 @@ export function MethodOverloads({overloads, programmingEnvironmentName}) {
   );
 }
 
-export default function Method({method, programmingEnvironmentName}) {
+export default function MethodWithOverloads({
+  method,
+  programmingEnvironmentName
+}) {
   return (
     <div style={styles.container}>
-      <StandaloneMethod method={method} />
+      <SingleMethod method={method} />
       {method.overloads?.length > 0 && (
-        <MethodOverloads
+        <MethodOverloadSection
           overloads={method.overloads}
           programmingEnvironmentName={programmingEnvironmentName}
         />
@@ -97,17 +108,18 @@ const methodShape = PropTypes.shape({
   overloads: PropTypes.arrayOf(PropTypes.object)
 });
 
-StandaloneMethod.propTypes = {
+SingleMethod.propTypes = {
   method: methodShape.isRequired,
-  programmingEnvironmentName: PropTypes.string
+  programmingEnvironmentName: PropTypes.string,
+  style: PropTypes.object
 };
 
-MethodOverloads.propTypes = {
+MethodOverloadSection.propTypes = {
   overloads: PropTypes.arrayOf(methodShape),
   programmingEnvironmentName: PropTypes.string
 };
 
-Method.propTypes = {
+MethodWithOverloads.propTypes = {
   method: methodShape.isRequired,
   programmingEnvironmentName: PropTypes.string
 };
