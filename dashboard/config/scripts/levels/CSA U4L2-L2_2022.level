@@ -2,20 +2,27 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "comparing objects using equals() method",
+    "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\nThen, experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. first thing\r\n\r\n2. second thing\r\n\r\n3. third thing",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
-    "encrypted_examples": [
-
-    ]
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    Event firstEvent = new Event(\"Prom\", 500);\n    Event secondEvent = firstEvent;\n    Event thirdEvent = new Event(\"Prom\", 500);\n\n    System.out.println(\"firstEvent == secondEvent: \" + (firstEvent == secondEvent));\n    System.out.println(\"firstEvent == thirdEvent: \" + (firstEvent == thirdEvent));\n\n    System.out.println(\"firstEvent.equals(secondEvent): \" + firstEvent.equals(secondEvent));\n    System.out.println(\"firstEvent.equals(thirdEvent): \" + firstEvent.equals(thirdEvent));\n    \n  }\n}",
+        "isVisible": true
+      },
+      "Event.java": {
+        "text": "/*\n * Represents an event\n */\npublic class Event {\n\n  private String eventName;  // The name of the event\n  private int capacity;      // The number of people attending the event\n\n  /*\n   * Constructor to create an Event\n   * with specified event name and capacity\n   */\n  public Event(String eventName, int capacity) {\n    this.eventName = eventName;\n    this.capacity = capacity;\n  }\n\n  /*\n   * Returns the name of the event\n   */\n  public String getEventName() {\n    return eventName;\n  }\n\n  /*\n   * Returns the capacity of the event\n   */\n  public int getCapacity() {\n    return capacity;\n  }\n\n  /*\n   * Checks if this Event is equivalent to otherEvent\n   */\n  public boolean equals(Event otherEvent) {\n    boolean status = false;\n\n    if (eventName == otherEvent.getEventName()) {\n      status = true;\n    }\n\n    return status;\n  }\n  \n}",
+        "isVisible": true
+      }
+    }
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-04-07T17:32:21.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-04-07T17:32:21.445+00:00\",\"changed\":[\"cloned from \\\"CSA U4L2-L1_2022\\\"\"],\"cloned_from\":\"CSA U4L2-L1_2022\"},{\"changed_at\":\"2022-04-07 17:32:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-04-07T17:32:21.445+00:00\",\"changed\":[\"cloned from \\\"CSA U4L2-L1_2022\\\"\"],\"cloned_from\":\"CSA U4L2-L1_2022\"},{\"changed_at\":\"2022-04-07 17:32:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-21 00:08:23 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-21 00:14:08 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
