@@ -137,16 +137,6 @@ class ProgrammingClass < ApplicationRecord
     }
   end
 
-  private
-
-  def parsed_examples
-    examples.blank? ? [] : JSON.parse(examples)
-  end
-
-  def parsed_fields
-    fields.blank? ? [] : JSON.parse(fields)
-  end
-
   def summarize_programming_methods
     methods = {}
     programming_methods.each do |m|
@@ -160,5 +150,15 @@ class ProgrammingClass < ApplicationRecord
       methods[m.overload_of][:overloads] += [m.summarize_for_show]
     end
     methods.values
+  end
+
+  private
+
+  def parsed_examples
+    examples.blank? ? [] : JSON.parse(examples)
+  end
+
+  def parsed_fields
+    fields.blank? ? [] : JSON.parse(fields)
   end
 end
