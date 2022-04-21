@@ -32,6 +32,7 @@ When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
   @eyes.stitch_mode = Applitools::STITCH_MODE[:css]
 
   @eyes.send_dom = false
+  @eyes.match_timeout = 0
 
   @eyes.open(config)
 end
