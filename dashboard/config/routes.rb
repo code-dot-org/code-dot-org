@@ -304,11 +304,7 @@ Dashboard::Application.routes.draw do
       get 'get_rollup_resources'
     end
 
-    resources :reference_guides, only: [:show, :update, :destroy, :index], param: 'key', path: 'guides' do
-      member do
-        get 'edit'
-      end
-    end
+    resources :reference_guides, param: 'key', path: 'guides'
   end
 
   # CSP 20-21 lockable lessons with lesson plan redirects
