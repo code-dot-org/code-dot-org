@@ -496,6 +496,18 @@ FactoryGirl.define do
     participant_type 'student'
 
     initialize_with {Section.new(attributes)}
+
+    trait :teacher_participants do
+      participant_type 'teacher'
+      grade 'pl'
+      login_type 'email'
+    end
+
+    trait :facilitator_participants do
+      participant_type 'facilitator'
+      grade 'pl'
+      login_type 'email'
+    end
   end
 
   factory :game do

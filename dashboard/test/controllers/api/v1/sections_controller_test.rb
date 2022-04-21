@@ -169,7 +169,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   test "join with participant type not student" do
     student = create :student
     sign_in student
-    section = create(:section, login_type: 'email', participant_type: 'teacher')
+    section = create(:section, :teacher_participants)
 
     post :join, params: {id: section.code}
     assert_response :forbidden
