@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-19 00:04:39 UTC",
+    "serialized_at": "2022-04-19 12:47:09 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -2630,23 +2630,11 @@
       }
     },
     {
-      "key": "7e4f87ec-8449-4984-8f3d-4df004a92ff4",
+      "key": "b590e69b-3745-46d6-9ce5-9a27820085a9",
       "position": 1,
       "properties": {
-        "description": "We have learned a lot of new terms so far! Let's review some of these terms through a game of CS Pyramid.",
-        "name": "CS Pyramid",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "7e4f87ec-8449-4984-8f3d-4df004a92ff4",
-        "lesson_activity.key": "0c6a557d-91ed-4acb-89f2-3486a1a8731b"
-      }
-    },
-    {
-      "key": "b590e69b-3745-46d6-9ce5-9a27820085a9",
-      "position": 2,
-      "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for playing CS Pyramid.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the CS Pyramid activity, and direct students to play CS Pyramid. Click through the animated slide to display each pyramid, and direct students to switch roles with each new pyramid."
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the problem.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode to solve the problem, then compare their solutions with another group.",
+        "name": "Breaking Up a Number"
       },
       "seeding_key": {
         "activity_section.key": "b590e69b-3745-46d6-9ce5-9a27820085a9",
@@ -2671,7 +2659,7 @@
       "key": "0db16726-5417-4dc0-8e48-f14465b19ee3",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the problem.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
         "progression_name": "Investigate: Obtaining Individual Digits"
       },
       "seeding_key": {
@@ -4771,6 +4759,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa6-2022"
+        ],
         "progression": "Unit 6 Survey"
       },
       "bonus": false,
@@ -4818,6 +4809,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Console Sandbox"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4839,6 +4833,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood Sandbox"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -4861,6 +4858,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -4883,6 +4883,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Theater Sandbox"
+        ]
       },
       "bonus": false,
       "seeding_key": {
