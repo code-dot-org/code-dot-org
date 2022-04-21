@@ -372,7 +372,8 @@ Javalab.prototype.executeJavabuilder = function(executionType) {
     this.setIsRunning,
     this.setIsTesting,
     executionType,
-    this.level.csaViewMode
+    this.level.csaViewMode,
+    getStore().getState().currentUser
   );
 
   let connectToJavabuilder;
