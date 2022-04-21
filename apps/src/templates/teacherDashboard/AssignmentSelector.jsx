@@ -92,6 +92,7 @@ export default class AssignmentSelector extends Component {
       unitId: isValidAssignment(selectedUnitId) ? selectedUnitId : null
     };
   }
+
   onChangeCourseOffering = event => {
     if (
       (event.target.value === noAssignment &&
