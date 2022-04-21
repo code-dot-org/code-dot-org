@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-18 19:08:17 UTC",
+    "serialized_at": "2022-04-20 22:31:56 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2091,7 +2091,7 @@
       "key": "86c61997-1716-41ff-b137-97b516225cb2",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** The Internet: Cybersecurity & Crime"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** [The Internet: Cybersecurity & Crime](https://youtu.be/AuYNXgO_f3Y)"
       },
       "seeding_key": {
         "activity_section.key": "86c61997-1716-41ff-b137-97b516225cb2",
@@ -2445,7 +2445,7 @@
       "key": "fd4afc35-f8d5-457e-b956-b32f840a3248",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch: The Internet: Encryption and Public Keys"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch: [r encryption_and_public_keys/csp/2022]"
       },
       "seeding_key": {
         "activity_section.key": "fd4afc35-f8d5-457e-b956-b32f840a3248",
@@ -3778,6 +3778,32 @@
       }
     },
     {
+      "name": "The Internet: Cybersecurity and Crime",
+      "url": "https://youtu.be/AuYNXgO_f3Y",
+      "key": "cybersecurity_and_crime",
+      "properties": {
+        "audience": "Student",
+        "download_url": "http://videos.code.org/2015/csp/concept_cybercrime.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "cybersecurity_and_crime"
+      }
+    },
+    {
+      "name": "Encryption and Public Keys",
+      "url": "https://youtu.be/ZghMPWGXexs",
+      "key": "encryption_and_public_keys",
+      "properties": {
+        "audience": "Student",
+        "download_url": "http://videos.code.org/2015/csp/concept_encryption.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "encryption_and_public_keys"
+      }
+    },
+    {
       "name": "Equifax Data Breach: What Went Wrong (Podcast)",
       "url": "https://www.carbonite.com/podcasts/breach/s02e03-Equifax-data-breach",
       "key": "equifax_data_breach_what_went_wrong_podcast_",
@@ -4028,6 +4054,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Protecting Data Part 1",
+        "resource.key": "encryption_and_public_keys"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Protecting Data Part 2",
         "resource.key": "call_center_-_reading_passage"
       }
@@ -4054,6 +4086,12 @@
       "seeding_key": {
         "lesson.key": "Security Risks Part 2",
         "resource.key": "csp_unit_10_-_cybersecurity_and_global_impacts"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Security Risks Part 2",
+        "resource.key": "cybersecurity_and_crime"
       }
     },
     {
