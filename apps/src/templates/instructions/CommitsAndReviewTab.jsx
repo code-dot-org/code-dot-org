@@ -71,6 +71,7 @@ const CommitsAndReviewTab = ({
               viewPeerList={!viewAsCodeReviewer}
               loadPeers={loadPeers}
               dropdownText={javalabMsg.youHaveProjectsToReview()}
+              color={Button.ButtonColor.gray}
             />
           )}
         </div>
