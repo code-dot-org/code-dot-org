@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
-import classNames from 'classnames';
 import {Button} from 'react-bootstrap';
 import FieldGroup from './FieldGroup';
 import {range} from 'lodash';
 
 const PetitionForm = () => {
   const [values, setValues] = useState({});
+  const [errors, setErrors] = useState({});
 
   const handleChange = event => {
     event.persist();
@@ -41,24 +41,25 @@ const PetitionForm = () => {
         type={'text'}
         help={helpText}
         onChange={handleChange}
-        value={values[id]}
+        value={values[id] || ''}
       />
     );
   };
 
-  const hasError = true;
-  const errorMessage = `Please ${JSON.stringify(values)}.`;
+  const handleSubmit = e => {
+    e.preventDefault();
+    setErrors(values);
+  };
 
   return (
     <>
-      <form id="petition-form" className="petition-form" onSubmit={() => {}}>
-        <div
-          className={classNames(
-            'petition-space',
-            hasError ? 'petition-error' : 'petition-no-error'
-          )}
-        >
-          {errorMessage}
+      <form
+        id="petition-form"
+        className="petition-form"
+        onSubmit={handleSubmit}
+      >
+        <div className={'petition-space'}>
+          {Object.keys(errors).length > 1 && JSON.stringify(errors)}
         </div>
         {buildFieldGroup('name', 'Name')}
         {buildFieldGroup('email', 'Email', 'Only used for infrequent updates')}
