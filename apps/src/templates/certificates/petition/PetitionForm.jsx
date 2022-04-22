@@ -2,22 +2,7 @@ import React, {useState} from 'react';
 import {Button} from 'react-bootstrap';
 import FieldGroup from './FieldGroup';
 import {range, forEach, mapValues} from 'lodash';
-import {isEmail, isInt} from '@cdo/apps/util/formatValidation';
-
-const keyValidation = {
-  name: {
-    isValid: value => !!value,
-    errorText: 'include your name'
-  },
-  email: {
-    isValid: isEmail,
-    errorText: 'enter a valid email address'
-  },
-  age: {
-    isValid: isInt,
-    errorText: 'select your age'
-  }
-};
+import {keyValidation} from '@cdo/apps/templates/certificates/petition/PetitionHelpers';
 
 const PetitionForm = () => {
   // data starts with all required fields having an empty value to ensure proper validation
