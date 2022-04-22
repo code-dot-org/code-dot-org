@@ -4,6 +4,7 @@ import CodeReviewTimelineElement, {
   codeReviewTimelineElementType
 } from '@cdo/apps/templates/instructions/codeReview/CodeReviewTimelineElement';
 import moment from 'moment';
+import javalabMsg from '@cdo/javalab/locale';
 
 const CodeReviewTimelineCommit = ({commit, isLastElementInTimeline}) => {
   const {createdAt, comment, projectVersion, isVersionExpired} = commit;
@@ -17,7 +18,7 @@ const CodeReviewTimelineCommit = ({commit, isLastElementInTimeline}) => {
       isProjectVersionExpired={isVersionExpired}
     >
       <div style={styles.wrapper}>
-        <div style={styles.header}>Commit</div>
+        <div style={styles.header}>{javalabMsg.commit()}</div>
         <div style={styles.date}>{formattedDate}</div>
         <div>{comment}</div>
       </div>
