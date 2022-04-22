@@ -637,17 +637,24 @@ class Level < ApplicationRecord
   #   name_suffix if one exists.
   # @param [String] editor_experiment Optional value to set the
   #   editor_experiment property to on the newly-created level.
-  def clone_with_suffix(new_suffix, editor_experiment: nil)
+  # @param [Boolean] allow_existing Whether to return an existing level if one
+  #   with a matching name is found. If false, the suffix will be modified to
+  #   make the new name unique.
+  def clone_with_suffix(new_suffix, editor_experiment: nil, allow_existing: true)
     # explicitly don't clone blockly levels (will cause a validation failure on non-unique level_num)
     return self if key.start_with?('blockly:')
 
     # Make sure we don't go over the 70 character limit.
     suffix = new_suffix[0] == '_' ? new_suffix : "_#{new_suffix}"
     max_index = 70 - suffix.length - 1
-    new_name = "#{base_name[0..max_index]}#{suffix}"
+    prefix = base_name[0..max_index]
+    new_name = "#{prefix}#{suffix}"
 
     level = Level.find_by_name(new_name)
-    return level if level
+    if level
+      return level if allow_existing
+      new_name = Level.next_unused_name(prefix, suffix)
+    end
 
     begin
       level = clone_with_name(new_name, editor_experiment: editor_experiment)
@@ -676,6 +683,20 @@ class Level < ApplicationRecord
       level
     rescue Exception => e
       raise e, "Failed to clone Level #{name.inspect} as #{new_name.inspect}. Message:\n#{e.message}", e.backtrace
+    end
+  end
+
+  # Returns the first level name of the form "<prefix>_copy<num>_<suffix>" which
+  # is not already used by another level.
+  # @param [String] prefix
+  # @param [String] suffix
+  def self.next_unused_name(prefix, suffix)
+    i = 1
+    loop do
+      new_name = "#{prefix}_copy#{i}#{suffix}"
+      level = Level.find_by_name(new_name)
+      return new_name unless level
+      i += 1
     end
   end
 

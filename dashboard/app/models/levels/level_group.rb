@@ -190,7 +190,7 @@ class LevelGroup < DSLDefined
   # e.g. [[Multi<id:1>, Match<id:2>],[External<id:4>,FreeResponse<id:4>]]
   def clone_sublevels_with_suffix(old_levels_and_texts_by_page, new_suffix)
     new_levels_and_texts_by_page = old_levels_and_texts_by_page.map do |levels_and_texts|
-      levels_and_texts.map {|level| level.clone_with_suffix(new_suffix)}
+      levels_and_texts.map {|level| level.clone_with_suffix(new_suffix, allow_existing: false)}
     end
     update_levels_and_texts_by_page(new_levels_and_texts_by_page)
   end
