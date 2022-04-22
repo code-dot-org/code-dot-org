@@ -150,6 +150,7 @@ module Levels
 
       # otherwise, update contained levels to match
       levels_child_levels.contained.destroy_all
+      return unless contained_level_names.present?
       Level.where(name: contained_level_names).each do |contained_level|
         ParentLevelsChildLevel.create!(
           child_level: contained_level,
