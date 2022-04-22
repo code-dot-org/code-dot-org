@@ -2,10 +2,10 @@ import React, {useState} from 'react';
 import {Button} from 'react-bootstrap';
 import {range, mapValues} from 'lodash';
 import {
-  buildControlledFieldGroup,
   createErrorMessage,
   keyValidation
 } from '@cdo/apps/templates/certificates/petition/PetitionHelpers';
+import FieldGroup from '@cdo/apps/templates/certificates/petition/FieldGroup';
 
 const PetitionForm = () => {
   // data starts with all required fields having an empty value to ensure proper validation
@@ -28,16 +28,31 @@ const PetitionForm = () => {
     helpText,
     componentClass,
     children
-  ) =>
-    buildControlledFieldGroup(
-      id,
-      placeholderOrLabel,
-      helpText,
-      componentClass,
-      children,
-      handleChange,
-      data
+  ) => {
+    const overlappingProps = {
+      id: id,
+      name: id,
+      key: id,
+      helpText: helpText,
+      onChange: handleChange,
+      value: data[id] || ''
+    };
+    return componentClass === 'select' ? (
+      <FieldGroup
+        {...overlappingProps}
+        label={placeholderOrLabel}
+        componentClass={componentClass}
+      >
+        {children}
+      </FieldGroup>
+    ) : (
+      <FieldGroup
+        {...overlappingProps}
+        placeholder={placeholderOrLabel}
+        type={'text'}
+      />
     );
+  };
 
   return (
     <>

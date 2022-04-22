@@ -1,42 +1,5 @@
-import React from 'react';
 import {isEmail, isInt} from '@cdo/apps/util/formatValidation';
-import FieldGroup from './FieldGroup';
 import {forEach, has} from 'lodash';
-
-export const buildControlledFieldGroup = (
-  id,
-  placeholderOrLabel,
-  helpText,
-  componentClass,
-  children,
-  handleChange,
-  data
-) => {
-  const overlappingProps = {
-    id: id,
-    name: id,
-    key: id,
-    helpText: helpText,
-    onChange: handleChange,
-    value: data[id] || ''
-  };
-
-  return componentClass === 'select' ? (
-    <FieldGroup
-      {...overlappingProps}
-      label={placeholderOrLabel}
-      componentClass={componentClass}
-    >
-      {children}
-    </FieldGroup>
-  ) : (
-    <FieldGroup
-      {...overlappingProps}
-      placeholder={placeholderOrLabel}
-      type={'text'}
-    />
-  );
-};
 
 export const keyValidation = {
   name: {
