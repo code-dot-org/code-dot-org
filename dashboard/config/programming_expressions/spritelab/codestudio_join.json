@@ -48,5 +48,5 @@
   ],
   "short_description": "Gets the text string created by combining two values.",
   "syntax": "text_join",
-  "tips": "- Add a space after the text in the first string block to make sure the content of the two blocks do not run together.\r\n- Multiple `join` blocks can be attached to join more than two blocks. "
+  "tips": "- Add a space after the text in the first string block to make sure the content of the two blocks do not run together.\r\n- Multiple [`join`(#acd2c6)](/docs/spritelab/codestudio_join/) blocks can be attached to join more than two blocks. "
 }
