@@ -4,7 +4,7 @@ import {range, mapValues} from 'lodash';
 import {
   createErrorMessage,
   keyValidation
-} from '@cdo/apps/templates/certificates/petition/PetitionHelpers';
+} from '@cdo/apps/templates/certificates/petition/petitionHelpers';
 import ControlledFieldGroup from '@cdo/apps/templates/certificates/petition/ControlledFieldGroup';
 
 const PetitionForm = () => {
