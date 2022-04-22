@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import {Button} from 'react-bootstrap';
 import FieldGroup from './FieldGroup';
-import {range, forEach} from 'lodash';
+import {range, forEach, mapValues} from 'lodash';
 import {isEmail, isInt} from '@cdo/apps/util/formatValidation';
 
-const formValidation = {
+const keyValidation = {
   name: {
     isValid: value => !!value,
     errorText: 'include your name'
@@ -20,7 +20,7 @@ const formValidation = {
 };
 
 const PetitionForm = () => {
-  const [data, setData] = useState({name: '', email: '', age: ''});
+  const [data, setData] = useState(mapValues(keyValidation, () => ''));
   const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = event => {
@@ -31,9 +31,9 @@ const PetitionForm = () => {
   const handleSubmit = e => {
     const createErrorMessage = () => {
       let errorStrings = [];
-      forEach(data, function(value, key) {
-        if (formValidation[key] && !formValidation[key].isValid(value)) {
-          errorStrings.push(formValidation[key].errorText);
+      forEach(data, (value, key) => {
+        if (keyValidation[key] && !keyValidation[key].isValid(value)) {
+          errorStrings.push(keyValidation[key].errorText);
         }
       });
 
