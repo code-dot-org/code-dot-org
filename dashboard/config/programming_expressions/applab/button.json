@@ -3,7 +3,7 @@
   "name": "button",
   "category": "UI controls",
   "category_key": "ui_controls",
-  "content": "Creates a button on the screen displaying the *text* provided and referenced by the given *id* at default location (0,0).\n\nMany apps use buttons to allow the user to initiate some app action. An event handler must be created for each type of user interaction with the button using `onEvent()` and the *id*.\n\n\n",
+  "content": "Creates a button on the screen displaying the *text* provided and referenced by the given *id* at default location (0,0).\n\nMany apps use buttons to allow the user to initiate some app action. An event handler must be created for each type of user interaction with the button using [`onEvent()`(#fff176)](/docs/applab/onEvent/) and the *id*.\n\n\n",
   "examples": [
     {
       "name": "Example: Simple Turtle Control 2",
@@ -54,5 +54,5 @@
   "return_value": "No return value. Modifies screen only.",
   "short_description": "Creates a button on the screen displaying the text provided and referenced by the given id at default location (0,0).",
   "syntax": "button(id, text)",
-  "tips": "- If there is another UI element at location (0,0) the button is placed at the next available position to the right or below.\n- There are various UI element modification functions available: `setText()`, `showElement()`, `hideElement()`, `deleteElement()`, `setPosition()`, `setSize()`. \n- There are various UI element query functions available: `getText()`, `getXPosition()`, `getYPosition()`.\n- Buttons can also be created and initialized in Design mode."
+  "tips": "- If there is another UI element at location (0,0) the button is placed at the next available position to the right or below.\n- There are various UI element modification functions available: [`setText()`(#fff176)](/docs/applab/setText/), [`showElement()`(#fff176)](/docs/applab/showElement/), [`hideElement()`(#fff176)](/docs/applab/hideElement/), [`deleteElement()`(#fff176)](/docs/applab/deleteElement/), [`setPosition()`(#fff176)](/docs/applab/setPosition/), [`setSize()`(#fff176)](/docs/applab/setSize/). \n- There are various UI element query functions available: [`getText()`(#fff176)](/docs/applab/getText/), [`getXPosition()`(#fff176)](/docs/applab/getXPosition/), [`getYPosition()`(#fff176)](/docs/applab/getYPosition/).\n- Buttons can also be created and initialized in Design mode."
 }
