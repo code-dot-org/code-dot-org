@@ -3,7 +3,7 @@
   "name": "deleteElement",
   "category": "UI controls",
   "category_key": "ui_controls",
-  "content": "Deletes the element with the provided id.\n\nThe user interface elements you place on the screen on not static. Sometimes you will no longer need an element in your app and it makes more sense to delete it than just hide it. All UI elements (`button()`, `textInput()`, `textLabel()`, `dropDown()`, `checkBox()`, `radioButton()`, `image()`), can be deleted.",
+  "content": "Deletes the element with the provided id.\n\nThe user interface elements you place on the screen on not static. Sometimes you will no longer need an element in your app and it makes more sense to delete it than just hide it. All UI elements ([`button()`(#fff176)](/docs/applab/button/), [`textInput()`(#fff176)](/docs/applab/textInput/), [`textLabel()`(#fff176)](/docs/applab/textLabel/), [`dropdown()`(#fff176)](/docs/applab/dropdown/), [`checkbox()`(#fff176)](/docs/applab/checkbox/), [`radioButton()`(#fff176)](/docs/applab/radioButton/), `image()`), can be deleted.",
   "examples": [
     {
       "name": "",

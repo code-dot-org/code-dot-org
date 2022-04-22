@@ -1,0 +1,23 @@
+name 'VPL-CSD-PILOT-S22-asyncOverview-mod4-lesson5'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Overview of Differentation
+
+##### In this lesson you will consider the three ways to differentiate lessons within the CS Discoveries curriculum: by task, by timing, by resources.
+
+<img src="https://images.code.org/417e5607fd678bb056c9311d09d70aed-image-1650339700026.JPG" alt="Image of the teacher differeientation guide" style="float: right; height: 275px; clear: both; margin: 0 20px 20px 0;">
+
+## In this lesson, you will:
+
+* ##### Explore opportunities for differentiation while using the CS Discoveries curriculum. 
+
+### **Suggested time:** 15 minutes
+
+
+## Let's get started!
+
+<div style="clear:both"/>
+
+MARKDOWN

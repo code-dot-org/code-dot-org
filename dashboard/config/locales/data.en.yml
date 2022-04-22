@@ -677,6 +677,17 @@ en:
         PL_CSD_Unit4_AppTesting: Paper Prototype Testing
         csd_u6_circuit_playground: Physical Computing
         csd_u6_input_output: Input and Output
+        CSA-PL-for-loops: For loops in Java
+        CSA-PL-variables: Creating Variables in Java
+        PL_CS_Journeys_Overview: CS Journeys
+        CSA-PL-intro-to-java-lab: Java Lab Basics
+        CSA-PL-first-program: Writing a Program in Java
+        CSD_u6_variables_part1: 'CSD: Variables'
+        csd_u6_if_statements: 'CSD: If Statements'
+        csc-poem-art-intro: Intro Video
+        csc-poem-art-outro: Outro Video
+        csd_u6_call_define_functions: 'CSD: Calling and Defining Functions'
+        csp_applab_parameters: Functions with Parameters
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

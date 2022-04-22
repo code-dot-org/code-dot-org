@@ -4,6 +4,22 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "Curriculum Videos",
+          "details": "Some lessons currently do not have links to videos in the lesson plans or slide deck. These videos are in final production and will be linked as soon as these are available.",
+          "link": "",
+          "type": "information",
+          "visibility": "Teacher-only"
+        },
+        {
+          "notice": "More Opportunities for Feedback",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
+          "link": "",
+          "type": "feedback",
+          "visibility": "Teacher-only"
+        }
+      ],
       "curriculum_umbrella": "CSA",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -15,8 +31,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-13 21:41:00 UTC",
-    "published_state": null,
+    "serialized_at": "2022-04-18 22:53:10 UTC",
+    "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -46,6 +62,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-2022"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Sandboxes"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa5-2022"
       }
     }
@@ -216,7 +244,7 @@
       "relative_position": 10,
       "properties": {
         "overview": "**How can I shift the elements in an array?**\n\nStudents practice working with 2D arrays and modifying standard algorithms to plan and implement an algorithm to shift a 2D array. Students explore how the elements in a 1D array can be shifted and then write pseudocode to modify the algorithm to be applied to a 2D array.",
-        "preparation": "* Print copies of the Shifting a 2D Array handout and manipulatives (one for each pair of students)\n* (Optional) Cut out the manipulatives from the Shifting a 2D Array handout\n* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Print copies of the Shifting a 2D Array handout and manipulatives (one for each pair of students)\n* (Optional) Cut out the manipulatives from the Shifting a 2D Array handout\n* Create code review groups if you are not reusing the same groups\n* Print copies of the Unit 5 Study Guide (one for each student)",
         "student_overview": "**How can I shift the elements in an array?**\n\nIn this lesson, you practice working with 2D arrays and modifying standard algorithms to plan and implement an algorithm to shift a 2D array. You explore how the elements in a 1D array can be shifted and then write pseudocode to modify the algorithm to be applied to a 2D array."
       },
       "seeding_key": {
@@ -314,6 +342,51 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-2022"
+      }
+    },
+    {
+      "key": "Console",
+      "name": "Console",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Console",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2022"
+      }
+    },
+    {
+      "key": "The Neighborhood",
+      "name": "The Neighborhood",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2022"
+      }
+    },
+    {
+      "key": "The Theater",
+      "name": "The Theater",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The Theater",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa5-2022"
       }
     }
@@ -567,6 +640,48 @@
       "seeding_key": {
         "lesson_activity.key": "dea33d8e-606e-4bd5-bb2a-b00a68b1b354",
         "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2022"
+      }
+    },
+    {
+      "key": "400e454f-27c0-466b-9577-2efc26950e6f",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "400e454f-27c0-466b-9577-2efc26950e6f",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2022"
+      }
+    },
+    {
+      "key": "01a3b029-db25-4a25-8319-812fa4131e95",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "01a3b029-db25-4a25-8319-812fa4131e95",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2022"
+      }
+    },
+    {
+      "key": "3079a2d1-6dae-4ba5-bb01-4975fff7dff8",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3079a2d1-6dae-4ba5-bb01-4975fff7dff8",
+        "lesson.key": "lesson-8",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa5-2022"
       }
@@ -902,6 +1017,42 @@
         "lesson_activity.key": "8c81776f-083c-4a0e-a021-92bd3b06e3af",
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-2022"
+      }
+    },
+    {
+      "key": "2af5c645-2a45-47a9-8ade-ac6dc62f8e62",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2af5c645-2a45-47a9-8ade-ac6dc62f8e62",
+        "lesson.key": "Console",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2022"
+      }
+    },
+    {
+      "key": "dc0cbe02-d34f-49e1-ad89-29e06ff1da7f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dc0cbe02-d34f-49e1-ad89-29e06ff1da7f",
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2022"
+      }
+    },
+    {
+      "key": "5336f88c-a247-4865-b2fe-40eb7f051b27",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5336f88c-a247-4865-b2fe-40eb7f051b27",
+        "lesson.key": "The Theater",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa5-2022"
       }
     }
@@ -2169,6 +2320,37 @@
       }
     },
     {
+      "key": "9880eb70-f58d-4acd-ab7c-b52010bc1c3d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9880eb70-f58d-4acd-ab7c-b52010bc1c3d",
+        "lesson_activity.key": "400e454f-27c0-466b-9577-2efc26950e6f"
+      }
+    },
+    {
+      "key": "78e1f0f7-58c7-4023-b530-28e65959d486",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "78e1f0f7-58c7-4023-b530-28e65959d486",
+        "lesson_activity.key": "01a3b029-db25-4a25-8319-812fa4131e95"
+      }
+    },
+    {
+      "key": "d87fa5db-6a3e-4d92-b4d7-420d7c2ac2a0",
+      "position": 1,
+      "properties": {
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "d87fa5db-6a3e-4d92-b4d7-420d7c2ac2a0",
+        "lesson_activity.key": "3079a2d1-6dae-4ba5-bb01-4975fff7dff8"
+      }
+    },
+    {
       "key": "e38efe61-24de-4ae1-9e8a-36879de23935",
       "position": 1,
       "properties": {
@@ -2641,7 +2823,7 @@
       "key": "0df5b0c9-8c66-4079-af5b-2bd43b62529e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know week.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Personal Narrative Project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 5 Study Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know week.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Personal Narrative Project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson."
       },
       "seeding_key": {
         "activity_section.key": "0df5b0c9-8c66-4079-af5b-2bd43b62529e",
@@ -2997,7 +3179,7 @@
       "key": "f48331b6-d532-4dfc-86f6-257a216e7413",
       "position": 1,
       "properties": {
-        "description": "We are almost done with our first project! You should be proud of what you have accomplished in this unit and this project.",
+        "description": "We are almost done with our project! You should be proud of what you have accomplished in this unit and this project.",
         "name": "Reflecting on Your Progress",
         "remarks": true
       },
@@ -3047,7 +3229,7 @@
       "key": "0e31600e-cb38-4bfa-914b-edeed6b127a8",
       "position": 3,
       "properties": {
-        "description": "Congratulations! You have completed your store management project for this unit. Let's show off our work through a Gallery Walk so you can share your work with your classmates.",
+        "description": "Congratulations! You have completed your personal narrative project for this unit. Let's show off our work through a Gallery Walk so you can share your work with your classmates.",
         "duration": "15",
         "name": "Peer Presentations",
         "remarks": true
@@ -3106,6 +3288,18 @@
       },
       "seeding_key": {
         "activity_section.key": "1e311a7d-a6df-42c8-8bcf-fe034a3d18ea",
+        "lesson_activity.key": "14640059-e921-4754-ba07-ca8462fcf43a"
+      }
+    },
+    {
+      "key": "60e8f8c2-1847-46d7-9d9b-ea208fac9c00",
+      "position": 4,
+      "properties": {
+        "name": "Survey",
+        "progression_name": "Unit 5 Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "60e8f8c2-1847-46d7-9d9b-ea208fac9c00",
         "lesson_activity.key": "14640059-e921-4754-ba07-ca8462fcf43a"
       }
     },
@@ -3317,6 +3511,48 @@
         "activity_section.key": "f1f35340-2d4d-4b7b-8167-29f79184b8b4",
         "lesson_activity.key": "8c81776f-083c-4a0e-a021-92bd3b06e3af"
       }
+    },
+    {
+      "key": "cc4cb957-b0c9-495c-967c-ce91b29d5201",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "cc4cb957-b0c9-495c-967c-ce91b29d5201",
+        "lesson_activity.key": "2af5c645-2a45-47a9-8ade-ac6dc62f8e62"
+      }
+    },
+    {
+      "key": "bd29aef8-6840-41a6-ad96-ac67acf8ef62",
+      "position": 1,
+      "properties": {
+        "progression_name": "With Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "bd29aef8-6840-41a6-ad96-ac67acf8ef62",
+        "lesson_activity.key": "dc0cbe02-d34f-49e1-ad89-29e06ff1da7f"
+      }
+    },
+    {
+      "key": "28a8ba45-5461-49a3-818c-1adeb928c4a3",
+      "position": 2,
+      "properties": {
+        "progression_name": "No Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "28a8ba45-5461-49a3-818c-1adeb928c4a3",
+        "lesson_activity.key": "dc0cbe02-d34f-49e1-ad89-29e06ff1da7f"
+      }
+    },
+    {
+      "key": "ef17abb7-0c7e-405d-ad4e-edfc14954e76",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ef17abb7-0c7e-405d-ad4e-edfc14954e76",
+        "lesson_activity.key": "5336f88c-a247-4865-b2fe-40eb7f051b27"
+      }
     }
   ],
   "script_levels": [
@@ -3451,6 +3687,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L1_2022"
+        ],
         "progression": "Investigate: Nested Loops and 2D Arrays"
       },
       "bonus": false,
@@ -3473,6 +3712,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L2_2022"
+        ],
         "progression": "Traversing 2D Arrays"
       },
       "bonus": false,
@@ -3495,6 +3737,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L3_2022"
+        ],
         "progression": "Traversing 2D Arrays"
       },
       "bonus": false,
@@ -3517,6 +3762,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L4_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3539,6 +3787,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L1_2022"
+        ],
         "progression": "Predict: Column-Major Traversal"
       },
       "bonus": false,
@@ -3561,6 +3812,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L2_2022"
+        ],
         "progression": "Traversing 2D Arrays"
       },
       "bonus": false,
@@ -3583,6 +3837,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L3_2022"
+        ],
         "progression": "Traversing 2D Arrays"
       },
       "bonus": false,
@@ -3605,6 +3862,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L4_2022"
+        ],
         "progression": "Traversing 2D Arrays"
       },
       "bonus": false,
@@ -3627,6 +3887,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L5_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3649,6 +3912,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L1_2022"
+        ],
         "progression": "Reversing 2D Arrays"
       },
       "bonus": false,
@@ -3671,6 +3937,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L2_2022"
+        ],
         "progression": "Reversing 2D Arrays"
       },
       "bonus": false,
@@ -3693,6 +3962,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L3 CR_2022"
+        ],
         "progression": "Code Review: Reversing 2D Arrays"
       },
       "bonus": false,
@@ -3715,6 +3987,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L4_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3737,6 +4012,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L1_2022"
+        ],
         "progression": "Predict: Enhanced For Loops and Objects"
       },
       "bonus": false,
@@ -3759,6 +4037,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L2_2022"
+        ],
         "progression": "Investigate: Enhanced For Loops and 2D Arrays"
       },
       "bonus": false,
@@ -3781,6 +4062,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L3_2022"
+        ],
         "progression": "Using Enhanced For Loops with 2D Arrays"
       },
       "bonus": false,
@@ -3803,6 +4087,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L4 CR_2022"
+        ],
         "progression": "Code Review: Using Enhanced For Loops with 2D Arrays"
       },
       "bonus": false,
@@ -3825,6 +4112,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L5_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3847,6 +4137,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L1_2022"
+        ],
         "progression": "Investigate: Modifying Pixels"
       },
       "bonus": false,
@@ -3869,6 +4162,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L2_2022"
+        ],
         "progression": "Creating Image Filters"
       },
       "bonus": false,
@@ -3891,6 +4187,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L3_2022"
+        ],
         "progression": "Creating Image Filters"
       },
       "bonus": false,
@@ -3913,6 +4212,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L4_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3933,8 +4235,33 @@
       "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U5L7-L1_2022"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2022",
+        "activity_section.key": "d87fa5db-6a3e-4d92-b4d7-420d7c2ac2a0"
+      },
+      "level_keys": [
+        "CSA U5L7-L1_2022"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 1,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L1_2022"
+        ],
         "progression": "Investigate: Changing Colors in an Image"
       },
       "bonus": false,
@@ -3952,11 +4279,14 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L2_2022"
+        ],
         "progression": "Creating Image Filters"
       },
       "bonus": false,
@@ -3974,11 +4304,14 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L3_2022"
+        ],
         "progression": "Creating Image Filters"
       },
       "bonus": false,
@@ -3996,11 +4329,14 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L4_2022"
+        ],
         "progression": "Creating Image Filters"
       },
       "bonus": false,
@@ -4018,11 +4354,14 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L5 CR_2022"
+        ],
         "progression": "Code Review: Creating Image Filters"
       },
       "bonus": false,
@@ -4040,11 +4379,14 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L6_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4062,11 +4404,14 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L1_2022"
+        ],
         "progression": "Finding Duplicates in a 2D Array"
       },
       "bonus": false,
@@ -4084,11 +4429,14 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L2_2022"
+        ],
         "progression": "Finding Duplicates in a 2D Array"
       },
       "bonus": false,
@@ -4106,11 +4454,14 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L3 CR_2022"
+        ],
         "progression": "Code Review: Finding Duplicates in a 2D Array"
       },
       "bonus": false,
@@ -4128,11 +4479,14 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L4_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4150,11 +4504,14 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L10-L1_2022"
+        ],
         "progression": "Investigate: Shifting Elements"
       },
       "bonus": false,
@@ -4172,11 +4529,14 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L10-L2_2022"
+        ],
         "progression": "Shifting a 2D Array"
       },
       "bonus": false,
@@ -4194,11 +4554,14 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L10-L3_2022"
+        ],
         "progression": "Shifting a 2D Array"
       },
       "bonus": false,
@@ -4216,11 +4579,14 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L10-L4_2022"
+        ],
         "progression": "Shifting a 2D Array"
       },
       "bonus": false,
@@ -4238,11 +4604,14 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L10-L5 CR_2022"
+        ],
         "progression": "Code Review: Shifting a 2D Array"
       },
       "bonus": false,
@@ -4260,11 +4629,14 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L10-L6_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4282,11 +4654,14 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L11-L1_2022"
+        ],
         "progression": "Personal Narrative Project"
       },
       "bonus": false,
@@ -4304,11 +4679,14 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L12-L1_2022"
+        ],
         "progression": "Personal Narrative Project"
       },
       "bonus": false,
@@ -4326,11 +4704,14 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L12-L2 CR_2022"
+        ],
         "progression": "Code Review: Personal Narrative Project"
       },
       "bonus": false,
@@ -4348,11 +4729,14 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L13-L1_2022"
+        ],
         "progression": "Personal Narrative Project"
       },
       "bonus": false,
@@ -4370,7 +4754,29 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Unit 5 Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csa5-2022"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-2022",
+        "activity_section.key": "60e8f8c2-1847-46d7-9d9b-ea208fac9c00"
+      },
+      "level_keys": [
+        "Student End of Unit Survey_csa5-2022"
+      ]
+    },
+    {
+      "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4392,6 +4798,92 @@
       },
       "level_keys": [
         "CSA Unit 5 Assessment 2022"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2022 Console Sandbox"
+        ],
+        "lesson.key": "Console",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2022",
+        "activity_section.key": "cc4cb957-b0c9-495c-967c-ce91b29d5201"
+      },
+      "level_keys": [
+        "CSA 2022 Console Sandbox"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "With Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2022 Neighborhood Sandbox"
+        ],
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2022",
+        "activity_section.key": "bd29aef8-6840-41a6-ad96-ac67acf8ef62"
+      },
+      "level_keys": [
+        "CSA 2022 Neighborhood Sandbox"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "No Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2022",
+        "activity_section.key": "28a8ba45-5461-49a3-818c-1adeb928c4a3"
+      },
+      "level_keys": [
+        "CSA 2022 Neighborhood - No Bucket Sandbox"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2022 Theater Sandbox"
+        ],
+        "lesson.key": "The Theater",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2022",
+        "activity_section.key": "ef17abb7-0c7e-405d-ad4e-edfc14954e76"
+      },
+      "level_keys": [
+        "CSA 2022 Theater Sandbox"
       ]
     }
   ],
@@ -4722,6 +5214,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U5L7-L1_2022",
+        "script_level.level_keys": [
+          "CSA U5L7-L1_2022"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2022",
+        "activity_section.key": "d87fa5db-6a3e-4d92-b4d7-420d7c2ac2a0"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U5L8-L1_2022",
         "script_level.level_keys": [
           "CSA U5L8-L1_2022"
@@ -4962,6 +5466,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "Student End of Unit Survey_csa5-2022",
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csa5-2022"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-2022",
+        "activity_section.key": "60e8f8c2-1847-46d7-9d9b-ea208fac9c00"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA Unit 5 Assessment 2022",
         "script_level.level_keys": [
           "CSA Unit 5 Assessment 2022"
@@ -4970,6 +5486,54 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa5-2022",
         "activity_section.key": "c281cc8d-9c66-41d1-a912-ba74bd1a9cf3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2022 Console Sandbox",
+        "script_level.level_keys": [
+          "CSA 2022 Console Sandbox"
+        ],
+        "lesson.key": "Console",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2022",
+        "activity_section.key": "cc4cb957-b0c9-495c-967c-ce91b29d5201"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2022 Neighborhood Sandbox",
+        "script_level.level_keys": [
+          "CSA 2022 Neighborhood Sandbox"
+        ],
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2022",
+        "activity_section.key": "bd29aef8-6840-41a6-ad96-ac67acf8ef62"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2022 Neighborhood - No Bucket Sandbox",
+        "script_level.level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2022",
+        "activity_section.key": "28a8ba45-5461-49a3-818c-1adeb928c4a3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2022 Theater Sandbox",
+        "script_level.level_keys": [
+          "CSA 2022 Theater Sandbox"
+        ],
+        "lesson.key": "The Theater",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2022",
+        "activity_section.key": "ef17abb7-0c7e-405d-ad4e-edfc14954e76"
       }
     }
   ],
@@ -5200,6 +5764,39 @@
       },
       "seeding_key": {
         "resource.key": "_key_u5l9_extra_practice"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/csa5-2022/resources",
+      "key": "all_resources_7",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_7"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa5-2022/standards",
+      "key": "all_standards_7",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_7"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa5-2022/vocab",
+      "key": "all_vocabulary_7",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_7"
       }
     },
     {
@@ -5480,7 +6077,7 @@
     },
     {
       "name": "Unit 5 Guide",
-      "url": "https://docs.google.com/document/d/1M4OOFDcM8TunCZtnZJmaC12UiKCwnQ_VDDgpZ-vMUzM/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1Bkn9O58hQarNhiuFOxx5audry1k4BB-skRUsizx2Un4/edit?usp=sharing",
       "key": "unit_5_guide",
       "properties": {
         "audience": "Student",
@@ -5488,6 +6085,18 @@
       },
       "seeding_key": {
         "resource.key": "unit_5_guide"
+      }
+    },
+    {
+      "name": "Unit 5 Overview",
+      "url": "https://docs.google.com/document/d/1lausMFcUUBRtnEwWVz02o2fayHWtDPzrOzeRZK1Yxq8/edit?usp=sharing",
+      "key": "unit_5_overview",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_5_overview"
       }
     },
     {
@@ -5500,6 +6109,18 @@
       },
       "seeding_key": {
         "resource.key": "unit_5_presentation"
+      }
+    },
+    {
+      "name": "Unit 5 Study Guide",
+      "url": "https://docs.google.com/document/d/1SLq__8s9HeiSOhlKIp6doJQfrOf3955_oimoqd_CNDw/edit?usp=sharing",
+      "key": "unit_5_study_guide",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_5_study_guide"
       }
     },
     {
@@ -5634,6 +6255,12 @@
       "seeding_key": {
         "lesson.key": "lesson-12",
         "resource.key": "unit_5_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "unit_5_study_guide"
       }
     },
     {
@@ -5866,7 +6493,42 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_7",
+        "script.name": "csa5-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_7",
+        "script.name": "csa5-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_7",
+        "script.name": "csa5-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_5_guide",
+        "script.name": "csa5-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_5_overview",
+        "script.name": "csa5-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_5_study_guide",
+        "script.name": "csa5-2022"
+      }
+    }
   ],
   "scripts_student_resources": [
 
