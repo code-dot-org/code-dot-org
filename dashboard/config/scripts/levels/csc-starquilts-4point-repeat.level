@@ -43,18 +43,15 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"This is the chunk of code that repeats: \\n<xml><block type=\\\"turtle_shape_with_side_length\\\"><field name=\\\"VALUE\\\">smallRhombusRed</field><value name=\\\"SIZE\\\"><block type=\\\"math_number\\\"><field name=\\\"NUM\\\">35</field></block></value><next><block type=\\\"draw_turn\\\"><field name=\\\"DIR\\\">turnRight</field><value name=\\\"VALUE\\\"><block type=\\\"math_number\\\"><field name=\\\"NUM\\\">60</field></block></value></block></next></block></xml>\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0286b39fe5466b49e822faa33b929b11/csc-starquilts-6point-repeat.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Put the chunk of code into a loop block:\\n\\n<xml><block type=\\\"controls_repeat_ext\\\"><value name=\\\"TIMES\\\"><block type=\\\"math_number\\\"><field name=\\\"NUM\\\">???</field></block></value><statement name=\\\"DO\\\"><block type=\\\"turtle_shape_with_side_length\\\"><field name=\\\"VALUE\\\">smallRhombusRed</field><value name=\\\"SIZE\\\"><block type=\\\"math_number\\\"><field name=\\\"NUM\\\">35</field></block></value><next><block type=\\\"draw_turn\\\"><field name=\\\"DIR\\\">turnRight</field><value name=\\\"VALUE\\\"><block type=\\\"math_number\\\"><field name=\\\"NUM\\\">60</field></block></value></block></next></block></statement></block></xml>\",\"hint_id\":\"hint2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2fd0d33a3a188eff62bd72db61159eb0/csc-starquilts-6point-repeat.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"How many times does the pattern repeat? \\n6 times. \\n\\nPut the number 6 in the number field of the loop block. \\n\\n<xml><block type=\\\"controls_repeat_ext\\\"><value name=\\\"TIMES\\\"><block type=\\\"math_number\\\"><field name=\\\"NUM\\\">6</field></block></value><statement name=\\\"DO\\\"><block type=\\\"turtle_shape_with_side_length\\\"><field name=\\\"VALUE\\\">smallRhombusRed</field><value name=\\\"SIZE\\\"><block type=\\\"math_number\\\"><field name=\\\"NUM\\\">35</field></block></value><next><block type=\\\"draw_turn\\\"><field name=\\\"DIR\\\">turnRight</field><value name=\\\"VALUE\\\"><block type=\\\"math_number\\\"><field name=\\\"NUM\\\">60</field></block></value></block></next></block></statement></block></xml>\\n\",\"hint_id\":\"hint3\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c505369bd04013c1d73ce8dd0d61c169/csc-starquilts-6point-repeat.mp3\"}]",
     "long_instructions": "*Experiment with the turn block in your code to create a 4 point star.*\r\n<div style=\"float:right;padding:20px\">\r\n<img src=\"https://images.code.org/d41506d78eef114f1badb99b9bb99d52-image-1649479710971.48.27 PM.png\" style=\"height:80px; border-width:1px; border-style:solid; border-color:black; border-radius:10px\">\r\n<p style=\"text-align: center\">\r\nexample\r\n</p>\r\n</div>\r\n\r\n- Modify the angle of the turn block to find the correct angle for a 4 points. \r\n- How many times should your loop repeat?",
     "project_template_level_name": "csc-starquilts-lesson1-template",
-    "encrypted_examples": [
-
-    ],
     "preload_asset_list": null
   },
-  "game_id": 23,
-  "published": true,
-  "created_at": "2022-04-09T04:46:19.000Z",
   "level_num": "custom",
+  "game_id": 23,
+  "created_at": "2022-04-09T04:46:19.000Z",
   "user_id": 16,
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-09T04:46:19.866+00:00\",\"changed\":[\"cloned from \\\"csc-starquilts-6point-repeat\\\"\"],\"cloned_from\":\"csc-starquilts-6point-repeat\"},{\"changed_at\":\"2022-04-09 04:48:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-04-09T04:46:19.866+00:00\",\"changed\":[\"cloned from \\\"csc-starquilts-6point-repeat\\\"\"],\"cloned_from\":\"csc-starquilts-6point-repeat\"},{\"changed_at\":\"2022-04-09 04:48:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-21 20:47:53 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -184,13 +181,13 @@
             </block>
           </value>
         </block>
-        <block type="draw_turn">
+        <block type="draw_turn_by_constant_dropdown">
+          <field name="DIR">turnLeft</field>
+          <field name="VALUE" config="30,60,90,120,180">???</field>
+        </block>
+        <block type="draw_turn_by_constant_dropdown">
           <field name="DIR">turnRight</field>
-          <value name="VALUE">
-            <block type="math_number">
-              <field name="NUM">60</field>
-            </block>
-          </value>
+          <field name="VALUE" config="30,60,90,120,180">???</field>
         </block>
         <block type="controls_repeat_ext">
           <value name="TIMES">

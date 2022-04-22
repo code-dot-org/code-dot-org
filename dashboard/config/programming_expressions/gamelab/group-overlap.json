@@ -3,7 +3,7 @@
   "name": "group.overlap()",
   "category": "Groups",
   "category_key": "groups",
-  "content": "Makes each sprite and the target overlap when they touch each other. Neither the sprite and the target change how they are moving.\r\n\r\nMost games will involve sprites colliding with each other. This is the fifth, and default, type of collision available in Game Lab. The collision blocks will cause a certain type of interaction between the sprite and its target and must be used within the draw function.\r\n\r\n`group.isTouching()` is effectively the same, but is strictly a boolean check.",
+  "content": "Makes each sprite and the target overlap when they touch each other. Neither the sprite and the target change how they are moving.\r\n\r\nMost games will involve sprites colliding with each other. This is the fifth, and default, type of collision available in Game Lab. The collision blocks will cause a certain type of interaction between the sprite and its target and must be used within the draw function.\r\n\r\n[`group.isTouching()`(#f78183)](/docs/gamelab/group.isTouching/) is effectively the same, but is strictly a boolean check.",
   "examples": [
     {
       "name": "Shield or No Shield",

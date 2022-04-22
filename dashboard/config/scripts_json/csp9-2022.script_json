@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-20 20:32:47 UTC",
+    "serialized_at": "2022-04-21 22:44:43 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2459,6 +2459,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U9L2 CFU Histogram vs Bar Chart2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2581,6 +2584,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Which Type of Chart2022"
+        ],
         "progression": "Which Type of Chart?"
       },
       "bonus": false,
@@ -2603,6 +2609,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U9L4 CFU Two Column vs One2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -3420,11 +3429,9 @@
     },
     {
       "name": "CSP Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1s5w7_UnVIGHOdkqCtK2O78rQ7JJFAWlOeZkZNsCovOY/preview",
       "key": "csp_curriculum_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csp_curriculum_guide"
