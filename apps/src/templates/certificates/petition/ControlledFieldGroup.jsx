@@ -7,11 +7,11 @@ const stylingForComponent = componentClass =>
   componentClass === 'select' ? 'dropdown' : 'grey_input';
 
 const FieldGroup = ({
+  children,
+  componentClass,
+  helpText,
   id,
   label,
-  helpText,
-  componentClass,
-  children,
   ...props
 }) => {
   return (
@@ -43,4 +43,51 @@ FieldGroup.propTypes = {
   componentClass: PropTypes.string
 };
 
-export default FieldGroup;
+const ControlledFieldGroup = ({
+  children,
+  componentClass,
+  handleChange,
+  helpText,
+  id,
+  placeholderOrLabel,
+  value,
+  ...props
+}) => {
+  const overlappingProps = {
+    id: id,
+    name: id,
+    key: id,
+    helpText: helpText,
+    onChange: handleChange,
+    value: value
+  };
+  return componentClass === 'select' ? (
+    <FieldGroup
+      {...overlappingProps}
+      label={placeholderOrLabel}
+      componentClass={componentClass}
+      {...props}
+    >
+      {children}
+    </FieldGroup>
+  ) : (
+    <FieldGroup
+      {...overlappingProps}
+      placeholder={placeholderOrLabel}
+      type={'text'}
+      {...props}
+    />
+  );
+};
+
+ControlledFieldGroup.propTypes = {
+  id: PropTypes.string.isRequired,
+  placeholderOrLabel: PropTypes.string.isRequired,
+  helpText: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  children: PropTypes.node,
+  componentClass: PropTypes.string,
+  handleChange: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired
+};
+
+export default ControlledFieldGroup;

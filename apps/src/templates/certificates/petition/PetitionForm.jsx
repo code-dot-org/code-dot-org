@@ -5,7 +5,7 @@ import {
   createErrorMessage,
   keyValidation
 } from '@cdo/apps/templates/certificates/petition/PetitionHelpers';
-import FieldGroup from '@cdo/apps/templates/certificates/petition/FieldGroup';
+import ControlledFieldGroup from '@cdo/apps/templates/certificates/petition/ControlledFieldGroup';
 
 const PetitionForm = () => {
   // data starts with all required fields having an empty value to ensure proper validation
@@ -22,37 +22,24 @@ const PetitionForm = () => {
     setErrorMessage(createErrorMessage(data));
   };
 
-  const buildFieldGroup = (
+  const buildControlledFieldGroup = (
     id,
     placeholderOrLabel,
     helpText,
     componentClass,
     children
-  ) => {
-    const overlappingProps = {
-      id: id,
-      name: id,
-      key: id,
-      helpText: helpText,
-      onChange: handleChange,
-      value: data[id] || ''
-    };
-    return componentClass === 'select' ? (
-      <FieldGroup
-        {...overlappingProps}
-        label={placeholderOrLabel}
-        componentClass={componentClass}
-      >
-        {children}
-      </FieldGroup>
-    ) : (
-      <FieldGroup
-        {...overlappingProps}
-        placeholder={placeholderOrLabel}
-        type={'text'}
-      />
-    );
-  };
+  ) => (
+    <ControlledFieldGroup
+      id={id}
+      placeholderOrLabel={placeholderOrLabel}
+      helpText={helpText}
+      componentClass={componentClass}
+      onChange={handleChange}
+      value={data[id] || ''}
+    >
+      {children}
+    </ControlledFieldGroup>
+  );
 
   return (
     <>
@@ -62,14 +49,18 @@ const PetitionForm = () => {
         onSubmit={handleSubmit}
       >
         <div className={'petition-space'}>{errorMessage}</div>
-        {buildFieldGroup('name', 'Name')}
-        {buildFieldGroup('email', 'Email', 'Only used for infrequent updates')}
-        {buildFieldGroup(
+        {buildControlledFieldGroup('name', 'Name')}
+        {buildControlledFieldGroup(
+          'email',
+          'Email',
+          'Only used for infrequent updates'
+        )}
+        {buildControlledFieldGroup(
           'zip-or-country',
           'ZIP code or country',
           'Enter country if outside the United States'
         )}
-        {buildFieldGroup(
+        {buildControlledFieldGroup(
           'age',
           'Age',
           <a href="/privacy">See our privacy practices for children</a>,
@@ -80,7 +71,7 @@ const PetitionForm = () => {
             </option>
           ))
         )}
-        {buildFieldGroup(
+        {buildControlledFieldGroup(
           'profession',
           'I am a',
           undefined,
