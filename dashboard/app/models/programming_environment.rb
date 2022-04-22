@@ -134,4 +134,8 @@ class ProgrammingEnvironment < ApplicationRecord
   def categories_for_navigation
     categories.select(&:should_be_in_navigation?).map(&:summarize_for_navigation)
   end
+
+  def categories_for_get
+    categories.select(&:should_be_in_navigation?).map(&:summarize_for_get)
+  end
 end

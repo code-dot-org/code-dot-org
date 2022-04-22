@@ -223,6 +223,18 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
     refute_nil ProgrammingEnvironment.find_by_name('test-environment')
   end
 
+  test 'can get summary by name' do
+    programming_environment = create :programming_environment, name: 'test-environment', published: true
+    programming_category = create :programming_environment_category, name: 'test-category', programming_environment_id: programming_environment.id
+    programming_class = create :programming_class, name: 'test-class', programming_environment_category_id: programming_category.id, programming_environment_id: programming_environment.id
+    get :get_summary_by_name, params: {name: programming_environment.name}
+    assert_response :ok
+    response = JSON.parse(@response.body)
+    assert_equal 1, response.length
+    assert_equal programming_category.name, response[0]["name"]
+    assert_equal programming_class.name, response[0]["docs"][0]["name"]
+  end
+
   class AccessTests < ActionController::TestCase
     setup do
       File.stubs(:write)
@@ -266,5 +278,15 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
     test_user_gets_response_for :index, user: :student, response: :success
     test_user_gets_response_for :index, user: :teacher, response: :success
     test_user_gets_response_for :index, user: :levelbuilder, response: :success
+
+    test_user_gets_response_for :get_summary_by_name, params: -> {{name: @published_programming_environment.name}}, user: nil, response: :success, name: 'signed out user can get summary of published programming environment'
+    test_user_gets_response_for :get_summary_by_name, params: -> {{name: @published_programming_environment.name}}, user: :student, response: :success, name: 'student can get summary of published programming environment'
+    test_user_gets_response_for :get_summary_by_name, params: -> {{name: @published_programming_environment.name}}, user: :teacher, response: :success, name: 'teacher can get summary of published programming environment'
+    test_user_gets_response_for :get_summary_by_name, params: -> {{name: @published_programming_environment.name}}, user: :levelbuilder, response: :success, name: 'levelbuilder can get summary of published programming environment'
+
+    test_user_gets_response_for :get_summary_by_name, params: -> {{name: @unpublished_programming_environment.name}}, user: nil, response: :forbidden, name: 'signed out user cannot get summary of unpublished programming environment'
+    test_user_gets_response_for :get_summary_by_name, params: -> {{name: @unpublished_programming_environment.name}}, user: :student, response: :forbidden, name: 'student cannot get summary of unpublished programming environment'
+    test_user_gets_response_for :get_summary_by_name, params: -> {{name: @unpublished_programming_environment.name}}, user: :teacher, response: :forbidden, name: 'teacher cannot get summary of unpublished programming environment'
+    test_user_gets_response_for :get_summary_by_name, params: -> {{name: @published_programming_environment.name}}, user: :levelbuilder, response: :success, name: 'levelbuilder can get summary of unpublished programming environment'
   end
 end
