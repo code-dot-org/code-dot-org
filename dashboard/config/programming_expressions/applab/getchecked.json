@@ -3,7 +3,7 @@
   "name": "getChecked",
   "category": "UI controls",
   "category_key": "ui_controls",
-  "content": "Gets the state of a checkbox or radioButton.\n\n`getChecked()` is used to check whether a user has checked a checkbox or radio button by using the element ID. Check boxes are used when the user is asked to check a box if they agree with something, like an app privacy statement. Radio buttons are used when the user is asked to choose one item from a predefined group of options.",
+  "content": "Gets the state of a checkbox or radioButton.\n\n[`getChecked()`(#fff176)](/docs/applab/getChecked/) is used to check whether a user has checked a checkbox or radio button by using the element ID. Check boxes are used when the user is asked to check a box if they agree with something, like an app privacy statement. Radio buttons are used when the user is asked to choose one item from a predefined group of options.",
   "examples": [
     {
       "name": "",
