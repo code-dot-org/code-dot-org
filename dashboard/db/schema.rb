@@ -314,6 +314,7 @@ ActiveRecord::Schema.define(version: 2022_04_21_224748) do
     t.integer "commenter_id", null: false
     t.boolean "is_resolved", null: false
     t.text "comment", size: :medium, null: false
+    t.datetime "deleted_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["code_review_request_id"], name: "index_code_review_notes_on_code_review_request_id"
