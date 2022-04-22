@@ -20,11 +20,11 @@ describe('unitSelectionRedux', () => {
     it('returns the script name of the selected script', () => {
       const state = {
         unitSelection: {
-          scriptId: 9,
+          scriptId: 5,
           coursesWithProgress: fakeCoursesWithProgress
         }
       };
-      assert.equal(getSelectedScriptName(state), 'flappy');
+      assert.equal(getSelectedScriptName(state), 'csd1-2018');
     });
 
     it('returns null if no script is selected', () => {
