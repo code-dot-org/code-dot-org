@@ -12,29 +12,28 @@ export const buildControlledFieldGroup = (
   handleChange,
   data
 ) => {
+  const overlappingProps = {
+    id: id,
+    name: id,
+    key: id,
+    helpText: helpText,
+    onChange: handleChange,
+    value: data[id] || ''
+  };
+
   return componentClass === 'select' ? (
     <FieldGroup
-      id={id}
-      name={id}
-      key={id}
+      {...overlappingProps}
       label={placeholderOrLabel}
       componentClass={componentClass}
-      helpText={helpText}
-      onChange={handleChange}
-      value={data[id] || ''}
     >
       {children}
     </FieldGroup>
   ) : (
     <FieldGroup
-      id={id}
-      name={id}
-      key={id}
+      {...overlappingProps}
       placeholder={placeholderOrLabel}
       type={'text'}
-      helpText={helpText}
-      onChange={handleChange}
-      value={data[id] || ''}
     />
   );
 };
