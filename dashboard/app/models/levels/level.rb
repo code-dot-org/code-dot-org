@@ -646,7 +646,8 @@ class Level < ApplicationRecord
     max_index = 70 - suffix.length - 1
     new_name = "#{base_name[0..max_index]}#{suffix}"
 
-    return Level.find_by_name(new_name) if Level.find_by_name(new_name)
+    level = Level.find_by_name(new_name)
+    return level if level
 
     begin
       level = clone_with_name(new_name, editor_experiment: editor_experiment)
