@@ -655,8 +655,15 @@ class Level < ApplicationRecord
       update_params = {name_suffix: suffix}
       update_params[:editor_experiment] = editor_experiment if editor_experiment
 
-      child_params_to_update = Level.clone_child_levels(level, new_suffix, editor_experiment: editor_experiment)
-      update_params.merge!(child_params_to_update)
+      # The clone_child_levels method does not work adequately for LevelGroup
+      # levels because the update_params it returns do not include an updated
+      # copy of levels_and_texts_per_page, nor does it rewrite the .level_group
+      # file. instead, it relies on LevelGroup#clone_sublevels_with_suffix to
+      # take care of these.
+      unless is_a? LevelGroup
+        child_params_to_update = Level.clone_child_levels(level, new_suffix, editor_experiment: editor_experiment)
+        update_params.merge!(child_params_to_update)
+      end
 
       level.update!(update_params)
 
