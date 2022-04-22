@@ -653,7 +653,7 @@ class Level < ApplicationRecord
     level = Level.find_by_name(new_name)
     if level
       return level if allow_existing
-      new_name = Level.next_unused_name(prefix, suffix)
+      new_name = next_unused_name_for_copy(suffix)
     end
 
     begin
@@ -686,11 +686,16 @@ class Level < ApplicationRecord
     end
   end
 
-  # Returns the first level name of the form "<prefix>_copy<num>_<suffix>" which
+  COPY_SUFFIX_LENGTH = 8 # '_copy999'.length
+
+  # Returns the first level name of the form "<base_name>_copy<num>_<suffix>" which
   # is not already used by another level.
-  # @param [String] prefix
   # @param [String] suffix
-  def self.next_unused_name(prefix, suffix)
+  def next_unused_name_for_copy(suffix)
+    # Make sure we don't go over the 70 character limit.
+    max_index = 70 - COPY_SUFFIX_LENGTH - suffix.length - 1
+    prefix = base_name[0..max_index]
+
     i = 1
     loop do
       new_name = "#{prefix}_copy#{i}#{suffix}"
