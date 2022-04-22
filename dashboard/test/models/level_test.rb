@@ -1232,12 +1232,24 @@ class LevelTest < ActiveSupport::TestCase
     assert_not level_with_contained.can_have_feedback_review_state?
   end
 
-  test 'next_unused_name' do
-    assert_equal 'unused_copy1_2020', Level.next_unused_name('unused', '_2020')
+  test 'next_unused_name_for_copy finds next available level name' do
+    level = create :level, name: 'my-level'
+    assert_equal 'my-level_copy1_2020', level.next_unused_name_for_copy('_2020')
 
     create :level, name: 'my-level_copy1_2020'
     create :level, name: 'my-level_copy2_2020'
     create :level, name: 'my-level_copy4_2020'
-    assert_equal 'my-level_copy3_2020', Level.next_unused_name('my-level', '_2020')
+    assert_equal 'my-level_copy3_2020', level.next_unused_name_for_copy('_2020')
+  end
+
+  test 'next_unused_name_for_copy returns name under the maximum length' do
+    long_name = 'abcdefghij123456789012345678901234567890123456789012345678901234567890'
+    assert_equal 70, long_name.length
+    level = create :level, name: long_name
+    next_name = level.next_unused_name_for_copy('_2020')
+
+    # the maximum is 70. allow a little extra room for longer numbers.
+    assert next_name.length <= 68
+    assert next_name.match /_copy1_2020$/
   end
 end
