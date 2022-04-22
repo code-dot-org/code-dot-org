@@ -334,33 +334,6 @@ class Script < ApplicationRecord
     return_units + all_scripts.select {|s| s.is_maker_unit? && s.has_pilot_access?(user)}
   end
 
-  # Get the set of units that are valid for the current user, ignoring those
-  # that are hidden based on the user's permission.
-  # @param [User] user
-  # @return [Script[]]
-  def self.valid_scripts(user)
-    return all_scripts if user.levelbuilder?
-
-    units = visible_units
-
-    if UnitGroup.has_any_course_experiments?(user)
-      units = units.map do |unit|
-        alternate_script = unit.alternate_script(user)
-        alternate_script.presence || unit
-      end
-    end
-
-    if has_any_pilot_access?(user)
-      units += all_scripts.select {|s| s.has_pilot_access?(user)}
-    end
-
-    if user.permission?(UserPermission::LEVELBUILDER)
-      units += all_scripts.select(&:in_development?)
-    end
-
-    units
-  end
-
   class << self
     def all_scripts
       return all.to_a unless should_cache?
@@ -1844,6 +1817,21 @@ class Script < ApplicationRecord
     nil
   end
 
+  def included_in_units?(unit_ids)
+    unit_ids.include? id
+  end
+
+  def summarize_for_unit_selector
+    {
+      id: id,
+      key: name,
+      version_year: version_year,
+      name: launched? ? localized_title : localized_title + " *",
+      position: unit_group_units&.first&.position,
+      description: localized_description ? Services::MarkdownPreprocessor.process(localized_description) : nil
+    }
+  end
+
   def summarize_for_assignment_dropdown
     [
       id,
@@ -1856,43 +1844,6 @@ class Script < ApplicationRecord
         position: unit_group_units&.first&.position
       }
     ]
-  end
-
-  # @return {AssignableInfo} with strings translated
-  def assignable_info
-    info = ScriptConstants.assignable_info(self)
-    info[:name] = I18n.t("data.script.name.#{info[:name]}.title", default: info[:name])
-    info[:name] += " *" unless launched?
-
-    if family_name
-      info[:assignment_family_name] = family_name
-      info[:assignment_family_title] = localized_assignment_family_title
-    end
-    if version_year
-      info[:version_year] = version_year
-      # No need to localize version_title yet, since we only display it for CSF
-      # units, which just use version_year.
-      info[:version_title] = version_year
-    end
-    if localized_description
-      info[:description] = Services::MarkdownPreprocessor.process(localized_description)
-    end
-
-    if localized_student_description
-      info[:student_description] = Services::MarkdownPreprocessor.process(localized_student_description)
-    end
-
-    info[:is_stable] = true if stable?
-
-    info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])
-    info[:supported_locales] = supported_locale_names
-    info[:supported_locale_codes] = supported_locale_codes
-    info[:lesson_extras_available] = lesson_extras_available
-    info[:text_to_speech_enabled] = text_to_speech_enabled?
-    if has_standards_associations?
-      info[:standards] = standards
-    end
-    info
   end
 
   def supported_locale_codes

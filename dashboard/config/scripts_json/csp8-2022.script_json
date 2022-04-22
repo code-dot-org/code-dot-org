@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-18 19:06:55 UTC",
+    "serialized_at": "2022-04-21 22:44:42 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1455,11 +1455,9 @@
     },
     {
       "name": "CSP Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1s5w7_UnVIGHOdkqCtK2O78rQ7JJFAWlOeZkZNsCovOY/preview",
       "key": "csp_curriculum_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csp_curriculum_guide"
