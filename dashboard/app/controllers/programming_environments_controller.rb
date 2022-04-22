@@ -2,7 +2,7 @@ class ProgrammingEnvironmentsController < ApplicationController
   include ProxyHelper
   EXPIRY_TIME = 30.minutes
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show, :docs_show, :docs_index]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show, :docs_show, :docs_index, :get_summary_by_name]
   before_action :set_programming_environment, except: [:index, :docs_index, :new, :create, :docs_show]
   authorize_resource
 
@@ -68,14 +68,14 @@ class ProgrammingEnvironmentsController < ApplicationController
 
   def show
     return head :forbidden unless can?(:read, @programming_environment)
-    @programming_environment_categories = @programming_environment.categories.select {|c| c.programming_expressions.count > 0}.map(&:summarize_for_environment_show)
+    @programming_environment_categories = @programming_environment.categories_for_navigation
   end
 
   def docs_show
     if DCDO.get('use-studio-code-docs', false)
       @programming_environment = ProgrammingEnvironment.find_by_name(params[:programming_environment_name])
       return render :not_found unless @programming_environment
-      @programming_environment_categories = @programming_environment.categories.select {|c| c.programming_expressions.count > 0}.map(&:summarize_for_environment_show)
+      @programming_environment_categories = @programming_environment.categories_for_navigation
       render :show
     else
       render_proxied_url(
@@ -93,6 +93,12 @@ class ProgrammingEnvironmentsController < ApplicationController
     render(status: 200, plain: "Destroyed #{@programming_environment.name}")
   rescue => e
     render(status: :not_acceptable, plain: e.message)
+  end
+
+  def get_summary_by_name
+    return render :not_found unless @programming_environment
+    return head :forbidden unless can?(:get_summary_by_name, @programming_environment)
+    return render json: @programming_environment.categories_for_get
   end
 
   private

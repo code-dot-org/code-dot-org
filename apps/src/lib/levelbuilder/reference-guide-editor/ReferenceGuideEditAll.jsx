@@ -175,6 +175,7 @@ export default function ReferenceGuideEditAll(props) {
           className="create-btn"
           icon={<FontAwesome icon="plus" />}
           iconBefore={true}
+          href={`${baseUrl}/new`}
           text="Create New Guide"
         />
       </div>

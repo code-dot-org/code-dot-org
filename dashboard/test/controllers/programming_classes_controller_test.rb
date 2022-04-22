@@ -84,6 +84,33 @@ class ProgrammingClassesControllerTest < ActionController::TestCase
     assert_equal 2, programming_class.programming_methods.count
   end
 
+  test 'can update and destroy programming methods when updating programming class' do
+    sign_in @levelbuilder
+    File.expects(:write).once
+
+    programming_class = create :programming_class, programming_environment: @programming_environment
+    category = create :programming_environment_category, programming_environment: @programming_environment
+    method_to_update = create :programming_method, programming_class: programming_class
+    method_to_destroy = create :programming_method, programming_class: programming_class
+
+    post :update, params: {
+      id: programming_class.id,
+      key: programming_class.key,
+      name: 'new name',
+      categoryKey: category.key,
+      fields: [{name: 'field 1', type: 'int'}],
+      methods: [{id: method_to_update.id, name: 'updated name'}]
+    }
+    assert_response :ok
+    programming_class.reload
+
+    assert_equal 'new name', programming_class.name
+    assert_equal category, programming_class.programming_environment_category
+    assert_equal 1, programming_class.programming_methods.count
+    assert_equal 'updated name', programming_class.programming_methods.first.name
+    assert_nil ProgrammingMethod.find_by_id(method_to_destroy.id)
+  end
+
   test 'data is passed down to edit page' do
     sign_in @levelbuilder
 
@@ -102,6 +129,8 @@ class ProgrammingClassesControllerTest < ActionController::TestCase
       File.stubs(:write)
       programming_environment = create :programming_environment
       @programming_class = create :programming_class, programming_environment: programming_environment
+      unpublished_programming_environment = create :programming_environment, published: false
+      @unpublished_programming_class = create :programming_class, programming_environment: unpublished_programming_environment
 
       @update_params = {id: @programming_class.id, name: 'new name'}
     end
@@ -125,5 +154,15 @@ class ProgrammingClassesControllerTest < ActionController::TestCase
     test_user_gets_response_for :update, params: -> {@update_params}, user: :student, response: :forbidden
     test_user_gets_response_for :update, params: -> {@update_params}, user: :teacher, response: :forbidden
     test_user_gets_response_for :update, params: -> {@update_params}, user: :levelbuilder, response: :success
+
+    test_user_gets_response_for :show, params: -> {{id: @programming_class.id}}, user: nil, response: :success
+    test_user_gets_response_for :show, params: -> {{id: @programming_class.id}}, user: :student, response: :success
+    test_user_gets_response_for :show, params: -> {{id: @programming_class.id}}, user: :teacher, response: :success
+    test_user_gets_response_for :show, params: -> {{id: @programming_class.id}}, user: :levelbuilder, response: :success
+
+    test_user_gets_response_for :show, params: -> {{id: @unpublished_programming_class.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in', name: 'test_signed_out_calling_get_show_for_unpublished_class_should_receive_redirect'
+    test_user_gets_response_for :show, params: -> {{id: @unpublished_programming_class.id}}, user: :student, response: :forbidden, name: 'test_student_calling_get_show_for_unpublished_class_should_receive_forbidden'
+    test_user_gets_response_for :show, params: -> {{id: @unpublished_programming_class.id}}, user: :teacher, response: :forbidden, name: 'test_teacher_calling_get_show_for_unpublished_class_should_receive_forbidden'
+    test_user_gets_response_for :show, params: -> {{id: @unpublished_programming_class.id}}, user: :levelbuilder, response: :success, name: 'test_levelbuilder_calling_get_show_for_unpublished_class_should_receive_success'
   end
 end
