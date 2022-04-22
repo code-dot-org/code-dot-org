@@ -699,7 +699,8 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should load file contents when editing a dsl defined level" do
     level_path = 'config/scripts/test_demo_level.external'
-    data, _ = External.parse_file level_path
+    contents = File.read(level_path)
+    data, _ = External.parse(contents, level_path)
     External.setup data
 
     level = Level.find_by_name 'Test Demo Level'
@@ -711,7 +712,8 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should load encrypted file contents when editing a dsl defined level with the wrong encryption key" do
     level_path = 'config/scripts/test_external_markdown.external'
-    data, _ = External.parse_file level_path
+    contents = File.read(level_path)
+    data, _ = External.parse(contents, level_path)
     External.setup data
     CDO.stubs(:properties_encryption_key).returns("thisisafakekeyyyyyyyyyyyyyyyyyyyyy")
     level = Level.find_by_name 'Test External Markdown'
