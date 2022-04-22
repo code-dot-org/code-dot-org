@@ -9,8 +9,9 @@ import CodeReviewDataApi from '@cdo/apps/templates/instructions/codeReviewV2/Cod
 import ReviewNavigator from '@cdo/apps/templates/instructions/codeReviewV2/ReviewNavigator';
 import CodeReviewTimelineElement, {
   codeReviewTimelineElementType
-} from './codeReview/CodeReviewTimelineElement';
-import CodeReviewTimelineCommit from './codeReview/CodeReviewTimelineCommit';
+} from '@cdo/apps/templates/instructions/codeReview/CodeReviewTimelineElement';
+import CodeReviewTimelineCommit from '@cdo/apps/templates/instructions/codeReview/CodeReviewTimelineCommit';
+import CodeReviewTimelineReview from '@cdo/apps/templates/instructions/codeReview/CodeReviewTimelineReview';
 import Button from '@cdo/apps/templates/Button';
 
 export const VIEWING_CODE_REVIEW_URL_PARAM = 'viewingCodeReview';
@@ -94,21 +95,12 @@ const CommitsAndReviewTab = ({
           />
         </div>
       </div>
-      <CodeReviewTimelineElement type={codeReviewTimelineElementType.CREATED}>
-        <div>Created</div>
-      </CodeReviewTimelineElement>
-      <CodeReviewTimelineElement type={codeReviewTimelineElementType.COMMIT}>
-        <CodeReviewTimelineCommit />
-      </CodeReviewTimelineElement>
-      <CodeReviewTimelineElement type={codeReviewTimelineElementType.COMMIT}>
-        <CodeReviewTimelineCommit />
-      </CodeReviewTimelineElement>
-      <CodeReviewTimelineElement
-        type={codeReviewTimelineElementType.CODE_REVIEW}
-        isLast={true}
-      >
-        <div>Code review</div>
-      </CodeReviewTimelineElement>
+      <div>Example timeline:</div>
+      <CodeReviewTimelineElement type={codeReviewTimelineElementType.CREATED} />
+      <CodeReviewTimelineCommit />
+      <CodeReviewTimelineCommit />
+      <CodeReviewTimelineReview />
+      <CodeReviewTimelineCommit isLastElementInTimeline={true} />
     </div>
   );
 };
