@@ -14,10 +14,14 @@ $(document).ready(() => {
   const store = getStore();
 
   const programmingMethod = getScriptData('programmingMethod');
+  const overloadOptions = getScriptData('overloadOptions');
   ReactDOM.render(
     <Provider store={store}>
       <>
-        <ProgrammingMethodEditor initialProgrammingMethod={programmingMethod} />
+        <ProgrammingMethodEditor
+          initialProgrammingMethod={programmingMethod}
+          overloadOptions={overloadOptions}
+        />
         <ExpandableImageDialog />
       </>
     </Provider>,

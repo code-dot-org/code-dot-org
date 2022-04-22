@@ -116,8 +116,8 @@ class LevelGroup < DSLDefined
     end
   end
 
-  def self.setup(data)
-    level = super(data)
+  def self.setup(data, md5)
+    level = super(data, md5)
 
     levels_and_texts_by_page = data[:pages].map do |page|
       page[:levels].map do |level_name|

@@ -57,6 +57,15 @@ class ProgrammingEnvironmentCategory < ApplicationRecord
     }
   end
 
+  def summarize_for_get
+    {
+      key: key,
+      name: name,
+      color: color,
+      docs: programming_classes.map(&:summarize_for_show) + programming_expressions.map(&:summarize_for_show)
+    }
+  end
+
   def should_be_in_navigation?
     !programming_classes.empty? || !programming_expressions.empty?
   end
