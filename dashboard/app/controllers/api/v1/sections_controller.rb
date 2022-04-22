@@ -38,8 +38,6 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     # Once this has been done, endpoint can use CanCan load_and_authorize_resource
     # rather than manually authorizing (above)
     return head :bad_request unless Section.valid_login_type? params[:login_type]
-    # TODO(dmcavoy): Remove after launching this feature
-    params[:participant_type] = SharedCourseConstants::PARTICIPANT_AUDIENCE.student if params[:participant_type].nil_or_empty?
     return head :bad_request unless Section.valid_participant_type? params[:participant_type]
 
     section = Section.create(
