@@ -304,11 +304,7 @@ Dashboard::Application.routes.draw do
       get 'get_rollup_resources'
     end
 
-    resources :reference_guides, only: [:show, :update, :destroy, :index], param: 'key', path: 'guides' do
-      member do
-        get 'edit'
-      end
-    end
+    resources :reference_guides, param: 'key', path: 'guides'
   end
 
   # CSP 20-21 lockable lessons with lesson plan redirects
@@ -354,6 +350,9 @@ Dashboard::Application.routes.draw do
   end
 
   resources :programming_environments, only: [:index, :new, :create, :edit, :update, :show, :destroy], param: 'name' do
+    member do
+      get :get_summary_by_name
+    end
     resources :programming_expressions, param: 'programming_expression_key', constraints: {programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/} do
       member do
         get :show, to: 'programming_expressions#show_by_keys'

@@ -56,7 +56,10 @@ function renderParameterEditor(parameter, updateFunc) {
   return <ParameterEditor parameter={parameter} update={updateFunc} />;
 }
 
-export default function ProgrammingMethodEditor({initialProgrammingMethod}) {
+export default function ProgrammingMethodEditor({
+  initialProgrammingMethod,
+  overloadOptions
+}) {
   const [
     programmingMethod,
     setProgrammingMethodProperty,
@@ -130,17 +133,33 @@ export default function ProgrammingMethodEditor({initialProgrammingMethod}) {
           style={styles.textInput}
         />
       </label>
+      {programmingMethod.canHaveOverload && (
+        <label>
+          Overload Of
+          <select
+            value={programmingMethod.overloadOf || ''}
+            onChange={e =>
+              setProgrammingMethodProperty('overloadOf', e.target.value)
+            }
+            style={styles.selectInput}
+          >
+            <option value="">None</option>
+            {overloadOptions.map(option => (
+              <option key={option.key} value={option.key}>
+                {option.name}
+              </option>
+            ))}
+          </select>
+        </label>
+      )}
       <CollapsibleEditorSection title="Documentation" collapsed>
         <label>
           External Documentation
           <HelpTip>Link to external documentation</HelpTip>
           <input
-            value={programmingMethod.externalDocumentation}
+            value={programmingMethod.externalLink}
             onChange={e =>
-              setProgrammingMethodProperty(
-                'externalDocumentation',
-                e.target.value
-              )
+              setProgrammingMethodProperty('externalLink', e.target.value)
             }
             style={styles.textInput}
           />
@@ -196,7 +215,7 @@ const programmingMethodShape = PropTypes.shape({
   key: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   categoryKey: PropTypes.string,
-  externalDocumentation: PropTypes.string,
+  externalLink: PropTypes.string,
   content: PropTypes.string,
   syntax: PropTypes.string,
   tips: PropTypes.string,
@@ -206,7 +225,13 @@ const programmingMethodShape = PropTypes.shape({
 });
 
 ProgrammingMethodEditor.propTypes = {
-  initialProgrammingMethod: programmingMethodShape.isRequired
+  initialProgrammingMethod: programmingMethodShape.isRequired,
+  overloadOptions: PropTypes.arrayOf(
+    PropTypes.shape({
+      key: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired
+    })
+  )
 };
 
 const styles = {
