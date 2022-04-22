@@ -44,7 +44,8 @@ RUN apt-get update && \
 		  libssl-dev \
 		  curl \
 		  libreadline-dev \
-		  python python-dev
+		  python python-dev \
+                  vim
 
 # install node
 RUN wget https://nodejs.org/dist/v14.17.1/node-v14.17.1.tar.gz && \
