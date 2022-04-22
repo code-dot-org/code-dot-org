@@ -1,8 +1,11 @@
 import React, {useState} from 'react';
 import {Button} from 'react-bootstrap';
-import FieldGroup from './FieldGroup';
-import {range, forEach, mapValues} from 'lodash';
-import {keyValidation} from '@cdo/apps/templates/certificates/petition/PetitionHelpers';
+import {range, mapValues} from 'lodash';
+import {
+  buildControlledFieldGroup,
+  createErrorMessage,
+  keyValidation
+} from '@cdo/apps/templates/certificates/petition/PetitionHelpers';
 
 const PetitionForm = () => {
   // data starts with all required fields having an empty value to ensure proper validation
@@ -15,27 +18,8 @@ const PetitionForm = () => {
   };
 
   const handleSubmit = e => {
-    const createErrorMessage = () => {
-      let errorStrings = [];
-      forEach(data, (value, key) => {
-        if (keyValidation[key] && !keyValidation[key].isValid(value)) {
-          errorStrings.push(keyValidation[key].errorText);
-        }
-      });
-
-      if (errorStrings.length === 0) {
-        return '';
-      } else if (errorStrings.length === 1) {
-        return `Please ${errorStrings[0]}.`;
-      } else {
-        return `Please ${errorStrings
-          .slice(0, -1)
-          .join(', ')}, and ${errorStrings.slice(-1)}.`;
-      }
-    };
-
     e.preventDefault();
-    setErrorMessage(createErrorMessage());
+    setErrorMessage(createErrorMessage(data));
   };
 
   const buildFieldGroup = (
