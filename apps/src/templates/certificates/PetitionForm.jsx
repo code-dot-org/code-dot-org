@@ -1,15 +1,55 @@
 import React, {useState} from 'react';
 import {Button} from 'react-bootstrap';
 import FieldGroup from './FieldGroup';
-import {range} from 'lodash';
+import {range, forEach} from 'lodash';
+import {isEmail, isInt} from '@cdo/apps/util/formatValidation';
+
+const formValidation = {
+  name: {
+    isValid: value => !!value,
+    errorText: 'include your name'
+  },
+  email: {
+    isValid: isEmail,
+    errorText: 'enter a valid email address'
+  },
+  age: {
+    isValid: isInt,
+    errorText: 'select your age'
+  }
+};
 
 const PetitionForm = () => {
-  const [values, setValues] = useState({});
-  const [errors, setErrors] = useState({});
+  const [data, setData] = useState({name: '', email: '', age: ''});
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = event => {
     event.persist();
-    setValues(values => ({...values, [event.target.name]: event.target.value}));
+    setData(data => ({...data, [event.target.name]: event.target.value}));
+  };
+
+  const handleSubmit = e => {
+    const createErrorMessage = () => {
+      let errorStrings = [];
+      forEach(data, function(value, key) {
+        if (formValidation[key] && !formValidation[key].isValid(value)) {
+          errorStrings.push(formValidation[key].errorText);
+        }
+      });
+
+      if (errorStrings.length === 0) {
+        return '';
+      } else if (errorStrings.length === 1) {
+        return `Please ${errorStrings[0]}.`;
+      } else {
+        return `Please ${errorStrings
+          .slice(0, -1)
+          .join(', ')}, and ${errorStrings.slice(-1)}.`;
+      }
+    };
+
+    e.preventDefault();
+    setErrorMessage(createErrorMessage());
   };
 
   const buildFieldGroup = (
@@ -28,7 +68,7 @@ const PetitionForm = () => {
         componentClass={componentClass}
         help={helpText}
         onChange={handleChange}
-        value={values[id] || ''}
+        value={data[id] || ''}
       >
         {children}
       </FieldGroup>
@@ -41,14 +81,9 @@ const PetitionForm = () => {
         type={'text'}
         help={helpText}
         onChange={handleChange}
-        value={values[id] || ''}
+        value={data[id] || ''}
       />
     );
-  };
-
-  const handleSubmit = e => {
-    e.preventDefault();
-    setErrors(values);
   };
 
   return (
@@ -58,9 +93,7 @@ const PetitionForm = () => {
         className="petition-form"
         onSubmit={handleSubmit}
       >
-        <div className={'petition-space'}>
-          {Object.keys(errors).length > 1 && JSON.stringify(errors)}
-        </div>
+        <div className={'petition-space'}>{errorMessage}</div>
         {buildFieldGroup('name', 'Name')}
         {buildFieldGroup('email', 'Email', 'Only used for infrequent updates')}
         {buildFieldGroup(
