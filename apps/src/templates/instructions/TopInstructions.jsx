@@ -100,7 +100,7 @@ class TopInstructions extends Component {
     isMinecraft: PropTypes.bool.isRequired,
     isBlockly: PropTypes.bool.isRequired,
     isRtl: PropTypes.bool.isRequired,
-    isBackgroundMusicLevel: PropTypes.bool.isRequired,
+    hasBackgroundMusic: PropTypes.bool.isRequired,
     mainStyle: PropTypes.object,
     containerStyle: PropTypes.object,
     resizable: PropTypes.bool,
@@ -575,7 +575,7 @@ class TopInstructions extends Component {
       isMinecraft,
       teacherMarkdown,
       isCollapsed,
-      isBackgroundMusicLevel,
+      hasBackgroundMusic,
       user,
       mainStyle,
       containerStyle,
@@ -664,7 +664,7 @@ class TopInstructions extends Component {
       teacherMarkdown,
       isEmbedView,
       isCollapsed,
-      isBackgroundMusicLevel,
+      hasBackgroundMusic,
       dynamicInstructions,
       dynamicInstructionsKey
     };
@@ -685,7 +685,7 @@ class TopInstructions extends Component {
           displayDocumentationTab={displayDocumentationTab}
           displayReviewTab={displayReviewTab}
           isViewingAsTeacher={this.isViewingAsTeacher}
-          isBackgroundMusicLevel={isBackgroundMusicLevel}
+          hasBackgroundMusic={hasBackgroundMusic}
           fetchingData={fetchingData}
           handleDocumentationClick={this.handleDocumentationClick}
           handleInstructionTabClick={() =>
@@ -884,7 +884,7 @@ export default connect(
     hidden: state.pageConstants.isShareView,
     shortInstructions: state.instructions.shortInstructions,
     isRtl: state.isRtl,
-    isBackgroundMusicLevel: !!state.pageConstants.isBackgroundMusicLevel,
+    hasBackgroundMusic: !!state.pageConstants.hasBackgroundMusic,
     dynamicInstructions: getDynamicInstructions(state.instructions),
     dynamicInstructionsKey: state.instructions.dynamicInstructionsKey,
     overlayVisible: state.instructions.overlayVisible,

@@ -2208,12 +2208,10 @@ Studio.init = function(config) {
 
   config.muteBackgroundMusic = function() {
     Studio.musicController.setMuteMusic(true);
-    Studio.musicController.stop();
   };
 
   config.unmuteBackgroundMusic = function() {
     Studio.musicController.setMuteMusic(false);
-    Studio.musicController.play();
   };
 
   /**

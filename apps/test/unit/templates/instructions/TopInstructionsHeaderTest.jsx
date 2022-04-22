@@ -17,7 +17,7 @@ const DEFAULT_PROPS = {
   levelHasRubric: false,
   isViewingAsTeacher: false,
   isViewingAsInstructorInTraining: false,
-  isBackgroundMusicLevel: false,
+  hasBackgroundMusic: false,
   fetchingData: false,
   handleDocumentationClick: () => {},
   handleInstructionTabClick: () => {},
@@ -105,16 +105,16 @@ describe('TopInstructionsHeader', () => {
     expect(wrapper.find('.uitest-feedback')).to.have.length(0);
   });
 
-  it('does not show mute button when isBackgroundMusicLevel is false', () => {
+  it('does not show mute button when hasBackgroundMusic is false', () => {
     const wrapper = setUp({
-      isBackgroundMusicLevel: false
+      hasBackgroundMusic: false
     });
     expect(wrapper.find('.uitest-mute-music-button')).to.have.length(0);
   });
 
-  it('shows mute button when isBackgroundMusicLevel is true', () => {
+  it('shows mute button when hasBackgroundMusic is true', () => {
     const wrapper = setUp({
-      isBackgroundMusicLevel: true
+      hasBackgroundMusic: true
     });
     expect(wrapper.find('.uitest-mute-music-button')).to.have.length(1);
   });

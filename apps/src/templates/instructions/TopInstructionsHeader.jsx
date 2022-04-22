@@ -22,7 +22,7 @@ function TopInstructionsHeader(props) {
     displayDocumentationTab,
     displayReviewTab,
     isViewingAsTeacher,
-    isBackgroundMusicLevel,
+    hasBackgroundMusic,
     fetchingData,
     handleDocumentationClick,
     handleInstructionTabClick,
@@ -158,7 +158,7 @@ function TopInstructionsHeader(props) {
               />
             )}
         </div>
-        {isBackgroundMusicLevel && (
+        {hasBackgroundMusic && (
           <BackgroundMusicMuteButton
             className="uitest-mute-music-button"
             isMinecraft={isMinecraft}
@@ -258,7 +258,7 @@ TopInstructionsHeader.propTypes = {
   displayDocumentationTab: PropTypes.bool,
   displayReviewTab: PropTypes.bool,
   isViewingAsTeacher: PropTypes.bool,
-  isBackgroundMusicLevel: PropTypes.bool.isRequired,
+  hasBackgroundMusic: PropTypes.bool.isRequired,
   fetchingData: PropTypes.bool,
   handleDocumentationClick: PropTypes.func.isRequired,
   handleInstructionTabClick: PropTypes.func.isRequired,

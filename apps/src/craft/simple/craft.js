@@ -211,20 +211,23 @@ Craft.init = function(config) {
 
   config.muteBackgroundMusic = function() {
     Craft.musicController.setMuteMusic(true);
-    Craft.musicController.stop();
   };
 
   config.unmuteBackgroundMusic = function() {
-    Craft.musicController.setMuteMusic(false);
-    Craft.beginBackgroundMusic();
+    var songToPlayFirst = Craft.getFirstSong();
+    Craft.musicController.setMuteMusic(false, songToPlayFirst);
   };
 
   // Play music when the instructions are shown
   Craft.beginBackgroundMusic = function() {
+    var songToPlayFirst = Craft.getFirstSong();
+    Craft.musicController.play(songToPlayFirst);
+  };
+
+  Craft.getFirstSong = function() {
     Sounds.getSingleton().whenAudioUnlocked(function() {
       var hasSongInLevel = Craft.level.songs && Craft.level.songs.length > 1;
-      var songToPlayFirst = hasSongInLevel ? Craft.level.songs[0] : null;
-      Craft.musicController.play(songToPlayFirst);
+      return hasSongInLevel ? Craft.level.songs[0] : null;
     });
   };
 
