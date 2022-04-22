@@ -101,11 +101,11 @@ class School < ApplicationRecord
 
   # School statuses representing currently open schools in 2018-2019 import.
   # Non-open statuses are 'Closed', 'Future', 'Inactive'
-  OPEN_SCHOOL_STATUSES = ['Open', 'New', 'Reopened', 'Changed Boundary/Agency', 'Added']
+  OPEN_SCHOOL_STATUSES_2018_2019 = ['Open', 'New', 'Reopened', 'Changed Boundary/Agency', 'Added']
 
-  # School statuses representing currently open schools in 2019-2020 import.
+  # School statuses representing currently open schools in 2019-2020 and 2020-2021 import.
   # Non-open statuses are '2-Closed', '7-Future', '6-Inactive'
-  OPEN_SCHOOL_STATUSES_2019_2020 = ['1-Open', '3-New', '8-Reopened', '5-Changed Boundary/Agency', '4-Added']
+  OPEN_SCHOOL_STATUSES = ['1-Open', '3-New', '8-Reopened', '5-Changed Boundary/Agency', '4-Added']
 
   # School categories need to be mapped to existing values for 2019-2020 import.
   SCHOOL_CATEGORY_MAP = {
@@ -340,7 +340,7 @@ class School < ApplicationRecord
             # New addition for this iteration -- a "school category",
             # which is Regular, Special Education, Alternative, or Career and Technical
             school_category:              row['SCH_TYPE_TEXT'],
-            last_known_school_year_open:  OPEN_SCHOOL_STATUSES.include?(row['UPDATED_STATUS_TEXT']) ? '2018-2019' : nil
+            last_known_school_year_open:  OPEN_SCHOOL_STATUSES_2018_2019.include?(row['UPDATED_STATUS_TEXT']) ? '2018-2019' : nil
           }
         end
       end
@@ -378,7 +378,7 @@ class School < ApplicationRecord
             school_district_id:           row['Agency ID - NCES Assigned [Public School] Latest available year'].to_i,
             state_school_id:              row['State School ID [Public School] 2019-20'],
             school_category:              SCHOOL_CATEGORY_MAP[row['School Type [Public School] 2019-20']].presence,
-            last_known_school_year_open:  OPEN_SCHOOL_STATUSES_2019_2020.include?(row['Updated Status [Public School] 2019-20']) ? '2019-2020' : nil
+            last_known_school_year_open:  OPEN_SCHOOL_STATUSES.include?(row['Updated Status [Public School] 2019-20']) ? '2019-2020' : nil
           }
         end
       end
@@ -403,7 +403,7 @@ class School < ApplicationRecord
             school_district_id:           row['Agency ID - NCES Assigned [Public School] Latest available year'].to_i,
             state_school_id:              row['State School ID [Public School] 2020-21'],
             school_category:              SCHOOL_CATEGORY_MAP[row['School Type [Public School] 2020-21']].presence,
-            last_known_school_year_open:  OPEN_SCHOOL_STATUSES_2019_2020.include?(row['Updated Status [Public School] 2020-21']) ? '2020-2021' : nil
+            last_known_school_year_open:  OPEN_SCHOOL_STATUSES.include?(row['Updated Status [Public School] 2020-21']) ? '2020-2021' : nil
           }
         end
       end
