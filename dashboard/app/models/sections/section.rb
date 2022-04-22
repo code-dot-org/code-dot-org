@@ -448,8 +448,9 @@ class Section < ApplicationRecord
     false
   end
 
-  # Returns the ids of all scripts which any participant in this section has ever
-  # been assigned to or made progress on.
+  # Returns the ids of all units which any participant in this section has ever
+  # been assigned to or made progress on if the instructor of the section can
+  # be an instructor for that unit
   def participant_script_ids
     # This performs two queries, but could be optimized to perform only one by
     # doing additional joins.
