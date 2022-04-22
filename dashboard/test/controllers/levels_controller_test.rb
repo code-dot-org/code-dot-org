@@ -635,6 +635,19 @@ class LevelsControllerTest < ActionController::TestCase
     assert_redirected_to "/"
   end
 
+  test 'can edit encrypted level' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in @levelbuilder
+    level = create :multi, encrypted: true
+
+    get :edit, params: {id: level.id}
+    assert_response :success
+
+    level.update!(encrypted: 'true')
+    get :edit, params: {id: level.id}
+    assert_response :success
+  end
+
   test "should not create level if not levelbuilder" do
     [@not_admin, @admin].each do |user|
       sign_in user
