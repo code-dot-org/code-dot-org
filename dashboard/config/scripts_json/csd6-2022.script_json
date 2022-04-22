@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-13 13:44:35 UTC",
+    "serialized_at": "2022-04-21 23:20:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -90,7 +90,6 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students will do some research into interesting innovations in computing. This lesson will expose students to a wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.\n\n**Question of the Day:** What is a computing innovation?",
         "preparation": "* Cue up [The Internet of Things - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [Computer Science is Changing Everything - Video](https://www.youtube.com/watch?v=QvyTEx1wyOY)\t\n* Print out a copy of the activity guide for each student\n* Decide how you would like to distribute the Computing Innovations Research Areas, and if you would like to make any edits to the document to add or remove websites.",
-        "purpose": "This lesson will lay the groundwork for students' understanding of how their Circuit Board could be used to model an innovative computing device. The goal is to get them thinking about how computers can be embedded into just about anything, and to start considering the potential impacts of such applications.",
         "student_overview": "In this lesson, you will explore a wide variety of new and innovative computing platforms while expanding your understanding of what a computer can be.\n"
       },
       "seeding_key": {
@@ -576,19 +575,6 @@
       }
     },
     {
-      "key": "d412e2da-1513-4fed-b0b8-2bf447573fd3",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "d412e2da-1513-4fed-b0b8-2bf447573fd3",
-        "lesson.key": "The Circuit Playground",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd6-2022"
-      }
-    },
-    {
       "key": "497560c4-a4cc-4a54-8f5f-017a9e604cff",
       "position": 1,
       "properties": {
@@ -625,19 +611,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "cf87c1c2-8b61-4831-be1d-bc41be6f4ba0",
-        "lesson.key": "Updating Screen Elements",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd6-2022"
-      }
-    },
-    {
-      "key": "2bb964f7-eeca-494e-a58e-eda2aacf7c56",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "2bb964f7-eeca-494e-a58e-eda2aacf7c56",
         "lesson.key": "Updating Screen Elements",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-2022"
@@ -686,19 +659,6 @@
       }
     },
     {
-      "key": "e5b0cd25-ad2a-4d7a-978e-d7bb70214d1a",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "e5b0cd25-ad2a-4d7a-978e-d7bb70214d1a",
-        "lesson.key": "Board Events",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd6-2022"
-      }
-    },
-    {
       "key": "8acdea08-64f6-4c2a-a2eb-4430b915ded0",
       "position": 1,
       "properties": {
@@ -735,19 +695,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "c8c76948-cc6b-4a29-8fce-1591d0762c68",
-        "lesson.key": "Variables and If Statements",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd6-2022"
-      }
-    },
-    {
-      "key": "001b8c18-fd9a-4a76-8183-348cf65eb156",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "001b8c18-fd9a-4a76-8183-348cf65eb156",
         "lesson.key": "Variables and If Statements",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-2022"
@@ -796,19 +743,6 @@
       }
     },
     {
-      "key": "81e6dace-a4b3-4b5b-8a39-b9f3ef8d2e9c",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "81e6dace-a4b3-4b5b-8a39-b9f3ef8d2e9c",
-        "lesson.key": "Mini-Project: On-The-Go App",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd6-2022"
-      }
-    },
-    {
       "key": "10c7736c-f5d1-41e5-9040-30abb38a95bf",
       "position": 1,
       "properties": {
@@ -845,19 +779,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "8208bc41-9a75-48b7-aece-1992f5754d44",
-        "lesson.key": "Color LEDs",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd6-2022"
-      }
-    },
-    {
-      "key": "9a3285d9-1326-4480-84b6-b0817781540c",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "9a3285d9-1326-4480-84b6-b0817781540c",
         "lesson.key": "Color LEDs",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-2022"
@@ -906,19 +827,6 @@
       }
     },
     {
-      "key": "a97465ae-d2a8-4cbd-8b95-f969700fdd3c",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "a97465ae-d2a8-4cbd-8b95-f969700fdd3c",
-        "lesson.key": "Getting Screen Inputs",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd6-2022"
-      }
-    },
-    {
       "key": "533692d3-a914-4927-a542-a4b86b99c79e",
       "position": 1,
       "properties": {
@@ -955,19 +863,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "3bed049b-6e73-4364-b9da-6e739f72c82e",
-        "lesson.key": "Combining Inputs and Outputs",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd6-2022"
-      }
-    },
-    {
-      "key": "c1ee24dc-f64c-4ab2-8041-d6cdc14aa643",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "c1ee24dc-f64c-4ab2-8041-d6cdc14aa643",
         "lesson.key": "Combining Inputs and Outputs",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-2022"
@@ -1043,19 +938,6 @@
       }
     },
     {
-      "key": "0b81a5ee-1590-4a9a-9da1-0a10d2e5b01e",
-      "position": 6,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "0b81a5ee-1590-4a9a-9da1-0a10d2e5b01e",
-        "lesson.key": "Project: Human Device Interaction",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd6-2022"
-      }
-    },
-    {
       "key": "e442e49a-0f47-4f9d-a2f1-2bb40bf49f09",
       "position": 1,
       "properties": {
@@ -1092,19 +974,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "5c53e3df-2b36-46c8-9cce-d849e378f4e5",
-        "lesson.key": "Board Sensors",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd6-2022"
-      }
-    },
-    {
-      "key": "20abd6be-3fed-4bae-bba1-66940ad51525",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "20abd6be-3fed-4bae-bba1-66940ad51525",
         "lesson.key": "Board Sensors",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd6-2022"
@@ -1153,19 +1022,6 @@
       }
     },
     {
-      "key": "2c771a4e-b4a0-42a0-b7d4-42cef9bf7282",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "2c771a4e-b4a0-42a0-b7d4-42cef9bf7282",
-        "lesson.key": "Accelerometer",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd6-2022"
-      }
-    },
-    {
       "key": "b6364f64-7652-413c-b216-00e84f75dc46",
       "position": 1,
       "properties": {
@@ -1202,19 +1058,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "ea249449-8468-4a0f-9291-66fcb8e755c1",
-        "lesson.key": "Making Music",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd6-2022"
-      }
-    },
-    {
-      "key": "e3e6b673-e6e7-4dd7-a00f-f2577ade6b08",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "e3e6b673-e6e7-4dd7-a00f-f2577ade6b08",
         "lesson.key": "Making Music",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd6-2022"
@@ -1263,23 +1106,10 @@
       }
     },
     {
-      "key": "4dfffa1b-7b65-47e6-bf50-022ea3c3c543",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "4dfffa1b-7b65-47e6-bf50-022ea3c3c543",
-        "lesson.key": "Functions",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd6-2022"
-      }
-    },
-    {
       "key": "8b4381a8-2c44-4715-a96f-318b5e328758",
       "position": 1,
       "properties": {
-        "duration": 5,
+        "duration": 10,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -1293,7 +1123,7 @@
       "key": "98874052-3ce4-460e-b161-718d1ee1e25f",
       "position": 2,
       "properties": {
-        "duration": 80,
+        "duration": 75,
         "name": "Activity"
       },
       "seeding_key": {
@@ -1312,19 +1142,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "56786253-7d5c-448f-84f3-113a7a58c867",
-        "lesson.key": "Mini-Project: Interactive Art",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd6-2022"
-      }
-    },
-    {
-      "key": "f056b48b-21f4-446e-834c-19244a7a1ae3",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "f056b48b-21f4-446e-834c-19244a7a1ae3",
         "lesson.key": "Mini-Project: Interactive Art",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd6-2022"
@@ -1428,19 +1245,6 @@
       }
     },
     {
-      "key": "beb48976-76eb-4f80-adc0-a41ae4f81d51",
-      "position": 4,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "beb48976-76eb-4f80-adc0-a41ae4f81d51",
-        "lesson.key": "Physical Inputs and Buttons",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd6-2022"
-      }
-    },
-    {
       "key": "519efadb-6bb4-4341-a9ec-1b666d76ac01",
       "position": 1,
       "properties": {
@@ -1490,19 +1294,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "0e3432dd-ba1d-4c56-a446-81c419bd6db9",
-        "lesson.key": "Project - Prototype an Innovation",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd6-2022"
-      }
-    },
-    {
-      "key": "d2ff5f5a-875d-4524-8930-d7e45545b0c2",
-      "position": 5,
-      "properties": {
-        "name": "Lesson Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "d2ff5f5a-875d-4524-8930-d7e45545b0c2",
         "lesson.key": "Project - Prototype an Innovation",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd6-2022"
@@ -1662,11 +1453,28 @@
       "key": "f12fbcf7-5d63-4105-a269-f198663ecdfa",
       "position": 1,
       "properties": {
-        "description": "**Journal:** What was the most surprising, cool, or impressive thing that you found in your research? If you could develop an innovation of your own, what would it be?",
-        "name": "Journaling\r"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [Circuits and Logic Video](https://www.youtube.com/watch?v=DTwtegUN3Gc&feature=youtu.be) in the slides. This video foreshadows what students will experience in the unit, using a circuit board to create devices to solve problems. The final moment of the video - \"What would you like to do with all these circuits?\" - can be used as a segue to the wrap-up journal prompt.",
+        "name": "Journaling\r",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**Limor Fried and Adafruit Industries:** Limor Fried (pronounced like \"freed\", rhymes with \"speed\") is the founder and CEO of Adafruit Industries, which produces the Circuit Playground used in this unit. For students looking for role models that apply computer science in creative or entrepreneurial ways, consider sharing more about Limor with your students throughout the unit such as [this interview with Limor from 2021](https://codeorg.medium.com/5-questions-with-adafruits-limor-fried-f727dd4a8cd0)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "f12fbcf7-5d63-4105-a269-f198663ecdfa",
+        "lesson_activity.key": "d79a6bf6-2044-46f7-97ff-06e2f8d72900"
+      }
+    },
+    {
+      "key": "2d9bcccb-deb9-43da-a8d7-c032efe392c2",
+      "position": 2,
+      "properties": {
+        "description": "**Journal:** What was the most surprising, cool, or impressive thing that you found in your research? If you could develop an innovation of your own, what would it be?"
+      },
+      "seeding_key": {
+        "activity_section.key": "2d9bcccb-deb9-43da-a8d7-c032efe392c2",
         "lesson_activity.key": "d79a6bf6-2044-46f7-97ff-06e2f8d72900"
       }
     },
@@ -1698,7 +1506,7 @@
       "key": "158db922-b97c-4498-9ebc-d6b3c9763f31",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Pass out a board and USB cable to each pair of students. Let students know that they should not yet plug the boards in.\n\n**Prompt:** Ask pairs to spend one minute looking over the board, focusing on the details. What do you think this board does (or could do) and why?\n\n**Share:** Have groups share back their thoughts to the whole group, keeping track of ideas on the board. Push students to support their ideas with evidence from reviewing the board, but don't worry about ensuring correctness at this point. As students go through this unit, they can refer back and refine this list.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out a board and USB cable to each pair of students. Let students know that they should not yet plug the boards in.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Ask pairs to spend one minute looking over the board, focusing on the details. What do you think this board does (or could do) and why?\n\n**Share:** Have groups share back their thoughts to the whole group, keeping track of ideas on the board. Push students to support their ideas with evidence from reviewing the board, but don't worry about ensuring correctness at this point. As students go through this unit, they can refer back and refine this list.\n",
         "name": "Board Inspection\r"
       },
       "seeding_key": {
@@ -1722,7 +1530,7 @@
       "key": "9d915931-896f-44e4-b303-cdc424e94d00",
       "position": 3,
       "properties": {
-        "description": "**Vocabulary:**\n- **Output**: the information computers give to users, devices, or other computers"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulary:**\n- **Output**: the information computers give to users, devices, or other computers"
       },
       "seeding_key": {
         "activity_section.key": "9d915931-896f-44e4-b303-cdc424e94d00",
@@ -1733,7 +1541,7 @@
       "key": "ba08c8f5-a8be-476d-9be8-c0bc9745685b",
       "position": 4,
       "properties": {
-        "description": "**Question of the Day:** What outputs can I control on the circuit playground?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day:** What outputs can I control on the circuit playground?"
       },
       "seeding_key": {
         "activity_section.key": "ba08c8f5-a8be-476d-9be8-c0bc9745685b",
@@ -1744,7 +1552,7 @@
       "key": "01ae9522-6c73-4653-beb4-2d7fcf1cbff9",
       "position": 1,
       "properties": {
-        "description": "**Transition:** Ask students to plug their boards in and head to [the Maker Toolkit setup page](//studio.code.org/maker/setup) to confirm that the software has been correctly configured.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Ask students to plug their boards in and head to [the Maker Toolkit setup page](//studio.code.org/maker/setup) to confirm that the software has been correctly configured.",
         "name": "Connecting The Board",
         "tips": [
           {
@@ -1762,7 +1570,7 @@
       "key": "60cc9b73-a9f5-4e7e-a285-976d896cf2d6",
       "position": 2,
       "properties": {
-        "description": "**Transition:** Send students to Code Studio"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio"
       },
       "seeding_key": {
         "activity_section.key": "60cc9b73-a9f5-4e7e-a285-976d896cf2d6",
@@ -1788,7 +1596,11 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Facilitating Predict Levels:** Predict levels are a great opportunity for students to think critically about code and engage in class discussions. Here are a few strategies for facilitating these levels:\n\n_Think-Pair-Share First:_ Consider having students think of their own prediction and discuss with a partner before typing in their response. Once they're run the code, bring the class together for a full-group discussion to discuss how their predictions were similar or different from the resulting program. Use this as an opportunity to address any misconceptions that students may have had about the code initially.\n\n_Full-Class First:_ Consider presenting the predict level to the entire class and asking the class to share what they think will happen. Keep track of their predictions at the front of the room, then run the code and compare the result to their predictions. After discussing and clarifying misconceptions, invite students to return to the Predict level on their own and enter in their new understanding of what the level will do.\n\n**Caution: Predict Entries Can't Be Deleted!** Once you enter an answer into the predict box, you are not able to reset it. This can make it difficult to repeat this process with multiple classes. Instead, we recommend entering dummy text like \"Class discussion\" and running the code. This way, the answer isn't \"spoiled\" for future classes. However, this means you will need to keep track of predictions separately such as on a whiteboard or in a document."
+            "markdown": "**Facilitating Predict Levels:** Predict levels are a great opportunity for students to think critically about code and engage in class discussions. Consider having students think of their own prediction and discuss with a partner before typing in their response. Once they're run the code, bring the class together for a full-group discussion to discuss how their predictions were similar or different from the resulting program. Use this as an opportunity to address any misconceptions that students may have had about the code initially.\n\n**Caution: Predict Entries Can't Be Deleted!** Once you enter an answer into the predict box, you are not able to reset it. This can make it difficult to repeat this process with multiple classes. Instead, we recommend entering dummy text like \"Class discussion\" and running the code. This way, the answer isn't \"spoiled\" for future classes. However, this means you will need to keep track of predictions separately such as on a whiteboard or in a document.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          },
+          {
+            "type": "discussionGoal",
+            "markdown": "When the button on the screen is clicked, the code will turn on a small red LED near the USB plug of the circuit playground. Students may have expected one of the larger LED lights to turn on, so they may not immediately notice the smaller red LED. "
           }
         ]
       },
@@ -1801,7 +1613,13 @@
       "key": "8521baa9-94ef-4752-ad13-09bacfd132d6",
       "position": 5,
       "properties": {
-        "progression_name": "Skill Building"
+        "progression_name": "Skill Building",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Skill Building Levels:** Skill Building levels are designed to continue teaching new skills and blocks through exploration, trial-and-error, and using worked examples from pre-supplied code. Students are still getting familiar with the concepts in the lesson and will need strong support throughout these levels to build confidence, debug their code, and cement their understanding. \n\nConsider having students complete Skill Building levels in pairs using **Pair Programming**, which has students use one computer and trade between being a Driver or a Navigator. This process is highlighted in [this video](https://www.youtube.com/watch?v=q7d_JtyCq1A), which you can show to the class. You can have students switch roles based on a timer, or switch every time they complete a level.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "8521baa9-94ef-4752-ad13-09bacfd132d6",
@@ -1812,7 +1630,13 @@
       "key": "a184074d-7a79-46a5-892f-8aeff5829c19",
       "position": 6,
       "properties": {
-        "progression_name": "Predict"
+        "progression_name": "Predict",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "This code uses the buzzer on the Circuit Playground to create a sound. The first number in the frequency block controls the note of the buzzer - low numbers create lower bass notes, and high numbers create higher frequency sounds. Students will explore these frequencies in the next few levels"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a184074d-7a79-46a5-892f-8aeff5829c19",
@@ -1834,7 +1658,13 @@
       "key": "e8a29551-e19b-47bd-9263-f1c1a08575ff",
       "position": 8,
       "properties": {
-        "progression_name": "Practice"
+        "progression_name": "Practice",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Practice Levels:** Practice levels are designed for students to apply their knowledge from the previous levels and develop fluency in using the new blocks of code to solve problems. Students can choose which practice levels they would like to complete, and it’s not necessary for a student to complete each practice level before continuing.\n\nStudents tend to be more engaged and respond better when they have an authentic choice about how to continue their learning. Allow students to choose practice levels according to their interests and level of comfort, and consider providing opportunities for students to demonstrate and explain their solutions to the practice levels they chose to the entire class.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e8a29551-e19b-47bd-9263-f1c1a08575ff",
@@ -1845,7 +1675,13 @@
       "key": "287099bd-5275-4c84-88bc-f7c5d93e99c8",
       "position": 9,
       "properties": {
-        "progression_name": "Assessment"
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Assessment Levels:** Assessment levels contain a single task that requires applying the skills and concepts from the level in order to solve. Students should complete these levels individually and you can use your judgment of how much external help students should have. Assessment levels also contain a rubric that can be used for formative assessment and a box to provide feedback to students - [click here to learn more about using rubrics and giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-).\n\n**Digging Deeper:** For more tips about assessing student work, see the [CSD Guide to Assessment](https://docs.google.com/document/d/1PdGi9HCStRVDoIMKg2p5E4V4i_eN-CVqKgS-1VrZK18/preview)."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "287099bd-5275-4c84-88bc-f7c5d93e99c8",
@@ -1856,7 +1692,13 @@
       "key": "6b3acaa2-c6c8-40b4-ad1c-f764207be9a2",
       "position": 10,
       "properties": {
-        "progression_name": "Challenge"
+        "progression_name": "Challenge",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Challenge Levels:** Challenge levels are designed as extensions to the concepts and skills students learn throughout a lesson. Challenge levels tend to focus on more open-ended tasks for students to complete, or opportunities to combine several skills from previous lessons together into one program.\n\nChallenge levels do **not** need to be completed for students to meet the core objectives of a lesson. Instead, every task in a challenge level is meant to supplement and enrich the learning objectives of a lesson, but are not required for future lessons. Students can still demonstrate mastery of the objectives of a lesson without completing any of the challenge levels.\n\n**Digging Deeper:** For more tips about programming levels, see the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "6b3acaa2-c6c8-40b4-ad1c-f764207be9a2",
@@ -1867,7 +1709,7 @@
       "key": "979f2b9a-28af-4ca1-97ad-25518f118554",
       "position": 1,
       "properties": {
-        "description": "**Journal:** Ask students to reflect on their introduction to the Circuit Playground. What did they think it was at first inspection? How did those expectations change after having programmed on the board?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Ask students to reflect on their introduction to the Circuit Playground. What did they think it was at first inspection? How did those expectations change after having programmed on the board?",
         "name": "What's in a Board\r"
       },
       "seeding_key": {
@@ -1876,21 +1718,10 @@
       }
     },
     {
-      "key": "3ca0eb95-491e-4ab5-8797-b516da70d3a7",
-      "position": 1,
-      "properties": {
-        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfROQdamfLnHVn11tsjHsGPElKhC5LzDfHFEqhaj0igtsqHAA/viewform?usp=sf_link)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
-      },
-      "seeding_key": {
-        "activity_section.key": "3ca0eb95-491e-4ab5-8797-b516da70d3a7",
-        "lesson_activity.key": "d412e2da-1513-4fed-b0b8-2bf447573fd3"
-      }
-    },
-    {
       "key": "80e62e03-08c7-4553-8995-a653f347ae6c",
       "position": 1,
       "properties": {
-        "description": "**Display:** Show students this example image\n\n<img alt=\"\" src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/diamond.png\" style=\"max-width: 200px;\">",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students this example image\n\n<img alt=\"\" src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/diamond.png\" style=\"max-width: 200px;\">",
         "name": "UI Element Properties Refresher"
       },
       "seeding_key": {
@@ -1902,7 +1733,7 @@
       "key": "85c76988-52f8-4b49-aba7-1b42dcf9d133",
       "position": 2,
       "properties": {
-        "description": "**Discuss:** How would you describe to somebody else how to recreate this screen? What specific details would they need to know about each design element?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _How would you describe to somebody else how to recreate this screen? What specific details would they need to know about each design element?_"
       },
       "seeding_key": {
         "activity_section.key": "85c76988-52f8-4b49-aba7-1b42dcf9d133",
@@ -1924,7 +1755,13 @@
       "key": "9ae0e497-0968-45f0-aa40-82f5d1d01712",
       "position": 1,
       "properties": {
-        "description": "**Transition:** Send students to Code Studio"
+        "description": "**Transition:** Send students to Code Studio",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9ae0e497-0968-45f0-aa40-82f5d1d01712",
@@ -1935,7 +1772,17 @@
       "key": "c77e40a7-1e58-48b3-a333-c458c9983ef8",
       "position": 2,
       "properties": {
-        "progression_name": "Predict"
+        "progression_name": "Predict",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "Students are familiar with design mode to set up the user interface of their app, but this level introduces how to change design elements with code. Students can hover over elements to see their IDs and use that to inform their guesses. When they press Run, the code will run slowly and highlight each line as it runs so students can see step-by-step what each line does. This can be helpful when discussing their prediction and matching the result to specific lines of code."
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "**Design Mode Review:** If students need a review on Design Mode and Events in App Lab, consider showing students the following videos:\n\n- [Intro to Design Mode](https://youtu.be/jiX1dST2PCw)\n- [Events in App Lab](https://youtu.be/npa2r4t6y2A)\n\nAs an ongoing resources for students, consider printing or displaying the following Help and Tip pages for students:\n- [Design Mode](https://drive.google.com/file/d/1WvW6pkUseGiXOg3TgeNAFPg-VwK65gjN/view?usp=sharing)\n- [Design Mode Elements](https://drive.google.com/file/d/1_freDr5sGWMgTKwDH0kFJwkKXjzVCoE_/view?usp=sharing)\n- [Responding to User Input](https://drive.google.com/file/d/1zTyBx7l2RiRLcB9AjRZZ314PL6kvY_-D/view)\n- [Changing Screens](https://drive.google.com/file/d/1d9yygBuMPaCOPP3fraA3oacuy_RD9iNB/view)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c77e40a7-1e58-48b3-a333-c458c9983ef8",
@@ -1946,7 +1793,13 @@
       "key": "a0549135-da45-4397-be95-1aad863b37d2",
       "position": 3,
       "properties": {
-        "progression_name": "Skill Building"
+        "progression_name": "Skill Building",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Normalizing Mistakes and Supporting Debugging:** As programming levels become more complex, students may find themselves with bugs in their code that they need to untangle. If this happens frequently, this can be a demoralizing experience for students and can affect their self-perception of how capable they are in class. \n\nTo counter this, we recommend normalizing bugs and mistakes as something that happens to everyone - it’s just part of the process. You can show students our [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s), which includes several students normalizing mistakes and discussing debugging strategies that students can use. Additionally, consider displaying the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) for students to reference throughout the unit and having [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) available for students to use."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a0549135-da45-4397-be95-1aad863b37d2",
@@ -1968,7 +1821,13 @@
       "key": "04b6ab50-104f-420b-9e70-8da663144a51",
       "position": 5,
       "properties": {
-        "progression_name": "Assessment"
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "04b6ab50-104f-420b-9e70-8da663144a51",
@@ -1990,7 +1849,7 @@
       "key": "28603b64-114b-4ff5-9a65-dde73bb48d23",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** Imagine you were creating an app and needed to represent an “error” to the user. Thinking about today’s lesson and yesterday’s lesson, how could we show an “error” to the user on both the screen and circuit playground?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Imagine you were creating an app and needed to represent an “error” to the user. Thinking about today’s lesson and yesterday’s lesson, how could we show an “error” to the user on both the screen and circuit playground?_"
       },
       "seeding_key": {
         "activity_section.key": "28603b64-114b-4ff5-9a65-dde73bb48d23",
@@ -2030,21 +1889,10 @@
       }
     },
     {
-      "key": "d294f289-13e3-4b06-b45e-0f03839cb671",
-      "position": 1,
-      "properties": {
-        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfROQdamfLnHVn11tsjHsGPElKhC5LzDfHFEqhaj0igtsqHAA/viewform?usp=sf_link)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
-      },
-      "seeding_key": {
-        "activity_section.key": "d294f289-13e3-4b06-b45e-0f03839cb671",
-        "lesson_activity.key": "2bb964f7-eeca-494e-a58e-eda2aacf7c56"
-      }
-    },
-    {
       "key": "5d1b708b-4fde-4870-b927-291058ef8f1b",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Pass out a board and USB cable to each pair of students. Let students know that they should not yet plug the boards in.\n\n**Prompt:** Ask pairs to spend one minute looking over the board, focusing on potential input devices. Based on what you already know about this board, how do you think you might use it to get input?\n\n**Share:** Have groups share back their thoughts to the whole group, keeping track of ideas on the board. Push students to support their ideas with evidence from reviewing the board, but don't worry about ensuring correctness at this point.\n\n**Discussion Goal:** Students will probably notice the buttons on the circuit playground. Students may also notice the small slider in the middle of the circuit playground that toggles back and forth. If students don’t address these, be sure to bring them up. Students may also ask about the small pads on the outer ring of the circuit playground, or they may notice the eye / ear / temperature icons on the circuit playground for the different sensors. Both of these are types of inputs that are discussed in later lessons - if students bring these up, acknowledge them but also let students know we’ll investigate these more in future lessons.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out a board and USB cable to each pair of students. Let students know that they should not yet plug the boards in.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Ask pairs to spend one minute looking over the board, focusing on potential input devices. Based on what you already know about this board, how do you think you might use it to get input?\n\n**Share:** Have groups share back their thoughts to the whole group, keeping track of ideas on the board. Push students to support their ideas with evidence from reviewing the board, but don't worry about ensuring correctness at this point.\n\n**Discussion Goal:** Students will probably notice the buttons on the circuit playground. Students may also notice the small slider in the middle of the circuit playground that toggles back and forth. If students don’t address these, be sure to bring them up. Students may also ask about the small pads on the outer ring of the circuit playground, or they may notice the eye / ear / temperature icons on the circuit playground for the different sensors. Both of these are types of inputs that are discussed in later lessons - if students bring these up, acknowledge them but also let students know we’ll investigate these more in future lessons.",
         "name": "Board Inspection: Inputs\r"
       },
       "seeding_key": {
@@ -2068,7 +1916,7 @@
       "key": "6549edf8-3599-427e-9e5e-2f4808400694",
       "position": 3,
       "properties": {
-        "description": "**Vocabulary:**\n\n- **Input:** the information computers get from users, devices, or other computers"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulary:**\n\n- **Input:** the information computers get from users, devices, or other computers"
       },
       "seeding_key": {
         "activity_section.key": "6549edf8-3599-427e-9e5e-2f4808400694",
@@ -2079,7 +1927,13 @@
       "key": "d95e3c69-5b66-4c2c-a137-0fa48ecf0dfc",
       "position": 1,
       "properties": {
-        "description": "**Transition:** Send students to Code Studio"
+        "description": "**Transition:** Send students to Code Studio",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d95e3c69-5b66-4c2c-a137-0fa48ecf0dfc",
@@ -2090,7 +1944,13 @@
       "key": "0570736b-7259-4187-8305-3dabf7ee65a8",
       "position": 2,
       "properties": {
-        "progression_name": "Predict"
+        "progression_name": "Predict",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "This code uses an event to detect user input, but it waits for an event on the circuit playground instead of the screen. When students run the code, nothing will happen until they press the left button on their circuit playground. Once they do, the red LED will light up. If student’s boards aren’t working, have them [press the Setup button](https://images.code.org/48fc6b4a015ff8c2505e6dee20b46782-setup-button.PNG) in the maker app or visit [https://studio.code.org/maker/setup](https://studio.code.org/maker/setup) on a Chromebook."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0570736b-7259-4187-8305-3dabf7ee65a8",
@@ -2123,7 +1983,13 @@
       "key": "fde374b2-aa35-4cb7-9cb2-176b0b48a9ae",
       "position": 5,
       "properties": {
-        "progression_name": "Assessment"
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "fde374b2-aa35-4cb7-9cb2-176b0b48a9ae",
@@ -2165,17 +2031,6 @@
       }
     },
     {
-      "key": "f411cee8-9535-4207-95e8-e0e0b37f5524",
-      "position": 1,
-      "properties": {
-        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfROQdamfLnHVn11tsjHsGPElKhC5LzDfHFEqhaj0igtsqHAA/viewform?usp=sf_link)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
-      },
-      "seeding_key": {
-        "activity_section.key": "f411cee8-9535-4207-95e8-e0e0b37f5524",
-        "lesson_activity.key": "e5b0cd25-ad2a-4d7a-978e-d7bb70214d1a"
-      }
-    },
-    {
       "key": "1021739d-d149-4dbb-896c-8a6fd1c3c674",
       "position": 1,
       "properties": {
@@ -2207,7 +2062,13 @@
       "key": "94238b4f-60fa-4645-8cd3-13120815edef",
       "position": 1,
       "properties": {
-        "description": "**Transition:** Send students to Code Studio"
+        "description": "**Transition:** Send students to Code Studio",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "94238b4f-60fa-4645-8cd3-13120815edef",
@@ -2218,7 +2079,13 @@
       "key": "e9d45b03-0bff-41bc-9727-8e21f8f0256a",
       "position": 2,
       "properties": {
-        "progression_name": "Predict"
+        "progression_name": "Predict",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "Students should notice that the names in the var blocks are repeated in the code. They may guess that the numbers assigned to these names at the top will be substituted in farther down the code. Even if students aren't sure what the screen will look like, they may be more sure that the rectangles will all look the same because they have the same width and height"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e9d45b03-0bff-41bc-9727-8e21f8f0256a",
@@ -2226,8 +2093,19 @@
       }
     },
     {
-      "key": "a0f4ad44-579c-4404-8ba2-bcb19e459e0c",
+      "key": "93ea638a-0d81-4055-88cc-d9167581d9be",
       "position": 3,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "93ea638a-0d81-4055-88cc-d9167581d9be",
+        "lesson_activity.key": "0c236fea-e8b0-4948-b5b1-15c35cc59c33"
+      }
+    },
+    {
+      "key": "a0f4ad44-579c-4404-8ba2-bcb19e459e0c",
+      "position": 4,
       "properties": {
         "progression_name": "Video - Variables"
       },
@@ -2238,7 +2116,7 @@
     },
     {
       "key": "c8cebe3f-35da-44ac-9cc6-29190c5b6544",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -2249,7 +2127,7 @@
     },
     {
       "key": "64e9d8c1-f351-4dec-b424-f4c03bd5324a",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Video - The Counter Pattern"
       },
@@ -2260,7 +2138,7 @@
     },
     {
       "key": "99737e58-9db8-43d5-8437-03794c232a9c",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -2271,7 +2149,7 @@
     },
     {
       "key": "314cd764-1846-45e2-951b-1fc00d8b5aed",
-      "position": 7,
+      "position": 8,
       "properties": {
         "progression_name": "Video - If Statements"
       },
@@ -2282,9 +2160,15 @@
     },
     {
       "key": "c9fa6f0e-80c5-4009-b74a-8bc73095ecbe",
-      "position": 8,
+      "position": 9,
       "properties": {
-        "progression_name": "Predict"
+        "progression_name": "Predict",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "Students should notice that both if-statements use the value 315, and some students might use their mouse cursor to hover over the app and notice that 315 is close to the horizon created by the hills and trees. Students should also notice that the background changes between two different colors - orange and gray. Connecting these two observations together, students might predict that this will change when the \"sun sets\" behind the horizon, changing colors between day (orange) and night (gray)."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c9fa6f0e-80c5-4009-b74a-8bc73095ecbe",
@@ -2293,7 +2177,7 @@
     },
     {
       "key": "ae140bd7-8f40-4e4b-b867-e72fe2d1894e",
-      "position": 9,
+      "position": 10,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -2304,9 +2188,15 @@
     },
     {
       "key": "103c17a8-f0b0-4836-8eed-93cd0a2fa293",
-      "position": 10,
+      "position": 11,
       "properties": {
-        "progression_name": "Assessment"
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "103c17a8-f0b0-4836-8eed-93cd0a2fa293",
@@ -2315,7 +2205,7 @@
     },
     {
       "key": "611c6617-a3b8-4d93-a786-8d1c7256b43f",
-      "position": 11,
+      "position": 12,
       "properties": {
         "progression_name": "Challenge"
       },
@@ -2343,21 +2233,10 @@
       }
     },
     {
-      "key": "1ede9c10-4753-4887-8dad-0a6cde84e48c",
-      "position": 1,
-      "properties": {
-        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfROQdamfLnHVn11tsjHsGPElKhC5LzDfHFEqhaj0igtsqHAA/viewform?usp=sf_link)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
-      },
-      "seeding_key": {
-        "activity_section.key": "1ede9c10-4753-4887-8dad-0a6cde84e48c",
-        "lesson_activity.key": "001b8c18-fd9a-4a76-8183-348cf65eb156"
-      }
-    },
-    {
       "key": "72e7af03-6898-41fa-98c5-b6904a035199",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** Think about a time when you've needed to collect data when moving around in the world, or when data is being collected about you. How was that data collected? What happened to that data?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Think about a time when you've needed to collect data when moving around in the world, or when data is being collected about you. How was that data collected? What happened to that data?_",
         "name": "Journal"
       },
       "seeding_key": {
@@ -2420,7 +2299,7 @@
       "key": "9be3201f-e2fd-45b2-9ffe-e7c291414cf0",
       "position": 6,
       "properties": {
-        "description": "**Question of the Day:** How can I use events and variables to create an app that collects and analyzes data?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day:** How can I use events and variables to create an app that collects and analyzes data?"
       },
       "seeding_key": {
         "activity_section.key": "9be3201f-e2fd-45b2-9ffe-e7c291414cf0",
@@ -2428,11 +2307,33 @@
       }
     },
     {
-      "key": "68996d30-3dce-47d9-86e1-678c8164023b",
+      "key": "1ae47ba4-9015-40e9-93fd-605c972cdf5d",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** (Optional) pass out copies of the project guide. Students will use this to plan their project, and includes items that can be used for assessment at the end of the project.",
-        "name": "Introduction"
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Mini-Projects:** Mini-Projects act as checkpoints in the curricula and cover the subset of skills students have seen so far in the unit. They are designed for 1-2 days of implementation as a way to check-in with how well students understand the course content so far. You may decide to extend these projects as a way to support or challenge students, which could allow you to revisit difficult concepts or support students who may have missed lessons and are trying to catch up. However, we recommend deciding this ahead of time and being firm with students about how much time they have for each project - otherwise, it's easy for projects to drag-out to multiple days and for student's work to spiral beyond the scope of this project."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1ae47ba4-9015-40e9-93fd-605c972cdf5d",
+        "lesson_activity.key": "f08286ef-f4b1-40dd-bb1f-f8608630a62c"
+      }
+    },
+    {
+      "key": "68996d30-3dce-47d9-86e1-678c8164023b",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** (Optional) pass out copies of the project guide. Students will use this to plan their project, and includes items that can be used for assessment at the end of the project.",
+        "name": "Introduction",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Group Projects:** If students are working in pairs or small teams to complete projects, consider showing these two videos to the class:\n\n- [How Teamwork Works](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n- [Dealing with Disagreements](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDepending on your goals with this project, consider having teams complete a [Student Guide to Team Planning](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), which reinforces the message in the video"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "68996d30-3dce-47d9-86e1-678c8164023b",
@@ -2441,9 +2342,9 @@
     },
     {
       "key": "e0ae7af5-a11e-4120-b28d-c1912c57a55b",
-      "position": 2,
+      "position": 3,
       "properties": {
-        "description": "**Slides**: Present an overview of the project and the steps students will take to complete it."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Slides**: Present an overview of the project and the steps students will take to complete it. There are multiple slides available to help explain the project.\n\n**(Optional) Class Brainstorm:** Before diving into individual projects, consider leading a class brainstorm of what some example projects could look like that fit this criteria. You may also decide to show one or two of the exemplar apps to help inspire the brainstorm. Using these ideas, students may find it easier to latch onto an initial idea for their project"
       },
       "seeding_key": {
         "activity_section.key": "e0ae7af5-a11e-4120-b28d-c1912c57a55b",
@@ -2452,9 +2353,9 @@
     },
     {
       "key": "d9a7fab9-6627-440f-b25d-e3449cf96b97",
-      "position": 3,
+      "position": 4,
       "properties": {
-        "description": "**Transition:** Send students to Code Studio."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio."
       },
       "seeding_key": {
         "activity_section.key": "d9a7fab9-6627-440f-b25d-e3449cf96b97",
@@ -2462,10 +2363,28 @@
       }
     },
     {
+      "key": "1dbb5db6-9f9e-4ddb-b73b-c33af06d16dc",
+      "position": 5,
+      "properties": {
+        "progression_name": "Example Apps",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Scoping Student Projects:** Students may ideate projects that are beyond the skills they currently have or that would take longer than the allotted time to implement. Rather than asking students to choose a different project, consider asking students to imagine a more scaled-down version of their initial idea. As an analogy, if students initial idea is the \"Run\" step, imagine a less intense version that represents what the \"Walk\" step would look like. If necessary, you can keep going back further to a \"Crawl\" step as well. \n\n**Digging Deeper:** This is sometimes referred to as the Minimal Viable Product - you can learn more about this process and adapt it into your project strategies by reading this article: [Making Sense of MVP](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp) by Henrik Kniberg"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1dbb5db6-9f9e-4ddb-b73b-c33af06d16dc",
+        "lesson_activity.key": "f08286ef-f4b1-40dd-bb1f-f8608630a62c"
+      }
+    },
+    {
       "key": "87d4f205-868c-44e3-9823-c97b03c967fd",
-      "position": 4,
+      "position": 6,
       "properties": {
         "name": "Code Studio",
+        "progression_name": "On-The-Go App",
         "tips": [
           {
             "type": "teachingTip",
@@ -2479,8 +2398,19 @@
       }
     },
     {
+      "key": "3e9609bb-ec97-4cd3-8648-e8b04256ca92",
+      "position": 7,
+      "properties": {
+        "description": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices."
+      },
+      "seeding_key": {
+        "activity_section.key": "3e9609bb-ec97-4cd3-8648-e8b04256ca92",
+        "lesson_activity.key": "f08286ef-f4b1-40dd-bb1f-f8608630a62c"
+      }
+    },
+    {
       "key": "cdba4023-5235-4505-8c9e-903e45be9ca4",
-      "position": 5,
+      "position": 8,
       "properties": {
         "description": "Allow students to walk around the room and interact with each other's devices. Celebrate all of the different ideas that students were able to implement with the same basic code.",
         "name": "(Optional) Gallery Walk",
@@ -2500,7 +2430,7 @@
       "key": "d517677e-a0c5-48b5-9198-340f9de4b197",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** What was your favorite part of the app you created? What is something you wish you had time to improve?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What was your favorite part of the app you created? What is something you wish you had time to improve?_",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2512,7 +2442,7 @@
       "key": "27de5b22-659a-4bfb-98ca-d3638ef8c4d0",
       "position": 2,
       "properties": {
-        "description": "You may decide to have students share these with a partner, or you may decide to have students keep their responses private. Either way, the goal of the prompt is to have students reflect on the apps they've created and celebrate what went well and acknowledge what could be improved for next time."
+        "description": "**Discussion Goal:** You may decide to have students share these with a partner, or you may decide to have students keep their responses private. Either way, the goal of the prompt is to have students reflect on the apps they've created and celebrate what went well and acknowledge what could be improved for next time."
       },
       "seeding_key": {
         "activity_section.key": "27de5b22-659a-4bfb-98ca-d3638ef8c4d0",
@@ -2520,21 +2450,10 @@
       }
     },
     {
-      "key": "e08c8a0c-0e6e-4da8-a7a6-4f4e709a38cd",
-      "position": 1,
-      "properties": {
-        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Project**](https://docs.google.com/forms/d/e/1FAIpQLSfin4Rf6upATKCSQd6qsN-ppzsG_3zc7BQfraMtEk9IoxiO8A/viewform)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
-      },
-      "seeding_key": {
-        "activity_section.key": "e08c8a0c-0e6e-4da8-a7a6-4f4e709a38cd",
-        "lesson_activity.key": "81e6dace-a4b3-4b5b-8a39-b9f3ef8d2e9c"
-      }
-    },
-    {
       "key": "8b763a92-05ad-4784-a3e8-61025e642c98",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** What is a list?  What do you use lists for?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What is a list?  What do you use lists for?_",
         "name": "Journal"
       },
       "seeding_key": {
@@ -2580,7 +2499,13 @@
       "key": "4045ce4e-232d-49f8-b831-12073f3d9495",
       "position": 1,
       "properties": {
-        "description": "**Transition:** Send students to Code Studio"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4045ce4e-232d-49f8-b831-12073f3d9495",
@@ -2594,8 +2519,12 @@
         "progression_name": "Predict",
         "tips": [
           {
-            "type": "teachingTip",
+            "type": "contentCorner",
             "markdown": "**List Terminology:** A list in javascript is formally called an **array**. The `colorLEDs[x]` block uses an array to access each LED.  The number inside the [square brackets] is called the **index**. We might say `colorLEDs[0]` represents the LED at index 0, or `colorLEDs[5]` represents the LED at index 5. \n\nArrays are discussed in more depth in a later lesson and students do not need to have a strong understanding of arrays by the end of this lesson. At a bare minimum, students should understand that the “first” LED starts at index 0, and the “last” LED is at index 9."
+          },
+          {
+            "type": "discussionGoal",
+            "markdown": "Students may be able to guess the behavior of the code, but they may be slightly off in predicting which lights will light up. There isn't a clear orientation on the circuit playground, but students should be able to \"work backwards\" to determine which lights are which. Students may also notice that the lights start with 0, which is the \"first\" light on the board."
           }
         ]
       },
@@ -2630,7 +2559,13 @@
       "key": "8f9190dd-ac05-4161-a3ec-523af179eb8f",
       "position": 5,
       "properties": {
-        "progression_name": "Assessment"
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "8f9190dd-ac05-4161-a3ec-523af179eb8f",
@@ -2652,7 +2587,7 @@
       "key": "4e670dbd-c1a5-48fc-97ff-d0b68df91a5d",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** LEDs are used as output in many devices that we use every day. Try to think of at least one device that uses an LED and describe how it helps make the device more usable or communicates with the user.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _LEDs are used as output in many devices that we use every day. Try to think of at least one device that uses an LED and describe how it helps make the device more usable or communicates with the user._",
         "name": "Journal"
       },
       "seeding_key": {
@@ -2672,21 +2607,10 @@
       }
     },
     {
-      "key": "72235a86-333b-4caa-bd50-04efc31be4ee",
-      "position": 1,
-      "properties": {
-        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfROQdamfLnHVn11tsjHsGPElKhC5LzDfHFEqhaj0igtsqHAA/viewform?usp=sf_link)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
-      },
-      "seeding_key": {
-        "activity_section.key": "72235a86-333b-4caa-bd50-04efc31be4ee",
-        "lesson_activity.key": "9a3285d9-1326-4480-84b6-b0817781540c"
-      }
-    },
-    {
       "key": "462d84bc-26b0-4f62-ab6e-8d6385a9ed99",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** \n1) What are all the ways we can get input from the user on a circuit playground?\n2) What are some ways you’ve seen where you can get input from the user in an app?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** \n\n1) _What are all the ways we can get input from the user on a circuit playground?_\n2) _What are some ways you’ve seen where you can get input from the user in an app?_",
         "name": "Journal"
       },
       "seeding_key": {
@@ -2729,10 +2653,33 @@
       }
     },
     {
-      "key": "47cf28d0-a32f-46bb-89b5-c3488628a1fd",
+      "key": "57cb955d-f937-4b8c-990b-0ceeac0bd2a3",
       "position": 1,
       "properties": {
-        "progression_name": "Predict"
+        "description": "**Code Studio:** Send students to Code Studio",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "57cb955d-f937-4b8c-990b-0ceeac0bd2a3",
+        "lesson_activity.key": "8c2e71e0-ca88-4730-a840-a53cd72d1615"
+      }
+    },
+    {
+      "key": "47cf28d0-a32f-46bb-89b5-c3488628a1fd",
+      "position": 2,
+      "properties": {
+        "progression_name": "Predict",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "Two new code blocks are introduced in this level: `getProperty` and `getText`. Students may notice these new blocks are being used with variables, and may predict they are being used to get user input from the screen. They may also notice there are new design elements: text inputs, dropdowns, and sliders. Try to push students to notice that the variables from `getText` and `getProperty` are used again later in the code to update the screen using `setText` and `setProperty` blocks."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "47cf28d0-a32f-46bb-89b5-c3488628a1fd",
@@ -2741,7 +2688,7 @@
     },
     {
       "key": "6b3d5fc1-6b24-4b20-b689-859ed60b7781",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -2752,7 +2699,7 @@
     },
     {
       "key": "f5248188-ada8-4736-a4a0-46383a8fabdb",
-      "position": 3,
+      "position": 4,
       "properties": {
         "progression_name": "Practice"
       },
@@ -2763,9 +2710,15 @@
     },
     {
       "key": "3b80805c-210e-4afa-b195-9d0849f5a1f0",
-      "position": 4,
+      "position": 5,
       "properties": {
-        "progression_name": "Assessment"
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "3b80805c-210e-4afa-b195-9d0849f5a1f0",
@@ -2774,7 +2727,7 @@
     },
     {
       "key": "62b8f83e-afda-4e53-a033-8fa297acd65f",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Challenge"
       },
@@ -2817,21 +2770,10 @@
       }
     },
     {
-      "key": "c0061a57-7746-45bc-b85a-83169656977b",
-      "position": 1,
-      "properties": {
-        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfROQdamfLnHVn11tsjHsGPElKhC5LzDfHFEqhaj0igtsqHAA/viewform?usp=sf_link)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
-      },
-      "seeding_key": {
-        "activity_section.key": "c0061a57-7746-45bc-b85a-83169656977b",
-        "lesson_activity.key": "a97465ae-d2a8-4cbd-8b95-f969700fdd3c"
-      }
-    },
-    {
       "key": "3f320d13-bcf3-4af8-bb19-a529b2f5a005",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Pass out a board and USB cable to each pair of students. Let students know that they should not yet plug the boards in."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out a board and USB cable to each pair of students. Let students know that they should not yet plug the boards in."
       },
       "seeding_key": {
         "activity_section.key": "3f320d13-bcf3-4af8-bb19-a529b2f5a005",
@@ -2842,7 +2784,7 @@
       "key": "5dca2862-74f8-4965-a94b-75e750adc133",
       "position": 2,
       "properties": {
-        "description": "**Prompt:** Create a chart like the one below. Write down all the design elements or circuit playground components that go in each box"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Create a chart like the one below. Write down all the design elements or circuit playground components that go in each box_"
       },
       "seeding_key": {
         "activity_section.key": "5dca2862-74f8-4965-a94b-75e750adc133",
@@ -2909,7 +2851,7 @@
       "key": "b553a3ff-e3b7-4f8f-a9b6-7712e1feef36",
       "position": 8,
       "properties": {
-        "description": "**Video:** Show students the Input / Output video in the slides"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r input_output_devices/csd/2022] video."
       },
       "seeding_key": {
         "activity_section.key": "b553a3ff-e3b7-4f8f-a9b6-7712e1feef36",
@@ -2920,7 +2862,13 @@
       "key": "b9330fe8-365a-492e-b155-48d1aa4b993e",
       "position": 1,
       "properties": {
-        "description": "**Transition:** Send students to Code Studio"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "b9330fe8-365a-492e-b155-48d1aa4b993e",
@@ -2931,7 +2879,13 @@
       "key": "a43fd1ca-e808-415f-8b73-ecc0caf330e2",
       "position": 2,
       "properties": {
-        "progression_name": "Predict"
+        "progression_name": "Predict",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "Student responses may include:\n- The screen is using a dropdown menu and a `getProperty` block for input to see whether the LED should blink or pulse\n- The screen is using a label and a `setText` block for output to display whether the light is on or off\n- The circuit playground is using the buttons and an `onBoardEvent` block for input to turn on or off the lights\n- The circuit playground is using the `colorLEDs` blocks as output to turn on the lights\n\nStudents will also need their circuit playgrounds for this level. If student’s boards aren’t working, have them [press the Setup button](https://images.code.org/48fc6b4a015ff8c2505e6dee20b46782-setup-button.PNG) in the maker app or visit [https://studio.code.org/maker/setup](https://studio.code.org/maker/setup) on a Chromebook."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a43fd1ca-e808-415f-8b73-ecc0caf330e2",
@@ -2964,7 +2918,13 @@
       "key": "e13764d2-b1f3-40c7-9632-b0e82f82ee45",
       "position": 5,
       "properties": {
-        "progression_name": "Assessment"
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e13764d2-b1f3-40c7-9632-b0e82f82ee45",
@@ -2986,7 +2946,7 @@
       "key": "9d2c2eaf-b8c9-44be-9558-e774f50949c4",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** What’s an example of a device you’ve seen that combines inputs and outputs between an app and a device? For example, you might press buttons on a device and then something changes on the app."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What’s an example of a device you’ve seen that combines inputs and outputs between an app and a device? For example, you might press buttons on a device and then something changes on the app._"
       },
       "seeding_key": {
         "activity_section.key": "9d2c2eaf-b8c9-44be-9558-e774f50949c4",
@@ -3005,21 +2965,10 @@
       }
     },
     {
-      "key": "51579a5d-81ff-4692-b50f-aee1985c0623",
-      "position": 1,
-      "properties": {
-        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfROQdamfLnHVn11tsjHsGPElKhC5LzDfHFEqhaj0igtsqHAA/viewform?usp=sf_link)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
-      },
-      "seeding_key": {
-        "activity_section.key": "51579a5d-81ff-4692-b50f-aee1985c0623",
-        "lesson_activity.key": "c1ee24dc-f64c-4ab2-8041-d6cdc14aa643"
-      }
-    },
-    {
       "key": "d18fd32f-358e-4525-96b9-329e455fea1c",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** What's an example of when someone has used an app to control a physical device of some kind? For example, using an app to automatically unlock or lock a car door.\n\n**Share Out:** Have students discuss with their neighbors, then lead a full class discussion\n\n**Discussion Goal:** Hopefully students will have a wide variety of experiences. Some examples might include:\n- Using an app to control a thermostat\n- Using an app to control a vacuum robot\n- Using an app to control a security camera\n- Using an app to turn on and off a light or change its color",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What's an example of when someone has used an app to control a physical device of some kind? For example, using an app to automatically unlock or lock a car door._\n\n**Share Out:** Have students discuss with their neighbors, then lead a full class discussion\n\n**Discussion Goal:** Hopefully students will have a wide variety of experiences. Some examples might include:\n- Using an app to control a thermostat\n- Using an app to control a vacuum robot\n- Using an app to control a security camera\n- Using an app to turn on and off a light or change its color",
         "duration": "5",
         "name": "Warm Up"
       },
@@ -3050,7 +2999,7 @@
       "key": "53d56dc5-06cd-49ec-8fe0-c126f01d00ed",
       "position": 3,
       "properties": {
-        "description": "**Vocabulary:**\n- **Prototype** - A first or early model of a product that allows you to test assumptions before developing a final version."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulary:**\n- **Prototype** - A first or early model of a product that allows you to test assumptions before developing a final version."
       },
       "seeding_key": {
         "activity_section.key": "53d56dc5-06cd-49ec-8fe0-c126f01d00ed",
@@ -3061,9 +3010,15 @@
       "key": "836b29e0-6e20-434b-a5b4-556abfb94d2b",
       "position": 4,
       "properties": {
-        "description": "**Distribute:** (Optional) pass out copies of the project guide. Students will use this to plan their project, and includes items that can be used for assessment at the end of the project.\n\n**Slides**: Present an overview of the project and the steps students will take to complete it.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** (Optional) pass out copies of the project guide. Students will use this to plan their project, and includes items that can be used for assessment at the end of the project.\n\n**Slides**: Present an overview of the project and the steps students will take to complete it.",
         "duration": "15",
-        "name": "Introduce the Project"
+        "name": "Introduce the Project",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Group Projects:** If students are working in pairs or small teams to complete projects, consider showing these two videos to the class:\n\n- [How Teamwork Works](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n- [Dealing with Disagreements](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDepending on your goals with this project, consider having teams complete a [Student Guide to Team Planning](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), which reinforces the message in the video"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "836b29e0-6e20-434b-a5b4-556abfb94d2b",
@@ -3076,7 +3031,13 @@
       "properties": {
         "description": "**Project Guide:** Have students begin filling out the project guide, planning their app and sketching what their device will look like. Check in with students during this step to help brainstorm ideas and ensure students are completing the project guide correctly.\n\n**Distribute:** As students finish their project guide, allow students to access the construction materials you've collected, such as paper and cardboard and any other supplies. ",
         "duration": "20",
-        "name": "Sketching Your Device"
+        "name": "Sketching Your Device",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Scoping Student Projects:** Students may ideate projects that are beyond the skills they currently have or that would take longer than the allotted time to implement. Rather than asking students to choose a different project, consider asking students to imagine a more scaled-down version of their initial idea. As an analogy, if students initial idea is the \"Run\" step, imagine a less intense version that represents what the \"Walk\" step would look like. If necessary, you can keep going back further to a \"Crawl\" step as well. \n\n**Digging Deeper:** This is sometimes referred to as the Minimal Viable Product - you can learn more about this process and adapt it into your project strategies by reading this article: [Making Sense of MVP](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp) by Henrik Kniberg"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e9b6aa89-e596-4ee6-bf0c-280d32403047",
@@ -3193,8 +3154,19 @@
       }
     },
     {
-      "key": "2e59bfde-65a5-450d-9701-426f7353a617",
+      "key": "1370ac6b-ceff-421e-b3b7-1b710bfcfb48",
       "position": 4,
+      "properties": {
+        "description": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+      },
+      "seeding_key": {
+        "activity_section.key": "1370ac6b-ceff-421e-b3b7-1b710bfcfb48",
+        "lesson_activity.key": "3117239b-9f1c-4b16-88dd-93ec0c7a9b68"
+      }
+    },
+    {
+      "key": "2e59bfde-65a5-450d-9701-426f7353a617",
+      "position": 5,
       "properties": {
         "description": "**Collect:** Provide a space for students to store their projects. You may want to provide extra time for students to organize their materials, store them safely, then clean up their workspace.\n\nYou can look over students code within Code Studio to see how much progress they are making and decide if there are any students worth checking in with tomorrow.",
         "duration": "5",
@@ -3304,21 +3276,10 @@
       }
     },
     {
-      "key": "19b2a0a1-015f-4bc1-922f-d6beddb24e0f",
-      "position": 1,
-      "properties": {
-        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Project**](https://docs.google.com/forms/d/e/1FAIpQLSfin4Rf6upATKCSQd6qsN-ppzsG_3zc7BQfraMtEk9IoxiO8A/viewform)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
-      },
-      "seeding_key": {
-        "activity_section.key": "19b2a0a1-015f-4bc1-922f-d6beddb24e0f",
-        "lesson_activity.key": "0b81a5ee-1590-4a9a-9da1-0a10d2e5b01e"
-      }
-    },
-    {
       "key": "016c41f7-549a-4037-be5f-704e76a82685",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Pass out Circuit Playgrounds to each pair of students "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out Circuit Playgrounds to each pair of students "
       },
       "seeding_key": {
         "activity_section.key": "016c41f7-549a-4037-be5f-704e76a82685",
@@ -3329,7 +3290,7 @@
       "key": "dfbaa5f7-a0e8-42f5-901d-3432a4d6eb66",
       "position": 2,
       "properties": {
-        "description": "**Prompt:** Humans have 5 senses - touch, taste, sight, smell, and hearing. Which of these senses do you think the Circuit Playground has? Are there any that you think the Circuit Playground has that we don’t?\n\nAs students consider this question, encourage them to look at the markings on the Circuit Playground for clues (for example: there are eye and ear icons on the circuit playground that can give clues)\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Humans have 5 senses - touch, taste, sight, smell, and hearing. Which of these senses do you think the Circuit Playground has? Are there any that you think the Circuit Playground has that we don’t?_\n\nAs students consider this question, encourage them to look at the markings on the Circuit Playground for clues (for example: there are eye and ear icons on the circuit playground that can give clues)\n"
       },
       "seeding_key": {
         "activity_section.key": "dfbaa5f7-a0e8-42f5-901d-3432a4d6eb66",
@@ -3374,7 +3335,7 @@
       "key": "d9bf1eac-89e2-4067-b465-e64824139119",
       "position": 6,
       "properties": {
-        "description": "**Question of the Day:** How can I use sensors to detect changes in the environment?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day:** How can I use sensors to detect changes in the environment?"
       },
       "seeding_key": {
         "activity_section.key": "d9bf1eac-89e2-4067-b465-e64824139119",
@@ -3385,7 +3346,13 @@
       "key": "b46cfe31-9b5e-4820-b368-fc8a4fa139a7",
       "position": 1,
       "properties": {
-        "description": "**Transition:** Send students to Code Studio"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "b46cfe31-9b5e-4820-b368-fc8a4fa139a7",
@@ -3396,7 +3363,13 @@
       "key": "9c9c1c7f-db27-4c84-941c-4dd1e3b2ce3c",
       "position": 2,
       "properties": {
-        "progression_name": "Predict"
+        "progression_name": "Predict",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "There are three sensors on the circuit playground: a light sensor, a sound sensor, and a temperature sensor. Encourage students to relate the sensors to their own senses and interact with the circuit playground that way - for example, we have a sense of sight, what happens when we show or hide things from the circuit playground? We have a sense of hearing, what happens when the volume changes near the circuit playground?\n\nThrough experimentation, students should notice that the minimum value is 0 and the maximum value is 1023. Students may also notice that one sensor (temperature) doesn't seem to change very much."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9c9c1c7f-db27-4c84-941c-4dd1e3b2ce3c",
@@ -3451,7 +3424,13 @@
       "key": "c4973fc1-e3ac-4d75-a00c-b2b1d9ea95e5",
       "position": 7,
       "properties": {
-        "progression_name": "Assessment"
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c4973fc1-e3ac-4d75-a00c-b2b1d9ea95e5",
@@ -3473,7 +3452,7 @@
       "key": "bf6abe53-60e7-4f2c-b6ab-88516663778e",
       "position": 1,
       "properties": {
-        "description": "**Journal:** Considering all of the computing devices that you interact with on a regular basis, write down as many potential sensors as you can. What type of sensor do you think you interact with the most?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Considering all of the computing devices that you interact with on a regular basis, write down as many potential sensors as you can. What type of sensor do you think you interact with the most?",
         "name": "Sensors All Around\r"
       },
       "seeding_key": {
@@ -3493,21 +3472,10 @@
       }
     },
     {
-      "key": "debde8ef-73f1-4299-a22b-0b560e0fb67c",
-      "position": 1,
-      "properties": {
-        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfROQdamfLnHVn11tsjHsGPElKhC5LzDfHFEqhaj0igtsqHAA/viewform?usp=sf_link)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
-      },
-      "seeding_key": {
-        "activity_section.key": "debde8ef-73f1-4299-a22b-0b560e0fb67c",
-        "lesson_activity.key": "20abd6be-3fed-4bae-bba1-66940ad51525"
-      }
-    },
-    {
       "key": "e3511503-36b7-42bf-b889-919cff249429",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** Have you ever tried to walk across a raised narrow platform, one foot in front of the other? How do you keep your balance and avoid falling over?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Have you ever tried to walk across a raised narrow platform, one foot in front of the other? How do you keep your balance and avoid falling over?_"
       },
       "seeding_key": {
         "activity_section.key": "e3511503-36b7-42bf-b889-919cff249429",
@@ -3552,7 +3520,13 @@
       "key": "b8a6fe12-b039-4ae6-b8af-7ca83f2cf8f4",
       "position": 1,
       "properties": {
-        "description": "**Transition:** Send students to Code Studio."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "b8a6fe12-b039-4ae6-b8af-7ca83f2cf8f4",
@@ -3563,7 +3537,13 @@
       "key": "8fbee503-556a-40cd-be06-2fe300b09ef5",
       "position": 2,
       "properties": {
-        "progression_name": "Predict"
+        "progression_name": "Predict",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "The accelerometer has two properties: the `roll` and `pitch`. The `roll` corresponds to tilting left and right, and `pitch` corresponds to tilting forwards and backwards. Students should notice this if they're holding their circuit playground level to the ground with the USB cable pointing away from them so all the lettering appears correctly. Students may also experiment with moving their circuit playground in the physical space - moving it up and down or left and right - but this doesn't affect the accelerometer. Only rotating and tilting the circuit playground will change the roll and pitch."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "8fbee503-556a-40cd-be06-2fe300b09ef5",
@@ -3596,7 +3576,13 @@
       "key": "c54f7dfb-6a80-43de-b63d-b72945c32a55",
       "position": 5,
       "properties": {
-        "progression_name": "Assessment"
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c54f7dfb-6a80-43de-b63d-b72945c32a55",
@@ -3618,7 +3604,7 @@
       "key": "7fe79fa5-dc50-4ddc-b145-f8630bde9143",
       "position": 1,
       "properties": {
-        "description": "**Prompt:**  What are some uses for pitch and roll in an everyday app?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:**  _What are some uses for pitch and roll in an everyday app?_",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -3638,21 +3624,10 @@
       }
     },
     {
-      "key": "518f0523-669f-4dfc-aa44-d8e23c416662",
-      "position": 1,
-      "properties": {
-        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfROQdamfLnHVn11tsjHsGPElKhC5LzDfHFEqhaj0igtsqHAA/viewform?usp=sf_link)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
-      },
-      "seeding_key": {
-        "activity_section.key": "518f0523-669f-4dfc-aa44-d8e23c416662",
-        "lesson_activity.key": "2c771a4e-b4a0-42a0-b7d4-42cef9bf7282"
-      }
-    },
-    {
       "key": "d1a51864-499c-47ef-bf86-9d401dcd748a",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** We've been using the buzzer to make sounds, but those buzzes didn't always sound too great.  What do you think you need to make real music on the buzzer?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _We've been using the buzzer to make sounds, but those buzzes didn't always sound too great.  What do you think you need to make real music on the buzzer?_"
       },
       "seeding_key": {
         "activity_section.key": "d1a51864-499c-47ef-bf86-9d401dcd748a",
@@ -3674,8 +3649,14 @@
       "key": "b29096d1-be92-43d1-b40d-48dc44779fcb",
       "position": 1,
       "properties": {
-        "description": "**Transition:** Send students to Code Studio.",
-        "name": "Making Music\r"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio.",
+        "name": "Making Music\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "b29096d1-be92-43d1-b40d-48dc44779fcb",
@@ -3686,7 +3667,13 @@
       "key": "b7df2f8f-c61b-45b6-ad12-400fe0b5dc66",
       "position": 2,
       "properties": {
-        "progression_name": "Predict"
+        "progression_name": "Predict",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "Students will have a tough time predicting their results here, but that's okay - it's more important that they realize that there should be matching sounds between the left buttons and the right buttons. When students run the code, they can press the buttons multiple times to try and find the matching pairs. They should discover the following pairs create the same sounds:\n\n- 261 <> C4\n- 329 <> E4\n- 493 <> B4\n- 392 <> G4\n\nAs students will discover soon, these frequencies correspond to musical notes like they might see on a piano. For now, they should leave this level understanding that certain frequencies correspond to certain \"notes\"."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "b7df2f8f-c61b-45b6-ad12-400fe0b5dc66",
@@ -3719,7 +3706,13 @@
       "key": "c4228271-c5b7-4567-a23a-47389f925254",
       "position": 5,
       "properties": {
-        "progression_name": "Predict"
+        "progression_name": "Predict",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "This level formally introduces students to arrays, which are like lists. Students have already been using arrays without realizing it - the [`colorLeds`(#f78183)](/docs/applab/colorLeds/) are an array of lights on the Circuit Playground. The array in this level works similar to the colorLeds. Help students notice the following:\n- Both arrays use square brackets `[]` with numbers inside to represent the position in the array\n- Both arrays seem to start with 0\n- The `notes` array is defined at the top of the code with a `var` block, but `colorLEDs` aren't defined anyway\n\nStudents will learn more about arrays in the video in the next lesson"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c4228271-c5b7-4567-a23a-47389f925254",
@@ -3752,7 +3745,13 @@
       "key": "69126bf3-cf78-4b06-8fe6-f39b86b5ec93",
       "position": 8,
       "properties": {
-        "progression_name": "Assessment"
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "69126bf3-cf78-4b06-8fe6-f39b86b5ec93",
@@ -3774,7 +3773,7 @@
       "key": "eb5e220c-7b46-48e3-a1a3-37e1b101cfbe",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** How are the arrays we use for songs similar to the array we use for `colorLEDs`? How are the arrays different?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _How are the arrays we use for songs similar to the array we use for `colorLEDs`? How are the arrays different?_",
         "name": "Journal \r"
       },
       "seeding_key": {
@@ -3805,21 +3804,10 @@
       }
     },
     {
-      "key": "3f7627e4-0707-4b76-8ce8-636f35fef1e0",
-      "position": 1,
-      "properties": {
-        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfROQdamfLnHVn11tsjHsGPElKhC5LzDfHFEqhaj0igtsqHAA/viewform?usp=sf_link)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
-      },
-      "seeding_key": {
-        "activity_section.key": "3f7627e4-0707-4b76-8ce8-636f35fef1e0",
-        "lesson_activity.key": "e3e6b673-e6e7-4dd7-a00f-f2577ade6b08"
-      }
-    },
-    {
       "key": "cbfba406-1357-4e91-8fe3-f262878a72dc",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Pass out a board and USB cable to each pair of students."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out a board and USB cable to each pair of students."
       },
       "seeding_key": {
         "activity_section.key": "cbfba406-1357-4e91-8fe3-f262878a72dc",
@@ -3830,7 +3818,7 @@
       "key": "db3d71d9-35eb-4f9d-bcde-2f799683ab8b",
       "position": 2,
       "properties": {
-        "description": "**Transition to Code Studio:** Have students get started in Code Studio right away",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition to Code Studio:** Have students get started in Code Studio right away",
         "tips": [
           {
             "type": "teachingTip",
@@ -3847,7 +3835,13 @@
       "key": "48fd15be-8f76-4d8e-9fa3-90bfc4b890eb",
       "position": 1,
       "properties": {
-        "description": "**Transition:** Send students to Code Studio"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "48fd15be-8f76-4d8e-9fa3-90bfc4b890eb",
@@ -3858,7 +3852,13 @@
       "key": "5c0e38f9-bfaf-4555-8051-d867140232fc",
       "position": 2,
       "properties": {
-        "progression_name": "Predict"
+        "progression_name": "Predict",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "Students might predict that the screen will update with button presses and the emoji and background colors will change. They may notice that `updateScreen()` appears in three places: within the two button events, and as a larger green block at the bottom of the code. It's okay if they're not completely sure how the green block is working, and they may try to describe what's happening by relating to variables - that a variable can be used in place of a value, and maybe `updateScreen()` is being used as a placeholder for the code at the bottom of the screen. Guide students to notice this is useful because the same code can be used in two different places (the left button and the right button).\n\nIt's okay to not come to a firm conclusion, since students will watch a video in the next level that explains Functions and how to use them in code."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "5c0e38f9-bfaf-4555-8051-d867140232fc",
@@ -3891,7 +3891,13 @@
       "key": "a37f0b1f-508e-4592-a58b-664fcefb22bf",
       "position": 5,
       "properties": {
-        "progression_name": "Predict"
+        "progression_name": "Predict",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "Students should notice that the left and right buttons are used, and that the function at the bottom is using the accelerometer to move something on the screen. Students may predict that the function changes depending on which button is pressed - the left button moves the purple bug, and the right button moves the orange bug. Students may also notice that the function has a variable, `bug`, that is included at the top of the function and used throughout. \n\nIn the next level, students will watch a video describing how these functions work and how `bug` is a **parameter** that can be used to change the behavior of a function when the function is called, like moving the orange bug or purple bug."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a37f0b1f-508e-4592-a58b-664fcefb22bf",
@@ -3935,7 +3941,13 @@
       "key": "e88de202-5900-475a-87e9-0a47216646d9",
       "position": 9,
       "properties": {
-        "progression_name": "Assessment"
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e88de202-5900-475a-87e9-0a47216646d9",
@@ -3946,7 +3958,8 @@
       "key": "f97cde59-b600-4d0d-8588-7d0c91c17b3e",
       "position": 1,
       "properties": {
-        "description": "Think back to some of the programs that you have made before.  What is one time that you could have used functions with parameters?  What would the parameter be?  How should the function's behavior change when the parameter changes?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Think back to some of the programs that you have made before.  What is one time that you could have used functions with parameters?  What would the parameter be?  How should the function's behavior change when the parameter changes?_",
+        "name": "Journal"
       },
       "seeding_key": {
         "activity_section.key": "f97cde59-b600-4d0d-8588-7d0c91c17b3e",
@@ -3954,21 +3967,10 @@
       }
     },
     {
-      "key": "4fe040fc-6487-44d1-96e5-1e8320843b93",
-      "position": 1,
-      "properties": {
-        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfROQdamfLnHVn11tsjHsGPElKhC5LzDfHFEqhaj0igtsqHAA/viewform?usp=sf_link)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
-      },
-      "seeding_key": {
-        "activity_section.key": "4fe040fc-6487-44d1-96e5-1e8320843b93",
-        "lesson_activity.key": "4dfffa1b-7b65-47e6-bf50-022ea3c3c543"
-      }
-    },
-    {
       "key": "75a70150-4ec4-45d8-a90d-d8942a6221b3",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** Answer the following questions about this video:\n1) How is the user interacting with the artwork and electronic devices?\n2) How are the electronic devices improving the piece of artwork?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Answer the following questions about this video:\n1) How is the user interacting with the artwork and electronic devices?\n2) How are the electronic devices improving the piece of artwork?",
         "name": "Journal"
       },
       "seeding_key": {
@@ -3980,7 +3982,7 @@
       "key": "d7f3a348-1beb-464f-9cc7-54d4d6101d4d",
       "position": 2,
       "properties": {
-        "description": "**Video:** Show the video [Pu Gong Ying Tu (Dandelion Painting)](https://www.youtube.com/watch?v=C1-pdgGn0SI) by artist Jie Qi",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the video [Pu Gong Ying Tu (Dandelion Painting)](https://www.youtube.com/watch?v=C1-pdgGn0SI) by artist Jie Qi",
         "tips": [
           {
             "type": "teachingTip",
@@ -4024,7 +4026,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Example App:** You may decide to show one of the exemplar apps as an example of what students can create. This can help spark ideas, and give students a model of what to work towards when making their own devices.\n\n**Other Examples:** Interactive art experiences can be found in live shows, museum exhibits, or specialized artistic displays. You may decide to show some other examples to students, such as:\n- [Otherworld](https://otherworldohio.com/), an immersive art installation\n- [Meow Wolf](https://meowwolf.com/), an interactive artist community\n- [iLuminate](https://www.youtube.com/channel/UCPP56EmLKcMhG4Cron9tYKg), a dance troupe that uses electronics in time with their dances"
+            "markdown": "**Example App:** You may decide to show students the exemplar apps and their videos examples of what students can create in this project. This can help spark ideas, and give students a model of what to work towards when making their own devices.\n\n**Other Examples:** Interactive art experiences can be found in live shows, museum exhibits, or specialized artistic displays. You may decide to show some other examples to students, such as:\n- [Otherworld](https://otherworldohio.com/), an immersive art installation\n- [Meow Wolf](https://meowwolf.com/), an interactive artist community\n- [iLuminate](https://www.youtube.com/channel/UCPP56EmLKcMhG4Cron9tYKg), a dance troupe that uses electronics in time with their dances"
           }
         ]
       },
@@ -4040,7 +4042,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Lesson Timing:** This mini-project is designed to take at most 2 days to complete, mostly due to time it takes construct the physical materials that can be used by students in their project and the extra time it takes to manage these additional materials. In practice, this lesson could extend longer if students need more time to construct their devices or gather materials."
+            "markdown": "**Facilitating Mini-Projects:** Mini-Projects act as checkpoints in the curricula and cover the subset of skills students have seen so far in the unit. They are designed for 1-2 days of implementation as a way to check-in with how well students understand the course content so far. You may decide to extend these projects as a way to support or challenge students, which could allow you to revisit difficult concepts or support students who may have missed lessons and are trying to catch up. However, we recommend deciding this ahead of time and being firm with students about how much time they have for each project - otherwise, it's easy for projects to drag-out to multiple days and for student's work to spiral beyond the scope of this project."
           }
         ]
       },
@@ -4050,10 +4052,44 @@
       }
     },
     {
-      "key": "228be993-4e4a-4861-a78b-056cd0055159",
+      "key": "13377864-9faa-4893-b0c2-262903a7710e",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** (Optional) pass out copies of the project guide. Students will use this to plan their project, and includes items that can be used for assessment at the end of the project.\n\n**Slides:** Present an overview of the project and the steps students will take to complete it.\n\n**Transition:** Send students to Code Studio."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** (Optional) pass out copies of the project guide. Students will use this to plan their project, and includes items that can be used for assessment at the end of the project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Group Projects:** If students are working in pairs or small teams to complete projects, consider showing these two videos to the class:\n\n- [How Teamwork Works](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n- [Dealing with Disagreements](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDepending on your goals with this project, consider having teams complete a [Student Guide to Team Planning](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), which reinforces the message in the video"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "13377864-9faa-4893-b0c2-262903a7710e",
+        "lesson_activity.key": "98874052-3ce4-460e-b161-718d1ee1e25f"
+      }
+    },
+    {
+      "key": "528d5cd8-aa69-4be6-814f-81f9dc22401d",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Slides:** Present an overview of the project and the steps students will take to complete it."
+      },
+      "seeding_key": {
+        "activity_section.key": "528d5cd8-aa69-4be6-814f-81f9dc22401d",
+        "lesson_activity.key": "98874052-3ce4-460e-b161-718d1ee1e25f"
+      }
+    },
+    {
+      "key": "228be993-4e4a-4861-a78b-056cd0055159",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Scoping Student Projects:** Students may ideate projects that are beyond the skills they currently have or that would take longer than the allotted time to implement. Rather than asking students to choose a different project, consider asking students to imagine a more scaled-down version of their initial idea. As an analogy, if students initial idea is the \"Run\" step, imagine a less intense version that represents what the \"Walk\" step would look like. If necessary, you can keep going back further to a \"Crawl\" step as well. \n\n**Digging Deeper:** This is sometimes referred to as the Minimal Viable Product - you can learn more about this process and adapt it into your project strategies by reading this article: [Making Sense of MVP](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp) by Henrik Kniberg"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "228be993-4e4a-4861-a78b-056cd0055159",
@@ -4062,8 +4098,15 @@
     },
     {
       "key": "48b11d9f-9819-4e81-86c0-5d57b093334b",
-      "position": 3,
+      "position": 5,
       "properties": {
+        "progression_name": "Interactive Art",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "48b11d9f-9819-4e81-86c0-5d57b093334b",
@@ -4072,7 +4115,7 @@
     },
     {
       "key": "59dd1975-4805-4f90-ac79-f35a47c4eed8",
-      "position": 4,
+      "position": 6,
       "properties": {
         "description": "Allow students to walk around the room and interact with each other's devices. Celebrate all of the different ideas that students were able to implement with the same basic code.",
         "name": "(Optional) Gallery Walk"
@@ -4086,7 +4129,7 @@
       "key": "04f9d7e1-c590-4d22-ab74-069209762be4",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** What was your favorite part of the app you created? What is something you wish you had time to improve?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What was your favorite part of the app you created? What is something you wish you had time to improve?_",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -4106,21 +4149,10 @@
       }
     },
     {
-      "key": "5067687a-a676-49ac-a8f7-6443b00ae9e5",
-      "position": 1,
-      "properties": {
-        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Project**](https://docs.google.com/forms/d/e/1FAIpQLSfin4Rf6upATKCSQd6qsN-ppzsG_3zc7BQfraMtEk9IoxiO8A/viewform)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
-      },
-      "seeding_key": {
-        "activity_section.key": "5067687a-a676-49ac-a8f7-6443b00ae9e5",
-        "lesson_activity.key": "f056b48b-21f4-446e-834c-19244a7a1ae3"
-      }
-    },
-    {
       "key": "732a32ea-4bed-4925-a6d4-444ccb69e5fe",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** If you could create any kind of computational device, what would it be? What would it do? How would people interact with it?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _If you could create any kind of computational device, what would it be? What would it do? How would people interact with it?_"
       },
       "seeding_key": {
         "activity_section.key": "732a32ea-4bed-4925-a6d4-444ccb69e5fe",
@@ -4165,7 +4197,13 @@
       "key": "c960fb55-e814-4e24-a9d4-07f5875c76f9",
       "position": 1,
       "properties": {
-        "description": "**Transition:** Send students to Code Studio"
+        "description": "**Transition:** Send students to Code Studio",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c960fb55-e814-4e24-a9d4-07f5875c76f9",
@@ -4187,7 +4225,13 @@
       "key": "f7118f4f-2fc6-430c-a803-09df0254c7dc",
       "position": 3,
       "properties": {
-        "progression_name": "Predict"
+        "progression_name": "Predict",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Classroom Safety:** This level is purposefully designed to provide an opportunity to discuss safety and best practices with handling the Circuit Playground. You may decide the emphasize these steps with the class as a full group, and monitor students as they complete these steps during this level. In general, students should always reset the app and unplug from the computer before making any wiring changes. Otherwise, it could ruin the LED or ruin the board."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "f7118f4f-2fc6-430c-a803-09df0254c7dc",
@@ -4220,7 +4264,13 @@
       "key": "65990eea-0d83-4814-9076-d63244b6b628",
       "position": 6,
       "properties": {
-        "progression_name": "Assessment"
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "65990eea-0d83-4814-9076-d63244b6b628",
@@ -4242,7 +4292,7 @@
       "key": "52499dd0-0df4-4eec-90ef-d794b8655d2f",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** What’s a new type of device you can create now that you know how to wire up external LEDs that you wouldn’t have been able to create before this lesson?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What’s a new type of device you can create now that you know how to wire up external LEDs that you wouldn’t have been able to create before this lesson?_"
       },
       "seeding_key": {
         "activity_section.key": "52499dd0-0df4-4eec-90ef-d794b8655d2f",
@@ -4275,7 +4325,7 @@
       "key": "a98ae999-f790-4536-b636-063170f6b369",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** Yesterday we used electricity to create a circuit to light up an LED. Today, we’re going to explore how to use electricity to represent a button press that we can use for input. What do you think that circuit will look like? What materials do you think we’ll need?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Yesterday we used electricity to create a circuit to light up an LED. Today, we’re going to explore how to use electricity to represent a button press that we can use for input. What do you think that circuit will look like? What materials do you think we’ll need?_"
       },
       "seeding_key": {
         "activity_section.key": "a98ae999-f790-4536-b636-063170f6b369",
@@ -4297,7 +4347,13 @@
       "key": "9cc97556-4746-41d2-aacd-4520dec3be96",
       "position": 1,
       "properties": {
-        "description": "**Transition:** Send students to Code Studio"
+        "description": "**Transition:** Send students to Code Studio",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9cc97556-4746-41d2-aacd-4520dec3be96",
@@ -4341,7 +4397,13 @@
       "key": "0376c3e9-bb4a-4cc6-90a7-1b7db8535f57",
       "position": 5,
       "properties": {
-        "progression_name": "Assessment"
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0376c3e9-bb4a-4cc6-90a7-1b7db8535f57",
@@ -4363,7 +4425,7 @@
       "key": "30534f9b-69fa-44d4-987f-9ee0b46cc9b6",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** Think back to the list of devices you wish you could develop and how people would use it. Using what we’ve learned in the last few lessons, describe with more details how you could start to create a device like that. How would you connect the wires? What external components would you use?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Think back to the list of devices you wish you could develop and how people would use it. Using what we’ve learned in the last few lessons, describe with more details how you could start to create a device like that. How would you connect the wires? What external components would you use?_"
       },
       "seeding_key": {
         "activity_section.key": "30534f9b-69fa-44d4-987f-9ee0b46cc9b6",
@@ -4382,22 +4444,28 @@
       }
     },
     {
-      "key": "de16a70c-f53f-4a25-a2d0-5a9a93072fbc",
+      "key": "b06fecf3-f666-4d47-97ed-0f43e2bd6781",
       "position": 1,
       "properties": {
-        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfROQdamfLnHVn11tsjHsGPElKhC5LzDfHFEqhaj0igtsqHAA/viewform?usp=sf_link)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
+        "description": "**Group:** Place students into groups of 2-4 for this project. At your discretion you may choose to have students form larger groups or work independently.",
+        "name": "Review Project Guide",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Group Projects:** If students are working in pairs or small teams to complete projects, consider showing these two videos to the class:\n\n- [How Teamwork Works](https://www.youtube.com/watch?v=qkw4pDV5Lec)\n- [Dealing with Disagreements](https://www.youtube.com/watch?v=6GgrUeVT-xs)\n\nDepending on your goals with this project, consider having teams complete a [Student Guide to Team Planning](https://docs.google.com/document/d/1pfwrtSLjj1LCqneR_lmyUfw2z0UkkWSXTq48AxuIhyo/edit#), which reinforces the message in the video"
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "de16a70c-f53f-4a25-a2d0-5a9a93072fbc",
-        "lesson_activity.key": "beb48976-76eb-4f80-adc0-a41ae4f81d51"
+        "activity_section.key": "b06fecf3-f666-4d47-97ed-0f43e2bd6781",
+        "lesson_activity.key": "519efadb-6bb4-4341-a9ec-1b666d76ac01"
       }
     },
     {
       "key": "d85819c8-89bd-4bb9-9be5-a76d07025949",
-      "position": 1,
+      "position": 2,
       "properties": {
-        "description": "**Group:** Place students into groups of 2-4 for this project. At your discretion you may choose to have students form larger groups or work independently.\n\n**Distribute:** Provide a copy of the project guide to each group. As a class, review the different steps of the project and where they appear in the project guide. \n\nDistribute the rubric or student checklist to each student. Have them look over this resource so that they know from the beginning what components of the project you will be looking for.",
-        "name": "Review Project Guide\r",
+        "description": "**Distribute:** Provide a copy of the project guide to each group. As a class, review the different steps of the project and where they appear in the project guide. \n\nDistribute the rubric or student checklist to each student. Have them look over this resource so that they know from the beginning what components of the project you will be looking for.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4450,6 +4518,13 @@
       "key": "5be532a8-3a04-478b-8840-962b2c499894",
       "position": 4,
       "properties": {
+        "progression_name": "Prototype an Innovation",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "5be532a8-3a04-478b-8840-962b2c499894",
@@ -4461,13 +4536,7 @@
       "position": 5,
       "properties": {
         "description": "**Group:** Pair up groups to review each other's projects.",
-        "name": "Reflect - Peer Review\r",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If you have the time for it, this can be a good opportunity to pull in the user testing process that students learned in Unit 4.\r\n"
-          }
-        ]
+        "name": "Reflect - Peer Review\r"
       },
       "seeding_key": {
         "activity_section.key": "b71674dc-4112-4737-bfb5-749f710b2bb2",
@@ -4519,7 +4588,8 @@
       "key": "266e20ca-98da-4140-80a3-b88831c809bc",
       "position": 2,
       "properties": {
-        "description": "* The original innovation they set out to build\n* A description of the programming process including at least one challenge they faced and one new feature they decided to add\n* A description of the most interesting or complex piece of code they wrote\n* A live demonstration of the actual innovation\n\nSend students to Code Studio to complete their reflection on their attitudes toward computer science.  Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey."
+        "description": "* The original innovation they set out to build\n* A description of the programming process including at least one challenge they faced and one new feature they decided to add\n* A description of the most interesting or complex piece of code they wrote\n* A live demonstration of the actual innovation\n\nSend students to Code Studio to complete their reflection on their attitudes toward computer science.  Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "progression_name": "End-Of-Unit Survey"
       },
       "seeding_key": {
         "activity_section.key": "266e20ca-98da-4140-80a3-b88831c809bc",
@@ -4560,17 +4630,6 @@
       "seeding_key": {
         "activity_section.key": "7d3cfd5f-d476-4d41-aee5-6cbd484d5263",
         "lesson_activity.key": "0e3432dd-ba1d-4c56-a446-81c419bd6db9"
-      }
-    },
-    {
-      "key": "63fb9446-ee5a-4307-9b52-3b1d8a03d302",
-      "position": 1,
-      "properties": {
-        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Project**](https://docs.google.com/forms/d/e/1FAIpQLSfin4Rf6upATKCSQd6qsN-ppzsG_3zc7BQfraMtEk9IoxiO8A/viewform)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
-      },
-      "seeding_key": {
-        "activity_section.key": "63fb9446-ee5a-4307-9b52-3b1d8a03d302",
-        "lesson_activity.key": "d2ff5f5a-875d-4524-8930-d7e45545b0c2"
       }
     },
     {
@@ -5308,6 +5367,28 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - If Variables - SB0_2222"
+        ],
+        "lesson.key": "Variables and If Statements",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-2022",
+        "activity_section.key": "93ea638a-0d81-4055-88cc-d9167581d9be"
+      },
+      "level_keys": [
+        "CSD U6 - If Variables - SB0_2222"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "CSD U6 - If Variables  - Vid_2222"
         ],
@@ -5328,8 +5409,8 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 3,
+      "chapter": 31,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5353,8 +5434,8 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 4,
+      "chapter": 32,
+      "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -5378,8 +5459,8 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 5,
+      "chapter": 33,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5403,8 +5484,8 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 6,
+      "chapter": 34,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5428,8 +5509,8 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 7,
+      "chapter": 35,
+      "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -5453,8 +5534,8 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 8,
+      "chapter": 36,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5478,8 +5559,8 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 9,
+      "chapter": 37,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5503,8 +5584,8 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 10,
+      "chapter": 38,
+      "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5528,8 +5609,8 @@
       ]
     },
     {
-      "chapter": 38,
-      "position": 11,
+      "chapter": 39,
+      "position": 12,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -5553,8 +5634,8 @@
       ]
     },
     {
-      "chapter": 39,
-      "position": 12,
+      "chapter": 40,
+      "position": 13,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -5578,8 +5659,8 @@
       ]
     },
     {
-      "chapter": 40,
-      "position": 13,
+      "chapter": 41,
+      "position": 14,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5603,14 +5684,40 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
+          "CSD U6 - On The Go - ExamplesParent_2022"
+        ],
+        "progression": "Example Apps"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - On The Go - ExamplesParent_2022"
+        ],
+        "lesson.key": "Mini-Project: On-The-Go App",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-2022",
+        "activity_section.key": "1dbb5db6-9f9e-4ddb-b73b-c33af06d16dc"
+      },
+      "level_keys": [
+        "CSD U6 - On The Go - ExamplesParent_2022"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "CSD U6 - On The Go - Design_2222"
-        ]
+        ],
+        "progression": "On-The-Go App"
       },
       "bonus": false,
       "seeding_key": {
@@ -5627,14 +5734,15 @@
       ]
     },
     {
-      "chapter": 42,
-      "position": 2,
+      "chapter": 44,
+      "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD U6 - On The Go - Events_2222"
-        ]
+        ],
+        "progression": "On-The-Go App"
       },
       "bonus": false,
       "seeding_key": {
@@ -5651,14 +5759,15 @@
       ]
     },
     {
-      "chapter": 43,
-      "position": 3,
+      "chapter": 45,
+      "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD U6 - On The Go - Logic_2222"
-        ]
+        ],
+        "progression": "On-The-Go App"
       },
       "bonus": false,
       "seeding_key": {
@@ -5675,14 +5784,15 @@
       ]
     },
     {
-      "chapter": 44,
-      "position": 4,
+      "chapter": 46,
+      "position": 5,
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
         "level_keys": [
           "CSD U6 - On The Go - Review_2222"
-        ]
+        ],
+        "progression": "On-The-Go App"
       },
       "bonus": false,
       "seeding_key": {
@@ -5699,7 +5809,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5724,7 +5834,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 48,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5749,7 +5859,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 49,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5774,7 +5884,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 50,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5799,7 +5909,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 51,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -5824,7 +5934,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 52,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5849,7 +5959,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 53,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -5874,7 +5984,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 54,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5899,7 +6009,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 55,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5924,7 +6034,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 56,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5949,7 +6059,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 57,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5974,7 +6084,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 58,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5999,7 +6109,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 59,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -6024,7 +6134,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 60,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -6049,7 +6159,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 61,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -6074,7 +6184,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 62,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -6099,7 +6209,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 63,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -6124,7 +6234,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 64,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -6149,7 +6259,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 65,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6174,7 +6284,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 66,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6199,7 +6309,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 67,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6224,7 +6334,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 68,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6249,7 +6359,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 69,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -6274,7 +6384,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 70,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -6299,7 +6409,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 71,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -6324,7 +6434,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 72,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -6349,7 +6459,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 73,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6373,7 +6483,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 74,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6397,7 +6507,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 75,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6421,7 +6531,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 76,
       "position": 4,
       "activity_section_position": 4,
       "assessment": true,
@@ -6445,7 +6555,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 77,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -6470,7 +6580,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 78,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6495,7 +6605,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 79,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6520,7 +6630,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 80,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6545,7 +6655,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 81,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6570,7 +6680,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 82,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6595,7 +6705,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 83,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6620,7 +6730,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 84,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -6645,7 +6755,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 85,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -6670,7 +6780,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 86,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -6695,7 +6805,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 87,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -6720,7 +6830,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 88,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6745,7 +6855,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 89,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6770,7 +6880,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 90,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6795,7 +6905,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 91,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6820,7 +6930,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 92,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -6845,7 +6955,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 93,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -6870,7 +6980,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 94,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -6895,7 +7005,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 95,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -6920,7 +7030,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 96,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -6945,7 +7055,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 97,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6970,7 +7080,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 98,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6995,7 +7105,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 99,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7020,7 +7130,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 100,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7045,7 +7155,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 101,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7070,7 +7180,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 102,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7095,7 +7205,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 103,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -7120,7 +7230,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 104,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -7145,7 +7255,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 105,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -7170,7 +7280,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 106,
       "position": 10,
       "activity_section_position": 4,
       "assessment": false,
@@ -7195,7 +7305,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 107,
       "position": 11,
       "activity_section_position": 5,
       "assessment": false,
@@ -7220,7 +7330,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 108,
       "position": 12,
       "activity_section_position": 1,
       "assessment": true,
@@ -7245,7 +7355,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 109,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -7270,7 +7380,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 110,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7295,7 +7405,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 111,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7320,7 +7430,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 112,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7345,7 +7455,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 113,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7370,7 +7480,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 114,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -7395,7 +7505,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 115,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -7420,7 +7530,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 116,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -7445,7 +7555,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 117,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -7470,7 +7580,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 118,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7495,7 +7605,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 119,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -7520,7 +7630,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 120,
       "position": 11,
       "activity_section_position": 3,
       "assessment": false,
@@ -7545,7 +7655,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 121,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -7570,7 +7680,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 122,
       "position": 13,
       "activity_section_position": 1,
       "assessment": true,
@@ -7595,14 +7705,15 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 123,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD U6 - Interactive Art - Events_2222"
-        ]
+        ],
+        "progression": "Interactive Art"
       },
       "bonus": false,
       "seeding_key": {
@@ -7619,14 +7730,15 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 124,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD U6 - Interactive Art - Logic_2222"
-        ]
+        ],
+        "progression": "Interactive Art"
       },
       "bonus": false,
       "seeding_key": {
@@ -7643,14 +7755,15 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 125,
       "position": 3,
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
         "level_keys": [
           "CSD U6 - Interactive Art - Review_2222"
-        ]
+        ],
+        "progression": "Interactive Art"
       },
       "bonus": false,
       "seeding_key": {
@@ -7667,7 +7780,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 126,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7692,7 +7805,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 127,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7717,7 +7830,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 128,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7742,7 +7855,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 129,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7767,7 +7880,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 130,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -7792,7 +7905,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 131,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7817,7 +7930,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 132,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -7842,7 +7955,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 133,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -7867,7 +7980,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 134,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7892,7 +8005,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 135,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7917,7 +8030,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 136,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7942,7 +8055,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 137,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -7967,7 +8080,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 138,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7992,7 +8105,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 139,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -8017,7 +8130,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 140,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -8042,14 +8155,15 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 141,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD U6 - Prototype Innovation - Design_2222"
-        ]
+        ],
+        "progression": "Prototype an Innovation"
       },
       "bonus": false,
       "seeding_key": {
@@ -8066,14 +8180,15 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 142,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD U6 - Prototype Innovation - Events_2222"
-        ]
+        ],
+        "progression": "Prototype an Innovation"
       },
       "bonus": false,
       "seeding_key": {
@@ -8090,14 +8205,15 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 143,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD U6 - Physical Innovations - Logic_2222"
-        ]
+        ],
+        "progression": "Prototype an Innovation"
       },
       "bonus": false,
       "seeding_key": {
@@ -8114,14 +8230,15 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 144,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD U6 - Physical Innovations - Review_2222"
-        ]
+        ],
+        "progression": "Prototype an Innovation"
       },
       "bonus": false,
       "seeding_key": {
@@ -8138,7 +8255,32 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 145,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csd6-2022"
+        ],
+        "progression": "End-Of-Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csd6-2022"
+        ],
+        "lesson.key": "Project - Prototype an Innovation",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-2022",
+        "activity_section.key": "266e20ca-98da-4140-80a3-b88831c809bc"
+      },
+      "level_keys": [
+        "Student End of Unit Survey_csd6-2022"
+      ]
+    },
+    {
+      "chapter": 146,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -8162,7 +8304,7 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 147,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8526,6 +8668,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSD U6 - If Variables - SB0_2222",
+        "script_level.level_keys": [
+          "CSD U6 - If Variables - SB0_2222"
+        ],
+        "lesson.key": "Variables and If Statements",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-2022",
+        "activity_section.key": "93ea638a-0d81-4055-88cc-d9167581d9be"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSD U6 - If Variables  - Vid_2222",
         "script_level.level_keys": [
           "CSD U6 - If Variables  - Vid_2222"
@@ -8666,6 +8820,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-2022",
         "activity_section.key": "611c6617-a3b8-4d93-a786-8d1c7256b43f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - On The Go - ExamplesParent_2022",
+        "script_level.level_keys": [
+          "CSD U6 - On The Go - ExamplesParent_2022"
+        ],
+        "lesson.key": "Mini-Project: On-The-Go App",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-2022",
+        "activity_section.key": "1dbb5db6-9f9e-4ddb-b73b-c33af06d16dc"
       }
     },
     {
@@ -9894,6 +10060,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "Student End of Unit Survey_csd6-2022",
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csd6-2022"
+        ],
+        "lesson.key": "Project - Prototype an Innovation",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-2022",
+        "activity_section.key": "266e20ca-98da-4140-80a3-b88831c809bc"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSD Physical Computing Post-Project Test_2022",
         "script_level.level_keys": [
           "CSD Physical Computing Post-Project Test_2022"
@@ -10369,7 +10547,7 @@
     },
     {
       "name": "Functions",
-      "url": "https://youtu.be/NBwlNBE9Fl0",
+      "url": "https://youtu.be/TUdtGzQge3M",
       "key": "functions_3",
       "properties": {
         "audience": "Student",
@@ -10418,7 +10596,7 @@
     },
     {
       "name": "If Statements",
-      "url": "https://youtu.be/0oG3Wck2fRU",
+      "url": "https://youtu.be/O4L1HSZ5VnA",
       "key": "if_statements_2",
       "properties": {
         "audience": "Student",
@@ -10439,6 +10617,18 @@
       },
       "seeding_key": {
         "resource.key": "innovations_in_computing"
+      }
+    },
+    {
+      "name": "Input / Output Devices",
+      "url": "https://youtu.be/N-zykCnEmck",
+      "key": "input_output_devices",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "input_output_devices"
       }
     },
     {
@@ -10897,7 +11087,7 @@
     },
     {
       "name": "Variables",
-      "url": "https://youtu.be/UG7Q1Sr0_F0",
+      "url": "https://youtu.be/WsXNpY3SXe8",
       "key": "variables_2",
       "properties": {
         "audience": "Student",
@@ -10998,6 +11188,12 @@
       "seeding_key": {
         "lesson.key": "Combining Inputs and Outputs",
         "resource.key": "combining_inputs_and_outputs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Combining Inputs and Outputs",
+        "resource.key": "input_output_devices"
       }
     },
     {

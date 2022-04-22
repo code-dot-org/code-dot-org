@@ -46,7 +46,7 @@ class CourseVersionTest < ActiveSupport::TestCase
     CourseOffering.add_course_offering(@partner_unit)
   end
   test 'get courses with participant progress for student should return no courses' do
-    assert_equal CourseVersion.courses_for_unit_selector([], @student).length, 0
+    assert_equal CourseVersion.courses_for_unit_selector([]).length, 0
   end
 
   test 'get courses with participant progress for levelbuilder should return all courses where followers in section have progress' do
@@ -72,7 +72,7 @@ class CourseVersionTest < ActiveSupport::TestCase
       @unit_facilitator_to_teacher.id
     ]
 
-    assert_equal CourseVersion.courses_for_unit_selector(student_unit_ids, @levelbuilder).map {|co| co[:display_name]}.sort, expected_course_info
+    assert_equal CourseVersion.courses_for_unit_selector(student_unit_ids).map {|co| co[:display_name]}.sort, expected_course_info
   end
 
   test 'get courses with participant progress for pilot teacher should return courses where pilot teacher can be instructor' do
@@ -80,7 +80,7 @@ class CourseVersionTest < ActiveSupport::TestCase
       @pilot_unit.course_version.course_offering.display_name + " *",
     ].sort
 
-    assert_equal CourseVersion.courses_for_unit_selector([@pilot_unit.id], @pilot_teacher).map {|co| co[:display_name]}.sort, expected_course_info
+    assert_equal CourseVersion.courses_for_unit_selector([@pilot_unit.id]).map {|co| co[:display_name]}.sort, expected_course_info
   end
 
   test 'get courses with participant progress for teacher should only return courses where they can be the instructor' do
@@ -91,11 +91,10 @@ class CourseVersionTest < ActiveSupport::TestCase
 
     student_unit_ids = [
       @unit_in_course.id,
-      @unit_teacher_to_students.id,
-      @unit_facilitator_to_teacher.id
+      @unit_teacher_to_students.id
     ]
 
-    assert_equal CourseVersion.courses_for_unit_selector(student_unit_ids, @teacher).map {|co| co[:display_name]}.sort, expected_course_info
+    assert_equal CourseVersion.courses_for_unit_selector(student_unit_ids).map {|co| co[:display_name]}.sort, expected_course_info
   end
 
   test 'get courses with participant progress for facilitator should return all courses, amd units where facilitator can be instructor and followers in section have progress' do
@@ -117,7 +116,7 @@ class CourseVersionTest < ActiveSupport::TestCase
       @unit_facilitator_to_teacher.id
     ]
 
-    courses_with_progress = CourseVersion.courses_for_unit_selector(student_unit_ids, @facilitator)
+    courses_with_progress = CourseVersion.courses_for_unit_selector(student_unit_ids)
 
     assert_equal courses_with_progress.map {|co| co[:display_name]}.sort, expected_course_info
 

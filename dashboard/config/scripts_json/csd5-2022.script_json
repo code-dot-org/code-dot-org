@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-12 20:57:38 UTC",
+    "serialized_at": "2022-04-14 20:59:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4664,7 +4664,7 @@
       "position": 1,
       "properties": {
         "description": "Send students to Code Studio to complete their reflection on their attitudes toward computer science. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
-        "progression_name": "Reflection"
+        "progression_name": "End-Of-Unit Survey"
       },
       "seeding_key": {
         "activity_section.key": "1892c7ae-6927-42df-a1ee-d590267476da",
@@ -5268,15 +5268,12 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "csd-pulse-check-survey-1-levelgroup U5Ch2_2022"
-        ],
-        "progression": "Reflection"
+        "progression": "End-Of-Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csd-pulse-check-survey-1-levelgroup U5Ch2_2022"
+          "Student End of Unit Survey_csd5-2022"
         ],
         "lesson.key": "Project - Make a Recommendation",
         "lesson_group.key": "csd5_2",
@@ -5284,7 +5281,7 @@
         "activity_section.key": "1892c7ae-6927-42df-a1ee-d590267476da"
       },
       "level_keys": [
-        "csd-pulse-check-survey-1-levelgroup U5Ch2_2022"
+        "Student End of Unit Survey_csd5-2022"
       ]
     },
     {
@@ -5604,9 +5601,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csd-pulse-check-survey-1-levelgroup U5Ch2_2022",
+        "level.key": "Student End of Unit Survey_csd5-2022",
         "script_level.level_keys": [
-          "csd-pulse-check-survey-1-levelgroup U5Ch2_2022"
+          "Student End of Unit Survey_csd5-2022"
         ],
         "lesson.key": "Project - Make a Recommendation",
         "lesson_group.key": "csd5_2",

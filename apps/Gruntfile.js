@@ -343,6 +343,7 @@ describe('entry tests', () => {
           ['build/package/css/courses.css', 'style/curriculum/courses.scss'],
           ['build/package/css/scripts.css', 'style/curriculum/scripts.scss'],
           ['build/package/css/lessons.css', 'style/curriculum/lessons.scss'],
+          ['build/package/css/markdown.css', 'style/curriculum/markdown.scss'],
           ['build/package/css/levels.css', 'style/curriculum/levels.scss'],
           ['build/package/css/rollups.css', 'style/curriculum/rollups.scss'],
           [
@@ -363,6 +364,7 @@ describe('entry tests', () => {
           ],
           ['build/package/css/plc.css', 'style/code-studio/plc.scss'],
           ['build/package/css/pd.css', 'style/code-studio/pd.scss'],
+          ['build/package/css/petition.css', 'style/code-studio/petition.scss'],
           [
             'build/package/css/publicKeyCryptography.css',
             'style/publicKeyCryptography/publicKeyCryptography.scss'
@@ -529,6 +531,8 @@ describe('entry tests', () => {
     'lessons/show': './src/sites/studio/pages/lessons/show.js',
     'lessons/student_lesson_plan':
       './src/sites/studio/pages/lessons/student_lesson_plan.js',
+    'programming_classes/show':
+      './src/sites/studio/pages/programming_classes/show.js',
     'programming_environments/index':
       './src/sites/studio/pages/programming_environments/index.js',
     'programming_environments/show':
@@ -666,6 +670,7 @@ describe('entry tests', () => {
       './src/sites/studio/pages/programming_expressions/edit.js',
     'programming_methods/edit':
       './src/sites/studio/pages/programming_methods/edit.js',
+    'reference_guides/new': './src/sites/studio/pages/reference_guides/new.js',
     'reference_guides/edit':
       './src/sites/studio/pages/reference_guides/edit.js',
     'reference_guides/edit_all':

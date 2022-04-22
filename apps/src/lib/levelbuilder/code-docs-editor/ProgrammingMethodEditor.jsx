@@ -12,18 +12,39 @@ import $ from 'jquery';
 import color from '@cdo/apps/util/color';
 
 function useProgrammingMethod(initialProgrammingMethod) {
-  const [programmingMethod, setProgrammingMethod] = useState(
-    initialProgrammingMethod
+  const initializeProgrammingMethod = programmingMethod => {
+    const copiedMethod = {...programmingMethod};
+    // We remove id and key from state as they should not be modified
+    delete copiedMethod.id;
+    delete copiedMethod.key;
+    // Examples and parameters don't have obvious unique identifiers so adding
+    // some here. These are required by React when we transform these lists
+    // into sets of components.
+    if (copiedMethod.examples) {
+      copiedMethod.examples.forEach(e => (e.key = createUuid()));
+    }
+    if (copiedMethod.parameters) {
+      copiedMethod.parameters.forEach(p => (p.key = createUuid()));
+    }
+    return copiedMethod;
+  };
+
+  const [programmingMethod, setProgrammingMethod] = useState(() =>
+    initializeProgrammingMethod(initialProgrammingMethod)
   );
 
-  function setProgrammingMethodProperty(key, value) {
+  const setProgrammingMethodProperty = (key, value) => {
     setProgrammingMethod({...programmingMethod, [key]: value});
-  }
+  };
+
+  const resetProgrammingMethod = newProgrammingMethod => {
+    setProgrammingMethod(initializeProgrammingMethod(newProgrammingMethod));
+  };
 
   return [
     programmingMethod,
     setProgrammingMethodProperty,
-    setProgrammingMethod
+    resetProgrammingMethod
   ];
 }
 
@@ -35,20 +56,15 @@ function renderParameterEditor(parameter, updateFunc) {
   return <ParameterEditor parameter={parameter} update={updateFunc} />;
 }
 
-export default function ProgrammingMethodEditor({initialProgrammingMethod}) {
-  // We don't want to update id or key
-  const {id, key, ...remainingProgrammingMethod} = initialProgrammingMethod;
-  if (remainingProgrammingMethod.examples) {
-    remainingProgrammingMethod.examples.forEach(e => (e.key = createUuid()));
-  }
-  if (remainingProgrammingMethod.parameters) {
-    remainingProgrammingMethod.parameters.forEach(p => (p.key = createUuid()));
-  }
+export default function ProgrammingMethodEditor({
+  initialProgrammingMethod,
+  overloadOptions
+}) {
   const [
     programmingMethod,
     setProgrammingMethodProperty,
-    setProgrammingMethod
-  ] = useProgrammingMethod(remainingProgrammingMethod);
+    resetProgrammingMethod
+  ] = useProgrammingMethod(initialProgrammingMethod);
   const [isSaving, setIsSaving] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
   const [error, setError] = useState(null);
@@ -58,7 +74,7 @@ export default function ProgrammingMethodEditor({initialProgrammingMethod}) {
       return;
     }
     setIsSaving(true);
-    fetch(`/programming_methods/${id}`, {
+    fetch(`/programming_methods/${initialProgrammingMethod.id}`, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json',
@@ -81,7 +97,7 @@ export default function ProgrammingMethodEditor({initialProgrammingMethod}) {
         } else {
           setLastUpdated(Date.now());
           setError(null);
-          setProgrammingMethod(json);
+          resetProgrammingMethod(json);
         }
       })
       .catch(error => {
@@ -111,19 +127,39 @@ export default function ProgrammingMethodEditor({initialProgrammingMethod}) {
       </label>
       <label>
         Key (Used in URLs)
-        <input value={key} readOnly style={styles.textInput} />
+        <input
+          value={initialProgrammingMethod.key}
+          readOnly
+          style={styles.textInput}
+        />
       </label>
+      {programmingMethod.canHaveOverload && (
+        <label>
+          Overload Of
+          <select
+            value={programmingMethod.overloadOf || ''}
+            onChange={e =>
+              setProgrammingMethodProperty('overloadOf', e.target.value)
+            }
+            style={styles.selectInput}
+          >
+            <option value="">None</option>
+            {overloadOptions.map(option => (
+              <option key={option.key} value={option.key}>
+                {option.name}
+              </option>
+            ))}
+          </select>
+        </label>
+      )}
       <CollapsibleEditorSection title="Documentation" collapsed>
         <label>
           External Documentation
           <HelpTip>Link to external documentation</HelpTip>
           <input
-            value={programmingMethod.externalDocumentation}
+            value={programmingMethod.externalLink}
             onChange={e =>
-              setProgrammingMethodProperty(
-                'externalDocumentation',
-                e.target.value
-              )
+              setProgrammingMethodProperty('externalLink', e.target.value)
             }
             style={styles.textInput}
           />
@@ -179,7 +215,7 @@ const programmingMethodShape = PropTypes.shape({
   key: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   categoryKey: PropTypes.string,
-  externalDocumentation: PropTypes.string,
+  externalLink: PropTypes.string,
   content: PropTypes.string,
   syntax: PropTypes.string,
   tips: PropTypes.string,
@@ -189,7 +225,13 @@ const programmingMethodShape = PropTypes.shape({
 });
 
 ProgrammingMethodEditor.propTypes = {
-  initialProgrammingMethod: programmingMethodShape.isRequired
+  initialProgrammingMethod: programmingMethodShape.isRequired,
+  overloadOptions: PropTypes.arrayOf(
+    PropTypes.shape({
+      key: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired
+    })
+  )
 };
 
 const styles = {

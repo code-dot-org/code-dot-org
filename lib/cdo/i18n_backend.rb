@@ -121,6 +121,8 @@ module Cdo
 
       def translate(locale, key, options = ::I18n::EMPTY_HASH)
         result = super(locale, key, options)
+        return result if options[:safe_interpolation] == false
+
         # Log unused interpolation arguments to honeybadger; these are likely
         # the result of translations mistakenly including interpolation syntax
         # that was removed in the source string and we want to be notified so

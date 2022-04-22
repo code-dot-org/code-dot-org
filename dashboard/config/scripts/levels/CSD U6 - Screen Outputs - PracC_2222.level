@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-08T16:52:40.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -70,14 +66,18 @@
     "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(77, 87, 95); background-color: rgba(0, 0, 0, 0); border-color: rgb(77, 87, 95); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 13px; padding: 2px 15px; width: 320px; height: 50px; position: absolute; left: -1.66533e-16px; top: 140px; text-align: center;\" id=\"titleLabel\">The App Is Not Running</label></div></div>",
     "display_name": "Debugging",
     "bubble_choice_description": "Help fix the bugs so the app appears correctly",
-    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L3/practice/C.png",
+    "thumbnail_url": "https://images.code.org/d3e6373a2a37f39ab3240adf25f131c7-image-1650058864115.png",
     "encrypted_examples": "md5c7MypYMYL70QlzH018W2sO+2YsE+tJqI8hc2IRjkog6hatyKYK3VtwpHI\nW7rHnOh839qJA4Of1vWP0l9AxA==\n",
     "video_key": "csd_debugging",
     "preload_asset_list": null
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-04-08T16:52:40.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-08T16:52:40.179+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Outputs - PracC_2022\\\"\"],\"cloned_from\":\"CSD U6 - Screen Outputs - PracC_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-08T16:52:40.179+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Outputs - PracC_2022\\\"\"],\"cloned_from\":\"CSD U6 - Screen Outputs - PracC_2022\"},{\"changed_at\":\"2022-04-15 21:41:16 +0000\",\"changed\":[\"code_functions\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

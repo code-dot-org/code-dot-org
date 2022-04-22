@@ -2,20 +2,35 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "implement algorithm",
+    "long_instructions": "The `SocialMediaScene`(#e7e8ea) class displays the icon for the social media app with the most users.\r\n\r\nIt has instance variables for `twitter`(#e7e8ea), `facebook`(#e7e8ea), and `instagram`(#e7e8ea) to store the number of users for each app. The `createScene()`(#e7e8ea) method draws the icon for the social media app with the most users.\r\n\r\n##In SocialMediaScene.java:\r\n\r\n1. Write the `createScene()`(#e7e8ea) method to draw the icon for the social media app with the most users.\r\n\r\n   * If `twitter`(#e7e8ea) is greater than `facebook`(#e7e8ea) and `instagram`(#e7e8ea), draw the `\"twitter.png\"`(#e7e8ea) image.\r\n   \r\n   * If `facebook`(#e7e8ea) is greater than `twitter`(#e7e8ea) and `instagram`(#e7e8ea), draw the `\"facebook.png\"`(#e7e8ea) image.\r\n   \r\n   * If `instagram`(#e7e8ea) is greater than `facebook`(#e7e8ea) and `twitter`(#e7e8ea), draw the `\"instagram.png\"`(#e7e8ea) image.",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "theater",
-    "encrypted_examples": [
-
-    ]
+    "start_sources": {
+      "MyTheater.java": {
+        "text": "import org.code.theater.*;\n\npublic class MyTheater {\n  public static void main(String[] args) {\n\n    SocialMediaScene myScene = new SocialMediaScene(1358, 10841, 4134);\n\n    myScene.createScene();\n\n    Theater.playScenes(myScene);\n    \n  }\n}",
+        "isVisible": true
+      },
+      "SocialMediaScene.java": {
+        "text": "import org.code.theater.*;\n\n/*\n * Represents a scene that illustrates\n * which social media app had the most users\n */\npublic class SocialMediaScene extends Scene {\n\n  private int twitter;     // The number of users on Twitter\n  private int facebook;    // The number of users on Facebook\n  private int instagram;   // The number of users on Instagram\n\n  /*\n   * Constructor to create a SocialMediaScene with the\n   * specified values for each social media app\n   */\n  public SocialMediaScene(int twitter, int facebook, int instagram) {\n    this.twitter = twitter;\n    this.facebook = facebook;\n    this.instagram = instagram;\n  }\n\n  /*\n   * Creates the scene by displaying the icon\n   * for the social media app with the most users\n   */\n  public void createScene() {\n    // TO DO #1: Use nested if statements to determine which\n    // social media app had the most users and draw its icon.\n\n    \n    \n  }\n}",
+        "isVisible": true
+      }
+    },
+    "starter_assets": {
+      "twitter.png": "4b65ee47-ff9d-4a12-bc5b-21e2f531b73f.png",
+      "facebook.png": "b0391ea8-beda-401d-baa2-24e68e43a1fa.png",
+      "instagram.png": "c4b2142b-76c4-4294-bce4-1f06d5721da6.png"
+    },
+    "display_name": "Social Media",
+    "bubble_choice_description": "Use nested if statements to determine which social media app had the most users and draw the icon for the app with the most users.",
+    "thumbnail_url": "https://images.code.org/1a476aeaa9ef35f7c7383ef0273ce63f-image-1650574693750.png"
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-04-07T17:45:26.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-04-07T17:45:26.824+00:00\",\"changed\":[\"cloned from \\\"CSA U4L3-L3b_2022\\\"\"],\"cloned_from\":\"CSA U4L3-L3b_2022\"},{\"changed_at\":\"2022-04-07 17:45:29 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-04-07T17:45:26.824+00:00\",\"changed\":[\"cloned from \\\"CSA U4L3-L3b_2022\\\"\"],\"cloned_from\":\"CSA U4L3-L3b_2022\"},{\"changed_at\":\"2022-04-07 17:45:29 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-21 18:00:36 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-21 20:56:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-21 21:03:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-21 21:03:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

@@ -21,7 +21,10 @@ module Services
 
             # prepare data
             data = ScriptCrowdinSerializer.new(script).as_json.compact
-            data.delete(:crowdin_key) # don't need this for top-level data
+            # The JSON object will have the script's crowdin_key as the top level key, but we don't
+            # need that, so we will discard the crowdin_key and set data to be the object it is
+            # pointing to.
+            data = data.first[1] unless data.first.nil?
 
             # we expect that some migrated scripts won't have any lesson plan content
             # at all; that's fine, we can just skip those.

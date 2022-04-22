@@ -152,23 +152,16 @@ class CourseVersion < ApplicationRecord
     latest_stable_version == content_root
   end
 
-  def self.courses_for_unit_selector(unit_ids, user)
-    CourseOffering.single_unit_course_offerings_containing_units_info(unit_ids, user).concat(CourseVersion.unit_group_course_versions_with_units_info(unit_ids, user)).sort_by {|c| c[:display_name]}
-  end
-
-  def self.unit_group_course_versions_with_units(unit_ids, user)
-    CourseVersion.all.select {|cv| cv.included_in_units?(unit_ids) && cv.course_assignable?(user) && cv.content_root_type == 'UnitGroup'}
-  end
-
-  def self.unit_group_course_versions_with_units_info(unit_ids, user)
-    unit_group_course_versions_with_units(unit_ids, user).map {|cv| cv.summarize_for_unit_selector(user)}
-  end
-
-  def summarize_for_unit_selector(user)
-    {
-      display_name: content_root.launched? ? content_root.localized_title : content_root.localized_title + ' *',
-      units: units.select {|u| u.course_assignable?(user)}.map(&:summarize_for_unit_selector).sort_by {|u| u[:position]}
-    }
+  # We use Course Offerings for single unit course offerings because
+  # we want to group together all the course offerings across years.
+  # So all the Course A's are together under the Course A header.
+  # Where as for unit group courses we want to have all the units for a
+  # specific year grouped together under the unit group for that year. So
+  # CSD has multiple headers in the list with the units for that year under it.
+  # See fakeCoursesWithProgress in teacherDashboardTestHelpers.js for an example of what
+  # the resulting data looks like
+  def self.courses_for_unit_selector(unit_ids)
+    CourseOffering.single_unit_course_offerings_containing_units_info(unit_ids).concat(CourseVersion.unit_group_course_versions_with_units_info(unit_ids)).sort_by {|c| c[:display_name]}
   end
 
   def summarize_for_assignment_dropdown(user, locale_code)
@@ -188,5 +181,20 @@ class CourseVersion < ApplicationRecord
         units: units.select {|u| u.course_assignable?(user)}.map(&:summarize_for_assignment_dropdown).to_h
       }
     ]
+  end
+
+  def self.unit_group_course_versions_with_units(unit_ids)
+    CourseVersion.all.select {|cv| cv.included_in_units?(unit_ids) && cv.content_root_type == 'UnitGroup'}
+  end
+
+  def self.unit_group_course_versions_with_units_info(unit_ids)
+    unit_group_course_versions_with_units(unit_ids).map(&:summarize_for_unit_selector)
+  end
+
+  def summarize_for_unit_selector
+    {
+      display_name: content_root.launched? ? content_root.localized_title : content_root.localized_title + ' *',
+      units: units.map(&:summarize_for_unit_selector).sort_by {|u| u[:position]}
+    }
   end
 end
