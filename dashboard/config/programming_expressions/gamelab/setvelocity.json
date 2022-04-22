@@ -36,5 +36,5 @@
   "return_value": "No return value. Changes output in the display after drawSprites() is called.",
   "short_description": "Sets the sprite velocity in both the x and y direction.",
   "syntax": "sprite.setVelocity(x, y)",
-  "tips": "- Changing `World.frameRate` will affect the velocity."
+  "tips": "- Changing [`World.frameRate`(#fff176)](/docs/gamelab/World.frameRate/) will affect the velocity."
 }
