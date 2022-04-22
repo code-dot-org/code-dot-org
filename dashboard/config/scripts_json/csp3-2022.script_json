@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-20 05:16:09 UTC",
+    "serialized_at": "2022-04-21 22:44:39 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3344,6 +3344,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L4 Add Code2022"
+        ],
         "progression": "Add Code"
       },
       "bonus": false,
@@ -3992,11 +3995,9 @@
     },
     {
       "name": "CSP Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1s5w7_UnVIGHOdkqCtK2O78rQ7JJFAWlOeZkZNsCovOY/preview",
       "key": "csp_curriculum_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csp_curriculum_guide"

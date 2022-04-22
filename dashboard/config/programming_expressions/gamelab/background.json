@@ -47,5 +47,5 @@
   "return_value": "No return value. Changes output to the display only.",
   "short_description": "Sets the color used for the background of your game.",
   "syntax": "background(color)",
-  "tips": "- A full list of color names can be found at [W3 Schools - Colors](http://www.w3schools.com/colors/colors_names.asp).\r\n- For more specific color selection, or to randomize color selection, use `rgb()` as a parameter to background instead of a color name.\r\n- To fill the entire screen use background instead of `rect()` because it will fill the screen regardless of how big the screen is.\r\n- When animating a drawing using the `draw()` function, you need to redraw the entire image, back to front, not just the part that is moving."
+  "tips": "- A full list of color names can be found at [W3 Schools - Colors](http://www.w3schools.com/colors/colors_names.asp).\r\n- For more specific color selection, or to randomize color selection, use `rgb()` as a parameter to background instead of a color name.\r\n- To fill the entire screen use background instead of [`rect()`(#f78183)](/docs/applab/rect/) because it will fill the screen regardless of how big the screen is.\r\n- When animating a drawing using the `draw()` function, you need to redraw the entire image, back to front, not just the part that is moving."
 }
