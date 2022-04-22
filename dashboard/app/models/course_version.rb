@@ -160,8 +160,8 @@ class CourseVersion < ApplicationRecord
   # CSD has multiple headers in the list with the units for that year under it.
   # See fakeCoursesWithProgress in teacherDashboardTestHelpers.js for an example of what
   # the resulting data looks like
-  def self.courses_for_unit_selector(unit_ids, user)
-    CourseOffering.single_unit_course_offerings_containing_units_info(unit_ids, user).concat(CourseVersion.unit_group_course_versions_with_units_info(unit_ids, user)).sort_by {|c| c[:display_name]}
+  def self.courses_for_unit_selector(unit_ids)
+    CourseOffering.single_unit_course_offerings_containing_units_info(unit_ids).concat(CourseVersion.unit_group_course_versions_with_units_info(unit_ids)).sort_by {|c| c[:display_name]}
   end
 
   def summarize_for_assignment_dropdown(user, locale_code)
@@ -186,21 +186,21 @@ class CourseVersion < ApplicationRecord
   class << self
     private
 
-    def unit_group_course_versions_with_units(unit_ids, user)
-      CourseVersion.all.select {|cv| cv.included_in_units?(unit_ids) && cv.course_assignable?(user) && cv.content_root_type == 'UnitGroup'}
+    def unit_group_course_versions_with_units(unit_ids)
+      CourseVersion.all.select {|cv| cv.included_in_units?(unit_ids) && cv.content_root_type == 'UnitGroup'}
     end
 
-    def unit_group_course_versions_with_units_info(unit_ids, user)
-      unit_group_course_versions_with_units(unit_ids, user).map {|cv| cv.summarize_for_unit_selector(user)}
+    def unit_group_course_versions_with_units_info(unit_ids)
+      unit_group_course_versions_with_units(unit_ids).map(&:summarize_for_unit_selector)
     end
   end
 
   private
 
-  def summarize_for_unit_selector(user)
+  def summarize_for_unit_selector
     {
       display_name: content_root.launched? ? content_root.localized_title : content_root.localized_title + ' *',
-      units: units.select {|u| u.course_assignable?(user)}.map(&:summarize_for_unit_selector).sort_by {|u| u[:position]}
+      units: units.map(&:summarize_for_unit_selector).sort_by {|u| u[:position]}
     }
   end
 end
