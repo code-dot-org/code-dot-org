@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-19 19:02:40 UTC",
+    "serialized_at": "2022-04-21 23:20:06 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -212,7 +212,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "*How can I use casting to temporarily convert a value to a different type or round to the nearest integer?*\n\nStudents learn how casting operators can be used to temporarily convert a value to a different type. Students explore the effect of using the `(int)` and `(double)` casting operators on a value and expression. Students also use casting operators to round a `double` value to the nearest integer.",
+        "overview": "**How can I use casting to temporarily convert a value to a different type or round to the nearest integer?**\n\nStudents learn how casting operators can be used to temporarily convert a value to a different type. Students explore the effect of using the `(int)` and `(double)` casting operators on a value and expression. Students also use casting operators to round a `double` value to the nearest integer.",
         "preparation": "* Print copies of the Investigating Casting handout (one for each pair of students)",
         "student_overview": "**How can I use casting to temporarily convert a value to a different type or round to the nearest integer?**\n\nSometimes we need to temporarily convert a value to a different type or round a value to the nearest integer. In this lesson, you learn about the functionality of casting operators. You explore the effect of using the `(int)` and `(double)` casting operators on a value and expression. You also use casting operators to round a `double` value to the nearest integer."
       },
@@ -1152,7 +1152,7 @@
       "key": "334812f6-9215-457c-85a6-18792b7250fb",
       "position": 5,
       "properties": {
-        "description": "**Do This:** Click through the animated slides to introduce the classes and methods in The Theater:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `Scene` class\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `drawImage()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The methods to draw shapes\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `playSound()` and `playNote()` methods\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `pause()` method"
+        "description": "**Do This:** Click through the animated slides to introduce the classes and methods in The Theater:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `Scene` class\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `drawImage()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The methods to draw shapes\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `playSound()` and `playNote()` methods\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `pause()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `Theater.playScenes()` method"
       },
       "seeding_key": {
         "activity_section.key": "334812f6-9215-457c-85a6-18792b7250fb",
@@ -1412,7 +1412,7 @@
       "key": "e9688d29-6cac-4e23-b3aa-d613a8c79a8c",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *The equals() Method*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Hold That Thought strategy to discuss the prompts.\n* *How could we use the `equals()` method to check if these two `Dessert` objects are equal?*\n* *What if the other `Dessert` object is `null`?*\n\n**Discussion Goal:** Students suggest overriding the `equals()` method to use `if` statements to check if the values for the instance variables are the same to determine if the two objects are equal. If the values are the same, the method should return `true`. Otherwise, it would return `false`. Students note that the method should first check if the other `Dessert` object is `null` before checking the values of the instance variables.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *The equals() Method*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the difference between using `==` and `equals()` to compare `String` objects.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Hold That Thought strategy to discuss the prompts.\n* *How could we use the `equals()` method to check if these two `Dessert` objects are equal?*\n* *What if the other `Dessert` object is `null`?*\n\n**Discussion Goal:** Students suggest overriding the `equals()` method to use `if` statements to check if the values for the instance variables are the same to determine if the two objects are equal. If the values are the same, the method should return `true`. Otherwise, it would return `false`. Students note that the method should first check if the other `Dessert` object is `null` before checking the values of the instance variables.",
         "tips": [
           {
             "type": "teachingTip",

@@ -40,8 +40,8 @@
     "mini_rubric": "false",
     "validation_enabled": "false",
     "enable_download_image": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your finished code should look like this <xml><block type=\\\"comment\\\"><field name=\\\"TEXT\\\">Row 2</field><next><block type=\\\"procedures_callnoreturn\\\"><mutation name=\\\"rowTwo\\\"></mutation><next><block type=\\\"turtle_shape_with_side_length\\\"><field name=\\\"VALUE\\\">smallRhombusOrange</field><value name=\\\"SIZE\\\"><block type=\\\"variables_get\\\"><field name=\\\"VAR\\\">length</field></block></value><next><block type=\\\"procedures_callnoreturn\\\"><mutation name=\\\"findPosition\\\"></mutation><next><block type=\\\"turtle_shape_with_side_length\\\"><field name=\\\"VALUE\\\">smallRhombusYellow</field><value name=\\\"SIZE\\\"><block type=\\\"variables_get\\\"><field name=\\\"VAR\\\">length</field></block></value><next><block type=\\\"jump_to\\\"><field name=\\\"VALUE\\\">13</field></block></next></block></next></block></next></block></next></block></next></block></xml>\",\"hint_id\":\"finished code\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bdcdce601dc7e18bc186c6358354b3a9/csc-starquilts-row2.mp3\"}]",
-    "long_instructions": "##Let’s move on to Row 2 \r\n\r\n<div style=\"float:right;padding:20px\">\r\n<img src=\"https://images.code.org/f2554464b2f58942368b3ffee50e3be8-image-1649371239864.40.36 PM.png\" style=\"height:80px; border-width:1px; border-style:solid; border-color:black; border-radius:10px\">\r\n<p style=\"text-align: center\">\r\nexample\r\n</p>\r\n</div>\r\n\r\n\r\n- Add a new `comment` block and type \"Row 2\"\r\n- Drag a `rowTwo` block and snap it under your new comment\r\n- Add a new `draw shape block`\r\n- Then use the`findPosition` block\r\n- Finally, use the `jump to the middle center` block so that the artist is ready for the next level",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Your finished code should look like this <xml><block type=\\\"when_run\\\" deletable=\\\"false\\\" movable=\\\"false\\\" id=\\\"when_run\\\"><next><block type=\\\"comment\\\"><field name=\\\"TEXT\\\">This sets the length of the rhombus to 35</field><next><block type=\\\"variables_set\\\"><field name=\\\"VAR\\\">length</field><value name=\\\"VALUE\\\"><block type=\\\"math_number\\\"><field name=\\\"NUM\\\">35</field></block></value><next><block type=\\\"comment\\\"><field name=\\\"TEXT\\\">Row 1</field><next><block type=\\\"turtle_shape_with_side_length\\\"><field name=\\\"VALUE\\\">smallRhombusRed45</field><value name=\\\"SIZE\\\"><block type=\\\"variables_get\\\"><field name=\\\"VAR\\\">length</field></block></value><next><block type=\\\"comment\\\"><field name=\\\"TEXT\\\">Row 2</field><next><block type=\\\"procedures_callnoreturn\\\"><mutation name=\\\"diagonalRight\\\"></mutation><next><block type=\\\"turtle_shape_with_side_length\\\"><field name=\\\"VALUE\\\">smallRhombusOrange45</field><value name=\\\"SIZE\\\"><block type=\\\"variables_get\\\"><field name=\\\"VAR\\\">length</field></block></value><next><block type=\\\"procedures_callnoreturn\\\"><mutation name=\\\"bumpLeft\\\"></mutation><next><block type=\\\"turtle_shape_with_side_length\\\"><field name=\\\"VALUE\\\">smallRhombusOrange45</field><value name=\\\"SIZE\\\"><block type=\\\"variables_get\\\"><field name=\\\"VAR\\\">length</field></block></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>\",\"hint_id\":\"finished code\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bdcdce601dc7e18bc186c6358354b3a9/csc-starquilts-row2.mp3\"}]",
+    "long_instructions": "**Let’s move on to Row 2** \r\n\r\n<div style=\"float:right;padding:20px\">\r\n<img src=\"https://images.code.org/f2554464b2f58942368b3ffee50e3be8-image-1649371239864.40.36 PM.png\" style=\"height:80px; border-width:1px; border-style:solid; border-color:black; border-radius:10px\">\r\n<p style=\"text-align: center\">\r\nexample\r\n</p>\r\n</div>\r\n\r\n\r\n- Add a new `comment` block for \"Row 2\"\r\n- The Artist needs to jump `diagonalRight`\r\n- Add a new `draw shape` block\r\n- Then use the`bumpLeft` block to nudge the Artist over\r\n- Add another `draw shape` block",
     "project_template_level_name": "csc-starquilts-template",
     "encrypted_examples": [
 
@@ -54,7 +54,7 @@
   "level_num": "custom",
   "user_id": 16,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-07T22:33:13.679+00:00\",\"changed\":[\"cloned from \\\"pattern_blocks_sandbox\\\"\"],\"cloned_from\":\"pattern_blocks_sandbox\"},{\"changed_at\":\"2022-04-07 22:47:43 +0000\",\"changed\":[\"name\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"short_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-07 22:50:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-07 22:50:30 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-07 23:27:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 01:23:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 01:24:45 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 01:27:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 21:50:07 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 21:56:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 21:57:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 21:59:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 21:59:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 22:00:36 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 22:01:38 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-09 03:57:03 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-09 03:57:34 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-09 03:59:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-09 04:01:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-09 04:06:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-11 17:38:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-04-07T22:33:13.679+00:00\",\"changed\":[\"cloned from \\\"pattern_blocks_sandbox\\\"\"],\"cloned_from\":\"pattern_blocks_sandbox\"},{\"changed_at\":\"2022-04-07 22:47:43 +0000\",\"changed\":[\"name\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"short_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-07 22:50:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-07 22:50:30 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-07 23:27:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 01:23:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 01:24:45 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 01:27:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 21:50:07 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 21:56:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 21:57:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 21:59:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 21:59:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 22:00:36 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 22:01:38 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-09 03:57:03 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-09 03:57:34 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-09 03:59:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-09 04:01:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-09 04:06:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-11 17:38:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-21 17:26:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-21 18:34:42 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-21 18:35:12 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-21 19:16:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-21 19:18:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-21 19:30:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -176,77 +176,30 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="comment">
-          <field name="TEXT"/>
-        </block>
-        <block type="turtle_shape_with_side_length">
-          <field name="VALUE">smallRhombusMaroon45</field>
-          <value name="SIZE">
+        <block type="variables_set">
+          <field name="VAR">length</field>
+          <value name="VALUE">
             <block type="math_number">
               <field name="NUM">35</field>
             </block>
           </value>
         </block>
-        <block type="jump_to">
-          <field name="VALUE">13</field>
+        <block type="comment">
+          <field name="TEXT">Row 2</field>
+        </block>
+        <block type="turtle_shape_with_side_length">
+          <field name="VALUE">smallRhombusOrange45</field>
+          <value name="SIZE">
+            <block type="variables_get">
+              <field name="VAR">length</field>
+            </block>
+          </value>
         </block>
         <block type="procedures_callnoreturn">
-          <mutation name="findPosition"/>
+          <mutation name="diagonalRight"/>
         </block>
         <block type="procedures_callnoreturn">
-          <mutation name="rowTwo"/>
-        </block>
-        <block type="procedures_defnoreturn" editable="false" uservisible="false" usercreated="true">
-          <mutation/>
-          <field name="NAME" id="rowTwo">rowTwo</field>
-          <statement name="STACK">
-            <block type="draw_turn_by_constant_dropdown" uservisible="false">
-              <field name="DIR">turnRight</field>
-              <field name="VALUE" config="30,60,90,120,180">30</field>
-              <next>
-                <block type="jump" uservisible="false">
-                  <field name="DIR">jumpForward</field>
-                  <value name="VALUE">
-                    <block type="variables_get" uservisible="false">
-                      <field name="VAR">length</field>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="draw_turn_by_constant_dropdown" uservisible="false">
-                      <field name="DIR">turnLeft</field>
-                      <field name="VALUE" config="30,60,90,120,180">30</field>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-        <block type="procedures_defnoreturn" uservisible="false" usercreated="true">
-          <mutation/>
-          <field name="NAME" id="findPosition">findPosition</field>
-          <statement name="STACK">
-            <block type="draw_turn_by_constant_dropdown" uservisible="false">
-              <field name="DIR">turnLeft</field>
-              <field name="VALUE" config="30,60,90,120,180">90</field>
-              <next>
-                <block type="jump" uservisible="false">
-                  <field name="DIR">jumpForward</field>
-                  <value name="VALUE">
-                    <block type="variables_get" uservisible="false">
-                      <field name="VAR">length</field>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="draw_turn_by_constant_dropdown" uservisible="false">
-                      <field name="DIR">turnRight</field>
-                      <field name="VALUE" config="30,60,90,120,180">90</field>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </statement>
+          <mutation name="bumpLeft"/>
         </block>
       </xml>
     </toolbox_blocks>

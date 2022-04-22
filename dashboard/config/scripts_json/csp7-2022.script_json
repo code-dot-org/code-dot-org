@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-18 23:42:33 UTC",
+    "serialized_at": "2022-04-21 22:44:44 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -358,18 +358,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "58dd2afa-e966-42ea-8df1-7f065de169eb",
-        "lesson.key": "Parameters and Return Explore",
-        "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2022"
-      }
-    },
-    {
-      "key": "96813fa8-2f28-45e1-b108-785fc878aa34",
-      "position": 5,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "96813fa8-2f28-45e1-b108-785fc878aa34",
         "lesson.key": "Parameters and Return Explore",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2022"
@@ -1035,7 +1023,7 @@
       "key": "0bd644a4-7e6f-4b6b-bfb4-6d51f9c5713d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Takeaways:** Review the slide with the class. \r\n\r\n* Functions with parameters and return values help us simplify our code\r\n* Functions can only return one value at a time\r\n* A function can have:\r\n\t* No parameters and no return values\r\n\t* Parameters, but no return values\r\n\t* Return values, but no parameters\r\n\t* Parameters and return values\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Students should add the following words and definitions to their journals: parameter, argument, return.\r\n\r\n\r\n---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the [r functions_with_parameters/csp/2022] video as a class. (*Note this video does not cover the concept of functions with return values.*)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Takeaways:** Review the slide with the class. \n\n* Functions with parameters and return values help us simplify our code\n* Functions can only return one value at a time\n* A function can have:\n\t* No parameters and no return values\n\t* Parameters, but no return values\n\t* Return values, but no parameters\n\t* Parameters and return values\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Students should add the following words and definitions to their journals: parameter, argument, return.\n\n\n---"
       },
       "seeding_key": {
         "activity_section.key": "0bd644a4-7e6f-4b6b-bfb4-6d51f9c5713d",
@@ -1047,22 +1035,12 @@
       "position": 2,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Read through the code and choose the correct answer.",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "927d229a-0d64-4108-ba26-59b8c27cabd1",
         "lesson_activity.key": "58dd2afa-e966-42ea-8df1-7f065de169eb"
-      }
-    },
-    {
-      "key": "b852ba37-c60f-4f8a-baff-28cf8ba71fca",
-      "position": 1,
-      "properties": {
-        "progression_name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "b852ba37-c60f-4f8a-baff-28cf8ba71fca",
-        "lesson_activity.key": "96813fa8-2f28-45e1-b108-785fc878aa34"
       }
     },
     {
@@ -1608,7 +1586,7 @@
       "key": "0e3c6c99-e4c4-4e5b-8d1d-3df820db2619",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Use the activity slides for this lesson to guide the unplugged activity on Libraries. \r\n\r\n|Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\r\n|---|---|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries21.svg) |**Say:** Have you ever wanted to share some of your code with a friend so they can use it to add a cool feature in their program? Or maybe you've got a collection of functions in one program that you want to use in another program. Today we are going to explore the answer to this question: How can we easily share functions between programs?|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries22.svg) |![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Stop once all three envelopes are on the screen. <br><br> **Say:** These are functions. We recently learned about functions with parameters and return values. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Click until the library definition appears on the screen. <br><br> **Say:** The envelopes have been grouped together in a folder. This represents a library. A library is a collection of functions that can be used in many different programs.|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries23.svg) |**Say:** Let's take a look at what's inside the library. If we open up the folder, we see the functions and some documentation. A library should have documentation for each of the included functions. The documentation should include: <ul><li>how each function works</li><li>a complete list of the parameters</li><li>what (if anything) will be returned</li></ul>|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries24.svg) |**Say:** This detailed type of documentation is also known as **Application Program Interface(API)**. APIs are specifications for how the functions in a library behave and can be used. <br><br> **Discuss:** With a partner, review the parts of the documentation. |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries25.svg) |**Discuss:** What potential problems could come up if I tried to use a function without knowing what it does or how to interact with it? This would be similar to looking at the front of a function envelope and having to guess: <ul><li>what the function does</li><li>what data type the parameters need</li><li>what is returned</li></ul>**Note:** If students are struggling to come up with ideas, give a few hints: <ul><li>what if there's an error when you run the code which calls this function?</li><li>what happens to a return if you don't store it in a variable or print it to the console?</li></ul> |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries26.svg) |**Discuss:** My friend wants to use my `findSmallest()` function in her program. Is this function ready to be shared in a library?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**<br><br>**Say:** Watch out for global variables! If a function accesses or updates a variable elsewhere in your program, that function shouldn't be shared as is.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**<br><br>**Do This:** With a partner, rewrite the function so it could be shared in a library.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Note:** The problem here, is that the function uses a global variable. Students should try to rewrite the function so only local variables and a return are used. The answer is shown later on in the slides.|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries27.svg) |**Say:** These are the things you should consider before adding a function to a library: <ol><li>Check for any use of a global variable within the function. If there is, rework the function using local variables and a return. </li><li>Check if another function is called in this function. If so, both functions should be included in the library. </li><li>Write the documentation for the function.</li></ol> |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries28.svg) |**Say:** Here's the same function, now written to be shared in a library. How does it look compared to yours? It may look a little different - and that's ok, as long as the function works as expected. Now my function is almost ready to be shared in a library. With a partner, write the API for this function: <ul><li>how the function works</li><li>all the parameters, their data types, and a short description of each</li><li>what (if anything) will be returned</li></ul>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** When the class is ready, click through to see a possible answer. |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries29.svg) |**Say:** A library needs a name. For our libraries in this class, we are going to follow the following rules: <ul><li>No spaces</li><li>Capitalize the first letter</li></ul>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries30.svg) | **Say:** This library can now be shared with others. They can use the functions within their own programs as long as they follow the rules set forth in the documentation.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries31.svg) |**Say:** You've seen libraries in action before. The Math library is built into App Lab. Notice the name of the library first, then after a dot, the name of the function and finally the parameters. This is the same formatting you will use to call functions in libraries: Library name, followed by function name, and finally the parameter(s) |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries32.svg) |**Do This:** Brainstorm with a partner a few functions that might show up in the following libraries: Calculator, DisplayLists, FiterDatabase. <br><br>**Note:** Here are some ideas:<ul><li>**Calculator:** functions similar to what you would find in a common calculator</li><li>**DisplayLists:** functions that help you display a list on a screen in different ways, such as one list item per line or divided with bullet points</li><li>**FilterDatabase:** functions that allow you to filter a database for different things, like all the items that start with the letter \"a\"</li></ul> |"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Use the activity slides for this lesson to guide the unplugged activity on Libraries. \n\n|Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries21.svg) |**Say:** Have you ever wanted to share some of your code with a friend so they can use it to add a cool feature in their program? Or maybe you've got a collection of functions in one program that you want to use in another program. Today we are going to explore the answer to this question: How can we easily share functions between programs?|\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries22.svg) |![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Stop once all three envelopes are on the screen. <br><br> **Say:** These are functions. We recently learned about functions with parameters and return values. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Click until the library definition appears on the screen. <br><br> **Say:** The envelopes have been grouped together in a folder. This represents a library. A library is a collection of functions that can be used in many different programs.|\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries23.svg) |**Say:** Let's take a look at what's inside the library. If we open up the folder, we see the functions and some documentation. A library should have documentation for each of the included functions. The documentation should include: <ul><li>how each function works</li><li>a complete list of the parameters</li><li>what (if anything) will be returned</li></ul>|\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries24.svg) |**Say:** This detailed type of documentation is also known as **Application Program Interface(API)**. APIs are specifications for how the functions in a library behave and can be used. <br><br> **Discuss:** With a partner, review the parts of the documentation. |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries25.svg) |**Discuss:** What potential problems could come up if I tried to use a function without knowing what it does or how to interact with it? This would be similar to looking at the front of a function envelope and having to guess: <ul><li>what the function does</li><li>what data type the parameters need</li><li>what is returned</li></ul>**Note:** If students are struggling to come up with ideas, give a few hints: <ul><li>what if there's an error when you run the code which calls this function?</li><li>what happens to a return if you don't store it in a variable or print it to the console?</li></ul> |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries26.svg) |**Discuss:** My friend wants to use my `findSmallest()` function in her program. Is this function ready to be shared in a library?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**<br><br>**Say:** Watch out for global variables! If a function accesses or updates a variable elsewhere in your program, that function shouldn't be shared as is.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**<br><br>**Do This:** With a partner, rewrite the function so it could be shared in a library.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Note:** The problem here, is that the function uses a global variable. Students should try to rewrite the function so only local variables and a return are used. The answer is shown later on in the slides.|\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries27.svg) |**Say:** These are the things you should consider before adding a function to a library: <ol><li>Check for any use of a global variable within the function. If there is, rework the function using local variables and a return. </li><li>Check if another function is called in this function. If so, both functions should be included in the library. </li><li>Write the documentation for the function.</li></ol> |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries28.svg) |**Say:** Here's the same function, now written to be shared in a library. How does it look compared to yours? It may look a little different - and that's ok, as long as the function works as expected. Now my function is almost ready to be shared in a library. With a partner, write the API for this function: <ul><li>how the function works</li><li>all the parameters, their data types, and a short description of each</li><li>what (if anything) will be returned</li></ul>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** When the class is ready, click through to see a possible answer. |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries29.svg) |**Say:** A library needs a name. For our libraries in this class, we are going to follow the following rules: <ul><li>No spaces</li><li>Capitalize the first letter</li></ul>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries30.svg) | **Say:** This library can now be shared with others. They can use the functions within their own programs as long as they follow the rules set forth in the documentation.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**|\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries31.svg) |**Say:** You've seen libraries in action before. The Math library is built into App Lab. Notice the name of the library first, then after a dot, the name of the function and finally the parameters. This is the same formatting you will use to call functions in libraries: Library name, followed by function name, and finally the parameter(s) |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries32.svg) |**Do This:** Brainstorm with a partner a few functions that might show up in the following libraries: Calculator, DisplayLists, FiterDatabase. <br><br>**Note:** Here are some ideas:<ul><li>**Calculator:** functions similar to what you would find in a common calculator</li><li>**DisplayLists:** functions that help you display a list on a screen in different ways, such as one list item per line or divided with bullet points</li><li>**FilterDatabase:** functions that allow you to filter a database for different things, like all the items that start with the letter \"a\"</li></ul> |"
       },
       "seeding_key": {
         "activity_section.key": "0e3c6c99-e4c4-4e5b-8d1d-3df820db2619",
@@ -1631,7 +1609,7 @@
       "key": "5e00dd3b-4193-4225-8e71-3901e720f6d6",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the Libraries video.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the [r libraries_in_app_lab/csp/2022] video.",
         "progression_name": "Libraries in App Lab"
       },
       "seeding_key": {
@@ -2493,7 +2471,7 @@
         "lesson.key": "Parameters and Return Explore",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2022",
-        "activity_section.key": "b852ba37-c60f-4f8a-baff-28cf8ba71fca"
+        "activity_section.key": "927d229a-0d64-4108-ba26-59b8c27cabd1"
       },
       "level_keys": [
         "U7L1 CFU Return2022"
@@ -2878,31 +2856,6 @@
       "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "Libraries in App Lab2022"
-        ],
-        "progression": "Libraries in App Lab"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Libraries in App Lab2022"
-        ],
-        "lesson.key": "Libraries Explore",
-        "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2022",
-        "activity_section.key": "5e00dd3b-4193-4225-8e71-3901e720f6d6"
-      },
-      "level_keys": [
-        "Libraries in App Lab2022"
-      ]
-    },
-    {
-      "chapter": 18,
-      "position": 2,
-      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -2925,7 +2878,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2950,7 +2903,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 19,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2975,7 +2928,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 20,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -3000,7 +2953,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3025,7 +2978,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3050,7 +3003,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 23,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3075,7 +3028,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 24,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -3100,7 +3053,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 25,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -3125,7 +3078,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 26,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -3150,7 +3103,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3175,7 +3128,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3200,7 +3153,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 29,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3225,7 +3178,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3250,7 +3203,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -3275,7 +3228,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3300,7 +3253,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3335,7 +3288,7 @@
         "lesson.key": "Parameters and Return Explore",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2022",
-        "activity_section.key": "b852ba37-c60f-4f8a-baff-28cf8ba71fca"
+        "activity_section.key": "927d229a-0d64-4108-ba26-59b8c27cabd1"
       }
     },
     {
@@ -3516,18 +3469,6 @@
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2022",
         "activity_section.key": "36179e51-ac63-4536-a176-2e09f5a7992a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Libraries in App Lab2022",
-        "script_level.level_keys": [
-          "Libraries in App Lab2022"
-        ],
-        "lesson.key": "Libraries Explore",
-        "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2022",
-        "activity_section.key": "5e00dd3b-4193-4225-8e71-3901e720f6d6"
       }
     },
     {
@@ -3784,11 +3725,9 @@
     },
     {
       "name": "CSP Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1s5w7_UnVIGHOdkqCtK2O78rQ7JJFAWlOeZkZNsCovOY/preview",
       "key": "csp_curriculum_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csp_curriculum_guide"
@@ -3821,6 +3760,19 @@
       }
     },
     {
+      "name": "Functions with Parameters",
+      "url": "https://youtu.be/M17C4rBwstE",
+      "key": "functions_with_parameters",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/csp_functionswithparameters-v1-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "functions_with_parameters"
+      }
+    },
+    {
       "name": "Guide to EIPM Lessons",
       "url": "https://www.youtube.com/watch?v=OTvi0XRTIjA",
       "key": "guide_to_eipm_lessons",
@@ -3830,6 +3782,19 @@
       },
       "seeding_key": {
         "resource.key": "guide_to_eipm_lessons"
+      }
+    },
+    {
+      "name": "Libraries in App Lab",
+      "url": "https://youtu.be/OJv3HeTP7fY",
+      "key": "libraries_in_app_lab",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/csp_librariesinapplab_sm-1-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "libraries_in_app_lab"
       }
     },
     {
@@ -3909,6 +3874,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Libraries Explore",
+        "resource.key": "libraries_in_app_lab"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Libraries Investigate",
         "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
       }
@@ -3929,6 +3900,12 @@
       "seeding_key": {
         "lesson.key": "Parameters and Return Explore",
         "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "resource.key": "functions_with_parameters"
       }
     },
     {
