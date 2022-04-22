@@ -44,33 +44,16 @@ const PetitionForm = () => {
     helpText,
     componentClass,
     children
-  ) => {
-    return componentClass === 'select' ? (
-      <FieldGroup
-        id={id}
-        name={id}
-        key={id}
-        label={placeholderOrLabel}
-        componentClass={componentClass}
-        help={helpText}
-        onChange={handleChange}
-        value={data[id] || ''}
-      >
-        {children}
-      </FieldGroup>
-    ) : (
-      <FieldGroup
-        id={id}
-        name={id}
-        key={id}
-        placeholder={placeholderOrLabel}
-        type={'text'}
-        help={helpText}
-        onChange={handleChange}
-        value={data[id] || ''}
-      />
+  ) =>
+    buildControlledFieldGroup(
+      id,
+      placeholderOrLabel,
+      helpText,
+      componentClass,
+      children,
+      handleChange,
+      data
     );
-  };
 
   return (
     <>
