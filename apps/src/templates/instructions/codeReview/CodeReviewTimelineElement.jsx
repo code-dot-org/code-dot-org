@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {TextLink} from '@dsco_/link';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import color from '@cdo/apps/util/color';
 
 export const codeReviewTimelineElementType = {
   CREATED: 'created',
@@ -9,55 +10,51 @@ export const codeReviewTimelineElementType = {
   CODE_REVIEW: 'codeReview'
 };
 
-const EyeballLink = ({versionHref}) => {
-  return (
-    <TextLink
-      href={versionHref}
-      icon={
-        <FontAwesome icon={'eye'} title={'preview'} style={styles.eyeIcon} />
-      }
-    />
-  );
-};
-
-EyeballLink.propTypes = {
-  versionHref: PropTypes.string
-};
-
 const CodeReviewTimelineElement = ({type, isLast, versionLink, children}) => {
   if (type === codeReviewTimelineElementType.CREATED) {
     return (
       <div style={styles.element}>
-        <div style={{...styles.eye, width: '21px'}} />
-        <div style={{...styles.timeline, alignItems: 'center'}}>
-          <div style={{...styles.dot, background: 'purple'}} />
-          <div style={styles.line} />
+        <div style={styles.eye} />
+        <div style={styles.timeline}>
+          <TimelineDot color={color.purple} />
+          {!isLast && <div style={styles.createdBottomLine} />}
         </div>
-        <div style={styles.child}>Created</div>
+        <div style={{...styles.child, ...styles.createdText}}>Created</div>
       </div>
     );
-  } else if (type === codeReviewTimelineElementType.COMMIT) {
+  }
+
+  if (type === codeReviewTimelineElementType.COMMIT) {
+    const borderLeft = isLast ? 'none' : lineStyle;
+
     return (
       <div style={styles.element}>
         <div style={styles.eye}>
           <EyeballLink versionHref={versionLink} />
         </div>
         <div style={styles.timeline}>
-          <div style={{...styles.dot, background: 'gray'}} />
+          {isLast && <div style={styles.commitTopLine} />}
+          <TimelineDot
+            color={color.dark_charcoal}
+            hasCheck={true}
+            style={isLast ? {marginTop: 0} : {}}
+          />
         </div>
-        <div style={styles.commitChild}>{children}</div>
+        <div style={{...styles.commitChild, borderLeft}}>{children}</div>
       </div>
     );
-  } else if (type === codeReviewTimelineElementType.CODE_REVIEW) {
+  }
+
+  if (type === codeReviewTimelineElementType.CODE_REVIEW) {
     return (
       <div style={styles.element}>
-        <div style={{...styles.eye, width: '28px'}}>
+        <div style={styles.eye}>
           <EyeballLink versionHref={versionLink} />
         </div>
-        <div style={styles.timeline}>
-          <div style={styles.topLine} />
-          <div style={styles.child}>{children}</div>
-          {!isLast && <div style={styles.line} />}
+        <div style={styles.codeReviewTimeline}>
+          <div style={styles.codeReviewTopLine} />
+          <div>{children}</div>
+          {!isLast && <div style={styles.codeReviewBottomLine} />}
         </div>
       </div>
     );
@@ -72,31 +69,77 @@ CodeReviewTimelineElement.propTypes = {
   children: PropTypes.node
 };
 
+const EyeballLink = ({versionHref}) => {
+  return (
+    <TextLink
+      href={versionHref}
+      icon={
+        <FontAwesome icon={'eye'} title={'preview'} style={styles.eyeIcon} />
+      }
+    />
+  );
+};
+EyeballLink.propTypes = {
+  versionHref: PropTypes.string
+};
+
+const TimelineDot = ({color, hasCheck, style = {}}) => {
+  return (
+    <div style={{...styles.dot, background: color, ...style}}>
+      {hasCheck && <FontAwesome icon="check" style={styles.check} />}
+    </div>
+  );
+};
+TimelineDot.propTypes = {
+  color: PropTypes.string.isRequired,
+  hasCheck: PropTypes.bool,
+  style: PropTypes.object
+};
+
+const lineStyle = `3px solid ${color.charcoal}`;
+
 const styles = {
   element: {
     display: 'flex'
   },
   eye: {
-    paddingTop: '10px'
+    paddingTop: '10px',
+    width: '21px'
   },
   eyeIcon: {
-    color: 'gray',
+    color: color.light_gray,
     fontSize: '20px'
   },
   timeline: {
     display: 'flex',
     flexDirection: 'column',
-    margin: '0 10px'
+    margin: '0 10px 0 16px',
+    alignItems: 'center'
   },
-  line: {
-    borderLeft: '2px solid black',
-    height: '30px',
-    margin: '0 2px'
+  codeReviewTimeline: {
+    display: 'flex',
+    flexDirection: 'column',
+    marginLeft: '11px'
   },
-  topLine: {
-    borderLeft: '2px solid black',
+  createdBottomLine: {
+    borderLeft: lineStyle,
+    height: '20px',
+    marginRight: '-1.5px'
+  },
+  commitTopLine: {
+    borderLeft: lineStyle,
     height: '10px',
-    margin: '0 2px'
+    marginRight: '-1.5px'
+  },
+  codeReviewTopLine: {
+    borderLeft: lineStyle,
+    height: '10px',
+    marginLeft: '15px'
+  },
+  codeReviewBottomLine: {
+    borderLeft: lineStyle,
+    height: '30px',
+    marginLeft: '15px'
   },
   dot: {
     width: '20px',
@@ -104,10 +147,19 @@ const styles = {
     borderRadius: '50%',
     margin: '1px 0',
     zIndex: 1,
-    marginTop: '10px'
+    marginTop: '10px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  check: {
+    color: color.white,
+    paddingTop: '2px'
+  },
+  createdText: {
+    fontWeight: 'bold'
   },
   commitChild: {
-    borderLeft: '2px solid black',
     padding: '10px 0 10px 20px',
     marginLeft: '-20px'
   },
