@@ -20,6 +20,7 @@ const keyValidation = {
 };
 
 const PetitionForm = () => {
+  // data starts with all required fields having an empty value to ensure proper validation
   const [data, setData] = useState(mapValues(keyValidation, () => ''));
   const [errorMessage, setErrorMessage] = useState('');
 
