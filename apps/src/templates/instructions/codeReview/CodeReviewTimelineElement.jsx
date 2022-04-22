@@ -38,7 +38,7 @@ const CodeReviewTimelineElement = ({
         <div style={styles.eye} />
         <div style={styles.timeline}>
           <TimelineDot color={color.purple} />
-          {!isLast && <div style={styles.createdBottomLine} />}
+          {!isLast && <TimelineLine height={20} marginRight={-1.5} />}
         </div>
         <div style={{...styles.child, ...styles.createdText}}>
           {javalabMsg.created()}
@@ -56,7 +56,7 @@ const CodeReviewTimelineElement = ({
           {displayVersion && <EyeballLink versionHref={versionLink} />}
         </div>
         <div style={styles.timeline}>
-          {isLast && <div style={styles.commitTopLine} />}
+          {isLast && <TimelineLine height={10} marginRight={-1.5} />}
           <TimelineDot
             color={color.dark_charcoal}
             hasCheck={true}
@@ -75,9 +75,9 @@ const CodeReviewTimelineElement = ({
           {displayVersion && <EyeballLink versionHref={versionLink} />}
         </div>
         <div style={styles.codeReviewTimeline}>
-          <div style={styles.codeReviewTopLine} />
+          <TimelineLine height={10} marginLeft={15} />
           <div>{children}</div>
-          {!isLast && <div style={styles.codeReviewBottomLine} />}
+          {!isLast && <TimelineLine height={30} marginLeft={15} />}
         </div>
       </div>
     );
@@ -93,6 +93,7 @@ CodeReviewTimelineElement.propTypes = {
   children: PropTypes.node
 };
 
+// Helper to render the eyeball
 const EyeballLink = ({versionHref}) => {
   return (
     <TextLink
@@ -107,6 +108,7 @@ EyeballLink.propTypes = {
   versionHref: PropTypes.string
 };
 
+// Helper to render the dot
 const TimelineDot = ({color, hasCheck, style = {}}) => {
   return (
     <div style={{...styles.dot, background: color, ...style}}>
@@ -118,6 +120,22 @@ TimelineDot.propTypes = {
   color: PropTypes.string.isRequired,
   hasCheck: PropTypes.bool,
   style: PropTypes.object
+};
+
+// Helper to render the lines
+const TimelineLine = ({height = 10, marginRight = 0, marginLeft = 0}) => {
+  const style = {
+    borderLeft: lineStyle,
+    height: `${height}px`,
+    marginRight: `${marginRight}px`,
+    marginLeft: `${marginLeft}px`
+  };
+  return <div style={style} />;
+};
+TimelineLine.propTypes = {
+  height: PropTypes.number,
+  marginRight: PropTypes.number,
+  marginLeft: PropTypes.number
 };
 
 const lineStyle = `3px solid ${color.charcoal}`;
@@ -144,26 +162,6 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     marginLeft: '11px'
-  },
-  createdBottomLine: {
-    borderLeft: lineStyle,
-    height: '20px',
-    marginRight: '-1.5px'
-  },
-  commitTopLine: {
-    borderLeft: lineStyle,
-    height: '10px',
-    marginRight: '-1.5px'
-  },
-  codeReviewTopLine: {
-    borderLeft: lineStyle,
-    height: '10px',
-    marginLeft: '15px'
-  },
-  codeReviewBottomLine: {
-    borderLeft: lineStyle,
-    height: '30px',
-    marginLeft: '15px'
   },
   dot: {
     width: '20px',
