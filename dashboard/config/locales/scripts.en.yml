@@ -25514,6 +25514,7 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+          student_description: ''
         sb-pt-cont:
           lessons:
             lesson-1:
@@ -27068,6 +27069,12 @@ en:
           lessons:
             lesson-1:
               name: Testing CSA Clone
+            lesson-2:
+              name: Lesson 2
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Lesson 3
           lesson_groups: {}
           name: tesstest921
           title: ''
@@ -32109,7 +32116,7 @@ en:
 
                 Sometimes we need to temporarily convert a value to a different type or round a value to the nearest integer. In this lesson, you learn about the functionality of casting operators. You explore the effect of using the `(int)` and `(double)` casting operators on a value and expression. You also use casting operators to round a `double` value to the nearest integer.
               description_teacher: |-
-                *How can I use casting to temporarily convert a value to a different type or round to the nearest integer?*
+                **How can I use casting to temporarily convert a value to a different type or round to the nearest integer?**
 
                 Students learn how casting operators can be used to temporarily convert a value to a different type. Students explore the effect of using the `(int)` and `(double)` casting operators on a value and expression. Students also use casting operators to round a `double` value to the nearest integer.
             lesson-11:
@@ -32167,6 +32174,8 @@ en:
               display_name: Content
             lessonGroup-3:
               display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Sandboxes
           name: csa4-2022
           title: Conditions and Logic ('22-'23)
           description_audience: ''
@@ -34815,20 +34824,20 @@ en:
               description_student: 
               description_teacher: 
             lesson-2:
-              name: 'Ecosystems: Interactions, Energy & Dynamics'
+              name: Overfishing Simulation
               description_student: 
-              description_teacher: 
+              description_teacher: In this lesson, students will program a model of an aquatic ecosystem and then simulate an overfishing situation. Students will learn how to program conditional statements to check the number of algae in the water and to change the look of the coral when there is too much algae.
             lesson-3:
-              name: Biological Evolution
+              name: Model Animal Adaptations
               description_student: 
-              description_teacher: 
+              description_teacher: "\nIn this lesson, students will create an event-based cause-and-effect model in Sprite Lab to illustrate how species adapt to their environments over time in order to survive. They will explore examples of evolution, adaptation, migration, natural selection, and survival in groups. The lesson concludes with a creative project where the student creates a hypothesis for a potential future aquatic animal adaptation due to overfishing.\n\nInteractive models and simulations are used in the real world to help engineers and scientists identify patterns, understand nature, make predictions about future changes, and design solutions to prepare for and/or combat major disruptions. "
             Hello World CSC:
               name: Hello World CSC
               description_student: In this lesson, you will learn to create and animate sprites and make them interactive using events.
               description_teacher: 'In this **skill-building** lesson, students will learn to create and animate sprites and make them interactive using events. '
           lesson_groups: {}
           name: csc-pilot-2022-ecosystems
-          title: ''
+          title: Ecosystems
           description_audience: ''
           description_short: ''
           description: ''
@@ -34838,20 +34847,24 @@ en:
             lesson-1:
               name: Visual Effects
             lesson-2:
-              name: My Time Capsule Story
+              name: The Time We Live In
+              description_student: 
+              description_teacher: 'In this lesson, students will plan out their time capsule app before coding it. Students will reflect on their favorite things to do and their own personal experiences in order to write a short story about the current time period. '
             lesson-3:
               name: Coding My Time Capsule
               description_student: 
-              description_teacher: 
+              description_teacher: "In this lesson, students will code their time capsule stories from the previous lesson. They will enhance the text by adding visual effects, imagery, and sound to their apps. \n"
             lesson-4:
               name: Gallery Walk
+              description_student: 
+              description_teacher: In this final lesson, students will share their apps with one another.  First they will copy and paste their app links into a new tab. Then students will walk around and run each other’s time capsule apps. Finally, the whole class will have a discussion on the importance of curation and how to decide what elements to keep in retelling history.
             Poem Art:
               name: Poem Art
               description_student: 'Poetry is making art with words. Add visual effects and images to your own animated poem. '
               description_teacher: "In this CS and ELA integrated lesson for new coders, students will animate a poem with code to illustrate the mood of a poem. Students will read and detect the mood of a poem. They will then find corresponding effects and images to help illustrate the poem's mood. Finally, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n"
           lesson_groups: {}
           name: csc-pilot-2022-timecapsule
-          title: ''
+          title: Time Capsule
           description_audience: ''
           description_short: ''
           description: ''
@@ -34860,17 +34873,19 @@ en:
           lessons:
             lesson-1:
               name: Native American Star Quilts
+              description_student: 
+              description_teacher: 'In the unplugged lesson for this activity, students will be introduced to Native American Star Quilts and their significance. Then, students will make a 6-pointed star shape on paper. One of the main goals is to discuss the patterns within the shape. These ideas will be key for the online portions of the activity later on. '
             lesson-2:
               name: Getting Started with The Artist
               description_student: 
-              description_teacher: 
+              description_teacher: The first online lesson provides an opportunity for students to become familiar with the Artist Tool and build important coding skills. Students learn how the stamping tool works, how to turn x degrees in an angle, and how to use loops. Students will create a simple star shape. By the end of the levels, students will manipulate angle measurements to see the effect on the number of points on the star. Computers allow for accuracy and precision in studying shapes and patterns because images are generated in a matter of seconds instead of relying on hand-drawn shapes.
             lesson-3:
               name: Code Your Star Quilt
               description_student: 
-              description_teacher: 
+              description_teacher: The final lesson for this activity students are ready to build their own Star Quilt. Students will build one point of the star and then loop their code to end up with a 8 point traditional Star Quilt. Star Quilts are meant to be gifted so students can share their project with someone special.
           lesson_groups: {}
           name: csc-pilot-2022-starquilts
-          title: ''
+          title: Star Quilts Module
           description_audience: ''
           description_short: ''
           description: ''
@@ -34903,7 +34918,7 @@ en:
               description_teacher: 'In this lesson, students will have time to reflect on their projects and share them with their peers. Students should work with their peers to debug any errors in their code. They are encouraged to  make connections to peers who have similar problems in their code, how they solved those problems, or see different ways to program. '
           lesson_groups: {}
           name: csc-pilot-2022-fables
-          title: ''
+          title: Fables
           description_audience: ''
           description_short: ''
           description: ''
