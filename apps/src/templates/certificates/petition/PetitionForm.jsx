@@ -12,9 +12,9 @@ const PetitionForm = () => {
   const [data, setData] = useState(mapValues(keyValidation, () => ''));
   const [errorMessage, setErrorMessage] = useState('');
 
-  const handleChange = event => {
-    event.persist();
-    setData(data => ({...data, [event.target.name]: event.target.value}));
+  const handleChange = e => {
+    e.persist();
+    setData(data => ({...data, [e.target.name]: e.target.value}));
   };
 
   const handleSubmit = e => {
@@ -68,7 +68,7 @@ const PetitionForm = () => {
         {buildFieldGroup(
           'profession',
           'I am a',
-          <a href="/privacy">See our privacy practices for children</a>,
+          undefined,
           'select',
           [
             '-',
