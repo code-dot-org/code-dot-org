@@ -1735,7 +1735,6 @@ ActiveRecord::Schema.define(version: 2022_04_18_160611) do
     t.boolean "hidden", default: false, null: false
     t.boolean "tts_autoplay_enabled", default: false, null: false
     t.boolean "restrict_section", default: false
-    t.boolean "code_review_enabled", default: true
     t.text "properties"
     t.string "participant_type", default: "student", null: false
     t.index ["code"], name: "index_sections_on_code", unique: true
