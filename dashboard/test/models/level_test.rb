@@ -1231,4 +1231,13 @@ class LevelTest < ActiveSupport::TestCase
 
     assert_not level_with_contained.can_have_feedback_review_state?
   end
+
+  test 'next_unused_name' do
+    assert_equal 'unused_copy1_2020', Level.next_unused_name('unused', '_2020')
+
+    create :level, name: 'my-level_copy1_2020'
+    create :level, name: 'my-level_copy2_2020'
+    create :level, name: 'my-level_copy4_2020'
+    assert_equal 'my-level_copy3_2020', Level.next_unused_name('my-level', '_2020')
+  end
 end
