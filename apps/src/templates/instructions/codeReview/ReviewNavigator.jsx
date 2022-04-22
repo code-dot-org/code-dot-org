@@ -12,7 +12,8 @@ class ReviewNavigator extends Component {
     viewPeerList: PropTypes.bool,
     loadPeers: PropTypes.func,
     dropdownText: PropTypes.string,
-    color: PropTypes.string
+    color: PropTypes.string,
+    teacherAccountViewingAsParticipant: PropTypes.bool
   };
 
   state = {
@@ -43,7 +44,7 @@ class ReviewNavigator extends Component {
 
     // If teacher account is viewing as participant, set up URLs
     // to persist this setting when they click to view another project.
-    if (this.props.userIsTeacher && !this.props.viewAsTeacher) {
+    if (this.props.teacherAccountViewingAsParticipant) {
       url += `&viewAs=Participant`;
     }
     return url;
