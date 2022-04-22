@@ -71,10 +71,10 @@
     "parent_level_id": 18069,
     "mini_rubric": "false",
     "encrypted": "false",
-    "start_blocks": "// Create and assign variable based on user input\nvar counter = promptNum(\"Enter a number\");\n\n//TO DO #1: Update the conditional statement so that the loop runs\n//as long as the counter is greater than 0\nwhile(counter){\n  //TO DO #2: Add code to print the number in the countdown and\n  //then decrease the value of the counter by 1 each time\n}\n\n//TO DO #3: Add code to print \"Blastoff!\" after the loop is done running\n\n\n",
+    "start_blocks": "// Create and assign variable based on user input\r\nvar counter = promptNum(\"Enter a number\");\r\n\r\n//TO DO #1: Update the conditional statement so that the loop runs\r\n//as long as the counter is greater than 0\r\nwhile(counter){\r\n  //TO DO #2: Add code to print the number in the countdown and\r\n  //then decrease the value of the counter by 1 each time\r\n}\r\n\r\n//TO DO #3: Add code to print \"Blastoff!\" after the loop is done running\r\n\r\n\r\n",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\" data-theme=\"classic\"></div></div>",
     "slider_speed": "0.8",
-    "watchers_prepopulated": "[\"counter\", \"coinFlips\", \"counter2\", \"diceRolls\"]",
+    "watchers_prepopulated": "[\"counter\"]",
     "widget_mode": "false",
     "libraries_enabled": "false",
     "name_suffix": "2022",
@@ -83,15 +83,18 @@
     "display_name": "Countdown",
     "bubble_choice_description": "Create a program that prints out a countdown based on user input.",
     "thumbnail_url": "https://images.code.org/82d45909668d5b4c70faa51f955eede9-image-1649915049750.png",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
   "game_id": 41,
+  "published": true,
   "created_at": "2022-04-14T05:38:13.000Z",
   "level_num": "custom",
   "user_id": 832,
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-14T05:38:13.122+00:00\",\"changed\":[\"cloned from \\\"U5 Loops Practice While Choice A\\\"\"],\"cloned_from\":\"U5 Loops Practice While Choice A\"},{\"changed_at\":\"2022-04-14 05:44:46 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-14 05:48:19 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-14 05:51:27 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-14T05:38:13.122+00:00\",\"changed\":[\"cloned from \\\"U5 Loops Practice While Choice A\\\"\"],\"cloned_from\":\"U5 Loops Practice While Choice A\"},{\"changed_at\":\"2022-04-14 05:44:46 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-14 05:48:19 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-14 05:51:27 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2022-04-21 22:56:26 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"watchers_prepopulated\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

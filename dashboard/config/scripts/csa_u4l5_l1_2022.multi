@@ -1,12 +1,14 @@
 name 'CSA U4L5-L1_2022'
 title 'Check for Understanding'
 
-wrong 'wrong'
-right 'right'
-wrong 'wrong'
-wrong 'wrong'
-wrong 'wrong'
+wrong 'The resulting truth value is always `true`.'
+wrong 'The resulting truth value is always `false`.'
+wrong 'There are three instances where the resulting truth value is `false`.'
+right 'There is only one instance where the resulting truth value is `false`.'
+wrong 'The resulting truth value is `true` only when `!C` is `true`.'
 
 markdown <<MARKDOWN
-question
+Which of the following best describes the Boolean expression shown below?
+
+`A || !(B && C)`
 MARKDOWN
