@@ -97,7 +97,6 @@ class ActivityCard extends Component {
     activity.activitySections.forEach(activitySection => {
       levelsInActivity += activitySection.scriptLevels.length;
     });
-    console.log(activity);
 
     return (
       <div className="uitest-activity-card">
