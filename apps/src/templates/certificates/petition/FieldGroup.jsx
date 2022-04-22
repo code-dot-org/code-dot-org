@@ -3,6 +3,9 @@ import {FormControl, FormGroup, HelpBlock} from 'react-bootstrap';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
+const stylingForComponent = componentClass =>
+  componentClass === 'select' ? 'dropdown' : 'grey_input';
+
 const FieldGroup = ({
   id,
   label,
@@ -16,20 +19,14 @@ const FieldGroup = ({
       {label && <span className="dropdown-label">{label}</span>}
       <FormControl
         componentClass={componentClass}
-        className={classNames(
-          'field',
-          componentClass === 'select' ? 'dropdown' : 'grey_input'
-        )}
+        className={classNames('field', stylingForComponent(componentClass))}
         {...props}
       >
         {children}
       </FormControl>
       {helpText && (
         <HelpBlock
-          className={classNames(
-            'help',
-            componentClass === 'select' ? 'dropdown' : 'grey_input'
-          )}
+          className={classNames('help', stylingForComponent(componentClass))}
         >
           {helpText}
         </HelpBlock>
