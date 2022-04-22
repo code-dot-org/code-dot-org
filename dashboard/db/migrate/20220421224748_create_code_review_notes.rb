@@ -5,6 +5,7 @@ class CreateCodeReviewNotes < ActiveRecord::Migration[6.0]
       t.integer :commenter_id, null: false
       t.boolean :is_resolved, null: false
       t.text :comment, null: false
+      t.datetime :deleted_at
 
       t.timestamps
 
