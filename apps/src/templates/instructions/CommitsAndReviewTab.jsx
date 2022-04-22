@@ -18,6 +18,7 @@ const CommitsAndReviewTab = ({
   serverScriptId,
   viewAsCodeReviewer,
   viewAsTeacher,
+  userIsTeacher,
   codeReviewEnabled
 }) => {
   const [loadingReviewData, setLoadingReviewData] = useState(false);
@@ -72,6 +73,9 @@ const CommitsAndReviewTab = ({
               loadPeers={loadPeers}
               dropdownText={javalabMsg.youHaveProjectsToReview()}
               color={Button.ButtonColor.gray}
+              teacherAccountViewingAsParticipant={
+                userIsTeacher && !viewAsTeacher
+              }
             />
           )}
         </div>
@@ -96,6 +100,7 @@ export default connect(state => ({
   codeReviewEnabled: state.instructions.codeReviewEnabledForLevel,
   viewAsCodeReviewer: state.pageConstants.isCodeReviewing,
   viewAsTeacher: state.viewAs === ViewType.Instructor,
+  userIsTeacher: state.currentUser.userType === 'teacher',
   channelId: state.pageConstants.channelId,
   serverLevelId: state.pageConstants.serverLevelId,
   serverScriptId: state.pageConstants.serverScriptId
@@ -107,6 +112,7 @@ CommitsAndReviewTab.propTypes = {
   codeReviewEnabled: PropTypes.bool,
   viewAsCodeReviewer: PropTypes.bool.isRequired,
   viewAsTeacher: PropTypes.bool,
+  userIsTeacher: PropTypes.bool,
   channelId: PropTypes.string,
   serverLevelId: PropTypes.number,
   serverScriptId: PropTypes.number

@@ -25,7 +25,7 @@ class ReviewTab extends Component {
     codeReviewEnabled: PropTypes.bool,
     viewAsCodeReviewer: PropTypes.bool.isRequired,
     viewAsTeacher: PropTypes.bool,
-    userIsTeacher: PropTypes.string,
+    userIsTeacher: PropTypes.bool,
     channelId: PropTypes.string,
     serverLevelId: PropTypes.number,
     serverScriptId: PropTypes.number
@@ -351,7 +351,8 @@ class ReviewTab extends Component {
       viewAsCodeReviewer,
       viewAsTeacher,
       codeReviewEnabled,
-      channelId
+      channelId,
+      userIsTeacher
     } = this.props;
     const {
       loadingReviewData,
@@ -400,6 +401,9 @@ class ReviewTab extends Component {
               <ReviewNavigator
                 viewPeerList={!viewAsCodeReviewer}
                 loadPeers={this.loadPeers}
+                teacherAccountViewingAsParticipant={
+                  userIsTeacher && !viewAsTeacher
+                }
               />
               {reviewCheckboxEnabled &&
                 !viewAsCodeReviewer &&
