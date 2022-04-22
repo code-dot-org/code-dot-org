@@ -16,6 +16,13 @@ class TestController < ApplicationController
     head :ok
   end
 
+  def plc_reviewer_access
+    return unless (user = current_user)
+    user.permission = UserPermission::PLC_REVIEWER
+    user.save!
+    head :ok
+  end
+
   def facilitator_access
     return unless (user = current_user)
     user.permission = UserPermission::FACILITATOR

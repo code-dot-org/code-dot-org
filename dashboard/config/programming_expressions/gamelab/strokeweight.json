@@ -3,7 +3,7 @@
   "name": "strokeWeight()",
   "category": "Drawing",
   "category_key": "drawing",
-  "content": "Sets the width of the stroke used for lines, points, and the border around shapes.\r\n\r\nThe stroke weight controls, for the future drawing, the thickness of lines drawn with `line()`, `point()`, and borders around shapes. The width is measured in pixels. As the stroke width increases, the lines drawn get thicker equally on both sides. Any lines or shapes that have already been drawn are not affected.",
+  "content": "Sets the width of the stroke used for lines, points, and the border around shapes.\r\n\r\nThe stroke weight controls, for the future drawing, the thickness of lines drawn with [`line()`(#f78183)](/docs/applab/line/), `point()`, and borders around shapes. The width is measured in pixels. As the stroke width increases, the lines drawn get thicker equally on both sides. Any lines or shapes that have already been drawn are not affected.",
   "examples": [
     {
       "name": "",
