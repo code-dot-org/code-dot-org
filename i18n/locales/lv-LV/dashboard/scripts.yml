@@ -730,6 +730,8 @@ lv:
           lesson_groups:
             required:
               display_name: Pārskats
+        basketball:
+          name: basketbols
         csd2-2017:
           lessons:
             Lists:
@@ -2531,6 +2533,10 @@ lv:
           lessons:
             lesson-6:
               name: Mainīgie
+        csa3-2022:
+          lessons:
+            lesson-5:
+              name: '"par" cikli'
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -2553,3 +2559,27 @@ lv:
               display_name: Digitālā pilsonība
             lessonGroup-8:
               display_name: Mainīgie
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Mainīgie
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Cikli
+              key: Cikli
+            Events:
+              name: Pasākumi
+              key: Pasākumi
+            Conditionals:
+              name: Sazarojumi
+              key: Sazarojumi
+            Functions:
+              name: Funkcijas
+              key: Funkcijas
+            Variables:
+              name: Mainīgie
+              key: Mainīgie
+            For Loops:
+              name: '"par" cikli'
+              key: '"par" cikli'

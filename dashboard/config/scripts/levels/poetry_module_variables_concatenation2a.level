@@ -273,9 +273,9 @@
               <next>
                 <block type="Poetry_setFontColor">
                   <value name="FILL">
-                    <block type="colour_picker">
+                    <shadow type="colour_picker">
                       <title name="COLOUR">#ffffff</title>
-                    </block>
+                    </shadow>
                   </value>
                 </block>
               </next>

@@ -1,10 +1,10 @@
-
 module JavalabFilesHelper
-  def self.upload_project_files(channel_id, level_id, hostname, auth_token)
+  def self.upload_project_files(project_files, hostname, auth_token)
     uri = URI.parse("#{CDO.javabuilder_upload_url}?Authorization=#{auth_token}")
     upload_request = Net::HTTP::Put.new(uri)
     upload_request['Origin'] = hostname
-    upload_request.body = get_project_files(channel_id, level_id).to_json
+    upload_request['Content-Type'] = 'application/json'
+    upload_request.body = project_files.to_json
 
     response = Net::HTTP.start(uri.hostname, uri.port, use_ssl: uri.scheme == 'https') do |http|
       http.request(upload_request)
@@ -14,53 +14,103 @@ module JavalabFilesHelper
     false
   end
 
-  # Get all files related to the project at the given channel id as a hash. The hash is in the format
-  # below. All values are strings.
+  # Get all files related to the project at the given channel id as a hash.
+  # Much of this can be constructed from the level where this project was created (get_level_files).
+  # This method adds in user-specific code and assets uploaded on the level where the project was created.
+  # The returned hash is in the format below. All values are strings.
   # {
   #   "sources": {"main.json": <main source file for a project>, "grid.txt": <serialized maze if it exists>},
   #   "assetUrls": {"asset_name_1": <asset_url>, ...}
   #   "validation": <all validation code for a project, in json format>
   # }
-  # If the channel doesn't have validation and/or a maze, those fields will not be present.
+  # If the level doesn't have validation and/or a maze, those fields will not be present.
   def self.get_project_files(channel_id, level_id)
-    all_files = {}
-    sources = {}
+    all_files = get_level_files(level_id)
+
     # get main.json
     source_data = SourceBucket.new.get(channel_id, "main.json")
-    sources["main.json"] = source_data[:body].string
-
-    # get maze file
-    level = Level.find(level_id)
-    if level
-      serialized_maze = level.try(:get_serialized_maze)
-      if serialized_maze
-        sources["grid.txt"] = serialized_maze.to_json
-      end
-    end
-    all_files["sources"] = sources
+    all_files["sources"]["main.json"] = source_data[:body].string
 
     # get level assets
-    assets = {}
     asset_bucket = AssetBucket.new
     asset_list = asset_bucket.list(channel_id)
     asset_list.each do |asset|
-      assets[asset[:filename]] = generate_asset_url(asset[:filename], channel_id)
+      all_files["assetUrls"][asset[:filename]] = generate_asset_url(asset[:filename], channel_id)
     end
 
-    # get starter assets
-    if level
-      (level&.project_template_level&.starter_assets || level.starter_assets || []).map do |friendly_name, _|
-        assets[friendly_name] = generate_starter_asset_url(friendly_name, level)
-      end
+    all_files
+  end
+
+  # Get all files for the project to be executed as a hash, with source code provided as an argument.
+  # Much of this can be constructed from the level where this project was created (get_level_files).
+  # This method adds in code provided the sources argument.
+  # The returned hash is in the format below. All values are strings.
+  # {
+  #   "sources": {"main.json": <main source file for a project>, "grid.txt": <serialized maze if it exists>},
+  #   "assetUrls": {"asset_name_1": <asset_url>, ...}
+  #   "validation": <all validation code for a project, in json format>
+  # }
+  # If the level doesn't have validation and/or a maze, those fields will not be present.
+  def self.get_project_files_with_override_sources(sources, level_id)
+    all_files = get_level_files(level_id)
+    all_files["sources"]["main.json"] = {source: sources}.to_json
+    all_files
+  end
+
+  # Get all files for the project to be executed as a hash, with validation code provided as an argument.
+  # Much of this can be constructed from the level where this project was created (get_level_files).
+  # This method adds in user-specific code and assets uploaded on the level where the project was created,
+  # and the validation code that was passed in replaces any existing validation on the level.
+  # The returned hash is in the format below. All values are strings.
+  # {
+  #   "sources": {"main.json": <main source file for a project>, "grid.txt": <serialized maze if it exists>},
+  #   "assetUrls": {"asset_name_1": <asset_url>, ...}
+  #   "validation": <all validation code for a project, in json format>
+  # }
+  # If the level doesn't have a maze, that field will not be present.
+  def self.get_project_files_with_override_validation(channel_id, level_id, validation)
+    all_files = get_project_files(channel_id, level_id)
+    all_files["validation"] = {source: validation}.to_json
+    all_files
+  end
+
+  # Get all files that can be derived from the level where a project was built (ie, files that are not user-specific).
+  # The hash is in the format below. All values are strings.
+  # Note that this hash does **not** include a "main.json" entry in under "sources", which is required for Javabuilder.
+  # {
+  #   "sources": {"grid.txt": <serialized maze if it exists>},
+  #   "assetUrls": {"asset_name_1": <asset_url>, ...}
+  #   "validation": <all validation code for a project, in json format>
+  # }
+  # If the level doesn't have validation and/or a maze, those fields will not be present.
+  def self.get_level_files(level_id)
+    all_level_files = {}
+    sources = {}
+    assets = {}
+
+    level = Level.find(level_id)
+
+    # get maze file
+    serialized_maze = level.try(:get_serialized_maze)
+    if serialized_maze
+      sources["grid.txt"] = serialized_maze.to_json
     end
-    all_files["assetUrls"] = assets
+    all_level_files["sources"] = sources
+
+    # get starter assets
+    (level&.project_template_level&.starter_assets || level.starter_assets || []).map do |friendly_name, _|
+      assets[friendly_name] = generate_starter_asset_url(friendly_name, level)
+    end
+    all_level_files["assetUrls"] = assets
 
     # get validation code
     if level.respond_to?(:validation) && level.validation
-      all_files["validation"] = level.validation.to_json
+      validation = {}
+      validation["source"] = level.validation
+      all_level_files["validation"] = validation.to_json
     end
 
-    return all_files
+    all_level_files
   end
 
   def self.generate_asset_url(filename, channel_id)

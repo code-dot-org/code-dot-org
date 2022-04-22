@@ -17,8 +17,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-06 20:00:12 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-04-20 22:42:54 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -1464,7 +1464,7 @@
       "key": "0b3f94f8-20b5-471e-a3cf-6dfee4524544",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Play [Computer Science is Changing Everything](https://www.youtube.com/watch?v=QvyTEx1wyOY)\n\n- The video is available for students in Code Studio as well.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Play [Computer Science is Changing Everything](https://www.youtube.com/watch?v=QvyTEx1wyOY)",
         "progression_name": "Computer Science is Changing Everything"
       },
       "seeding_key": {
@@ -2532,7 +2532,7 @@
       "key": "ca113d79-b1b6-4d0e-9fa2-d2aa297d4b97",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 2:**  Students will recreate the letter A using the black and white Pixelation Widget.  They must first enter the correct binary numbers to represent the width and height of the image.  Then, they will type the appropriate bit for each portion of the image (“0” for black, “1” for white).\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 1:**  Students will recreate the letter A using the black and white Pixelation Widget.  They must first enter the correct binary numbers to represent the width and height of the image.  Then, they will type the appropriate bit for each portion of the image (“0” for black, “1” for white).\n\n"
       },
       "seeding_key": {
         "activity_section.key": "ca113d79-b1b6-4d0e-9fa2-d2aa297d4b97",
@@ -2543,7 +2543,7 @@
       "key": "3fd18f03-4447-494b-9491-7580fcfb03a4",
       "position": 3,
       "properties": {
-        "description": "**Level 3:**  Students must find and delete the extra bit that is causing the image to be distorted.",
+        "description": "**Level 2:**  Students must find and delete the extra bit that is causing the image to be distorted.",
         "progression_name": "Pixelation Widget: B&W"
       },
       "seeding_key": {
@@ -2614,7 +2614,7 @@
       "key": "ad5d4d89-5075-4245-b0a0-978d494adef7",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  \n\n* Select your favorite company logo\n* Decide how you are going to sample this logo - use one of the grids in your Activity Guide. Draw the logo.\n* Recreate the logo in the Pixelation Widget on Level 6.\n* Show it to a classmate. Do they recognize the logo? Make adjustments if needed. For example: You may need to increase the sampling.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  \n\n* Select your favorite company logo\n* Decide how you are going to sample this logo - use one of the grids in your Activity Guide. Draw the logo.\n* Recreate the logo in the Pixelation Widget on Level 5.\n* Show it to a classmate. Do they recognize the logo? Make adjustments if needed. For example: You may need to increase the sampling.",
         "name": "Challenge C\r",
         "progression_name": "Sampling an Analog Image"
       },
@@ -3091,7 +3091,7 @@
       "key": "36acd483-b523-4a18-b5d2-116264e00b3b",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show  (feel free to skip from 2:30-5:00 if your students are comfortable with how the widget works, but don't miss 5:00+). After the video, be sure to emphasize two things: \n\n* The widget we are using is an example of **lossless compression**\n* The compression percentage at the bottom of the screen is calculated by comparing the number of **bytes** in the original message and the number of **bytes** in the compressed message.\n\n\n[r text_compression_widget_tutorial_/csp/2022]",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show [r text_compression_widget_tutorial_/csp/2022] (feel free to skip from 2:30-5:00 if your students are comfortable with how the widget works, but don't miss 5:00+). After the video, be sure to emphasize two things: \n\n* The widget we are using is an example of **lossless compression**\n* The compression percentage at the bottom of the screen is calculated by comparing the number of **bytes** in the original message and the number of **bytes** in the compressed message.\n\n\n",
         "progression_name": "Video: Text Compression Widget with Aloe Blacc"
       },
       "seeding_key": {
@@ -3736,7 +3736,8 @@
       "position": 6,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** How is a Creative Commons license different from a regular copyright?\n\n**Question:** Now that we understand Copyright, what would need to change in order for the scenario from the warm-up to be okay? As a reminder, here was the scenario from the warm-up: \n\n_Imagine you were using some of our pixelation tools to create an image and you posted it online for your friends to see - but, a week later you find out someone took that image and put it on a T-shirt that they’re selling for $10 each._",
-        "name": "Assessment: Check For Understanding"
+        "name": "Assessment: Check For Understanding",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "9c633b3e-0860-4f89-baed-8f8222ed9f6e",
@@ -4107,6 +4108,17 @@
       }
     },
     {
+      "key": "31082714-e682-482a-a0c4-8c1ca60b4b07",
+      "position": 4,
+      "properties": {
+        "progression_name": "End-Of-Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "31082714-e682-482a-a0c4-8c1ca60b4b07",
+        "lesson_activity.key": "6b3a39ea-89c9-448b-a125-fa532c918562"
+      }
+    },
+    {
       "key": "06860162-d4d7-4f85-9b25-703bedcd8927",
       "position": 1,
       "properties": {
@@ -4155,6 +4167,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pre-survey-levelgroup_21_222022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4174,30 +4189,11 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Computer Science is Changing Everything"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Computer Science is Changing Everything2022"
-        ],
-        "lesson.key": "Welcome to CSP",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2022",
-        "activity_section.key": "0b3f94f8-20b5-471e-a3cf-6dfee4524544"
-      },
-      "level_keys": [
-        "Computer Science is Changing Everything2022"
-      ]
-    },
-    {
-      "chapter": 3,
-      "position": 2,
-      "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp_socialBelonging_control2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4215,11 +4211,14 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L3 CFU Sending Complex Messages2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4237,11 +4236,14 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 4,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U1L4 CYU32022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4259,11 +4261,14 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L5 CFU how many bits2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4281,11 +4286,14 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 6,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L5 CFU adding bits2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4303,11 +4311,14 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 7,
       "position": 3,
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L5 CFU bin dec similarities2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4325,11 +4336,14 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 8,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Widget: Binary Odometer2022"
+        ],
         "progression": "Widget: Binary Odometer"
       },
       "bonus": false,
@@ -4347,11 +4361,14 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 9,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L6 CFU beyond odometer2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4369,11 +4386,14 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 10,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L6 CFU representing fractions2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4391,11 +4411,14 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L8 Reflection Multiple Representations CSP2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4413,33 +4436,14 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video: Intro to Pixelation Encoding B&W"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U1 L9 Introduction to Pixelation2022"
+        "level_keys": [
+          "U1L9 Pixelation - Make the Letter A2022"
         ],
-        "lesson.key": "Black and White Images",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2022",
-        "activity_section.key": "d856823e-2320-4508-9754-2170bdec9aa4"
-      },
-      "level_keys": [
-        "U1 L9 Introduction to Pixelation2022"
-      ]
-    },
-    {
-      "chapter": 14,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
         "progression": "Pixelation Widget: B&W"
       },
       "bonus": false,
@@ -4457,11 +4461,14 @@
       ]
     },
     {
-      "chapter": 15,
-      "position": 3,
+      "chapter": 13,
+      "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget Fix bit offset2022"
+        ],
         "progression": "Pixelation Widget: B&W"
       },
       "bonus": false,
@@ -4479,11 +4486,14 @@
       ]
     },
     {
-      "chapter": 16,
-      "position": 4,
+      "chapter": 14,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge a2022"
+        ],
         "progression": "Sampling an Analog Image"
       },
       "bonus": false,
@@ -4501,11 +4511,14 @@
       ]
     },
     {
-      "chapter": 17,
-      "position": 5,
+      "chapter": 15,
+      "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge B2022"
+        ],
         "progression": "Sampling an Analog Image"
       },
       "bonus": false,
@@ -4523,11 +4536,14 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 6,
+      "chapter": 16,
+      "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge C2022"
+        ],
         "progression": "Sampling an Analog Image"
       },
       "bonus": false,
@@ -4545,11 +4561,14 @@
       ]
     },
     {
-      "chapter": 19,
-      "position": 7,
+      "chapter": 17,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L9 CFU pixel data2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4567,11 +4586,14 @@
       ]
     },
     {
-      "chapter": 20,
-      "position": 8,
+      "chapter": 18,
+      "position": 7,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L9 Multiple Choice Digital Analog2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4589,11 +4611,14 @@
       ]
     },
     {
-      "chapter": 21,
-      "position": 9,
+      "chapter": 19,
+      "position": 8,
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L9 CFU Sampling2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4611,11 +4636,14 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 RGB2022"
+        ],
         "progression": "RGB Color"
       },
       "bonus": false,
@@ -4633,11 +4661,14 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 12022"
+        ],
         "progression": "Pixelation Widget: Color"
       },
       "bonus": false,
@@ -4655,11 +4686,14 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 22,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 More Shades of Color2022"
+        ],
         "progression": "More Shades of Color"
       },
       "bonus": false,
@@ -4677,11 +4711,14 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 23,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 22022"
+        ],
         "progression": "Pixelation Widget: Color"
       },
       "bonus": false,
@@ -4699,11 +4736,14 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 24,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 32022"
+        ],
         "progression": "Pixelation Widget: Color"
       },
       "bonus": false,
@@ -4721,11 +4761,14 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 25,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1 Sampling Widget2022"
+        ],
         "progression": "Color Sampling Widget"
       },
       "bonus": false,
@@ -4743,11 +4786,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 26,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 42022"
+        ],
         "progression": "Pixelation Widget: Color"
       },
       "bonus": false,
@@ -4765,33 +4811,14 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 27,
       "position": 8,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "How Computers Work: Binary and Data"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U1 L8 Video: Binary and Data2022"
-        ],
-        "lesson.key": "Color Images",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2022",
-        "activity_section.key": "36750b02-4ef4-497c-a890-6d521a072d9b"
-      },
-      "level_keys": [
-        "U1 L8 Video: Binary and Data2022"
-      ]
-    },
-    {
-      "chapter": 30,
-      "position": 9,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L10 Multiple Choice analog vs digital2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4809,11 +4836,14 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 10,
+      "chapter": 28,
+      "position": 9,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L10 CFU Sampling2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4831,11 +4861,14 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L11 Widget: Text Compression2022"
+        ],
         "progression": "Widget: Text Compression"
       },
       "bonus": false,
@@ -4853,33 +4886,14 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 30,
       "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Video: Text Compression Widget with Aloe Blacc"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U1 L11 Text Compression Widget Aloe Blacc2022"
-        ],
-        "lesson.key": "Lossless Compression",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2022",
-        "activity_section.key": "36acd483-b523-4a18-b5d2-116264e00b3b"
-      },
-      "level_keys": [
-        "U1 L11 Text Compression Widget Aloe Blacc2022"
-      ]
-    },
-    {
-      "chapter": 34,
-      "position": 3,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 Multiple Choice lossless compression2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4897,11 +4911,14 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 4,
+      "chapter": 31,
+      "position": 3,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 CFU Compression for Email2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4919,11 +4936,14 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1 Lossy Compression Widget v12022"
+        ],
         "progression": "Lossy Compression Widget"
       },
       "bonus": false,
@@ -4941,11 +4961,14 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1 Lossy Compression Widget v22022"
+        ],
         "progression": "Lossy Compression Widget"
       },
       "bonus": false,
@@ -4963,11 +4986,14 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 34,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 CPS CFU Cell Phone2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4985,16 +5011,17 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "progression": "Check For Understanding"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U1L12 CFU Creative Commons2022"
+          "U1L11 Multiple Choice Creative Commons2022"
         ],
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "csp_unit1_2020",
@@ -5002,15 +5029,19 @@
         "activity_section.key": "9c633b3e-0860-4f89-baed-8f8222ed9f6e"
       },
       "level_keys": [
-        "U1L12 CFU Creative Commons2022"
+        "U1L11 Multiple Choice Creative Commons2022"
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 36,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L12 CFU Copyright2022"
+        ],
+        "progression": "Check For Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -5027,11 +5058,14 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L13 CFU Digital Representation2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -5049,11 +5083,14 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L14 CSP CFU digital information2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -5071,11 +5108,39 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 39,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csp1-2022"
+        ],
+        "progression": "End-Of-Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csp1-2022"
+        ],
+        "lesson.key": "Project   Digital Information Dilemmas Part 2",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2022",
+        "activity_section.key": "31082714-e682-482a-a0c4-8c1ca60b4b07"
+      },
+      "level_keys": [
+        "Student End of Unit Survey_csp1-2022"
+      ]
+    },
+    {
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 1 AP-Style Assessment 2022"
+        ],
         "progression": "Unit 1 Exam"
       },
       "bonus": false,
@@ -5104,18 +5169,6 @@
         "lesson_group.key": "cspSurvey",
         "script.name": "csp1-2022",
         "activity_section.key": "c89cf3b6-bbe9-4c00-80d0-a62b4f142192"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Computer Science is Changing Everything2022",
-        "script_level.level_keys": [
-          "Computer Science is Changing Everything2022"
-        ],
-        "lesson.key": "Welcome to CSP",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2022",
-        "activity_section.key": "0b3f94f8-20b5-471e-a3cf-6dfee4524544"
       }
     },
     {
@@ -5236,18 +5289,6 @@
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2022",
         "activity_section.key": "fc0a7730-7e75-4206-9daf-3b441ddbe35e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U1 L9 Introduction to Pixelation2022",
-        "script_level.level_keys": [
-          "U1 L9 Introduction to Pixelation2022"
-        ],
-        "lesson.key": "Black and White Images",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2022",
-        "activity_section.key": "d856823e-2320-4508-9754-2170bdec9aa4"
       }
     },
     {
@@ -5432,18 +5473,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "U1 L8 Video: Binary and Data2022",
-        "script_level.level_keys": [
-          "U1 L8 Video: Binary and Data2022"
-        ],
-        "lesson.key": "Color Images",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2022",
-        "activity_section.key": "36750b02-4ef4-497c-a890-6d521a072d9b"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "U1L10 Multiple Choice analog vs digital2022",
         "script_level.level_keys": [
           "U1L10 Multiple Choice analog vs digital2022"
@@ -5476,18 +5505,6 @@
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2022",
         "activity_section.key": "71c2b742-c90e-4293-80bb-655a8f4139e3"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U1 L11 Text Compression Widget Aloe Blacc2022",
-        "script_level.level_keys": [
-          "U1 L11 Text Compression Widget Aloe Blacc2022"
-        ],
-        "lesson.key": "Lossless Compression",
-        "lesson_group.key": "csp_unit1_2020",
-        "script.name": "csp1-2022",
-        "activity_section.key": "36acd483-b523-4a18-b5d2-116264e00b3b"
       }
     },
     {
@@ -5552,9 +5569,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "U1L12 CFU Creative Commons2022",
+        "level.key": "U1L11 Multiple Choice Creative Commons2022",
         "script_level.level_keys": [
-          "U1L12 CFU Creative Commons2022"
+          "U1L11 Multiple Choice Creative Commons2022"
         ],
         "lesson.key": "Intellectual Property",
         "lesson_group.key": "csp_unit1_2020",
@@ -5596,6 +5613,18 @@
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2022",
         "activity_section.key": "238d7359-c055-497c-9b76-5d31cf2d11a4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Student End of Unit Survey_csp1-2022",
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csp1-2022"
+        ],
+        "lesson.key": "Project   Digital Information Dilemmas Part 2",
+        "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2022",
+        "activity_section.key": "31082714-e682-482a-a0c4-8c1ca60b4b07"
       }
     },
     {
@@ -5771,10 +5800,11 @@
     },
     {
       "name": "CSP Unit 1 - Digital Information",
-      "url": "https://docs.google.com/presentation/d/1GvzemSaA6WDc1MRkZdLHv6RkmEl3wLEjncW1Gd56F5I/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1KdaxPPMv81LJTvdwQaUnaGBe3-an0HdtpmcpKX5LRY8/view",
       "key": "csp_unit_1_-_digital_information",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1KdaxPPMv81LJTvdwQaUnaGBe3-an0HdtpmcpKX5LRY8/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {

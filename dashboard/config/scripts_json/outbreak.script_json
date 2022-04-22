@@ -4,15 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
-      "use_legacy_lesson_plans": true,
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "outbreak",
-    "serialized_at": "2021-11-22 19:57:22 UTC",
-    "published_state": "preview",
+    "serialized_at": "2022-04-08 13:31:38 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -43,9 +43,9 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "This lesson combines **skill-building** around events with a **mini-project** where students get to build their own computer simulation in Sprite Lab. Students will study the simulation to understand how quickly a virus can spread and what can be done to slow it down. ",
-        "preparation": "- Play through the puzzles to find any potential problem areas for your class.\n- Make sure every student has a reflection journal.\n",
-        "purpose": "In the previous lesson, students collected and interpreted data from a simple simulation.  In this lesson, students will follow instructions to code their own simulation model. Students’ prior knowledge about virus outbreaks in the real world will be applied to a fictitious scenario. \n",
+        "overview": "In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson combines **skill-building** around events with a **mini-project** where students get to build their own computer simulation in Sprite Lab. Students will study the simulation to understand how quickly a virus can spread and what can be done to slow it down. ",
+        "preparation": "####One Week Before Your Hour of Code\n\n* Review the [Hour of Code Educator Guide](https://hourofcode.com/us/how-to) and [Best Practices from Successful Educators](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) in order to begin to plan your Hour of Code event.\n\n* [Register your Hour of Code event](https://hourofcode.com/us) if you’d like to get classroom support, discounted posters, or participate in the robotics give-away (US only).\n\n* Review and complete the online tutorial yourself: [Outbreak](https://studio.code.org/s/outbreak/)\n\n* Be sure to test it first before asking your students to complete it. \n\n* Check your technology and decide if you need to troubleshoot anything in advance of your Hour of Code.\n\n####One Day Before Your Hour of Code\n\n* Each student who completes the activity should receive a [certificate](https://code.org/certificates). Print one for everyone in advance to make this easier at the end of your Hour of Code.\n\n* (optional) Encourage students to bring in headphones to use during the activity.",
+        "purpose": "In this lesson, students will follow instructions to code their own simulation model. Students’ prior knowledge about virus outbreaks in the real world will be applied to a fictitious scenario. \n",
         "student_overview": "A virus has come to Monster Town! Learn to create a virus simulator and help the monsters get back to being healthy."
       },
       "seeding_key": {
@@ -74,6 +74,7 @@
       "key": "a4b68e1c-d78c-455c-922f-2fd57f697f58",
       "position": 2,
       "properties": {
+        "duration": 35,
         "name": "Main Activity"
       },
       "seeding_key": {
@@ -87,6 +88,7 @@
       "key": "fdab57b2-566f-4f6f-a42d-967cf95bc73a",
       "position": 3,
       "properties": {
+        "duration": 10,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -121,8 +123,20 @@
       }
     },
     {
-      "key": "d63c77c1-4167-4360-ab98-25610934beda",
+      "key": "9abff5bb-3f76-4f3c-b3d2-f0a873876cf8",
       "position": 1,
+      "properties": {
+        "description": "**General Support:** As a teacher your role is primarily to support students as they make their way through the tutorial. Here are a few tips that should help students regardless of the level they're working on:\n\n* Encourage students to move through the different “extras” in whatever order they like. They can always go back to Level 1 to revisit the menu.\n\n\n* **Collaborate with Neighbors:** Encourage students to check in with a neighbor when they're getting stuck. Since this tutorial includes videos and students may be wearing headphones it can get easy to \"go into a bubble\". Help break those barriers by actively pairing students if they seem like they need help. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using [pair programming](https://youtu.be/vgkahOzFH2Q).  \n* **Read the Instructions:** The instructions usually provide helpful tips on how to complete the level. Before completing a level for a student ensure they've actually looked closely at the target image and read all the text there.\n* ![](https://curriculum.code.org/media/uploads/hint.png)**Stuck? Look for hints:** Each level includes a hint with further details about how to pass the level. If students are trying to pass puzzles as quickly as possible, they might find they just need to wait a certain amount of time for all of the code to play out before moving on. Many levels contain a second hint with suggestions of ways to get even more creative by extending the task.\n* **Move On and Come Back:** Sometimes students will benefit more from coming back to a tricky level. All levels are independent of one another, though they do rely to some degree on previously introduced concepts. \n\n* **Take your time and experiment.** Read the code carefully. Even though the first couple levels tell students exactly what they need to do to pass, they should also feel free to try out their own ideas. There are no right or wrong answers in these Levels. (They’re all free play!)",
+        "name": "General Support"
+      },
+      "seeding_key": {
+        "activity_section.key": "9abff5bb-3f76-4f3c-b3d2-f0a873876cf8",
+        "lesson_activity.key": "a4b68e1c-d78c-455c-922f-2fd57f697f58"
+      }
+    },
+    {
+      "key": "d63c77c1-4167-4360-ab98-25610934beda",
+      "position": 2,
       "properties": {
         "description": "*In today’s lesson, you’re going to “Monster Town” where a virus outbreak is about to happen. Dr. Monster needs your help to slow the spread of the virus.*\n\n*You will create an outbreak simulator in Sprite Lab, and then use it to understand how a virus can spread. You’ll also help all of the monsters get healthy again!*",
         "name": "Outbreak",
@@ -136,7 +150,7 @@
     },
     {
       "key": "385c2c6a-f7e4-4c90-b081-7030d22193ed",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "**Do This:** Read *Welcome to Monster Town* as a class.\n",
         "progression_name": "Welcome to Monster Town"
@@ -148,7 +162,7 @@
     },
     {
       "key": "60837b14-7f66-4848-9c51-1c6aa9a21ad9",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "**Do This:** Review the vocabulary, **models and simulations** with students, by building off of the previous lesson. A simulation is a computer model of a process or system.\n\n"
       },
@@ -159,7 +173,7 @@
     },
     {
       "key": "13a06294-2f2a-4661-9947-46ed5843913f",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "*Today, we will make a place like Monster Town come alive by writing some code. In this simulation, you’re going to use sprites to represent the different monsters. The sprites will have different costumes to tell us things like whether they are sick or healthy. You’ll also use behaviors to get the monsters moving. Finally, you’ll use events to change the costume of a sprite when two sprites touch on this screen. This will represent one monster passing the virus to another. You will make predictions about what will happen to the neighbors of Monster Town, and help them get healthy again!* ",
         "remarks": true
@@ -171,7 +185,7 @@
     },
     {
       "key": "df13fa93-37df-4188-837d-462c48179625",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "**Do This:** Transition students to their computers, and have them begin following the instructions for each level in the skill building section. If students finish this section early, they can continue experimenting with their code in Level 6 until the class is ready to move on.",
         "progression_name": "Skill Building"
@@ -183,7 +197,7 @@
     },
     {
       "key": "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "**Do this:** Transition students back to their computers, and have them work through the remaining levels. Some of these levels offer optional challenges. Encourage students to read the instructions carefully and to experiment with their simulations.",
         "progression_name": "Mini-Project: Outbreak Simulator"
@@ -195,7 +209,7 @@
     },
     {
       "key": "0620e645-f84e-47ca-809b-3dcbe803d83e",
-      "position": 7,
+      "position": 8,
       "properties": {
         "progression_name": "Free Play"
       },
@@ -236,6 +250,18 @@
       },
       "seeding_key": {
         "activity_section.key": "b8e884f1-eae0-4138-8778-0972f90e34d9",
+        "lesson_activity.key": "fdab57b2-566f-4f6f-a42d-967cf95bc73a"
+      }
+    },
+    {
+      "key": "c1c5b270-2aae-4f8c-aded-0d92811d532f",
+      "position": 4,
+      "properties": {
+        "description": "Explain that you are spending one hour coding today, because this week is CS Education Week, and millions of other students across the globe have also been learning one Hour of Code this week. Congratulate students on being part of this world wide movement.\n\nGive each student [a certificate](http://code.org/certificates) with his or her name on it.",
+        "name": "Celebrate"
+      },
+      "seeding_key": {
+        "activity_section.key": "c1c5b270-2aae-4f8c-aded-0d92811d532f",
         "lesson_activity.key": "fdab57b2-566f-4f6f-a42d-967cf95bc73a"
       }
     }

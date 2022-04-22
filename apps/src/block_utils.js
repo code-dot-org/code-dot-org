@@ -176,13 +176,13 @@ exports.generateSimpleBlock = function(blockly, generator, options) {
     helpUrl: helpUrl,
     init: function() {
       // Note: has a fixed HSV.  Could make this customizable if need be
-      this.setHSV(184, 1.0, 0.74);
+      Blockly.cdoUtils.setHSV(this, 184, 1.0, 0.74);
       var input = this.appendDummyInput();
       if (title) {
-        input.appendTitle(title);
+        input.appendField(title);
       }
       if (titleImage) {
-        input.appendTitle(new blockly.FieldImage(titleImage));
+        input.appendField(new blockly.FieldImage(titleImage));
       }
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -378,9 +378,9 @@ exports.functionalDefinitionXml = function(
   return (
     '<block type="functional_definition" inline="false">' +
     mutation +
-    '<title name="NAME">' +
+    '<field name="NAME">' +
     name +
-    '</title>' +
+    '</field>' +
     '<functional_input name="STACK">' +
     blockXml +
     '</functional_input>' +
@@ -447,7 +447,7 @@ exports.appendNewFunctions = function(blocksXml, functionsXml) {
       ? startBlocksDom.ownerDocument
       : document;
     const node = ownerDocument.evaluate(
-      'title[@name="NAME"]',
+      'field[@name="NAME"]',
       func,
       null,
       XPathResult.FIRST_ORDERED_NODE_TYPE,
@@ -463,7 +463,7 @@ exports.appendNewFunctions = function(blocksXml, functionsXml) {
     ).stringValue;
     const alreadyPresent =
       startBlocksDocument.evaluate(
-        `//block[@type="${type}"]/title[@id="${name}"]`,
+        `//block[@type="${type}"]/field[@id="${name}"]`,
         startBlocksDom,
         null,
         XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,
@@ -684,8 +684,8 @@ const STANDARD_INPUT_TYPES = {
     addInput(blockly, block, inputConfig, currentInputRow) {
       if (inputConfig.customOptions && inputConfig.customOptions.assetUrl) {
         currentInputRow
-          .appendTitle(inputConfig.label)
-          .appendTitle(
+          .appendField(inputConfig.label)
+          .appendField(
             new Blockly.FieldImage(
               Blockly.assetUrl(inputConfig.customOptions.assetUrl),
               inputConfig.customOptions.width,
@@ -711,11 +711,11 @@ const STANDARD_INPUT_TYPES = {
       const options = sanitizeOptions(inputConfig.options);
       const dropdown = new blockly.FieldDropdown(options);
       currentInputRow
-        .appendTitle(inputConfig.label)
-        .appendTitle(dropdown, inputConfig.name);
+        .appendField(inputConfig.label)
+        .appendField(dropdown, inputConfig.name);
     },
     generateCode(block, inputConfig) {
-      let code = block.getTitleValue(inputConfig.name);
+      let code = block.getFieldValue(inputConfig.name);
       if (
         inputConfig.type === Blockly.BlockValueType.STRING &&
         !code.startsWith('"') &&
@@ -733,7 +733,7 @@ const STANDARD_INPUT_TYPES = {
       block.getVars = function() {
         return {
           [Blockly.Variables.DEFAULT_CATEGORY]: [
-            block.getTitleValue(inputConfig.name)
+            block.getFieldValue(inputConfig.name)
           ]
         };
       };
@@ -741,14 +741,14 @@ const STANDARD_INPUT_TYPES = {
       // The following functions make sure that the variable naming/renaming options work for this block
       block.renameVar = function(oldName, newName) {
         if (
-          Blockly.Names.equals(oldName, block.getTitleValue(inputConfig.name))
+          Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
         ) {
           block.setTitleValue(newName, inputConfig.name);
         }
       };
       block.removeVar = function(oldName) {
         if (
-          Blockly.Names.equals(oldName, block.getTitleValue(inputConfig.name))
+          Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
         ) {
           block.dispose(true, true);
         }
@@ -763,12 +763,12 @@ const STANDARD_INPUT_TYPES = {
 
       // Add the variable field to the block
       currentInputRow
-        .appendTitle(inputConfig.label)
-        .appendTitle(new Blockly.FieldVariable(null), inputConfig.name);
+        .appendField(inputConfig.label)
+        .appendField(new Blockly.FieldVariable(null), inputConfig.name);
     },
     generateCode(block, inputConfig) {
       return Blockly.JavaScript.translateVarName(
-        block.getTitleValue(inputConfig.name)
+        block.getFieldValue(inputConfig.name)
       );
     }
   },
@@ -780,11 +780,11 @@ const STANDARD_INPUT_TYPES = {
         getFieldInputChangeHandler(blockly, inputConfig.type)
       );
       currentInputRow
-        .appendTitle(inputConfig.label)
-        .appendTitle(field, inputConfig.name);
+        .appendField(inputConfig.label)
+        .appendField(field, inputConfig.name);
     },
     generateCode(block, inputConfig) {
-      let code = block.getTitleValue(inputConfig.name);
+      let code = block.getFieldValue(inputConfig.name);
       if (inputConfig.type === Blockly.BlockValueType.STRING) {
         // Wraps the value in quotes, and escapes quotes/newlines
         code = JSON.stringify(code);
@@ -872,7 +872,7 @@ const interpolateInputs = function(
     });
 
     // Finally append the last input's label
-    lastInput.appendTitle(lastInputConfig.label);
+    lastInput.appendField(lastInputConfig.label);
   });
 };
 exports.interpolateInputs = interpolateInputs;
@@ -1051,9 +1051,9 @@ exports.createJsWrapperBlockCreator = function(
       helpUrl: '',
       init: function() {
         if (color) {
-          this.setHSV(...color);
+          Blockly.cdoUtils.setHSV(this, ...color);
         } else if (!returnType) {
-          this.setHSV(...DEFAULT_COLOR);
+          Blockly.cdoUtils.setHSV(this, ...DEFAULT_COLOR);
         }
 
         if (returnType) {
@@ -1080,7 +1080,7 @@ exports.createJsWrapperBlockCreator = function(
           (!window.appOptions || window.appOptions.level.miniToolbox)
         ) {
           var toggle = new Blockly.FieldIcon('+');
-          if (this.blockSpace.isReadOnly()) {
+          if (Blockly.cdoUtils.isWorkspaceReadOnly(this.blockSpace)) {
             toggle.setReadOnly();
           }
 
@@ -1093,7 +1093,7 @@ exports.createJsWrapperBlockCreator = function(
           this.isMiniFlyoutOpen = false;
           // On button click, open/close the horizontal flyout, toggle button text between +/-, and re-render the block.
           Blockly.bindEvent_(toggle.fieldGroup_, 'mousedown', this, () => {
-            if (this.blockSpace.isReadOnly()) {
+            if (Blockly.cdoUtils.isWorkspaceReadOnly(this.blockSpace)) {
               return;
             }
 
@@ -1124,8 +1124,8 @@ exports.createJsWrapperBlockCreator = function(
           });
 
           this.appendDummyInput()
-            .appendTitle(toggle, 'toggle')
-            .appendTitle(' ');
+            .appendField(toggle, 'toggle')
+            .appendField(' ');
 
           this.initMiniFlyout(miniToolboxXml);
         }

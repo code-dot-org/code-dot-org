@@ -88,12 +88,18 @@ export const commands = {
         let speechText = this.getLastSpeechBubbleForSpriteId(spriteIds[i])
           ?.text;
         let type = typeof speechText;
+        // We only want to set result to true here, so that any positive test
+        // allows the overall criterion to pass.
         switch (type) {
           case 'string':
-            result = speechText.includes(value);
+            if (speechText.includes(value)) {
+              result = true;
+            }
             break;
           case 'number':
-            result = speechText === value;
+            if (speechText === value) {
+              result = true;
+            }
             break;
           default:
             break;

@@ -6,7 +6,8 @@
           "498cd895eb5a102c5aeb977e2b928dee": "Tack!"
         },
         "courseE_Dogger_2": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Du vann!"
+          "e8a10c04d72b2f135dabe360c4bdd534": "Du vann!",
+          "c865bfd8e0c78020ace8e1376d3cc9ad": "Du förlorade."
         },
         "courseE_aboutme_3": {
           "ed076287532e86365e841e92bfc50d8c": "Hej Världen!"
@@ -38,7 +39,8 @@
         },
         "courseF_project_1": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Du vann!",
-          "498cd895eb5a102c5aeb977e2b928dee": "Tack!"
+          "498cd895eb5a102c5aeb977e2b928dee": "Tack!",
+          "6b90c9823ff75e6a78aa63b392e7315a": "Poäng: "
         },
         "Alien Defender": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Skriv text här",
@@ -59,15 +61,19 @@
         "Find the Wizard": {
           "0b895ef4c917e50663bc2a7327cbee3d": "Du hittade mig!",
           "0ab65920c84bec05a22e09feea7fe4ea": "Skriv text här",
-          "30fcc1693fa8402931d13ac3a5f396fd": "skriv titelnhär"
+          "30fcc1693fa8402931d13ac3a5f396fd": "skriv titelnhär",
+          "765366ef0f68387ed2a6ca3a8d24182d": "För hög!"
         },
         "FoodFight": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Skriv text här",
-          "30fcc1693fa8402931d13ac3a5f396fd": "skriv titelnhär"
+          "30fcc1693fa8402931d13ac3a5f396fd": "skriv titelnhär",
+          "62f1b3a41b5eef66a4b2382bb2ab24f4": "Poäng ",
+          "cc2ecba4e56986752892c0e68c8e32e0": "Nivå "
         },
         "Guess The Number": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Skriv text här",
-          "30fcc1693fa8402931d13ac3a5f396fd": "skriv titelnhär"
+          "30fcc1693fa8402931d13ac3a5f396fd": "skriv titelnhär",
+          "56582da5c99c1bb46ab5dcda003f8c27": "För ung."
         },
         "NEW Course 4 Play Lab Params 11": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Skriv text här",
@@ -91,7 +97,10 @@
         },
         "course4_playlab_variables_challenge1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Skriv text här",
-          "30fcc1693fa8402931d13ac3a5f396fd": "skriv titelnhär"
+          "30fcc1693fa8402931d13ac3a5f396fd": "skriv titelnhär",
+          "40f4f24106dde9234f43bf30465647e0": "Knack knack.",
+          "8292c7cbebf598e875ccd0c008958922": "vem?",
+          "3986de660e6560710c546cb2f22c12f3": "Vem är där?"
         },
         "courseC19_playLab_EOC1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Skriv text här",
@@ -163,7 +172,8 @@
         },
         "courseF_playlab_variables1a": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Skriv text här",
-          "30fcc1693fa8402931d13ac3a5f396fd": "skriv titelnhär"
+          "30fcc1693fa8402931d13ac3a5f396fd": "skriv titelnhär",
+          "97a97de7add5e8dcd9f70a407d56968e": "Mål!"
         },
         "courseF_playlab_variables3b_josh": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Skriv text här",
@@ -171,7 +181,8 @@
         },
         "courseF_playlab_variables4b": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Skriv text här",
-          "30fcc1693fa8402931d13ac3a5f396fd": "skriv titelnhär"
+          "30fcc1693fa8402931d13ac3a5f396fd": "skriv titelnhär",
+          "ed4b32d6c8e019829b6f9f2ddb6b7dd2": " år gammal, "
         },
         "courseF_playlab_variables4c_predictive1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Skriv text här",
@@ -191,11 +202,15 @@
         },
         "courseF_playlab_variables8c": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Skriv text här",
-          "30fcc1693fa8402931d13ac3a5f396fd": "skriv titelnhär"
+          "30fcc1693fa8402931d13ac3a5f396fd": "skriv titelnhär",
+          "bec312aa7dbfb0c284d221d2aa8e9ffd": "Grattis, "
         },
         "courseF_playlab_variables_challenge1": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Skriv text här",
-          "30fcc1693fa8402931d13ac3a5f396fd": "skriv titelnhär"
+          "30fcc1693fa8402931d13ac3a5f396fd": "skriv titelnhär",
+          "40f4f24106dde9234f43bf30465647e0": "Knack knack.",
+          "8292c7cbebf598e875ccd0c008958922": "vem?",
+          "3986de660e6560710c546cb2f22c12f3": "Vem är där?"
         },
         "iceage_free_play": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Skriv text här",
@@ -231,14 +246,172 @@
           "ed076287532e86365e841e92bfc50d8c": "Hej Världen!"
         },
         "courseF_apps_aquarium": {
-          "83e4a96aed96436c621b9809e258b309": "fisk"
+          "83e4a96aed96436c621b9809e258b309": "fisk",
+          "0d3e73168beb875063ea0f0302fe32bd": "Vilken fisk?"
         },
         "courseF_apps_collector": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Du vann!"
+          "e8a10c04d72b2f135dabe360c4bdd534": "Du vann!",
+          "077449fb290b51b9d70c9f2f3d3213bc": " sekunder"
         },
         "New Play Lab Project": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Skriv text här",
           "30fcc1693fa8402931d13ac3a5f396fd": "skriv titelnhär"
+        },
+        "Course 4 Play Lab Params 10": {
+          "46e888cc716ac8ec6fad01e85eb7c37c": "Nivå: ",
+          "013405bba4219ed238e87658786699b6": " Poäng: "
+        },
+        "CourseF_Project_SpriteLab_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "val 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "val 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "val 3"
+        },
+        "CourseF_Project_SpriteLab_cupcake_examples_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "val 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "val 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "val 3"
+        },
+        "CourseF_Project_SpriteLab_examples_2021": {
+          "78d989e01047ba7043a38650d695abaa": "Välj spelare",
+          "6e41661ddc1edd50b00b7c607cdcec1a": "val 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "val 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "val 3"
+        },
+        "OPD-K5-projects-6": {
+          "3e11a2dc6edb909c47778bed75a81769": "Text här"
+        },
+        "OPD-K5-projects-7": {
+          "3e11a2dc6edb909c47778bed75a81769": "Text här"
+        },
+        "course3_playLab_challenge1": {
+          "3e11a2dc6edb909c47778bed75a81769": "Text här"
+        },
+        "courseC19_playLab_EOC5": {
+          "3e11a2dc6edb909c47778bed75a81769": "Text här"
+        },
+        "courseC19_playLab_EOC5_2020": {
+          "3e11a2dc6edb909c47778bed75a81769": "Text här"
+        },
+        "courseC19_playLab_EOC5_2021": {
+          "3e11a2dc6edb909c47778bed75a81769": "Text här"
+        },
+        "courseC19_playLab_EOC6": {
+          "3e11a2dc6edb909c47778bed75a81769": "Text här"
+        },
+        "courseC19_playLab_EOC6_2020": {
+          "3e11a2dc6edb909c47778bed75a81769": "Text här"
+        },
+        "courseC19_playLab_EOC6_2021": {
+          "3e11a2dc6edb909c47778bed75a81769": "Text här"
+        },
+        "courseC19_playLab_sample1_2021": {
+          "3e11a2dc6edb909c47778bed75a81769": "Text här"
+        },
+        "courseC19_playLab_sample2_2021": {
+          "3e11a2dc6edb909c47778bed75a81769": "Text här"
+        },
+        "courseC_data wizard": {
+          "d93dfc24c6ce3e53d8ee07416c743e60": "En hund!",
+          "336ad881e37e713ba0325500a8fa1f00": " hundar!",
+          "27944770529dd15319a983bee8951560": "En katt!",
+          "22f6f6821f4d6d0a08653935b466ac2f": "katter!",
+          "1c64ef29c853587fbe94f69f05272b79": "En fågel!",
+          "5b402e6ea05e847a076e03ad74420c45": " fåglar!",
+          "4b23c908b939eaf7918e07142b9e05e0": "En drake!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " drakar!"
+        },
+        "courseC_data wizard_2020": {
+          "d93dfc24c6ce3e53d8ee07416c743e60": "En hund!",
+          "336ad881e37e713ba0325500a8fa1f00": " hundar!",
+          "27944770529dd15319a983bee8951560": "En katt!",
+          "22f6f6821f4d6d0a08653935b466ac2f": "katter!",
+          "1c64ef29c853587fbe94f69f05272b79": "En fågel!",
+          "5b402e6ea05e847a076e03ad74420c45": " fåglar!",
+          "4b23c908b939eaf7918e07142b9e05e0": "En drake!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " drakar!"
+        },
+        "courseC_data wizard_2021": {
+          "d93dfc24c6ce3e53d8ee07416c743e60": "En hund!",
+          "336ad881e37e713ba0325500a8fa1f00": " hundar!",
+          "27944770529dd15319a983bee8951560": "En katt!",
+          "22f6f6821f4d6d0a08653935b466ac2f": "katter!",
+          "1c64ef29c853587fbe94f69f05272b79": "En fågel!",
+          "5b402e6ea05e847a076e03ad74420c45": " fåglar!",
+          "4b23c908b939eaf7918e07142b9e05e0": "En drake!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": " drakar!"
+        },
+        "courseE_playLab_challenge1": {
+          "3e11a2dc6edb909c47778bed75a81769": "Text här"
+        },
+        "courseE_playLab_scaffold5": {
+          "3e11a2dc6edb909c47778bed75a81769": "Text här"
+        },
+        "courseF_apps_card": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "min fråga"
+        },
+        "courseF_apps_madlib": {
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Partyspel",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " spel.",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "min fråga"
+        },
+        "courseF_editable_card": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "min fråga"
+        },
+        "courseF_editable_chatbot": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "min fråga"
+        },
+        "courseF_editable_madlib": {
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Partyspel",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " spel.",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "min fråga"
+        },
+        "courseF_playlab_variables_challenge2": {
+          "6b90c9823ff75e6a78aa63b392e7315a": "Poäng: "
+        },
+        "courseF_text_answer": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "min fråga"
+        },
+        "courseF_text_choice_color": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "min fråga"
+        },
+        "courseF_text_choice_conversation": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "min fråga"
+        },
+        "courseF_text_choice_events": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "min fråga"
+        },
+        "courseF_text_choice_freeplay": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "min fråga"
+        },
+        "courseF_text_choice_interview": {
+          "34088af1fb721900963462375b3bbe23": "roboten!"
+        },
+        "courseF_text_choice_title": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "min fråga"
+        },
+        "courseF_text_concat": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "min fråga"
+        },
+        "courseF_text_prompts": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "min fråga"
+        },
+        "courseF_variables_card": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "min fråga"
+        },
+        "courseF_variables_card_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "min fråga"
+        },
+        "courseF_variables_chatbot": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "min fråga"
+        },
+        "courseF_variables_chatbot_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "min fråga"
+        },
+        "courseF_variables_madlib": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "min fråga"
+        },
+        "courseF_variables_madlib_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "min fråga"
         }
       }
     }

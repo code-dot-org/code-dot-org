@@ -383,6 +383,7 @@ class AssetsTest < FilesApiTestBase
   def test_assets_quota
     FilesApi.any_instance.stubs(:max_file_size).returns(5)
     FilesApi.any_instance.stubs(:max_app_size).returns(10)
+    AssetBucket.any_instance.stubs(:max_resize_size).returns(5)
 
     post_asset_file(@api, "file1.jpg", "1234567890ABC", 'image/jpeg')
     assert last_response.client_error?, "Error when file is larger than max file size."
@@ -412,11 +413,13 @@ class AssetsTest < FilesApiTestBase
 
     FilesApi.any_instance.unstub(:max_file_size)
     FilesApi.any_instance.unstub(:max_app_size)
+    AssetBucket.any_instance.unstub(:max_resize_size)
   end
 
   def test_assets_quota_newrelic_logging
     FilesApi.any_instance.stubs(:max_file_size).returns(5)
     FilesApi.any_instance.stubs(:max_app_size).returns(10)
+    AssetBucket.any_instance.stubs(:max_resize_size).returns(5)
     CDO.stub(:newrelic_logging, true) do
       post_asset_file(@api, "file1.jpg", "1234567890ABC", 'image/jpeg')
       assert last_response.client_error?, "Error when file is larger than max file size."
@@ -454,6 +457,22 @@ class AssetsTest < FilesApiTestBase
 
       assert @api.list_objects.empty?, "No unexpected assets were written to storage."
     end
+    FilesApi.any_instance.unstub(:max_file_size)
+    FilesApi.any_instance.unstub(:max_app_size)
+    AssetBucket.any_instance.unstub(:max_resize_size)
+  end
+
+  def test_assets_resize
+    FilesApi.any_instance.stubs(:max_file_size).returns(1000)
+    FilesApi.any_instance.stubs(:max_app_size).returns(2000)
+
+    # gradient.png's file size is 1559. Upload should only be successful if it is downsampled.
+    _, filetodelete1 = post_asset_file(@api, "existingFile.jpg", File.open("./test/gradient.png").read, 'image/png')
+    assert successful?, "Downsampled file upload is successful."
+    @api.delete_object(filetodelete1)
+
+    assert @api.list_objects.empty?, "No unexpected assets were written to storage."
+
     FilesApi.any_instance.unstub(:max_file_size)
     FilesApi.any_instance.unstub(:max_app_size)
   end

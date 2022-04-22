@@ -56,7 +56,7 @@ Feature: Checking the footer appearance
     And I press "runButton"
     And I wait until element "#finishButton" is visible
     And I press "finishButton"
-    And I wait until element "#sharing-input" is visible
+    And I wait until element "#sharing-dialog-copy-button" is visible
     And I navigate to the share URL
     And I wait until element ".small-footer-base" is visible
 
@@ -83,13 +83,13 @@ Feature: Checking the footer appearance
 
     Then I close my eyes
 
-  # TODO: Fix and re-enable (find #sharing-input element)
+  # TODO: Fix and re-enable (find #sharing-dialog-copy-button element)
   @eyes @skip
   Scenario: Desktop Minecraft share small footer
     Given I am on "http://studio.code.org/s/mc/lessons/1/levels/14?noautoplay=true"
     And I wait for the page to fully load
     And I press "runButton"
-    And I wait until element "#sharing-input" is visible
+    And I wait until element "#sharing-dialog-copy-button" is visible
     And I navigate to the share URL
     And I wait until element ".small-footer-base" is visible
 
@@ -148,7 +148,7 @@ Feature: Checking the footer appearance
     And I press "runButton"
     And I wait until element "#finishButton" is visible
     And I press "finishButton"
-    And I wait until element "#sharing-input" is visible
+    And I wait until element "#sharing-dialog-copy-button" is visible
     And I rotate to portrait
     And I wait for 0.5 seconds
     And I navigate to the share URL
@@ -169,14 +169,14 @@ Feature: Checking the footer appearance
 
     Then I close my eyes
 
-  # TODO: Fix and re-enable (find #sharing-input element)
+  # TODO: Fix and re-enable (find #sharing-dialog-copy-button element)
   @eyes_mobile @skip
   Scenario: Mobile Minecraft share small footer
     Given I am on "http://studio.code.org/s/mc/lessons/1/levels/14?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
     And I press "runButton"
-    And I wait until element "#sharing-input" is visible
+    And I wait until element "#sharing-dialog-copy-button" is visible
     And I rotate to portrait
     And I wait for 0.5 seconds
     And I navigate to the share URL

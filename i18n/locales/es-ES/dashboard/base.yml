@@ -1079,7 +1079,7 @@ es:
         other: "Otros:"
       workshop_course:
         csf_af: 'Fundamentos de Ciencias de la Computación (cursos A-F)'
-        csf_express: 'Fundamentos de Ciencias de la Computación (Pre-Exprés o Exprés)'
+        csf_express: 'Fundamentos de Informática (Pre-Exprés o Exprés)'
         csd: 'Descubrimientos de Ciencias de la Computación'
         csp: 'Principios de Ciencias de la Computación'
         not_applicable: "No aplicable"

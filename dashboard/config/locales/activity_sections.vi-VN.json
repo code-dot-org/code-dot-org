@@ -1216,7 +1216,7 @@
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
           "description": "#### Tạo không khíChào mừng học viên đến lớp và giới thiệu hoạt động trong ngày.",
           "tips": [
-            "Một cách để giới thiệu Giờ Lập Trình nếu bản thân bạn không rành về viết code là xem một trong những [video truyền cảm hứng của chúng tôi](https://hourofcode.com/promote/resources#videos). Chọn một trong những video mà bạn nghĩ rằng sẽ giúp truyền cảm hứng cho học viên của mình và chia sẻ nó ngay. Đối với học viên ở lớp trung cấp, chúng tôi đề xuất [Giờ Lập Trình Đã Tới](https://youtu.be/FC5FbmsH4fw)."
+            "Một cách để giới thiệu Giờ Lập Trình nếu bản thân bạn không rành về viết code là xem một trong những [video truyền cảm hứng của chúng tôi][0]. Chọn một trong những video mà bạn nghĩ rằng sẽ giúp truyền cảm hứng cho học viên của mình và chia sẻ nó ngay. Đối với học viên ở lớp trung cấp, chúng tôi đề xuất [Giờ Lập Trình Đã Tới][1]."
           ]
         },
         "d99fc09e-a586-41df-84b2-e552cc4735e3": {
@@ -1229,7 +1229,7 @@
           "description": "Bạn có biết rằng khoa học máy tính có thể rất sáng tạo? Trên thực tế, bạn có thể làm nghệ thuật với code. Xin nhắc lại, code là một tập hợp các hướng dẫn mà máy tính có thể hiểu được. Cũng giống như việc chọn màu sơn để sử dụng, việc chọn code để viết có thể là cơ hội để thể hiện sự sáng tạo của bạn! Chúng tôi sẽ sử dụng thơ ca để truyền cảm hứng cho việc viết code sáng tạo ngày hôm nay. Có ai biết thơ là gì không? Bạn có một bài thơ hoặc nhà thơ yêu thích không?"
         },
         "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
-          "description": "**Cùng đọc thơ:** Cả lớp cùng đọc [một vài bài thơ](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) và tập xác định tâm trạng của mỗi bài thơ. Khuyến khích học viên chia sẻ cách diễn giải của họ, ngay cả khi cách diễn giải này khác với cách diễn giải của người khác."
+          "description": "**Cùng đọc thơ:** Cả lớp cùng đọc [một vài bài thơ][0] và tập xác định tâm trạng của mỗi bài thơ. Khuyến khích học viên chia sẻ cách diễn giải của họ, ngay cả khi cách diễn giải này khác với cách diễn giải của người khác."
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
           "name": "Tranh thơ ca",

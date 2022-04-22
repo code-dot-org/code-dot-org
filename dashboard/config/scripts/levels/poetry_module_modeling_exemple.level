@@ -60,83 +60,83 @@
           <next>
             <block type="gamelab_setPromptWithChoices" deletable="false">
               <value name="QUESTION">
-                <block type="text" can_disconnect_from_parent="false" deletable="false">
+                <shadow type="text" can_disconnect_from_parent="false" deletable="false">
                   <title name="TEXT">Choose a verb:</title>
-                </block>
+                </shadow>
               </value>
               <value name="VAR">
-                <block type="variables_get" can_disconnect_from_parent="false" deletable="false">
+                <block type="variables_get" movable="false" deletable="false">
                   <title name="VAR">verb</title>
                 </block>
               </value>
               <value name="A">
-                <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
+                <shadow type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                   <title name="TEXT">glittering</title>
-                </block>
+                </shadow>
               </value>
               <value name="B">
-                <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
+                <shadow type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                   <title name="TEXT">hiding</title>
-                </block>
+                </shadow>
               </value>
               <value name="C">
-                <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
+                <shadow type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                   <title name="TEXT">shining</title>
-                </block>
+                </shadow>
               </value>
               <next>
                 <block type="gamelab_setPromptWithChoices" deletable="false">
                   <value name="QUESTION">
-                    <block type="text" can_disconnect_from_parent="false" deletable="false">
+                    <shadow type="text" can_disconnect_from_parent="false" deletable="false">
                       <title name="TEXT">Choose an animal:</title>
-                    </block>
+                    </shadow>
                   </value>
                   <value name="VAR">
-                    <block type="variables_get" can_disconnect_from_parent="false" deletable="false">
+                    <block type="variables_get" movable="false" deletable="false">
                       <title name="VAR">animal</title>
                     </block>
                   </value>
                   <value name="A">
-                    <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
+                    <shadow type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                       <title name="TEXT">birds</title>
-                    </block>
+                    </shadow>
                   </value>
                   <value name="B">
-                    <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
+                    <shadow type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                       <title name="TEXT">dogs</title>
-                    </block>
+                    </shadow>
                   </value>
                   <value name="C">
-                    <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
+                    <shadow type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                       <title name="TEXT">birds</title>
-                    </block>
+                    </shadow>
                   </value>
                   <next>
                     <block type="gamelab_setPromptWithChoices" deletable="false">
                       <value name="QUESTION">
-                        <block type="text" can_disconnect_from_parent="false" deletable="false">
+                        <shadow type="text" can_disconnect_from_parent="false" deletable="false">
                           <title name="TEXT">Choose an object</title>
-                        </block>
+                        </shadow>
                       </value>
                       <value name="VAR">
-                        <block type="variables_get" can_disconnect_from_parent="false" deletable="false">
+                        <block type="variables_get" movable="false" deletable="false">
                           <title name="VAR">object</title>
                         </block>
                       </value>
                       <value name="A">
-                        <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
+                        <shadow type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                           <title name="TEXT">sandwich</title>
                         </block>
                       </value>
                       <value name="B">
-                        <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
+                        <shadow type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                           <title name="TEXT">computer</title>
-                        </block>
+                        </shadow>
                       </value>
                       <value name="C">
-                        <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
+                        <shadow type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                           <title name="TEXT">gift</title>
-                        </block>
+                        </shadow>
                       </value>
                     </block>
                   </next>
@@ -158,6 +158,9 @@
                       <next>
                         <block type="Poetry_setTitle" deletable="false">
                           <value name="TITLE">
+                            <shadow type="text">
+                              <title name="TEXT"/>
+                            </shadow>
                             <block type="gamelab_textJoin" deletable="false">
                               <title name="TEXT1">My Day</title>
                             </block>
@@ -165,6 +168,9 @@
                           <next>
                             <block type="Poetry_setAuthor" deletable="false">
                               <value name="AUTHOR">
+                                <shadow type="text">
+                                  <title name="TEXT"/>
+                                </shadow>
                                 <block type="gamelab_textJoin" deletable="false">
                                   <title name="TEXT1">By: Dan</title>
                                 </block>
@@ -172,6 +178,9 @@
                               <next>
                                 <block type="Poetry_addLine" deletable="false">
                                   <value name="LINE">
+                                    <shadow type="text">
+                                      <title name="TEXT"/>
+                                    </shadow>
                                     <block type="gamelab_textJoin" deletable="false">
                                       <title name="TEXT1">The sun is </title>
                                       <value name="TEXT2">
@@ -184,6 +193,9 @@
                                   <next>
                                     <block type="Poetry_addLine" deletable="false">
                                       <value name="LINE">
+                                        <shadow type="text">
+                                          <title name="TEXT"/>
+                                        </shadow>
                                         <block type="gamelab_textJoin" deletable="false">
                                           <title name="TEXT1">The </title>
                                           <value name="TEXT2">
@@ -201,6 +213,9 @@
                                       <next>
                                         <block type="Poetry_addLine" deletable="false">
                                           <value name="LINE">
+                                            <shadow type="text">
+                                              <title name="TEXT"/>
+                                            </shadow>
                                             <block type="gamelab_textJoin" deletable="false">
                                               <title name="TEXT1">I stare at a </title>
                                               <value name="TEXT2">

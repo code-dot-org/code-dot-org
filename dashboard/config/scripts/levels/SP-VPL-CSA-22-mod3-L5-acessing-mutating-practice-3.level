@@ -1,0 +1,27 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**Do this:**\r\n\r\n1. Write your class header and main method. \r\n2. Declare and initialize an array named `prices` which contains 5 different `double` values that you will choose.\r\n3. Declare and initialize a variable `sum` of type `double`.  Access each element in `prices` to find the sum.\r\n5. Print the value of `sum` to the console.\r\n6. Update the value of each element in `prices` to be half of its original value. \r\n7. Update the value of `sum` to be the new sum of the elements stored in `prices`.\r\n8. Print the new value of `sum` to the console.\r\n\r\n--- \r\n**Example output**\r\n\r\nThe output of your program will be unique to how you initialize the values in the `prices` array.  For example, if `prices` contains `[1.20, 3.5, 2.0, 1.0, 4.5]`, when you print `sum` to the console, you should see `12.2` printed to the console after completing step #5. \r\n\r\nAfter completing steps 6 through 8, you would see `6.1` printed to the console.\r\n\r\n::: details [**Show Me How**]\r\n\r\n* Consider looking at prior levels to review how to write a class header and main method. \r\n\r\n* A 1D array can be declared and initialized with an initializer list using the following syntax:\r\n```\r\ndataType[] variableName = {value1, value2, . . . };\r\n```\r\nBe sure to replace `dataType` with the type of data the array will store. The `variableName` should be the name of the array. Inside the curly braces ( `{ }` ), list the values the array will store.\r\n\r\n* You can obtain a value from an array using the following syntax:\r\n```\r\nvariableName[index]\r\n```\r\n`variableName` refers to the name of the array, and `index` refers to the location in the array.\r\n\r\n\r\n:::\r\n\r\n\r\n",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "SumPractice.java": {
+        "text": "// TO DO #1: Write your class header and main method.\n\n\n// TO DO #2: Declare and initialize an array named prices which contains 5 different double values that you will choose.\n\n// TO DO #3: Declare and initialize a variable sum of type double. Access each element in prices to find the sum.\n\n// TO DO #4: Print the value of sum to the console.\n\n// TO DO #5: Update the value of each element in prices to be half of its original value.\n\n// TO DO #6: Update the value of sum to be the new sum of the elements stored in prices.\n\n// TO DO #7: Print the new value of sum to the console.",
+        "isVisible": true
+      }
+    },
+    "encrypted_examples": [
+
+    ]
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-03-21T20:32:51.000Z",
+  "level_num": "custom",
+  "user_id": 977,
+  "audit_log": "[{\"changed_at\":\"2022-03-22 00:58:16 +0000\",\"changed\":[\"published\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-22 00:59:04 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-04-19 19:08:58 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-04-19 19:15:56 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-04-19 19:22:30 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-04-19 19:45:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-04-19 19:48:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]"
+}]]></config>
+</Javalab>

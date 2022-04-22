@@ -161,6 +161,7 @@ class LessonOverview extends Component {
             lessonName: lesson.displayName
           })}
         </h1>
+        <h2>{i18n.minutesLabel({number: lesson.duration})}</h2>
 
         <div style={styles.frontPage}>
           <div style={styles.left}>

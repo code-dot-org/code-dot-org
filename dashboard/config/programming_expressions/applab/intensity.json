@@ -24,6 +24,6 @@
     }
   ],
   "short_description": "Changes the brightness of the color LED",
-  "syntax": "intensity",
+  "syntax": "colorLeds[index].intensity(brightness)",
   "tips": "* A common usage of `colorLeds[i].intensity()` is with a slider or some sort of variable that you can easily change or update. "
 }

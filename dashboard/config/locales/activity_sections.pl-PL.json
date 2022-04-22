@@ -916,6 +916,9 @@
             null
           ]
         },
+        "5d09fa3e-63ce-4142-ac59-d893889ce78d": {
+          "progression_name": "Trenuj AI, by czyścił ocean"
+        },
         "917bb837-8f93-4a92-86dc-ed60980f680b": {
           "progression_name": "AI: dane treningowe i stronniczość — Film"
         },
@@ -4740,7 +4743,7 @@
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
           "description": "#### Ustawianie sceny\n\nPowitaj uczniów na zajęciach i przedstaw aktywności tego dnia.",
           "tips": [
-            "Jednym ze sposobów na wprowadzenie Godziny Kodowania, jeśli sama nie jesteś zaznajomiona z kodowaniem, jest pokazanie jednego z [naszych inspirujących filmów wideo](https://hourofcode.com/promote/resources#videos). Wybierz ten, który Twoim zdaniem będzie inspirujący dla Twoich uczniów i udostępnij go teraz. Uczniom w klasach średnich proponujemy [Godzina Kodowania jest tutaj](https://youtu.be/FC5FbmsH4fw)."
+            "Jednym ze sposobów na wprowadzenie Godziny Kodowania, jeśli sama nie jesteś zaznajomiona z kodowaniem, jest pokazanie jednego z [naszych inspirujących filmów wideo][0]. Wybierz ten, który Twoim zdaniem będzie inspirujący dla Twoich uczniów i udostępnij go teraz. Uczniom w klasach średnich proponujemy [Godzina Kodowania jest tutaj][1]."
           ]
         },
         "d99fc09e-a586-41df-84b2-e552cc4735e3": {
@@ -4753,7 +4756,7 @@
           "description": "Czy wiesz, że informatyka może być bardzo kreatywna? W rzeczywistości możesz tworzyć dzieła sztuki za pomocą kodu. Przypominamy, że kod to zestaw instrukcji zrozumiałych dla komputera. Podobnie jak wybór kolorów farb, wybór kodu, który napiszesz, może być również okazją do wyrażenia swojej kreatywności!\n\nBędziemy dzisiaj używać poezji, aby zainspirować nasze kreatywne kodowanie. Czy ktoś wie, czym jest poezja? Masz ulubiony wiersz lub poetę?"
         },
         "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
-          "description": "**Czytajcie poezję razem:** Przeczytajcie [kilka wierszy](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) razem jako klasa i poćwiczcie nazywanie nastroju każdego wiersza. Zachęć uczniów, aby podzielili się swoją interpretacją, nawet jeśli różni się od innych."
+          "description": "**Czytajcie poezję razem:** Przeczytajcie [kilka wierszy][0] razem jako klasa i poćwiczcie nazywanie nastroju każdego wiersza. Zachęć uczniów, aby podzielili się swoją interpretacją, nawet jeśli różni się od innych."
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
           "name": "Sztuka poezji ",

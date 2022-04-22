@@ -57,26 +57,32 @@
         <block type="when_run" movable="false" deletable="false"/>
         <block type="gamelab_whenAllPromptsAnswered" deletable="false" y="200">
           <next>
-            <block type="Poetry_addLine" can_disconnect_from_parent="false" deletable="false">
+            <block type="Poetry_addLine" movable="false" deletable="false">
               <value name="LINE">
-                <block type="gamelab_textJoin" can_disconnect_from_parent="false" deletable="false">
+                <shadow type="text">
+                  <title name="TEXT"/>
+                </shadow>
+                <block type="gamelab_textJoin" movable="false" deletable="false">
                   <title name="TEXT1">Life is too short</title>
                 </block>
               </value>
               <next>
-                <block type="Poetry_addLine" can_disconnect_from_parent="false" deletable="false">
+                <block type="Poetry_addLine" movable="false" deletable="false">
                   <value name="LINE">
-                    <block type="gamelab_textJoin" can_disconnect_from_parent="false" deletable="false">
+                    <shadow type="text">
+                      <title name="TEXT"/>
+                    </shadow>
+                    <block type="gamelab_textJoin" movable="false" deletable="false">
                       <title name="TEXT1">to eat a bad </title>
                       <value name="TEXT2">
-                        <block type="Poetry_textVariableJoin" can_disconnect_from_parent="false" deletable="false">
+                        <block type="Poetry_textVariableJoin" movable="false" deletable="false">
                           <title name="VAR">food</title>
                         </block>
                       </value>
                     </block>
                   </value>
                   <next>
-                    <block type="Poetry_animateText" next_connection_disabled="true" can_disconnect_from_parent="false" deletable="false"/>
+                    <block type="Poetry_animateText" next_connection_disabled="true" movable="false" deletable="false"/>
                   </next>
                 </block>
               </next>
@@ -89,29 +95,29 @@
       <xml>
         <block type="gamelab_setPromptWithChoices">
           <value name="QUESTION">
-            <block type="text" can_disconnect_from_parent="false">
+            <shadow type="text" can_disconnect_from_parent="false">
               <title name="TEXT">Enter a food:</title>
-            </block>
+            </shadow>
           </value>
           <value name="VAR">
-            <block type="variables_get" can_disconnect_from_parent="false">
+            <block type="variables_get" movable="false">
               <title name="VAR">food</title>
             </block>
           </value>
           <value name="A">
-            <block type="Poetry_stringValue" can_disconnect_from_parent="false">
+            <shadow type="Poetry_stringValue" can_disconnect_from_parent="false">
               <title name="TEXT"/>
-            </block>
+            </shadow>
           </value>
           <value name="B">
-            <block type="Poetry_stringValue" can_disconnect_from_parent="false">
+            <shadow type="Poetry_stringValue" can_disconnect_from_parent="false">
               <title name="TEXT"/>
-            </block>
+            </shadow>
           </value>
           <value name="C">
-            <block type="Poetry_stringValue" can_disconnect_from_parent="false">
+            <shadow type="Poetry_stringValue" can_disconnect_from_parent="false">
               <title name="TEXT"/>
-            </block>
+            </shadow>
           </value>
         </block>
       </xml>

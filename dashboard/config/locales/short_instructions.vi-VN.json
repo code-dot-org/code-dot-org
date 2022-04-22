@@ -1120,8 +1120,8 @@
         "courseA_collector_loops9_2021": "**Thử thách:** Báu vật nằm rải rác trên những bậc thang này! Hãy viết mã lệnh để giúp Laurel lấy được toàn bộ.",
         "courseA_collector_loops_challenge1_2021": "_“Bạn có thể giúp tôi phát hiện lỗi được không?”_",
         "courseA_collector_loops_challenge2kp_2021": "Hãy lấy ít nhất **3** mảnh báu vật để vượt qua cấp độ này.",
-        "courseB_Scrat_ramp1_2021": "இந்த புதிருக்கு, தொகுதிகளை ஒன்றாக இணைத்து \"▶ Run\" அழுத்தவும்!",
-        "courseB_Scrat_ramp2_2021": "உங்கள் குறியீட்டை முடிக்க அனைத்து தொகுதிகளையும் ஒன்றாக ஒட்டவும், பின்னர் \"▶Run\" என்பதைக் கிளிக் செய்யவும்.",
+        "courseB_Scrat_ramp1_2021": "Trong bài tập này, hãy ghép các khối lại với nhau và nhấn “▶ Run” (chạy)!",
+        "courseB_Scrat_ramp2_2021": "Hãy gắn tất cả các khối lại với nhau để hoàn thành mã lệnh, sau đó nhấp chuột vào nút “▶ Run” (chạy).",
         "courseB_maze_seq9_2021": "Thử thách: Di chuyển vòng qua tảng băng vỡ để đưa Scrat đến chỗ hạt sồi.",
         "courseB_maze_seq_challenge1_2021": "Bạn có thể tìm ra đường đi trước khi hết khối để sử dụng không?",
         "helloworld_animals_backgrounds": "Hãy cùng tìm hiểu cách đổi hình nền nhé.",
@@ -1177,7 +1177,10 @@
         "poetry_hoc_spriteBehaviors": "Nhân vật có thể thực hiện lặp đi lặp lại các hành động hoặc hành vi nhất định khi chương trình chạy.",
         "poetry_hoc_spriteSizes": "Bạn có thể thay đổi kích thước của nhân vật đã tạo.",
         "New Artist Project": "Hãy vẽ thứ gì đó thú vị! Mã lập trình của bạn sẽ được lưu như một dự án để bạn có thể quay lại bất cứ lúc nào.",
-        "New Sports Project": "Hãy tạo trò chơi cho riêng bạn! Bạn được quyền phụ trách từ đây: bạn có thể thay đổi tất cả luật chơi, xáo trộn và kết hợp các môn thể thao, hãy thỏa sức sáng tạo! Khi bạn xong, bấm Hoàn thành để bạn bè của bạn có thể thử chơi trò chơi của bạn trên điện thoại của họ."
+        "New Sports Project": "Hãy tạo trò chơi cho riêng bạn! Bạn được quyền phụ trách từ đây: bạn có thể thay đổi tất cả luật chơi, xáo trộn và kết hợp các môn thể thao, hãy thỏa sức sáng tạo! Khi bạn xong, bấm Hoàn thành để bạn bè của bạn có thể thử chơi trò chơi của bạn trên điện thoại của họ.",
+        "Course 4 Play Lab Vars 1": "Lần này, bạn không phải viết bất kỳ đoạn mã nào, chỉ cần nhấn \"Chạy\" để chơi trò chơi. Trong trò chơi này, bạn sẽ đóng vai 1 chú chó cố gắng thu thập nhiều lá cờ hơn chú mèo. Bạn hãy sử dụng nút mũi tên để điều khiển chú chó. Nhấn \"Hoàn Thành\" khi chơi xong trò chơi nhé.",
+        "Course 4 Play Lab Vars 2": "Cuộc đua trong câu đố trước đó không được công bằng lắm. Hãy thay đổi biến `dog_speed` để đảm bảo bạn có thể thu thập nhiều lá cờ hơn chú mèo. Ai thu thập được 10 lá cờ trước sẽ là người chiến thắng.",
+        "Course 4 Play Lab Vars 3": "Sử dụng mũi tên trái và phải để di chuyển, và mũi tên lên để nhảy. Hãy xem bạn có thể thu thập hết tất cả các lá cờ không nhé."
       }
     }
   }

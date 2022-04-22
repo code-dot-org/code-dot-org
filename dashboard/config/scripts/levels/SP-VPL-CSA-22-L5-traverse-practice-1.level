@@ -1,0 +1,24 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Debugging practice\r\n\r\nThe following code is intended to print out each element in an array but it doesn’t work as expected. \r\n\r\n**Do this:**\r\n\r\n1. Run the code to see what happens.  \r\n2. Use a for loop to traverse the array and print each element to a new line in the console. \r\n\r\nWhen you are done you should see this in the console:\r\n```\r\nsunglasses\r\ntoothbrush\r\nsunscreen\r\ntravel pillow\r\n```\r\n",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "PackingList.java": {
+        "text": "public class PackingList{    \n  public static void main(String[] args){\n\n    String[] toPack = {\"sunglasses\", \"toothbrush\", \"sunscreen\", \"travel pillow\"};\n\n    System.out.print(toPack);\n\n    // TO DO: Use a for loop to traverse the array and print each element to a new line in the console.\n\n  } \n}",
+        "isVisible": true
+      }
+    }
+  },
+  "game_id": 68,
+  "created_at": "2022-03-21T20:36:50.000Z",
+  "level_num": "custom",
+  "user_id": 977,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-03-22 01:20:37 +0000\",\"changed\":[\"published\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-22 01:21:28 +0000\",\"changed\":[\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-22 01:25:14 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-22 01:49:48 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-22 01:50:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-22 01:52:56 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-22 02:36:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-22 02:53:29 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-22 14:19:06 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-22 14:19:19 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]"
+}]]></config>
+</Javalab>

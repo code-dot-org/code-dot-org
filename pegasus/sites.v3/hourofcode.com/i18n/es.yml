@@ -138,7 +138,7 @@ es:
     para entrenar el SVM. Según los datos de entrenamiento, el SVM separa el "espacio"
     de todos los peces posibles en dos partes, que corresponden a las clases que estamos
     tratando de aprender (como "azul" o "no azul").
-  social_hoc2019_oceans_title: 'IA para océanos #CSForGood'
+  social_hoc2019_oceans_title: 'Inteligencia Artificial para los Océanos #CSForGood'
   social_hoc2019_oceans_desc: Aprende sobre inteligencia artificial, aprendizaje automático,
     datos de entrenamiento y prejuicios, mientras exploras cuestiones éticas y cómo
     la inteligencia artificial se puede utilizar para abordar problemas mundiales.
@@ -171,20 +171,21 @@ es:
     ciencias y estudios sociales. A través de estos módulos, proyectos y lecciones,
     las escuelas pueden estudiar sus asignaturas habituales de formas nuevas e interesantes.
   hoc_overview_csc_learn_more: Conoce más sobre Conexiones a las Ciencias de la Computación
-  ai_video_title_what_is_ai: "¿Qué es IA?"
+  ai_video_title_what_is_ai: "¿Qué es la Inteligencia Artificial?"
   ai_video_title_algorithm_bias: Combatiendo el sesgo en los algoritmos
   ai_video_title_phone_knows_dog: "¿Cómo sabe tu teléfono que esto es un perro?"
-  ai_video_title_what_is_ml: "¿Qué es el aprendizaje automático?"
-  ai_video_title_ml_big_small_prickly: 'Aprendizaje automático: cómo resolver problemas
-    grandes, pequeños y espinosos'
-  ai_video_title_ethics_of_ai: Ética de la IA
-  ai_video_title_ml_human_bias: Aprendizaje automático y prejuicios humanos
-  ai_video_title_seeing_ai: 'Ver IA: hacer que el mundo visual sea más accesible'
+  ai_video_title_what_is_ml: "¿Qué es el Aprendizaje Automático?"
+  ai_video_title_ml_big_small_prickly: 'Aprendizaje Automático: Resolviendo Problemas
+    Grandes, Pequeños y Espinosos'
+  ai_video_title_ethics_of_ai: Ética de la Inteligencia Artificial
+  ai_video_title_ml_human_bias: Aprendizaje Automático y Sesgo Humano
+  ai_video_title_seeing_ai: 'Viendo la Inteligencia Artificial: Haciendo el mundo
+    visual más accesible'
   activity: Actividad
   name: Nombre
   description: Descripción
   audience: Audiencia
-  ai_resource_header: Enseñar y aprender sobre IA
+  ai_resource_header: Enseña y Aprende  la Inteligencia Artificial
   ai_resource_minecraft: Minecraft AI for Good
   ai_resource_minecraft_desc: 'Accede a recursos gratuitos que incluyen un plan de
     lecciones, videos, un plan de estudios en ciencias de la computación y entrenamientos
@@ -1221,7 +1222,7 @@ es:
   tutorial_bbcphys_name: Programación + física de Bitsbox
   tutorial_bitsbox_name: Crear aplicaciones locas con Bitsbox
   tutorial_tlcemo_name: 'Máquina de emociones: tarjeta de crear una cara'
-  tutorial_crd_name: Condicionales con naipes
+  tutorial_crd_name: Condicionales con Cartas
   tutorial_bbcbio_name: Programación + biología de Bitsbox
   tutorial_ticklebb8_name: BB-8 Swing
   tutorial_grok_name: Aprendizaje de Grok
@@ -2057,7 +2058,7 @@ es:
     escrito real! Los principiantes son bienvenidos."
   tutorial_tlcemo_shortdescription: Programa una cara de robot de tarjeta para mostrar
     diferentes emociones una tras otra.
-  tutorial_crd_shortdescription: Aprende algoritmos con una baraja de naipes
+  tutorial_crd_shortdescription: Aprende algoritmos con una baraja de cartas
   tutorial_bbcbio_shortdescription: 'Plan de lecciones basado en estándares para los
     niveles K-5. '
   tutorial_ticklebb8_shortdescription: Con Tickle, una aplicación de codificación
@@ -3795,7 +3796,7 @@ es:
     para traducir emociones (comandos de alto nivel) en instrucciones de máquina de
     bajo nivel.
   tutorial_crd_longdescription: Aprende sobre algoritmos y sentencias condicionales
-    en esta actividad "fuera de línea" usando una baraja de cartas. Los estudiantes
+    en esta actividad "sin conexión" usando una baraja de cartas. Los estudiantes
     hacen esta actividad en equipos y necesitan una baraja de cartas por equipo.
   tutorial_bbcbio_longdescription: Plan de lecciones basado en estándares para los
     grados K-5. Lleva a tus hijos al laboratorio de computación con hojas de trabajo

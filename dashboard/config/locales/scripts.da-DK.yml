@@ -983,6 +983,8 @@ da:
           lesson_groups:
             required:
               display_name: Oversigt
+        basketball:
+          name: basketball
         hoc-encryption:
           lessons:
             Simple Encryption:
@@ -2159,9 +2161,6 @@ da:
               display_name: Oversigt
         dance-2019:
           description: Lav din egen dansefest sammen med dine venner.
-          lessons:
-            Dance Party:
-              name: Dance Party
           student_description: Lav din egen dansefest sammen med dine venner.
         k5-onlinepd-2019:
           lessons:
@@ -2972,6 +2971,10 @@ da:
           lessons:
             lesson-6:
               name: Variabler
+        csa3-2022:
+          lessons:
+            lesson-5:
+              name: For Loops
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -2999,3 +3002,27 @@ da:
               display_name: figure
             lessonGroup-8:
               display_name: Variabler
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Variabler
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Løkker
+              key: Løkker
+            Events:
+              name: Hændelser
+              key: Hændelser
+            Conditionals:
+              name: Betingelser
+              key: Betingelser
+            Functions:
+              name: Funktioner
+              key: Funktioner
+            Variables:
+              name: Variabler
+              key: Variabler
+            For Loops:
+              name: For Loops
+              key: For Loops

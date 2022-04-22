@@ -953,6 +953,8 @@ eu:
           lesson_groups:
             required:
               display_name: Bista orokorra
+        basketball:
+          name: saskibaloia
         csd2-2017:
           lessons:
             Lists:
@@ -2756,6 +2758,10 @@ eu:
           lessons:
             lesson-6:
               name: Aldagaiak
+        csa3-2022:
+          lessons:
+            lesson-5:
+              name: For begiztak
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -2778,3 +2784,27 @@ eu:
               display_name: Hiritartasun digitala
             lessonGroup-8:
               display_name: Aldagaiak
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Aldagaiak
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Itzuliak
+              key: Itzuliak
+            Events:
+              name: Gertaerak
+              key: Gertaerak
+            Conditionals:
+              name: Baldintzak
+              key: Baldintzak
+            Functions:
+              name: Funtzioak
+              key: Funtzioak
+            Variables:
+              name: Aldagaiak
+              key: Aldagaiak
+            For Loops:
+              name: For begiztak
+              key: For begiztak

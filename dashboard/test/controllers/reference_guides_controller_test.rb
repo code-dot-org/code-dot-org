@@ -7,9 +7,12 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
     File.stubs(:write)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     @levelbuilder = create :levelbuilder
-    unit_group = create :unit_group, family_name: 'bogus-course', version_year: '2022', name: 'bogus-course-2022'
-    CourseOffering.add_course_offering(unit_group)
-    @reference_guide = create :reference_guide, course_version: unit_group.course_version
+    @unit_group = create :unit_group, family_name: 'bogus-course', version_year: '2022', name: 'bogus-course-2022'
+    CourseOffering.add_course_offering(@unit_group)
+    # category
+    @reference_guide = create :reference_guide, course_version: @unit_group.course_version
+    # subcategory
+    @reference_guide_subcategory = create :reference_guide, course_version: @unit_group.course_version, parent_reference_guide_key: @reference_guide.key
 
     @in_development_unit_group = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.in_development,
       family_name: 'indev-course', version_year: '2022', name: 'indev-course-2022'
@@ -37,9 +40,86 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
 
     show_data = css_select('script[data-referenceguide]').first.attribute('data-referenceguide').to_s
 
-    reference_guide = create :reference_guide
+    assert_equal @reference_guide.summarize_for_show.to_json, show_data
+  end
 
-    assert_equal reference_guide.summarize_for_show.to_json, show_data
+  test 'data is passed to edit_all page' do
+    sign_in @levelbuilder
+
+    get :edit_all, params: {
+      course_course_name: @reference_guide.course_offering_version
+    }
+    assert_response :ok
+
+    show_data = css_select('script[data-referenceguides]').first.attribute('data-referenceguides').to_s
+
+    assert_equal [@reference_guide.summarize_for_index, @reference_guide_subcategory.summarize_for_index].to_json, show_data
+  end
+
+  test 'ref guide is updated through update route' do
+    editable_reference_guide = create :reference_guide, course_version: @unit_group.course_version
+
+    sign_in @levelbuilder
+
+    assert_not_equal editable_reference_guide.content, 'new content'
+    File.expects(:write).with {|filename, _| filename.to_s.end_with? "#{editable_reference_guide.key}.json"}.once
+
+    post :update, params: {
+      course_course_name: editable_reference_guide.course_offering_version,
+      key: editable_reference_guide.key,
+      content: 'new content'
+    }
+    assert_response :ok
+
+    editable_reference_guide.reload
+    assert_equal 'new content', editable_reference_guide.content
+  end
+
+  test 'ref guide is deleted through destroy route' do
+    editable_reference_guide = create :reference_guide, course_version: @unit_group.course_version
+
+    sign_in @levelbuilder
+    File.expects(:delete).with {|filename, _| filename.to_s.end_with? "#{editable_reference_guide.key}.json"}.once
+
+    post :destroy, params: {
+      course_course_name: editable_reference_guide.course_offering_version,
+      key: editable_reference_guide.key
+    }
+    assert_response :no_content
+
+    assert_raise ActiveRecord::RecordNotFound do
+      editable_reference_guide.reload
+    end
+  end
+
+  test 'index redirects to the first guide' do
+    sign_in @levelbuilder
+
+    get :index, params: {
+      course_course_name: @reference_guide.course_offering_version
+    }
+    assert_response :redirect
+    assert_redirected_to "/courses/#{@reference_guide_subcategory.course_offering_version}/guides/#{@reference_guide_subcategory.key}"
+  end
+
+  test 'data is passed to new' do
+    sign_in @levelbuilder
+
+    get :new, params: {
+      course_course_name: @reference_guide.course_offering_version
+    }
+    assert_response :ok
+  end
+
+  test 'create results in new reference guide' do
+    key = 'new-ref-guide'
+
+    sign_in @levelbuilder
+    File.expects(:write).with {|filename, _| filename.to_s.end_with? "#{key}.json"}.once
+
+    assert_creates(ReferenceGuide) do
+      post :create, params: {key: key, course_course_name: @unit_group.name}
+    end
   end
 
   test_user_gets_response_for :show, params: -> {{course_course_name: @reference_guide.course_offering_version, key: 'unknown_ref_guide'}}, user: :student, response: :not_found
@@ -50,6 +130,24 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
   test_user_gets_response_for :show, params: -> {{course_course_name: @reference_guide.course_offering_version, key: @reference_guide.key}}, user: :teacher, response: :success
   test_user_gets_response_for :show, params: -> {{course_course_name: @reference_guide.course_offering_version, key: @reference_guide.key}}, user: :levelbuilder, response: :success
 
+  # edit page is levelbuilder only
+  test_user_gets_response_for :edit, params: -> {{course_course_name: @reference_guide.course_offering_version, key: @reference_guide.key}}, user: nil, response: :redirect
+  test_user_gets_response_for :edit, params: -> {{course_course_name: @reference_guide.course_offering_version, key: @reference_guide.key}}, user: :student, response: :forbidden
+  test_user_gets_response_for :edit, params: -> {{course_course_name: @reference_guide.course_offering_version, key: @reference_guide.key}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :edit, params: -> {{course_course_name: @reference_guide.course_offering_version, key: @reference_guide.key}}, user: :levelbuilder, response: :success
+
+  # edit_all page is levelbuilder only
+  test_user_gets_response_for :edit_all, params: -> {{course_course_name: @reference_guide.course_offering_version}}, user: nil, response: :redirect
+  test_user_gets_response_for :edit_all, params: -> {{course_course_name: @reference_guide.course_offering_version}}, user: :student, response: :forbidden
+  test_user_gets_response_for :edit_all, params: -> {{course_course_name: @reference_guide.course_offering_version}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :edit_all, params: -> {{course_course_name: @reference_guide.course_offering_version}}, user: :levelbuilder, response: :success
+
+  # new page is levelbuilder only
+  test_user_gets_response_for :new, params: -> {{course_course_name: @reference_guide.course_offering_version}}, user: nil, response: :redirect
+  test_user_gets_response_for :new, params: -> {{course_course_name: @reference_guide.course_offering_version}}, user: :student, response: :forbidden
+  test_user_gets_response_for :new, params: -> {{course_course_name: @reference_guide.course_offering_version}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :new, params: -> {{course_course_name: @reference_guide.course_offering_version}}, user: :levelbuilder, response: :success
+
   # pilot reference guides are restricted
   test_user_gets_response_for :show, name: 'not signed-in cannot view pilot ref guide',
     params: -> {{course_course_name: @reference_guide_pilot.course_offering_version, key: @reference_guide_pilot.key}}, user: nil, response: :redirect
@@ -57,6 +155,8 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
     params: -> {{course_course_name: @reference_guide_pilot.course_offering_version, key: @reference_guide_pilot.key}}, user: :student, response: :forbidden
   test_user_gets_response_for :show, name: 'regular teacher cannot view pilot ref guide',
     params: -> {{course_course_name: @reference_guide_pilot.course_offering_version, key: @reference_guide_pilot.key}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :edit_all, name: 'regular teacher cannot view pilot ref guide edit_all',
+    params: -> {{course_course_name: @reference_guide_pilot.course_offering_version}}, user: :teacher, response: :forbidden
   test_user_gets_response_for :show, name: 'pilot student can view pilot ref guide',
     params: -> {{course_course_name: @reference_guide_pilot.course_offering_version, key: @reference_guide_pilot.key}}, user: -> {@pilot_student}, response: :success
   test_user_gets_response_for :show, name: 'pilot teacher can view pilot ref guide',

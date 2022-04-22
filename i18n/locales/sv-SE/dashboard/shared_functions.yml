@@ -1,4 +1,13 @@
 sv:
   data:
     shared_functions:
+      growing: växer
+      moving east: flyttar öst
+      moving east and looping: flyttar österut och loopar
+      moving north: flyttar norrut
+      moving south: flyttar söderut
+      moving west: flyttar väst
+      moving west and looping: flyttar västerut och loopar
       moving with arrow keys: flytta med piltangenter
+      patrolling: patrullerar
+      shrinking: krymper

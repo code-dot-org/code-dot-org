@@ -17,6 +17,9 @@ class ReferenceGuideTest < ActiveSupport::TestCase
     assert_raises ActiveRecord::RecordInvalid do
       create :reference_guide, key: '\\ $ % * & @'
     end
+    assert_raises ActiveRecord::RecordInvalid do
+      create :reference_guide, key: 'edit'
+    end
   end
 
   test "reference guides are unique by key in course version" do

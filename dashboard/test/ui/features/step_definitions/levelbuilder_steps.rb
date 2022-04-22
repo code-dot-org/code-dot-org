@@ -22,6 +22,22 @@ Given(/^I create a temp migrated unit with lessons$/) do
   @temp_lesson_without_lesson_plan_id = data['lesson_without_lesson_plan_id']
 end
 
+Given(/^I enter a temp unit name$/) do
+  @temp_script_name = "temp-script-#{Time.now.to_i}-#{rand(1_000_000)}"
+  puts "temp unit name: #{@temp_script_name}"
+  steps %{
+    And element ".familyNameInput" is visible
+    And I press keys "#{@temp_script_name}" for element ".familyNameInput"
+  }
+end
+
+Given(/^the unit slug input contains the temp script name$/) do
+  steps %{
+    And I wait until element ".newUnitSlug" is visible
+    And element ".newUnitSlug" has value "#{@temp_script_name}"
+  }
+end
+
 Given(/^I view the temp unit overview page$/) do
   steps %{
     Given I am on "http://studio.code.org/s/#{@temp_script_name}"
@@ -33,6 +49,20 @@ Given(/^I view the temp unit edit page$/) do
   steps %{
     Given I am on "http://studio.code.org/s/#{@temp_script_name}/edit"
     And I wait until element ".edit_script" is visible
+  }
+end
+
+Given(/^I wait for the temp unit edit page to load$/) do
+  steps %{
+    And I wait until I am on "http://studio.code.org/s/#{@temp_script_name}/edit"
+    And I wait until element ".edit_script" is visible
+  }
+end
+
+Given(/^I wait for the temp unit overview page to load$/) do
+  steps %{
+    And I wait until I am on "http://studio.code.org/s/#{@temp_script_name}"
+    And I wait until element ".unit-overview-top-row" is visible
   }
 end
 
@@ -63,7 +93,7 @@ Given (/^I remove the temp unit from the cache$/) do
     body: {script_name: @temp_script_name}
   )
 end
-Given(/^I delete the temp unit with lessons$/) do
+Given(/^I delete the temp unit( with lessons)?$/) do |_|
   browser_request(
     url: '/api/test/destroy_script',
     method: 'POST',

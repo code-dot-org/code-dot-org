@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-31 19:48:18 UTC",
+    "serialized_at": "2022-03-11 13:05:05 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2247,7 +2247,7 @@
       "key": "01af59ff-3b90-4011-8422-ad7ebb2126eb",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define sentinel value.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What would be a reasonable sentinel value for this algorithm? How could the user indicate they finished entering values?*\n\n**Discussion Goal:** Students share that an empty `String` is not a reasonable song title and could indicate that the user finished entering songs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 5 and 6 on Code Studio. On Level 5, students translate the pseudocode into Java to accept user input. On Level 6, students complete a choice level by combining sentinel values and overridden methods to solve the given problems.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define sentinel value.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What would be a reasonable sentinel value for this algorithm? How could the user indicate they finished entering values?*\n\n**Discussion Goal:** Students share that an empty `String` is not a reasonable pastry name and could indicate that the user finished entering pastries.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 5 and 6 on Code Studio. On Level 5, students translate the pseudocode into Java to accept user input. On Level 6, students complete a choice level by combining sentinel values and overridden methods to solve the given problems.",
         "progression_name": "Sentinel Values"
       },
       "seeding_key": {

@@ -1,9 +1,17 @@
 {
+  "addAComment": "Lägg till en kommentar",
+  "backpackLabel": "Ryggsäck",
   "cancel": "Avbryt",
   "delete": "Ta bort",
+  "genericSaveErrorTitle": "Spara fel",
   "import": "Importera",
+  "includeFiles": "Inkludera filer",
   "markComplete": "Markera som slutförd",
   "markIncomplete": "Markera som inte slutförd",
+  "newFile": "Ny fil",
   "rename": "Ändra namn",
-  "saving": "Sparar..."
+  "replace": "Ersätt",
+  "running": "Springer...",
+  "saving": "Sparar...",
+  "teacherLabel": "lärare"
 }

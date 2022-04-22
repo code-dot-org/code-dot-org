@@ -62,7 +62,16 @@ Dashboard::Application.routes.draw do
 
   get 'redirected_url', to: 'redirect_proxy#get', format: false
 
-  get 'docs/', to: 'curriculum_proxy#get_doc_landing'
+  # We moved code docs off of curriculum builder in spring 2022.
+  # In that move, we wanted to preserve the previous /docs routes for these
+  # pages. However, there are a lot of other /docs URLs that did not move over
+  # so we're allow-listing the four IDEs that lived on curriculum builder to be
+  # served by ProgrammingEnvironmentsController and ProgrammingExpressionsController,
+  # with the rest falling back to the old proxying logic.
+  get 'docs/', to: 'programming_environments#docs_index'
+  get 'docs/:programming_environment_name', to: 'programming_environments#docs_show', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/}
+  get 'docs/:programming_environment_name/:programming_expression_key', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/, programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/}, to: 'programming_expressions#docs_show'
+  get 'docs/:programming_environment_name/:programming_expression_key/index.html', constraints: {programming_environment_name: /(applab|gamelab|spritelab|weblab)/, programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/}, to: 'programming_expressions#docs_show'
   get 'docs/*path', to: 'curriculum_proxy#get_doc'
   get 'curriculum/*path', to: 'curriculum_proxy#get_curriculum'
 
@@ -95,7 +104,8 @@ Dashboard::Application.routes.draw do
       end
       collection do
         get 'membership'
-        get 'valid_scripts'
+        get 'valid_course_offerings'
+        get 'available_participant_types'
         get 'require_captcha'
       end
     end
@@ -258,11 +268,13 @@ Dashboard::Application.routes.draw do
       get 'get_rubric'
       get 'embed_level'
       get 'edit_blocks/:type', to: 'levels#edit_blocks', as: 'edit_blocks'
+      get 'edit_exemplar', to: 'levels#edit_exemplar', as: 'edit_exemplar'
       get 'get_serialized_maze'
       post 'update_properties'
       post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
       post 'clone'
       post 'update_start_code'
+      post 'update_exemplar_code'
     end
   end
 
@@ -280,6 +292,8 @@ Dashboard::Application.routes.draw do
 
   get '/course/:course_name', to: redirect('/courses/%{course_name}')
   get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
+  # these routes use course_course_name to match generated routes below that are nested within courses
+  get '/courses/:course_course_name/guides/edit', to: 'reference_guides#edit_all', as: :edit_all_reference_guides
 
   resources :courses, param: 'course_name' do
     member do
@@ -290,8 +304,7 @@ Dashboard::Application.routes.draw do
       get 'get_rollup_resources'
     end
 
-    resources :reference_guides, only: [:show], param: 'key', path: 'guides' do
-    end
+    resources :reference_guides, param: 'key', path: 'guides'
   end
 
   # CSP 20-21 lockable lessons with lesson plan redirects
@@ -324,19 +337,30 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :programming_expressions, only: [:new, :create, :edit, :update, :show] do
+  resources :programming_classes, only: [:new, :create, :edit, :update, :show]
+
+  resources :programming_expressions, only: [:index, :new, :create, :edit, :update, :show, :destroy] do
     collection do
       get :search
+      get :get_filtered_expressions
+    end
+    member do
+      post :clone
     end
   end
 
-  resources :programming_environments, only: [:index, :new, :create, :edit, :update, :show], param: 'name' do
+  resources :programming_environments, only: [:index, :new, :create, :edit, :update, :show, :destroy], param: 'name' do
+    member do
+      get :get_summary_by_name
+    end
     resources :programming_expressions, param: 'programming_expression_key', constraints: {programming_expression_key: /#{CurriculumHelper::KEY_CHAR_RE}+/} do
       member do
         get :show, to: 'programming_expressions#show_by_keys'
       end
     end
   end
+
+  resources :programming_methods, only: [:edit, :update]
 
   resources :standards, only: [] do
     collection do
@@ -438,6 +462,10 @@ Dashboard::Application.routes.draw do
 
   # HOC dashboards.
   get '/admin/hoc/students_served', to: 'admin_hoc#students_served', as: 'hoc_students_served'
+
+  # NPS dashboards
+  get '/admin/nps/nps_form', to: 'admin_nps#nps_form', as: 'nps_form'
+  post '/admin/nps/nps_update', to: 'admin_nps#nps_update', as: 'nps_update'
 
   # internal report dashboards
   get '/admin/levels', to: 'admin_reports#level_completions', as: 'level_completions'
@@ -771,8 +799,10 @@ Dashboard::Application.routes.draw do
       concerns :section_api_routes
       post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
       post 'users/:user_id/display_theme', to: 'users#update_display_theme'
+      post 'users/:user_id/mute_music', to: 'users#post_mute_music'
       get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
       get 'users/:user_id/display_theme', to: 'users#get_display_theme'
+      get 'users/:user_id/mute_music', to: 'users#get_mute_music'
       get 'users/:user_id/contact_details', to: 'users#get_contact_details'
       get 'users/current', to: 'users#current'
       get 'users/:user_id/school_name', to: 'users#get_school_name'
@@ -881,6 +911,8 @@ Dashboard::Application.routes.draw do
   post '/i18n/track_string_usage', action: :track_string_usage, controller: :i18n
 
   get '/javabuilder/access_token', to: 'javabuilder_sessions#get_access_token'
+  get '/javabuilder/access_token_with_override_sources', to: 'javabuilder_sessions#get_access_token_with_override_sources'
+  get '/javabuilder/access_token_with_override_validation', to: 'javabuilder_sessions#get_access_token_with_override_validation'
 
   resources :sprites, only: [:index], controller: 'sprite_management' do
     collection do
@@ -937,7 +969,8 @@ Dashboard::Application.routes.draw do
   # offline-service-worker*.js needs to be loaded the the root level of the
   # domain('studio.code.org/').
   # Matches on ".js" or ".map" in order to serve source-map files for the service worker javascript.
-  get '/:file', action: :offline_service_worker, controller: :offline, constraints: {file: /offline-service-worker.*\.(js|map)/}
+  get '/s/express-2021/lessons/1/:file', action: :offline_service_worker, controller: :offline, constraints: {file: /offline-service-worker.*\.(js|map)/}
   # Adds the experiment cookie in the User's browser which allows them to experience offline features
   get '/offline/join_pilot', action: :set_offline_cookie, controller: :offline
+  get '/offline-files.json', action: :offline_files, controller: :offline
 end

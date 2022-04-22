@@ -1472,7 +1472,7 @@
         },
         "2a0e6d6d-f8b2-4f88-86e2-1b4c8c2ee300": {
           "name": "Ejemplo 2: Uso de la visión de la Información para mejorar el modelo",
-          "description": "Añadir más datos de entrenamiento no sólo cambia los resultados, sino también los datos mostrados en la visión de la información. A veces, el gráfico de resultados que se muestra puede aclarar por qué los resultados no coinciden con las expectativas.\n\nConsideremos un estudiante que quiere entrenar a la Inteligencia Artificial para que reconozca a los peces \"enfadados\".\nQuiere conseguirlo seleccionando cualquier pez con cejas que apunten hacia dentro y bocas fruncidas. Etiquetarán a un pez como \"enfadado\" si tiene una combinación de estos rasgos:\n\n| \"Angry\" eyes: ![](https://curriculum.code.org/media/uploads/eyes11.png)![](https://curriculum.code.org/media/uploads/eyes17.png) \"Angry\" mouths: ![](https://curriculum.code.org/media/uploads/mouth11.png)![](https://curriculum.code.org/media/uploads/mouth9.png)![](https://curriculum.code.org/media/uploads/mouth12.png)![](https://curriculum.code.org/media/uploads/mouth6.png) |\n| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n\n¿Puede la Inteligencia Artificial averiguar lo que hace el alumno sin ser programada explícitamente? Depende de la cantidad de datos de entrenamiento que proporcione el alumno y de la calidad de los datos del conjunto. \n\n| \"Angry\" fish - training: 30                                                       | \"Angry\" fish - training: 200                                               |\n| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |\n| <img src=\"https://curriculum.code.org/media/uploads/30_foyL4uc.png\" width=\"4000\"> | <img src=\"https://curriculum.code.org/media/uploads/200.png\" width=\"4000\"> |\n\n| \\_Aquí, podemos ver que la Inteligencia Artificial captó enseguida que los \"ojos\" eran el rasgo más importante, pero seguido de cerca por el \"color\", no por la \"boca\". En la imagen de la izquierda hay algunos peces de color púrpura que tienen bocas diferentes a las que el alumno tenía como objetivo. ¿Quizás muchos de los peces \"enfadados\" que el alumno seleccionó inicialmente eran morados? Una forma de mejorar el modelo sería continuar el entrenamiento, asegurándose de seguir hasta que varios peces morados \"no enfadados\" hayan sido etiquetados correctamente."
+          "description": "Añadir más datos de entrenamiento no sólo cambia los resultados, sino también los datos mostrados en la visión de la información. A veces, el gráfico de resultados que se muestra puede aclarar por qué los resultados no coinciden con las expectativas.\n\nConsideremos un estudiante que quiere entrenar a la Inteligencia Artificial para que reconozca a los peces \"enfadados\".\nQuiere conseguirlo seleccionando cualquier pez con cejas que apunten hacia dentro y bocas fruncidas. Etiquetarán a un pez como \"enfadado\" si tiene una combinación de estos rasgos:\n\n| \"Angry\" eyes: ![](https://curriculum.code.org/media/uploads/eyes11.png)![](https://curriculum.code.org/media/uploads/eyes17.png) \"Angry\" mouths: ![](https://curriculum.code.org/media/uploads/mouth11.png)![](https://curriculum.code.org/media/uploads/mouth9.png)![](https://curriculum.code.org/media/uploads/mouth12.png)![](https://curriculum.code.org/media/uploads/mouth6.png) |\n| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n\n¿Puede la Inteligencia Artificial averiguar lo que hace el alumno sin ser programada explícitamente? Depende de la cantidad de datos de entrenamiento que proporcione el alumno y de la calidad de los datos del conjunto. \n\n| \"Angry\" fish - training: 30                                                       | \"Angry\" fish - training: 200                                               |\n| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |\n| <img src=\"https://curriculum.code.org/media/uploads/30_foyL4uc.png\" width=\"4000\"> | <img src=\"https://curriculum.code.org/media/uploads/200.png\" width=\"4000\"> |\n\n\\| \\_Aquí, podemos ver que la Inteligencia Artificial captó enseguida que los \"ojos\" eran el rasgo más importante, pero seguido de cerca por el \"color\", no por la \"boca\". En la imagen de la izquierda hay algunos peces de color púrpura que tienen bocas diferentes a las que el alumno tenía como objetivo. ¿Quizás muchos de los peces \"enfadados\" que el alumno seleccionó inicialmente eran morados? Una forma de mejorar el modelo sería continuar el entrenamiento, asegurándose de seguir hasta que varios peces morados \"no enfadados\" hayan sido etiquetados correctamente."
         },
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Calentamiento"
@@ -6046,7 +6046,7 @@
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
           "description": "#### Preparando el Escenario\n\nDa la bienvenida a los alumnos a la clase y presenta la actividad del día.",
           "tips": [
-            "Una forma de presentar la Hora del Código, si no estás muy familiarizado con la codificación, es mostrar uno de [nuestros vídeos inspiradores](https://hourofcode.com/promote/resources#videos). Elige el que creas que tus alumnos encontrarán más estimulante y compártelo ahora. Para los alumnos de los grados intermedios, sugerimos [La Hora del Código está Aquí](https://youtu.be/FC5FbmsH4fw)."
+            "Una forma de presentar la Hora del Código, si no estás muy familiarizado con la codificación, es mostrar uno de [nuestros vídeos inspiradores][0]. Elige el que creas que tus alumnos encontrarán más estimulante y compártelo ahora. Para los alumnos de los grados intermedios, sugerimos [La Hora del Código está Aquí][1]."
           ]
         },
         "d99fc09e-a586-41df-84b2-e552cc4735e3": {
@@ -6059,7 +6059,7 @@
           "description": "¿Sabías que la informática puede ser muy creativa? De hecho, se puede hacer arte con el código. Como recordatorio, el código es un conjunto de instrucciones que un ordenador puede entender. Al igual que la elección de los colores de la pintura, la elección del código que escribes puede ser una oportunidad para expresar tu creatividad. \n\nHoy vamos a utilizar la poesía para inspirar nuestra codificación creativa. ¿Alguien sabe qué es la poesía? ¿Tienes algún poema o poeta favorito? "
         },
         "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
-          "description": "**Leer poesía juntos:** Leer [algunos poemas](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) juntos en la clase, practicando el nombre del estado de ánimo de cada poema. Anima a los alumnos a compartir su interpretación, aunque sea diferente a la de los demás. "
+          "description": "**Leer poesía juntos:** Leer [algunos poemas][0] juntos en la clase, practicando el nombre del estado de ánimo de cada poema. Anima a los alumnos a compartir su interpretación, aunque sea diferente a la de los demás. "
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
           "name": "Arte del Poema",
@@ -12458,6 +12458,7 @@
           "description": "**Reglas para la Versión A:**\n\n-   El **Programa** lee cada línea de código en voz alta.\n-   Al principio de cada bucle de robo, cada **Entrada** roba una nueva carta del mazo. Esto representa el estado actual de esa entrada.\n-   Cada vez que el **Programa** llega a un comando de comprobación de entradas (`entradaUna()`, `entradaDos()`, o `entradaTres()`), el **Programa** pide ver esa carta de entrada.\n-   Si el valor de la carta mostrada coincide con la condicional asociada, el **Programa** realiza la(s) acción(es) dentro de la condicional.\n\nDespués de que los grupos hayan ejecutado el programa unas cuantas veces y parezcan entender cómo funciona, haz que cambien los papeles para que cada alumno tenga la oportunidad de ser el **Programa**.\n\n#### Versión B: Eventos de Entrada\n\nEsta vez, en lugar de pedir constantemente una entrada en un bucle, el **Programa** asignará a cada **Entrada** un Evento para que lo observe. En el contexto de esta actividad, un Evento es una carta roja o negra, pero en un programa ese Evento podría ser un clic en un botón, el movimiento del ratón, la pulsación de una tecla, o más. Este es un modelo simplificado de la forma en que se maneja la entrada en el Laboratorio de Aplicaciones.\n\n**Reglas para la Versión B:**\n\n-   Cada **Entrada** saca una carta del mazo a un ritmo de aproximadamente una por segundo.\n-   El **Programa** lee cada línea de código en voz alta.\n-   Cuando el **Programa** llega a un comando [\\`onEvent\\`(#fff176)](/docs/applab/onEvent/), le dicen a la **Entrada** especificada qué Evento debe esperar, y cuál debe ser la Respuesta.\n-   Cuando se le asigna un Evento, la **Entrada** anota los detalles en su hoja de _Eventos a Vigilar_.\n-   Cada vez que una **Entrada** roba una carta, comprueba si coincide con uno de los Eventos de su hoja. Si lo hace, le dicen al **Programa** que ejecute la Respuesta.\n\nHay algunas simplificaciones importantes que se hacen en este modelo para minimizar el número de roles y reglas:\n\n-   Este modelo implica que las Entradas están realmente pendientes de los Eventos por sí mismas. En realidad, un Manejador de Eventos que se ejecuta en segundo plano está pendiente del evento especificado.\n-   En este modelo la **Entrada** le dice al **Programa** qué acciones debe ejecutar. En realidad, cuando un Manejador de Eventos es activado, el Programa va a esa porción de su código y ejecuta todo en la función."
         },
         "1bc5d31f-53aa-4add-9e2e-2fa69287df4b": {
+          "name": "Informe de Actividades",
           "description": "**Debatir:** Volviendo a los comentarios recogidos en la actividad de calentamiento, ¿qué cosas están más claras después de haber realizado la actividad? ¿Tienes alguna pregunta nueva?"
         },
         "4c3af8fe-b972-410f-a839-00f38e6a51ce": {
@@ -12470,6 +12471,9 @@
         "5f73a5a3-c6bd-424f-b8a8-89fa0bc9ca56": {
           "name": "Inspección de la Placa: Entradas",
           "description": "**Distribuye:** Reparte una placa y un cable USB a cada pareja de estudiantes. Haz saber a los estudiantes que aún no deben conectar las placas.\n\n**Pregunta:** Pide a las parejas que dediquen un minuto a examinar la placa, centrándose en los posibles dispositivos de entrada. Basándose en lo que ya saben sobre esta tarjeta, ¿cómo creen que podrían utilizarla para obtener información?\n\n**Compartir:** Pida a los grupos que compartan sus ideas con todo el grupo, llevando un registro de las ideas en la pizarra. Insta a los alumnos a que apoyen sus ideas con pruebas de la revisión de la placa, pero no te preocupes por asegurar la exactitud en este momento."
+        },
+        "1d21d7f0-f853-4045-9db8-760e1c215afb": {
+          "name": "Obteniendo Entradas de la Placa"
         },
         "42897a7c-47b8-426e-9d2f-c9177a06433e": {
           "progression_name": "Eventos de la Placa"
@@ -12484,13 +12488,23 @@
           "progression_name": "Desafío Extra: Efectos de Sonido"
         },
         "7091d49a-c4ac-4c04-aaa4-290efb0ee705": {
+          "description": "**Diario 3-2-1:**\n\n1.  ¿Cuáles son los tres tipos de eventos de la placa que has visto hasta ahora?\n2.  Describe dos situaciones diferentes y cómo necesitarían dos eventos **diferentes**.\n3.  ¿Cuál es otro evento que aún no has aprendido, pero crees que podría existir?",
           "tips": [
-            null
+            "Los alumnos deben elegir razonablemente cuándo un evento de la placa puede ser mejor que otro.  Es posible que quieras mantener un breve debate en clase antes o después de este diario para destacar las ventajas y desventajas de cada tipo de evento. "
           ]
+        },
+        "56f18b73-0f80-45aa-9af2-5abb0b14fd5e": {
+          "description": "**Repaso:** Pide a los alumnos que piensen en los diferentes tipos de información que pudieron obtener de la placa en la última lección (por ejemplo, pulsaciones de botones, estado de las palancas, etc.)"
+        },
+        "66c35b89-8cbd-456e-bddb-9e88ed218309": {
+          "description": "Hasta ahora hemos visto muchas formas de obtener información de nuestro Circuit Playground.  Hoy vamos a ver más formas de obtener información de la pantalla de nuestra aplicación."
+        },
+        "7679f996-c745-45c4-b413-aac4eeb2a9ae": {
+          "description": "Envía a los alumnos a Code Studio."
         },
         "2224615d-c083-4694-b797-4b3c8e8d84da": {
           "tips": [
-            null
+            "**Nivel 5** \nPuedes utilizar este nivel como evaluación formativa para los alumnos. Pulsa dentro del nivel para ver una rúbrica y dejar comentarios a tus alumnos"
           ],
           "progression_name": "Obtener propiedades"
         },
@@ -12507,14 +12521,27 @@
           "progression_name": "Desafío Extra"
         },
         "d0e85c72-53c1-4429-91ab-3d160fc10b20": {
+          "description": "**Pregunta del Diario:** Hasta ahora, has visto varios tipos diferentes de entrada, algunos desde la pantalla y otros desde el Circuit Playground.  Elige un tipo de entrada y responde a las siguientes preguntas sobre ella.",
           "tips": [
-            null
+            "Para esta pregunta, puedes \"descifrar\" las respuestas asignando a diferentes estudiantes o a diferentes grupos un tipo de entrada y respondiendo a las preguntas sobre cada tipo.  Las diferentes respuestas se pueden combinar para obtener una referencia de clase sobre los tipos de entrada."
           ]
         },
+        "305135b2-565f-4d86-9597-9aacc1b1d990": {
+          "description": "1.  ¿Qué código necesitas para obtener información de esta entrada?\n2.  ¿Cuál es un ejemplo de cuándo **si** querrías usar esta entrada?\n3.  ¿Cuál es un ejemplo de cuándo **no** querrías usar esta entrada?"
+        },
         "f5a1e7d6-5715-4050-bfed-a5e0663486c4": {
+          "name": "Analógico y Digital",
+          "description": "**Piensa, Empareja, Comparte:** ¿Cómo cuantificarías cada uno de tus cinco sentidos (tacto, gusto, vista, olfato y oído)? Piensa en la unidad anterior y en las distintas formas que se te ocurrieron para codificar datos en un ordenador.",
           "tips": [
-            null
+            "El objetivo es que los alumnos piensen en cómo se puede convertir un valor natural (o analógico) en un formato computable. Anima a los alumnos a reflexionar sobre cuáles pueden ser los límites superior e inferior de cada valor (por ejemplo, ¿hay una cantidad mínima o máxima de sonido?)."
           ]
+        },
+        "9b2fa494-5d70-4f47-967f-f7ede451d439": {
+          "description": "**Vídeo:** ¡Hoy vamos a escribir programas que tienen \"sentidos\" propios! Mostrar [Diferencia entre señales Analógicas y Digitales - Video](https://www.youtube.com/watch?v=RQc_frX50BA)"
+        },
+        "65b2eb73-b2f8-4ee7-ba1d-0d7e78e7f62a": {
+          "name": "Entradas Analógicas",
+          "description": "\\*\\* Distribuye:\\*\\* Reparte los Adafruit Circuit Playgrounds.\n\n**Transición:** Envía a los estudiantes a Code Studio. Hazles saber que hoy experimentarán con unos sensores que detectan señales [v analog/csd/2021] y las convierten en valores [v digital/csd/2021] que pueden ser utilizados por el ordenador."
         },
         "7eb66b7f-6ed3-4590-ac67-725362a38253": {
           "progression_name": "Experimento con sensores"
@@ -12527,14 +12554,23 @@
         },
         "ef9ec42f-f86e-4636-a45b-5da0d208b714": {
           "tips": [
-            null
+            "**Nivel 11**\nPuedes utilizar este nivel como evaluación formativa para los alumnos. Haz clic dentro del nivel para ver una rúbrica y dejar comentarios a tus alumnos"
           ],
           "progression_name": "Sensores para Colores"
         },
         "1a668f58-e58e-4624-a911-fcfc3188df23": {
           "progression_name": "Desafío Extra"
         },
+        "563119d4-41c6-499b-a289-9a6911461c56": {
+          "name": "Sensores por todas partes",
+          "description": "**Diario:** Teniendo en cuenta todos los dispositivos informáticos con los que interactúas habitualmente, identifica todos los posibles sensores analógicos que puedas. ¿Dónde reciben tus dispositivos informáticos una señal que cambia continuamente y la convierten en datos digitales?"
+        },
+        "4016ab65-7533-4351-9967-71b07aeb18f1": {
+          "name": "Juego de Carreras de Emojis",
+          "description": "**Agrupación:** Coloca a los estudiantes en parejas\n\n**Demostración:** Mostrar a los alumnos la demo de la Carrera Emoji, disponible al principio de esta lección.\n\n**Transición:** Envía a los estudiantes a Internet para que prueben el juego por su cuenta. Cada pareja debe ejecutar el juego y seguir las instrucciones en las que se les pide que hagan una lista de los componentes de la placa, los eventos y las variables que consideren necesarios para crear este juego."
+        },
         "dd376cda-c9b9-4bf6-9cd4-be44b1ec632f": {
+          "description": "**Debatir:** Los estudiantes deben haber creado individualmente una lista de componentes de la placa, eventos y funciones que necesitarán para hacer el juego que han practicado. Pide a los alumnos que compartan sus listas con un compañero antes de discutirlas en clase.",
           "tips": [
             null,
             null
@@ -14724,7 +14760,7 @@
         },
         "579df0b6-aebc-48d8-9ac3-427a2c04e61f": {
           "tips": [
-            null
+            "**Depuración:**\nA medida que los estudiantes comienzan con la depuración, este es un gran momento para hacer hincapié en una cultura positiva en torno a la depuración. Esta es una habilidad central que los estudiantes desarrollarán a lo largo del curso. Se debe insistir en que la depuración es una parte normal del proceso de programación, y que todos los programadores, incluso los expertos, tienen errores. Se puede encontrar más información en la \"Guía de Depuración\" vinculada a la página del plan de estudios de Descubrimientos de Informática en <https://studio.code.org/courses/csd>."
           ],
           "progression_name": "Desafío"
         },
@@ -14749,7 +14785,7 @@
         "ec491dbb-ef99-4e6e-9abf-f1f90c22e838": {
           "name": "Programación de pares",
           "tips": [
-            null
+            "**Programación por Parejas:** La programación por parejas se practica en la educación y en la industria.  Los alumnos que programan en parejas tienen más confianza en sus capacidades y es más probable que sigan estudiando informática. Esta práctica es más eficaz si se introduce pronto y el profesor hace cumplir las reglas para cambiar de pareja.  Puedes leer más sobre la programación en parejas en la guía del plan de estudios vinculada a la página del plan de estudios de Descubrimientos de Informática en <https://studio.code.org/courses/csd>."
           ]
         },
         "8ae3516e-e6e2-4401-afc1-4ddfb1f1312b": {

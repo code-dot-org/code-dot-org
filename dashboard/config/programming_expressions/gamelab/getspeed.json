@@ -3,7 +3,7 @@
   "name": "sprite.getSpeed()",
   "category": "Sprites",
   "category_key": "sprites",
-  "content": "The sprite's scalar speed.\r\n\r\nThe velocity of the sprite, its speed and direction, can be set in many ways:\r\n\r\n- by using the \"counter pattern\" on `sprite.x` and `sprite.y` properties within the `draw()` function\r\n- by setting the `sprite.velocityX` and `sprite.velocityY` properties\r\n- by calling `sprite.setVelocity()` or `sprite.setSpeedAndDirection()`",
+  "content": "The sprite's scalar speed.\n\nThe velocity of the sprite, its speed and direction, can be set in many ways:\n\n- by using the \"counter pattern\" on [`sprite.x`(#f78183)](/docs/gamelab/x/) and [`sprite.y`(#f78183)](/docs/gamelab/y/) properties within the [`draw()`(#fff176)](/docs/gamelab/draw/) function\n- by setting the  [`sprite.velocityX`(#f78183)](/docs/gamelab/velocityX/) and  [`sprite.velocityY`(#f78183)](/docs/gamelab/velocityY/) properties\n- by calling [`sprite.setVelocity()`(#f78183)](/docs/gamelab/setVelocity/) or [`sprite.setSpeedAndDirection()`(#f78183)](/docs/gamelab/setSpeedAndDirection/)",
   "examples": [
     {
       "name": "Spiral",
@@ -17,5 +17,5 @@
   ],
   "return_value": "The speed of the sprite in pixels per frame..",
   "short_description": "The sprite's scalar speed.",
-  "syntax": "getSpeed"
+  "syntax": "sprite.getSpeed()"
 }

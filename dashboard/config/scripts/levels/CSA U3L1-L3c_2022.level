@@ -1,0 +1,28 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "A planetary scientist wants to create lists of the planets in the solar system and their distances from the sun.\r\n\r\n##In MyConsole.java:\r\n\r\n1. Declare and initialize a `String`(#e7e8ea) array called `planets`(#e7e8ea) using an initializer list that contains the following values:\r\n\r\n```\r\n\"Mercury\", \"Venus\", \"Earth\", \"Mars\", \"Jupiter\", \"Saturn\", \"Uranus\", \"Neptune\", \"Pluto\"\r\n```\r\n\r\n2. Declare and initialize a `double`(#e7e8ea) array called `distances`(#e7e8ea) using an initializer list that contains the following values:\r\n\r\n```\r\n57.9, 108.2, 149.6, 227.9, 778.6, 1433.5, 2872.5, 4495.1, 5906.4\r\n```\r\n\r\n3. Print the length of the `planets`(#e7e8ea) array.\r\n\r\n4. Print the length of the `distances`(#e7e8ea) array.\r\n\r\n***Curious about this dataset?*** *Learn more about it [**here**](https://devstronomy.com/#/datasets)!*\r\n\r\n::: details [**Show Me How**]\r\nA 1D array is declared and initialized with an initializer list using the following syntax:\r\n  \r\n  ```\r\n  dataType[] variableName = {value1, value2, . . . };\r\n  ```\r\n\r\nBe sure to replace `dataType`(#e7e8ea) with the type of data the array will store. The `variableName`(#e7e8ea) should be the name of the array. Inside the curly braces ( `{ }`(#e7e8ea) ), list the values the array will store.\r\n:::",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "display_name": "Planets",
+    "bubble_choice_description": "Create 1D arrays to store the names of the planets in the solar system and their distances from the sun.",
+    "thumbnail_url": "https://images.code.org/b06a3550dd772cb1fac0f50cccf54db4-image-1648485055182.png",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    // TO DO #1: Declare and initialize a String array.\n\n\n    // TO DO #2: Declare and initialize a double array.\n\n\n    // TO DO #3: Print the length of the planets array.\n\n\n    // TO DO #4: Print the length of the distances array.\n\n    \n  }\n}",
+        "isVisible": true
+      }
+    },
+    "encrypted_exemplar_sources": "HM0H7Z3L+CTAPTxDu6u7zslyjM60me7VHOAdpgMoPI5MqHaEjG7wFN529NnD\nSipS/CP1Jfit8mVyy6Dtf/k5qvC0SzRmhhoEs5MRMb62aBIglNmxFbok22we\nxz20xGsWxXbuJMIm2FodOgz1OKY/WBusZ2clk+3Az6SBLvuBeqmJCreM0WQM\nhr0jYGUd04UYv5iCBYhlOqFIeVLTMhgvCTh0sqXipdo/8rH5wdeAxFZd4Hhv\nFg30/3PEX9oCrB6qikFOG2zHwwTQOoOcn5KR2OqIj6jeODB64gPfEO4C2umk\naagdkbbHnPCiDzKA4R09X0uw2ta2MSGBFGfOUsyZPDq/IuWHgFPX7J374jMu\naQqh6Sni+hz1GCgES4AWxE8xHzbPVXSkP3QjDodLkt0DTwAIJBgxM2q92dYe\nJFPgAKxRdWJ26bhkifhBGxCUcyWKUtRDq9JkfGTwDZDUSQETykUHys4unyzT\nYRjZv0ACqGDdNwsTdIGuQKHeC2TKv/rJRrxbx35Z+BYENt+w2ghp5eu4F517\ntrI+c8ujKmbsi7cnRheUfNmjWmlLUwXt7H1voDEOa2GWJSx68k1OtcMZBK9D\n5I2S0deiIl3ylmy4YUh6nJSt+5vYJm+TeN18xKi73lZeYJ+He+idH71NbVO7\nALQTmR98vNMQIKARiTaDQJr/Ue+TvVzn2osXcWedWeoNQqjzFyEQnACV6fsR\n1YtA2gTiDimUFOZSXwgECWw8lm3U+QsZ7s0qIDxr2aCdmvx+PiIMr6FL+V/I\nfAWFLlEtyj8+1QzaAbjabixADRbcT8vsbD5FR8oRmjFNFSssV9+rgELX74oa\nG5OgEHDtIoTQvOqrmebxpfeLjDxSHcUw958bqGUBF0QEWoX/Cpg7Jbgrt6zt\ns/5oi2gOgW3cKV24HJ1UqBCixR3D0676eBs2oo7i6Vw9wJHMGBDEkKkUTmUm\n"
+  },
+  "game_id": 68,
+  "created_at": "2022-03-24T23:57:54.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-03-24 23:57:57 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 16:31:39 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 16:32:44 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 16:33:57 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-28 16:35:05 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

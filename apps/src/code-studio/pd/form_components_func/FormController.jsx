@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback, useMemo} from 'react';
 import $ from 'jquery';
 import {Button, Alert, FormGroup} from 'react-bootstrap';
 import {Pagination} from '@react-bootstrap/pagination';
@@ -83,9 +83,11 @@ const FormController = props => {
   } = props;
 
   // We use functions here as the initial value so that these values are only calculated once
-  const [currentPage, setCurrentPage] = useState(
-    () => getInitialStored(sessionStorageKey, 'currentPage') || 0
+  const initialPage = useMemo(
+    () => getInitialStored(sessionStorageKey, 'currentPage') || 0,
+    [sessionStorageKey]
   );
+  const [currentPage, setCurrentPage] = useState(initialPage);
   const [data, setData] = useState(() => ({
     ...getInitialStored(sessionStorageKey, 'data'),
     ...getInitialData()
@@ -118,8 +120,8 @@ const FormController = props => {
   // do this once on mount only
   useEffect(() => {
     onInitialize();
-    onSetPageInternal(currentPage);
-  }, []);
+    onSetPageInternal(initialPage);
+  }, [onInitialize, onSetPageInternal, initialPage]);
 
   useEffect(() => {
     if (
@@ -166,13 +168,18 @@ const FormController = props => {
     if (newErrors) {
       scrollToTop();
     }
-  }, [errors]);
+  }, [
+    errors.length,
+    previousErrors.length,
+    pageComponents.length,
+    pageHasError
+  ]);
 
   // on page changed
   useEffect(() => {
     scrollToTop();
     onSetPageInternal(currentPage);
-  }, [currentPage]);
+  }, [currentPage, onSetPageInternal]);
 
   /**
    * checks the data collected so far against the required fields and the fields
@@ -183,63 +190,68 @@ const FormController = props => {
    * @return {boolean} true if this page is valid, false if any required fields
    *         are missing
    */
-  const validatePageRequiredFields = pageIndex => {
-    if (pageIndex < 0 || pageIndex >= pageComponents.length) {
-      throw `Invalid page index ${pageIndex}`;
-    }
-
-    const page = pageComponents[pageIndex];
-    const pageFields = page.associatedFields;
-
-    // Trim string values on page, and set empty strings to null
-    let pageData = {};
-    pageFields.forEach(field => {
-      let value = data[field];
-      if (typeof value === 'string') {
-        const trimmedValue = value.trim();
-        pageData[field] = trimmedValue.length > 0 ? trimmedValue : null;
-      } else {
-        pageData[field] = value;
+  const validatePageRequiredFields = useCallback(
+    pageIndex => {
+      if (pageIndex < 0 || pageIndex >= pageComponents.length) {
+        throw `Invalid page index ${pageIndex}`;
       }
-    });
 
-    if (page.processPageData) {
-      pageData = Object.assign(pageData, page.processPageData(pageData));
-    }
-    setData({
-      ...data,
-      ...pageData
-    });
+      const page = pageComponents[pageIndex];
+      const pageFields = page.associatedFields;
 
-    const pageRequiredFields = pageFields.filter(f =>
-      getRequiredFields().includes(f)
-    );
-    const missingRequiredFields = pageRequiredFields.filter(f => !pageData[f]);
-    const formatErrors =
-      (page.getErrorMessages && page.getErrorMessages(pageData)) || {};
+      // Trim string values on page, and set empty strings to null
+      let pageData = {};
+      pageFields.forEach(field => {
+        let value = data[field];
+        if (typeof value === 'string') {
+          const trimmedValue = value.trim();
+          pageData[field] = trimmedValue.length > 0 ? trimmedValue : null;
+        } else {
+          pageData[field] = value;
+        }
+      });
 
-    if (missingRequiredFields.length || Object.keys(formatErrors).length) {
-      setErrors([...missingRequiredFields, ...Object.keys(formatErrors)]);
-      setErrorMessages(formatErrors);
-      setErrorHeader(
-        'Please fill out all required fields. You must completely fill out this section before moving \
-      on to the next section or going back to edit a previous section.'
+      if (page.processPageData) {
+        pageData = Object.assign(pageData, page.processPageData(pageData));
+      }
+      setData({
+        ...data,
+        ...pageData
+      });
+
+      const pageRequiredFields = pageFields.filter(f =>
+        getRequiredFields().includes(f)
       );
+      const missingRequiredFields = pageRequiredFields.filter(
+        f => !pageData[f]
+      );
+      const formatErrors =
+        (page.getErrorMessages && page.getErrorMessages(pageData)) || {};
 
-      return false;
-    }
+      if (missingRequiredFields.length || Object.keys(formatErrors).length) {
+        setErrors([...missingRequiredFields, ...Object.keys(formatErrors)]);
+        setErrorMessages(formatErrors);
+        setErrorHeader(
+          'Please fill out all required fields. You must completely fill out this section before moving \
+      on to the next section or going back to edit a previous section.'
+        );
 
-    return true;
-  };
+        return false;
+      }
+
+      return true;
+    },
+    [pageComponents, data, getRequiredFields]
+  );
 
   /**
    * validate the current page
    */
-  const validateCurrentPageRequiredFields = () => {
+  const validateCurrentPageRequiredFields = useCallback(() => {
     return validatePageRequiredFields(currentPage);
-  };
+  }, [currentPage, validatePageRequiredFields]);
 
-  const validateForm = () => {
+  const validateForm = useCallback(() => {
     let invalidPages = [];
 
     // Validating page in reversed order because the last page being validated will overwrite
@@ -251,9 +263,9 @@ const FormController = props => {
     }
 
     return invalidPages;
-  };
+  }, [pageComponents, validatePageRequiredFields]);
 
-  const onSetPageInternal = () => {
+  const onSetPageInternal = useCallback(() => {
     if (validateOnSubmitOnly && triedToSubmit) {
       // If errors exist, create a summary header containing
       // clickable links to pages that have errors.
@@ -270,7 +282,7 @@ const FormController = props => {
       }
     }
     onSetPage();
-  };
+  }, [validateOnSubmitOnly, triedToSubmit, setPage, onSetPage, validateForm]);
 
   const getCurrentPageComponent = () => {
     return pageComponents[currentPage];
@@ -280,18 +292,21 @@ const FormController = props => {
    * Save currentPage and form data to the session storage, if a sessionStorageKey is specified
    * @param {Object} newState - data and/or currentPage to override the value in state
    */
-  const saveToSessionStorage = newState => {
-    if (sessionStorageKey) {
-      const mergedData = {
-        ...{
-          currentPage: currentPage,
-          data: data
-        },
-        ...newState
-      };
-      sessionStorage.setItem(sessionStorageKey, JSON.stringify(mergedData));
-    }
-  };
+  const saveToSessionStorage = useCallback(
+    newState => {
+      if (sessionStorageKey) {
+        const mergedData = {
+          ...{
+            currentPage: currentPage,
+            data: data
+          },
+          ...newState
+        };
+        sessionStorage.setItem(sessionStorageKey, JSON.stringify(mergedData));
+      }
+    },
+    [sessionStorageKey, currentPage, data]
+  );
 
   /**
    * Expects an object whose keys are the names of form inputs and whose values
@@ -300,18 +315,25 @@ const FormController = props => {
    *
    * @param {Object} newState
    */
-  const handleChange = newState => {
-    // clear any errors for newly changed fields
-    const newFields = Object.keys(newState);
-    const updatedErrors = errors.filter(error => !newFields.includes(error));
+  const handleChange = useCallback(
+    newState => {
+      // clear any errors for newly changed fields
+      const newFields = Object.keys(newState);
+      const updatedErrors = errors.filter(error => !newFields.includes(error));
 
-    // update state with new data
-    const updatedData = {...data, ...newState};
-    setData(updatedData);
-    setErrors(updatedErrors);
+      // update state with new data
+      const updatedData = {...data, ...newState};
+      if (!isEqual(data, updatedData)) {
+        setData(updatedData);
+        saveToSessionStorage({data: updatedData});
+      }
 
-    saveToSessionStorage({data: updatedData});
-  };
+      if (!isEqual(errors, updatedErrors)) {
+        setErrors(updatedErrors);
+      }
+    },
+    [errors, data, saveToSessionStorage]
+  );
 
   /**
    * Assemble all data to be submitted
@@ -333,6 +355,12 @@ const FormController = props => {
     if (data?.responseJSON?.errors?.form_data) {
       setErrors(data.responseJSON.errors.form_data);
       setErrorHeader(i18n.formErrorsBelow());
+    } else if (data?.status === 409) {
+      // trying to create an application that has already been created
+      setGlobalError(true);
+      setErrorHeader(
+        'We found an application that you already started. Reload the page to continue.'
+      );
     } else {
       // Otherwise, something unknown went wrong on the server
       setGlobalError(true);
@@ -430,24 +458,27 @@ const FormController = props => {
    *
    * @returns {boolean}
    */
-  const pageHasError = (page = currentPage) => {
-    const pageFields = pageComponents[page].associatedFields;
-    if (!pageFields) {
-      throw new TypeError(`
+  const pageHasError = useCallback(
+    (page = currentPage) => {
+      const pageFields = pageComponents[page].associatedFields;
+      if (!pageFields) {
+        throw new TypeError(`
         Every PageComponent of a FormController must define an array
         PageComponent.associatedFields for error handling
       `);
-    }
+      }
 
-    // When using VariableFormGroups that allow for nesting questions, the
-    // errors returned from the server can include state-specific data like
-    // "howInteresting[facilitator_name]". This is great for being able to flag
-    // the specific question on the page, but for purposes of determining which
-    // page a given error is on we really only care about the "howInteresting"
-    // key, not the "facilitator_name" data.
-    const flattenedErrors = errors.map(e => e.replace(/\[[^\]]*\]/, ''));
-    return pageFields.some(field => flattenedErrors.includes(field));
-  };
+      // When using VariableFormGroups that allow for nesting questions, the
+      // errors returned from the server can include state-specific data like
+      // "howInteresting[facilitator_name]". This is great for being able to flag
+      // the specific question on the page, but for purposes of determining which
+      // page a given error is on we really only care about the "howInteresting"
+      // key, not the "facilitator_name" data.
+      const flattenedErrors = errors.map(e => e.replace(/\[[^\]]*\]/, ''));
+      return pageFields.some(field => flattenedErrors.includes(field));
+    },
+    [pageComponents, errors, currentPage]
+  );
 
   /**
    * @returns {Element|undefined}
@@ -467,7 +498,7 @@ const FormController = props => {
   /**
    * @returns {Object}
    */
-  const getPageProps = () => {
+  const getPageProps = useCallback(() => {
     return {
       ...getAdditionalPageProps(),
       key: currentPage,
@@ -477,14 +508,22 @@ const FormController = props => {
       errorMessages: errorMessages,
       data: data
     };
-  };
+  }, [
+    currentPage,
+    options,
+    errors,
+    errorMessages,
+    data,
+    getAdditionalPageProps,
+    handleChange
+  ]);
 
   /**
    * Getter method for required field validation, so that inheriting classes can
    * support conditionally-required fields
    * @returns {String[]}
    */
-  const getRequiredFields = () => {
+  const getRequiredFields = useCallback(() => {
     const propsRequiredFields = [...requiredFields];
     const pageRequiredFields = pageComponents.map(
       page =>
@@ -496,7 +535,7 @@ const FormController = props => {
       (flattened, subArray) => flattened.concat(subArray),
       propsRequiredFields
     );
-  };
+  }, [requiredFields, pageComponents, data, getPageProps]);
 
   /**
    * @returns {Element}
@@ -509,17 +548,27 @@ const FormController = props => {
   /**
    * switch to the specified page in sequence, if it exists
    */
-  const setPage = i => {
-    const newPage = Math.min(Math.max(i, 0), pageComponents.length - 1);
+  const setPage = useCallback(
+    i => {
+      const newPage = Math.min(Math.max(i, 0), pageComponents.length - 1);
+      setShowDataWasLoadedMessage(false);
+      setShowSavedMessage(false);
 
-    const currentPageValid =
-      validateOnSubmitOnly || validateCurrentPageRequiredFields();
-    if (currentPageValid) {
-      setCurrentPage(newPage);
+      const currentPageValid =
+        validateOnSubmitOnly || validateCurrentPageRequiredFields();
+      if (currentPageValid) {
+        setCurrentPage(newPage);
 
-      saveToSessionStorage({currentPage: newPage});
-    }
-  };
+        saveToSessionStorage({currentPage: newPage});
+      }
+    },
+    [
+      pageComponents,
+      validateOnSubmitOnly,
+      saveToSessionStorage,
+      validateCurrentPageRequiredFields
+    ]
+  );
 
   /**
    * @returns {boolean}
@@ -539,7 +588,7 @@ const FormController = props => {
       >
         <p>
           {savedStatus === 'reopened'
-            ? 'Your Regional Partner has requested more information.  Please update and resubmit.'
+            ? 'Your Regional Partner has requested more information. Please update and resubmit.'
             : 'We found an application you started! Your saved responses have been loaded.'}
         </p>
       </Alert>
@@ -646,7 +695,7 @@ const FormController = props => {
 const styles = {
   pageButtons: {
     verticalAlign: 'middle',
-    margin: '0 10px'
+    margin: '0px 10px 5px'
   },
   saveButton: {
     marginLeft: '10px',

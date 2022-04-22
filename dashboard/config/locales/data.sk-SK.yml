@@ -13,7 +13,7 @@ sk:
         Artist2: Umelec 2
         Unplug5: Funkcie
         Farmer: Farmárka
-        Unplug6: Podmienky
+        Unplug6: Podmienené príkazy
         Artist3: Umelec 3
         Unplug7: Napísanie piesne
         Farmer2: Farmárka 2
@@ -505,7 +505,7 @@ sk:
         Unplug3: Programovanie na štvorčekový papier
         Unplug4: Algoritmy
         Unplug5: Funkcie
-        Unplug6: Podmienky
+        Unplug6: Podmienené príkazy
         Unplug7: Písanie pesničiek
         Unplug8: Abstrakcia
         Unplug9: Štafetové programovanie
@@ -517,7 +517,7 @@ sk:
         C1_getting_loopy: Cykly sa zacykľujú
         C1_pair_programming: Programovanie v páre
         C1_maze_intro_sequencing: Úvod do bludiska
-        C1_maze_debugging: 'Bludisko: Hľadanie a odstraňovanie chýb'
+        C1_maze_debugging: 'Bludisko: ladenie'
         C1_bee_level_intro: Úlohy s včelami - Úvod
         C1_artist_intro: Umelec - Úvod
         C1_spelling_bee_intro: Úvod do hláskovania
@@ -534,11 +534,11 @@ sk:
         C2_artist_loops: Umelec - Cykly
         C2_artist_debugging: 'Umelec: Hľadanie a odstraňovanie chýb'
         C2_bee_loops: 'Včela: Cykly'
-        C2_bee_debugging: 'Včela: Hľadanie a odstraňovanie chýb'
+        C2_bee_debugging: 'Včela: ladenie'
         C2_bee_conditionals: Podmienky s včelou
         C2_playlab_createstory: Play Lab - Vytvor príbeh
         C2_graph_paper: Programovanie na štvorčekový papier
-        C2_conditionals_with_cards: Podmienky
+        C2_conditionals_with_cards: Podmienené príkazy
         C2_binary_bracelets: Binárne náramky
         C2_relay_programming: Štafetové programovanie
         C2_paper_airplanes: Papierové lietadielká
@@ -553,7 +553,7 @@ sk:
         C3_artist_nested_loops: Vnorené cykly
         C3_farmer_while: Cykly "pokiaľ"
         C3_bee_nested_loops: Vnorené cykly
-        C3_bee_debugging: 'Včela: Hľadanie a odstraňovanie chýb'
+        C3_bee_debugging: 'Včela: ladenie'
         C3_bounce: Bounce
         C3_playlab_create_game: Play Lab - Vytvor hru
         C3_computational_thinking: Algoritmické myslenie
@@ -574,7 +574,7 @@ sk:
         C4_function_edit: Úprava funkcií
         C4_function_create: Tvorba funkcií
         C4_function_parameters: Funkcie s parametrami
-        C4_conditionals: Podmienky
+        C4_conditionals: Podmienené príkazy
         C4_unplugged_algorithms: Algoritmy s tangrammi
         C4_unplugged_madlibs: Slovné halušky
         C4_unplugged_variables: Premenné v obálkach
@@ -587,8 +587,8 @@ sk:
         CSF_collector_repeat_loops: Použitie bloku "Opakuj"
         CSF_collector_text_blocks: 'Základy informatiky: Zberateľka'
         CSF_create_functions: Vytváranie funkcií
-        CSF_debugging_k1_blocks: Hľadanie a odstraňovanie chýb
-        CSF_debugging_text_blocks: Hľadanie a odstraňovanie chýb
+        CSF_debugging_k1_blocks: Ladenie
+        CSF_debugging_text_blocks: Ladenie
         CSF_EF_cs_matters: Na informatike záleží
         CSF_maze_intro_k1_blocks: Úvod do Code štúdia
         CSF_maze_intro_text_blocks: Úvod do Code štúdia
@@ -676,20 +676,20 @@ sk:
         mc_2017_puzzle_3: Minecraft Hodina Kódu - Cykly (príkaz "Opakuj")
         mc_2017_puzzle_8: Minecraft Hodina Kódu - Funkcie
         mc_2017_puzzle_12: Minecraft Hodina Kódu - Voľná hra
-        hint_videos_d_11_3_first: 'Videonápoveda: D.11.3 Prvé'
-        hint_videos_d_11_3_last: 'Videonápoveda: D.11.3 Posledné'
-        hint_videos_d_11_4_first: 'Videonápoveda: D.11.4 Prvé'
-        hint_videos_d_11_4_last: 'Videonápoveda: D.11.4 Posledné'
-        hint_videos_d_11_5_first: 'Videonápoveda: D.11.5 Prvé'
-        hint_videos_d_11_5_last: 'Videonápoveda: D.11.5 Posledné'
-        hint_videos_d_11_6_first: 'Videonápoveda: D.11.6 Prvé'
-        hint_videos_d_11_6_last: 'Videonápoveda: D.11.6 Posledné'
-        hint_videos_d_11_7_first: 'Videonápoveda: D.11.7 Prvé'
-        hint_videos_d_11_7_last: 'Videonápoveda: D.11.7 Posledné'
-        hint_videos_d_11_9_first: 'Videonápoveda: D.11.9 Prvé'
-        hint_videos_d_11_9_last: 'Videonápoveda: D.11.9 Posledné'
-        hint_videos_d_11_11_first: 'Videonápoveda: D.11.11 Prvé'
-        hint_videos_d_11_11_last: 'Videonápoveda: D.11.11 Posledné'
+        hint_videos_d_11_3_first: 'Videopomôcka: D.11.3 Prvé'
+        hint_videos_d_11_3_last: 'Videopomôcka: D.11.3 Posledné'
+        hint_videos_d_11_4_first: 'Videopomôcka: D.11.4 Prvé'
+        hint_videos_d_11_4_last: 'Videopomôcka: D.11.4 Posledné'
+        hint_videos_d_11_5_first: 'Videopomôcka: D.11.5 Prvé'
+        hint_videos_d_11_5_last: 'Videopomôcka: D.11.5 Posledné'
+        hint_videos_d_11_6_first: 'Videopomôcka: D.11.6 Prvé'
+        hint_videos_d_11_6_last: 'Videopomôcka: D.11.6 Posledné'
+        hint_videos_d_11_7_first: 'Videopomôcka: D.11.7 Prvé'
+        hint_videos_d_11_7_last: 'Videopomôcka: D.11.7 Posledné'
+        hint_videos_d_11_9_first: 'Videopomôcka: D.11.9 Prvé'
+        hint_videos_d_11_9_last: 'Videopomôcka: D.11.9 Posledné'
+        hint_videos_d_11_11_first: 'Videopomôcka: D.11.11 Prvé'
+        hint_videos_d_11_11_last: 'Videopomôcka: D.11.11 Posledné'
         applab_intro_welcome: App Lab - Začíname
         applab_intro_events: App Lab - Spravme to interaktívne
         applab_intro_sounds: App Lab - Obrázky a zvuky
@@ -751,7 +751,7 @@ sk:
         CSF_SpriteLab_Intro_v2: Predstavenie Sprite Labu
         CSF_Spritelab_MakeSprite_v2: Ako vytvoriť postavu
         CSF_SpriteLab_SpritesInAction_v2: Postavy v akcii
-        csd_debugging: Hľadanie a odstraňovanie chýb
+        csd_debugging: Ladenie
         csd_applab_designmode_short: App Lab  - Dizajnový mód
         csp-pd-welcome: Vitaj v rodine!
         CSF-Teaching-Problem-Solving: CSF riešenie problémov pri učení
@@ -831,14 +831,14 @@ sk:
         poetry_module_textandvariables: Text a premenné - programovanie s poéziou
         poetry_module_planningapp: Plánovanie aplikácie generátora básní – programovanie
           s poéziou
-        poetry_module_multichoiceprompts: Nápovedy s viacerými možnosťami - programovanie
+        poetry_module_multichoiceprompts: Výzvy s viacerými možnosťami – programovanie
           s poéziou
         poetry_module_conditionals: Podmienené - programovanie s poéziou
         poemart_intro: Úvod do umenia básne
     callout:
       text:
         drag_blocks: Chyť blok "posuň sa" a pripoj ho pod už použitý blok
-        run: Vyskúšaj svoj program stlačením "Spustiť"
+        run: Vyskúšaj svoj program tlačidlom Spustiť
         watch_again: Pre opätovné prezretie videa klikni sem
         gray_block_explanation: Sivé bloky sa nedajú vymazať. Vieš napriek tomu vyriešiť
           túto úlohu?
@@ -851,20 +851,20 @@ sk:
         studio_say_text: Medzi tieto úvodzovky zadaj text, ktorý má tvoja postava
           povedať
         jigsaw_click: Klikni na tento blok!
-        move_elsa_forward: Presuň blok "Posuň sa dopredu" a pripoj ho pod blok "Po
-          spustení", aby sa Elsa pohla dopredu
-        turn_elsa: Použite blok "Otočiť" pre otočenie Elsy. Číslo vo vyberacom poli
-          určí, koľkokrát sa Elsa otočí
-        replace_questions: Použite rozbaľovacie pole pre nahradenie "???" číslom
+        move_elsa_forward: Vyber blok „posuň sa dopredu“ a pripoj ho pod blok „po
+          spustení“, aby sa Elsa pohla dopredu
+        turn_elsa: Otoč Elsu pomocou bloku „otoč sa“. Číslo v rozbaľovacej ponuke
+          určuje, koľkokrát sa Elsa otočí
+        replace_questions: Otvor rozbaľovaciu ponuku a nahraď „???“ číslom
         replace_questions_degree: Použite rozbaľovacie pole pre nahradenie "???" správnym
           uhlom otočenia
         repeat_blocks: Použi blok "Opakuj" a vlož do neho bloky z pracovnej plochy
-        repeat_blocks_1: "(1) Použite tento blok a pridajte ho okolo šedých blokov
+        repeat_blocks_1: "(1) Použi tento blok a vlož doň sivé bloky, ktoré už sú
           na pracovnej ploche"
-        repeat_blocks_2: (2) Presuň sem blok "Opakuj" a šedé bloky umiestni do jeho
-          vnútra
-        snowflake_dropdown: Použite toto rozbaľovacie menu pre vytvorenie rôznych
-          snehových vločiek!
+        repeat_blocks_2: "(2) Presuň sem blok „opakuj“ a sivé bloky umiestni do jeho
+          vnútra"
+        snowflake_dropdown: Použi túto rozbaľovaciu ponuku na vytvorenie rôznych snehových
+          vločiek!
         degrees_per_side: Vydeľte 360 počtom strán pre získanie každého uhla v stupňoch.
         set_sides: Použite tento blok pre nastavenie počtu "strán" potrebných pre
           dokončenie tejto úlohy.
@@ -873,8 +873,8 @@ sk:
         get_nectar: Použi nový blok "Získaj nektár".
         actions_category: Panel s nástrojmi má nový vzhľad! Bloky s "akciami" sú odteraz
           tu.
-        draw_square_hint: 'Nápoveda: Použi opakovací cyklus na vytvorenie štvorca
-          z predošlej úlohy.'
+        draw_square_hint: 'Pomôcka: Použi opakovací cyklus na vytvorenie štvorca z
+          predošlej úlohy.'
         edit_function: Klikni sem pre úpravu tvojej funkcie.
         create_function: Klikni sem, aby si otvoril panel "Funkcie" a potom klikni
           na tlačidlo "Vytvoriť funkciu".
@@ -887,12 +887,12 @@ sk:
         logic_category: Otvorte panel "Logické" pre bloky "If/Else".
         length_parameter: Viete aktualizovať túto funkciu, aby sa v nej použil parameter
           "dĺžka"?
-        frozen_diamond_repeat: Pre vytvorenie tohto tvaru použi blok "Opakuj".
+        frozen_diamond_repeat: Na vytvorenie tohto tvaru použi blok „opakuj“.
         frozen_circle_function_in_circle_turn: Nezabudni sa po vytvorení každej kružnice
           otočiť.
-        frozen_circle_function_with_parameter_circle: Použi blok "Vytvor kružnicu"
+        frozen_circle_function_with_parameter_circle: Použi blok „vytvor kružnicu“
           a zmeň veľkost.
-        frozen_snowflake_branch: Použi blok "Vytvor rameno vločky"
+        frozen_snowflake_branch: Použi blok „vytvor rameno vločky“
         frozen_create_square: Pripoj viac blokov, aby si vytvoril štvorec
         playlab_drag_say: Presuň sem blok "povedz" a napíš "ahoj"
         playlab_use_twice: Použi tento blok dvakrát a nezabudni zmeniť číslo postavy
@@ -939,10 +939,11 @@ sk:
         craft_run_button_callout: Vyskúšaj svoj program stlačením "Spustiť"
         craft_drag_block_callout: Potiahni blok "moveForward()" a pripoj ho pod iný
           blok
-        craft_callout_preplaced: Umiestnili sme sem nejaké bloky aby si mohol začať
-        craft_inside_repeat: Opakuj akcie umiestnením blokov tu
-        craft_callout_preplaced_house: Tento kód začne stavať tvoj dom. Dokážeš to
+        craft_callout_preplaced: Umiestnili sme sem nejaké bloky, aby sme ti pomohli
+          začať
+        craft_inside_repeat: Opakuj akcie tým, že umiestniš bloky sem
+        craft_callout_preplaced_house: Tento kód začne stavať tvoj dom. Dokážeš ho
           dokončiť?
         craft_what_is_iron: Vyťaž toto železo!
-        craft_callout_moveforward: Tento kód bude kontrolovať lávu, môžeš zadať príkaz
-          pre pohyb dopredu?
+        craft_callout_moveforward: Tento kód bude kontrolovať lávu, môžeš pridať príkaz
+          na posunutie dopredu?

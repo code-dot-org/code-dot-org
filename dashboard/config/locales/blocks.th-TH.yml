@@ -2,6 +2,8 @@
 th:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: ทำใหม่ {ANIMATION_NAME} สไปรท์ {LOCATION}
       Dancelab_alternateMoves:
         text: |-
           {GROUP} สลับทุกๆ {N} ห้องดนตรีร
@@ -554,7 +556,6 @@ th:
             '"fireworks"': พลุ
             '"flowers"': ดอกไม้
             '"growing_stars"': ดาวเปล่งแสง
-            '"higher_power"': พลังงานที่สูงขึ้น
             '"swirl"': ฮิปโน
             '"kaleidoscope"': ภาพลานตา
             '"lasers"': ฟลอร์เต้นรำเลเซอร์
@@ -1046,6 +1047,12 @@ th:
         text: ลากเส้น {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: "[SPRITE]บล็อกขอบ[0] จากการย้าย"
+      gamelab_everySeconds:
+        text: 'ทุกๆ {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': วินาที
+            '"frames"': กรอบ
       gamelab_followingTargets:
         text: ติดตามเป้าหมาย
       gamelab_getAllSprites:
@@ -1199,6 +1206,8 @@ th:
             '"pop"': กระโดด
             '"rain"': มีฝน
             '"spiral"': วงก้นหอย
+      gamelab_makeNewScaledSprite:
+        text: ทำใหม่ {ANIMATION_NAME} สไปรท์ {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: ทำใหม่ {ANIMATION_NAME} สไปรท์ {LOCATION}
       gamelab_makeNumSprites:

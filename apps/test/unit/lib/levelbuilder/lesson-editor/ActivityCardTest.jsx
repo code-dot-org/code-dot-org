@@ -47,7 +47,8 @@ describe('ActivityCard', () => {
       activitySectionMetrics: [],
       handleCollapse,
       collapsed: false,
-      hasLessonPlan: true
+      hasLessonPlan: true,
+      allowMajorCurriculumChanges: true
     };
   });
 
@@ -58,6 +59,20 @@ describe('ActivityCard', () => {
     expect(wrapper.find('OrderControls').length).to.equal(1);
     expect(wrapper.find('Connect(ActivitySectionCard)').length).to.equal(3);
     expect(wrapper.find('button').length).to.equal(1);
+  });
+
+  it('hides OrderControls when not allowed to make major curriculum changes', () => {
+    const wrapper = shallow(
+      <ActivityCard {...defaultProps} allowMajorCurriculumChanges={false} />
+    );
+    expect(wrapper.find('OrderControls').length).to.equal(0);
+  });
+
+  it('shows OrderControls when allowed to make major curriculum changes', () => {
+    const wrapper = shallow(
+      <ActivityCard {...defaultProps} allowMajorCurriculumChanges={true} />
+    );
+    expect(wrapper.find('OrderControls').length).to.equal(1);
   });
 
   it('renders correct fields for lesson without lesson plan', () => {

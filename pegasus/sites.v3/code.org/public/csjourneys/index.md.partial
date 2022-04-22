@@ -35,11 +35,11 @@ social:
 <div class="col-50" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="csadventures" href="/csjourneys/csadventures#trips" target="_blank">
-        <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/nasa-trip.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="NASA Chandra X-Ray Observatory">
+        <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/mbari-trip.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Monterey Bay Aquarium Trip">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Virtual field trips</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Sign your classroom up for virtual field trips with NASA, Amazon and Monterey Bay Aquarium! Students get a firsthand look at different ways that CS and tech are used in the real world.</div>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Sign your classroom up for virtual field trips with iRobot, Amazon, Monterey Bay Aquarium, and more! Students get a firsthand look at different ways that CS and tech are used in the real world.</div>
         <a class="linktag" id="csadventures" href="/csjourneys/csadventures#trips" target="_blank"><button>Learn more</button></a>
   </div>
 </div>
@@ -52,9 +52,9 @@ social:
         </a>
     <div class="tutorial-info" style="border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
         <h3 class="tutorial-info-h" style="color: #dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Career chats with professionals</strong></h3>
-        <div class="smalltext" style="color: #dimgray; text-align: left; margin-bottom: 10px">Join us for live weekly chats with a diverse group of computing professionals from Spotify, Oculus, MeowWolf, Snapchat, and more!</div>
+        <div class="smalltext" style="color: #dimgray; text-align: left; margin-bottom: 10px">Join us for chats with a diverse group of computing professionals from Spotify, Oculus (Meta), Meow Wolf, Snapchat, and more!</div>
         <br>
-        <a class="linktag" id="myjourneychats" href="/csjourneys/csadventures#chats" target="_blank"><button>Learn more</button></a>
+        <a class="linktag" id="myjourneychats" href="/csjourneys/pastchats" target="_blank"><button>Learn more</button></a>
   </div>
 </div>
 </div>

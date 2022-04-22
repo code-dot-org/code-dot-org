@@ -3,7 +3,6 @@
 # and those that do not (code_review_project_owner_and_teacher_scenarios.feature)
 
 @no_mobile
-@no_ie
 Feature: Code review (project owner/teacher scenarios)
 
   # At the end of the setup, we will have created
@@ -13,12 +12,16 @@ Feature: Code review (project owner/teacher scenarios)
   Background:
     # Create a section
     Given I create a levelbuilder named "Dumbledore"
-    And I create a new section assigned to "ui-test-csa-family-script"
+    And I create a new student section assigned to "ui-test-csa-family-script"
     And I sign in as "Dumbledore" and go home
     And I save the section url
     And I save the section id from row 0 of the section table
     Given I create a student named "Hermione"
     And I join the section
+    # Observed flakiness trying to navigate to teacher dashboard while still signed in as Hermione.
+    # Explicitly wait for sign out to occur to avoid this.
+    And I wait to see ".alert-success"
+    And I sign out using jquery
     # Create a code review group with students in it.
     # Save the group, and enable code review for the section.
     Given I sign in as "Dumbledore" and go home

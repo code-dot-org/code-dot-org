@@ -655,6 +655,8 @@ sl:
               display_name: Pregled
             content:
               display_name: Vsebina
+        basketball:
+          name: žoga za košarko
         csd2-2017:
           lessons:
             Lists:
@@ -2605,3 +2607,27 @@ sl:
           lesson_groups:
             lessonGroup-2:
               display_name: Vsebina
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Spremenljivke
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Zanke
+              key: Zanke
+            Events:
+              name: Dogodki
+              key: Dogodki
+            Conditionals:
+              name: Pogoji
+              key: Pogoji
+            Functions:
+              name: Funkcije
+              key: Funkcije
+            Variables:
+              name: Spremenljivke
+              key: Spremenljivke

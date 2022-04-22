@@ -49,7 +49,8 @@
         },
         "Choose Your Own Adventure": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
-          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet"
+          "30fcc1693fa8402931d13ac3a5f396fd": "ide írd a címet",
+          "710ba29e2eed73bc74a520631d0ab520": "Játék Vége"
         },
         "Course 4 Playlab For Loop Freeplay": {
           "0ab65920c84bec05a22e09feea7fe4ea": "ide írd a szöveget",
@@ -259,6 +260,23 @@
         },
         "New Sprite Lab Project": {
           "6cd3556deb0da54bca060b4c39479839": "Helló, világ!"
+        },
+        "Course 4 Play Lab Vars 1": {
+          "c469f9393f38213de6fcffa9fe48008d": " -pont- "
+        },
+        "Course 4 Play Lab Vars 2": {
+          "c469f9393f38213de6fcffa9fe48008d": " -pont- "
+        },
+        "Course 4 Play Lab Vars 6": {
+          "f2906a454b9ee96245db295d124807f9": "Nyomj egy jobbra nyilat a pite eldobásához!",
+          "38ef4db866aae5cb50ce847a505b95d1": "Kajacsata!"
+        },
+        "Course 4 Play Lab Vars 7": {
+          "f2906a454b9ee96245db295d124807f9": "Nyomj egy jobbra nyilat a pite eldobásához!",
+          "38ef4db866aae5cb50ce847a505b95d1": "Kajacsata!"
+        },
+        "Course 4 Playlab For Loops 6b": {
+          "710ba29e2eed73bc74a520631d0ab520": "Játék Vége"
         }
       }
     }

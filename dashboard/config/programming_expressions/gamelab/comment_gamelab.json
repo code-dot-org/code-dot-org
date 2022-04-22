@@ -1,9 +1,9 @@
 {
   "key": "comment_GameLab",
   "name": "comment",
-  "category": "World",
+  "category": "Game Lab",
   "category_key": "game_lab",
-  "content": "Writes a description of some code.\r\n\r\n// Comments are used document your code so it is easier for humans to understand. You should include a comment at the start of each function to explain what the function does, if it takes any arguments, and if it returns any values. It is also a good idea to comment any complex blocks of code so you, or another programmer, can more easily maintain or modify the code in the future.",
+  "content": "Writes a description of some code.\n\n// Comments are used to document your code so it is easier for humans to understand. You should include a comment at the start of each function to explain what the function does, if it takes any arguments, and if it returns any values. It is also a good idea to comment any complex blocks of code so you, or another programmer, can more easily maintain or modify the code in the future.",
   "examples": [
     {
       "name": "Example with Comments",

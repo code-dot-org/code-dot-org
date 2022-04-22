@@ -17,6 +17,6 @@
   ],
   "return_value": "The bounciness of the sprite.",
   "short_description": "The velocity lost or gained by a sprite during a collision or bounce.",
-  "syntax": "bounciness",
-  "tips": "- Sprites all have the same properties and you use the dot notation (combining the name of the sprite, followed by a dot, with the label of the property) to both access and update the property for that sprite.\r\n- Any changes to the properties of a sprite will not be seen until after `drawSprites()` is called."
+  "syntax": "sprite.bounciness",
+  "tips": "- Sprites all have the same properties and you use the dot notation (combining the name of the sprite, followed by a dot, with the label of the property) to both access and update the property for that sprite.\n- Any changes to the properties of a sprite will not be seen until after [`drawSprites(group)`(#fff176)](/docs/gamelab/drawSprites/) is called."
 }

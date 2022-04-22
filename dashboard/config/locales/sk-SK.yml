@@ -2,9 +2,9 @@
 sk:
   errors:
     messages:
-      not_saved: 'Opravte prosím nasledujúce chyby:'
+      not_saved: 'Opravte tieto chyby:'
       too_young: Tento obsah má vekové obmedzenia a nie je k dispozícii pre mladších
-        študentov.
+        žiakov.
       teacher_must_accept_terms: Tento obsah má vekové obmedzenia a nie je dostupný
         pre mladších študentov. Požiadaj svojho učiteľa, aby akceptoval nové "Podmienky
         používania služby" a umožnil ti prístup k tomuto obsahu. Tvoj učiteľ to môže
@@ -453,7 +453,7 @@ sk:
       iceage: Doba ľadová
       infinity: nekonečne
       makerlab: Výrobcovo náradie
-      minecraft_adventurer: Minecraft Objavovateľ
+      minecraft_adventurer: 'Minecraft: Dobrodruh'
       minecraft_aquatic: Minecraft Aquatic
       minecraft_codebuilder: 'Minecraft: Prepájanie kódu'
       minecraft_designer: Minecraft
@@ -752,7 +752,7 @@ sk:
   share_code:
     title: Klikni na 'Spustiť' pre zobrazenie tvojho kódu v akcii
     bounce_og_title: Pozri si moju hru Bounce
-    flappy_og_title: Pozri si moju Flappy hru
+    flappy_og_title: Pozri si moju hru v štýle Flappy Bird
     studio_og_title: Pozri si moju Play Lab appku
     check_out_what_i_made: Pozrite, čo som vytvoril/a
     og_description: Tento kód som napísal/a sama s Code.org
@@ -856,7 +856,7 @@ sk:
         samostatné kurzy alebo doplnkové hodiny v iných kurzoch informatiky.
       body_short: Ak nemáte počítač, vyskúšajte s triedou tieto Lekcie bez počítača.
     unplugged_conditionals:
-      title: Podmienky
+      title: Podmienené príkazy
       body: Nauč sa viac o algoritmoch a podmienkach pomocou balíčka kariet. Počítač
         nepotrebuješ!
     widgets:

@@ -25,5 +25,5 @@
     }
   ],
   "short_description": "Turns the red LED off.",
-  "syntax": "led.off"
+  "syntax": "led.off()"
 }

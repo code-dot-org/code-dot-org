@@ -34,12 +34,12 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.collector_ifCollectible = {
     helpUrl: '',
     init: function() {
-      this.setHSV(196, 1.0, 0.79);
-      this.appendDummyInput().appendTitle(
+      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
+      this.appendDummyInput().appendField(
         msg.ifCode() + ' ' + msg.collectiblePresent()
       );
       this.setInputsInline(true);
-      this.appendStatementInput('DO').appendTitle(msg.doCode());
+      this.appendStatementInput('DO').appendField(msg.doCode());
       this.setTooltip(msg.ifTooltip());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -57,11 +57,11 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.collector_whileCollectible = {
     helpUrl: 'http://code.google.com/p/blockly/wiki/Repeat',
     init: function() {
-      this.setHSV(322, 0.9, 0.95);
-      this.appendDummyInput().appendTitle(
+      Blockly.cdoUtils.setHSV(this, 322, 0.9, 0.95);
+      this.appendDummyInput().appendField(
         msg.whileMsg() + ' ' + msg.collectiblePresent()
       );
-      this.appendStatementInput('DO').appendTitle(msg.doCode());
+      this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.whileTooltip());

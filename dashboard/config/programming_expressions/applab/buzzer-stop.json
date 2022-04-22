@@ -16,5 +16,5 @@
     }
   ],
   "short_description": "Stops the buzzer from playing.",
-  "syntax": "buzzer.stop"
+  "syntax": "buzzer.stop()"
 }

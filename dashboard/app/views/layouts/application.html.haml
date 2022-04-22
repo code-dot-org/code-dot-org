@@ -1,6 +1,8 @@
 !!! 5
 %html{dir: locale_dir}
   %head
+    = render inline: File.read(Rails.root.join('..', 'shared', 'haml', 'onetrust_cookie_scripts.haml')), type: :haml, locals: {dashboard: true}
+
     -# The Crowdin In-Context tool (https://crowdin.com/project/codeorg/settings#in-context) allows
     -# us to view original & translated strings in Crowdin.
     -# "in-TL" is a pseudo-language locale where the Crowdin strings are stored
@@ -12,7 +14,7 @@
     -# Setup variables used by the Offline feature.
     :javascript
       window.OFFLINE_SERVICE_WORKER_PATH =
-        "#{webpack_offline_asset_path('js/offline-service-worker.js')}"
+        "/s/express-2021/lessons/1#{webpack_offline_asset_path('js/offline-service-worker.js')}"
     - appname = Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]"
     - title = @page_title ? "#{@page_title} - #{appname}" : appname
     %title= title
@@ -62,8 +64,16 @@
     - if current_user && current_user.age.nil?
       = render partial: 'layouts/age_interstitial'
 
+
     - cookie_key = environment_specific_cookie_name('_user_type')
     - user_type = request.cookies[cookie_key]
+    -# The _user_type cookie is set in devise.rb to differentiate under13 students as 'student_y'.
+    -# Splitting that single value here into two variables to align with user_type standards of "teacher/student".
+    - if user_type == 'student_y'
+      - user_type = 'student'
+      - under_13 = true
+    - else
+      - under_13 = false
 
     - gdpr_data = {}
     - if current_user
@@ -72,7 +82,7 @@
 
     #gdpr-dialog
 
-    %script{src: webpack_asset_path('js/code-studio.js'), data: {gdpr: gdpr_data.to_json, usertype: user_type.to_json}}
+    %script{src: webpack_asset_path('js/code-studio.js'), data: {gdpr: gdpr_data.to_json, usertype: user_type.to_json, under13: under_13.to_json}}
 
     .wrapper{style: ('background-color: #ffffff' if view_options[:white_background])}
       - unless view_options[:no_header]

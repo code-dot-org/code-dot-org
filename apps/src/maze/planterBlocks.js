@@ -20,12 +20,12 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.planter_ifAtSoil = {
     helpUrl: '',
     init: function() {
-      this.setHSV(196, 1.0, 0.79);
-      this.appendDummyInput().appendTitle(
+      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
+      this.appendDummyInput().appendField(
         [msg.ifCode(), msg.at(), msg.soil()].join(' ')
       );
       this.setInputsInline(true);
-      this.appendStatementInput('DO').appendTitle(msg.doCode());
+      this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -41,12 +41,12 @@ exports.install = function(blockly, blockInstallOptions) {
   blockly.Blocks.planter_ifAtSprout = {
     helpUrl: '',
     init: function() {
-      this.setHSV(196, 1.0, 0.79);
-      this.appendDummyInput().appendTitle(
+      Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
+      this.appendDummyInput().appendField(
         [msg.ifCode(), msg.at(), msg.sprout()].join(' ')
       );
       this.setInputsInline(true);
-      this.appendStatementInput('DO').appendTitle(msg.doCode());
+      this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }

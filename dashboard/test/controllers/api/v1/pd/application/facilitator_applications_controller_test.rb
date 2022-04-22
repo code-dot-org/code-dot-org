@@ -48,7 +48,7 @@ module Api::V1::Pd::Application
       assert_no_difference 'Pd::Application::Facilitator1920Application.count' do
         put :create, params: @test_params
       end
-      assert_response :success
+      assert_response :conflict
     end
   end
 end

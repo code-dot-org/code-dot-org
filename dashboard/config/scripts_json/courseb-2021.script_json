@@ -16,20 +16,30 @@
       ],
       "project_widget_visible": true,
       "supported_locales": [
+        "ar-SA",
+        "cs-CZ",
+        "de-DE",
         "es-ES",
         "es-MX",
         "fr-FR",
+        "hi-IN",
+        "kn-IN",
+        "mr-IN",
+        "ms-MY",
+        "pl-PL",
         "pt-BR",
+        "pt-PT",
         "ro-RO",
         "ru-RU",
-        "sk-SK"
+        "sk-SK",
+        "zh-TW"
       ],
       "tts": true,
       "version_year": "2021"
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2022-01-20 17:36:40 UTC",
+    "serialized_at": "2022-04-11 18:49:27 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -6907,12 +6917,12 @@
     },
     {
       "name": "The Big Event",
-      "url": "https://youtu.be/u0WV9shCoak",
+      "url": "https://www.youtube.com/watch?v=XoApWo-IrI4",
       "key": "unplugged-video-big-event",
       "properties": {
         "audience": "Student",
-        "download_url": "http://videos.code.org/2014/C1-bigevent-unplugged.mp4",
-        "type": "Unplugged Video"
+        "download_url": "https://s3.amazonaws.com/videos.code.org/csf/the-big-event.mp4",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "unplugged-video-big-event"

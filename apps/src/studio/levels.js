@@ -37,13 +37,13 @@ function saySpriteRequiredBlock(options) {
         }
         if (
           options.sprite &&
-          block.getTitleValue('SPRITE') !== options.sprite
+          block.getFieldValue('SPRITE') !== options.sprite
         ) {
           return false;
         }
         if (
           (options.notDefaultText || options.requiredText) &&
-          block.getTitleValue('TEXT') === msg.defaultSayText()
+          block.getFieldValue('TEXT') === msg.defaultSayText()
         ) {
           return false;
         }
@@ -82,11 +82,11 @@ function moveRequiredBlock(options) {
         }
         if (
           options.sprite &&
-          block.getTitleValue('SPRITE') !== options.sprite
+          block.getFieldValue('SPRITE') !== options.sprite
         ) {
           return false;
         }
-        if (options.dir && block.getTitleValue('DIR') !== options.dir) {
+        if (options.dir && block.getFieldValue('DIR') !== options.dir) {
           return false;
         }
 
@@ -499,8 +499,8 @@ levels.k1_4 = extend(levels.dog_move_cat_hello, {
           // text
           return (
             block.type === 'studio_saySprite' &&
-            block.getTitleValue('SPRITE') === '1' &&
-            block.getTitleValue('TEXT') !== msg.defaultSayText()
+            block.getFieldValue('SPRITE') === '1' &&
+            block.getFieldValue('TEXT') !== msg.defaultSayText()
           );
         },
         type: 'studio_saySprite',
@@ -916,7 +916,7 @@ levels.playlab_7 = {
       {
         test: function(b) {
           return (
-            b.type === 'studio_moveDistance' && b.getTitleValue('DIR') === '2'
+            b.type === 'studio_moveDistance' && b.getFieldValue('DIR') === '2'
           );
         },
         type: 'studio_moveDistance',
@@ -927,7 +927,7 @@ levels.playlab_7 = {
       {
         test: function(b) {
           return (
-            b.type === 'studio_moveDistance' && b.getTitleValue('DIR') === '8'
+            b.type === 'studio_moveDistance' && b.getFieldValue('DIR') === '8'
           );
         },
         type: 'studio_moveDistance',

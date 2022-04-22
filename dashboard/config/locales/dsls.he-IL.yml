@@ -2502,6 +2502,7 @@ he-IL:
           אתם יכולים גם לשתף את מודל הסימולציה שלכם עם אחרים, או לשתף הודעה עם מחשבותיך לגבי הדברים שאנחנו יכולים לעשות כדי לשמור על בריאותם של אחרים כאשר מגיע לעיירה נגיף חדש.
       courseExpress_EOC_2020:
         description: הגעתם לשיעור האחרון של הקורס המזורז! בחרו איזה פרוייקט תרצו ליצור.
+        display_name: פרויקט סיום קורס
       outbreak_freeplay_choice:
         display_name: משחק חופשי
       courseExpress_project_exemplars_2019_2020:
@@ -2658,6 +2659,7 @@ he-IL:
         - correct: true
         - correct: true
         - correct: true
+          feedback: טעות. הקוד הזה לוקח את הציפור אל החזיר בצורה מדויקת.
         questions:
         - {}
       courseC_multi_starWars_predict1_2021:
@@ -2998,3 +3000,37 @@ he-IL:
         - correct: true
         questions:
         - {}
+      courseAB_EOC_2021:
+        display_name: פרויקט סיום קורס
+      courseB_EOC_2021:
+        display_name: פרויקט סיום קורס
+      courseD_EOC_2020:
+        description: הגעתם לשיעור האחרון בקורס D! תבחרו פרויקט שתרצו ליצור.
+        display_name: פרויקט סיום קורס
+      courseD_EOC_2021:
+        description: הגעתם לשיעור האחרון בקורס D! תבחרו פרויקט שתרצו ליצור.
+        display_name: פרויקט סיום קורס
+      courseE_EOC_2020:
+        display_name: פרויקט סיום קורס
+      courseE_EOC_2021:
+        display_name: פרויקט סיום קורס
+      courseE_EOC_examples_2021:
+        display_name: פרויקט סיום קורס
+      courseF_EOC_2020:
+        display_name: פרויקט סיום קורס
+      courseF_EOC_2021:
+        display_name: פרויקט סיום קורס
+      courseF_EOC_examples_2021:
+        display_name: פרויקט סיום קורס
+      courseF_EOC_samples_2021:
+        display_name: פרויקט סיום קורס
+      csf_digital_trails:
+        markdown: |-
+          # עקבו אחר השביל הדיגיטלי
+          ## איזה מידע נתיר לשמור בפרופיל הדיגיטלי הפובמי שלכם?
+      csf_digital_trails_2021:
+        markdown: |-
+          # עקבו אחר השביל הדיגיטלי
+          ## איזה מידע נתיר לשמור בפרופיל הדיגיטלי הפובמי שלכם?
+      express_EOC_2021:
+        display_name: פרויקט סיום קורס

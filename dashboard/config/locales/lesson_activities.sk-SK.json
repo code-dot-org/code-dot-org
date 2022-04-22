@@ -2,11 +2,20 @@
   "sk-SK": {
     "data": {
       "lesson_activities": {
+        "a34f3d0c-c670-4774-a52e-bf7881f5a3cc": {
+          "name": "Začíname (5 minút)"
+        },
         "b5a5dd70-3968-40ab-bcb5-5d0e7df30880": {
           "name": "Aktivita (30 – 45 minút)"
         },
         "b9709fea-ff75-44f2-83fa-16d7351e17f6": {
           "name": "Zhrnutie"
+        },
+        "13553f81-6547-4b09-b32e-7aab19725967": {
+          "name": "Vyrobte virálne video!"
+        },
+        "7e5f5376-de4c-478e-a70d-d4ddb97b0564": {
+          "name": "Hodnotenie (2 minúty)"
         },
         "ab15beb1-d005-41c6-a156-e4c110c423b8": {
           "name": "Ďalšie študijné materiály"
@@ -20,14 +29,23 @@
         "eed86444-00e1-4cb0-aaf8-24b682cc88a6": {
           "name": "Zhrnutie"
         },
+        "2ccc0a90-872b-424b-ae39-d7f92ceb8c06": {
+          "name": "Hodnotenie (2 minúty)"
+        },
         "e4041676-353d-409e-a7aa-bcfcc62bab09": {
           "name": "Ďalšie študijné materiály"
+        },
+        "e85d6071-2762-4dbb-843e-2f65408a30f8": {
+          "name": "Začíname (5 minút)"
         },
         "a31970cd-e3cd-4bfc-84cb-f6db0ec16d3a": {
           "name": "Aktivita (30 – 45 minút)"
         },
         "f9bb2168-e488-4008-97a2-bf6a22cf557d": {
           "name": "Zhrnutie"
+        },
+        "2caf682d-0389-4b9f-830a-60d398a8260d": {
+          "name": "Hodnotenie (2 minúty)"
         },
         "ce329650-3549-4f96-8da9-8bc77c162411": {
           "name": "Ďalšie študijné materiály"
@@ -71,11 +89,17 @@
         "2edff75c-f27e-4059-a0c4-2ab501a43f48": {
           "name": "Ďalšie študijné materiály"
         },
+        "5cb4e862-56b7-445e-a99a-22cc738504a1": {
+          "name": "Začíname (5 minút)"
+        },
         "84586f7e-4b74-4a9f-936e-d358a0e7670b": {
           "name": "Aktivita (30 – 45 minút)"
         },
         "633ec4e2-ea0b-496f-8878-d4178882a69e": {
           "name": "Zhrnutie"
+        },
+        "838f000b-c756-4d71-abfc-877a61b59a91": {
+          "name": "Hodnotenie (2 minúty)"
         },
         "f49ce667-e4b7-4a66-88a4-16848365e63a": {
           "name": "Ďalšie študijné materiály"
@@ -143,6 +167,12 @@
         "4d9f4220-ead7-435d-adeb-bd7968b543aa": {
           "name": "Zhrnutie"
         },
+        "2d33d18f-944d-4408-992a-31d1311733fc": {
+          "name": "Hodnotenie (2 minúty)"
+        },
+        "74e90ab8-051a-45fd-bfd7-ec1e72686dc4": {
+          "name": "Vyrobte virálne video!"
+        },
         "a653c76e-8536-4e82-adad-98306fc15f07": {
           "name": "Úvodná aktivita"
         },
@@ -157,6 +187,12 @@
         },
         "9bd1489e-8bf5-45a9-828f-e8fab79d8331": {
           "name": "Aktivita (30 – 45 minút)"
+        },
+        "09d516b6-38b7-42e0-900c-5d427b051b65": {
+          "name": "Zhrnutie (5 minút)"
+        },
+        "3b10ea82-0421-4583-a1cf-561c09edc727": {
+          "name": "Hodnotenie (2 minúty)"
         },
         "a68f63ef-48f2-45b4-bf99-0c33d870bebc": {
           "name": "Ďalšie študijné materiály"
@@ -182,6 +218,9 @@
         "e170217a-dcf7-4f4e-9285-cc5f6bdb37a3": {
           "name": "Zhrnutie"
         },
+        "c3db2cde-3c6c-4da7-9ca0-0bbdd422a3f4": {
+          "name": "Začíname (5 minút)"
+        },
         "156ffaf5-a045-4956-9c89-15fcc64fa3af": {
           "name": "Aktivita (30 – 45 minút)"
         },
@@ -191,11 +230,20 @@
         "262ad475-1b09-4834-8401-0cf39d3955c5": {
           "name": "Ďalšie študijné materiály"
         },
+        "ab54fc81-dcbd-4647-a4c7-5308b0b6299b": {
+          "name": "Hodnotenie (2 minúty)"
+        },
         "37f266a7-4b80-449e-805a-4a06aad37292": {
           "name": "Začíname"
         },
         "301e5420-a6e3-46c3-a76f-c2e042652974": {
           "name": "Aktivita (30 – 45 minút)"
+        },
+        "3664c675-1dd2-468f-b854-a7daa9b0dc38": {
+          "name": "Hodnotenie (2 minúty)"
+        },
+        "efd4f483-32c2-4810-96fd-186649c2efe2": {
+          "name": "Zhrnutie (5 minút)"
         },
         "4e2ce993-660e-4574-9264-448e234c4bac": {
           "name": "Ďalšie študijné materiály"
@@ -233,11 +281,20 @@
         "20701fc4-d308-49af-8988-34896fd12713": {
           "name": "Zhrnutie"
         },
+        "f4c5d52c-8cb8-4f79-be4a-6d5b6a2d9aa6": {
+          "name": "Začíname (5 minút)"
+        },
         "d1fb8b1b-235a-41a7-bfb9-8c916983bb68": {
           "name": "Aktivita (30 – 45 minút)"
         },
+        "d77010f1-4c38-4b28-8b5f-ef931622b016": {
+          "name": "Zhrnutie (5 minút)"
+        },
         "5b9c8e29-d3c4-475c-a174-4fe663db40ba": {
           "name": "Ďalšie študijné materiály"
+        },
+        "894da896-c653-4f74-a0f9-b02dca7ebcad": {
+          "name": "Hodnotenie (2 minúty)"
         },
         "e7d8c33e-9a74-4c71-88bc-697d78573d4c": {
           "name": "Začíname"
@@ -272,8 +329,17 @@
         "84ceca2e-7c1f-4c9c-a0fd-33c41e4beb2a": {
           "name": "Ďalšie študijné materiály"
         },
+        "2e22fcb0-f00c-48f5-b78d-235ba4c8fba0": {
+          "name": "Začíname (5 minút)"
+        },
         "e5b705f9-3922-4d59-bf2f-99d6ef0ef0ed": {
           "name": "Aktivita (30 – 45 minút)"
+        },
+        "e2022e4c-66f9-4cac-9970-3e5bbf582f66": {
+          "name": "Zhrnutie (5 minút)"
+        },
+        "2cf39290-cd45-4bb4-8ef6-f1dc74e50890": {
+          "name": "Hodnotenie (2 minúty)"
         },
         "1f6b7c7a-3d21-4f80-8f9b-85df513a85ef": {
           "name": "Ďalšie študijné materiály"
@@ -290,11 +356,20 @@
         "6df6eb5e-2825-43ef-9e3c-16f3ea4ab499": {
           "name": "Ďalšie študijné materiály"
         },
+        "ad2299c9-28bf-4e9f-b320-cb44ff94bdba": {
+          "name": "Začíname "
+        },
         "544fd00b-84f3-47e4-9e02-cb27a6cfbbca": {
-          "name": "Aktivita (30 – 45 minút)"
+          "name": "Aktivita"
         },
         "e12c8da3-986d-488b-bed5-a7bb9e95e393": {
           "name": "Úrovne"
+        },
+        "2f9c446a-0802-48b0-91ff-a7df9fe4afe2": {
+          "name": "Zhrnutie"
+        },
+        "1a4d5cec-bd30-41f9-8012-4f16018769f9": {
+          "name": "Hodnotenie (2 minúty)"
         },
         "42552407-b313-4fc4-9163-e6a8e4a6029d": {
           "name": "Ďalšie študijné materiály"
@@ -302,8 +377,11 @@
         "ee8cbd12-265d-4681-b6c9-05a0a062916d": {
           "name": "Úrovne"
         },
+        "0f7585ce-d117-4b61-aee9-d54444cd83b0": {
+          "name": "Začíname "
+        },
         "82dec89b-f375-4238-a251-ffae17c2dfd1": {
-          "name": "Aktivita (30 – 45 minút)"
+          "name": "Aktivita"
         },
         "a25c23cd-4e73-4a82-882f-7cc0a9fdfeb4": {
           "name": "Úrovne"
@@ -311,11 +389,20 @@
         "239ba7ce-544c-4508-9e5c-e956de964002": {
           "name": "Zhrnutie"
         },
+        "4cf19609-58ef-497b-b48d-2b9a0281a490": {
+          "name": "Vyrobte virálne video!"
+        },
+        "7afb9d6e-2c07-44d2-8504-90df0cecc778": {
+          "name": "Hodnotenie"
+        },
         "a676c281-2f0e-41d3-8e30-dbf6bb8d6dc0": {
           "name": "Úvodná aktivita"
         },
         "160cbd69-f567-4fb4-9623-0e69ecec9b3a": {
           "name": "Aktivita"
+        },
+        "b304de28-91d8-4215-a853-27f5a3f8a157": {
+          "name": "Čas na oslavu a môžeme pokračovať!"
         },
         "04400eef-5989-4325-a801-ab4ad451f130": {
           "name": "Ďalšie študijné materiály"
@@ -4004,8 +4091,11 @@
         "0ba4a78d-b13f-442c-90f2-58125ef3ff64": {
           "name": "Zhrnutie"
         },
+        "235b3b14-975a-43b6-93bc-d386b857fd6b": {
+          "name": "Začíname"
+        },
         "fd06b4db-e3d4-491b-9372-af9a05dc2bb7": {
-          "name": "Aktivita (30 – 45 minút)"
+          "name": "Aktivita"
         },
         "e96a358f-201b-4474-8950-90dd94426aff": {
           "name": "Zhrnutie"
@@ -4578,7 +4668,7 @@
           "name": "Analýza: Súkromné alebo osobné?"
         },
         "d7df338d-c42c-4fce-aa60-ec516fd2d48d": {
-          "name": "Zhrnutie: Výstupný test"
+          "name": "Zhrnutie: Výstupný lístok"
         },
         "02429a22-ab18-4df6-9062-d88960fe9ae8": {
           "name": "Ďalšie študijné materiály"

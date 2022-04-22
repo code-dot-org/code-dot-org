@@ -951,6 +951,8 @@ he:
           lesson_groups:
             required:
               display_name: סקירה
+        basketball:
+          name: כדורסל
         csd2-2017:
           lesson_groups:
             csd2_1:
@@ -1058,6 +1060,8 @@ he:
               name: מבוא
         coursee-draft:
           lesson_groups:
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
             extra_course_content:
               display_name: תוכן נוסף של הקורס
           lessons:
@@ -1070,6 +1074,9 @@ he:
             Conditionals:
               name: תנאים
         coursef-draft:
+          lesson_groups:
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
             Variables in Play Lab:
               name: משתנים במעבדת הצעצועים
@@ -1095,6 +1102,8 @@ he:
           lessons:
             Hour of Code 2013:
               name: שעת קוד 2013
+        sports:
+          name: ספורט
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -1132,6 +1141,9 @@ he:
             Wrap-Up:
               name: אריזה
         csf2harvey:
+          lesson_groups:
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
             Binary:
               name: בינארי
@@ -1343,6 +1355,8 @@ he:
               display_name: המשך אל קורס ה (רשות)
             csf_e_2:
               display_name: תכני קורס ה
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
             extra_course_content:
               display_name: תוכן נוסף של הקורס
           lessons:
@@ -1395,6 +1409,8 @@ he:
               display_name: המשך אל קורס ו (רשות)
             csf_f_2:
               display_name: תכני קורס ו
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
             Introduction:
               name: היכרות עם חידות מבוכים
@@ -1462,6 +1478,9 @@ he:
             required:
               display_name: סקירה
         express-2017:
+          lesson_groups:
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
             Introduction:
               name: מבוא
@@ -1517,6 +1536,8 @@ he:
               display_name: המשך אל קורס ה (רשות)
             csf_e_2:
               display_name: תכני קורס ה
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
             extra_course_content:
               display_name: תוכן נוסף של הקורס
           lessons:
@@ -1552,6 +1573,9 @@ he:
             csp3_1:
               display_name: 'פרק 1: שפות תכנות ואלגוריתמים'
         new-express:
+          lesson_groups:
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
             Introduction:
               name: מבוא
@@ -1571,6 +1595,8 @@ he:
               display_name: המשך אל קורס ה (רשות)
             csf_e_2:
               display_name: תכני קורס ה
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
             extra_course_content:
               display_name: תוכן נוסף של הקורס
           lessons:
@@ -1590,6 +1616,8 @@ he:
               display_name: המשך אל קורס ו (רשות)
             csf_f_2:
               display_name: תכני קורס ו
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
             Sequence in Maze:
               name: רצף במבוך
@@ -1655,6 +1683,8 @@ he:
               display_name: המשך אל קורס ה (רשות)
             csf_e_2:
               display_name: תכני קורס ה
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
             extra_course_content:
               display_name: תוכן נוסף של הקורס
           lessons:
@@ -1676,6 +1706,8 @@ he:
               display_name: המשך אל קורס ו (רשות)
             csf_f_2:
               display_name: תכני קורס ו
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
             Sequence in Maze:
               name: רצף במבוך
@@ -1906,6 +1938,8 @@ he:
               display_name: המשך אל קורס ה (רשות)
             csf_e_2:
               display_name: תכני קורס ה
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
             extra_course_content:
               display_name: תוכן נוסף של הקורס
           lessons:
@@ -1953,6 +1987,8 @@ he:
               display_name: המשך אל קורס ו (רשות)
             csf_f_2:
               display_name: תכני קורס ו
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
             'Programming: My Robotic Friends':
               name: חברי הרובוטיים
@@ -2208,6 +2244,8 @@ he:
               display_name: אינטרנט
             csf_sprites:
               display_name: דמויות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
             Sequence in Maze:
               name: רצף במבוך
@@ -2221,6 +2259,8 @@ he:
               name: האמן
             Nested Loops in the Maze:
               name: לולאות מקוננות במבוך
+            End of Course Project:
+              name: פרויקט סיום קורס
             Internet:
               name: האינטרנט
         dance-low:
@@ -2240,6 +2280,8 @@ he:
               display_name: תנאים
             csf_binary:
               display_name: בינארי
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
             'Algorithms: Graph Paper Programming':
               name: תכנות לנייר משבצות
@@ -2288,6 +2330,8 @@ he:
               display_name: דמויות
             csf_functions:
               display_name: פונקציות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
             Sequence in Maze:
               name: רצף במבוך
@@ -2308,6 +2352,8 @@ he:
               name: אינטרנט
             Nested Loops in Bee:
               name: לולאות מקוננות במבוך
+            End of Course Project:
+              name: פרויקט סיום קורס
             Songwriting:
               name: כתיבת שירים
         express-2019:
@@ -2347,6 +2393,8 @@ he:
               name: אומן בינארי
             Internet:
               name: אינטרנט
+            Build A Project:
+              name: פרויקט סיום קורס
             Dance Party:
               name: מסיבת ריקודים
         csd1-2019:
@@ -2376,6 +2424,8 @@ he:
               display_name: חזרות
             csf_events:
               display_name: אירועים
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
             Programming in Maze:
               name: תכנות עם ציפורים כועסות
@@ -2387,6 +2437,8 @@ he:
               name: האירוע הגדול
             Binary Bracelets:
               name: צמידים בינארים
+            'End of Course Project: Create a Play Lab Game':
+              name: פרויקט סיום קורס
         csp-mid-survey:
           lesson_groups:
             cspSurvey:
@@ -2889,7 +2941,7 @@ he:
           description: קודדו מסיבת ריקודים משלכם ושתפו עם חברים!
           lessons:
             Dance Party:
-              name: מסיבת ריקודים
+              name: מסיבת ריקודים (2019)
           student_description: קודדו מסיבת ריקודים משלכם ושתפו עם חברים!
         k5-onlinepd-2019:
           lesson_groups:
@@ -2936,9 +2988,13 @@ he:
               display_name: תנאים
             csf_functions:
               display_name: פונקציות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
             Conditionals with Cards:
               name: התניות עם כרטיסים
+            End of Course Project:
+              name: פרויקט סיום קורס
         time4cs-experiment-unit-2:
           lessons:
             Nested Loops in Maze:
@@ -3117,6 +3173,8 @@ he:
               display_name: חזרות
             csf_events:
               display_name: אירועים
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
             Programming in Maze:
               name: תכנות עם ציפורים כועסות
@@ -3126,6 +3184,8 @@ he:
               name: צמידים בינארים
             'Events: The Big Event':
               name: האירוע הגדול
+            'End of Course Project: Create a Play Lab Game':
+              name: פרויקט סיום קורס
         coursed-2020:
           title: קורס ד' (2020)
           description: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות, לולאות
@@ -3139,6 +3199,8 @@ he:
               display_name: תנאים
             csf_binary:
               display_name: בינארי
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
             'Algorithms: Graph Paper Programming':
               name: תכנות לנייר משבצות
@@ -3174,6 +3236,8 @@ he:
                 כיצד המחשב שומר מידע מורכב יותר (כמו תמונות וצבעים) גם בצורה בינארית.
             Dance Party:
               name: מסיבת ריקודים
+            End of Course Project:
+              name: פרויקט סיום קורס
           student_description: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות,
             לולאות "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות
             דיגיטלית.
@@ -3185,6 +3249,8 @@ he:
               display_name: דמויות
             csf_functions:
               display_name: פונקציות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
             Conditionals:
               description_teacher: שיעור זה מכיר לתלמידים את לולאות 'עד' ופקודת 'אם/אחרת'.
@@ -3197,6 +3263,8 @@ he:
               name: לולאות מקוננות במבוך
             'Functions: Songwriting':
               name: כתיבת שירים
+            End of Course Project:
+              name: פרויקט סיום קורס
         coursef-2020:
           lesson_groups:
             ramp_up:
@@ -3207,6 +3275,8 @@ he:
               display_name: בשביל לולאות
             csf_sprites:
               display_name: דמויות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
             Nested Loops in the Maze:
               name: לולאות מקוננות במבוך
@@ -3214,6 +3284,8 @@ he:
               name: כיף עם לולאת "עבור"
             Internet:
               name: האינטרנט
+            End of Course Project:
+              name: פרויקט סיום קורס
         express-2020:
           lesson_groups:
             csf_warmup:
@@ -3230,6 +3302,8 @@ he:
               display_name: בשביל לולאות
             csf_sprites:
               display_name: דמויות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           lessons:
             Dance Party:
               name: מסיבת ריקודים
@@ -3243,6 +3317,8 @@ he:
               name: לולאות עבור עם הדבורה
             For Loops in Artist:
               name: לולאות עבור עם האומן
+            End of Course Project:
+              name: פרויקט סיום קורס
             Programming with Angry Birds:
               name: תכנות עם ציפורים כועסות
             Debugging with Scrat:
@@ -3440,6 +3516,8 @@ he:
           lessons:
             Virus Simulation for Code Bytes:
               name: קידוד של סימולציה
+            End of Course Project:
+              name: פרויקט סיום קורס
           lesson_groups:
             introduction:
               display_name: מבוא
@@ -3596,11 +3674,15 @@ he:
               description_teacher: בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים
                 במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק
                 אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!
+            lesson-1:
+              name: פרויקט סיום קורס
           lesson_groups:
             csf_loops:
               display_name: חזרות
             csf_events:
               display_name: אירועים
+            lessonGroup-5:
+              display_name: פרויקט סיום קורס
         courseb-2021:
           lessons:
             Move It, Move It:
@@ -3613,11 +3695,15 @@ he:
               name: תכנות עם ציפורים כועסות
             'Loops: Getting Loopy':
               name: עוברים ללולאות
+            lesson-1:
+              name: פרויקט סיום קורס
           lesson_groups:
             csf_loops:
               display_name: חזרות
             csf_events:
               display_name: אירועים
+            lessonGroup-6:
+              display_name: פרויקט סיום קורס
         coursec-2021:
           lessons:
             Programming in Maze:
@@ -3631,6 +3717,8 @@ he:
               name: צמידים בינארים
             'Events: The Big Event':
               name: האירוע הגדול
+            'End of Course Project: Create a Play Lab Game':
+              name: פרויקט סיום קורס
           lesson_groups:
             csf_binary:
               display_name: בינארי
@@ -3638,6 +3726,8 @@ he:
               display_name: חזרות
             csf_events:
               display_name: אירועים
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
         coursed-2021:
           title: קורס ד' (2021)
           lessons:
@@ -3680,6 +3770,9 @@ he:
                 כיצד המחשב שומר מידע מורכב יותר (כמו תמונות וצבעים) גם בצורה בינארית.
             Artist Binary:
               key: אומן בינארי
+            End of Course Project:
+              key: פרויקט סיום קורס
+              name: פרויקט סיום קורס
           lesson_groups:
             csf_events:
               display_name: אירועים
@@ -3689,6 +3782,8 @@ he:
               display_name: תנאים
             csf_binary:
               display_name: בינארי
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
         coursee-2021:
           lessons:
             Conditionals:
@@ -3703,6 +3798,9 @@ he:
               name: לולאות מקוננות במבוך
             'Functions: Songwriting':
               name: כתיבת שירים
+            End of Course Project:
+              key: פרויקט סיום קורס
+              name: פרויקט סיום קורס
           lesson_groups:
             csf_sprites:
               display_name: דמויות
@@ -3710,6 +3808,8 @@ he:
               display_name: תנאים
             csf_functions:
               display_name: פונקציות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
         coursef-2021:
           lessons:
             Nested Loops in the Maze:
@@ -3726,6 +3826,9 @@ he:
               key: לולאות עבור עם הדבורה
             For Loops in Artist:
               key: לולאות עבור עם האומן
+            End of Course Project:
+              key: פרויקט סיום קורס
+              name: פרויקט סיום קורס
             lesson-5:
               name: התפרצות
           lesson_groups:
@@ -3735,6 +3838,8 @@ he:
               display_name: בשביל לולאות
             csf_for_loops:
               display_name: בשביל לולאות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
             lessonGroup-8:
               display_name: משתנים
             lessonGroup-9:
@@ -3756,6 +3861,9 @@ he:
             Until Loops in Maze:
               key: לולאות "עד" במבוך
               name: לולאות "עד" במבוך
+            End of Course Project:
+              key: פרויקט סיום קורס
+              name: פרויקט סיום קורס
             lesson-1:
               name: מסיבת ריקודים
           lesson_groups:
@@ -3773,6 +3881,8 @@ he:
               display_name: בשביל לולאות
             csf_sprites:
               display_name: דמויות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
             lessonGroup-9:
               display_name: אירועים
         pre-express-2021:
@@ -4051,6 +4161,8 @@ he:
               display_name: דמויות
             lessonGroup-3:
               display_name: משתנים
+            lessonGroup-4:
+              display_name: פרויקט סיום קורס
         csd6-pilot-2022:
           lessons:
             Functions with Parameters:
@@ -4070,6 +4182,8 @@ he:
               description_teacher: בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים
                 במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק
                 אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!
+            End of Course Project:
+              name: פרויקט סיום קורס
             'Programming: Happy Maps':
               name: מפות שמחות
             Loops in Ice Age:
@@ -4079,11 +4193,15 @@ he:
               description_teacher: בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים
                 במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק
                 אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!
+            lesson-1:
+              name: פרויקט סיום קורס
           lesson_groups:
             csf_loops:
               display_name: חזרות
             csf_events:
               display_name: אירועים
+            lessonGroup-5:
+              display_name: פרויקט סיום קורס
         express-2022:
           lessons:
             Programming with Angry Birds:
@@ -4099,6 +4217,9 @@ he:
             Until Loops in Maze:
               name: לולאות "עד" במבוך
               key: לולאות "עד" במבוך
+            End of Course Project:
+              name: פרויקט סיום קורס
+              key: פרויקט סיום קורס
             Debugging with Scrat:
               key: ניפוי שגיאות עם סקראט
               name: איתור באגים במבוך
@@ -4119,6 +4240,8 @@ he:
               display_name: משתנים
             csf_for_loops:
               display_name: בשביל לולאות
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
         csp1-2022:
           lesson_groups:
             cspSurvey:
@@ -4157,6 +4280,8 @@ he:
               name: תכנות עם ציפורים כועסות
             Getting Loopy:
               name: עוברים ללולאות
+            End of Course Project:
+              name: פרויקט סיום קורס
             Sequencing in Maze:
               name: יצירת רצפים עם ציפורים כועסות
             Programming in Maze:
@@ -4164,11 +4289,15 @@ he:
               name: תכנות עם ציפורים כועסות
             'Loops: Getting Loopy':
               name: עוברים ללולאות
+            lesson-1:
+              name: פרויקט סיום קורס
           lesson_groups:
             csf_loops:
               display_name: חזרות
             csf_events:
               display_name: אירועים
+            lessonGroup-6:
+              display_name: פרויקט סיום קורס
         coursec-2022:
           lessons:
             Programming with Angry Birds:
@@ -4181,16 +4310,22 @@ he:
             Binary Bracelets:
               name: צמידים בינארים
               key: צמידים בינארים
+            End of Course Project:
+              name: פרויקט סיום קורס
             Programming in Maze:
               key: תכנות במבוך
               name: תכנות עם ציפורים כועסות
             'Events: The Big Event':
               name: האירוע הגדול
+            'End of Course Project: Create a Play Lab Game':
+              name: פרויקט סיום קורס
           lesson_groups:
             csf_loops:
               display_name: חזרות
             csf_events:
               display_name: אירועים
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
         coursed-2022:
           lessons:
             Graph Paper Programming:
@@ -4224,6 +4359,9 @@ he:
             Until Loops in Maze:
               name: לולאות "עד" במבוך
               key: לולאות "עד" במבוך
+            End of Course Project:
+              name: פרויקט סיום קורס
+              key: פרויקט סיום קורס
             'Algorithms: Graph Paper Programming':
               name: תכנות לנייר משבצות
             Debugging in Collector:
@@ -4237,6 +4375,8 @@ he:
               display_name: חזרות
             csf_conditionals:
               display_name: תנאים
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
           title: קורס ד' (2021)
         coursee-2022:
           lessons:
@@ -4249,6 +4389,9 @@ he:
                 הפקודות יצטרכו לחזור על עצמם, אבל הוא כן יודע מהו התנאי שצריך להתקיים
                 בכדי להמשיך את הלולאה. פקודת 'אם/אחרת' מאפשרת דינאמיות בתכנות על-ידי
                 הרצת קטע קוד רק אם תנאי מתקיים (יהיה אמת), אחרת הוא יריץ קטע קוד אחר.
+            End of Course Project:
+              name: פרויקט סיום קורס
+              key: פרויקט סיום קורס
             'Functions: Songwriting':
               name: כתיבת שירים
             Conditionals:
@@ -4266,6 +4409,8 @@ he:
               display_name: פונקציות
             csf_nested_loops:
               display_name: תנאים
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
         coursef-2022:
           lessons:
             Programming with the Bee:
@@ -4279,6 +4424,9 @@ he:
               name: בינה מלאכותית למען האוקיינוסים
             The Internet:
               name: האינטרנט
+            End of Course Project:
+              name: פרויקט סיום קורס
+              key: פרויקט סיום קורס
             Nested Loops in the Maze:
               name: לולאות מקוננות במבוך
             For Loops in Bee:
@@ -4295,6 +4443,8 @@ he:
               display_name: דמויות
             lessonGroup-8:
               display_name: משתנים
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
         csa1-2022:
           lessons:
             lesson-9:
@@ -4316,6 +4466,10 @@ he:
           lessons:
             lesson-6:
               name: משתנים
+        csa3-2022:
+          lessons:
+            lesson-5:
+              name: בשביל לולאות
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -4339,8 +4493,37 @@ he:
             The Internet:
               name: האינטרנט
               key: האינטרנט
+            End of Course Project:
+              name: פרויקט סיום קורס
+              key: פרויקט סיום קורס
           lesson_groups:
             ramp_up:
               display_name: דמויות
             lessonGroup-8:
               display_name: משתנים
+            end_of_course_project:
+              display_name: פרויקט סיום קורס
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: משתנים
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: חזרות
+              key: חזרות
+            Events:
+              name: אירועים
+              key: אירועים
+            Conditionals:
+              name: תנאים
+              key: תנאים
+            Functions:
+              name: פונקציות
+              key: פונקציות
+            Variables:
+              name: משתנים
+              key: משתנים
+            For Loops:
+              name: בשביל לולאות
+              key: בשביל לולאות

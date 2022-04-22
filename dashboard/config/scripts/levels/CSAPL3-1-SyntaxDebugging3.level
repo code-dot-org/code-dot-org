@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "**Do this:**\r\n\r\n1. Run the code.\r\n2. Look at the error message in the console. \r\n3. Use the error message to help identify where the syntax errors are.\r\n4. Fix the errors and re-run your code. \r\n5. When you are done, you should see the following message in the console:\r\n```\r\nA cat can jump about six times its length.\r\nA group of cats is called a clowder.\r\nCats make about 100 different sounds.\r\n```\r\n",
+    "long_instructions": "## Debugging Practice\r\n\r\nThere are several bugs in this code!  It is your task to find them all!\r\n\r\n**Do this:**\r\n\r\n1. Run the code.\r\n2. Look at the error message in the console. \r\n3. Use the error message to help identify where the syntax errors are.\r\n4. Fix the errors and re-run your code. \r\n5. When you are done, you should see the following message in the console:\r\n```\r\nA cat can jump about six times its length.\r\nA group of cats is called a clowder.\r\nCats make about 100 different sounds.\r\n```\r\n\r\n::: details [**Show me how**]\r\n\r\nHere are some tips for finding bugs in the code:\r\n1. Use the error messages to identify where the errors are. \r\n2. Clear the console before you re-run your code.  This button is in the lower right corner of the screen. Clearing your console will make it easier to understand what new errors you are getting in your code. \r\n\r\n:::\r\n",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -12,13 +12,16 @@
         "text": "public class MeowFacts{\n\n  public static void main(String[] args)\n    System.out.print(\"A cat can jump about six times its length.\")\n    System.out.print(\"A group of cats is called a clowder.\")\n    System.out.print(Cats make about 100 different sounds.)\n  \n}",
         "isVisible": true
       }
-    }
+    },
+    "encrypted_examples": [
+
+    ]
   },
   "game_id": 68,
+  "published": true,
   "created_at": "2022-03-02T20:03:54.000Z",
   "level_num": "custom",
   "user_id": 977,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-03-02T20:03:54.669+00:00\",\"changed\":[\"cloned from \\\"CSAPL3-1-SyntaxDebugging2\\\"\"],\"cloned_from\":\"CSAPL3-1-SyntaxDebugging2\"},{\"changed_at\":\"2022-03-02 20:05:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-02 20:06:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-02 20:06:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-02T20:03:54.669+00:00\",\"changed\":[\"cloned from \\\"CSAPL3-1-SyntaxDebugging2\\\"\"],\"cloned_from\":\"CSAPL3-1-SyntaxDebugging2\"},{\"changed_at\":\"2022-03-02 20:05:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-02 20:06:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-02 20:06:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-10 16:49:08 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-10 16:49:28 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-18 17:26:58 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-04-19 14:29:17 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]"
 }]]></config>
 </Javalab>

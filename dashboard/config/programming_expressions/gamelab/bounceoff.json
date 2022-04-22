@@ -3,7 +3,7 @@
   "name": "sprite.bounceOff()",
   "category": "Sprites",
   "category_key": "sprites",
-  "content": "Makes the sprite bounce off the target when they touch each other. The target keeps moving as before.\r\n\r\nMost games will involve sprites colliding with each other. There are four types of collisions available in Game Lab: `bounce`, `bounceOff`, `collide` and `displace`. These blocks will cause a certain type of interaction between the sprite and its target and must be used within the `draw` function.",
+  "content": "Makes the sprite bounce off the target when they touch each other. The target keeps moving as before.\n\nMost games will involve sprites colliding with each other. There are four types of collisions available in Game Lab: [`bounce`(#f78183)](/docs/gamelab/bounce/), [`bounceOff`(#f78183)](/docs/gamelab/bounceoff/), [`collide`(#f78183)](/docs/gamelab/collide/) and [`displace`(#f78183)](/docs/gamelab/displace/).  These blocks will cause a certain type of interaction between the sprite and its target and must be used within the `draw` function.",
   "examples": [
     {
       "name": "",
@@ -41,8 +41,11 @@
       "description": "The name of the target sprite or target group you want to check for a collision."
     }
   ],
+  "parameters": [
+    "target"
+  ],
   "return_value": "Boolean true or false. Changes output in the display after the sprites touch and drawSprites() is called.",
   "short_description": "Makes the sprite bounce off the target when they touch each other. The target keeps moving as before.",
-  "syntax": "bounceOff(target)",
+  "syntax": "sprite.bounceOff(target)",
   "tips": "- All four of the collisions are similar to including an \"if (sprite.isTouching(target))\" in the `draw` function, and then depending on the collision type, updating the sprite and target `velocityX` and `velocityY` properties.\r\n- Only one of the four types of collisions should be specified for each pair of sprites.\r\n- To fine tune your collision detection use `setCollider` to change the shape and size of the collider area and set `debug` to true for the sprites.\r\n- A sprite that is not visible can still collide with other sprites and user mouse interactions."
 }

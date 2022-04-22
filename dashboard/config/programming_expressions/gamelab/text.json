@@ -10,7 +10,7 @@
       "description": "Use additional text blocks to change the appearance of text on the screen. You can change: size, color, alignment, and other properties.",
       "code": "```\ntextSize(60);\r\ntextAlign(CENTER, TOP);\r\ntextFont(\"Impact\");\r\nfill(\"yellow\");\r\nstroke(\"red\");\r\nstrokeWeight(5);\r\ntext(\"Ada Lovelace was one of the first computer programmers!\", 0, 0, 400, 400);\n```",
       "app": "",
-      "image": "https://curriculum.code.org/media/text.PNG",
+      "image": "https://images.code.org/aba0a3b2027e38587c1f3c8af93a8669-text2.png",
       "app_display_type": "codeFromCodeField",
       "embed_app_with_code_height": 310
     },
@@ -65,8 +65,13 @@
       "description": "The height of the rectangular area to display the text. Should be a number from 0 to 400. When the text reaches the end of this width, it will wrap to a new line."
     }
   ],
+  "parameters": [
+    "str",
+    "x",
+    "y"
+  ],
   "return_value": "No return value. Outputs to the display only.",
   "short_description": "Draws text onto the display positioned at x and y.",
-  "syntax": "text(str, x, y)",
+  "syntax": "text(str, x, y, width, height)",
   "tips": "- you can also specify `fill()`, `stroke()` and `strokeWeight()` before calling text to change the color and outline used."
 }

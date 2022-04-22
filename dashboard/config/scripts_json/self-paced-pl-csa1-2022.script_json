@@ -4,15 +4,16 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "is_migrated": true,
+      "pilot_experiment": "csa-getting-started-preview"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-08 19:25:29 UTC",
-    "published_state": "in_development",
-    "instruction_type": "self_paced",
-    "instructor_audience": "facilitator",
-    "participant_audience": "teacher",
+    "serialized_at": "2022-04-19 21:08:13 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "self-paced-pl-csa1-2022"
     }
@@ -39,6 +40,8 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "overview": "**You will:**\n\n* Get an introduction to Code.org.\n* Learn how to engage in these professional learning modules.\n\n**Estimated time:** 20 minutes\n",
+        "student_overview": "**You will:**\n\n* Get an introduction to Code.org.\n* Learn how to engage in these professional learning modules.\n\n**Estimated time:** 20 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -54,6 +57,8 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "overview": "**You will:**\n\n* Get an introduction to the AP Computer Science A course\n* Learn Code.org’s curricular approach to CSA \n\n**Estimated time:** 40 minutes\n",
+        "student_overview": "**You will:**\n\n* Get an introduction to the AP Computer Science A course\n* Learn Code.org’s curricular approach to CSA \n\n**Estimated time:** 40 minutes\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -93,7 +98,7 @@
       "key": "212dc00e-7d98-482a-983f-439381050c7b",
       "position": 1,
       "properties": {
-        "progression_name": "Overview (~5 minutes)"
+        "progression_name": "Overview"
       },
       "seeding_key": {
         "activity_section.key": "212dc00e-7d98-482a-983f-439381050c7b",
@@ -104,7 +109,7 @@
       "key": "9f82dc35-6db5-4d55-ba4e-981ab3458705",
       "position": 2,
       "properties": {
-        "progression_name": "What is Code.org? (~10 minutes)"
+        "progression_name": "What is Code.org?"
       },
       "seeding_key": {
         "activity_section.key": "9f82dc35-6db5-4d55-ba4e-981ab3458705",
@@ -115,7 +120,7 @@
       "key": "6003eb69-dc29-4d63-9d9c-1a3a41a14561",
       "position": 1,
       "properties": {
-        "progression_name": "What is AP CSA? (~5 minutes)"
+        "progression_name": "What is AP CSA? "
       },
       "seeding_key": {
         "activity_section.key": "6003eb69-dc29-4d63-9d9c-1a3a41a14561",
@@ -126,7 +131,7 @@
       "key": "7334b29a-0ba5-447a-ac07-0ae4f64ec820",
       "position": 2,
       "properties": {
-        "progression_name": "The CSA Framework and Curriculum (~20 minutes)"
+        "progression_name": "The CSA Framework and Curriculum "
       },
       "seeding_key": {
         "activity_section.key": "7334b29a-0ba5-447a-ac07-0ae4f64ec820",
@@ -137,7 +142,7 @@
       "key": "c08d3db9-8de5-4325-ac63-5ec3ece5f9c4",
       "position": 3,
       "properties": {
-        "progression_name": "College Board Resources (~10 minutes)"
+        "progression_name": "College Board Resources "
       },
       "seeding_key": {
         "activity_section.key": "c08d3db9-8de5-4325-ac63-5ec3ece5f9c4",
@@ -148,7 +153,7 @@
       "key": "a52f215b-4a0a-41b9-9827-05a58e8c6ba8",
       "position": 4,
       "properties": {
-        "progression_name": "Frequently Asked Questions (~5 minutes)"
+        "progression_name": "Frequently Asked Questions "
       },
       "seeding_key": {
         "activity_section.key": "a52f215b-4a0a-41b9-9827-05a58e8c6ba8",
@@ -159,6 +164,7 @@
       "key": "5d58b8ef-b299-468e-a953-7ab8ff876cc1",
       "position": 5,
       "properties": {
+        "progression_name": "Wrap up"
       },
       "seeding_key": {
         "activity_section.key": "5d58b8ef-b299-468e-a953-7ab8ff876cc1",
@@ -173,7 +179,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Overview (~5 minutes)"
+        "level_keys": [
+          "SP-VPL-21-CSA-mod1-Overview-Welcome"
+        ],
+        "progression": "Overview"
       },
       "bonus": false,
       "seeding_key": {
@@ -195,7 +204,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "What is Code.org? (~10 minutes)"
+        "level_keys": [
+          "SP-VPL-21-mod1-welcome-vid"
+        ],
+        "progression": "What is Code.org?"
       },
       "bonus": false,
       "seeding_key": {
@@ -217,7 +229,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "What is Code.org? (~10 minutes)"
+        "level_keys": [
+          "SP-VPL-21-mod1-CSisFoundational"
+        ],
+        "progression": "What is Code.org?"
       },
       "bonus": false,
       "seeding_key": {
@@ -239,7 +254,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "What is AP CSA? (~5 minutes)"
+        "level_keys": [
+          "SP-VPL-21-CSA-mod1-what-is-CSA1"
+        ],
+        "progression": "What is AP CSA? "
       },
       "bonus": false,
       "seeding_key": {
@@ -261,7 +279,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "What is AP CSA? (~5 minutes)"
+        "level_keys": [
+          "SP-VPL-21-CSA-mod1-why-teach-with-Code"
+        ],
+        "progression": "What is AP CSA? "
       },
       "bonus": false,
       "seeding_key": {
@@ -283,7 +304,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "The CSA Framework and Curriculum (~20 minutes)"
+        "level_keys": [
+          "SP-VPL-21-CSA-mod1-csa-framework"
+        ],
+        "progression": "The CSA Framework and Curriculum "
       },
       "bonus": false,
       "seeding_key": {
@@ -305,7 +329,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "The CSA Framework and Curriculum (~20 minutes)"
+        "level_keys": [
+          "SP-VPL-21-CSA-mod1-approach-to-curriculum"
+        ],
+        "progression": "The CSA Framework and Curriculum "
       },
       "bonus": false,
       "seeding_key": {
@@ -327,7 +354,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "College Board Resources (~10 minutes)"
+        "level_keys": [
+          "SP-VPL-21-CSA-mod1-college-board-resources"
+        ],
+        "progression": "College Board Resources "
       },
       "bonus": false,
       "seeding_key": {
@@ -349,7 +379,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Frequently Asked Questions (~5 minutes)"
+        "level_keys": [
+          "SP-VPL-21-CSA-FAQ"
+        ],
+        "progression": "Frequently Asked Questions "
       },
       "bonus": false,
       "seeding_key": {
@@ -371,6 +404,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-Navigation-Mod1"
+        ],
+        "progression": "Wrap up"
       },
       "bonus": false,
       "seeding_key": {

@@ -105,14 +105,14 @@ sv-SE:
         title: Flervalsfråga
       2-3 Maze Match 2:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a3.png"
         content1: Matcha pusslet till blocken
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
         title: Labyrint matchning
       2-3 Maze Multi 2:
         answers:
@@ -161,92 +161,106 @@ sv-SE:
         - {}
         - {}
         - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png"
         content2: Matcha slingan till formen
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
         title: Konstnärs-slinga matchning 1
       2-3 artist loops multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
         questions:
         - text: Vilken form skapar den här slingan?
         title: Konstnär Slingor flervalsfrågor
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
+          500"
       2-3 artist loops multi 2:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
+          correct: true
         questions:
         - text: Vilken form är gjord av detta program?
         title: Konstnär Slingor flervalsfrågor
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
+          500"
       2-3 artist match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png"
         content1: Matcha formen med de block som slutför den.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png"
         title: Artist matchande
       2-3 bee conditionals multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
         questions:
         - text: Vilken jämförelse nedan är sann?
         title: Bi villkorssatser flervalsfråga 1
       2-3 bee conditionals multi 3:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
         questions:
         - text: Välj de bästa blocken.
         title: Bi villkorssatser flervalsfråga 2
+        content1: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
+          500"
       2-3 bee loops multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png"
         questions:
         - text: Vilket block samlar all nektar?
         title: Bi-slingor flervalssvar 1
+        content1: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500"
       2-3 maze match 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png"
         content1: Matcha pusslet till blocken
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png"
         title: Labyrint matchar en
       2-3 maze multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png"
         questions:
         - text: Vilken uppsättning block är det rätta svaret?
         title: Labyrint Flerval Ett
+        content1: "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500"
       4-5 Algorithms Match 1:
         answers:
         - text: "<h4>Set spelare 1 poäng  0</h4>"
@@ -325,18 +339,20 @@ sv-SE:
         title: Flervalsfråga
       4-5 Internet Multi 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: 23.23.224.106
+        - text: 54.209.61.132
+        - text: 64.14.68.10
+        - text: 54.243.71.82
+          correct: true
         questions:
         - text: När du försöker logga in på code.org, vilken IP-adress är mest sannolikt
             att DNS-servern tar dig till?
         title: Flervalsfråga
       4-5 Internet Multi 2:
         answers:
-        - {}
-        - correct: true
+        - text: code.org
+        - text: csisfun.com
+          correct: true
         - {}
         - {}
         questions:
@@ -612,7 +628,7 @@ sv-SE:
       CSD U3 Boolean MC:
         answers:
         - correct: true
-        - {}
+        - text: "0  \n200  \n100"
         - {}
         - {}
         questions:
@@ -621,7 +637,7 @@ sv-SE:
       CSD U3 Boolean MC_2018:
         answers:
         - correct: true
-        - {}
+        - text: "0  \n200  \n100"
         - {}
         - {}
         questions:
@@ -630,7 +646,7 @@ sv-SE:
       CSD U3 Boolean MC_2018_2019:
         answers:
         - correct: true
-        - {}
+        - text: "0  \n200  \n100"
         - {}
         - {}
         questions:
@@ -688,47 +704,53 @@ sv-SE:
       CSD U3 Sprite Movement Predict Multi:
         answers:
         - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "![](https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif)"
+        - text: "![](https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif)"
+          correct: true
+        - text: "![](https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif)"
         questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
         answers:
         - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "![](https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif)"
+        - text: "![](https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif)"
+          correct: true
+        - text: "![](https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif)"
         questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
         answers:
         - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "![](https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif)"
+        - text: "![](https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif)"
+          correct: true
+        - text: "![](https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif)"
         questions:
         - {}
       CSD U3 Sprites intro predict multi:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "![](https://images.code.org/9b55104462fe654f5f5410e635671c36-image-1579828016057.png)"
+        - text: "![](https://images.code.org/03bee2faf00d4edb534098397596df49-image-1579828016060.png)"
+        - text: "![](https://images.code.org/f7641c6d502ccae8c6e311a7b764ea4e-image-1579828016054.png)"
+          correct: true
+        - text: "![](https://images.code.org/cd6993477eac8964c01303661ef4e9ce-image-1579828016062.png)"
         questions:
         - {}
       CSD U3 Sprites intro predict multi_2018:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "![](https://images.code.org/ad526743d374c692b411f61a52b89398-image-1579828535705.png)"
+          correct: true
+        - text: "![](https://images.code.org/975d041b251956c9f821ab976f22a005-image-1579828535713.png)"
+        - text: "![](https://images.code.org/6e19ea3d0036aa734e9b9cd6a4b3fbc8-image-1579828535708.png)"
+        - text: "![](https://images.code.org/d3f8937565496bba2654f0eb3935554b-image-1579828535710.png)"
         questions:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
         answers:
-        - correct: true
-        - {}
+        - text: "![](https://images.code.org/8ca2c292184206f6b197b5818ac2af7c-image-1580245775794.png)"
+          correct: true
+        - text: "![](https://images.code.org/2176c09b3f0e422581bef15c4e6ec4eb-image-1580245775797.png)"
         - {}
         - {}
         questions:
@@ -819,6 +841,8 @@ sv-SE:
         - correct: true
         questions:
         - {}
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)\n"
       CSD U6 array multi_2018:
         answers:
         - {}
@@ -827,6 +851,8 @@ sv-SE:
         - correct: true
         questions:
         - {}
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)\n"
       CSD U6 array multi_2018_2019:
         answers:
         - {}
@@ -835,6 +861,8 @@ sv-SE:
         - correct: true
         questions:
         - {}
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)\n"
       CSD U6 final intro:
         content1: Beskrivning här
       CSD U6 final intro_2018:
@@ -843,26 +871,29 @@ sv-SE:
         content1: Beskrivning här
       CSD U6 setProperty predict multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
+        - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
+        - text: "![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)"
+        - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
+          correct: true
         questions:
         - {}
       CSD U6 setProperty predict multi_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
+        - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
+        - text: "![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)"
+        - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
+          correct: true
         questions:
         - {}
       CSD U6 setProperty predict multi_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
+        - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
+        - text: "![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)"
+        - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
+          correct: true
         questions:
         - {}
       Dance_Party_extras_intro:
@@ -1255,33 +1286,37 @@ sv-SE:
         content1: Beskrivning här
       behaviors 1 predict:
         answers:
-        - {}
+        - feedback: Fel.
         - correct: true
-        - {}
+          feedback: Rätt!
+        - feedback: Fel.
         - feedback: Fel
         questions:
         - {}
       behaviors 1 predict_2020:
         answers:
-        - {}
+        - feedback: Fel.
         - correct: true
-        - {}
+          feedback: Rätt!
+        - feedback: Fel.
         - feedback: Fel
         questions:
         - {}
       behaviors 4 predict:
         answers:
-        - {}
+        - feedback: Fel.
         - correct: true
-        - {}
+          feedback: Rätt!
+        - feedback: 'Fel. '
         - feedback: Fel
         questions:
         - {}
       behaviors 4 predict_2020:
         answers:
-        - {}
+        - feedback: Fel.
         - correct: true
-        - {}
+          feedback: Rätt!
+        - feedback: 'Fel. '
         - feedback: Fel
         questions:
         - {}
@@ -1290,7 +1325,8 @@ sv-SE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Rätt!
+        - text: Jag vet inte.
         questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018:
@@ -1298,7 +1334,8 @@ sv-SE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Rätt!
+        - text: Jag vet inte.
         questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
@@ -1306,7 +1343,8 @@ sv-SE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Rätt!
+        - text: Jag vet inte.
         questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019_2020:
@@ -1314,7 +1352,8 @@ sv-SE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Rätt!
+        - text: Jag vet inte.
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1:
@@ -1322,8 +1361,9 @@ sv-SE:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: Rätt!
         - text: '15'
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
@@ -1331,8 +1371,9 @@ sv-SE:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: Rätt!
         - text: '15'
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
@@ -1340,8 +1381,9 @@ sv-SE:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: Rätt!
         - text: '15'
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019_2020:
@@ -1349,32 +1391,36 @@ sv-SE:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: Rätt!
         - text: '15'
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
@@ -1382,39 +1428,43 @@ sv-SE:
         - {}
         - correct: true
         - correct: true
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019_2020:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseC_multi_starWars_predict1:
@@ -1422,7 +1472,8 @@ sv-SE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Rätt!
+        - text: Jag vet inte
         questions:
         - {}
       courseC_multi_starWars_predict1_2018:
@@ -1430,7 +1481,8 @@ sv-SE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Rätt!
+        - text: Jag vet inte
         questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019:
@@ -1438,7 +1490,8 @@ sv-SE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Rätt!
+        - text: Jag vet inte
         questions:
         - {}
       courseC_multi_starWars_predict1_2018_2019_2020:
@@ -1446,183 +1499,217 @@ sv-SE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Rätt!
+        - text: Jag vet inte
         questions:
         - {}
       courseC_multi_starWars_predict2:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseC_multi_starWars_predict2_2018:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019_2020:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_artist_binary8_predict1:
         answers:
         - text: A
+          feedback: Fel.
         - text: B
+          feedback: Fel.
         - text: C
+          feedback: Fel.
         - text: D
           correct: true
+          feedback: Rätt!
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018:
         answers:
         - text: A
+          feedback: Fel.
         - text: B
+          feedback: Fel.
         - text: C
+          feedback: Fel.
         - text: D
           correct: true
+          feedback: Rätt!
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
         answers:
         - text: A
+          feedback: Fel.
         - text: B
+          feedback: Fel.
         - text: C
+          feedback: Fel.
         - text: D
           correct: true
+          feedback: Rätt!
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
         - text: A
+          feedback: Fel.
         - text: B
+          feedback: Fel.
         - text: C
+          feedback: Fel.
         - text: D
           correct: true
+          feedback: Rätt!
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
         - text: A
           correct: true
+          feedback: Rätt!
         - text: B
         - text: C
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - text: A
           correct: true
+          feedback: Rätt!
         - text: B
         - text: C
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
         - text: A
           correct: true
+          feedback: Rätt!
         - text: B
         - text: C
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
         answers:
         - text: A
           correct: true
+          feedback: Rätt!
         - text: B
         - text: C
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_copy:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - correct: true
+          feedback: Rätt!
         - {}
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - correct: true
+          feedback: Rätt!
         - {}
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
         - correct: true
+          feedback: Rätt!
         - {}
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
         - correct: true
+          feedback: Rätt!
         - {}
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
@@ -1630,7 +1717,8 @@ sv-SE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Rätt!
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
@@ -1638,7 +1726,8 @@ sv-SE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Rätt!
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
@@ -1646,7 +1735,8 @@ sv-SE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Rätt!
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
@@ -1654,7 +1744,8 @@ sv-SE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Rätt!
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
@@ -1662,8 +1753,9 @@ sv-SE:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: Rätt!
         - text: '12'
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
@@ -1671,8 +1763,9 @@ sv-SE:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: Rätt!
         - text: '12'
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
@@ -1680,8 +1773,9 @@ sv-SE:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: Rätt!
         - text: '12'
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
@@ -1689,8 +1783,9 @@ sv-SE:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: Rätt!
         - text: '12'
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_collector_debugging10_predict1:
@@ -1698,7 +1793,8 @@ sv-SE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Rätt!
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1:
@@ -1706,7 +1802,8 @@ sv-SE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Rätt!
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
@@ -1714,7 +1811,8 @@ sv-SE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Rätt!
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
@@ -1722,7 +1820,8 @@ sv-SE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Rätt!
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
@@ -1730,47 +1829,53 @@ sv-SE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Rätt!
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_farmer_ramp13:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_farmer_while10_predict2:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019_2020:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_farmer_while4_predict1:
@@ -1778,7 +1883,8 @@ sv-SE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Rätt!
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018:
@@ -1786,7 +1892,8 @@ sv-SE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Rätt!
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
@@ -1794,7 +1901,8 @@ sv-SE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Rätt!
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019_2020:
@@ -1802,79 +1910,89 @@ sv-SE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Rätt!
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_maze_until10_predict2:
         answers:
         - correct: true
+          feedback: Rätt!
         - {}
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - correct: true
+          feedback: Rätt!
         - {}
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_maze_until10_predict2_2018_2019:
         answers:
         - correct: true
+          feedback: Rätt!
         - {}
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_maze_until10_predict2_2018_2019_2020:
         answers:
         - correct: true
+          feedback: Rätt!
         - {}
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_maze_until2_predict1:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2018:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019_2020:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_scrat_predict1:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseE_multi_bee_functions_predict1:
@@ -1882,7 +2000,7 @@ sv-SE:
         - correct: true
         - {}
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseE_multi_farmer_functions11_predict:
@@ -1891,6 +2009,7 @@ sv-SE:
         - {}
         - {}
         - correct: true
+          feedback: Rätt!
         questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018:
@@ -1898,6 +2017,7 @@ sv-SE:
         - {}
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
         questions:
         - {}
@@ -1906,6 +2026,7 @@ sv-SE:
         - {}
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
         questions:
         - {}
@@ -1914,6 +2035,7 @@ sv-SE:
         - {}
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
         questions:
         - {}
@@ -1961,24 +2083,27 @@ sv-SE:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseF_bee_variables_8a_2018_2019_2020:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseF_multi_artist_for10_predict1:
@@ -1986,7 +2111,8 @@ sv-SE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Rätt!
+        - text: Jag vet inte.
         questions:
         - {}
       courseF_multi_artist_for10_predict1_2018:
@@ -1994,7 +2120,8 @@ sv-SE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Rätt!
+        - text: Jag vet inte.
         questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
@@ -2002,7 +2129,8 @@ sv-SE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Rätt!
+        - text: Jag vet inte.
         questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019_2020:
@@ -2010,69 +2138,78 @@ sv-SE:
         - {}
         - {}
         - correct: true
-        - {}
+          feedback: Rätt!
+        - text: Jag vet inte.
         questions:
         - {}
       courseF_multi_artist_fwp2_predict1:
         answers:
         - correct: true
+          feedback: Rätt!
         - {}
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1:
         answers:
         - correct: true
+          feedback: Rätt!
         - {}
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
         - correct: true
+          feedback: Rätt!
         - {}
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
         answers:
         - correct: true
+          feedback: Rätt!
         - {}
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
         - correct: true
+          feedback: Rätt!
         - {}
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseF_multi_bee_conditionals1_predict1:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseF_multi_bee_conditionals7_predict2:
         answers:
         - correct: true
+          feedback: Rätt!
         - {}
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseF_multi_bee_for3_predict1:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
         - {}
         questions:
@@ -2081,6 +2218,7 @@ sv-SE:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
         - {}
         questions:
@@ -2089,6 +2227,7 @@ sv-SE:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
         - {}
         questions:
@@ -2097,6 +2236,7 @@ sv-SE:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
         - {}
         questions:
@@ -2106,21 +2246,23 @@ sv-SE:
         - {}
         - correct: true
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseF_multi_playlab_variables4c_predictive1:
         answers:
         - correct: true
+          feedback: 'Rätt. '
         - {}
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       coursee_prediction_artistfunction2:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
         - {}
         questions:
@@ -2129,6 +2271,7 @@ sv-SE:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
         - {}
         questions:
@@ -2137,6 +2280,7 @@ sv-SE:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
         - {}
         questions:
@@ -2145,6 +2289,7 @@ sv-SE:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
         - {}
         questions:
@@ -2159,32 +2304,36 @@ sv-SE:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       outbreak_story:
@@ -2417,6 +2566,7 @@ sv-SE:
         - {}
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
         questions:
         - {}
@@ -2425,6 +2575,7 @@ sv-SE:
         - text: '4'
         - text: '12'
           correct: true
+          feedback: Rätt!
         - text: '15'
         - text: '20'
         questions:
@@ -2441,6 +2592,7 @@ sv-SE:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
         - {}
         questions:
@@ -2450,6 +2602,7 @@ sv-SE:
         - {}
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
         questions:
         - {}
@@ -2457,6 +2610,7 @@ sv-SE:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
         - {}
         questions:
@@ -2465,6 +2619,7 @@ sv-SE:
         answers:
         - text: A
           correct: true
+          feedback: Rätt!
         - text: B
         - text: C
         - {}
@@ -2474,6 +2629,7 @@ sv-SE:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
         - {}
         questions:
@@ -2482,13 +2638,15 @@ sv-SE:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
-        - {}
+        - text: Jag vet inte.
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2021:
         answers:
         - correct: true
+          feedback: Rätt!
         - {}
         - {}
         - {}
@@ -2499,6 +2657,7 @@ sv-SE:
         - {}
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
         questions:
         - {}
@@ -2507,6 +2666,7 @@ sv-SE:
         - text: '4'
         - text: '8'
           correct: true
+          feedback: Rätt!
         - text: '10'
         - text: '12'
         questions:
@@ -2516,6 +2676,7 @@ sv-SE:
         - {}
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
         questions:
         - {}
@@ -2523,6 +2684,7 @@ sv-SE:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
         - {}
         questions:
@@ -2532,12 +2694,14 @@ sv-SE:
         - {}
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
         questions:
         - {}
       courseD_multi_maze_until10_predict2_2021:
         answers:
         - correct: true
+          feedback: Rätt!
         - {}
         - {}
         - {}
@@ -2547,6 +2711,7 @@ sv-SE:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
         - {}
         questions:
@@ -2556,6 +2721,7 @@ sv-SE:
         - {}
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
         questions:
         - {}
@@ -2564,6 +2730,7 @@ sv-SE:
         - {}
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
         questions:
         - {}
@@ -2588,6 +2755,7 @@ sv-SE:
         - {}
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
         questions:
         - {}
@@ -2611,6 +2779,7 @@ sv-SE:
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
         - correct: true
+          feedback: Rätt!
         - {}
         - {}
         - {}
@@ -2620,6 +2789,7 @@ sv-SE:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
         - {}
         questions:
@@ -2646,6 +2816,7 @@ sv-SE:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
         - {}
         questions:
@@ -2660,6 +2831,7 @@ sv-SE:
         answers:
         - {}
         - correct: true
+          feedback: Rätt!
         - {}
         - {}
         questions:
@@ -2759,7 +2931,7 @@ sv-SE:
       CSD U3 Boolean MC_2018_2019_pilot_2021:
         answers:
         - correct: true
-        - {}
+        - text: "0  \n200  \n100"
         - {}
         - {}
         questions:
@@ -2776,9 +2948,10 @@ sv-SE:
       CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
         answers:
         - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "![](https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif)"
+        - text: "![](https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif)"
+          correct: true
+        - text: "![](https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif)"
         questions:
         - {}
       CSD U3 drawSprites placement match_2019_pilot_2021:
@@ -2806,13 +2979,20 @@ sv-SE:
         - correct: true
         questions:
         - {}
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)\n"
       CSD U6 final intro_2021:
         content1: Beskrivning här
       CSD U6 setProperty predict multi_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
+        - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
+        - text: "![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)"
+        - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
+          correct: true
         questions:
         - {}
+      CSD CSS project RGB_2021:
+        display_name: RGB-färger
+      CSD HTML project Lists_2021:
+        display_name: HTML-listor

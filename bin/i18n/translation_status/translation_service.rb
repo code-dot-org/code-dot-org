@@ -16,7 +16,7 @@ class TranslationService
     if scope == ""
       I18n.exists?(key, locale: locale)
     else
-      !I18n.t(key, scope: JSON.parse(scope), smart: true).include?("translation missing:")
+      !I18n.t(key, scope: JSON.parse(scope), smart: true, tracking: false).include?("translation missing")
     end
   end
 

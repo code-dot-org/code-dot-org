@@ -21,6 +21,7 @@
 #  properties                  :text(65535)
 #  deleted_at                  :datetime
 #  status_timestamp_change_log :text(65535)
+#  applied_at                  :datetime
 #
 # Indexes
 #
@@ -884,9 +885,9 @@ module Pd::Application
 
     # @override
     # Filter out extraneous answers based on selected program (course)
-    def self.filtered_labels(course)
-      raise "Invalid course #{course}" unless VALID_COURSES.include?(course)
-      FILTERED_LABELS[course]
+    def self.filtered_labels(course, status = 'unreviewed')
+      raise "Invalid course #{course}" unless VALID_COURSES.include?(course) || status == 'incomplete'
+      status == 'incomplete' ? {} : FILTERED_LABELS[course]
     end
 
     # List of columns to be filtered out based on selected program (course)
@@ -1136,6 +1137,7 @@ module Pd::Application
     end
 
     def meets_criteria
+      return if incomplete?
       response_scores = response_scores_hash[:meets_minimum_criteria_scores] || {}
 
       scored_questions = SCOREABLE_QUESTIONS["criteria_score_questions_#{course}".to_sym]

@@ -146,6 +146,7 @@ export class QuickView extends React.Component {
             <FormGroup className="pull-right">
               <ControlLabel>Filter by Status</ControlLabel>
               <Select
+                id="status-filter"
                 value={this.state.filter}
                 onChange={this.handleStateChange}
                 placeholder={null}

@@ -433,6 +433,8 @@ ky:
           lessons:
             Teacher Dashboard:
               name: Мугалимдин тактасы
+        basketball:
+          name: баскетбол
         hoc-encryption:
           title: 'Код сааты: кадимки шифрлөө'
         csd2-2017:
@@ -2400,3 +2402,24 @@ ky:
           lesson_groups:
             lessonGroup-8:
               display_name: Өзгөрмөлөр
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Өзгөрмөлөр
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Циклдер
+              key: Циклдер
+            Events:
+              name: Окуялар
+              key: Окуялар
+            Conditionals:
+              name: Шартуулар
+              key: Шартуулар
+            Functions:
+              name: Функциялар
+              key: Функциялар
+            Variables:
+              name: Өзгөрмөлөр
+              key: Өзгөрмөлөр

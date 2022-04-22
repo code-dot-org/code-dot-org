@@ -921,6 +921,8 @@ hy:
               display_name: պարունակություն
             practice:
               display_name: Ուսուցիչի փորձեր
+        basketball:
+          name: basketball
         csd2-2017:
           lessons:
             Lists:
@@ -3013,6 +3015,9 @@ hy:
             lessonGroup-2:
               display_name: պարունակություն
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: For Loops
           lesson_groups:
             lessonGroup-2:
               display_name: պարունակություն
@@ -3069,3 +3074,30 @@ hy:
           lesson_groups:
             lessonGroup-2:
               display_name: պարունակություն
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: փոփոխականների
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: loops
+              key: loops
+            Events:
+              name: Իրադարձություններ
+              key: Իրադարձություններ
+            Conditionals:
+              name: conditionals
+              key: conditionals
+            Functions:
+              name: գործառույթները
+              key: գործառույթները
+            Variables:
+              name: փոփոխականների
+              key: փոփոխականների
+            For Loops:
+              name: For Loops
+              key: For Loops

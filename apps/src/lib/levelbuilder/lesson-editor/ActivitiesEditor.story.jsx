@@ -69,7 +69,10 @@ export default storybook => {
       name: 'ActivitiesEditor For Lesson With Lesson Plan',
       story: () => (
         <Provider store={createStoreWithLessonPlan()}>
-          <ActivitiesEditor hasLessonPlan={true} />
+          <ActivitiesEditor
+            hasLessonPlan={true}
+            allowMajorCurriculumChanges={true}
+          />
         </Provider>
       )
     },
@@ -77,7 +80,21 @@ export default storybook => {
       name: 'ActivitiesEditor For Lesson Without Lesson Plan',
       story: () => (
         <Provider store={createStoreWithoutLessonPlan()}>
-          <ActivitiesEditor hasLessonPlan={false} />
+          <ActivitiesEditor
+            hasLessonPlan={false}
+            allowMajorCurriculumChanges={true}
+          />
+        </Provider>
+      )
+    },
+    {
+      name: 'ActivitiesEditor when major changes are not allowed',
+      story: () => (
+        <Provider store={createStoreWithoutLessonPlan()}>
+          <ActivitiesEditor
+            hasLessonPlan={true}
+            allowMajorCurriculumChanges={false}
+          />
         </Provider>
       )
     }

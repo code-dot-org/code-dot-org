@@ -1,0 +1,24 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**Do this:**\r\n\r\n1. Declare and initialize a variable `originalNumber`.  Initialize it to any value you you choose.\r\n2. Declare and initialize a variable `magicNumber`.  Initialize it to 2 times the value stored in `originalNumber`.\r\n3. Update the value stored in `magicNumber` by adding 10 to the value.\r\n4. Update the value stored in `magicNumber` by dividing by 2.\r\n5. Update the value stored in `magicNubmer` by subtracting `originalNumber` from `magicNumber`. \r\n6. Update the value stored in `magicNumber` by adding 1 to the value.\r\n7. Print the value of `magicNumber` to the console.  If you did this correctly, you should see the value `6` printed to the console. \r\n",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MagicNumber.java": {
+        "text": "public class MagicNumber{\n\n  public static void main(String[] args){\n\n    // TO DO: \n    // 1.Declare and initialize a variable originalNumber. Initialize it to any value you you choose.\n    \n    // 2. Declare and initialize a variable magicNumber. Initialize it to 2 times the value stored in originalNumber.\n    \n    // 3. Update the value stored in magicNumber by adding 10 to the value. \n    \n    // 4. Update the value stored in magicNumber by dividing by 2.\n    \n    // 5. Update the value stored in magicNubmer by subtracting originalNumber from magicNumber.\n    \n    // 6. Update the value stored in magicNumber by adding 1 to the value.\n    \n    // 7. Print the value of magicNumber to the console. If you did this correctly, you should see the value 6 printed to the console.\n\n\n  }\n}",
+        "isVisible": true
+      }
+    }
+  },
+  "game_id": 68,
+  "created_at": "2022-03-13T15:57:44.000Z",
+  "level_num": "custom",
+  "user_id": 977,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-03-13 16:00:45 +0000\",\"changed\":[\"published\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-13 16:01:56 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-13 16:03:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-16 18:31:54 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-18 17:22:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-18 17:22:55 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-04-19 15:07:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]"
+}]]></config>
+</Javalab>

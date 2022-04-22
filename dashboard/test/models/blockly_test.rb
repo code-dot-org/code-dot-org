@@ -139,7 +139,7 @@ XML
 
   test 'field_or_title' do
     no_fields_or_titles = Nokogiri::XML('<xml><block type="block1"></block></xml>', &:noblanks)
-    assert_equal "field", Blockly.field_or_title(no_fields_or_titles)
+    assert_equal "title", Blockly.field_or_title(no_fields_or_titles)
 
     fields = Nokogiri::XML('<xml><block type="block2"><field name="value">Example</field></block></xml>', &:noblanks)
     assert_equal "field", Blockly.field_or_title(fields)

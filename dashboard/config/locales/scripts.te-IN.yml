@@ -26,6 +26,7 @@ te:
           lessons:
             Dance Party:
               name: డాన్స్ పార్టీ
+          name: డాన్స్
         dance--draft:
           lessons:
             Dance Party:
@@ -69,10 +70,6 @@ te:
           lesson_groups:
             csf_events:
               display_name: ఈవెంట్లు
-        dance-2019:
-          lessons:
-            Dance Party:
-              name: డాన్స్ పార్టీ
         k5-onlinepd-2019:
           lessons:
             Events:
@@ -1018,3 +1015,8 @@ te:
                 మరియు పద్దతుల ప్రీకండిషన్స్ మరియు పోస్ట్‌కండిషన్స్‌ను విద్యార్థులు
                 గుర్తించారు మరియు డాక్యుమెంట్ చేశారు. ఇప్పుడు, మల్టిపుల్-ఛాయిస్ మదింపుపై
                 యూనిట్ లెర్నింగ్ లక్ష్యాలను సాధించడాన్ని విద్యార్థులు మూల్యాంకనం చేస్తారు.
+        k5-onlinepd-2022:
+          lessons:
+            Events:
+              name: ఈవెంట్లు
+              key: ఈవెంట్లు

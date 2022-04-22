@@ -969,6 +969,12 @@ az:
         text: rəy bildir
       gamelab_draggable:
         text: sürüklənən olması
+      gamelab_everySeconds:
+        text: 'təkrarla hər '
+        options:
+          UNIT:
+            '"seconds"': saniyələr
+            '"frames"': çərçivə
       gamelab_followingTargets:
         text: hədəfləri izləmək
       gamelab_getProp:
@@ -1145,7 +1151,7 @@ az:
             "'sound://category_animals/elephant.mp3'": fil
             "'sound://category_animals/dolphin.mp3'": delfin
             "'sound://category_nature/thunderstorm_1.mp3'": ildırım
-            "'sound://category_animals/chick.mp3'": Cücə
+            "'sound://category_animals/chick.mp3'": cücə
             "'sound://category_animals/dog.mp3'": it
             "'sound://category_animals/tiger.mp3'": pələng
             "'sound://category_collect/trill_stings.mp3'": titrək səs

@@ -28,6 +28,9 @@
         "0cb1e680-8c08-4e85-bedf-0f968f52052c": {
           "progression_name": "Öka takten, sakta ner"
         },
+        "fecbdcbc-84a9-4d8c-ad7b-080f493e26e6": {
+          "name": "Fira"
+        },
         "b2879d66-a5c6-4127-afe0-c5df430b8f30": {
           "name": "Nästa steg"
         },
@@ -55,6 +58,9 @@
             null
           ]
         },
+        "5f00e31d-70fa-4bb2-9bef-223793082f5c": {
+          "name": "Fira"
+        },
         "20b7009c-3a45-4211-a9ad-c65f56099200": {
           "name": "Nästa steg"
         },
@@ -75,6 +81,9 @@
           "tips": [
             null
           ]
+        },
+        "145782a9-a436-4615-9827-0f75d7e4b3a0": {
+          "name": "Fira"
         },
         "cc38f575-4db4-4ca6-ab2f-a9d8557f16cf": {
           "name": "Nästa steg"
@@ -131,6 +140,9 @@
             null
           ]
         },
+        "ca7d5e61-0396-4885-934c-0d70ab63b072": {
+          "name": "Fira"
+        },
         "d4bf5db5-6884-4166-ae90-3a5cd01b9695": {
           "name": "Nästa steg"
         },
@@ -154,6 +166,9 @@
           "tips": [
             null
           ]
+        },
+        "46f387e2-c275-4c57-acec-c9709e7f44fc": {
+          "name": "Fira"
         },
         "692a60f1-d3a2-44d3-8c58-19461d6b5999": {
           "name": "Nästa steg"
@@ -179,6 +194,9 @@
             null
           ]
         },
+        "e9751fff-a71d-4d90-b401-0ccbf3356c44": {
+          "name": "Fira"
+        },
         "3596cc47-e661-4d00-943e-ed858c4f6f5d": {
           "name": "Nästa steg"
         },
@@ -198,6 +216,9 @@
             null
           ]
         },
+        "3d63393a-9146-4027-8783-247e19637d25": {
+          "name": "Fira"
+        },
         "4ae122fa-da6f-4aaf-b2f8-c68fd0bb68af": {
           "name": "Nästa steg"
         },
@@ -208,6 +229,9 @@
           "tips": [
             null
           ]
+        },
+        "f95b4eed-639e-483e-bef7-ead9abf4808e": {
+          "name": "Reflektion"
         },
         "6b51b4f1-5b1d-4b29-af25-c48d716a2d22": {
           "tips": [
@@ -238,6 +262,9 @@
             null
           ]
         },
+        "3b92bb05-ac4c-4717-afce-ed3d10f54527": {
+          "name": "Fira"
+        },
         "59cd05df-cb4d-4280-8700-840826c01845": {
           "name": "Nästa steg"
         },
@@ -262,6 +289,9 @@
             null
           ]
         },
+        "4ab7fba9-4c63-43ff-bdce-accd34003eb2": {
+          "name": "Fira"
+        },
         "456b1d51-129d-43ff-aab9-727995464e36": {
           "name": "Nästa steg"
         },
@@ -269,6 +299,9 @@
           "tips": [
             null
           ]
+        },
+        "656eee11-dc6d-428e-8849-6e4b31dc8c81": {
+          "name": "Reflektion"
         },
         "5396c200-526e-4dd4-86dc-eefe7b52ec03": {
           "name": "Introduktion"
@@ -290,6 +323,9 @@
           "tips": [
             null
           ]
+        },
+        "7e26ffea-ccaa-4969-9b40-01573fbe4303": {
+          "name": "Fira"
         },
         "de9c3d28-c38a-4d2e-af91-a72a92d31f52": {
           "name": "Nästa steg"
@@ -327,6 +363,9 @@
             null
           ]
         },
+        "fc172d97-57ec-446d-bd3b-fd4f79aad8bf": {
+          "name": "Diskussion"
+        },
         "c694a6e6-b265-4802-bfca-bbc9180c8407": {
           "tips": [
             null
@@ -336,6 +375,9 @@
           "tips": [
             null
           ]
+        },
+        "d5d3f8eb-f17e-4f26-88a8-ca6422ed7a1f": {
+          "name": "Reflektion"
         },
         "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
           "tips": [
@@ -349,6 +391,9 @@
           "tips": [
             null
           ]
+        },
+        "4cb35c62-404e-42b9-9eaf-09ec2f485a2b": {
+          "name": "Fira"
         },
         "80ff32c9-0373-4125-a65e-bef5f0e21cba": {
           "name": "Nästa steg"
@@ -374,6 +419,9 @@
             null
           ]
         },
+        "6b574c8b-2319-4244-acc8-fb8405fa5737": {
+          "name": "Fira"
+        },
         "02dfa607-4f9e-404c-bdae-f9f423fa526c": {
           "name": "Nästa steg"
         },
@@ -392,6 +440,9 @@
           "tips": [
             null
           ]
+        },
+        "cd90d1b3-60ef-4236-a8a3-3c7701224f98": {
+          "name": "Fira"
         },
         "e4662587-95dc-4eae-b19f-dfee2139a34d": {
           "name": "Nästa steg"
@@ -415,6 +466,9 @@
             null
           ]
         },
+        "ec905c64-2e80-49d0-8da3-7d75ed8d0693": {
+          "name": "Reflektion"
+        },
         "88f6ccc1-0efa-4c60-985c-971a235d5645": {
           "tips": [
             null
@@ -424,6 +478,9 @@
           "tips": [
             null
           ]
+        },
+        "16a6a4db-d853-478e-9945-3f0d17865e80": {
+          "name": "Fira"
         },
         "450db873-f55e-4f30-bbb9-5dfde5bf47e4": {
           "name": "Nästa steg"
@@ -453,6 +510,9 @@
         },
         "0620e645-f84e-47ca-809b-3dcbe803d83e": {
           "progression_name": "Fri lek"
+        },
+        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
+          "name": "Reflektion"
         },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Introduktion",
@@ -487,6 +547,9 @@
           "tips": [
             null
           ]
+        },
+        "ceaf9d96-e806-48e1-9a95-30566999264e": {
+          "name": "Fira"
         },
         "680268d8-e3db-4f80-b56d-dfe40ada4d77": {
           "name": "Nästa steg"
@@ -544,6 +607,9 @@
         "501df195-7991-40ad-bad9-df715484240b": {
           "progression_name": "Öka takten, sakta ner"
         },
+        "2458fd7f-011d-4251-8877-2e90d5d55684": {
+          "name": "Fira"
+        },
         "0dffb367-12f3-485a-bcde-cf4e789baed9": {
           "name": "Nästa steg"
         },
@@ -561,6 +627,9 @@
           "tips": [
             null
           ]
+        },
+        "f6bcac9d-cd44-435f-8565-57a5926542f8": {
+          "name": "Fira"
         },
         "34bd90ee-f836-4e48-a793-b97fee0d99c8": {
           "name": "Nästa steg"
@@ -585,11 +654,40 @@
             null
           ]
         },
+        "b68a11cc-930a-4803-beca-1d4f49ede378": {
+          "name": "Reflektion"
+        },
+        "23e04aed-1959-463f-bdd4-1398b64e398a": {
+          "progression_name": "Inspiration!"
+        },
+        "26fd2e5e-b3ca-430e-aa20-71894b02d35c": {
+          "progression_name": "Inspiration!"
+        },
+        "b44b4f32-2417-442d-812d-10bba9a6edc0": {
+          "progression_name": "Ritning"
+        },
         "c27c28bc-8307-4ca5-a34b-8e05ba178c8b": {
           "progression_name": "variabler"
         },
+        "a781606d-23c1-42ae-a33d-ce9cfffe22b1": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
+        },
+        "39bb2754-5f8f-4a99-9de5-4d60ee128ae1": {
+          "progression_name": "Kollisioner"
+        },
         "59c2bc8f-30d3-47e5-a5c7-1ad0bb4f022b": {
           "progression_name": "funktioner"
+        },
+        "d6ed872d-76c1-4f17-a785-1279a9ad0a59": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
+        },
+        "56a94d0e-564a-472e-9008-1438acf4966d": {
+          "progression_name": "Ändra"
+        },
+        "aac1d281-2be2-4440-8604-3deeb63e9803": {
+          "progression_name": "Motorcykel"
         },
         "90bc9191-8e68-41bd-b8e9-8291930dca38": {
           "progression_name": "Händelser"
@@ -597,11 +695,19 @@
         "bb7c5b8b-e429-48e3-a3a2-e282059f2889": {
           "progression_name": "funktioner"
         },
+        "6038ca77-b7b2-4328-bbd8-e3e6380019e3": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
+        },
         "bca84870-d563-4903-b1d9-51253cbbfc90": {
           "progression_name": "'För' loopar"
         },
         "d03a5e1d-7252-4cd1-aea7-0bd0a228f9b0": {
           "progression_name": "Funktioner med parametrar"
+        },
+        "0767d56f-4e70-4485-b012-e40fd5a4065f": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
         },
         "7b967905-5749-43d3-a59c-a0c38b12b3e9": {
           "name": "Representerar bilder",
@@ -610,8 +716,31 @@
         "8c2572d4-ae23-481b-9a2d-a82c1ca6c083": {
           "progression_name": "Binära tal"
         },
+        "d49dc1ea-f661-4801-a625-310f2ec35f9a": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
+        },
+        "5707e98f-8fcf-43b9-8354-de0f584c610f": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
+        },
+        "b20a720d-b3ee-4431-a9ff-422a105447ee": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
+        },
+        "75c655ea-684c-41b8-a9a6-5004023d49a7": {
+          "name": "Demo-appar",
+          "progression_name": "Demo-appar"
+        },
         "ed742835-e65c-4038-9db0-9ec1c5d540eb": {
           "progression_name": "Händelser"
+        },
+        "86beda4f-2767-4c15-99e0-05219ac26008": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
+        },
+        "1759aec3-522b-4157-b4ba-dc298a147b0d": {
+          "progression_name": "Utforska HTML"
         },
         "bcc27c68-f369-4469-a472-2047c24ee541": {
           "progression_name": "Par-programmering"
@@ -619,8 +748,29 @@
         "35ccf024-6c5d-495e-83ce-00b1e89cecd9": {
           "progression_name": "Listor"
         },
+        "925c414c-8c3d-458d-8a67-499347d94aa0": {
+          "progression_name": "Listor i HTML"
+        },
         "0eb10caa-d6c3-4afd-bba1-c28694a1128a": {
           "progression_name": "Felsökning"
+        },
+        "d0482660-cd4b-442d-9b3a-1dccc9ee2318": {
+          "progression_name": "Hyperlänkar"
+        },
+        "988b26e3-ab8c-4d5b-b903-982c822e17bd": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
+        },
+        "a718ba21-525e-4e71-9152-8a72012f2c2f": {
+          "progression_name": "CSS-klasser"
+        },
+        "bee03d6f-d230-400d-86b7-1337b2d8b006": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
+        },
+        "1ae21f40-f50a-43a6-9a5d-9418ce1f461d": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
         },
         "3fea4a8d-84f4-4f63-a8d2-7085c77b4fef": {
           "progression_name": "Par-programmering"
@@ -737,11 +887,31 @@
           "name": "Projekt",
           "progression_name": "Projekt"
         },
+        "9c9cd7c5-d796-4eaa-9788-f6235478e387": {
+          "progression_name": "Ritning"
+        },
         "13d78339-15e3-4fa2-9b87-22412794083d": {
           "progression_name": "variabler"
         },
+        "b1d59b54-0412-42c6-8aaa-38c2894d6cdd": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
+        },
+        "760f3b31-7405-4e48-81a6-98a1ffc5eb31": {
+          "progression_name": "Kollisioner"
+        },
         "5b940af6-d4a1-44a8-b849-05fb591c9c9d": {
           "progression_name": "funktioner"
+        },
+        "a93b675e-fb6a-430e-86e6-ffbe77fea72e": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
+        },
+        "c1741e76-fbd0-48fa-85d3-50beacd5a130": {
+          "progression_name": "Ändra"
+        },
+        "00660afa-eea9-47c0-98ed-a100665e15bf": {
+          "progression_name": "Motorcykel"
         },
         "de9506b3-18cc-45c8-a490-9f9b49505977": {
           "progression_name": "Händelser"
@@ -749,11 +919,31 @@
         "1034ed9f-3647-40e8-a0c3-6ccf577ed385": {
           "progression_name": "funktioner"
         },
+        "742c3f07-5b58-48b1-a4df-8180d29ed609": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
+        },
         "d6edc1c1-8e4b-47d8-821a-718c5007dfc6": {
           "progression_name": "'För' loopar"
         },
         "1ea8ae38-1276-4214-9baa-667d745ca47c": {
           "progression_name": "Funktioner med parametrar"
+        },
+        "12296f1e-4a27-45e0-b951-597d94b413ab": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
+        },
+        "62719290-7600-46ad-9665-13d4025300b0": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
+        },
+        "b5785efd-9e8a-48d7-a5a4-8af4fb5cc2b1": {
+          "name": "Demo-appar",
+          "progression_name": "Demo-appar"
+        },
+        "758bff77-ce78-4c98-bc3a-d5968a9032d3": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
         },
         "fea857ea-63be-405b-804a-7c6973defe5a": {
           "name": "Representerar bilder",
@@ -762,14 +952,49 @@
         "d9046a60-1bfa-40fd-bc94-4d9fb418cabf": {
           "progression_name": "Binära tal"
         },
+        "8bfda8a9-2f92-4cf9-8fcd-1c3009cc0e63": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
+        },
+        "40a3f261-c8e8-4724-83fd-10c3f539083f": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
+        },
+        "3abf4793-4d90-45c7-a47e-3e44a09581eb": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
+        },
+        "39bd7199-1d64-4d15-86e7-c038ca4fc357": {
+          "progression_name": "Utforska HTML"
+        },
         "4dcbbc45-c3df-4c2c-a75e-c5b2b5cc23db": {
           "progression_name": "Par-programmering"
         },
         "96c1880e-e7f9-43dd-a4e8-d89a104289cc": {
           "progression_name": "Listor"
         },
+        "f0d0bab0-1583-48e8-ad7b-194e498fcece": {
+          "progression_name": "Listor i HTML"
+        },
         "9b99bbac-c605-4a93-a573-277dbf0d31fe": {
           "progression_name": "Felsökning"
+        },
+        "90332559-0ced-42cf-b103-e30e0fc60e83": {
+          "progression_name": "Hyperlänkar"
+        },
+        "301881e9-8b2a-430a-9bf3-928038396c1f": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
+        },
+        "011ef4d6-4373-4beb-ab13-e77d1fa25dc5": {
+          "progression_name": "CSS-klasser"
+        },
+        "c3775f6e-614c-43a0-bc6f-c5a3da7a12bb": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
+        },
+        "2af454bc-9b55-4205-b0fd-247af66b3d13": {
+          "progression_name": "Ritning"
         },
         "aaec28b5-6d69-44c7-a70d-37dcba2745b6": {
           "name": "Fri lek",
@@ -810,6 +1035,10 @@
           "name": "Fri lek",
           "progression_name": "Fri lek"
         },
+        "f72b823d-ca51-4ed1-8d06-1ccf7f0960d6": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
+        },
         "3c2057a7-5065-43b6-9b53-bef50c2f9f3c": {
           "name": "Fri lek",
           "progression_name": "Fri lek"
@@ -822,6 +1051,9 @@
           "name": "Fri lek",
           "progression_name": "Fri lek"
         },
+        "3403945d-a572-4b10-b27d-49e00450b1f5": {
+          "progression_name": "Kollisioner"
+        },
         "744fd0ee-23fb-497a-a32e-edd8c31ffe13": {
           "name": "Fri lek",
           "progression_name": "Fri lek"
@@ -833,11 +1065,26 @@
           "name": "Fri lek",
           "progression_name": "Fri lek"
         },
+        "4a3c9ed6-af53-4747-9298-b104980a8961": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
+        },
+        "acb37390-01f3-460c-a88c-24c6379925a1": {
+          "progression_name": "Ändra"
+        },
+        "c4092a38-e690-4e82-8263-5be0b97c4208": {
+          "name": "Motorcykel",
+          "progression_name": "Motorcykel"
+        },
         "14876891-4b0e-4960-878d-f5c7b5771261": {
           "progression_name": "Händelser"
         },
         "470f48a9-4ea6-404a-8b41-9d36a5e9fa9a": {
           "progression_name": "funktioner"
+        },
+        "5436a65c-d0a9-4c88-a666-97fd1238f2f3": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
         },
         "ffe0d2ab-7af9-4415-8af0-48c88e6a0693": {
           "progression_name": "'För' loopar"
@@ -848,14 +1095,42 @@
         "41a48a88-144d-417d-a903-a09df11b7f9c": {
           "progression_name": "Funktioner med parametrar"
         },
+        "6d0332f9-d670-4588-9e96-5975fb480945": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
+        },
+        "0d50b717-9980-44bd-b6ea-bc0eb94d867b": {
+          "progression_name": "Utforska HTML"
+        },
         "322f42db-5491-4424-9d7b-b64af0b54703": {
           "progression_name": "Par-programmering"
         },
         "617bb683-840e-46f3-bfaf-72dea5842d0f": {
           "progression_name": "Listor"
         },
+        "9b3c9550-ffd2-4e71-b964-3dd6b47d77c3": {
+          "progression_name": "Listor i HTML"
+        },
         "3fcf676a-373f-41b3-8cf1-ecb10c28ec23": {
           "progression_name": "Felsökning"
+        },
+        "8827ab7e-b9de-478f-bd04-0897af746bc3": {
+          "progression_name": "Hyperlänkar"
+        },
+        "24f32bdd-aa52-4b1e-9dc3-53b6496ad1e9": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
+        },
+        "0b5bd0f5-7877-44d7-a983-b44ce18b5507": {
+          "progression_name": "CSS-klasser"
+        },
+        "83e68b3a-06c9-4278-90ed-97eeece79402": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
+        },
+        "dec8e91e-820f-47ce-928c-c6c4cc3da0b8": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
         },
         "f3b6cfe0-5520-47a1-9eef-38bbecffeb2b": {
           "name": "Representerar bilder",
@@ -863,6 +1138,10 @@
         },
         "ea794705-6489-44b1-a635-9a1a2249d4e5": {
           "progression_name": "Binära tal"
+        },
+        "47869dfd-2880-4471-a11b-c181a9f427e9": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
         },
         "11c25022-a283-488e-9952-4d58bd243a7e": {
           "progression_name": "Översikt"
@@ -877,13 +1156,29 @@
         "6cbd55ba-116e-493c-8bea-b71096dd0a05": {
           "progression_name": "Översikt"
         },
+        "4f744a54-0d8b-49a1-8581-fc05cef356c6": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
+        },
+        "f65ab3ae-4788-4d17-b858-3d3793684aa7": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
+        },
+        "858107cb-9f3a-4a39-a845-057b8c45b744": {
+          "name": "Demo-appar",
+          "progression_name": "Demo-appar"
+        },
         "2462e46e-2f0c-48e2-b59d-bd3bb61ab202": {
           "progression_name": "Händelser"
+        },
+        "8d51b4d0-8689-45d2-ab63-037dced30a56": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
         },
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
           "description": "#### Introduktion\n\nVälkomna eleverna till lektionen och presentera dagens aktivitet.",
           "tips": [
-            "Ett sätt att presentera kodningstimmen om du inte är så bekant med kodning själv är att visa en av [våra inspirationsvideor](https://hourofcode.com/promote/resources#videos). Välj den som du tror att dina elever kommer att tycka är inspirerande och dela den nu. För elever i åldern 11 till 14 år föreslår vi [Kodningstimmen är här](https://youtu.be/FC5FbmsH4fw)."
+            "Ett sätt att presentera kodningstimmen om du inte är så bekant med kodning själv är att visa en av [våra inspirationsvideor][0]. Välj den som du tror att dina elever kommer att tycka är inspirerande och dela den nu. För elever i åldern 11 till 14 år föreslår vi [Kodningstimmen är här][1]."
           ]
         },
         "d99fc09e-a586-41df-84b2-e552cc4735e3": {
@@ -896,7 +1191,7 @@
           "description": "Visste ni att datavetenskap kan vara väldigt kreativt? Faktum är att ni kan skapa konst med kod. Som en påminnelse är kod en uppsättning instruktioner som en dator kan förstå. Precis som att välja vilka färger som ska användas, kan valet av kod du skriver också vara en möjlighet att uttrycka er kreativitet!\n\nIdag kommer vi att använda poesi för att inspirera vår kreativa kodning. Är det någon som vet vad poesi är? Har ni någon favoritdikt eller favoritpoet?"
         },
         "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
-          "description": "**Läs poesi tillsammans:** Läs några [några dikter](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing) tillsammans i klassen och öva på att identifiera stämningen i varje dikt. Uppmuntra eleverna att dela med sig av sin tolkning, även om den skiljer sig från någon annans."
+          "description": "**Läs poesi tillsammans:** Läs några [några dikter][0] tillsammans i klassen och öva på att identifiera stämningen i varje dikt. Uppmuntra eleverna att dela med sig av sin tolkning, även om den skiljer sig från någon annans."
         },
         "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
           "description": "#### Allmänt stöd\n\nI slutet av den här aktiviteten kommer eleverna att ha en animerad dikt som representerar deras visuella tolkning av den dikt de valde. Den här lektionen är utformad för att ge eleverna en möjlighet att knåpa med sin kod och hitta de visuella effekter som de gillar bäst. \n\nNär du går runt i klassrummet ska du uppmuntra eleverna att:\n\n-   **Ta den tid som behövs:** De flesta nivåerna kräver att eleverna hittar de perfekta effekterna som matchar deras tolkning av stämningen i dikten. Att stanna kvar på en nivå och knåpa med sin kod ska uppmuntras. \n\n-   **Hitta en dikt som du gillar:** Dikten som visas för en elev på en ny nivå är bara ett förslag. Det finns en rullgardinsmeny för dikter med förinlästa dikter högst upp på skärmen. Be eleverna läsa igenom några och hitta en som de gillar. De kan sedan börja animera dikten de valt med kod. \n\n-   **Visa upp en slutförd nivå:** En nivåbubbla som är helt grön betyder att eleven har klarat alla kraven för den nivån. Be en elev klicka på en grön bubbla för att visa upp vad han eller hon har skapat. \n\nNär en elev har kört fast: \n\n-   **Läs instruktionerna:** Instruktionerna är en punktlista med information om hur man slutför nivån. Om en elev inte kommer vidare kan du be eleven läsa instruktionerna högt för dig och återberätta vad som står i instruktionerna med sina egna ord.\n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Students can also click on this text-to-speech icon to hear the instructions read aloud.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Håll utkik efter tips**: De flesta av nivåerna innehåller minst ett tips med mer ingående beskrivning om hur man klarar nivån. \n-   **Ta vara på buggar:** Att få en bugg i din kod är en naturlig del av kodningsprocessen. Om programmet inte gör vad eleven förväntade sig ber du denne att först berätta vad han eller hon vill ska hända, och sedan klicka på Kör för att observera vad som faktiskt händer och sedan hitta vad i koden som orsakade diskrepansen. Kom ihåg att poängtera att det är positivt att hitta och fixa buggar. Att få en bugg innebär att eleverna gör ett bra jobb med att bygga ett mer komplext program."
@@ -926,6 +1221,12 @@
             null
           ]
         },
+        "11068ad0-f20b-4daf-94cd-7b4549b76f3a": {
+          "progression_name": "Nivåer"
+        },
+        "319eb690-ba34-4d34-9158-d30d777c4b05": {
+          "name": "Reflektion"
+        },
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
           "name": "Introduktion"
         },
@@ -938,6 +1239,9 @@
           "tips": [
             null
           ]
+        },
+        "1fa1e4c0-3147-4057-8131-07b03520b95e": {
+          "name": "Reflektion"
         },
         "0ba8ddb2-a34b-4dfe-bdc7-b6384049aab1": {
           "tips": [
@@ -962,6 +1266,9 @@
             null
           ]
         },
+        "a594c37e-142d-44f1-93c9-e49ecce1e716": {
+          "name": "Reflektion"
+        },
         "9c5a2a2f-7a92-4928-a7c4-89d29765cb01": {
           "tips": [
             null
@@ -971,6 +1278,9 @@
           "tips": [
             null
           ]
+        },
+        "47bca048-39fb-4014-a480-e21d163469db": {
+          "name": "Reflektion"
         },
         "d8d29dde-b2c8-40bd-a9ce-b8fb74189ed9": {
           "name": "Introduktion"
@@ -983,6 +1293,12 @@
         "0e7630ac-9846-4c7f-9a3f-1a78ad5e4993": {
           "progression_name": "Fri lek"
         },
+        "c2ac88a2-6e26-49e5-a893-c3915816141a": {
+          "name": "Reflektion"
+        },
+        "437d0e58-a47c-4ea2-8125-501e4c0b154f": {
+          "name": "Partyspel"
+        },
         "1a870f4c-fdc7-4802-bcf8-44342bb8f7d6": {
           "tips": [
             null
@@ -993,6 +1309,9 @@
             null
           ]
         },
+        "035f92b6-2d03-4fec-adc4-a15a1b620f08": {
+          "name": "Reflektion"
+        },
         "aae21e24-4a0c-4d8c-aec0-67554766b38f": {
           "tips": [
             null
@@ -1002,6 +1321,9 @@
           "tips": [
             null
           ]
+        },
+        "d9171886-0618-4e77-a38b-4543fd46893e": {
+          "name": "Reflektion"
         },
         "20919642-5201-4796-9e45-ee76e368614d": {
           "tips": [
@@ -1026,8 +1348,14 @@
         "a9d27e5a-37b2-4490-a6a2-24fa4bf4cbd3": {
           "name": "Introduktion"
         },
+        "684dcdb5-2ce6-4481-85c2-aec19cf71f8e": {
+          "name": "Reflektion"
+        },
         "d6137926-640f-4180-a257-20c5f32317f5": {
           "progression_name": "Fri lek"
+        },
+        "910b513b-27b0-40c5-9793-782805d1da8e": {
+          "name": "Reflektion"
         },
         "92794e43-3dbb-4bf1-8326-f9ed17ef86b7": {
           "name": "Introduktion"
@@ -1037,8 +1365,14 @@
             null
           ]
         },
+        "1e7ed1a3-de4a-4a92-9732-80d71572719d": {
+          "name": "Reflektion"
+        },
         "3d33fa77-1fa9-4e46-921f-fd661884b23f": {
           "name": "Introduktion"
+        },
+        "a3b35da9-5d20-4f58-998a-e5395fc7e23f": {
+          "name": "Reflektion"
         },
         "0f9c9b1c-2d56-42f0-a8e5-76ed107c5210": {
           "name": "'För' loop skoj"
@@ -1054,12 +1388,16 @@
           ]
         },
         "2b2aff9f-1682-4071-a395-c38394654e47": {
+          "name": "Reflektion",
           "tips": [
             null
           ]
         },
         "2e172722-51c4-49c9-8a05-4447b2627ab3": {
           "name": "Introduktion"
+        },
+        "05cdc09c-2fde-45f0-ba51-06b6dc94b8a3": {
+          "name": "Reflektion"
         },
         "f44ed624-dfda-4f07-9f36-3c6e1ea15639": {
           "name": "Introduktion"
@@ -1072,8 +1410,14 @@
             null
           ]
         },
+        "266afcf9-1e97-47f3-bb0e-f8fe82181332": {
+          "name": "Reflektion"
+        },
         "6555bc01-7d35-4c5f-8934-eb8015426997": {
           "name": "Introduktion"
+        },
+        "de52214d-6afd-4af7-90e5-3e85484e0877": {
+          "name": "Reflektion"
         },
         "1969fb7f-ee71-41fc-bc5a-e8b44cb3df99": {
           "name": "Introduktion"
@@ -1086,6 +1430,9 @@
           "tips": [
             null
           ]
+        },
+        "1669b35c-0860-4d88-afc0-acda928f054d": {
+          "name": "Reflektion"
         },
         "708bfaf4-4547-4c24-87d4-3822f97185b5": {
           "tips": [
@@ -1106,6 +1453,9 @@
           "tips": [
             null
           ]
+        },
+        "f06209ef-3a44-433c-9f9f-78803376b321": {
+          "name": "Reflektion"
         },
         "fda34361-ffaa-4440-98c7-a5ab57d1cf17": {
           "name": "Introduktion"
@@ -1134,6 +1484,7 @@
           ]
         },
         "77fd3087-e475-4e92-937b-775e410c6585": {
+          "name": "Reflektion",
           "tips": [
             null
           ]
@@ -1142,6 +1493,9 @@
           "tips": [
             null
           ]
+        },
+        "556e548d-e34d-419a-8c67-85ccde21b96f": {
+          "name": "Prova"
         },
         "7b532b31-5253-47dd-b38a-f1d862451edc": {
           "tips": [
@@ -1167,6 +1521,7 @@
           "name": "Flytta det, flytta den"
         },
         "93f8de74-6246-4227-8418-08d5c736633b": {
+          "name": "Reflektion",
           "tips": [
             null
           ]
@@ -1181,6 +1536,9 @@
             null
           ]
         },
+        "d6a58782-e0dc-4632-a239-8ca9f36113ac": {
+          "name": "Reflektion"
+        },
         "7a8f2f22-1330-4e95-934e-8ab9c4441b20": {
           "tips": [
             null
@@ -1191,6 +1549,9 @@
             null
           ]
         },
+        "c0a1cc94-6551-4771-841c-2b480772c527": {
+          "name": "Reflektion"
+        },
         "53abffa5-fdeb-4041-a349-1e8e05f5d814": {
           "name": "Introduktion"
         },
@@ -1198,6 +1559,9 @@
           "tips": [
             null
           ]
+        },
+        "95894838-20b0-41ae-801a-5d3326e39e0b": {
+          "name": "Reflektion"
         },
         "018fc5e4-ba55-4049-8faf-bfd0f596e796": {
           "name": "Att bli snurrig"
@@ -1207,11 +1571,20 @@
             null
           ]
         },
+        "740f60c7-c857-4947-804e-498fb18ab620": {
+          "name": "Reflektion"
+        },
         "4d2a4e7e-8950-4697-a7c2-1035fe6a4d4c": {
           "name": "Introduktion"
         },
+        "8342e7d2-b605-4c73-80a9-2d3d97aad783": {
+          "name": "Reflektion"
+        },
         "6367a0d2-714f-4845-ab8f-2a350d75a4a9": {
           "name": "Introduktion"
+        },
+        "b4e46590-0e84-4574-9230-c8fb9e768647": {
+          "name": "Reflektion"
         },
         "bd9b2ae7-e0c5-43b5-8416-ab1b164feb2b": {
           "name": "Introduktion"
@@ -1223,6 +1596,12 @@
         },
         "22891986-f61f-4e37-aae4-177019581071": {
           "progression_name": "Fri lek"
+        },
+        "4ff7f892-7990-4917-9a54-92ad7d8c2335": {
+          "name": "Reflektion"
+        },
+        "804a67da-450d-4514-8c2e-2c9ed196e7c1": {
+          "name": "Reflektion"
         },
         "616fe3f0-31f4-4d6c-a96b-c2fea538d981": {
           "name": "Introduktion"
@@ -1248,6 +1627,9 @@
         },
         "afc1b191-5ed3-4f1e-9457-8499c5445f54": {
           "progression_name": "Fri lek"
+        },
+        "f7fafab8-5c1c-473a-901b-893eb23c491b": {
+          "name": "Reflektion"
         },
         "eeaa078b-cc45-4a32-9299-6fbb4967c502": {
           "progression_name": "Projekt"
@@ -1288,6 +1670,7 @@
           ]
         },
         "4aa550d3-10b9-4151-9ed8-45ce24b49e7d": {
+          "name": "Reflektion",
           "tips": [
             null
           ]
@@ -1310,6 +1693,9 @@
             null
           ]
         },
+        "a7d5f389-5e34-4cbf-91e8-e2d934992246": {
+          "name": "Reflektion"
+        },
         "7119f518-386e-44e7-893d-eff0fbc5a87d": {
           "tips": [
             null
@@ -1320,11 +1706,20 @@
             null
           ]
         },
+        "5703506b-9469-4b74-bbe0-14b169229f01": {
+          "name": "Reflektion"
+        },
         "2ded9602-0160-439c-8830-204047d30796": {
           "name": "Introduktion"
         },
+        "09d28d61-e268-4516-b6a4-56ab1f2ae0d8": {
+          "name": "Reflektion"
+        },
         "6c3b7137-b86e-4fc9-9fce-6e346df584dd": {
           "name": "Introduktion"
+        },
+        "e3639b33-cf35-4cc9-9d0d-616eb5ee7278": {
+          "name": "Reflektion"
         },
         "cb522975-96ad-44b4-942c-601fc373771c": {
           "tips": [
@@ -1341,6 +1736,9 @@
             null
           ]
         },
+        "319c51aa-b894-422b-8d4e-e6d3b2bd9a35": {
+          "name": "Reflektion"
+        },
         "dacbc9c3-1382-49f8-856d-5bce1247ebb4": {
           "name": "Introduktion"
         },
@@ -1348,6 +1746,9 @@
           "tips": [
             null
           ]
+        },
+        "a79a0dff-fe81-486d-9961-8198b65bdb8c": {
+          "name": "Reflektion"
         },
         "6f6b3e61-f640-4e12-b65a-a798a35229e8": {
           "name": "Introduktion"
@@ -1357,6 +1758,9 @@
             null
           ],
           "progression_name": "Fri lek"
+        },
+        "75843546-1fa3-4171-b034-3c14d8d9d5a4": {
+          "name": "Reflektion"
         },
         "ac847e89-ccab-4f15-8585-b06d61723c4c": {
           "name": "Introduktion"
@@ -1368,6 +1772,7 @@
           ]
         },
         "40978575-9e16-4760-a200-0678f187ff4c": {
+          "name": "Reflektion",
           "tips": [
             null
           ]
@@ -1382,6 +1787,9 @@
         },
         "4221ebcd-383b-44bf-a876-41e658bd8460": {
           "progression_name": "Fri lek"
+        },
+        "bae8edf5-1fe0-4f2b-ae79-08f18b2c3001": {
+          "name": "Reflektion"
         },
         "4ae60932-ccb3-411c-bfb4-bc9e52149b27": {
           "progression_name": "Projekt"
@@ -1412,6 +1820,7 @@
           ]
         },
         "1d9f53b2-4d8b-4d95-83b3-a9775f72da01": {
+          "name": "Reflektion",
           "tips": [
             null
           ]
@@ -1429,11 +1838,20 @@
             null
           ]
         },
+        "1108a4f2-f4c2-48ca-be06-124b1270dfc5": {
+          "name": "Reflektion"
+        },
         "34b2ac1f-8204-4cf2-817c-26a6eafb348b": {
           "name": "Introduktion"
         },
+        "13cf61a7-7e92-40c5-ba55-c4fa27c516a7": {
+          "name": "Reflektion"
+        },
         "c1c33567-d81d-49d9-a399-e0ba461f0165": {
           "name": "Introduktion"
+        },
+        "02bdc7bd-ae6d-426d-8e13-7f804e2292d4": {
+          "name": "Reflektion"
         },
         "5ba69a56-1f3b-42fa-9be4-9463ae109962": {
           "name": "Introduktion"
@@ -1443,16 +1861,28 @@
             null
           ]
         },
+        "e7143536-5b4e-4594-b2ff-707b87e128c3": {
+          "name": "Reflektion"
+        },
         "5e5453a7-f35f-458a-9831-b7c7b7f0fde1": {
           "tips": [
             null
           ]
         },
+        "dba044f7-494f-4657-a69b-ae2c7cf29ea0": {
+          "name": "Reflektion"
+        },
         "ff476c40-142d-458c-8c84-04f775b46de3": {
           "name": "Introduktion"
         },
+        "b8bea90c-e431-4f96-846f-733476b53374": {
+          "name": "Reflektion"
+        },
         "dacd64e5-3f26-48ad-9e50-3d2eaca56292": {
           "name": "Introduktion"
+        },
+        "809e449a-e392-48c2-9b9f-f53ce1d06366": {
+          "name": "Reflektion"
         },
         "aaae9aa4-7847-4f45-be5e-96f454d2e343": {
           "name": "Introduktion"
@@ -1465,6 +1895,9 @@
         "9af30f82-82cd-4807-9609-900519e17c43": {
           "progression_name": "Fri lek"
         },
+        "44ad4fa6-3b97-4af4-ae1e-f9b9f3988a66": {
+          "name": "Reflektion"
+        },
         "3eb5f296-9713-4bdb-8dd8-a77dc07cb4e5": {
           "name": "Den stora händelsen"
         },
@@ -1474,6 +1907,7 @@
           ]
         },
         "abca79b2-6a21-4f74-b06d-07ea956d12bc": {
+          "name": "Reflektion",
           "tips": [
             null
           ]
@@ -1491,6 +1925,9 @@
             null
           ]
         },
+        "a49ab9e9-2a47-4d02-93bf-ec9bd241a125": {
+          "name": "Reflektion"
+        },
         "782d1991-785a-406b-963c-687abb77e247": {
           "name": "Introduktion"
         },
@@ -1502,10 +1939,16 @@
         "a7a8c0ca-7507-4a7a-84da-2763a0e562a7": {
           "progression_name": "Fri lek"
         },
+        "27d0103f-b003-4668-bab3-46e2517d375f": {
+          "name": "Reflektion"
+        },
         "f0e7a0a5-69e8-44a7-a74a-e7bab3f36647": {
           "tips": [
             null
           ]
+        },
+        "49ce681a-9731-4e09-8d4a-e6d4d8895a9a": {
+          "name": "Reflektion"
         },
         "e55d7d37-4ddc-467f-9a9d-f02a31886572": {
           "name": "Introduktion"
@@ -1522,6 +1965,9 @@
           "tips": [
             null
           ]
+        },
+        "02945b11-d2db-485d-9002-9aff256a4ed4": {
+          "name": "Reflektion"
         },
         "11dd8aea-0a51-4c88-8517-0543fa4afb32": {
           "tips": [
@@ -1548,6 +1994,7 @@
           ]
         },
         "47c800d4-0c46-42ae-bc19-d837d28fd912": {
+          "name": "Reflektion",
           "tips": [
             null
           ]
@@ -1559,6 +2006,9 @@
           "tips": [
             null
           ]
+        },
+        "44f59c64-44ce-47bb-bcf6-d11a73277e48": {
+          "name": "Reflektion"
         },
         "3b261cf8-73e3-4dd0-bef0-f55ba858297b": {
           "tips": [
@@ -1573,8 +2023,14 @@
             null
           ]
         },
+        "fe8fc837-1652-4638-bb0d-fe8c61b31f79": {
+          "name": "Reflektion"
+        },
         "d2a287ee-e85d-4ced-a525-517d98f9258b": {
           "name": "Introduktion"
+        },
+        "e54eeb6d-ab26-4e65-9cd5-3d97a06733f9": {
+          "name": "Reflektion"
         },
         "9d0e1d83-61ee-4d81-8524-8423a2ddc53f": {
           "name": "Introduktion"
@@ -1586,6 +2042,9 @@
           "tips": [
             null
           ]
+        },
+        "15ed6573-547c-40be-a75f-e4d93a55e1b1": {
+          "name": "Reflektion"
         },
         "a6bc8c09-afdd-4ba6-b4d6-edb04739c37d": {
           "tips": [
@@ -1604,16 +2063,31 @@
           ],
           "progression_name": "Fri lek"
         },
+        "df2c1698-1e56-4e44-9a0b-9d43facaf9f2": {
+          "name": "Reflektion"
+        },
         "de442d79-1ed3-444b-a71e-b87718ffc7d7": {
           "tips": [
             null
           ]
         },
+        "07d81a89-c42f-4e92-90cf-a745cd0196d8": {
+          "description": "##### Nivå 1"
+        },
+        "f88c59b4-e502-4301-9ec4-221b7a85b350": {
+          "description": "##### Nivå 3"
+        },
         "da9ffffb-f192-44c2-86e8-1fe7d4de71c9": {
           "progression_name": "Händelser"
         },
+        "3dbac671-c428-479f-8a2b-301d4a5578e5": {
+          "description": "##### Nivå 6"
+        },
         "41bca090-a4b2-4019-b05e-3b3b3b0cca14": {
           "progression_name": "Takter"
+        },
+        "1790551e-be1b-4e39-8725-ab4ed96c2743": {
+          "description": "##### Nivå 10"
         },
         "d3f08051-43ee-48aa-9154-f8b1f21a486f": {
           "progression_name": "Egenskaper"
@@ -1623,8 +2097,14 @@
             null
           ]
         },
+        "19a261df-276b-4f57-98db-a694c8dc0b40": {
+          "description": "##### Nivå 14"
+        },
         "248f398f-18b7-4f09-a251-8d119f3c167d": {
           "progression_name": "Fri lek"
+        },
+        "a450ad93-b5c8-492e-98bc-84a719f014e2": {
+          "name": "Reflektion"
         },
         "d343f1b8-bbf5-455e-8d7d-e50907b2fc18": {
           "name": "Introduktion till loopar"
@@ -1634,11 +2114,20 @@
             null
           ]
         },
+        "37881eab-e326-4635-89a0-382e72e6fffc": {
+          "name": "Reflektion"
+        },
         "f34cb485-1f89-4670-bb09-f170b83be646": {
           "name": "Introduktion"
         },
+        "b5ff885e-a9ca-4b9b-8c1e-53f9273c7935": {
+          "name": "Reflektion"
+        },
         "07ca6e20-a059-4b67-b099-6a90c6d7f4ab": {
           "name": "Introduktion"
+        },
+        "b014e946-ff8d-4740-9c42-51c8aa635252": {
+          "name": "Reflektion"
         },
         "75e07169-e97a-4d68-b9dc-18aefddf1eab": {
           "name": "Introduktion"
@@ -1647,9 +2136,13 @@
           "name": "Villkorssatser med kort"
         },
         "4a483f91-af16-44dc-982f-c62424c8d5ec": {
+          "name": "Reflektion",
           "tips": [
             null
           ]
+        },
+        "95951ba3-d513-4635-a484-1d1819906049": {
+          "name": "Reflektion"
         },
         "6b12a150-fd35-4498-821d-938ad47883e4": {
           "name": "Introduktion"
@@ -1657,14 +2150,26 @@
         "f5e9d0c0-d9c2-40af-b9aa-781078d95fa2": {
           "progression_name": "Fri lek"
         },
+        "3cb11179-29ea-4362-b237-a509e3e0943f": {
+          "name": "Reflektion"
+        },
         "0e7cf944-a328-4388-afa7-8712fed768e0": {
           "name": "Introduktion"
+        },
+        "fd68c153-b4d6-4729-a742-09f9ee9c25b1": {
+          "name": "Reflektion"
         },
         "9edcc1a3-dce9-45bc-86af-546b41287b53": {
           "name": "Introduktion"
         },
+        "6751c001-d379-4682-8c2e-3eead4acba66": {
+          "name": "Reflektion"
+        },
         "6ecd9736-c038-433f-bd11-18b7ae703bcd": {
           "name": "Introduktion"
+        },
+        "b9c0e01d-2222-4dca-ad71-dc6068af0439": {
+          "name": "Reflektion"
         },
         "ea88a8c8-980d-4d9f-a288-545a8cd65be6": {
           "tips": [
@@ -1687,11 +2192,20 @@
             null
           ]
         },
+        "0cf25b1a-ce7f-42e1-9460-f17762284ea3": {
+          "name": "Reflektion"
+        },
         "defc5a97-b60a-4a6b-8617-e05be08dab35": {
           "name": "Introduktion"
         },
+        "0406b536-ef27-4e66-aebd-6163d05bcc36": {
+          "name": "Reflektion"
+        },
         "b26f7849-9b0a-4cb8-a4c1-27ee2eaf3b08": {
           "name": "Introduktion"
+        },
+        "c1db98cf-ca82-4092-a167-fc450bf6fd0f": {
+          "name": "Reflektion"
         },
         "493408f8-a48b-457f-924d-0c99519b55e2": {
           "name": "Introduktion"
@@ -1700,6 +2214,9 @@
           "tips": [
             null
           ]
+        },
+        "6e2ecb9e-09e6-4af0-b1b4-7b704334ba6c": {
+          "name": "Reflektion"
         },
         "0d4256d9-a4f5-4fed-9958-f515dd431f6e": {
           "name": "Introduktion",
@@ -1715,6 +2232,9 @@
         "5526b3db-d4a9-4d0d-a4a1-81732ba5d7ab": {
           "progression_name": "Fri lek"
         },
+        "35c19cbc-9b7b-4a5c-9d88-5f971a66fab2": {
+          "name": "Reflektion"
+        },
         "9b131ffd-535f-4044-b7f7-d8aa2ba715ae": {
           "name": "Introduktion"
         },
@@ -1723,10 +2243,16 @@
             null
           ]
         },
+        "a35138b5-f6fc-4fac-9a73-991bed07f6d1": {
+          "name": "Reflektion"
+        },
         "5eb0801e-a90b-47fe-9787-2f7fc7a79f5f": {
           "tips": [
             null
           ]
+        },
+        "7fde7a69-ad30-49f8-a4ae-225e82ca2a6b": {
+          "name": "Reflektion"
         },
         "c536d74f-f3af-41d7-b4e4-475b9a3f45c8": {
           "name": "Introduktion"
@@ -1738,6 +2264,9 @@
         },
         "95d18f1f-9406-4eb0-9be8-8ba8439d2bd4": {
           "progression_name": "Fri lek"
+        },
+        "8970ddea-49ba-429a-9607-6239c33e06be": {
+          "name": "Reflektion"
         },
         "0200789e-428c-4393-84ee-6c7a48948c36": {
           "progression_name": "Händelser"
@@ -1754,8 +2283,14 @@
         "86741327-b7d6-4dfb-b703-f23be6b2a7dc": {
           "progression_name": "Fri lek"
         },
+        "93b0085f-79bb-48eb-a786-f20c04016a31": {
+          "name": "Reflektion"
+        },
         "ee5c8682-facd-4fcb-88e1-597ca5e436c4": {
           "name": "Introduktion"
+        },
+        "8953de3d-a49f-4c4f-81e4-bcfbbc0baa3e": {
+          "name": "Reflektion"
         },
         "63067b3c-f088-46f7-a3af-7feb4225a2ac": {
           "name": "Introduktion"
@@ -1768,11 +2303,20 @@
         "ea33c4e3-5280-41e4-9496-1dc01d2fcbd3": {
           "progression_name": "Fri lek"
         },
+        "c40cef20-3f9c-4084-8440-4394cc4ea03a": {
+          "name": "Reflektion"
+        },
         "05c7c3a3-3378-4904-9136-be16d24330a3": {
           "name": "Introduktion"
         },
+        "fc83d25f-9089-4795-9933-52f7372e3ae7": {
+          "name": "Reflektion"
+        },
         "219bed13-d21f-4886-ac11-47ae6eb56005": {
           "name": "Introduktion"
+        },
+        "d1f0e984-22d3-4086-978b-0e830c9cc6c9": {
+          "name": "Reflektion"
         },
         "a608e3c1-c749-4463-b478-51d339fab447": {
           "name": "Introduktion"
@@ -1780,11 +2324,20 @@
         "61cffed6-e526-428f-9d2c-e53fbe5b2653": {
           "progression_name": "Fri lek"
         },
+        "a8610908-835c-4ecf-87b2-0f10e7381e88": {
+          "name": "Reflektion"
+        },
         "888667b6-71ac-4d2f-81df-ac6b8769f8b8": {
           "name": "Introduktion"
         },
+        "50020a45-10c5-4b0c-ba08-b54004bdcaa8": {
+          "name": "Reflektion"
+        },
         "c75f92ab-cfc1-481f-b93a-c6496cd99709": {
           "name": "Introduktion"
+        },
+        "4860c6c5-d580-4865-a582-3c33cdb8e4da": {
+          "name": "Reflektion"
         },
         "dc1332e9-8b48-4325-a310-3de22c787e7d": {
           "name": "Introduktion"
@@ -1792,11 +2345,20 @@
         "7064cb92-5320-4d9f-9de2-6de2ca05c5d1": {
           "progression_name": "Fri lek"
         },
+        "59d6d7fb-e5be-4534-b78a-c3899159474b": {
+          "name": "Reflektion"
+        },
         "f6d8a30c-dedb-4797-b71a-d661fb24aeec": {
           "name": "Introduktion"
         },
+        "8995dda6-6311-4747-a13d-9e793d658e20": {
+          "name": "Reflektion"
+        },
         "dc6adaa2-5c73-48d3-b84e-b046c054bfe6": {
           "name": "Introduktion"
+        },
+        "294fb9eb-4bd1-497a-8326-562ddd2671bf": {
+          "name": "Reflektion"
         },
         "88c1c297-1627-45ec-9eb7-f6fffbe45240": {
           "name": "Introduktion",
@@ -1812,14 +2374,23 @@
         "91e51520-32ea-4e43-bc6e-603cf76a7d22": {
           "progression_name": "Fri lek"
         },
+        "18f44055-e1bd-4cc4-9291-26a997c32a45": {
+          "name": "Reflektion"
+        },
         "99fdf72d-5290-448c-a15d-5da9d2cac486": {
           "name": "Introduktion"
         },
         "94ce59c5-2479-4a35-b9f3-acf6615471ce": {
           "progression_name": "Fri lek"
         },
+        "48eb2965-3a46-402c-9bcd-c38037adf810": {
+          "name": "Reflektion"
+        },
         "efc04a38-eabb-4c39-8ba5-571b966a2bd7": {
           "name": "Introduktion"
+        },
+        "3c8c44ae-c181-41c0-9574-54a236e706f9": {
+          "name": "Reflektion"
         },
         "79cc55bf-53a8-463c-b4dc-86cc8651587a": {
           "tips": [
@@ -1831,14 +2402,26 @@
             null
           ]
         },
+        "ba16d75f-cd57-4bf6-9c71-78f6bbe31603": {
+          "name": "Reflektion"
+        },
         "47be5db0-347f-4617-a652-e0b01325b180": {
           "progression_name": "Fri lek"
+        },
+        "e1938d70-43cf-4038-8782-51509d171b00": {
+          "name": "Reflektion"
         },
         "6ab692c9-eee1-4966-91fa-3bda39450263": {
           "name": "Introduktion"
         },
+        "40a52b8d-4101-4d39-a124-460b6553eea6": {
+          "name": "Reflektion"
+        },
         "b3ac68a6-7600-49ad-bfb3-88d318e25658": {
           "name": "Introduktion"
+        },
+        "3dde779a-f373-47b8-b892-013f3898d438": {
+          "name": "Reflektion"
         },
         "48c60679-9f25-4ade-9a34-7a52627fc8f2": {
           "name": "Introduktion"
@@ -1850,6 +2433,9 @@
         },
         "1582774d-bc37-4642-8f63-dccb08adea1c": {
           "progression_name": "Fri lek"
+        },
+        "4622563b-bc99-49ea-b1fb-b7a9916cf957": {
+          "name": "Reflektion"
         },
         "83a07440-69f4-47bc-9a0a-4281dd6b5b7b": {
           "tips": [
@@ -1882,6 +2468,9 @@
             null
           ]
         },
+        "68207b57-546c-4e2c-9742-e35a0ba2ef82": {
+          "name": "Reflektion"
+        },
         "a6a26f0a-a384-454d-bcae-e6b7f4531439": {
           "tips": [
             null
@@ -1897,13 +2486,22 @@
             null
           ]
         },
+        "51b1c494-c02c-43d8-bf3d-543f6634f474": {
+          "name": "Reflektion"
+        },
         "179a6d3a-af19-4c62-85c7-82844964d06a": {
           "tips": [
             null
           ]
         },
+        "12c1b1b7-2a91-4f58-ae14-136ea1536a67": {
+          "name": "Reflektion"
+        },
         "5990c610-f353-48fd-9d5f-a813486a237f": {
           "name": "Introduktion"
+        },
+        "4f8c5eb5-a782-4698-a471-19808d1dbbc4": {
+          "name": "Reflektion"
         },
         "6b656efc-0576-4c50-856b-5c9bc433e5b3": {
           "name": "Introduktion"
@@ -1912,6 +2510,9 @@
           "tips": [
             null
           ]
+        },
+        "94b18069-db8a-43d7-bbf0-8912ac563349": {
+          "name": "Reflektion"
         },
         "f6ac49ff-86ee-444b-9e56-62de0b794363": {
           "name": "Introduktion"
@@ -1926,8 +2527,14 @@
             null
           ]
         },
+        "0366b799-b555-4aef-b6c7-741c035590aa": {
+          "name": "Reflektion"
+        },
         "3948532c-fefc-466f-a7ff-7d95e6692b96": {
           "name": "Introduktion"
+        },
+        "6397718f-1733-47e6-8ace-820b3f9d1701": {
+          "name": "Reflektion"
         },
         "6361a98f-3232-4060-8758-b1f8064507a8": {
           "name": "Introduktion"
@@ -1940,6 +2547,9 @@
         "9501ab3a-0fa4-46d5-88a1-d546663cdffa": {
           "progression_name": "Fri lek"
         },
+        "7043a915-b252-47d3-bb01-5975d613129c": {
+          "name": "Reflektion"
+        },
         "b53a9767-0731-41e2-b2fe-0b8b841cd403": {
           "name": "Introduktion"
         },
@@ -1951,6 +2561,9 @@
         "92674c9e-c2dc-4023-a386-8fae5c2b8074": {
           "progression_name": "Fri lek"
         },
+        "e382cc47-35ef-4c10-80a1-4b9090d86856": {
+          "name": "Reflektion"
+        },
         "e54a7c2e-64b2-4b83-a007-845a622ca484": {
           "name": "Introduktion",
           "tips": [
@@ -1960,16 +2573,23 @@
         "708df6be-8599-4a1a-993b-13ca6e874d5c": {
           "progression_name": "Fri lek"
         },
+        "9336ef6c-3ac8-4703-8f8d-98e88518e5e9": {
+          "name": "Reflektion"
+        },
         "e41f8532-e8cd-4df7-a729-43346d3df6d1": {
           "name": "Introduktion"
         },
         "ddebabd0-cce0-446d-81ad-f4734e71d06c": {
           "progression_name": "Fri lek"
         },
+        "00695f27-0eaf-43ef-bbd4-bd7879fbaa1c": {
+          "name": "Reflektion"
+        },
         "716d5ed4-f198-4133-806e-dddeba48f571": {
           "name": "Introduktion"
         },
         "51b3125a-1efe-4f25-a05e-3e5250ceff18": {
+          "name": "Reflektion",
           "tips": [
             null
           ]
@@ -1990,6 +2610,9 @@
         "83778d93-2959-4776-94d0-e82985346914": {
           "progression_name": "Fri lek"
         },
+        "c925e7be-2487-4ebe-892b-bfe452625d91": {
+          "name": "Reflektion"
+        },
         "aad9aa38-56b3-42ef-b751-03065c308d0e": {
           "name": "Introduktion"
         },
@@ -2001,6 +2624,9 @@
         "f05ee764-4bce-42ba-bc3d-48685d6ba404": {
           "progression_name": "Fri lek"
         },
+        "fd74ff7a-4b6f-42d4-99ea-63fdf9036656": {
+          "name": "Reflektion"
+        },
         "e8b26a8a-533e-40fc-820c-2c9b5269a1e1": {
           "name": "Introduktion"
         },
@@ -2008,6 +2634,9 @@
           "tips": [
             null
           ]
+        },
+        "abd54ca8-cb9c-46ad-be0a-814b9eb36162": {
+          "name": "Reflektion"
         },
         "98d15c5f-c63b-4cf0-8466-e0e349892320": {
           "tips": [
@@ -2019,8 +2648,14 @@
             null
           ]
         },
+        "504e1645-369b-4f38-9e75-ee5f7d5e03cb": {
+          "name": "Reflektion"
+        },
         "5929b1ea-c353-4af8-bdd2-3d9dec6a211d": {
           "name": "Introduktion"
+        },
+        "7f7b2c5d-fcd3-409a-9191-5e8ee587d2ea": {
+          "name": "Reflektion"
         },
         "6d3af202-fd47-493f-93fa-081fec637b53": {
           "name": "Introduktion"
@@ -2033,8 +2668,14 @@
         "a2a794ce-1af9-4258-84ad-352ee9f9f187": {
           "progression_name": "Fri lek"
         },
+        "9ad07175-6454-4905-9366-61b189a9ab7e": {
+          "name": "Reflektion"
+        },
         "3fd1ff7f-942a-4316-9559-3d910ab63fc4": {
           "name": "Introduktion"
+        },
+        "47f46b59-d887-4bc5-8f39-c72cd925587a": {
+          "name": "Reflektion"
         },
         "372220f1-abea-4376-a0a2-d5a7c389adec": {
           "name": "Introduktion"
@@ -2058,6 +2699,7 @@
           ]
         },
         "06b4ee77-0a27-48bc-9dca-d55b530d1ce6": {
+          "name": "Reflektion",
           "tips": [
             null
           ]
@@ -2078,14 +2720,23 @@
         "faa2f676-cf14-4bd7-b277-8e0a30245c0d": {
           "progression_name": "Fri lek"
         },
+        "9639ed09-b00f-4186-a5e8-0a1020965a44": {
+          "name": "Reflektion"
+        },
         "efa5dada-af20-4c6f-bcc3-1c3ad1b2ef8d": {
           "name": "Introduktion"
+        },
+        "c8e5eb74-9ded-4c7c-bfbf-3fb3a144fe3a": {
+          "name": "Reflektion"
         },
         "26475297-6a91-4f8c-a64d-ded841ff0cb9": {
           "name": "Introduktion"
         },
         "dc8187ff-3bc9-4079-adda-93abea4abd16": {
           "progression_name": "Fri lek"
+        },
+        "c88e1d86-4746-4a47-8721-3e7e07784f19": {
+          "name": "Reflektion"
         },
         "2a7befee-2eac-4af5-bf1c-6192b24cbad2": {
           "name": "Introduktion"
@@ -2095,13 +2746,25 @@
             null
           ]
         },
+        "63757527-5067-4217-9d3b-134aac5a39ab": {
+          "name": "Reflektion"
+        },
         "990891b6-d051-4117-8dd5-fc3346d69dc5": {
           "name": "Introduktion"
+        },
+        "23dd0ba7-6d05-4611-bfa7-3b8eca5102b1": {
+          "name": "Reflektion"
+        },
+        "365538ed-acdc-4054-9f6c-fb4085cced76": {
+          "name": "Reflektion"
         },
         "076a8517-ba6d-4f59-804d-d40a49d9f184": {
           "tips": [
             null
           ]
+        },
+        "281f3680-418c-4e9f-b18f-dedc11afe3f2": {
+          "name": "Prova"
         },
         "ea6885b7-d893-417c-b8c9-d1bf3bfae12c": {
           "tips": [
@@ -2135,6 +2798,9 @@
           "tips": [
             null
           ]
+        },
+        "d26ab8fe-dc83-4704-8aba-bd0cdbdd80a4": {
+          "name": "Reflektion"
         },
         "8bdf1f4e-1c20-42bd-a5d5-7217dfa0bd4f": {
           "tips": [
@@ -2292,9 +2958,13 @@
           ]
         },
         "189848b1-8798-4d6b-ba64-c7e43f6aa84a": {
+          "name": "Prompt 1",
           "tips": [
             null
           ]
+        },
+        "0d64ff43-0979-4f02-9759-f8c960c0b22e": {
+          "name": "Prompt 2"
         },
         "43756539-5123-4890-8fb8-651dbb6ee4b2": {
           "tips": [
@@ -2427,6 +3097,10 @@
             null
           ]
         },
+        "489ed446-aa78-47e3-b9f2-30bc9164d6c3": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
+        },
         "f2c599ed-2dc6-4fa2-8ebd-5123c77dd9c3": {
           "tips": [
             null
@@ -2532,6 +3206,10 @@
             null
           ]
         },
+        "f5c2056c-f519-4991-a58b-f22058fbaa9d": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
+        },
         "9819f2db-593b-4631-96e8-ad45aba59e08": {
           "tips": [
             null
@@ -2617,6 +3295,9 @@
           "tips": [
             null
           ]
+        },
+        "3c36a33c-4c3d-4f93-8c89-a1a7dbdfd58c": {
+          "name": "Prova"
         },
         "8f2a96ab-2fe4-4799-bf45-5d850c830f97": {
           "tips": [
@@ -2728,6 +3409,9 @@
             null
           ]
         },
+        "3c6018f8-0048-4c97-9970-72884de4c736": {
+          "progression_name": "Reflektion"
+        },
         "86647112-ffd2-4c41-84b4-1ea040590a32": {
           "tips": [
             null
@@ -2797,6 +3481,9 @@
           "tips": [
             null
           ]
+        },
+        "761b498b-6ec2-4956-bd8f-b23e497644a5": {
+          "progression_name": "Exempel-appar"
         },
         "7fd85c65-ad1b-4f7d-a93d-eed09e89386c": {
           "tips": [
@@ -3018,6 +3705,9 @@
             null
           ]
         },
+        "cbd1e24c-3232-42ff-bd52-2725517f8697": {
+          "progression_name": "Reflektion"
+        },
         "b5282123-46f9-411e-ba2c-d6f5ab3b4ea7": {
           "tips": [
             null
@@ -3079,6 +3769,7 @@
           ]
         },
         "4c3af8fe-b972-410f-a839-00f38e6a51ce": {
+          "name": "Reflektion",
           "tips": [
             null
           ]
@@ -3092,6 +3783,12 @@
           "tips": [
             null
           ]
+        },
+        "aa167cb8-d7fb-4c0f-8a8a-55ee234635da": {
+          "progression_name": "Ändra"
+        },
+        "a7dd4853-b8c3-44d2-a03b-f5e5e23ff0ac": {
+          "progression_name": "Motorcykel"
         },
         "d0e85c72-53c1-4429-91ab-3d160fc10b20": {
           "tips": [
@@ -3139,6 +3836,9 @@
         },
         "b919f5c1-5152-4baa-bddb-112275d049ac": {
           "progression_name": "funktioner"
+        },
+        "187cdb02-266e-41c6-a35e-8d31c07cfdff": {
+          "progression_name": "Reflektion"
         },
         "316f977f-5ad8-4565-b6d1-1c62507ba565": {
           "tips": [
@@ -3273,6 +3973,9 @@
           "tips": [
             null
           ]
+        },
+        "7550d329-92cf-4cd3-b0b5-c918c24f2105": {
+          "progression_name": "Reflektion"
         },
         "44000645-7870-4e71-b27e-75cd70b6dbb9": {
           "tips": [
@@ -3463,6 +4166,9 @@
             null
           ]
         },
+        "89ef6969-5f33-411f-905d-93ffc791d9f8": {
+          "progression_name": "Reflektion"
+        },
         "c74f28dc-8f61-443c-b03a-4943b65c8824": {
           "tips": [
             null
@@ -3480,6 +4186,9 @@
           "tips": [
             null
           ]
+        },
+        "799529e8-aa6b-44e9-a270-1db8052d7df3": {
+          "name": "Prova"
         },
         "fae06660-56ad-41e5-8af3-bbfbe36ebb97": {
           "tips": [
@@ -3611,6 +4320,9 @@
             null
           ]
         },
+        "1f315b3a-9470-42be-95de-4b2327b9a338": {
+          "name": "Reflektion"
+        },
         "85bda82c-51d9-4b18-a377-4ecd142855c0": {
           "tips": [
             null
@@ -3680,6 +4392,9 @@
           "tips": [
             null
           ]
+        },
+        "22ca7a0f-899a-4cd3-8fbd-14afbf396317": {
+          "progression_name": "Reflektion"
         },
         "ec94d489-2b99-408d-bcce-782db2cdba44": {
           "tips": [
@@ -3796,6 +4511,9 @@
             null
           ]
         },
+        "ad26b802-3d93-4e28-bf0c-2b04b8127c12": {
+          "name": "Reflektion"
+        },
         "e13128cb-3a56-488b-86db-0a2edd7aff6d": {
           "tips": [
             null
@@ -3871,6 +4589,9 @@
             null
           ]
         },
+        "c0fc532b-e6eb-4858-af5b-5032cd917616": {
+          "progression_name": "Lägg till text"
+        },
         "fe60d6bf-420e-474d-8b50-0ff252e6c6bf": {
           "tips": [
             null
@@ -3935,6 +4656,9 @@
           "tips": [
             null
           ]
+        },
+        "6e3a6230-12e7-4b7f-90a7-ec8574647b3b": {
+          "progression_name": "Lägg till text"
         },
         "fa1f1ad4-aadd-49d1-9138-887450893813": {
           "tips": [
@@ -4036,6 +4760,12 @@
           "tips": [
             null
           ]
+        },
+        "d8f8a198-8cc9-47f1-b6c9-f03f573fe546": {
+          "progression_name": "Reflektion"
+        },
+        "360d3353-5639-4dfb-a66d-784a152e1794": {
+          "name": "Reflektion"
         },
         "a2fda764-6cf6-419d-a9cb-7d62a2749660": {
           "tips": [
@@ -4177,6 +4907,9 @@
             null
           ]
         },
+        "655acab5-5605-4833-b201-7d4776773bb5": {
+          "progression_name": "Samma spel"
+        },
         "d0d85465-a081-4c09-ae83-8b454e76c2ff": {
           "tips": [
             null
@@ -4219,6 +4952,9 @@
         },
         "d1ae9072-39e7-4cd7-81eb-6434e0b2e39d": {
           "name": "Dela"
+        },
+        "2d58346e-e123-4477-8995-fefc448b3fe3": {
+          "progression_name": "Reflektion"
         },
         "b44faa8f-43ae-4899-b299-888d85f57d48": {
           "tips": [
@@ -4299,6 +5035,9 @@
           "tips": [
             null
           ]
+        },
+        "4436ad56-59ce-4b60-8e8e-bd0c9f80626a": {
+          "description": "![](https://curriculum.code.org/media/uploads/first-computer.jpg)"
         },
         "c21034e8-cca8-4197-9819-081e4114ef36": {
           "tips": [
@@ -4446,6 +5185,13 @@
             null
           ]
         },
+        "03ad2f47-6f62-4854-b398-3075d952d71e": {
+          "name": "Reflektion",
+          "progression_name": "Reflektion"
+        },
+        "7bc95fda-8bc5-4e9c-8e1c-504e1fe504b8": {
+          "name": "Före klass"
+        },
         "7d3700c3-08ad-41e8-bee3-19384d50e4c4": {
           "tips": [
             null
@@ -4486,6 +5232,9 @@
             null
           ]
         },
+        "6c301b18-2257-43b7-ad69-d9d8eab042bd": {
+          "name": "Före klass"
+        },
         "c55fae38-7795-4027-b469-a3238f34efe5": {
           "tips": [
             null
@@ -4525,6 +5274,9 @@
           "tips": [
             null
           ]
+        },
+        "625b6145-fb18-49d5-ba66-2f69668f8178": {
+          "name": "Före klass"
         },
         "163d7212-c083-4ba8-bb87-6150a37f8f0f": {
           "tips": [
@@ -4654,7 +5406,8 @@
         "693d5350-e425-4ae5-926e-85984858fb31": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Utforska HTML"
         },
         "470c3268-f70d-43ac-831f-b37c3103531b": {
           "tips": [
@@ -4675,6 +5428,9 @@
           "tips": [
             null
           ]
+        },
+        "b883c2e6-ca65-4053-b848-046bdfbb2a38": {
+          "name": "Reflektion"
         },
         "7d15a1cb-357e-419d-b469-608585606064": {
           "tips": [
@@ -4844,6 +5600,9 @@
             null
           ]
         },
+        "48accbcd-e23c-4d31-aa68-baed73694793": {
+          "name": "Använda bilder"
+        },
         "2c7139b2-bd78-402d-9d57-1191bfcf3d3c": {
           "tips": [
             null
@@ -4863,6 +5622,9 @@
           "tips": [
             null
           ]
+        },
+        "869d287c-19c3-4e38-83bf-0498821d1157": {
+          "name": "Använda bilder"
         },
         "59343467-2b51-47a0-a2af-2f1357b5e3ba": {
           "tips": [
@@ -4941,6 +5703,9 @@
           "tips": [
             null
           ]
+        },
+        "bb76c259-62ef-49ef-9b8c-d0ca91a380a7": {
+          "progression_name": "Reflektion"
         },
         "20f18101-28c1-43ff-835a-9b098f7a5b9c": {
           "tips": [
@@ -5027,6 +5792,9 @@
             null
           ]
         },
+        "287a07a0-cdbc-4680-8733-69515c67c54b": {
+          "name": "Klasser"
+        },
         "d22a9dfb-fec1-43bb-add2-c76ec1a76f2a": {
           "tips": [
             null
@@ -5081,6 +5849,9 @@
             null
           ]
         },
+        "61b38059-437b-4b5b-a71d-e94ff04f6ae6": {
+          "progression_name": "Lägg till stil"
+        },
         "35722166-2159-4038-8c7e-7a6cc0580812": {
           "tips": [
             null
@@ -5090,6 +5861,9 @@
           "tips": [
             null
           ]
+        },
+        "c11db9e7-9e8e-470f-854b-a56722d138f0": {
+          "progression_name": "Reflektion"
         },
         "938b93c7-1d09-4893-a312-181b8a14a4db": {
           "tips": [

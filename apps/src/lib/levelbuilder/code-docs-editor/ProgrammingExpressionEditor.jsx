@@ -3,26 +3,42 @@ import React, {useState} from 'react';
 import OrderableList from './OrderableList';
 import ExampleEditor from './ExampleEditor';
 import ParameterEditor from './ParameterEditor';
+import ImageInput from './ImageInput';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
-import Button from '@cdo/apps/templates/Button';
-import UploadImageDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/UploadImageDialog';
 import {createUuid, navigateToHref} from '@cdo/apps/utils';
 import $ from 'jquery';
 import color from '@cdo/apps/util/color';
 
 function useProgrammingExpression(initialProgrammingExpression) {
-  const [programmingExpression, setProgrammingExpression] = useState(
-    initialProgrammingExpression
+  const initializeProgrammingExpression = programmingExpression => {
+    const copiedExpression = {...programmingExpression};
+    // We remove id and key from state as they should not be modified
+    delete copiedExpression.id;
+    delete copiedExpression.key;
+    // Examples and parameters don't have obvious unique identifiers so adding
+    // some here. These are required by React when we transform these lists
+    // into sets of components.
+    if (copiedExpression.examples) {
+      copiedExpression.examples.forEach(e => (e.key = createUuid()));
+    }
+    if (copiedExpression.parameters) {
+      copiedExpression.parameters.forEach(p => (p.key = createUuid()));
+    }
+    return copiedExpression;
+  };
+
+  const [programmingExpression, setProgrammingExpression] = useState(() =>
+    initializeProgrammingExpression(initialProgrammingExpression)
   );
 
-  function updateProgrammingExpression(key, value) {
+  const setProgrammingExpressionProperty = (key, value) => {
     setProgrammingExpression({...programmingExpression, [key]: value});
-  }
+  };
 
-  return [programmingExpression, updateProgrammingExpression];
+  return [programmingExpression, setProgrammingExpressionProperty];
 }
 
 function renderParameterEditor(param, updateFunc) {
@@ -48,32 +64,20 @@ export default function ProgrammingExpressionEditor({
   environmentCategories,
   videoOptions
 }) {
-  // We don't want to update id or key
-  const {
-    id,
-    key,
-    showPath,
-    ...remainingProgrammingExpression
-  } = initialProgrammingExpression;
-  remainingProgrammingExpression.parameters.forEach(
-    p => (p.key = createUuid())
-  );
-  remainingProgrammingExpression.examples.forEach(e => (e.key = createUuid()));
   const [
     programmingExpression,
-    updateProgrammingExpression
-  ] = useProgrammingExpression(remainingProgrammingExpression);
+    setProgrammingExpressionProperty
+  ] = useProgrammingExpression(initialProgrammingExpression);
   const [isSaving, setIsSaving] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
   const [error, setError] = useState(null);
-  const [uploadImageDialogOpen, setUploadImageDialogOpen] = useState(false);
 
   const save = (e, shouldCloseAfterSave) => {
     if (isSaving) {
       return;
     }
     setIsSaving(true);
-    fetch(`/programming_expressions/${id}`, {
+    fetch(`/programming_expressions/${initialProgrammingExpression.id}`, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json',
@@ -85,7 +89,7 @@ export default function ProgrammingExpressionEditor({
         setIsSaving(false);
         if (response.ok) {
           if (shouldCloseAfterSave) {
-            navigateToHref(showPath);
+            navigateToHref(initialProgrammingExpression.showPath);
           } else {
             setLastUpdated(Date.now());
             setError(null);
@@ -101,12 +105,13 @@ export default function ProgrammingExpressionEditor({
   };
 
   const markdownEditorFeatures = {
-    imageUpload: true
+    imageUpload: true,
+    programmingExpression: true
   };
 
   return (
     <div>
-      <h1>{`Editing ${key}`}</h1>
+      <h1>{`Editing ${initialProgrammingExpression.key}`}</h1>
       <h2>
         This feature is in development. Please continue to use curriculum
         builder to edit code documentation.
@@ -115,21 +120,50 @@ export default function ProgrammingExpressionEditor({
         Display Name
         <input
           value={programmingExpression.name}
-          onChange={e => updateProgrammingExpression('name', e.target.value)}
+          onChange={e =>
+            setProgrammingExpressionProperty('name', e.target.value)
+          }
           style={styles.textInput}
         />
       </label>
       <label>
         Key (Used in URLs)
-        <input value={key} readOnly style={styles.textInput} />
+        <input
+          value={initialProgrammingExpression.key}
+          readOnly
+          style={styles.textInput}
+        />
       </label>
-      {programmingExpression.environmentEditorType === 'blockly' && (
+      <label>
+        Category
+        <select
+          value={programmingExpression.categoryKey}
+          onChange={e =>
+            setProgrammingExpressionProperty('categoryKey', e.target.value)
+          }
+          style={styles.selectInput}
+        >
+          <option key="none" value={''}>
+            (None)
+          </option>
+          {environmentCategories.map(category => (
+            <option key={category.key} value={category.key}>
+              {category.name}
+            </option>
+          ))}
+        </select>
+        <HelpTip>
+          Choose a category for the code documentation to fall beneath
+        </HelpTip>
+      </label>
+
+      {programmingExpression.environmentLanguageType === 'blockly' && (
         <label>
           Block Name
           <input
             value={programmingExpression.blockName}
             onChange={e =>
-              updateProgrammingExpression('blockName', e.target.value)
+              setProgrammingExpressionProperty('blockName', e.target.value)
             }
             style={styles.textInput}
           />
@@ -140,7 +174,7 @@ export default function ProgrammingExpressionEditor({
         <select
           value={programmingExpression.videoKey || ''}
           onChange={e =>
-            updateProgrammingExpression('videoKey', e.target.value)
+            setProgrammingExpressionProperty('videoKey', e.target.value)
           }
           style={styles.selectInput}
         >
@@ -152,24 +186,18 @@ export default function ProgrammingExpressionEditor({
           ))}
         </select>
       </label>
-      <label>
-        Image
-        <Button
-          onClick={() => setUploadImageDialogOpen(true)}
-          text="Choose Image"
-          color="gray"
-          icon="plus-circle"
-        />
-        {programmingExpression.imageUrl && (
-          <span>{programmingExpression.imageUrl}</span>
-        )}
-      </label>
+      <ImageInput
+        updateImageUrl={imgUrl =>
+          setProgrammingExpressionProperty('imageUrl', imgUrl)
+        }
+        imageUrl={programmingExpression.imageUrl}
+      />
       <label>
         Short Description
         <textarea
           value={programmingExpression.shortDescription}
           onChange={e =>
-            updateProgrammingExpression('shortDescription', e.target.value)
+            setProgrammingExpressionProperty('shortDescription', e.target.value)
           }
           style={styles.textInput}
         />
@@ -181,7 +209,7 @@ export default function ProgrammingExpressionEditor({
           <input
             value={programmingExpression.externalDocumentation}
             onChange={e =>
-              updateProgrammingExpression(
+              setProgrammingExpressionProperty(
                 'externalDocumentation',
                 e.target.value
               )
@@ -189,33 +217,11 @@ export default function ProgrammingExpressionEditor({
             style={styles.textInput}
           />
         </label>
-        <label>
-          Category
-          <select
-            value={programmingExpression.categoryKey}
-            onChange={e =>
-              updateProgrammingExpression('categoryKey', e.target.value)
-            }
-            style={styles.selectInput}
-          >
-            <option key="none" value={''}>
-              (None)
-            </option>
-            {environmentCategories.map(category => (
-              <option key={category.key} value={category.key}>
-                {category.name}
-              </option>
-            ))}
-          </select>
-          <HelpTip>
-            Chose a category for the code documentation to fall beneath
-          </HelpTip>
-        </label>
         <TextareaWithMarkdownPreview
           markdown={programmingExpression.content}
           label={'Content'}
           handleMarkdownChange={e =>
-            updateProgrammingExpression('content', e.target.value)
+            setProgrammingExpressionProperty('content', e.target.value)
           }
           features={markdownEditorFeatures}
         />
@@ -225,7 +231,7 @@ export default function ProgrammingExpressionEditor({
           markdown={programmingExpression.syntax}
           label={'Syntax'}
           handleMarkdownChange={e =>
-            updateProgrammingExpression('syntax', e.target.value)
+            setProgrammingExpressionProperty('syntax', e.target.value)
           }
           features={markdownEditorFeatures}
         />
@@ -237,7 +243,7 @@ export default function ProgrammingExpressionEditor({
           <textarea
             value={programmingExpression.returnValue}
             onChange={e =>
-              updateProgrammingExpression('returnValue', e.target.value)
+              setProgrammingExpressionProperty('returnValue', e.target.value)
             }
             style={styles.textInput}
           />
@@ -248,7 +254,7 @@ export default function ProgrammingExpressionEditor({
           markdown={programmingExpression.tips}
           label={'Tips'}
           handleMarkdownChange={e =>
-            updateProgrammingExpression('tips', e.target.value)
+            setProgrammingExpressionProperty('tips', e.target.value)
           }
           features={markdownEditorFeatures}
           helpTip="List of tips for using this code documentation"
@@ -257,7 +263,7 @@ export default function ProgrammingExpressionEditor({
       <CollapsibleEditorSection title="Parameters" collapsed>
         <OrderableList
           list={programmingExpression.parameters}
-          setList={list => updateProgrammingExpression('parameters', list)}
+          setList={list => setProgrammingExpressionProperty('parameters', list)}
           addButtonText="Add Another Parameter"
           renderItem={renderParameterEditor}
         />
@@ -265,7 +271,7 @@ export default function ProgrammingExpressionEditor({
       <CollapsibleEditorSection title="Examples" collapsed>
         <OrderableList
           list={programmingExpression.examples || []}
-          setList={list => updateProgrammingExpression('examples', list)}
+          setList={list => setProgrammingExpressionProperty('examples', list)}
           addButtonText="Add Another Example"
           renderItem={renderExampleEditor}
         />
@@ -275,13 +281,7 @@ export default function ProgrammingExpressionEditor({
         isSaving={isSaving}
         lastSaved={lastUpdated}
         error={error}
-        handleView={() => navigateToHref(showPath)}
-      />
-      <UploadImageDialog
-        isOpen={uploadImageDialogOpen}
-        handleClose={() => setUploadImageDialogOpen(false)}
-        uploadImage={imgUrl => updateProgrammingExpression('imageUrl', imgUrl)}
-        allowExpandable={false}
+        handleView={() => navigateToHref(initialProgrammingExpression.showPath)}
       />
     </div>
   );

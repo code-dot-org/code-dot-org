@@ -73,6 +73,8 @@ mk:
           lessons:
             Lists:
               name: Листи
+        aquatic:
+          name: водно
         cspplayground:
           lesson_groups:
             csp_variables:
@@ -389,3 +391,15 @@ mk:
           lesson_groups:
             lessonGroup-8:
               display_name: Променливи
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Променливи
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Лупови
+              key: Лупови
+            Variables:
+              name: Променливи
+              key: Променливи

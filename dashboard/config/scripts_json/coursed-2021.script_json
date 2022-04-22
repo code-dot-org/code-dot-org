@@ -12,20 +12,29 @@
       "lesson_extras_available": true,
       "supported_locales": [
         "ar-SA",
+        "cs-CZ",
+        "de-DE",
         "es-ES",
         "es-MX",
         "fr-FR",
+        "hi-IN",
+        "kn-IN",
+        "mr-IN",
+        "ms-MY",
+        "pl-PL",
         "pt-BR",
+        "pt-PT",
         "ro-RO",
         "ru-RU",
-        "sk-SK"
+        "sk-SK",
+        "zh-TW"
       ],
       "tts": true,
       "version_year": "2021"
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2022-01-20 17:42:56 UTC",
+    "serialized_at": "2022-04-11 19:36:54 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -909,7 +918,8 @@
       "key": "235b3b14-975a-43b6-93bc-d386b857fd6b",
       "position": 1,
       "properties": {
-        "name": "Getting Started (5 minutes)"
+        "duration": 5,
+        "name": "Getting Started"
       },
       "seeding_key": {
         "lesson_activity.key": "235b3b14-975a-43b6-93bc-d386b857fd6b",
@@ -922,7 +932,8 @@
       "key": "fd06b4db-e3d4-491b-9372-af9a05dc2bb7",
       "position": 2,
       "properties": {
-        "name": "Activity (30-45 minutes)"
+        "duration": 30,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "fd06b4db-e3d4-491b-9372-af9a05dc2bb7",
@@ -1246,6 +1257,7 @@
       "key": "386b2a92-c44c-403c-a19e-44bbf2ed7786",
       "position": 3,
       "properties": {
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -9433,7 +9445,7 @@
     },
     {
       "name": "Dance Party: Unplugged",
-      "url": "https://curriculum.code.org/hoc/unplugged/4/",
+      "url": "https://studio.code.org/s/dance-unplugged/lessons/1",
       "key": "dance_party_unplugged",
       "properties": {
         "audience": "Student",
@@ -9553,8 +9565,8 @@
       }
     },
     {
-      "name": "Open-ended Programming Levels",
-      "url": "https://docs.google.com/document/d/14qVMrzEOkq7m0gRjtYI8Erb1nGbx_XCz4TSm_d_xCls/view",
+      "name": "Sample Level Solutions",
+      "url": "https://docs.google.com/document/d/1XNOBi1OrHlRQbQCiaCV9MPHeAQhQDDr34wjlAd3qatw/template/preview",
       "key": "open-ended_programming_levels_1",
       "properties": {
         "audience": "Teacher",

@@ -2,6 +2,8 @@
 hu:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: új {ANIMATION_NAME} szereplő {LOCATION} helyen
       Dancelab_alternateMoves:
         text: "{GROUP} váltakozik {N} ütemenként \n{MOVE1} és {MOVE2} között"
         options:
@@ -1038,6 +1040,12 @@ hu:
         text: vonal húzása {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: szélek megakadályozzák {SPRITE} mozgását
+      gamelab_everySeconds:
+        text: 'ismételd meg minden {N} {UNIT} után '
+        options:
+          UNIT:
+            '"seconds"': másodperc
+            '"frames"': keretek
       gamelab_followingTargets:
         text: célpontok követése
       gamelab_getAllSprites:
@@ -1191,6 +1199,8 @@ hu:
             '"pop"': pukkanás
             '"rain"': esős
             '"spiral"': spirál
+      gamelab_makeNewScaledSprite:
+        text: új {ANIMATION_NAME} szereplő {LOCATION} helyen
       gamelab_makeNewSpriteAnon:
         text: új {ANIMATION_NAME} szereplő {LOCATION} helyen
       gamelab_makeNumSprites:

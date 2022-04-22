@@ -93,8 +93,8 @@ class Blockly < Level
     num_fields = xml_doc.xpath('//field').count
     num_titles = xml_doc.xpath('//title').count
     raise "unexpected error: XML contains both field and title elements" if num_fields > 0 && num_titles > 0
-    return "title" unless num_titles == 0
-    "field"
+    return "field" unless num_fields == 0
+    "title"
   end
 
   # These serialized fields will be serialized/deserialized as straight XML

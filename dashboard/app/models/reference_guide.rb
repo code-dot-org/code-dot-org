@@ -56,6 +56,12 @@ class ReferenceGuide < ApplicationRecord
     File.write(file_path, JSON.pretty_generate(object_to_serialize))
   end
 
+  def remove_serialization
+    return unless Rails.application.config.levelbuilder_mode
+    file_path = Rails.root.join("config/reference_guides/#{course_offering_version}/#{key}.json")
+    File.delete(file_path)
+  end
+
   # runs through all seed files, creating and deleting records to match the seed files
   def self.seed_all
     # collect all existing ids
@@ -97,6 +103,27 @@ class ReferenceGuide < ApplicationRecord
 
   def summarize_for_show
     {
+      key: key,
+      parent_reference_guide_key: parent_reference_guide_key,
+      display_name: display_name,
+      content: content
+    }
+  end
+
+  def summarize_for_index
+    {
+      key: key,
+      parent_reference_guide_key: parent_reference_guide_key,
+      display_name: display_name,
+      position: position
+    }
+  end
+
+  def summarize_for_edit
+    {
+      key: key,
+      course_version_name: course_offering_version,
+      parent_reference_guide_key: parent_reference_guide_key,
       display_name: display_name,
       content: content
     }

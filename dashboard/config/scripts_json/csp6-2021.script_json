@@ -4,6 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "Upcoming panel for high school students: Internships & computer science opportunities beyond software engineering",
+          "details": "Join us Wed, April 27 at 8pm EDT as college women majoring in CS share experiences and advice surrounding internships and roles that a CS degree can lead to outside of software engineering. ",
+          "link": "https://bit.ly/3uRlvsl",
+          "type": "bullhorn",
+          "visibility": "Teacher and student"
+        }
+      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -17,7 +26,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-02-23 18:06:43 UTC",
+    "serialized_at": "2022-04-18 20:45:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -63,7 +72,7 @@
       "relative_position": 1,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Students will complete two exploratory activities that introduce the concept of a problem and an algorithm. In the first students answer a series of questions about birthdates and names of their classmates. They then discuss the similarities and differences between the problems. In the second activity students are given six different algorithms and must analyze them to determine which they think are the same or different. At the end of the lesson they are introduced to the formal definitions of a problem and an algorithm.",
+        "overview": "Students will complete two exploratory activities that introduce the concept of a problem and an algorithm. In the first students answer a series of questions about birthdates and names of their classmates. They then discuss the similarities and differences between the problems. In the second activity students are given six different algorithms and must analyze them to determine which they think are the same or different. At the end of the lesson they are introduced to the formal definitions of a problem and an algorithm. <a href=\"studio.code.org/s/csp6-2021\">CSP Unit 6</a>",
         "preparation": "* Review the algorithms students will be comparing in the second activity to make sure you are prepared to support students in trying them out.",
         "purpose": "This lesson is an approachable and interactive introduction to the main concepts of this short unit. Students have been writing a lot of code, and now they are ready to think on a high level about the patterns that make two different problems, or two different algorithms, similar or different. This mindset will be important as they tackle the more challenging material later in the unit where students will learn to compare different algorithms that address the same problem.",
         "student_overview": "Learn how computer scientists think about problems and the way different algorithms can be designed to solve them.",

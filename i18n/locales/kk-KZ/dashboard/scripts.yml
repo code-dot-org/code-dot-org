@@ -2927,6 +2927,9 @@ kk:
             lessonGroup-2:
               display_name: Контент
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: For ілмектері
           lesson_groups:
             lessonGroup-2:
               display_name: Контент
@@ -2983,3 +2986,30 @@ kk:
           lesson_groups:
             lessonGroup-2:
               display_name: Контент
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Айнымалылар
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Ілмек
+              key: Ілмек
+            Events:
+              name: Шаралар
+              key: Шаралар
+            Conditionals:
+              name: Шарттар
+              key: Шарттар
+            Functions:
+              name: Функциялар
+              key: Функциялар
+            Variables:
+              name: Айнымалылар
+              key: Айнымалылар
+            For Loops:
+              name: For ілмектері
+              key: For ілмектері

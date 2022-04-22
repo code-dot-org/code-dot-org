@@ -748,7 +748,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   test "build_script_level_url" do
     assert_equal "/s/laurel/lessons/1/levels/1", build_script_level_path(@custom_s1_l1)
-    assert_equal "http://test.host/s/laurel/lessons/1/levels/1", build_script_level_url(@custom_s1_l1)
+    assert_equal "//test-studio.code.org/s/laurel/lessons/1/levels/1", build_script_level_url(@custom_s1_l1)
   end
 
   test "next routing for custom scripts" do

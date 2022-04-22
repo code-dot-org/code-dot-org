@@ -103,6 +103,9 @@
           },
           "draw a car": {
             "name": "намалюйте автомобіль"
+          },
+          "draw triangle": {
+            "name": "намалювати трикутник"
           }
         },
         "4-5 Bee Debugging 8": {
@@ -1207,21 +1210,33 @@
         "courseE_artist_functions9": {
           "do something": {
             "name": "щось зробити"
+          },
+          "draw triangle": {
+            "name": "намалювати трикутник"
           }
         },
         "courseE_artist_functions9_2018": {
           "do something": {
             "name": "щось зробити"
+          },
+          "draw triangle": {
+            "name": "намалювати трикутник"
           }
         },
         "courseE_artist_functions9_2019": {
           "do something": {
             "name": "щось зробити"
+          },
+          "draw triangle": {
+            "name": "намалювати трикутник"
           }
         },
         "courseE_artist_functions9_2020": {
           "do something": {
             "name": "щось зробити"
+          },
+          "draw triangle": {
+            "name": "намалювати трикутник"
           }
         },
         "courseE_artist_functionsProj_2018": {
@@ -1710,7 +1725,7 @@
         },
         "course1_artist_loops_challenge2": {
           "potential solution": {
-            "name": "потенційне рішення"
+            "name": "можливе рішення"
           }
         },
         "courseA_artist_loops_challenge1": {
@@ -1720,22 +1735,22 @@
         },
         "courseB_artist_loops_challenge2": {
           "potential solution": {
-            "name": "потенційне рішення"
+            "name": "можливе рішення"
           }
         },
         "courseB_artist_loops_challenge2_2018": {
           "potential solution": {
-            "name": "потенційне рішення"
+            "name": "можливе рішення"
           }
         },
         "courseB_artist_loops_challenge2_2019": {
           "potential solution": {
-            "name": "потенційне рішення"
+            "name": "можливе рішення"
           }
         },
         "courseB_artist_loops_challenge2_2020": {
           "potential solution": {
-            "name": "потенційне рішення"
+            "name": "можливе рішення"
           }
         },
         "Function intro Ryan": {
@@ -2246,7 +2261,7 @@
         },
         "courseB_artist_loops_challenge2_2021": {
           "potential solution": {
-            "name": "потенційне рішення"
+            "name": "можливе рішення"
           }
         },
         "courseC_artist_prog3_2021": {
@@ -2340,6 +2355,9 @@
         "courseE_artist_functions9_2021": {
           "do something": {
             "name": "щось зробити"
+          },
+          "draw triangle": {
+            "name": "намалювати трикутник"
           }
         },
         "courseE_artist_functionsProj_2021": {
@@ -2838,6 +2856,14 @@
             "parameters": {
               "binary": "двійкова система"
             }
+          }
+        },
+        "4-5 Artist 8": {
+          "draw circle": {
+            "name": "намалювати коло"
+          },
+          "draw goal": {
+            "name": "намалювати ціль"
           }
         }
       }

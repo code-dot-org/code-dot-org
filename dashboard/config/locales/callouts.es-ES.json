@@ -1885,7 +1885,7 @@
           "courseC_maze_programming2_1": "Esta es la caja de herramientas. Aquí encontrarás los bloques extra para completar los rompecabezas."
         },
         "courseA_maze_seq1_2021": {
-          "courseA_maze_seq1_1": "¡Haz click en la bombilla cuando necesites ayuda!"
+          "courseA_maze_seq1_1": "¡Haz clic en la bombilla cuando necesites una pista!"
         },
         "courseA_playLab_events4_2021": {
           "courseA_playlab_events4_callout1": "Esta es una llamada"
@@ -1993,7 +1993,7 @@
         },
         "courseD_maze_ramp3_2021": {
           "courseC_maze_programming3_2": "Puedes arrastras los bloques extra a la caja de herramientas para eliminarlos.",
-          "stone_block_2": "Los bloques grises están hechos de piedra y no se pueden eliminar."
+          "stone_block_2": "Los bloques grises están bloqueados y no se pueden eliminar."
         },
         "courseD_maze_ramp5_2021": {
           "": "Estos bloques no tienen números. ¡Puedes usar tantos como quieras!"
@@ -2550,6 +2550,9 @@
         },
         "courseC_artist_prog2_2021": {
           "slider": "Aquí puedes hacer más lento tu programa."
+        },
+        "CSD U3 Random add_2021": {
+          "CSD_U3_butterfly": "Observa atentamente este código."
         }
       }
     }

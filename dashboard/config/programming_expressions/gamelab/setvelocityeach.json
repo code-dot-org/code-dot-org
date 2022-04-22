@@ -29,8 +29,12 @@
       "description": "The velocity of each sprite in the positive y direction, downward."
     }
   ],
+  "parameters": [
+    "x",
+    "y"
+  ],
   "return_value": "No return value. Changes output in the display after drawSprites() is called.",
   "short_description": "Sets the velocity in both the x and y direction for all the sprites in a group.",
-  "syntax": "setVelocityEach(x, y)",
+  "syntax": "group.setVelocityEach(x, y)",
   "tips": "- Changing World.frameRate will affect the velocity.\r\n- Groups of sprites all have the same functions and you use the dot notation (combining the name of the group, followed by a dot, with the function name) to call the function for that group of sprites.\r\n- Any changes to the properties of a sprite will not be seen until after `drawSprites()` is called.\r\n- If `setColliderEach()` is called for group before it is scaled, the collider is not scaled. But if a group of sprites is first scaled and then the collider set, the scale is also applied to the collider."
 }

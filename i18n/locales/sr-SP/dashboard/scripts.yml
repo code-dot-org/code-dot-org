@@ -2441,6 +2441,10 @@ sr:
           lessons:
             lesson-6:
               name: Променљиве
+        csa3-2022:
+          lessons:
+            lesson-5:
+              name: Бројачке петље
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -2463,3 +2467,27 @@ sr:
               display_name: Дигитално држављанство
             lessonGroup-8:
               display_name: Променљиве
+        csa2-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Променљиве
+        k5-onlinepd-2022:
+          lessons:
+            Loops:
+              name: Петље
+              key: Петље
+            Events:
+              name: Догађаји
+              key: Догађаји
+            Conditionals:
+              name: Кондиционали
+              key: Кондиционали
+            Functions:
+              name: Функције
+              key: Функције
+            Variables:
+              name: Променљиве
+              key: Променљиве
+            For Loops:
+              name: Бројачке петље
+              key: Бројачке петље

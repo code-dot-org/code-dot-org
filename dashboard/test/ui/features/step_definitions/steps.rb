@@ -125,6 +125,11 @@ When /^I switch to the first iframe$/ do
   @browser.switch_to.frame @browser.find_element(tag_name: 'iframe')
 end
 
+When /^I switch to the iframe "([^"]*)"$/ do |iframe_selector|
+  $default_window = @browser.window_handle
+  @browser.switch_to.frame @browser.find_element(:css, iframe_selector)
+end
+
 # Can switch out of iframe content
 When /^I switch to the default content$/ do
   @browser.switch_to.default_content
@@ -372,6 +377,10 @@ end
 
 When /^I select the "([^"]*)" option in dropdown "([^"]*)"( to load a new page)?$/ do |option_text, element_id, load|
   select_dropdown(@browser.find_element(:id, element_id), option_text, load)
+end
+
+When /^I select the "([^"]*)" option in dropdown with class "([^"]*)"( to load a new page)?$/ do |option_text, class_name, load|
+  select_dropdown(@browser.find_element(:css, ".#{class_name}"), option_text, load)
 end
 
 When /^I select the "([^"]*)" option in dropdown named "([^"]*)"( to load a new page)?$/ do |option_text, element_name, load|
@@ -627,7 +636,7 @@ Then /^I wait to see a congrats dialog with title containing "((?:[^"\\]|\\.)*)"
 end
 
 Then /^I reopen the congrats dialog unless I see the sharing input/ do
-  next if @browser.execute_script("return $('#sharing-input').length > 0;")
+  next if @browser.execute_script("return $('#sharing-dialog-copy-button').length > 0;")
   puts "reopening congrats dialog"
   individual_steps %{
     And I press "again-button"
@@ -936,6 +945,14 @@ Given(/^I am assigned to unit "([^"]*)"$/) do |script_name|
     url: '/api/test/assign_script_as_student',
     method: 'POST',
     body: {script_name: script_name}
+  )
+end
+
+Given(/^I am assigned to course "([^"]*)" and unit "([^"]*)"$/) do |course_name, script_name|
+  browser_request(
+    url: '/api/test/assign_course_and_unit_as_student',
+    method: 'POST',
+    body: {script_name: script_name, course_name: course_name}
   )
 end
 

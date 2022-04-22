@@ -2,6 +2,8 @@
 ar:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: جعل جديده {ANIMATION_NAME} العفريت في {LOCATION}
       Dancelab_alternateMoves:
         text: |-
           {GROUP} بدل كل {N} مقياس
@@ -1064,6 +1066,12 @@ ar:
         text: رسم خط {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: حواف كتلة {SPRITE} من التحرك
+      gamelab_everySeconds:
+        text: 'كل {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': ثوان
+            '"frames"': الإطارات
       gamelab_followingTargets:
         text: الأهداف التالية
       gamelab_getAllSprites:
@@ -1217,6 +1225,8 @@ ar:
             '"burst"': تدفق
             '"pop"': منبثقة
             '"rain"': مطر
+      gamelab_makeNewScaledSprite:
+        text: جعل جديده {ANIMATION_NAME} العفريت في {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: جعل جديده {ANIMATION_NAME} العفريت في {LOCATION}
       gamelab_makeNumSprites:

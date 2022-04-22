@@ -74,20 +74,22 @@ describe('ProgrammingExpressionEditor', () => {
         .props().readOnly
     ).to.be.true;
 
+    // Category select
+    const categorySelect = wrapper.find('select').at(0);
+    expect(categorySelect.find('option').length).to.equal(4);
+    expect(
+      categorySelect.find('option').map(option => option.props().value)
+    ).to.eql(['', 'circuit', 'variables', 'canvas']);
+
     // Video select
-    const videoSelect = wrapper.find('select').at(0);
+    const videoSelect = wrapper.find('select').at(1);
     expect(videoSelect.find('option').length).to.equal(3);
     expect(
       videoSelect.find('option').map(option => option.props().value)
     ).to.eql(['', 'video1', 'video2']);
 
     // Image upload
-    expect(
-      wrapper
-        .find('Button')
-        .at(0)
-        .props().text
-    ).to.equal('Choose Image');
+    expect(wrapper.find('ImageInput').length).to.equal(1);
 
     // short description
     expect(
@@ -105,12 +107,6 @@ describe('ProgrammingExpressionEditor', () => {
         .at(0)
         .props().value
     ).to.equal('developer.mozilla.org');
-    expect(
-      documentationSection
-        .find('select')
-        .at(0)
-        .find('option').length
-    ).to.equal(4);
     expect(
       documentationSection
         .find('TextareaWithMarkdownPreview')
@@ -164,21 +160,13 @@ describe('ProgrammingExpressionEditor', () => {
         {...defaultProps}
         initialProgrammingExpression={{
           ...initialProgrammingExpression,
-          environmentEditorType: 'blockly',
+          environmentLanguageType: 'blockly',
           blockName: 'gamelab_location_picker'
         }}
       />
     );
     const blockNameInput = wrapper.find('input').at(2);
     expect(blockNameInput.props().value).to.equal('gamelab_location_picker');
-  });
-
-  it('shows upload image dialog when choose image button is pressed', () => {
-    const wrapper = shallow(<ProgrammingExpressionEditor {...defaultProps} />);
-    const uploadButton = wrapper.find('Button').first();
-    expect(uploadButton).to.not.be.null;
-    uploadButton.simulate('click');
-    expect(wrapper.find('UploadImageDialog').length).to.equal(1);
   });
 
   it('attempts to save when save is pressed', () => {

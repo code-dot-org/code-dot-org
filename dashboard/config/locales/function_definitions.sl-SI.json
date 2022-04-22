@@ -55,6 +55,9 @@
           },
           "draw R pad": {
             "name": "nariši R gumb"
+          },
+          "jump to controller top left": {
+            "name": "Skoči na kontroler zgoraj levo"
           }
         },
         "2-3 Artist Debugging 5": {
@@ -86,6 +89,9 @@
           },
           "draw head": {
             "name": "nariši glavo"
+          },
+          "draw sitting stick figure": {
+            "name": "Nariši sedeči lik."
           }
         },
         "2-3 Artist Debugging 7": {

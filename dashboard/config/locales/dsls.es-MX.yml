@@ -7682,11 +7682,11 @@ es-MX:
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - text: La abeja avanzará y obtendrá el néctar solo una vez.
-          feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
-            el néctar, lo que permite resolver el desafío.
+          feedback: Incorrecto. La abeja enlaza la acción en bucle (loop) de avanzar
+            y recoger el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá solo 2 unidades de néctar.
-          feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
-            el néctar, lo que permite resolver el desafío.
+          feedback: Incorrecto. La abeja enlaza la acción en bucle (loop) de avanzar
+            y recoger el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá todo el néctar.
           correct: true
           feedback: "¡Correcto!"
@@ -7694,16 +7694,16 @@ es-MX:
           feedback: La abeja enlaza la acción en bucle de avanzar y recoger el néctar,
             lo que permite resolver el desafío.
         questions:
-        - text: Mira los bucles anidados a continuación. ¿Qué sucederá si haces clic
-            en "Ejecutar"?
+        - text: Mira los bucles (loops) anidados de abajo. ¿Qué sucederá si haces
+            clic en "Ejecutar"?
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
         - text: La abeja avanzará y obtendrá el néctar solo una vez.
-          feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
-            el néctar, lo que permite resolver el desafío.
+          feedback: Incorrecto. La abeja enlaza la acción en bucle (loop) de avanzar
+            y recoger el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá solo 2 unidades de néctar.
-          feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
-            el néctar, lo que permite resolver el desafío.
+          feedback: Incorrecto. La abeja enlaza la acción en bucle (loop) de avanzar
+            y recoger el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá todo el néctar.
           correct: true
           feedback: "¡Correcto!"
@@ -7711,16 +7711,16 @@ es-MX:
           feedback: La abeja enlaza la acción en bucle de avanzar y recoger el néctar,
             lo que permite resolver el desafío.
         questions:
-        - text: Mira los bucles anidados a continuación. ¿Qué sucederá si haces clic
-            en "Ejecutar"?
+        - text: Mira los bucles (loops) anidados de abajo. ¿Qué sucederá si haces
+            clic en "Ejecutar"?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         answers:
         - text: La abeja avanzará y obtendrá el néctar solo una vez.
-          feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
-            el néctar, lo que permite resolver el desafío.
+          feedback: Incorrecto. La abeja enlaza la acción en bucle (loop) de avanzar
+            y recoger el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá solo 2 unidades de néctar.
-          feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
-            el néctar, lo que permite resolver el desafío.
+          feedback: Incorrecto. La abeja enlaza la acción en bucle (loop) de avanzar
+            y recoger el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá todo el néctar.
           correct: true
           feedback: "¡Correcto!"
@@ -7728,16 +7728,16 @@ es-MX:
           feedback: La abeja enlaza la acción en bucle de avanzar y recoger el néctar,
             lo que permite resolver el desafío.
         questions:
-        - text: Mira los bucles anidados a continuación. ¿Qué sucederá si haces clic
-            en "Ejecutar"?
+        - text: Mira los bucles (loops) anidados de abajo. ¿Qué sucederá si haces
+            clic en "Ejecutar"?
       courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
         answers:
         - text: La abeja avanzará y obtendrá el néctar solo una vez.
-          feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
-            el néctar, lo que permite resolver el desafío.
+          feedback: Incorrecto. La abeja enlaza la acción en bucle (loop) de avanzar
+            y recoger el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá solo 2 unidades de néctar.
-          feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
-            el néctar, lo que permite resolver el desafío.
+          feedback: Incorrecto. La abeja enlaza la acción en bucle (loop) de avanzar
+            y recoger el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá todo el néctar.
           correct: true
           feedback: "¡Correcto!"
@@ -7745,88 +7745,88 @@ es-MX:
           feedback: La abeja enlaza la acción en bucle de avanzar y recoger el néctar,
             lo que permite resolver el desafío.
         questions:
-        - text: Mira los bucles anidados a continuación. ¿Qué sucederá si haces clic
-            en "Ejecutar"?
+        - text: Mira los bucles (loops) anidados de abajo. ¿Qué sucederá si haces
+            clic en "Ejecutar"?
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
         - text: '4'
-          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
-            y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
-            bucle que ocurre dos veces. ¡4 veces 2 es 8!
+          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle (loop) de avance,
+            y luego 2 néctares en un bucle (loop) hacia abajo. Esto está todo dentro
+            de otro bucle (loop) que ocurre dos veces. ¡4 veces 2 es 8!
         - text: '8'
           correct: true
           feedback: "¡Correcto!"
         - text: '12'
-          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
-            y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
-            bucle que ocurre dos veces. ¡4 veces 2 es 8!
+          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle (loop) de avance,
+            y luego 2 néctares en un bucle (loop) hacia abajo. Esto está todo dentro
+            de otro bucle (loop) que ocurre dos veces. ¡4 veces 2 es 8!
         - text: No lo sé.
           feedback: La abeja recoge 2 néctares en un bucle de avance, y luego 2 néctares
             en un bucle hacia abajo. Esto está todo dentro de otro bucle que ocurre
             dos veces. ¡4 veces 2 es 8!
         questions:
-        - text: Mira el código a continuación. ¿Cuánta miel hará la abeja si haces
-            clic en "Ejecutar"?
+        - text: Mira el código de abajo. ¿Cuánta miel hará la abeja si haces clic
+            en "Ejecutar"?
       courseD_multi_bee_nestedLoops9_predict2_2018:
         answers:
         - text: '4'
-          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
-            y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
-            bucle que ocurre dos veces. ¡4 veces 2 es 8!
+          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle (loop) de avance,
+            y luego 2 néctares en un bucle (loop) hacia abajo. Esto está todo dentro
+            de otro bucle (loop) que ocurre dos veces. ¡4 veces 2 es 8!
         - text: '8'
           correct: true
           feedback: "¡Correcto!"
         - text: '12'
-          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
-            y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
-            bucle que ocurre dos veces. ¡4 veces 2 es 8!
+          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle (loop) de avance,
+            y luego 2 néctares en un bucle (loop) hacia abajo. Esto está todo dentro
+            de otro bucle (loop) que ocurre dos veces. ¡4 veces 2 es 8!
         - text: No lo sé.
           feedback: La abeja recoge 2 néctares en un bucle de avance, y luego 2 néctares
             en un bucle hacia abajo. Esto está todo dentro de otro bucle que ocurre
             dos veces. ¡4 veces 2 es 8!
         questions:
-        - text: Mira el código a continuación. ¿Cuánta miel hará la abeja si haces
-            clic en "Ejecutar"?
+        - text: Mira el código de abajo. ¿Cuánta miel hará la abeja si haces clic
+            en "Ejecutar"?
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         answers:
         - text: '4'
-          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
-            y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
-            bucle que ocurre dos veces. ¡4 veces 2 es 8!
+          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle (loop) de avance,
+            y luego 2 néctares en un bucle (loop) hacia abajo. Esto está todo dentro
+            de otro bucle (loop) que ocurre dos veces. ¡4 veces 2 es 8!
         - text: '8'
           correct: true
           feedback: "¡Correcto!"
         - text: '12'
-          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
-            y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
-            bucle que ocurre dos veces. ¡4 veces 2 es 8!
+          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle (loop) de avance,
+            y luego 2 néctares en un bucle (loop) hacia abajo. Esto está todo dentro
+            de otro bucle (loop) que ocurre dos veces. ¡4 veces 2 es 8!
         - text: No lo sé.
           feedback: La abeja recoge 2 néctares en un bucle de avance, y luego 2 néctares
             en un bucle hacia abajo. Esto está todo dentro de otro bucle que ocurre
             dos veces. ¡4 veces 2 es 8!
         questions:
-        - text: Mira el código a continuación. ¿Cuánta miel hará la abeja si haces
-            clic en "Ejecutar"?
+        - text: Mira el código de abajo. ¿Cuánta miel hará la abeja si haces clic
+            en "Ejecutar"?
       courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
         - text: '4'
-          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
-            y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
-            bucle que ocurre dos veces. ¡4 veces 2 es 8!
+          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle (loop) de avance,
+            y luego 2 néctares en un bucle (loop) hacia abajo. Esto está todo dentro
+            de otro bucle (loop) que ocurre dos veces. ¡4 veces 2 es 8!
         - text: '8'
           correct: true
           feedback: "¡Correcto!"
         - text: '12'
-          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
-            y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
-            bucle que ocurre dos veces. ¡4 veces 2 es 8!
+          feedback: Incorrecto. La abeja recoge 2 néctares en un bucle (loop) de avance,
+            y luego 2 néctares en un bucle (loop) hacia abajo. Esto está todo dentro
+            de otro bucle (loop) que ocurre dos veces. ¡4 veces 2 es 8!
         - text: No lo sé.
           feedback: La abeja recoge 2 néctares en un bucle de avance, y luego 2 néctares
             en un bucle hacia abajo. Esto está todo dentro de otro bucle que ocurre
             dos veces. ¡4 veces 2 es 8!
         questions:
-        - text: Mira el código a continuación. ¿Cuánta miel hará la abeja si haces
-            clic en "Ejecutar"?
+        - text: Mira el código de abajo. ¿Cuánta miel hará la abeja si haces clic
+            en "Ejecutar"?
       courseD_multi_collector_debugging10_predict1:
         answers:
         - text: Laurel girará en la dirección incorrecta al tratar de hacer un cuadrado.
@@ -10594,7 +10594,7 @@ es-MX:
         markdown: |-
           # Cómo hacerse Loopy
 
-          Esta lección introduce el concepto de programación de los bucles a través de una actividad de baile.
+          Esta lección introduce el concepto de programación de los bucles (loops) a través de una actividad de baile.
       GraphPaperProgramming-Unplugged_2021:
         markdown: |
           #Programación de papel cuadriculado
@@ -12348,9 +12348,9 @@ es-MX:
           ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       csf_safety_in_my_online_neighborhood_2021:
         markdown: |-
-          # Mi vecindario en Línea
+          # Mi Barrio en Línea
 
-          ## ¿Cómo visitas lugares en línea de manera segura?
+          ## ¿Cómo navegas en la Red sin riesgo?
       express_EOC_2021:
         description: "¡Has llegado al final del Curso E! Elige un proyecto para crear."
         display_name: Proyecto de fin de curso
@@ -12378,17 +12378,25 @@ es-MX:
             ejecutes el programa?
       CSD Games Properties multi predict_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: un sprite de abeja en el centro de la pantalla
+        - text: un sprite de abeja en la esquina inferior derecha
+          correct: true
+        - text: dos sprites de abejas, uno en el centro y otro en la esquina inferior
+            derecha
+        - text: tres sprites de abejas, todos en diferentes lugares
+        - text: nada, se producirá un error
         questions:
-        - {}
+        - text: "¿Qué mostrará el programa?"
+        content1: Mira el código de abajo y adivina dónde aparecerá el sprite de la
+          abeja.
+        title: Posicionamiento del Sprite de la Abeja
       CSD Games Properties practice_2021:
         display_name: Propiedades de Sprite
+        description: Prueba las propiedades de los sprites que has aprendido aquí
       CSD Games variables practice_2021:
         display_name: Variables Practicar
+        description: Elige una de las siguientes actividades para practicar el uso
+          de variables.
       CSD Header Size MC_2018_2019_pilot_2021:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -12423,13 +12431,16 @@ es-MX:
         title: 'Prueba Fin de Proyecto: Ordenadores y Resolución de Problemas '
       CSD U2 CSS practice_pilot_2021:
         display_name: Estilos de texto con CSS
+        description: "¡Prueba tus nuevas habilidades en estos desafíos diferentes!"
       CSD U2 Image challenge_pilot_2021:
         display_name: Añadiendo los Imágenes
+        description: Encuentra aquí un desafío adicional o un nuevo tipo de código.
       CSD U2 Image practice_pilot_2021:
         display_name: Añadiendo los Imágenes
+        description: Practica tus nuevas habilidades aquí.
       CSD U2 image debug match_pilot_2021:
         answers:
-        - {}
+        - text: https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34%20PM.png
         - text: <img src="https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01
             PM.png">
         - text: <img src="https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47
@@ -12458,6 +12469,33 @@ es-MX:
           # Punto de control de la planificación
 
           Revise los planes de los alumnos antes de permitirles continuar en el resto de los niveles.
+        markdown: |
+          # Tu Página Web Personal
+
+          En los próximos niveles, completarás y publicarás tu página web personal.  Esta es tu oportunidad de compartir tus ideas con el mundo, y también de mostrar todo lo que has aprendido.
+
+          Necesitarás...
+
+          * Tu guía de proyecto completada
+          * Las imágenes que has descargado
+          * La rúbrica del proyecto
+
+          Estas son las cosas que has aprendido...
+
+          * Cómo usar HTML para estructurar el contenido de tu página
+          * Cómo usar CSS para dar estilo al texto, los colores y el diseño de tu página
+          * Cómo dar formato a tu código para que sea más fácil de leer
+          * Cómo depurar el código HTML y CSS
+          * Cómo utilizar las imágenes de forma responsable
+          * Cómo proteger tu información personal en línea
+
+          ## Ejemplos
+
+          <div style="float: left; text-align:center;"><strong>El Perro Más Bonito</strong><br /><a href="https://codeprojects.org/vfqqBSl9WL5EmWlRTaCuyGL523thd_RLmA6fZjoahHo/" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/be0c20dba6319b34dc07a9f87ae615fa-image-1565304900473.png" alt="Dog Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Mi Viaje</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhHHDE0tb28ed-9-scxvFYE0" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/51b787b6a25663e092b3f55e051e9a94-image-1565630570417.png" alt="Trip Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Instrumentos Musicales</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhMuNKEOTdyH5PPeUpDimEeY" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/82323a78b17b69101dd6e98a6a21c55c-image-1565630573896.png" alt="Instrument Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Club de Reciclaje</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhBiffg8HpOk2lRx1kd5sgaw" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/5b0044bfd92d44c97cd74d82f1933daa-image-1565630578147.png" alt="Recycling Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Haikus</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhLgd_3k2ffeKaGZZO7Ebvgs" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/40892c338c78da445310ddfb7cf63127-image-1565630595445.png" alt="Haiku Sample Page"></a></div>
       CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
         answers:
         - text: perro.rotacion &lt; gato.rotacion
@@ -12485,6 +12523,14 @@ es-MX:
         questions:
         - text: "¿Qué resultado se imprimirá en la consola con este programa?"
         title: Título
+        markdown: |
+          # Expresiones Booleanas
+
+          **Expresión booleana** - una expresión que sólo puede evaluarse como `Verdadero` o `Falso`.
+
+          # Adivinar
+
+          Lee el código de abajo. Hay algunos símbolos nuevos que no conoces. Adivina qué significan e intenta responder a la siguiente pregunta
       CSD U3 Card Examples_2018_2019_pilot_2021:
         content1: descripción aquí
         markdown: |-
@@ -12556,6 +12602,7 @@ es-MX:
         title: dibujarSprites
       CSD U3 drawing practice choice_2021:
         display_name: Practica
+        description: "¡Practica mucho!"
       CSD U3 game intro_2018_2019_pilot_2021:
         content1: descripción aquí
         markdown: |-
@@ -12670,18 +12717,29 @@ es-MX:
         title: Prueba Final del Proyecto Desarrollo Web
       CSD games cake challenge choice_2021:
         display_name: Desafíos
+        description: |2-
+
+          Haz el Tuyo Propio
+          Acabas de recorrer el plan de otra persona para crear un juego, así que ahora es el momento de hacer el tuyo propio. ¿Qué características o retos adicionales quieres crear?
       CSD games functions practice choice_2021:
         display_name: Funciones Practicar
+        description: Practica el uso de las funciones y aprende más sobre lo que las
+          hace tan útiles.
       CSD games platform challenge choice_2021:
         display_name: Desafíos
+        description: "¡Mejora tu juego con estos desafíos!"
       CSD web conditionals practice choice_2021:
         display_name: Condicionales Practicar
+        description: Practica el uso de booleanos y condicionales con estas actividades.
       CSD web draw loop practice choice_2021:
         display_name: Practica
+        description: Prueba a utilizar el bucle de dibujo con estas actividades.
       CSD web movement practice choice_2021:
         display_name: Practica
+        description: Prueba a utilizar el bucle de dibujo con estas actividades.
       CSD web text practice choice_2021:
         display_name: Practica
+        description: Pon a prueba tus conocimientos de texto en estas actividades.
       CSDU6 Innovation_2021:
         teacher_markdown: |+
           A continuación, se muestran algunos sitios recomendados para que los estudiantes comiencen su investigación.  Aunque estos sitios son generalmente apropiados para la escuela, el contenido dentro de ellos cambia con frecuencia, por lo que **sugerimos encarecidamente que compruebes cada sitio para ver si hay contenido inapropiado antes de compartirlo con los estudiantes**.
@@ -12714,6 +12772,44 @@ es-MX:
 
           * [CNet](https://www.cnet.com/smart-home/)
           * [IoT Evolution](http://www.iotevolutionworld.com/smart-home/)
+
+
+        markdown: |+
+          # Investigación sobre la Innovación
+
+          Elige uno de los siguientes temas para investigar. Querrás encontrar información sobre algunos de los dispositivos informáticos innovadores más recientes relacionados con tu categoría.
+
+          ## Tecnología Portable
+          La tecnología vestible incluye cualquier forma de informática diseñada para ser llevada por el usuario, ya sea integrada en la ropa o como accesorio. Muchos dispositivos para llevar puestos, como los podómetros inteligentes, se solapan en cierto modo con la salud y la seguridad, ya que el dispositivo es a la vez vestible _y_ pretende ayudar a mejorar la salud personal.
+
+          ## Salud y Seguridad
+          Este tema tan amplio incluye tanto la tecnología de consumo (cosas que puedes usar para mejorar tu salud o seguridad) como la tecnología profesional (equipos que puede usar un médico u otro profesional).
+
+          ## Agricultura
+          Puede que la agricultura no sea un tema obvio, pero las innovaciones tecnológicas han tenido un gran impacto en la forma en que concebimos la agricultura. Esto incluye la incorporación de ordenadores a los equipos agrícolas existentes, el uso de sensores y robótica para controlar los cultivos y el análisis de datos para mejorar la eficiencia y la sostenibilidad.
+
+          ## Fabricación
+          Los avances en la creación rápida de prototipos, la robótica industrial y la automatización han tenido un gran impacto en la forma de producir bienes. Ya sea la tecnología que permite la fabricación asequible a pequeña escala (como las impresoras 3D y las cortadoras láser) o la integración de los ordenadores en el trabajo de la fábrica, hay muchas áreas interesantes para investigar aquí.
+
+          ## Arte y Diseño
+          La intersección entre la expresión artística y la informática puede dar resultados impresionantes e inesperados. Aunque es menos probable encontrar productos comerciales relacionados con el arte y el diseño, sí que se puede encontrar una gran variedad de creaciones caseras que utilizan todo tipo de dispositivos informáticos de forma creativa y expresiva.
+
+          ## Casa Inteligente
+          El sueño de una casa que entienda e incluso se anticipe a tus necesidades está más cerca que nunca. Tanto si se controlan explícitamente mediante comandos de voz como si se utilizan sensores para controlar y responder a las condiciones cambiantes, los dispositivos domésticos inteligentes se encargan de cualquier número de tareas mundanas o repetitivas en la casa.
+
+
+          # Consideraciones sobre la Investigación
+
+          Cuando busques dispositivos sobre tu especialidad, ten en cuenta las siguientes consideraciones:
+
+          * Céntrate en las soluciones basadas en hardware sobre los programas de software
+          * Céntrate en las innovaciones recientes por encima de las antiguas
+          * Sigue lo que te interesa
+
+          # Comenzando tu Investigación
+
+          Consulta con tu profesor los sitios web recomendados para comenzar tu investigación. También puedes utilizar algunas de las palabras clave anteriores para empezar a buscar ideas específicas en Internet. Por ejemplo, considera la posibilidad de buscar en los distintos sitios web de financiación colectiva (como Kickstarter e Indiegogo) para ver los productos que aún no han salido al mercado.
+
 
 
       Design a Screen for your App_2021:
@@ -12860,3 +12956,222 @@ es-MX:
         display_name: Personaliza tu Aplicación
       ml-intro app lab-book recommender 5-2021:
         display_name: Personaliza tu Aplicación
+      CSD HTML project Lists_2021:
+        description: Echa un vistazo a estas nuevas etiquetas que te permitirán añadir
+          listas a tu página web.
+        display_name: Listas HTML
+      CSD HTML project Review_2021:
+        description: Aquí tienes algunas etiquetas HTML que habrás visto en las últimas
+          lecciones.  Puedes utilizarlas para repasar las etiquetas que podrías necesitar
+          para tu página web.
+        display_name: Revisión de HTML
+      CSD U2 Sample CSS text_2021:
+        markdown: |
+          # Ejemplo de Sitio Web
+
+          Pulsa el sitio web que aparece a continuación para descubrir algunos nuevos tipos de estilo para tus páginas.
+
+          [![](https://images.code.org/4343b7c16ca18f6d2c003bf95d756f42-image-1585189253769.png)](https://codeprojects.org/g4ZEsGYTllMm_2Ien3QDtJ4wya6onDyRVzRjWiKNdLo/)
+      CSD Web Headings challenge_2021:
+        description: Aquí hay algunos códigos HTML adicionales para probar, y un área
+          de Juego Libre para usarlos.
+        display_name: Cabeceras HTML
+      CSD Web Headings practice_2021:
+        description: Prueba lo que has aprendido en una o varias de las siguientes
+          actividades.
+        display_name: Cabeceras HTML
+      CSD Web Sample Pages_2021:
+        content1: Mira estos ejemplos de páginas web y decide qué propósitos tienen
+          sus creadores y visitantes.
+        markdown: |+
+          # Ejemplos de Páginas Web Personales
+
+          <div style="float: left; text-align:center;"><strong>El Perro Más Bonito</strong><br /><a href="https://codeprojects.org/uqvtQ_zKapQ2XocJkdGZypbJWM1nDMCpts1dN7NZ9wQ" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/be0c20dba6319b34dc07a9f87ae615fa-image-1565304900473.png" alt="Dog Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Mi Viaje</strong><br /><a href="https://codeprojects.org/qNceXIsgEYKraWZxd0Lq9uOO7Jj3yBfcp8pHR4uXq8c" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/51b787b6a25663e092b3f55e051e9a94-image-1565630570417.png" alt="Trip Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Instrumentos Musicales</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhMuNKEOTdyH5PPeUpDimEeY" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/82323a78b17b69101dd6e98a6a21c55c-image-1565630573896.png" alt="Instrument Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Club de Reciclaje</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhBiffg8HpOk2lRx1kd5sgaw" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/5b0044bfd92d44c97cd74d82f1933daa-image-1565630578147.png" alt="Recycling Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Haikus</strong><br /><a href="https://codeprojects.org/PPGOslHhH0Od4yEOHHdnjLT4-x4yfDMStUTlMUZy6Cc" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/40892c338c78da445310ddfb7cf63127-image-1565630595445.png" alt="Haiku Sample Page"></a></div>
+
+
+
+      csd-post-survey-markdown-with-link-to-survey_2021:
+        markdown: "# Encuesta Fin de Curso de Descubrimientos de Informática \n\n**¡Tu
+          opinión es muy importante para nosotros!** La utilizamos para:\n\n* Entender
+          tu experiencia\n* Realizar mejoras en el curso\n\n¡Gracias por dedicar tu
+          tiempo a mejorar Descubrimientos de Informática!\n\n<a class=\"btn btn-large
+          btn-success\" href=\"/s/csd-post-survey-2021/lockable/1/levels/1/page/1\"
+          target=\"top\">Pulsa aquí para completar la Encuesta Fin de Curso de Descubrimientos
+          de Informática</a>\n\n(se abre en una nueva pestaña)\n\n<br>\n\n\n\n\n\n"
+        teacher_markdown: |+
+          Este nivel aparece al final de cada unidad. **¡Por favor, pide a tus alumnos que completen esta encuesta al final de la última unidad!** Los alumnos sólo tienen que hacer la encuesta una vez al final del curso.
+
+          * Los resultados son vitales para que nosotros (code.org) podamos mantener nuestros cursos y hacer mejoras.
+          * También habrá una encuesta para los profesores en la que podrán dar su opinión. Se te notificará por correo electrónico sobre la encuesta para profesores.
+
+          **Instrucciones para desbloquear la encuesta para los estudiantes:** [[google doc](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/view)] [[pdf](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/export?format=pdf)]
+
+          Si los alumnos hacen clic en el enlace y ven un mensaje de error sobre que la encuesta está bloqueada, sigue los pasos de las instrucciones anteriores para desbloquear la encuesta para los alumnos.
+
+
+      ml-models in applab-choice parent:
+        description: Prueba lo que has aprendido en una o varias de las siguientes
+          actividades.
+      CSD CSS project RGB_2021:
+        description: Comprueba cómo puedes conseguir aún más colores utilizando los
+          códigos RGB.
+        display_name: Colores RGB
+      CSD CSS project Review_2021:
+        description: Aquí hay algunas propiedades CSS que tal vez hayas visto en las
+          últimas lecciones.  Puedes usarlas para revisar los estilos que podrías
+          necesitar para tu página web.
+        display_name: Revisión de CSS
+      CSD U2 CSS challenge_pilot_2021:
+        description: Hay muchas formas diferentes de dar estilo al texto.  Utiliza
+          los siguientes desafíos para obtener nuevas ideas y aplicarlas en tu página
+          web.
+        display_name: Desafíos y Código Adicional
+      CSD U2 Expression Exemplars_2018_2019_pilot_2021:
+        markdown: |
+          # Ejemplos de Sitios Web Personales
+
+          Haz clic en los sitios web que aparecen a continuación para ver los sitios web personales que han creado otros alumnos.
+
+          ## Ejemplos
+
+          <div style="float: left; text-align:center;"><strong>El Perro Más Bonito</strong><br /><a href="https://codeprojects.org/vfqqBSl9WL5EmWlRTaCuyGL523thd_RLmA6fZjoahHo/" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/be0c20dba6319b34dc07a9f87ae615fa-image-1565304900473.png" alt="Dog Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Mi Viaje</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhHHDE0tb28ed-9-scxvFYE0" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/51b787b6a25663e092b3f55e051e9a94-image-1565630570417.png" alt="Trip Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Instrumentos Musicales</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhMuNKEOTdyH5PPeUpDimEeY" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/82323a78b17b69101dd6e98a6a21c55c-image-1565630573896.png" alt="Instrument Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Club de Reciclaje</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhBiffg8HpOk2lRx1kd5sgaw" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/5b0044bfd92d44c97cd74d82f1933daa-image-1565630578147.png" alt="Recycling Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Haikus</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhLgd_3k2ffeKaGZZO7Ebvgs" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/40892c338c78da445310ddfb7cf63127-image-1565630595445.png" alt="Haiku Sample Page"></a></div>
+      CSD U2 Sample CSS layout_2021:
+        markdown: "# Ejemplos de Sitios Web \nHaz clic en el sitio web de abajo para
+          descubrir algunos nuevos tipos de estilo para tus páginas.\n\n|Ejemplo 1|Ejemplo
+          2|Ejemplo 3|\n|-|-|-|\n|[![](https://images.code.org/7c31d954229b205eff20e4a131271845-image-1585070245513.png)](https://studio.code.org/projects/weblab/-lbgSOg0xktagjHqalYTlPvYzGmfV3OyQxwifLBmmWE/view)|[![](https://images.code.org/00410044eee7dedc993ec9d6c8887444-image-1589309900750.56.13
+          PM.png)](https://studio.code.org/projects/weblab/3ZP18hc29B_ZMG2Yh17zXJfOZ_97JAa882aj9oJScME/view)|[![](https://images.code.org/c67c9e9b8e44094a403e3974db09e2e3-image-1589314612876.15.47
+          PM.png)](https://studio.code.org/projects/weblab/Hdfq1QJEwNjrbpI8x7qwPO6ZHgLyywZOxGRKqIZGp8Y/view)|\n\n\n"
+      CSD U2 Sample classes_2021:
+        markdown: |
+          # Ejemplo de Sitio Web
+
+          Haz clic en la página web que aparece a continuación para descubrir nuevas formas de dar estilo a los elementos.
+
+          [![](https://images.code.org/71a3cb8e9708093b17b9c75eb0723d10-image-1588247512749.49.53 AM.png)](https://codeprojects.org/zu24LsgcyFFFLdZo9Q3vpBvDu3RpEDrNHtOLnEKNhZE)
+      CSD U2 Top Websites_2018_2019_pilot_2021:
+        markdown: |
+          # Sitios Web para la Resolución de Problemas
+
+          Aquí tienes algunas páginas web creadas para resolver problemas.  Elige dos sitios y utilízalos para completar la guía de actividades.
+
+          [<img src="https://images.code.org/752da9829923228ba71fd32499c2a5bf-image-1566856199999.png" style="float: left; margin: 10px">](https://codeprojects.org/3zq0Xy-f0olOr1uy1wzTzdFqvq4bGQx0zi_PrWM5p8Y)
+
+          [<img src="https://images.code.org/3dbd54718965bf83f0695422d5600b0c-image-1566240318585.png" style="float: left; margin: 10px">](https://codeprojects.org/0YXSEeSdj7HHu8NqZndJKlRz7dO1Vxj8o70HhBSfTHU/)
+
+          [<img src="https://images.code.org/37b9660399cb69d5c0bbc2603e2c43da-image-1566240321606.png" style="float: left; margin: 10px">](https://codeprojects.org/kMDTPWRtSww05TgT-ZnhnNjpStohzsZGRmBxRTtV6cA/)
+
+          [<img src="https://images.code.org/7331e5d4b1dda825360217270212ed46-image-1566240324800.png" style="float: left; margin: 10px">](https://codeprojects.org/5FQC3-_R1-LCbwW5oRUVt2h7BKe-N5OBaBr_OfTlxpk/)
+      CSD U2 layout style challenge_pilot_2021:
+        description: Prueba desafíos adicionales o aprende algún código nuevo.
+        display_name: Elementos de Estilo
+      CSD U2 layout style practice_pilot_2021:
+        description: Practica tus nuevas habilidades aquí.
+        display_name: Elementos de Estilo
+      CSD U2 links challenge_2021:
+        description: Prueba desafíos adicionales o aprende algún código nuevo.
+        display_name: Creando Vínculos
+      CSD web classes challenge_2021:
+        description: Prueba desafíos adicionales o aprende algún código nuevo.
+        display_name: Usando las Clases
+      CSD web classes practice_2021:
+        description: Practica tus nuevas habilidades aquí.
+        display_name: Usando las Clases
+      CSD Games Parameters challenge_2021:
+        description: Echa un vistazo a uno o varios de estos bloques adicionales que
+          puedes utilizar para hacer tus imágenes más interesantes.
+        display_name: Desafíos de Figuras y Parámetros
+      CSD Games Properties challenge_2021:
+        description: Prueba estos nuevos desafíos con las propiedades de los sprites
+        display_name: 'Desafíos: Propiedades de los Sprites'
+      CSD Games Sprites Challenges_2021:
+        description: Prueba estos desafíos adicionales que te ayudarán a hacer tus
+          sprites aún más especiales.
+        display_name: 'Desafíos: Sprites y Animaciones'
+      CSD Games Sprites practice_2021:
+        description: Utiliza tus nuevos conocimientos de sprites y animaciones para
+          completar estos niveles.
+        display_name: Creando sprites y animaciones
+      CSD Games parameters practice_2021:
+        display_name: Práctica con Parámetros
+      CSD Games variables challenge_2021:
+        description: Amplía tus conocimientos sobre las variables con estos desafíos.
+        display_name: 'Desafíos de Variables '
+      CSD U3 drawing challenges_2021:
+        description: "¡Prueba algunos desafíos!"
+        display_name: Desafíos de Dibujo
+      CSD games random challenge_2021:
+        description: Prueba estos desafíos adicionales con números aleatorios.
+        display_name: 'Desafíos: Números Aleatorios'
+      CSD games random practice_2021:
+        description: Prueba tus nuevos conocimientos en estos niveles.
+        display_name: Práctica con Números Aleatorios
+      CSD web draw loop challenge choice_2021:
+        description: Prueba estos desafíos de bucles de dibujo.
+        display_name: Desafíos del Bucle de Dibujo
+      CSD web movement challenge choice_2021:
+        description: Añade más a tu escena de peces o crea algo nuevo.
+        display_name: Desafíos de Movimiento de Sprite
+      CSD web text challenge choice_2021:
+        description: Prueba estos nuevos bloques y desafíos.
+        display_name: Desafíos de Texto
+      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2021:
+        markdown: |
+          # Planifica tu Proyecto
+
+          Echa un vistazo a la guía del proyecto, que ya hemos rellenado para ti.
+
+          * ¿Describe la guía del proyecto los mismos sprites que tú pensaste?
+          * ¿Utiliza las mismas variables para almacenar información?
+          * ¿Las funciones que describe son las mismas que tú describiste?
+      CSD games collisions challenge choice_2021:
+        description: Prueba estos nuevos bloques y desafíos con colisiones.
+        display_name: Desafíos de Colisión
+      CSD games collisions practice choice_2021:
+        description: Practica el uso de los nuevos bloques de colisiones.
+        display_name: Práctica de Colisiones
+      CSD games functions challenge choice_2021:
+        description: Mejora tu juego y prueba estos desafíos con funciones.
+        display_name: Desafíos con Funciones
+      CSD games istouching challenge choice_2021:
+        description: Prueba estos nuevos bloques y desafíos con colisiones.
+        display_name: Desafíos de Colisión
+      CSD games istouching practice choice_2021:
+        description: Practica el uso de la detección de colisiones con estas actividades.
+        display_name: Prácticas de Colisión
+      CSD games movement2 challenge choice_2021:
+        description: Prueba estos nuevos bloques y desafíos con la velocidad y el
+          patrón de contador.
+        display_name: Desafíos de Movimientos Complejos de Sprite
+      CSD games movement2 practice choice_2021:
+        description: Practica con las nuevas formas de mover los sprites.
+        display_name: Práctica de Movimiento del Sprite
+      CSD games velocity challenge choice_2021:
+        description: Prueba estos nuevos bloques y desafíos con la velocidad.
+        display_name: Desafíos de Velocidad
+      CSD games velocity practice choice_2021:
+        description: Practica el uso de los bloques de velocidad con estas actividades.
+        display_name: Práctica de Velocidad
+      CSD web conditionals challenge choice_2021:
+        description: Prueba estos desafíos con condicionales.
+        display_name: Desafíos de Condicionales
+      CSD web keyboard challenge choice_2021:
+        description: Prueba estos nuevos bloques y desafíos con la entrada del teclado.
+        display_name: Desafíos de Entrada de Teclado
+      CSD web keyboard practice choice_2021:
+        description: Practica las entradas del teclado con estas actividades.
+        display_name: Práctica de Entradas de Teclado
+      CSD web mouse challenge choice_2021:
+        description: Prueba estos nuevos bloques y desafíos con la entrada del ratón.
+        display_name: Desafíos del Ratón
+      CSD web mouse practice choice_2021:
+        description: Practica la entrada de teclado y el uso del bloque if/else con
+          estas actividades.
+        display_name: Entrada de Ratón y Práctica de If/else

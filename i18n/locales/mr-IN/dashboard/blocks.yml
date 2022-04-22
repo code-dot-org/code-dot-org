@@ -2,6 +2,8 @@
 mr:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: "{LOCATION} येथे नवीन {ANIMATION_NAME} स्प्राइट बनवा"
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -323,6 +325,7 @@ mr:
           FORMAT:
             '"border"': सीमारेषा
             '"inner"': चौरस च्या आत
+            '"diamond"': हिरा
             '"circle"': वर्तुळ
             '"grid"': ग्रिड
             '"row"': ओळ
@@ -432,6 +435,7 @@ mr:
           LAYOUT:
             '"border"': सीमारेषा
             '"inner"': चौरस च्या आत
+            '"diamond"': हिरा
             '"circle"': वर्तुळ
             '"grid"': ग्रिड
             '"row"': ओळ
@@ -814,6 +818,7 @@ mr:
         options:
           STRING:
             '"hearts_colorful"': ह्रदय
+            '"diamond"': हिरा
             '"s"': s
             '"t"': t
             '"u"': u
@@ -956,6 +961,11 @@ mr:
         text: रेषा काढा {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: एजेस ब्लॉक {SPRITE} ला हलवण्यापासून रोखतात
+      gamelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': सेकंद
+            '"frames"': फ्रेम्स
       gamelab_followingTargets:
         text: पुढील लक्ष्ये
       gamelab_getAllSprites:
@@ -1109,6 +1119,8 @@ mr:
             '"pop"': पॉप
             '"rain"': पाऊस
             '"spiral"': सर्पिलाकार
+      gamelab_makeNewScaledSprite:
+        text: "{LOCATION} येथे नवीन {ANIMATION_NAME} स्प्राइट बनवा"
       gamelab_makeNewSpriteAnon:
         text: "{LOCATION} येथे नवीन {ANIMATION_NAME} स्प्राइट बनवा"
       gamelab_makeNumSprites:
@@ -1862,6 +1874,12 @@ mr:
             '10': '10'
       Poetry_whenPromptAnswered:
         text: जेव्हा {VAR} ने उत्तर दिले
+      RyanLab_moveForward:
+        text: पुढे जा
+      RyanLab_turnLeft:
+        text: डावीकडे वळा
+      RyanLab_turnRight:
+        text: उजवीकडे वळा
       Vector_randomLocation:
         text: कोणतेही यादृच्छिक स्थान
       aalab_layoutSprites:
@@ -1929,6 +1947,8 @@ mr:
         options:
           TYPE:
             "'sand'": वाळू
+      craft_moveForward:
+        text: पुढे जा
       craft_placeBlock:
         text: "{blockType} ठेवा"
       craft_placePrismarine:

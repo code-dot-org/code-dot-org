@@ -16,5 +16,5 @@
     }
   ],
   "short_description": "Alternates between turning the color LEDs on and off. ",
-  "syntax": "toggle"
+  "syntax": "colorLeds[index].toggle()"
 }

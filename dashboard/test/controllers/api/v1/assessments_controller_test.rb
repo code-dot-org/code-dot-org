@@ -233,13 +233,13 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     ]
 
     # create user_level for level_group
-    user_level = create :user_level, user: @student_1, best_result: 100, script: script, level: level1, submitted: true
+    level_group_user_level = create :user_level, user: @student_1, best_result: 100, script: script, level: level1, submitted: true
 
     # create user_levels for sublevels
     student_answers.each do |level_and_answer|
       level, answer = level_and_answer
       level_source = create :level_source, level: level, data: answer
-      user_level = create :user_level, user: @student_1, script: script, level: level, level_source: level_source
+      create :user_level, user: @student_1, script: script, level: level, level_source: level_source
     end
 
     # Call the controller method.
@@ -258,13 +258,13 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
             "lesson" => script.name,
             "puzzle" => 1,
             "question" => "Long assessment 1",
-            "url" => "http://test.host/s/#{script.name}/lessons/1/levels/1?section_id=#{@section.id}&user_id=#{@student_1.id}",
+            "url" => "//test-studio.code.org/s/#{script.name}/lessons/1/levels/1?section_id=#{@section.id}&user_id=#{@student_1.id}",
             "multi_correct" => 1,
             "multi_count" => 4,
             "match_correct" => 1,
             "match_count" => 3,
             "submitted" => true,
-            "timestamp" => user_level[:updated_at],
+            "timestamp" => level_group_user_level[:updated_at],
             "level_results" => [
               {"student_result" => "This is a free response", "status" => "", "type" => "FreeResponse"},
               {"type" => "Multi", "student_result" => [0], "status" => "correct",},
@@ -344,7 +344,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
               "lesson" => script.name,
               "puzzle" => 1,
               "question" => "Long assessment 1",
-              "url" => "http://test.host/s/#{script.name}/lessons/1/levels/1?section_id=#{@section.id}&user_id=#{@student_1.id}",
+              "url" => "//test-studio.code.org/s/#{script.name}/lessons/1/levels/1?section_id=#{@section.id}&user_id=#{@student_1.id}",
               "multi_correct" => 1,
               "multi_count" => 2,
               "match_correct" => 0,

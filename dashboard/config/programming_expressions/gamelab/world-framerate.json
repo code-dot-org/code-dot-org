@@ -1,9 +1,9 @@
 {
   "key": "World.frameRate",
   "name": "World.frameRate",
-  "category": "World",
-  "category_key": "world",
-  "content": "The number of times per second the screen is refreshed.\r\n\r\nThe number of times per second the screen is refreshed is also the speed of `draw()` loop. frameRate is a variable that you do not need to declare. You can both read the value of frameRate and assign a new value to frameRate.\r\n\r\nThe default rate of 30 frames per second and values are limited to between 1 and 60.",
+  "category": "Game Lab",
+  "category_key": "game_lab",
+  "content": "The number of times per second the screen is refreshed.\n\nThe number of times per second the screen is refreshed is also the speed of [`draw()`(#fff176)](/docs/gamelab/draw/) loop. frameRate is a variable that you do not need to declare. You can both read the value of frameRate and assign a new value to frameRate.\n\nThe default rate of 30 frames per second and values are limited to between 1 and 60.",
   "examples": [
     {
       "name": "",

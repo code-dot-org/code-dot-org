@@ -363,13 +363,13 @@
           "name": "Primeros pasos "
         },
         "544fd00b-84f3-47e4-9e02-cb27a6cfbbca": {
-          "name": "Actividad: (30-45 minutos)"
+          "name": "Actividad"
         },
         "e12c8da3-986d-488b-bed5-a7bb9e95e393": {
           "name": "Niveles"
         },
         "2f9c446a-0802-48b0-91ff-a7df9fe4afe2": {
-          "name": "Resumen (5 minutos)"
+          "name": "Actividad de cierre"
         },
         "1a4d5cec-bd30-41f9-8012-4f16018769f9": {
           "name": "Evaluación (2 minutos)"
@@ -384,7 +384,7 @@
           "name": "Primeros pasos "
         },
         "82dec89b-f375-4238-a251-ffae17c2dfd1": {
-          "name": "Actividad: (30-45 minutos)"
+          "name": "Actividad"
         },
         "a25c23cd-4e73-4a82-882f-7cc0a9fdfeb4": {
           "name": "Niveles"
@@ -396,7 +396,7 @@
           "name": "¡Que sea viral!"
         },
         "7afb9d6e-2c07-44d2-8504-90df0cecc778": {
-          "name": "Evaluación (2 minutos)"
+          "name": "Evaluación"
         },
         "a676c281-2f0e-41d3-8e30-dbf6bb8d6dc0": {
           "name": "Calentamiento"
@@ -3258,16 +3258,16 @@
           "name": "Oportunidad multidisciplinaria"
         },
         "424b80fc-8e8d-4dbd-bed3-4890da24b145": {
-          "name": "Preparación: la misma palabra, significados diferentes."
+          "name": "Actividad inicial: mismas palabras, diferentes significados."
         },
         "fdbc31b6-5f12-49c6-be6a-3183aec2bfa6": {
-          "name": "El poder de las palabras"
+          "name": "Ver: el poder de las palabras"
         },
         "fbda7646-9395-471f-8749-694fd9cd30da": {
-          "name": "Investigar: ¿Cuál es el problema?"
+          "name": "Investigar: ¿cuál es el problema?"
         },
         "f747c55f-efbf-41df-809a-2f2620917e1f": {
-          "name": "Conclusión: Cruzando la línea"
+          "name": "Actividad de cierre: cruzar la línea"
         },
         "86dafe20-4778-4665-94eb-cf837951259b": {
           "name": "Ampliación del aprendizaje"
@@ -3360,7 +3360,7 @@
           "name": "Calentamiento"
         },
         "5b774bd6-b243-4d1d-9145-20747f320129": {
-          "name": "Actividad Puente - Escoge Una"
+          "name": "Actividad puente: elige una"
         },
         "17982c9a-0fc7-457e-95a7-e0852d5f861e": {
           "name": "Actividad Principal"
@@ -3423,19 +3423,19 @@
           "name": "Evaluación"
         },
         "80cbea1a-7c3f-4121-bab6-abd831772020": {
-          "name": "Día 1 - Explora Ideas Para Proyectos"
+          "name": "Día 1 – Exploración de ideas de proyecto"
         },
         "d3e8770f-3f2d-450a-b605-bd792b3ed687": {
-          "name": "Día 2 - El Proceso de Diseño"
+          "name": "Día 2 – El proceso de diseño"
         },
         "12f4ca9e-9b05-4a99-a6f4-6133b8c0e407": {
-          "name": "Día 3. Construye Tu Proyecto"
+          "name": "Día 3 – Desarrollo del proyecto"
         },
         "459d00f2-e296-4205-bca6-eab8d4599354": {
-          "name": "Día 4 - Revisa Tu Proyecto"
+          "name": "Día 4 - Revisión del proyecto"
         },
         "25d5e16a-9db1-441d-a4c4-916612df574b": {
-          "name": "Día 5 & 6 - Presenta Tu Proyecto"
+          "name": "Días 5 y 6 – Presentación del proyecto"
         },
         "d9a085a2-e557-4826-952e-fdc5836fe8a2": {
           "name": "Ampliación del aprendizaje"
@@ -3471,7 +3471,7 @@
           "name": "Calentamiento"
         },
         "5fbaf40a-2106-4bfd-937a-3f4594b26b81": {
-          "name": "Actividad Puente - Escoge Una"
+          "name": "Actividad puente: elige una"
         },
         "248075ed-be23-4145-bbe5-f629eb3df448": {
           "name": "Actividad Principal"
@@ -3489,10 +3489,10 @@
           "name": "Calentamiento"
         },
         "bc23554e-190c-44f9-84b1-03b21dd7ef17": {
-          "name": "Actividad Puente - Escoge Una"
+          "name": "Actividad puente: elige una"
         },
         "0e24dd16-0f94-45cb-85a3-ed4852df7abd": {
-          "name": "Previsualizar desafíos online como clase"
+          "name": "Revisión de desafíos en línea en conjunto"
         },
         "394eeb9e-8c66-4a17-bfb8-294a6f91b6d6": {
           "name": "Actividad Principal"
@@ -3531,7 +3531,7 @@
           "name": "Calentamiento"
         },
         "06b2458e-a834-46c5-842e-385c1fc97bc8": {
-          "name": "Actividad Puente - Escoge Una"
+          "name": "Actividad puente: elige una"
         },
         "287b6295-2274-4349-a7c3-fab998a09e1c": {
           "name": "Actividad Principal"
@@ -3600,7 +3600,7 @@
           "name": "Calentamiento"
         },
         "8e77b151-07f6-4404-98ec-473f310fc8b1": {
-          "name": "Actividad Puente - Escoge Una"
+          "name": "Actividad puente: elige una"
         },
         "b170b2ef-82f1-4067-aadc-add8074acb80": {
           "name": "Actividad Principal"
@@ -3666,7 +3666,7 @@
           "name": "Calentamiento"
         },
         "9bcd264d-fc8b-42f8-a7d5-47be1a4ff975": {
-          "name": "Actividad Puente - Escoge Una"
+          "name": "Actividad puente: elige una"
         },
         "2a7f3c27-943a-415a-bdb1-1fbef4249074": {
           "name": "Actividad Principal"
@@ -3822,7 +3822,7 @@
           "name": "Actividad puente: programación"
         },
         "28178b0d-4526-4c90-ba4b-a2cab6f12461": {
-          "name": "Previsualizar desafíos online como clase"
+          "name": "Revisión de desafíos en línea en conjunto"
         },
         "679fd0a3-4fa5-445a-a58d-2789ae6af602": {
           "name": "Actividad Principal"
@@ -3891,7 +3891,7 @@
           "name": "Calentamiento"
         },
         "8df58520-6127-4563-b145-8d7d81635bde": {
-          "name": "Actividad Puente - Escoge Una"
+          "name": "Actividad puente: elige una"
         },
         "e36b6776-3c22-498e-94ef-44fae2c28065": {
           "name": "Actividad Principal"
@@ -3945,7 +3945,7 @@
           "name": "Calentamiento"
         },
         "bddb3c72-46b5-4cdf-897d-3cf4ffbbcdb9": {
-          "name": "Actividad Puente - Escoge Una"
+          "name": "Actividad puente: elige una"
         },
         "7ec11452-1367-44ef-afe4-c8cf354bb183": {
           "name": "Actividad Principal"
@@ -4005,16 +4005,16 @@
           "name": "Actividad de cierre"
         },
         "aebca980-e26c-4993-b001-dc20e492f04e": {
-          "name": "Calentamiento: Pssst ... ¿Qué es una Contraseña?"
+          "name": "Actividad inicial: pssst… ¿qué es una contraseña?"
         },
         "139034de-1cee-48f9-abd8-40e8c15cd439": {
-          "name": "Evaluar: ¡Uh-Oh! Si... Entonces..."
+          "name": "Evaluar: ¡Oh, oh! si… entonces…"
         },
         "a992b967-f8d7-474c-a1ad-81b9b7872fbd": {
-          "name": "Crear: Potencia tu Contraseña"
+          "name": "Crear: refuerza tu contraseña"
         },
         "735c6b82-9219-4ef5-9313-d386dc1c52b9": {
-          "name": "Recapitulación: Notas y Consejos sobre Contraseñas"
+          "name": "Actividad de cierre: consejos para crear contraseñas"
         },
         "e735098e-abab-465e-949c-a7e92e771b84": {
           "name": "Ampliación del aprendizaje"
@@ -4032,7 +4032,7 @@
           "name": "Actividad de cierre"
         },
         "4d3409a1-dc66-4033-87ad-1484af8ab342": {
-          "name": "Evaluación Opcional"
+          "name": "Evaluación opcional"
         },
         "c401b0f4-97af-418d-b58b-a58493c7570c": {
           "name": "Ampliación del aprendizaje"
@@ -4041,7 +4041,7 @@
           "name": "Calentamiento"
         },
         "6b7f225b-884f-47b3-8390-7226087e8fd1": {
-          "name": "Actividades Puente - Programación"
+          "name": "Actividad puente: programación"
         },
         "e514547a-7e9e-43e5-991d-3e3daab0ef20": {
           "name": "Actividad Principal"
@@ -4065,7 +4065,7 @@
           "name": "Calentamiento"
         },
         "4c685b1b-abfc-410a-ad22-e4f99f0e1a7e": {
-          "name": "Actividades puente: elija una"
+          "name": "Actividades puente: elige una"
         },
         "d05decb3-7f64-4886-8da0-088e7d73216d": {
           "name": "Actividad Principal"
@@ -4098,10 +4098,10 @@
           "name": "Actividad de cierre"
         },
         "235b3b14-975a-43b6-93bc-d386b857fd6b": {
-          "name": "Manos a la obra (5 minutos)"
+          "name": "Primeros pasos"
         },
         "fd06b4db-e3d4-491b-9372-af9a05dc2bb7": {
-          "name": "Actividad: (30-45 minutos)"
+          "name": "Actividad"
         },
         "e96a358f-201b-4474-8950-90dd94426aff": {
           "name": "Actividad de cierre"
@@ -4137,7 +4137,7 @@
           "name": "Actividad de cierre"
         },
         "69460e12-7295-400a-8fc1-135a17d25118": {
-          "name": "Calentamiento "
+          "name": "Actividad inicial"
         },
         "e63db04a-81d6-4b49-80b5-4afab4df2a05": {
           "name": "Actividad Principal"
@@ -4236,7 +4236,7 @@
           "name": "Calentamiento"
         },
         "1b0cbf3c-0437-4bc9-a50d-3bd6360cd665": {
-          "name": "Actividad Puente"
+          "name": "Actividad puente"
         },
         "813fd866-1517-4302-b080-b035a842ae06": {
           "name": "Actividad Principal"
@@ -4512,7 +4512,7 @@
           "name": "Calentamiento"
         },
         "472354f3-e631-40c3-8001-dc5d7f1206db": {
-          "name": "Previsualizar desafíos online como clase"
+          "name": "Revisión de desafíos en línea en conjunto"
         },
         "0dbd5d7d-e9b0-4c0c-be01-009191570dc5": {
           "name": "Actividad Principal"
@@ -4524,7 +4524,7 @@
           "name": "Ampliación del aprendizaje"
         },
         "a5713eec-33e7-45ba-acc9-fba5383c6355": {
-          "name": "Calentamiento: Programación Previa en el Laberinto"
+          "name": "Actividad previa: revisión de la programación en el Laberinto"
         },
         "e0aa5bd3-368a-43c0-b435-29b01a86a6d4": {
           "name": "Actividad Principal"
@@ -4569,7 +4569,7 @@
           "name": "Calentamiento"
         },
         "9299b9d4-262a-452e-93f2-b04f9c64c34e": {
-          "name": "Fundación en Línea: Vista Previa de Bucles en Coleccionista"
+          "name": "Bases en línea: revisión de bucles de la Recolectora"
         },
         "879a5770-47f6-4f01-bc0f-14726d6ae8b4": {
           "name": "Actividad Principal"
@@ -4632,7 +4632,7 @@
           "name": "Calentamiento"
         },
         "23175482-f558-4d04-aec7-69a02820317e": {
-          "name": "Actividad Puente"
+          "name": "Actividad puente"
         },
         "7007138d-bc16-4bc0-8d30-252440672814": {
           "name": "Actividad Principal"
@@ -4653,10 +4653,10 @@
           "name": "Calentamiento: Superhéroe Secreto"
         },
         "f642093a-def9-467e-a8cc-8950b21d62c8": {
-          "name": "Aprende: Ser un defensor de los demás (Upstander)"
+          "name": "Aprende: Ser un defensor de los demás "
         },
         "80d3bd1c-5d30-4abd-85d9-38e445a6068b": {
-          "name": "Crear: Tu Superhéroe Ciudadano Digital"
+          "name": "Crea: Tu Superhéroe Ciudadano Digital"
         },
         "7d491d29-d496-450c-aece-a776f7fbd3d3": {
           "name": "Recapitulación: ¡Salvemos el día! Cómic"
@@ -4668,13 +4668,13 @@
           "name": "Calentamiento: Levantarse, Sentarse"
         },
         "3d33781b-194e-4311-b493-e6cd3bf140ac": {
-          "name": "Analizar: ¿Por qué la gente comparte?"
+          "name": "Analizar: ¿por qué la gente comparte?"
         },
         "202398a5-6b48-4360-9ed8-10db2039b064": {
-          "name": "Analizar: ¿Privado o Personal?"
+          "name": "Analizar: ¿privado o personal?"
         },
         "d7df338d-c42c-4fce-aa60-ec516fd2d48d": {
-          "name": "Resumen: Ticket de Salida"
+          "name": "Actividad de cierre: boleto de salida"
         },
         "02429a22-ab18-4df6-9062-d88960fe9ae8": {
           "name": "Ampliación del aprendizaje"
@@ -4695,7 +4695,7 @@
           "name": "Oportunidad multidisciplinaria"
         },
         "077242ad-8c8a-4b24-a139-a5e198abd405": {
-          "name": "Calentamiento (Opcional)"
+          "name": "Calentamiento (opcional)"
         },
         "7ccdedb5-15bf-4d75-9efb-e65349644266": {
           "name": "Actividad Principal"
@@ -4764,7 +4764,7 @@
           "name": "Calentamiento"
         },
         "a80b5d47-5fb8-4557-9fb2-233074caad47": {
-          "name": "Actividad Puente - Escoge Una"
+          "name": "Actividad puente: elige una"
         },
         "0da29d00-d95a-4538-ac89-116513fba104": {
           "name": "Actividad Principal"
@@ -4830,13 +4830,13 @@
           "name": "Proyecto de fin de curso"
         },
         "430c7fd8-dd67-4fff-924a-e6080df26e8a": {
-          "name": "Día 2 - El Proceso de Diseño"
+          "name": "Día 2 – El proceso de diseño"
         },
         "0cf95f16-6aaa-4ea6-b62b-043b7c299f90": {
-          "name": "Día 3. Construye Tu Proyecto"
+          "name": "Día 3 – Desarrollo del proyecto"
         },
         "e8be4727-c687-43bb-a1be-e1b3da780020": {
-          "name": "Día 4 & 5 - Presenta Tu Proyecto"
+          "name": "Día 4 & 5 - Presentación del proyecto "
         },
         "070a6c7f-86b0-4bd2-b220-99469d1f1169": {
           "name": "Ampliación del aprendizaje"
@@ -5316,7 +5316,7 @@
           "name": "Actividad de cierre"
         },
         "1c6474e1-f1d7-4d13-94a0-2657589894ae": {
-          "name": "Calentamiento "
+          "name": "Actividad inicial"
         },
         "cdcd4d00-c6df-40db-a0c7-37064a6fcf40": {
           "name": "Actividad"
@@ -5490,7 +5490,7 @@
           "name": "Modificaciones de la lección"
         },
         "5f4ab37a-26cb-4570-9e78-2a1a7ce16e21": {
-          "name": "Calentamiento"
+          "name": "Actividad inicial"
         },
         "5c0c8ace-b8ec-4ea9-8e2a-6e3b55a93e17": {
           "name": "Actividad"
@@ -5502,7 +5502,7 @@
           "name": "Modificaciones de la lección"
         },
         "fa7bb816-68d0-4964-a4c9-acf09377edc3": {
-          "name": "Calentamiento"
+          "name": "Actividad Inicial"
         },
         "d72bfe99-62ed-4a91-87e0-27d873cc3aa8": {
           "name": "Actividad"
@@ -5514,7 +5514,7 @@
           "name": "Modificaciones de la lección"
         },
         "7e77a0b3-3a58-4d8d-9efa-b796c1496bde": {
-          "name": "Calentamiento"
+          "name": "Actividad Inicial"
         },
         "20458bdc-a944-45dd-b4a5-ddc0acf2a104": {
           "name": "Actividad"
@@ -5553,7 +5553,7 @@
           "name": "Calentamiento"
         },
         "9a78dce2-0812-414f-8c20-1728b4ff1de2": {
-          "name": "Actividad"
+          "name": "Actividad Principal"
         },
         "207bc633-dfe5-4c4d-b366-c1f5081676c1": {
           "name": "Actividad de cierre"
@@ -5577,10 +5577,10 @@
           "name": "Calentamiento"
         },
         "2e5b6973-dcd9-405c-958d-2366095f4375": {
-          "name": "Actividad"
+          "name": "Actividad Principal"
         },
         "3e93f640-d708-4ed5-a00a-4205f6dcd4fb": {
-          "name": "Cierre"
+          "name": "Actividad de cierre"
         },
         "9368b7ab-08ee-4900-b007-3a008552079f": {
           "name": "Modificaciones de la lección"
@@ -5601,7 +5601,7 @@
           "name": "Calentamiento"
         },
         "c4cdf9ba-b683-4025-bc79-a6e72c0d4cf3": {
-          "name": "Actividad"
+          "name": "Actividad Principal"
         },
         "6b3615be-6022-43a7-b634-56545dd94ace": {
           "name": "Actividad de cierre"
@@ -5625,7 +5625,7 @@
           "name": "Calentamiento"
         },
         "e22dd0d5-97b3-4829-9d90-3a213360c254": {
-          "name": "Actividad"
+          "name": "Actividad principal"
         },
         "7867053c-45a1-4d10-a159-8dc70ab53a0b": {
           "name": "Cierre"
@@ -5673,7 +5673,7 @@
           "name": "Calentamiento"
         },
         "ee232401-7aef-488e-b0f1-4b169a7a854e": {
-          "name": "Actividad"
+          "name": "Actividad Principal"
         },
         "6ad1cd24-169f-4b80-b9a4-8cc111becfd1": {
           "name": "Actividad de cierre"
@@ -5685,7 +5685,7 @@
           "name": "Calentamiento"
         },
         "c56d186e-9346-4a55-b871-3547db946cb0": {
-          "name": "Actividad"
+          "name": "Actividad Principal"
         },
         "639761f1-fc44-4250-ab0d-0e4b0565f95e": {
           "name": "Actividad de cierre"
@@ -6021,7 +6021,7 @@
           "name": "Modificaciones de la lección"
         },
         "2882d381-78b9-4874-8f84-6b9e4c251861": {
-          "name": "Calentamiento"
+          "name": "Actividad inicial"
         },
         "9d2f6fef-3722-429e-b4c1-f6d1103c942b": {
           "name": "Actividad"
@@ -6033,7 +6033,7 @@
           "name": "Modificaciones de la lección"
         },
         "479d0cbe-6860-44be-bd76-9d7e266e0785": {
-          "name": "Calentamiento"
+          "name": "Actividad Inicial"
         },
         "9982617c-045f-447f-8f83-522ea617c3b9": {
           "name": "Actividad"
@@ -6045,7 +6045,7 @@
           "name": "Modificaciones de la lección"
         },
         "d8c9fbdb-b731-44f3-aa89-3bfd07111678": {
-          "name": "Calentamiento"
+          "name": "Actividad Inicial"
         },
         "87977467-a47d-46de-90b9-df606358da99": {
           "name": "Actividad"
@@ -6057,7 +6057,7 @@
           "name": "Modificaciones de la lección"
         },
         "cb8113ad-e18f-49a9-9cb5-bfb45ee43bc4": {
-          "name": "Calentamiento"
+          "name": "Actividad Inicial"
         },
         "60f3718d-0319-4213-a83d-3ce3cb6bdd80": {
           "name": "Actividad"
@@ -6069,7 +6069,7 @@
           "name": "Modificaciones de la lección"
         },
         "17a16dd3-54c2-4e6a-b6cf-f6bbb3394f62": {
-          "name": "Calentamiento"
+          "name": "Actividad inicial"
         },
         "b3d7133e-335d-4c28-98d8-a61e8fecaab5": {
           "name": "Actividad"
@@ -6081,7 +6081,10 @@
           "name": "Modificaciones de la lección"
         },
         "54db6e45-9f93-4f70-aef0-f2820b64ad6d": {
-          "name": "Calentamiento"
+          "name": "Actividad Inicial"
+        },
+        "d72bad77-760b-4fe9-9282-586e05a164a7": {
+          "name": "Actividad "
         },
         "30ea67ca-4696-43c4-af86-24edbe8bea45": {
           "name": "Actividad de cierre"
@@ -6090,7 +6093,7 @@
           "name": "Modificaciones de la lección"
         },
         "481b15da-1d94-404a-859d-31a4cfe544ef": {
-          "name": "Calentamiento"
+          "name": "Actividad inicial"
         },
         "d6982573-b0dc-4c36-a400-b426cb43e2b4": {
           "name": "Actividad"
@@ -6102,7 +6105,7 @@
           "name": "Modificaciones de la lección"
         },
         "ff6415fc-9140-4824-ac75-30b80fff14ce": {
-          "name": "Calentamiento"
+          "name": "Actividad Inicial"
         },
         "50301e64-0051-4071-ab27-c0f0eb834ca5": {
           "name": "Actividad"
@@ -6114,10 +6117,13 @@
           "name": "Modificaciones de la lección"
         },
         "d0d7583f-c507-4ad5-92fa-0dff5d463423": {
-          "name": "Calentamiento"
+          "name": "Actividad Inicial"
         },
         "d5dd115f-dd41-4a16-b59f-0f77bb79ed00": {
           "name": "Actividad"
+        },
+        "af86f558-77c1-432e-a909-e02c93ad7c7c": {
+          "name": "Formación de grupos"
         },
         "47478503-0688-4122-8566-0aed5c015b89": {
           "name": "Actividad de cierre"
@@ -6126,7 +6132,7 @@
           "name": "Modificaciones de la lección"
         },
         "0e81302e-2d3e-4a15-a0be-8b8efd6c082f": {
-          "name": "Calentamiento"
+          "name": "Actividad Inicial"
         },
         "dd80250a-acb3-4fe7-a9b3-3703faad40ce": {
           "name": "Actividad"
@@ -6138,7 +6144,7 @@
           "name": "Modificaciones de la lección"
         },
         "ba30039c-8c54-4e5a-a810-18052eac7d45": {
-          "name": "Calentamiento"
+          "name": "Actividad Inicial"
         },
         "54106bc6-dce5-43e9-965a-07567d1856dc": {
           "name": "Actividad"
@@ -6150,7 +6156,7 @@
           "name": "Modificaciones de la lección"
         },
         "6fed748d-07a5-4be9-a535-2a1bd073cbd5": {
-          "name": "Calentamiento"
+          "name": "Actividad Inicial"
         },
         "8d3448c6-d7e5-44f9-8b60-e207f0026848": {
           "name": "Actividad"
@@ -6162,7 +6168,7 @@
           "name": "Modificaciones de la lección"
         },
         "ed6098ff-6be9-40e7-838e-eef99d12259b": {
-          "name": "Calentamiento"
+          "name": "Actividad Inicial "
         },
         "71440e94-c031-42dd-a79d-3f8cb5056b9f": {
           "name": "Actividad"
@@ -6174,7 +6180,7 @@
           "name": "Modificaciones de la lección"
         },
         "0051624b-1122-464c-a805-9dfd4e8afb4c": {
-          "name": "Calentamiento"
+          "name": "Actividad Inicial"
         },
         "12d9a87a-588e-43d1-b12d-ad4b83414276": {
           "name": "Actividad"
@@ -6186,7 +6192,7 @@
           "name": "Modificaciones de la lección"
         },
         "3a252e7c-c299-41f2-8617-a6b165dfd91f": {
-          "name": "Calentamiento"
+          "name": "Actividad Inicial"
         },
         "9c7bec47-be70-4024-a4f2-21f687434008": {
           "name": "Actividad"
@@ -6198,13 +6204,19 @@
           "name": "Modificaciones de la lección"
         },
         "5994929e-9d47-4037-9bf0-50728d56d31d": {
-          "name": "Calentamiento"
+          "name": "Actividad Inicial"
+        },
+        "7d6a40f7-3dce-4820-a330-59810b38dc39": {
+          "name": "Retroalimentación y repetición"
         },
         "bb408703-11ec-4822-a86b-b8625a121f6f": {
-          "name": "Presentación"
+          "name": "Exhibición"
         },
         "1840d382-40db-43dd-b6cd-4f002ec7eb04": {
-          "name": "Prueba posterior al proyecto"
+          "name": "Evaluación Post Proyecto"
+        },
+        "6e1384cd-1561-474c-bd34-f0b50f33d24a": {
+          "name": "Encuesta de final de curso"
         },
         "e159a5eb-31ca-47d9-bc81-e2777d7027a0": {
           "name": "Niveles"

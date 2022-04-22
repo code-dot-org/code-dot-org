@@ -58,24 +58,24 @@
           <next>
             <block type="gamelab_setPrompt">
               <value name="QUESTION">
-                <block type="Poetry_stringValue" can_disconnect_from_parent="false">
+                <shadow type="Poetry_stringValue" can_disconnect_from_parent="false">
                   <title name="TEXT">Name an animal:</title>
-                </block>
+                </shadow>
               </value>
               <value name="VAR">
-                <block type="variables_get" can_disconnect_from_parent="false">
+                <block type="variables_get" movable="false">
                   <title name="VAR">animal1</title>
                 </block>
               </value>
               <next>
                 <block type="gamelab_setPrompt">
                   <value name="QUESTION">
-                    <block type="Poetry_stringValue" can_disconnect_from_parent="false">
+                    <shadow type="Poetry_stringValue" can_disconnect_from_parent="false">
                       <title name="TEXT">Name another animal:</title>
-                    </block>
+                    </shadow>
                   </value>
                   <value name="VAR">
-                    <block type="variables_get" can_disconnect_from_parent="false">
+                    <block type="variables_get" movable="false">
                       <title name="VAR">animal2</title>
                     </block>
                   </value>
@@ -88,6 +88,9 @@
           <next>
             <block type="Poetry_setTitle">
               <value name="TITLE">
+                <shadow type="text">
+                  <title name="TEXT"/>
+                </shadow>
                 <block type="gamelab_textJoin">
                   <title name="TEXT1">The </title>
                   <value name="TEXT2">
@@ -110,6 +113,9 @@
               <next>
                 <block type="Poetry_setAuthor">
                   <value name="AUTHOR">
+                    <shadow type="text">
+                      <title name="TEXT"/>
+                    </shadow>
                     <block type="gamelab_textJoin">
                       <title name="TEXT1">(your name here)</title>
                     </block>
