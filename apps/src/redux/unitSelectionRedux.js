@@ -20,11 +20,14 @@ const getSelectedUnit = state => {
     return null;
   }
 
-  let script;
+  let unit;
   state.unitSelection.coursesWithProgress.forEach(course => {
-    script = course.units.find(unit => scriptId === unit.id);
+    const tempUnit = course.units.find(unit => scriptId === unit.id);
+    if (tempUnit) {
+      unit = tempUnit;
+    }
   });
-  return script;
+  return unit;
 };
 
 export const getSelectedScriptName = state => {
