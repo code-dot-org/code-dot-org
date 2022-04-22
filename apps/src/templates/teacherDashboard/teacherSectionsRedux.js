@@ -851,6 +851,7 @@ export default function teacherSections(state = initialState, action) {
         ...lessonExtraSettings,
         ...ttsAutoplayEnabledSettings,
         ...loginTypeSettings,
+        ...gradeSettings,
         ...action.props
       }
     };
