@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_18_160611) do
+ActiveRecord::Schema.define(version: 2022_04_21_224748) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -307,6 +307,29 @@ ActiveRecord::Schema.define(version: 2022_04_18_160611) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["section_id"], name: "index_code_review_groups_on_section_id"
+  end
+
+  create_table "code_review_notes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci", force: :cascade do |t|
+    t.integer "code_review_request_id", null: false
+    t.integer "commenter_id", null: false
+    t.boolean "is_resolved", null: false
+    t.text "comment", size: :medium, null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["code_review_request_id"], name: "index_code_review_notes_on_code_review_request_id"
+  end
+
+  create_table "code_review_requests", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "script_id", null: false
+    t.integer "level_id", null: false
+    t.integer "project_id", null: false
+    t.string "project_version", null: false
+    t.datetime "closed_at"
+    t.datetime "deleted_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id", "script_id", "level_id", "closed_at", "deleted_at"], name: "index_code_review_requests_unique", unique: true
   end
 
   create_table "concepts", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
