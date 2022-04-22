@@ -102,20 +102,8 @@ class CourseOffering < ApplicationRecord
     assignable_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
-  def units_included_in_any_version?(unit_ids)
-    course_versions.any? {|cv| cv.included_in_units?(unit_ids)}
-  end
-
-  def any_version_is_unit?
-    course_versions.any? {|cv| cv.content_root_type == 'Script'}
-  end
-
-  def self.single_unit_course_offerings_containing_units(unit_ids, user)
-    CourseOffering.all.select {|co| co.units_included_in_any_version?(unit_ids) && co.can_be_assigned?(user) && co.any_version_is_unit?}
-  end
-
   def self.single_unit_course_offerings_containing_units_info(unit_ids, user)
-    single_unit_course_offerings_containing_units(unit_ids, user).map {|cv| cv.summarize_for_unit_selector(unit_ids, user)}
+    single_unit_course_offerings_containing_units(unit_ids, user).map {|co| co.summarize_for_unit_selector(unit_ids, user)}
   end
 
   def summarize_for_unit_selector(unit_ids, user)
@@ -207,5 +195,23 @@ class CourseOffering < ApplicationRecord
     course_offering = CourseOffering.find_or_initialize_by(key: properties[:key])
     course_offering.update! properties
     course_offering.key
+  end
+
+  class << self
+    private
+
+    def single_unit_course_offerings_containing_units(unit_ids, user)
+      CourseOffering.all.select {|co| co.units_included_in_any_version?(unit_ids) && co.can_be_assigned?(user) && co.any_version_is_unit?}
+    end
+  end
+
+  private
+
+  def units_included_in_any_version?(unit_ids)
+    course_versions.any? {|cv| cv.included_in_units?(unit_ids)}
+  end
+
+  def any_version_is_unit?
+    course_versions.any? {|cv| cv.content_root_type == 'Script'}
   end
 end
