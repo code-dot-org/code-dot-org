@@ -10,7 +10,17 @@ export const codeReviewTimelineElementType = {
   CODE_REVIEW: 'codeReview'
 };
 
-const CodeReviewTimelineElement = ({type, isLast, versionLink, children}) => {
+const CodeReviewTimelineElement = ({
+  type,
+  isLast,
+  projectVersionId,
+  isProjectVersionExpired,
+  children
+}) => {
+  const displayVersion = !isProjectVersionExpired && !!projectVersionId;
+  const versionLink =
+    location.origin + location.pathname + '?version=' + projectVersionId;
+
   if (type === codeReviewTimelineElementType.CREATED) {
     return (
       <div style={styles.element}>
@@ -30,7 +40,7 @@ const CodeReviewTimelineElement = ({type, isLast, versionLink, children}) => {
     return (
       <div style={styles.element}>
         <div style={styles.eye}>
-          <EyeballLink versionHref={versionLink} />
+          {displayVersion && <EyeballLink versionHref={versionLink} />}
         </div>
         <div style={styles.timeline}>
           {isLast && <div style={styles.commitTopLine} />}
@@ -49,7 +59,7 @@ const CodeReviewTimelineElement = ({type, isLast, versionLink, children}) => {
     return (
       <div style={styles.element}>
         <div style={styles.eye}>
-          <EyeballLink versionHref={versionLink} />
+          {displayVersion && <EyeballLink versionHref={versionLink} />}
         </div>
         <div style={styles.codeReviewTimeline}>
           <div style={styles.codeReviewTopLine} />
@@ -65,7 +75,8 @@ CodeReviewTimelineElement.propTypes = {
   type: PropTypes.oneOf(Object.values(codeReviewTimelineElementType))
     .isRequired,
   isLast: PropTypes.bool,
-  versionLink: PropTypes.string,
+  projectVersionId: PropTypes.string,
+  isProjectVersionExpired: PropTypes.bool,
   children: PropTypes.node
 };
 
@@ -157,7 +168,8 @@ const styles = {
     paddingTop: '2px'
   },
   createdText: {
-    fontWeight: 'bold'
+    fontFamily: '"Gotham 5r", sans-serif',
+    fontStyle: 'italic'
   },
   commitChild: {
     padding: '10px 0 10px 20px',

@@ -68,6 +68,14 @@ const CommitsAndReviewTab = ({
     );
   }
 
+  const fakeCommit = {
+    id: 1,
+    createdAt: '2022-03-31T04:58:42.000Z',
+    comment: 'This is a comment from your teacher',
+    projectVersion: 'asdfjkl',
+    isVersionExpired: false
+  };
+
   return (
     <div style={styles.reviewsContainer}>
       <div style={styles.header}>
@@ -97,10 +105,13 @@ const CommitsAndReviewTab = ({
       </div>
       <div>Example timeline:</div>
       <CodeReviewTimelineElement type={codeReviewTimelineElementType.CREATED} />
-      <CodeReviewTimelineCommit />
-      <CodeReviewTimelineCommit />
+      <CodeReviewTimelineCommit commit={fakeCommit} />
+      <CodeReviewTimelineCommit commit={fakeCommit} />
       <CodeReviewTimelineReview />
-      <CodeReviewTimelineCommit isLastElementInTimeline={true} />
+      <CodeReviewTimelineCommit
+        commit={fakeCommit}
+        isLastElementInTimeline={true}
+      />
     </div>
   );
 };
