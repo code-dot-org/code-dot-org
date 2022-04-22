@@ -18,7 +18,7 @@
       "examples": "[]",
       "syntax": null,
       "external_link": null,
-      "overloaded_by": null
+      "overload_of": null
     },
     {
       "key": "getheight",
@@ -29,7 +29,7 @@
       "examples": "[]",
       "syntax": null,
       "external_link": null,
-      "overloaded_by": null
+      "overload_of": null
     },
     {
       "key": "clear",
@@ -40,7 +40,7 @@
       "examples": "[]",
       "syntax": null,
       "external_link": null,
-      "overloaded_by": null
+      "overload_of": null
     },
     {
       "key": "playsound",
@@ -51,7 +51,7 @@
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overloaded_by": null
+      "overload_of": null
     },
     {
       "key": "playnote",
@@ -62,7 +62,7 @@
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overloaded_by": null
+      "overload_of": null
     },
     {
       "key": "playnoteandpause",
@@ -73,7 +73,7 @@
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overloaded_by": null
+      "overload_of": null
     },
     {
       "key": "pause",
@@ -84,7 +84,7 @@
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overloaded_by": null
+      "overload_of": null
     },
     {
       "key": "drawimage",
@@ -95,7 +95,7 @@
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overloaded_by": null
+      "overload_of": null
     },
     {
       "key": "settextstyle",
@@ -106,7 +106,7 @@
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overloaded_by": null
+      "overload_of": null
     },
     {
       "key": "settextheight",
@@ -117,7 +117,7 @@
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overloaded_by": null
+      "overload_of": null
     },
     {
       "key": "settextcolor",
@@ -128,7 +128,7 @@
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overloaded_by": null
+      "overload_of": null
     },
     {
       "key": "drawtext",
@@ -139,7 +139,7 @@
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overloaded_by": null
+      "overload_of": null
     },
     {
       "key": "drawline",
@@ -150,7 +150,7 @@
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overloaded_by": null
+      "overload_of": null
     },
     {
       "key": "drawregularpolygon",
@@ -161,7 +161,7 @@
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overloaded_by": null
+      "overload_of": null
     },
     {
       "key": "drawshape",
@@ -172,7 +172,7 @@
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overloaded_by": null
+      "overload_of": null
     },
     {
       "key": "drawellipse",
@@ -183,7 +183,7 @@
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overloaded_by": null
+      "overload_of": null
     },
     {
       "key": "drawrectangle",
@@ -194,7 +194,7 @@
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overloaded_by": null
+      "overload_of": null
     },
     {
       "key": "setstrokewidth",
@@ -205,7 +205,7 @@
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overloaded_by": null
+      "overload_of": null
     },
     {
       "key": "setfillcolor",
@@ -216,7 +216,7 @@
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overloaded_by": null
+      "overload_of": null
     },
     {
       "key": "removestrokecolor",
@@ -227,7 +227,7 @@
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overloaded_by": null
+      "overload_of": null
     },
     {
       "key": "removefillcolor",
@@ -238,7 +238,7 @@
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overloaded_by": null
+      "overload_of": null
     }
   ]
 }

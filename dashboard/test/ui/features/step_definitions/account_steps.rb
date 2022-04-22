@@ -208,3 +208,7 @@ end
 And(/^I get universal instructor access$/) do
   browser_request(url: '/api/test/universal_instructor_access', method: 'POST')
 end
+
+And(/^I get plc reviewer access$/) do
+  browser_request(url: '/api/test/plc_reviewer_access', method: 'POST')
+end

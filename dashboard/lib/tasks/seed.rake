@@ -70,7 +70,9 @@ namespace :seed do
     'ui-test-script-in-course-2019',
     'ui-test-versioned-script-2017',
     'ui-test-versioned-script-2019',
-    'ui-test-csa-family-script'
+    'ui-test-csa-family-script',
+    'ui-test-teacher-pl-course',
+    'ui-test-facilitator-pl-course'
   ].map {|script| "test/ui/config/scripts_json/#{script}.script_json"}.freeze
   UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + [
     '20-hour',
@@ -229,6 +231,8 @@ namespace :seed do
   # explicit execution of "seed:dsls"
   timed_task dsls: :environment do
     DSLDefined.transaction do
+      level_md5s_by_name = Hash[DSLDefined.pluck(:name, :md5)]
+
       # Allow developers to seed just one dsl-defined level, e.g.
       # rake seed:dsls DSL_FILENAME=k-1_Artistloops_multi1.multi
       dsls_glob = ENV['DSL_FILENAME'] ? Dir.glob("config/scripts/**/#{ENV['DSL_FILENAME']}") : DSLS_GLOB
@@ -243,8 +247,12 @@ namespace :seed do
       dsls_glob.each do |filename|
         dsl_class = DSL_TYPES.detect {|type| filename.include?(".#{type.underscore}")}.try(:constantize)
         begin
-          data, _i18n = dsl_class.parse_file(filename)
-          dsl_class.setup data
+          contents = File.read(filename)
+          md5 = Digest::MD5.hexdigest(contents)
+          data, _i18n = dsl_class.parse(contents, filename)
+          unless md5 == level_md5s_by_name[data[:name]]
+            dsl_class.setup(data, md5)
+          end
         rescue Exception
           puts "Error parsing #{filename}"
           raise
@@ -291,7 +299,7 @@ namespace :seed do
   end
 
   timed_task course_offerings_ui_tests: :environment do
-    %w(ui-test-course ui-test-csa-family-script).each do |course_offering_name|
+    %w(ui-test-course ui-test-csa-family-script ui-test-teacher-pl-course ui-test-facilitator-pl-course).each do |course_offering_name|
       CourseOffering.seed_record("test/ui/config/course_offerings/#{course_offering_name}.json")
     end
   end

@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-18 19:05:48 UTC",
+    "serialized_at": "2022-04-20 19:59:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1775,7 +1775,7 @@
       "key": "6e30257f-4fc2-4923-9f29-4e09680cf2f8",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Before showing the video share these two questions.\n\n* Why is the type of computing presented “distributed”?\n* Why is distributed computing used to solve the problem?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video on Folding at home\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Have students share their responses to the two questions:\n\n* Why is the type of computing presented \"distributed\"?\n* Why is distributed computing used to solve the problem?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Before showing the video share these two questions.\n\n* Why is the type of computing presented “distributed”?\n* Why is distributed computing used to solve the problem?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video on the [r folding_home_supercomputing_project/csp/2022]\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Have students share their responses to the two questions:\n\n* Why is the type of computing presented \"distributed\"?\n* Why is distributed computing used to solve the problem?"
       },
       "seeding_key": {
         "activity_section.key": "6e30257f-4fc2-4923-9f29-4e09680cf2f8",
@@ -2561,6 +2561,18 @@
       }
     },
     {
+      "name": "Folding@home Supercomputing Project",
+      "url": "https://youtu.be/RGGzMQ2oFrA",
+      "key": "folding_home_supercomputing_project",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "folding_home_supercomputing_project"
+      }
+    },
+    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
@@ -2633,6 +2645,12 @@
       "seeding_key": {
         "lesson.key": "Parallel and Distributed Algorithms",
         "resource.key": "csp_unit_6_-_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "resource.key": "folding_home_supercomputing_project"
       }
     },
     {
