@@ -93,6 +93,12 @@ class ActivityCard extends Component {
       allowMajorCurriculumChanges
     } = this.props;
 
+    let levelsInActivity = 0;
+    activity.activitySections.forEach(activitySection => {
+      levelsInActivity += activitySection.scriptLevels.length;
+    });
+    console.log(activity);
+
     return (
       <div className="uitest-activity-card">
         <div
@@ -129,7 +135,7 @@ class ActivityCard extends Component {
                   <span style={{fontSize: 10}}>{'(mins)'}</span>
                 </label>
               </div>
-              {allowMajorCurriculumChanges && (
+              {(allowMajorCurriculumChanges || levelsInActivity === 0) && (
                 <OrderControls
                   name={activity.displayName || 'Unnamed Activity'}
                   move={this.handleMoveActivity}
