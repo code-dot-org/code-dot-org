@@ -448,12 +448,12 @@ class Section < ApplicationRecord
     false
   end
 
-  # Returns the ids of all scripts which any student in this section has ever
+  # Returns the ids of all scripts which any participant in this section has ever
   # been assigned to or made progress on.
-  def student_script_ids
+  def participant_script_ids
     # This performs two queries, but could be optimized to perform only one by
     # doing additional joins.
-    Script.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)}).distinct.pluck(:id)
+    Script.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)}).distinct.select {|s| s.course_assignable?(user)}.pluck(:id)
   end
 
   def code_review_enabled?
