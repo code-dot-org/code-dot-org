@@ -35,10 +35,19 @@ class ReviewNavigator extends Component {
     navigateToHref(this.generateLevelUrlWithCodeReviewParam());
   };
 
-  generateLevelUrlWithCodeReviewParam = () =>
-    currentLocation().origin +
-    currentLocation().pathname +
-    `?${VIEWING_CODE_REVIEW_URL_PARAM}=true`;
+  generateLevelUrlWithCodeReviewParam = () => {
+    let url =
+      currentLocation().origin +
+      currentLocation().pathname +
+      `?${VIEWING_CODE_REVIEW_URL_PARAM}=true`;
+
+    // If teacher account is viewing as participant, set up URLs
+    // to persist this setting when they click to view another project.
+    if (this.props.userIsTeacher && !this.props.viewAsTeacher) {
+      url += `&viewAs=Participant`;
+    }
+    return url;
+  };
 
   onDropdownClick = () => {
     this.setState({loadInProgress: true, loadError: false, peers: []});

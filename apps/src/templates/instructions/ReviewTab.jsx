@@ -5,7 +5,6 @@ import _ from 'lodash';
 import color from '@cdo/apps/util/color';
 import javalabMsg from '@cdo/javalab/locale';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import {currentLocation, navigateToHref} from '@cdo/apps/utils';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Comment from './codeReview/Comment';
 import CommentEditor from './codeReview/CommentEditor';
@@ -47,34 +46,6 @@ class ReviewTab extends Component {
     commentSaveError: false,
     commentSaveInProgress: false,
     commentSaveErrorMessage: ''
-  };
-
-  onSelectPeer = peer => {
-    if (!peer.id) {
-      return;
-    }
-
-    navigateToHref(
-      this.generateLevelUrlWithCodeReviewParam() + `&user_id=${peer.id}`
-    );
-  };
-
-  onClickBackToProject = () => {
-    navigateToHref(this.generateLevelUrlWithCodeReviewParam());
-  };
-
-  generateLevelUrlWithCodeReviewParam = () => {
-    let url =
-      currentLocation().origin +
-      currentLocation().pathname +
-      `?${VIEWING_CODE_REVIEW_URL_PARAM}=true`;
-
-    // If teacher account is viewing as participant, set up URLs
-    // to persist this setting when they click to view another project.
-    if (this.props.userIsTeacher && !this.props.viewAsTeacher) {
-      url += `&viewAs=Participant`;
-    }
-    return url;
   };
 
   componentDidMount() {
