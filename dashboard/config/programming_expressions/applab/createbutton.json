@@ -20,7 +20,7 @@
       "name": "Pin",
       "type": "number",
       "required": true,
-      "description": "The number of the pin your LED is connected to. This is usually printed on your board, but can also be found in your board's documentation."
+      "description": "The number of the pin your button is connected to. This is usually printed on your board, but can also be found in your board's documentation."
     }
   ],
   "parameters": [

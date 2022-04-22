@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "video_key": "csp_applab_conditionals_2A",
+    "video_key": "csd_u6_if_statements",
     "instructions_important": "false",
     "display_name": "Video: Functions",
     "skip_dialog": true,
@@ -16,7 +16,7 @@
   "level_num": "custom",
   "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-08T17:01:34.194+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables  - Vid3_2022\\\"\"],\"cloned_from\":\"CSD U6 - If Variables  - Vid3_2022\"},{\"changed_at\":\"2022-04-14 17:18:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-04-08T17:01:34.194+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables  - Vid3_2022\\\"\"],\"cloned_from\":\"CSD U6 - If Variables  - Vid3_2022\"},{\"changed_at\":\"2022-04-14 17:18:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-04-21 15:58:28 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -65,18 +65,15 @@
     "skip_autosave": true,
     "display_name": "Timed Events",
     "thumbnail_url": "https://images.code.org/a61f638ee2ea76dc54236483324d7fbc-image-1648496940150.48.45 PM.png",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
-  "game_id": 64,
-  "published": true,
-  "created_at": "2022-04-04T10:52:17.000Z",
   "level_num": "custom",
+  "game_id": 64,
+  "created_at": "2022-04-04T10:52:17.000Z",
   "user_id": 182,
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-04T10:52:17.488+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_bugs_selection_counters_two\\\"\"],\"cloned_from\":\"csc_ecosystems_bugs_selection_counters_two\"},{\"changed_at\":\"2022-04-04 10:55:08 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"short_instructions\",\"encrypted_examples\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-04 11:02:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-04 11:03:35 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-18 22:20:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-18 22:35:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"long_instructions\",\"callout_json\",\"instructions_icon\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-18 22:35:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-19 18:46:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-20 22:41:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-04-04T10:52:17.488+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_bugs_selection_counters_two\\\"\"],\"cloned_from\":\"csc_ecosystems_bugs_selection_counters_two\"},{\"changed_at\":\"2022-04-04 10:55:08 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"short_instructions\",\"encrypted_examples\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-04 11:02:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-04 11:03:35 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-18 22:20:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-18 22:35:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"long_instructions\",\"callout_json\",\"instructions_icon\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-18 22:35:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-19 18:46:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-20 22:41:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-21 18:32:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-21 18:33:10 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -243,13 +240,13 @@
           <field name="CONDITION">"when"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"cuteanimals_bear"</field>
+              <field name="ANIMATION">"beetle"</field>
             </block>
           </value>
         </block>
         <block type="gamelab_makeBurst">
           <field name="EFFECT">"pop"</field>
-          <field name="ANIMATION_NAME">"cuteanimals_bear"</field>
+          <field name="ANIMATION_NAME">"beetle"</field>
           <value name="NUM">
             <block type="math_number">
               <field name="NUM">50</field>
@@ -258,7 +255,7 @@
         </block>
         <block type="gamelab_makeBurst">
           <field name="EFFECT">"pop"</field>
-          <field name="ANIMATION_NAME">"cuteanimals_bear"</field>
+          <field name="ANIMATION_NAME">"beetle"</field>
           <value name="NUM">
             <block type="math_number">
               <field name="NUM">50</field>
@@ -285,7 +282,7 @@
           <field name="SPEECH"/>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation">
-              <field name="ANIMATION">"cuteanimals_bear"</field>
+              <field name="ANIMATION">"beetle2"</field>
             </block>
           </value>
         </block>

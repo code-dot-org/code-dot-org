@@ -21,18 +21,16 @@ const serverSections = taughtSections.map(serverSectionFromSection);
 
 const serverCourses = [
   {
-    id: 49,
-    name: 'Play Lab',
-    category: 'Hour of Code',
-    category_priority: 2,
-    script_name: 'playlab'
+    title: 'Play Lab',
+    link: 's/playlab',
+    description: 'HOC for playlab',
+    name: 'playlab'
   },
   {
-    id: 50,
-    name: 'CSP Unit 2 - Digital Information',
-    category: 'CSP',
-    category_priority: 1,
-    script_name: 'csp2'
+    title: 'CSP Unit 2 - Digital Information',
+    link: 's/csp2-2020',
+    description: 'Learning about digital info',
+    name: 'csp2-2020'
   }
 ];
 
@@ -155,7 +153,8 @@ export default storybook => {
         }
       },
       {
-        name: 'Teacher Homepage - courses, sections and joinedStudentSections',
+        name:
+          'Teacher Homepage - student and pl courses, sections, joinedStudentSections',
         description:
           'Teacher Homepage - teacher does have course progress in both student and pl courses, and does have sections they own and sections in which they are a student',
         story: () => {
