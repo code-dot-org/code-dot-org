@@ -17,6 +17,6 @@
   ],
   "return_value": "The scaled height of the sprite.",
   "short_description": "The scaled height of the sprite's current image in pixels. If no image or animation are set, it’s the scaled height of the placeholder rectangle.",
-  "syntax": "getScaledHeight",
+  "syntax": "sprite.getScaledHeight()",
   "tips": "- If sprite is scaled, `sprite.width` and `sprite.height` are not changed. Use `getScaledWidth()` and `getScaledHeight()` instead.\r\n- If `setCollider()` is called for a sprite before it is scaled, the collider is not scaled. But if a sprite is first scaled and then the collider set, the scale is also applied to the collider. "
 }

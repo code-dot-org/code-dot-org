@@ -141,11 +141,47 @@ class ScriptLevelTest < ActiveSupport::TestCase
       assert_equal sl.get_example_solutions(level, @authorized_teacher), ["https://studio.code.org/projects/playlab/example-1/view", "https://studio.code.org/projects/playlab/example-2/view"]
     end
 
-    test 'get_example_solutions for javalab level' do
+    # Should be removed as part of this task:
+    # https://codedotorg.atlassian.net/browse/JAVA-525
+    test 'get_example_solutions for javalab level with example (deprecated)' do
       level = create(:javalab, :with_example_solutions)
       sl = create(:script_level, levels: [level])
 
       assert_equal sl.get_example_solutions(level, @authorized_teacher), ["https://studio.code.org/s/csa-examples/lessons/1/levels/1/"]
+    end
+
+    test 'get_example_solutions for javalab level with exemplar' do
+      level = create(:javalab, exemplar_sources: 'some code')
+      script = create(:script)
+      sl = create(:script_level, levels: [level], script: script)
+
+      # Javalab levels should only have one example solution.
+      # Remove scheme (http v https) for assertion b/c these are inconsistent between drone and development
+      # https://github.com/code-dot-org/code-dot-org/blob/986459ab24cb401efa567d0551f23fec6e3d6af3/config.yml.erb#L331
+      example_solutions = sl.get_example_solutions(level, @authorized_teacher)
+      parsed_url = URI(example_solutions.first)
+
+      assert_equal 1, example_solutions.length
+      assert_equal "test-studio.code.org/s/#{script.name}/lessons/1/levels/1?exemplar=true",
+        parsed_url.host + parsed_url.path + '?' + parsed_url.query
+    end
+
+    test 'get_example_solutions for javalab sublevel level with exemplar' do
+      sublevel = create :javalab, exemplar_sources: 'some code'
+      sublevels = [sublevel]
+      bubble_choice = create :bubble_choice_level, sublevels: sublevels
+      script = create(:script)
+      sl = create :script_level, levels: [bubble_choice], script: script
+
+      # Javalab levels should only have one example solution.
+      # Remove scheme (http v https) for assertion b/c these are inconsistent between drone and development
+      # https://github.com/code-dot-org/code-dot-org/blob/986459ab24cb401efa567d0551f23fec6e3d6af3/config.yml.erb#L331
+      example_solutions = sl.get_example_solutions(sublevel, @authorized_teacher)
+      parsed_url = URI(example_solutions.first)
+
+      assert_equal 1, example_solutions.length
+      assert_equal "test-studio.code.org/s/#{script.name}/lessons/1/levels/1/sublevel/1?exemplar=true",
+        parsed_url.host + parsed_url.path + '?' + parsed_url.query
     end
 
     test 'get_example_solutions for level with ideal level source' do
@@ -153,7 +189,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
       level = create(:level, :blockly, :with_ideal_level_source)
       sl = create(:script_level, levels: [level], script: script)
 
-      assert_equal sl.get_example_solutions(level, @authorized_teacher), ["http://test-studio.code.org/s/test-script/lessons/1/levels/1?solution=true"]
+      assert_equal sl.get_example_solutions(level, @authorized_teacher), ["//test-studio.code.org/s/test-script/lessons/1/levels/1?solution=true"]
     end
 
     test 'get_example_solutions for level with ideal level source and section_id' do
@@ -161,7 +197,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
       level = create(:level, :blockly, :with_ideal_level_source)
       sl = create(:script_level, levels: [level], script: script)
 
-      assert_equal sl.get_example_solutions(level, @authorized_teacher, 5), ["http://test-studio.code.org/s/test-script/lessons/1/levels/1?section_id=5&solution=true"]
+      assert_equal sl.get_example_solutions(level, @authorized_teacher, 5), ["//test-studio.code.org/s/test-script/lessons/1/levels/1?section_id=5&solution=true"]
     end
 
     test 'get_example_solutions returns empty array if no examples' do
@@ -197,14 +233,14 @@ class ScriptLevelTest < ActiveSupport::TestCase
     sl2 = create(:script_level, lesson: sl.lesson, script: sl.script)
 
     summary = sl.summarize
-    assert_match Regexp.new("^#{root_url.chomp('/')}/s/bogus-script-[0-9]+/lessons/1/levels/1$"), summary[:url]
+    assert_match Regexp.new("^#{CDO.studio_url}/s/bogus-script-[0-9]+/lessons/1/levels/1$"), summary[:url]
     assert_equal false, summary[:previous]
     assert_equal 1, summary[:position]
     assert_equal LEVEL_KIND.puzzle, summary[:kind]
     assert_equal 1, summary[:title]
 
     summary = sl2.summarize
-    assert_match Regexp.new("^#{root_url.chomp('/')}/s/bogus-script-[0-9]+/lessons/1/levels/2$"), summary[:url]
+    assert_match Regexp.new("^#{CDO.studio_url}/s/bogus-script-[0-9]+/lessons/1/levels/2$"), summary[:url]
     assert_equal false, summary[:next]
     assert_equal 2, summary[:position]
     assert_equal LEVEL_KIND.puzzle, summary[:kind]
@@ -213,7 +249,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
   test 'summarize with custom route' do
     summary = Script.hoc_2014_unit.script_levels.first.summarize
-    assert_equal "#{root_url.chomp('/')}/hoc/1", summary[:url]  # Make sure we use the canonical /hoc/1 URL.
+    assert_equal "#{CDO.studio_url}/hoc/1", summary[:url]  # Make sure we use the canonical /hoc/1 URL.
     assert_equal false, summary[:previous]
     assert_equal 1, summary[:position]
     assert_equal LEVEL_KIND.puzzle, summary[:kind]

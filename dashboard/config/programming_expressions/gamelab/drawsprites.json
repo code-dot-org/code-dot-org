@@ -1,9 +1,9 @@
 {
   "key": "drawSprites",
   "name": "drawSprites()",
-  "category": "World",
+  "category": "Game Lab",
   "category_key": "game_lab",
-  "content": "Displays a group of sprites. If no parameter is specified, draws all sprites in the sketch. \r\n\r\nFor an animation, drawSprites is usually used along with `background()` within `draw()`. The drawing order is determined by the order the sprites were created, which is stored and can be altered in `sprite.depth`.\r\n",
+  "content": "Displays a group of sprites. If no parameter is specified, draws all sprites in the sketch. \n\nFor an animation, drawSprites is usually used along with [`background()`(#4dd0e1)](/docs/gamelab/background/) within [`function draw() {}`(#fff176)](/docs/gamelab/draw/). The drawing order is determined by the order the sprites were created, which is stored and can be altered in [`sprite.depth`(#f78183)](/docs/gamelab/depth/).\n",
   "examples": [
     {
       "name": "",
@@ -34,5 +34,5 @@
   ],
   "return_value": "No return value. Changes output to the display only.",
   "short_description": "Displays a group of sprites. If no parameter is specified, draws all sprites in the sketch. ",
-  "syntax": "drawSprites"
+  "syntax": "drawSprites(group)"
 }

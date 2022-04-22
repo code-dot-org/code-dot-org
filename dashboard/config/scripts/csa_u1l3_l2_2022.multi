@@ -1,12 +1,18 @@
 name 'CSA U1L3-L2_2022'
 title 'Check for Understanding'
 
-wrong 'wrong answer'
-right 'right answer'
-wrong 'wrong answer'
-wrong 'wrong answer'
-wrong 'wrong answer'
+wrong 'I only'
+wrong 'II only'
+right 'I and II'
+wrong 'II and III'
+wrong 'I, II, and III'
 
 markdown <<MARKDOWN
-Which of the following are attributes and behaviors that a `Student`(#e7e8ea) object might have?
+Which of the following are attributes that a `Student` object might have?
+
+I. `name`
+
+II. `grade`
+
+III. `goToSleep`
 MARKDOWN

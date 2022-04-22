@@ -45,6 +45,9 @@ class UnitEditor extends React.Component {
     i18nData: PropTypes.object.isRequired,
     initialPublishedState: PropTypes.oneOf(Object.values(PublishedState))
       .isRequired,
+    //Published state of units in a course can be set to be different than the course overall.
+    //We only use this field for units in a course
+    initialUnitPublishedState: PropTypes.oneOf(Object.values(PublishedState)),
     initialInstructionType: PropTypes.oneOf(Object.values(InstructionType))
       .isRequired,
     initialInstructorAudience: PropTypes.oneOf(
@@ -163,6 +166,7 @@ class UnitEditor extends React.Component {
       includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
       useLegacyLessonPlans: this.props.initialUseLegacyLessonPlans,
       publishedState: this.props.initialPublishedState,
+      unitPublishedState: this.props.initialUnitPublishedState,
       instructionType: this.props.initialInstructionType,
       instructorAudience: this.props.initialInstructorAudience,
       participantAudience: this.props.initialParticipantAudience
@@ -245,6 +249,20 @@ class UnitEditor extends React.Component {
       });
       return;
     } else if (
+      !this.props.hasCourse &&
+      this.state.professionalLearningCourse === '' &&
+      this.state.publishedState !== PublishedState.in_development &&
+      (!this.state.isCourse ||
+        this.state.versionYear === '' ||
+        this.state.familyName === '')
+    ) {
+      this.setState({
+        isSaving: false,
+        error:
+          'Standalone units that are not in development must be a standalone unit with family name and version year.'
+      });
+      return;
+    } else if (
       this.state.isCourse &&
       ((this.state.versionYear !== '' && this.state.familyName === '') ||
         (this.state.versionYear === '' && this.state.familyName !== ''))
@@ -272,6 +290,21 @@ class UnitEditor extends React.Component {
       }
     }
 
+    if (
+      this.state.unitPublishedState !== this.props.initialUnitPublishedState
+    ) {
+      const msg =
+        'It looks like you are hiding this unit. ' +
+        'Are you sure you want to hide this unit? ';
+      if (!window.confirm(msg)) {
+        this.setState({
+          isSaving: false,
+          error: 'Saving cancelled.'
+        });
+        return;
+      }
+    }
+
     let dataToSave = {
       name: this.props.name,
       family_name: this.state.familyName,
@@ -283,7 +316,9 @@ class UnitEditor extends React.Component {
       description: this.state.description,
       student_description: this.state.studentDescription,
       announcements: JSON.stringify(this.state.announcements),
-      published_state: this.state.publishedState,
+      published_state: this.props.hasCourse
+        ? this.state.unitPublishedState
+        : this.state.publishedState,
       instruction_type: this.state.instructionType,
       instructor_audience: this.state.instructorAudience,
       participant_audience: this.state.participantAudience,
@@ -360,16 +395,22 @@ class UnitEditor extends React.Component {
   };
 
   toggleHiddenCourseUnit = () => {
-    const publishedState =
-      this.state.publishedState === PublishedState.in_development
+    const unitPublishedState =
+      this.state.unitPublishedState === PublishedState.in_development
         ? null
         : PublishedState.in_development;
-    this.setState({publishedState});
+    this.setState({unitPublishedState});
   };
 
   render() {
     const useMigratedTeacherResources =
       this.props.isMigrated && !this.state.teacherResources?.length;
+
+    const allowMajorCurriculumChanges =
+      this.props.initialUnitPublishedState === PublishedState.in_development ||
+      this.props.initialPublishedState === PublishedState.in_development ||
+      this.props.initialPublishedState === PublishedState.pilot;
+
     return (
       <div>
         <label>
@@ -639,9 +680,7 @@ class UnitEditor extends React.Component {
             handleParticipantAudienceChange={e =>
               this.setState({participantAudience: e.target.value})
             }
-            canChangeParticipantType={
-              this.state.publishedState === PublishedState.in_development
-            }
+            allowMajorCurriculumChanges={allowMajorCurriculumChanges}
           />
         )}
 
@@ -689,13 +728,14 @@ class UnitEditor extends React.Component {
                   </p>
                 </HelpTip>
               </label>
-              {this.props.hasCourse && (
-                <div>
-                  <p>
-                    This unit is part of a course. Go to the course edit page to
-                    publish the course and its units.
-                  </p>
-                  {/*
+              {this.props.hasCourse &&
+                this.state.publishedState !== PublishedState.in_development && (
+                  <div>
+                    <p>
+                      This unit is part of a course. Go to the course edit page
+                      to publish the course and its units.
+                    </p>
+                    {/*
                    Just use a checkbox instead of a dropdown to set the
                    published state for now, because (1) units in unit groups
                    really only need 2 of the 6 possible states at the moment,
@@ -705,29 +745,31 @@ class UnitEditor extends React.Component {
                    clean this up is tracked in:
                    https://codedotorg.atlassian.net/browse/PLAT-1170
                    */}
-                  <label>
-                    Hide this unit within this course
-                    <input
-                      type="checkbox"
-                      checked={
-                        this.state.publishedState ===
-                        PublishedState.in_development
-                      }
-                      style={styles.checkbox}
-                      onChange={this.toggleHiddenCourseUnit}
-                    />
-                    <HelpTip>
-                      <p>
-                        Whether to hide this unit from the list of units in its
-                        course, as viewed on the course overview page, the edit
-                        section dialog, and the teacher dashboard, as well as
-                        when navigating directly to the unit by its url. Hidden
-                        units will still be visible to levelbuilders.
-                      </p>
-                    </HelpTip>
-                  </label>
-                </div>
-              )}
+                    <label>
+                      Hide this unit within this course
+                      <input
+                        className="unit-test-hide-unit-in-course"
+                        type="checkbox"
+                        checked={
+                          this.state.unitPublishedState ===
+                          PublishedState.in_development
+                        }
+                        style={styles.checkbox}
+                        onChange={this.toggleHiddenCourseUnit}
+                      />
+                      <HelpTip>
+                        <p>
+                          Whether to hide this unit from the list of units in
+                          its course, as viewed on the course overview page, the
+                          edit section dialog, and the teacher dashboard, as
+                          well as when navigating directly to the unit by its
+                          url. Hidden units will still be visible to
+                          levelbuilders.
+                        </p>
+                      </HelpTip>
+                    </label>
+                  </div>
+                )}
               {!this.props.hasCourse && (
                 <div>
                   <CourseVersionPublishingEditor
@@ -870,6 +912,7 @@ class UnitEditor extends React.Component {
             <label>
               Include student-facing lesson plans
               <input
+                className="student-facing-lesson-plan-checkbox"
                 type="checkbox"
                 checked={this.state.includeStudentLessonPlans}
                 style={styles.checkbox}
@@ -879,6 +922,7 @@ class UnitEditor extends React.Component {
                       .includeStudentLessonPlans
                   })
                 }
+                disabled={!allowMajorCurriculumChanges}
               />
               <HelpTip>
                 <p>
@@ -1074,7 +1118,7 @@ class UnitEditor extends React.Component {
         )}
 
         <CollapsibleEditorSection title="Lesson Groups and Lessons">
-          <UnitCard />
+          <UnitCard allowMajorCurriculumChanges={allowMajorCurriculumChanges} />
         </CollapsibleEditorSection>
         <SaveBar
           handleSave={this.handleSave}

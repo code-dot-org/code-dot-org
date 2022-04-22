@@ -57,7 +57,8 @@ module.exports = {
     "react/no-unescaped-entities": "off",
     "react/self-closing-comp": "error",
     "react/no-danger": "error",
-    "react-hooks/rules-of-hooks":"error",
+    "react-hooks/exhaustive-deps": "error",
+    "react-hooks/rules-of-hooks": "error",
     semi: "off", // enforced by babel/semi
     "space-before-blocks": "error",
     strict: "error",

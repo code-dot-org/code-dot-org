@@ -11,8 +11,55 @@ class CourseVersionTest < ActiveSupport::TestCase
     assert_equal course_version, course_version.content_root.course_version
   end
 
+  test "recommended? is false if course_version is not stable" do
+    script = create :script, family_name: 'ss', version_year: '2050', is_course: true, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    CourseOffering.add_course_offering(script)
+
+    unit_group = create :unit_group, family_name: 'ug', version_year: '2050', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    CourseOffering.add_course_offering(unit_group)
+
+    refute script.course_version.recommended?
+    refute unit_group.course_version.recommended?
+  end
+
+  test "recommended? is true if its the only course version in the course offering" do
+    script = create :script, family_name: 'ss', version_year: '2050', is_course: true, published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(script)
+
+    unit_group = create :unit_group, family_name: 'ug', version_year: '2050', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(unit_group)
+
+    assert script.course_version.recommended?
+    assert unit_group.course_version.recommended?
+  end
+
+  test "recommended? is true if its the latest stable version of unit in the family" do
+    script = create :script, family_name: 'ss', version_year: '2050', is_course: true, supported_locales: ['fake-locale'], published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(script)
+    script2 = create :script, family_name: 'ss', version_year: '2051', is_course: true, supported_locales: [], published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(script2)
+
+    refute script.course_version.recommended?('en-us')
+    assert script2.course_version.recommended?('en-us')
+    assert_equal script2.course_version.content_root, Script.latest_stable_version('ss')
+    assert script.course_version.recommended?('fake-locale')
+    refute script2.course_version.recommended?('fake-locale')
+    assert_equal script.course_version.content_root, Script.latest_stable_version('ss', locale: 'fake-locale')
+  end
+
+  test "recommended? is true if its the latest stable version of unit group in the family" do
+    unit_group = create :unit_group, family_name: 'ug', version_year: '2050', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(unit_group)
+    unit_group2 = create :unit_group, family_name: 'ug', version_year: '2051', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(unit_group2)
+
+    refute unit_group.course_version.recommended?
+    assert unit_group2.course_version.recommended?
+    assert_equal unit_group2.course_version.content_root, UnitGroup.latest_stable_version('ug')
+  end
+
   test "add_course_version creates CourseVersion for script that doesn't have one if is_course is true" do
-    offering = create :course_offering
+    offering = create :course_offering, key: 'csz'
     script = create :script, family_name: 'csz', version_year: '2050', is_course: true
     course_version = CourseVersion.add_course_version(offering, script)
 

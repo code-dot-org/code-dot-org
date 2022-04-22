@@ -56,7 +56,11 @@
       "description": "Should the sound file be played again and again (looped)? Default is false."
     }
   ],
+  "parameters": [
+    "url",
+    "loop"
+  ],
   "short_description": "Plays the MP3 sound file from the specified URL.",
-  "syntax": "playSound(url, loop)",
+  "syntax": "playSound(url)",
   "tips": "\r\n- The sound URL requires the full http:// prefix."
 }

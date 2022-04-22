@@ -66,6 +66,9 @@
         <block type="gamelab_whenAllPromptsAnswered"/>
         <block type="Poetry_setTitle">
           <value name="TITLE">
+            <shadow type="text">
+              <title name="TEXT"/>
+            </shadow>
             <block type="gamelab_textJoin">
               <title name="TEXT1"/>
             </block>
@@ -73,6 +76,9 @@
         </block>
         <block type="Poetry_setAuthor">
           <value name="AUTHOR">
+            <shadow type="text">
+              <title name="TEXT"/>
+            </shadow>
             <block type="gamelab_textJoin">
               <title name="TEXT1"/>
             </block>

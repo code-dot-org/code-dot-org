@@ -317,13 +317,16 @@ class FirehoseClient {
 }
 
 // This code sets up an AWS config against a very restricted user, so this is
-// not a concern, we just don't want to make things super obvious. For the
-// plaintext, contact asher or eric.
+// not a concern, we just don't want to make things super obvious. For more
+// info, contact the infrastructure team.
+/* eslint-disable */
 function createNewFirehose(AWS, Firehose) {
-  // eslint-disable-next-line
+  var _0xr0t13 = function(message) {
+    return message.replace(/[a-z]/gi, letter => String.fromCharCode(letter.charCodeAt(0) + (letter.toLowerCase() <= 'm' ? 13 : -13)));
+  }
   const _0x12ed = [
-    '\x41\x4b\x49\x41\x4a\x41\x41\x4d\x42\x59\x4d\x36\x55\x53\x59\x54\x34\x35\x34\x51',
-    '\x78\x4e\x4e\x39\x4e\x79\x32\x61\x6d\x39\x78\x75\x4b\x79\x57\x39\x53\x2b\x4e\x76\x41\x77\x33\x67\x68\x68\x74\x68\x72\x6b\x37\x6b\x6e\x51\x59\x54\x77\x6d\x4d\x48',
+    _0xr0t13('\x4e\x58\x56\x4e\x4a\x35\x43\x35\x52\x52\x52\x59\x56\x49\x57\x55\x53\x44\x44\x49'),
+    _0xr0t13('\x71\x42\x2f\x7a\x37\x77\x32\x4f\x64\x4e\x36\x53\x45\x4b\x73\x47\x4f\x4d\x71\x52\x64\x48\x6a\x45\x47\x2f\x50\x2b\x33\x39\x35\x76\x72\x42\x62\x6f\x43\x69\x4b\x35'),
     '\x75\x73\x2d\x65\x61\x73\x74\x2d\x31',
     '\x63\x6f\x6e\x66\x69\x67'
   ];
@@ -351,6 +354,7 @@ function createNewFirehose(AWS, Firehose) {
     correctClockSkew: true
   });
 }
+/* eslint-enable */
 
 let promise;
 function getSingleton() {

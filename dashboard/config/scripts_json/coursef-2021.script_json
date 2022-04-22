@@ -26,20 +26,29 @@
       "project_widget_visible": true,
       "supported_locales": [
         "ar-SA",
+        "cs-CZ",
+        "de-DE",
         "es-ES",
         "es-MX",
         "fr-FR",
+        "hi-IN",
+        "kn-IN",
+        "mr-IN",
+        "ms-MY",
+        "pl-PL",
         "pt-BR",
+        "pt-PT",
         "ro-RO",
         "ru-RU",
-        "sk-SK"
+        "sk-SK",
+        "zh-TW"
       ],
       "tts": true,
       "version_year": "2021"
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2022-02-28 17:23:03 UTC",
+    "serialized_at": "2022-04-11 19:49:09 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1354,6 +1363,7 @@
       "key": "d01a520e-a4bb-4422-80ae-fc1fe2157446",
       "position": 2,
       "properties": {
+        "duration": 35,
         "name": "Main Activity"
       },
       "seeding_key": {
@@ -1367,6 +1377,7 @@
       "key": "8fdf7e2e-9fd7-401d-b9af-43736a1a2c8b",
       "position": 3,
       "properties": {
+        "duration": 10,
         "name": "Wrap Up"
       },
       "seeding_key": {

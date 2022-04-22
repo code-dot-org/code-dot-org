@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-02-24 14:47:45 UTC",
+    "serialized_at": "2022-04-04 13:12:45 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2371,7 +2371,7 @@
       "key": "25820641-8acb-4ca1-82e4-348b4679edd1",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slides to display the prompts.\n* *Which algorithm is best when we consider efficiency?*\n* *Which algorithm is best when we consider readability?*\n* *Which algorithm is best when we consider ease of programming?*\n\n**Discussion Goal:** Students notice that insertion sort works faster on a sorted list, while selection sort works faster on an inverted list. Both algorithms perform similarly on randomly sorted elements. Students realize that one algorithm may be better than the other in specific circumstances, but both are generally similar.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the sentence stem provided on their handout. Students complete the sentence stem three times, once with each conjunction – But, Because, So. Have students share their sentences with a partner.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slides to display the prompts.\n* *Which algorithm is best when we consider efficiency?*\n* *Which algorithm is best when we consider readability?*\n* *Which algorithm is best when we consider ease of programming?*\n\n**Discussion Goal:** Students notice that insertion sort works faster on a sorted list, while selection sort works faster on an inverted list. Both algorithms perform similarly on randomly sorted elements. Students realize that one algorithm may be better than the other in specific circumstances, but both are generally similar.",
         "tips": [
           {
             "type": "teachingTip",

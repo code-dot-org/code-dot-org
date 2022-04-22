@@ -4,6 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "Upcoming panel for high school students: Internships & computer science opportunities beyond software engineering",
+          "details": "Join us Wed, April 27 at 8pm EDT as college women majoring in CS share experiences and advice surrounding internships and roles that a CS degree can lead to outside of software engineering. ",
+          "link": "https://bit.ly/3uRlvsl",
+          "type": "information",
+          "visibility": "Teacher-only"
+        }
+      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -17,7 +26,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-07 18:13:33 UTC",
+    "serialized_at": "2022-04-18 20:50:21 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3585,6 +3594,18 @@
       }
     },
     {
+      "name": "Exploring One Column Unit 9 Lesson 2",
+      "url": "https://docs.google.com/document/d/1R6cgFwz6_DRDelbKlX86-frQp2sCijUB4nOY3yTJRh8/edit?usp=sharing",
+      "key": "exploring_one_column_unit_9_lesson_2",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exploring_one_column_unit_9_lesson_2"
+      }
+    },
+    {
       "name": "Filtering Data Unit 9 Lesson 3",
       "url": "https://docs.google.com/document/d/1AVWPKZcB_FqB0O_MtH6URDPAqnbcdTElmV9V1UJIH38/edit?usp=sharing",
       "key": "filtering_data_unit_9_lesson_3",
@@ -3595,6 +3616,18 @@
       },
       "seeding_key": {
         "resource.key": "filtering_data_unit_9_lesson_3"
+      }
+    },
+    {
+      "name": "Filtering Data Unit 9 Lesson 3",
+      "url": "https://docs.google.com/document/d/1gjb51mzUUjIgCPsT95wueh3jhikVl0KsSgKUjhKNgqs/edit?usp=sharing",
+      "key": "filtering_data_unit_9_lesson_3_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "filtering_data_unit_9_lesson_3_1"
       }
     },
     {
@@ -3648,7 +3681,7 @@
     },
     {
       "name": "U9 Sample Project 1",
-      "url": "https://docs.google.com/document/d/1VJciLn-zKfugkaSoZzQ9RaLWlxZhRoiiyJ_lAnVY_ZA/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1sRBpINFb-LXLUKRBdAyRYzHAIAGxW2T3c3Jh8_1ly9c/edit?usp=sharing",
       "key": "u9_sample_project_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -3752,6 +3785,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Exploring One Column",
+        "resource.key": "exploring_one_column_unit_9_lesson_2"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Exploring Two Columns",
         "resource.key": "csp-u9-presentation"
       }
@@ -3778,6 +3817,12 @@
       "seeding_key": {
         "lesson.key": "Filtering and Cleaning Data",
         "resource.key": "filtering_data_unit_9_lesson_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Filtering and Cleaning Data",
+        "resource.key": "filtering_data_unit_9_lesson_3_1"
       }
     },
     {

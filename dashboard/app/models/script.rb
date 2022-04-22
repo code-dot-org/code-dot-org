@@ -42,6 +42,7 @@ class Script < ApplicationRecord
   include SharedCourseConstants
   include SharedConstants
   include Curriculum::CourseTypes
+  include Curriculum::AssignableCourse
   include Rails.application.routes.url_helpers
 
   include Seeded
@@ -379,24 +380,6 @@ class Script < ApplicationRecord
     end
   end
 
-  # @param user [User]
-  # @returns [Boolean] Whether the user can assign this unit.
-  # Users should only be able to assign one of their valid units.
-  # This includes the units that are assignable for everyone as well
-  # as unit that might be assignable based on users permissions
-  def assignable_for_user?(user)
-    if user&.teacher?
-      Script.valid_unit_id?(user, id)
-    end
-  end
-
-  # @param [User] user
-  # @param script_id [String] id of the unit we're checking the validity of
-  # @return [Boolean] Whether this is a valid unit ID
-  def self.valid_unit_id?(user, script_id)
-    valid_scripts(user).any? {|script| script[:id] == script_id.to_i}
-  end
-
   # @return [Array<Script>] An array of modern elementary units.
   def self.modern_elementary_courses
     Script::CATEGORIES[:csf].map {|name| Script.get_from_cache(name)}
@@ -593,7 +576,9 @@ class Script < ApplicationRecord
   end
 
   def self.get_family_without_cache(family_name)
-    Script.where(family_name: family_name).order("properties -> '$.version_year' DESC")
+    # This SQL string is not at risk for injection vulnerabilites because it's
+    # just a hardcoded string, so it's safe to wrap in Arel.sql
+    Script.where(family_name: family_name).order(Arel.sql("properties -> '$.version_year' DESC"))
   end
 
   # Returns all units within a family from the Rails cache.
@@ -618,7 +603,7 @@ class Script < ApplicationRecord
 
     family_units = Script.get_family_from_cache(family_name).sort_by(&:version_year).reverse
 
-    return nil unless family_units.last.can_be_instructor?(user) || family_units.last.can_be_participant?(user)
+    return nil unless family_units&.last&.can_be_instructor?(user) || family_units&.last&.can_be_participant?(user)
 
     # Only signed in participants should be redirected based on unit progress and/or section assignments.
     if user && family_units.last.can_be_participant?(user)
@@ -779,7 +764,9 @@ class Script < ApplicationRecord
       # select only units in the same family.
       where(family_name: family_name).
       # order by version year descending.
-      order("properties -> '$.version_year' DESC")&.
+      # This SQL string is not at risk for injection vulnerabilites because
+      # it's just a hardcoded string, so it's safe to wrap in Arel.sql
+      order(Arel.sql("properties -> '$.version_year' DESC"))&.
       first
   end
 
@@ -1441,7 +1428,7 @@ class Script < ApplicationRecord
     get_published_state == SharedCourseConstants::PUBLISHED_STATE.in_development
   end
 
-  def summarize(include_lessons = true, user = nil, include_bonus_levels = false)
+  def summarize(include_lessons = true, user = nil, include_bonus_levels = false, locale_code = 'en-us')
     # TODO: Set up peer reviews to be more consistent with the rest of the system
     # so that they don't need a bunch of one off cases (example peer reviews
     # don't have a lesson group in the database right now)
@@ -1509,12 +1496,12 @@ class Script < ApplicationRecord
       age_13_required: logged_out_age_13_required?,
       show_course_unit_version_warning: !unit_group&.has_dismissed_version_warning?(user) && has_older_course_progress,
       show_script_version_warning: !user_unit&.version_warning_dismissed && !has_older_course_progress && has_older_unit_progress,
-      versions: summarize_versions(user),
+      course_versions: summarize_course_versions(user, locale_code),
       supported_locales: supported_locales,
       section_hidden_unit_info: section_hidden_unit_info(user),
       pilot_experiment: get_pilot_experiment,
       editor_experiment: editor_experiment,
-      show_assign_button: assignable_for_user?(user),
+      show_assign_button: course_assignable?(user),
       project_sharing: project_sharing,
       curriculum_umbrella: curriculum_umbrella,
       family_name: family_name,
@@ -1532,6 +1519,7 @@ class Script < ApplicationRecord
       includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false,
       useLegacyLessonPlans: is_migrated && use_legacy_lesson_plans,
       courseVersionId: get_course_version&.id,
+      courseOfferingId: get_course_version&.course_offering&.id,
       scriptOverviewPdfUrl: get_unit_overview_pdf_url,
       scriptResourcesPdfUrl: get_unit_resources_pdf_url,
       updated_at: updated_at.to_s
@@ -1569,12 +1557,14 @@ class Script < ApplicationRecord
     summary = summarize(include_lessons)
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_unit_edit)
     summary[:courseOfferingEditPath] = edit_course_offering_path(course_version.course_offering.key) if course_version
+    summary[:coursePublishedState] = unit_group ? unit_group.published_state : published_state
+    summary[:unitPublishedState] = unit_group ? published_state : nil
     summary
   end
 
   def summarize_for_lesson_edit
     {
-      isLaunched: launched?,
+      allowMajorCurriculumChanges: get_published_state == PUBLISHED_STATE.in_development || get_published_state == PUBLISHED_STATE.pilot,
       courseVersionId: get_course_version&.id,
       unitPath: script_path(self),
       lessonExtrasAvailableForUnit: lesson_extras_available,
@@ -1674,29 +1664,17 @@ class Script < ApplicationRecord
     data
   end
 
-  # Returns an array of objects showing the name and version year for all units
-  # sharing the family_name of this course, including this one.
-  def summarize_versions(user = nil)
-    return [] unless family_name
-    return [] unless has_other_versions?
-    return [] unless unit_groups.empty?
-    units = Script.
-      where(family_name: family_name).
-      all.
-      select {|unit| user&.levelbuilder? || unit.launched?}.
-      map do |s|
-      {
-        name: s.name,
-        version_year: s.version_year,
-        version_title: s.version_year,
-        can_view_version: s.can_view_version?(user),
-        is_stable: s.stable?,
-        locales: s.supported_locale_names,
-        locale_codes: s.supported_locales
-      }
-    end
+  # Returns summary object of all the course versions that an instructor can
+  # assign or all the launched versions a participant can view. 'course_assignable'
+  # will always return false for participants so they will fall into the second check for
+  # launched and can_view_version?. For instructors if course_assignable? is false then
+  # launched will also be false.
+  def summarize_course_versions(user = nil, locale_code = 'en-us')
+    return {} if unit_group
 
-    units.sort_by {|info| info[:version_year]}.reverse
+    all_course_versions = course_version&.course_offering&.course_versions
+    course_versions_for_user = all_course_versions&.select {|cv| cv.course_assignable?(user) || (cv.launched? && cv.can_view_version?(user, locale: locale_code))}
+    course_versions_for_user&.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
   def self.clear_cache
@@ -1864,6 +1842,20 @@ class Script < ApplicationRecord
       return alternate_ugu.script if ugu != alternate_ugu
     end
     nil
+  end
+
+  def summarize_for_assignment_dropdown
+    [
+      id,
+      {
+        id: id,
+        name: launched? ? localized_title : localized_title + " *",
+        path: link,
+        lesson_extras_available: lesson_extras_available?,
+        text_to_speech_enabled: text_to_speech_enabled?,
+        position: unit_group_units&.first&.position
+      }
+    ]
   end
 
   # @return {AssignableInfo} with strings translated

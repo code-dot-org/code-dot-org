@@ -53,6 +53,7 @@ export default storybook => {
             activitySectionPosition={1}
             activityPosition={1}
             lessonExtrasAvailableForUnit={true}
+            allowMajorCurriculumChanges={true}
           />
         </div>
       )
@@ -67,6 +68,7 @@ export default storybook => {
             activitySectionPosition={1}
             activityPosition={1}
             lessonExtrasAvailableForUnit={false}
+            allowMajorCurriculumChanges={true}
           />
         </div>
       )
@@ -81,6 +83,7 @@ export default storybook => {
             activitySectionPosition={1}
             activityPosition={1}
             lessonExtrasAvailableForUnit={true}
+            allowMajorCurriculumChanges={true}
           />
         </div>
       )

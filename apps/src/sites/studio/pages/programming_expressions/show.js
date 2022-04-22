@@ -32,6 +32,7 @@ $(document).ready(() => {
           programmingEnvironmentTitle={programmingEnvironmentTitle}
           categoriesForNavigation={categoriesForNavigation}
           currentCategoryKey={currentCategoryKey}
+          currentDocId={programmingExpression.id}
         >
           <ProgrammingExpressionOverview
             programmingExpression={programmingExpression}

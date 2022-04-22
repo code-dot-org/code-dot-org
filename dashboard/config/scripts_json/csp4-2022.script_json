@@ -18,8 +18,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-05 15:44:02 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-04-20 22:19:54 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -2223,7 +2223,7 @@
       "key": "9a352c4c-3215-482a-aaae-7588518608c1",
       "position": 3,
       "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Can a computer evaluate an expression to something between true and false? Can you write an expression to deal with a \"maybe\" answer?",
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Terminology Matching: Boolean Expression, Logical Operator, &&, ||, and !\n\n**Question:** Can a computer evaluate an expression to something between true and false? Can you write an expression to deal with a \"maybe\" answer?",
         "progression_name": "Assessment: Check For Understanding\r"
       },
       "seeding_key": {
@@ -2299,7 +2299,7 @@
       "key": "c730e5db-2ac3-429a-b2b9-cdf51aed5776",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 1 - Video - Conditionals: If Statements** As a class watch the video on if-statements.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Video - Conditionals: If Statements** As a class watch the video [r introduction_to_conditionals_-_part_2a/csp/2022] on if-statements.",
         "progression_name": "Condi",
         "tips": [
           {
@@ -2317,7 +2317,7 @@
       "key": "336cdcd6-efa6-4812-b999-22df47500b32",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 2 - Lemon Squeeze App Pt 1:** This code investigation includes a number of steps to help students get familiar with a new app."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 1 - Lemon Squeeze App Pt 1:** This code investigation includes a number of steps to help students get familiar with a new app."
       },
       "seeding_key": {
         "activity_section.key": "336cdcd6-efa6-4812-b999-22df47500b32",
@@ -2350,7 +2350,7 @@
       "key": "2f15458f-ef0a-432b-b062-54f478c54699",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 3 - Video - Conditionals: If-Else Statements** As a class watch the video on if-else statements. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 4 - Lemon Squeeze App Pt 2:** This code investigation includes a number of steps to help students get familiar with a new app.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Now look together at lines 54-58. Students discuss with a partner how they think the MOD operator works.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video - Conditionals: If-Else Statements** As a class watch the video [r introduction_to_conditionals_-_part_2b/csp/2022] on if-else statements. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 2 - Lemon Squeeze App Pt 2:** This code investigation includes a number of steps to help students get familiar with a new app.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Now look together at lines 54-58. Students discuss with a partner how they think the MOD operator works.",
         "name": "Investigation 2: If-Else Statements and MOD",
         "tips": [
           {
@@ -2402,7 +2402,7 @@
       "key": "2d208a5b-0d5a-4635-90e6-8dbf0c4c1f1e",
       "position": 11,
       "properties": {
-        "description": "\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 5 - Video - Conditionals: If-Else-If Statements** As a class watch the video on if-else statements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 6 - Lemon Squeeze App Pt 3** This program is an updated version of the Lemon Squeeze app. This time students should continue to work in partners but do not need to work with other groups. They will need to",
+        "description": "\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video - Conditionals: If-Else-If Statements** As a class watch the video [r introduction_to_conditionals_-_part_2c/csp/2022] on if-else-if statements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 3 - Lemon Squeeze App Pt 3** This program is an updated version of the Lemon Squeeze app. This time students should continue to work in partners but do not need to work with other groups. They will need to",
         "duration": "10",
         "name": "Investigation 3: If-Else-If Statements",
         "tips": [
@@ -2443,7 +2443,7 @@
       "key": "12f81349-6219-4f41-a903-aa7d10ff8092",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 7 - Video - Conditionals: If-Else Statements** As a class watch the video on if-else statements.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video - Conditionals: If-Else Statements** As a class watch the video [r introduction_to_conditionals_-_part_3/csp/2022] on logical operators.",
         "duration": "10",
         "name": "Investigation 3: Logical Operators AND OR"
       },
@@ -2456,7 +2456,7 @@
       "key": "a43aec3e-bed3-4938-be55-fbdf4763e8e4",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 8 - Lemon Squeeze App Pt 4:** This program is a final version of the Lemon Squeeze app. Again students should work with partners.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 4 - Lemon Squeeze App Pt 4:** This program is a final version of the Lemon Squeeze app. Again students should work with partners.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2506,7 +2506,7 @@
       "key": "a7ffe33c-7cd5-4a88-8112-cd6ba98566d5",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review Patterns:** Have students read the pattern introduced in Level 9. This pattern appears frequently with if-else-if statements. Students' understanding of this pattern is assessed in the Check Your Understanding Question.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review Patterns:** Have students read the pattern introduced in Level 5. This pattern appears frequently with if-else-if statements. Students' understanding of this pattern is assessed in the Check Your Understanding Question.\n",
         "progression_name": "Patterns: If-else-if"
       },
       "seeding_key": {
@@ -2657,7 +2657,7 @@
       "key": "1a077d04-b1b0-4445-9213-44ea53c64b88",
       "position": 9,
       "properties": {
-        "description": "* Level 11 Students do a quick practice with the MOD operator.",
+        "description": "* Level 11: Students do a quick practice with the MOD operator.",
         "progression_name": "MOD Practice"
       },
       "seeding_key": {
@@ -2673,6 +2673,18 @@
       },
       "seeding_key": {
         "activity_section.key": "400100c6-51bf-4c9a-9006-f7fd87dcade1",
+        "lesson_activity.key": "7d2fb412-add9-4cbf-930b-2532d011b4d8"
+      }
+    },
+    {
+      "key": "0ad2ae1b-2150-47ad-b79b-52c9a7dedb2b",
+      "position": 11,
+      "properties": {
+        "description": "* Level 12 Students complete a choice level",
+        "progression_name": "Putting It Together"
+      },
+      "seeding_key": {
+        "activity_section.key": "0ad2ae1b-2150-47ad-b79b-52c9a7dedb2b",
         "lesson_activity.key": "7d2fb412-add9-4cbf-930b-2532d011b4d8"
       }
     },
@@ -2975,7 +2987,7 @@
       "key": "06da37ee-28ff-42a5-9a68-66055beb4132",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 2 - Video:** Watch the video as a class. The most important two takeaways are that\n\n* Functions are declared in your program in order to give a group of commands a name\n* Functions are called to run those commands.\n* A function is only declared once but is called as many times as you wish. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 3 - Investigate Score Clicker**\n\n* **Discuss:** Once students have had a chance to run the code ask them to explore it and be ready to share responses to the questions provided.\n    * The function is declared on line 23 but called three times, on lines 6, 12, and 19.\n    * This way of writing the program makes the code in each of the buttons much simpler to read. It also removes repeated code.\n* **Modify:** Have students modify the program as instructed. All of the modifications should be made from within the function. Afterwards call out the following points.\n    * If you change the function you can use those changes every place the function is called.\n    * These changes make it easier to debug your program since you are not writing redundant code. You only need to rewrite and debug the code once.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 4 - Investigate Lemon Squeeze App with Functions**\n\n* **Modify:** Students in this level are asked to create a function themselves by identifying repeated code. They'll need to create a single function for this repeated code.\n* **Discuss:** After creating their function lead a short discussion on the benefits of creating a function to remove repeated code."
+        "description": "**Video:** Watch the two videos as a class. \n * <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> [r functions_part1/csp/2022]\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> [r defining_and_calling_functions/csp/2022]\n\nThe most important two takeaways are that\n\n* Functions are declared in your program in order to give a group of commands a name\n* Functions are called to run those commands.\n* A function is only declared once but is called as many times as you wish. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 2 - Investigate Score Clicker**\n\n* **Discuss:** Once students have had a chance to run the code ask them to explore it and be ready to share responses to the questions provided.\n    * The function is declared on line 23 but called three times, on lines 6, 12, and 19.\n    * This way of writing the program makes the code in each of the buttons much simpler to read. It also removes repeated code.\n* **Modify:** Have students modify the program as instructed. All of the modifications should be made from within the function. Afterwards call out the following points.\n    * If you change the function you can use those changes every place the function is called.\n    * These changes make it easier to debug your program since you are not writing redundant code. You only need to rewrite and debug the code once.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 3 - Investigate Lemon Squeeze App with Functions**\n\n* **Modify:** Students in this level are asked to create a function themselves by identifying repeated code. They'll need to create a single function for this repeated code.\n* **Discuss:** After creating their function lead a short discussion on the benefits of creating a function to remove repeated code."
       },
       "seeding_key": {
         "activity_section.key": "06da37ee-28ff-42a5-9a68-66055beb4132",
@@ -3796,6 +3808,17 @@
       }
     },
     {
+      "key": "d0d5910f-95e9-49a2-84f0-ce02efd1ec30",
+      "position": 4,
+      "properties": {
+        "progression_name": "End-of-Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "d0d5910f-95e9-49a2-84f0-ce02efd1ec30",
+        "lesson_activity.key": "0fa89c3d-e239-4f17-9760-3510fd4b0f8a"
+      }
+    },
+    {
       "key": "b79dc500-0b23-452e-8395-1a387150c56c",
       "position": 1,
       "properties": {
@@ -4319,14 +4342,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "U4 L03 Variables operator practice 42022"
+          "CSP U4L3 Choice"
         ],
         "progression": "Putting it Together"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U4 L03 Variables operator practice 42022"
+          "CSP U4L3 Choice"
         ],
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
@@ -4334,7 +4357,7 @@
         "activity_section.key": "697cdbc1-a1ed-460a-9226-3286d84f9655"
       },
       "level_keys": [
-        "U4 L03 Variables operator practice 42022"
+        "CSP U4L3 Choice"
       ]
     },
     {
@@ -4441,31 +4464,31 @@
       "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
-          "U4 L06 Introduction to Conditionals: Boolean Expressions2022"
+          "U4L5 CSP CFU terms2022"
         ],
-        "progression": "Conditionals: Boolean Expressions"
+        "progression": "Assessment: Check For Understanding\r"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U4 L06 Introduction to Conditionals: Boolean Expressions2022"
+          "U4L5 CSP CFU terms2022"
         ],
         "lesson.key": "Conditionals Explore",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2022",
-        "activity_section.key": "0aa97909-fe30-4904-8e96-0b7e8509bf50"
+        "activity_section.key": "9a352c4c-3215-482a-aaae-7588518608c1"
       },
       "level_keys": [
-        "U4 L06 Introduction to Conditionals: Boolean Expressions2022"
+        "U4L5 CSP CFU terms2022"
       ]
     },
     {
       "chapter": 26,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -4489,58 +4512,8 @@
     },
     {
       "chapter": 27,
-      "position": 3,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U4L5 CSP CFU terms2022"
-        ],
-        "progression": "Assessment: Check For Understanding\r"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U4L5 CSP CFU terms2022"
-        ],
-        "lesson.key": "Conditionals Explore",
-        "lesson_group.key": "csp_conditionals",
-        "script.name": "csp4-2022",
-        "activity_section.key": "9a352c4c-3215-482a-aaae-7588518608c1"
-      },
-      "level_keys": [
-        "U4L5 CSP CFU terms2022"
-      ]
-    },
-    {
-      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U4L06 Introduction to Conditionals: if Statements2022"
-        ],
-        "progression": "If-Statements"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U4L06 Introduction to Conditionals: if Statements2022"
-        ],
-        "lesson.key": "Conditionals Investigate",
-        "lesson_group.key": "csp_conditionals",
-        "script.name": "csp4-2022",
-        "activity_section.key": "3a767842-ab28-4d08-95cb-bcd2b14d5d4d"
-      },
-      "level_keys": [
-        "U4L06 Introduction to Conditionals: if Statements2022"
-      ]
-    },
-    {
-      "chapter": 29,
-      "position": 2,
-      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4563,34 +4536,9 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 3,
+      "chapter": 28,
+      "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U4L06 Introduction to Conditionals: if-else Statements2022"
-        ],
-        "progression": "If-Else Statements"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U4L06 Introduction to Conditionals: if-else Statements2022"
-        ],
-        "lesson.key": "Conditionals Investigate",
-        "lesson_group.key": "csp_conditionals",
-        "script.name": "csp4-2022",
-        "activity_section.key": "f5af7f60-e530-4578-abed-97d689c52451"
-      },
-      "level_keys": [
-        "U4L06 Introduction to Conditionals: if-else Statements2022"
-      ]
-    },
-    {
-      "chapter": 31,
-      "position": 4,
-      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4613,34 +4561,9 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 5,
+      "chapter": 29,
+      "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U4L06 Introduction to Conditionals: if-else-if Statements2022"
-        ],
-        "progression": "If-Else-If Statements"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U4L06 Introduction to Conditionals: if-else-if Statements2022"
-        ],
-        "lesson.key": "Conditionals Investigate",
-        "lesson_group.key": "csp_conditionals",
-        "script.name": "csp4-2022",
-        "activity_section.key": "3c1f9e47-128a-47c6-87d5-fc74ce4a0438"
-      },
-      "level_keys": [
-        "U4L06 Introduction to Conditionals: if-else-if Statements2022"
-      ]
-    },
-    {
-      "chapter": 33,
-      "position": 6,
-      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4663,34 +4586,9 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 7,
+      "chapter": 30,
+      "position": 4,
       "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U4L06 Introduction to Conditionals: Compound Boolean Expressions2022"
-        ],
-        "progression": "Logical Operators: AND OR"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U4L06 Introduction to Conditionals: Compound Boolean Expressions2022"
-        ],
-        "lesson.key": "Conditionals Investigate",
-        "lesson_group.key": "csp_conditionals",
-        "script.name": "csp4-2022",
-        "activity_section.key": "50d7816c-57cc-41b0-b48a-93ed65e6eae6"
-      },
-      "level_keys": [
-        "U4L06 Introduction to Conditionals: Compound Boolean Expressions2022"
-      ]
-    },
-    {
-      "chapter": 35,
-      "position": 8,
-      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4713,8 +4611,8 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 9,
+      "chapter": 31,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4738,8 +4636,8 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 10,
+      "chapter": 32,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -4763,7 +4661,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4788,7 +4686,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4813,7 +4711,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 35,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4838,7 +4736,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 36,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4863,7 +4761,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 37,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -4888,7 +4786,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 38,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -4913,7 +4811,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 39,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -4938,7 +4836,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 40,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -4963,7 +4861,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 41,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -4988,7 +4886,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 42,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -5013,20 +4911,17 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 43,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U7 Param Return Practice MOD2022"
-        ],
         "progression": "MOD Practice"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U7 Param Return Practice MOD2022"
+          "U4 Conditionals Practice MOD_2022"
         ],
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
@@ -5034,12 +4929,34 @@
         "activity_section.key": "1a077d04-b1b0-4445-9213-44ea53c64b88"
       },
       "level_keys": [
-        "U7 Param Return Practice MOD2022"
+        "U4 Conditionals Practice MOD_2022"
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 44,
       "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Putting It Together"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U4L7 Choice"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2022",
+        "activity_section.key": "0ad2ae1b-2150-47ad-b79b-52c9a7dedb2b"
+      },
+      "level_keys": [
+        "CSP U4L7 Choice"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 13,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -5063,8 +4980,8 @@
       ]
     },
     {
-      "chapter": 50,
-      "position": 13,
+      "chapter": 46,
+      "position": 14,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
@@ -5088,7 +5005,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5113,7 +5030,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 48,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5138,7 +5055,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 49,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5163,59 +5080,9 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 50,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U4L09 Intro to Functions Video2022"
-        ],
-        "progression": "Declaring and Calling Functions"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U4L09 Intro to Functions Video2022"
-        ],
-        "lesson.key": "Functions Explore / Investigate",
-        "lesson_group.key": "csp_functions",
-        "script.name": "csp4-2022",
-        "activity_section.key": "8bdb0566-4b71-42bf-8cd2-1a47cd9ccb16"
-      },
-      "level_keys": [
-        "U4L09 Intro to Functions Video2022"
-      ]
-    },
-    {
-      "chapter": 55,
-      "position": 3,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U4L09 Defining and Calling Functions Video2022"
-        ],
-        "progression": "Declaring and Calling Functions"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U4L09 Defining and Calling Functions Video2022"
-        ],
-        "lesson.key": "Functions Explore / Investigate",
-        "lesson_group.key": "csp_functions",
-        "script.name": "csp4-2022",
-        "activity_section.key": "8bdb0566-4b71-42bf-8cd2-1a47cd9ccb16"
-      },
-      "level_keys": [
-        "U4L09 Defining and Calling Functions Video2022"
-      ]
-    },
-    {
-      "chapter": 56,
-      "position": 4,
-      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -5238,9 +5105,9 @@
       ]
     },
     {
-      "chapter": 57,
-      "position": 5,
-      "activity_section_position": 4,
+      "chapter": 51,
+      "position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -5263,8 +5130,8 @@
       ]
     },
     {
-      "chapter": 58,
-      "position": 6,
+      "chapter": 52,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5288,8 +5155,8 @@
       ]
     },
     {
-      "chapter": 59,
-      "position": 7,
+      "chapter": 53,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -5313,7 +5180,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 54,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5338,7 +5205,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 55,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5363,7 +5230,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 56,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5388,7 +5255,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 57,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5413,7 +5280,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 58,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -5438,7 +5305,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 59,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5463,7 +5330,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 60,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -5488,7 +5355,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 61,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5513,20 +5380,20 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 62,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "U4 L10 Making Functions Practice2022"
+          "CSP U4L10 Choice"
         ],
         "progression": "When to Declare Functions"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U4 L10 Making Functions Practice2022"
+          "CSP U4L10 Choice"
         ],
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
@@ -5534,11 +5401,11 @@
         "activity_section.key": "c3a04233-a047-4b4a-a594-d6c9097c67d8"
       },
       "level_keys": [
-        "U4 L10 Making Functions Practice2022"
+        "CSP U4L10 Choice"
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 63,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
@@ -5563,7 +5430,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5588,7 +5455,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 65,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5613,7 +5480,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5638,7 +5505,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 67,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5663,7 +5530,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 68,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5688,7 +5555,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 69,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5713,7 +5580,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 70,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5738,7 +5605,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 71,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5763,7 +5630,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 72,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5788,7 +5655,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 73,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5813,7 +5680,32 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 74,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csp4-2022"
+        ],
+        "progression": "End-of-Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csp4-2022"
+        ],
+        "lesson.key": "Project   Decision Maker App Part 3",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2022",
+        "activity_section.key": "d0d5910f-95e9-49a2-84f0-ce02efd1ec30"
+      },
+      "level_keys": [
+        "Student End of Unit Survey_csp4-2022"
+      ]
+    },
+    {
+      "chapter": 75,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6069,9 +5961,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "U4 L03 Variables operator practice 42022",
+        "level.key": "CSP U4L3 Choice",
         "script_level.level_keys": [
-          "U4 L03 Variables operator practice 42022"
+          "CSP U4L3 Choice"
         ],
         "lesson.key": "Variables Practice",
         "lesson_group.key": "csp_variables",
@@ -6129,14 +6021,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "U4 L06 Introduction to Conditionals: Boolean Expressions2022",
+        "level.key": "U4L5 CSP CFU terms2022",
         "script_level.level_keys": [
-          "U4 L06 Introduction to Conditionals: Boolean Expressions2022"
+          "U4L5 CSP CFU terms2022"
         ],
         "lesson.key": "Conditionals Explore",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2022",
-        "activity_section.key": "0aa97909-fe30-4904-8e96-0b7e8509bf50"
+        "activity_section.key": "9a352c4c-3215-482a-aaae-7588518608c1"
       }
     },
     {
@@ -6153,30 +6045,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "U4L5 CSP CFU terms2022",
-        "script_level.level_keys": [
-          "U4L5 CSP CFU terms2022"
-        ],
-        "lesson.key": "Conditionals Explore",
-        "lesson_group.key": "csp_conditionals",
-        "script.name": "csp4-2022",
-        "activity_section.key": "9a352c4c-3215-482a-aaae-7588518608c1"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U4L06 Introduction to Conditionals: if Statements2022",
-        "script_level.level_keys": [
-          "U4L06 Introduction to Conditionals: if Statements2022"
-        ],
-        "lesson.key": "Conditionals Investigate",
-        "lesson_group.key": "csp_conditionals",
-        "script.name": "csp4-2022",
-        "activity_section.key": "3a767842-ab28-4d08-95cb-bcd2b14d5d4d"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "U4 L06 Lemon Hunter App v1 Code2022",
         "script_level.level_keys": [
           "U4 L06 Lemon Hunter App v1 Code2022"
@@ -6185,18 +6053,6 @@
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2022",
         "activity_section.key": "3a767842-ab28-4d08-95cb-bcd2b14d5d4d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U4L06 Introduction to Conditionals: if-else Statements2022",
-        "script_level.level_keys": [
-          "U4L06 Introduction to Conditionals: if-else Statements2022"
-        ],
-        "lesson.key": "Conditionals Investigate",
-        "lesson_group.key": "csp_conditionals",
-        "script.name": "csp4-2022",
-        "activity_section.key": "f5af7f60-e530-4578-abed-97d689c52451"
       }
     },
     {
@@ -6213,18 +6069,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "U4L06 Introduction to Conditionals: if-else-if Statements2022",
-        "script_level.level_keys": [
-          "U4L06 Introduction to Conditionals: if-else-if Statements2022"
-        ],
-        "lesson.key": "Conditionals Investigate",
-        "lesson_group.key": "csp_conditionals",
-        "script.name": "csp4-2022",
-        "activity_section.key": "3c1f9e47-128a-47c6-87d5-fc74ce4a0438"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "U4 L06 Lemon Hunter App v2 Code2022",
         "script_level.level_keys": [
           "U4 L06 Lemon Hunter App v2 Code2022"
@@ -6233,18 +6077,6 @@
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2022",
         "activity_section.key": "3c1f9e47-128a-47c6-87d5-fc74ce4a0438"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U4L06 Introduction to Conditionals: Compound Boolean Expressions2022",
-        "script_level.level_keys": [
-          "U4L06 Introduction to Conditionals: Compound Boolean Expressions2022"
-        ],
-        "lesson.key": "Conditionals Investigate",
-        "lesson_group.key": "csp_conditionals",
-        "script.name": "csp4-2022",
-        "activity_section.key": "50d7816c-57cc-41b0-b48a-93ed65e6eae6"
       }
     },
     {
@@ -6405,14 +6237,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "U7 Param Return Practice MOD2022",
+        "level.key": "U4 Conditionals Practice MOD_2022",
         "script_level.level_keys": [
-          "U7 Param Return Practice MOD2022"
+          "U4 Conditionals Practice MOD_2022"
         ],
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
         "script.name": "csp4-2022",
         "activity_section.key": "1a077d04-b1b0-4445-9213-44ea53c64b88"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U4L7 Choice",
+        "script_level.level_keys": [
+          "CSP U4L7 Choice"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2022",
+        "activity_section.key": "0ad2ae1b-2150-47ad-b79b-52c9a7dedb2b"
       }
     },
     {
@@ -6473,30 +6317,6 @@
         "lesson_group.key": "csp_functions",
         "script.name": "csp4-2022",
         "activity_section.key": "5c897885-b013-4815-a098-0fabc27f5d42"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U4L09 Intro to Functions Video2022",
-        "script_level.level_keys": [
-          "U4L09 Intro to Functions Video2022"
-        ],
-        "lesson.key": "Functions Explore / Investigate",
-        "lesson_group.key": "csp_functions",
-        "script.name": "csp4-2022",
-        "activity_section.key": "8bdb0566-4b71-42bf-8cd2-1a47cd9ccb16"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "U4L09 Defining and Calling Functions Video2022",
-        "script_level.level_keys": [
-          "U4L09 Defining and Calling Functions Video2022"
-        ],
-        "lesson.key": "Functions Explore / Investigate",
-        "lesson_group.key": "csp_functions",
-        "script.name": "csp4-2022",
-        "activity_section.key": "8bdb0566-4b71-42bf-8cd2-1a47cd9ccb16"
       }
     },
     {
@@ -6645,9 +6465,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "U4 L10 Making Functions Practice2022",
+        "level.key": "CSP U4L10 Choice",
         "script_level.level_keys": [
-          "U4 L10 Making Functions Practice2022"
+          "CSP U4L10 Choice"
         ],
         "lesson.key": "Functions Practice",
         "lesson_group.key": "csp_functions",
@@ -6789,6 +6609,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "Student End of Unit Survey_csp4-2022",
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csp4-2022"
+        ],
+        "lesson.key": "Project   Decision Maker App Part 3",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2022",
+        "activity_section.key": "d0d5910f-95e9-49a2-84f0-ce02efd1ec30"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSP 20-21 Unit 4 Assessment2022",
         "script_level.level_keys": [
           "CSP 20-21 Unit 4 Assessment2022"
@@ -6925,10 +6757,11 @@
     },
     {
       "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
-      "url": "https://docs.google.com/presentation/d/1a4w7xtUqAs-3jxMdcLiwGayVA9r3x7k27oiVfsApRMs/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/17DOii-3gPXZrNszMyiLnHUt7VhbCULJ9Jddlb_Xss5o/view",
       "key": "csp_unit_4_-_variables_conditionals_and_functions",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/17DOii-3gPXZrNszMyiLnHUt7VhbCULJ9Jddlb_Xss5o/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -6998,6 +6831,19 @@
       },
       "seeding_key": {
         "resource.key": "eipm_a_short_introduction"
+      }
+    },
+    {
+      "name": "Introduction to Functions",
+      "url": "https://drive.google.com/file/d/1Gv4s_IdK5NcS0qOpiPS0NptrfGGjQdTJ/view?usp=sharing",
+      "key": "functions_part1",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://drive.google.com/file/d/1Gv4s_IdK5NcS0qOpiPS0NptrfGGjQdTJ/view?usp=sharing",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "functions_part1"
       }
     },
     {
@@ -7305,6 +7151,12 @@
       "seeding_key": {
         "lesson.key": "Functions Explore / Investigate",
         "resource.key": "defining_and_calling_functions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions Explore / Investigate",
+        "resource.key": "functions_part1"
       }
     },
     {

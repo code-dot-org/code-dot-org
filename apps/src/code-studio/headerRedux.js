@@ -65,11 +65,20 @@ export default (state = initialState, action) => {
     action.type === ENABLE_LEVEL_BUILDER_SAVE_BUTTON &&
     action.getChanges
   ) {
-    return {
+    const updatedState = {
       ...state,
       currentHeader: possibleHeaders.levelBuilderSave,
       getLevelBuilderChanges: action.getChanges
     };
+
+    if (action.overrideHeaderText) {
+      updatedState.overrideHeaderText = action.overrideHeaderText;
+    }
+    if (action.overrideOnSaveURL) {
+      updatedState.overrideOnSaveURL = action.overrideOnSaveURL;
+    }
+
+    return updatedState;
   }
 
   if (action.type === SHOW_PROJECT_UPDATED_AT) {
@@ -153,9 +162,15 @@ export const showProjectBackedHeader = showExport => ({
   showExport
 });
 
-export const showLevelBuilderSaveButton = getChanges => ({
+export const showLevelBuilderSaveButton = (
+  getChanges,
+  overrideHeaderText,
+  overrideOnSaveURL
+) => ({
   type: ENABLE_LEVEL_BUILDER_SAVE_BUTTON,
-  getChanges
+  getChanges,
+  overrideHeaderText,
+  overrideOnSaveURL
 });
 
 export const showProjectUpdatedAt = () => ({

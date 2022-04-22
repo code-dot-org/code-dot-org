@@ -1,9 +1,9 @@
 {
   "key": "nextFrame",
   "name": "sprite.nextFrame()",
-  "category": "Animations",
+  "category": "Sprites",
   "category_key": "sprites",
-  "content": "Move to the next frame for the animation for a sprite.\r\n\r\nWhen the last frame is displayed and nextFrame() is executed the first frame is disaplyed.\r\n\r\nUse the Animation tab to load multiple images which make up the frames for a labeled animation for your sprite. By default all frames are displayed one after another in round robin fashion. The speed is set by the slider in the Animation tab. Use `play()` to restart the animation. Use `pause()` to stop the animation.",
+  "content": "Move to the next frame for the animation for a sprite.\n\nWhen the last frame is displayed and nextFrame() is executed the first frame is disaplyed.\n\nUse the Animation tab to load multiple images which make up the frames for a labeled animation for your sprite. By default all frames are displayed one after another in round robin fashion. The speed is set by the slider in the Animation tab. Use [`play()`(#f78183)](/docs/gamelab/play/) to restart the animation. Use [`pause`(#f78183)](/docs/gamelab/pause/) to stop the animation.",
   "examples": [
     {
       "name": "Emoji Eyes",
@@ -17,6 +17,6 @@
   ],
   "return_value": "No return value. Changes output in the display after drawSprites() is called.",
   "short_description": "Move to the next frame for the animation for a sprite.",
-  "syntax": "nextFrame",
+  "syntax": "sprite.nextFrame()",
   "tips": "- Sprites all have the same functions and you use the dot notation (combining the name of the sprite, followed by a dot, with the function name) to call the function for that sprite.\r\n- Any changes to the properties of a sprite will not be seen until after `drawSprites()` is called."
 }

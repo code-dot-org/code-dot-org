@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "k5-onlinepd",
-    "serialized_at": "2021-11-22 19:57:38 UTC",
+    "serialized_at": "2022-03-10 17:19:17 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -3549,14 +3549,11 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "OPD-K5-ForLoopFArtist-2021"
-        ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "OPD-K5-ForLoopFArtist-2021"
+          "K5_PD_2021-Lesson14Level5"
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_basic_concepts_1",
@@ -3564,7 +3561,7 @@
         "activity_section.key": "0dcea2b0-30b6-48e5-a749-7d01d33092cc"
       },
       "level_keys": [
-        "OPD-K5-ForLoopFArtist-2021"
+        "K5_PD_2021-Lesson14Level5"
       ]
     },
     {
@@ -5799,9 +5796,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "OPD-K5-ForLoopFArtist-2021",
+        "level.key": "K5_PD_2021-Lesson14Level5",
         "script_level.level_keys": [
-          "OPD-K5-ForLoopFArtist-2021"
+          "K5_PD_2021-Lesson14Level5"
         ],
         "lesson.key": "For Loops",
         "lesson_group.key": "k5_basic_concepts_1",

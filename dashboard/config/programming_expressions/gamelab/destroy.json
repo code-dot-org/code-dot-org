@@ -3,7 +3,7 @@
   "name": "sprite.destroy()",
   "category": "Sprites",
   "category_key": "sprites",
-  "content": "Removes the sprite from the animation.\r\n\r\nThe removed sprite won't be drawn or updated anymore. Use `createSprite()` to re-create a sprite.",
+  "content": "Removes the sprite from the animation.\n\nThe removed sprite won't be drawn or updated anymore. Use [`createSprite()`(#f78183)](/docs/gamelab/createSprite/) to re-create a sprite.",
   "examples": [
     {
       "name": "",
@@ -26,5 +26,5 @@
   ],
   "return_value": "No return value. Changes output in the display after drawSprites() is called",
   "short_description": "Removes the sprite from the animation.",
-  "syntax": "destroy"
+  "syntax": "sprite.destroy()"
 }

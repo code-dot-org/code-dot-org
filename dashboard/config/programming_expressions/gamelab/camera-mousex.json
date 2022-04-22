@@ -1,8 +1,8 @@
 {
   "key": "camera.mouseX",
   "name": "camera.mouseX",
-  "category": "World",
-  "category_key": "world",
+  "category": "Game Lab",
+  "category_key": "game_lab",
   "content": "The x coordinate of the mouse translated to the camera view.\r\n\r\nMoving or zooming the camera will not change sprite positions nor the values of `World.mouseX` and `World.mouseY`. camera.mouseX values are not limited to the size of the display area. As the camera moves right the camera.mouseX values will increase, as the camera moves left the camera.mouseX values will decrease.",
   "examples": [
     {

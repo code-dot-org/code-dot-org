@@ -1,8 +1,8 @@
 {
   "key": "World.allSprites",
   "name": "World.allSprites",
-  "category": "World",
-  "category_key": "world",
+  "category": "Game Lab",
+  "category_key": "game_lab",
   "content": "Returns an array containing all the active sprites.\r\n\r\nSometimes you need to perform some actions on all the active sprites. Instead of coding multiples statements, one for each active sprite, you can use allSprites which creates an array, an indexed collection, of sprites that you can process one at a time with a loop.",
   "examples": [
     {

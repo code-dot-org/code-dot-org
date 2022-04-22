@@ -3,7 +3,7 @@
   "name": "group.setRotateToDirectionEach()",
   "category": "Groups",
   "category_key": "groups",
-  "content": "Lock the rotation property of each sprite in the group to the sprite's movement direction.\r\n\r\nYou animations and games are more realistic if the sprites turn in the direction they are moving.",
+  "content": "Lock the rotation property of each sprite in the group to the sprite's movement direction.\n\nYour animations and games are more realistic if the sprites turn in the direction they are moving.",
   "examples": [
     {
       "name": "Swarm",
@@ -23,8 +23,11 @@
       "description": "Should each sprite in the group rotate to its movement direction or not."
     }
   ],
+  "parameters": [
+    "bool"
+  ],
   "return_value": "No return value. Changes output in the display after drawSprites() is called.",
   "short_description": "Lock the rotation property of each sprite in the group to the sprite's movement direction.",
-  "syntax": "setRotateToDirectionEach(bool)",
+  "syntax": "group.setRotateToDirectionEach(bool)",
   "tips": "- Changing the sprite's location does not change the sprite's direction. Instead use the group velocity and direction functions: `setVelocityXEach()`, `setVelocityYEach()`, `setVelocityEach()`, `setSpeedAndDirectionEach()`\r\n- Groups of sprites all have the same functions and you use the dot notation (combining the name of the group, followed by a dot, with the function name) to call the function for that group of sprites.\r\n- Any changes to the properties of a sprite will not be seen until after `drawSprites()` is called.\r\n"
 }

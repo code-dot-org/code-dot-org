@@ -4,20 +4,20 @@
     <arg name="this sprite" type="Sprite"/>
     <description/>
   </mutation>
-  <title name="NAME" id="chasing">chasing</title>
+  <field name="NAME" id="chasing">chasing</field>
   <statement name="STACK">
     <block type="gamelab_moveToward">
       <value name="SPRITE">
         <block type="sprite_parameter_get">
-          <title name="VAR">this sprite</title>
+          <field name="VAR">this sprite</field>
         </block>
       </value>
       <value name="DISTANCE">
         <block type="gamelab_getProp">
-          <title name="PROPERTY">"speed"</title>
+          <field name="PROPERTY">"speed"</field>
           <value name="SPRITE">
             <block type="sprite_parameter_get">
-              <title name="VAR">this sprite</title>
+              <field name="VAR">this sprite</field>
             </block>
           </value>
         </block>
@@ -26,7 +26,7 @@
         <block type="gamelab_locationOf">
           <value name="SPRITE">
             <block type="sprite_parameter_get">
-              <title name="VAR">target</title>
+              <field name="VAR">target</field>
             </block>
           </value>
         </block>

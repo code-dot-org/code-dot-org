@@ -1,7 +1,13 @@
 module CurriculumHelper
   KEY_CHAR_RE = /[A-Za-z0-9\-\_\.]/
+  RESERVED_KEYS = ['edit', 'new']
 
   def validate_key_format
+    if RESERVED_KEYS.include?(key)
+      errors.add(:base, "Key must not be one of: ${RESERVED_KEYS}")
+      return false
+    end
+
     if key.blank?
       errors.add(:base, 'Key must not be blank')
       return false

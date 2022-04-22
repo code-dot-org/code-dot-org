@@ -49,7 +49,7 @@ Feature: Libraries
 
   Scenario: Assigning a library to a section as a teacher
     Given I create a teacher named "Library_Teacher"
-    And I create a new section
+    And I create a new student section
     Given I publish a basic library in Game Lab
     When I close the dialog
 

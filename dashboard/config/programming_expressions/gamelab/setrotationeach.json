@@ -23,8 +23,11 @@
       "description": "The rotation angle."
     }
   ],
+  "parameters": [
+    "angle"
+  ],
   "return_value": "No return value. Changes output in the display after drawSprites() is called.",
   "short_description": "Clockwise rotation in degrees of all the sprites in the group.",
-  "syntax": "setRotationEach(angle)",
+  "syntax": "group.setRotationEach(angle)",
   "tips": "- Groups of sprites all have the same functions and you use the dot notation (combining the name of the group, followed by a dot, with the function name) to call the function for that group of sprites.\r\n- Any changes to the properties of a sprite will not be seen until after `drawSprites()` is called."
 }

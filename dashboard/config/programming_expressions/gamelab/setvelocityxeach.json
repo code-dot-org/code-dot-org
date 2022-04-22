@@ -23,8 +23,11 @@
       "description": "The velocity of each sprite in the positive x direction, to the right."
     }
   ],
+  "parameters": [
+    "velocityX"
+  ],
   "return_value": "No return value. Changes output in the display after drawSprites() is called.",
   "short_description": "Sets the x direction velocity for all the sprites in a group.",
-  "syntax": "setVelocityXEach(velocityX)",
+  "syntax": "group.setVelocityXEach(velocity)",
   "tips": "- Changing World.frameRate will affect the velocity.\r\n- Groups of sprites all have the same functions and you use the dot notation (combining the name of the group, followed by a dot, with the function name) to call the function for that group of sprites.\r\n- Any changes to the properties of a sprite will not be seen until after `drawSprites()` is called.\r\n- If `setColliderEach()` is called for group before it is scaled, the collider is not scaled. But if a group of sprites is first scaled and then the collider set, the scale is also applied to the collider."
 }

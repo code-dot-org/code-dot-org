@@ -19,6 +19,8 @@ import {activityShape} from '@cdo/apps/lib/levelbuilder/shapes';
 class ActivitiesEditor extends Component {
   static propTypes = {
     hasLessonPlan: PropTypes.bool.isRequired,
+    allowMajorCurriculumChanges: PropTypes.bool.isRequired,
+
     //redux
     activities: PropTypes.arrayOf(activityShape).isRequired,
     addActivity: PropTypes.func.isRequired
@@ -122,7 +124,7 @@ class ActivitiesEditor extends Component {
   };
 
   render() {
-    const {activities} = this.props;
+    const {activities, allowMajorCurriculumChanges} = this.props;
 
     return (
       <div style={styles.activityEditAndPreview}>
@@ -140,6 +142,7 @@ class ActivitiesEditor extends Component {
             activitySectionMetrics={this.sectionMetrics}
             updateActivitySectionMetrics={this.updateActivitySectionMetrics}
             hasLessonPlan={this.props.hasLessonPlan}
+            allowMajorCurriculumChanges={allowMajorCurriculumChanges}
           />
         ))}
         {this.props.hasLessonPlan && (

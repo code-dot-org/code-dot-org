@@ -1,0 +1,41 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##In ImageScene.java:\r\n\r\n1. Write the `equals()`(#e7e8ea) method. It should return `true`(#e7e8ea) if the number of images in the `images`(#e7e8ea) array of both `ImageScene`(#e7e8ea) objects are the same. Otherwise, return `false`(#e7e8ea).\r\n\r\n##In MyConsole.java:\r\n\r\n2. Write an `if/else`(#e7e8ea) statement using your `equals()`(#e7e8ea) method to check if `firstImages`(#e7e8ea) and `secondImages`(#e7e8ea) are equivalent.\r\n\r\n   a. If the `equals()`(#e7e8ea) method returns `true`(#e7e8ea), use `Theater.playScenes(firstImages)`(#e7e8ea) to play only `firstImages`(#e7e8ea).\r\n   \r\n   b. If the `equals()`(#e7e8ea) method returns `false`(#e7e8ea), call `secondImages.createScene()`(#e7e8ea) then use `Theater.playScenes(firstImages, secondImages)`(#e7e8ea) to play both scenes.\r\n\r\n::: details [**Show Me How**]\r\nThe `equals()`(#e7e8ea) method uses the following syntax:\r\n  \r\n  ```\r\n  public boolean equals(Object otherObject) {\r\n    // code to compare values\r\n  }\r\n  ```\r\n\r\nDon't forget to first check if `otherObject`(#e7e8ea) is `null`(#e7e8ea)!\r\n\r\nTo call the `equals()`(#e7e8ea) method in an `if`(#e7e8ea) statement, use the following syntax:\r\n\r\n   ```\r\n   if (firstObject.equals(secondObject) {\r\n     // code to execute\r\n   }\r\n   ```\r\n:::",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "display_name": "The ImageScene Class",
+    "bubble_choice_description": "Write an equals() method in the ImageScene class to check if ImageScene objects are equivalent.",
+    "thumbnail_url": "https://images.code.org/efea2437f7911893fec65d579f0a3a5e-image-1650499050146.png",
+    "start_sources": {
+      "MyTheater.java": {
+        "text": "import org.code.theater.*;\n\npublic class MyTheater {\n  public static void main(String[] args) {\n\n    String[] music = {\"amp.jpg\", \"guitar.jpg\", \"piano.jpg\", \"violin.jpg\"};\n    ImageScene firstImages = new ImageScene(music);\n\n    String[] food = {\"burger.jpg\", \"pineapple.jpg\", \"pizza.jpg\", \"pasta.jpg\"};\n    ImageScene secondImages = new ImageScene(food);\n\n    firstImages.createScene();\n\n    // TO DO #2: Write an if/else statement to decide which scene(s) to play.\n    \n    \n  } \n}",
+        "isVisible": true
+      },
+      "ImageScene.java": {
+        "text": "import org.code.theater.*;\n\n/*\n * Represents a scene of images\n */\npublic class ImageScene extends Scene {\n\n  private String[] images;  // The array of image files\n\n  /*\n   * Constructor to create a ImageScene with\n   * an array of images\n   */\n  public ImageScene(String[] images) {\n    this.images = images;\n  }\n\n  /*\n   * Returns the array of images\n   */\n  public String[] getImages() {\n    return images;\n  }\n\n  /*\n   * Creates the image scene\n   */\n  public void createScene() {\n    for (int index = 0; index < images.length; index++) {\n      drawImage(images[index], 0, 0, getWidth());\n      pause(0.5);\n    }\n  }\n\n  // TO DO #1: Write the equals() method.\n  \n  \n}",
+        "isVisible": true
+      }
+    },
+    "starter_assets": {
+      "amp.jpg": "ab60421b-1f2e-46e1-be79-ac6d2dea211f.jpg",
+      "piano.jpg": "82f54566-62fe-414d-9522-889ba7b1193c.jpg",
+      "guitar.jpg": "a3cab07e-4aca-4626-b058-aab4d8326956.jpg",
+      "violin.jpg": "7ba069d0-93ba-4a73-971e-64ecde7ffc2b.jpg",
+      "burger.jpg": "e68f9302-7f5c-4ad6-b365-1734eed60b70.jpg",
+      "pineapple.jpg": "84b1b9b2-6a85-4b96-b767-38fb156850e6.jpg",
+      "pizza.jpg": "d38ee534-b6f6-469c-a566-355f0cee1a06.jpg",
+      "pasta.jpg": "dddbe2df-4133-4e31-a153-3f5af3816420.jpg"
+    }
+  },
+  "game_id": 68,
+  "created_at": "2022-04-07T17:34:51.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-04-07T17:34:51.911+00:00\",\"changed\":[\"cloned from \\\"CSA U4L2-L4c_2022\\\"\"],\"cloned_from\":\"CSA U4L2-L4c_2022\"},{\"changed_at\":\"2022-04-07 17:34:56 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-07 17:35:18 +0000\",\"changed\":[\"csa_view_mode\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 22:10:15 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 22:14:30 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 23:28:25 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 23:30:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 23:55:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 23:57:49 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 23:57:56 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

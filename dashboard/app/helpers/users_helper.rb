@@ -29,6 +29,9 @@ module UsersHelper
       return false
     end
 
+    # TODO: Remove this call https://codedotorg.atlassian.net/browse/FND-1927
+    log_self_takeover_investigation_to_firehose(firehose_params.merge({type: 'self'})) if source_user&.id == destination_user&.id
+
     ActiveRecord::Base.transaction do
       # Move over sections that source_user follows
       Follower.where(student_user_id: source_user.id).each do |followed|
@@ -47,7 +50,18 @@ module UsersHelper
 
     log_account_takeover_to_firehose(firehose_params)
     true
-  rescue
+  rescue => e
+    # TODO: Remove this block https://codedotorg.atlassian.net/browse/FND-1927
+    if source_user && destination_user
+      firehose_params = {
+        source_user: source_user,
+        destination_user: destination_user,
+        type: takeover_type,
+        provider: provider,
+        error: "Type: #{e.class} Message: #{e.message}"
+      }
+      log_self_takeover_investigation_to_firehose(firehose_params)
+    end
     false
   end
 
@@ -63,6 +77,29 @@ module UsersHelper
         data_json: {
           user_type: destination_user.user_type,
           error: error,
+        }.to_json
+      }
+    )
+  end
+
+  # TODO: Remove this function https://codedotorg.atlassian.net/browse/FND-1927
+  def log_self_takeover_investigation_to_firehose(source_user:, destination_user:, type:, provider:, error: nil)
+    FirehoseClient.instance.put_record(
+      :analysis,
+      {
+        study: 'self-takeover-investigation',
+        event: "#{type}-account-takeover", # Silent or OAuth takeover
+        user_id: source_user.id, # User account being "taken over" (deleted)
+        data_int: destination_user.id, # User account after takeover
+        data_string: provider,
+        error: error,   # Move error outside of data_json to query easier
+        data_json: {
+          session_sign_up_type: session[:sign_up_type],
+          destination_user_hashed_email: destination_user.hashed_email,
+          source_user_hashed_email: source_user.hashed_email,
+          # Including the auth_option_ids for reference, but not confident they will reveal much
+          destination_user_auth_option_ids: destination_user.authentication_options.map(&:id).join(', '),
+          source_user_auth_option_ids: source_user.authentication_options.map(&:id).join(', ')
         }.to_json
       }
     )
@@ -116,7 +153,7 @@ module UsersHelper
       user_data[:disableSocialShare] = true if user.under_13?
       user_data[:lockableAuthorized] = user.teacher? ? user.verified_instructor? : user.student_of_verified_instructor?
       user_data[:isTeacher] = true if user.teacher?
-      user_data[:isVerifiedInstructor] = true if user.verified_teacher?
+      user_data[:isVerifiedInstructor] = true if user.verified_instructor?
       user_data[:linesOfCode] = user.total_lines
       user_data[:linesOfCodeText] = I18n.t('nav.popup.lines', lines: user_data[:linesOfCode])
     end
@@ -341,7 +378,8 @@ module UsersHelper
 
     # get progress for sublevels to save in levels hash
     level.sublevels.each do |sublevel|
-      ul = user_levels_by_level.try(:[], sublevel.id)
+      level_for_progress = BubbleChoice.level_for_progress_for_sublevel(sublevel)
+      ul = user_levels_by_level.try(:[], level_for_progress.id)
       feedback = teacher_feedback_by_level.try(:[], sublevel.id)
       sublevel_progress = get_level_progress(user.id, ul, feedback&.review_state, script_level, paired_user_levels, include_timestamp)
       next unless sublevel_progress

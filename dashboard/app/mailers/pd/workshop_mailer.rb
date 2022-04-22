@@ -102,6 +102,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @enrollment = enrollment
     @workshop = enrollment.workshop
     @organizer = @workshop.organizer
+    @regional_partner_name = @workshop.regional_partner&.name
     @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
     @is_reminder = true
     @pre_workshop_survey_url = enrollment.pre_workshop_survey_url

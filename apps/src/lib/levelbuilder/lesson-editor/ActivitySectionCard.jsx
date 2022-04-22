@@ -52,6 +52,7 @@ class ActivitySectionCard extends Component {
     targetActivitySectionPos: PropTypes.number,
     updateActivitySectionMetrics: PropTypes.func.isRequired,
     hasLessonPlan: PropTypes.bool.isRequired,
+    allowMajorCurriculumChanges: PropTypes.bool.isRequired,
 
     //redux
     moveActivitySection: PropTypes.func.isRequired,
@@ -404,7 +405,8 @@ class ActivitySectionCard extends Component {
       targetActivityPos,
       targetActivitySectionPos,
       activityPosition,
-      hasLessonPlan
+      hasLessonPlan,
+      allowMajorCurriculumChanges
     } = this.props;
     const {draggedLevelPos, levelPosToRemove} = this.state;
     const isTargetActivitySection =
@@ -436,16 +438,19 @@ class ActivitySectionCard extends Component {
                 />
               </span>
             )}
-            <OrderControls
-              name={
-                this.props.activitySection.displayName ||
-                'Unnamed Activity Section'
-              }
-              move={this.handleMoveActivitySection}
-              remove={this.handleRemoveActivitySection}
-              item={this.props.activitySection}
-              itemType={'activitySection'}
-            />
+            {(allowMajorCurriculumChanges ||
+              activitySection.scriptLevels.length === 0) && (
+              <OrderControls
+                name={
+                  this.props.activitySection.displayName ||
+                  'Unnamed Activity Section'
+                }
+                move={this.handleMoveActivitySection}
+                remove={this.handleRemoveActivitySection}
+                item={this.props.activitySection}
+                itemType={'activitySection'}
+              />
+            )}
           </label>
           {hasLessonPlan && (
             <div style={styles.checkboxesAndButtons}>
@@ -506,6 +511,7 @@ class ActivitySectionCard extends Component {
                   this.state.currentYOffsets[scriptLevel.position - 1] || 0
                 }
                 handleDragStart={this.handleDragStart}
+                allowMajorCurriculumChanges={allowMajorCurriculumChanges}
               />
             ))}
           </div>
@@ -520,6 +526,14 @@ class ActivitySectionCard extends Component {
           appendVocabularyLink={this.appendVocabularyLink}
           appendSlide={this.appendSlide}
           hasLessonPlan={hasLessonPlan}
+          allowMajorCurriculumChanges={allowMajorCurriculumChanges}
+          isLastActivity={
+            this.props.activityPosition === this.props.activitiesCount
+          }
+          isLastActivitySection={
+            this.props.activitySection.position ===
+            this.props.activitySectionsCount
+          }
         />
         {/* This dialog lives outside LevelToken because moving it inside can
            interfere with drag and drop or fail to show the modal backdrop. */}

@@ -1111,7 +1111,7 @@ es-ES:
   dashboard_coursee: 'Curso E: '
   dashboard_coursef: 'Curso F: '
   dashboard_pre-express: 'Curso Exprés para pre-lectores: '
-  dashboard_express: 'Curso Express: '
+  dashboard_express: 'Curso Exprés: '
   dashboard_unplugged: Si no tienes equipos, <a href='%{unplugged_url}'> prueba estas
     clases de unplugged</a> en su aula.
   dashboard_unplugged_markdown: Si no tienes computadoras, [prueba estas lecciones
@@ -1365,13 +1365,13 @@ es-ES:
   coursed-2021_name: Curso D (2021)
   coursee-2021_name: Curso E (2021)
   coursef-2021_name: Curso F (2021)
-  express-2018_name: Curso Express (2018)
+  express-2018_name: Curso Exprés (2018)
   pre-express-2018_name: Curso Exprés para pre-lectores (2018)
-  express-2019_name: Curso Express (2019)
+  express-2019_name: Curso Exprés (2019)
   pre-express-2019_name: Curso Exprés para pre-lectores (2019)
-  express-2020_name: Curso Express (2019)
-  pre-express-2020_name: Curso exprés para pre-lectores (2020)
-  express-2021_name: Curso Express (2021)
+  express-2020_name: Curso Exprés (2020)
+  pre-express-2020_name: Curso Exprés para pre-lectores (2020)
+  express-2021_name: Curso Exprés (2021)
   pre-express-2021_name: Curso Exprés para pre-lectores (2021)
   csd2_name: 'Unidad 2: Desarrollo Web'
   csd3_name: 'Unidad 3: Animación y Juegos'

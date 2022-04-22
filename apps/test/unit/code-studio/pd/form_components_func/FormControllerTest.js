@@ -3,6 +3,7 @@ import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {isolateComponent} from 'isolate-react';
+import $ from 'jquery';
 
 let DummyPage1 = () => {
   return <div>Page 1</div>;
@@ -20,11 +21,36 @@ let DummyPage3 = () => {
 DummyPage3.associatedFields = [];
 
 describe('FormController', () => {
-  describe('Standard usage', () => {
-    let form;
-    let onSuccessfulSubmit = sinon.stub();
-    const fakeEndpoint = '/fake/endpoint';
-    let defaultProps = {
+  let form;
+  let onSuccessfulSubmit = sinon.stub();
+  const fakeEndpoint = '/fake/endpoint';
+  let defaultProps = {
+    apiEndpoint: fakeEndpoint,
+    options: {},
+    requiredFields: [],
+    pageComponents: [DummyPage1, DummyPage2, DummyPage3],
+    onSuccessfulSubmit,
+    allowPartialSaving: true
+  };
+  afterEach(() => {
+    sinon.restore();
+
+    DummyPage1 = () => {
+      return <div>Page 1</div>;
+    };
+    DummyPage1.associatedFields = [];
+
+    DummyPage2 = () => {
+      return <div>Page 2</div>;
+    };
+    DummyPage2.associatedFields = [];
+
+    DummyPage3 = () => {
+      return <div>Page 3</div>;
+    };
+    DummyPage3.associatedFields = [];
+
+    defaultProps = {
       apiEndpoint: fakeEndpoint,
       options: {},
       requiredFields: [],
@@ -32,582 +58,617 @@ describe('FormController', () => {
       onSuccessfulSubmit,
       allowPartialSaving: true
     };
-    afterEach(() => {
-      sinon.restore();
+  });
 
-      DummyPage1 = () => {
-        return <div>Page 1</div>;
-      };
-      DummyPage1.associatedFields = [];
+  const saveButtonText = 'Save and Return Later';
+  const appAlreadyExistsErrorText =
+    'We found an application that you already started. Reload the page to continue.';
+  const applicationId = 7;
+  const getCurrentPage = () => form.findOne('Pagination').props.activePage;
+  const getData = page => form.findOne(page).props.data;
+  const getErrors = page => form.findOne(page).props.errors;
+  const setPage = i => {
+    form.findOne('Pagination').props.onSelect(i + 1);
+  };
+  const serverResponse = (statusNumber = 200, data = {}) => [
+    statusNumber,
+    {'Content-Type': 'application/json'},
+    JSON.stringify(data)
+  ];
+  const clickSaveButton = () => form.findAll('Button')[1].props.onClick();
 
-      DummyPage2 = () => {
-        return <div>Page 2</div>;
-      };
-      DummyPage2.associatedFields = [];
+  it('Initially renders the first page', () => {
+    form = isolateComponent(<FormController {...defaultProps} />);
+    expect(getCurrentPage()).to.equal(1);
+    expect(form.exists(DummyPage1));
+    expect(!form.exists(DummyPage2));
+    expect(!form.exists(DummyPage3));
+  });
 
-      DummyPage3 = () => {
-        return <div>Page 3</div>;
-      };
-      DummyPage3.associatedFields = [];
+  it('Displays correct number of page buttons on each page', () => {
+    form = isolateComponent(<FormController {...defaultProps} />);
+    const pagination = form.findOne('Pagination');
+    expect(pagination.props.items).to.equal(3);
+  });
 
-      defaultProps = {
-        apiEndpoint: fakeEndpoint,
-        options: {},
-        requiredFields: [],
-        pageComponents: [DummyPage1, DummyPage2, DummyPage3],
-        onSuccessfulSubmit,
-        allowPartialSaving: true
-      };
-    });
+  it('Has a next button and a save button on the first page', () => {
+    form = isolateComponent(<FormController {...defaultProps} />);
+    const buttons = form.findAll('Button');
+    expect(buttons).to.have.length(2);
+    expect(buttons.map(button => button.content())).to.eql([
+      'Next',
+      saveButtonText
+    ]);
+  });
 
-    const saveButtonText = 'Save and Return Later';
-    const applicationId = 7;
-    const getCurrentPage = () => form.findOne('Pagination').props.activePage;
-    const getData = page => form.findOne(page).props.data;
-    const getErrors = page => form.findOne(page).props.errors;
-    const setPage = i => {
-      form.findOne('Pagination').props.onSelect(i + 1);
-    };
+  it('Has back, next, and save buttons on middle page', () => {
+    form = isolateComponent(
+      <FormController {...defaultProps} validateOnSubmitOnly={true} />
+    );
+    setPage(1);
+    const buttons = form.findAll('Button');
+    expect(buttons).to.have.length(3);
+    expect(buttons.map(button => button.content())).to.eql([
+      'Back',
+      'Next',
+      saveButtonText
+    ]);
+  });
 
-    it('Initially renders the first page', () => {
-      form = isolateComponent(<FormController {...defaultProps} />);
-      expect(getCurrentPage()).to.equal(1);
-      expect(form.exists(DummyPage1));
-      expect(!form.exists(DummyPage2));
-      expect(!form.exists(DummyPage3));
-    });
+  it('Has back, submit, and save buttons on the last page', () => {
+    form = isolateComponent(
+      <FormController {...defaultProps} validateOnSubmitOnly={true} />
+    );
+    setPage(2);
+    const buttons = form.findAll('Button');
+    expect(buttons).to.have.length(3);
+    expect(buttons.map(button => button.content())).to.eql([
+      'Back',
+      'Submit',
+      saveButtonText
+    ]);
+  });
 
-    it('Displays correct number of page buttons on each page', () => {
-      form = isolateComponent(<FormController {...defaultProps} />);
-      const pagination = form.findOne('Pagination');
-      expect(pagination.props.items).to.equal(3);
-    });
-
-    it('Has a next button and a save button on the first page', () => {
-      form = isolateComponent(<FormController {...defaultProps} />);
+  it('Never shows save button if partial saving is not enabled', () => {
+    form = isolateComponent(
+      <FormController
+        {...defaultProps}
+        allowPartialSaving={false}
+        validateOnSubmitOnly={true}
+      />
+    );
+    [0, 1, 2].forEach(page => {
+      setPage(page);
       const buttons = form.findAll('Button');
-      expect(buttons).to.have.length(2);
-      expect(buttons.map(button => button.content())).to.eql([
-        'Next',
-        saveButtonText
-      ]);
-    });
-
-    it('Has back, next, and save buttons on middle page', () => {
-      form = isolateComponent(
-        <FormController {...defaultProps} validateOnSubmitOnly={true} />
+      buttons.forEach(button =>
+        expect(button.content()).not.to.eql(saveButtonText)
       );
-      setPage(1);
+    });
+  });
+
+  it('Never shows save button if status is reopened', () => {
+    form = isolateComponent(
+      <FormController
+        {...defaultProps}
+        allowPartialSaving={true}
+        validateOnSubmitOnly={true}
+        savedStatus={'reopened'}
+      />
+    );
+    [0, 1, 2].forEach(page => {
+      setPage(page);
       const buttons = form.findAll('Button');
-      expect(buttons).to.have.length(3);
-      expect(buttons.map(button => button.content())).to.eql([
-        'Back',
-        'Next',
-        saveButtonText
-      ]);
+      buttons.forEach(button =>
+        expect(button.content()).not.to.eql(saveButtonText)
+      );
+    });
+  });
+
+  it('Shows data was loaded message given application id, and user can close message', () => {
+    form = isolateComponent(
+      <FormController
+        {...defaultProps}
+        applicationId={applicationId}
+        allowPartialSaving={true}
+        validateOnSubmitOnly={true}
+      />
+    );
+    const alert = form.findOne('Alert');
+    expect(alert.content()).to.contain(
+      'We found an application you started! Your saved responses have been loaded.'
+    );
+
+    alert.props.onDismiss();
+    expect(form.findAll('Alert')).to.have.length(0);
+  });
+
+  it('Removes data was loaded message after first page', () => {
+    form = isolateComponent(
+      <FormController
+        {...defaultProps}
+        applicationId={applicationId}
+        allowPartialSaving={true}
+        validateOnSubmitOnly={true}
+      />
+    );
+    expect(form.findOne('Alert')).to.exist;
+    setPage(1);
+    expect(form.findAll('Alert')).to.have.length(0);
+  });
+
+  it('Shows reopened message if status is reopened, and user can close message', () => {
+    form = isolateComponent(
+      <FormController
+        {...defaultProps}
+        applicationId={applicationId}
+        savedStatus={'reopened'}
+        allowPartialSaving={true}
+        validateOnSubmitOnly={true}
+      />
+    );
+    const alert = form.findOne('Alert');
+    expect(alert.content()).to.contain(
+      'Your Regional Partner has requested more information. Please update and resubmit.'
+    );
+
+    alert.props.onDismiss();
+    expect(form.findAll('Alert')).to.have.length(0);
+  });
+
+  it('Removes reopened message after first page', () => {
+    form = isolateComponent(
+      <FormController
+        {...defaultProps}
+        applicationId={applicationId}
+        savedStatus={'reopened'}
+        allowPartialSaving={true}
+        validateOnSubmitOnly={true}
+      />
+    );
+    expect(form.findOne('Alert')).to.exist;
+    setPage(1);
+    expect(form.findAll('Alert')).to.have.length(0);
+  });
+
+  it('Does not show data was loaded message if there is no application id', () => {
+    form = isolateComponent(
+      <FormController
+        {...defaultProps}
+        allowPartialSaving={true}
+        validateOnSubmitOnly={true}
+      />
+    );
+    expect(form.findAll('Alert')).to.have.length(0);
+  });
+
+  describe('Saving', () => {
+    it('Sends incomplete status on save', () => {
+      sinon.spy($, 'ajax');
+      form = isolateComponent(<FormController {...defaultProps} />);
+      clickSaveButton();
+      const serverCalledWith = $.ajax.getCall(0).args[0];
+      expect(JSON.parse(serverCalledWith.data).status).to.equal('incomplete');
     });
 
-    it('Has back, submit, and save buttons on the last page', () => {
-      form = isolateComponent(
-        <FormController {...defaultProps} validateOnSubmitOnly={true} />
-      );
-      setPage(2);
-      const buttons = form.findAll('Button');
-      expect(buttons).to.have.length(3);
-      expect(buttons.map(button => button.content())).to.eql([
-        'Back',
-        'Submit',
-        saveButtonText
-      ]);
+    it('Disables the save button during save and renders spinner', () => {
+      form = isolateComponent(<FormController {...defaultProps} />);
+      clickSaveButton();
+      expect(form.findAll('Button')[1].props).to.be.disabled;
+      expect(form.findAll('Spinner')).to.have.length(1);
     });
 
-    it('Never shows save button if partial saving is not enabled', () => {
-      form = isolateComponent(
-        <FormController
-          {...defaultProps}
-          allowPartialSaving={false}
-          validateOnSubmitOnly={true}
-        />
-      );
-      [0, 1, 2].forEach(page => {
-        setPage(page);
-        const buttons = form.findAll('Button');
-        buttons.forEach(button =>
-          expect(button.content()).not.to.eql(saveButtonText)
-        );
-      });
+    it('Re-enables the save button after successful save and removes spinner', () => {
+      form = isolateComponent(<FormController {...defaultProps} />);
+
+      const server = sinon.fakeServer.create();
+      server.respondWith(serverResponse(201));
+
+      clickSaveButton();
+      server.respond();
+
+      expect(form.findAll('Button')[1].props).to.be.disabled;
+      expect(form.findAll('Spinner')).to.have.length(0);
+
+      server.restore();
     });
 
-    it('Never shows save button if status is reopened', () => {
-      form = isolateComponent(
-        <FormController
-          {...defaultProps}
-          allowPartialSaving={true}
-          validateOnSubmitOnly={true}
-          savedStatus={'reopened'}
-        />
-      );
-      [0, 1, 2].forEach(page => {
-        setPage(page);
-        const buttons = form.findAll('Button');
-        buttons.forEach(button =>
-          expect(button.content()).not.to.eql(saveButtonText)
-        );
-      });
+    it('Shows error message if user tries to save an application that already exists', () => {
+      form = isolateComponent(<FormController {...defaultProps} />);
+
+      const server = sinon.fakeServer.create();
+      server.respondWith(serverResponse(409));
+
+      form.findAll('Button')[1].props.onClick();
+      server.respond();
+
+      const alerts = form.findAll('Alert');
+      expect(alerts).to.have.length(2);
+      expect(alerts[0].content()).to.contain(appAlreadyExistsErrorText);
+
+      server.restore();
     });
 
-    it('Shows data was loaded message given application id, and user can close message', () => {
-      form = isolateComponent(
-        <FormController
-          {...defaultProps}
-          applicationId={applicationId}
-          allowPartialSaving={true}
-          validateOnSubmitOnly={true}
-        />
-      );
-      const alert = form.findOne('Alert');
-      expect(alert.content()).to.contain(
-        'We found an application you started! Your saved responses have been loaded.'
-      );
-
-      alert.props.onDismiss();
-      expect(form.exists('Alert')).to.be.false;
-    });
-
-    it('Shows data was loaded message if status is reopened', () => {
-      form = isolateComponent(
-        <FormController
-          {...defaultProps}
-          applicationId={applicationId}
-          savedStatus={'reopened'}
-          allowPartialSaving={true}
-          validateOnSubmitOnly={true}
-        />
-      );
-      const alert = form.findOne('Alert');
-      expect(alert.content()).to.contain(
-        'Your Regional Partner has requested more information.  Please update and resubmit.'
-      );
-
-      alert.props.onDismiss();
-      expect(form.exists('Alert')).to.be.false;
-    });
-
-    it('Does not show data was loaded message if there is no application id', () => {
-      form = isolateComponent(
-        <FormController
-          {...defaultProps}
-          allowPartialSaving={true}
-          validateOnSubmitOnly={true}
-        />
-      );
-      expect(form.exists('Alert')).to.be.false;
-    });
-
-    describe('Saving', () => {
-      // [MEG] TODO: Refactor this to use savedStatus instead of form_data
-      it('Overrides application status as incomplete to data', () => {
-        const testData = {
-          field1: 'value 1',
-          field2: 'value 2',
-          status: 'something'
-        };
-
-        form = isolateComponent(
-          <FormController {...defaultProps} getInitialData={() => testData} />
-        );
-        form.findAll('Button')[1].props.onClick();
-
-        expect(getData(DummyPage1)).to.eql({...testData});
-      });
-
-      it('Disables the save button during save and renders spinner', () => {
-        form = isolateComponent(<FormController {...defaultProps} />);
-        form.findAll('Button')[1].props.onClick();
-        expect(form.findAll('Button')[1].props.disabled).to.be.true;
-        expect(form.findAll('Spinner')).to.have.length(1);
-      });
-
-      it('Re-enables the save button after successful save and removes spinner', () => {
+    [
+      serverResponse(400, {
+        errors: {form_data: ['an error']}
+      }),
+      serverResponse(500),
+      serverResponse(409)
+    ].forEach(response => {
+      const statusNumber = response[0];
+      it(`Re-enables the save button after unsuccessful save with ${statusNumber} error`, () => {
         form = isolateComponent(<FormController {...defaultProps} />);
 
         const server = sinon.fakeServer.create();
-        server.respondWith([
-          201,
-          {'Content-Type': 'application/json'},
-          JSON.stringify({})
-        ]);
-
-        form.findAll('Button')[1].props.onClick();
-        server.respond();
-
-        expect(form.findAll('Button')[1].props.disabled).to.be.false;
-        expect(form.findAll('Spinner')).to.have.length(0);
-
-        server.restore();
-      });
-
-      it('Re-enables the save button after unsuccessful save', () => {
-        form = isolateComponent(<FormController {...defaultProps} />);
-
-        const server = sinon.fakeServer.create();
-        server.respondWith([
-          400,
-          {'Content-Type': 'application/json'},
-          JSON.stringify({
+        server.respondWith(
+          serverResponse(400, {
             errors: {form_data: ['an error']}
           })
-        ]);
+        );
 
-        form.findAll('Button')[1].props.onClick();
+        clickSaveButton();
         server.respond();
 
-        expect(form.findAll('Button')[1].props.disabled).to.be.false;
+        expect(form.findAll('Button')[1].props).to.be.disabled;
 
         server.restore();
       });
+    });
 
-      it('Shows saved message alert after saving is complete, and user can close it', () => {
+    it('Shows saved message alert after saving is complete, and user can close it', () => {
+      form = isolateComponent(
+        <FormController {...defaultProps} applicationId={applicationId} />
+      );
+
+      const server = sinon.fakeServer.create();
+      server.respondWith(serverResponse(201));
+
+      clickSaveButton();
+      server.respond();
+
+      form.findAll('Button')[1].props.onClick();
+      server.respond();
+
+      const alert = form.findOne('Alert');
+      expect(alert.content()).to.contain(
+        'Your progress has been saved. Return to this page at any time to continue working on your application.'
+      );
+
+      alert.props.onDismiss();
+      expect(form.findAll('Alert')).to.have.length(0);
+
+      expect(form.findAll('Button')[1].props).to.be.disabled;
+
+      server.restore();
+    });
+
+    it('Saved message alert disappears after changing pages', () => {
+      form = isolateComponent(
+        <FormController {...defaultProps} applicationId={applicationId} />
+      );
+
+      const server = sinon.fakeServer.create();
+      server.respondWith([
+        201,
+        {'Content-Type': 'application/json'},
+        JSON.stringify({})
+      ]);
+
+      clickSaveButton(form);
+      server.respond();
+
+      expect(form.findOne('Alert')).to.exist;
+      setPage(1);
+      expect(form.findAll('Alert')).to.have.length(0);
+
+      server.restore();
+    });
+  });
+
+  describe('Page validation', () => {
+    it('Does not navigate when the current page has errors', () => {
+      // create errors
+      form = isolateComponent(
+        <FormController {...defaultProps} requiredFields={['field1']} />
+      );
+      DummyPage1.associatedFields = ['field1'];
+      setPage(1);
+
+      expect(getErrors(DummyPage1)).to.not.be.empty;
+      expect(getCurrentPage()).to.equal(1);
+    });
+
+    it('Navigates when the current page has no errors', () => {
+      // create valid
+      form = isolateComponent(<FormController {...defaultProps} />);
+      setPage(1);
+
+      expect(getErrors(DummyPage2)).to.be.empty;
+      expect(getCurrentPage()).to.equal(2);
+    });
+
+    describe('Submitting', () => {
+      const triggerSubmit = () =>
+        form.findOne('form').props.onSubmit({preventDefault: sinon.stub()});
+
+      const setupValid = (applicationId = undefined) => {
         form = isolateComponent(
           <FormController {...defaultProps} applicationId={applicationId} />
         );
+        setPage(2);
+      };
 
-        const server = sinon.fakeServer.create();
-        server.respondWith([
-          201,
-          {'Content-Type': 'application/json'},
-          JSON.stringify({})
-        ]);
+      const setUpValidWithApplicationId = applicationId =>
+        setupValid(applicationId);
 
-        form.findAll('Button')[1].props.onClick();
-        server.respond();
-
-        const alert = form.findOne('Alert');
-        expect(alert.content()).to.contain(
-          'Your progress has been saved. Return to this page at any time to continue working on your application.'
-        );
-
-        alert.props.onDismiss();
-        expect(form.exists('Alert')).to.be.false;
-
-        expect(form.findAll('Button')[1].props.disabled).to.be.false;
-
-        server.restore();
-      });
-    });
-
-    describe('Page validation', () => {
-      it('Does not navigate when the current page has errors', () => {
-        // create errors
+      const setupErrored = (applicationId = undefined) => {
         form = isolateComponent(
           <FormController {...defaultProps} requiredFields={['field1']} />
         );
-        DummyPage1.associatedFields = ['field1'];
-        setPage(1);
+        DummyPage3.associatedFields = ['field1'];
+        setPage(2);
+      };
 
-        expect(getErrors(DummyPage1)).to.not.be.empty;
-        expect(getCurrentPage()).to.equal(1);
+      let server;
+      beforeEach(() => {
+        server = sinon.fakeServer.create();
+      });
+      afterEach(() => {
+        server.restore();
       });
 
-      it('Navigates when the current page has no errors', () => {
-        // create valid
-        form = isolateComponent(<FormController {...defaultProps} />);
-        setPage(1);
+      it('Does not submit when the last page has errors', () => {
+        setupErrored();
 
-        expect(getErrors(DummyPage2)).to.be.empty;
-        expect(getCurrentPage()).to.equal(2);
+        triggerSubmit();
+
+        expect(getErrors(DummyPage3)).to.not.be.empty;
+        expect(server.requests).to.be.empty;
       });
 
-      describe('Submitting', () => {
-        let server;
-
-        const triggerSubmit = () =>
-          form.findOne('form').props.onSubmit({preventDefault: sinon.stub()});
-
-        const setupValid = (applicationId = undefined) => {
-          form = isolateComponent(
-            <FormController {...defaultProps} applicationId={applicationId} />
-          );
-          setPage(2);
-        };
-
-        const setUpValidWithApplicationId = applicationId =>
-          setupValid(applicationId);
-
-        const setupErrored = (applicationId = undefined) => {
-          form = isolateComponent(
-            <FormController {...defaultProps} requiredFields={['field1']} />
-          );
-          DummyPage3.associatedFields = ['field1'];
-          setPage(2);
-        };
-
-        beforeEach(() => {
-          server = sinon.fakeServer.create();
-        });
-        afterEach(() => {
-          server.restore();
-        });
-
-        it('Does not submit when the last page has errors', () => {
-          setupErrored();
+      [
+        {previouslySaved: false, message: 'with new application'},
+        {previouslySaved: true, message: 'with previously-saved application'}
+      ].forEach(({previouslySaved, message}) => {
+        it(`Submits when the last page has no errors ${message}`, () => {
+          previouslySaved
+            ? setUpValidWithApplicationId(applicationId)
+            : setupValid();
 
           triggerSubmit();
 
-          expect(getErrors(DummyPage3)).to.not.be.empty;
-          expect(server.requests).to.be.empty;
+          expect(getErrors(DummyPage3)).to.be.empty;
+          expect(server.requests).to.have.length(1);
+          expect(server.requests[0].method).to.eql(
+            previouslySaved ? 'PUT' : 'POST'
+          );
+          expect(server.requests[0].url).to.eql(
+            previouslySaved ? `${fakeEndpoint}/${applicationId}` : fakeEndpoint
+          );
         });
+      });
 
-        [
-          {previouslySaved: false, message: 'with new application'},
-          {previouslySaved: true, message: 'with previously-saved application'}
-        ].forEach(({previouslySaved, message}) => {
-          it(`Submits when the last page has no errors ${message}`, () => {
-            previouslySaved
-              ? setUpValidWithApplicationId(applicationId)
-              : setupValid();
+      it('Disables the submit button during submit and renders spinner', () => {
+        setupValid();
+        triggerSubmit();
+        expect(form.findOne('#submit').props).to.be.disabled;
+        expect(form.findAll('Spinner')).to.have.length(1);
+      });
 
-            triggerSubmit();
+      it('Shows error message if user tries to submit an application that already exists', () => {
+        setupValid();
+        server.respondWith(serverResponse(409));
 
-            expect(getErrors(DummyPage3)).to.be.empty;
-            expect(server.requests).to.have.length(1);
-            expect(server.requests[0].method).to.eql(
-              previouslySaved ? 'PUT' : 'POST'
-            );
-            expect(server.requests[0].url).to.eql(
-              previouslySaved
-                ? `${fakeEndpoint}/${applicationId}`
-                : fakeEndpoint
-            );
-          });
-        });
+        triggerSubmit();
+        server.respond();
 
-        it('Disables the submit button during submit and renders spinner', () => {
+        const alerts = form.findAll('Alert');
+        expect(alerts).to.have.length(2);
+        expect(alerts[0].content()).to.contain(appAlreadyExistsErrorText);
+      });
+
+      [
+        serverResponse(400, {
+          errors: {form_data: ['an error']}
+        }),
+        serverResponse(500),
+        serverResponse(409)
+      ].forEach(response => {
+        const statusNumber = response[0];
+        it(`Re-enables the submit button on ${statusNumber} error and removes spinner`, () => {
           setupValid();
-          triggerSubmit();
-          expect(form.findOne('#submit').props.disabled).to.be.true;
-          expect(form.findAll('Spinner')).to.have.length(1);
-        });
-
-        it('Re-enables the submit button on error and removes spinner', () => {
-          setupValid();
-          server.respondWith([
-            400,
-            {'Content-Type': 'application/json'},
-            JSON.stringify({
-              errors: {form_data: ['an error']}
-            })
-          ]);
+          server.respondWith(response);
 
           triggerSubmit();
           server.respond();
 
-          expect(getErrors(DummyPage3)).to.eql(['an error']);
-          expect(form.findOne('#submit').props.disabled).to.be.false;
+          statusNumber === 400 &&
+            expect(getErrors(DummyPage3)).to.eql(['an error']);
+          expect(form.findOne('#submit').props).to.be.disabled;
           expect(form.findAll('Spinner')).to.have.length(0);
         });
+      });
 
-        // [MEG] TODO: Refactor this to use savedStatus instead of form_data
-        it('Overrides application status as unreviewed on submit', () => {
-          const testData = {
-            field1: 'value 1',
-            field2: 'value 2',
-            status: 'incomplete'
-          };
+      it('Sends application status as unreviewed on submit', () => {
+        sinon.spy($, 'ajax');
+        form = isolateComponent(<FormController {...defaultProps} />);
+        setPage(2);
+        triggerSubmit();
+        const serverCalledWith = $.ajax.getCall(0).args[0];
+        expect(JSON.parse(serverCalledWith.data).status).to.equal('unreviewed');
+      });
 
-          form = isolateComponent(
-            <FormController {...defaultProps} getInitialData={() => testData} />
-          );
-          setPage(2);
-          triggerSubmit();
+      it('Keeps the submit button disabled and calls onSuccessfulSubmit on success', () => {
+        setupValid();
+        server.respondWith(serverResponse(200));
 
-          expect(getData(DummyPage3)).to.eql({
-            ...testData
-          });
-        });
+        triggerSubmit();
+        server.respond();
 
-        it('Keeps the submit button disabled and calls onSuccessfulSubmit on success', () => {
-          setupValid();
-          server.respondWith([
-            200,
-            {'Content-Type': 'application/json'},
-            JSON.stringify({})
-          ]);
+        expect(form.findOne('#submit').props).to.be.disabled;
+        expect(onSuccessfulSubmit).to.be.calledOnce;
+      });
+    });
+  });
 
-          triggerSubmit();
-          server.respond();
+  describe('validateCurrentPageRequiredFields()', () => {
+    it('Generates errors for missing required fields on the current page', () => {
+      // No data provided, so all required fields are missing
+      form = isolateComponent(
+        <FormController
+          {...defaultProps}
+          requiredFields={['included', 'excluded']}
+        />
+      );
+      DummyPage1.associatedFields = ['included'];
 
-          expect(form.findOne('#submit').props.disabled).to.be.true;
-          expect(onSuccessfulSubmit).to.be.calledOnce;
-        });
+      setPage(1);
+
+      expect(getErrors(DummyPage1)).to.eql(['included']);
+    });
+
+    it('Strips string values on current page and sets empty ones to null', () => {
+      const initialData = {
+        textFieldWithSpace: '   trim   ',
+        textFieldWithNoSpace: 'nothing to trim',
+        arrayField: ['  no trim in array  '],
+        onlySpaces: '     ',
+        otherPageTextFieldWithSpace: '   no trim   ',
+        otherPageArrayField: ['  still no trim in array  ']
+      };
+      form = isolateComponent(
+        <FormController {...defaultProps} getInitialData={() => initialData} />
+      );
+      DummyPage1.associatedFields = [
+        'textFieldWithSpace',
+        'textFieldWithNoSpace',
+        'arrayField',
+        'onlySpaces'
+      ];
+
+      setPage(1);
+
+      expect(getData(DummyPage2)).to.deep.eql({
+        textFieldWithSpace: 'trim',
+        textFieldWithNoSpace: 'nothing to trim',
+        arrayField: ['  no trim in array  '],
+        onlySpaces: null,
+        otherPageTextFieldWithSpace: '   no trim   ',
+        otherPageArrayField: ['  still no trim in array  ']
       });
     });
 
-    describe('validateCurrentPageRequiredFields()', () => {
-      it('Generates errors for missing required fields on the current page', () => {
-        // No data provided, so all required fields are missing
-        form = isolateComponent(
-          <FormController
-            {...defaultProps}
-            requiredFields={['included', 'excluded']}
-          />
-        );
-        DummyPage1.associatedFields = ['included'];
+    it('Calls processPageData for the current page', () => {
+      const pageData = {
+        page1Field1: 'value1',
+        page1Field2: 'will be cleared',
+        page1Field3: 'will be modified'
+      };
 
-        setPage(1);
-
-        expect(getErrors(DummyPage1)).to.eql(['included']);
-      });
-
-      it('Strips string values on current page and sets empty ones to null', () => {
-        const initialData = {
-          textFieldWithSpace: '   trim   ',
-          textFieldWithNoSpace: 'nothing to trim',
-          arrayField: ['  no trim in array  '],
-          onlySpaces: '     ',
-          otherPageTextFieldWithSpace: '   no trim   ',
-          otherPageArrayField: ['  still no trim in array  ']
-        };
-        form = isolateComponent(
-          <FormController
-            {...defaultProps}
-            getInitialData={() => initialData}
-          />
-        );
-        DummyPage1.associatedFields = [
-          'textFieldWithSpace',
-          'textFieldWithNoSpace',
-          'arrayField',
-          'onlySpaces'
-        ];
-
-        setPage(1);
-
-        expect(getData(DummyPage2)).to.deep.eql({
-          textFieldWithSpace: 'trim',
-          textFieldWithNoSpace: 'nothing to trim',
-          arrayField: ['  no trim in array  '],
-          onlySpaces: null,
-          otherPageTextFieldWithSpace: '   no trim   ',
-          otherPageArrayField: ['  still no trim in array  ']
-        });
-      });
-
-      it('Calls processPageData for the current page', () => {
-        const pageData = {
-          page1Field1: 'value1',
-          page1Field2: 'will be cleared',
-          page1Field3: 'will be modified'
-        };
-
-        DummyPage1.processPageData = sinon
-          .stub()
-          .withArgs(pageData)
-          .returns({
-            page1Field2: undefined,
-            page1Field3: 'modified'
-          });
-
-        DummyPage1.associatedFields = [
-          'page1Field1',
-          'page1Field2',
-          'page1Field3'
-        ];
-
-        const initialData = {
-          ...pageData,
-          page2Field1: 'unmodified'
-        };
-        form = isolateComponent(
-          <FormController
-            {...defaultProps}
-            getInitialData={() => initialData}
-          />
-        );
-
-        setPage(1);
-
-        expect(DummyPage1.processPageData).to.be.calledOnce;
-        expect(getData(DummyPage2)).to.deep.eql({
-          page1Field1: 'value1',
+      DummyPage1.processPageData = sinon
+        .stub()
+        .withArgs(pageData)
+        .returns({
           page1Field2: undefined,
-          page1Field3: 'modified',
-          page2Field1: 'unmodified'
+          page1Field3: 'modified'
         });
+
+      DummyPage1.associatedFields = [
+        'page1Field1',
+        'page1Field2',
+        'page1Field3'
+      ];
+
+      const initialData = {
+        ...pageData,
+        page2Field1: 'unmodified'
+      };
+      form = isolateComponent(
+        <FormController {...defaultProps} getInitialData={() => initialData} />
+      );
+
+      setPage(1);
+
+      expect(DummyPage1.processPageData).to.be.calledOnce;
+      expect(getData(DummyPage2)).to.deep.eql({
+        page1Field1: 'value1',
+        page1Field2: undefined,
+        page1Field3: 'modified',
+        page2Field1: 'unmodified'
       });
     });
+  });
 
-    describe('With session storage', () => {
-      const sessionStorageKey = 'DummyForm';
-      afterEach(() => {
-        sessionStorage.removeItem('DummyForm');
+  describe('With session storage', () => {
+    const sessionStorageKey = 'DummyForm';
+    afterEach(() => {
+      sessionStorage.removeItem('DummyForm');
+    });
+
+    it('Saves form data to session storage', () => {
+      const initialData = {
+        existingField1: 'existing value 1'
+      };
+      form = isolateComponent(
+        <FormController
+          {...defaultProps}
+          sessionStorageKey={sessionStorageKey}
+          getInitialData={() => initialData}
+        />
+      );
+      form.findOne(DummyPage1).props.onChange({
+        updatedField1: 'updated value 1'
+      });
+      expect(sessionStorage[sessionStorageKey]).to.eql(
+        JSON.stringify({
+          currentPage: 0,
+          data: {
+            existingField1: 'existing value 1',
+            updatedField1: 'updated value 1'
+          }
+        })
+      );
+    });
+
+    it('Saves current page to session storage', () => {
+      const initialData = {
+        existingField1: 'existing value 1'
+      };
+      form = isolateComponent(
+        <FormController
+          {...defaultProps}
+          sessionStorageKey={sessionStorageKey}
+          getInitialData={() => initialData}
+        />
+      );
+      setPage(1);
+      expect(sessionStorage['DummyForm']).to.eql(
+        JSON.stringify({
+          currentPage: 1,
+          data: {existingField1: 'existing value 1'}
+        })
+      );
+    });
+
+    it('Loads current page and form data from session storage on mount', () => {
+      const testData = {
+        field1: 'value 1',
+        field2: 'value 2'
+      };
+      sessionStorage['DummyForm'] = JSON.stringify({
+        currentPage: 2,
+        data: testData
       });
 
-      it('Saves form data to session storage', () => {
-        const initialData = {
-          existingField1: 'existing value 1'
-        };
-        form = isolateComponent(
-          <FormController
-            {...defaultProps}
-            sessionStorageKey={sessionStorageKey}
-            getInitialData={() => initialData}
-          />
-        );
-        form.findOne(DummyPage1).props.onChange({
-          updatedField1: 'updated value 1'
-        });
-        expect(sessionStorage[sessionStorageKey]).to.eql(
-          JSON.stringify({
-            currentPage: 0,
-            data: {
-              existingField1: 'existing value 1',
-              updatedField1: 'updated value 1'
-            }
-          })
-        );
-      });
-
-      it('Saves current page to session storage', () => {
-        const initialData = {
-          existingField1: 'existing value 1'
-        };
-        form = isolateComponent(
-          <FormController
-            {...defaultProps}
-            sessionStorageKey={sessionStorageKey}
-            getInitialData={() => initialData}
-          />
-        );
-        setPage(1);
-        expect(sessionStorage['DummyForm']).to.eql(
-          JSON.stringify({
-            currentPage: 1,
-            data: {existingField1: 'existing value 1'}
-          })
-        );
-      });
-
-      it('Loads current page and form data from session storage on mount', () => {
-        const testData = {
-          field1: 'value 1',
-          field2: 'value 2'
-        };
-        sessionStorage['DummyForm'] = JSON.stringify({
-          currentPage: 2,
-          data: testData
-        });
-
-        form = isolateComponent(
-          <FormController
-            {...defaultProps}
-            sessionStorageKey={sessionStorageKey}
-            onSuccessfulSubmit={onSuccessfulSubmit}
-          />
-        );
-        expect(getCurrentPage()).to.equal(3);
-        expect(getData(DummyPage3)).to.eql(testData);
-      });
+      form = isolateComponent(
+        <FormController
+          {...defaultProps}
+          sessionStorageKey={sessionStorageKey}
+          onSuccessfulSubmit={onSuccessfulSubmit}
+        />
+      );
+      expect(getCurrentPage()).to.equal(3);
+      expect(getData(DummyPage3)).to.eql(testData);
     });
   });
 });

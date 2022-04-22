@@ -4,15 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
-      "use_legacy_lesson_plans": true,
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "dance-unplugged",
-    "serialized_at": "2021-11-22 19:57:46 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-04-08 15:27:50 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -43,8 +43,8 @@
       "relative_position": 1,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Students will learn that events are a useful way to control when an action happens, and can even be used to make make multiple things act in sync. In programming, you can use events to respond to a user controlling it (like pressing buttons or clicking the mouse). Events can make your program more interesting and interactive.",
-        "preparation": "- Project the [Big Dance Party](https://docs.google.com/presentation/d/1Guau5AeuqQCcPz06bfhtTmgt_ykaxKZ_JzkhzcECOcQ/) slides.",
+        "overview": "In this lesson, learners of all ages get an introductory experience with computer science in a safe, supportive, and unplugged environment. This lesson has been designed for learners of all ages. Students will learn that events are a useful way to control when an action happens, and can even be used to make make multiple things act in sync. In programming, you can use events to respond to a user controlling it (like pressing buttons or clicking the mouse). Events can make your program more interesting and interactive.",
+        "preparation": "####One Week Before Your Hour of Code\n\n* Review the [Hour of Code Educator Guide](https://hourofcode.com/us/how-to) and [Best Practices from Successful Educators](https://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) in order to begin to plan your Hour of Code event.\n\n* [Register your Hour of Code event](https://hourofcode.com/us) if you’d like to get classroom support, discounted posters, or participate in the robotics give-away (US only).\n\n####One Day Before Your Hour of Code\n\n* Each student who completes the activity should receive a [certificate](https://code.org/certificates). Print one for everyone in advance to make this easier at the end of your Hour of Code.\n\n* Download the [Big Dance Party](https://docs.google.com/presentation/d/1Guau5AeuqQCcPz06bfhtTmgt_ykaxKZ_JzkhzcECOcQ/) slides.",
         "purpose": "Students will learn to think about controlling actions using events. Events are widely used in programming and should be easily recognizable after this lesson.",
         "student_overview": "Have a class dance party to learn about events. "
       },
@@ -240,6 +240,18 @@
       },
       "seeding_key": {
         "activity_section.key": "6b5da9cc-ba28-419c-aad8-27dcea32beff",
+        "lesson_activity.key": "00b3562c-c757-4895-8d43-ed88d76e1e39"
+      }
+    },
+    {
+      "key": "81456638-8f33-4603-8f38-a457f2337843",
+      "position": 2,
+      "properties": {
+        "description": "Explain that you are spending one hour learning computer science today, because this week is CS Education Week, and millions of other students across the globe have also been learning one Hour of Code this week. Congratulate students on being part of this world wide movement.\n\nGive each student a [certificate](https://code.org/certificates) with his or her name on it.",
+        "name": "Celebrate"
+      },
+      "seeding_key": {
+        "activity_section.key": "81456638-8f33-4603-8f38-a457f2337843",
         "lesson_activity.key": "00b3562c-c757-4895-8d43-ed88d76e1e39"
       }
     },

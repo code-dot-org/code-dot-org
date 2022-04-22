@@ -32,8 +32,11 @@
       "description": "The ID of the UI element to find the x position. Must begin with a letter, contain no spaces, and may contain letters, digits, - and _."
     }
   ],
+  "parameters": [
+    "id"
+  ],
   "return_value": "Returns a number representing the current x coordinate in pixels of the UI element within the app display.",
   "short_description": "Gets the element's x position.",
-  "syntax": "getXPosition(id)",
+  "syntax": "getXPosition(id);",
   "tips": "- The screen default size is 320 pixels wide and 450 pixels high, but you can move a UI element off the screen by exceeding those dimensions.\r\n- A UI element can be moved off the screen so *getXPosition()* can return a negative number if the element is off the screen to the left and *getXPosition()* can return a number greater than 320 if the element is off the screen to the right.\r\n\r\n<img src='https://images.code.org/7de9a1ac26ad8630ebcb92e608c3803c-image-1445616750775.jpg'>"
 }

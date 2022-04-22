@@ -38,6 +38,10 @@
       "description": "A function to execute each time the loop is repeated."
     }
   ],
+  "parameters": [
+    "ms",
+    "callback"
+  ],
   "return_value": "Returns a timed loop object which can be passed to `stopTimedLoop()` to stop only a specific loop.",
   "short_description": "Executes the callback function code every time a certain number of milliseconds has elapsed, until stopped using stopTimedLoop().",
   "syntax": "timedLoop(ms, callback)",

@@ -17,19 +17,29 @@
       "project_widget_visible": true,
       "supported_locales": [
         "ar-SA",
+        "cs-CZ",
+        "de-DE",
         "es-ES",
         "es-MX",
         "fr-FR",
+        "hi-IN",
+        "kn-IN",
+        "mr-IN",
+        "ms-MY",
+        "pl-PL",
         "pt-BR",
+        "pt-PT",
         "ro-RO",
-        "ru-RU"
+        "ru-RU",
+        "sk-SK",
+        "zh-TW"
       ],
       "tts": true,
       "version_year": "2021"
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2022-01-20 17:44:09 UTC",
+    "serialized_at": "2022-04-11 19:46:42 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1537,6 +1547,7 @@
       "key": "e8be4727-c687-43bb-a1be-e1b3da780020",
       "position": 4,
       "properties": {
+        "duration": 90,
         "name": "Day 4 & 5 - Present Your Project"
       },
       "seeding_key": {

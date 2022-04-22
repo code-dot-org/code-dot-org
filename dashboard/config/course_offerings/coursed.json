@@ -2,5 +2,6 @@
   "key": "coursed",
   "display_name": "Course D",
   "category": "csf",
-  "is_featured": false
+  "is_featured": false,
+  "assignable": true
 }

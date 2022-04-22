@@ -21,7 +21,9 @@ class Video < ApplicationRecord
 
   default_scope {order(:key)}
   scope :english_locale, -> {where(locale: 'en-US')}
-  scope :current_locale, -> {where(locale: I18n.locale.to_s).or(Video.english_locale).unscope(:order).order("(case when locale = 'en-US' then 0 else 1 end) desc")}
+  # This SQL string is not at risk for injection vulnerabilites because it's
+  # just a hardcoded string, so it's safe to wrap in Arel.sql
+  scope :current_locale, -> {where(locale: I18n.locale.to_s).or(Video.english_locale).unscope(:order).order(Arel.sql("(case when locale = 'en-US' then 0 else 1 end) desc"))}
 
   validates_uniqueness_of :key, scope: [:locale]
   validates :key, format: {with: /\A[a-zA-Z0-9\-_]+\z/}

@@ -81,12 +81,14 @@ describe('UnitEditor', () => {
       initialProjectSharing: false,
       initialLocales: [],
       isMigrated: false,
-      initialPublishedState: PublishedState.beta,
+      initialPublishedState: PublishedState.in_development,
+      initialUnitPublishedState: null,
       initialInstructionType: InstructionType.teacher_led,
       initialInstructorAudience: InstructorAudience.teacher,
       initialParticipantAudience: ParticipantAudience.student,
       hasCourse: false,
-      scriptPath: '/s/test-unit'
+      scriptPath: '/s/test-unit',
+      initialProfessionalLearningCourse: ''
     };
   });
 
@@ -115,6 +117,48 @@ describe('UnitEditor', () => {
       assert.equal(wrapper.find('CourseVersionPublishingEditor').length, 1);
     });
 
+    it('shows hide this unit in course if hasCourse and course is not in development', () => {
+      const wrapper = createWrapper({
+        hasCourse: true,
+        initialPublishedState: 'pilot'
+      });
+      assert.equal(wrapper.find('.unit-test-hide-unit-in-course').length, 1);
+    });
+
+    it('does not show hide this unit in course if does not have course', () => {
+      const wrapper = createWrapper({
+        hasCourse: false,
+        initialPublishedState: 'pilot'
+      });
+      assert.equal(wrapper.find('.unit-test-hide-unit-in-course').length, 0);
+    });
+
+    it('does not show hide this unit in course if course is in development', () => {
+      const wrapper = createWrapper({
+        hasCourse: true,
+        initialPublishedState: 'in_development'
+      });
+      assert.equal(wrapper.find('.unit-test-hide-unit-in-course').length, 0);
+    });
+
+    it('clicking hide unit checkbox updates unit published state', () => {
+      const wrapper = createWrapper({
+        hasCourse: true,
+        initialPublishedState: 'pilot',
+        initialUnitPublishedState: 'in_development'
+      });
+      assert.equal(wrapper.find('.unit-test-hide-unit-in-course').length, 1);
+      assert.equal(
+        wrapper.find('.unit-test-hide-unit-in-course').props().checked,
+        true
+      );
+      wrapper.find('.unit-test-hide-unit-in-course').simulate('change');
+      assert.equal(
+        wrapper.find('.unit-test-hide-unit-in-course').props().checked,
+        false
+      );
+    });
+
     it('uses new unit editor for migrated unit', () => {
       const wrapper = createWrapper({
         isMigrated: true,
@@ -130,6 +174,37 @@ describe('UnitEditor', () => {
       expect(wrapper.find('CourseTypeEditor').length).to.equal(1);
 
       expect(wrapper.find('UnitCard').length).to.equal(1);
+    });
+
+    it('disables changing student facing lesson plan checkbox when not allowed to make major curriculum changes', () => {
+      const wrapper = createWrapper({
+        initialPublishedState: 'stable',
+        isMigrated: true,
+        initialUseLegacyLessonPlans: false
+      });
+
+      expect(
+        wrapper.find('.student-facing-lesson-plan-checkbox').length
+      ).to.equal(1);
+      expect(
+        wrapper.find('.student-facing-lesson-plan-checkbox').props().disabled
+      ).to.equal(true);
+    });
+
+    it('allows changing student facing lesson plan checkbox when allowed to make major curriculum changes to hidden unit', () => {
+      const wrapper = createWrapper({
+        initialPublishedState: 'stable',
+        initialUnitPublishedState: 'in_development',
+        isMigrated: true,
+        initialUseLegacyLessonPlans: false
+      });
+
+      expect(
+        wrapper.find('.student-facing-lesson-plan-checkbox').length
+      ).to.equal(1);
+      expect(
+        wrapper.find('.student-facing-lesson-plan-checkbox').props().disabled
+      ).to.equal(false);
     });
 
     describe('Teacher Resources', () => {
@@ -503,6 +578,83 @@ describe('UnitEditor', () => {
       ).to.be.true;
 
       $.ajax.restore();
+    });
+
+    it('shows error when moving standalone unit out of in development if not supplied all standalone unit information', () => {
+      sinon.stub($, 'ajax');
+      const wrapper = createWrapper({initialIsCourse: false, hasCourse: false});
+
+      const unitEditor = wrapper.find('UnitEditor');
+      unitEditor.setState({publishedState: 'beta'});
+
+      const saveBar = wrapper.find('SaveBar');
+
+      const saveAndKeepEditingButton = saveBar.find('button').at(1);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
+      saveAndKeepEditingButton.simulate('click');
+
+      expect($.ajax).to.not.have.been.called;
+
+      expect(unitEditor.state().isSaving).to.equal(false);
+      expect(unitEditor.state().error).to.equal(
+        'Standalone units that are not in development must be a standalone unit with family name and version year.'
+      );
+
+      expect(
+        wrapper
+          .find('.saveBar')
+          .contains(
+            'Error Saving: Standalone units that are not in development must be a standalone unit with family name and version year.'
+          )
+      ).to.be.true;
+
+      $.ajax.restore();
+    });
+
+    it('saves successfully when moving standalone unit out of in development if professional learning course', () => {
+      sinon.stub(window, 'confirm').callsFake(() => true);
+      const wrapper = createWrapper({initialIsCourse: false, hasCourse: false});
+
+      const unitEditor = wrapper.find('UnitEditor');
+      unitEditor.setState({
+        publishedState: 'beta',
+        professionalLearningCourse: 'new-pl-course'
+      });
+
+      let returnData = {scriptPath: '/s/test-unit'};
+      let server = sinon.fakeServer.create();
+      server.respondWith('PUT', `/s/1`, [
+        200,
+        {'Content-Type': 'application/json'},
+        JSON.stringify(returnData)
+      ]);
+
+      const saveBar = wrapper.find('SaveBar');
+
+      const saveAndKeepEditingButton = saveBar.find('button').at(1);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
+      saveAndKeepEditingButton.simulate('click');
+
+      // check the the spinner is showing
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
+      expect(unitEditor.state().isSaving).to.equal(true);
+
+      clock = sinon.useFakeTimers(new Date('2020-12-01'));
+      const expectedLastSaved = Date.now();
+      server.respond();
+      clock.tick(50);
+
+      unitEditor.update();
+      expect(utils.navigateToHref).to.not.have.been.called;
+      expect(unitEditor.state().isSaving).to.equal(false);
+      expect(unitEditor.state().lastSaved).to.equal(expectedLastSaved);
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
+      //check that last saved message is showing
+      expect(wrapper.find('.lastSavedMessage').length).to.equal(1);
+      server.restore();
+      window.confirm.restore();
     });
 
     it('shows error when family name is set but version year is not', () => {

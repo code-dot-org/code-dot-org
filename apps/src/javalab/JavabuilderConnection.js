@@ -2,7 +2,8 @@ import {
   WebSocketMessageType,
   StatusMessageType,
   STATUS_MESSAGE_PREFIX,
-  ExecutionType
+  ExecutionType,
+  AuthorizerSignalType
 } from './constants';
 import {handleException} from './javabuilderExceptionHandler';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -38,31 +39,74 @@ export default class JavabuilderConnection {
 
   // Get the access token to connect to javabuilder and then open the websocket connection.
   // The token prevents access to our javabuilder AWS execution environment by un-verified users.
+  // This method should be used for any connection to Javabuilder that does not require a special override
+  // for sources or validation.
   connectJavabuilder() {
-    // Don't attempt to connect to Javabuilder if we do not have a project identifier.
+    let requestData = this.getDefaultRequestData();
+    requestData.channelId = this.channelId;
+
+    this.connectJavabuilderHelper(
+      '/javabuilder/access_token',
+      requestData,
+      /* checkProjectEdited */ true
+    );
+  }
+
+  // Get the access token to connect to javabuilder and then open the websocket connection.
+  // When getting the access token, send override sources to run instead of attempting to find
+  // sources based on a channel id.
+  // The token prevents access to our javabuilder AWS execution environment by un-verified users.
+  connectJavabuilderWithOverrideSources(overrideSources) {
+    let requestData = this.getDefaultRequestData();
+    requestData.overrideSources = overrideSources;
+
+    // When we have override sources, we do not need to check if the project has been edited,
+    // as the override sources are what we want to run.
+    this.connectJavabuilderHelper(
+      '/javabuilder/access_token_with_override_sources',
+      requestData,
+      /* checkProjectEdited */ false
+    );
+  }
+
+  // Get the access token to connect to javabuilder and then open the websocket connection.
+  // When getting the access token, send override validation code to run instead of any existing validation
+  // code on the level.
+  // The token prevents access to our javabuilder AWS execution environment by un-verified users.
+  connectJavabuilderWithOverrideValidation(overrideValidation) {
+    let requestData = this.getDefaultRequestData();
+    requestData.channelId = this.channelId;
+    requestData.overrideValidation = overrideValidation;
+
+    this.connectJavabuilderHelper(
+      '/javabuilder/access_token_with_override_validation',
+      requestData,
+      /* checkProjectEdited */ true
+    );
+  }
+
+  connectJavabuilderHelper(url, data, checkProjectEdited) {
+    // Don't attempt to connect to Javabuilder if we do not have a project
+    // and we want to check the edit status.
     // This typically occurs if a teacher is trying to view a student's project
     // that has not been modified from the starter code.
     // This case does not apply to students, who are able to execute unmodified starter code.
     // See this comment for more detail: https://github.com/code-dot-org/code-dot-org/pull/42313#discussion_r701417221
-    if (project.getCurrentId() === undefined) {
+    if (checkProjectEdited && project.getCurrentId() === undefined) {
       this.onOutputMessage(javalabMsg.errorProjectNotEditedYet());
       return;
     }
 
-    $.ajax({
-      url: '/javabuilder/access_token',
+    const ajaxPayload = {
+      url: url,
       type: 'get',
-      data: {
-        projectUrl: project.getProjectSourcesUrl(),
-        channelId: this.channelId,
-        projectVersion: project.getCurrentSourceVersionId(),
-        levelId: this.levelId,
-        options: this.options,
-        executionType: this.executionType,
-        useDashboardSources: true,
-        miniAppType: this.miniAppType
-      }
-    })
+      data: data
+    };
+
+    this.onOutputMessage(`${STATUS_MESSAGE_PREFIX} ${javalabMsg.connecting()}`);
+    this.onNewlineMessage();
+
+    $.ajax(ajaxPayload)
       .done(result => this.establishWebsocketConnection(result.token))
       .fail(error => {
         if (error.status === 403) {
@@ -76,6 +120,16 @@ export default class JavabuilderConnection {
           console.error(error.responseText);
         }
       });
+  }
+
+  getDefaultRequestData() {
+    return {
+      levelId: this.levelId,
+      options: this.options,
+      executionType: this.executionType,
+      useDashboardSources: false,
+      miniAppType: this.miniAppType
+    };
   }
 
   establishWebsocketConnection(token) {
@@ -141,6 +195,10 @@ export default class JavabuilderConnection {
         message = javalabMsg.runningValidation();
         lineBreakCount = 2;
         break;
+      case StatusMessageType.NO_TESTS_FOUND:
+        this.onNewlineMessage();
+        message = javalabMsg.noTestsFound();
+        break;
       default:
         break;
     }
@@ -181,6 +239,9 @@ export default class JavabuilderConnection {
           this.onOutputMessage(data.value);
           this.onNewlineMessage();
         }
+        break;
+      case WebSocketMessageType.AUTHORIZER:
+        this.onAuthorizerMessage(data.value, data.detail);
         break;
       default:
         break;
@@ -250,5 +311,27 @@ export default class JavabuilderConnection {
         this.setIsTesting(false);
         break;
     }
+  }
+
+  onAuthorizerMessage(value, detail) {
+    let message = '';
+    switch (value) {
+      case AuthorizerSignalType.TOKEN_USED:
+        message = javalabMsg.authorizerTokenUsed();
+        break;
+      case AuthorizerSignalType.NEAR_LIMIT:
+        message = javalabMsg.authorizerNearLimit({
+          attemptsLeft: detail.remaining
+        });
+        break;
+      case AuthorizerSignalType.USER_BLOCKED:
+        message = javalabMsg.userBlocked();
+        break;
+      case AuthorizerSignalType.CLASSROOM_BLOCKED:
+        message = javalabMsg.classroomBlocked();
+        break;
+    }
+    this.onOutputMessage(`${STATUS_MESSAGE_PREFIX} ${message}`);
+    this.onNewlineMessage();
   }
 }

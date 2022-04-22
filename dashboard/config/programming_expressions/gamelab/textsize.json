@@ -23,7 +23,10 @@
       "description": "The number of pixels for the height of the text. Should be a positive number."
     }
   ],
+  "parameters": [
+    "pixels"
+  ],
   "return_value": "The current text size in pixels. Also changes future text output to the display.",
   "short_description": "Sets/gets the current font size. ",
-  "syntax": "textSize(pixels)"
+  "syntax": "textSize(pixels);"
 }

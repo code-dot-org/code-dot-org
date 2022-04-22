@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csd6-pilot",
-    "serialized_at": "2022-03-05 16:36:32 UTC",
+    "serialized_at": "2022-04-01 16:05:52 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -124,7 +124,7 @@
       "properties": {
         "assessment_opportunities": "1. **Use a board event handler to control buttons on the circuit playground**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Use a board event handler to control the toggle switch on the circuit playground**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "This lesson transitions students from considering the Circuit Playground as strictly an output device and instead introduces the buttons and toggle switches as tools for input. Starting with the hardware buttons and switch, students learn to use `onBoardEvent()`, analogously to `onEvent()`, in order to take input from their Circuit Playgrounds.\n\n**Question of the Day:** How can the user interact with the circuit playground for input?",
+        "overview": "This lesson transitions students from considering the Circuit Playground as strictly an output device and instead introduces the buttons and toggle switches as tools for input. Starting with the hardware buttons and switch, students learn to use [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/), analogously to [`onEvent()`(#fff176)](/docs/applab/onEvent/), in order to take input from their Circuit Playgrounds.\n\n**Question of the Day:** How can the user interact with the circuit playground for input?",
         "preparation": "- Prepare a board and USB cable for each pair of students",
         "student_overview": "In this lesson, you will learn how to use the Circuit Playground's hardware buttons and switch which will give the Circuit Playground input."
       },
@@ -239,6 +239,7 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "overview": "In this project, students create an app that controls the Circuit Playground so it interacts with the physical environment around it, similar to many smart phone apps that are used to control devices in a house or car or school. Students use physical materials to help design their physical device, then create an app that lets the user interact with the physical device or change settings. ",
         "preparation": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas.\n* Gather prototyping materials, such as:\n\t* Structural material (cardboard, construction paper, etc)\n\t* Connective material (tape, glue, hot glue, etc)\n\t* Construction tools (scissors, staplers, etc)\n\t* Other materials (cups, binder clips, paper plates, etc)"
       },
       "seeding_key": {
@@ -715,7 +716,7 @@
       "key": "0a90718a-ced0-4294-b9da-36d33df1702c",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 80,
         "name": "Activity"
       },
       "seeding_key": {
@@ -1687,7 +1688,13 @@
       "key": "e7630405-12a6-4f82-970d-5250ed2bd855",
       "position": 4,
       "properties": {
-        "progression_name": "Predict"
+        "progression_name": "Predict",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Facilitating Predict Levels:** Predict levels are a great opportunity for students to think critically about code and engage in class discussions. Here are a few strategies for facilitating these levels:\n\n_Think-Pair-Share First:_ Consider having students think of their own prediction and discuss with a partner before typing in their response. Once they're run the code, bring the class together for a full-group discussion to discuss how their predictions were similar or different from the resulting program. Use this as an opportunity to address any misconceptions that students may have had about the code initially.\n\n_Full-Class First:_ Consider presenting the predict level to the entire class and asking the class to share what they think will happen. Keep track of their predictions at the front of the room, then run the code and compare the result to their predictions. After discussing and clarifying misconceptions, invite students to return to the Predict level on their own and enter in their new understanding of what the level will do.\n\n**Caution: Predict Entries Can't Be Deleted!** Once you enter an answer into the predict box, you are not able to reset it. This can make it difficult to repeat this process with multiple classes. Instead, we recommend entering dummy text like \"Class discussion\" and running the code. This way, the answer isn't \"spoiled\" for future classes. However, this means you will need to keep track of predictions separately such as on a whiteboard or in a document."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e7630405-12a6-4f82-970d-5250ed2bd855",
@@ -1941,7 +1948,7 @@
       "key": "7cc52ce6-a194-42f6-a5ba-9a2183c70399",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Pass out a board and USB cable to each pair of students. Let students know that they should not yet plug the boards in.\n\n**Prompt:** Ask pairs to spend one minute looking over the board, focusing on potential input devices. Based on what you already know about this board, how do you think you might use it to get input?\n\n**Share:** Have groups share back their thoughts to the whole group, keeping track of ideas on the board. Push students to support their ideas with evidence from reviewing the board, but don't worry about ensuring correctness at this point.\n\n**Discussion Goal:** Students will probably notice the buttons on the circuit playground. Students may also notice the small slider in the middle of the circuit playground that toggles back and forth. If students don’t address these, be sure to bring them up. Students may also ask about the small pads on the outer ring of the circuit playground, or they may notice the eye / ear / temperature icons on the circuit playground for the different sensors. Both of these are types of inputs that are discussed in later lessons - if students bring these up, acknowledge them but also let students know we’ll investigate these more in future lessons.\n",
+        "description": "**Distribute:** Pass out a board and USB cable to each pair of students. Let students know that they should not yet plug the boards in.\n\n**Prompt:** Ask pairs to spend one minute looking over the board, focusing on potential input devices. Based on what you already know about this board, how do you think you might use it to get input?\n\n**Share:** Have groups share back their thoughts to the whole group, keeping track of ideas on the board. Push students to support their ideas with evidence from reviewing the board, but don't worry about ensuring correctness at this point.\n\n**Discussion Goal:** Students will probably notice the buttons on the circuit playground. Students may also notice the small slider in the middle of the circuit playground that toggles back and forth. If students don’t address these, be sure to bring them up. Students may also ask about the small pads on the outer ring of the circuit playground, or they may notice the eye / ear / temperature icons on the circuit playground for the different sensors. Both of these are types of inputs that are discussed in later lessons - if students bring these up, acknowledge them but also let students know we’ll investigate these more in future lessons.",
         "name": "Board Inspection: Inputs\r"
       },
       "seeding_key": {
@@ -4409,18 +4416,6 @@
       },
       "seeding_key": {
         "activity_section.key": "9802dee1-e434-455d-8717-55fff09ae737",
-        "lesson_activity.key": "a8d91d04-87b3-4b87-a1cb-039bbeb1c286"
-      }
-    },
-    {
-      "key": "a0dbc38a-06ad-4f0a-8085-3b8e4bcd5b1a",
-      "position": 3,
-      "properties": {
-        "description": "If this is the last unit of CS Discoveries that you are teaching, also have students take the end-of-course survey. See the [CSD Instructions resource](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/edit?usp=sharing) for more information about the End-of-Course survey and how to assign and see the results. ",
-        "name": "End of Course Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "a0dbc38a-06ad-4f0a-8085-3b8e4bcd5b1a",
         "lesson_activity.key": "a8d91d04-87b3-4b87-a1cb-039bbeb1c286"
       }
     },
@@ -9994,7 +9989,7 @@
     },
     {
       "name": "Functions",
-      "url": "https://docs.google.com/presentation/d/1fDzBxID3Zye50GJxANGDS10COe8LGzRHZH4xEpK1cfk/copy",
+      "url": "https://docs.google.com/presentation/d/1qpTbQAOB7LoPT-rW5wuzRWhRNMkrVfpHi-Wr6yiwMuU/copy",
       "key": "functions",
       "properties": {
         "audience": "Teacher",
@@ -10021,7 +10016,8 @@
       "url": "https://youtu.be/5UMKeMPCa7E",
       "key": "functions_with_parameters",
       "properties": {
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "functions_with_parameters"
@@ -10101,7 +10097,7 @@
     },
     {
       "name": "Mini-Project: Interactive Art",
-      "url": "https://docs.google.com/presentation/d/1qpTbQAOB7LoPT-rW5wuzRWhRNMkrVfpHi-Wr6yiwMuU/copy",
+      "url": "https://docs.google.com/presentation/d/1fDzBxID3Zye50GJxANGDS10COe8LGzRHZH4xEpK1cfk/copy",
       "key": "mini-project_interactive_art",
       "properties": {
         "audience": "Teacher",
@@ -10124,27 +10120,29 @@
       }
     },
     {
-      "name": "Peer Review 1",
-      "url": "https://docs.google.com/document/d/1hCLS30HEvP3YNDdvCYRuWfBa5mao7msUIcY6iopaKbg",
-      "key": "peer_review_1",
+      "name": "Peer Review - Human Device Interaction",
+      "url": "https://docs.google.com/document/d/1lfEr8muFsAGldj7DHMxl8jVsUA_7Pb4LIaFNMWWvNaw/view",
+      "key": "peer_review_-_human_device_interaction",
       "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "peer_review_1"
+        "resource.key": "peer_review_-_human_device_interaction"
       }
     },
     {
-      "name": "Peer Review 2",
-      "url": "https://docs.google.com/document/d/1ZwH5a11o-P0w6cvCjhjNpGWiA655M3raz56M2PyyAn0",
-      "key": "peer_review_2",
+      "name": "Peer Review - Prototype an Innovation",
+      "url": "https://docs.google.com/document/d/1a7kngoybDZ4ZF6UeGEXjbfXzMynnfCxgaqJcsdc3YRc/view",
+      "key": "peer_review_-_prototype_an_innovation",
       "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
+        "audience": "Student",
+        "download_url": "https://docs.google.com/document/d/1a7kngoybDZ4ZF6UeGEXjbfXzMynnfCxgaqJcsdc3YRc/export?format=pdf",
+        "include_in_pdf": true
       },
       "seeding_key": {
-        "resource.key": "peer_review_2"
+        "resource.key": "peer_review_-_prototype_an_innovation"
       }
     },
     {
@@ -10284,10 +10282,11 @@
     },
     {
       "name": "Prototype an Innovation",
-      "url": "https://docs.google.com/document/d/1ntDcMNR6vwir8PRNphj9Vo32uUGCK8UetSMTs9bdjzY/edit",
+      "url": "https://docs.google.com/document/d/1txsg24iWQjTuw-I1gHOMdrf7dqiSjXrHoWOGlBtF-Hg/edit#",
       "key": "prototype_an_innovation",
       "properties": {
         "audience": "Student",
+        "download_url": "https://docs.google.com/document/d/1txsg24iWQjTuw-I1gHOMdrf7dqiSjXrHoWOGlBtF-Hg/export?format=pdf",
         "include_in_pdf": true,
         "type": "Rubric"
       },
@@ -10297,10 +10296,11 @@
     },
     {
       "name": "Prototype an Innovation - Student Checklist",
-      "url": "https://docs.google.com/document/d/1PkarqOeVEuHi24QFVuYsEy3EY5WPmi3pbmKjOB161EM/edit",
+      "url": "https://docs.google.com/document/d/1ifmTs7Xjlyk1jQUwYsrTny9OJK4kjCCfCgqsYHTNzX4/view",
       "key": "prototype_an_innovation_-_student_checklist",
       "properties": {
         "audience": "Student",
+        "download_url": "https://docs.google.com/document/d/1ifmTs7Xjlyk1jQUwYsrTny9OJK4kjCCfCgqsYHTNzX4/export?format=pdf",
         "include_in_pdf": true
       },
       "seeding_key": {
@@ -10309,15 +10309,52 @@
     },
     {
       "name": "Prototype an Innovation",
-      "url": "https://docs.google.com/document/d/14fdmAmOJpOJw6KXielJAws1wf2AWEnSqQnZueUC6GvM/edit",
+      "url": "https://docs.google.com/document/d/1j3snUDbEsv13M-sab6SXtwpHdUx6ilXS7BzUR2xnnk8/view",
       "key": "prototype_an_innovation_1",
       "properties": {
         "audience": "Student",
+        "download_url": "https://docs.google.com/document/d/1j3snUDbEsv13M-sab6SXtwpHdUx6ilXS7BzUR2xnnk8/export?format=pdf",
         "include_in_pdf": true,
-        "type": "Project Guide"
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "prototype_an_innovation_1"
+      }
+    },
+    {
+      "name": "Prototype an Innovation Example 1",
+      "url": "https://docs.google.com/document/d/1lujGcifyqK4lNZzeCMQaZ68EL90qx0tc5z6Q9pZHl1c/edit",
+      "key": "prototype_an_innovation_example_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "prototype_an_innovation_example_1"
+      }
+    },
+    {
+      "name": "Prototype an Innovation Example 2",
+      "url": "https://docs.google.com/document/d/1IfD9qlxTNGIsY3cgspUKtN3g2K93EZLGaUczG-Y00Dk/edit",
+      "key": "prototype_an_innovation_example_2",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "prototype_an_innovation_example_2"
+      }
+    },
+    {
+      "name": "Prototype an Innovation Example 3",
+      "url": "https://docs.google.com/document/d/1somgJ2TOLqsV5zFe0BgQtC29Mv3ignYsa34zf4PI_VU/edit",
+      "key": "prototype_an_innovation_example_3",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "prototype_an_innovation_example_3"
       }
     },
     {
@@ -10368,18 +10405,6 @@
       },
       "seeding_key": {
         "resource.key": "rubric_-_on-the-go_app"
-      }
-    },
-    {
-      "name": "Sample Marked Rubrics",
-      "url": "https://docs.google.com/document/d/1DLFzMQSYnRei9JzBDl_c-Moz4AczcUGwU9dtxvyjagc/edit",
-      "key": "sample_marked_rubrics",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "sample_marked_rubrics"
       }
     },
     {
@@ -10718,13 +10743,7 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Prototype an Innovation",
-        "resource.key": "peer_review_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Prototype an Innovation",
-        "resource.key": "peer_review_2"
+        "resource.key": "peer_review_-_prototype_an_innovation"
       }
     },
     {
@@ -10754,7 +10773,19 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Prototype an Innovation",
-        "resource.key": "sample_marked_rubrics"
+        "resource.key": "prototype_an_innovation_example_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Prototype an Innovation",
+        "resource.key": "prototype_an_innovation_example_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Prototype an Innovation",
+        "resource.key": "prototype_an_innovation_example_3"
       }
     },
     {
@@ -10833,6 +10864,12 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "resource.key": "exemplar_3_-_red_light_green_light"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "peer_review_-_human_device_interaction"
       }
     },
     {

@@ -20,7 +20,7 @@ export default function EmbeddedBlock({blockName, link, ariaLabel}) {
       );
       shrinkBlockSpaceContainer(blockSpace, true);
     }
-  }, [blockRef.current]);
+  }, [blockRef]);
 
   return (
     <div>

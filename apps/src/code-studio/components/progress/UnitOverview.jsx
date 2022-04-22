@@ -17,7 +17,7 @@ import {
   onDismissRedirectDialog,
   dismissedRedirectDialog
 } from '@cdo/apps/util/dismissVersionRedirect';
-import {assignmentVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
 import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/GoogleClassroomAttributionLabel';
 import UnitCalendar from './UnitCalendar';
@@ -30,6 +30,8 @@ import EndOfLessonDialog from '@cdo/apps/templates/EndOfLessonDialog';
 class UnitOverview extends React.Component {
   static propTypes = {
     id: PropTypes.number,
+    courseOfferingId: PropTypes.number,
+    courseVersionId: PropTypes.number,
     courseId: PropTypes.number,
     courseTitle: PropTypes.string,
     courseLink: PropTypes.string,
@@ -41,7 +43,7 @@ class UnitOverview extends React.Component {
     showScriptVersionWarning: PropTypes.bool,
     redirectScriptUrl: PropTypes.string,
     showRedirectWarning: PropTypes.bool,
-    versions: PropTypes.arrayOf(assignmentVersionShape).isRequired,
+    versions: PropTypes.objectOf(assignmentCourseVersionShape).isRequired,
     courseName: PropTypes.string,
     showAssignButton: PropTypes.bool,
     assignedSectionId: PropTypes.number,
@@ -108,7 +110,9 @@ class UnitOverview extends React.Component {
       scriptResourcesPdfUrl,
       showUnversionedRedirectWarning,
       isCsdOrCsp,
-      completedLessonNumber
+      completedLessonNumber,
+      courseOfferingId,
+      courseVersionId
     } = this.props;
 
     const displayRedirectDialog =
@@ -177,6 +181,8 @@ class UnitOverview extends React.Component {
             isMigrated={isMigrated}
             scriptOverviewPdfUrl={scriptOverviewPdfUrl}
             scriptResourcesPdfUrl={scriptResourcesPdfUrl}
+            courseOfferingId={courseOfferingId}
+            courseVersionId={courseVersionId}
           />
         </div>
         <ProgressTable minimal={false} />

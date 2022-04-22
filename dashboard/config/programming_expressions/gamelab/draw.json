@@ -1,9 +1,9 @@
 {
   "key": "draw",
   "name": "function draw() {}",
-  "category": "World",
+  "category": "Game Lab",
   "category_key": "game_lab",
-  "content": "The lines of code contained inside its block are continuously executed until the program is stopped.\r\n\r\nYou can make your drawings come to life using animation with the draw() function. Think of it as a virtual flip book. The default rate of 30 frames per second can be reset by assigning a new value to `World.frameRate`.\r\n\r\nThere can only be one draw() function for each sketch, and draw() must exist if you want the code to run continuously, or to process events such as `mouseDown()`.",
+  "content": "The lines of code contained inside its block are continuously executed until the program is stopped.\n\nYou can make your drawings come to life using animation with the draw() function. Think of it as a virtual flip book. The default rate of 30 frames per second can be reset by assigning a new value to [`World.frameRate`(#fff176)](/docs/gamelab/World.frameRate/).\n\nThere can only be one draw() function for each sketch, and draw() must exist if you want the code to run continuously, or to process events such as [`mouseDown(button)`(#fff176)](/docs/gamelab/mouseDown/).",
   "examples": [
     {
       "name": "",
@@ -18,7 +18,7 @@
       "name": "TV Static Line",
       "description": "Animate a line like on a broken old television.",
       "code": "```\n// Animate a line like on a broken old television.\r\nvar yPos = 0;\r\nfunction draw() {  \r\n  background(\"white\");\r\n  yPos = yPos - 1;\r\n  if (yPos < 0) {\r\n    yPos = 400;\r\n  }\r\n  line(0, yPos, 400, yPos);\r\n}\n```",
-      "app": "https://studio.code.org/projects/gamelab/93oYBOXj67FzNgsKl_omzw/view",
+      "app": "https://studio.code.org/projects/gamelab/93oYBOXj67FzNgsKl_omzw",
       "image": null,
       "app_display_type": "codeFromCodeField",
       "embed_app_with_code_height": 310

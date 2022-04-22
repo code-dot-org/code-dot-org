@@ -9,6 +9,7 @@
 #  updated_at   :datetime         not null
 #  category     :string(255)      default("other"), not null
 #  is_featured  :boolean          default(FALSE), not null
+#  assignable   :boolean          default(TRUE), not null
 #
 # Indexes
 #
@@ -72,6 +73,60 @@ class CourseOffering < ApplicationRecord
     end
   end
 
+  # All course versions in a course offering should have the same instructor audience
+  def can_be_instructor?(user)
+    course_versions.any? {|cv| cv.can_be_instructor?(user)}
+  end
+
+  def any_versions_launched?
+    course_versions.any?(&:launched?)
+  end
+
+  def any_versions_in_development?
+    course_versions.any?(&:in_development?)
+  end
+
+  def any_version_is_assignable_pilot?(user)
+    course_versions.any? {|cv| cv.pilot? && cv.has_pilot_experiment?(user)}
+  end
+
+  def any_version_is_assignable_editor_experiment?(user)
+    course_versions.any? {|cv| cv.content_root.is_a?(Script) && cv.has_editor_experiment?(user)}
+  end
+
+  def self.assignable_course_offerings(user)
+    CourseOffering.all.select {|co| co.can_be_assigned?(user)}
+  end
+
+  def self.assignable_course_offerings_info(user, locale_code = 'en-us')
+    assignable_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}.to_h
+  end
+
+  def can_be_assigned?(user)
+    return false unless assignable?
+    return false unless can_be_instructor?(user)
+    return true if any_versions_launched?
+    return true if any_version_is_assignable_pilot?(user)
+    return true if any_version_is_assignable_editor_experiment?(user)
+    return true if user.permission?(UserPermission::LEVELBUILDER)
+
+    false
+  end
+
+  def summarize_for_assignment_dropdown(user, locale_code)
+    [
+      id,
+      {
+        id: id,
+        display_name: any_versions_launched? ? localized_display_name : localized_display_name + ' *',
+        category: category,
+        is_featured: is_featured?,
+        participant_audience: course_versions.first.content_root.participant_audience,
+        course_versions: course_versions.select {|cv| cv.course_assignable?(user)}.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
+      }
+    ]
+  end
+
   def localized_display_name
     localized_name = I18n.t(
       key,
@@ -86,7 +141,8 @@ class CourseOffering < ApplicationRecord
       key: key,
       is_featured: is_featured?,
       category: category,
-      display_name: display_name
+      display_name: display_name,
+      assignable: assignable?
     }
   end
 
@@ -95,7 +151,8 @@ class CourseOffering < ApplicationRecord
       key: key,
       display_name: display_name,
       category: category,
-      is_featured: is_featured
+      is_featured: is_featured,
+      assignable: assignable?
     }
   end
 

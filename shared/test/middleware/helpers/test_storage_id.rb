@@ -106,7 +106,8 @@ class StorageIdTest < Minitest::Test
     assert_equal storage_id_in_table, storage_id_from_cookie
 
     # returns nil if storage id from cookie is owned by a user
-    update_annoymous_user_storage_id(storage_id_in_table, 2)
+    user_id = 5
+    update_annoymous_user_storage_id(storage_id_in_table, user_id)
     assert_nil storage_id_from_cookie
   end
 

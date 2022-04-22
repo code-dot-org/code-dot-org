@@ -200,28 +200,36 @@ namespace :test do
   task :shared_ci do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    ENV['TEST_ENV_NUMBER'] = '1'
     TestRunUtils.run_shared_tests
+    ENV.delete 'TEST_ENV_NUMBER'
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
   task :pegasus_ci do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    ENV['TEST_ENV_NUMBER'] = '1'
     TestRunUtils.run_pegasus_tests
+    ENV.delete 'TEST_ENV_NUMBER'
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
   task :lib_ci do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    ENV['TEST_ENV_NUMBER'] = '1'
     TestRunUtils.run_lib_tests
+    ENV.delete 'TEST_ENV_NUMBER'
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
   task :bin_i18n_ci do
     # isolate unit tests from the pegasus_test DB
     ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    ENV['TEST_ENV_NUMBER'] = '1'
     TestRunUtils.run_bin_i18n_tests
+    ENV.delete 'TEST_ENV_NUMBER'
     ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
@@ -293,7 +301,7 @@ namespace :test do
           'lib/**/*',
           'shared/**/*'
         ],
-        ignore: ['dashboard/test/ui/**/*']
+        ignore: ['dashboard/test/ui/**/*', 'dashboard/db/schema_cache.yml']
       ) do
         TestRunUtils.run_dashboard_tests
       end
