@@ -3,7 +3,7 @@
   "name": "setPosition",
   "category": "UI controls",
   "category_key": "ui_controls",
-  "content": "Positions an element at an *x,y* screen coordinate, and optionally sets a new *width* and *height* for the element.\n\nYour app sometimes needs to move, and possibly resize, the UI elements on a screen. All UI elements (`button()`, `textInput()`, `textLabel()`, `dropDown()`, `checkBox()`, `radioButton()`, `image()`), can be moved and resized. It is usually easier to place UI elements in their initial positions, with initial sizes, using Design mode in App Lab. In Design mode you can also specify font size, font color and background color for UI elements.",
+  "content": "Positions an element at an *x,y* screen coordinate, and optionally sets a new *width* and *height* for the element.\n\nYour app sometimes needs to move, and possibly resize, the UI elements on a screen. All UI elements ([`button()`(#fff176)](/docs/applab/button/), [`textInput()`(#fff176)](/docs/applab/textInput/), [`textLabel()`(#fff176)](/docs/applab/textLabel/), [`dropdown()`(#fff176)](/docs/applab/dropdown/), [`checkbox()`(#fff176)](/docs/applab/checkbox/), [`radioButton()`(#fff176)](/docs/applab/radioButton/), `image()`), can be moved and resized. It is usually easier to place UI elements in their initial positions, with initial sizes, using Design mode in App Lab. In Design mode you can also specify font size, font color and background color for UI elements.",
   "examples": [
     {
       "name": "Example: Harder Gingerbread Capture",
