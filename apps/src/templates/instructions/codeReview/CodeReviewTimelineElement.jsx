@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {TextLink} from '@dsco_/link';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
+import javalabMsg from '@cdo/javalab/locale';
 
 export const codeReviewTimelineElementType = {
   CREATED: 'created',
@@ -10,6 +11,16 @@ export const codeReviewTimelineElementType = {
   CODE_REVIEW: 'codeReview'
 };
 
+// This component represents elements on the code review and commit timeline. There are 3 types of elements:
+// 1. CREATED - this is the node that represents the first element on the timeline, if it is the last element
+//    in the timeline it will not have a line below it. Otherwise this node does not vary from project to project.
+// 2. COMMIT - this represents a commit to the project. It will display an eyeball on the left which links to the
+//    project version if the project version is present and not expired. It also handles a child which represents
+//    the specific content in the commit. If it is the last element in the timeline, it will not have a line extending
+//    down from it.
+// 3. CODE_REVIEW - this represnts a code review request and comments made. It will display an eyeball to the left
+//    which links to the project version if it is present and not expired. It takes a child which should be the actual
+//    code review component. If it is the last element in the timeline it will not have a line extending below it.
 const CodeReviewTimelineElement = ({
   type,
   isLast,
@@ -29,7 +40,9 @@ const CodeReviewTimelineElement = ({
           <TimelineDot color={color.purple} />
           {!isLast && <div style={styles.createdBottomLine} />}
         </div>
-        <div style={{...styles.child, ...styles.createdText}}>Created</div>
+        <div style={{...styles.child, ...styles.createdText}}>
+          {javalabMsg.created()}
+        </div>
       </div>
     );
   }
