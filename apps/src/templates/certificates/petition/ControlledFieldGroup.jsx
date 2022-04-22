@@ -46,7 +46,7 @@ FieldGroup.propTypes = {
 const ControlledFieldGroup = ({
   children,
   componentClass,
-  handleChange,
+  onChange,
   helpText,
   id,
   placeholderOrLabel,
@@ -58,7 +58,7 @@ const ControlledFieldGroup = ({
     name: id,
     key: id,
     helpText: helpText,
-    onChange: handleChange,
+    onChange: onChange,
     value: value
   };
   return componentClass === 'select' ? (
@@ -86,7 +86,7 @@ ControlledFieldGroup.propTypes = {
   helpText: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   children: PropTypes.node,
   componentClass: PropTypes.string,
-  handleChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired
 };
 
