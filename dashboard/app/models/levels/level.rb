@@ -660,10 +660,13 @@ class Level < ApplicationRecord
       level.update!(update_params)
 
       # Copy the level_concept_difficulty of the parent level to the new level
-      new_lcd = level_concept_difficulty.dup
-      level.level_concept_difficulty = new_lcd
-      # trigger a save to rewrite the custom level file
-      level.save!
+      old_lcd = level_concept_difficulty
+      if old_lcd
+        new_lcd = old_lcd.dup
+        level.level_concept_difficulty = new_lcd
+        # trigger a save to rewrite the custom level file
+        level.save!
+      end
 
       level
     rescue Exception => e
