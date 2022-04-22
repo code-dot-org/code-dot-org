@@ -197,21 +197,15 @@ class CourseOffering < ApplicationRecord
     course_offering.key
   end
 
-  class << self
-    private
-
-    def single_unit_course_offerings_containing_units(unit_ids)
-      CourseOffering.all.select {|co| co.units_included_in_any_version?(unit_ids) && co.any_version_is_unit?}
-    end
-  end
-
-  private
-
   def units_included_in_any_version?(unit_ids)
     course_versions.any? {|cv| cv.included_in_units?(unit_ids)}
   end
 
   def any_version_is_unit?
     course_versions.any? {|cv| cv.content_root_type == 'Script'}
+  end
+
+  def self.single_unit_course_offerings_containing_units(unit_ids)
+    CourseOffering.all.select {|co| co.units_included_in_any_version?(unit_ids) && co.any_version_is_unit?}
   end
 end
