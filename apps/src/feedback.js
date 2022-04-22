@@ -799,9 +799,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
         break;
       case TestResults.BLOCK_LIMIT_FAIL:
         var exceededBlockType = this.hasExceededLimitedBlocks_();
-        var limit = Blockly.mainBlockSpace.blockSpaceEditor.blockLimits.getLimit(
-          exceededBlockType
-        );
+        var limit = Blockly.cdoUtils.getBlockLimit(exceededBlockType);
         var block = `<xml><block type='${exceededBlockType}'></block></xml>`;
         message = msg.errorExceededLimitedBlocks({limit}) + block;
         break;
@@ -1959,8 +1957,7 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function(node, filter) {
  * Ensure that all limited toolbox blocks aren't exceeded.
  */
 FeedbackUtils.prototype.hasExceededLimitedBlocks_ = function() {
-  const blockLimits = Blockly.mainBlockSpace.blockSpaceEditor.blockLimits;
-  return blockLimits.blockLimitExceeded && blockLimits.blockLimitExceeded();
+  return Blockly.cdoUtils.blockLimitExceeded();
 };
 
 /**

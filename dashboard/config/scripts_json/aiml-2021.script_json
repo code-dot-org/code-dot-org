@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2022-03-11 12:08:34 UTC",
+    "serialized_at": "2022-04-14 16:03:20 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -3076,7 +3076,7 @@
       "key": "823c914b-db55-4005-b853-e9bf07946fd1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _If you could add another question to the show survey, what question would you ask? Why do you think that question would be helpful in deciding a shoe?_\r\n\r\nHave students journal individually, then share with a partner. If time remains, invite a few students to share with the class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _If you could add another question to the shoe survey, what question would you ask? Why do you think that question would be helpful in deciding a shoe?_\n\nHave students journal individually, then share with a partner. If time remains, invite a few students to share with the class.",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -4053,7 +4053,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360027667832-Rubrics-in-Code-org-courses)."
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
           }
         ]
       },
@@ -12786,6 +12786,16 @@
       }
     },
     {
+      "key": "2dfd2497-81b1-41b1-8224-64c2d4118c40",
+      "properties": {
+        "description": "Create a machine learning model using a real-world dataset"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "objective.key": "2dfd2497-81b1-41b1-8224-64c2d4118c40"
+      }
+    },
+    {
       "key": "316092e7-641f-433f-837c-db12e34accfd",
       "properties": {
         "description": "Describe the differences between supervised and unsupervised learning."
@@ -12923,6 +12933,16 @@
       "seeding_key": {
         "lesson.key": "lesson9",
         "objective.key": "9dd5b6eb-e1cd-4dae-8bf6-77fb08ba9d59"
+      }
+    },
+    {
+      "key": "b619b215-4403-423d-85c5-93f5c51f2769",
+      "properties": {
+        "description": "Create an app that uses a machine learning model"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-18",
+        "objective.key": "b619b215-4403-423d-85c5-93f5c51f2769"
       }
     },
     {

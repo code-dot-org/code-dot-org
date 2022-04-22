@@ -4,6 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "Supports to Teach CS Discoveries",
+          "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
+          "link": "https://code.org/educate/professional-development-online",
+          "type": "information",
+          "visibility": "Teacher-only"
+        }
+      ],
       "curriculum_umbrella": "CSD",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -18,8 +27,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-10 04:16:33 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-04-14 20:53:46 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -7547,7 +7556,7 @@
       "properties": {
         "description": "Send students to Code Studio to complete their reflection on their attitudes toward computer science.  Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
         "name": "Reflect\r",
-        "progression_name": "Reflection"
+        "progression_name": "End-Of-Unit Survey"
       },
       "seeding_key": {
         "activity_section.key": "574e77dd-d6f7-4d59-80db-f24e54851aa1",
@@ -8737,6 +8746,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 drawSprites placement match_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -10559,6 +10571,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - Interactive Card - ExampleChoice_2022"
+        ],
         "progression": "Make an Interactive Card"
       },
       "bonus": false,
@@ -12981,6 +12996,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - Design a Game 1 - ExampleChoice_2022"
+        ],
         "progression": "Sample Games"
       },
       "bonus": false,
@@ -13253,15 +13271,12 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2022"
-        ],
-        "progression": "Reflection"
+        "progression": "End-Of-Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2022"
+          "Student End of Unit Survey_csd3-2022"
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
@@ -13269,7 +13284,7 @@
         "activity_section.key": "574e77dd-d6f7-4d59-80db-f24e54851aa1"
       },
       "level_keys": [
-        "csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2022"
+        "Student End of Unit Survey_csd3-2022"
       ]
     },
     {
@@ -16037,9 +16052,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2022",
+        "level.key": "Student End of Unit Survey_csd3-2022",
         "script_level.level_keys": [
-          "csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2022"
+          "Student End of Unit Survey_csd3-2022"
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "csd3_2",
@@ -16075,7 +16090,7 @@
   "resources": [
     {
       "name": "All Code",
-      "url": "/s/csd3-2021/code",
+      "url": "/s/csd3-2022/code",
       "key": "all_code_1",
       "properties": {
         "is_rollup": true
@@ -16086,7 +16101,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/csd3-2021/resources",
+      "url": "/s/csd3-2022/resources",
       "key": "all_resources_1",
       "properties": {
         "is_rollup": true
@@ -16097,7 +16112,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/csd3-2021/standards",
+      "url": "/s/csd3-2022/standards",
       "key": "all_standards_1",
       "properties": {
         "is_rollup": true
@@ -16108,7 +16123,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/csd3-2021/vocab",
+      "url": "/s/csd3-2022/vocab",
       "key": "all_vocabulary_1",
       "properties": {
         "is_rollup": true
@@ -16360,11 +16375,9 @@
     },
     {
       "name": "CSD Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview",
+      "url": "https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview",
       "key": "csd_curriculum_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csd_curriculum_guide"
@@ -16392,14 +16405,22 @@
     },
     {
       "name": "CSD Implementation Guide",
-      "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
+      "url": "https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview",
       "key": "csd_implementation_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csd_implementation_guide"
+      }
+    },
+    {
+      "name": "CSD Programming Levels Guide",
+      "url": "https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview",
+      "key": "csd_programming_levels_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_programming_levels_guide"
       }
     },
     {
@@ -17221,13 +17242,13 @@
     },
     {
       "name": "Teacher Forum",
-      "url": "https://forum.code.org/c/csd3",
-      "key": "teacher_forum_1",
+      "url": "https://forum.code.org/c/csd",
+      "key": "teacher_forum",
       "properties": {
         "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "teacher_forum_1"
+        "resource.key": "teacher_forum"
       }
     },
     {
@@ -18042,7 +18063,13 @@
     },
     {
       "seeding_key": {
-        "resource.key": "teacher_forum_1",
+        "resource.key": "csd_programming_levels_guide",
+        "script.name": "csd3-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
         "script.name": "csd3-2022"
       }
     }

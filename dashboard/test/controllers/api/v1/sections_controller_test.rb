@@ -166,6 +166,16 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal "section_full", returned_json['result']
   end
 
+  test "join with participant type not student" do
+    student = create :student
+    sign_in student
+    section = create(:section, login_type: 'email', participant_type: 'teacher')
+
+    post :join, params: {id: section.code}
+    assert_response :forbidden
+    assert_equal "cant_be_participant", returned_json['result']
+  end
+
   test "join with a restricted section code" do
     student = create :student
     sign_in student

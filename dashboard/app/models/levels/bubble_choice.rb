@@ -143,8 +143,9 @@ class BubbleChoice < DSLDefined
         level_url(level.id)
 
       if user_id
+        level_for_sublevel_progress = BubbleChoice.level_for_progress_for_sublevel(level)
         user_level = UserLevel.find_by(
-          level: level,
+          level: level_for_sublevel_progress,
           script: script_level.try(:script),
           user_id: user_id
           )
@@ -230,6 +231,11 @@ class BubbleChoice < DSLDefined
     reload
   end
 
+  # Some BubbleChoice sublevels also have a contained level
+  def self.level_for_progress_for_sublevel(sublevel)
+    sublevel.contained_levels.any? ? sublevel.contained_levels.first : sublevel
+  end
+
   private
 
   # Returns the sublevel for a user that has the highest best_result.
@@ -237,7 +243,8 @@ class BubbleChoice < DSLDefined
   # @param [Script]
   # @return [Level]
   def best_result_sublevel(user, script)
-    ul = user.user_levels.where(level: sublevels, script: script).max_by(&:best_result)
+    sublevels_for_progress = sublevels.map {|sublevel| BubbleChoice.level_for_progress_for_sublevel(sublevel)}
+    ul = user.user_levels.where(level: sublevels_for_progress, script: script).max_by(&:best_result)
     ul&.level
   end
 

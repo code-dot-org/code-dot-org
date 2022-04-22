@@ -6,10 +6,12 @@ import * as shapes from '../shapes';
 import {KeyCodes} from '@cdo/apps/constants';
 import {selectors} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {PromptType} from '../redux/spritelabInput';
+import {animationSourceUrl} from '../redux/animationList';
 
 class SpritelabInput extends React.Component {
   static propTypes = {
     animationList: shapes.AnimationList.isRequired,
+    channelId: PropTypes.string,
     inputList: PropTypes.arrayOf(
       PropTypes.shape({
         promptType: PropTypes.string,
@@ -59,9 +61,16 @@ class SpritelabInput extends React.Component {
 
   constructSpriteMap = memoize(animationPropsByKey => {
     const spriteMap = {};
-    Object.values(animationPropsByKey).forEach(
-      animation => (spriteMap[`image_${animation.name}`] = animation.sourceUrl)
-    );
+
+    Object.entries(animationPropsByKey).forEach(animation => {
+      const animationKey = animation[0];
+      const animationData = animation[1];
+      const url =
+        animationData.sourceUrl ||
+        // If custom animation, generate URL from animations API
+        animationSourceUrl(animationKey, animationData, this.props.channelId);
+      spriteMap[`image_${animationData.name}`] = url;
+    });
     return spriteMap;
   });
 
@@ -240,6 +249,7 @@ const styles = {
 
 export default connect(state => ({
   animationList: state.animationList,
+  channelId: state.pageConstants.channelId,
   inputList: state.spritelabInputList || [],
   isRunning: selectors.isRunning(state),
   isPaused: selectors.isPaused(state)

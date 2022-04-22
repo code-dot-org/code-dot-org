@@ -52,8 +52,10 @@ class CodeReviewComment < ApplicationRecord
   def compute_is_from_teacher
     # Only should happen if we hard delete the commenter's account
     # via the delete accounts helper.
-    return false if commenter.nil?
+    return false if commenter.nil? || project_owner.nil?
 
-    self.is_from_teacher = commenter.teacher? ? true : false
+    # This is not ideal, as it only checks that the project owner
+    # is a participant in any section instructed by the commenter.
+    self.is_from_teacher = project_owner.teachers.include?(commenter)
   end
 end

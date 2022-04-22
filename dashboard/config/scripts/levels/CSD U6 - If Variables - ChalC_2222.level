@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-08T17:01:37.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -73,7 +69,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://dancodedotorg.github.io/CSD-U6-Images/L5/challenge/U6L5.13.c-finished.gif)\r\n\r\n<br/>\r\n\r\nClick to expand\r\n\r\n</div>\r\n\r\n# Emoji Race\r\n\r\nCreate a game that uses the left and right buttons to move characters down the screen. The first person to reach the bottom of the screen is the winner!\r\n\r\n## Do This\r\n\r\n_Note: You can click the instructions below to expand them and see more specific instructions_\r\n\r\n1) ::: details [When the left button is pressed, move the red emoji down the screen]\r\n\t- Use the [Counter Pattern](/docs/concepts/patterns/counter-patterns-with-event/) to change the `redY` variable so it moves down the screen.\r\n    - Update the `y` position of the red emoji using [`setProperty()`(#fff176)](/docs/applab/setProperty/).\r\n    :::\r\n2) ::: details [If the red emoji is at the bottom of the screen, show the `redWinner` screen]\r\n\t- Use an [`if statement`(#64B5F6)](/docs/applab/ifBlock/) to check if the y-position is past the bottom of the screen.\r\n    - If it is: change the screen to `redWinner`.\r\n    :::\r\n3) ::: details [When the right button is pressed, move the blue emoji down the screen]\r\n\t- Use the [Counter Pattern](/docs/concepts/patterns/counter-patterns-with-event/) to change the `blueY` variable so it moves down the screen.\r\n    - Update the `y` position of the blue emoji using [`setProperty()`(#fff176)](/docs/applab/setProperty/).\r\n    :::\r\n4) ::: details [If the blue emoji is at the bottom of the screen, show the `blueWinner` screen]\r\n\t- Use an [`if statement`(#64B5F6)](/docs/applab/ifBlock/) to check if the y-position is past the bottom of the screen.\r\n    - If it is: change the screen to `blueWinner`.\r\n    :::\r\n\r\n**Run Your Code!** Try playing with a friend where one person controls the red emoji and the other person controls the blue emoji.",
+    "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/b8b57481f944ac00e0d759cea15798b3-image-1650059926593.gif)\r\n\r\n<br/>\r\n\r\nClick to expand\r\n\r\n</div>\r\n\r\n# Emoji Race\r\n\r\nCreate a game that uses the left and right buttons to move characters down the screen. The first person to reach the bottom of the screen is the winner!\r\n\r\n## Do This\r\n\r\n_Note: You can click the instructions below to expand them and see more specific instructions_\r\n\r\n1) ::: details [When the left button is pressed, move the red emoji down the screen]\r\n\t- Use the [Counter Pattern](/docs/concepts/patterns/counter-patterns-with-event/) to change the `redY` variable so it moves down the screen.\r\n    - Update the `y` position of the red emoji using [`setProperty()`(#fff176)](/docs/applab/setProperty/).\r\n    :::\r\n2) ::: details [If the red emoji is at the bottom of the screen, show the `redWinner` screen]\r\n\t- Use an [`if statement`(#64B5F6)](/docs/applab/ifBlock/) to check if the y-position is past the bottom of the screen.\r\n    - If it is: change the screen to `redWinner`.\r\n    :::\r\n3) ::: details [When the right button is pressed, move the blue emoji down the screen]\r\n\t- Use the [Counter Pattern](/docs/concepts/patterns/counter-patterns-with-event/) to change the `blueY` variable so it moves down the screen.\r\n    - Update the `y` position of the blue emoji using [`setProperty()`(#fff176)](/docs/applab/setProperty/).\r\n    :::\r\n4) ::: details [If the blue emoji is at the bottom of the screen, show the `blueWinner` screen]\r\n\t- Use an [`if statement`(#64B5F6)](/docs/applab/ifBlock/) to check if the y-position is past the bottom of the screen.\r\n    - If it is: change the screen to `blueWinner`.\r\n    :::\r\n\r\n**Run Your Code!** Try playing with a friend where one person controls the red emoji and the other person controls the blue emoji.",
     "parent_level_id": 20595,
     "name_suffix": "_2222",
     "mini_rubric": "false",
@@ -99,9 +95,13 @@
     "encrypted_examples": "D+NpsjQjCRiiJM3YWMXcbMiaDl+SSmoSysZWiEM25vYb1kXVN7mb2ji7i2FG\n8jNFWLejPHvTwrkvPT7z7oTkWA==\n",
     "preload_asset_list": null
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-04-08T17:01:37.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-08T17:01:37.286+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - ChalC_2022\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - ChalC_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-08T17:01:37.286+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - ChalC_2022\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - ChalC_2022\"},{\"changed_at\":\"2022-04-15 21:59:19 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
