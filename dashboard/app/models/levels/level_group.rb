@@ -180,7 +180,7 @@ class LevelGroup < DSLDefined
       level.rewrite_dsl_file(LevelGroupDSL.serialize(level))
       level
     rescue Exception => e
-      raise e, "Failed to clone #{name} as #{new_name}. Message: #{e.message}"
+      raise e, "Failed to clone LevelGroup #{name.inspect} as #{new_name.inspect}. Message:\n#{e.message}", e.backtrace
     end
   end
 
