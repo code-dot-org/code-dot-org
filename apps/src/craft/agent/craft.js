@@ -179,12 +179,24 @@ export default class Craft {
 
     config.muteBackgroundMusic = function() {
       Craft.musicController.setMuteMusic(true);
-      Craft.musicController.stop();
     };
 
     config.unmuteBackgroundMusic = function() {
-      Craft.musicController.setMuteMusic(false);
-      Craft.beginBackgroundMusic();
+      var songToPlayFirst = Craft.getFirstSong();
+      Craft.musicController.setMuteMusic(false, songToPlayFirst);
+    };
+
+    // Play music when the instructions are shown
+    Craft.beginBackgroundMusic = function() {
+      var songToPlayFirst = Craft.getFirstSong();
+      Craft.musicController.play(songToPlayFirst);
+    };
+
+    Craft.getFirstSong = function() {
+      Sounds.getSingleton().whenAudioUnlocked(function() {
+        var hasSongInLevel = Craft.level.songs && Craft.level.songs.length > 1;
+        return hasSongInLevel ? Craft.level.songs[0] : null;
+      });
     };
 
     config.skin.staticAvatar = MEDIA_URL + 'Sliced_Parts/Agent_Neutral.png';
@@ -406,17 +418,6 @@ export default class Craft {
 
   static getAppReducers() {
     return reducers;
-  }
-
-  /**
-   * Play music when the instructions are shown
-   */
-  static beginBackgroundMusic() {
-    Sounds.getSingleton().whenAudioUnlocked(function() {
-      const hasSongInLevel = Craft.level.songs && Craft.level.songs.length > 1;
-      const songToPlayFirst = hasSongInLevel ? Craft.level.songs[0] : null;
-      Craft.musicController.play(songToPlayFirst);
-    });
   }
 
   static onArrowButtonDown(e, btn) {

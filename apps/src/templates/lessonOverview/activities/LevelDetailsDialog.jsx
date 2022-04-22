@@ -158,7 +158,7 @@ class LevelDetailsDialog extends Component {
           isCollapsed={false}
           hidden={false}
           isEmbedView={false}
-          isBackgroundMusicLevel={false}
+          hasBackgroundMusic={false}
           mainStyle={{paddingBottom: 5, position: 'static'}}
           containerStyle={{
             overflowY: 'auto',
