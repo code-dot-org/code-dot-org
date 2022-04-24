@@ -174,7 +174,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'pl section must use email logins required' do
-    section = build :section, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, login_type: 'word'
+    section = build :section, :teacher_participants, login_type: 'word'
     refute section.valid?
     assert_equal ['Login type must be email for professional learning sections.'], section.errors.full_messages
   end
@@ -282,7 +282,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'add_student returns failure if user does not meet participant_type for section' do
-    section_with_teacher_participants = build :section, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    section_with_teacher_participants = build :section, :teacher_participants
     assert_does_not_create(Follower) do
       add_student_return = section_with_teacher_participants.add_student @student
       assert_equal Section::ADD_STUDENT_FORBIDDEN, add_student_return
