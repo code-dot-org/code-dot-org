@@ -1,5 +1,4 @@
-import React, {useState, useCallback} from 'react';
-import PropTypes from 'prop-types';
+import React, {useState} from 'react';
 import {Button} from 'react-bootstrap';
 import {range, mapValues} from 'lodash';
 import {
@@ -13,28 +12,34 @@ const PetitionForm = () => {
   const [data, setData] = useState(mapValues(keyValidation, () => ''));
   const [errorMessage, setErrorMessage] = useState('');
 
-  const handleChange = useCallback(e => {
+  const handleChange = e => {
     e.persist();
     setData(data => ({...data, [e.target.name]: e.target.value}));
-  }, []);
+  };
 
   const handleSubmit = e => {
     e.preventDefault();
     setErrorMessage(createErrorMessage(data));
   };
 
-  const PetitionFieldGroup = useCallback(
-    ({id, ...props}) => (
-      <ControlledFieldGroup
-        id={id}
-        onChange={handleChange}
-        value={data[id] || ''}
-        {...props}
-      />
-    ),
-    [handleChange, data]
+  const buildControlledFieldGroup = (
+    id,
+    placeholderOrLabel,
+    helpText,
+    componentClass,
+    children
+  ) => (
+    <ControlledFieldGroup
+      id={id}
+      placeholderOrLabel={placeholderOrLabel}
+      helpText={helpText}
+      componentClass={componentClass}
+      onChange={handleChange}
+      value={data[id] || ''}
+    >
+      {children}
+    </ControlledFieldGroup>
   );
-  PetitionForm.propTypes = {id: PropTypes.string.isRequired};
 
   return (
     <>
@@ -44,37 +49,34 @@ const PetitionForm = () => {
         onSubmit={handleSubmit}
       >
         <div className={'petition-space'}>{errorMessage}</div>
-        <PetitionFieldGroup id="name" placeholderOrLabel="Name" />
-        <PetitionFieldGroup
-          id="email"
-          placeholderOrLabel="Email"
-          helpText="Only used for infrequent updates"
-        />
-        <PetitionFieldGroup
-          id="zip-or-country"
-          placeholderOrLabel="ZIP code or country"
-          helpText="Enter country if outside the United States"
-        />
-        <PetitionFieldGroup
-          id="age"
-          placeholderOrLabel="Age"
-          helpText={
-            <a href="/privacy">See our privacy practices for children</a>
-          }
-          componentClass="select"
-        >
-          {['-', ...range(1, 101)].map((age, index) => (
+        {buildControlledFieldGroup('name', 'Name')}
+        {buildControlledFieldGroup(
+          'email',
+          'Email',
+          'Only used for infrequent updates'
+        )}
+        {buildControlledFieldGroup(
+          'zip-or-country',
+          'ZIP code or country',
+          'Enter country if outside the United States'
+        )}
+        {buildControlledFieldGroup(
+          'age',
+          'Age',
+          <a href="/privacy">See our privacy practices for children</a>,
+          'select',
+          ['-', ...range(1, 101)].map((age, index) => (
             <option key={index} value={age}>
               {age}
             </option>
-          ))}
-        </PetitionFieldGroup>
-        <PetitionFieldGroup
-          id="profession"
-          placeholderOrLabel="I am a"
-          componentClass="select"
-        >
-          {[
+          ))
+        )}
+        {buildControlledFieldGroup(
+          'profession',
+          'I am a',
+          undefined,
+          'select',
+          [
             '-',
             'Student',
             'Parent',
@@ -86,8 +88,8 @@ const PetitionForm = () => {
             <option key={index} value={profession}>
               {profession}
             </option>
-          ))}
-        </PetitionFieldGroup>
+          ))
+        )}
         <Button
           className="petition-button"
           bsStyle="primary"
