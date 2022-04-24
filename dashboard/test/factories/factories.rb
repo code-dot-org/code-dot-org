@@ -500,11 +500,13 @@ FactoryGirl.define do
     trait :teacher_participants do
       participant_type 'teacher'
       login_type 'email'
+      grade 'pl'
     end
 
     trait :facilitator_participants do
       participant_type 'facilitator'
       login_type 'email'
+      grade 'pl'
     end
   end
 

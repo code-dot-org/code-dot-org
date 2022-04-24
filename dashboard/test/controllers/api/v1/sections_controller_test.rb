@@ -379,6 +379,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       post :create, params: {
         login_type: Section::LOGIN_TYPE_EMAIL,
         participant_type: desired_type,
+        grade: desired_type == 'student' ? 'Other' : 'pl'
       }
       assert_equal desired_type, returned_section.participant_type
     end
