@@ -7,7 +7,7 @@ class SectionTest < ActiveSupport::TestCase
     @teacher = create :teacher
     @section = create :section, teacher: @teacher
 
-    @default_attrs = {user: @teacher, name: 'test-section', participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student}
+    @default_attrs = {user: @teacher, name: 'test-section'}
   end
 
   test "sections are soft-deleted" do
@@ -174,7 +174,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'pl section must use email logins required' do
-    section = build :section, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, login_type: 'word'
+    section = build :section, :teacher_participants, login_type: 'word'
     refute section.valid?
     assert_equal ['Login type must be email for professional learning sections.'], section.errors.full_messages
   end
@@ -282,7 +282,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'add_student returns failure if user does not meet participant_type for section' do
-    section_with_teacher_participants = build :section, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    section_with_teacher_participants = build :section, :teacher_participants
     assert_does_not_create(Follower) do
       add_student_return = section_with_teacher_participants.add_student @student
       assert_equal Section::ADD_STUDENT_FORBIDDEN, add_student_return
@@ -620,6 +620,40 @@ class SectionTest < ActiveSupport::TestCase
 
     assert summarized_section[:script][:project_sharing]
     assert summarized_section[:sharing_disabled]
+  end
+
+  test 'can_join_section_as_participant? returns correct response based on permissions' do
+    student_section = create :section
+    teacher_section = create :section, :teacher_participants
+    facilitator_section = create :section, :facilitator_participants
+
+    levelbuilder = create :levelbuilder
+    universal_instructor = create :universal_instructor
+    plc_reviewer = create :plc_reviewer
+    facilitator = create :facilitator
+    teacher = create :teacher
+    student = create :student
+
+    assert student_section.can_join_section_as_participant?(levelbuilder)
+    assert student_section.can_join_section_as_participant?(universal_instructor)
+    assert student_section.can_join_section_as_participant?(plc_reviewer)
+    assert student_section.can_join_section_as_participant?(facilitator)
+    assert student_section.can_join_section_as_participant?(teacher)
+    assert student_section.can_join_section_as_participant?(student)
+
+    assert teacher_section.can_join_section_as_participant?(levelbuilder)
+    assert teacher_section.can_join_section_as_participant?(universal_instructor)
+    assert teacher_section.can_join_section_as_participant?(plc_reviewer)
+    assert teacher_section.can_join_section_as_participant?(facilitator)
+    assert teacher_section.can_join_section_as_participant?(teacher)
+    refute teacher_section.can_join_section_as_participant?(student)
+
+    assert facilitator_section.can_join_section_as_participant?(levelbuilder)
+    assert facilitator_section.can_join_section_as_participant?(universal_instructor)
+    refute facilitator_section.can_join_section_as_participant?(plc_reviewer)
+    assert facilitator_section.can_join_section_as_participant?(facilitator)
+    refute facilitator_section.can_join_section_as_participant?(teacher)
+    refute facilitator_section.can_join_section_as_participant?(student)
   end
 
   test 'valid_grade? accepts K-12 and Other' do
