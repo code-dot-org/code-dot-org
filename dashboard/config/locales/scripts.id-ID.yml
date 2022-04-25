@@ -19109,6 +19109,8 @@ id:
               name: Buat Adegan
             Text and Captioned Scenes:
               name: Teks dan Adegan Berteks
+            Sprite Properties:
+              name: Properti Sprite
           student_description: " Di Unit 3, Pengalaman coding Anda akan terbentuk
             sewaktu Anda memprogram animasi, seni interaktif, dan permainan di Game
             Lab. Unit ini dimulai dengan bentuk-bentuk sederhana dan berjenjang hingga
@@ -21661,6 +21663,8 @@ id:
               name: variabel
             Sprites and Animations:
               name: Sprite dan Animasi
+            Sprite Properties:
+              name: Properti Sprite
             Text and Captioned Scenes:
               name: Teks dan Adegan Berteks
             The Draw Loop:
@@ -24304,6 +24308,8 @@ id:
               name: variabel
             Sprites:
               name: Sprites
+            Sprite Properties:
+              name: Properti Sprite
             Text:
               name: Teks
               description_student: "**Pertanyaan Hari Ini: Bagaimana kita bisa menggunakan
@@ -24945,6 +24951,9 @@ id:
             Sprites:
               key: Sprites
               name: Sprites
+            Sprite Properties:
+              key: Properti Sprite
+              name: Properti Sprite
             Text:
               key: Teks
               name: Teks
@@ -33599,6 +33608,9 @@ id:
             Sprites:
               name: Sprites
               key: Sprites
+            Sprite Properties:
+              name: Properti Sprite
+              key: Properti Sprite
             Text:
               name: Teks
               key: Teks

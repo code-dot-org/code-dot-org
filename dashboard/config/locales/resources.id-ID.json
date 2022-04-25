@@ -2059,6 +2059,9 @@
         "sprites_1/csd/2021": {
           "name": "Sprites"
         },
+        "sprite_properties/csd/2021": {
+          "name": "Properti Sprite"
+        },
         "youtube-flipbook/csd/2021": {
           "type": "Video"
         },
