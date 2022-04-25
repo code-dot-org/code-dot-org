@@ -1358,7 +1358,7 @@
   "outdatedCourseWarningTitle": "This course is outdated!",
   "outdatedCourseWarningDescCourses1To4": "Use [CS Fundamentals Courses A-F]({csFundCourseLink}) instead. These teach the same concepts more effectively, are actively supported, and have full translation into over 30 languages.",
   "outdatedCourseWarningDescCoursesAccelCourse": "We recommend our [Express course]({expressCourseLink}) instead, which teaches the same concepts more effectively, is actively supported, and has full translation into over 30 languages.",
-  "outdatedCourseWarningDescCoursesCSInAlgebra": "We recommend the [Bootstrap:Algebra course]({bootstrapAlgLink}) instead, which is not a Code.org course but covers similar content.",
+  "outdatedCourseWarningDescCoursesCSInAlgebra": "We recommend the [Bootstrap: Algebra course]({bootstrapAlgLink}) instead, which is not a Code.org course but covers similar content.",
   "overview": "Overview",
   "paginationLabel": "Page:",
   "pairingNavigatorWarning": "This puzzle was completed while pairing with {driver}.",
