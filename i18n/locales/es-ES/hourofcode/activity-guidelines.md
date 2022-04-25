@@ -184,19 +184,19 @@ Además, para ser incluidas en la lista, todas las actividades deben:
 - No requerir registro 
 - No requerir pago (a excepción de las actividades de robótica, que pueden requerir la compra de un robot o kit) Para actividades autodirigidas para nuevos docentes y estudiantes, el comité de revisión buscará si:
 
-For self-directed activities for new teachers and students the review committee will be looking for whether:
+En el caso de las actividades autodidácticas para nuevos docentes y estudiantes, el comité de revisión buscará si:
 
-- Reciban las calificaciones más altas del comité de revisión
+- Reciben las calificaciones más altas del comité de revisión
 - Son actividades autodirigidas de una hora diseñadas para principiantes (estudiantes y docentes)
 - Atraen a una amplia gama de usuarios (en todas las plataformas, idiomas y edades)
 
-Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
+Los docentes y los alumnos podrán buscar y filtrar nuestra lista de actividades en función de filtros como el grado, el nivel de experiencia, la materia, el hardware, etc. Por defecto, mostraremos primero los planes de estudio y las actividades que:
 
 - ¿En qué plataformas y navegadores funciona mejor el tutorial?
 - Retroalimentación crítica - ¿Qué se puede mejorar?
-- Appeal to a wide range of users (across platforms, languages, and ages)
+- Atraen a una amplia gama de usuarios (en todas las plataformas, idiomas y edades)
 - ¿Alienta esta actividad a los estudiantes a crear algo único?
-- Are new this year
+- Son una novedad este año
 
 [**Volver al principio**](#top)
 
@@ -204,11 +204,11 @@ Teachers and students will be able to search through and filter our list of acti
 
 ## Sugerencias para diseñar tutoriales autoguiados de una hora
 
-You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
+Puedes incluir el [Logotipo de la Hora del Código](https://hourofcode.com/us/promote/resources#logo) en tu tutorial, pero no es necesario. Si utilizas el logo de la Hora del Código, consulta las directrices de la marca registrada más abajo. <u>Bajo ninguna circunstancia puedes usar el logo y el nombre de Code.org.</u> Ambos son marcas registradas y no pueden aparecer junto a una marca de un tercero sin un permiso expreso por escrito.
 
 **Incluye notas para el docente.** Los estudiantes deben poder seguir a su ritmo la mayoría de las actividades. Pero si una actividad debe ser gestionada por el docente, incluye instrucciones claras y simples en forma de notas en una URL separada que envías con tu actividad. No solo los estudiantes son principiantes, algunos docentes también lo son.
 
-**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
+**Incluya las notas del profesor.** La mayoría de las actividades deben ser dirigidas por alumnos. Pero si una actividad debe ser gestionada por el profesor, por favor incluya instrucciones claras y simples en forma de "notas de profesor" en una URL separada enviada con su actividad. No solo los estudiantes son principiantes, algunos docentes también lo son. Incluya información como:
 
 - ¿En qué plataformas y navegadores funciona mejor el tutorial?
 - ¿Funciona en smartphones? ¿Y en tablets?
@@ -217,13 +217,13 @@ You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resour
 
 **Anima a los estudiantes a publicar en las redes sociales (donde sea apropiado) una vez que terminen.** Por ejemplo, "He completado una Hora del Código con ________ ¿Y tú? #HoraDelCódigo”, o “He completado una #HoraDelCódigo como parte de la #CSEdWeek.
 
-Toda actividad enviada antes del 1ro de octubre recibirá una evaluación estándar, ya sea que reciba una evaluación temprana o no. Durante el periodo de evaluación estándar (septiembre-octubre), los evaluadores se enfocarán en calificar las actividades de acuerdo a los criterios descritos en la sección "Cómo serán evaluadas las actividades" de arriba. Al menos que señales cambios específicos en la actividad, los evaluadores se basarán en la retroalimentación de la evaluación temprana para calificar las actividades. @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+Toda actividad enviada antes del 1ro de octubre recibirá una evaluación estándar, ya sea que reciba una evaluación temprana o no. Durante el periodo de evaluación estándar (septiembre-octubre), los evaluadores se enfocarán en calificar las actividades de acuerdo a los criterios descritos en la sección "Cómo serán evaluadas las actividades" de arriba. Al menos que señales cambios específicos en la actividad, los evaluadores se basarán en la retroalimentación de la evaluación temprana para calificar las actividades. @Scratch.” Use el HashTag **#HourOfCode** (Con las letras H, O, C en mayúsculas)
 
-**Create your activity in Spanish or in other languages besides English.**
+**Crea tu actividad en español o en otros idiomas además del inglés.**
 
-**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
+**Explica o conecta la actividad a un contexto social significativo.** ¡La programación se convierte en un superpoder cuando los estudiantes ven cómo puede mejorar el mundo!
 
-**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
+**Asegúrate de que tu tutorial puede ser utilizado en un [paradigma](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) de Programación por Parejas.** Esto es especialmente útil para la Hora del Código, ya que muchas aulas no disponen de ordenadores para todos los alumnos.
 
 [**Volver al principio**](#top)
 
@@ -244,15 +244,15 @@ Toda actividad enviada antes del 1ro de octubre recibirá una evaluación están
 
 ## Pixel de seguimiento
 
-In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
+Para hacer un seguimiento más preciso de la participación, pedimos a todos los socios de los tutoriales que incluyan una imagen de seguimiento de 1 píxel en la primera página de sus tutoriales de La Hora del Código. La imagen pixelada debe estar sólo en la página de inicio. No lo incluyas en ninguna de las páginas intermedias de tu tutorial.
 
-This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
+Esto nos permitirá contar los usuarios que hacen tu tutorial de La Hora del Código. Esto hará que el recuento de la participación sea más preciso para tu tutorial.
 
-If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
+Si tu tutorial es aprobado e incluido en la página final del tutorial, Code.org te proporcionará un píxel de seguimiento único para que lo integres en tu tutorial. Véase el ejemplo siguiente.
 
-NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
+NOTA: esto no es importante en el caso de las aplicaciones instalables (aplicaciones iOS/Android o aplicaciones instalables en el escritorio)
 
-Example tracking pixels for Dance Party:
+Ejemplo de píxeles de seguimiento para la Fiesta de Baile:
 
 IMG SRC = <http://code.org/api/hour/begin_dance.png>   
 
@@ -263,7 +263,7 @@ IMG SRC = <http://code.org/api/hour/begin_dance.png>
 
 ## Promoción de tu actividad, la Semana por la Educación en Ciencias de la Computación y la Hora del Código
 
-Esto nos permitirá contar a los usuarios que hacen tu tutorial de la Hora del Código. Nos permitirá conocer un número más preciso de la participación en tu tutorial. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
+Esto nos permitirá contar a los usuarios que hacen tu tutorial de la Hora del Código. Nos permitirá conocer un número más preciso de la participación en tu tutorial. Es mucho más probable que tus usuarios reaccionen a un mensaje tuyo acerca de tu actividad. Usa la campaña internacional de la Hora del Código durante la Semana por la Educación en Ciencias de la Computación como una excusa para animar a los usuarios a invitar a otros a unirse. ¡Ayúdanos a alcanzar más estudiantes!
 
 - Destaca la Hora del Código y la Semana por la Educación en Ciencias de la Computación en tu sitio web. Por ejemplo: <http://www.tynker.com/hour-of-code>
 - Promueve la Hora del Código en redes sociales, medios de comunicación tradicionales, listas de correo, etcétera, con el hashtag #HoraDelCódigo (con H, D y C en mayúsculas)
