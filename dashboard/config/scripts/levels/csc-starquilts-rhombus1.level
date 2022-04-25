@@ -12,11 +12,10 @@
     "start_direction": "0",
     "x": "200",
     "y": "200",
-    "free_play": "true",
+    "free_play": "false",
     "impressive": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"New Artist Project_callout1\",\r\n  \"callout_text\": \"Click the categories to see the blocks in your toolbox! Drag blocks to the workspace to add them to your program\",\r\n  \"element_id\": \"#when_run\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": -125,\r\n     \"y\": 100\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"New Artist Project_callout2\",\r\n  \"callout_text\": \"Hit \\\"Run\\\" to save and run your program\",\r\n  \"element_id\": \"#runButton\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"top left\",\r\n    \"adjust\": {\r\n     \"x\": 15,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"sign_in_to_save_project\",\r\n  \"callout_text\": \"Want to access your project later? Sign in to save this project to your account!\",\r\n  \"element_id\": \".button-signin\",\r\n  \"on\": \"run_button_pressed\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top right\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -40,8 +39,8 @@
     "mini_rubric": "false",
     "validation_enabled": "false",
     "enable_download_image": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":null}]",
-    "long_instructions": "##Make a rhombus stamp. \r\n \r\n\r\n<div style=\"float:right;padding:20px\">\r\n<img src=\"https://images.code.org/117504ea63c4b71c2f06499eb7749e32-image-1649477817617.16.50 PM.png\" style=\"height:80px; border-width:1px; border-style:solid; border-color:black; border-radius:10px\">\r\n<p style=\"text-align: center\">\r\nexample\r\n</p>\r\n</div>\r\n\r\n\r\n- Drag the `draw shape` block and snap it under the `when run` block.\r\n- Use the drop down menu to select a rhombus color.",
+    "authored_hints": "[]",
+    "long_instructions": "<div style=\"float:right;padding:20px\">\r\n<img src=\"https://images.code.org/117504ea63c4b71c2f06499eb7749e32-image-1649477817617.16.50 PM.png\" style=\"height:80px; border-width:1px; border-style:solid; border-color:black; border-radius:10px\">\r\n<p style=\"text-align: center\">\r\nexample\r\n</p>\r\n</div>\r\n\r\n**Use a rhombus stamp**\r\n\r\n- Drag the `draw shape` block and snap it under the `when run` block.\r\n- Use the drop down menu to select a rhombus color.\r\n- Click run to test your code and then click finish to move on to the next level.",
     "project_template_level_name": "csc-starquilts-lesson1-template",
     "encrypted_examples": [
 
@@ -54,7 +53,7 @@
   "level_num": "custom",
   "user_id": 16,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-09T04:15:43.916+00:00\",\"changed\":[\"cloned from \\\"csc-starquilts-row2\\\"\"],\"cloned_from\":\"csc-starquilts-row2\"},{\"changed_at\":\"2022-04-09 04:17:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-09 04:19:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"project_template_level_name\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-09 04:19:30 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-09 04:19:38 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-09 04:21:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-09 05:04:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-04-09T04:15:43.916+00:00\",\"changed\":[\"cloned from \\\"csc-starquilts-row2\\\"\"],\"cloned_from\":\"csc-starquilts-row2\"},{\"changed_at\":\"2022-04-09 04:17:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-09 04:19:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"project_template_level_name\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-09 04:19:30 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-09 04:19:38 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-09 04:21:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-09 05:04:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-21 20:12:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-22 18:15:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-22 18:17:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-22 18:19:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"free_play\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-22 19:04:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"callout_json\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-04-23 00:18:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -188,7 +187,18 @@
     </toolbox_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" movable="false" deletable="false"/>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="turtle_shape_with_side_length">
+              <field name="VALUE">smallRhombusMaroon</field>
+              <value name="SIZE">
+                <block type="math_number">
+                  <field name="NUM">35</field>
+                </block>
+              </value>
+            </block>
+          </next>
+        </block>
       </xml>
     </solution_blocks>
   </blocks>

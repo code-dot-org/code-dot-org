@@ -3,7 +3,7 @@
   "name": "createLed()",
   "category": "Maker",
   "category_key": "maker",
-  "content": "A command to create a new LED object that can be programmed in the same way as the blocks in the Circuit drawer. The `var myLed = createLed()` command creates a new LED object named `myLed` that behaves just like the `led` blocks you've been using. Remember to pass in a pin parameter so the board knows where the LED is connected.",
+  "content": "A command to create a new LED object that can be programmed in the same way as the blocks in the Circuit drawer. The `var myLed = createLed()` command creates a new LED object named `myLed` that behaves just like the [`led`(#f78183)](/docs/applab/led/) blocks you've been using. Remember to pass in a pin parameter so the board knows where the LED is connected.",
   "examples": [
     {
       "name": "",

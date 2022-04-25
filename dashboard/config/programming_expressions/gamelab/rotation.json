@@ -36,5 +36,5 @@
   "return_value": "Clockwise rotation in degrees of the sprite.",
   "short_description": "Clockwise rotation in degrees of the sprite.",
   "syntax": "sprite.rotation",
-  "tips": "- This is not the sprite's movement direction, see `getDirection` instead.\r\n- Slight rotations in either direction make sprites look like they are jiggling or skidding while moving.\r\n- Sprites all have the same properties and you use the dot notation (combining the name of the sprite, followed by a dot, with the label of the property) to both access and update the property for that sprite.\r\n- Any changes to the properties of a sprite will not be seen until after `drawSprites()` is called."
+  "tips": "- This is not the sprite's movement direction, see [`getDirection`(#4dd0e1)](/docs/applab/getDirection/) instead.\r\n- Slight rotations in either direction make sprites look like they are jiggling or skidding while moving.\r\n- Sprites all have the same properties and you use the dot notation (combining the name of the sprite, followed by a dot, with the label of the property) to both access and update the property for that sprite.\r\n- Any changes to the properties of a sprite will not be seen until after `drawSprites()` is called."
 }
