@@ -13,6 +13,12 @@ export function SingleMethod({method, programmingEnvironmentName, style}) {
       <h3>{method.name}</h3>
       {method.syntax && <EnhancedSafeMarkdown markdown={method.syntax} />}
       {method.content && <EnhancedSafeMarkdown markdown={method.content} />}
+      {!!method.returnValue && (
+        <div>
+          <h4>{i18n.returnsHeader()}</h4>
+          <div>{method.returnValue}</div>
+        </div>
+      )}
       {method.parameters?.length > 0 && (
         <div>
           <h4>{i18n.parametersHeader()}</h4>

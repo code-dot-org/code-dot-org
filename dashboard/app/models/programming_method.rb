@@ -79,6 +79,7 @@ class ProgrammingMethod < ApplicationRecord
       key: key,
       name: name,
       content: content,
+      returnValue: return_value,
       parameters: parsed_parameters,
       examples: parsed_examples,
       syntax: syntax,
