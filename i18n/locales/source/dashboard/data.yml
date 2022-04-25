@@ -672,6 +672,11 @@ en:
         PL_CSP_EIPMOverview: Guide to EIPM Lessons
         tesstest: Tesstes
         CSA-PL-debugging-temp: Introduction to Debugging in Java Lab - temp
+        csd_app_lab_design_mode: CSD App Lab Design Mode
+        csd_app_lab_events: CSD App Lab Events
+        PL_CSD_Unit4_AppTesting: Paper Prototype Testing
+        csd_u6_circuit_playground: Physical Computing
+        csd_u6_input_output: Input and Output
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

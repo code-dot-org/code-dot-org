@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Debugging practice\r\n\r\nThe program below is supposed to check if the values 2 - 10 can be evenly divided into `num` but the code isn’t working as expected.\r\n\r\nDebug the program so that it works as intended.",
+    "long_instructions": "## Debugging practice\r\n\r\nThe program below is supposed to check if the values 2 - 10 can be evenly divided into `num` but the code isn’t working as expected.\r\n\r\nDebug the program so that it works as intended.\r\n\r\n--- \r\n**Testing your code**\r\n\r\nAfter debugging and running your code, you should expect to see the following in the console when the value stored in `num` is 20. \r\n```\r\n2 can be evenly divided into 20\r\n4 can be evenly divided into 20\r\n5 can be evenly divided into 20\r\n10 can be evenly divided into 20\r\n```",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -12,13 +12,16 @@
         "text": "public class Divide{    \n  public static void main(String[] args){\n\n    int num = 20;\n\n    for(int i = 1; i <=10; i++){\n      if(num/i == 0){\n        System.out.println(i + \" can be evenly divided into \" + num);\n      }\n    }\n    \n  } \n}",
         "isVisible": true
       }
-    }
+    },
+    "encrypted_examples": [
+
+    ]
   },
   "game_id": 68,
+  "published": true,
   "created_at": "2022-03-21T00:56:19.000Z",
   "level_num": "custom",
   "user_id": 977,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-03-21T00:56:19.677+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSA-22-mod3-L3-else-if-practice-1\\\"\"],\"cloned_from\":\"SP-VPL-CSA-22-mod3-L3-else-if-practice-1\"},{\"changed_at\":\"2022-03-21 01:32:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-21 01:33:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-21 01:39:31 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-21 01:40:10 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-21 01:41:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-21 01:42:34 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-21T00:56:19.677+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSA-22-mod3-L3-else-if-practice-1\\\"\"],\"cloned_from\":\"SP-VPL-CSA-22-mod3-L3-else-if-practice-1\"},{\"changed_at\":\"2022-03-21 01:32:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-21 01:33:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-21 01:39:31 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-21 01:40:10 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-21 01:41:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-21 01:42:34 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-04-19 16:54:23 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-04-19 16:55:26 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]"
 }]]></config>
 </Javalab>

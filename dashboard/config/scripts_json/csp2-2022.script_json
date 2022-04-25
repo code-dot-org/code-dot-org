@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-18 19:03:23 UTC",
+    "serialized_at": "2022-04-22 21:21:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -813,7 +813,7 @@
       "key": "2ee7d005-2fc5-48e6-961d-6bdf0ec4af61",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \r\n**Video:** Play \"What is the Internet\". Stop at 1:30.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n**Video:** Play [\"What is the Internet\"](https://www.youtube.com/watch?v=Dxcc6ycZ73M). Stop at 1:30.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3012,7 +3012,7 @@
   "resources": [
     {
       "name": "All Resources",
-      "url": "/s/csp2-2021/resources",
+      "url": "/s/csp2-2022/resources",
       "key": "all_resources_1",
       "properties": {
         "is_rollup": true
@@ -3023,7 +3023,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/csp2-2021/standards",
+      "url": "/s/csp2-2022/standards",
       "key": "all_standards_1",
       "properties": {
         "is_rollup": true
@@ -3046,11 +3046,9 @@
     },
     {
       "name": "CSP Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1s5w7_UnVIGHOdkqCtK2O78rQ7JJFAWlOeZkZNsCovOY/preview",
       "key": "csp_curriculum_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csp_curriculum_guide"
@@ -3245,18 +3243,6 @@
       },
       "seeding_key": {
         "resource.key": "u2l05_packets"
-      }
-    },
-    {
-      "name": "Virtual Modification Resources",
-      "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
-      "key": "virtual_modification_resources",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "virtual_modification_resources"
       }
     },
     {
@@ -3465,12 +3451,6 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
-        "script.name": "csp2-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "virtual_modification_resources",
         "script.name": "csp2-2022"
       }
     }

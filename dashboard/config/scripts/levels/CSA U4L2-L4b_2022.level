@@ -2,20 +2,30 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "override and use equals() method",
+    "long_instructions": "##In Video.java:\r\n\r\n1. Write the `equals()`(#e7e8ea) method. It should return `true`(#e7e8ea) if the `title`(#e7e8ea) of both `Video`(#e7e8ea) objects are the same. Otherwise, return `false`(#e7e8ea).\r\n\r\n##In MyConsole.java:\r\n\r\n2. Test your `equals()`(#e7e8ea) method by checking if `firstVideo`(#e7e8ea) and `secondVideo`(#e7e8ea) are equivalent and printing the result.\r\n\r\n::: details [**Show Me How**]\r\nThe `equals()`(#e7e8ea) method uses the following syntax:\r\n  \r\n  ```\r\n  public boolean equals(Object otherObject) {\r\n    // code to compare values\r\n  }\r\n  ```\r\n\r\nDon't forget to first check if `otherObject`(#e7e8ea) is `null`(#e7e8ea)!\r\n:::",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
-    "encrypted_examples": [
-
-    ]
+    "display_name": "The Video Class",
+    "bubble_choice_description": "Write an equals() method in the Video class to check if Video objects are equivalent.",
+    "thumbnail_url": "https://images.code.org/e5c20d6ce1123d1ec15d8c9f0e97c16e-image-1650492460871.png",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    Video firstVideo = new Video(\"Adventures in Java Lab\", 3);\n    Video secondVideo = new Video(\"Adventures in Java Lab\", 3);\n\n    System.out.println(\"firstVideo == secondVideo: \" + (firstVideo == secondVideo));\n\n    // TO DO #2: Test your equals method and print the result.\n\n    \n  }\n}",
+        "isVisible": true
+      },
+      "Video.java": {
+        "text": "/*\n * Represents a video\n */\npublic class Video {\n\n  private String title;  // The title of the video\n\n  /*\n   * Constructor to create a Video with\n   * the specified title\n   */\n  public Video(String title) {\n    this.title = title;\n  }\n\n  /*\n   * Returns the title of the video\n   */\n  public String getTitle() {\n    return title;\n  }\n\n  // TO DO #1: Write the equals() method.\n\n\n  \n}",
+        "isVisible": true
+      }
+    }
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-04-07T17:34:20.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-04-07T17:34:20.883+00:00\",\"changed\":[\"cloned from \\\"CSA U4L2-L4a_2022\\\"\"],\"cloned_from\":\"CSA U4L2-L4a_2022\"},{\"changed_at\":\"2022-04-07 17:34:23 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-04-07T17:34:20.883+00:00\",\"changed\":[\"cloned from \\\"CSA U4L2-L4a_2022\\\"\"],\"cloned_from\":\"CSA U4L2-L4a_2022\"},{\"changed_at\":\"2022-04-07 17:34:23 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 22:10:19 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 22:14:22 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 22:20:52 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 23:08:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 23:25:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 23:26:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
