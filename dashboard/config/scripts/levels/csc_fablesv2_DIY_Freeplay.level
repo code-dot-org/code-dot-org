@@ -53,7 +53,7 @@
       "GamelabJr"
     ],
     "mini_rubric": "false",
-    "include_shared_functions": "false",
+    "include_shared_functions": "true",
     "encrypted": "false",
     "hint_prompt_attempts_threshold": "1",
     "validation_enabled": "false",
@@ -75,7 +75,7 @@
   "level_num": "custom",
   "user_id": 182,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-14T08:34:20.743+00:00\",\"changed\":[\"cloned from \\\"csc_fablesv2_DIY_Interactions\\\"\"],\"cloned_from\":\"csc_fablesv2_DIY_Interactions\"},{\"changed_at\":\"2022-04-14 08:35:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"short_instructions\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-20 20:57:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"free_play\",\"start_animations\",\"long_instructions\",\"callout_json\",\"instructions_icon\",\"validation_code\",\"display_name\",\"thumbnail_url\",\"project_template_level_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-04-14T08:34:20.743+00:00\",\"changed\":[\"cloned from \\\"csc_fablesv2_DIY_Interactions\\\"\"],\"cloned_from\":\"csc_fablesv2_DIY_Interactions\"},{\"changed_at\":\"2022-04-14 08:35:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"short_instructions\",\"authored_hints\",\"preload_asset_list\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-20 20:57:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"free_play\",\"start_animations\",\"long_instructions\",\"callout_json\",\"instructions_icon\",\"validation_code\",\"display_name\",\"thumbnail_url\",\"project_template_level_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-22 21:15:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
