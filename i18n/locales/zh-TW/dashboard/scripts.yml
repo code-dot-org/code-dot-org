@@ -6220,7 +6220,8 @@ zh-TW:
               name: 其它
             Thanks:
               name: 謝謝
-            " ": {}
+            " ":
+              name: ''
         csp-pre-survey-test-2017:
           lessons:
             new stage:
