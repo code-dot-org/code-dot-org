@@ -29,6 +29,15 @@
         "ccela/RI": {
           "description": "Lectura informativa"
         },
+        "ccmath/OA": {
+          "description": "Operaciones y Pensamiento Algebraico"
+        },
+        "csta2011/CD": {
+          "description": "Ordenadores y Dispositivos de Comunicación"
+        },
+        "csta2011/CI": {
+          "description": "Impactos Sociales, Globales y Éticos"
+        },
         "ccela/W": {
           "description": "Escribir"
         },

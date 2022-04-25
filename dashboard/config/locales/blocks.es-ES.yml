@@ -5,21 +5,23 @@ es:
       BadGuys_makeNewBadGuysSprite:
         text: crear un nuevo sprite {ANIMATION_NAME} en {LOCATION}
       BadGuys_setSizeAll_dropdown:
+        text: configurar el tamaño de todos los sprites a {SIZE}
         options:
           SIZE:
             '0.50': extra pequeño
             '0.75': pequeño
             '1.00': medio
             '2.00': grande
-            '3.00': extra large
+            '3.00': extra grande
       BadGuys_setSize_dropdown:
+        text: configurar el tamaño de {SPRITE} a {SIZE}
         options:
           SIZE:
             '0.50': extra pequeño
             '0.75': pequeño
             '1.00': medio
             '2.00': grande
-            '3.00': extra large
+            '3.00': extra grande
       Dancelab_alternateMoves:
         text: "{GROUP} alternar cada {N} compases \nentre {MOVE1} y {MOVE2}"
         options:
