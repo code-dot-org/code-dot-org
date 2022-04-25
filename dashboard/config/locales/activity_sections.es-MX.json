@@ -1473,7 +1473,7 @@
         },
         "2a0e6d6d-f8b2-4f88-86e2-1b4c8c2ee300": {
           "name": "Ejemplo 2: Uso de la visión de la Información para mejorar el modelo",
-          "description": "Añadir más datos de entrenamiento no sólo cambia los resultados, sino también los datos mostrados en la visión de la información. A veces, el gráfico de resultados que se muestra puede aclarar por qué los resultados no coinciden con las expectativas.\n\nConsideremos un estudiante que quiere entrenar a la Inteligencia Artificial para que reconozca a los peces \"enfadados\".\nQuiere conseguirlo seleccionando cualquier pez con cejas que apunten hacia dentro y bocas fruncidas. Etiquetarán a un pez como \"enfadado\" si tiene una combinación de estos rasgos:\n\n| \"Angry\" eyes: ![](https://curriculum.code.org/media/uploads/eyes11.png)![](https://curriculum.code.org/media/uploads/eyes17.png) \"Angry\" mouths: ![](https://curriculum.code.org/media/uploads/mouth11.png)![](https://curriculum.code.org/media/uploads/mouth9.png)![](https://curriculum.code.org/media/uploads/mouth12.png)![](https://curriculum.code.org/media/uploads/mouth6.png) |\n| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n\n¿Puede la Inteligencia Artificial averiguar lo que hace el alumno sin ser programada explícitamente? Depende de la cantidad de datos de entrenamiento que proporcione el alumno y de la calidad de los datos del conjunto. \n\n| \"Angry\" fish - training: 30                                                       | \"Angry\" fish - training: 200                                               |\n| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |\n| <img src=\"https://curriculum.code.org/media/uploads/30_foyL4uc.png\" width=\"4000\"> | <img src=\"https://curriculum.code.org/media/uploads/200.png\" width=\"4000\"> |\n\n\\| \\_Aquí, podemos ver que la Inteligencia Artificial captó enseguida que los \"ojos\" eran el rasgo más importante, pero seguido de cerca por el \"color\", no por la \"boca\". En la imagen de la izquierda hay algunos peces de color púrpura que tienen bocas diferentes a las que el alumno tenía como objetivo. ¿Quizás muchos de los peces \"enfadados\" que el alumno seleccionó inicialmente eran morados? Una forma de mejorar el modelo sería continuar el entrenamiento, asegurándose de seguir hasta que varios peces morados \"no enfadados\" hayan sido etiquetados correctamente."
+          "description": "Añadir más datos de entrenamiento no sólo cambia los resultados, sino también los datos mostrados en la visión de la información. A veces, el gráfico de resultados que se muestra puede aclarar por qué los resultados no coinciden con las expectativas.\n\nConsideremos un estudiante que quiere entrenar a la Inteligencia Artificial para que reconozca a los peces \"enfadados\".\nQuiere conseguirlo seleccionando cualquier pez con cejas que apunten hacia dentro y bocas fruncidas. Etiquetarán a un pez como \"enfadado\" si tiene una combinación de estos rasgos:\n\n| \"Angry\" eyes: ![](https://curriculum.code.org/media/uploads/eyes11.png)![](https://curriculum.code.org/media/uploads/eyes17.png) \"Angry\" mouths: ![](https://curriculum.code.org/media/uploads/mouth11.png)![](https://curriculum.code.org/media/uploads/mouth9.png)![](https://curriculum.code.org/media/uploads/mouth12.png)![](https://curriculum.code.org/media/uploads/mouth6.png) |\n| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n\n¿Puede la Inteligencia Artificial averiguar lo que hace el alumno sin ser programada explícitamente? Depende de la cantidad de datos de entrenamiento que proporcione el alumno y de la calidad de los datos del conjunto. \n\n| \"Angry\" fish - training: 30                                                       | \"Angry\" fish - training: 200                                               |\n| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |\n| <img src=\"https://curriculum.code.org/media/uploads/30_foyL4uc.png\" width=\"4000\"> | <img src=\"https://curriculum.code.org/media/uploads/200.png\" width=\"4000\"> |\n\n| \\_Aquí, podemos ver que la Inteligencia Artificial captó enseguida que los \"ojos\" eran el rasgo más importante, pero seguido de cerca por el \"color\", no por la \"boca\". En la imagen de la izquierda hay algunos peces de color púrpura que tienen bocas diferentes a las que el alumno tenía como objetivo. ¿Quizás muchos de los peces \"enfadados\" que el alumno seleccionó inicialmente eran morados? Una forma de mejorar el modelo sería continuar el entrenamiento, asegurándose de seguir hasta que varios peces morados \"no enfadados\" hayan sido etiquetados correctamente."
         },
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Calentamiento"
@@ -13389,7 +13389,7 @@
           ]
         },
         "597e3c88-340f-44cf-83ca-c6dcfa231275": {
-          "description": "**Vocabulario:**\n\n-   **Bit:** un solo fragmento de información binaria."
+          "description": "**Vocabulario:**\n\n-   **Bit:** una sola pieza de información binaria."
         },
         "22519dbe-76b5-4795-a52b-cc047a714de1": {
           "description": "Hoy vimos bits de información representados de muchas formas, como perros y gatos o manzanas y bananas. Estas son formas válidas de representar encendido y apagado (On y Off) Más adelante usaremos 1 y 0, pero en resumen estos números sólo significan On y Off."
@@ -13524,10 +13524,10 @@
           "description": " Con estas tarjetas, hemos creado un sistema binario para representar números. Hemos utilizado un patrón que podemos seguir a medida que nuestros números crecen, nuestro sistema puede funcionar hasta donde podamos contar."
         },
         "984f56b5-6790-4ba6-bb1d-c3cb2bdcb4fd": {
-          "description": "**Decir:** Hasta ahora, hemos visto cómo podemos representar texto, imágenes y números en binario. ¿Existe otro tipo de información que utilices en tu computadora que necesite ser representado?\n\nPermita a los estudiantes a expresar sus ideas respecto a los distintos tipos de información, como por ejemplo música, videos, etc."
+          "description": "**Decir:** Hasta ahora, hemos visto cómo podemos representar texto, imágenes y números en binario. ¿Existe otro tipo de datos que utilices en tu computadora que necesite ser representado?\n\nPermita a los estudiantes a expresar sus ideas respecto a los distintos tipos de datos, como por ejemplo música, videos, etc."
         },
         "f5c7a247-cbbb-4827-b286-2de435548146": {
-          "description": "Todos esos son tipos de información que debe representarse en binario. A continuación, veremos un video que nos explicará como funciona esto."
+          "description": "Todos esos son tipos de datos que deben representarse en binario. A continuación, veremos un video que nos explicará como funciona esto."
         },
         "1128304f-5c68-48ac-bf6a-229b5abc8153": {
           "description": "**Mostrar:** Muestre el video “Binario y Datos”."
@@ -13924,23 +13924,53 @@
         "e0edb51a-713c-4007-a296-26e1876af1db": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Atención!** Si está enseñando virtualmente o en una sala de clases  [haga clic aquí](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit)  para acceder a las modificaciones que puede usar para esta lección."
         },
+        "917f496c-ae62-41a0-a8fe-a50df90ff2ff": {
+          "name": "El problema del entretenimiento",
+          "description": "**Decir:** ¿Cuál es tu forma de entretenimiento favorita? ¿Qué problema resuelve?"
+        },
         "2e17eccc-2343-4bde-849c-eaf270f343f8": {
+          "description": "**Análisis:** Permita que los estudiantes compartan sus ideas con el resto de la clase.",
           "tips": [
-            null
+            "El objetivo de esta actividad es que los estudiantes reflexionen acerca de por qué las personas buscan medios de entretenimiento. Es posible que la respuesta más común entre los estudiantes sea “el aburrimiento”, pídales que vayan más allá y que piensen su forma de entretenimiento favorita, en lo que está hace por ellos y qué problema les soluciona. Las posibles respuestas pueden ser:\n\n-   Conectar con otros\n-   Aprender nuevas cosas u obtener nuevas experiencias\n-   Despertar la creatividad\n-   Escapar de la realidad"
           ]
+        },
+        "b324b23b-a0f5-4671-a923-98252a073f39": {
+          "description": "**Pregunta del día: ¿Cómo se utilizan las ciencias de la computación en el entretenimiento?**"
+        },
+        "3051c3a3-5ddc-4d4c-85c0-502d2a2e1f70": {
+          "name": "Las ciencias de la computación en el entretenimiento",
+          "description": "Ya sea música, arte, juegos o cualquier actividad, hoy en día contamos con muchas formas de entretenimiento. En la clase de hoy, veremos el rol que juegan las ciencias de la computación en algunas de estas áreas."
+        },
+        "54975832-1dba-4a6c-8558-415d3867396a": {
+          "description": "**Agrupar:** Forme grupos de 3 estudiantes. Cada grupo deberá explorar un campo del entretenimiento en conjunto, por lo que sugerimos que los grupos estén compuestos por estudiantes que tengan intereses en común.\n\n**Distribuir:** Distribuya una copia de la guía de actividades a cada estudiante.\n\n#### Explorando el entretenimiento\n\nDurante esta actividad, los grupos investigarán el rol de las ciencias de la computación y la programación en los diversos campos del entretenimiento. El objetivo principal de esta actividad es mostrar a los estudiantes cómo se puede utilizar la programación para crear cosas divertidas. Algunos de los campos que los estudiantes investigarán, (cómo el arte, animación, y juegos) estarán relacionados directamente a programas en los que trabajarán más tarde en la unidad, mientras que otros campos de investigación les mostrarán que pueden aplicar las habilidades que han aprendido en distintas áreas.\n\n#### Temas\n\nEn la guía de actividades, se detallan algunos campos que los estudiantes pueden investigar. Estos campos específicos han sido sugeridos, ya que van de la mano con los recursos proporcionados por Code Studio. Sin embargo, si los estudiantes lo desean, pueden elegir otros campos para su investigación."
         },
         "f348d317-252e-4581-b489-fe1bbe700f67": {
+          "name": "Investigando tu tema",
+          "description": "Estos son algunos sitios que los estudiantes pueden utilizar para comenzar su investigación. Estos sitios son apropiados para usos pedagógicos, sin embargo, el contenido puede variar. **Recomendamos revisar los sitios antes de compartirlo con los estudiantes**.\n\n-   **Inside the Magic - [insidethemagic.net](http://www.insidethemagic.net)**: Este sitio web es acerca de las novedades de Disney. Las ciencias de la computación desempeñan un rol fundamental en las distintas formas de entretenimiento de Disney, pero no se relacionan directamente con este sitio web. Es por esto que recomendamos realizar una búsqueda de los artículos que involucren a las ciencias de la computación antes de mostrarlo a la clase.\n\n-   **Critical Path Videos - [criticalpathproject.com/explore/playlists/](http://www.criticalpathproject.com/explore/playlists/)**: En estos videos, los estudiantes podrán ver a personas que trabajan en la industria de los videojuegos hablar acerca de sus trabajos en distintas áreas de la industria.\n\n-   **Music Think Tank - [musicthinktank.com](http://www.musicthinktank.com/)**: Music Think Tank es un blog dirigido a las personas que trabajan en la industria de la música. No es un sitio que esté directamente relacionado con las ciencias de la computación, pero si busca dentro de la página algunas palabras claves como  \"computer science\" or \"programming” encontrará algunos artículos relevantes.\n\n-   **Creative Coding Podcast - [creativecodingpodcast.com](http://creativecodingpodcast.com/)**: Si bien este podcast no trata temas de programación formal profesional (como por ejemplo, personas que se dedican a ella), es un buen recurso para poder analizar las distintas formas en las que los aficionados pueden crear entretenimiento a través del código.",
           "tips": [
-            null
+            "Los estudiantes no tendrán acceso directo a estos sitios, ya que el contenido puede cambiar día a día. Recomendamos revisar el contenido y asegurarse que es apropiado antes de mostrarlo a los estudiantes."
           ]
         },
+        "e0c61c39-3d11-4463-b5dc-4a0978fd41bc": {
+          "name": "Observaciones de la investigación",
+          "description": "**Recorrer el salón** mientras los estudiantes buscan en la web, es probable que necesiten de su apoyo para concentrarse en la investigación. Esta investigación tiene un doble propósito:\n\n-   Primero, desarrollar una comprensión de cómo se utiliza la programación en los campos escogidos por los estudiantes. Los cambios que la tecnología de la computación está generando en este campo y los problemas que las personas quieren resolver mediante estas tecnologías.\n-   Segundo, identificar aplicaciones interesantes de las ciencias de la computación o datos interesantes que los estudiantes quieran compartir. ¿Qué cosas pueden hacer las personas en este campo usando las ciencias de la computación?\n\n#### Información interesante\n\nUna vez que los grupos aprendan cómo se usan las ciencias de la computación en los campos que eligieron investigar, pueden completar la siguiente información en la segunda página de la guía de actividades:\n\n-   **¿Qué problema resuelve?:** En este contexto la palabra “problema” puede ser muy amplia. Puede referirse a una tarea compleja o que toma mucho tiempo, hacer cosas que sin el uso de la tecnología serían imposibles, o cualquier limitación que este tipo de entretenimiento resuelva para sus usuarios finales.\n-   **¿Dé qué forma es una mejora?:** La respuesta a esta pregunta puede ser muy similar a la anterior. Pida a los estudiantes que reflexionen acerca de cómo fue creada esta forma de entretenimiento antes de que la programación fuera prevalente.\n-   **Un dato o uso interesante:** Deben compartir algo interesante o divertido acerca de la utilización de las ciencias de la computación en sus campos.\n-   **Una pregunta abierta:** Es posible que luego de esta investigación, los estudiantes tengan más preguntas que respuestas. Impúlselos a reflexionar y a buscar las respuestas a sus interrogantes.\n\n**Compartir:** De un momento a los estudiantes para que compartan sus respuestas."
+        },
+        "e63dcc17-f912-4c25-9586-88ecd502e7bb": {
+          "name": "Explorando Juegos en el Game Lab",
+          "description": "En esta unidad, tendremos la oportunidad de crear nuestro propio entretenimiento mediante animaciones y juegos, utilizando una herramienta llamada Game Lab. A continuación verán algunos ejemplos de programas hechos con esta herramienta."
+        },
         "caeb42d3-998b-49fd-99ec-4c36e013206f": {
+          "description": "**Muestre:** Puede mostrar a toda la clase o dejar que los estudiantes exploren la herramienta. Los programas de ejemplo se encuentran al final de la barra de progreso. Estos programas están diseñados para mostrar la variedad de aplicaciones que se pueden crear en el Game Lab.",
           "tips": [
-            null
+            "Algunos de estos programas son ejemplos de lo que los estudiantes realizarán en esta unidad, mientras que otros usan comandos y técnicas que no están contempladas en este curso. Es posible acceder al código de todos estos programas si desea apoyar a aquellos estudiantes que quieran aprender más habilidades."
           ]
         },
         "1d9fcb2e-5d45-47f4-b834-65c714a78452": {
           "progression_name": "Programas de ejemplo"
+        },
+        "88943583-e1bd-4692-bfda-ac470e102014": {
+          "name": "Visión del proyecto",
+          "description": "**Pregunta del día: ¿Cómo se usan las ciencias de la computación para el entretenimiento?**\n\n**Escribir en la bitácora:** De acuerdo a lo que pudiste ver hoy, tanto en tu investigación como en las aplicaciones de ejemplo, ¿Qué tipo de programas te gustaría poder crear?"
         },
         "41038ed3-ea0a-4cb1-b1d0-57661d3258de": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Atención!** Si está enseñando virtualmente o en una sala de clases  [haga clic aquí](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/edit)  para acceder a las modificaciones que puede usar para esta lección."
@@ -15679,38 +15709,88 @@
         "2a184203-f42f-45e9-8e1a-84c538d98d65": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Atención!** Si está enseñando virtualmente o en una sala de clases  [haga clic aquí](https://docs.google.com/document/d/1GuG1KvOOE6UcNfZClbHsMW50nEpSeKlnytbY4NrOeN0/edit)  para acceder a las modificaciones que puede usar para esta lección."
         },
+        "a46854b4-0c89-445c-bb74-76b861c1f7a9": {
+          "name": "Lluvia de ideas ",
+          "description": "**Decir:** Usamos el término “problema” para referirnos a distintas situaciones. Yo podría decir: mi tarea es un problema de matemáticas, tengo un problema con mi hermano, mi auto tiene un problema. Todos estos problemas son acerca de cosas distintas. Haz una lluvia de ideas con todo tipo de problemas que puedas Elabora una lista con distintos tipos de problemas que podrías enfrentar y prepárate para compartirlos con la clase."
+        },
         "fabada45-479f-44d4-bc2d-dbeb8a8e7abd": {
+          "description": "**Análisis:** Dé a los estudiantes unos minutos para que anoten sus ideas. Luego invítelos a compartir lo que escribieron con su compañero de puesto y finalmente pida a toda la clase que compartan sus ideas para crear una lista en conjunto. Piensa en distintos tipos de problemas, crea una lista con todos ellos y prepárate para compartirlos con la clase.",
           "tips": [
-            null,
-            null
+            "**Sepárelos en categorías:** Durante la conversación, recomendamos agrupar los problemas en categorías más generales e invitar a los estudiantes a participar. Por ejemplo, si dos de las sugerencias son “encontrar mis llaves” o “encontrar mis apuntes” sugiera una categoría más general como “encontrar objetos perdidos”.\n\n**Problemas de la vida cotidiana:** Pida a los estudiantes que eviten temas relacionados con la escuela o la tarea (ejemplo: problemas de matemáticas, ciencias, etc.). Comente que la idea es pensar en problemas cotidianos como; llegar a acuerdos en discusiones, tomar grandes decisiones, reparar o encontrar objetos, ir de un lugar a otro, etc.",
+            "**Objetivo:** El objetivo de esta conversación es demostrar que los problemas y sus soluciones forman parte de nuestra vida cotidiana. Use esta lluvia de ideas para crear una lista con los diferentes tipos de problemas en el pizarrón. Estas ideas ayudarán a los estudiantes en la próxima actividad cuando deban elegir un tipo de problema que son buenos resolviendo."
           ]
+        },
+        "889b6e82-6222-44d5-a7e8-d6bea339eb73": {
+          "description": "En nuestra vida siempre enfrentamos “problemas”. Dependiendo del contexto, los problemas pueden referirse a distintos tipos de situaciones. Hoy veremos algunos pasos que podemos usar para resolver toda clase de problemas."
+        },
+        "1b5c295f-10f1-469e-8cbf-d16b7c19056f": {
+          "description": "**Pregunta del día: ¿Qué pasos podemos utilizar para resolver distintos problemas?**"
+        },
+        "6a21930f-10d3-4f81-9c1d-8fd69681c1ef": {
+          "description": "Todo el tiempo estamos resolviendo problemas. Sin embargo, nunca nos detenemos a pensar en cómo los estamos resolviendo. Tener una estrategia, o proceso para abordar distintos tipos de problemas puede convertirte en un solucionador de problemas más reflexivo, creativo y exitoso."
+        },
+        "9842f2ee-96b6-4407-9dcb-379b048173c3": {
+          "description": "**Distribuir:** Imprima copias de la guía de actividades."
         },
         "23f003b6-2c1b-4e88-a343-f77714a50d89": {
           "name": "El proceso de resolución de problemas",
+          "description": "**Video:** Muestre el video del proceso de resolución de problemas en Code Studio\n\n**Preguntas para reflexionar con el vídeo:**\n\n-   En la lección anterior, ¿cómo seguiste el proceso de resolución de problemas?\n-   ¿Cómo podrías aplicar este proceso a un problema de tu vida cotidiana?",
           "tips": [
-            null
+            "La primera pregunta para discusión es una parte fundamental de la lección. Dé un tiempo a los estudiantes para trabajar con sus grupos y pensar qué acciones específicas de la actividad anterior encajan en cada paso del proceso de resolución de problemas. El objetivo de esta discusión es hacer que estos conceptos (Definir - Preparar - Intentar - Reflexionar), tengan sentido para los estudiantes y los puedan relacionar con la actividad de la clase anterior. La segunda pregunta permite a los estudiantes expandir su comprensión del proceso a un problema diferente, analizando cómo estos pasos pueden variar al aplicarse en distintos problemas. El objetivo de esta discusión es asegurar que los estudiantes comprendan el proceso de resolución de problemas y pueden aplicarlo en distintas situaciones. La comprensión del proceso es fundamental, ya que es un concepto que se utilizará durante todo el curso."
           ],
           "progression_name": "Vídeo: El proceso de resolución de problemas"
         },
+        "9541def4-ab55-4976-8e32-5c267d62e229": {
+          "description": "Presente la imagen de los cuatro pasos del proceso y coméntelo con la clase. Luego, responda o comente las preguntas de los estudiantes.  Si no existen preguntas continué con la primera sección de la guía de actividades."
+        },
+        "aab191bf-3a2c-4f58-86d1-bfa34cf48052": {
+          "description": "Pida a los estudiantes que trabajen en la primera sección de la guía de actividades. En cada palabra del proceso de resolución de problemas deben anotar los pasos correspondientes del proyecto que realizaron la clase anterior."
+        },
         "f3ad86f7-7c83-415c-aa5a-a276d6186faa": {
+          "description": "**Análisis:** Una vez que los estudiantes hayan completado la primera sección de la guía de actividades, pídales que compartan sus ideas con sus compañeros y luego con toda la clase.",
           "tips": [
-            null
+            "**Objetivo:** Esta conversación en particular, permite confirmar que los estudiantes entiendan el significado de los cuatro pasos. Use esta oportunidad para comentar que algunas acciones pueden estar en dos categorías. El objetivo es utilizar el contexto compartido de la actividad de la lección 1 para entender el proceso. A continuación, se muestran los pasos de la actividad anterior que los estudiantes pueden atribuir a cada palabra del proceso de resolución de problemas. \n\n**Definir:** Comprender el problema cuando fue asignado, examinar los recursos disponibles, encontrar problemas con su diseño original antes de decidir cómo solucionarlos, observar los problemas con los barcos de otros grupos.\n\n**Preparar:** Discutir con los miembros del equipo acerca de cómo proceder, intercambiar ideas sobre enfoques, anticipar las posibles fallas.\n\n**Intentar:** Construir los barcos y ponerlos a prueba\n\n**Reflexionar:** Analizar los resultados de sus pruebas, comparar sus resultados con sus predicciones, discutir con los miembros del grupo las razones por las que el barco se finalmente se hundió."
           ]
+        },
+        "9071b1c1-0031-4e52-b8f6-a20e311f95c1": {
+          "name": "Problema en el que eres hábil solucionando",
+          "description": "Los estudiantes deben seleccionar un tipo de problema en el que son hábiles en solucionar. Use la lista que ya está en la pizarra para ayudar a los estudiantes a pensar en un tipo de problema.  Dé tiempo a los estudiantes para que anoten los pasos de su proceso antes de compartirlos con un compañero."
         },
         "e3e59454-f8cc-47ef-a206-23e55cf74c89": {
+          "description": "**Análisis:** Pida a los estudiantes que compartan sus notas con un compañero, y luego reúna a la clase e inicie un debate. Solicite a los estudiantes que hablen sobre los pasos individuales que están usando para resolver sus problemas y que señalen qué estrategias se repiten.",
           "tips": [
-            null
+            "**Objetivo:** El objetivo del análisis es reforzar el significado de los cuatro pasos en el proceso de resolución de problemas. En esta conversación, solicite más participación de otros estudiantes para asegurar que las estrategias y pasos presentados en conjunto, se ajusten a las definiciones de los cuatro pasos que aparecen en la guía de actividades."
           ]
+        },
+        "7048cb12-62e3-4d97-a12a-7d75befc7d07": {
+          "name": "Un problema que tú y un compañero de clase quieren resolver mejor",
+          "description": "Solicite a los estudiantes que trabajen en parejas y pídales que completen la última parte de la guía de actividades. Tendrán que elegir un tipo de problema que ambos quieran resolver mejor y luego detallar qué pasos dentro del proceso de resolución de problemas deben seguir para resolverlo.\n\n**Análisis:** Organice una conversación final en la que los estudiantes propongan cómo utilizar el proceso de resolución de problemas para abordar problemas poco comunes."
         },
         "971b5c08-a61d-400c-a1ff-8ac3139a3c7c": {
+          "name": "Crear un póster con los pasos",
+          "description": "**Distribuir:** Dar a cada grupo una hoja de cartulina.",
           "tips": [
-            null
+            "También puede hacer esta actividad de forma digital.   Revise el [forum](https://forum.code.org/c/csd) para ver cómo otros docentes han modificado esta actividad para sus aulas, o para compartir sus propias modificaciones."
           ]
         },
+        "6c98d6b3-a1ef-45a7-afb1-4d6fa842e50d": {
+          "description": "**Decir:** Elijan uno de los problemas en los que trabajaron hoy, y elaboren un póster que muestre cómo el proceso de resolución de problemas puede ayudar a resolverlo.\n\n**Recorrer el salón de clases:** A medida que los estudiantes trabajan en sus pósteres, hágales preguntas sobre sus problemas y de cómo los pasos para resolverlos se relacionan con los pasos generales del proceso de resolución de problemas.\n\n**Compartir:** Permita que los estudiantes compartan sus pósteres con el resto de la clase."
+        },
+        "5c0ec90c-60b9-463c-a278-5a3c5104d0be": {
+          "description": "**Pregunta del día: ¿Qué pasos podemos utilizar para resolver distintos problemas?**"
+        },
         "03418848-4f2d-4f45-8f25-38012b191a2a": {
+          "description": "**Decir:** Hoy analizamos distintos tipos de problemas, en todos ellos pudimos utilizar nuestro proceso de resolución de problemas. Para cada paso del proceso piensa en un consejo que podría ser útil para alguien que esté tratando de resolver un problema.",
           "tips": [
-            null
+            "Compruebe que los estudiantes utilicen estrategias correctas para cada paso del proceso. Deben ser estrategias generales y no específicas para los problemas que eligieron."
           ]
+        },
+        "ae99a30d-0767-4d0b-9f6d-49a26f879d3d": {
+          "description": "Al principio de la clase, comencé diciendo que un proceso formal de resolución de problemas podría ayudarnos a resolver todo tipo de problemas. Hoy tuvimos la oportunidad de aplicar este proceso en situaciones de la vida real. En nuestra próxima lección, pondremos el proceso en acción para ver cómo funciona realmente."
+        },
+        "640e6f56-0797-4fde-a056-1b37b27d7e46": {
+          "name": "Análisis del artículo",
+          "description": "Lea el artículo, [Estás resolviendo el problema equivocado](https://uxmag.com/articles/you-are-solving-the-wrong-problem)\n\n1.  ¿Qué había de interesante en este artículo?\n2.  ¿Qué eventos actuales crees que necesitamos ver a través de este proceso de resolución de problemas? ¿Por qué?"
         },
         "d1da8d2b-4a50-42ae-929a-02094d6d152d": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**!Atención!** Si está enseñando virtualmente o en una clase con distanciamiento social, haga [clic aquí](https://docs.google.com/document/d/1A8YzyvZWN-p3KsNwYzQeJFDz0f7GKecMz870KUXHwJE/edit) para acceder a las modificaciones que puede usar para esta lección. "
@@ -15818,7 +15898,7 @@
           "description": "Dé a los estudiantes las siguientes instrucciones:\n\n-   Dibuja una línea que divida tu cartel en dos, en un lado escribe \"Es una computadora\" y en el otro \"No es una computadora\"\n-   En grupo, revisen la guía de actividades y discutan los objetos del conjunto que pertenecen a cada categoría\n-   Una vez que tu grupo esté de acuerdo, peguen los objetos en el lado correspondiente\n-   Elaboren una lista con las características que les permitieron decidir si un objeto es o no una computadora"
         },
         "ec21fe96-de6c-4818-bf1a-c02c1f4b66ff": {
-          "description": "**Recorrer el salón de clases:** Circule por la sala de clases mientras los estudiantes clasifican las distintas imágenes de la guía de actividades. Anime a los grupos a compartir sus ideas y a explicar por qué creen que un objeto debería o no ser categorizado como una computadora. Si los grupos tienen problemas para decidir, pida a los miembros que defiendan sus puntos de vista e intenten llegar a un acuerdo. Comunique a los grupos que es completamente normal si una o dos personas no están de acuerdo y que hay que respetar todos los puntos de vista.",
+          "description": "**Recorrer el salón de clases:** Circule por el salón de clases mientras los estudiantes clasifican las distintas imágenes de la guía de actividades. Anime a los grupos a compartir sus ideas y a explicar por qué creen que un objeto debería o no ser categorizado como una computadora. Si los grupos tienen problemas para decidir, pida a los miembros que defiendan sus puntos de vista e intenten llegar a un acuerdo. Comunique a los grupos que es completamente normal si una o dos personas no están de acuerdo y que hay que respetar todos los puntos de vista.",
           "tips": [
             "**Usar cinta adhesiva:** Mas adelante en la lección, los estudiantes tendrán la oportunidad de actualizar las categorizaciones y cambiar los objetos de lugar. Por ahora, sólo deben colocar los objetos en el lado correcto del cartel o pegarlos con cinta adhesiva para luego poder cambiarlos de lugar fácilmente."
           ]
@@ -16668,24 +16748,54 @@
         "a48c9e93-5e4f-4d2f-8dfa-60efd0b084ef": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Atención!** Si está enseñando virtualmente o en una sala de clases  [haga clic aquí](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit)  para acceder a las modificaciones que puede usar para esta lección."
         },
+        "48127896-3722-4288-ba60-9b0bc14e3c1b": {
+          "description": "**Bitácora y Análisis**"
+        },
         "c55d809b-5128-4cba-82bf-3bf0e51aec06": {
+          "description": "**Decir:** Si pudieras compartir algo importante con el mundo, ¿Qué sería? ¿Por qué es importante para ti?",
           "tips": [
-            null
+            "El objetivo de este análisis es que los estudiantes vean al desarrollo web como una forma de auto-expresión y comunicación, y que sepan que tienen la capacidad de aportar ideas importantes. Motive a sus estudiantes y coménteles que todos tienen la capacidad de compartir ideas valiosas que podrían beneficiar a los demás. La idea de este análisis es también establecer un ambiente positivo en el que se respeten la diversidad y los distintos puntos de vista de los estudiantes."
           ]
         },
+        "c7ee926a-19b5-45b6-a0a7-3e9d6699e9ce": {
+          "description": "Permita que los estudiantes compartan sus opiniones con el resto de la clase."
+        },
+        "5c1f9e0d-0ea4-4cd8-bbcf-693a8a546e80": {
+          "description": "Existen muchas formas para que las personas puedan compartir con el resto del mundo. Hoy, veremos cómo las personas utilizan los sitios web para compartir sus opiniones."
+        },
+        "692fa31e-7394-45e4-9df4-9136bd7f1ef7": {
+          "description": "**Pregunta del día: ¿Por qué las personas crean páginas web?**"
+        },
+        "fef149c4-da5f-4737-806d-cee5311c12f2": {
+          "name": "Páginas web personales",
+          "description": "La mayoría de las páginas web que acostumbramos a visitar han sido creadas por grandes organizaciones compuestas por muchos trabajadores. Pero, cualquier persona puede crear y publicar una página web personal. Hoy analizaremos algunas páginas web personales. Estas páginas fueron creadas por una persona que quería compartir algo con el mundo."
+        },
         "aeb0ec32-aea0-4bfd-82de-d37b71b2075c": {
+          "description": "**Agrupar:** Forme parejas de estudiantes.\n\n**Distribuir:** Imprima una copia de la guía de actividades para cada estudiante.\n\nPida a los estudiantes que ingresen a “Ejemplos de páginas web” en Code Studio.",
           "progression_name": "Ejemplos de Páginas Web Personales"
         },
         "1265c20c-95ab-4c34-b8fc-b3532b088415": {
           "name": "Exploración de sitios web",
+          "description": "Esta guía de actividades pide a los estudiantes que analicen por qué las personas crean páginas web personales, y qué pueden expresar a través ellas.",
           "tips": [
-            null
+            "El objetivo de la actividad no es que los estudiantes proporcionen una respuesta “correcta” para cada sitio, sino que analicen las razones por las que alguien crea un sitio web. Si los estudiantes tienen dificultades para identificar el propósito de un sitio web, puede hacer las siguientes preguntas:\n\n-   ¿El creador del sitio web quiere que el usuario haga algo?\n-   ¿El sitio web intenta convencer al usuario de algo en particular?\n-   ¿El sitio web sirve como una forma de expresión personal para el creador?\n\nLos sitios web que se muestran como ejemplos son muy simples, con el objetivo de mostrar a los estudiantes que éste es el tipo de sitio web que podrán crear en esta unidad."
           ]
         },
+        "13a35f1c-deed-4a3d-9dd2-be2b7f6e5333": {
+          "description": "-   ¿Qué está compartiendo esta persona con el mundo?\n-   ¿Por qué esto es importante para ellos?\n\nMotive a los estudiantes a ser lo más detallados posible cuando escriban los propósitos de estos sitios web."
+        },
+        "5f55a18c-a9cc-4cbb-96ea-55eb630fdf3f": {
+          "description": "**Compartir:** Una vez que todos hayan terminado de escribir sus ideas, solicite que las compartan con la clase."
+        },
         "c1050c6d-1379-4f81-ab69-6f00bbfb363a": {
+          "description": "**Análisis:** Permita que los estudiantes hagan preguntas acerca de los sitios de ejemplo. Asegúrese de que comprendan que un sitio web pequeño es principalmente una herramienta para la auto-expresión que puede ser útil para otras personas. ",
           "tips": [
-            null
+            "El objetivo de este análisis es preparar a los estudiantes para que puedan pensar en ellos mismos como potenciales creadores de sitios web. Mientras analizan las preguntas, motívelos a imaginar las razones por las que crearían un sitio web con esas características y cuáles serían sus motivaciones. Recuérdeles que, en esta unidad, tendrán la oportunidad de crear un sitio web que se compartirá con todo el mundo."
           ]
+        },
+        "d621ad85-b16c-458c-8473-abe27aef3168": {
+          "name": "Objetivos del desarrollo web",
+          "description": "**Pregunta del día: ¿Por qué las personas crean páginas web?**\n\n**Escribir en la bitácora 3, 2, 1:**\n\n3 - Escoge tres temas de tu interés con los que podrías crear un sitio web.\n\n2 - Nombra dos razones por las que alguien podría visitar tu sitio web\n\n1 - ¿Qué es lo que más te interesa aprender sobre la creación de sitios web?"
         },
         "a5c12f54-2e19-46af-a21d-db66b8318787": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Atención!** Si está enseñando virtualmente o en una sala de clases  [haga clic aquí](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit)  para acceder a las modificaciones que puede usar para esta lección. "
@@ -16734,7 +16844,7 @@
         "08e81098-b771-4c82-bb64-9108ece6c97c": {
           "description": "**Pregunta para reflexionar con el vídeo:**\n\n-   ¿Cuáles son las distintas partes del laboratorio web? ¿Para qué se usan?",
           "tips": [
-            "**Objetivo del análisis:**\nEl objetivo de este video es hacer que los estudiantes comprendan que las instrucciones de los niveles del laboratorio web se mostrarán en panel superior y que los tres paneles inferiores, de izquierda a derecha, contienen: una lista con los archivos en los que están trabajando, el área en donde escribirán su código y el área de vista previa, en donde podrán ver los resultados del código ingresado. Por ahora, no es necesario que sepan la función de cada botón, eso se les explicará más adelante. La idea es que los estudiantes entiendan que la herramienta de inspección les ayudará a enlazar partes de la página web con el código que las ha creado, y el botón de refrescar y guardar les permite actualizar su página web si no se actualiza automáticamente cuando cambian el código. \n\nAunque no forma parte del vídeo, el panel de instrucciones también suele incluir preguntas y respuestas desplegables que los alumnos pueden utilizar mientras trabajan en una actividad, y en algunos niveles se mostrará la pestaña de  \"Ayuda y consejos\" que incluye información relevante para las actividades."
+            "**Objetivo del análisis:**\nEl objetivo de este video es hacer que los estudiantes comprendan que las instrucciones de los niveles del laboratorio web se mostrarán en panel superior y que los tres paneles inferiores, de izquierda a derecha, contienen: una lista con los archivos en los que están trabajando, el área en donde escribirán su código y el área de vista previa, en donde podrán ver los resultados del código ingresado. Por ahora, no es necesario que sepan la función de cada botón, eso se les explicará más adelante. La idea es que los estudiantes entiendan que la herramienta de inspección les ayudará a enlazar partes de la página web con el código que las ha creado, y el botón de refrescar y guardar les permite actualizar su página web si no se actualiza automáticamente cuando cambian el código. \n\nAunque no forma parte del vídeo, el panel de instrucciones también suele incluir preguntas y respuestas desplegables que los estudiantes pueden utilizar mientras trabajan en una actividad, y en algunos niveles se mostrará la pestaña de  \"Ayuda y consejos\" que incluye información relevante para las actividades."
           ],
           "progression_name": "Video: introducción al Laboratorio web - Parte 1"
         },
@@ -16793,13 +16903,13 @@
         },
         "83d7613a-c741-4d4a-9dcd-993ab08aa61d": {
           "name": "Cartel de etiquetas",
-          "description": "**Escribir en la bitácora:** Pida a los estudiantes que realicen un gráfico T en sus bitácoras y que en lo titulen como “Etiquetas HTLM”",
+          "description": "**Escribir en la bitácora:** Pida a los estudiantes que realicen un gráfico T en sus bitácoras y que lo titulen como “Etiquetas HTML”",
           "tips": [
-            "[pull-right]\n\n![](https://images.code.org/e1dad1fb71c33b94f0b455ac5c116494-image-1611863995429.jpg)\n\n[/pull-right]\n\n**Cartel:** Durante el transcurso de la unidad, los estudiantes tomarán nota de todas las etiquetas HTML. Esta actividad inicial incentiva a los estudiantes a anotar las etiquetas HTML en sus bitácoras. Si lo desea, puede crear un cartel para la clase con esta información e ir actualizándolo al final de cada lección. Durante la lección, se le indicará cuando los estudiantes deben anotar información en sus bitácoras. Una de las ventajas de crear un cartel en el que toda la clase colabore, es poder reforzar los conceptos y el aprendizaje de los estudiantes.\n<br/>\n<br/>\n<br/>\n<br/>\n<br/>\n<br/>\n<br/>\n<br/>\n<br/>\n<br/>"
+            "[pull-right]\n\n![](https://images.code.org/e1dad1fb71c33b94f0b455ac5c116494-image-1611863995429.jpg)\n\n[/pull-right]\n\n**Cartel:** Durante el transcurso de la unidad, los estudiantes tomarán nota de todas las etiquetas HTML. Esta actividad inicial incentiva a los estudiantes a anotar las etiquetas HTML en sus bitácoras. Si lo desea, puede crear un cartel para la clase con esta información e ir actualizándolo al final de cada lección. Durante la lección, se le indicará cuando los estudiantes deben anotar información en sus bitácoras. Una de las ventajas de crear un cartel en el que toda la clase colabore es poder reforzar los conceptos y el aprendizaje de los estudiantes.\n<br/>\n<br/>\n<br/>\n<br/>\n<br/>\n<br/>\n<br/>\n<br/>\n<br/>\n<br/>"
           ]
         },
         "552e474b-947e-42e6-843f-5773cd440a41": {
-          "description": "**Decir:** En la clase anterior, aprendieron acerca del HTML, el lenguaje de la red informática mundial (World Wide Web) El HTML usa etiquetas para estructurar el contenido en las páginas web. En grupos, traten de recordar las etiquetas que vimos la clase anterior y lo que estas pueden hacer.\n\nPermita a los estudiantes un momento para completar este ejercicio."
+          "description": "**Decir:** En la clase anterior, aprendieron acerca del HTML, el lenguaje de la red informática mundial (World Wide Web). El HTML usa etiquetas para estructurar el contenido en las páginas web. En grupos, traten de recordar las etiquetas que vimos la clase anterior y lo que estas pueden hacer.\n\nDé a los estudiantes un momento para completar este ejercicio."
         },
         "fde80161-cf61-46a3-8f1e-136bf92adafd": {
           "description": "Ahora que tuvieron un momento para reflexionar, comenten sus respuestas con un compañero y revisen si pueden añadir algo más."
@@ -16818,13 +16928,13 @@
         },
         "ec491dbb-ef99-4e6e-9abf-f1f90c22e838": {
           "name": "Programación en parejas",
-          "description": "**Grupos:** Forme parejas de estudiantes",
+          "description": "**Agrupar:** Forme parejas de estudiantes",
           "tips": [
-            "**Programación en parejas:** La programación en parejas es algo que se utiliza tanto en educación como en la industria informática. Los estudiantes que programan en parejas, confían más en sus capacidades y es muy probable que continúen estudiando las ciencias de la computación. La programación en parejas es mucho más eficaz cuando se introduce en etapas iniciales del curso y el docente establece ciertas normas para cambiar de compañeros. Puede leer más acerca de la programación en parejas en la guía curricular, enlazada en la página de Guía Curricular CS Discoveries  <https://studio.code.org/courses/csd>."
+            "**Programación en parejas:** La programación en parejas es algo que se utiliza tanto en educación como en la industria informática. Los estudiantes que programan en parejas confían más en sus capacidades y es muy probable que continúen estudiando las ciencias de la computación. La programación en parejas es mucho más eficaz cuando se introduce en etapas iniciales del curso y el docente establece ciertas normas para cambiar de compañeros. Puede leer más acerca de la programación en parejas en la guía curricular, enlazada en la página de Guía Curricular CS Discoveries  <https://studio.code.org/courses/csd>."
           ]
         },
         "ddb7f09c-b9f6-4a84-bb26-3abd9a9294ff": {
-          "description": "Hoy trabajaremos en el laboratorio Web, usando la programación en parejas La programación en parejas ayuda a las personas a crear mejores programas, pero existen reglas que debemos seguir."
+          "description": "Hoy trabajaremos en el laboratorio Web, usando la programación en parejas. La programación en parejas ayuda a las personas a crear mejores programas, pero existen reglas que debemos seguir."
         },
         "4b49ed96-4d51-4f8a-a926-4475a76529fc": {
           "description": "**Mostrar:** Muestre el video de programación en parejas."
@@ -16832,15 +16942,15 @@
         "8ae3516e-e6e2-4401-afc1-4ddfb1f1312b": {
           "description": "**Repaso:** Asegúrese que los estudiantes comprenden las reglas de la programación en parejas:",
           "tips": [
-            "Puede que algunos grupos de estudiantes necesiten apoyo para colaborar y comunicarse efectivamente con sus compañeros. Para ayudarlos en este aspecto, antes de formar las parejas, realice una lluvia de ideas con comienzos de oraciones que puedan utilizar para lograr una comunicación más efectiva y respetuosa. Por ejemplo que los estudiantes digan a sus compañeros: “Has considerado esto” en lugar de “Debes hacer esto” o también frases como “qué tal si hacemos esto...”, “Yo creo que el problema podría ser...” . . A medida que los estudiantes avanzan en la lección, recuérdeles que a pesar de ser una clase dedicada a las etiquetas de encabezado, el objetivo principal de la lección es aprender a trabajar juntos para crear una página web. "
+            "Puede que algunos grupos de estudiantes necesiten apoyo para colaborar y comunicarse efectivamente con sus compañeros. Para ayudarlos en este aspecto, antes de formar las parejas, realice una lluvia de ideas con comienzos de oraciones que puedan utilizar para lograr una comunicación más efectiva y respetuosa. Por ejemplo, que los estudiantes digan a sus compañeros: “Has considerado esto” en lugar de “Debes hacer esto” o también frases como “qué tal si hacemos esto...”, “Yo creo que el problema podría ser...”. A medida que los estudiantes avanzan en la lección, recuérdeles que a pesar de ser una clase dedicada a las etiquetas de encabezado, el objetivo principal de la lección es aprender a trabajar juntos para crear una página web. "
           ]
         },
         "52fd4953-d84b-4892-a256-4792347224e0": {
-          "description": "-   Las parejas sólo contarán con una computadora.\n-   El conductor es el único que podrá manipular el mouse y el teclado.\n-   Mientras que el observador será el encargado de encontrar los problemas en el código y llevar el registro de la planificación de alto nivel.\n-   El conductor y el observador, deben mantener una comunicación constante.\n-   Y alternar cuando el docente lo indique, por lo general cada ciertos minutos."
+          "description": "-   Las parejas sólo contarán con una computadora.\n-   El conductor es el único que podrá manipular el mouse y el teclado.\n-   Mientras que el observador será el encargado de encontrar los problemas en el código y llevar el registro de la planificación de alto nivel.\n-   El conductor y el observador deben mantener una comunicación constante.\n-   Y alternar cuando el docente lo indique, por lo general cada ciertos minutos."
         },
         "52aeb427-5dad-444d-a251-86e1fb832f6d": {
           "name": "Laboratorio Web: Encabezados",
-          "description": "**Transición:** Pida a las parejas que ingresen a code studio y que inicien sesión usando la herramienta de “programación en parejas”. \n\n**Decir:** Recuérdeles que deben cambiar de rol (navegador/observador) cada 3 minutos. Recomendamos proyectar un cronómetro en el pizarrón."
+          "description": "**Transición:** Pida a las parejas que ingresen a Code Studio y que inicien sesión usando la herramienta de “programación en parejas”. \n\n**Decir:** Recuérdeles que deben cambiar de rol (navegador/observador) cada 3 minutos. Recomendamos proyectar un cronómetro en el pizarrón."
         },
         "77578c68-97e0-4ef5-a4a5-75c5c0d5bcc1": {
           "description": "**Preguntas acerca del vídeo:**\n\n-   ¿Por qué crees que los programadores profesionales usan la programación en parejas?\n-   ¿Cómo crees que la programación por parejas te ayudará a programar mejor?",
@@ -16857,7 +16967,7 @@
         },
         "415a1a02-00ce-4eee-9af3-bcddf1369b79": {
           "tips": [
-            "[pull-right]\n\n![](<https://images.code.org/b945453baae76206d68f443de4cc07bc-teacher panel.jpg>)\n\n[/pull-right]\n\n**Tipos de niveles:** Esta pregunta de selección múltiple, que pide a los alumnos elegir cómo se mostrarán los encabezados HTML en una página web. Puede revisar las respuestas de los estudiantes ingresando al nivel correspondiente y haciendo clic en la pestaña de “panel del docente” a la derecha de la pantalla. Las respuestas correctas se mostrarán con color verde. Los estudiantes tienen la posibilidad de responder varias veces por lo que adivinar o corregir sus respuestas también puede resultar en una respuesta correcta. [Haga clic aquí para aprender más acerca de cómo usar el panel del docente”.](https://support.code.org/hc/en-us/articles/360047703872-How-do-I-view-a-student-s-code-on-an-individual-level-)"
+            "[pull-right]\n\n![](<https://images.code.org/b945453baae76206d68f443de4cc07bc-teacher panel.jpg>)\n\n[/pull-right]\n\n**Tipos de niveles:** Esta pregunta de selección múltiple que pide a los estudiantes elegir cómo se mostrarán los encabezados HTML en una página web. Puede revisar las respuestas de los estudiantes ingresando al nivel correspondiente y haciendo clic en la pestaña de “panel del docente” a la derecha de la pantalla. Las respuestas correctas se mostrarán con color verde. Los estudiantes tienen la posibilidad de responder varias veces, por lo que adivinar o corregir sus respuestas también puede resultar en una respuesta correcta. [Haga clic aquí para aprender más acerca de cómo usar el panel del docente”.](https://support.code.org/hc/en-us/articles/360047703872-How-do-I-view-a-student-s-code-on-an-individual-level-)"
           ],
           "progression_name": "Revisión Rápida"
         },
@@ -16879,10 +16989,10 @@
         },
         "86e13822-ef3f-4ec1-981a-e8b90ef192ab": {
           "name": "Escribir en la bitácora",
-          "description": "**Pregunta del día: ¿Cómo podemos trabajar juntos para reparar los problemas de nuestros sitios web?**\n\n**Decir:** Pida a sus alumnos que actualicen el listado de las “etiquetas HTML” y agreguen las que aprendieron en esta lección.\n\n**Vocabulario:**\n\n-   **Encabezado** - Un título o resumen de un documento o de una sección de un documento"
+          "description": "**Pregunta del día: ¿Cómo podemos trabajar juntos para reparar los problemas de nuestros sitios web?**\n\n**Decir:** Pida a sus estudiantes que actualicen el listado de las “etiquetas HTML” y agreguen las que aprendieron en esta lección.\n\n**Vocabulario:**\n\n-   **Encabezado** - Un título o resumen de un documento o de una sección de un documento"
         },
         "1db390c3-2d64-4581-a038-c4dd0f7226ee": {
-          "description": "**Decir:** Hoy aprendieron mucho acerca de la depuración, una habilidad importante en los programadores. ¿De qué forma el trabajo con un compañero te ayudó a depurar?",
+          "description": "**Decir:** Hoy, aprendieron mucho acerca de la depuración, una habilidad importante en los programadores. ¿De qué forma el trabajo con un compañero te ayudó a depurar?",
           "tips": [
             "Asegúrese que los estudiantes describan formas efectivas de colaboración."
           ]
@@ -16895,7 +17005,7 @@
           "description": "**Decir:** ¿Qué valor personal te gustaría compartir con el mundo?"
         },
         "016877a1-d391-46b7-998e-fbe9a7c12703": {
-          "description": "Pida a los estudiantes que voluntariamente compartan con la clase los valores personales que creen que son importantes.",
+          "description": "Permita que los estudiantes voluntariamente compartan con la clase los valores personales que creen que son importantes.",
           "tips": [
             "Esta discusión permite que los estudiantes compartan ideas para sus sitios web, pero no es necesaria la participación de todos. El objetivo de este análisis es que los estudiantes comiencen a pensar acerca del tema y motivarlos a que utilicen sus sitios web como una forma de expresión."
           ]
@@ -16949,7 +17059,7 @@
           "description": "**Decir:** ¿Hay algo que aún no sepas hacer que podría mejorar tu página web?"
         },
         "1712fd0b-563c-4ac9-b929-288bce3bbb72": {
-          "description": "A medida que los alumnos compartan sus ideas, póngalas en la pizarra o en un cartel, e incluya todas las habilidades que aprendan en las próximas lecciones.",
+          "description": "A medida que los estudiantes compartan sus ideas, póngalas en la pizarra o en un cartel, e incluya todas las habilidades que aprendan en las próximas lecciones.",
           "tips": [
             "Use estas ideas para que los estudiantes se entusiasmen con las cosas que podrán aprender en las próximas lecciones. Si decide crear un cartel, recomendamos tachar los temas a medida que los enseña. Si los estudiantes proponen temas que no están cubiertos en el plan de estudio, puede sugerir temas similares que sí lo estén o, si es apropiado, sugerir información o páginas web externas que los puedan ayudar a aprender esas habilidades."
           ]
@@ -16964,18 +17074,18 @@
         "ec53cc7b-755c-461d-a075-16cf2ca7f1dd": {
           "description": "\\*\\*Análisis: \\*\\* Pida a los estudiantes que hagan una lluvia de ideas o que anoten sus ideas en la bitácora. Una vez que hayan terminado, deben compartirlas con un compañero y finalmente con toda la clase. Elabore una lista con todos los sitios web que podrían tener su información personal.",
           "tips": [
-            "**Objetivo:** Este análisis no se trata solamente de mostrar a los estudiantes los sitios que poseen su información personal ni busca asustarlos de compartir información. El objetivo es que los estudiantes comiencen a analizar de forma más clara cuándo y dónde comparten información acerca de ellos mismos.\n\nEste ejercicio los preparará para la actividad principal, en la que analizarán información específica; frente a qué tipo de público es importante la privacidad y si accidentalmente están compartiendo su información personal.\n\nSi los estudiantes tienen problemas para pensar en la información, puede hacer estas preguntas para ayudarlos: \n\n-   ¿Qué información recuerdas haber dado a un sitio web? (por ejemplo, su dirección de correo electrónico)\n-   ¿Qué información podrías haber dado accidentalmente a un sitio web? (por ejemplo, una foto con la dirección de su casa)\n-   ¿Qué información otras personas podrían haber compartido acerca de ti sin tu permiso? (por ejemplo, etiquetarlo en Facebook)"
+            "**Objetivo:** Este análisis no se trata solamente de mostrar a los estudiantes los sitios que poseen su información personal ni busca asustarlos de compartir información. El objetivo es que los estudiantes comiencen a analizar de forma más clara cuándo y dónde comparten información acerca de ellos mismos.\n\nEste ejercicio los preparará para la actividad principal, en la que analizarán información específica; frente a qué tipo de público es importante la privacidad y si accidentalmente están compartiendo su información personal.\n\nSi los estudiantes tienen problemas para pensar en la información, puede hacer estas preguntas para ayudarlos: \n\n-   ¿Qué información recuerdas haber dado a un sitio web? (por ejemplo, su dirección de correo electrónico)\n-   ¿Qué información podrías haber dado accidentalmente a un sitio web? (por ejemplo, una foto con la dirección de su casa)\n-   ¿Qué información podrían haber compartido otras personas acerca de ti sin tu permiso? (por ejemplo, etiquetarte en Facebook)"
           ]
         },
         "c4655dca-e5f0-4b84-8d9b-7212f13b440f": {
-          "description": "Hay mucha información que ponemos en Internet, ya sea de manera intencional o no. Si bien podemos estar de acuerdo con que parte de esa información esté en línea, hay otras cosas que nos gustaría mantener en privado. Toda la información sobre nosotros que se puede encontrar en Internet se conoce como nuestra huella digital. Debemos ser cuidadosos con la información que damos a esta huella digital."
+          "description": "Hay mucha información que ponemos en Internet, ya sea de manera intencional o no. Si bien podemos estar de acuerdo con que solo una parte de esa información esté en línea, hay otras cosas que nos gustaría mantener en privado. Toda la información sobre nosotros que se puede encontrar en Internet se conoce como nuestra huella digital. Debemos ser cuidadosos con la información que damos a esta huella digital."
         },
         "4c49a2d4-20e8-4c45-9abe-ff95adb5d085": {
           "description": "**Vocabulario:**\n\n-   **Huella digital** - La información recopilada sobre una persona en varios sitios web de Internet.\n\n**Pregunta del día: ¿Cómo podemos asegurarnos de que nuestra información privada siga siendo privada?**"
         },
         "dfb7b97b-9a3b-4424-8b24-e4e1f208b5a9": {
           "name": "Investigando perfiles en redes sociales",
-          "description": "**Objetivo:** Explorar cómo pequeños pedazos de información personal distribuidos en múltiples sitios de Internet, pueden juntarse para darnos una imagen bastante detallada de una persona. Es decir, su [v digital_footprint/csd/2021].\n\n**Gropo:** En esta actividad, los estudiantes pueden trabajar de forma individual, pero se sugiere formar grupos de 2 o 3 personas\n\n**Distribuir:** Guía de actividades de \"Investigador social\"\n\n**Transición:** Solicite a los estudiantes que ingresen a Code Studio."
+          "description": "**Objetivo:** Explorar cómo pequeños pedazos de información personal distribuidos en múltiples sitios de Internet pueden juntarse para darnos una imagen bastante detallada de una persona. Es decir, su [v digital_footprint/csd/2021].\n\n**Agrupar:** En esta actividad, los estudiantes pueden trabajar de forma individual, pero se sugiere formar grupos de 2 ó 3 personas\n\n**Distribuir:** Guía de actividades de \"Investigador social\"\n\n**Transición:** Solicite a los estudiantes que ingresen a Code Studio."
         },
         "71a885a3-e705-4367-8d43-5711b5af7e8f": {
           "progression_name": "Investigador Social"
@@ -16987,7 +17097,7 @@
           ]
         },
         "2487e526-f969-4440-bea4-f970fa05528d": {
-          "description": "**Paso 2:** Una vez que hayan analizado las páginas, los estudiantes intentarán averiguar a que usuarios corresponden las distintas cuentas y responderán algunas preguntas acerca de ellos. Las preguntas acerca de la huella digital están diseñadas para que los estudiantes puedan combinar los detalles que los usuarios comparten en las distintas plataformas sociales y comprender que al juntar estos perfiles, los usuarios probablemente están compartiendo mucha más información de la que querían compartir. Puede que algunas preguntas acerca de los usuarios no se puedan responder o que tengan otro tipo de detalles. Por ejemplo: En el caso de un usuario la dirección completa de su casa. Y en el caso de otro, sólo la ciudad o el estado en el que viven."
+          "description": "**Paso 2:** Una vez que hayan analizado las páginas, los estudiantes intentarán averiguar a qué usuarios corresponden las distintas cuentas y responderán algunas preguntas acerca de ellos. Las preguntas acerca de la huella digital están diseñadas para que los estudiantes puedan combinar los detalles que los usuarios comparten en las distintas plataformas sociales y comprender que al juntar estos perfiles, los usuarios probablemente están compartiendo mucha más información de la que querían compartir. Puede que algunas preguntas acerca de los usuarios no se puedan responder o que tengan otro tipo de detalles. Por ejemplo: En el caso de un usuario, la dirección completa de su casa. Y en el caso de otro, sólo la ciudad o el estado en el que viven."
         },
         "f4eb6112-53c1-43fb-825c-8b064cb9af9f": {
           "description": "**Compartir:** Pida a la clase que compartan las huellas digitales que encontraron en la actividad."
@@ -17005,37 +17115,37 @@
         "69dde422-3372-406e-9efe-b1df46472d00": {
           "description": "**Decir:** Con su compañero de puesto, elaboren una lista que puedan usar para determinar qué información deben y cuál no deben compartir en línea.",
           "tips": [
-            "**Objetivo:** Utilice este análisis para crear una lista de las mejores prácticas para cuando se publique información en línea. Estas son algunas ideas que puede incluir en la lista:\n\n-   ¿Alguien podría identificarme con esta información?: por ejemplo nombre, dirección, número de teléfono, etc.\n-   ¿Quiero que todos vean esto?: Evita publicar información que no quieres compartir con todo el mundo.\n-   ¿Quiero que esto sea permanente?: Una vez que lo publicas, pierdes el control de esa información y esta podría estar en línea durante toda tu vida.\n\nLas listas de los alumnos pueden ser diferentes, pero todas deben incluir estos y otros principios adicionales que aprendieron en esta lección.\n\nAsegúrese de que los estudiantes estén usando el vocabulario.\n\n**Huella digital** - La información recopilada sobre una persona en varios sitios web de Internet"
+            "**Objetivo:** Utilice este análisis para crear una lista de las mejores prácticas para cuando se publique información en línea. Estas son algunas ideas que puede incluir en la lista:\n\n-   ¿Alguien podría identificarme con esta información?: por ejemplo nombre, dirección, número de teléfono, etc.\n-   ¿Quiero que todos vean esto?: Evita publicar información que no quieres compartir con todo el mundo.\n-   ¿Quiero que esto sea permanente?: Una vez que lo publicas, pierdes el control de esa información y esta podría estar en línea durante toda tu vida.\n\nLas listas de los estudiantes pueden ser diferentes, pero todas deben incluir estos y otros principios adicionales que aprendieron en esta lección.\n\nAsegúrese de que los estudiantes estén usando el vocabulario.\n\n**Huella digital** - La información recopilada sobre una persona en varios sitios web de Internet"
           ]
         },
         "0db491eb-577a-4715-873f-1ea5a2282093": {
-          "description": "**Compartir:** Permita que los grupos compartan sus listas, utilice estas respuestas para elaborar una lista con los comentarios de toda la clase. Considere hacer un cartel de esta lista que esté disponible para que los estudiantes puedan usarlo durante toda la unidad."
+          "description": "**Compartir:** Permita que los grupos compartan sus listas, utilizando estas respuestas para elaborar una lista con los comentarios de toda la clase. Considere hacer un cartel de esta lista que esté disponible para que los estudiantes puedan usarlo durante toda la unidad."
         },
         "83c158d0-11bd-4cd7-8fc7-7534dda863e4": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Atención!** Si está enseñando virtualmente o en una sala de clases  [haga clic aquí](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit)  para acceder a las modificaciones que puede usar para esta lección. "
         },
         "ea8f89ca-3e2f-435d-8b7d-53e2eb1f83cd": {
-          "name": "Escribir en la bitácora Apariencia del  HTML",
+          "name": "Escribir en la bitácora: Apariencia del HTML",
           "description": "**Mostrar:** Muestre o pida a los estudiantes que ingresen la página de Code Studio.\n "
         },
         "274e44d0-b3dd-47d0-bec2-7878f59d38fd": {
           "description": "**Decir:** Veamos esta página en Code Studio. Si quisieran crear una página así, ¿Qué cosas ya saben hacer? ¿Qué es lo que aún deben aprender?"
         },
         "3412213d-9a22-470e-859c-66b9a752d6bb": {
-          "description": "**Discusión:** Pida a los estudiantes que compartan sus respuestas",
+          "description": "**Discusión:** Pida a los estudiantes que compartan lo que saben y no saben",
           "tips": [
             "**Objetivo:** Los estudiantes deberían decir que ya saben cómo estructurar y modificar el tamaño de letra de un texto, usando encabezados (por ejemplo: `<h1>`) y párrafos `<p>`. Es posible que se den cuenta de que no saben como cambiar el color de un texto. O comentar otras cosas que ven en esta página web, como por ejemplo, que los párrafos están escritos en cursiva, los nombres de los discursos están subrayados y que el tamaño del texto en las citas es mucho más pequeño que en los párrafos."
           ]
         },
         "716adb76-8da2-4226-9ab8-2a57536da9a6": {
-          "description": "Hasta ahora hemos trabajado con páginas web en dónde sólo podemos controlar el contenido y la estructura, como por ejemplo qué partes de la página son encabezados y cuales son párrafos. Hemos usado el HTML como un lenguaje para especificar el contenido y la estructura de las páginas. Si bien el HTML nos permite controlar cómo se ve nuestra página, no permite que los desarrolladores puedan cambiar las apariencias y estilo de cada uno de los elementos. Para hacer esto, necesitamos un lenguaje que nos permita expresar el _estilo_."
+          "description": "Hasta ahora hemos trabajado con páginas web en dónde sólo podemos controlar el contenido y la estructura, como por ejemplo qué partes de la página son encabezados y cuáles son párrafos. Hemos usado el HTML como un lenguaje para especificar el contenido y la estructura de las páginas. Si bien el HTML nos permite controlar cómo se ve nuestra página, no permite que los desarrolladores puedan cambiar las apariencias y estilo de cada uno de los elementos. Para hacer esto, necesitamos un lenguaje que nos permita expresar el _estilo_."
         },
         "e205ebdc-a224-4b80-9e0a-290dadcd0ab2": {
           "description": "**Pregunta del día: ¿Cómo podemos cambiar la apariencia de un texto en una página web?**"
         },
         "3da6f5d8-fc89-457f-9466-1f539cb9f55b": {
           "name": "Laboratorio Web: Introducción al CSS",
-          "description": "**Grupos:** Forma parejas de estudiantes.\n\n**Transición:** Solicite a los estudiantes que ingresen a Code Studio.\n\nPermita que los estudiantes ingresen a la página web de ejemplo en Code Studio.",
+          "description": "**Agrupar:** Forma parejas de estudiantes.\n\n**Transición:** Solicite a los estudiantes que ingresen a Code Studio.\n\nPermita que los estudiantes ingresen a la página web de ejemplo en Code Studio.",
           "progression_name": "Sitio web de ejemplo"
         },
         "0fb9d1d3-097c-4ce5-b276-aa71c839c82f": {
@@ -17050,13 +17160,13 @@
         "029f4c9c-3f40-458c-8480-b677aee2c5f5": {
           "description": "**Preguntas para reflexionar con el vídeo:**\n\n-   ¿En qué se diferencia el estilo y estructura de una página? \n-   ¿Por qué querrías dar cierto estilo a tu página web?",
           "tips": [
-            "**Vocabulario**\n\n-   **CSS** - Cascading Style Sheets (en español Hojas de estilo en cascada): Un lenguaje usado para describir el estilo de los elementos HTML\n-   \\*\\*Selector CSS \\*\\* - La parte de un set de reglas de CSS que indica los elementos del HTML a los que debe aplicarse un estilo\n\nLos estudiantes deben comprender que la estructura de una página sirve para organizar la información de manera estructurada, pero que no puede indicarle a una computadora como mostrar estos elementos. Por ejemplo, la estructura de una página web podría tener distintos encabezados y párrafos, pero no puede especificar el color del texto o el tamaño de la letra. El estilo de una página es lo que especifica la apariencia. Si las páginas no contarán con un estilo en particular, cada navegador web decidiría cómo mostrar la página.\n\nLos estilos son importantes, ya que permiten que los desarrolladores puedan decidir cómo debe verse una página web en una pantalla. Como el estilo está separado de la estructura y contenido, los desarrolladores web pueden cambiar el estilo de una página web completa con mucha facilidad y sin tener que hacer cambios a su estructura o contenido. Esto significa que es muy fácil dar un aspecto individual y uniforme a una página web.",
-            "**Imágenes en el video**: El video menciona que los estudiantes ya saben cómo agregar imágenes a un sitio web. Este video fue hecho para la versión anterior de este curso, en la cual los estudiantes aprendían como agregar imágenes antes de aprender CSS. En esta versión del curso, los estudiantes aún no han visto este tipo de videos. Si preguntan, utilice este momento para generar expectativa de lo que podrán aprender en las siguientes lecciones.\n "
+            "**Vocabulario**\n\n-   **CSS** - Cascading Style Sheets (en español Hojas de estilo en cascada): Un lenguaje usado para describir el estilo de los elementos HTML\n-   \\*\\*Selector CSS \\*\\* - La parte de un set de reglas de CSS que indica los elementos del HTML a los que debe aplicarse un estilo\n\nLos estudiantes deben comprender que la estructura de una página sirve para organizar la información de manera estructurada, pero que no puede indicarle a una computadora cómo mostrar estos elementos. Por ejemplo, la estructura de una página web podría tener distintos encabezados y párrafos, pero no puede especificar el color del texto o el tamaño de la letra. El estilo de una página es lo que especifica la apariencia. Si las páginas no contarán con un estilo en particular, cada navegador web decidiría cómo mostrar la página.\n\nLos estilos son importantes, ya que permiten que los desarrolladores puedan decidir cómo debe verse una página web en una pantalla. Como el estilo está separado de la estructura y contenido, los desarrolladores web pueden cambiar el estilo de una página web completa con mucha facilidad y sin tener que hacer cambios a su estructura o contenido. Esto significa que es muy fácil dar un aspecto individual y uniforme a una página web.",
+            "**Imágenes en el video**: El video menciona que los estudiantes ya saben cómo agregar imágenes a un sitio web. Este video fue hecho para la versión anterior de este curso, en la cual los estudiantes aprendían cómo agregar imágenes antes de aprender CSS. En esta versión del curso, los estudiantes aún no han visto este tipo de videos. Si preguntan, utilice este momento para generar expectativa de lo que podrán aprender en las siguientes lecciones.\n "
           ],
           "progression_name": "Video: Introducción al CSS- Parte 1"
         },
         "111d1cba-08a3-4658-bb00-cb5e3c52427e": {
-          "description": "**Circule:** Apoye a los estudiantes mientras avanzan en la lección."
+          "description": "**Recorrer el salón de clases:** Apoye a los estudiantes mientras avanzan en la lección."
         },
         "8c1fda37-7107-43e8-92ad-60e7fc6d2d7d": {
           "progression_name": "Desarrollo de Habilidades"
@@ -17082,7 +17192,7 @@
         },
         "3a9a8696-72e3-4e6f-9812-59e180a16192": {
           "tips": [
-            "**Nota acerca de las fuentes y familias tipográficas.**\n\nPara que un navegador web muestre una **fuente**, ésta debe estar disponible en el dispositivo en el que se ejecuta el navegador web.  No hay garantía de que ningún dispositivo tenga un tipo de letra en particular, por lo que es mucho más seguro utilizar **familias** tipográficas, que permiten que muchas fuentes distintas, parezcan y se vean iguales.\n\nSi los alumnos quieren especificar un tipo de letra exacto, tendrán que utilizar un tipo de letra de la web, de modo que el navegador pueda descargar ese tipo de letra específico para utilizarlo al visualizar la página.  Puede encontrar más información acerca de las fuentes disponibles en **Google Fonts** y **W3Schools**."
+            "**Nota acerca de las fuentes y familias tipográficas.**\n\nPara que un navegador web muestre una **fuente**, ésta debe estar disponible en el dispositivo en el que se ejecuta el navegador web.  No hay garantía de que ningún dispositivo tenga un tipo de letra en particular, por lo que es mucho más seguro utilizar **familias** tipográficas, las cuales permiten que muchas fuentes distintas parezcan y se vean iguales.\n\nSi los estudiantes quieren especificar un tipo de letra exacto, tendrán que utilizar un tipo de letra de la web, de modo que el navegador pueda descargar ese tipo de letra específico para utilizarlo al visualizar la página.  Puede encontrar más información acerca de las fuentes disponibles en **Google Fonts** y **W3Schools**."
           ],
           "progression_name": "Desafíos"
         },
@@ -17103,14 +17213,14 @@
           ]
         },
         "6b222417-5594-4fd8-b943-3a43810b6cab": {
-          "description": "**Grupos:** Forme grupos de 2 a 5 estudiantes, debe haber al menos un grupo por cada una de las propiedades presentadas en esta lección.\n\n**Rompecabezas:** Asigne una de las propiedades aprendidas en la lección de hoy a cada grupo. Cada grupo debe describir y dar ejemplos de esa propiedad.\n\n**Vocabulario:**\n\n-   **CSS** - Cascading Style Sheets (en español Hojas de estilo en cascada): Un lenguaje usado para describir el estilo de los elementos HTML\n-   **Selector CSS** - La parte de un set de reglas de CSS que indica a qué elementos del HTML debe aplicarse un estilo.\n\n**Compartir:** Pida a los grupos que anoten las propiedades en sus bitácoras o en el cartel."
+          "description": "**Agrupar:** Forme grupos de 2 a 5 estudiantes. Debe haber al menos un grupo por cada una de las propiedades presentadas en esta lección.\n\n**Rompecabezas:** Asigne una de las propiedades aprendidas en la lección de hoy a cada grupo. Cada grupo debe describir y dar ejemplos de esa propiedad.\n\n**Vocabulario:**\n\n-   **CSS** - Cascading Style Sheets (en español Hojas de estilo en cascada): Un lenguaje usado para describir el estilo de los elementos HTML\n-   **Selector CSS** - La parte de un set de reglas de CSS que indica a qué elementos del HTML debe aplicarse un estilo.\n\n**Compartir:** Pida a los grupos que anoten las propiedades en sus bitácoras o en el cartel."
         },
         "743c31d1-cc99-468e-9152-2fe251370f2f": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Atención!** Si está enseñando virtualmente o en una sala de clases  [haga clic aquí](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit)  para acceder a las modificaciones que puede usar para esta lección. "
         },
         "5572ccc6-7ab9-4dca-a02c-8ecd22e87705": {
           "name": "Escribir en la bitácora",
-          "description": "**Decir:** ¿Que hace que tu estilo personal sea especial y por qué te gustaría compartirlo con el mundo?"
+          "description": "**Decir:** ¿Qué hace que tu estilo personal sea especial y por qué te gustaría compartirlo con el mundo?"
         },
         "4662cf38-bec5-4f63-9f2d-237617407f0f": {
           "description": "Invite a los estudiantes que quieran participar a compartir aquellos aspectos de su estilo personal que consideren importantes.",
@@ -17129,7 +17239,7 @@
         },
         "c4f6d157-8bd5-40ec-98a9-65cd3d968b8c": {
           "name": "Paso 1: Define - Establece tu objetivo",
-          "description": "En la actividad inicial, los estudiantes pudieron describir su estilo personal. En esta instancia los estudiantes podrán definir su tema o cambiar de opinión acerca del estilo que usarán en su sitio web."
+          "description": "En la actividad inicial, los estudiantes pudieron describir su estilo personal. En esta instancia, los estudiantes podrán definir su tema o cambiar de opinión acerca del estilo que usarán en su sitio web."
         },
         "d37f1e1e-0f76-4f17-b871-cd5233590f47": {
           "name": "Paso 2: Preparar - Diseñar tu página",
@@ -17170,7 +17280,7 @@
           "description": "**¿Cómo puedes expresar tu estilo personal en una página web?**\n\n**Decir:** ¿Hay algo que aún no sepas hacer que podría mejorar tu página web?"
         },
         "8c10515f-4ba5-4629-b5e0-e44975336298": {
-          "description": "A medida que los alumnos compartan sus ideas, póngalas en la pizarra o en un cartel, e incluya todas las habilidades que aprendan en las próximas lecciones.",
+          "description": "A medida que los estudiantes compartan sus ideas, póngalas en la pizarra o en un cartel, e incluya todas las habilidades que aprendan en las próximas lecciones.",
           "tips": [
             "Use estas ideas para que los estudiantes se entusiasmen con lo que podrán aprender en las próximas lecciones. Si decide crear un cartel, recomendamos tachar los temas a medida que los enseña. Si los estudiantes proponen temas que no están cubiertos en el plan de estudio, puede sugerir temas similares que sí lo estén o que sean apropiados, sugerir información o páginas web externas que los puedan ayudar a aprender esas habilidades."
           ]
@@ -17183,7 +17293,7 @@
           "description": "Todos ustedes han estado trabajando duro para crear un nuevo sitio web que van a publicar al mundo. Sin embargo, cuando publicas algo, puede ser difícil controlar lo que otras personas hacen con él. A veces las personas usan nuestro trabajo de maneras que no nos parecen justas. Voy a describir algunas situaciones. Si crees que lo que sucedió fue justo, levántate. Si crees que fue injusto, siéntate."
         },
         "3356cda1-c8fe-4475-aaf6-1361379c848f": {
-          "description": "1.  Tomaste una foto increíble y alguien la puso en su cuenta de redes sociales con tu nombre al lado.\n2.  Escribiste una historia, alguien más la publicó y dice que la escribió.\n3.  Escribiste una canción y alguien se la canta a sus amigos.\n4.  Escribiste una canción, alguien la canta en un concierto y gana mucho dinero.\n5.  Tomaste una foto y alguien más la modificó y puso la nueva versión en su sitio web.",
+          "description": "1.  Tomaste una foto increíble y alguien la puso en su cuenta de redes sociales con tu nombre al lado.\n2.  Escribiste una historia y alguien más la publicó y dice que la escribió.\n3.  Escribiste una canción y alguien se la canta a sus amigos.\n4.  Escribiste una canción y alguien la canta en un concierto y gana mucho dinero.\n5.  Tomaste una foto y alguien más la modificó y puso la nueva versión en su sitio web.",
           "tips": [
             "El objetivo de estos ejemplos es relacionar los derechos de autor con las experiencias personales que los estudiantes han tenido creando y compartiendo contenido en línea. Para hacer que se sientan identificados, puede adaptar los ejemplos a las plataformas de redes sociales que los estudiantes utilicen en su vida diaria. Si los estudiantes no utilizan redes sociales, sitúe estos ejemplos en otros contextos en el que su trabajo creativo se use de manera inapropiada."
           ]
@@ -17192,26 +17302,26 @@
           "description": "**Decir:** ¿Qué reglas harías para las personas que quieran usar tu trabajo creativo?"
         },
         "fe6c8d53-4cc0-4bbb-8ffe-8cc1432e522b": {
-          "description": "**Análisis:** Pida a los alumnos que reflexionen individualmente en sus bitácoras, luego que compartan con un compañero de puesto y, finalmente, que la clase completa analice las situaciones. ",
+          "description": "**Análisis:** Pida a los estudiantes que reflexionen individualmente en sus bitácoras, luego que compartan con un compañero de puesto y, finalmente, que la clase completa analice las situaciones. ",
           "tips": [
             "Este análisis ayuda a que los estudiantes piensen en el problema antes de presentar la solución de Creative Commons. A medida que los estudiantes analizan las reglas que les gustaría para su propio trabajo, asegúrese de enfatizar y resaltar los principios que corresponden a las propiedades de Creative Commons que explorarán más adelante en la lección."
           ]
         },
         "36bd75d0-1aa9-4fd5-82f7-84b15aa6c2f0": {
-          "description": "Está bien tener distintas opiniones acerca de cómo quieren que se use su propio trabajo. La ley de derechos de autor dice que el creador del contenido nuevo, como una imagen, una historia o una canción, puede decidir cómo se permite que otras personas lo usen."
+          "description": "Está bien tener distintas opiniones acerca de cómo quieren que se use su propio trabajo. La ley de derechos de autor dice que el creador del contenido nuevo, como una imagen, una historia o una canción, puede decidir cómo las otras personas pueden usar dicho contenido. "
         },
         "29bd3aba-9e14-4d7d-b88c-54ea4d67f323": {
-          "description": "**Vocabulario:**\n\n-   **Copyright** - El derecho legal exclusivo de imprimir, publicar, interpretar, filmar o grabar material literario, artístico o musical, y de autorizar a otros a hacer lo mismo\n\n**Pregunta del día: ¿Qué tipo de reglas protegen nuestros derechos de autor al compartir contenido?**"
+          "description": "**Vocabulario:**\n\n-   **Derecho de autor** - El derecho legal exclusivo de imprimir, publicar, interpretar, filmar o grabar material literario, artístico o musical, y de autorizar a otros a hacer lo mismo\n\n**Pregunta del día: ¿Qué tipo de reglas protegen nuestros derechos de autor al compartir contenido?**"
         },
         "2822dc84-309f-40d5-91c8-f7e68188487c": {
           "name": "La solución Creative Commons",
           "description": "Los derechos de autor se otorgan en el momento en el que se crea algo, entonces, a menos que se indique lo contrario, tenemos que asumir que cualquier imagen, video u otro medio que encontremos en línea está totalmente cubierto por la ley de derechos de autor. Esto significa, que nadie más puede hacer copias o publicarlo en línea sin permiso. \n\nA veces, sin embargo, queremos que la gente comparta nuestro trabajo para que más personas puedan verlo. La licencia Creative Commons (CC) fue desarrollada para ayudar a los creadores de contenido a tener un control más específico sobre cómo otras personas pueden usar su trabajo."
         },
         "51ea51b8-4f71-49d9-8eac-f6118f5364cf": {
-          "description": "**Mostrar:** Presente el video a la clase. Este video es de la Biblioteca McLaughlin de la Universidad de Guelph. \n\n**Grupo:** Emparejar a los estudiantes.\n\n**Distribuir:** Entregue a cada estudiante una copia de la guía de actividades."
+          "description": "**Mostrar:** Presente el video a la clase. Este video es de la Biblioteca McLaughlin de la Universidad de Guelph. \n\n**Agrupar:** Emparejar a los estudiantes.\n\n**Distribuir:** Entregue a cada estudiante una copia de la guía de actividades."
         },
         "0a1fb44a-12cf-4dd2-ab20-acf365289d46": {
-          "description": "#### Licencia de su trabajo\n\n**Componentes de licencia**"
+          "description": "#### Registrando tu autoría\n\n**Componentes de licencia**"
         },
         "f8a65f45-b4db-4f6f-9a20-b4ef89910159": {
           "description": "La primera parte de esta guía de actividades cubre los componentes de una licencia Creative Commons. En esta actividad, incite a los estudiantes a pensar críticamente acerca del valor que cada componente agrega al creador, pero también sobre las formas en las que podría limitar el intercambio cultural de ideas, conectando los componentes de la licencia a los escenarios analizados en la actividad inicial.",
@@ -17222,27 +17332,27 @@
         "957ba0ee-6412-418d-bb42-811c2ea546cc": {
           "description": "**Otras opciones**\n\nLa segunda parte de la guía presenta a los estudiantes otras licencias y escenarios a los que pueden enfrentarse cuando busquen imágenes. ",
           "tips": [
-            "Los estudiantes podrían tener preguntas acerca de cómo atribuir las imágenes que toman ellos mismos. Puede recordarles que, como creadores de contenido, pueden escoger la licencia que desean usar y listarse como el creador junto con esa licencia."
+            "Los estudiantes podrían tener preguntas acerca de cómo atribuirse las imágenes que toman ellos mismos. Puede recordarles que, como creadores de contenido, pueden escoger la licencia que desean usar y listarse como el creador junto con esa licencia."
           ]
         },
         "ef076e07-e82a-4f80-9bb1-0b1d811c0b1b": {
           "description": "**Elegir la licencia correcta**\n\nLa segunda página de esta actividad proporciona a los estudiantes cuatro licencias CC y dos escenarios de creador de contenido. Para cada escenario, los estudiantes deben evaluar cuál de las cuatro licencias proporcionadas es la _menos restrictiva_, pero aun así aborda las preocupaciones y necesidades del creador de contenido."
         },
         "353b9fc5-832d-4961-ab5e-4c59f80c104d": {
-          "description": "**Análisis:** Pida a varios alumnos que compartan sus respuestas a los _distintos_ escenarios. Si los estudiantes identificaron diferentes licencias para los mismos escenarios, utilice esta oportunidad para fomentar la discusión y el debate.",
+          "description": "**Análisis:** Pida a varios estudiantes que compartan sus respuestas a los _distintos_ escenarios. Si los estudiantes identificaron diferentes licencias para los mismos escenarios, utilice esta oportunidad para fomentar la discusión y el debate.",
           "tips": [
             "**Objetivo:** Aunque probablemente no haya una licencia de \"derecho\" específica para cada uno de estos escenarios, comente a los estudiantes que siempre es recomendable preguntarse si la licencia que eligieron es más restrictiva de lo que debería ser. Uno de los objetivos de diseño de la licencia de Creative Commons es aumentar la cantidad de material creativo disponible para el público en general, promoviendo el intercambio de propiedad intelectual para el bien común. Con esto en mente, solo deberíamos agregar las restricciones mínimas necesarias para cumplir con los deseos del creador de contenido."
           ]
         },
         "038ca026-dab7-4b7a-8c7b-c6266154edcf": {
-          "description": "**Búsqueda de imágenes**\n\nLa primera parte de la guía pide a los estudiantes que encuentren imágenes de su elección e identifiquen las licencias bajo las cuales fueron publicadas.\n\nDebido a que no podemos saber qué sitios están bloqueados en su escuela, hemos evitado utilizar motores de búsqueda específicos. No todos los motores de búsqueda facilitan la configuración de filtros Creative Commons, algunos de los más fáciles incluyen:\n\n-   [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)\n-   [Google Image Advanced Search](https://www.google.com/advanced_image_search)\n-   [Flickr Creative Commons](https://www.flickr.com/creativecommons/)\n-   [Wordpress Openverse](https://wordpress.org/openverse/) (formerly Creative Commons Search)\n\nAdicionalmente, esta [guía de la Biblioteca de la Escuela de Derecho de Harvard](https://guides.library.harvard.edu/c.php?g=310751&p=2072816) contiene una variedad de motores de búsqueda que puede utilizarse para encontrar imágenes de creative commons. Esta guía podría ser abrumadora para los estudiantes, pero debe considerarse como un recurso para situaciones específicas o para encontrar motores de búsqueda adicionales que estén disponibles en su escuela.\n\nAl igual que con cualquier sitio con contenido de crowdsourcing, los resultados de los motores de búsqueda pueden cambiar de un día a otro e incluso ser inapropiados para la clase. Recomendamos revisar estos sitios antes de mostrarlos a la clase y decidir la mejor alternativa.\n\n**Compartir:** Permita que los estudiantes compartan las imágenes y licencias que han encontrado, y si las imágenes podrían incluirse en un sitio web del estudiante. De ser así, que comenten qué reglas debería seguir el estudiante para usar la imagen."
+          "description": "**Búsqueda de imágenes**\n\nLa primera parte de la guía pide a los estudiantes que encuentren imágenes de su elección e identifiquen las licencias bajo las cuales fueron publicadas.\n\nDebido a que no podemos saber qué sitios están bloqueados en su escuela, hemos evitado utilizar motores de búsqueda específicos. No todos los motores de búsqueda facilitan la configuración de filtros Creative Commons, algunos de los más fáciles incluyen:\n\n-   [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)\n-   [Google Image Advanced Search](https://www.google.com/advanced_image_search)\n-   [Flickr Creative Commons](https://www.flickr.com/creativecommons/)\n-   [Wordpress Openverse](https://wordpress.org/openverse/) (formerly Creative Commons Search)\n\nAdicionalmente, esta [guía de la Biblioteca de la Escuela de Derecho de Harvard](https://guides.library.harvard.edu/c.php?g=310751&p=2072816) contiene una variedad de motores de búsqueda que puede utilizarse para encontrar imágenes de creative commons. Esta guía podría ser abrumadora para los estudiantes, pero debe considerarse como un recurso para situaciones específicas o para encontrar motores de búsqueda adicionales que estén disponibles en su escuela.\n\nAl igual que con cualquier sitio con contenido de crowdsourcing, los resultados de los motores de búsqueda pueden cambiar de un día a otro, e incluso ser inapropiados para la clase. Recomendamos revisar estos sitios antes de mostrarlos a la clase y decidir la mejor alternativa.\n\n**Compartir:** Permita que los estudiantes compartan las imágenes y licencias que han encontrado, y si las imágenes podrían incluirse en un sitio web del estudiante. De ser así, que comenten qué reglas debería seguir el estudiante para usar la imagen."
         },
         "d5a7f547-8873-4260-b32e-b863b2dc5b29": {
           "name": "Tu propia licencia CC",
           "description": "**Pregunta del día: ¿Qué tipo de reglas protegen nuestros derechos de autor al compartir contenido?**"
         },
         "aba827e0-c4a3-455f-9c37-d7d46c47ea2e": {
-          "description": "**Vocabulario:**\n\n-   **copyright** - El derecho legal exclusivo de imprimir, publicar, interpretar, filmar o grabar material literario, artístico o musical, y de autorizar a otros a hacer lo mismo"
+          "description": "**Vocabulario:**\n\n-   **derechos de autor** - El derecho legal exclusivo de imprimir, publicar, interpretar, filmar o grabar material literario, artístico o musical, y de autorizar a otros a hacer lo mismo"
         },
         "6ff6d697-74a4-41a2-91a3-4ef817ceff84": {
           "description": "**Escribir en la bitácora:** Piensen en algunas de las fotos, dibujos y trabajos escritos que han creado en el pasado, e incluso en el sitio web que crearán en esta clase. Sin una licencia clara, todas esas cosas están cubiertas por los derechos de autor totalmente restrictivos. ¿Qué licencia Creative Commons preferirías usar (si la hubiera) y por qué?",
@@ -17258,10 +17368,10 @@
         },
         "48accbcd-e23c-4d31-aa68-baed73694793": {
           "name": "Usando Imágenes",
-          "description": "Hoy agregaremos imágenes a nuestros sitios web. Esto puede hacer que nuestros sitios web se vean mejor, pero también significa que debemos ser cuidadosos y asegurarnos que estamos utilizando estas imágenes de forma correcta y responsable."
+          "description": "Hoy, agregaremos imágenes a nuestros sitios web. Esto puede hacer que nuestros sitios web se vean mejor, pero también significa que debemos ser cuidadosos y asegurarnos que estamos utilizando estas imágenes de forma correcta y responsable."
         },
         "2c7139b2-bd78-402d-9d57-1191bfcf3d3c": {
-          "description": "**Decir:** En sus bitácoras anoten algunas reglas que deberíamos tener en cuenta cuando utilizamos imágenes. ¿Cómo podemos asegurarnos de respetar los derechos de otros?",
+          "description": "**Decir:** En sus bitácoras, anoten algunas reglas que deberíamos tener en cuenta cuando utilizamos imágenes. ¿Cómo podemos asegurarnos de respetar los derechos de otros?",
           "tips": [
             "Mientras los estudiantes trabajan, puede mencionar las actividades que realizaron en lecciones anteriores y lo que aprendieron acerca de compartir información personal y cómo respetar los derechos de autor. Es posible que algunos grupos deseen agregar otras directrices como definir lo que es apropiado para el ambiente escolar, o que antes de publicar deben asegurarse de que contar con la autorización de aquellas personas que aparecen en la imagen. En cualquiera de estos escenarios, asegúrese de que se cumplan los objetivos de la actividad antes de pasar a la siguiente."
           ]
@@ -17273,14 +17383,14 @@
           "name": "Añadiendo los Imágenes",
           "description": "**Transición:** Solicite a los estudiantes que ingresen a Code Studio.",
           "tips": [
-            "Es posible que al comenzar a utilizar imágenes, los estudiantes no puedan encontrar el tamaño adecuado para colocar en sus sitios web. En las dos lecciones, los estudiantes aprenderán como re dimensionar sus imágenes utilizando CSS. Por ahora, los estudiantes pueden modificar las dimensiones de una imagen utilizando algunos sitios web como <https://resizeimage.net/>, to resize their images. Por ahora pueden utilizar los atributos [\\`height\\`](/docs/weblab/height/) o [\\`width\\`](/docs/weblab/width/) dentro de las etiquetas [\\`img\\`](/docs/weblab/img/) para re dimensionar la página."
+            "Es posible que al comenzar a utilizar imágenes, los estudiantes no puedan encontrar el tamaño adecuado para colocar en sus sitios web. En las dos lecciones, los estudiantes aprenderán como redimensionar sus imágenes utilizando CSS. Por ahora, los estudiantes pueden modificar las dimensiones de una imagen utilizando algunos sitios web como <https://resizeimage.net/>. Por ahora, pueden utilizar los atributos [\\`height\\`](/docs/weblab/height/) o [\\`width\\`](/docs/weblab/width/) dentro de las etiquetas [\\`img\\`](/docs/weblab/img/) para redimensionar la página."
           ]
         },
         "f69595ea-98fa-4c39-9686-6916ab265ab4": {
           "progression_name": "Desarrollo de Habilidades"
         },
         "397c0b58-b779-4a76-afd5-4592332a561c": {
-          "description": "**Nivel 1:** Puede que los estudiantes encuentren algunas etiquetas de imagen que se vean así: `<img src=\"imgURL.jpg\" alt=\"my image\" />`\n\nEstas están ahí para indicar que esta etiqueta es de cierre automático, pero que son opcionales y no tienen afectan a la página web.\n\n**Nivel 2** Al utilizar este tipo de licencia, no es necesario que los estudiantes citen las fuentes del contenido, sin embargo, el hacerlo crea un buen hábito que le servirá a futuro cuando construyan sus sitios web.\n\n**Nivel 5 - Motores de búsqueda recomendados:** Debido a que no podemos saber qué sitios están bloqueados en su escuela, hemos evitado utilizar motores de búsqueda específicos. No todos los motores de búsqueda facilitan la configuración de filtros Creative Commons, algunos de los más fáciles incluyen:\n\n-   [Búsqueda en Creative Commons](https://search.creativecommons.org/)\n-   [Búsqueda avanzada de imágenes en Google](https://www.google.com/advanced_image_search)\n-   [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)\n-   [Flickr Creative Commons](https://www.flickr.com/creativecommons/)\n\nAl igual que con cualquier sitio con contenido de colaboración abierta los resultados de los motores de búsqueda pueden cambiar de un día a otro e incluso ser inapropiados para la clase. Recomendamos revisar estos sitios antes de mostrarlos a la clase y decidir la mejor alternativa."
+          "description": "**Nivel 1:** Puede que los estudiantes encuentren algunas etiquetas de imagen que se vean así: `<img src=\"imgURL.jpg\" alt=\"my image\" />`\n\nEstas están ahí para indicar que esta etiqueta es de cierre automático, pero que son opcionales y no afectan a la página web.\n\n**Nivel 2** Al utilizar este tipo de licencia, no es necesario que los estudiantes citen las fuentes del contenido, sin embargo, el hacerlo crea un buen hábito que le servirá a futuro cuando construyan sus sitios web.\n\n**Nivel 5 - Motores de búsqueda recomendados:** Debido a que no podemos saber qué sitios están bloqueados en su escuela, hemos evitado utilizar motores de búsqueda específicos. No todos los motores de búsqueda facilitan la configuración de filtros Creative Commons, algunos de los más fáciles incluyen:\n\n-   [Búsqueda en Creative Commons](https://search.creativecommons.org/)\n-   [Búsqueda avanzada de imágenes en Google](https://www.google.com/advanced_image_search)\n-   [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)\n-   [Flickr Creative Commons](https://www.flickr.com/creativecommons/)\n\nAl igual que con cualquier sitio con contenido de colaboración abierta, los resultados de los motores de búsqueda pueden cambiar de un día a otro e incluso ser inapropiados para la clase. Recomendamos revisar estos sitios antes de mostrarlos a la clase y decidir la mejor alternativa."
         },
         "cf0abcbd-3e9a-4964-9cb3-de8d7b5bec52": {
           "tips": [
@@ -17299,7 +17409,7 @@
         },
         "869d287c-19c3-4e38-83bf-0498821d1157": {
           "name": "Usando Imágenes",
-          "description": "**Pregunta del día: ¿Cómo añadir imágenes a nuestros sitios web asegurándonos que se respeten los derechos de todos?**\n\n**Escribir en la bitácora 3, 2, 1:**\n\n-   Nombra **3** formas en las que puedas usar imágenes para mejorar tu sitio web.\n-   Cuáles son los desafíos al añadir imágenes a un sitio web.\n-   ¿De qué formas puedes respetar los derechos de las personas cuando utilizas imágenes?"
+          "description": "**Pregunta del día: ¿Cómo añadir imágenes a nuestros sitios web asegurándonos que se respeten los derechos de todos?**\n\n**Escribir en la bitácora 3, 2, 1:**\n\n-   Nombra **3** formas en las que puedas usar imágenes para mejorar tu sitio web.\n-   ¿Cuáles son los **2** desafíos presentes al añadir imágenes a un sitio web?\n-   ¿Cuál es **1** forma en la puedes respetar los derechos de las personas cuando utilizas imágenes?"
         },
         "5135be5c-3b48-41fd-90f9-a9c70a323590": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Atención!** Si está enseñando virtualmente o en una sala de clases  [haga clic aquí](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit)  para acceder a las modificaciones que puede usar para esta lección. "
@@ -17311,27 +17421,27 @@
         "59343467-2b51-47a0-a2af-2f1357b5e3ba": {
           "description": "**Análisis:** Pida a los estudiantes que trabajen individualmente en sus bitácoras, luego que compartan sus ideas con un compañero de puesto y, finalmente, con toda la clase.",
           "tips": [
-            "\\*Objetivo:\\*\\* En esta actividad Inicial los estudiantes crearán una lista de las formas en las que los estudiantes expresan sus ideas. Si necesitan ayuda para comenzar, puede mencionar algunos ejemplos de la siguiente lista. El objetivo de esta actividad es enmarcar al desarrollo web como otra forma para la autoexpresión. "
+            "\\*Objetivo:\\*\\* En esta actividad Inicial, los estudiantes crearán una lista de las formas en las que los estudiantes expresan sus ideas. Si necesitan ayuda para comenzar, puede mencionar algunos ejemplos de la siguiente lista. El objetivo de esta actividad es enmarcar al desarrollo web como otra forma para la auto-expresión. "
           ]
         },
         "384ab1ae-3b23-4ee4-bb78-19e695c63015": {
-          "description": "Existen distintas formas para expresar nuestros pensamientos, sentimientos e ideas. Algunas personas expresan sus pensamientos en línea, otros en su vestimenta, escribiendo una canción, o dibujando. La auto expresión es una parte importante de nuestras vidas. Hoy aprenderemos qué otras formas de expresar nuestras ideas, intereses y pensamientos es a través de la creación de nuestros sitios web."
+          "description": "Existen distintas formas para expresar nuestros pensamientos, sentimientos e ideas. Algunas personas expresan sus pensamientos en línea, otros en su vestimenta, escribiendo una canción, o dibujando. La auto-expresión es una parte importante de nuestras vidas. Hoy aprenderemos qué otras formas de expresar nuestras ideas, intereses y pensamientos son a través de la creación de nuestros sitios web."
         },
         "9f949a84-aa34-4646-9ce1-132bf89514f0": {
           "description": "**Pregunta del día: ¿Cómo podemos utilizar sitios web para expresarnos?**"
         },
         "1296352e-2e42-45a9-a7c7-2cbc4e7f5689": {
           "name": "Revisión del proceso de resolución de problemas",
-          "description": "**Revisión:**Vuelva a revisar la estructura del proceso de resolución de problemas. Definir, preparar, intentar, reflexionar"
+          "description": "**Revisión:**Vuelva a revisar la estructura del proceso de resolución de problemas: Definir, preparar, intentar, reflexionar"
         },
         "1bead7d0-5102-4ba1-9de7-3c9366841210": {
-          "description": "Si bien la auto expresión no es precisamente un “problema” que debemos resolver, podemos utilizar el proceso de resolución de problemas como una ayuda para expresarnos en nuestras páginas web. Hoy veremos cómo “definir” el problema que nuestra página web resolverá."
+          "description": "Si bien la auto-expresión no es precisamente un “problema” que debemos resolver, podemos utilizar el proceso de resolución de problemas como una ayuda para expresarnos en nuestras páginas web. Hoy veremos cómo “definir” el problema que nuestra página web resolverá."
         },
         "8aaf1b58-dda9-4a40-a345-cf5179d83904": {
           "description": "#### Guía de planificación de sitio web personal\n\n**Distribuir:** Pida a los estudiantes que abran sus bitácoras o distribuya copias de la guía de actividades."
         },
         "bf7e752c-b96b-4416-b4cd-f3af71a59035": {
-          "description": "**Ideas de contenido:** Lea esta sección en la guía de actividades. Luego, dé un momento a los estudiantes para que anoten ideas de contenido que quieran incluir en sus sitios web.",
+          "description": "**Ideas de contenido:** Lea esta sección de la guía de actividades. Luego, dé un momento a los estudiantes para que anoten ideas de contenido que quieran incluir en sus sitios web.",
           "tips": [
             "**Usar la bitácora:** Los estudiantes pueden realizar la actividad de esta lección en sus bitácoras. Proyecte o comparta las instrucciones y permita que los estudiantes hagan su actividad en la bitácora."
           ]
@@ -17349,7 +17459,7 @@
           "progression_name": "Muestra de sitio web personales"
         },
         "f694e569-1f2b-40ac-8e46-0439d6b12551": {
-          "description": "**Propósito de una página web:** Dé un momento a los estudiantes para que puedan reflexionar acerca de los propósitos de sus páginas web. Intente alejar a la conversación del contenido exacto de la página web, ya que tendrán tiempo para planear esto más adelante en esta lección.",
+          "description": "**Propósito de una página web:** Dé un momento a los estudiantes para que puedan reflexionar acerca de los propósitos de sus páginas web. Intente alejar la conversación del contenido exacto de la página web, ya que tendrán tiempo para planear esto más adelante en esta lección.",
           "tips": [
             "Los estudiantes deben ser capaces de ver a sus sitios web como una oportunidad para expresarse y compartir sus propias metas. Verifique que cada estudiante explique por qué su sitio web tiene un significado para ellos."
           ]
@@ -17374,14 +17484,14 @@
           "description": "En las siguientes lecciones, trabajarán para concretar muchas de sus ideas. El contenido de lo que quieran compartir podría variar a medida que avanzamos en esta unidad, sin embargo la meta siempre será crear sus sitio web como una forma de expresión."
         },
         "880281a5-a3bc-4ac7-8712-87fb7a79ee31": {
-          "description": "**Recoja:** Retire las bitácoras si los estudiantes no anotaron sus ideas para sus páginas web en ellos. Deberán hacerlo una vez que comiencen su proyecto."
+          "description": "**Recoja:** Retire las bitácoras si los estudiantes no anotaron sus ideas para sus páginas web en ellas. Deberán hacerlo una vez que comiencen su proyecto."
         },
         "43eef65b-6395-4536-9c23-694a4c12ce55": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Atención!** Si está enseñando virtualmente o en una sala de clases  [haga clic aquí](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit)  para acceder a las modificaciones que puede usar para esta lección. "
         },
         "149e485f-35bf-40c0-b2bd-f32a5e23c5bc": {
           "name": "Análisis: ¿Qué estilos quieres usar?",
-          "description": "**Mostrar:** Muestre o pida a los estudiantes que ingresen la página de Code Studio.\n\n**Decir:** Nombra dos estilos de CSS en esta página que ya conozcas Nombra dos estilos de CSS en esta página que aún no sepas codificar"
+          "description": "**Mostrar:** Muestre o pida a los estudiantes que ingresen la página de Code Studio.\n\n**Decir:** Nombra dos estilos de CSS en esta página que ya conozcas. Nombra dos estilos de CSS en esta página que aún no sepas codificar"
         },
         "0c2abb8a-e980-4137-bca7-7af46bb7b629": {
           "description": "**Análisis:** Solicite a los estudiantes que compartan los distintos estilos en la página.",
@@ -17399,7 +17509,7 @@
           "name": "Laboratorio Web: Estilos de texto con CSS",
           "description": "**Transición:** Solicite a los estudiantes que ingresen a Code Studio.",
           "tips": [
-            "**Programación en parejas:** Recomendamos usar programación en pares para toda o algunas de las actividades en esta lección, en especial cuando los estudiantes aprenden nuevas propiedades de CSS."
+            "**Programación en parejas:** Recomendamos usar programación en parejas para toda o algunas de las actividades en esta lección, en especial cuando los estudiantes aprenden nuevas propiedades de CSS."
           ]
         },
         "5b7dc4f0-181c-44f8-af21-9dfd8a5edb26": {
@@ -17430,12 +17540,12 @@
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Atención!** Si está enseñando virtualmente o en una sala de clases  [haga clic aquí](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit)  para acceder a las modificaciones que puede usar para esta lección. "
         },
         "411e5353-2fbf-4061-bef1-aac7c9964654": {
-          "description": "**Decir:** En esta unidad, hemos aprendido mucho acerca del HTML y CSS y también mucho acerca de cómo ser ciudadanos digitales responsables. Estamos a punto de planear los detalles de nuestras páginas web. Tomen unos minutos para pensar acerca de las cosas que deberíamos recordar durante el proyecto en estas categorías:\n\n1.  Etiquetas HTML y consejos para usarlas\n2.  Propiedades CSS y consejos para usarlas\n3.  Cómo ser responsable y seguro en línea"
+          "description": "**Decir:** En esta unidad, hemos aprendido mucho acerca del HTML y CSS, y también mucho acerca de cómo ser ciudadanos digitales responsables. Estamos a punto de planear los detalles de nuestras páginas web. Tomen unos minutos para pensar acerca de las cosas que deberíamos recordar durante el proyecto en estas categorías:\n\n1.  Etiquetas HTML y consejos para usarlas\n2.  Propiedades CSS y consejos para usarlas\n3.  Cómo ser responsable y seguro en línea"
         },
         "0bb5cdfb-1e6b-44df-9d3f-7a1f0bfcab33": {
           "description": "**Análisis:** Pida a los estudiantes que compartan sus ideas y que las presenten frente a la clase.",
           "tips": [
-            "**Objetivo:** Esta es una oportunidad para que los estudiantes recuerden (y para que el profesor revise) las cosas más importantes que han aprendido hasta el momento en la unidad. Si bien el enfoque de cada clase fue distinto, todas ellas aprendieron algo relacionado con estas categorías. En las conversaciones debe destacar las diferencias entre estructura (HTML) y estilo (CSS). Si nota que los estudiantes tienen algunas dificultades en ciertos aspectos, este es un buen momento para asegurarse de que estén preparados para enfrentarlas."
+            "**Objetivo:** Esta es una oportunidad para que los estudiantes recuerden (y para que el docente revise) las cosas más importantes que han aprendido hasta el momento en la unidad. Si bien el enfoque de cada clase fue distinto, en todas ellas aprendieron algo relacionado con estas categorías. En las conversaciones debe destacar las diferencias entre estructura (HTML) y estilo (CSS). Si nota que los estudiantes tienen algunas dificultades en ciertos aspectos, este es un buen momento para asegurarse de que estén preparados para enfrentarlas."
           ]
         },
         "964298df-2ee6-4599-b083-443043b27e80": {
@@ -17454,7 +17564,7 @@
         },
         "cc6a79fc-1951-4e82-8952-39b9a662aca5": {
           "name": "Encuentra tus imágenes",
-          "description": "**Transición:** Pida que los estudiantes que busquen las imágenes que quieren utilizar para sus sitios. Asegúrese de que escriban la información de derechos de autor y que digan de dónde sacaron la imagen para que ellos o usted puedan encontrarla posteriormente.",
+          "description": "**Transición:** Permita que los estudiantes busquen las imágenes que quieren utilizar para sus sitios. Asegúrese de que escriban la información de derechos de autor y que digan de dónde sacaron la imagen para que ellos o usted puedan encontrarla posteriormente.",
           "tips": [
             "Recomendamos que cada estudiante muestre su plan al docente antes de conectarse a buscar las imágenes. Asegúrese que cada estudiante haya descrito su sitio y los estilos de algunas etiquetas. El bosquejo y descripción deben mostrar que la página será suficiente para demostrar que han adquirido las habilidades y conocimientos deseados para este capítulo."
           ]
@@ -17464,7 +17574,7 @@
           "description": "**Pregunta del día: ¿Cómo debemos prepararnos para construir nuestras páginas web?**"
         },
         "b363e7a6-4522-46c8-99b8-c7a1db5936b7": {
-          "description": "**Decir:** Volvamos a la parte de “definición” de este proyecto Describe dos formas en las que tu plan hará que tu página web tenga éxito.",
+          "description": "**Decir:** Volvamos a la parte de “definición” de este proyecto. Describe dos formas en las que tu plan hará que tu página web tenga éxito.",
           "tips": [
             "Revise que los estudiantes relacionen a las decisiones del diseño con el propósito del sitio web, como se explica en la lección “Sitios web para expresión”"
           ]
@@ -17480,19 +17590,19 @@
           "description": "En esta lección, codificarán su página web y la compartirán con el mundo. Una de las partes más importantes de codificar es depurar."
         },
         "710ee97e-1fb7-429d-a724-cb0a92f72425": {
-          "description": "**Decir:** \n\n-   Hasta el momento, cuáles son los **3** errores más comunes que han encontrado al construir páginas web? \n-   ¿Cuáles son las **2** acciones que hacen que sea más fácil encontrar y reparar errores cuando codificamos? \n-   ¿Cuál es **1** consejo que darías a alguien que haya encontrado un error en su página?",
+          "description": "**Decir:** \n\n-   Hasta el momento, ¿cuáles son los **3** errores más comunes que han encontrado al construir páginas web? \n-   ¿Cuáles son las **2** acciones que hacen que sea más fácil encontrar y reparar errores cuando codificamos? \n-   ¿Cuál es **1** consejo que darías a alguien que haya encontrado un error en su página?",
           "tips": [
-            "El objetivo de este análisis es normalizar la depuración y asegurarse de que los estudiantes comiencen a codificar utilizando buenas estrategias que los ayuden a depurar. Los errores comunes pueden ser: faltas de ortografía, olvidar enlazar la hoja de estilo, no anidar las etiquetas de forma adecuada, etc. Esto va a variar de clase en clase, pero la mayoría de los estudiantes encontrarán muchos errores a lo largo de este capítulo. En la codificación, los estudiantes deberían usar un formato adecuado para ayudarlos a leer su código, codifique pequeños segmentos y revise a medida que avanzan, utilice una nomenclatura clara de todos los elementos. Para consejos acerca de como depurar, los estudiantes pueden dar consejos como (“¡no te rindas!”, “¡recuerda que los errores son algo normal!”), recomendar recursos (“pide a un amigo que lo revise”, “mira los mapas de nivel), consejos basados en el proceso (“primero describe el error y luego búscalo antes de cambiar las cosas”, “analiza el error y luego corrige errores de ortografía en esa parte”), o consejo basado en herramientas (“fíjate en las partes de color rosa”, “usa la herramienta de inspección”). Permita que los estudiantes compartan sus consejos y asegúrese de que mencionen el proceso de depuración."
+            "El objetivo de este análisis es normalizar la depuración y asegurarse de que los estudiantes comiencen a codificar utilizando buenas estrategias que los ayuden a depurar. Los errores comunes pueden ser: faltas de ortografía, olvidar enlazar la hoja de estilo, no anidar las etiquetas de forma adecuada, etc. Esto va a variar de clase en clase, pero la mayoría de los estudiantes encontrarán muchos errores a lo largo de este capítulo. En la codificación, los estudiantes deberían usar un formato adecuado para ayudarlos a leer su código, codificar pequeños segmentos y revisar a medida que avanzan, y utilizar una nomenclatura clara de todos los elementos. Para consejos acerca de cómo depurar, los estudiantes pueden dar consejos como (“¡no te rindas!”, “¡recuerda que los errores son algo normal!”), recomendar recursos (“pide a un amigo que lo revise”, “mira los mapas de nivel), consejos basados en el proceso (“primero describe el error y luego búscalo antes de cambiar las cosas”, “analiza el error y luego corrige errores de ortografía en esa parte”), o consejos basados en herramientas (“fíjate en las partes de color rosa”, “usa la herramienta de inspección”). Permita que los estudiantes compartan sus consejos y asegúrese de que mencionen el proceso de depuración."
           ]
         },
         "491aad33-b3c4-4c36-887a-0df138c18ddd": {
           "description": "Dé a los estudiantes algunos minutos para pensar en sus ideas, luego permita que compartan con la clase. Recomendamos proyectar sus ideas y dejarlas visibles durante el proceso de codificación.\n\n**Pregunta del día: ¿Qué habilidades y prácticas son útiles al codificar páginas web?**"
         },
         "793b6091-27f6-48c5-9b0c-b02534f8bc79": {
-          "name": "Muestra de sitio web personal",
+          "name": "Sitios Web Personales",
           "description": "**Distribuya** Entregue a los estudiantes la parte de “definir” y “preparar” de la guía del proyecto. Distribuya una copia de la rúbrica o de la lista del estudiante. Pídales que lean los requerimientos para este proyecto, esto les ayudará a autoevaluarse y reflexionar mientras trabajan.\n\n**Transición:** Solicite a los estudiantes que ingresen a Code Studio.",
           "tips": [
-            "**Rubrica y lista de comprobación:** Los estudiantes tienen dos recursos que pueden utilizar para la auto reflexión y para asegurarse de que van por el buen camino: la rúbrica y la lista de comprobación. Recomendamos que los estudiantes utilicen la lista de comprobación para su propia autoevaluación y reflexión, ya que puede ser más fácil de comprender al revisar su propio proyecto. Sin embargo, recomendamos que los docentes utilicen la rúbrica para evaluar los proyectos y brindar una retroalimentación más detallada a los estudiantes."
+            "**Rubrica y lista de comprobación:** Los estudiantes tienen dos recursos que pueden utilizar para la auto-reflexión y para asegurarse de que van por el buen camino: la rúbrica y la lista de comprobación. Recomendamos que los estudiantes utilicen la lista de comprobación para su propia autoevaluación y reflexión, ya que puede ser más fácil de comprender al revisar su propio proyecto. Sin embargo, recomendamos que los docentes utilicen la rúbrica para evaluar los proyectos y brindar una retroalimentación más detallada a los estudiantes."
           ]
         },
         "8b6eb0b5-4aba-4b1e-8c0b-5ef7c4035ae1": {
@@ -17516,10 +17626,10 @@
         },
         "ff09ae02-5fc8-4ac3-9e08-18a25ffd0d76": {
           "name": "Revisión Por Pares",
-          "description": "**Distribuir:** Guías de reflexión “Página web personal” y la de revisión por pares.\n\n**Apoyo:** Ayude a los estudiantes a completar la guía de reflexión. En esta guía los estudiantes deben reflexionar si su página web alcanza los requerimientos que establecieron en la fase de “definición”, y si se adapta al plan que establecieron en la fase de “preparación”. Luego, deben indicar qué es lo que más les gustó, qué aspectos desean mejorar de su sitio web y qué tipo de comentarios les gustaría recibir.\n\n**Grupo:** Forma parejas de estudiantes"
+          "description": "**Distribuir:** Guías de reflexión “Página web personal” y la de revisión por pares.\n\n**Apoyo:** Ayude a los estudiantes a completar la guía de reflexión. En esta guía, los estudiantes deben reflexionar si su página web alcanza los requerimientos que establecieron en la fase de “definición”, y si se adapta al plan que establecieron en la fase de “preparación”. Luego, deben indicar qué es lo que más les gustó, qué aspectos desean mejorar de su sitio web y qué tipo de comentarios les gustaría recibir.\n\n**Agrupar:** Forma parejas de estudiantes"
         },
         "6b3cfe52-1dd0-4a4c-8de2-360db4cd636d": {
-          "name": "Pre Revisión",
+          "name": "Pre-Revisión",
           "description": "Antes que los estudiantes revisen el trabajo de otros, cada uno debe llenar la sección de retroalimentación e indicar los aspectos en los cuales les gustaría recibir comentarios."
         },
         "4c77683d-f5ce-4793-a6b2-7b99901aaa77": {
@@ -17535,16 +17645,16 @@
           "description": "Luego, los estudiantes intercambian guías nuevamente y los creadores reflexionan en cómo estos comentarios los pueden ayudar a mejorar sus proyectos. Pueden volver a ingresar a Code Studio y revisar las decisiones que han tomado a lo largo de este proyecto.\n\nLos estudiantes deben revisar la rúbrica de este proyecto para ver cómo se alinea su proyecto. Puede distribuir la guía de trabajo “Página web personal - Lista del creador” para que los estudiantes puedan autoevaluar si su trabajo cumple con los requisitos del proyecto."
         },
         "83101615-6d17-4c95-b86d-8275cdf19921": {
-          "description": "**Recoja:** Guías de proyecto y guía de revisión por pares"
+          "description": "**Recoja:** Guías de proyecto y guía de revisión por pares."
         },
         "59bb1048-4c00-4d84-b98d-a9ce8a302d72": {
           "name": "Escribir en la bitácora: Sitios Web Personales",
-          "description": "**Pregunta del día: ¿Qué habilidades y prácticas son útiles al codificar páginas web?**\n\n**Decir:** Hoy comenzaron a armar sus sitios web, ahora reflexionaremos acerca de esta experiencia.\n\n-   ¿Cómo utilizaste el proceso de resolución de problemas para crear tu sitio?\n-   ¿Qué otras habilidades y prácticas te ayudaron a crear tu página web?"
+          "description": "**Pregunta del día: ¿Qué habilidades y prácticas son útiles al codificar páginas web?**\n\n**Decir:** Hoy comenzaron a armar sus sitios web. Ahora reflexionaremos acerca de esta experiencia.\n\n-   ¿Cómo utilizaste el proceso de resolución de problemas para crear tu sitio?\n-   ¿Qué otras habilidades y prácticas te ayudaron a crear tu página web?"
         },
         "10b08619-0a72-442e-a75e-13b6cead2e90": {
           "description": "**Análisis:** Pida a los estudiantes que compartan las habilidades y prácticas que usaron.",
           "tips": [
-            "**Objetivo:** Los estudiantes deben reflexionar acerca del proceso hasta el momento. Si tienen dificultades para pensar en las prácticas que los han ayudado, puede recordarles que las cinco prácticas de las ciencias de la computación son: solución de problemas, perseverancia, creatividad, comunicación y colaboración. También pueden mencionar otras habilidades específicas como la documentación, planificación, trabajo en equipo y depuración. Pida que los estudiantes expliquen cómo estas prácticas los ayudaron mientras codificaban."
+            "**Objetivo:** Los estudiantes deben reflexionar acerca del proceso hasta el momento. Si tienen dificultades para pensar en las prácticas que los han ayudado, puede recordarles que las cinco prácticas de las ciencias de la computación son: solución de problemas, perseverancia, creatividad, comunicación y colaboración. También pueden mencionar otras habilidades específicas como la documentación, planificación, trabajo en equipo y depuración. Pida a los estudiantes que expliquen cómo estas prácticas les ayudaron mientras codificaban."
           ]
         },
         "bb76c259-62ef-49ef-9b8c-d0ca91a380a7": {
@@ -17555,7 +17665,7 @@
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Atención!** Si está enseñando virtualmente o en una sala de clases  [haga clic aquí](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit)  para acceder a las modificaciones que puede usar para esta lección. "
         },
         "20f18101-28c1-43ff-835a-9b098f7a5b9c": {
-          "name": "El ultimo sitio web que visitaste",
+          "name": "El último sitio web que visitaste",
           "description": "**Decir:** ¿Cuál fue el último sitio web que visitaste? ¿Por qué visitaste este sitio web?",
           "tips": [
             "**Sitios web versus aplicaciones:** Puede que los estudiantes visiten estos sitios web frecuentemente mediante el uso de aplicaciones. Si esto ocurre, comente a los estudiantes que deben considerar que estas aplicaciones también tienen una versión web. Por ejemplo, es probable que Facebook sea más utilizado en su versión de aplicación, pero fue creado como un sitio web y aún se puede acceder a él de esta forma."
@@ -17568,14 +17678,14 @@
           ]
         },
         "8f260b2d-3718-492f-b75b-fa99597fef18": {
-          "description": "Acabamos de comentar muchas razones por las que visitamos sitios web, pero estás son solo nuestras razones. Las personas también tienen razones para crear sitios web. En la próxima actividad, comenzaremos a analizar cuáles son los propósitos de los sitios web, tanto para sus creadores como para los usuarios."
+          "description": "Acabamos de comentar muchas razones por las que visitamos sitios web, pero estas son solo nuestras razones. Las personas también tienen razones para crear sitios web. En la próxima actividad, comenzaremos a analizar cuáles son los propósitos de los sitios web, tanto para sus creadores como para los usuarios."
         },
         "8faac7b6-fb5b-4b94-982a-f7c8188bca44": {
           "description": "**Pregunta del día: ¿Qué motiva a las personas a crear sitios web?**"
         },
         "fb115984-94cf-4127-a53a-43a973865616": {
           "name": "El propósito de los sitios web",
-          "description": "**Grupo:** Forme parejas de estudiantes.\n\n**Distribuir:** Imprima una copia de la guía de actividades para cada estudiante.\n\nPida a los estudiantes que ingresen al nivel de “Muestras de Sitios web” en Code Studio."
+          "description": "**Agrupar:** Forme parejas de estudiantes.\n\n**Distribuir:** Imprima una copia de la guía de actividades para cada estudiante.\n\nPida a los estudiantes que ingresen al nivel de “Muestras de Sitios web” en Code Studio."
         },
         "4e4b8bec-4263-4163-9bad-dee99822db2a": {
           "progression_name": "Sitios web más visitados"
@@ -17584,7 +17694,7 @@
           "description": "#### Explorando sitios web\n\n#### Ejemplos de sitios web"
         },
         "d2fbc09d-cec0-4514-ba77-b635cc9379d5": {
-          "description": "En esta guía de actividades los estudiantes deberán detallar los propósitos que cumplen estos sitios web. Las parejas deben seleccionar dos sitios web y analizar cada uno de ellos:",
+          "description": "En esta guía de actividades, los estudiantes deberán detallar los propósitos que cumplen estos sitios web. Las parejas deben seleccionar dos sitios web y analizar cada uno de ellos:",
           "tips": [
             "El objetivo de la actividad no es que los estudiantes proporcionen una respuesta “correcta” para cada sitio, sino que sean capaces de señalar los potenciales propósitos que estos sitios web tienen para su creador. Si los estudiantes tienen dificultades para identificar el propósito de un sitio web, puede hacer las siguientes preguntas:\n\n-   ¿El creador del sitio web quiere que el usuario haga algo?\n-   ¿El sitio web intenta convencer al usuario de algo en particular?\n-   ¿Qué problema aborda el sitio web?\n-   ¿Qué impacto quiere el creador que tenga el sitio web?"
           ]
@@ -17595,7 +17705,7 @@
         "286dd512-4c7c-42ec-8028-428a89833572": {
           "description": "**Análisis:** Una vez que todos los estudiantes hayan escrito sus ideas, pídales que compartan sus ideas acerca de los ejemplos de sitios web con la clase.",
           "tips": [
-            "El objetivo de esta discusión es preparar a los estudiantes para que vean a sus sitios web como una herramienta para solucionar problemas e incitar cambios. Mientras los estudiantes trabajan, anímelos a imaginar por qué querrían crear un sitio similar a los que vieron en ejemplos y qué problemas en particular abordarían.  "
+            "El objetivo de esta discusión es preparar a los estudiantes para que vean sus sitios web como una herramienta para solucionar problemas e incitar cambios. Mientras los estudiantes trabajan, anímelos a imaginar por qué querrían crear un sitio similar a los que vieron en ejemplos y qué problemas en particular abordarían.  "
           ]
         },
         "0635e0b2-714a-4200-a9d1-56a791801297": {
@@ -17608,16 +17718,16 @@
           "description": "**Compartir:** Pida a los estudiantes que compartan los distintos problemas que podrían abordar a través de un sitio web y que presenten sus respuestas frente a la clase."
         },
         "f410b7cd-fcb4-42ac-9ba6-517b2a8db144": {
-          "description": "**Grupos:** Luego de esta presentación, es posible que se formen grupos de forma natural y basados en las distintas reacciones a los temas presentados por sus compañeros. Asigne o pida a los estudiantes que formen grupos de 3 ó 4 personas.",
+          "description": "**Agrupar:** Luego de esta presentación, es posible que se formen grupos de forma natural y basados en las distintas reacciones a los temas presentados por sus compañeros. Asigne o pida a los estudiantes que formen grupos de 3 ó 4 personas.",
           "tips": [
-            "Existen algunas consideraciones a tomar en cuenta cuando se forman grupos para toda una unidad. Usted puede asignar, permitir a los estudiantes que formen sus propios grupos o trabajar de la forma que funciona mejor en su clase. De cualquier forma, es importante que los estudiantes se mantengan en sus grupos durante esta y el comienzo de la próxima lección."
+            "Existen algunas consideraciones a tomar en cuenta cuando se forman grupos para toda una unidad. Usted puede asignar, permitir que los estudiantes formen sus propios grupos o trabajar de la forma que funciona mejor en su clase. De cualquier forma, es importante que los estudiantes se mantengan en sus grupos durante esta y el comienzo de la próxima lección."
           ]
         },
         "3ccc5800-d573-4f7b-bc43-4f6bf8f44f86": {
-          "description": "**Pregunta del día: ¿Qué motiva a las personas a crear sitios web?**\n\n**Decir:** En las próximas lecciones trabajarán con su equipo para crear un sitio web que aborde un problema. Juntos deben crear un lema o un logo de su equipo que les recuerde (1) por qué es importante resolver este problema (2) Cómo trabajarán juntos en equipo."
+          "description": "**Pregunta del día: ¿Qué motiva a las personas a crear sitios web?**\n\n**Decir:** En las próximas lecciones ,trabajarán con su equipo para crear un sitio web que aborde un problema. Juntos deben crear un lema o un logo de su equipo que les recuerde (1) por qué es importante resolver este problema (2) Cómo trabajarán juntos en equipo."
         },
         "f8ec8428-8030-4f3d-a42a-ace8a6526a70": {
-          "description": "**Compartir:** Pida a los equipos que compartan sus logos y lemas.",
+          "description": "**Compartir:** Permitir que los equipos compartan sus logos y lemas.",
           "tips": [
             "Mientras los estudiantes comparten sus logos y sus lemas, pregunte cómo se reflejan sus valores en estos elementos y destaque la importancia de una colaboración efectiva y de compartir los objetivos."
           ]
@@ -17650,24 +17760,24 @@
           "description": "**Pregunta del día: ¿Cómo podemos trabajar juntos para formar un buen equipo?**"
         },
         "e877f46e-2546-45c8-b3da-ec38677cacf9": {
-          "description": "**Grupo:** Pida a los estudiantes que se reúnan con sus grupos de proyecto.\n\n**Mostrar:** Muestre el video de “trabajo en equipo” (disponible en las diapositivas de Code Studio)."
+          "description": "**Agrupar:** Pida a los estudiantes que se reúnan con sus grupos de proyecto.\n\n**Mostrar:** Muestre el video de “trabajo en equipo” (disponible en las diapositivas de Code Studio)."
         },
         "4e9b0621-b725-4913-8938-757f111a9ce6": {
-          "description": "**Análisis del video:**\n\n-   ¿Cuáles son las ventajas de trabajar en equipo?\n-   ¿Cuáles son los consejos para trabajar bien como equipo?",
+          "description": "**Análisis del video:**\n\n-   ¿Cuáles son las ventajas de trabajar en equipo?\n-   ¿Cuáles son algunos consejos para trabajar bien como equipo?",
           "tips": [
             "El objetivo de este video es que los estudiantes comiencen a trabajar en equipo con una actitud positiva y darles algunas sugerencias para que sus equipos trabajen sin complicaciones. Puede que los estudiantes tengan distintas opiniones acerca de las ventajas del trabajo en equipo, sin embargo, deben mencionar que las personas pueden hacer más cosas con un equipo y que las distintas ideas de sus miembros hacen que un proyecto sea mejor.\n\n**Los consejos mencionados en el video son:**\n\n-   Tener un plan\n-   Asignar roles específicos a cada miembro\n-   Celebrar el éxito de sus compañeros de equipo\n-   ¡Divertirse!\n-   Identificar las fortalezas de cada persona\n-   Escuchar y respetar las ideas de cada persona\n-   No tener miedo de compartir tus ideas"
           ],
           "progression_name": "Video: Trabajo en equipo"
         },
         "bb3e2187-2b04-4e47-8304-3eae1e02d9c7": {
-          "description": "**Distribuir:** Distribuya la guía de actividades"
+          "description": "**Distribuir:** Distribuya la guía de actividades."
         },
         "912b3e51-d92c-4f07-95ce-781a726e07b3": {
           "name": "Meta de equipo",
           "description": "En esta etapa, los equipos ya deberían haber elegido el tema de su proyecto y deben chequear que todos los miembros del equipo estén de acuerdo con la decisión."
         },
         "43da857d-e2ac-4797-b205-4bc8e5b274c8": {
-          "name": "Habilidades y objetivos",
+          "name": "Habilidades y Objetivos",
           "description": "Cada estudiante debe identificar sus propias fortalezas y áreas de crecimiento para el proyecto y compartirlas con su grupo.",
           "tips": [
             "Este tipo de reflexión personal puede ser difícil para los estudiantes. Dependiendo de la clase, recomendamos tomar un momento de la lección y repasar lo aprendido respecto a cómo escuchar respetuosamente a otros cuando se trabaja en grupo. La primera actividad es una buena oportunidad para que los estudiantes pongan en práctica estos comportamientos. Es probable que el docente deba explicar aquellos comportamientos que promueven una buena dinámica de grupo."
@@ -17678,7 +17788,7 @@
         },
         "82adee1c-1ccb-493b-89e8-f9e05f691574": {
           "name": "Reuniendo distintas ideas",
-          "description": "Gran parte de trabajar en grupos es tener muchas ideas, sin embargo, los compañeros de equipo no siempre estarán de acuerdo. A continuación veremos distintas formas en las que un equipo enfrenta estos desacuerdos para mejorar aún más su producto."
+          "description": "Gran parte de trabajar en grupos es tener muchas ideas, sin embargo, los compañeros de equipo no siempre estarán de acuerdo. A continuación, veremos distintas formas en las que un equipo enfrenta estos desacuerdos para mejorar aún más su producto."
         },
         "7a0f9024-6d07-4372-bfad-439082fecd46": {
           "description": "**Mostrar:** Muestre el video Resolviendo Desacuerdos disponibles en Code Studio y en las diapositivas de la lección."
@@ -17686,7 +17796,7 @@
         "52a7434e-fca4-48af-9aa8-61086949bb98": {
           "description": "**Análisis del video:**\n\n-   Nombra tres consejos que podemos usar para resolver desacuerdos",
           "tips": [
-            "Los estudiantes deben comprender que los desacuerdos son algo normal en el trabajo en equipo y que deben contar con las herramientas para enfrentar estas situaciones en sus equipos.\n\n**Los consejos mencionados en el video son:**\n\n-   Valora las ideas de tu equipo, aunque no estés de acuerdo con ellas\n-   Muestra interés por las ideas de otros y trata de entender por qué son buenas ideas.\n-   Muestra compromiso con tus compañeros de equipo, destacando lo mejor de cada idea y conectándolas entre sí."
+            "Los estudiantes deben comprender que los desacuerdos son algo normal en el trabajo en equipo y que deben contar con las herramientas para enfrentar estas situaciones en sus equipos.\n\n**Los consejos mencionados en el video son:**\n\n-   Valora las ideas de tu equipo, aunque no estés de acuerdo con ellas.\n-   Muestra interés por las ideas de otros y trata de entender por qué son buenas ideas.\n-   Muestra compromiso con tus compañeros de equipo, destacando lo mejor de cada idea y conectándolas entre sí."
           ],
           "progression_name": "Video: Resolviendo desacuerdos"
         },
@@ -17698,7 +17808,7 @@
         },
         "43bb329a-86ef-46f8-a276-126437f08d74": {
           "name": "Visión del proyecto",
-          "description": "Los estudiantes definen como se ve el éxito en torno a su proyecto y anticipan las partes más complejas y más divertidas del proyecto.\n\n**Circule:** Recorra el salón de clases mientras los estudiantes trabajan en la guía de actividades y pregúnteles acerca de sus planes para trabajar como equipo. Señale las ventajas y desventajas de sus estrategias.\n\n**Compartir:** Pida a distintos grupos que compartan algunos aspectos de sus planes. Mencione algunas estrategias específicas que pudo revisar durante la actividad.\n\n## Lluvia de ideas\n\n**Análisis:** Dé un momento a los estudiantes para que hagan una lluvia de ideas de su proyecto junto a sus equipos. Pueden compartir ideas acerca del contenido o características que les gustaría tener en el sitio web. Mientras realizan la actividad esté atento a los problemas en las dinámicas de grupo, si es necesario, puede intervenir. Recuérdeles los planes a los miembros del equipo y cómo pueden ayudar a que su equipo tenga éxito."
+          "description": "Los estudiantes definen como se ve el éxito en torno a su proyecto y anticipan las partes más complejas y más divertidas del proyecto.\n\n**Recorrer el salón de clases:** circule el salón de clases mientras los estudiantes trabajan en la guía de actividades y pregúnteles acerca de sus planes para trabajar como equipo. Señale las ventajas y desventajas de sus estrategias.\n\n**Compartir:** Pida a distintos grupos que compartan algunos aspectos de sus planes. Mencione algunas estrategias específicas que pudo revisar durante la actividad.\n\n## Lluvia de ideas\n\n**Análisis:** Dé un momento a los estudiantes para que hagan una lluvia de ideas de su proyecto junto a sus equipos. Pueden compartir ideas acerca del contenido o características que les gustaría tener en el sitio web. Mientras realizan la actividad, esté atento a los problemas en las dinámicas de grupo. Si es necesario, puede intervenir. Recuérdeles los planes a los miembros del equipo y cómo pueden ayudar a que su equipo tenga éxito."
         },
         "6bf100e0-3cb3-45d3-b4f9-58fe77be8d7d": {
           "name": "Reconocimientos",
@@ -17708,8 +17818,8 @@
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Atención!** Si está enseñando virtualmente o en una sala de clases  [haga clic aquí](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit)  para acceder a las modificaciones que puede usar para esta lección. "
         },
         "5d73aca1-2634-43e5-b541-b45f78746f8c": {
-          "name": "Búsqueda del tesoro en la web",
-          "description": "**Grupo:** Forma parejas de estudiantes Los estudiantes trabajarán con sus equipos de proyecto en la actividad principal, por lo que no es necesario que se agrupen en esta actividad inicial."
+          "name": "Búsqueda del Tesoro en la Web",
+          "description": "**Agrupar:** Forma parejas de estudiantes. Los estudiantes trabajarán con sus equipos de proyecto en la actividad principal, por lo que no es necesario que se agrupen en esta actividad inicial."
         },
         "49bb4251-eaa1-423c-9bfd-ec0f6113f83e": {
           "description": "**Distribuir:** Cada grupo necesitará una copia de Búsqueda del tesoro en la web - Guía de actividades.",
@@ -17733,14 +17843,14 @@
           ]
         },
         "2f979aac-0d3b-4f36-ae61-7ce65731967f": {
-          "description": "**Vocabulario:**\n\n-   Relevante - Muy relacionado con un tema (responde la pregunta)\n-   Confiable - fiable, honesto y verdadero (proporciona una respuesta correcta)\n-   Motor de búsqueda - Un programa que busca elementos en la red informática mundial (World Wide Web)\n\n**Pregunta del día: ¿Cómo podemos encontrar información relevante y fiable en Internet?**"
+          "description": "**Vocabulario:**\n\n-   Relevante - muy relacionado con un tema (responde la pregunta)\n-   Confiable - fiable, honesto y verdadero (proporciona una respuesta correcta)\n-   Motor de búsqueda - un programa que busca elementos en la red informática mundial (World Wide Web)\n\n**Pregunta del día: ¿Cómo podemos encontrar información relevante y fiable en Internet?**"
         },
         "96f9e813-1e45-4708-90fc-5cd09101faf6": {
-          "name": "Búsqueda y confiabilidad",
+          "name": "Búsqueda y Confiabilidad",
           "description": "Cuando empiecen a construir sus sitios web, querrán usar información que encuentren en la web o enlazar a otros sitios web relacionados con el problema que están tratando de resolver. Para esto, necesitarán analizar si la información que están usando es confiable o no."
         },
         "59e2dfbe-ec86-436d-91b0-5d19554ed462": {
-          "description": "**Grupo:** Pida a los estudiantes que se reúnan con sus grupos de proyecto.\n\n**Distribuir:** Distribuya una copia de la guía de actividades Enlaces e investigación, o reparta las bitácoras de los estudiantes.\n\n**Búsqueda:** Dé a los estudiantes diez minutos para buscar en línea y llenar la tabla en la guía de actividades. \n\n**Compartir:** Pida a los grupos que compartan los distintos sitios que encontraron, y luego que comenten cuáles en su opinión son los más confiables y por qué. Pida a los estudiantes que sean lo más detallados posible en las razones por las que confiaron o no en un sitio, y anótelas en la pizarra.\n\n**Búsqueda:** Dé a los estudiantes un par de minutos extra para revisar sus sitios fuente nuevamente tomando en cuenta los comentarios de sus compañeros. Si sobra tiempo de la clase, los estudiantes pueden utilizarlo para encontrar fuentes para sus sitios web."
+          "description": "**Agrupar:** Pida a los estudiantes que se reúnan con sus grupos de proyecto.\n\n**Distribuir:** Distribuya una copia de la guía de actividades Enlaces e investigación, o reparta las bitácoras de los estudiantes.\n\n**Búsqueda:** Dé a los estudiantes diez minutos para buscar en línea y llenar la tabla en la guía de actividades. \n\n**Compartir:** Pida a los grupos que compartan los distintos sitios que encontraron, y luego que comenten cuáles en su opinión son los más confiables y por qué. Pida a los estudiantes que sean lo más detallados posible en las razones por las que confiaron o no en un sitio, y anótelas en la pizarra.\n\n**Búsqueda:** Dé a los estudiantes un par de minutos extra para revisar sus sitios de fuente nuevamente tomando en cuenta los comentarios de sus compañeros. Si sobra tiempo de la clase, los estudiantes pueden utilizarlo para encontrar fuentes para sus sitios web."
         },
         "b66bd9e2-03dd-4f20-925e-c0f6350831fe": {
           "name": "Checklist de confiabilidad",
@@ -17753,7 +17863,7 @@
           ]
         },
         "77e4cad0-e298-4a93-bbb1-5de9f8ca7ca9": {
-          "description": "**Compartir:** Pida a los grupos que compartan sus listas. Cómo clase colaboren para crear el cartel de checklist de confiabilidad. Puede volver a mostrar este cartel en el futuro cuando los estudiantes tengan que buscar información en línea."
+          "description": "**Compartir:** Pida a los grupos que compartan sus listas. Como clase, colaboren para crear el cartel de checklist de confiabilidad. Puede volver a mostrar este cartel en el futuro cuando los estudiantes tengan que buscar información en línea."
         },
         "6a799e5e-d77a-4c80-bdd4-713e6a4d9760": {
           "name": " Cómo funciona la búsqueda",
@@ -17767,7 +17877,7 @@
         },
         "01a5973e-7096-468e-b640-899767928b23": {
           "name": "Escribir en la bitácora",
-          "description": "  **Decir:** ¿Crees que las personas ven a tu sitio web como un sitio confiable o no? ¿Qué cambios harías en tu sitio web para que las personas confíen en su contenido?"
+          "description": "  **Decir:** ¿Crees que las personas ven tu sitio web como un sitio confiable o no? ¿Qué cambios harías en tu sitio web para que las personas confíen en su contenido?"
         },
         "6a1f16c8-cae3-41fe-a10f-62e69a936dc2": {
           "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Atención!** Si está enseñando virtualmente o en una sala de clases  [haga clic aquí](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/edit)  para acceder a las modificaciones que puede usar para esta lección. "
@@ -17836,7 +17946,7 @@
           "description": "**Pregunta del día: ¿Cómo planear una página web como grupo?**"
         },
         "5d28ad11-7626-46cc-8848-1aaab17dbbd5": {
-          "description": "**Grupo:** Pida a los estudiantes que se reúnan con sus grupos de proyecto.\n\n**Distribuir:** Entregue una guía de proyecto a cada grupo. Entregue una rúbrica o un checklist del estudiante a cada grupo para que puedan autoevaluarse y reflexionar a lo largo del proyecto."
+          "description": "**Agrupar:** Pida a los estudiantes que se reúnan con sus grupos de proyecto.\n\n**Distribuir:** Entregue una guía de proyecto a cada grupo. Entregue una rúbrica o un checklist del estudiante a cada grupo para que puedan autoevaluarse y reflexionar a lo largo del proyecto."
         },
         "05ee8316-106b-4b34-9138-d1ceca375a8f": {
           "name": "Reseña",
@@ -17884,7 +17994,7 @@
         },
         "1a13b683-5eb4-436f-b59e-bb9304d7d5a2": {
           "name": "Búsqueda de la primera página web",
-          "description": "**Grupo:** Forme parejas de estudiantes. No es necesario que se reúnan con sus grupos de proyecto."
+          "description": "**Agrupar:** Forme parejas de estudiantes. No es necesario que se reúnan con sus grupos de proyecto."
         },
         "85c3804b-17da-40f8-a088-0627011b36e7": {
           "description": "**Mostrar:** Muestre las dos preguntas en la pizarra y pida a los estudiantes que busquen las respuestas en la web usando un motor de búsqueda de libre elección o los métodos que utilicen habitualmente para buscar información en línea.",
@@ -17903,7 +18013,7 @@
         },
         "c78f2804-62f0-4fe5-842f-0ed415de05fc": {
           "name": "Laboratorio Web",
-          "description": "**Grupo:** Los estudiantes deben continuar en parejas\n\n**Transición:** Solicite a los estudiantes que ingresen a Code Studio."
+          "description": "**Agrupar:** Los estudiantes deben continuar en parejas\n\n**Transición:** Solicite a los estudiantes que ingresen a Code Studio."
         },
         "01cbfd4f-3493-48d9-beb3-04018d4272f3": {
           "progression_name": "Exploración"
@@ -18005,7 +18115,7 @@
           "name": "Preparar e intentar: Modificaciones finales",
           "description": "**Transición:** Los equipos regresan a Code Studio y efectúan los cambios recomendados por sus compañeros en la revisión por pares. Usted puede brindar algunas sugerencias, si no cuentan con esta revisión. \n\nComo una revisión final de su trabajo, los estudiantes deben analizar la rúbrica y el checklist.",
           "tips": [
-            "**Rubrica y lista de comprobación:** Los estudiantes tienen dos recursos que pueden utilizar para la auto reflexión y para asegurarse de que van por el buen camino: la rúbrica y la lista de comprobación. Recomendamos que los alumnos utilicen el checklist para su propia autoevaluación y reflexión, ya que puede ser más fácil de comprender al revisar su propio proyecto. Sin embargo, recomendamos a los profesores que utilicen la rúbrica completa para evaluar los proyectos, a fin de dar una respuesta más precisa a los alumnos."
+            "**Rubrica y lista de comprobación:** Los estudiantes tienen dos recursos que pueden utilizar para la auto-reflexión y para asegurarse de que van por el buen camino: la rúbrica y la lista de comprobación. Recomendamos que los estudiantes utilicen el checklist para su propia autoevaluación y reflexión, ya que puede ser más fácil de comprender al revisar su propio proyecto. Sin embargo, recomendamos a los docentes que utilicen la rúbrica completa para evaluar los proyectos, a fin de dar una respuesta más precisa a los estudiantes."
           ],
           "progression_name": "Incorporar la retroalimentación"
         },

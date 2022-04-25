@@ -1370,6 +1370,9 @@
         "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
           "description": "Piensa acerca de cómo el prejuicio humano juega un papel en el aprendizaje automático."
         },
+        "b2682f90-e600-48aa-aef4-def3798b261d": {
+          "description": "Identificar cómo se utilizan las ciencias de la computación en el ámbito del entretenimiento"
+        },
         "27e5577c-a619-4ef6-8f34-b252c18deb58": {
           "description": "Razonar acerca de las ubicaciones en la cuadrícula de coordenadas del Game Lab"
         },
@@ -1508,6 +1511,12 @@
         "1a3a0395-0d25-44f7-9d47-e1c7700c3507": {
           "description": "Identificar las distintas estrategias utilizadas para la resolución de problemas"
         },
+        "3c206514-27ee-4c05-a9b7-f84176d23ebe": {
+          "description": "Al enfrentar un problema, identifica acciones individuales que pueden ser parte de cada paso del proceso de resolución de problemas"
+        },
+        "1383b94a-1a14-4579-8da9-47114eec604d": {
+          "description": "Identifica estrategias útiles dentro de cada paso del proceso de resolución de problemas"
+        },
         "e8cad68d-4922-47bd-9b73-c22e8af10879": {
           "description": "Aplicar el proceso de resolución de problemas en distintas situaciones"
         },
@@ -1595,6 +1604,9 @@
         "1e8b24b5-f8b6-46a6-b0b1-aba1633a02f0": {
           "description": "Evalúe que tan bien definido está un problema y utilice estrategias para definirlo con más precisión"
         },
+        "364c4d7c-4f39-4cef-95ed-9a5b7d7a2e9e": {
+          "description": "Identificar las razones por las que alguien visitaría un sitio web"
+        },
         "d8ec162b-7a19-496b-8f90-2ffb596be6a7": {
           "description": "Identificar las razones por las que las personas crean sitios web"
         },
@@ -1611,7 +1623,7 @@
           "description": "Usar las etiquetas de encabezado para cambiar la apariencia de un texto en una página web."
         },
         "8301013f-1346-4f62-a416-ed9371bf3588": {
-          "description": "Estructurar el contenido en encabezados, sub encabezados y párrafos."
+          "description": "Estructurar el contenido en encabezados, subencabezados y párrafos."
         },
         "6b4d8978-99c8-4541-9213-fa14c4132c62": {
           "description": "Usar una práctica estructurada y colaborativa para crear un artefacto digital."
@@ -1626,13 +1638,13 @@
           "description": "Comprender y justificar las pautas para publicar información en línea de forma segura. "
         },
         "f37f28fd-4bc2-4e94-9dc0-6f33f4cb4788": {
-          "description": "Usar los selectores CSS para dar estilo a los elementos HTML"
+          "description": "Usar los selectores CSS para dar estilo a los elementos HTML."
         },
         "11d70e24-1663-4d02-a703-df9dc90d95ce": {
-          "description": "Enlace a una hoja de estilo externa"
+          "description": "Enlace a una hoja de estilo externa."
         },
         "841a5265-0723-41ea-b44b-d400888b94b3": {
-          "description": "Explicar cuales son las diferencias entre HTML y CSS tanto en su uso como en su sintaxis."
+          "description": "Explicar cuáles son las diferencias entre HTML y CSS, tanto en su uso como en su sintaxis."
         },
         "c90f8313-22ae-45e6-9450-a0714af452cc": {
           "description": "Explicar el propósito de los derechos de autor."
@@ -1641,7 +1653,7 @@
           "description": "Identificar los derechos y restricciones otorgados por diversas licencias Creative Commons."
         },
         "47b9c8f4-c0ee-4b41-9eb6-a30052d7c23c": {
-          "description": "Respetar la ley de derechos de autor, atribuir al usar su trabajo."
+          "description": "Respetar la ley de derechos de autor, atribuir al usar su trabajo.\n\nSiga la ley de derechos de autor, atribuyendo a otros cuando use su trabajo."
         },
         "9aafa27a-70aa-484d-badc-18eb0a076314": {
           "description": "Agregar una imagen a una página web."

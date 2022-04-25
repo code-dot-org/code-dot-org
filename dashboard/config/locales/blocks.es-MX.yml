@@ -5,21 +5,23 @@ es-MX:
       BadGuys_makeNewBadGuysSprite:
         text: crear un nuevo sprite {ANIMATION_NAME} en {LOCATION}
       BadGuys_setSizeAll_dropdown:
+        text: configurar el tamaño de todos los sprites a {SIZE}
         options:
           SIZE:
             '0.50': extra pequeño
             '0.75': pequeño
             '1.00': mediano
             '2.00': grande
-            '3.00': extra large
+            '3.00': extra grande
       BadGuys_setSize_dropdown:
+        text: configurar el tamaño de {SPRITE} a {SIZE}
         options:
           SIZE:
             '0.50': extra pequeño
             '0.75': pequeño
             '1.00': mediano
             '2.00': grande
-            '3.00': extra large
+            '3.00': extra grande
       Dancelab_alternateMoves:
         text: "{GROUP} alternar cada {N} compases \nentre {MOVE1} y {MOVE2}"
         options:
@@ -1058,9 +1060,9 @@ es-MX:
             new Behavior(wandering, []): deambulando
             new Behavior(patrolling, []): patrullando
             new Behavior(moving_west_and_looping, []): moviéndose hacia el oeste y
-              haciendo un bucle
+              haciendo un bucle (loop).
             new Behavior(moving_east_and_looping, []): moviéndose hacia el este y
-              haciendo un bucle
+              haciendo un bucle (loop).
             new Behavior(moving_north_and_looping, []): moviéndose hacia el norte
               y haciendo un bucle
             new Behavior(moving_south_and_looping, []): moviéndose hacia el sur y

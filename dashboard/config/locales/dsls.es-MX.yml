@@ -7412,11 +7412,11 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: B
-          feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
-            repite un círculo 4 veces.
+          feedback: Incorrecto.  El bucle (loop) interior hace un pentágono, y el
+            bucle (loop) exterior repite un círculo 4 veces.
         - text: C
-          feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
-            repite un círculo 4 veces.
+          feedback: Incorrecto.  El bucle (loop) interior hace un pentágono, y el
+            bucle (loop) exterior repite un círculo 4 veces.
         - text: No lo sé.
           feedback: El loop interior hace un pentágono, y el loop exterior repite
             un círculo 4 veces.
@@ -7436,11 +7436,11 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: B
-          feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
-            repite un círculo 4 veces.
+          feedback: Incorrecto.  El bucle (loop) interior hace un pentágono, y el
+            bucle (loop) exterior repite un círculo 4 veces.
         - text: C
-          feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
-            repite un círculo 4 veces.
+          feedback: Incorrecto.  El bucle (loop) interior hace un pentágono, y el
+            bucle (loop) exterior repite un círculo 4 veces.
         - text: No lo sé.
           feedback: El loop interior hace un pentágono, y el loop exterior repite
             un círculo 4 veces.
@@ -7460,11 +7460,11 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: B
-          feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
-            repite un círculo 4 veces.
+          feedback: Incorrecto.  El bucle (loop) interior hace un pentágono, y el
+            bucle (loop) exterior repite un círculo 4 veces.
         - text: C
-          feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
-            repite un círculo 4 veces.
+          feedback: Incorrecto.  El bucle (loop) interior hace un pentágono, y el
+            bucle (loop) exterior repite un círculo 4 veces.
         - text: No lo sé.
           feedback: El loop interior hace un pentágono, y el loop exterior repite
             un círculo 4 veces.
@@ -7484,11 +7484,11 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: B
-          feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
-            repite un círculo 4 veces.
+          feedback: Incorrecto.  El bucle (loop) interior hace un pentágono, y el
+            bucle (loop) exterior repite un círculo 4 veces.
         - text: C
-          feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
-            repite un círculo 4 veces.
+          feedback: Incorrecto.  El bucle (loop) interior hace un pentágono, y el
+            bucle (loop) exterior repite un círculo 4 veces.
         - text: No lo sé.
           feedback: El loop interior hace un pentágono, y el loop exterior repite
             un círculo 4 veces.
@@ -8371,86 +8371,76 @@ es-MX:
         - text: Observa las funciones definidas a continuación. ¿Qué recogerá la cosechadora?
       courseE_prediction_artistFunction1:
         answers:
-        - text: Nada. No se llama a la función en el programa.
-          feedback: Incorrecto. En realidad, se llama a la función dos veces en el
-            programa.
+        - text: Nada. No se usa la función en el programa.
+          feedback: Incorrecto. En realidad, se usa la función dos veces en el programa.
         - text: El artista dibujará un solo cuadrado.
-          feedback: Incorrecto. En realidad, se llama a la función dos veces en el
-            programa.
+          feedback: Incorrecto. En realidad, se usa la función dos veces en el programa.
         - text: El artista dibujará dos cuadrados que se superponen.
           feedback: Incorrecto. La longitud de cada lado del cuadrado es de solo 100
             pixeles, pero el artista salta a 175 pixeles entre funciones.
         - text: El artista dibujará dos cuadrados con un pequeño espacio en el medio.
           correct: true
-          feedback: "¡Correcto! La función se llama dos veces en el programa, con
+          feedback: "¡Correcto! La función se activa dos veces en el programa, con
             un salto en el medio de ambas."
         questions:
         - text: ¿Qué sucederá cuando presiones "Ejecutar"?
       courseE_prediction_artistFunction1_2018:
         answers:
-        - text: Nada. No se llama a la función en el programa.
-          feedback: Incorrecto. En realidad, se llama a la función dos veces en el
-            programa.
+        - text: Nada. No se usa la función en el programa.
+          feedback: Incorrecto. En realidad, se usa la función dos veces en el programa.
         - text: El artista dibujará un solo cuadrado.
-          feedback: Incorrecto. En realidad, se llama a la función dos veces en el
-            programa.
+          feedback: Incorrecto. En realidad, se usa la función dos veces en el programa.
         - text: El artista dibujará dos cuadrados que se superponen.
           feedback: Incorrecto. La longitud de cada lado del cuadrado es de solo 100
             pixeles, pero el artista salta a 175 pixeles entre funciones.
         - text: El artista dibujará dos cuadrados con un pequeño espacio en el medio.
           correct: true
-          feedback: "¡Correcto! La función se llama dos veces en el programa, con
+          feedback: "¡Correcto! La función se activa dos veces en el programa, con
             un salto en el medio de ambas."
         questions:
         - text: ¿Qué sucederá cuando presiones "Ejecutar"?
       courseE_prediction_artistFunction1_2018_2019:
         answers:
-        - text: Nada. No se llama a la función en el programa.
-          feedback: Incorrecto. En realidad, se llama a la función dos veces en el
-            programa.
+        - text: Nada. No se usa la función en el programa.
+          feedback: Incorrecto. En realidad, se usa la función dos veces en el programa.
         - text: El artista dibujará un solo cuadrado.
-          feedback: Incorrecto. En realidad, se llama a la función dos veces en el
-            programa.
+          feedback: Incorrecto. En realidad, se usa la función dos veces en el programa.
         - text: El artista dibujará dos cuadrados que se superponen.
           feedback: Incorrecto. La longitud de cada lado del cuadrado es de solo 100
             pixeles, pero el artista salta a 175 pixeles entre funciones.
         - text: El artista dibujará dos cuadrados con un pequeño espacio en el medio.
           correct: true
-          feedback: "¡Correcto! La función se llama dos veces en el programa, con
+          feedback: "¡Correcto! La función se activa dos veces en el programa, con
             un salto en el medio de ambas."
         questions:
         - text: ¿Qué sucederá cuando presiones "Ejecutar"?
       courseE_prediction_artistFunction1_2018_2019_2020:
         answers:
-        - text: Nada. No se llama a la función en el programa.
-          feedback: Incorrecto. En realidad, se llama a la función dos veces en el
-            programa.
+        - text: Nada. No se usa la función en el programa.
+          feedback: Incorrecto. En realidad, se usa la función dos veces en el programa.
         - text: El artista dibujará un solo cuadrado.
-          feedback: Incorrecto. En realidad, se llama a la función dos veces en el
-            programa.
+          feedback: Incorrecto. En realidad, se usa la función dos veces en el programa.
         - text: El artista dibujará dos cuadrados que se superponen.
           feedback: Incorrecto. La longitud de cada lado del cuadrado es de solo 100
             pixeles, pero el artista salta a 175 pixeles entre funciones.
         - text: El artista dibujará dos cuadrados con un pequeño espacio en el medio.
           correct: true
-          feedback: "¡Correcto! La función se llama dos veces en el programa, con
+          feedback: "¡Correcto! La función se activa dos veces en el programa, con
             un salto en el medio de ambas."
         questions:
         - text: ¿Qué sucederá cuando presiones "Ejecutar"?
       courseE_prediction_artistFunction1_copy:
         answers:
-        - text: Nada. No se llama a la función en el programa.
-          feedback: Incorrecto. En realidad, se llama a la función dos veces en el
-            programa.
+        - text: Nada. No se usa la función en el programa.
+          feedback: Incorrecto. En realidad, se usa la función dos veces en el programa.
         - text: El artista dibujará un solo cuadrado.
-          feedback: Incorrecto. En realidad, se llama a la función dos veces en el
-            programa.
+          feedback: Incorrecto. En realidad, se usa la función dos veces en el programa.
         - text: El artista dibujará dos cuadrados que se superponen.
           feedback: Incorrecto. La longitud de cada lado del cuadrado es de solo 100
             pixeles, pero el artista salta a 175 pixeles entre funciones.
         - text: El artista dibujará dos cuadrados con un pequeño espacio en el medio.
           correct: true
-          feedback: "¡Correcto! La función se llama dos veces en el programa, con
+          feedback: "¡Correcto! La función se activa dos veces en el programa, con
             un salto en el medio de ambas."
         questions:
         - text: ¿Qué sucederá cuando presiones "Ejecutar"?
@@ -11776,14 +11766,14 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: B
-          feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
-            repite un círculo 4 veces.
+          feedback: Incorrecto.  El bucle (loop) interior hace un pentágono, y el
+            bucle (loop) exterior repite un círculo 4 veces.
         - text: C
-          feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
-            repite un círculo 4 veces.
+          feedback: Incorrecto.  El bucle (loop) interior hace un pentágono, y el
+            bucle (loop) exterior repite un círculo 4 veces.
         - text: Ninguna de las anteriores
-          feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
-            repite un círculo 4 veces.
+          feedback: Incorrecto.  El bucle (loop) interior hace un pentágono, y el
+            bucle (loop) exterior repite un círculo 4 veces.
         markdown: |+
           <table>
           <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
@@ -12027,10 +12017,10 @@ es-MX:
         - text: Observa las funciones definidas a continuación. ¿Qué recogerá la granjera?
       courseE_prediction_artistFunction1_2021:
         answers:
-        - text: Nada. El programa no activa la función.
-          feedback: Incorrecto. El programa activa dos veces la función.
+        - text: Nada. No se usa la función en el programa.
+          feedback: Incorrecto. En realidad, se usa la función dos veces en el programa.
         - text: El artista dibujará un solo cuadrado.
-          feedback: Incorrecto. El programa activa dos veces la función.
+          feedback: Incorrecto. En realidad, se usa la función dos veces en el programa.
         - text: El artista dibujará dos cuadrados que se superponen.
           feedback: Incorrecto. La longitud de cada lado del cuadrado es de solo 100
             pixeles, pero el artista salta a 175 pixeles entre funciones.
@@ -12042,18 +12032,16 @@ es-MX:
         - text: ¿Qué sucederá cuando presiones "Ejecutar"?
       courseE_prediction_artistFunction1_dani:
         answers:
-        - text: Nada. No se llama a la función en el programa.
-          feedback: Incorrecto. En realidad, se llama a la función dos veces en el
-            programa.
+        - text: Nada. No se usa la función en el programa.
+          feedback: Incorrecto. En realidad, se usa la función dos veces en el programa.
         - text: El artista dibujará un solo cuadrado.
-          feedback: Incorrecto. En realidad, se llama a la función dos veces en el
-            programa.
+          feedback: Incorrecto. En realidad, se usa la función dos veces en el programa.
         - text: El artista dibujará dos cuadrados que se superponen.
           feedback: Incorrecto. La longitud de cada lado del cuadrado es de solo 100
             pixeles, pero el artista salta a 175 pixeles entre funciones.
         - text: El artista dibujará dos cuadrados con un pequeño espacio en el medio.
           correct: true
-          feedback: "¡Correcto! La función se llama dos veces en el programa, con
+          feedback: "¡Correcto! La función se activa dos veces en el programa, con
             un salto en el medio de ambas."
         questions:
         - text: ¿Qué sucederá cuando presiones "Ejecutar"?
@@ -12770,23 +12758,23 @@ es-MX:
         description: Pon a prueba tus conocimientos de texto en estas actividades.
       CSDU6 Innovation_2021:
         teacher_markdown: |+
-          A continuación, se muestran algunos sitios recomendados para que los estudiantes comiencen su investigación.  Aunque estos sitios son generalmente apropiados para la escuela, el contenido dentro de ellos cambia con frecuencia, por lo que **sugerimos encarecidamente que compruebes cada sitio para ver si hay contenido inapropiado antes de compartirlo con los estudiantes**.
+          A continuación, hay algunos sitios web que los estudiantes pueden utilizar para comenzar su investigación. No hemos proporcionado estos sitios web directamente a los estudiantes debido a que algunas veces estos sitios son bloqueados por programas de filtrado distritales, ó bien, la innovación mas reciente digna de una noticia puede no ser apropiada para estudiantes de secundaria. **Sugerimos encarecidamente que compruebes cada sitio para asegurarte que no incluya contenido inapropiado y que cargue en las computadoras del salon de clases antes de compartirlo con los estudiantes**.
 
-          ### Tecnología Portable
+          ### Tecnología Portable/Vestible
 
-          * [Warable.com](https://www.wareable.com/)
+          * [Wareable.com](https://www.wareable.com/)
 
-          ### Salud y Seguridad
+          ### Salud y Cuidado
 
-          * [Sanidad Moderna](http://www.modernhealthcare.com/section/medical-devices)
+          * [Modern Healthcare](http://www.modernhealthcare.com/section/medical-devices)
           * [Medstartr](http://www.medstartr.com/)
 
           ### Agricultura
 
           * [Instituto Nacional de Alimentación y Agricultura](https://nifa.usda.gov/topic/agriculture-technology)
-          * [Noticias del Sector Agrícola](http://www.farmindustrynews.com/technology)
+          * [Noticias de la Industria Agrícola](http://www.farmindustrynews.com/technology)
 
-          ### Fabricación
+          ### Manufactura
 
           * [Semana de la Industria](https://www.industryweek.com/technology-and-iiot)
           * [Impresión 3D](https://3dprinting.com/)
@@ -12794,7 +12782,7 @@ es-MX:
           ### Arte y Diseño
 
           * [ArtFab](http://artfab.art.cmu.edu/)
-          * [Tutoriales](http://www.instructables.com/tag/type-id/category-technology/)
+          * [Instructables](http://www.instructables.com/tag/type-id/category-technology/)
 
           ### Casa Inteligente
 
@@ -12805,38 +12793,37 @@ es-MX:
         markdown: |+
           # Investigación sobre la Innovación
 
-          Elige uno de los siguientes temas para investigar. Querrás encontrar información sobre algunos de los dispositivos informáticos innovadores más recientes relacionados con tu categoría.
+          Elige uno de los siguientes temas para investigar. Querrás encontrar información acerca de algunos de los dispositivos de computo innovadores más recientes relacionados con tu categoría.
 
-          ## Tecnología Portable
-          La tecnología vestible incluye cualquier forma de informática diseñada para ser llevada por el usuario, ya sea integrada en la ropa o como accesorio. Muchos dispositivos para llevar puestos, como los podómetros inteligentes, se solapan en cierto modo con la salud y la seguridad, ya que el dispositivo es a la vez vestible _y_ pretende ayudar a mejorar la salud personal.
+          ## Tecnología Portable/Vestible
+          La tecnología portable/vestible incluye cualquier forma de computo diseñada para ser portada/vestida por el usuario, ya sea integrada en la ropa o como un accesorio. Muchos dispositivos portables/vestibles, como los podómetros inteligentes, se superponen en cierto modo con la salud y los cuidados, ya que el dispositivo es a la vez portable/vestible _y_ tiene como proposito ayudar a mejorar la salud personal.
 
-          ## Salud y Seguridad
-          Este tema tan amplio incluye tanto la tecnología de consumo (cosas que puedes usar para mejorar tu salud o seguridad) como la tecnología profesional (equipos que puede usar un médico u otro profesional).
+          ## Salud y Cuidado
+          Este tema tan amplio incluye tanto la tecnología de consumo (cosas que puedes usar para mejorar tu salud o cuidado) como la tecnología profesional (equipos que pueden ser utilizados por un médico u otro profesional).
 
           ## Agricultura
-          Puede que la agricultura no sea un tema obvio, pero las innovaciones tecnológicas han tenido un gran impacto en la forma en que concebimos la agricultura. Esto incluye la incorporación de ordenadores a los equipos agrícolas existentes, el uso de sensores y robótica para controlar los cultivos y el análisis de datos para mejorar la eficiencia y la sostenibilidad.
+          Puede que la agricultura no sea un tema obvio, pero las innovaciones tecnológicas han tenido un gran impacto en la forma en que concebimos la agricultura. Esto incluye la incorporación de computadoras a los equipos agrícolas existentes, el uso de sensores y robótica para monitorear los cultivos y el análisis de datos para mejorar la eficiencia y la sostenibilidad.
 
-          ## Fabricación
-          Los avances en la creación rápida de prototipos, la robótica industrial y la automatización han tenido un gran impacto en la forma de producir bienes. Ya sea la tecnología que permite la fabricación asequible a pequeña escala (como las impresoras 3D y las cortadoras láser) o la integración de los ordenadores en el trabajo de la fábrica, hay muchas áreas interesantes para investigar aquí.
+          ## Manufactura
+          Los avances en la creación rápida de prototipos, la robótica industrial y la automatización han tenido un gran impacto en la forma de producir bienes. Ya sea la tecnología que permite la manufactura asequible a pequeña escala (como las impresoras 3D y las cortadoras láser) o la integración de computadoras en el trabajo de la fábrica, hay muchas áreas interesantes para investigar aquí.
 
           ## Arte y Diseño
-          La intersección entre la expresión artística y la informática puede dar resultados impresionantes e inesperados. Aunque es menos probable encontrar productos comerciales relacionados con el arte y el diseño, sí que se puede encontrar una gran variedad de creaciones caseras que utilizan todo tipo de dispositivos informáticos de forma creativa y expresiva.
+          La intersección entre la expresión artística y la computación puede producir resultados impresionantes e inesperados. Aunque es menos probable que encuentres productos comerciales disponibles relacionados con el arte y el diseño, encontraras una gran variedad de creaciones caseras que utilizan todo tipo de dispositivos de computo de maneras creativas y expresivas.
 
           ## Casa Inteligente
-          El sueño de una casa que entienda e incluso se anticipe a tus necesidades está más cerca que nunca. Tanto si se controlan explícitamente mediante comandos de voz como si se utilizan sensores para controlar y responder a las condiciones cambiantes, los dispositivos domésticos inteligentes se encargan de cualquier número de tareas mundanas o repetitivas en la casa.
-
+          El sueño de una casa que entienda e incluso se anticipe a tus necesidades está más cerca que nunca. Tanto si se controlan explícitamente mediante comandos de voz como si se utilizan sensores para monitorear y responder a las condiciones cambiantes, los dispositivos domésticos inteligentes se encargan de cualquier número de tareas mundanas o repetitivas en la casa.
 
           # Consideraciones sobre la Investigación
 
-          Cuando busques dispositivos sobre tu especialidad, ten en cuenta las siguientes consideraciones:
+          Cuando busques dispositivos sobre tu tema, ten en mente las siguientes consideraciones:
 
-          * Céntrate en las soluciones basadas en hardware sobre los programas de software
-          * Céntrate en las innovaciones recientes por encima de las antiguas
+          * Enfocate en las soluciones basadas en hardware por encima de los programas de software
+          * Enfocate en las innovaciones recientes por encima de las antiguas
           * Sigue lo que te interesa
 
           # Comenzando tu Investigación
 
-          Consulta con tu profesor los sitios web recomendados para comenzar tu investigación. También puedes utilizar algunas de las palabras clave anteriores para empezar a buscar ideas específicas en Internet. Por ejemplo, considera la posibilidad de buscar en los distintos sitios web de financiación colectiva (como Kickstarter e Indiegogo) para ver los productos que aún no han salido al mercado.
+          Consulta con tu profesor los sitios web recomendados para comenzar tu investigación. También puedes utilizar algunas de las palabras clave anteriores para empezar a buscar ideas específicas en Internet. Por ejemplo, considera la posibilidad de buscar en los distintos sitios web de financiación colectiva (como Kickstarter e Indiegogo) productos que aún no han salido al mercado.
 
 
 

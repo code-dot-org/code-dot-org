@@ -2,6 +2,9 @@
   "es-MX": {
     "data": {
       "category": {
+        "csta/AP": {
+          "description": "Algoritmos y programación"
+        },
         "ccela/SL": {
           "description": "Hablar y escuchar"
         },
@@ -29,6 +32,18 @@
         "ccela/RI": {
           "description": "Lectura informativa"
         },
+        "ccmath/OA": {
+          "description": "Operaciones y Pensamiento Algebraico"
+        },
+        "csta2011/CD": {
+          "description": "Ordenadores y Dispositivos de Comunicación"
+        },
+        "csta2011/CI": {
+          "description": "Impactos Sociales, Globales y Éticos"
+        },
+        "ccmath/MD": {
+          "description": "Usando Probabilidades para Tomar Decisiones"
+        },
         "ccela/W": {
           "description": "Escribir"
         },
@@ -40,6 +55,15 @@
         },
         "csta/IC": {
           "description": "Impactos de la computación"
+        },
+        "csta/NI": {
+          "description": "Redes e Internet"
+        },
+        "csta/CS": {
+          "description": "Sistemas de computación"
+        },
+        "ngss/ETS1": {
+          "description": "Diseño Ingenieril"
         }
       }
     }

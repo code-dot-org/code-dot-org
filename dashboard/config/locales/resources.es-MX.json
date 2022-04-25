@@ -1522,7 +1522,7 @@
           "type": "Vídeo"
         },
         "open-ended_programming_levels/coursec/2021": {
-          "name": "Niveles de programación abiertos",
+          "name": "Pauta con ejemplos resueltos",
           "url": "https://docs.google.com/document/d/1cJ_FIgqGEt1OikBc53bEJGhFFOLrppJ2pRWAw-bmV0k/view",
           "type": "Guía de respuestas"
         },
@@ -1751,7 +1751,7 @@
           "type": "Guía de respuestas"
         },
         "open-ended_programming_levels_1/coursed/2021": {
-          "name": "Niveles de programación abiertos",
+          "name": "Pauta con ejemplos resueltos",
           "url": "https://docs.google.com/document/d/14qVMrzEOkq7m0gRjtYI8Erb1nGbx_XCz4TSm_d_xCls/view",
           "type": "Guía de respuestas"
         },
@@ -3147,9 +3147,13 @@
           "name": "Todo el vocabulario"
         },
         "cs-entertainment-activity/csd/2021": {
+          "name": "Las ciencias de la computación en el entretenimiento",
+          "url": "https://docs.google.com/document/d/1uDt9Neil1on0iB0zOOHQCC014pPJTI0F/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Guía de actividades"
         },
         "cs_in_entertainment/csd/2021": {
+          "name": "Las ciencias de la computación en el entretenimiento",
+          "url": "https://docs.google.com/document/d/1l4c_DAfjy88WfrEEMEJeX4t1BDZM-xFk/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Ejemplar"
         },
         "csd_unit_3_-_interactive_animations_and_games/csd/2021": {
@@ -3296,7 +3300,6 @@
         },
         "animated-scene-planning-exemplar-2020/csd/2021": {
           "name": "Planificación de una escena animada",
-          "url": "https://docs.google.com/document/d/1z7ZqFUhyKYOUzGi4tNqBRNB_nN1fpbhIKtscT_SRUZY/edit?usp=sharing",
           "type": "Ejemplar"
         },
         "animated-scene-1/csd/2021": {
@@ -3341,7 +3344,6 @@
         },
         "interactive-card-exemplar-2020/csd/2021": {
           "name": "Tarjeta interactiva",
-          "url": "https://docs.google.com/document/d/1_nRUx1t-MO8fW9oQndl-9mQ8xRYGo91hhM0seisf6jM/edit?usp=sharing",
           "type": "Ejemplar"
         },
         "interactive-card-marked-rubrics/csd/2021": {
@@ -3385,7 +3387,6 @@
         },
         "collision-detection-exemplar-2020/csd/2021": {
           "name": "Detección de colisiones",
-          "url": "https://docs.google.com/document/d/1TpC1qb6wletapYlxTnPwpp0dCbVlc_VRL5t_GkZU3Zk/edit?usp=sharing",
           "type": "Ejemplar"
         },
         "collision_detection_version_b_/csd/2021": {
@@ -3531,18 +3532,22 @@
         },
         "problem-solving-process-exemplar-2020/csd/2021": {
           "name": "Proceso de resolución de problemas",
+          "url": "https://docs.google.com/document/d/1I9czeAdw-kZvCve2IG8azYfUl5UM3k_A/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Ejemplar"
         },
         "problem-solving-process-1/csd/2021": {
           "name": "Proceso de resolución de problemas",
+          "url": "https://youtu.be/z7RaFPT3DTE",
           "type": "Vídeo"
         },
         "the-problem-solving-process/csd/2021": {
           "name": "El proceso de resolución de problemas",
+          "url": "https://docs.google.com/document/d/1oaw9keqDRTbWv1ciAOMwyzYzdapX8msk/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Guía de actividades"
         },
         "problem-solving-process/csd/2021": {
-          "name": "Proceso de resolución de problemas"
+          "name": "Proceso de resolución de problemas",
+          "url": "https://drive.google.com/file/d/1wHBxaYEH04phJiRXKw2Oz3p0CrgirwA5/view?usp=sharing"
         },
         "solving-problems-exemplar-2020/csd/2021": {
           "name": "Solucionando Problemas",
@@ -3714,10 +3719,12 @@
         },
         "exploring-web-pages-exemplar-2020/csd/2021": {
           "name": "Exploración de páginas web",
+          "url": "https://docs.google.com/document/d/1um6hwXXqklHmt1NViwtdxLd3UsfSNTQI/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Ejemplar"
         },
         "exploring-web-pages/csd/2021": {
           "name": "Exploración de páginas web",
+          "url": "https://docs.google.com/document/d/1Dzg-74YJbzWwqg4--zvOqVUhVlkEm5AA/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Guía de actividades"
         },
         "csd_unit_2_-_web_development/csd/2021": {
@@ -3762,12 +3769,12 @@
         },
         "project-guide-html-project-2020/csd/2021": {
           "name": "Guía de proyecto - Proyecto HTML",
-          "url": "https://docs.google.com/document/d/1XBGLcAr9DWDohBSjSIo1mX95d4xDsF3y/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "url": "https://docs.google.com/document/d/1rCZJ08BRbjqOKPBttCZtL781OqnucyXe/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Ejemplar"
         },
         "peer-review-html-web-page-exemplar-2020/csd/2021": {
           "name": "Revisión de compañeros - Página Web HTML",
-          "url": "https://docs.google.com/document/d/16fbMh8ScHGcwhsesC5wTnOaPrqG0YZuG/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "url": "https://docs.google.com/document/d/1D8VwAcL58Z2uXXIBPAJ5akAojQZKxu7Q/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Ejemplar"
         },
         "html-web-page-1/csd/2021": {
@@ -3807,7 +3814,7 @@
         },
         "social-sleuth-exemplar-2020/csd/2021": {
           "name": "Investigador Social",
-          "url": "https://docs.google.com/document/d/10DQ0ctP4Z-5aX8JJW2F_wSP3cvj-e-Ha/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "url": "https://docs.google.com/document/d/1ysWagvtXoL70uJ87Xfhl-ZUf1shov5DK/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Ejemplar"
         },
         "social-sleuth/csd/2021": {
@@ -3837,12 +3844,12 @@
         },
         "project-guide-your-personal-style-exemplar-2020/csd/2021": {
           "name": "Guía de Proyectos - Tu estilo personal",
-          "url": "https://docs.google.com/document/d/1ZdoedsacEt7jJM0CvEppQOZwebFXo6tk/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "url": "https://docs.google.com/document/d/1cXOOhQa_Wsx-jgDY-McQ6vSuskgsV_8p/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Ejemplar"
         },
         "peer-review-your-personal-style-exemplar-2020/csd/2021": {
           "name": "Revisión de pares - Tu estilo personal",
-          "url": "https://docs.google.com/document/d/1M9N6q8f9mzt0H7CgtqfH16czIJVKh0vP/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "url": "https://docs.google.com/document/d/1SfsWDfn9o6O9dnvF5HRsMoaAQtbk5BK7/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Ejemplar"
         },
         "your-personal-style-1-2-3/csd/2021": {
@@ -3862,7 +3869,7 @@
         },
         "licensing-your-work-exemplar-2020/csd/2021": {
           "name": "Patentando tu trabajo",
-          "url": "https://docs.google.com/document/d/12w1BAhfRsJawQt4B_WR9NcNiHo9iD9Yz/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "url": "https://docs.google.com/document/d/1galHeLAWbJoxKMn1r8d5yp5gL-3NWyFI/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Ejemplar"
         },
         "licensing-your-work-2020/csd/2021": {
@@ -3887,11 +3894,11 @@
         },
         "define-your-webpage-2020/csd/2021": {
           "name": "Explorando sitios web",
-          "url": "https://docs.google.com/document/d/1U7JYq79dKmfnTGPHOIIkGMlTsS3_9yU1/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "url": "https://docs.google.com/document/d/1xRmO02sG8w8AjNbVFCnXwKciu7yxKeKG/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Ejemplar"
         },
         "define-your-web-page/csd/2021": {
-          "name": "Explorando sitios web",
+          "name": "Defina su página web",
           "url": "https://docs.google.com/document/d/1U7JYq79dKmfnTGPHOIIkGMlTsS3_9yU1/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Guía de actividades"
         },
@@ -3907,7 +3914,7 @@
         },
         "project-guide-personal-web-page-prepare-exemplar-2020/csd/2021": {
           "name": "Guía de proyecto - Página Web Personal - Preparar",
-          "url": "https://docs.google.com/document/d/1xHo70I67T_RgHoVEAby6YVWAbdLQQLNu/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "url": "https://docs.google.com/document/d/1zJPNMDwjKFg2YZLMLLAncQlH3yVqXpn2/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Ejemplar"
         },
         "person-web-page-prepare/csd/2021": {
@@ -3917,17 +3924,17 @@
         },
         "practices-reflection-exemplar-2020/csd/2021": {
           "name": "Reflexión sobre Prácticas ",
-          "url": "https://docs.google.com/document/d/1QijwlqA33Ao_b8Ti1wKHOc0Y0UHutTm0/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "url": "https://docs.google.com/document/d/12MD1gfyUMhtvNUg0U69vg3inrqpapGbV/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Ejemplar"
         },
         "project-guide-personal-web-page-reflect-exemplar-2020/csd/2021": {
           "name": "Guía de proyecto - Página Web Personal - Reflexionar",
-          "url": "https://docs.google.com/document/d/10LTsuEFOPRwrlQVh6jYyATHwcJYWmZHb/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "url": "https://docs.google.com/document/d/1mW7wIjlJA72CohnghBY1y5hPX01q_esv/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Ejemplar"
         },
         "peer-review-personal-website-exemplar-2020/csd/2021": {
           "name": "Revisión de compañeros - Página Web Personal",
-          "url": "https://docs.google.com/document/d/16ieiGwSaVainE1WTvPc8OtfU0dRsdYJf/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
+          "url": "https://docs.google.com/document/d/1yAcQpKwwHn7Yfsub-Xr1ArOWSMXp1xlJ/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Ejemplar"
         },
         "personal-web-page-1/csd/2021": {
@@ -3991,7 +3998,7 @@
           "type": "Guía de actividades"
         },
         "links-and-research-1/csd/2021": {
-          "name": "Enlaces e investigación",
+          "name": "Enlaces e Investigación",
           "url": "https://docs.google.com/document/d/1AVeTwMWDUrf1Kd051rMe-BPWpaiqJhFV/edit?usp=sharing&ouid=103163802033599385527&rtpof=true&sd=true",
           "type": "Ejemplar"
         },

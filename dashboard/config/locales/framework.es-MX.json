@@ -13,6 +13,9 @@
         },
         "iste": {
           "name": "Estándares ISTE para estudiantes"
+        },
+        "ngss": {
+          "name": "Estándares Científicos de la Próxima Generación"
         }
       }
     }

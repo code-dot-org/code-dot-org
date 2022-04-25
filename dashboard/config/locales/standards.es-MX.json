@@ -2,6 +2,15 @@
   "es-MX": {
     "data": {
       "standards": {
+        "csta/1B-AP-10": {
+          "description": "Crear programas que incluyan secuencias, eventos, bucles y condicionales."
+        },
+        "csta/1B-AP-12": {
+          "description": "Modificar, mezclar o incorporar partes de un programa existente en el propio trabajo, para desarrollar algo nuevo o agregar funciones más avanzadas."
+        },
+        "csta/1B-AP-15": {
+          "description": "Probar y depurar (identificar y corregir errores) un programa o algoritmo para asegurarse de que se ejecuta según lo previsto."
+        },
         "ccela/6.SL.1": {
           "description": "Participa de manera efectiva en una variedad de debates colaborativos (uno a uno, en grupos y dirigidos por maestros) con diversos compañeros sobre temas, textos y problemas de sexto grado, aprovechando las ideas de los demás y expresando las suyas con claridad."
         },
@@ -173,8 +182,23 @@
         "iste/4.d": {
           "description": "Utiliza múltiples procesos y perspectivas diversas para explorar soluciones alternativas."
         },
+        "csta/1A-AP-11": {
+          "description": "Descomponer (desglosar) los pasos necesarios para resolver un problema en una secuencia precisa de instrucciones."
+        },
         "csta/1A-IC-17": {
           "description": "Trabaja de forma respetuosa y responsable con los demás en línea."
+        },
+        "csta/1A-AP-09": {
+          "description": "Modelar la forma en que los programas almacenan y manipulan datos utilizando números u otros símbolos para representar información."
+        },
+        "csta/1A-AP-14": {
+          "description": "Depurar (identificar y corregir) errores en un algoritmo o programa que incluye secuencias y ciclos (bucles) simples."
+        },
+        "csta/1B-CS-01": {
+          "description": "Describir cómo funcionan las partes internas y externas de los dispositivos computacionales para formar un sistema."
+        },
+        "csta/1B-CS-02": {
+          "description": "Modelar cómo el hardware y el software del computador funcionan juntos como un sistema para realizar tareas."
         },
         "csta/1A-IC-18": {
           "description": "Conserva la privacidad de los datos de acceso y cierra la sesión de los dispositivos de forma adecuada."
@@ -182,11 +206,17 @@
         "csta/1A-CS-02": {
           "description": "Utiliza la terminología adecuada para identificar y describir la función de los componentes físicos comunes de los sistemas informáticos (hardware)."
         },
+        "csta/1A-CS-03": {
+          "description": "Describe problemas básicos de hardware y software usando la terminología adecuada."
+        },
         "csta/1A-AP-08": {
           "description": "Hacer un ejemplo de los procesos diarios creando y siguiendo algoritmos (conjuntos de instrucciones paso a paso) para completar las tareas."
         },
         "csta/1A-AP-12": {
           "description": "Desarrolla planes que describan la secuencia de eventos, los objetivos y los resultados esperados de un programa."
+        },
+        "csta/1A-AP-10": {
+          "description": "Desarrollar programas con secuencias y ciclos (bucles) simples, para expresar ideas o abordar un problema."
         },
         "csta/1A-NI-04": {
           "description": "Explica qué son las contraseñas y por qué las usamos, así como el uso de contraseñas seguras para proteger los dispositivos y la información del acceso no autorizado."
@@ -200,8 +230,17 @@
         "csta/1A-IC-16": {
           "description": "Comparar cómo viven y trabajan las personas antes y después de la implantación o adopción de una nueva tecnología informática."
         },
+        "csta/1B-AP-11": {
+          "description": "Descomponer (desglosar) problemas en subproblemas más pequeños y manejables para facilitar el proceso de desarrollo del programa."
+        },
+        "csta/1B-NI-05": {
+          "description": "Discutir problemas de ciberseguridad del mundo real y cómo se proteger la información personal."
+        },
         "csta/1B-AP-08": {
           "description": "Compara y perfecciona varios algoritmos para la misma tarea y determina cuál es el más adecuado."
+        },
+        "csta/1B-AP-09": {
+          "description": "Crear programas que usen variables para almacenar y modificar datos."
         },
         "csta/1B-DA-06": {
           "description": "Organizar y presentar visualmente los datos recogidos para destacar las relaciones y respaldar una reclamación."
@@ -212,11 +251,20 @@
         "csta/1B-IC-20": {
           "description": "Buscar diversas perspectivas con el fin de mejorar los dispositivos informáticos."
         },
+        "csta/1B-IC-21": {
+          "description": "Usar medios de dominio público o creative commons y abstenerse de copiar o usar material creado por otros sin permiso."
+        },
         "csta/1B-AP-13": {
           "description": "Utiliza un proceso iterativo para planificar el desarrollo de un programa incluyendo las perspectivas de otros y considerando las preferencias de los usuarios."
         },
+        "csta/1B-AP-14": {
+          "description": "Observar los derechos de propiedad intelectual y otorgar la atribución adecuada al crear o reutilizar programas."
+        },
         "csta/1B-AP-16": {
           "description": "Asume diversas funciones, con la orientación del profesor, al colaborar con tus compañeros durante las etapas de diseño, implementación y revisión del desarrollo del programa."
+        },
+        "csta/1B-AP-17": {
+          "description": "Describir las elecciones realizadas durante el desarrollo del programa utilizando comentarios de código, presentaciones y demostraciones."
         },
         "csta/1B-CS-03": {
           "description": "Determinar posibles soluciones para resolver problemas sencillos de hardware y software utilizando estrategias comunes de resolución de problemas."
