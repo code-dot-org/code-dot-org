@@ -633,6 +633,7 @@
         "express-2021/lesson-3": {
           "overview": "Dans cette leçon de **renforcement des compétences**, les élèves passeront par une série de niveaux de programmation sur ordinateur, en terminant par une tâche de « jeu libre » ouverte où ils pourront construire ce qu'ils veulent. Les étudiants écriront des programmes qui répondent à des événements chronométrés et à des entrées utilisateur. ",
           "preparation": "Naviguez à travers les niveaux et passez en revue les diapositives de la leçon. ",
+          "purpose": "",
           "student_overview": "Vous travaillerez à travers les niveaux de programmation et terminerez avec une tâche de « jeu libre » ouverte où vous pourrez créer ce que vous voulez. "
         },
         "express-2021/Virtual Pet with Sprite Lab": {
