@@ -53,10 +53,21 @@ input.field, select.field {
   padding: 5px;
   border-width: 1px;
   margin: 0;
+
+  &:focus {
+    border-color: #66afe9;
+    outline: 0;
+    box-shadow: 0 0 8px #66afe9;
+  }
 }
 
 input.has-error, select.has-error {
-  border-color: #b94a48;
+  border-color: #a94442;
+
+  &:focus {
+    box-shadow: 0 0 6px #ce8483;
+    border-color: #843534;
+  }
 }
 
 input.grey_input {
