@@ -33,3 +33,10 @@ export const getInvalidFields = data => {
 
   return invalidFields;
 };
+
+export const getErrorMessage = invalidFields =>
+  invalidFields.length === 0
+    ? ''
+    : invalidFields.length === 1
+    ? 'Please fix the error below'
+    : 'Please fix the errors below';
