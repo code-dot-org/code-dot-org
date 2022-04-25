@@ -642,7 +642,8 @@ class Projects
   end
 
   def create(_, _)
-    project_id = SecureRandom.random_number(100000)
+    # project_id must be an integer > 0
+    project_id = 1 + SecureRandom.random_number(100000)
     storage_encrypt_channel_id(@storage_id, project_id)
   end
 

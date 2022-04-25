@@ -113,14 +113,6 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
   traceOn() {} // TODO
 }
 
-WorkspaceSvg.prototype.blockSpaceEditor = {
-  blockLimits: {
-    blockLimitExceeded: () => false, // TODO
-    getLimit: () => {} // TODO
-  },
-  svgResize: () => {} // TODO
-};
-
 WorkspaceSvg.prototype.events = {
   dispatchEvent: () => {} // TODO
 };

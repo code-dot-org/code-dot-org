@@ -351,6 +351,7 @@ module LevelsHelper
       @app_options[:level][:levelVideos] = @level.related_videos.map(&:summarize)
       @app_options[:level][:mapReference] = @level.map_reference
       @app_options[:level][:referenceLinks] = @level.reference_links
+      @app_options[:level][:programmingEnvironment] = get_programming_environment
 
       if (@user || current_user) && @script
         @app_options[:level][:isStarted] = level_started?(@level, @script, @user || current_user)
@@ -1019,6 +1020,19 @@ module LevelsHelper
       POST_MILESTONE_MODE.all
     else
       POST_MILESTONE_MODE.final_level_only
+    end
+  end
+
+  # Get the programming environment for a given level. For now,
+  # getting programming environment information via the level is only
+  # supported by Java Lab, so only Java Lab will return a non-nil value.
+  # This method should return the name of a programming environment, or nil.
+  def get_programming_environment
+    case @level.game
+    when Game.javalab
+      "javalab"
+    else
+      nil
     end
   end
 end

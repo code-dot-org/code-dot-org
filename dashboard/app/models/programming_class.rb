@@ -63,7 +63,8 @@ class ProgrammingClass < ApplicationRecord
     programming_class.programming_methods =
       properties[:methods].map do |method_config|
         method = ProgrammingMethod.find_or_initialize_by(programming_class_id: programming_class.id, key: method_config['key'])
-        method.update! method_config
+        method.seed_in_progress = true
+        method.update!(method_config)
         method
       end
     programming_class.id
@@ -105,8 +106,34 @@ class ProgrammingClass < ApplicationRecord
       methods: programming_methods,
       tips: tips || '',
       syntax: syntax || '',
-      external_documentation: external_documentation || '',
+      externalDocumentation: external_documentation || '',
       categoryKey: programming_environment_category&.key || ''
+    }
+  end
+
+  def summarize_for_show
+    {
+      id: id,
+      key: key,
+      name: name,
+      content: content,
+      examples: parsed_examples,
+      fields: parsed_fields,
+      tips: tips,
+      syntax: syntax,
+      externalDocumentation: external_documentation,
+      categoryKey: programming_environment_category&.key || '',
+      color: programming_environment_category&.color || '',
+      category: programming_environment_category&.name || ''
+    }
+  end
+
+  def summarize_for_navigation
+    {
+      key: key,
+      name: name,
+      syntax: syntax,
+      link: "/programming_classes/#{id}"
     }
   end
 
