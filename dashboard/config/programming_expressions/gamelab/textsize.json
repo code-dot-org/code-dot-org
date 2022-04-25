@@ -3,7 +3,7 @@
   "name": "textSize()",
   "category": "Drawing",
   "category_key": "drawing",
-  "content": "Sets/gets the current font size. \n\nThis size will be used in all subsequent calls to `text()`. Font size is measured in pixels and the default font size is 12 pixels. Text that does not fit completely within the display area will not be drawn or seen.",
+  "content": "Sets/gets the current font size. \n\nThis size will be used in all subsequent calls to [`text()`(#4dd0e1)](/docs/gamelab/text/). Font size is measured in pixels and the default font size is 12 pixels. Text that does not fit completely within the display area will not be drawn or seen.",
   "examples": [
     {
       "name": "",
