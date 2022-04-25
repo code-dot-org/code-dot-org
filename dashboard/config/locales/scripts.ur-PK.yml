@@ -513,6 +513,10 @@ ur:
           lessons:
             Loops in Artist:
               name: Artist میں لوپس
+        subgoal-labels-opt-in:
+          lessons:
+            other:
+              name: دیگر
         applab-intro:
           lessons:
             Intro to App Lab:

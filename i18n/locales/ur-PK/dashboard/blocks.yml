@@ -1082,6 +1082,7 @@ ur:
         options:
           CHOICE:
             '"this"': یہ
+            '"other"': دیگر
       gamelab_getTime:
         text: "{UNIT} میں ٹائم"
         options:
