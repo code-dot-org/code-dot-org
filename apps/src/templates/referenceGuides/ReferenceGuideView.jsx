@@ -7,6 +7,7 @@ import {
   NavigationItem
 } from '@cdo/apps/templates/NavigationBar';
 import {organizeReferenceGuides} from '@cdo/apps/util/referenceGuideHelpers';
+import {Link} from '@dsco_/link';
 
 const baseUrl = window.location.href
   .split('/')
@@ -63,7 +64,15 @@ export default function ReferenceGuideView({referenceGuide, referenceGuides}) {
             </NavigationCategory>
           ))}
         </NavigationBar>
-        <EnhancedSafeMarkdown markdown={referenceGuide.content} />
+        <div>
+          <EnhancedSafeMarkdown markdown={referenceGuide.content} />
+          <p>
+            Found a bug in the documentation? Let us know at{' '}
+            <Link href={`mailto:documentation@code.org`}>
+              documentation@code.org
+            </Link>
+          </p>
+        </div>
       </div>
     </>
   );
