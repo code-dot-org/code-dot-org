@@ -769,6 +769,8 @@ ta:
           description_short: கணினி அறிவியலின் அடிப்படைகளைக் கற்றுக் கொள்ளுங்கள் மற்றும்
             உங்கள் சொந்த கலை, கதைகள் மற்றும் விளையாட்டுகளை உருவாக்கவும்.
           lesson_groups:
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
             extra_course_content:
               display_name: கூடுதல் பாடநெறி உள்ளடக்கம்
           lessons:
@@ -803,6 +805,9 @@ ta:
         coursef-draft:
           description_short: கணினி அறிவியலின் அடிப்படைகளைக் கற்றுக் கொள்ளுங்கள் மற்றும்
             உங்கள் சொந்த கலை, கதைகள் மற்றும் விளையாட்டுகளை உருவாக்கவும்.
+          lesson_groups:
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
           lessons:
             Variables in Play Lab:
               name: Play ஆய்வகத்தில் மாறிகள்
@@ -870,6 +875,9 @@ ta:
             required:
               display_name: கண்ணோட்டம்
         csf2harvey:
+          lesson_groups:
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
           lessons:
             'Functions: Songwriting':
               name: 'செயல்பாடுகள்: பாடல் எழுதுதல் '
@@ -1200,6 +1208,8 @@ ta:
           description_short: பாடநெறி C & D இல் உள்ள கருத்துகளை விரைவாக மறைத்து, பின்னர்
             செயல்பாடுகளுடன் மேலும் செல்லுங்கள்.
           lesson_groups:
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
             extra_course_content:
               display_name: கூடுதல் பாடநெறி உள்ளடக்கம்
           lessons:
@@ -1285,6 +1295,9 @@ ta:
           assignment_family_title: பாடநெறி ஊ
           description_short: கணினி அறிவியல் அடிப்படைகளில் உள்ள அனைத்து கருத்துகளையும்
             கற்றுக் கொள்ளுங்கள் மற்றும் உங்கள் சொந்த கலை, கதை அல்லது விளையாட்டை உருவாக்கவும்.
+          lesson_groups:
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
           lessons:
             'Algorithms: Tangrams':
               name: 'அல்காரிதம்கள்: டாங்கிராம்கள் '
@@ -1390,6 +1403,9 @@ ta:
             required:
               display_name: கண்ணோட்டம்
         express-2017:
+          lesson_groups:
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
           lessons:
             'Algorithms: Graph Paper Programming':
               name: 'புரோகிராமிங்: கிராப் பேப்பர் புரோகிராமிங்'
@@ -1496,6 +1512,8 @@ ta:
                 **வயதுப் பொருத்தம்:** பயிற்சியானது 13 வயதுக்கு மேற்பட்ட மாணவர்களுக்காக வடிவமைக்கப்பட்டுள்ளது. இது மாணவர்களின் தனிப்பயன் ஒலிகள் மற்றும் படங்களை பதிவேற்ற அனுமதிக்கும் என்பதால், இளம் மாணவர்கள் மேற்பார்வையின்றி இதைப் பயன்படுத்தக்கூடாது. மாணவர்களின் தனியுரிமையைப் பாதுகாக்க, உங்கள் மாணவர்கள் 13 வயதிற்குட்பட்டவர்களாக இருந்தால், நீங்கள் நிர்வகிக்கும் பிரிவில் அவர்களுக்கான கணக்குகளை முதலில் அமைக்கும் வரை அவர்களால் இந்தப் பயிற்சியைப் பயன்படுத்த முடியாது.
         e-f-ramp:
           lesson_groups:
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
             extra_course_content:
               display_name: கூடுதல் பாடநெறி உள்ளடக்கம்
           lessons:
@@ -1566,6 +1584,9 @@ ta:
             Loops in Artist:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
         new-express:
+          lesson_groups:
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
           lessons:
             'Algorithms: Graph Paper Programming':
               name: 'அல்காரிதம்ஸ்: கிராஃப் பேப்பர் புரோகிராமிங்'
@@ -1621,6 +1642,8 @@ ta:
               name: லூப்ஸ் இன் ஆர்ட்டிஸ்ட்
         new-e:
           lesson_groups:
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
             extra_course_content:
               display_name: கூடுதல் பாடநெறி உள்ளடக்கம்
           lessons:
@@ -1663,6 +1686,9 @@ ta:
             Present Your Project:
               name: உங்கள் திட்டத்தை வழங்கவும்
         new-f:
+          lesson_groups:
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
           lessons:
             'Programming: My Robotic Friends':
               name: 'நிரலாக்கம்: எனது ரோபோ நண்பர்கள்'
@@ -1745,6 +1771,8 @@ ta:
               name: ஹாலோவீன் கலைஞர்
         course-e-2018:
           lesson_groups:
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
             extra_course_content:
               display_name: கூடுதல் பாடநெறி உள்ளடக்கம்
           lessons:
@@ -1789,6 +1817,9 @@ ta:
             Build a Star Wars Game:
               name: ஸ்டார் வார்ஸ் விளையாட்டை உருவாக்குங்கள்
         course-f-2018:
+          lesson_groups:
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
           lessons:
             'Programming: My Robotic Friends':
               name: 'நிரலாக்கம்: எனது ரோபோ நண்பர்கள்'
@@ -2108,6 +2139,8 @@ ta:
         coursee-2018:
           assignment_family_title: பாடநெறி உ
           lesson_groups:
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
             extra_course_content:
               display_name: கூடுதல் பாடநெறி உள்ளடக்கம்
           lessons:
@@ -2168,6 +2201,9 @@ ta:
           assignment_family_title: பாடநெறி ஊ
           description_short: கணினி அறிவியல் அடிப்படைகளில் உள்ள அனைத்து கருத்துகளையும்
             கற்றுக் கொள்ளுங்கள் மற்றும் உங்கள் சொந்த கலை, கதை அல்லது விளையாட்டை உருவாக்கவும்.
+          lesson_groups:
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
           lessons:
             Debugging with Scrat:
               name: ஸ்க்ராட் மூலம் பிழைதிருத்தம்
@@ -2420,6 +2456,8 @@ ta:
               display_name: மாறிலிகள்
             csf_data:
               display_name: தகவல்கள்
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
           lessons:
             'Programming: My Robotic Friends':
               name: 'நிரலாக்கம்: எனது ரோபோ நண்பர்கள்'
@@ -2485,6 +2523,7 @@ ta:
             Virtual Pet:
               name: ஸ்ப்ரைட் ஆய்வகத்துடன் மெய்நிகர் செல்லம்
             End of Course Project:
+              name: பாடநெறி திட்டத்தின் முடிவு
               description_student: இந்த பெரிய திட்டங்களுக்கு நிறைய நேரமும் திட்டமிடலும்
                 தேவை. உங்கள் உத்வேகத்தைக் கண்டுபிடி, ஒரு திட்டத்தை உருவாக்கி, உங்கள்
                 படைப்பாற்றலை கட்டவிழ்த்து விடுங்கள்!
@@ -2515,6 +2554,8 @@ ta:
               display_name: சுழற்சிகள்
             csf_conditionals:
               display_name: நிபந்தனைகள்
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
           lessons:
             'Algorithms: Graph Paper Programming':
               name: வரைதாள் செய்நிரல்
@@ -2608,6 +2649,8 @@ ta:
               display_name: உள்ளமை சுழல்கள்
             csf_functions:
               display_name: செயல்பாடுகள்
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
           lessons:
             'Programming: My Robotic Friends':
               name: 'நிரலாக்கம்: எனது ரோபோ நண்பர்கள்'
@@ -2695,6 +2738,7 @@ ta:
               description_student: இந்த பாடத்தில், சுழல்கள் கலைஞருடன் கூட குளிர்ச்சியான
                 படங்களை உருவாக்குவதை எளிதாக்குகின்றன!
             End of Course Project:
+              name: பாடநெறி திட்டத்தின் முடிவு
               description_student: இந்த பெரிய திட்டங்களுக்கு நிறைய நேரமும் திட்டமிடலும்
                 தேவை. உங்கள் உத்வேகத்தைக் கண்டுபிடி, ஒரு திட்டத்தை உருவாக்கி, உங்கள்
                 படைப்பாற்றலை கட்டவிழ்த்து விடுங்கள்!
@@ -2790,6 +2834,8 @@ ta:
               name: கலைஞர் பைனரி
             Virtual Pet with Sprite Lab:
               name: ஸ்ப்ரைட் ஆய்வகத்துடன் மெய்நிகர் செல்லம்
+            Build A Project:
+              name: பாடநெறி திட்டத்தின் முடிவு
             Dance Party:
               name: நடன விருந்து
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -2820,6 +2866,8 @@ ta:
               display_name: நிகழ்வுகள்
             csf_data:
               display_name: தகவல்கள்
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
           lessons:
             Programming in Maze:
               name: கோபம் பறவைகளுடன் நிரலாக்கம்
@@ -2863,6 +2911,7 @@ ta:
               description_student: உங்கள் சொந்த பைனரி வளையலை உருவாக்கி, கணினிகள் தகவல்களை
                 எவ்வாறு நினைவில் கொள்கின்றன என்பதை அறியவும்!
             'End of Course Project: Create a Play Lab Game':
+              name: பாடநெறி திட்டத்தின் முடிவு
               description_student: ஏராளமான குறியீட்டுக்கு அந்த கைகளை தயார் செய்யுங்கள்!
                 உங்கள் திட்டத்தை உருவாக்கத் தொடங்க வேண்டிய நேரம் இது.
             'Programming: My Robotic Friends':
@@ -3251,6 +3300,8 @@ ta:
               name: நிபந்தனைகள்
             Functions:
               name: செயல்பாடுகள்
+            Sprite Properties:
+              name: ஸ்பிரைட் பண்புகள்
         maddie-test:
           lessons:
             stage 1:
@@ -3412,6 +3463,8 @@ ta:
               display_name: உள்ளமை சுழல்கள்
             csf_functions:
               display_name: செயல்பாடுகள்
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
           lessons:
             Nested Loops in Artist:
               name: கலைஞரில் உள்ளமை சுழல்கள்
@@ -3421,6 +3474,8 @@ ta:
               name: Minecraft இல் செயல்பாடுகள்
             Functions in Artist:
               name: கலைஞரின் செயல்பாடுகள்
+            End of Course Project:
+              name: பாடநெறி திட்டத்தின் முடிவு
         time4cs-experiment-unit-2:
           lessons:
             Nested Loops in Maze:
@@ -3493,6 +3548,8 @@ ta:
           lessons:
             Variables:
               name: மாறிலிகள்
+            Sprite Properties:
+              name: ஸ்பிரைட் பண்புகள்
             Conditionals:
               name: நிபந்தனைகள்
             Functions:
@@ -3650,6 +3707,8 @@ ta:
               display_name: நிகழ்வுகள்
             csf_data:
               display_name: தகவல்கள்
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
           lessons:
             Screen Out the Mean:
               name: சராசரி ஸ்கிரீன் அவுட்
@@ -3705,6 +3764,7 @@ ta:
               description_student: பிளே லேபில் ஆக்கப்பூர்வமாக விளையாடுவதற்கான நேரம்
                 இது!
             'End of Course Project: Create a Play Lab Game':
+              name: பாடநெறி திட்டத்தின் முடிவு
               description_student: ஏராளமான குறியீட்டுக்கு அந்த கைகளை தயார் செய்யுங்கள்!
                 உங்கள் திட்டத்தை உருவாக்கத் தொடங்க வேண்டிய நேரம் இது.
             Putting a STOP to Online Meanness:
@@ -3725,6 +3785,8 @@ ta:
               display_name: சுழற்சிகள்
             csf_conditionals:
               display_name: நிபந்தனைகள்
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
           lessons:
             'Algorithms: Graph Paper Programming':
               name: வரைதாள் செய்நிரல்
@@ -3808,6 +3870,7 @@ ta:
               description_student: கொண்டாட நேரம்! இந்த பாடத்தில், நீங்கள் உங்கள் சொந்த
                 ஊடாடும் நடன விருந்தை ஏற்பாடு செய்வீர்கள்.
             End of Course Project:
+              name: பாடநெறி திட்டத்தின் முடிவு
               description_student: ஏராளமான குறியீட்டுக்கு அந்த கைகளை தயார் செய்யுங்கள்!
                 உங்கள் திட்டத்தை உருவாக்கத் தொடங்க வேண்டிய நேரம் இது.
             Be A Super Digital Citizen:
@@ -3820,6 +3883,8 @@ ta:
               display_name: உள்ளமை சுழல்கள்
             csf_functions:
               display_name: செயல்பாடுகள்
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
           lessons:
             Sequencing in the Maze:
               description_teacher: "இந்த புதிர்களின் தொகுப்பில், Code.org இன் ஆன்லைன்
@@ -3882,6 +3947,7 @@ ta:
               name: கலைஞருடன் செயல்பாடுகள்
               description_student: செயல்பாடுகளுடன் மிகவும் சிக்கலான வரைபடங்களை உருவாக்கவும்!
             End of Course Project:
+              name: பாடநெறி திட்டத்தின் முடிவு
               description_student: இந்த பெரிய திட்டங்களுக்கு நிறைய நேரமும் திட்டமிடலும்
                 தேவை. உங்கள் உத்வேகத்தைக் கண்டுபிடி, ஒரு திட்டத்தை உருவாக்கி, உங்கள்
                 படைப்பாற்றலை கட்டவிழ்த்து விடுங்கள்!
@@ -3897,6 +3963,8 @@ ta:
               display_name: மாறிலிகள்
             csf_data:
               display_name: தகவல்கள்
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
           lessons:
             Functions in Minecraft:
               name: Minecraft இல் செயல்பாடுகள்
@@ -3944,6 +4012,7 @@ ta:
               description_student: இந்த பாடத்தில், உரிமை மற்றும் பதிப்புரிமை ஆகியவற்றின்
                 சவால்கள் மற்றும் நன்மைகள் பற்றி நீங்கள் அறிந்து கொள்வீர்கள்.
             End of Course Project:
+              name: பாடநெறி திட்டத்தின் முடிவு
               description_student: இந்த பெரிய திட்டங்களுக்கு நிறைய நேரமும் திட்டமிடலும்
                 தேவை. உங்கள் உத்வேகத்தைக் கண்டுபிடி, ஒரு திட்டத்தை உருவாக்கி, உங்கள்
                 படைப்பாற்றலை கட்டவிழ்த்து விடுங்கள்!
@@ -3963,6 +4032,8 @@ ta:
               display_name: செயல்பாடுகள்
             csf_variables:
               display_name: மாறிலிகள்
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
           lessons:
             Dance Party:
               name: நடன விருந்து
@@ -4002,6 +4073,8 @@ ta:
               name: ஸ்ப்ரைட் ஆய்வகத்துடன் மெய்நிகர் செல்லம்
             Swimming Fish with Sprite Lab:
               name: ஸ்பிரைட் ஆய்வகத்துடன் நீச்சல் மீன்
+            End of Course Project:
+              name: பாடநெறி திட்டத்தின் முடிவு
             Programming with Angry Birds:
               name: கோபம் பறவைகளுடன் நிரலாக்கம்
             Debugging with Scrat:
@@ -4140,6 +4213,8 @@ ta:
           lessons:
             Variables:
               name: மாறிலிகள்
+            Sprite Properties:
+              name: ஸ்பிரைட் பண்புகள்
             Text:
               name: உரை
             Conditionals:
@@ -4238,6 +4313,8 @@ ta:
               name: உருவங்களை உருவாக்குதல்
             blank space stories:
               name: வெற்று விண்வெளி கதைகள்
+            End of Course Project:
+              name: பாடநெறி திட்டத்தின் முடிவு
             Outbreaklab:
               name: அவுட் பிரேக் தனி ஆய்வகம்
           lesson_groups:
@@ -4252,6 +4329,9 @@ ta:
             Variables:
               key: மாறிலிகள்
               name: மாறிலிகள்
+            Sprite Properties:
+              key: ஸ்பிரைட் பண்புகள்
+              name: ஸ்பிரைட் பண்புகள்
             Text:
               key: உரை
               name: உரை
@@ -4391,6 +4471,7 @@ ta:
                 உருவாக்க அவர்கள் கற்றுக்கொண்ட அனைத்து குறியீட்டு திறன்களையும் பயன்படுத்துவார்கள்.
                 பிளே லேபில் படைப்பாற்றல் மற்றும் கதையை உருவாக்கும் நேரம் இது!
             lesson-1:
+              name: பாடநெறி திட்டத்தின் முடிவு
               description_student: கலைஞருடன் கதை சொல்லுங்கள்!
               description_teacher: இந்த \*\* ப்ராஜெக்ட் \*\* பாடத்தில், மாணவர்கள்
                 ஆர்டிஸ்ட்டுடன் சீக்வென்சிங் மற்றும் லூப்ஸ் பற்றி கற்றுக்கொண்டதைப்
@@ -4402,6 +4483,8 @@ ta:
               display_name: சுழற்சிகள்
             csf_events:
               display_name: நிகழ்வுகள்
+            lessonGroup-5:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
         courseb-2021:
           lessons:
             Digital Trails:
@@ -4487,6 +4570,7 @@ ta:
                 உருவாக்க கற்றுக்கொண்ட அனைத்து குறியீட்டு திறன்களையும் பயன்படுத்துவதற்கான
                 வாய்ப்பைப் பெறுவார்கள்.
             lesson-1:
+              name: பாடநெறி திட்டத்தின் முடிவு
               description_student: உங்கள் சொந்த கதை அல்லது விளையாட்டை உருவாக்கவும்.
               description_teacher: இந்த \*\* திட்டம் \*\* பாடத்தில், மாணவர்கள் பிளே
                 லேப் மூலம் ஒரு திறந்தநிலை திட்டத்தில் வரிசை மற்றும் நிகழ்வுகள் பற்றி
@@ -4498,6 +4582,8 @@ ta:
               display_name: சுழற்சிகள்
             csf_events:
               display_name: நிகழ்வுகள்
+            lessonGroup-6:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
         coursec-2021:
           description_short: கணினி அறிவியலின் அடிப்படைகளைக் கற்றுக் கொள்ளுங்கள் மற்றும்
             உங்கள் சொந்த கலை, கதைகள் மற்றும் விளையாட்டுகளை உருவாக்கவும்.
@@ -4614,6 +4700,7 @@ ta:
                 சேகரித்து, இந்த \*\* ஆய்வு \*\* பாடத்தில் வெவ்வேறு வரைபடங்களைப் பயன்படுத்தி
                 காட்சிப்படுத்துவார்கள்.
             'End of Course Project: Create a Play Lab Game':
+              name: பாடநெறி திட்டத்தின் முடிவு
               description_student: ஏராளமான குறியீட்டுக்கு அந்த கைகளை தயார் செய்யுங்கள்!
                 உங்கள் திட்டத்தை உருவாக்கத் தொடங்க வேண்டிய நேரம் இது.
               description_teacher: இந்த \*\* திட்டம் \*\* பாடம் புதிய பிளே லேப் திட்டங்களை
@@ -4628,6 +4715,8 @@ ta:
               display_name: நிகழ்வுகள்
             csf_data:
               display_name: தகவல்கள்
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
         coursed-2021:
           title: பாடநெறி ஈ (2021)
           lessons:
@@ -4756,6 +4845,8 @@ ta:
               description_student: நீங்கள் சைபர் மிரட்டலைக் காணும்போது நீங்கள் எவ்வாறு
                 ஒரு சிறந்தவராக இருக்க முடியும் என்பதை அறியுங்கள்.
             End of Course Project:
+              key: பாடநெறி திட்டத்தின் முடிவு
+              name: பாடநெறி திட்டத்தின் முடிவு
               description_student: ஏராளமான குறியீட்டுக்கு அந்த கைகளை தயார் செய்யுங்கள்!
                 உங்கள் திட்டத்தை உருவாக்கத் தொடங்க வேண்டிய நேரம் இது.
               description_teacher: இந்த \*\* திட்டம் \*\* பாடம் புதிய திட்டங்களை வடிவமைத்தல்,
@@ -4786,6 +4877,8 @@ ta:
               display_name: சுழற்சிகள்
             csf_conditionals:
               display_name: நிபந்தனைகள்
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
         coursee-2021:
           lessons:
             Sequencing in the Maze:
@@ -4902,6 +4995,8 @@ ta:
               description_teacher: இந்த \*\* திறமையை வளர்ப்பது \*\* பாடத்தில், மாணவர்கள்
                 கலைஞருடன் செயல்பாடுகளை பயன்படுத்துவார்கள்.
             End of Course Project:
+              key: பாடநெறி திட்டத்தின் முடிவு
+              name: பாடநெறி திட்டத்தின் முடிவு
               description_student: இந்த பெரிய திட்டங்களுக்கு நிறைய நேரமும் திட்டமிடலும்
                 தேவை. உங்கள் உத்வேகத்தைக் கண்டுபிடி, ஒரு திட்டத்தை உருவாக்கி, உங்கள்
                 படைப்பாற்றலை கட்டவிழ்த்து விடுங்கள்!
@@ -4926,6 +5021,8 @@ ta:
               display_name: நிபந்தனைகள்
             csf_functions:
               display_name: செயல்பாடுகள்
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
         coursef-2021:
           description_short: கணினி அறிவியல் அடிப்படைகளில் உள்ள அனைத்து கருத்துகளையும்
             கற்றுக் கொள்ளுங்கள் மற்றும் உங்கள் சொந்த கலை, கதை அல்லது விளையாட்டை உருவாக்கவும்.
@@ -5044,6 +5141,8 @@ ta:
                 பின்னர் அவர்கள் தங்கள் நிகழ்வை உயிர்ப்பிக்க அவர்கள் கற்றுக்கொண்ட நிகழ்வுகள்,
                 நடத்தைகள் மற்றும் பிற கருத்துகளைப் பயன்படுத்துவார்கள்.
             End of Course Project:
+              key: பாடநெறி திட்டத்தின் முடிவு
+              name: பாடநெறி திட்டத்தின் முடிவு
               description_student: இந்த பெரிய திட்டங்களுக்கு நிறைய நேரமும் திட்டமிடலும்
                 தேவை. உங்கள் உத்வேகத்தைக் கண்டுபிடி, ஒரு திட்டத்தை உருவாக்கி, உங்கள்
                 படைப்பாற்றலை கட்டவிழ்த்து விடுங்கள்!
@@ -5117,6 +5216,8 @@ ta:
                 மாதிரி திட்டங்களை ஆராய்ந்து, தங்கள் சொந்த திட்டத்திற்கான திட்டத்தை
                 உருவாக்கி, அதை புதிதாக நிரல் செய்வார்கள்.
           lesson_groups:
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
             lessonGroup-8:
               display_name: மாறிலிகள்
             lessonGroup-9:
@@ -5319,6 +5420,8 @@ ta:
                 பின்னர் அவர்கள் தங்கள் நிகழ்வை உயிர்ப்பிக்க அவர்கள் கற்றுக்கொண்ட நிகழ்வுகள்,
                 நடத்தைகள் மற்றும் பிற கருத்துகளைப் பயன்படுத்துவார்கள்.
             End of Course Project:
+              key: பாடநெறி திட்டத்தின் முடிவு
+              name: பாடநெறி திட்டத்தின் முடிவு
               description_student: ஏராளமான குறியீட்டுக்கு அந்த கைகளை தயார் செய்யுங்கள்!
                 உங்கள் திட்டத்தை உருவாக்கத் தொடங்க வேண்டிய நேரம் இது.
               description_teacher: இந்த \*\* திட்டம் \*\* பாடம் புதிய திட்டங்களை வடிவமைத்தல்,
@@ -5366,6 +5469,8 @@ ta:
               display_name: செயல்பாடுகள்
             csf_variables:
               display_name: மாறிலிகள்
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
             lessonGroup-9:
               display_name: நிகழ்வுகள்
         pre-express-2021:
@@ -5952,6 +6057,10 @@ ta:
           lesson_groups:
             lessonGroup-3:
               display_name: வளங்கள்
+        ai-lab:
+          lessons:
+            lesson-3:
+              name: தேர்வு
         dlp21-csp-mod4:
           lesson_groups:
             lessonGroup-2:
@@ -7417,6 +7526,8 @@ ta:
           lesson_groups:
             lessonGroup-3:
               display_name: மாறிலிகள்
+            lessonGroup-4:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
         csd6-pilot-2022:
           lessons:
             lesson-10:
@@ -7588,6 +7699,7 @@ ta:
                 உருவாக்க அவர்கள் கற்றுக்கொண்ட அனைத்து குறியீட்டு திறன்களையும் பயன்படுத்துவார்கள்.
                 பிளே லேபில் படைப்பாற்றல் மற்றும் கதையை உருவாக்கும் நேரம் இது!
             End of Course Project:
+              name: பாடநெறி திட்டத்தின் முடிவு
               description_student: கலைஞருடன் கதை சொல்லுங்கள்!
               description_teacher: இந்த \*\* ப்ராஜெக்ட் \*\* பாடத்தில், மாணவர்கள்
                 ஆர்டிஸ்ட்டுடன் சீக்வென்சிங் மற்றும் லூப்ஸ் பற்றி கற்றுக்கொண்டதைப்
@@ -7642,6 +7754,7 @@ ta:
                 பிளே லேபில் படைப்பாற்றல் மற்றும் கதையை உருவாக்கும் நேரம் இது!
             lesson-1:
               key: பாடம் 1
+              name: பாடநெறி திட்டத்தின் முடிவு
               description_student: கலைஞருடன் கதை சொல்லுங்கள்!
               description_teacher: இந்த \*\* ப்ராஜெக்ட் \*\* பாடத்தில், மாணவர்கள்
                 ஆர்டிஸ்ட்டுடன் சீக்வென்சிங் மற்றும் லூப்ஸ் பற்றி கற்றுக்கொண்டதைப்
@@ -7653,6 +7766,8 @@ ta:
               display_name: சுழற்சிகள்
             csf_events:
               display_name: நிகழ்வுகள்
+            lessonGroup-5:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
           description_short: முன் வாசகர்களுக்கு கணினி அறிவியலுக்கான அறிமுகம்.
         express-2022:
           lessons:
@@ -7866,11 +7981,13 @@ ta:
                 முடிப்பார்கள்.
               key: கலைஞருடன் சுழல்களுக்கு
             End of Course Project:
+              name: பாடநெறி திட்டத்தின் முடிவு
               description_student: ஏராளமான குறியீட்டுக்கு அந்த கைகளை தயார் செய்யுங்கள்!
                 உங்கள் திட்டத்தை உருவாக்கத் தொடங்க வேண்டிய நேரம் இது.
               description_teacher: இந்த \*\* திட்டம் \*\* பாடம் புதிய திட்டங்களை வடிவமைத்தல்,
                 மேம்படுத்துதல் மற்றும் காட்சிப்படுத்துதல் ஆகியவற்றின் மூலம் மாணவர்களை
                 அழைத்துச் செல்கிறது!
+              key: பாடநெறி திட்டத்தின் முடிவு
             Debugging with Scrat:
               key: ஸ்க்ராட் மூலம் பிழைதிருத்தம்
               name: பிரமை பிழைத்திருத்தம்
@@ -7968,6 +8085,8 @@ ta:
               display_name: செயல்பாடுகள்
             csf_variables:
               display_name: மாறிலிகள்
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
         csp2-2022:
           lessons:
             Packets:
@@ -8071,6 +8190,7 @@ ta:
                 உருவாக்க கற்றுக்கொண்ட அனைத்து குறியீட்டு திறன்களையும் பயன்படுத்துவதற்கான
                 வாய்ப்பைப் பெறுவார்கள்.
             End of Course Project:
+              name: பாடநெறி திட்டத்தின் முடிவு
               description_student: உங்கள் சொந்த கதை அல்லது விளையாட்டை உருவாக்கவும்.
               description_teacher: இந்த \*\* திட்டம் \*\* பாடத்தில், மாணவர்கள் பிளே
                 லேப் மூலம் ஒரு திறந்தநிலை திட்டத்தில் வரிசை மற்றும் நிகழ்வுகள் பற்றி
@@ -8146,6 +8266,7 @@ ta:
                 வாய்ப்பைப் பெறுவார்கள்.
             lesson-1:
               key: பாடம் 1
+              name: பாடநெறி திட்டத்தின் முடிவு
               description_student: உங்கள் சொந்த கதை அல்லது விளையாட்டை உருவாக்கவும்.
               description_teacher: இந்த \*\* திட்டம் \*\* பாடத்தில், மாணவர்கள் பிளே
                 லேப் மூலம் ஒரு திறந்தநிலை திட்டத்தில் வரிசை மற்றும் நிகழ்வுகள் பற்றி
@@ -8157,6 +8278,8 @@ ta:
               display_name: சுழற்சிகள்
             csf_events:
               display_name: நிகழ்வுகள்
+            lessonGroup-6:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
         coursec-2022:
           lessons:
             Putting a STOP to Online Meanness:
@@ -8261,6 +8384,7 @@ ta:
               description_teacher: இந்த \*\* ஆய்வு \*\* பாடம் பைனரி என்ற கருத்தை அறிமுகப்படுத்துகிறது,
                 இது கணினிகள் இன்று அனைத்து வகையான தகவல்களையும் சேமித்து வைக்கிறது.
             End of Course Project:
+              name: பாடநெறி திட்டத்தின் முடிவு
               description_student: ஏராளமான குறியீட்டுக்கு அந்த கைகளை தயார் செய்யுங்கள்!
                 உங்கள் திட்டத்தை உருவாக்கத் தொடங்க வேண்டிய நேரம் இது.
               description_teacher: இந்த \*\* திட்டம் \*\* பாடம் புதிய பிளே லேப் திட்டங்களை
@@ -8337,6 +8461,7 @@ ta:
                 சுற்றி \*\* சிறு திட்டத்துடன் \*\* ஒருங்கிணைக்கிறது, அங்கு மாணவர்கள்
                 தங்கள் சொந்த அனிமேஷன் விளையாட்டை உருவாக்க முடியும்.
             'End of Course Project: Create a Play Lab Game':
+              name: பாடநெறி திட்டத்தின் முடிவு
               description_student: ஏராளமான குறியீட்டுக்கு அந்த கைகளை தயார் செய்யுங்கள்!
                 உங்கள் திட்டத்தை உருவாக்கத் தொடங்க வேண்டிய நேரம் இது.
               description_teacher: இந்த \*\* திட்டம் \*\* பாடம் புதிய பிளே லேப் திட்டங்களை
@@ -8351,6 +8476,8 @@ ta:
               display_name: நிகழ்வுகள்
             csf_data:
               display_name: தகவல்கள்
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
           description_short: கணினி அறிவியலின் அடிப்படைகளைக் கற்றுக் கொள்ளுங்கள் மற்றும்
             உங்கள் சொந்த கலை, கதைகள் மற்றும் விளையாட்டுகளை உருவாக்கவும்.
         csp8-2022:
@@ -8489,11 +8616,13 @@ ta:
                 நிரல்களை உருவாக்கும்.
               key: பிரமை உள்ள சுழல்கள் வரை
             End of Course Project:
+              name: பாடநெறி திட்டத்தின் முடிவு
               description_student: ஏராளமான குறியீட்டுக்கு அந்த கைகளை தயார் செய்யுங்கள்!
                 உங்கள் திட்டத்தை உருவாக்கத் தொடங்க வேண்டிய நேரம் இது.
               description_teacher: இந்த \*\* திட்டம் \*\* பாடம் புதிய திட்டங்களை வடிவமைத்தல்,
                 மேம்படுத்துதல் மற்றும் காட்சிப்படுத்துதல் ஆகியவற்றின் மூலம் மாணவர்களை
                 அழைத்துச் செல்கிறது!
+              key: பாடநெறி திட்டத்தின் முடிவு
             lesson-5:
               key: பாடம்-5
               description_student: இந்த பாடத்தில், கடவுச்சொற்கள் உங்கள் தகவலை எவ்வாறு
@@ -8559,6 +8688,8 @@ ta:
               display_name: சுழற்சிகள்
             csf_conditionals:
               display_name: நிபந்தனைகள்
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
           title: பாடநெறி ஈ (2021)
         coursee-2022:
           lessons:
@@ -8668,12 +8799,14 @@ ta:
                 பொருட்களை தயார் \n    செய்யவும்.\n-   ஒவ்வொரு மாணவருக்கும் ஒரு பிரதிபலிப்பு
                 பத்திரிகை இருப்பதை உறுதி செய்து \n    கொள்ளுங்கள்."
             End of Course Project:
+              name: பாடநெறி திட்டத்தின் முடிவு
               description_student: இந்த பெரிய திட்டங்களுக்கு நிறைய நேரமும் திட்டமிடலும்
                 தேவை. உங்கள் உத்வேகத்தைக் கண்டுபிடி, ஒரு திட்டத்தை உருவாக்கி, உங்கள்
                 படைப்பாற்றலை கட்டவிழ்த்து விடுங்கள்!
               description_teacher: இந்த \*\* திட்டம் \*\* பாடம் புதிய திட்டங்களை வடிவமைத்தல்,
                 மேம்படுத்துதல் மற்றும் காட்சிப்படுத்துதல் ஆகியவற்றின் மூலம் மாணவர்களை
                 அழைத்துச் செல்கிறது!
+              key: பாடநெறி திட்டத்தின் முடிவு
             Simon Says:
               name: அல்காரிதம் பின்பற்றவும்
               description_student: ஒரு விளையாட்டை விளையாடுங்கள் மற்றும் சரியான முடிவைப்
@@ -8760,6 +8893,8 @@ ta:
               display_name: செயல்பாடுகள்
             csf_nested_loops:
               display_name: நிபந்தனைகள்
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
         coursef-2022:
           lessons:
             Introducing Sprite Lab:
@@ -8912,12 +9047,14 @@ ta:
                 கள், ஐபி முகவரிகள் மற்றும் டிஎன்எஸ் பற்றி கற்றுக் கொள்ளும் போது மாணவர்கள்
                 இணையம் வழியாக பாய்வது போல் நடிப்பார்கள்.
             End of Course Project:
+              name: பாடநெறி திட்டத்தின் முடிவு
               description_student: இந்த பெரிய திட்டங்களுக்கு நிறைய நேரமும் திட்டமிடலும்
                 தேவை. உங்கள் உத்வேகத்தைக் கண்டுபிடி, ஒரு திட்டத்தை உருவாக்கி, உங்கள்
                 படைப்பாற்றலை கட்டவிழ்த்து விடுங்கள்!
               description_teacher: இந்த \*\* திட்டம் \*\* பாடம் புதிய திட்டங்களை வடிவமைத்தல்,
                 மேம்படுத்துதல் மற்றும் காட்சிப்படுத்துதல் ஆகியவற்றின் மூலம் மாணவர்களை
                 அழைத்துச் செல்கிறது!
+              key: பாடநெறி திட்டத்தின் முடிவு
             lesson-6:
               key: பாடம்-6
             lesson-7:
@@ -9056,6 +9193,8 @@ ta:
           lesson_groups:
             lessonGroup-8:
               display_name: மாறிலிகள்
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
           description_short: கணினி அறிவியல் அடிப்படைகளில் உள்ள அனைத்து கருத்துகளையும்
             கற்றுக் கொள்ளுங்கள் மற்றும் உங்கள் சொந்த கலை, கதை அல்லது விளையாட்டை உருவாக்கவும்.
         csa1-2022:
@@ -9480,15 +9619,19 @@ ta:
                 இணையம் வழியாக பாய்வது போல் நடிப்பார்கள்.
               key: இணையம்
             End of Course Project:
+              name: பாடநெறி திட்டத்தின் முடிவு
               description_student: இந்த பெரிய திட்டங்களுக்கு நிறைய நேரமும் திட்டமிடலும்
                 தேவை. உங்கள் உத்வேகத்தைக் கண்டுபிடி, ஒரு திட்டத்தை உருவாக்கி, உங்கள்
                 படைப்பாற்றலை கட்டவிழ்த்து விடுங்கள்!
               description_teacher: இந்த \*\* திட்டம் \*\* பாடம் புதிய திட்டங்களை வடிவமைத்தல்,
                 மேம்படுத்துதல் மற்றும் காட்சிப்படுத்துதல் ஆகியவற்றின் மூலம் மாணவர்களை
                 அழைத்துச் செல்கிறது!
+              key: பாடநெறி திட்டத்தின் முடிவு
           lesson_groups:
             lessonGroup-8:
               display_name: மாறிலிகள்
+            end_of_course_project:
+              display_name: பாடநெறி திட்டத்தின் முடிவு
           description_short: கணினி அறிவியல் அடிப்படைகளில் உள்ள அனைத்து கருத்துகளையும்
             கற்றுக் கொள்ளுங்கள் மற்றும் உங்கள் சொந்த கலை, கதை அல்லது விளையாட்டை உருவாக்கவும்.
         csa6-2022:
@@ -10155,6 +10298,9 @@ ta:
             Variables:
               name: மாறிலிகள்
               key: மாறிலிகள்
+            Sprite Properties:
+              name: ஸ்பிரைட் பண்புகள்
+              key: ஸ்பிரைட் பண்புகள்
             Text:
               name: உரை
               key: உரை
