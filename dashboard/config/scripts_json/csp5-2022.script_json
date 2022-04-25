@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-20 19:48:26 UTC",
+    "serialized_at": "2022-04-22 22:26:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -34,7 +34,7 @@
       "position": 1,
       "properties": {
         "display_name": "Lists",
-        "description": "### Unit Philosophy and Pedagogy\n\n* **Independent Creation and The Hackathon Project:** Much like the project in Unit 4, the \"Hackathon\" project in this unit is designed as an opportunity for students to creatively and independently build something with their programming skills. While students are asked to include some technical requirements in their program to ensure they demonstrate mastery of new programming concepts, they have free rein to choose the goals, design, and implementation of their project. To avoid asking students to complete a major programming project right before the Create PT, this hackathon is the most \"Create-PT-like\" project of the course. It is the best chance for students to practice skills like budgeting time or scoping an open-ended project. In many classrooms, if you maintain the recommended pacing of the course, this project serves as an excellent end to the first semester.\n\n* **Growing Comfort with EIPM:** By Unit 5, students (and teachers!) should be developing greater comfort with the flow of EIPM lessons. Students may begin to anticipate that sequences build towards an independent Make lesson or look forward to stepping away from computers to Explore. A nice feature of EIPM is that you will find strategies and modifications to each lesson type that work best for your students. Keep an eye out for how you and your students are developing comfort with EIPM and note strategies that help meet your classroom's needs.\n\n* **Programming with Real-world Data:** The Data Library is a new feature in App Lab for the 2020-21 school year and was designed to let students program with data from the real world. This tool aims to motivate students to build new kinds of data-powered apps that they find personally interesting. This tool also facilitates programming with lists of information since students will need to manipulate lists of data to incorporate the different data sources. Encourage students to use datasets they find personally relevant as they draw on their creative ideas for bringing data to life.\n\n\n\n### Major Assessment and Projects\n\nThe unit project asks students to spend five days as part of a \"Hackathon\" project that they have nearly complete independence to scope and design. Students must choose one dataset from the Data Library in AppLab to be a component of their project to demonstrate what they have learned about lists and list processing; otherwise, scoping the project is completely up to them. Students submit their app, project guide, and written responses to reflection questions about how the app is designed and the development process they used to make it. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* CRD-2: Developers create and innovate using an iterative design process that is user-focused, incorporating implementation/feedback cycles, which leaves ample room for experimentation and risk-taking.\n* AAP-1: To find specific solutions to generalizable problems, programmers represent and organize data in multiple ways.\n* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.\n* AAP-3: Programmers break down problems into smaller and more manageable pieces. By creating procedures and leveraging parameters, programmers generalize processes that they can reuse. Procedures allow programmers to draw upon existing code that has already been tested, allowing them to write programs more quickly and more confidently.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n* 3.2 Data Abstraction\n* 3.4 Strings\n* 3.8 Iteration\n* 3.10 Lists\n* 3.16 Simulations\n\nThe College Board has supplied formative Create PT questions to help prepare students to complete the Create Task. We recommend that students complete the following prompts with the unit project. More information can be found in Code.org CS Principles Topic Coverage.\n\n* 3.b.i\n* 3.b.ii\n* 3.b.iii\n* 3.b.iv\n* 3.b.v"
+        "description": "### Unit Philosophy and Pedagogy\n\n* **Independent Creation and The Hackathon Project:** Much like the project in Unit 4, the \"Hackathon\" project in this unit is designed as an opportunity for students to creatively and independently build something with their programming skills. While students are asked to include some technical requirements in their program to ensure they demonstrate mastery of new programming concepts, they have free rein to choose the goals, design, and implementation of their project. To avoid asking students to complete a major programming project right before the Create PT, this hackathon is the most \"Create-PT-like\" project of the course. It is the best chance for students to practice skills like budgeting time or scoping an open-ended project. In many classrooms, if you maintain the recommended pacing of the course, this project serves as an excellent end to the first semester.\n\n* **Growing Comfort with EIPM:** By Unit 5, students (and teachers!) should be developing greater comfort with the flow of EIPM lessons. Students may begin to anticipate that sequences build towards an independent Make lesson or look forward to stepping away from computers to Explore. A nice feature of EIPM is that you will find strategies and modifications to each lesson type that work best for your students. Keep an eye out for how you and your students are developing comfort with EIPM and note strategies that help meet your classroom's needs.\n\n* **Programming with Real-world Data:** The Data Library is a new feature in App Lab for the 2020-21 school year and was designed to let students program with data from the real world. This tool aims to motivate students to build new kinds of data-powered apps that they find personally interesting. This tool also facilitates programming with lists of information since students will need to manipulate lists of data to incorporate the different data sources. Encourage students to use datasets they find personally relevant as they draw on their creative ideas for bringing data to life.\n\n\n\n### Major Assessment and Projects\n\nThe unit project asks students to spend five days as part of a \"Hackathon\" project that they have nearly complete independence to scope and design. Students must choose one dataset from the Data Library in AppLab to be a component of their project to demonstrate what they have learned about lists and list processing; otherwise, scoping the project is completely up to them. Students submit their app, project guide, and written responses to reflection questions about how the app is designed and the development process they used to make it. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* CRD-2: Developers create and innovate using an iterative design process that is user-focused, incorporating implementation/feedback cycles, which leaves ample room for experimentation and risk-taking.\n* AAP-1: To find specific solutions to generalizable problems, programmers represent and organize data in multiple ways.\n* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.\n* AAP-3: Programmers break down problems into smaller and more manageable pieces. By creating procedures and leveraging parameters, programmers generalize processes that they can reuse. Procedures allow programmers to draw upon existing code that has already been tested, allowing them to write programs more quickly and more confidently.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1RniAGymLBBpIpDaNNR5Ea8CgiiUKv0tMvaDixSj6m_Q/edit?usp=sharing).\n\n* 3.2 Data Abstraction\n* 3.4 Strings\n* 3.8 Iteration\n* 3.10 Lists\n* 3.16 Simulations\n\nThe College Board has supplied formative Create PT questions to help prepare students to complete the Create Task. We recommend that students complete the following prompts with the unit project. More information can be found in Code.org CS Principles Topic Coverage.\n\n* 3.b.i\n* 3.b.ii\n* 3.b.iii\n* 3.b.iv\n* 3.b.v"
       },
       "seeding_key": {
         "lesson_group.key": "csp_lists",
@@ -1836,7 +1836,7 @@
       "key": "0cab2889-3cdb-4c9d-9562-d2c0096c81b0",
       "position": 8,
       "properties": {
-        "description": "\n**Levels 8-11 List Operations:** In these levels, students work with list operations: [`appendItem()`(#BB77C7)](/docs/applab/appendItem/), [`removeItem()`(#BB77C7)](/docs/applab/removeItem/), and [`insertItem()`(#BB77C7)](/docs/applab/insertItem/)\n\n* Level 8: Students practice using [`appendItem`(#BB77C7)](/docs/applab/appendItem/) to increase the size of a list\n* Level 9: Students modify a \"Food Diary\" app so that the user can add new elements to a list\n* Level 10: Students practice using [`removeItem`(#BB77C7)](/docs/applab/removeItem/) and [`insertItem`(#BB77C7)](/docs/applab/insertItem/) to modify lists"
+        "description": "\n**Levels 8-10 List Operations:** In these levels, students work with list operations: [`appendItem()`(#BB77C7)](/docs/applab/appendItem/), [`removeItem()`(#BB77C7)](/docs/applab/removeItem/), and [`insertItem()`(#BB77C7)](/docs/applab/insertItem/)\n\n* Level 8: Students practice using [`appendItem`(#BB77C7)](/docs/applab/appendItem/) to increase the size of a list\n* Level 9: Students modify a \"Food Diary\" app so that the user can add new elements to a list\n* Level 10: Students practice using [`removeItem`(#BB77C7)](/docs/applab/removeItem/) and [`insertItem`(#BB77C7)](/docs/applab/insertItem/) to modify lists"
       },
       "seeding_key": {
         "activity_section.key": "0cab2889-3cdb-4c9d-9562-d2c0096c81b0",
@@ -1858,7 +1858,14 @@
       "key": "da689648-cedf-4467-9bd7-26d5f3ca8264",
       "position": 10,
       "properties": {
-        "progression_name": "Practice with Lists"
+        "description": "**Level 11: Putting It Together** Students complete a choice level practicing with lists\n * Level 11a - Students add code that allows the user to add songs to the Top 10 Songs.\n * Level 11b - Students debug some scrolling issues and add code to update the total number of photos on the app screen.\n * Level 11c - Students write code to add items to a list of encouragement and display a random caption on a photo.",
+        "progression_name": "Putting It Together",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Choice Level:** Some students may want to act as “helpers” to their peers, which can have both positive and negative effects. If some students act as helpers, consider having firm guidelines for both giving and receiving help, such as a “don’t touch the keyboard” rule for student helpers. You may also consider switching up who the “helpers” are so multiple students have the opportunity."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "da689648-cedf-4467-9bd7-26d5f3ca8264",
@@ -3095,9 +3102,15 @@
       "key": "3e8eef8b-3cb0-43af-b873-10353fc296fa",
       "position": 6,
       "properties": {
-        "description": "* **Level 7:** Choice level where students use the reduce and filter patterns to finish building an app.",
+        "description": "* **Level 7:** Choice level where students use the reduce and filter patterns to finish building an app.\n  * Level 7a - Students add code to calculate a user's average grade.\n  * Level 7b - Students add code to allow a user to look up Air Quality data from their state.\n  * Level 7c - Students update a program so that it shows average gas prices for multiple cities across the USA.",
         "name": "App Practice",
-        "progression_name": "App Practice"
+        "progression_name": "Putting It Together",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Choice Level:** Consider polling your students to see which level they would like to review as a class."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "3e8eef8b-3cb0-43af-b873-10353fc296fa",
@@ -4267,7 +4280,7 @@
         "level_keys": [
           "CSP U5L3 Choice"
         ],
-        "progression": "Practice with Lists"
+        "progression": "Putting It Together"
       },
       "bonus": false,
       "seeding_key": {
@@ -4389,6 +4402,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L5 CSP CFU Looping2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -5189,7 +5205,7 @@
         "level_keys": [
           "CSP U5L11 Traversals App Practice Choice"
         ],
-        "progression": "App Practice"
+        "progression": "Putting It Together"
       },
       "bonus": false,
       "seeding_key": {
@@ -6229,7 +6245,7 @@
   "resources": [
     {
       "name": "All Resources",
-      "url": "/s/csp5-2021/resources",
+      "url": "/s/csp5-2022/resources",
       "key": "all_resources_4",
       "properties": {
         "is_rollup": true
@@ -6240,7 +6256,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/csp5-2021/standards",
+      "url": "/s/csp5-2022/standards",
       "key": "all_standards_4",
       "properties": {
         "is_rollup": true
@@ -6263,11 +6279,9 @@
     },
     {
       "name": "CSP Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1s5w7_UnVIGHOdkqCtK2O78rQ7JJFAWlOeZkZNsCovOY/preview",
       "key": "csp_curriculum_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csp_curriculum_guide"
@@ -6379,7 +6393,7 @@
     },
     {
       "name": "Guide to EIPM Lessons",
-      "url": "https://www.youtube.com/watch?v=OTvi0XRTIjA",
+      "url": "https://www.youtube.com/playlist?list=PLzdnOPI1iJNeqEl6MN7c2KyM3gdBSo8t3",
       "key": "guide_to_eipm_lessons",
       "properties": {
         "audience": "Teacher",
@@ -6573,18 +6587,6 @@
       },
       "seeding_key": {
         "resource.key": "using_loops"
-      }
-    },
-    {
-      "name": "Virtual Modification Resources",
-      "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
-      "key": "virtual_modification_resources",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "virtual_modification_resources"
       }
     }
   ],
@@ -6888,12 +6890,6 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
-        "script.name": "csp5-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "virtual_modification_resources",
         "script.name": "csp5-2022"
       }
     }

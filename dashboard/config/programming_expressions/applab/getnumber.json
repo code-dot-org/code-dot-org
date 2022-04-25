@@ -3,7 +3,7 @@
   "name": "getNumber",
   "category": "UI controls",
   "category_key": "ui_controls",
-  "content": "Gets the number from the specified screen element.\n\nTo capture numeric data entered by the user your apps will need to read data from `textInput()` or slider screen elements*. `getNumber()` is usually used in an `onEvent()` callback function, and returns a number that can be stored in a variable, used as a parameter in another function call, or used in an arithmetic expression.\n\n*The slider design element was contributed by Mike and Mitchell Schmidt.",
+  "content": "Gets the number from the specified screen element.\n\nTo capture numeric data entered by the user your apps will need to read data from [`textInput()`(#fff176)](/docs/applab/textInput/) or slider screen elements*. [`getNumber()`(#fff176)](/docs/applab/getNumber/) is usually used in an [`onEvent()`(#fff176)](/docs/applab/onEvent/) callback function, and returns a number that can be stored in a variable, used as a parameter in another function call, or used in an arithmetic expression.\n\n*The slider design element was contributed by Mike and Mitchell Schmidt.",
   "examples": [
     {
       "name": "Example: Fahrenheit to Celcius",
@@ -35,5 +35,5 @@
   "return_value": "A number containing the contents of the screen element.",
   "short_description": "Gets the number from the specified screen element.",
   "syntax": "getNumber(id)",
-  "tips": "- `getText()` can also read textInput screen elements, but a number will be converted to a string and arithmetic will not be possible with the result."
+  "tips": "- [`getText()`(#fff176)](/docs/applab/getText/) can also read textInput screen elements, but a number will be converted to a string and arithmetic will not be possible with the result."
 }

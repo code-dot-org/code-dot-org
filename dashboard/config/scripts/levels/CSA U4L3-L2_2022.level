@@ -2,20 +2,31 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "implement algorithm",
+    "long_instructions": "##In TemperatureScene.java:\r\n\r\n1. Write the method `createScene()`(#e7e8ea) using nested `if`(#e7e8ea) statements to choose which image to draw.\r\n\r\n   * If `temp`(#e7e8ea) is greater than `75`(#e7e8ea) and `hasClouds`(#e7e8ea) is `true`(#e7e8ea), draw the `\"clouds.png\"`(#e7e8ea) image.\r\n\r\n   * If `temp`(#e7e8ea) is greater than `75`(#e7e8ea) and `hasClouds`(#e7e8ea) is `false`(#e7e8ea), draw the `\"sun.png\"`(#e7e8ea) image.\r\n   \r\n##In MyConsole.java:\r\n\r\n2. Test your algorithm by changing the values for the `TemperatureScene`(#e7e8ea) object.",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "theater",
-    "encrypted_examples": [
-
-    ]
+    "start_sources": {
+      "MyTheater.java": {
+        "text": "import org.code.theater.*;\n\npublic class MyTheater {\n  public static void main(String[] args) {\n\n    // TO DO #2: Change the values to test your algorithm.\n    TemperatureScene myScene = new TemperatureScene(80, false);\n\n    myScene.createScene();\n\n    Theater.playScenes(myScene);\n    \n  }\n}",
+        "isVisible": true
+      },
+      "TemperatureScene.java": {
+        "text": "import org.code.theater.*;\n\n/*\n * Represents a scene displaying either clouds or a sun\n */\npublic class TemperatureScene extends Scene {\n\n  private int temp;            // The temperature\n  private boolean hasClouds;   // Whether or not there are clouds\n\n  /*\n   * Constructor to create a TemperatureScene\n   * with the specified temperature and status of clouds\n   */\n  public TemperatureScene(int temp, boolean hasClouds) {\n    this.temp = temp;\n    this.hasClouds = hasClouds;\n  }\n\n  /*\n   * Creates a scene displaying either clouds or a sun\n   * based on the temperature and status of clouds\n   */\n  public void createScene() {\n    // TO DO #1: Implement your algorithm to draw the correct image\n    // based on the temperature and status of hasClouds.\n    \n    \n    \n  }\n}",
+        "isVisible": true
+      }
+    },
+    "starter_assets": {
+      "clouds.png": "d69da5bb-7e11-44ab-9af7-51bff542d411.png",
+      "sun.png": "10adcd09-aa74-4192-a2e0-9cc912e0df8b.png"
+    }
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-04-07T17:44:25.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-04-07T17:44:25.405+00:00\",\"changed\":[\"cloned from \\\"CSA U4L3-L1_2022\\\"\"],\"cloned_from\":\"CSA U4L3-L1_2022\"},{\"changed_at\":\"2022-04-07 17:44:38 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-04-07T17:44:25.405+00:00\",\"changed\":[\"cloned from \\\"CSA U4L3-L1_2022\\\"\"],\"cloned_from\":\"CSA U4L3-L1_2022\"},{\"changed_at\":\"2022-04-07 17:44:38 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-21 13:25:18 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-21 13:26:15 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-21 13:26:41 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-21 13:26:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-21 13:30:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-21 13:31:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
