@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-18 23:55:38 UTC",
+    "serialized_at": "2022-04-22 21:11:13 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -495,7 +495,7 @@
     },
     {
       "key": "Design an AI App",
-      "name": "Design an AI App",
+      "name": "Project - Design an AI App",
       "absolute_position": 21,
       "lockable": false,
       "has_lesson_plan": true,

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_08_173143) do
+ActiveRecord::Schema.define(version: 2022_04_18_160611) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1411,8 +1411,10 @@ ActiveRecord::Schema.define(version: 2022_04_08_173143) do
     t.string "external_link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "overloaded_by"
+    t.string "overload_of"
+    t.string "return_value"
     t.index ["key", "programming_class_id"], name: "index_programming_methods_on_key_and_programming_class_id", unique: true
+    t.index ["programming_class_id", "overload_of"], name: "index_programming_methods_on_class_id_and_overload_of"
   end
 
   create_table "project_versions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
@@ -1733,7 +1735,6 @@ ActiveRecord::Schema.define(version: 2022_04_08_173143) do
     t.boolean "hidden", default: false, null: false
     t.boolean "tts_autoplay_enabled", default: false, null: false
     t.boolean "restrict_section", default: false
-    t.boolean "code_review_enabled", default: true
     t.text "properties"
     t.string "participant_type", default: "student", null: false
     t.index ["code"], name: "index_sections_on_code", unique: true
