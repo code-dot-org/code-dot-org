@@ -688,6 +688,7 @@ en:
         csc-poem-art-outro: Outro Video
         csd_u6_call_define_functions: 'CSD: Calling and Defining Functions'
         csp_applab_parameters: Functions with Parameters
+        starquilts_intro_artist: Intro to Star Quilts
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

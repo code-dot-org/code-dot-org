@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-21 22:44:42 UTC",
+    "serialized_at": "2022-04-22 21:33:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1219,7 +1219,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/csp8-2021/resources",
+      "url": "/s/csp8-2022/resources",
       "key": "all_resources_6",
       "properties": {
         "is_rollup": true
@@ -1230,7 +1230,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/csp8-2021/standards",
+      "url": "/s/csp8-2022/standards",
       "key": "all_standards_6",
       "properties": {
         "is_rollup": true
@@ -1261,6 +1261,18 @@
       },
       "seeding_key": {
         "resource.key": "apcsp_ct_20-21_task_instructions"
+      }
+    },
+    {
+      "name": "Code.org CSP Topic Coverage",
+      "url": "https://docs.google.com/document/d/1RniAGymLBBpIpDaNNR5Ea8CgiiUKv0tMvaDixSj6m_Q/view",
+      "key": "code_org_csp_topic_coverage",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "code_org_csp_topic_coverage"
       }
     },
     {
@@ -1487,18 +1499,6 @@
       "seeding_key": {
         "resource.key": "teacher_forum"
       }
-    },
-    {
-      "name": "Virtual Modification Resources",
-      "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
-      "key": "virtual_modification_resources",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "virtual_modification_resources"
-      }
     }
   ],
   "lessons_resources": [
@@ -1668,6 +1668,12 @@
     },
     {
       "seeding_key": {
+        "resource.key": "code_org_csp_topic_coverage",
+        "script.name": "csp8-2022"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "course_vocabulary",
         "script.name": "csp8-2022"
       }
@@ -1681,12 +1687,6 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
-        "script.name": "csp8-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "virtual_modification_resources",
         "script.name": "csp8-2022"
       }
     }
