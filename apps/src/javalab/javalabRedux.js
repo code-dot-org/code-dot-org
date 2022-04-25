@@ -71,6 +71,11 @@ export const appendNewlineToConsoleLog = () => ({
   log: {type: 'newline'}
 });
 
+export const appendMarkdownLog = log => ({
+  type: APPEND_CONSOLE_LOG,
+  log: {type: 'markdown', text: log}
+});
+
 export const clearConsoleLogs = () => ({
   type: CLEAR_CONSOLE_LOGS
 });
