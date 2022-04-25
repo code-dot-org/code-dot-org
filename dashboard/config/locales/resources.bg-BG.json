@@ -1027,6 +1027,9 @@
         "introduction_to_arrays/csd/2021": {
           "type": "Видео"
         },
+        "playing_notes/csd/2021": {
+          "name": "Пускане на Ноти"
+        },
         "loops_in_app_lab/csd/2021": {
           "name": "За циклите",
           "type": "Видео"

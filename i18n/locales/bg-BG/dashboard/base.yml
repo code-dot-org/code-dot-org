@@ -382,6 +382,7 @@ bg:
       basketball: 'Баскетбол'
       bounce: 'Bounce'
       calc: 'Calc'
+      dance: 'Танцово Парти'
       eval: 'Оценяване'
       flappy: 'Flappy'
       frozen: 'Frozen'
@@ -636,6 +637,10 @@ bg:
       body_short: "Създайте дизайн, програмирайте с блокове или JavaScript приложението си, а след това го споделете за секунди."
       audience: 'Възраст 13 +'
       cta: 'Научете как'
+    dance:
+      title: 'Танцово Парти'
+    dance-2019:
+      title: 'Танцово Парти'
     hoc:
       title: 'Класически лабиринт'
       body: 'Опитайте основите на компютърните науки. Милиони направиха първите си стъпки.'
@@ -1046,3 +1051,4 @@ bg:
   behaviors:
     this_sprite: "този спрайт"
   unit_prefix: "Единица %{n}"
+  code_org_logo_alt: "Начална страница Code.org"

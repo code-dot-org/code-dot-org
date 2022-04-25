@@ -990,6 +990,8 @@ bg:
               name: Основи на компютърните науки
             Next Steps:
               name: Следващи стъпки
+            Planning:
+              name: Планиране
         ECSPD2:
           description: 'Фаза 2 онлайн: Смесено лятно учене'
           description_short: 'Фаза 2 онлайн: Смесено лятно учене'
@@ -1415,6 +1417,8 @@ bg:
           lessons:
             Design Mode:
               name: Режим на проектиране
+        CSDU1-Draft:
+          description_short: Разрешаване на Проблеми
         CSDU2-Draft:
           lessons:
             Peer Review:
@@ -1592,6 +1596,8 @@ bg:
               name: Спрайт
             Conditionals:
               name: Условия
+            Keyboard Input:
+              name: Въвеждане от Клавиатурата
         grade2:
           description_audience: Възраст 5 + (необходими са умения за четене)
           lessons:
@@ -1736,6 +1742,8 @@ bg:
           lessons:
             Digital Citizenship:
               name: Цифрови граждани
+            Private and Personal Information:
+              name: Лична Информация
             Internet:
               name: Интернет
             Crowdsourcing:
@@ -1858,6 +1866,8 @@ bg:
               name: За циклите
             Map:
               name: Карта
+            Getting Properties:
+              name: Получаване на Свойства
             Functions with Parameters:
               name: Функции с параметри
         workshop-gamelab:
@@ -1874,6 +1884,8 @@ bg:
               name: нов етап
             Combining Representations:
               name: Комбиниране на Представяния
+            Representing Images:
+              name: Представяне на Изображения
         applab-2hour:
           lessons:
             new stage:
@@ -1896,8 +1908,12 @@ bg:
               name: Списъци
             For Loops:
               name: За циклите
+            Getting Properties:
+              name: Получаване на Свойства
             Functions with Parameters:
               name: Функции с параметри
+            Getting Properties_:
+              name: Получаване на Свойства
             Functions with Parameters_:
               name: Функции с параметри
         csd3-draft:
@@ -1908,6 +1924,8 @@ bg:
               name: Спрайт
             Conditionals:
               name: Условия
+            Keyboard Input:
+              name: Въвеждане от Клавиатурата
             Velocity:
               name: Скорост
             Collisions:
@@ -1916,6 +1934,8 @@ bg:
               name: Функции
         csd5-2017:
           lessons:
+            Representing Images:
+              name: Представяне на Изображения
             Combining Representations:
               name: Комбиниране на Представяния
             Keeping Data Secret:
@@ -1940,6 +1960,8 @@ bg:
               name: Спрайт
             Conditionals:
               name: Условия
+            Keyboard Input:
+              name: Въвеждане от Клавиатурата
             Velocity:
               name: Скорост
             Collisions:
@@ -2165,6 +2187,8 @@ bg:
               name: Вмъкнати цикли
             Conditionals:
               name: Условия
+            Private and Personal Information:
+              name: Лична Информация
             Internet:
               name: Интернет
             Crowdsourcing:
@@ -2211,6 +2235,8 @@ bg:
               name: Изграждане на база
             Conditionals:
               name: Условия
+            Private and Personal Information:
+              name: Лична Информация
             Internet:
               name: Интернет
             Crowdsourcing:
@@ -2233,6 +2259,8 @@ bg:
               name: Композиране на песен с параметри
         csd5-old:
           lessons:
+            Representing Images:
+              name: Представяне на Изображения
             Combining Representations:
               name: Комбиниране на Представяния
         hocali:
@@ -2300,6 +2328,8 @@ bg:
               name: Въведение
             Conditionals:
               name: Условия
+            Private and Personal Information:
+              name: Лична Информация
             Internet:
               name: Интернет
             Crowdsourcing:
@@ -2339,6 +2369,8 @@ bg:
               name: Спрайт
             Conditionals:
               name: Условия
+            Keyboard Input:
+              name: Въвеждане от Клавиатурата
             Velocity:
               name: Скорост
             Collisions:
@@ -2360,6 +2392,8 @@ bg:
               name: Спрайт
             Conditionals:
               name: Условия
+            Keyboard Input:
+              name: Въвеждане от Клавиатурата
             Velocity:
               name: Скорост
             Collisions:
@@ -2466,6 +2500,8 @@ bg:
           lessons:
             Functions with Parameters_:
               name: Функции с параметри\_
+            Getting Properties:
+              name: Получаване на Свойства
             Functions with Parameters:
               name: Функции с параметри
         coursee-2018:
@@ -2477,8 +2513,12 @@ bg:
               name: Моите приятели роботи
             Building a Foundation:
               name: Изграждане на база
+            'Loops: My Loopy Robotic Friends':
+              name: Моите Циклични Приятели Роботи
             Introduction:
               name: Въведение
+            Private and Personal Information:
+              name: Лична Информация
             'Functions: Songwriting':
               name: Писане на песен
             Internet:
@@ -2495,6 +2535,8 @@ bg:
               name: Моите приятели роботи
             Building a Foundation:
               name: Изграждане на база
+            'Loops: My Loopy Robotic Friends':
+              name: Моите Циклични Приятели Роботи
             'Algorithms: Tangrams':
               name: 'Алгоритми: Танграми'
             Introduction:
@@ -2541,6 +2583,8 @@ bg:
             cspSurvey:
               display_name: Проучване
           lessons:
+            Representing Images:
+              name: Представяне на Изображения
             Keeping Data Secret:
               name: Пазене на Тайни Данни
             Combining Representations:
@@ -2736,9 +2780,12 @@ bg:
             Artist:
               name: Художник
         dance:
+          title: Танцово Парти (2018)
           lessons:
             new stage:
               name: нов етап
+            Dance Party:
+              name: Танцово Парти
           name: танц
         frozen-2018-test-b:
           lessons:
@@ -2750,6 +2797,14 @@ bg:
             Aquatic:
               name: 'Minecraft: Подводното пътешествие'
           name: воден
+        dance--draft:
+          lessons:
+            Dance Party:
+              name: Танцово Парти
+        dance-draft:
+          lessons:
+            Dance Party:
+              name: Танцово Парти
         cspplayground:
           lesson_groups:
             csp_variables:
@@ -2787,6 +2842,10 @@ bg:
               name: Интернет
             Crowdsourcing:
               name: Crowdsourcing кампания
+        dance-low:
+          lessons:
+            Dance Party:
+              name: Танцово Парти
         coursed-2019:
           lesson_groups:
             csf_events:
@@ -2810,6 +2869,8 @@ bg:
               name: Цифрови граждани
             'Unplugged: Binary':
               name: Бинарни образи(картини)
+            Dance Party:
+              name: Танцово Парти
         coursee-2019:
           lesson_groups:
             csf_sprites:
@@ -2827,6 +2888,8 @@ bg:
               name: Вмъкнати цикли
             Conditionals with Cards:
               name: Условия с карти
+            Private and Personal Information:
+              name: Лична Информация
             'Functions: Songwriting':
               name: Писане на песен
             Internet:
@@ -2874,6 +2937,8 @@ bg:
               name: Интернет
             Crowdsourcing:
               name: Crowdsourcing кампания
+            Dance Party:
+              name: Танцово Парти
         csd1-2019:
           lesson_groups:
             cspSurvey:
@@ -2983,6 +3048,8 @@ bg:
               name: Спрайт
             Conditionals:
               name: Условия
+            Keyboard Input:
+              name: Въвеждане от Клавиатурата
             Velocity:
               name: Скорост
             Collisions:
@@ -2998,6 +3065,8 @@ bg:
             cspSurvey:
               display_name: Проучване
           lessons:
+            Representing Images:
+              name: Представяне на Изображения
             Keeping Data Secret:
               name: Пазене на Тайни Данни
             Combining Representations:
@@ -3007,6 +3076,8 @@ bg:
             cspSurvey:
               display_name: Проучване
           lessons:
+            Getting Properties:
+              name: Получаване на Свойства
             Functions with Parameters:
               name: Функции с параметри
         csp4-pilot:
@@ -3252,6 +3323,8 @@ bg:
               name: Спрайт
             Conditionals:
               name: Условия
+            Keyboard Input:
+              name: Въвеждане от Клавиатурата
             Velocity:
               name: Скорост
             Collisions:
@@ -3382,6 +3455,8 @@ bg:
           lessons:
             Computer Science Fundamentals:
               name: Основи на компютърните науки
+            Planning:
+              name: Планиране
             Next Steps:
               name: Следващи стъпки
             Loops:
@@ -3415,6 +3490,8 @@ bg:
           lessons:
             Conditionals:
               name: Условия
+            Private and Personal Information:
+              name: Лична Информация
         time4cs-control-unit-2:
           lesson_groups:
             csf_digcit:
@@ -3445,6 +3522,8 @@ bg:
           lessons:
             Conditionals:
               name: Условия
+            Private and Personal Information:
+              name: Лична Информация
         time4cs-experiment-unit-1:
           lesson_groups:
             csf_loops:
@@ -3460,6 +3539,8 @@ bg:
           lessons:
             Conditionals:
               name: Условия
+            Private and Personal Information:
+              name: Лична Информация
         csp7-pilot:
           lesson_groups:
             required:
@@ -3506,6 +3587,8 @@ bg:
             cspSurvey:
               display_name: Проучване
           lessons:
+            Representing Images:
+              name: Представяне на Изображения
             Keeping Data Secret:
               name: Пазене на Тайни Данни
             Combining Representations:
@@ -3515,6 +3598,8 @@ bg:
             cspSurvey:
               display_name: Проучване
           lessons:
+            Getting Properties:
+              name: Получаване на Свойства
             Functions with Parameters:
               name: Функции с параметри
         csd3-2020:
@@ -3528,6 +3613,8 @@ bg:
               name: Свойства на Спрайта
             Conditionals:
               name: Условия
+            Keyboard Input:
+              name: Въвеждане от Клавиатурата
             Velocity:
               name: Скорост
             Collisions:
@@ -3606,6 +3693,8 @@ bg:
               name: Бинарни образи(картини)
             Digital Citizenship:
               name: Цифрови граждани
+            Dance Party:
+              name: Танцово Парти
         coursee-2020:
           lesson_groups:
             csf_sprites:
@@ -3617,6 +3706,8 @@ bg:
             csf_functions:
               display_name: Функции
           lessons:
+            Private and Personal Information:
+              name: Лична Информация
             Access Ability:
               name: Проектиране за Достъпност
             'Functions: Songwriting':
@@ -3658,6 +3749,9 @@ bg:
               display_name: За циклите
             csf_sprites:
               display_name: Спрайт
+          lessons:
+            Dance Party:
+              name: Танцово Парти
         pre-express-2020:
           lesson_groups:
             csf_loops:
@@ -3817,6 +3911,8 @@ bg:
               name: Текст
             Conditionals:
               name: Условия
+            Keyboard Input:
+              name: Въвеждане от Клавиатурата
             Velocity:
               name: Скорост
             Collisions:
@@ -3862,12 +3958,16 @@ bg:
           lessons:
             csf:
               name: CS основи
+        outbreak:
+          title: Симулатор на Епидемия
         2021drafting:
           lesson_groups:
             introduction:
               display_name: Въведение
             lessonGroup-3:
               display_name: Променливи
+            outbreak:
+              display_name: Симулатор на Епидемия
             debugging:
               display_name: Отстраняване на грешки
         csd1-2021:
@@ -3899,6 +3999,9 @@ bg:
             Conditionals:
               key: Условия
               name: Условия
+            Keyboard Input:
+              key: Въвеждане от Клавиатурата
+              name: Въвеждане от Клавиатурата
             Velocity:
               key: Скорост
               name: Скорост
@@ -3917,6 +4020,9 @@ bg:
               display_name: Проучване
         csd5-2021:
           lessons:
+            Representing Images:
+              key: Представяне на Изображения
+              name: Представяне на Изображения
             Keeping Data Secret:
               key: Пазене на Тайни Данни
               name: Пазене на Тайни Данни
@@ -3928,6 +4034,9 @@ bg:
               display_name: Проучване
         csd6-2021:
           lessons:
+            Getting Properties:
+              key: Получаване на Свойства
+              name: Получаване на Свойства
             Functions with Parameters:
               key: Функции с параметри
               name: Функции с параметри
@@ -4041,6 +4150,9 @@ bg:
             Relay Programming:
               key: Повтори програмирането
               name: Повтори програмирането
+            Dance Party:
+              key: Танцово Парти
+              name: Танцово Парти
             Conditionals with Cards:
               key: Условия с карти
               name: Условия с карти
@@ -4066,6 +4178,9 @@ bg:
           lessons:
             Conditionals:
               key: Условия
+            Private and Personal Information:
+              key: Лична Информация
+              name: Лична Информация
             About Me:
               name: 'Мини-Проект: За Мен'
             'Functions: Songwriting':
@@ -4119,6 +4234,12 @@ bg:
             lessonGroup-7:
               display_name: Цифрови граждани
         express-2021:
+          lessons:
+            Dance Party:
+              key: Танцово Парти
+              name: Танцово Парти
+            lesson-1:
+              name: Танцово Парти
           lesson_groups:
             csf_loops:
               display_name: Повторения
@@ -4158,6 +4279,9 @@ bg:
               display_name: Проучване
         csd5-preview-2021:
           lessons:
+            Representing Images:
+              key: Представяне на Изображения
+              name: Представяне на Изображения
             Keeping Data Secret:
               key: Пазене на Тайни Данни
               name: Пазене на Тайни Данни
@@ -4281,6 +4405,9 @@ bg:
             Computer Science Fundamentals:
               key: Основи на компютърните науки
               name: Основи на компютърните науки
+            Planning:
+              key: Планиране
+              name: Планиране
             Next Steps:
               key: Следващи стъпки
               name: Следващи стъпки
@@ -4457,6 +4584,8 @@ bg:
               display_name: Съдържание
         2022drafting:
           lessons:
+            lesson-4:
+              name: Симулатор на Епидемия
             lesson-5:
               name: 'Мини-Проект: За Мен'
             For Loop Fun:
@@ -4517,6 +4646,11 @@ bg:
             csf_events:
               display_name: Събития
         express-2022:
+          lessons:
+            Dance Party:
+              name: Танцово Парти
+            lesson-1:
+              name: Танцово Парти
           lesson_groups:
             csf_sprites:
               display_name: Спрайт
@@ -4614,6 +4748,9 @@ bg:
             Relay Programming:
               name: Повтори програмирането
               key: Повтори програмирането
+            Dance Party:
+              name: Танцово Парти
+              key: Танцово Парти
             Conditionals with Cards:
               name: Условия с карти
               key: Условия с карти
@@ -4630,6 +4767,9 @@ bg:
               display_name: Условия
         coursee-2022:
           lessons:
+            Private and Personal Information:
+              name: Лична Информация
+              key: Лична Информация
             'Mini-Project: About Me':
               name: 'Мини-Проект: За Мен'
             Songwriting:
@@ -4854,6 +4994,9 @@ bg:
             Conditionals:
               name: Условия
               key: Условия
+            Keyboard Input:
+              name: Въвеждане от Клавиатурата
+              key: Въвеждане от Клавиатурата
             Velocity:
               name: Скорост
               key: Скорост
@@ -4872,6 +5015,9 @@ bg:
               display_name: Проучване
         csd5-2022:
           lessons:
+            Representing Images:
+              name: Представяне на Изображения
+              key: Представяне на Изображения
             Combining Representations:
               name: Комбиниране на Представяния
               key: Комбиниране на Представяния
