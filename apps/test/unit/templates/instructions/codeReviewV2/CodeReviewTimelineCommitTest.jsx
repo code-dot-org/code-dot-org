@@ -1,10 +1,10 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
-import CodeReviewTimelineCommit from '@cdo/apps/templates/instructions/codeReview/CodeReviewTimelineCommit';
+import CodeReviewTimelineCommit from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineCommit';
 import CodeReviewTimelineElement, {
   codeReviewTimelineElementType
-} from '@cdo/apps/templates/instructions/codeReview/CodeReviewTimelineElement';
+} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
 import javalabMsg from '@cdo/javalab/locale';
 
 const DEFAULT_PROPS = {
