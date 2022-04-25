@@ -6082,7 +6082,8 @@ de:
             Thanks:
               name: Danke
             '': {}
-            " ": {}
+            " ":
+              name: ''
         csp-pre-survey-test-2017:
           lessons:
             new stage:
