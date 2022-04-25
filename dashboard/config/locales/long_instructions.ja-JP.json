@@ -2998,7 +2998,7 @@
         "OPD-K5 LessonPlanning_dani": "ここまでアンプラグドレッスンプランのいくつかを紹介してきました。ただ、「コンピュータサイエンス入門」のレッスンごとに、プラグインおよびオンラインの両方のレッスンプランがあります。各コースのレッスンプランの完全なリストは以下の通りです。\n<br/>\n<br/>\n[コースAレッスンプラン][0]<br/>\n[コースBレッスンプラン][1]<br/>\n[コースCレッスンプラン][2]<br/>\n[コースDレッスンプラン][3]<br/>\n[コースEレッスンプラン][4]<br/>\n[コースFレッスンプラン][5]<br/>\n\nただし、これらのレッスンは授業にあったものにするか、独自のレッスンを作成することをお勧めします。以下のビデオでは、「コンピュータサイエンス入門」のレッスン構成を説明していますが、独自のレッスンを開発する場合のヒントにもなります。",
         "OPD-K5 EventsVid": "「イベント」を定義し、「コンピュータサイエンス入門」でそれらがどのように機能するかを示すこのビデオを視聴しましょう。その後、イベントのコーディングを必要とするパズルをいくつか試してみます。\n\n> イベントとは、何かが発生するのを「聞いて」からアクションを実行するようにコンピュータに指示するコード行のことです。たとえば、ウェブページでは、マウスでナビゲーションバーをロールオーバーすると、ドロップダウンメニューが表示されることがよくあります。 「マウスロールオーバー」は、アクションをトリガーする「イベント」です。",
         "OPD-K5 EventsVid_dani": "「イベント」を定義し、「コンピュータサイエンス入門」でそれらがどのように機能するかを示すこのビデオを視聴しましょう。その後、イベントのコーディングを必要とするパズルをいくつか試してみます。\n\n> イベントとは、何かが発生するのを「聞いて」からアクションを実行するようにコンピュータに指示するコード行のことです。たとえば、ウェブページでは、マウスでナビゲーションバーをロールオーバーすると、ドロップダウンメニューが表示されることがよくあります。 「マウスロールオーバー」は、アクションをトリガーする「イベント」です。",
-        "helloworld_animals_backgrounds": "_イベントでは他に何ができますか？ 背景を変更する方法を学びましょう。_\n\n_これらのブロックにはすでに気づいていることでしょう。_ \n<xml><block type=\"gamelab_setBackgroundImageAs\"><title name=\"IMG\">\"gradient\\_30\"</title></block></xml>\n\n<xml><block type=\"gamelab_setBackground\"><value name=\"COLOR\"><block type=\"colour_picker\"><title name=\"COLOUR\">#ffffff</title></block></value></block></xml>\n\n-   シーンを変更するイベントの下にある他の「背景を設定」ブロックを置くには、スプライトをクリックします。",
+        "helloworld_animals_backgrounds": "_イベントでは他に何ができますか？ 背景を変更する方法を学びましょう。_\n\n_これらのブロックにはすでに気づいていることでしょう。_ \n<xml><block type=\"gamelab_setBackgroundImageAs\"><title name=\"IMG\">\"gradient_30\"</title></block></xml>\n\n<xml><block type=\"gamelab_setBackground\"><value name=\"COLOR\"><block type=\"colour_picker\"><title name=\"COLOUR\">#ffffff</title></block></value></block></xml>\n\n-   シーンを変更するイベントの下にある他の「背景を設定」ブロックを置くには、スプライトをクリックします。",
         "helloworld_animals_behaviors": "_ビヘイビアを使ってスプライトをアニメ化する方法を学びます。ビヘイビアはプログラム実行中に何度も起こるアクションのことです。_\n\n-   ツールボックスの下にある新しいブロックを使って、スプライトを1人アニメ化します。\n\n\\_チャレンジ: クリックしたとき、スプライトにビヘイビアが開始する **イベント** を使ってみましょう。",
         "helloworld_animals_click": "\\_ここでは何かが違いますか？ これらのスプライトに何か言わせることができますか？\n\n-   コードを読みます。何か気づきましたか？\n-   _\"実行\"_ ボタンをクリックします。\n-   スプライトをクリックまたはタップします。",
         "helloworld_animals_costumes": "_スプライトの外観を変える方法を学びましょう。_\n\n-   クリックしてスプライトのコスチュームを変えるには、新しい「コスチュームを変える」ブロックを使います。\n-   ユーザーがスプライトと関わったとき、イベントによって何かが起こることを覚えておきます。.\n\n_他のチャレンジ:_ 妖精のコスチュームを1回以上変えるか、複数のスプライトのコスチュームを変えてみましょう。",
@@ -3051,7 +3051,13 @@
         "poetry_hoc_sounds": "プログラムに**サウンド**と**音楽**を加えると、詩を読んでいる時の詩の雰囲気を変えることができます。\n\n-   コードに新しいサウンドと音楽のブロックを加えます。\n-   詩のムードにマッチするサウンドや音楽を探します。 ",
         "poetry_hoc_spriteBehaviors": "プログラム実行中、スプライトは何度も特定のアクションやビヘイビアをすることができます。\n\n-   コードに「スプライトの開始」ブロックを加えます。\n-   さまざまな妖精のビヘイビアを探します。\n-   詩にマッチするビヘイビアを選びます。\n\n_他のチャレンジ:_ **イベント**に「スプライトの開始」ブロックを加えます。",
         "poetry_hoc_spriteSizes": "すでに作成したスプライトの**サイズ** を変更することができます。 \n\n-   新しい「サイズの設定」ブロックを使ってスプライトのサイズを変更します。 \n-   必ず100以上のサイズを選びます。",
-        "CSD U6 iter predict bubbles_2021": "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
+        "CSD U6 iter predict bubbles_2021": "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)",
+        "AppLab Intro 7 - Change Screen Color": "<div style=\"float:right\">\n\t<img src=\"https://images.code.org/bf9b1fb57751fa90c9b786339914ad70-image-1508521068798.34.54 AM.png\" style=\"height:150px\"> \n</div>\n\n**ゴール:** 画面を緑にします。\n\n\\*方法:\\*\\* `setProperty()` ブロックをドラッグしてワークスペースに入れます。ドロップダウン・メニューを使って画面の背景色`\"background-color\"`を 緑`\"green\"`にしてから、\"実行\"を押します。\n\n\\*\\*うまくいきませんか? \\*\\* ![expandable](https://images.code.org/3b5e70522b02867a1df1d5b5e481785e-image-1511279858395.gif) をクリックしてください。",
+        "CourseD_EOC_artist": "自分だけの絵をかきましょう！",
+        "CourseD_EOC_bounce1": "自分だけのバスケットボールのゲームを作りましょう！",
+        "CourseD_EOC_dance": "自分だけのダンスを作りましょう！",
+        "CourseD_EOC_starwars": "自分だけのスターウォーズのゲームを作りましょう！ ",
+        "courseA_playLab_events3_2020": "ワークプレースにすでにある <xml><block type=\"studio_whenArrow\" block-text=\"when left arrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml> イベントブロックに <xml><block type=\"studio_move\" block-text=\"move dog west\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> ブロックを つなげて、犬のジョージを動かしましょう。\n\n矢印キーを押してジョージを旗まで連れて行けば、このレベルをクリアできます！"
       }
     }
   }

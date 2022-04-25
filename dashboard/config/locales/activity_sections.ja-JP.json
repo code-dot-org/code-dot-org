@@ -902,6 +902,12 @@
         "5baa2f9a-16b7-412f-b3cb-4fb126c06add": {
           "progression_name": "適切な ID の選択"
         },
+        "7197ddf8-89bf-4b3a-86d9-1f424a1d1b0a": {
+          "progression_name": "ユーザー情報に返答"
+        },
+        "a81e104f-4588-40de-bce6-a309993c9bd4": {
+          "progression_name": "マルチスクリーンアプリ"
+        },
         "43a2cde3-0ad9-4dc0-87df-db17a8f9e789": {
           "progression_name": "ゲッターとセッター"
         },
@@ -910,6 +916,9 @@
         },
         "4e481fb1-126e-41df-bd8b-7358c3bf23fc": {
           "progression_name": "テキスト受信 vs 番号受信"
+        },
+        "432cf1e5-be20-4ba1-a6b5-617481522694": {
+          "progression_name": "getNumber"
         },
         "04db6cce-94f1-43ba-ad97-05a8fcd32541": {
           "progression_name": "プロパティを設定"
@@ -1068,6 +1077,9 @@
         },
         "97c9dbc2-beb0-4885-95fc-653f1454def5": {
           "progression_name": "スプライトと描画ループ"
+        },
+        "9fcb88d4-d160-48f1-839b-a859098936ba": {
+          "progression_name": "スプライトのプロパティ"
         },
         "5af1eedf-4119-4465-9112-21357b4c9530": {
           "progression_name": "スプライトと描画ループ"
@@ -2574,6 +2586,9 @@
         "e4d88a2f-2530-4833-a49f-62a940388897": {
           "progression_name": "スプライトと描画ループ"
         },
+        "89860dc5-98ff-4e81-b72c-56732f2f2b0a": {
+          "progression_name": "スプライトのプロパティ"
+        },
         "c9cc0204-f409-4d46-89e4-620987dab74e": {
           "progression_name": "スプライトと描画ループ"
         },
@@ -2799,6 +2814,9 @@
         "08c729fe-47a9-4501-ae1b-b90607c230d4": {
           "progression_name": "繰り返しのあるプログラム"
         },
+        "2088c73b-0667-4407-8f79-182ae09a3db2": {
+          "progression_name": "ビデオ：Forループ"
+        },
         "d6edc1c1-8e4b-47d8-821a-718c5007dfc6": {
           "progression_name": "ループ用"
         },
@@ -2882,8 +2900,14 @@
         "1d83d565-21fa-499c-8a66-27f53423ea9b": {
           "progression_name": "画面の追加"
         },
+        "351d0f3e-feee-4c78-8318-4666de043c40": {
+          "progression_name": "マルチスクリーンアプリ"
+        },
         "28a1debd-3867-4db1-89e9-435a5b18012c": {
           "progression_name": "イベントおよびリンク画面"
+        },
+        "7d3f98a9-1e2a-4e35-8cfe-386edf3d35fc": {
+          "progression_name": "ユーザー情報に返答"
         },
         "04ffc416-c94c-4d8c-8866-75dfa8de8b96": {
           "name": "プロジェクトの組み合わせ",
@@ -3216,6 +3240,9 @@
         },
         "50c9bec4-0a92-411d-8a8f-8b0b73c07224": {
           "progression_name": "スプライトと描画ループ"
+        },
+        "6d500881-4394-4b38-9bbb-56b73d897b83": {
+          "progression_name": "スプライトのプロパティ"
         },
         "bf95d671-b457-4d3a-9ca8-ae57d660a224": {
           "progression_name": "スプライトと描画ループ"
@@ -4277,6 +4304,9 @@
         "aec92f2d-9b44-43b4-a418-3aebaf5af709": {
           "progression_name": "探索：Forループ"
         },
+        "671c8e13-e78c-49f3-867b-45e7643d0026": {
+          "progression_name": "ビデオ：Forループ"
+        },
         "297e5651-8422-476e-b1db-3d893b7e0bc8": {
           "progression_name": "予測"
         },
@@ -4298,7 +4328,8 @@
           "description": "このレッスンに関係するコードスタジオのパズルから最終デザインの1つを、クラス全体に向けてボードに描いて (またはプロジェクターで表示して) ください。以下のいずれかをお勧めします。\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/F.11hint.png)\n\n表示された絵をコンピュータがどのように描くか、クラスに聞いてみましょう。\n\nいくつか予想が出たところで、もちろんforループを使います、と答えます。\n\nこれからforループと変数を使って、このような細かい絵を描く方法を学ぶのだと伝えます。"
         },
         "b838a926-533f-414b-86f6-17f8ea078fad": {
-          "name": "アーティストと学ぶForループ"
+          "name": "アーティストと学ぶForループ",
+          "progression_name": "ビデオ：Forループ"
         },
         "5a79bfa7-16f2-41b1-8ebf-88fadad29acb": {
           "progression_name": "探究"
@@ -7724,6 +7755,9 @@
         "7d22dea9-9b88-47a4-a697-1c836bf6f2e5": {
           "progression_name": "探索：Forループ"
         },
+        "387d8104-557d-4700-bdef-2c8ea2855b07": {
+          "progression_name": "ビデオ：Forループ"
+        },
         "600fa08b-d08b-4e28-96a5-e1e2b6b5c908": {
           "progression_name": "予測"
         },
@@ -7748,7 +7782,8 @@
           "name": "「アーティスト」の「for」ループ",
           "tips": [
             "パズルはとても楽しいですが、分度器とメモ用紙を用意しておくと、これらの設計が実際に形になったものを見れるので役立つかもしれません。クラスでそれが用意できないようなら、生徒にコンピュータの画面を指でなぞってもらってください。"
-          ]
+          ],
+          "progression_name": "ビデオ：Forループ"
         },
         "7d78c293-a385-49ee-a08a-1e0a02b185aa": {
           "progression_name": "探究"
@@ -10152,7 +10187,8 @@
         "d5b2ea3b-4370-4cf8-a9ed-670e789d812f": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "ビデオ：Forループ"
         },
         "2aed74d8-d9e0-4c5d-b0bc-7bc5e90ce0df": {
           "progression_name": "ループ用"

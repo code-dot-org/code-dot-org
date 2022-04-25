@@ -1928,6 +1928,12 @@
         "design_mode_1/csd/2021": {
           "name": "設計モード"
         },
+        "multi-screen_apps/csd/2021": {
+          "name": "マルチスクリーンアプリ"
+        },
+        "responding_to_user_input/csd/2021": {
+          "name": "ユーザー情報に返答"
+        },
         "app-presentation/csd/2021": {
           "name": "アプリのプレゼンテーション",
           "type": "ルーブリック"
@@ -1947,6 +1953,9 @@
         "innovation-video-1-1/csd/2021": {
           "name": "コンピューター サイエンスはすべてを変えています",
           "type": "ビデオ"
+        },
+        "responding_to_user_input_1/csd/2021": {
+          "name": "ユーザー情報に返答"
         },
         "how_computers_word_hardware_software/csd/2021": {
           "name": "コンピューターの仕組み：ハードウェア＆ソフトウェア",
@@ -2101,6 +2110,9 @@
         },
         "sprites_1/csd/2021": {
           "name": "スプライト"
+        },
+        "sprite_properties/csd/2021": {
+          "name": "スプライトのプロパティ"
         },
         "captioned-scenes/csd/2021": {
           "type": "ルーブリック"
