@@ -9,11 +9,6 @@ import {
 import {organizeReferenceGuides} from '@cdo/apps/util/referenceGuideHelpers';
 import {Link} from '@dsco_/link';
 
-const baseUrl = window.location.href
-  .split('/')
-  .slice(0, -1)
-  .join('/');
-
 const referenceGuideShape = PropTypes.shape({
   display_name: PropTypes.string,
   content: PropTypes.string,
@@ -21,7 +16,11 @@ const referenceGuideShape = PropTypes.shape({
   parent_reference_guide_key: PropTypes.string
 });
 
-export default function ReferenceGuideView({referenceGuide, referenceGuides}) {
+export default function ReferenceGuideView({
+  referenceGuide,
+  referenceGuides,
+  baseUrl
+}) {
   let rootCategory = referenceGuide;
   while (rootCategory.parent_reference_guide_key !== null) {
     rootCategory = referenceGuides.find(
@@ -80,5 +79,6 @@ export default function ReferenceGuideView({referenceGuide, referenceGuides}) {
 
 ReferenceGuideView.propTypes = {
   referenceGuide: referenceGuideShape.isRequired,
-  referenceGuides: PropTypes.arrayOf(referenceGuideShape).isRequired
+  referenceGuides: PropTypes.arrayOf(referenceGuideShape).isRequired,
+  baseUrl: PropTypes.string.isRequired
 };
