@@ -498,6 +498,7 @@ pl:
       starwars: Gwiezdne Wojny
       starwarsblocks: Star Wars (Bloki)
       starwarsblocks_hour: Star Wars (Bloki)
+      thebadguys: Źli faceci
       loading: Trwa pobieranie ...
       weblab: Web Lab
       view_all: Obejrzyj wszystkie projekty...
@@ -1278,6 +1279,11 @@ pl:
   no_level_access_teacher: 'Nie masz dostępu do tego poziomu. Jeśli wydaje Ci się,
     że powinieneś mieć dostęp do tego poziomu, to proszę napisać pod adresem: support@code.org
     tak, abyśmy mogli naprawić tę sytuację.'
+  no_exemplar: Nie ma żadnego przykładu dla tego poziomu.
+  no_exemplar_access_student: Studenci nie mają dostępu do przykładowego kodu. Zapytaj
+    swojego nauczyciela, na jakim poziomie powinieneś być.
+  no_exemplar_access_teacher: Tylko zweryfikowani nauczyciele mają dostęp do przykładowego
+    kodu. Jeśli chcesz zostać zweryfikowanym nauczycielem, napisz na adres support@code.org.
   return_unit_overview: Przejdź do przeglądu jednostek
   return_course_overview: Przejdź do omówienia kursu
   view_all_units: Zobacz wszystkie jednostki

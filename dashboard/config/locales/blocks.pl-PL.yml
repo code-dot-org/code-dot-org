@@ -5,21 +5,23 @@ pl:
       BadGuys_makeNewBadGuysSprite:
         text: utwórz nowego {ANIMATION_NAME} duszka w {LOCATION}
       BadGuys_setSizeAll_dropdown:
+        text: ustaw wiekość wszystkich duszków na  {SIZE}
         options:
           SIZE:
             '0.50': ekstra mały
             '0.75': mały
             '1.00': średni
             '2.00': duży
-            '3.00': extra large
+            '3.00': bardzo duży
       BadGuys_setSize_dropdown:
+        text: ustaw {SPRITE} woelkość na {SIZE}
         options:
           SIZE:
             '0.50': ekstra mały
             '0.75': mały
             '1.00': średni
             '2.00': duży
-            '3.00': extra large
+            '3.00': bardzo duży
       Dancelab_alternateMoves:
         text: "{GROUP} zmienia się co {N} takty \nmiędzy {MOVE1} i {MOVE2}"
         options:
@@ -1493,7 +1495,7 @@ pl:
           narysuj tablicę wyników
           {SPRITE1COSTUME}wynik{VAR1}{SPRITE2COSTUME}wynik{VAR2}cel{SPRITE3COSTUME}
       gamelab_setupSim:
-        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME}
+        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3][null][4]
           z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
       gamelab_showTitleScreen:
         text: pokaż ekran tytułowy {BREAK} tytuł {TITLE} podtytuł {SUBTITLE}
@@ -1878,7 +1880,7 @@ pl:
           populacja:{SPRITE2N}
           {TOGGLE}wirus
       Mikelab_setupSim:
-        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME}
+        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3][null][4]
           z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
       Mikelab_showScoreboard:
         options:

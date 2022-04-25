@@ -1016,6 +1016,9 @@
         "5baa2f9a-16b7-412f-b3cb-4fb126c06add": {
           "progression_name": "Wybieranie dobrych identyfikatorów"
         },
+        "a81e104f-4588-40de-bce6-a309993c9bd4": {
+          "progression_name": "Aplikacje wieloekranowe"
+        },
         "43a2cde3-0ad9-4dc0-87df-db17a8f9e789": {
           "progression_name": "Gettery I settery"
         },
@@ -3533,6 +3536,9 @@
         },
         "1d83d565-21fa-499c-8a66-27f53423ea9b": {
           "progression_name": "Dodawanie Ekranów"
+        },
+        "351d0f3e-feee-4c78-8318-4666de043c40": {
+          "progression_name": "Aplikacje wieloekranowe"
         },
         "28a1debd-3867-4db1-89e9-435a5b18012c": {
           "progression_name": "Zdarzenia i Ekrany z linkami"
@@ -11432,15 +11438,32 @@
             null
           ]
         },
+        "443a800b-e1ba-4bfa-b6d5-c13f6a72ab2c": {
+          "description": "#### Reprezentacja ma znaczenie"
+        },
+        "a55ce75b-80e1-4daa-973e-40ccf2cfc730": {
+          "name": "Osoba 1",
+          "description": "**„Jestem uczulony na jajka.”**"
+        },
         "617e101b-5c13-40e7-be75-6a4626bebe3e": {
           "tips": [
             null
           ]
         },
+        "2d53240d-98ed-4acc-8197-0f8b303689e1": {
+          "name": "Osoba 2"
+        },
+        "7b4894fa-f2e6-41dc-b9e5-fa22de67c9f1": {
+          "name": "Osoba 3",
+          "description": "**„Staram się oszczędzać pieniądze.”**"
+        },
         "e94772c1-7ac5-4e4f-b9b3-021ba4b36ef5": {
           "tips": [
             null
           ]
+        },
+        "1ec61889-d528-4888-8568-7b059e9a2d7c": {
+          "name": "Osoba 4"
         },
         "c670c339-5f6d-475c-b6cf-ad8a35c2d8a2": {
           "name": "Refleksja"

@@ -2479,10 +2479,15 @@
         "unit-4-the-design-process/csd/2021": {
           "type": "Slajdy"
         },
+        "pspe-image/csd/2021": {
+          "url": "https://code.org/curriculum/docs/csd/PSPE.png"
+        },
         "designing_with_empathy/csd/2021": {
+          "url": "https://docs.google.com/document/d/10uAtyNYjzc91_hMTBRHRkSSxx7QJRZptkguzeH8Dwqg/view",
           "type": "Przewodnik po zajęciach"
         },
         "designing_with_empathy_1/csd/2021": {
+          "url": "https://docs.google.com/document/d/1iwf4Y8AYLQFAuHSq-k-FnASFI7Wt8w7skZKFclggBcA/view",
           "type": "Wzór"
         },
         "reacting-as-your-user-exemplar-19/csd/2021": {
@@ -2636,6 +2641,7 @@
           "type": "Zasoby"
         },
         "multi-screen_apps/csd/2021": {
+          "name": "Aplikacje wieloekranowe",
           "type": "Zasoby"
         },
         "responding_to_user_input/csd/2021": {
@@ -2684,10 +2690,12 @@
           "type": "Przewodnik po zajęciach"
         },
         "internet-of-things-video/csd/2021": {
+          "url": "https://youtu.be/xQGsubJNbQw",
           "type": "Wideo"
         },
         "innovation-video-1-1/csd/2021": {
           "name": "Informatyka zmienia wszystko",
+          "url": "https://www.youtube.com/watch?v=QvyTEx1wyOY",
           "type": "Wideo"
         },
         "csd_unit_6_-_physical_computing/csd/2021": {
@@ -2833,13 +2841,16 @@
         },
         "representation-matters-exemplar-2019/csd/2021": {
           "name": "Reprezentacja ma znaczenie",
+          "url": "https://docs.google.com/document/d/17LnkRYXZMiyjC9enTcZRp2akfySN_YYmMe8fJRmkF4E/edit",
           "type": "Wzór"
         },
         "meals-data-resource-2019/csd/2021": {
+          "url": "https://docs.google.com/document/d/1nVUNkvIqz4sQjXnr52eBd17Pmi61Ir2aTH6ulVnco9o/edit",
           "type": "Zasoby"
         },
         "representation-matters/csd/2021": {
           "name": "Reprezentacja ma znaczenie",
+          "url": "https://docs.google.com/document/d/1wU8QANCmyz_DiJf2vdg2QPqKHq1YE0XDLGJmEsbKfiU/edit?usp=sharing",
           "type": "Przewodnik po zajęciach"
         },
         "representing-information-1/csd/2021": {
@@ -3417,10 +3428,12 @@
         },
         "exploring-web-pages-exemplar-2020/csd/2021": {
           "name": "Badanie stron internetowych",
+          "url": "https://docs.google.com/document/d/1H442FzizijHYbf8mozKacAZNQaMBHNQ2wvXY5qRB8nU/edit?usp=sharing",
           "type": "Wzór"
         },
         "exploring-web-pages/csd/2021": {
           "name": "Badanie stron internetowych",
+          "url": "https://docs.google.com/document/d/1aJj7fg6BQDZlAwBI9KLnQh7_7kZGXi6avPVO0PSqYh0/",
           "type": "Przewodnik po zajęciach"
         },
         "csd_unit_2_-_web_development/csd/2021": {

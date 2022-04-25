@@ -2506,6 +2506,8 @@ pl:
               name: Weź udział w badaniu podłużnym!
             CSP Student Post-Course Survey:
               name: Ankieta dla uczniów po odbyciu kursu CSD
+            Multi-Screen Apps:
+              name: Aplikacje wieloekranowe
             '"if" Statements Unplugged':
               name: Instrukcje "jeśli" bez komputera
             Boolean Expressions and "if" Statements:
@@ -33252,6 +33254,8 @@ pl:
                 którego można przekazać przewidywaną konstrukcję produktu, z wykorzystaniem
                 tanich i łatwych do znalezienia materiałów takich jak karton i taśma
                 klejąca.
+            lesson-21:
+              name: Ankieta studenckich faktów EOU - [Course]
           lesson_groups:
             lessonGroup-3:
               display_name: Szablony
@@ -36099,6 +36103,8 @@ pl:
               name: Dzień sprawdzianu
               description_teacher: 'Uczniowie przystępują do testu wielokrotnego wyboru,
                 który obejmuje zagadnienia jednostki. '
+            EOU Student Facting Survey - [Course]:
+              name: Ankieta studenckich faktów EOU - [Course]
           lesson_groups:
             cspSurvey:
               display_name: Ankieta
@@ -36136,6 +36142,8 @@ pl:
             'Lesson 9: Assessment Day':
               key: 'Lekcja 9: Dzień sprawdzianu'
               name: Dzień sprawdzianu
+            EOU Student Facting Survey - [Course]:
+              name: Ankieta studenckich faktów EOU - [Course]
           lesson_groups:
             csp_unit2_2020:
               display_name: 'Jednostka 2: Internet'
@@ -36170,6 +36178,8 @@ pl:
             'Lesson 11: Assessment Day':
               key: 'Lekcja 11: Dzień sprawdzianu'
               name: Dzień sprawdzianu
+            EOU Student Facting Survey - [Course]:
+              name: Ankieta studenckich faktów EOU - [Course]
           lesson_groups:
             csp_unit3_2020:
               display_name: Jednostka 3 - Wprowadzenie do projektowania aplikacji
@@ -36219,6 +36229,8 @@ pl:
             'Lesson 15: Assessment Day':
               key: 'Lekcja 15: Dzień sprawdzianu'
               name: Dzień sprawdzianu
+            EOU Student Facting Survey - [Course]:
+              name: Ankieta studenckich faktów EOU - [Course]
           lesson_groups:
             csp_variables:
               display_name: Zmienne
@@ -36282,6 +36294,8 @@ pl:
             'Lesson 18: Assessment Day':
               key: 'Lekcja  18: Dzień sprawdzianu'
               name: Dzień sprawdzianu
+            EOU Student Facting Survey - [Course]:
+              name: Ankieta studenckich faktów EOU - [Course]
           lesson_groups:
             csp_lists:
               display_name: Listy
@@ -36771,6 +36785,8 @@ pl:
             'Lesson 6: Assessment Day':
               key: 'Lekcja 6: Dzień sprawdzianu'
               name: Dzień sprawdzianu
+            EOU Student Facting Survey - [Course]:
+              name: Ankieta studenckich faktów EOU - [Course]
           lesson_groups:
             csp_unit6_2020:
               display_name: 'Jednistka 6: Algorytmy'
@@ -36819,6 +36835,8 @@ pl:
                 który obejmuje zagadnienia jednostki. '
             CS Principles Post-Course Survey:
               name: Zasady informatyki Ankieta po kursie
+            EOU Student Facting Survey - [Course]:
+              name: Ankieta studenckich faktów EOU - [Course]
           lesson_groups:
             csp_parameters_return_values:
               display_name: Parametry i wartości zwracane
@@ -36837,6 +36855,8 @@ pl:
               key: Utwórz PT - Sporządź plan
             Create PT - Complete the Task:
               key: Utwórz PT - Wykonaj zadanie
+            EOU Student Facting Survey - [Course]:
+              name: Ankieta studenckich faktów EOU - [Course]
           name: csp8-2022
         csp9-2022:
           lessons:
@@ -36880,6 +36900,8 @@ pl:
                 który obejmuje zagadnienia jednostki. '
               description_teacher: 'Uczniowie przystępują do testu wielokrotnego wyboru,
                 który obejmuje zagadnienia jednostki. '
+            EOU Student Facting Survey - [Course]:
+              name: Ankieta studenckich faktów EOU - [Course]
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Jednostka 9: Dane'
@@ -36929,6 +36951,8 @@ pl:
             'Lesson 14: Unit Assessment Day':
               key: 'Lekcja 14: Dzień sprawdzianu Jednostki'
               name: Dzień sprawdzianu
+            EOU Student Facting Survey - [Course]:
+              name: Ankieta studenckich faktów EOU - [Course]
           lesson_groups:
             csp_unit10_2020:
               display_name: 'Jednostka 10: Cyberbezpieczeństwo i globalne oddziaływanie'
@@ -38157,6 +38181,7 @@ pl:
               name: Praktyka FRQ
             lesson-2:
               name: Jednostka 3 - Sprawdzian
+              description_student: Oceń swoje postępy w sprawdzianie z Jednostki 3.
             lesson-5:
               name: Pętle dla (for)
             lesson-12:
@@ -38294,8 +38319,15 @@ pl:
               name: Praktyka FRQ
             lesson-2:
               name: Jednostka 4 Sprawdzian
+              description_student: Oceń swoje postępy w sprawdzianie z Jednostki 4.
             lesson-3:
               name: Korzystanie z poleceń
+            lesson-6:
+              name: Operatory logiczne
+            lesson-7:
+              name: Prawa de Morgana
+            lesson-8:
+              name: Metody statyczne
             lesson-15:
               description_student: |-
                 **Jak mój rozwój jako inżyniera oprogramowania znajduje odzwierciedlenie w moim projekcie?**
@@ -38314,9 +38346,19 @@ pl:
               name: Praktyka FRQ
             lesson-2:
               name: Jednostka 5 Sprawdzian
+              description_student: Oceń swoje postępy w sprawdzianie z Jednostki 5.
+            lesson-3:
+              name: Tablice dwuwymiarowe (2D)
+            lesson-6:
+              name: Odwróć tablicę 2D
             lesson-11:
               name: Znajdowanie duplikatów
+            lesson-13:
+              name: Własny projekt narracyjny – Dzień 1
+            lesson-14:
+              name: Własny projekt narracyjny – Dzień 2
             lesson-15:
+              name: Własny projekt narracyjny – Dzień 3
               description_student: |-
                 **Jak mój rozwój jako inżyniera oprogramowania znajduje odzwierciedlenie w moim projekcie?**
 
@@ -39551,8 +39593,12 @@ pl:
             lesson-1:
               key: lekcja 1
               name: Dokumentowanie kodu programu
+            lesson-4:
+              name: Manipulowanie elementami
             lesson-5:
               name: Lista obiektów
+            lesson-6:
+              name: Usuwanie elementów
             lesson-8:
               name: Porównywanie łańcuchów
             lesson-13:
@@ -39562,6 +39608,9 @@ pl:
                 Uczestniczyłeś w przeglądzie kodu na końcu poprzedniej lekcji, aby przekazać i otrzymać informację zwrotną do zidentyfikowania obszarów poprawy i rozwiązania napotkanych problemów. Rozważ te informacje zwrotne podczas kończenia prac na tej lekcji. Następnie podziel się swoim końcowym projektem ze swoimi rówieśnikami, aby uczcić swój sukces.
             lesson-14:
               name: Praktyka FRQ
+            lesson-15:
+              name: Jednostka 6 Sprawdzian
+              description_student: Oceń swoje postępy w sprawdzianie z Jednostki 6.
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -39795,8 +39844,12 @@ pl:
               key: Korzystanie z poleceń
             lesson-1:
               name: Dokumentowanie kodu programu
+            lesson-2:
+              name: Parametry ,metody
             lesson-3:
               name: Metody przeciążania
+            lesson-4:
+              name: Metody prywatne
             lesson-5:
               name: Nadrzędne metody
             lesson-6:
@@ -39809,6 +39862,12 @@ pl:
               name: Algorytmy rekurencyjne
             lesson-10:
               name: Maksymalizacja niezawodności systemu
+            lesson-11:
+              name: Kreatywne kodowanie z Teatrem – Dzień 1
+            lesson-12:
+              name: Kreatywne kodowanie z Teatrem – Dzień 2
+            lesson-13:
+              name: Kreatywne kodowanie z Teatrem – Dzień 3
             lesson-14:
               name: Praktyka FRQ
             lesson-15:
@@ -39953,6 +40012,12 @@ pl:
               name: Porządkowanie przez scalanie
             lesson-9:
               name: Wyszukiwanie i porządkowanie
+            lesson-11:
+              name: Kreatywne kodowanie z Konsolą – Dzień 1
+            lesson-12:
+              name: Kreatywne kodowanie z Konsolą – Dzień 2
+            lesson-13:
+              name: Kreatywne kodowanie z Konsolą – Dzień 3
             lesson-14:
               name: Praktyka FRQ
             lesson-15:
@@ -40008,8 +40073,16 @@ pl:
               name: TLO 1
             lesson-3:
               name: Planowanie lekcji
+            lesson-5:
+              name: Narzędzia i strategie
+            lesson-7:
+              name: TLO 1 - Jednostka 3 lekcja 3 - usuń
+            lesson-8:
+              name: TLO 2 - Jednostka 3 lekcja 4 - usuń
             lesson-9:
               name: Zakończenie
+            lesson-11:
+              name: Dostęp do edukacji informatycznej
             Headings:
               name: TLO 1
             Drawing in Game Lab:
@@ -40031,10 +40104,22 @@ pl:
           lessons:
             lesson-1:
               name: Witaj
+            lesson-3:
+              name: TLO 3 - Jednostka 4 lekcja 3 - usuń
+            lesson-6:
+              name: TLO 4 - Jednostka 5 lekcja 1 - usuń
+            lesson-7:
+              name: TLO 5 - Jednostka 5 lekcja 9 - usuń
             lesson-8:
               name: Zakończenie
+            lesson-9:
+              name: Bariery i szanse
             User Centered Design   Define and Prepare:
               name: TLO 3 - Jednostka 4 Lekcja 3
+            Representation Matters:
+              name: TLO 4 - Jednostka 5 Lekcja 1
+            Problem Solving and Data:
+              name: TLO 5 - Jednostka 5 Lekcja 9
           lesson_groups:
             lessonGroup-2:
               display_name: Synchroniczna Część 1
@@ -40052,6 +40137,18 @@ pl:
               name: "[TEMPLATE] Wprowadzenie do..."
             lesson-4:
               name: Witaj
+            lesson-5:
+              name: TLO 6 - Jednostka 6 lekcja 3 - usuń
+            lesson-6:
+              name: TLO 7 - Jednostka 7 Lekcja 1
+            lesson-8:
+              name: Różniczkowanie
+            lesson-10:
+              name: Budowanie społeczności wspierającej edukację informatyczną
+            lesson-12:
+              name: Równość w edukacji informatycznej
+            lesson-13:
+              name: Planowanie modułowe
             lesson-14:
               name: Zakończenie
             Updating Screen Elements:
@@ -40073,6 +40170,12 @@ pl:
           lessons:
             lesson-1:
               name: Witaj
+            lesson-3:
+              name: Tworzenie planu
+            lesson-5:
+              name: Przygotowanie do roku
+            lesson-8:
+              name: Ceremonie zamknięcia
           lesson_groups:
             lessonGroup-2:
               display_name: Synchroniczna Część 1
@@ -40163,6 +40266,12 @@ pl:
               key: Następne kroki
         vpl-csd1-ci-pilot-2022:
           lessons:
+            lesson-1:
+              name: Wprowadzenie do rozwiązywania problemów i obliczeń
+            lesson-2:
+              name: Praktykuj korzystając z procesu rozwiązywania problemów
+            lesson-3:
+              name: Poznaj, jak działa komputer
             lesson-4:
               name: Oiczenia fizyczne
         vpl-csd2-ci-pilot-2022:
@@ -40173,22 +40282,36 @@ pl:
           lessons:
             lesson-5:
               name: Oiczenia fizyczne
+            lesson-6:
+              name: Animuj scenę za pomocą duszków
         vpl-csd4-ci-pilot-2022:
           lessons:
+            lesson-1:
+              name: Wprowadzenie do procesu projektowania
+            lesson-2:
+              name: Użyj papierowego prototypu
+            lesson-3:
+              name: Zbuduj cyfrowy prototyp w App Lab
             lesson-5:
               name: Oiczenia fizyczne
         vpl-csd5-ci-pilot-2022:
           lessons:
+            lesson-1:
+              name: Wprowadzenie do Dane i Społeczeństwo
             lesson-4:
               name: Dane i społeczeństwo
             lesson-5:
               name: Oiczenia fizyczne
         vpl-csd6-ci-pilot-2022:
           lessons:
+            lesson-3:
+              name: Eksperymenty z danymi i wynikami
             lesson-5:
               name: Oiczenia fizyczne
         vpl-csd7-ci-pilot-2022:
           lessons:
+            lesson-1:
+              name: Wprowadzenie do sztucznej inteligencji i uczenia maszynowego
             lesson-2:
               name: Animacje i gry interaktywne
             lesson-3:
@@ -40230,14 +40353,21 @@ pl:
           name: csd-playground
         csc-pilot-2022-ecosystems:
           lessons:
+            lesson-1:
+              name: 'Hello World - CSC '
+            lesson-3:
+              name: Ewolucja biologiczna
             Hello World CSC:
               description_student: Na tej lekcji nauczysz się tworzyć i animować duszki
                 oraz czynić je interaktywnymi za pomocą zdarzeń.
               description_teacher: Podczas tej lekcji **budującej umiejętności** uczniowie
                 nauczą się tworzyć i animować duszki oraz czynić je interaktywnymi
                 za pomocą zdarzeń.
+          name: csc-pilot-2022-ecosystems
         csc-pilot-2022-timecapsule:
           lessons:
+            lesson-1:
+              name: Efekty wizualne
             Poem Art:
               name: Sztuka poezji
               description_teacher: W tej zintegrowanej lekcji informatyki i ELA uczniowie
@@ -40247,14 +40377,20 @@ pl:
                 pomogą zilustrować nastrój wiersza. Na koniec wykorzystają zdarzenia
                 (kod), aby zilustrować zmianę nastroju lub animować wprowadzenie nowych
                 obrazów w wierszu.
+          name: csc-pilot-2022-timecapsule
+        csc-pilot-2022-starquilts:
+          name: csc-pilot-2022-starquilts
         csc-pilot-2022-fables:
           lessons:
+            lesson-1:
+              name: Hello World - CSC
             Hello World CSC:
               description_student: Na tej lekcji nauczysz się tworzyć i animować duszki
                 oraz czynić je interaktywnymi za pomocą zdarzeń.
               description_teacher: Podczas tej lekcji **budującej umiejętności** uczniowie
                 nauczą się tworzyć i animować duszki oraz czynić je interaktywnymi
                 za pomocą zdarzeń.
+          name: csc-pilot-2022-fables
         csd1-2022:
           lessons:
             CS Discoveries Pre-survey:
@@ -40372,6 +40508,7 @@ pl:
               display_name: Lekcje alternatywne
           description_short: Dowiedz się, w jaki sposób ludzie pracują na komputerach,
             aby rozwiązać problemy.
+          name: csd1-2022
         csd2-2022:
           lessons:
             Exploring Web Pages:
@@ -40478,6 +40615,8 @@ pl:
             lesson-1:
               key: lekcja 1
               name: Ankieta po kursie Odkrycia Informatyki
+            EOU Student Facting Survey - [Course]:
+              name: Ankieta studenckich faktów EOU - [Course]
           lesson_groups:
             csd2_1v2:
               display_name: 'Rozdział 1: Tworzenie stron internetowych'
@@ -40493,6 +40632,7 @@ pl:
             i praca zespołowa.
           description_short: "  Naucz się budować swoją własną stronę internetową
             w Web Lab."
+          name: csd2-2022
         csd3-2022:
           lessons:
             Programming for Entertainment:
@@ -40638,6 +40778,8 @@ pl:
             lesson-1:
               key: lekcja 1
               name: Ankieta po kursie Odkrycia Informatyki
+            EOU Student Facting Survey - [Course]:
+              name: Ankieta studenckich faktów EOU - [Course]
           lesson_groups:
             csd3_1:
               display_name: 'Rozdział 1: Obrazy i animacje'
@@ -40654,6 +40796,7 @@ pl:
             spersonalizowany program interaktywny.
           description_short: Naucz się programować animacje, interaktywne grafiki
             i gry w Game Lab.
+          name: csd3-2022
         csd4-2022:
           lessons:
             Designing With Empathy:
@@ -40716,17 +40859,22 @@ pl:
               key: Analiza projektu
               name: Projektowanie z empatią
             User-Centered Design 1:
+              key: Projektowanie zorientowane na użytkownika 1
               name: Projekt zorientowany na użytkownika Zdefiniuj i przygotuj
             User-Centered Design 2:
+              key: Projektowanie zorientowane na użytkownika 2
               name: Projektowanie zorientowane na użytkownika Wypróbuj i pomyśl
             Paper Prototypes:
               key: Prototypy na papierze
             Digital Design:
               key: Projekt cyfrowy
             Events In AppLab:
+              key: Zdarzenia w App Lab
               name: Zdarzenia w AppLab
             Linking Screens:
               key: Łączenie ekranów
+            EOU Student Facting Survey - [Course]:
+              name: Ankieta studenckich faktów EOU - [Course]
           lesson_groups:
             csd4_1:
               display_name: 'Rozdział 1: Projektowanie zorientowane na użytkownika'
@@ -40744,6 +40892,7 @@ pl:
             informacje zwrotne i kształtować dalszą iterację.
           description_short: Ucz się, jak zaprojektować program, który zaspokoi potrzeby
             Twoich użytkowników
+          name: csd4-2022
         csd5-2022:
           lessons:
             Representation Matters:
@@ -40799,6 +40948,8 @@ pl:
               key: Ankieta po kursie Odkrycia Informatyki
             Project - Create a Representation:
               key: Projekt - Twórz reprezentację
+            EOU Student Facting Survey - [Course]:
+              name: Ankieta studenckich faktów EOU - [Course]
           lesson_groups:
             csd5_1:
               display_name: 'Rozdział 1: Reprezentowanie Informacji'
@@ -40817,6 +40968,7 @@ pl:
             przez siebie obszarze.
           description_short: Dowiedz się, w jaki sposób ludzie używają komputerów,
             aby rozwiązywać problemy z danymi.
+          name: csd5-2022
         csd7-2022:
           lessons:
             Introduction to Machine Learning:
@@ -40924,6 +41076,8 @@ pl:
                 aby przewidzieć najbezpieczniejszą drogę do laboratorium, co będzie
                 wymagało przeszkolenia Toma za pomocą algorytmu regresji. \\\r\n\\\r\n**Pytanie
                 dnia:** Jak komputery uczą się przewidywać z pomoc danych liczbowych? "
+            EOU Student Facting Survey - [Course]:
+              name: Ankieta studenckich faktów EOU - [Course]
           lesson_groups:
             lessonGroup-2:
               display_name: Rozdział 1 - Uczenie maszynowe
@@ -40932,6 +41086,7 @@ pl:
             lessonGroup-4:
               display_name: Ankieta
           title: AI i uczenie maszynowe
+          name: csd7-2022
         csd6-2022:
           lessons:
             Innovations in Computing:
@@ -41021,16 +41176,22 @@ pl:
               name: Testy po realizacji projektu
             CS Discoveries Post-Course Survey:
               name: Ankieta po kursie Odkrycia Informatyki
+            EOU Student Facting Survey - [Course]:
+              name: Ankieta studenckich faktów EOU - [Course]
           lesson_groups:
+            lessonGroup-2:
+              display_name: 'Rozdział 1: Dane i wyniki'
             lessonGroup-3:
               display_name: 'Rozdział 2: Budowanie prototypów fizycznych'
             lessonGroup-4:
               display_name: Ankieta
+          name: csd6-2022
           description_short: Naucz się programować przy pomocy urządzeń fizycznych
         csd-post-survey-2022:
           lessons:
             Post-Course Survey:
               name: Ankieta po odbyciu kursu
+          name: csd-post-survey-2022
           title: Ankieta po kursie Odkrycia Informatyki
           description: Ta jednostka zawiera ankietę na zakończenie kursu Odkrycia
             informatyki. Ta jednostka może zostać przypisana po ukończeniu przez uczniów
@@ -41042,6 +41203,7 @@ pl:
           lessons:
             Course Survey:
               name: Ankieta kursu
+          name: csp-post-survey-2022
           title: Zasady informatyki Ankieta po kursie
           description: Ta jednostka zawiera ankietę po kursie Zasady Informatyki
           student_description: Ta jednostka zawiera ankietę dotyczącą kursu Zasady
