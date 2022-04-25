@@ -115,10 +115,7 @@ export default class JavabuilderConnection {
       .done(result => this.establishWebsocketConnection(result.token))
       .fail(error => {
         if (error.status === 403) {
-          // Send unauthorized message as markdown as some unauthorized messages contain links
-          // for further details.
-          this.onMarkdownLog(this.getUnauthorizedMessage());
-          this.onNewlineMessage();
+          this.displayUnauthorizedMessage(error);
         } else {
           this.onOutputMessage(javalabMsg.errorJavabuilderConnectionGeneral());
           this.onNewlineMessage();
@@ -147,6 +144,12 @@ export default class JavabuilderConnection {
   }
 
   onOpen() {
+    // We need to send an initial message to Javabuilder here in case there was an issue
+    // with our token. Javabuilder will send back an error message with details, but can
+    // only do so once we've sent a message. This is a bit of a hack, but this should only
+    // happen if our token was somehow valid for the initial Javabuilder HTTP request and
+    // then became invalid when establishing the WebSocket connection.
+    this.sendMessage('connected');
     this.miniApp?.onCompile?.();
   }
 
@@ -340,15 +343,27 @@ export default class JavabuilderConnection {
     this.onNewlineMessage();
   }
 
-  getUnauthorizedMessage() {
+  displayUnauthorizedMessage(error) {
+    const body = error.responseJSON;
+    if (body.type === WebSocketMessageType.AUTHORIZER) {
+      this.onAuthorizerMessage(body.value, body.detail);
+      return;
+    }
+
+    let unauthorizedMessage;
     if (this.currentUser.signInState === SignInState.SignedIn) {
       if (this.currentUser.userType === 'teacher') {
-        return javalabMsg.unauthorizedJavabuilderConnectionTeacher();
+        unauthorizedMessage = javalabMsg.unauthorizedJavabuilderConnectionTeacher();
       } else {
-        return javalabMsg.unauthorizedJavabuilderConnectionStudent();
+        unauthorizedMessage = javalabMsg.unauthorizedJavabuilderConnectionStudent();
       }
     } else {
-      return javalabMsg.unauthorizedJavabuilderConnectionNotLoggedIn();
+      unauthorizedMessage = javalabMsg.unauthorizedJavabuilderConnectionNotLoggedIn();
     }
+
+    // Send unauthorized message as markdown as some unauthorized messages contain links
+    // for further details.
+    this.onMarkdownLog(unauthorizedMessage);
+    this.onNewlineMessage();
   }
 }
