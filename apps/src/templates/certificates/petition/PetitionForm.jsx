@@ -12,6 +12,7 @@ const PetitionForm = () => {
   // data starts with all required fields having an empty value to ensure proper validation
   const [data, setData] = useState(mapValues(keyValidation, () => ''));
   const [invalidFields, setInvalidFields] = useState([]);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = e => {
     e.persist();
@@ -28,6 +29,7 @@ const PetitionForm = () => {
       }
     });
     setInvalidFields(getInvalidFields(data));
+    setErrorMessage(getErrorMessage(data));
   };
 
   const buildControlledFieldGroup = (
@@ -57,7 +59,7 @@ const PetitionForm = () => {
         className="petition-form"
         onSubmit={handleSubmit}
       >
-        <div className={'petition-space'}>{getErrorMessage(invalidFields)}</div>
+        <div className={'petition-space'}>{errorMessage}</div>
         {buildControlledFieldGroup('name', 'Name')}
         {buildControlledFieldGroup(
           'email',
