@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-19 19:59:55 UTC",
+    "serialized_at": "2022-04-24 15:02:58 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -1305,7 +1305,7 @@
       "key": "9879a477-9acb-4465-ab3f-12d313753619",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 7 Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
         "progression_name": "Investigate: Object References as Parameters"
       },
       "seeding_key": {
@@ -1891,7 +1891,7 @@
       "key": "10fbb776-0b03-4eec-976b-c527ea741541",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the program traverses an array of the parent class type, and each child class outputs different information when calling the method. Students also notice that the keyword `super` is used to call a superclass version of a method. Students may wonder why each class has a different version of the method used while traversing the array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define overriding and review overriding `toString()` and `equals()`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *Why would we want to override methods?*\n* *Where else have we seen the benefits of overriding methods?*\n\n**Discussion Goal:** Students suggest that the parent class might have a generic version of the method, but each child class might need more specific versions of a method. Students realize that overriding makes it possible to create lists of the parent class type and call the method but get the overridden versions in each subclass. Students also make connections to polymorphism and recall how traversing an array of a superclass type allows them to easily call each subclass version of a method.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the program traverses an array of the parent class type, and each child class outputs different information when calling the method. Students also notice that the keyword `super` is used to call a superclass version of a method. Students may wonder why each class has a different version of the method used while traversing the array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review overriding and review overriding `toString()` and `equals()`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *Why would we want to override methods?*\n* *Where else have we seen the benefits of overriding methods?*\n\n**Discussion Goal:** Students suggest that the parent class might have a generic version of the method, but each child class might need more specific versions of a method. Students realize that overriding makes it possible to create lists of the parent class type and call the method but get the overridden versions in each subclass. Students also make connections to polymorphism and recall how traversing an array of a superclass type allows them to easily call each subclass version of a method.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2282,7 +2282,7 @@
       "key": "1d6ea410-e6b4-4b72-9cf9-9956328ac2c5",
       "position": 1,
       "properties": {
-        "description": "In the previous lesson, you learned that recursive methods are methods that call themselves and that they consist of a base case and a recursive case. Recursive methods can solve the same problems as iterative solutions. Let's look at how we might use recursion to navigate through a maze in The Neighborhood.",
+        "description": "In the previous lesson, you learned that recursive methods are methods that call themselves and that they consist of a base case and a recursive case. Recursive methods can solve the same problems as iterative solutions. Let's look at how we might use recursion to create drawings.",
         "name": "Recursive Navigation",
         "remarks": true
       },
@@ -2666,7 +2666,7 @@
       "key": "916208b8-d947-430a-a611-8b040b002f40",
       "position": 1,
       "properties": {
-        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. Students work on the project throughout the unit to brainstorm, plan, and begin developing their program. Students then have three dedicated class periods to refine and complete their projects. Lessons 11, 12, and 13 collectively include instructions for the three-day project.\n\nIf there is not enough time for the three-day project, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the **Creative Coding with The Theater Project 1 Day Lesson Plan**. Direct students to develop their program on Lesson 13 to submit their project. While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use."
+        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. Students work on the project throughout the unit to brainstorm, plan, and begin developing their program. Students then have three dedicated class periods to refine and complete their projects. Lessons 11, 12, and 13 collectively include instructions for the three-day project.\n\nIf there is not enough time for the three-day project, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the [**Creative Coding with The Theater Project 1 Day Lesson Plan**](https://docs.google.com/document/d/1eCn26wJangxWhq-vGU9yJxJY9JYkRNqk5i9u2uWzoZc/edit?usp=sharing). Direct students to develop their program on Lesson 13 to submit their project. While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use."
       },
       "seeding_key": {
         "activity_section.key": "916208b8-d947-430a-a611-8b040b002f40",
@@ -2995,7 +2995,7 @@
       "key": "75873165-0f80-4121-b886-c70c70a5f7a5",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to finish and submit their Creative Coding Project. Students do a code review with a partner to receive feedback and improve their work as they complete tasks on their Project Planning Board.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to finish and submit their Creative Coding Project.",
         "progression_name": "Creative Coding with The Theater Project",
         "tips": [
           {

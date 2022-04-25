@@ -123,5 +123,6 @@
   "togglePeerReviewError": "Error enabling/disabling peer review, please try again.",
   "unknownError": "Oops. We hit an error on our side. Try running your program again. If this error continues, contact us at support@code.org. Be sure to include the connection ID {connectionId} in your message.\n{type}",
   "userBlocked": "You have run your code too many times and your account has been locked. Contact support@code.org to unlock your account.",
+  "youHaveProjectsToReview": "You have projects to review...",
   "yourPeer": "your peer"
 }

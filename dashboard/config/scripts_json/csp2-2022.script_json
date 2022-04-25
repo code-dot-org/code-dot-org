@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-21 22:44:39 UTC",
+    "serialized_at": "2022-04-22 21:21:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3012,7 +3012,7 @@
   "resources": [
     {
       "name": "All Resources",
-      "url": "/s/csp2-2021/resources",
+      "url": "/s/csp2-2022/resources",
       "key": "all_resources_1",
       "properties": {
         "is_rollup": true
@@ -3023,7 +3023,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/csp2-2021/standards",
+      "url": "/s/csp2-2022/standards",
       "key": "all_standards_1",
       "properties": {
         "is_rollup": true
@@ -3246,18 +3246,6 @@
       }
     },
     {
-      "name": "Virtual Modification Resources",
-      "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
-      "key": "virtual_modification_resources",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "virtual_modification_resources"
-      }
-    },
-    {
       "name": "What is the Internet?",
       "url": "https://www.youtube.com/watch?v=Dxcc6ycZ73M",
       "key": "what_is_the_internet_",
@@ -3463,12 +3451,6 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
-        "script.name": "csp2-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "virtual_modification_resources",
         "script.name": "csp2-2022"
       }
     }

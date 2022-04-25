@@ -20,6 +20,7 @@ function TopInstructionsHeader(props) {
     levelHasRubric,
     displayDocumentationTab,
     displayReviewTab,
+    displayCommitsAndReviewTab,
     isViewingAsTeacher,
     fetchingData,
     handleDocumentationClick,
@@ -28,6 +29,7 @@ function TopInstructionsHeader(props) {
     handleCommentTabClick,
     handleDocumentationTabClick,
     handleReviewTabClick,
+    handleCommitsAndReviewTabClick,
     handleTeacherOnlyTabClick,
     handleClickCollapser,
     isMinecraft,
@@ -141,6 +143,16 @@ function TopInstructionsHeader(props) {
               isRtl={isRtl}
             />
           )}
+          {displayCommitsAndReviewTab && (
+            <InstructionsTab
+              className="uitest-commitsAndReviewTab"
+              onClick={handleCommitsAndReviewTabClick}
+              selected={tabSelected === TabType.COMMITS_AND_REVIEW}
+              text={i18n.review()}
+              isMinecraft={isMinecraft}
+              isRtl={isRtl}
+            />
+          )}
           {(isViewingAsTeacher || isViewingAsInstructorInTraining) &&
             (teacherMarkdown ||
               showContainedLevelAnswer ||
@@ -248,6 +260,7 @@ TopInstructionsHeader.propTypes = {
   levelHasRubric: PropTypes.bool,
   displayDocumentationTab: PropTypes.bool,
   displayReviewTab: PropTypes.bool,
+  displayCommitsAndReviewTab: PropTypes.bool,
   isViewingAsTeacher: PropTypes.bool,
   fetchingData: PropTypes.bool,
   handleDocumentationClick: PropTypes.func.isRequired,
@@ -256,6 +269,7 @@ TopInstructionsHeader.propTypes = {
   handleCommentTabClick: PropTypes.func.isRequired,
   handleDocumentationTabClick: PropTypes.func.isRequired,
   handleReviewTabClick: PropTypes.func.isRequired,
+  handleCommitsAndReviewTabClick: PropTypes.func.isRequired,
   handleTeacherOnlyTabClick: PropTypes.func.isRequired,
   handleClickCollapser: PropTypes.func.isRequired,
   isMinecraft: PropTypes.bool.isRequired,
