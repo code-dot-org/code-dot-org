@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import {Button} from 'react-bootstrap';
-import {range, mapValues} from 'lodash';
+import {range, mapValues, without} from 'lodash';
 import {
-  createErrorMessage,
+  getInvalidFields,
   keyValidation
 } from '@cdo/apps/templates/certificates/petition/petitionHelpers';
 import ControlledFieldGroup from '@cdo/apps/templates/certificates/petition/ControlledFieldGroup';
@@ -10,16 +10,23 @@ import ControlledFieldGroup from '@cdo/apps/templates/certificates/petition/Cont
 const PetitionForm = () => {
   // data starts with all required fields having an empty value to ensure proper validation
   const [data, setData] = useState(mapValues(keyValidation, () => ''));
-  const [errorMessage, setErrorMessage] = useState('');
+  const [invalidFields, setInvalidFields] = useState([]);
 
   const handleChange = e => {
     e.persist();
     setData(data => ({...data, [e.target.name]: e.target.value}));
+    setInvalidFields(without(invalidFields, e.target.name)); // Remove error from field
   };
 
   const handleSubmit = e => {
     e.preventDefault();
-    setErrorMessage(createErrorMessage(data));
+    Object.entries(data).forEach(field => {
+      let value = data[field];
+      if (typeof value === 'string') {
+        setData({...data, [field]: value.trim()});
+      }
+    });
+    setInvalidFields(getInvalidFields(data));
   };
 
   const buildControlledFieldGroup = (
@@ -35,6 +42,7 @@ const PetitionForm = () => {
       helpText={helpText}
       componentClass={componentClass}
       onChange={handleChange}
+      isErrored={invalidFields.includes(id)}
       value={data[id] || ''}
     >
       {children}
@@ -48,7 +56,9 @@ const PetitionForm = () => {
         className="petition-form"
         onSubmit={handleSubmit}
       >
-        <div className={'petition-space'}>{errorMessage}</div>
+        <div className={'petition-space'}>
+          {invalidFields.length > 0 ? 'there are errors' : ''}
+        </div>
         {buildControlledFieldGroup('name', 'Name')}
         {buildControlledFieldGroup(
           'email',
