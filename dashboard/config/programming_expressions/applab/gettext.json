@@ -3,7 +3,7 @@
   "name": "getText",
   "category": "UI controls",
   "category_key": "ui_controls",
-  "content": "Gets the text from the specified screen element.\n\nTo capture data entered by the user, your apps will need to read data from `textInput()` or textArea screen elements. `getText()` is usually used in an `onEvent()` callback function, and returns a string that can be stored in a variable or used as a parameter in another function call.\n\n\n",
+  "content": "Gets the text from the specified screen element.\n\nTo capture data entered by the user, your apps will need to read data from [`textInput()`(#fff176)](/docs/applab/textInput/) or textArea screen elements. [`getText()`(#fff176)](/docs/applab/getText/) is usually used in an [`onEvent()`(#fff176)](/docs/applab/onEvent/) callback function, and returns a string that can be stored in a variable or used as a parameter in another function call.\n\n\n",
   "examples": [
     {
       "name": "Example Random Thoughts",
@@ -38,5 +38,5 @@
   "return_value": "A string containing the contents of the screen element.\r\n",
   "short_description": "Gets the text from the specified screen element.",
   "syntax": "getText(id)",
-  "tips": "- `getText()` can also read the text on a `button()` or `textLabel()`."
+  "tips": "- [`getText()`(#fff176)](/docs/applab/getText/) can also read the text on a [`button()`(#fff176)](/docs/applab/button/) or [`textLabel()`(#fff176)](/docs/applab/textLabel/)."
 }

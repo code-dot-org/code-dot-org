@@ -2,20 +2,30 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "using math class methods",
+    "long_instructions": "A researcher wants to determine an approximate width of the largest cities in the world by land area.\r\n\r\nThe researcher assumes that each city is shaped like a circle. To find the approximate width of each city, the researcher needs to find the square root of each value in `landAreas`(#e7e8ea) divided by `Math.PI`(#e7e8ea).\r\n\r\n##In CityData.java:\r\n\r\n1. Write the `calculateSizes()`(#e7e8ea) method.\r\n\r\n   * Traverse the `landAreas`(#e7e8ea) array. Divide each value by `Math.PI`(#e7e8ea) then use `Math.sqrt()`(#e7e8ea) to calculate the square root of this result to get the radius.\r\n   \r\n   * Multiply each radius by `2`(#e7e8ea) to get the total approximate width.\r\n\r\n   * Return a new array that contains the width.\r\n\r\n##In MyConsole.java:\r\n\r\n2. Declare and initialize a new array called `landSizes`(#e7e8ea) that stores the array returned from the `calculateSizes()`(#e7e8ea) method.\r\n\r\n3. Print the values stored in the `landSizes`(#e7e8ea) array.",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
-    "csa_view_mode": "theater",
-    "encrypted_examples": [
-
-    ]
+    "csa_view_mode": "console",
+    "display_name": "City Sizes",
+    "bubble_choice_description": "A researcher wants to determine an approximate width of the largest cities in the world by land area.",
+    "thumbnail_url": "https://images.code.org/5a69e413e8df7d42deec96c5384b717e-image-1650649001010.png",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    String[] cities = {\"New York\", \"Tokyo\", \"Chicago\", \"Atlanta\", \"Philadelphia\", \"Boston\",\n                       \"Los Angeles\", \"Dallas/Fort Worth\", \"Houston\", \"Detroit\"};\n    double[] cityAreas = {8683, 6993, 5498, 5083, 4661, 4497, 4320, 3644, 3355, 3267};\n    CityData myCities = new CityData(cityAreas);\n\n    // TO DO #2: Call the calculateSizes() method.\n\n\n    // TO DO #3: Print the values stored in the new array.\n\n    \n  }\n}",
+        "isVisible": true
+      },
+      "CityData.java": {
+        "text": "/*\n * Analyzes city data\n */\npublic class CityData {\n\n  private double[] landAreas;   // The list of land areas\n\n  /*\n   * Constructor to create a CityData object\n   * with the specified array of land areas\n   */\n  public CityData(double[] landAreas) {\n    this.landAreas = landAreas;\n  }\n\n  /*\n   * Returns an array containing the approximate\n   * width of each city\n   */\n  public double[] calculateSizes() {\n    // TO DO #2: Return an array containing the approximate width of each city.\n\n    \n  }\n  \n}",
+        "isVisible": true
+      }
+    }
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-04-07T18:27:20.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-04-07T18:27:20.111+00:00\",\"changed\":[\"cloned from \\\"CSA U4L7-L5c_2022\\\"\"],\"cloned_from\":\"CSA U4L7-L5c_2022\"},{\"changed_at\":\"2022-04-07 18:27:22 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-04-07T18:27:20.111+00:00\",\"changed\":[\"cloned from \\\"CSA U4L7-L5c_2022\\\"\"],\"cloned_from\":\"CSA U4L7-L5c_2022\"},{\"changed_at\":\"2022-04-07 18:27:22 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 17:37:11 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 18:22:58 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"encrypted_examples\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 18:41:07 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 18:51:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
