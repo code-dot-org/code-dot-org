@@ -2,6 +2,9 @@
   "ko-KR": {
     "data": {
       "category": {
+        "csta/AP": {
+          "description": "알고리즘 및 프로그래밍"
+        },
         "ccela/SL": {
           "description": "말하기와 듣기"
         },
@@ -37,6 +40,9 @@
         },
         "csta/IC": {
           "description": "컴퓨팅의 영향"
+        },
+        "csta/NI": {
+          "description": "네트워크 및 인터넷"
         }
       }
     }
