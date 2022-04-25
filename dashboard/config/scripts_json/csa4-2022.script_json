@@ -31,8 +31,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-18 22:52:35 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-04-23 21:26:37 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -141,7 +141,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "**How can logical operators be used to evaluate multiple conditions?**\n\nStudents revisit logical operators to explore the use of the `&&` (and) and `||` (or) operators. Students use truth tables to evaluate Boolean expressions and learn about short-circuited evaluation.",
-        "preparation": "* Print copies of the Truth Tables handout (one for each student)\n* Gather sticky notes or scrap pieces of paper (one for each student)",
+        "preparation": "* Print copies of the Truth Tables handout (one for each student)\n* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up\n* Gather sticky notes or scrap pieces of paper (one for each student)",
         "student_overview": "**How can logical operators be used to evaluate multiple conditions?**\n\nYou have used the NOT ( `!` ) operator to reverse the outcome of a Boolean expression. In this lesson, you explore the use of the AND ( `&&` ) and OR ( `||` ) operators. You learn to use truth tables to evaluate Boolean expressions and the functionality of short-circuited evaluation."
       },
       "seeding_key": {
@@ -212,7 +212,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "*How can I use casting to temporarily convert a value to a different type or round to the nearest integer?*\n\nStudents learn how casting operators can be used to temporarily convert a value to a different type. Students explore the effect of using the `(int)` and `(double)` casting operators on a value and expression. Students also use casting operators to round a `double` value to the nearest integer.",
+        "overview": "**How can I use casting to temporarily convert a value to a different type or round to the nearest integer?**\n\nStudents learn how casting operators can be used to temporarily convert a value to a different type. Students explore the effect of using the `(int)` and `(double)` casting operators on a value and expression. Students also use casting operators to round a `double` value to the nearest integer.",
         "preparation": "* Print copies of the Investigating Casting handout (one for each pair of students)",
         "student_overview": "**How can I use casting to temporarily convert a value to a different type or round to the nearest integer?**\n\nSometimes we need to temporarily convert a value to a different type or round a value to the nearest integer. In this lesson, you learn about the functionality of casting operators. You explore the effect of using the `(int)` and `(double)` casting operators on a value and expression. You also use casting operators to round a `double` value to the nearest integer."
       },
@@ -1152,7 +1152,7 @@
       "key": "334812f6-9215-457c-85a6-18792b7250fb",
       "position": 5,
       "properties": {
-        "description": "**Do This:** Click through the animated slides to introduce the classes and methods in The Theater:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `Scene` class\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `drawImage()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The methods to draw shapes\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `playSound()` and `playNote()` methods\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `pause()` method"
+        "description": "**Do This:** Click through the animated slides to introduce the classes and methods in The Theater:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `Scene` class\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `drawImage()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The methods to draw shapes\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `playSound()` and `playNote()` methods\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `pause()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `Theater.playScenes()` method"
       },
       "seeding_key": {
         "activity_section.key": "334812f6-9215-457c-85a6-18792b7250fb",
@@ -1412,7 +1412,7 @@
       "key": "e9688d29-6cac-4e23-b3aa-d613a8c79a8c",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *The equals() Method*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Hold That Thought strategy to discuss the prompts.\n* *How could we use the `equals()` method to check if these two `Dessert` objects are equal?*\n* *What if the other `Dessert` object is `null`?*\n\n**Discussion Goal:** Students suggest overriding the `equals()` method to use `if` statements to check if the values for the instance variables are the same to determine if the two objects are equal. If the values are the same, the method should return `true`. Otherwise, it would return `false`. Students note that the method should first check if the other `Dessert` object is `null` before checking the values of the instance variables.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *The equals() Method*.\n\n**Do This:** Click through the animated slides to explain comparing `String` objects for equality:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Using the `==` operator to compare two string literals\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> How Java stores string literals in the Java String Pool\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Comparing using the `==` operator to compare string literals and `String` objects\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Comparing `String` objects for equality using the `equals()` method\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Hold That Thought strategy to discuss the prompts.\n* *How could we use the `equals()` method to check if these two `Dessert` objects are equal?*\n* *What if the other `Dessert` object is `null`?*\n\n**Discussion Goal:** Students suggest overriding the `equals()` method to use `if` statements to check if the values for the instance variables are the same to determine if the two objects are equal. If the values are the same, the method should return `true`. Otherwise, it would return `false`. Students note that the method should first check if the other `Dessert` object is `null` before checking the values of the instance variables.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2127,9 +2127,10 @@
       "key": "ada92bbd-5426-467f-b5ba-f09dee81173a",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Hold That Thought strategy to discuss the prompts.\n* *When is an instance method best to use?*\n* *Where have you seen a static method before?*\n* *When is a static method best to use?*\n\n**Discussion Goal:** Students suggest using instance methods when the behaviors need to be specific to an object instead of a class. Students recall that the `main()` method is static and note that it is static because they do not create an object to use the `main()` method. Students suggest using a static method when a behavior is not dependent on a specific object or does not require an object to be created to be used.",
+        "description": "We have used static methods with The Theater to play scenes. We are able to call the `playScenes()` method without needing to create a `Theater` object. The Theater also has a static method to extract audio samples from a sound file into an array of `double` values.",
         "duration": "15",
-        "name": "Using Static Methods"
+        "name": "Using Static Methods",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "ada92bbd-5426-467f-b5ba-f09dee81173a",
@@ -2140,8 +2141,7 @@
       "key": "f100e7b0-b01a-4b50-9e47-b4ff8254a491",
       "position": 5,
       "properties": {
-        "description": "Static methods are useful when you have a behavior for a class that does not need to work with the instance variables or instance methods of a class. Just like we can have static variables and constants that are not dependent on a specific object, we can also have static methods that are not dependent on a specific object.",
-        "remarks": true
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Introduce the classes in the `org.code.media` package.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Explain the functionality of the `read()` method in the `SoundLoader` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Click through the animated slide to explain the components of sound.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Explain the range of values that stored in the `double` array."
       },
       "seeding_key": {
         "activity_section.key": "f100e7b0-b01a-4b50-9e47-b4ff8254a491",
@@ -2509,7 +2509,7 @@
       "key": "ea41e111-0f1f-4b0a-b34b-8a0170186ff4",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What does casting mean?*\n* *Look at the Food Truck question in your activity guide. How did you round down?*\n\n**Discussion Goal:** Students share their definitions for casting and explain how they used casting to answer the Food Truck question on the Investigating Casting handout."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What does casting mean?*\n* *Look at the Food Truck question in your activity guide. How did you round down?*\n\n**Discussion Goal:** Students share their definitions for casting and explain how they used casting to answer the Food Truck question on the Investigating Casting handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *cast* and *widen*."
       },
       "seeding_key": {
         "activity_section.key": "ea41e111-0f1f-4b0a-b34b-8a0170186ff4",
@@ -4940,6 +4940,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa4-2022"
+        ],
         "progression": "Unit 4 Survey"
       },
       "bonus": false,
@@ -4987,6 +4990,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Console Sandbox"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5008,6 +5014,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood Sandbox"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -5030,6 +5039,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -5052,6 +5064,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Theater Sandbox"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6029,6 +6044,30 @@
       }
     },
     {
+      "name": "CS Bingo Cards",
+      "url": "https://docs.google.com/presentation/d/1JWNIeSVRbgsusc1bQNbmAyoPecSO3nXUvSHpmc03dBY/edit?usp=sharing",
+      "key": "cs_bingo_cards_3",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "cs_bingo_cards_3"
+      }
+    },
+    {
+      "name": "CS Bingo Definitions",
+      "url": "https://docs.google.com/document/d/1fmhxQJWeJQcU-KivDSrWcp4vfi1be43RRmnrDchHnC4/edit?usp=sharing",
+      "key": "cs_bingo_definitions_3",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_bingo_definitions_3"
+      }
+    },
+    {
       "name": "Dataset Summaries",
       "url": "https://docs.google.com/document/d/1wyGaZP_Lc_aC9gjv_7PrUwH5TFy5O2USU3rqFUuKKpA/edit?usp=sharing",
       "key": "dataset_summaries",
@@ -6526,6 +6565,18 @@
       "seeding_key": {
         "lesson.key": "lesson-6",
         "resource.key": "_key_u4l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "cs_bingo_cards_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "cs_bingo_definitions_3"
       }
     },
     {

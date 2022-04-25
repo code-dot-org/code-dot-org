@@ -3365,7 +3365,7 @@ class UserTest < ActiveSupport::TestCase
       other_pl_script = create :script, name: 'pl-other', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
       @teacher.assign_script(other_pl_script)
 
-      pl_section = create :section, user_id: facilitator.id, unit_group: pl_unit_group, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+      pl_section = create :section, :teacher_participants, user_id: facilitator.id, unit_group: pl_unit_group
       Follower.create!(section_id: pl_section.id, student_user_id: @teacher.id, user: facilitator)
     end
 
