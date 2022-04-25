@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import JavalabButton from './JavalabButton';
 import JavalabSettings from './JavalabSettings';
+import BaseDialog from '../templates/BaseDialog';
+import StandaloneAnimationPicker from './StandaloneAnimationPicker';
 
 export default function ControlButtons({
   isRunning,
@@ -38,8 +40,19 @@ export default function ControlButtons({
     finishButtonId = 'finishButton';
   }
 
+  const [showDialog, setShowDialog] = useState(false);
+
   return (
     <div>
+      <BaseDialog isOpen={showDialog} handleClose={() => setShowDialog(false)}>
+        <StandaloneAnimationPicker
+          manifest={'spritelab'}
+          onAnimationsSelected={animations => {
+            console.log(animations);
+            setShowDialog(false);
+          }}
+        />
+      </BaseDialog>
       <div style={styles.leftButtons}>
         <JavalabButton
           id="runButton"
@@ -63,6 +76,7 @@ export default function ControlButtons({
             isDisabled={disableTestButton}
           />
         )}
+        <div onClick={() => setShowDialog(true)}>{'OPEN ANIMATIONS COOL'}</div>
       </div>
       <div style={styles.rightButtons}>
         <JavalabSettings>{renderSettings()}</JavalabSettings>
