@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "csc-pilot-2022-ecosystems",
-    "serialized_at": "2022-04-21 21:28:37 UTC",
+    "serialized_at": "2022-04-22 20:29:10 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -64,7 +64,7 @@
       "relative_position": 2,
       "properties": {
         "overview": "In this lesson, students will program a model of an aquatic ecosystem and then simulate an overfishing situation. Students will learn how to program conditional statements to check the number of algae in the water and to change the look of the coral when there is too much algae.",
-        "preparation": "- Play through the levels and review the lesson slides.\n- Check your technology and decide if you need to troubleshoot anything in advance.\n- Review slides and decide on pacing between student work time and whole group instruction.",
+        "preparation": "- Play through the levels and review the lesson slides.\n- Decide on pacing between student work time and whole group instruction.\n- Check your technology and decide if you need to troubleshoot anything in advance.",
         "purpose": "Students will learn about how ecosystems have many organisms that interact and keep each other in balance. They will combine computer science with life sciences to create a model that simulates the effects of overfishing.  "
       },
       "seeding_key": {
@@ -81,9 +81,9 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "\nIn this lesson, students will create an event-based cause-and-effect model in Sprite Lab to illustrate how species adapt to their environments over time in order to survive. They will explore examples of evolution, adaptation, migration, natural selection, and survival in groups. The lesson concludes with a creative project where the student creates a hypothesis for a potential future aquatic animal adaptation due to overfishing.\n\nInteractive models and simulations are used in the real world to help engineers and scientists identify patterns, understand nature, make predictions about future changes, and design solutions to prepare for and/or combat major disruptions. ",
+        "overview": "In this lesson, students will create an event-based cause-and-effect model in Sprite Lab to illustrate how species adapt to their environments over time in order to survive. They will explore examples of evolution, adaptation, migration, natural selection, and survival in groups. The lesson concludes with a creative project where students create a hypothesis for a potential future aquatic animal adaptation due to overfishing.",
         "preparation": "- Review and complete the online tutorial yourself\n- Check your technology and decide if you need to troubleshoot anything in advance\n- Review slides and decide on pacing between student work time and whole group instruction",
-        "purpose": "Students will learn how to use computer science to code models of animal adaptations. They will make a project that demonstrates how several animals have changed over time. For example, they could show how giraffes got their long necks, how bunnies have changed their fur color to hide in their environment and how whales migrate to warmer or cooler water when the season changes. \n"
+        "purpose": "Students will learn how to use computer science to code models of animal adaptations. Interactive models and simulations are used in the real world to help engineers and scientists identify patterns, understand nature, make predictions about future changes, and design solutions to prepare for and/or combat major disruptions. Students will make a project that demonstrates how several animals have changed over time. For example, they could show how giraffes got their long necks, how bunnies have changed their fur color to hide in their environment and how whales migrate to warmer or cooler water when the season changes. \n"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -225,7 +225,7 @@
       "key": "61e690bc-a476-42cc-895c-2ddae024519f",
       "position": 1,
       "properties": {
-        "description": "Welcome students to class and very briefly introduce the day’s activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _How do we use sprites in our programs?_",
+        "description": "Welcome students to class and very briefly introduce the day’s activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Notice, Wonder, Want to Know” slide\n\n**Say**: \n* _What do you notice about this picture and code?_\n* _What do you wonder?_\n* _What do you want to know?_\n",
         "name": "Setting the Stage "
       },
       "seeding_key": {
@@ -249,7 +249,7 @@
       "key": "1e226d86-819a-46f6-a575-358c67adedc0",
       "position": 3,
       "properties": {
-        "description": "*We’re learning a new meaning for the word \"event\" today. Let's focus on events that cause other actions to happen like when flipping a switch causes the lights to turn on or pressing a button to make a character in a game move.*"
+        "description": "**Say**: *We’re learning a new meaning for the word \"event\" today. Let's focus on events that cause other actions to happen like when flipping a switch causes the lights to turn on or pressing a button to make a character in a game move.*"
       },
       "seeding_key": {
         "activity_section.key": "1e226d86-819a-46f6-a575-358c67adedc0",
@@ -271,7 +271,8 @@
       "key": "8cad997f-8cf1-4989-b24f-603f0592ac4e",
       "position": 5,
       "properties": {
-        "description": "*In this activity, you’re going to have fun making an interactive world with fun characters called sprites. You’ll be able to make the sprites say things with speech bubbles as you’d see in a comic or graphic novel, and you’ll learn to make them respond automatically when you or someone else clicks on them.*"
+        "description": "In this activity, you’re going to have fun making an interactive world with fun characters called sprites. You’ll be able to make the sprites say things with speech bubbles as you’d see in a comic or graphic novel, and you’ll learn to make them respond automatically when you or someone else clicks on them.",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "8cad997f-8cf1-4989-b24f-603f0592ac4e",
@@ -331,7 +332,8 @@
       "key": "2b254962-0fed-44e0-aa27-04cd7d766886",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7-12 - Skill Building” slide"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7-13 - Skill Building” slide",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "2b254962-0fed-44e0-aa27-04cd7d766886",
@@ -377,7 +379,7 @@
       "key": "ef5da659-551f-47e7-b09b-364bc0c4c223",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _What did you learn today about sprites?_ \n* _How do events work in your code?_\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _What did you learn today about sprites?_ \n* _How do events work in your code?_\n* _Which level was the most challenging?_\n",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -491,10 +493,32 @@
       }
     },
     {
-      "key": "90016b1d-ac74-4f90-a88d-02eb15348a76",
+      "key": "c9349269-9270-46e3-93b0-f10ef90f4a64",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 4 - Prediction” slide\n\n**Do This**: As soon as a few students have completed level 3, bring the whole class together to preview level 4. Make a prediction together and discuss the correct answer. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 4 - Prediction” slide\n\n**Do This**: As soon as a few students have completed level 3, bring the whole class together to preview level 4. Make a prediction together and discuss the correct answer. "
+      },
+      "seeding_key": {
+        "activity_section.key": "c9349269-9270-46e3-93b0-f10ef90f4a64",
+        "lesson_activity.key": "ad5fdf70-0572-41f8-8cda-d716986a5fdf"
+      }
+    },
+    {
+      "key": "2e3f83e4-e4a1-4617-87ec-b4a502dccd79",
+      "position": 7,
+      "properties": {
+        "description": "On Levels 4 and 6 you will need to read the code, out loud if possible, then choose the answer that best describes what will happen in the program. After choosing your answer, click the run button to see what happens. Were you correct? How did you know? What do you notice in the code now that you saw the program run? ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2e3f83e4-e4a1-4617-87ec-b4a502dccd79",
+        "lesson_activity.key": "ad5fdf70-0572-41f8-8cda-d716986a5fdf"
+      }
+    },
+    {
+      "key": "90016b1d-ac74-4f90-a88d-02eb15348a76",
+      "position": 8,
+      "properties": {
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -504,7 +528,7 @@
     },
     {
       "key": "b4025688-fd40-4651-b8e0-d4ad04f3b717",
-      "position": 7,
+      "position": 9,
       "properties": {
         "tips": [
           {
@@ -519,32 +543,19 @@
       }
     },
     {
-      "key": "2e3f83e4-e4a1-4617-87ec-b4a502dccd79",
-      "position": 8,
+      "key": "e6d0ff9b-725f-45d4-a556-f134142da793",
+      "position": 10,
       "properties": {
-        "description": "On Levels 4 and 6 you will need to read the code, out loud if possible, then choose the answer that best describes what will happen in the program. After choosing your answer, click the run button to see what happens. Were you correct? How did you know? What do you notice in the code now that you saw the program run? ",
-        "remarks": true
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Key Concept” slide\n\n**Do This**: Introduce conditionals as a key concept. Show the anatomy of a conditional statement and then show the video on the following slide. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Conditional Statements” video\n\n**Discuss**: Computers are very good at using true or false statements to make decisions on what to do. For example: “If the volume+  key is pressed, then the sound will get louder. Or if the mute key is pressed then the sound will turn off. What other examples can you think of that computers check a condition to see if it’s true or false and then execute an action based on the answer? \n\n**Discussion Goal**: Students will understand that computers can check to see if something is true or false and ‘decide’ which action to execute based on the answer. \n\n* **Condition** - Something a program checks to see if it is true before allowing an action.\n* **Conditionals** - Statements that only run under certain conditions.\n"
       },
       "seeding_key": {
-        "activity_section.key": "2e3f83e4-e4a1-4617-87ec-b4a502dccd79",
-        "lesson_activity.key": "ad5fdf70-0572-41f8-8cda-d716986a5fdf"
-      }
-    },
-    {
-      "key": "e2735473-f5f1-487f-b11a-27bbc5526d23",
-      "position": 9,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Key Concept” slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 5” slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6” slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7” slide\n\n**Do This**: Introduce conditionals as a key concept. Show the anatomy of a conditional statement and then show the video on the following slide. ",
-        "progression_name": "Skill Building"
-      },
-      "seeding_key": {
-        "activity_section.key": "e2735473-f5f1-487f-b11a-27bbc5526d23",
+        "activity_section.key": "e6d0ff9b-725f-45d4-a556-f134142da793",
         "lesson_activity.key": "ad5fdf70-0572-41f8-8cda-d716986a5fdf"
       }
     },
     {
       "key": "904c3551-9864-4258-8017-e96b1d905729",
-      "position": 10,
+      "position": 11,
       "properties": {
         "tips": [
           {
@@ -559,10 +570,22 @@
       }
     },
     {
-      "key": "18951d48-856d-4d66-99a4-b5056bcf4611",
-      "position": 11,
+      "key": "e2735473-f5f1-487f-b11a-27bbc5526d23",
+      "position": 12,
       "properties": {
-        "description": "**Discuss**: Computers are very good at using true or false statements to make decisions on what to do. For example: “If the volume+  key is pressed, then the sound will get louder. Or if the mute key is pressed then the sound will turn off. What other examples can you think of that computers check a condition to see if it’s true or false and then execute an action based on the answer? \n\n**Discussion Goal**: Students will understand that computers can check to see if something is true or false and ‘decide’ which action to execute based on the answer. \n\n**Condition** - Something a program checks to see if it is true before allowing an action.\n**Conditionals** - Statements that only run under certain conditions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Review slides for Levels 5 - 7\n \n**Do This**: Point out the science of the cause and effect of fish being removed from the ecosystem and show the conditional statement blocks that will check if the number of algae is high (>8) or low (<8).  After discussing conditionals and previewing levels 5-7, send students to resume working at their own pace for the remainder of the lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8” slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Review slides for Levels 5 - 7\n \n**Do This**: Point out the science of the cause and effect of fish being removed from the ecosystem and show the conditional statement blocks that will check if the number of algae is high (>8) or low (<8).  After discussing conditionals and previewing levels 5-7, send students to resume working at their own pace for the remainder of the lesson.",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "e2735473-f5f1-487f-b11a-27bbc5526d23",
+        "lesson_activity.key": "ad5fdf70-0572-41f8-8cda-d716986a5fdf"
+      }
+    },
+    {
+      "key": "18951d48-856d-4d66-99a4-b5056bcf4611",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8” slide\n",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -572,7 +595,7 @@
     },
     {
       "key": "c64edda8-c21c-409f-b725-9e961bf8865a",
-      "position": 12,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9” slide\n",
         "progression_name": "Multiple Choice"
@@ -584,7 +607,7 @@
     },
     {
       "key": "37c6c5f7-0093-4bb1-bb08-551734e3603d",
-      "position": 13,
+      "position": 15,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10” slide\n",
         "progression_name": "Free Play"
@@ -596,7 +619,7 @@
     },
     {
       "key": "d23e9d4d-4731-4f63-9a38-c7cb41945893",
-      "position": 14,
+      "position": 16,
       "properties": {
         "duration": "10",
         "name": "Modify the Simulation",
@@ -614,7 +637,7 @@
     },
     {
       "key": "8b8211fa-dd9f-472c-98b6-3e412019a71c",
-      "position": 15,
+      "position": 17,
       "properties": {
         "description": "Try changing one number at a time and predict what you expect to happen before clicking the run button. Explain what changed in the program after changing the numbers. After you experiment a bit try answering the following questions: \n\n- What happens if your ecosystem starts with a large number of fish? \n- What happens if it takes more/less time for the algae to regrow? \n- How else can you control how many new algae are growing? \n- Bonus Challenge! Can you add a second type of fish to your model? \n",
         "remarks": true
@@ -628,7 +651,7 @@
       "key": "43ff1ae0-d263-4486-a578-fb4d18294089",
       "position": 1,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discuss**: Use conditional statements to explain balanced and/or unbalanced ecosystems. .\n\n\n**Discussion Goal**: Students will be able to articulate what they have learned about the effects of one organism on another in an ecosystem. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Show What You Know!” slide\n\n**Discuss**: Use conditional statements to explain balanced and/or unbalanced ecosystems.\n\n**Discussion Goal**: Students will be able to articulate what they have learned about the effects of one organism on another in an ecosystem. ",
         "duration": "10",
         "name": "Cause and Effect"
       },
@@ -641,7 +664,7 @@
       "key": "31b3e67a-e021-4625-8ec5-1fd2c387cb9b",
       "position": 2,
       "properties": {
-        "description": "We have learned how to show cause and effect in an ecosystem using code! Show what you’ve learned about how the organisms in this aquatic ecosystem balance each other and how over fishing can disrupt the balance. Fill in the blanks of the conditional statement: If there are  _________ then ________. The word bank has some options to get you started but you may use any other words you need as well. \n\nFor example: If there are **too many algae** then **the coral will become unhealthy**. If there are **too few fish to eat the algae** then **the algae will overgrow**.",
+        "description": "We have learned how to show cause and effect in an ecosystem using code! Show what you’ve learned about how the organisms in this aquatic ecosystem balance each other and how over fishing can disrupt the balance. Fill in the blanks of the conditional statement: If there are  ________ then ________. The word bank has some options to get you started but you may use any other words you need as well. \n\nFor example: If there are **too many algae** then **the coral will become unhealthy**. If there are **too few fish to eat the algae** then **the algae will overgrow**.",
         "remarks": true
       },
       "seeding_key": {
@@ -716,7 +739,7 @@
       "key": "0d8f6ea5-9ef2-4882-ab26-b9c152b64c34",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Science + Coding” slide\n\n**Display**: \n\n_**Adaptations**_ \\\n_Animals change over many generations so that they have a better chance of survival._\n\n_**Build a Model**_ \\\n_Today you will use computer science and code to build models that show animal adaptations._\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Learning Targets” slide\n\n* _I can develop a model using code to show biological evolution._\n* _I can create simulations of animal adaptations._\n* _I can explain how animals evolve and change as a result of changes in their environment_\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Science + Coding” slide\n\n**Display**: \n\n_**Adaptations:** Animals change over many generations so that they have a better chance of survival._\n\n_**Build a Model:** Today you will use computer science and code to build models that show animal adaptations._\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Learning Targets” slide\n\n* _I can develop a model using code to show biological evolution._\n* _I can create simulations of animal adaptations._\n* _I can explain how animals evolve and change as a result of changes in their environment_\n"
       },
       "seeding_key": {
         "activity_section.key": "0d8f6ea5-9ef2-4882-ab26-b9c152b64c34",
@@ -741,7 +764,7 @@
       "key": "ff91ebf4-4a45-4bd7-85fb-ff2099105c70",
       "position": 2,
       "properties": {
-        "description": "**Do This**: Circulate as students work at their own pace using the instructions to learn and code programs on each level. "
+        "description": "**Do This**: Transition students to their computers, and have them begin following the instructions for each level in the skill building section. Circulate the room as students work at their own pace."
       },
       "seeding_key": {
         "activity_section.key": "ff91ebf4-4a45-4bd7-85fb-ff2099105c70",
@@ -879,8 +902,8 @@
       "key": "0d2ef06c-1721-486e-925f-b3e359db0157",
       "position": 13,
       "properties": {
-        "description": "**(Optional) Do This**: It is possible for teachers to make a remix of the Free Play level and then upload your own images to use for sprites. You could use this technique to put a local lens on the last level. This is a video that explains how to upload your own images for your students to use as sprites. ",
-        "progression_name": "Freeplay"
+        "description": "**(Optional) Do This**: It is possible for teachers to make a remix of the Free Play level and then upload their own images to use for sprites. You could use this technique to put a local lens on the last level. This is a [video](https://www.youtube.com/watch?v=8KCAvNt4jRg) that explains how to upload your own images for your students to use as sprites. ",
+        "progression_name": "Free Play"
       },
       "seeding_key": {
         "activity_section.key": "0d2ef06c-1721-486e-925f-b3e359db0157",
@@ -1099,7 +1122,8 @@
       "properties": {
         "level_keys": [
           "coursee_helloworld_events_ecosystems"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1123,7 +1147,8 @@
       "properties": {
         "level_keys": [
           "helloworld_food_backgrounds_ecosystems"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1147,7 +1172,8 @@
       "properties": {
         "level_keys": [
           "helloworld_food_costumes_ecosystems"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1171,7 +1197,8 @@
       "properties": {
         "level_keys": [
           "helloworld_food_sizes_ecosystems"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1195,7 +1222,8 @@
       "properties": {
         "level_keys": [
           "helloworld_food_behaviors_ecosystems"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1219,7 +1247,8 @@
       "properties": {
         "level_keys": [
           "gray_csc_helloworld_choice_group_ecosystems"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1243,7 +1272,8 @@
       "properties": {
         "level_keys": [
           "helloworld_food_sounds_ecosystems"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1315,6 +1345,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_fish"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1337,6 +1370,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_boat"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1359,6 +1395,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_algae"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1381,6 +1420,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_algae_growth"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -1403,6 +1445,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_multiple_choice_1"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1425,6 +1470,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_coral"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1447,6 +1495,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_multiple_choice_2"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1469,6 +1520,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_coral_health"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -1491,6 +1545,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_multiple_choice_3"
+        ],
         "progression": "Multiple Choice"
       },
       "bonus": false,
@@ -1766,7 +1823,7 @@
         "level_keys": [
           "csc_ecosystems_freeplay"
         ],
-        "progression": "Freeplay"
+        "progression": "Free Play"
       },
       "bonus": false,
       "seeding_key": {
@@ -2207,19 +2264,6 @@
   ],
   "resources": [
     {
-      "name": "CSC - Hello World - Slides",
-      "url": "https://docs.google.com/presentation/d/1Zt7oK0fuOR8XyKsCjWos3jfifO1uD0KFZfK8cbJulH8/template/preview\t",
-      "key": "csc_-_hello_world_-_slides",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1Zt7oK0fuOR8XyKsCjWos3jfifO1uD0KFZfK8cbJulH8/explore/pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csc_-_hello_world_-_slides"
-      }
-    },
-    {
       "name": "Ecosystems",
       "url": "https://docs.google.com/presentation/d/1PDi5BJoire7klvIUYG-z8HYofryBHiIsFhJ8P8i6t90/template/preview",
       "key": "ecosystems",
@@ -2237,7 +2281,7 @@
     {
       "seeding_key": {
         "lesson.key": "Hello World CSC",
-        "resource.key": "csc_-_hello_world_-_slides"
+        "resource.key": "ecosystems"
       }
     },
     {

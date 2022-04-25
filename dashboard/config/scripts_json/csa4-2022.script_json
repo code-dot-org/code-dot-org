@@ -31,8 +31,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-21 23:20:06 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-04-23 21:26:37 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -1412,7 +1412,7 @@
       "key": "e9688d29-6cac-4e23-b3aa-d613a8c79a8c",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *The equals() Method*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the difference between using `==` and `equals()` to compare `String` objects.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Hold That Thought strategy to discuss the prompts.\n* *How could we use the `equals()` method to check if these two `Dessert` objects are equal?*\n* *What if the other `Dessert` object is `null`?*\n\n**Discussion Goal:** Students suggest overriding the `equals()` method to use `if` statements to check if the values for the instance variables are the same to determine if the two objects are equal. If the values are the same, the method should return `true`. Otherwise, it would return `false`. Students note that the method should first check if the other `Dessert` object is `null` before checking the values of the instance variables.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *The equals() Method*.\n\n**Do This:** Click through the animated slides to explain comparing `String` objects for equality:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Using the `==` operator to compare two string literals\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> How Java stores string literals in the Java String Pool\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Comparing using the `==` operator to compare string literals and `String` objects\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Comparing `String` objects for equality using the `equals()` method\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Hold That Thought strategy to discuss the prompts.\n* *How could we use the `equals()` method to check if these two `Dessert` objects are equal?*\n* *What if the other `Dessert` object is `null`?*\n\n**Discussion Goal:** Students suggest overriding the `equals()` method to use `if` statements to check if the values for the instance variables are the same to determine if the two objects are equal. If the values are the same, the method should return `true`. Otherwise, it would return `false`. Students note that the method should first check if the other `Dessert` object is `null` before checking the values of the instance variables.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2127,9 +2127,10 @@
       "key": "ada92bbd-5426-467f-b5ba-f09dee81173a",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Hold That Thought strategy to discuss the prompts.\n* *When is an instance method best to use?*\n* *Where have you seen a static method before?*\n* *When is a static method best to use?*\n\n**Discussion Goal:** Students suggest using instance methods when the behaviors need to be specific to an object instead of a class. Students recall that the `main()` method is static and note that it is static because they do not create an object to use the `main()` method. Students suggest using a static method when a behavior is not dependent on a specific object or does not require an object to be created to be used.",
+        "description": "We have used static methods with The Theater to play scenes. We are able to call the `playScenes()` method without needing to create a `Theater` object. The Theater also has a static method to extract audio samples from a sound file into an array of `double` values.",
         "duration": "15",
-        "name": "Using Static Methods"
+        "name": "Using Static Methods",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "ada92bbd-5426-467f-b5ba-f09dee81173a",
@@ -2140,8 +2141,7 @@
       "key": "f100e7b0-b01a-4b50-9e47-b4ff8254a491",
       "position": 5,
       "properties": {
-        "description": "Static methods are useful when you have a behavior for a class that does not need to work with the instance variables or instance methods of a class. Just like we can have static variables and constants that are not dependent on a specific object, we can also have static methods that are not dependent on a specific object.",
-        "remarks": true
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Introduce the classes in the `org.code.media` package.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Explain the functionality of the `read()` method in the `SoundLoader` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Click through the animated slide to explain the components of sound.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Explain the range of values that stored in the `double` array."
       },
       "seeding_key": {
         "activity_section.key": "f100e7b0-b01a-4b50-9e47-b4ff8254a491",
@@ -2509,7 +2509,7 @@
       "key": "ea41e111-0f1f-4b0a-b34b-8a0170186ff4",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What does casting mean?*\n* *Look at the Food Truck question in your activity guide. How did you round down?*\n\n**Discussion Goal:** Students share their definitions for casting and explain how they used casting to answer the Food Truck question on the Investigating Casting handout."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What does casting mean?*\n* *Look at the Food Truck question in your activity guide. How did you round down?*\n\n**Discussion Goal:** Students share their definitions for casting and explain how they used casting to answer the Food Truck question on the Investigating Casting handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *cast* and *widen*."
       },
       "seeding_key": {
         "activity_section.key": "ea41e111-0f1f-4b0a-b34b-8a0170186ff4",
