@@ -35,18 +35,22 @@ export function getTextWidth(p5, text, size) {
  * ratio is too low (e.g., the width is too narrow and tail is too large). Consider
  * setting a minimum width or calculating a ratio greater than 5:1 (not exact; just a starting
  * point).
+ * Bubbles follow the sprite but not past the app canvas. Tails extend down towards the sprite.
+ * The bubble has a fixed size, while the tail can shrink depending on the available space.
  *
  * @param {P5} p5
- * @param {Number} x
- * @param {Number} y
- * @param {Number} width
- * @param {Number} height
- * @param {Number} config.tailSize
+ * @param {Number} bubbleX - top left corner
+ * @param {Number} bubbleY - top left corner
+ * @param {Number} bubbleWidth
+ * @param {Number} bubbleHeight
+ * @param {Number} config.Width
+ * @param {Number} config.Height
  * @param {Number} config.tailTipX
  * @param {Number} config.radius
  * @param {String} config.fill
  * @param {Number} config.strokeWeight
  * @param {Number} config.stroke
+ * @param {String} bubbleType - 'say' or 'think'
  * @returns {Object}
  */
 export function speechBubble(
@@ -68,11 +72,6 @@ export function speechBubble(
   } = {},
   bubbleType
 ) {
-  // A speech bubble is comprised of a rectangular bubble stacked on top of a bubble.
-  // Bubbles follow the sprite but not past the app canvas. Tails extend down towards the sprite.
-  // The bubble has a fixed size, while the tail can shrink depending on the available space.
-  // bubbleX and bubbleY are the coordinates of the top left corner of the bubble.
-
   // Shorten the tail if the sprite moves up past the bubble:
   if (bubbleY + bubbleHeight + tailHeight > spriteY) {
     // A minimum of one is used to prevent the tail from disappearing completely.

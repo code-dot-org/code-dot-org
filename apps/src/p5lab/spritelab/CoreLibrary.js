@@ -95,13 +95,20 @@ export default class CoreLibrary {
     });
   }
 
+  /**
+   * Draws a speech bubble with multi-lane text.
+   * @param {String} text
+   * @param {Number} spriteX - corner of sprite
+   * @param {Number} spriteY - top of sprite
+   * @param {String} bubbleType - 'say' or 'think'
+   */
   drawSpeechBubble(text, spriteX, spriteY, bubbleType) {
-    //spriteY actually refers to the top of the sprite, rather than the middle.
     const padding = 8;
     if (typeof text === 'number') {
       text = text.toString();
     }
-    //protect against crashes in the unlikely event that a non-string or non-number was passed
+    // Protect against crashes in the unlikely event that a
+    // non-string or non-number was passed.
     if (typeof text !== 'string') {
       text = '';
     }
