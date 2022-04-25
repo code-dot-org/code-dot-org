@@ -3901,7 +3901,7 @@ zh-CN:
             content:
               display_name: 内容
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
             extra_course_content:
               display_name: 额外的课程内容
           lessons:
@@ -3951,7 +3951,7 @@ zh-CN:
             content:
               display_name: 内容
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
           lessons:
             Digital Citizenship:
               name: 数字公民
@@ -4163,7 +4163,7 @@ zh-CN:
         csf2harvey:
           lesson_groups:
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
             content:
               display_name: 内容
           lessons:
@@ -5330,7 +5330,7 @@ zh-CN:
             csf_e_2:
               display_name: 课程E的内容
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
             extra_course_content:
               display_name: 额外的课程内容
           lessons:
@@ -5472,7 +5472,7 @@ zh-CN:
             csf_f_2:
               display_name: 课程F的内容
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
           lessons:
             'Algorithms: Tangrams':
               name: 算法：七巧板
@@ -5887,7 +5887,7 @@ zh-CN:
             content:
               display_name: 内容
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
           lessons:
             'Programming Unplugged: My Robotic Friends':
               name: 离线编程：我的机器人朋友
@@ -6175,7 +6175,7 @@ zh-CN:
             csf_e_2:
               display_name: 课程E的内容
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
             extra_course_content:
               display_name: 额外的课程内容
           lessons:
@@ -6303,7 +6303,7 @@ zh-CN:
             content:
               display_name: 内容
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
           lessons:
             'Algorithms: Graph Paper Programming':
               name: '算法: 图纸编程'
@@ -6400,7 +6400,7 @@ zh-CN:
             csf_e_2:
               display_name: 课程E的内容
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
             extra_course_content:
               display_name: 额外的课程内容
           lessons:
@@ -6464,7 +6464,7 @@ zh-CN:
             csf_f_2:
               display_name: 课程F的内容
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
           lessons:
             'Programming: My Robotic Friends':
               name: '编程: 我的机器人朋友'
@@ -6879,7 +6879,7 @@ zh-CN:
             csf_e_2:
               display_name: 课程E的内容
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
             extra_course_content:
               display_name: 额外的课程内容
           lessons:
@@ -6949,7 +6949,7 @@ zh-CN:
             csf_f_2:
               display_name: 课程F的内容
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
           lessons:
             'Programming: My Robotic Friends':
               name: '编程: 我的机器人朋友'
@@ -7831,7 +7831,7 @@ zh-CN:
             csf_e_2:
               display_name: 课程E的内容
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
             extra_course_content:
               display_name: 额外的课程内容
           lessons:
@@ -7948,7 +7948,7 @@ zh-CN:
             csf_f_2:
               display_name: 课程F的内容
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
           lessons:
             'Programming: My Robotic Friends':
               name: 我的机器人朋友
@@ -9260,7 +9260,7 @@ zh-CN:
             csf_digcit:
               display_name: 数字公民
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
           lessons:
             'Programming: My Robotic Friends':
               name: '编程: 我的机器人朋友'
@@ -9377,7 +9377,7 @@ zh-CN:
             Data from Sprite Lab:
               name: 精灵图实验室的数据
             End of Course Project:
-              name: 课程结束项目
+              name: 课程项目结束
               description_student: 这个大项目需要大量的时间和良好的计划。寻找灵感，制定计划，释放你的创造力！
               description_teacher: |-
                 接下来的 5 堂课会让学生们有机会将编程技巧使用到结课项目中。此项目会让每个人获得编程经验，并能做出可分享给伙伴和亲人的示例。这需要是一次多堂课或数周的项目，学生们需要花时间进行头脑风暴，学习设计流程，构建，并演示最终作品。\\r
@@ -9428,7 +9428,7 @@ zh-CN:
             csf_digcit:
               display_name: 数字公民
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
           lessons:
             'Algorithms: Graph Paper Programming':
               name: 方格纸编程
@@ -9535,7 +9535,7 @@ zh-CN:
             csf_functions:
               display_name: 函数
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
           lessons:
             'Programming: My Robotic Friends':
               name: '编程: 我的机器人朋友'
@@ -9647,7 +9647,7 @@ zh-CN:
               description_student: 这节课中，循环会让小艺术家画出更酷的图像！
               description_teacher: 当学生们用几个模块和图片就能做出自己的设计时，他们会无比的兴奋！本课基于前一次课对循环的理解，让学生有一次真正创作的机会。本活动非常适合制作作品集，或为家长会或教师会做素材。
             End of Course Project:
-              name: 课程结束项目
+              name: 课程项目结束
               description_student: 这个大项目需要大量的时间和良好的计划。寻找灵感，制定计划，释放你的创造力！
               description_teacher: |-
                 接下来的 4 堂课让学生们有机会将编程技巧使用到结课项目中。此项目会让每个人获得编程经验，并能做出可分享给伙伴和亲人的示例。这需要多堂课或数周的体验，学生们要花时间进行头脑风暴，学习设计流程，构建，并演示最终作品。\\r
@@ -9801,7 +9801,7 @@ zh-CN:
             Virtual Pet with Sprite Lab:
               name: 虚拟宠物
             Build A Project:
-              name: 课程结束项目
+              name: 课程项目结束
             Dance Party:
               name: 舞蹈派对
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -9931,7 +9931,7 @@ zh-CN:
             csf_data:
               display_name: 数据
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
           lessons:
             Programming in Maze:
               name: 迷宫编程
@@ -9993,7 +9993,7 @@ zh-CN:
             Create a Design with Loops:
               name: 创建循环设计
             'End of Course Project: Create a Play Lab Game':
-              name: 课程结束项目
+              name: 课程项目结束
               description_student: 准备好大量的编码吧！是时候开始自己的项目了。
               description_teacher: '这堂实践课程让学生经历设计、开发以及展示自己剧本实验室项目的全过程！为了保证学习过程的顺利，可让学生跟随一步步的结构，从在纸上制定计划，到在网站上编码。另外，我们还为老师准备了一些主持最终展示的想法！ '
             'Programming: My Robotic Friends':
@@ -13033,7 +13033,7 @@ zh-CN:
             csf_functions:
               display_name: 函数
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
           lessons:
             Crowdsourcing:
               name: 众包
@@ -13054,7 +13054,7 @@ zh-CN:
             Functions in Artist:
               name: 艺术家之间的功能
             End of Course Project:
-              name: 课程结束项目
+              name: 课程项目结束
             Nested Loops in the Maze:
               name: 迷宫里的嵌套循环
         time4cs-experiment-unit-2:
@@ -14015,7 +14015,7 @@ zh-CN:
             csf_data:
               display_name: 数据
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
           lessons:
             Screen Out the Mean:
               name: 筛选出平均值
@@ -14090,7 +14090,7 @@ zh-CN:
               description_student: 数据被用来帮助学生理解世界，回答有趣的问题。这节课中，学生们会从剧本实验室项目中收集数据，并通过几种图表来显示。
               description_teacher: 数据被用来帮助学生理解世界，回答有趣的问题。这节课中，学生们会从剧本实验室项目中收集数据，并通过几种图表来显示。
             'End of Course Project: Create a Play Lab Game':
-              name: 课程结束项目
+              name: 课程项目结束
               description_student: 准备好大量的编码吧！是时候开始自己的项目了。
               description_teacher: '这堂实践课程让学生经历设计、开发以及展示自己剧本实验室项目的全过程！为了保证学习过程的顺利，可让学生跟随一步步的结构，从在纸上制定计划，到在网站上编码。另外，我们还为老师准备了一些主持最终展示的想法！ '
             Password Power-Up:
@@ -14115,7 +14115,7 @@ zh-CN:
             csf_digcit:
               display_name: 数字公民
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
           lessons:
             'Algorithms: Graph Paper Programming':
               name: 方格纸编程
@@ -14199,7 +14199,7 @@ zh-CN:
             Dance Part:
               name: 舞蹈派对
             End of Course Project:
-              name: 课程结束项目
+              name: 课程项目结束
               description_student: 准备好大量的编码吧！是时候开始自己的项目了。
             Be A Super Digital Citizen:
               name: 做一个超级数字公民
@@ -14223,7 +14223,7 @@ zh-CN:
             csf_impacts:
               display_name: 计算的影响
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
           lessons:
             Sequencing in the Maze:
               name: 迷宫中的序列
@@ -14293,7 +14293,7 @@ zh-CN:
               name: 艺术家之间的功能
               description_student: 用函数来让复杂的图画变得更简单！
             End of Course Project:
-              name: 课程结束项目
+              name: 课程项目结束
               description_student: 这个大项目需要大量的时间和良好的计划。寻找灵感，制定计划，释放你的创造力！
               description_teacher: |-
                 接下来的 4 堂课让学生们有机会将编程技巧使用到结课项目中。此项目会让每个人获得编程经验，并能做出可分享给伙伴和亲人的示例。这需要多堂课或数周的体验，学生们要花时间进行头脑风暴，学习设计流程，构建，并演示最终作品。\\r
@@ -14327,7 +14327,7 @@ zh-CN:
             csf_sprites:
               display_name: 精灵图
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
           lessons:
             Functions in Minecraft:
               name: "《我的世界》中的函数"
@@ -14404,7 +14404,7 @@ zh-CN:
               description_student: '这节课中，会学到所有权和版权的挑战和利益。 '
               description_teacher: 通过团队的版权和创新来学习计算机科学基础，这门课帮助学生理解尊重他人的所有权和版权的益处和挑战，特别是在数字作品领域。鼓励学生们要成为良好的数字公民，尊重艺术家的版权是重要的一部分。
             End of Course Project:
-              name: 课程结束项目
+              name: 课程项目结束
               description_student: 这个大项目需要大量的时间和良好的计划。寻找灵感，制定计划，释放你的创造力！
               description_teacher: |-
                 接下来的 5 堂课会让学生们有机会将编程技巧使用到结课项目中。此项目会让每个人获得编程经验，并能做出可分享给伙伴和亲人的示例。这需要是一次多堂课或数周的项目，学生们需要花时间进行头脑风暴，学习设计流程，构建，并演示最终作品。\\r
@@ -14436,7 +14436,7 @@ zh-CN:
             csf_sprites:
               display_name: 精灵图
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
           lessons:
             Dance Party:
               name: 舞蹈派对
@@ -14499,7 +14499,7 @@ zh-CN:
             Behaviors with Sprite Lab:
               name: 用精灵图实验室编辑行为
             End of Course Project:
-              name: 课程结束项目
+              name: 课程项目结束
             Programming with Angry Birds:
               name: 迷宫编程
             Debugging with Scrat:
@@ -15358,7 +15358,7 @@ zh-CN:
             Sprites in Action:
               name: 动作精灵图
             End of Course Project:
-              name: 课程结束项目
+              name: 课程项目结束
             Outbreaklab:
               name: 疫情爆发独立实验室
           lesson_groups:
@@ -16232,7 +16232,7 @@ zh-CN:
               description_student: 创建自己的游戏或故事。
               description_teacher: 在这个在线活动中，学生们有机会学习在剧本实验室中如何使用事件，并应用他们学过的所有编程技能来创建一个动画游戏。是时候在剧本实验室里表达创意，编个故事了！
             lesson-1:
-              name: 课程结束项目
+              name: 课程项目结束
           lesson_groups:
             csf_digcit:
               display_name: 数字公民
@@ -16243,7 +16243,7 @@ zh-CN:
             csf_events:
               display_name: 事件
             lessonGroup-5:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
           student_description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
         courseb-2021:
           description_short: 为学前学生准备的计算机科学介绍。类似于课程A，但是增加了概念的深度。
@@ -16308,7 +16308,7 @@ zh-CN:
               description_student: 用事件来创作故事或交互的游戏。
               description_teacher: 在这个在线活动中，学生们可以在剧本实验室中学习如何使用事件，并用学会的编程技巧来创建动画游戏。是时候在剧本实验室里创作游戏了！
             lesson-1:
-              name: 课程结束项目
+              name: 课程项目结束
           lesson_groups:
             csf_digcit:
               display_name: 数字公民
@@ -16321,7 +16321,7 @@ zh-CN:
             csf_events:
               display_name: 事件
             lessonGroup-6:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
           student_description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
         coursec-2021:
           description_short: 学习计算机科学的基础知识, 创造你自己的艺术, 故事和游戏。
@@ -16401,7 +16401,7 @@ zh-CN:
               description_teacher: 数据被用来帮助学生理解世界，回答有趣的问题。这节课中，学生们会从剧本实验室项目中收集数据，并通过几种图表来显示。
             'End of Course Project: Create a Play Lab Game':
               key: '课程结束项目: 创建一个游戏实验室游戏'
-              name: 课程结束项目
+              name: 课程项目结束
               description_student: 准备好大量的编码吧！是时候开始自己的项目了。
               description_teacher: 这堂实践课程让学生经历设计、开发以及展示自己剧本实验室项目的全过程！为了保证学习过程的顺利，可让学生跟随一步步的结构，从在纸上制定计划，到在网站上编码。另外，我们还为老师准备了一些主持最终展示的想法！
           lesson_groups:
@@ -16418,7 +16418,7 @@ zh-CN:
             csf_data:
               display_name: 数据
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
           student_description: 用循环、事件和条件来创建程序。将你的名字翻译成二进制，调查不同的解决问题的技术，并学习如何回应网上欺凌。在课程的最后，创建你自己的，能够共享的游戏或故事。
         coursed-2021:
           title: 课程 D （2021）
@@ -16507,8 +16507,8 @@ zh-CN:
             Be A Super Digital Citizen:
               key: 做一个超级数字公民
             End of Course Project:
-              key: 课程结束项目
-              name: 课程结束项目
+              key: 课程项目结束
+              name: 课程项目结束
               description_student: 准备好大量的编码吧！是时候开始自己的项目了。
             lesson-6:
               name: 与《我的世界》往前看
@@ -16534,7 +16534,7 @@ zh-CN:
             csf_digcit:
               display_name: 数字公民
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
             lessonGroup-6:
               display_name: 数字公民
         coursee-2021:
@@ -16625,8 +16625,8 @@ zh-CN:
               description_student: '这节课中，学生们通过为假想的应用进行头脑风暴并设计辅助功能解决方案，来了解辅助功能以及同理心的价值。 '
               description_teacher: '这节课中，学生们通过为假想的应用进行头脑风暴并设计辅助功能解决方案，来了解辅助功能以及同理心的价值。 '
             End of Course Project:
-              key: 课程结束项目
-              name: 课程结束项目
+              key: 课程项目结束
+              name: 课程项目结束
               description_student: 这个大项目需要大量的时间和良好的计划。寻找灵感，制定计划，释放你的创造力！
               description_teacher: |-
                 接下来的 4 堂课让学生们有机会将编程技巧使用到结课项目中。此项目会让每个人获得编程经验，并能做出可分享给伙伴和亲人的示例。这需要多堂课或数周的体验，学生们要花时间进行头脑风暴，学习设计流程，构建，并演示最终作品。\\r
@@ -16651,7 +16651,7 @@ zh-CN:
             csf_impacts:
               display_name: 计算的影响
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
             lessonGroup-7:
               display_name: 计算的影响
         coursef-2021:
@@ -16744,8 +16744,8 @@ zh-CN:
               description_student: 这节课里，学生们会创建出一只能交互的虚拟宠物，他们能决定它的长相和行为。学生们将使用精灵图实验室的"服装"工具来定制宠物的外表。还会使用到已经学会的事件、行为以及其它概念来让宠物拥有生命！
               description_teacher: 这节课里，学生们会创建出一只能交互的虚拟宠物，他们能决定它的长相和行为。学生们将使用精灵图实验室的"服装"工具来定制宠物的外表。还会使用到已经学会的事件、行为以及其它概念来让宠物拥有生命！
             End of Course Project:
-              key: 课程结束项目
-              name: 课程结束项目
+              key: 课程项目结束
+              name: 课程项目结束
               description_student: 这个大项目需要大量的时间和良好的计划。寻找灵感，制定计划，释放你的创造力！
             lesson-1:
               name: 辅助功能设计
@@ -16776,7 +16776,7 @@ zh-CN:
             csf_sprites:
               display_name: 计算的影响
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
             lessonGroup-8:
               display_name: 变量
             lessonGroup-9:
@@ -16914,8 +16914,8 @@ zh-CN:
               description_student: 这节课里，学生们会创建出一只能交互的虚拟宠物，他们能决定它的长相和行为。学生们将使用精灵图实验室的"服装"工具来定制宠物的外表。还会使用到已经学会的事件、行为以及其它概念来让宠物拥有生命！
               description_teacher: 这节课里，学生们会创建出一只能交互的虚拟宠物，他们能决定它的长相和行为。学生们将使用精灵图实验室的"服装"工具来定制宠物的外表。还会使用到已经学会的事件、行为以及其它概念来让宠物拥有生命！
             End of Course Project:
-              key: 课程结束项目
-              name: 课程结束项目
+              key: 课程项目结束
+              name: 课程项目结束
               description_student: 准备好大量的编码吧！是时候开始自己的项目了。
             lesson-1:
               name: 舞蹈派对
@@ -16943,7 +16943,7 @@ zh-CN:
             csf_sprites:
               display_name: 精灵图
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
             lessonGroup-9:
               display_name: 事件
         pre-express-2021:
@@ -18622,7 +18622,7 @@ zh-CN:
             lessonGroup-3:
               display_name: 变量
             lessonGroup-4:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
         csd6-pilot-2022:
           lessons:
             Project - Prototype an Innovation:
@@ -18797,7 +18797,7 @@ zh-CN:
               description_student: 创建自己的游戏或故事。
               description_teacher: 在这个在线活动中，学生们有机会学习在剧本实验室中如何使用事件，并应用他们学过的所有编程技能来创建一个动画游戏。是时候在剧本实验室里表达创意，编个故事了！
             End of Course Project:
-              name: 课程结束项目
+              name: 课程项目结束
             'Programming: Happy Maps':
               key: '编程: 快乐地图'
               name: 快乐地图
@@ -18834,7 +18834,7 @@ zh-CN:
               description_teacher: 在这个在线活动中，学生们有机会学习在剧本实验室中如何使用事件，并应用他们学过的所有编程技能来创建一个动画游戏。是时候在剧本实验室里表达创意，编个故事了！
             lesson-1:
               key: 第1课
-              name: 课程结束项目
+              name: 课程项目结束
           lesson_groups:
             csf_digcit:
               display_name: 数字公民
@@ -18845,7 +18845,7 @@ zh-CN:
             csf_events:
               display_name: 事件
             lessonGroup-5:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
           student_description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
           description_short: 为学前学生准备的计算机科学介绍
           description_audience: 年龄：4-7
@@ -18961,9 +18961,9 @@ zh-CN:
               description_teacher: 在这节课中，学生们会继续练习计数循环，这次是和小艺术家一起。学生们会组合变量、循环、和计数循环创建复杂的图像，来完成关卡。结束时，他们有机会在自由关卡中创建他们自己的艺术。
               key: 对于艺术家里的循环
             End of Course Project:
-              name: 课程结束项目
+              name: 课程项目结束
               description_student: 准备好大量的编码吧！是时候开始自己的项目了。
-              key: 课程结束项目
+              key: 课程项目结束
             Debugging with Scrat:
               key: 斯奎特和调试
               name: 迷宫里的调试
@@ -19022,7 +19022,7 @@ zh-CN:
             csf_for_loops:
               display_name: 计数循环
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
           description_short: 计算机科学导论：组合了我们为高年级学生准备的最佳的小学课程。
           description_audience: 年龄：9-18
           name: express-2022
@@ -19309,7 +19309,7 @@ zh-CN:
               description_student: 用事件来创作故事或交互的游戏。
               description_teacher: 在这个在线活动中，学生们可以在剧本实验室中学习如何使用事件，并用学会的编程技巧来创建动画游戏。是时候在剧本实验室里创作游戏了！
             End of Course Project:
-              name: 课程结束项目
+              name: 课程项目结束
             Sequencing in Maze:
               key: 迷宫中的序列
               name: 愤怒的小鸟中的序列
@@ -19356,7 +19356,7 @@ zh-CN:
               description_teacher: 在这个在线活动中，学生们可以在剧本实验室中学习如何使用事件，并用学会的编程技巧来创建动画游戏。是时候在剧本实验室里创作游戏了！
             lesson-1:
               key: 第1课
-              name: 课程结束项目
+              name: 课程项目结束
           lesson_groups:
             csf_digcit:
               display_name: 数字公民
@@ -19369,7 +19369,7 @@ zh-CN:
             csf_events:
               display_name: 事件
             lessonGroup-6:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
           student_description: 学习计算机科学的基础和网络安全。在课程的结束时，创建你自己的，能共享的游戏或故事。
           description_short: 为学前学生准备的计算机科学介绍。类似于课程A，但是增加了概念的深度。
           description_audience: 年龄： 5-8
@@ -19431,7 +19431,7 @@ zh-CN:
               description_teacher: 二进制在计算机世界中非常重要。绝大多数计算机将所有信息都保存为二进制的形式。这节课会演示如何从真实世界中获取信息，并转换为一些开和关。
               key: 二进制的手镯
             End of Course Project:
-              name: 课程结束项目
+              name: 课程项目结束
               description_student: 准备好大量的编码吧！是时候开始自己的项目了。
               description_teacher: 这堂实践课程让学生经历设计、开发以及展示自己剧本实验室项目的全过程！为了保证学习过程的顺利，可让学生跟随一步步的结构，从在纸上制定计划，到在网站上编码。另外，我们还为老师准备了一些主持最终展示的想法！
             'Programming: My Robotic Friends':
@@ -19475,7 +19475,7 @@ zh-CN:
               description_teacher: 在这个在线活动中，学生们可以在剧本实验室中学习如何使用事件，并用学会的编程技巧来创建动画游戏。是时候在剧本实验室里创作游戏了！
             'End of Course Project: Create a Play Lab Game':
               key: '课程结束项目: 创建一个游戏实验室游戏'
-              name: 课程结束项目
+              name: 课程项目结束
               description_student: 准备好大量的编码吧！是时候开始自己的项目了。
               description_teacher: 这堂实践课程让学生经历设计、开发以及展示自己剧本实验室项目的全过程！为了保证学习过程的顺利，可让学生跟随一步步的结构，从在纸上制定计划，到在网站上编码。另外，我们还为老师准备了一些主持最终展示的想法！
           lesson_groups:
@@ -19490,7 +19490,7 @@ zh-CN:
             csf_data:
               display_name: 数据
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
           student_description: 用循环、事件和条件来创建程序。将你的名字翻译成二进制，调查不同的解决问题的技术，并学习如何回应网上欺凌。在课程的最后，创建你自己的，能够共享的游戏或故事。
           description_short: 学习计算机科学的基础知识, 创造你自己的艺术, 故事和游戏。
           description_audience: 年龄：6-10
@@ -19726,9 +19726,9 @@ zh-CN:
               description_teacher: 这次课中，学生会学习`直到`循环。学生们会构建程序让主要演员重复动作，`直到`满足希望的停止条件。
               key: 迷宫里的直到循环
             End of Course Project:
-              name: 课程结束项目
+              name: 课程项目结束
               description_student: 准备好大量的编码吧！是时候开始自己的项目了。
-              key: 课程结束项目
+              key: 课程项目结束
             lesson-5:
               key: 第5课
               name: 密码升级
@@ -19775,7 +19775,7 @@ zh-CN:
             csf_conditionals:
               display_name: 条件语句
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
           title: 课程 D （2021）
           description_audience: 年龄：7-11
         coursee-2022:
@@ -19843,13 +19843,13 @@ zh-CN:
               name: 辅助功能设计
               description_teacher: '这节课中，学生们通过为假想的应用进行头脑风暴并设计辅助功能解决方案，来了解辅助功能以及同理心的价值。 '
             End of Course Project:
-              name: 课程结束项目
+              name: 课程项目结束
               description_student: 这个大项目需要大量的时间和良好的计划。寻找灵感，制定计划，释放你的创造力！
               description_teacher: |-
                 接下来的 4 堂课让学生们有机会将编程技巧使用到结课项目中。此项目会让每个人获得编程经验，并能做出可分享给伙伴和亲人的示例。这需要多堂课或数周的体验，学生们要花时间进行头脑风暴，学习设计流程，构建，并演示最终作品。\\r
                 \\r
                 在"探索"阶段，学生将使用已构建好的小艺术家和精灵图实验室程序来寻找灵感。然后，会学习设计的过程，如何在自己的项目中实现。然后给他们空间在小艺术家、精灵图实验室里创建自己的项目，或使用其它熟悉的界面。（这可能是项目中最长的一个阶段。）最终，要给同学们展示最终的作品。
-              key: 课程结束项目
+              key: 课程项目结束
             Simon Says:
               key: Simon 说
               description_student: 玩一下游戏，并思考用什么命令能得到正确的结果。
@@ -19919,7 +19919,7 @@ zh-CN:
             lessonGroup-7:
               display_name: 计算的影响
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
           description_audience: 年龄：8-12
         coursef-2022:
           lessons:
@@ -19979,9 +19979,9 @@ zh-CN:
               description_student: 有没有好奇过信息是如何在互联网上传递的？没什么神奇的！这堂课会教你互联网的基本工作。
               description_teacher: 虽然很多人天天都在使用互联网，但没有多少人知道它是如何工作的。在这堂课中，学生们会假装为互联网，会学会连接，URL，IP地址和域名解析服务。
             End of Course Project:
-              name: 课程结束项目
+              name: 课程项目结束
               description_student: 这个大项目需要大量的时间和良好的计划。寻找灵感，制定计划，释放你的创造力！
-              key: 课程结束项目
+              key: 课程项目结束
             lesson-6:
               key: 第6课
             lesson-7:
@@ -20052,7 +20052,7 @@ zh-CN:
             lessonGroup-8:
               display_name: 变量
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
           description_short: 学习计算机科学基础中的所有概念，并创建你自己的艺术、故事或游戏。
           description_audience: 年龄：9-13
         csp-post-survey-2021:
@@ -20414,9 +20414,9 @@ zh-CN:
               description_teacher: 虽然很多人天天都在使用互联网，但没有多少人知道它是如何工作的。在这堂课中，学生们会假装为互联网，会学会连接，URL，IP地址和域名解析服务。
               key: 互联网
             End of Course Project:
-              name: 课程结束项目
+              name: 课程项目结束
               description_student: 这个大项目需要大量的时间和良好的计划。寻找灵感，制定计划，释放你的创造力！
-              key: 课程结束项目
+              key: 课程项目结束
           lesson_groups:
             lessonGroup-7:
               display_name: 数字公民
@@ -20425,7 +20425,7 @@ zh-CN:
             lessonGroup-8:
               display_name: 变量
             end_of_course_project:
-              display_name: 课程结束项目
+              display_name: 课程项目结束
           description_audience: 年龄：9-13
           description_short: 学习计算机科学基础中的所有概念，并创建你自己的艺术、故事或游戏。
         csa6-2022:

@@ -1231,6 +1231,7 @@ zh-CN:
         text: 使用{NUM} {ANIMATION_NAME}精灵图，创建{EFFECT}效果
         options:
           EFFECT:
+            '"burst"': 爆裂
             '"pop"': 爆破
             '"rain"': 下雨
       gamelab_makeNewSpriteAnon:
@@ -1283,6 +1284,7 @@ zh-CN:
             "'sound://category_digital/boing_2.mp3'": 啵嘤
             "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": 爆破
             "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": 闪烁
+            "'sound://category_app/app_button_1.mp3'": 按钮
             "'sound://category_collect/clicky_crunch.mp3'": 紧缩
             "'sound://category_swish/quick_swing.mp3'": 摇摆
             "'sound://category_nature/summer_night_loop.mp3'": 夏日夜晚
@@ -1298,6 +1300,7 @@ zh-CN:
             "'sound://category_animals/elephant.mp3'": 大象
             "'sound://category_animals/dolphin.mp3'": 海豚
             "'sound://category_nature/thunderstorm_1.mp3'": 雷暴
+            "'sound://category_animals/chick.mp3'": 小鸡
             "'sound://category_animals/dog.mp3'": 狗
             "'sound://category_collect/trill_stings.mp3'": 颤音
             "'sound://category_tap/vibrant_positive_tap_1.mp3'": 点击
@@ -1948,6 +1951,7 @@ zh-CN:
         text: 使用{NUM} {ANIMATION_NAME}精灵图，创建{EFFECT}效果
         options:
           EFFECT:
+            '"burst"': 爆裂
             '"pop"': 爆破
             '"rain"': 下雨
       Poetry_makeNewSpriteAnon:
