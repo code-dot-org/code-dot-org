@@ -50,7 +50,6 @@ FieldGroup.propTypes = {
 };
 
 const ControlledFieldGroup = ({
-  children,
   componentClass,
   isErrored,
   onChange,
@@ -75,9 +74,7 @@ const ControlledFieldGroup = ({
       label={placeholderOrLabel}
       componentClass={componentClass}
       {...props}
-    >
-      {children}
-    </FieldGroup>
+    />
   ) : (
     <FieldGroup
       {...overlappingProps}
@@ -93,7 +90,6 @@ ControlledFieldGroup.propTypes = {
   isErrored: PropTypes.bool,
   placeholderOrLabel: PropTypes.string.isRequired,
   helpText: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  children: PropTypes.node,
   componentClass: PropTypes.string,
   onChange: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired
