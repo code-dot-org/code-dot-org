@@ -1,7 +1,9 @@
 import GoogleBlockly from 'blockly/core';
 
 /**
- * Adds a copy command to the block context menu.
+ * Adds a copy command to the block context menu. After switching to v7,
+ * we can replace this with:
+ * https://github.com/google/blockly-samples/tree/master/plugins/cross-tab-copy-paste
  */
 const registerBlockCopyToStorage = function() {
   const copyToStorageOption = {
@@ -29,7 +31,9 @@ const registerBlockCopyToStorage = function() {
 };
 
 /**
- * Adds a paste command to the block context menu.
+ * Adds a paste command to the block context menu. After switching to v7,
+ * we can replace this with:
+ * https://github.com/google/blockly-samples/tree/master/plugins/cross-tab-copy-paste
  */
 const registerBlockPasteFromStorage = function() {
   const pasteFromStorageOption = {
