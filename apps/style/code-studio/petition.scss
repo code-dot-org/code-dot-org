@@ -55,6 +55,10 @@ input.field, select.field {
   margin: 0;
 }
 
+input.has-error, select.has-error {
+  border-color: #b94a48;
+}
+
 input.grey_input {
   width: 150px;
 }

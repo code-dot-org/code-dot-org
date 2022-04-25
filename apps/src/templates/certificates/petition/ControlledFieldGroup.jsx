@@ -11,6 +11,7 @@ const FieldGroup = ({
   componentClass,
   helpText,
   id,
+  isErrored,
   label,
   ...props
 }) => {
@@ -19,7 +20,11 @@ const FieldGroup = ({
       {label && <span className="dropdown-label">{label}</span>}
       <FormControl
         componentClass={componentClass}
-        className={classNames('field', stylingForComponent(componentClass))}
+        className={classNames(
+          'field',
+          isErrored ? 'has-error' : '',
+          stylingForComponent(componentClass)
+        )}
         {...props}
       >
         {children}
@@ -37,6 +42,7 @@ const FieldGroup = ({
 
 FieldGroup.propTypes = {
   id: PropTypes.string.isRequired,
+  isErrored: PropTypes.bool,
   label: PropTypes.string,
   helpText: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   children: PropTypes.node,
@@ -46,6 +52,7 @@ FieldGroup.propTypes = {
 const ControlledFieldGroup = ({
   children,
   componentClass,
+  isErrored,
   onChange,
   helpText,
   id,
@@ -55,6 +62,7 @@ const ControlledFieldGroup = ({
 }) => {
   const overlappingProps = {
     id: id,
+    isErrored: isErrored,
     name: id,
     key: id,
     helpText: helpText,
@@ -82,6 +90,7 @@ const ControlledFieldGroup = ({
 
 ControlledFieldGroup.propTypes = {
   id: PropTypes.string.isRequired,
+  isErrored: PropTypes.bool,
   placeholderOrLabel: PropTypes.string.isRequired,
   helpText: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   children: PropTypes.node,
