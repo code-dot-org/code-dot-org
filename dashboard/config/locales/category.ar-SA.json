@@ -2,6 +2,9 @@
   "ar-SA": {
     "data": {
       "category": {
+        "csta/AP": {
+          "description": "الخوارزميات والبرمجة"
+        },
         "ccela/SL": {
           "description": "التحدث والاستماع"
         },
@@ -26,6 +29,9 @@
         "ccela/RI": {
           "description": "القراءة المعلوماتية"
         },
+        "ccmath/MD": {
+          "description": "استخدام الاحتمالات في اتخاذ القرارات"
+        },
         "ccela/W": {
           "description": "الكتابة"
         },
@@ -37,6 +43,15 @@
         },
         "csta/IC": {
           "description": "تأثيرات الحوسبة"
+        },
+        "csta/NI": {
+          "description": "الشبكات والإنترنت"
+        },
+        "csta/CS": {
+          "description": "أنظمة الحوسبة"
+        },
+        "ngss/ETS1": {
+          "description": "التصميم الهندسي"
         }
       }
     }
