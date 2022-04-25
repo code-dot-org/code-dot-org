@@ -183,6 +183,8 @@ uz:
               name: Funksional "quyosh ovchilari"
             Internet:
               name: Internet
+            Maze:
+              name: Labirint
             'Maze: Conditionals':
               name: 'Labirint: Shartli bayonotlar'
             Songwriting:
@@ -224,6 +226,9 @@ uz:
             Skrat personajlari bilan kompyuter savodxonligi asoslarini sinab ko‘ring!'
           description_short: Ko‘plab ajoyib personajlar bilan kompyuter savodxonligi
             asoslarini sinab ko‘ring!
+          lessons:
+            Maze:
+              name: Labirint
           student_description: '"Angry Birds", "Plants vs Zombies" va "Ice Age" o‘yinidagi
             Skrat personajlari bilan kompyuter savodxonligi asoslarini sinab ko‘ring!'
         frozen:
@@ -1034,6 +1039,8 @@ uz:
               name: Markdown Details
             Match:
               name: Match
+            Maze:
+              name: Labirint
             Minecraft:
               name: Minecraft
             Multi:
@@ -23983,6 +23990,8 @@ uz:
               name: Kollektor o‘yinini yaratish
             Virus Simulation for Code Bytes:
               name: Simulyatsiyani kodlash
+            Making Sprites:
+              name: Sprayt yasash
             Sprites in Action:
               name: Spraytlar amalda
             video:
@@ -26192,6 +26201,8 @@ uz:
                 qiymati haqida bilib oling. '
             lesson-6:
               name: Sprite laboratoriyasi bilan tanishish
+            lesson-7:
+              name: Sprayt yasash
             lesson-8:
               name: Spraytlar amalda
             lesson-2:
@@ -26484,6 +26495,8 @@ uz:
               description_teacher: Bu darsda, talabalar o‘zlarining interaktiv raqs
                 bazmini dasturlashtiradilar. Qurilma musiqaga javob qaytarish uchun
                 yaratilganligi sababli bu mashg‘ulot tovushni talab qiladi.
+            lesson-2:
+              name: Sprayt yasash
             lesson-3:
               name: Spraytlar amalda
           lesson_groups:
@@ -26646,6 +26659,8 @@ uz:
               name: Sprayt guruhlari
             lesson-6:
               name: Kollektor o‘yinini yaratish
+            Making Sprites:
+              name: Sprayt yasash
             Sprites in Action:
               name: Spraytlar amalda
             introducing-spritelab:
@@ -28000,6 +28015,8 @@ uz:
               name: Oʻzgaruvchilar bilan sanash
             Introducing Sprite Lab:
               name: Sprite laboratoriyasi bilan tanishish
+            Making Sprites:
+              name: Sprayt yasash
             Sprites in Action:
               name: Spraytlar amalda
             'Mini-Project: Virtual Pet':
@@ -28318,6 +28335,8 @@ uz:
                 are characters or objects on the screen that students can move, change,
                 and manipulate. Behaviors are actions that sprites will take continuously
                 until they are stopped.'
+            Making Sprites:
+              name: Sprayt yasash
             Sprites in Action:
               name: Spraytlar amalda
             Virtual Pet with Sprite Lab:
@@ -28509,6 +28528,8 @@ uz:
                 Ular xatolikni topish uchun mavjud kodni qatorma-qator tekshirib chiqishadi,
                 jumladan, noto‘g‘ri ishlatilgan sikllar, unutib qoldirilgan bo‘limlar,
                 ortiqcha bo‘limlar va tartibdan tashqaridagi bo‘limlarni.
+            lesson-2:
+              name: Sprayt yasash
             lesson-3:
               name: Spraytlar amalda
             lesson-1:
@@ -29818,6 +29839,8 @@ uz:
           lessons:
             Introducing Sprite Lab:
               name: Sprite laboratoriyasi bilan tanishish
+            Making Sprites:
+              name: Sprayt yasash
             Sprites in Action:
               name: Spraytlar amalda
             'Mini-Project: Virtual Pet':
@@ -29959,6 +29982,8 @@ uz:
                 loyihalarini loyihalashtirish, ishlab chiqish va namoyish etish jarayonidan
                 o‘tadi!
               key: End of Course Project
+            lesson-7:
+              name: Sprayt yasash
             lesson-8:
               name: Spraytlar amalda
             Virtual Pet:
@@ -30312,6 +30337,9 @@ uz:
             Introducing Sprite Lab:
               name: Sprite laboratoriyasi bilan tanishish
               key: Sprite laboratoriyasi bilan tanishish
+            Making Sprites:
+              name: Sprayt yasash
+              key: Sprayt yasash
             Sprites in Action:
               name: Spraytlar amalda
               key: Spraytlar amalda

@@ -158,6 +158,8 @@ uz:
               name: Funksional "quyosh ovchilari"
             Internet:
               name: Internet
+            Maze:
+              name: Labirint
             'Maze: Conditionals':
               name: 'Labirint: Shartli bayonotlar'
             Songwriting:
@@ -189,6 +191,9 @@ uz:
           title: Klassik labirint
           description: '"Angry Birds", "Plants vs Zombies" va "Ice Age" o‘yinidagi Skrat personajlari bilan kompyuter savodxonligi asoslarini sinab ko‘ring!'
           description_short: Ko‘plab ajoyib personajlar bilan kompyuter savodxonligi asoslarini sinab ko‘ring!
+          lessons:
+            Maze:
+              name: Labirint
           student_description: '"Angry Birds", "Plants vs Zombies" va "Ice Age" o‘yinidagi Skrat personajlari bilan kompyuter savodxonligi asoslarini sinab ko‘ring!'
         frozen:
           title: Anna va Elza bilan kod yozing
@@ -960,6 +965,8 @@ uz:
               name: Markdown Details
             Match:
               name: Match
+            Maze:
+              name: Labirint
             Minecraft:
               name: Minecraft
             Multi:
@@ -15031,6 +15038,8 @@ uz:
               name: Kollektor o‘yinini yaratish
             Virus Simulation for Code Bytes:
               name: Simulyatsiyani kodlash
+            Making Sprites:
+              name: Sprayt yasash
             Sprites in Action:
               name: Spraytlar amalda
             video:
@@ -16360,6 +16369,8 @@ uz:
               description_teacher: 'Miya hujumi (brainstorm) va faraziy ilovalar uchun qulay yechimlarni loyihalashtirish orqali kirish imkoniyati va empatiya qiymati haqida bilib oling. '
             lesson-6:
               name: Sprite laboratoriyasi bilan tanishish
+            lesson-7:
+              name: Sprayt yasash
             lesson-8:
               name: Spraytlar amalda
             lesson-2:
@@ -16527,6 +16538,8 @@ uz:
               name: Dance Party
               description_student: Bayram qilish vaqti keldi! Ushbu darsda siz o‘z interaktiv raqs bazmingizni dasturlashtirasiz.
               description_teacher: Bu darsda, talabalar o‘zlarining interaktiv raqs bazmini dasturlashtiradilar. Qurilma musiqaga javob qaytarish uchun yaratilganligi sababli bu mashg‘ulot tovushni talab qiladi.
+            lesson-2:
+              name: Sprayt yasash
             lesson-3:
               name: Spraytlar amalda
           lesson_groups:
@@ -16634,6 +16647,8 @@ uz:
               name: Sprayt guruhlari
             lesson-6:
               name: Kollektor o‘yinini yaratish
+            Making Sprites:
+              name: Sprayt yasash
             Sprites in Action:
               name: Spraytlar amalda
             introducing-spritelab:
@@ -17418,6 +17433,8 @@ uz:
               name: Oʻzgaruvchilar bilan sanash
             Introducing Sprite Lab:
               name: Sprite laboratoriyasi bilan tanishish
+            Making Sprites:
+              name: Sprayt yasash
             Sprites in Action:
               name: Spraytlar amalda
             'Mini-Project: Virtual Pet':
@@ -17617,6 +17634,8 @@ uz:
             Swimming Fish in Sprite Lab:
               description_student: Learn how to create and edit sprites.
               description_teacher: 'In this lesson, students will learn about the two concepts at the heart of Sprite Lab: sprites and behaviors. Sprites are characters or objects on the screen that students can move, change, and manipulate. Behaviors are actions that sprites will take continuously until they are stopped.'
+            Making Sprites:
+              name: Sprayt yasash
             Sprites in Action:
               name: Spraytlar amalda
             Virtual Pet with Sprite Lab:
@@ -17714,6 +17733,8 @@ uz:
               name: Debugging in Maze
               description_student: Boshqotirmalardagi muammolarni toping va debug qilish mahoratingizni amalda sinab ko‘ring.
               description_teacher: Debug qilish dasturlashni o‘rganishning muhim elementidir. Bu darsda, talabalar noto‘g‘ri yechilgan boshqotirmalarga duch kelishadi. Ular xatolikni topish uchun mavjud kodni qatorma-qator tekshirib chiqishadi, jumladan, noto‘g‘ri ishlatilgan sikllar, unutib qoldirilgan bo‘limlar, ortiqcha bo‘limlar va tartibdan tashqaridagi bo‘limlarni.
+            lesson-2:
+              name: Sprayt yasash
             lesson-3:
               name: Spraytlar amalda
             lesson-1:
@@ -18542,6 +18563,8 @@ uz:
           lessons:
             Introducing Sprite Lab:
               name: Sprite laboratoriyasi bilan tanishish
+            Making Sprites:
+              name: Sprayt yasash
             Sprites in Action:
               name: Spraytlar amalda
             'Mini-Project: Virtual Pet':
@@ -18603,6 +18626,8 @@ uz:
               description_student: Projects this big take time and plenty of planning. Find your inspiration, develop a plan, and unleash your creativity!
               description_teacher: Ushbu yakunlovchi dars o‘quvchilarni o‘zlarining loyihalarini loyihalashtirish, ishlab chiqish va namoyish etish jarayonidan o‘tadi!
               key: End of Course Project
+            lesson-7:
+              name: Sprayt yasash
             lesson-8:
               name: Spraytlar amalda
             Virtual Pet:
@@ -18826,6 +18851,9 @@ uz:
             Introducing Sprite Lab:
               name: Sprite laboratoriyasi bilan tanishish
               key: Sprite laboratoriyasi bilan tanishish
+            Making Sprites:
+              name: Sprayt yasash
+              key: Sprayt yasash
             Sprites in Action:
               name: Spraytlar amalda
               key: Spraytlar amalda

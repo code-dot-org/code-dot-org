@@ -517,6 +517,7 @@
           "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview"
         },
         "making_sprites/coursef/2021": {
+          "name": "Sprayt yasash",
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "sprite_lab_documentation/coursef/2021": {
@@ -1244,6 +1245,9 @@
         "sprite_lab_documentation/express/2021": {
           "name": "Sprite Lab Documentation",
           "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "making_sprites/express/2021": {
+          "name": "Sprayt yasash"
         },
         "sprite_lab_documentation_1/express/2021": {
           "name": "Sprite Lab Documentation",
