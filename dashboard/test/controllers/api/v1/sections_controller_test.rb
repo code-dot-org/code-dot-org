@@ -404,13 +404,12 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_nil returned_section.grade
   end
 
-  test "create section without participant type defaults to student" do
+  test "create section without participant type gives error" do
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL
     }
-    assert_response :success
-    assert_equal returned_section.participant_type, 'student'
+    assert_response :bad_request
   end
 
   test 'cannot pass an invalid grade' do
