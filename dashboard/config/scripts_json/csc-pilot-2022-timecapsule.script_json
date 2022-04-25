@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "csc-pilot-2022-timecapsule",
-    "serialized_at": "2022-04-21 21:27:53 UTC",
+    "serialized_at": "2022-04-22 20:48:10 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -283,7 +283,7 @@
       "key": "4e626245-ad07-4497-83c5-18757bd19640",
       "position": 1,
       "properties": {
-        "description": "####Setting the Stage\nWelcome students to class and introduce the day’s activity."
+        "description": "####Setting the Stage\nWelcome students to class and introduce the day’s activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide \n\n**Discuss**:\n* _What is a curator?_\n* _How do you think a curator selects which content to use?_\n* _How can we use images and sound to help represent the meaning of a story?_\n"
       },
       "seeding_key": {
         "activity_section.key": "4e626245-ad07-4497-83c5-18757bd19640",
@@ -340,7 +340,7 @@
       "key": "6ccfe050-d23a-4a71-8c38-71318c504156",
       "position": 1,
       "properties": {
-        "description": "####General Support\nBy the end of this activity, students will have an animated poem that represents their visual interpretation of the poem they chose. This lesson is designed to give students an opportunity to tinker with their code and find the visual effects that they like best. \n\nWhile circling the room, encourage students to:\n- **Take Your Time:** Most of the levels require students to find the perfect effects to match their interpretation of the mood of the poem. Staying on a level and tinkering with their code is highly encouraged. \n- **Find a poem you like:** The poem that displays for a student at a new level is just a suggestion. There is a poem dropdown menu with pre-loaded poems at the top of the playspace. Ask students to read through a few and find one that speaks to them. They can then start animating the poem they chose with code. \n\n- **Show off a completed level:** Any level bubble that is fully green means the student successfully completed all the requirements for that level. Ask a student to click on a green bubble to show off what they created. \n\nFor the times when a student feels stuck: \n- **Read the Instructions:** The instructions are bulleted points on how to complete the level. If a student feels stuck, ask them to read the instructions out loud to you and ask them to repeat back what the instructions say in their own words. \n  - <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Students can also click on this text-to-speech icon to hear the instructions read aloud.\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Look for hints**: Most levels include at least one hint with more explicit details about how to pass the level. \n- **Celebrate bugs:** Getting a bug in your code is a natural part of the coding process. If the program isn’t doing what they expected, ask the student to first tell you what they want to happen, click run to observe what is actually happening, then find the place in their code that caused the discrepancy. Remember to celebrate finding bugs and fixing bugs. Getting a bug means students are doing a great job building a more complex program. \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Adding Meaning with Images and Sounds\" video\n\n####General Support\nBy the end of this activity, students will have an animated poem that represents their visual interpretation of the poem they chose. This lesson is designed to give students an opportunity to tinker with their code and find the visual effects that they like best. \n\nWhile circling the room, encourage students to:\n- **Take Your Time:** Most of the levels require students to find the perfect effects to match their interpretation of the mood of the poem. Staying on a level and tinkering with their code is highly encouraged. \n- **Find a poem you like:** The poem that displays for a student at a new level is just a suggestion. There is a poem dropdown menu with pre-loaded poems at the top of the playspace. Ask students to read through a few and find one that speaks to them. They can then start animating the poem they chose with code. \n\n- **Show off a completed level:** Any level bubble that is fully green means the student successfully completed all the requirements for that level. Ask a student to click on a green bubble to show off what they created. \n\nFor the times when a student feels stuck: \n- **Read the Instructions:** The instructions are bulleted points on how to complete the level. If a student feels stuck, ask them to read the instructions out loud to you and ask them to repeat back what the instructions say in their own words. \n  - <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Students can also click on this text-to-speech icon to hear the instructions read aloud.\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Look for hints**: Most levels include at least one hint with more explicit details about how to pass the level. \n- **Celebrate bugs:** Getting a bug in your code is a natural part of the coding process. If the program isn’t doing what they expected, ask the student to first tell you what they want to happen, click run to observe what is actually happening, then find the place in their code that caused the discrepancy. Remember to celebrate finding bugs and fixing bugs. Getting a bug means students are doing a great job building a more complex program. \n",
         "name": "Poem Art"
       },
       "seeding_key": {
@@ -352,7 +352,7 @@
       "key": "45e15f48-7c01-40ba-95fe-8bb6c9c8a160",
       "position": 2,
       "properties": {
-        "description": "####Level-by-Level Support (40 minutes)\n**Level 1:** Encourage students to read through the poem. Then ask students to find a background color or effect that matches the tone of the poem they chose. ",
+        "description": "####Level-by-Level Support (40 minutes)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “All Levels\" slide\n\n**Level 1:** Encourage students to read through the poem. Then ask students to find a background color or effect that matches the tone of the poem they chose. ",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -433,6 +433,17 @@
       }
     },
     {
+      "key": "4f2ab4a8-68ea-4533-a667-58eedf2edcba",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Great work! What’s next?\" slide\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "4f2ab4a8-68ea-4533-a667-58eedf2edcba",
+        "lesson_activity.key": "f7eb5cd6-1191-4183-b7d9-2a6e041c8949"
+      }
+    },
+    {
       "key": "caa75868-cef4-4a9c-829e-b6869d2c41d1",
       "position": 1,
       "properties": {
@@ -445,8 +456,19 @@
       }
     },
     {
-      "key": "60d79f58-2781-4b13-818d-06d181016f9a",
+      "key": "23e61b7f-4e0e-4c9a-91b2-44425c19c235",
       "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect\" slide\n\n* _What decisions did you make when you curated the image effects and sounds to go with the words of the poem you chose?_\n* _Do you think curating different images and effects would have made your poem feel different? How?_\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "23e61b7f-4e0e-4c9a-91b2-44425c19c235",
+        "lesson_activity.key": "31c272ae-8136-493c-9596-9d850738d4ed"
+      }
+    },
+    {
+      "key": "60d79f58-2781-4b13-818d-06d181016f9a",
+      "position": 3,
       "properties": {
         "description": "####(Optional) Assessment: Check For Understanding (4 minutes)\n\nPass out two sticky notes per student. "
       },
@@ -457,7 +479,7 @@
     },
     {
       "key": "9e6dc94f-4938-43b3-b28a-f73c8fb575bb",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "You have two sticky notes. On one, write one thing you learned about coding today. \nOn the second, write one thing you learned about poetry today. \n\nLet’s share with the whole class by raising your hand to answer this question: What else do you hope you can learn about coding and computer science next? ",
         "remarks": true
@@ -591,7 +613,7 @@
       "key": "02f78081-ff6d-497b-8e8d-fd450daa7b08",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: Look at the words you circled. How might someone else interpret those words? What feelings or thoughts do you hope the viewer gets from reading your story?\n\n**Discussion Goal**: Students should be able to name specific emotions or thoughts that the viewer will be left with after reading their time capsule story. Students should also understand the power of curation and how every person can interpret the same content differently.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _Look at the words you circled._ \n\n_How might someone else interpret those words?_ \n\n_What feelings or thoughts do you hope the viewer gets from reading your story?_\n\n**Discussion Goal**: Students should be able to name specific emotions or thoughts that the viewer will be left with after reading their time capsule story. Students should also understand the power of curation and how every person can interpret the same content differently.",
         "duration": "10",
         "name": "Reflection"
       },
@@ -617,7 +639,7 @@
       "key": "2657dcf5-22f0-4819-8701-61510c9f0692",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Time Capsule Stories: Cafeteria Lunches” slide\n\n**Cafeteria Lunches** \\\n*The menu for this week: \\\nMonday - Chicken Patty with Gravy \\\nTuesday - Spaghetti \\\nWednesday - Pepperoni Pizza \\\nThursday - Chicken Patty (again!?) \\\nFriday - Salisbury Steak (AKA mystery meat) \\\nI heard in other countries \\\nThey get fresh fruit \\\nSure sounds nice* \n\n**Do This**: Read the time capsule stories aloud as a class. Then have students discuss what they visualize for each poem."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Time Capsule Stories: Cafeteria Lunches” slide\n\n**Cafeteria Lunches** \\\n*The menu for this week: \\\nMonday - Chicken Patty with Gravy \\\nTuesday - Spaghetti \\\nWednesday - Pepperoni Pizza \\\nThursday - Chicken Patty (again!?) \\\nFriday - Salisbury Steak (AKA mystery meat) \\\nI heard in other countries \\\nThey get fresh fruit \\\nSure sounds nice* \n\n**Do This**: Read the time capsule stories aloud as a class. "
       },
       "seeding_key": {
         "activity_section.key": "2657dcf5-22f0-4819-8701-61510c9f0692",
@@ -625,8 +647,19 @@
       }
     },
     {
-      "key": "3acb7048-79b5-4354-8686-80df8a53f422",
+      "key": "56b2543a-d826-4e16-b3b6-0ec0591b2aac",
       "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Read and Imagine” slide\n\n**Discuss**: Discuss with a partner what images you visualize and what sounds you hear when you read the stories.  How would you curate these stories? How is your idea similar to or different from your partner’s idea? \n\n**Discussion Goal**: The purpose of this warm up is to show students two examples of short time capsule stories that can easily be visualized.  The warm-up discussion is a review for students to practice visualizing stories and understand how curating content is often dependent upon the creator."
+      },
+      "seeding_key": {
+        "activity_section.key": "56b2543a-d826-4e16-b3b6-0ec0591b2aac",
+        "lesson_activity.key": "c39c549b-16d1-42e8-b3ef-dfcc917949aa"
+      }
+    },
+    {
+      "key": "3acb7048-79b5-4354-8686-80df8a53f422",
+      "position": 4,
       "properties": {
         "tips": [
           {
@@ -637,17 +670,6 @@
       },
       "seeding_key": {
         "activity_section.key": "3acb7048-79b5-4354-8686-80df8a53f422",
-        "lesson_activity.key": "c39c549b-16d1-42e8-b3ef-dfcc917949aa"
-      }
-    },
-    {
-      "key": "56b2543a-d826-4e16-b3b6-0ec0591b2aac",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Read and Imagine” slide\n\n**Discuss**: Discuss with a partner what images you visualize and what sounds you hear when you read the stories.  How would you curate these stories? How is your idea similar to or different from your partner’s idea? \n\n**Discussion Goal**: The purpose of this warm up is to show students two examples of short time capsule stories that can easily be visualized.  The warm-up discussion is a review for students to practice visualizing stories and understand how curating content is often dependent upon the creator."
-      },
-      "seeding_key": {
-        "activity_section.key": "56b2543a-d826-4e16-b3b6-0ec0591b2aac",
         "lesson_activity.key": "c39c549b-16d1-42e8-b3ef-dfcc917949aa"
       }
     },
@@ -680,7 +702,7 @@
       "key": "2c69632d-7711-4931-9173-490311397a7a",
       "position": 3,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Add Your Story” slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Add a Background” slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Add Sprites” slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Add Effects and Sounds” slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Add Events” slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Final Review” slide\n\n**Do This**: Have students move to their computer and sign in. Students will now code their time capsule apps in Poem Art. Students should follow the instructions on the slides as they add in their text, backgrounds, effects, sounds, and events. They will use the skills they learned from Poem Art tutorial to enhance their time capsule stories. Circulate the room to support students. Encourage them to press Run each time they add a block and note if they need to add any other effects, sprites, or events to best match their story."
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Add Your Story” slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Add a Background” slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Add Sprites” slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Add Effects and Sounds” slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Add Events” slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Final Review” slide\n\n**Do This**: Have students move to their computers and sign in. Students will now code their time capsule apps in Poem Art. Students should follow the instructions on the slides as they add in their text, backgrounds, effects, sounds, and events. They will use the skills they learned from Poem Art tutorial to enhance their time capsule stories. Circulate the room to support students. Encourage them to press Run each time they add a block and note if they need to add any other effects, sprites, or events to best match their story."
       },
       "seeding_key": {
         "activity_section.key": "2c69632d-7711-4931-9173-490311397a7a",
@@ -717,7 +739,7 @@
       "key": "c256844c-82d7-4583-95e4-f15ad43b3877",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Discuss**: Watch your program run again. What do you hope a future historian might learn from your program? What visual or sound effects does your program use to accomplish that goal? \n\n**Discussion Goal**: The reflection question should help the students think about how their programs run and if the visual effects best represent the mood and feeling of their story. They should understand that the decisions they make as a creator can affect the experience of the viewer.  ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _Watch your program run again._\n\n_What do you hope a future historian might learn from your program?_ \n\n_What visual or sound effects does your program use to accomplish that goal?_ \n\n**Discussion Goal**: The reflection question should help the students think about how their programs run and if the visual effects best represent the mood and feeling of their story. They should understand that the decisions they make as a creator can affect the experience of the viewer.  ",
         "duration": "10",
         "name": "Reflection"
       },
@@ -796,7 +818,7 @@
       "key": "b721e6b5-c5df-4caa-ba47-385e56ef98e0",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Final Thoughts” slide\n\n**Say**: Imagine you are a museum curator and want to tell the story of now from the perspective of your class as a whole (not just through your own eyes). \n\nWhat elements would you make sure to include and which would you leave out?\nWhat happens when you include certain things? \nWhat happens when you leave those things out? \n\n**Do This**: Have students discuss the reflection question in small groups, then bring the class together for a larger class discussion.\n\n**Discussion Goal**: These final questions should help students reflect on the experience of curating content and writing their own stories. They should be aware of the impact of being able to tell a story through their own lens and should see how a story might change if told by a different person or group of people.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Final Thoughts” slide\n\n**Say**: _Imagine you are a museum curator and want to tell the story of now from the perspective of your class as a whole (not just through your own eyes):_\n\n* _What elements would you make sure to include and which would you leave out?_\n* _What happens when you include certain things?_ \n* _What happens when you leave those things out?_ \n\n**Do This**: Have students discuss the reflection question in small groups, then bring the class together for a larger class discussion.\n\n**Discussion Goal**: These final questions should help students reflect on the experience of curating content and writing their own stories. They should be aware of the impact of being able to tell a story through their own lens and should see how a story might change if told by a different person or group of people.\n",
         "duration": "10",
         "name": "Reflection"
       },
@@ -813,6 +835,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-poem-art-intro-video-level"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -834,6 +859,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_backgroundEffects_timecapsule-"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -856,6 +884,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_exemplar1_timecapsule-"
+        ],
         "progression": "Example"
       },
       "bonus": false,
@@ -878,6 +909,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_sounds_timecapsule-"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -900,6 +934,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_events1_timecapsule-"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -922,6 +959,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_exemplar2_timecapsule-"
+        ],
         "progression": "Example"
       },
       "bonus": false,
@@ -944,6 +984,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_addSprites_timecapsule-"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -966,6 +1009,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_spriteBehaviors_timecapsule-"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -988,6 +1034,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_spriteSizes_timecapsule-"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1010,6 +1059,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_freeplay_timecapsule-"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -1032,6 +1084,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-poem-art-outro-video-level"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1053,6 +1108,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "timecapsule_freeplay"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1229,18 +1287,6 @@
       }
     },
     {
-      "name": "Coding with Poetry Lesson 1",
-      "url": "https://docs.google.com/presentation/d/1x1PExqc7Ca45EKXtM5hditmNHdvl2gGdsIJHLez-wQo/copy",
-      "key": "coding_with_poetry_lesson_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "coding_with_poetry_lesson_1"
-      }
-    },
-    {
       "name": "Plan Your Time Capsule",
       "url": "https://docs.google.com/document/d/1E6Ev3uJ-J31471jMnPjQnFoXCL_xUbyi8aTiP_o_dUI/template/preview",
       "key": "plan_your_time_capsule",
@@ -1342,12 +1388,6 @@
     {
       "seeding_key": {
         "lesson.key": "Poem Art",
-        "resource.key": "coding_with_poetry_lesson_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Poem Art",
         "resource.key": "poem_art_1_-_introduction"
       }
     },
@@ -1367,6 +1407,12 @@
       "seeding_key": {
         "lesson.key": "Poem Art",
         "resource.key": "poem_art_4_-_celebration"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Poem Art",
+        "resource.key": "time_capsule"
       }
     },
     {

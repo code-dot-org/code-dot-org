@@ -16,7 +16,6 @@
     "impressive": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"New Artist Project_callout1\",\r\n  \"callout_text\": \"Click the categories to see the blocks in your toolbox! Drag blocks to the workspace to add them to your program\",\r\n  \"element_id\": \"#when_run\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": -125,\r\n     \"y\": 100\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"New Artist Project_callout2\",\r\n  \"callout_text\": \"Hit \\\"Run\\\" to save and run your program\",\r\n  \"element_id\": \"#runButton\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"top left\",\r\n    \"adjust\": {\r\n     \"x\": 15,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"sign_in_to_save_project\",\r\n  \"callout_text\": \"Want to access your project later? Sign in to save this project to your account!\",\r\n  \"element_id\": \".button-signin\",\r\n  \"on\": \"run_button_pressed\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top right\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -43,15 +42,18 @@
     "authored_hints": "[]",
     "long_instructions": "**Bonus level: Create a border around the star.**<br>\r\n- Select a pattern that you would like to use for the border.\r\n- Use startBorder to jump out to right position to start.",
     "project_template_level_name": "csc-starquilts-lesson1-template",
+    "encrypted_examples": [
+
+    ],
     "preload_asset_list": null
   },
-  "level_num": "custom",
   "game_id": 23,
-  "created_at": "2022-04-21T20:49:52.000Z",
-  "user_id": 16,
   "published": true,
+  "created_at": "2022-04-21T20:49:52.000Z",
+  "level_num": "custom",
+  "user_id": 16,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-21T20:49:52.052+00:00\",\"changed\":[\"cloned from \\\"csc-starquilts-4point-repeat\\\"\"],\"cloned_from\":\"csc-starquilts-4point-repeat\"},{\"changed_at\":\"2022-04-21 20:50:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"long_instructions\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-21 20:53:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-21 20:53:38 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-21 20:54:31 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-21 20:54:36 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-04-21T20:49:52.052+00:00\",\"changed\":[\"cloned from \\\"csc-starquilts-4point-repeat\\\"\"],\"cloned_from\":\"csc-starquilts-4point-repeat\"},{\"changed_at\":\"2022-04-21 20:50:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"long_instructions\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-21 20:53:17 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-21 20:53:38 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-21 20:54:31 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-21 20:54:36 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18528,\"changed_by_email\":\"grayjordann+levelbuilder@gmail.com\"},{\"changed_at\":\"2022-04-22 18:30:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-22 18:33:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-22 19:09:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"callout_json\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -59,64 +61,6 @@
     <start_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false" id="when_run"/>
-        <block type="procedures_callnoreturn">
-          <mutation name="rowTwo"/>
-        </block>
-        <block type="procedures_callnoreturn">
-          <mutation name="findPosition"/>
-        </block>
-        <block type="procedures_defnoreturn" editable="false" usercreated="true">
-          <mutation/>
-          <field name="NAME" id="rowTwo">rowTwo</field>
-          <statement name="STACK">
-            <block type="draw_turn_by_constant_dropdown">
-              <field name="DIR">turnRight</field>
-              <field name="VALUE" config="30,60,90,120,180">30</field>
-              <next>
-                <block type="jump">
-                  <field name="DIR">jumpForward</field>
-                  <value name="VALUE">
-                    <block type="variables_get">
-                      <field name="VAR">length</field>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="draw_turn_by_constant_dropdown">
-                      <field name="DIR">turnLeft</field>
-                      <field name="VALUE" config="30,60,90,120,180">30</field>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-        <block type="procedures_defnoreturn" editable="false" usercreated="true">
-          <mutation/>
-          <field name="NAME" id="rowTwo">rowTwo2</field>
-          <statement name="STACK">
-            <block type="draw_turn_by_constant_dropdown">
-              <field name="DIR">turnRight</field>
-              <field name="VALUE" config="30,60,90,120,180">30</field>
-              <next>
-                <block type="jump">
-                  <field name="DIR">jumpForward</field>
-                  <value name="VALUE">
-                    <block type="variables_get">
-                      <field name="VAR">length</field>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="draw_turn_by_constant_dropdown">
-                      <field name="DIR">turnLeft</field>
-                      <field name="VALUE" config="30,60,90,120,180">30</field>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
         <block type="procedures_defnoreturn">
           <mutation/>
           <field name="NAME">startBorder</field>
@@ -136,58 +80,6 @@
                     <block type="draw_turn_by_constant_dropdown">
                       <field name="DIR">turnLeft</field>
                       <field name="VALUE" config="30,60,90,120,180">120</field>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-        <block type="procedures_defnoreturn" editable="false" usercreated="true">
-          <mutation/>
-          <field name="NAME" id="rowTwo">rowTwo3</field>
-          <statement name="STACK">
-            <block type="draw_turn_by_constant_dropdown">
-              <field name="DIR">turnRight</field>
-              <field name="VALUE" config="30,60,90,120,180">30</field>
-              <next>
-                <block type="jump">
-                  <field name="DIR">jumpForward</field>
-                  <value name="VALUE">
-                    <block type="variables_get">
-                      <field name="VAR">length</field>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="draw_turn_by_constant_dropdown">
-                      <field name="DIR">turnLeft</field>
-                      <field name="VALUE" config="30,60,90,120,180">30</field>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-        <block type="procedures_defnoreturn" usercreated="true">
-          <mutation/>
-          <field name="NAME" id="findPosition">findPosition</field>
-          <statement name="STACK">
-            <block type="draw_turn_by_constant_dropdown">
-              <field name="DIR">turnLeft</field>
-              <field name="VALUE" config="30,60,90,120,180">90</field>
-              <next>
-                <block type="jump">
-                  <field name="DIR">jumpForward</field>
-                  <value name="VALUE">
-                    <block type="variables_get">
-                      <field name="VAR">length</field>
-                    </block>
-                  </value>
-                  <next>
-                    <block type="draw_turn_by_constant_dropdown">
-                      <field name="DIR">turnRight</field>
-                      <field name="VALUE" config="30,60,90,120,180">90</field>
                     </block>
                   </next>
                 </block>
@@ -224,6 +116,10 @@
         </block>
         <block type="procedures_callnoreturn">
           <mutation name="startBorder"/>
+        </block>
+        <block type="draw_move_by_constant">
+          <field name="DIR">moveForward</field>
+          <field name="VALUE">35</field>
         </block>
         <block type="procedures_defnoreturn" uservisible="false">
           <mutation/>
