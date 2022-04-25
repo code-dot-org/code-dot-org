@@ -9,9 +9,9 @@ import CodeReviewDataApi from '@cdo/apps/templates/instructions/codeReviewV2/Cod
 import ReviewNavigator from '@cdo/apps/templates/instructions/codeReviewV2/ReviewNavigator';
 import CodeReviewTimelineElement, {
   codeReviewTimelineElementType
-} from '@cdo/apps/templates/instructions/codeReview/CodeReviewTimelineElement';
-import CodeReviewTimelineCommit from '@cdo/apps/templates/instructions/codeReview/CodeReviewTimelineCommit';
-import CodeReviewTimelineReview from '@cdo/apps/templates/instructions/codeReview/CodeReviewTimelineReview';
+} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
+import CodeReviewTimelineCommit from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineCommit';
+import CodeReviewTimelineReview from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineReview';
 import Button from '@cdo/apps/templates/Button';
 
 export const VIEWING_CODE_REVIEW_URL_PARAM = 'viewingCodeReview';

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CodeReviewTimelineElement, {
   codeReviewTimelineElementType
-} from '@cdo/apps/templates/instructions/codeReview/CodeReviewTimelineElement';
+} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
 
 const CodeReviewTimelineReview = ({isLastElementInTimeline}) => {
   return (

@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import CodeReviewTimelineElement, {
   codeReviewTimelineElementType
-} from '@cdo/apps/templates/instructions/codeReview/CodeReviewTimelineElement';
+} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
 import color from '@cdo/apps/util/color';
 import javalabMsg from '@cdo/javalab/locale';
 
