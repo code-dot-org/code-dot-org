@@ -1087,6 +1087,21 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal 'new-level-editors', new_level.editor_experiment
   end
 
+  test 'clone with suffix uses existing levels when level names match' do
+    existing_level = create :level, name: 'old level_2020'
+    old_level = create :level, name: 'old level'
+    new_level = old_level.clone_with_suffix('_2020')
+    assert_equal existing_level, new_level
+  end
+
+  test 'clone with suffix does not use exactly levels when allow_existing is false' do
+    existing_level = create :level, name: 'old level_2020'
+    old_level = create :level, name: 'old level'
+    new_level = old_level.clone_with_suffix('_2020', allow_existing: false)
+    refute_equal existing_level, new_level
+    assert_equal 'old level_copy1_2020', new_level.name
+  end
+
   test 'contained_level_names filters blank names before validation' do
     level = build :level
     create :level, name: 'real_name'
