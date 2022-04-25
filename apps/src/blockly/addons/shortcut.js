@@ -2,7 +2,8 @@ import GoogleBlockly from 'blockly/core';
 
 /**
  * Adds a keyboard shortcut that will store copy information for a block
- * in localStorage.
+ * in localStorage. After switching to v7, we can replace this file with:
+ * https://github.com/google/blockly-samples/tree/master/plugins/cross-tab-copy-paste
  */
 const blockCopyToStorageShortcut = function() {
   const copyShortcut = {
