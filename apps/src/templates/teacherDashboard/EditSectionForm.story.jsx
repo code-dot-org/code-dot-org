@@ -28,7 +28,7 @@ export default storybook => {
         assignedUnitTextToSpeechEnabled={false}
       />
     ));
-    storybook = storybook.add('no students yet', () => (
+    storybook = storybook.add(`no students yet/ ${loginType}`, () => (
       <EditSectionForm
         title="Edit section details"
         handleSave={action('handleSave')}
@@ -48,7 +48,7 @@ export default storybook => {
         assignedUnitTextToSpeechEnabled={false}
       />
     ));
-    storybook = storybook.add('save in progress', () => (
+    storybook = storybook.add(`save in progress/ ${loginType}`, () => (
       <EditSectionForm
         title="Edit section details"
         handleSave={action('handleSave')}

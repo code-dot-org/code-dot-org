@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-12 20:46:59 UTC",
+    "serialized_at": "2022-04-22 18:26:41 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3344,17 +3344,6 @@
       }
     },
     {
-      "key": "f8b3b5af-9f93-49b7-a6c4-42afad60a668",
-      "position": 2,
-      "properties": {
-        "progression_name": "Old Reflection (Delete Later)"
-      },
-      "seeding_key": {
-        "activity_section.key": "f8b3b5af-9f93-49b7-a6c4-42afad60a668",
-        "lesson_activity.key": "e228135e-7cba-44db-93d4-93ed63ec0cfc"
-      }
-    },
-    {
       "key": "62bf93c9-f7ae-40b7-a515-4b81b83acee9",
       "position": 1,
       "properties": {
@@ -5290,31 +5279,6 @@
     },
     {
       "chapter": 20,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "csd-pulse-check-survey-1-levelgroup U1Ch2_2022"
-        ],
-        "progression": "Old Reflection (Delete Later)"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csd-pulse-check-survey-1-levelgroup U1Ch2_2022"
-        ],
-        "lesson.key": "Project - Propose an App",
-        "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2022",
-        "activity_section.key": "f8b3b5af-9f93-49b7-a6c4-42afad60a668"
-      },
-      "level_keys": [
-        "csd-pulse-check-survey-1-levelgroup U1Ch2_2022"
-      ]
-    },
-    {
-      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5565,18 +5529,6 @@
         "lesson_group.key": "csd1_2",
         "script.name": "csd1-2022",
         "activity_section.key": "3258b13a-0f05-4f62-bf07-38aca3a745db"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csd-pulse-check-survey-1-levelgroup U1Ch2_2022",
-        "script_level.level_keys": [
-          "csd-pulse-check-survey-1-levelgroup U1Ch2_2022"
-        ],
-        "lesson.key": "Project - Propose an App",
-        "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2022",
-        "activity_section.key": "f8b3b5af-9f93-49b7-a6c4-42afad60a668"
       }
     },
     {

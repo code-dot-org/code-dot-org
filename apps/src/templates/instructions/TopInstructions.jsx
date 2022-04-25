@@ -13,6 +13,7 @@ import ContainedLevelAnswer from '../ContainedLevelAnswer';
 import HelpTabContents from './HelpTabContents';
 import DocumentationTab from './DocumentationTab';
 import ReviewTab from './ReviewTab';
+import CommitsAndReviewTab from './CommitsAndReviewTab';
 import {
   toggleInstructionsCollapsed,
   setInstructionsMaxHeightNeeded,
@@ -36,6 +37,7 @@ import TopInstructionsHeader from './TopInstructionsHeader';
 import {Z_INDEX as OVERLAY_Z_INDEX} from '../Overlay';
 import Button from '../Button';
 import i18n from '@cdo/locale';
+import experiments from '@cdo/apps/util/experiments';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -48,7 +50,8 @@ export const TabType = {
   COMMENTS: 'comments',
   DOCUMENTATION: 'documentation',
   REVIEW: 'review',
-  TEACHER_ONLY: 'teacher-only'
+  TEACHER_ONLY: 'teacher-only',
+  COMMITS_AND_REVIEW: 'commits-and-review'
 };
 
 // Minecraft-specific styles
@@ -617,7 +620,8 @@ class TopInstructions extends Component {
       isCSF && !hasContainedLevels && tabSelected === TabType.INSTRUCTIONS
         ? styles.csfBody
         : containerStyle || styles.body,
-      isMinecraft && craftStyles.instructionsBody
+      isMinecraft && craftStyles.instructionsBody,
+      tabSelected === TabType.COMMITS_AND_REVIEW && styles.commitAndReview
     ];
 
     // Only display the help tab when there are one or more videos or
@@ -635,6 +639,9 @@ class TopInstructions extends Component {
       !!rubric ||
       (!displayReviewTab && teacherViewingStudentWork) ||
       (this.isViewingAsStudent && !!latestFeedback);
+
+    const displayCommitsAndReviewTab =
+      displayReviewTab && experiments.isEnabled('code_review_v2');
 
     // Teacher is viewing students work and in the Feedback Tab
     const teacherOnly =
@@ -681,6 +688,7 @@ class TopInstructions extends Component {
           levelHasRubric={!!rubric}
           displayDocumentationTab={displayDocumentationTab}
           displayReviewTab={displayReviewTab}
+          displayCommitsAndReviewTab={displayCommitsAndReviewTab}
           isViewingAsTeacher={this.isViewingAsTeacher}
           fetchingData={fetchingData}
           handleDocumentationClick={this.handleDocumentationClick}
@@ -693,6 +701,9 @@ class TopInstructions extends Component {
             this.handleTabClick(TabType.DOCUMENTATION)
           }
           handleReviewTabClick={() => this.handleTabClick(TabType.REVIEW)}
+          handleCommitsAndReviewTabClick={() =>
+            this.handleTabClick(TabType.COMMITS_AND_REVIEW)
+          }
           handleTeacherOnlyTabClick={this.handleTeacherOnlyTabClick}
           collapsible={this.props.collapsible}
           handleClickCollapser={this.handleClickCollapser}
@@ -734,6 +745,12 @@ class TopInstructions extends Component {
             {tabSelected === TabType.REVIEW && (
               <ReviewTab
                 ref={ref => (this.reviewTab = ref)}
+                onLoadComplete={this.forceTabResizeToMaxOrAvailableHeight}
+              />
+            )}
+            {tabSelected === TabType.COMMITS_AND_REVIEW && (
+              <CommitsAndReviewTab
+                ref={ref => (this.commitsAndReviewTab = ref)}
                 onLoadComplete={this.forceTabResizeToMaxOrAvailableHeight}
               />
             )}
@@ -826,6 +843,15 @@ const styles = {
     left: 0,
     right: 0,
     overflow: 'hidden'
+  },
+  commitAndReview: {
+    backgroundColor: color.background_gray,
+    position: 'absolute',
+    top: HEADER_HEIGHT,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    overflowY: 'auto'
   },
   embedView: {
     height: undefined,

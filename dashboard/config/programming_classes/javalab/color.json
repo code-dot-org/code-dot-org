@@ -1,0 +1,133 @@
+{
+  "category_key": "org_code_media",
+  "content": "Represents a color as amounts of red, green, and blue (ranging from 0 to 255) that blend together to make a unique color. This class also provides a number of preset colors, like `fuschia`, which can be referenced either by a string value or as one of the constants in this class, e.g. `Color.FUSCHIA`.",
+  "examples": "[]",
+  "external_documentation": "",
+  "fields": "[{\"name\":\"WHITE\",\"type\":\"public static final Color \",\"description\":\"Constant color with the value (255, 255, 255)\\n\\n\"},{\"name\":\"SILVER\",\"type\":\"public static final Color \",\"description\":\"Constant color with the value (192, 192, 192)\"},{\"name\":\"GRAY\",\"type\":\"public static final Color \",\"description\":\"Constant color with the value (128, 128, 128)\"},{\"name\":\"BLACK\",\"type\":\"public static final Color \",\"description\":\"Constant color with the value (0,0,0)\"},{\"name\":\"RED\",\"type\":\"public static final Color\",\"description\":\"Constant color with the value (255,0,0)\"},{\"name\":\"MAROON\",\"type\":\"public static final Color\",\"description\":\"Constant color with the value (128,0,0)\"},{\"name\":\"YELLOW\",\"type\":\"public static final Color \"},{\"name\":\"OLIVE\",\"type\":\"public static final Color \"},{\"name\":\"LIME\",\"type\":\"public static final Color \"},{\"name\":\"GREEN\",\"type\":\"public static final Color \"},{\"name\":\"AQUA\",\"type\":\"public static final Color \"},{\"name\":\"TEAL\",\"type\":\"public static final Color \"},{\"name\":\"BLUE\",\"type\":\"public static final Color \"},{\"name\":\"NAVY\",\"type\":\"public static final Color \"},{\"name\":\"FUSCHIA\",\"type\":\"public static final Color \"},{\"name\":\"PURPLE\",\"type\":\"public static final Color \"},{\"name\":\"PINK\",\"type\":\"public static final Color \"},{\"name\":\"ORANGE\",\"type\":\"public static final Color \"},{\"name\":\"GOLD\",\"type\":\"public static final Color \"},{\"name\":\"BROWN\",\"type\":\"public static final Color \"},{\"name\":\"CHOCOLATE\",\"type\":\"public static final Color \"},{\"name\":\"TAN\",\"type\":\"public static final Color \"},{\"name\":\"TURQUOISE\",\"type\":\"public static final Color \"},{\"name\":\"INDIGO\",\"type\":\"public static final Color \"},{\"name\":\"VIOLET\",\"type\":\"public static final Color \"},{\"name\":\"BEIGE\",\"type\":\"public static final Color \"},{\"name\":\"IVORY\",\"type\":\"public static final Color \"}]",
+  "key": "Color",
+  "name": "Color",
+  "syntax": "",
+  "tips": "",
+  "methods": [
+    {
+      "name": "Color",
+      "position": 0,
+      "key": "color",
+      "content": null,
+      "parameters": null,
+      "examples": null,
+      "syntax": null,
+      "external_link": null,
+      "overload_of": null,
+      "return_value": null
+    },
+    {
+      "name": "Color",
+      "position": 1,
+      "key": "color2",
+      "content": null,
+      "parameters": "[]",
+      "examples": "[]",
+      "syntax": null,
+      "external_link": null,
+      "overload_of": null,
+      "return_value": null
+    },
+    {
+      "name": "Color3",
+      "position": 2,
+      "key": "color3",
+      "content": null,
+      "parameters": null,
+      "examples": null,
+      "syntax": null,
+      "external_link": null,
+      "overload_of": null,
+      "return_value": null
+    },
+    {
+      "name": "Color4",
+      "position": 3,
+      "key": "color4",
+      "content": null,
+      "parameters": null,
+      "examples": null,
+      "syntax": null,
+      "external_link": null,
+      "overload_of": null,
+      "return_value": null
+    },
+    {
+      "name": "getRed",
+      "position": 4,
+      "key": "getred",
+      "content": null,
+      "parameters": null,
+      "examples": null,
+      "syntax": null,
+      "external_link": null,
+      "overload_of": null,
+      "return_value": null
+    },
+    {
+      "name": "setGreen",
+      "position": 5,
+      "key": "setgreen",
+      "content": null,
+      "parameters": null,
+      "examples": null,
+      "syntax": null,
+      "external_link": null,
+      "overload_of": null,
+      "return_value": null
+    },
+    {
+      "name": "getGreen",
+      "position": 6,
+      "key": "getgreen",
+      "content": null,
+      "parameters": null,
+      "examples": null,
+      "syntax": null,
+      "external_link": null,
+      "overload_of": null,
+      "return_value": null
+    },
+    {
+      "name": "setBlue",
+      "position": 7,
+      "key": "setblue",
+      "content": null,
+      "parameters": null,
+      "examples": null,
+      "syntax": null,
+      "external_link": null,
+      "overload_of": null,
+      "return_value": null
+    },
+    {
+      "name": "getBlue",
+      "position": 8,
+      "key": "getblue",
+      "content": null,
+      "parameters": null,
+      "examples": null,
+      "syntax": null,
+      "external_link": null,
+      "overload_of": null,
+      "return_value": null
+    },
+    {
+      "name": "setRed",
+      "position": 9,
+      "key": "setred",
+      "content": null,
+      "parameters": null,
+      "examples": null,
+      "syntax": null,
+      "external_link": null,
+      "overload_of": null,
+      "return_value": null
+    }
+  ]
+}

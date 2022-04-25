@@ -1,11 +1,20 @@
 name 'CSA U3 Assessment 2022 q06'
 
-wrong 'wrong'
-right 'right'
-wrong 'wrong'
-wrong 'wrong'
-wrong 'wrong'
+wrong '`{3, 4, 0}`'
+wrong '`{4, 9, 1}`'
+wrong '`13`'
+right '`14`'
+wrong '`26`'
 
 markdown <<MARKDOWN
-question
+Consider the following code segment:
+
+```
+int[] values = {1, 7, 3, 4, 9, 2, 1};
+int sum = values[3] + values [4];
+values[0] = sum;
+sum += values[0];
+```
+
+What is stored in `sum` after this code segment is run?
 MARKDOWN
