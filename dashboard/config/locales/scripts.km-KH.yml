@@ -1035,6 +1035,10 @@ km:
             'Programming: Star Wars':
               name: 'ការសរសេរកូដ៖ សង្គ្រាមភពផ្កាយ '
           name: ព្រី-អុិចប្រេស-2017
+        subgoal-labels-opt-in:
+          lessons:
+            other:
+              name: ផ្សេងៗ
         e-f-ramp:
           lesson_groups:
             csf_e_1:
