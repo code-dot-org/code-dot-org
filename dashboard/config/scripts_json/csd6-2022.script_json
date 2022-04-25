@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-18 22:26:39 UTC",
+    "serialized_at": "2022-04-22 18:11:37 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -179,16 +179,16 @@
     },
     {
       "key": "Mini-Project: On-The-Go App",
-      "name": "Mini-Project: On-The-Go App",
+      "name": "Mini-Project: Field Collector App",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals.",
-        "overview": "In this mini-project, students will create an app that uses the Circuit Playground to collect data, then has an app to analyze the data that was collected. This is similar to citizen science or step-tracking apps that students may be familiar with. Students will use variables and events to collect data from the circuit playground, then use if-statements to make decisions or recommendations based on the data they collect.\n\n**Question of the Day:** How can I use events and variables to create an app that collects and analyzes data?",
+        "overview": "In this mini-project, students will create an app that uses the Circuit Playground to collect data, then has an app to analyze the data that was collected. This is similar to citizen science fieldwork or survey apps that students may be familiar with. Students will use variables and events to collect data from the circuit playground, then use if-statements to make decisions or recommendations based on the data they collect.\n\n**Question of the Day:** How can I use events and variables to create an app that collects and analyzes data?",
         "preparation": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas.",
-        "student_overview": "Create an app that uses the Circuit Playground to collect data, then has an app to analyze the data that was collected"
+        "student_overview": "Create an app that uses the Circuit Playground to collect data for a specific purpose, then has an app to analyze the data that was collected"
       },
       "seeding_key": {
         "lesson.key": "Mini-Project: On-The-Go App",
@@ -2093,8 +2093,19 @@
       }
     },
     {
-      "key": "a0f4ad44-579c-4404-8ba2-bcb19e459e0c",
+      "key": "93ea638a-0d81-4055-88cc-d9167581d9be",
       "position": 3,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "93ea638a-0d81-4055-88cc-d9167581d9be",
+        "lesson_activity.key": "0c236fea-e8b0-4948-b5b1-15c35cc59c33"
+      }
+    },
+    {
+      "key": "a0f4ad44-579c-4404-8ba2-bcb19e459e0c",
+      "position": 4,
       "properties": {
         "progression_name": "Video - Variables"
       },
@@ -2105,7 +2116,7 @@
     },
     {
       "key": "c8cebe3f-35da-44ac-9cc6-29190c5b6544",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -2116,7 +2127,7 @@
     },
     {
       "key": "64e9d8c1-f351-4dec-b424-f4c03bd5324a",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Video - The Counter Pattern"
       },
@@ -2127,7 +2138,7 @@
     },
     {
       "key": "99737e58-9db8-43d5-8437-03794c232a9c",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -2138,7 +2149,7 @@
     },
     {
       "key": "314cd764-1846-45e2-951b-1fc00d8b5aed",
-      "position": 7,
+      "position": 8,
       "properties": {
         "progression_name": "Video - If Statements"
       },
@@ -2149,7 +2160,7 @@
     },
     {
       "key": "c9fa6f0e-80c5-4009-b74a-8bc73095ecbe",
-      "position": 8,
+      "position": 9,
       "properties": {
         "progression_name": "Predict",
         "tips": [
@@ -2166,7 +2177,7 @@
     },
     {
       "key": "ae140bd7-8f40-4e4b-b867-e72fe2d1894e",
-      "position": 9,
+      "position": 10,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -2177,7 +2188,7 @@
     },
     {
       "key": "103c17a8-f0b0-4836-8eed-93cd0a2fa293",
-      "position": 10,
+      "position": 11,
       "properties": {
         "progression_name": "Assessment",
         "tips": [
@@ -2194,7 +2205,7 @@
     },
     {
       "key": "611c6617-a3b8-4d93-a786-8d1c7256b43f",
-      "position": 11,
+      "position": 12,
       "properties": {
         "progression_name": "Challenge"
       },
@@ -2225,7 +2236,7 @@
       "key": "72e7af03-6898-41fa-98c5-b6904a035199",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Think about a time when you've needed to collect data when moving around in the world, or when data is being collected about you. How was that data collected? What happened to that data?_",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Think about a time when you've needed to collect data to help solve a problem or answer a question, or when data is being collected about you. How was that data collected? What happened to that data?_",
         "name": "Journal"
       },
       "seeding_key": {
@@ -2237,7 +2248,7 @@
       "key": "cee762df-3912-4192-b551-523624095f28",
       "position": 2,
       "properties": {
-        "description": "**Circulate:** Hopefully students may think of ways their phones or other devices collect data about them, such as a pedometer or when a car keeps track of how many miles someone has driven. Students may also think of situations where data is collected about them, such as when they are captured on video or when they use a credit card."
+        "description": "**Circulate:** Hopefully students may think of ways their phones or other devices collect data about them, such as completing a survey or checking a pedometer or when a car keeps track of how many miles someone has driven. Students may also think of situations where data is collected about them, such as when they are captured on video or when they use a credit card."
       },
       "seeding_key": {
         "activity_section.key": "cee762df-3912-4192-b551-523624095f28",
@@ -2259,7 +2270,7 @@
       "key": "e4cfe184-e9df-425a-8a67-78e5317167c0",
       "position": 4,
       "properties": {
-        "description": "**Discussion Goal:** As students share answers, highlight that there is usually a device that does the data collecting, and then there is a separate service that analyzes or makes decisions about that data. For example, a watch may collect heart rate data, and then an app on your phone tells you how many calories you burned."
+        "description": "**Discussion Goal:** As students share answers, highlight that there is usually a device that does the data collecting, and then there is a separate service that analyzes or makes decisions about that data. For example, a watch may collect heart rate data, and then an app on your phone tells you how many calories you burned. Or you may answer a survey question, and then later you see the data from all the people who answered the same question."
       },
       "seeding_key": {
         "activity_section.key": "e4cfe184-e9df-425a-8a67-78e5317167c0",
@@ -2270,14 +2281,8 @@
       "key": "80e05042-31cc-44d9-8f63-c0d96be74743",
       "position": 5,
       "properties": {
-        "description": "Today, we're going to complete a project where we design an app that uses the circuit playground to collect data, and then uses an app to make a decision or recommendation based on that data.",
-        "remarks": true,
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Example App:** You may decide to show one of the exemplar apps as an example of what students can create. This can help spark ideas, and give students a model of what to work towards when making their own devices."
-          }
-        ]
+        "description": "Today, we're going to complete a project where we design an app that uses the circuit playground to collect data, and then uses an app to make a decision or recommendation based on that data. ",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "80e05042-31cc-44d9-8f63-c0d96be74743",
@@ -2285,8 +2290,25 @@
       }
     },
     {
-      "key": "9be3201f-e2fd-45b2-9ffe-e7c291414cf0",
+      "key": "9c7a93a7-6a81-4360-9284-736ae07012e2",
       "position": 6,
+      "properties": {
+        "description": "**Example Apps:** Demonstrate for students one or two of the exemplar apps as an example of what students can create. This can help spark ideas, and give students a model of what to work towards when making their own devices. Since students begin this project by sketching their ideas on paper, we do not recommend passing out circuit playgrounds and having students experiment yet - instead, it can be better to demonstrate as a full-class and discuss the apps together.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Extended Examples:** You may decide to extend these examples to issues that are relevant to your local community - for example, instead of surveying birds, it may be more appropriate to relate this app to surveying marine life or desert fauna. Consider if there are any local initiatives in their \"data gathering / survey\" phase that could be an example for students as well\n\n**Real-World Connection:** Gathering survey or location data to make a recommendation or create a narrative is a common practice amongst geographers who use Geographic Information Mapping (GIS) software. A student competition is held every year with [past winners available here](https://www.esri.com/en-us/arcgis/products/arcgis-storymaps/contest/gallery/archive) - you may decide to show students some of these projects as examples of how the prototype they will build could lead to a more realistic application"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9c7a93a7-6a81-4360-9284-736ae07012e2",
+        "lesson_activity.key": "6ee23a8a-e115-463b-a6fe-85a36a97406a"
+      }
+    },
+    {
+      "key": "9be3201f-e2fd-45b2-9ffe-e7c291414cf0",
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day:** How can I use events and variables to create an app that collects and analyzes data?"
       },
@@ -2344,18 +2366,7 @@
       "key": "d9a7fab9-6627-440f-b25d-e3449cf96b97",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio."
-      },
-      "seeding_key": {
-        "activity_section.key": "d9a7fab9-6627-440f-b25d-e3449cf96b97",
-        "lesson_activity.key": "f08286ef-f4b1-40dd-bb1f-f8608630a62c"
-      }
-    },
-    {
-      "key": "1dbb5db6-9f9e-4ddb-b73b-c33af06d16dc",
-      "position": 5,
-      "properties": {
-        "progression_name": "Example Apps",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2364,16 +2375,16 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "1dbb5db6-9f9e-4ddb-b73b-c33af06d16dc",
+        "activity_section.key": "d9a7fab9-6627-440f-b25d-e3449cf96b97",
         "lesson_activity.key": "f08286ef-f4b1-40dd-bb1f-f8608630a62c"
       }
     },
     {
       "key": "87d4f205-868c-44e3-9823-c97b03c967fd",
-      "position": 6,
+      "position": 5,
       "properties": {
         "name": "Code Studio",
-        "progression_name": "On-The-Go App",
+        "progression_name": "Field Collector App",
         "tips": [
           {
             "type": "teachingTip",
@@ -2388,7 +2399,7 @@
     },
     {
       "key": "3e9609bb-ec97-4cd3-8648-e8b04256ca92",
-      "position": 7,
+      "position": 6,
       "properties": {
         "description": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices."
       },
@@ -2399,7 +2410,7 @@
     },
     {
       "key": "cdba4023-5235-4505-8c9e-903e45be9ca4",
-      "position": 8,
+      "position": 7,
       "properties": {
         "description": "Allow students to walk around the room and interact with each other's devices. Celebrate all of the different ideas that students were able to implement with the same basic code.",
         "name": "(Optional) Gallery Walk",
@@ -3130,6 +3141,7 @@
         "description": "**Transition:** Send students to Code Studio to begin coding their devices.",
         "duration": "25",
         "name": "Start Coding",
+        "progression_name": "Human Device Interaction",
         "tips": [
           {
             "type": "teachingTip",
@@ -5357,6 +5369,31 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "CSD U6 - If Variables - SB0_2222"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - If Variables - SB0_2222"
+        ],
+        "lesson.key": "Variables and If Statements",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-2022",
+        "activity_section.key": "93ea638a-0d81-4055-88cc-d9167581d9be"
+      },
+      "level_keys": [
+        "CSD U6 - If Variables - SB0_2222"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "CSD U6 - If Variables  - Vid_2222"
         ],
         "progression": "Video - Variables"
@@ -5376,8 +5413,8 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 3,
+      "chapter": 31,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5401,8 +5438,8 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 4,
+      "chapter": 32,
+      "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -5426,8 +5463,8 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 5,
+      "chapter": 33,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5451,8 +5488,8 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 6,
+      "chapter": 34,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5476,8 +5513,8 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 7,
+      "chapter": 35,
+      "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -5501,8 +5538,8 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 8,
+      "chapter": 36,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5526,8 +5563,8 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 9,
+      "chapter": 37,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5551,8 +5588,8 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 10,
+      "chapter": 38,
+      "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5576,8 +5613,8 @@
       ]
     },
     {
-      "chapter": 38,
-      "position": 11,
+      "chapter": 39,
+      "position": 12,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -5601,8 +5638,8 @@
       ]
     },
     {
-      "chapter": 39,
-      "position": 12,
+      "chapter": 40,
+      "position": 13,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -5626,8 +5663,8 @@
       ]
     },
     {
-      "chapter": 40,
-      "position": 13,
+      "chapter": 41,
+      "position": 14,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5651,40 +5688,15 @@
       ]
     },
     {
-      "chapter": 41,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSD U6 - On The Go - ExamplesParent_2022"
-        ],
-        "progression": "Example Apps"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U6 - On The Go - ExamplesParent_2022"
-        ],
-        "lesson.key": "Mini-Project: On-The-Go App",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd6-2022",
-        "activity_section.key": "1dbb5db6-9f9e-4ddb-b73b-c33af06d16dc"
-      },
-      "level_keys": [
-        "CSD U6 - On The Go - ExamplesParent_2022"
-      ]
-    },
-    {
       "chapter": 42,
-      "position": 2,
+      "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD U6 - On The Go - Design_2222"
         ],
-        "progression": "On-The-Go App"
+        "progression": "Field Collector App"
       },
       "bonus": false,
       "seeding_key": {
@@ -5702,14 +5714,14 @@
     },
     {
       "chapter": 43,
-      "position": 3,
+      "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD U6 - On The Go - Events_2222"
         ],
-        "progression": "On-The-Go App"
+        "progression": "Field Collector App"
       },
       "bonus": false,
       "seeding_key": {
@@ -5727,14 +5739,14 @@
     },
     {
       "chapter": 44,
-      "position": 4,
+      "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "CSD U6 - On The Go - Logic_2222"
         ],
-        "progression": "On-The-Go App"
+        "progression": "Field Collector App"
       },
       "bonus": false,
       "seeding_key": {
@@ -5752,14 +5764,14 @@
     },
     {
       "chapter": 45,
-      "position": 5,
+      "position": 4,
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
         "level_keys": [
           "CSD U6 - On The Go - Review_2222"
         ],
-        "progression": "On-The-Go App"
+        "progression": "Field Collector App"
       },
       "bonus": false,
       "seeding_key": {
@@ -6433,7 +6445,8 @@
       "properties": {
         "level_keys": [
           "CSD U6 - Human Device - Design_2222"
-        ]
+        ],
+        "progression": "Human Device Interaction"
       },
       "bonus": false,
       "seeding_key": {
@@ -6457,7 +6470,8 @@
       "properties": {
         "level_keys": [
           "CSD U6 - Human Device - Events_2222"
-        ]
+        ],
+        "progression": "Human Device Interaction"
       },
       "bonus": false,
       "seeding_key": {
@@ -6481,7 +6495,8 @@
       "properties": {
         "level_keys": [
           "CSD U6 - Human Device - Logic_2222"
-        ]
+        ],
+        "progression": "Human Device Interaction"
       },
       "bonus": false,
       "seeding_key": {
@@ -6505,7 +6520,8 @@
       "properties": {
         "level_keys": [
           "CSD U6 - Human Device - Review_2222"
-        ]
+        ],
+        "progression": "Human Device Interaction"
       },
       "bonus": false,
       "seeding_key": {
@@ -8635,6 +8651,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSD U6 - If Variables - SB0_2222",
+        "script_level.level_keys": [
+          "CSD U6 - If Variables - SB0_2222"
+        ],
+        "lesson.key": "Variables and If Statements",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-2022",
+        "activity_section.key": "93ea638a-0d81-4055-88cc-d9167581d9be"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSD U6 - If Variables  - Vid_2222",
         "script_level.level_keys": [
           "CSD U6 - If Variables  - Vid_2222"
@@ -8775,18 +8803,6 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-2022",
         "activity_section.key": "611c6617-a3b8-4d93-a786-8d1c7256b43f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSD U6 - On The Go - ExamplesParent_2022",
-        "script_level.level_keys": [
-          "CSD U6 - On The Go - ExamplesParent_2022"
-        ],
-        "lesson.key": "Mini-Project: On-The-Go App",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csd6-2022",
-        "activity_section.key": "1dbb5db6-9f9e-4ddb-b73b-c33af06d16dc"
       }
     },
     {
@@ -10502,7 +10518,7 @@
     },
     {
       "name": "Functions",
-      "url": "https://youtu.be/NBwlNBE9Fl0",
+      "url": "https://youtu.be/TUdtGzQge3M",
       "key": "functions_3",
       "properties": {
         "audience": "Student",
@@ -10551,7 +10567,7 @@
     },
     {
       "name": "If Statements",
-      "url": "https://youtu.be/0oG3Wck2fRU",
+      "url": "https://youtu.be/O4L1HSZ5VnA",
       "key": "if_statements_2",
       "properties": {
         "audience": "Student",
@@ -10625,7 +10641,7 @@
       }
     },
     {
-      "name": "Mini-Project: On-The-Go App",
+      "name": "Mini-Project: Field Collector App",
       "url": "https://docs.google.com/presentation/d/1YmBeSUdteOkV8dBbko24AbLtieO8M06bQq73GxHdStg/template/preview",
       "key": "mini-project_on-the-go_app",
       "properties": {
@@ -10764,7 +10780,7 @@
       }
     },
     {
-      "name": "Project Guide - On-The-Go App",
+      "name": "Project Guide - Field Collector App",
       "url": "https://docs.google.com/document/d/1cWvcddxBCTku-YAtHWreeoIJVD8v1_8CwlydofZ_Dlo/view",
       "key": "project_guide_-_on-the-go_app",
       "properties": {
@@ -10917,7 +10933,7 @@
       }
     },
     {
-      "name": "Rubric - On-The-Go App",
+      "name": "Rubric - Field Collector App",
       "url": "https://docs.google.com/document/d/11wbS2tB6eOzkyY0Q-JFqpgR14XaY7wZBKhlRHrBBVQI/view",
       "key": "rubric_-_on-the-go_app",
       "properties": {
@@ -11042,7 +11058,7 @@
     },
     {
       "name": "Variables",
-      "url": "https://youtu.be/UG7Q1Sr0_F0",
+      "url": "https://youtu.be/WsXNpY3SXe8",
       "key": "variables_2",
       "properties": {
         "audience": "Student",

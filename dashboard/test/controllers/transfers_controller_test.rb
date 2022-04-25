@@ -28,7 +28,7 @@ class TransfersControllerTest < ActionController::TestCase
     @other_teacher = create :teacher
     @other_teacher_section = create :section, user: @other_teacher, login_type: 'word'
 
-    @pl_email_section = create(:section, user: @facilitator, login_type: 'email', participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    @pl_email_section = create(:section, :teacher_participants, user: @facilitator)
   end
 
   test "returns an error when student ids are not provided" do

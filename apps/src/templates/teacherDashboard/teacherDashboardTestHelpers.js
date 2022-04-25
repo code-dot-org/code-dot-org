@@ -406,3 +406,57 @@ export const courseOfferings = {
     }
   }
 };
+
+export const fakeCoursesWithProgress = [
+  {
+    display_name: 'Course A',
+    units: [
+      {
+        id: 2,
+        version_year: '2018',
+        key: 'coursea-2018',
+        name: 'Course A (2018)',
+        position: null
+      },
+      {
+        id: 1,
+        version_year: '2017',
+        key: 'coursea-2017',
+        name: 'Course A (2017)',
+        position: null
+      }
+    ]
+  },
+  {
+    display_name: 'CS Discoveries 2018',
+    units: [
+      {
+        id: 5,
+        version_year: null,
+        key: 'csd1-2018',
+        name: 'Unit 1',
+        position: 1
+      },
+      {
+        id: 6,
+        version_year: null,
+        key: 'csd2-2018',
+        name: 'Unit 2',
+        position: 2
+      }
+    ]
+  },
+  {
+    display_name: 'Flappy',
+    units: [
+      {
+        id: 9,
+        version_year: 'unversioned',
+        key: 'flappy',
+        name: 'Flappy',
+        position: null,
+        description: 'Make a flappy game!'
+      }
+    ]
+  }
+];

@@ -206,9 +206,9 @@ class BubbleChoice < DSLDefined
     level
   end
 
-  def self.setup(data)
+  def self.setup(data, md5)
     sublevel_names = data[:properties].delete(:sublevels)
-    level = super(data)
+    level = super(data, md5)
     level.setup_sublevels(sublevel_names)
     level
   end

@@ -1,0 +1,18 @@
+name 'VPL-CSD-PILOT-S22-async-Day2Lesson4-WrapUp'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Wrap Up
+
+## Next Steps
+
+#### Ensure that each of the following things are true for your teaching group:
+
+1. Each teacher in your group has a role in delivering your TLO lesson.
+2. Your group has contingency plans for if the lesson goes longer or shorter than planned.
+3. You have communicated (or will shortly communicate) with your producer about the size and timing of breakout rooms for your TLO lesson.
+<br><br>
+
+#### If you have any questions, please add them to the parking lot.
+MARKDOWN
