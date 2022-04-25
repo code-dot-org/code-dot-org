@@ -378,6 +378,8 @@ kn:
         coursee-draft:
           description_short: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ನ ಮೂಲಾಂಶಗಳನ್ನು ತಿಳಿದುಕೊಳ್ಳಿ ಮತ್ತು ನಿಮ್ಮದೇ ಕಲೆ, ಕಥೆಗಳು ಮತ್ತು ಗೇಮ್ಸ್‌ ಅನ್ನು ರಚಿಸಿ.
           lesson_groups:
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
             extra_course_content:
               display_name: ಹೆಚ್ಚುವರಿ ಕೋರ್ಸ್‌ ಕಂಟೆಂಟ್
           lessons:
@@ -409,6 +411,9 @@ kn:
               name: 'ಅಲ್ಗೊರಿಥಂಗಳು: ಡೈಸ್ ರೇಸ್'
         coursef-draft:
           description_short: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ನ ಮೂಲಾಂಶಗಳನ್ನು ತಿಳಿದುಕೊಳ್ಳಿ ಮತ್ತು ನಿಮ್ಮದೇ ಕಲೆ, ಕಥೆಗಳು ಮತ್ತು ಗೇಮ್ಸ್‌ ಅನ್ನು ರಚಿಸಿ.
+          lesson_groups:
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lessons:
             Variables in Play Lab:
               name: ಪ್ಲೇಲ್ಯಾಬ್‌ನಲ್ಲಿ ವೇರಿಯಬಲ್‌ಗಳು
@@ -462,6 +467,9 @@ kn:
             required:
               display_name: ಮುನ್ನೋಟ
         csf2harvey:
+          lesson_groups:
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lessons:
             'Functions: Songwriting':
               name: 'ಫಂಕ್ಷನ್‌ಗಳು: ಹಾಡು ಬರೆಯುವುದು'
@@ -654,6 +662,8 @@ kn:
           assignment_family_title: ಕೋರ್ಸ್‌ ಇ
           description_short: ಕೋರ್ಸ್‌ ಸಿ ಮತ್ತು ಡಿಯಲ್ಲಿ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ತ್ವರಿತವಾಗಿ ಕವರ್ ಮಾಡಿ ಮತ್ತು ನಂತರ ಫಂಕ್ಷನ್‌ಗಳೊಂದಿಗೆ ಮುಂದುವರಿಯಿರಿ
           lesson_groups:
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
             extra_course_content:
               display_name: ಹೆಚ್ಚುವರಿ ಕೋರ್ಸ್‌ ಕಂಟೆಂಟ್
           lessons:
@@ -715,6 +725,9 @@ kn:
           title: ಕೋರ್ಸ್‌ ಎಫ್‌
           assignment_family_title: ಕೋರ್ಸ್‌ ಎಫ್‌
           description_short: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್‌ನಲ್ಲಿ ಎಲ್ಲ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ಕಲಿಯಿರಿ ಮತ್ತು ನಿಮ್ಮದೇ ಆರ್ಟ್‌, ಸ್ಟೋರಿ ಅಥವಾ ಗೇಮ್ ರಚಿಸಿ.
+          lesson_groups:
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lessons:
             'Algorithms: Tangrams':
               name: 'ಅಲ್ಗೊರಿಥಂಗಳು: ಟ್ಯಾಂಗ್ರಾಮ್ಸ್‌'
@@ -805,6 +818,9 @@ kn:
             required:
               display_name: ಮುನ್ನೋಟ
         express-2017:
+          lesson_groups:
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lessons:
             'Algorithms: Graph Paper Programming':
               name: 'ಪ್ರೋಗ್ರಾಮಿಂಗ್: ಗ್ರಾಫ್ ಪೇಪರ್ ಪ್ರೋಗ್ರಾಮಿಂಗ್'
@@ -899,6 +915,8 @@ kn:
                 **ವಯಸ್ಸಿನ ಸೂಕ್ತತೆ:** ಟ್ಯುಟೋರಿಯಲ್ ಅನ್ನು 13 ವರ್ಷಕ್ಕಿಂತ ಮೇಲ್ಪಟ್ಟ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ವಿನ್ಯಾಸಗೊಳಿಸಲಾಗಿದೆ. ಏಕೆಂದರೆ ಇದು ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಕಸ್ಟಮ್ ಧ್ವನಿಗಳು ಮತ್ತು ಚಿತ್ರಗಳನ್ನು ಅಪ್‌ಲೋಡ್ ಮಾಡಲು ಅನುಮತಿಸುತ್ತದೆ, ಯುವ ವಿದ್ಯಾರ್ಥಿಗಳು ಇದನ್ನು ಮೇಲ್ವಿಚಾರಣೆಯಿಲ್ಲದೆ ಬಳಸಬಾರದು. ವಿದ್ಯಾರ್ಥಿಗಳ ಗೌಪ್ಯತೆಯನ್ನು ರಕ್ಷಿಸಲು, ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳು 13 ವರ್ಷದೊಳಗಿನವರಾಗಿದ್ದರೆ, ನೀವು ನಿರ್ವಹಿಸುವ ವಿಭಾಗದಲ್ಲಿ ನೀವು ಮೊದಲು ಖಾತೆಗಳನ್ನು ಹೊಂದಿಸದ ಹೊರತು ಅವರು ಈ ಟ್ಯುಟೋರಿಯಲ್ ಅನ್ನು ಬಳಸಲು ಸಾಧ್ಯವಾಗುವುದಿಲ್ಲ.
         e-f-ramp:
           lesson_groups:
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
             extra_course_content:
               display_name: ಹೆಚ್ಚುವರಿ ಕೋರ್ಸ್‌ ಕಂಟೆಂಟ್
           lessons:
@@ -957,6 +975,9 @@ kn:
             Loops in Artist:
               name: ಆರ್ಟಿಸ್ಟ್‌ನಲ್ಲಿ ಲೂಪ್ಸ್
         new-express:
+          lesson_groups:
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lessons:
             'Algorithms: Graph Paper Programming':
               name: 'ಅಲ್ಗೊರಿಥಂಗಳು: ಗ್ರಾಫ್ ಪೇಪರ್ ಪ್ರೋಗ್ರಾಮಿಂಗ್'
@@ -1002,6 +1023,8 @@ kn:
               name: ಆರ್ಟಿಸ್ಟ್‌ನಲ್ಲಿ ಲೂಪ್ಸ್
         new-e:
           lesson_groups:
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
             extra_course_content:
               display_name: ಹೆಚ್ಚುವರಿ ಕೋರ್ಸ್‌ ಕಂಟೆಂಟ್
           lessons:
@@ -1038,6 +1061,9 @@ kn:
             Present Your Project:
               name: ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ ಪ್ರಸ್ತುತಪಡಿಸಿ
         new-f:
+          lesson_groups:
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lessons:
             'Programming: My Robotic Friends':
               name: 'ಪ್ರೋಗ್ರಾಮಿಂಗ್: ಮೈ ರೋಬೋಟಿಕ್ ಫ್ರೆಂಡ್ಸ್'
@@ -1098,6 +1124,8 @@ kn:
               name: ಆಪ್‌ ಲ್ಯಾಬ್‌ಗೆ ಪರಿಚಯ
         course-e-2018:
           lesson_groups:
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
             extra_course_content:
               display_name: ಹೆಚ್ಚುವರಿ ಕೋರ್ಸ್‌ ಕಂಟೆಂಟ್
           lessons:
@@ -1136,6 +1164,9 @@ kn:
             Present Your Project:
               name: ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ ಪ್ರಸ್ತುತಪಡಿಸಿ
         course-f-2018:
+          lesson_groups:
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lessons:
             'Programming: My Robotic Friends':
               name: 'ಪ್ರೋಗ್ರಾಮಿಂಗ್: ಮೈ ರೋಬೋಟಿಕ್ ಫ್ರೆಂಡ್ಸ್'
@@ -1287,6 +1318,8 @@ kn:
         coursee-2018:
           assignment_family_title: ಕೋರ್ಸ್‌ ಇ
           lesson_groups:
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
             extra_course_content:
               display_name: ಹೆಚ್ಚುವರಿ ಕೋರ್ಸ್‌ ಕಂಟೆಂಟ್
           lessons:
@@ -1309,6 +1342,9 @@ kn:
         coursef-2018:
           assignment_family_title: ಕೋರ್ಸ್‌ ಎಫ್‌
           description_short: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್‌ನಲ್ಲಿ ಎಲ್ಲ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ಕಲಿಯಿರಿ ಮತ್ತು ನಿಮ್ಮದೇ ಆರ್ಟ್‌, ಸ್ಟೋರಿ ಅಥವಾ ಗೇಮ್ ರಚಿಸಿ.
+          lesson_groups:
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lessons:
             'Algorithms: Tangrams':
               name: 'ಅಲ್ಗೊರಿಥಂಗಳು: ಟ್ಯಾಂಗ್ರಾಮ್ಸ್‌'
@@ -1458,6 +1494,8 @@ kn:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csf_data:
               display_name: ಡೇಟಾ
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lessons:
             'Programming: My Robotic Friends':
               name: 'ಪ್ರೋಗ್ರಾಮಿಂಗ್: ಮೈ ರೋಬೋಟಿಕ್ ಫ್ರೆಂಡ್ಸ್'
@@ -1481,6 +1519,8 @@ kn:
               name: ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್ ಪರಿಷ್ಕರಿಸಿ
             Present Your Project:
               name: ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ ಪ್ರಸ್ತುತಪಡಿಸಿ
+            End of Course Project:
+              name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         dance-low:
           lessons:
             Dance Party:
@@ -1493,6 +1533,8 @@ kn:
               display_name: ಲೂಪ್‌ಗಳು
             csf_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lessons:
             Introduction to Online Puzzles:
               name: ಆನ್‌ಲೈನ್ ಪಝಲ್‌ಗಳಿಗೆ ಪರಿಚಯ
@@ -1509,6 +1551,8 @@ kn:
           lesson_groups:
             csf_nested_loops:
               display_name: ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lessons:
             'Programming: My Robotic Friends':
               name: 'ಪ್ರೋಗ್ರಾಮಿಂಗ್: ಮೈ ರೋಬೋಟಿಕ್ ಫ್ರೆಂಡ್ಸ್'
@@ -1534,6 +1578,8 @@ kn:
               description_teacher: |-
                 ಈ ಪಝಲ್‌ಗಳ ಸೆಟ್‌ನಲ್ಲಿ, Code.org ನ ಆನ್‌ಲೈನ್‌ ವರ್ಕ್‌ಸ್ಪೇಸ್‌ ಪರಿಚಯವನ್ನು (ಅಥವಾ ನಿಮ್ಮ ತರಗತಿಯ ಅನುಭವವನ್ನು ಆಧರಿಸಿ ಪರಿಶೀಲನೆಯನ್ನು) ವಿದ್ಯಾರ್ಥಿಗಳು ಪಡೆಯುವುದನ್ನು ಆರಂಭಿಸುತ್ತಾರೆ. 'ರನ್', 'ರಿಸೆಟ್' ಮತ್ತು 'ಸ್ಟೆಪ್' ಬಟನ್‌ಗಳು ಸೇರಿದಂತೆ ವರ್ಕ್‌ಸ್ಪೇಸ್‌ನ ಪ್ರಾಥಮಿಕ ಕಾರ್ಯನಿರ್ವಹಣೆಯನ್ನು ತೋರಿಸುವ ವೀಡಿಯೋಗಳಿವೆ. ಈ ವೀಡಿಯೋಗಳಲ್ಲಿ ಇದನ್ನೂ ಚರ್ಚಿಸಲಾಗಿದೆ: ಬ್ಲಾಕಿಲಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಎಳೆಯುವುದು, ಬ್ಲಾಕಿಲಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಅಳೆಯುವುದು ಮತ್ತು ಬ್ಲಾಕಿಲಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಸಂಪರ್ಕಿಸುವುದು. ಮುಂದೆ, ವಿದ್ಯಾರ್ಥಿಗಳು ಮೇಝ್‌ನಲ್ಲಿ _ಸೀಕ್ವೆನ್ಸಿಂಗ್_ ಮತ್ತು _ಡಿಬಗ್ಗಿಂಗ್‌_ ಕೌಶಲಗಳನ್ನು ಕಲಿಯುತ್ತಾರೆ. \\r
                 ಪ್ರೋಗ್ರಾಮ್ ಕಲಿಕೆಯಲ್ಲಿ ಡಿಬಗ್ಗಿಂಗ್ ಒಂದು ಅಗತ್ಯದ ಅಂಶವಾಗಿದೆ. ತಪ್ಪಾಗಿ ಪರಿಹಾರ ಮಾಡಿದ ಕೆಲವು ಪಝಲ್‌ಗಳನ್ನು ವಿದ್ಯಾರ್ಥಿಗಳು ಎದುರಿಸುತ್ತಾರೆ. ತಪ್ಪಾದ ಲೂಪ್‌ಗಳು, ತಪ್ಪಿದ ಬ್ಲಾಕ್‌ಗಳು, ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳು ಮತ್ತು ಅನುಕ್ರಮದಲ್ಲಿಲ್ಲದ ಬ್ಲಾಕ್‌ಗಳು ಸೇರಿದಂತೆ ದೋಷಗಳನ್ನು ಗುರುತಿಸಲು ಪ್ರಸ್ತುತ ಕೋಡ್ ಮೂಲಕ ಅವರು ಸಾಗಬೇಕಿರುತ್ತದೆ.
+            End of Course Project:
+              name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         express-2019:
           lesson_groups:
             csf_loops:
@@ -1569,6 +1615,8 @@ kn:
               name: ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್ ಪರಿಷ್ಕರಿಸಿ
             Present Your Project:
               name: ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ ಪ್ರಸ್ತುತಪಡಿಸಿ
+            Build A Project:
+              name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
             Dance Party:
               name: ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ
         andrea-test:
@@ -1591,6 +1639,8 @@ kn:
               display_name: ಈವೆಂಟ್‌ಗಳು
             csf_data:
               display_name: ಡೇಟಾ
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lessons:
             'Loops: Getting Loopy':
               name: 'ಲೂಪ್ಸ್: ಲೂಪಿ ಆಗುವುದು'
@@ -1598,6 +1648,8 @@ kn:
               name: ಆರ್ಟಿಸ್ಟ್‌ನಲ್ಲಿ ಲೂಪ್ಸ್
             Screen Out the Mean:
               name: ಮೀನ್ ಸ್ಕ್ರೀನ್ ಔಟ್ ಮಾಡಿ
+            'End of Course Project: Create a Play Lab Game':
+              name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         coursea-2019:
           description_short: ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಒಂದು ಪರಿಚಯ.
           lesson_groups:
@@ -1786,6 +1838,8 @@ kn:
               name: ವೇರಿಯಬಲ್‌ಗಳು
             Conditionals:
               name: ಕಂಡೀಷನಲ್ಸ್‌
+            Sprite Properties:
+              name: ಸ್ಪ್ರೈಟ್ಸ್‌ ಪ್ರಾಪರ್ಟಿಗಳು
         csp3-pilot:
           lesson_groups:
             required:
@@ -1900,6 +1954,8 @@ kn:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
             csf_nested_loops:
               display_name: ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lessons:
             Nested Loops in Artist:
               name: ಆರ್ಟಿಸ್ಟ್‌ನಲ್ಲಿ ನೆಸ್ಟೆಡ್ ಲೂಪ್ಸ್
@@ -1907,6 +1963,8 @@ kn:
               name: 'ಫಂಕ್ಷನ್‌ಗಳು: ಹಾಡು ಬರೆಯುವುದು'
             Functions in Artist:
               name: ಆರ್ಟಿಸ್ಟ್‌ನಲ್ಲಿ ಫಂಕ್ಷನ್‌ಗಳು
+            End of Course Project:
+              name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         time4cs-control-unit-1:
           lesson_groups:
             csf_loops:
@@ -1953,6 +2011,8 @@ kn:
           lessons:
             Variables:
               name: ವೇರಿಯಬಲ್‌ಗಳು
+            Sprite Properties:
+              name: ಸ್ಪ್ರೈಟ್ಸ್‌ ಪ್ರಾಪರ್ಟಿಗಳು
             Conditionals:
               name: ಕಂಡೀಷನಲ್ಸ್‌
             Text:
@@ -1997,9 +2057,13 @@ kn:
               display_name: ಈವೆಂಟ್‌ಗಳು
             csf_data:
               display_name: ಡೇಟಾ
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lessons:
             Screen Out the Mean:
               name: ಮೀನ್ ಸ್ಕ್ರೀನ್ ಔಟ್ ಮಾಡಿ
+            'End of Course Project: Create a Play Lab Game':
+              name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         coursed-2020:
           lesson_groups:
             csf_events:
@@ -2008,6 +2072,8 @@ kn:
               display_name: ಲೂಪ್‌ಗಳು
             csf_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lessons:
             Introduction to Online Puzzles:
               name: ಆನ್‌ಲೈನ್ ಪಝಲ್‌ಗಳಿಗೆ ಪರಿಚಯ
@@ -2016,15 +2082,21 @@ kn:
               description_teacher: ಈ ಆನ್‌ಲೈನ್ ಚಟುವಟಿಕೆಯಲ್ಲಿ, ಈವೆಂಟ್‌ಗಳು ಎಂದರೇನು ಮತ್ತು ವೀಡಿಯೋ ಗೇಮ್‌ಗಳಂತಹ ಪ್ರೋಗ್ರಾಮ್‌ಗಳಲ್ಲಿ ಕಂಪ್ಯೂಟರ್‌ಗಳು ಇವುಗಳನ್ನು ಹೇಗೆ ಬಳಸುತ್ತವೆ ಎಂದು ವಿದ್ಯಾರ್ಥಿಗಳು ತಿಳಿದುಕೊಳ್ಳುತ್ತಾರೆ. ಈವೆಂಟ್‌ಗಳಿಗೆ ಪ್ರೋಗ್ರಾಮ್ ಪ್ರತಿಕ್ರಿಯಿಸುವಂತೆ ಮಾಡುತ್ತಾ (ಬಾಣದ ಗುರುತಿನ ಬಟನ್‌ಗಳನ್ನು ಒತ್ತುವಂತಹ) ಪಝಲ್‌ಗಳ ಮೇಲೆ ವಿದ್ಯಾರ್ಥಿಗಳು ಕೆಲಸ ಮಾಡುತ್ತಾರೆ. ಪಝಲ್‌ನ ಕೊನೆಯಲ್ಲಿ, ವಿಭಿನ್ನ ವೇಗ ಮತ್ತು ಧ್ವನಿಗಳೊಂದಿಗೆ ತಮ್ಮ ಗೇಮ್‌ ಅನ್ನು ಗ್ರಾಹಕೀಯಗೊಳಿಸುವ ಅವಕಾಶವನ್ನು ವಿದ್ಯಾರ್ಥಿಗಳು ಹೊಂದುತ್ತಾರೆ.
             Dance Party:
               name: ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ
+            End of Course Project:
+              name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         coursee-2020:
           lesson_groups:
             csf_nested_loops:
               display_name: ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lessons:
             Sequencing in the Maze:
               description_teacher: |-
                 ಈ ಪಝಲ್‌ಗಳ ಸೆಟ್‌ನಲ್ಲಿ, Code.org ನ ಆನ್‌ಲೈನ್‌ ವರ್ಕ್‌ಸ್ಪೇಸ್‌ ಪರಿಚಯವನ್ನು (ಅಥವಾ ನಿಮ್ಮ ತರಗತಿಯ ಅನುಭವವನ್ನು ಆಧರಿಸಿ ಪರಿಶೀಲನೆಯನ್ನು) ವಿದ್ಯಾರ್ಥಿಗಳು ಪಡೆಯುವುದನ್ನು ಆರಂಭಿಸುತ್ತಾರೆ. 'ರನ್', 'ರಿಸೆಟ್' ಮತ್ತು 'ಸ್ಟೆಪ್' ಬಟನ್‌ಗಳು ಸೇರಿದಂತೆ ವರ್ಕ್‌ಸ್ಪೇಸ್‌ನ ಪ್ರಾಥಮಿಕ ಕಾರ್ಯನಿರ್ವಹಣೆಯನ್ನು ತೋರಿಸುವ ವೀಡಿಯೋಗಳಿವೆ. ಈ ವೀಡಿಯೋಗಳಲ್ಲಿ ಇದನ್ನೂ ಚರ್ಚಿಸಲಾಗಿದೆ: ಬ್ಲಾಕಿಲಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಎಳೆಯುವುದು, ಬ್ಲಾಕಿಲಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಅಳೆಯುವುದು ಮತ್ತು ಬ್ಲಾಕಿಲಿ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಸಂಪರ್ಕಿಸುವುದು. ಮುಂದೆ, ವಿದ್ಯಾರ್ಥಿಗಳು ಮೇಝ್‌ನಲ್ಲಿ _ಸೀಕ್ವೆನ್ಸಿಂಗ್_ ಮತ್ತು _ಡಿಬಗ್ಗಿಂಗ್‌_ ಕೌಶಲಗಳನ್ನು ಕಲಿಯುತ್ತಾರೆ. \\r
                 ಪ್ರೋಗ್ರಾಮ್ ಕಲಿಕೆಯಲ್ಲಿ ಡಿಬಗ್ಗಿಂಗ್ ಒಂದು ಅಗತ್ಯದ ಅಂಶವಾಗಿದೆ. ತಪ್ಪಾಗಿ ಪರಿಹಾರ ಮಾಡಿದ ಕೆಲವು ಪಝಲ್‌ಗಳನ್ನು ವಿದ್ಯಾರ್ಥಿಗಳು ಎದುರಿಸುತ್ತಾರೆ. ತಪ್ಪಾದ ಲೂಪ್‌ಗಳು, ತಪ್ಪಿದ ಬ್ಲಾಕ್‌ಗಳು, ಹೆಚ್ಚುವರಿ ಬ್ಲಾಕ್‌ಗಳು ಮತ್ತು ಅನುಕ್ರಮದಲ್ಲಿಲ್ಲದ ಬ್ಲಾಕ್‌ಗಳು ಸೇರಿದಂತೆ ದೋಷಗಳನ್ನು ಗುರುತಿಸಲು ಪ್ರಸ್ತುತ ಕೋಡ್ ಮೂಲಕ ಅವರು ಸಾಗಬೇಕಿರುತ್ತದೆ.
+            End of Course Project:
+              name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         coursef-2020:
           description_short: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್‌ನಲ್ಲಿ ಎಲ್ಲ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ಕಲಿಯಿರಿ ಮತ್ತು ನಿಮ್ಮದೇ ಆರ್ಟ್‌, ಸ್ಟೋರಿ ಅಥವಾ ಗೇಮ್ ರಚಿಸಿ.
           lesson_groups:
@@ -2032,11 +2104,15 @@ kn:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
             csf_data:
               display_name: ಡೇಟಾ
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lessons:
             For Loops in Bee:
               name: ಜೇನ್ನೊಣದ ಜೊತೆಗೆ ಲೂಪ್‌ಗಳಿಗಾಗಿ
             The Power of Words:
               name: ಶಬ್ದಗಳ ಶಕ್ತಿ
+            End of Course Project:
+              name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         express-2020:
           lesson_groups:
             csf_loops:
@@ -2045,6 +2121,8 @@ kn:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
             csf_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lessons:
             Dance Party:
               name: ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ
@@ -2066,6 +2144,8 @@ kn:
               name: ಜೇನ್ನೊಣದಲ್ಲಿ ಲೂಪ್‌ಗಳಿಗಾಗಿ
             For Loops in Artist:
               name: ಆರ್ಟಿಸ್ಟ್‌ನಲ್ಲಿ ಲೂಪ್‌ಗಳಿಗಾಗಿ
+            End of Course Project:
+              name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
             For Loops with Bee:
               name: ಜೇನ್ನೊಣದ ಜೊತೆಗೆ ಲೂಪ್‌ಗಳಿಗಾಗಿ
         pre-express-2020:
@@ -2127,6 +2207,8 @@ kn:
           lessons:
             Variables:
               name: ವೇರಿಯಬಲ್‌ಗಳು
+            Sprite Properties:
+              name: ಸ್ಪ್ರೈಟ್ಸ್‌ ಪ್ರಾಪರ್ಟಿಗಳು
             Text:
               name: ಪಠ್ಯ
             Conditionals:
@@ -2186,6 +2268,8 @@ kn:
               name: ಸಿಮ್ಯುಲೇಶನ್ ಕೋಡಿಂಗ್
             Making Sprites:
               name: ಸ್ಪ್ರೈಟ್‌ಗಳನ್ನು ಮಾಡುವುದು
+            End of Course Project:
+              name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
             Outbreaklab:
               name: ಔಟ್‌ಬ್ರೇಕ್ ಸ್ಟಾಂಡಲೋನ್ ಲ್ಯಾಬ್
           lesson_groups:
@@ -2200,6 +2284,9 @@ kn:
             Variables:
               key: ವೇರಿಯಬಲ್‌ಗಳು
               name: ವೇರಿಯಬಲ್‌ಗಳು
+            Sprite Properties:
+              key: ಸ್ಪ್ರೈಟ್ಸ್‌ ಪ್ರಾಪರ್ಟಿಗಳು
+              name: ಸ್ಪ್ರೈಟ್ಸ್‌ ಪ್ರಾಪರ್ಟಿಗಳು
             Text:
               key: ಪಠ್ಯ
               name: ಪಠ್ಯ
@@ -2241,11 +2328,15 @@ kn:
               key: 'ಈವೆಂಟ್‌ಗಳು: ದಿ ಬಿಗ್ ಈವೆಂಟ್'
             Events in Play Lab:
               key: ಪ್ಲೇ ಲ್ಯಾಬ್‌ನಲ್ಲಿ ಈವೆಂಟ್ಸ್
+            lesson-1:
+              name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lesson_groups:
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
             csf_events:
               display_name: ಈವೆಂಟ್‌ಗಳು
+            lessonGroup-5:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         courseb-2021:
           lessons:
             Programming in Maze:
@@ -2260,11 +2351,15 @@ kn:
               key: 'ಈವೆಂಟ್‌ಗಳು: ದಿ ಬಿಗ್ ಈವೆಂಟ್'
             Events in Play Lab:
               key: ಪ್ಲೇ ಲ್ಯಾಬ್‌ನಲ್ಲಿ ಈವೆಂಟ್ಸ್
+            lesson-1:
+              name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lesson_groups:
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
             csf_events:
               display_name: ಈವೆಂಟ್‌ಗಳು
+            lessonGroup-6:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         coursec-2021:
           description_short: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ನ ಮೂಲಾಂಶಗಳನ್ನು ತಿಳಿದುಕೊಳ್ಳಿ ಮತ್ತು ನಿಮ್ಮದೇ ಕಲೆ, ಕಥೆಗಳು ಮತ್ತು ಗೇಮ್ಸ್‌ ಅನ್ನು ರಚಿಸಿ.
           lessons:
@@ -2282,6 +2377,8 @@ kn:
               key: 'ಈವೆಂಟ್‌ಗಳು: ದಿ ಬಿಗ್ ಈವೆಂಟ್'
             Events in Play Lab:
               key: ಪ್ಲೇ ಲ್ಯಾಬ್‌ನಲ್ಲಿ ಈವೆಂಟ್ಸ್
+            'End of Course Project: Create a Play Lab Game':
+              name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lesson_groups:
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
@@ -2289,6 +2386,8 @@ kn:
               display_name: ಈವೆಂಟ್‌ಗಳು
             csf_data:
               display_name: ಡೇಟಾ
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         coursed-2021:
           title: ಕೋರ್ಸ್‌ ಡಿ (2021)
           lessons:
@@ -2306,6 +2405,9 @@ kn:
               key: ಜೇನ್ನೊಣದಲ್ಲಿ ಕಂಡೀಷನಲ್‌ಗಳು
             Conditionals & Loops in Harvester:
               key: ಹಾರ್ವೆಸ್ಟರ್‌ನಲ್ಲಿ ಕಂಡೀಷನಲ್‌ಗಳು ಮತ್ತು ಲೂಪ್‌ಗಳು
+            End of Course Project:
+              key: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+              name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
             lesson-1:
               name: ಶಬ್ದಗಳ ಶಕ್ತಿ
           lesson_groups:
@@ -2315,6 +2417,8 @@ kn:
               display_name: ಲೂಪ್‌ಗಳು
             csf_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         coursee-2021:
           lessons:
             Sequencing in the Maze:
@@ -2329,11 +2433,16 @@ kn:
               key: 'ಫಂಕ್ಷನ್‌ಗಳು: ಹಾಡು ಬರೆಯುವುದು'
             Functions in Artist:
               key: ಆರ್ಟಿಸ್ಟ್‌ನಲ್ಲಿ ಫಂಕ್ಷನ್‌ಗಳು
+            End of Course Project:
+              key: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+              name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lesson_groups:
             ramp_up:
               display_name: ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು
             csf_nested_loops:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         coursef-2021:
           description_short: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್‌ನಲ್ಲಿ ಎಲ್ಲ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ಕಲಿಯಿರಿ ಮತ್ತು ನಿಮ್ಮದೇ ಆರ್ಟ್‌, ಸ್ಟೋರಿ ಅಥವಾ ಗೇಮ್ ರಚಿಸಿ.
           lessons:
@@ -2347,6 +2456,9 @@ kn:
               key: ಆರ್ಟಿಸ್ಟ್‌ನಲ್ಲಿ ಲೂಪ್‌ಗಳಿಗಾಗಿ
             Virtual Pet:
               key: ವರ್ಚುವಲ್ ಪೆಟ್
+            End of Course Project:
+              key: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+              name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
             lesson-6:
               description_student: ಆಪ್‌ಗಳು ಮತ್ತು ಪರಿಕರಗಳು ಹೇಗೆ ಬಳಸಬೇಕು ಎಂಬ ಬಗ್ಗೆ ಬಳಕೆದಾರರಿಗೆ ಆಯ್ಕೆ ನೀಡುವುದರ ಮೇಲೆ ಗಮನ ಹರಿಸುವುದರೊಂದಿಗೆ ನಿಮ್ಮ ಜೀವನದಲ್ಲಿ ಕಂಪ್ಯೂಟರ್‌ಗಳು ಮತ್ತು ತಂತ್ರಜ್ಞಾನದ ಪಾತ್ರದ ಬಗ್ಗೆ ನೀವು ಚರ್ಚೆ ನಡೆಸುತ್ತೀರಿ.
             lesson-7:
@@ -2356,6 +2468,8 @@ kn:
             lesson-2:
               name: ಶಬ್ದಗಳ ಶಕ್ತಿ
           lesson_groups:
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
             lessonGroup-8:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
         express-2021:
@@ -2366,6 +2480,9 @@ kn:
             For Loops with Bee:
               key: ಜೇನ್ನೊಣದ ಜೊತೆಗೆ ಲೂಪ್‌ಗಳಿಗಾಗಿ
               name: ಜೇನ್ನೊಣದ ಜೊತೆಗೆ ಲೂಪ್‌ಗಳಿಗಾಗಿ
+            End of Course Project:
+              key: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+              name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
             lesson-1:
               name: ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ
             lesson-2:
@@ -2377,6 +2494,8 @@ kn:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
             csf_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
             lessonGroup-9:
               display_name: ಈವೆಂಟ್‌ಗಳು
         pre-express-2021:
@@ -3373,6 +3492,8 @@ kn:
           lesson_groups:
             lessonGroup-3:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
+            lessonGroup-4:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         csd6-pilot-2022:
           lessons:
             lesson-10:
@@ -3467,6 +3588,8 @@ kn:
             Programming with Rey and BB-8:
               name: ರೇ ಮತ್ತು ಬಿಬಿ-8 ಸಹಿತ ಪ್ರೋಗ್ರಾಮಿಂಗ್
               key: ರೇ ಮತ್ತು ಬಿಬಿ-8 ಸಹಿತ ಪ್ರೋಗ್ರಾಮಿಂಗ್
+            End of Course Project:
+              name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
             'Programming: Happy Maps':
               key: 'ಪ್ರೋಗ್ರಾಮಿಂಗ್: ಹ್ಯಾಪಿ ಮ್ಯಾಪ್ಸ್'
             'Loops: Happy Loops':
@@ -3479,11 +3602,14 @@ kn:
               key: ಪ್ಲೇ ಲ್ಯಾಬ್‌ನಲ್ಲಿ ಈವೆಂಟ್ಸ್
             lesson-1:
               key: ಅಧ್ಯಾಯ -1
+              name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lesson_groups:
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
             csf_events:
               display_name: ಈವೆಂಟ್‌ಗಳು
+            lessonGroup-5:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           description_short: ಪ್ರೀ ರೀಡರ್‌ಗಳಿಗಾಗಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ಗೆ ಒಂದು ಪರಿಚಯ.
         express-2022:
           lessons:
@@ -3494,6 +3620,9 @@ kn:
             For Loops with Bee:
               name: ಜೇನ್ನೊಣದ ಜೊತೆಗೆ ಲೂಪ್‌ಗಳಿಗಾಗಿ
               key: ಜೇನ್ನೊಣದ ಜೊತೆಗೆ ಲೂಪ್‌ಗಳಿಗಾಗಿ
+            End of Course Project:
+              name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+              key: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
             lesson-2:
               key: ಅಧ್ಯಾಯ -2
               name: ಸ್ಪ್ರೈಟ್‌ಗಳನ್ನು ಮಾಡುವುದು
@@ -3513,6 +3642,8 @@ kn:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
             csf_variables:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         csp3-2022:
           lessons:
             Debugging:
@@ -3532,6 +3663,8 @@ kn:
               display_name: ಲೂಪ್‌ಗಳು
         courseb-2022:
           lessons:
+            End of Course Project:
+              name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
             Programming in Maze:
               key: ಮೇಝ್‌ನಲ್ಲಿ ಪ್ರೋಗ್ರಾಮಿಂಗ್
             'Loops: Getting Loopy':
@@ -3546,13 +3679,18 @@ kn:
               key: ಪ್ಲೇ ಲ್ಯಾಬ್‌ನಲ್ಲಿ ಈವೆಂಟ್ಸ್
             lesson-1:
               key: ಅಧ್ಯಾಯ -1
+              name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lesson_groups:
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
             csf_events:
               display_name: ಈವೆಂಟ್‌ಗಳು
+            lessonGroup-6:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         coursec-2022:
           lessons:
+            End of Course Project:
+              name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
             'Programming: My Robotic Friends':
               key: 'ಪ್ರೋಗ್ರಾಮಿಂಗ್: ಮೈ ರೋಬೋಟಿಕ್ ಫ್ರೆಂಡ್ಸ್'
             Programming in Maze:
@@ -3567,6 +3705,8 @@ kn:
               key: 'ಈವೆಂಟ್‌ಗಳು: ದಿ ಬಿಗ್ ಈವೆಂಟ್'
             Events in Play Lab:
               key: ಪ್ಲೇ ಲ್ಯಾಬ್‌ನಲ್ಲಿ ಈವೆಂಟ್ಸ್
+            'End of Course Project: Create a Play Lab Game':
+              name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lesson_groups:
             csf_loops:
               display_name: ಲೂಪ್‌ಗಳು
@@ -3574,6 +3714,8 @@ kn:
               display_name: ಈವೆಂಟ್‌ಗಳು
             csf_data:
               display_name: ಡೇಟಾ
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           description_short: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ನ ಮೂಲಾಂಶಗಳನ್ನು ತಿಳಿದುಕೊಳ್ಳಿ ಮತ್ತು ನಿಮ್ಮದೇ ಕಲೆ, ಕಥೆಗಳು ಮತ್ತು ಗೇಮ್ಸ್‌ ಅನ್ನು ರಚಿಸಿ.
         csp8-2022:
           lessons:
@@ -3591,6 +3733,9 @@ kn:
             Dance Party:
               name: ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ
               key: ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ
+            End of Course Project:
+              name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+              key: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
             lesson-5:
               key: ಅಧ್ಯಾಯ -5
             'Algorithms: Graph Paper Programming':
@@ -3608,9 +3753,14 @@ kn:
               display_name: ಲೂಪ್‌ಗಳು
             csf_conditionals:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           title: ಕೋರ್ಸ್‌ ಡಿ (2021)
         coursee-2022:
           lessons:
+            End of Course Project:
+              name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+              key: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
             lesson-4:
               key: ಅಧ್ಯಾಯ -4
             Nested Loops in Artist:
@@ -3630,6 +3780,8 @@ kn:
               display_name: ನೆಸ್ಟೆಡ್ ಲೂಪ್‌ಗಳು
             csf_nested_loops:
               display_name: ಕಂಡೀಷನಲ್ಸ್‌
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
         coursef-2022:
           lessons:
             Introducing Sprite Lab:
@@ -3642,6 +3794,9 @@ kn:
               name: ಜೇನ್ನೊಣದ ಜೊತೆಗೆ ಲೂಪ್‌ಗಳಿಗಾಗಿ
             Outbreak:
               name: ಹರಡುವಿಕೆ
+            End of Course Project:
+              name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+              key: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
             lesson-6:
               key: ಅಧ್ಯಾಯ -6
             lesson-7:
@@ -3670,6 +3825,8 @@ kn:
           lesson_groups:
             lessonGroup-8:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           description_short: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್‌ನಲ್ಲಿ ಎಲ್ಲ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ಕಲಿಯಿರಿ ಮತ್ತು ನಿಮ್ಮದೇ ಆರ್ಟ್‌, ಸ್ಟೋರಿ ಅಥವಾ ಗೇಮ್ ರಚಿಸಿ.
         csa1-2022:
           lessons:
@@ -3899,9 +4056,14 @@ kn:
             Outbreak:
               name: ಹರಡುವಿಕೆ
               key: ಹರಡುವಿಕೆ
+            End of Course Project:
+              name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+              key: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           lesson_groups:
             lessonGroup-8:
               display_name: ವೇರಿಯಬಲ್‌ಗಳು
+            end_of_course_project:
+              display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
           description_short: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್‌ನಲ್ಲಿ ಎಲ್ಲ ಕಾನ್ಸೆಪ್ಟ್‌ಗಳನ್ನು ಕಲಿಯಿರಿ ಮತ್ತು ನಿಮ್ಮದೇ ಆರ್ಟ್‌, ಸ್ಟೋರಿ ಅಥವಾ ಗೇಮ್ ರಚಿಸಿ.
         csa6-2022:
           lessons:
@@ -4201,6 +4363,9 @@ kn:
             Variables:
               name: ವೇರಿಯಬಲ್‌ಗಳು
               key: ವೇರಿಯಬಲ್‌ಗಳು
+            Sprite Properties:
+              name: ಸ್ಪ್ರೈಟ್ಸ್‌ ಪ್ರಾಪರ್ಟಿಗಳು
+              key: ಸ್ಪ್ರೈಟ್ಸ್‌ ಪ್ರಾಪರ್ಟಿಗಳು
             Text:
               name: ಪಠ್ಯ
               key: ಪಠ್ಯ
