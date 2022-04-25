@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-14 20:39:25 UTC",
+    "serialized_at": "2022-04-22 18:29:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -8437,6 +8437,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csd2-2022"
+        ],
         "progression": "End-Of-Unit Survey"
       },
       "bonus": false,
