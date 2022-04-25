@@ -1422,6 +1422,9 @@
         "41bca090-a4b2-4019-b05e-3b3b3b0cca14": {
           "progression_name": "Neurriak"
         },
+        "d3f08051-43ee-48aa-9154-f8b1f21a486f": {
+          "progression_name": "Propietateak"
+        },
         "c7bb438d-7dd6-483a-954a-0431f8ece258": {
           "tips": [
             null
@@ -1552,7 +1555,8 @@
         "7e0f9f67-19cb-455a-bd75-d771183b8773": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Propietateak"
         },
         "86741327-b7d6-4dfb-b703-f23be6b2a7dc": {
           "progression_name": "Joku askea"
@@ -5035,6 +5039,9 @@
         },
         "4da75e07-81b7-447e-90d4-5253a241a850": {
           "progression_name": "Neurriak"
+        },
+        "a9494fa0-0b2b-4c5a-939e-c440bb5f4717": {
+          "progression_name": "Propietateak"
         },
         "7a2b3e7f-2f8f-4592-a166-1d279f647fb2": {
           "progression_name": "Ixtea"
