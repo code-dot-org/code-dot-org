@@ -657,6 +657,8 @@ mr:
           description_short: संगणक शास्त्रातील मूलभूत गोष्टी शिका आणि तुमची स्वत:ची
             कला, गोष्टी आणिया गेम्स बनवा.
           lesson_groups:
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
             extra_course_content:
               display_name: अभ्यासक्रमातील अतिरिक्त सामग्री
           lessons:
@@ -691,6 +693,9 @@ mr:
         coursef-draft:
           description_short: संगणक शास्त्रातील मूलभूत गोष्टी शिका आणि तुमची स्वत:ची
             कला, गोष्टी आणिया गेम्स बनवा.
+          lesson_groups:
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
           lessons:
             Variables in Play Lab:
               name: प्ले लॅबमधील व्हेरीएबल्स
@@ -753,6 +758,9 @@ mr:
             required:
               display_name: आढावा
         csf2harvey:
+          lesson_groups:
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
           lessons:
             'Functions: Songwriting':
               name: 'फंक्शन्स: गीतलेखन'
@@ -1034,6 +1042,8 @@ mr:
           description_short: अभ्यासक्रम C आणि D मधल्या संकल्पना पटकन पूर्ण करा आणि
             नंतर पुढे जाऊन फंक्शन्स करा.
           lesson_groups:
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
             extra_course_content:
               display_name: अभ्यासक्रमातील अतिरिक्त सामग्री
           lessons:
@@ -1105,6 +1115,9 @@ mr:
           assignment_family_title: अभ्यासक्रम F
           description_short: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना शिका
             आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
+          lesson_groups:
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
           lessons:
             'Algorithms: Tangrams':
               name: 'अल्गोरिदम्स: टॅनग्रॅम्स'
@@ -1206,6 +1219,9 @@ mr:
             required:
               display_name: आढावा
         express-2017:
+          lesson_groups:
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
           lessons:
             'Algorithms: Graph Paper Programming':
               name: 'प्रोग्रॅमिंग: आलेख कागद प्रोग्रॅमिंग'
@@ -1310,6 +1326,8 @@ mr:
                 **वय योग्यता:** हे ट्यूटोरियल 13 वर्षांपेक्षा जास्त वयाच्या विद्यार्थ्यांसाठी डिझाइन केलेले आहे. कारण ते विद्यार्थ्यांना सानुकूल ध्वनी आणि प्रतिमा अपलोड करण्यास अनुमती देते, तरुण विद्यार्थ्यांनी हे पर्यवेक्षणाशिवाय वापरू नये. विद्यार्थ्यांच्या गोपनीयतेचे रक्षण करण्यासाठी, तुमचे विद्यार्थी 13 वर्षांखालील असल्यास, तुम्ही व्यवस्थापित करत असलेल्या विभागात तुम्ही प्रथम त्यांच्यासाठी खाती सेट केल्याशिवाय ते हे ट्यूटोरियल वापरण्यास सक्षम असणार नाहीत.
         e-f-ramp:
           lesson_groups:
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
             extra_course_content:
               display_name: अभ्यासक्रमातील अतिरिक्त सामग्री
           lessons:
@@ -1380,6 +1398,9 @@ mr:
             Loops in Artist:
               name: आर्टीस्टमध्ये लूप्स
         new-express:
+          lesson_groups:
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
           lessons:
             'Algorithms: Graph Paper Programming':
               name: 'अल्गोरिदम्स: आलेख कागद प्रोग्रॅमिंग '
@@ -1435,6 +1456,8 @@ mr:
               name: आर्टीस्टमध्ये लूप्स
         new-e:
           lesson_groups:
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
             extra_course_content:
               display_name: अभ्यासक्रमातील अतिरिक्त सामग्री
           lessons:
@@ -1477,6 +1500,9 @@ mr:
             Present Your Project:
               name: तुमचा प्रकल्प सादर करा
         new-f:
+          lesson_groups:
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
           lessons:
             'Programming: My Robotic Friends':
               name: 'प्रोग्रॅमिंग: माझे रोबो मित्र'
@@ -1557,6 +1583,8 @@ mr:
               name: हॅलोविन आर्टीस्ट
         course-e-2018:
           lesson_groups:
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
             extra_course_content:
               display_name: अभ्यासक्रमातील अतिरिक्त सामग्री
           lessons:
@@ -1601,6 +1629,9 @@ mr:
             Build a Star Wars Game:
               name: एक स्टार वॉर्स गेम तयार करा
         course-f-2018:
+          lesson_groups:
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
           lessons:
             'Programming: My Robotic Friends':
               name: 'प्रोग्रॅमिंग: माझे रोबो मित्र'
@@ -1893,6 +1924,8 @@ mr:
         coursee-2018:
           assignment_family_title: अभ्यासक्रम E
           lesson_groups:
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
             extra_course_content:
               display_name: अभ्यासक्रमातील अतिरिक्त सामग्री
           lessons:
@@ -1939,6 +1972,9 @@ mr:
           assignment_family_title: अभ्यासक्रम F
           description_short: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना शिका
             आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
+          lesson_groups:
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
           lessons:
             Debugging with Scrat:
               name: स्क्रॅट सोबत डीबगिंग
@@ -2179,6 +2215,8 @@ mr:
               display_name: व्हेरीएबल्स
             csf_data:
               display_name: डेटा
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
           lessons:
             'Programming: My Robotic Friends':
               name: 'प्रोग्रॅमिंग: माझे रोबो मित्र'
@@ -2232,6 +2270,8 @@ mr:
               name: लूप सोबत ड्रॉइंग
             Virtual Pet:
               name: स्प्राइट लॅबसह व्हर्च्युअल पाळीव प्राणी
+            End of Course Project:
+              name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
             Running Simulations:
               name: रनिंग सिम्युलेशन
         dance-low:
@@ -2251,6 +2291,8 @@ mr:
               display_name: लूप्स
             csf_conditionals:
               display_name: कंडीशनल्स
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
           lessons:
             'Algorithms: Graph Paper Programming':
               description_student: या धड्यामध्ये, तुम्ही तुमच्या वर्गमित्रांना चित्र
@@ -2305,6 +2347,8 @@ mr:
           lesson_groups:
             csf_nested_loops:
               display_name: नेस्टेड लूप्स
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
           lessons:
             'Programming: My Robotic Friends':
               name: 'प्रोग्रॅमिंग: माझे रोबो मित्र'
@@ -2369,6 +2413,8 @@ mr:
                 शोधण्यासाठी त्यांना सध्या असलेला कोड पायरीपायरीने रन करावा लागेल."
             Programming and Loops with the Artist:
               name: लूप सोबत ड्रॉइंग
+            End of Course Project:
+              name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
             'Conditionals in Minecraft: Voyage Aquatic':
               name: 'माइनक्राफ्टमधील कंडीशनल्स : व्हॉयेज एक्वाटिक'
             Swimming Fish with Sprite Lab:
@@ -2454,6 +2500,8 @@ mr:
               name: आर्टीस्ट बायनरी
             Virtual Pet with Sprite Lab:
               name: स्प्राइट लॅबसह व्हर्च्युअल पाळीव प्राणी
+            Build A Project:
+              name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
             Dance Party:
               name: डांस पार्टी
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -2483,6 +2531,8 @@ mr:
               display_name: ईव्हेंट्स
             csf_data:
               display_name: डेटा
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
           lessons:
             Programming in Maze:
               name: अँग्री बर्ड्स सह प्रोग्रामिंग
@@ -2513,6 +2563,8 @@ mr:
               description_student: सर्जनशील व्हा आणि प्ले लॅबमध्ये गेम बनवा!
             Looking Ahead:
               name: माइनक्राफ्ट सह पुढे  पाहणे
+            'End of Course Project: Create a Play Lab Game':
+              name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
             Sticker Art with Loops:
               name: लूपसह स्टिकर आर्ट
         coursea-2019:
@@ -2838,6 +2890,8 @@ mr:
               name: व्हेरीएबल्स
             Conditionals:
               name: कंडीशनल्स
+            Sprite Properties:
+              name: स्प्राईट प्रॉपर्टीज
         csp3-pilot:
           lesson_groups:
             required:
@@ -2983,6 +3037,8 @@ mr:
               display_name: कंडीशनल्स
             csf_nested_loops:
               display_name: नेस्टेड लूप्स
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
           lessons:
             Nested Loops in Artist:
               name: आर्टीस्टमध्ये नेस्टेड लूप्स
@@ -2992,6 +3048,8 @@ mr:
               name: माईनक्राफ्ट मधील फंक्शन्स
             Functions in Artist:
               name: आर्टीस्टमध्ये फंक्शन्स
+            End of Course Project:
+              name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
         time4cs-experiment-unit-2:
           lessons:
             Nested Loops in Maze:
@@ -3062,6 +3120,8 @@ mr:
           lessons:
             Variables:
               name: व्हेरीएबल्स
+            Sprite Properties:
+              name: स्प्राईट प्रॉपर्टीज
             Conditionals:
               name: कंडीशनल्स
             Text:
@@ -3193,6 +3253,8 @@ mr:
               display_name: ईव्हेंट्स
             csf_data:
               display_name: डेटा
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
           lessons:
             Screen Out the Mean:
               name: शेरेबाजी काढून टाका
@@ -3221,6 +3283,8 @@ mr:
             Events in Play Lab:
               name: इव्हेंट सोबत गेम चा पाठलाग करणे
               description_student: सर्जनशील व्हा आणि प्ले लॅबमध्ये गेम बनवा!
+            'End of Course Project: Create a Play Lab Game':
+              name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
         coursed-2020:
           title: अभ्यासक्रम D (2020)
           lesson_groups:
@@ -3232,6 +3296,8 @@ mr:
               display_name: लूप्स
             csf_conditionals:
               display_name: कंडीशनल्स
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
           lessons:
             'Algorithms: Graph Paper Programming':
               description_student: या धड्यामध्ये, तुम्ही तुमच्या वर्गमित्रांना चित्र
@@ -3277,6 +3343,8 @@ mr:
               name: आर्टीस्टसह बायनरी इमेजेस
             Dance Party:
               name: डांस पार्टी
+            End of Course Project:
+              name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
             Be A Super Digital Citizen:
               description_student: सायबर गुंडगिरी पाहिल्यावर आपण अपस्टेंडर कसे राहू
                 शकता हे शिका
@@ -3285,6 +3353,8 @@ mr:
           lesson_groups:
             csf_nested_loops:
               display_name: नेस्टेड लूप्स
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
           lessons:
             Sequencing in the Maze:
               description_teacher: "कोड्यांच्या या संचात, विद्यार्थी  Code.org च्या
@@ -3323,6 +3393,8 @@ mr:
             Functions in Artist:
               name: आर्टीस्टसह फंक्शन्स
               description_student: फंक्शन्ससह जटिल ड्रॉइंग्स अधिक सहज बनवा!
+            End of Course Project:
+              name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
         coursef-2020:
           title: अभ्यासक्रम F (2020)
           description_short: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना शिका
@@ -3332,6 +3404,8 @@ mr:
               display_name: व्हेरीएबल्स
             csf_data:
               display_name: डेटा
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
           lessons:
             Functions in Minecraft:
               name: माईनक्राफ्ट मधील फंक्शन्स
@@ -3361,6 +3435,8 @@ mr:
               name: स्प्राइट लॅबसह व्हर्च्युअल पाळीव प्राणी
             The Power of Words:
               name: शब्दांची ताकद
+            End of Course Project:
+              name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
             AI for Oceans:
               name: महासागरांसाठी कृत्रिम बुद्धिमत्ता
               description_student: 'ट्युटोरीयल सारांश: आधी विद्यार्थी महासागरातून
@@ -3383,6 +3459,8 @@ mr:
               display_name: कंडीशनल्स
             csf_variables:
               display_name: व्हेरीएबल्स
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
           lessons:
             Dance Party:
               name: डांस पार्टी
@@ -3422,6 +3500,8 @@ mr:
               name: स्प्राइट लॅबसह व्हर्च्युअल पाळीव प्राणी
             Swimming Fish with Sprite Lab:
               name: स्प्राइट लॅबसह स्विमिंग फिश
+            End of Course Project:
+              name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
             Programming with Angry Birds:
               name: अँग्री बर्ड्स सह प्रोग्रामिंग
             Debugging with Scrat:
@@ -3545,6 +3625,8 @@ mr:
           lessons:
             Variables:
               name: व्हेरीएबल्स
+            Sprite Properties:
+              name: स्प्राईट प्रॉपर्टीज
             Text:
               name: टेक्स्ट
             Conditionals:
@@ -3614,6 +3696,8 @@ mr:
               name: स्प्राईट्स तयार करणे
             blank space stories:
               name: ब्लॅंक स्पेस स्टोरीज
+            End of Course Project:
+              name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
             Outbreaklab:
               name: आऊटब्रेक स्टँडअलोन लॅब
           lesson_groups:
@@ -3628,6 +3712,9 @@ mr:
             Variables:
               key: व्हेरीएबल्स
               name: व्हेरीएबल्स
+            Sprite Properties:
+              key: स्प्राईट प्रॉपर्टीज
+              name: स्प्राईट प्रॉपर्टीज
             Text:
               key: टेक्स्ट
               name: टेक्स्ट
@@ -3714,6 +3801,7 @@ mr:
               key: प्ले लॅबमधील इव्हेंट्स
               description_student: आपली स्वतःची गेम किंवा स्टोरी तयार करा.
             lesson-1:
+              name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
               description_student: आर्टीस्ट सोबत एक गोष्ट सांगा!
           lesson_groups:
             csf_sequencing:
@@ -3722,6 +3810,8 @@ mr:
               display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
+            lessonGroup-5:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
         courseb-2021:
           lessons:
             Move It, Move It:
@@ -3761,6 +3851,7 @@ mr:
               description_student: कथा  किंवा इंटरॲक्टीव्ह गेम  तयार करण्यासाठी इव्हेंटचा
                 वापर करा.
             lesson-1:
+              name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
               description_student: आपली स्वतःची स्टोरी किंवा गेम तयार करा.
           lesson_groups:
             csf_sequencing:
@@ -3769,6 +3860,8 @@ mr:
               display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
+            lessonGroup-6:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
         coursec-2021:
           description_short: संगणक शास्त्रातील मूलभूत गोष्टी शिका आणि तुमची स्वत:ची
             कला, गोष्टी आणिया गेम्स बनवा.
@@ -3812,6 +3905,8 @@ mr:
             Events in Play Lab:
               key: प्ले लॅबमधील इव्हेंट्स
               description_student: सर्जनशील व्हा आणि प्ले लॅबमध्ये गेम बनवा!
+            'End of Course Project: Create a Play Lab Game':
+              name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
@@ -3821,6 +3916,8 @@ mr:
               display_name: ईव्हेंट्स
             csf_data:
               display_name: डेटा
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
         coursed-2021:
           title: अभ्यासक्रम D (2021)
           lessons:
@@ -3866,6 +3963,9 @@ mr:
             Be A Super Digital Citizen:
               description_student: सायबर गुंडगिरी पाहिल्यावर आपण अपस्टेंडर कसे राहू
                 शकता हे शिका
+            End of Course Project:
+              key: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
+              name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
             lesson-6:
               name: माइनक्राफ्ट सह पुढे  पाहणे
             lesson-1:
@@ -3879,6 +3979,8 @@ mr:
               display_name: लूप्स
             csf_conditionals:
               display_name: कंडीशनल्स
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
         coursee-2021:
           lessons:
             Sequencing in the Maze:
@@ -3929,6 +4031,9 @@ mr:
               key: आर्टीस्टमध्ये फंक्शन्स
               name: आर्टीस्टसह फंक्शन्स
               description_student: फंक्शन्ससह जटिल ड्रॉइंग्स अधिक सहज बनवा!
+            End of Course Project:
+              key: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
+              name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
             lesson-4:
               description_student: सायबर गुंडगिरी पाहिल्यावर आपण अपस्टेंडर कसे राहू
                 शकता हे शिका
@@ -3937,6 +4042,8 @@ mr:
               display_name: नेस्टेड लूप्स
             csf_nested_loops:
               display_name: कंडीशनल्स
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
         coursef-2021:
           description_short: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना शिका
             आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
@@ -3975,6 +4082,9 @@ mr:
               name: आर्टीस्टसह फॉर लूप्स
             Virtual Pet:
               key: व्हर्च्युअल पाळीव प्राणी
+            End of Course Project:
+              key: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
+              name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
             lesson-7:
               name: स्प्राईट्स तयार करणे
             lesson-9:
@@ -3988,6 +4098,8 @@ mr:
             lesson-2:
               name: शब्दांची ताकद
           lesson_groups:
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
             lessonGroup-8:
               display_name: व्हेरीएबल्स
         express-2021:
@@ -4074,6 +4186,9 @@ mr:
             Virtual Pet with Sprite Lab:
               key: स्प्राइट लॅबसह व्हर्च्युअल पाळीव प्राणी
               name: स्प्राइट लॅबसह व्हर्च्युअल पाळीव प्राणी
+            End of Course Project:
+              key: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
+              name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
             lesson-1:
               name: डांस पार्टी
             lesson-2:
@@ -4093,6 +4208,8 @@ mr:
               display_name: कंडीशनल्स
             csf_variables:
               display_name: व्हेरीएबल्स
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
             lessonGroup-9:
               display_name: ईव्हेंट्स
         pre-express-2021:
@@ -5226,6 +5343,8 @@ mr:
           lesson_groups:
             lessonGroup-3:
               display_name: व्हेरीएबल्स
+            lessonGroup-4:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
         csd6-pilot-2022:
           lessons:
             lesson-10:
@@ -5351,6 +5470,7 @@ mr:
             'Mini-Project: On the Move with Play Lab':
               description_student: आपली स्वतःची गेम किंवा स्टोरी तयार करा.
             End of Course Project:
+              name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
               description_student: आर्टीस्ट सोबत एक गोष्ट सांगा!
             'Programming: Happy Maps':
               key: 'प्रोग्रॅमिंग: आनंदी नकाशे'
@@ -5377,6 +5497,7 @@ mr:
               description_student: आपली स्वतःची गेम किंवा स्टोरी तयार करा.
             lesson-1:
               key: धडा -1
+              name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
               description_student: आर्टीस्ट सोबत एक गोष्ट सांगा!
           lesson_groups:
             csf_sequencing:
@@ -5385,6 +5506,8 @@ mr:
               display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
+            lessonGroup-5:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
           description_short: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
         express-2022:
           lessons:
@@ -5464,6 +5587,9 @@ mr:
             For Loops with Artist:
               name: आर्टीस्टसह फॉर लूप्स
               key: आर्टीस्टसह फॉर लूप्स
+            End of Course Project:
+              name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
+              key: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
             Debugging with Scrat:
               key: स्क्रॅट सोबत डीबगिंग
               name: मेझ मध्ये डीबगिंग
@@ -5502,6 +5628,8 @@ mr:
               display_name: कंडीशनल्स
             csf_variables:
               display_name: व्हेरीएबल्स
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
         csp2-2022:
           lessons:
             Packets:
@@ -5556,6 +5684,7 @@ mr:
               description_student: कथा  किंवा इंटरॲक्टीव्ह गेम  तयार करण्यासाठी इव्हेंटचा
                 वापर करा.
             End of Course Project:
+              name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
               description_student: आपली स्वतःची स्टोरी किंवा गेम तयार करा.
             Sequencing in Maze:
               name: अँग्री बर्ड्स सह अनुक्रम
@@ -5590,6 +5719,7 @@ mr:
                 वापर करा.
             lesson-1:
               key: धडा -1
+              name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
               description_student: आपली स्वतःची स्टोरी किंवा गेम तयार करा.
           lesson_groups:
             csf_sequencing:
@@ -5598,6 +5728,8 @@ mr:
               display_name: लूप्स
             csf_events:
               display_name: ईव्हेंट्स
+            lessonGroup-6:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
         coursec-2022:
           lessons:
             Programming with Angry Birds:
@@ -5626,6 +5758,8 @@ mr:
               key: " फ्लॅपी गेम तयार करा"
             'Mini-Project: Chase Game':
               description_student: सर्जनशील व्हा आणि प्ले लॅबमध्ये गेम बनवा!
+            End of Course Project:
+              name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
             'Programming: My Robotic Friends':
               key: 'प्रोग्रॅमिंग: माझे रोबो मित्र'
             Programming in Maze:
@@ -5653,6 +5787,8 @@ mr:
             Events in Play Lab:
               key: प्ले लॅबमधील इव्हेंट्स
               description_student: सर्जनशील व्हा आणि प्ले लॅबमध्ये गेम बनवा!
+            'End of Course Project: Create a Play Lab Game':
+              name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
           lesson_groups:
             csf_sequencing:
               display_name: सिक्वेन्सिंग
@@ -5662,6 +5798,8 @@ mr:
               display_name: ईव्हेंट्स
             csf_data:
               display_name: डेटा
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
           description_short: संगणक शास्त्रातील मूलभूत गोष्टी शिका आणि तुमची स्वत:ची
             कला, गोष्टी आणिया गेम्स बनवा.
         csp8-2022:
@@ -5711,6 +5849,9 @@ mr:
             Until Loops in Maze:
               name: मेझ मध्ये लूप पर्यंत
               key: मेझ मध्ये लूप पर्यंत
+            End of Course Project:
+              name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
+              key: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
             lesson-5:
               key: धडा -5
             'Algorithms: Graph Paper Programming':
@@ -5739,6 +5880,8 @@ mr:
               display_name: लूप्स
             csf_conditionals:
               display_name: कंडीशनल्स
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
           title: अभ्यासक्रम D (2021)
         coursee-2022:
           lessons:
@@ -5773,6 +5916,9 @@ mr:
               name: शेतकऱ्यासह कंडीशनल्स
             Functions with Harvester:
               name: हार्वेस्टर सोबत फंक्शन्स
+            End of Course Project:
+              name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
+              key: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
             Simon Says:
               name: अल्गोरिदमचे अनुसरण करा
             Learning Sprites with Sprite Lab:
@@ -5807,6 +5953,8 @@ mr:
               display_name: नेस्टेड लूप्स
             csf_nested_loops:
               display_name: कंडीशनल्स
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
         coursef-2022:
           lessons:
             Making Sprites:
@@ -5834,6 +5982,9 @@ mr:
               name: उद्रेक
             AI For Oceans:
               name: महासागरांसाठी कृत्रिम बुद्धिमत्ता
+            End of Course Project:
+              name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
+              key: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
             lesson-6:
               key: धडा -6
             lesson-7:
@@ -5877,6 +6028,8 @@ mr:
           lesson_groups:
             lessonGroup-8:
               display_name: व्हेरीएबल्स
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
           description_short: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना शिका
             आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
         csa1-2022:
@@ -6163,9 +6316,14 @@ mr:
             AI For Oceans:
               name: महासागरांसाठी कृत्रिम बुद्धिमत्ता
               key: महासागरांसाठी कृत्रिम बुद्धिमत्ता
+            End of Course Project:
+              name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
+              key: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
           lesson_groups:
             lessonGroup-8:
               display_name: व्हेरीएबल्स
+            end_of_course_project:
+              display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
           description_short: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना शिका
             आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
         csa6-2022:
@@ -6625,6 +6783,9 @@ mr:
             Variables:
               name: व्हेरीएबल्स
               key: व्हेरीएबल्स
+            Sprite Properties:
+              name: स्प्राईट प्रॉपर्टीज
+              key: स्प्राईट प्रॉपर्टीज
             Text:
               name: टेक्स्ट
               key: टेक्स्ट
