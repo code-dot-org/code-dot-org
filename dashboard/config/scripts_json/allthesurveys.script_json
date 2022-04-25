@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "allthesurveys",
-    "serialized_at": "2022-04-18 16:59:41 UTC",
+    "serialized_at": "2022-04-20 16:08:59 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1413,6 +1413,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pre-survey-levelgroup_21_222022_csa-2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1434,6 +1437,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-levelgroup_csa-2022"
+        ],
         "progression": "Survey"
       },
       "bonus": false,
