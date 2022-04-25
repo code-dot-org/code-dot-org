@@ -88,6 +88,7 @@ describe('SingleMethod', () => {
       content: 'A detailed description of what this method does',
       syntax: 'method(int i)',
       externalLink: 'example.example',
+      returnValue: '`string` that represents the return value',
       examples: [
         {
           name: 'Example 1',
@@ -110,6 +111,7 @@ describe('SingleMethod', () => {
 
     expect(wrapper.find('h3').text()).to.contain(defaultMethod.name);
     expect(wrapper.find('h4').map(h => h.text())).to.eql([
+      'Returns',
       'Parameters',
       'Examples',
       'Additional Information'
@@ -137,7 +139,14 @@ describe('SingleMethod', () => {
     ).to.contain(defaultMethod.externalDocumentation);
   });
 
-  it('hides the examples header if no syntax is provided', () => {
+  it('hides the returns header if no returnValue is provided', () => {
+    delete defaultMethod.returnValue;
+    const wrapper = shallow(<SingleMethod method={defaultMethod} />);
+    expect(wrapper.find('h4').length).to.be.greaterThan(0);
+    expect(wrapper.find('h4').map(h => h.text())).to.not.include('Returns');
+  });
+
+  it('hides the examples header if no examples is provided', () => {
     delete defaultMethod.examples;
     const wrapper = shallow(<SingleMethod method={defaultMethod} />);
     expect(wrapper.find('h4').length).to.be.greaterThan(0);
