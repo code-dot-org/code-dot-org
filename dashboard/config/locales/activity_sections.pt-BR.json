@@ -8087,6 +8087,7 @@
           ]
         },
         "64a65e3a-6b86-4cc4-93fa-d0b4b9104781": {
+          "name": "Projeto de Fim do Curso",
           "description": "Equipados com seus guias de planejamento concluídos, os alunos agora estão prontos para dar vida a seus projetos. Esses níveis correspondem à estrutura do guia de planejamento e ajudam a orientar os alunos pelo processo de transformar suas ideias em código.",
           "tips": [
             "Os alunos experimentarão muitas tentativas e erros durante a codificação. É provável que seus projetos se tornem versões truncadas de seu escopo original. Lembre aos alunos que esse tipo de compromisso é comum no design de software. Tudo bem se eles não conseguirem criar todos os recursos que planejaram!"

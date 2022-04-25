@@ -123,6 +123,7 @@ pt:
     use_clever: "Desculpe, sua conta do Code.org não está ligada à sua %{provider}. Por favor entre através do seu Portal Clever."
     invalid_provider: "Desculpe-nos, contas do(a) empresa %{provider} não podem ser associadas à contas do Code.org."
     unable_to_connect_provider: "Não foi possível conecta sua conta do Code.org ao seu %{provider}. Por favor tente novamente."
+    disconnect_successful: "Sucesso! Desconectamos a conta externa da sua conta do Code.org."
     already_in_use: "Seu %{provider} já está conectado a outra conta do Code.org."
     already_linked: "Seu %{provider} já está lincado a outra conta do Code.org."
     existing_account:
@@ -158,6 +159,10 @@ pt:
     invalid_password: "A senha deve ter pelo menos 6 caracteres"
     mismatch_password: "As duas senhas que você digitou são diferentes"
     student_consent: "Confirmo que tenho autorização dos meus pais ou do tutor legal para usar os serviços do Code.org."
+    agree_us_data_transfer_student: '**Concordo que o Code.org pode transferir dados (incluindo dados pessoais) do meu uso deste site para os Estados Unidos** com a finalidade de hospedar e processar esses dados.'
+    agree_us_data_transfer_teacher: '**Concordo que o Code.org pode transferir dados (incluindo dados pessoais) do meu uso (e do uso dos meus alunos) deste site para os Estados Unidos** com a finalidade de hospedar e processar esses dados.'
+    data_collection_us: "Entendo que o Code.org é um site sem fins lucrativos com sede nos EUA e que as leis que regem a coleta de dados nos EUA podem diferir das leis do meu país."
+    visit_privacy: 'Visite a [Política de Privacidade](%{privacy_url}) do Code.org para saber mais.'
     student_terms_markdown: "Os endereços de email não são armazenados em um formulário que nos permita entrar em contato com os alunos. Os alunos nunca receberão emails do Code.org, exceto para recuperação de senha. Veja nossa [política de privacidade] (http://code.org/privacy) para mais informações."
     additional_information: "Precisamos de mais informações para continuar com o processo de inscrição."
     user_type_button: "Atualizar Tipo de Conta"
@@ -277,6 +282,7 @@ pt:
     invite_sent: 'Convite enviado'
     added_teacher: '%{name} foi adicionado como seu professor'
     registered: "Você já está registrado para %{section_name}."
+    captcha_required: 'Por favor, preencha o CAPTCHA para participar desta seção.'
     already_exists: 'Você já se juntou à seção %{section_name}.'
     error:
       signed_in: 'Saia antes de prosseguir'
@@ -287,6 +293,8 @@ pt:
       blank_code: "Insira um código de seção"
       cant_join_own_section: "Desculpe, você não pode entrar em sua própria seção."
       provider_managed_section: "Esta turma é dirigida por outro provedor e não pode ser entrada. Por favor pergunte a seu professor via %{provider} e re-sincronize a turma."
+      restricted_section: "Não foi possível adicionar você à seção %{section_code} porque ela está bloqueada. Entre em contato com seu professor para obter ajuda."
+      full_section: "Não foi possível adicionar você à seção %{section_code} porque já existem %{section_capacity} alunos nela. Entre em contato com seu professor para obter ajuda."
       not_participant_type: "Não foi possível adicioná-lo à seção %{section_code}, porque você não é o tipo de participante esperado."
     mail:
       student_disassociated:
@@ -334,6 +342,7 @@ pt:
       game_lab_tutorials: "Tutoriais Game Lab"
       sprite_lab_documentation: "Documentação do Sprite Lab"
       sprite_lab_tutorials: "Tutoriais do Sprite Lab"
+      web_lab_documentation: "Documentação do Web Lab"
       educate_overview: "Visão Geral do Educador"
       educate_elementary: "Ensino Fundamental"
       educate_middle: "Ensino Fundamental II"
@@ -409,6 +418,7 @@ pt:
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (Blocos)'
       starwarsblocks_hour: 'Star Wars (Blocos)'
+      thebadguys: 'Os caras maus'
       loading: 'Carregando...'
       weblab: 'Laboratório Web'
       view_all: 'Ver todos os projetos...'
@@ -451,6 +461,7 @@ pt:
       worked_with: 'Trabalhou com'
       update_lock_settings: 'Atualize as configurações de bloqueio aqui.'
       clear_response: 'Apagar resposta'
+    student_code_view_diabled: 'O código do aluno não pode ser visualizado para esta atividade.'
   user:
     email_confirm_needed: 'O endereço de email não foi confirmado:'
     email_confirm_needed_required: 'Seu endereço de e-mail %{email} não foi confirmado:'
@@ -565,6 +576,7 @@ pt:
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Todos os direitos reservados. Star Wars&#8482; &copy; %{current_year} Disney e Lucasfilm. Todos os direitos reservados. Frozen&#8482; &copy; %{current_year} Disney. Todos os direitos reservados. A Era do Gelo&#8482; &copy; %{current_year} 20th Century Fox. Todos os direitos reservados. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Todos os direitos reservados. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Todos os direitos reservados. O Incrível Mundo de Gumball é uma marca registrada e &copy; 2015 Cartoon Network.'
     code_from_html: 'A Code.org usa o p5.play, que tem a licensa <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html"> GNU LGPL 2.1</a>.'
     powered_by_aws: 'Powered by Amazon Web Services'
+    google_copyright: '© Google Inc. usado com permissão. Google Classroom é uma marca registrada de Google Inc.'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, o logotipo da CODE e Hora do Código&reg; são marcas registradas da Code.org.'
     copyright: 'Direitos Autorais'
     more: 'Mais'
@@ -809,6 +821,7 @@ pt:
     reminder_desc_markdown: Atualizamos nossos [Termos de Serviço](%{tos_url}) e [Política de Privacidade](%{privacy_url}). Leia-os com atenção antes de aceitá-los. Antes de aceitar explicitamente os termos atualizados, observe que nossas ferramentas para o ensino de JavaScript podem estar indisponíveis aos seus alunos.
     review_terms: "Ver os termos atualizados"
   donor_interstitial:
+    title: "Seus cursos gratuitos de CS são possíveis por..."
     support_codeorg_1: "Cada dólar doado ao Code.org gera oportunidades para mais estudantes."
     support_codeorg_2: "[Doe agora](%{donate_url}) para ajudar o Code.org."
   school_info_interstitial:

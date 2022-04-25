@@ -4021,6 +4021,8 @@ pt:
           lesson_groups:
             content:
               display_name: Conteúdo
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
             extra_course_content:
               display_name: Conteúdo do curso extra
           lessons:
@@ -4069,6 +4071,8 @@ pt:
           lesson_groups:
             content:
               display_name: Conteúdo
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             Digital Citizenship:
               name: Cidadania digital
@@ -4279,6 +4283,8 @@ pt:
               name: Resumo
         csf2harvey:
           lesson_groups:
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
             content:
               display_name: Conteúdo
           lessons:
@@ -5451,6 +5457,8 @@ pt:
               display_name: Treinamento até Curso E (Opcional)
             csf_e_2:
               display_name: Conteúdo do curso E
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
             extra_course_content:
               display_name: Conteúdo do curso extra
           lessons:
@@ -5594,6 +5602,8 @@ pt:
               display_name: Treinamento até Curso F (Opcional)
             csf_f_2:
               display_name: Conteúdo do curso F
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             'Algorithms: Tangrams':
               name: 'Algoritmos: tangrams'
@@ -6020,6 +6030,8 @@ pt:
           lesson_groups:
             content:
               display_name: Conteúdo
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             'Programming Unplugged: My Robotic Friends':
               name: 'Programação desconectada: Meus amigos robóticos'
@@ -6306,6 +6318,8 @@ pt:
               display_name: Treinamento até Curso E (Opcional)
             csf_e_2:
               display_name: Conteúdo do curso E
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
             extra_course_content:
               display_name: Conteúdo do curso extra
           lessons:
@@ -6432,6 +6446,8 @@ pt:
           lesson_groups:
             content:
               display_name: Conteúdo
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             'Algorithms: Graph Paper Programming':
               name: 'Algoritmos: Programação em papel milimétrico'
@@ -6527,6 +6543,8 @@ pt:
               display_name: Treinamento até Curso E (Opcional)
             csf_e_2:
               display_name: Conteúdo do curso E
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
             extra_course_content:
               display_name: Conteúdo do curso extra
           lessons:
@@ -6589,6 +6607,8 @@ pt:
               display_name: Treinamento até Curso F (Opcional)
             csf_f_2:
               display_name: Conteúdo do curso F
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             'Programming: My Robotic Friends':
               name: 'Programando: Meus amigos robôs'
@@ -7003,6 +7023,8 @@ pt:
               display_name: Treinamento até Curso E (Opcional)
             csf_e_2:
               display_name: Conteúdo do curso E
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
             extra_course_content:
               display_name: Conteúdo do curso extra
           lessons:
@@ -7071,6 +7093,8 @@ pt:
               display_name: Treinamento até Curso F (Opcional)
             csf_f_2:
               display_name: Conteúdo do curso F
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             'Programming: My Robotic Friends':
               name: 'Programando: Meus amigos robôs'
@@ -7982,6 +8006,8 @@ pt:
               display_name: Treinamento até Curso E (Opcional)
             csf_e_2:
               display_name: Conteúdo do curso E
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
             extra_course_content:
               display_name: Conteúdo do curso extra
           lessons:
@@ -8103,6 +8129,8 @@ pt:
               display_name: Treinamento até Curso F (Opcional)
             csf_f_2:
               display_name: Conteúdo do curso F
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             'Programming: My Robotic Friends':
               name: Meus amigos robóticos
@@ -9439,6 +9467,8 @@ pt:
               display_name: Sprite
             csf_digcit:
               display_name: Cidadania digital
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             'Programming: My Robotic Friends':
               name: 'Programando: Meus amigos robôs'
@@ -9563,6 +9593,7 @@ pt:
             Data from Sprite Lab:
               name: Dados do Sprite Lab
             End of Course Project:
+              name: Projeto de Fim do Curso
               description_student: Projetos desse tamanho levam tempo e muito planejamento. Encontre sua inspiração, desenvolva um plano e libere sua criatividade!
               description_teacher: |-
                 As próximas cinco lições proporcionam aos alunos a oportunidade de usar suas habilidades de codificação em um projeto de referência. Este projeto ajudará as pessoas a ganhar experiência com codificação e produzir um exemplo para compartilhar com colegas e entes queridos. Pretende-se que seja um projeto de várias lições ou de várias semanas em que os alunos passam um tempo discutindo, aprendendo sobre o processo de design, construindo e depois apresentando seu trabalho final. \\r
@@ -9613,6 +9644,8 @@ pt:
               display_name: Binário
             csf_digcit:
               display_name: Cidadania digital
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Programação em papel quadriculado
@@ -9719,6 +9752,8 @@ pt:
               display_name: Laços aninhados
             csf_functions:
               display_name: funções
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             'Programming: My Robotic Friends':
               name: 'Programando: Meus amigos robôs'
@@ -9839,6 +9874,7 @@ pt:
               description_student: Nesta lição, os loops facilitam a criação de imagens ainda mais legais com o Artist!
               description_teacher: Veja os rostos dos alunos se iluminarem enquanto criam seus próprios designs lindos usando um pequeno número de blocos e adesivos digitais! Esta lição baseia-se na compreensão dos loops das lições anteriores e oferece aos alunos a chance de serem verdadeiramente criativos. Essa atividade é fantástica para a produção de artefatos para portfólios ou conferências de pais/professores.
             End of Course Project:
+              name: Projeto de Fim do Curso
               description_student: Projetos desse tamanho levam tempo e muito planejamento. Encontre sua inspiração, desenvolva um plano e libere sua criatividade!
               description_teacher: |-
                 As próximas quatro lições proporcionam aos alunos a oportunidade de usar suas habilidades de codificação em um projeto principal. Este projeto ajudará as pessoas a ganhar experiência com codificação e produzir um exemplo para compartilhar com colegas e entes queridos. Com a intenção de ser uma experiência de várias lições ou de várias semanas, os alunos passarão um tempo explorando o brainstorming, aprendendo sobre o processo de design, construindo e apresentando seu trabalho final. \\r
@@ -9993,6 +10029,8 @@ pt:
               name: Comportamentos no Lab Sprite
             Virtual Pet with Sprite Lab:
               name: Pet Virtual com Sprite Lab
+            Build A Project:
+              name: Projeto de Fim do Curso
             Dance Party:
               name: Festa dançante
             'Conditionals in Minecraft: Voyage Aquatic':
@@ -10124,6 +10162,8 @@ pt:
               display_name: Eventos
             csf_data:
               display_name: Dados
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             Programming in Maze:
               name: Programando com Angry Birds
@@ -10185,6 +10225,7 @@ pt:
             Create a Design with Loops:
               name: Criar um design com loops
             'End of Course Project: Create a Play Lab Game':
+              name: Projeto de Fim do Curso
               description_student: Prepare essas mãos para muita codificação! É hora de começar a construir seu projeto.
               description_teacher: 'Esta lição fundamental leva os alunos ao processo de criar, desenvolver e apresentar seus próprios projetos do Play Lab! Para garantir que esse processo ocorra sem problemas, fornecemos uma estrutura passo a passo para os alunos seguirem, desde o planejamento em papel até a codificação em nosso site. Além disso, oferecemos idéias para ajudar os professores a facilitar um final de demonstração! '
             'Programming: My Robotic Friends':
@@ -13253,6 +13294,8 @@ pt:
               display_name: Laços aninhados
             csf_functions:
               display_name: funções
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             Crowdsourcing:
               name: Crowdsourcing
@@ -13272,6 +13315,8 @@ pt:
               name: Funções em Colheitadeira
             Functions in Artist:
               name: Funções no Artista
+            End of Course Project:
+              name: Projeto de Fim do Curso
             Nested Loops in the Maze:
               name: Laços Aninhados no Labirinto
         time4cs-experiment-unit-2:
@@ -14228,6 +14273,8 @@ pt:
               display_name: Eventos
             csf_data:
               display_name: Dados
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             Screen Out the Mean:
               name: Tela fora da média
@@ -14304,6 +14351,7 @@ pt:
               description_student: Os dados podem ser usados ​​para ajudar os alunos a entender seu mundo e responder a perguntas interessantes. Nesta lição, os alunos coletarão dados de um projeto do Play Lab e os visualizarão usando diferentes tipos de gráficos.
               description_teacher: Os dados podem ser usados ​​para ajudar os alunos a entender seu mundo e responder a perguntas interessantes. Nesta lição, os alunos coletarão dados de um projeto do Play Lab e os visualizarão usando diferentes tipos de gráficos.
             'End of Course Project: Create a Play Lab Game':
+              name: Projeto de Fim do Curso
               description_student: Prepare essas mãos para muita codificação! É hora de começar a construir seu projeto.
               description_teacher: 'Esta lição fundamental leva os alunos ao processo de criar, desenvolver e apresentar seus próprios projetos do Play Lab! Para garantir que esse processo ocorra sem problemas, fornecemos uma estrutura passo a passo para os alunos seguirem, desde o planejamento em papel até a codificação em nosso site. Além disso, oferecemos idéias para ajudar os professores a facilitar um final de demonstração! '
             Password Power-Up:
@@ -14327,6 +14375,8 @@ pt:
               display_name: Binário
             csf_digcit:
               display_name: Cidadania digital
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Programação em papel quadriculado
@@ -14411,6 +14461,7 @@ pt:
             Dance Part:
               name: Festa dançante
             End of Course Project:
+              name: Projeto de Fim do Curso
               description_student: Prepare essas mãos para muita codificação! É hora de começar a construir seu projeto.
           student_description: Os alunos desenvolvem sua compreensão de loops, condicionais e eventos. Além da codificação, os alunos aprendem sobre cidadania digital.
         coursee-2020:
@@ -14431,6 +14482,8 @@ pt:
               display_name: funções
             csf_impacts:
               display_name: Impacto da computação
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             Sequencing in the Maze:
               name: Sequenciamento no labirinto
@@ -14502,6 +14555,7 @@ pt:
               description_student: Faça desenhos complexos mais facilmente com funções!
               description_teacher: Os alunos serão apresentados ao uso de funções no Code.org. Imagens magníficas serão criadas e modificadas com funções no Artista. Para padrões mais complicados, os alunos aprenderão sobre aninhamento de funções, chamando uma função dentro de outra.
             End of Course Project:
+              name: Projeto de Fim do Curso
               description_student: Projetos desse tamanho levam tempo e muito planejamento. Encontre sua inspiração, desenvolva um plano e libere sua criatividade!
               description_teacher: |-
                 As próximas quatro lições proporcionam aos alunos a oportunidade de usar suas habilidades de codificação em um projeto principal. Este projeto ajudará as pessoas a ganhar experiência com codificação e produzir um exemplo para compartilhar com colegas e entes queridos. Com a intenção de ser uma experiência de várias lições ou de várias semanas, os alunos passarão um tempo explorando o brainstorming, aprendendo sobre o processo de design, construindo e apresentando seu trabalho final. \\r
@@ -14534,6 +14588,8 @@ pt:
               display_name: Laços para
             csf_sprites:
               display_name: Sprite
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             Functions in Minecraft:
               name: Funções com Minecraft
@@ -14615,6 +14671,7 @@ pt:
               description_student: 'Nesta lição, você aprenderá sobre os desafios e benefícios da propriedade e dos direitos autorais. '
               description_teacher: Emprestado para os Fundamentos de Ciência da Computação pelo time em Direitos Autorais e Criatividade, esta lição existe para ajudar os estudantes a entenderem os desafios e benefícios de respeitar posse e direitos autorais, particularmente em ambientes digitais. Estudantes deveriam ser encorajados a respeitar os direitos dos artistas como uma parte importante de ser um cidadão digital ético.
             End of Course Project:
+              name: Projeto de Fim do Curso
               description_student: Projetos desse tamanho levam tempo e muito planejamento. Encontre sua inspiração, desenvolva um plano e libere sua criatividade!
               description_teacher: |-
                 As próximas cinco lições proporcionam aos alunos a oportunidade de usar suas habilidades de codificação em um projeto de referência. Este projeto ajudará as pessoas a ganhar experiência com codificação e produzir um exemplo para compartilhar com colegas e entes queridos. Pretende-se que seja um projeto de várias lições ou de várias semanas em que os alunos passam um tempo discutindo, aprendendo sobre o processo de design, construindo e depois apresentando seu trabalho final. \\r
@@ -14645,6 +14702,8 @@ pt:
               display_name: Laços para
             csf_sprites:
               display_name: Sprite
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           lessons:
             Dance Party:
               name: Festa dançante
@@ -14704,6 +14763,8 @@ pt:
               name: Desenvolva um projeto
             Swimming Fish with Sprite Lab:
               name: Peixe nadando com o Sprite Lab
+            End of Course Project:
+              name: Projeto de Fim do Curso
             Programming with Angry Birds:
               name: Programando com Angry Birds
             Debugging with Scrat:
@@ -15498,6 +15559,8 @@ pt:
               name: Codificação da simulação
             Sprites in Action:
               name: Sprites em Ação
+            End of Course Project:
+              name: Projeto de Fim do Curso
           lesson_groups:
             introduction:
               display_name: Introdução
@@ -16343,6 +16406,8 @@ pt:
               key: Eventos no Laboratório de jogos
               description_student: Crie seu próprio jogo ou história.
               description_teacher: Nesta atividade online, os alunos irão ter a oportunidade de aprender a como utilizar eventos no Laboratório de Jogos e aplicar todas as habilidades de programação que eles aprenderam para criar um jogo animado. É hora de ser criativo e criar uma história no Laboratório de Jogos!
+            lesson-1:
+              name: Projeto de Fim do Curso
           lesson_groups:
             csf_digcit:
               display_name: Cidadania digital
@@ -16352,6 +16417,8 @@ pt:
               display_name: laços
             csf_events:
               display_name: Eventos
+            lessonGroup-5:
+              display_name: Projeto de Fim do Curso
           student_description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
         courseb-2021:
           description_short: Uma introdução à ciência da computação na alfabetização Semelhante ao curso A, mas com conceitos mais aprofundados.
@@ -16415,6 +16482,8 @@ pt:
               key: Eventos no Laboratório de jogos
               description_student: Use eventos para criar uma história ou criar um jogo interativo.
               description_teacher: Nesta atividade online, os alunos terão a oportunidade de aprender a usar eventos no Play Lab e aplicar todas as habilidades de codificação que aprenderam para criar um jogo animado. É hora de ser criativo e criar um jogo no Play Lab!
+            lesson-1:
+              name: Projeto de Fim do Curso
           lesson_groups:
             csf_digcit:
               display_name: Cidadania digital
@@ -16426,6 +16495,8 @@ pt:
               display_name: Impacto da computação
             csf_events:
               display_name: Eventos
+            lessonGroup-6:
+              display_name: Projeto de Fim do Curso
           student_description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
         coursec-2021:
           description_short: Aprenda o básico da ciência da computação e crie sua própria arte, histórias e jogos.
@@ -16504,6 +16575,7 @@ pt:
               description_teacher: Os dados podem ser usados ​​para ajudar os alunos a entender seu mundo e responder a perguntas interessantes. Nesta lição, os alunos coletarão dados de um projeto do Play Lab e os visualizarão usando diferentes tipos de gráficos.
             'End of Course Project: Create a Play Lab Game':
               key: 'Projeto de fim de curso: criar um jogo no Play Lab'
+              name: Projeto de Fim do Curso
               description_student: Prepare essas mãos para muita codificação! É hora de começar a construir seu projeto.
               description_teacher: Esta lição fundamental leva os alunos ao processo de criar, desenvolver e apresentar seus próprios projetos do Play Lab! Para garantir que esse processo ocorra sem problemas, fornecemos uma estrutura passo a passo para os alunos seguirem, desde o planejamento em papel até a codificação em nosso site. Além disso, oferecemos idéias para ajudar os professores a facilitar um final de demonstração!
           lesson_groups:
@@ -16519,6 +16591,8 @@ pt:
               display_name: Eventos
             csf_data:
               display_name: Dados
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           student_description: Crie programas com sequenciamento, loops e eventos. Traduza suas iniciais em binário, investigue diferentes técnicas de solução de problemas e aprenda a responder ao cyberbullying. No final do curso, crie seu próprio jogo ou história que você pode compartilhar!
         coursed-2021:
           title: Curso D (2021)
@@ -16607,6 +16681,8 @@ pt:
               description_student: Nesta lição, você aprenderá como criar imagens usando apenas 0s e 1s.
               description_teacher: Esta série de aulas on-line fará com que os alunos aprendam a criar imagens usando e desativando.
             End of Course Project:
+              key: Projeto de Fim do Curso
+              name: Projeto de Fim do Curso
               description_student: Prepare essas mãos para muita codificação! É hora de começar a construir seu projeto.
             lesson-6:
               name: Prevendo com o Minecraft
@@ -16630,6 +16706,8 @@ pt:
               display_name: Binário
             csf_digcit:
               display_name: Cidadania digital
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
             lessonGroup-6:
               display_name: Cidadania digital
         coursee-2021:
@@ -16721,6 +16799,8 @@ pt:
               description_student: 'Nesta lição, os alunos aprenderão sobre acessibilidade e o valor da empatia por meio de brainstorming e design de soluções acessíveis para aplicativos hipotéticos. '
               description_teacher: 'Nesta lição, os alunos aprenderão sobre acessibilidade e o valor da empatia por meio de brainstorming e design de soluções acessíveis para aplicativos hipotéticos. '
             End of Course Project:
+              key: Projeto de Fim do Curso
+              name: Projeto de Fim do Curso
               description_student: Projetos desse tamanho levam tempo e muito planejamento. Encontre sua inspiração, desenvolva um plano e libere sua criatividade!
               description_teacher: |-
                 As próximas quatro lições proporcionam aos alunos a oportunidade de usar suas habilidades de codificação em um projeto principal. Este projeto ajudará as pessoas a ganhar experiência com codificação e produzir um exemplo para compartilhar com colegas e entes queridos. Com a intenção de ser uma experiência de várias lições ou de várias semanas, os alunos passarão um tempo explorando o brainstorming, aprendendo sobre o processo de design, construindo e apresentando seu trabalho final. \\r
@@ -16742,6 +16822,8 @@ pt:
               display_name: funções
             csf_impacts:
               display_name: Impacto da computação
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
             lessonGroup-7:
               display_name: Impacto da computação
         coursef-2021:
@@ -16839,6 +16921,8 @@ pt:
               description_student: Nesta lição, os alunos criarão um animal de estimação virtual interativo que se parece e se comporta como deseja. Os alunos usarão a ferramenta "Trajes" do Sprite Lab para personalizar a aparência do animal. Eles então usarão eventos, comportamentos e outros conceitos que aprenderam para dar vida própria ao animal de estimação!
               description_teacher: Nesta lição, os alunos criarão um animal de estimação virtual interativo que se parece e se comporta como deseja. Os alunos usarão a ferramenta "Trajes" do Sprite Lab para personalizar a aparência do animal. Eles então usarão eventos, comportamentos e outros conceitos que aprenderam para dar vida própria ao animal de estimação!
             End of Course Project:
+              key: Projeto de Fim do Curso
+              name: Projeto de Fim do Curso
               description_student: Projetos desse tamanho levam tempo e muito planejamento. Encontre sua inspiração, desenvolva um plano e libere sua criatividade!
             lesson-1:
               name: Projetando para Acessibilidade
@@ -16864,6 +16948,8 @@ pt:
               display_name: Laços para
             csf_sprites:
               display_name: Impacto da computação
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
             lessonGroup-8:
               display_name: variáveis
             lessonGroup-9:
@@ -17002,6 +17088,8 @@ pt:
               description_student: Nesta lição, os alunos criarão um animal de estimação virtual interativo que se parece e se comporta como deseja. Os alunos usarão a ferramenta "Trajes" do Sprite Lab para personalizar a aparência do animal. Eles então usarão eventos, comportamentos e outros conceitos que aprenderam para dar vida própria ao animal de estimação!
               description_teacher: Nesta lição, os alunos criarão um animal de estimação virtual interativo que se parece e se comporta como deseja. Os alunos usarão a ferramenta "Trajes" do Sprite Lab para personalizar a aparência do animal. Eles então usarão eventos, comportamentos e outros conceitos que aprenderam para dar vida própria ao animal de estimação!
             End of Course Project:
+              key: Projeto de Fim do Curso
+              name: Projeto de Fim do Curso
               description_student: Prepare essas mãos para muita codificação! É hora de começar a construir seu projeto.
             lesson-1:
               name: Festa dançante
@@ -17026,6 +17114,8 @@ pt:
               display_name: Laços para
             csf_sprites:
               display_name: Sprite
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
             lessonGroup-9:
               display_name: Eventos
         pre-express-2021:
@@ -18581,6 +18671,8 @@ pt:
               display_name: Sprite
             lessonGroup-3:
               display_name: variáveis
+            lessonGroup-4:
+              display_name: Projeto de Fim do Curso
         csd6-pilot-2022:
           lessons:
             Project - Prototype an Innovation:
@@ -18752,6 +18844,8 @@ pt:
             'Mini-Project: On the Move with Play Lab':
               description_student: Crie seu próprio jogo ou história.
               description_teacher: Nesta atividade online, os alunos irão ter a oportunidade de aprender a como utilizar eventos no Laboratório de Jogos e aplicar todas as habilidades de programação que eles aprenderam para criar um jogo animado. É hora de ser criativo e criar uma história no Laboratório de Jogos!
+            End of Course Project:
+              name: Projeto de Fim do Curso
             'Programming: Happy Maps':
               key: 'Programação: Mapas felizes'
               name: Mapas divertidos
@@ -18790,6 +18884,7 @@ pt:
               description_teacher: Nesta atividade online, os alunos irão ter a oportunidade de aprender a como utilizar eventos no Laboratório de Jogos e aplicar todas as habilidades de programação que eles aprenderam para criar um jogo animado. É hora de ser criativo e criar uma história no Laboratório de Jogos!
             lesson-1:
               key: lição 1
+              name: Projeto de Fim do Curso
           lesson_groups:
             csf_digcit:
               display_name: Cidadania digital
@@ -18799,6 +18894,8 @@ pt:
               display_name: laços
             csf_events:
               display_name: Eventos
+            lessonGroup-5:
+              display_name: Projeto de Fim do Curso
           student_description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
           description_short: Uma introdução à ciência da computação para pré-leitores.
           description_audience: 'Idade: de 4 a 7 anos'
@@ -18914,7 +19011,9 @@ pt:
               description_teacher: Nesta lição, os alunos continuam praticando loops `for`, mas desta vez com o Artist. Os alunos irão completar quebra-cabeças combinando as idéias de variáveis, loops e loops `for` para criar designs complexos. No final, eles terão a chance de criar sua própria arte em um nível de freeplay.
               key: Para Loops com o artista
             End of Course Project:
+              name: Projeto de Fim do Curso
               description_student: Prepare essas mãos para muita codificação! É hora de começar a construir seu projeto.
+              key: Projeto de Fim do Curso
             Debugging with Scrat:
               key: Depurando com Scrat
               name: Depurando no Labirinto
@@ -18970,6 +19069,8 @@ pt:
               display_name: variáveis
             csf_for_loops:
               display_name: Laços para
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           description_short: 'Uma introdução à ciência da computação: combina o melhor do nosso currículo do ensino fundamental para alunos mais velhos.'
           description_audience: 9-18 anos de idade
           name: express-2022
@@ -19255,6 +19356,8 @@ pt:
             'Mini-Project: A Royal Battle with Events':
               description_student: Use eventos para criar uma história ou criar um jogo interativo.
               description_teacher: Nesta atividade online, os alunos terão a oportunidade de aprender a usar eventos no Play Lab e aplicar todas as habilidades de codificação que aprenderam para criar um jogo animado. É hora de ser criativo e criar um jogo no Play Lab!
+            End of Course Project:
+              name: Projeto de Fim do Curso
             Sequencing in Maze:
               key: Sequenciamento no labirinto
               name: Sequenciando com Angry Birds
@@ -19303,6 +19406,7 @@ pt:
               description_teacher: Nesta atividade online, os alunos terão a oportunidade de aprender a usar eventos no Play Lab e aplicar todas as habilidades de codificação que aprenderam para criar um jogo animado. É hora de ser criativo e criar um jogo no Play Lab!
             lesson-1:
               key: lição 1
+              name: Projeto de Fim do Curso
           lesson_groups:
             csf_digcit:
               display_name: Cidadania digital
@@ -19314,6 +19418,8 @@ pt:
               display_name: Impacto da computação
             csf_events:
               display_name: Eventos
+            lessonGroup-6:
+              display_name: Projeto de Fim do Curso
           student_description: Aprenda o básixo de Ciências da Computação e segurança na internet. No final deste curso, você irá irá seu próprio jogo ou história, que poderá ser compartilhada.
           description_short: Uma introdução à ciência da computação na alfabetização Semelhante ao curso A, mas com conceitos mais aprofundados.
           description_audience: 'Idades: 5-8'
@@ -19377,6 +19483,7 @@ pt:
               description_teacher: Binário é extremamente importante no mundo dos computadores. Atualmente, a maioria dos computadores armazena todos os tipos de informações em formato binário. Esta lição ajuda a demonstrar como é possível tirar algo da vida real e traduzi-lo em uma série de prós e contras.
               key: Pulseiras binárias
             End of Course Project:
+              name: Projeto de Fim do Curso
               description_student: Prepare essas mãos para muita codificação! É hora de começar a construir seu projeto.
               description_teacher: Esta lição fundamental leva os alunos ao processo de criar, desenvolver e apresentar seus próprios projetos do Play Lab! Para garantir que esse processo ocorra sem problemas, fornecemos uma estrutura passo a passo para os alunos seguirem, desde o planejamento em papel até a codificação em nosso site. Além disso, oferecemos idéias para ajudar os professores a facilitar um final de demonstração!
             'Programming: My Robotic Friends':
@@ -19422,6 +19529,7 @@ pt:
               description_teacher: Nesta atividade online, os alunos terão a oportunidade de aprender a usar eventos no Play Lab e aplicar todas as habilidades de codificação que aprenderam para criar um jogo animado. É hora de ser criativo e criar um jogo no Play Lab!
             'End of Course Project: Create a Play Lab Game':
               key: 'Projeto de fim de curso: criar um jogo no Play Lab'
+              name: Projeto de Fim do Curso
               description_student: Prepare essas mãos para muita codificação! É hora de começar a construir seu projeto.
               description_teacher: Esta lição fundamental leva os alunos ao processo de criar, desenvolver e apresentar seus próprios projetos do Play Lab! Para garantir que esse processo ocorra sem problemas, fornecemos uma estrutura passo a passo para os alunos seguirem, desde o planejamento em papel até a codificação em nosso site. Além disso, oferecemos idéias para ajudar os professores a facilitar um final de demonstração!
           lesson_groups:
@@ -19435,6 +19543,8 @@ pt:
               display_name: Eventos
             csf_data:
               display_name: Dados
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           student_description: Crie programas com sequenciamento, loops e eventos. Traduza suas iniciais em binário, investigue diferentes técnicas de solução de problemas e aprenda a responder ao cyberbullying. No final do curso, crie seu próprio jogo ou história que você pode compartilhar!
           description_short: Aprenda o básico da ciência da computação e crie sua própria arte, histórias e jogos.
           description_audience: 'Idades: 6-10'
@@ -19669,7 +19779,9 @@ pt:
               description_teacher: Nesta lição, os alunos aprenderão sobre os loops \`até '. Os alunos criarão programas que terão como personagem principal repetir ações até atingirem o ponto de parada desejado.
               key: Até Loops no Labirinto
             End of Course Project:
+              name: Projeto de Fim do Curso
               description_student: Prepare essas mãos para muita codificação! É hora de começar a construir seu projeto.
+              key: Projeto de Fim do Curso
             lesson-5:
               key: lição 5
               description_student: Nesta lição, você aprenderá sobre como as senhas protegem suas informações e como criar uma boa senha.
@@ -19714,6 +19826,8 @@ pt:
               display_name: laços
             csf_conditionals:
               display_name: Condições
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           title: Curso D (2021)
           description_short: Aprenda sobre declarações condicionais. Crie sua própria arte, jogos e até uma festa de dança.
           description_audience: 'Idades: 7-11'
@@ -19781,11 +19895,13 @@ pt:
               name: Projetando para Acessibilidade
               description_teacher: 'Nesta lição, os alunos aprenderão sobre acessibilidade e o valor da empatia por meio de brainstorming e design de soluções acessíveis para aplicativos hipotéticos. '
             End of Course Project:
+              name: Projeto de Fim do Curso
               description_student: Projetos desse tamanho levam tempo e muito planejamento. Encontre sua inspiração, desenvolva um plano e libere sua criatividade!
               description_teacher: |-
                 As próximas quatro lições proporcionam aos alunos a oportunidade de usar suas habilidades de codificação em um projeto principal. Este projeto ajudará as pessoas a ganhar experiência com codificação e produzir um exemplo para compartilhar com colegas e entes queridos. Com a intenção de ser uma experiência de várias lições ou de várias semanas, os alunos passarão um tempo explorando o brainstorming, aprendendo sobre o processo de design, construindo e apresentando seu trabalho final. \\r
                 \\r
                 Na fase de exploração, os alunos brincam com exemplos pré-criados de projetos no Artist e no Sprite Lab para se inspirar. Em seguida, os alunos aprenderão sobre o processo de design e como implementá-lo em seus próprios projetos. Eles terão espaço para criar seu próprio projeto no Artist, no Sprite Lab ou em outra interface com a qual se familiarizarem (esse é provavelmente o estágio mais longo do projeto). Finalmente, os alunos poderão apresentar seus trabalhos concluídos aos colegas.
+              key: Projeto de Fim do Curso
             Simon Says:
               key: Simon diz
               description_student: Jogue um jogo e pense em quais comandos são necessários para obter o resultado certo.
@@ -19854,6 +19970,8 @@ pt:
               display_name: Condições
             lessonGroup-7:
               display_name: Impacto da computação
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           description_audience: De 8 a 12 anos
         coursef-2022:
           lessons:
@@ -19910,7 +20028,9 @@ pt:
               description_student: Já imaginou como a informação viaja pela Internet? Não é mágico! Esta lição ensinará os conceitos básicos de como a Internet funciona.
               description_teacher: Embora muitas pessoas usem a Internet diariamente, poucas sabem como ela funciona. Nesta lição, os alunos fingirão fluir pela Internet, aprendendo o tempo todo sobre conexões, URLs, endereços IP e DNS.
             End of Course Project:
+              name: Projeto de Fim do Curso
               description_student: Projetos desse tamanho levam tempo e muito planejamento. Encontre sua inspiração, desenvolva um plano e libere sua criatividade!
+              key: Projeto de Fim do Curso
             lesson-6:
               key: lição 6
             lesson-7:
@@ -19979,6 +20099,8 @@ pt:
               display_name: Cidadania digital
             lessonGroup-8:
               display_name: variáveis
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           description_short: Aprenda todos os conceitos Fundamentais da Ciência da Computação e crie sua própria arte, história ou jogo.
           description_audience: 'Idades: 9-13'
         csp-post-survey-2021:
@@ -20285,7 +20407,9 @@ pt:
               description_teacher: Embora muitas pessoas usem a Internet diariamente, poucas sabem como ela funciona. Nesta lição, os alunos fingirão fluir pela Internet, aprendendo o tempo todo sobre conexões, URLs, endereços IP e DNS.
               key: A Internet
             End of Course Project:
+              name: Projeto de Fim do Curso
               description_student: Projetos desse tamanho levam tempo e muito planejamento. Encontre sua inspiração, desenvolva um plano e libere sua criatividade!
+              key: Projeto de Fim do Curso
           lesson_groups:
             lessonGroup-7:
               display_name: Cidadania digital
@@ -20293,6 +20417,8 @@ pt:
               display_name: Sprite
             lessonGroup-8:
               display_name: variáveis
+            end_of_course_project:
+              display_name: Projeto de Fim do Curso
           description_audience: 'Idades: 9-13'
           description_short: Aprenda todos os conceitos Fundamentais da Ciência da Computação e crie sua própria arte, história ou jogo.
         csa6-2022:
