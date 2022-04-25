@@ -352,7 +352,8 @@
           "description": "Existuje množstvo spôsobov, ako v triede vo vyučovaní informatiky pokračovať aj po skončení Hodiny kódu. Tu sme spísali niekoľko nápadov pre žiakov prvého stupňa:\n\n-   **Prejdite si so žiakmi kurzy v učebnom pláne [Základy informatiky](http://code.org/educate/k5)**. Týchto šesť kurzov je určených pre mladších žiakov. Žiaci postupne riešia sériu úloh, ktorými sa učia programovať, a pedagógovia majú k dispozícii zaujímavé plány hodín, vďaka ktorým bude učenie zábavou. Code.org k týmto kurzom poskytuje bezplatné príležitosti na profesijný rozvoj, a to on‑line aj osobne.\n-   Predstavte si so žiakmi niektoré z pracovných pozícií využívajúcich kódovanie, ktoré ste dnes pomenovali. Ak potrebujete materiály, ktoré vám pomôžu zadať žiakom projekt zameraný na skúmanie rôznych kariérnych ciest, pozrite si web [sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research).\n-   **Pozvite si do triedy odborníka alebo odborníčku na informatiku, nech žiakom porozpráva o svojej práci**. Nemáte v okolí nikoho, koho by ste mohli pozvať? Nájdite si niekoľkých na našej [mape dobrovoľníkov](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research)"
         },
         "81b7030c-beab-4434-9afc-9b0ea0db5a2f": {
-          "name": "Príprava"
+          "name": "Príprava",
+          "description": "Privítajte žiakov v triede a stručne predstavte dnešnú aktivitu.\n\n**Povedzte:** _Dnes strávime hodinu tým, že sa budeme učiť kódovať. Počul už niekto z vás slovo „kód“? Čo sa ním myslí?_\n\nŽiaci možno odpovedia, že „kód“ je ako tajná správa alebo nejakým spôsobom súvisí s počítačmi."
         },
         "fc04ef5f-0d78-418b-9311-e12201106453": {
           "tips": [
@@ -363,7 +364,8 @@
           "description": "Vysvetlite, že v informatike sa pojmom „kód“ myslí súbor pokynov, ktorým dokáže počítač porozumieť. Vysvetlite žiakom, že dnes si budú precvičovať „kódovanie“, „programovanie“ a „ladenie“.\n\nZadefinujte:\n\n-   **Kódovanie** je písanie kódu, teda pokynov pre počítač.\n-   **Programovanie** je písanie kódu alebo inštrukcií. Dnes budete programovať pomocou blokov na počítači (ako robíte online aktivity) alebo pomocou pera a papiera (ak robíte aktivitu bez počítača).\n-   **Ladenie** je kontrola kódu s cieľom nájsť chyby a opraviť ich.\n\nSpýtajte sa žiakov, čo bude podľa nich najlepším krokom po skončení strednej školy. Povedzte im, aby zdvihli ruku, ak pri tomto ďalšom kroku budú musieť používať počítač. Ruku by mal zdvihnúť každý, pretože počítače sú všade okolo nás – v telefónoch, autách či dokonca mikrovlnných rúrach a umývačkách riadu!\n\nVysvetlite žiakom, že na mnohých školách na Slovensku sa informatika nevyučuje v dostatočnej kvalite a rozsahu. Veľká časť ľudí teda nemá dobrú príležitosť učiť sa informatiku. Položte žiakom otázku: Ak mladý človek nemá takmer žiadne skúsenosti s počítačmi, ako to ovplyvní jeho schopnosť nájsť si svoju vysnívanú prácu alebo sa dostať na vysokú školu, kde chce študovať? Tento problém pritom nie je iba záležitosťou Slovenska, ale čelia mu školy po celom svete.\n\nVysvetlite žiakom, že žiaci po celom svete sa zapájajú do Hodiny kódu, ktorej hlavným cieľom je zvýšiť povedomie o tom, že nie všetci žiaci majú rovnako jednoduchý prístup k dobrému informatickému vzdelaniu. Žiaci sa teda podujatia zúčastňujú nielen preto, aby sa naučili základy informatiky a trochu sa zabavili, ale aj preto, aby vyjadrili svoj postoj a poukázali na to, aká je informatika dôležitá."
         },
         "c628ba28-35c2-4ded-a19d-74079377b309": {
-          "name": "Play Lab Doba ľadová"
+          "name": "Play Lab Doba ľadová",
+          "description": "Vyzvite svojich žiakov, aby dokončili kurz [Play Lab: Doba ľadová](https://studio.code.org/s/iceage/lessons/1/levels/1).\n\nV závislosti od veku a schopností svojich žiakov môže byť vhodné prispôsobiť aktivitu nasledovne: \n\n-   Pri žiakoch 2. stupňa základných škôl a žiakoch stredných škôl odporúčame vybrať aktivity, ktoré ponúkajú možnosť voľnej hry a voľného vytvárania aplikácií alebo hier. Žiaci môžu pracovať samostatne, vo dvojiciach alebo v malých skupinách. Na stránke [code.org/learn](http://code.org/learn) je k dispozícii množstvo ďalších aktivít, ktoré žiakom ponúkajú možnosť slobodne niečo vytvárať, napríklad [Vytvor si hru v štýle Flappy Bird](https://studio.code.org/s/flappy) a náš nový nástroj [App Lab](https://code.org/educate/applab) (zatiaľ v beta verzii).\n-   Pri mladších žiakoch odporúčame, aby ste triedu rozdelili do dvojíc alebo malých skupín (po troch alebo štyroch žiakov) a dali každej skupine za úlohu spraviť aktivitu s využitím [párového programovania](https://youtu.be/vgkahOzFH2Q).\n-   Pre dospelých odporúčame aktivitu [Napíš svoj prvý počítačový program](https://studio.code.org/hoc/1), ktorá funguje výborne aj ako samostatná aktivita, aj ako aktivita na párové programovanie."
         },
         "548dc37b-f338-4a52-a77e-7380794c64f2": {
           "tips": [
@@ -390,7 +392,8 @@
           "description": "Vyzvite žiakov k tomu, aby sa o nejaký svoj zážitok alebo výstup z Hodiny kódu podelili aj na sociálnych sieťach pomocou hashtagov #HodinaKodu a #HourOfCode. Prispejú tak svojou troškou k zvyšovaniu povedomia o tomto celosvetovom hnutí. Žiaci môžu zdieľať svoju hru, obrázky, videá alebo aj svoje myšlienky."
         },
         "4ae8bc68-25be-4eaa-ae1e-b9bfe8623a23": {
-          "name": "Ako ďalej po Hodine kódu"
+          "name": "Ako ďalej po Hodine kódu",
+          "description": "Existuje množstvo spôsobov, ako v triede vo vyučovaní informatiky pokračovať aj po skončení Hodiny kódu. Tu sme spísali niekoľko nápadov pre žiakov prvého stupňa:\n\n-   **Prejdite si so žiakmi kurzy v učebnom pláne [Základy informatiky](http://code.org/educate/k5)**. Tieto štyri kurzy sú určené pre mladších žiakov. Žiaci postupne riešia sériu úloh, ktorými sa učia programovať, a pedagógovia majú k dispozícii zaujímavé plány hodín, vďaka ktorým bude učenie zábavou. Code.org k týmto kurzom poskytuje bezplatné príležitosti na profesijný rozvoj, a to on‑line aj osobne.\n-   **Pozvite si do triedy odborníka alebo odborníčku na informatiku, nech žiakom porozpráva o svojej práci**. Nemáte v okolí nikoho, koho by ste mohli pozvať? Nájdite si niekoľkých na našej [mape dobrovoľníkov](https://code.org/volunteer/local)"
         },
         "aad08892-e7b6-4fdc-bfd6-8199118fc2d6": {
           "name": "Príprava",
@@ -450,7 +453,8 @@
           "description": "#### Čo ďalej po Hodine kódu\n\nExistuje množstvo spôsobov, ako v triede vo vyučovaní informatiky pokračovať aj po skončení Hodiny kódu. Tu sme spísali niekoľko nápadov pre žiakov prvého stupňa:\n\n-   **Prejdite si so žiakmi kurzy v učebnom pláne [Základy informatiky](http://code.org/educate/k5)**. Týchto šesť kurzov je určených pre mladších žiakov. Žiaci postupne riešia sériu úloh, ktorými sa učia programovať, a pedagógovia majú k dispozícii zaujímavé plány hodín, vďaka ktorým bude učenie zábavou. Code.org k týmto kurzom poskytuje bezplatné príležitosti na profesijný rozvoj, a to on‑line aj osobne.\n-   **Viac tipov na kurzy nájdete na stránke [Aj ty môžeš učit informatiku](https://studio.code.org/courses?view=teacher)**.\n-   **Pozvite si do triedy odborníka alebo odborníčku na informatiku, nech žiakom porozpráva o svojej práci**. Nemáte v okolí nikoho, koho by ste mohli pozvať? Nájdite si dobrovoľníka na našej [mape dobrovoľníkov](https://code.org/volunteer/local)\n\nNa podporu učenia môžete použiť nasledujúcu aktivitu, ktorá sa dá využiť aj mimo hodiny .\n\n**Kopírka**\n\n-   Dajte žiakom dva listy papiera.\n-   Na jeden list žiaci nakreslia jednoduchý obrázok iba pomocou rovných čiar.\n-   Na druhý list napíšu inštrukcie, ako daný obrázok nakresliť pomocou príkazov na pohyb dopredu a otočenie o konkrétny uhol.\n-   Žiaci si medzi sebou vymenia papiere s inštrukciami a pokúsia sa zreprodukovať obrázok iba pomocou poskytnutých inštrukcií."
         },
         "a2f60a17-c25f-4c4d-9f2d-384486d7a67d": {
-          "name": "Príprava"
+          "name": "Príprava",
+          "description": "Privítajte žiakov v triede a stručne predstavte dnešnú aktivitu.\n\n**Povedzte:** _Dnes strávime hodinu tým, že sa budeme učiť kódovať. Počul už niekto z vás slovo „kód“? Čo sa ním myslí?_\n\nŽiaci možno odpovedia, že „kód“ je ako tajná správa alebo nejakým spôsobom súvisí s počítačmi."
         },
         "c857d03e-91e3-4949-8ccc-79a2aec463c8": {
           "tips": [
@@ -489,7 +493,8 @@
           "description": "Vyzvite žiakov k tomu, aby sa o nejaký svoj zážitok alebo výstup z Hodiny kódu podelili aj na sociálnych sieťach pomocou hashtagov #HodinaKodu a #HourOfCode. Prispejú tak svojou troškou k zvyšovaniu povedomia o tomto celosvetovom hnutí. Žiaci môžu zdieľať svoju hru, obrázky, videá alebo aj svoje myšlienky."
         },
         "2836d5f0-0808-4868-bc34-bbd3cf8b631f": {
-          "name": "Ako ďalej po Hodine kódu"
+          "name": "Ako ďalej po Hodine kódu",
+          "description": "Existuje množstvo spôsobov, ako v triede vo vyučovaní informatiky pokračovať aj po skončení Hodiny kódu. Tu sme spísali niekoľko nápadov pre žiakov prvého stupňa:\n\n-   **Prejdite si so žiakmi kurzy v učebnom pláne [Základy informatiky](http://code.org/educate/k5)**. Tieto štyri kurzy sú určené pre mladších žiakov. Žiaci postupne riešia sériu úloh, ktorými sa učia programovať, a pedagógovia majú k dispozícii zaujímavé plány hodín, vďaka ktorým bude učenie zábavou. Code.org k týmto kurzom poskytuje bezplatné príležitosti na profesijný rozvoj, a to on‑line aj osobne.\n-   **Pozvite si do triedy odborníka alebo odborníčku na informatiku, nech žiakom porozpráva o svojej práci**. Nemáte v okolí nikoho, koho by ste mohli pozvať? Nájdite si niekoľkých na našej [mape dobrovoľníkov](https://code.org/volunteer/local)"
         },
         "0335c0d1-6eb5-4671-a1e2-1e3f559b3103": {
           "name": "Úvod",
@@ -761,7 +766,8 @@
           "description": "#### Reflexia\n\nPožiadajte žiakov, aby sa zamysleli nad aktivitami, ktorým sa dnes venovali. Čo sa naučili o kódovaní? Sprajtoch? Udalostiach?\n\nAko sa ich názor na informatiku a programovanie zmenil po tom, čo sa im hodinu venovali?\n\n#### Ďalšie kroky\n\nPovedzte žiakom, že ak sa im dnešná aktivita páčila, majú veľa možností, ako v programovaní pokračovať. Pozrite si náš učebný plán [CS Connections](https://code.org/educate/csc), kde nájdete nápady, ako prepojiť informatiku s inými predmetmi, alebo si prečítajte viac o našej [ponuke kurzov pre základné školy](https://code.org/educate/curriculum/elementary-school)."
         },
         "ede504c6-d7ea-444a-a17d-cb87ed4a461e": {
-          "name": "Príprava"
+          "name": "Príprava",
+          "description": "Privítajte žiakov v triede a stručne predstavte dnešnú aktivitu.\n\n**Povedzte:** _Dnes strávime hodinu tým, že sa budeme učiť kódovať. Počul už niekto z vás slovo „kód“? Čo sa ním myslí?_\n\nŽiaci možno odpovedia, že „kód“ je ako tajná správa alebo nejakým spôsobom súvisí s počítačmi."
         },
         "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
           "tips": [
@@ -1071,7 +1077,8 @@
           "description": "Vyzvite žiakov k tomu, aby sa o nejaký svoj zážitok alebo výstup z Hodiny kódu podelili aj na sociálnych sieťach pomocou hashtagov #HodinaKodu a #HourOfCode. Prispejú tak svojou troškou k zvyšovaniu povedomia o tomto celosvetovom hnutí. Žiaci môžu zdieľať svoju hru, obrázky, videá alebo aj svoje myšlienky."
         },
         "38f15942-4a08-48f7-a0c4-e04232bc9bdc": {
-          "name": "Ako ďalej po Hodine kódu"
+          "name": "Ako ďalej po Hodine kódu",
+          "description": "Existuje množstvo spôsobov, ako v triede vo vyučovaní informatiky pokračovať aj po skončení Hodiny kódu. Tu sme spísali niekoľko nápadov pre žiakov prvého stupňa:\n\n-   **Prejdite si so žiakmi kurzy v učebnom pláne [Základy informatiky](http://code.org/educate/k5)**. Tieto štyri kurzy sú určené pre mladších žiakov. Žiaci postupne riešia sériu úloh, ktorými sa učia programovať, a pedagógovia majú k dispozícii zaujímavé plány hodín, vďaka ktorým bude učenie zábavou. Code.org k týmto kurzom poskytuje bezplatné príležitosti na profesijný rozvoj, a to on‑line aj osobne.\n-   **Pozvite si do triedy odborníka alebo odborníčku na informatiku, nech žiakom porozpráva o svojej práci**. Nemáte v okolí nikoho, koho by ste mohli pozvať? Nájdite si niekoľkých na našej [mape dobrovoľníkov](https://code.org/volunteer/local)"
         },
         "8295d7d8-acb1-4cc1-b178-8d89613aa6b6": {
           "name": "Úvod",
