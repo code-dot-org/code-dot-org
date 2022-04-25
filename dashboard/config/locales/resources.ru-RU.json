@@ -2035,6 +2035,9 @@
         "sprites_1/csd/2021": {
           "name": "Спрайты"
         },
+        "sprite_properties/csd/2021": {
+          "name": "Свойства спрайтов"
+        },
         "captioned-scenes/csd/2021": {
           "type": "Рубрика"
         },

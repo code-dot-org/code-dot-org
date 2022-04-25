@@ -1871,6 +1871,8 @@ ru:
           lesson_groups:
             content:
               display_name: Содержимое
+            end_of_course_project:
+              display_name: Конец проекта курса
             extra_course_content:
               display_name: Дополнительный материал для курса
           lessons:
@@ -1904,6 +1906,8 @@ ru:
           lesson_groups:
             content:
               display_name: Содержимое
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             Digital Citizenship:
               name: Цифровое гражданство
@@ -2011,6 +2015,8 @@ ru:
               name: Итоги
         csf2harvey:
           lesson_groups:
+            end_of_course_project:
+              display_name: Конец проекта курса
             content:
               display_name: Содержимое
           lessons:
@@ -2447,6 +2453,8 @@ ru:
               display_name: Продвинуться к Курсу Е (опционально)
             csf_e_2:
               display_name: Содержание Курса Е
+            end_of_course_project:
+              display_name: Конец проекта курса
             extra_course_content:
               display_name: Дополнительный материал для курса
           lessons:
@@ -2534,6 +2542,8 @@ ru:
               display_name: Продвинуться к Курсу Ф (опционально)
             csf_f_2:
               display_name: Содержание Курса Ф
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             'Algorithms: Tangrams':
               name: 'Алгоритмы: Танграмы'
@@ -2716,6 +2726,8 @@ ru:
           lesson_groups:
             content:
               display_name: Содержимое
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             'Programming Unplugged: My Robotic Friends':
               name: 'Офлайн-занятие по программированию: "Мои друзья-роботы"'
@@ -2863,6 +2875,8 @@ ru:
               display_name: Продвинуться к Курсу Е (опционально)
             csf_e_2:
               display_name: Содержание Курса Е
+            end_of_course_project:
+              display_name: Конец проекта курса
             extra_course_content:
               display_name: Дополнительный материал для курса
           lessons:
@@ -2932,6 +2946,8 @@ ru:
           lesson_groups:
             content:
               display_name: Содержимое
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             Introduction:
               name: Введение
@@ -2993,6 +3009,8 @@ ru:
               display_name: Продвинуться к Курсу Е (опционально)
             csf_e_2:
               display_name: Содержание Курса Е
+            end_of_course_project:
+              display_name: Конец проекта курса
             extra_course_content:
               display_name: Дополнительный материал для курса
           lessons:
@@ -3026,6 +3044,8 @@ ru:
               display_name: Продвинуться к Курсу Ф (опционально)
             csf_f_2:
               display_name: Содержание Курса Ф
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             Building a Foundation:
               name: Строительство опоры
@@ -3161,6 +3181,8 @@ ru:
               display_name: Продвинуться к Курсу Е (опционально)
             csf_e_2:
               display_name: Содержание Курса Е
+            end_of_course_project:
+              display_name: Конец проекта курса
             extra_course_content:
               display_name: Дополнительный материал для курса
           lessons:
@@ -3200,6 +3222,8 @@ ru:
               display_name: Продвинуться к Курсу Ф (опционально)
             csf_f_2:
               display_name: Содержание Курса Ф
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             Building a Foundation:
               name: Строительство опоры
@@ -3595,6 +3619,8 @@ ru:
               display_name: Продвинуться к Курсу Е (опционально)
             csf_e_2:
               display_name: Содержание Курса Е
+            end_of_course_project:
+              display_name: Конец проекта курса
             extra_course_content:
               display_name: Дополнительный материал для курса
           lessons:
@@ -3670,6 +3696,8 @@ ru:
               display_name: Продвинуться к Курсу Ф (опционально)
             csf_f_2:
               display_name: Содержание Курса Ф
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             'Programming: My Robotic Friends':
               name: Мои друзья роботы
@@ -4187,6 +4215,8 @@ ru:
               display_name: Спрайты
             csf_digcit:
               display_name: Цифровое гражданство
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             Building a Foundation:
               name: Строительство опоры
@@ -4240,6 +4270,8 @@ ru:
               description_teacher: На этом оналйн-занятии у учащихся будет возможность вывести свое понимание циклов на совершенно новый уровень. Играя с пчелой, растениями и зомби, ученики научатся программировать циклы внутри других циклов. Они также смогут увидеть как незначительные изменения любых циклов влияют на выполнение их программы после нажатия кнопки "Выполнить".
             Loops with the Artist:
               description_teacher: Посмотрите как загораются глаза учеников, когда они создают свои великолепные изображения с помощью небольшого количества блоков и цифровых этикеток! Этот урок основывается на понимании циклов, полученном в ходе предыдущих уроков, и дает ученикам возможность настоящего творчества. Это занятие – прекрасная возможность создания произведений искусства для портфолио или для собраний родителей или учителей.
+            End of Course Project:
+              name: Конец проекта курса
             Internet:
               name: Интернет
               description_student: Вы когда-либо задумывались над тем, как информация распространяется по всему интернету? Это не волшебство! На этому уроке вы узнаете об основах работы интернета.
@@ -4271,6 +4303,8 @@ ru:
               display_name: Двоичный
             csf_digcit:
               display_name: Цифровое гражданство
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Программирование на бумаге в клеточку
@@ -4333,6 +4367,8 @@ ru:
               display_name: Вложенные циклы
             csf_functions:
               display_name: функции
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             Building a Foundation:
               name: Строительство опоры
@@ -4389,6 +4425,8 @@ ru:
               description_student: На этом уроке вы поймете как писать собственные программы!
             Programming and Loops with the Artist:
               description_teacher: Посмотрите как загораются глаза учеников, когда они создают свои великолепные изображения с помощью небольшого количества блоков и цифровых этикеток! Этот урок основывается на понимании циклов, полученном в ходе предыдущих уроков, и дает ученикам возможность настоящего творчества. Это занятие – прекрасная возможность создания произведений искусства для портфолио или для собраний родителей или учителей.
+            End of Course Project:
+              name: Конец проекта курса
             Conditionals in Minecraft:
               name: Условные операторы в игре Minecraft
             Access Ability:
@@ -4470,6 +4508,8 @@ ru:
               name: интернет
             Crowdsourcing:
               name: Краудсорсинг
+            Build A Project:
+              name: Конец проекта курса
             Dance Party:
               name: Танцевальная вечеринка
         csd1-2019:
@@ -4514,6 +4554,8 @@ ru:
               display_name: События
             csf_data:
               display_name: Данные
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             Programming in Maze:
               description_student: Изучайте последовательности и алгоритмы с Angry Birds.
@@ -4544,6 +4586,8 @@ ru:
             Binary Bracelets:
               name: Двоичные браслеты
               description_teacher: Двоичная система счисления играет исключительно важную роль в мире компьютеров. Большинство компьютеров сегодня хранят информацию всех видов в двоичной форме. Этот урок помогает продемонстрировать, каким образом возможно взять что-либо из реальной жизни и преобразовать это что-то в серию сигналов "вкл."/"выкл.".
+            'End of Course Project: Create a Play Lab Game':
+              name: Конец проекта курса
             'Programming: My Robotic Friends':
               description_teacher: Используя вместо кода набор символов, учащиеся разрабатывают алгоритмы, дающие "роботу" команды по составлению чашек различным образом. Ученики по очереди играют роль робота, реагирующего исключительно на алгоритм, составленный другими учениками. В этом сегменте занятия ученики усваивают взаимосвязь между символами и действиями, а также различие между алгоритмом и программой, приобретая также ценный навык отладки.
             'Loops: My Loopy Robotic Friends':
@@ -5169,6 +5213,8 @@ ru:
               name: функции
             Random Numbers:
               name: Случайные числа
+            Sprite Properties:
+              name: Свойства спрайтов
         maddie-test:
           lessons:
             stage 1:
@@ -5398,6 +5444,8 @@ ru:
               display_name: Вложенные циклы
             csf_functions:
               display_name: функции
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             Crowdsourcing:
               name: Краудсорсинг
@@ -5411,6 +5459,8 @@ ru:
               name: Вложенные циклы в игре на тему "Ледяного сердца"
             Functions in Harvester:
               name: Функции в игре "Жнец"
+            End of Course Project:
+              name: Конец проекта курса
         time4cs-experiment-unit-2:
           lessons:
             Nested Loops in Maze:
@@ -5621,6 +5671,8 @@ ru:
               name: Переменные
             Random Numbers:
               name: Случайные числа
+            Sprite Properties:
+              name: Свойства спрайтов
             Conditionals:
               name: Условные команды
             Keyboard Input:
@@ -5738,6 +5790,8 @@ ru:
               display_name: События
             csf_data:
               display_name: Данные
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             Screen Out the Mean:
               name: Барьер против негатива
@@ -5775,6 +5829,8 @@ ru:
               description_teacher: На этом онлайн-занятии ученики будут иметь возможность изучать способы использования событий в Лаборатории игр и смогут применить все приобретенные ими навыки написания кода для создания анимированной игры. Пора творчески поработать и создать игру в Лаборатории игр!
             Picturing Data:
               name: Изображение данных
+            'End of Course Project: Create a Play Lab Game':
+              name: Конец проекта курса
         coursed-2020:
           title: Курс D (2020)
           description_audience: 'Возраст: 7-11'
@@ -5791,6 +5847,8 @@ ru:
               display_name: Двоичный
             csf_digcit:
               display_name: Цифровое гражданство
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             'Algorithms: Graph Paper Programming':
               name: Программирование на бумаге в клеточку
@@ -5833,6 +5891,8 @@ ru:
               description_student: Некоторыми данными небезопасно делиться онлайн. Этот урок научит вас различать безопасную и конфиденциальную информацию.
             Dance Party:
               name: Танцевальная вечеринка
+            End of Course Project:
+              name: Конец проекта курса
         coursee-2020:
           title: Курс E (2020)
           description_audience: 'Возраст: 8-12'
@@ -5849,6 +5909,8 @@ ru:
               display_name: функции
             csf_impacts:
               display_name: Воздействие компьютерной техники
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             Sequencing in the Maze:
               description_student: На этом уроке вы поймете как писать собственные программы!
@@ -5878,6 +5940,8 @@ ru:
               description_teacher: Функция – это одна из замечательнейших структур в мире информатики. Функции (иногда называемые процедурами) – это мини-программы, которые вы можете многократно использовать в больших программах. Этот урок поможет ученикам интуитивно понять, почему может оказаться столь полезным объединение фрагментов кода в функции.
             Functions in Harvester:
               description_teacher: Ученики получили практические навыки создания впечатляющих изображений с помощью Художника и перемещения по лабиринту в игре "Пчела", а сегодня они будут использовать функции для сбора урожая в игре "Жнец". Этот урок побудит учащихся использовать функции по-новому, комбинируя их с циклами "пока" и операторами "если-иначе".
+            End of Course Project:
+              name: Конец проекта курса
             Digital Sharing:
               name: Публикация цифровых произведений
               description_teacher: Предоставленный курсу "Основы компьютерных наук" сотрудниками сайта Copyright and Creativity ("Авторские права и творчество"), этот урок призван объяснить учащимся проблемы и преимущества уважения права собственности и авторского права, особенно в цифровой среде. Учащимся следует объяснить, что, не уважая прав артистов, невозможно быть этичным цифровым гражданином.
@@ -5900,6 +5964,8 @@ ru:
               display_name: Циклы с параметром
             csf_sprites:
               display_name: Спрайты
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             Loops with the Artist:
               description_teacher: Посмотрите как загораются глаза учеников, когда они создают свои великолепные изображения с помощью небольшого количества блоков и цифровых этикеток! Этот урок основывается на понимании циклов, полученном в ходе предыдущих уроков, и дает ученикам возможность настоящего творчества. Это занятие – прекрасная возможность создания произведений искусства для портфолио или для собраний родителей или учителей.
@@ -5939,6 +6005,8 @@ ru:
             Digital Sharing:
               name: Публикация цифровых произведений
               description_teacher: Предоставленный курсу "Основы компьютерных наук" сотрудниками сайта Copyright and Creativity ("Авторские права и творчество"), этот урок призван объяснить учащимся проблемы и преимущества уважения права собственности и авторского права, особенно в цифровой среде. Учащимся следует объяснить, что, не уважая прав артистов, невозможно быть этичным цифровым гражданином.
+            End of Course Project:
+              name: Конец проекта курса
             AI for Oceans:
               name: AI для океанов
               description_student: 'Краткое содержание урока: сначала ученики классифицируют объекты либо как "рыбу", либо как" не рыбу", чтобы попытаться удалить мусор из океана. Затем учащиеся должны будут расширить свой набор данных обучения, чтобы включить в него других морских существ, которые живут в воде. Во второй части занятия учащиеся будут выбирать собственные метки для нанесения на изображения случайно сгенерированных рыб. Эти обучающие данные используются для модели машинного обучения, которая затем должна иметь возможность самостоятельно маркировать новые изображения.'
@@ -5967,6 +6035,8 @@ ru:
               display_name: Циклы с параметром
             csf_sprites:
               display_name: Спрайты
+            end_of_course_project:
+              display_name: Конец проекта курса
           lessons:
             Dance Party:
               name: Танцевальная вечеринка
@@ -5988,6 +6058,8 @@ ru:
               name: Цикл for в Пчеле
             For Loops in Artist:
               name: Цикл for в Художнике
+            End of Course Project:
+              name: Конец проекта курса
             Sticker Art with Loops:
               name: Циклы в исполнителе Художник
             Nested Loops in Maze:
@@ -6226,6 +6298,8 @@ ru:
               name: Случайные числа
             Sprites:
               name: Спрайты
+            Sprite Properties:
+              name: Свойства спрайтов
             Text:
               name: Текст
             Conditionals:
@@ -6334,6 +6408,8 @@ ru:
               name: Создание спрайтов
             Sprites in Action:
               name: Спрайты в действии
+            End of Course Project:
+              name: Конец проекта курса
           lesson_groups:
             introduction:
               display_name: Введение
@@ -6391,6 +6467,9 @@ ru:
             Sprites:
               key: Спрайты
               name: Спрайты
+            Sprite Properties:
+              key: Свойства спрайтов
+              name: Свойства спрайтов
             Text:
               key: Текст
               name: Текст
@@ -6626,6 +6705,8 @@ ru:
               key: 'События: Большое событие'
             Events in Play Lab:
               key: События в Лаборатории игр
+            lesson-1:
+              name: Конец проекта курса
           lesson_groups:
             csf_digcit:
               display_name: Цифровое гражданство
@@ -6635,6 +6716,8 @@ ru:
               display_name: Циклы
             csf_events:
               display_name: События
+            lessonGroup-5:
+              display_name: Конец проекта курса
           student_description: Изучите основы информатики и интернет-безопасности. В конце курса создайте свою собственную игру или историю, которой сможете поделиться.
         courseb-2021:
           description_audience: 'Возраст: 5-8'
@@ -6661,6 +6744,8 @@ ru:
               key: 'События: Большое событие'
             Events in Play Lab:
               key: События в Лаборатории игр
+            lesson-1:
+              name: Конец проекта курса
           lesson_groups:
             csf_digcit:
               display_name: Цифровое гражданство
@@ -6672,6 +6757,8 @@ ru:
               display_name: Воздействие компьютерной техники
             csf_events:
               display_name: События
+            lessonGroup-6:
+              display_name: Конец проекта курса
           student_description: Изучите основы информатики и интернет-безопасности. В конце курса создайте свою собственную игру или историю, которой сможете поделиться.
         coursec-2021:
           description_audience: 'Возраст: 6-10'
@@ -6695,6 +6782,8 @@ ru:
             Picturing Data:
               key: Изображение данных
               name: Изображение данных
+            'End of Course Project: Create a Play Lab Game':
+              name: Конец проекта курса
           lesson_groups:
             csf_digcit:
               display_name: Цифровое гражданство
@@ -6708,6 +6797,8 @@ ru:
               display_name: События
             csf_data:
               display_name: Данные
+            end_of_course_project:
+              display_name: Конец проекта курса
         coursed-2021:
           title: Курс D (2021)
           description_audience: 'Возраст: 7-11'
@@ -6750,6 +6841,9 @@ ru:
               key: 'Художник: двоичная система'
               name: Двоичный Художник
               description_teacher: Эта серия онлайн-уроков научит учеников создавать изображения с помощью включения и выключения.
+            End of Course Project:
+              key: Конец проекта курса
+              name: Конец проекта курса
             lesson-1:
               name: Digital Citizenship
           lesson_groups:
@@ -6765,6 +6859,8 @@ ru:
               display_name: Двоичный
             csf_digcit:
               display_name: Цифровое гражданство
+            end_of_course_project:
+              display_name: Конец проекта курса
             lessonGroup-6:
               display_name: Цифровое гражданство
         coursee-2021:
@@ -6802,6 +6898,9 @@ ru:
             Designing for Accessibility:
               key: Разработка для обеспечения доступности
               name: Разработка для обеспечения доступности
+            End of Course Project:
+              key: Конец проекта курса
+              name: Конец проекта курса
             lesson-1:
               name: Разработка для обеспечения доступности
               description_student: 'Узнай о значении доступности и эмпатии путем коллективного обсуждения и разработки решений в области доступа для гипотетических приложений. '
@@ -6818,6 +6917,8 @@ ru:
               display_name: функции
             csf_impacts:
               display_name: Воздействие компьютерной техники
+            end_of_course_project:
+              display_name: Конец проекта курса
             lessonGroup-7:
               display_name: Воздействие компьютерной техники
         coursef-2021:
@@ -6861,6 +6962,9 @@ ru:
             Virtual Pet:
               key: Виртуальный питомец
               name: 'Мини-проект: Виртуальный питомец'
+            End of Course Project:
+              key: Конец проекта курса
+              name: Конец проекта курса
             lesson-1:
               name: Разработка для обеспечения доступности
             lesson-6:
@@ -6887,6 +6991,8 @@ ru:
               display_name: Циклы с параметром
             csf_sprites:
               display_name: Воздействие компьютерной техники
+            end_of_course_project:
+              display_name: Конец проекта курса
             lessonGroup-8:
               display_name: Переменные
             lessonGroup-9:
@@ -6916,6 +7022,9 @@ ru:
             For Loops with Artist:
               key: Цикл for в Художнике
               name: Цикл for в Художнике
+            End of Course Project:
+              key: Конец проекта курса
+              name: Конец проекта курса
             lesson-1:
               name: Танцевальная вечеринка
             lesson-2:
@@ -6939,6 +7048,8 @@ ru:
               display_name: Циклы с параметром
             csf_sprites:
               display_name: Спрайты
+            end_of_course_project:
+              display_name: Конец проекта курса
             lessonGroup-9:
               display_name: События
         pre-express-2021:
@@ -8135,6 +8246,8 @@ ru:
               display_name: Спрайты
             lessonGroup-3:
               display_name: Переменные
+            lessonGroup-4:
+              display_name: Конец проекта курса
         csd6-pilot-2022:
           lessons:
             Board Events:
@@ -8270,6 +8383,8 @@ ru:
             Ocean Scene with Loops:
               name: Циклы в исполнителе Художник
               key: Циклы в исполнителе Художник
+            End of Course Project:
+              name: Конец проекта курса
             'Programming: Happy Maps':
               name: Весёлые карты
             Programming in Ice Age:
@@ -8289,6 +8404,7 @@ ru:
               key: События в Лаборатории игр
             lesson-1:
               key: урок-1
+              name: Конец проекта курса
           lesson_groups:
             csf_digcit:
               display_name: Цифровое гражданство
@@ -8298,6 +8414,8 @@ ru:
               display_name: Циклы
             csf_events:
               display_name: События
+            lessonGroup-5:
+              display_name: Конец проекта курса
           student_description: Изучите основы информатики и интернет-безопасности. В конце курса создайте свою собственную игру или историю, которой сможете поделиться.
           description_short: Введение в компьютерные науки для детей, еще не умеющих читать.
           description_audience: 'Возраст: 4-7'
@@ -8320,6 +8438,9 @@ ru:
             For Loops with Artist:
               name: Цикл for в Художнике
               key: Цикл for в Художнике
+            End of Course Project:
+              name: Конец проекта курса
+              key: Конец проекта курса
             lesson-2:
               key: урок-2
               name: Создание спрайтов
@@ -8353,6 +8474,8 @@ ru:
               display_name: Переменные
             csf_for_loops:
               display_name: Циклы с параметром
+            end_of_course_project:
+              display_name: Конец проекта курса
           description_audience: 'Возраст: 9-18'
           name: ускоренный курс-2022
         csp1-2022:
@@ -8418,6 +8541,8 @@ ru:
             The Right App:
               name: The Right App
               key: The Right App
+            End of Course Project:
+              name: Конец проекта курса
             Programming in Maze:
               key: Программирование в Лабиринте
             'Loops: Getting Loopy':
@@ -8436,6 +8561,7 @@ ru:
               key: События в Лаборатории игр
             lesson-1:
               key: урок-1
+              name: Конец проекта курса
           lesson_groups:
             csf_digcit:
               display_name: Цифровое гражданство
@@ -8447,6 +8573,8 @@ ru:
               display_name: Воздействие компьютерной техники
             csf_events:
               display_name: События
+            lessonGroup-6:
+              display_name: Конец проекта курса
           student_description: Изучите основы информатики и интернет-безопасности. В конце курса создайте свою собственную игру или историю, которой сможете поделиться.
           description_audience: 'Возраст: 5-8'
         coursec-2022:
@@ -8459,6 +8587,8 @@ ru:
             Binary Bracelets:
               name: Двоичные браслеты
               key: Двоичные браслеты
+            End of Course Project:
+              name: Конец проекта курса
             Programming in Maze:
               key: Программирование в Лабиринте
             Programming in Collector:
@@ -8472,6 +8602,8 @@ ru:
               name: Большое Событие
             Events in Play Lab:
               key: События в Лаборатории игр
+            'End of Course Project: Create a Play Lab Game':
+              name: Конец проекта курса
           lesson_groups:
             csf_digcit:
               display_name: Цифровое гражданство
@@ -8483,6 +8615,8 @@ ru:
               display_name: События
             csf_data:
               display_name: Данные
+            end_of_course_project:
+              display_name: Конец проекта курса
           description_audience: 'Возраст: 6-10'
         csp7-2022:
           lesson_groups:
@@ -8546,6 +8680,9 @@ ru:
             While Loops in Farmer:
               name: Цикл while в Фермере
               key: Цикл while в Фермере
+            End of Course Project:
+              name: Конец проекта курса
+              key: Конец проекта курса
             lesson-5:
               key: урок-5
             'Algorithms: Graph Paper Programming':
@@ -8571,6 +8708,8 @@ ru:
               display_name: Циклы
             csf_conditionals:
               display_name: Условные команды
+            end_of_course_project:
+              display_name: Конец проекта курса
           title: Курс D (2021)
           description_audience: 'Возраст: 7-11'
         coursee-2022:
@@ -8591,6 +8730,9 @@ ru:
             Designing for Accessibility:
               name: Разработка для обеспечения доступности
               description_student: 'Узнай о значении доступности и эмпатии путем коллективного обсуждения и разработки решений в области доступа для гипотетических приложений. '
+            End of Course Project:
+              name: Конец проекта курса
+              key: Конец проекта курса
             Simon Says:
               key: Саймон говорит
             lesson-4:
@@ -8630,6 +8772,8 @@ ru:
               display_name: Условные команды
             lessonGroup-7:
               display_name: Воздействие компьютерной техники
+            end_of_course_project:
+              display_name: Конец проекта курса
           description_audience: 'Возраст: 8-12'
         coursef-2022:
           lessons:
@@ -8668,6 +8812,9 @@ ru:
                 \*\* Проверка правильности: \* \* этот учебник не скажет ученикам, правильно ли они прошли уровень. Можно быстро пропустить различные части действия. Поощряйте учащихся смотреть видео, читать инструкции и пробовать разные вещи по пути. В любой момент они могут поделиться своими находками с вами или одноклассником.\\р
             The Internet:
               name: Интернет
+            End of Course Project:
+              name: Конец проекта курса
+              key: Конец проекта курса
             lesson-6:
               key: урок-6
             lesson-7:
@@ -8721,6 +8868,8 @@ ru:
               display_name: Цифровое гражданство
             lessonGroup-8:
               display_name: Переменные
+            end_of_course_project:
+              display_name: Конец проекта курса
           description_short: Изучи все понятия в Основах компьютерных наук и создай собственную картинку, игру или историю!
           description_audience: 'Возраст: 9-13'
         csa1-2022:
@@ -9024,6 +9173,9 @@ ru:
             The Internet:
               name: Интернет
               key: Интернет
+            End of Course Project:
+              name: Конец проекта курса
+              key: Конец проекта курса
           lesson_groups:
             lessonGroup-7:
               display_name: Цифровое гражданство
@@ -9031,6 +9183,8 @@ ru:
               display_name: Спрайты
             lessonGroup-8:
               display_name: Переменные
+            end_of_course_project:
+              display_name: Конец проекта курса
           description_audience: 'Возраст: 9-13'
           description_short: Изучи все понятия в Основах компьютерных наук и создай собственную картинку, игру или историю!
         csa6-2022:
@@ -9410,6 +9564,9 @@ ru:
             Sprites:
               name: Спрайты
               key: Спрайты
+            Sprite Properties:
+              name: Свойства спрайтов
+              key: Свойства спрайтов
             Text:
               name: Текст
               key: Текст
