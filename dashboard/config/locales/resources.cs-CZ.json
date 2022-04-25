@@ -1973,6 +1973,9 @@
         "sprites_1/csd/2021": {
           "name": "Postavy"
         },
+        "sprite_properties/csd/2021": {
+          "name": "Vlastnosti sprajtu"
+        },
         "captioned-scenes/csd/2021": {
           "type": "Rubrika"
         },

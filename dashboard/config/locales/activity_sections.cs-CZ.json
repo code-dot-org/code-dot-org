@@ -750,6 +750,9 @@
         "c27c28bc-8307-4ca5-a34b-8e05ba178c8b": {
           "progression_name": "Proměnné"
         },
+        "9fcb88d4-d160-48f1-839b-a859098936ba": {
+          "progression_name": "Vlastnosti sprajtu"
+        },
         "8ca97900-8855-4bb6-9717-d9e403b12fb0": {
           "progression_name": "Video: Podmínky"
         },
@@ -1151,6 +1154,9 @@
         "13d78339-15e3-4fa2-9b87-22412794083d": {
           "progression_name": "Proměnné"
         },
+        "89860dc5-98ff-4e81-b72c-56732f2f2b0a": {
+          "progression_name": "Vlastnosti sprajtu"
+        },
         "51e86e72-fda9-4a5d-9f4a-a3dec424039b": {
           "progression_name": "Video: Podmíněný příkaz"
         },
@@ -1294,6 +1300,9 @@
         "3d8197af-4652-485f-9f96-a5a2c78bb3d6": {
           "name": "Volná hra",
           "progression_name": "Volná hra"
+        },
+        "6d500881-4394-4b38-9bbb-56b73d897b83": {
+          "progression_name": "Vlastnosti sprajtu"
         },
         "bb202266-76ce-425e-83e1-fa5ccee34421": {
           "name": "Volná hra",

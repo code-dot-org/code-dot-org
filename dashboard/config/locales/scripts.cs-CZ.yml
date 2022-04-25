@@ -6609,6 +6609,8 @@ cs:
               name: Funkce
             Random Numbers:
               name: Náhodná čísla
+            Sprite Properties:
+              name: Vlastnosti sprajtu
         maddie-test:
           lessons:
             stage 1:
@@ -6984,6 +6986,8 @@ cs:
               name: Proměnné
             Random Numbers:
               name: Náhodná čísla
+            Sprite Properties:
+              name: Vlastnosti sprajtu
             Conditionals:
               name: Podmínky
             Velocity:
@@ -8409,6 +8413,8 @@ cs:
               name: Náhodná čísla
             Sprites:
               name: Postavy
+            Sprite Properties:
+              name: Vlastnosti sprajtu
             Text:
               name: Text
             Conditionals:
@@ -8546,6 +8552,9 @@ cs:
             Sprites:
               key: Postavy
               name: Postavy
+            Sprite Properties:
+              key: Vlastnosti sprajtu
+              name: Vlastnosti sprajtu
             Text:
               key: Text
               name: Text
@@ -13870,6 +13879,9 @@ cs:
             Sprites:
               name: Postavy
               key: Postavy
+            Sprite Properties:
+              name: Vlastnosti sprajtu
+              key: Vlastnosti sprajtu
             Text:
               name: Text
               key: Text
