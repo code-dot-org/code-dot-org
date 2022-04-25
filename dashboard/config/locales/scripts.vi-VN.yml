@@ -2312,6 +2312,8 @@ vi:
               name: Tham gia vào một nghiên cứu theo chiều dọc!
             CSP Student Post-Course Survey:
               name: Khảo sát sau khóa học của học sinh CSP
+            Multi-Screen Apps:
+              name: Ứng dụng đa màn hình
             '"if" Statements Unplugged':
               name: Câu lệnh "If"
             Boolean Expressions and "if" Statements:
@@ -10138,6 +10140,8 @@ vi:
               name: Sử dụng quy trình thiết kế trò chơi
             Project - Design a Game:
               name: Dự án - thiết kế một trò chơi
+            Sprite Properties:
+              name: Thuộc tính của nhân vật
         maddie-test:
           lessons:
             stage 1:
@@ -10616,6 +10620,8 @@ vi:
               name: Bản vẽ trong Kho trò chơi
             Variables:
               name: Các biến
+            Sprite Properties:
+              name: Thuộc tính của nhân vật
             Booleans Unplugged:
               name: Booleans
             Conditionals:
@@ -12285,6 +12291,8 @@ vi:
               name: Các biến
             Sprites:
               name: Nhân vật
+            Sprite Properties:
+              name: Thuộc tính của nhân vật
             Text:
               name: Văn bản
             Conditionals:
@@ -12465,6 +12473,9 @@ vi:
             Sprites:
               key: Nhân vật
               name: Nhân vật
+            Sprite Properties:
+              key: Thuộc tính của nhân vật
+              name: Thuộc tính của nhân vật
             Text:
               key: Văn bản
               name: Văn bản
@@ -18449,6 +18460,9 @@ vi:
             Sprites:
               name: Nhân vật
               key: Nhân vật
+            Sprite Properties:
+              name: Thuộc tính của nhân vật
+              key: Thuộc tính của nhân vật
             Text:
               name: Văn bản
               key: Văn bản

@@ -1806,6 +1806,9 @@
         "design_mode_1/csd/2021": {
           "name": "Chế độ thiết kế"
         },
+        "multi-screen_apps/csd/2021": {
+          "name": "Ứng dụng đa màn hình"
+        },
         "app-presentation/csd/2021": {
           "name": "Trình bày ứng dụng"
         },
@@ -1890,6 +1893,9 @@
         },
         "sprites_1/csd/2021": {
           "name": "Nhân vật"
+        },
+        "sprite_properties/csd/2021": {
+          "name": "Thuộc tính của nhân vật"
         },
         "youtube-flipbook/csd/2021": {
           "type": "Video"

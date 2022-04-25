@@ -747,11 +747,17 @@
           "name": "Phản ánh",
           "description": "#### Thảo luận\n\nYêu cầu học sinh suy nghĩ về các hoạt động trong ngày. Họ đã học gì về lập trình? Nhân vật? Sự kiện?\n\nHọ cảm thấy thế nào về khoa học máy tính và lập trình sau khi dành một giờ khám phá?\n\n#### Các bước tiếp theo\n\nCho học sinh biết rằng nếu họ thích hoạt động hôm nay, họ có nhiều lựa chọn để tiếp tục lập trình. Hãy truy cập [Kết nối KHMT][0] để xem ý tưởng tích hợp khoa học máy tính vào các môn học khác hoặc đọc thêm về [các khóa học có sẵn dành cho trường tiểu học][1] của chúng tôi."
         },
+        "a81e104f-4588-40de-bce6-a309993c9bd4": {
+          "progression_name": "Ứng dụng đa màn hình"
+        },
         "b44b4f32-2417-442d-812d-10bba9a6edc0": {
           "progression_name": "Bản vẽ"
         },
         "c27c28bc-8307-4ca5-a34b-8e05ba178c8b": {
           "progression_name": "Các biến"
+        },
+        "9fcb88d4-d160-48f1-839b-a859098936ba": {
+          "progression_name": "Thuộc tính của nhân vật"
         },
         "a781606d-23c1-42ae-a33d-ce9cfffe22b1": {
           "name": "Phản ánh",
@@ -976,6 +982,9 @@
         "13d78339-15e3-4fa2-9b87-22412794083d": {
           "progression_name": "Các biến"
         },
+        "89860dc5-98ff-4e81-b72c-56732f2f2b0a": {
+          "progression_name": "Thuộc tính của nhân vật"
+        },
         "b1d59b54-0412-42c6-8aaa-38c2894d6cdd": {
           "name": "Phản ánh",
           "progression_name": "Phản ánh"
@@ -1022,6 +1031,9 @@
         "62719290-7600-46ad-9665-13d4025300b0": {
           "name": "Phản ánh",
           "progression_name": "Phản ánh"
+        },
+        "351d0f3e-feee-4c78-8318-4666de043c40": {
+          "progression_name": "Ứng dụng đa màn hình"
         },
         "758bff77-ce78-4c98-bc3a-d5968a9032d3": {
           "name": "Phản ánh",
@@ -1087,6 +1099,9 @@
         "3d8197af-4652-485f-9f96-a5a2c78bb3d6": {
           "name": "chơi miễn phí",
           "progression_name": "chơi miễn phí"
+        },
+        "6d500881-4394-4b38-9bbb-56b73d897b83": {
+          "progression_name": "Thuộc tính của nhân vật"
         },
         "bb202266-76ce-425e-83e1-fa5ccee34421": {
           "name": "chơi miễn phí",
