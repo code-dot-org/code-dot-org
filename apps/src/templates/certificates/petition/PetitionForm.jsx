@@ -2,8 +2,9 @@ import React, {useState} from 'react';
 import {Button} from 'react-bootstrap';
 import {range, mapValues, without} from 'lodash';
 import {
+  keyValidation,
   getInvalidFields,
-  keyValidation
+  getErrorMessage
 } from '@cdo/apps/templates/certificates/petition/petitionHelpers';
 import ControlledFieldGroup from '@cdo/apps/templates/certificates/petition/ControlledFieldGroup';
 
@@ -15,7 +16,7 @@ const PetitionForm = () => {
   const handleChange = e => {
     e.persist();
     setData(data => ({...data, [e.target.name]: e.target.value}));
-    setInvalidFields(without(invalidFields, e.target.name)); // Remove error from field
+    setInvalidFields(without(invalidFields, e.target.name)); // Remove error from field until next submit
   };
 
   const handleSubmit = e => {
@@ -56,9 +57,7 @@ const PetitionForm = () => {
         className="petition-form"
         onSubmit={handleSubmit}
       >
-        <div className={'petition-space'}>
-          {invalidFields.length > 0 ? 'there are errors' : ''}
-        </div>
+        <div className={'petition-space'}>{getErrorMessage(invalidFields)}</div>
         {buildControlledFieldGroup('name', 'Name')}
         {buildControlledFieldGroup(
           'email',
