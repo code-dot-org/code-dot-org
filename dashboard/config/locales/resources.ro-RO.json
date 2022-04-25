@@ -2053,6 +2053,12 @@
         "velocity_2/csd/2021": {
           "name": "Viteza"
         },
+        "collision-detection-exemplar-2020/csd/2021": {
+          "name": "Detectarea coliziunilor"
+        },
+        "collision_detection/csd/2021": {
+          "name": "Detectarea coliziunilor"
+        },
         "side-scroller-1/csd/2021": {
           "type": "Rubrică"
         },

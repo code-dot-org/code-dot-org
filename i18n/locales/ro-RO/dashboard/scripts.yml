@@ -1418,6 +1418,8 @@ ro:
         CSDU3-Draft:
           description_short: Programare
           lessons:
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
             Velocity:
@@ -1718,6 +1720,8 @@ ro:
           lessons:
             Velocity:
               name: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
             Variables:
@@ -2338,6 +2342,8 @@ ro:
               name: Condiţionale
             Velocity:
               name: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
         csd5-2017:
@@ -2355,6 +2361,8 @@ ro:
           lessons:
             Velocity:
               name: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
         csd1-old:
@@ -2385,6 +2393,8 @@ ro:
               name: Condiţionale
             Velocity:
               name: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
             'null':
@@ -3663,6 +3673,8 @@ ro:
               name: Condiţionale
             Velocity:
               name: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
         textbook: {}
@@ -3685,6 +3697,8 @@ ro:
               name: Condiţionale
             Velocity:
               name: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
             CS Discoveries End of Semester Survey: {}
@@ -5564,6 +5578,8 @@ ro:
               name: Condiţionale
             Velocity:
               name: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
             CS Discoveries End of Semester Survey: {}
@@ -6021,6 +6037,8 @@ ro:
               name: Condiţionale
             Velocity:
               name: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
             Post-Project Test: {}
@@ -6488,6 +6506,8 @@ ro:
               name: Condiţionale
             Velocity:
               name: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
             Post-Project Test: {}
@@ -7304,6 +7324,8 @@ ro:
           lessons:
             Velocity:
               name: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
         code-break:
@@ -7374,6 +7396,8 @@ ro:
               name: Condiţionale
             Velocity:
               name: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
             Post-Project Test: {}
@@ -7523,6 +7547,9 @@ ro:
             Velocity:
               key: Viteza
               name: Viteza
+            Collision Detection:
+              key: Detectarea coliziunilor
+              name: Detectarea coliziunilor
             Collisions:
               description_teacher: "**Întrebarea Zilei: Cum pot construi programatorii abstracții pentru a crea alte abstracții?**\\\\r\n\\\\r\nÎn această lecții, elevii își programează spiritele să interacționeze în noi moduri. După o scurtă revizuire a modului în care au utilizat blocul [`isTouching`(#f78183)](/docs/gamelab/isTouching/), elevii vor căuta alte moduri în care două spirite pot interacționa. Apoi ei pot utiliza [`isTouching`(#f78183)](/docs/gamelab/isTouching/) pentru a determina un spirit să îl împingă pe altul pe ecran înainte de a exersa cu cele patru blocuri de coliziune ([`collide`(#f78183)](/docs/gamelab/collide/), [`displace`(#f78183)](/docs/gamelab/displace/), [`bounce`(#f78183)](/docs/gamelab/bounce/), și [`bounceOff`(#f78183)](/docs/gamelab/bounceOff/))."
             Functions:
@@ -11826,6 +11853,9 @@ ro:
             Velocity:
               name: Viteza
               key: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
+              key: Detectarea coliziunilor
             Collisions:
               description_teacher: "**Întrebarea Zilei: Cum pot construi programatorii abstracții pentru a crea alte abstracții?**\\\\r\n\\\\r\nÎn această lecții, elevii își programează spiritele să interacționeze în noi moduri. După o scurtă revizuire a modului în care au utilizat blocul [`isTouching`(#f78183)](/docs/gamelab/isTouching/), elevii vor căuta alte moduri în care două spirite pot interacționa. Apoi ei pot utiliza [`isTouching`(#f78183)](/docs/gamelab/isTouching/) pentru a determina un spirit să îl împingă pe altul pe ecran înainte de a exersa cu cele patru blocuri de coliziune ([`collide`(#f78183)](/docs/gamelab/collide/), [`displace`(#f78183)](/docs/gamelab/displace/), [`bounce`(#f78183)](/docs/gamelab/bounce/), și [`bounceOff`(#f78183)](/docs/gamelab/bounceOff/))."
             Functions:

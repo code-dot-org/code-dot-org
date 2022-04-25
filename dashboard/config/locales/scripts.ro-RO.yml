@@ -1571,6 +1571,8 @@ ro:
         CSDU3-Draft:
           description_short: Programare
           lessons:
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
             Velocity:
@@ -1868,6 +1870,8 @@ ro:
           lessons:
             Velocity:
               name: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
             Variables:
@@ -2553,6 +2557,8 @@ ro:
               name: Condiţionale
             Velocity:
               name: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
         csd5-2017:
@@ -2581,6 +2587,8 @@ ro:
           lessons:
             Velocity:
               name: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
         csd1-old:
@@ -2611,6 +2619,8 @@ ro:
               name: Condiţionale
             Velocity:
               name: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
             'null':
@@ -4386,6 +4396,8 @@ ro:
               name: Condiţionale
             Velocity:
               name: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
         csd3-2018:
@@ -4405,6 +4417,8 @@ ro:
               name: Condiţionale
             Velocity:
               name: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
         csd2-2018:
@@ -7308,6 +7322,8 @@ ro:
               name: Condiţionale
             Velocity:
               name: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
         csd4-2019:
@@ -7678,6 +7694,8 @@ ro:
               name: Condiţionale
             Velocity:
               name: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
             Sprite Properties:
@@ -8108,6 +8126,8 @@ ro:
               name: Condiţionale
             Velocity:
               name: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
             Text:
@@ -9614,6 +9634,8 @@ ro:
           lessons:
             Velocity:
               name: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
         code-break:
@@ -9674,6 +9696,8 @@ ro:
               name: Condiţionale
             Velocity:
               name: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
             Functions:
               name: Funcţii
           lesson_groups:
@@ -9814,6 +9838,9 @@ ro:
             Velocity:
               key: Viteza
               name: Viteza
+            Collision Detection:
+              key: Detectarea coliziunilor
+              name: Detectarea coliziunilor
             Collisions:
               description_teacher: "**Întrebarea Zilei: Cum pot construi programatorii
                 abstracții pentru a crea alte abstracții?**\\\r\n\\\r\nÎn această
@@ -16029,6 +16056,9 @@ ro:
             Velocity:
               name: Viteza
               key: Viteza
+            Collision Detection:
+              name: Detectarea coliziunilor
+              key: Detectarea coliziunilor
             Collisions:
               description_teacher: "**Întrebarea Zilei: Cum pot construi programatorii
                 abstracții pentru a crea alte abstracții?**\\\r\n\\\r\nÎn această

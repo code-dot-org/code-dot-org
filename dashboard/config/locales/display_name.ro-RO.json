@@ -310,7 +310,11 @@
         "courseF_variables_madlib": "Poveste cu spații necompletate, Partea 1",
         "courseF_variables_madlib_finish": "Poveste cu spații necompletate, Partea 2",
         "helloworld_emoji_location": "Evenimente care depind de timp",
-        "helloworld_retro_location": "Evenimente care depind de timp"
+        "helloworld_retro_location": "Evenimente care depind de timp",
+        "CSD U3 collisions build isTouching": "Detectarea coliziunilor",
+        "CSD U3 collisions build isTouching_2018": "Detectarea coliziunilor",
+        "CSD U3 collisions build isTouching_2019": "Detectarea coliziunilor",
+        "CSD U3 collisions build isTouching_2021": "Detectarea coliziunilor"
       }
     }
   }

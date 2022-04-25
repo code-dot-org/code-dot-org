@@ -6,7 +6,8 @@
           "498cd895eb5a102c5aeb977e2b928dee": "Mulţumesc!"
         },
         "courseE_Dogger_2": {
-          "e8a10c04d72b2f135dabe360c4bdd534": "Ai câştigat!"
+          "e8a10c04d72b2f135dabe360c4bdd534": "Ai câştigat!",
+          "8437002ea42b64a5fd68abfb2ab8dae0": "Jocul s-a terminat."
         },
         "courseE_aboutme_3": {
           "ed076287532e86365e841e92bfc50d8c": "Salutare lume!"
@@ -63,7 +64,9 @@
         },
         "FoodFight": {
           "0ab65920c84bec05a22e09feea7fe4ea": "tastează text aici",
-          "30fcc1693fa8402931d13ac3a5f396fd": "tastează titlul aici"
+          "30fcc1693fa8402931d13ac3a5f396fd": "tastează titlul aici",
+          "62f1b3a41b5eef66a4b2382bb2ab24f4": "Scor ",
+          "cc2ecba4e56986752892c0e68c8e32e0": "Nivel "
         },
         "Guess The Number": {
           "0ab65920c84bec05a22e09feea7fe4ea": "tastează text aici",
@@ -372,6 +375,13 @@
         },
         "courseF_variables_predict": {
           "f6429fe0f1a76611670df7e1234af936": "Cum te numești?"
+        },
+        "Course 4 Play Lab Params 10": {
+          "46e888cc716ac8ec6fad01e85eb7c37c": "Nivel: "
+        },
+        "courseE_playLab_scaffold6": {
+          "2d3cdcfdd4061212e4d4930a183dad2d": "Te rugăm să încerci din nou.",
+          "af142a90df4becc2aa7ae0d3acb3cc90": "Jocul s-a terminat!"
         }
       }
     }

@@ -134,7 +134,8 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+        - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+          correct: true
         questions:
         - text: Ce ar trebui să corectezi pentru a termina acest cerc?
         title: Depanare Artist Opțiuni Multiple 1
@@ -268,10 +269,10 @@ ro-RO:
         title: Alegere multiplă
       4-5 Computational Thinking Match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
         content1: Fiecare dintre aceste vehicule a fost descompus în bucăţi mai mici.
           Asociază fiecărui vehicul lista corespunzătoare.
         questions:
@@ -298,8 +299,14 @@ ro-RO:
         title: Alegere multiplă
       4-5 Crowdsourcing Multi 1:
         answers:
-        - correct: true
-        - correct: true
+        - text: |-
+            /script_assets/4-
+            5_images/unplugged/crowdsourcing_2_a1.png
+          correct: true
+        - text: |-
+            /script_assets/4-
+            5_images/unplugged/crowdsourcing_2_a2.png
+          correct: true
         questions:
         - text: Care dintre aceste imagini reprezintă cel mai bine crowdsourcing?
         title: Alegere multiplă
@@ -344,6 +351,7 @@ ro-RO:
         - text: Când încerci să te conectezi la code.org, la care adresă de IP este
             cel mai probabil să te ducă DNS-ul?
         title: Alegere multiplă
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
       4-5 Internet Multi 2:
         answers:
         - text: code.org
@@ -358,6 +366,7 @@ ro-RO:
         - text: Dacă DNS-ul te-a trimis la pagina de la adresa IP 100.42.50.110, pe
             care site ești?
         title: Alegere multiplă
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
       4-5 Songwriting Multi 1:
         answers:
         - text: Lou, Lou, du-mă la al meu Lou,
@@ -379,6 +388,7 @@ ro-RO:
             ca refren, astfel încât corul să îl repete exact de fiecare dată când
             este apelat?
         title: Alegere multiplă
+        content1: "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
       4-5 Suncatchers Match 1:
         answers:
         - text: "<h4>STACK</h4>"
@@ -388,20 +398,25 @@ ro-RO:
         content1: Asociază fiecare program cuvântului pe care îl face, folosind grupul
           de deprinderi oferite.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
         title: Potrivire
+        content2: "/script_assets/4-5_images/unplugged/suncatchers_1.png"
       4-5 Suncatchers Multi 1:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
+          correct: true
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
+          correct: true
+        - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
+          correct: true
         questions:
         - text: Care dintre programele de mai jos <em>nu</em> are exact aceeaşi secvență
             de acțiuni ca programul 1?
         title: Alegere multiplă
+        content1: "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
       4-5 artist loops multi 1:
         answers:
         - correct: true
@@ -1320,10 +1335,14 @@ ro-RO:
         title: Alegere multiplă
       K-1 Happy Maps Multi 1:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
+          correct: true
         questions:
         - text: Care săgeată îl duce pe Flurb la comoară?
         title: Alegere multiplă
@@ -1384,26 +1403,36 @@ ro-RO:
         title: Labirint
       K-1 Move It Multi 1:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/rightright.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/leftleft.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/upleft.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/leftdown.png"
+          correct: true
         questions:
         - text: Care algoritm îl duce pe Flurb la flori?
         title: Alegere multiplă
       K-1 Plant a Seed Multi 1:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/poke-hole.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
+          correct: true
         questions:
         - text: Care pas ar trebui să fie primul în acest algoritm?
         title: Alegere multiplă
       K-1 Plant a Seed Multi 2:
         answers:
-        - correct: true
-        - correct: true
-        - correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/cover-seed.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/water-pot.png"
+          correct: true
         questions:
         - text: Care pas ar trebui să completeze spațiul din acest algoritm?
         title: Alegere multiplă
@@ -1593,6 +1622,7 @@ ro-RO:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
           feedback: Incorect
@@ -1602,6 +1632,7 @@ ro-RO:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
           feedback: Incorect
@@ -1611,6 +1642,7 @@ ro-RO:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
           feedback: Incorect
@@ -1620,6 +1652,7 @@ ro-RO:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
           feedback: Incorect
@@ -1630,7 +1663,9 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+          feedback: Corect!
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018:
@@ -1638,7 +1673,9 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+          feedback: Corect!
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
@@ -1646,7 +1683,9 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+          feedback: Corect!
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019_2020:
@@ -1654,7 +1693,9 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+          feedback: Corect!
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1:
@@ -1663,9 +1704,11 @@ ro-RO:
           correct: true
         - text: '12'
           correct: true
+          feedback: Corect!
         - text: '15'
           correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
@@ -1674,9 +1717,11 @@ ro-RO:
           correct: true
         - text: '12'
           correct: true
+          feedback: Corect!
         - text: '15'
           correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
@@ -1685,9 +1730,11 @@ ro-RO:
           correct: true
         - text: '12'
           correct: true
+          feedback: Corect!
         - text: '15'
           correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019_2020:
@@ -1696,33 +1743,41 @@ ro-RO:
           correct: true
         - text: '12'
           correct: true
+          feedback: Corect!
         - text: '15'
           correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
@@ -1730,39 +1785,48 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019_2020:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseC_multi_starWars_predict1:
@@ -1770,6 +1834,7 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
+          feedback: Corect!
         - text: Nu știu
           correct: true
         questions:
@@ -1779,6 +1844,7 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
+          feedback: Corect!
         - text: Nu știu
           correct: true
         questions:
@@ -1788,6 +1854,7 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
+          feedback: Corect!
         - text: Nu știu
           correct: true
         questions:
@@ -1797,6 +1864,7 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
+          feedback: Corect!
         - text: Nu știu
           correct: true
         questions:
@@ -1805,32 +1873,40 @@ ro-RO:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseC_multi_starWars_predict2_2018:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019_2020:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_artist_binary8_predict1:
@@ -1843,6 +1919,7 @@ ro-RO:
           correct: true
         - text: D
           correct: true
+          feedback: Corect!
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018:
@@ -1855,6 +1932,7 @@ ro-RO:
           correct: true
         - text: D
           correct: true
+          feedback: Corect!
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
@@ -1867,6 +1945,7 @@ ro-RO:
           correct: true
         - text: D
           correct: true
+          feedback: Corect!
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019_2020:
@@ -1879,122 +1958,149 @@ ro-RO:
           correct: true
         - text: D
           correct: true
+          feedback: Corect!
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
         - text: A
           correct: true
+          feedback: Corect!
         - text: B
           correct: true
         - text: C
           correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - text: A
           correct: true
+          feedback: Corect!
         - text: B
           correct: true
         - text: C
           correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
         - text: A
           correct: true
+          feedback: Corect!
         - text: B
           correct: true
         - text: C
           correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
         answers:
         - text: A
           correct: true
+          feedback: Corect!
         - text: B
           correct: true
         - text: C
           correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_copy:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
         answers:
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
@@ -2002,7 +2108,9 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+          feedback: Corect!
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
@@ -2010,7 +2118,9 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+          feedback: Corect!
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
@@ -2018,7 +2128,9 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+          feedback: Corect!
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
@@ -2026,7 +2138,9 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+          feedback: Corect!
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
@@ -2035,9 +2149,11 @@ ro-RO:
           correct: true
         - text: '8'
           correct: true
+          feedback: Corect!
         - text: '12'
           correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
@@ -2046,9 +2162,11 @@ ro-RO:
           correct: true
         - text: '8'
           correct: true
+          feedback: Corect!
         - text: '12'
           correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
@@ -2057,9 +2175,11 @@ ro-RO:
           correct: true
         - text: '8'
           correct: true
+          feedback: Corect!
         - text: '12'
           correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
@@ -2068,9 +2188,11 @@ ro-RO:
           correct: true
         - text: '8'
           correct: true
+          feedback: Corect!
         - text: '12'
           correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_collector_debugging10_predict1:
@@ -2078,7 +2200,9 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+          feedback: Corect!
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1:
@@ -2086,7 +2210,9 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+          feedback: Corect!
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
@@ -2094,7 +2220,9 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+          feedback: Corect!
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
@@ -2102,7 +2230,9 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+          feedback: Corect!
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
@@ -2110,47 +2240,59 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+          feedback: Corect!
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_farmer_ramp13:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_farmer_while10_predict2:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019_2020:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_farmer_while4_predict1:
@@ -2158,7 +2300,9 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+          feedback: Corect!
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018:
@@ -2166,7 +2310,9 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+          feedback: Corect!
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
@@ -2174,7 +2320,9 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+          feedback: Corect!
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019_2020:
@@ -2182,79 +2330,99 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+          feedback: Corect!
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_maze_until10_predict2:
         answers:
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_maze_until10_predict2_2018_2019:
         answers:
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_maze_until10_predict2_2018_2019_2020:
         answers:
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_maze_until2_predict1:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2018:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019_2020:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_scrat_predict1:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseE_multi_bee_functions_predict1:
@@ -2262,7 +2430,8 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseE_multi_farmer_functions11_predict:
@@ -2271,6 +2440,7 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
+          feedback: Corect!
         questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018:
@@ -2278,6 +2448,7 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
         questions:
         - {}
@@ -2286,6 +2457,7 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
         questions:
         - {}
@@ -2294,6 +2466,7 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
         questions:
         - {}
@@ -2341,24 +2514,30 @@ ro-RO:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseF_bee_variables_8a_2018_2019_2020:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseF_multi_artist_for10_predict1:
@@ -2366,7 +2545,9 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+          feedback: Corect!
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseF_multi_artist_for10_predict1_2018:
@@ -2374,7 +2555,9 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+          feedback: Corect!
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
@@ -2382,7 +2565,9 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+          feedback: Corect!
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019_2020:
@@ -2390,69 +2575,86 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+          feedback: Corect!
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseF_multi_artist_fwp2_predict1:
         answers:
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1:
         answers:
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
         answers:
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019_2020:
         answers:
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseF_multi_bee_conditionals1_predict1:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseF_multi_bee_conditionals7_predict2:
         answers:
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseF_multi_bee_for3_predict1:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
         questions:
@@ -2461,6 +2663,7 @@ ro-RO:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
         questions:
@@ -2469,6 +2672,7 @@ ro-RO:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
         questions:
@@ -2477,6 +2681,7 @@ ro-RO:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
         questions:
@@ -2486,7 +2691,8 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseF_multi_playlab_variables4c_predictive1:
@@ -2494,13 +2700,15 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       coursee_prediction_artistfunction2:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
         questions:
@@ -2509,6 +2717,7 @@ ro-RO:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
         questions:
@@ -2517,6 +2726,7 @@ ro-RO:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
         questions:
@@ -2525,6 +2735,7 @@ ro-RO:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
         questions:
@@ -2548,32 +2759,40 @@ ro-RO:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       Unit 1 Lesson 1 Overview:
@@ -2906,6 +3125,7 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
         questions:
         - {}
@@ -2915,6 +3135,7 @@ ro-RO:
           correct: true
         - text: '12'
           correct: true
+          feedback: Corect!
         - text: '15'
           correct: true
         - text: '20'
@@ -2933,6 +3154,7 @@ ro-RO:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
         questions:
@@ -2942,6 +3164,7 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
         questions:
         - {}
@@ -2949,6 +3172,7 @@ ro-RO:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
         questions:
@@ -2959,6 +3183,7 @@ ro-RO:
         answers:
         - text: A
           correct: true
+          feedback: Corect!
         - text: B
           correct: true
         - text: C
@@ -2970,6 +3195,7 @@ ro-RO:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
         questions:
@@ -2978,13 +3204,16 @@ ro-RO:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
-        - correct: true
+        - text: Nu știu.
+          correct: true
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2021:
         answers:
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
         - correct: true
@@ -2995,6 +3224,7 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
         questions:
         - {}
@@ -3004,6 +3234,7 @@ ro-RO:
           correct: true
         - text: '8'
           correct: true
+          feedback: Corect!
         - text: '10'
           correct: true
         - text: '12'
@@ -3015,6 +3246,7 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
         questions:
         - {}
@@ -3022,6 +3254,7 @@ ro-RO:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
         questions:
@@ -3031,12 +3264,14 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
         questions:
         - {}
       courseD_multi_maze_until10_predict2_2021:
         answers:
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
         - correct: true
@@ -3046,6 +3281,7 @@ ro-RO:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
         questions:
@@ -3059,6 +3295,7 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
         questions:
         - {}
@@ -3067,6 +3304,7 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
         questions:
         - {}
@@ -3091,6 +3329,7 @@ ro-RO:
         - correct: true
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
         questions:
         - {}
@@ -3142,6 +3381,7 @@ ro-RO:
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
         - correct: true
@@ -3151,6 +3391,7 @@ ro-RO:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
         questions:
@@ -3210,6 +3451,7 @@ ro-RO:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
         questions:
@@ -3226,6 +3468,7 @@ ro-RO:
         answers:
         - correct: true
         - correct: true
+          feedback: Corect!
         - correct: true
         - correct: true
         questions:
@@ -3513,3 +3756,7 @@ ro-RO:
           atenție aceste proiecte înainte de a se hotărî asupra proiectului pe care
           vor să-l creeze. Puteți să le analizați împreună în clasă sau să le cereți
           elevilor să le exploreze pe cont propriu."
+      CSD U1 Test:
+        title: Test Post-Proiect Computere și Rezolvare de Probleme
+      CSD U1 Test_2021:
+        title: Test Post-Proiect Computere și Rezolvare de Probleme

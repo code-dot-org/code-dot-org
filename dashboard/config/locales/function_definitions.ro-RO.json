@@ -492,6 +492,9 @@
           },
           "shift down/backward": {
             "name": "deplasează jos/înapoi"
+          },
+          "draw a square 20": {
+            "name": "desenează un pătrat 20"
           }
         },
         "Course 4 SCF 1a": {
@@ -513,6 +516,9 @@
           },
           "shift down": {
             "name": "deplasează jos"
+          },
+          "draw a square 20": {
+            "name": "desenează un pătrat 20"
           }
         },
         "Course 4 SCF 3": {
@@ -523,6 +529,9 @@
             "parameters": {
               "length": "lungime"
             }
+          },
+          "draw a square 20": {
+            "name": "desenează un pătrat 20"
           }
         },
         "Course E: Play Lab Project": {
@@ -629,6 +638,9 @@
         "NEW Course 4 Artist Functions 11": {
           "draw a line of  squares": {
             "name": "desenează o linie de pătrate"
+          },
+          "draw a square 20": {
+            "name": "desenează un pătrat 20"
           }
         },
         "NEW Course 4 Artist Functions 14": {
@@ -637,6 +649,9 @@
           },
           "draw a square 40": {
             "name": "desenează un pătrat 40"
+          },
+          "draw a square 20": {
+            "name": "desenează un pătrat 20"
           }
         },
         "NEW Course 4 Artist Functions 3": {
@@ -740,7 +755,10 @@
             }
           },
           "draw a circle": {
-            "name": "desenează un cerc"
+            "name": "desenează un cerc",
+            "parameters": {
+              "radius": "raza"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
@@ -889,7 +907,10 @@
             }
           },
           "draw a circle": {
-            "name": "desenează un cerc"
+            "name": "desenează un cerc",
+            "parameters": {
+              "radius": "raza"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
@@ -1015,6 +1036,9 @@
           },
           "do something": {
             "name": "facă ceva"
+          },
+          "draw a square 20": {
+            "name": "desenează un pătrat 20"
           }
         },
         "course4_bee_fwp_challenge1": {
@@ -2059,7 +2083,10 @@
             }
           },
           "draw a circle": {
-            "name": "desenează un cerc"
+            "name": "desenează un cerc",
+            "parameters": {
+              "radius": "raza"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
@@ -2109,6 +2136,9 @@
           },
           "do something": {
             "name": "facă ceva"
+          },
+          "draw a square 20": {
+            "name": "desenează un pătrat 20"
           }
         },
         "courseF_artist_fwp_challenge2": {
@@ -2119,6 +2149,9 @@
             "parameters": {
               "length": "lungime"
             }
+          },
+          "draw a square 20": {
+            "name": "desenează un pătrat 20"
           }
         },
         "courseF_bee_functions6": {
@@ -2264,7 +2297,10 @@
             }
           },
           "draw a circle": {
-            "name": "desenează un cerc"
+            "name": "desenează un cerc",
+            "parameters": {
+              "radius": "raza"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
@@ -2311,7 +2347,10 @@
             }
           },
           "draw a circle": {
-            "name": "desenează un cerc"
+            "name": "desenează un cerc",
+            "parameters": {
+              "radius": "raza"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
@@ -2353,7 +2392,10 @@
             }
           },
           "draw a circle": {
-            "name": "desenează un cerc"
+            "name": "desenează un cerc",
+            "parameters": {
+              "radius": "raza"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
@@ -2395,7 +2437,10 @@
             }
           },
           "draw a circle": {
-            "name": "desenează un cerc"
+            "name": "desenează un cerc",
+            "parameters": {
+              "radius": "raza"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
@@ -2437,7 +2482,10 @@
             }
           },
           "draw a circle": {
-            "name": "desenează un cerc"
+            "name": "desenează un cerc",
+            "parameters": {
+              "radius": "raza"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
@@ -2699,6 +2747,31 @@
         "CourseF_app_computer": {
           "reset game": {
             "name": "resetează jocul"
+          }
+        },
+        "Choose Your Own Adventure": {
+          "story": {
+            "name": "poveste"
+          }
+        },
+        "Course 4 Artist Functions Inspiration": {
+          "draw a square 20": {
+            "name": "desenează un pătrat 20"
+          }
+        },
+        "Course 4 Artist Functions challenge": {
+          "draw a square 20": {
+            "name": "desenează un pătrat 20"
+          }
+        },
+        "NEW Course 4 Artist Functions 12": {
+          "draw a square 20": {
+            "name": "desenează un pătrat 20"
+          }
+        },
+        "NEW Course 4 Artist Functions 13": {
+          "draw a square 20": {
+            "name": "desenează un pătrat 20"
           }
         }
       }
