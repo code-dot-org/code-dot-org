@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "csc-pilot-2022-fables",
-    "serialized_at": "2022-04-21 21:28:57 UTC",
+    "serialized_at": "2022-04-22 20:30:51 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -443,7 +443,7 @@
       "key": "513d94f4-0731-468d-8d46-c309c12868e8",
       "position": 1,
       "properties": {
-        "description": "Welcome students to class and very briefly introduce the day’s activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _How do we use sprites in our programs?_",
+        "description": "Welcome students to class and very briefly introduce the day’s activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Learn the Basics with Hello World!” slide\n\n**Reflect**: _What are some of your favorite animated stories?_",
         "name": "Setting the Stage "
       },
       "seeding_key": {
@@ -467,7 +467,7 @@
       "key": "341304b8-cde4-43c6-b800-e8fd61e1e826",
       "position": 3,
       "properties": {
-        "description": "*We’re learning a new meaning for the word \"event\" today. Let's focus on events that cause other actions to happen like when flipping a switch causes the lights to turn on or pressing a button to make a character in a game move.*"
+        "description": "**Say**: *We’re learning a new meaning for the word \"event\" today. Let's focus on events that cause other actions to happen like when flipping a switch causes the lights to turn on or pressing a button to make a character in a game move.*"
       },
       "seeding_key": {
         "activity_section.key": "341304b8-cde4-43c6-b800-e8fd61e1e826",
@@ -478,7 +478,7 @@
       "key": "a250aa89-76c1-4c25-8366-631f5175dff4",
       "position": 4,
       "properties": {
-        "description": "Today, students will work in Sprite Lab, but the events they will be working on will be more like the video games they are used to playing. Events will take the form of actions, such as clicking the screen or two characters running into each other."
+        "description": "**Goal**: Today, students will work in Sprite Lab, but the events they will be working on will be more like the video games they are used to playing. Events will take the form of actions, such as clicking the screen or two characters running into each other."
       },
       "seeding_key": {
         "activity_section.key": "a250aa89-76c1-4c25-8366-631f5175dff4",
@@ -489,7 +489,8 @@
       "key": "3fc80945-a501-47c1-bf07-393e66f4d4a5",
       "position": 5,
       "properties": {
-        "description": "*In this activity, you’re going to have fun making an interactive world with fun characters called sprites. You’ll be able to make the sprites say things with speech bubbles as you’d see in a comic or graphic novel, and you’ll learn to make them respond automatically when you or someone else clicks on them.*"
+        "description": "In this activity, you’re going to have fun making an interactive world with fun characters called sprites. You’ll be able to make the sprites say things with speech bubbles as you’d see in a comic or graphic novel, and you’ll learn to make them respond automatically when you or someone else clicks on them.",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "3fc80945-a501-47c1-bf07-393e66f4d4a5",
@@ -549,7 +550,8 @@
       "key": "08b69c76-ea3d-45fa-b42c-2880ef2d9132",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7-12 - Skill Building” slide"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7-13 - Skill Building” slide",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "08b69c76-ea3d-45fa-b42c-2880ef2d9132",
@@ -595,7 +597,7 @@
       "key": "bad5b3c6-555f-4a17-8498-e979f826bb98",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _What did you learn today about sprites?_ \n* _How do events work in your code?_\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _How do events work in your code?_\n* _What sprites would you use to animate your favorite fable?_\n",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -668,7 +670,7 @@
       "key": "31411250-b8bd-491b-8544-3daf13ae7799",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: _What were the character traits from our previous fable? What do you think are other common character traits in a fable?_\n\n**Discussion Goal**: Students should recall the character traits from the previous lessons. They can also brainstorm other common character traits, such as wise, cunning/tricky, brave, greedy, giving, patient, persistent, hard-working, and more.\n\nAs students reach the end of their brainstorm, remind them of the moral of the previous story and help them see how the character’s traits directly relate to the moral of the story. This is because the reader learns the moral of the story through the character’s actions and growth.\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: _What were the character traits from our previous fable? What do you think are other common character traits in a fable?_\n\n**Discussion Goal**: Students should recall the character traits from the previous lessons. They can also brainstorm other common character traits, such as wise, cunning/tricky, brave, greedy, giving, patient, persistent, hard-working, and more.\n\n**Do This:** As students reach the end of their brainstorm, remind them of the moral of the previous story and help them see how the character’s traits directly relate to the moral of the story. This is because the reader learns the moral of the story through the character’s actions and growth.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "31411250-b8bd-491b-8544-3daf13ae7799",
@@ -821,7 +823,7 @@
       "key": "51ffad5f-022b-4857-959f-6ffb942bfbd9",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Check In” slide\n\n**Check In**: \n- _What is the moral of your fable?_\n- _What two characters did you choose?_\n- _Do both characters say something that matches their trait?\nDo both characters say something to each other?_\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Check In” slide\n\n**Check In**: \n- _What is the moral of your fable?_\n- _What two characters did you choose?_\n- _Do both characters say something that matches their trait?_\n- _Do both characters say something to each other?_\n"
       },
       "seeding_key": {
         "activity_section.key": "51ffad5f-022b-4857-959f-6ffb942bfbd9",
@@ -869,7 +871,7 @@
       "key": "a45c2442-8204-4770-ace7-b2360f8829e6",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n- _What is the purpose of reading fables?_\n- _Why are characters important in a fable?_\n\n**Discussion Goal**: Students should understand that the purpose of a fable is to teach a moral or lesson. They should be able to explain that a character and their traits directly relates to the moral of the story, and typically the reader learns the central lesson through the main character's traits and actions. Students can refer back to previous fables as examples, where they learned the moral through the actions of the characters.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n- _What is the purpose of reading fables?_\n- _Why are characters important in a fable?_\n\n**Discussion Goal**: Students should understand that the purpose of a fable is to teach a moral or lesson. They should be able to explain that a character and their traits directly relates to the moral of the story, and typically the reader learns the central lesson through the main character's traits and actions. Students can refer back to previous fables as examples, where they learned the moral through the actions of the characters.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n* **Fable** - A short story conveying a moral\n* **Moral** - A lesson learned\n* **Big Idea** - A key detail that moves the story from one part to the next"
       },
       "seeding_key": {
         "activity_section.key": "a45c2442-8204-4770-ace7-b2360f8829e6",
@@ -917,7 +919,8 @@
       "key": "1bf0f686-ddfb-421c-9afe-dce53d2ac55e",
       "position": 3,
       "properties": {
-        "description": "**Do This**: Have students move to their computer and sign in. Students should complete the Skill Building levels and then spend any remaining time choosing from the various Practice activities. Circulate the room to support students."
+        "description": "**Do This**: Have students move to their computer and sign in. ",
+        "progression_name": "Choice Levels"
       },
       "seeding_key": {
         "activity_section.key": "1bf0f686-ddfb-421c-9afe-dce53d2ac55e",
@@ -944,7 +947,7 @@
       "key": "a355fc11-6155-4ff6-8865-ce06c8d4dee2",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Discussion” slide\n\n**Discuss**: \n- _What did you notice about the code?_ \n- _What did you notice about the characters?_\n\n**Discussion Goal**: Students should start to make the connection that each “when sprite clicked” event includes a character’s dialogue that is a “big idea”. A big idea is a key detail that moves the story forward to reveal more of the moral or lesson.\n\n**Do This**: Hand back the Fable Planning Sheet from yesterday’s lesson and make sure students have it available for the remainder of class. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Code Your Fable App” slide\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Discussion” slide\n\n**Discuss**: \n- _What did you notice about the code?_ \n- _What did you notice about the characters?_\n\n**Discussion Goal**: Students should start to make the connection that each “when sprite clicked” event includes a character’s dialogue that is a “big idea”. A big idea is a key detail that moves the story forward to reveal more of the moral or lesson.\n\n**Do This**: Hand back the Fable Planning Sheet from yesterday’s lesson and make sure students have it available for the remainder of class. "
       },
       "seeding_key": {
         "activity_section.key": "a355fc11-6155-4ff6-8865-ce06c8d4dee2",
@@ -971,7 +974,7 @@
       "key": "33e1e876-a735-49d7-8162-64629ae5c05c",
       "position": 7,
       "properties": {
-        "description": "**Do This**: Hand back the Fable Planning Sheet from yesterday’s lesson and make sure students have it available for the remainder of class. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-6 - Code Your Fable App” slide"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-6 - Code Your Fable App” slide"
       },
       "seeding_key": {
         "activity_section.key": "33e1e876-a735-49d7-8162-64629ae5c05c",
@@ -1021,6 +1024,7 @@
       "key": "0cc0d247-baf3-42c9-b0aa-467f5fcb9081",
       "position": 11,
       "properties": {
+        "progression_name": "Code Your Fable"
       },
       "seeding_key": {
         "activity_section.key": "0cc0d247-baf3-42c9-b0aa-467f5fcb9081",
@@ -1076,7 +1080,7 @@
       "key": "81d0968c-848b-491c-a547-5e4bf3415adf",
       "position": 3,
       "properties": {
-        "description": "**Discuss**: \n-  _Three things that I learned about programming are…_\n- _Two things I learned about fables and their characters are…_\n- _One thing I would like more information about is…_\n\n**Discussion Goal**:  Students should  reflect on their biggest takeaways from today’s lesson. They should be able to describe how a character’s motivation leads to their actions in a story and illustrate how a character’s actions affect other characters. "
+        "description": "**Discuss**: \n-  _**Three** things that I learned about programming are…_\n- _**Two** things I learned about fables and their characters are…_\n- _**One** thing I would like more information about is…_\n\n**Discussion Goal**:  Students should  reflect on their biggest takeaways from today’s lesson. They should be able to describe how a character’s motivation leads to their actions in a story and illustrate how a character’s actions affect other characters. "
       },
       "seeding_key": {
         "activity_section.key": "81d0968c-848b-491c-a547-5e4bf3415adf",
@@ -1112,7 +1116,7 @@
       "key": "f40ef2dc-2be4-4c8e-bdd6-f2901947a45a",
       "position": 2,
       "properties": {
-        "description": "Now that we have finished our projects, it is time to share! Before we share, we will think about how the project went. On your Project Reflection Sheet, fill in the questions and reflect on your project.\n- How is your adaptation similar and/or different from the original fables? \n- How do the characters interact that are similar or different?\n",
+        "description": "Now that we have finished our projects, it is time to share! Before we share, we will think about how the project went. On your Project Reflection Sheet, fill in the questions and reflect on your project.\n- How is your adaptation similar to or different from the original fables? \n- How do the characters interact with each other?\n",
         "remarks": true
       },
       "seeding_key": {
@@ -1160,7 +1164,7 @@
       "key": "78b8a297-ecf8-4d9a-978f-374987fe40eb",
       "position": 3,
       "properties": {
-        "description": "**Do This**: Ask students to stand up, raise their hands and high-five a peer. Play “do the hustle” song while students find their partners. When students find a partner, they should lower their hands.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Do the Hustle!” slide\n\n**Do This**: When there are no hands left, prompt students to share their projects and the answers to the discussion questions. Once students are both finished sharing, then play “Do the Hustle” as a signal for students to raise their hands and high-five a different partner for the next question. (Source: Edutopia). \n\n**Do This**: Play “Do the hustle and have students find their first partner. Once everyone is partnered up, start the timer for a new 2 minute sharing. Repeat this process for 3-4 rounds, depending on how much time you have. Leave 5 minutes left at the end of class to wrap up as a whole class. "
+        "description": "**Do This**: Ask students to stand up, raise their hands and high-five a peer. Play “do the hustle” song while students find their partners. When students find a partner, they should lower their hands.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Do the Hustle!” slide\n\n**Do This**: When there are no hands left, prompt students to share their projects and the answers to the discussion questions. Once students are both finished sharing, then play “Do the Hustle” as a signal for students to raise their hands and high-five a different partner for the next question. (Source: Edutopia). \n\n**Do This**: Play “Do the hustle\" and have students find their first partner. Once everyone is partnered up, start the timer for a new 2 minute sharing. Repeat this process for 3-4 rounds, depending on how much time you have. Leave 5 minutes left at the end of class to wrap up as a whole class. "
       },
       "seeding_key": {
         "activity_section.key": "78b8a297-ecf8-4d9a-978f-374987fe40eb",
@@ -1171,7 +1175,7 @@
       "key": "2c74eb9f-856e-44f6-b304-883b5406c134",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _How was your program similar to or different from your classmates?_\n\n\n**Discussion Goal**: Students will discuss how the programs had similar morals, dialogue, character traits. Encourage students to think about the elements of a fable that they discussed in previous classes. Students may also discuss the similarities and differences in their code, such as in what order their characters were introduced.  \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _How was your program similar to or different from your classmates' programs?_\n\n**Discussion Goal**: Students will discuss how the programs had similar morals, dialogue, character traits. Encourage students to think about the elements of a fable that they discussed in previous classes. Students may also discuss the similarities and differences in their code, such as in what order their characters were introduced.  \n",
         "name": "Reflect"
       },
       "seeding_key": {
@@ -1351,7 +1355,8 @@
       "properties": {
         "level_keys": [
           "coursee_helloworld_events_fables"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1375,7 +1380,8 @@
       "properties": {
         "level_keys": [
           "helloworld_food_backgrounds_fables"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1399,7 +1405,8 @@
       "properties": {
         "level_keys": [
           "helloworld_food_costumes_fables"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1423,7 +1430,8 @@
       "properties": {
         "level_keys": [
           "helloworld_food_sizes_fables"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1447,7 +1455,8 @@
       "properties": {
         "level_keys": [
           "helloworld_food_behaviors_fables"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1471,7 +1480,8 @@
       "properties": {
         "level_keys": [
           "gray_csc_helloworld_choice_group_fables"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1495,7 +1505,8 @@
       "properties": {
         "level_keys": [
           "helloworld_food_sounds_fables"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1569,7 +1580,8 @@
       "properties": {
         "level_keys": [
           "csc_fablesv2_choice"
-        ]
+        ],
+        "progression": "Choice Levels"
       },
       "bonus": false,
       "seeding_key": {
@@ -1593,7 +1605,8 @@
       "properties": {
         "level_keys": [
           "csc_fablesv2_DIY_Set_Scene"
-        ]
+        ],
+        "progression": "Code Your Fable"
       },
       "bonus": false,
       "seeding_key": {
@@ -1617,7 +1630,8 @@
       "properties": {
         "level_keys": [
           "csc_fablesv2_DIY_Dialogue"
-        ]
+        ],
+        "progression": "Code Your Fable"
       },
       "bonus": false,
       "seeding_key": {
@@ -1641,7 +1655,8 @@
       "properties": {
         "level_keys": [
           "csc_fables_predict"
-        ]
+        ],
+        "progression": "Code Your Fable"
       },
       "bonus": false,
       "seeding_key": {
@@ -1665,7 +1680,8 @@
       "properties": {
         "level_keys": [
           "csc_fablesv2_DIY_Interactions"
-        ]
+        ],
+        "progression": "Code Your Fable"
       },
       "bonus": false,
       "seeding_key": {
@@ -1689,7 +1705,8 @@
       "properties": {
         "level_keys": [
           "csc_fablesv2_DIY_Freeplay"
-        ]
+        ],
+        "progression": "Code Your Fable"
       },
       "bonus": false,
       "seeding_key": {
@@ -1962,19 +1979,6 @@
   ],
   "resources": [
     {
-      "name": "CSC - Hello World - Slides",
-      "url": "https://docs.google.com/presentation/d/1Zt7oK0fuOR8XyKsCjWos3jfifO1uD0KFZfK8cbJulH8/template/preview\t",
-      "key": "csc_-_hello_world_-_slides",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1Zt7oK0fuOR8XyKsCjWos3jfifO1uD0KFZfK8cbJulH8/explore/pdf",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csc_-_hello_world_-_slides"
-      }
-    },
-    {
       "name": "Fable Adaptations",
       "url": "https://docs.google.com/presentation/d/1qwrRfj0udh4wM08WhH1pMK9enARkZW3tQ1lFTBsLfxE/template/preview",
       "key": "fable_adaptations",
@@ -2052,7 +2056,7 @@
     {
       "seeding_key": {
         "lesson.key": "Hello World CSC",
-        "resource.key": "csc_-_hello_world_-_slides"
+        "resource.key": "fable_adaptations"
       }
     },
     {
@@ -2183,6 +2187,24 @@
     }
   ],
   "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "big_idea"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "fable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "moral"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "lesson-4",
