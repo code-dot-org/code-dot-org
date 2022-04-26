@@ -1,0 +1,24 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "CSA ULL9-L4a PBT_2022",
+    "long_instructions": "Create a scene that draws random circles and rectangles using random colors at random locations in The Theater!\r\n\r\n##In ShapesScene.java:\r\n\r\n1. Write the `createScene`(#e7e8ea) method to draw the number of shapes specified by the `numShapes`(#e7e8ea) parameter.\r\n\r\n   * Generate a random number (`0`(#e7e8ea) or `1`(#e7e8ea)). Draw a circle if the number is `0`(#e7e8ea), and draw a rectangle if the number is `1`(#e7e8ea).\r\n   \r\n   * Choose a random color from the `colors`(#e7e8ea) array and use `setFillColor()`(#e7e8ea) with the randomly chosen color.\r\n   \r\n   **Hint:** Use `colors.length`(#e7e8ea) to set the range of index values to choose from.\r\n   \r\n   * Choose a random `x`(#e7e8ea) and `y`(#e7e8ea) location to draw the shape.\r\n   \r\n   **Hint:** Use the `getWidth()`(#e7e8ea) and `getHeight()`(#e7e8ea) methods in the `Scene`(#e7e8ea) class to set the range of `x`(#e7e8ea) and `y`(#e7e8ea) locations to choose from.\r\n\r\n##In MyTheater.java:\r\n\r\n2. Call the `createScene()`(#e7e8ea) method with a number of shapes to draw.\r\n\r\n3. Use `Theater.playScenes()`(#e7e8ea) to play the scene.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "encrypted_examples": [
+
+    ],
+    "display_name": "Random Shapes",
+    "bubble_choice_description": "Use Math.random() to draw shapes in your scene."
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-04-07T18:41:47.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2022-04-07 18:41:50 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-07 18:42:22 +0000\",\"changed\":[\"encrypted_examples\",\"csa_view_mode\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 21:32:11 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 21:38:42 +0000\",\"changed\":[\"encrypted_examples\",\"display_name\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 22:43:22 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 22:43:43 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

@@ -496,6 +496,18 @@ FactoryGirl.define do
     participant_type 'student'
 
     initialize_with {Section.new(attributes)}
+
+    trait :teacher_participants do
+      participant_type 'teacher'
+      login_type 'email'
+      grade 'pl'
+    end
+
+    trait :facilitator_participants do
+      participant_type 'facilitator'
+      login_type 'email'
+      grade 'pl'
+    end
   end
 
   factory :game do
@@ -1000,6 +1012,12 @@ FactoryGirl.define do
     association :programming_environment
     sequence(:name) {|n| "programming class #{n}"}
     sequence(:key) {|n| "programming-class-#{n}"}
+  end
+
+  factory :programming_method do
+    association :programming_class
+    sequence(:name) {|n| "programming method #{n}"}
+    sequence(:key) {|n| "programming-method-#{n}"}
   end
 
   factory :callout do

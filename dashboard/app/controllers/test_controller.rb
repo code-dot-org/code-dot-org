@@ -16,6 +16,13 @@ class TestController < ApplicationController
     head :ok
   end
 
+  def plc_reviewer_access
+    return unless (user = current_user)
+    user.permission = UserPermission::PLC_REVIEWER
+    user.save!
+    head :ok
+  end
+
   def facilitator_access
     return unless (user = current_user)
     user.permission = UserPermission::FACILITATOR
@@ -67,7 +74,7 @@ class TestController < ApplicationController
     }
     fake_user = User.create!(attributes)
 
-    section = Section.create(name: "New Section", user: fake_user, script_id: script.id, course_id: course.id)
+    section = Section.create(name: "New Section", user: fake_user, script_id: script.id, course_id: course.id, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
     section.students << user
     section.save!
     head :ok
@@ -89,7 +96,7 @@ class TestController < ApplicationController
     }
     fake_user = User.create!(attributes)
 
-    section = Section.create(name: "New Section", user: fake_user, script: script)
+    section = Section.create(name: "New Section", user: fake_user, script: script, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
     section.students << user
     section.save!
     head :ok

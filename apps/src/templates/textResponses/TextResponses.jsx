@@ -12,7 +12,6 @@ import Button from '../Button';
 import TextResponsesLessonSelector from '@cdo/apps/templates/textResponses/TextResponsesLessonSelector';
 import {
   setScriptId,
-  validScriptPropType,
   getSelectedScriptName
 } from '@cdo/apps/redux/unitSelectionRedux';
 import {loadTextResponsesFromServer} from '@cdo/apps/templates/textResponses/textReponsesDataApi';
@@ -28,7 +27,7 @@ const PADDING = 8;
 
 function TextResponses({
   sectionId,
-  validScripts,
+  coursesWithProgress,
   scriptId,
   scriptName,
   setScriptId
@@ -102,7 +101,7 @@ function TextResponses({
       <div style={styles.unitSelection}>
         <div style={{...h3Style, ...styles.header}}>{i18n.selectACourse()}</div>
         <UnitSelector
-          validScripts={validScripts}
+          coursesWithProgress={coursesWithProgress}
           scriptId={scriptId}
           onChange={onChangeScript}
         />
@@ -144,7 +143,7 @@ function TextResponses({
 TextResponses.propTypes = {
   // Provided by redux.
   sectionId: PropTypes.number.isRequired,
-  validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
+  coursesWithProgress: PropTypes.array.isRequired,
   scriptId: PropTypes.number,
   scriptName: PropTypes.string,
   setScriptId: PropTypes.func.isRequired
@@ -180,7 +179,7 @@ export const UnconnectedTextResponses = TextResponses;
 export default connect(
   state => ({
     sectionId: state.teacherSections.selectedSectionId,
-    validScripts: state.unitSelection.validScripts,
+    coursesWithProgress: state.unitSelection.coursesWithProgress,
     scriptId: state.unitSelection.scriptId,
     scriptName: getSelectedScriptName(state)
   }),

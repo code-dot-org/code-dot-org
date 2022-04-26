@@ -3,17 +3,15 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-### <a href="https://levelbuilder-studio.code.org/s/vpl-csd2-ci-pilot-2022/lessons/5/levels/2" target="blank" rel="noopener noreferrer">Example Level</a> - remove when complete
-
-# Chapter 1 project: Insert project title here
+# Chapter 1 project: Create a Representation
 
 ## Project overview
 
-##### Add project overview 
+##### Chapter 1 of the Data and Society unit concludes with students designing a structure to represent their perfect day using the binary representation systems. Students start by writing a short description of their perfect day and then review with a partner to identify the key pieces of information they think a computer could capture. Then as a class they decide how a punch card of bytes of information will be interpreted to represent their pieces of information. Finally, students will use the ASCII, binary number, and image formats to represent their perfect days and trade their punch cards to try and decode what the other student's perfect day is like. The project concludes with students reflecting on their encoding and decoding process.
 
 ## Sample student projects
 
-### Add sample projects and delete these instructions
+### Only thing left to do is add sample projects and delete these instructions
 
 ##### Click the images below to view the sample projects in a new tab.
 
@@ -31,13 +29,10 @@ markdown <<MARKDOWN
 ##### If you are short on time, this project can be used as way to wrap up the unit. This project can also be expanded out to include a student presentation if you have the time available. 
 
 ## Project resources
-
-### Update links below and delete these instructions
-
-* ##### <a href="https://studio.code.org/s/csd2-2022/lessons/13" target="blank" rel="noopener noreferrer" >Lesson Plan</a>  
-* ##### <a href="https://docs.google.com/document/d/1J8BV9ekJXvT8-KzWkzc8_XOTam5BFzZ42A_0ZaUXoww/view" target="blank" rel="noopener noreferrer" >Project guide</a> 
-* ##### <a href="https://docs.google.com/document/d/1pL93fCFPGSxOo9nCmU3bfAw2m2MhY7B9nG-k-IT28Lo/view" target="blank" rel="noopener noreferrer" >Student checklist</a> 
-* ##### <a href="https://docs.google.com/document/d/1xDnK38-eItsz7ccg4OctJjBuy7svd3yBXF9tTvDpGo0/view" target="blank" rel="noopener noreferrer" >Project rubric</a> 
+* ##### <a href="https://studio.code.org/s/csd5-2021/lessons/8" target="blank" rel="noopener noreferrer" >Lesson Plan</a>  
+* ##### <a href="https://docs.google.com/document/d/1DWD0xxNqdoAeusdS2NBQQL_lCGjvx8_uS_tb0Fzvfhw/view" target="blank" rel="noopener noreferrer" >Project Guide</a> 
+* ##### <a href="https://docs.google.com/document/d/1UGYRASWLwE7LulGVyKKKN96_DMUvRzjHbkI5rBqtP2Q/view" target="blank" rel="noopener noreferrer" >Student Checklist</a> 
+* ##### <a href="https://docs.google.com/document/d/1Ndo0YTX76UMcxiY_SQz_CgPyrbux1Vzqi9KcM5-Ijw8/view" target="blank" rel="noopener noreferrer" >Project Rubric</a> 
 
 
 MARKDOWN

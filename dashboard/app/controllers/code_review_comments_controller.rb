@@ -54,7 +54,7 @@ class CodeReviewCommentsController < ApplicationController
       project_id: @project_id
     ).order(:created_at)
 
-    # Keep teacher comments private between project owner and teacher.
+    # Keep teacher comments private between project owner and instructor.
     unless @project_owner.student_of?(current_user) || @project_owner == current_user
       @project_comments = @project_comments.reject {|comment| !!comment.is_from_teacher}
     end

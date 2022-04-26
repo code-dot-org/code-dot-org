@@ -1,0 +1,75 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Create a scene that draws the logos of basketball teams based on the number of championship wins they have.\r\n\r\n##In BasketballScene.java:\r\n\r\n1. Write the `createScene()`(#e7e8ea) method to draw each basketball team's logo at a random location in the scene. Traverse the `championships`(#e7e8ea) array and use multi-selection statements to check the number of championship wins and decide the size to draw the image.\r\n\r\n   * If the number of wins is greater than `10`(#e7e8ea), draw the corresponding team logo in the `logos`(#e7e8ea) array with a size of `150`(#e7e8ea).\r\n   \r\n   * Else if the number of wins is greater than or equal to `5`(#e7e8ea), draw the corresponding team logo in the `logos`(#e7e8ea) array with a size of `100`(#e7e8ea).\r\n   \r\n   * Otherwise, draw the corresponding team logo in the `logos`(#e7e8ea) array with a size of `50`(#e7e8ea).\r\n\r\n##In MyTheater.java:\r\n\r\n2. Call the `createScene()`(#e7e8ea) method with the array.\r\n\r\n3. Use `Theater.playScenes()`(#e7e8ea) to play the scene.\r\n\r\n::: details [**Show Me How**]\r\nA multi-selection statement uses the following syntax:\r\n  \r\n  ```\r\n  if (condition) {\r\n    // code to execute\r\n  }\r\n  else if (condition) {\r\n    // code to execute\r\n  }\r\n  else {\r\n    // code to execute\r\n  }\r\n  ```\r\n\r\nYou can have more than one `else if`(#e7e8ea) if you have additional conditions you need to check.\r\n:::",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "start_sources": {
+      "MyTheater.java": {
+        "text": "import org.code.theater.*;\n\npublic class MyTheater {\n  public static void main(String[] args) {\n\n    String[] logos = FileReader.readText(\"logos.txt\", 30);\n    int[] wins = FileReader.readNumbers(\"wins.txt\", 30);\n\n    BasketballScene myScene = new BasketballScene(logos, wins);\n\n    // TO DO #2: Call the createScene() method.\n\n\n    // TO DO #3: Use Theater.playScenes() to play the scene.\n    \n    \n  }\n}",
+        "isVisible": true
+      },
+      "BasketballScene.java": {
+        "text": "import org.code.theater.*;\n\n/*\n * A scene visualizing the number of championship wins\n * for each basketball team\n */\npublic class BasketballScene extends Scene {\n\n  private String[] logos;             // The list of basketball team logos\n  private int[] championships;        // The list of championship wins\n\n  /*\n   * Constructor to create a BasketballScene with the\n   * specified arrays of logos and championship wins\n   */\n  public BasketballScene(String[] logos, int[] championships) {\n    this.logos = logos;\n    this.championships = championships;\n  }\n\n  /*\n   * Creates the scene by drawing each team logo based\n   * on the number of championship wins they have\n   */\n  public void createScene() {    \n    // TO DO #1: Draw each team logo image at random locations. Use the\n    // number of championship wins to inform the size of the image.\n\n    \n  }\n  \n}",
+        "isVisible": true
+      },
+      "FileReader.java": {
+        "text": "import java.util.Scanner;\nimport java.io.File;\nimport java.io.FileNotFoundException;\n\n/*\n * Reads data from a file\n */\npublic final class FileReader {\n\n  private static File myFile;\n  private static Scanner input;\n\n  /*\n   * Reads numValues integers from a file into\n   * an int 1D array and returns the array\n   */\n  public static int[] readNumbers(String filename, int numValues) {\n    createScanner(filename);\n    int[] values = new int[numValues];\n\n    for (int index = 0; index < values.length; index++) {\n      if (input.hasNextInt()) {\n        values[index] = input.nextInt();\n      }\n    }\n\n    input.close();\n    return values;\n  }\n\n  /*\n   * Reads numValues Strings from a file into\n   * an String 1D array and returns the array\n   */\n  public static String[] readText(String filename, int numValues) {\n    createScanner(filename);\n    String[] text = new String[numValues];\n\n    for (int index = 0; index < text.length; index++) {\n      if (input.hasNextLine()) {\n        text[index] = input.nextLine();\n      }\n    }\n\n    input.close();\n    return text;\n  }\n\n  /*\n   * Creates the input object with the specified file\n   * or notifies the user that the file is not found\n   */\n  public static void createScanner(String filename) {\n    myFile = new File(filename);\n    \n    try {\n      input = new Scanner(myFile);\n    } catch (FileNotFoundException error) {\n      System.out.println(\"File not found.\");\n    }\n  }\n  \n}",
+        "isVisible": true
+      },
+      "logos.txt": {
+        "text": "bostonceltics.png\nbrooklynnets.png\nnewyorkknicks.png\nphiladelphia76ers.png\ntorontoraptors.png\nchicagobulls.png\nclevelandcavaliers.png\ndetroitpistons.png\nindianapacers.png\nmilwaukeebucks.png\natlantahawks.png\ncharlottehornets.png\nmiamiheat.png\norlandomagic.png\nwashingtonwizards.png\ndenvernuggets.png\nminnesotatimberwolves.png\nokcthunder.png\nportlandtrailblazers.png\nutahjazz.png\ngoldenstatewarriors.png\nlosangelesclippers.png\nlalakers.png\nphoenixsuns.png\nsacramentokings.png\ndallasmavericks.png\nhoustonrockets.png\nmemphisgrizzlies.png\nneworleanspelicans.png\nsanantoniospurs.png",
+        "isVisible": true
+      },
+      "wins.txt": {
+        "text": "17\n0\n2\n3\n1\n6\n1\n3\n0\n1\n1\n0\n3\n0\n1\n0\n0\n1\n1\n0\n6\n0\n16\n0\n1\n1\n2\n0\n0\n5",
+        "isVisible": true
+      }
+    },
+    "display_name": "NBA Teams",
+    "bubble_choice_description": "Draw the logos for each NBA team based on the number of championship wins they have.",
+    "thumbnail_url": "https://images.code.org/4c3552b00321d044c4c44408ddc5af8c-image-1650719208107.png",
+    "starter_assets": {
+      "bostonceltics.png": "8d0c4cbc-ad44-4fec-b5bb-ea75a2f11845.png",
+      "brooklynnets.png": "4ed2f12b-25bb-4a1f-a1a6-de3088a6b146.png",
+      "newyorkknicks.png": "973a488c-6506-49e4-b5db-0a1e6307783e.png",
+      "philadelphia76ers.png": "b62ef4ce-20e5-4fd2-a0f8-267612e24c44.png",
+      "torontoraptors.png": "201e2e9f-e591-4ab2-a109-371d1d080bb7.png",
+      "chicagobulls.png": "9c45f74b-e082-4eb0-8d70-b6404302a567.png",
+      "clevelandcavaliers.png": "0e990edc-33d4-44b7-9777-06bd84338265.png",
+      "detroitpistons.png": "5467cc09-9161-4d50-bb27-570488cf97fe.png",
+      "indianapacers.png": "fb42d121-fcdd-477c-9b32-9dcad075b3f8.png",
+      "milwaukeebucks.png": "eed23b47-9443-463d-9a7a-95fc668860f1.png",
+      "atlantahawks.png": "089bc0ba-0a70-44b4-a2a9-bf770714f94f.png",
+      "charlottehornets.png": "7307b9a1-b9cb-4af1-bf4b-11b2f45074fd.png",
+      "miamiheat.png": "4c8a15cd-0413-4c84-9ae7-5ae5f4af0434.png",
+      "orlandomagic.png": "55a8642f-355b-4f35-8679-dcc2725869aa.png",
+      "washingtonwizards.png": "7491cdfa-9f32-4b15-9ff4-c10953d35bf9.png",
+      "denvernuggets.png": "3c713d8e-7e68-483e-855c-af30a287d90e.png",
+      "minnesotatimberwolves.png": "8c54f077-9c64-4a63-b143-a740aecd24bd.png",
+      "okcthunder.png": "19419a54-8649-48b8-8b21-536a523e548b.png",
+      "portlandtrailblazers.png": "06937393-537f-4aa6-b4c4-f326baeec984.png",
+      "utahjazz.png": "67b4e79a-aae9-4c3e-b1dd-498f85971a63.png",
+      "goldenstatewarriors.png": "f06c5338-5b48-45a1-91fb-ccdd990a289f.png",
+      "losangelesclippers.png": "9a53038a-651e-486e-bec0-324d68044fc5.png",
+      "lalakers.png": "22e61a3c-bcde-4f80-b4e9-983511257d1d.png",
+      "phoenixsuns.png": "65dee8d5-28c7-4479-a837-d457a947d738.png",
+      "sacramentokings.png": "d5b6b861-8036-4f0e-a55a-cf35dc37fdbe.png",
+      "dallasmavericks.png": "f98ff3e0-e9ba-48db-a38d-fa35b55f3844.png",
+      "houstonrockets.png": "f7643790-2edb-4ffc-89a6-62c06a7a92b9.png",
+      "memphisgrizzlies.png": "e5115728-8b77-42fb-848f-9beba94cec64.png",
+      "neworleanspelicans.png": "34dd1e64-8e4a-4d2f-a3f3-9c895d807e48.png",
+      "sanantoniospurs.png": "b90c5bbd-2602-4a9d-ac10-fd2d12da00db.png"
+    }
+  },
+  "game_id": 68,
+  "created_at": "2022-04-07T18:58:06.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-04-07T18:58:06.768+00:00\",\"changed\":[\"cloned from \\\"CSA U4L10-L3a_2022\\\"\"],\"cloned_from\":\"CSA U4L10-L3a_2022\"},{\"changed_at\":\"2022-04-07 18:58:09 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-23 13:00:20 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-23 13:02:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-23 13:06:59 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-23 15:25:01 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-23 15:36:36 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-23 16:08:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-23 16:14:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-23 16:15:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-23 16:16:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

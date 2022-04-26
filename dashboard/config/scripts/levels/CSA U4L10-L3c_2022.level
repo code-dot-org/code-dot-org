@@ -1,0 +1,54 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Create a scene that draws an image of each planet based on the length of their days.\r\n\r\n##In PlanetScene.java:\r\n\r\n1. Write the `createScene()`(#e7e8ea) method to draw each planet's image at a random location in the scene. Traverse the `dayLengths`(#e7e8ea) array and use multi-selection statements to check the length of each day and decide the size to draw the image.\r\n\r\n   * If the length of the day is greater than `100`(#e7e8ea), draw the corresponding planet's image in the `planets`(#e7e8ea) array with a size of `150`(#e7e8ea).\r\n   \r\n   * Else if the length of the day is greater than or equal to `15`(#e7e8ea), draw the corresponding planet's image in the `planets`(#e7e8ea) array with a size of `100`(#e7e8ea).\r\n   \r\n   * Otherwise, draw the corresponding planet's image in the `planets`(#e7e8ea) array with a size of `50`(#e7e8ea).\r\n\r\n##In MyTheater.java:\r\n\r\n2. Call the `createScene()`(#e7e8ea) method with the array.\r\n\r\n3. Use `Theater.playScenes()`(#e7e8ea) to play the scene.\r\n\r\n::: details [**Show Me How**]\r\nA multi-selection statement uses the following syntax:\r\n  \r\n  ```\r\n  if (condition) {\r\n    // code to execute\r\n  }\r\n  else if (condition) {\r\n    // code to execute\r\n  }\r\n  else {\r\n    // code to execute\r\n  }\r\n  ```\r\n\r\nYou can have more than one `else if`(#e7e8ea) if you have additional conditions you need to check.\r\n:::",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "start_sources": {
+      "MyTheater.java": {
+        "text": "import org.code.theater.*;\n\npublic class MyTheater {\n  public static void main(String[] args) {\n\n    String[] planets = FileReader.readText(\"planets.txt\", 9);\n    int[] dayLengths = FileReader.readNumbers(\"dayLengths.txt\", 9);\n\n    PlanetScene myScene = new PlanetScene(planets, dayLengths);\n\n    // TO DO #2: Call the createScene() method.\n\n\n    // TO DO #3: Use Theater.playScenes() to play the scene.\n    \n    \n  }\n}",
+        "isVisible": true
+      },
+      "PlanetScene.java": {
+        "text": "import org.code.theater.*;\n\n/*\n * A scene visualizing the length of a day for each planet\n */\npublic class PlanetScene extends Scene {\n\n  private String[] planets;     // The list of planet images\n  private int[] dayLengths;     // The list of the length of days for each planet\n\n  /*\n   * Constructor to create a PlanetScene with the\n   * specified arrays of planet images and day lengths\n   */\n  public PlanetScene(String[] planets, int[] dayLengths) {\n    this.planets = planets;\n    this.dayLengths = dayLengths;\n  }\n\n  /*\n   * Creates the scene by drawing each planet image\n   * based on the length of their days\n   */\n  public void createScene() {    \n    // TO DO #1: Draw each planet image at random locations. Use the\n    // length of their days to inform the size of the image.\n\n    \n  }\n  \n}",
+        "isVisible": true
+      },
+      "FileReader.java": {
+        "text": "import java.util.Scanner;\nimport java.io.File;\nimport java.io.FileNotFoundException;\n\n/*\n * Reads data from a file\n */\npublic final class FileReader {\n\n  private static File myFile;\n  private static Scanner input;\n\n  /*\n   * Reads numValues integers from a file into\n   * an int 1D array and returns the array\n   */\n  public static int[] readNumbers(String filename, int numValues) {\n    createScanner(filename);\n    int[] values = new int[numValues];\n\n    for (int index = 0; index < values.length; index++) {\n      if (input.hasNextInt()) {\n        values[index] = input.nextInt();\n      }\n    }\n\n    input.close();\n    return values;\n  }\n\n  /*\n   * Reads numValues Strings from a file into\n   * an String 1D array and returns the array\n   */\n  public static String[] readText(String filename, int numValues) {\n    createScanner(filename);\n    String[] text = new String[numValues];\n\n    for (int index = 0; index < text.length; index++) {\n      if (input.hasNextLine()) {\n        text[index] = input.nextLine();\n      }\n    }\n\n    input.close();\n    return text;\n  }\n\n  /*\n   * Creates the input object with the specified file\n   * or notifies the user that the file is not found\n   */\n  public static void createScanner(String filename) {\n    myFile = new File(filename);\n    \n    try {\n      input = new Scanner(myFile);\n    } catch (FileNotFoundException error) {\n      System.out.println(\"File not found.\");\n    }\n  }\n  \n}",
+        "isVisible": true
+      },
+      "planets.txt": {
+        "text": "mercury.png\nvenus.png\nearth.png\nmars.png\njupiter.png\nsaturn.png\nuranus.png\nneptune.png\npluto.png",
+        "isVisible": true
+      },
+      "dayLengths.txt": {
+        "text": "4222\n2802\n24\n24\n9\n10\n17\n16\n153",
+        "isVisible": true
+      }
+    },
+    "display_name": "Planets",
+    "bubble_choice_description": "Draw the images for each planet based on the length of their days.",
+    "thumbnail_url": "https://images.code.org/baad52ae8ed2a37bfa00da5ccc375658-image-1650719543283.png",
+    "starter_assets": {
+      "pluto.png": "253a86ad-b96b-4d7c-99cf-d0cb9f79eb73.png",
+      "neptune.png": "af43b0ac-7525-4292-a6b0-438741a029e9.png",
+      "uranus.png": "f8900e70-805c-4ad3-a659-3f1b0d18613f.png",
+      "saturn.png": "c702d5ff-0356-43eb-8f05-aee10c41129d.png",
+      "jupiter.png": "8e16c859-61e8-474d-bb15-0708df82f5bd.png",
+      "mars.png": "6f542895-a832-41e9-84c8-f5a8a2dbc6bf.png",
+      "earth.png": "a6f87412-cf56-4e23-b148-515d0c420f3b.png",
+      "venus.png": "577f8056-2845-42ae-8d8f-ca36dca181c2.png",
+      "mercury.png": "adc6cf55-2a14-4cc8-a8d2-8388c68201cb.png"
+    }
+  },
+  "game_id": 68,
+  "created_at": "2022-04-07T18:58:22.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-04-07T18:58:22.559+00:00\",\"changed\":[\"cloned from \\\"CSA U4L10-L3b_2022\\\"\"],\"cloned_from\":\"CSA U4L10-L3b_2022\"},{\"changed_at\":\"2022-04-07 18:58:25 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-23 13:00:27 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-23 13:02:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-23 13:12:33 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-23 15:25:10 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-23 16:14:01 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-23 16:19:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-23 16:22:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>
