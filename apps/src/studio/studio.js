@@ -55,7 +55,7 @@ import project from '../code-studio/initApp/project';
 import {blockAsXmlNode, cleanBlocks} from '../block_utils';
 import {parseElement} from '../xml';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
-import {muteCookieWithLevel} from '../../util/muteCookieHelpers';
+import {muteCookieWithLevel} from '../util/muteCookieHelpers';
 import {
   showArrowButtons,
   dismissSwipeOverlay
