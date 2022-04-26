@@ -149,7 +149,7 @@ export default class JavabuilderConnection {
     // only do so once we've sent a message. This is a bit of a hack, but this should only
     // happen if our token was somehow valid for the initial Javabuilder HTTP request and
     // then became invalid when establishing the WebSocket connection.
-    this.sendMessage('connected');
+    this.sendMessage(WebSocketMessageType.CONNECTED);
     this.miniApp?.onCompile?.();
   }
 
