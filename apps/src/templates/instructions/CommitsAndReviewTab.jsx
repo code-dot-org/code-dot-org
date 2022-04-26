@@ -12,7 +12,6 @@ import Button from '@cdo/apps/templates/Button';
 export const VIEWING_CODE_REVIEW_URL_PARAM = 'viewingCodeReview';
 
 const CommitsAndReviewTab = ({
-  onLoadComplete,
   channelId,
   serverLevelId,
   serverScriptId,
@@ -32,7 +31,6 @@ const CommitsAndReviewTab = ({
   const refresh = () => {
     setLoadingReviewData(true);
     // TODO: load review data
-    onLoadComplete();
     setLoadingReviewData(false);
   };
 
@@ -107,7 +105,6 @@ export default connect(state => ({
 }))(CommitsAndReviewTab);
 
 CommitsAndReviewTab.propTypes = {
-  onLoadComplete: PropTypes.func,
   // Populated by redux
   codeReviewEnabled: PropTypes.bool,
   viewAsCodeReviewer: PropTypes.bool.isRequired,
