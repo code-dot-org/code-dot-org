@@ -1,0 +1,85 @@
+{
+  "category_key": "org_code_media",
+  "content": "",
+  "examples": "[]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "Image",
+  "name": "Image",
+  "syntax": "",
+  "tips": "",
+  "methods": [
+    {
+      "key": "image",
+      "position": 0,
+      "name": "public Image(int width, int height)",
+      "content": "Creates an empty image filled with the default background color.",
+      "parameters": "[{\"name\":\"width\",\"type\":\"int\",\"required\":true,\"description\":\"the width of the image to create\"},{\"name\":\"height\",\"type\":\"int\",\"required\":true,\"description\":\"the height of the image to create.\\n\"}]",
+      "examples": "[]",
+      "syntax": null,
+      "external_link": null,
+      "overload_of": null,
+      "return_value": null
+    },
+    {
+      "key": "getpixel",
+      "position": 1,
+      "name": "public Pixel getPixel(int x, int y)",
+      "content": "Get the Pixel at the (x,y) coordinate specified.",
+      "parameters": "[{\"name\":\"x\",\"type\":\"int\",\"required\":true,\"description\":\"the x position of the pixel\"},{\"name\":\"y\",\"type\":\"int\",\"required\":true,\"description\":\"the y position of the pixel\"}]",
+      "examples": "[]",
+      "syntax": null,
+      "external_link": null,
+      "overload_of": null,
+      "return_value": null
+    },
+    {
+      "key": "setpixel",
+      "position": 2,
+      "name": "public void setPixel(int x, int y, Color color)",
+      "content": "Set the Pixel at the (x,y) coordinate specified to the provided color.",
+      "parameters": "[{\"name\":\"x\",\"type\":\"int\",\"required\":true,\"description\":\"the x position of the pixel\"},{\"name\":\"y\",\"type\":\"int\",\"required\":true,\"description\":\"the y position of the pixel\\n\"},{\"name\":\"color\",\"type\":\"Color\",\"required\":true,\"description\":\"the color to set the pixel\"}]",
+      "examples": "[]",
+      "syntax": null,
+      "external_link": null,
+      "overload_of": null,
+      "return_value": null
+    },
+    {
+      "key": "getwidth",
+      "position": 3,
+      "name": "public int getWidth()",
+      "content": "Returns the width of the image in pixels.",
+      "parameters": "[]",
+      "examples": "[]",
+      "syntax": "",
+      "external_link": null,
+      "overload_of": null,
+      "return_value": null
+    },
+    {
+      "key": "getheight",
+      "position": 4,
+      "name": "public int getHeight()",
+      "content": "Returns the height of the image in pixels.",
+      "parameters": "[]",
+      "examples": "[]",
+      "syntax": null,
+      "external_link": null,
+      "overload_of": null,
+      "return_value": null
+    },
+    {
+      "key": "clear",
+      "position": 5,
+      "name": "public void clear(Color color)",
+      "content": "Clears the image, filling it with the color provided.",
+      "parameters": "[{\"name\":\"color\",\"type\":\"Color\",\"required\":true,\"description\":\"the color with which to fill the image.\"}]",
+      "examples": "[]",
+      "syntax": null,
+      "external_link": null,
+      "overload_of": null,
+      "return_value": null
+    }
+  ]
+}
