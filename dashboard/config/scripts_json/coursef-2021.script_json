@@ -48,7 +48,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2022-04-11 19:49:09 UTC",
+    "serialized_at": "2022-04-25 18:52:06 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1646,7 +1646,7 @@
       "key": "bb2b2c3c-57d7-4ad1-aa3c-4f5f3fd37205",
       "position": 4,
       "properties": {
-        "description": "**Do This:** Show the User Choices slide, found in the Resources section above.\n\n**Discuss:** For each app or game you see, what choice do you think the app maker is giving the user?\n\n**Goal:** Students should be of the discussion is for students to be discussing ideas not just about what the apps are about, but the specific choices that the user gets to make. For example, Talk Box lets users choose an avatar or digital representation of themselves. This choice is a good thing because it helps the user feel like the app is really for them.\n",
+        "description": "**Do This:** Show the User Choices slide, found in the Resources section above.\n\n**Discuss:** For each app or game you see, what choice do you think the app maker is giving the user?\n\n**Goal:** Students should discuss the specific choices that the user gets to make, not just ideas about what their app is about. For example, Talk Box lets users choose an avatar or digital representation of themselves. This choice is a good thing because it helps the user feel like the app is really for them.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2494,7 +2494,7 @@
       "key": "20919642-5201-4796-9e45-ee76e368614d",
       "position": 1,
       "properties": {
-        "description": "**Do This:** Using the lesson slides, review the concepts that students have explore so far in the course: sprites, behaviors, events, and text. Finally, review how prompts and variables work. \n\n####Prediction\n**Do This:** Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.",
+        "description": "**Do This:** Using the lesson slides, review the concepts that students have explored so far in the course: sprites, behaviors, events, and text. Finally, review how prompts and variables work. \n\n####Prediction\n**Do This:** Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.",
         "name": "Review",
         "progression_name": "Prediction",
         "tips": [
@@ -2992,7 +2992,7 @@
       "key": "36568ca1-c41d-45f4-ae3a-462166e038e7",
       "position": 1,
       "properties": {
-        "description": "![](https://curriculum.code.org/media/uploads/mathSmall.png) **Computer Science + Math**\n\n*Standards Addressed:*\n- **MD** - Measurement And Data\n\n - **2.MD.10:** - Draw a picture graph and a bar graph (with single-unit scale) to represent a data set with up to four categories. Solve simple put- together, take-apart, and compare problems4 using information presented in a bar graph."
+        "description": "![](https://curriculum.code.org/media/uploads/mathSmall.png) **Computer Science + Math**\n\n*Standards Addressed:*\n- **MD** - Measurement And Data\n\n - **2.MD.10:** - Draw a picture graph and a bar graph (with single-unit scale) to represent a data set with up to four categories. Solve simple put- together, take-apart, and compare problems using information presented in a bar graph."
       },
       "seeding_key": {
         "activity_section.key": "36568ca1-c41d-45f4-ae3a-462166e038e7",
