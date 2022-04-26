@@ -9,8 +9,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-22 19:57:45 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-04-21 23:08:07 UTC",
+    "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -19,7 +19,17 @@
     }
   },
   "lesson_groups": [
-
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "tesspl2"
+      }
+    }
   ],
   "lessons": [
 
