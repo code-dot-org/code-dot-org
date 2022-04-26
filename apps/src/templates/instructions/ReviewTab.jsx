@@ -18,7 +18,6 @@ const FLASH_ERROR_TIME_MS = 5000;
 
 class ReviewTab extends Component {
   static propTypes = {
-    onLoadComplete: PropTypes.func,
     // Used only in tests
     dataApi: PropTypes.object,
     // Populated by redux
@@ -50,12 +49,6 @@ class ReviewTab extends Component {
 
   componentDidMount() {
     this.loadReviewData();
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState.loadingReviewData && !this.state.loadingReviewData) {
-      this.props.onLoadComplete();
-    }
   }
 
   loadReviewData = () => {

@@ -7,7 +7,6 @@ import ReviewNavigator from '@cdo/apps/templates/instructions/codeReview/ReviewN
 import Button from '@cdo/apps/templates/Button';
 
 const DEFAULT_PROPS = {
-  onLoadComplete: () => {},
   channelId: 'asdfjkl',
   serverLevelId: 1,
   serverScriptId: 2,
