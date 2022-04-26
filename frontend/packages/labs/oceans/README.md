@@ -9,6 +9,8 @@ Like the Dance Party repo, it is a standalone repo that is published as an [NPM 
 
 **AI for Oceans** was produced for the Hour of Code in 2019.  This module provides the student experience for the 5 interactive levels in the **AI for Oceans** script at https://studio.code.org/s/oceans.
 
+![grid_comp](https://user-images.githubusercontent.com/2205926/165404102-87073dad-8d90-482a-ad68-bc475beb6b11.png)
+
 # Design notes
 
 ## Modes
@@ -40,7 +42,7 @@ In this mode, the user chooses from one of fifteen adjectives.  With more subjec
 Adapted from content at https://code.org/oceans:
 
 > Levels 2-4 (`fishvtrash`, `creaturesvtrashdemo`, `creaturesvtrash`) use a pretrained model provided by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md) project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks) that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over 14 million images hand-annotated with words such as "balloon" or "strawberry". In order to customize this model with the labeled training data the student generates in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning). Each image in the training dataset is fed to MobileNet, as pixels, to obtain a list of annotations that are most likely to apply to it. Then, for a new image, we feed it to MobileNet and compare its resulting list of annotations to those from the training dataset. We classify the new image with the same label (such as "fish" or "not fish") as the images from the training set with the most similar results.
-
+>
 > Levels 6-8 (`short`, `long`) use a [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble all of the metadata for the components (such as number of teeth, body shape) into a vector of numbers for each fish. We use these vectors to train the SVM. Based on the training data, the SVM separates the "space" of all possible fish into two parts, which correspond to the classes we are trying to learn (such as "blue" or "not blue").
 
 ## Scenes
@@ -51,44 +53,44 @@ The app itself contains a variety of "scenes", with each mode using a different 
 
 ### `loading`
 
-<img width="1512" alt="loading" src="https://user-images.githubusercontent.com/2205926/165215465-9433a9eb-7114-4a50-8dfd-bac8d39e5837.png">
-
+<img width="1328" alt="loading" src="https://user-images.githubusercontent.com/2205926/165404296-5f5c71df-6650-476b-8ada-b4e277a25a51.png">
 
 A simple loading screen.
 
 ### `words`
 
-<img width="1512" alt="words" src="https://user-images.githubusercontent.com/2205926/165215477-045f46b3-1706-499d-a04e-892dd924157c.png">
+<img width="1301" alt="short" src="https://user-images.githubusercontent.com/2205926/165404312-26e8ca9b-847d-4d75-81bd-97bd735a55b0.png">
+
+<img width="1301" alt="words" src="https://user-images.githubusercontent.com/2205926/165404326-83af55e8-0aaf-4541-94b8-e6f28946a9f3.png">
 
 
 Select adjectives for the `short` & `long` modes.
 
 ### `train`
 
-<img width="1512" alt="train" src="https://user-images.githubusercontent.com/2205926/165215505-c37975a2-29f5-4126-a19e-0311e113d4d2.png">
-
+<img width="1299" alt="train" src="https://user-images.githubusercontent.com/2205926/165404433-39d8b295-92a1-4b1f-8bec-514cd38ec475.png">
 
 The user trains the AI by choosing one of two options (true or false) for each item (fish, non-fish sea creatures, trash).
 
 ### `predict`
 
-<img width="1512" alt="predict" src="https://user-images.githubusercontent.com/2205926/165215521-033e4ff4-cda6-475f-8f78-9ceaf91fcaa2.png">
+<img width="1301" alt="predict" src="https://user-images.githubusercontent.com/2205926/165404442-76f84923-e698-469c-ae3d-6f621f2b991c.png">
 
 The user watches A.I. (the "bot") categorizing items, one at a time.
 
 ### `pond`
 
-<img width="1512" alt="pond-true" src="https://user-images.githubusercontent.com/2205926/165215549-926a481a-87e7-496c-86b3-cedb99a7ec38.png">
+<img width="1297" alt="pond-true" src="https://user-images.githubusercontent.com/2205926/165404461-e42b3727-92ce-4243-b85c-98654517624a.png">
 
-<img width="1512" alt="pond-false" src="https://user-images.githubusercontent.com/2205926/165215539-928a1381-ee55-461b-bd13-e3ede88bbe04.png">
+<img width="1298" alt="pond-false" src="https://user-images.githubusercontent.com/2205926/165404481-6e36e7d2-c6db-4e69-b84c-afd28f6444ba.png">
 
 The user shows the results of the predictions.  The user can toggle between the matching & non-matching sets.  In short & long, the user can click each item to view additional information about the AI's recognition.
 
 In the `short` and `long` modes, the pond also has a metapanel which can show general information about the ML processing, or, when a fish is selected, specific information about that fish's categorization:
 
-<img width="1512" alt="pond_info" src="https://user-images.githubusercontent.com/2205926/165217317-fa752d7e-1b8c-4755-9014-e6fa19df645b.png">
+<img width="1301" alt="pond_info" src="https://user-images.githubusercontent.com/2205926/165404496-396a1f6b-8c84-42bb-96d4-b369185b781f.png">
 
-<img width="1512" alt="pond_fishinfo" src="https://user-images.githubusercontent.com/2205926/165217326-c041e226-0f05-4e9c-87bb-37981b9efc23.png">
+<img width="1302" alt="pond_fishinfo" src="https://user-images.githubusercontent.com/2205926/165404511-abb9b9c1-83f5-46fa-ad7c-e85ce0044abd.png">
 
 ## Graphics & UI
 
@@ -115,6 +117,17 @@ Each piece of Guide text is declared, along with the app state needed for it to 
 See the implementation at https://github.com/code-dot-org/ml-activities/blob/main/src/oceans/models/guide.js
 
 This simple system enabled the team to add a detailed narrative voice to the script, and allowed a variety of team members to contribute text.
+
+<img width="1301" alt="guide_arrow" src="https://user-images.githubusercontent.com/2205926/165404540-6bf26e57-876d-464f-b643-dcfb1bf2920f.png">
+
+<img width="1300" alt="guide_arrow_bright" src="https://user-images.githubusercontent.com/2205926/165404544-d031c4f0-57e5-480a-8f12-55b426e430ef.png">
+
+## Popups
+
+We also use popups to give extra information.
+
+<img width="1311" alt="popup" src="https://user-images.githubusercontent.com/2205926/165404670-4b556c6e-18e7-4ec6-b3d2-19c025c5b108.png">
+
 
 # Additional information
 
