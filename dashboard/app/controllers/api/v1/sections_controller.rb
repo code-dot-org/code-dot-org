@@ -41,7 +41,10 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     return head :bad_request unless Section.valid_participant_type? params[:participant_type]
 
     if @course || @unit
+      puts "HERE"
       participant_audience = @course ? @course.participant_audience : @unit.participant_audience
+      puts participant_audience
+      puts params[:participant_type]
       return head :forbidden unless Section.can_be_assigned_course?(participant_audience, params[:participant_type])
     end
 

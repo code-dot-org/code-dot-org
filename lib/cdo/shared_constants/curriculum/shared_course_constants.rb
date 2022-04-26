@@ -78,7 +78,7 @@ module SharedCourseConstants
   # should never be assigned a course where the participants in the section can not be
   # participants in the course. There this will tell you give the participant_audience of the
   # course what the valid participant_types of a section are.
-  PARTICIPANT_TYPES_BY_AUDIENCE = OpenStruct.new(
+  PARTICIPANT_AUDIENCES_BY_TYPE = OpenStruct.new(
     {
       student: ['student'],
       teacher: ['student', 'teacher'],
