@@ -237,7 +237,7 @@ class Section < ApplicationRecord
   # Sections can not be assigned courses where participants in the section
   # can not be participants in the course
   def self.can_be_assigned_course?(participant_audience, participant_type)
-    SharedCourseConstants::PARTICIPANT_TYPES_BY_AUDIENCE[participant_audience].include? participant_type
+    SharedCourseConstants::PARTICIPANT_AUDIENCES_BY_TYPE[participant_type].include? participant_audience
   end
 
   # Adds the student to the section, restoring a previous enrollment to do so if possible.

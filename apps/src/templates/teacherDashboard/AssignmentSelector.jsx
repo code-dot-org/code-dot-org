@@ -6,7 +6,7 @@ import {sectionShape, assignmentCourseOfferingShape} from './shapes';
 import AssignmentVersionSelector from './AssignmentVersionSelector';
 import {
   CourseOfferingCategories,
-  ParticipantTypesByAudience
+  ParticipantAudiencesByType
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
 const noAssignment = '__noAssignment__';
@@ -19,7 +19,7 @@ export const getCourseOfferingsByCategory = (
   participantType
 ) => {
   const filteredCourseOfferings = _.filter(courseOfferings, function(offering) {
-    return ParticipantTypesByAudience[participantType].includes(
+    return ParticipantAudiencesByType[participantType].includes(
       offering.participant_audience
     );
   });
