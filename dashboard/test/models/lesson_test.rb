@@ -1201,6 +1201,14 @@ class LessonTest < ActiveSupport::TestCase
       assert_equal 2, copied_lesson.relative_position
     end
 
+    test 'unit cannot have two lessons with the same name' do
+      unit = create :script, :with_lessons, name: 'unit-name'
+      e = assert_raises do
+        unit.lessons.last.update!(key: unit.lessons.first.key)
+      end
+      assert_includes e.message, "lesson with key \"#{unit.lessons.first.key}\" is already taken within unit \"unit-name\""
+    end
+
     test "creates lesson group if script has none" do
       @destination_script.lesson_groups = []
 
