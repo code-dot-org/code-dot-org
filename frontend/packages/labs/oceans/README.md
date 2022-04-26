@@ -1,76 +1,98 @@
 [![Build Status](https://github.com/code-dot-org/ml-activities/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/code-dot-org/ml-activities/actions/workflows/deploy.yml)
 
 
-# AI for Oceans
+# **AI for Oceans**
 
-This is the repo for AI for Oceans from Code.org.
+This is the repo for **AI for Oceans** from Code.org.
 
-Like the Dance Party repo, it is a standalone repo that is published as an NPM package, and consumed by the main repo.
+Like the Dance Party repo, it is a standalone repo that is published as an [NPM package](https://www.npmjs.com/package/@code-dot-org/ml-activities), and consumed by the [main repo](https://github.com/code-dot-org/code-dot-org).
 
-AI for Oceans was produced for the Hour of Code in 2019.  It provides the student experience for the 5 interactive levels in the AI for Oceans script at https://studio.code.org/s/oceans.
+**AI for Oceans** was produced for the Hour of Code in 2019.  This module provides the student experience for the 5 interactive levels in the **AI for Oceans** script at https://studio.code.org/s/oceans.
 
 # Design notes
 
 ## Modes
 
-These 5 levels are invoked with a "mode" parameter:
+These 5 levels are invoked with a "mode" (stored internally as `appMode`) parameter:
 
-### fishvtrash
+### `fishvtrash`
 
 The user trains the AI to differentiate between fish versus trash, and then examine the results.
 
-### creaturesvtrashdemo
+### `creaturesvtrashdemo`
 
 Next, the concept of non-fish sea creatures is introduced to show that AI is only as good as its training.  In this mode, the experience is abbreviated: the user doesn't do training, but rather the mode demonstrates what happens when fish-specific training encounters non-fish.
 
-### creaturesvtrash
+### `creaturesvtrash`
 
 In this mode, the user trains the AI again, but this time encountering fish, non-fish creatures, and trash.
 
-### short
+### `short`
 
 In this mode, the user chooses from one of six adjectives and then categorizes fish based on that.  The AI is trained on which fish fit into this arbitrary category or not, and then demonstrates this training.
 
-### long
+### `long`
 
 In this mode, the user chooses from one of fifteen adjectives.  With more subjectivity in this list, the user can explore more subtle implications of training and recognition.
 
+## ML technology
 
 Adapted from content at https://code.org/oceans:
 
-Levels 2-4 use a pretrained model provided by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md) project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks) that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over 14 million images hand-annotated with words such as "balloon" or "strawberry". In order to customize this model with the labeled training data the student generates in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning). Each image in the training dataset is fed to MobileNet, as pixels, to obtain a list of annotations that are most likely to apply to it. Then, for a new image, we feed it to MobileNet and compare its resulting list of annotations to those from the training dataset. We classify the new image with the same label (such as "fish" or "not fish") as the images from the training set with the most similar results.
+> Levels 2-4 (`fishvtrash`, `creaturesvtrashdemo`, `creaturesvtrash`) use a pretrained model provided by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md) project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks) that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over 14 million images hand-annotated with words such as "balloon" or "strawberry". In order to customize this model with the labeled training data the student generates in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning). Each image in the training dataset is fed to MobileNet, as pixels, to obtain a list of annotations that are most likely to apply to it. Then, for a new image, we feed it to MobileNet and compare its resulting list of annotations to those from the training dataset. We classify the new image with the same label (such as "fish" or "not fish") as the images from the training set with the most similar results.
 
-Levels 6-8 use a [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble all of the metadata for the components (such as number of teeth, body shape) into a vector of numbers for each fish. We use these vectors to train the SVM. Based on the training data, the SVM separates the "space" of all possible fish into two parts, which correspond to the classes we are trying to learn (such as "blue" or "not blue").
+> Levels 6-8 (`short`, `long`) use a [Support-Vector Machine](https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble all of the metadata for the components (such as number of teeth, body shape) into a vector of numbers for each fish. We use these vectors to train the SVM. Based on the training data, the SVM separates the "space" of all possible fish into two parts, which correspond to the classes we are trying to learn (such as "blue" or "not blue").
 
-## Screens
+## Scenes
 
-The AI for Oceans script forms a linear narrative structure.  The app is designed to deliver the interactive levels for this script, one mode at a time, with no need to persist data to the browser or server between each level.
+The **AI for Oceans** script presents a linear narrative structure.  The app is designed to deliver the interactive levels for this script, one mode at a time, with no need to persist data to the browser or server between each level.
 
-The app itself contains a variety of "scenes", with each mode using a different subset.  The scenes are as follows:
+The app itself contains a variety of "scenes", with each mode using a different subset.  The scenes (known as `currentMode` internally) are as follows:
 
-### loading
+### `loading`
+
+<img width="1512" alt="loading" src="https://user-images.githubusercontent.com/2205926/165215465-9433a9eb-7114-4a50-8dfd-bac8d39e5837.png">
+
 
 A simple loading screen.
 
-### words
+### `words`
 
-Select adjectives for the short & long modes.
+<img width="1512" alt="words" src="https://user-images.githubusercontent.com/2205926/165215477-045f46b3-1706-499d-a04e-892dd924157c.png">
 
-### train
 
-The user trains the AI by choosing one of two options for each item (fish, non-fish sea creatures, trash).
+Select adjectives for the `short` & `long` modes.
 
-### predict
+### `train`
 
-The user watches AI categorizing items, one at a time.
+<img width="1512" alt="train" src="https://user-images.githubusercontent.com/2205926/165215505-c37975a2-29f5-4126-a19e-0311e113d4d2.png">
 
-### pond
+
+The user trains the AI by choosing one of two options (true or false) for each item (fish, non-fish sea creatures, trash).
+
+### `predict`
+
+<img width="1512" alt="predict" src="https://user-images.githubusercontent.com/2205926/165215521-033e4ff4-cda6-475f-8f78-9ceaf91fcaa2.png">
+
+The user watches A.I. (the "bot") categorizing items, one at a time.
+
+### `pond`
+
+<img width="1512" alt="pond-true" src="https://user-images.githubusercontent.com/2205926/165215549-926a481a-87e7-496c-86b3-cedb99a7ec38.png">
+
+<img width="1512" alt="pond-false" src="https://user-images.githubusercontent.com/2205926/165215539-928a1381-ee55-461b-bd13-e3ede88bbe04.png">
 
 The user shows the results of the predictions.  The user can toggle between the matching & non-matching sets.  In short & long, the user can click each item to view additional information about the AI's recognition.
 
+In the `short` and `long` modes, the pond also has a metapanel which can show general information about the ML processing, or, when a fish is selected, specific information about that fish's categorization:
+
+<img width="1512" alt="pond_info" src="https://user-images.githubusercontent.com/2205926/165217317-fa752d7e-1b8c-4755-9014-e6fa19df645b.png">
+
+<img width="1512" alt="pond_fishinfo" src="https://user-images.githubusercontent.com/2205926/165217326-c041e226-0f05-4e9c-87bb-37981b9efc23.png">
+
 ## Graphics & UI
 
-The app uses two layers in the DOM.  Underneath, a canvas provides the background and all the sprites.  On top, a regular DOM uses HTML elements to provide the user interface.
+The app uses two layers in the DOM.  Underneath, a canvas provides the background and all the sprites.  On top, a regular DOM uses HTML elements to provide the user interface.  The HTML interface is implemented in React.
 
 The app is fully responsive by scaling the canvas and also scaling the size of the HTML elements correspondingly.  The UI simply shrinks to match the underlying canvas.  
 
@@ -94,10 +116,11 @@ See the implementation at https://github.com/code-dot-org/ml-activities/blob/mai
 
 This simple system enabled the team to add a detailed narrative voice to the script, and allowed a variety of team members to contribute text.
 
+# Additional information
+
 ## Common operations
 
 The documentation for common operations for AI Lab is comprehensive and should apply to this project too: https://github.com/code-dot-org/ml-playground#common-operations
-
 
 
 ## Getting started
