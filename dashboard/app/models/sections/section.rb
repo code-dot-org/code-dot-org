@@ -95,7 +95,8 @@ class Section < ApplicationRecord
     end
   end
 
-  # PL courses which are run with adults should have the grade type of 'pl'
+  # PL courses which are run with adults should have the grade type of 'pl'.
+  # This value was recommended by RED team.
   def pl_sections_must_use_pl_grade
     if pl_section? && grade != SharedConstants::PL_GRADE_VALUE
       errors.add(:grade, 'must be pl for pl section.')
