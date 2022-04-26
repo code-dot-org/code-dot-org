@@ -214,6 +214,7 @@ Resources:
                 SAML:aud: https://signin.aws.amazon.com/saml
       ManagedPolicyArns:
         - !Ref DataAnalystPolicy
+        - !Ref DataAnalystDmsReadOnlyPolicy
         - arn:aws:iam::aws:policy/AmazonRedshiftQueryEditor
         - arn:aws:iam::aws:policy/AmazonRedshiftQueryEditorV2FullAccess
       Tags:
