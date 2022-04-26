@@ -139,7 +139,7 @@ export const commands = {
             initialAngle:
               (i * 360) / num - 180 * ((i + 1) % 2) + spiralRandomizer,
             delay: (i * 30) / num,
-            lifetime: 90
+            lifetime: 91
           };
           break;
         }
