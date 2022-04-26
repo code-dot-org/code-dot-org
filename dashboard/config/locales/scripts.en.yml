@@ -36440,3 +36440,113 @@ en:
             This unit is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.
 
             **For Teachers:** [Click here](https://studio.code.org/s/aiml-2022?viewAs=Instructor) to see lesson plans and teacher resources for this unit.
+        vpl-csd-2022:
+          lessons:
+            Module 1:
+              name: Module 1
+              description_student: ''
+              description_teacher: ''
+              key: Module 1
+            Module 2:
+              name: Module 2
+              description_student: ''
+              description_teacher: ''
+              key: Module 2
+            Module 3:
+              name: Module 3
+              description_student: ''
+              description_teacher: ''
+              key: Module 3
+            Module 4:
+              name: Module 4
+              description_student: ''
+              description_teacher: ''
+              key: Module 4
+            Module 5:
+              name: Module 5
+              description_student: ''
+              description_teacher: ''
+              key: Module 5
+            Module 6:
+              name: Module 6
+              description_student: ''
+              description_teacher: ''
+              key: Module 6
+            Module 7:
+              name: Module 7
+              description_student: ''
+              description_teacher: ''
+              key: Module 7
+            Module 8:
+              name: Module 8
+              description_student: ''
+              description_teacher: ''
+              key: Module 8
+          title: CS Discoveries Virtual Professional Learning 2021 - 22
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        vpl-csp-2022:
+          lessons:
+            Module 1:
+              name: Module 1
+              description_student: ''
+              description_teacher: ''
+              key: Module 1
+            Module 2:
+              name: Module 2
+              description_student: ''
+              description_teacher: ''
+              key: Module 2
+            Module 3:
+              name: Module 3
+              description_student: ''
+              description_teacher: ''
+              key: Module 3
+            Module 4:
+              name: Module 4
+              description_student: ''
+              description_teacher: ''
+              key: Module 4
+            'Module 5: Unit 7 and Understanding Functions with Parameters and Return':
+              name: 'Module 5: Unit 7 and Understanding Functions with Parameters and Return'
+              description_student: 
+              description_teacher: 
+            'Module 6: Introduction to the Create Performance Task':
+              name: 'Module 6: Introduction to the Create Performance Task'
+              description_student: 
+              description_teacher: 
+            'Module 7: Tools and Structure in Unit 9 - Data':
+              name: 'Module 7: Tools and Structure in Unit 9 - Data'
+              description_student: 
+              description_teacher: 
+            'Module 8: Building Community and Preparing Students for the AP Exam':
+              name: 'Module 8: Building Community and Preparing Students for the AP Exam'
+              description_student: 
+              description_teacher: 
+            Module 5:
+              key: Module 5
+              name: 'Module 5: Unit 7 and Understanding Functions with Parameters and Return'
+              description_student: ''
+              description_teacher: ''
+            Module 6:
+              key: Module 6
+              name: 'Module 6: Introduction to the Create Performance Task'
+              description_student: ''
+              description_teacher: ''
+            Module 7:
+              key: Module 7
+              name: 'Module 7: Tools and Structure in Unit 9 - Data'
+              description_student: ''
+              description_teacher: ''
+            Module 8:
+              key: Module 8
+              name: 'Module 8: Building Community and Preparing Students for the AP Exam'
+              description_student: ''
+              description_teacher: ''
+          title: CS Principles Virtual Professional Learning 21 - 22
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''

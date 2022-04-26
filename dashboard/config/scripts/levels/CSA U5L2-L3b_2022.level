@@ -2,20 +2,23 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\nThen, experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. first thing\r\n\r\n2. second thing\r\n\r\n3. third thing\r\n\r\n##Getting Started\r\n1. Import `SomeClass.java`(#e7e8ea) from the ![Backpack](https://images.code.org/b17feeef2e8db2a98abdb4a5860c5c61-image-1642175705297.png)\r\n\r\n*Don't have it or it doesn't work? That's ok! Just copy and paste the code from [**here**](https://linktocode.com).*\r\n\r\n##In MyConsole.java:\r\n\r\n2. first step\r\n\r\n3. second step\r\n\r\n4. third step\r\n\r\n::: details [**Show Me How**]\r\nA `for`(#e7e8ea) loop uses the following syntax:\r\n  \r\n  ```\r\n  for (int variableName = startingValue; condition; variableName_change) {\r\n    // code to execute\r\n  }\r\n  ```\r\n\r\nBe sure to change `variableName`(#e7e8ea) to a name you can easily identify, such as `index`(#e7e8ea), and set the `startingValue`(#e7e8ea) to the value you want to start the loop.\r\n:::",
+    "long_instructions": "A family is trying to decide on which dog breed to adopt. They want to choose a dog breed that is less than or equal to 20 inches tall. They have the following values:\r\n\r\n![](https://images.code.org/48f45f5c5536ef79b2e6f45293020325-image-1650999244520.png)\r\n\r\nwhere each row represents a Beagle, Dalmation, Golden Retriever, and Pug, respectively. Each column represents the minimum height and maximum height of each dog breed, respectively.\r\n\r\n##In DogData.java:\r\n\r\n1. Write the method `findHeight()`(#e7e8ea) to find the dog breeds with a minimum or maximum height that is less than or equal to `20`(#e7e8ea).\r\n\r\n   * For each value found that meets the criteria, print the name of the dog breed and height. Specify whether the height is the minimum or maximum height.\r\n\r\n::: details [**Show Me How**]\r\nTraversing a 2D array uses the following syntax:\r\n  \r\n  ```\r\n  for (int row = 0; row < arrayName.length; row++) {\r\n    for (int col = 0; col < arrayName[0].length; col++) {\r\n      // code to execute\r\n    }\r\n  }\r\n  ```\r\n:::",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
     "encrypted_examples": [
 
-    ]
+    ],
+    "display_name": "Dog Breeds",
+    "bubble_choice_description": "Write a method to find the dog breeds with a minimum or maximum height that meet a specific criteria and print the results.",
+    "thumbnail_url": "https://images.code.org/88f3474433cfc656f10f5f9d39e325fc-image-1650999257527.png"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2022-04-12T18:55:58.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-04-12T18:55:58.834+00:00\",\"changed\":[\"cloned from \\\"CSA U5L2-L3a_2022\\\"\"],\"cloned_from\":\"CSA U5L2-L3a_2022\"},{\"changed_at\":\"2022-04-12 18:56:03 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-12T18:55:58.834+00:00\",\"changed\":[\"cloned from \\\"CSA U5L2-L3a_2022\\\"\"],\"cloned_from\":\"CSA U5L2-L3a_2022\"},{\"changed_at\":\"2022-04-12 18:56:03 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-26 18:56:50 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
