@@ -1,6 +1,6 @@
 module CurriculumHelper
   KEY_CHAR_RE = /[A-Za-z0-9\-\_\.]/
-  RESERVED_KEYS = ['edit']
+  RESERVED_KEYS = ['edit', 'new']
 
   def validate_key_format
     if RESERVED_KEYS.include?(key)

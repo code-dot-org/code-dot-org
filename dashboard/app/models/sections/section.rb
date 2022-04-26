@@ -21,7 +21,6 @@
 #  hidden               :boolean          default(FALSE), not null
 #  tts_autoplay_enabled :boolean          default(FALSE), not null
 #  restrict_section     :boolean          default(FALSE)
-#  code_review_enabled  :boolean          default(TRUE)
 #  properties           :text(65535)
 #  participant_type     :string(255)      default("student"), not null
 #
@@ -39,6 +38,7 @@ require 'cdo/safe_names'
 class Section < ApplicationRecord
   include SerializedProperties
   include SharedConstants
+  include SharedCourseConstants
   self.inheritance_column = :login_type
 
   class << self
@@ -81,16 +81,23 @@ class Section < ApplicationRecord
   alias_attribute :lesson_extras, :stage_extras
 
   validates :participant_type, acceptance: {accept: SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values, message: 'must be facilitator, teacher, or student'}
-  validates :grade, acceptance: {accept: SharedConstants::STUDENT_GRADE_LEVELS, message: "must be one of the valid student grades. Expected one of: #{SharedConstants::STUDENT_GRADE_LEVELS}. Got: \"%{value}\"."}
-
+  validates :grade, acceptance: {accept: [SharedConstants::STUDENT_GRADE_LEVELS, SharedConstants::PL_GRADE_VALUE].flatten, message: "must be one of the valid student grades. Expected one of: #{[SharedConstants::STUDENT_GRADE_LEVELS, SharedConstants::PL_GRADE_VALUE].flatten}. Got: \"%{value}\"."}
   validate :pl_sections_must_use_email_logins
+  validate :pl_sections_must_use_pl_grade
   validate :participant_type_not_changed
 
   # PL courses which are run with adults should be set up with teacher accounts so they must use
   # email logins
   def pl_sections_must_use_email_logins
-    if participant_type != SharedCourseConstants::PARTICIPANT_AUDIENCE.student && login_type != LOGIN_TYPE_EMAIL
+    if pl_section? && login_type != LOGIN_TYPE_EMAIL
       errors.add(:login_type, 'must be email for professional learning sections.')
+    end
+  end
+
+  # PL courses which are run with adults should have the grade type of 'pl'
+  def pl_sections_must_use_pl_grade
+    if pl_section? && grade != SharedConstants::PL_GRADE_VALUE
+      errors.add(:grade, 'must be pl for pl section.')
     end
   end
 
@@ -101,6 +108,10 @@ class Section < ApplicationRecord
     if participant_type_changed? && persisted?
       errors.add(:participant_type, "can not be update once set.")
     end
+  end
+
+  def pl_section?
+    participant_type != SharedCourseConstants::PARTICIPANT_AUDIENCE.student
   end
 
   serialized_attrs %w(code_review_expires_at)
@@ -127,6 +138,7 @@ class Section < ApplicationRecord
   ADD_STUDENT_EXISTS = 'exists'.freeze
   ADD_STUDENT_SUCCESS = 'success'.freeze
   ADD_STUDENT_FAILURE = 'failure'.freeze
+  ADD_STUDENT_FORBIDDEN = 'forbidden'.freeze
   ADD_STUDENT_FULL = 'full'.freeze
   ADD_STUDENT_RESTRICTED = 'restricted'.freeze
 
@@ -137,8 +149,12 @@ class Section < ApplicationRecord
     LOGIN_TYPES.include? type
   end
 
+  def self.valid_participant_type?(type)
+    SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values.include? type
+  end
+
   def self.valid_grade?(grade)
-    SharedConstants::STUDENT_GRADE_LEVELS.include? grade
+    SharedConstants::STUDENT_GRADE_LEVELS.include?(grade) || grade == PL_GRADE_VALUE
   end
 
   # Override default script accessor to use our cache
@@ -204,6 +220,8 @@ class Section < ApplicationRecord
   # Checks if a user can join a section as a participant by
   # checking if they meet the participant_type for the section
   def can_join_section_as_participant?(user)
+    return true if user.permission?(UserPermission::UNIVERSAL_INSTRUCTOR) || user.permission?(UserPermission::LEVELBUILDER)
+
     if participant_type == SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator
       return user.permission?(UserPermission::FACILITATOR)
     elsif participant_type == SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
@@ -223,7 +241,7 @@ class Section < ApplicationRecord
     follower = Follower.with_deleted.find_by(section: self, student_user: student)
 
     return ADD_STUDENT_FAILURE if user_id == student.id
-    return ADD_STUDENT_FAILURE unless can_join_section_as_participant?(student)
+    return ADD_STUDENT_FORBIDDEN unless can_join_section_as_participant?(student)
     # If the section is restricted, return a restricted error unless a user is added by
     # the teacher (Creating a Word or Picture login-based student) or is created via an
     # OAUTH login section (Google Classroom / clever).
@@ -335,6 +353,10 @@ class Section < ApplicationRecord
       tts_autoplay_enabled: tts_autoplay_enabled,
       sharing_disabled: sharing_disabled?,
       login_type: login_type,
+      participant_type: participant_type,
+      course_offering_id: unit_group ? unit_group&.course_version&.course_offering&.id : script&.course_version&.course_offering&.id,
+      course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
+      unit_id: unit_group ? script_id : nil,
       course_id: course_id,
       script: {
         id: script_id,
@@ -434,12 +456,13 @@ class Section < ApplicationRecord
     false
   end
 
-  # Returns the ids of all scripts which any student in this section has ever
-  # been assigned to or made progress on.
-  def student_script_ids
+  # Returns the ids of all units which any participant in this section has ever
+  # been assigned to or made progress on if the instructor of the section can
+  # be an instructor for that unit
+  def participant_unit_ids
     # This performs two queries, but could be optimized to perform only one by
     # doing additional joins.
-    Script.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)}).distinct.pluck(:id)
+    Script.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)}).distinct.select {|s| s.course_assignable?(user)}.pluck(:id)
   end
 
   def code_review_enabled?

@@ -40,5 +40,5 @@
   ],
   "return_value": "The remainder of the division x / y",
   "short_description": "\r\nModulo operator\r\nCategory: Math",
-  "syntax": "__ % __"
+  "syntax": "x % y"
 }

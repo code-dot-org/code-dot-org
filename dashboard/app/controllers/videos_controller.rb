@@ -42,6 +42,10 @@ class VideosController < ApplicationController
   end
 
   def create
+    return render(status: :not_acceptable, plain: 'Key required') if video_params[:key].blank?
+    return render(status: :not_acceptable, plain: 'YouTube code required') if video_params[:youtube_code].blank?
+    return render(status: :not_acceptable, plain: 'Download file required') unless video_params[:download]
+
     filename = upload_to_s3
     @video = Video.new(video_params.merge(download: "https://videos.code.org/#{filename}"))
 
@@ -63,6 +67,10 @@ class VideosController < ApplicationController
   # PATCH/PUT /videos/1
   # PATCH/PUT /videos/1.json
   def update
+    return render(status: :not_acceptable, plain: 'Key required') if video_params[:key].blank?
+    return render(status: :not_acceptable, plain: 'YouTube code required') if video_params[:youtube_code].blank?
+    return render(status: :not_acceptable, plain: 'Download file required') unless video_params[:download]
+
     filename = upload_to_s3
 
     if @video.update(video_params.merge(download: "https://videos.code.org/#{filename}"))

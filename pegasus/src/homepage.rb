@@ -12,18 +12,25 @@ class Homepage
     return nil if @@load_error || !@@announcements_data
     pages = @@announcements_data[:pages]
     banners = @@announcements_data[:banners]
-    banner_id_for_page = pages[page]
-    return nil unless banner_id_for_page
 
-    banner = banners[banner_id_for_page]
+    # Try each potential banner for this page until we find the first that can be used.
+    pages[page].each do |banner_id_for_page|
+      banner = banners[banner_id_for_page]
 
-    # If the banner has an array of environments, then the current environment must be one of them.
-    return nil if banner["environments"] && !banner["environments"].include?(CDO.rack_env.to_s)
+      next unless banner
 
-    # If the banner has a required DCDO flag, then it must be set.
-    return nil if banner["dcdo"] && !DCDO.get(banner["dcdo"], false)
+      # If the banner has an array of environments, then the current environment must be one of them.
+      next if banner["environments"] && !banner["environments"].include?(CDO.rack_env.to_s)
 
-    banner ? banner.merge({"id": banner_id_for_page}) : nil
+      # If the banner has a required DCDO flag, then it must be set.
+      next if banner["dcdo"] && !DCDO.get(banner["dcdo"], false)
+
+      # We have a banner.  Add the ID to the hash that we return.
+      return banner.merge({"id": banner_id_for_page})
+    end
+
+    # If we made it to here, none of the potential banners was available.
+    nil
   end
 
   def self.load_announcements
@@ -63,7 +70,7 @@ class Homepage
 
   # validate a banner has the required fields
   def self.validate_banner(banner)
-    banner[:desktopImage] && banner[:items] && banner[:actions]
+    banner[:desktopImage] && banner[:actions]
   end
 
   def self.get_heroes
@@ -169,6 +176,33 @@ class Homepage
     ]
   end
 
+  def self.get_action_buttons_css_class
+    custom_banner = get_announcement_for_page("homepage")
+    if custom_banner && custom_banner["class"]
+      custom_banner["class"]
+    else
+      "action_buttons"
+    end
+  end
+
+  def self.get_num_columns
+    custom_banner = get_announcement_for_page("homepage")
+    if custom_banner && custom_banner["leftImage"] && custom_banner["rightImage"]
+      return 3
+    end
+
+    1
+  end
+
+  def self.get_outer_column_images
+    custom_banner = get_announcement_for_page("homepage")
+    if custom_banner && custom_banner["leftImage"] && custom_banner["rightImage"]
+      return {left_image: custom_banner["leftImage"], right_image: custom_banner["rightImage"]}
+    end
+
+    nil
+  end
+
   def self.get_actions(request)
     # Show a Latin American specific video to users browsing in Spanish or
     # Portuguese to promote LATAM HOC.
@@ -194,7 +228,12 @@ class Homepage
         {
           text: action["text"],
           type: action["type"],
-          url: action["url"]
+          url: action["url"],
+          youtube_id: action["youtube_id"],
+          download_path: action["download_path"],
+          facebook: action["facebook"],
+          twitter: action["twitter"],
+          image_url: action["image_url"]
         }
       end
     elsif hoc_mode == "actual-hoc"
@@ -303,8 +342,8 @@ class Homepage
                 url: CDO.studio_url("/")
               },
               {
-                text: "homepage_slot_text_link_local",
-                url: "/learn/local"
+                text: "homepage_slot_text_link_thebadguys",
+                url: "/thebadguys"
               },
               {
                 text: "homepage_slot_text_link_othercourses",
@@ -412,14 +451,14 @@ class Homepage
   end
 
   def self.get_video(request)
-    video = get_actions(request).find {|a| a[:type] == "video" || a[:type] == "code_break_video"}
+    video = get_actions(request).find {|a| ["video", "video_thumbnail"].include? a[:type]}
 
     if video
       {
         video_code: video[:youtube_id],
         download_path: video[:download_path],
-        facebook: {u: video[:facebook]},
-        twitter: {related: 'codeorg', text: video[:twitter]}
+        facebook: video[:facebook] ? {u: video[:facebook]} : nil,
+        twitter: video[:twitter] ? {related: 'codeorg', text: video[:twitter]} : nil
       }
     else
       nil
@@ -445,7 +484,7 @@ class Homepage
     custom_banner = get_announcement_for_page("homepage")
     if custom_banner
       heroes_arranged =
-        [{centering: "50% 30%", textposition: "bottom", items: custom_banner["items"], image: custom_banner["desktopImage"]}]
+        [{centering: "50% 100%", textposition: "bottom", items: custom_banner["items"], image: custom_banner["desktopImage"]}]
     elsif show_single_hero(request) == "changeworld"
       heroes_arranged = hero_changeworld
     else

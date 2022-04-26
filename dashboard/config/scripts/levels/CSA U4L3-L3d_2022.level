@@ -1,0 +1,24 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "The `SATScene`(#e7e8ea) class creates a visualization of the number of SAT scores in the following ranges:\r\n\r\n* Top Scores\r\n\r\n* Competitive Scores\r\n\r\n* Above Average Scores\r\n\r\n* Below Average Scores\r\n\r\nThe `SATScene`(#e7e8ea) class has instance variables for each range. The `analyzeData`(#e7e8ea) method counts the number of scores in the `satScores`(#e7e8ea) array that fall within each range. The `createScene`(#e7e8ea) method draws circles using these counts to represent the number of scores in each range.\r\n\r\n##In SATScene.java:\r\n\r\n1. Write the `analyzeData()`(#e7e8ea) method by traversing the `satScores`(#e7e8ea) array.\r\n\r\n   * If the value is less than or equal to `1600`(#e7e8ea) and greater than or equal to `1340`(#e7e8ea), add `1`(#e7e8ea) to `topScores`(#e7e8ea).\r\n   \r\n   * If the value is less than or equal to `1320`(#e7e8ea) and greater than or equal to `1200`(#e7e8ea), add `1`(#e7e8ea) to `competitive`(#e7e8ea).\r\n   \r\n   * If the value is less than or equal to `1180`(#e7e8ea) and greater than or equal to `1030`(#e7e8ea), add `1`(#e7e8ea) to `aboveAverage`(#e7e8ea).\r\n   \r\n   * If the value is less than or equal to `1010`(#e7e8ea) and greater than or equal to `400`(#e7e8ea), add `1`(#e7e8ea) to `belowAverage`(#e7e8ea).\r\n\r\n2. Write the `createScene()`(#e7e8ea) method by drawing different colored circles for each range. Use the instance variables `topScores`(#e7e8ea), `competitive`(#e7e8ea), `aboveAverage`(#e7e8ea), and `belowAverage`(#e7e8ea) for the width and height of the circles.\r\n\r\n![](https://images.code.org/3b76d3f7d3eabfc90caaf653c78b6b92-image-1650563872945.png)",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "encrypted_examples": [
+
+    ],
+    "display_name": "SAT Scores",
+    "bubble_choice_description": "Use nested if statements to analyze SAT score ranges and draw circles to represent the number of scores in each range.",
+    "thumbnail_url": "https://images.code.org/3b76d3f7d3eabfc90caaf653c78b6b92-image-1650563872945.png"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-04-07T17:45:40.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2022-04-07T17:45:40.407+00:00\",\"changed\":[\"cloned from \\\"CSA U4L3-L3c_2022\\\"\"],\"cloned_from\":\"CSA U4L3-L3c_2022\"},{\"changed_at\":\"2022-04-07 17:45:43 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-21 17:58:35 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

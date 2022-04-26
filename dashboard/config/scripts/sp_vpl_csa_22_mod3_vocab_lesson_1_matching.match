@@ -1,7 +1,7 @@
 name 'SP-VPL-CSA-22-mod3-Vocab-lesson-1-matching'
 title 'Check for understanding'
 description 'Match the vocabulary word with the definition'
-height'85'
+height'95'
 question 'Consists of the class keyword and the name of the class'
 answer 'Class header '
 

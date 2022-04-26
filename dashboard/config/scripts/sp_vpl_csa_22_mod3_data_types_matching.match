@@ -1,7 +1,7 @@
 name 'SP-VPL-CSA-22-mod3-data-types-matching'
 title 'Check for understanding'
 description 'Match the type of data you want to store to the information described'
-height'85'
+height '40'
 question 'The age of a student'
 answer '`int`'
 

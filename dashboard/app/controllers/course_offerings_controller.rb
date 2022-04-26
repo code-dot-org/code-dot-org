@@ -25,6 +25,6 @@ class CourseOfferingsController < ApplicationController
   private
 
   def course_offering_params
-    params.permit(:display_name, :is_featured, :category).to_h
+    params.permit(:display_name, :is_featured, :category, :assignable).to_h
   end
 end

@@ -39,6 +39,7 @@
     var printButton = $('#print_button');
     if (printButton) {
       printButton.click(function() {
+        trackEvent('clicks', 'frozen_print_gallery', 'print');
         var item = $("#print_frame")[0];
         item.contentWindow.document.getElementsByTagName("img")[0].style.width="100%";
         if (item.contentWindow.document.execCommand('print', false, null)) {

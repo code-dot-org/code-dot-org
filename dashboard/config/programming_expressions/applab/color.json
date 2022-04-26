@@ -19,7 +19,7 @@
       "description": "Turns the lights different colors around the board by RGB value. The off button turns them all off at the same time.",
       "code": "```\n//Turns the lights different colors around the board by RGB value. The off button turns them all off at the same time.\r\nonEvent(\"rgb_on_btn\", \"click\", function(event) {\r\n  rgb_on();\r\n});\r\n\r\nfunction rgb_on() {\r\n  //Blue\r\n  colorLeds[0].color(0, 0, 100);\r\n  //Purple\r\n  colorLeds[1].color(100, 0, 100);\r\n  //White\r\n  colorLeds[2].color(100, 100, 100);\r\n  //Green\r\n  colorLeds[3].color(0, 100, 0);\r\n  //Red\r\n  colorLeds[4].color(200, 0, 0);\r\n  //Blue green mix\r\n  colorLeds[5].color(0, 250, 100);\r\n  //Dark yellow\r\n  colorLeds[6].color(15, 15, 10);\r\n  //Pink\r\n  colorLeds[7].color(70, 30, 20);\r\n  //Lime\r\n  colorLeds[8].color(100, 200, 10);\r\n  //Orange\r\n  colorLeds[9].color(250, 100, 10);\r\n}\r\n\r\nonEvent(\"rgb_off_btn\", \"click\", function(event) {\r\n  rgb_off();\r\n});\r\n\r\nfunction rgb_off() {\r\n    colorLeds[0].off();\r\n    colorLeds[1].off();\r\n    colorLeds[2].off();\r\n    colorLeds[3].off();\r\n    colorLeds[4].off();\r\n    colorLeds[5].off();\r\n    colorLeds[6].off();\r\n    colorLeds[7].off();\r\n    colorLeds[8].off();\r\n    colorLeds[9].off();\r\n}\r\n\n```",
       "app": "",
-      "image": "https://curriculum.code.org/media/example3_lightscoloromethod.jpg",
+      "image": "https://images.code.org/fb659d7b6a2af4678d723f895c236169-example3_lightscoloromethod2.jpg",
       "app_display_type": "codeFromCodeField",
       "embed_app_with_code_height": 310
     },
@@ -59,7 +59,10 @@
       "description": "Changes the saturation of blue in the LED. Must be a number ranging from 0-255 for this to work."
     }
   ],
+  "parameters": [
+    "color"
+  ],
   "short_description": "Changes the color of the color LED specified.",
-  "syntax": "color(color)",
+  "syntax": "colorLeds[index].color(color)",
   "tips": "* `colorLeds[i].color()` also accepts hexadecimal strings as a color parameter. \r\n\r\n* You can randomly color the LEDs in a few ways. You can follow example #2 from above and make an array of colors and choose a random index, or you can use the RGB parameters and assign a random number up to 255 to each parameter. \r\n\r\n* Keep in mind: the second method of randomizing colors does not allow much control for what colors you see. If you're looking for certain colors, you should use the array method from example #2."
 }

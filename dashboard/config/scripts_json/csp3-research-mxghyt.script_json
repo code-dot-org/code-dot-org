@@ -16,37 +16,11 @@
       "hideable_lessons": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
-      "teacher_resources": [
-        [
-          "lessonPlans",
-          "https://curriculum.code.org/csp/unit3/"
-        ],
-        [
-          "teacherForum",
-          "https://forum.code.org/c/csp3"
-        ],
-        [
-          "vocabulary",
-          "https://curriculum.code.org/csp/unit3/vocab/"
-        ],
-        [
-          "codeIntroduced",
-          "https://curriculum.code.org/csp/unit3/code/"
-        ],
-        [
-          "standardMappings",
-          "https://curriculum.code.org/csp/unit3/standards/"
-        ],
-        [
-          "professionalLearning",
-          "https://studio.code.org/s/csp3-support"
-        ]
-      ],
       "use_legacy_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-11 12:07:29 UTC",
+    "serialized_at": "2022-03-22 21:16:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4705,7 +4679,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_affirmation_intervention_3",
+        "level.key": "csp_affirmation_control_3",
         "script_level.level_keys": [
           "csp_affirmation_control_3",
           "csp_affirmation_intervention_3"
@@ -4718,7 +4692,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_affirmation_control_3",
+        "level.key": "csp_affirmation_intervention_3",
         "script_level.level_keys": [
           "csp_affirmation_control_3",
           "csp_affirmation_intervention_3"
@@ -4755,13 +4729,113 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "Code Introduced",
+      "url": "https://curriculum.code.org/csp/unit3/code/",
+      "key": "code_introduced",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "code_introduced"
+      }
+    },
+    {
+      "name": "Lesson Plans",
+      "url": "https://curriculum.code.org/csp/unit3/",
+      "key": "lesson_plans_4",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_plans_4"
+      }
+    },
+    {
+      "name": "Professional Learning",
+      "url": "https://studio.code.org/s/csp3-support",
+      "key": "professional_learning_2",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "professional_learning_2"
+      }
+    },
+    {
+      "name": "Standard Mappings",
+      "url": "https://curriculum.code.org/csp/unit3/standards/",
+      "key": "standard_mappings_4",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "standard_mappings_4"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csp3",
+      "key": "teacher_forum_3",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum_3"
+      }
+    },
+    {
+      "name": "Vocabulary",
+      "url": "https://curriculum.code.org/csp/unit3/vocab/",
+      "key": "vocabulary_2",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "vocabulary_2"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "code_introduced",
+        "script.name": "csp3-research-mxghyt"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "lesson_plans_4",
+        "script.name": "csp3-research-mxghyt"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "professional_learning_2",
+        "script.name": "csp3-research-mxghyt"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "standard_mappings_4",
+        "script.name": "csp3-research-mxghyt"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum_3",
+        "script.name": "csp3-research-mxghyt"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "vocabulary_2",
+        "script.name": "csp3-research-mxghyt"
+      }
+    }
   ],
   "scripts_student_resources": [
 

@@ -29,9 +29,9 @@ class ProgrammingEnvironment < ApplicationRecord
 
   after_destroy :remove_serialization
 
-  # @attr [String] editor_type - Type of editor one of the following: 'text-based', 'droplet', 'blockly'
+  # @attr [String] editor_language - Type of editor one of the following: 'text-based', 'droplet', 'blockly'
   serialized_attrs %w(
-    editor_type
+    editor_language
     block_pool_name
     title
     description
@@ -85,6 +85,14 @@ class ProgrammingEnvironment < ApplicationRecord
     File.delete(file_path) if File.exist?(file_path)
   end
 
+  def studio_documentation_path
+    if DCDO.get('use-studio-code-docs', false) && ['applab', 'gamelab', 'spritelab', 'weblab'].include?(name)
+      "/docs/#{name}"
+    else
+      programming_environment_path(name)
+    end
+  end
+
   def summarize_for_lesson_edit
     {id: id, name: name}
   end
@@ -97,7 +105,7 @@ class ProgrammingEnvironment < ApplicationRecord
       imageUrl: image_url,
       projectUrl: project_url,
       description: description,
-      editorType: editor_type,
+      editorLanguage: editor_language,
       blockPoolName: block_pool_name,
       categories: categories.map(&:serialize_for_edit),
       showPath: programming_environment_path(name)
@@ -109,7 +117,7 @@ class ProgrammingEnvironment < ApplicationRecord
       title: title,
       description: description,
       projectUrl: project_url,
-      categories: categories.select {|c| c.programming_expressions.count > 0}.map(&:summarize_for_environment_show)
+      categories: categories_for_navigation
     }
   end
 
@@ -119,7 +127,15 @@ class ProgrammingEnvironment < ApplicationRecord
       title: title,
       imageUrl: image_url,
       description: description,
-      showPath: programming_environment_path(name)
+      showPath: studio_documentation_path
     }
+  end
+
+  def categories_for_navigation
+    categories.select(&:should_be_in_navigation?).map(&:summarize_for_navigation)
+  end
+
+  def categories_for_get
+    categories.select(&:should_be_in_navigation?).map(&:summarize_for_get)
   end
 end

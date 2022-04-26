@@ -10,6 +10,8 @@
   ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
   "properties": {
     "family_name": "csd",
     "has_verified_resources": true,

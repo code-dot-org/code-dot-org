@@ -8,7 +8,6 @@ import i18n from '@cdo/locale';
 import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import {
-  beginEditingNewSection,
   pageTypes,
   setAuthProviders,
   setPageType,
@@ -16,7 +15,6 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
-import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
 import experiments from '@cdo/apps/util/experiments';
@@ -45,22 +43,6 @@ function showHomepage() {
     store.dispatch(setMapboxAccessToken(homepageData.mapboxAccessToken));
   }
 
-  let courseId;
-  let scriptId;
-  if (query.courseId) {
-    courseId = parseInt(query.courseId, 10);
-    // remove courseId/scriptId params so that if we navigate back we don't get
-    // this dialog again
-    updateQueryParam('courseId', undefined, true);
-  }
-  if (query.scriptId) {
-    scriptId = parseInt(query.scriptId, 10);
-    updateQueryParam('scriptId', undefined, true);
-  }
-  if (courseId || scriptId) {
-    store.dispatch(beginEditingNewSection(courseId, scriptId));
-  }
-
   const announcement = getTeacherAnnouncement(announcementOverride);
 
   const allowTeacherAppReopening = experiments.isEnabled(
@@ -76,7 +58,8 @@ function showHomepage() {
             hocLaunch={homepageData.hocLaunch}
             courses={homepageData.courses}
             plCourses={homepageData.plCourses}
-            joinedSections={homepageData.joined_sections}
+            joinedStudentSections={homepageData.joined_student_sections}
+            joinedPlSections={homepageData.joined_pl_sections}
             topCourse={homepageData.topCourse}
             topPlCourse={homepageData.topPlCourse}
             queryStringOpen={query['open']}

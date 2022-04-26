@@ -40,6 +40,8 @@ class UnitOverviewTopRow extends React.Component {
     isMigrated: PropTypes.bool,
     scriptOverviewPdfUrl: PropTypes.string,
     scriptResourcesPdfUrl: PropTypes.string,
+    courseOfferingId: PropTypes.number,
+    courseVersionId: PropTypes.number,
 
     // redux provided
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
@@ -118,7 +120,9 @@ class UnitOverviewTopRow extends React.Component {
       weeklyInstructionalMinutes,
       isMigrated,
       unitCompleted,
-      hasPerLevelResults
+      hasPerLevelResults,
+      courseOfferingId,
+      courseVersionId
     } = this.props;
 
     const useMigratedTeacherResources = isMigrated && !teacherResources.length;
@@ -217,6 +221,8 @@ class UnitOverviewTopRow extends React.Component {
             assignmentName={unitTitle}
             showAssignButton={showAssignButton}
             courseId={currentCourseId}
+            courseOfferingId={courseOfferingId}
+            courseVersionId={courseVersionId}
             scriptId={scriptId}
             forceReload={true}
             buttonLocationAnalytics={'unit-overview-top'}
@@ -270,13 +276,13 @@ const styles = {
 
 export const UnconnectedUnitOverviewTopRow = UnitOverviewTopRow;
 
-export default connect(state => ({
+export default connect((state, ownProps) => ({
   selectedSectionId: state.teacherSections.selectedSectionId,
   sectionsForDropdown: sectionsForDropdown(
     state.teacherSections,
-    state.progress.scriptId,
-    state.progress.courseId,
-    false
+    ownProps.courseOfferingId,
+    ownProps.courseVersionId,
+    state.progress.scriptId
   ),
   professionalLearningCourse: state.progress.professionalLearningCourse,
   hasPerLevelResults: Object.keys(state.progress.levelResults).length > 0,

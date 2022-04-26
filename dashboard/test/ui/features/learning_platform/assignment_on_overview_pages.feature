@@ -6,8 +6,8 @@ Feature: (Un)Assign on script and course overview pages
 
   Background:
     Given I create a teacher named "Frizzle" and go home
-    And I create a new section named "assigned CSP1" assigned to "Computer Science Principles" version "'17-'18"
-    Then the section table should have 1 row
+    And I create a new student section named "assigned CSP1" assigned to "Computer Science Principles" version "'17-'18"
+    Then the student section table should have 1 row
 
   Scenario: Assignment on script and course overview for teacher
     And I save the section id from row 0 of the section table
@@ -55,7 +55,7 @@ Feature: (Un)Assign on script and course overview pages
     And I wait until element ".uitest-assign-button" is visible
 
   Scenario: Assignment on script and course overview for student
-    And I save the section url
+    And I save the student section url
     Given I create a student named "Arnold"
     And I join the section
     Then I am on "http://studio.code.org/courses/csp-2017"

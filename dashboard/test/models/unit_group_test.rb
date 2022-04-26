@@ -549,7 +549,8 @@ class UnitGroupTest < ActiveSupport::TestCase
   end
 
   test "summarize" do
-    unit_group = create :unit_group, name: 'my-unit-group', family_name: 'my-family', version_year: '1999'
+    unit_group = create :unit_group, name: 'my-unit-group', family_name: 'my-family', version_year: '1999', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    CourseOffering.add_course_offering(unit_group)
 
     test_locale = :"te-ST"
     I18n.locale = test_locale
@@ -583,14 +584,14 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     unit_group.teacher_resources = [['curriculum', '/link/to/curriculum']]
 
-    summary = unit_group.summarize
+    summary = unit_group.summarize(create(:teacher))
 
     assert_equal [:name, :id, :title, :assignment_family_title,
                   :family_name, :version_year, :published_state, :instruction_type, :instructor_audience, :participant_audience,
                   :pilot_experiment, :description_short, :description_student,
                   :description_teacher, :version_title, :scripts, :teacher_resources, :migrated_teacher_resources,
-                  :student_resources, :is_migrated, :has_verified_resources, :has_numbered_units, :versions, :show_assign_button,
-                  :announcements, :course_version_id, :course_path, :course_offering_edit_path], summary.keys
+                  :student_resources, :is_migrated, :has_verified_resources, :has_numbered_units, :course_versions, :show_assign_button,
+                  :announcements, :course_offering_id, :course_version_id, :course_path, :course_offering_edit_path], summary.keys
     assert_equal 'my-unit-group', summary[:name]
     assert_equal 'my-unit-group-title', summary[:title]
     assert_equal 'short description', summary[:description_short]
@@ -605,9 +606,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal 'unit1', summary[:scripts][0][:name]
     assert_equal 'unit1-description', summary[:scripts][0][:description]
 
-    assert_equal 1, summary[:versions].length
-    assert_equal 'my-unit-group', summary[:versions].first[:name]
-    assert_equal '1999', summary[:versions].first[:version_year]
+    assert_equal 1, summary[:course_versions].keys.length
 
     # make sure we dont have lesson info
     assert_nil summary[:scripts][0][:lessons]
@@ -683,21 +682,40 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal(expected, summary[:description_teacher])
   end
 
-  test 'summarize_version' do
+  test 'summarize_course_versions' do
     csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
+    CourseOffering.add_course_offering(csp_2017)
     csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
+    CourseOffering.add_course_offering(csp_2018)
     csp_2019 = create(:unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
-    csp_2020 = create(:unit_group, name: 'csp-2020', family_name: 'csp', version_year: '2019', published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
+    CourseOffering.add_course_offering(csp_2019)
+    csp_2020 = create(:unit_group, name: 'csp-2020', family_name: 'csp', version_year: '2020', published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
+    CourseOffering.add_course_offering(csp_2020)
 
-    [csp_2017, csp_2018, csp_2019].each do |c|
-      summary = c.summarize_versions
-      assert_equal ['csp-2019', 'csp-2018', 'csp-2017'], summary.map {|h| h[:name]}
-      assert_equal [false, true, true], summary.map {|h| h[:is_stable]}
+    [csp_2017, csp_2018, csp_2019, csp_2020].each do |c|
+      summary = c.summarize_course_versions(create(:teacher))
+      assert_equal ["Computer Science Principles ('17-'18)", "Computer Science Principles ('18-'19)", "Computer Science Principles ('19-'20)"], summary.values.map {|h| h[:name]}
+      assert_equal [true, true, false], summary.values.map {|h| h[:is_stable]}
+      assert_equal [false, true, false], summary.values.map {|h| h[:is_recommended]}
     end
+  end
 
-    # Result should include self, even if it's not launched
-    summary = csp_2020.summarize_versions
-    assert_equal ['csp-2020', 'csp-2019', 'csp-2018', 'csp-2017'], summary.map {|h| h[:name]}
+  test 'summarize_course_versions for student' do
+    csp_2017 = create(:unit_group, name: 'csp-2017', family_name: 'csp', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
+    CourseOffering.add_course_offering(csp_2017)
+    csp_2018 = create(:unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
+    CourseOffering.add_course_offering(csp_2018)
+    csp_2019 = create(:unit_group, name: 'csp-2019', family_name: 'csp', version_year: '2019', published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
+    CourseOffering.add_course_offering(csp_2019)
+    csp_2020 = create(:unit_group, name: 'csp-2020', family_name: 'csp', version_year: '2020', published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
+    CourseOffering.add_course_offering(csp_2020)
+
+    [csp_2017, csp_2018, csp_2019, csp_2020].each do |c|
+      summary = c.summarize_course_versions(create(:student))
+      assert_equal ["Computer Science Principles ('18-'19)"], summary.values.map {|h| h[:name]}
+      assert_equal [true], summary.values.map {|h| h[:is_stable]}
+      assert_equal [true], summary.values.map {|h| h[:is_recommended]}
+    end
   end
 
   class SelectCourseScriptTests < ActiveSupport::TestCase
@@ -1003,130 +1021,6 @@ class UnitGroupTest < ActiveSupport::TestCase
       refute @csp_2017.has_older_version_progress?(@student)
       refute @csp_2018.has_older_version_progress?(@student)
     end
-  end
-
-  test "valid_courses" do
-    csp = create(:unit_group, name: 'csp-2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
-    # Should still be in valid_courses if in preview published state
-    csd = create(:unit_group, name: 'csd-2017', published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
-    create(:unit_group, name: 'madeup')
-
-    assert_equal [csp, csd], UnitGroup.valid_courses
-  end
-
-  test "assignable_info" do
-    csp = create(:unit_group, name: 'csp-2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
-    csp1 = create(:script, name: 'csp1')
-    csp2 = create(:script, name: 'csp2')
-    csp2_alt = create(:script, name: 'csp2-alt', published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
-    csp3 = create(:script, name: 'csp3')
-
-    create(:unit_group_unit, position: 1, unit_group: csp, script: csp1)
-    create(:unit_group_unit, position: 2, unit_group: csp, script: csp2)
-    create(:unit_group_unit,
-      position: 2,
-      unit_group: csp,
-      script: csp2_alt,
-      experiment_name: 'csp2-alt-experiment',
-      default_script: csp2
-    )
-    create(:unit_group_unit, position: 3, unit_group: csp, script: csp3)
-
-    csp_assign_info = csp.assignable_info
-
-    # has fields from ScriptConstants::Assignable_Info
-    assert_equal csp.id, csp_assign_info[:id]
-    assert_equal 'csp-2017', csp_assign_info[:script_name]
-    assert_equal(-1, csp_assign_info[:category_priority])
-
-    # has localized name, category
-    assert_equal "Computer Science Principles ('17-'18)", csp_assign_info[:name]
-    assert_equal 'Full Courses', csp_assign_info[:category]
-
-    # has script_ids
-    assert_equal [csp1.id, csp2.id, csp3.id], csp_assign_info[:script_ids]
-
-    # teacher without experiment has default script_ids
-    teacher = create(:teacher)
-    csp_assign_info = csp.assignable_info(teacher)
-    assert_equal csp.id, csp_assign_info[:id]
-    assert_equal [csp1.id, csp2.id, csp3.id], csp_assign_info[:script_ids]
-
-    # teacher with experiment has alternate script_ids
-    teacher_with_experiment = create(:teacher)
-    experiment = create(:single_user_experiment, name: 'csp2-alt-experiment', min_user_id: teacher_with_experiment.id)
-    csp_assign_info = csp.assignable_info(teacher_with_experiment)
-    assert_equal csp.id, csp_assign_info[:id]
-    assert_equal [csp1.id, csp2_alt.id, csp3.id], csp_assign_info[:script_ids]
-    experiment.destroy
-  end
-
-  test "self.valid_courses: omits in-development courses" do
-    student = create :student
-    teacher = create :teacher
-    levelbuilder = create :levelbuilder
-    create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.in_development
-    assert UnitGroup.any?(&:in_development?)
-
-    refute UnitGroup.valid_courses(user: student).any?(&:in_development?)
-    refute UnitGroup.valid_courses(user: teacher).any?(&:in_development?)
-    assert UnitGroup.valid_courses(user: levelbuilder).any?(&:in_development?)
-  end
-
-  test "self.valid_courses: omits pilot courses" do
-    student = create :student
-    teacher = create :teacher
-    levelbuilder = create :levelbuilder
-    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    create :unit_group, pilot_experiment: 'my-experiment'
-    assert UnitGroup.any?(&:pilot?)
-
-    refute UnitGroup.valid_courses(user: student).any?(&:pilot_experiment)
-    refute UnitGroup.valid_courses(user: teacher).any?(&:pilot_experiment)
-    assert UnitGroup.valid_courses(user: pilot_teacher).any?(&:pilot_experiment)
-    assert UnitGroup.valid_courses(user: levelbuilder).any?(&:pilot_experiment)
-  end
-
-  test "valid_courses: pilot experiment results not cached" do
-    teacher = create :teacher
-    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-
-    csp_2019 = create :unit_group, name: 'csp-2019', published_state: SharedCourseConstants::PUBLISHED_STATE.preview
-    csp_2020 = create :unit_group, name: 'csp-2020', pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
-
-    assert_equal UnitGroup.valid_courses, [csp_2019]
-    assert_equal UnitGroup.valid_courses(user: teacher), [csp_2019]
-    # We had a caching bug where valid_courses with a user with pilot experiment would mutate the value stored
-    # in the Rails cache, causing the course behind the experiment to be returned for all calls afterwards.
-    # Verify that the results are still correct after this call.
-    assert_equal UnitGroup.valid_courses(user: pilot_teacher), [csp_2019, csp_2020]
-    assert_equal UnitGroup.valid_courses, [csp_2019]
-    assert_equal UnitGroup.valid_courses(user: teacher), [csp_2019]
-  end
-
-  test "assignable_for_user?: normal courses" do
-    student = create :student
-    teacher = create :teacher
-    levelbuilder = create :levelbuilder
-    course = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.stable
-
-    refute course.assignable_for_user?(student)
-    assert course.assignable_for_user?(teacher)
-    assert course.assignable_for_user?(levelbuilder)
-  end
-
-  test "assignable_for_user?: works for pilot courses" do
-    student = create :student
-    teacher = create :teacher
-    levelbuilder = create :levelbuilder
-    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    pilot_course = create :unit_group, pilot_experiment: 'my-experiment'
-    assert UnitGroup.any?(&:pilot?)
-
-    refute pilot_course.assignable_for_user?(student)
-    refute pilot_course.assignable_for_user?(teacher)
-    assert pilot_course.assignable_for_user?(pilot_teacher)
-    assert pilot_course.assignable_for_user?(levelbuilder)
   end
 
   test "update_teacher_resources" do

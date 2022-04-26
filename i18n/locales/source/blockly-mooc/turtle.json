@@ -38,6 +38,8 @@
   "drawATriangle": "draw a triangle",
   "drawUpperWave": "draw upper wave",
   "drawLowerWave": "draw lower wave",
+  "drawShape": "draw shape",
+  "drawShapeWithSideLength": "draw shape with side length",
   "drawSticker": "draw sticker",
   "drawStickerWithSize": "draw sticker with size",
   "forward": "forward",
@@ -103,5 +105,6 @@
   "turtleVisibilityTooltip": "Makes the artist visible or invisible.",
   "widthTooltip": "Changes the width of the pencil.",
   "withSize": "with size",
+  "withSideLength": "with side length",
   "wrongColour": "Your picture is the wrong color.  For this puzzle, it needs to be %1."
 }

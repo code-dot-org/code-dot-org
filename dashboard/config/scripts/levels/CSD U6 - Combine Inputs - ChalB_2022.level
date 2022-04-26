@@ -94,14 +94,12 @@
       "/docs/concepts/maker-toolkit/board-events/"
     ],
     "display_name": "Motorcycle Movement",
-    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L9/challenge/B.png",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
+    "thumbnail_url": "https://images.code.org/3f3c1010a959a4503137b0fc5e613c20-image-1648843153015.8.b-preview.gif",
     "bubble_choice_description": "Create an app that moves a motorcycle left and right on the screen using the circuit playground buttons",
     "start_blocks": "// Move the motorcycle left when the left button is clicked\r\nonBoardEvent( buttonL, \"press\", function() {\r\n  var motorX = getProperty(\"motorcycle\", \"x\");\r\n  motorX = motorX - 10;\r\n  setProperty(\"motorcycle\", \"x\", motorX);\r\n});\r\n\r\n// Move the motorcycle right when right button is clicked\r\n",
-    "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\" data-theme=\"classic\"><img data-canonical-image-url=\"icon://fa-motorcycle\" id=\"motorcycle\" style=\"height: 100px; width: 100px; position: absolute; top: 175px; margin: 0px; left: 105px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px;\" data-icon-color=\"#ff0000\" data-image-type=\"icon\"></div></div>"
+    "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\" data-theme=\"classic\"><img data-canonical-image-url=\"icon://fa-motorcycle\" id=\"motorcycle\" style=\"height: 100px; width: 100px; position: absolute; top: 175px; margin: 0px; left: 105px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px;\" data-icon-color=\"#ff0000\" data-image-type=\"icon\"></div></div>",
+    "preload_asset_list": null,
+    "encrypted_examples": "aRXff2fDt7V6jck5B7byYCDtr0Of3L9mzVXB5FKmqLMb4iiSIFGthK0W4k31\n5QR+77KP6Lz1BegLtTycwzSwqA==\n"
   },
   "game_id": 41,
   "published": true,
@@ -109,7 +107,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-12-19T00:53:57.060+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - ChalA_2022\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - ChalA_2022\"},{\"changed_at\":\"2021-12-19 00:53:59 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 17:22:32 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-03-07 17:55:40 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"long_instructions\",\"display_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-19T00:53:57.060+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - ChalA_2022\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - ChalA_2022\"},{\"changed_at\":\"2021-12-19 00:53:59 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 17:22:32 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-03-07 17:55:40 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"long_instructions\",\"display_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-04-01 19:59:24 +0000\",\"changed\":[\"code_functions\",\"thumbnail_url\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-04-01 20:00:26 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -1,0 +1,28 @@
+{
+  "name": "csd-2022",
+  "script_names": [
+    "csd1-2022",
+    "csd2-2022",
+    "csd3-2022",
+    "csd4-2022",
+    "csd5-2022",
+    "csd6-2022",
+    "csd7-2022",
+    "csd-post-survey-2022"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "csd",
+    "has_verified_resources": true,
+    "version_year": "2022"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

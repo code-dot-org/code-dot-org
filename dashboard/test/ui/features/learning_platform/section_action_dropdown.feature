@@ -17,7 +17,7 @@ Feature: Using the SectionActionDropdown
   # * Check that we get redirected to the right page
   Scenario: Managing students from SectionActionDropdown
     Given I am a teacher
-    And I create a new section and go home
+    And I create a new student section and go home
     And I wait to see ".ui-test-section-dropdown"
     And I open the section action dropdown
     And I press the first ".manage-students-link" element to load a new page
@@ -26,7 +26,7 @@ Feature: Using the SectionActionDropdown
   # * Check that we get redirected to the right page
   Scenario: Printing Login Cards from SectionActionDropdown
     Given I am a teacher
-    And I create a new section and go home
+    And I create a new student section and go home
     And I open the section action dropdown
     And I press the first ".print-login-link" element to load a new page
     And I wait until current URL contains "/login_info"
@@ -36,7 +36,7 @@ Feature: Using the SectionActionDropdown
   #     * If the save button cannot be pressed, we do not have focus in the right dialog.
   Scenario: Editing Section Information from SectionActionDropdown
     Given I am a teacher
-    And I create a new section and go home
+    And I create a new student section and go home
     And I open the section action dropdown
     And I press the first ".edit-section-details-link" element
     And I press the first ".uitest-saveButton" element
@@ -50,7 +50,7 @@ Feature: Using the SectionActionDropdown
   #   * Check that the option to hide the section is available again
   Scenario: Hiding/Showing Section from SectionActionDropdown
     Given I am a teacher
-    And I create a new section and go home
+    And I create a new student section and go home
     And I open the section action dropdown
     And I press the child number 4 of class ".pop-up-menu-item"
     And I wait until I don't see selector ".ui-test-section-dropdown"

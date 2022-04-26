@@ -18,7 +18,7 @@ social:
 
 이 최신 커리큘럼은 컴퓨터 과학 학습을 수학 및 언어, 과학, 사회와 같은 다른 과목의 학습에 연결합니다. CS 커넥션을 통해, K-12 학급은 흥미롭고 새로운 방식으로 일반 과목을 탐구합니다!
 
-## Modules
+## 모듈
 
 CS Connections modules are a structured series of lessons that integrate computer science learning into core subject areas like math, ELA, and science. These modules are aligned to standards across subjects and culminate in a cross-curricular project.
 
@@ -26,7 +26,7 @@ They're perfect for teachers who'd like to incorporate computer science into the
 
 {{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "ELA", duration: "5 hours", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Coding with Poetry", right_description: "Connect computer science and poetry in your classroom with this series of lessons.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "View module" }}
 
-## Open-ended projects
+## 오픈 엔드 프로젝트
 
 Continue making connections between computer science and traditional subjects with our cross-curricular projects. They take just 1-2 instructional hours to complete and are ideal for any teachers looking to develop topic-specific projects to fit within their existing curriculum.
 

@@ -516,6 +516,18 @@ class ScriptLevelsController < ApplicationController
       current_user.present? &&
       (current_user.teacher? || (current_user&.sections_as_student&.any?(&:code_review_enabled?) && !current_user.code_review_groups.empty?))
 
+    # Javalab exemplar URLs include ?exemplar=true as a URL param
+    if params[:exemplar]
+      return render 'levels/no_access_exemplar' unless current_user&.verified_instructor?
+
+      @is_viewing_exemplar = true
+      exemplar_sources = @level.try(:exemplar_sources)
+      return render 'levels/no_exemplar' unless exemplar_sources
+
+      level_view_options(@level.id, {is_viewing_exemplar: true, exemplar_sources: exemplar_sources})
+      readonly_view_options
+    end
+
     view_options(
       full_width: true,
       small_footer: @game.uses_small_footer? || @level.enable_scrolling?,

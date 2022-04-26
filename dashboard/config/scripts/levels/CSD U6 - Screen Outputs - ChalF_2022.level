@@ -71,11 +71,12 @@
     "ai_enabled": "false",
     "display_name": "Local Business App",
     "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L3/challenge/F.png",
+    "bubble_choice_description": "Create an app prototype that could be used to promote a local business",
     "preload_asset_list": null,
     "encrypted_examples": [
 
     ],
-    "bubble_choice_description": "Create an app prototype that could be used to promote a local business"
+    "teacher_markdown": "This level does not contain an exemplar because of how open-ended the directions are. Instead, we encourage you to consider this as a **focused free-play** level: students are free to design an app based on their own interests and creative expression, but focused in a particular area to give some initial guidance. This can be an opportunity to gain insights and offer feedback on the skills students demonstrate while building their app, even if they do not finish the level completely. This type of level can also reinforce the Problem Solving Process as students ideate and develop an app of their own choosing (Define - Prepare - Try - Reflect).\r\n\r\nAs students develop more skills throughout the unit, they may decide to use an idea from this level as the basis for one of their projects or to continue developing on their own time."
   },
   "game_id": 41,
   "published": true,
@@ -83,7 +84,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-12-16T03:05:14.508+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Outputs - ChalE_2022\\\"\"],\"cloned_from\":\"CSD U6 - Screen Outputs - ChalE_2022\"},{\"changed_at\":\"2021-12-16 03:05:16 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 16:58:05 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 16:58:10 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-22 22:17:13 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"display_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-16T03:05:14.508+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Outputs - ChalE_2022\\\"\"],\"cloned_from\":\"CSD U6 - Screen Outputs - ChalE_2022\"},{\"changed_at\":\"2021-12-16 03:05:16 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 16:58:05 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 16:58:10 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-22 22:17:13 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"display_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-03-14 23:55:56 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

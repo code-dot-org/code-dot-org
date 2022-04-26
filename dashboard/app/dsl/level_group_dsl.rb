@@ -107,8 +107,4 @@ class LevelGroupDSL < LevelDSL
     end
     new_dsl
   end
-
-  def self.parse_file(filename)
-    super(filename, File.basename(filename, '.level_group'))
-  end
 end

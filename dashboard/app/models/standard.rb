@@ -18,6 +18,7 @@
 class Standard < ApplicationRecord
   belongs_to :framework
   belongs_to :category, class_name: 'StandardCategory'
+  has_one :parent_category, through: :category
 
   # ensures associated lessons_standards are deleted when a standard is deleted
   has_and_belongs_to_many :lessons, association_foreign_key: 'stage_id'
@@ -30,20 +31,20 @@ class Standard < ApplicationRecord
     {
       id: id,
       shortcode: shortcode,
-      category_description: category.description,
-      description: description
+      category_description: category.localized_description,
+      description: localized_description
     }
   end
 
   def summarize_for_lesson_show
     {
-      frameworkName: framework.name,
-      parentCategoryShortcode: category&.parent_category&.shortcode,
-      parentCategoryDescription: category&.parent_category&.description,
+      frameworkName: framework.localized_name,
+      parentCategoryShortcode: parent_category&.shortcode,
+      parentCategoryDescription: parent_category&.localized_description,
       categoryShortcode: category&.shortcode,
-      categoryDescription: category&.description,
+      categoryDescription: category&.localized_description,
       shortcode: shortcode,
-      description: description
+      description: localized_description
     }
   end
 
@@ -51,13 +52,21 @@ class Standard < ApplicationRecord
     {
       frameworkShortcode: framework.shortcode,
       frameworkName: framework.name,
-      parentCategoryShortcode: category&.parent_category&.shortcode,
-      parentCategoryDescription: category&.parent_category&.description,
+      parentCategoryShortcode: parent_category&.shortcode,
+      parentCategoryDescription: parent_category&.description,
       categoryShortcode: category&.shortcode,
       categoryDescription: category&.description,
       shortcode: shortcode,
       description: description
     }
+  end
+
+  def crowdin_key
+    [framework.shortcode, shortcode].join('/')
+  end
+
+  def localized_description
+    Services::I18n::CurriculumSyncUtils.get_localized_property(self, :description, crowdin_key)
   end
 
   # Loads/merges the data from a CSV into the Standards table.

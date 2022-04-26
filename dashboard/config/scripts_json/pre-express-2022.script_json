@@ -19,8 +19,8 @@
     },
     "new_name": null,
     "family_name": "pre-express",
-    "serialized_at": "2022-02-02 17:55:17 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-04-21 16:35:54 UTC",
+    "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -7104,27 +7104,36 @@
       }
     },
     {
-      "name": "Course Vocabulary\t",
-      "url": "https://studio.code.org/s/pre-express-2021/vocab",
-      "key": "course_vocabulary",
+      "name": "All Resources",
+      "url": "/s/pre-express-2022/resources",
+      "key": "all_resources",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
+        "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "course_vocabulary"
+        "resource.key": "all_resources"
       }
     },
     {
-      "name": "CSTA Standards Mapping",
-      "url": "https://studio.code.org/s/pre-express-2021/standards",
-      "key": "csta_standards_mapping",
+      "name": "All Standards",
+      "url": "/s/pre-express-2022/standards",
+      "key": "all_standards",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
+        "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "csta_standards_mapping"
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/pre-express-2022/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
       }
     },
     {
@@ -7355,13 +7364,19 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "course_vocabulary",
+        "resource.key": "all_resources",
         "script.name": "pre-express-2022"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "csta_standards_mapping",
+        "resource.key": "all_standards",
+        "script.name": "pre-express-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
         "script.name": "pre-express-2022"
       }
     },

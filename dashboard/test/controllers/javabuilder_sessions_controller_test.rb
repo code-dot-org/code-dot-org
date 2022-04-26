@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class JavabuilderSessionsControllerTest < ActionController::TestCase
-  URL = "url"
   CSA_PILOT = "csa-pilot"
   CSA_PILOT_FACILITATORS = "csa-pilot-facilitators"
   CSD_PILOT = "csd-piloters"
@@ -10,20 +9,47 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     @rsa_key_test = OpenSSL::PKey::RSA.new(2048)
     OpenSSL::PKey::RSA.stubs(:new).returns(@rsa_key_test)
     @fake_channel_id = storage_encrypt_channel_id(1, 1)
+
+    JavalabFilesHelper.stubs(:get_project_files).returns({})
+    JavalabFilesHelper.stubs(:get_project_files_with_override_sources).returns({})
+    JavalabFilesHelper.stubs(:get_project_files_with_override_validation).returns({})
+    JavalabFilesHelper.stubs(:upload_project_files).returns(true)
   end
 
   test_user_gets_response_for :get_access_token,
     user: :student,
     response: :forbidden
   test_user_gets_response_for :get_access_token,
-    params: {channelId: storage_encrypt_channel_id(1, 1), projectVersion: 123, projectUrl: URL, executionType: 'RUN', miniAppType: 'console'},
+    params: {channelId: storage_encrypt_channel_id(1, 1), executionType: 'RUN', miniAppType: 'console'},
+    user: :levelbuilder,
+    response: :success
+
+  test_user_gets_response_for :get_access_token_with_override_sources,
+    user: :student,
+    response: :forbidden
+  test_user_gets_response_for :get_access_token_with_override_sources,
+    user: :teacher,
+    response: :forbidden
+  test_user_gets_response_for :get_access_token_with_override_sources,
+    params: {overrideSources: "{'source': {}}", executionType: 'RUN', miniAppType: 'console'},
+    user: :levelbuilder,
+    response: :success
+
+  test_user_gets_response_for :get_access_token_with_override_validation,
+    user: :student,
+    response: :forbidden
+  test_user_gets_response_for :get_access_token_with_override_validation,
+    user: :teacher,
+    response: :forbidden
+  test_user_gets_response_for :get_access_token_with_override_validation,
+    params: {channelId: storage_encrypt_channel_id(1, 1), overrideValidation: "{'MyClass.java': {}}", executionType: 'RUN', miniAppType: 'console'},
     user: :levelbuilder,
     response: :success
 
   test 'can decode jwt token' do
     levelbuilder = create :levelbuilder
     sign_in(levelbuilder)
-    get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123, projectUrl: URL, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
+    get :get_access_token, params: {channelId: @fake_channel_id, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
 
     response = JSON.parse(@response.body)
     token = response['token']
@@ -40,8 +66,6 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     sign_in(levelbuilder)
     get :get_access_token, params: {
       channelId: @fake_channel_id,
-      projectVersion: 123,
-      projectUrl: URL,
       executionType: 'RUN',
       options: {'useNeighborhood': true},
       miniAppType: 'console'
@@ -59,7 +83,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     user = create :user
     create(:single_user_experiment, min_user_id: user.id, name: CSA_PILOT)
     sign_in(user)
-    get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123, projectUrl: URL, executionType: 'RUN', miniAppType: 'console'}
+    get :get_access_token, params: {channelId: @fake_channel_id, executionType: 'RUN', miniAppType: 'console'}
     assert_response :success
   end
 
@@ -69,7 +93,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     section = create(:section, user: teacher, login_type: 'word')
     student_1 = create(:follower, section: section).student_user
     sign_in(student_1)
-    get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123, projectUrl: URL, executionType: 'RUN', miniAppType: 'console'}
+    get :get_access_token, params: {channelId: @fake_channel_id, executionType: 'RUN', miniAppType: 'console'}
     assert_response :success
     section.destroy
   end
@@ -80,7 +104,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     section = create(:section, user: teacher, login_type: 'word')
     student_1 = create(:follower, section: section).student_user
     sign_in(student_1)
-    get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123, projectUrl: URL, executionType: 'RUN', miniAppType: 'console'}
+    get :get_access_token, params: {channelId: @fake_channel_id, executionType: 'RUN', miniAppType: 'console'}
     assert_response :success
     section.destroy
   end
@@ -91,7 +115,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     section = create(:section, user: teacher, login_type: 'word')
     student_1 = create(:follower, section: section).student_user
     sign_in(student_1)
-    get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123, projectUrl: URL, executionType: 'RUN', miniAppType: 'console'}
+    get :get_access_token, params: {channelId: @fake_channel_id, executionType: 'RUN', miniAppType: 'console'}
     assert_response :forbidden
     section.destroy
   end
@@ -99,43 +123,43 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
   test 'param for channel id is required' do
     levelbuilder = create :levelbuilder
     sign_in(levelbuilder)
-    get :get_access_token, params: {projectVersion: 123, projectUrl: URL, executionType: 'RUN', miniAppType: 'console'}
+    get :get_access_token, params: {executionType: 'RUN', miniAppType: 'console'}
     assert_response :bad_request
   end
 
-  test 'param for project version is required' do
+  test 'param for override sources is required when using override sources route' do
     levelbuilder = create :levelbuilder
     sign_in(levelbuilder)
-    get :get_access_token, params: {channelId: @fake_channel_id, projectUrl: URL, executionType: 'RUN', miniAppType: 'console'}
+    get :get_access_token_with_override_sources, params: {executionType: 'RUN', miniAppType: 'console'}
     assert_response :bad_request
   end
 
-  test 'param project_url is required' do
+  test 'param for override validation is required when using override validation route' do
     levelbuilder = create :levelbuilder
     sign_in(levelbuilder)
-    get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123, executionType: 'RUN', miniAppType: 'console'}
+    get :get_access_token_with_override_validation, params: {executionType: 'RUN', miniAppType: 'console'}
     assert_response :bad_request
   end
 
   test 'param for execution type is required' do
     levelbuilder = create :levelbuilder
     sign_in(levelbuilder)
-    get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123, projectUrl: URL, miniAppType: 'console'}
+    get :get_access_token, params: {channelId: @fake_channel_id, miniAppType: 'console'}
     assert_response :bad_request
   end
 
   test 'param for mini-app type is required' do
     levelbuilder = create :levelbuilder
     sign_in(levelbuilder)
-    get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123, projectUrl: URL, executionType: 'RUN'}
+    get :get_access_token, params: {channelId: @fake_channel_id, executionType: 'RUN'}
     assert_response :bad_request
   end
 
-  test 'returns error if upload fails when not using dashboard sources' do
+  test 'returns error if upload fails' do
     JavalabFilesHelper.stubs(:upload_project_files).returns(false)
     levelbuilder = create :levelbuilder
     sign_in(levelbuilder)
-    get :get_access_token, params: {useDashboardSources: "false", channelId: @fake_channel_id, projectVersion: 123, projectUrl: URL, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
+    get :get_access_token, params: {channelId: @fake_channel_id, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
     assert_response :internal_server_error
   end
 
@@ -153,7 +177,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     create(:follower, section: section_3, student_user: student_1)
 
     sign_in(student_1)
-    get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123, projectUrl: URL, executionType: 'RUN', miniAppType: 'console'}
+    get :get_access_token, params: {channelId: @fake_channel_id, executionType: 'RUN', miniAppType: 'console'}
     assert_response :success
 
     response = JSON.parse(@response.body)
@@ -174,7 +198,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
   test 'levelbuilder has correct verified_teachers parameter' do
     levelbuilder = create :levelbuilder
     sign_in(levelbuilder)
-    get :get_access_token, params: {channelId: @fake_channel_id, projectVersion: 123, projectUrl: URL, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
+    get :get_access_token, params: {channelId: @fake_channel_id, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
 
     response = JSON.parse(@response.body)
     token = response['token']

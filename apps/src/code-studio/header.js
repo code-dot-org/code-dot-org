@@ -212,8 +212,18 @@ header.showMinimalProjectHeader = function() {
   getStore().dispatch(showMinimalProjectHeader());
 };
 
-header.showLevelBuilderSaveButton = function(getChanges) {
-  getStore().dispatch(showLevelBuilderSaveButton(getChanges));
+header.showLevelBuilderSaveButton = function(
+  getChanges,
+  overrideHeaderText,
+  overrideOnSaveURL
+) {
+  getStore().dispatch(
+    showLevelBuilderSaveButton(
+      getChanges,
+      overrideHeaderText,
+      overrideOnSaveURL
+    )
+  );
 };
 
 /**

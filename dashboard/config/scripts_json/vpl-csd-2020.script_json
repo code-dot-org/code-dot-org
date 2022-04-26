@@ -9,29 +9,11 @@
       "is_migrated": true,
       "pilot_experiment": "20-21-virtual-AYW-CSD",
       "student_detail_progress_view": true,
-      "teacher_resources": [
-        [
-          "lessonPlans",
-          "https://curriculum.code.org/csd-20/"
-        ],
-        [
-          "teacherForum",
-          "https://forum.code.org/"
-        ],
-        [
-          "curriculumGuide",
-          "https://docs.google.com/document/d/1-O6o5yQ4I1dk0n4Qzh86quXGBtzDDtyJ3Skr6RpcpO4/preview"
-        ],
-        [
-          "professionalLearning",
-          "/link/to/professional/learning"
-        ]
-      ],
       "version_year": "2020"
     },
     "new_name": null,
     "family_name": "vpl-csd",
-    "serialized_at": "2021-11-22 19:57:19 UTC",
+    "serialized_at": "2022-03-22 21:16:46 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -5475,13 +5457,79 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1-O6o5yQ4I1dk0n4Qzh86quXGBtzDDtyJ3Skr6RpcpO4/preview",
+      "key": "curriculum_guide",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "curriculum_guide"
+      }
+    },
+    {
+      "name": "Lesson Plans",
+      "url": "https://curriculum.code.org/csd-20/",
+      "key": "lesson_plans",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_plans"
+      }
+    },
+    {
+      "name": "Professional Learning",
+      "url": "/link/to/professional/learning",
+      "key": "professional_learning",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "professional_learning"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/",
+      "key": "teacher_forum",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "curriculum_guide",
+        "script.name": "vpl-csd-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "lesson_plans",
+        "script.name": "vpl-csd-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "professional_learning",
+        "script.name": "vpl-csd-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "vpl-csd-2020"
+      }
+    }
   ],
   "scripts_student_resources": [
 

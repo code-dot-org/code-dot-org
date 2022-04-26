@@ -47,7 +47,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2022-03-11 12:07:47 UTC",
+    "serialized_at": "2022-03-22 21:15:54 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -6703,13 +6703,96 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview",
+      "key": "curriculum_guide",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "curriculum_guide"
+      }
+    },
+    {
+      "name": "Lesson Plans",
+      "url": "https://curriculum.code.org/csf-19/coursec/",
+      "key": "lesson_plans",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_plans"
+      }
+    },
+    {
+      "name": "Standard Mappings",
+      "url": "https://curriculum.code.org/csf-19/coursec/standards/",
+      "key": "standard_mappings",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "standard_mappings"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csf",
+      "key": "teacher_forum",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
+    },
+    {
+      "name": "Vocabulary",
+      "url": "https://curriculum.code.org/csf-19/coursec/vocab/",
+      "key": "vocabulary",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "vocabulary"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "curriculum_guide",
+        "script.name": "coursec-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "lesson_plans",
+        "script.name": "coursec-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "standard_mappings",
+        "script.name": "coursec-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "coursec-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "vocabulary",
+        "script.name": "coursec-2019"
+      }
+    }
   ],
   "scripts_student_resources": [
 

@@ -66,6 +66,7 @@ const DEFAULT_Y = CANVAS_HEIGHT / 2;
 const DEFAULT_DIRECTION = 90;
 
 const MAX_STICKER_SIZE = 100;
+const MAX_SHAPE_SIZE = 400;
 
 const SMOOTH_ANIMATE_STEP_SIZE = 5;
 const FAST_SMOOTH_ANIMATE_STEP_SIZE = 15;
@@ -242,6 +243,40 @@ Artist.prototype.preloadAllStickerImages = function() {
 };
 
 /**
+ * Initializes all geometry sticker images as defined in this.skin.shapes,
+ * if any, storing the created images in this.shapes.
+ *
+ * NOTE: initializes this.shapes as a side effect
+ *
+ * @return {Promise} that resolves once all images have finished loading,
+ *         whether they did so successfully or not (or that resolves instantly
+ *         if there are no images to load).
+ */
+Artist.prototype.preloadAllShapeImages = function() {
+  this.shapes = {};
+
+  const loadShape = name =>
+    new Promise(resolve => {
+      const img = new Image();
+
+      img.onload = () => resolve();
+      img.onerror = () => resolve();
+
+      img.src = this.skin.shapes[name];
+      this.shapes[name] = img;
+    });
+
+  const shapes = (this.skin && this.skin.shapes) || {};
+  const shapeNames = Object.keys(shapes);
+
+  if (shapeNames.length) {
+    return Promise.all(shapeNames.map(loadShape));
+  } else {
+    return Promise.resolve();
+  }
+};
+
+/**
  * Initializes all pattern images as defined in
  * this.skin.lineStylePatternOptions, if any, storing the created images in
  * this.loadedPathPatterns.
@@ -369,6 +404,7 @@ Artist.prototype.init = function(config) {
 
   return Promise.all([
     this.preloadAllStickerImages(),
+    this.preloadAllShapeImages(),
     this.preloadAllPatternImages()
   ]).then(() => {
     ReactDOM.render(
@@ -1100,6 +1136,10 @@ Artist.prototype.step = function(command, values, options) {
   var result;
   var distance;
   var heading;
+  var img;
+  var dimensions;
+  var width;
+  var height;
 
   switch (command) {
     case 'FD': // Forward
@@ -1192,6 +1232,52 @@ Artist.prototype.step = function(command, values, options) {
     case 'ST': // Show Turtle
       this.visualization.avatar.visible = true;
       break;
+    case 'shape': {
+      let size = MAX_SHAPE_SIZE;
+
+      if (typeof values[1] === 'number') {
+        // Shapes are scaled up 4 times. The student is specifying the
+        // length of one side of the image, not the size of the entire image.
+        size = values[1] * 4;
+      }
+
+      if (this.visualization.shouldDrawNormalized_) {
+        values = Object.keys(this.shapes);
+      }
+
+      img = this.shapes[values[0]];
+
+      dimensions = scaleToBoundingBox(size, img.width, img.height);
+      width = dimensions.width;
+      height = dimensions.height;
+
+      // Rotate the image such the turtle is at the center of the bottom of
+      // the image and the image is pointing (from bottom to top) in the same
+      // direction as the turtle.
+      this.visualization.ctxScratch.save();
+      this.visualization.ctxScratch.translate(
+        this.visualization.x,
+        this.visualization.y
+      );
+      this.visualization.ctxScratch.rotate(
+        this.visualization.degreesToRadians_(this.visualization.heading)
+      );
+      this.visualization.ctxScratch.drawImage(
+        img,
+        0,
+        0,
+        img.width,
+        img.height,
+        -width / 2,
+        -height,
+        width,
+        height
+      );
+
+      this.visualization.ctxScratch.restore();
+
+      break;
+    }
     case 'sticker': {
       let size = MAX_STICKER_SIZE;
 
@@ -1203,13 +1289,13 @@ Artist.prototype.step = function(command, values, options) {
         values = Object.keys(this.stickers);
       }
 
-      var img = this.stickers[values[0]];
+      img = this.stickers[values[0]];
 
-      var dimensions = scaleToBoundingBox(size, img.width, img.height);
-      var width = dimensions.width;
-      var height = dimensions.height;
+      dimensions = scaleToBoundingBox(size, img.width, img.height);
+      width = dimensions.width;
+      height = dimensions.height;
 
-      // Rotate the image such the the turtle is at the center of the bottom of
+      // Rotate the image such the turtle is at the center of the bottom of
       // the image and the image is pointing (from bottom to top) in the same
       // direction as the turtle.
       this.visualization.ctxScratch.save();

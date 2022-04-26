@@ -153,7 +153,7 @@ module UsersHelper
       user_data[:disableSocialShare] = true if user.under_13?
       user_data[:lockableAuthorized] = user.teacher? ? user.verified_instructor? : user.student_of_verified_instructor?
       user_data[:isTeacher] = true if user.teacher?
-      user_data[:isVerifiedInstructor] = true if user.verified_teacher?
+      user_data[:isVerifiedInstructor] = true if user.verified_instructor?
       user_data[:linesOfCode] = user.total_lines
       user_data[:linesOfCodeText] = I18n.t('nav.popup.lines', lines: user_data[:linesOfCode])
     end
@@ -378,7 +378,8 @@ module UsersHelper
 
     # get progress for sublevels to save in levels hash
     level.sublevels.each do |sublevel|
-      ul = user_levels_by_level.try(:[], sublevel.id)
+      level_for_progress = BubbleChoice.level_for_progress_for_sublevel(sublevel)
+      ul = user_levels_by_level.try(:[], level_for_progress.id)
       feedback = teacher_feedback_by_level.try(:[], sublevel.id)
       sublevel_progress = get_level_progress(user.id, ul, feedback&.review_state, script_level, paired_user_levels, include_timestamp)
       next unless sublevel_progress

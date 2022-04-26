@@ -44,12 +44,12 @@ base_dir = CDO.sources_s3_directory
 count = 0
 key_not_found = 0
 
-puts "Fetching a list of applab apps from Pegasus DB. This step may take approximately 10 minutes"
-puts "to run over ~3M rows in storage_apps in production..."
+puts "Fetching a list of applab apps from Dashboard DB. This step may take approximately 10 minutes"
+puts "to run over ~3M rows in projects in production..."
 
 # An array of pairs of storage_owner_ids and channel_ids, each representing an applab app.
-PEGASUS_REPORTING_DB_READONLY = sequel_connect CDO.pegasus_reporting_db_reader, CDO.pegasus_reporting_db_reader
-applab_channels = PEGASUS_REPORTING_DB_READONLY[:storage_apps].grep(:value, '%applab%').map do |row|
+DASHBOARD_REPORTING_DB_READONLY = sequel_connect CDO.dashboard_reporting_db_reader, CDO.dashboard_reporting_db_reader
+applab_channels = DASHBOARD_REPORTING_DB_READONLY[:projects].grep(:value, '%applab%').map do |row|
   [row[:storage_id], row[:id]]
 end
 
@@ -57,9 +57,9 @@ puts "Scanning #{applab_channels.length} source files in S3 using #{MAX_THREADS}
 
 applab_channels.each_slice(MAX_THREADS) do |chunk|
   threads = []
-  chunk.each do |owner_storage_id, storage_app_id|
+  chunk.each do |owner_storage_id, project_id|
     threads << Thread.new do
-      s3_filename = "#{base_dir}/#{owner_storage_id}/#{storage_app_id}/main.json"
+      s3_filename = "#{base_dir}/#{owner_storage_id}/#{project_id}/main.json"
       begin
         body = s3.get_object(bucket: bucket, key: s3_filename)[:body].read
       rescue Aws::S3::Errors::NoSuchKey
@@ -71,7 +71,7 @@ applab_channels.each_slice(MAX_THREADS) do |chunk|
       if source
         commands.each do |regex, filename|
           source.scan(regex).each do |match|
-            channel = storage_encrypt_channel_id(owner_storage_id, storage_app_id)
+            channel = storage_encrypt_channel_id(owner_storage_id, project_id)
             project_url = "https://#{CDO.dashboard_hostname}/projects/applab/#{channel}/view"
 
             File.open(filename, 'a') do |file|

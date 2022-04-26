@@ -3,7 +3,7 @@
   "name": "led.on()",
   "category": "Circuit",
   "category_key": "circuit",
-  "content": "Turns the red LED on.\r\n\r\nUsing `led.on()` will keep the red LED next to the USB on continuously. To turn it off, use `led.off()` ",
+  "content": "Turns the red LED on.\r\n\r\nUsing [`led.on()`(#f78183)](/docs/applab/led.on/) will keep the red LED next to the USB on continuously. To turn it off, use [`led.off()`(#f78183)](/docs/applab/led.off/) ",
   "examples": [
     {
       "name": "Toggle Switch",
@@ -25,5 +25,5 @@
     }
   ],
   "short_description": "Turns the red LED on.",
-  "syntax": "led.on"
+  "syntax": "led.on()"
 }

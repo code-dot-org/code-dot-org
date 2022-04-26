@@ -47,7 +47,7 @@ class ScriptsController < ApplicationController
     @show_redirect_warning = params[:redirect_warning] == 'true'
     unless current_user&.student?
       @section = current_user&.sections&.all&.find {|s| s.id.to_s == params[:section_id]}&.summarize
-      sections = current_user.try {|u| u.sections.all.reject(&:hidden).map {|s| s.slice(:id, :name, :script_id, :course_id)}}
+      sections = current_user.try {|u| u.sections.all.reject(&:hidden).map(&:summarize)}
       @sections_with_assigned_info = sections&.map {|section| section.merge!({"isAssigned" => section[:script_id] == @script.id})}
     end
 
@@ -72,7 +72,7 @@ class ScriptsController < ApplicationController
       sections: @sections_with_assigned_info
     }
 
-    @script_data = @script.summarize(true, current_user).merge(additional_script_data)
+    @script_data = @script.summarize(true, current_user, false, request.locale).merge(additional_script_data)
 
     if @script.old_professional_learning_course? && current_user && Plc::UserCourseEnrollment.exists?(user: current_user, plc_course: @script.plc_course_unit.plc_course)
       @plc_breadcrumb = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.unit_group)}
