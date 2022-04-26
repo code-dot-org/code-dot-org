@@ -2,20 +2,27 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
-    "long_instructions": "predict",
+    "long_instructions": "##In MyConsole.java:\r\n\r\n1. Instantiate a `Scanner`(#e7e8ea) object called `input`(#e7e8ea).\r\n\r\n2. Prompt the user to enter a number and use `input.nextInt()`(#e7e8ea) to get their input.\r\n\r\n**Note:** Don't forget to store their input in a variable!\r\n\r\n3. Prompt the user to enter another number and use `input.nextInt()`(#e7e8ea) to get their input.\r\n\r\n4. Print the sum of their two numbers.\r\n\r\n5. Use the `close()`(#e7e8ea) to close the `Scanner`(#e7e8ea) object.\r\n\r\n![](https://images.code.org/3529672eb72644293f85a1bea291ef58-image-1647298892379.gif)\r\n\r\n::: details [**Show Me How**]\r\nA `Scanner`(#e7e8ea) object is instantiated using the following syntax:\r\n\r\n  ```\r\n  Scanner variableName = new Scanner(System.in);\r\n  ```\r\n:::",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
-    "csa_view_mode": "console"
+    "csa_view_mode": "console",
+    "display_name": "Add Two Numbers",
+    "bubble_choice_description": "Use the Scanner class to get two numbers from the user and print their sum.",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "import java.util.Scanner;\n\npublic class MyConsole {\n  public static void main(String[] args) {\n\n    // TO DO #1: Create a Scanner object called input.\n\n\n    // TO DO #2: Get the first number from the user.\n\n\n    // TO DO #3: Get the second number from the user.\n\n\n    // TO DO #4: Print the sum of the two numbers.\n\n\n    // TO DO #5: Close the Scanner.\n\n    \n  }\n}",
+        "isVisible": true
+      }
+    },
+    "thumbnail_url": "https://images.code.org/3529672eb72644293f85a1bea291ef58-image-1647298892379.gif",
+    "encrypted_exemplar_sources": "HM0H7Z3L+CTAPTxDu6u7zslyjM60me7VHOAdpgMoPI723fcl3Hz+KDX5JaKa\nieELtv4J6Nz8hDQGcjqOGcCCAIYFLpiW8ojOK2nzaUtvdmoVMFHpt4Kq5oOT\nDKXAd8TF6E1/EYBnLLOE2ZrIDE7fPkY/ptgHFFqahl6HatnNpfavRpmFZa2o\nRC+Et080t6u938qfh4ToZFseKQ3g5x8oSKzmmh/gOJ2CHXTp9xBKGSBG1X4Y\nXx58oN6SOR+VEd7e3Gl2AfFblbUXWFxXTNAxCYfT8MpRmrjnJaNKFAjzRO6A\nQzLCTAgXC1sfqjohllotSoQ1wOr/Wq8jZGLvGc6CVsXHWklCe8hcX9ypZlyY\nptaCmZ6CTgaI5qj/WshM4TC+beYRjw0QAwyvcrBRs66PKh95ChbIIxac/ZT4\nXH7gFcTwWqs7leIskhwEKxJgQDJnwj9Qkr+QGJwzvRgKjCnWwwIL8ZNzzpfC\nhuc3Q6Owr3GgCRv1sUvq3/Hci5CQTHxEf1N8zHWbqD666a5ogZoxQ+sOWwoO\nDbuvKVBUpl4nI2Z1RlqhaMM1fUs0g853qmN85zDGuihy4i0Uj0SHX8NM2aiG\nG6H3EBM4jJm/onUrh+tFnN50oaEauEpsK9eWvY+ZCzntoam/KCB5F+42V30e\nL+UZhu5FVAtCsqKyoP2enenZ33MyIDKDkk3d1wrEzUbj6uTfKrPnqZPxclK/\nKHclLTrvwUdxwjPDRdS/QN6FwbPmxBUGpdg0P0OX5/fBEINGWrkS6zADPp6k\nD9AAlebgQU12+WLC1n3didW2UzpduPvztKS9B6nP6QLabRzx7qsJ1HTtSCVR\ny61pLAzRnlTyRAFbadYZgDPMeQjGFgbUra5xStEzTYNPiTFYzc2SCt+xTc9v\ndf/9C6IqdQw9i2MBqKFNUd3PAkgI2uz9WC6q/HZ41e8shoj1YOhnvM7vVjwm\nxwRZFgq+lgdww7q+VffhFg==\n"
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-03-12T12:29:24.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-03-12 12:29:27 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-03-12 12:29:27 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-14 22:55:43 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-14 22:58:17 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-14 23:02:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-11 12:53:45 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

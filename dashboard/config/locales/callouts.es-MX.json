@@ -1377,11 +1377,11 @@
         },
         "courseD_maze_ramp3_2019": {
           "courseC_maze_programming3_2": "Puedes arrastras los bloques extra a la caja de herramientas para eliminarlos.",
-          "stone_block_2": "Los bloques grises están hechos de piedra y no se pueden eliminar."
+          "stone_block_2": "Los bloques grises están bloqueados y no se pueden eliminar."
         },
         "courseD_maze_ramp3_2020": {
           "courseC_maze_programming3_2": "Puedes arrastras los bloques extra a la caja de herramientas para eliminarlos.",
-          "stone_block_2": "Los bloques grises están hechos de piedra y no se pueden eliminar."
+          "stone_block_2": "Los bloques grises están bloqueados y no se pueden eliminar."
         },
         "courseD_maze_ramp4": {
           "courseC_maze_programming4_1": "Este es el límite de tus bloques. Te dice cuántos bloques te quedan por usar."
@@ -1880,7 +1880,7 @@
           "question_mark": "?"
         },
         "courseA_artist_loops4_2021": {
-          "courseA_artist_loops4_1": "Este número indica cuántos de estos bloques se pueden utilizar en este rompecabezas."
+          "courseA_artist_loops4_1": "Este número indica cuántos de estos bloques se pueden utilizar en este desafío."
         },
         "courseA_artist_loops7_2021": {
           "courseA_artist_loops7_1": "Este número significa que sólo uno de este tipo de bloque se puede usar en la respuesta final."
@@ -1907,7 +1907,7 @@
           "courseA_playLab_events5_1": "Haz click aquí para cambiar la dirección de la flecha del evento."
         },
         "courseA_playLab_events6_2021": {
-          "courseA_playLab_events6_1": "Esto te permite elegir un sonido \"aleatorio\", lo que significa que no sabes que vas a escuchar!"
+          "courseA_playLab_events6_1": "Esto te permite elegir un sonido \"aleatorio\", lo que significa que ¡no sabes que vas a escuchar!"
         },
         "courseB_Scrat_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "Después de conectar todos los bloques, pulsa \"Ejecutar\" para iniciar el programa."
@@ -1919,7 +1919,7 @@
           "courseB_artist_loops3_1": "Sólo hay uno de estos bloques en la caja de herramientas.  ¿Cómo se utilizará?"
         },
         "courseB_collector_loops1_2021": {
-          "courseB_collector_loops1_1": "Usa este bloque para recoger el tesoro"
+          "courseB_collector_loops1_1": "¿Ves algunos bloques nuevos en la caja de herramientas? No te preocupes, te mostraremos cómo utilizarlos más adelante en el escenario."
         },
         "courseB_maze_seq1_2021": {
           "courseB_maze_seq1": "¡Haz click en la bombilla cuando necesites ayuda!"
@@ -2006,7 +2006,7 @@
           "courseD_farmer_while7_2018_PathAhead": "Necesitarás usar un bloque \"mientras camino adelante\" para resolver este desafío."
         },
         "courseD_maze_intro4_2021": {
-          "courseC_maze_programming4_1": "Este es el límite de bloques. Te dice cuántos bloques te quedan por usar."
+          "courseC_maze_programming4_1": "Este es el límite de tus bloques. Te dice cuántos bloques te quedan por usar."
         },
         "courseD_maze_intro5a_2021": {
           "": "Estos bloques no tienen números. ¡Puedes usar tantos como quieras!"
@@ -2019,7 +2019,7 @@
         },
         "courseD_maze_ramp3_2021": {
           "courseC_maze_programming3_2": "Puedes arrastras los bloques extra a la caja de herramientas para eliminarlos.",
-          "stone_block_2": "Los bloques grises están hechos de piedra y no se pueden eliminar."
+          "stone_block_2": "Los bloques grises están bloqueados y no se pueden eliminar."
         },
         "courseD_maze_ramp5_2021": {
           "": "Estos bloques no tienen números. ¡Puedes usar tantos como quieras!"
@@ -2550,6 +2550,9 @@
         },
         "CSD web text size_2021": {
           "": "Usa este bloque para poner texto en la pantalla"
+        },
+        "CSD U3 Random add_2021": {
+          "CSD_U3_butterfly": "Observa atentamente este código."
         }
       }
     }

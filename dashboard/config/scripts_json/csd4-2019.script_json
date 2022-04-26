@@ -39,7 +39,7 @@
     },
     "new_name": null,
     "family_name": "csd4",
-    "serialized_at": "2022-03-11 12:07:51 UTC",
+    "serialized_at": "2022-03-22 21:16:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2955,13 +2955,96 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "Code Introduced",
+      "url": "https://curriculum.code.org/csd-19/unit4/code/",
+      "key": "code_introduced_2",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "code_introduced_2"
+      }
+    },
+    {
+      "name": "Lesson Plans",
+      "url": "https://curriculum.code.org/csd-19/unit4/",
+      "key": "lesson_plans_3",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_plans_3"
+      }
+    },
+    {
+      "name": "Standard Mappings",
+      "url": "https://curriculum.code.org/csd-19/unit4/standards/",
+      "key": "standard_mappings_3",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "standard_mappings_3"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csd",
+      "key": "teacher_forum",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
+    },
+    {
+      "name": "Vocabulary",
+      "url": "https://curriculum.code.org/csd-19/unit4/vocab/",
+      "key": "vocabulary_3",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "vocabulary_3"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "code_introduced_2",
+        "script.name": "csd4-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "lesson_plans_3",
+        "script.name": "csd4-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "standard_mappings_3",
+        "script.name": "csd4-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csd4-2019"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "vocabulary_3",
+        "script.name": "csd4-2019"
+      }
+    }
   ],
   "scripts_student_resources": [
 

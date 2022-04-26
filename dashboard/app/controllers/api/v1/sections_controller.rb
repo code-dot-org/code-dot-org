@@ -1,7 +1,8 @@
 class Api::V1::SectionsController < Api::V1::JsonApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
-  load_and_authorize_resource except: [:join, :leave, :membership, :valid_scripts, :create, :update, :require_captcha]
+  before_action :get_course_and_unit, only: [:create, :update]
+  load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :update, :require_captcha]
 
   skip_before_action :verify_authenticity_token, only: [:update_sharing_disabled, :update]
 
@@ -37,19 +38,19 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     # Once this has been done, endpoint can use CanCan load_and_authorize_resource
     # rather than manually authorizing (above)
     return head :bad_request unless Section.valid_login_type? params[:login_type]
-
-    valid_script = params[:script] && Script.valid_unit_id?(current_user, params[:script][:id])
-    script_to_assign = valid_script && Script.get_from_cache(params[:script][:id])
+    # TODO(dmcavoy): Remove after launching this feature
+    params[:participant_type] = SharedCourseConstants::PARTICIPANT_AUDIENCE.student if params[:participant_type].nil_or_empty?
+    return head :bad_request unless Section.valid_participant_type? params[:participant_type]
 
     section = Section.create(
       {
         user_id: current_user.id,
         name: params[:name].present? ? params[:name].to_s : I18n.t('sections.default_name', default: 'Untitled Section'),
         login_type: params[:login_type],
+        participant_type: params[:participant_type],
         grade: Section.valid_grade?(params[:grade].to_s) ? params[:grade].to_s : nil,
-        script_id: script_to_assign ? script_to_assign.id : params[:script_id],
-        course_id: params[:course_id] && UnitGroup.valid_course_id?(params[:course_id], current_user) ?
-          params[:course_id].to_i : nil,
+        script_id: @unit&.id,
+        course_id: @course&.id,
         lesson_extras: params['lesson_extras'] || false,
         pairing_allowed: params[:pairing_allowed].nil? ? true : params[:pairing_allowed],
         tts_autoplay_enabled: params[:tts_autoplay_enabled].nil? ? false : params[:tts_autoplay_enabled],
@@ -59,9 +60,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     render head :bad_request unless section
 
     # TODO: Move to an after_create step on Section model when old API is fully deprecated
-    if script_to_assign
-      current_user.assign_script script_to_assign
-    end
+    current_user.assign_script @unit if @unit
 
     render json: section.summarize
   end
@@ -71,28 +70,13 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     section = Section.find(params[:id])
     authorize! :manage, section
 
-    course_id = params[:course_id]
-
-    # This endpoint needs to satisfy two endpoint formats for getting script_id
-    # This should be updated soon to always expect params[:script_id]
-    script_id = params[:script][:id] if params[:script]
-    script_id ||= params[:script_id]
-
-    if script_id
-      script = Script.get_from_cache(script_id)
-      return head :bad_request if script.nil?
-      # If given a course and script, make sure the script is in that course
-      return head :bad_request if course_id && course_id != script.unit_group.try(:id)
-      # If script has a course and no course_id was provided, use default course
-      course_id ||= script.unit_group.try(:id)
-      # Unhide script for this section before assigning
-      section.toggle_hidden_script script, false
-    end
+    # Unhide unit for this section before assigning
+    section.toggle_hidden_script @unit, false if @unit
 
     # TODO: (madelynkasula) refactor to use strong params
     fields = {}
-    fields[:course_id] = set_course_id(course_id)
-    fields[:script_id] = set_script_id(script_id)
+    fields[:course_id] = @course&.id
+    fields[:script_id] = @unit&.id
     fields[:name] = params[:name] if params[:name].present?
     fields[:login_type] = params[:login_type] if Section.valid_login_type?(params[:login_type])
     fields[:grade] = params[:grade] if Section.valid_grade?(params[:grade])
@@ -103,9 +87,9 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     fields[:restrict_section] = params[:restrict_section] unless params[:restrict_section].nil?
 
     section.update!(fields)
-    if script_id
+    if @unit
       section.students.each do |student|
-        student.assign_script(script)
+        student.assign_script(@unit)
       end
     end
     render json: section.summarize
@@ -132,6 +116,13 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
       }, status: :bad_request
       return
     end
+    # add_student returns 'forbidden' when user can not be participant in section
+    if result == 'forbidden'
+      render json: {
+        result: 'cant_be_participant'
+      }, status: :forbidden
+      return
+    end
     # add_student returns 'full' when @section has or will have 500 followers
     if result == 'full'
       render json: {
@@ -149,6 +140,8 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     end
     render json: {
       sections: current_user.sections_as_student.map(&:summarize_without_students),
+      studentSections: current_user.sections_as_student_participant.map(&:summarize_without_students),
+      plSections: current_user.sections_as_pl_participant.map(&:summarize_without_students),
       result: result
     }
   end
@@ -159,6 +152,8 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     @section.remove_student(current_user, @follower, {notify: true})
     render json: {
       sections: current_user.sections_as_student.map(&:summarize_without_students),
+      studentSections: current_user.sections_as_student_participant.map(&:summarize_without_students),
+      plSections: current_user.sections_as_pl_participant.map(&:summarize_without_students),
       result: "success"
     }
   end
@@ -172,10 +167,6 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     }
   end
 
-  def student_script_ids
-    render json: {studentScriptIds: @section.student_script_ids}
-  end
-
   # GET /api/v1/sections/membership
   # Get the set of sections that the current user is enrolled in.
   def membership
@@ -183,20 +174,28 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     render json: current_user.sections_as_student, each_serializer: Api::V1::SectionNameAndIdSerializer
   end
 
-  # GET /api/v1/sections/valid_scripts
-  def valid_scripts
-    return head :forbidden unless current_user
-
-    scripts = Script.valid_scripts(current_user).map(&:assignable_info)
-    render json: scripts
-  end
-
   # GET /api/v1/sections/valid_course_offerings
   def valid_course_offerings
     return head :forbidden unless current_user
 
-    course_offerings = CourseOffering.assignable_course_offerings_info(current_user)
+    course_offerings = CourseOffering.assignable_course_offerings_info(current_user, request.locale)
     render json: course_offerings
+  end
+
+  # GET /api/v1/sections/available_participant_types
+  def available_participant_types
+    return head :forbidden unless current_user && !current_user.student?
+
+    participant_types =
+      if current_user.permission?(UserPermission::PLC_REVIEWER) || current_user.permission?(UserPermission::UNIVERSAL_INSTRUCTOR) || current_user.permission?(UserPermission::LEVELBUILDER)
+        [SharedCourseConstants::PARTICIPANT_AUDIENCE.student, SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator]
+      elsif current_user.permission?(UserPermission::FACILITATOR)
+        [SharedCourseConstants::PARTICIPANT_AUDIENCE.student, SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher]
+      else
+        [SharedCourseConstants::PARTICIPANT_AUDIENCE.student]
+      end
+
+    render json: {availableParticipantTypes: participant_types}
   end
 
   # GET /api/v1/sections/require_captcha
@@ -263,17 +262,29 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     @follower = Follower.where(section: @section.id, student_user_id: current_user.id).first
   end
 
-  # Update script_id if user provided valid script_id
-  # Set script_id to nil if invalid or no script_id provided
-  def set_script_id(script_id)
-    return script_id if Script.valid_unit_id?(current_user, script_id)
-    nil
-  end
+  def get_course_and_unit
+    return head :forbidden if current_user.nil?
 
-  # Update course_id if user provided valid course_id
-  # Set course_id to nil if invalid or no course_id provided
-  def set_course_id(course_id)
-    return course_id if UnitGroup.valid_course_id?(course_id, current_user)
-    nil
+    if params[:course_version_id]
+      course_version = CourseVersion.find_by_id(params[:course_version_id])
+      return head :bad_request unless course_version
+
+      if course_version.content_root_type == 'UnitGroup'
+        course_id = course_version.content_root_id
+        @course = UnitGroup.get_from_cache(course_id)
+        return head :bad_request unless @course
+        return head :forbidden unless @course.course_assignable?(current_user)
+        @unit = params[:unit_id] ? Script.get_from_cache(params[:unit_id]) : nil
+        return head :bad_request if @unit && @course.id != @unit.unit_group.try(:id)
+      elsif course_version.content_root_type == 'Script'
+        unit_id = course_version.content_root_id
+        @unit = Script.get_from_cache(unit_id)
+        return head :bad_request unless @unit
+        return head :forbidden unless @unit.course_assignable?(current_user)
+      end
+    else
+      # Should not get a unit_id unless also get a course version which is course
+      return head :bad_request if params[:unit_id]
+    end
   end
 end

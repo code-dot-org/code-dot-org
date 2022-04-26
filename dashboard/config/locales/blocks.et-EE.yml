@@ -781,6 +781,11 @@ et:
             '"while"': tingimusel
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
+      gamelab_everySeconds:
+        text: 'iga {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': sekundit
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:

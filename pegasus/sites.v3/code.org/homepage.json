@@ -1,27 +1,34 @@
 {
   "pages": {
-    "homepage": "higherPower"
+    "homepage": ["thebadguys"]
   },
 
   "banners": {
-    "higherPower": {
-      "dcdo": "higher-power-promotion",
-      "desktopImage": "/images/marketing/homepage-higher-power-background.jpg",
-      "items": [
+    "thebadguys": {
+      "dcdo": "thebadguys-promotion",
+      "class": "vertical-stack",
+      "desktopImage": "/images/marketing/homepage-thebadguys-background.jpg",
+      "leftImage": "/images/marketing/homepage-thebadguys-left.png",
+      "rightImage": "/images/marketing/homepage-thebadguys-right.png",
+      "actions": [
         {
           "type": "image",
-          "url": "/images/marketing/homepage-higher-power-logo.png"
+          "url": "/images/marketing/homepage-thebadguys-logo.png"
+        },
+        {
+          "type": "video_thumbnail",
+          "image_url": "/images/marketing/homepage-thebadguys-video-thumbnail.png",
+          "text": "homepage_action_text_codevideo",
+          "youtube_id": "6gauCnbXxnQ"
         },
         {
           "type": "text",
-          "text": "homepage_higher_power_body"
-        }
-      ],
-      "actions": [
+          "text": "homepage_thebadguys_body"
+        },
         {
+          "type": "cta_button_solid_black",
           "text": "homepage_action_text_try_it",
-          "url": "/coldplay",
-          "type": "cta_button_solid_yellow"
+          "url": "/thebadguys"
         }
       ]
     }

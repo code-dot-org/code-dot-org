@@ -4,15 +4,16 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "is_migrated": true,
+      "pilot_experiment": "csa-getting-started-preview"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-10 02:19:57 UTC",
-    "published_state": "in_development",
-    "instruction_type": "self_paced",
-    "instructor_audience": "facilitator",
-    "participant_audience": "teacher",
+    "serialized_at": "2022-04-19 21:08:13 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "self-paced-pl-csa1-2022"
     }
@@ -39,8 +40,8 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "You will:\n\n* Get an introduction to Code.org.\n* Learn how to engage in these professional learning modules.\n\n**Estimated time:** 20 minutes\n",
-        "student_overview": "You will:\n\n* Get an introduction to Code.org.\n* Learn how to engage in these professional learning modules.\n\n**Estimated time:** 20 minutes"
+        "overview": "**You will:**\n\n* Get an introduction to Code.org.\n* Learn how to engage in these professional learning modules.\n\n**Estimated time:** 20 minutes\n",
+        "student_overview": "**You will:**\n\n* Get an introduction to Code.org.\n* Learn how to engage in these professional learning modules.\n\n**Estimated time:** 20 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -56,8 +57,8 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "You will:\n\n* Get an introduction to the AP Computer Science A course\n* Learn Code.org’s curricular approach to CSA \n\n**Estimated time:** 40 minutes\n",
-        "student_overview": "You will:\n\n* Get an introduction to the AP Computer Science A course\n* Learn Code.org’s curricular approach to CSA \n\n**Estimated time:** 40 minutes\n"
+        "overview": "**You will:**\n\n* Get an introduction to the AP Computer Science A course\n* Learn Code.org’s curricular approach to CSA \n\n**Estimated time:** 40 minutes\n",
+        "student_overview": "**You will:**\n\n* Get an introduction to the AP Computer Science A course\n* Learn Code.org’s curricular approach to CSA \n\n**Estimated time:** 40 minutes\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",

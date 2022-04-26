@@ -851,6 +851,8 @@ gl:
           lesson_groups:
             required:
               display_name: Visión xeral
+        basketball:
+          name: pelota de baloncesto
         csd2-2017:
           lessons:
             Lists:
@@ -2584,6 +2586,10 @@ gl:
           lessons:
             lesson-6:
               name: Variables
+        csa3-2022:
+          lessons:
+            lesson-5:
+              name: Bucles "Para" (For)
         cs4all-invasive-species:
           lessons:
             lesson-12:

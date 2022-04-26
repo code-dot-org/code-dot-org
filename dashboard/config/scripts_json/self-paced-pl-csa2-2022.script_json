@@ -4,15 +4,16 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "is_migrated": true,
+      "pilot_experiment": "csa-getting-started-preview"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-10 00:04:48 UTC",
-    "published_state": "in_development",
-    "instruction_type": "self_paced",
-    "instructor_audience": "facilitator",
-    "participant_audience": "teacher",
+    "serialized_at": "2022-04-02 02:31:12 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "self-paced-pl-csa2-2022"
     }
@@ -39,8 +40,8 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n\n**Suggested time:** 30 minutes",
-        "student_overview": "**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n\n**Suggested time:** 30 minutes"
+        "overview": "**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n\n**Estimated time:** 30 minutes",
+        "student_overview": "**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n\n**Estimated time:** 30 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -56,8 +57,8 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**You will:**\n\n* Locate and use course lesson plans and teacher resources.\n\n**Suggested time:** 25 minutes",
-        "student_overview": "**You will:**\n\n* Locate and use course lesson plans and teacher resources.\n\n**Suggested time:** 25 minutes"
+        "overview": "**You will:**\n\n* Locate and use course lesson plans and teacher resources.\n\n**Estimated time:** 25 minutes",
+        "student_overview": "**You will:**\n\n* Locate and use course lesson plans and teacher resources.\n\n**Estimated time:** 25 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -73,8 +74,8 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "**You will:**\n\n* Learn how to access support while teaching the course.\n\n**Suggested time:** 15 minutes",
-        "student_overview": "**You will:**\n\n* Learn how to access support while teaching the course.\n\n**Suggested time:** 15 minutes"
+        "overview": "**You will:**\n\n* Learn how to access support while teaching the course.\n\n**Estimated time:** 15 minutes",
+        "student_overview": "**You will:**\n\n* Learn how to access support while teaching the course.\n\n**Estimated time:** 15 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -551,6 +552,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-22-mod2-Lesson-slides-levels-CSA"
+        ],
         "progression": "Explore course lesson plans"
       },
       "bonus": false,

@@ -16,6 +16,8 @@ import EmptySection from './EmptySection';
 import _ from 'lodash';
 import firehoseClient from '../../lib/util/firehose';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import i18n from '@cdo/locale';
 
 class TeacherDashboard extends Component {
   static propTypes = {
@@ -23,6 +25,7 @@ class TeacherDashboard extends Component {
     sectionId: PropTypes.number.isRequired,
     sectionName: PropTypes.string.isRequired,
     studentCount: PropTypes.number.isRequired,
+    coursesWithProgress: PropTypes.array.isRequired,
 
     // Provided by React router in parent.
     location: PropTypes.object.isRequired
@@ -55,7 +58,8 @@ class TeacherDashboard extends Component {
       studioUrlPrefix,
       sectionId,
       sectionName,
-      studentCount
+      studentCount,
+      coursesWithProgress
     } = this.props;
 
     // Select a default tab if current path doesn't match one of the paths in our TeacherDashboardPath type.
@@ -111,6 +115,25 @@ class TeacherDashboard extends Component {
             />
           )}
           <Route
+            path={TeacherDashboardPath.projects}
+            component={props => (
+              <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
+            )}
+          />
+          <Route
+            path={TeacherDashboardPath.stats}
+            component={props => <StatsTableWithData />}
+          />
+          {coursesWithProgress.length === 0 && (
+            <Route
+              component={() => (
+                <div style={styles.text}>
+                  <SafeMarkdown markdown={i18n.noProgressSection()} />
+                </div>
+              )}
+            />
+          )}
+          <Route
             path={TeacherDashboardPath.progress}
             component={props => <SectionProgress />}
           />
@@ -124,16 +147,6 @@ class TeacherDashboard extends Component {
               <SectionAssessments sectionName={sectionName} />
             )}
           />
-          <Route
-            path={TeacherDashboardPath.projects}
-            component={props => (
-              <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
-            )}
-          />
-          <Route
-            path={TeacherDashboardPath.stats}
-            component={props => <StatsTableWithData />}
-          />
         </Switch>
       </div>
     );
@@ -142,3 +155,11 @@ class TeacherDashboard extends Component {
 
 export const UnconnectedTeacherDashboard = TeacherDashboard;
 export default TeacherDashboard;
+
+const styles = {
+  text: {
+    fontStyle: 'italic',
+    textAlign: 'center',
+    paddingTop: 10
+  }
+};

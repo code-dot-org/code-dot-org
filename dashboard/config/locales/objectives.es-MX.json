@@ -336,13 +336,13 @@
           "description": "Crear una animación interactiva mediante eventos."
         },
         "c3951ab5-ed99-4234-9f90-d82cfca63b70": {
-          "description": "Crear una mascota virtual interactiva mediante eventos, comportamientos y arte personalizado."
+          "description": "Crear una mascota virtual interactiva usando eventos, comportamientos, variables y arte personalizado."
         },
         "cb9ec256-91d1-4dde-8cff-69bdb063aa0a": {
-          "description": "Programar soluciones a los problemas que surgen al diseñar una mascota virtual, entre ellos, cómo alimentarla."
+          "description": "Programar soluciones a problemas emergentes en el diseño de una mascota virtual, como la alimentación o el monitoreo de la energía."
         },
         "8cbf109a-b450-420b-973a-db9efd47f61f": {
-          "description": "Decida qué tipos de declaraciones están bien decir en línea y cuáles no."
+          "description": "Decidir qué tipo de cosas está bien decir en internet y qué no."
         },
         "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
           "description": "Declare una variable"
@@ -351,34 +351,34 @@
           "description": "Asignar un valor a una variable"
         },
         "41ddf297-8c92-42c1-8157-97ba0660483d": {
-          "description": "Llama a una variable varias veces en un programa."
+          "description": "Llamar a una variable varias veces en un programa."
         },
         "55e42aa4-7f88-4f0f-9d90-97716ef3ab75": {
-          "description": "Determine la relación entre cómo se define, almacena y recupera una variable cuando pulsamos «Ejecutar» en un programa."
+          "description": "Determinar la relación entre cómo se define, almacena y recupera una variable cuando presionamos \"Ejecutar\" en un programa."
         },
         "28d3cc79-4aea-431d-a445-745e75e747d8": {
           "description": "Usar variables para contener palabras y frases."
         },
         "66e1fe88-3957-437f-a065-66909844fcd1": {
-          "description": "Utilice variables junto con las indicaciones."
+          "description": "Usar variables junto con sugerencias."
         },
         "a81623bb-ffd8-467f-be3f-5488e42ea5f8": {
           "description": "Usar variables para contener palabras y frases."
         },
         "8dbf18d9-ed4b-4068-91a3-6d1c2bee531d": {
-          "description": "Utilice variables junto con las indicaciones."
+          "description": "Usar variables junto con sugerencias."
         },
         "a1e3a5d5-d609-4c1f-a4ef-6000a4335957": {
-          "description": "Cree un programa informático interactivo que responda a las entradas del usuario."
+          "description": "Crear un programa informático interactivo que responda a las entradas del usuario."
         },
         "0272de44-fd6e-4cc0-a5f1-b4f21a96d21b": {
-          "description": "Identificar los beneficios de usar una estructura de bucles en lugar de la repetición manual."
+          "description": "Identificar los beneficios de usar una estructura de bucle en lugar de la repetición manual."
         },
         "5936ef50-add4-4fbb-a911-224d5c1e9fcc": {
-          "description": "Diferenciar entre comandos que deben repetirse en bucles y comandos que deben usarse solos."
+          "description": "Diferenciar entre comandos que deben ser repetidos en bucle y comandos que deben ser usados de forma casual."
         },
         "8cba8ac9-820e-48fd-b726-f7926ecf3348": {
-          "description": "Asignar valores a las variables existentes."
+          "description": "Asignar valores a variables existentes."
         },
         "550ac608-922b-468f-a69d-08cc1f20799e": {
           "description": "Utilizar variables en lugar de valores repetitivos dentro de un programa."
@@ -387,46 +387,46 @@
           "description": "Usar variables para cambiar valores dentro de un bucle."
         },
         "dd570e3f-8340-4838-8ba1-de856546f834": {
-          "description": "Dividir las tareas complejas en secciones repetibles más pequeñas."
+          "description": "Dividir tareas complejas en secciones repetibles más pequeñas."
         },
         "12412b47-e83e-43a9-ad42-e98cba364913": {
-          "description": "Reconocer patrones grandes repetidos conformados de patrones repetidos más pequeños."
+          "description": "Reconocer que largos patrones repetidos están conformados de patrones repetidos más pequeños."
         },
         "931f4770-e471-4bf8-a79a-b9a7c9d14890": {
-          "description": "Identificar los beneficios de usar una estructura de bucles en lugar de la repetición manual."
+          "description": "Identificar los beneficios de usar una estructura de bucle en lugar de la repetición manual."
         },
         "059b2997-3d05-4186-8450-066fceeb8c5b": {
-          "description": "Identificar áreas en las que pueden utilizar variables para modificar cantidades durante el tiempo de ejecución. "
+          "description": "Identificar las áreas en donde puedan usarse variables para modificar cantidades mientras se ejecuta el programa."
         },
         "9d4ac105-0b5b-4e05-9a32-af6177abfb6c": {
-          "description": "Examine el código para encontrar lugares en los que las variables se pueden sustituir por valores específicos."
+          "description": "Examinar el código para encontrar zonas donde las variables puedan ser sustituidas por valores específicos."
         },
         "f0d9f34e-7686-4f9b-a29c-4a6bae1c038d": {
-          "description": "Determine el valor inicial, el valor de detención y el valor de escalón para un «bucle for»."
+          "description": "Determinar los valores de inicio, de término y de intervalo de pasos de un bucle “desde”."
         },
         "1e676bcd-e312-4827-88ce-d6befc87d61c": {
-          "description": "Ilustra los valores de contador que se alcanzan cada vez a través de un «bucle for» durante el tiempo de ejecución."
+          "description": "Ilustrar los valores del contador que se marcan a lo largo del bucle “desde”, durante la ejecución."
         },
         "a4f6a65a-de1d-4d51-9429-b3b381919b84": {
-          "description": "Determine el valor inicial, el valor de detención y el valor de escalón para un bucle for."
+          "description": "Determinar los valores de inicio, de término y de intervalo de pasos de un bucle “desde”."
         },
         "01f5efc8-bcf1-4dd9-b50a-6ba1abf40d06": {
-          "description": "Reconoce cuándo usar un bucle for y cuándo usar otros bucles, como los bucles repeat y while."
+          "description": "Reconocer cuándo usar un bucle “desde” u otros tipos de bucles, como los bucles “repetir” o “mientras”."
         },
         "68c038c1-990a-4009-ad61-619ba6ea71af": {
-          "description": "Utilice bucles for para cambiar el bucle varias veces con valores diferentes."
+          "description": "Usar los bucles “desde” para cambiar varias veces los valores de un bucle."
         },
         "7ad09074-8899-4330-bb54-6a00c5164299": {
-          "description": "Reconoce cuándo usar un bucle for y cuándo usar otros bucles, como los bucles repeat y while."
+          "description": "Reconocer cuándo usar un bucle “desde” u otros tipos de bucles, como los bucles “repetir” o “mientras”."
         },
         "081b1c52-9a72-44ac-a10e-86f0ebec4c43": {
-          "description": "Utilizar una simulación por ordenador para recopilar datos sobre un modelo"
+          "description": "Usar una simulación de computador para recolectar datos de un modelo."
         },
         "519c1444-230e-4182-a4eb-09414a7d09fb": {
-          "description": "Crear un gráfico de doble línea para comparar datos sobre dos fuentes diferentes"
+          "description": "Crear un gráfico de doble línea para comparar los datos de dos fuentes diferentes."
         },
         "16dabf47-0051-4143-834c-067bb8fb605c": {
-          "description": "Realizar y probar una predicción modificando variables de simulación"
+          "description": "Hacer y probar una predicción modificando las variables de simulación."
         },
         "f748f186-f152-468e-9f51-48bee23c44db": {
           "description": "Discute el papel que juega la inteligencia artificial en sus vidas."
@@ -438,25 +438,25 @@
           "description": "Piensa acerca de cómo el prejuicio humano juega un papel en el aprendizaje automático."
         },
         "03137644-b4a2-4c28-8a6a-9de5c407a8f1": {
-          "description": "Aprender sobre la complejidad de enviar mensajes a través de Internet."
+          "description": "Aprender sobre la complejidad de enviar mensajes por Internet."
         },
         "e94042c1-9793-4fe8-8ce9-1a76bc63f161": {
-          "description": "Traducir URL a direcciones IP."
+          "description": "Traducir URL en direcciones de IP."
         },
         "12c53e25-70d7-4192-a97a-da08dd673338": {
-          "description": "Aprender a planificar con anticipación para una asignación continua."
+          "description": "Planificar de antemano una tarea en curso."
         },
         "b76f1811-9865-416d-bd06-601301120384": {
-          "description": "Poder explicar cómo las limitaciones del sistema pueden afectar el diseño del proyecto."
+          "description": "Explicar cómo las limitaciones del sistema pueden afectar el diseño de un proyecto."
         },
         "8f7582ed-ec8f-4370-8c2a-49ac0d54e10b": {
-          "description": "Describir cómo el compromiso puede ayudar a mantener en marcha un proyecto e inspirar creatividad."
+          "description": "Explicar cómo el compromiso puede mantener un proyecto en marcha e inspirar creatividad."
         },
         "ad877f06-ef7d-4a69-8217-1e593cfac32f": {
-          "description": "Redactar e implementar planes para resolver cualquier problema en el código."
+          "description": "Idear e implementar planes para resolver problemas en el código."
         },
         "2fb6d16c-93cd-4226-b282-1f3d2c0f5c65": {
-          "description": "Articular el proceso de diseño y cómo ayudó a dar forma al proyecto finalizado."
+          "description": "Explicar el proceso de diseño y cómo ayudó a dar forma al resultado final del proyecto."
         },
         "e66808ba-0c59-48f7-93c3-f5267f7b3de9": {
           "description": "Aprender que la información que comparten en internet deja una huella digital o “rastro”."
@@ -504,7 +504,7 @@
           "description": "Convertir una serie de varias acciones en un solo bucle."
         },
         "b7345cb5-cb6f-4bed-b9c8-4db24c6fb0c4": {
-          "description": "Identificar los beneficios de usar una estructura de bucles en lugar de la repetición manual."
+          "description": "Identificar los beneficios de usar una estructura de bucle en lugar de la repetición manual."
         },
         "b8432810-ae14-4baf-9acb-e56ad1f8995f": {
           "description": "Descomponer una secuencia larga de instrucciones en una secuencia de repetición más corta."
@@ -516,7 +516,7 @@
           "description": "Utilizar una combinación de comandos secuenciales y en bucle para llegar al final de un laberinto."
         },
         "1a658eb5-9957-4d23-9736-ba85ea545c5e": {
-          "description": "Identificar los beneficios de usar una estructura de bucles en lugar de la repetición manual."
+          "description": "Identificar los beneficios de usar una estructura de bucle en lugar de la repetición manual."
         },
         "b46842b6-02c4-4fd5-abff-6180d77a5c55": {
           "description": "Descomponer una secuencia larga de instrucciones en una secuencia de repetición más corta."
@@ -621,7 +621,7 @@
           "description": "Mejorar un código existente al encontrar áreas de repetición y transformarlas en estructuras de bucle"
         },
         "632bd918-c124-4f4c-892e-980cdc07b3bf": {
-          "description": "Identificar los beneficios de usar una estructura de bucles en lugar de la repetición manual."
+          "description": "Identificar los beneficios de usar una estructura de bucle en lugar de la repetición manual."
         },
         "ea6a44e1-0175-4ecc-a257-4489b703c063": {
           "description": "Descomponer una secuencia larga de instrucciones en una secuencia de repetición más corta."
@@ -708,7 +708,7 @@
           "description": "Escribir instrucciones que usen bucles para repetir patrones."
         },
         "46288097-dbab-437f-897c-4e14352ae388": {
-          "description": "Identificar los beneficios de usar una estructura de bucles en lugar de la repetición manual."
+          "description": "Identificar los beneficios de usar una estructura de bucle en lugar de la repetición manual."
         },
         "dea9fd7a-8b64-4d36-90a4-1eee89ea355a": {
           "description": "Descomponer una secuencia larga de instrucciones en una secuencia de repetición más corta."
@@ -726,10 +726,10 @@
           "description": "Emplear una combinación de comandos secuenciales y en bucle para moverse y realizar acciones."
         },
         "bf154cd9-0914-43c2-b895-030de92d1427": {
-          "description": "Identificar los beneficios de usar una estructura de bucles en lugar de la repetición manual."
+          "description": "Identificar los beneficios de usar una estructura de bucle en lugar de la repetición manual."
         },
         "b27f9553-dc95-452c-a4ee-dc69db0fc913": {
-          "description": "Diferenciar entre comandos que deben repetirse en bucles y comandos que deben usarse solos."
+          "description": "Diferenciar entre comandos que deben ser repetidos en bucle y comandos que deben ser usados de forma casual."
         },
         "74ce2354-89e9-4396-8cf5-5f9a43e02bd4": {
           "description": "Repetir comandos dados por un instructor."
@@ -849,19 +849,19 @@
           "description": "Mejorar un código existente al encontrar áreas de repetición y transformarlas en estructuras de bucle"
         },
         "d0dae7ad-246b-4f90-8800-8cc9f1de25aa": {
-          "description": "Identificar los beneficios de usar una estructura de bucles en lugar de la repetición manual."
+          "description": "Identificar los beneficios de usar una estructura de bucle en lugar de la repetición manual."
         },
         "079d7fb4-c8a7-4319-80d6-53037ad705eb": {
-          "description": "Diferenciar entre comandos que deben repetirse en bucles y comandos que deben usarse solos."
+          "description": "Diferenciar entre comandos que deben ser repetidos en bucle y comandos que deben ser usados de forma casual."
         },
         "3a50aae3-6e0f-4821-9539-d06669eba0b1": {
-          "description": "Dividir las tareas complejas en secciones repetibles más pequeñas."
+          "description": "Dividir tareas complejas en secciones repetibles más pequeñas."
         },
         "a19b271e-27b4-410c-bd3f-20c07f3ce2f0": {
-          "description": "Reconocer patrones grandes repetidos conformados de patrones repetidos más pequeños."
+          "description": "Reconocer que largos patrones repetidos están conformados de patrones repetidos más pequeños."
         },
         "673ddc56-5217-45a9-919c-b42024f7de2b": {
-          "description": "Identificar los beneficios de usar una estructura de bucles en lugar de la repetición manual."
+          "description": "Identificar los beneficios de usar una estructura de bucle en lugar de la repetición manual."
         },
         "fd3464fd-5921-4873-a850-c0799c55eecd": {
           "description": "Definir circunstancias en que ciertas partes de un programa deban ejecutarse y cuándo no."
@@ -930,7 +930,7 @@
           "description": "Dividir formas complejas en partes simples."
         },
         "090bc5c3-f9cb-4aea-bc89-a1dd85c9d196": {
-          "description": "Define «sprite» como un personaje u objeto de la pantalla que se puede mover y cambiar."
+          "description": "Define \"sprite\" como un personaje u objeto de la pantalla que se puede mover y cambiar."
         },
         "09281dd0-4b33-4537-9543-a2377bc2f923": {
           "description": "Crear nuevos sprites y asignarles disfraces y comportamientos."
@@ -951,10 +951,10 @@
           "description": "Desarrollar programas que respondan a las entradas de los usuarios."
         },
         "203638b5-ded8-4023-be3e-f66dfbdc6f8f": {
-          "description": "Crea una mascota virtual interactiva usando eventos, comportamientos, variables y arte personalizado."
+          "description": "Crear una mascota virtual interactiva utilizando eventos, comportamientos, variables y arte personalizado."
         },
         "f5e7cf67-bc19-4175-82b0-f449d09551d4": {
-          "description": "Programe soluciones a los problemas que surgen al diseñar una mascota virtual, como alimentarla o controlar su felicidad."
+          "description": "Programar soluciones a los problemas que surgen al diseñar una mascota virtual, como alimentarla o controlar su felicidad."
         },
         "21ba9121-5cce-4ebe-8a8e-a04dae7f9c09": {
           "description": "Desarrollar programas que respondan a eventos cronometrados"
@@ -966,7 +966,7 @@
           "description": "Crear animaciones de baile a través del código"
         },
         "f66d5b0d-f5b6-441f-b3c0-c24a7a857912": {
-          "description": "Identificar los beneficios de usar una estructura de bucles en lugar de la repetición manual."
+          "description": "Identificar los beneficios de usar una estructura de bucle en lugar de la repetición manual."
         },
         "d41cb934-ead6-42d0-a3c6-3a692fa53626": {
           "description": "Descomponer una secuencia larga de instrucciones en una secuencia de repetición más corta."
@@ -975,19 +975,19 @@
           "description": "Utilizar una combinación de comandos secuenciales y en bucle para llegar al final de un laberinto."
         },
         "7304a528-6a3a-4670-9e66-1438d26c3fc2": {
-          "description": "Identificar los beneficios de usar una estructura de bucles en lugar de la repetición manual."
+          "description": "Identificar los beneficios de usar una estructura de bucle en lugar de la repetición manual."
         },
         "32250c07-4872-43ce-9968-33e17f779cf3": {
-          "description": "Diferenciar entre comandos que deben repetirse en bucles y comandos que deben usarse solos."
+          "description": "Diferenciar entre comandos que deben ser repetidos en bucle y comandos que deben ser usados de forma casual."
         },
         "06be5715-7c67-4b13-816d-acb7253a13b2": {
-          "description": "Dividir las tareas complejas en secciones repetibles más pequeñas."
+          "description": "Dividir tareas complejas en secciones repetibles más pequeñas."
         },
         "b884b12d-1247-42f3-a907-652dd25566f2": {
-          "description": "Reconocer patrones grandes repetidos conformados de patrones repetidos más pequeños."
+          "description": "Reconocer que largos patrones repetidos están conformados de patrones repetidos más pequeños."
         },
         "aca03fc9-6f07-4b4a-9b83-26e9ff32ce1f": {
-          "description": "Identificar los beneficios de usar una estructura de bucles en lugar de la repetición manual."
+          "description": "Identificar los beneficios de usar una estructura de bucle en lugar de la repetición manual."
         },
         "f35a3857-a630-4783-98c3-c0e6304af48f": {
           "description": "Separar el código en secuencias repetibles más grandes mediante bucles y bucles anidados."
@@ -1029,10 +1029,10 @@
           "description": "Traspasar declaraciones condicionales y bucles desde el lenguaje hablado hasta un programa."
         },
         "8107c1bb-a8ed-4cb4-9f5e-1a21126a4700": {
-          "description": "Anidar condicionales para analizar condiciones de valor múltiple mediante la lógica, si, si no si, si no."
+          "description": "Anidar condicionales para analizar condiciones de valor múltiple mediante la lógica si, si no si, si no."
         },
         "0174cd8f-0a91-423b-b643-2b8a0290fcff": {
-          "description": "Integrar un bucle y una sentencia condicional."
+          "description": "Integrar un bucle y una declaración condicional."
         },
         "1ece8579-425f-4324-a041-8f47ce736f42": {
           "description": "Usar funciones para simplificar programas complejos."
@@ -1053,13 +1053,13 @@
           "description": "Utilizar funciones predeterminadas para completar tareas que se repiten mucho."
         },
         "ef77d0c7-ef92-4f67-85fc-b9e4c8d14c49": {
-          "description": "Acciones Utilice variables para contener palabras y frases."
+          "description": "Acciones Usar variables para contener palabras y frases."
         },
         "077a5626-d78c-4ae2-9620-e0558a2ab8cf": {
-          "description": "Utilice variables junto con las indicaciones."
+          "description": "Usar variables junto con sugerencias."
         },
         "16854174-125c-4c79-9a42-064ef84535e3": {
-          "description": "Asignar valores a las variables existentes."
+          "description": "Asignar valores a variables existentes."
         },
         "4fe2cf70-9f34-41b0-bae1-9c5af60706de": {
           "description": "Utilizar variables en lugar de valores repetitivos dentro de un programa."
@@ -1068,22 +1068,22 @@
           "description": "Usar variables para cambiar valores dentro de un bucle."
         },
         "a80a4857-3cff-46f5-9fc5-63a3969a4631": {
-          "description": "Identificar áreas en las que pueden utilizar variables para modificar cantidades durante el tiempo de ejecución. "
+          "description": "Identificar las áreas en donde puedan usarse variables para modificar cantidades mientras se ejecuta el programa."
         },
         "dd4add89-b2d6-4b12-a073-6ec56b4c6de1": {
-          "description": "Examine el código para encontrar lugares en los que las variables se pueden sustituir por valores específicos."
+          "description": "Examinar el código para encontrar zonas donde las variables puedan ser sustituidas por valores específicos."
         },
         "14d7681c-8e63-4c4f-9bb8-4bbd17910ef2": {
-          "description": "Determine el valor inicial, el valor de detención y el valor de escalón para un bucle for."
+          "description": "Determinar los valores de inicio, de término y de intervalo de pasos de un bucle “desde”."
         },
         "3abab07c-e404-45d4-ab89-f92a34c68356": {
-          "description": "Reconoce cuándo usar un bucle for y cuándo usar otros bucles, como los bucles repeat y while."
+          "description": "Reconocer cuándo usar un bucle “desde” u otros tipos de bucles, como los bucles “repetir” o “mientras”."
         },
         "1b705c64-cbba-4dfe-8d47-549eb6754326": {
-          "description": "Utilice bucles for para cambiar el bucle varias veces con valores diferentes."
+          "description": "Usar los bucles “desde” para cambiar varias veces los valores de un bucle."
         },
         "a5169230-8faf-4492-bc49-ca11dca864fa": {
-          "description": "Reconoce cuándo usar un bucle for y cuándo usar otros bucles, como los bucles repeat y while."
+          "description": "Reconocer cuándo usar un bucle “desde” u otros tipos de bucles, como los bucles “repetir” o “mientras”."
         },
         "db7a8439-bc00-43ef-a9a8-2067da8dbda6": {
           "description": "Superar obstáculos como limitaciones de tiempo o errores."
@@ -1128,7 +1128,7 @@
           "description": "Mejorar un código existente al encontrar áreas de repetición y transformarlas en estructuras de bucle"
         },
         "442a1fcc-3ffc-4e3a-9c55-9cfd94d281e1": {
-          "description": "Identificar los beneficios de usar una estructura de bucles en lugar de la repetición manual."
+          "description": "Identificar los beneficios de usar una estructura de bucle en lugar de la repetición manual."
         },
         "8fef5927-aacf-4340-b4c3-d221ebe3f13a": {
           "description": "Descomponer una secuencia larga de instrucciones en una secuencia de repetición más corta."
@@ -1173,7 +1173,7 @@
           "description": "empezar a hacer conexiones sobre una nueva forma de escribir programas"
         },
         "88e512c1-9ce0-4aaf-9dab-e0f2716c73ae": {
-          "description": "Define «sprite» como un personaje u objeto de la pantalla que se puede mover y cambiar."
+          "description": "Define \"sprite\" como un personaje u objeto de la pantalla que se puede mover y cambiar."
         },
         "bd575116-1370-4f4c-bc5a-a81472d6ab61": {
           "description": "Crear nuevos sprites y asignarles disfraces y comportamientos."
@@ -1194,22 +1194,22 @@
           "description": "Explicar por qué es peligroso compartir información privada en Internet."
         },
         "c217a50f-4aa2-4eb7-998d-7d06b38bdd93": {
-          "description": "Elegir qué información sobre ellos mismos es segura para compartir en línea."
+          "description": "Elegir qué información sobre ellos es seguro compartir en Internet."
         },
         "3ab2d965-5fe5-4a1e-b745-8118e6815776": {
-          "description": "Crear un programa informático interactivo que exprese quiénes son ellos con texto e imágenes personalizadas."
+          "description": "Crear un programa de computador interactivo que exprese quienes son con textos e imágenes."
         },
         "0ab15cd0-3d1b-48a6-8a93-53c87d679c05": {
-          "description": "Interpretar el intercambio ético de material protegido por derechos de autor frente al intercambio que no es ético."
+          "description": "Interpretar el acto ético de compartir material protegido por copyright y el acto de compartir que no es ético."
         },
         "0709575a-e9e6-4856-a4f4-02b290f86975": {
-          "description": "Comprender sus propios derechos sobre los materiales que han creado"
+          "description": "Comprender sus derechos respecto a materiales creados por ellos mismos"
         },
         "5d061773-3d1d-4dc1-866b-66a878b9b5e4": {
-          "description": "Identificar los beneficios de usar una estructura de bucles en lugar de la repetición manual."
+          "description": "Identificar los beneficios de usar una estructura de bucle en lugar de la repetición manual."
         },
         "c94bf0ed-de3d-428d-b6af-f3d9283d6b81": {
-          "description": "Diferenciar entre comandos que deben repetirse en bucles y comandos que deben usarse solos."
+          "description": "Diferenciar entre comandos que deben ser repetidos en bucle y comandos que deben ser usados de forma casual."
         },
         "70f5581b-eb40-4ba7-9a34-3eb09e0f5ea8": {
           "description": "Combinar formas simples en diseños complejos con bucles anidados."
@@ -1218,7 +1218,7 @@
           "description": "Contar la cantidad de veces que una acción debe ser repetida y representarla como un bucle."
         },
         "5b77c883-5479-4cfe-a31a-605957dd083d": {
-          "description": "Dividir las tareas complejas en secciones repetibles más pequeñas."
+          "description": "Dividir tareas complejas en secciones repetibles más pequeñas."
         },
         "6174da85-eb3a-4c0e-925d-360b04604fdb": {
           "description": "Describir cuándo se necesita un bucle o un bucle anidado, o cuándo no se necesita ningún bucle."
@@ -1269,28 +1269,28 @@
           "description": "Utilizar funciones predeterminadas para completar tareas que se repiten mucho."
         },
         "87094122-056f-4fa4-83b7-e3d6abb52e67": {
-          "description": "Describe el impacto de las aplicaciones móviles en el mundo moderno."
+          "description": "Describir el impacto de las apps móviles en el mundo moderno."
         },
         "b672db1b-ee05-44b3-9f82-73b1b1f94e1a": {
-          "description": "Explica por qué la accesibilidad es una parte importante del diseño de una aplicación para los usuarios."
+          "description": "Explicar por qué la inclusión es una parte importante en la creación de una app."
         },
         "3a5ae2ad-5774-4da7-b4e4-4e0aaeb02cbe": {
-          "description": "Mejorar el diseño de una aplicación existente atendiendo a las necesidades de accesibilidad de los usuarios."
+          "description": "Mejorar una app existente al suplir las carencias de inclusión que los usuarios pudiesen tener."
         },
         "cc7b3a7a-21b5-4450-9b38-e85bb5c378bc": {
-          "description": "Aprender a planificar con anticipación para una asignación continua."
+          "description": "Planificar de antemano una tarea en curso."
         },
         "63070ef2-2aab-4493-a65f-7516e7aadb98": {
-          "description": "Explicar cómo las limitaciones del sistema pueden afectar el diseño del proyecto."
+          "description": "Explicar cómo las limitaciones del sistema pueden afectar el diseño de un proyecto."
         },
         "45927b72-922a-4845-8b40-2458a92372f5": {
-          "description": "Describir cómo el compromiso puede ayudar a mantener en marcha un proyecto e inspirar creatividad."
+          "description": "Explicar cómo el compromiso puede mantener un proyecto en marcha e inspirar creatividad."
         },
         "db7d248b-f06c-475c-8413-f1ea08fae35b": {
-          "description": "Redactar e implementar planes para resolver cualquier problema en el código."
+          "description": "Idear e implementar planes para resolver problemas en el código."
         },
         "2594052b-3b87-4d83-9038-56175058c1c2": {
-          "description": "Articular el proceso de diseño y cómo ayudó a dar forma al proyecto finalizado."
+          "description": "Explicar el proceso de diseño y cómo ayudó a dar forma al resultado final del proyecto."
         },
         "a49c45e6-6dd1-4a47-8b8b-23f63139beef": {
           "description": "Configurar las propiedades de los elementos de la interfaz de usuario mediante código"
@@ -1333,6 +1333,12 @@
         },
         "5b183dd0-2691-4e31-81d2-74139e335e46": {
           "description": "Representar el valor de un sensor de varias maneras"
+        },
+        "52c81204-19e3-433f-a6f2-9c7342c37b72": {
+          "description": "Implementar distintas funciones de un programa siguiendo una guía de proyecto estructurada."
+        },
+        "f574312e-c0f6-4d4c-a52a-10e2874d55ba": {
+          "description": "Explorar las características de una pieza de programa de forma independiente."
         },
         "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
           "description": "Entrena y prueba un modelo de aprendizaje automático."
@@ -1377,7 +1383,7 @@
           "description": "Coloca el texto en la pantalla usando un plano de coordenadas."
         },
         "b40e994c-3d1e-4ba8-9cf1-8674567bb26c": {
-          "description": "Utiliza argumentos para controlar el texto que se muestra en la pantalla."
+          "description": "Utilizar argumentos para controlar el texto que se muestra en la pantalla."
         },
         "d6709c2c-76b3-495d-bb07-af8a4c772363": {
           "description": "Utilizar un proceso estructurado para planificar y desarrollar un programa."
@@ -1417,6 +1423,57 @@
         },
         "899e51b2-2cb8-4948-9987-aaada64c6a85": {
           "description": "Aplicar un patrón iterador a las variables o propiedades en un bucle"
+        },
+        "ebf0954f-2190-4e20-8420-f0275aceee0a": {
+          "description": "Utilizar los bloques de velocidad y la velocidad de rotación para crear y cambiar los movimientos de un sprite."
+        },
+        "01426fc9-55b3-41ec-92ec-fb871a4739b1": {
+          "description": "Describir las ventajas y desventajas de simplificar el código utilizando los bloques de alto nivel"
+        },
+        "bb7bce08-c20e-4a8b-8b3e-def24447e33f": {
+          "description": "Detectar cuando los sprites se tocan o superponen y cambian el programa en respuesta."
+        },
+        "d3aa02b0-9340-47ab-b258-5446686c77b4": {
+          "description": "Describir cómo las abstracciones ayudan a gestionar la complejidad del código"
+        },
+        "63135326-7d2f-4974-af73-f8d7a801cd04": {
+          "description": "Utilizar la velocidad de un sprite con el patrón contador para crear distintos tipos de movimientos."
+        },
+        "6ed44bf4-19c7-4fd2-b72d-527e7c1ed3f3": {
+          "description": "Explicar como las construcciones de programación individuales pueden combinarse para crear comportamientos más complejos"
+        },
+        "2a7e04b6-f408-4915-a8df-10a590d5b45a": {
+          "description": "Modelar distintos tipos de interacciones entre sprites."
+        },
+        "ba90afe9-19b4-4a19-b7e7-9cc6dcc94b86": {
+          "description": "Describir cómo las abstracciones pueden construirse para desarrollar nuevas abstracciones."
+        },
+        "3572828f-fdf1-4708-bfd1-1a021799e8fd": {
+          "description": "Crear y utilizar funciones para bloques de código que realicen una sola tarea de alto nivel dentro de un programa."
+        },
+        "9d1d61de-4fa4-458f-b11f-aee208854019": {
+          "description": "Explicar las ventajas de utilizar funciones en un programa"
+        },
+        "dd877754-8fc0-4026-9205-385c6a3a2e4e": {
+          "description": "Explicar de qué forma las funciones permiten a los programadores razonar sobre un programa en un alto nivel"
+        },
+        "1cfd94eb-3bdf-4628-b8c5-2caeaa3dc189": {
+          "description": "Implementar distintas funciones de un programa siguiendo una guía de proyecto estructurada."
+        },
+        "87b37b88-d7c7-4ad7-a5bc-f4be00ef3016": {
+          "description": "Identificar las principales construcciones necesarias para construir distintos componentes de un juego"
+        },
+        "cb1a4260-ee88-49c1-abf7-92dfc8d1dc16": {
+          "description": "Implementar distintas funciones de un programa siguiendo una guía de proyecto estructurada."
+        },
+        "0b62d335-144f-495a-971c-fb1ee82f154a": {
+          "description": "Explorar las características de una pieza de programa de forma independiente."
+        },
+        "ea476a5f-3a8d-4c7a-bb2c-c6e58d216ef3": {
+          "description": "Crear un plan para construir una pieza de software describiendo sus componentes principales"
+        },
+        "7f488fda-a480-4f40-814d-6a2810780b38": {
+          "description": "Implementar un plan para crear una pieza de software"
         },
         "74126a3c-61fa-40ac-aef5-ffe0bf68a549": {
           "description": " Comunicarse y colaborar con sus compañeros de clase con el fin de buscar soluciones a distintos problemas "

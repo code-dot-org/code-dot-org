@@ -338,7 +338,7 @@
         },
         "sprite/coursef/2021": {
           "word": "Sprite",
-          "definition": "Gráfico en pantalla con ubicación, tamaño y apariencia."
+          "definition": "Un gráfico en pantalla con ubicación, tamaño y apariencia."
         },
         "user/coursef/2021": {
           "word": "Usuario",
@@ -346,7 +346,7 @@
         },
         "behavior/coursef/2021": {
           "word": "Comportamiento",
-          "definition": "Acción que realiza un sprite de forma continua hasta que se le indica que se detenga."
+          "definition": "Una acción que realiza un sprite de forma continua hasta que se le indica que se detenga."
         },
         "program/coursef/2021": {
           "word": "Programa",
@@ -362,15 +362,15 @@
         },
         "variable/coursef/2021": {
           "word": "Variable",
-          "definition": "un marcador de posición para una información que puede cambiar."
+          "definition": "Una etiqueta para una porción de información en un programa."
         },
         "prompt/coursef/2021": {
-          "word": "Prompt",
-          "definition": "Un mensaje en la pantalla del ordenador que espera la entrada del usuario."
+          "word": "Mensaje",
+          "definition": "Un mensaje en la pantalla del computador que espera la entrada del usuario."
         },
         "input/coursef/2021": {
           "word": "Entrada",
-          "definition": "La información que los ordenadores obtienen de los usuarios."
+          "definition": "La información que los computadores obtienen de los usuarios."
         },
         "loop/coursef/2021": {
           "word": "Bucle",
@@ -378,11 +378,11 @@
         },
         "repeat/coursef/2021": {
           "word": "Repetir",
-          "definition": "hacer algo de nuevo."
+          "definition": "Hacer algo otra vez."
         },
         "for_loop/coursef/2021": {
-          "word": "Bucles desde",
-          "definition": "bucles que tienen un comienzo, un final y un incremento predeterminados (intervalo de paso)."
+          "word": "Bucle desde",
+          "definition": "Bucles que tienen un inicio, un fin y un incremento prestablecidos (intervalo de pasos)."
         },
         "models_and_simulations/coursef/2021": {
           "word": "Modelos y Simulaciones",
@@ -394,55 +394,55 @@
         },
         "dns/coursef/2021": {
           "word": "DNS",
-          "definition": "abreviatura de Domain Name System (sistema de nombres de dominio), que traduce nombres de dominio (como ejemplo.com) a direcciones IP (como 93.184.216.34)."
+          "definition": "abreviación de Domain Name System (sistema de nombres de dominio). Este sistema traduce nombres de dominio como ejemplo.com a direcciones de IP, como 93.184.216.34."
         },
         "internet/coursef/2021": {
           "word": "Internet",
-          "definition": "un grupo de computadoras y servidores que están conectados entre sí."
+          "definition": "Un conjunto de computadores y servidores conectados unos con otros."
         },
         "packets/coursef/2021": {
           "word": "Paquetes",
-          "definition": "pequeños fragmentos de información que se formaron minuciosamente a partir de fragmentos más grandes."
+          "definition": "Pequeños conjuntos de información que fueron cuidadosamente formados en base a porciones de información más grandes."
         },
         "servers/coursef/2021": {
           "word": "Servidores",
-          "definition": "computadoras cuya función es proporcionar cosas a otros."
+          "definition": "Computadores que existen con el único objetivo de proveer servicios a los demás."
         },
         "url/coursef/2021": {
-          "word": "Stop",
-          "definition": "una dirección fácil de recordar que llama a una página web (como www.code.org)."
+          "word": "URL",
+          "definition": "Una dirección fácil de recordar para referirse a una página web, como www.code.org."
         },
         "dsl_cable/coursef/2021": {
           "word": "DSL/Cable",
-          "definition": "un método para enviar información mediante cables telefónicos o de televisión."
+          "definition": "Un método para enviar información a través de un cable de teléfono o de televisión."
         },
         "fiber_optic_cable/coursef/2021": {
           "word": "Cable de fibra óptica",
-          "definition": "una conexión que utiliza la luz para transmitir información."
+          "definition": "Una conexión que usa la luz para transmitir información."
         },
         "ip_address/coursef/2021": {
           "word": "Dirección IP",
-          "definition": "un número asignado a cualquier elemento que esté conectado a Internet."
+          "definition": "Un número asignado a cada aparato y dispositivo conectado a Internet."
         },
         "wi_fi/coursef/2021": {
           "word": "Wi-Fi",
-          "definition": "un método inalámbrico para enviar información mediante ondas de radio."
+          "definition": "Un método inalámbrico para enviar información a través de ondas de radio."
         },
         "define/coursef/2021": {
           "word": "Definir",
-          "definition": "descubrir los detalles de los problemas que estás tratando de resolver."
+          "definition": "Averiguar los detalles de los problemas que se intentan resolver."
         },
         "prepare/coursef/2021": {
           "word": "Preparar",
-          "definition": "investigar, planificar y adquirir materiales para la actividad que estás a punto de realizar."
+          "definition": "Investigar, planificar y recolectar materiales para la actividad que realizarás."
         },
         "reflect/coursef/2021": {
           "word": "Reflexionar",
-          "definition": "pensar cuidadosamente en algo con la intención de mejorar el resultado en el futuro."
+          "definition": "Pensar minuciosamente sobre algo, con el objetivo de mejorar el resultado."
         },
         "try/coursef/2021": {
-          "word": "Probar",
-          "definition": "intentar hacer algo."
+          "word": "Intentar",
+          "definition": "Probar cómo hacer algo."
         },
         "algorithm/courseb/2021": {
           "word": "Algoritmo",
@@ -490,7 +490,7 @@
         },
         "repeat/courseb/2021": {
           "word": "Repetir",
-          "definition": "hacer algo de nuevo."
+          "definition": "Hacer algo otra vez."
         },
         "event/courseb/2021": {
           "word": "Evento",
@@ -538,7 +538,7 @@
         },
         "repeat/coursea/2021": {
           "word": "Repetir",
-          "definition": "hacer algo de nuevo."
+          "definition": "Hacer algo otra vez."
         },
         "event/coursea/2021": {
           "word": "Evento",
@@ -574,7 +574,7 @@
         },
         "repeat/coursec/2021": {
           "word": "Repetir",
-          "definition": "hacer algo de nuevo."
+          "definition": "Hacer algo otra vez."
         },
         "event/coursec/2021": {
           "word": "Evento",
@@ -625,7 +625,7 @@
         },
         "repeat/coursed/2021": {
           "word": "Repetir",
-          "definition": "hacer algo de nuevo."
+          "definition": "Hacer algo otra vez."
         },
         "command/coursed/2021": {
           "word": "Comando",
@@ -677,18 +677,18 @@
         },
         "behavior/express/2021": {
           "word": "Comportamiento",
-          "definition": "Acción que realiza un sprite de forma continua hasta que se le indica que se detenga."
+          "definition": "Una acción que realiza un sprite de forma continua hasta que se le indica que se detenga."
         },
         "sprite/express/2021": {
           "word": "Sprite",
-          "definition": "Gráfico en pantalla con ubicación, tamaño y apariencia."
+          "definition": "Un gráfico en pantalla con ubicación, tamaño y apariencia."
         },
         "event/express/2021": {
           "word": "Evento",
           "definition": "una acción que hace que algo suceda."
         },
         "code/express/2021": {
-          "definition": "escribir código o escribir instrucciones para un equipo."
+          "definition": "escribir código, o escribir instrucciones para un computador."
         },
         "loop/express/2021": {
           "word": "Bucle",
@@ -696,7 +696,7 @@
         },
         "repeat/express/2021": {
           "word": "Repetir",
-          "definition": "hacer algo de nuevo."
+          "definition": "Hacer algo otra vez."
         },
         "command/express/2021": {
           "word": "Comando",
@@ -724,31 +724,31 @@
         },
         "variable/express/2021": {
           "word": "Variable",
-          "definition": "un marcador de posición para una información que puede cambiar."
+          "definition": "Una etiqueta para una porción de información en un programa."
         },
         "prompt/express/2021": {
-          "word": "preguntar",
-          "definition": "Un mensaje en la pantalla del ordenador que espera la entrada del usuario."
+          "word": "mensaje",
+          "definition": "Un mensaje en la pantalla del computador que espera la entrada del usuario."
         },
         "for_loop/express/2021": {
-          "word": "Bucles desde",
-          "definition": "bucles que tienen un comienzo, un final y un incremento predeterminados (intervalo de paso)."
+          "word": "Bucle desde",
+          "definition": "Bucles que tienen un inicio, un fin y un incremento prestablecidos (intervalo de pasos)."
         },
         "define/express/2021": {
           "word": "Definir",
-          "definition": "descubrir los detalles de los problemas que estás tratando de resolver."
+          "definition": "Averiguar los detalles de los problemas que se intentan resolver."
         },
         "prepare/express/2021": {
           "word": "Preparar",
-          "definition": "investigar, planificar y adquirir materiales para la actividad que estás a punto de realizar."
+          "definition": "Investigar, planificar y recolectar materiales para la actividad que realizarás."
         },
         "reflect/express/2021": {
           "word": "Reflexionar",
-          "definition": "pensar cuidadosamente en algo con la intención de mejorar el resultado en el futuro."
+          "definition": "Pensar minuciosamente sobre algo, con el objetivo de mejorar el resultado."
         },
         "try/express/2021": {
-          "word": "Probar",
-          "definition": "intentar hacer algo."
+          "word": "Intentar",
+          "definition": "Probar cómo hacer algo."
         },
         "click/pre-express/2021": {
           "word": "Clic",
@@ -796,7 +796,7 @@
         },
         "repeat/pre-express/2021": {
           "word": "Repetir",
-          "definition": "hacer algo de nuevo."
+          "definition": "Hacer algo otra vez."
         },
         "event/pre-express/2021": {
           "word": "Evento",
@@ -804,7 +804,7 @@
         },
         "behavior/coursee/2021": {
           "word": "Comportamiento",
-          "definition": "Acción que realiza un sprite de forma continua hasta que se le indica que se detenga."
+          "definition": "Una acción que realiza un sprite de forma continua hasta que se le indica que se detenga."
         },
         "algorithm/coursee/2021": {
           "word": "algoritmo",
@@ -812,7 +812,7 @@
         },
         "sprite/coursee/2021": {
           "word": "Sprite",
-          "definition": "Gráfico en pantalla con ubicación, tamaño y apariencia."
+          "definition": "Un gráfico en pantalla con ubicación, tamaño y apariencia."
         },
         "event/coursee/2021": {
           "word": "Evento",
@@ -820,7 +820,7 @@
         },
         "copyright/coursee/2021": {
           "word": "Derechos de autor",
-          "definition": "el derecho legal exclusivo de imprimir, publicar, interpretar, filmar o grabar material literario, artístico o musical, y de autorizar a otros a hacer lo mismo"
+          "definition": "el derecho legal a imprimir, publicar, realizar, filmar o grabar de forma exclusiva material literario, artístico o musical, y la capacidad de autorizar a otros a hacerlo también"
         },
         "loop/coursee/2021": {
           "word": "Bucle",
@@ -828,7 +828,7 @@
         },
         "repeat/coursee/2021": {
           "word": "Repetir",
-          "definition": "hacer algo de nuevo."
+          "definition": "Hacer algo otra vez."
         },
         "function/coursee/2021": {
           "word": "Función",
@@ -848,19 +848,19 @@
         },
         "define/coursee/2021": {
           "word": "Definir",
-          "definition": "descubrir los detalles de los problemas que estás tratando de resolver."
+          "definition": "Averiguar los detalles de los problemas que se intentan resolver."
         },
         "prepare/coursee/2021": {
           "word": "Preparar",
-          "definition": "investigar, planificar y adquirir materiales para la actividad que estás a punto de realizar."
+          "definition": "Investigar, planificar y recolectar materiales para la actividad que realizarás."
         },
         "reflect/coursee/2021": {
           "word": "Reflexionar",
-          "definition": "pensar cuidadosamente en algo con la intención de mejorar el resultado en el futuro."
+          "definition": "Pensar minuciosamente sobre algo, con el objetivo de mejorar el resultado."
         },
         "try/coursee/2021": {
-          "word": "Probar",
-          "definition": "intentar hacer algo."
+          "word": "Intentar",
+          "definition": "Probar cómo hacer algo."
         },
         "machine_learning/csd/2021": {
           "word": "Aprendizaje automático",
@@ -885,8 +885,8 @@
           "definition": "Datos o señales representados por un número finito de valores. Las señales analógicas (que pueden tener infinitos valores) deben ser convertidas a digitales para poder ser computadas."
         },
         "for_loop/csd/2021": {
-          "word": "Bucles desde",
-          "definition": "bucles que tienen un comienzo, un final y un incremento predeterminados (intervalo de paso)."
+          "word": "Bucle desde",
+          "definition": "Bucles que tienen un inicio, un fin y un incremento prestablecidos (intervalo de pasos)."
         },
         "parameter/csd/2021": {
           "word": "Parámetro",
@@ -902,7 +902,7 @@
         },
         "variable/csd/2021": {
           "word": "Variable",
-          "definition": "un marcador de posición para una información que puede cambiar."
+          "definition": "Una etiqueta para una porción de información en un programa."
         },
         "property/csd/2021": {
           "word": "Propiedades",
@@ -913,7 +913,7 @@
           "definition": "Un personaje en la pantalla con propiedades que describen su ubicación, movimiento y apariencia. "
         },
         "dot_notation/csd/2021": {
-          "word": "Dot notation (Notación de puntos)",
+          "word": "Notación de puntos",
           "definition": "La forma en la que las propiedades de las sprites se utilizan en el Game Lab. Conectando a la sprite y a sus propiedades mediante un punto."
         },
         "condition/csd/2021": {
@@ -929,10 +929,12 @@
           "definition": "En programación, una expresión evalúa verdadero o falso."
         },
         "abstraction/csd/2021": {
-          "word": "Abstracción"
+          "word": "Abstracción",
+          "definition": "una representación simplificada de algo más complejo. Las abstracciones permiten ocultar los detalles para ayudarnos a gestionar la complejidad, enfocarnos en conceptos relevantes y para que podamos analizar problemas en un nivel más alto."
         },
         "function/csd/2021": {
-          "word": "Función"
+          "word": "Función",
+          "definition": "Un fragmento etiquetado de instrucciones de programación."
         },
         "computer/csd/2021": {
           "word": "Computadora",

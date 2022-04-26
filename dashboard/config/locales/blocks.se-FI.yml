@@ -2,6 +2,8 @@
 se:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: ráhkat ođđa {ANIMATION_NAME} sprite dán {LOCATION}
       Dancelab_alternateMoves:
         text: "{GROUP} lonohola juohke {N} távtta \ngaskkal {MOVE1} and {MOVE2}"
         options:
@@ -924,6 +926,11 @@ se:
         text: maid sáhttá gaikut
       gamelab_edgesDisplace:
         text: ravddat lássejit {SPRITE} sirdimis
+      gamelab_everySeconds:
+        text: gearddut juohke {N} {UNIT}
+        options:
+          UNIT:
+            '"frames"': govat
       gamelab_getAllSprites:
         text: buot sprite:at
       gamelab_getProp:
@@ -1036,6 +1043,8 @@ se:
         text: sadji {SPRITE}:s
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeNewScaledSprite:
+        text: ráhkat ođđa {ANIMATION_NAME} sprite dán {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: ráhkat ođđa {ANIMATION_NAME} sprite dán {LOCATION}
       gamelab_makeNumSprites:

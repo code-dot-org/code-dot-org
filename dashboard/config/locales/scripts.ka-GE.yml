@@ -1370,6 +1370,9 @@ ka:
             თავგადასავლებში.
         oceans:
           title: AI ოკეანეებისთვის
+          lessons:
+            Oceans:
+              name: AI ოკეანეებისთვის
         CSPPD3-Unit3-pt2:
           lessons:
             Challenge Overview:
@@ -2469,6 +2472,7 @@ ka:
                 ბოლოს, კი მოსწავლეებს საშუალება ექნებათ გაამრავალფეროვნონ საკუთარი
                 თამაშები სხვადასხვა ხმებითა თუ სიჩქარეებით.'
           student_description: აირჩიეთ თქვენი გუნდი და შექმენით კალათბურთის თამაში
+          name: კალათბურთი
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -7844,10 +7848,6 @@ ka:
               display_name: შიგთავსი
             required:
               display_name: მიმოხილვა
-        dance-2019:
-          lessons:
-            Dance Party:
-              name: ცეკვა
         k5-onlinepd-2019:
           lesson_groups:
             k5_getting_started:
@@ -10500,7 +10500,7 @@ ka:
           description_audience: 'ასაკი: 5-8'
         coursec-2022:
           lessons:
-            My Robotic Friends Jr.:
+            My Robotic Friends Jr:
               name: 'პროგრამირება: ჩემი რობოტი მეგობრები.'
             Programming with Angry Birds:
               name: პროგრამირება ლაბირინთში
@@ -10511,7 +10511,7 @@ ka:
               name: განძის შეგროვება ლორელთან ერთად
             Creating Art with Code:
               name: კოდის მეშვეობით ხელოვნების შექმნა
-            My Loopy Robotic Friends Jr.:
+            My Loopy Robotic Friends Jr:
               name: 'ციკლები: ჩემი ციკლური რობოტი მეგობრები.'
             Loops with Rey and BB-8:
               name: ციკლები რეისთან და BB-8-სთან ერთად
@@ -10807,6 +10807,9 @@ ka:
             lessonGroup-2:
               display_name: შიგთავსი
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: '"მიზნისთვის" ციკლები'
           lesson_groups:
             lessonGroup-2:
               display_name: შიგთავსი

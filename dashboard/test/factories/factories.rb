@@ -6,6 +6,7 @@ FactoryGirl.define do
   factory :course_offering do
     sequence(:key, 'a') {|c| "bogus-course-offering-#{c}"}
     sequence(:display_name, 'a') {|c| "bogus-course-offering-#{c}"}
+    assignable true
   end
 
   factory :course_version do
@@ -31,6 +32,9 @@ FactoryGirl.define do
     sequence(:family_name) {|n| "bogus-course-#{n}"}
     version_year "1991"
     published_state "beta"
+    instruction_type "teacher_led"
+    participant_audience "student"
+    instructor_audience "teacher"
   end
 
   factory :experiment do
@@ -492,6 +496,18 @@ FactoryGirl.define do
     participant_type 'student'
 
     initialize_with {Section.new(attributes)}
+
+    trait :teacher_participants do
+      participant_type 'teacher'
+      login_type 'email'
+      grade 'pl'
+    end
+
+    trait :facilitator_participants do
+      participant_type 'facilitator'
+      login_type 'email'
+      grade 'pl'
+    end
   end
 
   factory :game do
@@ -758,6 +774,12 @@ FactoryGirl.define do
     participant_audience "student"
     instructor_audience "teacher"
 
+    trait :is_course do
+      sequence(:version_year) {|n| "bogus-version-year-#{n}"}
+      sequence(:family_name) {|n| "bogus-family-name-#{n}"}
+      is_course true
+    end
+
     trait :with_lessons do
       transient do
         lessons_count 2
@@ -840,7 +862,7 @@ FactoryGirl.define do
   end
 
   factory :featured_project do
-    storage_app_id {456}
+    project_id {456}
   end
 
   factory :user_ml_model do
@@ -984,6 +1006,18 @@ FactoryGirl.define do
     association :programming_environment
     sequence(:name) {|n| "programming expression #{n}"}
     sequence(:key) {|n| "programming-expression-#{n}"}
+  end
+
+  factory :programming_class do
+    association :programming_environment
+    sequence(:name) {|n| "programming class #{n}"}
+    sequence(:key) {|n| "programming-class-#{n}"}
+  end
+
+  factory :programming_method do
+    association :programming_class
+    sequence(:name) {|n| "programming method #{n}"}
+    sequence(:key) {|n| "programming-method-#{n}"}
   end
 
   factory :callout do
@@ -1520,7 +1554,7 @@ FactoryGirl.define do
     association :commenter, factory: :student
     association :project_owner, factory: :student
 
-    storage_app_id 1
+    project_id 1
     comment 'a comment about your project'
   end
 
@@ -1535,7 +1569,7 @@ FactoryGirl.define do
   end
 
   factory :reviewable_project do
-    sequence(:storage_app_id)
+    sequence(:project_id)
     association :user, factory: :student
     association :level
     association :script

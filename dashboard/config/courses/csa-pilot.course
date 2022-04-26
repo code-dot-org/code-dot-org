@@ -13,6 +13,8 @@
   ],
   "published_state": "pilot",
   "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
   "properties": {
     "family_name": "csa",
     "has_numbered_units": true,

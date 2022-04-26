@@ -28,7 +28,6 @@ import {
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import progress from '@cdo/apps/code-studio/progress';
 import UnitOverview from '@cdo/apps/code-studio/components/progress/UnitOverview.jsx';
-import {convertAssignmentVersionShapeFromServer} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {setStudentDefaultsSummaryView} from '@cdo/apps/code-studio/progressRedux';
 import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
 
@@ -112,6 +111,8 @@ function initPage() {
       <UnitOverview
         id={scriptData.id}
         courseId={scriptData.course_id}
+        courseOfferingId={scriptData.courseOfferingId}
+        courseVersionId={scriptData.courseVersionId}
         courseTitle={scriptData.course_title}
         courseLink={scriptData.course_link}
         excludeCsfColumnInLegend={!scriptData.csf}
@@ -124,7 +125,7 @@ function initPage() {
         showScriptVersionWarning={scriptData.show_script_version_warning}
         showRedirectWarning={scriptData.show_redirect_warning}
         redirectScriptUrl={scriptData.redirect_script_url}
-        versions={convertAssignmentVersionShapeFromServer(scriptData.versions)}
+        versions={scriptData.course_versions}
         courseName={scriptData.course_name}
         showAssignButton={scriptData.show_assign_button}
         userId={scriptData.user_id}

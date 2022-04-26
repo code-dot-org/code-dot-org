@@ -9,6 +9,7 @@
 #  updated_at   :datetime         not null
 #  category     :string(255)      default("other"), not null
 #  is_featured  :boolean          default(FALSE), not null
+#  assignable   :boolean          default(TRUE), not null
 #
 # Indexes
 #
@@ -77,11 +78,6 @@ class CourseOffering < ApplicationRecord
     course_versions.any? {|cv| cv.can_be_instructor?(user)}
   end
 
-  # All course versions in a course offering should have the same participant audience
-  def pl_course?
-    course_versions.any?(&:pl_course?)
-  end
-
   def any_versions_launched?
     course_versions.any?(&:launched?)
   end
@@ -90,38 +86,39 @@ class CourseOffering < ApplicationRecord
     course_versions.any?(&:in_development?)
   end
 
-  def any_version_has_pilot_access?(user)
-    course_versions.any? {|cv| cv.has_pilot_access?(user)}
+  def any_version_is_assignable_pilot?(user)
+    course_versions.any? {|cv| cv.pilot? && cv.has_pilot_experiment?(user)}
+  end
+
+  def any_version_is_assignable_editor_experiment?(user)
+    course_versions.any? {|cv| cv.content_root.is_a?(Script) && cv.has_editor_experiment?(user)}
   end
 
   def self.assignable_course_offerings(user)
-    CourseOffering.all.select {|co| co.assignable?(user)}
+    CourseOffering.all.select {|co| co.can_be_assigned?(user)}
   end
 
   def self.assignable_course_offerings_info(user, locale_code = 'en-us')
     assignable_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
-  def self.assignable_student_course_offerings(user)
-    assignable_course_offerings(user).select {|aco| !aco.pl_course?}
+  def self.single_unit_course_offerings_containing_units_info(unit_ids)
+    single_unit_course_offerings_containing_units(unit_ids).map {|co| co.summarize_for_unit_selector(unit_ids)}
   end
 
-  def self.assignable_student_course_offerings_info(user, locale_code = 'en-us')
-    assignable_student_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}.to_h
+  def summarize_for_unit_selector(unit_ids)
+    {
+      display_name: any_versions_launched? ? localized_display_name : localized_display_name + ' *',
+      units: course_versions.map(&:units).flatten.select {|u| u.included_in_units?(unit_ids)}.map(&:summarize_for_unit_selector).sort_by {|u| -1 * u[:version_year].to_i}
+    }
   end
 
-  def self.assignable_pl_course_offerings(user)
-    assignable_course_offerings(user).select(&:pl_course?)
-  end
-
-  def self.assignable_pl_course_offerings_info(user, locale_code = 'en-us')
-    assignable_pl_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}.to_h
-  end
-
-  def assignable?(user)
+  def can_be_assigned?(user)
+    return false unless assignable?
     return false unless can_be_instructor?(user)
     return true if any_versions_launched?
-    return true if Script.has_any_pilot_access?(user) && any_version_has_pilot_access?(user)
+    return true if any_version_is_assignable_pilot?(user)
+    return true if any_version_is_assignable_editor_experiment?(user)
     return true if user.permission?(UserPermission::LEVELBUILDER)
 
     false
@@ -132,9 +129,10 @@ class CourseOffering < ApplicationRecord
       id,
       {
         id: id,
-        display_name: localized_display_name,
+        display_name: any_versions_launched? ? localized_display_name : localized_display_name + ' *',
         category: category,
         is_featured: is_featured?,
+        participant_audience: course_versions.first.content_root.participant_audience,
         course_versions: course_versions.select {|cv| cv.course_assignable?(user)}.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
       }
     ]
@@ -154,7 +152,8 @@ class CourseOffering < ApplicationRecord
       key: key,
       is_featured: is_featured?,
       category: category,
-      display_name: display_name
+      display_name: display_name,
+      assignable: assignable?
     }
   end
 
@@ -163,7 +162,8 @@ class CourseOffering < ApplicationRecord
       key: key,
       display_name: display_name,
       category: category,
-      is_featured: is_featured
+      is_featured: is_featured,
+      assignable: assignable?
     }
   end
 
@@ -195,5 +195,17 @@ class CourseOffering < ApplicationRecord
     course_offering = CourseOffering.find_or_initialize_by(key: properties[:key])
     course_offering.update! properties
     course_offering.key
+  end
+
+  def units_included_in_any_version?(unit_ids)
+    course_versions.any? {|cv| cv.included_in_units?(unit_ids)}
+  end
+
+  def any_version_is_unit?
+    course_versions.any? {|cv| cv.content_root_type == 'Script'}
+  end
+
+  def self.single_unit_course_offerings_containing_units(unit_ids)
+    CourseOffering.all.select {|co| co.units_included_in_any_version?(unit_ids) && co.any_version_is_unit?}
   end
 end

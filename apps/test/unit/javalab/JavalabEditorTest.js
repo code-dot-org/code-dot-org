@@ -24,7 +24,11 @@ import javalab, {
   setBackpackApi
 } from '@cdo/apps/javalab/javalabRedux';
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
-import {setAllSources} from '../../../src/javalab/javalabRedux';
+import {
+  setAllSources,
+  setAllValidation,
+  setBackpackEnabled
+} from '../../../src/javalab/javalabRedux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import {allowConsoleWarnings} from '../../util/throwOnConsole';
@@ -68,6 +72,7 @@ describe('Java Lab Editor Test', () => {
         getFileList: backpackGetFileListStub
       })
     );
+    store.dispatch(setBackpackEnabled(true));
   });
 
   afterEach(() => {
@@ -85,11 +90,12 @@ describe('Java Lab Editor Test', () => {
     );
   };
 
+  const backpackHeaderButtonId = '#javalab-editor-backpack';
   const editorHeaderButtonIdentifiers = [
     '#javalab-editor-create-file',
     '#data-mode-versions-header',
     '#javalab-editor-save',
-    '#javalab-editor-backpack'
+    backpackHeaderButtonId
   ];
 
   describe('Editing Mode', () => {
@@ -242,6 +248,44 @@ describe('Java Lab Editor Test', () => {
         expect(javalabEditor.state.fileMetadata).to.deep.equal({
           'file-0': 'Class1.java',
           'file-1': 'Class2.java'
+        });
+      });
+
+      it('displays error message on a validation naming collision', () => {
+        const editor = createWrapper();
+        const javalabEditor = editor.find('JavalabEditor').instance();
+        store.dispatch(
+          setAllSources({
+            'Class1.java': {text: '', isVisible: true, isValidation: false}
+          })
+        );
+
+        store.dispatch(
+          setAllValidation({
+            'Validation.java': {text: '', isVisible: false, isValidation: true}
+          })
+        );
+
+        javalabEditor.setState({
+          showMenu: false,
+          contextTarget: null,
+          editTabKey: 'file-0',
+          editTabFilename: 'Class1.java',
+          openDialog: 'renameFile',
+          orderedTabKeys: ['file-0'],
+          fileMetadata: {
+            'file-0': 'Class1.java'
+          }
+        });
+        // we are trying to update Class1.java -> Validation.java here
+        javalabEditor.onRenameFile('Validation.java');
+        // after rename with existing filename, dialog should not close and
+        // error message should be populated
+        expect(javalabEditor.state.renameFileError).to.exist;
+        expect(javalabEditor.state.openDialog).to.equal('renameFile');
+        expect(javalabEditor.state.orderedTabKeys).to.deep.equal(['file-0']);
+        expect(javalabEditor.state.fileMetadata).to.deep.equal({
+          'file-0': 'Class1.java'
         });
       });
 
@@ -473,6 +517,32 @@ describe('Java Lab Editor Test', () => {
         });
       });
 
+      it('displays error message on a validation naming collision', () => {
+        const editor = createWrapper();
+        const javalabEditor = editor.find('JavalabEditor').instance();
+        store.dispatch(
+          setAllValidation({
+            'Validation.java': {text: '', isVisible: false, isValidation: true}
+          })
+        );
+
+        javalabEditor.setState({
+          showMenu: false,
+          contextTarget: null,
+          openDialog: 'createFile',
+          orderedTabKeys: [],
+          lastTabKeyIndex: 0,
+          fileMetadata: {}
+        });
+        javalabEditor.onCreateFile('Validation.java');
+        // after create with existing filename, dialog should not close and
+        // error message should be populated
+        expect(javalabEditor.state.newFileError).to.exist;
+        expect(javalabEditor.state.openDialog).to.equal('createFile');
+        expect(javalabEditor.state.orderedTabKeys).to.deep.equal([]);
+        expect(javalabEditor.state.fileMetadata).to.deep.equal({});
+      });
+
       it('displays error message if file name is blank', () => {
         const editor = createWrapper();
         const javalabEditor = editor.find('JavalabEditor').instance();
@@ -676,13 +746,23 @@ describe('Java Lab Editor Test', () => {
     it('header buttons are enabled', () => {
       const editor = createWrapper();
       editorHeaderButtonIdentifiers.forEach(headerButtonId => {
+        const propName =
+          headerButtonId === backpackHeaderButtonId
+            ? 'isButtonDisabled'
+            : 'isDisabled';
         const isButtonDisabled = editor
           .find(headerButtonId)
           .first()
-          .props().isDisabled;
+          .props()[propName];
 
         expect(isButtonDisabled).to.be.false;
       });
+    });
+
+    it('hides backpack button if disabled', () => {
+      store.dispatch(setBackpackEnabled(false));
+      const editor = createWrapper();
+      expect(editor.find(backpackHeaderButtonId)).to.have.lengthOf(0);
     });
   });
 
@@ -708,10 +788,14 @@ describe('Java Lab Editor Test', () => {
     it('header buttons are disabled', () => {
       const editor = createWrapper();
       editorHeaderButtonIdentifiers.forEach(headerButtonId => {
+        const propName =
+          headerButtonId === backpackHeaderButtonId
+            ? 'isButtonDisabled'
+            : 'isDisabled';
         const isButtonDisabled = editor
           .find(headerButtonId)
           .first()
-          .props().isDisabled;
+          .props()[propName];
 
         expect(isButtonDisabled).to.be.true;
       });

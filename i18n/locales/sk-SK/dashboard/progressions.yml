@@ -17,9 +17,9 @@ sk:
       'Artist: Variables': 'Umelec: Premenné'
       Assessment: Hodnotenie
       Attribution: Uvedenie zdroja
-      Back and Forth: Dozadu a dopredu
+      Back and Forth: Dopredu a dozadu
       Basic Conditionals: Základné podmienky
-      Bass, Mid, and Treble: Basy, Stredy, a Výšky
+      Bass, Mid, and Treble: Basy, stredy, výšky
       Be a Super Digital Citizen: Buď super digitálny občan
       Binary Bracelets - Unplugged Activity: Binárne náramky – aktivita bez počítača
       Binary Numbers: Binárne čísla
@@ -39,7 +39,7 @@ sk:
       Checking for a Winner: Určuje sa víťaz
       Choose Your Own Adventure: Interaktívny príbeh
       'Circuit Playground: Introduction': 'Cvičný obvod: Úvod'
-      Code Your Own Flappy Game: 'Video: Vytvor si vlastnú hru Flappy'
+      Code Your Own Flappy Game: Vytvor si hru v štýle Flappy Bird
       Collector Game: Hra Zberateľ
       Collision Detection: Detekcia kolízie
       Collision Detection Review: Detekcie kolízie - prehľad
@@ -65,7 +65,7 @@ sk:
       Dance Crews: Tanečné skupiny
       Data Visualization: Vykreslenie údajov
       De-bugging with the Step Button: Ladenie programu pomocou tlačidla krokovania
-      Debugging: Hľadanie a odstraňovanie chýb
+      Debugging: Ladenie
       Debugging with the Step Button: Ladenie pomocou tlačidla Krok
       Demo Apps: Demo aplikácie
       Design Mode: Dizajnový mód
@@ -135,7 +135,7 @@ sk:
       Introduction to Variables: Predstavenie premenných
       Introduction to Variables - Part 1: Predstavenie premenných - 1. časť
       Iteration and Parameters: Opakovanie a parametre
-      Keep On Dancing!: Pokračuj v tancovaní!
+      Keep On Dancing!: Neprestávaj tancovať!
       Keyboard Input: Stlačenie kláves ako vstup
       LED Apps: Appky s LEDkami
       Layout with CSS: Rozloženie pomocou CSS
@@ -155,7 +155,7 @@ sk:
       Making an Interactive Card: Vytvorenie interaktívnej pohľadnice
       'Maze Intro: Programming with Blocks': 'Úvod k bludiskám: Programovanie pomocou blokov'
       Measures: Takty
-      'Minecraft: Hero''s Journey': 'Minecraft: Cesta Hrdinu'
+      'Minecraft: Hero''s Journey': 'Minecraft: Cesta hrdinu'
       'Mini-Project: About Me': '"O mne" so Sprite Labom'
       'Mini-Project: Alien Dance Moves': 'Mini-Projekt: Tanečné pohyby votrelca'
       'Mini-Project: Alien Dance Party': 'Mini-Projekt: Votrelcova tanečná párty'
@@ -168,7 +168,7 @@ sk:
       'Mini-Project: User Input Programs': 'Miniprojekt: Programy reagujúce na vstupy používateľa'
       'Mini-Project: Virtual Pet': 'Mini-Projekt: Virtuálny maznáčik'
       'Mini-project: Chase Game': 'Mini-Projekt: Naháňačka'
-      'Mini-project: Flappy Game': 'Mini projekt: Hra s Flappym'
+      'Mini-project: Flappy Game': 'Miniprojekt: Hra v štýle Flappy Bird'
       'Mini-project: Interactive Poster': 'Mini-Projekt: Interaktívny plagát'
       'Mini-project: Jorge the Dog': 'Mini projekt: Pes Jorge'
       'Mini-project: Sticker Art': 'Miniprojekt: Pečiatkovanie'
@@ -212,7 +212,7 @@ sk:
       Project Work: Projektová práca
       Properties: Vlastnosti
       Publishing Your Website: Publikovanie tvojej webstránky
-      Quarter Notes: Štvrťové doby
+      Quarter Notes: Štvrťové noty
       RGB Exploration: Objavovanie RGB
       Reading Sensors: Čítanie snímačov
       Reflection: Reflexia
@@ -290,7 +290,7 @@ sk:
       'Video: Artist Intro with JR Hildebrande': 'Video: Úvod k Umelcovi s JR Hildebrandom'
       'Video: Booleans': 'Video: Logické výrazy'
       'Video: CS Matters': 'Video: Na informatike záleží'
-      'Video: Code Your Own Flappy Game': 'Video: Vytvor si vlastnú hru Flappy'
+      'Video: Code Your Own Flappy Game': 'Video: Vytvor si hru v štýle Flappy Bird'
       'Video: Conditional Statements': 'Video: Podmienené príkazy'
       'Video: Conditionals': 'Video: Blok Ak/Inak'
       'Video: Conditionals: If Statements': 'Video: Podmienky – Príkazy „ak“'
@@ -336,7 +336,7 @@ sk:
       'Video: Minecraft - Repeat Loops': 'Video: Minecraft – opakovacie cykly'
       'Video: Minecraft - The Agent': 'Video: Minecraft - Agent'
       'Video: Minecraft: Voyage Aquatic Conditionals': 'Video: Minecraft: Vodné dobrodružstvo – podmienky'
-      'Video: Minecraft: Voyage Aquatic Congratulations': 'Video: Minecraft: Vodné Dobrodružstvo – Gratulujeme'
+      'Video: Minecraft: Voyage Aquatic Congratulations': 'Video: Minecraft: Vodné dobrodružstvo – Gratulujeme'
       'Video: Minecraft: Voyage Aquatic Introduction': 'Video: Minecraft: Úvod do vodného dobrodružstva'
       'Video: Minecraft: Voyage Aquatic Repeat Until': 'Video: Minecraft: Vodné dobrodružstvo – „opakuj až kým neplatí“'
       'Video: Nested Loops': 'Video: Vnorené cykly'
@@ -374,7 +374,7 @@ sk:
       Warm Up: Úvodná aktivita
       Website Project: Projekt webstránky
       Welcome to Monster Town: Vitajte v mestečku Monster Town
-      Where'd They Go?: Kam zmizli?
+      Where'd They Go?: Kam sa podeli?
       While Loops with the Farmer: Cykly "pokiaľ" s Farmárkou
       Wrap-up: Zhrnutie
       Your Personal Website: Tvoja vlastná webstránka

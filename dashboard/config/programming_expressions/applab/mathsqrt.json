@@ -34,5 +34,5 @@
   ],
   "return_value": "A number that is the square root of x",
   "short_description": "\nTakes the square root of x.",
-  "syntax": "Math.sqrt"
+  "syntax": "Math.sqrt(x);"
 }

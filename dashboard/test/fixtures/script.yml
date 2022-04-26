@@ -59,9 +59,9 @@ jigsaw:
   participant_audience: student
   user_id:
   login_required: false
-  properties: "{}"
-  new_name: 
-  family_name: 
+  properties: '{"version_year":"unversioned", "is_course":true}'
+  new_name:
+  family_name: jigsaw
 hourofcode:
   id: 341
   name: hourofcode

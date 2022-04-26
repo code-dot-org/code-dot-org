@@ -2,6 +2,8 @@
 zh-CN:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: 在 {LOCATION} 处, 创建一个新的 {ANIMATION_NAME} 精灵图
       Dancelab_alternateMoves:
         text: "{GROUP} 每 {N} 小节交替动作 {MOVE1} 和 {MOVE2}"
         options:
@@ -1054,6 +1056,12 @@ zh-CN:
         text: 画线{COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: 边缘模块阻止了 {SPRITE} 移动
+      gamelab_everySeconds:
+        text: 每 {N} {UNIT} 重复一次
+        options:
+          UNIT:
+            '"seconds"': " 秒"
+            '"frames"': 帧
       gamelab_followingTargets:
         text: 遵循目标
       gamelab_getAllSprites:
@@ -1206,6 +1214,8 @@ zh-CN:
           EFFECT:
             '"pop"': 爆破
             '"rain"': 下雨
+      gamelab_makeNewScaledSprite:
+        text: 在 {LOCATION} 处, 创建一个新的 {ANIMATION_NAME} 精灵图
       gamelab_makeNewSpriteAnon:
         text: 在 {LOCATION} 处, 创建一个新的 {ANIMATION_NAME} 精灵图
       gamelab_makeNumSprites:

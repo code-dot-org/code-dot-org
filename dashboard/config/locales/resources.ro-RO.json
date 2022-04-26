@@ -107,6 +107,429 @@
           "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Video"
         },
+        "lesson_plans/courseb/2018": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/courseb/2018": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/courseb/2018": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/courseb/2018": {
+          "name": "Vocabular"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/coursea/2018": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/coursea/2018": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/coursea/2018": {
+          "name": "Vocabular"
+        },
+        "lesson_plans/coursed/2018": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/coursed/2018": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/coursed/2018": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/coursed/2018": {
+          "name": "Vocabular"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/coursef/2018": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/coursef/2018": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/coursef/2018": {
+          "name": "Vocabular"
+        },
+        "lesson_plans/express/2018": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/express/2018": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/express/2018": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/express/2018": {
+          "name": "Vocabular"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/coursee/2018": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/coursee/2018": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/coursee/2018": {
+          "name": "Vocabular"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/coursec/2018": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/coursec/2018": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/coursec/2018": {
+          "name": "Vocabular"
+        },
+        "code_introduced_1/csd/2018": {
+          "name": "Codul introdus"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings_2/csd/2018": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum_2/csd/2018": {
+          "name": "Forum profesori"
+        },
+        "vocabulary_2/csd/2018": {
+          "name": "Vocabular"
+        },
+        "code_introduced_3/csd/2018": {
+          "name": "Codul introdus"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings_5/csd/2018": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum_5/csd/2018": {
+          "name": "Forum profesori"
+        },
+        "vocabulary_5/csd/2018": {
+          "name": "Vocabular"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings_4/csd/2018": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum_4/csd/2018": {
+          "name": "Forum profesori"
+        },
+        "vocabulary_4/csd/2018": {
+          "name": "Vocabular"
+        },
+        "code_introduced_2/csd/2018": {
+          "name": "Codul introdus"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings_3/csd/2018": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum_3/csd/2018": {
+          "name": "Forum profesori"
+        },
+        "vocabulary_3/csd/2018": {
+          "name": "Vocabular"
+        },
+        "code_introduced/csd/2018": {
+          "name": "Codul introdus"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings_1/csd/2018": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum_1/csd/2018": {
+          "name": "Forum profesori"
+        },
+        "vocabulary_1/csd/2018": {
+          "name": "Vocabular"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/csd/2018": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/csd/2018": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/csd/2018": {
+          "name": "Vocabular"
+        },
+        "curriculum_guide/coursea/2019": {
+          "name": "Ghid Curicular"
+        },
+        "lesson_plans/coursea/2019": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/coursea/2019": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/coursea/2019": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/coursea/2019": {
+          "name": "Vocabular"
+        },
+        "curriculum_guide/courseb/2019": {
+          "name": "Ghid Curicular"
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/courseb/2019": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/courseb/2019": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/courseb/2019": {
+          "name": "Vocabular"
+        },
+        "curriculum_guide/coursed/2019": {
+          "name": "Ghid Curicular"
+        },
+        "lesson_plans/coursed/2019": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/coursed/2019": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/coursed/2019": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/coursed/2019": {
+          "name": "Vocabular"
+        },
+        "curriculum_guide/coursef/2019": {
+          "name": "Ghid Curicular"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/coursef/2019": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/coursef/2019": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/coursef/2019": {
+          "name": "Vocabular"
+        },
+        "curriculum_guide/coursee/2019": {
+          "name": "Ghid Curicular"
+        },
+        "lesson_plans/coursee/2019": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/coursee/2019": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/coursee/2019": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/coursee/2019": {
+          "name": "Vocabular"
+        },
+        "lesson_plans/express/2019": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/express/2019": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/express/2019": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/express/2019": {
+          "name": "Vocabular"
+        },
+        "curriculum_guide/coursec/2019": {
+          "name": "Ghid Curicular"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/coursec/2019": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/coursec/2019": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/coursec/2019": {
+          "name": "Vocabular"
+        },
+        "teacher_forum/csd/2019": {
+          "name": "Forum profesori"
+        },
+        "code_introduced_1/csd/2019": {
+          "name": "Codul introdus"
+        },
+        "lesson_plans_2/csd/2019": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings_2/csd/2019": {
+          "name": "Mapări standard"
+        },
+        "vocabulary_2/csd/2019": {
+          "name": "Vocabular"
+        },
+        "code_introduced_3/csd/2019": {
+          "name": "Codul introdus"
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings_5/csd/2019": {
+          "name": "Mapări standard"
+        },
+        "vocabulary_5/csd/2019": {
+          "name": "Vocabular"
+        },
+        "code_introduced_2/csd/2019": {
+          "name": "Codul introdus"
+        },
+        "lesson_plans_3/csd/2019": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings_3/csd/2019": {
+          "name": "Mapări standard"
+        },
+        "vocabulary_3/csd/2019": {
+          "name": "Vocabular"
+        },
+        "lesson_plans_4/csd/2019": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings_4/csd/2019": {
+          "name": "Mapări standard"
+        },
+        "vocabulary_4/csd/2019": {
+          "name": "Vocabular"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/csd/2019": {
+          "name": "Mapări standard"
+        },
+        "vocabulary/csd/2019": {
+          "name": "Vocabular"
+        },
+        "code_introduced/csd/2019": {
+          "name": "Codul introdus"
+        },
+        "lesson_plans_1/csd/2019": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings_1/csd/2019": {
+          "name": "Mapări standard"
+        },
+        "vocabulary_1/csd/2019": {
+          "name": "Vocabular"
+        },
+        "code_introduced_1/csd/2017": {
+          "name": "Codul introdus"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings_2/csd/2017": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum_2/csd/2017": {
+          "name": "Forum profesori"
+        },
+        "vocabulary_2/csd/2017": {
+          "name": "Vocabular"
+        },
+        "code_introduced_3/csd/2017": {
+          "name": "Codul introdus"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings_5/csd/2017": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum_5/csd/2017": {
+          "name": "Forum profesori"
+        },
+        "vocabulary_5/csd/2017": {
+          "name": "Vocabular"
+        },
+        "code_introduced/csd/2017": {
+          "name": "Codul introdus"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings_1/csd/2017": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum_1/csd/2017": {
+          "name": "Forum profesori"
+        },
+        "vocabulary_1/csd/2017": {
+          "name": "Vocabular"
+        },
+        "lesson_plans/csd/2017": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/csd/2017": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/csd/2017": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/csd/2017": {
+          "name": "Vocabular"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings_4/csd/2017": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum_4/csd/2017": {
+          "name": "Forum profesori"
+        },
+        "vocabulary_4/csd/2017": {
+          "name": "Vocabular"
+        },
+        "code_introduced_2/csd/2017": {
+          "name": "Codul introdus"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings_3/csd/2017": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum_3/csd/2017": {
+          "name": "Forum profesori"
+        },
+        "vocabulary_3/csd/2017": {
+          "name": "Vocabular"
+        },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "Lista poeziilor",
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
@@ -440,7 +863,8 @@
         },
         "unplugged-video-big-event/courseb/2021": {
           "name": "Marele eveniment",
-          "url": "https://youtu.be/u0WV9shCoak"
+          "url": "https://youtu.be/u0WV9shCoak",
+          "type": "Video"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "Marele eveniment",
@@ -1721,6 +2145,120 @@
         },
         "website-for-a-purpose/csd/2021": {
           "type": "Împerecheaţi dispozitivele"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/pre-express/2020": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/pre-express/2020": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/pre-express/2020": {
+          "name": "Vocabular"
+        },
+        "lesson_plans/express/2020": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/express/2020": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/express/2020": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/express/2020": {
+          "name": "Vocabular"
+        },
+        "curriculum_guide/courseb/2020": {
+          "name": "Ghid Curicular"
+        },
+        "lesson_plans/courseb/2020": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/courseb/2020": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/courseb/2020": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/courseb/2020": {
+          "name": "Vocabular"
+        },
+        "curriculum_guide/coursed/2020": {
+          "name": "Ghid Curicular"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/coursed/2020": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/coursed/2020": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/coursed/2020": {
+          "name": "Vocabular"
+        },
+        "curriculum_guide/coursec/2020": {
+          "name": "Ghid Curicular"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/coursec/2020": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/coursec/2020": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/coursec/2020": {
+          "name": "Vocabular"
+        },
+        "curriculum_guide/coursee/2020": {
+          "name": "Ghid Curicular"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/coursee/2020": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/coursee/2020": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/coursee/2020": {
+          "name": "Vocabular"
+        },
+        "curriculum_guide/coursea/2020": {
+          "name": "Ghid Curicular"
+        },
+        "lesson_plans/coursea/2020": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/coursea/2020": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/coursea/2020": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/coursea/2020": {
+          "name": "Vocabular"
+        },
+        "curriculum_guide/coursef/2020": {
+          "name": "Ghid Curicular"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "Planuri de lecție"
+        },
+        "standard_mappings/coursef/2020": {
+          "name": "Mapări standard"
+        },
+        "teacher_forum/coursef/2020": {
+          "name": "Forum profesori"
+        },
+        "vocabulary/coursef/2020": {
+          "name": "Vocabular"
         }
       }
     }

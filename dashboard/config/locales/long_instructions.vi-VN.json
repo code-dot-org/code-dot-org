@@ -1088,7 +1088,9 @@
         "poetry_hoc_sounds": "Thêm **âm thanh** và **nhạc** vào chương trình có thể thay đổi cảm xúc trong bài thơ khi đọc.\n\n-   Thêm khối âm thanh hoặc khối nhạc mới vào mã lệnh.\n-   Tìm âm thanh hoặc nhạc phù hợp với cảm xúc trong bài thơ.",
         "poetry_hoc_spriteBehaviors": "Nhân vật có thể thực hiện lặp đi lặp lại các hành động hoặc **hành vi** nhất định khi chương trình chạy.\n\n-   Thêm khối `sprite begins` (nhân vật bắt đầu) vào mã lệnh.\n-   Khám phá các hành vi nhân vật khác nhau.\n-   Chọn hành vi phù hợp với bài thơ.\n\n_Thử thử thách bổ sung:_ Thêm khối `sprite begins` (nhân vật bắt đầu) vào **event** (sự kiện)!",
         "poetry_hoc_spriteSizes": "Bạn có thể thay đổi **kích thước** của nhân vật đã tạo.\n\n-   Thay đổi kích thước của nhân vật bằng cách sử dụng khối `set size` (đặt kích thước) mới.\n-   Đừng quên chọn kích thước khác 100.",
-        "CSD U6 iter predict bubbles_2021": "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
+        "CSD U6 iter predict bubbles_2021": "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)",
+        "Course 4 Play Lab Vars 1": "Lần này, bạn không phải viết bất kỳ đoạn mã nào, chỉ cần nhấn `Run` để chơi trò chơi. Trong trò chơi này, bạn sẽ đóng vai 1 chú chó cố gắng thu thập nhiều lá cờ hơn chú mèo. Bạn hãy sử dụng nút tên để điều khiển chú chó. Nhấn `Finish` khi chơi xong trò chơi nhé.",
+        "Course 4 Play Lab Vars 2": "Cuộc đua trong câu đố trước đó không được công bằng lắm. Hãy thay đổi biến `dog_speed` để đảm bảo bạn có thể thu thập nhiều lá cờ hơn chú mèo. Ai thu thập được 10 lá cờ trước sẽ là người chiến thắng."
       }
     }
   }

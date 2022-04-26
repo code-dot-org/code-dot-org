@@ -1740,29 +1740,35 @@ a.download-video {
     color: $selectUserTypeButtonTextColor;
     border-radius: 15px;
     border-color: $selectUserTypeButtonBorderColor;
+    display: flex;
+    flex-direction: column;
 
     .user-type-name {
-      position: absolute;
-      left: 35%;
-      top: 20px;
+      width: 100%;
       text-align: center;
+      margin-top: 10px;
     }
 
     .user-type-desc {
-      position: absolute;
-      top: 55px;
-      text-align: left;
+      text-align: start;
+      margin-top: 10px;
       margin-left: 5px;
       margin-right: 5px;
     }
 
     .user-type-abilities-unordered-list {
-      position: absolute;
-      text-align: left;
-      margin-left: 30px;
-      margin-right: 5px;
-      top: 100px;
+      text-align: start;
+      width: 85%;
+      margin-inline-start: 10%;
     }
+  }
+
+  #select-user-type-original {
+    display: flex;
+  }
+
+  #select-user-type-variant {
+    display: none;
   }
 
   .select-user-type-teacher-button:hover, .select-user-type-student-button:hover {
@@ -1919,7 +1925,7 @@ a.download-video {
     }
 
     #signup-select-user-type-label {
-      width: 135px;
+      width: 220px;
     }
 
     .padded-container {

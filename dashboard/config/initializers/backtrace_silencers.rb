@@ -10,13 +10,18 @@
 silenced = [
   # Added in Rails 5.2
   /Single arity template handlers are deprecated/,
-  /Dangerous query method \(method whose arguments are used as raw SQL\) called with non-attribute argument\(s\)/,
   /SourceAnnotationExtractor is deprecated! Use Rails::SourceAnnotationExtractor instead/,
 
   # Added in Rails 6.0
   /Uniqueness validator will no longer enforce case sensitive comparison in Rails 6.1/,
   /The asset ".*" is not present in the asset pipeline.Falling back to an asset that may be in the public folder./,
   /NOT conditions will no longer behave as NOR in Rails 6.1. To continue using NOR conditions, NOT each condition individually/,
+  /Rails 6.1 will return Content-Type header without modification/,
+  /update_attributes!? is deprecated and will be removed from Rails 6.1/,
+  /Initialization autoloaded the constants/,
+  /Class level methods will no longer inherit scoping/,
+  /ActionView::Base instances should be constructed with a lookup context, assignments, and a controller/,
+  /ActionView::Base instances must implement `compiled_method_container`/,
 ]
 
 silenced_expr = Regexp.new(silenced.join('|'))

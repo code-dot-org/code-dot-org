@@ -1,0 +1,159 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://cdo-v3-assets.s3.amazonaws.com/?encoding-type=url&prefix=assets_test/1/1
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Mar 2022 20:23:22 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-assets</Name><Prefix>assets_test/1/1</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListBucketResult>
+    http_version: 
+  recorded_at: Wed, 23 Mar 2022 20:23:16 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-assets.s3.amazonaws.com/?encoding-type=url&prefix=assets_test/1/1/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Mar 2022 20:23:22 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-assets</Name><Prefix>assets_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListBucketResult>
+    http_version: 
+  recorded_at: Wed, 23 Mar 2022 20:23:16 GMT
+- request:
+    method: put
+    uri: https://cdo-v3-assets.s3.amazonaws.com/assets_test/1/1/existingFileac0a7f8c2faac49775a6.jpg
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        /9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/2wBDAQMDAwQDBAgEBAgQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/wAARCABkAGQDAREAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUI/8QAHRAAAgICAwEAAAAAAAAAAAAAABQBYRNRAmJxkf/EABYBAQEBAAAAAAAAAAAAAAAAAAAFCP/EABgRAQEBAQEAAAAAAAAAAAAAAAATARES/9oADAMBAAIRAxEAPwDfzEGa4r9hiBEsMQIlhiBEsMQIlhiBEsMQIlhiBEsMQIlhiBEsMQIlhiBEsMQIlktiynJJsMWJFhixIsMWJFhixIsMWJFhixIsMWJFhixIsMWJFhixIsMWJFhixIsls+/SnJLroz79EiujPv0SK6M+/RIroz79EiujPv0SK6M+/RIroz79EiujPv0SK6M+/RIroz79EiujPv0SK6M+/RIrqUxBUil2GIESwxAiWGIESwxAiWGIESwxAiWGIESwxAiWGIESwxAiWGIESwxAiWSmrKcUqw1YiWGrESw1YiWGrESw1YiWGrESw1YiWGrESw1YiWGrESw1YiWGrESyY0VIpVhoRLDQiWGhEsNCJYaESw0IlhoRLDQiWGhEsNCJYaESw0IlktidlOSVYYnYkWGJ2JFhidiRYYnYkWGJ2JFhidiRYYnYkWGJ2JFhidiRYYnYkWGJ2JFhidiRZKz9ipFLqZ+wiVM/YRKmfsIlTP2ESpn7CJUz9hEqZ+wiVM/YRKmfsIlTP2ESpn7CJUz9hEqlsSU4pVhiREsMSIlhiREsMSIlhiREsMSIlhiREsMSIlhiREsMSIlhiREsMSIlkxiypJKsMWJFhixIsMWJFhixIsMWJFhixIsMWJFhixIsMWJFhixIsMWJFhixIslM2VIpVhmxEsM2IlhmxEsM2IlhmxEsM2IlhmxEsM2IlhmxEsM2IlhmxEsM2IlkpmNlOKVYZjYiWGY2IlhmNiJYZjYiWGY2IlhmNiJYZjYiWGY2IlhmNiJYZjYiWGY2IlhmNiJZPyctlHxid3TJy2PGHdMnLY8Yd0yctjxh3TJy2PGHdMnLY8Yd0yctjxh3TJy2PGHdMnLY8Yd0yctjxh3TJy2PGHdMnLY8Yd0yctjxh3X/2Q==
+    headers:
+      X-Amz-Meta-Abuse-Score:
+      - '0'
+      Expect:
+      - 100-continue
+      Content-Md5:
+      - 11vd/4P2GRvmTmHOiYp+Xw==
+      Content-Length:
+      - '967'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Mar 2022 20:23:23 GMT
+      X-Amz-Version-Id:
+      - TxNv8yj0LEy20YgAUCLOJ6pYWp3U7q5s
+      Etag:
+      - '"d75bddff83f6191be64e61ce898a7e5f"'
+      Server:
+      - AmazonS3
+      Content-Length:
+      - '0'
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 23 Mar 2022 20:23:17 GMT
+- request:
+    method: delete
+    uri: https://cdo-v3-assets.s3.amazonaws.com/assets_test/1/1/existingFileac0a7f8c2faac49775a6.jpg
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Date:
+      - Wed, 23 Mar 2022 20:23:23 GMT
+      X-Amz-Version-Id:
+      - 6HP6Xtv4F9ogFEZdSJFgoU7d1F1KVsxd
+      X-Amz-Delete-Marker:
+      - 'true'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 23 Mar 2022 20:23:17 GMT
+- request:
+    method: get
+    uri: https://cdo-v3-assets.s3.amazonaws.com/?encoding-type=url&prefix=assets_test/1/1/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Content-Length:
+      - '0'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 23 Mar 2022 20:23:24 GMT
+      X-Amz-Bucket-Region:
+      - us-east-1
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"><Name>cdo-v3-assets</Name><Prefix>assets_test/1/1/</Prefix><Marker></Marker><MaxKeys>1000</MaxKeys><EncodingType>url</EncodingType><IsTruncated>false</IsTruncated></ListBucketResult>
+    http_version: 
+  recorded_at: Wed, 23 Mar 2022 20:23:18 GMT
+recorded_with: VCR 3.0.3

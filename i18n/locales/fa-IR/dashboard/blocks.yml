@@ -216,6 +216,10 @@ fa:
           CONDITION:
             '"when"': وقتی
             '"while"': '"while"'
+      gamelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': ثانیه
       gamelab_getProp:
         options:
           PROPERTY:

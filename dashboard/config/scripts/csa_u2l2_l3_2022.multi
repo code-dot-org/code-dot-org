@@ -1,11 +1,12 @@
 name 'CSA U2L2-L3_2022'
 title 'Check for Understanding'
 
-wrong 'wrong answer'
-right 'right answer'
-wrong 'wrong answer'
-wrong 'wrong answer'
-wrong 'wrong answer'
+wrong '1.6'
+wrong '2.5'
+wrong '1.5'
+wrong '7'
+right '7.5'
+
 markdown <<MARKDOWN
 Consider the following code segment.
 

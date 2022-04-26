@@ -2,6 +2,7 @@
 
 env:
 _env:       <%=env == 'production' ? '' : "_#{env}"%>
+_test_env_num: <%=env == 'test' ? ENV['TEST_ENV_NUMBER'] : '' %>
 unit_test:  <%=!!ENV['UNIT_TEST']%>
 ci:         <%=!!ENV['CI']%>
 ci_test:    <%=unit_test || ci%>
@@ -522,7 +523,7 @@ db_proxy_admin:
 db_writer: !Secret
 reporting_db_writer: <%=db_writer%>
 
-dashboard_db_name: dashboard_<%=env%>
+dashboard_db_name: <%= "dashboard_#{env}#{_test_env_num}" %>
 pegasus_db_name: <%= ENV['USE_PEGASUS_UNITTEST_DB'] ? 'pegasus_unittest' : "pegasus#{_env}" %>
 
 # Default reader endpoints to writer endpoint.

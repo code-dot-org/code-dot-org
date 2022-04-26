@@ -2,7 +2,7 @@
   "name": "weblab",
   "published": true,
   "description": "Web based HTML/CSS editor.",
-  "editor_type": "text",
+  "editor_language": "html/css",
   "image_url": "https://studio.code.org/shared/images/courses/logo_weblab.png",
   "project_url": "/p/weblab",
   "title": "Web Lab",

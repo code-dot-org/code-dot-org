@@ -17,8 +17,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-21 18:59:16 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-04-22 22:40:46 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -33,7 +33,7 @@
       "position": 1,
       "properties": {
         "display_name": "Parameters and Return Values",
-        "description": "### Unit Philosophy and Pedagogy\n\n* **Learning by Building Libraries:** In the second EIPM sequence of this unit, students learn to use the Student-Create Libraries tool in App Lab. This tool allows them to build and share libraries of functions that they can use in many different projects. This tool serves many purposes besides simply teaching students about libraries. By having to write functions that other students find useful, they will need to think about common patterns or situations that they have seen in projects across the course. Students will also practice commenting their code so others can understand how it works, practice designing functions that use parameters and return.  \n\n* **Final Preparation for the Create PT:** Students learn very few new concepts in this unit; nevertheless, it can be challenging because students need to learn how to integrate the ideas of parameters and return with every other concept they have learned in this course. This unit presents a good opportunity to do a final review of every programming construct covered in the course as students prepare to demonstrate what they've learned on the Create PT.\n\n### Major Assessment and Projects\n\nThe unit project asks students to design a library of functions that they can share with classmates. Their library must contain at least two functions, and at least one of those functions must include a parameter, return, a loop, and an if-statement. This requirement ensures students practice skills they willll use in the Create PT. Using a project guide, students choose a theme for their library, build it, test it, and exchange feedback with other students. Students submit their library code, project guide, and written responses to reflection questions about how the app is designed and the development process they used to make it. They will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* CRD-2: Developers create and innovate using an iterative design process that is user-focused, that incorporates implementation/feedback cycles, and that leaves ample room for experimentation and risk-taking.\n* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.\n* AAP-3: Programmers break down problems into smaller and more manageable pieces. By creating procedures and leveraging parameters, programmers generalize processes that can be reused. Procedures allow programmers to draw upon existing code that has already been tested, allowing them to write programs more quickly and with more confidence.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n* 3.12 Calling Procedures\n* 3.13 Developing Procedures\n* 3.14 Libraries\n\nThe College Board has supplied formative Create PT questions to help prepare students to complete the Create Task. We recommend that students complete the following prompts with the unit project. More information can be found in Code.org CS Principles Topic Coverage.\n\n* 3.c.i\n* 3.c.ii\n* 3.c.iii\n* 3.c.iv\n* 3.d.i\n* 3.d.ii\n* 3.d.iii"
+        "description": "### Unit Philosophy and Pedagogy\n\n* **Learning by Building Libraries:** In the second EIPM sequence of this unit, students learn to use the Student-Create Libraries tool in App Lab. This tool allows them to build and share libraries of functions that they can use in many different projects. This tool serves many purposes besides simply teaching students about libraries. By having to write functions that other students find useful, they will need to think about common patterns or situations that they have seen in projects across the course. Students will also practice commenting their code so others can understand how it works, practice designing functions that use parameters and return.  \n\n* **Final Preparation for the Create PT:** Students learn very few new concepts in this unit; nevertheless, it can be challenging because students need to learn how to integrate the ideas of parameters and return with every other concept they have learned in this course. This unit presents a good opportunity to do a final review of every programming construct covered in the course as students prepare to demonstrate what they've learned on the Create PT.\n\n### Major Assessment and Projects\n\nThe unit project asks students to design a library of functions that they can share with classmates. Their library must contain at least two functions, and at least one of those functions must include a parameter, return, a loop, and an if-statement. This requirement ensures students practice skills they willll use in the Create PT. Using a project guide, students choose a theme for their library, build it, test it, and exchange feedback with other students. Students submit their library code, project guide, and written responses to reflection questions about how the app is designed and the development process they used to make it. They will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* CRD-2: Developers create and innovate using an iterative design process that is user-focused, that incorporates implementation/feedback cycles, and that leaves ample room for experimentation and risk-taking.\n* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.\n* AAP-3: Programmers break down problems into smaller and more manageable pieces. By creating procedures and leveraging parameters, programmers generalize processes that can be reused. Procedures allow programmers to draw upon existing code that has already been tested, allowing them to write programs more quickly and with more confidence.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1RniAGymLBBpIpDaNNR5Ea8CgiiUKv0tMvaDixSj6m_Q/edit?usp=sharing).\n\n* 3.12 Calling Procedures\n* 3.13 Developing Procedures\n* 3.14 Libraries\n\nThe College Board has supplied formative Create PT questions to help prepare students to complete the Create Task. We recommend that students complete the following prompts with the unit project. More information can be found in Code.org CS Principles Topic Coverage.\n\n* 3.c.i\n* 3.c.ii\n* 3.c.iii\n* 3.c.iv\n* 3.d.i\n* 3.d.ii\n* 3.d.iii"
       },
       "seeding_key": {
         "lesson_group.key": "csp_parameters_return_values",
@@ -51,6 +51,18 @@
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2022"
       }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Post-Course Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csp7-2022"
+      }
     }
   ],
   "lessons": [
@@ -65,7 +77,7 @@
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students work with envelopes and paper to model functions with parameters and return values. Students create their own physical function envelope for drawing a house that takes in different parameters, and then build another function to calculate and return the cost of building that house.  ",
         "preparation": "* Collect various sizes of sticky notes. Small sticky notes are particularly useful for this activity. \r\n* Two envelopes per group\r\n* Pencils/pens\r\n* One baggy for a teacher demonstration (optional)\r\n* Print out copies of the Activity Guide for students\r\n* Review the Unit 7, Lesson 1 slides prior to the class",
-        "purpose": "In this Exlore lesson, students follow a presentation and use manipulatives to understand the basics of creating a function with parameters and return values. ",
+        "purpose": "In this Explore lesson, students follow a presentation and use manipulatives to understand the basics of creating a function with parameters and return values. ",
         "student_overview": "Develop a mental model for how functions can be generalized using parameters and return values.",
         "unplugged": true
       },
@@ -278,6 +290,21 @@
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2022"
       }
+    },
+    {
+      "key": "CS Principles Post-Course Survey",
+      "name": "CS Principles Post-Course Survey",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csp7-2022"
+      }
     }
   ],
   "lesson_activities": [
@@ -331,18 +358,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "58dd2afa-e966-42ea-8df1-7f065de169eb",
-        "lesson.key": "Parameters and Return Explore",
-        "lesson_group.key": "csp_parameters_return_values",
-        "script.name": "csp7-2022"
-      }
-    },
-    {
-      "key": "96813fa8-2f28-45e1-b108-785fc878aa34",
-      "position": 5,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "96813fa8-2f28-45e1-b108-785fc878aa34",
         "lesson.key": "Parameters and Return Explore",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2022"
@@ -942,6 +957,18 @@
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2022"
       }
+    },
+    {
+      "key": "62f34113-4dc7-4e7e-b8e6-7f412faf7a15",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "62f34113-4dc7-4e7e-b8e6-7f412faf7a15",
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csp7-2022"
+      }
     }
   ],
   "activity_sections": [
@@ -996,7 +1023,7 @@
       "key": "0bd644a4-7e6f-4b6b-bfb4-6d51f9c5713d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Takeaways:** Review the slide with the class. \r\n\r\n* Functions with parameters and return values help us simplify our code\r\n* Functions can only return one value at a time\r\n* A function can have:\r\n\t* No parameters and no return values\r\n\t* Parameters, but no return values\r\n\t* Return values, but no parameters\r\n\t* Parameters and return values\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Students should add the following words and definitions to their journals: parameter, argument, return.\r\n\r\n\r\n---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the [r functions_with_parameters/csp/2022] video as a class. (*Note this video does not cover the concept of functions with return values.*)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Takeaways:** Review the slide with the class. \n\n* Functions with parameters and return values help us simplify our code\n* Functions can only return one value at a time\n* A function can have:\n\t* No parameters and no return values\n\t* Parameters, but no return values\n\t* Return values, but no parameters\n\t* Parameters and return values\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Students should add the following words and definitions to their journals: parameter, argument, return.\n\n\n---"
       },
       "seeding_key": {
         "activity_section.key": "0bd644a4-7e6f-4b6b-bfb4-6d51f9c5713d",
@@ -1008,22 +1035,12 @@
       "position": 2,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Read through the code and choose the correct answer.",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "927d229a-0d64-4108-ba26-59b8c27cabd1",
         "lesson_activity.key": "58dd2afa-e966-42ea-8df1-7f065de169eb"
-      }
-    },
-    {
-      "key": "b852ba37-c60f-4f8a-baff-28cf8ba71fca",
-      "position": 1,
-      "properties": {
-        "progression_name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "b852ba37-c60f-4f8a-baff-28cf8ba71fca",
-        "lesson_activity.key": "96813fa8-2f28-45e1-b108-785fc878aa34"
       }
     },
     {
@@ -1277,7 +1294,7 @@
       "key": "9f76f5bc-04d2-4fb8-982f-a6db9346207c",
       "position": 5,
       "properties": {
-        "description": "* Level 1: Calling a function multiple times with a single parameter\n* Level 2: Students follow a pattern to choose a random Compliment from a list that is concatenated with a name passed through a parameter. \n* Level 3: This is the same as Level 1, except now the functions use return values. Again, students follow a pattern given in another working function. \n* Level 4: Students write a function that returns the season a month is in. By this point, students should be noticing the type of commenting that is happening above each function. This format previews how students will need to write comments for libraries later on in the unit. \n* Level 5: This level traverses lists to find the longest and shortest words. Parameters and return values are used. ",
+        "description": "* Level 1: Calling a function multiple times with a single parameter\n* Level 2: Students follow a pattern to choose a random Compliment from a list that is concatenated with a name passed through a parameter. \n* Level 3: This is the same as Level 1, except now the functions use return values. Again, students follow a pattern given in another working function. \n* Level 4: Students write a function that returns the season a month is in. By this point, students should be noticing the type of commenting that is happening above each function. This format previews how students will need to write comments for libraries later on in the unit. \n",
         "progression_name": "console.log Practice"
       },
       "seeding_key": {
@@ -1286,10 +1303,22 @@
       }
     },
     {
-      "key": "17f61ab7-570b-42ab-857f-a74c04bb9b21",
+      "key": "68e0de79-4b69-4796-a610-faa6c1e7ae31",
       "position": 6,
       "properties": {
-        "description": "\n**Levels 6-8:** Students continue practicing, now working with apps\n\n* Level 6: Students debug and comment an ordering app. Completing this level will require students to read programs that use functions with parameters and return carefully.\n* Level 7: We return to the compliment code, this time reworking it into an app. Again students write their own comments, this time including comments for a return value. Students also complete the `updateScreen` function, which calls both of the functions with parameters. \n* Level 8: Students practice writing a `checkCorrect` function with parameters in making a quiz app function. The app uses data from theRoot: 100 Influential African-Americans dataset.\n",
+        "description": "* Level 5: A choice level involving different programs using parameters and return values.\n  * Level 5a - Traverse lists to find the longest and shortest words.\n  * Level 5b - Traverse lists to find states and countries with the largest and smallest populations.\n  * Level 5c -  Display track information about a random top 50 song.\n  * Level 5d - Create a program that determines if it's ok to sleep in or not.",
+        "progression_name": "Putting It Together: Console"
+      },
+      "seeding_key": {
+        "activity_section.key": "68e0de79-4b69-4796-a610-faa6c1e7ae31",
+        "lesson_activity.key": "ea399cc0-0f37-4ca4-b28a-70d1ee239f4e"
+      }
+    },
+    {
+      "key": "17f61ab7-570b-42ab-857f-a74c04bb9b21",
+      "position": 7,
+      "properties": {
+        "description": "\n**Levels 6-9:** Students continue practicing, now working with apps\n\n* Level 6: Students debug and comment an ordering app. Completing this level will require students to read programs that use functions with parameters and return carefully.\n* Level 7: We return to the compliment code, this time reworking it into an app. Again students write their own comments, this time including comments for a return value. Students also complete the `updateScreen` function, which calls both of the functions with parameters. \n* Level 8: Students practice writing a `checkCorrect` function with parameters in making a quiz app function. The app uses data from theRoot: 100 Influential African-Americans dataset.\n",
         "progression_name": "App Practice"
       },
       "seeding_key": {
@@ -1299,13 +1328,25 @@
     },
     {
       "key": "686de70e-c037-4f9b-867f-7d57773f4f7e",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "\n\n**Extension Opportunities:**\n\n* Level 7: Add more greeting and compliment options to the lists\n* Level 8: Use a different dataset in place of theRoot dataset.",
         "progression_name": "MOD Practice"
       },
       "seeding_key": {
         "activity_section.key": "686de70e-c037-4f9b-867f-7d57773f4f7e",
+        "lesson_activity.key": "ea399cc0-0f37-4ca4-b28a-70d1ee239f4e"
+      }
+    },
+    {
+      "key": "a9d411d0-6756-44b1-a9a9-86d717a14c95",
+      "position": 9,
+      "properties": {
+        "description": "* Level 9: Choice level involving apps that all work but could be rewritten with functions that use parameters and returns to manage complexity.",
+        "progression_name": "Putting It Together: Apps"
+      },
+      "seeding_key": {
+        "activity_section.key": "a9d411d0-6756-44b1-a9a9-86d717a14c95",
         "lesson_activity.key": "ea399cc0-0f37-4ca4-b28a-70d1ee239f4e"
       }
     },
@@ -1558,7 +1599,7 @@
       "key": "0e3c6c99-e4c4-4e5b-8d1d-3df820db2619",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Use the activity slides for this lesson to guide the unplugged activity on Libraries. \r\n\r\n|Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\r\n|---|---|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries21.svg) |**Say:** Have you ever wanted to share some of your code with a friend so they can use it to add a cool feature in their program? Or maybe you've got a collection of functions in one program that you want to use in another program. Today we are going to explore the answer to this question: How can we easily share functions between programs?|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries22.svg) |![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Stop once all three envelopes are on the screen. <br><br> **Say:** These are functions. We recently learned about functions with parameters and return values. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Click until the library definition appears on the screen. <br><br> **Say:** The envelopes have been grouped together in a folder. This represents a library. A library is a collection of functions that can be used in many different programs.|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries23.svg) |**Say:** Let's take a look at what's inside the library. If we open up the folder, we see the functions and some documentation. A library should have documentation for each of the included functions. The documentation should include: <ul><li>how each function works</li><li>a complete list of the parameters</li><li>what (if anything) will be returned</li></ul>|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries24.svg) |**Say:** This detailed type of documentation is also known as **Application Program Interface(API)**. APIs are specifications for how the functions in a library behave and can be used. <br><br> **Discuss:** With a partner, review the parts of the documentation. |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries25.svg) |**Discuss:** What potential problems could come up if I tried to use a function without knowing what it does or how to interact with it? This would be similar to looking at the front of a function envelope and having to guess: <ul><li>what the function does</li><li>what data type the parameters need</li><li>what is returned</li></ul>**Note:** If students are struggling to come up with ideas, give a few hints: <ul><li>what if there's an error when you run the code which calls this function?</li><li>what happens to a return if you don't store it in a variable or print it to the console?</li></ul> |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries26.svg) |**Discuss:** My friend wants to use my `findSmallest()` function in her program. Is this function ready to be shared in a library?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**<br><br>**Say:** Watch out for global variables! If a function accesses or updates a variable elsewhere in your program, that function shouldn't be shared as is.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**<br><br>**Do This:** With a partner, rewrite the function so it could be shared in a library.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Note:** The problem here, is that the function uses a global variable. Students should try to rewrite the function so only local variables and a return are used. The answer is shown later on in the slides.|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries27.svg) |**Say:** These are the things you should consider before adding a function to a library: <ol><li>Check for any use of a global variable within the function. If there is, rework the function using local variables and a return. </li><li>Check if another function is called in this function. If so, both functions should be included in the library. </li><li>Write the documentation for the function.</li></ol> |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries28.svg) |**Say:** Here's the same function, now written to be shared in a library. How does it look compared to yours? It may look a little different - and that's ok, as long as the function works as expected. Now my function is almost ready to be shared in a library. With a partner, write the API for this function: <ul><li>how the function works</li><li>all the parameters, their data types, and a short description of each</li><li>what (if anything) will be returned</li></ul>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** When the class is ready, click through to see a possible answer. |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries29.svg) |**Say:** A library needs a name. For our libraries in this class, we are going to follow the following rules: <ul><li>No spaces</li><li>Capitalize the first letter</li></ul>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries30.svg) | **Say:** This library can now be shared with others. They can use the functions within their own programs as long as they follow the rules set forth in the documentation.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**|\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries31.svg) |**Say:** You've seen libraries in action before. The Math library is built into App Lab. Notice the name of the library first, then after a dot, the name of the function and finally the parameters. This is the same formatting you will use to call functions in libraries: Library name, followed by function name, and finally the parameter(s) |\r\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries32.svg) |**Do This:** Brainstorm with a partner a few functions that might show up in the following libraries: Calculator, DisplayLists, FiterDatabase. <br><br>**Note:** Here are some ideas:<ul><li>**Calculator:** functions similar to what you would find in a common calculator</li><li>**DisplayLists:** functions that help you display a list on a screen in different ways, such as one list item per line or divided with bullet points</li><li>**FilterDatabase:** functions that allow you to filter a database for different things, like all the items that start with the letter \"a\"</li></ul> |"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Use the activity slides for this lesson to guide the unplugged activity on Libraries. \n\n|Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries21.svg) |**Say:** Have you ever wanted to share some of your code with a friend so they can use it to add a cool feature in their program? Or maybe you've got a collection of functions in one program that you want to use in another program. Today we are going to explore the answer to this question: How can we easily share functions between programs?|\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries22.svg) |![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Stop once all three envelopes are on the screen. <br><br> **Say:** These are functions. We recently learned about functions with parameters and return values. <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation:** Click until the library definition appears on the screen. <br><br> **Say:** The envelopes have been grouped together in a folder. This represents a library. A library is a collection of functions that can be used in many different programs.|\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries23.svg) |**Say:** Let's take a look at what's inside the library. If we open up the folder, we see the functions and some documentation. A library should have documentation for each of the included functions. The documentation should include: <ul><li>how each function works</li><li>a complete list of the parameters</li><li>what (if anything) will be returned</li></ul>|\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries24.svg) |**Say:** This detailed type of documentation is also known as **Application Program Interface(API)**. APIs are specifications for how the functions in a library behave and can be used. <br><br> **Discuss:** With a partner, review the parts of the documentation. |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries25.svg) |**Discuss:** What potential problems could come up if I tried to use a function without knowing what it does or how to interact with it? This would be similar to looking at the front of a function envelope and having to guess: <ul><li>what the function does</li><li>what data type the parameters need</li><li>what is returned</li></ul>**Note:** If students are struggling to come up with ideas, give a few hints: <ul><li>what if there's an error when you run the code which calls this function?</li><li>what happens to a return if you don't store it in a variable or print it to the console?</li></ul> |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries26.svg) |**Discuss:** My friend wants to use my `findSmallest()` function in her program. Is this function ready to be shared in a library?<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**<br><br>**Say:** Watch out for global variables! If a function accesses or updates a variable elsewhere in your program, that function shouldn't be shared as is.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**<br><br>**Do This:** With a partner, rewrite the function so it could be shared in a library.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Note:** The problem here, is that the function uses a global variable. Students should try to rewrite the function so only local variables and a return are used. The answer is shown later on in the slides.|\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries27.svg) |**Say:** These are the things you should consider before adding a function to a library: <ol><li>Check for any use of a global variable within the function. If there is, rework the function using local variables and a return. </li><li>Check if another function is called in this function. If so, both functions should be included in the library. </li><li>Write the documentation for the function.</li></ol> |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries28.svg) |**Say:** Here's the same function, now written to be shared in a library. How does it look compared to yours? It may look a little different - and that's ok, as long as the function works as expected. Now my function is almost ready to be shared in a library. With a partner, write the API for this function: <ul><li>how the function works</li><li>all the parameters, their data types, and a short description of each</li><li>what (if anything) will be returned</li></ul>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** When the class is ready, click through to see a possible answer. |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries29.svg) |**Say:** A library needs a name. For our libraries in this class, we are going to follow the following rules: <ul><li>No spaces</li><li>Capitalize the first letter</li></ul>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries30.svg) | **Say:** This library can now be shared with others. They can use the functions within their own programs as long as they follow the rules set forth in the documentation.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation**|\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries31.svg) |**Say:** You've seen libraries in action before. The Math library is built into App Lab. Notice the name of the library first, then after a dot, the name of the function and finally the parameters. This is the same formatting you will use to call functions in libraries: Library name, followed by function name, and finally the parameter(s) |\n|![](https://curriculum.code.org/media/uploads/CSP-Unit-7_-Parameters,-Return,-and-Libraries32.svg) |**Do This:** Brainstorm with a partner a few functions that might show up in the following libraries: Calculator, DisplayLists, FiterDatabase. <br><br>**Note:** Here are some ideas:<ul><li>**Calculator:** functions similar to what you would find in a common calculator</li><li>**DisplayLists:** functions that help you display a list on a screen in different ways, such as one list item per line or divided with bullet points</li><li>**FilterDatabase:** functions that allow you to filter a database for different things, like all the items that start with the letter \"a\"</li></ul> |"
       },
       "seeding_key": {
         "activity_section.key": "0e3c6c99-e4c4-4e5b-8d1d-3df820db2619",
@@ -1581,7 +1622,7 @@
       "key": "5e00dd3b-4193-4225-8e71-3901e720f6d6",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the Libraries video.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the [r libraries_in_app_lab/csp/2022] video.",
         "progression_name": "Libraries in App Lab"
       },
       "seeding_key": {
@@ -2345,6 +2386,17 @@
       }
     },
     {
+      "key": "fadaa301-d77b-48e8-9977-f84e01069399",
+      "position": 3,
+      "properties": {
+        "progression_name": "End-of-Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "fadaa301-d77b-48e8-9977-f84e01069399",
+        "lesson_activity.key": "9ef41b68-0479-41da-a9cd-70f4b84fb10e"
+      }
+    },
+    {
       "key": "8018b697-e19e-40c2-8455-dcdbee2e9d08",
       "position": 1,
       "properties": {
@@ -2393,6 +2445,23 @@
         "activity_section.key": "f44d7a1c-d10f-4698-8952-7f80726627ff",
         "lesson_activity.key": "195e29a3-07a0-469b-9d55-a0d33505688f"
       }
+    },
+    {
+      "key": "8b4723c2-6323-41c1-9894-39d368609dea",
+      "position": 1,
+      "properties": {
+        "progression_name": "Post-Course Survey Instructions",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This level appears at the end of every unit. **Please have your students complete this survey at the end of their final unit!** Students only need to take the survey once at the end of the course.\n\n* The results are vital for us (code.org) to sustain our courses and make improvements.\n* There will be a teacher survey as well where you can provide your own input. You will be notified via email about the teacher survey.\n\n**Instructions for Unlocking the Survey for Students:** [[google doc](https://docs.google.com/document/d/1oo-G0h7EKL9kkZvk48PKkSoRMIVCCN1CB57BN5Km-aQ/view)] [[pdf](https://docs.google.com/document/d/1oo-G0h7EKL9kkZvk48PKkSoRMIVCCN1CB57BN5Km-aQ/export?format=pdf)]\n\nIf students click the link and see an error message about the survey being locked, please follow the steps in the instructions above to unlock the survey for students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8b4723c2-6323-41c1-9894-39d368609dea",
+        "lesson_activity.key": "62f34113-4dc7-4e7e-b8e6-7f412faf7a15"
+      }
     }
   ],
   "script_levels": [
@@ -2415,7 +2484,7 @@
         "lesson.key": "Parameters and Return Explore",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2022",
-        "activity_section.key": "b852ba37-c60f-4f8a-baff-28cf8ba71fca"
+        "activity_section.key": "927d229a-0d64-4108-ba26-59b8c27cabd1"
       },
       "level_keys": [
         "U7L1 CFU Return2022"
@@ -2599,26 +2668,23 @@
     {
       "chapter": 9,
       "position": 5,
-      "activity_section_position": 5,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U7 Param Return Practice Part 52022"
-        ],
-        "progression": "console.log Practice"
+        "progression": "Putting It Together: Console"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U7 Param Return Practice Part 52022"
+          "CSP U7L3 Console Choice"
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2022",
-        "activity_section.key": "9f76f5bc-04d2-4fb8-982f-a6db9346207c"
+        "activity_section.key": "68e0de79-4b69-4796-a610-faa6c1e7ae31"
       },
       "level_keys": [
-        "U7 Param Return Practice Part 52022"
+        "CSP U7L3 Console Choice"
       ]
     },
     {
@@ -2700,6 +2766,31 @@
       "chapter": 13,
       "position": 9,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U7L3 App Choice"
+        ],
+        "progression": "Putting It Together: Apps"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U7L3 App Choice"
+        ],
+        "lesson.key": "Parameters and Return Practice",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-2022",
+        "activity_section.key": "a9d411d0-6756-44b1-a9a9-86d717a14c95"
+      },
+      "level_keys": [
+        "CSP U7L3 App Choice"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 10,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -2722,7 +2813,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2747,7 +2838,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -2772,33 +2863,8 @@
       ]
     },
     {
-      "chapter": 16,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "Libraries in App Lab2022"
-        ],
-        "progression": "Libraries in App Lab"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Libraries in App Lab2022"
-        ],
-        "lesson.key": "Libraries Explore",
-        "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2022",
-        "activity_section.key": "5e00dd3b-4193-4225-8e71-3901e720f6d6"
-      },
-      "level_keys": [
-        "Libraries in App Lab2022"
-      ]
-    },
-    {
       "chapter": 17,
-      "position": 2,
+      "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -3148,6 +3214,31 @@
     },
     {
       "chapter": 31,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csp7-2022"
+        ],
+        "progression": "End-of-Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csp7-2022"
+        ],
+        "lesson.key": "Project   Make a Library Part 3",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-2022",
+        "activity_section.key": "fadaa301-d77b-48e8-9977-f84e01069399"
+      },
+      "level_keys": [
+        "Student End of Unit Survey_csp7-2022"
+      ]
+    },
+    {
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3170,6 +3261,31 @@
       "level_keys": [
         "CSP Unit 7 AP-Style Assessment 2022"
       ]
+    },
+    {
+      "chapter": 33,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey_2022"
+        ],
+        "progression": "Post-Course Survey Instructions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey_2022"
+        ],
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csp7-2022",
+        "activity_section.key": "8b4723c2-6323-41c1-9894-39d368609dea"
+      },
+      "level_keys": [
+        "csp-post-survey-2021-markdown-with-link-to-survey_2022"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -3182,7 +3298,7 @@
         "lesson.key": "Parameters and Return Explore",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2022",
-        "activity_section.key": "b852ba37-c60f-4f8a-baff-28cf8ba71fca"
+        "activity_section.key": "927d229a-0d64-4108-ba26-59b8c27cabd1"
       }
     },
     {
@@ -3271,14 +3387,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "U7 Param Return Practice Part 52022",
+        "level.key": "CSP U7L3 Console Choice",
         "script_level.level_keys": [
-          "U7 Param Return Practice Part 52022"
+          "CSP U7L3 Console Choice"
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2022",
-        "activity_section.key": "9f76f5bc-04d2-4fb8-982f-a6db9346207c"
+        "activity_section.key": "68e0de79-4b69-4796-a610-faa6c1e7ae31"
       }
     },
     {
@@ -3319,6 +3435,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSP U7L3 App Choice",
+        "script_level.level_keys": [
+          "CSP U7L3 App Choice"
+        ],
+        "lesson.key": "Parameters and Return Practice",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-2022",
+        "activity_section.key": "a9d411d0-6756-44b1-a9a9-86d717a14c95"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "U73 CFU Param Return AP2022",
         "script_level.level_keys": [
           "U73 CFU Param Return AP2022"
@@ -3351,18 +3479,6 @@
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2022",
         "activity_section.key": "36179e51-ac63-4536-a176-2e09f5a7992a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Libraries in App Lab2022",
-        "script_level.level_keys": [
-          "Libraries in App Lab2022"
-        ],
-        "lesson.key": "Libraries Explore",
-        "lesson_group.key": "csp_libraries",
-        "script.name": "csp7-2022",
-        "activity_section.key": "5e00dd3b-4193-4225-8e71-3901e720f6d6"
       }
     },
     {
@@ -3535,6 +3651,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "Student End of Unit Survey_csp7-2022",
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csp7-2022"
+        ],
+        "lesson.key": "Project   Make a Library Part 3",
+        "lesson_group.key": "csp_libraries",
+        "script.name": "csp7-2022",
+        "activity_section.key": "fadaa301-d77b-48e8-9977-f84e01069399"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSP Unit 7 AP-Style Assessment 2022",
         "script_level.level_keys": [
           "CSP Unit 7 AP-Style Assessment 2022"
@@ -3543,6 +3671,18 @@
         "lesson_group.key": "csp_libraries",
         "script.name": "csp7-2022",
         "activity_section.key": "f44d7a1c-d10f-4698-8952-7f80726627ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-post-survey-2021-markdown-with-link-to-survey_2022",
+        "script_level.level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey_2022"
+        ],
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csp7-2022",
+        "activity_section.key": "8b4723c2-6323-41c1-9894-39d368609dea"
       }
     }
   ],
@@ -3561,7 +3701,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/csp7-2021/resources",
+      "url": "/s/csp7-2022/resources",
       "key": "all_resources_9",
       "properties": {
         "is_rollup": true
@@ -3572,13 +3712,25 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/csp7-2021/standards",
+      "url": "/s/csp7-2022/standards",
       "key": "all_standards_9",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
         "resource.key": "all_standards_9"
+      }
+    },
+    {
+      "name": "Code.org CSP Topic Coverage",
+      "url": "https://docs.google.com/document/d/1RniAGymLBBpIpDaNNR5Ea8CgiiUKv0tMvaDixSj6m_Q/view",
+      "key": "code_org_csp_topic_coverage",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "code_org_csp_topic_coverage"
       }
     },
     {
@@ -3595,11 +3747,9 @@
     },
     {
       "name": "CSP Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1s5w7_UnVIGHOdkqCtK2O78rQ7JJFAWlOeZkZNsCovOY/preview",
       "key": "csp_curriculum_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csp_curriculum_guide"
@@ -3620,10 +3770,11 @@
     },
     {
       "name": "CSP Unit 7 - Parameters, Return, and Libraries",
-      "url": "https://docs.google.com/presentation/d/1J5SBGz5EXZH1BQu_3FoARNNLadq9osgjr-IrgPuhEsw/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/10yJToYHpOMPFkazfY6Lxh6G_CULAxHyWpVK8OEMJjVo/view",
       "key": "csp_unit_7_-_parameters_return_and_libraries",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/10yJToYHpOMPFkazfY6Lxh6G_CULAxHyWpVK8OEMJjVo/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -3631,8 +3782,21 @@
       }
     },
     {
+      "name": "Functions with Parameters",
+      "url": "https://youtu.be/M17C4rBwstE",
+      "key": "functions_with_parameters",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/csp_functionswithparameters-v1-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "functions_with_parameters"
+      }
+    },
+    {
       "name": "Guide to EIPM Lessons",
-      "url": "https://www.youtube.com/watch?v=OTvi0XRTIjA",
+      "url": "https://www.youtube.com/playlist?list=PLzdnOPI1iJNeqEl6MN7c2KyM3gdBSo8t3",
       "key": "guide_to_eipm_lessons",
       "properties": {
         "audience": "Teacher",
@@ -3640,6 +3804,19 @@
       },
       "seeding_key": {
         "resource.key": "guide_to_eipm_lessons"
+      }
+    },
+    {
+      "name": "Libraries in App Lab",
+      "url": "https://youtu.be/OJv3HeTP7fY",
+      "key": "libraries_in_app_lab",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/csp_librariesinapplab_sm-1-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "libraries_in_app_lab"
       }
     },
     {
@@ -3690,18 +3867,6 @@
       "seeding_key": {
         "resource.key": "u7_high_score_sample_planning_guide_rubric"
       }
-    },
-    {
-      "name": "Virtual Modification Resources",
-      "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
-      "key": "virtual_modification_resources",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "virtual_modification_resources"
-      }
     }
   ],
   "lessons_resources": [
@@ -3715,6 +3880,12 @@
       "seeding_key": {
         "lesson.key": "Libraries Explore",
         "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Libraries Explore",
+        "resource.key": "libraries_in_app_lab"
       }
     },
     {
@@ -3739,6 +3910,12 @@
       "seeding_key": {
         "lesson.key": "Parameters and Return Explore",
         "resource.key": "csp_unit_7_-_parameters_return_and_libraries"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Explore",
+        "resource.key": "functions_with_parameters"
       }
     },
     {
@@ -3829,6 +4006,12 @@
     },
     {
       "seeding_key": {
+        "resource.key": "code_org_csp_topic_coverage",
+        "script.name": "csp7-2022"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "course_vocabulary",
         "script.name": "csp7-2022"
       }
@@ -3848,12 +4031,6 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
-        "script.name": "csp7-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "virtual_modification_resources",
         "script.name": "csp7-2022"
       }
     }

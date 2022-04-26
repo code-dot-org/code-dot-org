@@ -30,7 +30,7 @@
           "2-3_Artist_9_a": "Tento diamand je vlastne len štvorec položený na strane"
         },
         "2-3 Artist Debugging 2": {
-          "2-3_Artist_Debugging_2_a": "Nápoveda: Každý fúz je 75 pixelov dlhý."
+          "2-3_Artist_Debugging_2_a": "Pomôcka: Každý fúz má dĺžku 75 pixelov."
         },
         "2-3 Artist Debugging 3": {
           "2-3_Artist_Debugging_3_a": "Každá z otočiek je o 15 stupňov primalá.",
@@ -162,77 +162,77 @@
           "Course_4_SCV_6_f": "**Riešenie:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"variables_set\" inline=\"false\">\n            <title name=\"VAR\">red1</title>\n            <value name=\"VALUE\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">0</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"variables_set\" inline=\"false\">\n                <title name=\"VAR\">green1</title>\n                <value name=\"VALUE\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">175</title>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"variables_set\" inline=\"false\">\n                    <title name=\"VAR\">blue1</title>\n                    <value name=\"VALUE\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">200</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"variables_set\" inline=\"false\">\n                        <title name=\"VAR\">red2</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">100</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"variables_set\" inline=\"false\">\n                            <title name=\"VAR\">green2</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">50</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"variables_set\" inline=\"false\">\n                                <title name=\"VAR\">blue2</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">150</title>\n                                  </block>\n                                </value>\n                                <next>\n                                  <block type=\"variables_set\" inline=\"false\">\n                                    <title name=\"VAR\">length</title>\n                                    <value name=\"VALUE\">\n                                      <block type=\"math_number\">\n                                        <title name=\"NUM\">70</title>\n                                      </block>\n                                    </value>\n                                    <next>\n                                      <block type=\"variables_set\" inline=\"false\">\n                                        <title name=\"VAR\">sides</title>\n                                        <value name=\"VALUE\">\n                                          <block type=\"math_number\">\n                                            <title name=\"NUM\">5</title>\n                                          </block>\n                                        </value>\n                                        <next>\n                                          <block type=\"controls_repeat_ext\" inline=\"true\">\n                                            <value name=\"TIMES\">\n                                              <block type=\"math_arithmetic\" inline=\"true\">\n                                                <title name=\"OP\">MULTIPLY</title>\n                                                <value name=\"A\">\n                                                  <block type=\"math_number\">\n                                                    <title name=\"NUM\">2</title>\n                                                  </block>\n                                                </value>\n                                                <value name=\"B\">\n                                                  <block type=\"variables_get\">\n                                                    <title name=\"VAR\">sides</title>\n                                                  </block>\n                                                </value>\n                                              </block>\n                                            </value>\n                                            <statement name=\"DO\">\n                                              <block type=\"controls_repeat_ext\" inline=\"true\">\n                                                <value name=\"TIMES\">\n                                                  <block type=\"variables_get\">\n                                                    <title name=\"VAR\">sides</title>\n                                                  </block>\n                                                </value>\n                                                <statement name=\"DO\">\n                                                  <block type=\"controls_repeat_ext\" inline=\"true\">\n                                                    <value name=\"TIMES\">\n                                                      <block type=\"variables_get\">\n                                                        <title name=\"VAR\">sides</title>\n                                                      </block>\n                                                    </value>\n                                                    <statement name=\"DO\">\n                                                      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n                                                        <value name=\"COLOUR\">\n                                                          <block type=\"colour_rgb\" inline=\"false\">\n                                                            <value name=\"RED\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">red1</title>\n                                                            </block>\n                                                            </value>\n                                                            <value name=\"GREEN\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">green1</title>\n                                                            </block>\n                                                            </value>\n                                                            <value name=\"BLUE\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">blue1</title>\n                                                            </block>\n                                                            </value>\n                                                          </block>\n                                                        </value>\n                                                        <next>\n                                                          <block type=\"draw_move\" inline=\"true\">\n                                                            <title name=\"DIR\">moveForward</title>\n                                                            <value name=\"VALUE\">\n                                                            <block type=\"math_arithmetic\" inline=\"true\">\n                                                            <title name=\"OP\">DIVIDE</title>\n                                                            <value name=\"A\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">length</title>\n                                                            </block>\n                                                            </value>\n                                                            <value name=\"B\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">sides</title>\n                                                            </block>\n                                                            </value>\n                                                            </block>\n                                                            </value>\n                                                            <next>\n                                                            <block type=\"draw_turn\" inline=\"true\">\n                                                            <title name=\"DIR\">turnLeft</title>\n                                                            <value name=\"VALUE\">\n                                                            <block type=\"math_arithmetic\" inline=\"true\">\n                                                            <title name=\"OP\">DIVIDE</title>\n                                                            <value name=\"A\">\n                                                            <block type=\"math_number\">\n                                                            <title name=\"NUM\">360</title>\n                                                            </block>\n                                                            </value>\n                                                            <value name=\"B\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">sides</title>\n                                                            </block>\n                                                            </value>\n                                                            </block>\n                                                            </value>\n                                                            <next>\n                                                            <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n                                                            <value name=\"COLOUR\">\n                                                            <block type=\"colour_rgb\" inline=\"false\">\n                                                            <value name=\"RED\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">red2</title>\n                                                            </block>\n                                                            </value>\n                                                            <value name=\"GREEN\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">green2</title>\n                                                            </block>\n                                                            </value>\n                                                            <value name=\"BLUE\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">blue2</title>\n                                                            </block>\n                                                            </value>\n                                                            </block>\n                                                            </value>\n                                                            <next>\n                                                            <block type=\"draw_move\" inline=\"true\">\n                                                            <title name=\"DIR\">moveForward</title>\n                                                            <value name=\"VALUE\">\n                                                            <block type=\"math_arithmetic\" inline=\"true\">\n                                                            <title name=\"OP\">DIVIDE</title>\n                                                            <value name=\"A\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">length</title>\n                                                            </block>\n                                                            </value>\n                                                            <value name=\"B\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">sides</title>\n                                                            </block>\n                                                            </value>\n                                                            </block>\n                                                            </value>\n                                                            <next>\n                                                            <block type=\"draw_turn\" inline=\"true\">\n                                                            <title name=\"DIR\">turnRight</title>\n                                                            <value name=\"VALUE\">\n                                                            <block type=\"math_arithmetic\" inline=\"true\">\n                                                            <title name=\"OP\">DIVIDE</title>\n                                                            <value name=\"A\">\n                                                            <block type=\"math_number\">\n                                                            <title name=\"NUM\">360</title>\n                                                            </block>\n                                                            </value>\n                                                            <value name=\"B\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">sides</title>\n                                                            </block>\n                                                            </value>\n                                                            </block>\n                                                            </value>\n                                                            </block>\n                                                            </next>\n                                                            </block>\n                                                            </next>\n                                                            </block>\n                                                            </next>\n                                                            </block>\n                                                            </next>\n                                                          </block>\n                                                        </next>\n                                                      </block>\n                                                    </statement>\n                                                    <next>\n                                                      <block type=\"draw_turn\" inline=\"true\">\n                                                        <title name=\"DIR\">turnRight</title>\n                                                        <value name=\"VALUE\">\n                                                          <block type=\"math_arithmetic\" inline=\"true\">\n                                                            <title name=\"OP\">DIVIDE</title>\n                                                            <value name=\"A\">\n                                                            <block type=\"math_number\">\n                                                            <title name=\"NUM\">360</title>\n                                                            </block>\n                                                            </value>\n                                                            <value name=\"B\">\n                                                            <block type=\"variables_get\">\n                                                            <title name=\"VAR\">sides</title>\n                                                            </block>\n                                                            </value>\n                                                          </block>\n                                                        </value>\n                                                      </block>\n                                                    </next>\n                                                  </block>\n                                                </statement>\n                                                <next>\n                                                  <block type=\"draw_turn\" inline=\"true\">\n                                                    <title name=\"DIR\">turnRight</title>\n                                                    <value name=\"VALUE\">\n                                                      <block type=\"math_arithmetic\" inline=\"true\">\n                                                        <title name=\"OP\">DIVIDE</title>\n                                                        <value name=\"A\">\n                                                          <block type=\"math_number\">\n                                                            <title name=\"NUM\">180</title>\n                                                          </block>\n                                                        </value>\n                                                        <value name=\"B\">\n                                                          <block type=\"variables_get\">\n                                                            <title name=\"VAR\">sides</title>\n                                                          </block>\n                                                        </value>\n                                                      </block>\n                                                    </value>\n                                                  </block>\n                                                </next>\n                                              </block>\n                                            </statement>\n                                          </block>\n                                        </next>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "CourseD_Dance_2020_01": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Zabezpeč, aby sa na obrazovke objavil tanečník.\n\n_Táto úroveň končí po 4 taktoch._",
-          "challenges": "**Dobrovoľná výzva**\n\n-   Vyber si inú pesničku.\n-   Presuň svojho tanečníka na novú pozíciu. \n-   Vytvor viac ako jedného tanečníka."
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Dosiahni, aby sa na obrazovke objavil tanečník.\n\n_Táto úroveň sa končí po 4 taktoch._",
+          "challenges": "**Dobrovoľné úlohy**\n\n-   Vyber inú pesničku.\n-   Presuň svojho tanečníka na iné miesto. \n-   Vytvor viacero tanečníkov."
         },
         "CourseD_Dance_2020_02": {
-          "validation": "**Ako prejdem tento level?**\n\n-   Tanečník musí predviest nejaký pohyb.\n-   Musíš stlačiť tlačidlo so šípkou.\n\n_Tento level skončí po 4 taktoch._",
-          "challenges": "**Doborovoľná výzva**\n\nPouži viac ako jeden blok <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>."
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Tanečník musí predviest nejaký pohyb.\n-   Musíš stlačiť tlačidlo so šípkou.\n\n_Táto úroveň sa skončí po 4 taktoch._",
+          "challenges": "**Doborovoľná úloha**\n\nPouži viac ako jeden blok <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>."
         },
         "CourseD_Dance_2020_03": {
-          "validation": "**Ako prejdem tento level?**\n\n-   Obaja tanečníci musia predviest nejaký pohyb.\n-   Musíš stlačiť tlačidlo so šípkou.\n\n_Tento level skončí po 6 taktoch._",
-          "challenges": "**Doborovoľná výzva**\n\n-   Tanečník musí regovať po stlačení tlačidiel ľavej a pravej šipky."
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Obaja tanečníci musia predviest nejaký pohyb.\n-   Musíš stlačiť tlačidlo so šípkou.\n\n_Táto úroveň sa skončí po 6 taktoch._",
+          "challenges": "**Doborovoľná úloha**\n\n-   Dosiahni, aby tanečník reagoval na stlačenie ľavej aj pravej šipky."
         },
         "CourseD_Dance_2020_04": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Tanečník musí po 4 taktoch zmeniť kroky.\n\n_Úroveň končí po 7 taktoch._"
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Tanečník musí po 4 taktoch zmeniť tanečný krok.\n\n_Úroveň sa končí po 7 taktoch._"
         },
         "CourseD_Dance_2020_05": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Po 6 taktoch musí tvoj tanečník robiť iný krok, ako robil po 4 taktoch.\n\n_Úroveň končí po 11 taktoch._",
-          "challenges": "**Dobrovoľná výzva**\n\n-   Zmeň pozadie, vždy keď tanečníci zmenia tanečný pohyb."
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Po 6 taktoch musí tvoj tanečník robiť iný krok, ako robil po 4 taktoch.\n\n_Úroveň sa končí po 11 taktoch._",
+          "challenges": "**Dobrovoľná úloha**\n\n-   Nastav, aby sa pri každej zmene tanečného pohybu zmenilo aj pozadie."
         },
         "CourseD_Dance_2020_06": {
-          "validation": "**Ako prejdem tento level?**\n\n-   Vytvor jedného hlavného tanečníka a skupinu vedľajších tanečníkov v rámvi prvých štyroch taktov. \n\n_Tento level sa skončí po siedmich taktoch._",
-          "challenges": "**Dobrovoľná výzva**\n\n-   Vytvor niekoľko skupín vedľajších tanečníkov."
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Počas prvých 4 taktov piesne vytvor jedného hlavného tanečníka a skupinu sprievodných tanečníkov. \n\n_Táto úroveň sa skončí po 7 taktoch._",
+          "challenges": "**Dobrovoľná úloha**\n\n-   Vytvor viacero skupín sprievodných tanečníkov."
         },
         "CourseD_Dance_2020_07": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Zmeň veľkosť aspoň jedného tanečníka.\n\n_Tento level končí po 6 taktoch._",
-          "challenges": "**Dobrovoľná výzva**\n\n-   Experimentuj a zmeň aj ďalšie vlastnosti ako napríklad šírka alebo otočenie."
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Zmeň veľkosť aspoň jedného tanečníka.\n\nTáto úroveň sa končí po 6 taktoch.\\_",
+          "challenges": "**Dobrovoľná úloha**\n\n-   Pohraj sa s úpravou ďalších vlastností, napríklad šírky alebo otočenia."
         },
         "CourseD_Dance_2020_08": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Zmeň odtieň aspoň jedného tanečníka.\n\n_Tento level končí po 6 taktoch._",
-          "tint_hint": "Všimli ste si, že sa vaši tanečníci nezmenia presne na tú farbu, kotrú ste si vybrali? Je to tak preto, že **odtiene** kombinujú farbu, ktorú si vyberiete, s farbami tanečníka."
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Zmeň sfarbenie aspoň jedného tanečníka.\n\n_Táto úroveň sa končí po 6 taktoch._",
+          "tint_hint": "Všímaš si, že tanečníci nezmenia farbu presne na tú, ktorú im nastavíme? Je to spôsobené tým, že vlastnosť **sfarbenie** „primieša“ zvolenú farbu k farbám tanečníka."
         },
         "CourseD_Dance_2020_09": {
-          "validation": "**Ako prejdem tento level?**\n\n-   Len stlač tlačidlo \"Dokončiť\"!",
-          "repeat_every_ideas": "**Potrebuješ inšpiráciu?**\n\n-   Opakovane zmeň veľkosť tanečníka, aby narástol.\n-   Opakovane meň otáčanie tanečníka, aby si ho roztočil/a.\n\n_Taktiež môžeš použiť záporné čísla, aby si vytvoril/a opačný efekt!_",
-          "next_previous": "**Dobrovoľná výzva**\n\n-   Tento nový blok udalostí môžeš tiež použiť na prechádzanie zoznamom tanečných pohybov, ak ho nastaveníš napr´klad na `(Náhodné)`, `(Ďalšie)`, alebo `(Predchádzajúce)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Len stlač tlačidlo Dokončiť!",
+          "repeat_every_ideas": "**Potrebuješ inšpiráciu?**\n\n-   Skús opakovane meniť veľkosť tanečníka tak, aby narástol.\n-   Skús opakovane meniť otočenie tanečníka tak, aby sa roztočil.\n\n_Môžeš používať aj záporné čísla, aby sa tanečník zmenšoval alebo točil opačne!_",
+          "next_previous": "**Dobrovoľná úloha**\n\n-   Pomocou tohto nového bloku s udalosťou môžeš prechádzať zoznamom tanečných pohybov. Stačí nastaviť ďalší tanečný krok na `(Náhodný)`, `(Ďalší)` alebo `(Predchádzajúci)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus1": {
-          "alternate": "Blok na striedanie je v kategórii \"Tanečníci“."
+          "alternate": "Blok na striedanie tanečných krokov nájdeš v kategórii „Tanečníci“."
         },
         "CourseD_Dance_Party_01": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Zabezpeč, aby sa na obrazovke objavil tanečník.\n\n_Táto úroveň končí po 4 taktoch._",
-          "challenges": "**Dobrovoľné výzvy**\n\n-   Vyber si inú pesničku.\n-   Premenuj svojho tanečníka."
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Dosiahni, aby sa na obrazovke objavil tanečník.\n\n_Táto úroveň sa končí po 4 taktoch._",
+          "challenges": "**Dobrovoľné úlohy**\n\n-   Vyber si inú pesničku.\n-   Premenuj svojho tanečníka."
         },
         "CourseD_Dance_Party_02": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Tanečník musí po 4 taktoch zmeniť kroky.\n\n_Úroveň končí po 7 taktoch._"
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Tanečník musí po 4 taktoch zmeniť tanečný krok.\n\n_Úroveň sa končí po 7 taktoch._"
         },
         "CourseD_Dance_Party_03": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Po 6 taktoch musí tvoj tanečník robiť iný krok, ako robil po 4 taktoch.\n\n_Úroveň končí po 11 taktoch._"
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Po 6 taktoch musí tvoj tanečník robiť iný krok, ako robil po 4 taktoch.\n\n_Úroveň sa končí po 11 taktoch._"
         },
         "CourseD_Dance_Party_04": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Potrebuješ zmeniť efekt pozadia skôr, ako začne siedmy takt.\n\n_Táto úroveň končí po 9 taktoch._",
-          "challenges": "**Dobrovoľná výzva**\n\nZmeň efekt pozadia v roznych častiach pesničky napojením nového bloku pod blok <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"takty\"</title></block></xml>."
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Potrebuješ zmeniť efekt pozadia skôr, ako začne siedmy takt.\n\n_Táto úroveň sa končí po 9 taktoch._",
+          "challenges": "**Dobrovoľná úloha**\n\nDosiahni, aby sa v roznych častiach pesničky menil efekt pozadia, tým, že pod blok <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml> pripojíš iný blok."
         },
         "CourseD_Dance_Party_06": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Potrebuješ mať aspoň dvoch tanečníkov.\n\n_Táto úroveň končí po 5 taktoch._",
-          "challenges": "**Dobrovoľná výzva**\n\n-   Pridaj tretieho tanečníka (ak chceš, tak aj viacerých!) \n-   Nastav tanečníkov tak, aby robili rôzne kroky v rôznych častiach pesničky."
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Potrebuješ mať aspoň dvoch tanečníkov.\n\n_Táto úroveň sa končí po 5 taktoch._",
+          "challenges": "**Dobrovoľná úloha**\n\n-   Pridaj tretieho tanečníka (ak chceš, tak aj viacerých).\n-   Nastav tanečníkov tak, aby v rôznych častiach pesničky robili rôzne tanečné kroky."
         },
         "CourseD_Dance_Party_08": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Dvaja tanečníci musia mať veľkosť inú ako 100.\n\n_Táto úroveň končí po 5 taktoch._",
-          "challenges": "**Dobrovoľná výzva**\n\n-   Experimentuj s menením aj ďalších vlastností (šírka, výška, otočenie, atď.)"
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Dvaja tanečníci musia mať veľkosť inú ako 100.\n\n_Táto úroveň sa končí po 5 taktoch._",
+          "challenges": "**Dobrovoľná úloha**\n\n-   Experimentuj aj s úpravou ďalších vlastností (šírka, výška, otočenie atď.)."
         },
         "CourseD_Dance_Party_09": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Zmeň sfarbenie aspoň jedného tanečníka.\n\n_Táto úroveň končí po 7 taktoch._"
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Zmeň sfarbenie aspoň jedného tanečníka.\n\n_Táto úroveň sa skončí po 7 taktoch._"
         },
         "CourseD_Dance_Party_10": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Vlastnosti dvoch alebo viacerých tanečníkov sa musia meniť.\n\n_Táto úroveň končí po 7 taktoch._"
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Musia sa meniť vlastnosti dvoch alebo viacerých tanečníkov.\n\n_Táto úroveň sa skončí po 7 taktoch._"
         },
         "CourseD_Dance_Party_11": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Stačí, ak dáš priestor svojej kreativite!\n\n_Táto úroveň končí po 7 taktoch._"
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Stačí, ak dáš priestor svojej kreativite!\n\n_Táto úroveň sa končí po 7 taktoch._"
         },
         "CourseD_Dance_Party_11_5": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Stačí, ak dáš priestor svojej kreativite!\n\n_Táto úroveň končí po 7 taktoch._"
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Stačí, ak dáš priestor svojej kreativite!\n\n_Táto úroveň sa končí po 7 taktoch._"
         },
         "CourseD_Dance_Party_11b": {
           "validation": "**Ako prejdem túto úroveň?**\n\n-   Použi blok `keď hore stlačený` nato, aby Robot urobil tanečný krok, keď stlačíš šípku hore.\n\n_Táto úroveň končí po 7 taktoch._"
@@ -256,95 +256,95 @@
           "voyage_aquatic_9a": "Vidíš štvorčeky s červenými a modrými koralmi? Využi ich ako smerovníky, ktoré ti povedia, kedy sa otočiť doprava a kedy doľava."
         },
         "Dance_2019_01": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Zabezpeč, aby sa na obrazovke objavil tanečník.\n\n_Táto úroveň končí po 4 taktoch._",
-          "challenges": "**Dobrovoľná výzva**\n\n-   Vyber si inú pesničku.\n-   Presuň svojho tanečníka na novú pozíciu. \n-   Vytvor viac ako jedného tanečníka."
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Dosiahni, aby sa na obrazovke objavil tanečník.\n\n_Táto úroveň sa končí po 4 taktoch._",
+          "challenges": "**Dobrovoľné úlohy**\n\n-   Vyber inú pesničku.\n-   Presuň svojho tanečníka na iné miesto. \n-   Vytvor viacero tanečníkov."
         },
         "Dance_2019_02": {
-          "validation": "**Ako prejdem tento level?**\n\n-   Tanečník musí predviest nejaký pohyb.\n-   Musíš stlačiť tlačidlo so šípkou.\n\n_Tento level skončí po 4 taktoch._",
-          "challenges": "**Doborovoľná výzva**\n\nPouži viac ako jeden blok <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>."
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Tanečník musí predviest nejaký pohyb.\n-   Musíš stlačiť tlačidlo so šípkou.\n\n_Táto úroveň sa skončí po 4 taktoch._",
+          "challenges": "**Doborovoľná úloha**\n\nPouži viac ako jeden blok <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>."
         },
         "Dance_2019_03": {
-          "validation": "**Ako prejdem tento level?**\n\n-   Obaja tanečníci musia predviest nejaký pohyb.\n-   Musíš stlačiť tlačidlo so šípkou.\n\n_Tento level skončí po 6 taktoch._",
-          "challenges": "**Doborovoľná výzva**\n\n-   Tanečník musí regovať po stlačení tlačidiel ľavej a pravej šipky."
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Obaja tanečníci musia predviest nejaký pohyb.\n-   Musíš stlačiť tlačidlo so šípkou.\n\n_Táto úroveň sa skončí po 6 taktoch._",
+          "challenges": "**Doborovoľná úloha**\n\n-   Dosiahni, aby tanečník reagoval na stlačenie ľavej aj pravej šipky."
         },
         "Dance_2019_04": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Tanečník musí po 4 taktoch zmeniť kroky.\n\n_Úroveň končí po 7 taktoch._"
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Tanečník musí po 4 taktoch zmeniť tanečný krok.\n\n_Úroveň sa končí po 7 taktoch._"
         },
         "Dance_2019_05": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Po 6 taktoch musí tvoj tanečník robiť iný krok, ako robil po 4 taktoch.\n\n_Úroveň končí po 11 taktoch._",
-          "challenges": "**Dobrovoľná výzva**\n\n-   Zmeň pozadie, vždy keď tanečníci zmenia tanečný pohyb."
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Po 6 taktoch musí tvoj tanečník robiť iný krok, ako robil po 4 taktoch.\n\n_Úroveň sa končí po 11 taktoch._",
+          "challenges": "**Dobrovoľná úloha**\n\n-   Nastav, aby sa pri každej zmene tanečného pohybu zmenilo aj pozadie."
         },
         "Dance_2019_06": {
-          "validation": "**Ako prejdem tento level?**\n\n-   Vytvor jedného hlavného tanečníka a skupinu vedľajších tanečníkov v rámvi prvých štyroch taktov. \n\n_Tento level sa skončí po siedmich taktoch._",
-          "challenges": "**Dobrovoľná výzva**\n\n-   Vytvor niekoľko skupín vedľajších tanečníkov."
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Počas prvých 4 taktov piesne vytvor jedného hlavného tanečníka a skupinu sprievodných tanečníkov. \n\n_Táto úroveň sa skončí po 7 taktoch._",
+          "challenges": "**Dobrovoľná úloha**\n\n-   Vytvor viacero skupín sprievodných tanečníkov."
         },
         "Dance_2019_07": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Zmeň veľkosť aspoň jedného tanečníka.\n\n_Tento level končí po 6 taktoch._",
-          "challenges": "**Dobrovoľná výzva**\n\n-   Experimentuj a zmeň aj ďalšie vlastnosti ako napríklad šírka alebo otočenie."
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Zmeň veľkosť aspoň jedného tanečníka.\n\nTáto úroveň sa končí po 6 taktoch.\\_",
+          "challenges": "**Dobrovoľná úloha**\n\n-   Pohraj sa s úpravou ďalších vlastností, napríklad šírky alebo otočenia."
         },
         "Dance_2019_08": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Zmeň odtieň aspoň jedného tanečníka.\n\n_Tento level končí po 6 taktoch._",
-          "tint_hint": "Všimli ste si, že sa vaši tanečníci nezmenia presne na tú farbu, kotrú ste si vybrali? Je to tak preto, že **odtiene** kombinujú farbu, ktorú si vyberiete, s farbami tanečníka."
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Zmeň sfarbenie aspoň jedného tanečníka.\n\n_Táto úroveň sa končí po 6 taktoch._",
+          "tint_hint": "Všímaš si, že tanečníci nezmenia farbu presne na tú, ktorú im nastavíme? Je to spôsobené tým, že vlastnosť **sfarbenie** „primieša“ zvolenú farbu k farbám tanečníka."
         },
         "Dance_2019_09": {
-          "validation": "**Ako prejdem tento level?**\n\n-   Len stlač tlačidlo \"Dokončiť\"!",
-          "repeat_every_ideas": "**Potrebuješ inšpiráciu?**\n\n-   Opakovane zmeň veľkosť tanečníka, aby narástol.\n-   Opakovane meň otáčanie tanečníka, aby si ho roztočil/a.\n\n_Taktiež môžeš použiť záporné čísla, aby si vytvoril/a opačný efekt!_",
-          "next_previous": "**Dobrovoľná výzva**\n\n-   Tento nový blok udalostí môžeš tiež použiť na prechádzanie zoznamom tanečných pohybov, ak ho nastaveníš napr´klad na `(Náhodné)`, `(Ďalšie)`, alebo `(Predchádzajúce)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Len stlač tlačidlo Dokončiť!",
+          "repeat_every_ideas": "**Potrebuješ inšpiráciu?**\n\n-   Skús opakovane meniť veľkosť tanečníka tak, aby narástol.\n-   Skús opakovane meniť otočenie tanečníka tak, aby sa roztočil.\n\n_Môžeš používať aj záporné čísla, aby sa tanečník zmenšoval alebo točil opačne!_",
+          "next_previous": "**Dobrovoľná úloha**\n\n-   Pomocou tohto nového bloku s udalosťou môžeš prechádzať zoznamom tanečných pohybov. Stačí nastaviť ďalší tanečný krok na `(Náhodný)`, `(Ďalší)` alebo `(Predchádzajúci)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "Dance_Party_01": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Zabezpeč, aby sa na obrazovke objavil tanečník.\n\n_Táto úroveň končí po 4 taktoch._",
-          "challenges": "**Dobrovoľné výzvy**\n\n-   Vyber si inú pesničku.\n-   Premenuj svojho tanečníka."
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Dosiahni, aby sa na obrazovke objavil tanečník.\n\n_Táto úroveň sa končí po 4 taktoch._",
+          "challenges": "**Dobrovoľné úlohy**\n\n-   Vyber si inú pesničku.\n-   Premenuj svojho tanečníka."
         },
         "Dance_Party_02": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Tanečník musí po 4 taktoch zmeniť kroky.\n\n_Úroveň končí po 7 taktoch._"
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Tanečník musí po 4 taktoch zmeniť tanečný krok.\n\n_Úroveň sa končí po 7 taktoch._"
         },
         "Dance_Party_03": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Po 6 taktoch musí tvoj tanečník robiť iný krok, ako robil po 4 taktoch.\n\n_Úroveň končí po 11 taktoch._"
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Po 6 taktoch musí tvoj tanečník robiť iný krok, ako robil po 4 taktoch.\n\n_Úroveň sa končí po 11 taktoch._"
         },
         "Dance_Party_04": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Potrebuješ zmeniť efekt pozadia skôr, ako začne siedmy takt.\n\n_Táto úroveň končí po 9 taktoch._",
-          "challenges": "**Dobrovoľná výzva**\n\nZmeň efekt pozadia v roznych častiach pesničky napojením nového bloku pod blok <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"takty\"</title></block></xml>."
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Potrebuješ zmeniť efekt pozadia skôr, ako začne siedmy takt.\n\n_Táto úroveň sa končí po 9 taktoch._",
+          "challenges": "**Dobrovoľná úloha**\n\nDosiahni, aby sa v roznych častiach pesničky menil efekt pozadia, tým, že pod blok <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml> pripojíš iný blok."
         },
         "Dance_Party_05": {
-          "validation": "**Ako prejdem tento level?**\n\n-   Pred ukončením úrovne musí tvoj tanečník absolvovať najmenej 4 rôzne tanečné pohyby.\n\n_Tento level skončí po 12tich taktoch._"
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Pred skončením úrovne musí tvoj tanečník urobiť najmenej 4 rôzne tanečné pohyby.\n\n_Táto úroveň sa skončí po 12 taktoch._"
         },
         "Dance_Party_06": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Potrebuješ mať aspoň dvoch tanečníkov.\n\n_Táto úroveň končí po 5 taktoch._",
-          "challenges": "**Dobrovoľná výzva**\n\n-   Pridaj tretieho tanečníka (ak chceš, tak aj viacerých!) \n-   Nastav tanečníkov tak, aby robili rôzne kroky v rôznych častiach pesničky."
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Potrebuješ mať aspoň dvoch tanečníkov.\n\n_Táto úroveň sa končí po 5 taktoch._",
+          "challenges": "**Dobrovoľná úloha**\n\n-   Pridaj tretieho tanečníka (ak chceš, tak aj viacerých).\n-   Nastav tanečníkov tak, aby v rôznych častiach pesničky robili rôzne tanečné kroky."
         },
         "Dance_Party_08": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Dvaja tanečníci musia mať veľkosť inú ako 100.\n\n_Táto úroveň končí po 5 taktoch._",
-          "challenges": "**Dobrovoľná výzva**\n\n-   Experimentuj s menením aj ďalších vlastností (šírka, výška, otočenie, atď.)"
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Dvaja tanečníci musia mať veľkosť inú ako 100.\n\n_Táto úroveň sa končí po 5 taktoch._",
+          "challenges": "**Dobrovoľná úloha**\n\n-   Experimentuj aj s úpravou ďalších vlastností (šírka, výška, otočenie atď.)."
         },
         "Dance_Party_09": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Zmeň sfarbenie aspoň jedného tanečníka.\n\n_Táto úroveň končí po 7 taktoch._"
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Zmeň sfarbenie aspoň jedného tanečníka.\n\n_Táto úroveň sa skončí po 7 taktoch._"
         },
         "Dance_Party_10": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Vlastnosti dvoch alebo viacerých tanečníkov sa musia meniť.\n\n_Táto úroveň končí po 7 taktoch._"
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Musia sa meniť vlastnosti dvoch alebo viacerých tanečníkov.\n\n_Táto úroveň sa skončí po 7 taktoch._"
         },
         "Dance_Party_11": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Stačí, ak dáš priestor svojej kreativite!\n\n_Táto úroveň končí po 7 taktoch._"
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Stačí, ak dáš priestor svojej kreativite!\n\n_Táto úroveň sa končí po 7 taktoch._"
         },
         "Dance_Party_11_5": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Stačí, ak dáš priestor svojej kreativite!\n\n_Táto úroveň končí po 7 taktoch._"
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Stačí, ak dáš priestor svojej kreativite!\n\n_Táto úroveň sa končí po 7 taktoch._"
         },
         "Dance_Party_11b": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Použi blok `pri stlačení vľavo` na to, aby Robot urobil tanečný krok, keď stlačíš šípku vľavo.\n\n_Táto úroveň končí po 7 taktoch._"
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Použi blok `pri stlačení vľavo` na to, aby robot urobil tanečný krok, keď stlačíš šípku vľavo.\n\n_Táto úroveň sa končí po 7 taktoch._"
         },
         "Dance_Party_extras_alternate_2019": {
-          "alternate": "Blok na striedanie je v kategórii \"Tanečníci“."
+          "alternate": "Blok na striedanie tanečných krokov nájdeš v kategórii „Tanečníci“."
         },
         "Function intro Ryan": {
-          "Function_intro_Ryan_b": "Ak správne zavoláš funkcie, toto je cesta ktorou pôjdeš...",
-          "Function_intro_Ryan_a": "Funkciu môžeš zavolať v programe viackrát. Skús ju volať dvakrát a vyrieš tak túto úlohu."
+          "Function_intro_Ryan_b": "Ak správne zavoláš funkcie, toto je cesta ktorou pôjdeš…",
+          "Function_intro_Ryan_a": "Funkciu môžeš v programe použiť viackrát. Na vyriešenie tejto úlohy skús zavolať funkciu dvakrát."
         },
         "Function intro Ryan_2019": {
-          "Function_intro_Ryan_b": "Ak správne zavoláš funkcie, toto je cesta ktorou pôjdeš...",
-          "Function_intro_Ryan_a": "Funkciu môžeš zavolať v programe viackrát. Skús ju volať dvakrát a vyrieš tak túto úlohu."
+          "Function_intro_Ryan_b": "Ak správne zavoláš funkcie, toto je cesta ktorou pôjdeš…",
+          "Function_intro_Ryan_a": "Funkciu môžeš v programe použiť viackrát. Na vyriešenie tejto úlohy skús zavolať funkciu dvakrát."
         },
         "Function intro Ryan_2020": {
-          "Function_intro_Ryan_b": "Ak správne zavoláš funkcie, toto je cesta ktorou pôjdeš...",
-          "Function_intro_Ryan_a": "Funkciu môžeš zavolať v programe viackrát. Skús ju volať dvakrát a vyrieš tak túto úlohu."
+          "Function_intro_Ryan_b": "Ak správne zavoláš funkcie, toto je cesta ktorou pôjdeš…",
+          "Function_intro_Ryan_a": "Funkciu môžeš v programe použiť viackrát. Na vyriešenie tejto úlohy skús zavolať funkciu dvakrát."
         },
         "HOC 2018 Level_10": {
           "voyage_aquatic_10a": "Vidíš **morské lampáše** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Ako by sa dali využiť v podmienke, aby tvojej postave pomohly dostať sa cez podmorskú pamiatku?"
@@ -356,140 +356,140 @@
           "voyage_aquatic_9a": "Vidíš štvorčeky s červenými a modrými koralmi? Využi ich ako smerovníky, ktoré ti povedia, kedy sa otočiť doprava a kedy doľava."
         },
         "MC_HOC_2017_01_RETRY": {
-          "MC_HOC_2017_01_RETRY_a": "Z panela s nástrojmi presuň jeden blok 'posuň sa dopredu' do pracovného priestoru a prichyť ho na mieste pod blokom 'pri spustení'.",
-          "MC_HOC_2017_01_RETRY_b": "Nezabudni kliknúť na tlačidlo \"Spustiť\", aby sa spustil kód pre agenta.",
+          "MC_HOC_2017_01_RETRY_a": "Z panela nástrojov presuň jeden blok `posuň sa dopredu` do pracovného priestoru a umiestni ho pod blok `pri spustení`.",
+          "MC_HOC_2017_01_RETRY_b": "Nezabudni kliknúť na tlačidlo Spustiť, aby sa spustil kód pre agenta.",
           "MC_HOC_2017_01_RETRY_c": "Keď agent prejde všetok svoj kód, môžeš posúvať hráča pomocou klávesov so šípkami!"
         },
         "MC_HOC_2017_01_RETRY_2019": {
-          "MC_HOC_2017_01_RETRY_a": "Z panela s nástrojmi presuň jeden blok 'posuň sa dopredu' do pracovného priestoru a prichyť ho na mieste pod blokom 'pri spustení'.",
-          "MC_HOC_2017_01_RETRY_b": "Nezabudni kliknúť na tlačidlo \"Spustiť\", aby sa spustil kód pre agenta.",
+          "MC_HOC_2017_01_RETRY_a": "Z panela nástrojov presuň jeden blok `posuň sa dopredu` do pracovného priestoru a umiestni ho pod blok `pri spustení`.",
+          "MC_HOC_2017_01_RETRY_b": "Nezabudni kliknúť na tlačidlo Spustiť, aby sa spustil kód pre agenta.",
           "MC_HOC_2017_01_RETRY_c": "Keď agent prejde všetok svoj kód, môžeš posúvať hráča pomocou klávesov so šípkami!"
         },
         "MC_HOC_2017_01_RETRY_2020": {
-          "MC_HOC_2017_01_RETRY_a": "Z panela s nástrojmi presuň jeden blok 'posuň sa dopredu' do pracovného priestoru a prichyť ho na mieste pod blokom 'pri spustení'.",
-          "MC_HOC_2017_01_RETRY_b": "Nezabudni kliknúť na tlačidlo \"Spustiť\", aby sa spustil kód pre agenta.",
+          "MC_HOC_2017_01_RETRY_a": "Z panela nástrojov presuň jeden blok `posuň sa dopredu` do pracovného priestoru a umiestni ho pod blok `pri spustení`.",
+          "MC_HOC_2017_01_RETRY_b": "Nezabudni kliknúť na tlačidlo Spustiť, aby sa spustil kód pre agenta.",
           "MC_HOC_2017_01_RETRY_c": "Keď agent prejde všetok svoj kód, môžeš posúvať hráča pomocou klávesov so šípkami!"
         },
         "MC_HOC_2017_02_Cole": {
-          "MC_HOC_2017_02_Cole_a": "Posuň agenta dopredu o dve políčka, aby sa postavil na prítlačnú dosku. To otvorí hráčovi dvere.",
-          "MC_HOC_2017_02_Cole_b": "Stlač tlačidlo \"Spustiť\"!\n\nKód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.",
+          "MC_HOC_2017_02_Cole_a": "Posuň agenta dopredu o dve políčka, aby sa postavil na prítlačnú dosku. Tým sa tvojmu hráčovi otvoria dvere.",
+          "MC_HOC_2017_02_Cole_b": "Stlač tlačidlo Spustiť.\n\nKód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.",
           "MC_HOC_2017_02_Cole_c": "Keď agent otvorí dvere, posúvaj hráča po mape pomocou klávesov so šípkami!",
           "MC_HOC_2017_02_Cole_d": "Uisti sa, že agent ide po ceste vyznačenej na mape!"
         },
         "MC_HOC_2017_02_Cole_2019": {
-          "MC_HOC_2017_02_Cole_a": "Posuň agenta dopredu o dve políčka, aby sa postavil na prítlačnú dosku. To otvorí hráčovi dvere.",
-          "MC_HOC_2017_02_Cole_b": "Stlač tlačidlo \"Spustiť\"!\n\nKód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.",
+          "MC_HOC_2017_02_Cole_a": "Posuň agenta dopredu o dve políčka, aby sa postavil na prítlačnú dosku. Tým sa tvojmu hráčovi otvoria dvere.",
+          "MC_HOC_2017_02_Cole_b": "Stlač tlačidlo Spustiť.\n\nKód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.",
           "MC_HOC_2017_02_Cole_c": "Keď agent otvorí dvere, posúvaj hráča po mape pomocou klávesov so šípkami!",
           "MC_HOC_2017_02_Cole_d": "Uisti sa, že agent ide po ceste vyznačenej na mape!"
         },
         "MC_HOC_2017_02_Cole_2020": {
-          "MC_HOC_2017_02_Cole_a": "Posuň agenta dopredu o dve políčka, aby sa postavil na prítlačnú dosku. To otvorí hráčovi dvere.",
-          "MC_HOC_2017_02_Cole_b": "Stlač tlačidlo \"Spustiť\"!\n\nKód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.",
+          "MC_HOC_2017_02_Cole_a": "Posuň agenta dopredu o dve políčka, aby sa postavil na prítlačnú dosku. Tým sa tvojmu hráčovi otvoria dvere.",
+          "MC_HOC_2017_02_Cole_b": "Stlač tlačidlo Spustiť.\n\nKód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.",
           "MC_HOC_2017_02_Cole_c": "Keď agent otvorí dvere, posúvaj hráča po mape pomocou klávesov so šípkami!",
           "MC_HOC_2017_02_Cole_d": "Uisti sa, že agent ide po ceste vyznačenej na mape!"
         },
         "MC_HOC_2017_03_Cole": {
           "MC_HOC_2017_03_Cole_a": "Keď dostaneš agenta k prítlačnej doske, pomocou klávesov so šípkami môžeš presunúť hráča ku kompasu!",
-          "MC_HOC_2017_03_Cole_b": "Zdá sa ti kód trochu dlhý? Skús použiť cyklus 'opakuj' a uvidíš, či prídeš na to, ako ho skrátiť!"
+          "MC_HOC_2017_03_Cole_b": "Zdá sa ti kód trochu dlhý? Skús použiť cyklus `opakuj` a uvidíš, či prídeš na to, ako ho skrátiť!"
         },
         "MC_HOC_2017_03_Cole_2019": {
           "MC_HOC_2017_03_Cole_a": "Keď dostaneš agenta k prítlačnej doske, pomocou klávesov so šípkami môžeš presunúť hráča ku kompasu!",
-          "MC_HOC_2017_03_Cole_b": "Zdá sa ti kód trochu dlhý? Skús použiť cyklus 'opakuj' a uvidíš, či prídeš na to, ako ho skrátiť!"
+          "MC_HOC_2017_03_Cole_b": "Zdá sa ti kód trochu dlhý? Skús použiť cyklus `opakuj` a uvidíš, či prídeš na to, ako ho skrátiť!"
         },
         "MC_HOC_2017_03_Cole_2020": {
           "MC_HOC_2017_03_Cole_a": "Keď dostaneš agenta k prítlačnej doske, pomocou klávesov so šípkami môžeš presunúť hráča ku kompasu!",
-          "MC_HOC_2017_03_Cole_b": "Zdá sa ti kód trochu dlhý? Skús použiť cyklus 'opakuj' a uvidíš, či prídeš na to, ako ho skrátiť!"
+          "MC_HOC_2017_03_Cole_b": "Zdá sa ti kód trochu dlhý? Skús použiť cyklus `opakuj` a uvidíš, či prídeš na to, ako ho skrátiť!"
         },
         "MC_HOC_2017_04POINT5_RYAN": {
-          "MC_HOC_2017_04POINT5_RYAN_b": "Pomocou bloku 'otoč sa v pravo' zmeň smer agenta ",
+          "MC_HOC_2017_04POINT5_RYAN_b": "Pomocou bloku `otoč sa vpravo` zmeň smerovanie agenta ",
           "MC_HOC_2017_04POINT5_RYAN_a": "Agentovi sa stačí dostať k prvej prítlačnej doske, aby Alex alebo Steve mohli prejsť k sekere."
         },
         "MC_HOC_2017_04POINT5_RYAN_2019": {
-          "MC_HOC_2017_04POINT5_RYAN_b": "Pomocou bloku 'otoč sa v pravo' zmeň smer agenta ",
+          "MC_HOC_2017_04POINT5_RYAN_b": "Pomocou bloku `otoč sa vpravo` zmeň smerovanie agenta ",
           "MC_HOC_2017_04POINT5_RYAN_a": "Agentovi sa stačí dostať k prvej prítlačnej doske, aby Alex alebo Steve mohli prejsť k sekere."
         },
         "MC_HOC_2017_04POINT5_RYAN_2020": {
-          "MC_HOC_2017_04POINT5_RYAN_b": "Pomocou bloku 'otoč sa v pravo' zmeň smer agenta ",
+          "MC_HOC_2017_04POINT5_RYAN_b": "Pomocou bloku `otoč sa vpravo` zmeň smerovanie agenta ",
           "MC_HOC_2017_04POINT5_RYAN_a": "Agentovi sa stačí dostať k prvej prítlačnej doske, aby Alex alebo Steve mohli prejsť k sekere."
         },
         "MC_HOC_2017_04_Cole": {
-          "MC_HOC_2017_04_Cole_a": "Agent musí použiť príkaz 'posuň sa dopredu' 7-krát. Ako môžeš použiť cyklus 'opakuj', aby sa to stalo?",
-          "MC_HOC_2017_04_Cole_c": "Stlač tlačidlo \"Spustiť\"!\n\nKód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.",
+          "MC_HOC_2017_04_Cole_a": "Agent musí použiť príkaz `posuň sa dopredu` 7-krát. Ako to môžeš pomocou cyklu `opakuj` dosiahnuť?",
+          "MC_HOC_2017_04_Cole_c": "Stlač tlačidlo Spustiť.\n\nKód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.",
           "MC_HOC_2017_04_Cole_b": "Keď sa agent dostane na prítlačnú dosku, otvorí hráčovi dvere."
         },
         "MC_HOC_2017_04_Cole_2019": {
-          "MC_HOC_2017_04_Cole_a": "Agent musí použiť príkaz 'posuň sa dopredu' 7-krát. Ako môžeš použiť cyklus 'opakuj', aby sa to stalo?",
-          "MC_HOC_2017_04_Cole_c": "Stlač tlačidlo \"Spustiť\"!\n\nKód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.",
+          "MC_HOC_2017_04_Cole_a": "Agent musí použiť príkaz `posuň sa dopredu` 7-krát. Ako to môžeš pomocou cyklu `opakuj` dosiahnuť?",
+          "MC_HOC_2017_04_Cole_c": "Stlač tlačidlo Spustiť.\n\nKód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.",
           "MC_HOC_2017_04_Cole_b": "Keď sa agent dostane na prítlačnú dosku, otvorí hráčovi dvere."
         },
         "MC_HOC_2017_04_Cole_2020": {
-          "MC_HOC_2017_04_Cole_a": "Agent musí použiť príkaz 'posuň sa dopredu' 7-krát. Ako môžeš použiť cyklus 'opakuj', aby sa to stalo?",
-          "MC_HOC_2017_04_Cole_c": "Stlač tlačidlo \"Spustiť\"!\n\nKód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.",
+          "MC_HOC_2017_04_Cole_a": "Agent musí použiť príkaz `posuň sa dopredu` 7-krát. Ako to môžeš pomocou cyklu `opakuj` dosiahnuť?",
+          "MC_HOC_2017_04_Cole_c": "Stlač tlačidlo Spustiť.\n\nKód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.",
           "MC_HOC_2017_04_Cole_b": "Keď sa agent dostane na prítlačnú dosku, otvorí hráčovi dvere."
         },
         "MC_HOC_2017_05_Cole": {
-          "MC_HOC_2017_05_Cole_a": "Vieš, že do cyklu môžeš vložiť viac ako jeden blok kódu? Skús sa pohybovať dopredu  **a** umiestniť dosku vo vnútri cyklu 'opakuj'. Tak dokončíš túto úlohu.",
-          "MC_HOC_2017_05_Cole_b": "Dostaň agenta cez rieku postavením mostu popri tom, ako kráčaš."
+          "MC_HOC_2017_05_Cole_a": "Vieš, že do cyklu môžeš vložiť viac ako jeden blok kódu? Ak chceš dokončiť túto úlohu, skús sa vo vnútri cyklu `opakuj` pohybovať dopredu **a zároveň** umiestniť dosku.",
+          "MC_HOC_2017_05_Cole_b": "Dostaň agenta cez rieku postavením mosta popri tom, ako kráčaš."
         },
         "MC_HOC_2017_05_Cole_2019": {
-          "MC_HOC_2017_05_Cole_a": "Vieš, že do cyklu môžeš vložiť viac ako jeden blok kódu? Skús sa pohybovať dopredu  **a** umiestniť dosku vo vnútri cyklu 'opakuj'. Tak dokončíš túto úlohu.",
-          "MC_HOC_2017_05_Cole_b": "Dostaň agenta cez rieku postavením mostu popri tom, ako kráčaš."
+          "MC_HOC_2017_05_Cole_a": "Vieš, že do cyklu môžeš vložiť viac ako jeden blok kódu? Ak chceš dokončiť túto úlohu, skús sa vo vnútri cyklu `opakuj` pohybovať dopredu **a zároveň** umiestniť dosku.",
+          "MC_HOC_2017_05_Cole_b": "Dostaň agenta cez rieku postavením mosta popri tom, ako kráčaš."
         },
         "MC_HOC_2017_05_Cole_2020": {
-          "MC_HOC_2017_05_Cole_a": "Vieš, že do cyklu môžeš vložiť viac ako jeden blok kódu? Skús sa pohybovať dopredu  **a** umiestniť dosku vo vnútri cyklu 'opakuj'. Tak dokončíš túto úlohu.",
-          "MC_HOC_2017_05_Cole_b": "Dostaň agenta cez rieku postavením mostu popri tom, ako kráčaš."
+          "MC_HOC_2017_05_Cole_a": "Vieš, že do cyklu môžeš vložiť viac ako jeden blok kódu? Ak chceš dokončiť túto úlohu, skús sa vo vnútri cyklu `opakuj` pohybovať dopredu **a zároveň** umiestniť dosku.",
+          "MC_HOC_2017_05_Cole_b": "Dostaň agenta cez rieku postavením mosta popri tom, ako kráčaš."
         },
         "MC_HOC_2017_06_Cole": {
-          "MC_HOC_2017_06_Cole_a": "Koľkokrát sa tento cyklus spustí? Koľkokrát _by sa mal_ spustiť?",
+          "MC_HOC_2017_06_Cole_a": "Koľkokrát sa tento cyklus spustí? Koľkokrát by sa _mal_ spustiť?",
           "MC_HOC_2017_06_Cole_b": "Pomôž agentovi postaviť most po celej šírke rieky! "
         },
         "MC_HOC_2017_06_Cole_2019": {
-          "MC_HOC_2017_06_Cole_a": "Koľkokrát sa tento cyklus spustí? Koľkokrát _by sa mal_ spustiť?",
+          "MC_HOC_2017_06_Cole_a": "Koľkokrát sa tento cyklus spustí? Koľkokrát by sa _mal_ spustiť?",
           "MC_HOC_2017_06_Cole_b": "Pomôž agentovi postaviť most po celej šírke rieky! "
         },
         "MC_HOC_2017_06_Cole_2020": {
-          "MC_HOC_2017_06_Cole_a": "Koľkokrát sa tento cyklus spustí? Koľkokrát _by sa mal_ spustiť?",
+          "MC_HOC_2017_06_Cole_a": "Koľkokrát sa tento cyklus spustí? Koľkokrát by sa _mal_ spustiť?",
           "MC_HOC_2017_06_Cole_b": "Pomôž agentovi postaviť most po celej šírke rieky! "
         },
         "MC_HOC_2017_07_Cole": {
-          "MC_HOC_2017_07_Cole_c": "Všetko, čo musíš spraviť s agentom, je vyčistiť chodník k banskému vozíku.",
-          "MC_HOC_2017_07_Cole_a": "Ak chceš vyriešiť túto úlohu, zisti, čo robí funkcia `vymaž cestu`. Z panela nástrojov vyber malý zelený blok `vymaž cestu` toľkokrát, koľko potrebuješ.",
-          "MC_HOC_2017_07_Cole_b": "Skús zmiešať bloky funkcie s ďalšími blokmi z panela nástrojov a vyrieš túto úlohu."
+          "MC_HOC_2017_07_Cole_c": "S agentom stačí uvoľniť cestu k banskému vozíku.",
+          "MC_HOC_2017_07_Cole_a": "Ak chceš vyriešiť túto úlohu, zisti, čo robí funkcia `uvoľni cestu`. Z panela nástrojov vyber malý zelený blok `uvoľni cestu` toľkokrát, koľko potrebuješ.",
+          "MC_HOC_2017_07_Cole_b": "Ak chceš vyriešiť túto úlohu, skús skombinovať bloky funkcie s ďalšími blokmi z panela nástrojov."
         },
         "MC_HOC_2017_07_Cole_2019": {
-          "MC_HOC_2017_07_Cole_c": "Všetko, čo musíš spraviť s agentom, je vyčistiť chodník k banskému vozíku.",
-          "MC_HOC_2017_07_Cole_a": "Ak chceš vyriešiť túto úlohu, zisti, čo robí funkcia `vymaž cestu`. Z panela nástrojov vyber malý zelený blok `vymaž cestu` toľkokrát, koľko potrebuješ.",
-          "MC_HOC_2017_07_Cole_b": "Skús zmiešať bloky funkcie s ďalšími blokmi z panela nástrojov a vyrieš túto úlohu."
+          "MC_HOC_2017_07_Cole_c": "S agentom stačí uvoľniť cestu k banskému vozíku.",
+          "MC_HOC_2017_07_Cole_a": "Ak chceš vyriešiť túto úlohu, zisti, čo robí funkcia `uvoľni cestu`. Z panela nástrojov vyber malý zelený blok `uvoľni cestu` toľkokrát, koľko potrebuješ.",
+          "MC_HOC_2017_07_Cole_b": "Ak chceš vyriešiť túto úlohu, skús skombinovať bloky funkcie s ďalšími blokmi z panela nástrojov."
         },
         "MC_HOC_2017_07_Cole_2020": {
-          "MC_HOC_2017_07_Cole_c": "Všetko, čo musíš spraviť s agentom, je vyčistiť chodník k banskému vozíku.",
-          "MC_HOC_2017_07_Cole_a": "Ak chceš vyriešiť túto úlohu, zisti, čo robí funkcia `vymaž cestu`. Z panela nástrojov vyber malý zelený blok `vymaž cestu` toľkokrát, koľko potrebuješ.",
-          "MC_HOC_2017_07_Cole_b": "Skús zmiešať bloky funkcie s ďalšími blokmi z panela nástrojov a vyrieš túto úlohu."
+          "MC_HOC_2017_07_Cole_c": "S agentom stačí uvoľniť cestu k banskému vozíku.",
+          "MC_HOC_2017_07_Cole_a": "Ak chceš vyriešiť túto úlohu, zisti, čo robí funkcia `uvoľni cestu`. Z panela nástrojov vyber malý zelený blok `uvoľni cestu` toľkokrát, koľko potrebuješ.",
+          "MC_HOC_2017_07_Cole_b": "Ak chceš vyriešiť túto úlohu, skús skombinovať bloky funkcie s ďalšími blokmi z panela nástrojov."
         },
         "MC_HOC_2017_10_RETRY": {
-          "MC_HOC_2017_10_Cole_b": "Nevieš kam ísť? Pohľadaj bodkovanú čiaru!",
+          "MC_HOC_2017_10_Cole_b": "Nevieš, kam ísť? Pohľadaj prerušovanú čiaru!",
           "MC_HOC_2017_10_Cole_a": "Zjednoduš riešenie tohto hlavolamu pomocou funkcií!"
         },
         "MC_HOC_2017_10_RETRY_2019": {
-          "MC_HOC_2017_10_Cole_b": "Nevieš kam ísť? Pohľadaj bodkovanú čiaru!",
+          "MC_HOC_2017_10_Cole_b": "Nevieš, kam ísť? Pohľadaj prerušovanú čiaru!",
           "MC_HOC_2017_10_Cole_a": "Zjednoduš riešenie tohto hlavolamu pomocou funkcií!"
         },
         "MC_HOC_2017_10_RETRY_2020": {
-          "MC_HOC_2017_10_Cole_b": "Nevieš kam ísť? Pohľadaj bodkovanú čiaru!",
+          "MC_HOC_2017_10_Cole_b": "Nevieš, kam ísť? Pohľadaj prerušovanú čiaru!",
           "MC_HOC_2017_10_Cole_a": "Zjednoduš riešenie tohto hlavolamu pomocou funkcií!"
         },
         "MC_HOC_2017_Ali": {
-          "MC_HOC_2017_08_RY_a": "Stlač tlačidlo \"Spustiť\"!\n\nKód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.",
+          "MC_HOC_2017_08_RY_a": "Stlač tlačidlo Spustiť.\n\nKód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.",
           "MC_HOC_2017_08_RY_b": "Existuje MNOHO spôsobov, ako vyriešiť tento hlavolam. Skús niektoré z nich!",
           "MC_HOC_2017_08_RY_c": "Cez lávu sa najľahšie dostaneš po prerušovanej čiare."
         },
         "MC_HOC_2017_Ali_2019": {
-          "MC_HOC_2017_08_RY_a": "Stlač tlačidlo \"Spustiť\"!\n\nKód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.",
+          "MC_HOC_2017_08_RY_a": "Stlač tlačidlo Spustiť.\n\nKód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.",
           "MC_HOC_2017_08_RY_b": "Existuje MNOHO spôsobov, ako vyriešiť tento hlavolam. Skús niektoré z nich!",
           "MC_HOC_2017_08_RY_c": "Cez lávu sa najľahšie dostaneš po prerušovanej čiare."
         },
         "MC_HOC_2017_Ali_2020": {
-          "MC_HOC_2017_08_RY_a": "Stlač tlačidlo \"Spustiť\"!\n\nKód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.",
+          "MC_HOC_2017_08_RY_a": "Stlač tlačidlo Spustiť.\n\nKód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.",
           "MC_HOC_2017_08_RY_b": "Existuje MNOHO spôsobov, ako vyriešiť tento hlavolam. Skús niektoré z nich!",
           "MC_HOC_2017_08_RY_c": "Cez lávu sa najľahšie dostaneš po prerušovanej čiare."
         },
@@ -580,42 +580,42 @@
         },
         "Overworld Avoid Monsters": {
           "mc_8_a": "Je viacero ciest, ktorými môžeš ísť. Ktorá je tá najkratšia?",
-          "mc_8_b": "Použi cykly `opakuj` pre zjednodušenie kódu.",
+          "mc_8_b": "Zjednoduš kód pomocou cyklov `opakuj`.",
           "mc_8_c": "Tvojim cieľom je dostať sa cez dvere domu, ktorý sa nachádza v hornej časti obrazovky."
         },
         "Overworld Avoid Monsters_2019": {
           "mc_8_a": "Je viacero ciest, ktorými môžeš ísť. Ktorá je tá najkratšia?",
-          "mc_8_b": "Použi cykly `opakuj` pre zjednodušenie kódu.",
+          "mc_8_b": "Zjednoduš kód pomocou cyklov `opakuj`.",
           "mc_8_c": "Tvojim cieľom je dostať sa cez dvere domu, ktorý sa nachádza v hornej časti obrazovky."
         },
         "Overworld Avoid Monsters_2020": {
           "mc_8_a": "Je viacero ciest, ktorými môžeš ísť. Ktorá je tá najkratšia?",
-          "mc_8_b": "Použi cykly `opakuj` pre zjednodušenie kódu.",
+          "mc_8_b": "Zjednoduš kód pomocou cyklov `opakuj`.",
           "mc_8_c": "Tvojim cieľom je dostať sa cez dvere domu, ktorý sa nachádza v hornej časti obrazovky."
         },
         "Overworld Chop Tree": {
           "mc_2_a": "Pred strom sa dostaneš, keď použiješ dvakrát príkaz `posuň sa dopredu`.",
-          "mc_2_b": "Príkaz `znič blok` zotne strom, ktorý je pred tebou. "
+          "mc_2_b": "Príkaz `znič blok` zotne strom, ktorý je pred tebou."
         },
         "Overworld Chop Tree_2019": {
           "mc_2_a": "Pred strom sa dostaneš, keď použiješ dvakrát príkaz `posuň sa dopredu`.",
-          "mc_2_b": "Príkaz `znič blok` zotne strom, ktorý je pred tebou. "
+          "mc_2_b": "Príkaz `znič blok` zotne strom, ktorý je pred tebou."
         },
         "Overworld Chop Tree_2020": {
           "mc_2_a": "Pred strom sa dostaneš, keď použiješ dvakrát príkaz `posuň sa dopredu`.",
-          "mc_2_b": "Príkaz `znič blok` zotne strom, ktorý je pred tebou. "
+          "mc_2_b": "Príkaz `znič blok` zotne strom, ktorý je pred tebou."
         },
         "Overworld Chop Trees": {
-          "mc_4_a": "Stromy môžeš porúbať v akomkoľvek poradí. Na ktorú z ciest budeš potrebovať najmenší počet blokov?",
-          "mc_4_b": "Príkaz `znič blok` zotne strom, ktorý je pred tebou. "
+          "mc_4_a": "Stromy môžeš vyrúbať v akomkoľvek poradí. Akou cestou sa má postavička vydať, aby sa v programe použilo čo najmenej blokov?",
+          "mc_4_b": "Príkaz `znič blok` zotne strom, ktorý je pred tebou."
         },
         "Overworld Chop Trees_2019": {
-          "mc_4_a": "Stromy môžeš porúbať v akomkoľvek poradí. Na ktorú z ciest budeš potrebovať najmenší počet blokov?",
-          "mc_4_b": "Príkaz `znič blok` zotne strom, ktorý je pred tebou. "
+          "mc_4_a": "Stromy môžeš vyrúbať v akomkoľvek poradí. Akou cestou sa má postavička vydať, aby sa v programe použilo čo najmenej blokov?",
+          "mc_4_b": "Príkaz `znič blok` zotne strom, ktorý je pred tebou."
         },
         "Overworld Chop Trees_2020": {
-          "mc_4_a": "Stromy môžeš porúbať v akomkoľvek poradí. Na ktorú z ciest budeš potrebovať najmenší počet blokov?",
-          "mc_4_b": "Príkaz `znič blok` zotne strom, ktorý je pred tebou. "
+          "mc_4_a": "Stromy môžeš vyrúbať v akomkoľvek poradí. Akou cestou sa má postavička vydať, aby sa v programe použilo čo najmenej blokov?",
+          "mc_4_b": "Príkaz `znič blok` zotne strom, ktorý je pred tebou."
         },
         "Overworld House Frame Chosen": {
           "mc_6_a": "Stlač šípku na bloku `umiestni` a zvoľ si, čo chceš umiestniť.",
@@ -633,130 +633,130 @@
           "mc_6_c": "Do vnútra bloku `opakuj` môžeš vložiť aj viac blokov."
         },
         "Overworld Move to Sheep": {
-          "mc_1_a": "Blok `posuň sa dopredu` je na vrchu v tvojom paneli nástrojov.",
-          "mc_1_b": "Uisti sa, že obidva bloky `posuň sa dopredu` sú spojené s blokom `pri spustení`."
+          "mc_1_a": "Blok `posuň sa dopredu` je v hornej časti panela nástrojov.",
+          "mc_1_b": "Uisti sa, že obidva bloky `posuň sa dopredu` sú spojené s bloku `pri spustení`."
         },
         "Overworld Move to Sheep_2019": {
-          "mc_1_a": "Blok `posuň sa dopredu` je na vrchu v tvojom paneli nástrojov.",
-          "mc_1_b": "Uisti sa, že obidva bloky `posuň sa dopredu` sú spojené s blokom `pri spustení`."
+          "mc_1_a": "Blok `posuň sa dopredu` je v hornej časti panela nástrojov.",
+          "mc_1_b": "Uisti sa, že obidva bloky `posuň sa dopredu` sú spojené s bloku `pri spustení`."
         },
         "Overworld Move to Sheep_2020": {
-          "mc_1_a": "Blok `posuň sa dopredu` je na vrchu v tvojom paneli nástrojov.",
-          "mc_1_b": "Uisti sa, že obidva bloky `posuň sa dopredu` sú spojené s blokom `pri spustení`."
+          "mc_1_a": "Blok `posuň sa dopredu` je v hornej časti panela nástrojov.",
+          "mc_1_b": "Uisti sa, že obidva bloky `posuň sa dopredu` sú spojené s bloku `pri spustení`."
         },
         "Overworld Place Wall": {
           "mc_5_a": "Najprv použi blok `umiestni` a potom blok `posuň sa`.",
-          "mc_5_b": "Uisti sa, že obidva bloky sú vo vnútri cyklu  `opakuj`, aby kód zbehol viac ako raz.",
+          "mc_5_b": "Uisti sa, že obidva bloky sú vo vnútri cyklu `opakuj`, aby sa kód spustil viac ako raz.",
           "mc_5_c": "Neboj sa urobiť chybu! Spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. "
         },
         "Overworld Place Wall_2019": {
           "mc_5_a": "Najprv použi blok `umiestni` a potom blok `posuň sa`.",
-          "mc_5_b": "Uisti sa, že obidva bloky sú vo vnútri cyklu  `opakuj`, aby kód zbehol viac ako raz.",
+          "mc_5_b": "Uisti sa, že obidva bloky sú vo vnútri cyklu `opakuj`, aby sa kód spustil viac ako raz.",
           "mc_5_c": "Neboj sa urobiť chybu! Spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. "
         },
         "Overworld Place Wall_2020": {
           "mc_5_a": "Najprv použi blok `umiestni` a potom blok `posuň sa`.",
-          "mc_5_b": "Uisti sa, že obidva bloky sú vo vnútri cyklu  `opakuj`, aby kód zbehol viac ako raz.",
+          "mc_5_b": "Uisti sa, že obidva bloky sú vo vnútri cyklu `opakuj`, aby sa kód spustil viac ako raz.",
           "mc_5_c": "Neboj sa urobiť chybu! Spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. "
         },
         "Overworld Plant Crops": {
-          "mc_7_a": "Použi blok `zasaď plodinu` a zasadíš niečo na mieste, kde stojíš. ",
-          "mc_7_b": "Do obidvoch pásov tmavohnedej pôdy pri vode potrebuješ nasadiť rastliny.",
+          "mc_7_a": "Pomocou bloku `zasaď plodinu` zasadíš plodinu na mieste, kde stojíš. ",
+          "mc_7_b": "Oba pásy tmavohnedej pôdy pri vode treba zaplniť plodinami.",
           "mc_7_c": "Do vnútra bloku `opakuj` môžeš vložiť aj viac blokov."
         },
         "Overworld Plant Crops_2019": {
-          "mc_7_a": "Použi blok `zasaď plodinu` a zasadíš niečo na mieste, kde stojíš. ",
-          "mc_7_b": "Do obidvoch pásov tmavohnedej pôdy pri vode potrebuješ nasadiť rastliny.",
+          "mc_7_a": "Pomocou bloku `zasaď plodinu` zasadíš plodinu na mieste, kde stojíš. ",
+          "mc_7_b": "Oba pásy tmavohnedej pôdy pri vode treba zaplniť plodinami.",
           "mc_7_c": "Do vnútra bloku `opakuj` môžeš vložiť aj viac blokov."
         },
         "Overworld Plant Crops_2020": {
-          "mc_7_a": "Použi blok `zasaď plodinu` a zasadíš niečo na mieste, kde stojíš. ",
-          "mc_7_b": "Do obidvoch pásov tmavohnedej pôdy pri vode potrebuješ nasadiť rastliny.",
+          "mc_7_a": "Pomocou bloku `zasaď plodinu` zasadíš plodinu na mieste, kde stojíš. ",
+          "mc_7_b": "Oba pásy tmavohnedej pôdy pri vode treba zaplniť plodinami.",
           "mc_7_c": "Do vnútra bloku `opakuj` môžeš vložiť aj viac blokov."
         },
         "Overworld Powered Minecart": {
-          "mc_13_a": "Použi príkaz \"Umiestni koľajnice\", ktorým uložíš koľajnice na miesto, na ktorom stojíš.",
-          "mc_13_b": "Použi príkaz \"Opakuj\" a skráť si tak svoj kód."
+          "mc_13_a": "Použi príkaz „umiestni koľajnicu“, ktorým uložíš koľajnicu na miesto, kde stojíš.",
+          "mc_13_b": "Skráť svoj kód pomocou cyklov „opakuj“."
         },
         "Overworld Powered Minecart_2019": {
-          "mc_13_a": "Použi príkaz \"Umiestni koľajnice\", ktorým uložíš koľajnice na miesto, na ktorom stojíš.",
-          "mc_13_b": "Použi príkaz \"Opakuj\" a skráť si tak svoj kód."
+          "mc_13_a": "Použi príkaz „umiestni koľajnicu“, ktorým uložíš koľajnicu na miesto, kde stojíš.",
+          "mc_13_b": "Skráť svoj kód pomocou cyklov „opakuj“."
         },
         "Overworld Powered Minecart_2020": {
-          "mc_13_a": "Použi príkaz \"Umiestni koľajnice\", ktorým uložíš koľajnice na miesto, na ktorom stojíš.",
-          "mc_13_b": "Použi príkaz \"Opakuj\" a skráť si tak svoj kód."
+          "mc_13_a": "Použi príkaz „umiestni koľajnicu“, ktorým uložíš koľajnicu na miesto, kde stojíš.",
+          "mc_13_b": "Skráť svoj kód pomocou cyklov „opakuj“."
         },
         "Overworld Shear Sheep": {
-          "mc_3_a": "Blok `ostrihaj` posunie ovcu pred teba. Smeruješ tvárou k ovci?",
-          "mc_3_b": "Ak potrebuješ zmeniť smer, ktorým sa pozeráš, použi blok `otoč sa`.",
+          "mc_3_a": "Blok `ostrihaj` funguje na ovcu, ktorá sa nachádza pred tebou. Je tvoja postavička otočená k ovci?",
+          "mc_3_b": "Ak sa potrebuješ otočiť iným smerom, použi blok `otoč sa`.",
           "mc_3_c": "Neboj sa urobiť chybu! Spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. "
         },
         "Overworld Shear Sheep_2019": {
-          "mc_3_a": "Blok `ostrihaj` posunie ovcu pred teba. Smeruješ tvárou k ovci?",
-          "mc_3_b": "Ak potrebuješ zmeniť smer, ktorým sa pozeráš, použi blok `otoč sa`.",
+          "mc_3_a": "Blok `ostrihaj` funguje na ovcu, ktorá sa nachádza pred tebou. Je tvoja postavička otočená k ovci?",
+          "mc_3_b": "Ak sa potrebuješ otočiť iným smerom, použi blok `otoč sa`.",
           "mc_3_c": "Neboj sa urobiť chybu! Spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. "
         },
         "Overworld Shear Sheep_2020": {
-          "mc_3_a": "Blok `ostrihaj` posunie ovcu pred teba. Smeruješ tvárou k ovci?",
-          "mc_3_b": "Ak potrebuješ zmeniť smer, ktorým sa pozeráš, použi blok `otoč sa`.",
+          "mc_3_a": "Blok `ostrihaj` funguje na ovcu, ktorá sa nachádza pred tebou. Je tvoja postavička otočená k ovci?",
+          "mc_3_b": "Ak sa potrebuješ otočiť iným smerom, použi blok `otoč sa`.",
           "mc_3_c": "Neboj sa urobiť chybu! Spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. "
         },
         "Underground Avoiding Lava": {
-          "mc_11_a": "Celý kód je usporiadaný tak, aby sondoval lávu a potom  sa s ňou vysporiadal. Jediné čo potrebuješ spraviť, je pridať blok na posunutie sa.",
+          "mc_11_a": "Existujúci kód slúži na to, aby kontroloval prítomnosť lávy a v prípade potreby sa s ňou vysporiadal. Jediné, čo potrebuješ spraviť, je pridať blok na posunutie sa.",
           "mc_11_b": "Má tvoj príkaz `posuň sa dopredu` ísť dovnútra podmienky `ak` alebo až za ňu?"
         },
         "Underground Avoiding Lava_2019": {
-          "mc_11_a": "Celý kód je usporiadaný tak, aby sondoval lávu a potom  sa s ňou vysporiadal. Jediné čo potrebuješ spraviť, je pridať blok na posunutie sa.",
+          "mc_11_a": "Existujúci kód slúži na to, aby kontroloval prítomnosť lávy a v prípade potreby sa s ňou vysporiadal. Jediné, čo potrebuješ spraviť, je pridať blok na posunutie sa.",
           "mc_11_b": "Má tvoj príkaz `posuň sa dopredu` ísť dovnútra podmienky `ak` alebo až za ňu?"
         },
         "Underground Avoiding Lava_2020": {
-          "mc_11_a": "Celý kód je usporiadaný tak, aby sondoval lávu a potom  sa s ňou vysporiadal. Jediné čo potrebuješ spraviť, je pridať blok na posunutie sa.",
+          "mc_11_a": "Existujúci kód slúži na to, aby kontroloval prítomnosť lávy a v prípade potreby sa s ňou vysporiadal. Jediné, čo potrebuješ spraviť, je pridať blok na posunutie sa.",
           "mc_11_b": "Má tvoj príkaz `posuň sa dopredu` ísť dovnútra podmienky `ak` alebo až za ňu?"
         },
         "Underground If Statements": {
-          "mc_12_a": "Na miestach s červenými škvrnami nájdeš aj červené kamene.",
-          "mc_12_b": "Môžeš použiť cyklus `opakuj` a skrátiť si tak svoj kód?",
+          "mc_12_a": "Rudit nájdeš na políčkach s červenými škvrnami.",
+          "mc_12_b": "Môžeš použiť cyklus `opakuj` a skrátiť tak svoj kód?",
           "mc_12_c": "Ak chceš skontrolovať či je niekde láva, použi podmienku `ak` a potom umiestni kameň. "
         },
         "Underground If Statements_2019": {
-          "mc_12_a": "Na miestach s červenými škvrnami nájdeš aj červené kamene.",
-          "mc_12_b": "Môžeš použiť cyklus `opakuj` a skrátiť si tak svoj kód?",
+          "mc_12_a": "Rudit nájdeš na políčkach s červenými škvrnami.",
+          "mc_12_b": "Môžeš použiť cyklus `opakuj` a skrátiť tak svoj kód?",
           "mc_12_c": "Ak chceš skontrolovať či je niekde láva, použi podmienku `ak` a potom umiestni kameň. "
         },
         "Underground If Statements_2020": {
-          "mc_12_a": "Na miestach s červenými škvrnami nájdeš aj červené kamene.",
-          "mc_12_b": "Môžeš použiť cyklus `opakuj` a skrátiť si tak svoj kód?",
+          "mc_12_a": "Rudit nájdeš na políčkach s červenými škvrnami.",
+          "mc_12_b": "Môžeš použiť cyklus `opakuj` a skrátiť tak svoj kód?",
           "mc_12_c": "Ak chceš skontrolovať či je niekde láva, použi podmienku `ak` a potom umiestni kameň. "
         },
         "Underground Iron": {
-          "mc_10_a": "Oceľové bloky sú tie škvrnité miesta za fakľou! Ako sa tam dostaneš?",
-          "mc_10_b": "Keď stojíš na hranici s lávou, použi blok `umiestni kameň vpredu` a vytvor si bezpečnú cestu. Potom po nej môžeš prejsť!",
+          "mc_10_a": "Oceľové bloky sú tie škvrnité za fakľou! Ako sa tam ale dostaneš?",
+          "mc_10_b": "Keď stojíš na kraji lávy, vytvor si bezpečnú cestu pomocou bloku `umiestni kameň vpredu`. Potom po nej môžeš prejsť!",
           "mc_10_c": "Neboj sa urobiť chybu! Spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. "
         },
         "Underground Iron_2019": {
-          "mc_10_a": "Oceľové bloky sú tie škvrnité miesta za fakľou! Ako sa tam dostaneš?",
-          "mc_10_b": "Keď stojíš na hranici s lávou, použi blok `umiestni kameň vpredu` a vytvor si bezpečnú cestu. Potom po nej môžeš prejsť!",
+          "mc_10_a": "Oceľové bloky sú tie škvrnité za fakľou! Ako sa tam ale dostaneš?",
+          "mc_10_b": "Keď stojíš na kraji lávy, vytvor si bezpečnú cestu pomocou bloku `umiestni kameň vpredu`. Potom po nej môžeš prejsť!",
           "mc_10_c": "Neboj sa urobiť chybu! Spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. "
         },
         "Underground Iron_2020": {
-          "mc_10_a": "Oceľové bloky sú tie škvrnité miesta za fakľou! Ako sa tam dostaneš?",
-          "mc_10_b": "Keď stojíš na hranici s lávou, použi blok `umiestni kameň vpredu` a vytvor si bezpečnú cestu. Potom po nej môžeš prejsť!",
+          "mc_10_a": "Oceľové bloky sú tie škvrnité za fakľou! Ako sa tam ale dostaneš?",
+          "mc_10_b": "Keď stojíš na kraji lávy, vytvor si bezpečnú cestu pomocou bloku `umiestni kameň vpredu`. Potom po nej môžeš prejsť!",
           "mc_10_c": "Neboj sa urobiť chybu! Spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. "
         },
         "Underground Mining Coal": {
-          "mc_9_a": "Pozeráš správnym smerom? Príkaz `znič blok` vydoluje blok, ktorý je pred tebou.",
-          "mc_9_b": "Čierne fľaky v stenách sú uhlie! Použi na nich príkaz `znič blok` a vyťaž uhlie.",
-          "mc_9_c": "Použi blok `umiestni fakľu` a daj fakľu na miesto, kde stojíš. "
+          "mc_9_a": "Je tvoja postavička otočená správnym smerom? Príkazom `znič blok` vydoluje blok, ktorý je pred ňou.",
+          "mc_9_b": "Čierne fľaky v stenách sú uhlie! Vyťaž ho pomocou príkazu `znič blok`.",
+          "mc_9_c": "Pomocou bloku `umiestni fakľu` dáš fakľu na miesto, kde stojíš."
         },
         "Underground Mining Coal_2019": {
-          "mc_9_a": "Pozeráš správnym smerom? Príkaz `znič blok` vydoluje blok, ktorý je pred tebou.",
-          "mc_9_b": "Čierne fľaky v stenách sú uhlie! Použi na nich príkaz `znič blok` a vyťaž uhlie.",
-          "mc_9_c": "Použi blok `umiestni fakľu` a daj fakľu na miesto, kde stojíš. "
+          "mc_9_a": "Je tvoja postavička otočená správnym smerom? Príkazom `znič blok` vydoluje blok, ktorý je pred ňou.",
+          "mc_9_b": "Čierne fľaky v stenách sú uhlie! Vyťaž ho pomocou príkazu `znič blok`.",
+          "mc_9_c": "Pomocou bloku `umiestni fakľu` dáš fakľu na miesto, kde stojíš."
         },
         "Underground Mining Coal_2020": {
-          "mc_9_a": "Pozeráš správnym smerom? Príkaz `znič blok` vydoluje blok, ktorý je pred tebou.",
-          "mc_9_b": "Čierne fľaky v stenách sú uhlie! Použi na nich príkaz `znič blok` a vyťaž uhlie.",
-          "mc_9_c": "Použi blok `umiestni fakľu` a daj fakľu na miesto, kde stojíš. "
+          "mc_9_a": "Je tvoja postavička otočená správnym smerom? Príkazom `znič blok` vydoluje blok, ktorý je pred ňou.",
+          "mc_9_b": "Čierne fľaky v stenách sú uhlie! Vyťaž ho pomocou príkazu `znič blok`.",
+          "mc_9_c": "Pomocou bloku `umiestni fakľu` dáš fakľu na miesto, kde stojíš."
         },
         "behaviors 5": {
           "behavior hint": "Na vyriešenie tejto úlohy je treba upraviť správanie. Postava kozmonauta sa musí pohnúť dvomi rôznymi smermi, aby išla diagonálne.",
@@ -7476,43 +7476,43 @@
           "courseA_collector_preLoops6_a": "Na vyriešenie tejto úlohy použi dva bloky ![](https://images.code.org/563c0deb5c51d43cdfa72d62dec3419d-image-1508904559201.05.30.png)."
         },
         "CourseD_Dance_2020_01_2021": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Zabezpeč, aby sa na obrazovke objavil tanečník.\n\n_Táto úroveň končí po 4 taktoch._",
-          "challenges": "**Dobrovoľná výzva**\n\n-   Vyber si inú pesničku.\n-   Presuň svojho tanečníka na novú pozíciu. \n-   Vytvor viac ako jedného tanečníka."
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Dosiahni, aby sa na obrazovke objavil tanečník.\n\n_Táto úroveň sa končí po 4 taktoch._",
+          "challenges": "**Dobrovoľné úlohy**\n\n-   Vyber inú pesničku.\n-   Presuň svojho tanečníka na iné miesto. \n-   Vytvor viacero tanečníkov."
         },
         "CourseD_Dance_2020_02_2021": {
-          "validation": "**Ako prejdem tento level?**\n\n-   Tanečník musí predviest nejaký pohyb.\n-   Musíš stlačiť tlačidlo so šípkou.\n\n_Tento level skončí po 4 taktoch._",
-          "challenges": "**Doborovoľná výzva**\n\nPouži viac ako jeden blok <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>."
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Tanečník musí predviest nejaký pohyb.\n-   Musíš stlačiť tlačidlo so šípkou.\n\n_Táto úroveň sa skončí po 4 taktoch._",
+          "challenges": "**Doborovoľná úloha**\n\nPouži viac ako jeden blok <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>."
         },
         "CourseD_Dance_2020_03_2021": {
-          "validation": "**Ako prejdem tento level?**\n\n-   Obaja tanečníci musia predviest nejaký pohyb.\n-   Musíš stlačiť tlačidlo so šípkou.\n\n_Tento level skončí po 6 taktoch._",
-          "challenges": "**Doborovoľná výzva**\n\n-   Tanečník musí regovať po stlačení tlačidiel ľavej a pravej šipky."
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Obaja tanečníci musia predviest nejaký pohyb.\n-   Musíš stlačiť tlačidlo so šípkou.\n\n_Táto úroveň sa skončí po 6 taktoch._",
+          "challenges": "**Doborovoľná úloha**\n\n-   Dosiahni, aby tanečník reagoval na stlačenie ľavej aj pravej šipky."
         },
         "CourseD_Dance_2020_04_2021": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Tanečník musí po 4 taktoch zmeniť kroky.\n\n_Úroveň končí po 7 taktoch._"
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Tanečník musí po 4 taktoch zmeniť tanečný krok.\n\n_Úroveň sa končí po 7 taktoch._"
         },
         "CourseD_Dance_2020_05_2021": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Po 6 taktoch musí tvoj tanečník robiť iný krok, ako robil po 4 taktoch.\n\n_Úroveň končí po 11 taktoch._",
-          "challenges": "**Dobrovoľná výzva**\n\n-   Zmeň pozadie, vždy keď tanečníci zmenia tanečný pohyb."
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Po 6 taktoch musí tvoj tanečník robiť iný krok, ako robil po 4 taktoch.\n\n_Úroveň sa končí po 11 taktoch._",
+          "challenges": "**Dobrovoľná úloha**\n\n-   Nastav, aby sa pri každej zmene tanečného pohybu zmenilo aj pozadie."
         },
         "CourseD_Dance_2020_06_2021": {
-          "validation": "**Ako prejdem tento level?**\n\n-   Vytvor jedného hlavného tanečníka a skupinu vedľajších tanečníkov v rámvi prvých štyroch taktov. \n\n_Tento level sa skončí po siedmich taktoch._",
-          "challenges": "**Dobrovoľná výzva**\n\n-   Vytvor niekoľko skupín vedľajších tanečníkov."
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Počas prvých 4 taktov piesne vytvor jedného hlavného tanečníka a skupinu sprievodných tanečníkov. \n\n_Táto úroveň sa skončí po 7 taktoch._",
+          "challenges": "**Dobrovoľná úloha**\n\n-   Vytvor viacero skupín sprievodných tanečníkov."
         },
         "CourseD_Dance_2020_07_2021": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Zmeň veľkosť aspoň jedného tanečníka.\n\n_Tento level končí po 6 taktoch._",
-          "challenges": "**Dobrovoľná výzva**\n\n-   Experimentuj a zmeň aj ďalšie vlastnosti ako napríklad šírka alebo otočenie."
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Zmeň veľkosť aspoň jedného tanečníka.\n\nTáto úroveň sa končí po 6 taktoch.\\_",
+          "challenges": "**Dobrovoľná úloha**\n\n-   Pohraj sa s úpravou ďalších vlastností, napríklad šírky alebo otočenia."
         },
         "CourseD_Dance_2020_08_2021": {
-          "validation": "**Ako prejdem túto úroveň?**\n\n-   Zmeň odtieň aspoň jedného tanečníka.\n\n_Tento level končí po 6 taktoch._",
-          "tint_hint": "Všimli ste si, že sa vaši tanečníci nezmenia presne na tú farbu, kotrú ste si vybrali? Je to tak preto, že **odtiene** kombinujú farbu, ktorú si vyberiete, s farbami tanečníka."
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Zmeň sfarbenie aspoň jedného tanečníka.\n\n_Táto úroveň sa končí po 6 taktoch._",
+          "tint_hint": "Všímaš si, že tanečníci nezmenia farbu presne na tú, ktorú im nastavíme? Je to spôsobené tým, že vlastnosť **sfarbenie** „primieša“ zvolenú farbu k farbám tanečníka."
         },
         "CourseD_Dance_2020_09_2021": {
-          "validation": "**Ako prejdem tento level?**\n\n-   Len stlač tlačidlo \"Dokončiť\"!",
-          "repeat_every_ideas": "**Potrebuješ inšpiráciu?**\n\n-   Opakovane zmeň veľkosť tanečníka, aby narástol.\n-   Opakovane meň otáčanie tanečníka, aby si ho roztočil/a.\n\n_Taktiež môžeš použiť záporné čísla, aby si vytvoril/a opačný efekt!_",
-          "next_previous": "**Dobrovoľná výzva**\n\n-   Tento nový blok udalostí môžeš tiež použiť na prechádzanie zoznamom tanečných pohybov, ak ho nastaveníš napr´klad na `(Náhodné)`, `(Ďalšie)`, alebo `(Predchádzajúce)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
+          "validation": "**Ako prejdem túto úroveň?**\n\n-   Len stlač tlačidlo Dokončiť!",
+          "repeat_every_ideas": "**Potrebuješ inšpiráciu?**\n\n-   Skús opakovane meniť veľkosť tanečníka tak, aby narástol.\n-   Skús opakovane meniť otočenie tanečníka tak, aby sa roztočil.\n\n_Môžeš používať aj záporné čísla, aby sa tanečník zmenšoval alebo točil opačne!_",
+          "next_previous": "**Dobrovoľná úloha**\n\n-   Pomocou tohto nového bloku s udalosťou môžeš prechádzať zoznamom tanečných pohybov. Stačí nastaviť ďalší tanečný krok na `(Náhodný)`, `(Ďalší)` alebo `(Predchádzajúci)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus1_2021": {
-          "alternate": "Blok na striedanie je v kategórii \"Tanečníci“."
+          "alternate": "Blok na striedanie tanečných krokov nájdeš v kategórii „Tanečníci“."
         },
         "CourseE_HOC 2018 Level_10_2021": {
           "voyage_aquatic_10a": "Vidíš **morské lampáše** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Ako by sa dali využiť v podmienke, aby tvojej postave pomohly dostať sa cez podmorskú pamiatku?"
@@ -7532,67 +7532,67 @@
           "hint1": "Kliknite na tlačidlo \"+\" v bloku udalosti. Vyplňte prázdne miesto v bloku „zmeniť kostým“ tak, aby sa vo vnútri nachádzal blok „predmetu“.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak3": {
-          "hint1": "Ak chcete dať príšerám masky, použite blok \"zmeniť kostým\" spolu s udalosťou \"pri kliknutí\":\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nNezabudnite tiež potiahnuť malý červený blok „kliknutý“!",
-          "hint2": "Nový kód pre túto úroveň by mal vyzerať takto:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "Ak chcete dať príšerám masky, použite blok \"zmeniť kostým\" spolu s udalosťou \"pri kliknutí\":\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy\\_mask\"</title></block></next></block></xml>\n\nNezabudnite tiež potiahnuť malý červený blok „kliknutý“!",
+          "hint2": "Nový kód pre túto úroveň by mal vyzerať takto:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak4": {
           "challenge": "## Hľadáte ďalšiu výzvu?\n\nMôžete tiež dosiahnuť, aby sa príšery pohybovali rýchlejšie alebo pomalšie.\n\n1.  Kliknite na položku „Upraviť“ v tomto bloku <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml>\n2.  Zvýšte alebo znížte počet v tomto bloku:\n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nAk chcete, aby sa príšery pohybovali pomalšie, zvoľte desatinné číslo napr. \"0,5\" alebo \"0,25\". Ak chcete, aby sa pohybovali rýchlejšie, vyberte akékoľvek číslo vyššie ako 1."
         },
         "CourseF_outbreak6": {
           "hint2": "Uistite sa, že ste presunuli ďalšie bloky „akcia“ do vnútra bloku „ak je to možné“:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">90</title>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
-          "hint1": "Budete musieť pridať ďalšie 3 udalosti „pri dotyku“, aby ste skontrolovali všetky možné kombinácie \"dotykov\" medzi zdravými a infikovanými príšerkami.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
+          "hint1": "Budete musieť pridať ďalšie 3 udalosti „pri dotyku“, aby ste skontrolovali všetky možné kombinácie \"dotykov\" medzi zdravými a infikovanými príšerkami.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
         },
         "CourseF_outbreak7": {
-          "whenclicked": "## Vakcíny\n\nSimulujte podávanie vakcíny príšerám, keď na ne kliknete. Ak to chcete urobiť, použite blok „zmeniť kostým“ s  touto udalosťou:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "whenclicked": "## Vakcíny\n\nSimulujte podávanie vakcíny príšerám, keď na ne kliknete. Ak to chcete urobiť, použite blok „zmeniť kostým“ s  touto udalosťou:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
           "verionhistory": "Zasekli ste sa? Svoj kód môžete kedykoľvek resetovať kliknutím na položku „História verzií“ nižšie a výberom možnosti „Začať odznova“."
         },
         "Function intro Ryan_2021": {
-          "Function_intro_Ryan_b": "Ak správne zavoláš funkcie, toto je cesta ktorou pôjdeš...",
-          "Function_intro_Ryan_a": "Funkciu môžeš zavolať v programe viackrát. Skús ju volať dvakrát a vyrieš tak túto úlohu."
+          "Function_intro_Ryan_b": "Ak správne zavoláš funkcie, toto je cesta ktorou pôjdeš…",
+          "Function_intro_Ryan_a": "Funkciu môžeš v programe použiť viackrát. Na vyriešenie tejto úlohy skús zavolať funkciu dvakrát."
         },
         "MC_HOC_2017_01_RETRY_2021": {
-          "MC_HOC_2017_01_RETRY_a": "Z panela s nástrojmi presuň jeden blok 'posuň sa dopredu' do pracovného priestoru a prichyť ho na mieste pod blokom 'pri spustení'.",
-          "MC_HOC_2017_01_RETRY_b": "Nezabudni kliknúť na tlačidlo \"Spustiť\", aby sa spustil kód pre agenta.",
+          "MC_HOC_2017_01_RETRY_a": "Z panela nástrojov presuň jeden blok `posuň sa dopredu` do pracovného priestoru a umiestni ho pod blok `pri spustení`.",
+          "MC_HOC_2017_01_RETRY_b": "Nezabudni kliknúť na tlačidlo Spustiť, aby sa spustil kód pre agenta.",
           "MC_HOC_2017_01_RETRY_c": "Keď agent prejde všetok svoj kód, môžeš posúvať hráča pomocou klávesov so šípkami!"
         },
         "MC_HOC_2017_02_Cole_2021": {
-          "MC_HOC_2017_02_Cole_a": "Posuň agenta dopredu o dve políčka, aby sa postavil na prítlačnú dosku. To otvorí hráčovi dvere.",
-          "MC_HOC_2017_02_Cole_b": "Stlač tlačidlo \"Spustiť\"!\n\nKód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.",
+          "MC_HOC_2017_02_Cole_a": "Posuň agenta dopredu o dve políčka, aby sa postavil na prítlačnú dosku. Tým sa tvojmu hráčovi otvoria dvere.",
+          "MC_HOC_2017_02_Cole_b": "Stlač tlačidlo Spustiť.\n\nKód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.",
           "MC_HOC_2017_02_Cole_c": "Keď agent otvorí dvere, posúvaj hráča po mape pomocou klávesov so šípkami!",
           "MC_HOC_2017_02_Cole_d": "Uisti sa, že agent ide po ceste vyznačenej na mape!"
         },
         "MC_HOC_2017_03_Cole_2021": {
           "MC_HOC_2017_03_Cole_a": "Keď dostaneš agenta k prítlačnej doske, pomocou klávesov so šípkami môžeš presunúť hráča ku kompasu!",
-          "MC_HOC_2017_03_Cole_b": "Zdá sa ti kód trochu dlhý? Skús použiť cyklus 'opakuj' a uvidíš, či prídeš na to, ako ho skrátiť!"
+          "MC_HOC_2017_03_Cole_b": "Zdá sa ti kód trochu dlhý? Skús použiť cyklus `opakuj` a uvidíš, či prídeš na to, ako ho skrátiť!"
         },
         "MC_HOC_2017_04POINT5_RYAN_2021": {
-          "MC_HOC_2017_04POINT5_RYAN_b": "Pomocou bloku 'otoč sa v pravo' zmeň smer agenta ",
+          "MC_HOC_2017_04POINT5_RYAN_b": "Pomocou bloku `otoč sa vpravo` zmeň smerovanie agenta ",
           "MC_HOC_2017_04POINT5_RYAN_a": "Agentovi sa stačí dostať k prvej prítlačnej doske, aby Alex alebo Steve mohli prejsť k sekere."
         },
         "MC_HOC_2017_04_Cole_2021": {
-          "MC_HOC_2017_04_Cole_a": "Agent musí použiť príkaz 'posuň sa dopredu' 7-krát. Ako môžeš použiť cyklus 'opakuj', aby sa to stalo?",
-          "MC_HOC_2017_04_Cole_c": "Stlač tlačidlo \"Spustiť\"!\n\nKód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.",
+          "MC_HOC_2017_04_Cole_a": "Agent musí použiť príkaz `posuň sa dopredu` 7-krát. Ako to môžeš pomocou cyklu `opakuj` dosiahnuť?",
+          "MC_HOC_2017_04_Cole_c": "Stlač tlačidlo Spustiť.\n\nKód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.",
           "MC_HOC_2017_04_Cole_b": "Keď sa agent dostane na prítlačnú dosku, otvorí hráčovi dvere."
         },
         "MC_HOC_2017_05_Cole_2021": {
-          "MC_HOC_2017_05_Cole_a": "Vieš, že do cyklu môžeš vložiť viac ako jeden blok kódu? Skús sa pohybovať dopredu  **a** umiestniť dosku vo vnútri cyklu 'opakuj'. Tak dokončíš túto úlohu.",
-          "MC_HOC_2017_05_Cole_b": "Dostaň agenta cez rieku postavením mostu popri tom, ako kráčaš."
+          "MC_HOC_2017_05_Cole_a": "Vieš, že do cyklu môžeš vložiť viac ako jeden blok kódu? Ak chceš dokončiť túto úlohu, skús sa vo vnútri cyklu `opakuj` pohybovať dopredu **a zároveň** umiestniť dosku.",
+          "MC_HOC_2017_05_Cole_b": "Dostaň agenta cez rieku postavením mosta popri tom, ako kráčaš."
         },
         "MC_HOC_2017_06_Cole_2021": {
-          "MC_HOC_2017_06_Cole_a": "Koľkokrát sa tento cyklus spustí? Koľkokrát _by sa mal_ spustiť?",
+          "MC_HOC_2017_06_Cole_a": "Koľkokrát sa tento cyklus spustí? Koľkokrát by sa _mal_ spustiť?",
           "MC_HOC_2017_06_Cole_b": "Pomôž agentovi postaviť most po celej šírke rieky! "
         },
         "MC_HOC_2017_07_Cole_2021": {
-          "MC_HOC_2017_07_Cole_c": "Všetko, čo musíš spraviť s agentom, je vyčistiť chodník k banskému vozíku.",
-          "MC_HOC_2017_07_Cole_a": "Ak chceš vyriešiť túto úlohu, zisti, čo robí funkcia `vymaž cestu`. Z panela nástrojov vyber malý zelený blok `vymaž cestu` toľkokrát, koľko potrebuješ.",
-          "MC_HOC_2017_07_Cole_b": "Skús zmiešať bloky funkcie s ďalšími blokmi z panela nástrojov a vyrieš túto úlohu."
+          "MC_HOC_2017_07_Cole_c": "S agentom stačí uvoľniť cestu k banskému vozíku.",
+          "MC_HOC_2017_07_Cole_a": "Ak chceš vyriešiť túto úlohu, zisti, čo robí funkcia `uvoľni cestu`. Z panela nástrojov vyber malý zelený blok `uvoľni cestu` toľkokrát, koľko potrebuješ.",
+          "MC_HOC_2017_07_Cole_b": "Ak chceš vyriešiť túto úlohu, skús skombinovať bloky funkcie s ďalšími blokmi z panela nástrojov."
         },
         "MC_HOC_2017_10_RETRY_2021": {
-          "MC_HOC_2017_10_Cole_b": "Nevieš kam ísť? Pohľadaj bodkovanú čiaru!",
+          "MC_HOC_2017_10_Cole_b": "Nevieš, kam ísť? Pohľadaj prerušovanú čiaru!",
           "MC_HOC_2017_10_Cole_a": "Zjednoduš riešenie tohto hlavolamu pomocou funkcií!"
         },
         "MC_HOC_2017_Ali_2021": {
-          "MC_HOC_2017_08_RY_a": "Stlač tlačidlo \"Spustiť\"!\n\nKód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.",
+          "MC_HOC_2017_08_RY_a": "Stlač tlačidlo Spustiť.\n\nKód môžeš spustiť, aj keď nie je správny. Spúšťaj a resetuj kód znova a znova, až kým nezistíš, kde je chyba.",
           "MC_HOC_2017_08_RY_b": "Existuje MNOHO spôsobov, ako vyriešiť tento hlavolam. Skús niektoré z nich!",
           "MC_HOC_2017_08_RY_c": "Cez lávu sa najľahšie dostaneš po prerušovanej čiare."
         },
@@ -7601,16 +7601,16 @@
         },
         "Overworld Avoid Monsters_2021": {
           "mc_8_a": "Je viacero ciest, ktorými môžeš ísť. Ktorá je tá najkratšia?",
-          "mc_8_b": "Použi cykly `opakuj` pre zjednodušenie kódu.",
+          "mc_8_b": "Zjednoduš kód pomocou cyklov `opakuj`.",
           "mc_8_c": "Tvojim cieľom je dostať sa cez dvere domu, ktorý sa nachádza v hornej časti obrazovky."
         },
         "Overworld Chop Tree_2021": {
           "mc_2_a": "Pred strom sa dostaneš, keď použiješ dvakrát príkaz `posuň sa dopredu`.",
-          "mc_2_b": "Príkaz `znič blok` zotne strom, ktorý je pred tebou. "
+          "mc_2_b": "Príkaz `znič blok` zotne strom, ktorý je pred tebou."
         },
         "Overworld Chop Trees_2021": {
-          "mc_4_a": "Stromy môžeš porúbať v akomkoľvek poradí. Na ktorú z ciest budeš potrebovať najmenší počet blokov?",
-          "mc_4_b": "Príkaz `znič blok` zotne strom, ktorý je pred tebou. "
+          "mc_4_a": "Stromy môžeš vyrúbať v akomkoľvek poradí. Akou cestou sa má postavička vydať, aby sa v programe použilo čo najmenej blokov?",
+          "mc_4_b": "Príkaz `znič blok` zotne strom, ktorý je pred tebou."
         },
         "Overworld House Frame Chosen_2021": {
           "mc_6_a": "Stlač šípku na bloku `umiestni` a zvoľ si, čo chceš umiestniť.",
@@ -7618,46 +7618,46 @@
           "mc_6_c": "Do vnútra bloku `opakuj` môžeš vložiť aj viac blokov."
         },
         "Overworld Move to Sheep_2021": {
-          "mc_1_a": "Blok `posuň sa dopredu` je na vrchu v tvojom paneli nástrojov.",
-          "mc_1_b": "Uisti sa, že obidva bloky `posuň sa dopredu` sú spojené s blokom `pri spustení`."
+          "mc_1_a": "Blok `posuň sa dopredu` je v hornej časti panela nástrojov.",
+          "mc_1_b": "Uisti sa, že obidva bloky `posuň sa dopredu` sú spojené s bloku `pri spustení`."
         },
         "Overworld Place Wall_2021": {
           "mc_5_a": "Najprv použi blok `umiestni` a potom blok `posuň sa`.",
-          "mc_5_b": "Uisti sa, že obidva bloky sú vo vnútri cyklu  `opakuj`, aby kód zbehol viac ako raz.",
+          "mc_5_b": "Uisti sa, že obidva bloky sú vo vnútri cyklu `opakuj`, aby sa kód spustil viac ako raz.",
           "mc_5_c": "Neboj sa urobiť chybu! Spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. "
         },
         "Overworld Plant Crops_2021": {
-          "mc_7_a": "Použi blok `zasaď plodinu` a zasadíš niečo na mieste, kde stojíš. ",
-          "mc_7_b": "Do obidvoch pásov tmavohnedej pôdy pri vode potrebuješ nasadiť rastliny.",
+          "mc_7_a": "Pomocou bloku `zasaď plodinu` zasadíš plodinu na mieste, kde stojíš. ",
+          "mc_7_b": "Oba pásy tmavohnedej pôdy pri vode treba zaplniť plodinami.",
           "mc_7_c": "Do vnútra bloku `opakuj` môžeš vložiť aj viac blokov."
         },
         "Overworld Powered Minecart_2021": {
-          "mc_13_a": "Použi príkaz \"Umiestni koľajnice\", ktorým uložíš koľajnice na miesto, na ktorom stojíš.",
-          "mc_13_b": "Použi príkaz \"Opakuj\" a skráť si tak svoj kód."
+          "mc_13_a": "Použi príkaz „umiestni koľajnicu“, ktorým uložíš koľajnicu na miesto, kde stojíš.",
+          "mc_13_b": "Skráť svoj kód pomocou cyklov „opakuj“."
         },
         "Overworld Shear Sheep_2021": {
-          "mc_3_a": "Blok `ostrihaj` posunie ovcu pred teba. Smeruješ tvárou k ovci?",
-          "mc_3_b": "Ak potrebuješ zmeniť smer, ktorým sa pozeráš, použi blok `otoč sa`.",
+          "mc_3_a": "Blok `ostrihaj` funguje na ovcu, ktorá sa nachádza pred tebou. Je tvoja postavička otočená k ovci?",
+          "mc_3_b": "Ak sa potrebuješ otočiť iným smerom, použi blok `otoč sa`.",
           "mc_3_c": "Neboj sa urobiť chybu! Spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. "
         },
         "Underground Avoiding Lava_2021": {
-          "mc_11_a": "Celý kód je usporiadaný tak, aby sondoval lávu a potom  sa s ňou vysporiadal. Jediné čo potrebuješ spraviť, je pridať blok na posunutie sa.",
+          "mc_11_a": "Existujúci kód slúži na to, aby kontroloval prítomnosť lávy a v prípade potreby sa s ňou vysporiadal. Jediné, čo potrebuješ spraviť, je pridať blok na posunutie sa.",
           "mc_11_b": "Má tvoj príkaz `posuň sa dopredu` ísť dovnútra podmienky `ak` alebo až za ňu?"
         },
         "Underground If Statements_2021": {
-          "mc_12_a": "Na miestach s červenými škvrnami nájdeš aj červené kamene.",
-          "mc_12_b": "Môžeš použiť cyklus `opakuj` a skrátiť si tak svoj kód?",
+          "mc_12_a": "Rudit nájdeš na políčkach s červenými škvrnami.",
+          "mc_12_b": "Môžeš použiť cyklus `opakuj` a skrátiť tak svoj kód?",
           "mc_12_c": "Ak chceš skontrolovať či je niekde láva, použi podmienku `ak` a potom umiestni kameň. "
         },
         "Underground Iron_2021": {
-          "mc_10_a": "Oceľové bloky sú tie škvrnité miesta za fakľou! Ako sa tam dostaneš?",
-          "mc_10_b": "Keď stojíš na hranici s lávou, použi blok `umiestni kameň vpredu` a vytvor si bezpečnú cestu. Potom po nej môžeš prejsť!",
+          "mc_10_a": "Oceľové bloky sú tie škvrnité za fakľou! Ako sa tam ale dostaneš?",
+          "mc_10_b": "Keď stojíš na kraji lávy, vytvor si bezpečnú cestu pomocou bloku `umiestni kameň vpredu`. Potom po nej môžeš prejsť!",
           "mc_10_c": "Neboj sa urobiť chybu! Spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. "
         },
         "Underground Mining Coal_2021": {
-          "mc_9_a": "Pozeráš správnym smerom? Príkaz `znič blok` vydoluje blok, ktorý je pred tebou.",
-          "mc_9_b": "Čierne fľaky v stenách sú uhlie! Použi na nich príkaz `znič blok` a vyťaž uhlie.",
-          "mc_9_c": "Použi blok `umiestni fakľu` a daj fakľu na miesto, kde stojíš. "
+          "mc_9_a": "Je tvoja postavička otočená správnym smerom? Príkazom `znič blok` vydoluje blok, ktorý je pred ňou.",
+          "mc_9_b": "Čierne fľaky v stenách sú uhlie! Vyťaž ho pomocou príkazu `znič blok`.",
+          "mc_9_c": "Pomocou bloku `umiestni fakľu` dáš fakľu na miesto, kde stojíš."
         },
         "courseA_artist_loops2_2021": {
           "courseA_artist_loops2_a": "Nevieš prísť na to, ako nakresliť čiaru? Začni s pripájaním blokov k bloku <xml><block type=\"when_run\"/></xml> a uvidíš, čo sa stane.",
@@ -9370,7 +9370,7 @@
           "courseD_bee_conditionals1_a": "Predtým, než sa pokúsiš vziať nektár, budeš potrebovať pomocou bloku `ak` skontrolovať, či sa pod oblakom nachádza kvet."
         },
         "courseD_bee_conditionals_challenge2_2021": {
-          "courseD_bee_conditionals_challenge1_b": "Podobne ako pri bloku `ak pri kvete`, kód v bloku `pokiaľ nektár > 0` sa spustí iba vtedy, keď je včela pri kvete. Rozdiel je, že kód v bloku sa bude opakovať až dovtedy, kým sa nektár neminie. Skús tento postup:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "Podobne ako pri bloku `ak pri kvete`, kód v bloku `pokiaľ nektár > 0` sa spustí iba vtedy, keď je včela pri kvete. Rozdiel je, že kód v bloku sa bude opakovať až dovtedy, kým sa nektár neminie. Skús tento postup:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseF_artist_variablesFP_2021": {
           "polygon_table": "Chceš vyskúšať iné mnohouholníky? \n\nPočet strán použi v bloku `opakuj` a uhol zase v bloku `otoč`.\nVyskúšaj tieto kombinácie:\n\n|     Útvar    | Strany | Uhol |\n| :----------: | :----: | :--: |\n|  trojuholník |    3   | 120° |\n|    štvorec   |    4   |  90° |\n|  päťuholník  |    5   |  72° |\n|  šesťuholník |    6   |  60° |\n|  osemuholník |    8   |  45° |\n| deväťuholník |    9   |  40° |\n| desaťuholník |   10   |  36° |"

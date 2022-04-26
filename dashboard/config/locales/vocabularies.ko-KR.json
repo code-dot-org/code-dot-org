@@ -124,6 +124,9 @@
           "word": "변수",
           "definition": "프로그램에서 사용되는 정보 조각을 위한 라벨."
         },
+        "input/coursef/2021": {
+          "word": "입력"
+        },
         "repeat/coursef/2021": {
           "word": "반복",
           "definition": "뭔가를 다시 하기 위해."
@@ -537,6 +540,9 @@
         },
         "function/csd/2021": {
           "word": "함수"
+        },
+        "input/csd/2021": {
+          "word": "입력"
         },
         "processing/csd/2021": {
           "word": "프로세싱"

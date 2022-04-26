@@ -101,6 +101,7 @@ class User < ApplicationRecord
     ops_gender
     using_text_mode
     display_theme
+    mute_music
     last_seen_school_info_interstitial
     has_seen_standards_report_info_dialog
     oauth_refresh_token
@@ -210,7 +211,7 @@ class User < ApplicationRecord
   has_many :pd_attendances, class_name: 'Pd::Attendance', foreign_key: :teacher_id
 
   has_many :sign_ins
-  has_many :user_geos, -> {order 'updated_at desc'}
+  has_many :user_geos, -> {order(updated_at: :desc)}
 
   before_validation :normalize_parent_email
   validate :validate_parent_email
@@ -416,7 +417,7 @@ class User < ApplicationRecord
 
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 
-  has_many :user_levels, -> {order 'id desc'}, inverse_of: :user
+  has_many :user_levels, -> {order(id: :desc)}, inverse_of: :user
 
   # Relationships (sections/followers/students) from being a teacher.
   has_many :sections, dependent: :destroy
@@ -437,7 +438,9 @@ class User < ApplicationRecord
   before_create :update_default_share_setting
 
   # a bit of trickery to sort most recently started/assigned/progressed scripts first and then completed
-  has_many :user_scripts, -> {order "-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc"}
+  # This SQL string is not at risk for injection vulnerabilites because it's
+  # just a hardcoded string, so it's safe to wrap in Arel.sql
+  has_many :user_scripts, -> {order Arel.sql("-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc")}
   has_many :scripts, through: :user_scripts, source: :script
 
   validates :name, presence: true, unless: -> {purged_at}
@@ -1267,7 +1270,7 @@ class User < ApplicationRecord
   def last_attempt(level, script = nil)
     query = UserLevel.where(user_id: id, level_id: level.id)
     query = query.where(script_id: script.id) unless script.nil?
-    query.order('updated_at DESC').first
+    query.order(updated_at: :desc).first
   end
 
   # Returns the most recent (via updated_at) user_level for any of the specified
@@ -1280,7 +1283,7 @@ class User < ApplicationRecord
     }
     conditions[:script_id] = script_id unless script_id.nil?
     UserLevel.where(conditions).
-      order('updated_at DESC').
+      order(updated_at: :desc).
       first
   end
 
@@ -1765,6 +1768,14 @@ class User < ApplicationRecord
     user_course_data = courses_as_participant.select {|c| !c.pl_course?}.map(&:summarize_short)
 
     user_course_data + user_script_data
+  end
+
+  def sections_as_student_participant
+    sections_as_student.select {|s| !s.pl_section?}
+  end
+
+  def sections_as_pl_participant
+    sections_as_student.select(&:pl_section?)
   end
 
   def all_sections
@@ -2342,36 +2353,17 @@ class User < ApplicationRecord
   private def soft_delete_channels
     return unless user_storage_id
 
-    channel_ids = PEGASUS_DB[:storage_apps].
-      where(storage_id: user_storage_id).
-      map(:id)
+    project = Projects.new(user_storage_id)
+    project_ids = project.get_all_project_ids
 
     # Unfeature any featured projects owned by the user
     FeaturedProject.
-      where(storage_app_id: channel_ids, unfeatured_at: nil).
+      where(project_id: project_ids, unfeatured_at: nil).
       where.not(featured_at: nil).
       update_all(unfeatured_at: Time.now)
 
-    # Soft-delete all of the user's channels
-    PEGASUS_DB[:storage_apps].
-      where(id: channel_ids).
-      exclude(state: 'deleted').
-      update(state: 'deleted', updated_at: Time.now)
-  end
-
-  # Restores all of this user's projects that were soft-deleted after the given time
-  # Called after undestroy
-  private def restore_channels_deleted_after(deleted_at)
-    return unless user_storage_id
-
-    channel_ids = PEGASUS_DB[:storage_apps].
-      where(storage_id: user_storage_id).
-      map(:id)
-
-    PEGASUS_DB[:storage_apps].
-      where(id: channel_ids, state: 'deleted').
-      where(Sequel.lit('updated_at >= ?', deleted_at.localtime)).
-      update(state: 'active', updated_at: Time.now)
+    # Soft-delete all of the user's projects
+    project.soft_delete_all
   end
 
   def user_storage_id
@@ -2389,7 +2381,8 @@ class User < ApplicationRecord
 
     # Paranoia documentation at https://github.com/rubysherpas/paranoia#usage.
     result = restore(recursive: true, recovery_window: 5.minutes)
-    restore_channels_deleted_after(soft_delete_time - 5.minutes)
+    deleted_time = soft_delete_time - 5.minutes
+    Projects.new(user_storage_id).restore_if_deleted_after(deleted_time) if user_storage_id
     result
   end
 

@@ -174,9 +174,15 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'pl section must use email logins required' do
-    section = build :section, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, login_type: 'word'
+    section = build :section, :teacher_participants, login_type: 'word'
     refute section.valid?
     assert_equal ['Login type must be email for professional learning sections.'], section.errors.full_messages
+  end
+
+  test 'pl section must use pl grade' do
+    section = build :section, :teacher_participants, grade: 'Other'
+    refute section.valid?
+    assert_equal ['Grade must be pl for pl section.'], section.errors.full_messages
   end
 
   test 'can not update participant type' do
@@ -184,6 +190,7 @@ class SectionTest < ActiveSupport::TestCase
 
     error = assert_raises do
       section.participant_type = SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+      section.grade = 'pl'
       section.save!
     end
 
@@ -282,10 +289,10 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'add_student returns failure if user does not meet participant_type for section' do
-    section_with_teacher_participants = build :section, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    section_with_teacher_participants = build :section, :teacher_participants
     assert_does_not_create(Follower) do
       add_student_return = section_with_teacher_participants.add_student @student
-      assert_equal Section::ADD_STUDENT_FAILURE, add_student_return
+      assert_equal Section::ADD_STUDENT_FORBIDDEN, add_student_return
     end
   end
 
@@ -399,7 +406,9 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'summarize: section with a course assigned' do
-    unit_group = create :unit_group, name: 'somecourse'
+    unit_group = create :unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family'
+    CourseOffering.add_course_offering(unit_group)
+
     Timecop.freeze(Time.zone.now) do
       section = create :section, script: nil, unit_group: unit_group
 
@@ -420,6 +429,10 @@ class SectionTest < ActiveSupport::TestCase
         tts_autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
+        participant_type: 'student',
+        course_offering_id: unit_group.course_version.course_offering.id,
+        course_version_id: unit_group.course_version.id,
+        unit_id: nil,
         course_id: unit_group.id,
         script: {id: nil, name: nil, project_sharing: nil},
         studentCount: 0,
@@ -442,6 +455,8 @@ class SectionTest < ActiveSupport::TestCase
   test 'summarize: section with a script assigned' do
     # Use an existing script so that it has a translation
     script = Script.find_by_name('jigsaw')
+    CourseOffering.add_course_offering(script)
+
     Timecop.freeze(Time.zone.now) do
       section = create :section, script: script, unit_group: nil
 
@@ -462,6 +477,10 @@ class SectionTest < ActiveSupport::TestCase
         tts_autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
+        participant_type: 'student',
+        course_offering_id: script.course_version.course_offering.id,
+        course_version_id: script.course_version.id,
+        unit_id: nil,
         course_id: nil,
         script: {id: script.id, name: script.name, project_sharing: nil},
         studentCount: 0,
@@ -484,7 +503,8 @@ class SectionTest < ActiveSupport::TestCase
   test 'summarize: section with both a course and a script' do
     # Use an existing script so that it has a translation
     script = Script.find_by_name('jigsaw')
-    unit_group = create :unit_group, name: 'somecourse'
+    unit_group = create :unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family'
+    CourseOffering.add_course_offering(unit_group)
 
     Timecop.freeze(Time.zone.now) do
       # If this were a real section, it would actually have a script that is part of
@@ -508,6 +528,10 @@ class SectionTest < ActiveSupport::TestCase
         tts_autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
+        participant_type: 'student',
+        course_offering_id: unit_group.course_version.course_offering.id,
+        course_version_id: unit_group.course_version.id,
+        unit_id: script.id,
         course_id: unit_group.id,
         script: {id: script.id, name: script.name, project_sharing: nil},
         studentCount: 0,
@@ -548,6 +572,10 @@ class SectionTest < ActiveSupport::TestCase
         tts_autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
+        participant_type: 'student',
+        course_offering_id: nil,
+        course_version_id: nil,
+        unit_id: nil,
         course_id: nil,
         script: {id: nil, name: nil, project_sharing: nil},
         studentCount: 0,
@@ -599,6 +627,40 @@ class SectionTest < ActiveSupport::TestCase
 
     assert summarized_section[:script][:project_sharing]
     assert summarized_section[:sharing_disabled]
+  end
+
+  test 'can_join_section_as_participant? returns correct response based on permissions' do
+    student_section = create :section
+    teacher_section = create :section, :teacher_participants
+    facilitator_section = create :section, :facilitator_participants
+
+    levelbuilder = create :levelbuilder
+    universal_instructor = create :universal_instructor
+    plc_reviewer = create :plc_reviewer
+    facilitator = create :facilitator
+    teacher = create :teacher
+    student = create :student
+
+    assert student_section.can_join_section_as_participant?(levelbuilder)
+    assert student_section.can_join_section_as_participant?(universal_instructor)
+    assert student_section.can_join_section_as_participant?(plc_reviewer)
+    assert student_section.can_join_section_as_participant?(facilitator)
+    assert student_section.can_join_section_as_participant?(teacher)
+    assert student_section.can_join_section_as_participant?(student)
+
+    assert teacher_section.can_join_section_as_participant?(levelbuilder)
+    assert teacher_section.can_join_section_as_participant?(universal_instructor)
+    assert teacher_section.can_join_section_as_participant?(plc_reviewer)
+    assert teacher_section.can_join_section_as_participant?(facilitator)
+    assert teacher_section.can_join_section_as_participant?(teacher)
+    refute teacher_section.can_join_section_as_participant?(student)
+
+    assert facilitator_section.can_join_section_as_participant?(levelbuilder)
+    assert facilitator_section.can_join_section_as_participant?(universal_instructor)
+    refute facilitator_section.can_join_section_as_participant?(plc_reviewer)
+    assert facilitator_section.can_join_section_as_participant?(facilitator)
+    refute facilitator_section.can_join_section_as_participant?(teacher)
+    refute facilitator_section.can_join_section_as_participant?(student)
   end
 
   test 'valid_grade? accepts K-12 and Other' do

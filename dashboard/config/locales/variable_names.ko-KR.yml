@@ -2,37 +2,83 @@
 ko:
   data:
     variable_names:
+      "???": "???"
+      Actor_1_Counter: 배우_1_카운터
+      Actor_2_Counter: 배우_2_카운터
       Blue: 파란색
       Green: 녹색
       Red: 빨간색
       actor: 캐릭터
       age: 나이
+      animal1score: 동물1점수
+      animal1speed: 동물1속도
+      animal2score: 동물2점수
+      animal2speed: 동물2속도
       answer: 응답
+      armlength: 팔 길이
       binary: 2진
       birds: 새들
+      bit: 비트
+      blue1: 파란색1
+      blue2: 파란색2
+      bodylength: 몸 길이
+      buttonHeight: 버튼높이
+      buttonMargin: 버튼여백
+      buttonWidth: 버튼너비
+      cat_score: 고양이_점수
+      cat_speed: 고양이_속도
       cats: 모든 고양이
+      choice: 선택
+      circ: 원
       codeName: 코드이름
       color: 색깔
+      controllerHeight: 컨트롤러높이
+      controllerWidth: 컨트롤러너비
       counter: counter
-      dogs: 모든 개
+      counter2: 카운터2
+      currentActor: 현재배우
+      direction: 방향
+      dog_score: 강아지_점수
+      dog_speed: 강아지_속도
+      dogs: 개
+      dragons: 용들
+      enemy_speed: 적_속도
       energy: 에너지
+      firstName: 이름
+      footlength: 발높이
+      gather: 약탈
+      green1: 녹색1
+      green2: 녹색2
+      guess: 추측
       height: '높이:'
       honey: 꿀
       i: i
       left: 왼쪽으로
+      legangle: 다리각도
+      leglength: 다리길이
       length: length
       level: 레벨
+      marginX: 여백X
+      marginY: 여백Y
+      meal: 식사
       myName: 저이름
       name: 맵 이름
       nectar: 꽃꿀의 양
+      nectars: 꽃꿀
       planet: 행성
+      player_score: 플레이어_점수
       points: 점수
+      punchLine: 펀치라인
       random: random(랜덤)
       red1: 빨간1
       red2: 빨간2
       repeat: 반복
       right: 오른쪽으로
       score: 점수
+      score1: 점수1
+      score2: 점수2
+      screenHeight: 화면높이
+      screenWidth: 화면너비
       shout: 소리지름
       size: 크기
       speed: 스피드

@@ -53,7 +53,7 @@ sk:
         title: Štafetové programovanie
         desc: Študenti budú bežať štafetové preteky, v rámci ktorých budú písať algoritmus na nakreslenie obrázku v štýle "Programovania na štvorčekový papier". Každý súťažiaci môže v svojom kole napísať len jeden príkaz a ak niekde nájde chybu, musí vymazať všetky príkazy zapísané od tejto chyby.
       Conditionals:
-        title: Podmienky
+        title: Podmienené príkazy
         desc: Na pochopenie konceptu podmienok si študenti zahrajú kartovú hru a vytvoria pravidlá ako napr. "ak si potiahnem červenú kartu, dostanem bod" a "ak si potiahnem čiernu kartu, ty dostaneš bod."
       BigEvent:
         title: Veľká udalosť
@@ -247,7 +247,7 @@ sk:
         title: Aktivita bez počítača
         desc: Dnes sa naučíte, čo robiť, ak sa niekto v online svete správa nepríjemne.
       Conditionals_2018:
-        title: Podmienky
+        title: Podmienené príkazy
         desc: Na pochopenie konceptu podmienok si študenti zahrajú kartovú hru a vytvoria pravidlá ako napr. "ak si potiahnem červenú kartu, dostanem bod" a "ak si potiahnem čiernu kartu, ty dostaneš bod."
       DigitalFootprint_2018:
         title: Tvoja digitálna stopa
@@ -285,7 +285,7 @@ sk:
         title: Moji zacyklení robotickí kamaráti
         desc: 'chýba preklad: en-US.data.unplugged.courseB_unplugged_loopyMRF_2018.desc'
       Conditionals_2019:
-        title: Podmienky
+        title: Podmienené príkazy
         desc: Na pochopenie konceptu podmienok si študenti zahrajú kartovú hru a vytvoria pravidlá ako napr. "ak si potiahnem červenú kartu, dostanem bod" a "ak si potiahnem čiernu kartu, ty dostaneš bod."
       courseF_unplugged_powerOfWords_2019:
         title: 'chýba preklad: en-US.data.unplugged.courseF_unplugged_powerOfWords_2018.title'
@@ -374,5 +374,5 @@ sk:
         title: Crowdsourcing
         desc: '_Joshova poznámka: na rozdiel od prvej lekcie, túto som naformátoval ako typickú lekciu bez počítača._'
       timeforcs_demo_conditionals:
-        title: Podmienky
+        title: Podmienené príkazy
         desc: Na pochopenie konceptu podmienok si študenti zahrajú kartovú hru a vytvoria pravidlá ako napr. "ak si potiahnem červenú kartu, dostanem bod" a "ak si potiahnem čiernu kartu, ty dostaneš bod."

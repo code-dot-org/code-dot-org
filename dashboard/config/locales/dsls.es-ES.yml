@@ -12316,17 +12316,25 @@ es-ES:
           de estar preparado para seguir adelante, ¡consulta con tu profesor!\n"
       CSD Games Properties multi predict_2021:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: un sprite de abeja en el centro de la pantalla
+        - text: un sprite de abeja en la esquina inferior derecha
+          correct: true
+        - text: dos sprites de abejas, uno en el centro y otro en la esquina inferior
+            derecha
+        - text: tres sprites de abejas, todos en diferentes lugares
+        - text: nada, se producirá un error
         questions:
-        - {}
+        - text: "¿Qué mostrará el programa?"
+        content1: Mira el código de abajo y adivina dónde aparecerá el sprite de la
+          abeja.
+        title: Posicionamiento del Sprite de la Abeja
       CSD Games Properties practice_2021:
         display_name: Propiedades de Sprite
+        description: Prueba las propiedades de los sprites que has aprendido aquí
       CSD Games variables practice_2021:
         display_name: Variables Practicar
+        description: Elige una de las siguientes actividades para practicar el uso
+          de variables.
       CSD Header Size MC_2018_2019_pilot_2021:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -12453,6 +12461,14 @@ es-ES:
         questions:
         - text: "¿Qué resultado se imprimirá en la consola con este programa?"
         title: Título
+        markdown: |
+          # Expresiones Booleanas
+
+          **Expresión booleana** - una expresión que sólo puede evaluarse como `Verdadero` o `Falso`.
+
+          # Adivinar
+
+          Lee el código de abajo. Hay algunos símbolos nuevos que no conoces. Adivina qué significan e intenta responder a la siguiente pregunta
       CSD U3 Card Examples_2018_2019_pilot_2021:
         content1: descripción aquí
         markdown: |-
@@ -12524,6 +12540,7 @@ es-ES:
         title: dibujarSprites
       CSD U3 drawing practice choice_2021:
         display_name: Practica
+        description: "¡Practica mucho!"
       CSD U3 game intro_2018_2019_pilot_2021:
         content1: descripción aquí
         markdown: |-
@@ -12638,18 +12655,29 @@ es-ES:
         title: Prueba Final del Proyecto Desarrollo Web
       CSD games cake challenge choice_2021:
         display_name: Desafíos
+        description: |2-
+
+          Haz el Tuyo Propio
+          Acabas de recorrer el plan de otra persona para crear un juego, así que ahora es el momento de hacer el tuyo propio. ¿Qué características o retos adicionales quieres crear?
       CSD games functions practice choice_2021:
         display_name: Funciones Practicar
+        description: Practica el uso de las funciones y aprende más sobre lo que las
+          hace tan útiles.
       CSD games platform challenge choice_2021:
         display_name: Desafíos
+        description: "¡Mejora tu juego con estos desafíos!"
       CSD web conditionals practice choice_2021:
         display_name: Condicionales Practicar
+        description: Practica el uso de booleanos y condicionales con estas actividades.
       CSD web draw loop practice choice_2021:
         display_name: Practica
+        description: Prueba a utilizar el bucle de dibujo con estas actividades.
       CSD web movement practice choice_2021:
         display_name: Practica
+        description: Prueba a utilizar el bucle de dibujo con estas actividades.
       CSD web text practice choice_2021:
         display_name: Practica
+        description: Pon a prueba tus conocimientos de texto en estas actividades.
       CSDU6 Innovation_2021:
         teacher_markdown: |+
           A continuación, se muestran algunos sitios recomendados para que los estudiantes comiencen su investigación.  Aunque estos sitios son generalmente apropiados para la escuela, el contenido dentro de ellos cambia con frecuencia, por lo que **sugerimos encarecidamente que compruebes cada sitio para ver si hay contenido inapropiado antes de compartirlo con los estudiantes**.
@@ -12987,9 +13015,110 @@ es-ES:
         display_name: Elementos de Estilo
       CSD U2 links challenge_2021:
         description: Prueba desafíos adicionales o aprende algún código nuevo.
+        display_name: Creando Vínculos
       CSD web classes challenge_2021:
         description: Prueba desafíos adicionales o aprende algún código nuevo.
         display_name: Usando las Clases
       CSD web classes practice_2021:
         description: Practica tus nuevas habilidades aquí.
         display_name: Usando las Clases
+      CSD Games Parameters challenge_2021:
+        description: Echa un vistazo a uno o varios de estos bloques adicionales que
+          puedes utilizar para hacer tus imágenes más interesantes.
+        display_name: Desafíos de Figuras y Parámetros
+      CSD Games Properties challenge_2021:
+        description: Prueba estos nuevos desafíos con las propiedades de los sprites
+        display_name: 'Desafíos: Propiedades de los Sprites'
+      CSD Games Sprites Challenges_2021:
+        description: Prueba estos desafíos adicionales que te ayudarán a hacer tus
+          sprites aún más especiales.
+        display_name: 'Desafíos: Sprites y Animaciones'
+      CSD Games Sprites practice_2021:
+        description: Utiliza tus nuevos conocimientos de sprites y animaciones para
+          completar estos niveles.
+        display_name: Creando sprites y animaciones
+      CSD Games parameters practice_2021:
+        display_name: Práctica con Parámetros
+      CSD Games variables challenge_2021:
+        description: Amplía tus conocimientos sobre las variables con estos desafíos.
+        display_name: 'Desafíos de Variables '
+      CSD U3 drawing challenges_2021:
+        description: "¡Prueba algunos desafíos!"
+        display_name: Desafíos de Dibujo
+      CSD games random challenge_2021:
+        description: Prueba estos desafíos adicionales con números aleatorios.
+        display_name: 'Desafíos: Números Aleatorios'
+      CSD games random practice_2021:
+        description: Prueba tus nuevos conocimientos en estos niveles.
+        display_name: Práctica con Números Aleatorios
+      CSD web draw loop challenge choice_2021:
+        description: Prueba estos desafíos de bucles de dibujo.
+        display_name: Desafíos del Bucle de Dibujo
+      CSD web movement challenge choice_2021:
+        description: Añade más a tu escena de peces o crea algo nuevo.
+        display_name: Desafíos de Movimiento de Sprite
+      CSD web text challenge choice_2021:
+        description: Prueba estos nuevos bloques y desafíos.
+        display_name: Desafíos de Texto
+      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2021:
+        markdown: |
+          # Planifica tu Proyecto
+
+          Echa un vistazo a la guía del proyecto, que ya hemos rellenado para ti.
+
+          * ¿Describe la guía del proyecto los mismos sprites que tú pensaste?
+          * ¿Utiliza las mismas variables para almacenar información?
+          * ¿Las funciones que describe son las mismas que tú describiste?
+      CSD games collisions challenge choice_2021:
+        description: Prueba estos nuevos bloques y desafíos con colisiones.
+        display_name: Desafíos de Colisión
+      CSD games collisions practice choice_2021:
+        description: Practica el uso de los nuevos bloques de colisiones.
+        display_name: Práctica de Colisiones
+      CSD games functions challenge choice_2021:
+        description: Mejora tu juego y prueba estos desafíos con funciones.
+        display_name: Desafíos con Funciones
+      CSD games istouching challenge choice_2021:
+        description: Prueba estos nuevos bloques y desafíos con colisiones.
+        display_name: Desafíos de Colisión
+      CSD games istouching practice choice_2021:
+        description: Practica el uso de la detección de colisiones con estas actividades.
+        display_name: Prácticas de Colisión
+      CSD games movement2 challenge choice_2021:
+        description: Prueba estos nuevos bloques y desafíos con la velocidad y el
+          patrón de contador.
+        display_name: Desafíos de Movimientos Complejos de Sprite
+      CSD games movement2 practice choice_2021:
+        description: Practica con las nuevas formas de mover los sprites.
+        display_name: Práctica de Movimiento del Sprite
+      CSD games velocity challenge choice_2021:
+        description: Prueba estos nuevos bloques y desafíos con la velocidad.
+        display_name: Desafíos de Velocidad
+      CSD games velocity practice choice_2021:
+        description: Practica el uso de los bloques de velocidad con estas actividades.
+        display_name: Práctica de Velocidad
+      CSD web conditionals challenge choice_2021:
+        description: Prueba estos desafíos con condicionales.
+        display_name: Desafíos de Condicionales
+      CSD web keyboard challenge choice_2021:
+        description: Prueba estos nuevos bloques y desafíos con la entrada del teclado.
+        display_name: Desafíos de Entrada de Teclado
+      CSD web keyboard practice choice_2021:
+        description: Practica las entradas del teclado con estas actividades.
+        display_name: Práctica de Entradas de Teclado
+      CSD web mouse challenge choice_2021:
+        description: Prueba estos nuevos bloques y desafíos con la entrada del ratón.
+        display_name: Desafíos del Ratón
+      CSD web mouse practice choice_2021:
+        description: Practica la entrada de teclado y el uso del bloque if/else con
+          estas actividades.
+        display_name: Entrada de Ratón y Práctica de If/else
+      aiml-ch1-pulse-survey_2021:
+        title: "¡Encuesta rápida sobre Inteligencia Artificial y Aprendizaje Automático!"
+      aiml-intro-pulse-survey_2021:
+        title: "¡Encuesta rápida sobre Inteligencia Artificial y Aprendizaje Automático!"
+      ml-models-shoe survey:
+        markdown: |
+          ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
+
+          ## [Pulsa aquí](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) para realizar la Encuesta de Recomendación de Calzado

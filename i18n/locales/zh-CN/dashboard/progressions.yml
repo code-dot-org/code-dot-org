@@ -2,13 +2,29 @@ zh-CN:
   data:
     progressions:
       '"If/Else" with the Bee': '“如果/否则”与蜜蜂'
+      8-Bit Binary Number Widget: 8比特二进制数组件
+      AI Lab and Isaac's Data: AI实验室和Issac的数据
+      AI Lab and Kim's Data: AI实验室和Kim的数据
       AI Machine Learning - Video: 人工智能机器学习 - 视频
+      'AI for Oceans: Fish vs Not Fish': '海洋AI：鱼VS非鱼'
+      'AI for Oceans: Types of Fish': '海洋AI：鱼的种类'
       'AI: Impact on Society - Video': '人工智能：对社会的影响 - 视频'
       'AI: Training Data & Bias - Video': '人工智能：训练数据与偏差 - 视频'
       Accelerometer Events: 加速传感器事件
+      Add Content and HTML: 添加目录和HTML
+      Add Content and Structure to Your Page: 给你的页面添加目录和结构
+      Add Movement: 添加动作
+      Add Sprites: 添加小精灵
+      Add Style: 添加样式
+      Add Style to Your Page: 给你的页面添加样式
+      Add Text: 添加文本
+      Add a Welcome Screen: 添加欢迎页面
       Adding Images: 添加图画
+      Adding New Screens: 添加新的屏幕
+      Adding Pages: 添加页面
       Adding Screens: 添加屏幕
       Alien Defender: 外星人辩护人
+      Alternative Datasets: 备选数据设定
       Analog Sensors: 模拟传感器
       Animate Your Scene: 活动你的场景
       Animating Sprites: 精灵图的动画
@@ -17,21 +33,46 @@ zh-CN:
       'App Project: Linking Screens': '应用程序项目：链接屏幕'
       'App Project: Screen Design': '应用程序项目：屏幕设计'
       'App Project: Screen Import': '应用程序项目：屏幕导入'
+      'App: Choose a Kid''s Movie': 'APP：选择一个小朋友的电影'
+      'App: Friend Finder': 'APP：朋友搜寻器'
+      'App: Guess the Number': 'APP：猜数字'
+      'App: How Many Countries': 'APP：有多少国家'
+      'App: Improved Pet App': 'APP：改进的宠物APP'
+      'App: Is It Your Birthday?': 'APP：这是你的生日吗？'
+      'App: My Famous Birthday': 'APP：我著名的生日'
+      'App: National Parks': 'APP：国家公园'
+      'App: Outfit Picker': 'APP：挑选装备'
+      'App: Pet Chooser': 'APP：选择宠物'
+      'App: Stamp Notebook': 'APP：邮票笔记本'
+      'App: Story Creator': 'APP：故事创造'
+      'App: The Fastest Finger': 'APP：最快的手指'
+      'App: Where Should I Live?': 'APP：我应该住在哪里？'
       Arrays: 数组
+      Artist Intro with JR Hildebrand: JR Hildebrand 的文章简介
+      Artist Intro with JR Hildebrande: JR Hildebrande 的文章简介
       Artist Project: 艺术家项目
       'Artist: Variables': '小艺术家：变量'
       Assessment: 测验
       Attribution: 属性
       Back and Forth: 不断重复
+      Basic Conditionals: 基础条件
       Bass, Mid, and Treble: 低音、中音和高音
+      Be a Super Digital Citizen: 做一个超级数字公民
       Begin planning your project: 开始计划您的项目
       Begin planning your project_2018: 开始计划您的项目2018
+      Binary Bracelets - Unplugged Activity: 二进制手链-线下活动
+      Binary Number Widget: 二进制数组件
       Binary Numbers: 二进制数
       Binary and Data: 二进制和数据
       Board Events: 主板事件
+      Board Input and Output: 边框输入和输出
+      Book Recommender App: 图书介绍APP
+      Book Recommender Model Card: 图书介绍器的模型卡片
       Boolean Comparison: 布尔比较
       Booleans and Comparison Operators: 布尔值和比较运算符
+      Build a Platform Jumper: 建造一个跳跃平台
       Build a Screen: 创建屏幕
+      Building a UI with Design Mode: 建造一个有设计模式的用户界面
       Building an App: 创建一个应用程序
       'Bunny ': '兔子 '
       Bunny Jumper: 兔子跳线
@@ -39,21 +80,30 @@ zh-CN:
       Buttons and Switch: 按钮和开关
       CS Discoveries Post-Course Survey: 计算机科学发现课后调查
       CS Discoveries Post-course Survey: 计算机科学发现课课后调查
+      CSD U3 Interactive Card Exemplar: CSD U3 相互作用的卡片
+      CSD U3 platform intro: CSD U3 平台介绍
+      'CSD: For Loop': 'CSD：for循环'
       CSS Classes: CSS 类
       CSS Text Properties: CSS 文本属性
       CSS and Style Sheets: CSS和样式表
       Cake Defender: 蛋糕卫士
+      Cake Survey: 蛋糕问卷
       Challenge: 挑战
+      Challenge Levels: 挑战关卡
       'Challenge: Add More Inputs': '挑战: 添加更多输入'
       'Challenge: Checking for Multiple Conditions': '挑战：检查多重条件'
       'Challenge: Draw an Image': '挑战：绘制图像'
       'Challenge: Extend Your Scene': '挑战：扩展您的场景'
+      'Challenge: Lists': '挑战：列表'
       'Challenge: Making Sense of Sensors': '挑战：理解传感器'
+      'Challenge: RGB Colors': '挑战：RGB 颜色'
       'Challenge: Updating Variables': '挑战：更新变量'
       Challenges: 挑战
       Change: 更改
       Changing Screens: 更改屏幕
       Changing Sensor Scale: 改变传感器的级别
+      Check Your Work: 检查你的工作
+      Check-In Survey: check-in 服务
       'Circuit Playground: Buzzer': '电路播放场：模糊'
       'Circuit Playground: Color LEDs': '电路播放场：彩色LED'
       'Circuit Playground: Introduction': '电路播放场：LED'

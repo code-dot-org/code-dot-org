@@ -260,7 +260,7 @@
           "dance_callout_11_b": "Nový blok!"
         },
         "CourseD_Dance_Party_11_5": {
-          "dance_party_11_5_groups": "Tu hľadaj blok \"všetky kačice\""
+          "dance_party_11_5_groups": "Tu hľadaj blok „kačky urobte“"
         },
         "Dance_2019_01": {
           "dance_callout_01": "Tu si vyberieš typ tanečníka."
@@ -302,7 +302,7 @@
           "dance_callout_11_b": "Nový blok!"
         },
         "Dance_Party_11_5": {
-          "dance_party_11_5_groups": "Tu hľadaj blok \"všetky kačice\""
+          "dance_party_11_5_groups": "Tu hľadaj blok „kačky urobte“"
         },
         "Fish Tank 3-validated_2019": {
           "spritelab_comment": "Použi tento blok a napíš odkaz sebe alebo svojmu učiteľovi o tom, ako tvoj kód funguje."
@@ -311,13 +311,13 @@
           "spritelab_comment": "Použi tento blok a napíš odkaz sebe alebo svojmu učiteľovi o tom, ako tvoj kód funguje."
         },
         "Function intro Ryan": {
-          "Function_intro_Ryan_1": "Tento krátky pokyn hovorí počítaču, aby v pracovnom priestore spustil VEĽKÝ blok kódu s rovnakým názvom."
+          "Function_intro_Ryan_1": "Tento krátky pokyn hovorí počítaču, aby v pracovnom priestore spustil VEĽKÝ sled príkazov, ktoré sú označené týmto názvom."
         },
         "Function intro Ryan_2019": {
-          "Function_intro_Ryan_1": "Tento krátky pokyn hovorí počítaču, aby v pracovnom priestore spustil VEĽKÝ blok kódu s rovnakým názvom."
+          "Function_intro_Ryan_1": "Tento krátky pokyn hovorí počítaču, aby v pracovnom priestore spustil VEĽKÝ sled príkazov, ktoré sú označené týmto názvom."
         },
         "Function intro Ryan_2020": {
-          "Function_intro_Ryan_1": "Tento krátky pokyn hovorí počítaču, aby v pracovnom priestore spustil VEĽKÝ blok kódu s rovnakým názvom."
+          "Function_intro_Ryan_1": "Tento krátky pokyn hovorí počítaču, aby v pracovnom priestore spustil VEĽKÝ sled príkazov, ktoré sú označené týmto názvom."
         },
         "Geometric Sun": {
           "4-5_Artist_Patterns_Free_Play_1": "Všetky tvoje obľúbené bloky sú usporiadané do kategórií.  Klikni na tieto slová aby si videl, kam  všetko odišlo!"
@@ -345,19 +345,19 @@
           "InspirationalArtwork_1": "Vyskúšajte použitie bloku \"komentovať\" v tejto sekcií a zanechajte si poznámky vo vnútri vášho programu!"
         },
         "MC HOC 2016 Level 2-2": {
-          "craft2_run_button_callout": "Keď si pripravený vyskúšaj svoj program stlačením \"Spustiť\"."
+          "craft2_run_button_callout": "Keď je všetko pripravené, vyskúšaj svoj program stlačením tlačidla Spustiť."
         },
         "MC HOC 2016 New Walk": {
-          "MC_HOC_2016_New_Walk_callout2": "Kliknite na \"Spusti\" pre začatie pohybu."
+          "MC_HOC_2016_New_Walk_callout2": "Stlač tlačidlo „Spustiť“, nech sa môžeš hýbať."
         },
         "MC_HOC_2017_03_Cole": {
-          "MC_HOC_2017_03_Cole_1": "Toto je cyklus 'opakuj'. Pripoj blok do pracovného priestoru a vlož do neho kód, ktorý chceš spúšťať opakovane."
+          "MC_HOC_2017_03_Cole_1": "Toto je cyklus `opakuj`. Pripoj blok do pracovného priestoru a vlož doň kód, ktorý chceš spúšťať opakovane."
         },
         "MC_HOC_2017_03_Cole_2019": {
-          "MC_HOC_2017_03_Cole_1": "Toto je cyklus 'opakuj'. Pripoj blok do pracovného priestoru a vlož do neho kód, ktorý chceš spúšťať opakovane."
+          "MC_HOC_2017_03_Cole_1": "Toto je cyklus `opakuj`. Pripoj blok do pracovného priestoru a vlož doň kód, ktorý chceš spúšťať opakovane."
         },
         "MC_HOC_2017_03_Cole_2020": {
-          "MC_HOC_2017_03_Cole_1": "Toto je cyklus 'opakuj'. Pripoj blok do pracovného priestoru a vlož do neho kód, ktorý chceš spúšťať opakovane."
+          "MC_HOC_2017_03_Cole_1": "Toto je cyklus `opakuj`. Pripoj blok do pracovného priestoru a vlož doň kód, ktorý chceš spúšťať opakovane."
         },
         "MC_HOC_2017_04_Cole": {
           "MC_HOC_2017_04_Cole_a": "Na rozdiel od hráča sa agent môže vznášať nad vodou!"
@@ -417,7 +417,7 @@
           "sign_in_to_save_project": "Chcete mať váš projekt k dispozícií aj v budúcnosti? Prihláste sa pre uloženie projektu do vášho konta!"
         },
         "New Frozen Project": {
-          "snowflake_dropdown": "Použite toto rozbaľovacie menu pre vytvorenie rôznych snehových vločiek!"
+          "snowflake_dropdown": "Použi túto rozbaľovaciu ponuku na vytvorenie rôznych snehových vločiek!"
         },
         "New Play Lab Project": {
           "New Play Lab Project_callout1": "Po kliknutí na kategórie uvidíš jednotlivé bloky. Ak chceš blok použiť vo svojom programe, presuň ho na pracovnú plochu",
@@ -440,43 +440,43 @@
           "courseF_artist_variables3_a": "Použi tento blok na nastavenie hodnoty pre `dĺžku`"
         },
         "Overworld Chop Trees": {
-          "craft_callout_preplaced": "Umiestnili sme sem nejaké bloky aby si mohol začať"
+          "craft_callout_preplaced": "Umiestnili sme sem nejaké bloky, aby sme ti pomohli začať"
         },
         "Overworld Chop Trees_2019": {
-          "craft_callout_preplaced": "Umiestnili sme sem nejaké bloky aby si mohol začať"
+          "craft_callout_preplaced": "Umiestnili sme sem nejaké bloky, aby sme ti pomohli začať"
         },
         "Overworld Chop Trees_2020": {
-          "craft_callout_preplaced": "Umiestnili sme sem nejaké bloky aby si mohol začať"
+          "craft_callout_preplaced": "Umiestnili sme sem nejaké bloky, aby sme ti pomohli začať"
         },
         "Overworld House Frame Chosen": {
-          "craft_callout_preplaced_house": "Tento kód začne stavať tvoj dom. Dokážeš to dokončiť?"
+          "craft_callout_preplaced_house": "Tento kód začne stavať tvoj dom. Dokážeš ho dokončiť?"
         },
         "Overworld House Frame Chosen_2019": {
-          "craft_callout_preplaced_house": "Tento kód začne stavať tvoj dom. Dokážeš to dokončiť?"
+          "craft_callout_preplaced_house": "Tento kód začne stavať tvoj dom. Dokážeš ho dokončiť?"
         },
         "Overworld House Frame Chosen_2020": {
-          "craft_callout_preplaced_house": "Tento kód začne stavať tvoj dom. Dokážeš to dokončiť?"
+          "craft_callout_preplaced_house": "Tento kód začne stavať tvoj dom. Dokážeš ho dokončiť?"
         },
         "Overworld Move to Sheep": {
-          "craft_run_button_callout": "Vyskúšaj svoj program stlačením \"Spustiť\"",
-          "craft_drag_block_callout": "Potiahnite blok \"posunúť vpred\" a zapojte ho pod iný blok"
+          "craft_run_button_callout": "Vyskúšaj svoj program tlačidlom Spustiť",
+          "craft_drag_block_callout": "Vyber blok „posuň sa dopredu“ a zapoj ho pod blok, ktorý už v programe je"
         },
         "Overworld Move to Sheep_2019": {
-          "craft_run_button_callout": "Vyskúšaj svoj program stlačením \"Spustiť\"",
-          "craft_drag_block_callout": "Potiahnite blok \"posunúť vpred\" a zapojte ho pod iný blok"
+          "craft_run_button_callout": "Vyskúšaj svoj program tlačidlom Spustiť",
+          "craft_drag_block_callout": "Vyber blok „posuň sa dopredu“ a zapoj ho pod blok, ktorý už v programe je"
         },
         "Overworld Move to Sheep_2020": {
-          "craft_run_button_callout": "Vyskúšaj svoj program stlačením \"Spustiť\"",
-          "craft_drag_block_callout": "Potiahnite blok \"posunúť vpred\" a zapojte ho pod iný blok"
+          "craft_run_button_callout": "Vyskúšaj svoj program tlačidlom Spustiť",
+          "craft_drag_block_callout": "Vyber blok „posuň sa dopredu“ a zapoj ho pod blok, ktorý už v programe je"
         },
         "Overworld Place Wall": {
-          "craft_inside_repeat": "Opakuj akcie umiestnením blokov tu"
+          "craft_inside_repeat": "Opakuj akcie tým, že umiestniš bloky sem"
         },
         "Overworld Place Wall_2019": {
-          "craft_inside_repeat": "Opakuj akcie umiestnením blokov tu"
+          "craft_inside_repeat": "Opakuj akcie tým, že umiestniš bloky sem"
         },
         "Overworld Place Wall_2020": {
-          "craft_inside_repeat": "Opakuj akcie umiestnením blokov tu"
+          "craft_inside_repeat": "Opakuj akcie tým, že umiestniš bloky sem"
         },
         "Robot Doodle": {
           "4-5_Artist_Patterns_Free_Play_2": "Vyskúšajte použitie nového bloku \"komentovať\" v tejto sekcií a zanechajte si poznámky vo vnútri vášho programu!"
@@ -485,13 +485,13 @@
           "4-5_Artist_Patterns_Free_Play_2": "Vyskúšajte použitie nového bloku \"komentovať\" v tejto sekcií a zanechajte si poznámky vo vnútri vášho programu!"
         },
         "Underground Avoiding Lava": {
-          "craft_callout_moveforward": "Tento kód bude kontrolovať lávu, môžeš zadať príkaz pre pohyb dopredu?"
+          "craft_callout_moveforward": "Tento kód bude kontrolovať lávu, môžeš pridať príkaz na posunutie dopredu?"
         },
         "Underground Avoiding Lava_2019": {
-          "craft_callout_moveforward": "Tento kód bude kontrolovať lávu, môžeš zadať príkaz pre pohyb dopredu?"
+          "craft_callout_moveforward": "Tento kód bude kontrolovať lávu, môžeš pridať príkaz na posunutie dopredu?"
         },
         "Underground Avoiding Lava_2020": {
-          "craft_callout_moveforward": "Tento kód bude kontrolovať lávu, môžeš zadať príkaz pre pohyb dopredu?"
+          "craft_callout_moveforward": "Tento kód bude kontrolovať lávu, môžeš pridať príkaz na posunutie dopredu?"
         },
         "Underground Iron": {
           "craft_what_is_iron": "Vyťaž toto železo!"
@@ -658,10 +658,10 @@
           "courseA_maze_seq1_1": "Ak potrebuješ nápovedu, klikni na žiarovku!"
         },
         "courseA_maze_seq1_2019": {
-          "courseA_maze_seq1_1": "Ak potrebuješ nápovedu, klikni na žiarovku!"
+          "courseA_maze_seq1_1": "Ak potrebuješ pomôcku, klikni na žiarovku!"
         },
         "courseA_maze_seq1_2020": {
-          "courseA_maze_seq1_1": "Ak potrebuješ nápovedu, klikni na žiarovku!"
+          "courseA_maze_seq1_1": "Ak potrebuješ pomôcku, klikni na žiarovku!"
         },
         "courseA_maze_seq2": {
           "courseA_maze_seqA_callout1": "Použite tlačidlo \"Kroky\" na prejdenie programom krok po kroku. Toto vám pomôže nájsť chybu!"
@@ -748,16 +748,16 @@
           "courseB_collector_loops1_1": "Vidíš v paneli nástrojov nové bloky? Neboj sa, neskôr ti ukážeme, ako ich používať."
         },
         "courseB_maze_seq1": {
-          "courseB_maze_seq1": "Ak potrebuješ nápovedu, klikni na žiarovku!"
+          "courseB_maze_seq1": "Ak potrebuješ pomôcku, klikni na žiarovku!"
         },
         "courseB_maze_seq1_2018": {
-          "courseB_maze_seq1": "Ak potrebuješ nápovedu, klikni na žiarovku!"
+          "courseB_maze_seq1": "Ak potrebuješ pomôcku, klikni na žiarovku!"
         },
         "courseB_maze_seq1_2019": {
-          "courseB_maze_seq1": "Ak potrebuješ nápovedu, klikni na žiarovku!"
+          "courseB_maze_seq1": "Ak potrebuješ pomôcku, klikni na žiarovku!"
         },
         "courseB_maze_seq1_2020": {
-          "courseB_maze_seq1": "Ak potrebuješ nápovedu, klikni na žiarovku!"
+          "courseB_maze_seq1": "Ak potrebuješ pomôcku, klikni na žiarovku!"
         },
         "courseB_maze_seq2": {
           "courseB_maze_seq2_callout1": "Použite tlačidlo \"Kroky\" na prejdenie programom krok po kroku. Toto vám pomôže nájsť chybu!"
@@ -989,7 +989,7 @@
         },
         "courseD_bee_conditionals2": {
           "4_5_Bee_Conditionals_2_1": "Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU. Nemusíš vôbec vyhľadávať plásty.",
-          "4_5_Bee_Conditionals_2_2": "Potrebujete pomoc?  Kliknite sem pre videonápovedu!"
+          "4_5_Bee_Conditionals_2_2": "Potrebuješ pomoc? Kliknite sem a pozri si videopomôcku!"
         },
         "courseD_bee_conditionals2_2018": {
           "4_5_Bee_Conditionals_2_1": "Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU. Nemusíš vôbec vyhľadávať plásty."
@@ -1002,7 +1002,7 @@
         },
         "courseD_bee_conditionals2_copy": {
           "4_5_Bee_Conditionals_2_1": "Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU. Nemusíš vôbec vyhľadávať plásty.",
-          "4_5_Bee_Conditionals_2_2": "Potrebujete pomoc?  Kliknite sem pre videonápovedu!"
+          "4_5_Bee_Conditionals_2_2": "Potrebuješ pomoc? Kliknite sem a pozri si videopomôcku!"
         },
         "courseD_bee_conditionals_challenge2": {
           "courseD_bee_conditionals_challenge2_1": "Použi tento cyklus na to, aby si pozbieral všetok nektár (alebo vyrobil med) z jedného kvetu (alebo medového plástu)."
@@ -1401,45 +1401,45 @@
           "express_maze_debugging9_2019_1": "Presuň bloky z panela nástrojov na tvoju pracovnú plochu."
         },
         "frozen circle function with parameter": {
-          "frozen_circle_function_with_parameter_circle": "Použi blok \"Vytvor kružnicu\" a zmeň veľkost."
+          "frozen_circle_function_with_parameter_circle": "Použi blok „vytvor kružnicu“ a zmeň veľkost."
         },
         "frozen cross": {
-          "repeat_blocks_1": "(1) Použite tento blok a pridajte ho okolo šedých blokov na pracovnej ploche",
-          "repeat_blocks_2": "(2) Presuň sem blok \"Opakuj\" a šedé bloky umiestni do jeho vnútra"
+          "repeat_blocks_1": "(1) Použi tento blok a vlož doň sivé bloky, ktoré už sú na pracovnej ploche",
+          "repeat_blocks_2": "(2) Presuň sem blok „opakuj“ a sivé bloky umiestni do jeho vnútra"
         },
         "frozen cross rotate": {
-          "replace_questions_degree": "Použite rozbaľovacie pole pre nahradenie \"???\" číslom"
+          "replace_questions_degree": "Otvor rozbaľovaciu ponuku a nahraď „???“ číslom"
         },
         "frozen diamond": {
-          "frozen_diamond_repeat": "Pre vytvorenie tohto tvaru použi blok \"Opakuj\"."
+          "frozen_diamond_repeat": "Na vytvorenie tohto tvaru použi blok „opakuj“."
         },
         "frozen diamond snowflake": {
-          "frozen_diamond_repeat": "Pre vytvorenie tohto tvaru použi blok \"Opakuj\"."
+          "frozen_diamond_repeat": "Na vytvorenie tohto tvaru použi blok „opakuj“."
         },
         "frozen freeplay": {
-          "snowflake_dropdown": "Použite toto rozbaľovacie menu pre vytvorenie rôznych snehových vločiek!"
+          "snowflake_dropdown": "Použi túto rozbaľovaciu ponuku na vytvorenie rôznych snehových vločiek!"
         },
         "frozen line": {
-          "run": "Aby si spustil svoj program, stlač tlačidlo \"Spustiť\"!",
-          "move_elsa_forward": "Presuň blok \"Posuň sa dopredu\" a pripoj ho pod blok \"Po spustení\", aby sa Elsa pohla dopredu"
+          "run": "Na spustenie svojho programu stlač tlačidlo „Spustiť“!",
+          "move_elsa_forward": "Vyber blok „posuň sa dopredu“ a pripoj ho pod blok „po spustení“, aby sa Elsa pohla dopredu"
         },
         "frozen perpendicular": {
-          "turn_elsa": "Použite blok \"Otočiť\" pre otočenie Elsy. Číslo vo vyberacom poli určí, koľkokrát sa Elsa otočí"
+          "turn_elsa": "Otoč Elsu pomocou bloku „otoč sa“. Číslo v rozbaľovacej ponuke určuje, koľkokrát sa Elsa otočí"
         },
         "frozen snowflake branch": {
-          "frozen_snowflake_branch": "Použi blok \"Vytvor rameno vločky\""
+          "frozen_snowflake_branch": "Použi blok „vytvor rameno vločky“"
         },
         "frozen square iterative": {
           "frozen_create_square": "Pripoj viac blokov, aby si vytvoril štvorec"
         },
         "frozen square loop": {
-          "replace_questions": "Použite rozbaľovacie pole pre nahradenie \"???\" číslom"
+          "replace_questions": "Otvor rozbaľovaciu ponuku a nahraď „???“ číslom"
         },
         "frozen square loop 3x": {
-          "replace_questions": "Použite rozbaľovacie pole pre nahradenie \"???\" číslom"
+          "replace_questions": "Otvor rozbaľovaciu ponuku a nahraď „???“ číslom"
         },
         "frozen square snowflake": {
-          "replace_questions": "Použite rozbaľovacie pole pre nahradenie \"???\" číslom"
+          "replace_questions": "Otvor rozbaľovaciu ponuku a nahraď „???“ číslom"
         },
         "grade5_artist_variables_triangles1": {
           "grade5_artist_variables_triangles1_1": "Všimni si, že bloky majú nový spôsob zadávani čísiel. Tieto \"matematické\" bloky môžeš vytiahnuť a presúvať podľa potreby!"
@@ -1504,10 +1504,10 @@
           "spritelab_comment": "Použi tento blok a napíš odkaz sebe alebo svojmu učiteľovi o tom, ako tvoj kód funguje."
         },
         "Function intro Ryan_2021": {
-          "Function_intro_Ryan_1": "Tento krátky pokyn hovorí počítaču, aby v pracovnom priestore spustil VEĽKÝ blok kódu s rovnakým názvom."
+          "Function_intro_Ryan_1": "Tento krátky pokyn hovorí počítaču, aby v pracovnom priestore spustil VEĽKÝ sled príkazov, ktoré sú označené týmto názvom."
         },
         "MC_HOC_2017_03_Cole_2021": {
-          "MC_HOC_2017_03_Cole_1": "Toto je cyklus 'opakuj'. Pripoj blok do pracovného priestoru a vlož do neho kód, ktorý chceš spúšťať opakovane."
+          "MC_HOC_2017_03_Cole_1": "Toto je cyklus `opakuj`. Pripoj blok do pracovného priestoru a vlož doň kód, ktorý chceš spúšťať opakovane."
         },
         "MC_HOC_2017_04_Cole_2021": {
           "MC_HOC_2017_04_Cole_a": "Na rozdiel od hráča sa agent môže vznášať nad vodou!"
@@ -1519,20 +1519,20 @@
           "MC_HOC_2017_08_RY_1": "Na rozdiel od Alex a Steva sa agent môže vznášať nad lávou!  "
         },
         "Overworld Chop Trees_2021": {
-          "craft_callout_preplaced": "Umiestnili sme sem nejaké bloky aby si mohol začať"
+          "craft_callout_preplaced": "Umiestnili sme sem nejaké bloky, aby sme ti pomohli začať"
         },
         "Overworld House Frame Chosen_2021": {
-          "craft_callout_preplaced_house": "Tento kód začne stavať tvoj dom. Dokážeš to dokončiť?"
+          "craft_callout_preplaced_house": "Tento kód začne stavať tvoj dom. Dokážeš ho dokončiť?"
         },
         "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "Vyskúšaj svoj program stlačením \"Spustiť\"",
-          "craft_drag_block_callout": "Potiahnite blok \"posunúť vpred\" a zapojte ho pod iný blok"
+          "craft_run_button_callout": "Vyskúšaj svoj program tlačidlom Spustiť",
+          "craft_drag_block_callout": "Vyber blok „posuň sa dopredu“ a zapoj ho pod blok, ktorý už v programe je"
         },
         "Overworld Place Wall_2021": {
-          "craft_inside_repeat": "Opakuj akcie umiestnením blokov tu"
+          "craft_inside_repeat": "Opakuj akcie tým, že umiestniš bloky sem"
         },
         "Underground Avoiding Lava_2021": {
-          "craft_callout_moveforward": "Tento kód bude kontrolovať lávu, môžeš zadať príkaz pre pohyb dopredu?"
+          "craft_callout_moveforward": "Tento kód bude kontrolovať lávu, môžeš pridať príkaz na posunutie dopredu?"
         },
         "Underground Iron_2021": {
           "craft_what_is_iron": "Vyťaž toto železo!"
@@ -1556,7 +1556,7 @@
           "courseC_maze_programming2_1": "Toto je panel nástrojov. Tu nájdete extra bloky pre dokončenie Vaších cvičení."
         },
         "courseA_maze_seq1_2021": {
-          "courseA_maze_seq1_1": "Ak potrebuješ nápovedu, klikni na žiarovku!"
+          "courseA_maze_seq1_1": "Ak potrebuješ pomôcku, klikni na žiarovku!"
         },
         "courseA_playLab_events4_2021": {
           "courseA_playlab_events4_callout1": "Toto je hlásenie"
@@ -1580,7 +1580,7 @@
           "courseB_collector_loops1_1": "Vidíš v paneli nástrojov nové bloky? Neboj sa, neskôr ti ukážeme, ako ich používať."
         },
         "courseB_maze_seq1_2021": {
-          "courseB_maze_seq1": "Ak potrebuješ nápovedu, klikni na žiarovku!"
+          "courseB_maze_seq1": "Ak potrebuješ pomôcku, klikni na žiarovku!"
         },
         "courseB_playlab_events6_2021": {
           "courseB_playlab_events6_a": "Použite zelenú šípku pre zmenu smeru."
@@ -1646,7 +1646,7 @@
         },
         "courseD_bee_conditionals2_dani": {
           "4_5_Bee_Conditionals_2_1": "Nezabudni skontrolovať či má KAŽDÝ mrak KVETINU. Nemusíš vôbec vyhľadávať plásty.",
-          "4_5_Bee_Conditionals_2_2": "Potrebujete pomoc?  Kliknite sem pre videonápovedu!"
+          "4_5_Bee_Conditionals_2_2": "Potrebuješ pomoc? Kliknite sem a pozri si videopomôcku!"
         },
         "courseD_bee_conditionals_challenge2_2021": {
           "courseD_bee_conditionals_challenge2_1": "Použi tento cyklus na to, aby si pozbieral všetok nektár (alebo vyrobil med) z jedného kvetu (alebo medového plástu)."

@@ -2,6 +2,8 @@
 fil:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: gumawa ng bagong {ANIMATION_NAME} sprite sa {LOCATION}
       Dancelab_alternateMoves:
         text: "Ang {GROUP} ay maghahalinhinan bawat {N} measure \nsa pagitan ng {MOVE1} at {MOVE2}"
         options:
@@ -1040,6 +1042,12 @@ fil:
         text: gumuhit ng linya {COLOR} {LOC1} {LOC2}
       gamelab_edgesDisplace:
         text: gilid block {SPRITE} mula sa paglipat
+      gamelab_everySeconds:
+        text: 'ulitin bawat {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': mga segundo
+            '"frames"': mga frame
       gamelab_followingTargets:
         text: sumusunod sa mga target
       gamelab_getAllSprites:
@@ -1193,6 +1201,8 @@ fil:
             '"pop"': pop
             '"rain"': ulan
             '"spiral"': paikid
+      gamelab_makeNewScaledSprite:
+        text: gumawa ng bagong {ANIMATION_NAME} sprite sa {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: gumawa ng bagong {ANIMATION_NAME} sprite sa {LOCATION}
       gamelab_makeNumSprites:

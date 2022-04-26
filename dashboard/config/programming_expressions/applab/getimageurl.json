@@ -3,7 +3,7 @@
   "name": "getImageURL",
   "category": "UI controls",
   "category_key": "ui_controls",
-  "content": "Gets the URL for the provided image element id.\n\nThe images in apps are not always static, they sometimes change based on user or other events. `getImageURL()` can be used to access the URL of the image displayed for an image element ID.",
+  "content": "Gets the URL for the provided image element id.\n\nThe images in apps are not always static, they sometimes change based on user or other events. [`getImageURL()`(#fff176)](/docs/applab/getImageURL/) can be used to access the URL of the image displayed for an image element ID.",
   "examples": [
     {
       "name": "Example: Image Swap",
@@ -32,8 +32,11 @@
       "description": "The unique identifier for the screen element. Must begin with a letter, contain no spaces, and may contain letters, digits, - and _."
     }
   ],
+  "parameters": [
+    "id"
+  ],
   "return_value": "Returns a string containing image url for the provided id.",
   "short_description": "Gets the URL for the provided image element id.",
   "syntax": "getImageURL(id)",
-  "tips": "- The string returned contains the image URL. For example  http://code.org/images/logo.png is returned as https://studio.code.org/media?u=http%3A%2F%2Fcode.org%2Fimages%2Flogo.png\r\n"
+  "tips": "- The string returned contains the image URL. For example  http:// code.org/images/logo.png is returned as https:// studio.code.org/media?u=http%3A%2F%2Fcode.org%2Fimages%2Flogo.png\n"
 }

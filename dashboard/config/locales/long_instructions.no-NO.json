@@ -294,15 +294,7 @@
         "courseB_maze_seq9_2021": "**Utfordring:** Flytt deg rundt den sprekte isen for å få Scrat til eikenøtten.",
         "courseB_maze_seq_challenge1_2021": "Du har bare 4 av hver bevegelsesblokk. Kan du finne en rute før du går tom for blokker?",
         "courseB_maze_seq_challenge2_2021": "Feilsøk dette nivået. Du har de riktige blokkene, men de er i feil rekkefølge!",
-        "CSD U6 iter predict bubbles_2021": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)",
-        "courseB_Scrat_ramp1_2021": "For å få Scrat til eikenøtten, fest  <xml><block type=\"maze_moveEast\" block-text=\"move East\"/></xml> blokken til bunnen av <xml><block type=\"when_run\" block-text=\"when run\"/></xml> blokken og trykk \"Kjør\"",
-        "courseB_Scrat_ramp2_2021": "Slå sammen begge <xml><block type=\"maze_moveEast\" block-text=\"move east\"/></xml> blokkene til bunnen av <xml><block type=\"when_run\" block-text=\"when run\"/></xml> blokken for å fullføre koden, klikk så på \"Run\"",
-        "courseB_Scrat_ramp3a_2021": "Ta en <xml><block type=\"maze_moveNorth\" block-text=\"move north\"/></xml> blokk fra verktøykassen og legg til bunnen av de andre blokkene for å fullføre koden, klikke så på \"Kjør\"",
-        "courseB_Scrat_ramp3b_2021": "Det er en ekstra blokk på slutten av denne koden!\n\nDra den tilbake til verktøykassen for å fjerne den.",
-        "courseB_Scrat_ramp4a_2021": "Kan du finne ut hvilken blokk du må legge til bunnen av de andre blokkene for å fullføre koden?",
-        "courseB_Scrat_ramp5a_2021": "Prøv denne helt alene!",
-        "courseB_starWars_prog1_2021": "![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\\_ \"Gå å hent skrapmetallet, BB-8!\"\\_\n\nSe opp for vegger og kasser. Skrapmetall ser slik ut: ![picture of scrap metal](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)",
-        "courseB_starWars_prog2_2021": "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) \\_ \"Få tak i alt metallet\" \\_"
+        "CSD U6 iter predict bubbles_2021": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
       }
     }
   }
