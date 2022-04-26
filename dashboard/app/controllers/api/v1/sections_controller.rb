@@ -38,12 +38,16 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     # Once this has been done, endpoint can use CanCan load_and_authorize_resource
     # rather than manually authorizing (above)
     return head :bad_request unless Section.valid_login_type? params[:login_type]
+    # TODO(dmcavoy): Remove after launching this feature
+    params[:participant_type] = SharedCourseConstants::PARTICIPANT_AUDIENCE.student if params[:participant_type].nil_or_empty?
+    return head :bad_request unless Section.valid_participant_type? params[:participant_type]
 
     section = Section.create(
       {
         user_id: current_user.id,
         name: params[:name].present? ? params[:name].to_s : I18n.t('sections.default_name', default: 'Untitled Section'),
         login_type: params[:login_type],
+        participant_type: params[:participant_type],
         grade: Section.valid_grade?(params[:grade].to_s) ? params[:grade].to_s : nil,
         script_id: @unit&.id,
         course_id: @course&.id,
@@ -112,6 +116,13 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
       }, status: :bad_request
       return
     end
+    # add_student returns 'forbidden' when user can not be participant in section
+    if result == 'forbidden'
+      render json: {
+        result: 'cant_be_participant'
+      }, status: :forbidden
+      return
+    end
     # add_student returns 'full' when @section has or will have 500 followers
     if result == 'full'
       render json: {
@@ -129,6 +140,8 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     end
     render json: {
       sections: current_user.sections_as_student.map(&:summarize_without_students),
+      studentSections: current_user.sections_as_student_participant.map(&:summarize_without_students),
+      plSections: current_user.sections_as_pl_participant.map(&:summarize_without_students),
       result: result
     }
   end
@@ -139,6 +152,8 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     @section.remove_student(current_user, @follower, {notify: true})
     render json: {
       sections: current_user.sections_as_student.map(&:summarize_without_students),
+      studentSections: current_user.sections_as_student_participant.map(&:summarize_without_students),
+      plSections: current_user.sections_as_pl_participant.map(&:summarize_without_students),
       result: "success"
     }
   end
@@ -150,10 +165,6 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
       sharing_disabled: @section.sharing_disabled,
       students: @section.students.map(&:summarize)
     }
-  end
-
-  def student_script_ids
-    render json: {studentScriptIds: @section.student_script_ids}
   end
 
   # GET /api/v1/sections/membership

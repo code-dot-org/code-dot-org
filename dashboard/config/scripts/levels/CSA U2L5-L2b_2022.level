@@ -15,16 +15,14 @@
         "isVisible": true
       }
     },
-    "encrypted_examples": [
-
-    ],
-    "thumbnail_url": "https://images.code.org/3529672eb72644293f85a1bea291ef58-image-1647298892379.gif"
+    "thumbnail_url": "https://images.code.org/3529672eb72644293f85a1bea291ef58-image-1647298892379.gif",
+    "encrypted_exemplar_sources": "HM0H7Z3L+CTAPTxDu6u7zslyjM60me7VHOAdpgMoPI723fcl3Hz+KDX5JaKa\nieELtv4J6Nz8hDQGcjqOGcCCAIYFLpiW8ojOK2nzaUtvdmoVMFHpt4Kq5oOT\nDKXAd8TF6E1/EYBnLLOE2ZrIDE7fPkY/ptgHFFqahl6HatnNpfavRpmFZa2o\nRC+Et080t6u938qfh4ToZFseKQ3g5x8oSKzmmh/gOJ2CHXTp9xBKGSBG1X4Y\nXx58oN6SOR+VEd7e3Gl2AfFblbUXWFxXTNAxCYfT8MpRmrjnJaNKFAjzRO6A\nQzLCTAgXC1sfqjohllotSoQ1wOr/Wq8jZGLvGc6CVsXHWklCe8hcX9ypZlyY\nptaCmZ6CTgaI5qj/WshM4TC+beYRjw0QAwyvcrBRs66PKh95ChbIIxac/ZT4\nXH7gFcTwWqs7leIskhwEKxJgQDJnwj9Qkr+QGJwzvRgKjCnWwwIL8ZNzzpfC\nhuc3Q6Owr3GgCRv1sUvq3/Hci5CQTHxEf1N8zHWbqD666a5ogZoxQ+sOWwoO\nDbuvKVBUpl4nI2Z1RlqhaMM1fUs0g853qmN85zDGuihy4i0Uj0SHX8NM2aiG\nG6H3EBM4jJm/onUrh+tFnN50oaEauEpsK9eWvY+ZCzntoam/KCB5F+42V30e\nL+UZhu5FVAtCsqKyoP2enenZ33MyIDKDkk3d1wrEzUbj6uTfKrPnqZPxclK/\nKHclLTrvwUdxwjPDRdS/QN6FwbPmxBUGpdg0P0OX5/fBEINGWrkS6zADPp6k\nD9AAlebgQU12+WLC1n3didW2UzpduPvztKS9B6nP6QLabRzx7qsJ1HTtSCVR\ny61pLAzRnlTyRAFbadYZgDPMeQjGFgbUra5xStEzTYNPiTFYzc2SCt+xTc9v\ndf/9C6IqdQw9i2MBqKFNUd3PAkgI2uz9WC6q/HZ41e8shoj1YOhnvM7vVjwm\nxwRZFgq+lgdww7q+VffhFg==\n"
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-03-12T12:29:24.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-03-12 12:29:27 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-14 22:55:43 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-14 22:58:17 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-14 23:02:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-03-12 12:29:27 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-14 22:55:43 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-14 22:58:17 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-14 23:02:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-11 12:53:45 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

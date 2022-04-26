@@ -19,8 +19,8 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2022-04-08 15:24:23 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-04-21 16:37:34 UTC",
+    "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -3954,7 +3954,7 @@
       "key": "f26ccabe-2b34-481f-b142-b6227421df3e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** _Today, you'll start the final lesson of the unit, in which you will design and code your own project._\n\n- _Before you start, what are three skills or qualities that you think will be important as you complete this project?_\n\n####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n\n- **Define** - Figure out the details of the problems that you are trying to solve.\n- **Prepare** - Research, plan, and acquire materials for the activity you are about to do.\n- **Reflect** - Carefully think back on something with the intention of improving the outcome in the future.\n- **Try** - Attempt to do something.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “End of Course Project” slide\n\n**Goal:** This part of the process is an exploration.  Students will sit down with a stage full of example projects to remix and learn.  Not only will this give students an idea of what is possible, it will also help them see the limitations of the tool.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Day 1 - Explore” slide\n\nGive students a day to play with and remix the projects found on Code Studio. Have them use their journals (or notebook paper) to keep track of thoughts and ideas as they go.\n\nThis activity should be done in the same pairs/groups that will be working on projects together over the next several lessons.\n\nMake sure your class understands that they will be spending the next several weeks working with projects of their own, so they should pay close attention to how these programs were written, as well as the concepts that they use.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 1 - Example Projects” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** _Today, you'll start the final lesson of the unit, in which you will design and code your own project._\n\n- _Before you start, what was your favorite lesson we have done so far?_\n- _What skills did you need in order to be successful?_\n\n####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n\n- **Define** - Figure out the details of the problems that you are trying to solve.\n- **Prepare** - Research, plan, and acquire materials for the activity you are about to do.\n- **Reflect** - Carefully think back on something with the intention of improving the outcome in the future.\n- **Try** - Attempt to do something.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “End of Course Project” slide\n\n**Goal:** This part of the process is an exploration.  Students will sit down with a stage full of example projects to remix and learn.  Not only will this give students an idea of what is possible, it will also help them see the limitations of the tool.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Day 1 - Explore” slide\n\nGive students a day to play with and remix the projects found on Code Studio. Have them use their journals (or notebook paper) to keep track of thoughts and ideas as they go.\n\nThis activity should be done in the same pairs/groups that will be working on projects together over the next several lessons.\n\nMake sure your class understands that they will be spending the next several weeks working with projects of their own, so they should pay close attention to how these programs were written, as well as the concepts that they use.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 1 - Example Projects” slide",
         "name": "Explore"
       },
       "seeding_key": {
@@ -4032,6 +4032,22 @@
       },
       "seeding_key": {
         "activity_section.key": "3591fc28-830a-4a32-94e4-3468853cea32",
+        "lesson_activity.key": "b69f4d33-0eac-44f4-95b3-11c2a269112a"
+      }
+    },
+    {
+      "key": "bad6c34f-b32e-4116-908c-7eb4fc2ca6a4",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "As students code their projects, encourage them to use their debugging skills. Remind them that debugging is an essential part of the programming process. You can even create a Bug Hall of Fame for students to post their successful attempts at debugging their own code or their classmates' code."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bad6c34f-b32e-4116-908c-7eb4fc2ca6a4",
         "lesson_activity.key": "b69f4d33-0eac-44f4-95b3-11c2a269112a"
       }
     },
@@ -4126,8 +4142,24 @@
       }
     },
     {
-      "key": "e5a4600f-c0cb-4f61-82bc-b1fdff9ad731",
+      "key": "1b707283-b28d-4147-921e-691c3e5325fe",
       "position": 5,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "At the end of presentations, make time to celebrate students' hard work! You might choose to print out [certificates of completion](https://code.org/congrats/course1) for students or host an awards ceremony. If you choose to present awards to your students, focus on their skills and contributions as a classmate rather than on the complexity of their final project. For example, consider awards such as Most Improved Coder, Most Persistent Debugger, and Best Teammate. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1b707283-b28d-4147-921e-691c3e5325fe",
+        "lesson_activity.key": "9291f0b4-758d-4006-b10f-a2d5dfcbbf42"
+      }
+    },
+    {
+      "key": "e5a4600f-c0cb-4f61-82bc-b1fdff9ad731",
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** \n* _What did you learn in creating this project?_\n* _What was the most challenging part about this experience? How did you overcome that challenge?_\n\nStudents will reflect on their work by completing the final **Reflect** section of their ***Final Project Guide** packets.\n",
         "name": "Reflect "
@@ -8289,7 +8321,7 @@
     },
     {
       "name": "Virtual Lesson Modifications",
-      "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/preview",
+      "url": "https://docs.google.com/document/d/10v_thWkO0aJNWsCFtv_bpVbiIy-meYs_vbUiHi-ZCH0/preview",
       "key": "virtual_lesson_modifications",
       "properties": {
       },

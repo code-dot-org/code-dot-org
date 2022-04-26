@@ -36,5 +36,5 @@
   "return_value": "No return value. Changes output in the display after drawSprites() is called.",
   "short_description": "Rotate the sprite to face the (x,y) coordinate.",
   "syntax": "sprite.pointTo(x,y)",
-  "tips": "- Any changes to the properties of a sprite will not be seen until after `drawSprites()` is called."
+  "tips": "- Any changes to the properties of a sprite will not be seen until after [`drawSprites()`(#fff176)](/docs/gamelab/drawSprites/) is called."
 }

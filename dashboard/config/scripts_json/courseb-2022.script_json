@@ -19,8 +19,8 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2022-04-07 21:18:49 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-04-21 16:36:48 UTC",
+    "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -6939,11 +6939,9 @@
     },
     {
       "name": "Virtual Lesson Modifications",
-      "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit",
+      "url": "https://docs.google.com/document/d/1lB1bXzIatKSSWLDLsLnRPXgoKR7Q-YzDQ1ClM0OcurU/view",
       "key": "virtual_lesson_modifications",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "virtual_lesson_modifications"

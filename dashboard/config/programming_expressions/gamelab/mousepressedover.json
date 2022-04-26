@@ -1,9 +1,9 @@
 {
   "key": "mousePressedOver",
   "name": "mousePressedOver()",
-  "category": "World",
+  "category": "Game Lab",
   "category_key": "game_lab",
-  "content": "Checks if the mouse is pressed over the sprite specified.\r\n\r\nSome interactive games use the mouse for the user to control the game. All sprites have a collider area that defines the active area to detect collisions with other sprites and mouse interactions. Use `setCollider` to change the default collider area, a rectangle, for a sprite.",
+  "content": "Checks if the mouse is pressed over the sprite specified.\n\nSome interactive games use the mouse for the user to control the game. All sprites have a collider area that defines the active area to detect collisions with other sprites and mouse interactions. Use [`setCollider()`(#f78183)](/docs/gamelab/setCollider/) to change the default collider area, a rectangle, for a sprite.",
   "examples": [
     {
       "name": "",
@@ -32,8 +32,11 @@
       "description": "The name of the sprite you want to check if the mouse is over."
     }
   ],
+  "parameters": [
+    "sprite"
+  ],
   "return_value": "Boolean true or false.",
   "short_description": "Checks if the mouse is pressed over the sprite specified.",
   "syntax": "mousePressedOver(sprite)",
-  "tips": "- When testing your games that use keyboard or mouse input make sure you click in the display area before you run, otherwise the Workspace will record your keyboard and mouse actions.\r\n- To fine tune your mouse and sprite interactions use `setCollider` to change the shape and size of the collider area and set `debug` to true for the sprite."
+  "tips": "- When testing your games that use keyboard or mouse input make sure you click in the display area before you run, otherwise the Workspace will record your keyboard and mouse actions.\r\n- To fine tune your mouse and sprite interactions use [`setCollider`(#f78183)](/docs/gamelab/setCollider/) to change the shape and size of the collider area and set [`debug`(#f78183)](/docs/gamelab/debug/) to true for the sprite."
 }
