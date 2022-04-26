@@ -40,6 +40,11 @@ class Experiment < ApplicationRecord
   cattr_accessor :experiments
   @@experiments = nil
 
+  def self.clear_cache
+    raise "only call this in a test!" unless Rails.env.test?
+    @@experiments = nil
+  end
+
   # users in these experiments can create levels on levelbuilder, as well as
   # edit scripts and levels marked with the same editor_experiment.
   LEVEL_EDITOR_EXPERIMENTS = %w(

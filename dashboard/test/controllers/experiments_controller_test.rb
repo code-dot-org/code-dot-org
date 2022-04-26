@@ -2,6 +2,7 @@ require 'test_helper'
 
 class ExperimentsControllerTest < ActionController::TestCase
   setup_all do
+    Experiment.clear_cache
     @pilot = create :pilot, allow_joining_via_url: true
     @pilot_name = @pilot.name
   end
