@@ -25,7 +25,7 @@ import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import PlayerSelectionDialog from '@cdo/apps/craft/PlayerSelectionDialog';
 import reducers from '@cdo/apps/craft/redux';
-import cookies from 'js-cookie';
+import {muteCookieWithLevel} from '../../util/muteCookieHelpers';
 
 var MEDIA_URL = '/blockly/media/craft/';
 
@@ -176,7 +176,7 @@ Craft.init = function(config) {
     },
     levelTracks,
     levelTracks.length > 1 ? 7500 : null,
-    Craft.level.muteMusic || cookies.get('mute_music') === 'true'
+    muteCookieWithLevel(Craft.level)
   );
 
   config.muteBackgroundMusic = function() {
