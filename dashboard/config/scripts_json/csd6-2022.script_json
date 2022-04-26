@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-25 23:28:16 UTC",
+    "serialized_at": "2022-04-26 17:33:58 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1330,7 +1330,7 @@
       "key": "c34e82c1-7915-4903-8b84-5bb8e0a93f89",
       "position": 1,
       "properties": {
-        "description": "This unit requires the Adafruit Circuit Playground.  You can read more about this microcontroller board at [https://code.org/circuitplayground](https://code.org/circuitplayground)",
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\nThis unit requires the Adafruit Circuit Playground.  You can read more about this microcontroller board at [https://code.org/circuitplayground](https://code.org/circuitplayground)",
         "name": "Preparing for the Unit"
       },
       "seeding_key": {
