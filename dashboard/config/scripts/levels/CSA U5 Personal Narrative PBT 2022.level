@@ -6,15 +6,22 @@
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "theater",
-    "encrypted_examples": [
-
-    ]
+    "start_sources": {
+      "MyTheater.java": {
+        "text": "import org.code.theater.*;\n\npublic class MyTheater {\n  public static void main(String[] args) {\n\n\n\n\n  }\n}",
+        "isVisible": true
+      },
+      "NarrativeScene.java": {
+        "text": "import org.code.theater.*;\n\npublic class NarrativeScene extends Scene {\n\n\n\n\n\n  \n}",
+        "isVisible": true
+      }
+    }
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-04-12T19:48:03.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-04-12T19:48:03.982+00:00\",\"changed\":[\"cloned from \\\"CSA U5L10-L4d PBT_2022\\\"\"],\"cloned_from\":\"CSA U5L10-L4d PBT_2022\"},{\"changed_at\":\"2022-04-12 19:48:06 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-04-12T19:48:03.982+00:00\",\"changed\":[\"cloned from \\\"CSA U5L10-L4d PBT_2022\\\"\"],\"cloned_from\":\"CSA U5L10-L4d PBT_2022\"},{\"changed_at\":\"2022-04-12 19:48:06 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 13:11:01 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

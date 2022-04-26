@@ -169,7 +169,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   test "join with participant type not student" do
     student = create :student
     sign_in student
-    section = create(:section, login_type: 'email', participant_type: 'teacher')
+    section = create(:section, :teacher_participants)
 
     post :join, params: {id: section.code}
     assert_response :forbidden
@@ -379,6 +379,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       post :create, params: {
         login_type: Section::LOGIN_TYPE_EMAIL,
         participant_type: desired_type,
+        grade: desired_type == 'student' ? 'Other' : 'pl'
       }
       assert_equal desired_type, returned_section.participant_type
     end
@@ -1031,34 +1032,6 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       id: @section.id,
       sharing_disabled: true,
     }
-    assert_response :forbidden
-  end
-
-  test 'anonymous user cannot access student_script_ids' do
-    get :student_script_ids, params: {id: @section_with_script.id}
-    assert_response :forbidden
-  end
-
-  test 'teacher can access student_script_ids' do
-    sign_in @teacher
-
-    get :student_script_ids, params: {id: @section_with_script.id}
-    assert_response :success
-    ids = JSON.parse(@response.body)
-    assert_equal({'studentScriptIds' => [@script_in_preview_state.id]}, ids)
-
-    # make sure we include other scripts which the student has progress in
-    create(:user_script, user: @student_with_script, script: @script)
-
-    get :student_script_ids, params: {id: @section_with_script.id}
-    assert_response :success
-    ids = JSON.parse(@response.body)
-    assert_equal({'studentScriptIds' => [@script.id, @script_in_preview_state.id]}, ids)
-  end
-
-  test 'student cannot access student_script_ids' do
-    sign_in @student_with_script
-    get :student_script_ids, params: {id: @section_with_script.id}
     assert_response :forbidden
   end
 

@@ -1,244 +1,277 @@
 {
-  "category_key": null,
-  "content": null,
-  "examples": null,
-  "external_documentation": null,
-  "fields": null,
+  "category_key": "org_code_theater",
+  "content": "",
+  "examples": "[]",
+  "external_documentation": "",
+  "fields": "[]",
   "key": "Scene",
   "name": "Scene",
-  "syntax": null,
-  "tips": null,
+  "syntax": "",
+  "tips": "",
   "methods": [
     {
-      "key": "getwidth",
+      "key": "scene",
       "position": 0,
+      "name": "public Scene()",
+      "content": "Creates a new scene for the Theater. A scene is a set of steps of animation, such as drawing an image, text or a shape. A scene can also include sound, like playing a sound file or musical notes",
+      "parameters": "[]",
+      "examples": "[]",
+      "syntax": null,
+      "external_link": null,
+      "overload_of": null,
+      "return_value": null
+    },
+    {
+      "key": "getwidth",
+      "position": 1,
       "name": "getWidth()",
       "content": "Returns the width of the theater canvas in pixels.\n",
       "parameters": "[]",
       "examples": "[]",
       "syntax": null,
       "external_link": null,
-      "overload_of": null
+      "overload_of": null,
+      "return_value": null
     },
     {
       "key": "getheight",
-      "position": 1,
+      "position": 2,
       "name": "getHeight()",
       "content": "Returns the height of the theater canvas, in pixels.\n",
       "parameters": "[]",
       "examples": "[]",
       "syntax": null,
       "external_link": null,
-      "overload_of": null
+      "overload_of": null,
+      "return_value": null
     },
     {
       "key": "clear",
-      "position": 2,
+      "position": 3,
       "name": "clear(String color)",
       "content": "Clear the canvas and set the background to the given color name.\n",
       "parameters": "[{\"name\":\"color\",\"type\":\"String\",\"description\":\"The name of the color to clear the canvas with. If the name does not match a known color or hex value, this method will set the background to black.\"}]",
       "examples": "[]",
       "syntax": null,
       "external_link": null,
-      "overload_of": null
+      "overload_of": null,
+      "return_value": null
     },
     {
       "key": "playsound",
-      "position": 3,
+      "position": 4,
       "name": "playSound",
       "content": null,
       "parameters": null,
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overload_of": null
+      "overload_of": null,
+      "return_value": null
     },
     {
       "key": "playnote",
-      "position": 4,
+      "position": 5,
       "name": "playNote",
       "content": null,
       "parameters": null,
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overload_of": null
+      "overload_of": null,
+      "return_value": null
     },
     {
       "key": "playnoteandpause",
-      "position": 5,
+      "position": 6,
       "name": "playNoteAndPause",
       "content": null,
       "parameters": null,
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overload_of": null
+      "overload_of": null,
+      "return_value": null
     },
     {
       "key": "pause",
-      "position": 6,
+      "position": 7,
       "name": "pause",
       "content": null,
       "parameters": null,
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overload_of": null
+      "overload_of": null,
+      "return_value": null
     },
     {
       "key": "drawimage",
-      "position": 7,
+      "position": 8,
       "name": "drawImage",
       "content": null,
       "parameters": null,
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overload_of": null
+      "overload_of": null,
+      "return_value": null
     },
     {
       "key": "settextstyle",
-      "position": 8,
+      "position": 9,
       "name": "setTextStyle",
       "content": null,
       "parameters": null,
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overload_of": null
+      "overload_of": null,
+      "return_value": null
     },
     {
       "key": "settextheight",
-      "position": 9,
+      "position": 10,
       "name": "setTextHeight",
       "content": null,
       "parameters": null,
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overload_of": null
+      "overload_of": null,
+      "return_value": null
     },
     {
       "key": "settextcolor",
-      "position": 10,
+      "position": 11,
       "name": "setTextColor",
       "content": null,
       "parameters": null,
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overload_of": null
+      "overload_of": null,
+      "return_value": null
     },
     {
       "key": "drawtext",
-      "position": 11,
+      "position": 12,
       "name": "drawText",
       "content": null,
       "parameters": null,
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overload_of": null
+      "overload_of": null,
+      "return_value": null
     },
     {
       "key": "drawline",
-      "position": 12,
+      "position": 13,
       "name": "drawLine",
       "content": null,
       "parameters": null,
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overload_of": null
+      "overload_of": null,
+      "return_value": null
     },
     {
       "key": "drawregularpolygon",
-      "position": 13,
+      "position": 14,
       "name": "drawRegularPolygon",
       "content": null,
       "parameters": null,
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overload_of": null
+      "overload_of": null,
+      "return_value": null
     },
     {
       "key": "drawshape",
-      "position": 14,
+      "position": 15,
       "name": "drawShape",
       "content": null,
       "parameters": null,
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overload_of": null
+      "overload_of": null,
+      "return_value": null
     },
     {
       "key": "drawellipse",
-      "position": 15,
+      "position": 16,
       "name": "drawEllipse",
       "content": null,
       "parameters": null,
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overload_of": null
+      "overload_of": null,
+      "return_value": null
     },
     {
       "key": "drawrectangle",
-      "position": 16,
+      "position": 17,
       "name": "drawRectangle",
       "content": null,
       "parameters": null,
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overload_of": null
+      "overload_of": null,
+      "return_value": null
     },
     {
       "key": "setstrokewidth",
-      "position": 17,
+      "position": 18,
       "name": "setStrokeWidth",
       "content": null,
       "parameters": null,
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overload_of": null
+      "overload_of": null,
+      "return_value": null
     },
     {
       "key": "setfillcolor",
-      "position": 18,
+      "position": 19,
       "name": "setFillColor",
       "content": null,
       "parameters": null,
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overload_of": null
+      "overload_of": null,
+      "return_value": null
     },
     {
       "key": "removestrokecolor",
-      "position": 19,
+      "position": 20,
       "name": "removeStrokeColor",
       "content": null,
       "parameters": null,
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overload_of": null
+      "overload_of": null,
+      "return_value": null
     },
     {
       "key": "removefillcolor",
-      "position": 20,
+      "position": 21,
       "name": "removeFillColor",
       "content": null,
       "parameters": null,
       "examples": null,
       "syntax": null,
       "external_link": null,
-      "overload_of": null
+      "overload_of": null,
+      "return_value": null
     }
   ]
 }

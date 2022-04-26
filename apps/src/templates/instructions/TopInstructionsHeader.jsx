@@ -21,6 +21,7 @@ function TopInstructionsHeader(props) {
     levelHasRubric,
     displayDocumentationTab,
     displayReviewTab,
+    displayCommitsAndReviewTab,
     isViewingAsTeacher,
     hasBackgroundMusic,
     fetchingData,
@@ -30,6 +31,7 @@ function TopInstructionsHeader(props) {
     handleCommentTabClick,
     handleDocumentationTabClick,
     handleReviewTabClick,
+    handleCommitsAndReviewTabClick,
     handleTeacherOnlyTabClick,
     handleClickCollapser,
     isMinecraft,
@@ -138,6 +140,16 @@ function TopInstructionsHeader(props) {
               className="uitest-reviewTab"
               onClick={handleReviewTabClick}
               selected={tabSelected === TabType.REVIEW}
+              text={i18n.review()}
+              isMinecraft={isMinecraft}
+              isRtl={isRtl}
+            />
+          )}
+          {displayCommitsAndReviewTab && (
+            <InstructionsTab
+              className="uitest-commitsAndReviewTab"
+              onClick={handleCommitsAndReviewTabClick}
+              selected={tabSelected === TabType.COMMITS_AND_REVIEW}
               text={i18n.review()}
               isMinecraft={isMinecraft}
               isRtl={isRtl}
@@ -257,6 +269,7 @@ TopInstructionsHeader.propTypes = {
   levelHasRubric: PropTypes.bool,
   displayDocumentationTab: PropTypes.bool,
   displayReviewTab: PropTypes.bool,
+  displayCommitsAndReviewTab: PropTypes.bool,
   isViewingAsTeacher: PropTypes.bool,
   hasBackgroundMusic: PropTypes.bool.isRequired,
   fetchingData: PropTypes.bool,
@@ -266,6 +279,7 @@ TopInstructionsHeader.propTypes = {
   handleCommentTabClick: PropTypes.func.isRequired,
   handleDocumentationTabClick: PropTypes.func.isRequired,
   handleReviewTabClick: PropTypes.func.isRequired,
+  handleCommitsAndReviewTabClick: PropTypes.func.isRequired,
   handleTeacherOnlyTabClick: PropTypes.func.isRequired,
   handleClickCollapser: PropTypes.func.isRequired,
   isMinecraft: PropTypes.bool.isRequired,

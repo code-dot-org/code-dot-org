@@ -3,7 +3,7 @@
   "name": "shape()",
   "category": "Drawing",
   "category_key": "drawing",
-  "content": "Connect the points to draw a shape.\r\n\r\nAre not limited to rectangles, ellipses and regular polygons. shape() allows you to draw any shape you want by connecting points. Shapes are drawn using the current stroke weight and current stroke color, and then filled with the current fill color (unless `noStroke()` or `noFill()` commands have been run).",
+  "content": "Connect the points to draw a shape.\r\n\r\nAre not limited to rectangles, ellipses and regular polygons. shape() allows you to draw any shape you want by connecting points. Shapes are drawn using the current stroke weight and current stroke color, and then filled with the current fill color (unless [`noStroke()`(#4dd0e1)](/docs/gamelab/noStroke/) or [`noFill()`(#4dd0e1)](/docs/gamelab/noFill/) commands have been run).",
   "examples": [
     {
       "name": "Star",
@@ -52,5 +52,5 @@
   "return_value": "No return value. Outputs to the display only.",
   "short_description": "Connect the points to draw a shape.",
   "syntax": "shape(x1, y1, x2, y2, ..., xn, yn) // Pairs of x,y coordinates. Even number of parameters, four or greater.",
-  "tips": "- If you're having trouble getting a shape to show up, make sure that `noFill()` or `noStroke()` haven't been called, and where you're trying to draw the shape fits within the coordinates of the display (400 x 400).\r\n- Anything you draw will overlap previous things you drew. The sequence of drawing statements is usually important.\r\n- The default stroke is black, the default stroke weight is 1 pixel, and the default fill is gray. Change the width of the line, color of the line, and fill color used to draw all subsequent shapes using `strokeWeight()`, `stroke()`, and `fill()`.\r\n- When drawing thick lines, the size of the shape is relative to the center of the perimeter line. The outside perimeter of the shape will be one half the stroke weight larger all around."
+  "tips": "- If you're having trouble getting a shape to show up, make sure that [`noFill()`(#4dd0e1)](/docs/gamelab/noFill/) or [`noStroke()`(#4dd0e1)](/docs/gamelab/noStroke/) haven't been called, and where you're trying to draw the shape fits within the coordinates of the display (400 x 400).\r\n- Anything you draw will overlap previous things you drew. The sequence of drawing statements is usually important.\r\n- The default stroke is black, the default stroke weight is 1 pixel, and the default fill is gray. Change the width of the line, color of the line, and fill color used to draw all subsequent shapes using [`strokeWeight()`(#4dd0e1)](/docs/gamelab/strokeWeight/), [`stroke()`(#4dd0e1)](/docs/gamelab/stroke/), and [`fill()`(#4dd0e1)](/docs/gamelab/fill/).\r\n- When drawing thick lines, the size of the shape is relative to the center of the perimeter line. The outside perimeter of the shape will be one half the stroke weight larger all around."
 }

@@ -7,6 +7,8 @@ import {
 } from '@cdo/apps/templates/instructions/TopInstructions';
 import TopInstructionsHeader from '@cdo/apps/templates/instructions/TopInstructionsHeader';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import sinon from 'sinon';
+import experiments from '@cdo/apps/util/experiments';
 
 const DEFAULT_PROPS = {
   isEmbedView: false,
@@ -253,6 +255,41 @@ describe('TopInstructions', () => {
 
         expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to
           .be.false;
+      });
+
+      it('passes displayCommitsAndReviewTab false if displayReviewTab is false', () => {
+        const wrapper = shallow(
+          <TopInstructions
+            {...DEFAULT_PROPS}
+            viewAs={ViewType.Participant}
+            displayReviewTab={false}
+          />
+        );
+
+        expect(
+          wrapper.find(TopInstructionsHeader).props().displayCommitsAndReviewTab
+        ).to.be.false;
+      });
+
+      it('passes displayCommitsAndReviewTab false if the code_review_v2 experiment is not enabled', () => {
+        sinon
+          .stub(experiments, 'isEnabled')
+          .withArgs('code_review_v2')
+          .returns(false);
+
+        const wrapper = shallow(
+          <TopInstructions
+            {...DEFAULT_PROPS}
+            viewAs={ViewType.Participant}
+            displayReviewTab={true}
+          />
+        );
+
+        expect(
+          wrapper.find(TopInstructionsHeader).props().displayCommitsAndReviewTab
+        ).to.be.false;
+
+        experiments.isEnabled.restore();
       });
     });
   });

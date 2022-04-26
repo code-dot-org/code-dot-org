@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-20 20:17:09 UTC",
+    "serialized_at": "2022-04-22 22:40:46 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -33,7 +33,7 @@
       "position": 1,
       "properties": {
         "display_name": "Parameters and Return Values",
-        "description": "### Unit Philosophy and Pedagogy\n\n* **Learning by Building Libraries:** In the second EIPM sequence of this unit, students learn to use the Student-Create Libraries tool in App Lab. This tool allows them to build and share libraries of functions that they can use in many different projects. This tool serves many purposes besides simply teaching students about libraries. By having to write functions that other students find useful, they will need to think about common patterns or situations that they have seen in projects across the course. Students will also practice commenting their code so others can understand how it works, practice designing functions that use parameters and return.  \n\n* **Final Preparation for the Create PT:** Students learn very few new concepts in this unit; nevertheless, it can be challenging because students need to learn how to integrate the ideas of parameters and return with every other concept they have learned in this course. This unit presents a good opportunity to do a final review of every programming construct covered in the course as students prepare to demonstrate what they've learned on the Create PT.\n\n### Major Assessment and Projects\n\nThe unit project asks students to design a library of functions that they can share with classmates. Their library must contain at least two functions, and at least one of those functions must include a parameter, return, a loop, and an if-statement. This requirement ensures students practice skills they willll use in the Create PT. Using a project guide, students choose a theme for their library, build it, test it, and exchange feedback with other students. Students submit their library code, project guide, and written responses to reflection questions about how the app is designed and the development process they used to make it. They will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* CRD-2: Developers create and innovate using an iterative design process that is user-focused, that incorporates implementation/feedback cycles, and that leaves ample room for experimentation and risk-taking.\n* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.\n* AAP-3: Programmers break down problems into smaller and more manageable pieces. By creating procedures and leveraging parameters, programmers generalize processes that can be reused. Procedures allow programmers to draw upon existing code that has already been tested, allowing them to write programs more quickly and with more confidence.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n* 3.12 Calling Procedures\n* 3.13 Developing Procedures\n* 3.14 Libraries\n\nThe College Board has supplied formative Create PT questions to help prepare students to complete the Create Task. We recommend that students complete the following prompts with the unit project. More information can be found in Code.org CS Principles Topic Coverage.\n\n* 3.c.i\n* 3.c.ii\n* 3.c.iii\n* 3.c.iv\n* 3.d.i\n* 3.d.ii\n* 3.d.iii"
+        "description": "### Unit Philosophy and Pedagogy\n\n* **Learning by Building Libraries:** In the second EIPM sequence of this unit, students learn to use the Student-Create Libraries tool in App Lab. This tool allows them to build and share libraries of functions that they can use in many different projects. This tool serves many purposes besides simply teaching students about libraries. By having to write functions that other students find useful, they will need to think about common patterns or situations that they have seen in projects across the course. Students will also practice commenting their code so others can understand how it works, practice designing functions that use parameters and return.  \n\n* **Final Preparation for the Create PT:** Students learn very few new concepts in this unit; nevertheless, it can be challenging because students need to learn how to integrate the ideas of parameters and return with every other concept they have learned in this course. This unit presents a good opportunity to do a final review of every programming construct covered in the course as students prepare to demonstrate what they've learned on the Create PT.\n\n### Major Assessment and Projects\n\nThe unit project asks students to design a library of functions that they can share with classmates. Their library must contain at least two functions, and at least one of those functions must include a parameter, return, a loop, and an if-statement. This requirement ensures students practice skills they willll use in the Create PT. Using a project guide, students choose a theme for their library, build it, test it, and exchange feedback with other students. Students submit their library code, project guide, and written responses to reflection questions about how the app is designed and the development process they used to make it. They will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* CRD-2: Developers create and innovate using an iterative design process that is user-focused, that incorporates implementation/feedback cycles, and that leaves ample room for experimentation and risk-taking.\n* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.\n* AAP-3: Programmers break down problems into smaller and more manageable pieces. By creating procedures and leveraging parameters, programmers generalize processes that can be reused. Procedures allow programmers to draw upon existing code that has already been tested, allowing them to write programs more quickly and with more confidence.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1RniAGymLBBpIpDaNNR5Ea8CgiiUKv0tMvaDixSj6m_Q/edit?usp=sharing).\n\n* 3.12 Calling Procedures\n* 3.13 Developing Procedures\n* 3.14 Libraries\n\nThe College Board has supplied formative Create PT questions to help prepare students to complete the Create Task. We recommend that students complete the following prompts with the unit project. More information can be found in Code.org CS Principles Topic Coverage.\n\n* 3.c.i\n* 3.c.ii\n* 3.c.iii\n* 3.c.iv\n* 3.d.i\n* 3.d.ii\n* 3.d.iii"
       },
       "seeding_key": {
         "lesson_group.key": "csp_parameters_return_values",
@@ -1294,7 +1294,7 @@
       "key": "9f76f5bc-04d2-4fb8-982f-a6db9346207c",
       "position": 5,
       "properties": {
-        "description": "* Level 1: Calling a function multiple times with a single parameter\n* Level 2: Students follow a pattern to choose a random Compliment from a list that is concatenated with a name passed through a parameter. \n* Level 3: This is the same as Level 1, except now the functions use return values. Again, students follow a pattern given in another working function. \n* Level 4: Students write a function that returns the season a month is in. By this point, students should be noticing the type of commenting that is happening above each function. This format previews how students will need to write comments for libraries later on in the unit. \n* Level 5: This level traverses lists to find the longest and shortest words. Parameters and return values are used. ",
+        "description": "* Level 1: Calling a function multiple times with a single parameter\n* Level 2: Students follow a pattern to choose a random Compliment from a list that is concatenated with a name passed through a parameter. \n* Level 3: This is the same as Level 1, except now the functions use return values. Again, students follow a pattern given in another working function. \n* Level 4: Students write a function that returns the season a month is in. By this point, students should be noticing the type of commenting that is happening above each function. This format previews how students will need to write comments for libraries later on in the unit. \n",
         "progression_name": "console.log Practice"
       },
       "seeding_key": {
@@ -1303,10 +1303,22 @@
       }
     },
     {
-      "key": "17f61ab7-570b-42ab-857f-a74c04bb9b21",
+      "key": "68e0de79-4b69-4796-a610-faa6c1e7ae31",
       "position": 6,
       "properties": {
-        "description": "\n**Levels 6-8:** Students continue practicing, now working with apps\n\n* Level 6: Students debug and comment an ordering app. Completing this level will require students to read programs that use functions with parameters and return carefully.\n* Level 7: We return to the compliment code, this time reworking it into an app. Again students write their own comments, this time including comments for a return value. Students also complete the `updateScreen` function, which calls both of the functions with parameters. \n* Level 8: Students practice writing a `checkCorrect` function with parameters in making a quiz app function. The app uses data from theRoot: 100 Influential African-Americans dataset.\n",
+        "description": "* Level 5: A choice level involving different programs using parameters and return values.\n  * Level 5a - Traverse lists to find the longest and shortest words.\n  * Level 5b - Traverse lists to find states and countries with the largest and smallest populations.\n  * Level 5c -  Display track information about a random top 50 song.\n  * Level 5d - Create a program that determines if it's ok to sleep in or not.",
+        "progression_name": "Putting It Together: Console"
+      },
+      "seeding_key": {
+        "activity_section.key": "68e0de79-4b69-4796-a610-faa6c1e7ae31",
+        "lesson_activity.key": "ea399cc0-0f37-4ca4-b28a-70d1ee239f4e"
+      }
+    },
+    {
+      "key": "17f61ab7-570b-42ab-857f-a74c04bb9b21",
+      "position": 7,
+      "properties": {
+        "description": "\n**Levels 6-9:** Students continue practicing, now working with apps\n\n* Level 6: Students debug and comment an ordering app. Completing this level will require students to read programs that use functions with parameters and return carefully.\n* Level 7: We return to the compliment code, this time reworking it into an app. Again students write their own comments, this time including comments for a return value. Students also complete the `updateScreen` function, which calls both of the functions with parameters. \n* Level 8: Students practice writing a `checkCorrect` function with parameters in making a quiz app function. The app uses data from theRoot: 100 Influential African-Americans dataset.\n",
         "progression_name": "App Practice"
       },
       "seeding_key": {
@@ -1316,7 +1328,7 @@
     },
     {
       "key": "686de70e-c037-4f9b-867f-7d57773f4f7e",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "\n\n**Extension Opportunities:**\n\n* Level 7: Add more greeting and compliment options to the lists\n* Level 8: Use a different dataset in place of theRoot dataset.",
         "progression_name": "MOD Practice"
@@ -1328,9 +1340,10 @@
     },
     {
       "key": "a9d411d0-6756-44b1-a9a9-86d717a14c95",
-      "position": 8,
+      "position": 9,
       "properties": {
-        "progression_name": "Managing Complexity"
+        "description": "* Level 9: Choice level involving apps that all work but could be rewritten with functions that use parameters and returns to manage complexity.",
+        "progression_name": "Putting It Together: Apps"
       },
       "seeding_key": {
         "activity_section.key": "a9d411d0-6756-44b1-a9a9-86d717a14c95",
@@ -2458,6 +2471,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U7L1 CFU Return2022"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2652,13 +2668,10 @@
     {
       "chapter": 9,
       "position": 5,
-      "activity_section_position": 5,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U7L3 Console Choice"
-        ],
-        "progression": "console.log Practice"
+        "progression": "Putting It Together: Console"
       },
       "bonus": false,
       "seeding_key": {
@@ -2668,7 +2681,7 @@
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2022",
-        "activity_section.key": "9f76f5bc-04d2-4fb8-982f-a6db9346207c"
+        "activity_section.key": "68e0de79-4b69-4796-a610-faa6c1e7ae31"
       },
       "level_keys": [
         "CSP U7L3 Console Choice"
@@ -2758,7 +2771,7 @@
         "level_keys": [
           "CSP U7L3 App Choice"
         ],
-        "progression": "Managing Complexity"
+        "progression": "Putting It Together: Apps"
       },
       "bonus": false,
       "seeding_key": {
@@ -3381,7 +3394,7 @@
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2022",
-        "activity_section.key": "9f76f5bc-04d2-4fb8-982f-a6db9346207c"
+        "activity_section.key": "68e0de79-4b69-4796-a610-faa6c1e7ae31"
       }
     },
     {
@@ -3688,7 +3701,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/csp7-2021/resources",
+      "url": "/s/csp7-2022/resources",
       "key": "all_resources_9",
       "properties": {
         "is_rollup": true
@@ -3699,13 +3712,25 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/csp7-2021/standards",
+      "url": "/s/csp7-2022/standards",
       "key": "all_standards_9",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
         "resource.key": "all_standards_9"
+      }
+    },
+    {
+      "name": "Code.org CSP Topic Coverage",
+      "url": "https://docs.google.com/document/d/1RniAGymLBBpIpDaNNR5Ea8CgiiUKv0tMvaDixSj6m_Q/view",
+      "key": "code_org_csp_topic_coverage",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "code_org_csp_topic_coverage"
       }
     },
     {
@@ -3722,11 +3747,9 @@
     },
     {
       "name": "CSP Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1s5w7_UnVIGHOdkqCtK2O78rQ7JJFAWlOeZkZNsCovOY/preview",
       "key": "csp_curriculum_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csp_curriculum_guide"
@@ -3760,11 +3783,11 @@
     },
     {
       "name": "Functions with Parameters",
-      "url": "https://youtu.be/5UMKeMPCa7E",
+      "url": "https://youtu.be/M17C4rBwstE",
       "key": "functions_with_parameters",
       "properties": {
         "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/functionswithparameters-mp4.mp4",
+        "download_url": "https://videos.code.org/levelbuilder/csp_functionswithparameters-v1-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -3773,7 +3796,7 @@
     },
     {
       "name": "Guide to EIPM Lessons",
-      "url": "https://www.youtube.com/watch?v=OTvi0XRTIjA",
+      "url": "https://www.youtube.com/playlist?list=PLzdnOPI1iJNeqEl6MN7c2KyM3gdBSo8t3",
       "key": "guide_to_eipm_lessons",
       "properties": {
         "audience": "Teacher",
@@ -3843,18 +3866,6 @@
       },
       "seeding_key": {
         "resource.key": "u7_high_score_sample_planning_guide_rubric"
-      }
-    },
-    {
-      "name": "Virtual Modification Resources",
-      "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
-      "key": "virtual_modification_resources",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "virtual_modification_resources"
       }
     }
   ],
@@ -3995,6 +4006,12 @@
     },
     {
       "seeding_key": {
+        "resource.key": "code_org_csp_topic_coverage",
+        "script.name": "csp7-2022"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "course_vocabulary",
         "script.name": "csp7-2022"
       }
@@ -4014,12 +4031,6 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
-        "script.name": "csp7-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "virtual_modification_resources",
         "script.name": "csp7-2022"
       }
     }

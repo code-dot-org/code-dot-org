@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-19 18:16:47 UTC",
+    "serialized_at": "2022-04-22 20:46:45 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -90,14 +90,14 @@
     },
     {
       "key": "lesson-2",
-      "name": "Equity in CS",
+      "name": "Vision for CS Education",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**Overview:**\nThis session is designed to introduce participants to Code.org’s “why” related to CS education which will lay the foundation for the conversations around equity, access, diversity, and inclusion that are woven throughout the workshop agenda. Participants will also have the opportunity to define their personal “why” related to CS education.\n\n**Participants will:**\n\n* Get an introduction to Code.org’s “why” related to equity in CS education. \n* Differentiate between equity, access, diversity, and inclusion as they relate to CS education.\n* Define your personal “why” related to CS education. \n\n**Suggested time:** 30 minutes",
-        "student_overview": "**You will:**\n\n* Get an introduction to Code.org’s “why” related to equity in CS education. \n* Differentiate between equity, access, diversity, and inclusion as they relate to CS education.\n* Define your personal “why” related to CS education. "
+        "overview": "**Overview:**\nThis session is designed to introduce participants to Code.org’s “why” related to CS education which will lay the foundation for the conversations around equity, access, diversity, and inclusion that are woven throughout the workshop agenda. Participants will also have the opportunity to define their personal “why” related to CS education.\n\n**Participants will:**\n\n* Get an introduction to Code.org’s “why” related to equity in CS education. \n* Differentiate between equity, access, diversity, and inclusion related to CS education.\n* Define their personal “why” related to CS education. \n* Set an intention for the workshop. \n\n**Suggested time:** 35 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to Code.org’s “why” related to equity in CS education. \n* Differentiate between equity, access, diversity, and inclusion related to CS education.\n* Define your personal “why” related to CS education. \n* Set an intention for the workshop. "
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -206,8 +206,8 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "**Overview:**\nThis session is designed to establish a shared definition of identity and to provide participants with the space to reflect on how their identity, experiences, and beliefs shape how they see their role as CS teachers. A key takeaway of this session is that we all have identity markers that shape how we engage with students in our classrooms.  \n\n**Participants will:**\n\n* Define identity. \n* Reflect on how your identity, experiences, and beliefs shape how you see your role as a CS teacher. \n\n**Suggested time:** 35 minutes",
-        "student_overview": "**You will:**\n\n* Define identity. \n* Reflect on how your identity, experiences, and beliefs shape how you see your role as a CS teacher. "
+        "overview": "**Overview:**\nThis session is designed to establish a shared definition of identity and to provide participants with the space to reflect on how their identity, experiences, and beliefs shape how they see their role as CS teachers. A key takeaway of this session is that we all have identity markers that shape how we engage with students in our classrooms.  \n\n**Participants will:**\n\n* Define identity. \n* Reflect on how your identity, experiences, and beliefs shape how you see your role as a CS teacher. \n* Define unconscious bias. \n* Reflect on their beliefs around who should have access to CS education. \n\n**Suggested time:** 35 minutes",
+        "student_overview": "**You will:**\n\n* Define identity. \n* Reflect on how your identity, experiences, and beliefs shape how you see your role as a CS teacher. \n* Define unconscious bias. \n* Reflect on your beliefs around who should have access to CS education."
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -223,7 +223,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "**Overview:**\nIn this session, participants will reflect on what they have gotten out of the day along with what they still need from the workshop experience.\n\n**Participants will:**\n\n* Get an introduction to the asynchronous activities. \n* Reflect on gots and needs. \n\n**Suggested time:** 10 minutes",
+        "overview": "**Overview:**\nIn this session, participants will be introduced to their asynchronous assignment and reflect on what they have gotten out of the day along with what they still need from the workshop experience.\n\n**Participants will:**\n\n* Get an introduction to the asynchronous activities. \n* Reflect on gots and needs. \n\n**Suggested time:** 30 minutes",
         "student_overview": "**You will:**\n\n* Get an introduction to the asynchronous activities. \n* Reflect on gots and needs. "
       },
       "seeding_key": {
@@ -267,7 +267,6 @@
       "key": "766003f5-a9e9-429a-bb55-c6f6a20bf686",
       "position": 1,
       "properties": {
-        "name": "Where is the Lesson Plan?"
       },
       "seeding_key": {
         "lesson_activity.key": "766003f5-a9e9-429a-bb55-c6f6a20bf686",
@@ -499,7 +498,6 @@
       "key": "54647d60-2b30-4223-b0bc-58d682912089",
       "position": 1,
       "properties": {
-        "description": "This lesson plan exists to provide resources to teachers. Any actual facilitation guidance is in the Google Doc agenda: [link]"
       },
       "seeding_key": {
         "activity_section.key": "54647d60-2b30-4223-b0bc-58d682912089",
