@@ -30,6 +30,10 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     CourseOffering.add_course_offering(@script)
     @script.reload
 
+    @pl_unit = create(:script, :is_course, published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    CourseOffering.add_course_offering(@pl_unit)
+    @pl_unit.reload
+
     @script_in_preview_state = create(:script, :is_course, published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
     CourseOffering.add_course_offering(@script_in_preview_state)
     @script_in_preview_state.reload
@@ -552,6 +556,16 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       login_type: Section::LOGIN_TYPE_EMAIL,
       participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
       course_version_id: @beta_unit_group.course_version.id,
+    }
+    assert_response :forbidden
+  end
+
+  test 'cannot assign a course to a section where participants in the section can not participate in the course' do
+    sign_in @facilitator
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      course_version_id: @pl_unit.course_version.id,
     }
     assert_response :forbidden
   end

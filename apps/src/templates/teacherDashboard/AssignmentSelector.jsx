@@ -4,29 +4,29 @@ import _ from 'lodash';
 import i18n from '@cdo/locale';
 import {sectionShape, assignmentCourseOfferingShape} from './shapes';
 import AssignmentVersionSelector from './AssignmentVersionSelector';
-import {CourseOfferingCategories} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {
+  CourseOfferingCategories,
+  ParticipantTypesByAudience
+} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
 const noAssignment = '__noAssignment__';
 //Additional valid option in dropdown - no associated course
 const decideLater = '__decideLater__';
 const isValidAssignment = id => id !== noAssignment && id !== decideLater;
 
-const participantTypesByAudience = {
-  student: ['student'],
-  teacher: ['student', 'teacher'],
-  facilitator: ['student', 'teacher', 'facilitator']
-};
-
 export const getCourseOfferingsByCategory = (
   courseOfferings,
   participantType
 ) => {
-  const filterCourseOfferings = _.filter(courseOfferings, function(offering) {
-    return participantTypesByAudience[participantType].includes(
+  const filteredCourseOfferings = _.filter(courseOfferings, function(offering) {
+    return ParticipantTypesByAudience[participantType].includes(
       offering.participant_audience
     );
   });
-  let orderedCourseOfferings = _.orderBy(filterCourseOfferings, 'display_name');
+  let orderedCourseOfferings = _.orderBy(
+    filteredCourseOfferings,
+    'display_name'
+  );
   orderedCourseOfferings = _.orderBy(
     orderedCourseOfferings,
     'is_featured',
