@@ -70,22 +70,22 @@ describe('ProgrammingExpressionsTable', () => {
       allCategories: [
         {
           id: 100,
-          envId: 2,
-          envName: 'spritelab',
+          environmentId: 2,
+          environmentName: 'spritelab',
           key: 'math',
           formattedName: 'Spritelab: Math'
         },
         {
           id: 200,
-          envId: 1,
-          envName: 'applab',
+          environmentId: 1,
+          environmentName: 'applab',
           key: 'uicontrols',
           formattedName: 'App Lab: UI Controls'
         },
         {
           id: 300,
-          envId: 3,
-          envName: 'gamelab',
+          environmentId: 3,
+          environmentName: 'gamelab',
           key: 'sprites',
           formattedName: 'Game Lab: Sprites'
         }

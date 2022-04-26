@@ -418,7 +418,8 @@
               "type": "rating",
               "name": "instructional_focus_rating",
               "minRateDescription": "Strongly aligned with A",
-              "maxRateDescription": "Strongly aligned with B"
+              "maxRateDescription": "Strongly aligned with B",
+              "titleLocation": "hidden"
             },
             {
               "type": "html",
@@ -429,7 +430,8 @@
               "type": "rating",
               "name": "lead_learner_rating",
               "minRateDescription": "Strongly aligned with A",
-              "maxRateDescription": "Strongly aligned with B"
+              "maxRateDescription": "Strongly aligned with B",
+              "titleLocation": "hidden"
             },
             {
               "type": "html",
@@ -440,7 +442,8 @@
               "type": "rating",
               "name": "prioritize_time_rating",
               "minRateDescription": "Strongly aligned with A",
-              "maxRateDescription": "Strongly aligned with B"
+              "maxRateDescription": "Strongly aligned with B",
+              "titleLocation": "hidden"
             },
             {
               "type": "matrix",

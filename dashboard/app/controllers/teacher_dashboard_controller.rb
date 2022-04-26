@@ -4,6 +4,7 @@ class TeacherDashboardController < ApplicationController
   def show
     @section_summary = @section.summarize
     @sections = current_user.sections.map(&:summarize)
+    @locale_code = request.locale
   end
 
   def parent_letter

@@ -1,0 +1,34 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "A students wants to create a calculator that allows the user to repeatedly enter two numbers and provide the result of the first number raised to the second number.\r\n\r\n##In Calculator.java:\r\n\r\n1. Write the `calculateExponent()`(#e7e8ea) method.\r\n\r\n   * Use `Math.pow()`(#e7e8ea) to get the result of `firstNumber`(#e7e8ea) raised to `secondPower`(#e7e8ea).\r\n\r\n   * Return the resulting value.\r\n\r\n##In MyConsole.java:\r\n\r\n2. Use a sentinel value to repeatedly prompt the user for two numbers or `-1`(#e7e8ea) to quit.\r\n\r\n   * For each two numbers they enter, call the `calculateExponent()`(#e7e8ea) method and print the result.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "display_name": "Calculating Exponents",
+    "bubble_choice_description": "A students wants to create a calculator that allows the user to repeatedly enter two numbers and provide the result of the first number raised to the second number.",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "import java.util.Scanner;\n\npublic class MyConsole {\n  public static void main(String[] args) {\n\n    Scanner input = new Scanner(System.in);\n    Calculator myCalculator = new Calculator();\n\n    // TO DO #2: Use a sentinel value to repeatedly prompt the user for\n    // two values. Call the calculateExponent() method and print each result.\n    \n    \n  }\n}",
+        "isVisible": true
+      },
+      "Calculator.java": {
+        "text": "/*\n * Class that performs calculations\n */\npublic class Calculator {\n\n  public double calculateExponent(double firstNumber, double secondNumber) {\n    // TO DO #1: Return the resulting value of firstNumber raised to secondNumber.\n    \n    \n  }\n\n}",
+        "isVisible": true
+      }
+    },
+    "encrypted_examples": [
+
+    ],
+    "thumbnail_url": "https://images.code.org/db4edcb9427438090efe7de8f6000e6e-image-1650653296209.png"
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-04-07T18:26:23.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2022-04-07T18:26:23.201+00:00\",\"changed\":[\"cloned from \\\"CSA U4L7-L4_2022\\\"\"],\"cloned_from\":\"CSA U4L7-L4_2022\"},{\"changed_at\":\"2022-04-07 18:26:30 +0000\",\"changed\":[\"csa_view_mode\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 16:44:47 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 17:11:55 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 17:33:18 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 17:35:51 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 17:39:28 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 18:06:02 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 18:06:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 18:08:35 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 18:08:43 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 18:09:05 +0000\",\"changed\":[\"csa_view_mode\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 18:09:36 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 18:48:26 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

@@ -340,7 +340,7 @@ class FollowersControllerTest < ActionController::TestCase
 
   test 'student_register errors when joining a section where user does not meet participant type' do
     sign_in @student
-    section = create(:section, login_type: Section::LOGIN_TYPE_EMAIL, participant_type: 'facilitator')
+    section = create(:section, :facilitator_participants)
 
     assert_does_not_create(User, Follower) do
       get :student_register, params: {section_code: section.code}

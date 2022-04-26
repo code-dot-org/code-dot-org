@@ -5,7 +5,7 @@ Feature: Using the join section page while not signed in
   Scenario: Join section while not signed in with invalid form inputs
     Given I am a teacher
     And I create a new student section and go home
-    And I save the section url
+    And I save the student section url
 
     # Have new user join section with invalid password
     Given I sign out
@@ -17,7 +17,7 @@ Feature: Using the join section page while not signed in
   Scenario: Join section while not signed in with valid form inputs
     Given I am a teacher
     And I create a new student section and go home
-    And I save the section url
+    And I save the student section url
 
     # Have new user join section with valid form inputs
     Given I sign out

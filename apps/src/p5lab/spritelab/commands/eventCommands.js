@@ -17,6 +17,11 @@ export const commands = {
     this.addEvent('collectData', {}, callback);
   },
 
+  everyInterval(n, unit, callback) {
+    let roundedValue = Math.round(n);
+    this.addEvent('everyInterval', {n: roundedValue, unit}, callback);
+  },
+
   keyPressed(condition, key, callback) {
     if (condition === 'when' || condition === 'while') {
       this.addEvent(condition + 'press', {key: key}, callback);

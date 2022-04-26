@@ -70,9 +70,9 @@ export default function CourseOfferingEditor(props) {
           style={styles.dropdown}
           onChange={e => updateCourseOffering('category', e.target.value)}
         >
-          {Object.values(CourseOfferingCategories).map(category => (
+          {Object.keys(CourseOfferingCategories).map(category => (
             <option key={category} value={category}>
-              {category}
+              {CourseOfferingCategories[category]}
             </option>
           ))}
         </select>

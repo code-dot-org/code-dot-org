@@ -1,0 +1,31 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##In GradeChecker.java:\r\n\r\n1. Write a static method called `getLetterGrade()`(#e7e8ea). The method takes a parameter `int score`(#e7e8ea) for the score to check and returns a `String`(#e7e8ea) with the matching letter grade.\r\n\r\n   * If `score`(#e7e8ea) is greater than or equal to `90`(#e7e8ea) and less than or equal to `100`(#e7e8ea), return `\"A\"`(#e7e8ea).\r\n   \r\n   * If `score`(#e7e8ea) is greater than or equal to `80`(#e7e8ea) and less than `90`(#e7e8ea), return `\"B\"`(#e7e8ea).\r\n   \r\n   * If `score`(#e7e8ea) is greater than or equal to `70`(#e7e8ea) and less than `80`(#e7e8ea), return `\"C\"`(#e7e8ea).\r\n   \r\n   * If `score`(#e7e8ea) is greater than or equal to `60`(#e7e8ea) and less than `70`(#e7e8ea), return `\"D\"`(#e7e8ea).\r\n\r\n##In MyConsole.java:\r\n\r\n2. Call the `getLetterGrade()`(#e7e8ea) method with different scores to test the method.\r\n\r\n::: details [**Show Me How**]\r\nA static method uses the following syntax:\r\n  \r\n  ```\r\n  public static returnType methodName() {\r\n     // code to execute\r\n  }\r\n  ```\r\n\r\nA static method is called using the following syntax:\r\n\r\n  ```\r\n  ClassName.methodName();\r\n  ```\r\n:::",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    // TO DO #2: Call the getLetterGrade() method.\n\n    \n    \n  }\n}",
+        "isVisible": true
+      },
+      "GradeChecker.java": {
+        "text": "/*\n * A class that analyzes grades\n */\npublic class GradeChecker {\n\n  // TO DO #1: Write the static method getLetterGrade() to\n  // return the letter grade matching the score.\n\n  \n  \n}",
+        "isVisible": true
+      }
+    },
+    "encrypted_examples": [
+
+    ]
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-04-07T18:11:09.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2022-04-07T18:11:09.705+00:00\",\"changed\":[\"cloned from \\\"CSA U4L6-L2_2022\\\"\"],\"cloned_from\":\"CSA U4L6-L2_2022\"},{\"changed_at\":\"2022-04-07 18:11:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 15:48:53 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 15:54:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

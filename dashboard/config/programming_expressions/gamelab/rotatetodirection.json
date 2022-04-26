@@ -27,5 +27,5 @@
   "return_value": "Boolean true or false.",
   "short_description": "Lock the rotation property of the sprite to the sprite's movement direction and vice versa.",
   "syntax": "sprite.rotateToDirection",
-  "tips": "- Changing the sprite's location by updating sprite.x and sprite.y does not change the sprite's direction. Instead use the velocity and direction properties/functions: `sprite.velocityX`, `sprite.velocityY`, `setVelocity()`, `sprite.setSpeedAndDirection()`"
+  "tips": "- Changing the sprite's location by updating sprite.x and sprite.y does not change the sprite's direction. Instead use the velocity and direction properties/functions: [`sprite.velocityX`(#f78183)](/docs/gamelab/velocityX/), [`sprite.velocityY`(#f78183)](/docs/gamelab/velocityY/), `setVelocity()`, `sprite.setSpeedAndDirection()`"
 }

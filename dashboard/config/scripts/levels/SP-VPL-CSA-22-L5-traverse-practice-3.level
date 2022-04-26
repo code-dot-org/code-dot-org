@@ -9,19 +9,16 @@
     "csa_view_mode": "console",
     "start_sources": {
       "TardyTracker.java": {
-        "text": "public class TardyTracker{    \n  public static void main(String[] args){\n\n    int[] absences = {3, 0 , 0, 6, 0, 1, 5, 3, 0, 0, 2, 7, 0, 1, 0, 1, 1, 6, 1, 1, 7, 7, 3, 1, 8, 0}\n\n    // TO DO: Write a program to count the number of calls home needed given the \n    // number of students with absences of 3 or more.\n\n    // TO DO: Print the total number of calls needed to the screen.\n    \n  } \n}",
+        "text": "public class TardyTracker{    \n  public static void main(String[] args){\n\n    int[] absences = {3, 0 , 0, 6, 0, 1, 5, 3, 0, 0, 2, 7, 0, 1, 0, 1, 1, 6, 1, 1, 7, 7, 3, 1, 8, 0};\n\n    // TO DO: Write a program to count the number of calls home needed given the \n    // number of students with absences of 3 or more.\n\n    // TO DO: Print the total number of calls needed to the screen.\n    \n  } \n}",
         "isVisible": true
       }
-    },
-    "encrypted_examples": [
-
-    ]
+    }
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-03-21T20:37:03.000Z",
   "level_num": "custom",
   "user_id": 977,
-  "audit_log": "[{\"changed_at\":\"2022-03-22 03:11:33 +0000\",\"changed\":[\"published\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-22 03:14:36 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-22 03:15:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-03-22 03:11:33 +0000\",\"changed\":[\"published\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-22 03:14:36 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-22 03:15:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-04-19 19:24:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]"
 }]]></config>
 </Javalab>

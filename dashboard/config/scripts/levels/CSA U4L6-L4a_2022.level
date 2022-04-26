@@ -1,0 +1,38 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "The `SoundEditor`(#e7e8ea) class edits sound samples to create effects.\r\n\r\n##In SoundEditor.java:\r\n\r\n1. Write the static method `increaseVolume()`(#e7e8ea).\r\n\r\n   * The method takes the parameters `double[] sound`(#e7e8ea) for the sound to use and `double amount`(#e7e8ea) for the amount to increase the volume.\r\n   \r\n   * The method returns a new `double`(#e7e8ea) array containing the sound with the volume increased.\r\n   \r\n   * The volume is increased by multiplying the sample value by `amount`(#e7e8ea).\r\n   \r\n##In MyTheater.java:\r\n\r\n2. Declare and initialize a `double`(#e7e8ea) array that stores the sample values extracted from calling `SoundLoader.read()`(#e7e8ea) on the `\"beat.wav\"`(#e7e8ea) sound file.\r\n\r\n3. Declare and initialize a `double`(#e7e8ea) array called `newSound`(#e7e8ea) that stores the new sound created from calling your `increaseVolume()`(#e7e8ea) method.\r\n\r\n::: details [**Show Me How**]\r\nA static method uses the following syntax:\r\n  \r\n  ```\r\n  public static returnType methodName() {\r\n     // code to execute\r\n  }\r\n  ```\r\n\r\nA static method is called using the following syntax:\r\n\r\n  ```\r\n  ClassName.methodName();\r\n  ```\r\n:::",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "project_template_level_name": "CSA U4L6-L4a PBT_2022",
+    "display_name": "Increase the Volume",
+    "bubble_choice_description": "Write a static method to increase the volume of a sound.",
+    "thumbnail_url": "https://images.code.org/e5e8c3d0b87917728feda2c46fb4cd11-image-1650634109756.png",
+    "starter_assets": {
+      "beat.wav": "894f781b-768f-48fe-9650-6fa0f6c705a2.wav"
+    },
+    "start_sources": {
+      "MyTheater.java": {
+        "text": "import org.code.theater.*;\nimport org.code.media.*;\n\npublic class MyTheater {\n  public static void main(String[] args) {\n\n    // TO DO #2: Use SoundLoader.read() to extract the samples from the sound file into a double array.\n    \n\n    // TO DO #3: Call your increaseVolume() method on your array.\n\n    \n    Scene myScene = new Scene();\n    myScene.playSound(newSound);\n    Theater.playScenes(myScene);\n    \n  }\n}",
+        "isVisible": true
+      },
+      "SoundEditor.java": {
+        "text": "import org.code.theater.*;\nimport org.code.media.*;\n\n/*\n * Edits sound samples to create effects\n */\npublic class SoundEditor() {\n\n  /*\n   * Returns a double array with the sound increased\n   */\n  public static double[] increaseVolume(double[] sound, double amount) {\n    // TO DO #1: Traverse the sound array to increase the volume of the sound.\n\n\n    \n  }\n}",
+        "isVisible": true
+      }
+    },
+    "encrypted_examples": [
+
+    ]
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2022-04-07T18:12:11.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "audit_log": "[{\"changed_at\":\"2022-04-07T18:12:11.813+00:00\",\"changed\":[\"cloned from \\\"CSA U4L6-L4a PBT_2022\\\"\"],\"cloned_from\":\"CSA U4L6-L4a PBT_2022\"},{\"changed_at\":\"2022-04-07 18:12:21 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 13:33:55 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 14:09:41 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 14:25:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 14:26:40 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

@@ -3365,7 +3365,7 @@ class UserTest < ActiveSupport::TestCase
       other_pl_script = create :script, name: 'pl-other', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
       @teacher.assign_script(other_pl_script)
 
-      pl_section = create :section, user_id: facilitator.id, unit_group: pl_unit_group, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+      pl_section = create :section, :teacher_participants, user_id: facilitator.id, unit_group: pl_unit_group
       Follower.create!(section_id: pl_section.id, student_user_id: @teacher.id, user: facilitator)
     end
 
@@ -4204,13 +4204,17 @@ class UserTest < ActiveSupport::TestCase
     user = create :user
     level = create :level
     script = create :script
-    user_level_1 = create :user_level, user: user, level: level, script: script, updated_at: 1.day.ago
-    user_level_2 = create :user_level, user: user, level: level, script: script, updated_at: 1.day.ago
-    user_level_3 = create :user_level, user: user, level: level, script: script, updated_at: 1.day.ago
 
-    result = User.index_user_levels_by_level_id([user_level_1, user_level_2, user_level_3])
+    # Freeze time to ensure all the user levels have the same updated_at timestamp
+    Timecop.freeze do
+      user_level_1 = create :user_level, user: user, level: level, script: script, updated_at: 1.day.ago
+      user_level_2 = create :user_level, user: user, level: level, script: script, updated_at: 1.day.ago
+      user_level_3 = create :user_level, user: user, level: level, script: script, updated_at: 1.day.ago
 
-    assert_equal({level.id => user_level_1}, result)
+      result = User.index_user_levels_by_level_id([user_level_1, user_level_2, user_level_3])
+
+      assert_equal({level.id => user_level_1}, result)
+    end
   end
 
   test 'find_by_email_or_hashed_email returns nil when no user is found' do

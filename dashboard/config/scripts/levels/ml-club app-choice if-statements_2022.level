@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-03-30T23:50:15.000Z",
-  "level_num": "custom",
-  "user_id": 106,
   "properties": {
     "skin": "applab",
     "edit_code": true,
@@ -68,11 +64,19 @@
     "map_reference": "/docs/concepts/app-lab/if-statements/",
     "video_key": "csp_applab_conditionals_2A",
     "name_suffix": "_2022",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "teacher_markdown": "**Supporting Students:** These levels are similar to similar customizations students completed in previous lessons. If students get stuck, consider referring them to these previous lessons:\r\n- Adding multiple screens for the resulting prediction: [Lesson 10 - Model Cards in App Lab](../../../../10/levels/5)"
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-03-30T23:50:15.000Z",
+  "level_num": "custom",
+  "user_id": 106,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-03-30T23:50:15.287+00:00\",\"changed\":[\"cloned from \\\"ml-club app-choice if-statements\\\"\"],\"cloned_from\":\"ml-club app-choice if-statements\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-03-30T23:50:15.287+00:00\",\"changed\":[\"cloned from \\\"ml-club app-choice if-statements\\\"\"],\"cloned_from\":\"ml-club app-choice if-statements\"},{\"changed_at\":\"2022-04-12 21:46:31 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -111,7 +111,7 @@ class JavabuilderSessionsController < ApplicationController
         teacher.has_pilot_experiment?(CSA_PILOT_FACILITATORS)
       teachers << teacher.id
     end
-    teachers
+    teachers.uniq
   end
 
   def log_token_creation(payload)

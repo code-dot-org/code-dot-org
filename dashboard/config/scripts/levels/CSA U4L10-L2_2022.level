@@ -1,0 +1,28 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##In FoodTruck.java:\r\n\r\n1. Write the method `chooseDiscount()`(#e7e8ea) using multi-selection statements to decide which message to display.\r\n\r\n   * If `quantity`(#e7e8ea) is evenly divisible by `12`(#e7e8ea), print `\"15% discount\"`(#e7e8ea)\r\n\r\n   * If `quantity`(#e7e8ea) is evenly divisible by `6`(#e7e8ea), print `\"10% discount\"`(#e7e8ea)\r\n\r\n   * Else, print `\"No discount\"`(#e7e8ea)\r\n\r\n##In MyConsole.java:\r\n\r\n2. Call the `chooseDiscount()`(#e7e8ea) method with several values to test.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    // TO DO #2: Call the chooseDiscount() method.\n    \n    \n  }\n}",
+        "isVisible": true
+      },
+      "FoodTruck.java": {
+        "text": "/*\n * Represents a food truck\n */\npublic final class FoodTruck {\n\n  /*\n   * Prints a message with the appropriate discount\n   * based on the given quantity\n   */\n  public static void chooseDiscount(int quantity) {\n    // TO DO #1: Use multi-selection statements to print\n    // the correct message based on the quantity.\n\n\n    \n  }\n  \n}",
+        "isVisible": true
+      }
+    }
+  },
+  "game_id": 68,
+  "created_at": "2022-04-07T18:56:17.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-04-07T18:56:17.296+00:00\",\"changed\":[\"cloned from \\\"CSA U4L10-L1_2022\\\"\"],\"cloned_from\":\"CSA U4L10-L1_2022\"},{\"changed_at\":\"2022-04-07 18:56:31 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 23:11:40 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 23:14:42 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>
