@@ -301,7 +301,7 @@ namespace :test do
           'lib/**/*',
           'shared/**/*'
         ],
-        ignore: ['dashboard/test/ui/**/*']
+        ignore: ['dashboard/test/ui/**/*', 'dashboard/db/schema_cache.yml']
       ) do
         TestRunUtils.run_dashboard_tests
       end

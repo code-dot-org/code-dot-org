@@ -959,6 +959,43 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal contained_level_2_copy, level_2_copy.contained_levels.last
   end
 
+  test 'clone with suffix copies child levels of bubble choice sublevels' do
+    template_level = create :level, name: 'template level', start_blocks: '<xml>template</xml>'
+    level_1 = create :level, name: 'level 1'
+    level_1.project_template_level_name = template_level.name
+    level_1.save!
+
+    contained_level = create :level, name: 'contained level', type: 'FreeResponse'
+    level_2 = create :level, name: 'level 2'
+    level_2.contained_level_names = [contained_level.name]
+    level_2.save!
+
+    dsl_text = <<~DSL
+      name 'bubble choice'
+      sublevels
+      level 'level 1'
+      level 'level 2'
+    DSL
+
+    bubble_choice = BubbleChoice.create_from_level_builder({}, {name: 'bubble choice', type: 'BubbleChoice', dsl_text: dsl_text})
+    bubble_choice.stubs(:dsl_text).returns(dsl_text)
+    File.stubs(:write)
+    assert_equal bubble_choice.sublevels.first.name, 'level 1'
+    assert_equal bubble_choice.sublevels.last.name, 'level 2'
+
+    bubble_choice_copy = bubble_choice.clone_with_suffix('copy')
+
+    level_1_copy = bubble_choice_copy.sublevels.first
+    assert_equal level_1_copy.name, 'level 1_copy'
+    template_level_copy = level_1_copy.project_template_level
+    assert_equal template_level_copy.name, 'template level_copy'
+
+    level_2_copy = bubble_choice_copy.sublevels.last
+    assert_equal level_2_copy.name, 'level 2_copy'
+    contained_level_copy = level_2_copy.contained_levels.first
+    assert_equal contained_level_copy.name, 'contained level_copy'
+  end
+
   test 'clone with suffix copies level concept difficulty' do
     level_1 = create :level, name: 'level 1'
     level_1.assign_attributes(
@@ -1048,6 +1085,21 @@ class LevelTest < ActiveSupport::TestCase
     new_level = old_level.clone_with_suffix('_copy', editor_experiment: 'new-level-editors')
     assert_equal 'old multi level_copy', new_level.name
     assert_equal 'new-level-editors', new_level.editor_experiment
+  end
+
+  test 'clone with suffix uses existing levels when level names match' do
+    existing_level = create :level, name: 'old level_2020'
+    old_level = create :level, name: 'old level'
+    new_level = old_level.clone_with_suffix('_2020')
+    assert_equal existing_level, new_level
+  end
+
+  test 'clone with suffix does not use exactly levels when allow_existing is false' do
+    existing_level = create :level, name: 'old level_2020'
+    old_level = create :level, name: 'old level'
+    new_level = old_level.clone_with_suffix('_2020', allow_existing: false)
+    refute_equal existing_level, new_level
+    assert_equal 'old level_copy1_2020', new_level.name
   end
 
   test 'contained_level_names filters blank names before validation' do
@@ -1193,5 +1245,26 @@ class LevelTest < ActiveSupport::TestCase
     level_with_contained = create :level, contained_level_names: [contained_level.name]
 
     assert_not level_with_contained.can_have_feedback_review_state?
+  end
+
+  test 'next_unused_name_for_copy finds next available level name' do
+    level = create :level, name: 'my-level'
+    assert_equal 'my-level_copy1_2020', level.next_unused_name_for_copy('_2020')
+
+    create :level, name: 'my-level_copy1_2020'
+    create :level, name: 'my-level_copy2_2020'
+    create :level, name: 'my-level_copy4_2020'
+    assert_equal 'my-level_copy3_2020', level.next_unused_name_for_copy('_2020')
+  end
+
+  test 'next_unused_name_for_copy returns name under the maximum length' do
+    long_name = 'abcdefghij123456789012345678901234567890123456789012345678901234567890'
+    assert_equal 70, long_name.length
+    level = create :level, name: long_name
+    next_name = level.next_unused_name_for_copy('_2020')
+
+    # the maximum is 70. allow a little extra room for longer numbers.
+    assert next_name.length <= 68
+    assert next_name.match /_copy1_2020$/
   end
 end

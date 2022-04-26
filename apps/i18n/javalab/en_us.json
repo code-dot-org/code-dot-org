@@ -41,7 +41,6 @@
   "emptyBackpackMessage": "Files saved to your backpack will appear here.",
   "enablePeerReview": "Enable Peer Review",
   "errorJavabuilderConnectionGeneral": "We hit an error connecting to our server. Try again.",
-  "errorJavabuilderConnectionNotAuthorized": "You are not authorized to access Javalab. Do you need to log in or join a section?",
   "errorLoadingClassmates": "There was an error loading the list of your classmates. Please try again.",
   "errorMediaImageLoadError": "There was an error loading the image.",
   "errorNeighborhoodInvalidGrid": "There was an error loading the neighborhood level. Please contact us at support@code.org, and be sure to include the URL to this page in your message.",
@@ -121,7 +120,11 @@
   "saving": "Saving...",
   "teacherLabel": "teacher",
   "togglePeerReviewError": "Error enabling/disabling peer review, please try again.",
+  "unauthorizedJavabuilderConnectionNotLoggedIn": "You need to be logged in to run your code in Java Lab. Log in and try again.",
+  "unauthorizedJavabuilderConnectionTeacher": "To run your code in Java Lab, you need to become \"verified\" or join a CSA section owned by a verified teacher. Please see [this article](https://support.code.org/hc/en-us/articles/115001550131) for details on how to become verified.",
+  "unauthorizedJavabuilderConnectionStudent": "To run your code in Java Lab, you need to be assigned to a CSA section and your teacher needs to be \"verified.\" Ask your teacher for help and try again. Your teacher can find more details in [this article.](https://support.code.org/hc/en-us/articles/115001550131)",
   "unknownError": "Oops. We hit an error on our side. Try running your program again. If this error continues, contact us at support@code.org. Be sure to include the connection ID {connectionId} in your message.\n{type}",
   "userBlocked": "You have run your code too many times and your account has been locked. Contact support@code.org to unlock your account.",
+  "youHaveProjectsToReview": "You have projects to review...",
   "yourPeer": "your peer"
 }

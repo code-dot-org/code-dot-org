@@ -18,6 +18,7 @@ Dashboard::Application.configure do
   # https://guides.rubyonrails.org/configuring.html#configuring-middleware
   config.hosts << "localhost-studio.code.org"
   config.hosts << "localhost.code.org"
+  config.hosts << "localhost.hourofcode.com"
 
   # Do not eager load code on boot.
   config.eager_load = false
