@@ -106,7 +106,7 @@ export default function StylizedBaseDialog(props) {
         {props.body ? props.body : props.children}
       </div>
       {!props.hideFooter && (
-        <div>
+        <div className="uitest-base-dialog-footer">
           {horizontalRule}
           <div
             style={{

@@ -75,10 +75,33 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
     assert_equal 'new content', editable_reference_guide.content
   end
 
+  test 'updating parent_reference_guide_key works' do
+    editable_reference_guide = create :reference_guide, course_version: @unit_group.course_version, parent_reference_guide_key: nil
+
+    sign_in @levelbuilder
+
+    assert_not_equal editable_reference_guide.content, 'new content'
+    File.expects(:write).with {|filename, _| filename.to_s.end_with? "#{editable_reference_guide.key}.json"}.once
+
+    old_last_position = ReferenceGuide.where(course_version_id: @unit_group.course_version.id, parent_reference_guide_key: @reference_guide.key).last.position
+
+    post :update, params: {
+      course_course_name: editable_reference_guide.course_offering_version,
+      key: editable_reference_guide.key,
+      parent_reference_guide_key: @reference_guide.key
+    }
+    assert_response :ok
+
+    editable_reference_guide.reload
+    assert_equal @reference_guide.key, editable_reference_guide.parent_reference_guide_key
+    assert editable_reference_guide.position > old_last_position
+  end
+
   test 'ref guide is deleted through destroy route' do
     editable_reference_guide = create :reference_guide, course_version: @unit_group.course_version
 
     sign_in @levelbuilder
+    File.expects(:delete).with {|filename, _| filename.to_s.end_with? "#{editable_reference_guide.key}.json"}.once
 
     post :destroy, params: {
       course_course_name: editable_reference_guide.course_offering_version,
@@ -101,6 +124,30 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
     assert_redirected_to "/courses/#{@reference_guide_subcategory.course_offering_version}/guides/#{@reference_guide_subcategory.key}"
   end
 
+  test 'data is passed to new' do
+    sign_in @levelbuilder
+
+    get :new, params: {
+      course_course_name: @reference_guide.course_offering_version
+    }
+    assert_response :ok
+  end
+
+  test 'create results in new reference guide' do
+    key = 'new-ref-guide'
+
+    sign_in @levelbuilder
+    File.expects(:write).with {|filename, _| filename.to_s.end_with? "#{key}.json"}.once
+
+    old_last_position = ReferenceGuide.where(course_version_id: @unit_group.course_version.id, parent_reference_guide_key: nil).last.position
+
+    assert_creates(ReferenceGuide) do
+      post :create, params: {key: key, course_course_name: @unit_group.name}
+    end
+
+    assert ReferenceGuide.find_by_course_version_id_and_key(@unit_group.course_version.id, key).position > old_last_position
+  end
+
   test_user_gets_response_for :show, params: -> {{course_course_name: @reference_guide.course_offering_version, key: 'unknown_ref_guide'}}, user: :student, response: :not_found
 
   # everyone can see basic reference guides
@@ -120,6 +167,12 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
   test_user_gets_response_for :edit_all, params: -> {{course_course_name: @reference_guide.course_offering_version}}, user: :student, response: :forbidden
   test_user_gets_response_for :edit_all, params: -> {{course_course_name: @reference_guide.course_offering_version}}, user: :teacher, response: :forbidden
   test_user_gets_response_for :edit_all, params: -> {{course_course_name: @reference_guide.course_offering_version}}, user: :levelbuilder, response: :success
+
+  # new page is levelbuilder only
+  test_user_gets_response_for :new, params: -> {{course_course_name: @reference_guide.course_offering_version}}, user: nil, response: :redirect
+  test_user_gets_response_for :new, params: -> {{course_course_name: @reference_guide.course_offering_version}}, user: :student, response: :forbidden
+  test_user_gets_response_for :new, params: -> {{course_course_name: @reference_guide.course_offering_version}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :new, params: -> {{course_course_name: @reference_guide.course_offering_version}}, user: :levelbuilder, response: :success
 
   # pilot reference guides are restricted
   test_user_gets_response_for :show, name: 'not signed-in cannot view pilot ref guide',

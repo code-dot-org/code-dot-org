@@ -1,6 +1,6 @@
 name 'CSA U4L7-L5_2022'
-display_name 'Using Math Class Methods'
-description 'Use Math class methods to create visuals in The Theater.'
+display_name 'Solving Problems with the Math Class'
+description 'Use methods in the `Math` class to solve various problems.'
 
 sublevels
 level 'CSA U4L7-L5a_2022'
