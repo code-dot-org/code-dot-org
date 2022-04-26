@@ -38,5 +38,5 @@
   "return_value": "New LED object",
   "short_description": "A command to create a new LED object that can be programmed in the same way as the blocks in the Circuit drawer. The var myLed = createLed() command creates a new LED object named myLed that behaves just like the led blocks you've been using. Remember to pass in a pin parameter so the board knows where the LED is connected.",
   "syntax": "var myLed = createLed(pin);",
-  "tips": "* You'll need to work in text mode to use this block. You can still drag out blocks that you're familiar with from the Circuit drawer, you'll just need to change the name of the object.\r\n* `led.pulse()` will not work with new LEDs.\r\n* You can create new LED objects on pins 0, 2, 3, 6, and 12."
+  "tips": "* You'll need to work in text mode to use this block. You can still drag out blocks that you're familiar with from the Circuit drawer, you'll just need to change the name of the object.\r\n* [`led.pulse()`(#f78183)](/docs/applab/led.pulse/) will not work with new LEDs.\r\n* You can create new LED objects on pins 0, 2, 3, 6, and 12."
 }

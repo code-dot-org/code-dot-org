@@ -4,19 +4,50 @@ import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import Button from '@cdo/apps/templates/Button';
 import javalabMsg from '@cdo/javalab/locale';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import {currentLocation, navigateToHref} from '@cdo/apps/utils';
+import {VIEWING_CODE_REVIEW_URL_PARAM} from '@cdo/apps/templates/instructions/ReviewTab';
 
 class ReviewNavigator extends Component {
   static propTypes = {
-    onSelectPeer: PropTypes.func,
-    onReturnToProject: PropTypes.func,
     viewPeerList: PropTypes.bool,
-    loadPeers: PropTypes.func
+    loadPeers: PropTypes.func,
+    dropdownText: PropTypes.string,
+    color: PropTypes.string,
+    teacherAccountViewingAsParticipant: PropTypes.bool
   };
 
   state = {
     peers: [],
     loadError: false,
     loadInProgress: false
+  };
+
+  onSelectPeer = peer => {
+    if (!peer.id) {
+      return;
+    }
+
+    navigateToHref(
+      this.generateLevelUrlWithCodeReviewParam() + `&user_id=${peer.id}`
+    );
+  };
+
+  onClickBackToProject = () => {
+    navigateToHref(this.generateLevelUrlWithCodeReviewParam());
+  };
+
+  generateLevelUrlWithCodeReviewParam = () => {
+    let url =
+      currentLocation().origin +
+      currentLocation().pathname +
+      `?${VIEWING_CODE_REVIEW_URL_PARAM}=true`;
+
+    // If teacher account is viewing as participant, set up URLs
+    // to persist this setting when they click to view another project.
+    if (this.props.teacherAccountViewingAsParticipant) {
+      url += `&viewAs=Participant`;
+    }
+    return url;
   };
 
   onDropdownClick = () => {
@@ -33,7 +64,6 @@ class ReviewNavigator extends Component {
   };
 
   getPeerList() {
-    const {onSelectPeer} = this.props;
     const {loadError, peers, loadInProgress} = this.state;
     if (loadInProgress) {
       return [
@@ -59,7 +89,7 @@ class ReviewNavigator extends Component {
         <a
           key={peer.id}
           onClick={() => {
-            onSelectPeer(peer);
+            this.onSelectPeer(peer);
           }}
           className="code-review-peer-link"
         >
@@ -70,12 +100,12 @@ class ReviewNavigator extends Component {
   }
 
   render() {
-    const {onReturnToProject, viewPeerList} = this.props;
+    const {viewPeerList, dropdownText, color} = this.props;
     return viewPeerList ? (
       <div style={styles.container}>
         <DropdownButton
-          text={javalabMsg.reviewClassmateProject()}
-          color={Button.ButtonColor.white}
+          text={dropdownText || javalabMsg.reviewClassmateProject()}
+          color={color || Button.ButtonColor.white}
           onClick={this.onDropdownClick}
           className="peer-dropdown-button"
         >
@@ -85,11 +115,11 @@ class ReviewNavigator extends Component {
     ) : (
       <Button
         text={javalabMsg.returnToMyProject()}
-        color={Button.ButtonColor.white}
+        color={color || Button.ButtonColor.white}
         icon={'caret-left'}
         size={Button.ButtonSize.default}
         iconStyle={styles.backToProjectIcon}
-        onClick={onReturnToProject}
+        onClick={this.onClickBackToProject}
         style={styles.backToProjectButton}
       />
     );

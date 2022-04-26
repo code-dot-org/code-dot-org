@@ -18,5 +18,5 @@
   "return_value": "No return value. Possibly changes output in the display after drawSprites() is called.",
   "short_description": "Deactivates the camera. ",
   "syntax": "camera.off();",
-  "tips": "- The camera is automatically turned on at the start of each `draw()` loop. "
+  "tips": "- The camera is automatically turned on at the start of each [`draw()`(#fff176)](/docs/gamelab/draw/) loop. "
 }
