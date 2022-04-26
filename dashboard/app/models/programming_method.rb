@@ -83,7 +83,8 @@ class ProgrammingMethod < ApplicationRecord
       parameters: parsed_parameters,
       examples: parsed_examples,
       syntax: syntax,
-      externalLink: external_link
+      externalLink: external_link,
+      position: position
     }
   end
 
