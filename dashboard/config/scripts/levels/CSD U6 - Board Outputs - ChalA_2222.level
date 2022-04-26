@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2022-04-07T23:49:47.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -71,7 +67,7 @@
     "libraries_enabled": "false",
     "ai_enabled": "false",
     "display_name": "Animal Sounds",
-    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L2/challenge/A.png",
+    "thumbnail_url": "https://images.code.org/7681f638db48c5d15694f033b7a51681-image-1650058566435.png",
     "starter_assets": {
       "Bat.png": "15ff307d-8fe5-48f6-82b2-183548753a41.png",
       "BrownBear.png": "451108da-88e3-424c-a0e2-285f9acf713e.png",
@@ -85,9 +81,13 @@
     "encrypted_examples": "pMxORM14KhdZVsXOJcitrcPRqv9JtMWoz5rp9GOiwrrbR+laD7sULKINaJLZ\nXOBudC0qg6RWygupJEsrziYsJA==\n",
     "preload_asset_list": null
   },
+  "game_id": 41,
   "published": true,
+  "created_at": "2022-04-07T23:49:47.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-07T23:49:47.831+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - ChalA_2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - ChalA_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-07T23:49:47.831+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - ChalA_2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - ChalA_2022\"},{\"changed_at\":\"2022-04-15 21:36:17 +0000\",\"changed\":[\"code_functions\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -4,6 +4,22 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "Curriculum Videos",
+          "details": "Some lessons currently do not have links to videos in the lesson plans or slide deck. These videos are in final production and will be linked as soon as these are available.",
+          "link": "",
+          "type": "information",
+          "visibility": "Teacher-only"
+        },
+        {
+          "notice": "More Opportunities for Feedback",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
+          "link": "",
+          "type": "feedback",
+          "visibility": "Teacher-only"
+        }
+      ],
       "curriculum_umbrella": "CSA",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -15,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-05 13:54:34 UTC",
+    "serialized_at": "2022-04-19 19:56:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -26,9 +42,21 @@
   },
   "lesson_groups": [
     {
-      "key": "lessonGroup-2",
+      "key": "lessonGroup-5",
       "user_facing": true,
       "position": 1,
+      "properties": {
+        "display_name": "Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2022"
+      }
+    },
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 2,
       "properties": {
         "display_name": "Content"
       },
@@ -40,7 +68,7 @@
     {
       "key": "lessonGroup-3",
       "user_facing": true,
-      "position": 2,
+      "position": 3,
       "properties": {
         "display_name": "Show What You Know"
       },
@@ -52,7 +80,7 @@
     {
       "key": "lessonGroup-4",
       "user_facing": true,
-      "position": 3,
+      "position": 4,
       "properties": {
         "display_name": "Sandboxes"
       },
@@ -64,9 +92,24 @@
   ],
   "lessons": [
     {
+      "key": "lesson-23",
+      "name": "CSA Pre-Survey",
+      "absolute_position": 1,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2022"
+      }
+    },
+    {
       "key": "lesson-1",
       "name": "Welcome to CSA",
-      "absolute_position": 1,
+      "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
@@ -84,7 +127,7 @@
     {
       "key": "lesson-2",
       "name": "Java Lab",
-      "absolute_position": 2,
+      "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
@@ -102,7 +145,7 @@
     {
       "key": "lesson-3",
       "name": "The Neighborhood",
-      "absolute_position": 3,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
@@ -119,7 +162,7 @@
     {
       "key": "lesson-4",
       "name": "Navigating and Painting",
-      "absolute_position": 4,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
@@ -136,7 +179,7 @@
     {
       "key": "lesson-5",
       "name": "One-Way Selection Statements",
-      "absolute_position": 5,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 5,
@@ -154,7 +197,7 @@
     {
       "key": "lesson-6",
       "name": "PainterPlus",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 6,
@@ -171,7 +214,7 @@
     {
       "key": "lesson-7",
       "name": "Writing Methods",
-      "absolute_position": 7,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 7,
@@ -189,7 +232,7 @@
     {
       "key": "lesson-8",
       "name": "Code Reviews",
-      "absolute_position": 8,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 8,
@@ -207,7 +250,7 @@
     {
       "key": "lesson-9",
       "name": "Loops",
-      "absolute_position": 9,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 9,
@@ -225,7 +268,7 @@
     {
       "key": "lesson-10",
       "name": "Two-Way Selection Statements",
-      "absolute_position": 10,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 10,
@@ -243,7 +286,7 @@
     {
       "key": "lesson-11",
       "name": "Debugging Strategies",
-      "absolute_position": 11,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 11,
@@ -260,7 +303,7 @@
     {
       "key": "lesson-12",
       "name": "Decomposition and Design",
-      "absolute_position": 12,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 12,
@@ -278,7 +321,7 @@
     {
       "key": "lesson-13",
       "name": "PatternPainter",
-      "absolute_position": 13,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 13,
@@ -296,7 +339,7 @@
     {
       "key": "lesson-14",
       "name": "BackgroundPainter",
-      "absolute_position": 14,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 14,
@@ -314,13 +357,13 @@
     {
       "key": "lesson-15",
       "name": "Open Source Code",
-      "absolute_position": 15,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
         "overview": "**How have I grown as a software engineer?**\n\nStudents examine open source code and connect real-world applications and the concepts they have learned in this unit. Students review the characteristics of software engineers and reflect on how they demonstrate these characteristics while planning and implementing solutions.",
-        "preparation": "* Enter the words/phrases from Lesson 1 onto the indicated slide\n* Gather sticky notes (at least three for each student)\n* Print copies of the Exploring Open Source Code handout (one for each student)",
+        "preparation": "* Enter the words/phrases from Lesson 1 onto the indicated slide\n* Gather sticky notes (at least three for each student)\n* Print copies of the Exploring Open Source Code handout (one for each student)\n* Print copies of the Unit 1 Study Guide (one for each student)",
         "student_overview": "**How have I grown as a software engineer?**\n\nYou have made a lot of progress in becoming a software engineer! In this lesson, you examine open source code and connect real-world applications and the concepts you have learned in this unit. You review the characteristics of software engineers and reflect on how you demonstrate these characteristics while planning and implementing solutions."
       },
       "seeding_key": {
@@ -332,7 +375,7 @@
     {
       "key": "lesson-16",
       "name": "Asphalt Art Project – Day 1",
-      "absolute_position": 16,
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 16,
@@ -350,7 +393,7 @@
     {
       "key": "lesson-17",
       "name": "Asphalt Art Project – Day 2",
-      "absolute_position": 17,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 17,
@@ -368,7 +411,7 @@
     {
       "key": "lesson-18",
       "name": "Asphalt Art Project – Day 3",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 18,
@@ -387,7 +430,7 @@
     {
       "key": "lesson-19",
       "name": "FRQ Practice",
-      "absolute_position": 19,
+      "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 19,
@@ -405,7 +448,7 @@
     {
       "key": "lesson-20",
       "name": "Unit 1 Assessment",
-      "absolute_position": 20,
+      "absolute_position": 21,
       "lockable": true,
       "has_lesson_plan": true,
       "relative_position": 20,
@@ -424,7 +467,7 @@
     {
       "key": "lesson-21",
       "name": "Console",
-      "absolute_position": 21,
+      "absolute_position": 22,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 21,
@@ -439,7 +482,7 @@
     {
       "key": "lesson-22",
       "name": "The Neighborhood",
-      "absolute_position": 22,
+      "absolute_position": 23,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 22,
@@ -453,6 +496,18 @@
     }
   ],
   "lesson_activities": [
+    {
+      "key": "69c880be-4800-4ca0-818a-225b206425aa",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "69c880be-4800-4ca0-818a-225b206425aa",
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2022"
+      }
+    },
     {
       "key": "3da14ab9-4fe4-4eca-aca7-12ae7ca2e896",
       "position": 1,
@@ -1318,6 +1373,16 @@
   ],
   "activity_sections": [
     {
+      "key": "751da42a-39cc-46c5-a16f-e45b67a13087",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "751da42a-39cc-46c5-a16f-e45b67a13087",
+        "lesson_activity.key": "69c880be-4800-4ca0-818a-225b206425aa"
+      }
+    },
+    {
       "key": "b5e00b39-4f79-44ca-8507-e62da9bcb4a6",
       "position": 1,
       "properties": {
@@ -1691,7 +1756,7 @@
       "key": "b73866c4-57d5-43fb-9296-7c199f0bb034",
       "position": 7,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to complete Levels 1 through 4. Students investigate the programs on Levels 1 and 2 with their partner and make changes to the programs as prompted. On Level 3, students complete a Check for Understanding to identify the error in the program. On Level 4, students write the class header and `main` method.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Java Lab Basics*.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to complete Levels 1 through 4. Students investigate the programs on Levels 1 and 2 with their partner and make changes to the programs as prompted. On Level 3, students complete a Check for Understanding to identify the error in the program. On Level 4, students write the class header and `main` method.",
         "progression_name": "Investigate: Java Basics",
         "tips": [
           {
@@ -1721,7 +1786,7 @@
       "key": "daffe131-0f3a-43a0-9b07-bb7c86e52163",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Java Lab Features*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the Java syntax rules.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to identify the components of a class."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Writing Our First Program*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the Java syntax rules.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to identify the components of a class."
       },
       "seeding_key": {
         "activity_section.key": "daffe131-0f3a-43a0-9b07-bb7c86e52163",
@@ -2934,7 +2999,7 @@
       "key": "bb1861ab-f679-4fbe-9b27-c19642d9a304",
       "position": 5,
       "properties": {
-        "description": "The `Painter` class doesn't have a method to turn right. Now that we have a `PainterPlus` class that extends the `Painter` class.",
+        "description": "The `Painter` class doesn't have a method to turn right. Now we have a `PainterPlus` class that extends the `Painter` class.",
         "duration": "20",
         "name": "Turning Right in The Neighborhood",
         "remarks": true
@@ -4238,8 +4303,31 @@
       }
     },
     {
-      "key": "5bbf833a-1acb-45b3-a817-dfe89878183c",
+      "key": "52a06a99-92bd-4c78-bfbe-d45ac3820acf",
       "position": 6,
+      "properties": {
+        "description": "When painting patterns and murals, we need a way to set the amount of paint a `Painter` object has so we don't have to collect a lot of paint from multiple paint buckets.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "52a06a99-92bd-4c78-bfbe-d45ac3820acf",
+        "lesson_activity.key": "851323ef-96d0-426c-bb4d-d84a54f75da3"
+      }
+    },
+    {
+      "key": "6b73bc58-35f9-4f15-83f5-d168a2849c46",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce and explain the `setPaint()` method."
+      },
+      "seeding_key": {
+        "activity_section.key": "6b73bc58-35f9-4f15-83f5-d168a2849c46",
+        "lesson_activity.key": "851323ef-96d0-426c-bb4d-d84a54f75da3"
+      }
+    },
+    {
+      "key": "5bbf833a-1acb-45b3-a817-dfe89878183c",
+      "position": 8,
       "properties": {
         "description": "Use your UML diagram, pseudocode, and notes to create the `PatternPainter` class. After writing the class, create a mural of your pattern.",
         "duration": "15",
@@ -4253,7 +4341,7 @@
     },
     {
       "key": "c7835f51-b42e-4080-ba41-e4c84ef7e070",
-      "position": 7,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to complete Levels 1, 2, and 3. Students complete a Check for Understanding on Level 1, then continue to Level 2 to write the `PatternPainter` class. Students create a mural with their `PatternPainter` class on Level 3.",
         "progression_name": "PatternPainter"
@@ -4265,7 +4353,7 @@
     },
     {
       "key": "313591cb-a0b3-41e6-9fc9-5f7013817b8c",
-      "position": 8,
+      "position": 10,
       "properties": {
         "description": "This is a good time to commit our code and save our `PatternPainter` class to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
         "remarks": true
@@ -4277,7 +4365,7 @@
     },
     {
       "key": "ab1d0557-8aba-4d6a-8964-1c82a816afda",
-      "position": 9,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving the `PatternPainter` class to the Backpack."
       },
@@ -4288,7 +4376,7 @@
     },
     {
       "key": "7165a128-21b1-424b-8ca9-e3e46884d990",
-      "position": 10,
+      "position": 12,
       "properties": {
         "description": "When we write new code, getting feedback from our peers is helpful to make sure we have met the requirements of the problem efficiently.",
         "remarks": true
@@ -4300,7 +4388,7 @@
     },
     {
       "key": "4b28c683-7217-4a57-94c2-2a5d7f902435",
-      "position": 11,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on their program on Level 4.",
         "progression_name": "Code Review: PatternPainter"
@@ -4729,7 +4817,7 @@
       "key": "9ed1e173-6377-4e1d-b7be-bba625a2c006",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know week."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 1 Study Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know week."
       },
       "seeding_key": {
         "activity_section.key": "9ed1e173-6377-4e1d-b7be-bba625a2c006",
@@ -5260,6 +5348,18 @@
       }
     },
     {
+      "key": "f8bb9ba0-c10c-4048-b0c7-2b7ee53fb6b6",
+      "position": 4,
+      "properties": {
+        "name": "Survey",
+        "progression_name": "Unit 1 Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "f8bb9ba0-c10c-4048-b0c7-2b7ee53fb6b6",
+        "lesson_activity.key": "089b98cc-8674-44b7-8252-2be180212541"
+      }
+    },
+    {
       "key": "75f9cc1c-e355-4632-b81d-ce7fff1166d9",
       "position": 1,
       "properties": {
@@ -5471,6 +5571,30 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csp-pre-survey-levelgroup_21_222022_csa-2022"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-pre-survey-levelgroup_21_222022_csa-2022"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2022",
+        "activity_section.key": "751da42a-39cc-46c5-a16f-e45b67a13087"
+      },
+      "level_keys": [
+        "csp-pre-survey-levelgroup_21_222022_csa-2022"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -5493,7 +5617,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 3,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5518,7 +5642,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 4,
       "position": 3,
       "activity_section_position": 3,
       "assessment": true,
@@ -5543,7 +5667,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5568,7 +5692,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5593,7 +5717,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5618,7 +5742,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5643,7 +5767,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -5668,7 +5792,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5693,7 +5817,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5718,7 +5842,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5743,7 +5867,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5768,7 +5892,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -5793,7 +5917,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -5818,7 +5942,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5843,7 +5967,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5868,7 +5992,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5893,7 +6017,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -5918,7 +6042,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5943,7 +6067,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5968,7 +6092,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5993,7 +6117,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -6018,7 +6142,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6043,7 +6167,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6068,7 +6192,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6093,7 +6217,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -6118,7 +6242,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6143,7 +6267,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6168,7 +6292,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6193,7 +6317,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6218,7 +6342,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6243,7 +6367,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -6268,7 +6392,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6293,7 +6417,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -6318,7 +6442,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6343,7 +6467,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6368,7 +6492,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6393,7 +6517,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -6418,7 +6542,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6443,7 +6567,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -6468,7 +6592,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6493,7 +6617,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6518,7 +6642,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6543,7 +6667,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -6568,7 +6692,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6593,7 +6717,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6618,7 +6742,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6643,7 +6767,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -6668,7 +6792,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6693,7 +6817,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6718,7 +6842,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -6743,7 +6867,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6768,7 +6892,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6793,7 +6917,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6818,7 +6942,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6843,7 +6967,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -6868,7 +6992,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6893,7 +7017,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6918,7 +7042,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6943,7 +7067,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6968,7 +7092,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -6993,7 +7117,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7018,7 +7142,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7043,7 +7167,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7068,7 +7192,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7093,7 +7217,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7118,7 +7242,32 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa1-2022"
+        ],
+        "progression": "Unit 1 Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csa1-2022"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2022",
+        "activity_section.key": "f8bb9ba0-c10c-4048-b0c7-2b7ee53fb6b6"
+      },
+      "level_keys": [
+        "Student End of Unit Survey_csa1-2022"
+      ]
+    },
+    {
+      "chapter": 69,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7143,7 +7292,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 70,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7167,7 +7316,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 71,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7192,7 +7341,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 72,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7218,6 +7367,18 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "csp-pre-survey-levelgroup_21_222022_csa-2022",
+        "script_level.level_keys": [
+          "csp-pre-survey-levelgroup_21_222022_csa-2022"
+        ],
+        "lesson.key": "lesson-23",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa1-2022",
+        "activity_section.key": "751da42a-39cc-46c5-a16f-e45b67a13087"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "CSA U1L2-L1_2022",
@@ -8012,6 +8173,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "Student End of Unit Survey_csa1-2022",
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csa1-2022"
+        ],
+        "lesson.key": "lesson-18",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-2022",
+        "activity_section.key": "f8bb9ba0-c10c-4048-b0c7-2b7ee53fb6b6"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA Unit 1 Assessment 2022",
         "script_level.level_keys": [
           "CSA Unit 1 Assessment 2022"
@@ -8742,6 +8915,18 @@
       }
     },
     {
+      "name": "Unit 1 Study Guide",
+      "url": "https://docs.google.com/document/d/1dQPxCgOB8Cz4sJ93vDQiyjVPO3ooVommPLrxRooZlqg/edit?usp=sharing",
+      "key": "unit_1_study_guide",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_study_guide"
+      }
+    },
+    {
       "name": "Unity and Safety Through Street Art in Norfolk, VA",
       "url": "https://youtu.be/-gnXVMcg0yk",
       "key": "unity_and_safety_through_street_art_in_norfolk_va",
@@ -8975,6 +9160,12 @@
       "seeding_key": {
         "lesson.key": "lesson-15",
         "resource.key": "unit_1_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "unit_1_study_guide"
       }
     },
     {
@@ -9269,7 +9460,19 @@
     },
     {
       "seeding_key": {
+        "resource.key": "unit_1_guide",
+        "script.name": "csa1-2022"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "unit_1_overview",
+        "script.name": "csa1-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_1_study_guide",
         "script.name": "csa1-2022"
       }
     }

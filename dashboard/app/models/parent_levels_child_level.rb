@@ -36,7 +36,7 @@
 class ParentLevelsChildLevel < ApplicationRecord
   belongs_to :parent_level, class_name: 'Level'
   belongs_to :child_level, class_name: 'Level'
-  validates_uniqueness_of :child_level, scope: :parent_level
+  validates_uniqueness_of :child_level, scope: :parent_level, message: ->(plcl, _data) {"child_level #{plcl.child_level&.name&.dump} is already taken for parent_level #{plcl.parent_level&.name&.dump}"}
 
   default_scope {order(position: :asc)}
 

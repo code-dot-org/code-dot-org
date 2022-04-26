@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csa-backpack-2022",
-    "serialized_at": "2022-04-08 15:41:13 UTC",
+    "serialized_at": "2022-04-25 13:16:59 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -59,6 +59,21 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "ImageEffect",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "csa-backpack-2022"
       }
