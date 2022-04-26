@@ -832,6 +832,7 @@ class Lesson < ApplicationRecord
     Services::MarkdownPreprocessor.sub_vocab_definitions!(copied_lesson.preparation, update_vocab_definition_on_clone) if copied_lesson.preparation
     Services::MarkdownPreprocessor.sub_resource_links!(copied_lesson.assessment_opportunities, update_resource_link_on_clone) if copied_lesson.assessment_opportunities
     Services::MarkdownPreprocessor.sub_vocab_definitions!(copied_lesson.assessment_opportunities, update_vocab_definition_on_clone) if copied_lesson.assessment_opportunities
+    copied_lesson.save!
 
     # Copy lesson activities, activity sections, and script levels
     copied_lesson.lesson_activities = lesson_activities.map do |original_lesson_activity|
