@@ -433,7 +433,7 @@ GEM
       http-cookie (~> 1.0.0)
     faraday_middleware (0.14.0)
       faraday (>= 0.7.4, < 1.0)
-    ffi (1.10.0)
+    ffi (1.15.4)
     firebase (0.2.6)
       httpclient
       json
@@ -530,7 +530,7 @@ GEM
     launchy (2.4.3)
       addressable (~> 2.3)
     le (2.7.2)
-    libv8 (8.4.255.0)
+    libv8-node (15.14.0.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -551,8 +551,8 @@ GEM
     mini_magick (4.9.5)
     mini_mime (1.1.1)
     mini_portile2 (2.6.1)
-    mini_racer (0.3.1)
-      libv8 (~> 8.4.255)
+    mini_racer (0.4.0)
+      libv8-node (~> 15.14.0.0)
     minitest (5.14.4)
     minitest-around (0.4.1)
       minitest (~> 5.0)
