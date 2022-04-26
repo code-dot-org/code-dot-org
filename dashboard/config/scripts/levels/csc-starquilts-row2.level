@@ -12,7 +12,7 @@
     "start_direction": "0",
     "x": "200",
     "y": "200",
-    "free_play": "true",
+    "free_play": "false",
     "impressive": "false",
     "embed": "false",
     "disable_sharing": "false",
@@ -54,7 +54,7 @@
   "level_num": "custom",
   "user_id": 16,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-07T22:33:13.679+00:00\",\"changed\":[\"cloned from \\\"pattern_blocks_sandbox\\\"\"],\"cloned_from\":\"pattern_blocks_sandbox\"},{\"changed_at\":\"2022-04-07 22:47:43 +0000\",\"changed\":[\"name\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"short_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-07 22:50:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-07 22:50:30 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-07 23:27:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 01:23:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 01:24:45 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 01:27:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 21:50:07 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 21:56:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 21:57:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 21:59:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 21:59:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 22:00:36 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 22:01:38 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-09 03:57:03 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-09 03:57:34 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-09 03:59:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-09 04:01:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-09 04:06:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-11 17:38:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-21 17:26:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-21 18:34:42 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-21 18:35:12 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-21 19:16:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-21 19:18:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-21 19:30:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-04-07T22:33:13.679+00:00\",\"changed\":[\"cloned from \\\"pattern_blocks_sandbox\\\"\"],\"cloned_from\":\"pattern_blocks_sandbox\"},{\"changed_at\":\"2022-04-07 22:47:43 +0000\",\"changed\":[\"name\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"short_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-07 22:50:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-07 22:50:30 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-07 23:27:58 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 01:23:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 01:24:45 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 01:27:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 21:50:07 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 21:56:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 21:57:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 21:59:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 21:59:57 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 22:00:36 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-08 22:01:38 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-09 03:57:03 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-09 03:57:34 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-09 03:59:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-09 04:01:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-09 04:06:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-11 17:38:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-21 17:26:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-21 18:34:42 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-21 18:35:12 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-21 19:16:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-21 19:18:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-21 19:30:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-22 16:07:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"free_play\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-04-22 16:09:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -205,7 +205,209 @@
     </toolbox_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" movable="false" deletable="false"/>
+        <block type="when_run" deletable="false" movable="false" id="when_run">
+          <next>
+            <block type="comment">
+              <field name="TEXT">This sets the length of the rhombus to 35</field>
+              <next>
+                <block type="variables_set">
+                  <field name="VAR">length</field>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <field name="NUM">35</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="comment">
+                      <field name="TEXT">Row 1</field>
+                      <next>
+                        <block type="turtle_shape_with_side_length">
+                          <field name="VALUE">smallRhombusRed45</field>
+                          <value name="SIZE">
+                            <block type="variables_get">
+                              <field name="VAR">length</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="comment">
+                              <field name="TEXT">Row 2</field>
+                              <next>
+                                <block type="procedures_callnoreturn">
+                                  <mutation name="diagonalRight"/>
+                                  <next>
+                                    <block type="turtle_shape_with_side_length">
+                                      <field name="VALUE">smallRhombusOrange45</field>
+                                      <value name="SIZE">
+                                        <block type="variables_get">
+                                          <field name="VAR">length</field>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="procedures_callnoreturn">
+                                          <mutation name="bumpLeft"/>
+                                          <next>
+                                            <block type="turtle_shape_with_side_length">
+                                              <field name="VALUE">smallRhombusOrange45</field>
+                                              <value name="SIZE">
+                                                <block type="variables_get">
+                                                  <field name="VAR">length</field>
+                                                </block>
+                                              </value>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation/>
+          <field name="NAME">diagonalLeft</field>
+          <statement name="STACK">
+            <block type="draw_turn_by_constant" uservisible="false">
+              <field name="DIR">turnLeft</field>
+              <field name="VALUE">22.5</field>
+              <next>
+                <block type="jump" uservisible="false">
+                  <field name="DIR">jumpForward</field>
+                  <value name="VALUE">
+                    <block type="variables_get" uservisible="false">
+                      <field name="VAR">length</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="draw_turn_by_constant" uservisible="false">
+                      <field name="DIR">turnRight</field>
+                      <field name="VALUE">22.5</field>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation/>
+          <field name="NAME">diagonalRight</field>
+          <statement name="STACK">
+            <block type="draw_turn_by_constant" uservisible="false">
+              <field name="DIR">turnRight</field>
+              <field name="VALUE">22.5</field>
+              <next>
+                <block type="jump" uservisible="false">
+                  <field name="DIR">jumpForward</field>
+                  <value name="VALUE">
+                    <block type="variables_get" uservisible="false">
+                      <field name="VAR">length</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="draw_turn_by_constant" uservisible="false">
+                      <field name="DIR">turnLeft</field>
+                      <field name="VALUE">22.5</field>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation/>
+          <field name="NAME">bumpLeft</field>
+          <statement name="STACK">
+            <block type="draw_turn_by_constant" uservisible="false">
+              <field name="DIR">turnRight</field>
+              <field name="VALUE">22.5</field>
+              <next>
+                <block type="jump" uservisible="false">
+                  <field name="DIR">jumpBackward</field>
+                  <value name="VALUE">
+                    <block type="variables_get" uservisible="false">
+                      <field name="VAR">length</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="draw_turn_by_constant" uservisible="false">
+                      <field name="DIR">turnLeft</field>
+                      <field name="VALUE">45</field>
+                      <next>
+                        <block type="jump" uservisible="false">
+                          <field name="DIR">jumpForward</field>
+                          <value name="VALUE">
+                            <block type="variables_get" uservisible="false">
+                              <field name="VAR">length</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="draw_turn_by_constant" uservisible="false">
+                              <field name="DIR">turnRight</field>
+                              <field name="VALUE">22.5</field>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn" uservisible="false">
+          <mutation/>
+          <field name="NAME">bumpRight</field>
+          <statement name="STACK">
+            <block type="draw_turn_by_constant" uservisible="false">
+              <field name="DIR">turnLeft</field>
+              <field name="VALUE">22.5</field>
+              <next>
+                <block type="jump" uservisible="false">
+                  <field name="DIR">jumpBackward</field>
+                  <value name="VALUE">
+                    <block type="variables_get" uservisible="false">
+                      <field name="VAR">length</field>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="draw_turn_by_constant" uservisible="false">
+                      <field name="DIR">turnRight</field>
+                      <field name="VALUE">45</field>
+                      <next>
+                        <block type="jump" uservisible="false">
+                          <field name="DIR">jumpForward</field>
+                          <value name="VALUE">
+                            <block type="variables_get" uservisible="false">
+                              <field name="VAR">length</field>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="draw_turn_by_constant" uservisible="false">
+                              <field name="DIR">turnLeft</field>
+                              <field name="VALUE">22.5</field>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
       </xml>
     </solution_blocks>
   </blocks>

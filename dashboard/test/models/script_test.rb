@@ -1549,36 +1549,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal("Waiting for review", feedback2_result[:reviewStateLabel])
   end
 
-  # This test checks that all categories that may show up in the UI have
-  # translation strings.
-  test 'all visible categories have translations' do
-    I18n.locale = 'en-US'
-
-    # A course can belong to more than one category and only the first
-    # category is shown in the UI (and thus needs a translation).
-
-    # To determine the set of categories that must be translated, we first
-    # collect the list of all units that are mapped to categories in
-    # ScriptConstants::CATEGORIES.
-    all_units = ScriptConstants::CATEGORIES.reduce(Set.new) do |scripts, (_, scripts_in_category)|
-      scripts | scripts_in_category
-    end
-
-    # Add a unit that is not in any category so that the 'other' category
-    # will be tested.
-    all_units |= ['uncategorized-script']
-
-    untranslated_categories = Set.new
-    all_units.each do |unit|
-      category = ScriptConstants.categories(unit)[0] || ScriptConstants::OTHER_CATEGORY_NAME
-      translation = I18n.t("data.script.category.#{category}_category_name", default: nil)
-      untranslated_categories.add(category) if translation.nil?
-    end
-
-    assert untranslated_categories.empty?,
-      "The following categories are missing translations in scripts.en.yml '#{untranslated_categories}'"
-  end
-
   test "get_assessment_script_levels returns an empty list if no level groups" do
     unit = create(:script, name: 'test-no-levels')
     level_group_script_level = unit.get_assessment_script_levels
