@@ -4,6 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "Supports to Teach CS Discoveries",
+          "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
+          "link": "https://code.org/educate/professional-development-online",
+          "type": "information",
+          "visibility": "Teacher-only"
+        }
+      ],
       "curriculum_umbrella": "CSD",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -18,8 +27,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-30 23:47:59 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-04-25 23:22:37 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -81,7 +90,7 @@
         "assessment_opportunities": "1. **Provide examples of how representing data in different ways can affect its ability to solve different problems.**\r\n\r\n\tWIn the discussion at the end of the activity, students should identify how the nature of each problem lent itself to a particular representation.  \r\n\r\n2. **Choose the best way to represent some information based on how it will be used.**\r\n\r\n\tIn the discussion at the end of the activity, students should justify the \"better\" and \"worse\" representations within the context of the various problems they were asked to solve.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How does data affect decisions we make every day?**\n\nIn the first lesson of the data unit, students get an overview of what data is and how it is used to solve problems. Students start off with a brief discussion to come to a common understanding of data. They then split into groups and use a data set to make a series of meal recommendations for people with various criteria. Each group has the choices of meal represented in a different way (pictures, recipes, menu, nutrition) that gives an advantage for one of the recommendations. Afterwards, groups compare their responses and discuss how the different representations of the meal data affected how the students were able to solve the different problems.\n",
-        "preparation": "* Print copies of the Meals Data resource so that each group can get one of the four pages\r\n* Print one copy of the activity guide for each group",
+        "preparation": "* Print copies of the Meals Data resource so that each group can get one of the four pages\n* Print one copy of the activity guide for each group\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-1-lessons-1-8/36196) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson introduces a number of important ideas that students will explore in this chapter. They'll see that the same objects can be represented in a number of different ways. In Chapter 1 they'll learn the different representation systems that computers use to represent information. They'll also see in this lesson that representation matters when we use data to make decisions. In Chapter 2 of this unit students will explore more deeply how data can be used by humans and computers to make decisions.",
         "student_overview": "**Question of the Day: How does data affect decisions we make every day?**\n\nIn this lesson, you will explore what data is and how it is used to solve problems. "
       },
@@ -102,7 +111,7 @@
         "assessment_opportunities": "1. **Describe the necessary features of a system for representing information**\r\n\r\n\tWrap up: students should identify key features that their systems needed to be effective.\r\n\r\n2. **Create and use a system for representing information**\r\n\r\n\tActivity Guide: There should be a unique code for each letter on the activity guide, with a system for determining when one letter stops and the other begins.  During the activity, you may also want to circulate to see the codes in use.\r\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we create a system for representing information?**\r\n\r\nIn this lesson students create their own system for representing information. They begin by brainstorming all the different systems they already use to represent yes-no responses. They then work in small groups to create a system that can represent any letter in the alphabet using only a single stack of cards. The cards used have one of 6 different possible drawings (6 animals, 6 colors, etc.) and so to represent the entire alphabet students will need to use patterns of multiple cards to represent each letter. Students create messages with their systems and exchange with other groups to ensure the system worked as intended. In the wrap-up discussion the class reviews any pros and cons of the different systems. They discuss commonalities between working systems and recognize that there are many possible solutions to this problem and what's important is that everyone uses the same arbitrary system to communicate.\r\n",
-        "preparation": "* Print one copy of the activity guide for each group of 2-3\r\n* Print and cut up one copy of the manipulative resource for each group of 2-3",
+        "preparation": "* Print one copy of the activity guide for each group of 2-3\n* Print and cut up one copy of the manipulative resource for each group of 2-3\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-1-lessons-1-8/36196) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "In this lesson students get to explore for themselves the qualities of a good system for representing information. They should find through creating and testing their systems that\r\n\r\n1. there are typically many possible systems for representing information\r\n2. people must agree on a common set of rules for a system to work\r\n\r\nThe features of the systems students create in this lesson serve as a reference point in coming lessons when students explore the representation systems actually used in computers.\r\n\r\nIn the next lesson students will be introduced to the concept of binary and how computers use on-off signals or \"0's and 1's\" to represent information. Even though this concept is hinted at in the introductory yes-no activity, it shouldn't be introduced until the next lesson.",
         "student_overview": "**Question of the Day: How can we create a system for representing information?**\n\nIn this lesson, you will create a system to represent information by working with a group to create a system that can represent any letter in the alphabet using only a single stack of cards. "
       },
@@ -123,7 +132,7 @@
         "assessment_opportunities": "1. **Define a binary system as one that uses just two possible states to represent information**\r\n \r\n\tActivity Guide: Students create their own binary system to create their own encoded messages.\r\n \r\n2. **Use the ASCII system to encode and decode text information in binary**\r\n \r\n\tActivity Guide: The messages should be encoded and decoded correctly on the activity guide.  Check to make sure students are only using two elements in the encoding challenge, and that there are no spaces in the encoded message.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: What system do computers use to represent letters and words?**\r\n \r\nIn this lesson students learn to use their first binary system for encoding information, the ASCII system for representing letters and other characters. At the beginning of the lesson the teacher introduces the fact that computers must represent information using either \"on\" or \"off\". Then students are introduced to the ASCII system for representing text using binary symbols. Students practice using this system before encoding their own message using ASCII. At the end of the lesson a debrief conversation helps synthesize the key learning objectives of the activity.",
-        "preparation": "* Print copies of the activity guide - 1 per student\r\n* Print copies of the ASCII text resource - 1 for each pair of students\r\n",
+        "preparation": "* Print copies of the activity guide - 1 per student\n* Print copies of the ASCII text resource - 1 for each pair of students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-1-lessons-1-8/36196) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n",
         "purpose": "This lesson is an opportunity to make some real world connections from the previous lesson and review some of the concepts students saw in that activity. Students are formally introduced to the concept of binary, learn what a bit of information is, and get practice using a binary system. Students review the fact that patterns of bits can be used to represent information and consider why having patterns that are all the same length (in this case 7 bits) makes it easier to use a system.",
         "student_overview": "**Question of the Day: What system do computers use to represent letters and words?**\n\nIn this lesson, you will be learning about binary and the ASCII system used for representing text. "
       },
@@ -144,7 +153,7 @@
         "assessment_opportunities": "1. **Create and manipulate binary patterns to represent black and white images**\n\n\tCode Studio: In bubble 2, the student should have created a smiley face with the widget.\n\n2. **Describe common features of systems used to represent information in binary**\n\n\tWrap up: Students should identify key shared features of the binary systems they have seen.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: What system do computers use to represent images?**\r\n\r\nIn this lesson students learn how computers represent images. To begin the lesson they consider the challenge of turning all the complexity of vision into a binary pattern. Through a series of images showing how this transformation is made students are introduced to the concept of splitting images into squares or \"pixels\" which can then be turned on or off individually to make the entire image. Students then do a short set of challenges using the Pixelation Widget in order to draw black and white images. Puzzles are designed to call out some of the challenges of representing images in this way. In the wrap up students make connections between the system for representing images and the system for representing text they learned in the previous lesson.\r\n",
-        "preparation": "* Practice using the Pixelation Widget for ~10 mins to prepare to respond to questions",
+        "preparation": "* Practice using the Pixelation Widget for ~10 mins to prepare to respond to questions\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-1-lessons-1-8/36196) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson introduces another commonly used system of representing information in binary. The most obvious takeaways from the Pixelation Widget will obviously be that a 1 means an \"On\" and a 0 means an \"Off\". What might be less obvious, however, is that the width and height of the image need to be agreed upon in order to interpret the binary image information as well. Finally this is an opportunity to explore how systems for representing information are created. A \"raw\" image is really hard to represent. The idea to turn an image into a grid of black and white squares significantly simplifies this challenge and makes it into the kind of problem that computer scientists knew how to solve. While the activity in this lesson may feel like just typing 0s and 1s, it actually reveals a lot about how people think about representing information in binary, and what challenges and tradeoffs are created as a result.",
         "student_overview": "**Question of the Day: What system do computers use to represent images?**\n\nIn this lesson, you will continue exploring how you can create systems to represent information using binary, this time images!"
       },
@@ -165,6 +174,7 @@
         "assessment_opportunities": "1. **Use a binary system to represent numbers.**\r\n\r\n\tActivity Guide, page 1: Student answers should match the key, noting that the last three questions may have different answers student to student.\r\n\r\n2. **Extend a representation system based on patterns.**\r\n\r\n\tActivity Guide, page 1: On the bottom of the page, students should correctly extend the pattern to 5- and 6-bit numbers.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: What system do computers use to represent numbers?**\r\n\r\nIn this lesson, students learn about the binary number system.  With a set of cards that represent the place values in a binary (base-2) number system by a collection of dots, students turn bits \"on\" or \"off\" by turning cards face up and face down, then observe the numbers that result from these different patterns.  Eventually, students extend the pattern to a generic 4-bit system.",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-1-lessons-1-8/36196) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "Students learn how to use the binary system to represent integers.  Unlike ASCII, which is presented as an arbitrary mapping of bit patterns to characters, binary numbers are introduced within the context of patterns of numbers.  Students use the patterns to determine the binary representations of different numbers, rather than simply looking them up in a table.",
         "student_overview": "**Question of the Day: What system do computers use to represent numbers?**\n\nIn this lesson, you will learn about the actual binary number system!"
       },
@@ -185,7 +195,7 @@
         "assessment_opportunities": "1. **Use multiple binary systems to decode information.**\r\n\r\n\tActivity Guide, page 2: In the chart at the bottom of the page, the data should be decoded as in the answer key.\r\n\r\n2. **Determine the most appropriate encoding system for a given piece of information.**\r\n\r\n\tActivity Guide, page 2: The method of encoding the new information should be appropriate for the information type (e.g. numbers for height, ASCII for location).",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How do computers tell the difference between binary codes for letters, numbers, or images?**\r\n \r\nIn this lesson, students use all three types of binary representation systems (ASCII characters, binary number, and images) to decode information in a record. After seeing a series of bits and being asked to decode them, students are introduced to the idea that in order to understand binary information, they must understand both the system that is being used and the meaning of the information encoded. They then decode a record representing a pet based on a given structure.\r\n",
-        "preparation": "* Have the 8-Bit Binary Widget and Binary to ASCII Table ready to model with the class",
+        "preparation": "* Have the 8-Bit Binary Widget and Binary to ASCII Table ready to model with the class\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-1-lessons-1-8/36196) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "In previous lessons, students used different representation systems in isolation.  Here, they see various representation systems used together within the same record.  They should see that it's important not only to know the various codes, but to create rules about which codes are being used at which points in the record.  Without this structure, it is impossible to decode a series of bits.",
         "student_overview": "**Question of the Day: How do computers tell the difference between binary codes for letters, numbers, or images?**\n\nIn this lesson, you'll combine ASCII, binary, and images to explore ways to encode more complex types of information. "
       },
@@ -206,6 +216,7 @@
         "assessment_opportunities": "1. **Describe the reasons encryption is needed to protect personal data**\n\nActivity Guide Page 1: Students describe the data within a medical card that should be kept secret because it is too personal and brainstorm ways personal data could be used inappropriately if revealed.\n\n2. **Apply a method of encryption to ensure the secure transmission of data**\n\nActivity Guide, page 2: Students decrypt several medical records to reveal the conditions of their users. Use the answer key to check whether students have completed each decryption successfully.\n\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we keep data secret and protect it from misuse?**\n\nStudents continue to explore how data is represented in a punchcard, and begin considering whether some data should be protected from public view because it is too personal or sensitive. Once students understand the reasons for protecting data, they learn a binary encryption system that lets them encrypt and decrypt data in their punchcards, and eventually they are able to send secret messages to one another using this method. Class concludes with a discussion on the importance of protecting our information and how encryption is one way we can accomplish this.",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-1-lessons-1-8/36196) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "As students have been encoding and decoding with data, they have not been worried about the securing of the data that they are using even when that information has been highly personal or sensitive (such as addresses or phone numbers). In this lesson, they begin to think about how they can ensure that only the intended recipient can read the data that they send. The lesson is framed around the real-world issues of keeping medical history protected, allowing students to see how this issue extends to real-world scenarios and may be impacting their lives without them being aware of it.",
         "student_overview": "**Question of the Day: How can we keep data secret and protect it from misuse?**\n\nIn this lesson, you will explore different levels of security, look at the importance of privacy, and learn how to encrypt information!\n"
       },
@@ -217,7 +228,7 @@
     },
     {
       "key": "Create a Representation",
-      "name": "Create a Representation",
+      "name": "Project - Create a Representation",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -226,6 +237,7 @@
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this chapter.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can I represent complex information using binary systems?**\n\nIn this lesson students design a structure to represent their perfect day using the binary representation systems they've learned in this chapter. Students will first write a short description of their perfect day and then review with a partner to identify the key pieces of information they think a computer could capture. As a class students will decide how a punch card of bytes of information will be interpreted to represent those pieces of information. Students will then use the ASCII, binary number, and image formats they have learned to represent their perfect days. Students then trade punch cards and try to decode what the other student's perfect day is like. The lesson ends with a reflection.",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-create-a-representation-data-and-society-lesson-8/36214) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson forces students to grapple with some of the challenges of representing information to a computer. Computers are good at representing some kinds of information like numbers or characters, but this forces people to represent information in ways that might not always capture the full analog experience of an object or event. The project also serves as a cumulative project for the chapter, bringing together the different representation systems students have learned. As students move into the next chapter they'll look more closely at how information is used to make decisions once it's in a format that can be input to a computer.",
         "student_overview": "**Question of the Day: How can I represent complex information using binary systems?**\n\nIn this lesson, you will explore how to use ASCII, binary, and image formats to represent your perfect day!"
       },
@@ -237,7 +249,7 @@
     },
     {
       "key": "Problem Solving and Data",
-      "name": "Problem Solving and Data",
+      "name": "Problem Solving With Data",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -246,6 +258,7 @@
         "assessment_opportunities": "1. **Use the problem solving process to answer a question using data.**\r\n\r\n\tJournal Prompt: As students reflect on the problem solving process that they used, they should identify how they used each step in solving their problem.\r\n\r\n2. **Identify and collect relevant data to help solve a problem.**\r\n\r\n\tActivity Guide, page 1: In the \"Prepare\" section, relevant data should be identified and recorded.\r\n\r\n3. **Use data to draw conclusions.**\r\n\r\n\tActivity Guide, page 2: The reasons justifying the student's choice should be clearly related to the cited data.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we use data to solve problems in our community?**\r\n\r\nIn this lesson, students use the problem solving process from earlier in the course to solve a data problem. After reviewing the process, the class is presented with a decision: whether a city should build a library, pet shelter, or fire department. Students work in teams to collect information on the Internet to help them decide what should be built, then use this information to build an argument that will convince the city council of their choice. They then map what they have done to the problem solving process that they have been using throughout the course, comparing the general problem solving process to its specific application to data problems.",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "Students have spent the first half of the unit exploring how computers represent different types of information, or data.  In this lesson, they learn how data can be used to solve real word problems, revising the problem solving process through the lens of data analysis.",
         "student_overview": "**Question of the Day: How can we use data to solve problems in our community?**\n\nIn this lesson, you will decide what a city most needs to spend resources on as a way to see how to use data to solve problems."
       },
@@ -266,6 +279,7 @@
         "assessment_opportunities": "1. **Identify and remove irrelevant data from a data set.**\r\n\r\n\tAs students clean their data in the digital activity, circulate and ask them about the choices that they are making.  You may also use the discussion afterwards as a time for them to explain what data they identified as irrelevant.\r\n\r\n2. **Create a bar chart based on a set of data.**\r\n\r\n\tActivity Guide: The bar chart should be filled in.  Answers may vary slightly, but should overall be approximately the same as in the exemplar.\r\n\r\n3. **Explain why a set of data must be cleaned before a computer can use it.**\r\n\r\n\tActivity Guide: Students should identify data that needs to be cleaned and explain why it is problematic in its raw form.  You can also use the discussion afterwards to prompt students to give a more explicit explanation of why it is necessary.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: how can we make it easier for computers to process data?**\r\n\r\nIn this lesson, students go further into the collection and interpretation of data, including cleaning and visualizing data. Students first look at how presenting data in different ways can help people to understand it better, and they then create visualizations of their own data. Using the results of a preferred pizza topping survey, students must decide what to do with data that does not easily fit into the visualization scheme that they have chosen. Finally, students discuss which parts of this process can be automated by a computer and which need a human to make decisions.",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson demonstrates that raw data must be interpreted in some way to help people use it to make decisions. Students engage in both visualization and cleaning of data, and they see how data can be misinterpreted if it is not cleaned properly. Students also see how data must be structured in particular ways to be used by a computer.",
         "student_overview": "**Question of the Day: how can we make it easier for computers to process data?**\n\nIn this lesson, you will learn how to present data in different ways that can help people understand the data better as well as which parts of the process can be done by a computer and which parts need a human. "
       },
@@ -286,6 +300,7 @@
         "assessment_opportunities": "1. **Visually organize data to highlight relationships and support a claim.**\r\n\r\n\tActivity Guide: The charts on the left side of the page should be filled out to reflect the given data.  (See exemplar)\r\n\r\n2. **Use cross tabulation to find patterns and relationships in data**\r\n\r\n\tActivity Guide: The relationships on the right side should demonstrate accurate analysis of the frequency table. (See exemplar)",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can patterns in data help us make decisions?**\n\nStudents begin the lesson by looking at a cake preference survey that allows respondents to specify both a cake and an icing flavor. They discuss how knowing the relationship between cake and icing preference helps them better decide which combination to recommend. They are then introduced to cross tabulation, which allows them to graph relationships to different preferences. They use this technique to find relationships in a preference survey, then brainstorm the different types of problems that this process could help solve.\n",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "In the previous lesson, students used data visualization to help them make decisions using a single data source (toppings on a pizza). In this lesson, they learn how to find relationships between variables using cross tabulation in the responses to different survey questions. Determining how answer choices relate to each other will allow them to make predictions about users based on previous responses. In the final project, they will use this same type of analysis to help them to design an algorithm for their recommendation generator.",
         "student_overview": "**Question of the Day: How can patterns in data help us make decisions?**\n\nIn this lesson, you will learn about cross tabulation which will allow you to graph relationships between various pieces of data. "
       },
@@ -306,7 +321,7 @@
         "assessment_opportunities": "1. **Use tables and visualizations summarizing data to support a decision**\r\n\r\n\tActivity Guide: The decision recorded on each page should be logically connected to the given data.  You may also use the discussion to have students further explain or justify their decisions.\r\n\r\n2. **Identify additional data that could be collected to improve a decision**\r\n\r\n\tActivity Guide: The extra data should be relevant to the given problem.  The final discussion can also be used for insight into how students might use the data to improve their decisions.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day - how can patterns in data help make a decision?**\r\n\r\nIn this lesson students get practice making decisions with data based on problems designed to be familiar to middle school students. Students work in groups discussing how they would use the data presented to make a decision before the class discusses their final choices. Not all questions have right answers and in some cases students can and should decide that they should collect more data. The lesson concludes with a discussion of how different people could draw different conclusions from the same data, or how collecting different data might have affected the decisions they made.\r\n",
-        "preparation": "* Print copies of the activity guide\r\n* Print copies of the Problem Solving Process with Data - one per group",
+        "preparation": "* Print copies of the activity guide\n* Print copies of the Problem Solving Process with Data - one per group\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "Students begin exploring the data problem solving process, making decisions with data that has already been collected and interpreted. Students likely do not come into this course with a lot of experience making decisions based on data in this way. This lesson intends to contextualize this step of the process inside of decisions that may be familiar to their daily lives.\r\n\r\nMaking decisions with data is not a formulaic process. Different people might draw different conclusions with the same data. It's important that students ground their decisions in the data collected, but there's usually not a \"right answer\". This lesson is an opportunity to introduce the nuances of making decisions in a controlled and shared context before students go off to start collecting more information of their own.\r\n",
         "student_overview": "**Question of the Day - how can patterns in data help make a decision?**\n\nIn this lesson, you will get a chance to practice the data problem-solving process you learned about in the previous lesson. "
       },
@@ -327,6 +342,7 @@
         "assessment_opportunities": "1. **Design and implement an algorithm for making decisions using data as inputs**\r\n\r\n\tActivity Guide: The points assigned to each vacation spot on the first page are consistent with how the algorithm is implemented on the second page.\r\n\r\n2. **Explain the benefits and drawbacks of using computers for automated decision making**\r\n\r\n\tWrap Up: Students should identify multiple advantages and disadvantages to automated decision making.\r\n\r\n3. **Interpret collected data to identify patterns**\r\n\r\n\tActivity Guide, page 1: The points assigned to each vacation spot should reasonably reflect the given data.  (see exemplar)",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can computers help us make decisions about data?**\r\n\r\nIn this lesson students look at a simple example of how a computer could be used to complete the decision making step of the data problem solving process. Students are given the task of creating an algorithm that could suggest a vacation spot. Students then create rules that a computer could use to make this decision automatically. Students share their rules and what choices their rules would make with the class data. They then use their rules on data from their classmates to test whether their rules would make the same decision that a person would. The lesson concludes with a discussion about the benefits and drawbacks of using computers to automate the data problem solving process.\r\n",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson demonstrates to students that the last step in the data problem solving process, making a decision, is something that a computer can do automatically if it's given an algorithm. It builds off the previous lesson which demonstrates the importance of designing the way you collect data in order for it to be usable for interpretation. This is especially true for computers which are much better suited for the multiple choice style data they will see in this lesson.",
         "student_overview": "**Question of the Day: How can computers help us make decisions about data?**\n\nIn this lesson, you will examine how a computer could be used to complete the decision-making step of the data problem-solving process."
       },
@@ -347,7 +363,7 @@
         "assessment_opportunities": "1. **Give examples of how data is collected from sensors and tracking user behavior.**\r\n\r\n\tActivity Guide, page 2: There should be multiple examples of tracking user behavior and sensor data in the second and third columns of the chart.\r\n\r\n2. **Determine data that would be helpful in solving a problem, and how that data could be collected.**\r\n\r\n\tActivity Guide: On each page, there should be reasonable descriptions of relevant data and how it could be collected.  These do not need to be the same as the data actually collected by the companies, but should be relevant to the given problem and possible to collect.\r\n\r\n3. **Distinguish between data that users intentionally and unintentionally produce.**\r\n\r\n\tActivity Guide, page 2: The first and second columns should give multiple examples of data that has been actively and passively collected.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How is our data collected and why is it useful?**\r\n\r\nIn this lesson, students look at how data is collected and used by organizations to solve problems in the real world. Students are presented with three scenarios that could be solved using data and brainstorm the types of data they would need and how they could collect the data. Each problem is designed to reflect a real-world service that exists. After brainstorming, students watch a video about a real-world service and record notes about what data is collected by the real-world service and how it is used. At the end of the lesson, students record whether data was provided actively by a user, was recorded passively, or is collected by sensors.\r\n",
-        "preparation": "* Print copies of the activity guide\r\n* Prepare projector if you will show videos to the whole class ",
+        "preparation": "* Print copies of the activity guide\n* Prepare projector if you will show videos to the whole class \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "In this lesson students see three examples of how the data problem solving process is used to solve real-world problems. This lesson expands the types of problems students think of as data problems and helps them to relate what they know about data to their real world experiences with common Internet services. The examples also provide an opportunity to reflect on the fact that in their own lives they are intentionally and unintentionally producing data that companies collect and use.",
         "student_overview": "**Question of the Day: How is our data collected and why is it useful?**\n\nIn this lesson, you will get a look at how data is collected and used by organizations to solve real problems in the real world. \n"
       },
@@ -367,7 +383,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can machines \"learn\"?**\r\n\r\nIn this lesson, students are introduced to the concepts of Artificial Intelligence and Machine Learning using the AI for Oceans widget. First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.",
-        "preparation": "* Review and complete the online tutorial yourself. If you are not going to use AI for Oceans, explore the other options listed below. ",
+        "preparation": "* Review and complete the online tutorial yourself. If you are not going to use AI for Oceans, explore the other options listed below. \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-2-lessons-9-16/36197) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "In previous lessons, students have seen how we can use data to make decisions. We've also seen that data can be collected about us constantly, leading to a larger amount of data to analyze - more than a human can handle! This tutorial is designed to quickly introduce students to machine learning, a type of artificial intelligence that can be used to make decisions about large amounts of data. Students will explore how training data is used to enable a machine learning model to classify new data. ",
         "student_overview": "**Question of the Day: How can machines \"learn\"?**\n\nIn this lesson, you get to work with Artificial Intelligence and learn about Machine Learning. "
       },
@@ -388,7 +404,7 @@
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this unit. You may also choose to assign the post-project test through Code Studio.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can I use data to make my own recommendations?**\n\nTo conclude this unit, students design a recommendation engine based on data that they collect and analyze from their classmates. After looking at an example of a recommendation app, students follow a project guide to complete this multi-day activity. In the first several steps, students choose what choice they want to help the user to make, what data they need to give the recommendation, create a survey, and collect information about their classmates' choices. They then interpret the data and use what they have learned to create the recommendation algorithm. Last, they use their algorithms to make recommendations to a few classmates. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.",
-        "preparation": "* Print copies of the project guide\r\n* Print copies of the rubric\r\n* Print copies of the peer review guide",
+        "preparation": "* Print copies of the project guide\n* Print copies of the rubric\n* Print copies of the peer review guide\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-make-a-recommendation-data-and-society-lesson-16/36215) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This project serves as an assessment for the second chapter of the unit. Students should demonstrate that they can apply the data problem-solving process to a problem or domain that they are interested in. Students complete many of the same activities but linked together in one comprehensive project. For example, students have previously used cross-tabulation to find relationships between preferences and have created recommendation algorithms, but in this project, they will use the relationships that they find in the data to create their algorithms. The last step in the activity is intentionally vague on how students will present their work so that you may choose the method that makes the most sense for your classroom.",
         "student_overview": "**Question of the Day: How can I use data to make my own recommendations?**\n\nIn this lesson, you will design a recommendation engine based on data that you collect and analyze from your classmates. "
       },
@@ -4655,7 +4671,7 @@
       "position": 1,
       "properties": {
         "description": "Send students to Code Studio to complete their reflection on their attitudes toward computer science. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
-        "progression_name": "Reflection"
+        "progression_name": "End-Of-Unit Survey"
       },
       "seeding_key": {
         "activity_section.key": "1892c7ae-6927-42df-a1ee-d590267476da",
@@ -4709,6 +4725,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation_2022"
+        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -4731,6 +4750,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation 2_2022"
+        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -4753,6 +4775,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation 3_2022"
+        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -4775,6 +4800,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation 4_2022"
+        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -4797,6 +4825,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation 5_2022"
+        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -4819,6 +4850,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 binary widget_2022"
+        ],
         "progression": "Binary Number Widget"
       },
       "bonus": false,
@@ -4841,6 +4875,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 binary video_2022"
+        ],
         "progression": "Binary and Data"
       },
       "bonus": false,
@@ -4863,6 +4900,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 binary 8 bits_2022"
+        ],
         "progression": "8-Bit Binary Number Widget"
       },
       "bonus": false,
@@ -4885,6 +4925,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U5Ch1_2022"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4907,6 +4950,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Pizza_2022"
+        ],
         "progression": "Pizza Party Data"
       },
       "bonus": false,
@@ -4929,6 +4975,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Netflix Data Video_2022"
+        ],
         "progression": "Video: Netflix and Data"
       },
       "bonus": false,
@@ -4951,6 +5000,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Waze Data Video_2022"
+        ],
         "progression": "Video: Waze and Data"
       },
       "bonus": false,
@@ -4973,6 +5025,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Amazon Data Video_2022"
+        ],
         "progression": "Video: Amazon and Data"
       },
       "bonus": false,
@@ -4995,6 +5050,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Video_Machine_Learning_2022"
+        ],
         "progression": "Video: What is Machine Learning?"
       },
       "bonus": false,
@@ -5017,6 +5075,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_FishVTrash_2022"
+        ],
         "progression": "AI for Oceans: Fish vs Not Fish"
       },
       "bonus": false,
@@ -5039,6 +5100,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_CreaturesVTrashDemo_2022"
+        ],
         "progression": "AI for Oceans: Fish vs Not Fish"
       },
       "bonus": false,
@@ -5061,6 +5125,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_CreaturesVTrash_2022"
+        ],
         "progression": "AI for Oceans: Fish vs Not Fish"
       },
       "bonus": false,
@@ -5083,6 +5150,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Video_Training_Data_2022"
+        ],
         "progression": "Video: Training Data and Bias"
       },
       "bonus": false,
@@ -5105,6 +5175,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Short_2022"
+        ],
         "progression": "AI for Oceans: Types of Fish"
       },
       "bonus": false,
@@ -5127,6 +5200,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Long_2022"
+        ],
         "progression": "AI for Oceans: Types of Fish"
       },
       "bonus": false,
@@ -5149,6 +5225,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Video_Societal_Implications_2022"
+        ],
         "progression": "Video: Impact on Society"
       },
       "bonus": false,
@@ -5171,6 +5250,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd u5 recommender sample_2022"
+        ],
         "progression": "Sample App"
       },
       "bonus": false,
@@ -5193,12 +5275,15 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Reflection"
+        "level_keys": [
+          "Student End of Unit Survey_csd5-2022"
+        ],
+        "progression": "End-Of-Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csd-pulse-check-survey-1-levelgroup U5Ch2_2022"
+          "Student End of Unit Survey_csd5-2022"
         ],
         "lesson.key": "Project - Make a Recommendation",
         "lesson_group.key": "csd5_2",
@@ -5206,7 +5291,7 @@
         "activity_section.key": "1892c7ae-6927-42df-a1ee-d590267476da"
       },
       "level_keys": [
-        "csd-pulse-check-survey-1-levelgroup U5Ch2_2022"
+        "Student End of Unit Survey_csd5-2022"
       ]
     },
     {
@@ -5215,6 +5300,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U5 test_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5236,6 +5324,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-post-survey-markdown-with-link-to-survey_2022"
+        ],
         "progression": "Post-Course Survey Instructions"
       },
       "bonus": false,
@@ -5520,9 +5611,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csd-pulse-check-survey-1-levelgroup U5Ch2_2022",
+        "level.key": "Student End of Unit Survey_csd5-2022",
         "script_level.level_keys": [
-          "csd-pulse-check-survey-1-levelgroup U5Ch2_2022"
+          "Student End of Unit Survey_csd5-2022"
         ],
         "lesson.key": "Project - Make a Recommendation",
         "lesson_group.key": "csd5_2",
@@ -5571,7 +5662,7 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/csd5-2021/resources",
+      "url": "/s/csd5-2022/resources",
       "key": "all_resources_3",
       "properties": {
         "is_rollup": true
@@ -5582,7 +5673,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/csd5-2021/standards",
+      "url": "/s/csd5-2022/standards",
       "key": "all_standards_3",
       "properties": {
         "is_rollup": true
@@ -5593,7 +5684,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/csd5-2021/vocab",
+      "url": "/s/csd5-2022/vocab",
       "key": "all_vocabulary_3",
       "properties": {
         "is_rollup": true
@@ -5637,6 +5728,19 @@
       },
       "seeding_key": {
         "resource.key": "ascii"
+      }
+    },
+    {
+      "name": "ASCII and Binary Representation",
+      "url": "https://docs.google.com/presentation/d/1RkUjU8jpW0RvQnCvfTs3COAE_uNyNvOmEAtUJVeTZQ4/template/preview",
+      "key": "ascii_and_binary_representation",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1RkUjU8jpW0RvQnCvfTs3COAE_uNyNvOmEAtUJVeTZQ4/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "ascii_and_binary_representation"
       }
     },
     {
@@ -5729,6 +5833,19 @@
       }
     },
     {
+      "name": "Automating Data Decisions",
+      "url": "https://docs.google.com/presentation/d/18aJ0c9BIjs9nr1ydoQJ_cZyhNCjYAWC39G0EqhWNKMg/template/preview",
+      "key": "automating_data_decisions_3",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/18aJ0c9BIjs9nr1ydoQJ_cZyhNCjYAWC39G0EqhWNKMg/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "automating_data_decisions_3"
+      }
+    },
+    {
       "name": "Binary and Data",
       "url": "https://www.youtube.com/watch?v=USCBCmwMCDA",
       "key": "binary_and_data",
@@ -5739,6 +5856,19 @@
       },
       "seeding_key": {
         "resource.key": "binary_and_data"
+      }
+    },
+    {
+      "name": "Combining Representations",
+      "url": "https://docs.google.com/presentation/d/1TzUBqU1Scd4cNDOoWL7H1cp4ZkwgdikDv0GDZ6BrCHU/template/preview",
+      "key": "combining_representations",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1TzUBqU1Scd4cNDOoWL7H1cp4ZkwgdikDv0GDZ6BrCHU/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "combining_representations"
       }
     },
     {
@@ -5804,6 +5934,19 @@
       }
     },
     {
+      "name": "Create a Representation",
+      "url": "https://docs.google.com/presentation/d/1aDAxxW4hJKJ5b00hchThqKTnGCh2-G6WMI5lwwH_cVg/template/preview",
+      "key": "create_a_representation_3",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1aDAxxW4hJKJ5b00hchThqKTnGCh2-G6WMI5lwwH_cVg/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "create_a_representation_3"
+      }
+    },
+    {
       "name": "Create a Representation Marked Rubrics",
       "url": "https://docs.google.com/document/d/1ln_KKQGsghLvPZv2dtM2fKrrXk8LDVYKQ7ap_hWR0B8/view",
       "key": "create_a_representation_marked_rubrics",
@@ -5817,11 +5960,9 @@
     },
     {
       "name": "CSD Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview",
+      "url": "https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview",
       "key": "csd_curriculum_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csd_curriculum_guide"
@@ -5839,26 +5980,25 @@
     },
     {
       "name": "CSD Implementation Guide",
-      "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
+      "url": "https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview",
       "key": "csd_implementation_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csd_implementation_guide"
       }
     },
     {
-      "name": "CSD Unit 5 - Data & Society",
-      "url": "https://docs.google.com/presentation/d/1qAf-Nt78JMDtvqh837cyP8dtudTv5o2AvAsWiUH2YJs/copy",
-      "key": "csd_unit_5_-_data_society",
+      "name": "Data and Machine Learning",
+      "url": "https://docs.google.com/presentation/d/14lUkQ6joXUgyRT2iw4P_KE3v1bscdWQObZcjmcxugpo/template/preview",
+      "key": "data_and_machine_learning",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/14lUkQ6joXUgyRT2iw4P_KE3v1bscdWQObZcjmcxugpo/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "csd_unit_5_-_data_society"
+        "resource.key": "data_and_machine_learning"
       }
     },
     {
@@ -5925,6 +6065,19 @@
       }
     },
     {
+      "name": "Interpreting Data",
+      "url": "https://docs.google.com/presentation/d/1v7F4D-nm_apBEDkN6yFWW7xgPu2wmknE_mndqtYhRQQ/template/preview",
+      "key": "interpreting_data_3",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1v7F4D-nm_apBEDkN6yFWW7xgPu2wmknE_mndqtYhRQQ/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "interpreting_data_3"
+      }
+    },
+    {
       "name": "Keeping Data Secret",
       "url": "https://docs.google.com/document/d/123IEPPRvhk18oW4hGQE1cRh8Ab5Kl-YvJHQ1udl6oks/edit",
       "key": "keeping_data_secret",
@@ -5934,6 +6087,19 @@
       },
       "seeding_key": {
         "resource.key": "keeping_data_secret"
+      }
+    },
+    {
+      "name": "Keeping Data Secret",
+      "url": "https://docs.google.com/presentation/d/1jlUXZObY3Wn7zdPxoKK67CTMZx1XIA1LE6KrRH3dRog/template/preview",
+      "key": "keeping_data_secret_1",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1jlUXZObY3Wn7zdPxoKK67CTMZx1XIA1LE6KrRH3dRog/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "keeping_data_secret_1"
       }
     },
     {
@@ -6013,6 +6179,19 @@
       }
     },
     {
+      "name": "Making Decisions with Data",
+      "url": "https://docs.google.com/presentation/d/1UdNc4EdI2ReMx_YTH8C8OmpIsW9JLLJmcL3c6IJenek/template/preview",
+      "key": "making_decisions_with_data_2",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1UdNc4EdI2ReMx_YTH8C8OmpIsW9JLLJmcL3c6IJenek/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "making_decisions_with_data_2"
+      }
+    },
+    {
       "name": "Meals Data",
       "url": "https://docs.google.com/document/d/1nVUNkvIqz4sQjXnr52eBd17Pmi61Ir2aTH6ulVnco9o/edit",
       "key": "meals_data",
@@ -6088,6 +6267,19 @@
       }
     },
     {
+      "name": "Patterns and Representation",
+      "url": "https://docs.google.com/presentation/d/1Ama35jAILCQPxztIx1hGd3WqQ3hqww6XF4sqy46P8Ek/template/preview",
+      "key": "patterns_and_representation",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1Ama35jAILCQPxztIx1hGd3WqQ3hqww6XF4sqy46P8Ek/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "patterns_and_representation"
+      }
+    },
+    {
       "name": "Peer Review Exemplar 1 ",
       "url": "https://docs.google.com/document/d/1D4W-8H1hbNDOk-KNNJ9UgfLjEyn8oNx9fuiKca57Twc/edit",
       "key": "peer_review_exemplar_1",
@@ -6124,6 +6316,19 @@
       }
     },
     {
+      "name": "Problem Solving With Data",
+      "url": "https://docs.google.com/presentation/d/1MqElc0dCl444dBaoyd0K07Pfh4vI66RXR8fGWbUKp2Y/template/preview",
+      "key": "problem_solving_and_data",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1MqElc0dCl444dBaoyd0K07Pfh4vI66RXR8fGWbUKp2Y/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_and_data"
+      }
+    },
+    {
       "name": "Problem Solving Process with Data",
       "url": "https://docs.google.com/document/d/1EW18C1XT1qLzXY8XnU1Ryo5QJE2tfmaGE08Y6C5zYo8/edit#heading=h.55w5y6g4xe8d",
       "key": "problem_solving_process_with_data",
@@ -6134,6 +6339,19 @@
       },
       "seeding_key": {
         "resource.key": "problem_solving_process_with_data"
+      }
+    },
+    {
+      "name": "Problem Solving with Big Data",
+      "url": "https://docs.google.com/presentation/d/1TcG6n5nGAlyOh2HdNGWQZIlotSrw0JnS5Wtn1woWJQ8/template/preview",
+      "key": "problem_solving_with_big_data",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1TcG6n5nGAlyOh2HdNGWQZIlotSrw0JnS5Wtn1woWJQ8/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_with_big_data"
       }
     },
     {
@@ -6159,6 +6377,19 @@
       },
       "seeding_key": {
         "resource.key": "problem_solving_with_data_1"
+      }
+    },
+    {
+      "name": "Project - Make a Recommendation",
+      "url": "https://docs.google.com/presentation/d/16-v5kY6RGcqBypNTCen96fIXdWJ-vXEcD7hd2cbjx9g/template/preview",
+      "key": "project_-_make_a_recommendation",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/16-v5kY6RGcqBypNTCen96fIXdWJ-vXEcD7hd2cbjx9g/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "project_-_make_a_recommendation"
       }
     },
     {
@@ -6196,6 +6427,32 @@
       },
       "seeding_key": {
         "resource.key": "representation_matters_1"
+      }
+    },
+    {
+      "name": "Representation Matters",
+      "url": "https://docs.google.com/presentation/d/1U3NpxfpC3QU7RlLSIu8nZ1Wt97s1Xu2eYs5LDcWPAEY/template/preview",
+      "key": "representation_matters_2",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1U3NpxfpC3QU7RlLSIu8nZ1Wt97s1Xu2eYs5LDcWPAEY/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "representation_matters_2"
+      }
+    },
+    {
+      "name": "Representing Images",
+      "url": "https://docs.google.com/presentation/d/10kCN7bCRPQg7iCLaiBR2AuozysxS7mVBaNdNf_nwgEc/template/preview",
+      "key": "representing_images",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/10kCN7bCRPQg7iCLaiBR2AuozysxS7mVBaNdNf_nwgEc/export?format=pdf",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "representing_images"
       }
     },
     {
@@ -6245,6 +6502,19 @@
       },
       "seeding_key": {
         "resource.key": "representing_numbers"
+      }
+    },
+    {
+      "name": "Representing Numbers",
+      "url": "https://docs.google.com/presentation/d/1FSXepS9tbm9aukEjRu7xg7BE7QHzohKq_cqNUjQtATE/template/preview",
+      "key": "representing_numbers_1",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1FSXepS9tbm9aukEjRu7xg7BE7QHzohKq_cqNUjQtATE/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "representing_numbers_1"
       }
     },
     {
@@ -6299,6 +6569,19 @@
       }
     },
     {
+      "name": "Structuring Data",
+      "url": "https://docs.google.com/presentation/d/1DTCT62Z2-r7EEuLCSFmX4ZMla5iP5Ckk4rzeO74iJ1c/template/preview",
+      "key": "structuring_data_1",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1DTCT62Z2-r7EEuLCSFmX4ZMla5iP5Ckk4rzeO74iJ1c/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "structuring_data_1"
+      }
+    },
+    {
       "name": "Structuring Data 2021",
       "url": "https://docs.google.com/document/d/1edTTFHTHp4uxIi1CrHvvfEfFCZacCB5BXNfL1uaBf-E/view",
       "key": "structuring_data_2021",
@@ -6320,18 +6603,6 @@
       },
       "seeding_key": {
         "resource.key": "teacher_forum"
-      }
-    },
-    {
-      "name": "Unit 5 Data & Society",
-      "url": "https://docs.google.com/presentation/u/1/d/1wmd-2sdaEdePFms8frZUQm1sRuJSLvH40gqXv7-KLfY/copy",
-      "key": "unit_5_data_society",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "unit_5_data_society"
       }
     },
     {
@@ -6397,6 +6668,12 @@
     {
       "seeding_key": {
         "lesson.key": "ASCII and Binary Representation",
+        "resource.key": "ascii_and_binary_representation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "ASCII and Binary Representation",
         "resource.key": "ascii_challenges"
       }
     },
@@ -6410,12 +6687,6 @@
       "seeding_key": {
         "lesson.key": "ASCII and Binary Representation",
         "resource.key": "ascii_text"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "ASCII and Binary Representation",
-        "resource.key": "csd_unit_5_-_data_society"
       }
     },
     {
@@ -6439,7 +6710,7 @@
     {
       "seeding_key": {
         "lesson.key": "Automating Data Decisions",
-        "resource.key": "csd_unit_5_-_data_society"
+        "resource.key": "automating_data_decisions_3"
       }
     },
     {
@@ -6457,7 +6728,7 @@
     {
       "seeding_key": {
         "lesson.key": "Combining Representations",
-        "resource.key": "csd_unit_5_-_data_society"
+        "resource.key": "combining_representations"
       }
     },
     {
@@ -6499,19 +6770,19 @@
     {
       "seeding_key": {
         "lesson.key": "Create a Representation",
-        "resource.key": "create_a_representation_marked_rubrics"
+        "resource.key": "create_a_representation_3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Create a Representation",
-        "resource.key": "unit_5_data_society"
+        "resource.key": "create_a_representation_marked_rubrics"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Data and Machine Learning",
-        "resource.key": "csd_unit_5_-_data_society"
+        "resource.key": "data_and_machine_learning"
       }
     },
     {
@@ -6535,12 +6806,6 @@
     {
       "seeding_key": {
         "lesson.key": "Interpreting Data",
-        "resource.key": "csd_unit_5_-_data_society"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Interpreting Data",
         "resource.key": "interpreting_data"
       }
     },
@@ -6558,8 +6823,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Interpreting Data",
+        "resource.key": "interpreting_data_3"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Keeping Data Secret",
         "resource.key": "keeping_data_secret"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Keeping Data Secret",
+        "resource.key": "keeping_data_secret_1"
       }
     },
     {
@@ -6582,18 +6859,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Keeping Data Secret",
-        "resource.key": "unit_5_data_society"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Making Decisions with Data",
-        "resource.key": "csd_unit_5_-_data_society"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Making Decisions with Data",
         "resource.key": "making_decisions_with_data"
       }
@@ -6602,6 +6867,12 @@
       "seeding_key": {
         "lesson.key": "Making Decisions with Data",
         "resource.key": "making_decisions_with_data_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Decisions with Data",
+        "resource.key": "making_decisions_with_data_2"
       }
     },
     {
@@ -6619,7 +6890,7 @@
     {
       "seeding_key": {
         "lesson.key": "Patterns and Representation",
-        "resource.key": "csd_unit_5_-_data_society"
+        "resource.key": "patterns_and_representation"
       }
     },
     {
@@ -6643,7 +6914,7 @@
     {
       "seeding_key": {
         "lesson.key": "Problem Solving and Data",
-        "resource.key": "csd_unit_5_-_data_society"
+        "resource.key": "problem_solving_and_data"
       }
     },
     {
@@ -6667,12 +6938,6 @@
     {
       "seeding_key": {
         "lesson.key": "Problem Solving with Big Data",
-        "resource.key": "csd_unit_5_-_data_society"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Problem Solving with Big Data",
         "resource.key": "data_in_the_real_world"
       }
     },
@@ -6686,6 +6951,12 @@
       "seeding_key": {
         "lesson.key": "Problem Solving with Big Data",
         "resource.key": "netflix_and_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Problem Solving with Big Data",
+        "resource.key": "problem_solving_with_big_data"
       }
     },
     {
@@ -6739,6 +7010,12 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Make a Recommendation",
+        "resource.key": "project_-_make_a_recommendation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Make a Recommendation",
         "resource.key": "project_guide_exemplar_1"
       }
     },
@@ -6746,18 +7023,6 @@
       "seeding_key": {
         "lesson.key": "Project - Make a Recommendation",
         "resource.key": "sample_marked_rubrics_3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Make a Recommendation",
-        "resource.key": "unit_5_data_society"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Representation Matters",
-        "resource.key": "csd_unit_5_-_data_society"
       }
     },
     {
@@ -6780,20 +7045,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Representation Matters",
+        "resource.key": "representation_matters_2"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Representing Images",
-        "resource.key": "csd_unit_5_-_data_society"
+        "resource.key": "representing_images"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Representing Numbers",
         "resource.key": "binary_and_data"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Representing Numbers",
-        "resource.key": "csd_unit_5_-_data_society"
       }
     },
     {
@@ -6817,19 +7082,25 @@
     {
       "seeding_key": {
         "lesson.key": "Representing Numbers",
+        "resource.key": "representing_numbers_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Representing Numbers",
         "resource.key": "representing_numbers_2021"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Structuring Data",
-        "resource.key": "csd_unit_5_-_data_society"
+        "resource.key": "structuring_data"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Structuring Data",
-        "resource.key": "structuring_data"
+        "resource.key": "structuring_data_1"
       }
     },
     {

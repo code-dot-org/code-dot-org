@@ -10,9 +10,10 @@
     "csp7-2022",
     "csp8-2022",
     "csp9-2022",
-    "csp10-2022"
+    "csp10-2022",
+    "csp-post-survey-2022"
   ],
-  "published_state": "in_development",
+  "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
@@ -22,7 +23,76 @@
     "version_year": "2022"
   },
   "resources": [
-
+    {
+      "name": "All Resources",
+      "url": "/courses/csp-2022/resources",
+      "key": "all_resources_10",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_10"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/csp-2022/standards",
+      "key": "all_standards_10",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_10"
+      }
+    },
+    {
+      "name": "Course Vocabulary",
+      "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
+      "key": "course_vocabulary",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "course_vocabulary"
+      }
+    },
+    {
+      "name": "CSP Change Log",
+      "url": "https://docs.google.com/document/d/1a36tn-OzGAkzwrU2cqqNzVNoJSMBTG7O3mc2PdL121A/preview",
+      "key": "csp_change_log",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csp_change_log"
+      }
+    },
+    {
+      "name": "CSP Curriculum Guide",
+      "url": "https://docs.google.com/document/d/1s5w7_UnVIGHOdkqCtK2O78rQ7JJFAWlOeZkZNsCovOY/preview",
+      "key": "csp_curriculum_guide_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csp_curriculum_guide_1"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csp/curriculum/392",
+      "key": "teacher_forum",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
+    }
   ],
   "student_resources": [
 

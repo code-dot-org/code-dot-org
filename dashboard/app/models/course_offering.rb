@@ -115,6 +115,17 @@ class CourseOffering < ApplicationRecord
     assignable_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
+  def self.single_unit_course_offerings_containing_units_info(unit_ids)
+    single_unit_course_offerings_containing_units(unit_ids).map {|co| co.summarize_for_unit_selector(unit_ids)}
+  end
+
+  def summarize_for_unit_selector(unit_ids)
+    {
+      display_name: any_versions_launched? ? localized_display_name : localized_display_name + ' *',
+      units: course_versions.map(&:units).flatten.select {|u| u.included_in_units?(unit_ids)}.map(&:summarize_for_unit_selector).sort_by {|u| -1 * u[:version_year].to_i}
+    }
+  end
+
   def can_be_assigned?(user)
     return false unless assignable?
     return false unless can_be_instructor?(user)
@@ -201,5 +212,17 @@ class CourseOffering < ApplicationRecord
 
   def self.all_course_offerings
     @@all_course_offerings ||= CourseOffering.with_versions.all
+  end
+
+  def units_included_in_any_version?(unit_ids)
+    course_versions.any? {|cv| cv.included_in_units?(unit_ids)}
+  end
+
+  def any_version_is_unit?
+    course_versions.any? {|cv| cv.content_root_type == 'Script'}
+  end
+
+  def self.single_unit_course_offerings_containing_units(unit_ids)
+    CourseOffering.all_course_offerings.select {|co| co.units_included_in_any_version?(unit_ids) && co.any_version_is_unit?}
   end
 end

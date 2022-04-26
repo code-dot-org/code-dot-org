@@ -1,0 +1,42 @@
+name 'csp-pre-survey-levelgroup_21_222022_csa-2022'
+title 'CS Principles Student Pre-Course Survey'
+submittable 'true'
+anonymous 'true'
+
+page
+text 'csp-pre-survey-2017 preamble 12022_csa-2022'
+level 'csp-pre-survey-2017-q32022_csa-2022'
+level 'csp-pre-survey-2017-q42022_csa-2022'
+level 'csp-pre-survey-2017-q92022_csa-2022'
+
+page
+text 'csp-pre-survey-2017 preamble 2 cs in general2022_csa-2022'
+level 'csp-pre-survey-2017-q102022_csa-2022'
+level 'interested-in-learning-cs2022_csa-2022'
+level 'csp-pre-survey-2017-q162022_csa-2022'
+level 'confident-ability-to-learn2022_csa-2022'
+level 'csp-pre-survey-2017-q132022_csa-2022'
+level 'csp-pre-survey-2017-q172022_csa-2022'
+level 'naturally-better-at-cs2022_csa-2022'
+
+page
+text 'csp-pre-survey-2017 preamble 4 the future2022_csa-2022'
+level 'csp-pre-survey-2017-q302022_csa-2022'
+level 'csp-pre-survey-2017-q312022_csa-2022'
+text 'csp-pre-survey-2017 preamble 5 demographics2022_csa-2022'
+level 'ever-learned-cs2022_csa-2022'
+level 'ever-learned-cs-outside-school2022_csa-2022'
+
+page
+text 'csp-pre-survey-2017 preamble 3 this class2022_csa-2022'
+level 'csp-pre-survey-2017-q192022_csa-2022'
+level 'csp-pre-survey-2017-q202022_csa-2022'
+level 'csp-pre-survey-2017-q222022_csa-2022'
+level 'will-be-myself-in-cs2022_csa-2022'
+level 'worried-seen-incapable2022_csa-2022'
+level 'reasons-took-course-csp2022_csa-2022'
+level 'family_encourage2022_csa-2022'
+level 'teacher_encourage2022_csa-2022'
+level 'counselor_encourage2022_csa-2022'
+level 'someone_else_encourage2022_csa-2022'
+level 'most-excited-for-in-this-class_csa-2022'
