@@ -13,7 +13,8 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     JavalabFilesHelper.stubs(:get_project_files).returns({})
     JavalabFilesHelper.stubs(:get_project_files_with_override_sources).returns({})
     JavalabFilesHelper.stubs(:get_project_files_with_override_validation).returns({})
-    JavalabFilesHelper.stubs(:upload_project_files).returns(true)
+    put_response = Net::HTTPResponse.new(nil, '200', nil)
+    JavalabFilesHelper.stubs(:upload_project_files).returns(put_response)
   end
 
   test_user_gets_response_for :get_access_token,
@@ -156,7 +157,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
   end
 
   test 'returns error if upload fails' do
-    JavalabFilesHelper.stubs(:upload_project_files).returns(false)
+    JavalabFilesHelper.stubs(:upload_project_files).returns(nil)
     levelbuilder = create :levelbuilder
     sign_in(levelbuilder)
     get :get_access_token, params: {channelId: @fake_channel_id, levelId: 261, executionType: 'RUN', miniAppType: 'console'}
