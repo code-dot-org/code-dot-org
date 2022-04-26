@@ -3,7 +3,7 @@
   "name": "createButton()",
   "category": "Maker",
   "category_key": "maker",
-  "content": "A command to create a new button object that can be programmed in the same way as the blocks in the Circuit drawer. The var myButton = createButton() command creates a new button object named myButton that you can use in `onBoardEvent()` blocks, just like `buttonL` and `buttonR`. Remember to pass in a pin parameter so the board knows where the button is connected.",
+  "content": "A command to create a new button object that can be programmed in the same way as the blocks in the Circuit drawer. The var myButton = createButton() command creates a new button object named myButton that you can use in [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) blocks, just like `buttonL` and `buttonR`. Remember to pass in a pin parameter so the board knows where the button is connected.",
   "examples": [
     {
       "name": "",
