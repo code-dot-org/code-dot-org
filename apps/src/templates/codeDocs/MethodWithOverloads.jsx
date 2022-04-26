@@ -7,9 +7,9 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 
-export function SingleMethod({method, programmingEnvironmentName, style}) {
+export function SingleMethod({method, programmingEnvironmentName}) {
   return (
-    <div id={`method-${method.key}`} style={style}>
+    <div id={`method-${method.key}`}>
       <h3>{method.name}</h3>
       {method.syntax && <EnhancedSafeMarkdown markdown={method.syntax} />}
       {method.content && <EnhancedSafeMarkdown markdown={method.content} />}
@@ -65,19 +65,11 @@ export function MethodOverloadSection({overloads, programmingEnvironmentName}) {
       </div>
       {isOpen && (
         <div style={styles.overloadBox}>
-          {overloads.map((overload, i) => (
+          {overloads.map(overload => (
             <SingleMethod
               key={overload.key}
               method={overload}
               programmingEnvironmentName={programmingEnvironmentName}
-              style={
-                i === overloads.length - 1
-                  ? {}
-                  : {
-                      borderBottom: `1px solid ${color.lighter_gray}`,
-                      paddingBottom: 5
-                    }
-              }
             />
           ))}
         </div>
@@ -116,8 +108,7 @@ const methodShape = PropTypes.shape({
 
 SingleMethod.propTypes = {
   method: methodShape.isRequired,
-  programmingEnvironmentName: PropTypes.string,
-  style: PropTypes.object
+  programmingEnvironmentName: PropTypes.string
 };
 
 MethodOverloadSection.propTypes = {
