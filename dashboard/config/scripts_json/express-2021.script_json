@@ -38,7 +38,7 @@
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2022-04-05 22:52:38 UTC",
+    "serialized_at": "2022-04-25 18:32:30 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -5132,7 +5132,7 @@
       "key": "5defab8f-984c-4baa-89a5-d0a37e70bf26",
       "position": 1,
       "properties": {
-        "name": "Flor Loops with Artist",
+        "name": "For Loops with Artist",
         "progression_name": "Video: For Loops",
         "tips": [
           {
