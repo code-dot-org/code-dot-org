@@ -1087,6 +1087,21 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal 'new-level-editors', new_level.editor_experiment
   end
 
+  test 'clone with suffix uses existing levels when level names match' do
+    existing_level = create :level, name: 'old level_2020'
+    old_level = create :level, name: 'old level'
+    new_level = old_level.clone_with_suffix('_2020')
+    assert_equal existing_level, new_level
+  end
+
+  test 'clone with suffix does not use exactly levels when allow_existing is false' do
+    existing_level = create :level, name: 'old level_2020'
+    old_level = create :level, name: 'old level'
+    new_level = old_level.clone_with_suffix('_2020', allow_existing: false)
+    refute_equal existing_level, new_level
+    assert_equal 'old level_copy1_2020', new_level.name
+  end
+
   test 'contained_level_names filters blank names before validation' do
     level = build :level
     create :level, name: 'real_name'
@@ -1230,5 +1245,26 @@ class LevelTest < ActiveSupport::TestCase
     level_with_contained = create :level, contained_level_names: [contained_level.name]
 
     assert_not level_with_contained.can_have_feedback_review_state?
+  end
+
+  test 'next_unused_name_for_copy finds next available level name' do
+    level = create :level, name: 'my-level'
+    assert_equal 'my-level_copy1_2020', level.next_unused_name_for_copy('_2020')
+
+    create :level, name: 'my-level_copy1_2020'
+    create :level, name: 'my-level_copy2_2020'
+    create :level, name: 'my-level_copy4_2020'
+    assert_equal 'my-level_copy3_2020', level.next_unused_name_for_copy('_2020')
+  end
+
+  test 'next_unused_name_for_copy returns name under the maximum length' do
+    long_name = 'abcdefghij123456789012345678901234567890123456789012345678901234567890'
+    assert_equal 70, long_name.length
+    level = create :level, name: long_name
+    next_name = level.next_unused_name_for_copy('_2020')
+
+    # the maximum is 70. allow a little extra room for longer numbers.
+    assert next_name.length <= 68
+    assert next_name.match /_copy1_2020$/
   end
 end

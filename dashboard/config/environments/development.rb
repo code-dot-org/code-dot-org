@@ -23,6 +23,7 @@ Dashboard::Application.configure do
   if config.respond_to?(:hosts)
     config.hosts << "localhost-studio.code.org"
     config.hosts << "localhost.code.org"
+    config.hosts << "localhost.hourofcode.com"
   end
 
   # Do not eager load code on boot.
