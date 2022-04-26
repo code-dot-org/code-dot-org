@@ -4,11 +4,13 @@ import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
 import {PaneButton} from '@cdo/apps/templates/PaneHeader';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import cookies from 'js-cookie';
+import {
+  muteCookieValue,
+  setMuteCookie,
+  removeMuteCookie
+} from '../../util/muteCookieHelpers';
 import {setMuteMusic, SignInState} from '@cdo/apps/templates/currentUserRedux';
 import UserPreferences from '../../lib/util/UserPreferences';
-
-const MUTE_MUSIC = 'mute_music';
 
 function BackgroundMusicMuteButton({
   className,
@@ -22,7 +24,7 @@ function BackgroundMusicMuteButton({
 }) {
   const initialMuteState = signedIn
     ? currentUserBackgroundMusicMuted
-    : !!cookies.get(MUTE_MUSIC);
+    : muteCookieValue();
 
   const [isBackgroundMusicMuted, setIsBackgroundMusicMuted] = useState(
     initialMuteState
@@ -48,11 +50,11 @@ function BackgroundMusicMuteButton({
     var muteLabel;
     if (updatedMuteValue) {
       muteBackgroundMusic();
-      cookies.set(MUTE_MUSIC, 'true', {expires: 30, path: '/'});
+      setMuteCookie();
       muteLabel = 'mute';
     } else {
       unmuteBackgroundMusic();
-      cookies.remove(MUTE_MUSIC, {path: '/'});
+      removeMuteCookie();
       muteLabel = 'unmute';
     }
 

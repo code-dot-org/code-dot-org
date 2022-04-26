@@ -55,7 +55,7 @@ import project from '../code-studio/initApp/project';
 import {blockAsXmlNode, cleanBlocks} from '../block_utils';
 import {parseElement} from '../xml';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
-import cookies from 'js-cookie';
+import {muteCookieWithLevel} from '../../util/muteCookieHelpers';
 import {
   showArrowButtons,
   dismissSwipeOverlay
@@ -2203,7 +2203,7 @@ Studio.init = function(config) {
     skin.assetUrl,
     levelTracks,
     undefined,
-    config.level.muteMusic || cookies.get('mute_music') === 'true'
+    muteCookieWithLevel(config.level)
   );
 
   config.muteBackgroundMusic = function() {

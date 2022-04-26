@@ -32,7 +32,7 @@ import {
 } from '@cdo/apps/templates/arrowDisplayRedux';
 import PlayerSelectionDialog from '@cdo/apps/craft/PlayerSelectionDialog';
 import reducers from '@cdo/apps/craft/redux';
-import cookies from 'js-cookie';
+import {muteCookieWithLevel} from '../../util/muteCookieHelpers';
 
 const MEDIA_URL = '/blockly/media/craft/';
 
@@ -174,7 +174,7 @@ export default class Craft {
       },
       levelTracks,
       levelTracks.length > 1 ? 7500 : null,
-      Craft.level.muteMusic || cookies.get('mute_music') === 'true'
+      muteCookieWithLevel(Craft.level)
     );
 
     config.muteBackgroundMusic = function() {
