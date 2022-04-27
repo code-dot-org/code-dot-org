@@ -100,6 +100,7 @@ let initialSaveComplete = false;
 let initialCaptureComplete = false;
 let thumbnailChanged = false;
 let thumbnailPngBlob = null;
+let loadResponseCode = null;
 
 /**
  * Current state of our sources API data
@@ -499,6 +500,10 @@ var projects = (module.exports = {
     const isEditOrViewPage = pageAction === 'edit' || pageAction === 'view';
 
     return hasEditPermissions && isEditOrViewPage;
+  },
+
+  notFound() {
+    return loadResponseCode >= 400 && loadResponseCode < 500;
   },
 
   __TestInterface: {
@@ -1687,18 +1692,7 @@ var projects = (module.exports = {
       // Load the project ID, if one exists
       return this.fetchChannel(pathInfo.channelId)
         .catch(err => {
-          if (err.message.includes('error: Not Found')) {
-            // Project not found. Redirect to the most recent project of this
-            // type, or a new project of this type if none exists.
-            const newPath = utils
-              .currentLocation()
-              .pathname.split('/')
-              .slice(PathPart.START, PathPart.APP + 1)
-              .join('/');
-            utils.navigateToHref(newPath);
-          }
-          // Reject even after navigation, to allow unit tests which stub
-          // navigateToHref to confirm that navigation has happened.
+          loadResponseCode = err.cause;
           return Promise.reject(err);
         })
         .then(this.fetchSource.bind(this))
