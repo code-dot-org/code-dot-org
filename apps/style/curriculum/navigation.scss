@@ -1,0 +1,47 @@
+@import 'color';
+@import 'font';
+
+.nav-bar {
+  margin-right: 5px;
+  min-width: 200px;
+  font-size: 14px;
+  font-family: $gotham-extra-bold;
+
+  .category {
+    padding-left: 10px;
+    width: 200px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    .title {
+      padding: 16px 0px;
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .nav-link {
+      background-color: $white;
+      padding: 8px;
+      border-bottom: 2px solid $lightest_gray;
+      display: none;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &.open .nav-link {
+      display: block;
+    }
+    .link {
+      color: $light_gray;
+    }
+    .active .link {
+      color: $light_teal;
+    }
+    .link:hover {
+      color: $lightish_teal;
+    }
+  }
+}

@@ -41,6 +41,22 @@ class JavabuilderSessionsController < ApplicationController
     upload_project_files_and_render(session_id, project_files, encoded_payload)
   end
 
+  # GET /javabuilder/access_token_with_override_validation
+  def get_access_token_with_override_validation
+    unless has_required_params?([:channelId, :overrideValidation])
+      return render status: :bad_request, json: {}
+    end
+    channel_id = params[:channelId]
+    override_validation = params[:overrideValidation]
+
+    session_id = SecureRandom.uuid
+    encoded_payload = get_encoded_payload({sid: session_id, channel_id: channel_id})
+
+    level_id = params[:levelId].to_i
+    project_files = JavalabFilesHelper.get_project_files_with_override_validation(channel_id, level_id, override_validation)
+    upload_project_files_and_render(session_id, project_files, encoded_payload)
+  end
+
   private
 
   def upload_project_files_and_render(session_id, project_files, encoded_payload)
@@ -52,9 +68,6 @@ class JavabuilderSessionsController < ApplicationController
 
   def get_encoded_payload(additional_payload)
     teacher_list = get_teacher_list.join(',')
-    project_version = params[:projectVersion]
-    # TODO: remove project_url after javabuilder is deployed with update to no longer need it
-    project_url = params[:projectUrl]
     level_id = params[:levelId]
     options = params[:options]
     execution_type = params[:executionType]
@@ -64,16 +77,14 @@ class JavabuilderSessionsController < ApplicationController
 
     # Set the IAT a little in the past to account for time drift between environments
     issued_at_time = (Time.now - 5.seconds).to_i
-    # expire token in 15 minutes
-    expiration_time = (Time.now + 15.minutes).to_i
+    # expire token in 1 minute
+    expiration_time = (Time.now + 1.minute).to_i
 
     payload = {
       iat: issued_at_time,
       iss: CDO.dashboard_hostname,
       exp: expiration_time,
       uid: current_user.id,
-      project_version: project_version,
-      project_url: project_url,
       level_id: level_id,
       execution_type: execution_type,
       mini_app_type: mini_app_type,
@@ -100,7 +111,7 @@ class JavabuilderSessionsController < ApplicationController
         teacher.has_pilot_experiment?(CSA_PILOT_FACILITATORS)
       teachers << teacher.id
     end
-    teachers
+    teachers.uniq
   end
 
   def log_token_creation(payload)
@@ -124,7 +135,7 @@ class JavabuilderSessionsController < ApplicationController
   end
 
   def has_required_params?(additional_params)
-    default_params = [:projectVersion, :projectUrl, :executionType, :miniAppType]
+    default_params = [:executionType, :miniAppType]
 
     begin
       params.require(default_params.concat(additional_params))

@@ -68,6 +68,7 @@ module Pd::Application
     # An application either has an "incomplete" or "unreviewed" state when created.
     # The applied_at field gets set when the status becomes 'unreviewed' for the first time
     before_save :set_applied_date, if: :status_changed?
+
     # After creation, an RP or admin can change the status to "accepted," which triggers update_accepted_data.
     before_save :update_accepted_date, if: :status_changed?
 
@@ -241,7 +242,7 @@ module Pd::Application
       answer
     end
 
-    def self.filtered_labels(course)
+    def self.filtered_labels(course, status = 'unreviewed')
       raise 'Abstract method must be overridden in inheriting class'
     end
 
@@ -267,7 +268,7 @@ module Pd::Application
             hash[field_name] = self.class.answer_with_additional_text hash, field_name, option, additional_text_field_name
             hash.delete additional_text_field_name
           end
-        end.slice(*(self.class.filtered_labels(course).keys + self.class.additional_labels).uniq)
+        end.slice(*(self.class.filtered_labels(course, status).keys + self.class.additional_labels).uniq)
       end
     end
 
@@ -338,9 +339,9 @@ module Pd::Application
     end
 
     # displays the iso8601 date (yyyy-mm-dd)
-    # [MEG] TODO: Update this method to use applied_at date
+    # The applied_at date is null if an application has been started, saved, and not submitted
     def date_applied
-      created_at.to_date.iso8601
+      applied_at&.to_date&.iso8601
     end
 
     # Convert responses cores to a hash of underscore_cased symbols

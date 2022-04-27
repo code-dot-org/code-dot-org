@@ -26,39 +26,13 @@
       "is_migrated": true,
       "project_sharing": true,
       "student_detail_progress_view": true,
-      "teacher_resources": [
-        [
-          "lessonPlans",
-          "https://curriculum.code.org/csp-18/unit5"
-        ],
-        [
-          "teacherForum",
-          "https://forum.code.org/c/csp5"
-        ],
-        [
-          "vocabulary",
-          "https://curriculum.code.org/csp-18/unit5/vocab/"
-        ],
-        [
-          "codeIntroduced",
-          "https://curriculum.code.org/csp-18/unit5/code/"
-        ],
-        [
-          "standardMappings",
-          "https://curriculum.code.org/csp-18/unit5/standards/"
-        ],
-        [
-          "professionalLearning",
-          "https://studio.code.org/s/csp5-support"
-        ]
-      ],
       "tts": true,
       "use_legacy_lesson_plans": true,
       "version_year": "2018"
     },
     "new_name": null,
     "family_name": "csp5",
-    "serialized_at": "2022-03-11 12:07:38 UTC",
+    "serialized_at": "2022-03-22 21:16:36 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -13297,13 +13271,113 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "Code Introduced",
+      "url": "https://curriculum.code.org/csp-18/unit5/code/",
+      "key": "code_introduced_1",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "code_introduced_1"
+      }
+    },
+    {
+      "name": "Lesson Plans",
+      "url": "https://curriculum.code.org/csp-18/unit5",
+      "key": "lesson_plans_6",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_plans_6"
+      }
+    },
+    {
+      "name": "Professional Learning",
+      "url": "https://studio.code.org/s/csp5-support",
+      "key": "professional_learning_4",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "professional_learning_4"
+      }
+    },
+    {
+      "name": "Standard Mappings",
+      "url": "https://curriculum.code.org/csp-18/unit5/standards/",
+      "key": "standard_mappings_6",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "standard_mappings_6"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csp5",
+      "key": "teacher_forum_5",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum_5"
+      }
+    },
+    {
+      "name": "Vocabulary",
+      "url": "https://curriculum.code.org/csp-18/unit5/vocab/",
+      "key": "vocabulary_4",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "vocabulary_4"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "code_introduced_1",
+        "script.name": "csp5-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "lesson_plans_6",
+        "script.name": "csp5-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "professional_learning_4",
+        "script.name": "csp5-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "standard_mappings_6",
+        "script.name": "csp5-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum_5",
+        "script.name": "csp5-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "vocabulary_4",
+        "script.name": "csp5-2018"
+      }
+    }
   ],
   "scripts_student_resources": [
 

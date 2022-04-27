@@ -24,22 +24,26 @@ class ChannelToken < ApplicationRecord
   belongs_to :user
   belongs_to :level
 
+  # The projects table used to be named storage_apps. This column has not been renamed
+  # to reflect the new table name, so an alias is used to clarify which table this ID maps to.
+  alias_attribute :project_id, :storage_app_id
+
   def channel
-    storage_encrypt_channel_id(storage_id, storage_app_id)
+    storage_encrypt_channel_id(storage_id, project_id)
   end
 
   # @param [Level] level The level associated with the channel token request.
   # @param [String] ip The IP address making the channel token request.
-  # @param [String] user_storage_id The ID of the storage app associated with the channel token request.
+  # @param [String] user_storage_id The ID of the project associated with the channel token request.
   # @param [Integer] script_id The ID of the script associated with the channel token.
   # @param [Hash] data
   # @return [ChannelToken] The channel token (new or existing).
   def self.find_or_create_channel_token(level, ip, user_storage_id, script_id = nil, data = {})
-    storage_app = StorageApps.new(user_storage_id)
+    project = Projects.new(user_storage_id)
     # If `create` fails because it was beat by a competing request, a second
     # `find_by` should succeed.
     # Read from primary to minimize write conflicts.
-    MultipleDatabasesTransitionHelper.use_writer_connection do
+    ActiveRecord::Base.connected_to(role: :writing) do
       Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
         # your own channel
         channel_token = find_channel_token(level, user_storage_id, script_id)
@@ -51,8 +55,8 @@ class ChannelToken < ApplicationRecord
         # but not used in the query for a channel_token yet.
         create!(level: level.host_level, storage_id: user_storage_id, script_id: script_id) do |ct|
           # Get a new channel_id.
-          channel = create_channel ip, storage_app, data: data, standalone: false
-          _, ct.storage_app_id = storage_decrypt_channel_id(channel)
+          channel = create_channel ip, project, data: data, standalone: false
+          _, ct.project_id = storage_decrypt_channel_id(channel)
         end
       end
     end
@@ -69,7 +73,7 @@ class ChannelToken < ApplicationRecord
   # is why we need to query for a channel token with script_id and fallback on one without script_id.
   #
   # @param [Level] level The level associated with the channel token request.
-  # @param [String] user_storage_id The ID of the storage app associated with the channel token request.
+  # @param [String] user_storage_id The ID of the project associated with the channel token request.
   # @param [Integer] script_id The ID of the script associated with the channel token.
   def self.find_channel_token(level, user_storage_id, script_id)
     order(script_id: 'desc').find_by(level: level.host_level, storage_id: user_storage_id, script_id: [nil, script_id])
@@ -79,16 +83,16 @@ class ChannelToken < ApplicationRecord
   # @param [Hash] data Data to store in the channel.
   # @param [String] src Optional source channel to copy data from, instead of
   #   using the value from the `data` param.
-  def self.create_channel(ip, storage_app, data: {}, src: nil, type: nil, remix_parent_id: nil, standalone: true)
+  def self.create_channel(ip, project, data: {}, src: nil, type: nil, remix_parent_id: nil, standalone: true)
     if src
-      data = storage_app.get(src)
+      data = project.get(src)
       data['name'] = "Remix: #{data['name']}"
       data['hidden'] = false
       data['frozen'] = false
     end
 
     timestamp = Time.now
-    storage_app.create(
+    project.create(
       data.merge('createdAt' => timestamp, 'updatedAt' => timestamp),
       ip: ip,
       type: type,

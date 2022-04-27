@@ -175,7 +175,6 @@ class FilesTest < FilesApiTestBase
     DCDO.stubs(:get).with('disallowed_html_tags', []).returns(['script', 'meta[http-equiv]'])
     DCDO.stubs(:get).with('s3_timeout', 15).returns(15)
     DCDO.stubs(:get).with('s3_slow_request', 15).returns(15)
-    DCDO.stubs(:get).with('user_storage_ids_in_dashboard', false).returns(false)
 
     filename = 'index.html'
     # The below HTML is valid/invalid in WebLab projects only. Other project types do not
@@ -185,7 +184,7 @@ class FilesTest < FilesApiTestBase
     invalid_html_2 = '<meta http-equiv="refresh">'
 
     # WebLab
-    StorageApps.any_instance.stubs(:get).returns({projectType: 'weblab'})
+    Projects.any_instance.stubs(:get).returns({projectType: 'weblab'})
     @api.put_object(filename, valid_html)
     assert successful?
     @api.delete_object(filename)
@@ -199,7 +198,7 @@ class FilesTest < FilesApiTestBase
     @api.delete_object(filename)
 
     # Not WebLab
-    StorageApps.any_instance.stubs(:get).returns({projectType: 'applab'})
+    Projects.any_instance.stubs(:get).returns({projectType: 'applab'})
     @api.put_object(filename, valid_html)
     assert successful?
     @api.delete_object(filename)
@@ -210,7 +209,7 @@ class FilesTest < FilesApiTestBase
 
     # This means the channel_id does not belong to a valid project.
     # These requests should always return a 400.
-    StorageApps.any_instance.stubs(:get).returns(nil)
+    Projects.any_instance.stubs(:get).returns(nil)
     @api.put_object(filename, valid_html)
     assert bad_request?
     @api.delete_object(filename)
@@ -219,7 +218,7 @@ class FilesTest < FilesApiTestBase
     assert bad_request?
     @api.delete_object(filename)
 
-    StorageApps.any_instance.unstub(:get)
+    Projects.any_instance.unstub(:get)
     delete_all_manifest_versions
   end
 

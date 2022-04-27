@@ -14,13 +14,15 @@
         }
       ],
       "has_verified_resources": true,
+      "is_course": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
-      "tts": true
+      "tts": true,
+      "version_year": "2021"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2022-01-25 01:58:04 UTC",
+    "family_name": "self-paced-pl-csd5",
+    "serialized_at": "2022-03-31 15:10:07 UTC",
     "published_state": "beta",
     "instruction_type": "self_paced",
     "instructor_audience": "universal_instructor",

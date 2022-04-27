@@ -19,6 +19,7 @@ class Ability
       Script, # see override below
       Lesson, # see override below
       ScriptLevel, # see override below
+      ProgrammingClass, # see override below
       ProgrammingEnvironment, # see override below
       ProgrammingExpression, # see override below
       ReferenceGuide, # see override below
@@ -77,13 +78,18 @@ class Ability
       can? :update, level
     end
 
-    can [:read], ProgrammingEnvironment do |environment|
+    can [:read, :docs_show, :docs_index, :get_summary_by_name], ProgrammingEnvironment do |environment|
       environment.published || user.permission?(UserPermission::LEVELBUILDER)
     end
 
-    can [:read, :show_by_keys], ProgrammingExpression do |expression|
+    can [:read], ProgrammingClass do |programming_class|
+      can? :read, programming_class.programming_environment
+    end
+
+    can [:read, :show_by_keys, :docs_show], ProgrammingExpression do |expression|
       can? :read, expression.programming_environment
     end
+    cannot :index, ProgrammingExpression
 
     if user.persisted?
       can :manage, user
@@ -92,21 +98,24 @@ class Ability
       can :create, UserLevel, user_id: user.id
       can :update, UserLevel, user_id: user.id
       can :create, Follower, student_user_id: user.id
-      can :destroy, Follower, student_user_id: user.id
+      can :destroy, Follower do |follower|
+        follower.student_user_id == user.id && !user.student?
+      end
       can :read, UserPermission, user_id: user.id
       can [:show, :pull_review, :update], PeerReview, reviewer_id: user.id
       can :toggle_resolved, CodeReviewComment, project_owner_id: user.id
       can :destroy, CodeReviewComment do |code_review_comment|
         # Teachers can delete comments on their student's projects,
-        # as well as their own comments.
+        # their own comments anywhere, and comments on their projects.
         code_review_comment.project_owner&.student_of?(user) ||
-          (user.teacher? && user == code_review_comment.commenter)
+          (user.teacher? && user == code_review_comment.commenter) ||
+          (user.teacher? && user == code_review_comment.project_owner)
       end
-      can :create,  CodeReviewComment do |_, project_owner, storage_app_id, level_id, script_id|
-        CodeReviewComment.user_can_review_project?(project_owner, user, storage_app_id, level_id, script_id)
+      can :create,  CodeReviewComment do |_, project_owner, project_id, level_id, script_id|
+        CodeReviewComment.user_can_review_project?(project_owner, user, project_id, level_id, script_id)
       end
-      can :project_comments, CodeReviewComment do |_, project_owner, storage_app_id|
-        CodeReviewComment.user_can_review_project?(project_owner, user, storage_app_id)
+      can :project_comments, CodeReviewComment do |_, project_owner, project_id|
+        CodeReviewComment.user_can_review_project?(project_owner, user, project_id)
       end
       can :create, ReviewableProject do |_, project_owner|
         ReviewableProject.user_can_mark_project_reviewable?(project_owner, user)
@@ -151,7 +160,7 @@ class Ability
             CodeReviewComment.user_can_review_project?(
               user_to_assume,
               user,
-              reviewable_project.storage_app_id,
+              reviewable_project.project_id,
               reviewable_project.level_id,
               reviewable_project.script_id
             )
@@ -355,8 +364,10 @@ class Ability
         Game,
         Level,
         Lesson,
+        ProgrammingClass,
         ProgrammingEnvironment,
         ProgrammingExpression,
+        ProgrammingMethod,
         ReferenceGuide,
         CourseOffering,
         UnitGroup,
@@ -409,9 +420,9 @@ class Ability
       end
     end
 
-    # This action allows levelbuilders to work on exemplars in levelbuilder
+    # This action allows levelbuilders to work on exemplars and validation in levelbuilder
     if user.persisted? && user.permission?(UserPermission::LEVELBUILDER)
-      can :get_access_token_with_override_sources, :javabuilder_session
+      can [:get_access_token_with_override_sources, :get_access_token_with_override_validation], :javabuilder_session
     end
 
     if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)

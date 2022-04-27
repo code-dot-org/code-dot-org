@@ -129,14 +129,6 @@ module Pd::Application
       application_year
     end
 
-    # Since teacher applications may be created on save before they are submitted, we cannot rely
-    # on the created_at field. When applications are submitted, they have status 'unreviewed'
-    # [MEG] TODO: Delete this method once applied_at column exists, i.e.
-    # ActiveRecord::Base.connection.column_exists?(:pd_applications, :applied_at) is true
-    def date_applied
-      status_log.find {|status_entry| status_entry["status"] == "unreviewed"}&.[]("at")&.to_date&.iso8601
-    end
-
     def self.next_year(year)
       current_year_index = APPLICATION_YEARS.index(year)
       current_year_index >= 0 ? APPLICATION_YEARS[current_year_index + 1] : nil
@@ -893,9 +885,9 @@ module Pd::Application
 
     # @override
     # Filter out extraneous answers based on selected program (course)
-    def self.filtered_labels(course)
-      raise "Invalid course #{course}" unless VALID_COURSES.include?(course)
-      FILTERED_LABELS[course]
+    def self.filtered_labels(course, status = 'unreviewed')
+      raise "Invalid course #{course}" unless VALID_COURSES.include?(course) || status == 'incomplete'
+      status == 'incomplete' ? {} : FILTERED_LABELS[course]
     end
 
     # List of columns to be filtered out based on selected program (course)
@@ -1145,6 +1137,7 @@ module Pd::Application
     end
 
     def meets_criteria
+      return if incomplete?
       response_scores = response_scores_hash[:meets_minimum_criteria_scores] || {}
 
       scored_questions = SCOREABLE_QUESTIONS["criteria_score_questions_#{course}".to_sym]

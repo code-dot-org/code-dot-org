@@ -9,8 +9,7 @@
     "parent_level_id": 19997,
     "name_suffix": "_2021",
     "long_instructions": "#### This video is included in the CS Discoveries curriculum to introduce students to Web Lab.\r\n\r\n## As you watch the video, consider the following:\r\n#### How will my students use Web Lab to create websites? ",
-    "encrypted": "false",
-    "teacher_markdown": "## Discussion Goals\r\n\r\nWhile there are no broad learning goals for this video, students should understand that the instructions for Web Lab levels appear in the wide panel at the top, and the bottom three panels, from left to right, include the list of files that they are working on, the area where they type in their code, and the area where they see the results of their code.  For now, they do not need to worry about every button, as they will be explained later, but they should understand that the inspector tool helps them to link parts of the web page with code that created them, and the refresh and save button allows them to update their webpage if it does not automatically update when they change the code.\r\n\r\nAlthough it's not part of the video, the instructions pane will also often include drop down questions and answers that students can use when they are completing an activity, and in some levels the tabs at the top of the instructions pane will take students to a \"Help and Tips\" area that includes reference information relevant to the activities."
+    "encrypted": "false"
   },
   "game_id": 54,
   "published": true,
@@ -18,7 +17,7 @@
   "level_num": "custom",
   "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-03-20T20:38:08.422+00:00\",\"changed\":[\"cloned from \\\"Intro to Web Lab - Part 1_2021\\\"\"],\"cloned_from\":\"Intro to Web Lab - Part 1_2021\"},{\"changed_at\":\"2022-03-20 20:55:24 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2022-03-21 20:48:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-03-20T20:38:08.422+00:00\",\"changed\":[\"cloned from \\\"Intro to Web Lab - Part 1_2021\\\"\"],\"cloned_from\":\"Intro to Web Lab - Part 1_2021\"},{\"changed_at\":\"2022-03-20 20:55:24 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2022-03-21 20:48:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2022-03-23 00:25:04 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

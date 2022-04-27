@@ -19,34 +19,12 @@
       "is_migrated": true,
       "project_sharing": true,
       "student_detail_progress_view": true,
-      "teacher_resources": [
-        [
-          "lessonPlans",
-          "https://curriculum.code.org/csp-18/unit1/"
-        ],
-        [
-          "teacherForum",
-          "https://forum.code.org/c/csp1"
-        ],
-        [
-          "vocabulary",
-          "https://curriculum.code.org/csp-18/unit1/vocab/"
-        ],
-        [
-          "standardMappings",
-          "https://curriculum.code.org/csp-18/unit1/standards/"
-        ],
-        [
-          "professionalLearning",
-          "https://studio.code.org/s/csp1-support"
-        ]
-      ],
       "use_legacy_lesson_plans": true,
       "version_year": "2018"
     },
     "new_name": null,
     "family_name": "csp1",
-    "serialized_at": "2022-03-11 12:07:36 UTC",
+    "serialized_at": "2022-03-22 21:16:28 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4002,13 +3980,96 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "Lesson Plans",
+      "url": "https://curriculum.code.org/csp-18/unit1/",
+      "key": "lesson_plans_2",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_plans_2"
+      }
+    },
+    {
+      "name": "Professional Learning",
+      "url": "https://studio.code.org/s/csp1-support",
+      "key": "professional_learning",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "professional_learning"
+      }
+    },
+    {
+      "name": "Standard Mappings",
+      "url": "https://curriculum.code.org/csp-18/unit1/standards/",
+      "key": "standard_mappings_2",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "standard_mappings_2"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csp1",
+      "key": "teacher_forum_1",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum_1"
+      }
+    },
+    {
+      "name": "Vocabulary",
+      "url": "https://curriculum.code.org/csp-18/unit1/vocab/",
+      "key": "vocabulary",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "vocabulary"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "lesson_plans_2",
+        "script.name": "csp1-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "professional_learning",
+        "script.name": "csp1-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "standard_mappings_2",
+        "script.name": "csp1-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum_1",
+        "script.name": "csp1-2018"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "vocabulary",
+        "script.name": "csp1-2018"
+      }
+    }
   ],
   "scripts_student_resources": [
 

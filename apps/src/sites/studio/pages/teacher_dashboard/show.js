@@ -12,7 +12,6 @@ import teacherSections, {
   setSections,
   selectSection,
   setRosterProvider,
-  setValidAssignments,
   setCourseOfferings,
   setShowLockSectionField, // DCDO Flag - show/hide Lock Section field
   setStudentsForCurrentSection
@@ -27,7 +26,7 @@ import currentUser, {
   setCurrentUserHasSeenStandardsReportInfo
 } from '@cdo/apps/templates/currentUserRedux';
 import {
-  setValidScripts,
+  setCoursesWithProgress,
   setScriptId
 } from '../../../../redux/unitSelectionRedux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
@@ -37,12 +36,10 @@ const scriptData = JSON.parse(script.dataset.dashboard);
 const {
   section,
   sections,
-  validScripts,
-  studentScriptIds,
-  validCourses,
   validCourseOfferings,
   localeCode,
-  hasSeenStandardsReportInfo
+  hasSeenStandardsReportInfo,
+  coursesWithProgress
 } = scriptData;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
@@ -67,7 +64,6 @@ $(document).ready(function() {
   store.dispatch(setStudentsForCurrentSection(section.id, section.students));
   store.dispatch(setRosterProvider(section.login_type));
   store.dispatch(setLoginType(section.login_type));
-  store.dispatch(setValidAssignments(validCourses, validScripts));
   store.dispatch(setCourseOfferings(validCourseOfferings));
   store.dispatch(setLocaleCode(localeCode));
 
@@ -84,9 +80,7 @@ $(document).ready(function() {
     store.dispatch(setScriptId(defaultScriptId));
   }
 
-  store.dispatch(
-    setValidScripts(validScripts, studentScriptIds, validCourses, section)
-  );
+  store.dispatch(setCoursesWithProgress(coursesWithProgress));
 
   ReactDOM.render(
     <Provider store={store}>
@@ -100,6 +94,7 @@ $(document).ready(function() {
               sectionId={section.id}
               sectionName={section.name}
               studentCount={section.students.length}
+              coursesWithProgress={coursesWithProgress}
             />
           )}
         />

@@ -213,7 +213,7 @@ module Pd::Application
       assert_equal '2018-03-09', application.date_accepted
     end
 
-    test 'applied_at is populated with the first unreviewed status' do
+    test 'applied_at and date_applied have the first unreviewed status' do
       application = create :pd_teacher_application, status: 'incomplete'
       assert_nil application.applied_at
 
@@ -230,6 +230,7 @@ module Pd::Application
       end
 
       assert_equal tomorrow, application.applied_at
+      assert_equal tomorrow, application.date_applied.to_time
     end
 
     test 'memoized full_answers' do

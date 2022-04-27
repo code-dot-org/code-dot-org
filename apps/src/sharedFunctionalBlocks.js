@@ -298,7 +298,7 @@ function installBoolean(blockly, generator, gensym) {
       );
       var values = blockly.Blocks.functional_boolean.VALUES;
       this.appendDummyInput()
-        .appendTitle(new blockly.FieldDropdown(values), 'VAL')
+        .appendField(new blockly.FieldDropdown(values), 'VAL')
         .setAlign(Blockly.ALIGN_CENTRE);
       this.setFunctionalOutput(true, blockly.BlockValueType.BOOLEAN);
     }
@@ -310,7 +310,7 @@ function installBoolean(blockly, generator, gensym) {
   ];
 
   generator.functional_boolean = function() {
-    return this.getTitleValue('VAL') === 'true';
+    return this.getFieldValue('VAL') === 'true';
   };
 }
 
@@ -327,7 +327,7 @@ function installMathNumber(blockly, generator, gensym) {
         ...blockly.FunctionalTypeColors[blockly.BlockValueType.NUMBER]
       );
       this.appendDummyInput()
-        .appendTitle(
+        .appendField(
           new Blockly.FieldTextInput(
             '0',
             Blockly.FieldTextInput.numberValidator
@@ -340,7 +340,7 @@ function installMathNumber(blockly, generator, gensym) {
   };
 
   generator.functional_math_number = function() {
-    return +this.getTitleValue('NUM');
+    return +this.getFieldValue('NUM');
   };
 
   blockly.Blocks.functional_math_number_dropdown = {
@@ -355,7 +355,7 @@ function installMathNumber(blockly, generator, gensym) {
         ...blockly.FunctionalTypeColors[blockly.BlockValueType.NUMBER]
       );
       this.appendDummyInput()
-        .appendTitle(new Blockly.FieldDropdown(), 'NUM')
+        .appendField(new Blockly.FieldDropdown(), 'NUM')
         .setAlign(Blockly.ALIGN_CENTRE);
       this.setFunctionalOutput(true, blockly.BlockValueType.NUMBER);
     }
@@ -376,16 +376,16 @@ function installString(blockly, generator) {
         ...blockly.FunctionalTypeColors[blockly.BlockValueType.STRING]
       );
       this.appendDummyInput()
-        .appendTitle(new Blockly.FieldLabel('"'))
-        .appendTitle(new Blockly.FieldTextInput(''), 'VAL')
-        .appendTitle(new Blockly.FieldLabel('"'))
+        .appendField(new Blockly.FieldLabel('"'))
+        .appendField(new Blockly.FieldTextInput(''), 'VAL')
+        .appendField(new Blockly.FieldLabel('"'))
         .setAlign(Blockly.ALIGN_CENTRE);
       this.setFunctionalOutput(true, blockly.BlockValueType.STRING);
     }
   };
 
   generator.functional_string = function() {
-    return blockly.JavaScript.quote_(this.getTitleValue('VAL'));
+    return blockly.JavaScript.quote_(this.getFieldValue('VAL'));
   };
 }
 
@@ -500,10 +500,10 @@ function installCondForType(blockly, generator, type) {
       );
 
       this.appendDummyInput()
-        .appendTitle(new Blockly.FieldLabel('cond', options))
+        .appendField(new Blockly.FieldLabel('cond', options))
         .setAlign(Blockly.ALIGN_CENTRE);
 
-      this.appendDummyInput('ELSE').appendTitle(
+      this.appendDummyInput('ELSE').appendField(
         new Blockly.FieldLabel('else', options)
       );
       var defaultInput = this.appendFunctionalInput('DEFAULT').setInline(true);
@@ -513,7 +513,7 @@ function installCondForType(blockly, generator, type) {
       );
 
       this.appendDummyInput('PLUS')
-        .appendTitle(plusField)
+        .appendField(plusField)
         .setInline(true);
 
       this.setFunctionalOutput(
@@ -555,7 +555,7 @@ function installCondForType(blockly, generator, type) {
           this,
           _.bind(this.removeConditionalRow, this, id)
         );
-        minusInput.appendTitle(minusField);
+        minusInput.appendField(minusField);
       }
 
       this.moveInputBefore('MINUS' + id, 'ELSE');

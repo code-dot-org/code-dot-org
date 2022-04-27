@@ -62,10 +62,13 @@ class ActivitiesController < ApplicationController
       end
 
       unless share_failure || ActivityConstants.skipped?(params[:new_result].to_i)
-        @level_source = LevelSource.find_identical_or_create(
-          @level,
-          params[:program].strip_utf8mb4
-        )
+        # Explicitly use the writer connection to make this write call
+        ActiveRecord::Base.connected_to(role: :writing) do
+          @level_source = LevelSource.find_identical_or_create(
+            @level,
+            params[:program].strip_utf8mb4
+          )
+        end
         if share_filtering_error
           FirehoseClient.instance.put_record(
             :analysis,
@@ -105,13 +108,15 @@ class ActivitiesController < ApplicationController
       params[:lines] = MAX_LINES_OF_CODE if params[:lines] > MAX_LINES_OF_CODE
     end
 
-    @level_source_image = find_or_create_level_source_image(params[:image], @level_source)
+    ActiveRecord::Base.connected_to(role: :writing) do
+      @level_source_image = find_or_create_level_source_image(params[:image], @level_source)
 
-    @new_level_completed = false
-    if current_user
-      track_progress_for_user if @script_level
-    else
-      track_progress_in_session
+      @new_level_completed = false
+      if current_user
+        track_progress_for_user if @script_level
+      else
+        track_progress_in_session
+      end
     end
 
     total_lines = if current_user && current_user.total_lines

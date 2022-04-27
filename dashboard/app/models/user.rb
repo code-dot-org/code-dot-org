@@ -1770,6 +1770,14 @@ class User < ApplicationRecord
     user_course_data + user_script_data
   end
 
+  def sections_as_student_participant
+    sections_as_student.select {|s| !s.pl_section?}
+  end
+
+  def sections_as_pl_participant
+    sections_as_student.select(&:pl_section?)
+  end
+
   def all_sections
     sections_as_teacher = student? ? [] : sections.to_a
     sections_as_teacher.concat(sections_as_student).uniq
@@ -2345,36 +2353,17 @@ class User < ApplicationRecord
   private def soft_delete_channels
     return unless user_storage_id
 
-    channel_ids = PEGASUS_DB[:storage_apps].
-      where(storage_id: user_storage_id).
-      map(:id)
+    project = Projects.new(user_storage_id)
+    project_ids = project.get_all_project_ids
 
     # Unfeature any featured projects owned by the user
     FeaturedProject.
-      where(storage_app_id: channel_ids, unfeatured_at: nil).
+      where(project_id: project_ids, unfeatured_at: nil).
       where.not(featured_at: nil).
       update_all(unfeatured_at: Time.now)
 
-    # Soft-delete all of the user's channels
-    PEGASUS_DB[:storage_apps].
-      where(id: channel_ids).
-      exclude(state: 'deleted').
-      update(state: 'deleted', updated_at: Time.now)
-  end
-
-  # Restores all of this user's projects that were soft-deleted after the given time
-  # Called after undestroy
-  private def restore_channels_deleted_after(deleted_at)
-    return unless user_storage_id
-
-    channel_ids = PEGASUS_DB[:storage_apps].
-      where(storage_id: user_storage_id).
-      map(:id)
-
-    PEGASUS_DB[:storage_apps].
-      where(id: channel_ids, state: 'deleted').
-      where(Sequel.lit('updated_at >= ?', deleted_at.localtime)).
-      update(state: 'active', updated_at: Time.now)
+    # Soft-delete all of the user's projects
+    project.soft_delete_all
   end
 
   def user_storage_id
@@ -2392,7 +2381,8 @@ class User < ApplicationRecord
 
     # Paranoia documentation at https://github.com/rubysherpas/paranoia#usage.
     result = restore(recursive: true, recovery_window: 5.minutes)
-    restore_channels_deleted_after(soft_delete_time - 5.minutes)
+    deleted_time = soft_delete_time - 5.minutes
+    Projects.new(user_storage_id).restore_if_deleted_after(deleted_time) if user_storage_id
     result
   end
 

@@ -58,7 +58,7 @@ class CoursesControllerTest < ActionController::TestCase
 
     test_user_gets_response_for :index, response: :success, user: :user, queries: 4
 
-    test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @unit_group_regular.name}}, queries: 11
+    test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @unit_group_regular.name}}, queries: 10
 
     test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @unit_group_regular.name}}, queries: 3
   end
@@ -119,7 +119,6 @@ class CoursesControllerTest < ActionController::TestCase
   end
 
   test "show: redirect to latest stable version in course family" do
-    Rails.cache.delete("valid_courses/all") # requery the db after adding the unit_groups below
     offering = create :course_offering, key: 'csp'
     ug2018 = create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
     create :course_version, course_offering: offering, content_root: ug2018, key: '2018'
@@ -131,7 +130,6 @@ class CoursesControllerTest < ActionController::TestCase
     assert_redirected_to '/courses/csp-2019'
 
     Rails.cache.delete("course_version/course_offering_keys/UnitGroup")
-    Rails.cache.delete("valid_courses/all") # requery the db after adding the unit_groups below
     offering = create :course_offering, key: 'csd'
     ug2018 = create :unit_group, name: 'csd-2018', family_name: 'csd', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
     create :course_version, course_offering: offering, content_root: ug2018, key: '2018'
@@ -145,7 +143,6 @@ class CoursesControllerTest < ActionController::TestCase
 
   test "get_unit_group for family name with no stable versions does not redirect" do
     Rails.cache.delete("course_version/course_offering_keys/UnitGroup")
-    Rails.cache.delete("valid_courses/all") # requery the db after adding the unit_groups below
     offering = create :course_offering, key: 'csd'
     ug2020 = create :unit_group, name: 'csd-2020', family_name: 'csd', version_year: '2020', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     create :course_version, course_offering: offering, content_root: ug2020, key: '2020'
@@ -156,7 +153,6 @@ class CoursesControllerTest < ActionController::TestCase
 
   test 'redirect to latest standards in course family' do
     Rails.cache.delete("course_version/course_offering_keys/UnitGroup")
-    Rails.cache.delete("valid_courses/all")
 
     offering = create :course_offering, key: 'csp'
     ug2018 = create :unit_group, name: 'csp-2018', family_name: 'csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable

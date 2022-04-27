@@ -7,13 +7,30 @@ module Services
         def serializable_hash(adapter_options, options, adapter_instance)
           # Default CollectionSerializer behavior is to return an array of hashes,
           # where each hash is a single result. We would instead like to return a
-          # single hash, keyed by `crowdin_key`
-          return super.reduce({}) do |results, result|
-            raise KeyEror.new("Serializer must define :crowdin_key for curriculum content I18N serialization; got #{result.keys.inspect}") unless result.key?(:crowdin_key)
-            crowdin_key = result.delete(:crowdin_key)
-            results[crowdin_key] = result unless result.empty?
-            results
-          end
+          # single hash, keyed by `crowdin_key`.
+          # For example:
+          # {
+          #   "lessons": [
+          #     {
+          #       "/s/express-2021/lessons/1/levels/2": {
+          #         "short_instructions": "In this lesson you will be..."
+          #       }
+          #     },
+          #     {
+          #       "/s/express-2021/lessons/1/levels/3": {}
+          #     }
+          #   ]
+          # }
+          # becomes
+          # {
+          #   "lessons": {
+          #     "/s/express-2021/lessons/1/levels/2": {
+          #       "short_instructions": "In this lesson you will be..."
+          #     },
+          #     "/s/express-2021/lessons/1/levels/3": {}
+          #   }
+          # }
+          super.reduce(:deep_merge)
         end
       end
 
@@ -28,7 +45,25 @@ module Services
           # default of only a single level of nesting.
           options[:include_directive] ||= JSONAPI::IncludeDirective.new('**', allow_wildcard: true)
           # compact the result, excluding not only nil values but also empty ones
-          super.reject {|_, v| v.blank?}
+          result = super.reject {|_, v| v.blank?}
+          raise KeyEror.new("Serializer must define :crowdin_key for curriculum content I18N serialization; got #{result.keys.inspect}") unless result.key?(:crowdin_key)
+          # We override the default serialization for single objects because we want the crowdin_key
+          # moved outside the object. For example:
+          # {
+          #   "crowdin_key": "/s/express-2021/lessons/1/levels/2",
+          #   "short_instructions": "In this lesson you will be..."
+          # }
+          # becomes
+          # {
+          #   "/s/express-2021/lessons/1/levels/2": {
+          #     "short_instructions": "In this lesson you will be..."
+          #   }
+          # }
+          # The reason we move the crowdin_key outside the object is so all the strings in the
+          # object have the crowdin_key as part of their context. The crowdin_key is usually
+          # something which makes it easier to identify where the string is used.
+          crowdin_key = result.delete(:crowdin_key)
+          {crowdin_key => result}
         end
 
         # Add a 'crowdin_key' attribute to every model. Should return a value that
@@ -81,6 +116,28 @@ module Services
         attribute :description
       end
 
+      class FrameworkCrowdinSerializer < CrowdinSerializer
+        attributes :name
+
+        delegate :crowdin_key, to: :object
+      end
+
+      class StandardCategoryCrowdinSerializer < CrowdinSerializer
+        attributes :description
+
+        delegate :crowdin_key, to: :object
+      end
+
+      class StandardCrowdinSerializer < CrowdinSerializer
+        attributes :description
+
+        belongs_to :framework, serializer: CurriculumSyncUtils::FrameworkCrowdinSerializer
+        belongs_to :parent_category, serializer: CurriculumSyncUtils::StandardCategoryCrowdinSerializer
+        belongs_to :category, serializer: CurriculumSyncUtils::StandardCategoryCrowdinSerializer
+
+        delegate :crowdin_key, to: :object
+      end
+
       class LessonCrowdinSerializer < CrowdinSerializer
         # Note that we don't include "name" here, because that's already
         # handled by existing logic. We could in the future consider moving
@@ -97,6 +154,8 @@ module Services
         has_many :objectives, serializer: CurriculumSyncUtils::ObjectiveCrowdinSerializer
         has_many :resources, serializer: CurriculumSyncUtils::ResourceCrowdinSerializer
         has_many :vocabularies, serializer: CurriculumSyncUtils::VocabularyCrowdinSerializer
+        has_many :standards, serializer: CurriculumSyncUtils::StandardCrowdinSerializer
+        has_many :opportunity_standards, serializer: CurriculumSyncUtils::StandardCrowdinSerializer
 
         # override
         def crowdin_key
