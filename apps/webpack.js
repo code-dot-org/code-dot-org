@@ -242,7 +242,7 @@ function devtool(options) {
   } else if (options && options.minify) {
     return 'source-map';
   } else if (process.env.DEV) {
-    return 'cheap-inline-source-map';
+    return 'inline-cheap-source-map';
   } else {
     return 'inline-source-map';
   }
