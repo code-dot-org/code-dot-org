@@ -151,7 +151,11 @@ const renderCopyLessonButton = () => {
     const lessonName = lessonData['displayName'];
 
     ReactDOM.render(
-      <CloneLessonDialogButton lessonId={lessonId} lessonName={lessonName} />,
+      <CloneLessonDialogButton
+        lessonId={lessonId}
+        lessonName={lessonName}
+        buttonText="Copy"
+      />,
       element
     );
   }

@@ -13,7 +13,7 @@ export default function CloneLessonDialogButton(props) {
   return (
     <div>
       <button type="button" onClick={onClick}>
-        Copy
+        {props.buttonText}
       </button>
       <CloneLessonDialog
         lessonId={lessonId}
@@ -26,5 +26,6 @@ export default function CloneLessonDialogButton(props) {
 
 CloneLessonDialogButton.propTypes = {
   lessonId: PropTypes.number.isRequired,
-  lessonName: PropTypes.string.isRequired
+  lessonName: PropTypes.string.isRequired,
+  buttonText: PropTypes.string.isRequired
 };
