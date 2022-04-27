@@ -49,6 +49,7 @@ const Dialog = makeEnum(
   'COMMIT_FILES'
 );
 const DEFAULT_FILE_NAME = '.java';
+const EDITOR_LOAD_PAUSE_MS = 100;
 
 // Custom theme overrides (exported for tests)
 export const editorDarkModeThemeOverride = EditorView.theme(
@@ -319,7 +320,7 @@ class JavalabEditor extends React.Component {
           // stop trying to focus once we have focused.
           clearInterval(timer);
         }
-      }, 100);
+      }, EDITOR_LOAD_PAUSE_MS);
     }
   }
 
