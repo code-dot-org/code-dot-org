@@ -150,6 +150,7 @@ export default function CodeReviewGroupsDialog({
         footerJustification="space-between"
         confirmationButtonText={i18n.confirmChanges()}
         disableConfirmationButton={!groupsHaveChanged}
+        stickyHeaderFooter={true}
       >
         {renderModalBody()}
       </StylizedBaseDialog>
