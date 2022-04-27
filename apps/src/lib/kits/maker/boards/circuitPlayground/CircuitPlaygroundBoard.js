@@ -213,11 +213,9 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     this.dynamicComponents_.forEach(component => {
       // For now, these are _always_ Leds.  Complain if they're not.
       if (component instanceof Led) {
-        // Make sure the LED is turned off.
+        // Make sure the LED is turned off.  This will also stop any ongoing activity such as
+        // timer-based blinking.
         component.off();
-
-        // And stop any ongoing activity such as timer-based blinking.
-        component.stop();
       } else if (component instanceof five.Button) {
         // No special cleanup required for five.Button
       } else {
