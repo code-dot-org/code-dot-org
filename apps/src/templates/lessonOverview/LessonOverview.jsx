@@ -4,9 +4,8 @@ import {connect} from 'react-redux';
 
 import Activity from '@cdo/apps/templates/lessonOverview/activities/Activity';
 import Button from '@cdo/apps/templates/Button';
-import DropdownButton from '@cdo/apps/templates/DropdownButton';
+import PrintPdfDropdownButton from '@cdo/apps/templates/PrintPdfDropdownButton';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import LessonAgenda from '@cdo/apps/templates/lessonOverview/LessonAgenda';
 import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonNavigationDropdown';
@@ -37,29 +36,6 @@ class LessonOverview extends Component {
     isSignedIn: PropTypes.bool.isRequired,
     isVerifiedInstructor: PropTypes.bool.isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired
-  };
-
-  recordAndNavigateToPdf = (e, firehoseKey, url) => {
-    // Prevent navigation to url until callback
-    e.preventDefault();
-    firehoseClient.putRecord(
-      {
-        study: 'pdf-click',
-        study_group: 'lesson',
-        event: 'open-pdf',
-        data_json: JSON.stringify({
-          name: this.props.lesson.key,
-          pdfType: firehoseKey
-        })
-      },
-      {
-        includeUserId: true,
-        callback: () => {
-          window.location.href = url;
-        }
-      }
-    );
-    return false;
   };
 
   compilePdfDropdownOptions = () => {
@@ -116,24 +92,12 @@ class LessonOverview extends Component {
             </a>
             <div style={styles.dropdowns}>
               {pdfDropdownOptions.length > 0 && (
-                <div style={{marginRight: 5}}>
-                  <DropdownButton
-                    color={Button.ButtonColor.gray}
-                    text={i18n.printingOptions()}
-                  >
-                    {pdfDropdownOptions.map(option => (
-                      <a
-                        key={option.key}
-                        onClick={e =>
-                          this.recordAndNavigateToPdf(e, option.key, option.url)
-                        }
-                        href={option.url}
-                      >
-                        {option.name}
-                      </a>
-                    ))}
-                  </DropdownButton>
-                </div>
+                <PrintPdfDropdownButton
+                  color={Button.ButtonColor.gray}
+                  dropdownOptions={pdfDropdownOptions}
+                  name={this.props.lesson.key}
+                  studyGroup={'lesson'}
+                />
               )}
               <LessonNavigationDropdown lesson={lesson} />
             </div>
