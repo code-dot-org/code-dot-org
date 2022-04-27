@@ -81,7 +81,6 @@ const styles = {
     fontFamily: "'Gotham 4r', sans-serif",
     fontSize: 15,
     cursor: 'pointer',
-    float: 'left',
     textAlign: 'center',
     flex: 1,
     userSelect: 'none',

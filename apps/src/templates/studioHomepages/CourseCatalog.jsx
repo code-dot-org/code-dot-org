@@ -1,15 +1,32 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {useState} from 'react';
 import TutorialExplorer from '../../tutorialExplorer/tutorialExplorer';
 import {assignmentCourseOfferingShape} from '../teacherDashboard/shapes';
 import {TutorialsSortByOptions} from '../../tutorialExplorer/util';
 import i18n from '@cdo/locale';
+import Notification, {NotificationType} from '../Notification';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
 
 export default function CourseCatalog(props) {
+  const [showQuiz, setShowQuiz] = useState(false);
   let {filters, initialFilters, hideFilters} = getFilters();
 
   return (
     <div>
+      <Notification
+        type={NotificationType.bullhorn}
+        notice={'Wondering which course to teach?'}
+        details={
+          'Take the quiz to figure out which course is right for your classroom'
+        }
+        buttonText={'Take the quiz'}
+        buttonLink={''}
+        onButtonClick={() => {
+          setShowQuiz(true);
+        }}
+        dismissible={false}
+        width="100%"
+      />
       <TutorialExplorer
         tutorials={Object.values(props.courseOfferings)}
         filterGroups={filters}
@@ -21,6 +38,15 @@ export default function CourseCatalog(props) {
         disabledTutorials={[]}
         defaultSortBy={TutorialsSortByOptions.popularityrank}
       />
+      <BaseDialog
+        isOpen={showQuiz}
+        handleClose={() => {
+          setShowQuiz(false);
+        }}
+        useUpdatedStyles
+      >
+        <h1>{'Quiz'}</h1>
+      </BaseDialog>
     </div>
   );
 }

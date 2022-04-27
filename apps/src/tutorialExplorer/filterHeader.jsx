@@ -163,11 +163,9 @@ const styles = {
     height: 34
   },
   full: {
-    float: 'left',
     width: '100%'
   },
   left: {
-    float: 'left',
     marginLeft: 6
   },
   right: {
@@ -181,8 +179,7 @@ const styles = {
     color: 'dimgrey'
   },
   filterGroupGradeContainer: {
-    width: '68%',
-    float: 'left'
+    width: '68%'
   },
   filterGroupStudentExperienceContainer: {
     width: '28%',
