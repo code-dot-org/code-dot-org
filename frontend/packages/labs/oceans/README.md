@@ -9,6 +9,8 @@ Like the Dance Party repo, it is a standalone repo that is published as an [NPM 
 
 **AI for Oceans** was produced for the Hour of Code in 2019.  This module provides the student experience for the 5 interactive levels in the **AI for Oceans** script at https://studio.code.org/s/oceans.
 
+We have measured over one million unique [completions](https://twitter.com/codeorg/status/1385266661700288513) of the script.
+
 ![grid_comp](https://user-images.githubusercontent.com/2205926/165404102-87073dad-8d90-482a-ad68-bc475beb6b11.png)
 
 # Design notes
@@ -19,7 +21,7 @@ These 5 levels are invoked with a "mode" (stored internally as `appMode`) parame
 
 ### `fishvtrash`
 
-The user trains the AI to differentiate between fish versus trash, and then examine the results.
+The user trains the AI to differentiate between fish and trash, and then examines the results.
 
 ### `creaturesvtrashdemo`
 
@@ -35,7 +37,7 @@ In this mode, the user chooses from one of six adjectives and then categorizes f
 
 ### `long`
 
-In this mode, the user chooses from one of fifteen adjectives.  With more subjectivity in this list, the user can explore more subtle implications of training and recognition.
+In this mode, the user chooses from one of fifteen adjectives.  With more subjectivity in this list, the user can explore more subtle implications of training and categorization.
 
 ## ML technology
 
@@ -47,15 +49,15 @@ Adapted from content at https://code.org/oceans:
 
 ## Scenes
 
-The **AI for Oceans** script presents a linear narrative structure.  The app is designed to deliver the interactive levels for this script, one mode at a time, with no need to persist data to the browser or server between each level.
+The **AI for Oceans** script presents a linear narrative structure.  This app is designed to deliver the interactive levels for this script, one mode at a time, with no need to persist data to the browser or server between each level.
 
-The app itself contains a variety of "scenes", with each mode using a different subset.  The scenes (known as `currentMode` internally) are as follows:
+The app itself presents a variety of "scenes", with each mode using a different subset.  The scenes (known as `currentMode` internally) are as follows:
 
 ### `loading`
 
 <img width="1328" alt="loading" src="https://user-images.githubusercontent.com/2205926/165404296-5f5c71df-6650-476b-8ada-b4e277a25a51.png">
 
-A simple loading screen.
+A simple "loading" screen, used when loading or processing data.
 
 ### `words`
 
@@ -63,8 +65,7 @@ A simple loading screen.
 
 <img width="1301" alt="words" src="https://user-images.githubusercontent.com/2205926/165404326-83af55e8-0aaf-4541-94b8-e6f28946a9f3.png">
 
-
-Select adjectives for the `short` & `long` modes.
+The user selects from a list of adjectives for the `short` & `long` modes.
 
 ### `train`
 
@@ -84,7 +85,7 @@ The user watches A.I. (the "bot") categorizing items, one at a time.
 
 <img width="1298" alt="pond-false" src="https://user-images.githubusercontent.com/2205926/165404481-6e36e7d2-c6db-4e69-b84c-afd28f6444ba.png">
 
-The user shows the results of the predictions.  The user can toggle between the matching & non-matching sets.  In short & long, the user can click each item to view additional information about the AI's recognition.
+The user is shown the result of the predictions.  The user can toggle between the matching & non-matching sets.
 
 In the `short` and `long` modes, the pond also has a metapanel which can show general information about the ML processing, or, when a fish is selected, specific information about that fish's categorization:
 
@@ -94,27 +95,27 @@ In the `short` and `long` modes, the pond also has a metapanel which can show ge
 
 ## Graphics & UI
 
-The app uses two layers in the DOM.  Underneath, a canvas provides the background and all the sprites.  On top, a regular DOM uses HTML elements to provide the user interface.  The HTML interface is implemented in React.
+The app uses three layers in the DOM.  Underneath, one canvas contains the scene's background image, while another canvas contains all the sprites.  On top, the app uses React to render HTML elements for the user interface, implemented [here](https://github.com/code-dot-org/ml-activities/blob/c9d24c4b7a20ea12d5dc7a094094c5ef4dfbbde3/src/oceans/ui.jsx).
 
-The app is fully responsive by scaling the canvas and also scaling the size of the HTML elements correspondingly.  The UI simply shrinks to match the underlying canvas.  
+The app is fully responsive by scaling the canvases and also scaling the size of the HTML elements correspondingly.  This way, the UI simply shrinks to match the underlying canvases.  
 
 ## Animation
 
 The animation is designed to be be smooth and frame-rate independent.  
 
-The prediction screen notably renders the progression based on the concept of a "current offset in time", making it possible to pause, and even reverse the animation, as well as adjust its the speed.
+The prediction screen notably renders the progression based on the concept of a "current offset in time", making it possible to pause, and even reverse the animation, as well as adjust its speed.
 
-All items have a simple "bobbing" animation, using out of sync X and Y offsets cycling in a sine loop.
+All items have simple "bobbing" animations, using offsets cycling in a sine loop, such as [here](https://github.com/code-dot-org/ml-activities/blob/f8a438628f9f5a0dba4a602f8ae0bbffb714ce35/src/oceans/renderer.js#L615-L618).
+
+The fish pause under the scanner using a simple S-curve adjustment to their movement, implemented [here](https://github.com/code-dot-org/ml-activities/blob/f8a438628f9f5a0dba4a602f8ae0bbffb714ce35/src/oceans/renderer.js#L258).
 
 ## The Guide
 
-After initial playtests, we identified a need to slow the pacing of the tutorial and tell a clear story.  The solution we adapted was pop-up text boxes with "typing" text, reminiscent of old-school computer games.  
+After initial playtests, we identified a need to slow the pacing of the tutorial and tell a clear story.  The solution we adopted was text boxes with "typing" text, reminiscent of old-school computer games.  
 
 "The Guide" is the implementation of this solution, and was designed to be a simple but flexible system that allowed us to add a variety of text for every step and situation encountered in the tutorial.
 
-Each piece of Guide text is declared, along with the app state needed for it to show, which can even include code for more expressiveness.  
-
-See the implementation at https://github.com/code-dot-org/ml-activities/blob/main/src/oceans/models/guide.js
+Each piece of Guide text is declared, along with the app state needed for it to show (which can even include code for more expressiveness), [here](https://github.com/code-dot-org/ml-activities/blob/main/src/oceans/models/guide.js).  
 
 This simple system enabled the team to add a detailed narrative voice to the script, and allowed a variety of team members to contribute text.
 
@@ -124,16 +125,27 @@ This simple system enabled the team to add a detailed narrative voice to the scr
 
 ## Popups
 
-We also use popups to give extra information.
+We also use modal popups to give extra information.
 
 <img width="1311" alt="popup" src="https://user-images.githubusercontent.com/2205926/165404670-4b556c6e-18e7-4ec6-b3d2-19c025c5b108.png">
 
+## State
+
+The app's runtime state is stored in a very simple module [here](https://github.com/code-dot-org/ml-activities/blob/c9d24c4b7a20ea12d5dc7a094094c5ef4dfbbde3/src/oceans/state.js).  Updates to state trigger a React render, unless deliberately skipped.
+
+## Host interface
+
+The full functionality of this app is enabled when hosted by https://studio.code.org.  The main repo loads this app via code [here](https://github.com/code-dot-org/code-dot-org/tree/c3325655902e82479d0a85d5adc73049810e5b66/apps/src/fish).  Specific parameters passed in during initialization, [here](https://github.com/code-dot-org/code-dot-org/blob/c3325655902e82479d0a85d5adc73049810e5b66/apps/src/fish/Fish.js#L127-L136), include a foreground and background canvas, the `appMode`, a callback when the user continues to the next level, callbacks for loading & playing sound effects, and localized strings.
+
+## Analytics
+
+If Google Analytics is available on the page, the app generates a synthetic page view for each scene, allowing for an understanding of usage and duration of each scene in the script.
 
 # Additional information
 
 ## Common operations
 
-The documentation for common operations for AI Lab is comprehensive and should apply to this project too: https://github.com/code-dot-org/ml-playground#common-operations
+The documentation for common operations for **AI Lab** is comprehensive and should apply to this project too: https://github.com/code-dot-org/ml-playground#common-operations
 
 
 ## Getting started
