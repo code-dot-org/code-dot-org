@@ -205,13 +205,15 @@ class PeerReview < ApplicationRecord
   end
 
   def summarize
-    return {
-      id: id,
-      status: review_completed? ? LEVEL_STATUS.perfect : LEVEL_STATUS.not_tried,
-      name: review_completed? ? I18n.t('peer_review.link_to_submitted_review') : I18n.t('peer_review.review_in_progress'),
-      result: review_completed? ? ActivityConstants::BEST_PASS_RESULT : ActivityConstants::UNSUBMITTED_RESULT,
-      locked: false
-    }
+    ActiveRecord::Base.connected_to(role: :reading) do
+      return {
+        id: id,
+        status: review_completed? ? LEVEL_STATUS.perfect : LEVEL_STATUS.not_tried,
+        name: review_completed? ? I18n.t('peer_review.link_to_submitted_review') : I18n.t('peer_review.review_in_progress'),
+        result: review_completed? ? ActivityConstants::BEST_PASS_RESULT : ActivityConstants::UNSUBMITTED_RESULT,
+        locked: false
+      }
+    end
   end
 
   def self.get_potential_reviews(script, user)

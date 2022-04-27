@@ -34,12 +34,14 @@ class LessonActivity < ApplicationRecord
   )
 
   def summarize
-    {
-      id: id,
-      position: position,
-      name: name,
-      duration: duration,
-    }
+    ActiveRecord::Base.connected_to(role: :reading) do
+      {
+        id: id,
+        position: position,
+        name: name,
+        duration: duration,
+      }
+    end
   end
 
   def summarize_for_lesson_show(can_view_teacher_markdown, current_user)

@@ -133,15 +133,17 @@ class LessonGroup < ApplicationRecord
   end
 
   def summarize
-    {
-      id: id,
-      key: key,
-      display_name: localized_display_name,
-      description: localized_description,
-      big_questions: localized_big_questions,
-      user_facing: user_facing,
-      position: position
-    }
+    ActiveRecord::Base.connected_to(role: :reading) do
+      {
+        id: id,
+        key: key,
+        display_name: localized_display_name,
+        description: localized_description,
+        big_questions: localized_big_questions,
+        user_facing: user_facing,
+        position: position
+      }
+    end
   end
 
   def summarize_for_unit_edit

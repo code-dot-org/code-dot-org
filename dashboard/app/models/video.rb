@@ -150,15 +150,17 @@ class Video < ApplicationRecord
   end
 
   def summarize(autoplay = true)
-    # Note: similar video info is also set in javascript at levels/_blockly.html.haml
-    {
-      src: youtube_url(autoplay: autoplay ? 1 : 0),
-      key: key,
-      name: localized_name,
-      download: download,
-      thumbnail: thumbnail_path,
-      enable_fallback: true,
-      autoplay: autoplay,
-    }
+    ActiveRecord::Base.connected_to(role: :reading) do
+      # Note: similar video info is also set in javascript at levels/_blockly.html.haml
+      {
+        src: youtube_url(autoplay: autoplay ? 1 : 0),
+        key: key,
+        name: localized_name,
+        download: download,
+        thumbnail: thumbnail_path,
+        enable_fallback: true,
+        autoplay: autoplay,
+      }
+    end
   end
 end

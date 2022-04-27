@@ -139,12 +139,14 @@ class AuthenticationOption < ApplicationRecord
   end
 
   def summarize
-    {
-      id: id,
-      credential_type: credential_type,
-      email: email,
-      hashed_email: hashed_email
-    }
+    ActiveRecord::Base.connected_to(role: :reading) do
+      {
+        id: id,
+        credential_type: credential_type,
+        email: email,
+        hashed_email: hashed_email
+      }
+    end
   end
 
   # Given credentials from OmniAuth::AuthHash or a similarly-formatted hash, updates the OAuth tokens on the AuthenticationOption.

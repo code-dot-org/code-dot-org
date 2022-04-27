@@ -532,12 +532,14 @@ class Level < ApplicationRecord
   end
 
   def summarize
-    {
-      level_id: id.to_s,
-      type: self.class.to_s,
-      name: name,
-      display_name: display_name
-    }
+    ActiveRecord::Base.connected_to(role: :reading) do
+      {
+        level_id: id.to_s,
+        type: self.class.to_s,
+        name: name,
+        display_name: display_name
+      }
+    end
   end
 
   def summarize_for_edit
