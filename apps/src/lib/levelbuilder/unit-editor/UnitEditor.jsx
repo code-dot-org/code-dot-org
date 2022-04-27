@@ -661,8 +661,9 @@ class UnitEditor extends React.Component {
         {this.props.hasCourse && (
           <CollapsibleEditorSection title="Course Type Settings">
             <p>
-              This unit is part of a course. Go to the course edit page to set
-              the course type settings for the course and its units.
+              Settings in this section change depending on whether this unit is
+              grouped with other units in a course. If this does not look as
+              expected, please add or remove this unit from a course.
             </p>
           </CollapsibleEditorSection>
         )}
@@ -724,8 +725,10 @@ class UnitEditor extends React.Component {
                 this.state.publishedState !== PublishedState.in_development && (
                   <div>
                     <p>
-                      This unit is part of a course. Go to the course edit page
-                      to publish the course and its units.
+                      Settings in this section change depending on whether this
+                      unit is grouped with other units in a course. If this does
+                      not look as expected, please add or remove this unit from
+                      a course.
                     </p>
                     {/*
                    Just use a checkbox instead of a dropdown to set the
