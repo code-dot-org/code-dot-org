@@ -27,7 +27,7 @@ class TeacherSections extends Component {
   };
 
   componentDidMount() {
-    this.props.asyncLoadSectionData();
+    this.props.asyncLoadSectionData(null, true);
   }
 
   render() {
