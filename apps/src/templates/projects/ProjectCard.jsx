@@ -130,7 +130,7 @@ const styles = {
     color: color.charcoal
   },
   lastEdit: {
-    paddingLeft: 30,
+    paddingLeft: 15,
     paddingRight: 10,
     paddingBottom: 10,
     fontSize: 11,
