@@ -4,6 +4,22 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "Curriculum Videos",
+          "details": "Some lessons currently do not have links to videos in the lesson plans or slide deck. These videos are in final production and will be linked as soon as these are available.",
+          "link": "",
+          "type": "information",
+          "visibility": "Teacher-only"
+        },
+        {
+          "notice": "More Opportunities for Feedback",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
+          "link": "",
+          "type": "feedback",
+          "visibility": "Teacher-only"
+        }
+      ],
       "curriculum_umbrella": "CSA",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -15,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-15 19:06:07 UTC",
+    "serialized_at": "2022-04-26 15:39:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -46,6 +62,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa4-2022"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Sandboxes"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa4-2022"
       }
     }
@@ -113,7 +141,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "**How can logical operators be used to evaluate multiple conditions?**\n\nStudents revisit logical operators to explore the use of the `&&` (and) and `||` (or) operators. Students use truth tables to evaluate Boolean expressions and learn about short-circuited evaluation.",
-        "preparation": "* Print copies of the Truth Tables handout (one for each student)\n* Gather sticky notes or scrap pieces of paper (one for each student)",
+        "preparation": "* Print copies of the Truth Tables handout (one for each student)\n* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up\n* Gather sticky notes or scrap pieces of paper (one for each student)",
         "student_overview": "**How can logical operators be used to evaluate multiple conditions?**\n\nYou have used the NOT ( `!` ) operator to reverse the outcome of a Boolean expression. In this lesson, you explore the use of the AND ( `&&` ) and OR ( `||` ) operators. You learn to use truth tables to evaluate Boolean expressions and the functionality of short-circuited evaluation."
       },
       "seeding_key": {
@@ -184,7 +212,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "*How can I use casting to temporarily convert a value to a different type or round to the nearest integer?*\n\nStudents learn how casting operators can be used to temporarily convert a value to a different type. Students explore the effect of using the `(int)` and `(double)` casting operators on a value and expression. Students also use casting operators to round a `double` value to the nearest integer.",
+        "overview": "**How can I use casting to temporarily convert a value to a different type or round to the nearest integer?**\n\nStudents learn how casting operators can be used to temporarily convert a value to a different type. Students explore the effect of using the `(int)` and `(double)` casting operators on a value and expression. Students also use casting operators to round a `double` value to the nearest integer.",
         "preparation": "* Print copies of the Investigating Casting handout (one for each pair of students)",
         "student_overview": "**How can I use casting to temporarily convert a value to a different type or round to the nearest integer?**\n\nSometimes we need to temporarily convert a value to a different type or round a value to the nearest integer. In this lesson, you learn about the functionality of casting operators. You explore the effect of using the `(int)` and `(double)` casting operators on a value and expression. You also use casting operators to round a `double` value to the nearest integer."
       },
@@ -221,7 +249,7 @@
       "relative_position": 10,
       "properties": {
         "overview": "**How can I specify different outcomes for different conditions?**\n\nStudents expand their knowledge of selection statements to evaluate and implement multi-selection statements. Students explore the functionality of multi-selection statements and learn to use these to test a combination of conditions. Students use multi-selection statements to implement algorithms to solve problems.",
-        "preparation": "* Print copies of the Finding Patterns handout (one for each student)\n* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Print copies of the Finding Patterns handout (one for each student)\n* Create code review groups if you are not reusing the same groups\n* Print copies of the Unit 4 Study Guide (one for each student)",
         "student_overview": "**How can I specify different outcomes for different conditions?**\n\nYou expand your knowledge of selection statements to evaluate and implement multi-selection statements. You explore the functionality of multi-selection statements and learn to use these to test a combination of conditions. You use multi-selection statements to implement algorithms to solve problems."
       },
       "seeding_key": {
@@ -319,6 +347,51 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa4-2022"
+      }
+    },
+    {
+      "key": "Console",
+      "name": "Console",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Console",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa4-2022"
+      }
+    },
+    {
+      "key": "The Neighborhood",
+      "name": "The Neighborhood",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa4-2022"
+      }
+    },
+    {
+      "key": "lesson-16",
+      "name": "The Theater",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa4-2022"
       }
     }
@@ -951,6 +1024,42 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa4-2022"
       }
+    },
+    {
+      "key": "aac62f7e-109e-4fd5-8782-7b9e1af52567",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "aac62f7e-109e-4fd5-8782-7b9e1af52567",
+        "lesson.key": "Console",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa4-2022"
+      }
+    },
+    {
+      "key": "b297621a-6af9-4ecf-acc8-e1d8e3bf0d1c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b297621a-6af9-4ecf-acc8-e1d8e3bf0d1c",
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa4-2022"
+      }
+    },
+    {
+      "key": "5a00b3aa-6217-42a0-a732-1d7560a0bb67",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5a00b3aa-6217-42a0-a732-1d7560a0bb67",
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa4-2022"
+      }
     }
   ],
   "activity_sections": [
@@ -1043,7 +1152,7 @@
       "key": "334812f6-9215-457c-85a6-18792b7250fb",
       "position": 5,
       "properties": {
-        "description": "**Do This:** Click through the animated slides to introduce the classes and methods in The Theater:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `Scene` class\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `drawImage()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The methods to draw shapes\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `playSound()` and `playNote()` methods\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `pause()` method"
+        "description": "**Do This:** Click through the animated slides to introduce the classes and methods in The Theater:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `Scene` class\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `drawImage()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The methods to draw shapes\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `playSound()` and `playNote()` methods\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `pause()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `Theater.playScenes()` method"
       },
       "seeding_key": {
         "activity_section.key": "334812f6-9215-457c-85a6-18792b7250fb",
@@ -1303,7 +1412,7 @@
       "key": "e9688d29-6cac-4e23-b3aa-d613a8c79a8c",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *The equals() Method*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Hold That Thought strategy to discuss the prompts.\n* *How could we use the `equals()` method to check if these two `Dessert` objects are equal?*\n* *What if the other `Dessert` object is `null`?*\n\n**Discussion Goal:** Students suggest overriding the `equals()` method to use `if` statements to check if the values for the instance variables are the same to determine if the two objects are equal. If the values are the same, the method should return `true`. Otherwise, it would return `false`. Students note that the method should first check if the other `Dessert` object is `null` before checking the values of the instance variables.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *The equals() Method*.\n\n**Do This:** Click through the animated slides to explain comparing `String` objects for equality:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Using the `==` operator to compare two string literals\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> How Java stores string literals in the Java String Pool\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Comparing using the `==` operator to compare string literals and `String` objects\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Comparing `String` objects for equality using the `equals()` method\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Hold That Thought strategy to discuss the prompts.\n* *How could we use the `equals()` method to check if these two `Dessert` objects are equal?*\n* *What if the other `Dessert` object is `null`?*\n\n**Discussion Goal:** Students suggest overriding the `equals()` method to use `if` statements to check if the values for the instance variables are the same to determine if the two objects are equal. If the values are the same, the method should return `true`. Otherwise, it would return `false`. Students note that the method should first check if the other `Dessert` object is `null` before checking the values of the instance variables.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2018,9 +2127,10 @@
       "key": "ada92bbd-5426-467f-b5ba-f09dee81173a",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Hold That Thought strategy to discuss the prompts.\n* *When is an instance method best to use?*\n* *Where have you seen a static method before?*\n* *When is a static method best to use?*\n\n**Discussion Goal:** Students suggest using instance methods when the behaviors need to be specific to an object instead of a class. Students recall that the `main()` method is static and note that it is static because they do not create an object to use the `main()` method. Students suggest using a static method when a behavior is not dependent on a specific object or does not require an object to be created to be used.",
+        "description": "We have used static methods with The Theater to play scenes. We are able to call the `playScenes()` method without needing to create a `Theater` object. The Theater also has a static method to extract audio samples from a sound file into an array of `double` values.",
         "duration": "15",
-        "name": "Using Static Methods"
+        "name": "Using Static Methods",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "ada92bbd-5426-467f-b5ba-f09dee81173a",
@@ -2031,8 +2141,7 @@
       "key": "f100e7b0-b01a-4b50-9e47-b4ff8254a491",
       "position": 5,
       "properties": {
-        "description": "Static methods are useful when you have a behavior for a class that does not need to work with the instance variables or instance methods of a class. Just like we can have static variables and constants that are not dependent on a specific object, we can also have static methods that are not dependent on a specific object.",
-        "remarks": true
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Introduce the classes in the `org.code.media` package.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Explain the functionality of the `read()` method in the `SoundLoader` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Click through the animated slide to explain the components of sound.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Explain the range of values that stored in the `double` array."
       },
       "seeding_key": {
         "activity_section.key": "f100e7b0-b01a-4b50-9e47-b4ff8254a491",
@@ -2400,7 +2509,7 @@
       "key": "ea41e111-0f1f-4b0a-b34b-8a0170186ff4",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What does casting mean?*\n* *Look at the Food Truck question in your activity guide. How did you round down?*\n\n**Discussion Goal:** Students share their definitions for casting and explain how they used casting to answer the Food Truck question on the Investigating Casting handout."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What does casting mean?*\n* *Look at the Food Truck question in your activity guide. How did you round down?*\n\n**Discussion Goal:** Students share their definitions for casting and explain how they used casting to answer the Food Truck question on the Investigating Casting handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *cast* and *widen*."
       },
       "seeding_key": {
         "activity_section.key": "ea41e111-0f1f-4b0a-b34b-8a0170186ff4",
@@ -2870,7 +2979,7 @@
       "key": "6346bf6e-3d13-4221-b89b-b74bd6da128e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know week.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Abstract Data Art Project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 4 Study Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know week.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Abstract Data Art Project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "6346bf6e-3d13-4221-b89b-b74bd6da128e",
@@ -3339,6 +3448,18 @@
       }
     },
     {
+      "key": "65fa7a71-3d99-48d0-b3d9-0a4050793dfa",
+      "position": 4,
+      "properties": {
+        "name": "Survey",
+        "progression_name": "Unit 4 Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "65fa7a71-3d99-48d0-b3d9-0a4050793dfa",
+        "lesson_activity.key": "936dd77f-35cc-40c5-8f4f-a844a9581f12"
+      }
+    },
+    {
       "key": "091c1b95-f13f-4561-a09f-8982446f2bd1",
       "position": 1,
       "properties": {
@@ -3542,6 +3663,48 @@
       "seeding_key": {
         "activity_section.key": "7a2f41d6-daf7-4bc1-b765-ac2529dd8169",
         "lesson_activity.key": "5e599f39-d0c9-4cdd-9bea-642a97c62d06"
+      }
+    },
+    {
+      "key": "5ee9a99f-5da9-4450-9bd9-14d75fb39809",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5ee9a99f-5da9-4450-9bd9-14d75fb39809",
+        "lesson_activity.key": "aac62f7e-109e-4fd5-8782-7b9e1af52567"
+      }
+    },
+    {
+      "key": "b72a0b94-33fa-4080-818e-bb3f375265ca",
+      "position": 1,
+      "properties": {
+        "progression_name": "With Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "b72a0b94-33fa-4080-818e-bb3f375265ca",
+        "lesson_activity.key": "b297621a-6af9-4ecf-acc8-e1d8e3bf0d1c"
+      }
+    },
+    {
+      "key": "7b8696a8-bec3-48b6-807c-f16bdb2e33a8",
+      "position": 2,
+      "properties": {
+        "progression_name": "No Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "7b8696a8-bec3-48b6-807c-f16bdb2e33a8",
+        "lesson_activity.key": "b297621a-6af9-4ecf-acc8-e1d8e3bf0d1c"
+      }
+    },
+    {
+      "key": "7e1ff15f-d39a-4a3a-bbbc-4376dfcd3309",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7e1ff15f-d39a-4a3a-bbbc-4376dfcd3309",
+        "lesson_activity.key": "5a00b3aa-6217-42a0-a732-1d7560a0bb67"
       }
     }
   ],
@@ -4773,6 +4936,31 @@
     },
     {
       "chapter": 50,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa4-2022"
+        ],
+        "progression": "Unit 4 Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csa4-2022"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa4-2022",
+        "activity_section.key": "65fa7a71-3d99-48d0-b3d9-0a4050793dfa"
+      },
+      "level_keys": [
+        "Student End of Unit Survey_csa4-2022"
+      ]
+    },
+    {
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4794,6 +4982,104 @@
       },
       "level_keys": [
         "CSA Unit 4 Assessment 2022"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2022 Console Sandbox"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2022 Console Sandbox"
+        ],
+        "lesson.key": "Console",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa4-2022",
+        "activity_section.key": "5ee9a99f-5da9-4450-9bd9-14d75fb39809"
+      },
+      "level_keys": [
+        "CSA 2022 Console Sandbox"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood Sandbox"
+        ],
+        "progression": "With Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2022 Neighborhood Sandbox"
+        ],
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa4-2022",
+        "activity_section.key": "b72a0b94-33fa-4080-818e-bb3f375265ca"
+      },
+      "level_keys": [
+        "CSA 2022 Neighborhood Sandbox"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox"
+        ],
+        "progression": "No Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa4-2022",
+        "activity_section.key": "7b8696a8-bec3-48b6-807c-f16bdb2e33a8"
+      },
+      "level_keys": [
+        "CSA 2022 Neighborhood - No Bucket Sandbox"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2022 Theater Sandbox"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2022 Theater Sandbox"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa4-2022",
+        "activity_section.key": "7e1ff15f-d39a-4a3a-bbbc-4376dfcd3309"
+      },
+      "level_keys": [
+        "CSA 2022 Theater Sandbox"
       ]
     }
   ],
@@ -5388,6 +5674,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "Student End of Unit Survey_csa4-2022",
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csa4-2022"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa4-2022",
+        "activity_section.key": "65fa7a71-3d99-48d0-b3d9-0a4050793dfa"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA Unit 4 Assessment 2022",
         "script_level.level_keys": [
           "CSA Unit 4 Assessment 2022"
@@ -5396,6 +5694,54 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa4-2022",
         "activity_section.key": "a4c257a4-edc2-47d7-b551-93f0c2797b07"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2022 Console Sandbox",
+        "script_level.level_keys": [
+          "CSA 2022 Console Sandbox"
+        ],
+        "lesson.key": "Console",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa4-2022",
+        "activity_section.key": "5ee9a99f-5da9-4450-9bd9-14d75fb39809"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2022 Neighborhood Sandbox",
+        "script_level.level_keys": [
+          "CSA 2022 Neighborhood Sandbox"
+        ],
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa4-2022",
+        "activity_section.key": "b72a0b94-33fa-4080-818e-bb3f375265ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2022 Neighborhood - No Bucket Sandbox",
+        "script_level.level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa4-2022",
+        "activity_section.key": "7b8696a8-bec3-48b6-807c-f16bdb2e33a8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2022 Theater Sandbox",
+        "script_level.level_keys": [
+          "CSA 2022 Theater Sandbox"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa4-2022",
+        "activity_section.key": "7e1ff15f-d39a-4a3a-bbbc-4376dfcd3309"
       }
     }
   ],
@@ -5698,6 +6044,30 @@
       }
     },
     {
+      "name": "CS Bingo Cards",
+      "url": "https://docs.google.com/presentation/d/1JWNIeSVRbgsusc1bQNbmAyoPecSO3nXUvSHpmc03dBY/edit?usp=sharing",
+      "key": "cs_bingo_cards_3",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "cs_bingo_cards_3"
+      }
+    },
+    {
+      "name": "CS Bingo Definitions",
+      "url": "https://docs.google.com/document/d/1fmhxQJWeJQcU-KivDSrWcp4vfi1be43RRmnrDchHnC4/edit?usp=sharing",
+      "key": "cs_bingo_definitions_3",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_bingo_definitions_3"
+      }
+    },
+    {
       "name": "Dataset Summaries",
       "url": "https://docs.google.com/document/d/1wyGaZP_Lc_aC9gjv_7PrUwH5TFy5O2USU3rqFUuKKpA/edit?usp=sharing",
       "key": "dataset_summaries",
@@ -5903,7 +6273,7 @@
     },
     {
       "name": "Unit 4 Guide",
-      "url": "https://docs.google.com/document/d/1YA_zYh2HlVntDUpFTKrFlO6He__qySBndCt1X-09BkA/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1wmJn8rKQe7ajbQC8e_V6yPAs2hGd7zaSJNyWuVNgyWc/edit?usp=sharing",
       "key": "unit_4_guide",
       "properties": {
         "audience": "Student",
@@ -5935,6 +6305,18 @@
       },
       "seeding_key": {
         "resource.key": "unit_4_presentation"
+      }
+    },
+    {
+      "name": "Unit 4 Study Guide",
+      "url": "https://docs.google.com/document/d/1O4mEEDX1Z1XFpohUwXFtMQDueRBHVvYFOybnroXVWvM/edit?usp=sharing",
+      "key": "unit_4_study_guide",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_4_study_guide"
       }
     },
     {
@@ -6051,6 +6433,12 @@
       "seeding_key": {
         "lesson.key": "lesson-12",
         "resource.key": "unit_4_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "unit_4_study_guide"
       }
     },
     {
@@ -6177,6 +6565,18 @@
       "seeding_key": {
         "lesson.key": "lesson-6",
         "resource.key": "_key_u4l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "cs_bingo_cards_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "cs_bingo_definitions_3"
       }
     },
     {
@@ -6309,7 +6709,19 @@
     },
     {
       "seeding_key": {
+        "resource.key": "unit_4_guide",
+        "script.name": "csa4-2022"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "unit_4_overview",
+        "script.name": "csa4-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_4_study_guide",
         "script.name": "csa4-2022"
       }
     }

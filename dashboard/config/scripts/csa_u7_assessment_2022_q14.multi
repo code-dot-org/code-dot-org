@@ -1,0 +1,11 @@
+name 'CSA U7 Assessment 2022 q14'
+
+wrong 'wrong'
+right 'right'
+wrong 'wrong'
+wrong 'wrong'
+wrong 'wrong'
+
+markdown <<MARKDOWN
+question
+MARKDOWN

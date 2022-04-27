@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-15 18:04:01 UTC",
+    "serialized_at": "2022-04-22 22:26:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -34,7 +34,7 @@
       "position": 1,
       "properties": {
         "display_name": "Lists",
-        "description": "### Unit Philosophy and Pedagogy\n\n* **Independent Creation and The Hackathon Project:** Much like the project in Unit 4, the \"Hackathon\" project in this unit is designed as an opportunity for students to creatively and independently build something with their programming skills. While students are asked to include some technical requirements in their program to ensure they demonstrate mastery of new programming concepts, they have free rein to choose the goals, design, and implementation of their project. To avoid asking students to complete a major programming project right before the Create PT, this hackathon is the most \"Create-PT-like\" project of the course. It is the best chance for students to practice skills like budgeting time or scoping an open-ended project. In many classrooms, if you maintain the recommended pacing of the course, this project serves as an excellent end to the first semester.\n\n* **Growing Comfort with EIPM:** By Unit 5, students (and teachers!) should be developing greater comfort with the flow of EIPM lessons. Students may begin to anticipate that sequences build towards an independent Make lesson or look forward to stepping away from computers to Explore. A nice feature of EIPM is that you will find strategies and modifications to each lesson type that work best for your students. Keep an eye out for how you and your students are developing comfort with EIPM and note strategies that help meet your classroom's needs.\n\n* **Programming with Real-world Data:** The Data Library is a new feature in App Lab for the 2020-21 school year and was designed to let students program with data from the real world. This tool aims to motivate students to build new kinds of data-powered apps that they find personally interesting. This tool also facilitates programming with lists of information since students will need to manipulate lists of data to incorporate the different data sources. Encourage students to use datasets they find personally relevant as they draw on their creative ideas for bringing data to life.\n\n\n\n### Major Assessment and Projects\n\nThe unit project asks students to spend five days as part of a \"Hackathon\" project that they have nearly complete independence to scope and design. Students must choose one dataset from the Data Library in AppLab to be a component of their project to demonstrate what they have learned about lists and list processing; otherwise, scoping the project is completely up to them. Students submit their app, project guide, and written responses to reflection questions about how the app is designed and the development process they used to make it. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* CRD-2: Developers create and innovate using an iterative design process that is user-focused, incorporating implementation/feedback cycles, which leaves ample room for experimentation and risk-taking.\n* AAP-1: To find specific solutions to generalizable problems, programmers represent and organize data in multiple ways.\n* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.\n* AAP-3: Programmers break down problems into smaller and more manageable pieces. By creating procedures and leveraging parameters, programmers generalize processes that they can reuse. Procedures allow programmers to draw upon existing code that has already been tested, allowing them to write programs more quickly and more confidently.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n* 3.2 Data Abstraction\n* 3.4 Strings\n* 3.8 Iteration\n* 3.10 Lists\n* 3.16 Simulations\n\nThe College Board has supplied formative Create PT questions to help prepare students to complete the Create Task. We recommend that students complete the following prompts with the unit project. More information can be found in Code.org CS Principles Topic Coverage.\n\n* 3.b.i\n* 3.b.ii\n* 3.b.iii\n* 3.b.iv\n* 3.b.v"
+        "description": "### Unit Philosophy and Pedagogy\n\n* **Independent Creation and The Hackathon Project:** Much like the project in Unit 4, the \"Hackathon\" project in this unit is designed as an opportunity for students to creatively and independently build something with their programming skills. While students are asked to include some technical requirements in their program to ensure they demonstrate mastery of new programming concepts, they have free rein to choose the goals, design, and implementation of their project. To avoid asking students to complete a major programming project right before the Create PT, this hackathon is the most \"Create-PT-like\" project of the course. It is the best chance for students to practice skills like budgeting time or scoping an open-ended project. In many classrooms, if you maintain the recommended pacing of the course, this project serves as an excellent end to the first semester.\n\n* **Growing Comfort with EIPM:** By Unit 5, students (and teachers!) should be developing greater comfort with the flow of EIPM lessons. Students may begin to anticipate that sequences build towards an independent Make lesson or look forward to stepping away from computers to Explore. A nice feature of EIPM is that you will find strategies and modifications to each lesson type that work best for your students. Keep an eye out for how you and your students are developing comfort with EIPM and note strategies that help meet your classroom's needs.\n\n* **Programming with Real-world Data:** The Data Library is a new feature in App Lab for the 2020-21 school year and was designed to let students program with data from the real world. This tool aims to motivate students to build new kinds of data-powered apps that they find personally interesting. This tool also facilitates programming with lists of information since students will need to manipulate lists of data to incorporate the different data sources. Encourage students to use datasets they find personally relevant as they draw on their creative ideas for bringing data to life.\n\n\n\n### Major Assessment and Projects\n\nThe unit project asks students to spend five days as part of a \"Hackathon\" project that they have nearly complete independence to scope and design. Students must choose one dataset from the Data Library in AppLab to be a component of their project to demonstrate what they have learned about lists and list processing; otherwise, scoping the project is completely up to them. Students submit their app, project guide, and written responses to reflection questions about how the app is designed and the development process they used to make it. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* CRD-2: Developers create and innovate using an iterative design process that is user-focused, incorporating implementation/feedback cycles, which leaves ample room for experimentation and risk-taking.\n* AAP-1: To find specific solutions to generalizable problems, programmers represent and organize data in multiple ways.\n* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.\n* AAP-3: Programmers break down problems into smaller and more manageable pieces. By creating procedures and leveraging parameters, programmers generalize processes that they can reuse. Procedures allow programmers to draw upon existing code that has already been tested, allowing them to write programs more quickly and more confidently.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1RniAGymLBBpIpDaNNR5Ea8CgiiUKv0tMvaDixSj6m_Q/edit?usp=sharing).\n\n* 3.2 Data Abstraction\n* 3.4 Strings\n* 3.8 Iteration\n* 3.10 Lists\n* 3.16 Simulations\n\nThe College Board has supplied formative Create PT questions to help prepare students to complete the Create Task. We recommend that students complete the following prompts with the unit project. More information can be found in Code.org CS Principles Topic Coverage.\n\n* 3.b.i\n* 3.b.ii\n* 3.b.iii\n* 3.b.iv\n* 3.b.v"
       },
       "seeding_key": {
         "lesson_group.key": "csp_lists",
@@ -767,18 +767,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "94a434a6-bb53-4cdb-b30d-f1a372851340",
-        "lesson.key": "Loops Explore",
-        "lesson_group.key": "csp_loops",
-        "script.name": "csp5-2022"
-      }
-    },
-    {
-      "key": "80dc7358-647e-446c-ba78-865443d706f8",
-      "position": 5,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "80dc7358-647e-446c-ba78-865443d706f8",
         "lesson.key": "Loops Explore",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2022"
@@ -1545,7 +1533,7 @@
       "key": "35c5717b-d8f7-4628-a8f7-23fc86e8949a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Video:** As a class watch both videos on lists. \n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n**Do This:** Review Key Takeaways and have students add to their journals: lists, element, and index.\n\n",
+        "description": "\n **Video:** As a class watch both videos on lists. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> [r introduction_to_lists_-_part_1/csp/2022]\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> [r introduction_to_lists_-_part_2/csp/2022]\n\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n**Do This:** Review Key Takeaways and have students add to their journals: lists, element, and index.\n\n",
         "name": "Video and Vocabulary\r",
         "progression_name": "Introduction to Lists"
       },
@@ -1633,7 +1621,7 @@
       "key": "22c19006-f8fd-4327-ad8a-11c9d5cbf8e2",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n**Level 1 - Video:** Show the video explaining how to determine the length of a list. \n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Levels 2 - 3: Band Namer and Outfit Picker** Assign half of the pairs to investigate the Band Namer app and half to investigate the Outfit Picker. Each pair should read the app carefully and prepare answers to the questions for their app.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Discuss:** Have pairs match up with another pair that investigated another app, forming a group of four. Each pair should spend ~5 minutes walking them through the way that the app works and what they learned specifically from answering each question. Afterwards discuss any open questions that they couldn't answer with the room.\n\n**Discussion Goal:** Use this paired-group discussion to push students on using new vocabulary associated with lists and referring/pointing to specific lines when explaining their answers to the questions. Both programs use `.length` in ways that might be challenging for students to understand. Demonstrating the difference between using `.length` and `.length-1` to the class could be useful.\n\n**Modify:** Have pairs modify the app the investigated based on the instructions for the particular app."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n**Video:** Show the video [r introduction_to_lists_-_part_4/csp/2022]. \n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Levels 1 - 2: Band Namer and Outfit Picker** Assign half of the pairs to investigate the Band Namer app and half to investigate the Outfit Picker. Each pair should read the app carefully and prepare answers to the questions for their app.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Discuss:** Have pairs match up with another pair that investigated another app, forming a group of four. Each pair should spend ~5 minutes walking them through the way that the app works and what they learned specifically from answering each question. Afterwards discuss any open questions that they couldn't answer with the room.\n\n**Discussion Goal:** Use this paired-group discussion to push students on using new vocabulary associated with lists and referring/pointing to specific lines when explaining their answers to the questions. Both programs use `.length` in ways that might be challenging for students to understand. Demonstrating the difference between using `.length` and `.length-1` to the class could be useful.\n\n**Modify:** Have pairs modify the app the investigated based on the instructions for the particular app."
       },
       "seeding_key": {
         "activity_section.key": "22c19006-f8fd-4327-ad8a-11c9d5cbf8e2",
@@ -1655,7 +1643,7 @@
       "key": "6d1472f4-b8b4-49f9-801a-519f1369c6a6",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Level 4 - Video:** Show the video explaining how to determine the length of a list. \n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Levels 5 - Pair Maker:** Have all pairs investigate this app on their own, answering the questions listed there.\n\n**Discuss:** Have pairs match up with another pair forming a group of four. The group should spend ~5 minutes discussing their responses to each of the questions. Bubble up confusion points or open questions to the room.\n\n**Discussion Goal:** Make sure students understand how the properties of the dropdown and the lists are working together in this program. Demonstrating how to find these properties and play around with them in design mode might help your students better understand the connection.\n\n**Modify:** If short on time, have students modify the default names. If not, have students modify the app to pick groups of 3 rather than 2.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Video:** Show the video [r introduction_to_lists_-_part_3/csp/2022]. \n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Levels 3 - Pair Maker:** Have all pairs investigate this app on their own, answering the questions listed there.\n\n**Discuss:** Have pairs match up with another pair forming a group of four. The group should spend ~5 minutes discussing their responses to each of the questions. Bubble up confusion points or open questions to the room.\n\n**Discussion Goal:** Make sure students understand how the properties of the dropdown and the lists are working together in this program. Demonstrating how to find these properties and play around with them in design mode might help your students better understand the connection.\n\n**Modify:** If short on time, have students modify the default names. If not, have students modify the app to pick groups of 3 rather than 2.",
         "name": "Changing Lists\r"
       },
       "seeding_key": {
@@ -1678,7 +1666,7 @@
       "key": "e6609cf8-a4c8-44b5-af05-edc29dcfbbf5",
       "position": 1,
       "properties": {
-        "description": "**Levels 6-7:** Review the patterns in these levels as a class.\n\n* Have students add any relevant notes about the patterns to their journals.\n* Discuss which of the three apps you think were using which pattern.",
+        "description": "**Levels 4-5:** Review the patterns in these levels as a class.\n\n* Have students add any relevant notes about the patterns to their journals.\n* Discuss which of the three apps you think were using which pattern.",
         "name": "Patterns Review\r"
       },
       "seeding_key": {
@@ -1848,7 +1836,7 @@
       "key": "0cab2889-3cdb-4c9d-9562-d2c0096c81b0",
       "position": 8,
       "properties": {
-        "description": "\n**Levels 8-11 List Operations:** In these levels, students work with list operations: [`appendItem()`(#BB77C7)](/docs/applab/appendItem/), [`removeItem()`(#BB77C7)](/docs/applab/removeItem/), and [`insertItem()`(#BB77C7)](/docs/applab/insertItem/)\n\n* Level 8: Students practice using [`appendItem`(#BB77C7)](/docs/applab/appendItem/) to increase the size of a list\n* Level 9: Students modify a \"Food Diary\" app so that the user can add new elements to a list\n* Level 10: Students practice using [`removeItem`(#BB77C7)](/docs/applab/removeItem/) and [`insertItem`(#BB77C7)](/docs/applab/insertItem/) to modify lists"
+        "description": "\n**Levels 8-10 List Operations:** In these levels, students work with list operations: [`appendItem()`(#BB77C7)](/docs/applab/appendItem/), [`removeItem()`(#BB77C7)](/docs/applab/removeItem/), and [`insertItem()`(#BB77C7)](/docs/applab/insertItem/)\n\n* Level 8: Students practice using [`appendItem`(#BB77C7)](/docs/applab/appendItem/) to increase the size of a list\n* Level 9: Students modify a \"Food Diary\" app so that the user can add new elements to a list\n* Level 10: Students practice using [`removeItem`(#BB77C7)](/docs/applab/removeItem/) and [`insertItem`(#BB77C7)](/docs/applab/insertItem/) to modify lists"
       },
       "seeding_key": {
         "activity_section.key": "0cab2889-3cdb-4c9d-9562-d2c0096c81b0",
@@ -1870,7 +1858,14 @@
       "key": "da689648-cedf-4467-9bd7-26d5f3ca8264",
       "position": 10,
       "properties": {
-        "progression_name": "Practice with Lists"
+        "description": "**Level 11: Putting It Together** Students complete a choice level practicing with lists\n * Level 11a - Students add code that allows the user to add songs to the Top 10 Songs.\n * Level 11b - Students debug some scrolling issues and add code to update the total number of photos on the app screen.\n * Level 11c - Students write code to add items to a list of encouragement and display a random caption on a photo.",
+        "progression_name": "Putting It Together",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Choice Level:** Some students may want to act as “helpers” to their peers, which can have both positive and negative effects. If some students act as helpers, consider having firm guidelines for both giving and receiving help, such as a “don’t touch the keyboard” rule for student helpers. You may also consider switching up who the “helpers” are so multiple students have the opportunity."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "da689648-cedf-4467-9bd7-26d5f3ca8264",
@@ -2165,7 +2160,7 @@
       "key": "a82c28cb-f9f9-4e88-9ee0-cea3e618ddb8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Video:** \tAs a class watch the video on Loops. \n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Journal:** Have students add to their journals: iteration and infinite loop. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Video:** As a class watch the video on [r using_loops/csp/2022]. \n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Journal:** Have students add to their journals: iteration and infinite loop. ",
         "name": "Introduction to Loops",
         "progression_name": "Introduction to Loops"
       },
@@ -2191,22 +2186,11 @@
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** When breaking a problem down, you often encounter elements that you want to use repeatedly in your code. Sometimes it's appropriate to write a new function; at other times it's appropriate to write a loop.\r\n\r\nThere is no hard-and-fast rule as to which is better, but what do you think? What kinds of circumstances would lead you to writing a function versus using a loop?",
         "name": "Assessment: Check For Understanding\r",
-        "progression_name": "Introduction to Loops"
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "d370fa96-5356-48e4-af39-8ad55117b7bb",
         "lesson_activity.key": "94a434a6-bb53-4cdb-b30d-f1a372851340"
-      }
-    },
-    {
-      "key": "a045310f-efab-4c5b-a8ff-eeae71799964",
-      "position": 1,
-      "properties": {
-        "progression_name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "a045310f-efab-4c5b-a8ff-eeae71799964",
-        "lesson_activity.key": "80dc7358-647e-446c-ba78-865443d706f8"
       }
     },
     {
@@ -2859,7 +2843,7 @@
       "key": "09fc7a9e-08a4-4d44-be2b-834c2997ff36",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Do This:** Review key takeaways with the class. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Video:** As a class watch the video on Traversals. \n\n**Journal:** Have students add the definition for the word traversal to their journal."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Do This:** Review key takeaways with the class. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Video:** As a class watch the video on [r processing_lists_with_loops/csp/2022]. \n\n**Journal:** Have students add the definition for the word traversal to their journal."
       },
       "seeding_key": {
         "activity_section.key": "09fc7a9e-08a4-4d44-be2b-834c2997ff36",
@@ -2879,20 +2863,8 @@
       }
     },
     {
-      "key": "8f7ce233-faed-49ce-a5c5-cbd3c5623204",
-      "position": 3,
-      "properties": {
-        "name": "Introduction to Traversal",
-        "progression_name": "Introduction to Traversal"
-      },
-      "seeding_key": {
-        "activity_section.key": "8f7ce233-faed-49ce-a5c5-cbd3c5623204",
-        "lesson_activity.key": "84edeafe-1def-4453-a5c0-e1f39ccd83e2"
-      }
-    },
-    {
       "key": "05abe352-195d-439e-9e2e-d7a496f03888",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "---"
       },
@@ -2903,7 +2875,7 @@
     },
     {
       "key": "0598160a-356d-4ee2-b3af-188911607d46",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Why is traversal with a for loop a good method for accessing and updating items in a lengthy list?",
         "name": "Assessment: Check For Understanding\r",
@@ -3130,9 +3102,15 @@
       "key": "3e8eef8b-3cb0-43af-b873-10353fc296fa",
       "position": 6,
       "properties": {
-        "description": "* **Level 7:** Choice level where students use the reduce and filter patterns to finish building an app.",
+        "description": "* **Level 7:** Choice level where students use the reduce and filter patterns to finish building an app.\n  * Level 7a - Students add code to calculate a user's average grade.\n  * Level 7b - Students add code to allow a user to look up Air Quality data from their state.\n  * Level 7c - Students update a program so that it shows average gas prices for multiple cities across the USA.",
         "name": "App Practice",
-        "progression_name": "App Practice"
+        "progression_name": "Putting It Together",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Choice Level:** Consider polling your students to see which level they would like to review as a class."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "3e8eef8b-3cb0-43af-b873-10353fc296fa",
@@ -3897,56 +3875,6 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "U5 L01 Introduction to Lists2022"
-        ],
-        "progression": "Introduction to Lists"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "U5 L01 Introduction to Lists2022"
-        ],
-        "lesson.key": "Lists Explore",
-        "lesson_group.key": "csp_lists",
-        "script.name": "csp5-2022",
-        "activity_section.key": "35c5717b-d8f7-4628-a8f7-23fc86e8949a"
-      },
-      "level_keys": [
-        "U5 L01 Introduction to Lists2022"
-      ]
-    },
-    {
-      "chapter": 2,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "Introduction to Lists - Part 22022"
-        ],
-        "progression": "Introduction to Lists"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Introduction to Lists - Part 22022"
-        ],
-        "lesson.key": "Lists Explore",
-        "lesson_group.key": "csp_lists",
-        "script.name": "csp5-2022",
-        "activity_section.key": "35c5717b-d8f7-4628-a8f7-23fc86e8949a"
-      },
-      "level_keys": [
-        "Introduction to Lists - Part 22022"
-      ]
-    },
-    {
-      "chapter": 3,
-      "position": 3,
-      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -3969,34 +3897,9 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "Introduction to Lists - Part 42022"
-        ],
-        "progression": "Accessing Lists"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Introduction to Lists - Part 42022"
-        ],
-        "lesson.key": "Lists Investigate",
-        "lesson_group.key": "csp_lists",
-        "script.name": "csp5-2022",
-        "activity_section.key": "1ae07a66-84d4-43ec-8ff9-f90d20f4a93e"
-      },
-      "level_keys": [
-        "Introduction to Lists - Part 42022"
-      ]
-    },
-    {
-      "chapter": 5,
-      "position": 2,
-      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4019,9 +3922,9 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 3,
-      "activity_section_position": 3,
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4044,34 +3947,9 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 4,
+      "chapter": 4,
+      "position": 3,
       "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "Introduction to Lists - Part 32022"
-        ],
-        "progression": "Changing Lists"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Introduction to Lists - Part 32022"
-        ],
-        "lesson.key": "Lists Investigate",
-        "lesson_group.key": "csp_lists",
-        "script.name": "csp5-2022",
-        "activity_section.key": "c91eb834-3b5f-4870-b8e5-1393a315b29a"
-      },
-      "level_keys": [
-        "Introduction to Lists - Part 32022"
-      ]
-    },
-    {
-      "chapter": 8,
-      "position": 5,
-      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4094,8 +3972,8 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 6,
+      "chapter": 5,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4119,8 +3997,8 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 7,
+      "chapter": 6,
+      "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -4144,7 +4022,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4169,7 +4047,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 8,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4194,7 +4072,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 9,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4219,7 +4097,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 10,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -4244,7 +4122,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 11,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -4269,7 +4147,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 12,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4294,7 +4172,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 13,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -4319,7 +4197,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 14,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4344,7 +4222,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 15,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -4369,7 +4247,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 16,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -4394,7 +4272,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 17,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -4402,7 +4280,7 @@
         "level_keys": [
           "CSP U5L3 Choice"
         ],
-        "progression": "Practice with Lists"
+        "progression": "Putting It Together"
       },
       "bonus": false,
       "seeding_key": {
@@ -4419,7 +4297,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 18,
       "position": 12,
       "activity_section_position": 1,
       "assessment": true,
@@ -4444,7 +4322,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 19,
       "position": 13,
       "activity_section_position": 2,
       "assessment": true,
@@ -4469,7 +4347,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4494,7 +4372,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4519,33 +4397,8 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 22,
       "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csp_applab_loops2022"
-        ],
-        "progression": "Introduction to Loops"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csp_applab_loops2022"
-        ],
-        "lesson.key": "Loops Explore",
-        "lesson_group.key": "csp_loops",
-        "script.name": "csp5-2022",
-        "activity_section.key": "a82c28cb-f9f9-4e88-9ee0-cea3e618ddb8"
-      },
-      "level_keys": [
-        "csp_applab_loops2022"
-      ]
-    },
-    {
-      "chapter": 27,
-      "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -4562,14 +4415,14 @@
         "lesson.key": "Loops Explore",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2022",
-        "activity_section.key": "a045310f-efab-4c5b-a8ff-eeae71799964"
+        "activity_section.key": "d370fa96-5356-48e4-af39-8ad55117b7bb"
       },
       "level_keys": [
         "U3L5 CSP CFU Looping2022"
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4594,7 +4447,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 24,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4619,7 +4472,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 25,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4644,7 +4497,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 26,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -4669,7 +4522,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4694,7 +4547,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4719,7 +4572,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 29,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4744,7 +4597,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 30,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4769,7 +4622,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 31,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4794,7 +4647,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 32,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -4819,7 +4672,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 33,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -4844,7 +4697,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 34,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4869,7 +4722,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 35,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -4894,7 +4747,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 36,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
@@ -4919,7 +4772,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 37,
       "position": 11,
       "activity_section_position": 2,
       "assessment": true,
@@ -4944,7 +4797,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4969,7 +4822,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4994,33 +4847,8 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 40,
       "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "Processing Lists with Loops2022"
-        ],
-        "progression": "Introduction to Traversal"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Processing Lists with Loops2022"
-        ],
-        "lesson.key": "Traversals Explore",
-        "lesson_group.key": "csp_traversals",
-        "script.name": "csp5-2022",
-        "activity_section.key": "8f7ce233-faed-49ce-a5c5-cbd3c5623204"
-      },
-      "level_keys": [
-        "Processing Lists with Loops2022"
-      ]
-    },
-    {
-      "chapter": 46,
-      "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -5044,7 +4872,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5069,7 +4897,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 42,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5094,7 +4922,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 43,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5119,7 +4947,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 44,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5144,7 +4972,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 45,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5169,7 +4997,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 46,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5194,7 +5022,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 47,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -5219,7 +5047,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5244,7 +5072,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 49,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5269,7 +5097,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 50,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5294,7 +5122,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 51,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5319,7 +5147,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 52,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -5344,7 +5172,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 53,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -5369,7 +5197,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 54,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5377,7 +5205,7 @@
         "level_keys": [
           "CSP U5L11 Traversals App Practice Choice"
         ],
-        "progression": "App Practice"
+        "progression": "Putting It Together"
       },
       "bonus": false,
       "seeding_key": {
@@ -5394,7 +5222,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 55,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -5419,7 +5247,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5444,7 +5272,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 57,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5469,7 +5297,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5494,7 +5322,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5519,7 +5347,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5544,7 +5372,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 61,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5569,7 +5397,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 62,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5594,7 +5422,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5619,11 +5447,14 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey_csp5-2022"
+        ],
         "progression": "Post-Course Survey Instructions"
       },
       "bonus": false,
@@ -5644,30 +5475,6 @@
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "U5 L01 Introduction to Lists2022",
-        "script_level.level_keys": [
-          "U5 L01 Introduction to Lists2022"
-        ],
-        "lesson.key": "Lists Explore",
-        "lesson_group.key": "csp_lists",
-        "script.name": "csp5-2022",
-        "activity_section.key": "35c5717b-d8f7-4628-a8f7-23fc86e8949a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Introduction to Lists - Part 22022",
-        "script_level.level_keys": [
-          "Introduction to Lists - Part 22022"
-        ],
-        "lesson.key": "Lists Explore",
-        "lesson_group.key": "csp_lists",
-        "script.name": "csp5-2022",
-        "activity_section.key": "35c5717b-d8f7-4628-a8f7-23fc86e8949a"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "csp-20-21-u5-assess-lists2022",
         "script_level.level_keys": [
           "csp-20-21-u5-assess-lists2022"
@@ -5676,18 +5483,6 @@
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2022",
         "activity_section.key": "962a219b-e36e-46c2-bab5-4b9fa3e327b2"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Introduction to Lists - Part 42022",
-        "script_level.level_keys": [
-          "Introduction to Lists - Part 42022"
-        ],
-        "lesson.key": "Lists Investigate",
-        "lesson_group.key": "csp_lists",
-        "script.name": "csp5-2022",
-        "activity_section.key": "1ae07a66-84d4-43ec-8ff9-f90d20f4a93e"
       }
     },
     {
@@ -5712,18 +5507,6 @@
         "lesson_group.key": "csp_lists",
         "script.name": "csp5-2022",
         "activity_section.key": "1ae07a66-84d4-43ec-8ff9-f90d20f4a93e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Introduction to Lists - Part 32022",
-        "script_level.level_keys": [
-          "Introduction to Lists - Part 32022"
-        ],
-        "lesson.key": "Lists Investigate",
-        "lesson_group.key": "csp_lists",
-        "script.name": "csp5-2022",
-        "activity_section.key": "c91eb834-3b5f-4870-b8e5-1393a315b29a"
       }
     },
     {
@@ -5944,18 +5727,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_applab_loops2022",
-        "script_level.level_keys": [
-          "csp_applab_loops2022"
-        ],
-        "lesson.key": "Loops Explore",
-        "lesson_group.key": "csp_loops",
-        "script.name": "csp5-2022",
-        "activity_section.key": "a82c28cb-f9f9-4e88-9ee0-cea3e618ddb8"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "U3L5 CSP CFU Looping2022",
         "script_level.level_keys": [
           "U3L5 CSP CFU Looping2022"
@@ -5963,7 +5734,7 @@
         "lesson.key": "Loops Explore",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2022",
-        "activity_section.key": "a045310f-efab-4c5b-a8ff-eeae71799964"
+        "activity_section.key": "d370fa96-5356-48e4-af39-8ad55117b7bb"
       }
     },
     {
@@ -6168,18 +5939,6 @@
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2022",
         "activity_section.key": "5d2af020-451f-4e1e-91d3-f3c09c603625"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Processing Lists with Loops2022",
-        "script_level.level_keys": [
-          "Processing Lists with Loops2022"
-        ],
-        "lesson.key": "Traversals Explore",
-        "lesson_group.key": "csp_traversals",
-        "script.name": "csp5-2022",
-        "activity_section.key": "8f7ce233-faed-49ce-a5c5-cbd3c5623204"
       }
     },
     {
@@ -6486,7 +6245,7 @@
   "resources": [
     {
       "name": "All Resources",
-      "url": "/s/csp5-2021/resources",
+      "url": "/s/csp5-2022/resources",
       "key": "all_resources_4",
       "properties": {
         "is_rollup": true
@@ -6497,7 +6256,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/csp5-2021/standards",
+      "url": "/s/csp5-2022/standards",
       "key": "all_standards_4",
       "properties": {
         "is_rollup": true
@@ -6520,11 +6279,9 @@
     },
     {
       "name": "CSP Curriculum Guide",
-      "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1s5w7_UnVIGHOdkqCtK2O78rQ7JJFAWlOeZkZNsCovOY/preview",
       "key": "csp_curriculum_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csp_curriculum_guide"
@@ -6610,10 +6367,11 @@
     },
     {
       "name": "CSP Unit 5 - Lists Loops, and Traversals",
-      "url": "https://docs.google.com/presentation/d/1DABkbjVXjTM7FkPeNN1PavV3BWKsOWFyNksWW4UDdQk/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1va0YG_3b8nc4Uu1hV8L7xkZldDy7WYl19qywGSI-RHc/view",
       "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1va0YG_3b8nc4Uu1hV8L7xkZldDy7WYl19qywGSI-RHc/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -6635,7 +6393,7 @@
     },
     {
       "name": "Guide to EIPM Lessons",
-      "url": "https://www.youtube.com/watch?v=OTvi0XRTIjA",
+      "url": "https://www.youtube.com/playlist?list=PLzdnOPI1iJNeqEl6MN7c2KyM3gdBSo8t3",
       "key": "guide_to_eipm_lessons",
       "properties": {
         "audience": "Teacher",
@@ -6672,7 +6430,7 @@
       }
     },
     {
-      "name": "Introduction to Lists - Part 3",
+      "name": "Introduction to Lists - Assigning and Updating",
       "url": "https://youtu.be/rWSsVSMGXXY",
       "key": "introduction_to_lists_-_part_3",
       "properties": {
@@ -6685,7 +6443,7 @@
       }
     },
     {
-      "name": "Introduction to Lists - Part 4",
+      "name": "Introduction to Lists - Getting Length",
       "url": "https://youtu.be/H__zi1BiXJM",
       "key": "introduction_to_lists_-_part_4",
       "properties": {
@@ -6710,7 +6468,7 @@
       }
     },
     {
-      "name": "Processing Lists with Loops",
+      "name": "Introduction to Traversal",
       "url": "https://youtu.be/RQ6GJt9f2vg",
       "key": "processing_lists_with_loops",
       "properties": {
@@ -6829,18 +6587,6 @@
       },
       "seeding_key": {
         "resource.key": "using_loops"
-      }
-    },
-    {
-      "name": "Virtual Modification Resources",
-      "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
-      "key": "virtual_modification_resources",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "virtual_modification_resources"
       }
     }
   ],
@@ -7144,12 +6890,6 @@
     {
       "seeding_key": {
         "resource.key": "teacher_forum",
-        "script.name": "csp5-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "virtual_modification_resources",
         "script.name": "csp5-2022"
       }
     }

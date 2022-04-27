@@ -9,6 +9,7 @@ import {handleException} from './javabuilderExceptionHandler';
 import project from '@cdo/apps/code-studio/initApp/project';
 import javalabMsg from '@cdo/javalab/locale';
 import {onTestResult} from './testResultHandler';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 // Creates and maintains a websocket connection with javabuilder while a user's code is running.
 export default class JavabuilderConnection {
@@ -22,7 +23,9 @@ export default class JavabuilderConnection {
     setIsRunning,
     setIsTesting,
     executionType,
-    miniAppType
+    miniAppType,
+    currentUser,
+    onMarkdownLog
   ) {
     this.channelId = project.getCurrentId();
     this.javabuilderUrl = javabuilderUrl;
@@ -35,6 +38,8 @@ export default class JavabuilderConnection {
     this.setIsTesting = setIsTesting;
     this.executionType = executionType;
     this.miniAppType = miniAppType;
+    this.currentUser = currentUser;
+    this.onMarkdownLog = onMarkdownLog;
   }
 
   // Get the access token to connect to javabuilder and then open the websocket connection.
@@ -110,9 +115,9 @@ export default class JavabuilderConnection {
       .done(result => this.establishWebsocketConnection(result.token))
       .fail(error => {
         if (error.status === 403) {
-          this.onOutputMessage(
-            javalabMsg.errorJavabuilderConnectionNotAuthorized()
-          );
+          // Send unauthorized message as markdown as some unauthorized messages contain links
+          // for further details.
+          this.onMarkdownLog(this.getUnauthorizedMessage());
           this.onNewlineMessage();
         } else {
           this.onOutputMessage(javalabMsg.errorJavabuilderConnectionGeneral());
@@ -333,5 +338,17 @@ export default class JavabuilderConnection {
     }
     this.onOutputMessage(`${STATUS_MESSAGE_PREFIX} ${message}`);
     this.onNewlineMessage();
+  }
+
+  getUnauthorizedMessage() {
+    if (this.currentUser.signInState === SignInState.SignedIn) {
+      if (this.currentUser.userType === 'teacher') {
+        return javalabMsg.unauthorizedJavabuilderConnectionTeacher();
+      } else {
+        return javalabMsg.unauthorizedJavabuilderConnectionStudent();
+      }
+    } else {
+      return javalabMsg.unauthorizedJavabuilderConnectionNotLoggedIn();
+    }
   }
 }
