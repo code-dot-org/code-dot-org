@@ -1,35 +1,39 @@
 :scss
-  .dcdo-padding {
-    padding: 5px;
-  }
+  .dcdo-list {
+    .dcdo-padding {
+      padding: 10px;
+      margin: auto 0;
+    }
 
-  .dcdo-row {
-    display: grid;
-    grid-template-columns: 300px 300px 100px;
-  }
+    .dcdo-row {
+      display: grid;
+      grid-template-columns: 300px 300px 100px;
+      border-bottom: 1px solid #eee;
+    }
 
-  .dcdo-key {
-    border: 1px solid black;
-  }
+    .dcdo-submit-button {
+      margin: auto;
+    }
 
-  .dcdo-value {
-    border: 1px solid black;
-  }
-
-  .dcdo-update-button {
-    border: 1px solid black;
+    form, input {
+      margin: 0;
+    }
   }
 
 .dcdo-list
   %h3 DCDO Flags
   %div
+    %div{:class => %w[dcdo-row]}
+      %div{:class => %w[dcdo-label dcdo-padding]} Key
+      %div{:class => %w[dcdo-label dcdo-padding]} Value
+      %div{:class => %w[dcdo-label]}
     = form_for :add, :url => {:controller => 'dynamic_config', :action => 'dcdo_set'} do |f|
       %div{:class => %w[dcdo-row]}
         %div{:class => %w[dcdo-key dcdo-padding]}
-          %input{:type => "text", :name => "key", :placeholder => "key"}
+          %input{:type => "text", :name => "key", :placeholder => "new key"}
         %div{:class => %w[dcdo-value dcdo-padding]}
           %input{:type => "text", :placeholder => "value", :name => "value"}
-        %div{:class => %w[dcdo-update-button dcdo-padding]}
+        %div{:class => %w[dcdo-submit-button dcdo-padding]}
           %input{:type => "submit", :value => "Add", :class => "btn"}
     - @dcdo_hsh.to_a.sort.each do |key, value|
       = form_for :add, :url => {:controller => 'dynamic_config', :action => 'dcdo_set'} do |f|
@@ -38,5 +42,5 @@
           %div{:class => %w[dcdo-value dcdo-padding]}
             %input{:type => "text", :name => "key", :style => "display: none", :value => key}
             %input{:type => "text", :placeholder => "value", :name => "value", :value => value.to_json}
-          %div{:class => %w[dcdo-update-button dcdo-padding]}
+          %div{:class => %w[dcdo-submit-button dcdo-padding]}
             %input{:type => "submit", :value => "Update", :class => "btn"}
