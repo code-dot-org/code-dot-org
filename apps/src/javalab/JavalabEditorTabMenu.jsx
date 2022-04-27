@@ -2,12 +2,13 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import JavalabDropdown from './components/JavalabDropdown';
 import javalabMsg from '@cdo/javalab/locale';
+import onClickOutside from 'react-onclickoutside';
 
 /**
  * A menu with a set of clickable links that calls the cancel handler if you
  * click outside the menu or the cancel button.
  */
-export default class JavalabEditorTabMenu extends Component {
+class JavalabEditorTabMenu extends Component {
   static propTypes = {
     cancelTabMenu: PropTypes.func.isRequired,
     renameFromTabMenu: PropTypes.func.isRequired,
@@ -20,6 +21,10 @@ export default class JavalabEditorTabMenu extends Component {
 
   state = {
     dropdownOpen: false
+  };
+
+  handleClickOutside = () => {
+    this.props.cancelTabMenu();
   };
 
   dropdownElements = () => {
@@ -103,3 +108,5 @@ export default class JavalabEditorTabMenu extends Component {
     return <JavalabDropdown>{this.dropdownElements()}</JavalabDropdown>;
   }
 }
+
+export default onClickOutside(JavalabEditorTabMenu);
