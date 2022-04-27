@@ -85,7 +85,9 @@ class Lesson < ApplicationRecord
   # absolute_position of 3 but a relative_position of 1
   acts_as_list scope: :script, column: :absolute_position
 
-  validates_uniqueness_of :key, scope: :script_id
+  validates_uniqueness_of :key, scope: :script_id, message: ->(object, _data) do
+    "lesson with key #{object.key.inspect} is already taken within unit #{object.script&.name.inspect}"
+  end
 
   include CodespanOnlyMarkdownHelper
 

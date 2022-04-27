@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-23 23:47:47 UTC",
+    "serialized_at": "2022-04-26 14:46:52 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -5299,6 +5299,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csa8-2022/resources",
+      "key": "all_resources_12",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_12"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa8-2022/standards",
+      "key": "all_standards_11",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_11"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa8-2022/vocab",
+      "key": "all_vocabulary_11",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_11"
+      }
+    },
+    {
       "name": "Binary Search",
       "url": "https://docs.google.com/document/d/1gQEFtKMJbcL2Yq10YeLJVtId8D3enHlA9_CgEFpFeYE/edit?usp=sharing",
       "key": "binary_search",
@@ -5920,6 +5953,24 @@
     }
   ],
   "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_12",
+        "script.name": "csa8-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_11",
+        "script.name": "csa8-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_11",
+        "script.name": "csa8-2022"
+      }
+    },
     {
       "seeding_key": {
         "resource.key": "unit_8_guide",
