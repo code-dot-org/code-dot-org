@@ -2,20 +2,36 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\nThen, experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. first thing\r\n\r\n2. second thing\r\n\r\n3. third thing\r\n\r\n##Getting Started\r\n1. Import `SomeClass.java`(#e7e8ea) from the ![Backpack](https://images.code.org/b17feeef2e8db2a98abdb4a5860c5c61-image-1642175705297.png)\r\n\r\n*Don't have it or it doesn't work? That's ok! Just copy and paste the code from [**here**](https://linktocode.com).*\r\n\r\n##In MyConsole.java:\r\n\r\n2. first step\r\n\r\n3. second step\r\n\r\n4. third step\r\n\r\n::: details [**Show Me How**]\r\nA `for`(#e7e8ea) loop uses the following syntax:\r\n  \r\n  ```\r\n  for (int variableName = startingValue; condition; variableName_change) {\r\n    // code to execute\r\n  }\r\n  ```\r\n\r\nBe sure to change `variableName`(#e7e8ea) to a name you can easily identify, such as `index`(#e7e8ea), and set the `startingValue`(#e7e8ea) to the value you want to start the loop.\r\n:::",
+    "long_instructions": "A social media analyst wants to store data about the age groups of users on different social media platforms to create a visual to represent each platform. They have the following values:\r\n\r\n![](https://images.code.org/76ef5d2f4378239d7734f70de16556c9-image-1650990198797.png)\r\n\r\nwhere each row represents ages 18-29, ages 30-49, ages 50-64, and ages 65 and up, respectively. Each column represents the percentages of users on Facebook, YouTube, Twitter, and Instagram, respectively.\r\n\r\n##In SocialMediaScene.java:\r\n\r\n1. Write the `createScene()`(#e7e8ea) method to find the largest percentage of users for each social media platform.\r\n\r\n   * Draw the appropriate icon from the `icons`(#e7e8ea) array based on the column.\r\n   \r\n   * Use the `drawText(String text, int x, int y)`(#e7e8ea) in the `Scene`(#e7e8ea) class to write the age group from the `ageGroup`(#e7e8ea) array based on the row and the largest percentage for that social media platform.\r\n\r\n::: details [**Show Me How**]\r\nTraversing a 2D array in column-major order uses the following syntax:\r\n  \r\n  ```\r\n  for (int col = 0; col < arrayName[0].length; col++) {\r\n    for (int row = 0; row < arrayName.length; row++) {\r\n      // code to execute\r\n    }\r\n  }\r\n  ```\r\n:::",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
-    "csa_view_mode": "console",
-    "encrypted_examples": [
-
-    ]
+    "csa_view_mode": "theater",
+    "display_name": "Social Media Users",
+    "bubble_choice_description": "Write a method to find age group with the largest percentage of users for each social media platform and create a scene to visualize the results.",
+    "thumbnail_url": "https://images.code.org/555c9c7bbec2eaf3760ae4df3c33bbfb-image-1650990657328.png",
+    "starter_assets": {
+      "facebook.png": "25a11c02-6b9c-4651-a2ba-d76c21b21c23.png",
+      "youtube.png": "9738e002-cbdf-4791-bd76-2dea6a21bbca.png",
+      "twitter.png": "3eeccb2a-943d-413e-a1e2-52c7845171a0.png",
+      "instagram.png": "a9042a03-a899-467e-a547-46eed2d03ab6.png"
+    },
+    "start_sources": {
+      "MyTheater.java": {
+        "text": "import org.code.theater.*;\n\npublic class MyTheater {\n  public static void main(String[] args) {\n\n    String[] icons = {\"facebook.png\", \"youtube.png\", \"twitter.png\", \"instagram.png\"};\n    String[] ageGroups = {\"18-29\", \"30-49\", \"50-64\", \"65 and up\"};\n    int[][] percentages = {{22, 29, 39, 47}, {41, 38, 37, 37},\n                           {23, 21, 18, 12}, {15, 12, 6, 4}};\n\n    SocialMediaScene myScene = new SocialMediaScene(icons, ageGroups, percentages);\n\n    myScene.createScene();\n\n    Theater.playScenes(myScene);\n    \n  }\n}",
+        "isVisible": true
+      },
+      "SocialMediaScene.java": {
+        "text": "import org.code.theater.*;\n\n/*\n * Creates a scene based on which social media platform\n * has the largest percentage of users in an age group\n */\npublic class SocialMediaScene extends Scene {\n\n  private String[] icons;        // The list of social media icons\n  private String[] ageGroups;    // The list of age groups\n  private int[][] percentages;   // The 2D array of age group percentages\n\n  /*\n   * Constructor to create a SocialMediaScene with the specified\n   * array of icons, age groups, and 2D array of age group percentages\n   */\n  public SocialMediaScene(String[] icons, String[] ageGroups, int[][] percentages) {\n    this.icons = icons;\n    this.ageGroups = ageGroups;\n    this.percentages = percentages;\n  }\n\n  /*\n   * Creates a scene to show each social media platform\n   * and their largest percentage of users in an age group\n   */ \n  public void createScene() {\n    // TO DO #1: Find which age group has the largest percentage of users for each\n    // social media platform and draw the appropriate icon and text based on the result.\n\n    \n  }\n  \n}\n",
+        "isVisible": true
+      }
+    }
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-04-12T19:01:04.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-04-12T19:01:04.349+00:00\",\"changed\":[\"cloned from \\\"CSA U5L3-L4b_2022\\\"\"],\"cloned_from\":\"CSA U5L3-L4b_2022\"},{\"changed_at\":\"2022-04-12 19:08:20 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-04-12T19:01:04.349+00:00\",\"changed\":[\"cloned from \\\"CSA U5L3-L4b_2022\\\"\"],\"cloned_from\":\"CSA U5L3-L4b_2022\"},{\"changed_at\":\"2022-04-12 19:08:20 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-27 15:16:16 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-27 16:54:05 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-27 18:14:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
