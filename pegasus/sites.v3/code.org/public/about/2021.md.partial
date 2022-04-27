@@ -20,7 +20,7 @@ social:
 
 In the nine years since Code.org launched, computer science has become the fastest-growing subject in primary and secondary education, globally. Over 70 countries have announced plans for computer science, and millions of teachers have begun teaching CS in their classrooms. In the US, AP Computer Science has grown 10-fold in under a decade.
 
-In 2021, we were inspired by the connections computer science has to every facet of our lives. 
+In 2021, we were inspired by the connections computer science has to every facet of our lives.
 
 From the depths of outer space to the devices in our hands, computer science impacts so many different subjects and fields. This year for Hour of Code, we saw students get inspired by how CS touches their lives, too, with more than 85,000 events across 164 countries.
 
@@ -28,7 +28,7 @@ With two new programs this year, we hope students continue to explore the wide w
 
 In the U.S., momentum for the CS movement is happening outside of Code.org, too, thanks to the hard work and collaboration of our partners in advocacy. For the first time ever, a majority of all U.S. high schools now offer foundational computer science—up from 10% when we started this work. Findings from our <a href="https://advocacy.code.org/stateofcs" target="_blank">2021 State of Computer Science Education</a> report show how far we’ve come, and outline the work that needs to be done to improve access and participation for every student.
 
-As part of our effort to address equity in CS, we began developing a first-of-its-kind curriculum for the AP Computer Science A (CSA) Java programming course with an intentional focus on increasing student access, participation, and diversity. At a time when AP CSA has extremely low representation of young women and students from underrepresented racial and ethnic groups, we believe we can reimagine how this content is taught to change the face of computing and broaden access to underserved students. 
+As part of our effort to address equity in CS, we began developing a first-of-its-kind curriculum for the AP Computer Science A (CSA) Java programming course with an intentional focus on increasing student access, participation, and diversity. At a time when AP CSA has extremely low representation of young women and students from underrepresented racial and ethnic groups, we believe we can reimagine how this content is taught to change the face of computing and broaden access to underserved students.
 
 Millions of teachers and educators, our Regional Partner and International Partner networks, and hundreds of other partner organizations have helped this movement grow. Yet there is still a long way to go to reach universal access and balanced representation. We are thankful to every partner and supporter behind the vision that every student in every school should have the opportunity to learn computer science.
 
@@ -50,12 +50,12 @@ To help students make meaningful connections between CS and other disciplines �
 <div class="color-block bt0">
   <p class="callout-quote">Coming out of a pandemic, this allowed students to <em>see a real-world future in programming</em> and impacting students of the next generation. They loved it and made huge connections — even as K-12 students</p>
   <p class="callout-attrib"><strong>— Elementary school teacher, Virginia</strong></p>
-</div>  
+</div>
 
 
 
 <h2 class="highlight">We celebrated 2 million teachers on Code.org</h2>
-In 2021, we celebrated 2 million teachers with accounts on Code.org! To every teacher who has taught a Code.org course, hosted an Hour of Code, taken a Professional Development workshop, or been a champion of CS at their school, we say thank you! 
+In 2021, we celebrated 2 million teachers with accounts on Code.org! To every teacher who has taught a Code.org course, hosted an Hour of Code, taken a Professional Development workshop, or been a champion of CS at their school, we say thank you!
 
 <figure class="centerspot">
   <img src="/images/AR2021/fit-580/twomillion2021.png" alt="Illustration of a computer"/>
@@ -75,7 +75,7 @@ The curriculum considers cultural references and learning styles in every facet.
 <h2 class="highlight">We showed students CS in the real world</h2>
 We're excited to help bring computer science lessons to life for students of all ages. <a href="https://code.org/csjourneys" target="_blank">CS Journeys</a> is a program designed for students to explore how CS impacts their world and envision their own future possibilities.
 
-From virtual field trips with NASA and live class chats with Star Wars creators, students are encouraged to uncover CS in unexpected places. We hope these unique experiences will inspire students to continue their CS journey, both in the classroom and beyond. 
+From virtual field trips with NASA and live class chats with Star Wars creators, students are encouraged to uncover CS in unexpected places. We hope these unique experiences will inspire students to continue their CS journey, both in the classroom and beyond.
 
 <figure class="centerspot">
   <img src="/images/AR2021/fit-580/threegirlswithtablets2021.jpg" alt="Three smiling girls sitting outside with tablets"/>
@@ -84,7 +84,7 @@ From virtual field trips with NASA and live class chats with Star Wars creators,
 
 
 <h2 class="highlight">We outlined ambitious goals to transform global CS education</h2>
-We envision a world where computer science is a fundamental part of the education system, and we plan to grow in order to pursue strategies to unlock this potential. For a close look at our goals in closing gaps and increasing opportunity, you can review the ambitious <a href="https://code.org/files/2025goals.pdf" target="_blank">2025 goals</a> we've detailed and how we determined those goals. In light of the COVID-19 setback to the global education system, the goals we set in 2020 are likely too ambitious. Our Board of directors will discuss whether we revise the timeline for these goals. We want goals that are aspirational and achievable. We've also identified a number of large-scale, multiyear projects that would enable Code.org to reach an even greater scale in making CS a standard in education globally. Read about them in our <a href="https://code.org/files/bigbets.pdf" target="_blank">Big Bets in Computer Science Education</a> summary. 
+We envision a world where computer science is a fundamental part of the education system, and we plan to grow in order to pursue strategies to unlock this potential. For a close look at our goals in closing gaps and increasing opportunity, you can review the ambitious <a href="https://code.org/files/2025goals.pdf" target="_blank">2025 goals</a> we've detailed and how we determined those goals. In light of the COVID-19 setback to the global education system, the goals we set in 2020 are likely too ambitious. Our Board of directors will discuss whether we revise the timeline for these goals. We want goals that are aspirational and achievable. We've also identified a number of large-scale, multiyear projects that would enable Code.org to reach an even greater scale in making CS a standard in education globally. Read about them in our <a href="https://code.org/files/bigbets.pdf" target="_blank">Big Bets in Computer Science Education</a> summary.
 
 
 
@@ -101,7 +101,7 @@ This year, our founder and CEO Hadi Partovi <a href="https://codeorg.medium.com/
 
 
 <h2 class="highlight">We reported on foundational CS course participation by demographics and passed policy in most states</h2>
-We developed and produced the 5th annual <a href="https://advocacy.code.org/stateofcs" target="_blank">State of Computer Science Education</a> report in partnership with the CSTA and ECEP Alliance. The report includes state policy data and Access Report data. For the first time, we reported on enrollment in foundational computer science courses overall and by demographics. 
+We developed and produced the 5th annual <a href="https://advocacy.code.org/stateofcs" target="_blank">State of Computer Science Education</a> report in partnership with the CSTA and ECEP Alliance. The report includes state policy data and Access Report data. For the first time, we reported on enrollment in foundational computer science courses overall and by demographics.
 
 <section class="flex stateofcs-report">
   <figure>
@@ -128,14 +128,14 @@ This year, students and teachers used Hour of Code to explore the relationship t
 <div class="color-block bp0">
   <p class="callout-quote">It was fun to watch students who struggle with other aspects of school <em>really shine</em> when doing the Hour of Code!</p>
   <p class="callout-attrib"><strong>— Elementary school teacher, Georgia</strong></p>
-</div>  
+</div>
 
 Hour of Code 2021 was a rousing success, with more than 85,000 events registered across 164 countries!
 
 
 
 <h2 class="highlight">We saw large growth in international usage on our platform</h2>
-Last year was the first time in Code.org history there were more new accounts created from outside the U.S. The percentage of new teacher accounts from outside the U.S. grew to 70% in 2021. Non-U.S. usage of Code.org-created Hour of Code tutorials was 62% of total use. 
+Last year was the first time in Code.org history there were more new accounts created from outside the U.S. The percentage of new teacher accounts from outside the U.S. grew to 70% in 2021. Non-U.S. usage of Code.org-created Hour of Code tutorials was 62% of total use.
 
 <figure class="centerspot">
   <img src="/images/AR2021/fit-580/intlusage2021.png" alt="CEO Hadi Partovi and a student at a computer"/>
@@ -146,19 +146,19 @@ Last year was the first time in Code.org history there were more new accounts cr
 <h2 class="highlight">We achieved milestones in our localization work and continued to drive systemic change</h2>
 We hit our goal of translating our primary education content into 30 languages leading to large increases in CS Fundamentals usage (especially in South Korea, Japan, Poland, France, and Brazil).
 
-In 2021, Code.org contributed to and helped launch <a href="https://www.brookings.edu/essay/building-skills-for-life-how-to-expand-and-improve-computer-science-education-around-the-world/" target="_blank">the global CS report created by the Brookings Institute</a>, which validated that 70 countries already teach CS in primary, secondary, or both. We also worked with the Inter-American Development Bank to author an assessment of CS education in seven Caribbean countries, which will result in a two-country pilot and recommendations for ministries of education to adopt CS. 
+In 2021, Code.org contributed to and helped launch <a href="https://www.brookings.edu/essay/building-skills-for-life-how-to-expand-and-improve-computer-science-education-around-the-world/" target="_blank">the global CS report created by the Brookings Institute</a>, which validated that 70 countries already teach CS in primary, secondary, or both. We also worked with the Inter-American Development Bank to author an assessment of CS education in seven Caribbean countries, which will result in a two-country pilot and recommendations for ministries of education to adopt CS.
 
 
 
 <h2 class="highlight">We saw excitement and advocacy for CS in campaigns across the world</h2>
-In 2021, <a href="https://www.youtube.com/watch?v=FbRWeaygDq8&list=PLzdnOPI1iJNe9SjNaR9Rk2-osurLgB3lz&index=7" target="_blank">we launched a video</a> where the President of the Spanish government Pedro Sánchez Pérez-Castejón, and four living former Spanish Presidents called for CS to be taught in all schools and to all students in Spain. 
+In 2021, <a href="https://www.youtube.com/watch?v=FbRWeaygDq8&list=PLzdnOPI1iJNe9SjNaR9Rk2-osurLgB3lz&index=7" target="_blank">we launched a video</a> where the President of the Spanish government Pedro Sánchez Pérez-Castejón, and four living former Spanish Presidents called for CS to be taught in all schools and to all students in Spain.
 
 <figure class="centerspot">
   {{ vid_spanish_prez }}
   <figcaption>Four former Spanish Presidents share their support for Code.org.</figcaption>
 </figure>
 
-In early 2021, the Ministry of Education of Saudi Arabia—in collaboration with Microsoft and Code.org— attracted a record 3.5 million students (more that 50% of all K12 students in the country) to a coding challenge known as “My School is Programming” or “Madrasati Codes.” Over half of the students enrolled in the kingdom’s 24,000 primary and secondary schools participated in the competition with girls representing 61% of the participants. 
+In early 2021, the Ministry of Education of Saudi Arabia—in collaboration with Microsoft and Code.org— attracted a record 3.5 million students (more that 50% of all K12 students in the country) to a coding challenge known as “My School is Programming” or “Madrasati Codes.” Over half of the students enrolled in the kingdom’s 24,000 primary and secondary schools participated in the competition with girls representing 61% of the participants.
 
 
 
@@ -280,7 +280,7 @@ The table below shows the total cost breakdown of our headline achievements sinc
 * See the [2020 Annual Report](/about/2020)
 * See the [2019 Annual Report](/about/2019)
 * See the [2018 Annual Report](/about/2018)
-* See the [2017 Annual Report](/about/2017) 
+* See the [2017 Annual Report](/about/2017)
 * See the [2016 Annual Report](/about/2016) and [2015-16 Code.org Evaluation Report](/files/EvaluationReport2015-16.pdf)
 * See the [2015 Annual Report](/about/2015) and [2014-15 Evaluation Report](/about/evaluation)
 * See the [2014 Annual Report](/about/2014)
@@ -327,7 +327,7 @@ Code.org gratefully acknowledges the following supporters who have made generous
       </tr>
       <tr>
         <td class="large">
-          <p style="font-size: 16px;"><strong>Charlie Lee and Aileen Tang</strong></p>
+          <p style="font-size: 16px;"><strong>Charlie Lee</strong></p>
         </td>
         <td class="large">
           <p style="font-size: 16px;"><strong>Anonymous</strong></p>
