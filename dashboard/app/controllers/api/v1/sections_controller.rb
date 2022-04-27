@@ -1,8 +1,8 @@
 class Api::V1::SectionsController < Api::V1::JsonApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
-  before_action :get_course_and_unit, only: [:create, :update]
   load_and_authorize_resource except: [:join, :leave, :membership, :valid_course_offerings, :create, :update, :require_captcha]
+  before_action :get_course_and_unit, only: [:create, :update]
 
   skip_before_action :verify_authenticity_token, only: [:update_sharing_disabled, :update]
 
@@ -38,9 +38,12 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     # Once this has been done, endpoint can use CanCan load_and_authorize_resource
     # rather than manually authorizing (above)
     return head :bad_request unless Section.valid_login_type? params[:login_type]
-    # TODO(dmcavoy): Remove after launching this feature
-    params[:participant_type] = SharedCourseConstants::PARTICIPANT_AUDIENCE.student if params[:participant_type].nil_or_empty?
     return head :bad_request unless Section.valid_participant_type? params[:participant_type]
+
+    if @course || @unit
+      participant_audience = @course ? @course.participant_audience : @unit.participant_audience
+      return head :forbidden unless Section.can_be_assigned_course?(participant_audience, params[:participant_type])
+    end
 
     section = Section.create(
       {
@@ -72,6 +75,11 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
 
     # Unhide unit for this section before assigning
     section.toggle_hidden_script @unit, false if @unit
+
+    if @course || @unit
+      participant_audience = @course ? @course.participant_audience : @unit.participant_audience
+      return head :forbidden unless Section.can_be_assigned_course?(participant_audience, section.participant_type)
+    end
 
     # TODO: (madelynkasula) refactor to use strong params
     fields = {}
