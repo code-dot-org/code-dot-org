@@ -65,4 +65,42 @@ class DynamicConfigController < ApplicationController
     flash[:notice] = "Updated successfully! Remember your changes take 30 seconds to go into effect, so don't expect to see the changes immediately on this page."
     redirect_to action: :gatekeeper_show, feature: feature
   end
+
+  def dcdo_show
+    authorize! :read, :reports
+    DCDO.refresh
+
+    @dcdo_hsh = DCDO.to_h
+  end
+
+  def dcdo_set
+    authorize! :read, :reports
+    DCDO.refresh
+
+    params.require(:key)
+    key = params[:key]
+    raw_value = params[:value] || ""
+
+    if raw_value.to_i.to_s == raw_value
+      value = raw_value.to_i
+    elsif raw_value.to_f.to_s == raw_value
+      value = raw_value.to_f
+    elsif raw_value.downcase == "true" || raw_value.downcase == "false"
+      value = raw_value.to_bool
+    else
+      begin
+        value = JSON.parse(raw_value)
+      rescue JSON::ParserError
+        value = raw_value.delete_prefix('"').delete_suffix('"')
+      end
+    end
+
+    DCDO.set(key, value)
+
+    # log_msg = "<b>DCDO - #{key}</b> #{current_user.name} set to #{value}"
+    # ChatClient.log log_msg
+
+    flash[:notice] = "Updated successfully! Remember your changes take 30 seconds to go into effect, so don't expect to see the changes immediately on this page."
+    redirect_to action: :dcdo_show
+  end
 end

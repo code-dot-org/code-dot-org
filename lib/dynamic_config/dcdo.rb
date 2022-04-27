@@ -47,6 +47,14 @@ class DCDOBase < DynamicConfigBase
       'code_review_v2': DCDO.get('code_review_v2', false)
     }
   end
+
+  def to_h
+    @datastore_cache.all
+  end
+
+  def refresh
+    @datastore_cache.update_cache
+  end
 end
 
 DCDO = DCDOBase.create
