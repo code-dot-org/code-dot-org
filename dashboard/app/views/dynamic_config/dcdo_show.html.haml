@@ -1,0 +1,42 @@
+:scss
+  .dcdo-padding {
+    padding: 5px;
+  }
+
+  .dcdo-row {
+    display: grid;
+    grid-template-columns: 300px 300px 100px;
+  }
+
+  .dcdo-key {
+    border: 1px solid black;
+  }
+
+  .dcdo-value {
+    border: 1px solid black;
+  }
+
+  .dcdo-update-button {
+    border: 1px solid black;
+  }
+
+.dcdo-list
+  %h3 DCDO Flags
+  %div
+    = form_for :add, :url => {:controller => 'dynamic_config', :action => 'dcdo_set'} do |f|
+      %div{:class => %w[dcdo-row]}
+        %div{:class => %w[dcdo-key dcdo-padding]}
+          %input{:type => "text", :name => "key", :placeholder => "key"}
+        %div{:class => %w[dcdo-value dcdo-padding]}
+          %input{:type => "text", :placeholder => "value", :name => "value"}
+        %div{:class => %w[dcdo-update-button dcdo-padding]}
+          %input{:type => "submit", :value => "Add", :class => "btn"}
+    - @dcdo_hsh.to_a.sort.each do |key, value|
+      = form_for :add, :url => {:controller => 'dynamic_config', :action => 'dcdo_set'} do |f|
+        %div{:class => %w[dcdo-row]}
+          %div{:class => %w[dcdo-key dcdo-padding]}= key
+          %div{:class => %w[dcdo-value dcdo-padding]}
+            %input{:type => "text", :name => "key", :style => "display: none", :value => key}
+            %input{:type => "text", :placeholder => "value", :name => "value", :value => value.to_json}
+          %div{:class => %w[dcdo-update-button dcdo-padding]}
+            %input{:type => "submit", :value => "Update", :class => "btn"}

@@ -518,6 +518,9 @@ Dashboard::Application.routes.draw do
   post '/admin/gatekeeper/delete', to: 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
   post '/admin/gatekeeper/set', to: 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
 
+  get '/admin/dcdo', to: 'dynamic_config#dcdo_show', as: 'dcdo_show'
+  post '/admin/dcdo/set', to: 'dynamic_config#dcdo_set', as: 'dcdo_set'
+
   get '/notes/:key', to: 'notes#index'
 
   resources :zendesk_session, only: [:index]
