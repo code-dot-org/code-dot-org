@@ -79,6 +79,7 @@ export default class ParticipantSections extends Component {
             canLeave={!!isTeacher}
             updateSections={this.props.updateSections}
             updateSectionsResult={this.props.updateSectionsResult}
+            isPlSections={this.props.isPlSections}
           />
         )}
         {archivedSections.length > 0 && (
