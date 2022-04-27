@@ -132,7 +132,12 @@ Javalab.prototype.init = function(config) {
           config,
           this.studioApp_
         );
-      this.visualization = <NeighborhoodVisualizationColumn />;
+      this.visualization = (
+        <NeighborhoodVisualizationColumn
+          skin={this.skin}
+          gridSize={this.level.serializedMaze.length}
+        />
+      );
       break;
     case CsaViewMode.THEATER:
       this.miniApp = new Theater(

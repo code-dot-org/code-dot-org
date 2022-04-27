@@ -188,7 +188,7 @@ class JavalabPanels extends React.Component {
     const scaleCss = `scale(${scale})`;
     switch (this.props.viewMode) {
       case CsaViewMode.NEIGHBORHOOD:
-        $('#svgMaze').css('transform', scaleCss);
+        $('#svgMazeParent').css('transform', scaleCss);
         break;
       case CsaViewMode.THEATER:
         $('#theater-container').css('transform', scaleCss);
