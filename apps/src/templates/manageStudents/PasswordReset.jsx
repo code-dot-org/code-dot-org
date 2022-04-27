@@ -60,23 +60,10 @@ class PasswordReset extends Component {
           isResetting: false,
           input: ''
         });
-        firehoseClient.putRecord(
-          {
-            study: 'teacher-dashboard',
-            study_group: 'manage-students',
-            event: 'reset-secret',
-            data_json: JSON.stringify({
-              sectionId: sectionId,
-              studentId: studentId,
-              loginType: 'email'
-            })
-          },
-          {includeUserId: true}
-        );
+        this.recordResetSecret();
         this.hidePasswordLengthFailure();
       })
       .fail((jqXhr, status) => {
-        console.log(JSON.parse(jqXhr.responseText).errors);
         const errorArray = JSON.parse(jqXhr.responseText).errors;
         if (errorArray.includes(PASSWORD_TOO_SHORT_ERROR_MESSAGE)) {
           this.props.setPasswordLengthFailure(true);
@@ -87,6 +74,23 @@ class PasswordReset extends Component {
         }
         console.error(status);
       });
+  };
+
+  recordResetSecret = () => {
+    const {sectionId, studentId} = this.props;
+    firehoseClient.putRecord(
+      {
+        study: 'teacher-dashboard',
+        study_group: 'manage-students',
+        event: 'reset-secret',
+        data_json: JSON.stringify({
+          sectionId: sectionId,
+          studentId: studentId,
+          loginType: 'email'
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   updateInput = event => {
