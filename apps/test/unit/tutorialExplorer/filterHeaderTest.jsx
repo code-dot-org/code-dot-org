@@ -4,7 +4,7 @@ import {StickyContainer} from 'react-sticky';
 import {expect} from '../../util/deprecatedChai';
 import FilterHeader from '@cdo/apps/tutorialExplorer/filterHeader';
 import BackButton from '@cdo/apps/tutorialExplorer/backButton';
-import i18n from '@cdo/tutorialExplorer/locale';
+import i18n from '@cdo/locale';
 import {allowConsoleWarnings} from '../../util/testUtils';
 
 const FAKE_ON_USER_INPUT = () => {};

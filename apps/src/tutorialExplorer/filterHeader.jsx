@@ -8,7 +8,7 @@ import BackButton from './backButton';
 import FilterGroupHeaderSelection from './filterGroupHeaderSelection';
 import {getResponsiveValue} from './responsive';
 import {Sticky} from 'react-sticky';
-import i18n from '@cdo/tutorialExplorer/locale';
+import i18n from '@cdo/locale';
 
 export default class FilterHeader extends React.Component {
   static propTypes = {

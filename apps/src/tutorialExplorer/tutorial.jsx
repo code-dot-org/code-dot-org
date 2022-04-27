@@ -29,8 +29,8 @@ export default class Tutorial extends React.Component {
     };
 
     const imageSrc = this.props.item.image
-      .replace('/images/', '/images/fill-480x360/')
-      .replace('.png', '.jpg');
+      ?.replace('/images/', '/images/fill-480x360/')
+      ?.replace('.png', '.jpg');
 
     return (
       <div
@@ -46,7 +46,7 @@ export default class Tutorial extends React.Component {
             <Image src={imageSrc} style={styles.tutorialImage} alt="" />
           </LazyLoad>
         </div>
-        <div style={styles.tutorialName}>{this.props.item.name}</div>
+        <div style={styles.tutorialName}>{this.props.item.display_name}</div>
         <div style={styles.tutorialSub}>
           {getTutorialDetailString(this.props.item)}
         </div>

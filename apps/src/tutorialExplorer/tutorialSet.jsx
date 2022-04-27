@@ -6,7 +6,7 @@ import React from 'react';
 import Tutorial from './tutorial';
 import TutorialDetail from './tutorialDetail';
 import shapes from './shapes';
-import i18n from '@cdo/tutorialExplorer/locale';
+import i18n from '@cdo/locale';
 
 export default class TutorialSet extends React.Component {
   static propTypes = {
@@ -55,7 +55,7 @@ export default class TutorialSet extends React.Component {
         {this.props.tutorials.map(item => (
           <Tutorial
             item={item}
-            key={item.code}
+            key={item.id}
             tutorialClicked={this.tutorialClicked.bind(this, item)}
           />
         ))}

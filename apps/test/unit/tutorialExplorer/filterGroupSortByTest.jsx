@@ -4,7 +4,7 @@ import {expect} from '../../util/deprecatedChai';
 import sinon from 'sinon';
 import {TutorialsSortByOptions} from '@cdo/apps/tutorialExplorer/util';
 import FilterGroupSortBy from '@cdo/apps/tutorialExplorer/filterGroupSortBy';
-import i18n from '@cdo/tutorialExplorer/locale';
+import i18n from '@cdo/locale';
 
 const FAKE_ON_SORT_BY = () => {};
 const DEFAULT_PROPS = {

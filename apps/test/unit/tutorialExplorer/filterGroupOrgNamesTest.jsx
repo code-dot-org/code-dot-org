@@ -4,7 +4,7 @@ import sinon from 'sinon';
 import {expect} from '../../util/deprecatedChai';
 import FilterGroupOrgNames from '@cdo/apps/tutorialExplorer/filterGroupOrgNames';
 import FilterGroupContainer from '@cdo/apps/tutorialExplorer/filterGroupContainer';
-import i18n from '@cdo/tutorialExplorer/locale';
+import i18n from '@cdo/locale';
 
 const TEST_ORG_NAME = 'Code Studio';
 const ORG_1 = 'Hogwarts School';

@@ -2,7 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../util/deprecatedChai';
 import RoboticsButton from '@cdo/apps/tutorialExplorer/roboticsButton';
-import i18n from '@cdo/tutorialExplorer/locale';
+import i18n from '@cdo/locale';
 
 describe('RoboticsButton', () => {
   it('renders with given url', () => {

@@ -14,6 +14,7 @@
   courses_data[:signedout] = @is_signed_out
   courses_data[:modernelementarycoursesavailable] = @modern_elementary_courses_available
   courses_data[:showAiCard] = DCDO.get('courses_show_ai', CDO.default_courses_show_ai)
+  courses_data[:courseOfferings] = @course_offerings_info
 
   @page_title = @is_teacher ? I18n.t('courses_page.title_teacher') : I18n.t('courses_page.title_student')
 
