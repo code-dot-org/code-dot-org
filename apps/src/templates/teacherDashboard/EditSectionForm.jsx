@@ -27,6 +27,7 @@ import {
   StudentGradeLevels
 } from '@cdo/apps/util/sharedConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {ParticipantAudience} from '../../generated/curriculum/sharedCourseConstants';
 
 /**
  * UI for editing section details: Name, grade, assigned course, etc.
@@ -192,11 +193,13 @@ class EditSectionForm extends Component {
             onChange={name => editSectionProperties({name})}
             disabled={isSaveInProgress}
           />
-          <GradeField
-            value={section.grade || ''}
-            onChange={grade => editSectionProperties({grade})}
-            disabled={isSaveInProgress}
-          />
+          {section.participantType === ParticipantAudience.student && (
+            <GradeField
+              value={section.grade || ''}
+              onChange={grade => editSectionProperties({grade})}
+              disabled={isSaveInProgress}
+            />
+          )}
           {showLoginTypeField && (
             <LoginTypeField
               value={section.loginType}
