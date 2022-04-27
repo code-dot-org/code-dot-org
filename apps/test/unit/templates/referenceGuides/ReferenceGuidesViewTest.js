@@ -16,6 +16,7 @@ describe('ReferenceGuideView', () => {
       <ReferenceGuideView
         referenceGuide={referenceGuide}
         referenceGuides={[referenceGuide]}
+        baseUrl={'fgsfds'}
       />
     );
     expect(wrapper.findOne('h1').content()).to.equal(
@@ -35,6 +36,7 @@ describe('ReferenceGuideView', () => {
       <ReferenceGuideView
         referenceGuide={referenceGuide}
         referenceGuides={[referenceGuide]}
+        baseUrl={'fgsfds'}
       />
     );
     expect(wrapper.findOne('EnhancedSafeMarkdown').props.markdown).to.equal(
@@ -90,6 +92,7 @@ describe('ReferenceGuideView', () => {
       <ReferenceGuideView
         referenceGuide={referenceGuide}
         referenceGuides={referenceGuides}
+        baseUrl={'fgsfds'}
       />
     );
     const bar = wrapper.findOne('NavigationBar');
