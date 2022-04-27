@@ -69,7 +69,7 @@
   "user_id": 182,
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-04-20T20:59:49.613+00:00\",\"changed\":[\"cloned from \\\"csc_multiple_choice_1\\\"\"],\"cloned_from\":\"csc_multiple_choice_1\"},{\"changed_at\":\"2022-04-20 21:01:39 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"contained_level_names\",\"instructions_icon\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-20 21:10:02 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-20 21:12:07 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-20 21:12:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-04-20T20:59:49.613+00:00\",\"changed\":[\"cloned from \\\"csc_multiple_choice_1\\\"\"],\"cloned_from\":\"csc_multiple_choice_1\"},{\"changed_at\":\"2022-04-20 21:01:39 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"contained_level_names\",\"instructions_icon\",\"preload_asset_list\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-20 21:10:02 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-20 21:12:07 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-20 21:12:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-04-25 19:40:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -93,7 +93,7 @@
                       <field name="ANIMATION_NAME">"tortoise_1_csc"</field>
                       <value name="LOCATION">
                         <block type="gamelab_location_picker">
-                          <field name="LOCATION">{"x":243,"y":331}</field>
+                          <field name="LOCATION">{"x":197,"y":343}</field>
                         </block>
                       </value>
                       <next>

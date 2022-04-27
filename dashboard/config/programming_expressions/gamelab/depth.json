@@ -3,7 +3,7 @@
   "name": "sprite.depth",
   "category": "Sprites",
   "category_key": "sprites",
-  "content": "Depth of the sprite in the drawing order. \r\n\r\nSprites are drawn, when `drawSprites()` is executed, in order from lowest depth to highest depth. The sprites drawn later will overlay sprites drawn earlier.\r\n\r\nIf you assign a sprite to a depth that is already the depth of another sprite, that other sprite, and all other larger depth sprites, have their depths increased by one.",
+  "content": "Depth of the sprite in the drawing order. \r\n\r\nSprites are drawn, when [`drawSprites()`(#fff176)](/docs/gamelab/drawSprites/) is executed, in order from lowest depth to highest depth. The sprites drawn later will overlay sprites drawn earlier.\r\n\r\nIf you assign a sprite to a depth that is already the depth of another sprite, that other sprite, and all other larger depth sprites, have their depths increased by one.",
   "examples": [
     {
       "name": "",
@@ -18,5 +18,5 @@
   "return_value": "The depth of the sprite.",
   "short_description": "Depth of the sprite in the drawing order. ",
   "syntax": "sprite.depth",
-  "tips": "- Sprites all have the same properties and you use the dot notation (combining the name of the sprite, followed by a dot, with the label of the property) to both access and update the property for that sprite.\r\n- Any changes to the properties of a sprite will not be seen until after `drawSprites()` is called."
+  "tips": "- Sprites all have the same properties and you use the dot notation (combining the name of the sprite, followed by a dot, with the label of the property) to both access and update the property for that sprite.\r\n- Any changes to the properties of a sprite will not be seen until after [`drawSprites()`(#fff176)](/docs/gamelab/drawSprites/) is called."
 }

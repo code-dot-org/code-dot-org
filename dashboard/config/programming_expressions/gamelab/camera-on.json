@@ -27,5 +27,5 @@
   "return_value": "No return value. Possibly changes output in the display after drawSprites() is called.",
   "short_description": "Activates the camera. The display area will be drawn according to the camera position and scale until camera.off() is called.",
   "syntax": "camera.on();",
-  "tips": "- The camera is automatically turned on at the start of each `draw()` loop. "
+  "tips": "- The camera is automatically turned on at the start of each [`draw()`(#fff176)](/docs/gamelab/draw/) loop. "
 }

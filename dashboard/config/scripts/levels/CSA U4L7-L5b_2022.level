@@ -2,20 +2,30 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "using math class methods",
+    "long_instructions": "A business owner wants to review their sales for the week, but some of the values were entered wrong – they were entered as negative numbers!\r\n\r\n##In SalesAnalyzer.java:\r\n\r\n1. Write the `cleanData()`(#e7e8ea) method.\r\n\r\n   * Traverse the `sales`(#e7e8ea) array and use `Math.abs()`(#e7e8ea) to get the absolute value of each value in the array.\r\n\r\n   * Return a new array that contains the corrected sales values.\r\n\r\n##In MyConsole.java:\r\n\r\n2. Declare and initialize a new array called `correctedSales`(#e7e8ea) that stores the array returned from the `cleanData()`(#e7e8ea) method.\r\n\r\n3. Print the values stored in the `correctedSales`(#e7e8ea) array.",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
-    "csa_view_mode": "theater",
-    "encrypted_examples": [
-
-    ]
+    "csa_view_mode": "console",
+    "display_name": "Sales Data",
+    "bubble_choice_description": "A business owner wants to review their sales for the week, but some of the values were entered wrong – they were entered as negative numbers!",
+    "thumbnail_url": "https://images.code.org/343aa351d48cf567249cbe52455fdd63-image-1650648823651.png",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    double[] sales = {-4.05, 5.06, 3.99, -3.99, -1.99, 2.05, 10.50, -7.85, 6.73, -8.45};\n    SalesAnalyzer mySales = new SalesAnalyzer(sales);\n\n    // TO DO #2: Call the cleanData() method.\n\n\n    // TO DO #3: Print the values stored in the new array.\n\n    \n  }\n}",
+        "isVisible": true
+      },
+      "SalesAnalyzer.java": {
+        "text": "/*\n * Analyzes sales data for a business\n */\npublic class SalesAnalyzer {\n\n  private double[] sales;  // The list of sales\n\n  /*\n   * Constructor to create a SalesAnalyzer\n   * with the specified array of sales\n   */\n  public SalesAnalyzer(double[] sales) {\n    this.sales = sales;\n  }\n\n  /*\n   * Returns a new array containing corrected sales values\n   */\n  public double[] cleanData() {\n    // TO DO #1: Return a new array containing the corrected sales values.\n\n\n    \n  }\n  \n}",
+        "isVisible": true
+      }
+    }
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-04-07T18:26:42.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-04-07T18:26:42.361+00:00\",\"changed\":[\"cloned from \\\"CSA U4L7-L5a_2022\\\"\"],\"cloned_from\":\"CSA U4L7-L5a_2022\"},{\"changed_at\":\"2022-04-07 18:26:45 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-04-07T18:26:42.361+00:00\",\"changed\":[\"cloned from \\\"CSA U4L7-L5a_2022\\\"\"],\"cloned_from\":\"CSA U4L7-L5a_2022\"},{\"changed_at\":\"2022-04-07 18:26:45 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 17:09:00 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 17:34:05 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 18:13:38 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 18:14:58 +0000\",\"changed\":[\"csa_view_mode\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 18:27:24 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 18:30:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

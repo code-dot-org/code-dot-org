@@ -124,19 +124,17 @@ class SectionsAsStudentTable extends React.Component {
               </td>
               {canLeave && (
                 <td style={{...styles.col, ...styles.leaveCol}}>
-                  {!/^(C|G)-/.test(section.code) && (
-                    <Button
-                      __useDeprecatedTag
-                      style={{marginLeft: 5}}
-                      text={i18n.leaveSection()}
-                      onClick={this.onLeave.bind(
-                        this,
-                        section.code,
-                        section.name
-                      )}
-                      color={Button.ButtonColor.gray}
-                    />
-                  )}
+                  <Button
+                    __useDeprecatedTag
+                    style={{marginLeft: 5}}
+                    text={i18n.leaveSection()}
+                    onClick={this.onLeave.bind(
+                      this,
+                      section.code,
+                      section.name
+                    )}
+                    color={Button.ButtonColor.gray}
+                  />
                 </td>
               )}
             </tr>
