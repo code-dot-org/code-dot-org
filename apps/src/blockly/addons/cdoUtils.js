@@ -16,6 +16,9 @@ export function getBlockFields(block) {
 
 export function getToolboxType() {
   const workspace = Blockly.getMainWorkspace();
+  if (!workspace) {
+    return;
+  }
   if (workspace.flyout_) {
     return ToolboxType.UNCATEGORIZED;
   } else if (workspace.toolbox_) {
