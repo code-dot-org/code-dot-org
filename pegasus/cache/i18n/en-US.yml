@@ -384,6 +384,7 @@
   homepage_slot_text_link_buy: "Get involved"
   homepage_slot_text_link_donate: "Donate"
   homepage_slot_text_link_shop: "T-shirts, hats, & more"
+  homepage_slot_text_link_thebadguys: "Code with The Bad Guys"
   homepage_slot_text_link_administrators: "Bring CS to your school"
   homepage_gallery_header: "Over %{project_count} million Code.org projects created"
   homepage_header_donors: "Code.org thanks its supporters"
