@@ -36,7 +36,13 @@ class PreviewModal extends React.Component {
         <p>
           {datasetInfo.description}{' '}
           {datasetInfo.docUrl && (
-            <a href={datasetInfo.docUrl}>{msg.moreInfo()}</a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={datasetInfo.docUrl}
+            >
+              {msg.moreInfo()}
+            </a>
           )}
         </p>
         <div style={{overflow: 'scroll', maxHeight: '70%'}}>
