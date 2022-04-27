@@ -2,20 +2,42 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\nThen, experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. first thing\r\n\r\n2. second thing\r\n\r\n3. third thing\r\n\r\n##Getting Started\r\n1. Import `SomeClass.java`(#e7e8ea) from the ![Backpack](https://images.code.org/b17feeef2e8db2a98abdb4a5860c5c61-image-1642175705297.png)\r\n\r\n*Don't have it or it doesn't work? That's ok! Just copy and paste the code from [**here**](https://linktocode.com).*\r\n\r\n##In MyConsole.java:\r\n\r\n2. first step\r\n\r\n3. second step\r\n\r\n4. third step\r\n\r\n::: details [**Show Me How**]\r\nA `for`(#e7e8ea) loop uses the following syntax:\r\n  \r\n  ```\r\n  for (int variableName = startingValue; condition; variableName_change) {\r\n    // code to execute\r\n  }\r\n  ```\r\n\r\nBe sure to change `variableName`(#e7e8ea) to a name you can easily identify, such as `index`(#e7e8ea), and set the `startingValue`(#e7e8ea) to the value you want to start the loop.\r\n:::",
+    "long_instructions": "A students wants to store data about the bestselling books to create a visual of the books that received the most reviews each year. They have a 2D array of `Book`(#e7e8ea) objects, where each row represents fiction books and non-fiction books, respectively. Each column represents 2017, 2018, and 2019, respectively.\r\n\r\n##In BookScene.java:\r\n\r\n1. Write the `createScene()`(#e7e8ea) method to find which `Book`(#e7e8ea) object had the most reviews each year.\r\n\r\n   * Draw the book cover for the `Book`(#e7e8ea) object that has the most reviews for the year.\r\n   \r\n   * Use the `pause`(#e7e8ea) and `clear()`(#e7e8ea) methods in the `Scene`(#e7e8ea) class to pause and clear the scene before drawing the next book cover.\r\n\r\n::: details [**Show Me How**]\r\nTraversing a 2D array in column-major order uses the following syntax:\r\n  \r\n  ```\r\n  for (int col = 0; col < arrayName[0].length; col++) {\r\n    for (int row = 0; row < arrayName.length; row++) {\r\n      // code to execute\r\n    }\r\n  }\r\n  ```\r\n:::",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
-    "csa_view_mode": "console",
-    "encrypted_examples": [
-
-    ]
+    "csa_view_mode": "theater",
+    "display_name": "Bestselling Books",
+    "bubble_choice_description": "Write a method to find which Book objects had the most number of reviews each year and create a scene to visualize the results.",
+    "thumbnail_url": "https://images.code.org/3511c1087ebe7ce6b7afe029aef78cdd-image-1650997669413.png",
+    "starter_assets": {
+      "1984.jpg": "fb541b01-9239-4eae-8bc7-65df1c96637f.jpg",
+      "fahrenheit.jpg": "ce8f3910-fcd0-43b7-8a3c-9dd5bea71067.jpg",
+      "gobletoffire.jpg": "fe24e889-cba4-4ba0-b8b3-bb96bcf2c427.jpg",
+      "winfriends.jpg": "8b14d432-d0c2-422a-8bf7-677ff28f74a5.jpg",
+      "agreements.jpg": "352a52fb-2f05-4c88-b06a-afcd4b2dab6c.jpg",
+      "gratitude.jpg": "bf10283d-d23e-4bc7-bddb-183381f589f0.jpg"
+    },
+    "start_sources": {
+      "MyTheater.java": {
+        "text": "import org.code.theater.*;\n\npublic class MyTheater {\n  public static void main(String[] args) {\n\n    // Creates the Book objects\n    Book orwell = new Book(\"1984.jpg\", 21424);\n    Book fahrenheit = new Book(\"fahrenheit.jpg\", 10721);\n    Book gobletoffire = new Book(\"gobletoffire.jpg\", 7758);\n    Book winFriends = new Book(\"winfriends.jpg\", 25001);\n    Book agreements = new Book(\"agreements.jpg\", 23308);\n    Book gratitude = new Book(\"gratitude.jpg\", 10141);\n\n    // Stores the Book objects in a 2D array\n    Book[][] bestsellers = {{orwell, fahrenheit, gobletoffire},\n                            {winFriends, agreements, gratitude}};\n\n    // Creates the BookScene\n    BookScene myScene = new BookScene(bestsellers);\n    myScene.createScene();\n\n    // Plays the BookScene\n    Theater.playScenes(myScene);\n    \n  }\n}",
+        "isVisible": true
+      },
+      "BookScene.java": {
+        "text": "import org.code.theater.*;\n\n/*\n * Creates a scene based on which books have at least 10,000 reviews\n */\npublic class BookScene extends Scene {\n\n  private Book[][] bestsellers;   // The 2D array of Books\n\n  /*\n   * Constructor to create a BookScene with\n   * the specified 2D array of Books\n   */\n  public BookScene(Book[][] bestsellers) {\n    this.bestsellers = bestsellers;\n  }\n\n  /*\n   * Creates a scene that draws the book cover\n   * for each book with at least 10,000 reviews\n   */\n  public void createScene() {\n    // TO DO #1: Find each Book that has at least 10,000 reviews\n    // and draw its book cover.\n\n    \n  }\n  \n}",
+        "isVisible": true
+      },
+      "Book.java": {
+        "text": "/*\n * Represents a book\n */\npublic class Book {\n\n  private String bookCover;   // The image file of the book cover\n  private int numReviews;     // The number of reviews\n\n  /*\n   * Constructor to create a Book with\n   * a specified bookCover and number of reviews\n   */\n  public Book(String bookCover, int numReviews) {\n    this.bookCover = bookCover;\n    this.numReviews = numReviews;\n  }\n\n  /*\n   * Returns the image file of the book cover\n   */\n  public String getBookCover() {\n    return bookCover;\n  }\n\n  /*\n   * Returns the number of reviews\n   */\n  public int getNumReviews() {\n    return numReviews;\n  }\n  \n}",
+        "isVisible": true
+      }
+    }
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-04-12T19:08:34.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-04-12T19:08:34.940+00:00\",\"changed\":[\"cloned from \\\"CSA U5L3-L4c_2022\\\"\"],\"cloned_from\":\"CSA U5L3-L4c_2022\"},{\"changed_at\":\"2022-04-12 19:08:37 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-04-12T19:08:34.940+00:00\",\"changed\":[\"cloned from \\\"CSA U5L3-L4c_2022\\\"\"],\"cloned_from\":\"CSA U5L3-L4c_2022\"},{\"changed_at\":\"2022-04-12 19:08:37 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-27 16:23:03 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-27 16:58:47 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
