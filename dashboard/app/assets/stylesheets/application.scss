@@ -407,6 +407,9 @@ img.video_thumbnail {
   margin: 16px;
 }
 #courses-container {
+  display: flex;
+  margin: 50px 100px;
+
   #header-banner {
     background-position: 75% 40%;
   }

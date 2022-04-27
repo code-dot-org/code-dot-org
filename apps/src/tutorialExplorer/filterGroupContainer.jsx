@@ -29,7 +29,6 @@ export default class FilterGroupContainer extends React.Component {
 
 const styles = {
   filterGroupOuter: {
-    float: 'left',
     paddingBottom: 20,
     paddingRight: 40,
     paddingLeft: 10

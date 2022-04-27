@@ -506,48 +506,57 @@ export default class TutorialExplorer extends React.Component {
               />
               <div style={{clear: 'both'}} />
 
-              {this.shouldShowFilters() && (
-                <div
-                  style={{
-                    float: 'left',
-                    width: getResponsiveValue({xs: 100, md: 20})
-                  }}
-                >
-                  <Search
-                    onChange={this.handleSearchTerm}
-                    showClearIcon={this.state.searchTerm !== ''}
-                  />
-                  <FilterSet
-                    mobileLayout={this.state.mobileLayout}
-                    uniqueOrgNames={this.getUniqueOrgNames()}
-                    orgName={this.state.orgName}
-                    showSortDropdown={this.props.showSortDropdown}
-                    defaultSortBy={this.props.defaultSortBy}
-                    sortBy={this.state.sortBy}
-                    filterGroups={this.props.filterGroups}
-                    selection={this.state.filters}
-                    onUserInputFilter={this.handleUserInputFilter}
-                    onUserInputOrgName={this.handleUserInputOrgName}
-                    onUserInputSortBy={this.handleUserInputSortBy}
-                    roboticsButtonUrl={this.props.roboticsButtonUrl}
-                  />
-                </div>
-              )}
-
               <div
                 style={{
-                  float: 'left',
-                  width: getResponsiveValue({xs: 100, md: 80})
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'flex-start',
+                  alignItems: 'flex-start',
+                  alignContent: 'flex-start'
                 }}
               >
-                {this.shouldShowTutorials() && (
-                  <TutorialSet
-                    tutorials={this.state.filteredTutorials}
-                    localeEnglish={this.isLocaleEnglish()}
-                    disabledTutorials={this.props.disabledTutorials}
-                    grade={grade}
-                  />
+                {this.shouldShowFilters() && (
+                  <div
+                    style={{
+                      width: getResponsiveValue({xs: 100, md: 20})
+                    }}
+                  >
+                    <Search
+                      onChange={this.handleSearchTerm}
+                      showClearIcon={this.state.searchTerm !== ''}
+                    />
+                    <FilterSet
+                      mobileLayout={this.state.mobileLayout}
+                      uniqueOrgNames={this.getUniqueOrgNames()}
+                      orgName={this.state.orgName}
+                      showSortDropdown={this.props.showSortDropdown}
+                      defaultSortBy={this.props.defaultSortBy}
+                      sortBy={this.state.sortBy}
+                      filterGroups={this.props.filterGroups}
+                      selection={this.state.filters}
+                      onUserInputFilter={this.handleUserInputFilter}
+                      onUserInputOrgName={this.handleUserInputOrgName}
+                      onUserInputSortBy={this.handleUserInputSortBy}
+                      roboticsButtonUrl={this.props.roboticsButtonUrl}
+                    />
+                  </div>
                 )}
+
+                <div
+                  style={{
+                    width: getResponsiveValue({xs: 100, md: 80}),
+                    paddingLeft: 30
+                  }}
+                >
+                  {this.shouldShowTutorials() && (
+                    <TutorialSet
+                      tutorials={this.state.filteredTutorials}
+                      localeEnglish={this.isLocaleEnglish()}
+                      disabledTutorials={this.props.disabledTutorials}
+                      grade={grade}
+                    />
+                  )}
+                </div>
               </div>
             </div>
           </StickyContainer>
