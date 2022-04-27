@@ -70,12 +70,10 @@ table td {
   width: 100%;
   font-size: 24px;
   font-weight: 900;
-  margin: 0px;
+  margin: 0 0 12px 0;
   padding: 0px;
   text-align: center;
   color: #4d575f;
-  position: absolute;
-  top: 0px;
   font-family: 'Gotham 4r', sans-serif;
 }
 
