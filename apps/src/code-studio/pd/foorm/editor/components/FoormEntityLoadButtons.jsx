@@ -1,7 +1,11 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import {Button, DropdownButton, MenuItem} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
+import loadable from '@cdo/apps/util/loadable';
+const VirtualizedSelect = loadable(() =>
+  import('@cdo/apps/templates/VirtualizedSelect')
+);
 import SingleCheckbox from '../../../form_components/SingleCheckbox';
 import {
   setLastSaved,
@@ -62,21 +66,9 @@ class FoormEntityLoadButtons extends React.Component {
             a['text'].localeCompare(b['text']) ||
             a['metadata']['version'] - b['metadata']['version']
         )
-        .map((entity, i) => {
-          return this.renderMenuItem(
-            () => this.props.onSelect(entity['metadata']),
-            entity['text'],
-            i
-          );
+        .map(entity => {
+          return {metadata: entity['metadata'], label: entity['text']};
         })
-    );
-  }
-
-  renderMenuItem(clickHandler, textToDisplay, key) {
-    return (
-      <MenuItem key={key} eventKey={key} onClick={clickHandler}>
-        {textToDisplay}
-      </MenuItem>
     );
   }
 
@@ -96,21 +88,22 @@ class FoormEntityLoadButtons extends React.Component {
   render() {
     return (
       <div>
-        <DropdownButton
-          id="load_config"
-          title={`Load ${this.props.foormEntityName}...`}
-          className="btn"
-          disabled={this.props.isDisabled}
-        >
-          {this.getDropdownOptions()}
-        </DropdownButton>
-        <Button
-          onClick={() => this.initializeEmptyCodeMirror()}
-          className="btn"
-          disabled={this.props.isDisabled}
-        >
-          {`New ${this.props.foormEntityName}`}
-        </Button>
+        <div className="load-buttons-top-row">
+          <VirtualizedSelect
+            options={this.getDropdownOptions()}
+            className="load-buttons-search"
+            cache={false}
+            onChange={entity => this.props.onSelect(entity.metadata)}
+            placeholder={`Search for ${this.props.foormEntityName}`}
+          />
+          <Button
+            onClick={() => this.initializeEmptyCodeMirror()}
+            className="load-buttons-new"
+            disabled={this.props.isDisabled}
+          >
+            {`New ${this.props.foormEntityName}`}
+          </Button>
+        </div>
         {this.props.showVersionFilterToggle && (
           <SingleCheckbox
             name="latestVersionsOnly"
