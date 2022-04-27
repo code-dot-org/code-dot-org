@@ -6,7 +6,7 @@ import color from '@cdo/apps/util/color';
 import DCDO from '@cdo/apps/dcdo';
 
 const ProjectsPromo = () => {
-  if (!!DCDO.get('thebadguys-promotion', false)) {
+  if (!!DCDO.get('thebadguys-projects-page', false)) {
     return (
       <TwoColumnActionBlock
         imageUrl={pegasus(

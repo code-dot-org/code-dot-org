@@ -12,6 +12,7 @@ class ReferenceGuidesController < ApplicationController
 
   # GET /courses/:course_name/guides/:key
   def show
+    @base_url = "/courses/#{params[:course_course_name]}/guides"
   end
 
   # GET /courses/:course_name/guides
@@ -37,7 +38,7 @@ class ReferenceGuidesController < ApplicationController
       key: params[:key],
       display_name: params[:key],
       course_version_id: course_version_id,
-      position: 0
+      position: after_last_child_position(course_version_id, nil)
     )
     if reference_guide.save
       reference_guide.write_serialization
@@ -49,7 +50,13 @@ class ReferenceGuidesController < ApplicationController
 
   # PATCH /courses/:course_name/guides/:key
   def update
-    @reference_guide.update!(reference_guide_params.except(:key, :course_course_name))
+    new_attributes = reference_guide_params.except(:key, :course_course_name)
+    # when updating the parent, move the reference guide to the end of that list of children
+    # so that it receives a unique position among its siblings
+    if @reference_guide.parent_reference_guide_key != new_attributes[:parent_reference_guide_key] && !new_attributes[:position]
+      new_attributes[:position] = after_last_child_position(@reference_guide.course_version_id, new_attributes[:parent_reference_guide_key])
+    end
+    @reference_guide.update!(new_attributes)
     @reference_guide.write_serialization
     render json: @reference_guide.summarize_for_edit.to_json
   end
@@ -67,6 +74,13 @@ class ReferenceGuidesController < ApplicationController
   end
 
   private
+
+  def after_last_child_position(course_version_id, parent_key)
+    (ReferenceGuide.
+      where(course_version_id: course_version_id, parent_reference_guide_key: parent_key).
+      order('position').
+      last&.position || 0) + 1
+  end
 
   def find_reference_guide
     course_version_id = find_matching_course_version(params[:course_course_name])&.id

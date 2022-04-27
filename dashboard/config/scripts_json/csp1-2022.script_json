@@ -10,6 +10,7 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
+      "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
       "version_year": "2021",
@@ -17,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-21 22:47:50 UTC",
+    "serialized_at": "2022-04-22 21:21:14 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6097,11 +6098,9 @@
     },
     {
       "name": "Virtual Modification Resources",
-      "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/11hSBtl5mdkbbRNrjzafjKnVJntAdIj8JjtN2bFkbol0/view",
       "key": "virtual_modification_resources",
       "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "virtual_modification_resources"
