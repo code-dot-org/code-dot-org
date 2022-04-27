@@ -6,12 +6,16 @@ import Button from '../Button';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
+const PASSWORD_TOO_SHORT_ERROR_MESSAGE =
+  'Password is too short (minimum is 6 characters)';
+
 class PasswordReset extends Component {
   static propTypes = {
     initialIsResetting: PropTypes.bool,
     sectionId: PropTypes.number,
     studentId: PropTypes.number,
-    resetDisabled: PropTypes.bool
+    resetDisabled: PropTypes.bool,
+    setPasswordLengthFailure: PropTypes.func
   };
 
   state = {
@@ -30,6 +34,11 @@ class PasswordReset extends Component {
       isResetting: false,
       input: ''
     });
+    this.hidePasswordLengthFailure();
+  };
+
+  hidePasswordLengthFailure = () => {
+    this.props.setPasswordLengthFailure(false);
   };
 
   save = () => {
@@ -64,11 +73,18 @@ class PasswordReset extends Component {
           },
           {includeUserId: true}
         );
+        this.hidePasswordLengthFailure();
       })
       .fail((jqXhr, status) => {
-        // We may want to handle this more cleanly in the future, but for now this
-        // matches the experience we got in angular
-        alert(i18n.unexpectedError());
+        console.log(JSON.parse(jqXhr.responseText).errors);
+        const errorArray = JSON.parse(jqXhr.responseText).errors;
+        if (errorArray.includes(PASSWORD_TOO_SHORT_ERROR_MESSAGE)) {
+          this.props.setPasswordLengthFailure(true);
+        } else {
+          // We may want to handle this more cleanly in the future, but for now this
+          // matches the experience we got in angular
+          alert(i18n.unexpectedError());
+        }
         console.error(status);
       });
   };
