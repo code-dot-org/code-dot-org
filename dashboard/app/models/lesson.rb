@@ -267,70 +267,72 @@ class Lesson < ApplicationRecord
   end
 
   def summarize(include_bonus_levels = false, for_edit: false)
-    lesson_summary = Rails.cache.fetch("#{cache_key}/lesson_summary/#{I18n.locale}/#{include_bonus_levels}") do
-      cached_levels = include_bonus_levels ? cached_script_levels : cached_script_levels.reject(&:bonus)
+    ActiveRecord::Base.connected_to(role: :reading) do
+      lesson_summary = Rails.cache.fetch("#{cache_key}/lesson_summary/#{I18n.locale}/#{include_bonus_levels}") do
+        cached_levels = include_bonus_levels ? cached_script_levels : cached_script_levels.reject(&:bonus)
 
-      description_student = I18n.t('description_student', scope: [:data, :script, :name, script.name, :lessons, key], smart: true, default: '')
-      description_student = render_codespan_only_markdown(description_student) unless script.is_migrated?
-      description_teacher = I18n.t('description_teacher', scope: [:data, :script, :name, script.name, :lessons, key], smart: true, default: '')
-      description_teacher = render_codespan_only_markdown(description_teacher) unless script.is_migrated?
+        description_student = I18n.t('description_student', scope: [:data, :script, :name, script.name, :lessons, key], smart: true, default: '')
+        description_student = render_codespan_only_markdown(description_student) unless script.is_migrated?
+        description_teacher = I18n.t('description_teacher', scope: [:data, :script, :name, script.name, :lessons, key], smart: true, default: '')
+        description_teacher = render_codespan_only_markdown(description_teacher) unless script.is_migrated?
 
-      lesson_data = {
-        script_id: script.id,
-        script_name: script.name,
-        num_script_lessons: script.lessons.to_a.size,
-        id: id,
-        position: absolute_position,
-        relative_position: relative_position,
-        name: localized_name,
-        key: key,
-        assessment: !!assessment,
-        title: localized_title,
-        lesson_group_display_name: lesson_group&.localized_display_name,
-        lockable: !!lockable,
-        hasLessonPlan: has_lesson_plan,
-        numberedLesson: numbered_lesson?,
-        levels: cached_levels.map {|sl| sl.summarize(false, for_edit: for_edit)},
-        description_student: description_student,
-        description_teacher: description_teacher,
-        unplugged: unplugged,
-        lessonEditPath: get_uncached_edit_path,
-        lessonStartUrl: start_url
-      }
-      # Use to_a here so that we get access to the cached script_levels.
-      # Without it, script_levels.last goes back to the database.
-      last_script_level = script_levels.to_a.last
+        lesson_data = {
+          script_id: script.id,
+          script_name: script.name,
+          num_script_lessons: script.lessons.to_a.size,
+          id: id,
+          position: absolute_position,
+          relative_position: relative_position,
+          name: localized_name,
+          key: key,
+          assessment: !!assessment,
+          title: localized_title,
+          lesson_group_display_name: lesson_group&.localized_display_name,
+          lockable: !!lockable,
+          hasLessonPlan: has_lesson_plan,
+          numberedLesson: numbered_lesson?,
+          levels: cached_levels.map {|sl| sl.summarize(false, for_edit: for_edit)},
+          description_student: description_student,
+          description_teacher: description_teacher,
+          unplugged: unplugged,
+          lessonEditPath: get_uncached_edit_path,
+          lessonStartUrl: start_url
+        }
+        # Use to_a here so that we get access to the cached script_levels.
+        # Without it, script_levels.last goes back to the database.
+        last_script_level = script_levels.to_a.last
 
-      # The last level in a lesson might be a long assessment, so add extra information
-      # related to that.  This might include information for additional pages if it
-      # happens to be a multi-page long assessment.
-      if last_script_level&.long_assessment?
-        last_level_summary = lesson_data[:levels].last
-        extra_levels = ScriptLevel.summarize_extra_puzzle_pages(last_level_summary)
-        lesson_data[:levels] += extra_levels
-        last_level_summary[:uid] = "#{last_level_summary[:ids].first}_0"
-        last_level_summary[:url] << "/page/1"
-        last_level_summary[:page_number] = 1
-      end
-
-      if has_lesson_plan
-        lesson_data[:lesson_plan_html_url] = lesson_plan_html_url
-        lesson_data[:lesson_plan_pdf_url] = lesson_plan_pdf_url
-        if script.include_student_lesson_plans && script.is_migrated
-          lesson_data[:student_lesson_plan_html_url] = script_lesson_student_path(script, self)
+        # The last level in a lesson might be a long assessment, so add extra information
+        # related to that.  This might include information for additional pages if it
+        # happens to be a multi-page long assessment.
+        if last_script_level&.long_assessment?
+          last_level_summary = lesson_data[:levels].last
+          extra_levels = ScriptLevel.summarize_extra_puzzle_pages(last_level_summary)
+          lesson_data[:levels] += extra_levels
+          last_level_summary[:uid] = "#{last_level_summary[:ids].first}_0"
+          last_level_summary[:url] << "/page/1"
+          last_level_summary[:page_number] = 1
         end
+
+        if has_lesson_plan
+          lesson_data[:lesson_plan_html_url] = lesson_plan_html_url
+          lesson_data[:lesson_plan_pdf_url] = lesson_plan_pdf_url
+          if script.include_student_lesson_plans && script.is_migrated
+            lesson_data[:student_lesson_plan_html_url] = script_lesson_student_path(script, self)
+          end
+        end
+
+        if script.hoc?
+          lesson_data[:finishLink] = script.hoc_finish_url
+          lesson_data[:finishText] = I18n.t('nav.header.finished_hoc')
+        end
+
+        lesson_data[:lesson_extras_level_url] = script_lesson_extras_url(script.name, lesson_position: relative_position) unless unplugged_lesson?
+
+        lesson_data
       end
-
-      if script.hoc?
-        lesson_data[:finishLink] = script.hoc_finish_url
-        lesson_data[:finishText] = I18n.t('nav.header.finished_hoc')
-      end
-
-      lesson_data[:lesson_extras_level_url] = script_lesson_extras_url(script.name, lesson_position: relative_position) unless unplugged_lesson?
-
-      lesson_data
+      lesson_summary.freeze
     end
-    lesson_summary.freeze
   end
 
   def get_uncached_edit_path

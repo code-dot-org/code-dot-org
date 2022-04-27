@@ -78,19 +78,21 @@ class Plc::UserCourseEnrollment < ApplicationRecord
   end
 
   def summarize
-    {
-      courseName: plc_course.name,
-      link: Rails.application.routes.url_helpers.course_path(plc_course.unit_group),
-      status: status,
-      courseUnits: plc_unit_assignments.sort_by {|a| a.plc_course_unit.unit_order || 0}.map do |unit_assignment|
-        {
-          unitName: unit_assignment.plc_course_unit.unit_name,
-          link: Rails.application.routes.url_helpers.script_path(unit_assignment.plc_course_unit.script),
-          moduleAssignments: unit_assignment.summarize_progress,
-          status: unit_assignment.status
-        }
-      end
-    }
+    ActiveRecord::Base.connected_to(role: :reading) do
+      {
+        courseName: plc_course.name,
+        link: Rails.application.routes.url_helpers.course_path(plc_course.unit_group),
+        status: status,
+        courseUnits: plc_unit_assignments.sort_by {|a| a.plc_course_unit.unit_order || 0}.map do |unit_assignment|
+          {
+            unitName: unit_assignment.plc_course_unit.unit_name,
+            link: Rails.application.routes.url_helpers.script_path(unit_assignment.plc_course_unit.script),
+            moduleAssignments: unit_assignment.summarize_progress,
+            status: unit_assignment.status
+          }
+        end
+      }
+    end
   end
 
   private

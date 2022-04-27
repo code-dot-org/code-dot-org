@@ -28,12 +28,14 @@ class Standard < ApplicationRecord
   has_many :lessons_opportunity_standards, dependent: :destroy
 
   def summarize
-    {
-      id: id,
-      shortcode: shortcode,
-      category_description: category.localized_description,
-      description: localized_description
-    }
+    ActiveRecord::Base.connected_to(role: :reading) do
+      {
+        id: id,
+        shortcode: shortcode,
+        category_description: category.localized_description,
+        description: localized_description
+      }
+    end
   end
 
   def summarize_for_lesson_show

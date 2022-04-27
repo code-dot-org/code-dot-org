@@ -43,17 +43,19 @@ class ActivitySection < ApplicationRecord
   )
 
   def summarize
-    localized_progression_name = Services::I18n::CurriculumSyncUtils.get_localized_property(self, :progression_name) if progression_name
-    {
-      id: id,
-      position: position,
-      name: Services::I18n::CurriculumSyncUtils.get_localized_property(self, :name),
-      duration: duration,
-      remarks: remarks,
-      description: Services::I18n::CurriculumSyncUtils.get_localized_property(self, :description),
-      tips: tips,
-      progressionName: localized_progression_name
-    }
+    ActiveRecord::Base.connected_to(role: :reading) do
+      localized_progression_name = Services::I18n::CurriculumSyncUtils.get_localized_property(self, :progression_name) if progression_name
+      {
+        id: id,
+        position: position,
+        name: Services::I18n::CurriculumSyncUtils.get_localized_property(self, :name),
+        duration: duration,
+        remarks: remarks,
+        description: Services::I18n::CurriculumSyncUtils.get_localized_property(self, :description),
+        tips: tips,
+        progressionName: localized_progression_name
+      }
+    end
   end
 
   def summarize_for_lesson_show(can_view_teacher_markdown, current_user)

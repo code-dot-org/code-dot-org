@@ -1994,24 +1994,26 @@ class User < ApplicationRecord
 
   # Format user information for the JSON API
   def summarize
-    {
-      id: id,
-      name: name,
-      username: username,
-      email: email,
-      hashed_email: hashed_email,
-      user_type: user_type,
-      gender: gender,
-      birthday: birthday,
-      total_lines: total_lines,
-      secret_words: secret_words,
-      secret_picture_name: secret_picture&.name,
-      secret_picture_path: secret_picture&.path,
-      location: "/v2/users/#{id}",
-      age: age,
-      sharing_disabled: sharing_disabled?,
-      has_ever_signed_in: has_ever_signed_in?,
-    }
+    ActiveRecord::Base.connected_to(role: :reading) do
+      {
+        id: id,
+        name: name,
+        username: username,
+        email: email,
+        hashed_email: hashed_email,
+        user_type: user_type,
+        gender: gender,
+        birthday: birthday,
+        total_lines: total_lines,
+        secret_words: secret_words,
+        secret_picture_name: secret_picture&.name,
+        secret_picture_path: secret_picture&.path,
+        location: "/v2/users/#{id}",
+        age: age,
+        sharing_disabled: sharing_disabled?,
+        has_ever_signed_in: has_ever_signed_in?,
+      }
+    end
   end
 
   def has_ever_signed_in?
