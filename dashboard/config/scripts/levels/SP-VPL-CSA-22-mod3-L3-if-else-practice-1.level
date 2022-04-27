@@ -13,15 +13,13 @@
         "isVisible": true
       }
     },
-    "encrypted_examples": [
-
-    ]
+    "encrypted_exemplar_sources": "6G6ExKZgxp5DJKlPjCBd+qwJQmKwzh/dzTEY7/gcljb2AMx76iiufwu2w0TO\nRj2XSH7FvQGsWz1EmNyVfd7On1OqxTYjlrDjv8JURIEzsJPDaBZPoNBJxNWr\njlhLqX6FrAdVsNjUArEvu6T7EUgZ7W4PGiKtw2SGkNk2rtAIYEGWIJODENOV\nQ//HwPxcKXKzXCwtNPGmBTAnuIEMGkDxEYFva2ZaG9344a7pyrbjW6Jf2gE8\neD0l5H/FIM4rLGKxLo7SK9G4SCdPp5WEUSGbmMPeP+ZaO10ThBqvS31tAQFY\nizOJPkqK7cwwqWvtzD1mNtZG7rWJl2bJzwP1rRoq7A6/pAzqv0d+9PAzQqif\n+zWUDQiVtv8buzh2J1/tYBFF35z36bdH2Yyd2tFqdIDYobFCD6Nrd12CbLC7\nvIkvErtcwHFtmoKuivoXOn+3aCiNdEgQk/X3BuFYCQEbD1viY2qRpTWH4aoT\nFXRB3z2xBDKyOQn702p+65A4Pfv2/IQyDLoHH2X0LXxgId9rJDocgSaMn1s9\nqnna/HCGL+U2s1i+pVWvMg83q+hzfmWqB+TUPuxReCG0ENuY8hRJqk7z0FJ/\nfxZCAmc6a4VjETFgizN0efOhJEIt5OMyRo7c6W4aOWqNaOEqNI+i30wswNOe\nDzBFN9kXUOTMXHvFXXBW6G2CAsvhapxM1oDoo7LDUzAt2xR7Fr12DNmJeVAN\nMEv5VIcFOQkkkvstQX2IsroA2lKBSjEJJtJb7fK8juJcndSX3Jw/j0g7wHeu\nTS1stRP2X9JHP0UC0HTPFgQ21hu8jsrf6m1EmEaO/qq+PB5jxKKUQEJinSA5\nXW1a5BUV1AhT79mFnewhf9mx8rAYcgCFvAqojVCF7/pML2Jn7y4Cuin7bLfE\niJwdBc60A0isKEeJts2aQBmkowkK5eTS9Xuedb9kBE16yTqQWleATvlr/5B4\n"
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-03-19T19:42:27.000Z",
   "level_num": "custom",
   "user_id": 977,
-  "audit_log": "[{\"changed_at\":\"2022-03-19T19:42:27.860+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSA-22-mod3-L3-variables-predict-1\\\"\"],\"cloned_from\":\"SP-VPL-CSA-22-mod3-L3-variables-predict-1\"},{\"changed_at\":\"2022-03-19 19:54:10 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-19 20:21:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-19 20:21:44 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-04-19 16:01:20 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-04-19 16:42:43 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-03-19T19:42:27.860+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSA-22-mod3-L3-variables-predict-1\\\"\"],\"cloned_from\":\"SP-VPL-CSA-22-mod3-L3-variables-predict-1\"},{\"changed_at\":\"2022-03-19 19:54:10 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-19 20:21:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-03-19 20:21:44 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-04-19 16:01:20 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-04-19 16:42:43 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2022-04-26 16:15:52 +0000\",\"changed\":[],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"}]"
 }]]></config>
 </Javalab>

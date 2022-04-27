@@ -31474,7 +31474,7 @@ en:
             This unit exposes students to object-oriented programming principles as they explore The Neighborhood. Students learn fundamental Java concepts as they navigate and interact with The Neighborhood with `Painter` objects and create new types of `Painter`s to expand the capabilities of their programs. Students practice predicting the outcome of program code and use their `Painter` objects with conditional statements, `while` loops, and Boolean expressions to navigate mazes and create drawings. While students work with the `Painter`, they practice identifying syntax and logic errors to explain why code segments will not compile or work as intended. Additionally, students learn to document program code using comments to describe the behavior of specific code segments. Throughout this unit, students discover their identity as software engineers and use debugging strategies and code reviews to improve their programming skills.
 
             ### AP Classroom Personal Progress Checks
-            To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org/s/csa8-pilot-facilitator/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
+            To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org/s/csa1-2022/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
           student_description: This unit exposes you to object-oriented programming principles as you explore The Neighborhood. You learn fundamental Java concepts as you navigate and interact with The Neighborhood with `Painter` objects and create new types of `Painter`s to expand the capabilities of your programs. You practice predicting the outcome of program code and use your `Painter` objects with conditional statements, `while` loops, and Boolean expressions to navigate mazes and create drawings. While you work with the `Painter`, you practice identifying syntax and logic errors to explain why code segments will not compile or work as intended. Additionally, you learn to document program code using comments to describe the behavior of specific code segments. Throughout this unit, you discover your identity as a software engineer and use debugging strategies and code reviews to improve your programming skills.
         pre-express-2022:
           lessons:
@@ -31720,12 +31720,12 @@ en:
           name: csa2-2022
           title: Class Structure and Design ('22-'23)
           description_audience: ''
-          description_short: ''
+          description_short: Students develop an understanding of data encapsulation and object-oriented design decisions.
           description: |-
             This unit expands on the object-oriented programming principles introduced in Unit 1 to explore design principles as students develop classes with attributes and behaviors and work with primitive and object data. Students learn to work with variables and user input as they develop and utilize classes and objects to represent desserts, customers, and food trucks for the Project Mercury Pastries Food Truck business. As students work with the `Dessert` class, they build on their knowledge of inheritance to design subclasses that represent specific types of desserts. While working with variables, students learn to create and evaluate expressions using assignment and relational operators and trace code segments to determine the result of output. Throughout this unit, students continue to develop software engineering skills as they learn to use UML diagrams to represent classes and the DRY principle to refactor program code.
 
             ### AP Classroom Personal Progress Checks
-            To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org/s/csa6-pilot-facilitator/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
+            To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org/s/csa2-2022/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
 
             The following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:
             * Personal Progress Check 1
@@ -31898,12 +31898,12 @@ en:
           name: csa3-2022
           title: Arrays and Algorithms ('22-'23)
           description_audience: ''
-          description_short: ''
+          description_short: Students use one-dimensional (1D) arrays to store lists of primitive values and object references.
           description: |-
             This unit introduces students to data structures to store primitive values and object references. Students use one-dimensional (1D) arrays to represent lists of data while expanding their knowledge of loops and conditionals to analyze and process data in a 1D array. Students learn to use `for` loops to traverse arrays and discover that an algorithm involving loops can be implemented with either a `for` loop or a `while` loop. Throughout the unit, students develop and modify standard algorithms to find and manipulate elements in a 1D array while also discovering the concept of polymorphism when traversing arrays of objects. As part of the planning process, students identify the preconditions and postconditions that an algorithm must satisfy. Additionally, students learn to use the `static` and `final` keywords to create static variables to represent values shared with all classes and constants to represent values that cannot be changed.
 
             ### AP Classroom Personal Progress Checks
-            To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org/s/csa6-pilot-facilitator/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
+            To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org/s/csa3-2022/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
 
             The following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:
             * Personal Progress Check 4
@@ -32179,17 +32179,8 @@ en:
           name: csa4-2022
           title: Conditions and Logic ('22-'23)
           description_audience: ''
-          description_short: ''
-          description: |-
-            This unit revisits the use of packages to access existing functionalities in their programs, such as The Neighborhood, to expand their knowledge of APIs and libraries and explore The Theater. With The Theater, students learn to improve the decisions made in conditionals and loops with relational and logical operators to evaluate primitive values and object references. While working with conditionals and logical operators, students expand their knowledge of the `static` keyword to write static methods and explore their functionality. Additionally, students use casting operators and `Math` class methods to evaluate expressions and perform calculations, including incorporating random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, students develop an understanding of De Morgan’s Laws and learn how to evaluate truth tables.
-
-            ### AP Classroom Personal Progress Checks
-            To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org/s/csa6-pilot-facilitator/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
-
-            The following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:
-            * Personal Progress Check 3
-
-            ***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.*
+          description_short: Students improve decision-making in their programs using relational and logical operators to evaluate primitive values and object references and use the Math class to perform calculations and generate random numbers.
+          description: "This unit revisits the use of packages to access existing functionalities in their programs, such as The Neighborhood, to expand their knowledge of APIs and libraries and explore The Theater. With The Theater, students learn to improve the decisions made in conditionals and loops with relational and logical operators to evaluate primitive values and object references. While working with conditionals and logical operators, students expand their knowledge of the `static` keyword to write static methods and explore their functionality. Additionally, students use casting operators and `Math` class methods to evaluate expressions and perform calculations, including incorporating random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, students develop an understanding of De Morgan’s Laws and learn how to evaluate truth tables.\n\n### AP Classroom Personal Progress Checks\nTo assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org\t/s/csa4-2022/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:\n* Personal Progress Check 3\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.*"
           student_description: This unit revisits the use of packages to access existing functionalities in your programs, such as The Neighborhood, to expand your knowledge of APIs and libraries and explore The Theater. With The Theater, you learn to improve the decisions made in conditionals and loops with relational and logical operators to evaluate primitive values and object references. While working with conditionals and logical operators, you expand your knowledge of the `static` keyword to write static methods and explore their functionality. Additionally, you use casting operators and `Math` class methods to evaluate expressions and perform calculations, including incorporating random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, you develop an understanding of De Morgan's Laws and learn how to evaluate truth tables.
         csa5-2022:
           lessons:
@@ -32335,12 +32326,12 @@ en:
           name: csa5-2022
           title: Two-Dimensional Arrays ('22-'23)
           description_audience: ''
-          description_short: ''
+          description_short: Students use two-dimensional (2D) arrays to expand storage and organization capabilities in their programs.
           description: |-
             This unit expands on data structures introduced in Unit 3 to create tables of data using two-dimensional (2D) arrays. Students identify similarities and differences between 1D and 2D arrays when creating, accessing, and traversing 2D arrays and apply standard algorithms to find and manipulate elements. As students analyze problems involving 2D arrays, they revisit these standard algorithms to determine what code needs to be added or modified and to interact with completed program code. Students apply these concepts to manipulate pixels and in The Theater to create image filters in addition to working with primitive values and various object references. Additionally, students use the programming knowledge and skills they have acquired to consider the impacts of programs on society, economies, and culture.
 
             ### AP Classroom Personal Progress Checks
-            To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org/s/csa6-pilot-facilitator/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
+            To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's [**Standards**](https://studio.code.org/s/csa5-2022/standards) page. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).
 
             The following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:
 
@@ -36449,3 +36440,113 @@ en:
             This unit is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.
 
             **For Teachers:** [Click here](https://studio.code.org/s/aiml-2022?viewAs=Instructor) to see lesson plans and teacher resources for this unit.
+        vpl-csd-2022:
+          lessons:
+            Module 1:
+              name: Module 1
+              description_student: ''
+              description_teacher: ''
+              key: Module 1
+            Module 2:
+              name: Module 2
+              description_student: ''
+              description_teacher: ''
+              key: Module 2
+            Module 3:
+              name: Module 3
+              description_student: ''
+              description_teacher: ''
+              key: Module 3
+            Module 4:
+              name: Module 4
+              description_student: ''
+              description_teacher: ''
+              key: Module 4
+            Module 5:
+              name: Module 5
+              description_student: ''
+              description_teacher: ''
+              key: Module 5
+            Module 6:
+              name: Module 6
+              description_student: ''
+              description_teacher: ''
+              key: Module 6
+            Module 7:
+              name: Module 7
+              description_student: ''
+              description_teacher: ''
+              key: Module 7
+            Module 8:
+              name: Module 8
+              description_student: ''
+              description_teacher: ''
+              key: Module 8
+          title: CS Discoveries Virtual Professional Learning 2021 - 22
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        vpl-csp-2022:
+          lessons:
+            Module 1:
+              name: Module 1
+              description_student: ''
+              description_teacher: ''
+              key: Module 1
+            Module 2:
+              name: Module 2
+              description_student: ''
+              description_teacher: ''
+              key: Module 2
+            Module 3:
+              name: Module 3
+              description_student: ''
+              description_teacher: ''
+              key: Module 3
+            Module 4:
+              name: Module 4
+              description_student: ''
+              description_teacher: ''
+              key: Module 4
+            'Module 5: Unit 7 and Understanding Functions with Parameters and Return':
+              name: 'Module 5: Unit 7 and Understanding Functions with Parameters and Return'
+              description_student: 
+              description_teacher: 
+            'Module 6: Introduction to the Create Performance Task':
+              name: 'Module 6: Introduction to the Create Performance Task'
+              description_student: 
+              description_teacher: 
+            'Module 7: Tools and Structure in Unit 9 - Data':
+              name: 'Module 7: Tools and Structure in Unit 9 - Data'
+              description_student: 
+              description_teacher: 
+            'Module 8: Building Community and Preparing Students for the AP Exam':
+              name: 'Module 8: Building Community and Preparing Students for the AP Exam'
+              description_student: 
+              description_teacher: 
+            Module 5:
+              key: Module 5
+              name: 'Module 5: Unit 7 and Understanding Functions with Parameters and Return'
+              description_student: ''
+              description_teacher: ''
+            Module 6:
+              key: Module 6
+              name: 'Module 6: Introduction to the Create Performance Task'
+              description_student: ''
+              description_teacher: ''
+            Module 7:
+              key: Module 7
+              name: 'Module 7: Tools and Structure in Unit 9 - Data'
+              description_student: ''
+              description_teacher: ''
+            Module 8:
+              key: Module 8
+              name: 'Module 8: Building Community and Preparing Students for the AP Exam'
+              description_student: ''
+              description_teacher: ''
+          title: CS Principles Virtual Professional Learning 21 - 22
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
