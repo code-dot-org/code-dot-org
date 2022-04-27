@@ -274,7 +274,6 @@ class PersonalProjectsTable extends React.Component {
             )}
           </div>
         )}
-        )
         <PublishDialog />
         <DeleteProjectDialog />
       </div>
