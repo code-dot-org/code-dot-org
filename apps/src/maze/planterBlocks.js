@@ -21,11 +21,11 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(
         [msg.ifCode(), msg.at(), msg.soil()].join(' ')
       );
       this.setInputsInline(true);
-      this.appendStatementInput('DO').appendTitle(msg.doCode());
+      this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -42,11 +42,11 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: '',
     init: function() {
       Blockly.cdoUtils.setHSV(this, 196, 1.0, 0.79);
-      this.appendDummyInput().appendTitle(
+      this.appendDummyInput().appendField(
         [msg.ifCode(), msg.at(), msg.sprout()].join(' ')
       );
       this.setInputsInline(true);
-      this.appendStatementInput('DO').appendTitle(msg.doCode());
+      this.appendStatementInput('DO').appendField(msg.doCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }

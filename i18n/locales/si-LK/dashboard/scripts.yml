@@ -682,6 +682,7 @@ si:
             Hour of Code 2015:
               name: පැයක කේතය 2015
           student_description: කේත කොටස් භාවිතා කරමින්, ස්ටීව් හෝ ඇලෙක්ස් ව මෙම Minecraft ලෝකය හරහා වික්‍රමාන්විත ගමන් මගක රැගෙන යන්න.
+          name: mc
         ScienceP3OLPT3:
           lessons:
             Welcome!:
@@ -926,6 +927,8 @@ si:
               display_name: අන්තර්ගතය
             practice:
               display_name: ඉගැන්වීමේ පිළිවෙත්
+        basketball:
+          name: පැසිපන්දු
         csd2-2017:
           lessons:
             Peer Review:
@@ -1693,6 +1696,8 @@ si:
           lessons:
             Artist:
               name: කලාකරු
+        aquatic:
+          name: ජලජ
         cspplayground:
           lesson_groups:
             csp_variables:
@@ -2996,6 +3001,9 @@ si:
             lessonGroup-2:
               display_name: අන්තර්ගතය
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: ලූපයන් සඳහා
           lesson_groups:
             lessonGroup-2:
               display_name: අන්තර්ගතය

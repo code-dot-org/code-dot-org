@@ -2,6 +2,8 @@
 pl:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: utwórz nowego {ANIMATION_NAME} duszka w {LOCATION}
       Dancelab_alternateMoves:
         text: "{GROUP} zmienia się co {N} takty \nmiędzy {MOVE1} i {MOVE2}"
         options:
@@ -1081,6 +1083,12 @@ pl:
         text: narysuj linię {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: krawędzie bloku {SPRITE} z ruchu
+      gamelab_everySeconds:
+        text: 'powtarzaj co {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': sekundy
+            '"frames"': ramki
       gamelab_followingTargets:
         text: idąc za celami
       gamelab_getAllSprites:
@@ -1235,6 +1243,8 @@ pl:
             '"pop"': popularny
             '"rain"': deszcz
             '"spiral"': spirala
+      gamelab_makeNewScaledSprite:
+        text: utwórz nowego {ANIMATION_NAME} duszka w {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: utwórz nowego {ANIMATION_NAME} duszka w {LOCATION}
       gamelab_makeNumSprites:
@@ -1448,7 +1458,7 @@ pl:
           narysuj tablicę wyników
           {SPRITE1COSTUME}wynik{VAR1}{SPRITE2COSTUME}wynik{VAR2}cel{SPRITE3COSTUME}
       gamelab_setupSim:
-        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3][null][4] z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
+        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME} z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
       gamelab_showTitleScreen:
         text: pokaż ekran tytułowy {BREAK} tytuł {TITLE} podtytuł {SUBTITLE}
       gamelab_spriteClicked:
@@ -1822,7 +1832,7 @@ pl:
           populacja:{SPRITE2N}
           {TOGGLE}wirus
       Mikelab_setupSim:
-        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3][null][4] z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
+        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME} z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
       Mikelab_showScoreboard:
         options:
           CORNER:

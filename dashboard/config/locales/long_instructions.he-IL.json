@@ -569,7 +569,7 @@
         "Overworld Move to Sheep_2021": "הוסיפו עוד פקודת `זוז קדימה` כדי להגיע לכבשה.",
         "courseA_maze_seq1_2021": "_\"שחקו בעזרת הבלוקים האלה ועיזרו לי להגיע אל החזיר הרע!\"_",
         "courseA_maze_seq_challenge2_2021": "עקוב אחרי הנתיב והובל אותי אל החזיר. היזהר מ-TNT (חומר נפץ) או שנוצות יעופו לכל עבר!",
-        "courseA_playLab_events3_2021": "תעזרו לג'ורג' הכלב להתחיל לזוז על ידי חיבור של הבלוק  <xml><block type=\"studio_move\" block-text=\"move dog west\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> לבלוק האירוע <xml><block type=\"studio_whenArrow\" block-text=\"when left arrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml>  שכבר נמצא על שולחן העבודה.\nהשתמשו במקשי החיצים או הקליקו על כפתורי החיצים כדי להזיז את ג'ורג' עד הדגל ולסיים את השלב.",
+        "courseA_playLab_events3_2021": "עזרו לג'ורג' הכלב להתחיל לזוז על ידי חיבור של הבלוק  <xml><block type=\"studio_move\" block-text=\"move dog west\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> לבלוק האירוע <xml><block type=\"studio_whenArrow\" block-text=\"when left arrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml>  שכבר נמצא על שולחן העבודה.\nהשתמשו במקשי החיצים או הקליקו על כפתורי החיצים כדי להזיז את ג'ורג' עד הדגל ולסיים את השלב.",
         "courseB_Scrat_ramp1_2021": "כדי להביא את סקראט הסנאי אל הבלוט חבר את הבלוק <xml><block type=\"maze_moveEast\"/></xml> אל החלק התחתון של הבלוק <xml><block type=\"when_run\"/></xml> ואז לחץ על \"הרץ ▶\"!",
         "courseB_Scrat_ramp3b_2021": "ישנו בלוק עודף בסוף הקוד הזה! \n\nגרור אותו בחזרה אל תיבת הכלים כדי להיפטר ממנו.",
         "courseB_iceage_loops1_2021": "עזור לסקראט הסנאי לחצות את הקרח החלקלק כדי להגיע לבלוט!",

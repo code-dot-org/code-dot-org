@@ -179,7 +179,8 @@
         "Course 4 Bee Params 8": {
           "get nectar make honey": {
             "parameters": {
-              "honey": "мед"
+              "honey": "мед",
+              "direction": "посока"
             }
           }
         },
@@ -2220,6 +2221,41 @@
           "rowOfNectarOrHoney": {
             "parameters": {
               "width": "широчина"
+            }
+          }
+        },
+        "Course 4 Bee Params 3": {
+          "get 3 nectar": {
+            "parameters": {
+              "direction": "посока"
+            }
+          }
+        },
+        "Course 4 Bee Params 4": {
+          "get 3 nectar": {
+            "parameters": {
+              "direction": "посока"
+            }
+          }
+        },
+        "Course 4 Bee Params 5": {
+          "get 5 nectar": {
+            "parameters": {
+              "direction": "посока"
+            }
+          }
+        },
+        "Course 4 Bee Params 6": {
+          "get 5 nectar": {
+            "parameters": {
+              "direction": "посока"
+            }
+          }
+        },
+        "Course 4 Bee Params 7": {
+          "get many nectar": {
+            "parameters": {
+              "direction": "посока"
             }
           }
         }

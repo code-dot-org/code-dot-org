@@ -2,6 +2,8 @@
 ku:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: سپرایتێکی {ANIMATION_NAME} نوێ دروست بکە لە {LOCATION}
       Dancelab_alternateMoves:
         options:
           GROUP:
@@ -852,6 +854,8 @@ ku:
         text: دەتوانرێ بجوڵێنرێ
       gamelab_edgesDisplace:
         text: لێوارەکان ڕێگەدەگرن کە {SPRITE} بجوڵێ
+      gamelab_everySeconds:
+        text: 'هەموو {N} {UNIT} '
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -953,6 +957,8 @@ ku:
         text: شوێنی {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeNewScaledSprite:
+        text: سپرایتێکی {ANIMATION_NAME} نوێ دروست بکە لە {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: سپرایتێکی {ANIMATION_NAME} نوێ دروست بکە لە {LOCATION}
       gamelab_mirrorSprite:

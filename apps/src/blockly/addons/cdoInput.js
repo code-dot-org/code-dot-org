@@ -5,10 +5,6 @@ export default class Input extends GoogleBlockly.Input {
     return super.setCheck(check);
   }
 
-  appendTitle(a, b) {
-    return super.appendField(a, b);
-  }
-
   getFieldRow() {
     return this.fieldRow;
   }

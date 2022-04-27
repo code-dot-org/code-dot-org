@@ -148,7 +148,11 @@ class ProgrammingExpression < ApplicationRecord
   end
 
   def studio_documentation_path
-    programming_environment_programming_expression_path(programming_environment.name, key)
+    if DCDO.get('use-studio-code-docs', false)
+      documentation_path
+    else
+      programming_environment_programming_expression_path(programming_environment.name, key)
+    end
   end
 
   def summarize_for_lesson_edit
@@ -173,7 +177,7 @@ class ProgrammingExpression < ApplicationRecord
       blockName: block_name,
       categoryKey: programming_environment_category&.key,
       programmingEnvironmentName: programming_environment.name,
-      environmentEditorType: programming_environment.editor_type,
+      environmentEditorLanguage: programming_environment.editor_language,
       imageUrl: image_url,
       videoKey: video_key,
       shortDescription: short_description || '',
@@ -190,6 +194,7 @@ class ProgrammingExpression < ApplicationRecord
 
   def summarize_for_show
     {
+      id: id,
       name: name,
       blockName: block_name,
       category: programming_environment_category&.name,
@@ -217,14 +222,27 @@ class ProgrammingExpression < ApplicationRecord
     }
   end
 
-  def serialize_for_environment_show
+  def summarize_for_navigation
     {
+      id: id,
       key: key,
       name: name,
       blockName: block_name,
       color: get_color,
       syntax: syntax,
       link: studio_documentation_path
+    }
+  end
+
+  def summarize_for_all_code_docs
+    {
+      id: id,
+      key: key,
+      name: name,
+      environmentId: programming_environment.id,
+      environmentTitle: programming_environment.title,
+      categoryName: programming_environment_category&.name,
+      editPath: edit_programming_expression_path(self)
     }
   end
 

@@ -858,6 +858,10 @@ te:
             '"direction"': మువ్‌మెంట్ డైరెక్షన్
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
+      gamelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': సెకండ్లు
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:

@@ -2,6 +2,8 @@
 fi:
   data:
     blocks:
+      BadGuys_makeNewBadGuysSprite:
+        text: tee uusi {ANIMATION_NAME} sprite sijaintiin {LOCATION}
       Dancelab_alternateMoves:
         text: "{GROUP} vaihtele jokaisen {N} tahdin \nvälillä {MOVE1} ja {MOVE2}"
         options:
@@ -1007,6 +1009,11 @@ fi:
         text: on vedettävä
       gamelab_edgesDisplace:
         text: reunat estävät {SPRITE} liikkumasta
+      gamelab_everySeconds:
+        text: 'joka {N} {UNIT} '
+        options:
+          UNIT:
+            '"seconds"': sekuntia
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1132,6 +1139,8 @@ fi:
         options:
           EFFECT:
             '"rain"': sade
+      gamelab_makeNewScaledSprite:
+        text: tee uusi {ANIMATION_NAME} sprite sijaintiin {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: tee uusi {ANIMATION_NAME} sprite sijaintiin {LOCATION}
       gamelab_makeProjectile:

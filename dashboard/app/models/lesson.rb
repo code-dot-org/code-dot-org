@@ -181,9 +181,9 @@ class Lesson < ApplicationRecord
   # page, and the lesson plan pdf as a backup.
   def start_url
     if script_levels.first
-      return url_from_path(build_script_level_path(script_levels.first))
+      return url_from_path(build_script_level_path(script_levels.first), CDO.default_scheme)
     elsif script.include_student_lesson_plans && script.is_migrated
-      return url_from_path(script_lesson_student_path(script, self))
+      return url_from_path(script_lesson_student_path(script, self), CDO.default_scheme)
     elsif student_lesson_plan_pdf_url
       return student_lesson_plan_pdf_url
     end
@@ -832,6 +832,7 @@ class Lesson < ApplicationRecord
     Services::MarkdownPreprocessor.sub_vocab_definitions!(copied_lesson.preparation, update_vocab_definition_on_clone) if copied_lesson.preparation
     Services::MarkdownPreprocessor.sub_resource_links!(copied_lesson.assessment_opportunities, update_resource_link_on_clone) if copied_lesson.assessment_opportunities
     Services::MarkdownPreprocessor.sub_vocab_definitions!(copied_lesson.assessment_opportunities, update_vocab_definition_on_clone) if copied_lesson.assessment_opportunities
+    copied_lesson.save!
 
     # Copy lesson activities, activity sections, and script levels
     copied_lesson.lesson_activities = lesson_activities.map do |original_lesson_activity|

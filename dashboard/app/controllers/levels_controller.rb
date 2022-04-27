@@ -141,7 +141,9 @@ class LevelsController < ApplicationController
   # GET /levels/1/edit
   def edit
     # Make sure that the encrypted property is a boolean
-    @level.properties['encrypted'] = @level.properties['encrypted'].to_bool if @level.properties['encrypted']
+    if @level.properties['encrypted']&.is_a?(String)
+      @level.properties['encrypted'] = @level.properties['encrypted'].to_bool
+    end
     @in_script = @level.script_levels.any?
     @standalone = ProjectsController::STANDALONE_PROJECTS.values.map {|h| h[:name]}.include?(@level.name)
     fb = FirebaseHelper.new('shared')
@@ -174,6 +176,8 @@ class LevelsController < ApplicationController
   # GET /levels/:id/edit_blocks/:type
   # Action for using blockly workspace as a toolbox/startblock editor.
   # Expects params[:type] which can be either 'toolbox_blocks' or 'start_blocks'
+  # Javalab also uses this route to edit starter code, and sets the type param
+  # to 'start_sources'
   def edit_blocks
     type = params[:type]
     blocks_xml = @level.properties[type].presence || @level[type] || EMPTY_XML
@@ -218,6 +222,18 @@ class LevelsController < ApplicationController
     end
 
     @is_start_mode = type == 'start_blocks'
+
+    show
+    render :show
+  end
+
+  # GET /levels/:id/edit_exemplar
+  def edit_exemplar
+    @game = @level.game
+    @is_editing_exemplar = true
+
+    exemplar_sources = @level.try(:exemplar_sources)
+    level_view_options(@level.id, {is_editing_exemplar: true, exemplar_sources: exemplar_sources})
 
     show
     render :show
@@ -286,6 +302,21 @@ class LevelsController < ApplicationController
       @level.validation = changes["validation"]
     end
     return update_properties(ignored_keys: ["validation"])
+  end
+
+  # POST /levels/:id/update_exemplar_code
+  def update_exemplar_code
+    changes = JSON.parse(request.body.read)
+    if @level.respond_to?(:exemplar_sources)
+      @level.exemplar_sources = changes["exemplar_sources"]
+    end
+
+    @level.log_changes(current_user)
+    @level.save!
+
+    # We tend to respond with a redirect URL in this controller,
+    # but it is not used in this case.
+    render json: {redirect: level_url(@level)}
   end
 
   # POST /levels

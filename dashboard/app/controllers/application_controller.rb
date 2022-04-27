@@ -8,8 +8,7 @@ class ApplicationController < ActionController::Base
   include LocaleHelper
   include ApplicationHelper
 
-  include SeamlessDatabasePool::ControllerFilter
-  include MultipleDatabasesTransitionHelper::ControllerFilter
+  include Services::DatabaseConnections::ControllerFilter
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.

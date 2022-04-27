@@ -11,22 +11,12 @@
       "is_migrated": true,
       "project_sharing": true,
       "student_detail_progress_view": true,
-      "teacher_resources": [
-        [
-          "lessonPlans",
-          "https://curriculum.code.org/csd-20/unit2/"
-        ],
-        [
-          "teacherForum",
-          "https://forum.code.org/c/csd"
-        ]
-      ],
       "tts": true,
       "use_legacy_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-11 12:07:56 UTC",
+    "serialized_at": "2022-03-22 21:16:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5981,13 +5971,45 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "Lesson Plans",
+      "url": "https://curriculum.code.org/csd-20/unit2/",
+      "key": "lesson_plans_1",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_plans_1"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csd",
+      "key": "teacher_forum",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "lesson_plans_1",
+        "script.name": "csd2-2020"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csd2-2020"
+      }
+    }
   ],
   "scripts_student_resources": [
 

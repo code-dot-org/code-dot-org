@@ -62,6 +62,429 @@
           "name": "IA: Dati di apprendimento e distorsioni",
           "type": "Video"
         },
+        "lesson_plans/courseb/2018": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/courseb/2018": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/courseb/2018": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/courseb/2018": {
+          "name": "Vocabolario"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/coursea/2018": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/coursea/2018": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/coursea/2018": {
+          "name": "Vocabolario"
+        },
+        "lesson_plans/coursed/2018": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/coursed/2018": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/coursed/2018": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/coursed/2018": {
+          "name": "Vocabolario"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/coursef/2018": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/coursef/2018": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/coursef/2018": {
+          "name": "Vocabolario"
+        },
+        "lesson_plans/express/2018": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/express/2018": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/express/2018": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/express/2018": {
+          "name": "Vocabolario"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/coursee/2018": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/coursee/2018": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/coursee/2018": {
+          "name": "Vocabolario"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/coursec/2018": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/coursec/2018": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/coursec/2018": {
+          "name": "Vocabolario"
+        },
+        "code_introduced_1/csd/2018": {
+          "name": "Code introdotto"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings_2/csd/2018": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum_2/csd/2018": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary_2/csd/2018": {
+          "name": "Vocabolario"
+        },
+        "code_introduced_3/csd/2018": {
+          "name": "Code introdotto"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings_5/csd/2018": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum_5/csd/2018": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary_5/csd/2018": {
+          "name": "Vocabolario"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings_4/csd/2018": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum_4/csd/2018": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary_4/csd/2018": {
+          "name": "Vocabolario"
+        },
+        "code_introduced_2/csd/2018": {
+          "name": "Code introdotto"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings_3/csd/2018": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum_3/csd/2018": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary_3/csd/2018": {
+          "name": "Vocabolario"
+        },
+        "code_introduced/csd/2018": {
+          "name": "Code introdotto"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings_1/csd/2018": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum_1/csd/2018": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary_1/csd/2018": {
+          "name": "Vocabolario"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/csd/2018": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/csd/2018": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/csd/2018": {
+          "name": "Vocabolario"
+        },
+        "curriculum_guide/coursea/2019": {
+          "name": "Guida Curriculum"
+        },
+        "lesson_plans/coursea/2019": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/coursea/2019": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/coursea/2019": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/coursea/2019": {
+          "name": "Vocabolario"
+        },
+        "curriculum_guide/courseb/2019": {
+          "name": "Guida Curriculum"
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/courseb/2019": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/courseb/2019": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/courseb/2019": {
+          "name": "Vocabolario"
+        },
+        "curriculum_guide/coursed/2019": {
+          "name": "Guida Curriculum"
+        },
+        "lesson_plans/coursed/2019": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/coursed/2019": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/coursed/2019": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/coursed/2019": {
+          "name": "Vocabolario"
+        },
+        "curriculum_guide/coursef/2019": {
+          "name": "Guida Curriculum"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/coursef/2019": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/coursef/2019": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/coursef/2019": {
+          "name": "Vocabolario"
+        },
+        "curriculum_guide/coursee/2019": {
+          "name": "Guida Curriculum"
+        },
+        "lesson_plans/coursee/2019": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/coursee/2019": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/coursee/2019": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/coursee/2019": {
+          "name": "Vocabolario"
+        },
+        "lesson_plans/express/2019": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/express/2019": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/express/2019": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/express/2019": {
+          "name": "Vocabolario"
+        },
+        "curriculum_guide/coursec/2019": {
+          "name": "Guida Curriculum"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/coursec/2019": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/coursec/2019": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/coursec/2019": {
+          "name": "Vocabolario"
+        },
+        "teacher_forum/csd/2019": {
+          "name": "Forum dell'insegnante"
+        },
+        "code_introduced_1/csd/2019": {
+          "name": "Code introdotto"
+        },
+        "lesson_plans_2/csd/2019": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings_2/csd/2019": {
+          "name": "Funzioni Standard"
+        },
+        "vocabulary_2/csd/2019": {
+          "name": "Vocabolario"
+        },
+        "code_introduced_3/csd/2019": {
+          "name": "Code introdotto"
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings_5/csd/2019": {
+          "name": "Funzioni Standard"
+        },
+        "vocabulary_5/csd/2019": {
+          "name": "Vocabolario"
+        },
+        "code_introduced_2/csd/2019": {
+          "name": "Code introdotto"
+        },
+        "lesson_plans_3/csd/2019": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings_3/csd/2019": {
+          "name": "Funzioni Standard"
+        },
+        "vocabulary_3/csd/2019": {
+          "name": "Vocabolario"
+        },
+        "lesson_plans_4/csd/2019": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings_4/csd/2019": {
+          "name": "Funzioni Standard"
+        },
+        "vocabulary_4/csd/2019": {
+          "name": "Vocabolario"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/csd/2019": {
+          "name": "Funzioni Standard"
+        },
+        "vocabulary/csd/2019": {
+          "name": "Vocabolario"
+        },
+        "code_introduced/csd/2019": {
+          "name": "Code introdotto"
+        },
+        "lesson_plans_1/csd/2019": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings_1/csd/2019": {
+          "name": "Funzioni Standard"
+        },
+        "vocabulary_1/csd/2019": {
+          "name": "Vocabolario"
+        },
+        "code_introduced_1/csd/2017": {
+          "name": "Code introdotto"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings_2/csd/2017": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum_2/csd/2017": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary_2/csd/2017": {
+          "name": "Vocabolario"
+        },
+        "code_introduced_3/csd/2017": {
+          "name": "Code introdotto"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings_5/csd/2017": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum_5/csd/2017": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary_5/csd/2017": {
+          "name": "Vocabolario"
+        },
+        "code_introduced/csd/2017": {
+          "name": "Code introdotto"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings_1/csd/2017": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum_1/csd/2017": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary_1/csd/2017": {
+          "name": "Vocabolario"
+        },
+        "lesson_plans/csd/2017": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/csd/2017": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/csd/2017": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/csd/2017": {
+          "name": "Vocabolario"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings_4/csd/2017": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum_4/csd/2017": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary_4/csd/2017": {
+          "name": "Vocabolario"
+        },
+        "code_introduced_2/csd/2017": {
+          "name": "Code introdotto"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings_3/csd/2017": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum_3/csd/2017": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary_3/csd/2017": {
+          "name": "Vocabolario"
+        },
         "list_of_poems_1/poem-art/unversioned": {
           "name": "Elenco di poesie",
           "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
@@ -392,7 +815,8 @@
         },
         "unplugged-video-big-event/courseb/2021": {
           "name": "Il grande evento",
-          "url": "https://youtu.be/u0WV9shCoak"
+          "url": "https://youtu.be/u0WV9shCoak",
+          "type": "Video"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "Il grande evento",
@@ -1608,6 +2032,120 @@
         },
         "website-for-a-purpose/csd/2021": {
           "type": "Valutazioni dei parigrado"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/pre-express/2020": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/pre-express/2020": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/pre-express/2020": {
+          "name": "Vocabolario"
+        },
+        "lesson_plans/express/2020": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/express/2020": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/express/2020": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/express/2020": {
+          "name": "Vocabolario"
+        },
+        "curriculum_guide/courseb/2020": {
+          "name": "Guida Curriculum"
+        },
+        "lesson_plans/courseb/2020": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/courseb/2020": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/courseb/2020": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/courseb/2020": {
+          "name": "Vocabolario"
+        },
+        "curriculum_guide/coursed/2020": {
+          "name": "Guida Curriculum"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/coursed/2020": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/coursed/2020": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/coursed/2020": {
+          "name": "Vocabolario"
+        },
+        "curriculum_guide/coursec/2020": {
+          "name": "Guida Curriculum"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/coursec/2020": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/coursec/2020": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/coursec/2020": {
+          "name": "Vocabolario"
+        },
+        "curriculum_guide/coursee/2020": {
+          "name": "Guida Curriculum"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/coursee/2020": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/coursee/2020": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/coursee/2020": {
+          "name": "Vocabolario"
+        },
+        "curriculum_guide/coursea/2020": {
+          "name": "Guida Curriculum"
+        },
+        "lesson_plans/coursea/2020": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/coursea/2020": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/coursea/2020": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/coursea/2020": {
+          "name": "Vocabolario"
+        },
+        "curriculum_guide/coursef/2020": {
+          "name": "Guida Curriculum"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "Piano di lavoro delle lezioni"
+        },
+        "standard_mappings/coursef/2020": {
+          "name": "Funzioni Standard"
+        },
+        "teacher_forum/coursef/2020": {
+          "name": "Forum dell'insegnante"
+        },
+        "vocabulary/coursef/2020": {
+          "name": "Vocabolario"
         }
       }
     }

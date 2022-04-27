@@ -253,6 +253,10 @@ ky:
           CONDITION:
             '"when"': качан
             '"while"': болуп турганда
+      gamelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': секунд
       gamelab_getProp:
         options:
           PROPERTY:

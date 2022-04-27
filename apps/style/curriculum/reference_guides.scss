@@ -1,4 +1,11 @@
 @import 'color';
+@import 'font';
+@import "markdown";
+
+.page-content {
+  display: flex;
+  gap: 16px;
+}
 
 .page-actions {
   display: flex;
@@ -26,4 +33,8 @@
 .actions-box {
   display: flex;
   justify-content: space-around;
+}
+
+.input {
+  display: block;
 }

@@ -17,17 +17,437 @@
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
           "type": "Видео"
         },
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "url": "https://docs.google.com/document/d/1dEvtuFNhx9tOWBFt8z_7_uB6WqeS5SSSdYamsZu6hJ0/"
+        },
+        "decode-this-message/text-compression/unversioned": {
+          "name": "Декодирайте това съобщение",
+          "url": "https://docs.google.com/document/d/1x89s9Xo6lwMJPQjJqhzPaBg_huwTF9LmV2PrUrESYZQ/"
+        },
+        "textcompressioncodestudio/text-compression/unversioned": {
+          "url": "https://studio.code.org/s/text-compression/stage/1/puzzle/1"
+        },
         "video-text-compression/text-compression/unversioned": {
+          "name": "Видео: Компресиране на текст с Aloe Blacc",
+          "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be",
           "type": "Видео"
         },
         "ai-ml/oceans/unversioned": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Видео"
         },
         "ai-societal/oceans/unversioned": {
+          "url": "https://youtu.be/ng4c1g3COfs",
           "type": "Видео"
         },
         "ai-training/oceans/unversioned": {
+          "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Видео"
+        },
+        "lesson_plans/courseb/2018": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings/courseb/2018": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum/courseb/2018": {
+          "name": "Учителски форум"
+        },
+        "vocabulary/courseb/2018": {
+          "name": "Речник"
+        },
+        "lesson_plans/coursea/2018": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings/coursea/2018": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum/coursea/2018": {
+          "name": "Учителски форум"
+        },
+        "vocabulary/coursea/2018": {
+          "name": "Речник"
+        },
+        "lesson_plans/coursed/2018": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings/coursed/2018": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum/coursed/2018": {
+          "name": "Учителски форум"
+        },
+        "vocabulary/coursed/2018": {
+          "name": "Речник"
+        },
+        "lesson_plans/coursef/2018": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings/coursef/2018": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum/coursef/2018": {
+          "name": "Учителски форум"
+        },
+        "vocabulary/coursef/2018": {
+          "name": "Речник"
+        },
+        "lesson_plans/express/2018": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings/express/2018": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum/express/2018": {
+          "name": "Учителски форум"
+        },
+        "vocabulary/express/2018": {
+          "name": "Речник"
+        },
+        "lesson_plans/coursee/2018": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings/coursee/2018": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum/coursee/2018": {
+          "name": "Учителски форум"
+        },
+        "vocabulary/coursee/2018": {
+          "name": "Речник"
+        },
+        "lesson_plans/coursec/2018": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings/coursec/2018": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum/coursec/2018": {
+          "name": "Учителски форум"
+        },
+        "vocabulary/coursec/2018": {
+          "name": "Речник"
+        },
+        "code_introduced_1/csd/2018": {
+          "name": "Въведение в кода"
+        },
+        "lesson_plans_2/csd/2018": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings_2/csd/2018": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum_2/csd/2018": {
+          "name": "Учителски форум"
+        },
+        "vocabulary_2/csd/2018": {
+          "name": "Речник"
+        },
+        "code_introduced_3/csd/2018": {
+          "name": "Въведение в кода"
+        },
+        "lesson_plans_5/csd/2018": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings_5/csd/2018": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum_5/csd/2018": {
+          "name": "Учителски форум"
+        },
+        "vocabulary_5/csd/2018": {
+          "name": "Речник"
+        },
+        "lesson_plans_4/csd/2018": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings_4/csd/2018": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum_4/csd/2018": {
+          "name": "Учителски форум"
+        },
+        "vocabulary_4/csd/2018": {
+          "name": "Речник"
+        },
+        "code_introduced_2/csd/2018": {
+          "name": "Въведение в кода"
+        },
+        "lesson_plans_3/csd/2018": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings_3/csd/2018": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum_3/csd/2018": {
+          "name": "Учителски форум"
+        },
+        "vocabulary_3/csd/2018": {
+          "name": "Речник"
+        },
+        "code_introduced/csd/2018": {
+          "name": "Въведение в кода"
+        },
+        "lesson_plans_1/csd/2018": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings_1/csd/2018": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum_1/csd/2018": {
+          "name": "Учителски форум"
+        },
+        "vocabulary_1/csd/2018": {
+          "name": "Речник"
+        },
+        "lesson_plans/csd/2018": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings/csd/2018": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum/csd/2018": {
+          "name": "Учителски форум"
+        },
+        "vocabulary/csd/2018": {
+          "name": "Речник"
+        },
+        "lesson_plans/coursea/2019": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings/coursea/2019": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum/coursea/2019": {
+          "name": "Учителски форум"
+        },
+        "vocabulary/coursea/2019": {
+          "name": "Речник"
+        },
+        "lesson_plans/courseb/2019": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings/courseb/2019": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum/courseb/2019": {
+          "name": "Учителски форум"
+        },
+        "vocabulary/courseb/2019": {
+          "name": "Речник"
+        },
+        "lesson_plans/coursed/2019": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings/coursed/2019": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum/coursed/2019": {
+          "name": "Учителски форум"
+        },
+        "vocabulary/coursed/2019": {
+          "name": "Речник"
+        },
+        "lesson_plans/coursef/2019": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings/coursef/2019": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum/coursef/2019": {
+          "name": "Учителски форум"
+        },
+        "vocabulary/coursef/2019": {
+          "name": "Речник"
+        },
+        "lesson_plans/coursee/2019": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings/coursee/2019": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum/coursee/2019": {
+          "name": "Учителски форум"
+        },
+        "vocabulary/coursee/2019": {
+          "name": "Речник"
+        },
+        "lesson_plans/express/2019": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings/express/2019": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum/express/2019": {
+          "name": "Учителски форум"
+        },
+        "vocabulary/express/2019": {
+          "name": "Речник"
+        },
+        "lesson_plans/coursec/2019": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings/coursec/2019": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum/coursec/2019": {
+          "name": "Учителски форум"
+        },
+        "vocabulary/coursec/2019": {
+          "name": "Речник"
+        },
+        "teacher_forum/csd/2019": {
+          "name": "Учителски форум"
+        },
+        "code_introduced_1/csd/2019": {
+          "name": "Въведение в кода"
+        },
+        "lesson_plans_2/csd/2019": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings_2/csd/2019": {
+          "name": "Стандартни съпоставяния"
+        },
+        "vocabulary_2/csd/2019": {
+          "name": "Речник"
+        },
+        "code_introduced_3/csd/2019": {
+          "name": "Въведение в кода"
+        },
+        "lesson_plans_5/csd/2019": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings_5/csd/2019": {
+          "name": "Стандартни съпоставяния"
+        },
+        "vocabulary_5/csd/2019": {
+          "name": "Речник"
+        },
+        "code_introduced_2/csd/2019": {
+          "name": "Въведение в кода"
+        },
+        "lesson_plans_3/csd/2019": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings_3/csd/2019": {
+          "name": "Стандартни съпоставяния"
+        },
+        "vocabulary_3/csd/2019": {
+          "name": "Речник"
+        },
+        "lesson_plans_4/csd/2019": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings_4/csd/2019": {
+          "name": "Стандартни съпоставяния"
+        },
+        "vocabulary_4/csd/2019": {
+          "name": "Речник"
+        },
+        "lesson_plans/csd/2019": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings/csd/2019": {
+          "name": "Стандартни съпоставяния"
+        },
+        "vocabulary/csd/2019": {
+          "name": "Речник"
+        },
+        "code_introduced/csd/2019": {
+          "name": "Въведение в кода"
+        },
+        "lesson_plans_1/csd/2019": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings_1/csd/2019": {
+          "name": "Стандартни съпоставяния"
+        },
+        "vocabulary_1/csd/2019": {
+          "name": "Речник"
+        },
+        "code_introduced_1/csd/2017": {
+          "name": "Въведение в кода"
+        },
+        "lesson_plans_2/csd/2017": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings_2/csd/2017": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum_2/csd/2017": {
+          "name": "Учителски форум"
+        },
+        "vocabulary_2/csd/2017": {
+          "name": "Речник"
+        },
+        "code_introduced_3/csd/2017": {
+          "name": "Въведение в кода"
+        },
+        "lesson_plans_5/csd/2017": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings_5/csd/2017": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum_5/csd/2017": {
+          "name": "Учителски форум"
+        },
+        "vocabulary_5/csd/2017": {
+          "name": "Речник"
+        },
+        "code_introduced/csd/2017": {
+          "name": "Въведение в кода"
+        },
+        "lesson_plans_1/csd/2017": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings_1/csd/2017": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum_1/csd/2017": {
+          "name": "Учителски форум"
+        },
+        "vocabulary_1/csd/2017": {
+          "name": "Речник"
+        },
+        "lesson_plans/csd/2017": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings/csd/2017": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum/csd/2017": {
+          "name": "Учителски форум"
+        },
+        "vocabulary/csd/2017": {
+          "name": "Речник"
+        },
+        "lesson_plans_4/csd/2017": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings_4/csd/2017": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum_4/csd/2017": {
+          "name": "Учителски форум"
+        },
+        "vocabulary_4/csd/2017": {
+          "name": "Речник"
+        },
+        "code_introduced_2/csd/2017": {
+          "name": "Въведение в кода"
+        },
+        "lesson_plans_3/csd/2017": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings_3/csd/2017": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum_3/csd/2017": {
+          "name": "Учителски форум"
+        },
+        "vocabulary_3/csd/2017": {
+          "name": "Речник"
         },
         "introducing_sprite_lab_1/coursef/2021": {
           "type": "Видео"
@@ -55,12 +475,15 @@
           "type": "Оценка"
         },
         "ai-ml/coursef/2021": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Видео"
         },
         "ai-training/coursef/2021": {
+          "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Видео"
         },
         "ai-societal/coursef/2021": {
+          "url": "https://youtu.be/ng4c1g3COfs",
           "type": "Видео"
         },
         "unplugged-video-internet/coursef/2021": {
@@ -124,7 +547,8 @@
           "type": "Видео"
         },
         "unplugged-video-big-event/courseb/2021": {
-          "name": "Голямото събитие"
+          "name": "Голямото събитие",
+          "type": "Видео"
         },
         "csf-the-big-event-assessment/courseb/2021": {
           "name": "Голямото събитие",
@@ -386,6 +810,7 @@
           "name": "Учителски форум"
         },
         "ai_what_is_machine_learning_/csd/2021": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Видео"
         },
         "seeing_ai/csd/2021": {
@@ -401,6 +826,7 @@
           "type": "Видео"
         },
         "ai_training_data_bias/csd/2021": {
+          "url": "https://youtu.be/x2mRoFNm22g",
           "type": "Видео"
         },
         "model_cards_in_ai_lab/csd/2021": {
@@ -501,6 +927,7 @@
           "type": "Видео"
         },
         "video_machine_learning/csd/2021": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
           "type": "Видео"
         },
         "video_training_data_and_bias/csd/2021": {
@@ -669,6 +1096,102 @@
         },
         "website-for-a-purpose/csd/2021": {
           "type": "Вашаят отзив"
+        },
+        "lesson_plans/pre-express/2020": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings/pre-express/2020": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum/pre-express/2020": {
+          "name": "Учителски форум"
+        },
+        "vocabulary/pre-express/2020": {
+          "name": "Речник"
+        },
+        "lesson_plans/express/2020": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings/express/2020": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum/express/2020": {
+          "name": "Учителски форум"
+        },
+        "vocabulary/express/2020": {
+          "name": "Речник"
+        },
+        "lesson_plans/courseb/2020": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings/courseb/2020": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum/courseb/2020": {
+          "name": "Учителски форум"
+        },
+        "vocabulary/courseb/2020": {
+          "name": "Речник"
+        },
+        "lesson_plans/coursed/2020": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings/coursed/2020": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum/coursed/2020": {
+          "name": "Учителски форум"
+        },
+        "vocabulary/coursed/2020": {
+          "name": "Речник"
+        },
+        "lesson_plans/coursec/2020": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings/coursec/2020": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum/coursec/2020": {
+          "name": "Учителски форум"
+        },
+        "vocabulary/coursec/2020": {
+          "name": "Речник"
+        },
+        "lesson_plans/coursee/2020": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings/coursee/2020": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum/coursee/2020": {
+          "name": "Учителски форум"
+        },
+        "vocabulary/coursee/2020": {
+          "name": "Речник"
+        },
+        "lesson_plans/coursea/2020": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings/coursea/2020": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum/coursea/2020": {
+          "name": "Учителски форум"
+        },
+        "vocabulary/coursea/2020": {
+          "name": "Речник"
+        },
+        "lesson_plans/coursef/2020": {
+          "name": "Планове на уроци"
+        },
+        "standard_mappings/coursef/2020": {
+          "name": "Стандартни съпоставяния"
+        },
+        "teacher_forum/coursef/2020": {
+          "name": "Учителски форум"
+        },
+        "vocabulary/coursef/2020": {
+          "name": "Речник"
         }
       }
     }

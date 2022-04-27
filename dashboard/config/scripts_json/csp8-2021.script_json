@@ -4,15 +4,6 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "announcements": [
-        {
-          "notice": "Upcoming Panel: Overcoming Imposter Syndrome -- Building Confidence & Belonging",
-          "details": "Join us Wed, March 23 at 8pm EDT as college women share their experiences as computer science majors.  Gain valuable strategies for building support networks, connections, and confidence to help you overcome the challenge of feeling like you don’t belong (imposter syndrome). ",
-          "link": "https://bit.ly/rtc3LB2022",
-          "type": "bullhorn",
-          "visibility": "Teacher and student"
-        }
-      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -26,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-17 21:17:36 UTC",
+    "serialized_at": "2022-04-26 17:19:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

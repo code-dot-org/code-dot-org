@@ -1,0 +1,45 @@
+name 'VPL-CSD-PILOT-S22-C2-Chapter2-ProjectOverview-U4L5C2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Chapter 2 project: Designing Apps for Good - App Presentation
+
+## Project overview
+
+##### Chapter 2 of the Design Process unit concludes with a multi-lesson project where students will use the skills they have learned throughout the unit to come up with a a group app of personal and social importance. Students start the app design project in Lesson 9 and continue to work on it through the end of the unit in lesson 21.
+
+##### Students first learn about the project in Lesson 9, and explore some apps made by students their age that address social good.  In Lesson 10 they share their ideas with peers to get user input for the idea they would like to create and its ability to meet their target user's needs.  In Lesson 11 students explore some sample apps made in App Lab to identify components of typical user interfaces and make a plan for which features they want to include in their app.
+
+##### In Lesson 12 Students work with their groups to create a paper prototype for their app, followed by testing and iterating on their app design in Lesson 13 before any online work begins on the user interface of app in Lessons 14 and 15. Lessons 16 and 17 follow up with the team dividing up the digital work to start on the code of the app where they use event driven programming to link the screens together.
+
+##### In Lesson 18 the team has peers test their app to see if it is geared toward the target audience it was intended for and recored their results to make any modifications and fix bugs. Lesson 20 is all about last minute updates to the app before they present their groups process for developing the app, the problem they set out to solve with the app, and ways they incorporated feedback/testing, along with any future plans for the app in Lesson 21.
+
+## Sample student projects
+
+### Only thing left to do is add sample projects and delete these instructions
+
+##### Click the images below to view the sample projects in a new tab.
+
+<div style="float: left; text-align:center;"><strong>Recycling Club</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhBiffg8HpOk2lRx1kd5sgaw" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin: 25px;" src="https://images.code.org/5b0044bfd92d44c97cd74d82f1933daa-image-1565630578147.png" width="250px"; alt="Image of recycling club web page"></a></div>
+
+<div style="float: left; text-align:center;"><strong>Musical Instruments</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhMuNKEOTdyH5PPeUpDimEeY" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin: 25px;" src="https://images.code.org/82323a78b17b69101dd6e98a6a21c55c-image-1565630573896.png" width="250px" alt="Immage of musical insrumentss web page"></a></div>
+
+<div style="float: left; text-align:center;"><strong>My Trip</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhHHDE0tb28ed-9-scxvFYE0" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin: 25px;" src="https://images.code.org/51b787b6a25663e092b3f55e051e9a94-image-1565630570417.png" width="250px" alt="Image of trip web page"></a></div>
+
+
+<div style="clear:both"/>
+
+## Pacing recommendation
+
+##### If you are short on time, this project can be used as way to wrap up the unit. This project can also be expanded out to include a student presentation if you have the time available. 
+
+## Project resources
+* ##### <a href="https://studio.code.org/s/csd4-2021/lessons/21" target="blank" rel="noopener noreferrer" >Lesson 21 Plan</a>  
+* ##### <a href="https://docs.google.com/document/d/163Ene8sb4nK0kfoDHsIBzUCMJWiFtaYZ8YYVIytGH4A/edit" target="blank" rel="noopener noreferrer" >Project Guide Lesson 9 - Paper Prototyping</a> 
+* ##### <a href="https://docs.google.com/document/d/1q06xCd9SXPup1KHcfXL0kczUNUs5C-rUTfxyB2qhs-Y/view" target="blank" rel="noopener noreferrer" >Project Guide Lesson 12 - Paper Prototyping</a> 
+* ##### <a href="https://docs.google.com/document/d/1d1Dq6t-90ZbseWX5JW7JrZLP3CSHzR1rXk8rzZKzFOo/view" target="blank" rel="noopener noreferrer" >Student Checklist</a> 
+* ##### <a href="https://docs.google.com/document/d/1-2z9HtHPEMui9aavjRkYs4vlp5l0ujgXI8XW8KFCcf4/view" target="blank" rel="noopener noreferrer" >Project Rubric</a> 
+
+
+MARKDOWN

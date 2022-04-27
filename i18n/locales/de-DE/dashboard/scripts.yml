@@ -1250,8 +1250,6 @@ de:
           student_description: 'Phase 2 Online: Gemischtes Sommerstudium'
         equity-pd:
           lessons:
-            Code.org Equity PD:
-              name: Code.org Chancengleichheit PD
             Necessary Background:
               name: Erforderlicher Hintergrund
         science-PD2:
@@ -3460,6 +3458,7 @@ de:
               description_student: Hast du dir jemals gewünscht, in der Schule Videospiele zu spielen? In dieser Lektion kannst du deine eigenen Spiele entwickeln!
               description_teacher: In dieser Online-Aktivität lernen die SchülerInnen, was Ereignisse sind und wie Computer sie in Programmen wie Videospielen verwenden. Die SchülerInnen arbeiten Aufgaben durch, bei denen das Programm auf Ereignisse reagiert (z. B. das Drücken von Pfeiltasten). Am Ende des Aufgaben haben die SchülerInnen die Möglichkeit, ihr Spiel mit verschiedenen Geschwindigkeiten und Geräuschen anzupassen.
           student_description: Wähle Dein Team und spiele eine Runde Basketball
+          name: Basketball
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -4033,6 +4032,7 @@ de:
               description_student: Hast du dir jemals gewünscht, in der Schule Videospiele zu spielen? In dieser Lektion kannst du deine eigenen Spiele entwickeln!
               description_teacher: In dieser Online-Aktivität lernen die SchülerInnen, was Ereignisse sind und wie Computer sie in Programmen wie Videospielen verwenden. Die SchülerInnen arbeiten Aufgaben durch, bei denen das Programm auf Ereignisse reagiert (z. B. das Drücken von Pfeiltasten). Am Ende des Aufgaben haben die SchülerInnen die Möglichkeit, ihr Spiel mit verschiedenen Geschwindigkeiten und Geräuschen anzupassen.
           student_description: Kombiniere Elemente unterschiedlicher Sportarten
+          name: Sportarten
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -6074,8 +6074,7 @@ de:
             Thanks:
               name: Danke
             '': {}
-            " ":
-              name: ''
+            " ": {}
         csp-pre-survey-test-2017:
           lessons:
             new stage:
@@ -6819,6 +6818,7 @@ de:
               name: 'Minecraft: Hero’s Journey'
               description_teacher: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup tua untuk membaca (umur 6 +). Pelajar yang lebih muda mungkin tidak akan menyelesaikan tutorial, tetapi akan mempunyai banyak keseronokan bekerja melalui teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menyelesaikan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada akhir.
           student_description: Minecraft präsentiert eine brandneue Aktivität zur Hour of Code! Entdecke die Welt von Minecraft mit Code.
+          name: Held
         applab-intro-staging:
           title: Einführung in AppLab Staging
           lessons:
@@ -9232,6 +9232,7 @@ de:
               description_student: In dieser Lektion machen Schülerinnen und Schüler aller Altersgruppen in einer sicheren, unterstützenden Umgebung erste Erfahrungen mit Programmierung und Informatik. Diese Lektion wurde für Teilnehmer aller Altersgruppen konzipiert, setzt jedoch Lesefähigkeiten voraus. Der Ton muss aktiviert sein, weil das Tool für Musik entwickelt wurde.
               description_teacher: In dieser Lektion machen Schülerinnen und Schüler aller Altersgruppen in einer sicheren, unterstützenden Umgebung erste Erfahrungen mit Programmierung und Informatik. Diese Lektion wurde für Teilnehmer aller Altersgruppen konzipiert, setzt jedoch Lesefähigkeiten voraus. Der Ton muss aktiviert sein, weil das Tool für Musik entwickelt wurde.
           student_description: Programmiere deine eigene Tanzparty, um sie mit deinen Freunden zu teilen!
+          name: Tanz
         frozen-2018-test-b:
           title: Neues `Frozen`- Skript
           lessons:
@@ -9246,6 +9247,7 @@ de:
               name: 'Minecraft: Voyage Aquatic'
               description_teacher: Dalam pelajaran ini, pelajar dari semua peringkat umur mendapat pengalaman pengenalan dengan pengekodan dan sains komputer dalam persekitaran yang selamat dan menyokong. Pelajaran ini berfungsi dengan baik untuk mana-mana pelajar yang cukup tua untuk membaca (umur 6 +). Pelajar yang lebih muda mungkin tidak akan menyelesaikan tutorial, tetapi akan mempunyai banyak keseronokan bekerja melalui teka-teki selama satu jam. Pelajar sekolah menengah kebanyakannya akan menyelesaikan tutorial dan mempunyai sedikit masa untuk bermain pada tahap permainan percuma pada akhir.
           student_description: Minecraft ist zurück - mit einer brandneuen Aktivität! Setzen Sie Ihre Kreativität und Problemlösungsfähigkeiten ein, um Unterwasserwelten mit Code zu erforschen und zu bauen.
+          name: aquatisch
         sconyers:
           title: Traceys Spielplatz
           lessons:
@@ -12891,7 +12893,7 @@ de:
           description: Programmiere deine eigene Tanzparty, um sie mit deinen Freunden zu teilen!
           lessons:
             Dance Party:
-              name: Tanzparty
+              name: Tanzparty (2019)
               description_student: In dieser Lektion machen Schülerinnen und Schüler aller Altersgruppen in einer sicheren, unterstützenden Umgebung erste Erfahrungen mit Programmierung und Informatik. Diese Lektion wurde für Teilnehmer aller Altersgruppen konzipiert, setzt jedoch Lesefähigkeiten voraus. Der Ton muss aktiviert sein, weil das Tool für Musik entwickelt wurde.
               description_teacher: In dieser Lektion machen Schülerinnen und Schüler aller Altersgruppen in einer sicheren, unterstützenden Umgebung erste Erfahrungen mit Programmierung und Informatik. Diese Lektion wurde für Teilnehmer aller Altersgruppen konzipiert, setzt jedoch Lesefähigkeiten voraus. Der Ton muss aktiviert sein, weil das Tool für Musik entwickelt wurde.
           student_description: Programmiere deine eigene Tanzparty, um sie mit deinen Freunden zu teilen!
@@ -17903,7 +17905,7 @@ de:
               name: Modul 1
             Getting Started:
               name: Erste Schritte
-            What is Code.org:
+            What is Codeorg:
               name: Was ist Code.org?
           lesson_groups:
             k5_getting_started_1:
@@ -18366,8 +18368,7 @@ de:
           title: '"Hallo, Welt!"'
         csa-self-paced-pl:
           lessons:
-            Navigating the Code.org learning platform:
-              name: " Lernplattform – Navigieren in Code.org"
+            Navigating the Codeorg learning platform:
               description_teacher: |-
                 **Sie lernen Folgendes:**
 
@@ -19523,7 +19524,7 @@ de:
               description_student: Verwenden Sie Schleifen und Muster, um die Bilder fertigzustellen.
               description_teacher: Bei der Wiederaufnahme des Schleifen-Konzepts lernen die SchülerInnen, Bilder zu zeichnen, indem sie einfache Sequenzen von Anweisungen mithilfe von Schleifen wiederholen. In der vorhergehenden Lektion ohne Computer wurden Schleifen verwendet, um ein Labyrinth zu durchqueren und Schätze zu sammeln. Hier erzeugen die Schleifen Muster. Am Ende dieses Levels haben die SchülerInnen die Möglichkeit, ihre eigenen Bilder mit Hilfe von Schleifen zu erstellen.
               key: Meeresszene mit Schleifen
-            The Big Event Jr.:
+            The Big Event Jr:
               name: Das große Ereignis
               description_student: Bewegen Sie sich und schreien Sie, wenn Ihre LehrerInnen Knöpfe auf einer riesigen Fernbedienung drücken.
               description_teacher: Ereignisse sind eine großartige Möglichkeit, einen vorformulierten Algorithmus interessant zu gestalten. Manchmal möchten Sie, dass Ihr Programm genau dann auf den Benutzer reagieren kann, wenn der Benutzer dies wünscht. Dafür gibt es Ereignisse.
@@ -20042,7 +20043,7 @@ de:
               description_student: Skizzieren Sie Ihre eigene Sekundärmarkt-App.
               description_teacher: In dieser Lektion erkennen die SchülerInnen, dass die Informatik Menschen im wirklichen Leben helfen kann. Zuerst entwickeln die SchülerInnen ein Verständnis für mehrere fiktive Sekundärmarkt-Benutzer ein, um ihnen zu helfen, die "richtige App" zu finden, die ihren Bedürfnissen entspricht. Dann üben die SchülerInnen Empathie und Kreativität, um ihre eigene Sekundärmarkt-App zu entwerfen, die die Bedürfnisse eines weiteren Benutzers erfüllt.
               key: Die richtige App
-            The Big Event Jr.:
+            The Big Event Jr:
               name: Das große Ereignis
               description_student: Bewegen Sie sich oder schreien Sie, wenn Ihr Lehrer Tasten auf einer riesigen Fernbedienung drückt.
               description_teacher: Ereignisse sind eine großartige Möglichkeit, einen vorformulierten Algorithmus interessant zu gestalten. Manchmal möchten Sie, dass Ihr Programm genau dann auf den Benutzer reagieren kann, wenn der Benutzer dies wünscht. Dafür gibt es Ereignisse.
@@ -20120,7 +20121,7 @@ de:
             Putting a STOP to Online Meanness:
               name: Gemeinheiten im Internet STOPPEN
               key: Gemeinheiten im Internet STOPPEN
-            My Robotic Friends Jr.:
+            My Robotic Friends Jr:
               name: Meine Roboterfreunde Jr.
               description_student: In dieser Lektion tun Sie so, als seien Ihre Klassenkameraden Roboter und programmieren sie, dass sie Muster aus gestapelten Bechern erstellen.
               description_teacher: Unter Verwendung eines Instrumentariums von Symbolen anstelle von Code entwerfen die SchülerInnen Algorithmen, mit denen sie einen "Roboter" anweisen, Becher in verschiedenen Mustern zu stapeln. Die SchülerInnen übernehmen abwechselnd die Rolle des Roboters und reagieren nur auf den von ihren KlassenkameradInnen definierten Algorithmus. In diesem Segment lernen die SchülerInnen die Verbindung zwischen Symbolen und Aktionen, den Unterschied zwischen einem Algorithmus und einem Programm sowie die wichtige Fähigkeit , Fehler zu entdecken und zu beheben (Debuggen).
@@ -20141,7 +20142,7 @@ de:
               name: Kunst erschaffen mit Code
               description_student: Erstelle schöne Bilder durch die Programmierung des Zeichners.
               description_teacher: In dieser Lektion übernehmen die SchülerInnen die Kontrolle über den Künstler, um Zeichnungen auf dem Bildschirm fertigzustellen. In dieser Phase mit dem Künstler können die SchülerInnen Bilder von zunehmender Komplexität erstellen, indem sie neue Bausteine wie "100 Pixel vorwärts" und "90 Grad nach rechts drehen" verwenden.
-            My Loopy Robotic Friends Jr.:
+            My Loopy Robotic Friends Jr:
               name: Meine schleifenden Freunde von Loopy Robotic Jr.
               description_student: In dieser Lektion werden Sie Ihre Klassenkameraden erneut programmieren, können aber mit Hilfe von Schleifen umfassendere und kompliziertere Probleme lösen.
               description_teacher: Auf der Grundlage der anfänglichen Aktivität "Meine Roboterfreunde" beschäftigen sich die SchülerInnen mit umfassenderen und komplizierteren Entwürfen. Um ihre "Roboter" so zu programmieren, dass sie diese größeren Entwürfe fertigstellen, müssen die SchülerInnen sich wiederholende Muster in ihren Anweisungen identifizieren, die durch eine Schleife ersetzt werden könnten.
@@ -20813,6 +20814,9 @@ de:
               name: Java-Labor
             lesson-9:
               name: Schleifen
+            lesson-21:
+              name: Konsole
+            lesson-22: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -20864,10 +20868,19 @@ de:
               name: Lerneinheit 2 Bewertung
             lesson-6:
               name: Variablen
+            lesson-16:
+              name: Konsole
+            lesson-17: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: Schleifen mit dem Wiederhol-Block
+            lesson-16:
+              name: Konsole
+            lesson-17: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -20950,7 +20963,6 @@ de:
         self-paced-pl-csa3-2022:
           lessons:
             lesson-1: {}
-            lesson-2: {}
         csa7-pilot-extra:
           lessons:
             Assessment Day:
@@ -21222,14 +21234,14 @@ de:
             lesson-1:
               name: Willkommen
             lesson-3: {}
+            lesson-9:
+              name: Unterrichtsplanung
         vpl-csd2-summer-pilot-2022:
           lessons:
             lesson-1: {}
             lesson-2: {}
         vpl-csd3-summer-pilot-2022: {}
-        vpl-csd4-summer-pilot-2022:
-          lessons:
-            lesson-1: {}
+        vpl-csd4-summer-pilot-2022: {}
         vpl-csd5-summer-pilot-2022: {}
         csa2-2022-exemplars:
           lessons:
@@ -21300,3 +21312,22 @@ de:
             Implementation Approaches and Barriers: {}
             Next steps:
               key: Nächste Schritte
+        vpl-csd1-ci-pilot-2022: {}
+        vpl-csd2-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: Physische Datenverarbeitung
+        vpl-csd3-ci-pilot-2022:
+          lessons:
+            lesson-2: {}
+            lesson-5:
+              name: Physische Datenverarbeitung
+        vpl-csd4-ci-pilot-2022: {}
+        vpl-csd5-ci-pilot-2022: {}
+        vpl-csd6-ci-pilot-2022: {}
+        vpl-csd7-ci-pilot-2022: {}
+        hello-world-csc:
+          title: Hallo Welt
+        csd-playground:
+          lessons:
+            lesson-1: {}

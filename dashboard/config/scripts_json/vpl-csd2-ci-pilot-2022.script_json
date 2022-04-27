@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-03-21 20:54:45 UTC",
+    "serialized_at": "2022-04-07 06:41:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -22,13 +22,14 @@
   },
   "lesson_groups": [
     {
-      "key": "",
-      "user_facing": false,
+      "key": "lessonGroup-2",
+      "user_facing": true,
       "position": 1,
       "properties": {
+        "display_name": "Teaching Web Development"
       },
       "seeding_key": {
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022"
       }
     }
@@ -42,12 +43,12 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
-        "overview": "**You will:**\n\n* Get an introduction to code.org's Web Development unit.\n* Get a preview of the first week of the Web Development unit content.\n\n**Suggested time:** 15 minutes",
-        "student_overview": "**You will:**\n\n* Get an introduction to code.org's Web Development unit.\n* Get a preview of the first week of the Web Development unit content.\n\n**Suggested time:** 15 minutes"
+        "overview": "**You will:**\n\n* Get an introduction to code.org's Web Development unit.\n* Get a preview of the first week of the Web Development unit content.\n\n**Suggested time:** 10 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to code.org's Web Development unit.\n* Get a preview of the first week of the Web Development unit content.\n\n**Suggested time:** 10 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022"
       }
     },
@@ -59,10 +60,12 @@
       "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
+        "overview": "**You will:**\n\n* Get an introduction to using Web Lab.\n* Add structure to a web page using HML. \n* Add images to a web page. \n\n**Suggested time:** 30 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to using Web Lab.\n* Add structure to a web page using HML. \n* Add images to a web page. \n\n**Suggested time:** 30 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022"
       }
     },
@@ -74,25 +77,29 @@
       "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
+        "overview": "**You will:**\n\n* Style the text of a web page using CSS.\n* Link a CSS style sheet to the web page index.\n* Explore additional properties to style elements on a web page.\n\n**Suggested time:** 25 minutes",
+        "student_overview": "**You will:**\n\n* Style the text of a web page using CSS.\n* Link a CSS style sheet to the web page index.\n* Explore additional properties to style elements on a web page.\n\n**Suggested time:** 25 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022"
       }
     },
     {
       "key": "lesson-4",
-      "name": "Consider real-world implications",
+      "name": "Consider roles and responsibilities related to digital media",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
+        "overview": "**You will:**\n\n* Explore the ways in which students will work to understand their role and responsibilities as both creators and consumers of digital media.\n\n**Suggested time:** 15 minutes",
+        "student_overview": "**You will:**\n\n* Explore the ways in which students will work to understand their role and responsibilities as both creators and consumers of digital media.\n\n**Suggested time:** 15 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022"
       }
     },
@@ -109,7 +116,7 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022"
       }
     }
@@ -123,7 +130,7 @@
       "seeding_key": {
         "lesson_activity.key": "d88d176b-1fa1-4102-9da1-7a0971b322c1",
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022"
       }
     },
@@ -135,7 +142,7 @@
       "seeding_key": {
         "lesson_activity.key": "d50f6359-67c7-488a-b671-3adb7beccb0d",
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022"
       }
     },
@@ -147,7 +154,7 @@
       "seeding_key": {
         "lesson_activity.key": "ba6f26f4-7211-42d0-9cc2-d231a1b00659",
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022"
       }
     },
@@ -159,7 +166,7 @@
       "seeding_key": {
         "lesson_activity.key": "210315e0-aac1-4abe-8088-d8aa0be1d36e",
         "lesson.key": "lesson-4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022"
       }
     },
@@ -171,7 +178,7 @@
       "seeding_key": {
         "lesson_activity.key": "e858db27-c963-44d1-b5ac-a0be6670346b",
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022"
       }
     }
@@ -211,8 +218,19 @@
       }
     },
     {
-      "key": "328dca30-3d33-48b6-a987-a6621991585f",
+      "key": "aa06b6c2-fbc5-473a-9cab-d1dd6da23668",
       "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "aa06b6c2-fbc5-473a-9cab-d1dd6da23668",
+        "lesson_activity.key": "d50f6359-67c7-488a-b671-3adb7beccb0d"
+      }
+    },
+    {
+      "key": "328dca30-3d33-48b6-a987-a6621991585f",
+      "position": 2,
       "properties": {
         "progression_name": "Explore Web Lab"
       },
@@ -223,7 +241,7 @@
     },
     {
       "key": "2908cc33-caa8-4876-8ca7-e45e3369e17e",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "Add structure using HTML"
       },
@@ -233,8 +251,30 @@
       }
     },
     {
-      "key": "4be4c02b-6888-48be-8aab-b64f3c4f2358",
+      "key": "e8a93190-70ac-4356-b120-dc6cf8be7a93",
+      "position": 4,
+      "properties": {
+        "progression_name": "Add images"
+      },
+      "seeding_key": {
+        "activity_section.key": "e8a93190-70ac-4356-b120-dc6cf8be7a93",
+        "lesson_activity.key": "d50f6359-67c7-488a-b671-3adb7beccb0d"
+      }
+    },
+    {
+      "key": "7f57bd59-b11d-4f8a-a8e3-0b4c88270e76",
       "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "7f57bd59-b11d-4f8a-a8e3-0b4c88270e76",
+        "lesson_activity.key": "ba6f26f4-7211-42d0-9cc2-d231a1b00659"
+      }
+    },
+    {
+      "key": "4be4c02b-6888-48be-8aab-b64f3c4f2358",
+      "position": 2,
       "properties": {
         "progression_name": "Style text with CSS"
       },
@@ -245,7 +285,7 @@
     },
     {
       "key": "08bebb60-5be7-4db7-8b74-cfef2f4a0c87",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "Style elements with CSS"
       },
@@ -258,9 +298,43 @@
       "key": "f7fb2558-1b41-42c9-96d2-7bb35e451000",
       "position": 1,
       "properties": {
+        "progression_name": "Overview"
       },
       "seeding_key": {
         "activity_section.key": "f7fb2558-1b41-42c9-96d2-7bb35e451000",
+        "lesson_activity.key": "210315e0-aac1-4abe-8088-d8aa0be1d36e"
+      }
+    },
+    {
+      "key": "066eaa0f-f5d0-4b9e-806d-aee6a3436212",
+      "position": 2,
+      "properties": {
+        "progression_name": "Digital citizenship"
+      },
+      "seeding_key": {
+        "activity_section.key": "066eaa0f-f5d0-4b9e-806d-aee6a3436212",
+        "lesson_activity.key": "210315e0-aac1-4abe-8088-d8aa0be1d36e"
+      }
+    },
+    {
+      "key": "48a3b0d2-b645-4610-a70e-31673ef9fcc4",
+      "position": 3,
+      "properties": {
+        "progression_name": "Intellectual property"
+      },
+      "seeding_key": {
+        "activity_section.key": "48a3b0d2-b645-4610-a70e-31673ef9fcc4",
+        "lesson_activity.key": "210315e0-aac1-4abe-8088-d8aa0be1d36e"
+      }
+    },
+    {
+      "key": "d759904b-3710-4807-ab9f-aa8623b9f67e",
+      "position": 4,
+      "properties": {
+        "progression_name": "Sources and research"
+      },
+      "seeding_key": {
+        "activity_section.key": "d759904b-3710-4807-ab9f-aa8623b9f67e",
         "lesson_activity.key": "210315e0-aac1-4abe-8088-d8aa0be1d36e"
       }
     },
@@ -316,7 +390,7 @@
           "VPL-CSD-PILOT-S22-CI-ModuleOverview-mod2"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "fd2815b1-c48c-4470-b6d6-0449e703b212"
       },
@@ -341,7 +415,7 @@
           "VPL-CSD-pilot-S22-CI-Unit_Overview-mod2"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "fd2815b1-c48c-4470-b6d6-0449e703b212"
       },
@@ -352,6 +426,31 @@
     {
       "chapter": 3,
       "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-mod2"
+        ],
+        "progression": "Unit overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-mod2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "fd2815b1-c48c-4470-b6d6-0449e703b212"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-Unit_PSP-mod2"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -366,7 +465,7 @@
           "VPL-CSD-pilot-S22-CI-Unit_tools-mod2"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "2b24e742-56ad-4922-a17b-9788b9efe888"
       },
@@ -375,8 +474,8 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
+      "chapter": 5,
+      "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -391,7 +490,7 @@
           "VPL-CSD-PILOT-S22-CI-Intro to Web Lab - Part 1_2021"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "2b24e742-56ad-4922-a17b-9788b9efe888"
       },
@@ -400,8 +499,8 @@
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
+      "chapter": 6,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -416,7 +515,7 @@
           "VPL-CSD-pilot-S22-2-week1-mod2"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "41cfd821-b738-41c2-9479-e360d20571e8"
       },
@@ -425,8 +524,8 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 6,
+      "chapter": 7,
+      "position": 7,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
@@ -441,7 +540,7 @@
           "VPL-CSD-PILOT-S22-CI-vocab-c4u-mod2"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "41cfd821-b738-41c2-9479-e360d20571e8"
       },
@@ -450,8 +549,33 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-lesson2-overview"
+        ],
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-lesson2-overview"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "aa06b6c2-fbc5-473a-9cab-d1dd6da23668"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod2-lesson2-overview"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -467,7 +591,7 @@
           "VPL-CSD-PILOT-S22-CI-CSDU2 - Type Anything_2021"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "328dca30-3d33-48b6-a987-a6621991585f"
       },
@@ -476,8 +600,8 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 2,
+      "chapter": 10,
+      "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -493,7 +617,7 @@
           "VPL-CSD-PILOT-S22-CI-CSD U2 Inspector Warm Up_2021"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "328dca30-3d33-48b6-a987-a6621991585f"
       },
@@ -502,8 +626,8 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 3,
+      "chapter": 11,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -518,7 +642,7 @@
           "VPL-CSD-PILOT-S22-CI-Intro to Web Lab - Part 2_2021"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "2908cc33-caa8-4876-8ca7-e45e3369e17e"
       },
@@ -527,8 +651,8 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 4,
+      "chapter": 12,
+      "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -544,7 +668,7 @@
           "VPL-CSD-PILOT-S22-CI-CSD U2 HTML Adding Paragraphs_2021"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "2908cc33-caa8-4876-8ca7-e45e3369e17e"
       },
@@ -553,8 +677,8 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 5,
+      "chapter": 13,
+      "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -569,7 +693,7 @@
           "VPL-CSD-PILOT-S22-CI-mod2-HTML-overview"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "2908cc33-caa8-4876-8ca7-e45e3369e17e"
       },
@@ -578,8 +702,8 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 6,
+      "chapter": 14,
+      "position": 7,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -595,7 +719,7 @@
           "VPL-CSD-PILOT-S22-CI-CSD U2 Heading Demo_2021"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "2908cc33-caa8-4876-8ca7-e45e3369e17e"
       },
@@ -604,10 +728,10 @@
       ]
     },
     {
-      "chapter": 13,
-      "position": 7,
+      "chapter": 15,
+      "position": 8,
       "activity_section_position": 5,
-      "assessment": false,
+      "assessment": true,
       "properties": {
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-CSD Header Size MC_2018_2019_pilot_2021"
@@ -620,7 +744,7 @@
           "VPL-CSD-PILOT-S22-CI-CSD Header Size MC_2018_2019_pilot_2021"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "2908cc33-caa8-4876-8ca7-e45e3369e17e"
       },
@@ -629,8 +753,110 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 16,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U2 Image Tag 1_2021"
+        ],
+        "progression": "Add images"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U2 Image Tag 1_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "e8a93190-70ac-4356-b120-dc6cf8be7a93"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U2 Image Tag 1_2021"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 10,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-ImagesInHTML"
+        ],
+        "progression": "Add images"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-ImagesInHTML"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "e8a93190-70ac-4356-b120-dc6cf8be7a93"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod2-ImagesInHTML"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 11,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U2 Image Tag Inconsistent Spelling_2021"
+        ],
+        "progression": "Add images"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U2 Image Tag Inconsistent Spelling_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "e8a93190-70ac-4356-b120-dc6cf8be7a93"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U2 Image Tag Inconsistent Spelling_2021"
+      ]
+    },
+    {
+      "chapter": 19,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-sample-mod2-lesson3-overview"
+        ],
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-sample-mod2-lesson3-overview"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "7f57bd59-b11d-4f8a-a8e3-0b4c88270e76"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-sample-mod2-lesson3-overview"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -645,7 +871,7 @@
           "VPL-CSD-PILOT-S22-CI-Video: Intro to CSS_2021"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "4be4c02b-6888-48be-8aab-b64f3c4f2358"
       },
@@ -654,8 +880,8 @@
       ]
     },
     {
-      "chapter": 15,
-      "position": 2,
+      "chapter": 21,
+      "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -671,7 +897,7 @@
           "VPL-CSD-PILOT-S22-CI-CSD U2 text style h1_2021"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "4be4c02b-6888-48be-8aab-b64f3c4f2358"
       },
@@ -680,8 +906,8 @@
       ]
     },
     {
-      "chapter": 16,
-      "position": 3,
+      "chapter": 22,
+      "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -697,7 +923,7 @@
           "VPL-CSD-PILOT-S22-CI-CSD U2 text style h3_2021"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "4be4c02b-6888-48be-8aab-b64f3c4f2358"
       },
@@ -706,8 +932,8 @@
       ]
     },
     {
-      "chapter": 17,
-      "position": 4,
+      "chapter": 23,
+      "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -723,7 +949,7 @@
           "VPL-CSD-PILOT-S22-CI-CSD U2 text style size_2021"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "4be4c02b-6888-48be-8aab-b64f3c4f2358"
       },
@@ -732,9 +958,35 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 5,
+      "chapter": 24,
+      "position": 6,
       "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true,
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD Web Headings Wrong Tag in Rule Set_2021"
+        ],
+        "progression": "Style text with CSS"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD Web Headings Wrong Tag in Rule Set_2021"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "4be4c02b-6888-48be-8aab-b64f3c4f2358"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD Web Headings Wrong Tag in Rule Set_2021"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 7,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -748,7 +1000,7 @@
           "VPL-CSD-PILOT-S22-CI-Video: Intro to CSS Part 2_2021"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "4be4c02b-6888-48be-8aab-b64f3c4f2358"
       },
@@ -757,9 +1009,9 @@
       ]
     },
     {
-      "chapter": 19,
-      "position": 6,
-      "activity_section_position": 6,
+      "chapter": 26,
+      "position": 8,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "instructor_in_training": true,
@@ -774,7 +1026,7 @@
           "VPL-CSD-PILOT-S22-CI-CSD U2 add file_2021"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "4be4c02b-6888-48be-8aab-b64f3c4f2358"
       },
@@ -783,11 +1035,37 @@
       ]
     },
     {
-      "chapter": 20,
-      "position": 7,
+      "chapter": 27,
+      "position": 9,
+      "activity_section_position": 8,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-CSS-elements-C4U"
+        ],
+        "progression": "Style text with CSS"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-CSS-elements-C4U"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "4be4c02b-6888-48be-8aab-b64f3c4f2358"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod2-CSS-elements-C4U"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "VPL-CSD-PILOT-S22-CI-CSD U2 layout style sample_2021"
         ],
@@ -799,7 +1077,7 @@
           "VPL-CSD-PILOT-S22-CI-CSD U2 layout style sample_2021"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "08bebb60-5be7-4db7-8b74-cfef2f4a0c87"
       },
@@ -808,7 +1086,207 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 29,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-StylingElements"
+        ],
+        "progression": "Style elements with CSS"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-StylingElements"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "08bebb60-5be7-4db7-8b74-cfef2f4a0c87"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod2-StylingElements"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-L4-overview"
+        ],
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-L4-overview"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "f7fb2558-1b41-42c9-96d2-7bb35e451000"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod2-L4-overview"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-L4-DigitalFootprint-overview"
+        ],
+        "progression": "Digital citizenship"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-L4-DigitalFootprint-overview"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "066eaa0f-f5d0-4b9e-806d-aee6a3436212"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod2-L4-DigitalFootprint-overview"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-L4-DigitalFootprint-activity"
+        ],
+        "progression": "Digital citizenship"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-L4-DigitalFootprint-activity"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "066eaa0f-f5d0-4b9e-806d-aee6a3436212"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod2-L4-DigitalFootprint-activity"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-L4-DigitalFootprint-answer"
+        ],
+        "progression": "Digital citizenship"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-L4-DigitalFootprint-answer"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "066eaa0f-f5d0-4b9e-806d-aee6a3436212"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod2-L4-DigitalFootprint-answer"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-L4-IntellectualProperty-overview"
+        ],
+        "progression": "Intellectual property"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-L4-IntellectualProperty-overview"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "48a3b0d2-b645-4610-a70e-31673ef9fcc4"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod2-L4-IntellectualProperty-overview"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-L4-SourcesAndResearch-overview"
+        ],
+        "progression": "Sources and research"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-L4-SourcesAndResearch-overview"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "d759904b-3710-4807-ab9f-aa8623b9f67e"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod2-L4-SourcesAndResearch-overview"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-csd web search video_2021"
+        ],
+        "progression": "Sources and research"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-csd web search video_2021"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "d759904b-3710-4807-ab9f-aa8623b9f67e"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-csd web search video_2021"
+      ]
+    },
+    {
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -824,7 +1302,7 @@
           "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview-Mod2"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "ec5c83a5-7d71-4557-8e36-a02b3c27ab68"
       },
@@ -833,7 +1311,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -849,7 +1327,7 @@
           "VPL-CSD-PILOT-S22-CI-Cahpter1-ProjectOverview-mod2"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "8e2610dd-aee3-4d75-8857-dcfeb71aebdf"
       },
@@ -858,7 +1336,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 39,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -874,7 +1352,7 @@
           "VPL-CSD-PILOT-S22-CI-Cahpter2-ProjectOverview-mod2"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "8e2610dd-aee3-4d75-8857-dcfeb71aebdf"
       },
@@ -891,7 +1369,7 @@
           "VPL-CSD-PILOT-S22-CI-ModuleOverview-mod2"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "fd2815b1-c48c-4470-b6d6-0449e703b212"
       }
@@ -903,7 +1381,19 @@
           "VPL-CSD-pilot-S22-CI-Unit_Overview-mod2"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "fd2815b1-c48c-4470-b6d6-0449e703b212"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-Unit_PSP-mod2",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-mod2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "fd2815b1-c48c-4470-b6d6-0449e703b212"
       }
@@ -915,7 +1405,7 @@
           "VPL-CSD-pilot-S22-CI-Unit_tools-mod2"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "2b24e742-56ad-4922-a17b-9788b9efe888"
       }
@@ -927,7 +1417,7 @@
           "VPL-CSD-PILOT-S22-CI-Intro to Web Lab - Part 1_2021"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "2b24e742-56ad-4922-a17b-9788b9efe888"
       }
@@ -939,7 +1429,7 @@
           "VPL-CSD-pilot-S22-2-week1-mod2"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "41cfd821-b738-41c2-9479-e360d20571e8"
       }
@@ -951,9 +1441,21 @@
           "VPL-CSD-PILOT-S22-CI-vocab-c4u-mod2"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "41cfd821-b738-41c2-9479-e360d20571e8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod2-lesson2-overview",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-lesson2-overview"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "aa06b6c2-fbc5-473a-9cab-d1dd6da23668"
       }
     },
     {
@@ -963,7 +1465,7 @@
           "VPL-CSD-PILOT-S22-CI-CSDU2 - Type Anything_2021"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "328dca30-3d33-48b6-a987-a6621991585f"
       }
@@ -975,7 +1477,7 @@
           "VPL-CSD-PILOT-S22-CI-CSD U2 Inspector Warm Up_2021"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "328dca30-3d33-48b6-a987-a6621991585f"
       }
@@ -987,7 +1489,7 @@
           "VPL-CSD-PILOT-S22-CI-Intro to Web Lab - Part 2_2021"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "2908cc33-caa8-4876-8ca7-e45e3369e17e"
       }
@@ -999,7 +1501,7 @@
           "VPL-CSD-PILOT-S22-CI-CSD U2 HTML Adding Paragraphs_2021"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "2908cc33-caa8-4876-8ca7-e45e3369e17e"
       }
@@ -1011,7 +1513,7 @@
           "VPL-CSD-PILOT-S22-CI-mod2-HTML-overview"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "2908cc33-caa8-4876-8ca7-e45e3369e17e"
       }
@@ -1023,7 +1525,7 @@
           "VPL-CSD-PILOT-S22-CI-CSD U2 Heading Demo_2021"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "2908cc33-caa8-4876-8ca7-e45e3369e17e"
       }
@@ -1035,9 +1537,57 @@
           "VPL-CSD-PILOT-S22-CI-CSD Header Size MC_2018_2019_pilot_2021"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "2908cc33-caa8-4876-8ca7-e45e3369e17e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U2 Image Tag 1_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U2 Image Tag 1_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "e8a93190-70ac-4356-b120-dc6cf8be7a93"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod2-ImagesInHTML",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-ImagesInHTML"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "e8a93190-70ac-4356-b120-dc6cf8be7a93"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U2 Image Tag Inconsistent Spelling_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U2 Image Tag Inconsistent Spelling_2021"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "e8a93190-70ac-4356-b120-dc6cf8be7a93"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-sample-mod2-lesson3-overview",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-sample-mod2-lesson3-overview"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "7f57bd59-b11d-4f8a-a8e3-0b4c88270e76"
       }
     },
     {
@@ -1047,7 +1597,7 @@
           "VPL-CSD-PILOT-S22-CI-Video: Intro to CSS_2021"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "4be4c02b-6888-48be-8aab-b64f3c4f2358"
       }
@@ -1059,7 +1609,7 @@
           "VPL-CSD-PILOT-S22-CI-CSD U2 text style h1_2021"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "4be4c02b-6888-48be-8aab-b64f3c4f2358"
       }
@@ -1071,7 +1621,7 @@
           "VPL-CSD-PILOT-S22-CI-CSD U2 text style h3_2021"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "4be4c02b-6888-48be-8aab-b64f3c4f2358"
       }
@@ -1083,7 +1633,19 @@
           "VPL-CSD-PILOT-S22-CI-CSD U2 text style size_2021"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "4be4c02b-6888-48be-8aab-b64f3c4f2358"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD Web Headings Wrong Tag in Rule Set_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD Web Headings Wrong Tag in Rule Set_2021"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "4be4c02b-6888-48be-8aab-b64f3c4f2358"
       }
@@ -1095,7 +1657,7 @@
           "VPL-CSD-PILOT-S22-CI-Video: Intro to CSS Part 2_2021"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "4be4c02b-6888-48be-8aab-b64f3c4f2358"
       }
@@ -1107,7 +1669,19 @@
           "VPL-CSD-PILOT-S22-CI-CSD U2 add file_2021"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "4be4c02b-6888-48be-8aab-b64f3c4f2358"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod2-CSS-elements-C4U",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-CSS-elements-C4U"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "4be4c02b-6888-48be-8aab-b64f3c4f2358"
       }
@@ -1119,9 +1693,105 @@
           "VPL-CSD-PILOT-S22-CI-CSD U2 layout style sample_2021"
         ],
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "08bebb60-5be7-4db7-8b74-cfef2f4a0c87"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod2-StylingElements",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-StylingElements"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "08bebb60-5be7-4db7-8b74-cfef2f4a0c87"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod2-L4-overview",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-L4-overview"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "f7fb2558-1b41-42c9-96d2-7bb35e451000"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod2-L4-DigitalFootprint-overview",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-L4-DigitalFootprint-overview"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "066eaa0f-f5d0-4b9e-806d-aee6a3436212"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod2-L4-DigitalFootprint-activity",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-L4-DigitalFootprint-activity"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "066eaa0f-f5d0-4b9e-806d-aee6a3436212"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod2-L4-DigitalFootprint-answer",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-L4-DigitalFootprint-answer"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "066eaa0f-f5d0-4b9e-806d-aee6a3436212"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod2-L4-IntellectualProperty-overview",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-L4-IntellectualProperty-overview"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "48a3b0d2-b645-4610-a70e-31673ef9fcc4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod2-L4-SourcesAndResearch-overview",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod2-L4-SourcesAndResearch-overview"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "d759904b-3710-4807-ab9f-aa8623b9f67e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-csd web search video_2021",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-csd web search video_2021"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "vpl-csd2-ci-pilot-2022",
+        "activity_section.key": "d759904b-3710-4807-ab9f-aa8623b9f67e"
       }
     },
     {
@@ -1131,7 +1801,7 @@
           "VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview-Mod2"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "ec5c83a5-7d71-4557-8e36-a02b3c27ab68"
       }
@@ -1143,7 +1813,7 @@
           "VPL-CSD-PILOT-S22-CI-Cahpter1-ProjectOverview-mod2"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "8e2610dd-aee3-4d75-8857-dcfeb71aebdf"
       }
@@ -1155,7 +1825,7 @@
           "VPL-CSD-PILOT-S22-CI-Cahpter2-ProjectOverview-mod2"
         ],
         "lesson.key": "lesson-5",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "vpl-csd2-ci-pilot-2022",
         "activity_section.key": "8e2610dd-aee3-4d75-8857-dcfeb71aebdf"
       }

@@ -281,12 +281,6 @@
         "ba49206c-c099-4994-be57-1f8744273eaf": {
           "description": "اشرح قواعد السفر بأمان على الانترنت."
         },
-        "9727a876-04d5-4ae0-a904-13cd594e2fac": {
-          "description": ""
-        },
-        "b93b9c57-632c-4107-ae9a-d9ef8a8049c1": {
-          "description": ""
-        },
         "fa05721c-e159-4343-aa2d-679c0a4a7ca4": {
           "description": "ترجمة خوارزمية إلى برنامج."
         },
@@ -930,7 +924,7 @@
           "description": "وصف تأثير تطبيقات الأجهزة المحمولة على العالم الحديث."
         },
         "b672db1b-ee05-44b3-9f82-73b1b1f94e1a": {
-          "description": "اشرح لماذا تعد إمكانية الوصول جزءًا مهمًا من تصميم تطبيق للمستخدمين."
+          "description": "اشرح لماذا تعد إمكانية الوصول جزءًا مهماً من تصميم تطبيق للمستخدمين."
         },
         "3a5ae2ad-5774-4da7-b4e4-4e0aaeb02cbe": {
           "description": "قم بتحسين تصميم تطبيق موجود من خلال تلبية احتياجات إمكانية الوصول للمستخدمين."
@@ -950,206 +944,11 @@
         "2594052b-3b87-4d83-9038-56175058c1c2": {
           "description": "توضيح عملية التصميم وكيف ساعدت في تشكيل مشروع التتويج النهائي."
         },
-        "80e00862-0fe7-44a4-9e0c-785e6674f0e5": {
-          "description": ""
-        },
-        "19b5be99-7f7e-42e1-9ce4-6e53d7361d35": {
-          "description": ""
-        },
-        "6ad62a76-15c2-4ee6-812b-89426ccbaf53": {
-          "description": ""
-        },
-        "314c3d2c-32d4-4b31-a7b7-bc848001a0ef": {
-          "description": ""
-        },
-        "a4a38d49-6a85-4c4e-9e9f-b589bc00b61a": {
-          "description": ""
-        },
-        "607265dd-c7c2-4ef7-bb9d-ea8026f769e3": {
-          "description": ""
-        },
-        "3a37860e-7f85-4921-a622-4c0435783261": {
-          "description": ""
-        },
-        "bddab4e2-74ad-4394-8180-11dde4ab88f9": {
-          "description": ""
-        },
-        "572e2633-ed9c-4957-9399-4cdd236c9da9": {
-          "description": ""
-        },
-        "7db30b84-9106-4f12-9a6b-3d4119423ec7": {
-          "description": ""
-        },
-        "1eceabc4-6a94-4939-bdb3-a1084c6e6aa4": {
-          "description": ""
-        },
-        "42021a55-c97c-432b-9420-a62927cc2bba": {
-          "description": ""
-        },
-        "e537dea9-f777-4037-8c48-d20298ba53b2": {
-          "description": ""
-        },
-        "e4ff5379-6af0-43ba-8611-535630489148": {
-          "description": ""
-        },
-        "8f1a62d6-c1b7-400f-9324-3f7cf5cecc72": {
-          "description": ""
-        },
-        "d7b16ab2-6683-4efa-93d9-d425024858bf": {
-          "description": ""
-        },
-        "550ed66e-4795-428a-aee8-9a77e03f667d": {
-          "description": ""
-        },
-        "88327c34-dbb7-4b44-8c32-c76166910b39": {
-          "description": ""
-        },
-        "87ac4c51-43bc-4219-93ba-29f517c309ef": {
-          "description": ""
-        },
-        "98d5856a-9dc5-4d14-bfc1-c79f4d9191d0": {
-          "description": ""
-        },
-        "5ac58714-911b-460c-b34b-73d1e67c160e": {
-          "description": ""
-        },
-        "fd6610c2-f7c5-4e4a-ac5a-b1e358c8a11d": {
-          "description": ""
-        },
-        "8d396418-f31f-438e-b9d8-43730f49868f": {
-          "description": ""
-        },
-        "1d63355b-8406-4aba-a3e7-a4a559c67c5f": {
-          "description": ""
-        },
-        "a656b8a6-b4f4-4014-9c91-ed44f25b2831": {
-          "description": ""
-        },
-        "e645e06c-9cb1-479c-91b6-1b81b8961d54": {
-          "description": ""
-        },
-        "b17ebfe7-f8da-40c2-82d1-43b00a7e8364": {
-          "description": ""
-        },
-        "02c329fa-a4a0-4b23-b77e-788296c2bc7b": {
-          "description": ""
-        },
-        "b8217d7c-960e-42d1-b3f0-1035158a64a0": {
-          "description": ""
-        },
-        "fd3bf488-7c63-4869-9c48-a97556d39150": {
-          "description": ""
-        },
-        "44bb192f-0e71-405f-b8a6-5757ff7f37e1": {
-          "description": ""
-        },
         "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
           "description": "تدريب نموذج تعلُّم آلي واختباره."
         },
         "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
           "description": "التفكير في الدور الذي يؤديه التحيز البشري في التعلم الآلي."
-        },
-        "6885b6d1-78d2-4560-8bf5-8f14cfc68bb7": {
-          "description": ""
-        },
-        "b0342e84-056b-46d6-ac84-1d976155c38d": {
-          "description": ""
-        },
-        "74126a3c-61fa-40ac-aef5-ffe0bf68a549": {
-          "description": ""
-        },
-        "8bc02767-3a96-4d13-a946-1e5a0dbcb037": {
-          "description": ""
-        },
-        "1a3a0395-0d25-44f7-9d47-e1c7700c3507": {
-          "description": ""
-        },
-        "e8cad68d-4922-47bd-9b73-c22e8af10879": {
-          "description": ""
-        },
-        "34e775e2-0c00-4052-9987-1ea46e705fa0": {
-          "description": ""
-        },
-        "ccfcb058-12bd-488b-8356-b22d10c4ea6f": {
-          "description": ""
-        },
-        "bac6e9a1-3d3a-4632-951a-18176be462c8": {
-          "description": ""
-        },
-        "10f87a6a-1dee-44d3-b8d9-1a8d79891db9": {
-          "description": ""
-        },
-        "b77ee6ff-2558-4b8a-b835-6cc16409602f": {
-          "description": ""
-        },
-        "372ca368-9509-4398-b84c-21ac4c890a1d": {
-          "description": ""
-        },
-        "36878c76-5f41-4efb-bba1-e9ca4a2e32fa": {
-          "description": ""
-        },
-        "dd98dbf4-2b0d-4d8b-be4e-4807c06de0a0": {
-          "description": ""
-        },
-        "434ebdb0-40d0-4a29-bcfb-635ade18fb5e": {
-          "description": ""
-        },
-        "eecfc6b0-93e7-4a6f-bdc2-fcfe306a3407": {
-          "description": ""
-        },
-        "f8ceacee-8c38-4d94-a2f3-35ee71d8b382": {
-          "description": ""
-        },
-        "30f1b582-38d8-402b-83da-c8a7cba4b2aa": {
-          "description": ""
-        },
-        "e543e22d-8270-4eb9-81ad-6de8d5455d59": {
-          "description": ""
-        },
-        "6fa18746-fa9c-4ace-a0e3-fc7936899b64": {
-          "description": ""
-        },
-        "5caf913a-779e-4174-9e9f-b6a87756263e": {
-          "description": ""
-        },
-        "07998a0e-1ef2-4bc0-af59-5278007a0058": {
-          "description": ""
-        },
-        "74336c50-eaa5-4dce-a478-27925ce67729": {
-          "description": ""
-        },
-        "30d66e3d-96aa-4b8e-adb5-6f112d41f16d": {
-          "description": ""
-        },
-        "71eb384e-9034-406d-a8fc-3e410e869985": {
-          "description": ""
-        },
-        "eb402ed0-5510-4b3a-bc73-694ddde8bf0f": {
-          "description": ""
-        },
-        "9f5e8294-cf6c-4f28-9f8f-1c0c869a69be": {
-          "description": ""
-        },
-        "dd44e0a2-e2a0-46aa-bc51-e0d67dc95491": {
-          "description": ""
-        },
-        "2c2dc6c4-9a9f-4186-85ba-44882179e48b": {
-          "description": ""
-        },
-        "1829ce9e-4e7e-451f-898e-692c3abb5ad6": {
-          "description": ""
-        },
-        "a98e9a65-fe9a-421b-854f-ee5c090c9503": {
-          "description": ""
-        },
-        "4616a321-c362-4a0e-928a-b1bc642d4010": {
-          "description": ""
-        },
-        "69a7b9a8-b9be-4d2e-aacc-43805fc5f186": {
-          "description": ""
-        },
-        "1e8b24b5-f8b6-46a6-b0b1-aba1633a02f0": {
-          "description": ""
         }
       }
     }

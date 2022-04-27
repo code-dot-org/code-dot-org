@@ -6,7 +6,9 @@ const path = require('path');
 const {WebpackManifestPlugin} = require('webpack-manifest-plugin');
 const envConstants = require('./envConstants');
 const mode = envConstants.DEV ? 'development' : 'production';
-
+const outputFilename = envConstants.DEV
+  ? '[name].js'
+  : '[name]wp[contenthash].min.js';
 const config = {
   target: 'webworker',
   mode: mode,
@@ -17,7 +19,7 @@ const config = {
   output: {
     path: path.resolve(__dirname, 'build/package/js/'),
     publicPath: '/',
-    filename: '[name]wp[contenthash].min.js'
+    filename: outputFilename
   },
   module: {
     rules: [

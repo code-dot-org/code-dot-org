@@ -443,10 +443,11 @@ class Pd::Workshop < ApplicationRecord
       "#{workshop_year.to_i - 1}-#{workshop_year}"
   end
 
-  # Note that this is one of (at least) two mechanisms we use to suppress
+  # Note that this is one of (at least) three mechanisms we use to suppress
   # email in various cases -- see the serialized attribute 'suppress_email'
   # for more information.
   # Suppress 3 and 10-day reminders for certain workshops
+  # [MEG] It appears that these courses can move into the MUST_SUPPRESS_EMAIL_SUBJECTS constant
   def suppress_reminders?
     [
       SUBJECT_CSP_TEACHER_CON,

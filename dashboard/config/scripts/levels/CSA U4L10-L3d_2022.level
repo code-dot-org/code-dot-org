@@ -1,0 +1,50 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Create a scene that visualizes the number of cat breeds that originated in each country. Use multi-selection statements to count the number of cat breeds for each country, and use the counts for each country to decide the size of the flag images to draw.\r\n\r\n##In CatScene.java:\r\n\r\n1. Write the `analyzeCountries()`(#e7e8ea) method to count the number of cat breeds that originated in each country by traversing the `countries`(#e7e8ea) array.\r\n\r\n   * Create an `int`(#e7e8ea) array to store the counts for each country.\r\n\r\n   * Use multi-selection statements and the `equals()`(#e7e8ea) method to check if the current country equals `\"Egypt\"`(#e7e8ea), `\"Russia\"`(#e7e8ea), `\"Thailand\"`(#e7e8ea), `\"United Kingdom\"`(#e7e8ea), or `\"United States\"`(#e7e8ea). Increase the corresponding value in the `int`(#e7e8ea) array by `1`(#e7e8ea) if the condition is `true`(#e7e8ea).\r\n   \r\n   * Return the `int`(#e7e8ea) array.\r\n\r\n2. Write the `createScene()`(#e7e8ea) method to draw each country flag at a random location in the scene. Use the corresponding value in the `counts`(#e7e8ea) array to determine the size to draw the image.\r\n\r\n##In MyTheater.java:\r\n\r\n3. Declare and initialize an array to store the array returned from calling the `analyzeCountries()`(#e7e8ea) method, then call the `createScene()`(#e7e8ea) method with the array.\r\n\r\n4. Use `Theater.playScenes()`(#e7e8ea) to play the scene.\r\n\r\n::: details [**Show Me How**]\r\nA multi-selection statement uses the following syntax:\r\n  \r\n  ```\r\n  if (condition) {\r\n    // code to execute\r\n  }\r\n  else if (condition) {\r\n    // code to execute\r\n  }\r\n  else {\r\n    // code to execute\r\n  }\r\n  ```\r\n\r\nYou can have more than one `else if`(#e7e8ea) if you have additional conditions you need to check.\r\n:::",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "start_sources": {
+      "MyTheater.java": {
+        "text": "import org.code.theater.*;\n\npublic class MyTheater {\n  public static void main(String[] args) {\n\n    String[] breeds = FileReader.readText(\"breeds.txt\", 47);\n    String[] countries = FileReader.readText(\"countries.txt\", 47);\n\n    CatScene myScene = new CatScene(breeds, countries);\n\n    // TO DO #3: Call the analyzeCountries() and createScene() methods.\n\n\n    // TO DO #4: Use Theater.playScenes() to play the scene.\n    \n    \n  }\n}",
+        "isVisible": true
+      },
+      "CatScene.java": {
+        "text": "import org.code.theater.*;\n\n/*\n * A scene visualizing the number of cat\n * breeds that originated in each country\n */\npublic class CatScene extends Scene {\n\n  private String[] breeds;     // The list of cat breeds\n  private String[] countries;  // The list of originating countries\n\n  /*\n   * Constructor to create a CatScene with the\n   * specified arrays of breeds and countries\n   */\n  public CatScene(String[] breeds, String[] countries) {\n    this.breeds = breeds;\n    this.countries = countries;\n  }\n\n  /*\n   * Returns an array containing the number\n   * of cat breeds for each country\n   */\n  public int[] analyzeCountries() {\n    // TO DO #1: Traverse the countries array to count the number of breeds\n    // that originated in each country.\n\n    \n  }\n\n  /*\n   * Creates the scene by drawing each country flag at a random location\n   * and the size based on the number of originating cat breeds\n   */\n  public void createScene(int[] counts) {\n    String[] countryFlags = {\"egypt.png\", \"russia.png\", \"thailand.png\", \"uk.png\", \"usa.png\"};\n    \n    // TO DO #2: Draw each country flag at a random location. Use its\n    // number of originating cat breeds to inform the size of the image.\n\n    \n  }\n  \n}",
+        "isVisible": true
+      },
+      "FileReader.java": {
+        "text": "import java.util.Scanner;\nimport java.io.File;\nimport java.io.FileNotFoundException;\n\n/*\n * Reads data from a file\n */\npublic final class FileReader {\n\n  private static File myFile;\n  private static Scanner input;\n\n  /*\n   * Reads numValues integers from a file into\n   * an int 1D array and returns the array\n   */\n  public static int[] readNumbers(String filename, int numValues) {\n    createScanner(filename);\n    int[] values = new int[numValues];\n\n    for (int index = 0; index < values.length; index++) {\n      if (input.hasNextInt()) {\n        values[index] = input.nextInt();\n      }\n    }\n\n    input.close();\n    return values;\n  }\n\n  /*\n   * Reads numValues Strings from a file into\n   * an String 1D array and returns the array\n   */\n  public static String[] readText(String filename, int numValues) {\n    createScanner(filename);\n    String[] text = new String[numValues];\n\n    for (int index = 0; index < text.length; index++) {\n      if (input.hasNextLine()) {\n        text[index] = input.nextLine();\n      }\n    }\n\n    input.close();\n    return text;\n  }\n\n  /*\n   * Creates the input object with the specified file\n   * or notifies the user that the file is not found\n   */\n  public static void createScanner(String filename) {\n    myFile = new File(filename);\n    \n    try {\n      input = new Scanner(myFile);\n    } catch (FileNotFoundException error) {\n      System.out.println(\"File not found.\");\n    }\n  }\n  \n}",
+        "isVisible": true
+      },
+      "breeds.txt": {
+        "text": "Abyssinian\nAmerican Bobtail\nAmerican Curl\nAmerican Shorthair\nAmerican Wirehair\nBalinese\nBambino\nBengal\nBombay\nBritish Longhair\nBritish Shorthair\nBurmilla\nCalifornia Spangled\nChantilly-Tiffany\nChausie\nCheetoh\nColorpoint Shorthair\nCornish Rex\nDevon Rex\nDonskoy\nEgyptian Mau\nExotic Shorthair\nHavana Brown\nHimalayan\nJavanese\nKhao Manee\nKorat\nKurilian\nLaPerm\nMaine Coon\nMalayan\nMunchkin\nNebelung\nOcicat\nOriental\nPixie-bob\nRagamuffin\nRagdoll\nRussian Blue\nSavannah\nScottish Fold\nSelkirk Rex\nSiamese\nSiberian\nSnowshoe\nToyger\nYork Chocolate",
+        "isVisible": true
+      },
+      "countries.txt": {
+        "text": "Egypt\nUnited States\nUnited States\nUnited States\nUnited States\nUnited States\nUnited States\nUnited States\nUnited States\nUnited Kingdom\nUnited Kingdom\nUnited Kingdom\nUnited States\nUnited States\nEgypt\nUnited States\nUnited States\nUnited Kingdom\nUnited Kingdom\nRussia\nEgypt\nUnited States\nUnited Kingdom\nUnited States\nUnited States\nThailand\nThailand\nRussia\nThailand\nUnited States\nUnited Kingdom\nUnited States\nUnited States\nUnited States\nUnited States\nUnited States\nUnited States\nUnited States\nRussia\nUnited States\nUnited Kingdom\nUnited States\nThailand\nRussia\nUnited States\nUnited States\nUnited States",
+        "isVisible": true
+      }
+    },
+    "display_name": "Cat Breeds",
+    "bubble_choice_description": "Count the number of cat breeds that originated in each country and draw images based on the count.",
+    "thumbnail_url": "https://images.code.org/7ad394dec8c9fc164c5a3c37f8f6b1ea-image-1650719083623.png",
+    "starter_assets": {
+      "egypt.png": "e94e8860-a143-473b-ae1a-d32c14aaf670.png",
+      "russia.png": "647d112c-8af6-45db-9153-90d021104e5d.png",
+      "thailand.png": "d21a0a84-c788-4bff-8363-e074a0d6ecae.png",
+      "uk.png": "4fb0d7df-a8b5-4978-9681-37f771a0b52b.png",
+      "usa.png": "e741c5ce-d939-4194-9ec9-1bdca5e548e4.png"
+    }
+  },
+  "game_id": 68,
+  "created_at": "2022-04-07T18:58:38.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-04-07T18:58:38.005+00:00\",\"changed\":[\"cloned from \\\"CSA U4L10-L3c_2022\\\"\"],\"cloned_from\":\"CSA U4L10-L3c_2022\"},{\"changed_at\":\"2022-04-07 18:58:43 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-23 13:00:34 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-23 13:02:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-23 13:16:08 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-23 15:25:24 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-23 15:30:26 +0000\",\"changed\":[\"encrypted_examples\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-23 15:31:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-23 15:49:54 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

@@ -10,34 +10,12 @@
       "is_migrated": true,
       "project_sharing": true,
       "student_detail_progress_view": true,
-      "teacher_resources": [
-        [
-          "lessonPlans",
-          "https://curriculum.code.org/csp/unit2/"
-        ],
-        [
-          "teacherForum",
-          "https://forum.code.org/c/csp2"
-        ],
-        [
-          "vocabulary",
-          "https://curriculum.code.org/csp/unit2/vocab/"
-        ],
-        [
-          "standardMappings",
-          "https://curriculum.code.org/csp/unit2/standards/"
-        ],
-        [
-          "professionalLearning",
-          "https://studio.code.org/s/csp2-support"
-        ]
-      ],
       "use_legacy_lesson_plans": true,
       "version_year": "2017"
     },
     "new_name": "csp2-2017",
     "family_name": "csp2",
-    "serialized_at": "2022-03-11 12:07:17 UTC",
+    "serialized_at": "2022-03-22 21:16:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3766,7 +3744,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_affirmation_intervention_2",
+        "level.key": "csp_affirmation_control_2",
         "script_level.level_keys": [
           "csp_affirmation_control_2",
           "csp_affirmation_intervention_2"
@@ -3779,7 +3757,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_affirmation_control_2",
+        "level.key": "csp_affirmation_intervention_2",
         "script_level.level_keys": [
           "csp_affirmation_control_2",
           "csp_affirmation_intervention_2"
@@ -3828,13 +3806,96 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "Lesson Plans",
+      "url": "https://curriculum.code.org/csp/unit2/",
+      "key": "lesson_plans_3",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_plans_3"
+      }
+    },
+    {
+      "name": "Professional Learning",
+      "url": "https://studio.code.org/s/csp2-support",
+      "key": "professional_learning_1",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "professional_learning_1"
+      }
+    },
+    {
+      "name": "Standard Mappings",
+      "url": "https://curriculum.code.org/csp/unit2/standards/",
+      "key": "standard_mappings_3",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "standard_mappings_3"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csp2",
+      "key": "teacher_forum_2",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum_2"
+      }
+    },
+    {
+      "name": "Vocabulary",
+      "url": "https://curriculum.code.org/csp/unit2/vocab/",
+      "key": "vocabulary_1",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "vocabulary_1"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "lesson_plans_3",
+        "script.name": "csp2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "professional_learning_1",
+        "script.name": "csp2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "standard_mappings_3",
+        "script.name": "csp2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum_2",
+        "script.name": "csp2-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "vocabulary_1",
+        "script.name": "csp2-2017"
+      }
+    }
   ],
   "scripts_student_resources": [
 

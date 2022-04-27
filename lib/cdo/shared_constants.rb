@@ -52,6 +52,8 @@ module SharedConstants
 
   STUDENT_GRADE_LEVELS = %w(K 1 2 3 4 5 6 7 8 9 10 11 12 Other).freeze
 
+  PL_GRADE_VALUE = 'pl'.freeze
+
   # The set of artist autorun options
   ARTIST_AUTORUN_OPTIONS = OpenStruct.new(
     {
@@ -98,6 +100,7 @@ module SharedConstants
     spritelab
     poetry
     poetry_hoc
+    thebadguys
   ).freeze
 
   # For privacy reasons, App Lab and Game Lab can only be shared if certain conditions are met. These project types can be shared if: the user is >= 13 years old and their teacher has NOT disabled sharing OR the user is < 13 and their teacher has enabled sharing.

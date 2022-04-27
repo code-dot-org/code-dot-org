@@ -36,7 +36,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2022-03-11 12:08:15 UTC",
+    "serialized_at": "2022-03-23 21:08:33 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -11038,7 +11038,7 @@
     {
       "key": "parameter",
       "word": "Parameter",
-      "definition": "An extra piece of information passed to a function to customize it for a specific need",
+      "definition": "Additional information provided as input to a block to customize it's functionality",
       "properties": {
       },
       "seeding_key": {

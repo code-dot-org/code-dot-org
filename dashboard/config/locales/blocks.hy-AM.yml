@@ -159,6 +159,10 @@ hy:
           CONDITION:
             '"when"': երբ
             '"while"': ժամանակ
+      gamelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': վայրկյան
       gamelab_getProp:
         options:
           PROPERTY:

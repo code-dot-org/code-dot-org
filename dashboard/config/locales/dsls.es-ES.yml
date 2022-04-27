@@ -12655,10 +12655,17 @@ es-ES:
         title: Prueba Final del Proyecto Desarrollo Web
       CSD games cake challenge choice_2021:
         display_name: Desafíos
+        description: |2-
+
+          Haz el Tuyo Propio
+          Acabas de recorrer el plan de otra persona para crear un juego, así que ahora es el momento de hacer el tuyo propio. ¿Qué características o retos adicionales quieres crear?
       CSD games functions practice choice_2021:
         display_name: Funciones Practicar
+        description: Practica el uso de las funciones y aprende más sobre lo que las
+          hace tan útiles.
       CSD games platform challenge choice_2021:
         display_name: Desafíos
+        description: "¡Mejora tu juego con estos desafíos!"
       CSD web conditionals practice choice_2021:
         display_name: Condicionales Practicar
         description: Practica el uso de booleanos y condicionales con estas actividades.
@@ -13053,3 +13060,65 @@ es-ES:
       CSD web text challenge choice_2021:
         description: Prueba estos nuevos bloques y desafíos.
         display_name: Desafíos de Texto
+      CSD U3 AnimationsMulti STOP project guide_2018_2019_pilot_2021:
+        markdown: |
+          # Planifica tu Proyecto
+
+          Echa un vistazo a la guía del proyecto, que ya hemos rellenado para ti.
+
+          * ¿Describe la guía del proyecto los mismos sprites que tú pensaste?
+          * ¿Utiliza las mismas variables para almacenar información?
+          * ¿Las funciones que describe son las mismas que tú describiste?
+      CSD games collisions challenge choice_2021:
+        description: Prueba estos nuevos bloques y desafíos con colisiones.
+        display_name: Desafíos de Colisión
+      CSD games collisions practice choice_2021:
+        description: Practica el uso de los nuevos bloques de colisiones.
+        display_name: Práctica de Colisiones
+      CSD games functions challenge choice_2021:
+        description: Mejora tu juego y prueba estos desafíos con funciones.
+        display_name: Desafíos con Funciones
+      CSD games istouching challenge choice_2021:
+        description: Prueba estos nuevos bloques y desafíos con colisiones.
+        display_name: Desafíos de Colisión
+      CSD games istouching practice choice_2021:
+        description: Practica el uso de la detección de colisiones con estas actividades.
+        display_name: Prácticas de Colisión
+      CSD games movement2 challenge choice_2021:
+        description: Prueba estos nuevos bloques y desafíos con la velocidad y el
+          patrón de contador.
+        display_name: Desafíos de Movimientos Complejos de Sprite
+      CSD games movement2 practice choice_2021:
+        description: Practica con las nuevas formas de mover los sprites.
+        display_name: Práctica de Movimiento del Sprite
+      CSD games velocity challenge choice_2021:
+        description: Prueba estos nuevos bloques y desafíos con la velocidad.
+        display_name: Desafíos de Velocidad
+      CSD games velocity practice choice_2021:
+        description: Practica el uso de los bloques de velocidad con estas actividades.
+        display_name: Práctica de Velocidad
+      CSD web conditionals challenge choice_2021:
+        description: Prueba estos desafíos con condicionales.
+        display_name: Desafíos de Condicionales
+      CSD web keyboard challenge choice_2021:
+        description: Prueba estos nuevos bloques y desafíos con la entrada del teclado.
+        display_name: Desafíos de Entrada de Teclado
+      CSD web keyboard practice choice_2021:
+        description: Practica las entradas del teclado con estas actividades.
+        display_name: Práctica de Entradas de Teclado
+      CSD web mouse challenge choice_2021:
+        description: Prueba estos nuevos bloques y desafíos con la entrada del ratón.
+        display_name: Desafíos del Ratón
+      CSD web mouse practice choice_2021:
+        description: Practica la entrada de teclado y el uso del bloque if/else con
+          estas actividades.
+        display_name: Entrada de Ratón y Práctica de If/else
+      aiml-ch1-pulse-survey_2021:
+        title: "¡Encuesta rápida sobre Inteligencia Artificial y Aprendizaje Automático!"
+      aiml-intro-pulse-survey_2021:
+        title: "¡Encuesta rápida sobre Inteligencia Artificial y Aprendizaje Automático!"
+      ml-models-shoe survey:
+        markdown: |
+          ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
+
+          ## [Pulsa aquí](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) para realizar la Encuesta de Recomendación de Calzado

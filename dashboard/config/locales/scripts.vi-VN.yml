@@ -1275,8 +1275,6 @@ vi:
           student_description: 'Trực tuyến giai đoạn 2: Tìm hiểu sắc màu mùa hè'
         equity-pd:
           lessons:
-            Code.org Equity PD:
-              name: Code.org Equity PD
             Necessary Background:
               name: Nền tảng cần thiết
         science-PD2:
@@ -1786,6 +1784,7 @@ vi:
             quyết các vấn đề của thế giới.
           lessons:
             Oceans:
+              name: Trí Tuệ Nhân Tạo cho Đại Dương
               description_student: 'Tóm tắt bài hướng dẫn: Đầu tiên, học sinh phân
                 loại các đối tượng là “cá” hoặc “không phải cá” để cố gắng loại bỏ
                 rác khỏi đại dương. Sau đó, học sinh sẽ cần mở rộng tập dữ liệu đào
@@ -3271,6 +3270,7 @@ vi:
                 hoàn thành bài tập, học sinh sẽ có cơ hội tùy chỉnh game của mình
                 với tốc độ và âm thanh khác nhau.
           student_description: Chọn đội của bạn và làm game bóng rổ
+          name: bóng rổ
         sample-csp5:
           lessons:
             Controlling Memory with Variables:
@@ -3722,6 +3722,7 @@ vi:
                 trình phản ứng với các sự kiện (như khi nhấn phím mũi tên). Sau khi
                 hoàn thành bài tập, học sinh sẽ có cơ hội tùy chỉnh game của mình
                 với tốc độ và âm thanh khác nhau.
+          name: thể thao
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -5975,6 +5976,7 @@ vi:
                 ở phần cuối.
           student_description: Minecraft đã trở lại với một hoạt động hoàn toàn mới
             cho Hour of Code! Cuộc hành trình đi qua Minecraft với mật mã.
+          name: anh hùng
         applab-intro-staging:
           lessons:
             Intro to AppLab - Your First App:
@@ -7776,6 +7778,7 @@ vi:
                 công cụ và được thiết kế để phản hồi với âm nhạc.
           student_description: Viết mã bữa tiệc khiêu vũ của riêng bạn để chia sẻ
             với bạn bè của mình!
+          name: nhảy múa
         frozen-2018-test-b:
           title: Kịch bản Frozen mới
           lessons:
@@ -7796,6 +7799,7 @@ vi:
                 phá các bài tập trong một giờ. Phần lớn học sinh trung học sẽ hoàn
                 thành bài hướng dẫn và có thời gian để khám phá cấp độ chơi tự do
                 ở phần cuối.
+          name: dưới nước
         dance--draft:
           lessons:
             Dance Party:
@@ -10304,7 +10308,6 @@ vi:
             bè của mình!
           lessons:
             Dance Party:
-              name: Bữa Tiệc Khiêu Vũ
               description_student: Trong bài học này, học viên ở mọi lứa tuổi được
                 trải nghiệm nhập môn về lập trình và khoa học máy tính trong một môi
                 trường an toàn, có sự hỗ trợ. Bài học này được thiết kế cho học viên
@@ -14438,8 +14441,7 @@ vi:
           title: '"Xin chào thế giới!"'
         csa-self-paced-pl:
           lessons:
-            Navigating the Code.org learning platform:
-              name: Sử dụng nền tảng học tập Code.org
+            Navigating the Codeorg learning platform:
               description_teacher: |-
                 \*\*Bạn sẽ học cách: \*\*
 
@@ -16083,7 +16085,7 @@ vi:
               description_student: Sử dụng vòng lặp và các mô hình để hoàn thành hình
                 ảnh.
               key: Vòng lặp trong câu chuyện về biển
-            The Big Event Jr.:
+            The Big Event Jr:
               name: Sự kiện lớn – nâng cao
               description_student: Di chuyển và hét lên khi giáo viên của bạn nhấn
                 các nút trên chiếc điều khiển từ xa khổng lồ.
@@ -16506,7 +16508,7 @@ vi:
             The Right App:
               description_student: Phác thảo ứng dụng điện thoại thông minh của riêng
                 bạn.
-            The Big Event Jr.:
+            The Big Event Jr:
               name: Sự kiện lớn – nâng cao
               description_student: Di chuyển hoặc hét lên khi giáo viên của bạn nhấn
                 các nút trên chiếc điều khiển từ xa khổng lồ.
@@ -16607,7 +16609,7 @@ vi:
 
                 Trên Internet có rất nhiều kiểu người thú vị, nhưng đôi khi, một số người trong số họ có thể có hành vi tiêu cực với nhau. Trong bài học nhập vai này, hãy giúp học sinh của bạn hiểu lý do tại sao hành xử tiêu cực trên mạng thường dễ dàng hơn so với trong cuộc sống và cách đối phó với hành vi tiêu cực trên mạng khi các em chứng kiến hành vi đó.
               key: Hãy CHẤM DỨT hành vi tiêu cực trên mạng
-            My Robotic Friends Jr.:
+            My Robotic Friends Jr:
               name: Những người bạn robot của tôi – nâng cao
               description_student: Trong bài học này, bạn sẽ giả vờ rằng các bạn cùng
                 lớp của mình là rô bốt và lập trình các bạn để tạo ra các mô hình
@@ -16624,7 +16626,7 @@ vi:
                 thập thật nhiều đá quý!
             Creating Art with Code:
               description_student: Tạo hình ảnh đẹp bằng cách lập trình Artist.
-            My Loopy Robotic Friends Jr.:
+            My Loopy Robotic Friends Jr:
               name: Những người bạn robot Loopy của tôi – nâng cao
               description_student: Trong bài học này, bạn sẽ lại lập trình cho các
                 bạn cùng lớp của mình, nhưng bằng cách sử dụng các vòng lặp, bạn sẽ
@@ -17358,6 +17360,8 @@ vi:
           lessons:
             lesson-9:
               name: Vòng lặp
+            lesson-21:
+              name: Bảng điều khiển
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
@@ -17407,10 +17411,17 @@ vi:
           lessons:
             lesson-6:
               name: Các biến
+            lesson-16:
+              name: Bảng điều khiển
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
         csa3-2022:
+          lessons:
+            lesson-5:
+              name: Cho vòng lặp
+            lesson-16:
+              name: Bảng điều khiển
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
@@ -17913,3 +17924,5 @@ vi:
             For Loops:
               name: Cho vòng lặp
               key: Cho vòng lặp
+        hello-world-csc:
+          title: Xin chào cả thế giới

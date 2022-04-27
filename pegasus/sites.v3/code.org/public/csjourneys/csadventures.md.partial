@@ -29,19 +29,21 @@ social:
 
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
-      <a class="linktag" id="irobot-trip" href="https://experience.irobot.com/irobot-education-virtual-museum-tours" target="_blank">
-        <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/iRobot-trip.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="iRobot Tours">
+      <a class="linktag" id="snap-trip" href="https://snapchat.zoom.us/webinar/register/WN_vhLtZn_0Q1SO9TJhHgl6TA" target="_blank">
+        <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/snap-trip.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="iRobot Tours">
       </a>
 
 
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-        <div class="smalltext" style="color: #00adbc; text-align: left"><strong>Two tours per week in April</strong></div>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Go inside the iRobot Cool Stuff Museum</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Join us in the iRobot Cool Stuff Museum, exploring over 30 years of robotics history. See via our mobile robot while our guide brings robotics and computer science to life.</div>
-        <a class="linktag" id="irobot-trip" href="https://experience.irobot.com/irobot-education-virtual-museum-tours" target="_blank"><button>View details</button></a>
+        <div class="smalltext" style="color: #00adbc; text-align: left"><strong>May 6 at 1pm EDT</strong></div>
+        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Explore the world of Augmented Reality (AR) with Snap</strong></h3>
+        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Join Snap team members for a 45-minute interactive session on the future of Augmented Reality (AR) through an in-depth look at Snap's Lens Studio and Spectacles.</div>
+        <a class="linktag" id="snap-trip" href="https://snapchat.zoom.us/webinar/register/WN_vhLtZn_0Q1SO9TJhHgl6TA" target="_blank"><button>View details</button></a>
   </div>
+  </div>
+<p style="padding-left:15px; padding-right:15px"><i>As part of this CS Journeys experience, Snap is giving away a pair of Snap Spectacles to 25 registered classrooms! (Recipients selected at random.)</i></p>
 </div>
-</div>
+
 
 
 <div class="col-33" style="padding-bottom:15px">
@@ -59,24 +61,6 @@ social:
 </div>
 </div>
 
-
-<div class="col-33" style="padding-bottom:15px">
-  <div class="tutorial-tile" style="padding-right:20px">
-      <a class="linktag" id="nasa-trip" href="https://chandra.si.edu/fieldtrip/" target="_blank">
-        <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/nasa-trip2.jpg" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Chandra X-Ray Observatory">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-        <div class="smalltext" style="color: #00adbc; text-align: left"><strong>One tour per week</strong></div>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Explore the universe with NASA's Chandra X-ray Observatory</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Tour NASA’s Chandra X-ray Observatory as we investigate hot regions of the Universe, from black holes to exploding stars!</div>
-       <br>
-       <a class="linktag" id="nasa-trip" href="https://chandra.si.edu/fieldtrip/" target="_blank"><button>View details</button></a>
-  </div>
-</div>
-</div>
-
-<div style="clear: both; margin-bottom: 20px"></div>
-
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="mbari-trip" href="https://montereybayaquarium.thinkific.com/courses/exploring-the-deep-bit-by-bit" target="_blank">
@@ -92,13 +76,15 @@ social:
 <p style="padding-left:15px; padding-right:15px"><i>Note that students need to create an account with Monterey Bay Aquarium to access the experience.</i></p>
 </div>
 
+<div style="clear: both; margin-bottom: 20px"></div>
+
 <div class="col-33" style="padding-bottom:15px">
   <div class="tutorial-tile" style="padding-right:20px">
       <a class="linktag" id="alexa-trip" href="https://www.amazonfutureengineer.com/space?utm_campaign=codeorg&utm_medium=alexaforastronauts&utm_source=US&utm_content=Website" target="_blank">
         <img class="tutorial-tile-img" src="/images/csjourneys/fill-485x235/alexa-trip.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Alexa Trip">
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-        <div class="smalltext" style="color: #00adbc; text-align: left"><strong>Self-Paced -- Coming in May</strong></div>
+        <div class="smalltext" style="color: #00adbc; text-align: left"><strong>Self-paced -- coming soon!</strong></div>
         <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Alexa, take me to the Moon!</strong></h3>
         <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Join Amazon, Lockheed Martin, and Webex for a behind-the-scenes look at the technology being tested on NASA’s Artemis I mission.</div>
         <br>
@@ -112,96 +98,29 @@ social:
 
 <a id="chats">
 <h2 style="margin-top:25px">My Journey Chats</h2>
-<p>In these weekly conversations, give your students the opportunity to hear from a diverse group of people using computer science to bring music to our lives, create exciting new virtual reality worlds, and more! Conversations last 20-30 minutes, with live closed captioning available. Recordings will be made available a day or two after each event. To view recordings of past events, <a  class="linktag" id="past chats" href="https://code.org/csjourneys/pastchats" target="_blank">click here</a>.</p>
-<p><strong>Note that clicking any of the "View details" buttons below will take you to Eventbrite.com.</strong></p>
+<p>Spring class chats have now concluded. Check out a few of our past chats below, or to view all past events, <a  class="linktag" id="past chats" href="https://code.org/csjourneys/pastchats" target="_blank">click here</a>.</p>
 <br>
 
+<a id="recordings"></a>
 
-
-<div class="col-33" style="padding-bottom:15px">
-  <div class="tutorial-tile" style="padding-right:20px">
-      <a class="linktag" id="lucasfilm-chat" href="https://www.eventbrite.com/e/my-journey-creating-visual-effects-for-star-wars-registration-261427184747" target="_blank">
-        <img class="tutorial-tile-img" src="/images/csjourneys/lucasfilm-myjourney.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="My Journey Chat with Allison Moon of Lucasfilm">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-        <div class="smalltext" style="color: #00adbc; text-align: left"><strong>Wed, March 23 at 1 pm EDT</strong></div>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Creating visual effects for Star Wars</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Hear from Allison Moon, a pipeline technical director with Lucasfilm who helps create visual effects for movies such as Star Wars: The Last Jedi. <i>For grades K-5</i>.</div>
-        <br>
-        <br>
-        <a class="linktag" id="lucasfilm-chat" href="https://www.eventbrite.com/e/my-journey-creating-visual-effects-for-star-wars-registration-261427184747" target="_blank"><button>View details</button></a>
-  </div>
-</div>
+<div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
+  {{ myjourney14 }}
+  <h3><strong>Using computer science to keep people safe</strong></h3>
+  <p>Hear from Richard Nelson, V, a mechanical engineer at Motorola Solutions who plays a crucial role in ensuring public safety.</p>
 </div>
 
-<div class="col-33" style="padding-bottom:15px">
-  <div class="tutorial-tile" style="padding-right:20px">
-      <a class="linktag" id="meowwolf-chat" href="https://www.eventbrite.com/e/my-journey-making-interactive-art-with-technology-registration-261398238167" target="_blank">
-        <img class="tutorial-tile-img" src="/images/csjourneys/meowwolf-myjourney.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="My Journey Chat Danny Bazo of Meow Wolf">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-        <div class="smalltext" style="color: #00adbc; text-align: left"><strong>Fri, April 1 at 1 pm EDT</strong></div>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Making interactive art with technology</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Learn how a creative engineer at Meow Wolf helps to build interactive art installations that immerse visitors in mind-blowing new worlds with the intersection of art and engineering. <i>For grades 6-12</i>.</div>
-        <a class="linktag" id="meowwolf-chat" href="https://www.eventbrite.com/e/my-journey-making-interactive-art-with-technology-registration-261398238167" target="_blank"><button>View details</button></a>
-  </div>
-</div>
-</div>
-
-
-<div class="col-33" style="padding-bottom:15px; padding-right:20px; text-align:center">
-  <div class="col-100" style="padding:25px; border: 1px solid #0094ca; border-bottom: none; border-radius:15px 15px 0 0; text-align: center">
-    <h2 style="margin-top:10px; margin-bottom:10px; color:#0094ca">Teacher Guides</h2>
-    <p>To learn more about key takeaways for students and suggestions for planning, view the Teacher Guide that’s most appropriate to you.</p>
-  </div>
-  <div class="col-50" style="padding:25px; background-color: #7665a0; border: 1px solid #7665a0">
-    <a class="linktag" id="chat-guide-k5" href="https://staging.code.org/files/csjourneys/classchats-guide-k5.pdf" target="_blank"><h3 style="margin-top:0; color:#ffffff"><strong><br>For K-5 Classrooms<br><br></strong></h3></a>
-  </div>
-  <div class="col-50" style="padding:25px; background-color: #00adbc; border: 1px solid #00adbc; border-left:none">
-    <a class="linktag" id="chat-guide-612" href="https://staging.code.org/files/csjourneys/classchats-guide-middlehigh.pdf" target="_blank"><h3 style="margin-top:0; color:#ffffff"><strong>For Middle and High School Classrooms</strong></h3></a>
-  </div>
-  <div class="col-100" style="padding:25px; padding-top:170px; padding-bottom:17px; border: 1px solid #0094ca; border-radius: 0 0 15px 15px; text-align: center">
-    <br>
-    <br>
-    <p>To view recordings of past events, <a  class="linktag" id="pastchats" href="https://code.org/csjourneys/pastchats" target="_blank">click here</a>.</p>
-  </div>
-  <div style="clear: both"></div>
+<div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
+  {{ myjourney5 }}
+  <h3><strong>Building robots</strong></h3>
   <br>
+  <p>Learn how Eva Moscat and Anna Elzer are helping build software for robots and designing learning experiences that inspire the next generation of technologists.</p>
 </div>
 
-<div style="clear: both; margin-bottom: 20px"></div>
-
-
-<div class="col-33" style="padding-bottom:15px">
-  <div class="tutorial-tile" style="padding-right:20px">
-      <a class="linktag" id="snapchat-chat" href="https://www.eventbrite.com/e/252182493627" target="_blank">
-        <img class="tutorial-tile-img" src="/images/csjourneys/myjourney-snapchat.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="My Journey Chat Bertrand Saint-Preux of Snapchat">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-        <div class="smalltext" style="color: #00adbc; text-align: left"><strong>Fri, April 8 at 1 pm EDT</strong></div>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Creating an inclusive camera at Snapchat</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Hear about a Snapchat Product Lead’s journey from building a jukebox app to creating an inclusive camera that works well for everyone, regardless of their skin tone, culture, beauty standards, or ability. <i>For grades 6-12</i>.</div>
-        <a class="linktag" id="snapchat-chat" href="https://www.eventbrite.com/e/252182493627" target="_blank"><button>View details</button></a>
-  </div>
-</div>
-</div>
-
-<div class="col-33" style="padding-bottom:15px">
-  <div class="tutorial-tile" style="padding-right:20px">
-      <a class="linktag" id="greenwayhealth-chat" href="https://www.eventbrite.com/e/277186250537" target="_blank">
-        <img class="tutorial-tile-img" src="/images/csjourneys/myjourney-greenwayhealth2.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="My Journey Chat with Kevin Schriver of Greenway Health">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-        <div class="smalltext" style="color: #00adbc; text-align: left"><strong>Wednesday, April 13 at 2 pm EDT</strong></div>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Improving user experiences in healthcare</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Hear from a self-taught web developer about how his contributions at Greenway Health make access to healthcare information more user-friendly. <i>For grades K-5</i>.</div>
-		<br>
-		<a class="linktag" id="greenwayhealth-chat" href="https://www.eventbrite.com/e/277186250537" target="_blank"><button>View details</button></a>
-  </div>
-</div>
+<div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
+  {{ myjourney13 }}
+  <h3><strong>How to outsmart a malicious hacker</strong></h3>
+  <p>Learn how Christopher Lopez, a security analyst with Tanium, helps organizations protect their networks from cybersecurity threats.</p>
 </div>
 
 
 <div style="clear: both; margin-bottom: 20px"></div>
-
-<p>To view all the Spring 2022 My Journey chats, <a href="https://www.eventbrite.com/o/codeorg-33962316631" target="_blank">click here</a>. (Note this link will take you to Eventbrite.com)</p>

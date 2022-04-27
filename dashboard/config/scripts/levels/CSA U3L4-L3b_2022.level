@@ -1,0 +1,23 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "CSA U3L4-L3b PBT_2022",
+    "long_instructions": "The `BooksStats`(#e7e8ea) class has instance variables for a 1D array of book titles and a 1D array containing their years of publication.\r\n\r\n##In BooksStats.java:\r\n\r\nThe method `hasYear()`(#e7e8ea) should return `true`(#e7e8ea) if at least one value in the `years`(#e7e8ea) array is equal to its parameter `yearToFind`(#e7e8ea). In the method `hasYear()`(#e7e8ea),\r\n\r\n1. Traverse the `years`(#e7e8ea) array and check if the current value is equal to `yearToFind`(#e7e8ea).\r\n\r\n   * Return `true`(#e7e8ea) if the current value is equal to `yearToFind`(#e7e8ea).\r\n\r\n2. If no values in `year`(#e7e8ea) is equal to `yearToFind`(#e7e8ea), return `false`(#e7e8ea).\r\n\r\n***Curious about this dataset?*** *Learn more about it [**here**](https://www.kaggle.com/datasets/jealousleopard/goodreadsbooks)!*",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "display_name": "Books",
+    "bubble_choice_description": "Determine if a 1D array of book publication years contains at least one value that is equal to a specific value.",
+    "thumbnail_url": "https://images.code.org/5e08536bd2a6be219e509018949be592-image-1648584897633.png",
+    "encrypted_exemplar_sources": "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\n43ztNoewB3RgV2z2luzFj9Qm4NK60Q==\n"
+  },
+  "game_id": 68,
+  "created_at": "2022-03-25T00:46:34.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-03-25 00:46:37 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 20:16:00 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 20:34:28 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-03-29 20:35:06 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Javalab>

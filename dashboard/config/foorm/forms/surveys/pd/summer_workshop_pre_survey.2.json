@@ -228,7 +228,7 @@
             }
           ],
           "visibleIf": "{workshop_course} = 'CS Principles' or {workshop_course} = 'CS A'",
-          "natalia_comment": "NOTE: re-used the CSP panel for CSA because they will use the same questions. Didn't change any of the technical names that sey csp to preserve the ability to compare historical data - NATALIA"
+          "natalia_comment": "NOTE: re-used the CSP panel for CSA because they will use the same questions. Didn't change any of the technical names that include 'csp' inthe question name to preserve the ability to compare historical data - NATALIA"
         },
         {
           "type": "panel",

@@ -806,7 +806,7 @@ class LessonTest < ActiveSupport::TestCase
 
     assert_equal(
       new_lesson.start_url,
-      "//test-studio.code.org/s/#{new_script.name}/lockable/1/levels/1"
+      CDO.studio_url("/s/#{new_script.name}/lockable/1/levels/1", CDO.default_scheme)
     )
   end
 
@@ -818,7 +818,7 @@ class LessonTest < ActiveSupport::TestCase
 
     assert_equal(
       new_lesson.start_url,
-      "//test-studio.code.org/s/#{new_script.name}/lessons/1/levels/1"
+      CDO.studio_url("/s/#{new_script.name}/lessons/1/levels/1", CDO.default_scheme)
     )
   end
 
@@ -989,6 +989,26 @@ class LessonTest < ActiveSupport::TestCase
       copied_resource2 = @destination_course_version.resources.find_by_name('resource2')
       refute_nil copied_resource2
       assert_equal @destination_script.lessons.last.lesson_activities.last.activity_sections.last.description, "Resource 1: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(copied_resource1)}]. Resource 2: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(copied_resource2)}]."
+    end
+
+    test "preparation resource markdown is updated when cloning lesson" do
+      resource_in_lesson = create :resource, key: 'original_key', name: 'resource1', course_version: @original_course_version, lessons: [@original_lesson]
+      resource_not_in_lesson = create :resource, name: 'resource2', course_version: @original_course_version, lessons: []
+
+      @original_lesson.preparation = "Resource 1: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(resource_in_lesson)}]. Resource 2: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(resource_not_in_lesson)}]."
+      @original_lesson.save!
+
+      @destination_script.expects(:write_script_json).once
+      copied_lesson = @original_lesson.copy_to_unit(@destination_script)
+      assert_equal @destination_script, copied_lesson.script
+      assert_equal 1, copied_lesson.resources.length
+      assert_equal @original_lesson.resources.map {|r| r.attributes.slice('name', 'url', 'properties').to_a}, copied_lesson.resources.map {|r| r.attributes.slice('name', 'url', 'properties').to_a}
+
+      copied_resource1 = @destination_course_version.resources.find_by_name('resource1')
+      refute_nil copied_resource1
+      copied_resource2 = @destination_course_version.resources.find_by_name('resource2')
+      refute_nil copied_resource2
+      assert_equal @destination_script.lessons.last.preparation, "Resource 1: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(copied_resource1)}]. Resource 2: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(copied_resource2)}]."
     end
 
     test "vocabulary markdown is updated when cloning lesson" do

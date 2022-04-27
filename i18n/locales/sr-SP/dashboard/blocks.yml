@@ -438,6 +438,10 @@ sr:
           CONDITION:
             '"when"': када
             '"while"': док је
+      gamelab_everySeconds:
+        options:
+          UNIT:
+            '"seconds"': секунде
       gamelab_getProp:
         options:
           PROPERTY:
