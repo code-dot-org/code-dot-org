@@ -261,16 +261,16 @@ class PersonalProjectsTable extends React.Component {
               </Table.Provider>
             )}
             {noProjects && this.props.isUserSignedIn && (
-              <h3>{i18n.noPersonalProjects()}</h3>
+              <div style={styles.noPersonalProjects}>
+                {i18n.noPersonalProjects()}
+              </div>
             )}
             {noProjects && !this.props.isUserSignedIn && (
-              <h3>
-                <SafeMarkdown
-                  markdown={i18n.noSavedProjects({
-                    signInUrl: '/users/sign_in?user_return_to=/projects'
-                  })}
-                />
-              </h3>
+              <SafeMarkdown
+                markdown={i18n.noSavedProjects({
+                  signInUrl: '/users/sign_in?user_return_to=/projects'
+                })}
+              />
             )}
           </div>
         )}
@@ -332,6 +332,9 @@ export const styles = {
   },
   bottomMargin: {
     marginBottom: 20
+  },
+  noPersonalProjects: {
+    fontSize: 14
   }
 };
 
