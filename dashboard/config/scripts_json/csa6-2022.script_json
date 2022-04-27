@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-19 12:47:09 UTC",
+    "serialized_at": "2022-04-26 14:55:21 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -2780,7 +2780,7 @@
       "key": "5b3bcb30-a210-467b-b990-b4e196294820",
       "position": 1,
       "properties": {
-        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. It is completed in three class periods to plan and create the program, including choosing a topic or goal and implementing an algorithm. Students participate in planning and feedback activities to solve problems, reinforce software development practices and self-image as software engineers, and improve their programs. Lessons 11, 12, and 13 collectively include instructions for the three-day project.\n\nIf there is not enough time for the three-day project, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the **Natural Language Processing Project 1 Day Lesson Plan**, which includes a one-day version of the **Natural Language Processing Project Planning Guide**. Direct students to develop their program on Lesson 13 to submit their project. While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use."
+        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. It is completed in three class periods to plan and create the program, including choosing a topic or goal and implementing an algorithm. Students participate in planning and feedback activities to solve problems, reinforce software development practices and self-image as software engineers, and improve their programs. Lessons 11, 12, and 13 collectively include instructions for the three-day project.\n\nIf there is not enough time for the three-day project, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the [**Natural Language Processing Project 1 Day Lesson Plan**](https://docs.google.com/document/d/1ir0g4bRHiT0oRJmj-4drZPTqrxIdIGHox1KbP-5V7QY/edit?usp=sharing), which includes a one-day version of the [**Natural Language Processing Project Planning Guide**](https://docs.google.com/document/d/1L3bPdd1hvNTxseCVBy08Ln7U2hvaXm4HjYrcj16m-k8/edit?usp=sharing). Direct students to develop their program on Lesson 13 to submit their project. While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use."
       },
       "seeding_key": {
         "activity_section.key": "5b3bcb30-a210-467b-b990-b4e196294820",

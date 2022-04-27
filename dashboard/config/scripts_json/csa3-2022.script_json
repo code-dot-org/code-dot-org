@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-18 22:51:46 UTC",
+    "serialized_at": "2022-04-26 15:40:19 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5128,6 +5128,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa3-2022"
+        ],
         "progression": "Unit 3 Survey"
       },
       "bonus": false,
