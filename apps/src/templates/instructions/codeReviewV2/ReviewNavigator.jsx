@@ -102,8 +102,8 @@ class ReviewNavigator extends Component {
     return viewPeerList ? (
       <div style={styles.container}>
         <DropdownButton
-          text={javalabMsg.reviewClassmateProject()}
-          color={Button.ButtonColor.white}
+          text={javalabMsg.youHaveProjectsToReview()}
+          color={Button.ButtonColor.gray}
           onClick={this.onDropdownClick}
           className="peer-dropdown-button"
         >
@@ -113,7 +113,7 @@ class ReviewNavigator extends Component {
     ) : (
       <Button
         text={javalabMsg.returnToMyProject()}
-        color={Button.ButtonColor.white}
+        color={Button.ButtonColor.gray}
         icon={'caret-left'}
         size={Button.ButtonSize.default}
         iconStyle={styles.backToProjectIcon}
