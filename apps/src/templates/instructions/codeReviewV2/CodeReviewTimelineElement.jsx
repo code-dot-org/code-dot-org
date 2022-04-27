@@ -153,7 +153,8 @@ const styles = {
   codeReviewTimeline: {
     display: 'flex',
     flexDirection: 'column',
-    marginLeft: '11px'
+    marginLeft: '11px',
+    width: '100%'
   },
   dot: {
     width: dotHeight,
