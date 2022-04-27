@@ -13,13 +13,6 @@
       %h1
         = I18n.t(:homepage_header_donors)
 
-      #donorlinks.desktop-feature
-        %a{href: "/about/donors"}
-          = I18n.t(:homepage_donors_seall)
-        &nbsp; &nbsp; &nbsp;
-        %a{href: "/donate"}
-          = I18n.t(:homepage_donors_donate)
-
     .donor-slider
       - diamond_supporters.each_with_index do |supporter|
         %a{:href=>supporter[:url_s], :target=> "_blank"}
@@ -33,3 +26,7 @@
             = "#{supporter[:name_s]}"
           - else
             = "#{supporter[:name_s]}, "
+    
+    .donor-button
+      %button{onclick: "window.location.href = '/donate'"}
+        = I18n.t(:homepage_donors_donate)
