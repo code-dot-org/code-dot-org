@@ -1,8 +1,10 @@
-import {ScrollOptions} from '@blockly/plugin-scroll-options';
+import {
+  ScrollBlockDragger,
+  ScrollOptions
+} from '@blockly/plugin-scroll-options';
 import {BlocklyVersion} from '@cdo/apps/constants';
 import styleConstants from '@cdo/apps/styleConstants';
 import * as utils from '@cdo/apps/utils';
-import CdoBlockDragger from './addons/cdoBlockDragger';
 import CdoBlockSvg from './addons/cdoBlockSvg';
 import initializeCdoConstants from './addons/cdoConstants';
 import CdoFieldButton from './addons/cdoFieldButton';
@@ -90,6 +92,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('Blocks');
   blocklyWrapper.wrapReadOnlyProperty('BlockSvg');
   blocklyWrapper.wrapReadOnlyProperty('common_locale');
+  blocklyWrapper.wrapReadOnlyProperty('ComponentManager');
   blocklyWrapper.wrapReadOnlyProperty('Connection');
   blocklyWrapper.wrapReadOnlyProperty('ContextMenu');
   blocklyWrapper.wrapReadOnlyProperty('contractEditor');
@@ -143,6 +146,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('RTL');
   blocklyWrapper.wrapReadOnlyProperty('Scrollbar');
   blocklyWrapper.wrapReadOnlyProperty('selected');
+  blocklyWrapper.wrapReadOnlyProperty('SPRITE');
   blocklyWrapper.wrapReadOnlyProperty('svgResize');
   blocklyWrapper.wrapReadOnlyProperty('tutorialExplorer_locale');
   blocklyWrapper.wrapReadOnlyProperty('useContractEditor');
@@ -315,7 +319,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
     const options = {
       ...opt_options,
       theme: CdoTheme,
-      trashcan: true,
+      trashcan: false, // Don't use default trashcan.
       move: {
         wheel: true,
         drag: true,
@@ -325,7 +329,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
         }
       },
       plugins: {
-        blockDragger: CdoBlockDragger,
+        blockDragger: ScrollBlockDragger,
         metricsManager: CdoMetricsManager
       },
       renderer: 'cdo_renderer'
@@ -356,6 +360,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
     const scrollOptionsPlugin = new ScrollOptions(workspace);
     scrollOptionsPlugin.init();
+
+    const trashcan = new CdoTrashcan(workspace);
+    trashcan.init();
   };
 
   // Used by StudioApp to tell Blockly to resize for Mobile Safari.
