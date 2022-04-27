@@ -1,7 +1,7 @@
 # Helper steps for creating and managing sections
 
-And /^I create a new student section( and go home)?$/ do |home|
-  section = JSON.parse(browser_request(url: '/dashboardapi/sections', method: 'POST', body: {login_type: 'email', participant_type: 'student'}))
+And (/^I create a new (student|teacher|facilitator) section( and go home)?$/) do |participant_type, home|
+  section = JSON.parse(browser_request(url: '/dashboardapi/sections', method: 'POST', body: {login_type: 'email', participant_type: participant_type}))
   section_code = section['code']
   @section_url = "http://studio.code.org/join/#{section_code}"
   navigate_to replace_hostname('http://studio.code.org') if home
@@ -32,7 +32,7 @@ And /^I create a new student section named "([^"]*)" assigned to "([^"]*)" versi
   individual_steps %Q{
     And I press the save button to create a new section
     And I wait for the dialog to close
-    Then I should see the section table
+    Then I should see the student section table
   }
 end
 
@@ -69,7 +69,7 @@ And /^I create a new student section with course "([^"]*)", version "([^"]*)"(?:
   individual_steps %Q{
     And I press the save button to create a new section
     And I wait for the dialog to close using jQuery
-    Then I should see the section table
+    Then I should see the student section table
   }
 end
 
@@ -84,8 +84,8 @@ And(/^I create a(n authorized)? teacher-associated( under-13)? student named "([
   create_user(name, url: "/join/#{section_code}", code: 200, age: under_13 ? '10' : '16')
 end
 
-And(/^I save the section url$/) do
-  wait_short_until {steps 'Then I should see the section table'}
+And(/^I save the student section url$/) do
+  wait_short_until {steps 'Then I should see the student section table'}
   section_code = @browser.execute_script <<-SCRIPT
     return document
       .querySelector('.uitest-owned-sections tbody tr:last-of-type td:nth-child(6)')
@@ -144,18 +144,46 @@ When /^I select (picture|word|email) login$/ do |login_type|
   steps %Q{When I press the first ".uitest-#{login_type}Login" element}
 end
 
+When /^I select (student|teacher|facilitator) participant type$/ do |participant_type|
+  steps %Q{When I press the first ".uitest-#{participant_type}-type" element}
+end
+
 When /^I press the save button to create a new section$/ do
   steps 'When I press the first ".uitest-saveButton" element'
 end
 
-Then /^I should see the section table$/ do
+Then /^I should see the student section table$/ do
   steps 'Then I see ".uitest-owned-sections"'
 end
 
-Then /^the section table should have (\d+) rows?$/ do |expected_row_count|
-  wait_short_until {steps 'Then I should see the section table'}
+Then /^I should see the professional learning section table$/ do
+  steps 'Then I see ".uitest-owned-pl-sections"'
+end
+
+Then /^I should see the professional learning joined sections table$/ do
+  steps 'Then I see ".ui-test-joined-pl-sections-table"'
+end
+
+Then /^the student section table should have (\d+) rows?$/ do |expected_row_count|
+  wait_short_until {steps 'Then I should see the student section table'}
   row_count = @browser.execute_script(<<-SCRIPT)
     return document.querySelectorAll('.uitest-owned-sections tbody tr').length;
+  SCRIPT
+  expect(row_count.to_i).to eq(expected_row_count.to_i)
+end
+
+Then /^the professional learning section table should have (\d+) rows?$/ do |expected_row_count|
+  wait_short_until {steps 'Then I should see the professional learning section table'}
+  row_count = @browser.execute_script(<<-SCRIPT)
+    return document.querySelectorAll('.uitest-owned-pl-sections tbody tr').length;
+  SCRIPT
+  expect(row_count.to_i).to eq(expected_row_count.to_i)
+end
+
+Then /^the professional learning joined sections table should have (\d+) rows?$/ do |expected_row_count|
+  wait_short_until {steps 'Then I should see the professional learning joined sections table'}
+  row_count = @browser.execute_script(<<-SCRIPT)
+    return document.querySelectorAll('table.ui-test-joined-pl-sections-table tbody tr.test-row').length;
   SCRIPT
   expect(row_count.to_i).to eq(expected_row_count.to_i)
 end
@@ -171,7 +199,7 @@ Then /^the section table row at index (\d+) has (primary|secondary) assignment p
 end
 
 Then /^I save the section id from row (\d+) of the section table$/ do |row_index|
-  wait_short_until {steps 'Then I should see the section table'}
+  wait_short_until {steps 'Then I should see the student section table'}
   @section_id = get_section_id_from_table(row_index)
 end
 
@@ -248,11 +276,17 @@ Then /^I add the first student to the first code review group$/ do
   STEPS
 end
 
-Then /^I create a new code review group for the section I saved$/ do
+Then /^I open the code review groups management dialog$/ do
   steps <<-STEPS
     And I navigate to teacher dashboard for the section I saved
     And I click selector "#uitest-teacher-dashboard-nav a:contains(Manage Students)" once I see it
     And I click selector "#uitest-code-review-groups-button" once I see it
+  STEPS
+end
+
+Then /^I create a new code review group for the section I saved$/ do
+  steps <<-STEPS
+    And I open the code review groups management dialog
     And I wait for 2 seconds
     And I click selector "#uitest-create-code-review-group" once I see it
   STEPS

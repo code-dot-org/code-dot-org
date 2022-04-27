@@ -21,9 +21,18 @@ class CodeReviewCommentTest < ActiveSupport::TestCase
     assert_equal false, code_review_comment.is_from_teacher?
   end
 
-  test 'comment from teacher is marked as from teacher' do
+  test 'comment from teacher account that is not instructor is not marked as from teacher' do
     teacher = create :teacher
     code_review_comment = create :code_review_comment, commenter: teacher
+    assert_equal false, code_review_comment.is_from_teacher?
+  end
+
+  test 'comment from teacher account that is instructor is marked as from teacher' do
+    project_owner = create :student
+    teacher = create :teacher
+    section = create :section, teacher: teacher
+    create :follower, section: section, student_user: project_owner
+    code_review_comment = create :code_review_comment, commenter: teacher, project_owner: project_owner
     assert_equal true, code_review_comment.is_from_teacher?
   end
 
