@@ -24,6 +24,7 @@ class CoursesController < ApplicationController
         @is_signed_out = current_user.nil?
         @force_race_interstitial = params[:forceRaceInterstitial]
         @modern_elementary_courses_available = Script.modern_elementary_courses_available?(request.locale)
+        @course_offerings_info = CourseOffering.assignable_course_offerings_info(current_user, request.locale)
       end
       format.json do
         course_infos = UnitGroup.valid_course_infos(user: current_user)

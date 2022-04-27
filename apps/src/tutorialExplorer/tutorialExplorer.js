@@ -12,21 +12,18 @@ import TutorialSet from './tutorialSet';
 import ToggleAllTutorialsButton from './toggleAllTutorialsButton';
 import Search from './search';
 import {
-  isTutorialSortByFieldNamePopularity,
   TutorialsSortByOptions,
   TutorialsSortByFieldNames,
   TutorialsOrgName,
   mobileCheck,
-  DoNotShow,
-  orgNameCodeOrg,
-  orgNameMinecraft
+  DoNotShow
 } from './util';
 import {
   getResponsiveContainerWidth,
   isResponsiveCategoryInactive,
   getResponsiveValue
 } from './responsive';
-import i18n from '@cdo/tutorialExplorer/locale';
+import i18n from '@cdo/locale';
 import _ from 'lodash';
 import queryString from 'query-string';
 import {StickyContainer} from 'react-sticky';
@@ -402,111 +399,7 @@ export default class TutorialExplorer extends React.Component {
    *   the currently active filters.  Each array is named for its filter group.
    */
   static filterTutorials(tutorials, filterProps) {
-    const {
-      locale,
-      specificLocale,
-      orgName,
-      filters,
-      hideFilters,
-      sortByFieldName,
-      searchTerm
-    } = filterProps;
-
-    const cleanSearchTerm = searchTerm?.toLowerCase()?.trim();
-
-    const filteredTutorials = tutorials
-      .filter(tutorial => {
-        // Check that the tutorial isn't marked as DoNotShow.  If it does,
-        // it's hidden.
-        if (tutorial.tags.split(',').indexOf(DoNotShow) !== -1) {
-          return false;
-        }
-
-        // First check that the tutorial language doesn't exclude it immediately.
-        // If the tags contain some languages, and we don't have a match, then
-        // hide the tutorial.
-        if (locale && tutorial.languages_supported) {
-          const languageTags = tutorial.languages_supported.split(',');
-          if (
-            languageTags.length > 0 &&
-            languageTags.indexOf(locale) === -1 &&
-            languageTags.indexOf(locale.substring(0, 2)) === -1
-          ) {
-            return false;
-          }
-        } else if (specificLocale) {
-          // If the tutorial doesn't have language tags, but we're only looking
-          // for specific matches to our current locale, then don't show this
-          // tutorial.  i.e. don't let non-locale-specific tutorials through.
-          return false;
-        }
-
-        // If we are showing an explicit orgname, then filter if it doesn't
-        // match.  Make an exception for Minecraft so that it shows when
-        // Code.org is selected.
-        if (
-          orgName &&
-          orgName !== TutorialsOrgName.all &&
-          tutorial.orgname !== orgName &&
-          !(orgName === orgNameCodeOrg && tutorial.orgname === orgNameMinecraft)
-        ) {
-          return false;
-        }
-
-        if (
-          searchTerm &&
-          !(
-            tutorial.name?.toLowerCase().includes(cleanSearchTerm) ||
-            tutorial.longdescription?.toLowerCase().includes(cleanSearchTerm)
-          )
-        ) {
-          return false;
-        }
-
-        // If we are explicitly hiding a matching filter, then don't show the
-        // tutorial.
-        for (const filterGroupName in hideFilters) {
-          const tutorialTags = tutorial['tags_' + filterGroupName];
-          const filterGroup = hideFilters[filterGroupName];
-
-          if (
-            filterGroup.length !== 0 &&
-            tutorialTags &&
-            tutorialTags.length > 0 &&
-            TutorialExplorer.findMatchingTag(filterGroup, tutorialTags)
-          ) {
-            return false;
-          }
-        }
-
-        // If we miss any active filter group, then we don't show the tutorial.
-        let filterGroupsSatisfied = true;
-
-        for (const filterGroupName in filters) {
-          const tutorialTags = tutorial['tags_' + filterGroupName];
-          const filterGroup = filters[filterGroupName];
-
-          if (
-            filterGroup.length !== 0 &&
-            tutorialTags &&
-            tutorialTags.length > 0 &&
-            !TutorialExplorer.findMatchingTag(filterGroup, tutorialTags)
-          ) {
-            filterGroupsSatisfied = false;
-          }
-        }
-
-        return filterGroupsSatisfied;
-      })
-      .sort((tutorial1, tutorial2) => {
-        if (isTutorialSortByFieldNamePopularity(sortByFieldName)) {
-          return tutorial1[sortByFieldName] - tutorial2[sortByFieldName];
-        } else {
-          return tutorial2[sortByFieldName] - tutorial1[sortByFieldName];
-        }
-      });
-
-    return filteredTutorials;
+    return tutorials;
   }
 
   /* Given a filter group, and the tutorial's relevant tags for that filter group,
@@ -520,7 +413,7 @@ export default class TutorialExplorer extends React.Component {
    */
   static findMatchingTag(filterGroup, tutorialTags) {
     return filterGroup.some(
-      filterName => tutorialTags.split(',').indexOf(filterName) !== -1
+      filterName => tutorialTags?.split(',').indexOf(filterName) !== -1
     );
   }
 
@@ -535,7 +428,7 @@ export default class TutorialExplorer extends React.Component {
     // Filter out tutorials with DoNotShow as either tag or organization name.
     let availableTutorials = tutorials.filter(t => {
       return (
-        t.tags.split(',').indexOf(DoNotShow) === -1 && t.orgname !== DoNotShow
+        t.tags?.split(',').indexOf(DoNotShow) === -1 && t.orgname !== DoNotShow
       );
     });
 
@@ -543,9 +436,9 @@ export default class TutorialExplorer extends React.Component {
     // are on robotics variant of the page or not.
     availableTutorials = availableTutorials.filter(t => {
       if (robotics) {
-        return t.tags_activity_type.split(',').indexOf('robotics') !== -1;
+        return t.tags_activity_type?.split(',').indexOf('robotics') !== -1;
       } else {
-        return t.tags_activity_type.split(',').indexOf('robotics') === -1;
+        return t.tags_activity_type?.split(',').indexOf('robotics') === -1;
       }
     });
 
@@ -561,12 +454,6 @@ export default class TutorialExplorer extends React.Component {
   }
 
   render() {
-    const bottomLinksContainerStyle = {
-      ...styles.bottomLinksContainer,
-      textAlign: getResponsiveValue({xs: 'left', md: 'right'}),
-      visibility: this.shouldShowTutorials() ? 'visible' : 'hidden'
-    };
-
     const grade = this.state.filters.grade[0];
 
     return (
@@ -662,25 +549,6 @@ export default class TutorialExplorer extends React.Component {
                   />
                 )}
               </div>
-
-              <div style={bottomLinksContainerStyle}>
-                <div style={styles.bottomLinksLinkFirst}>
-                  <a
-                    style={styles.bottomLinksLink}
-                    href="https://hourofcode.com/activity-guidelines"
-                  >
-                    {i18n.bottomGuidelinesLink()}
-                  </a>
-                </div>
-                <div>
-                  <a
-                    style={styles.bottomLinksLink}
-                    href="https://support.code.org/hc/en-us/articles/115001306531-How-can-students-with-special-needs-or-disabilities-participate-"
-                  >
-                    {i18n.bottomSpecialNeedsLink()}
-                  </a>
-                </div>
-              </div>
             </div>
           </StickyContainer>
         )}
@@ -688,21 +556,6 @@ export default class TutorialExplorer extends React.Component {
     );
   }
 }
-
-const styles = {
-  bottomLinksContainer: {
-    padding: '10px 7px 40px 7px',
-    fontSize: 13,
-    lineHeight: '17px',
-    clear: 'both'
-  },
-  bottomLinksLink: {
-    fontFamily: '"Gotham 5r", sans-serif'
-  },
-  bottomLinksLinkFirst: {
-    paddingBottom: 10
-  }
-};
 
 function getFilters({robotics, mobile}) {
   const filters = [

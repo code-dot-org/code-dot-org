@@ -6,7 +6,7 @@ import React from 'react';
 import shapes from './shapes';
 import {getTagString, getTutorialDetailString, DoNotShow} from './util';
 import Image from './image';
-import i18n from '@cdo/tutorialExplorer/locale';
+import i18n from '@cdo/locale';
 /* global ga */
 
 export default class TutorialDetail extends React.Component {
@@ -98,8 +98,8 @@ export default class TutorialDetail extends React.Component {
     ];
 
     const imageSrc = this.props.item.image
-      .replace('/images/', '/images/fill-480x360/')
-      .replace('.png', '.jpg');
+      ?.replace('/images/', '/images/fill-480x360/')
+      ?.replace('.png', '.jpg');
 
     const imageComponent = (
       <div
@@ -227,7 +227,7 @@ export default class TutorialDetail extends React.Component {
                     )}
                     {!this.props.disabledTutorial &&
                       this.props.item.tags_activity_type
-                        .split(',')
+                        ?.split(',')
                         .indexOf('online-tutorial') !== -1 && (
                         <tr key={1}>
                           <td style={styles.tutorialDetailsTableTitle}>
