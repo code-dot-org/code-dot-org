@@ -316,9 +316,10 @@ class JavalabEditor extends React.Component {
       const timer = setInterval(() => {
         this.editors[key].focus();
         if (this.editors[key].hasFocus) {
+          // stop trying to focus once we have focused.
           clearInterval(timer);
         }
-      }, 500);
+      }, 100);
     }
   }
 
