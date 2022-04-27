@@ -25,4 +25,15 @@ describe('CloneLessonDialogButton', () => {
     expect(dialog.prop('lessonId')).to.be.undefined;
     expect(dialog.prop('lessonName')).to.equal('Lesson One');
   });
+
+  it('renders an open CloneLessonDialog after button is clicked', () => {
+    const wrapper = shallow(<CloneLessonDialogButton {...defaultProps} />);
+
+    const button = wrapper.find('Button');
+    button.simulate('click');
+
+    const dialog = wrapper.find('CloneLessonDialog');
+    expect(dialog.prop('lessonId')).to.equal(123);
+    expect(dialog.prop('lessonName')).to.equal('Lesson One');
+  });
 });
