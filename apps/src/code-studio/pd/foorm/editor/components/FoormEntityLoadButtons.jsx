@@ -36,7 +36,8 @@ class FoormEntityLoadButtons extends React.Component {
   };
 
   state = {
-    latestVersionsOnly: true
+    latestVersionsOnly: true,
+    selectedOption: null
   };
 
   shouldShowLatestVersionsOnly() {
@@ -93,7 +94,13 @@ class FoormEntityLoadButtons extends React.Component {
             options={this.getDropdownOptions()}
             className="load-buttons-search"
             cache={false}
-            onChange={entity => this.props.onSelect(entity.metadata)}
+            value={this.state.selectedOption}
+            onChange={option => {
+              this.setState({selectedOption: option});
+              if (option) {
+                this.props.onSelect(option.metadata);
+              }
+            }}
             placeholder={`Search for ${this.props.foormEntityName}`}
           />
           <Button
