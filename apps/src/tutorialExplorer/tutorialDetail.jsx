@@ -4,10 +4,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import shapes from './shapes';
-import {getTagString, getTutorialDetailString, DoNotShow} from './util';
-import Image from './image';
-import i18n from '@cdo/locale';
-/* global ga */
+import AssignmentVersionSelector from '../templates/teacherDashboard/AssignmentVersionSelector';
 
 export default class TutorialDetail extends React.Component {
   static propTypes = {
@@ -19,6 +16,17 @@ export default class TutorialDetail extends React.Component {
     disabledTutorial: PropTypes.bool.isRequired,
     grade: PropTypes.string.isRequired
   };
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      selectedCourseVersion:
+        props.item && props.item.course_versions
+          ? Object.values(props.item?.course_versions)[0]
+          : null
+    };
+  }
 
   componentDidMount() {
     document.addEventListener('keydown', this.onKeyDown);
@@ -42,10 +50,9 @@ export default class TutorialDetail extends React.Component {
     }
   };
 
-  startTutorialClicked = () => {
-    const shortCode = this.props.item.short_code;
-    ga('send', 'event', 'learn', 'start', shortCode);
-    ga('send', 'event', 'learn', `start-${this.props.grade}`, shortCode);
+  setSelectedCourseVersion = versionId => {
+    const version = this.props.item.course_versions[versionId];
+    this.setState({selectedCourseVersion: version});
   };
 
   render() {
@@ -57,61 +64,6 @@ export default class TutorialDetail extends React.Component {
 
     // Disable body scrolling.
     $('body').css('overflow', 'hidden');
-
-    const tableEntries = [
-      // Reserve key 0 for the optional teachers notes.
-      // Reserve key 1 for the optional short link.
-      {
-        key: 2,
-        title: i18n.filterStudentExperience(),
-        body: getTagString(
-          'student_experience',
-          this.props.item.tags_student_experience
-        )
-      },
-      {
-        key: 3,
-        title: i18n.filterPlatform(),
-        body: this.props.item.string_platforms
-      },
-      {
-        key: 4,
-        title: i18n.filterTopics(),
-        body: getTagString('subject', this.props.item.tags_subject)
-      },
-      {
-        key: 5,
-        title: i18n.filterActivityType(),
-        body: getTagString('activity_type', this.props.item.tags_activity_type)
-      },
-      {
-        key: 6,
-        title: i18n.filterLength(),
-        body: getTagString('length', this.props.item.tags_length)
-      },
-      {
-        key: 7,
-        title: i18n.tutorialDetailInternationalLanguages(),
-        body: this.props.item.language
-      }
-      // Reserve key 8 for the optional standards.
-    ];
-
-    const imageSrc = this.props.item.image
-      ?.replace('/images/', '/images/fill-480x360/')
-      ?.replace('.png', '.jpg');
-
-    const imageComponent = (
-      <div
-        style={styles.tutorialDetailImageOuterContainer}
-        className="col-xs-12 col-sm-6"
-      >
-        <div style={styles.tutorialDetailImageContainer}>
-          <div style={styles.tutorialDetailImageBackground} />
-          <Image style={styles.tutorialDetailImage} src={imageSrc} />
-        </div>
-      </div>
-    );
 
     return (
       <div id="tutorialPopupFullWidth" style={styles.popupFullWidth}>
@@ -148,129 +100,12 @@ export default class TutorialDetail extends React.Component {
                 className="modal-body"
                 style={styles.tutorialDetailModalBody}
               >
-                {!this.props.disabledTutorial && (
-                  <a
-                    href={this.props.item.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={this.startTutorialClicked}
-                  >
-                    {imageComponent}
-                  </a>
-                )}
-                {this.props.disabledTutorial && imageComponent}
-
-                <div
-                  style={styles.tutorialDetailInfoContainer}
-                  className="col-xs-12 col-sm-6"
-                >
-                  <div style={styles.tutorialDetailName}>
-                    {this.props.item.name}
-                  </div>
-                  {this.props.item.orgname !== DoNotShow && (
-                    <div style={styles.tutorialDetailPublisher}>
-                      {this.props.item.orgname}
-                    </div>
-                  )}
-                  <div style={styles.tutorialDetailSub}>
-                    {getTutorialDetailString(this.props.item)}
-                  </div>
-                  <div style={styles.tutorialDetailDescription}>
-                    {this.props.item.longdescription}
-                  </div>
-                  {this.props.disabledTutorial && (
-                    <div style={styles.tutorialDetailDisabled}>
-                      <i
-                        className="fa fa-warning warning-sign"
-                        style={styles.tutorialDetailDisabledIcon}
-                      />
-                      &nbsp;
-                      {i18n.tutorialDetailDisabled()}
-                    </div>
-                  )}
-                  {!this.props.disabledTutorial && (
-                    <a
-                      href={this.props.item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={this.startTutorialClicked}
-                    >
-                      <button type="button" style={{marginTop: 20}}>
-                        {i18n.startButton()}
-                      </button>
-                    </a>
-                  )}
-                </div>
-                <div style={{clear: 'both'}} />
-                <table style={styles.tutorialDetailsTable}>
-                  <tbody>
-                    {this.props.item.teachers_notes && (
-                      <tr key={0}>
-                        <td style={styles.tutorialDetailsTableTitle}>
-                          {i18n.tutorialDetailsMoreResources()}
-                        </td>
-                        <td style={styles.tutorialDetailsTableBody}>
-                          <a
-                            href={this.props.item.teachers_notes}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <i
-                              className="fa fa-external-link"
-                              aria-hidden={true}
-                            />
-                            &nbsp;
-                            {i18n.tutorialDetailsTeacherNotes()}
-                          </a>
-                        </td>
-                      </tr>
-                    )}
-                    {!this.props.disabledTutorial &&
-                      this.props.item.tags_activity_type
-                        ?.split(',')
-                        .indexOf('online-tutorial') !== -1 && (
-                        <tr key={1}>
-                          <td style={styles.tutorialDetailsTableTitle}>
-                            {i18n.tutorialDetailsShortLink()}
-                          </td>
-                          <td style={styles.tutorialDetailsTableBody}>
-                            <a
-                              href={`https://hourofcode.com/${
-                                this.props.item.short_code
-                              }`}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              {`https://hourofcode.com/${
-                                this.props.item.short_code
-                              }`}
-                            </a>
-                          </td>
-                        </tr>
-                      )}
-                    {tableEntries.map(item => (
-                      <tr key={item.key}>
-                        <td style={styles.tutorialDetailsTableTitle}>
-                          {item.title}
-                        </td>
-                        <td style={styles.tutorialDetailsTableBody}>
-                          {item.body}
-                        </td>
-                      </tr>
-                    ))}
-                    {this.props.localeEnglish &&
-                      this.props.item.string_standards && (
-                        <tr key={8}>
-                          <td style={styles.tutorialDetailsTableTitle}>
-                            {i18n.tutorialDetailStandards()}
-                          </td>
-                          <td style={styles.tutorialDetailsTableBodyNoWrap}>
-                            {this.props.item.string_standards}
-                          </td>
-                        </tr>
-                      )}
-                  </tbody>
-                </table>
+                <h1>{this.state.selectedCourseVersion.name}</h1>
+                <AssignmentVersionSelector
+                  onChangeVersion={this.setSelectedCourseVersion}
+                  courseVersions={this.props.item.courseVersions}
+                  selectedCourseVersionId={this.state.selectedCourseVersion.id}
+                />
               </div>
             </div>
           </div>
