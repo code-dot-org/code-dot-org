@@ -6,6 +6,7 @@ import {getDatasetInfo} from './dataUtils';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import DataTable from './DataTable';
 import msg from '@cdo/locale';
+import {Link} from '@dsco_/link';
 
 class PreviewModal extends React.Component {
   static propTypes = {
@@ -36,13 +37,9 @@ class PreviewModal extends React.Component {
         <p>
           {datasetInfo.description}{' '}
           {datasetInfo.docUrl && (
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href={datasetInfo.docUrl}
-            >
+            <Link href={datasetInfo.docUrl} openInNewTab external>
               {msg.moreInfo()}
-            </a>
+            </Link>
           )}
         </p>
         <div style={{overflow: 'scroll', maxHeight: '70%'}}>
