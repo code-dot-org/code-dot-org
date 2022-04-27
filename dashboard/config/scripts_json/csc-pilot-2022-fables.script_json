@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "csc-pilot-2022-fables",
-    "serialized_at": "2022-04-22 20:30:51 UTC",
+    "serialized_at": "2022-04-26 19:25:37 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -772,7 +772,7 @@
       "key": "abe13260-9eff-485a-ad50-1322bc66d6d0",
       "position": 6,
       "properties": {
-        "description": "On your planning sheet, fill in by sketching or writing\n\n- Who are the characters in your story? Where are they?\n- What would each character say at the beginning of the story? \n- What would each character say when they interact with each other?\n",
+        "description": "On your planning sheet, fill in by sketching or writing\n\n- Who are the characters in your story? Where are they?\n- What would each character say or think at the beginning of the story? \n- What would each character say when they interact with each other?\n",
         "remarks": true
       },
       "seeding_key": {
@@ -997,7 +997,7 @@
       "key": "d246aee0-fcb1-447d-b6c4-5d32ab8b49ac",
       "position": 9,
       "properties": {
-        "description": "**Do This**: Release students to begin working on Level 2. Circulate the room to support students and remind them to use their planning guide from yesterday. Once students have completed Level 2, they may move on to the other levels.  \n\n- In **Level 2**, students are thinking about what comes first in their fable. On the planning sheet, they can use the “Level 2” box as a guide. In this level, they will set the scene by choosing the background and two sprites.\n\n- In **Level 3**, students use the “Level 3” box from the planning sheet to code the next part of your fable. They will add some dialogue by making each sprite say something that follows their character traits. \n\n- In **Level 4**, students will make a prediction by reading the code and seeing what will happen when two characters touch. Consider regrouping the class at this spot to discuss together to make sure everyone understands how these new blocks work.\n\n- In **Level 5**, students apply what they just learned and use the “when sprite touches” block to code interactions between the two characters. On the planning sheet, they can use the “Level 5” box as a guide\n\n- In **Level 6**, students are able to add more to their project in anyway that you choose. \n"
+        "description": "**Do This**: Release students to begin working on Level 2. Circulate the room to support students and remind them to use their planning guide from yesterday. Once students have completed Level 2, they may move on to the other levels.  \n\n- In **Level 2**, students are thinking about what comes first in their fable. On the planning sheet, they can use the “Level 2” box as a guide. In this level, they will set the scene by choosing the background and two sprites.\n\n- In **Level 3**, students use the “Level 3” box from the planning sheet to code the next part of your fable. They will add some dialogue by making each sprite say or think something that follows their character traits. \n\n- In **Level 4**, students will make a prediction by reading the code and seeing what will happen when two characters touch. Consider regrouping the class at this spot to discuss together to make sure everyone understands how these new blocks work.\n\n- In **Level 5**, students apply what they just learned and use the “when sprite touches” block to code interactions between the two characters. On the planning sheet, they can use the “Level 5” box as a guide\n\n- In **Level 6**, students are able to add more to their project in anyway that you choose. \n"
       },
       "seeding_key": {
         "activity_section.key": "d246aee0-fcb1-447d-b6c4-5d32ab8b49ac",
