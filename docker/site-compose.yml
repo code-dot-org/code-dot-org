@@ -16,7 +16,7 @@
 version: "3"
 services:
   site:
-    image: codedotorg/code-dot-org:1.3
+    image: brendandev
     user: ${FIXUID:-1000}:${FIXGID:-1000}
     volumes:
       - ../:/home/circleci/code-dot-org:delegated
@@ -27,10 +27,15 @@ services:
       - mysqldata:/var/lib/mysql
       - yarncache:/home/circleci/.cache
       - gcloud_config:/home/circleci/.config/gcloud
+      - $HOME/.git-credentials:/home/circleci/.git-credentials-original:delegated
+      - $HOME/gitcred.sh:/home/circleci/gitcred.sh:delegated
+      - ../../droplet/:/home/circleci/droplet:delegated
+
     ports:
       - "3000:3000"
+      - "3001:3001"
     tty: true
-    command: bash -c "bin/dashboard-server"
+    command: bash -c "bin/dashboard-server" 
 
 volumes:
   mysqldata:
