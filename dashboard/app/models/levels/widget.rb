@@ -36,10 +36,10 @@ class Widget < Level
 
   def widget_app_options
     # Base options are just the level properties
-    app_options = properties.camelize_keys.dup
+    app_options = properties.camelize_keys
 
     # Some options should be localized (right now, just long instructions)
-    if should_localize? && try(:long_instructions)
+    if should_localize?
       localized_long_instructions =
         I18n.t(
           name,
