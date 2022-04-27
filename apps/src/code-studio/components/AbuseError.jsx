@@ -15,8 +15,7 @@ export default class AbuseError extends React.Component {
       contact_us: PropTypes.string.isRequired
     }).isRequired,
     className: PropTypes.string,
-    style: PropTypes.object,
-    textStyle: PropTypes.object
+    style: PropTypes.object
   };
 
   render() {
