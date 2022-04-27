@@ -1687,6 +1687,7 @@ var projects = (module.exports = {
       // Load the project ID, if one exists
       return this.fetchChannel(pathInfo.channelId)
         .catch(err => {
+          console.log(err.message);
           if (err.message.includes('error: Not Found')) {
             // Project not found. Redirect to the most recent project of this
             // type, or a new project of this type if none exists.
