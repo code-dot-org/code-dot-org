@@ -684,14 +684,6 @@ class UnitEditor extends React.Component {
           />
         )}
 
-        <CollapsibleEditorSection title="Announcements">
-          <AnnouncementsEditor
-            announcements={this.state.announcements}
-            inputStyle={styles.input}
-            updateAnnouncements={this.handleUpdateAnnouncements}
-          />
-        </CollapsibleEditorSection>
-
         <CollapsibleEditorSection title="Publishing Settings">
           {this.props.isLevelbuilder && (
             <div>
@@ -805,6 +797,14 @@ class UnitEditor extends React.Component {
               )}
             </div>
           )}
+        </CollapsibleEditorSection>
+
+        <CollapsibleEditorSection title="Announcements">
+          <AnnouncementsEditor
+            announcements={this.state.announcements}
+            inputStyle={styles.input}
+            updateAnnouncements={this.handleUpdateAnnouncements}
+          />
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Lesson Settings">
