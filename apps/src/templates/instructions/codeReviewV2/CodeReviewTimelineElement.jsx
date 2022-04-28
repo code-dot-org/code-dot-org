@@ -38,7 +38,7 @@ const CodeReviewTimelineElement = ({
         <div style={styles.eye} />
         <div style={styles.timeline}>
           <TimelineDot color={color.purple} />
-          {!isLast && <TimelineLine height={20} marginRight={-1.5} />}
+          {!isLast && <TimelineLine height={40} marginRight={-1.5} />}
         </div>
         <div style={{...styles.child, ...styles.createdText}}>
           {javalabMsg.created()}
@@ -56,7 +56,6 @@ const CodeReviewTimelineElement = ({
           {displayVersion && <EyeballLink versionHref={versionLink} />}
         </div>
         <div style={styles.timeline}>
-          {isLast && <TimelineLine height={10} marginRight={-1.5} />}
           <TimelineDot
             color={color.dark_charcoal}
             hasCheck={true}
@@ -75,9 +74,8 @@ const CodeReviewTimelineElement = ({
           {displayVersion && <EyeballLink versionHref={versionLink} />}
         </div>
         <div style={styles.codeReviewTimeline}>
-          <TimelineLine height={10} marginLeft={15} />
           <div>{children}</div>
-          {!isLast && <TimelineLine height={30} marginLeft={15} />}
+          {!isLast && <TimelineLine height={40} marginLeft={15} />}
         </div>
       </div>
     );
@@ -145,7 +143,6 @@ const styles = {
     display: 'flex'
   },
   eye: {
-    paddingTop: '10px',
     width: '21px'
   },
   eyeIcon: {
@@ -167,9 +164,7 @@ const styles = {
     width: '20px',
     height: '20px',
     borderRadius: '50%',
-    margin: '1px 0',
     zIndex: 1,
-    marginTop: '10px',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center'
@@ -183,11 +178,8 @@ const styles = {
     fontStyle: 'italic'
   },
   commitChild: {
-    padding: '10px 0 10px 20px',
+    padding: '0 0 25px 20px',
     marginLeft: '-20px'
-  },
-  child: {
-    paddingTop: '10px'
   }
 };
 
