@@ -87,11 +87,17 @@ class ScriptsController < ApplicationController
   end
 
   def new
-    @unit_families_course_types = Script.family_names.map do |cf|
-      unit = CourseOffering.find_by(key: cf)&.course_versions&.first&.content_root
-      next unless unit
-      [cf, {instruction_type: unit.instruction_type, instructor_audience: unit.instructor_audience, participant_audience: unit.participant_audience}]
-    end.compact.to_h
+    @versioned_unit_families = []
+    @unit_families_course_types = []
+    UnitGroup.family_names.map do |cf|
+      co = CourseOffering.find_by(key: cf)
+      first_cv = co.course_versions.first
+      unit = first_cv.content_root
+      @versioned_unit_families << cf unless first_cv.key == 'unversioned'
+      @unit_families_course_types << [cf, {instruction_type: unit.instruction_type, instructor_audience: unit.instructor_audience, participant_audience: unit.participant_audience}]
+    end
+
+    @unit_families_course_types.compact.to_h
   end
 
   def create
