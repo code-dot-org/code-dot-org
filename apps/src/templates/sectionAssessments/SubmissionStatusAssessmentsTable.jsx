@@ -112,7 +112,7 @@ class SubmissionStatusAssessmentsTable extends Component {
     }
 
     return (
-      <div style={styles.main} id="timestampCell">
+      <div style={styles.main} className="timestampCell">
         <div style={styles.text}>{submissionTimeStampContent}</div>
         {isSubmitted && (
           <div style={styles.icon}>
