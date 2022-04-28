@@ -216,4 +216,79 @@ describe('SubmissionStatusAssessmentsTable', () => {
       testDataTimestamps.newest.toLocaleString()
     );
   });
+
+  it('renders submission timestamps', () => {
+    const wrapper = mount(
+      <SubmissionStatusAssessmentsTable
+        studentOverviewData={studentOverviewData}
+      />
+    );
+
+    // Renders a user-friendly formatted time string
+    expect(
+      wrapper
+        .find('.timestampCell')
+        .first()
+        .text()
+    ).to.equal('10/7/2018, 8:52:05 PM');
+
+    // Also renders a machine/screen-reader-friendly (Date)Time Element
+    expect(
+      wrapper
+        .find('.timestampCell')
+        .first()
+        .find('time')
+    ).to.exist;
+
+    expect(
+      wrapper
+        .find('.timestampCell')
+        .first()
+        .find('time')
+        .prop('dateTime')
+    ).to.equal('2018-10-07T20:52:05.000Z');
+  });
+
+  it('renders localized submission timestamps', () => {
+    const basicNonEnglishWrapper = mount(
+      <SubmissionStatusAssessmentsTable
+        studentOverviewData={studentOverviewData}
+        localeCode={'es-MX'}
+      />
+    );
+    expect(
+      basicNonEnglishWrapper
+        .find('.timestampCell')
+        .first()
+        .text()
+    ).to.equal('7/10/2018 20:52:05');
+
+    const rtlAndNonLatinWrapper = mount(
+      <SubmissionStatusAssessmentsTable
+        studentOverviewData={studentOverviewData}
+        localeCode={'ar-SA'}
+      />
+    );
+    expect(
+      rtlAndNonLatinWrapper
+        .find('.timestampCell')
+        .first()
+        .text()
+    ).to.equal('٢٧‏/١‏/١٤٤٠ هـ في ٨:٥٢:٠٥ م');
+
+    // localeCode will undefined by default here, but it defaults to null in
+    // redux; so, make sure we explicitly test that particular falsy value
+    const nullLocaleWrapper = mount(
+      <SubmissionStatusAssessmentsTable
+        studentOverviewData={studentOverviewData}
+        localeCode={null}
+      />
+    );
+    expect(
+      nullLocaleWrapper
+        .find('.timestampCell')
+        .first()
+        .text()
+    ).to.equal('10/7/2018, 8:52:05 PM');
+  });
 });
