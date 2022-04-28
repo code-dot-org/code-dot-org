@@ -12,8 +12,8 @@ export const codeReviewTimelineElementType = {
 };
 
 // This component represents elements on the code review and commit timeline. There are 3 types of elements:
-// 1. CREATED - this is the node that represents the first element on the timeline, if it is the last element
-//    in the timeline it will not have a line below it. Otherwise this node does not vary from project to project.
+// 1. CREATED - this is the node that represents the first element on the timeline, it has a line extending below
+//    it unless it is also the only element in the timeline. Otherwise this node does not vary from project to project.
 // 2. COMMIT - this represents a commit to the project. It will display an eyeball on the left which links to the
 //    project version if the project version is present and not expired. It also handles a child which represents
 //    the specific content in the commit. If it is the last element in the timeline, it will not have a line extending
@@ -35,7 +35,7 @@ const CodeReviewTimelineElement = ({
   if (type === codeReviewTimelineElementType.CREATED) {
     return (
       <div style={styles.element}>
-        <div style={styles.eye} />
+        <div style={styles.eyeColumn} />
         <div style={styles.timeline}>
           <TimelineDot color={color.purple} />
           {!isLast && <TimelineLine height={40} marginRight={-1.5} />}
@@ -52,15 +52,11 @@ const CodeReviewTimelineElement = ({
 
     return (
       <div style={styles.element}>
-        <div style={styles.eye}>
+        <div style={styles.eyeColumn}>
           {displayVersion && <EyeballLink versionHref={versionLink} />}
         </div>
         <div style={styles.timeline}>
-          <TimelineDot
-            color={color.dark_charcoal}
-            hasCheck={true}
-            style={isLast ? {marginTop: 0} : {}}
-          />
+          <TimelineDot color={color.dark_charcoal} hasCheck={true} />
         </div>
         <div style={{...styles.commitChild, borderLeft}}>{children}</div>
       </div>
@@ -70,7 +66,7 @@ const CodeReviewTimelineElement = ({
   if (type === codeReviewTimelineElementType.CODE_REVIEW) {
     return (
       <div style={styles.element}>
-        <div style={styles.eye}>
+        <div style={styles.eyeColumn}>
           {displayVersion && <EyeballLink versionHref={versionLink} />}
         </div>
         <div style={styles.codeReviewTimeline}>
@@ -107,17 +103,16 @@ EyeballLink.propTypes = {
 };
 
 // Helper to render the dot
-const TimelineDot = ({color, hasCheck, style = {}}) => {
+const TimelineDot = ({color, hasCheck}) => {
   return (
-    <div style={{...styles.dot, background: color, ...style}}>
+    <div style={{...styles.dot, background: color}}>
       {hasCheck && <FontAwesome icon="check" style={styles.check} />}
     </div>
   );
 };
 TimelineDot.propTypes = {
   color: PropTypes.string.isRequired,
-  hasCheck: PropTypes.bool,
-  style: PropTypes.object
+  hasCheck: PropTypes.bool
 };
 
 // Helper to render the lines
@@ -142,7 +137,7 @@ const styles = {
   element: {
     display: 'flex'
   },
-  eye: {
+  eyeColumn: {
     width: '21px'
   },
   eyeIcon: {
