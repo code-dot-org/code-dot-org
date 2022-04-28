@@ -383,18 +383,11 @@ export const reloadAfterEditingSection = () => (dispatch, getState) => {
   });
 };
 
-export const asyncLoadSectionData = (id, withoutStudents) => dispatch => {
+export const asyncLoadSectionData = id => dispatch => {
   dispatch({type: ASYNC_LOAD_BEGIN});
 
-  let sectionsSummaryApi = '/dashboardapi/sections';
-  // When loading section summary on teacher homepage,
-  // do not include student-level data.
-  if (withoutStudents) {
-    sectionsSummaryApi += '?without_students=true';
-  }
-
   let apis = [
-    sectionsSummaryApi,
+    '/dashboardapi/sections?without_students=true',
     '/dashboardapi/sections/valid_course_offerings',
     '/dashboardapi/sections/available_participant_types'
   ];
