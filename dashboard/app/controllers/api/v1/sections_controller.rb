@@ -20,9 +20,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   # Get the set of sections owned by the current user
   def index
     prevent_caching
-    params[:without_students] ?
-      render(json: current_user.sections.map(&:summarize_without_students)) :
-      render(json: current_user.sections.map(&:summarize))
+    render(json: current_user.sections.map(&:summarize_without_students))
   end
 
   # GET /api/v1/sections/<id>
