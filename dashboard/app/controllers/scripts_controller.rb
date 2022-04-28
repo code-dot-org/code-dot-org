@@ -87,6 +87,11 @@ class ScriptsController < ApplicationController
   end
 
   def new
+    @unit_families_course_types = Script.family_names.map do |cf|
+      unit = CourseOffering.find_by(key: cf)&.course_versions&.first&.content_root
+      next unless unit
+      [cf, {instruction_type: unit.instruction_type, instructor_audience: unit.instructor_audience, participant_audience: unit.participant_audience}]
+    end.compact.to_h
   end
 
   def create
