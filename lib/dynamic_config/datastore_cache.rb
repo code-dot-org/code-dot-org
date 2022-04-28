@@ -62,10 +62,16 @@ class DatastoreCache
     @cache
   end
 
-  # Clear the datastore
+  # Attempt to clear the datastore. Note that most of our datastore adapters
+  # don't actually support being cleared; in fact, ONLY the in-memory adapter
+  # does, which means this is something of a sharp corner.
+  #
+  # Note also that the only reason it's merely a sharp corner and not a
+  # breaking issue is that the only place we currently attempt to clear the
+  # database is when running unit tests, which use the in-memory adapter.
   def clear
     @cache = {}
-    @datastore.clear
+    @datastore.try(:clear)
     notify_change_listeners
   end
 

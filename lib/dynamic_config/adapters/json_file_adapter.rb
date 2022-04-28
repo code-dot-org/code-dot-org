@@ -1,49 +1,31 @@
-# A data adapter for datastore_cache that uses a json file
-# as the persistent data storage mechanism.
+# A data adapter for datastore_cache that uses a json file as the persistent
+# data storage mechanism.
 
-require 'oj'
+require 'dynamic_config/adapters/base'
 
-class JSONFileDatastoreAdapter
+class JSONFileDatastoreAdapter < BaseAdapter
   def initialize(file_path)
     @file_path = file_path
     @hash = {}
     load_from_file
   end
 
-  # @param key [String]
-  # @param value [String]
-  def set(key, value)
+  private
+
+  def persist(key, value)
     load_from_file
-    @hash[key] = Oj.dump(value, mode: :strict)
+    @hash[key] = value
     write_to_file
   end
 
-  # @param key [String]
-  # @returns [JSONable Object] or nil if key doesn't exist
-  def get(key)
+  def all_persisted_keys
     load_from_file
-    begin
-      return Oj.load(@hash[key])
-    rescue => exc
-      Honeybadger.notify(exc)
-    end
-    nil
+    return @hash.keys
   end
 
-  # @returns [Hash]
-  def all
+  def retrieve(key)
     load_from_file
-    ret = {}
-    @hash.each do |k, v|
-      begin
-        value = Oj.load(v)
-      rescue => exc
-        Honeybadger.notify(exc)
-        nil
-      end
-      ret[k] = value
-    end
-    ret
+    return @hash[key]
   end
 
   def load_from_file
@@ -63,9 +45,5 @@ class JSONFileDatastoreAdapter
     File.open(@file_path, "w") do |f|
       f.write(JSON.dump(@hash))
     end
-  end
-
-  def clear
-    raise NotImplementedError, "JSONFileDatastoreAdapter does not support clear"
   end
 end

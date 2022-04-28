@@ -4,9 +4,6 @@
 require 'dynamic_config/datastore_cache'
 require 'dynamic_config/dynamic_config_base'
 require 'dynamic_config/environment_aware_dynamic_config_helper'
-require 'dynamic_config/adapters/dynamodb_adapter'
-require 'dynamic_config/adapters/json_file_adapter'
-require 'dynamic_config/adapters/memory_adapter'
 
 class DCDOBase < DynamicConfigBase
   # Adds a listener whose on_change() method will be invoked at least
