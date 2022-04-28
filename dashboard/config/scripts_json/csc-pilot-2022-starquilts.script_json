@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "csc-pilot-2022-starquilts",
-    "serialized_at": "2022-04-22 19:07:49 UTC",
+    "serialized_at": "2022-04-27 16:30:24 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -248,7 +248,7 @@
       "key": "405e6dce-bdaa-4795-83c4-3e4c52e9b6cf",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Star Quilt” video\n \n**Do This**: Watch the [Star Quilt Video](https://www.youtube.com/watch?v=Q210ko41yqo).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” video\n \n**Reflect**: _What stands out to you about Star Quilts?_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Star Quilt” video\n \n**Do This**: Watch the [Star Quilt Video](https://www.youtube.com/watch?v=Q210ko41yqo).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n \n**Reflect**: _What stands out to you about Star Quilts?_"
       },
       "seeding_key": {
         "activity_section.key": "405e6dce-bdaa-4795-83c4-3e4c52e9b6cf",
@@ -422,7 +422,7 @@
       "key": "079a7a28-1eba-4027-bffe-50be6f81bfa0",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 5-6 - Skill Building” slide\n\n**Debugging Tips:**\n\n**Level 6**: Show students how to use the angle menu to modify the measurement. Students should select 90 degrees. Remind students to also alter the loop to only repeat 4 times.\n\n**Level 7**: Students should modify the angle measurement to 30 degrees. Remind students to also alter the loop to repeat 12 times.\n\n**Do This**: Have students continue working in Code Studio.\n\nIn these levels students will alter the turn angle to see how it affects the number of points in a star. In level 5, students will turn 90 degrees and create a 4 point star. In level 6, students will turn 30 degrees and create a 12 point star. If students are done early, they can try to create stars with other numbers of points. Discuss the relationship between angle measurement and number of points with students.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6-7 - Skill Building” slide\n\n**Debugging Tips:**\n\n**Level 6**: Show students how to use the angle menu to modify the measurement. Students should select 90 degrees. Remind students to also alter the loop to only repeat 4 times.\n\n**Level 7**: Students should modify the angle measurement to 30 degrees. Remind students to also alter the loop to repeat 12 times.\n\n**Do This**: Have students continue working in Code Studio.\n\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -434,7 +434,7 @@
       "key": "98267be9-ec3e-40d9-808b-22fa394dd382",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7 - Free Play” slide\n\n**Overview**: In these levels, students will learn additional skills using the Artist. Students will use turn and move blocks to create a border around the star shape. There are several options for students to select an Artistic border. \n\n**Debugging Tips**:\n\n**Level 7**: This is a free play level for students to make their very own star creation. Students will apply the skills they’ve learned in the previous levels. Students can experiment with colors, angles and loops to make a unique star shape.\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Free Play” slide\n\n**Overview**: In these levels, students will learn additional skills using the Artist. Students will use turn and move blocks to create a border around the star shape. There are several options for students to select an Artistic border. \n\n**Debugging Tips**:\n\n**Level 8**: This is a free play level for students to make their very own star creation. Students will apply the skills they’ve learned in the previous levels. Students can experiment with colors, angles and loops to make a unique star shape.\n\n\n",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -443,38 +443,13 @@
       }
     },
     {
-      "key": "a63fe886-f192-4ae2-80f4-9aff5510c817",
-      "position": 7,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Bonus” slide\n\n**Level 8**: Students select the border that they would like to use. Students use the function **startBorder** to be in the right position to start their border. Talk to students about what this function does.",
-        "progression_name": "Bonus"
-      },
-      "seeding_key": {
-        "activity_section.key": "a63fe886-f192-4ae2-80f4-9aff5510c817",
-        "lesson_activity.key": "182debfe-1909-48a1-baa5-9fd4623afeb9"
-      }
-    },
-    {
-      "key": "8e18453f-b73b-4df3-a9a9-23fa0b984041",
-      "position": 8,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9-11 - Challenge” slide\n\n**Level 9-10**: Students draw the border of one point in the star. Guide students in figuring out the correct way to turn and move. \n\n**Level 11**: Students use the repeat block to continue the border all around the star. Students should set it to repeat 6 times.",
-        "name": "Challenge",
-        "progression_name": "Challenge"
-      },
-      "seeding_key": {
-        "activity_section.key": "8e18453f-b73b-4df3-a9a9-23fa0b984041",
-        "lesson_activity.key": "182debfe-1909-48a1-baa5-9fd4623afeb9"
-      }
-    },
-    {
       "key": "b791db20-3641-4a9e-9786-59175a81ccc5",
-      "position": 9,
+      "position": 7,
       "properties": {
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "While circling the room, encourage students to:\n\n- **Take Their Time**: Staying on a level and tinkering with their code is highly encouraged.The instructions tell students generally what to do, but they should also feel free to try out their own ideas.\n- **Show off a completed level**: Any level bubble that is fully green means the student successfully completed all the requirements for that level. Ask a student to click on a green bubble to show off what they created.\n\nFor the times when a student feels stuck:\n- **Collaborate with Neighbors**: Encourage students to check in with a neighbor when they're getting stuck. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using pair programming.\n- **Read the Instructions**: The instructions are bulleted points on how to complete the level. If a student feels stuck, ask them to read the instructions out loud to you and ask them to repeat back what the instructions say in their own words. The instructions usually provide helpful tips on how to complete the level. Before giving students the answer, ensure they've carefully looked at the instructions, hints, videos, and any starter code carefully.\n- <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> **Text to Speech:** Students can also click on this text-to-speech icon to hear the instructions read aloud.\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Look for hints**: Most levels include at least one hint with more explicit details about how to pass the level.\n- **Celebrate bugs**: Getting a bug in your code is a natural part of the coding process. If the program isn’t doing what they expected, ask the student to first tell you what they want to happen, click run to observe what is actually happening, then find the place in their code that caused the discrepancy. Remember to celebrate finding bugs and fixing bugs. Getting a bug means students are doing a great job building a more complex program.\n"
+            "markdown": "While circling the room, encourage students to:\n\n- **Take Their Time**: Staying on a level and tinkering with their code is highly encouraged. The instructions tell students generally what to do, but they should also feel free to try out their own ideas.\n- **Show off a completed level**: Any level bubble that is fully green means the student successfully completed all the requirements for that level. Ask a student to click on a green bubble to show off what they created.\n\nFor the times when a student feels stuck:\n- **Collaborate with Neighbors**: Encourage students to check in with a neighbor when they're getting stuck. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using pair programming.\n- **Read the Instructions**: The instructions are bulleted points on how to complete the level. If a student feels stuck, ask them to read the instructions out loud to you and ask them to repeat back what the instructions say in their own words. The instructions usually provide helpful tips on how to complete the level. Before giving students the answer, ensure they've carefully looked at the instructions, hints, videos, and any starter code carefully.\n- <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> **Text to Speech:** Students can also click on this text-to-speech icon to hear the instructions read aloud.\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Look for hints**: Most levels include at least one hint with more explicit details about how to pass the level.\n- **Celebrate bugs**: Getting a bug in your code is a natural part of the coding process. If the program isn’t doing what they expected, ask the student to first tell you what they want to happen, click run to observe what is actually happening, then find the place in their code that caused the discrepancy. Remember to celebrate finding bugs and fixing bugs. Getting a bug means students are doing a great job building a more complex program.\n"
           }
         ]
       },
@@ -573,7 +548,7 @@
       "key": "e9af003a-b874-4e0e-849d-5f7f274b9670",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Skill Building\" slide\n\n**Debugging Tips**:\n\n**Level 8**: Before the Artist can repeat the point it needs to turn. Set the loop to repeat 8 times. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Skill Building\" slide\n\n**Level 8**: Before the Artist can repeat the point it needs to turn. Set the loop to repeat 8 times. ",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -614,6 +589,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_star_quilts_artist_intro"
+        ],
         "progression": "Video"
       },
       "bonus": false,
@@ -686,6 +664,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-starquilts-rhombus3"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -708,6 +689,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_video_loops2"
+        ],
         "progression": "Video"
       },
       "bonus": false,
@@ -731,14 +715,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csc-starquilts-6point-repeat"
+          "csc-starquilts-4point-repeat"
         ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc-starquilts-6point-repeat"
+          "csc-starquilts-4point-repeat"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -746,32 +730,32 @@
         "activity_section.key": "079a7a28-1eba-4027-bffe-50be6f81bfa0"
       },
       "level_keys": [
-        "csc-starquilts-6point-repeat"
+        "csc-starquilts-4point-repeat"
       ]
     },
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csc-starquilts-4point-repeat"
+          "csc-starquilts-12point-repeat"
         ],
-        "progression": "Free Play"
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc-starquilts-4point-repeat"
+          "csc-starquilts-12point-repeat"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "98267be9-ec3e-40d9-808b-22fa394dd382"
+        "activity_section.key": "079a7a28-1eba-4027-bffe-50be6f81bfa0"
       },
       "level_keys": [
-        "csc-starquilts-4point-repeat"
+        "csc-starquilts-12point-repeat"
       ]
     },
     {
@@ -781,104 +765,26 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csc-starquilts-12point-repeat"
+          "csc-starquilts-rhombus-freeplay"
         ],
-        "progression": "Bonus"
+        "progression": "Free Play"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csc-starquilts-12point-repeat"
+          "csc-starquilts-rhombus-freeplay"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "a63fe886-f192-4ae2-80f4-9aff5510c817"
+        "activity_section.key": "98267be9-ec3e-40d9-808b-22fa394dd382"
       },
       "level_keys": [
-        "csc-starquilts-12point-repeat"
+        "csc-starquilts-rhombus-freeplay"
       ]
     },
     {
       "chapter": 9,
-      "position": 9,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "challenge": true,
-        "level_keys": [
-          "csc-starquilts-bonus-one"
-        ],
-        "progression": "Challenge"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc-starquilts-bonus-one"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "8e18453f-b73b-4df3-a9a9-23fa0b984041"
-      },
-      "level_keys": [
-        "csc-starquilts-bonus-one"
-      ]
-    },
-    {
-      "chapter": 10,
-      "position": 10,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "challenge": true,
-        "level_keys": [
-          "csc-starquilts-bonus-two"
-        ],
-        "progression": "Challenge"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc-starquilts-bonus-two"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "8e18453f-b73b-4df3-a9a9-23fa0b984041"
-      },
-      "level_keys": [
-        "csc-starquilts-bonus-two"
-      ]
-    },
-    {
-      "chapter": 11,
-      "position": 11,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "challenge": true,
-        "level_keys": [
-          "csc-starquilts-bonus-three"
-        ],
-        "progression": "Challenge"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csc-starquilts-bonus-three"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "8e18453f-b73b-4df3-a9a9-23fa0b984041"
-      },
-      "level_keys": [
-        "csc-starquilts-bonus-three"
-      ]
-    },
-    {
-      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -903,7 +809,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 10,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -928,7 +834,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 11,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -953,7 +859,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 12,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -978,7 +884,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 13,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -1003,7 +909,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 14,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -1028,7 +934,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 15,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -1053,7 +959,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 16,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -1078,7 +984,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 17,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -1166,18 +1072,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "csc-starquilts-6point-repeat",
-        "script_level.level_keys": [
-          "csc-starquilts-6point-repeat"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "079a7a28-1eba-4027-bffe-50be6f81bfa0"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "csc-starquilts-4point-repeat",
         "script_level.level_keys": [
           "csc-starquilts-4point-repeat"
@@ -1185,7 +1079,7 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "98267be9-ec3e-40d9-808b-22fa394dd382"
+        "activity_section.key": "079a7a28-1eba-4027-bffe-50be6f81bfa0"
       }
     },
     {
@@ -1197,43 +1091,19 @@
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "a63fe886-f192-4ae2-80f4-9aff5510c817"
+        "activity_section.key": "079a7a28-1eba-4027-bffe-50be6f81bfa0"
       }
     },
     {
       "seeding_key": {
-        "level.key": "csc-starquilts-bonus-one",
+        "level.key": "csc-starquilts-rhombus-freeplay",
         "script_level.level_keys": [
-          "csc-starquilts-bonus-one"
+          "csc-starquilts-rhombus-freeplay"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "8e18453f-b73b-4df3-a9a9-23fa0b984041"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc-starquilts-bonus-two",
-        "script_level.level_keys": [
-          "csc-starquilts-bonus-two"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "8e18453f-b73b-4df3-a9a9-23fa0b984041"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csc-starquilts-bonus-three",
-        "script_level.level_keys": [
-          "csc-starquilts-bonus-three"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "csc-pilot-2022-starquilts",
-        "activity_section.key": "8e18453f-b73b-4df3-a9a9-23fa0b984041"
+        "activity_section.key": "98267be9-ec3e-40d9-808b-22fa394dd382"
       }
     },
     {

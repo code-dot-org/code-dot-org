@@ -5,6 +5,7 @@
     "login_required": true,
     "properties": {
       "curriculum_umbrella": "CSA",
+      "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
@@ -15,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-18 19:23:52 UTC",
+    "serialized_at": "2022-04-26 14:47:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2815,6 +2816,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Console Sandbox"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2836,6 +2840,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood Sandbox"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -2858,6 +2865,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -2880,6 +2890,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2022 Theater Sandbox"
+        ]
       },
       "bonus": false,
       "seeding_key": {

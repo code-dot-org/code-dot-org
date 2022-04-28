@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-22 21:24:41 UTC",
+    "serialized_at": "2022-04-27 03:52:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -176,7 +176,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students practice using the different programming concepts that they were introduced to in the last lesson. To begin, however, they are introduced to the concept of debugging and are encouraged to use and reflect on this practice throughout the lesson. At the end of the lesson students share their experiences debugging as well as an new realizations about programming.",
-        "preparation": "* Review the steps of the debugging process\r\n* Review the levels students will need to complete on Code Studio",
+        "preparation": "* Review the steps of the debugging process\n* Review the [r debugging/csp/2022] one-pager\n* Review the levels students will need to complete on Code Studio",
         "purpose": "This lesson serves a number of roles. Even if students had modified programs in the previous lesson, this continues to be an introduction to many of the skills of programming. Students are also introduced to debugging as a skill they'll need to use and develop as programmers. A huge goal of this lesson, however, is attitudinal.",
         "student_overview": "Learn how to identify and fix problems in your code through the debugging process. Then practice using it with a classmate."
       },
@@ -4024,6 +4024,18 @@
       }
     },
     {
+      "name": "Debugging",
+      "url": "https://docs.google.com/document/d/17EvJ2lQBUwg_FkafIs143frPpk6nuXvhmJhxWA8qGP4/preview",
+      "key": "debugging",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "debugging"
+      }
+    },
+    {
       "name": "How Computers Work - What Makes a Computer, a Computer",
       "url": "https://www.youtube.com/watch?v=mCq8-xTH7jA&feature=youtu.be",
       "key": "how_computers_work_-_what_makes_a_computer_a_computer",
@@ -4140,6 +4152,12 @@
       "seeding_key": {
         "lesson.key": "Debugging",
         "resource.key": "csp_unit_3_-_intro_to_app_design"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging",
+        "resource.key": "debugging"
       }
     },
     {

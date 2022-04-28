@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-22 18:29:32 UTC",
+    "serialized_at": "2022-04-27 22:53:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -90,7 +90,7 @@
         "assessment_opportunities": "1. **Identify the reasons someone might visit a given website**\r\n\r\n\tOn the activity guide, check that students have reasons that a user might visit each website, such as learning more about a topic or entertaining themselves.\r\n    \r\n2. **Identify the reasons someone might create a given website**\r\n\r\n\tOn the activity guide, check students' reasons for why the creators would make their respective sites. Student explanations may include pragmatic reasons, such as getting feedback and advice from others, or more social reasons such as personal expression.\r\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day:  Why do people create web pages?**  \r\n\r\n\r\nEvery website has a purpose, a reason someone created it and others use it. In this lesson, students will start to consider the purposes a website might serve, both for the users and the creators. Students will explore some sample websites and discuss the purpose they serve for their creators. They are then asked to reflect on reasons that someone might want to create websites.",
-        "preparation": "* Print a copy of the activity guide for each student.",
+        "preparation": "* Print a copy of the activity guide for each student.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This unit is all about the World Wide Web, with a focus on creating websites for self expression. To start students thinking about why they might want to create a website, they must begin to consider how websites are useful tools for both users and creators. The lesson opens with popular websites because students are familiar with them, but students are asked to narrow their vision to simpler sites that are within the scope of what they will be able to make in this course.",
         "student_overview": "**Question of the Day:  Why do people create web pages?**\n\nIn this lesson, you will explore the various purposes that web pages serve users and creators. \n"
       },
@@ -111,7 +111,7 @@
         "assessment_opportunities": "1. **Explain that HTML allows a programmer to communicate the way content should be structured on a web page**\n\n\tIn the final reflection prompt, students should give an explanation of how HTML is used to structure content on a page.\n\n2. **Write a simple HTML document that uses opening and closing tags to structure content**\n\n\tLevel 6 on Code Studio provides a mini-rubric to assess student use of HTML.\n\n3. **Understand how to use lesson resources provided in Web Lab**\n\n\tAs students progress through the HTML lesson, check that they are looking through the drop-down tips on the right hand side of the instructions, clicking into the map levels in the \"Help and Tips\" tab, and making use of the inspector tool.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we tell the computer both *what* to put on the web page, and *how* to organize it?**\r\n\r\nIn this lesson students are introduced to HTML as a solution to the problem of how to communicate both the content and structure of a website to a computer. The lesson begins with a brief unplugged activity demonstrating the challenges of effectively communicating the structure of a web page. Students then look at an exemplar HTML page in Web Lab and discuss with their classmates how HTML tags help solve this problem. Students then write their first HTML. A wrap-up discussion helps to solidify the understanding of content vs. structure that was developed throughout the lesson.",
-        "preparation": "* Review the Code Studio levels",
+        "preparation": "* Review the Code Studio levels\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson introduces many new concepts and tools to students. They are introduced to HTML, the Web Lab tool, and how to navigate lesson resources on Code.org in general. While the understanding of HTML as a way to communicate the structure of a web page is a critical learning objective, this lesson has students do minimal programming since there are many other new ideas and tools to grasp. In the next lesson students will have more time to spend programming in HTML.",
         "student_overview": "**Question of the Day: How can we tell the computer both *what* to put on the web page, and *how* to organize it?**\n\n\nYou will look at an HTML page in Web Lab and use HTML to write your first web page of the unit.\n"
       },
@@ -132,7 +132,7 @@
         "assessment_opportunities": "1. **Use heading tags to change the appearance of text on a web page.**\r\n\r\n\tSee the multiple choice question on Level 8 and the rubric on Level 9.\r\n\r\n2. **Structure content into headings, subheadings, and paragraphs.**\r\n\r\n\tSee the rubric on Level 9.\r\n    \r\n3. **Use a structured practice to collaboratively create a digital artifact.**\r\n\r\n\tAs students move through the lesson, ensure that that are following the guidelines for pair programming as described in the video.  In the wrap up journal prompt, check that student responses describe effective collaboration.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we work together to fix problems with our websites?**\r\n\r\nIn this lesson, students continue to use HTML to structure text on web pages, this time in pairs,  with a focus on working together and debugging problems with their sites.  Students learn how the different heading elements are displayed by default and practice using them to create page and section titles.  ",
-        "preparation": "* Have student journals ready to give back.\r\n* If you want to use an anchor chart, prepare poster paper to do so as a whole class.",
+        "preparation": "* Have student journals ready to give back.\n* If you want to use an anchor chart, prepare poster paper to do so as a whole class.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson introduces the core practices of pair programming and debugging.  These will be used throughout the unit and align with authentic practices used by industry professionals. It also covers the heading tags that students will use in their pages for the rest of the unit and reinforces the general structure of HTML (opening tag / content / closing tag).\r\n\r\n",
         "student_overview": "**Question of the Day: How can we work together to fix problems with our websites?**\n\nIn this lesson, you will learn about HTML headings and how to use them to create page and section titles for web pages. \n\n"
       },
@@ -153,7 +153,7 @@
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals. ",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can I use HTML to express a personal value?**\r\n\r\nIn this optional mini-project, students use what they have learned to create their own personal web page on a topic of their choice.  The lesson starts with a review of the HTML that students have learned.  They then begin their project by designing a web page and identifying which tags they will use to implement it.  They then create their web pages in Web Lab and share with the class. Optionally, after engaging in a formal feedback process, they may make final changes to their websites before reflecting on their process.  This project can be completed in one day or expanded over several days, depending on the scheduling needs of the class.",
-        "preparation": "* Print out a copy of the project guide for each student.",
+        "preparation": "* Print out a copy of the project guide for each student.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-html-web-page-web-development-lesson-4/36202) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This project allows students more time to practice the content that they have already learned. It is intentionally open-ended and flexible to allow classes to spend one or several days, depending on the pacing needs of the students or the school calendar.",
         "student_overview": "**Question of the Day: How can I use HTML to express a personal value?**\n\nIn this lesson, you will create a simple personal web page on a topic of your choice. \n\n"
       },
@@ -174,7 +174,7 @@
         "assessment_opportunities": "1. **Understand and explain reasons that it is difficult to control who sees information published online.**\r\n\r\n\tIn page 2 the Social Sleuth activity guide, look at students' explanations of how information was accidentally shared.\r\n\r\n2. **Understand and justify guidelines for safely publishing information online.**\r\n\r\n\tReview students' checklists in the lesson wrap up.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can you make sure that your private information stays private?**\r\n\r\nThis lesson takes a step back from students’ work developing web pages to help them articulate what personal information they choose to share digitally and with whom. It also reinforces the notion that much of the information that they choose to share digitally falls largely out of their control the moment it is released.  \r\n\r\nStudents look at several social media pages to determine what sorts of information people are sharing about themselves or one another. Last, students reflect on what guidelines they think are appropriate for posting information online.\r\n\r\nThe ultimate point of this lesson is not to scare students, but rather to experientially bring students to realize that they don’t have control over information released online.",
-        "preparation": "* Print out copies of \"Social Sleuth\" for each student (or one for each group if grouping)",
+        "preparation": "* Print out copies of \"Social Sleuth\" for each student (or one for each group if grouping)\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "Now that students are beginning to share information publicly, it's crucial that they are instilled with an understanding of the potential consequences of sharing personal information online.\n\nIn this lesson students look through several example social media profiles for fake students. Individually these pages contain relatively innocuous information, but when students cross reference information across multiple profiles they see how a detailed picture (or [v digital_footprint/csd/2021]) can start to form. Through this activity students see that even information that they may not see as private on its own can share more information than intended when combined with other small details.",
         "student_overview": "**Question of the Day: How can you make sure that your private information stays private?**\n\nIn this lesson, you will think about the personal information that you choose to share digitally through various websites, apps, and social media. \n\n"
       },
@@ -195,7 +195,7 @@
         "assessment_opportunities": "1. **Use CSS selectors to style HTML text elements.**\r\n\r\n\tSee Level 10 in Code Studio.\r\n\r\n2. **Link to an external style sheet.**\r\n\r\n\tSee Level 10 in Code Studio.\r\n\r\n3. **Explain the differences between HTML and CSS in both use and syntax.**\r\n\r\n\tSee the review at the main activity.  You may also want to collect a T-chart from each group.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we change the style of text on a web page?**\r\n\r\nThis lesson introduces CSS as a way to style elements on the page. Students learn the basic syntax for CSS rule-sets and then explore properties that impact HTML text elements. They work on a HTML page about Guinness World Record holders, adding their own style to the provided page. ",
-        "preparation": "* Create a new poster titled **CSS Properties** if your students will not be tracking new CSS properties in their journals",
+        "preparation": "* Create a new poster titled **CSS Properties** if your students will not be tracking new CSS properties in their journals\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson introduces students to a new language (CSS), and to the idea that different computer languages have different functions and syntax.  While only a few CSS properties are introduced in the core lesson, students are encouraged to use the optional activities at the end of the lesson to explore more ways that they can express themselves using CSS.",
         "student_overview": "**Question of the Day: How can we change the style of text on a web page?**\n\nIn this lesson, you will learn how to use CSS to style the HTML elements on your web page. \n\n"
       },
@@ -216,7 +216,7 @@
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**How can you express your personal style on a web page?**\r\n\r\nIn this optional mini-project, students use what they have learned to create their own styled web page on a topic of their choice. The lesson starts with a review of the CSS that students have learned. They then begin their project by designing a web page and identifying which properties they will use to implement it. They create their web pages in Web Lab and share with the class.  After engaging in a formal feedback process, they make final changes to their websites before reflecting on their process.  This project can be completed in one day or expanded over several days, depending on the scheduling needs of the class.",
-        "preparation": "* Print a copy of the project guide for each student.",
+        "preparation": "* Print a copy of the project guide for each student.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-your-personal-style-web-development-lesson-7/36203) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This project gives students more time to practice the content that they have already learned. It is intentionally open-ended and flexible to allow classes to spend one or several days, depending on the pacing needs of the students or the school calendar.",
         "student_overview": "**Question of the Day: How can you express your personal style on a web page?**\n\nIn this lesson, you will create your own styled web page!\n\n"
       },
@@ -237,7 +237,7 @@
         "assessment_opportunities": "1. **Explain the purpose of copyright.**\r\n\r\n\tIn the wrap up journal prompt, check that students are thinking of reasons that people may want their intellectual property covered under copyright law.\r\n\r\n2. **Identify the rights and restrictions granted by various Creative Commons licenses**\r\n\r\n\tIn the activity guide, check that students are choosing licenses and providing explanations consistent with the given scenarios.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: What kind of rules protect everyone's rights when we use each other's content?**\r\n\r\nStarting with a discussion of their personal opinions on how others should be allowed to use their work, the class explores the purpose and role of copyright for both creators and users of creative content. They then move on to an activity exploring the various Creative Commons licenses as a solution to the difficulty in dealing with copyright. ",
-        "preparation": "* Preview Creative Commons Overview - Video. You may need to download it before school if YouTube is blocked.",
+        "preparation": "* Preview Creative Commons Overview - Video. You may need to download it before school if YouTube is blocked.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "Until this point the only content that students have used on their web pages is their own, but in the next lesson they will be adding images to their sites. Before they do so, they need to understand the rules governing how to legally use content they find on the web. We use the Creative Commons license as a clearer alternative to the more restrictive standard copyright and guide students through searching for, using, and properly citing Creative Commons licensed media.",
         "student_overview": "**Question of the Day: What kind of rules protect everyone's rights when we use each other's content?**\n\nIn this lesson, you will explore the various Creative Commons licenses. \n"
       },
@@ -258,6 +258,7 @@
         "assessment_opportunities": "1. **Follow copyright law, accurately attributing others when using their work.**\n\n\tSee Level 7 in the Code Studio lesson.\n    \n2. **Add an image to a web page**\n\n    See Level 7 in the Code Studio lesson.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we add images on our websites, while making sure we respect everyone's rights?**\r\n\r\nStudents start the class by considering the ethical implications of using images on their websites, specifically in terms of intellectual property. They then learn how to add images to their web pages using the &lt;img&gt; tag and how to cite the image sources appropriately.",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson introduces images, which are different from earlier tags in that they are 'self-closing' and include attributes.  Students should understand that these tags do not surround content in the same way as other tags.\r\n\r\nThis is also the first time that students are encouraged to use content from others, and provides them an opportunity to put into practice what they have learned about intellectual property and copyright.",
         "student_overview": "**Question of the Day: How can we add images on our websites, while making sure we respect everyone's rights?**\n\nIn this lesson, you will learn how to add images to your web pages making sure to keep copyright and Creative Commons licenses in mind. \n\n"
       },
@@ -278,7 +279,7 @@
         "assessment_opportunities": "1. **Identify websites as a form of personal expression**\r\n\r\n\tIn the activity guide and discussion, check that students have clearly explained the purpose of their own web pages and why that purpose is personally relevant to them.\r\n    ",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we use websites to express ourselves?**\r\n\r\nIn this lesson students investigate ways to use websites as a means of personal expression and develop a list of topics and interests that they would want to include on a personal website. Students begin by brainstorming different ways that people express and share their interests and ideas. Students then look at a few exemplar websites to identify ways they express ideas. Finally, students brainstorm and share a list of topics and interests they might want to include on a personal website; they will reference this list as they progress through the unit.",
-        "preparation": "* Prepare journals or optionally print copies of the activity guide",
+        "preparation": "* Prepare journals or optionally print copies of the activity guide\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson emphasizes that web development, and by extension computer science, is an avenue for self expression. The warm up situates web development as another means of self-expression alongside visual art, dance, music, fashion, social media, and many other ways students are likely already expressing themselves. Seeing student exemplars helps scope students' expectations for their own pages. The activity situates web development within the Problem Solving Process framework, and brainstorming content for their website provides students an opportunity to define the ways that they would like to express themselves through their pages. ",
         "student_overview": "**Question of the Day: How can we use websites to express ourselves?**\n\nIn this lesson, you will explore and brainstorm different interests and ideas that people can express and share using websites. "
       },
@@ -299,6 +300,7 @@
         "assessment_opportunities": "1. **Use CSS properties to change the layout properties of elements.**\n\n\tSee Level 8 in Code Studio.\n\n2. **Create a CSS rule-set for the body element that impacts all elements on the page.**\n\n\tSee Level 8 in Code Studio",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we style the images and layouts of our pages?**\r\n\r\nThis lesson continues the introduction to CSS style properties, this time focusing more on non-text elements. Students begin this lesson by looking at a website about Desserts of the World. They investigate and modify the new CSS styles on this website, adding their own styles to the page. After working on the Desserts page, students apply their knowledge of new CSS properties to their personal websites.",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson builds on what students previously learned about CSS properties, this time looking at properties that can be used on elements.  These new properties impact the visual look of the web page beyond its text and give students more precise control over the layout of their pages. As students expand their knowledge of style properties, many may have questions about how they can do even more with CSS. Curious students can explore more properties at <a href=\"http://www.w3schools.com/cssref/\"> W3 Schools </a>.",
         "student_overview": "**Question of the Day: How can we style the images and layouts of our pages?**\n\nIn this lesson, you will learn more CSS style properties, this time focusing on non-text elements.\n"
       },
@@ -319,7 +321,7 @@
         "assessment_opportunities": "1. **Logically separate the content, structure and formatting of a digital artifact**\r\n    \r\n    In the activity guide, check that the design sketch includes the content, and that the tag and style columns in the \"Describe your styles\" section are filled out with HTML tags on the left and style descriptions or CSS on the right.\r\n    \r\n2. **Create documentation that explains the design decisions of an artifact**\r\n\r\n\tIn the wrap up, check that students have tied their design decisions in the Activity Guide with the goal of the website as stated in the earlier lesson.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: What do we need to do to prepare to build our web pages?**\r\n\r\nIn this lesson, students engage in the \"prepare\" stage of the problem-solving process, deciding what elements and style their web page will have. They begin by reviewing the different HTML, CSS, and digital citizenship guidelines they will need in building their web pages. They then describe and sketch their pages, listing the tags and styles they will use to get the layout and design that they decided on. They then move online to find and download the images they will need for their pages. Afterwards, they reflect on how their plan will ensure that the website does what it is designed to do.",
-        "preparation": "* Print out one copy of the activity guide for each student.",
+        "preparation": "* Print out one copy of the activity guide for each student.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson reinforces the idea that students should design and plan their pages before they start coding.  It provides a structured process for planning that ties into the problem solving process that threads throughout the course.  The plan should tie back to the \"Define\" worksheet that students completed a couple lessons before, and gives them something to use as they build their pages in the next lesson.",
         "student_overview": "**Question of the Day: What do we need to do to prepare to build our web pages?**\n\nIn this lesson, you will work on the \"prepare\" stage of the problem-solving process to decide what elements and style your web page will have. \n\n"
       },
@@ -340,7 +342,7 @@
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of this chapter's learning goals.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: What skills and practices help when we code web pages?**\r\n\r\nAfter quickly reviewing their debugging process, students go online to create the pages that they have planned out in previous lessons, with the project guides as a reference. Once they have finished with their pages, they complete a short reflection on the process, what they are most proud of, and what they would like feedback on. They then engage in a structured peer feedback process before making final edits to the pages. Afterwards, they reflect on the skills and practices that helped them to be successful.\r\n\r\n",
-        "preparation": "* Ensure students have access to the Project Guide from the last lesson.\r\n* Print copies of the reflection and peer feedback documents.",
+        "preparation": "* Ensure students have access to the Project Guide from the last lesson.\n* Print copies of the reflection and peer feedback documents.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-personal-web-page-web-development-lesson-13/36204) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "In the previous lessons, students have planned out their personal web page. In this lesson, they'll get to create and share it with the rest of the world. This should reinforce the value of the planning process, and also give them a chance to practice effective communication through peer feedback. Students should have a chance to engage in all five practices in this lesson: Problem Solving, Persistence, Communication, Collaboration, and Creativity.",
         "student_overview": "**Question of the Day: What skills and practices help when we code web pages?**\n\nIn this lesson, you will work on creating the web pages that you have planned out in previous lessons. "
       },
@@ -361,6 +363,7 @@
         "assessment_opportunities": "1. **Identify the reasons someone might create a given website**\r\n\r\n\tCheck the table in the activity guide for reasonable purposes for each websites.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: What are the different reasons people make websites?**\r\n\r\n\r\nIn this lesson, students explore the different reasons people make websites. They first think of different reasons that they visit websites, then investigate web sites that have been created to address a particular problem. After deciding what different purposes those websites might serve for the creators, they begin to think about the problem that they might want to solve with a web site. At the end of the lesson, students form the groups that they will be in for their chapter projects.",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lessons transitions students from thinking about websites as a form of personal expression to considering how websites might serve broader purposes for their creators. It also serves as a soft introduction to the chapter project, in which students will work in teams to create websites to solve a problem of their choosing.",
         "student_overview": "**Question of the Day: What are the different reasons people make websites?**\n\nIn this lesson, you will explore different reason that people make websites and the problems that may be solved with your own website.  \n\n"
       },
@@ -381,6 +384,7 @@
         "assessment_opportunities": "**1. Students ablility to work as a team**\n\nUse the short answer responses on the second page of the activity guide to assess student mastery of learning goals of this lesson.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we work together to make a great team?**\r\n\r\nStudents work together to set group norms and brainstorm what features they would like their websites to have. The class starts by thinking of some popular teams in different contexts, then reflects on what makes teams successful. They then get into their own teams and make a plan for how they will interact and reach success in their own projects. Afterwards, the teams begin to brainstorm ideas for their website project.",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson explicitly addresses the challenges students may find working in a group and supports them in crafting a plan to overcome these challenges.  Students should refer back to this lesson throughout the unit as they work in teams to complete their projects.",
         "student_overview": "**Question of the Day: How can we work together to make a great team?**\n\nYou will work together with a team to brainstorm possible features you'd like your websites to have and discuss how you will interact with your team in order to be successful. "
       },
@@ -401,7 +405,7 @@
         "assessment_opportunities": "1. **Use basic web searching techniques to find relevant information online**\r\n\r\n\tIn the activity guide, check that students have filled out the chart with relevant web sites.\r\n\r\n2. **Identify elements that contribute to a website's trustworthiness or untrustworthiness**\r\n\r\n\tUse the students' trustworthiness checklist and discussions around it to get a broader sense of the elements students can identify, as well as the final journal prompt for more individual reflection about how a student could use those elements in a personal website.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How do we find relevant and trustworthy information on the Internet?**\r\n\r\nThis lesson encourages students to think more about how to find relevant and trustworthy information online. After viewing and discussing a video about how search engines work, students will search for information relevant to their site. They'll need to analyze the sites they find for credibility to decide which are appropriate to use on their own website.",
-        "preparation": "* Print a copy of the Internet Scavenger Hunt activity guide for each pair of students, or prepare to project the questions to the class.\r\n* Create a blank poster titled **Trustworthiness Checklist** and place it on the wall.\r\n",
+        "preparation": "* Print a copy of the Internet Scavenger Hunt activity guide for each pair of students, or prepare to project the questions to the class.\n* Create a blank poster titled **Trustworthiness Checklist** and place it on the wall.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n",
         "purpose": "As students are finishing up their own websites, this lesson encourages them to also think about their responsibilities as consumers of information. By the end of this lesson, students should have developed strategies for determining which websites are more trustworthy and tie these strategies back to their own role as content producers by looking for ways to make their own sites appear more trustworthy.",
         "student_overview": "**Question of the Day: How do we find relevant and trustworthy information on the Internet?**\n\nIn this lesson, you will discover how to find relevant and trustworthy information online!\n"
       },
@@ -422,6 +426,7 @@
         "assessment_opportunities": "1. **Group elements using classes in order to create more specific styles on their website.**\r\n\r\n\tSee Level 5 on Code Studio.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day:  How can we create different styles for the same type of element?**\r\n\r\nThis lesson expands on the CSS that students have already learned by introducing classes, which allow web developers to treat groups of elements they want styled differently than other elements of the same type. Students first investigate and modify classes on various pages, then create their own classes and use them to better control the appearance of their pages.  They then reflect on how they could use this skill to improve their team websites.",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "Up until this point, the only styling students have been able to do is styling by element, which means that every element of a particular kind has the same style. Classes allow for web developers to group together a set of elements they want to style.  This means students can single out a certain element they want to style or group together elements from one or more types of elements. Once elements are in a class, the class can be used as a selector in a style rule. \r\n\r\nNote: Single elements can also be selected by id, but this type of selection is possible with a class applied only to that single element. Because id selection does not add any extra functionality, it is not taught in this course.",
         "student_overview": "**Question of the Day:  How can we create different styles for the same type of element?**\n\nYou will learn about CSS classes in this lesson which will allow you to style groups of elements differently than other elements of the same type. \n"
       },
@@ -442,6 +447,7 @@
         "assessment_opportunities": "**1. Distribute tasks amongst team members.**\r\n\r\nCheck over the work plan at the bottom of the activity guide and make sure that it is specific enough to be useful and that it seems to be a fair and reasonable division of work.\r\n\r\n**2. Seek and incorporate feedback from team members.**\r\n\r\nIn the wrap up, check that students have reasonable ways of handling disagreement with one another.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day:  How do we plan a web page as a group?**\r\n\r\nStudents work in teams to plan out their web sites and create a sketch of each page. They then download the media that they will need for their sites. At the end of the activity, they decide how the work will be distributed among team members and report whether the entire group agreed to the plan.",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson gives students a chance to plan as a team. They will need to make many group decisions and have effective ways of resolving disagreements. The plan that they create will be referenced over the next few lessons as they build their sites.",
         "student_overview": "**Question of the Day:  How do we plan a web page as a group?**\n\nYou will work together with a team today to plan out your final websites and decide how the work will be distributed among yourselves.  \n\n"
       },
@@ -462,7 +468,7 @@
         "assessment_opportunities": "1. **Use HTML to create links between pages**\r\n\r\n\tSee assessment level in Code Studio.\r\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can we combine several different web pages into one website?**\r\n\r\nStudents begin the lesson by looking online for the first web page and discussing how its use of links was what started the web. They then transition to Web Lab where they learn how to make their own links, as well as good conventions that make it easier for users to navigate on a page.  Finally, they reflect on their group project and what their personal goals are for the final stretch.",
-        "preparation": "* Make sure students have access to their website plans from the previous lesson.",
+        "preparation": "* Make sure students have access to their website plans from the previous lesson.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "Links are the defining characteristic of the web.  Although they seem simple, they are what allow us to move seamlessly across the Internet. This lesson will give students practice in using links and introduce them to good navigation practices for their sites.",
         "student_overview": "**Question of the Day: How can we combine several different web pages into one website?**\n\nIn this lesson, you will learn how to use hyperlinks on a web page. "
       },
@@ -483,6 +489,7 @@
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: What skills and practices will help us work together to make a great website?**\r\n\r\nTeams have spent a lot of time throughout the chapter planning their websites. In this lesson they are finally able to code their pages. Using the project guide, the team works together and individually to code all of the pages, then puts all of the work together into a single site.",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-website-for-a-purpose-web-development-lesson-20/36205) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This project emphasizes many of the core practices of this course. Students will need creativity, problem solving skills, persistence, collaboration and communication to complete their websites. ",
         "student_overview": "**Question of the Day: What skills and practices will help us work together to make a great website?**\n\nIn this lesson, your team will finally code the pages that you have been planning!"
       },
@@ -546,8 +553,21 @@
   ],
   "lesson_activities": [
     {
-      "key": "3c12deb4-0b16-4b91-bfd8-314c5329b0fd",
+      "key": "51a8ef92-df7b-4cb5-a17b-b6d70d5ea566",
       "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "51a8ef92-df7b-4cb5-a17b-b6d70d5ea566",
+        "lesson.key": "Exploring Web Pages",
+        "lesson_group.key": "csd2_1v2",
+        "script.name": "csd2-2022"
+      }
+    },
+    {
+      "key": "3c12deb4-0b16-4b91-bfd8-314c5329b0fd",
+      "position": 2,
       "properties": {
         "name": "Lesson Modifications"
       },
@@ -560,7 +580,7 @@
     },
     {
       "key": "3bdeb93a-6ace-48f2-940e-594eb4fa00d4",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -574,7 +594,7 @@
     },
     {
       "key": "5114c102-679b-43ce-9399-33bff161328c",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -588,7 +608,7 @@
     },
     {
       "key": "8de03792-c957-4389-9d07-66563ce920e1",
-      "position": 4,
+      "position": 5,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1767,6 +1787,18 @@
   ],
   "activity_sections": [
     {
+      "key": "9e251e38-16aa-4539-bed3-194074664e5b",
+      "position": 1,
+      "properties": {
+        "description": "**Starting with Problem Solving:** We recommend teaching the first three lessons from the [Problem Solving and Computing unit](/s/csd1-2022), which introduces the Problem Solving Process referenced throughout the course. These lessons also include a pre-survey that you can administer to students.\n\n**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Canvas\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.",
+        "name": "Preparing for the Unit"
+      },
+      "seeding_key": {
+        "activity_section.key": "9e251e38-16aa-4539-bed3-194074664e5b",
+        "lesson_activity.key": "51a8ef92-df7b-4cb5-a17b-b6d70d5ea566"
+      }
+    },
+    {
       "key": "a2e1159a-9b1a-4816-8448-f224af9b7d17",
       "position": 1,
       "properties": {
@@ -1778,21 +1810,11 @@
       }
     },
     {
-      "key": "4c43d2e4-464c-46f2-8439-e0fde03d95fb",
+      "key": "e62ce10c-b80c-4463-b585-1ba755d17ad9",
       "position": 1,
       "properties": {
-        "description": "**Journal and Discussion**"
-      },
-      "seeding_key": {
-        "activity_section.key": "4c43d2e4-464c-46f2-8439-e0fde03d95fb",
-        "lesson_activity.key": "3bdeb93a-6ace-48f2-940e-594eb4fa00d4"
-      }
-    },
-    {
-      "key": "e62ce10c-b80c-4463-b585-1ba755d17ad9",
-      "position": 2,
-      "properties": {
         "description": "**Prompt:** If you could say something important to the whole world, what would it be?  Why is it important to you?",
+        "name": "Journal",
         "tips": [
           {
             "type": "discussionGoal",
@@ -1807,7 +1829,7 @@
     },
     {
       "key": "062f5aa7-ce44-4667-b468-97c0df0e33f6",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "Allow students to share out their contributions to the group."
       },
@@ -1818,7 +1840,7 @@
     },
     {
       "key": "27e7fcc2-89b1-4e45-8dca-ec8403ab9c1f",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "There are lots of ways that people share with the world.  Today, we're going to look at how people use web pages to share what they have to say.",
         "remarks": true
@@ -1830,7 +1852,7 @@
     },
     {
       "key": "9bb85d89-c2f4-44d2-badf-9a0ac4189b73",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "**Question of the Day:  Why do people create web pages?**"
       },
@@ -9759,6 +9781,17 @@
       }
     },
     {
+      "name": "CSD Learning Frameworks",
+      "url": "https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/preview",
+      "key": "csd_learning_frameworks",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks"
+      }
+    },
+    {
       "name": "CSD Programming Levels Guide",
       "url": "https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview",
       "key": "csd_programming_levels_guide",
@@ -11478,6 +11511,12 @@
     {
       "seeding_key": {
         "resource.key": "csd_implementation_guide",
+        "script.name": "csd2-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks",
         "script.name": "csd2-2022"
       }
     },

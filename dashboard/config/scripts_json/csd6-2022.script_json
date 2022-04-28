@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-22 18:11:37 UTC",
+    "serialized_at": "2022-04-27 23:00:28 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -89,7 +89,7 @@
         "assessment_opportunities": "1. **Identify computing innovations within a given field**\n\n\tActivity Guide, page 2: The description of the device, its purpose, and the type of innovation should clearly demonstrate what it does and why it is innovative.\n\n2. **Describe the inputs and outputs of a device**\n\n\tActivity Guide, page 2: The description of the user interaction should identify multiple possible inputs and outputs for the device.\n\n3. **Describe the impacts of the device on society**\n\n\tActivity Guide, page 2: The description of the impact should identify the people who are impacted and either positive or negative effects of that impact.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students will do some research into interesting innovations in computing. This lesson will expose students to a wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.\n\n**Question of the Day:** What is a computing innovation?",
-        "preparation": "* Cue up [The Internet of Things - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [Computer Science is Changing Everything - Video](https://www.youtube.com/watch?v=QvyTEx1wyOY)\t\n* Print out a copy of the activity guide for each student\n* Decide how you would like to distribute the Computing Innovations Research Areas, and if you would like to make any edits to the document to add or remove websites.",
+        "preparation": "* Cue up [The Internet of Things - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [Computer Science is Changing Everything - Video](https://www.youtube.com/watch?v=QvyTEx1wyOY)\t\n* Print out a copy of the activity guide for each student\n* Decide how you would like to distribute the Computing Innovations Research Areas, and if you would like to make any edits to the document to add or remove websites.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "In this lesson, you will explore a wide variety of new and innovative computing platforms while expanding your understanding of what a computer can be.\n"
       },
       "seeding_key": {
@@ -109,7 +109,7 @@
         "assessment_opportunities": "1. **Connect and troubleshoot external devices**\n\n\tAt the beginning of the online activity, students should connect the boards themselves, using the setup page to troubleshoot common problems.\n\n2. **Turn on and off an LED with code**\n\n\tCode Studio: See rubric on level 9.\n\n3. **Control the buzzer with code**\n\n\tCode Studio: see rubric on level 9.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students get their first opportunity to write programs that use the Circuit Playground. After first inspecting the board visually and hypothesizing possible functionalities, students move online where they will learn to write applications that control an LED and use a buzzer to make sounds. By combining App Lab screens with the Circuit Playgrounds, students can gradually start to integrate elements of the board as an output device while relying on App Lab for user input.\n\n**Question of the Day:** What outputs can I control on the circuit playground?",
-        "preparation": "* Make sure that student computers have the drivers and software necessary to connect to the Circuit Playground ([details here](//studio.code.org/maker/setup))\r\n* Prepare a board and USB cable for each pair of students",
+        "preparation": "* Make sure that student computers have the drivers and software necessary to connect to the Circuit Playground ([details here](//studio.code.org/maker/setup))\n* Prepare a board and USB cable for each pair of students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "In this lesson, you will get to know the Circuit Playground, the circuit board that will be used throughout the rest of this unit. "
       },
       "seeding_key": {
@@ -129,7 +129,7 @@
         "assessment_opportunities": "1. **Set the properties of UI elements using code**\n\n\tCode Studio: See the rubric on the assessment level\n\n1. **Change text on the screen using code**\n\n\tCode Studio: See the rubric on the assessment level\n\n1. **Respond to user input using event handlers**\n\n\tCode Studio: See the rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students should already be familiar with programming in App Lab, specifically using Design Mode to create screen elements and using `onEvent` blocks to create button click events. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the `setProperty()` and `setText()` blocks that allow users to change the properties and content of various UI elements. In this lesson students explore how they can use events to update elements on the screen\n\n**Question of the Day:** How can you update design elements of an app?",
-        "preparation": "- Students do _not_ need Circuit Playgrounds for this lesson, and we recommend teaching the lesson without devices to avoid distractions",
+        "preparation": "- Students do _not_ need Circuit Playgrounds for this lesson, and we recommend teaching the lesson without devices to avoid distractions\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "In this lesson, you will start to build apps that allow for lots of user interaction and functionality"
       },
       "seeding_key": {
@@ -149,7 +149,7 @@
         "assessment_opportunities": "1. **Use a board event handler to control buttons on the circuit playground**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Use a board event handler to control the toggle switch on the circuit playground**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson transitions students from considering the Circuit Playground as strictly an output device and instead introduces the buttons and toggle switches as tools for input. Starting with the hardware buttons and switch, students learn to use [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/), analogously to [`onEvent()`(#fff176)](/docs/applab/onEvent/), in order to take input from their Circuit Playgrounds.\n\n**Question of the Day:** How can the user interact with the circuit playground for input?",
-        "preparation": "- Prepare a board and USB cable for each pair of students",
+        "preparation": "- Prepare a board and USB cable for each pair of students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "In this lesson, you will learn how to use the Circuit Playground's hardware buttons and switch which will give the Circuit Playground input."
       },
       "seeding_key": {
@@ -168,7 +168,7 @@
       "properties": {
         "assessment_opportunities": "1. **Use variables to store information when creating apps**\n\n\tCode Studio: Levels 3-4, and see rubric on the assessment level\n\n1. **Use the counter pattern to update variables when creating apps**\n\n\tCode Studio: Levels 6-7, and see rubric on the assessment level\n\n1. **Use if-statements to make decisions when creating apps**\n\n\tCode Studio: Levels 10-11, and see rubric on the assessment level",
         "overview": "In this lesson, students are introduced to variables, the counter pattern, and if-statements. Students will use these concepts in the context of programming the circuit playground and creating more complex input/output behaviors, such as counting the number of button presses before having the circuit playground make a noise. The concepts in this lesson are used to make more complex and fulfilling apps in future lessons, and students may need to refer back to the videos and examples in this lesson as they continue to master these concepts.\n\n**Question of the Day:** How can I create more complex programs that keep track of information and make decisions?",
-        "preparation": "- Prepare a board and USB cable for each pair of students",
+        "preparation": "- Prepare a board and USB cable for each pair of students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Learn to make more complex programs that keep track of information and make decisions, using variables and if-statements."
       },
       "seeding_key": {
@@ -187,7 +187,7 @@
       "properties": {
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals.",
         "overview": "In this mini-project, students will create an app that uses the Circuit Playground to collect data, then has an app to analyze the data that was collected. This is similar to citizen science fieldwork or survey apps that students may be familiar with. Students will use variables and events to collect data from the circuit playground, then use if-statements to make decisions or recommendations based on the data they collect.\n\n**Question of the Day:** How can I use events and variables to create an app that collects and analyzes data?",
-        "preparation": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas.",
+        "preparation": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-field-collector-app-physical-computing-lesson-6/36200) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Create an app that uses the Circuit Playground to collect data for a specific purpose, then has an app to analyze the data that was collected"
       },
       "seeding_key": {
@@ -207,7 +207,7 @@
         "assessment_opportunities": "1. **Use the color LED block to individually control each color LED**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students learn how to use the 10 color LEDs on the Circuit Playground. Students will control the color and intensity of each LED, then use what they have learned to program light patterns to create a light show on their Circuit Playground.\n\n**Question of the Day:** How can you use the colored LEDs in an app?",
-        "preparation": "- Prepare a board and USB cable for each pair of students",
+        "preparation": "- Prepare a board and USB cable for each pair of students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "In this lesson, you will learn how to access and control the colored LEDs on the Circuit Playground."
       },
       "seeding_key": {
@@ -227,7 +227,7 @@
         "assessment_opportunities": "1. **Design apps using the text input, dropdown, and slider design elements**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Use getProperty and getText to access user input on the screen**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Use user input to update elements on the screen using code**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students learn to use several new design elements - text inputs, dropdowns, and sliders - so they can get user input from the screen of their apps. This lesson also introduces students to the getProperty and getText blocks, which allow them to access their user input in their code. Students first practice using these tools to determine what the user has input in various user interface elements. Students later use getProperty and setProperty together with the counter pattern to make elements move across the screen. A new event trigger, change, is also introduced to represent when a dropdown or slider changes values.\n\n**Question of the Day:** How can we use the app screen for user input?",
-        "preparation": "- Students do _not_ need Circuit Playgrounds for this lesson, and we recommend teaching the lesson without devices.",
+        "preparation": "- Students do _not_ need Circuit Playgrounds for this lesson, and we recommend teaching the lesson without devices.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "In this lesson, you will learn how to use design elements like textboxes or dropdowns to get user input from the screen"
       },
       "seeding_key": {
@@ -246,7 +246,7 @@
       "properties": {
         "assessment_opportunities": "1. **Use inputs from app design elements to update screen elements or produce output on the circuit playground**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Use inputs from the circuit playground to update screen elements or produce output on the circuit playground**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Use variables and if-statements for complex user interaction**\n\n\tCode Studio: see rubric on the assessment level",
         "overview": "In this lesson, students combine inputs and outputs across both the circuit playground and the app screen. For example, students may use dropdowns or sliders to make the LEDs on the circuit playground change. Or, students may use the buttons on the circuit playground to update elements on the screen. This lesson also extends how students use variables and if-statements to make more complex decisions based on user input. There are no new coding commands or circuit playground features in this lesson, but students are combining many elements from previous lessons in new ways.\n\n**Question of the Day:** How can I use inputs and outputs from both the circuit playground and the app screen?",
-        "preparation": "- Prepare a board and USB cable for each pair of students\n- (Optional) consider preparing external reference materials from previous lessons for students, such as a Word Wall or Reference Packet, that students can access.",
+        "preparation": "- Prepare a board and USB cable for each pair of students\n- (Optional) consider preparing external reference materials from previous lessons for students, such as a Word Wall or Reference Packet, that students can access.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Combine inputs and outputs from the screen and Circuit Playground to make complex apps"
       },
       "seeding_key": {
@@ -264,7 +264,7 @@
       "relative_position": 10,
       "properties": {
         "overview": "In this project, students create an app that controls the Circuit Playground so it interacts with the physical environment around it, similar to many smart phone apps that are used to control devices in a house or car or school. Students use physical materials to help design their physical device, then create an app that lets the user interact with the physical device or change settings. ",
-        "preparation": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas.\n* Gather prototyping materials, such as:\n\t* Structural material (cardboard, construction paper, etc)\n\t* Connective material (tape, glue, hot glue, etc)\n\t* Construction tools (scissors, staplers, etc)\n\t* Other materials (cups, binder clips, paper plates, etc)"
+        "preparation": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas.\n* Gather prototyping materials, such as:\n\t* Structural material (cardboard, construction paper, etc)\n\t* Connective material (tape, glue, hot glue, etc)\n\t* Construction tools (scissors, staplers, etc)\n\t* Other materials (cups, binder clips, paper plates, etc)\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-human-device-interaction-physical-computing-lesson-10/36216) forum for verified teachers to find additional strategies or resources shared by fellow teachers"
       },
       "seeding_key": {
         "lesson.key": "Project: Human Device Interaction",
@@ -283,7 +283,7 @@
         "assessment_opportunities": "1. **Develop programs that respond to sensor input**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Scale a range of numbers to meet a specific need**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students explore how the three sensors (sound, light, and temperature) can be used to write programs that respond to changes in the environment. The use of these sensors marks a transition in terms of how users interact with a program. By using sensors as an input, the user of an app doesn't have to directly interact with it at all or may interact without actually realizing they are doing so.\n\n**Question of the Day:** How can I use sensors to detect changes in the environment?",
-        "preparation": "- Prepare a board and USB cable for each pair of students\n* Consider having some flashlights or other light sources on hand for testing the light sensor",
+        "preparation": "- Prepare a board and USB cable for each pair of students\n* Consider having some flashlights or other light sources on hand for testing the light sensor\n- Consider having noisemakers or whistles or small instruments on hand for testing the sound sensor\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-2-lessons-11-18/36180) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Explore the sensors on the Circuit Playground and write programs that respond to the environment.\n"
       },
       "seeding_key": {
@@ -303,7 +303,7 @@
         "assessment_opportunities": "1. **Use accelerometer orientation (pitch and roll) when creating apps**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Use the data event to continually update an element's properties.**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications.\n\n**Question of the Day:** How can I use the accelerometer to create apps?",
-        "preparation": "* Prepare a board and USB cable for each pair of students",
+        "preparation": "* Prepare a board and USB cable for each pair of students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-2-lessons-11-18/36180) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "In this lesson, you will explore the accelerometer and its capabilities. "
       },
       "seeding_key": {
@@ -323,7 +323,7 @@
         "assessment_opportunities": "1. **Use the buzzer to produce individual notes or sequences of notes**\n\n\tCode Studio: see rubric on the assessment level\n\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students will use the buzzer to its full extent by producing sounds, notes, and songs with the buzzer. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of notes. Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together. Once students are able to play notes on the buzzer, they use arrays to hold and play sequences of notes, forming simple songs.\n\n**Question of the Day:** How can I use the buzzer to play musical notes or songs?",
-        "preparation": "* Prepare a board and USB cable for each pair of students",
+        "preparation": "* Prepare a board and USB cable for each pair of students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-2-lessons-11-18/36180) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "In this lesson, you will use the Circuit Playground’s buzzer feature to its full extent by producing sounds, notes, and songs. "
       },
       "seeding_key": {
@@ -343,7 +343,7 @@
         "assessment_opportunities": "1. **Use functions to organize repeated blocks of code**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Use functions to organize repeated blocks of code**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson introduces students to functions as way to organize and group repeated blocks of code together, such as changing all of the LEDs to red or blue. Then, students learn how to use parameters in their functions as a way to generalize behaviors to work for different contexts - for example, changing all the LEDs to a certain color rather than always changing them red or blue. Students will use these concepts in future lessons, and it may be necessary to return to this lesson to reference the resources and videos.\n\n**Question of the Day:** How can I use functions to organize and simplify my code?",
-        "preparation": "* Prepare a board and USB cable for each pair of students",
+        "preparation": "* Prepare a board and USB cable for each pair of students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-2-lessons-11-18/36180) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "In this lesson, you will learn how to create and call functions, then learn how to use parameters to make functions useful across many different situations\n"
       },
       "seeding_key": {
@@ -362,7 +362,7 @@
       "properties": {
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals.",
         "overview": "In this lesson, students create a piece of interactive artwork using the sensors on the Circuit Playground and physical materials. Students explore how the Circuit Playground can augment physical materials to create an interactive experience. This project does not use the App Lab screen except to help with debugging - otherwise, users only interact with the physical artwork itself.",
-        "preparation": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas.\n* Gather prototyping materials, such as:\n\t* Structural material (cardboard, construction paper, etc)\n\t* Connective material (tape, glue, hot glue, etc)\n\t* Construction tools (scissors, staplers, etc)\n\t* Other materials (cups, binder clips, paper plates, etc)",
+        "preparation": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas.\n* Gather prototyping materials, such as:\n\t* Structural material (cardboard, construction paper, etc)\n\t* Connective material (tape, glue, hot glue, etc)\n\t* Construction tools (scissors, staplers, etc)\n\t* Other materials (cups, binder clips, paper plates, etc)\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-interactive-art-physical-computing-lesson-15/36217) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Create a piece of interactive artwork using a Circuit Playground and physical materials"
       },
       "seeding_key": {
@@ -382,7 +382,7 @@
         "assessment_opportunities": "1. **Create and debug a circuit with an LED**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Create prototype devices that control an LED with code**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students learn how to attach external LEDs to their circuit playground and use code to light up these LEDs. This allows students to create more flexible devices that mimic real-world products. This lesson requires several external materials, as well as safety protocols to ensure students don’t accidentally damage their circuit playground.\n\n**Question of the Day:** How can I use external LEDs to create physical prototypes?",
-        "preparation": "* Prepare circuit wiring materials, such as:\n\t* Alligator clip wires (included in Circuit Playground classroom kit)\n\t* LEDs (included in Circuit Playground classroom kit)\n\t* Other conductive material (wire, paper clips, foil, etc)\n\t* (optional) Buttons or switches",
+        "preparation": "* Prepare circuit wiring materials, such as:\n\t* Alligator clip wires (included in Circuit Playground classroom kit)\n\t* LEDs (included in Circuit Playground classroom kit)\n\t* Other conductive material (wire, paper clips, foil, etc)\n\t* (optional) Buttons or switches\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-2-lessons-11-18/36180) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "In this lesson, you will learn to use wires to create devices with external LEDs and add code to control these lights.\n"
       },
       "seeding_key": {
@@ -402,7 +402,7 @@
         "assessment_opportunities": "1. **Create and debug a circuit with a button**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Create prototype devices that use an external button for input**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students learn how to connect external wires to create input events when the wires touch, simulating a button press. Students learn to use code to recognize these external button events to make changes to their app. This allows students to create more flexible devices that mimic real-world products. This lesson requires several external materials, as well as safety protocols to ensure students don’t accidentally damage their circuit playground.\n\n**Question of the Day:** How can I use external buttons to create physical prototypes?",
-        "preparation": "* Prepare circuit wiring materials, such as:\n\t* Alligator clip wires (included in Circuit Playground classroom kit)\n\t* LEDs (included in Circuit Playground classroom kit)\n\t* Other conductive material (wire, paper clips, foil, etc)\n\t* (optional) Buttons or switches",
+        "preparation": "* Prepare circuit wiring materials, such as:\n\t* Alligator clip wires (included in Circuit Playground classroom kit)\n\t* LEDs (included in Circuit Playground classroom kit)\n\t* Other conductive material (wire, paper clips, foil, etc)\n\t* (optional) Buttons or switches\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-2-lessons-11-18/36180) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Learn how to connect external wires to create input events when the wires touch, simulating a button press"
       },
       "seeding_key": {
@@ -422,7 +422,7 @@
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this chapter. You may also choose to assign the post-project test through Code Studio.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this final project for the course, students team to develop and test a prototype for an innovative computing device based on the Circuit Playground. Using the inputs and outputs available on the board, groups will create programs that allow for interesting and unique user interactions. ",
-        "preparation": "* Collect materials for physical prototyping, eg.\r\n\t* Cardboard\r\n\t* Scissors\r\n\t* Tape\r\n\t* Glue\r\n\t* Foil\r\n* Print a copy of the project guide for each pair of students\r\n* Print a copy of the peer review sheet for each student\r\n* Print a copy of the rubric for each student",
+        "preparation": "* Collect materials for physical prototyping, eg.\n\t* Cardboard\n\t* Scissors\n\t* Tape\n\t* Glue\n\t* Foil\n* Print a copy of the project guide for each pair of students\n* Print a copy of the peer review sheet for each student\n* Print a copy of the rubric for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-prototype-an-innovation-physical-computing-lesson-18/36218) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson is the culmination of Unit 6 and provides students an opportunity to build a Maker Toolkit project of their own from the ground up. This project is an opportunity to showcase technical skills, but they will also need to demonstrate collaboration, constructive peer feedback, and iterative problem solving as they encounter obstacles along the way. This project should be student-directed whenever possible, and provide an empowering and memorable conclusion to the final unit of CS Discoveries.",
         "student_overview": "In this final project, you will be challenged to develop and test a prototype for a device that interacts with the physical world through various types of input and output and allows for interesting and unique user interactions. "
       },
@@ -1330,7 +1330,7 @@
       "key": "c34e82c1-7915-4903-8b84-5bb8e0a93f89",
       "position": 1,
       "properties": {
-        "description": "This unit requires the Adafruit Circuit Playground.  You can read more about this microcontroller board at [https://code.org/circuitplayground](https://code.org/circuitplayground)",
+        "description": "**Starting with Problem Solving:** We recommend teaching the first three lessons from the [Problem Solving and Computing unit](/s/csd1-2022), which introduces the Problem Solving Process referenced throughout the course. These lessons also include a pre-survey that you can administer to students.\n\n**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Canvas\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Circuit Playgrounds:** This unit requires the Adafruit Circuit Playground.  You can read more about this microcontroller board at [https://code.org/circuitplayground](https://code.org/circuitplayground)\n\n**Introducing App Lab:**  This unit assumes students are already familiar with App Lab. If you have students who have not worked in App Lab and Design Mode before, consider spending some additional class time introducing just enough App Lab to students for them to be successful in this unit. For example, by having students complete the [App Lab Hour of Code Tutorial](https://studio.code.org/s/applab-intro/reset)",
         "name": "Preparing for the Unit"
       },
       "seeding_key": {
@@ -10362,6 +10362,17 @@
       }
     },
     {
+      "name": "CSD Learning Frameworks",
+      "url": "https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/preview",
+      "key": "csd_learning_frameworks",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks"
+      }
+    },
+    {
       "name": "CSD Programming Levels Guide",
       "url": "https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview",
       "key": "csd_programming_levels_guide",
@@ -11574,6 +11585,12 @@
     {
       "seeding_key": {
         "resource.key": "csd_implementation_guide",
+        "script.name": "csd6-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks",
         "script.name": "csd6-2022"
       }
     },

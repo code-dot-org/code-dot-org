@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-22 21:11:13 UTC",
+    "serialized_at": "2022-04-27 23:51:23 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -98,7 +98,7 @@
         "assessment_opportunities": "1. **Apply the Problem Solving Process to train a computer to solve a problem**\n\n\tCheck student responses on the activity guide at the end of the class period.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students are introduced to a form of artificial intelligence called machine learning and how they can use the Problem Solving Process to help train a robot to solve problems. They participate in three machine learning activities where a robot - A.I. Bot - is learning how to detect patterns in fish.\n\n**Question of the Day:** How can we use the Problem Solving Process to solve a problem with machine learning?",
-        "preparation": "- Review the Code Studio levels before the lesson\r\n- Print copies of the activity guide for each student",
+        "preparation": "- Review the Code Studio levels before the lesson\n- Print copies of the activity guide for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Learn the basics of machine learning by helping AI Bot recognize fish to clean up the ocean"
       },
       "seeding_key": {
@@ -127,7 +127,7 @@
         "assessment_opportunities": "1) **Describe the differences between supervised and unsupervised learning.**\n\n\tCheck student responses on the activity guide at the end of the class period.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students will consider how they create “mental” models when learning new concepts, and how those can be similar to a “machine learning” model. They participate in a color pattern activity to simulate building a machine learning model without help, then they play a game called \"Green Glass Door\" as an example of supervised learning, and finally, they will sort several scenarios into “supervised” or “unsupervised” learning.\n\n**Question of the Day:** What are different types of machine learning?",
-        "preparation": "- Review all materials for today’s lesson.",
+        "preparation": "- Review all materials for today’s lesson.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "- Review the Code Studio levels before the lesson so you know how to play the game called “the Green Glass Door”\n- Print or prepare to share online copies of the activity guide for each student",
         "student_overview": "Learn two different types of machine learning - supervised and unsupervised learning. Then compare how machine learning can be similar or different to how humans learn."
       },
@@ -156,7 +156,7 @@
         ],
         "assessment_opportunities": "1) **Describe how Artificial Intelligence is having an impact on society**\n\n\tSee the activity guide for this lesson as a way to measure each step of the problem solving process.",
         "overview": "In this lesson, students explore an application of AI called Seeing AI and examine how it is supporting people with visual impairments. Then, students research other examples of how AI is impacting society, focusing on users who are impacted by the examples they find. Finally, students share their findings with each other.\n\n**Question of the Day:** How is AI helping to solve problems around the world?",
-        "preparation": "- Print copies of the activity guide for each student\n- Prepare to digitally distribute the AI Research Areas resource to students. ",
+        "preparation": "- Print copies of the activity guide for each student\n- Prepare to digitally distribute the AI Research Areas resource to students. \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Research different examples of how Artificial Intelligence is being used to solve problems in the world."
       },
       "seeding_key": {
@@ -176,7 +176,7 @@
         "assessment_opportunities": "1) **Describe how a model makes a decision (for example: with randomness, or a decision tree, or using data)**\n\t\n\tUse class discussions as a way to assess how well students understand the different ways computers can make decisions\n\n2) **Look for patterns in data to help make a decision**\n\t\n\tSee the activity guide for this lesson.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students will examine several apps that make decisions about what shoes to wear, ultimately building up to an understanding of how machine learning can help make this decision. Students are guided to the conclusion that surveying their users can help them make the best decision by looking for patterns in the data and basing their decisions on these patterns.\n\n**Question of the Day:** What strategies do computer models use to make decisions?",
-        "preparation": "- Review the Code Studio levels before the lesson\n- Print copies of the activity guide for each student",
+        "preparation": "- Review the Code Studio levels before the lesson\n- Print copies of the activity guide for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Explore three different ways computers can make recommendations and how important data can be in making accurate decisions."
       },
       "seeding_key": {
@@ -196,7 +196,7 @@
         "assessment_opportunities": "1) **Explain how computers can separate data to make a decision**\n\n\tSee the activity guide and the wrap-up response.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students will participate in an unplugged activity simulating one of the machine learning algorithms computers use to separate data into groups to help make decisions. Students will be tasked with helping a computer learn to classify food as fruits or vegetables, graph 20 different fruits on two axes comparing “sweetness” to “easy to eat”, and then try to separate the data into groups - a fruit area, and a veggie area.\n\n**Question of the Day:** How do computers learn to classify data?",
-        "preparation": "- Review all materials for today’s lesson.\r\n- Cut out fruit & veggie cards - one set of cards for each group\r\n- Ruler or straightedge for each student\r\n",
+        "preparation": "- Review all materials for today’s lesson.\n- Cut out fruit & veggie cards - one set of cards for each group\n- Ruler or straightedge for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Learn how to create a machine learning model by helping a computer classify foods as fruits or veggies"
       },
       "seeding_key": {
@@ -216,7 +216,7 @@
         "assessment_opportunities": "1) **Use AI Lab to select features to train a model**\n\n\tEach level requires a minimum accuracy score to continue. Checking that students fully complete each level is enough to verify that they have met this objective.\n\n2) **Use data visualization tools to decide which features to include when training a model**\n\n\tCheck the free responses in the activity guide to assess this objective.\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students will dive into the AI Lab tool for the first time, where they select features to train a model that predicts a given label. They start by exploring AI Lab and training a model to recognize shapes. Then they pretend they have been hired by several restaurants who would like to make recommendations to new customers based on survey data they’re collected, go through each dataset, and use data visualization tools to identify features with high relationships in the data.\n\n**Question of the Day:** How can we use machine learning to make recommendations?",
-        "preparation": "- Review the Code Studio levels before the lesson\n- Watch the two videos in this lesson and be familiar with AI Lab\n- Print or prepare to share online copies of the activity guide for each student\n",
+        "preparation": "- Review the Code Studio levels before the lesson\n- Watch the two videos in this lesson and be familiar with AI Lab\n- Print or prepare to share online copies of the activity guide for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Learn how to use AI Lab to train machine learning models, such as how to recognize shapes or how to make food recommendations for a restaurant."
       },
       "seeding_key": {
@@ -236,7 +236,7 @@
         "assessment_opportunities": "1) **Create an app that uses machine learning**\n\n\tLevel 6 in Code Studio has a mini-rubric that can be used to assess this objective\n\n2) **Add screens and events in App Lab**\n\n\tLevel 6 in Code Studio has a mini-rubric that can be used to assess this objective",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students are introduced to importing their models into App Lab and linking their model to their screens. They help create a book recommendation app and learn how to add a welcome screen and events to their code. This lesson assumes students are already familiar with App Lab - for classrooms that have not seen App Lab before, consider extending this lesson and including additional videos or activities that are recommended in the lesson plan.\n\n**Question of the Day:** How can I create an app using machine learning?",
-        "preparation": "- Review the Code Studio levels before the lesson so you will be familiar with importing a model into App Lab\n- Decide if you would like to provide additional resources for students to become familiar with App Lab, as outlined in the lesson plan.\n",
+        "preparation": "- Review the Code Studio levels before the lesson so you will be familiar with importing a model into App Lab\n- Decide if you would like to provide additional resources for students to become familiar with App Lab, as outlined in the lesson plan.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Learn how to import a model into App Lab to help create a Book Recommendation app for a middle school classroom."
       },
       "seeding_key": {
@@ -256,7 +256,7 @@
         "assessment_opportunities": "1) **Read a model card and use it to evaluate a model**\n\n\tSee the activity guide for this lesson as a way to measure this objective.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students will investigate a model for bias and be introduced to a Model Card, which is a way of representing important information about a trained model that could help uncover bias. They will be investigating a Medical Priority app, which helps a hospital decide how soon to view patients based on their symptoms. As students go through the activity, they realize that the app is biased based on personal information and examine how this could happen.\n\n**Question of the Day:** How can we evaluate machine learning models once they've been trained?",
-        "preparation": "- Review the Code Studio levels before the lesson\n- Anticipate how you will guide the discussion on racial and gender bias, considering that some students may have experiences similar to those discussed in this lesson.",
+        "preparation": "- Review the Code Studio levels before the lesson\n- Anticipate how you will guide the discussion on racial and gender bias, considering that some students may have experiences similar to those discussed in this lesson.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Help decide which model a hospital should use for it's emergency room prioritization system, and determine which models include unintended biases. You will also learn how Model Cards can help evaluate and analyze machine learning models."
       },
       "seeding_key": {
@@ -276,7 +276,7 @@
         "assessment_opportunities": "1) **Use data visualizations and feature iteration to train machine learning models**\n\n\tEach level in this lesson requires at least 75% accuracy before continuing. Students who have completed each level will have met this objective.\n\n2) **Create model cards in AI Lab to save machine learning models**\n\n\tCompleting level 4 satisfies this objective.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students complete the full process of training and saving a model, then importing into App Lab. For the first time, students are able to choose the label they would like to predict and spend time deciding the features they will use to help predict their label of choice. Students also create a model card for their models in order to save them and import it into App Lab\n\n**Question of the Day:** How can I use Model Cards to document my decisions when training a machine learning model?",
-        "preparation": "- Review the Code Studio levels before the lesson to be familiar with investigating columns in AI Lab and training their  model\n- Print copies of the activity guide for each student",
+        "preparation": "- Review the Code Studio levels before the lesson to be familiar with investigating columns in AI Lab and training their  model\n- Print copies of the activity guide for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Help train several models to help a zoo create educational apps for their customers. You will create Model Cards for each of your models, then import one of them into App Lab to create an app."
       },
       "seeding_key": {
@@ -296,7 +296,7 @@
         "assessment_opportunities": "1) **Use a model card to update the user interface of an app**\n\n\tLevel 9 contains a mini-rubric that can be used to assess this objective.\n\n2) **Use if-statements to change the behavior of an app**\n\n\tLevel 9 contains a mini-rubric that can be used to assess this objective.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students practice importing their models into App Lab, this time including models that have numerical data and using model cards to help improve the user experience of filling out their form. They will then learn how to view the model card within App Lab and use this to add more descriptive elements to an app. Next, they focus on improving the user experience by adding informational text to help guide users through completing the form and adding a style to their app to improve the user experience.\n\n**Question of the Day:** How can I use a Model Card to improve my app?",
-        "preparation": "- Review the Code Studio levels before the lesson",
+        "preparation": "- Review the Code Studio levels before the lesson\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Learn how to use Model Cards to improve a machine learning app, and how to update the final screen based on the model prediction."
       },
       "seeding_key": {
@@ -316,7 +316,7 @@
         "assessment_opportunities": "1) **Explain how computers can make decisions by comparing similarities in data**\n\n\tSee the Zombie Prediction activity guide for assessing this objective,\n\n2) **Explain how accuracy calculation for numerical data is different from categorical data**\n\n\tSee the Numerical Accuracy activity guide for assessing this objective.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students participate in an unplugged activity simulating a zombie outbreak. Students must predict which parts of town have the least amount of zombies using data from a neighboring town. Students will use degrees of similarity and averages to make predictions about the number of zombies at a particular location. Then, students are rescued and get to compare their predictions to the actual numbers as a way to discuss how accuracy is different for numerical data compared to categorical data.\n\n**Question of the Day:** How do computers learn to make predictions with numerical data?",
-        "preparation": "- Review all materials for today’s lesson.\r\n- Print or prepare to share online the activity guide - one per student or group.",
+        "preparation": "- Review all materials for today’s lesson.\n- Print or prepare to share online the activity guide - one per student or group.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Zombies have invaded your town and you need to use data to predict which parts of town have the least amount of zombies so you can lead people to safety."
       },
       "seeding_key": {
@@ -336,6 +336,7 @@
         "assessment_opportunities": "1) **Use data visualizations to find patterns in numerical data**\n\n\tCompleting the Safari Model level satisfies this objective\n\n2) **Compare and contrast categorical data versus numerical data**\n\n\tUse the warm-up discussion and exit ticket to assess this objective",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students will be introduced to numerical data which represents a range of values. Students are presented with a scenario where every feature and label is represented with numerical data, and they learn to use the new data visualization tools within AI Lab to help find patterns.\n\n**Question of the Day:** How can we use AI Lab to predict numerical data?",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Use AI Lab and numerical data to make predictions about real-world scenarios"
       },
       "seeding_key": {
@@ -355,7 +356,7 @@
         "assessment_opportunities": "1) **Use the Model Card to create new input elements for a machine learning app**\n\n\tLevel 8 can be used to assess this objective.\n\n1) **Update the default model code to use new inputs in a machine learning app**\n\n\tLevel 8 can be used to assess this objective.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students will explore how to customize the code of their app to make additional changes to the design of their app. They will start by exploring a single-screen app and then practice expanding the app to two-screens and updating the code to use the new design mode elements. After this, students help create a Driver Alert app that requires changes to the code using new design mode elements. Using the skills from this lesson, students will be able to create multi-screen apps where questions can appear on multiple screens instead of a single screen.\n\n**Question of the Day:** How can I customize the code for a machine learning app?",
-        "preparation": "- Review the Code Studio levels before the lesson to be familiar with changing the input element ",
+        "preparation": "- Review the Code Studio levels before the lesson to be familiar with changing the input element \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Learn how to edit the code for a machine learning app by helping to create a driver alert system, where each sensor is on a different screen of the app."
       },
       "seeding_key": {
@@ -374,7 +375,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.\n\n**Question of the Day:** What are guidelines we can use to create ethical machine learning apps?",
-        "preparation": "- Prepare to share online one **AI Ethics Research Areas** handout per group.\r\n- Print or prepare to share online one **AI Ethics Research Reflection** handout per group.\r\n- Prepare a shareable web document, slide presentation, video template, or any other form of media to be used to comprise your class’ “Our AI Code of Ethics” resource.",
+        "preparation": "- Prepare to share online one **AI Ethics Research Areas** handout per group.\n- Print or prepare to share online one **AI Ethics Research Reflection** handout per group.\n- Prepare a shareable web document, slide presentation, video template, or any other form of media to be used to comprise your class’ “Our AI Code of Ethics” resource.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "What does it mean for artificial intelligence to be used ethically? In this lesson, you'll help create an AI Code of Ethics and research examples of artificial intelligence that are or are not following your code of ethics."
       },
       "seeding_key": {
@@ -393,7 +394,7 @@
       "properties": {
         "assessment_opportunities": "A rubric is provided to assess the mini-project",
         "overview": "In this one or two day mini-project, students apply their skills from the unit so far and create a machine learning app using real-world data. Students are provided with several real-world datasets from a variety of contexts, and they choose which dataset they would like to investigate. They train and save their model, then make a simple App Lab app that uses the model. This mini-project is an opportunity to assess how well students can use features to create accurate machine learning models, and how well they can create apps that use machine learning.\n\n**Question of the Day:** Can I use real-world data to create an app that uses machine learning?",
-        "preparation": "- Review the Code Studio levels before the lesson\n- Print copies of the activity guide for each student",
+        "preparation": "- Review the Code Studio levels before the lesson\n- Print copies of the activity guide for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-make-a-machine-learning-app-ai-and-machine-learning-lesson-15/36219) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Choose from several real-world datasets to train a model and create an app that uses machine learning"
       },
       "seeding_key": {
@@ -412,6 +413,7 @@
       "properties": {
         "assessment_opportunities": "1) **Develop a problem observation into a core issue using brainstorming strategies**\n\n\tSee the activity guide for this lesson as a way to measure this objective.\n",
         "overview": "This is the first of a five-day sequence of lessons that prepare students for the final project. In this lesson, students meet a team of fictional students who want to use machine learning to address an issue in their community. Students participate in an issue brainstorm using the 5 Why's strategy, then they help evaluate the ideas that the other student team came up with. The steps students take in this lesson are identical to the steps students will take in their final project.\n\n**Question of the Day:** How can machine learning be used to address an issue in your community?\n\n",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-2-lessons-16-21/36199) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Working with a team of students from another school, develop ideas for how machine learning can be used to address an issue in your community."
       },
       "seeding_key": {
@@ -430,7 +432,7 @@
       "properties": {
         "assessment_opportunities": "1) **Develop survey questions that can be used to create a machine learning app**\n\n\tSee the activity guide for this lesson as a way to measure this objective\n\n2) **Use a template to create a Google Form survey**\n\n\tHave students submit their Google Form to you. Filling out the form can verify whether they used the template correctly to create the form.",
         "overview": "This is the second in a five-day sequence of lessons that prepare students for the final project. In this lesson, students learn that the other team of students would like to create a club recommender app based on the clubs at their school. Students imagine what questions would be most useful to help make this recommendation, then they learn how to use a Google Form template to create a survey. The steps students take in this lesson are identical to the steps students will take in their final project.\n\n**Question of the Day:** How can I create a survey to gather data for a machine learning app?",
-        "preparation": "- Print copies of the activity guide for each student\n- Review the video on how to use a template to create a Google Form",
+        "preparation": "- Print copies of the activity guide for each student\n- Review the video on how to use a template to create a Google Form\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-2-lessons-16-21/36199) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Help the other team of students develop questions that would be useful to create a machine learning app, then learn how to use Google Forms to create a survey to collect data."
       },
       "seeding_key": {
@@ -449,6 +451,7 @@
       "properties": {
         "assessment_opportunities": "1) **Download a csv file from Google Sheets**\n\n\tCompleting Level 3 satisfies this objective.\n\n2) **Upload a csv file to AI Lab**\n\n\tCompleting Level 3 satisfies this objective.\n\n3) **Analyze and clean data in Google Sheets**\n\n\tCompleting Level 5 satisfies this objective.",
         "overview": "This is the third in a five-day sequence of lessons that prepare students for the final project. In this lesson, students learn how to view survey data in Google Sheets and save the data to their computer as a csv file. Then, they upload the saved data to AI Lab and examine the survey results from one of the students to train a model using their data. Then, students use Google Sheets to examine data from another student where the data has errors and then try to fix the errors. The steps students take in this lesson are identical to the steps students will take in their final project, and the problem-solving strategies they develop will help them overcome challenges in their own final project.\n\n**Question of the Day**:  How can I import data into AI Lab to train a machine learning model?",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-2-lessons-16-21/36199) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Learn how to download survey data and use it in AI Lab to train a model. The skills in this lesson are important for completing the final lesson in this unit."
       },
       "seeding_key": {
@@ -467,6 +470,7 @@
       "properties": {
         "assessment_opportunities": "1) **Explain how choices in data collection can lead to issues when training a machine learning model**\n\n\tSee the activity guide for this lesson as a way to measure this objective",
         "overview": "This is the fourth of a five-day sequence of lessons that prepare students for the final project. In this lesson, students examine survey data from other members of the student team and analyze why their models are not working correctly. In examining the data, students develop strategies for avoiding these issues in the future and strategies for coping with these issues should they happen again. These are skills students will use in the final project as they develop their own surveys and collect data.\n\n**Question of the Day**:  What are strategies to make sure our data generates an accurate model?",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-2-lessons-16-21/36199) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Help students from the other team analyze their survey data and determine why they are unable to get accurate models _or_ they are unable to create usable models when tested."
       },
       "seeding_key": {
@@ -485,6 +489,7 @@
       "properties": {
         "assessment_opportunities": "1) **Create an app that uses machine learning**\n\n\tLevel 7 has a mini-rubric that can be used to assess this objective.",
         "overview": "This is the fifth of a five-day sequence of lessons that prepare students for the final project. In this lesson, students import the club recommender app into App Lab and begin customizing the app. Students add a welcome screen and update the descriptions of each feature, then they can decide how they would like to further customize the app. The steps students take in this lesson are identical to the steps students will take in their final project.\n\n**Question of the Day**:  How can I create a friendly, easy-to-use machine learning app?",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-2-lessons-16-21/36199) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "The model is finally ready! Now it's time to import the model into App Lab and build the final Club Recommender app!"
       },
       "seeding_key": {
@@ -502,9 +507,9 @@
       "relative_position": 21,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "To conclude this unit, students develop an AI app that addresses the social issue they have returned to throughout the unit. After looking at a sample app, students follow a project guide to complete this multi-day activity. In the first step, students prepare the data they will use to train their model in AI Lab. After training, testing, and generating a model card, they export their model into App Lab for development. Here they use their model to create a user-friendly app based on their mockup from the previous lesson, “Planning Your App”. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class.\n\n**Question of the Day:** How can I create an AI App the solves a problem in my community?",
-        "preparation": "- Ensure students have copies of their “Lesson 2: AI for Social Good” and “Lesson 19: Planning Your App” handouts.\r\n- Print copies of the Project Guide.\r\n- Print copies of the Rubric.\r\n- Print copies of the Peer Review Guide.\r\n",
-        "student_overview": "To conclude this unit, students develop an AI app that addresses the social issue they have returned to throughout the unit. After looking at a sample app, students follow a project guide to complete this multi-day activity. In the first step, students prepare the data they will use to train their model in AI Lab. After training, testing, and generating a model card, they export their model into App Lab for development. Here they use their model to create a user-friendly app based on their mockup from the previous lesson, “Planning Your App”. Students perform a peer review and make any necessary updates to their projects before preparing a presentation to the class."
+        "overview": "To conclude this unit, students develop an AI app that addresses the social issue of their interest. Students follow a project guide to complete this multi-day activity. In the first step, students prepare the data they will use to train their model in AI Lab. After training, testing, and generating a model card, they export their model into App Lab for development. Here they use their model to create a user-friendly app. Students perform a peer review and make any necessary updates to their projects while reflecting on the outcome.\n\n**Question of the Day:** How can I create an AI App the solves a problem in my community?",
+        "preparation": "- Print copies of the Project Guide.\n- Print copies of the Rubric.\n- Print copies of the Peer Review Guide.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-design-an-ai-app-ai-and-machine-learning-lesson-21/36220) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "Create an app that uses machine learning to solve a problem in your community"
       },
       "seeding_key": {
         "lesson.key": "Design an AI App",
@@ -533,7 +538,7 @@
       "key": "92ecc06f-cf07-4550-9f9f-1fc435c8a453",
       "position": 1,
       "properties": {
-        "name": "Before the Unit"
+        "name": "Before the Lesson"
       },
       "seeding_key": {
         "lesson_activity.key": "92ecc06f-cf07-4550-9f9f-1fc435c8a453",
@@ -1495,7 +1500,8 @@
       "key": "aeada9ea-6aee-47f4-a0fc-2f9760dfa7a0",
       "position": 1,
       "properties": {
-        "description": "This unit assumes students are already familiar with the design elements of App Lab and the onEvent and setScreen commands - essentially what is covered in Unit 4 of CS Discoveries or the App Lab Hour of Code tutorial. Students will use App Lab for the first time in Lesson 7. \n\nIf you have students who have not worked in App Lab and Design Mode before, you may consider spending some additional class time introducing just enough App Lab to students for them to be successful in this unit. [Click here](https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview) to read our recommendations for how to do this."
+        "description": "**Starting with Problem Solving:** We recommend teaching the first three lessons from the [Problem Solving and Computing unit](/s/csd1-2022), which introduces the Problem Solving Process referenced throughout the course. These lessons also include a pre-survey that you can administer to students.\n\n**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Canvas\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Introducing App Lab:**  This unit assumes students are already familiar with App Lab. If you have students who have not worked in App Lab and Design Mode before, consider spending some additional class time introducing just enough App Lab to students for them to be successful in this unit. For example, by having students complete the [App Lab Hour of Code Tutorial](https://studio.code.org/s/applab-intro/reset)",
+        "name": "Preparing for the Unit"
       },
       "seeding_key": {
         "activity_section.key": "aeada9ea-6aee-47f4-a0fc-2f9760dfa7a0",
@@ -11411,7 +11417,7 @@
     },
     {
       "name": "Survey Template [Google Form]",
-      "url": "https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy",
+      "url": "https://docs.google.com/forms/d/1E4sGp03dDW6TYVh1G6zlNITuuSaLFGlMox2E0Iiczzo/copy",
       "key": "survey_template_google_form_",
       "properties": {
         "audience": "Student"
