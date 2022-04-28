@@ -387,7 +387,7 @@ export const asyncLoadSectionData = id => dispatch => {
   dispatch({type: ASYNC_LOAD_BEGIN});
 
   let apis = [
-    '/dashboardapi/sections?without_students=true',
+    '/dashboardapi/sections',
     '/dashboardapi/sections/valid_course_offerings',
     '/dashboardapi/sections/available_participant_types'
   ];
