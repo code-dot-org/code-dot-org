@@ -5,16 +5,47 @@ theme: responsive
 ---
 
 <style>
-  section{
+  .clearfix {
+    clear: both;
+    margin-bottom: 4em;
+  }
+
+  .no-padding {
+    padding: 0;
+  }
+
+  .no-flex {
+    display: unset;
+  }
+
+  section {
     padding: 2em;
     display: flex;
     justify-content: space-around;
+  }
+
+    section h3 {
+      background: #00b2c0;
+      color: white;
+      padding: 1em;
+      margin: 2em 0 0;
+      width: 100%;
+    }
+
+  .lists h4 {
+    padding: 1em;
+    margin: 2px 0 0;
+    background: #5b6770;
+    color: white;
   }
 
   img {
     align-self: center;
   }
 </style>
+
+
+
 
 # Supporters
 
@@ -37,8 +68,40 @@ To contact the Office of Development, please email giving@code.org or call (206)
 
 
 ## Gold Supporters ($1,000,000+)
+<section>
+  <img src="/images/fit-200/avatars/ballmer_group.jpg" alt="Ballmer Group logo" />
+  <img src="/images/fit-200/avatars/google.png" alt="Google logo" />
+</section>
+<section>
+  <p style="font-size: 16px;"><strong>Charlie Lee</strong></p>
+  <p style="font-size: 16px;"><strong>Anonymous</strong></p>
+</section>
 
 
+<section class="lists no-flex no-padding">
+  <section class="no-padding">
+    <h3>Institutional Supporters</h3>
+    <h3>Individual Supporters</h3>
+  </section>
+
+  <h4>$500,000+</h4>
+
+  <div class="col-50">
+    <ul>
+      <li>Test</li>
+      <li>Test2</li>
+    </ul>
+  </div>
+
+  <div class="col-50">
+    <ul>
+      <li>Test3</li>
+      <li>Test4</li>
+    </ul>
+  </div>
+</section>
+
+<div class="clearfix"></div>
 
 <hr />
 <a href="/about/donation-policy">Donation Policy</a>
