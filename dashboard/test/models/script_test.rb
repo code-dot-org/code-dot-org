@@ -2177,6 +2177,16 @@ class ScriptTest < ActiveSupport::TestCase
     end
   end
 
+  test 'should raise error if deeper learning course is being launched' do
+    unit = create(:standalone_unit, professional_learning_course: 'my-deeper-learning-course')
+    error = assert_raises do
+      unit.published_state = 'stable'
+      unit.save!
+    end
+
+    assert_includes error.message, 'Published state must be in_development or beta for a deeper learning course.'
+  end
+
   test 'should raise error if participant audience is nil for standalone unit' do
     unit = create(:standalone_unit)
     error = assert_raises do
