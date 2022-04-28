@@ -18,7 +18,7 @@ export default function NewCourseFields(props) {
           className="familyNameSelector"
           onChange={e => {
             setSelectedFamilyName(e.target.value);
-            props.setFamilyName(e.target.value);
+            props.setFamilyAndCourseType(e.target.value);
           }}
           disabled={newFamilyName !== ''}
         >
@@ -135,6 +135,7 @@ NewCourseFields.propTypes = {
   versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
   familyName: PropTypes.string.isRequired,
   setFamilyName: PropTypes.func.isRequired,
+  setFamilyAndCourseType: PropTypes.func.isRequired,
   versionYear: PropTypes.string.isRequired,
   setVersionYear: PropTypes.func.isRequired,
   instructionType: PropTypes.string.isRequired,
