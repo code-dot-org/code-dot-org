@@ -1608,6 +1608,22 @@ class ScriptTest < ActiveSupport::TestCase
     assert_not Script.modern_elementary_courses_available?("fr-fr")
   end
 
+  test 'locale_english_name_map' do
+    english_names = Script.locale_english_name_map
+    assert english_names.key?('en-US')
+    assert_equal english_names['en-US'], 'English'
+    assert english_names.key?('fr-FR')
+    assert_equal english_names['fr-FR'], 'French'
+  end
+
+  test 'locale_native_name_map' do
+    native_names = Script.locale_native_name_map
+    assert native_names.key?('en-US')
+    assert_equal native_names['en-US'], 'English'
+    assert native_names.key?('fr-FR')
+    assert_equal native_names['fr-FR'], 'Français'
+  end
+
   test 'supported_locale_codes' do
     unit = create :script
     assert_equal ['en-US'], unit.supported_locale_codes

@@ -438,7 +438,7 @@ module LevelsHelper
   def widget_options
     app_options = {}
     app_options[:level] ||= {}
-    app_options[:level].merge! @level.properties.camelize_keys
+    app_options[:level].merge! @level.widget_app_options
     app_options.merge! view_options.camelize_keys
     set_puzzle_position_options(app_options[:level])
     app_options
