@@ -128,7 +128,7 @@ export default class ChangeEmailForm extends React.Component {
             labelDetails={this.emailOptInLabelDetails()}
             error={validationErrors.emailOptIn}
           >
-            <div>
+            <>
               <label>
                 <input
                   style={styles.radio}
@@ -138,6 +138,7 @@ export default class ChangeEmailForm extends React.Component {
                   onClick={this.onEmailOptInChange}
                   disabled={disabled}
                   onKeyDown={this.onKeyDown}
+                  tabIndex="1"
                 />
                 {i18n.yes()}
               </label>
@@ -150,10 +151,11 @@ export default class ChangeEmailForm extends React.Component {
                   onClick={this.onEmailOptInChange}
                   disabled={disabled}
                   onKeyDown={this.onKeyDown}
+                  tabIndex="1"
                 />
                 {i18n.no()}
               </label>
-            </div>
+            </>
           </Field>
         )}
       </div>
