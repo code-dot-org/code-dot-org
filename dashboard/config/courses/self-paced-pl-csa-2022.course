@@ -5,7 +5,7 @@
     "self-paced-pl-csa2-2022",
     "self-paced-pl-csa3-2022"
   ],
-  "published_state": "pilot",
+  "published_state": "stable",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",
