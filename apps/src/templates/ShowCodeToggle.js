@@ -41,7 +41,7 @@ class ShowCodeButton extends Component {
   }
 
   render() {
-    let blockGlyphIconStyle = {
+    const blockGlyphIconStyle = {
       ...styles.blocksGlyph,
       ...(this.props.isRtl && styles.blocksGlyphRtl)
     };
