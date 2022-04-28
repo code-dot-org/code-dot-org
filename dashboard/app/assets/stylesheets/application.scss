@@ -1687,7 +1687,19 @@ a.download-video {
   }
 
   #forgot-password {
-    font-family: $gotham-extra-bold-italics;
+    font-family: $gotham-extra-bold;
+  }
+
+  #password_input {
+    margin-bottom: 0;
+  }
+
+  #password_field {
+    margin-bottom: 7px;
+  }
+
+  .password_help_link {
+    margin-bottom: 21px;
   }
 
   button {
