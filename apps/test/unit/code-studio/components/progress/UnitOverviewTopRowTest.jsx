@@ -5,7 +5,7 @@ import i18n from '@cdo/locale';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {UnconnectedUnitOverviewTopRow as UnitOverviewTopRow} from '@cdo/apps/code-studio/components/progress/UnitOverviewTopRow';
 import Button from '@cdo/apps/templates/Button';
-import DropdownButton from '@cdo/apps/templates/DropdownButton';
+import PrintPdfDropdownButton from '@cdo/apps/templates/PrintPdfDropdownButton';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
@@ -341,16 +341,16 @@ describe('UnitOverviewTopRow', () => {
         viewAs={ViewType.Instructor}
       />
     );
-    expect(wrapper.find(DropdownButton).length).to.equal(1);
+    expect(wrapper.find(PrintPdfDropdownButton).length).to.equal(1);
     const dropdownLinks = wrapper
-      .find(DropdownButton)
+      .find(PrintPdfDropdownButton)
       .first()
-      .props().children;
-    expect(dropdownLinks.map(link => link.props.href)).to.eql([
+      .props().dropdownOptions;
+    expect(dropdownLinks.map(link => link.url)).to.eql([
       '/link/to/script_overview.pdf',
       '/link/to/script_resources.pdf'
     ]);
-    expect(dropdownLinks.map(link => link.props.children)).to.eql([
+    expect(dropdownLinks.map(link => link.name)).to.eql([
       'Print Lesson Plans',
       'Print Handouts'
     ]);
@@ -365,7 +365,7 @@ describe('UnitOverviewTopRow', () => {
         viewAs={ViewType.Participant}
       />
     );
-    expect(wrapper.find(DropdownButton).length).to.equal(0);
+    expect(wrapper.find(PrintPdfDropdownButton).length).to.equal(0);
   });
 
   it('renders RTL without errors', () => {
