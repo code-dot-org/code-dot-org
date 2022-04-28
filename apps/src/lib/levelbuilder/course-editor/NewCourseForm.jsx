@@ -46,7 +46,8 @@ export default function NewCourseForm(props) {
         families={props.families}
         versionYearOptions={props.versionYearOptions}
         familyName={familyName}
-        setFamilyName={setFamilyAndCourseType}
+        setFamilyAndCourseType={setFamilyAndCourseType}
+        setFamilyName={setFamilyName}
         versionYear={versionYear}
         setVersionYear={setVersionYear}
         instructionType={instructionType}
