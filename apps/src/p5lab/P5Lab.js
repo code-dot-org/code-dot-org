@@ -138,6 +138,7 @@ export default class P5Lab {
     dropletConfig.injectGameLab(this);
 
     consoleApi.setLogMethod(this.log.bind(this));
+    consoleApi.setClearMethod(this.clear.bind(this));
 
     /** Expose for testing **/
     window.__mostRecentGameLabInstance = this;
@@ -184,6 +185,16 @@ export default class P5Lab {
       getStore().dispatch(
         jsDebugger.appendLog({output: object, fromConsoleLog: true}, logLevel)
       );
+    }
+  }
+
+  /**
+   * Clear both loggers.
+   */
+  clear() {
+    this.consoleLogger_.clear();
+    if (this.debuggerEnabled) {
+      getStore().dispatch(jsDebugger.clearLog());
     }
   }
 

@@ -119,6 +119,15 @@ Applab.log = function(object, logLevel) {
 };
 consoleApi.setLogMethod(Applab.log);
 
+Applab.clear = function() {
+  if (jsInterpreterLogger) {
+    jsInterpreterLogger.clear();
+  }
+
+  getStore().dispatch(jsDebugger.clearLog());
+};
+consoleApi.setClearMethod(Applab.clear);
+
 var level;
 var skin;
 var copyrightStrings;
