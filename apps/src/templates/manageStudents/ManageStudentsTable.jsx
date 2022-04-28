@@ -690,6 +690,7 @@ class ManageStudentsTable extends Component {
             type={NotificationType.failure}
             notice={i18n.passwordsMustBeSixChars()}
             details={i18n.passwordUpdateFailed()}
+            dismissible={false}
           />
         )}
         {addStatus.status === AddStatus.FULL && (
