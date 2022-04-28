@@ -1,53 +1,33 @@
-# A DynamoDB adapter class that allows us to use
-# dynamodb as a persistent store with the datastore_cache.
+# A DynamoDB adapter class that allows us to use dynamodb as a persistent store
+# with the datastore_cache.
 require 'aws-sdk-dynamodb'
-require 'oj'
+require 'set'
 
-class DynamoDBAdapter
+require 'dynamic_config/adapters/base'
+
+class DynamoDBAdapter < BaseAdapter
   # @param table_name [String] the name of the dynamodb table to use
   def initialize(table_name)
     @table_name = table_name
     @client = Aws::DynamoDB::Client.new
   end
 
-  # @param key [String]
-  # @returns [Object] or nil if the key doesnt exist
-  def get(key)
-    resp = @client.get_item(
-      {
-        table_name: @table_name,
-        key: {'data-key' => key}
-      }
-    )
-    return nil if resp.item.nil?
-    begin
-      value = Oj.load(resp.item['data-value'])
-    rescue => exc
-      Honeybadger.notify(exc)
-      value = nil
-    end
-    value
-  end
+  private
 
-  # @param key [String]
-  # @param value [JSONable object]
-  # @raise if DynamoDB is unavailable
-  def set(key, value)
+  def persist(key, value)
     @client.put_item(
       {
         table_name: @table_name,
         item: {
           'data-key' => key,
-          'data-value' => Oj.dump(value, mode: :strict)
+          'data-value' => value
         }
       }
     )
   end
 
-  # @returns [Hash]
-  # @raise if DynamoDB is unavailable
-  def all
-    result = {}
+  def all_persisted_keys
+    result = Set[]
     last_evaluated = nil
     loop do
       resp = @client.scan(
@@ -57,16 +37,10 @@ class DynamoDBAdapter
         }
       )
 
-      resp.items.each do |item|
-        key = item['data-key']
-        begin
-          value = Oj.load(item['data-value'])
-        rescue => exc
-          Honeybadger.notify(exc)
-          value = nil
-        end
-        result[key] = value
+      keys = resp.items.map do |item|
+        item['data-key']
       end
+      result.merge(keys)
 
       break if resp.count == 0 || resp.last_evaluated_key.nil?
       last_evaluated = resp.last_evaluated_key
@@ -75,7 +49,14 @@ class DynamoDBAdapter
     result
   end
 
-  def clear
-    raise NotImplementedError, "DynamoDBAdapter does not support clear"
+  def retrieve(key)
+    resp = @client.get_item(
+      {
+        table_name: @table_name,
+        key: {'data-key' => key}
+      }
+    )
+    return nil if resp.item.nil?
+    return resp.item['data-value']
   end
 end
