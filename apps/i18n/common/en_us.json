@@ -1107,6 +1107,7 @@
   "libraryUnPublishExplanation": "No one will be able to import or update your library. However, people who have already imported your library will be able to keep using it. You can re-publish your library at any time.",
   "libraryUnPublishFail": "There was an error unpublishing your library. Please check your internet connection and try again.",
   "libraryUnPublishTitle": "Successfully unpublished your library",
+  "licenseMaterials": "If you are interested in licensing Code.org materials for commercial purposes [contact us]({link}).",
   "linesOfCode": "Lines of Code",
   "links": "Links",
   "linux": "Linux",
