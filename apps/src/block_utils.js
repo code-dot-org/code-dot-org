@@ -24,9 +24,10 @@ exports.createToolbox = function(blocks) {
 
 const appendBlocks = function(toolboxDom, blockTypes) {
   const root = toolboxDom.firstChild;
-  blockTypes.forEach(blockName => {
+  blockTypes.forEach((blockName, idCounter) => {
     const block = toolboxDom.createElement('block');
     block.setAttribute('type', blockName);
+    block.setAttribute('id', idCounter++);
     root.appendChild(block);
   });
   return xml.serialize(toolboxDom);
