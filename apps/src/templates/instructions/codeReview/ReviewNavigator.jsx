@@ -11,8 +11,6 @@ class ReviewNavigator extends Component {
   static propTypes = {
     viewPeerList: PropTypes.bool,
     loadPeers: PropTypes.func,
-    dropdownText: PropTypes.string,
-    color: PropTypes.string,
     teacherAccountViewingAsParticipant: PropTypes.bool
   };
 
@@ -100,12 +98,12 @@ class ReviewNavigator extends Component {
   }
 
   render() {
-    const {viewPeerList, dropdownText, color} = this.props;
+    const {viewPeerList} = this.props;
     return viewPeerList ? (
       <div style={styles.container}>
         <DropdownButton
-          text={dropdownText || javalabMsg.reviewClassmateProject()}
-          color={color || Button.ButtonColor.white}
+          text={javalabMsg.reviewClassmateProject()}
+          color={Button.ButtonColor.white}
           onClick={this.onDropdownClick}
           className="peer-dropdown-button"
         >
@@ -115,7 +113,7 @@ class ReviewNavigator extends Component {
     ) : (
       <Button
         text={javalabMsg.returnToMyProject()}
-        color={color || Button.ButtonColor.white}
+        color={Button.ButtonColor.white}
         icon={'caret-left'}
         size={Button.ButtonSize.default}
         iconStyle={styles.backToProjectIcon}
