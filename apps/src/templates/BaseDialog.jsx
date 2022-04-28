@@ -27,6 +27,7 @@ export default class BaseDialog extends React.Component {
     children: PropTypes.node,
     fixedWidth: PropTypes.number,
     fixedHeight: PropTypes.number,
+    useFlexbox: PropTypes.bool,
     bodyId: PropTypes.string,
     bodyClassName: PropTypes.string,
     style: PropTypes.object,
@@ -121,6 +122,13 @@ export default class BaseDialog extends React.Component {
         overflowY: overflowY,
         borderRadius: 4
       };
+      if (this.props.useFlexbox) {
+        modalBodyStyle = {
+          ...modalBodyStyle,
+          display: 'flex',
+          flexDirection: 'column'
+        };
+      }
       bodyStyle = {
         ...bodyStyle,
         width: this.props.fixedWidth || BASE_DIALOG_WIDTH,
