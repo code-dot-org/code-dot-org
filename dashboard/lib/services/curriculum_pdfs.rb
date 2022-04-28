@@ -89,7 +89,11 @@ module Services
     #    process themselves.
     # 2. Is the script one for which we care about PDFs? Right now, we only
     #    want to generate PDFs for "migrated" scripts.
-    # 3. Is the script actually being updated? The overall seed process is
+    # 3. Is the unit able to be seen by a signed out user?
+    #    We rely on being able to see the unit overview page as a signed out user
+    #    in order to generate the overview pdf. When a course is in-development or pilot
+    #    signed out users can not see the unit overview page
+    # 4. Is the script actually being updated? The overall seed process is
     #    indiscriminate, and will happily re-seed content even without
     #    changes. This is fine for database upserts, but we want to be more
     #    cautious with the more-expensive PDFs generation process.
