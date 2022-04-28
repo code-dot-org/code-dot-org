@@ -63,7 +63,7 @@ describe('SubmissionStatusAssessmentsTable', () => {
       />
     );
 
-    const timeStampCells = wrapper.find('#timestampCell');
+    const timeStampCells = wrapper.find('.timestampCell');
     assert.equal(timeStampCells.length, 10);
 
     const timestampHeaderCell = wrapper.find('#timestampHeaderCell');
@@ -73,70 +73,70 @@ describe('SubmissionStatusAssessmentsTable', () => {
 
     assert.equal(
       wrapper
-        .find('#timestampCell')
+        .find('.timestampCell')
         .at(0)
         .text(),
       i18n.notStarted()
     );
     assert.equal(
       wrapper
-        .find('#timestampCell')
+        .find('.timestampCell')
         .at(1)
         .text(),
       i18n.notStarted()
     );
     assert.equal(
       wrapper
-        .find('#timestampCell')
+        .find('.timestampCell')
         .at(2)
         .text(),
       i18n.inProgress()
     );
     assert.equal(
       wrapper
-        .find('#timestampCell')
+        .find('.timestampCell')
         .at(3)
         .text(),
       i18n.inProgress()
     );
     assert.equal(
       wrapper
-        .find('#timestampCell')
+        .find('.timestampCell')
         .at(4)
         .text(),
       testDataTimestamps.oldest.toLocaleString()
     );
     assert.equal(
       wrapper
-        .find('#timestampCell')
+        .find('.timestampCell')
         .at(5)
         .text(),
       testDataTimestamps.older.toLocaleString()
     );
     assert.equal(
       wrapper
-        .find('#timestampCell')
+        .find('.timestampCell')
         .at(6)
         .text(),
       testDataTimestamps.old.toLocaleString()
     );
     assert.equal(
       wrapper
-        .find('#timestampCell')
+        .find('.timestampCell')
         .at(7)
         .text(),
       testDataTimestamps.new.toLocaleString()
     );
     assert.equal(
       wrapper
-        .find('#timestampCell')
+        .find('.timestampCell')
         .at(8)
         .text(),
       testDataTimestamps.newer.toLocaleString()
     );
     assert.equal(
       wrapper
-        .find('#timestampCell')
+        .find('.timestampCell')
         .at(9)
         .text(),
       testDataTimestamps.newest.toLocaleString()
@@ -147,70 +147,70 @@ describe('SubmissionStatusAssessmentsTable', () => {
 
     assert.equal(
       wrapper
-        .find('#timestampCell')
+        .find('.timestampCell')
         .at(9)
         .text(),
       i18n.notStarted()
     );
     assert.equal(
       wrapper
-        .find('#timestampCell')
+        .find('.timestampCell')
         .at(8)
         .text(),
       i18n.notStarted()
     );
     assert.equal(
       wrapper
-        .find('#timestampCell')
+        .find('.timestampCell')
         .at(7)
         .text(),
       i18n.inProgress()
     );
     assert.equal(
       wrapper
-        .find('#timestampCell')
+        .find('.timestampCell')
         .at(6)
         .text(),
       i18n.inProgress()
     );
     assert.equal(
       wrapper
-        .find('#timestampCell')
+        .find('.timestampCell')
         .at(5)
         .text(),
       testDataTimestamps.oldest.toLocaleString()
     );
     assert.equal(
       wrapper
-        .find('#timestampCell')
+        .find('.timestampCell')
         .at(4)
         .text(),
       testDataTimestamps.older.toLocaleString()
     );
     assert.equal(
       wrapper
-        .find('#timestampCell')
+        .find('.timestampCell')
         .at(3)
         .text(),
       testDataTimestamps.old.toLocaleString()
     );
     assert.equal(
       wrapper
-        .find('#timestampCell')
+        .find('.timestampCell')
         .at(2)
         .text(),
       testDataTimestamps.new.toLocaleString()
     );
     assert.equal(
       wrapper
-        .find('#timestampCell')
+        .find('.timestampCell')
         .at(1)
         .text(),
       testDataTimestamps.newer.toLocaleString()
     );
     assert.equal(
       wrapper
-        .find('#timestampCell')
+        .find('.timestampCell')
         .at(0)
         .text(),
       testDataTimestamps.newest.toLocaleString()
