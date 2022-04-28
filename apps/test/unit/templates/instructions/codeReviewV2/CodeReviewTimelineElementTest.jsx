@@ -117,14 +117,6 @@ describe('CodeReviewTimelineElement', () => {
       expect(borderLeft).to.equal('none');
     });
 
-    it('displays line above if it is the last element', () => {
-      const wrapper = setUp({
-        type: codeReviewTimelineElementType.COMMIT,
-        isLast: true
-      });
-      expect(wrapper.find('TimelineLine')).to.have.length(1);
-    });
-
     it('displays gray timeline dot with a check', () => {
       const wrapper = setUp({
         type: codeReviewTimelineElementType.COMMIT
@@ -174,20 +166,20 @@ describe('CodeReviewTimelineElement', () => {
       expect(wrapper.find('.the-child')).to.have.length(1);
     });
 
-    it('displays a top and bottom line if it is not the lasst', () => {
+    it('displays a bottom line if it is not the last', () => {
       const wrapper = setUp({
         type: codeReviewTimelineElementType.CODE_REVIEW,
         isLast: false
       });
-      expect(wrapper.find('TimelineLine')).to.have.length(2);
+      expect(wrapper.find('TimelineLine')).to.have.length(1);
     });
 
-    it('displays only top line if it is the last', () => {
+    it('displays no line if it is last', () => {
       const wrapper = setUp({
         type: codeReviewTimelineElementType.CODE_REVIEW,
         isLast: true
       });
-      expect(wrapper.find('TimelineLine')).to.have.length(1);
+      expect(wrapper.find('TimelineLine')).to.have.length(0);
     });
   });
 });
