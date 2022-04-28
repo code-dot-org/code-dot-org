@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-25 22:52:01 UTC",
+    "serialized_at": "2022-04-27 22:53:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -553,8 +553,21 @@
   ],
   "lesson_activities": [
     {
-      "key": "3c12deb4-0b16-4b91-bfd8-314c5329b0fd",
+      "key": "51a8ef92-df7b-4cb5-a17b-b6d70d5ea566",
       "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "51a8ef92-df7b-4cb5-a17b-b6d70d5ea566",
+        "lesson.key": "Exploring Web Pages",
+        "lesson_group.key": "csd2_1v2",
+        "script.name": "csd2-2022"
+      }
+    },
+    {
+      "key": "3c12deb4-0b16-4b91-bfd8-314c5329b0fd",
+      "position": 2,
       "properties": {
         "name": "Lesson Modifications"
       },
@@ -567,7 +580,7 @@
     },
     {
       "key": "3bdeb93a-6ace-48f2-940e-594eb4fa00d4",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -581,7 +594,7 @@
     },
     {
       "key": "5114c102-679b-43ce-9399-33bff161328c",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -595,7 +608,7 @@
     },
     {
       "key": "8de03792-c957-4389-9d07-66563ce920e1",
-      "position": 4,
+      "position": 5,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1774,6 +1787,18 @@
   ],
   "activity_sections": [
     {
+      "key": "9e251e38-16aa-4539-bed3-194074664e5b",
+      "position": 1,
+      "properties": {
+        "description": "**Starting with Problem Solving:** We recommend teaching the first three lessons from the [Problem Solving and Computing unit](/s/csd1-2022), which introduces the Problem Solving Process referenced throughout the course. These lessons also include a pre-survey that you can administer to students.\n\n**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Canvas\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.",
+        "name": "Preparing for the Unit"
+      },
+      "seeding_key": {
+        "activity_section.key": "9e251e38-16aa-4539-bed3-194074664e5b",
+        "lesson_activity.key": "51a8ef92-df7b-4cb5-a17b-b6d70d5ea566"
+      }
+    },
+    {
       "key": "a2e1159a-9b1a-4816-8448-f224af9b7d17",
       "position": 1,
       "properties": {
@@ -1785,21 +1810,11 @@
       }
     },
     {
-      "key": "4c43d2e4-464c-46f2-8439-e0fde03d95fb",
+      "key": "e62ce10c-b80c-4463-b585-1ba755d17ad9",
       "position": 1,
       "properties": {
-        "description": "**Journal and Discussion**"
-      },
-      "seeding_key": {
-        "activity_section.key": "4c43d2e4-464c-46f2-8439-e0fde03d95fb",
-        "lesson_activity.key": "3bdeb93a-6ace-48f2-940e-594eb4fa00d4"
-      }
-    },
-    {
-      "key": "e62ce10c-b80c-4463-b585-1ba755d17ad9",
-      "position": 2,
-      "properties": {
         "description": "**Prompt:** If you could say something important to the whole world, what would it be?  Why is it important to you?",
+        "name": "Journal",
         "tips": [
           {
             "type": "discussionGoal",
@@ -1814,7 +1829,7 @@
     },
     {
       "key": "062f5aa7-ce44-4667-b468-97c0df0e33f6",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "Allow students to share out their contributions to the group."
       },
@@ -1825,7 +1840,7 @@
     },
     {
       "key": "27e7fcc2-89b1-4e45-8dca-ec8403ab9c1f",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "There are lots of ways that people share with the world.  Today, we're going to look at how people use web pages to share what they have to say.",
         "remarks": true
@@ -1837,7 +1852,7 @@
     },
     {
       "key": "9bb85d89-c2f4-44d2-badf-9a0ac4189b73",
-      "position": 5,
+      "position": 4,
       "properties": {
         "description": "**Question of the Day:  Why do people create web pages?**"
       },
@@ -9766,6 +9781,17 @@
       }
     },
     {
+      "name": "CSD Learning Frameworks",
+      "url": "https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/preview",
+      "key": "csd_learning_frameworks",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks"
+      }
+    },
+    {
       "name": "CSD Programming Levels Guide",
       "url": "https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview",
       "key": "csd_programming_levels_guide",
@@ -11485,6 +11511,12 @@
     {
       "seeding_key": {
         "resource.key": "csd_implementation_guide",
+        "script.name": "csd2-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks",
         "script.name": "csd2-2022"
       }
     },
