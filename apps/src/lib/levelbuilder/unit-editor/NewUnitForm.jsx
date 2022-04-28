@@ -20,6 +20,17 @@ export default function NewUnitForm(props) {
     return name;
   };
 
+  const setFamilyAndCourseType = familyName => {
+    setFamilyName(familyName);
+    setParticipantAudience(
+      props.familiesCourseTypes[familyName].participant_audience
+    );
+    setInstructorAudience(
+      props.familiesCourseTypes[familyName].instructor_audience
+    );
+    setInstructionType(props.familiesCourseTypes[familyName].instruction_type);
+  };
+
   return (
     <form action="/s" method="post">
       <RailsAuthenticityToken />
@@ -55,15 +66,12 @@ export default function NewUnitForm(props) {
             families={props.families}
             versionYearOptions={props.versionYearOptions}
             familyName={familyName}
-            setFamilyName={setFamilyName}
+            setFamilyName={setFamilyAndCourseType}
             versionYear={versionYear}
             setVersionYear={setVersionYear}
             instructionType={instructionType}
-            setInstructionType={setInstructionType}
             instructorAudience={instructorAudience}
-            setInstructorAudience={setInstructorAudience}
             participantAudience={participantAudience}
-            setParticipantAudience={setParticipantAudience}
           />
           {familyName !== '' && versionYear !== '' && (
             <div>
@@ -140,7 +148,8 @@ export default function NewUnitForm(props) {
 
 NewUnitForm.propTypes = {
   families: PropTypes.arrayOf(PropTypes.string).isRequired,
-  versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired
+  versionYearOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
+  familiesCourseTypes: PropTypes.object.isRequired
 };
 
 const styles = {
