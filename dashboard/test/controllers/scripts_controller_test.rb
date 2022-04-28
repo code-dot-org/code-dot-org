@@ -447,6 +447,34 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal unit.participant_audience, SharedCourseConstants::PARTICIPANT_AUDIENCE.student
   end
 
+  test 'create: sets course type if provided' do
+    unit_name = 'test-pl-unit-create'
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
+    File.stubs(:write).with do |filename, contents|
+      filename == "#{Rails.root}/config/scripts_json/#{unit_name}.script_json" && JSON.parse(contents)['script']['name'] == unit_name
+    end
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+
+    post :create, params: {
+      script: {name: unit_name},
+      lesson_groups: '[]',
+      is_migrated: true,
+      instruction_type: 'self-paced',
+      instructor_audience: 'universal_instructor',
+      participant_audience: 'teacher'
+    }
+    assert_redirected_to edit_script_path id: unit_name
+
+    unit = Script.find_by_name(unit_name)
+    assert_equal unit_name, unit.name
+    assert unit.is_migrated
+    assert_equal unit.published_state, SharedCourseConstants::PUBLISHED_STATE.in_development
+    assert_equal unit.instruction_type, SharedCourseConstants::INSTRUCTION_TYPE.self_paced
+    assert_equal unit.instructor_audience, SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor
+    assert_equal unit.participant_audience, SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+  end
+
   test 'cannot create legacy unit' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)

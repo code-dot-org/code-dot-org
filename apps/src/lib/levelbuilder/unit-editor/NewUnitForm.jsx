@@ -110,21 +110,27 @@ export default function NewUnitForm(props) {
               </label>
               <input name="family_name" value={familyName} type="hidden" />
               <input name="version_year" value={versionYear} type="hidden" />
-              <input
-                name="instruction_type"
-                value={instructionType}
-                type="hidden"
-              />
-              <input
-                name="instructor_audience"
-                value={instructorAudience}
-                type="hidden"
-              />
-              <input
-                name="participant_audience"
-                value={participantAudience}
-                type="hidden"
-              />
+              {instructionType !== '' && (
+                <input
+                  name="instruction_type"
+                  value={instructionType}
+                  type="hidden"
+                />
+              )}
+              {instructorAudience !== '' && (
+                <input
+                  name="instructor_audience"
+                  value={instructorAudience}
+                  type="hidden"
+                />
+              )}
+              {participantAudience !== '' && (
+                <input
+                  name="participant_audience"
+                  value={participantAudience}
+                  type="hidden"
+                />
+              )}
               <input
                 name="is_course"
                 value={isCourse === 'true'}

@@ -454,6 +454,28 @@ class CoursesControllerTest < ActionController::TestCase
     assert_redirected_to '/courses/csp-1991/edit'
   end
 
+  test "create: defaults to teacher led, teacher to student course if nothing provided" do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    post :create, params: {course: {name: 'csp-1991'}, family_name: 'csp', version_year: '1991'}
+    ug = UnitGroup.find_by_name!('csp-1991')
+    assert_equal ug.instruction_type, 'teacher_led'
+    assert_equal ug.instructor_audience, 'teacher'
+    assert_equal ug.participant_audience, 'student'
+  end
+
+  test "create: sets course type if info is provided" do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    post :create, params: {course: {name: 'pl-csp-1991'}, family_name: 'pl-csp', version_year: '1991', instruction_type: 'self-paced', instructor_audience: 'universal_instructor', participant_audience: 'teacher'}
+    ug = UnitGroup.find_by_name!('pl-csp-1991')
+    assert_equal ug.instruction_type, 'self_paced'
+    assert_equal ug.instructor_audience, 'universal_instructor'
+    assert_equal ug.participant_audience, 'teacher'
+  end
+
   test "create: writes course json file" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
