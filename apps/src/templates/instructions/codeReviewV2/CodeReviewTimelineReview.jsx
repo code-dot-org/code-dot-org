@@ -29,6 +29,9 @@ const CodeReviewTimelineReview = ({isLastElementInTimeline}) => {
             />
           </div>
         </div>
+        <div>
+          Note: code editing is disabled while your project is in review
+        </div>
       </div>
     </CodeReviewTimelineElement>
   );
@@ -43,7 +46,6 @@ export default CodeReviewTimelineReview;
 const styles = {
   wrapper: {
     backgroundColor: 'white',
-    height: '40px',
     borderRadius: '10px',
     padding: '20px'
   },
@@ -51,7 +53,8 @@ const styles = {
     paddingRight: '5px'
   },
   header: {
-    display: 'flex'
+    display: 'flex',
+    marginBottom: '10px'
   },
   title: {
     flexGrow: 1
