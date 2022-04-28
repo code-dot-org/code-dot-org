@@ -3,7 +3,6 @@ import * as sort from 'sortabular';
 import PropTypes from 'prop-types';
 import React from 'react';
 import orderBy from 'lodash/orderBy';
-import {connect} from 'react-redux';
 
 import commonMsg from '@cdo/locale';
 
@@ -244,8 +243,4 @@ const styles = {
   }
 };
 
-export const UnconnectedProjectsList = ProjectsList;
-
-export default connect(state => ({
-  localeCode: state.locales.localeCode
-}))(ProjectsList);
+export default ProjectsList;
