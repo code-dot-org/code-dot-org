@@ -27,19 +27,19 @@ const SCRIPT_OVERVIEW_WIDTH = 1100;
 // This object in the form of {scriptName : description of warning}.
 const OUTDATED_SCRIPT_NAMES_AND_DESC = {
   course1: i18n.outdatedCourseWarningDescCourses1To4({
-    csFundCourseLink: pegasus('/educate/curriculum/csf')
+    csFundCourseLink: pegasus('/educate/curriculum/csf-transition-guide')
   }),
   course2: i18n.outdatedCourseWarningDescCourses1To4({
-    csFundCourseLink: pegasus('/educate/curriculum/csf')
+    csFundCourseLink: pegasus('/educate/curriculum/csf-transition-guide')
   }),
   course3: i18n.outdatedCourseWarningDescCourses1To4({
-    csFundCourseLink: pegasus('/educate/curriculum/csf')
+    csFundCourseLink: pegasus('/educate/curriculum/csf-transition-guide')
   }),
   course4: i18n.outdatedCourseWarningDescCourses1To4({
-    csFundCourseLink: pegasus('/educate/curriculum/csf')
+    csFundCourseLink: pegasus('/educate/curriculum/csf-transition-guide')
   }),
   '20-hour': i18n.outdatedCourseWarningDescCoursesAccelCourse({
-    expressCourseLink: studio('/s/express-2021')
+    expressCourseLink: studio('/s/express')
   }),
   algebra: i18n.outdatedCourseWarningDescCoursesCSInAlgebra({
     bootstrapAlgLink: 'https://www.bootstrapworld.org/materials/algebra/'
