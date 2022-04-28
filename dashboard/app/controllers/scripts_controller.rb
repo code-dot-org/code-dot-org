@@ -101,18 +101,18 @@ class ScriptsController < ApplicationController
     updated_unit_params = unit_params.merge(
       {
         published_state: SharedCourseConstants::PUBLISHED_STATE.in_development,
-        instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
-        participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
-        instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+        instructor_audience: general_params[:instructor_audience] ? general_params[:instructor_audience] : SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+        participant_audience: general_params[:participant_audience] ? general_params[:participant_audience] : SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+        instruction_type: general_params[:instruction_type] ? general_params[:instruction_type] : SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
       }
     )
 
     updated_general_params = general_params.merge(
       {
         published_state: SharedCourseConstants::PUBLISHED_STATE.in_development,
-        instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
-        participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
-        instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+        instructor_audience: general_params[:instructor_audience] ? general_params[:instructor_audience] : SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+        participant_audience: general_params[:participant_audience] ? general_params[:participant_audience] : SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+        instruction_type: general_params[:instruction_type] ? general_params[:instruction_type] : SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
       }
     )
 
