@@ -41,23 +41,15 @@ class ShowCodeButton extends Component {
   }
 
   render() {
-    // const blocksGlyphImage = (
-    //   <img
-    //     src={this.props.hasFocus ? BLOCKS_GLYPH_LIGHT : BLOCKS_GLYPH_DARK}
-    //     style={[
-    //       styles.blocksGlyph,
-    //       this.props.isRtl && styles.blocksGlyphRtl,
-    //       this.props.showingBlocks
-    //         ? {display: 'none'}
-    //         : {display: 'inline-block'}
-    //     ]}
-    //   />
-    // );
+    let blockGlyphIconStyle = {
+      ...styles.blocksGlyph,
+      ...(this.props.isRtl && styles.blocksGlyphRtl)
+    };
     const blocksGlyphIcon = (
-      <i style={styles.blocksGlyph}>
+      <i style={blockGlyphIconStyle}>
         <img
           src={this.props.hasFocus ? BLOCKS_GLYPH_LIGHT : BLOCKS_GLYPH_DARK}
-          style={(this.props.isRtl && styles.blocksGlyphRtl) || {}}
+          style={this.props.isRtl ? styles.blocksGlyphImageRtl : {}}
         />
       </i>
     );
@@ -207,7 +199,9 @@ const styles = {
   },
   blocksGlyphRtl: {
     paddingRight: 0,
-    paddingLeft: 8,
+    paddingLeft: 8
+  },
+  blocksGlyphImageRtl: {
     transform: 'scale(-1, 1)',
     MozTransform: 'scale(-1, 1)',
     WebkitTransform: 'scale(-1, 1)',
