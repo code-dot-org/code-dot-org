@@ -15,7 +15,10 @@ describe('NewCourseFieldsTest', () => {
       familyName: '',
       setFamilyName,
       versionYear: '',
-      setVersionYear
+      setVersionYear,
+      instructorAudience: '',
+      participantAudience: '',
+      instructionType: ''
     };
   });
 
@@ -28,14 +31,24 @@ describe('NewCourseFieldsTest', () => {
       .find('.familyNameSelector')
       .simulate('change', {target: {value: 'family-1'}});
     expect(setFamilyName).to.have.been.calledWith('family-1');
-    wrapper.setProps({familyName: 'family-1'});
+    wrapper.setProps({
+      familyName: 'family-1',
+      instructorAudience: 'teacher',
+      participantAudience: 'student',
+      instructionType: 'teacher_led'
+    });
     expect(wrapper.find('.isVersionedSelector').length).to.equal(1);
 
     wrapper
       .find('.familyNameSelector')
       .simulate('change', {target: {value: ''}});
     expect(setFamilyName).to.have.been.calledWith('');
-    wrapper.setProps({familyName: ''});
+    wrapper.setProps({
+      familyName: '',
+      instructorAudience: '',
+      participantAudience: '',
+      instructionType: ''
+    });
 
     expect(wrapper.find('.isVersionedSelector').length).to.equal(0);
   });
@@ -49,7 +62,12 @@ describe('NewCourseFieldsTest', () => {
       .find('.familyNameSelector')
       .simulate('change', {target: {value: 'family-1'}});
     expect(setFamilyName).to.have.been.calledWith('family-1');
-    wrapper.setProps({familyName: 'family-1'});
+    wrapper.setProps({
+      familyName: 'family-1',
+      instructorAudience: 'teacher',
+      participantAudience: 'student',
+      instructionType: 'teacher_led'
+    });
     expect(wrapper.find('.isVersionedSelector').length).to.equal(1);
 
     wrapper
@@ -90,12 +108,19 @@ describe('NewCourseFieldsTest', () => {
     expect(wrapper.find('.familyNameSelector').length).to.equal(1);
 
     expect(wrapper.find('isVersionedSelector').length).to.equal(0);
+    expect(wrapper.find('CourseTypeEditor').length).to.equal(0);
     wrapper
       .find('.familyNameSelector')
       .simulate('change', {target: {value: 'family-1'}});
     expect(setFamilyName).to.have.been.calledWith('family-1');
-    wrapper.setProps({familyName: 'family-1'});
+    wrapper.setProps({
+      familyName: 'family-1',
+      instructorAudience: 'teacher',
+      participantAudience: 'student',
+      instructionType: 'teacher_led'
+    });
     expect(wrapper.find('.isVersionedSelector').length).to.equal(1);
+    expect(wrapper.find('CourseTypeEditor').length).to.equal(1);
 
     wrapper
       .find('.isVersionedSelector')
@@ -124,6 +149,7 @@ describe('NewCourseFieldsTest', () => {
     wrapper.setProps({familyName: 'new-family-name'});
 
     expect(wrapper.find('.isVersionedSelector').length).to.equal(1);
+    expect(wrapper.find('CourseTypeEditor').length).to.equal(0);
 
     wrapper
       .find('.isVersionedSelector')
@@ -145,12 +171,19 @@ describe('NewCourseFieldsTest', () => {
     expect(wrapper.find('.familyNameSelector').length).to.equal(1);
 
     expect(wrapper.find('isVersionedSelector').length).to.equal(0);
+    expect(wrapper.find('CourseTypeEditor').length).to.equal(0);
     wrapper
       .find('.familyNameSelector')
       .simulate('change', {target: {value: 'family-1'}});
     expect(setFamilyName).to.have.been.calledWith('family-1');
-    wrapper.setProps({familyName: 'family-1'});
+    wrapper.setProps({
+      familyName: 'family-1',
+      instructorAudience: 'teacher',
+      participantAudience: 'student',
+      instructionType: 'teacher_led'
+    });
     expect(wrapper.find('.isVersionedSelector').length).to.equal(1);
+    expect(wrapper.find('CourseTypeEditor').length).to.equal(1);
 
     wrapper
       .find('.isVersionedSelector')
@@ -182,6 +215,7 @@ describe('NewCourseFieldsTest', () => {
     wrapper.setProps({familyName: 'new-family-name'});
 
     expect(wrapper.find('.isVersionedSelector').length).to.equal(1);
+    expect(wrapper.find('CourseTypeEditor').length).to.equal(0);
 
     wrapper
       .find('.isVersionedSelector')

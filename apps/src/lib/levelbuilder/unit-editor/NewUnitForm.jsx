@@ -21,14 +21,23 @@ export default function NewUnitForm(props) {
   };
 
   const setFamilyAndCourseType = familyName => {
+    if (familyName === '') {
+      setParticipantAudience('');
+      setInstructorAudience('');
+      setInstructionType('');
+    } else {
+      setParticipantAudience(
+        props.familiesCourseTypes[familyName].participant_audience
+      );
+      setInstructorAudience(
+        props.familiesCourseTypes[familyName].instructor_audience
+      );
+      setInstructionType(
+        props.familiesCourseTypes[familyName].instruction_type
+      );
+    }
+
     setFamilyName(familyName);
-    setParticipantAudience(
-      props.familiesCourseTypes[familyName].participant_audience
-    );
-    setInstructorAudience(
-      props.familiesCourseTypes[familyName].instructor_audience
-    );
-    setInstructionType(props.familiesCourseTypes[familyName].instruction_type);
   };
 
   return (
