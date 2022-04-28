@@ -12,7 +12,7 @@
     {
       "key": "color",
       "position": 0,
-      "name": "Color(String color) throws IllegalArgumentException",
+      "name": "Color(String color)",
       "content": "Creates a color from a string name, like `\"red\"` or `\"brown\"`. If the name is not recognized, this constructor will throw an `IllegalArgumentException`.",
       "parameters": "[{\"name\":\"color\",\"type\":\"String\",\"required\":true,\"description\":\"The name of the color. See the above list for supported color names.\"}]",
       "examples": "[]",
@@ -36,11 +36,11 @@
     {
       "key": "color3",
       "position": 2,
-      "name": "public Color(Color color)",
+      "name": "Color(Color color)",
       "content": "Creates a new color that a copy of the provided color.\n",
       "parameters": "[{\"name\":\"color\",\"type\":\"Color\",\"required\":true,\"description\":\"the color to copy\"}]",
       "examples": "[]",
-      "syntax": null,
+      "syntax": "public Color(Color color)",
       "external_link": null,
       "overload_of": "color",
       "return_value": null
@@ -48,7 +48,7 @@
     {
       "key": "getred",
       "position": 3,
-      "name": "public int getRed()",
+      "name": "getRed()",
       "content": "Returns the amount of red (ranging from 0 to 255).",
       "parameters": "[]",
       "examples": "[]",
@@ -60,7 +60,7 @@
     {
       "key": "getgreen",
       "position": 4,
-      "name": "public int getGreen()",
+      "name": "getGreen()",
       "content": "Returns the amount of green (ranging from 0 to 255).\n",
       "parameters": "[]",
       "examples": "[]",
@@ -72,7 +72,7 @@
     {
       "key": "getblue",
       "position": 5,
-      "name": "public int getBlue()",
+      "name": "getBlue()",
       "content": "Returns the amount of blue (ranging from 0 to 255).\n",
       "parameters": "[]",
       "examples": "[]",
@@ -84,7 +84,7 @@
     {
       "key": "setred",
       "position": 6,
-      "name": "public void setRed(int value)",
+      "name": "setRed(int value)",
       "content": "Sets the amount of red (ranging from 0 to 255). Values below 0 will be ignored and set to 0, and values above 255 will be ignored and set to 255.",
       "parameters": "[{\"name\":\"value\",\"type\":\"int\",\"required\":true,\"description\":\"the amount of red (ranging from 0 to 255) in the color\\n\"}]",
       "examples": "[]",
@@ -96,7 +96,7 @@
     {
       "key": "setgreen",
       "position": 7,
-      "name": "public void setGreen(int value)",
+      "name": "setGreen(int value)",
       "content": "Sets the amount of green (ranging from 0 to 255). Values below 0 will be ignored and set to 0, and values above 255 will be ignored and set to 255.\n",
       "parameters": "[{\"name\":\"value\",\"type\":\"int\",\"required\":true,\"description\":\"the amount of green (ranging from 0 to 255) in the color\\n\"}]",
       "examples": "[]",
@@ -108,11 +108,11 @@
     {
       "key": "setblue",
       "position": 8,
-      "name": "public int setBlue(int value)",
+      "name": "setBlue(int value)",
       "content": null,
       "parameters": "[{\"name\":\"value\",\"type\":\"int\",\"required\":true,\"description\":\"the amount of blue (ranging from 0 to 255) in the color\\n\"}]",
       "examples": "[]",
-      "syntax": null,
+      "syntax": "public void setBlue(int value)",
       "external_link": null,
       "overload_of": null,
       "return_value": null
