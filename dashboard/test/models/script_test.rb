@@ -1197,7 +1197,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'teacher_led', unit_group.instruction_type
     assert_equal 'beta', unit_group.published_state
 
-    unit.update!(instructor_audience: 'universal_instructor', participant_audience: 'teacher', instruction_type: 'self_paced', published_state: 'stable')
+    unit.update!(instructor_audience: 'universal_instructor', participant_audience: 'teacher', instruction_type: 'self_paced', published_state: 'in_development')
 
     unit.reload
     unit_group = unit.plc_course_unit.plc_course.unit_group
@@ -1205,7 +1205,7 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 'universal_instructor', unit_group.instructor_audience
     assert_equal 'teacher', unit_group.participant_audience
     assert_equal 'self_paced', unit_group.instruction_type
-    assert_equal 'stable', unit_group.published_state
+    assert_equal 'in_development', unit_group.published_state
   end
 
   test 'generate plc objects will use defaults if script has null values' do
