@@ -460,6 +460,8 @@ describe('CircuitPlaygroundBoard', () => {
         sinon.spy(led1, 'stop');
         sinon.spy(led2, 'stop');
 
+        // reset() will call resetDynamicComponents() which, for each LED, will call off()
+        // which internally calls stop().
         expect(led1.stop).not.to.have.been.called;
         expect(led2.stop).not.to.have.been.called;
 
