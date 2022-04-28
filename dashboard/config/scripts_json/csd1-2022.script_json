@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-27 20:00:44 UTC",
+    "serialized_at": "2022-04-27 22:33:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5813,6 +5813,17 @@
       }
     },
     {
+      "name": "CSD Learning Frameworks",
+      "url": "https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/preview",
+      "key": "csd_learning_frameworks",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks"
+      }
+    },
+    {
       "name": "Exploring Problem Solving",
       "url": "https://docs.google.com/presentation/d/1_-cc28V0UGo-lNB9yJRPvGlHwdMSnYpcoi9lwJVkHEc/template/preview",
       "key": "exploring_problem_solving",
@@ -6639,6 +6650,12 @@
     {
       "seeding_key": {
         "resource.key": "csd_implementation_guide",
+        "script.name": "csd1-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks",
         "script.name": "csd1-2022"
       }
     },
