@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "csc-pilot-2022-starquilts",
-    "serialized_at": "2022-04-26 19:08:50 UTC",
+    "serialized_at": "2022-04-27 16:30:24 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -248,7 +248,7 @@
       "key": "405e6dce-bdaa-4795-83c4-3e4c52e9b6cf",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Star Quilt” video\n \n**Do This**: Watch the [Star Quilt Video](https://www.youtube.com/watch?v=Q210ko41yqo).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” video\n \n**Reflect**: _What stands out to you about Star Quilts?_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Star Quilt” video\n \n**Do This**: Watch the [Star Quilt Video](https://www.youtube.com/watch?v=Q210ko41yqo).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n \n**Reflect**: _What stands out to you about Star Quilts?_"
       },
       "seeding_key": {
         "activity_section.key": "405e6dce-bdaa-4795-83c4-3e4c52e9b6cf",
@@ -422,7 +422,7 @@
       "key": "079a7a28-1eba-4027-bffe-50be6f81bfa0",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 5-6 - Skill Building” slide\n\n**Debugging Tips:**\n\n**Level 6**: Show students how to use the angle menu to modify the measurement. Students should select 90 degrees. Remind students to also alter the loop to only repeat 4 times.\n\n**Level 7**: Students should modify the angle measurement to 30 degrees. Remind students to also alter the loop to repeat 12 times.\n\n**Do This**: Have students continue working in Code Studio.\n\nIn these levels students will alter the turn angle to see how it affects the number of points in a star. In level 5, students will turn 90 degrees and create a 4 point star. In level 6, students will turn 30 degrees and create a 12 point star. If students are done early, they can try to create stars with other numbers of points. Discuss the relationship between angle measurement and number of points with students.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6-7 - Skill Building” slide\n\n**Debugging Tips:**\n\n**Level 6**: Show students how to use the angle menu to modify the measurement. Students should select 90 degrees. Remind students to also alter the loop to only repeat 4 times.\n\n**Level 7**: Students should modify the angle measurement to 30 degrees. Remind students to also alter the loop to repeat 12 times.\n\n**Do This**: Have students continue working in Code Studio.\n\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -434,7 +434,7 @@
       "key": "98267be9-ec3e-40d9-808b-22fa394dd382",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7 - Free Play” slide\n\n**Overview**: In these levels, students will learn additional skills using the Artist. Students will use turn and move blocks to create a border around the star shape. There are several options for students to select an Artistic border. \n\n**Debugging Tips**:\n\n**Level 8**: This is a free play level for students to make their very own star creation. Students will apply the skills they’ve learned in the previous levels. Students can experiment with colors, angles and loops to make a unique star shape.\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Free Play” slide\n\n**Overview**: In these levels, students will learn additional skills using the Artist. Students will use turn and move blocks to create a border around the star shape. There are several options for students to select an Artistic border. \n\n**Debugging Tips**:\n\n**Level 8**: This is a free play level for students to make their very own star creation. Students will apply the skills they’ve learned in the previous levels. Students can experiment with colors, angles and loops to make a unique star shape.\n\n\n",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -449,7 +449,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "While circling the room, encourage students to:\n\n- **Take Their Time**: Staying on a level and tinkering with their code is highly encouraged.The instructions tell students generally what to do, but they should also feel free to try out their own ideas.\n- **Show off a completed level**: Any level bubble that is fully green means the student successfully completed all the requirements for that level. Ask a student to click on a green bubble to show off what they created.\n\nFor the times when a student feels stuck:\n- **Collaborate with Neighbors**: Encourage students to check in with a neighbor when they're getting stuck. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using pair programming.\n- **Read the Instructions**: The instructions are bulleted points on how to complete the level. If a student feels stuck, ask them to read the instructions out loud to you and ask them to repeat back what the instructions say in their own words. The instructions usually provide helpful tips on how to complete the level. Before giving students the answer, ensure they've carefully looked at the instructions, hints, videos, and any starter code carefully.\n- <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> **Text to Speech:** Students can also click on this text-to-speech icon to hear the instructions read aloud.\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Look for hints**: Most levels include at least one hint with more explicit details about how to pass the level.\n- **Celebrate bugs**: Getting a bug in your code is a natural part of the coding process. If the program isn’t doing what they expected, ask the student to first tell you what they want to happen, click run to observe what is actually happening, then find the place in their code that caused the discrepancy. Remember to celebrate finding bugs and fixing bugs. Getting a bug means students are doing a great job building a more complex program.\n"
+            "markdown": "While circling the room, encourage students to:\n\n- **Take Their Time**: Staying on a level and tinkering with their code is highly encouraged. The instructions tell students generally what to do, but they should also feel free to try out their own ideas.\n- **Show off a completed level**: Any level bubble that is fully green means the student successfully completed all the requirements for that level. Ask a student to click on a green bubble to show off what they created.\n\nFor the times when a student feels stuck:\n- **Collaborate with Neighbors**: Encourage students to check in with a neighbor when they're getting stuck. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using pair programming.\n- **Read the Instructions**: The instructions are bulleted points on how to complete the level. If a student feels stuck, ask them to read the instructions out loud to you and ask them to repeat back what the instructions say in their own words. The instructions usually provide helpful tips on how to complete the level. Before giving students the answer, ensure they've carefully looked at the instructions, hints, videos, and any starter code carefully.\n- <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> **Text to Speech:** Students can also click on this text-to-speech icon to hear the instructions read aloud.\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Look for hints**: Most levels include at least one hint with more explicit details about how to pass the level.\n- **Celebrate bugs**: Getting a bug in your code is a natural part of the coding process. If the program isn’t doing what they expected, ask the student to first tell you what they want to happen, click run to observe what is actually happening, then find the place in their code that caused the discrepancy. Remember to celebrate finding bugs and fixing bugs. Getting a bug means students are doing a great job building a more complex program.\n"
           }
         ]
       },
@@ -548,7 +548,7 @@
       "key": "e9af003a-b874-4e0e-849d-5f7f274b9670",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Skill Building\" slide\n\n**Debugging Tips**:\n\n**Level 8**: Before the Artist can repeat the point it needs to turn. Set the loop to repeat 8 times. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Skill Building\" slide\n\n**Level 8**: Before the Artist can repeat the point it needs to turn. Set the loop to repeat 8 times. ",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -714,6 +714,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-starquilts-4point-repeat"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -736,6 +739,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-starquilts-12point-repeat"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -758,6 +764,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-starquilts-rhombus-freeplay"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
