@@ -40,25 +40,18 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
     return super.getAllBlocks().filter(block => !block.disabled);
   }
 
-  resize() {
-    super.resize();
-
-    if (Blockly.cdoUtils.getToolboxType() === ToolboxType.UNCATEGORIZED) {
-      this.flyout_.resize();
-    }
-  }
-
   setEnableToolbox() {} // TODO - called by StudioApp, not sure whether it's still needed.
   traceOn() {} // TODO
 }
-const oldBlocklyResize = GoogleBlockly.WorkspaceSvg.prototype.resize;
 
+const oldBlocklyResize = GoogleBlockly.WorkspaceSvg.prototype.resize;
 WorkspaceSvg.prototype.resize = function() {
   oldBlocklyResize.call(this);
   if (getToolboxType() === ToolboxType.UNCATEGORIZED) {
     this.flyout_.resize();
   }
 };
+
 WorkspaceSvg.prototype.events = {
   dispatchEvent: () => {} // TODO
 };
