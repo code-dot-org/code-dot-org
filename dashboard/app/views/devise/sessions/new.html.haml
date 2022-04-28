@@ -13,17 +13,17 @@
         = f.text_field :login, value: email, autofocus: email == ''
 
       / Password
-      .field
+      .field#password_field
         = f.label :password
-        = f.password_field :password, autofocus: email != ''
+        = f.password_field :password, autofocus: email != '', id: 'password_input'
+
+        / Forgot password?
+      - if devise_mapping.recoverable?
+        %div.field-aligned.password_help_link
+          = link_to t('auth.forgot_password'), new_password_path(resource_name), id: 'forgot-password'
 
       / Sign in button
       %button#signin-button= t('signin_form.submit')
-
-      / Forgot password?
-      - if devise_mapping.recoverable?
-        %div.field-aligned
-          = link_to t('auth.forgot_password'), new_password_path(resource_name), id: 'forgot-password'
 
     / Not yet signed up? Sign up
     - if devise_mapping.registerable?
