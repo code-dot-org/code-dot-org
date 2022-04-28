@@ -82,6 +82,7 @@ class Section < ApplicationRecord
 
   validates :participant_type, acceptance: {accept: SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values, message: 'must be facilitator, teacher, or student'}
   validates :grade, acceptance: {accept: [SharedConstants::STUDENT_GRADE_LEVELS, SharedConstants::PL_GRADE_VALUE].flatten, message: "must be one of the valid student grades. Expected one of: #{[SharedConstants::STUDENT_GRADE_LEVELS, SharedConstants::PL_GRADE_VALUE].flatten}. Got: \"%{value}\"."}
+
   validate :pl_sections_must_use_email_logins
   validate :pl_sections_must_use_pl_grade
   validate :participant_type_not_changed
@@ -94,7 +95,8 @@ class Section < ApplicationRecord
     end
   end
 
-  # PL courses which are run with adults should have the grade type of 'pl'
+  # PL courses which are run with adults should have the grade type of 'pl'.
+  # This value was recommended by RED team.
   def pl_sections_must_use_pl_grade
     if pl_section? && grade != SharedConstants::PL_GRADE_VALUE
       errors.add(:grade, 'must be pl for pl section.')
@@ -231,6 +233,12 @@ class Section < ApplicationRecord
     end
 
     false
+  end
+
+  # Sections can not be assigned courses where participants in the section
+  # can not be participants in the course
+  def self.can_be_assigned_course?(participant_audience, participant_type)
+    SharedCourseConstants::PARTICIPANT_AUDIENCES_BY_TYPE[participant_type].include? participant_audience
   end
 
   # Adds the student to the section, restoring a previous enrollment to do so if possible.
