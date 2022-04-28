@@ -158,6 +158,13 @@ class Script < ApplicationRecord
     }
 
   validates :published_state, acceptance: {accept: SharedCourseConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, in_development, pilot, beta, preview or stable'}
+  validate :deeper_learning_courses_cannot_be_launched
+
+  def deeper_learning_courses_cannot_be_launched
+    if old_professional_learning_course? && (launched? || pilot?)
+      errors.add(:published_state, 'must be in_development or beta for a deeper learning course.')
+    end
+  end
 
   after_save :check_course_type_settings
 
