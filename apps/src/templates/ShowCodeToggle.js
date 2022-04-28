@@ -41,23 +41,31 @@ class ShowCodeButton extends Component {
   }
 
   render() {
-    const blocksGlyphImage = (
-      <img
-        src={this.props.hasFocus ? BLOCKS_GLYPH_LIGHT : BLOCKS_GLYPH_DARK}
-        style={[
-          styles.blocksGlyph,
-          this.props.isRtl && styles.blocksGlyphRtl,
-          this.props.showingBlocks
-            ? {display: 'none'}
-            : {display: 'inline-block'}
-        ]}
-      />
+    // const blocksGlyphImage = (
+    //   <img
+    //     src={this.props.hasFocus ? BLOCKS_GLYPH_LIGHT : BLOCKS_GLYPH_DARK}
+    //     style={[
+    //       styles.blocksGlyph,
+    //       this.props.isRtl && styles.blocksGlyphRtl,
+    //       this.props.showingBlocks
+    //         ? {display: 'none'}
+    //         : {display: 'inline-block'}
+    //     ]}
+    //   />
+    // );
+    const blocksGlyphIcon = (
+      <i style={styles.blocksGlyph}>
+        <img
+          src={this.props.hasFocus ? BLOCKS_GLYPH_LIGHT : BLOCKS_GLYPH_DARK}
+          style={(this.props.isRtl && styles.blocksGlyphRtl) || {}}
+        />
+      </i>
     );
     return (
       <PaneButton
         id="show-code-header"
-        hiddenImage={blocksGlyphImage}
         iconClass={this.props.showingBlocks ? 'fa fa-code' : ''}
+        icon={this.props.showingBlocks ? null : blocksGlyphIcon}
         label={
           this.props.showingBlocks
             ? this.props.showCodeLabel
@@ -192,11 +200,10 @@ export default class ShowCodeToggle extends Component {
 
 const styles = {
   blocksGlyph: {
-    display: 'none',
-    height: 18,
-    lineHeight: '24px',
-    verticalAlign: 'text-bottom',
-    paddingRight: 8
+    lineHeight: '22px',
+    paddingRight: 8,
+    fontSize: 15,
+    fontWeight: 'bold'
   },
   blocksGlyphRtl: {
     paddingRight: 0,
