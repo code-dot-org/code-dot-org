@@ -27,8 +27,6 @@
 
     / Not yet signed up? Sign up
     - if devise_mapping.registerable?
-      %div.field-aligned
-        %strong= t('auth.notyet_signedup')
       = link_to new_user_registration_path, class: 'field-aligned' do
         %button.blue-button= t('nav.user.signup')
 
