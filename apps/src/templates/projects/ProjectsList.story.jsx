@@ -1,5 +1,5 @@
 import React from 'react';
-import ProjectsList from './ProjectsList';
+import {UnconnectedProjectsList as ProjectsList} from './ProjectsList';
 
 const STUB_PROJECTS_DATA = [
   {
