@@ -5,7 +5,7 @@ module Curriculum::AssignableCourse
   extend ActiveSupport::Concern
 
   def course_assignable?(user)
-    return false unless can_be_instructor?(user)
+    return false unless instructor?(user)
     return true if launched?
     return true if pilot? && has_pilot_experiment?(user)
     return true if is_a?(Script) && has_editor_experiment?(user)

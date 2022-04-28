@@ -478,7 +478,7 @@ class UnitGroup < ApplicationRecord
 
     # Restrictions only apply to participants and logged out users.
     return false if user.nil?
-    return true if can_be_instructor?(user)
+    return true if instructor?(user)
 
     # A student can view the course version if they are assigned to it or they have progress in it.
     user.section_courses.include?(self) || has_progress?(user)

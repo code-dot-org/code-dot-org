@@ -255,13 +255,13 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert @partner_unit.course_version.course_offering.any_version_is_assignable_editor_experiment?(@partner)
   end
 
-  test 'can_be_instructor? is true if user can be instructor of any course version' do
-    refute @unit_teacher_to_students.course_version.course_offering.can_be_instructor?(@student)
-    assert @unit_teacher_to_students.course_version.course_offering.can_be_instructor?(@teacher)
+  test 'instructor? is true if user can be instructor of any course version' do
+    refute @unit_teacher_to_students.course_version.course_offering.instructor?(@student)
+    assert @unit_teacher_to_students.course_version.course_offering.instructor?(@teacher)
 
-    refute @unit_facilitator_to_teacher.course_version.course_offering.can_be_instructor?(@student)
-    refute @unit_facilitator_to_teacher.course_version.course_offering.can_be_instructor?(@teacher)
-    assert @unit_facilitator_to_teacher.course_version.course_offering.can_be_instructor?(@facilitator)
+    refute @unit_facilitator_to_teacher.course_version.course_offering.instructor?(@student)
+    refute @unit_facilitator_to_teacher.course_version.course_offering.instructor?(@teacher)
+    assert @unit_facilitator_to_teacher.course_version.course_offering.instructor?(@facilitator)
   end
 
   test 'any_versions_launched? is true if any course versions have been launched' do

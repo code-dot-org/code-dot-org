@@ -279,7 +279,7 @@ class Ability
     end
 
     can :read, UnitGroup do |unit_group|
-      if unit_group.can_be_participant?(user) || unit_group.can_be_instructor?(user)
+      if unit_group.participant?(user) || unit_group.instructor?(user)
         if unit_group.in_development?
           user.permission?(UserPermission::LEVELBUILDER)
         elsif unit_group.pilot?
@@ -293,7 +293,7 @@ class Ability
     end
 
     can :read, Script do |script|
-      if script.can_be_participant?(user) || script.can_be_instructor?(user)
+      if script.participant?(user) || script.instructor?(user)
         if script.in_development?
           user.permission?(UserPermission::LEVELBUILDER)
         elsif script.pilot?

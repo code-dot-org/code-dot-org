@@ -576,10 +576,10 @@ class Script < ApplicationRecord
 
     family_units = Script.get_family_from_cache(family_name).sort_by(&:version_year).reverse
 
-    return nil unless family_units&.last&.can_be_instructor?(user) || family_units&.last&.can_be_participant?(user)
+    return nil unless family_units&.last&.instructor?(user) || family_units&.last&.participant?(user)
 
     # Only signed in participants should be redirected based on unit progress and/or section assignments.
-    if user && family_units.last.can_be_participant?(user)
+    if user && family_units.last.participant?(user)
       assigned_unit_ids = user.section_scripts.pluck(:id)
       progress_unit_ids = user.user_levels.map(&:script_id)
       unit_ids = assigned_unit_ids.concat(progress_unit_ids).compact.uniq
@@ -650,7 +650,7 @@ class Script < ApplicationRecord
     # No redirect unless unit belongs to a family.
     return nil unless family_name
     # Only redirect participants.
-    return nil unless user && can_be_participant?(user)
+    return nil unless user && participant?(user)
     return nil unless has_other_versions?
     # No redirect unless user is allowed to view this unit version and they are not already assigned to this unit
     # or the course it belongs to.
@@ -689,7 +689,7 @@ class Script < ApplicationRecord
 
     # Restrictions only apply to participants and logged out users.
     return false if user.nil?
-    return true if can_be_instructor?(user)
+    return true if instructor?(user)
 
     # A student can view the unit version if they have progress in it or the course it belongs to.
     has_progress = user.scripts.include?(self) || unit_group&.has_progress?(user)

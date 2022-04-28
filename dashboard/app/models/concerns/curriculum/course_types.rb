@@ -54,11 +54,11 @@ module Curriculum::CourseTypes
   # Checks if a user can be the instructor for the course. universal instructors and levelbuilders
   # can be the instructors of any course. Student accounts should never be able to be the instructor
   # of any course.
-  def can_be_instructor?(user)
+  def instructor?(user)
     return false unless user
 
     # If unit is in a unit group then decide based on unit group audience
-    return unit_group.can_be_instructor?(user) if is_a?(Script) && unit_group
+    return unit_group.instructor?(user) if is_a?(Script) && unit_group
 
     return false if user.student?
     return true if user.permission?(UserPermission::UNIVERSAL_INSTRUCTOR) || user.permission?(UserPermission::LEVELBUILDER)
@@ -78,13 +78,13 @@ module Curriculum::CourseTypes
   # instructor in the course then this will return false because we do not want
   # to treat them like a participant. Signed out users should be able to be participants
   # in student courses.
-  def can_be_participant?(user)
+  def participant?(user)
     # If unit is in a unit group then decide based on unit group audience
-    return unit_group.can_be_participant?(user) if is_a?(Script) && unit_group
+    return unit_group.participant?(user) if is_a?(Script) && unit_group
 
     # Signed out users can only use student facing courses
     return false if !user && participant_audience != 'student'
-    return false if can_be_instructor?(user)
+    return false if instructor?(user)
 
     if participant_audience == 'facilitator'
       return user.permission?(UserPermission::FACILITATOR)

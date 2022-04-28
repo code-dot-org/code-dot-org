@@ -66,7 +66,7 @@ class CourseVersion < ApplicationRecord
   delegate :pilot?, to: :content_root, allow_nil: true
   delegate :has_pilot_experiment?, to: :content_root, allow_nil: true
   delegate :has_editor_experiment?, to: :content_root, allow_nil: true
-  delegate :can_be_instructor?, to: :content_root, allow_nil: true
+  delegate :instructor?, to: :content_root, allow_nil: true
   delegate :course_assignable?, to: :content_root, allow_nil: true
   delegate :can_view_version?, to: :content_root, allow_nil: true
   delegate :included_in_units?, to: :content_root, allow_nil: true
