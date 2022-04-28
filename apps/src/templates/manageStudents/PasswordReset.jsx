@@ -49,30 +49,46 @@ class PasswordReset extends Component {
       }
     };
 
-    $.ajax({
-      url: `/dashboardapi/sections/${sectionId}/students/${studentId}`,
+    fetch(`/dashboardapi/sections/${sectionId}/students/${studentId}`, {
       method: 'PATCH',
-      contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify(dataToUpdate)
+      headers: {
+        'Content-Type': 'application/json;charset=UTF-8'
+      },
+      body: JSON.stringify(dataToUpdate),
+      credentials: 'include'
     })
-      .done(data => {
-        this.setState({
-          isResetting: false,
-          input: ''
-        });
-        this.recordResetSecret();
-        this.hidePasswordLengthFailure();
-      })
-      .fail((jqXhr, status) => {
-        const errorArray = JSON.parse(jqXhr.responseText).errors;
-        if (errorArray.includes(PASSWORD_TOO_SHORT_ERROR_MESSAGE)) {
-          this.props.setPasswordLengthFailure(true);
+      .then(res => {
+        if (res.ok) {
+          this.setState({
+            isResetting: false,
+            input: ''
+          });
+          this.recordResetSecret();
+          this.hidePasswordLengthFailure();
+        } else if (res.status === 400) {
+          return res.text().then(text => {
+            throw new Error(text);
+          });
         } else {
-          // We may want to handle this more cleanly in the future, but for now this
-          // matches the experience we got in angular
-          alert(i18n.unexpectedError());
+          const err = new Error('HTTP status code: ' + res.status);
+          err.response = res;
+          err.status = res.status;
+          throw err;
         }
-        console.error(status);
+      })
+      .catch(err => {
+        try {
+          const errorObj = JSON.parse(err.message);
+          if (errorObj.errors.includes(PASSWORD_TOO_SHORT_ERROR_MESSAGE)) {
+            this.props.setPasswordLengthFailure(true);
+            return;
+          }
+        } catch {
+          console.log(err.message);
+        }
+        // We may want to handle this more cleanly in the future, but for now this
+        // matches the experience we got in angular
+        alert(i18n.unexpectedError());
       });
   };
 
