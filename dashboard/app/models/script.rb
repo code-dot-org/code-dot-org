@@ -788,7 +788,7 @@ class Script < ApplicationRecord
   end
 
   def twenty_hour?
-    Script.unit_in_category?('twenty_hour', name)
+    name === '20-hour'
   end
 
   def hoc?

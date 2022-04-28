@@ -339,7 +339,7 @@ module ScriptConstants
   ].freeze
 
   def self.unit_in_category?(category, script)
-    return Script.get_from_cache(script).course_version.course_offering.category == category
+    return CATEGORIES[category].include? script
   end
 
   CSF_COURSE_PATTERNS = [/^(course[a-f])-([0-9]+)$/, /^(express)-([0-9]+)$/, /^(pre-express)-([0-9]+)$/]
