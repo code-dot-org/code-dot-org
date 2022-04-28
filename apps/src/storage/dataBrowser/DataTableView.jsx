@@ -13,6 +13,8 @@ import {changeView, showWarning, tableType} from '../redux/data';
 import * as dataStyles from './dataStyles';
 import color from '../../util/color';
 import {connect} from 'react-redux';
+import msg from '@cdo/locale';
+import {getDatasetInfo} from '@cdo/apps/storage/dataBrowser/dataUtils';
 
 const MIN_TABLE_WIDTH = 600;
 
@@ -28,6 +30,7 @@ class DataTableView extends React.Component {
     tableListMap: PropTypes.object.isRequired,
     tableRecords: PropTypes.array.isRequired,
     view: PropTypes.oneOf(Object.keys(DataView)),
+    libraryManifest: PropTypes.object.isRequired,
 
     // from redux dispatch
     onShowWarning: PropTypes.func.isRequired,
@@ -90,6 +93,35 @@ class DataTableView extends React.Component {
     return JSON.stringify(records, null, 2);
   }
 
+  renderMoreInfoDescription() {
+    const datasetInfo = getDatasetInfo(
+      this.props.tableName,
+      this.props.libraryManifest.tables
+    );
+    let moreInfo;
+    if (datasetInfo) {
+      if (datasetInfo.docUrl) {
+        moreInfo = (
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={datasetInfo.docUrl}
+          >
+            {msg.moreInfo()}
+          </a>
+        );
+      }
+      return (
+        <div>
+          <span style={{display: 'block'}}>
+            {datasetInfo.description} {moreInfo}
+          </span>
+        </div>
+      );
+    }
+    return null;
+  }
+
   render() {
     const visible = DataView.TABLE === this.props.view;
     const containerStyle = [
@@ -137,6 +169,7 @@ class DataTableView extends React.Component {
           tableName={this.props.tableName}
           readOnly={readOnly}
         />
+        {this.renderMoreInfoDescription()}
         <div style={debugDataStyle}>{this.getTableJson()}</div>
         {!this.state.showDebugView && <DataTable readOnly={readOnly} />}
       </div>
@@ -186,7 +219,8 @@ export default connect(
     tableColumns: state.data.tableColumns || [],
     tableRecords: state.data.tableRecords || [],
     tableName: state.data.tableName || '',
-    tableListMap: state.data.tableListMap || {}
+    tableListMap: state.data.tableListMap || {},
+    libraryManifest: state.data.libraryManifest || {}
   }),
   dispatch => ({
     onShowWarning(warningMsg, warningTitle) {
