@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-25 23:22:37 UTC",
+    "serialized_at": "2022-04-27 22:54:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -447,8 +447,21 @@
   ],
   "lesson_activities": [
     {
-      "key": "e756dd3c-ceff-4018-ae32-e393404279eb",
+      "key": "9299d981-71c8-4dfb-a0b7-3f994bd62bbf",
       "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9299d981-71c8-4dfb-a0b7-3f994bd62bbf",
+        "lesson.key": "Representation Matters",
+        "lesson_group.key": "csd5_1",
+        "script.name": "csd5-2022"
+      }
+    },
+    {
+      "key": "e756dd3c-ceff-4018-ae32-e393404279eb",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -462,7 +475,7 @@
     },
     {
       "key": "5c108e1d-49dc-4541-af3a-664a08b5ec6b",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -476,7 +489,7 @@
     },
     {
       "key": "7b09e139-498e-49e6-8509-1daf3186b587",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1158,6 +1171,18 @@
     }
   ],
   "activity_sections": [
+    {
+      "key": "eb02dfda-f51a-4c80-a975-a1adc3d44091",
+      "position": 1,
+      "properties": {
+        "description": "**Starting with Problem Solving:** We recommend teaching the first three lessons from the [Problem Solving and Computing unit](/s/csd1-2022), which introduces the Problem Solving Process referenced throughout the course. These lessons also include a pre-survey that you can administer to students.\n\n**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Canvas\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.",
+        "name": "Preparing for the Unit"
+      },
+      "seeding_key": {
+        "activity_section.key": "eb02dfda-f51a-4c80-a975-a1adc3d44091",
+        "lesson_activity.key": "9299d981-71c8-4dfb-a0b7-3f994bd62bbf"
+      }
+    },
     {
       "key": "67a65590-fb9a-4752-91fa-f633f0ea41c9",
       "position": 1,
@@ -5989,6 +6014,17 @@
       }
     },
     {
+      "name": "CSD Learning Frameworks",
+      "url": "https://docs.google.com/document/d/1zA0qPfzSRZd8lQeJ5kmTNJVnTwrBgMyCKzt0nhC8oBg/preview",
+      "key": "csd_learning_frameworks",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks"
+      }
+    },
+    {
       "name": "Data and Machine Learning",
       "url": "https://docs.google.com/presentation/d/14lUkQ6joXUgyRT2iw4P_KE3v1bscdWQObZcjmcxugpo/template/preview",
       "key": "data_and_machine_learning",
@@ -7144,6 +7180,12 @@
     {
       "seeding_key": {
         "resource.key": "csd_implementation_guide",
+        "script.name": "csd5-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_learning_frameworks",
         "script.name": "csd5-2022"
       }
     },
