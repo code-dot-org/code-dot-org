@@ -65,9 +65,9 @@ class CoursesController < ApplicationController
       name: params.require(:course).require(:name),
       family_name: params.require(:family_name),
       version_year: params.require(:version_year),
-      instruction_type: params.require(:instruction_type),
-      instructor_audience: params.require(:instructor_audience),
-      participant_audience: params.require(:participant_audience),
+      instruction_type: params[:instruction_type] ? params[:instruction_type] : SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
+      instructor_audience: params[:instructor_audience] ? params[:instructor_audience] : SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+      participant_audience: params[:participant_audience] ? params[:participant_audience] : SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
       has_numbered_units: true
     )
     if @unit_group.save
