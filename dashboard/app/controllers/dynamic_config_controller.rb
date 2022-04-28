@@ -77,30 +77,42 @@ class DynamicConfigController < ApplicationController
     authorize! :read, :reports
     DCDO.refresh
 
-    params.require(:key)
+    params.require([:key, :data_type])
     key = params[:key]
-    raw_value = params[:value] || ""
+    raw_value = params[:value]
+    data_type = params[:data_type]
 
-    if raw_value.to_i.to_s == raw_value
-      value = raw_value.to_i
-    elsif raw_value.to_f.to_s == raw_value
-      value = raw_value.to_f
-    elsif raw_value.downcase == "true" || raw_value.downcase == "false"
-      value = raw_value.to_bool
-    else
-      begin
-        value = JSON.parse(raw_value)
-      rescue JSON::ParserError
-        value = raw_value.delete_prefix('"').delete_suffix('"')
-      end
+    begin
+      value =
+        case data_type
+          when "Integer"
+            Integer(raw_value)
+          when "Float"
+            Float(raw_value)
+          when "Boolean"
+            raw_value.to_bool
+          when "String"
+            raw_value
+          else
+            new_value = JSON.parse(raw_value)
+            if new_value.class.to_s != data_type
+              raise "#{new_value} does not match data type \"#{data_type}\""
+            end
+            new_value
+        end
+
+      DCDO.set(key, value)
+
+      log_msg = "<b>DCDO - #{key}</b> #{current_user.name} set to #{value}"
+      ChatClient.log log_msg
+      flash[:notice] = "Updated successfully! Remember your changes take 30 seconds to go into effect, so don't expect to see the changes immediately on this page."
+      redirect_to action: :dcdo_show
+    rescue JSON::ParserError, NoMethodError, ArgumentError => e
+      flash[:alert] = "Failed to update, value and data type mismatch: #{e}"
+      redirect_to action: :dcdo_show
+    rescue StandardError => e
+      flash[:alert] = "Failed to update: #{e}"
+      redirect_to action: :dcdo_show
     end
-
-    DCDO.set(key, value)
-
-    # log_msg = "<b>DCDO - #{key}</b> #{current_user.name} set to #{value}"
-    # ChatClient.log log_msg
-
-    flash[:notice] = "Updated successfully! Remember your changes take 30 seconds to go into effect, so don't expect to see the changes immediately on this page."
-    redirect_to action: :dcdo_show
   end
 end
