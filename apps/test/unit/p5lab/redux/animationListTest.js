@@ -23,11 +23,13 @@ import {setExternalGlobals} from '../../../util/testUtils';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 const project = require('@cdo/apps/code-studio/initApp/project');
+import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import _ from 'lodash';
 
 describe('animationList', function() {
   setExternalGlobals(beforeEach, afterEach);
   describe('animationSourceUrl', function() {
+    before(() => assetPrefix.init({}));
     const key = 'foo';
 
     it(`returns the sourceUrl from props if it exists and is not an uploaded image`, function() {
