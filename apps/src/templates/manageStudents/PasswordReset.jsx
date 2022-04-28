@@ -6,8 +6,8 @@ import Button from '../Button';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
-const PASSWORD_TOO_SHORT_ERROR_MESSAGE =
-  'Password is too short (minimum is 6 characters)';
+// This min length is configured in user.rb with validates_length_of :password
+const MIN_PASSWORD_LENGTH = 6;
 
 class PasswordReset extends Component {
   static propTypes = {
@@ -43,6 +43,12 @@ class PasswordReset extends Component {
 
   save = () => {
     const {sectionId, studentId} = this.props;
+
+    if (this.state.input.length < MIN_PASSWORD_LENGTH) {
+      this.props.setPasswordLengthFailure(true);
+      return;
+    }
+
     const dataToUpdate = {
       student: {
         password: this.state.input
@@ -55,7 +61,7 @@ class PasswordReset extends Component {
         'Content-Type': 'application/json;charset=UTF-8'
       },
       body: JSON.stringify(dataToUpdate),
-      credentials: 'include'
+      credentials: 'same-origin'
     })
       .then(res => {
         if (res.ok) {
@@ -65,10 +71,6 @@ class PasswordReset extends Component {
           });
           this.recordResetSecret();
           this.hidePasswordLengthFailure();
-        } else if (res.status === 400) {
-          return res.text().then(text => {
-            throw new Error(text);
-          });
         } else {
           const err = new Error('HTTP status code: ' + res.status);
           err.response = res;
@@ -76,16 +78,7 @@ class PasswordReset extends Component {
           throw err;
         }
       })
-      .catch(err => {
-        try {
-          const errorObj = JSON.parse(err.message);
-          if (errorObj.errors.includes(PASSWORD_TOO_SHORT_ERROR_MESSAGE)) {
-            this.props.setPasswordLengthFailure(true);
-            return;
-          }
-        } catch {
-          console.log(err.message);
-        }
+      .catch(() => {
         // We may want to handle this more cleanly in the future, but for now this
         // matches the experience we got in angular
         alert(i18n.unexpectedError());
