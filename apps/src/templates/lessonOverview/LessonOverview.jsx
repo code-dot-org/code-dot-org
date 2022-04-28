@@ -123,7 +123,9 @@ class LessonOverview extends Component {
                     customText={
                       <div>
                         <FontAwesome icon="print" style={styles.icon} />
-                        <span>{i18n.printingOptions()}</span>
+                        <span style={styles.customText}>
+                          {i18n.printingOptions()}
+                        </span>
                       </div>
                     }
                   >
@@ -328,8 +330,12 @@ const styles = {
     flexDirection: 'row',
     marginTop: 40
   },
+  customText: {
+    marginRight: 2,
+    marginLeft: 2
+  },
   icon: {
-    marginRight: 4,
+    marginRight: 2,
     marginLeft: 2,
     fontSize: 16,
     // we want our icon text to be a different size than our button text, which
