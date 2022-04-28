@@ -100,6 +100,7 @@ module Services
 
       return false unless rack_env?(:staging)
       return false unless script_data['properties'].fetch('is_migrated', false)
+      return false if script_data['published_state'] == SharedCourseConstants::PUBLISHED_STATE.in_development
       return false if script_data['properties'].fetch('use_legacy_lesson_plans', false)
       return false if DCDO.get('disable_curriculum_pdf_generation', false)
 

@@ -60,6 +60,25 @@ module Services
       refute Services::CurriculumPdfs.generate_pdfs?(script_data)
     end
 
+    test 'will not generate a PDF if unit is in development published state' do
+      CDO.stubs(:rack_env).returns(:staging)
+      script = create(:script)
+      script_data = {
+        'properties' => {
+          'is_migrated' => true,
+        },
+        'serialized_at' => Time.now.getutc,
+        'name' => script.name,
+        'published_state' => SharedCourseConstants::PUBLISHED_STATE.in_development
+      }
+
+      script_data = JSON.parse(script_data.to_json)
+
+      refute Services::CurriculumPdfs.generate_pdfs?(script_data)
+      script_data['published_state'] = SharedCourseConstants::PUBLISHED_STATE.beta
+      assert Services::CurriculumPdfs.generate_pdfs?(script_data)
+    end
+
     test 'will not generate a overview PDF when unit does not have lesson plans' do
       CDO.stubs(:rack_env).returns(:staging)
       unit_with_lesson_plans = create(:script, is_migrated: true, published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
