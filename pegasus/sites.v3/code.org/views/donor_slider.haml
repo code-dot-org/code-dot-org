@@ -28,5 +28,5 @@
             = "#{supporter[:name_s]}, "
     
     .donor-button
-      %button{onclick: "window.location.href = '/donate'"}
+      %button{role: "link", onclick: "window.location.href = '/donate'"}
         = I18n.t(:homepage_donors_donate)
