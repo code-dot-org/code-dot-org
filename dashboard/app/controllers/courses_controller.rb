@@ -15,6 +15,13 @@ class CoursesController < ApplicationController
 
   authorize_resource class: 'UnitGroup', except: [:index], instance_name: 'unit_group', id_param: :course_name
 
+  def new
+    @course_families_course_types = UnitGroup.family_names.map do |cf|
+      ug = CourseOffering.find_by(key: cf).course_versions.first.content_root
+      [cf, {instruction_type: ug.instruction_type, instructor_audience: ug.instructor_audience, participant_audience: ug.participant_audience}]
+    end.to_h
+  end
+
   def index
     view_options(full_width: true, responsive_content: true, no_padding_container: true, has_i18n: true)
     respond_to do |format|
@@ -53,14 +60,14 @@ class CoursesController < ApplicationController
     render 'show', locals: {unit_group: @unit_group, redirect_warning: params[:redirect_warning] == 'true'}
   end
 
-  def new
-  end
-
   def create
     @unit_group = UnitGroup.new(
       name: params.require(:course).require(:name),
       family_name: params.require(:family_name),
       version_year: params.require(:version_year),
+      instruction_type: params.require(:instruction_type),
+      instructor_audience: params.require(:instructor_audience),
+      participant_audience: params.require(:participant_audience),
       has_numbered_units: true
     )
     if @unit_group.save

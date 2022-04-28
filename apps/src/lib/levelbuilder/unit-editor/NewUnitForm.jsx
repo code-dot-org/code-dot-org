@@ -8,6 +8,9 @@ export default function NewUnitForm(props) {
   const [isCourse, setIsCourse] = useState('');
   const [familyName, setFamilyName] = useState('');
   const [versionYear, setVersionYear] = useState('');
+  const [instructorAudience, setInstructorAudience] = useState('');
+  const [participantAudience, setParticipantAudience] = useState('');
+  const [instructionType, setInstructionType] = useState('');
 
   const getScriptName = () => {
     const name =
@@ -55,6 +58,12 @@ export default function NewUnitForm(props) {
             setFamilyName={setFamilyName}
             versionYear={versionYear}
             setVersionYear={setVersionYear}
+            instructionType={instructionType}
+            setInstructionType={setInstructionType}
+            instructorAudience={instructorAudience}
+            setInstructorAudience={setInstructorAudience}
+            participantAudience={participantAudience}
+            setParticipantAudience={setParticipantAudience}
           />
           {familyName !== '' && versionYear !== '' && (
             <div>
@@ -83,6 +92,21 @@ export default function NewUnitForm(props) {
               </label>
               <input name="family_name" value={familyName} type="hidden" />
               <input name="version_year" value={versionYear} type="hidden" />
+              <input
+                name="instruction_type"
+                value={instructionType}
+                type="hidden"
+              />
+              <input
+                name="instructor_audience"
+                value={instructorAudience}
+                type="hidden"
+              />
+              <input
+                name="participant_audience"
+                value={participantAudience}
+                type="hidden"
+              />
               <input
                 name="is_course"
                 value={isCourse === 'true'}
