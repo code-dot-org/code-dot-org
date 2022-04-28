@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-27 22:53:40 UTC",
+    "serialized_at": "2022-04-28 15:42:18 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1875,10 +1875,27 @@
       }
     },
     {
-      "key": "6f6470cd-6589-428d-b3fc-30fbdd935e19",
+      "key": "d43801bf-efbb-477d-8bdc-4365121344d0",
       "position": 2,
       "properties": {
-        "description": "**Group:** Put students in pairs.\n\n**Distribute:** Pass out a copy of the activity guide to each student.\n\nDirect students to the \"Sample Web Pages\" level on Code Studio.\n\n\n\n\n\n\n    \n\n",
+        "description": "**Group:** Put students in pairs.\n\n**Distribute:** Pass out a copy of the activity guide to each student.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Answer Keys & Exemplars:** An answer key or exemplar is provided for verified teachers as part of the resources in this lesson plan. If you do not see an answer key or exemplar listed as a resource, [follow these steps](https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-) to become a verified teacher."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d43801bf-efbb-477d-8bdc-4365121344d0",
+        "lesson_activity.key": "5114c102-679b-43ce-9399-33bff161328c"
+      }
+    },
+    {
+      "key": "6f6470cd-6589-428d-b3fc-30fbdd935e19",
+      "position": 3,
+      "properties": {
+        "description": "\n**Code Studio:** Direct students to the \"Sample Web Pages\" level on Code Studio.",
         "progression_name": "Sample Personal Web Pages"
       },
       "seeding_key": {
@@ -1888,7 +1905,7 @@
     },
     {
       "key": "cd25afa1-2718-46ab-870d-64e47ec1e98f",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "This activity guide asks students to consider why people make personal web pages and what sorts of interests can be expressed on them.",
         "name": "Exploring Websites",
@@ -1906,7 +1923,7 @@
     },
     {
       "key": "49fd921c-33fb-4ecd-9268-837e829c6201",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "* What is this person sharing with the world?\r\n* Why is it important to them?\r\n\r\nEncourage students to be as detailed as possible when brainstorming the purposes of these sites."
       },
@@ -1917,7 +1934,7 @@
     },
     {
       "key": "1f3c093c-6764-4f4f-b863-6fcb17e5f415",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "**Share:** Once everyone has had a chance to brainstorm about their sites, give students a chance to share out their thoughts."
       },
@@ -1928,7 +1945,7 @@
     },
     {
       "key": "b046dcc5-3dd8-422d-9e5e-462e8a03877f",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "**Discuss:** Give students an opportunity to ask questions about these example sites. Make sure they understand how a small site that is primarily a tool for individual self-expression can also be a useful site for other people.",
         "tips": [
