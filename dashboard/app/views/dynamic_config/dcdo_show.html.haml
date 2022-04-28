@@ -7,7 +7,7 @@
 
     .dcdo-row {
       display: grid;
-      grid-template-columns: 300px 300px 100px;
+      grid-template-columns: 240px 384px 111px 100px;
       border-bottom: 1px solid #eee;
     }
 
@@ -15,10 +15,22 @@
       margin: auto;
     }
 
-    form, input {
+    .dcdo-value {
+      input {
+        width: 350px;
+      }
+    }
+
+    select {
+      width: auto;
+    }
+
+    form, input, select {
       margin: 0;
     }
   }
+
+- data_types = ["Array", "Boolean", "Float", "Hash", "Integer", "String"]
 
 .dcdo-list
   %h3 DCDO Flags
@@ -26,6 +38,7 @@
     %div{:class => %w[dcdo-row]}
       %div{:class => %w[dcdo-label dcdo-padding]} Key
       %div{:class => %w[dcdo-label dcdo-padding]} Value
+      %div{:class => %w[dcdo-label dcdo-padding]} Data Type
       %div{:class => %w[dcdo-label]}
     = form_for :add, :url => {:controller => 'dynamic_config', :action => 'dcdo_set'} do |f|
       %div{:class => %w[dcdo-row]}
@@ -33,14 +46,23 @@
           %input{:type => "text", :name => "key", :placeholder => "new key"}
         %div{:class => %w[dcdo-value dcdo-padding]}
           %input{:type => "text", :placeholder => "value", :name => "value"}
+        %div{:class => %w[dcdo-padding]}
+          %select{:name => "data_type"}
+            - data_types.each do |type|
+              %option{:value => type}= type
         %div{:class => %w[dcdo-submit-button dcdo-padding]}
           %input{:type => "submit", :value => "Add", :class => "btn"}
     - @dcdo_hsh.to_a.sort.each do |key, value|
+      - current_type = value.class == TrueClass || value.class == FalseClass ? "Boolean" : value.class.to_s
       = form_for :add, :url => {:controller => 'dynamic_config', :action => 'dcdo_set'} do |f|
         %div{:class => %w[dcdo-row]}
           %div{:class => %w[dcdo-key dcdo-padding]}= key
           %div{:class => %w[dcdo-value dcdo-padding]}
             %input{:type => "text", :name => "key", :style => "display: none", :value => key}
-            %input{:type => "text", :placeholder => "value", :name => "value", :value => value.to_json}
+            %input{:type => "text", :placeholder => "value", :name => "value", :value => current_type == "Hash" ? value.to_json : value.to_s}
+          %div{:class => %w[dcdo-padding]}
+            %select{:name => "data_type"}
+              - data_types.each do |type|
+                %option{:value => type, :selected => current_type == type}= type
           %div{:class => %w[dcdo-submit-button dcdo-padding]}
             %input{:type => "submit", :value => "Update", :class => "btn"}
