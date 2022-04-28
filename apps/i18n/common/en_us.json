@@ -1477,6 +1477,7 @@
   "programmingEnvironmentDocumentation": "{programmingEnvironmentTitle} Documentation",
   "progress": "Progress",
   "progressBubbleDescription": "Level {levelID}",
+  "progressBubbleDescriptionWithLesson": "Level {levelID} Lesson {lessonName}",
   "progressLegendAssessment": "Assessment",
   "progressOnCSTAStandards": "Progress on CSTA Standards",
   "progressOnCSTAStandardsDescription": "This view shows you how the lessons your class has completed map to the **[Computer Science Teachers Association's (CSTA) standards]({cstaLink})**.",

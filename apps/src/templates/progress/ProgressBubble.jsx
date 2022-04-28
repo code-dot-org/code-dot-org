@@ -36,7 +36,8 @@ export default class ProgressBubble extends React.Component {
     onClick: PropTypes.func,
     // We have the ability to hide the assessment checkmark badge because
     // it's visually cluttering in places like the teacher panel and progress table
-    hideAssessmentBadge: PropTypes.bool
+    hideAssessmentBadge: PropTypes.bool,
+    lessonName: PropTypes.string
   };
 
   isClickable() {
@@ -124,7 +125,16 @@ export default class ProgressBubble extends React.Component {
   render() {
     const level = this.props.level;
     const levelID = level.bubbleText || level.letter || level.levelNumber;
-    const description = i18n.progressBubbleDescription({levelID: levelID});
+    const lessonName = this.props.lessonName;
+    let description = i18n.progressBubbleDescription({
+      levelID: levelID
+    });
+    if (lessonName) {
+      description = i18n.progressBubbleDescriptionWithLesson({
+        levelID: levelID,
+        lessonName: lessonName
+      });
+    }
     if (this.isClickable()) {
       return (
         <BubbleLink
