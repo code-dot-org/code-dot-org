@@ -230,7 +230,7 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
         projects: projectsList
       };
     case PUBLISH_SUCCESS:
-      if (!state.projects) {
+      if (!state.projects?.length) {
         // We haven't loaded the projects and therefore have nothing to update.
         return state;
       }
