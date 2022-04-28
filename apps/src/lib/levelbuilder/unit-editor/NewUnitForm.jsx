@@ -75,6 +75,7 @@ export default function NewUnitForm(props) {
           />
           {familyName !== '' && versionYear !== '' && (
             <div>
+              <h2>Unit Slug</h2>
               <label>
                 The Unit Slug for this course will be:
                 <HelpTip>

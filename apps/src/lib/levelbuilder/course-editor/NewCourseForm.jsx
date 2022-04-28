@@ -46,6 +46,7 @@ export default function NewCourseForm(props) {
       />
       {familyName !== '' && versionYear !== '' && (
         <div>
+          <h2>Course Slug</h2>
           <label>
             The Course Slug for this course will be:
             <HelpTip>
