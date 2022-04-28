@@ -25,6 +25,7 @@ import LessonStandards from './LessonStandards';
 import StyledCodeBlock from './StyledCodeBlock';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import FontAwesome from '../FontAwesome';
 
 class LessonOverview extends Component {
   static propTypes = {
@@ -119,7 +120,12 @@ class LessonOverview extends Component {
                 <div style={{marginRight: 5}}>
                   <DropdownButton
                     color={Button.ButtonColor.gray}
-                    text={i18n.printingOptions()}
+                    customText={
+                      <div>
+                        <FontAwesome icon="print" style={styles.icon} />
+                        <span>{i18n.printingOptions()}</span>
+                      </div>
+                    }
                   >
                     {pdfDropdownOptions.map(option => (
                       <a
@@ -321,6 +327,15 @@ const styles = {
     display: 'flex',
     flexDirection: 'row',
     marginTop: 40
+  },
+  icon: {
+    marginRight: 4,
+    marginLeft: 2,
+    fontSize: 16,
+    // we want our icon text to be a different size than our button text, which
+    // requires we manually offset to get it centered properly
+    position: 'relative',
+    top: 1
   },
   left: {
     width: '60%',
