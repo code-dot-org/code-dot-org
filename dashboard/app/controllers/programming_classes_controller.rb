@@ -1,6 +1,7 @@
 class ProgrammingClassesController < ApplicationController
-  before_action :require_levelbuilder_mode_or_test_env
+  before_action :require_levelbuilder_mode_or_test_env, only: [:new, :create, :edit, :update]
   load_and_authorize_resource
+  before_action :set_class_by_keys, only: [:show_by_keys]
 
   def new
     @programming_environments_for_select = ProgrammingEnvironment.all.map {|env| {id: env.id, name: env.name}}
@@ -58,6 +59,15 @@ class ProgrammingClassesController < ApplicationController
     @programming_environment_categories = @programming_class.programming_environment.categories_for_navigation
   end
 
+  def show_by_keys
+    return render :not_found unless @programming_class
+    if params[:programming_environment_name] && params[:programming_class_key]
+      @programming_environment_categories = @programming_class.programming_environment.categories_for_navigation
+      return render :show
+    end
+    render :not_found
+  end
+
   private
 
   def programming_class_params
@@ -76,5 +86,9 @@ class ProgrammingClassesController < ApplicationController
     transformed_params[:examples] = transformed_params[:examples].to_json if transformed_params[:examples]
     transformed_params[:fields] = transformed_params[:fields].to_json if transformed_params[:fields]
     transformed_params
+  end
+
+  def set_class_by_keys
+    @programming_class = ProgrammingEnvironment.find_by_name(params[:programming_environment_name])&.programming_classes&.find_by_key(params[:programming_class_key])
   end
 end
