@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csa-backpack-2022",
-    "serialized_at": "2022-04-25 13:16:59 UTC",
+    "serialized_at": "2022-04-29 17:31:35 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -68,7 +68,7 @@
       "name": "ImageEffect",
       "absolute_position": 3,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
       },
