@@ -2184,7 +2184,7 @@ class ScriptTest < ActiveSupport::TestCase
       unit.save!
     end
 
-    assert_includes error.message, 'Published state must be in_development or beta for a deeper learning course.'
+    assert_includes error.message, 'Published state can never be pilot, preview or launched for a deeper learning course.'
   end
 
   test 'should raise error if participant audience is nil for standalone unit' do
