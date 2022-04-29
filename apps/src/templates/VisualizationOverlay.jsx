@@ -49,7 +49,6 @@ export class VisualizationOverlay extends React.Component {
       this.props.width !== nextProps.width ||
       this.props.height !== nextProps.height
     ) {
-      console.log(`recalculating transform, new width is ${nextProps.width} old width was ${this.props.width}`);
       this.recalculateTransform();
     }
   }
@@ -112,7 +111,6 @@ export class VisualizationOverlay extends React.Component {
   }
 
   render() {
-    console.log(`width is ${this.props.width}`);
     return (
       <svg
         ref="root"
