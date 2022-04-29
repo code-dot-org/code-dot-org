@@ -346,7 +346,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
       @unit_facilitator_to_teacher.course_version.course_offering.id
     ].sort
 
-    assert_equal CourseOffering.assignable_course_offerings_info(@levelbuilder).keys.sort, expected_course_offering_info
+    assignable_course_offerings = CourseOffering.assignable_course_offerings_info(@levelbuilder)
+    expected_course_offering_info.each {|co| assert assignable_course_offerings.keys.include?(co)}
   end
 
   test 'in assignable course offerings summary display names of course offerings include star if they are not launched' do
@@ -361,7 +362,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
       @unit_facilitator_to_teacher.course_version.course_offering.display_name
     ].sort
 
-    assert_equal CourseOffering.assignable_course_offerings_info(@levelbuilder).values.map {|co| co[:display_name]}.sort, expected_course_offering_names
+    assignable_course_offering_names = CourseOffering.assignable_course_offerings_info(@levelbuilder).values.map {|co| co[:display_name]}
+    expected_course_offering_names.each {|name| assert assignable_course_offering_names.include?(name)}
   end
 
   test 'get assignable course offerings for pilot teacher should return offerings where pilot teacher can be instructor' do
@@ -371,7 +373,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
       @pilot_unit.course_version.course_offering.id
     ].sort
 
-    assert_equal CourseOffering.assignable_course_offerings_info(@pilot_teacher).keys.sort, expected_course_offering_info
+    assignable_course_offerings = CourseOffering.assignable_course_offerings_info(@pilot_teacher)
+    expected_course_offering_info.each {|co| assert assignable_course_offerings.keys.include?(co)}
   end
 
   test 'get assignable course offerings for partner should return offerings where partner can be instructor and partners courses' do
@@ -381,7 +384,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
       @partner_unit.course_version.course_offering.id
     ].sort
 
-    assert_equal CourseOffering.assignable_course_offerings_info(@partner).keys.sort, expected_course_offering_info
+    assignable_course_offerings = CourseOffering.assignable_course_offerings_info(@partner)
+    expected_course_offering_info.each {|co| assert assignable_course_offerings.keys.include?(co)}
   end
 
   test 'get assignable course offerings for pl pilot instructor should return offerings where pl pilot instructor can be instructor' do
@@ -392,7 +396,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
       @unit_facilitator_to_teacher.course_version.course_offering.id
     ].sort
 
-    assert_equal CourseOffering.assignable_course_offerings_info(@pilot_instructor).keys.sort, expected_course_offering_info
+    assignable_course_offerings = CourseOffering.assignable_course_offerings_info(@pilot_instructor)
+    expected_course_offering_info.each {|co| assert assignable_course_offerings.keys.include?(co)}
   end
 
   test 'get assignable course offerings for teacher should return offerings where teacher can be instructor' do
@@ -401,7 +406,8 @@ class CourseOfferingTest < ActiveSupport::TestCase
       @unit_teacher_to_students.course_version.course_offering.id
     ].sort
 
-    assert_equal CourseOffering.assignable_course_offerings_info(@teacher).keys.sort, expected_course_offering_info
+    assignable_course_offerings = CourseOffering.assignable_course_offerings_info(@teacher)
+    expected_course_offering_info.each {|co| assert assignable_course_offerings.keys.include?(co)}
   end
 
   test 'get assignable course offerings for facilitator should return all offerings, versions, amd units where facilitator can be instructor' do
@@ -413,7 +419,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
 
     assignable_course_offerings = CourseOffering.assignable_course_offerings_info(@facilitator)
 
-    assert_equal assignable_course_offerings.keys.sort, expected_course_offering_info
+    expected_course_offering_info.each {|co| assert assignable_course_offerings.keys.include?(co)}
 
     unit_group_course_versions = assignable_course_offerings[@unit_group.course_version.course_offering.id][:course_versions]
     assert_equal unit_group_course_versions.keys, [@unit_group.course_version.id]
