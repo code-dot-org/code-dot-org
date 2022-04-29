@@ -772,7 +772,7 @@ class Script < ApplicationRecord
   end
 
   def self.unit_in_category?(category, script)
-    return Script.get_from_cache(script).course_version.course_offering.category == category
+    return Script.get_from_cache(script)&.course_version&.course_offering&.category == category
   end
 
   # Legacy levels have different video and title logic in LevelsHelper.
