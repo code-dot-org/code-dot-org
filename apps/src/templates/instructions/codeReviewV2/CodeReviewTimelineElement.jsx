@@ -38,7 +38,7 @@ const CodeReviewTimelineElement = ({
         <div style={styles.eyeColumn} />
         <div style={styles.timeline}>
           <TimelineDot color={color.purple} />
-          {!isLast && <TimelineLine height={40} marginRight={-1.5} />}
+          {!isLast && <TimelineLine height="40px" marginRight="-1.5px" />}
         </div>
         <div style={{...styles.child, ...styles.createdText}}>
           {javalabMsg.created()}
@@ -48,8 +48,6 @@ const CodeReviewTimelineElement = ({
   }
 
   if (type === codeReviewTimelineElementType.COMMIT) {
-    const borderLeft = isLast ? 'none' : lineStyle;
-
     return (
       <div style={styles.element}>
         <div style={styles.eyeColumn}>
@@ -57,8 +55,9 @@ const CodeReviewTimelineElement = ({
         </div>
         <div style={styles.timeline}>
           <TimelineDot color={color.dark_charcoal} hasCheck={true} />
+          {!isLast && <TimelineLine height={`calc(100% - ${dotHeight}px`} />}
         </div>
-        <div style={{...styles.commitChild, borderLeft}}>{children}</div>
+        <div style={{...styles.commitChild}}>{children}</div>
       </div>
     );
   }
@@ -71,7 +70,7 @@ const CodeReviewTimelineElement = ({
         </div>
         <div style={styles.codeReviewTimeline}>
           <div>{children}</div>
-          {!isLast && <TimelineLine height={40} marginLeft={15} />}
+          {!isLast && <TimelineLine height="40px" marginLeft="15px" />}
         </div>
       </div>
     );
@@ -116,22 +115,23 @@ TimelineDot.propTypes = {
 };
 
 // Helper to render the lines
-const TimelineLine = ({height = 10, marginRight = 0, marginLeft = 0}) => {
+const TimelineLine = ({height, marginRight = '0px', marginLeft = '0px'}) => {
   const style = {
     borderLeft: lineStyle,
-    height: `${height}px`,
-    marginRight: `${marginRight}px`,
-    marginLeft: `${marginLeft}px`
+    height: height,
+    marginRight: marginRight,
+    marginLeft: marginLeft
   };
   return <div style={style} />;
 };
 TimelineLine.propTypes = {
-  height: PropTypes.number,
-  marginRight: PropTypes.number,
-  marginLeft: PropTypes.number
+  height: PropTypes.string.isRequired,
+  marginRight: PropTypes.string,
+  marginLeft: PropTypes.string
 };
 
 const lineStyle = `3px solid ${color.charcoal}`;
+const dotHeight = 20;
 
 const styles = {
   element: {
@@ -156,8 +156,8 @@ const styles = {
     marginLeft: '11px'
   },
   dot: {
-    width: '20px',
-    height: '20px',
+    width: dotHeight,
+    height: dotHeight,
     borderRadius: '50%',
     zIndex: 1,
     display: 'flex',
