@@ -132,10 +132,24 @@ class ProgrammingEnvironment < ApplicationRecord
   end
 
   def categories_for_navigation
-    categories.select(&:should_be_in_navigation?).map(&:summarize_for_navigation)
+    Rails.cache.fetch("#{cache_key_with_version}/categories_for_navigation", force: !Script.should_cache?) do
+      categories.select(&:should_be_in_navigation?).map(&:summarize_for_navigation)
+    end
   end
 
   def categories_for_get
     categories.select(&:should_be_in_navigation?).map(&:summarize_for_get)
+  end
+
+  def self.get_published_environments_from_cache
+    Rails.cache.fetch("published_programming_environments", force: !Script.should_cache?) do
+      @programming_environments = ProgrammingEnvironment.where(published: true).order(:name).map(&:summarize_for_index)
+    end
+  end
+
+  def self.get_from_cache(name)
+    Rails.cache.fetch("programming_environment/#{name}", force: !Script.should_cache?) do
+      ProgrammingEnvironment.find_by_name(name)
+    end
   end
 end
