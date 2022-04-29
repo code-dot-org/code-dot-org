@@ -12976,7 +12976,7 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         } else if (known.anyobj && node.callee.type === 'MemberExpression') {
           this.jsSocketAndMark(indentDepth, node.callee.object, depth + 1, NEVER_PAREN, null, null, known != null ? (ref8 = known.fn) != null ? ref8.objectDropdown : void 0 : void 0);
         } else if (known && node.callee.type === 'MemberExpression' && this.opts.createSocketForKnownBlock) {
-          this.jsSocketAndMark(indentDepth, node.callee.object, depth + 1, null, null, null, known != null ? (ref9 = known.fn) != null ? ref9.objectDropdown : void 0 : void 0);
+          this.jsSocketAndMark(indentDepth, node.callee.object, depth + 1, 3, null, null, known != null ? (ref9 = known.fn) != null ? ref9.objectDropdown : void 0 : void 0);
         }
         ref10 = node["arguments"];
         for (i = n = 0, len4 = ref10.length; n < len4; i = ++n) {
@@ -13022,7 +13022,7 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         if (!known || known.anyobj) {
           return this.jsSocketAndMark(indentDepth, node.object, depth + 1);
         } else if (known && this.opts.createSocketForKnownBlock) {
-          return this.jsSocketAndMark(indentDepth, node.object, depth + 1);
+          return this.jsSocketAndMark(indentDepth, node.object, depth + 1, 3);
         }
         break;
       case 'UpdateExpression':
