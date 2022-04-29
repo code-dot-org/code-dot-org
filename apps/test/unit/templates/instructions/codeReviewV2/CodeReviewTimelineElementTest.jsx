@@ -86,35 +86,22 @@ describe('CodeReviewTimelineElement', () => {
       expect(wrapper.find('EyeballLink')).to.have.length(0);
     });
 
-    it('displays a border left on children if it is not the last element', () => {
-      const child = <div className="the-child" />;
-      const wrapper = setUp(
-        {
-          type: codeReviewTimelineElementType.COMMIT
-        },
-        child
-      );
-      const borderLeft = wrapper
-        .find('.the-child')
-        .parent()
-        .props().style.borderLeft;
-      expect(borderLeft).to.equal('3px solid #5b6770');
+    it('displays a bottom line if it is not the last element', () => {
+      const wrapper = setUp({
+        type: codeReviewTimelineElementType.COMMIT,
+        isLast: false
+      });
+      const timelineLine = wrapper.find('TimelineLine');
+      expect(timelineLine).to.have.length(1);
     });
 
-    it('does not have a border left on children if it is the last element', () => {
-      const child = <div className="the-child" />;
-      const wrapper = setUp(
-        {
-          type: codeReviewTimelineElementType.COMMIT,
-          isLast: true
-        },
-        child
-      );
-      const borderLeft = wrapper
-        .find('.the-child')
-        .parent()
-        .props().style.borderLeft;
-      expect(borderLeft).to.equal('none');
+    it('does not display a bottom line if it is the last element', () => {
+      const wrapper = setUp({
+        type: codeReviewTimelineElementType.COMMIT,
+        isLast: true
+      });
+      const timelineLine = wrapper.find('TimelineLine');
+      expect(timelineLine).to.have.length(0);
     });
 
     it('displays gray timeline dot with a check', () => {
