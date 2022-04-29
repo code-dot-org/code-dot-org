@@ -1128,7 +1128,7 @@ class Script < ApplicationRecord
     end
   end
 
-  def clone_migrated_unit(new_name, new_level_suffix: nil, destination_unit_group_name: nil, version_year: nil, family_name:  nil)
+  def clone_migrated_unit(new_name, new_level_suffix: nil, destination_unit_group_name: nil, professional_learning_course: nil, version_year: nil, family_name:  nil)
     raise 'Script name has already been taken' if Script.find_by_name(new_name) || File.exist?(Script.script_json_filepath(new_name))
 
     destination_unit_group = destination_unit_group_name ?
@@ -1143,8 +1143,9 @@ class Script < ApplicationRecord
         copied_unit.pilot_experiment = nil
         copied_unit.tts = false
         copied_unit.announcements = nil
-        copied_unit.is_course = destination_unit_group.nil?
+        copied_unit.is_course = destination_unit_group.nil? && professional_learning_course.nil?
         copied_unit.name = new_name
+        copied_unit.professional_learning_course = professional_learning_course unless professional_learning_course.nil?
 
         if version_year
           copied_unit.version_year = version_year
@@ -1152,26 +1153,30 @@ class Script < ApplicationRecord
 
         copied_unit.save!
 
-        if destination_unit_group
-          raise 'Destination unit group must be in a course version' if destination_unit_group.course_version.nil?
-          UnitGroupUnit.create!(unit_group: destination_unit_group, script: copied_unit, position: destination_unit_group.default_units.length + 1)
-          copied_unit.reload
-        else
-          copied_unit.is_course = true
-          raise "Must supply version year if new unit will be a standalone unit" unless version_year
-          copied_unit.version_year = version_year
-          raise "Must supply family name if new unit will be a standalone unit" unless family_name
-          copied_unit.family_name = family_name
-          CourseOffering.add_course_offering(copied_unit)
+        if professional_learning_course.nil?
+          if destination_unit_group
+            raise 'Destination unit group must be in a course version' if destination_unit_group.course_version.nil?
+            UnitGroupUnit.create!(unit_group: destination_unit_group, script: copied_unit, position: destination_unit_group.default_units.length + 1)
+            copied_unit.reload
+          else
+            copied_unit.is_course = true
+            raise "Must supply version year if new unit will be a standalone unit" unless version_year
+            copied_unit.version_year = version_year
+            raise "Must supply family name if new unit will be a standalone unit" unless family_name
+            copied_unit.family_name = family_name
+            CourseOffering.add_course_offering(copied_unit)
+          end
         end
 
         lesson_groups.each do |original_lesson_group|
           original_lesson_group.copy_to_unit(copied_unit, new_level_suffix)
         end
 
-        course_version = copied_unit.get_course_version
-        copied_unit.resources = resources.map {|r| r.copy_to_course_version(course_version)}
-        copied_unit.student_resources = student_resources.map {|r| r.copy_to_course_version(course_version)}
+        if professional_learning_course.nil?
+          course_version = copied_unit.get_course_version
+          copied_unit.resources = resources.map {|r| r.copy_to_course_version(course_version)}
+          copied_unit.student_resources = student_resources.map {|r| r.copy_to_course_version(course_version)}
+        end
 
         # Make sure we don't modify any files in unit tests.
         if Rails.application.config.levelbuilder_mode
