@@ -242,6 +242,9 @@ class UnitGroup < ApplicationRecord
         ugu.position = index + 1
         unit.update!(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil, is_course: false, pilot_experiment: nil)
         unit.course_version.destroy if unit.course_version
+
+        unit.reload
+        unit.write_script_json
       end
       unit_group_unit.update!(position: index + 1)
     end
