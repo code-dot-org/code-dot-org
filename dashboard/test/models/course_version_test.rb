@@ -72,7 +72,8 @@ class CourseVersionTest < ActiveSupport::TestCase
       @unit_facilitator_to_teacher.id
     ]
 
-    assert_equal CourseVersion.courses_for_unit_selector(student_unit_ids).map {|co| co[:display_name]}.sort, expected_course_info
+    course_display_names = CourseVersion.courses_for_unit_selector(student_unit_ids).map {|co| co[:display_name]}
+    expected_course_info.each {|c| assert course_display_names.include?(c)}
   end
 
   test 'get courses with participant progress for pilot teacher should return courses where pilot teacher can be instructor' do
@@ -80,7 +81,12 @@ class CourseVersionTest < ActiveSupport::TestCase
       @pilot_unit.course_version.course_offering.display_name + " *",
     ].sort
 
-    assert_equal CourseVersion.courses_for_unit_selector([@pilot_unit.id]).map {|co| co[:display_name]}.sort, expected_course_info
+    student_unit_ids = [
+      @pilot_pl_unit.id
+    ]
+
+    course_display_names = CourseVersion.courses_for_unit_selector(student_unit_ids).map {|co| co[:display_name]}
+    expected_course_info.each {|c| assert course_display_names.include?(c)}
   end
 
   test 'get courses with participant progress for teacher should only return courses where they can be the instructor' do
@@ -94,7 +100,8 @@ class CourseVersionTest < ActiveSupport::TestCase
       @unit_teacher_to_students.id
     ]
 
-    assert_equal CourseVersion.courses_for_unit_selector(student_unit_ids).map {|co| co[:display_name]}.sort, expected_course_info
+    course_display_names = CourseVersion.courses_for_unit_selector(student_unit_ids).map {|co| co[:display_name]}
+    expected_course_info.each {|c| assert course_display_names.include?(c)}
   end
 
   test 'get courses with participant progress for facilitator should return all courses, amd units where facilitator can be instructor and followers in section have progress' do
@@ -118,10 +125,11 @@ class CourseVersionTest < ActiveSupport::TestCase
 
     courses_with_progress = CourseVersion.courses_for_unit_selector(student_unit_ids)
 
-    assert_equal courses_with_progress.map {|co| co[:display_name]}.sort, expected_course_info
+    course_display_names = courses_with_progress.map {|co| co[:display_name]}
+    expected_course_info.each {|c| assert course_display_names.include?(c)}
 
     unit_names = courses_with_progress.map {|co| co[:units]}.flatten.map {|u| u[:name]}
-    assert_equal unit_names.sort, expected_unit_info
+    expected_unit_info.each {|u| assert unit_names.include?(u)}
   end
 
   test "course version associations" do
