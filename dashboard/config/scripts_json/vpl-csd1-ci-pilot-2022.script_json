@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-15 22:29:26 UTC",
+    "serialized_at": "2022-04-28 20:52:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -77,21 +77,6 @@
         "lesson_group.key": "",
         "script.name": "vpl-csd1-ci-pilot-2022"
       }
-    },
-    {
-      "key": "lesson-4",
-      "name": "Unit wrap up",
-      "absolute_position": 4,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "",
-        "script.name": "vpl-csd1-ci-pilot-2022"
-      }
     }
   ],
   "lesson_activities": [
@@ -127,18 +112,6 @@
       "seeding_key": {
         "lesson_activity.key": "cd6cd3db-6c68-44b7-9c99-9f118727a0d3",
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "vpl-csd1-ci-pilot-2022"
-      }
-    },
-    {
-      "key": "7c724e3f-8e30-4ceb-8e32-820ab52a1843",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "7c724e3f-8e30-4ceb-8e32-820ab52a1843",
-        "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "vpl-csd1-ci-pilot-2022"
       }
@@ -185,16 +158,6 @@
       "seeding_key": {
         "activity_section.key": "5c9853d0-de30-4c85-84f7-2ef4d2801550",
         "lesson_activity.key": "cd6cd3db-6c68-44b7-9c99-9f118727a0d3"
-      }
-    },
-    {
-      "key": "5c72c4fb-a740-49ec-974f-de95b81ec6ad",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "5c72c4fb-a740-49ec-974f-de95b81ec6ad",
-        "lesson_activity.key": "7c724e3f-8e30-4ceb-8e32-820ab52a1843"
       }
     }
   ],
@@ -281,31 +244,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "VPL-CSD-pilot-S22-2-week1-U1L5"
-        ],
-        "progression": "Explore the first week of curriculum"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "VPL-CSD-pilot-S22-2-week1-U1L5"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "vpl-csd1-ci-pilot-2022",
-        "activity_section.key": "6d63c390-0b37-482e-93ab-70d76a90aa09"
-      },
-      "level_keys": [
-        "VPL-CSD-pilot-S22-2-week1-U1L5"
-      ]
-    },
-    {
-      "chapter": 5,
-      "position": 5,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "VPL-CSD-PILOT-S22-CI-vocab-c4u-U1L6"
         ],
         "progression": "Explore the first week of curriculum"
@@ -325,11 +263,56 @@
       ]
     },
     {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD Problem Solving Process Video_2022"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd1-ci-pilot-2022",
+        "activity_section.key": "628d905c-070b-42b0-8a81-2d18fa6bade1"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD Problem Solving Process Video_2022"
+      ]
+    },
+    {
       "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-U1L5"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd1-ci-pilot-2022",
+        "activity_section.key": "5c9853d0-de30-4c85-84f7-2ef4d2801550"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-2-week1-U1L5"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD What Makes a Computer a Computer Video_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -343,6 +326,134 @@
       },
       "level_keys": [
         "VPL-CSD-PILOT-S22-CI-CSD What Makes a Computer a Computer Video_2022"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-mod1-IOSP-Overview"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd1-ci-pilot-2022",
+        "activity_section.key": "5c9853d0-de30-4c85-84f7-2ef4d2801550"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-mod1-IOSP-Overview"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U1 processing bday_2022"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd1-ci-pilot-2022",
+        "activity_section.key": "5c9853d0-de30-4c85-84f7-2ef4d2801550"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U1 processing bday_2022"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "instructor_in_training": true
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U1 storage outfit_2022"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd1-ci-pilot-2022",
+        "activity_section.key": "5c9853d0-de30-4c85-84f7-2ef4d2801550"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U1 storage outfit_2022"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U1 storage video_2022"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd1-ci-pilot-2022",
+        "activity_section.key": "5c9853d0-de30-4c85-84f7-2ef4d2801550"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U1 storage video_2022"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": true,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U1 IOSP match_2022"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd1-ci-pilot-2022",
+        "activity_section.key": "5c9853d0-de30-4c85-84f7-2ef4d2801550"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U1 IOSP match_2022"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Cahpter2-ProjectOverview-mod1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd1-ci-pilot-2022",
+        "activity_section.key": "5c9853d0-de30-4c85-84f7-2ef4d2801550"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-Cahpter2-ProjectOverview-mod1"
       ]
     }
   ],
@@ -385,18 +496,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL-CSD-pilot-S22-2-week1-U1L5",
-        "script_level.level_keys": [
-          "VPL-CSD-pilot-S22-2-week1-U1L5"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "vpl-csd1-ci-pilot-2022",
-        "activity_section.key": "6d63c390-0b37-482e-93ab-70d76a90aa09"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "VPL-CSD-PILOT-S22-CI-vocab-c4u-U1L6",
         "script_level.level_keys": [
           "VPL-CSD-PILOT-S22-CI-vocab-c4u-U1L6"
@@ -409,9 +508,105 @@
     },
     {
       "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD Problem Solving Process Video_2022",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD Problem Solving Process Video_2022"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd1-ci-pilot-2022",
+        "activity_section.key": "628d905c-070b-42b0-8a81-2d18fa6bade1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-2-week1-U1L5",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-U1L5"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd1-ci-pilot-2022",
+        "activity_section.key": "5c9853d0-de30-4c85-84f7-2ef4d2801550"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "VPL-CSD-PILOT-S22-CI-CSD What Makes a Computer a Computer Video_2022",
         "script_level.level_keys": [
           "VPL-CSD-PILOT-S22-CI-CSD What Makes a Computer a Computer Video_2022"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd1-ci-pilot-2022",
+        "activity_section.key": "5c9853d0-de30-4c85-84f7-2ef4d2801550"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-mod1-IOSP-Overview",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-mod1-IOSP-Overview"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd1-ci-pilot-2022",
+        "activity_section.key": "5c9853d0-de30-4c85-84f7-2ef4d2801550"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U1 processing bday_2022",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U1 processing bday_2022"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd1-ci-pilot-2022",
+        "activity_section.key": "5c9853d0-de30-4c85-84f7-2ef4d2801550"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U1 storage outfit_2022",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U1 storage outfit_2022"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd1-ci-pilot-2022",
+        "activity_section.key": "5c9853d0-de30-4c85-84f7-2ef4d2801550"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U1 storage video_2022",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U1 storage video_2022"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd1-ci-pilot-2022",
+        "activity_section.key": "5c9853d0-de30-4c85-84f7-2ef4d2801550"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U1 IOSP match_2022",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U1 IOSP match_2022"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd1-ci-pilot-2022",
+        "activity_section.key": "5c9853d0-de30-4c85-84f7-2ef4d2801550"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-Cahpter2-ProjectOverview-mod1",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Cahpter2-ProjectOverview-mod1"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",

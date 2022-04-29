@@ -2,20 +2,30 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\nThen, experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. first thing\r\n\r\n2. second thing\r\n\r\n3. third thing\r\n\r\n##Getting Started\r\n1. Import `SomeClass.java`(#e7e8ea) from the ![Backpack](https://images.code.org/b17feeef2e8db2a98abdb4a5860c5c61-image-1642175705297.png)\r\n\r\n*Don't have it or it doesn't work? That's ok! Just copy and paste the code from [**here**](https://linktocode.com).*\r\n\r\n##In MyConsole.java:\r\n\r\n2. first step\r\n\r\n3. second step\r\n\r\n4. third step\r\n\r\n::: details [**Show Me How**]\r\nA `for`(#e7e8ea) loop uses the following syntax:\r\n  \r\n  ```\r\n  for (int variableName = startingValue; condition; variableName_change) {\r\n    // code to execute\r\n  }\r\n  ```\r\n\r\nBe sure to change `variableName`(#e7e8ea) to a name you can easily identify, such as `index`(#e7e8ea), and set the `startingValue`(#e7e8ea) to the value you want to start the loop.\r\n:::",
+    "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\nThen, experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. first thing\r\n\r\n2. second thing\r\n\r\n3. third thing",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
-    "csa_view_mode": "console",
-    "encrypted_examples": [
-
-    ]
+    "csa_view_mode": "theater",
+    "start_sources": {
+      "MyTheater.java": {
+        "text": "import org.code.theater.*;\nimport java.io.FileNotFoundException;\n\npublic class MyTheater {\n  public static void main(String[] args) throws FileNotFoundException {\n\n    Scene myScene = new Scene();\n    BrightenedImage myImage = new BrightenedImage(\"paintbrushes.jpg\");\n    \n    System.out.println(\"Number of pixels: \" + (myImage.getWidth() * myImage.getHeight()));\n\n    myScene.drawImage(myImage, 0, 0, myScene.getWidth());\n\n    myImage.brightenColors(50);\n\n    myScene.pause(0.5);\n\n    myScene.drawImage(myImage, 0, 0, myScene.getWidth());\n\n    Theater.playScenes(myScene);\n    \n  }\n}",
+        "isVisible": true
+      },
+      "BrightenedImage.java": {
+        "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.io.FileNotFoundException;\n\npublic class BrightenedImage extends Image {\n\n  private Pixel[][] imagePixels;\n\n  public BrightenedImage(String imageFile) throws FileNotFoundException {\n    super(imageFile);\n    \n    imagePixels = getPixels();\n  }\n\n  public Pixel[][] getPixels() {\n    Pixel[][] tempPixels = new Pixel[getHeight()][getWidth()];\n    \n    for (int row = 0; row < tempPixels.length; row++) {\n      for (int col = 0; col < tempPixels[0].length; col++) {\n        tempPixels[row][col] = getPixel(col, row);\n      }\n    }\n\n    return tempPixels;\n  }\n\n  public void brightenColors(int amount) {\n    for (int row = 0; row < imagePixels.length; row++) {\n      for (int col = 0; col < imagePixels[0].length; col++) {\n        Pixel currentPixel = imagePixels[row][col];\n\n        currentPixel.setRed(currentPixel.getRed() + amount);\n        currentPixel.setGreen(currentPixel.getGreen() + amount);\n        currentPixel.setBlue(currentPixel.getBlue() + amount);\n      }\n    }\n  }\n  \n}",
+        "isVisible": true
+      }
+    },
+    "starter_assets": {
+      "paintbrushes.jpg": "89b85131-13af-4382-a470-71cc6e14a59a.jpg"
+    }
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-04-12T19:24:38.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-04-12T19:24:38.674+00:00\",\"changed\":[\"cloned from \\\"CSA U5L5-L3d_2022\\\"\"],\"cloned_from\":\"CSA U5L5-L3d_2022\"},{\"changed_at\":\"2022-04-12 19:24:41 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-04-12T19:24:38.674+00:00\",\"changed\":[\"cloned from \\\"CSA U5L5-L3d_2022\\\"\"],\"cloned_from\":\"CSA U5L5-L3d_2022\"},{\"changed_at\":\"2022-04-12 19:24:41 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-28 21:24:58 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-28 21:25:13 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-28 21:37:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-28 21:39:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-28 22:57:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-28 22:58:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-28 22:59:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-29 00:43:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
