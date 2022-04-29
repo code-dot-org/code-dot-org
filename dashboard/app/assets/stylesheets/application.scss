@@ -348,6 +348,13 @@ img.video_thumbnail {
   }
 }
 
+.levelbuilder-header {
+  .header {
+    background-color: $purple;
+  }
+}
+
+
 #language_dir.rtl #pageheader-wrapper {
   .create_options {
     direction: rtl;
