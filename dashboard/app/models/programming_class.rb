@@ -139,24 +139,14 @@ class ProgrammingClass < ApplicationRecord
   end
 
   def summarize_programming_methods
-    # Create a map of top level methods, i.e. methods that do not
-    # have overload_of set
-    methods = {}
+    # Create a list of the top level programming methods, i.e. the
+    # ones without overload_of set
+    methods = []
     programming_methods.each do |m|
       next unless m.overload_of.blank?
-      obj = m.summarize_for_show
-      obj[:overloads] = []
-      methods[m.key] = obj
+      methods += [m.summarize_for_show]
     end
-
-    # Group the overloads with the top level methods, using the key overloads
-    programming_methods.each do |m|
-      next if m.overload_of.blank?
-      methods[m.overload_of][:overloads] += [m.summarize_for_show]
-    end
-
-    # We don't care about the keys of the hash anymore, just return the values
-    methods.values.sort_by {|m| m[:position]}
+    methods
   end
 
   private
