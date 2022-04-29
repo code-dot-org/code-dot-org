@@ -1128,8 +1128,12 @@ class Script < ApplicationRecord
     end
   end
 
-  def clone_migrated_unit(new_name, new_level_suffix: nil, destination_unit_group_name: nil, professional_learning_course: nil, version_year: nil, family_name:  nil)
+  def clone_migrated_unit(new_name, new_level_suffix: nil, destination_unit_group_name: nil, destination_professional_learning_course: nil, version_year: nil, family_name:  nil)
     raise 'Script name has already been taken' if Script.find_by_name(new_name) || File.exist?(Script.script_json_filepath(new_name))
+
+    if !destination_professional_learning_course.nil? && old_professional_learning_course?
+      raise 'Deeper learning courses must be copied to be new deeper learning courses. Include destination_professional_learning_course to set the professional learning course.'
+    end
 
     destination_unit_group = destination_unit_group_name ?
       UnitGroup.find_by_name(destination_unit_group_name) :
@@ -1139,13 +1143,16 @@ class Script < ApplicationRecord
     begin
       ActiveRecord::Base.transaction do
         copied_unit = dup
-        copied_unit.published_state = SharedCourseConstants::PUBLISHED_STATE.in_development
+        copied_unit.published_state = destination_unit_group.nil? ? SharedCourseConstants::PUBLISHED_STATE.in_development : nil
         copied_unit.pilot_experiment = nil
         copied_unit.tts = false
         copied_unit.announcements = nil
-        copied_unit.is_course = destination_unit_group.nil? && professional_learning_course.nil?
+        copied_unit.is_course = destination_unit_group.nil? && destination_professional_learning_course.nil?
         copied_unit.name = new_name
-        copied_unit.professional_learning_course = professional_learning_course unless professional_learning_course.nil?
+        copied_unit.professional_learning_course = destination_professional_learning_course unless destination_professional_learning_course.nil?
+        copied_unit.instruction_type = destination_unit_group.nil? ? get_instruction_type : nil
+        copied_unit.participant_audience = destination_unit_group.nil? ? get_participant_audience : nil
+        copied_unit.instructor_audience = destination_unit_group.nil? ? get_instructor_audience : nil
 
         if version_year
           copied_unit.version_year = version_year
@@ -1153,7 +1160,7 @@ class Script < ApplicationRecord
 
         copied_unit.save!
 
-        if professional_learning_course.nil?
+        if destination_professional_learning_course.nil?
           if destination_unit_group
             raise 'Destination unit group must be in a course version' if destination_unit_group.course_version.nil?
             UnitGroupUnit.create!(unit_group: destination_unit_group, script: copied_unit, position: destination_unit_group.default_units.length + 1)
@@ -1172,7 +1179,7 @@ class Script < ApplicationRecord
           original_lesson_group.copy_to_unit(copied_unit, new_level_suffix)
         end
 
-        if professional_learning_course.nil?
+        if destination_professional_learning_course.nil?
           course_version = copied_unit.get_course_version
           copied_unit.resources = resources.map {|r| r.copy_to_course_version(course_version)}
           copied_unit.student_resources = student_resources.map {|r| r.copy_to_course_version(course_version)}
