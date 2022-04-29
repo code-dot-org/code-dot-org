@@ -5,8 +5,8 @@ import color from '@cdo/apps/util/color';
 import javalabMsg from '@cdo/javalab/locale';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import CodeReviewDataApiV2 from './codeReview/CodeReviewDataApiV2';
-import ReviewNavigator from './codeReview/ReviewNavigator';
+import CodeReviewDataApi from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
+import ReviewNavigator from '@cdo/apps/templates/instructions/codeReviewV2/ReviewNavigator';
 import Button from '@cdo/apps/templates/Button';
 
 export const VIEWING_CODE_REVIEW_URL_PARAM = 'viewingCodeReview';
@@ -23,7 +23,7 @@ const CommitsAndReviewTab = ({
 }) => {
   const [loadingReviewData, setLoadingReviewData] = useState(false);
 
-  const dataApi = new CodeReviewDataApiV2(
+  const dataApi = new CodeReviewDataApi(
     channelId,
     serverLevelId,
     serverScriptId
@@ -72,7 +72,6 @@ const CommitsAndReviewTab = ({
               viewPeerList={!viewAsCodeReviewer}
               loadPeers={loadPeers}
               dropdownText={javalabMsg.youHaveProjectsToReview()}
-              color={Button.ButtonColor.gray}
               teacherAccountViewingAsParticipant={
                 userIsTeacher && !viewAsTeacher
               }
