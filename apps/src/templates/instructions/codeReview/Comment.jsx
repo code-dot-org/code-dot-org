@@ -135,7 +135,9 @@ class Comment extends Component {
         // Wrap onClick in a promise because some menu items onClick
         // do not make async requests and thus do not return a promise
         // (eg, hiding/showing comments)
-        Promise.resolve(item.onClick()).then(() => {
+
+        // Return promise for tests.
+        return Promise.resolve(item.onClick()).then(() => {
           if (this._isMounted) {
             this.setState({isUpdating: false});
           }
