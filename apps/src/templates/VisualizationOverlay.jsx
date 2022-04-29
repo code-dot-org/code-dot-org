@@ -19,7 +19,8 @@ export class VisualizationOverlay extends React.Component {
     areOverlaysVisible: PropTypes.bool.isRequired,
     areRunStateOverlaysVisible: PropTypes.bool.isRequired,
     onMouseMove: PropTypes.func,
-    children: PropTypes.node
+    children: PropTypes.node,
+    style: PropTypes.object
   };
 
   state = {
@@ -48,6 +49,7 @@ export class VisualizationOverlay extends React.Component {
       this.props.width !== nextProps.width ||
       this.props.height !== nextProps.height
     ) {
+      console.log(`recalculating transform, new width is ${nextProps.width} old width was ${this.props.width}`);
       this.recalculateTransform();
     }
   }
@@ -110,6 +112,7 @@ export class VisualizationOverlay extends React.Component {
   }
 
   render() {
+    console.log(`width is ${this.props.width}`);
     return (
       <svg
         ref="root"
@@ -118,7 +121,7 @@ export class VisualizationOverlay extends React.Component {
         baseProfile="full"
         width={this.props.width}
         height={this.props.height}
-        style={{left: 'auto'}}
+        style={{left: 'auto', ...this.props.style}}
         viewBox={'0 0 ' + this.props.width + ' ' + this.props.height}
         pointerEvents="none"
       >

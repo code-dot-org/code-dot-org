@@ -5,11 +5,6 @@ import PreviewPaneHeader from '../PreviewPaneHeader';
 import MazeVisualization from '@cdo/apps/maze/VisualizationWithOverlay';
 import {toggleVisualizationCollapsed} from '../javalabRedux';
 import {DisplayTheme} from '../DisplayTheme';
-import {VisualizationOverlay} from '../../templates/VisualizationOverlay';
-import CrosshairOverlay from '../../templates/CrosshairOverlay';
-import TooltipOverlay, {
-  coordinatesProvider
-} from '../../templates/TooltipOverlay';
 
 const ICON_PATH = '/blockly/media/turtle/';
 
@@ -26,8 +21,6 @@ class NeighborhoodVisualizationColumn extends React.Component {
   state = {
     isFullscreen: false
   };
-
-  onMouseMove = (mouseX, mouseY) => this.setState({mouseX, mouseY});
 
   render() {
     const {
@@ -64,20 +57,7 @@ class NeighborhoodVisualizationColumn extends React.Component {
               squareSize={skin.squareSize}
               rows={gridSize}
               cols={gridSize}
-            >
-              <VisualizationOverlay
-                width={skin.svgWidth}
-                height={skin.svgHeight}
-                areOverlaysVisible={true}
-                areRunStateOverlaysVisible={true}
-                onMouseMove={this.onMouseMove}
-              >
-                <CrosshairOverlay />
-                <TooltipOverlay
-                  providers={[coordinatesProvider(false, false)]}
-                />
-              </VisualizationOverlay>
-            </MazeVisualization>
+            />
           </div>
           <svg id="slider" version="1.1" width="150" height="50">
             {/* Slow icon. */}
