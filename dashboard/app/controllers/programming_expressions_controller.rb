@@ -137,8 +137,7 @@ class ProgrammingExpressionsController < ApplicationController
   def docs_show
     if DCDO.get('use-studio-code-docs', false)
       return render :not_found unless @programming_expression
-      @programming_environment_categories = @programming_expression.programming_environment.categories_for_navigation
-      return render :show
+      return redirect_to(programming_environment_programming_expression_path(@programming_expression.programming_environment.name, @programming_expression.key))
     end
     render_proxied_url(
       "https://curriculum.code.org/docs/#{params[:programming_environment_name]}/#{params[:programming_expression_key]}/",

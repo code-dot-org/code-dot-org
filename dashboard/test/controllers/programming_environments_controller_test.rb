@@ -41,9 +41,8 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
     assert_equal 1, JSON.parse(nav_data).length
   end
 
-  test 'data is passed down to docs show page if using studio code docs' do
+  test 'redirects to docs show page url if using studio code docs' do
     Rails.application.config.stubs(:levelbuilder_mode).returns false
-    DCDO.expects(:get).at_least_once
     DCDO.expects(:get).with('use-studio-code-docs', false).returns(true).at_least_once
 
     programming_environment = create :programming_environment, name: 'weblab'
@@ -52,13 +51,7 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
     create :programming_expression, programming_environment: programming_environment, programming_environment_category: category
 
     get :docs_show, params: {programming_environment_name: programming_environment.name}
-    assert_response :ok
-
-    show_data = css_select('script[data-programmingenvironment]').first.attribute('data-programmingenvironment').to_s
-    assert_equal programming_environment.summarize_for_show.to_json, show_data
-
-    nav_data = css_select('script[data-categoriesfornavigation]').first.attribute('data-categoriesfornavigation').to_s
-    assert_equal 1, JSON.parse(nav_data).length
+    assert_response :redirect
   end
 
   test 'page is proxied to docs show page if not using studio code docs' do
