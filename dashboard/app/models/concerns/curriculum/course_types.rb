@@ -51,7 +51,7 @@ module Curriculum::CourseTypes
     errors.add(:instructor_audience, 'should be different from participant audiences.') if !instructor_audience.nil? && instructor_audience == participant_audience
   end
 
-  # Checks if a user can be the instructor for the course. universal instructors and levelbuilders
+  # Checks if a user acts as the instructor for the course. universal instructors and levelbuilders
   # can be the instructors of any course. Student accounts should never be able to be the instructor
   # of any course.
   def instructor?(user)
@@ -74,7 +74,7 @@ module Curriculum::CourseTypes
     false
   end
 
-  # Checks if a user is acting as a participant in a course. If they are able to be an
+  # Checks if a user acts as a participant in a course. If they are able to be an
   # instructor in the course then this will return false because we do not want
   # to treat them like a participant. Signed out users should be able to be participants
   # in student courses.
