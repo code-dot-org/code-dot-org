@@ -4,7 +4,6 @@ var path = require('path');
 var LiveReloadPlugin = require('webpack-livereload-plugin');
 var envConstants = require('./envConstants');
 var WebpackNotifierPlugin = require('webpack-notifier');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 // Certain packages ship in ES6 and need to be transpiled for our purposes.
 var toTranspileWithinNodeModules = [
@@ -137,17 +136,11 @@ var baseConfig = {
         ],
         loader: 'ejs-webpack-loader'
       },
-      {
-        test: /\.css$/,
-        use: [
-          {loader: MiniCssExtractPlugin.loader, options: {esModule: false}},
-          {loader: 'css-loader'}
-        ]
-      },
+      {test: /\.css$/, use: [{loader: 'style-loader'}, {loader: 'css-loader'}]},
       {
         test: /\.scss$/,
         use: [
-          {loader: MiniCssExtractPlugin.loader, options: {esModule: false}},
+          {loader: 'style-loader'},
           {loader: 'css-loader', options: {modules: true}},
           {
             loader: 'sass-loader',
@@ -269,8 +262,7 @@ var storybookConfig = _.extend({}, baseConfig, {
       ),
       PISKEL_DEVELOPMENT_MODE: JSON.stringify(false)
     }),
-    new webpack.IgnorePlugin({resourceRegExp: /^serialport$/}),
-    new MiniCssExtractPlugin()
+    new webpack.IgnorePlugin({resourceRegExp: /^serialport$/})
   ]
 });
 
@@ -372,8 +364,7 @@ var karmaConfig = _.extend({}, baseConfig, {
       ),
       LEVEL_TYPE: JSON.stringify(envConstants.LEVEL_TYPE),
       PISKEL_DEVELOPMENT_MODE: JSON.stringify(false)
-    }),
-    new MiniCssExtractPlugin()
+    })
   ]
 });
 
@@ -425,8 +416,7 @@ function create(options) {
         ),
         PISKEL_DEVELOPMENT_MODE: JSON.stringify(piskelDevMode)
       }),
-      new webpack.IgnorePlugin({resourceRegExp: /^serialport$/}),
-      new MiniCssExtractPlugin()
+      new webpack.IgnorePlugin({resourceRegExp: /^serialport$/})
     ].concat(plugins),
     watch: watch,
     keepalive: watch,
