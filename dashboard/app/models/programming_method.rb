@@ -84,7 +84,7 @@ class ProgrammingMethod < ApplicationRecord
       examples: parsed_examples,
       syntax: syntax,
       externalLink: external_link,
-      position: position
+      overloads: ProgrammingMethod.where(programming_class_id: programming_class_id, overload_of: key).map(&:summarize_for_show)
     }
   end
 
