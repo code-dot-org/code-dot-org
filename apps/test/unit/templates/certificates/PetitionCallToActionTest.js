@@ -8,4 +8,8 @@ describe('PetitionCallToAction', () => {
     const callToAction = isolateComponent(<PetitionCallToAction />);
     expect(callToAction.findOne('#petition-message').content()).to.exist;
   });
+  it('has a message to sign the petition', () => {
+    const callToAction = isolateComponent(<PetitionCallToAction />);
+    expect(callToAction.findOne('#sign-message').content()).to.exist;
+  });
 });
