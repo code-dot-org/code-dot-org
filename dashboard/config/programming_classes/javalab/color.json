@@ -13,10 +13,10 @@
       "key": "color",
       "position": 0,
       "name": "Color(String color)",
-      "content": "Creates a color from a string name, like `\"red\"` or `\"brown\"`. If the name is not recognized, this constructor will throw an `IllegalArgumentException`.",
+      "content": "Creates a color from a string name, like `\"red\"` or `\"brown\"`. If the name is not recognized, this constructor will throw an `IllegalArgumentException`.\n\nPossible color names are:\n![expandable](https://images.code.org/b93be88eb3e0a7ea66fe63503b51dee1-color_names.png)",
       "parameters": "[{\"name\":\"color\",\"type\":\"String\",\"required\":true,\"description\":\"The name of the color. See the above list for supported color names.\"}]",
       "examples": "[]",
-      "syntax": "Possible color names are:\n![expandable](https://images.code.org/b93be88eb3e0a7ea66fe63503b51dee1-color_names.png)",
+      "syntax": "`public Color(String color) throws IllegalArgumentException`",
       "external_link": null,
       "overload_of": null,
       "return_value": null
@@ -28,7 +28,7 @@
       "content": "Create a new color based on the red, green, and blue values provided. The alpha value will be maximum opacity.",
       "parameters": "[{\"name\":\"red\",\"type\":\"int\",\"required\":true,\"description\":\"the red value from 0 - 255\\n\"},{\"name\":\"green\",\"type\":\"int\",\"required\":true,\"description\":\"the green value from 0 - 255\\n\"},{\"name\":\"blue\",\"type\":\"int\",\"required\":true,\"description\":\"the blue value from 0 - 255\\n\"}]",
       "examples": "[]",
-      "syntax": null,
+      "syntax": "`public Color(int red, int green, int blue)`",
       "external_link": null,
       "overload_of": "color",
       "return_value": null
@@ -40,7 +40,7 @@
       "content": "Creates a new color that a copy of the provided color.\n",
       "parameters": "[{\"name\":\"color\",\"type\":\"Color\",\"required\":true,\"description\":\"the color to copy\"}]",
       "examples": "[]",
-      "syntax": "public Color(Color color)",
+      "syntax": "`public Color(Color color)`",
       "external_link": null,
       "overload_of": "color",
       "return_value": null
@@ -52,7 +52,7 @@
       "content": "Returns the amount of red (ranging from 0 to 255).",
       "parameters": "[]",
       "examples": "[]",
-      "syntax": null,
+      "syntax": "`public int getRed()`",
       "external_link": null,
       "overload_of": null,
       "return_value": null

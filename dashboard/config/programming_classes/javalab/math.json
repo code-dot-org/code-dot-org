@@ -1,0 +1,25 @@
+{
+  "category_key": "java_lang",
+  "content": "general description of the Math class",
+  "examples": "[]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "Math",
+  "name": "Math",
+  "syntax": "",
+  "tips": "",
+  "methods": [
+    {
+      "key": "abs",
+      "position": 0,
+      "name": "abs",
+      "content": null,
+      "parameters": "[{\"name\":\"a\",\"type\":\"double\",\"required\":true,\"description\":\"description\"}]",
+      "examples": "[]",
+      "syntax": "public void abs(double a)",
+      "external_link": null,
+      "overload_of": null,
+      "return_value": null
+    }
+  ]
+}
