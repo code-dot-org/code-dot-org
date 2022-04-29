@@ -154,11 +154,11 @@ class ScriptTest < ActiveSupport::TestCase
   end
 
   test 'get_from_cache raises if called with a family_name' do
-    create :course_offering, key: 'courseq'
+    create :course_offering, key: 'csd'
     error = assert_raises do
-      Script.get_from_cache('courseq')
+      Script.get_from_cache('csd')
     end
-    assert_equal 'Do not call Script.get_from_cache with a family_name. Call Script.get_unit_family_redirect_for_user instead.  Family: courseq', error.message
+    assert_equal 'Do not call Script.get_from_cache with a family_name. Call Script.get_unit_family_redirect_for_user instead.  Family: csd', error.message
   end
 
   test 'get_family_from_cache uses unit_family_cache' do
