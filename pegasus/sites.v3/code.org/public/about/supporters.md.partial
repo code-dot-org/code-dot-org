@@ -4,78 +4,9 @@ nav: about_nav
 theme: responsive
 ---
 
-<style>
-  .clearfix {
-    clear: both;
-  }
-
-  .no-padding {
-    padding: 0;
-  }
-
-  .no-flex {
-    display: unset;
-  }
-
-  /* Show on mobile */
-  .mobile-show {
-    display: none;
-  }
-
-  section {
-    padding: 2em;
-    display: flex;
-    justify-content: space-around;
-  }
-
-    section h3 {
-      background: #00b2c0;
-      color: white;
-      padding: 1em;
-      margin: 2em 0 0;
-      width: 100%;
-    }
-
-  .lists h4 {
-    padding: 1em;
-    margin: 2px 0 0;
-    background: #5b6770;
-    color: white;
-  }
-
-  img {
-    align-self: center;
-  }
-
-  @media screen and (max-width: 640px) {
-
-    section {
-      flex-wrap: wrap;
-    }
-
-    /* Hide on mobile */
-    .mobile-hide {
-      display: none;
-    }
-
-    /* Show on mobile */
-    .mobile-show {
-      display: block;
-    }
-
-    h5 {
-      color: #00adbc;
-      font-family: 'Gotham 7r', sans-serif;
-      margin: 1.5em 1em 0;
-    }
-  }
-</style>
-
-
-
+<link rel="stylesheet" href="/css/supporters.css">
 
 # Supporters
-
 Code.org gratefully acknowledges current supporters who have made a generous annual commitment of $1,000 or above to support Code.org's fiscal years 2021 or 2022.
 
 Code.org® believes that every student in every school should have the opportunity to learn computer science. Together with a generous community of institutional, corporate, and individual supporters, we are able to increase access to computer science education globally.
@@ -85,6 +16,8 @@ Code.org is a 501(c)(3) nonprofit organization and our Federal Tax ID is 46-0858
 To contact the Office of Development, please email giving@code.org or call (206) 593-5521.
 
 <a href="/donate"><button>Please consider a donation</button></a>
+
+
 
 ## Platinum Supporters ($3,000,000+)
 <section>
@@ -97,6 +30,7 @@ To contact the Office of Development, please email giving@code.org or call (206)
 ## Gold Supporters ($1,000,000+)
 <section>
   <img src="/images/fit-200/avatars/ballmer_group.jpg" alt="Ballmer Group logo" />
+  <img src="/images/fit-200/avatars/coinbase.png" alt="Coinbase logo" />
   <img src="/images/fit-200/avatars/google.png" alt="Google logo" />
 </section>
 <section>
