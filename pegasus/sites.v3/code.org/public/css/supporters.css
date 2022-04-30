@@ -19,8 +19,8 @@ section {
   padding: 2em;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
-
   section h3 {
     background: #00b2c0;
     color: white;
@@ -29,6 +29,10 @@ section {
     width: 100%;
   }
 
+img {
+  align-self: center;
+}
+
 .lists h4 {
   padding: 1em;
   margin: 2px 0 0;
@@ -36,15 +40,7 @@ section {
   color: white;
 }
 
-img {
-  align-self: center;
-}
-
 @media screen and (max-width: 640px) {
-
-  section {
-    flex-wrap: wrap;
-  }
 
   /* Hide on mobile */
   .mobile-hide {
@@ -56,13 +52,16 @@ img {
     display: block;
   }
 
+  section {
+    flex-wrap: wrap;
+  }
+    section img {
+      margin: 1em auto;
+    }
+
   h5 {
     color: #00adbc;
     font-family: 'Gotham 7r', sans-serif;
     margin: 1.5em 1em 0;
-  }
-
-  section img {
-    margin: 1em auto;
   }
 }
