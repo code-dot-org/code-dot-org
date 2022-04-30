@@ -23,4 +23,10 @@ describe('PetitionCallToAction', () => {
     const form = callToActionWithForm.findOne('form');
     expect(form.findOne('Button').content().length).to.be.greaterThan(0);
   });
+  it('has a form with five fields ', () => {
+    const callToActionWithForm = isolateComponent(<PetitionCallToAction />);
+    callToActionWithForm.inline(PetitionForm);
+    const fields = callToActionWithForm.findAll('ControlledFieldGroup');
+    expect(fields).to.have.length(5);
+  });
 });
