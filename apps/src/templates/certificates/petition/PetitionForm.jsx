@@ -9,6 +9,8 @@ import {
   getAgeSafeData
 } from '@cdo/apps/templates/certificates/petition/petitionHelpers';
 import ControlledFieldGroup from '@cdo/apps/templates/certificates/petition/ControlledFieldGroup';
+import PropTypes from 'prop-types';
+/* global ga */
 
 const sendDataToEndpoint = data => {
   const handleSuccessfulSubmit = () => {
@@ -29,7 +31,7 @@ const sendDataToEndpoint = data => {
     .fail(handleFailedSubmit);
 };
 
-const PetitionForm = () => {
+const PetitionForm = ({gaPagePath}) => {
   // data starts with all required fields having an empty value to ensure proper validation
   const [data, setData] = useState(mapValues(keyValidation, () => ''));
   const [invalidFields, setInvalidFields] = useState([]);
@@ -64,6 +66,9 @@ const PetitionForm = () => {
       } else {
         // Do not send email or name server-side for under sixteen users to protect privacy.
         sendDataToEndpoint(getAgeSafeData(sanitizedData));
+        ga('send', 'event', 'petition', 'click', {
+          page: gaPagePath
+        });
       }
     },
     [data]
@@ -149,6 +154,10 @@ const PetitionForm = () => {
       </form>
     </>
   );
+};
+
+PetitionForm.propTypes = {
+  gaPagePath: PropTypes.string.isRequired // takes the form '/congrats/coursea-2020' to be sent to ga
 };
 
 export default PetitionForm;
