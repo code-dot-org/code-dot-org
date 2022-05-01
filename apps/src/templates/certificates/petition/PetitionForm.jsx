@@ -9,6 +9,25 @@ import {
 } from '@cdo/apps/templates/certificates/petition/petitionHelpers';
 import ControlledFieldGroup from '@cdo/apps/templates/certificates/petition/ControlledFieldGroup';
 
+const sendDataToEndpoint = data => {
+  const handleSuccessfulSubmit = () => {
+    //  TODO: Redirect to /promote/thanks
+    // window.location.href = "/promote/thanks";
+  };
+  const handleFailedSubmit = () => {
+    // TODO: Show error message
+  };
+
+  $.ajax({
+    url: '/forms/Petition',
+    type: 'post',
+    dataType: 'json',
+    data: data.serialize()
+  })
+    .done(handleSuccessfulSubmit)
+    .fail(handleFailedSubmit);
+};
+
 const PetitionForm = () => {
   // data starts with all required fields having an empty value to ensure proper validation
   const [data, setData] = useState(mapValues(keyValidation, () => ''));
