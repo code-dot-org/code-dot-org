@@ -1,16 +1,18 @@
 import {isEmail, isInt} from '@cdo/apps/util/formatValidation';
-import {forEach, has} from 'lodash';
-import i18n from '@cdo/locale';
+import {forEach, has, merge} from 'lodash';
 
 export const keyValidation = {
   name: {
-    isValid: value => !!value
+    isValid: value => !!value,
+    errorText: 'include your name'
   },
   email: {
-    isValid: isEmail
+    isValid: isEmail,
+    errorText: 'enter a valid email address'
   },
   age: {
-    isValid: isInt
+    isValid: isInt,
+    errorText: 'select your age'
   }
 };
 
@@ -37,8 +39,16 @@ export const getErrorMessage = data => {
   if (invalidFields.length === 0) {
     return '';
   } else if (invalidFields.length === 1) {
-    return i18n.formErrorBelow();
+    return 'Please fix the error below';
   } else {
-    return i18n.formErrorsBelow();
+    return 'Please fix the errors below';
   }
+};
+
+export const getAgeSafeData = data => {
+  const safeData = {
+    email: 'anonymous@code.org',
+    name: ''
+  };
+  return data.age < 16 ? merge(data, safeData) : data;
 };
