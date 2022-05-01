@@ -5,7 +5,8 @@ import i18n from '@cdo/locale';
 import {
   keyValidation,
   getInvalidFields,
-  getErrorMessage
+  getErrorMessage,
+  getAgeSafeData
 } from '@cdo/apps/templates/certificates/petition/petitionHelpers';
 import ControlledFieldGroup from '@cdo/apps/templates/certificates/petition/ControlledFieldGroup';
 
@@ -46,14 +47,24 @@ const PetitionForm = () => {
   const handleSubmit = useCallback(
     e => {
       e.preventDefault();
+
+      let sanitizedData = data;
       Object.entries(data).forEach(field => {
         let value = data[field];
         if (typeof value === 'string') {
-          setData({...data, [field]: value.trim()});
+          sanitizedData = {...sanitizedData, [field]: value.trim()};
         }
       });
-      setInvalidFields(getInvalidFields(data));
-      setErrorMessage(getErrorMessage(data));
+      setData(sanitizedData);
+
+      const currentInvalidFields = getInvalidFields(data);
+      if (currentInvalidFields) {
+        setInvalidFields(currentInvalidFields);
+        setErrorMessage(getErrorMessage(data));
+      } else {
+        // Do not send email or name server-side for under sixteen users to protect privacy.
+        sendDataToEndpoint(getAgeSafeData(sanitizedData));
+      }
     },
     [data]
   );
