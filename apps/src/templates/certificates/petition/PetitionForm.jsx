@@ -2,6 +2,7 @@ import React, {useState, useCallback} from 'react';
 import {Button} from 'react-bootstrap';
 import {range, mapValues, without} from 'lodash';
 import i18n from '@cdo/locale';
+import $ from 'jquery';
 import {
   keyValidation,
   getInvalidFields,
@@ -14,10 +15,12 @@ import PropTypes from 'prop-types';
 
 const sendDataToEndpoint = data => {
   const handleSuccessfulSubmit = () => {
+    console.log('submit successful');
     //  TODO: Redirect to /promote/thanks
     // window.location.href = "/promote/thanks";
   };
   const handleFailedSubmit = () => {
+    console.log('submit failed');
     // TODO: Show error message
   };
 
@@ -25,7 +28,7 @@ const sendDataToEndpoint = data => {
     url: '/forms/Petition',
     type: 'post',
     dataType: 'json',
-    data: data.serialize()
+    data: data
   })
     .done(handleSuccessfulSubmit)
     .fail(handleFailedSubmit);
@@ -59,8 +62,8 @@ const PetitionForm = ({gaPagePath}) => {
       });
       setData(sanitizedData);
 
-      const currentInvalidFields = getInvalidFields(data);
-      if (currentInvalidFields) {
+      const currentInvalidFields = getInvalidFields(sanitizedData);
+      if (currentInvalidFields.length !== 0) {
         setInvalidFields(currentInvalidFields);
         setErrorMessage(getErrorMessage(data));
       } else {
@@ -157,7 +160,7 @@ const PetitionForm = ({gaPagePath}) => {
 };
 
 PetitionForm.propTypes = {
-  gaPagePath: PropTypes.string.isRequired // takes the form '/congrats/coursea-2020' to be sent to ga
+  gaPagePath: PropTypes.string.isRequired // in the form '/congrats/coursea-2020' to be sent to ga
 };
 
 export default PetitionForm;
