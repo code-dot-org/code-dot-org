@@ -8652,22 +8652,22 @@
           "verionhistory": "هل أنت في حيرة من أمرك؟ يمكنك دائمًا إعادة تعيين الأوامر البرمجية الخاصة بك عن طريق النقر فوق `سجل الإصدارات` أدناه ثم اختيار \"البدء من جديد\"."
         },
         "CourseD_Dance_2020_01_2021": {
-          "validation": "**كيف يمكنني تجاوز هذا المستوى؟**\n\n-   تأكد من ظهور الراقص على الشاشة.\n\n_ينتهي هذا المستوى بعد 4 إجراءات._",
+          "validation": "**كيف يمكنني تجاوز هذا المستوى؟**\n-  تأكد من ظهور الراقص على الشاشة.\n\n_ينتهي هذا المستوى بعد 4 إجراءات._",
           "challenges": "**تحديات اختيارية**\n\n-   اختر أغنية مختلفة للعب.\n-   حرك الراقص الخاص بك إلى موقع جديد.\n-   قم بصنع أكثر من راقص واحد."
         },
         "CourseD_Dance_2020_02_2021": {
           "validation": "**كيف يمكني اجتياز  هذا المستوى؟**\n\n-   يجب على الراقص تأدية الحركة.\n-   يلزم عليك الضغط على مفتاح السهم.\n\n_ينتهي هذا المستوى بعد 4 إجراءات._",
-          "challenges": "**تحدي اختياري**\n\n-   استخدم أكثر من مربع برمجي <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml> واحد."
+          "challenges": "**تحدي اختياري**\n\n-   استخدم أكثر من مربع برمجي [blockly block][0] واحد."
         },
         "CourseD_Dance_2020_03_2021": {
           "validation": "**كيف يمكني اجتياز  هذا المستوى؟**\n\n-   يجب على كلا الراقصين تأدية الحركة.\n-   يلزم عليك الضغط على مفاتيح الأسهم.\n\n_ينتهي هذا المستوى بعد 6 إجراءات._",
           "challenges": "**تحدي اختياري**\n\n-   اجعل الراقص يتفاعل لليمين واليسار باستخدام مفاتيح الأسهم اليسرى واليمنى."
         },
         "CourseD_Dance_2020_04_2021": {
-          "validation": "**كيف يمكنني تجاوز هذا المستوى؟**\n\n-   يحتاج الراقص إلى الانتقال إلى خطوة جديدة بعد 4 إجراءات.\n\n_ينتهي هذا المستوى بعد 8 إجراءات._"
+          "validation": "**كيف يمكنني تجاوز هذا المستوى؟**\n-  يحتاج الراقص إلى الانتقال إلى خطوة جديدة بعد 4 إجراءات.\n\n_ينتهي هذا المستوى بعد 8 إجراءات._"
         },
         "CourseD_Dance_2020_05_2021": {
-          "validation": "**كيف يمكنني تجاوز هذا المستوى؟**\n\n-   بعد 6 إجراءات، يلزم على راقصك أداء رقصة مختلفة عن الرقصة التي أدّاها بعد 4 إجراءات.\n\n_ينتهي هذا المستوى بعد 12 إجراءًا._",
+          "validation": "**كيف يمكنني تجاوز هذا المستوى؟**\n\n-  بعد 6 إجراءات، يلزم على راقصك أداء رقصة مختلفة عن الرقصة التي أدّاها بعد 4 إجراءات.\n\n_ينتهي هذا المستوى بعد 12 إجراءًا._",
           "challenges": "**تحدي اختياري**\n\n-   قم بتغيير الخلفية كلما قام الراقصون بتبديل حركاتهم."
         },
         "CourseD_Dance_2020_06_2021": {
@@ -8676,7 +8676,7 @@
         },
         "CourseD_Dance_2020_07_2021": {
           "validation": "**كيف يمكني اجتياز  هذا المستوى؟**\n\n-   قم بتغيير حجم راقص واحد على الأقل بعد بدء الموسيقى.\n\n_ينتهي هذا المستوى بعد 6 إجراءات._",
-          "challenges": "**تحدٍّ اختياري**\n\n-   اختبر تغيير خصائص أخرى (العرض والارتفاع والدوران وغير ذلك)."
+          "challenges": "**تحدٍّ اختياري**\n\n-  اختبر تغيير خصائص أخرى (العرض والارتفاع والدوران وغير ذلك)."
         },
         "CourseD_Dance_2020_08_2021": {
           "validation": "**كيف يمكني اجتياز  هذا المستوى؟**\n\n-   قم بتغيير اللون الخفيف لراقص واحد على الأقل.\n\n_ينتهي هذا المستوى بعد 6 إجراءات._",
@@ -8697,29 +8697,29 @@
           "aquatic7": "يمكنك استخدام القطعة البرمجية if path لمساعدتك في اتخاذ الدوران الصحيح."
         },
         "CourseE_HOC 2018 Level_9b_2021": {
-          "voyage_aquatic_9a": "يا لها من شعاب مرجانية جميلة! المرجان الأزرق هو الطريقة \\* \\* الصحيحة \\* \\* للمضي، وتحقق من أن المرجان الأحمر ليس إلى \\* \\* اليسار \\* \\*!"
+          "voyage_aquatic_9a": "يا لها من شعاب مرجانية جميلة! المرجان الأزرق هو الطريقة * * الصحيحة * * للمضي، وتحقق من أن المرجان الأحمر ليس إلى * * اليسار * *!"
         },
         "CourseF_outbreak1": {
-          "step1": "استخدم هذه القطع البرمجية لإنشاء الرسوم المتحركة الخاصة بك:\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\nتم العثور على هذه القطعة في فئة **الرسوم المتحركة** من صندوق الأدوات.",
-          "step2": "قم بتغيير حجم الرسوم المتحركة للوحوش بهذه القطعة البرمجية: <xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"/></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">50</title></block></value></block></xml>.\n\nتم العثور عليه في فئة **الإجراءات** من صندوق الأدوات.",
-          "step3": "اجعل جميع الرسوم المتحركة للوحوش تبدأ بالتحرك من خلال: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.\n\nتم العثور على هذه القطعة في فئة **الإجراءات** من صندوق الأدوات."
+          "step1": "استخدم هذه القطع البرمجية لإنشاء الرسوم المتحركة الخاصة بك:\n\n[blockly block][0]\n\n[blockly block][1]\n\nتم العثور على هذه القطعة في فئة **الرسوم المتحركة** من صندوق الأدوات.",
+          "step2": "قم بتغيير حجم الكائنات المتحركة للوحوش بهذه القطعة البرمجية: [blockly block][0].\n\nتم العثور عليه في فئة ** الكائنات** من صندوق الأدوات.",
+          "step3": "اجعل جميع الرسوم المتحركة للوحوش تبدأ بالتحرك من خلال: [blockly block][0].\n\nتم العثور على هذه القطعة في فئة **الإجراءات** من صندوق الأدوات."
         },
         "CourseF_outbreak2": {
-          "hint1": "انقر فوق زر `+` في قطعة \"الحدث\". واملأ المكان الفارغ في قطعة \"تغيير الزي\" مع وجود كتلة \"الموضوع\" بالداخل.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "انقر فوق زر `+` في قطعة \"الحدث\". واملأ المكان الفارغ في قطعة \"تغيير الزي\" مع وجود كتلة \"الموضوع\" بالداخل.\n\n[blockly block][0]"
         },
         "CourseF_outbreak3": {
-          "hint1": "لوضع أقنعة وجه على الوحوش، استخدم قطعة `تغيير الزي` مع حدث `عند النقر`:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nتأكد من سحب القطعة الحمراء الصغيرة `التي تم النقر عليها` أيضًا!",
-          "hint2": "يجب أن يبدو الكود الجديد لهذا المستوى على النحو التالي:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "لوضع أقنعة وجه على الوحوش، استخدم قطعة `تغيير الزي` مع حدث `عند النقر`:\n\n[blockly block][0]\n\nتأكد من سحب القطعة الحمراء الصغيرة `التي تم النقر عليها` أيضًا!",
+          "hint2": "يجب أن يبدو الكود الجديد لهذا المستوى على النحو التالي:\n\n[blockly block][0]"
         },
         "CourseF_outbreak4": {
-          "challenge": "## هل تبحث عن تحدٍ إضافي؟\n\nيمكنك أيضًا جعل الوحوش تتحرك بشكل أسرع أو أبطأ.\n\n1.  انقر فوق `تعديل` في هذه القطعة <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  قم زيادة أو تقليل الرقم في هذه القطعة: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nلجعل الوحوش تتحرك بشكل أبطأ، اختر رقمًا عشريًا مثل `0.5` أو `0.25`. ولجعلها تتحرك بشكل أسرع، اختر أي رقم أكبر من 1."
+          "challenge": "## هل تبحث عن تحدٍ إضافي؟\n\nيمكنك أيضًا جعل الوحوش تتحرك بشكل أسرع أو أبطأ.\n\n1.  انقر فوق `تعديل` في هذه القطعة [blockly block][0] \n2.  قم زيادة أو تقليل الرقم في هذه القطعة: \n\n[blockly block][1]\n\nلجعل الوحوش تتحرك بشكل أبطأ، اختر رقمًا عشريًا مثل `0.5` أو `0.25`. ولجعلها تتحرك بشكل أسرع، اختر أي رقم أكبر من 1."
         },
         "CourseF_outbreak6": {
-          "hint2": "تأكد من نقل قطع \"الإجراء\" الأخرى إلى داخل القطعة `إذا كانت هناك احتمالية`:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">90</title>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
-          "hint1": "ستحتاج إلى إضافة 3 أحداث `عند اللمس` أخرى للتحقق من جميع المجموعات الممكنة من `اللمسات` بين الوحوش السليمة والمصابة.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
+          "hint2": "تأكد من نقل قطع \"الإجراء\" الأخرى إلى داخل القطعة `إذا كانت هناك احتمالية`:\n\n[blockly block][0]",
+          "hint1": "ستحتاج إلى إضافة 3 أحداث `عند اللمس` أخرى للتحقق من جميع المجموعات الممكنة من `اللمسات` بين الوحوش السليمة والمصابة.\n\n[blockly block][0]"
         },
         "CourseF_outbreak7": {
-          "whenclicked": "## اللقاحات\n\nيمكنك محاكاة إعطاء اللقاح للوحوش عند النقر عليها. ومن أجل القيام بذلك، استخدم قطعة `تغيير الزي` مع هذا الحدث:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "whenclicked": "## اللقاحات\n\nيمكنك محاكاة إعطاء اللقاح للوحوش عند النقر عليها. ومن أجل القيام بذلك، استخدم قطعة `تغيير الزي` مع هذا الحدث:\n\n[blockly block][0]",
           "verionhistory": "هل أنت في حيرة من أمرك؟ يمكنك دائمًا إعادة تعيين الأوامر البرمجية الخاصة بك عن طريق النقر فوق `سجل الإصدارات` أدناه ثم اختيار \"البدء من جديد\"."
         },
         "Function intro Ryan_2021": {
@@ -9458,11 +9458,11 @@
           "courseC_PlayLab_events_challenge_c": "يمكنك أيضاً تغيير سرعة اللاعب الآخر لتجعل اللعبة أسهل أو أكثر تحدياً!\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n  </block></xml>"
         },
         "courseC_artist_loops1a_2021": {
-          "courseC_artist_loops1a_a": "هذه القطعة البرمجية الأولى التي ستحتاجها:\n\n<xml>\n  <block type=\"jump_to\">\n    <title name=\"VALUE\">13</title>\n  </block>\n</xml>",
-          "courseC_artist_loops1a_b": "استخدم هذه القطعة البرمجية لرسم الملصق!\n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
+          "courseC_artist_loops1a_a": "هذه القطعة البرمجية الأولى التي ستحتاجها:\n\n[blockly block][0]",
+          "courseC_artist_loops1a_b": "استخدم هذه القطعة البرمجية لرسم الملصق!\n\n[blockly block][0]"
         },
         "courseC_artist_loops1b_2021": {
-          "courseC_artist_loops1b_a": "هذه هي القطعة البرمجية الأولى الذي ستحتاجه:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nيمكنك استخدام إما اليمين وإما اليسار، وأي عدد من الدرجات."
+          "courseC_artist_loops1b_a": "هذه هي القطعة البرمجية الأولى الذي ستحتاجه:\n\n[blockly block][0]\n\nيمكنك استخدام إما اليمين وإما اليسار، وأي عدد من الدرجات."
         },
         "courseC_artist_loops2a_2021": {
           "courseC_artist_loops2a_a": "داخل حلقة التكرار, يجب عليك القفز إلى المنتصف, ومن ثم الدوران, ومن ثم رسم الملصق.",
@@ -9470,16 +9470,16 @@
         },
         "courseC_artist_loops3a_2021": {
           "courseC_artist_loops3a_a": "يجب عليك إضافة قطعة برمجية واحدة داخل حلقة التكرار، بعد الملصق الأول.",
-          "courseC_artist_loops3a_b": "يجب أن يكون برنامجك كالتالي!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"sticker\">\n                        <title name=\"VALUE\">Dog</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>\n\nيمكنك استخدام أي ملصقات تعجبك!"
+          "courseC_artist_loops3a_b": "يجب أن يكون برنامجك كالتالي!\n\n[blockly block][0]\n\nيمكنك استخدام أي ملصقات تعجبك!"
         },
         "courseC_artist_loops4a_2021": {
-          "courseC_artist_loops4a_a": "استخدم هذه القطعة البرمجية للقفز للأمام:\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">???</title>\n  </block>\n</xml>\n\nتذكر تغيير المسافة!",
-          "courseC_artist_loops4a_b": "يجب أن يظهر برنامجك كالتالي!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseC_artist_loops4a_a": "استخدم هذه القطعة البرمجية للقفز للأمام:\n\n[blockly block][0]\n\nتذكر تغيير المسافة!",
+          "courseC_artist_loops4a_b": "يجب أن يظهر برنامجك كالتالي!\n\n[blockly block][0]"
         },
         "courseC_artist_loops5b_2021": {
-          "courseC_artist_loops5b_a": "استخدم هذه القطعة البرمجية لتعيين النمط الخاص بالأسطر الخاصة بك:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
+          "courseC_artist_loops5b_a": "استخدم هذه القطعة البرمجية لتعيين النمط الخاص بالأسطر الخاصة بك:\n\n[blockly block][0]",
           "courseC_artist_loops5b_b": "لصنع تصميم مثل هذا الموجود أعلاه، ستحتاج إلى الرجوع للخلف بنفس المقدار الذي تتحرك به للأمام.",
-          "courseC_artist_loops5b_c": "يجب أن يظهر برنامجك كالتالي!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_line_style_pattern\">\n        <title name=\"VALUE\">rainbowLine</title>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"jump_to\">\n                <title name=\"VALUE\">13</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">???</title>\n                    <next>\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveBackward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant_dropdown\">\n                            <title name=\"DIR\">???</title>\n                            <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                            <next>\n                              <block type=\"sticker\">\n                                <title name=\"VALUE\">Cat</title>\n                                <next>\n                                  <block type=\"jump_by_constant\">\n                                    <title name=\"DIR\">jumpForward</title>\n                                    <title name=\"VALUE\">???</title>\n                                    <next>\n                                      <block type=\"sticker\">\n                                        <title name=\"VALUE\">Dog</title>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseC_artist_loops5b_c": "يجب أن يظهر برنامجك كالتالي!\n\n[blockly block][0]"
         },
         "courseC_artist_loops6a_2021": {
           "courseC_artist_loops6a_a": "لتحصل على تصميم مشابه للأعلى, اقفز للأمام أقل من مقدار 75 بكسل بين كل ملصق."
@@ -9529,15 +9529,15 @@
           "courseC_maze_loops_challenge2_b": "استخدم حلقة \"التكرار\" لكي لا تنتهي القطع البرمجية \"اجمع\"!"
         },
         "courseC_collector_prog1_2021": {
-          "courseC_collector_prog1_a": "عندما تقف في مكان يحتوي على جوهرة استخدم القطعة البرمجية <xml><block type=\"collector_collect\"/></xml> لتجمعها.",
+          "courseC_collector_prog1_a": "عندما تقف في مكان يحتوي على جوهرة استخدم القطعة البرمجية [blockly block][0] لتجمعها.",
           "courseC_collector_prog1_b": "أسهل حل يمكنك استخدامه هو التقدم للأمام مره واحدة. ومن ثم التقاط الجوهرة."
         },
         "courseC_collector_prog2_2021": {
-          "courseC_collector_prog2_a": "يمكنك استخدام 4 قطع برمجية <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> أو استخدم <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> لتجعل برنامجك قصيراً.",
+          "courseC_collector_prog2_a": "يمكنك استخدام 4 قطع برمجية [blockly block][0] أو استخدم [blockly block][1] لتجعل برنامجك قصيراً.",
           "courseC_collector_prog2_b": "لا تخشَ ارتكاب الأخطاء! جرب إضافة القطع البرمجية وتشغيل الأوامر البرمجية لرؤية ماذا سيحدث، حتى إذا كنت تعتقد بأنك لن تتوصل لحل اللغز حتى الآن."
         },
         "courseC_collector_prog3_2021": {
-          "courseC_collector_prog3_a": "البرنامج سوف يشغل القطع البرمجية المتصلة فقط بـ <xml><block type=\"when_run\"/></xml> block.",
+          "courseC_collector_prog3_a": "البرنامج سوف يشغل القطع البرمجية المتصلة فقط بـ [blockly block][0] block.",
           "courseC_collector_prog3_b": "جرب استخدام زر \"خطوة\" لتشغل برنامجك سطرا بعد سطر. هل يمكنك معرفة مكان الخطأ؟",
           "courseC_collector_prog3_c": "إذا كنت تواجه مشكلة في حل هذا اللغز, حاول كتابة الخطوات في ورقة خارجية."
         },
@@ -9649,11 +9649,11 @@
         "courseC_maze_debugging2_2021": {
           "courseC_maze_debugging2_a": "يوجد الكثير من الأوامر البرمجية الثمينة في مساحة العمل. لا تلغيه كله وتبدأ من جديد!",
           "courseC_maze_debugging2_b": "-   هل يعمل كل شيء على ما يرام بعد الخطوة الأولى؟\n-   هل ما زال يعمل بعد الخطوة الثانية؟\n-   أين يحدث الخطأ؟",
-          "courseC_maze_debugging2_c": "لا يمكنك معرفة ما الخطأ؟ حاول تشغيل الكود لبضع مرات لترى ما الذي يحدث."
+          "courseC_maze_debugging2_c": "لا يمكنك معرفة ما الخطأ؟ حاول تشغيل الكود لبضع مرات لترى ما الذي يحدث.\n"
         },
         "courseC_maze_debugging3_2021": {
-          "courseC_maze_debugging3_a": "لإلغاء قطعة برمجية من منتصف الأوامر البرمجية، اسحب القطعة البرمجية التي تريد حذفها مع ما تحتها إلى جزء آخر من مساحة العمل.\n\nثم اسحب القطعة البرمجية الذي تريد حذفها أرجعه إلى صندوق الأدوات.\n\nأخيرا، أعِد القطع البرمجية الأخرى إلى مكانها. \n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
-          "courseC_maze_debugging3_b": "لا يمكنك معرفة ما الخطأ؟ حاول تشغيل الكود لبضع مرات لترى ما الذي يحدث."
+          "courseC_maze_debugging3_a": "لإلغاء قطعة برمجية من منتصف الأوامر البرمجية، اسحب القطعة البرمجية التي تريد حذفها مع ما تحتها إلى جزء آخر من مساحة العمل.\n\nثم اسحب القطعة البرمجية الذي تريد حذفها أرجعه إلى صندوق الأدوات.\n\nأخيرا، أعِد القطع البرمجية الأخرى إلى مكانها. \n[][0]",
+          "courseC_maze_debugging3_b": "لا يمكنك معرفة ما الخطأ؟ حاول تشغيل الكود لبضع مرات لترى ما الذي يحدث.\n"
         },
         "courseC_maze_debugging4_2021": {
           "courseC_maze_debugging4_a": "استخدم زر \"الخطوة\" لتتبُّع الكود سطر بعد سطر. هل تساعد هذه الطريقة في العثور على السطر الذي حدث فيه الخطأ؟",
@@ -9665,7 +9665,7 @@
           "courseC_maze_debugging5_b": "قل بصوت مرتفع ماذا يتوجب على سكرات أن يفعل. هل هو نفس الكود الموجود في مساحة العمل؟ ما الخطأ الذي يحدث؟"
         },
         "courseC_maze_debugging6_2021": {
-          "courseC_maze_debugging6_a": "ما الذي تفعله الأوامر البرمجية?\\\nما الذي يفترض فيها أن تعمل?\\\nما الذي يقول لك ذلك?",
+          "courseC_maze_debugging6_a": "ما الذي تفعله الأوامر البرمجية؟\nما الذي يفترض فيها أن تعمل؟\nما الذي يقول لك ذلك؟",
           "courseC_maze_debugging6_b": "بمجرد العثور على الخطأ الأول وتصحيحه، ادخل إلى عملية تصحيح الأخطاء مرة أخرى للعثور الخطأ الثاني.\n\nكرر العملية حتى يعمل البرنامج!"
         },
         "courseC_maze_debugging7_2021": {
@@ -9675,7 +9675,7 @@
         },
         "courseC_maze_debugging_challenge1_2021": {
           "courseC_maze_debugging_challenge1_a": "الانعطاف لليسار، أو لليمين؟ الأمر متروكاً لك!",
-          "courseC_maze_debugging_challenge1_b": "مسار الطائر سكرات هو عبارة عن شكل مستطيل! وهو يحتاج إلى الانعطاف بنفس الطريقة في كل مرة.",
+          "courseC_maze_debugging_challenge1_b": "مسار سكرات هو عبارة عن شكل مستطيل! وهو يحتاج إلى الانعطاف بنفس الطريقة في كل مرة.",
           "courseC_maze_debugging_challenge1_c": "إذا واجهتك مشكلة، يمكنك دائمًا البدء من جديد وإيجاد طريق جديد!"
         },
         "courseC_maze_debugging_challenge2_2021": {
@@ -9690,16 +9690,16 @@
           "courseC_maze_programming1_0": "تأكد أن جميع البالقطع البرمجية متصلة ببعضها ثم اضغط على زر \" تشغيل\" مرة اخرى."
         },
         "courseC_maze_programming2_2021": {
-          "courseC_maze_programming2_a": "لتستخدم <xml><block type=\"maze_moveForward\"/></xml> اسحبها من صندوق الأدوات والصقها بالقطعة البرمجية <xml><block type=\"when_run\"/></xml>.",
+          "courseC_maze_programming2_a": "لتستخدم [blockly block][0] اسحبها من صندوق الأدوات والصقها بالقطعة البرمجية [blockly block][1].",
           "courseC_maze_programming2_b": "تأكد أن جميع البالقطع البرمجية متصلة ببعضها ثم اضغط على زر \" تشغيل\" مرة اخرى."
         },
         "courseC_maze_programming3_2021": {
           "courseC_maze_programming3_a": "جرب تشغيل الكود أولاً لتحدد مكان الخطأ.",
-          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nلتحذف بلوكة من منتصف الكود البرمجي, اسحب القطعة البرمجة التي تريد حفها مع ما تحتها إلى أي مكان في مساحة العمل.\n\nومن ثم اسحب القطعة البرمجية التي تريد حذفها إلى صندوق الأدوات.\n\nأخيرا, أعد القطع البرمجية الأخرى إلى مكانها."
+          "courseC_maze_programming3_b": "[][0]\n\nلتحذف بلوكة من منتصف الكود البرمجي, اسحب القطعة البرمجة التي تريد حفها مع ما تحتها إلى أي مكان في مساحة العمل.\n\nومن ثم اسحب القطعة البرمجية التي تريد حذفها إلى صندوق الأدوات.\n\nأخيرا, أعد القطع البرمجية الأخرى إلى مكانها."
         },
         "courseC_maze_programming4_2021": {
-          "courseC_maze_programming4_a": "تذكر أنه عند الالتفاف فإنك تتجه من وجهة نظر الطائر, إذا اتجهت لليمين سيتجه الطائر إلى أسفل.",
-          "courseC_maze_programming4_b": "لتتبع الطريق:\n\n-   تحرك إلى الأمام\n-   اتجه نحو أحد الجهات\n-   تحرك إلى الأمام\n-   اتجه إلى عكس الجهة السابقة\n-   تحرك إلى الأمام"
+          "courseC_maze_programming4_a": "تذكر أنه عند الالتفاف فإنك تتجه من وجهة نظر _الطائر_، إذا اتجهت لليمين سيتجه الطائر إلى أسفل.",
+          "courseC_maze_programming4_b": "لتتبع الطريق:\n\n- تحرك إلى الأمام\n- اتجه نحو أحد الجهات\n- تحرك إلى الأمام\n- اتجه إلى عكس الجهة السابقة\n- تحرك إلى الأمام"
         },
         "courseC_maze_programming5_2021": {
           "courseC_maze_programming5_a": "جرب استخدام زر \"خطوة\" لتشغيل الأوامر البرمجية سطر بعد سطر.هل يمكنك معرفة ما تحتاج لفعله لاحقاً؟",
@@ -9725,11 +9725,11 @@
         },
         "courseC_maze_programming_challenge2_2021": {
           "courseC_maze_programming_challenge2_a": "_\" إذا ارسلتني للخلف, كن حذراً واجعلني اتخذ الاتجاه الصحيح\"_",
-          "courseC_maze_programming_challenge2_b": "الحل الأقصر سوف يستخدم 5 قطع برمجية فقط, لكنه سيستخدم هذه القطعة:\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+          "courseC_maze_programming_challenge2_b": "الحل الأقصر سوف يستخدم 5 قطع برمجية فقط, لكنه سيستخدم هذه القطعة:\n\n[blockly block][0]"
         },
         "courseC_starWars_loops10_2021": {
           "courseC_starWars_loops10_a": "أليس هذا النمط يبدوا وكأنه خطوة كبيرة في السلم؟ جرب أن تستخدم ما تعلمته من الألغاز السابقة للتوجه بكل الاتجاهات.",
-          "courseC_starWars_loops10_b": "إذا أردت استخدام القليل من القطع البرمجية, يمكنك وضع حلقة \"تكرار\" داخل أخرى!/ هذه تسمى \\*\\* حلقة التكرار المتداخلة\\*\\*.",
+          "courseC_starWars_loops10_b": "إذا أردت استخدام القليل من القطع البرمجية, يمكنك وضع حلقة \"تكرار\" داخل أخرى!/ هذه تسمى ** حلقة التكرار المتداخلة**.",
           "courseC_starWars_loops10_c": "لا تخشَ ارتكاب الأخطاء! قم بتشغيل الاوامر البرمجية لرؤية ماذا سيحدث، حتى لو لم تحل اللغز بعد!"
         },
         "courseC_starWars_loops1_2021": {
@@ -9762,7 +9762,7 @@
         },
         "courseC_starWars_loops6_2021": {
           "courseC_starWars_loops6_a": "حاول كتابة كل الحركات على ورقة وابحث عن النمط.",
-          "courseC_starWars_loops6_b": "إذا أردت استخدام القليل من القطع البرمجية, يمكنك وضع حلقة \"تكرار\" داخل أخرى!/ هذه تسمى \\*\\* حلقة التكرار المتداخلة\\*\\*."
+          "courseC_starWars_loops6_b": "إذا أردت استخدام القليل من القطع البرمجية, يمكنك وضع حلقة \"تكرار\" داخل أخرى!/ هذه تسمى ** حلقة التكرار المتداخلة**."
         },
         "courseC_starWars_loops6_dani": {
           "courseC_starWars_loops6_a": "حاول كتابة كل الحركات على ورقة وابحث عن النمط.",
@@ -9781,7 +9781,7 @@
         "courseC_starWars_loops8_2021": {
           "course_starWars_loops8_a": "حاول التفكير في هذه المشكلة بتجزئتها. خذ وقتك. لا تحتاج أن تحلها من المرة الاولى!",
           "course_starWars_loops8_b": "فكر في النصف الأول من المشكلة وكأنها درجة في السلم. كيف قمت بحلها سابقاَ؟",
-          "course_starWars_loops8_c": "ألقِ نظرة على هذا المسار.\n\n![](https://images.code.org/7d696dd3b1e6984a1d6041f366d5c96b-image-1510198804955.37.04.png)"
+          "course_starWars_loops8_c": "ألقِ نظرة على هذا المسار.\n\n[][0]"
         },
         "courseC_starWars_loops8_dani": {
           "course_starWars_loops8_a": "حاول التفكير في هذه المشكلة بتجزئتها. خذ وقتك. لا تحتاج أن تحلها من المرة الاولى!",
@@ -9790,7 +9790,7 @@
         },
         "courseC_starWars_loops9_2021": {
           "course_starWars_loops9_b": "يمكنك وضع أكثر من قطعة برمجية داخل حلقة \"التكرار\".",
-          "course_starWars_loops9_c": "لا تحتاج للتوجه نحو ليسار لحل هذا اللغز. كل اتجاهاتك يمكن أن تكون لليمين.\n\n![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)"
+          "course_starWars_loops9_c": "لا تحتاج للتوجه نحو ليسار لحل هذا اللغز. كل اتجاهاتك يمكن أن تكون لليمين.\n\n[][0]"
         },
         "courseD_artist_1_2021": {
           "courseD_artist_project1_a": "استخدم القائمة المنسدلة في القطع البرمجية \"الدوران\" لاختيار الزاوية التي تحتاجها!",
@@ -9804,12 +9804,12 @@
           "1": "إذا كنت ستبدِّل أشكالك، فلا تنسَ أنك ستحتاج إلى تبديل زواياها أيضًا!"
         },
         "courseD_artist_nestedLoops1_2021": {
-          "courseD_artist_nestedLoops1_a": "أسهل طريقة لرسم هذا المثلث هي \"التقدم للأمام\" واستخدام \"الدوران لليمين\".",
-          "courseD_artist_nestedLoops1_b": "يمكنك رسم هذا المثلث بحلقة \"تكرار\" مع قطعتين برمجيتين داخلها. ما هي القطع برمجية التي ستحتاجها؟",
+          "courseD_artist_nestedLoops1_a": "أسهل طريقة لرسم هذا المثلث هي \"التقدم للأمام\" واستخدام \"الدوران لليمين\".\n",
+          "courseD_artist_nestedLoops1_b": "يمكنك رسم هذا المثلث بحلقة \"تكرار\" مع قطعتين برمجيتين داخلها. ما هي القطع برمجية التي ستحتاجها؟\n",
           "courseD_artist_nestedLoops1_c": "حاول كتابة الخطوات على ورقة وابحث عن أنماط يمكن تبسيطها باستخدام حلقات التكرار."
         },
         "courseD_artist_nestedLoops1a_2021": {
-          "courseD_artist_nestedLoops1a_a": "ستحتاج لرسم ما مجموعه 6 مثلثات. \n\nبعد الانتهاء من كل مثلث، عليك الدوران 60 درجة والانتقال للبدء برسم المثلث التالي.![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)",
+          "courseD_artist_nestedLoops1a_a": "ستحتاج لرسم ما مجموعه 6 مثلثات. \n\nبعد الانتهاء من كل مثلث، عليك الدوران 60 درجة والانتقال للبدء برسم المثلث التالي.[][0]",
           "courseD_artist_nestedLoops1a_b": "إذا أنشأت مثلثًا باستخدام حلقة، ينبغي أن يواجه الفنان نفس الطريقة التي بدأ بها. \nهذا سيجعل الدوران 60 درجة أسهل بكثير.",
           "courseD_artist_nestedLoops1a_c": "إذا أردت ألوان، استخدم القطعة البرمجية \"اللون المعيّن\" في الكود. ولست ملزمًا بمطابقة الألوان في صورة القالب."
         },
@@ -9824,27 +9824,27 @@
         },
         "courseD_artist_nestedLoops4_2021": {
           "courseD_artist_nestedLoops4_d": "لحل هذا الأمر بصورة صحيحة، ينبغي أن تتحرك **قبل** أن تستدير، وإلا فإن دائرتك ستكون مزاحة بكمية صغيرة جدًا!",
-          "courseD_artist_nestedLoops4_a": "لرسم دائرة:\n\n-   كرر 360 مرة    \n-   حرّك للأمام 1 بكسل    \n-   لف لليسار بدرجة واحدة",
+          "courseD_artist_nestedLoops4_a": "لرسم دائرة:\n-   كرر 360 مرة    \n-   حرّك للأمام 1 بكسل    \n-   لف لليسار بدرجة واحدة",
           "courseD_artist_nestedLoops4_b": "لا تنسى أن تقفز للأمام 50 بِكسِلا بين الدوائر.",
           "courseD_artist_nestedLoops4_c": "استخدم حلقة تكرار متداخلة لرسم الدوائر 4 مرات."
         },
         "courseD_artist_nestedLoops5_2021": {
-          "courseD_artist_nestedLoops5_a": "لعمل ذلك بسهولة:\n\n-   كرر 4 مرات    \n-   ارسم دائرة    \n-   اقفز للأمام بمسافة 50 بِكسِل    \n-   استدر إلى اليمين بـ 90 درجة",
+          "courseD_artist_nestedLoops5_a": "لعمل ذلك بسهولة:\n-   كرر 4 مرات    \n-   ارسم دائرة    \n-   اقفز للأمام بمسافة 50 بِكسِل    \n-   استدر إلى اليمين بـ 90 درجة",
           "courseD_artist_nestedLoops5_b": "لرسم دائرة قم بإعداد حلقة تكرار 360 مرة. \nداخل الحلقة\" التقدم للأمام\" عدد 1 بِكسِل واستدِر درجة واحدة."
         },
         "courseD_artist_nestedLoops7_2021": {
-          "courseD_artist_nestedLoops7_a": "-   يجب أن تستخدم حلقات تكرار متداخلة هنا. \n    أولاً، استخدم حلقة لرسم مربع. ما الذي تفعله الحلقة الخارجية إذا قامت الحلقة الداخلية برسم مربع؟",
-          "courseD_artist_nestedLoops7_b": "استخدم حلقة تكرار متداخلة، حيث تكون الحلقة الداخلية التعليمات البرمجية لمربع.\n\n-   كرر 6 مرات    \n-   اصنع مربع    \n-   أقفز قدمًا بـ **50 بِكسِل**    \n-   استدِر **60 درجة**"
+          "courseD_artist_nestedLoops7_a": "- يجب أن تستخدم حلقات تكرار متداخلة هنا. \nأولاً، استخدم حلقة لرسم مربع. ما الذي تفعله الحلقة الخارجية إذا قامت الحلقة الداخلية برسم مربع؟",
+          "courseD_artist_nestedLoops7_b": "استخدم حلقة تكرار متداخلة، حيث تكون الحلقة الداخلية التعليمات البرمجية لمربع.\n-   كرر 6 مرات    \n-   اصنع مربع    \n-   أقفز قدمًا بـ **50 بِكسِل**    \n-   استدِر **60 درجة**"
         },
         "courseD_artist_nestedLoops8_2021": {
           "courseD_artist_nestedLoops8_a": "لكي تكون في رسمك 8 أشكال سداسية، يجب أن تدور **45 درجة** بين كل منها. لماذا؟ لأن 360 درجة (دورة كاملة) مقسمة على 8 (عدد الأشكال السداسية) تساوي 45 درجة.",
           "courseD_artist_nestedLoops8_b": "إذا واجهتك مشكلة، ابدأ بالنظر في اللغز الأخير، ثم غيّر الأشياء التي تكون مختلفة.",
-          "courseD_artist_nestedLoops8_c": "استخدم حلقة التكرار المتداخلة:\n\n-   كررها 8 مرات    \n-   ارسم شكل سداسي    \n-   اقفز للأمام 50 بِكسِل    \n-   استدِر لليمين 45 درجة"
+          "courseD_artist_nestedLoops8_c": "استخدم حلقة التكرار المتداخلة:\n-   كررها 8 مرات    \n-   ارسم شكل سداسي    \n-   اقفز للأمام 50 بِكسِل    \n-   استدِر لليمين 45 درجة"
         },
         "courseD_artist_nestedLoops9_2021": {
           "courseD_artist_nestedLoops9_a": "ابدأ باستخدام حلقةة التكرار المتداخلة مثلما عملت سابقًا، ولكن هذه المرة، اصنعها مع مربعات.",
           "courseD_artist_nestedLoops9_b": "أضف مجموعة ثانية من حلقات التكرار المتداخلة في نهاية المجموعة الأولى ولكن هذه المرة مع المثلثات. ",
-          "courseD_artist_nestedLoops9_c": "استخدم حلقتي تكرار متداخلتين:\n\n-   كرر العملية 8 مرات    \n-   ارسم مربع    \n-   اقفز للأمام 50 بِكسِل    \n-   استدِر إلى اليمين 45 درجة\n-   كرر العملية 8 مرات    \n-   ارسم مثلث    \n-   اقفز للأمام 50 بِكسِل    \n-   استدِر إلى اليمين 45 درجة"
+          "courseD_artist_nestedLoops9_c": "استخدم حلقتي تكرار متداخلتين:\n-   كرر العملية 8 مرات    \n-   ارسم مربع    \n-   اقفز للأمام 50 بِكسِل    \n-   استدِر إلى اليمين 45 درجة\n-   كرر العملية 8 مرات    \n-   ارسم مثلث    \n-   اقفز للأمام 50 بِكسِل    \n-   استدِر إلى اليمين 45 درجة"
         },
         "courseD_artist_nestedLoopsFP_2021": {
           "courseD_artist_nestedLoopsFP_a": "<img src=\"https://images.code.org/9257cbf61f238f5a749a949059731934-image-1478732674615.02.25.png\" width=\"200px\"/>\n\nتم انتاج هذه الصورة باستخدام حلقة تكرار متداخلة تردد شكلاً هندسيًا سداسيًا (بجوانب قياسها 50 بِكسِل) 15 مرة مستخدمًا الدوران 48 درجة.",
@@ -9956,7 +9956,7 @@
           "courseD_bee_conditionals7_a": "**تذكّر.** هذا اللغز يتغير كل مرة يتم فيها تشغيله. لحل هذا التحدي ينبغي عليك استخدام القطعة البرمجية الشرطية \"إذا/وإلا\"."
         },
         "courseD_bee_conditionals8_2021": {
-          "courseD_bee_conditionals8_a": "\\*\\* تذكر: \\*\\* هذا اللغز يتغير في كل مرة يتم تشغيله. \n\nستحتاج أن تستخدم كتلة شرطية (\"إذا\" أو \"إذا/وإلا\") لحل هذا التحدي.",
+          "courseD_bee_conditionals8_a": "** تذكر: ** هذا اللغز يتغير في كل مرة يتم تشغيله. \n\nستحتاج أن تستخدم كتلة شرطية (\"إذا\" أو \"إذا/وإلا\") لحل هذا التحدي.",
           "courseD_bee_conditionals8_b": "يعد هذا اللغز صعباً، لأنه لا يمكنك التحقق من المربعات الفارغة، والرحيق والعسل الذي يوجد تحت جملة شرطية واحدة.\n\nتحقق فقط لمعرفة وجود الرحيق والعسل في نهاية مسارك."
         },
         "courseD_bee_conditionals_challenge1_2021": {
@@ -9964,7 +9964,7 @@
           "courseD_bee_conditionals_challenge1_b": "في هذا اللغز، لكل مساحة زهرة، خلية نحل، أو لا شيء. وهذا يعني أنك يمكن أن تكرر \"إذا/وإلا\" الشرطية في كل مربع."
         },
         "courseD_bee_conditionals_challenge2_2021": {
-          "courseD_bee_conditionals_challenge1_b": "تمامًا مثل القطعة البرمجية \"إذا في الزهرة\"، الأوامر البرمجية داخل \"بينما الرحيق >0\" تعمل فقط إذا كانت النحلة عند زهرة. \nالفرق هو أن الأوامر البرمجية الموجودة في الداخل ستعمل مرارًا وتكرارًا إلى أن لا يبقى هناك أي رحيق. جرّب هذا النمط:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "تمامًا مثل القطعة البرمجية \"إذا في الزهرة\"، الأوامر البرمجية داخل \"بينما الرحيق >0\" تعمل فقط إذا كانت النحلة عند زهرة. \nالفرق هو أن الأوامر البرمجية الموجودة في الداخل ستعمل مرارًا وتكرارًا إلى أن لا يبقى هناك أي رحيق. جرّب هذا النمط:\n\n[blockly block][0]"
         },
         "courseD_bee_nestedLoops1_2021": {
           "courseD_bee_nestedLoops1_a": "لا يجدي ذلك نفعاً؟ جرب استخدم زر \"خطوة\" حتى ترى ما يحدث سطر بسطر.",
@@ -9983,7 +9983,7 @@
         "courseD_bee_nestedLoops7_2021": {
           "courseD_bee_nestedLoops7_a": "ستحتاج إلى تكرار خيار \"الحصول على رحيق العسل\" داخل مربع \"تكرار\" آخر الذي يكون لديه كذلك مربع برمجي \"التحرك إلى الأمام\" بداخله.",
           "courseD_bee_nestedLoops7_b": "ستحتاج إلى استخدام كل القطع البرمجية \"تكرار\" المتاحة البالغ عددها ثلاثة لحل هذا اللغز.",
-          "courseD_bee_nestedLoops7_c": "قم ببناء المربعات البرمجية الثلاثة الخاصة بك، على هذا النحو:\n\n-   تكرار 4\n-   تكرار 3\n-   تكرار 12\n-   الحصول على رحيق العسل\n-   التحرك إلى الأمام\n-   الدوران لليمين"
+          "courseD_bee_nestedLoops7_c": "قم ببناء المربعات البرمجية الثلاثة الخاصة بك، على هذا النحو:\n-    تكرار 4\n-   تكرار 3\n-   تكرار 12\n-   الحصول على رحيق العسل\n-   التحرك إلى الأمام\n-   الدوران لليمين"
         },
         "courseD_bounce_events10s_2021": {
           "courseD_bounce_events10s_a": "من المفترض أن يكون لديك كلا الحدثين البرمجيين في الكود البرمجي الخاص بك:\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
@@ -10040,7 +10040,7 @@
           "courseD_bee_nested_loops_challenge2_a": "تذكر أنه يمكنك \"تكرار\" أمر واحد، أو نمط أطول. يمكنك حتى \"تكرار\" حلقة \"التكرار\"!",
           "courseD_bee_nested_loops_challenge2_b": "للحصول على كل المجوهرات البالغ عددها 4 قطع، استخدم أولاً الحلقة للتحرك إلى الأمام بعيداً عن المركز. استدر لليسار أو لليمين، ثم استخدم الحلقة المتداخلة للتحرك من الكومة الأولى الخاصة بالكنز إلى الثانية. في حالة تكرار الحلقة المتداخلة عدد مرات كافية، فسوف تتحرك الحصادة حول _الكهف_ بأكلمه!",
           "courseD_bee_nested_loops_challenge2_c": "أقصر برنامج يصل إلى كل الجواهر يستخدم قطعة \"تجميع\" واحدة ودوران مرتين.",
-          "courseD_bee_nested_loops_challenge2_d": "**الحل:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat_dropdown\">\n        <title name=\"TIMES\" config=\"3-10\">3</title>\n        <statement name=\"DO\">\n          <block type=\"maze_move\">\n            <title name=\"DIR\">moveForward</title>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnLeft</title>\n            <next>\n              <block type=\"controls_repeat_dropdown\">\n                <title name=\"TIMES\" config=\"3-10\">3</title>\n                <statement name=\"DO\">\n                  <block type=\"collector_collect\">\n                    <next>\n                      <block type=\"controls_repeat_dropdown\">\n                        <title name=\"TIMES\" config=\"3-10\">3</title>\n                        <statement name=\"DO\">\n                          <block type=\"maze_move\">\n                            <title name=\"DIR\">moveForward</title>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"controls_repeat_dropdown\">\n                                <title name=\"TIMES\" config=\"3-10\">3</title>\n                                <statement name=\"DO\">\n                                  <block type=\"maze_move\">\n                                    <title name=\"DIR\">moveForward</title>\n                                  </block>\n                                </statement>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseD_bee_nested_loops_challenge2_d": "**الحل:**\n\n[blockly block][0]"
         },
         "courseD_farmer_condLoops1_2021": {
           "courseD_farmer_condLoops1_a": "ستحتاج إلى البحث عن الذرة 5 مرات باستخدام حلقة التكرار.",
@@ -10049,7 +10049,7 @@
         "courseD_farmer_condLoops2_2021": {
           "courseD_farmer_condLoops2_a": "الطريقة الأفضل للقيام بذلك هو تداخل عبارات \"إذا\" من خلال وضع الواحدة داخل الأخرى.",
           "courseD_farmer_condLoops2_b": "لحل هذا اللغز، يجب أن يكون لديك عبارة \"إذا/ بخلاف ذلك\"، وعبارة \"إذا\" بسيطة واحدة.",
-          "courseD_farmer_condLoops2_c": "يجب أن تكون عبارة \"إذا\" مماثلة كثيرا لما يلي:\n\n-   إذا توجد ذرة\n-   التقط ذرة\n-   وإلّا\n-   إذا يوجد خس\n-   التقط خس إذا لم يوجد شيء هناك، فلن تلتقط أي شيء!"
+          "courseD_farmer_condLoops2_c": "يجب أن تكون عبارة \"إذا\" مماثلة كثيرا لما يلي:\n-   إذا توجد ذرة\n-   التقط ذرة\n-   وإلّا\n-   إذا يوجد خس\n-   التقط خس إذا لم يوجد شيء هناك، فلن تلتقط أي شيء!"
         },
         "courseD_farmer_condLoops3_2021": {
           "courseD_farmer_condLoops3_a": "للحصول على جميع العناصر ، حاول تداخل ثلاث عبارات \"إذا\".\n\nهذا يعني أنه يجب عليك وضع عبارة `إذا` داخل أخرى، ثم ضع عبارة`إذا` ثالثة داخل العبارة الثانية.",
@@ -10069,7 +10069,7 @@
           "courseD_farmer_condLoops6_b": "لن تحتاج سوى التحقق من وجود الذرة في أثناء معظم موسم الحصاد. وما عليك سوى التقاط ثمرة يقطين واحدة مع اقتراب نهاية برنامجك."
         },
         "courseD_farmer_condLoops7_2021": {
-          "courseD_farmer_condLoops7_a": "لاحظ بأن المسار الأكثر سهولة للوصول إلى كل المحاصيل مازال في مسار حلزوني.\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",
+          "courseD_farmer_condLoops7_a": "لاحظ بأن المسار الأكثر سهولة للوصول إلى كل المحاصيل مازال في مسار حلزوني.\n\n[][0]",
           "courseD_farmer_condLoops7_b": "حاول استخدام \"طالما المسار سالكاً\" لجعل الحصّادة تتحرك العدد الصحيح من الخطوات."
         },
         "courseD_farmer_condLoops_challenge1_2021": {
@@ -10182,7 +10182,7 @@
           "courseD_maze_nestedLoops3_c": "جرب كتابة الأوامر البرمجية لقطعة مستقيمة واحدة من المسار، ثم قم بالدوران. هل يمكنك تكرار هذا للحصول على زهرة عباد الشمس؟"
         },
         "courseD_maze_nestedLoops4_2021": {
-          "courseD_maze_nestedLoops4_a": "جرب استخدام هذا المسار عبر المتاهة.![](https://images.code.org/565dbbcaf5862da0f60e54195820e814-image-1505961491245.36.09.png)",
+          "courseD_maze_nestedLoops4_a": "جرب استخدام هذا المسار عبر المتاهة.[][0]",
           "courseD_maze_nestedLoops4_b": "إذا كان من الصعب رؤية نمط الحلقة، جرب كتابة الأوامر البرمجية أولاً، ثم شاهد أي منها يتكرر عدة مرات قبل وضع الحلقات.",
           "courseD_maze_nestedLoops4_c": "جرب استخدام حلقة \"تكرار\" داخل أخرى لتقليل عدد الأوامر البرمجية التي تحتاجها."
         },
@@ -10247,7 +10247,7 @@
         "courseE_artist_functions10_2021": {
           "courseD_artist_functions10_b": "هذا الرسم يشبه كثيرًا الرسم الأخير، لكن وظيفة \"رسم الخط\" ترسم الآن شكلاً آخر.",
           "courseD_artist_functions10_a": "لتجنب استخدام قطع برمجية متعددة لـ \"التحرك للأمام\"",
-          "courseD_artist_functions10_c": "هل ترى أين يمكن لهذا الرسم أن يستخدم وظيفة تسمى \"خط الأشكال السداسية\"؟\n\n![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)"
+          "courseD_artist_functions10_c": "هل ترى أين يمكن لهذا الرسم أن يستخدم وظيفة تسمى \"خط الأشكال السداسية\"؟\n\n[][0]"
         },
         "courseE_artist_functions1_dani": {
           "courseE_artist_functions1_a": "لكل من المربعات جوانب بطول 100 بكسل، هذا يعني أن عليك التحرك نحو الأمام بمقدار 175 بكسل قبل رسم مربعك الثاني.",
@@ -10256,8 +10256,8 @@
         },
         "courseE_artist_functions2_2021": {
           "courseD_artist_functions2_b": "من المفترض ألّا تحتوي الوظيفة على برنامجك كاملاً، بل الجزء الذي يرسم مربعًا بأضلاع قدرها 100 بكسل.",
-          "courseD_artist_functions2_c": "لا تنسّ استخدام القطعة  الخضراء \"ارسم مربعًا\" من أجل \"استدعاء\" وظيفتك، وإلا فإن الكود البرمجي في وظيفتك لن يعمل.\n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>",
-          "courseD_artist_functions2_a": "ينبغي لبرنامجك أن:\n\n-   يستخدِم وظيفتك\n-   يتحرَّك إلى الأمام بمقدار 100 + 75 بكسل\n-   يستخدم وظيفتك مرة أخرى"
+          "courseD_artist_functions2_c": "لا تنسّ استخدام القطعة  الخضراء \"ارسم مربعًا\" من أجل \"استدعاء\" وظيفتك، وإلا فإن الكود البرمجي في وظيفتك لن يعمل.\n\n[blockly block][0]",
+          "courseD_artist_functions2_a": "ينبغي لبرنامجك أن:\n\n- يستخدِم وظيفتك\n- يتحرَّك إلى الأمام بمقدار 100 + 75 بكسل\n- يستخدم وظيفتك مرة أخرى"
         },
         "courseE_artist_functions2_dani": {
           "courseD_artist_functions2_b": "الوظيفة التي تكتبها يجب ألّا تحتوي على برنامجك الكامل، بل تحتوي فقط على القسم الذي يرسم المربع الذي قياس جوانبه 100 بِكسِل.",
@@ -10290,8 +10290,8 @@
         "courseE_artist_functions8_2021": {
           "courseD_artist_functions8_f": "تحتاج إلى قطعة \"الحركة للأمام\" واحدة، ولكنك بحاجة لعدد صغير من \"القفز للأمام\" و/أو \"القفز للخلف\"!",
           "courseD_artist_functions8_a": "ابدأ بصناعة وظيفة لمربع، ثم حاول صناعة وظيفة لخط من خطوط المربع.\n\nكيف تستخدم وظيفة \"رسم خط المربع\" لانتاج هذه الصورة؟",
-          "courseD_artist_functions8_d": "لصناعة خط من المربعات،\n\n-   كرر 3 مرات\n    -   ارسم مربع قياس سطحه \\*\\* 50 بِكسِل\\*\\*\n    -   اقفز للأمام **100 بِكسِل**",
-          "courseD_artist_functions8_b": "فكّر أن كل سطر من هذه الصورة هو خط مؤلف من 3 مربعات. كم خط من خطوط المربعات موجود وأين تبدأ برسم كل منها؟\n\n![](<https://images.code.org/22a6f5cc5551371057244eee01955f8e-image-1493135135468.4.10 Hint Drawing.png>)",
+          "courseD_artist_functions8_d": "لصناعة خط من المربعات،\n\n-   كرر 3 مرات\n    -   ارسم مربع قياس سطحه ** 50 بِكسِل**\n    -   اقفز للأمام **100 بِكسِل**",
+          "courseD_artist_functions8_b": "فكّر أن كل سطر من هذه الصورة هو خط مؤلف من 3 مربعات. كم خط من خطوط المربعات موجود وأين تبدأ برسم كل منها؟\n\n[][0]",
           "courseD_artist_functions8_c": "في نهاية كل مجموعة من المربعات المتداخلة، سيحتاج الفنان إلى القفز لأسفل وللخلف قبل أن يرسِم المجموعة التالية من المربعات المتداخلة.",
           "courseD_artist_functions8_g": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         },
@@ -10306,7 +10306,7 @@
           "courseD_artist_functions8_c": "في نهاية كل خط من المربعات، لن يحتاج الفنان سوى الانعطاف بزاوية قدرها 180 درجة قبل رسم الخط الثاني من المربعات. وضَع كل ذلط في حلقة تكرار لإعدادك للتدريب القادِم!"
         },
         "courseE_artist_functions9_2021": {
-          "courseD_artist_functions9_e": "هل يمكنك رؤية جميع الأماكن الأربعة التي يمكن استخدام \"خطوط المثلثات في هذا الرسم؟\n\n![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)",
+          "courseD_artist_functions9_e": "هل يمكنك رؤية جميع الأماكن الأربعة التي يمكن استخدام \"خطوط المثلثات في هذا الرسم؟\n\n[][0]",
           "courseD_artist_functions9_a": "يمكن تقسيم هذا اللغز إلى ثلاثة أجزاء:\n\n-   اصنع وظيفة \"رسم مثلث\"\n-   اصنع وظيفة \"رسم خط المثلثات\"\n-   استخدم وظيفة \"رسم خط من المثلثات\" أربع مرات لتكملة الرسم",
           "courseD_artist_functions9_b": " يتم إنتاج هذا الرسم عن طريق رسم خط المثلثات 4 مرات والدوران إما 60 أو 120 درجة قبل أن ترسم خط المثلث التالي.",
           "courseD_artist_functions9_c": "لرسم خط المثلثات:\n\n-   كرر 4 مرات\n    -   ارسم مثلث\n    -   أقفز للأمام 50 بِكسِل",
@@ -10317,7 +10317,7 @@
           "courseE_artist_functions_challenge1_b": "يمكنك أيضًا \"القفز إلى\" مواضع أخرى أو تغيير التصميم كله كيفما تشاء!"
         },
         "courseE_artist_functions_challenge2_2021": {
-          "courseE_artist_functions_challenge1_a": "<xml>\n  <block type=\"jump_to_xy\">\n    <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n  </block>\n  </xml>\n\nالقطعة البرمجية \"اقفز إلى\" تقوم بتحريك الفنان زومبي إلى أي بِكسِل في الشبكة، متى شئت. أنه يعمل بتحريكه عدد من بِكسِلات إلى اليمين وعدد من بِكسِلات إلى الأسفل. وتحسب هذه دائمَا من أعلى يسار الزاوية، الذي يعني أنه ليس من المهم أين يقع الفنان الزومبي _قبل_ تنفيذ الأمر.\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
+          "courseE_artist_functions_challenge1_a": "[blockly block][0]\n\nالقطعة البرمجية \"اقفز إلى\" تقوم بتحريك الفنان زومبي إلى أي بِكسِل في الشبكة، متى شئت. أنه يعمل بتحريكه عدد من بِكسِلات إلى اليمين وعدد من بِكسِلات إلى الأسفل. وتحسب هذه دائمَا من أعلى يسار الزاوية، الذي يعني أنه ليس من المهم أين يقع الفنان الزومبي _قبل_ تنفيذ الأمر.\n\n[][1]"
         },
         "courseE_farmer_functions1_2021": {
           "courseE_farmer_functions1_a": "تم تنظيم صندوق الأدوات بصورة مختلفة هذه المرة! انقر على الفئات المختلفة لمشاهدة أي قطع برمجية لديك.",
@@ -10380,10 +10380,10 @@
         "courseF_artist_for10_2021": {
           "courseF_artist_for10_a": "الصورة في هذا الرسم تم إجرائها باستخدام العداد لـ \"مجموعة ألفا\"، و\"العداد\" / والرقم 10 كحجم للفرشاة.",
           "courseF_artist_for10_b": "الصورة في الرسم تستخدم الدوران 61 درجة.",
-          "courseF_artist_for10_c": "هل تريد معرفة الطريقة التي تم بها إنشاء الصورة؟\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n        <value name=\"COLOUR\">\n          <block type=\"colour_picker\">\n            <title name=\"COLOUR\">#ff0000</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">15</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">175</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_width\" inline=\"false\">\n                <value name=\"WIDTH\">\n                  <block type=\"math_arithmetic\" inline=\"true\">\n                    <title name=\"OP\">DIVIDE</title>\n                    <value name=\"A\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"B\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_move\" inline=\"true\">\n                        <title name=\"DIR\">moveForward</title>\n                        <value name=\"VALUE\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <next>\n                          <block type=\"draw_turn\" inline=\"true\">\n                            <title name=\"DIR\">turnRight</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">61</title>\n                              </block>\n                            </value>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseF_artist_for10_c": "هل تريد معرفة الطريقة التي تم بها إنشاء الصورة؟\n\n[blockly block][0]\n"
         },
         "courseF_artist_for1_2021": {
-          "courseF_artist_for1_a": "هل يمكنك رسم شيء ما كهذا:\n\n![](https://images.code.org/efee6df2a8840c89fa535bef72e9e45f-image-1530131926453.png)"
+          "courseF_artist_for1_a": "هل يمكنك رسم شيء ما كهذا:\n\n[][0]"
         },
         "courseF_artist_for6_2021": {
           "courseF_artist_for6_a": "ستحتاج حلقة \"لِكي\" إلى العد بداية من 15 إلى 300 مضروباً في 15.",
@@ -10408,13 +10408,13 @@
           "courseF_artist_for_challenge1_a": "عرض القلم هو 1. المربع الأول طول ضلعه 50 نقطة، وضلع كل مربع أكبر من السابق بـ 50 نقطة.",
           "courseF_artist_for_challenge1_b": "قتامة الفرشاة تكون دائما \"عداد\" قسمة 2.",
           "courseF_artist_for_challenge1_c": "بعد رسم كل مربع، لا تنس أن تقفز للخلف، ثم تستدير، ثم تقفز مرة أخرى، ثم تستدير عائداً!",
-          "courseF_artist_for_challenge1_d": "**الحل:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n            <value name=\"COLOUR\">\n              <block type=\"colour_picker\">\n                <title name=\"COLOUR\">#0000cd</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"controls_for_counter\" inline=\"true\">\n              <mutation counter=\"counter\"></mutation>\n                <value name=\"FROM\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <value name=\"TO\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">350</title>\n                  </block>\n                </value>\n                <value name=\"BY\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">DIVIDE</title>\n                        <value name=\"A\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">2</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">4</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"draw_move\" inline=\"true\">\n                            <title name=\"DIR\">moveForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"jump\" inline=\"true\">\n                            <title name=\"DIR\">jumpBackward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">25</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                                <next>\n                                  <block type=\"jump\" inline=\"true\">\n                                    <title name=\"DIR\">jumpBackward</title>\n                                    <value name=\"VALUE\">\n                                      <block type=\"math_number\">\n                                        <title name=\"NUM\">25</title>\n                                      </block>\n                                    </value>\n                                    <next>\n                                      <block type=\"draw_turn\" inline=\"true\">\n                                        <title name=\"DIR\">turnLeft</title>\n                                        <value name=\"VALUE\">\n                                          <block type=\"math_number\">\n                                            <title name=\"NUM\">90</title>\n                                          </block>\n                                        </value>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseF_artist_for_challenge1_d": "**الحل:**\n\n[blockly block][0]"
         },
         "courseF_artist_for_challenge2_2021": {
           "courseF_artist_for_challenge2_c": "تعد الحلقة \"لأجل\" من 5 إلى 250 بزيادة مقدارها 2. ",
           "courseF_artist_for_challenge2_a": "تغيير اللون يحدث باستخدام الكتلة البرمجية \"تعيين اللون - التلوين مع أحمر أخضر أزرق\". الأحمر يكون ثابتاً بقيمة 255، والأخضر يكون دائماً بقيمة المتغير \"عداد\"، أما الأزرق فيكون \"255 - عداد\".",
           "courseF_artist_for_challenge2_b": " الأوامر البرمجية لهذا أكثر بساطة مما تعتقد. كل ما عليك هو تعيين اللون داخل حلقة التكرار \"لِكَيْ\"، والتحرك إلى الأمام، ثم الدوران.",
-          "courseF_artist_for_challenge2_d": "**الحل:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">5</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">250</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n                <value name=\"COLOUR\">\n                  <block type=\"colour_rgb\" inline=\"false\">\n                    <value name=\"RED\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">255</title>\n                      </block>\n                    </value>\n                    <value name=\"GREEN\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"BLUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">MINUS</title>\n                        <value name=\"A\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">255</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_move\" inline=\"true\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\" inline=\"true\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">80</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>\n\n![](<https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png>)"
+          "courseF_artist_for_challenge2_d": "**الحل:**\n\n[blockly block][0]\n\n[][1]\n"
         },
         "courseF_artist_variables10_2021": {
           "courseF_artist_variables10_a": "تمتع بهذا المستوى! شاهد ما الذي ستفعله التغيرات القليلة بأوامرك البرمجية.",
@@ -10428,7 +10428,7 @@
         "courseF_artist_variables8_2021": {
           "courseF_artist_variables8_b": "تذكر بدء أوامرك البرمجية الخاصة بالمثلث مع القطعة \"تعيين الطول\"، وقم بالبدء عند 150 بكسل.",
           "courseF_artist_variables8_c": "تأكد من استخدام حلقة \"تكرار\" لرسم المثلث الخاص بك.",
-          "courseF_artist_variables8_a": "جرب وضع القطعة البرمجية\n\n<xml>\n<block type=\"math_change\">\n      <title name=\"VAR\">length</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block>\n</xml>\n\n داخل حلقتك في النهاية."
+          "courseF_artist_variables8_a": "جرب وضع القطعة البرمجية\n\n[blockly block][0]\n\n داخل حلقتك في النهاية."
         },
         "courseF_artist_variables9_2021": {
           "courseF_artist_variables9_a": "لهذا اللغز، كل ما تحتاجه هو تغيير عدد المرات التي تتكرر فيها الحلقة.",
@@ -10437,7 +10437,7 @@
         "courseF_bee_for10_2021": {
           "courseF_bee_for10_a": "هل يمكن أن تجد النمط ما بين عدد الخطوات التي تحتاج لاتخاذها، وعدد مقادير رحيق العسل التي تريد جمعها؟",
           "courseF_bee_for10_b": "المجموعة الأولى من الزهور لديها عدد إجمالي من \"14 زهرة\". للحصول على المجموعة الأولى هذه، يجب على النحل إصدار طنين لأسفل بمقدار **7 مربعات** (أو 14 مربع مقسم على 2.) كم عدد الزهور في المجموعة التالية، وما مقدار المربعات التي ستسافر خلالها النحلة للوصول إلى هناك؟",
-          "courseF_bee_for10_c": "في هذا اللغز، توجد لدى المجموعة الأولى من الزهور عدد **زهرة**، والمجموعة الثانية لديها **10** زهرات، والمجموعة الثالثة لديها **6** زهرات، والمجموعة الرابعة لديها عدد **2** زهرة.\n\nفي هذا الرسم، ستلاحظ أنه يوجد **7** من  المربعات الحمراء، وعدد **5** من المربعات البرتقالية، و**3** من المربعات الخضراء، و**1** مربع برمجي أزرق. \n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\nكيف ترتبط الأعداد؟",
+          "courseF_bee_for10_c": "في هذا اللغز، توجد لدى المجموعة الأولى من الزهور عدد **زهرة**، والمجموعة الثانية لديها **10** زهرات، والمجموعة الثالثة لديها **6** زهرات، والمجموعة الرابعة لديها عدد **2** زهرة.\n\nفي هذا الرسم، ستلاحظ أنه يوجد **7** من  المربعات الحمراء، وعدد **5** من المربعات البرتقالية، و**3** من المربعات الخضراء، و**1** مربع برمجي أزرق. \n\n[][0]\n\nكيف ترتبط الأعداد؟",
           "courseF_bee_for10_d": "ستحتاج إلى عمليّتي تكرار، علمية تكرار واحدة ستستخدم القطعة البرمجية \"رياضيات\"."
         },
         "courseF_bee_for11_2021": {
@@ -10473,7 +10473,7 @@
         "courseF_bee_for8_2021": {
           "courseF_bee_for8_a": "إذا كنت حلقتك في حالة عد لأعلى، فستتم إضافة مقدار الزيادة إلى متغير \"العداد\" الخاص بك في كل مرة. ما الذي تحتاج لإضافة كل رقم من أجل الحصول على الكمية التالية من رحيق العسل؟",
           "courseF_bee_for8_b": "في هذا اللغز، ستحتاج إلى التحرك في نمط السلم للوصول إلى الزهور.",
-          "courseF_bee_for8_c": "سيكون عد الحلقة الخاصة بك من\\_ 3 إلى 15 \\_مع بعض زيادة. ما هي؟"
+          "courseF_bee_for8_c": "سيكون عد الحلقة الخاصة بك من_ 3 إلى 15 _مع بعض زيادة. ما هي؟"
         },
         "courseF_bee_for9_2021": {
           "courseF_bee_for9_a": "جرب استخدام بعض الرياضيات مع المتغير \"عداد\"ما الذي يجب عليك فعله بالعداد في كل زهرة من أجل معادلة رحيق النحل الذي تحتاج لتجميعه؟",
@@ -10484,10 +10484,10 @@
           "courseF_bee_for_challenge2_a": "ألق نظرة على هذا الخيار للحركة:  \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)",
           "courseF_bee_for_challenge2_b": "حاول استخدام حلقتي \"لِكَيْ\": حلقة للصعود والحصول على الرحيق، وحلقة أخرى للهبوط وصنع العسل.",
           "courseF_bee_for_challenge2_c": "لاحظ أن حلقة \"لأجل\" الأولى تحتاج مجموعة من حلقات \"التكرار\" داخلها لتكرر بمقدار الـ \"عداد\" لعمل نمط الصعود المتزايد. \n\nوالحلقة \"لأجل\" الأخرى تحتاج فقط حلقة واحدة \"التكرار\" لصنع عسل بمقدار الـ \"عداد\".",
-          "courseF_bee_for_challenge2_d": "**الحل:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for\" inline=\"true\">\n        <title name=\"VAR\">counter</title>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"variables_get\">\n                <title name=\"VAR\">counter</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"maze_moveForward\"/>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"maze_nectar\"/>\n                </statement>\n                <next>\n                  <block type=\"maze_turn\">\n                    <title name=\"DIR\">turnLeft</title>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"maze_moveForward\"/>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnRight</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnRight</title>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"controls_for\" inline=\"true\">\n                    <title name=\"VAR\">counter</title>\n                    <value name=\"FROM\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <value name=\"TO\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                    <value name=\"BY\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"maze_moveForward\">\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"maze_moveForward\">\n                                <next>\n                                  <block type=\"maze_turn\">\n                                    <title name=\"DIR\">turnRight</title>\n                                    <next>\n                                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                                        <value name=\"TIMES\">\n                                          <block type=\"variables_get\">\n                                            <title name=\"VAR\">counter</title>\n                                          </block>\n                                        </value>\n                                        <statement name=\"DO\">\n                                          <block type=\"maze_honey\"/>\n                                        </statement>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "courseF_bee_for_challenge2_d": "**الحل:**\n\n[blockly block][0]"
         },
         "courseF_text_concat": {
-          "prompt_example": "<xml>\n  <block type=\"when_run\" deletable=\"false\">\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\">\n            <title name=\"TEXT\">What is your name?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">name</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_printText\">\n        <value name=\"TEXT\">\n          <block type=\"gamelab_textJoin\">\n            <title name=\"TEXT1\">Hello, </title>\n            <value name=\"TEXT2\">\n              <block type=\"gamelab_textVariableJoin\">\n                <title name=\"VAR\">name</title>\n                <value name=\"TEXT2\">\n                  <block type=\"gamelab_textJoin\">\n                    <title name=\"TEXT1\">!</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "prompt_example": "[blockly block][0]"
         },
         "coursea_maze_ramp1_2021": {
           "courseC_maze_programming1_a": "إذا لم يصل الطائر إلى الخنزير، فتأكَّد من أنه قد تم النقر على كلا القطعتين البرمجيتين تمامًا، ثم انقر فوق \"تشغيل\" مرة ثانية.",
@@ -10505,157 +10505,161 @@
           "iceage_warn_ice_age_b": "أضف قطعتين برمجيتين تحت حدث \"عند التشغيل\" لجعلهما يحدثان فورًا بعد بدء البرنامج."
         },
         "helloworld_animals_backgrounds": {
-          "hello_world_background": "يمكنك تغيير الخلفية عن طريق توصيل كتلة \"ضبط الخلفية\" تحت كتلة حدث \"عند النقر\":\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_background": "يمكنك تغيير الخلفية عن طريق توصيل كتلة \"ضبط الخلفية\" تحت كتلة حدث \"عند النقر\":\n\n[blockly block][0]"
         },
         "helloworld_animals_behaviors": {
-          "storyboard_behavior_example": "\\_ملاحظة: \\_ لإعطاء كائن سلوكًا ما، تحتاج إلى استخدام كتلة \"الكائن يبدأ\" بإحدى كتل السلوك الخضراء، مثل \"الدوران لليمين\".\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"cuteanimals_rooster_hello\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+          "storyboard_behavior_example": "_ملاحظة: _ لإعطاء كائن سلوكًا ما، تحتاج إلى استخدام كتلة \"الكائن يبدأ\" بإحدى كتل السلوك الخضراء، مثل \"الدوران لليمين\".\n\n[blockly block][0]"
         },
         "helloworld_animals_click": {
-          "hw_no_changes": "لا تحتاج إلى تغيير أي من الكود في هذا المستوى."
+          "hw_no_changes": "لا تحتاج إلى تغيير أي من الكود في هذا المستوى.",
+          "hw_click_sprites": "انقر الكائنات المتحركة بينما البرنامج قيد التنفيذ."
         },
         "helloworld_animals_costumes": {
-          "hello_world_costumes": "حاول ربط كتلة \"تغيير الزي\" تحت كتلة حدث \"عند النقر\".\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"\"cuteanimals_goat_hello\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_costumes": "حاول ربط كتلة \"تغيير الزي\" تحت كتلة حدث \"عند النقر\".\n\n[blockly block][0]"
         },
         "helloworld_animals_events": {
-          "hello_world_click": "اربط كتلة \"قول\" تحت كتلة حدث \"عند النقر\":\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, ocean!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+          "hello_world_click": "اربط كتلة \"قول\" تحت كتلة حدث \"عند النقر\":\n\n[blockly block][0]"
         },
         "helloworld_animals_location": {
-          "location_pin_hint": "لتغيير موقع الكائن، انقر فوق الدبوس الموجود في كتلة الموقع، ثم انقر حيث تريد أن تذهب.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+          "location_pin_hint": "لتغيير موقع الكائن، انقر فوق الدبوس الموجود في كتلة الموقع، ثم انقر حيث تريد أن تذهب.\n\n[][0]"
         },
         "helloworld_animals_multi": {
-          "cat_xml": "تأكد من تطابق الأزياء في كل كتلة.\n\n<xml>\n  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_cat_hello\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>\n  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Meow!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_cat_hello\"</title>\n      </block>\n    </value>\n    </block></next></block>\n</xml>"
+          "cat_xml": "تأكد من تطابق الأزياء في كل كتلة.\n\n[blockly block][0]"
         },
         "helloworld_animals_say": {
-          "hello-world-first-solution-bear": "لجعل الدب يقول شيئًا ما، قم بتوصيل كتل الكود هكذا:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_bear\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_bear\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+          "hello-world-first-solution-bear": "لجعل الدب يقول شيئًا ما، قم بتوصيل كتل الكود هكذا:\n\n[blockly block][0]"
         },
         "helloworld_animals_sizes": {
-          "storyboard_setProp": "لضبط حجم الكائن مرة واحدة فقط، يمكنك استخدام هذه الكتلة:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_tiger\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
-          "storyboard_changePropBy": "إذا كنت تريد تغيير حجم الكائن مرارًا وتكرارًا (مع الأحداث)، فاستخدم هذه الكتلة:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_cheetah_hello\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_setProp": "لضبط حجم الكائن مرة واحدة فقط، يمكنك استخدام هذه الكتلة:\n\n[blockly block][0]",
+          "storyboard_changePropBy": "إذا كنت تريد تغيير حجم الكائن مرارًا وتكرارًا (مع الأحداث)، فاستخدم هذه الكتلة:\n\n[blockly block][0]"
         },
         "helloworld_emoji_backgrounds": {
-          "hello_world_background": "يمكنك تغيير الخلفية عن طريق توصيل كتلة \"ضبط الخلفية\" تحت كتلة حدث \"عند النقر\":\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_35_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_17_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_background": "يمكنك تغيير الخلفية عن طريق توصيل كتلة \"ضبط الخلفية\" تحت كتلة حدث \"عند النقر\":\n\n[blockly block][0]"
         },
         "helloworld_emoji_behaviors": {
-          "storyboard_behavior_example": "\\_ملاحظة: \\_ لإعطاء كائن سلوكًا ما، تحتاج إلى استخدام كتلة \"الكائن يبدأ\" بإحدى كتل السلوك الخضراء، مثل \"الدوران لليمين\".\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"emoji_05_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+          "storyboard_behavior_example": "_ملاحظة: _ لإعطاء كائن سلوكًا ما، تحتاج إلى استخدام كتلة \"الكائن يبدأ\" بإحدى كتل السلوك الخضراء، مثل \"الدوران لليمين\".\n\n[blockly block][0]"
         },
         "helloworld_emoji_click": {
-          "hw_no_changes": "لا تحتاج إلى تغيير أي من الكود في هذا المستوى."
+          "hw_no_changes": "لا تحتاج إلى تغيير أي من الكود في هذا المستوى.",
+          "hw_click_sprites": "انقر الكائنات المتحركة بينما البرنامج قيد التنفيذ."
         },
         "helloworld_emoji_costumes": {
-          "hello_world_costumes": "حاول ربط كتلة \"تغيير الزي\" تحت كتلة حدث \"عند النقر\".\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"emoji_18_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"emoji_25_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"emoji_18_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_costumes": "حاول ربط كتلة \"تغيير الزي\" تحت كتلة حدث \"عند النقر\".\n\n[blockly block][0]"
         },
         "helloworld_emoji_events": {
-          "hello_world_click": "اربط كتلة \"قول\" تحت كتلة حدث \"عند النقر\":\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_06_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Look at that!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"emoji_06_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+          "hello_world_click": "اربط كتلة \"قول\" تحت كتلة حدث \"عند النقر\":\n\n[blockly block][0]"
         },
         "helloworld_emoji_location": {
-          "location_pin_hint": "لتغيير موقع الكائن، انقر فوق الدبوس الموجود في كتلة الموقع، ثم انقر حيث تريد أن تذهب.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+          "location_pin_hint": "لتغيير موقع الكائن، انقر فوق الدبوس الموجود في كتلة الموقع، ثم انقر حيث تريد أن تذهب.\n\n[][0]"
         },
         "helloworld_emoji_multi": {
-          "storyboard_costume": "تأكد من تطابق الأزياء لكل كائن.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Look at me!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_14_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_costume": "تأكد من تطابق الأزياء لكل كائن.\n[blockly block][0]"
         },
         "helloworld_emoji_say": {
-          "hello-world-first-solution-emoji": "لجعل الرمز التعبيري يقول شيئًا ما، قم بتوصيل كتل الكود هكذا:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"emoji_19\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_19\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+          "hello-world-first-solution-emoji": "لجعل الرمز التعبيري يقول شيئًا ما، قم بتوصيل كتل الكود هكذا:\n\n[blockly block][0]"
         },
         "helloworld_emoji_sizes": {
-          "storyboard_setProp": "لضبط حجم الكائن مرة واحدة فقط، يمكنك استخدام هذه الكتلة:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_17_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
-          "storyboard_changePropBy": "إذا كنت تريد تغيير حجم الكائن مرارًا وتكرارًا (مع الأحداث)، فاستخدم هذه الكتلة:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_33_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_setProp": "لضبط حجم الكائن مرة واحدة فقط، يمكنك استخدام هذه الكتلة:\n\n[blockly block][0]",
+          "storyboard_changePropBy": "إذا كنت تريد تغيير حجم الكائن مرارًا وتكرارًا (مع الأحداث)، فاستخدم هذه الكتلة:\n\n[blockly block][0]"
         },
         "helloworld_food_backgrounds": {
-          "hello_world_background": "يمكنك تغيير الخلفية عن طريق توصيل كتلة \"ضبط الخلفية\" تحت كتلة حدث \"عند النقر\":\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_background": "يمكنك تغيير الخلفية عن طريق توصيل كتلة \"ضبط الخلفية\" تحت كتلة حدث \"عند النقر\":\n\n[blockly block][0]"
         },
         "helloworld_food_behaviors": {
-          "storyboard_behavior_example": "\\_ملاحظة: \\_ لإعطاء كائن سلوكًا ما، تحتاج إلى استخدام كتلة \"الكائن يبدأ\" بإحدى كتل السلوك الخضراء، مثل \"الدوران لليمين\".\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"face_burger_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+          "storyboard_behavior_example": "_ملاحظة: _ لإعطاء كائن سلوكًا ما، تحتاج إلى استخدام كتلة \"الكائن يبدأ\" بإحدى كتل السلوك الخضراء، مثل \"الدوران لليمين\".\n\n[blockly block][0]"
         },
         "helloworld_food_click": {
-          "hw_no_changes": "لا تحتاج إلى تغيير أي من الكود في هذا المستوى."
+          "hw_no_changes": "لا تحتاج إلى تغيير أي من الكود في هذا المستوى.",
+          "hw_click_sprites": "انقر الكائنات المتحركة بينما البرنامج قيد التنفيذ."
         },
         "helloworld_food_costumes": {
-          "hello_world_costumes": "حاول ربط كتلة \"تغيير الزي\" تحت كتلة حدث \"عند النقر\".\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"face_taco_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_costumes": "حاول ربط كتلة \"تغيير الزي\" تحت كتلة حدث \"عند النقر\".\n\n[blockly block][0]"
         },
         "helloworld_food_events": {
-          "hello_world_click": "اربط كتلة \"قول\" تحت كتلة حدث \"عند النقر\":\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+          "hello_world_click": "اربط كتلة \"قول\" تحت كتلة حدث \"عند النقر\":\n\n[blockly block][0]"
         },
         "helloworld_food_location": {
-          "location_pin_hint": "لتغيير موقع الكائن، انقر فوق الدبوس الموجود في كتلة الموقع، ثم انقر حيث تريد أن تذهب.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+          "location_pin_hint": "لتغيير موقع الكائن، انقر فوق الدبوس الموجود في كتلة الموقع، ثم انقر حيث تريد أن تذهب.\n\n[][0]"
         },
         "helloworld_food_multi": {
-          "storyboard_costume": "تأكد من تطابق الأزياء لكل كائن.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, broccoli!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_costume": "تأكد من تطابق الأزياء لكل كائن.\n[blockly block][0]"
         },
         "helloworld_food_say": {
-          "hello-world-first-solution-pizza": "لجعل البيتزا تقول شيئًا ما، قم بتوصيل كتل الكود هكذا:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+          "hello-world-first-solution-pizza": "لجعل البيتزا تقول شيئًا ما، قم بتوصيل كتل الكود هكذا:\n\n[blockly block][0]"
         },
         "helloworld_food_sizes": {
-          "storyboard_setProp": "لضبط حجم الكائن مرة واحدة فقط، يمكنك استخدام هذه الكتلة:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
-          "storyboard_changePropBy": "إذا كنت تريد تغيير حجم الكائن مرارًا وتكرارًا (مع الأحداث)، فاستخدم هذه الكتلة:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_setProp": "لضبط حجم الكائن مرة واحدة فقط، يمكنك استخدام هذه الكتلة:\n\n[blockly block][0]",
+          "storyboard_changePropBy": "إذا كنت تريد تغيير حجم الكائن مرارًا وتكرارًا (مع الأحداث)، فاستخدم هذه الكتلة:\n\n[blockly block][0]"
         },
         "helloworld_retro_backgrounds": {
-          "hello_world_background": "يمكنك تغيير الخلفية عن طريق توصيل كتلة \"ضبط الخلفية\" تحت كتلة حدث \"عند النقر\":\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retroship_21\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"background_landscape11_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_background": "يمكنك تغيير الخلفية عن طريق توصيل كتلة \"ضبط الخلفية\" تحت كتلة حدث \"عند النقر\":\n\n[blockly block][0]"
         },
         "helloworld_retro_behaviors": {
-          "storyboard_behavior_example": "\\_ملاحظة: \\_ لإعطاء كائن سلوكًا ما، تحتاج إلى استخدام كتلة \"الكائن يبدأ\" بإحدى كتل السلوك الخضراء، مثل \"الدوران لليمين\".\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"retrocreature_09_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+          "storyboard_behavior_example": "_ملاحظة: _ لإعطاء كائن سلوكًا ما، تحتاج إلى استخدام كتلة \"الكائن يبدأ\" بإحدى كتل السلوك الخضراء، مثل \"الدوران لليمين\".\n\n[blockly block][0]"
         },
         "helloworld_retro_click": {
-          "hw_no_changes": "لا تحتاج إلى تغيير أي من الكود في هذا المستوى."
+          "hw_no_changes": "لا تحتاج إلى تغيير أي من الكود في هذا المستوى.",
+          "hw_click_sprites": "انقر الكائنات المتحركة بينما البرنامج قيد التنفيذ."
         },
         "helloworld_retro_costumes": {
-          "hello_world_costumes": "حاول ربط كتلة \"تغيير الزي\" تحت كتلة حدث \"عند النقر\".\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"retrocreature_07_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_20_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"retrocreature_07_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+          "hello_world_costumes": "حاول ربط كتلة \"تغيير الزي\" تحت كتلة حدث \"عند النقر\".\n\n[blockly block][0]"
         },
         "helloworld_retro_events": {
-          "hello_world_click": "اربط كتلة \"قول\" تحت كتلة حدث \"عند النقر\":\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retro_powerup_heart\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">POWERUP!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"retro_powerup_heart\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+          "hello_world_click": "اربط كتلة \"قول\" تحت كتلة حدث \"عند النقر\":\n\n[blockly block][0]"
         },
         "helloworld_retro_location": {
-          "location_pin_hint": "لتغيير موقع الكائن، انقر فوق الدبوس الموجود في كتلة الموقع، ثم انقر حيث تريد أن تذهب.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+          "location_pin_hint": "لتغيير موقع الكائن، انقر فوق الدبوس الموجود في كتلة الموقع، ثم انقر حيث تريد أن تذهب.\n\n[][0]"
         },
         "helloworld_retro_multi": {
-          "storyboard_costume": "تأكد من تطابق الأزياء لكل كائن.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_16\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_costume": "تأكد من تطابق الأزياء لكل كائن.\n[blockly block][0]"
         },
         "helloworld_retro_say": {
-          "hello-world-first-solution-retrocreature": "لجعل المخلوق يقول شيئًا ما، قم بتوصيل كتل الكود هكذا:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"retrocreature_18_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_18_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+          "hello-world-first-solution-retrocreature": "لجعل المخلوق يقول شيئًا ما، قم بتوصيل كتل الكود هكذا:\n\n[blockly block][0]"
         },
         "helloworld_retro_sizes": {
-          "hw_retro_setProp": "لضبط حجم الكائن مرة واحدة فقط، يمكنك استخدام هذه الكتلة:\n\n<xml><block type=\"gamelab_setProp\">\n    <title name=\"PROPERTY\">\"scale\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retro_purple_burst\"</title>\n      </block>\n    </value>\n    <value name=\"VAL\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">50</title>\n      </block>\n    </value>\n  </block></xml>",
-          "hw_retro_changePropBy": "إذا كنت تريد تغيير حجم الكائن مرارًا وتكرارًا (مع الأحداث)، فاستخدم هذه الكتلة:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+          "hw_retro_setProp": "لضبط حجم الكائن مرة واحدة فقط، يمكنك استخدام هذه الكتلة:\n\n[blockly block][0]",
+          "hw_retro_changePropBy": "إذا كنت تريد تغيير حجم الكائن مرارًا وتكرارًا (مع الأحداث)، فاستخدم هذه الكتلة:\n\n[blockly block][0]"
         },
         "poetry_hoc_addSprites": {
-          "location_hint": "كل كائن له **موقع**. يمكنك ضبط الموقع عن طريق النقر فوق الدبوس الموجود في هذه الكتلة:\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   انقر فوق الدبوس ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>) الموجود في قالب الموقع ثم اختر موضعًا جديدًا للكائن على الشاشة.\n-   اضغط على زر \"تشغيل\" عند الانتهاء من الكود.",
-          "remove_hint": "يمكنك إزالة كائن برقم سطر معين. يمكنك إضافة كائن جديد ليحل محله:\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
+          "location_hint": "كل كائن له **موقع**. يمكنك ضبط الموقع عن طريق النقر فوق الدبوس الموجود في هذه الكتلة:\n[blockly block][0]\n\n-   انقر فوق الدبوس [][1] الموجود في قالب الموقع ثم اختر موضعًا جديدًا للكائن على الشاشة.\n- اضغط على زر \"تشغيل\" عند الانتهاء من الكود.",
+          "remove_hint": "يمكنك إزالة كائن برقم سطر معين. يمكنك إضافة كائن جديد ليحل محله:\n\n[blockly block][0]"
         },
         "poetry_hoc_backgroundEffects": {
-          "add_background_effect": "ابحث عن كتلة خلفية مثل هذه:\n<xml><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"colors\"</title><title name=\"PALETTE\">\"sunrise\"</title></block></xml>\n\nواعثر على كتلة تأثير نصي مثل هذه: \n\n<xml><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#000099</title></block></value></block></xml>\n\nقم بربط هذه الكتل تحت \"عند التشغيل\" في مساحة العمل الخاصة بك.",
-          "add_more_effects": "أضف المزيد من الألوان أو التأثيرات للمساعدة في خلق الحالة المزاجية لهذه القصيدة.\n\n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"squiggles\"</title><title name=\"PALETTE\">\"sky\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#000099</title></block></value><next><block type=\"Poetry_setFont\"><title name=\"FONT\">\"Courier\"</title><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"typewriter\"</title></block></next></block></next></block></next></block></next></block></xml>"
+          "add_background_effect": "ابحث عن كتلة خلفية مثل هذه:\n[blockly block][0]\n\nواعثر على كتلة تأثير نصي مثل هذه: \n\n[blockly block][1]\n\nقم بربط هذه الكتل تحت \"عند التشغيل\" في مساحة العمل الخاصة بك.",
+          "add_more_effects": "أضف المزيد من الألوان أو التأثيرات للمساعدة في خلق الحالة المزاجية لهذه القصيدة.\n\n[blockly block][0]"
         },
         "poetry_hoc_events1": {
-          "do_effect_hint": "ستضيف كتلة \"تنفيذ التأثير\" الجديدة تأثيرًا جديدًا مرة واحدة. \n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">1</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title></block></next></block></xml>\n\nيمكنك تكديس أكثر من \"تأثير\" واحد فوق بعضها البعض لجعل التأثير يدوم لفترة أطول.<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">0</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title></block></next></block></next></block></next></block></xml>",
-          "background_effect_hint": "يمكنك إضافة تأثيرات أخرى ضمن كتلة حدث بكود كهذا:\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setBackgroundEffect\">\n    <title name=\"EFFECT\">\"ripples\"</title>\n    <title name=\"PALETTE\">\"sky\"</title>\n  </block></next></block></xml>",
-          "more_events_hint": "يمكنك استخدام أكثر من حدث في برنامجك. حاول استخدام حدثين بتأثيرات مختلفة لمطابقة الأسطر الجديدة في القصيدة.\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">2</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"starburst\"</title></block></next></block></xml>\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"bubbles\"</title></block></next></block></xml>"
+          "do_effect_hint": "ستضيف كتلة \"تنفيذ التأثير\" الجديدة تأثيرًا جديدًا مرة واحدة. \n[blockly block][0]\n\nيمكنك تكديس أكثر من \"تأثير\" واحد فوق بعضها البعض لجعل التأثير يدوم لفترة أطول.[blockly block][1]",
+          "background_effect_hint": "يمكنك إضافة تأثيرات أخرى ضمن كتلة حدث بكود كهذا:\n[blockly block][0]",
+          "more_events_hint": "يمكنك استخدام أكثر من حدث في برنامجك. حاول استخدام حدثين بتأثيرات مختلفة لمطابقة الأسطر الجديدة في القصيدة.\n\n[blockly block][0]\n\n[blockly block][1]"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound_hint": "ابحث عن هذه الكتلة:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_background/typewriter.mp3\"</title></block></next></block></xml>\nأو هذه الكتلة: \n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\nقم بربطها تحت \"عند التشغيل\" في مساحة العمل الخاصة بك.",
-          "more_code": "أضف المزيد من التأثيرات والألوان لتتماشى مع الصوت الذي اخترته. \n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>"
+          "poetry_sound_hint": "ابحث عن هذه الكتلة:\n[blockly block][0]\nأو هذه الكتلة: \n\n[blockly block][1]\n\nقم بربطها تحت \"عند التشغيل\" في مساحة العمل الخاصة بك.",
+          "more_code": "أضف المزيد من التأثيرات والألوان لتتماشى مع الصوت الذي اخترته. \n[blockly block][0]"
         },
         "poetry_hoc_spriteBehaviors": {
-          "add_behavior": "أضف كتلة \"بدء الكائن\" إلى الكود الخاص بك. تأكد من أنك قمت بالفعل بإنشاء الكائن الذي تعطي سلوكًا له.\n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next><block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
+          "add_behavior": "أضف كتلة \"بدء الكائن\" إلى الكود الخاص بك. تأكد من أنك قمت بالفعل بإنشاء الكائن الذي تعطي سلوكًا له.\n\n[blockly block][0]"
         },
         "poetry_hoc_spriteSizes": {
-          "size hint": "ابحث عن هذه الكتلة وانقر فوق `150`.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nماذا يحدث عندما يكون الرقم `25`؟\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+          "size hint": "ابحث عن هذه الكتلة وانقر فوق `150`.\n[blockly block][0]\n\nماذا يحدث عندما يكون الرقم `25`؟\n[blockly block][1]"
         },
         "courseF_sprites_clouds": {
           "behavior_list": "جرب استخدام سلوكيات مثل \"التحرك الى الشرق والدوران\"، \"الدوران باتجاه اليمين\" و \"التجوّل\"."
         },
         "courseF_bee_variables_3a_2021": {
-          "courseF_bee_variables_3_2021_1": "لمواصلة النمط، قم بزيادة عدد التكرارات:\n<xml><block type=\"controls_repeat_ext\">\n      <value name=\"TIMES\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">4</title>\n        </block>\n      </value>\n    </block></xml>"
+          "courseF_bee_variables_3_2021_1": "لمواصلة النمط، قم بزيادة عدد التكرارات:\n[blockly block][0]"
         },
         "courseF_bee_variables_3aa_2021": {
-          "courseF_bee_variables_3_2021_1": "لتضيف واحدًا الى المتغيِّر، يمكنك استخدام هذا الكود البرمجي في برنامجك:\n<xml><block type=\"math_change\">\n      <title name=\"VAR\">counter</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>"
+          "courseF_bee_variables_3_2021_1": "لتضيف واحدًا الى المتغيِّر، يمكنك استخدام هذا الكود البرمجي في برنامجك:\n[blockly block][0]"
         },
         "courseF_events_choice_pufferfish": {
-          "changeProp": "سوف تحتاج إلى هذه القطع البرمجية:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
+          "changeProp": "سوف تحتاج إلى هذه القطع البرمجية:\n\n[blockly block][0]"
         },
         "courseF_events_key": {
-          "changePropBlock": "سوف تحتاج إلى هذه القطع البرمجية:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
+          "changePropBlock": "سوف تحتاج إلى هذه القطع البرمجية:\n\n[blockly block][0]"
         },
         "courseF_variables_card_finish": {
-          "card_idea1": "يمكنك إضافة محفز ثانٍ (أو ثالث أو رابع) عن طريق توصيل قطع محفز جديدة بمتغير مختلف بحدثك الأول \"عند الإجابة\".\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">ماذا تريد لعيد ميلادك؟</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">هدية</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
+          "card_idea1": "يمكنك إضافة محفز ثانٍ (أو ثالث أو رابع) عن طريق توصيل قطع محفز جديدة بمتغير مختلف بحدثك الأول \"عند الإجابة\".\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">اسم</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">ماذا تريد لعيد ميلادك؟</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">هدية</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
           "card_idea2": "يمكن أن يكون لديك تغيير من سلوك إلى آخر باستخدام قطعة \"إيقاف الكائن\" مع قطعة \"بدء الكائن\" ضمن حدث برمجي.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">اسم</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"روبوت ـ٢ـ١\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">الدوران لليسار</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"روبوت ـ٢ـ١\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">الدوران لليمين</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
           "card_idea3": "يمكنك جعل برنامجك تفاعليًا عن طريق جعل أشياء أخرى تحدث عندما يضغط المستخدم على مفتاح أو بعد مرور فترة زمنية معينة.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">\"عندما\"</title>\n    <title name=\"KEY\">\"أعلى\"</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"مقياس\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"روبوت٢ـ١\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">١٠</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
@@ -10669,6 +10673,15 @@
           "card_idea1": "يمكنك إضافة محفز ثانٍ (أو ثالث أو رابع) باستخدام قطع محفزات جديدة بمتغير مختلف.\n\n<xml>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">أدخل كلمة إجراء:</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">فعل</title>\n          </block>\n        </value>\n      </block>\n    </xml>",
           "card_idea2": "يمكن أن يكون لديك تغيير من سلوك إلى آخر باستخدام قطعة \"إيقاف الكائن\" مع قطعة \"بدء الكائن\" ضمن حدث برمجي.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">اسم</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"روبوت ـ٢ـ١\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">الدوران لليسار</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"روبوت ـ٢ـ١\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">الدوران لليمين</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
           "card_idea3": "يمكنك جعل برنامجك تفاعليًا عن طريق جعل أشياء أخرى تحدث عندما يضغط المستخدم على مفتاح أو بعد مرور فترة زمنية معينة.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">\"عندما\"</title>\n    <title name=\"KEY\">\"أعلى\"</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"مقياس\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"روبوت٢ـ١\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">١٠</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseF_artist_variablesFP_2021": {
+          "polygon_table": "هل تريد تجربة مضلعات أخرى؟\n\nاستخدم عدد الجوانب في \"التكرار\" والزاوية في قطعة \"الانعطاف\".\nجرب هذا:\n\n| الشكل | الجانبين | زاوية |\n| : ------: | : ---: | : ---: |\n| مثلث | ٣ | ١٢٠ درجة |\n| مربع | ٤ | ٩٠ درجة |\n| خماسي | ٥ | ٧٢ درجة |\n| مسدس | ٦ | ٦٠ درجة |\n| مثمن | ٨ | ٤٥ درجة |\n| تساعي | ٩ | ٤٠ درجة |\n| عشري | ١٠ | ٣٦ درجة |"
+        },
+        "courseF_bee_variables_4a_2021": {
+          "courseF_bee_variables_4_2021_1": "بدلًا من إضافة ١ إلى المتغير، أضف ٢ في كل مرة بدلاً من ذلك."
+        },
+        "courseF_text_choice_multiprompt": {
+          "when_answered_var": "حاول تغيير تسمية المتغير في قطعة \"عند الإجابة\". نظرًا لوجود محفزات متعددة، استخدم تسمية المحفز * الأخير * الذي سيتم الرد عليه.\n\n[blockly block][0]"
         }
       }
     }

@@ -2,6 +2,18 @@
   "ar-SA": {
     "data": {
       "standards": {
+        "ccela/3.RL.4": {
+          "description": ""
+        },
+        "ccela/4.RL.7": {
+          "description": ""
+        },
+        "ccela/5.RL.4": {
+          "description": ""
+        },
+        "ccela/5.RL.7": {
+          "description": ""
+        },
         "csta/1B-AP-10": {
           "description": "إنشاء برامج تتضمن التتابع، الأحداث البرمجية، حلقات التكرار والجمل الشرطية."
         },
@@ -198,7 +210,7 @@
           "description": "نموذج لكيفية عمل أجهزة وبرامج الكمبيوتر معًا كنظام لإنجاز المهام."
         },
         "csta/1A-CS-03": {
-          "description": "وصف مشاكل الأجهزة والبرامج الأساسية باستخدام مصطلحات دقيقة."
+          "description": "قم بوصف مشاكل الأجهزة والبرامج الأساسية باستخدام مصطلحات دقيقة."
         },
         "csta/1A-AP-10": {
           "description": "تطوير برامج تتضمن التتابع وحلقات تكرار بسيطة للتعبير عن أفكار أو معالجة مشكلة."
@@ -222,45 +234,141 @@
           "description": "مراعاة حقوق الملكية الفكرية وإعطاء الإسناد المناسب عند إنشاء البرامج أو إعادة دمجها."
         },
         "csta/1B-AP-17": {
-          "description": "وصف الاختيارات التي تم اتخاذها أثناء تطوير البرنامج باستخدام تعليقات التعليمات البرمجية والعروض التقديمية والعروض التوضيحية."
+          "description": "وصف الاختيارات التي تم اتخاذها أثناء تطوير البرنامج باستخدام تعليقات الكود والعروض التقديمية والعروض التوضيحية."
         },
-        "csta/2-IC-20": {
+        "csta/1B-IC-19": {
           "description": ""
         },
-        "csta/2-IC-23": {
+        "csta/1B-AP-08": {
           "description": ""
         },
-        "csta/2-AP-16": {
+        "csta/1B-AP-13": {
           "description": ""
         },
-        "csta/2-AP-19": {
+        "csta/1B-DA-06": {
           "description": ""
         },
-        "csta/3A-AP-20": {
+        "csta/1B-DA-07": {
           "description": ""
         },
-        "csta/2-AP-13": {
-          "description": ""
-        },
-        "csta/2-AP-15": {
-          "description": ""
-        },
-        "csta/2-AP-17": {
-          "description": ""
-        },
-        "csta/2-AP-18": {
-          "description": ""
-        },
-        "csta/2-IC-22": {
-          "description": ""
-        },
-        "csta/2-IC-21": {
+        "csta/1B-NI-04": {
           "description": ""
         },
         "csta/1B-AP-16": {
           "description": ""
         },
+        "csta/1A-IC-16": {
+          "description": ""
+        },
+        "csta/1A-IC-17": {
+          "description": ""
+        },
+        "csta/1A-IC-18": {
+          "description": ""
+        },
+        "csta/1A-NI-04": {
+          "description": ""
+        },
+        "csta/1A-AP-08": {
+          "description": ""
+        },
+        "csta/1A-AP-12": {
+          "description": ""
+        },
+        "csta/1A-CS-01": {
+          "description": ""
+        },
+        "csta/1A-CS-02": {
+          "description": ""
+        },
+        "csta/1A-DA-05": {
+          "description": ""
+        },
+        "csta/1A-DA-06": {
+          "description": ""
+        },
+        "csta/1A-DA-07": {
+          "description": ""
+        },
+        "csta/1A-AP-13": {
+          "description": ""
+        },
+        "csta/1A-AP-15": {
+          "description": ""
+        },
+        "csta/1B-CS-03": {
+          "description": ""
+        },
         "csta/1B-IC-20": {
+          "description": ""
+        },
+        "csta/2-CS-01": {
+          "description": ""
+        },
+        "csta/2-CS-02": {
+          "description": ""
+        },
+        "csta/2-IC-20": {
+          "description": ""
+        },
+        "csta/2-IC-21": {
+          "description": ""
+        },
+        "csta/2-AP-10": {
+          "description": ""
+        },
+        "csta/2-AP-17": {
+          "description": ""
+        },
+        "csta/2-AP-15": {
+          "description": ""
+        },
+        "csta/2-IC-22": {
+          "description": ""
+        },
+        "csta/2-AP-13": {
+          "description": ""
+        },
+        "csta/2-AP-19": {
+          "description": ""
+        },
+        "csta/2-DA-08": {
+          "description": ""
+        },
+        "csta/2-DA-09": {
+          "description": ""
+        },
+        "csta/2-AP-16": {
+          "description": ""
+        },
+        "csta/2-AP-18": {
+          "description": ""
+        },
+        "csta/2-AP-14": {
+          "description": ""
+        },
+        "csta/2-AP-11": {
+          "description": ""
+        },
+        "csta/2-CS-03": {
+          "description": ""
+        },
+        "csta/2-AP-12": {
+          "description": ""
+        },
+        "csta/3A-AP-16": {
+          "description": ""
+        },
+        "csta/2-DA-07": {
+          "description": ""
+        },
+        "csta/2-NI-05": {
+          "description": ""
+        },
+        "csta/2-NI-06": {
+          "description": ""
+        },
+        "csta/2-IC-23": {
           "description": ""
         }
       }
