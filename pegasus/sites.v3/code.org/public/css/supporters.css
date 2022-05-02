@@ -24,13 +24,14 @@ section {
   section h3 {
     background: #00b2c0;
     color: white;
-    padding: 1em;
+    padding: .75em;
     margin: 2em 0 0;
     width: 100%;
   }
 
 img {
   align-self: center;
+  max-width: 150px;
 }
 
 .lists h4 {
@@ -53,10 +54,23 @@ img {
   }
 
   section {
-    flex-wrap: wrap;
+    flex-direction: column;
   }
     section img {
-      margin: 1em auto;
+      margin: 1.5em auto;
+    }
+
+    section p {
+      margin: 1em 0;
+    }
+
+    /* Adjust padding of the  Gold Supporters sections */
+    section:nth-of-type(2) {
+      padding-bottom: 0;
+    }
+    section:nth-of-type(3) {
+      padding-top: 0;
+      padding-bottom: 4em
     }
 
   h5 {
