@@ -4,9 +4,12 @@ import {assert} from 'chai';
 
 import {UnconnectedFoormEntityLoadButtons as FoormEntityLoadButtons} from '@cdo/apps/code-studio/pd/foorm/editor/components/FoormEntityLoadButtons';
 import SingleCheckbox from '@cdo/apps/code-studio/pd/form_components/SingleCheckbox';
+import {Button} from 'react-bootstrap';
+import sinon from 'sinon';
 
 describe('FoormEntityLoadButtons', () => {
-  let defaultProps, wrapper;
+  let defaultProps, wrapper, showCodeMirrorStub;
+  showCodeMirrorStub = sinon.stub();
   beforeEach(() => {
     defaultProps = {
       foormEntities: [
@@ -26,7 +29,15 @@ describe('FoormEntityLoadButtons', () => {
           metadata: {name: 'c_library', version: 0},
           text: 'c_library, version 0'
         }
-      ]
+      ],
+      showCodeMirror: showCodeMirrorStub,
+      resetCodeMirror: () => {},
+      resetSelectedData: () => {},
+      setLastSaved: () => {},
+      setSaveError: () => {},
+      setHasJSONError: () => {},
+      setHasLintError: () => {},
+      setLastSavedQuestions: () => {}
     };
   });
 
@@ -108,5 +119,11 @@ describe('FoormEntityLoadButtons', () => {
       .find('.load-buttons-search')
       .prop('options')
       .every((menuItem, i) => assert.equal(menuItem.label, expectedOrder[i]));
+  });
+
+  it('shows blank editor on new library click', () => {
+    wrapper.find(Button).prop('onClick')();
+
+    sinon.assert.calledOnce(showCodeMirrorStub);
   });
 });
