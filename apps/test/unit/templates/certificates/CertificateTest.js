@@ -95,7 +95,7 @@ describe('Certificate', () => {
       });
       let image = wrapper.find('#uitest-certificate img');
       expect(image.prop('src')).to.match(
-        /\/_karma_webpack_\d+\/hour_of_code_certificate/
+        /\/webpack_output\/hour_of_code_certificate/
       );
 
       const printLink = wrapper.find('.social-print-link');
@@ -144,7 +144,7 @@ describe('Certificate', () => {
       });
       let image = wrapper.find('#uitest-certificate img');
       expect(image.prop('src')).to.match(
-        /\/_karma_webpack_\d+\/hour_of_code_certificate/
+        /^\/webpack_output\/hour_of_code_certificate/
       );
 
       const printLink = wrapper.find('.social-print-link');
