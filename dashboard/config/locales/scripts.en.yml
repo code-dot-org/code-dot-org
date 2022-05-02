@@ -31817,11 +31817,11 @@ en:
             lesson-9:
               name: Polymorphism
               description_student: |-
-                **How can I create and use arrays of objects?**
+                **How can I create and use arrays of different objects?**
 
                 You have used inheritance to create hierarchies of classes and worked with arrays of primitive values and Strings. In this lesson, you explore arrays of objects and learn how to refer to object data when accessing elements in an array. You revisit inheritance and discover using polymorphism to work with 1D arrays of a superclass type. You review overriding methods and traverse an array of objects to use subclass methods.
               description_teacher: |-
-                **How can I create and use arrays of objects?**
+                **How can I create and use arrays of different objects?**
 
                 Students explore arrays of objects and learn how to refer to object data when accessing elements in an array. Students revisit inheritance and discover using polymorphism to work with 1D arrays of a superclass type. Students review overriding methods and traverse an array of objects to use subclass methods.
             lesson-10:
