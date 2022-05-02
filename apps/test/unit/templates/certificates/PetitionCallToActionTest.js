@@ -24,6 +24,8 @@ describe('PetitionCallToAction', () => {
     expect(form.findOne('Button').content().length).to.be.greaterThan(0);
   });
   it('has a form with five fields ', () => {
+    // TODO: Once the request is being made,
+    //  refactor this to instead check that the request is sending the correct data
     const callToActionWithForm = isolateComponent(<PetitionCallToAction />);
     callToActionWithForm.inline(PetitionForm);
     const fields = callToActionWithForm.findAll('ControlledFieldGroup');
