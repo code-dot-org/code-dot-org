@@ -2,20 +2,24 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\nThen, experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. first thing\r\n\r\n2. second thing\r\n\r\n3. third thing\r\n\r\n##Getting Started\r\n1. Import `SomeClass.java`(#e7e8ea) from the ![Backpack](https://images.code.org/b17feeef2e8db2a98abdb4a5860c5c61-image-1642175705297.png)\r\n\r\n*Don't have it or it doesn't work? That's ok! Just copy and paste the code from [**here**](https://linktocode.com).*\r\n\r\n##In MyConsole.java:\r\n\r\n2. first step\r\n\r\n3. second step\r\n\r\n4. third step\r\n\r\n::: details [**Show Me How**]\r\nA `for`(#e7e8ea) loop uses the following syntax:\r\n  \r\n  ```\r\n  for (int variableName = startingValue; condition; variableName_change) {\r\n    // code to execute\r\n  }\r\n  ```\r\n\r\nBe sure to change `variableName`(#e7e8ea) to a name you can easily identify, such as `index`(#e7e8ea), and set the `startingValue`(#e7e8ea) to the value you want to start the loop.\r\n:::",
+    "long_instructions": "The owner of the Project Mercury Pastries Food Truck business assigns food trucks for each day of the week in several cities. The owner stores these food trucks in a 2D array, where each row represents a unique city. Each column represents Monday, Tuesday, Wednesday, Thursday, and Friday, respectively.\r\n\r\nThe owner wants to reverse the order of food trucks assigned for each city.\r\n\r\n##In Owner.java:\r\n\r\n1. Write the `reverseFoodTrucks()`(#e7e8ea) method to reverse each row in the 2D array `foodTrucks`(#e7e8ea).\r\n\r\n##In MyConsole.java:\r\n\r\n2. Call the `reverseFoodTrucks()`(#e7e8ea) method and print the results.\r\n\r\n::: details [**Show Me How**]\r\nA `for`(#e7e8ea) loop uses the following syntax:\r\n  \r\n  ```\r\n  for (int variableName = startingValue; condition; variableName_change) {\r\n    // code to execute\r\n  }\r\n  ```\r\n\r\nBe sure to change `variableName`(#e7e8ea) to a name you can easily identify, such as `index`(#e7e8ea), and set the `startingValue`(#e7e8ea) to the value you want to start the loop.\r\n:::",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
     "encrypted_examples": [
 
-    ]
+    ],
+    "project_template_level_name": "CSA U5L4-L2b PBT_2022",
+    "display_name": "Food Trucks",
+    "bubble_choice_description": "The owner of the Project Mercury Pastries Food Truck business assigns food trucks for each day of the week in several cities. They want to reverse the order of food trucks assigned for each city.",
+    "thumbnail_url": "https://images.code.org/ea1b090b2fbb2c289dabfdaa149ade05-image-1651095705021.png"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2022-04-12T19:10:09.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-04-12T19:10:09.177+00:00\",\"changed\":[\"cloned from \\\"CSA U5L4-L2a_2022\\\"\"],\"cloned_from\":\"CSA U5L4-L2a_2022\"},{\"changed_at\":\"2022-04-12 19:10:11 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-12T19:10:09.177+00:00\",\"changed\":[\"cloned from \\\"CSA U5L4-L2a_2022\\\"\"],\"cloned_from\":\"CSA U5L4-L2a_2022\"},{\"changed_at\":\"2022-04-12 19:10:11 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-27 19:58:43 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-27 21:42:18 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-27 21:49:16 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-27 21:54:53 +0000\",\"changed\":[\"encrypted_examples\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
