@@ -2430,3 +2430,8 @@ bg-BG:
         display_name: Упражнение
       CSD web text practice choice_2021:
         display_name: Упражнение
+      MyRoboticFriends-Unplugged_2021:
+        markdown: |-
+          # Моите Приятели Роботи
+
+          Научи се да програмираш като пишеш код с приятели!

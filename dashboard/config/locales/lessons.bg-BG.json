@@ -2,6 +2,21 @@
   "bg-BG": {
     "data": {
       "lessons": {
+        "iceage/Ice Age Play Lab": {
+          "student_overview": "В този урок, учащите получават въведение на компютърните науки и създават игра използвайки базов блоков код."
+        },
+        "playlab/Play Lab": {
+          "student_overview": "В този урок, учащите получават въведение на компютърните науки и създават игра използвайки базов блоков код."
+        },
+        "infinity/Infinity": {
+          "student_overview": "В този урок, учащите получават въведение на компютърните науки и създават игра използвайки базов блоков код."
+        },
+        "oceans/Oceans": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
         "coursef-2021/lesson-6": {
           "overview": "",
           "preparation": "",
@@ -121,84 +136,6 @@
           "purpose": "",
           "student_overview": ""
         },
-        "courseb-2021/Digital Trails": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Move It, Move It": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Sequencing in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Programming in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Programming in Harvester": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Loops: Getting Loopy": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Loops in Harvester": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Loops in Collector": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Loops in Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/The Right App": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Events: The Big Event": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/Events in Play Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "courseb-2021/lesson-1": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
         "coursea-2021/Safety in My Online Neighborhood": {
           "overview": "",
           "preparation": "",
@@ -272,102 +209,6 @@
           "student_overview": ""
         },
         "coursea-2021/lesson-1": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Putting a STOP to Online Meanness": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Programming: My Robotic Friends": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Programming in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Debugging in Maze": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Programming in Collector": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Programming in Artist": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Loops: My Loopy Robotic Friends": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Loops with Rey and BB-8": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Loops in Harvester": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Sticker Art with Loops": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Events: The Big Event": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Build a Flappy Game": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Events in Play Lab": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Picturing Data": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/Binary Bracelets": {
-          "overview": "",
-          "preparation": "",
-          "purpose": "",
-          "student_overview": ""
-        },
-        "coursec-2021/End of Course Project: Create a Play Lab Game": {
           "overview": "",
           "preparation": "",
           "purpose": "",
@@ -643,172 +484,414 @@
           "purpose": "",
           "student_overview": ""
         },
-        "pre-express-2021/Learn to Drag and Drop": {
+        "csd7-2021/Introduction to Machine Learning": {
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Types of Machine Learning": {
           "overview": "",
           "preparation": "",
           "purpose": "",
           "student_overview": ""
         },
-        "pre-express-2021/Sequencing with Scrat": {
+        "csd7-2021/Innovations in AI": {
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Patterns in Data": {
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Classification Models": {
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Introduction to AI Lab": {
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Importing Models in App Lab": {
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Model Cards": {
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Saving Models in AI Lab": {
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Model Cards in App Lab": {
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Similarity Models": {
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Numerical Data in AI Lab": {
+          "overview": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Customizing Apps": {
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd7-2021/AI Code of Ethics": {
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Mini-Project: Make a Machine Learning App": {
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Issue Statements": {
+          "overview": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Survey Planning": {
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Survey Data in AI Lab": {
+          "overview": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Troubleshooting Models": {
+          "overview": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Creating an App": {
+          "overview": "",
+          "student_overview": ""
+        },
+        "csd7-2021/Design an AI App": {
+          "overview": "",
+          "preparation": "",
+          "student_overview": ""
+        },
+        "csd6-2021/Innovations in Computing": {
           "overview": "",
           "preparation": "",
           "purpose": "",
           "student_overview": ""
         },
-        "pre-express-2021/Programming in with Angry Birds": {
+        "csd6-2021/Designing Screens with Code": {
           "overview": "",
-          "preparation": "",
-          "purpose": ""
+          "purpose": "",
+          "student_overview": ""
         },
-        "pre-express-2021/Programming with Rey and BB-8": {
-          "overview": "",
-          "preparation": "",
-          "purpose": ""
-        },
-        "pre-express-2021/Programming in Harvester": {
+        "csd6-2021/The Circuit Playground": {
           "overview": "",
           "preparation": "",
           "purpose": "",
           "student_overview": ""
         },
-        "pre-express-2021/Loops with Scrat": {
+        "csd6-2021/Input Unplugged": {
           "overview": "",
           "preparation": "",
           "purpose": "",
           "student_overview": ""
         },
-        "pre-express-2021/Loops with Laurel": {
+        "csd6-2021/Board Events": {
           "overview": "",
-          "preparation": "",
-          "purpose": ""
+          "purpose": "",
+          "student_overview": ""
         },
-        "pre-express-2021/Ocean Scene with Loops": {
+        "csd6-2021/Getting Properties": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd6-2021/Analog Input": {
           "overview": "",
           "preparation": "",
           "purpose": "",
           "student_overview": ""
         },
-        "pre-express-2021/Drawing Gardens with Loops": {
+        "csd6-2021/The Program Design Process": {
           "overview": "",
           "preparation": "",
           "purpose": "",
           "student_overview": ""
         },
-        "pre-express-2021/On the Move with Events": {
+        "csd6-2021/Project: Make a Game": {
           "overview": "",
           "preparation": "",
           "purpose": "",
           "student_overview": ""
         },
-        "pre-express-2021/A Royal Battle with Events": {
+        "csd6-2021/Arrays and Color LEDs": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd6-2021/Making Music": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd6-2021/Arrays and For Loops": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd6-2021/Accelerometer": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd6-2021/Functions with Parameters": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd6-2021/Circuits and Physical Prototypes": {
           "overview": "",
           "preparation": "",
           "purpose": "",
           "student_overview": ""
         },
-        "coursee-2021/Simon Says": {
+        "csd6-2021/Project: Prototype an Innovation": {
           "overview": "",
           "preparation": "",
           "purpose": "",
           "student_overview": ""
         },
-        "coursee-2021/Learning Sprites with Sprite Lab": {
+        "csd3-2021/Programming for Entertainment": {
           "overview": "",
           "preparation": "",
           "purpose": "",
           "student_overview": ""
         },
-        "coursee-2021/Alien Dance Party with Sprite Lab": {
+        "csd3-2021/Plotting Shapes": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Drawing in Game Lab": {
           "overview": "",
           "preparation": "",
           "purpose": "",
           "student_overview": ""
         },
-        "coursee-2021/lesson-4": {
+        "csd3-2021/Shapes and Parameters": {
           "overview": "",
           "preparation": "",
           "purpose": "",
           "student_overview": ""
         },
-        "coursee-2021/Private and Personal Information": {
+        "csd3-2021/Variables": {
           "overview": "",
           "preparation": "",
           "purpose": "",
           "student_overview": ""
         },
-        "coursee-2021/About Me": {
+        "csd3-2021/Random Numbers": {
           "overview": "",
           "preparation": "",
           "purpose": "",
           "student_overview": ""
         },
-        "coursee-2021/Digital Sharing": {
+        "csd3-2021/Sprites": {
           "overview": "",
           "preparation": "",
           "purpose": "",
           "student_overview": ""
         },
-        "coursee-2021/Programming and Loops with the Artist": {
+        "csd3-2021/Sprite Properties": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Text": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Mini-Project: Captioned Scenes": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/The Draw Loop": {
           "overview": "",
           "preparation": "",
           "purpose": "",
           "student_overview": ""
         },
-        "coursee-2021/Nested Loops in Artist": {
+        "csd3-2021/Sprite Movement": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Mini-Project: Animation": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Conditionals": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Keyboard Input": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Mouse Input": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Project - Interactive Card": {
           "overview": "",
           "preparation": "",
           "purpose": "",
           "student_overview": ""
         },
-        "coursee-2021/Nested Loops in Frozen": {
+        "csd3-2021/Velocity": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Collision Detection": {
           "overview": "",
           "preparation": "",
           "purpose": "",
           "student_overview": ""
         },
-        "coursee-2021/Functions: Songwriting": {
+        "csd3-2021/Mini-Project: Side Scroller": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Complex Sprite Movement": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Collisions": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Mini-Project: Flyer Game": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/Functions": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd3-2021/The Game Design Process": {
           "overview": "",
           "preparation": "",
           "purpose": "",
           "student_overview": ""
         },
-        "coursee-2021/Functions in Minecraft": {
+        "csd3-2021/Using the Game Design Process": {
           "overview": "",
           "preparation": "",
           "purpose": "",
           "student_overview": ""
         },
-        "coursee-2021/Functions in Artist": {
+        "csd3-2021/Project - Design a Game": {
           "overview": "",
           "preparation": "",
           "purpose": "",
           "student_overview": ""
         },
-        "coursee-2021/Conditionals in Minecraft: Voyage Aquatic": {
+        "csd1-2021/Intro to Problem Solving": {
+          "overview": "",
+          "preparation": "**За всяка група**\n\n-   2 листа алуминиево фолио, 13 на 13 см всяко\n-   1 контейнер, който може да съдържа 7-10 cm вода \n-   Няколко хартиени кърпи или парцали, които могат да бъдат сложени под контейнера \n-   15 монети(на стотинки)\n-   Едно копие на ръководството на дейността\n\n**За учителя**\n\n-   1 контейнер, който може да съдържа 7-10 см вода \n-   50 монети(на стотинки) \n-   Допълнителни хартиени кърпи или парцали ",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd1-2021/The Problem Solving Process": {
           "overview": "",
           "preparation": "",
           "purpose": "",
           "student_overview": ""
         },
-        "coursee-2021/Conditionals": {
+        "csd1-2021/Exploring Problem Solving": {
           "overview": "",
           "preparation": "",
           "purpose": "",
           "student_overview": ""
         },
-        "coursee-2021/Functions in Harvester": {
+        "csd1-2021/What is a Computer?": {
           "overview": "",
           "preparation": "",
           "purpose": "",
           "student_overview": ""
         },
-        "coursee-2021/lesson-1": {
+        "csd1-2021/Input and Output": {
           "overview": "",
           "preparation": "",
           "purpose": "",
           "student_overview": ""
         },
-        "coursee-2021/End of Course Project": {
+        "csd1-2021/Processing": {
+          "overview": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd1-2021/Storage": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd1-2021/Project - Propose an App": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd1-2021/Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd1-2021/Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1)": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd1-2021/Intro to Problem Solving - Paper Tower (Alternate Lesson 1)": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd1-2021/Exploring Problem Solving - Animals Theme (Alternate Lesson 3)": {
+          "overview": "",
+          "preparation": "",
+          "purpose": "",
+          "student_overview": ""
+        },
+        "csd1-2021/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
           "overview": "",
           "preparation": "",
           "purpose": "",
