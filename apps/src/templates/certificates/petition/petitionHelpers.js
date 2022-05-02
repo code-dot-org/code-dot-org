@@ -4,16 +4,13 @@ import i18n from '@cdo/locale';
 
 export const keyValidation = {
   name: {
-    isValid: value => !!value,
-    errorText: 'include your name'
+    isValid: value => !!value
   },
   email: {
-    isValid: isEmail,
-    errorText: 'enter a valid email address'
+    isValid: isEmail
   },
   age: {
-    isValid: isInt,
-    errorText: 'select your age'
+    isValid: isInt
   }
 };
 
