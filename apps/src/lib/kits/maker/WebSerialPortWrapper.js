@@ -28,10 +28,8 @@ export default class WebSerialPortWrapper extends EventEmitter {
       throw new Error(`Requested port is already open.`);
     }
 
-    Promise.resolve()
-      .then(() => {
-        return this.port.open({baudRate: SERIAL_BAUD});
-      })
+    this.port
+      .open({baudRate: SERIAL_BAUD})
       .then(() => {
         this.writer = this.port.writable.getWriter();
         this.reader = this.port.readable.getReader();
