@@ -429,15 +429,16 @@ describe('entry tests', () => {
       : ''
   };
 
-  // This is the default karma-webpack output directory, but we need access to it to load test images
-  // see: https://github.com/ryanclark/karma-webpack/issues/498
+  // Workaround for https://github.com/ryanclark/karma-webpack/issues/498.
+  // This is the default karma-webpack output directory, but we define it here
+  // so we can configure webpack's output.publicPath and karma's options.files
+  // so that bundled files will be properly served.
   // this is the source of the following warning, which can be ignored:
   // "All files matched by "/tmp/_karma_webpack_425424/**/*" were excluded or matched by prior matchers."
-  const output = {
-    path:
-      path.join(os.tmpdir(), '_karma_webpack_') +
-      Math.floor(Math.random() * 1000000)
-  };
+  const webpackOutputPath =
+    path.join(os.tmpdir(), '_karma_webpack_') +
+    Math.floor(Math.random() * 1000000);
+  const webpackOutputPublicPath = '/webpack_output/';
 
   config.karma = {
     options: {
@@ -483,14 +484,32 @@ describe('entry tests', () => {
           nocache: true
         },
         {
-          pattern: `${output.path}/**/*`,
+          pattern: `${webpackOutputPath}/**/*`,
           watched: false,
           included: false,
           nocache: true
         }
       ],
+
+      proxies: {
+        // configure karma server to serve files from the source tree for
+        // various paths (the '/base' prefix points to the apps directory where
+        // karma.conf.js is located)
+        '/blockly/media/': '/base/static/',
+        '/lib/blockly/media/': '/base/static/',
+        '/v3/assets/': '/base/test/integration/assets/',
+        '/base/static/1x1.gif': '/base/lib/blockly/media/1x1.gif',
+
+        // requests to the webpack output public path should be served from the
+        // webpack output path where bundled assets are written
+        [webpackOutputPublicPath]: '/absolute/' + webpackOutputPath + '/'
+      },
+
       webpack: {
-        output
+        output: {
+          path: webpackOutputPath,
+          publicPath: webpackOutputPublicPath
+        }
       },
       client: {
         mocha: {
