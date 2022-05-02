@@ -22,13 +22,7 @@ class UnassignSectionDialog extends Component {
   };
 
   render() {
-    const {
-      isOpen,
-      courseName,
-      sectionName,
-      onClose,
-      cancelUnassign
-    } = this.props;
+    const {isOpen, courseName, sectionName, cancelUnassign} = this.props;
     return (
       <BaseDialog
         isOpen={isOpen}
@@ -51,7 +45,7 @@ class UnassignSectionDialog extends Component {
           <Button
             __useDeprecatedTag
             text={i18n.dialogCancel()}
-            onClick={onClose}
+            onClick={cancelUnassign}
             color={Button.ButtonColor.gray}
             className="ui-unassign-cancel-button"
           />

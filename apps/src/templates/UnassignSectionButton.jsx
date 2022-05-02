@@ -62,7 +62,7 @@ function UnassignSectionButton({
   };
 
   const cancelUnassign = () => {
-    this.closeUnassignDialog();
+    closeUnassignDialog();
     firehoseSendRecord(FIREHOSE_CANCEL_EVENT);
   };
 
