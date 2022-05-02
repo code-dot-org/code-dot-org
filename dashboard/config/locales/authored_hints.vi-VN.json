@@ -834,11 +834,13 @@
         },
         "courseA_maze_seq13": {
           "courseA_maze_seq13_a": "Nếu con đường bạn cần không rõ ràng, dùng ngón tay để vẽ đường từ chú chim đến chú lợn.",
-          "courseA_maze_seq13_b": "Đừng lo lắng về việc mắc lỗi! Thử thêm các khối lệnh và chạy chương trình xem điều gì sẽ xảy ra."
+          "courseA_maze_seq13_b": "Đừng lo lắng về việc mắc lỗi! Thử thêm các khối lệnh và chạy chương trình xem điều gì sẽ xảy ra.",
+          "courseA_maze_seq13_c": "Những khối này <xml><block type=\"maze_moveNorth\"/></xml><xml><block type=\"maze_moveEast\"/></xml>sẽ giúp bạn di chuyển đến gần chú lợn hơn."
         },
         "courseA_maze_seq13_2018": {
           "courseA_maze_seq13_a": "Nếu con đường bạn cần không rõ ràng, dùng ngón tay để vẽ đường từ chú chim đến chú lợn.",
-          "courseA_maze_seq13_b": "Đừng lo lắng về việc mắc lỗi! Thử thêm các khối lệnh và chạy chương trình xem điều gì sẽ xảy ra."
+          "courseA_maze_seq13_b": "Đừng lo lắng về việc mắc lỗi! Thử thêm các khối lệnh và chạy chương trình xem điều gì sẽ xảy ra.",
+          "courseA_maze_seq13_c": "Những khối này <xml><block type=\"maze_moveNorth\"/></xml><xml><block type=\"maze_moveEast\"/></xml>sẽ giúp bạn di chuyển đến gần chú lợn hơn."
         },
         "courseA_maze_seq13_2019": {
           "courseA_maze_seq13_a": "Nếu con đường bạn cần không rõ ràng, dùng ngón tay để vẽ đường từ chú chim đến chú lợn.",

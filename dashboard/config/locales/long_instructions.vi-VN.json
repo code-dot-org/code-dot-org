@@ -2372,7 +2372,10 @@
         "simconfig": "# Sửa đổi và Dự đoán\n\nChọn một trong các biến điều khiển bản mô phỏng này để sửa đổi và dự đoán xem việc đó sẽ thay đổi kết quả như thế nào.\n\nSau khi viết ra dự đoán của mình, hãy chạy bản mô phỏng 5 lần và ghi lại những phát hiện của bạn. Dự đoán của bạn có chính xác không?",
         "simconfig_2020": "# Sửa đổi và Dự đoán\n\nChọn một trong các biến điều khiển bản mô phỏng này để sửa đổi và dự đoán xem việc đó sẽ thay đổi kết quả như thế nào.\n\nSau khi viết ra dự đoán của mình, hãy chạy bản mô phỏng 5 lần và ghi lại những phát hiện của bạn. Dự đoán của bạn có chính xác không?",
         "simstarter": "# Thu thập dữ liệu\n\nChạy bản mô phỏng này 5 lần. Mỗi lần đều sử dụng tài liệu hướng dẫn hoạt động Thu thập dữ liệu để ghi chép lại:\n\n-   Chú voi đã nhặt được bao nhiêu quả táo?\n-   Chú hà mã đã nhặt được bao nhiêu quả táo?\n-   Mất bao nhiêu thời gian để nhặt toàn bộ số táo kể trên?",
-        "simstarter_2020": "# Thu thập dữ liệu\n\nChạy bản mô phỏng này 5 lần. Mỗi lần đều sử dụng tài liệu hướng dẫn hoạt động Thu thập dữ liệu để ghi chép lại:\n\n-   Chú voi đã nhặt được bao nhiêu quả táo?\n-   Chú hà mã đã nhặt được bao nhiêu quả táo?\n-   Mất bao nhiêu thời gian để nhặt toàn bộ số táo kể trên?"
+        "simstarter_2020": "# Thu thập dữ liệu\n\nChạy bản mô phỏng này 5 lần. Mỗi lần đều sử dụng tài liệu hướng dẫn hoạt động Thu thập dữ liệu để ghi chép lại:\n\n-   Chú voi đã nhặt được bao nhiêu quả táo?\n-   Chú hà mã đã nhặt được bao nhiêu quả táo?\n-   Mất bao nhiêu thời gian để nhặt toàn bộ số táo kể trên?",
+        "courseA_harvester_seq2": "Sử dụng  **ba** khối <xml><block type=\"maze_moveWest\"/></xml> để đưa người thu hoạch đến chỗ lấy ngô!",
+        "courseA_harvester_seq3": "Hãy dùng **ba** khối <xml><block type=\"maze_moveNorth\"/></xml> để đưa người thu hoạch đến chỗ có ngô! Đừng quên nhặt ngô ở ô cuối cùng nhé.",
+        "courseA_maze_ramp2_2018": "Gắn các khối <xml><block type=\"maze_moveEast\"/></xml> vào khối <xml><block type=\"when_run\"/></xml> để hoàn tất mã lệnh, sau đó nhấp chuột vào “▶ Run” (chạy)."
       }
     }
   }
