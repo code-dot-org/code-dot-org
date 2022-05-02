@@ -843,11 +843,20 @@ class Lesson < ApplicationRecord
         copied_activity_section = original_activity_section.dup
         copied_activity_section.key = SecureRandom.uuid
         copied_activity_section.lesson_activity_id = copied_lesson_activity.id
-        %w(remarks description tips).each do |field|
-          next unless copied_activity_section.try(field)
-          Services::MarkdownPreprocessor.sub_resource_links!(copied_activity_section.try(field), update_resource_link_on_clone)
-          Services::MarkdownPreprocessor.sub_vocab_definitions!(copied_activity_section.try(field), update_vocab_definition_on_clone)
+
+        if copied_activity_section.description
+          Services::MarkdownPreprocessor.sub_resource_links!(copied_activity_section.description, update_resource_link_on_clone)
+          Services::MarkdownPreprocessor.sub_vocab_definitions!(copied_activity_section.description, update_vocab_definition_on_clone)
         end
+
+        unless copied_activity_section.tips.blank?
+          copied_activity_section.tips.each do |tip|
+            next unless tip && tip['markdown']
+            Services::MarkdownPreprocessor.sub_resource_links!(tip['markdown'], update_resource_link_on_clone)
+            Services::MarkdownPreprocessor.sub_vocab_definitions!(tip['markdown'], update_vocab_definition_on_clone)
+          end
+        end
+
         copied_activity_section.save!
         sl_data = original_activity_section.script_levels.map.with_index(1) do |original_script_level, pos|
           # Only include active level and discard variants
