@@ -16,4 +16,18 @@ class ProjectVersionsController < ApplicationController
     headers['csrf-token'] = form_authenticity_token
     return head :ok
   end
+
+  def project_commits
+    _, project_id = storage_decrypt_channel_id(params[:storage_id])
+    commits = ProjectVersion.where(project_id: project_id)
+    commits = commits.map do |commit|
+      {
+        createdAt: commit.created_at,
+        comment: commit.comment,
+        projectVersion: commit.object_version_id,
+        isVersionExpired: commit.created_at < 1.year.ago
+      }
+    end
+    render :ok, json: commits.to_json
+  end
 end
