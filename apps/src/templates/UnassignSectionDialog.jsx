@@ -10,6 +10,7 @@ class UnassignSectionDialog extends Component {
     isOpen: PropTypes.bool.isRequired,
     sectionId: PropTypes.number.isRequired,
     onClose: PropTypes.func.isRequired,
+    cancelUnassign: PropTypes.func.isRequired,
     unassignSection: PropTypes.func.isRequired,
     courseName: PropTypes.string,
     sectionName: PropTypes.string
@@ -21,11 +22,17 @@ class UnassignSectionDialog extends Component {
   };
 
   render() {
-    const {isOpen, courseName, sectionName, onClose} = this.props;
+    const {
+      isOpen,
+      courseName,
+      sectionName,
+      onClose,
+      cancelUnassign
+    } = this.props;
     return (
       <BaseDialog
         isOpen={isOpen}
-        handleClose={onClose}
+        handleClose={cancelUnassign}
         useUpdatedStyles
         style={styles.dialog}
       >
