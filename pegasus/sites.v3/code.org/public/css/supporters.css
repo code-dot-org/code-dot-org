@@ -29,9 +29,13 @@ section {
     width: 100%;
   }
 
+  section p {
+    margin: 1em 0;
+    font-size: 18px;
+  }
+
 img {
   align-self: center;
-  max-width: 150px;
 }
 
 .lists h4 {
@@ -58,10 +62,6 @@ img {
   }
     section img {
       margin: 1.5em auto;
-    }
-
-    section p {
-      margin: 1em 0;
     }
 
     /* Adjust padding of the  Gold Supporters sections */
