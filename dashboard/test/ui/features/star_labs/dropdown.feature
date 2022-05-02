@@ -9,10 +9,6 @@ Scenario: Drag a dropdown and select a different option.
   And I dismiss the login reminder
   And I drag block "4" to offset "250, 100"
   And I press dropdown number 11
-  And I press dropdown number 12
-  And I press dropdown number 13
-  And I press dropdown number 14
-  And I press dropdown number 15
   Then the dropdown is visible
   Then I select item 2 from the dropdown
   And I wait for 1 seconds
