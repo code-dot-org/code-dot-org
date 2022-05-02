@@ -3,8 +3,7 @@ class ProgrammingEnvironmentsController < ApplicationController
   EXPIRY_TIME = 30.minutes
 
   before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show, :docs_show, :docs_index, :get_summary_by_name]
-  before_action :set_programming_environment, only: [:edit, :update]
-  before_action :set_programming_environment_from_cache, only: [:show, :docs_show]
+  before_action :set_programming_environment, only: [:edit, :update, :destroy, :get_summary_by_name]
   authorize_resource
 
   def index
@@ -68,13 +67,15 @@ class ProgrammingEnvironmentsController < ApplicationController
   end
 
   def show
+    @programming_environment = ProgrammingEnvironment.get_from_cache(params[:name])
+    return render :not_found unless @programming_environment
     return head :forbidden unless can?(:read, @programming_environment)
     @programming_environment_categories = @programming_environment.categories_for_navigation
   end
 
   def docs_show
     if DCDO.get('use-studio-code-docs', false)
-      @programming_environment = ProgrammingEnvironment.find_by_name(params[:programming_environment_name])
+      @programming_environment = ProgrammingEnvironment.get_from_cache(params[:programming_environment_name])
       return render :not_found unless @programming_environment
       @programming_environment_categories = @programming_environment.categories_for_navigation
       render :show
@@ -121,11 +122,6 @@ class ProgrammingEnvironmentsController < ApplicationController
 
   def set_programming_environment
     @programming_environment = ProgrammingEnvironment.find_by_name(params[:name])
-    raise ActiveRecord::RecordNotFound unless @programming_environment
-  end
-
-  def set_programming_environment_from_cache
-    @programming_environment = ProgrammingEnvironment.get_from_cache(params[:name])
     raise ActiveRecord::RecordNotFound unless @programming_environment
   end
 end
