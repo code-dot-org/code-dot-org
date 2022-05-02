@@ -13,27 +13,6 @@ import ControlledFieldGroup from '@cdo/apps/templates/certificates/petition/Cont
 import PropTypes from 'prop-types';
 /* global ga */
 
-const sendDataToEndpoint = data => {
-  const handleSuccessfulSubmit = () => {
-    console.log('submit successful');
-    //  TODO: Redirect to /promote/thanks
-    // window.location.href = "/promote/thanks";
-  };
-  const handleFailedSubmit = () => {
-    console.log('submit failed');
-    // TODO: Show error message
-  };
-
-  $.ajax({
-    url: '/forms/Petition',
-    type: 'post',
-    dataType: 'json',
-    data: data
-  })
-    .done(handleSuccessfulSubmit)
-    .fail(handleFailedSubmit);
-};
-
 const PetitionForm = ({gaPagePath}) => {
   // data starts with all required fields having an empty value to ensure proper validation
   const [data, setData] = useState(mapValues(keyValidation, () => ''));
@@ -76,6 +55,27 @@ const PetitionForm = ({gaPagePath}) => {
     },
     [data]
   );
+
+  const sendDataToEndpoint = data => {
+    const handleSuccessfulSubmit = () => {
+      console.log('submit successful');
+      //  TODO: Redirect to /promote/thanks
+      // window.location.href = "/promote/thanks";
+    };
+    const handleFailedSubmit = () => {
+      console.log('submit failed');
+      // TODO: Show error message
+    };
+
+    $.ajax({
+      url: '/forms/Petition',
+      type: 'post',
+      dataType: 'json',
+      data: data
+    })
+      .done(handleSuccessfulSubmit)
+      .fail(handleFailedSubmit);
+  };
 
   return (
     <>
