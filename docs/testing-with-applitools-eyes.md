@@ -7,7 +7,7 @@ Applitools Eyes is a service that lets us upload and compare screenshots of our 
 As of November 2021, you can use your GitHub credentials or your Google Code.org credentials to get an account.
 
 ## Add your feature to the eyes file
-``
+
 Either add your test to `/dashboard/test/ui/features/eyes.feature`
 
 OR
