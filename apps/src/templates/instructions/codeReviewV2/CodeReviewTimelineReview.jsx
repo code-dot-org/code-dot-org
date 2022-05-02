@@ -41,7 +41,7 @@ const CodeReviewTimelineReview = ({
                 icon="close"
                 style={{fontSize: 13, margin: 0}}
                 onClick={() => {}}
-                text={'Close review'}
+                text={javalabMsg.closeReview()}
                 color={Button.ButtonColor.blue}
               />
             </div>
