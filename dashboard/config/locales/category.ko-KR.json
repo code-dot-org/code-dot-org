@@ -43,6 +43,33 @@
         },
         "csta/NI": {
           "description": "네트워크 및 인터넷"
+        },
+        "csta/CS": {
+          "description": "컴퓨팅 시스템"
+        },
+        "csta/DA": {
+          "description": ""
+        },
+        "ngss/ETS1": {
+          "description": "엔지니어링 설계"
+        },
+        "ai4k12-2021/3-A-ii": {
+          "description": ""
+        },
+        "ai4k12-2021/3-A-iv": {
+          "description": ""
+        },
+        "ai4k12-2021/3-A-i": {
+          "description": ""
+        },
+        "ai4k12-2021/3-C-i": {
+          "description": ""
+        },
+        "ai4k12-2021/3-A-iii": {
+          "description": ""
+        },
+        "ai4k12-2021/3-C-iii": {
+          "description": ""
         }
       }
     }

@@ -713,6 +713,9 @@
         "f14af7c1-5797-4c9a-bafc-5dd0d630406b": {
           "description": "막대 그래프와 파이 차트를 만들어 간단한 데이터를 나타내세요."
         },
+        "0ca67e69-bff3-4d30-96d3-3f53299353cc": {
+          "description": "다른 이가 한 데이터 시각화를 서로 비교하고 그것을 사용해 예측을 합니다."
+        },
         "9a785141-1fe6-4728-996c-2fbb8781b62c": {
           "description": "글자를 바이너리로 암호화."
         },
@@ -722,8 +725,17 @@
         "ce1f4117-76f3-4359-a554-683a878f82cb": {
           "description": "종이 위 글자를 저장하는 아이디어를 컴퓨터에 정보를 저장하는 아이디어에 연결 짓기."
         },
+        "03ac24d5-21f0-45e5-b15a-3354a578b67d": {
+          "description": "계획한 설계를 창작을 위한 청사진으로서 사용."
+        },
         "a5834224-d1d8-47e2-b203-dc8e6935aa53": {
           "description": "시간 제약 또는 버그 등과 같이 잠재적 장애물 극복."
+        },
+        "e546a87d-131a-4d75-b2c6-d5942ee4a0c0": {
+          "description": "\"비밀번호\"라는 용어를 정의하고 비밀번호의 용도를 설명하세요."
+        },
+        "ea9adc1d-dc64-4a08-a97f-19eec1e448e6": {
+          "description": "기억할만하고 강력한 비밀번호를 만드는 연습을 합니다."
         },
         "3c4b51d5-b72f-42df-a55a-86c146214424": {
           "description": "단계 순서를 인코딩된 프로그램으로 다시 구성."
@@ -1193,11 +1205,572 @@
         "2594052b-3b87-4d83-9038-56175058c1c2": {
           "description": "설계 프로세스와 그것이 완료된 프로젝트를 형상화하는 데 어떤 도움을 주었는지 분명하게 기술. "
         },
+        "56d03b70-1f5b-408c-a3d4-bd8439cc372e": {
+          "description": ""
+        },
+        "3160fb3d-404e-41b2-b8dc-ad2f4baf630c": {
+          "description": ""
+        },
+        "5e9ca97a-3af9-4a06-bab7-09e6831a6070": {
+          "description": ""
+        },
+        "83f51427-8851-4311-b7d6-bc2dc72898f0": {
+          "description": ""
+        },
+        "554a2d22-308b-4e01-be9d-b8bd9287a065": {
+          "description": ""
+        },
+        "8870551e-1d9f-4c03-b78e-e1ac184cba86": {
+          "description": ""
+        },
+        "aa76cd8b-eb6b-48ee-92f9-e48af49997c0": {
+          "description": ""
+        },
+        "7d06da51-46a7-4210-9366-091598d8f8cf": {
+          "description": ""
+        },
+        "49f91ded-6e10-4292-81c0-bf90fdd0de99": {
+          "description": ""
+        },
+        "1d44b50f-9b7f-4fd8-819b-7f62f60fda8a": {
+          "description": ""
+        },
+        "a22e4c3d-2f63-4fbc-972c-6bbec9d73c64": {
+          "description": ""
+        },
+        "02f51780-cf77-4ecd-874b-df34b3770de9": {
+          "description": ""
+        },
+        "58409d45-e5cc-431d-9cfb-2a2f3ec482d5": {
+          "description": ""
+        },
+        "b73d7232-626e-4e25-a777-fc943cff4870": {
+          "description": ""
+        },
+        "edb72a9b-c1d3-4e52-87bc-1c16a42fc404": {
+          "description": ""
+        },
+        "102a6bad-2171-4d9c-b49b-56b0bca9fda1": {
+          "description": ""
+        },
+        "8d138ce3-323a-4285-b76d-9fdc215610d4": {
+          "description": ""
+        },
+        "382925be-583d-4458-a749-9039780ebfed": {
+          "description": ""
+        },
+        "5a207f71-9052-4460-810f-b0118f6067ea": {
+          "description": ""
+        },
+        "6d340248-8d1c-472f-8e0a-ceba9d233246": {
+          "description": ""
+        },
+        "e7f59f67-a615-43b9-acc3-39dc2ebda34a": {
+          "description": ""
+        },
+        "1bc4557b-5ff1-4f9f-ae5f-1ff202f2084c": {
+          "description": ""
+        },
+        "88f6eb6d-2837-4d90-be14-132d823a3ab1": {
+          "description": ""
+        },
+        "173089ae-6d54-457a-a391-0a8f5510aaca": {
+          "description": ""
+        },
+        "516ee8d7-e5f6-41c3-a27e-a6a22c67e3e2": {
+          "description": ""
+        },
+        "eca7e19d-20f2-41f4-a1eb-9d90257b7f24": {
+          "description": ""
+        },
+        "105797c1-c68c-4ff9-af1f-4381a25459b0": {
+          "description": ""
+        },
+        "3fef29ac-2dd7-4d6c-983d-b8f8c16fd7bd": {
+          "description": ""
+        },
+        "7c5f2ec7-d487-49a3-9db3-df016dfac686": {
+          "description": ""
+        },
+        "1d298ad1-82f0-4e55-ad7b-62ccfa360119": {
+          "description": ""
+        },
+        "1598362d-3c6e-4a16-aa0e-ac3f3046f96e": {
+          "description": ""
+        },
+        "90487953-eb66-44f3-918e-2395a9fa6379": {
+          "description": ""
+        },
+        "bac73557-0d4b-4836-8b56-1d0d5b2257ef": {
+          "description": ""
+        },
+        "99cfd798-833c-40e9-8382-bce53c24ce78": {
+          "description": ""
+        },
+        "9bcee94b-4d0a-4a92-a6a7-142e0ecdc6fa": {
+          "description": ""
+        },
+        "ad6a4213-49c3-49e2-ace9-5a7d36daa458": {
+          "description": ""
+        },
+        "5b050fa6-537c-42bd-ab68-8da930f96fc1": {
+          "description": ""
+        },
+        "c570aee0-75a6-4698-a3d7-b211adcd5ef8": {
+          "description": ""
+        },
+        "6b88c767-4b50-4334-8b24-fff5e79a467d": {
+          "description": ""
+        },
+        "8885beeb-2915-4569-b3b2-2ceca9293597": {
+          "description": ""
+        },
+        "ce14b7c8-ae41-4118-9fa2-56086e2298a1": {
+          "description": ""
+        },
+        "33a9d6e5-89ba-422e-a8f1-c3a200a8c2ba": {
+          "description": ""
+        },
+        "81d19c33-2675-415e-9b35-12643f8c33be": {
+          "description": ""
+        },
+        "6c20f4f3-4375-4dee-9f00-012a33e7d2af": {
+          "description": ""
+        },
+        "cff6cc90-bf04-4c7d-9dac-c6f1a28310a8": {
+          "description": ""
+        },
+        "3b9c322a-6a98-4473-8079-d20160c3e352": {
+          "description": ""
+        },
+        "95e992b6-6a6c-42f6-aa5c-aee60535a00a": {
+          "description": ""
+        },
+        "b09ef219-e569-45de-94f7-3e7beec34d72": {
+          "description": ""
+        },
+        "c6441f90-9643-4b1d-9ac8-90e4ee024f61": {
+          "description": ""
+        },
+        "6d0afa47-7d02-480b-9369-b4aabf3b6841": {
+          "description": ""
+        },
+        "91be4c6c-f556-4fc4-85b4-8cb5bbdf8e29": {
+          "description": ""
+        },
+        "b3622011-d99b-4a7b-9818-63ff04be86f8": {
+          "description": ""
+        },
+        "6fa760e4-910d-4f77-99be-68f7673581d6": {
+          "description": ""
+        },
+        "d1a36c22-f6c1-42c6-bf97-88091a1201c6": {
+          "description": ""
+        },
+        "3e59ba97-41b3-4967-9366-d38699ab43bb": {
+          "description": ""
+        },
+        "01fafc69-a442-46b9-8274-d8ec27670236": {
+          "description": ""
+        },
+        "c2f81013-f143-44b7-940d-fba98243bb3d": {
+          "description": ""
+        },
+        "3a6f69e7-fc2d-4f5a-bebe-8336c819e788": {
+          "description": ""
+        },
+        "41aa43b4-0a6f-4377-927a-e1d6042149cb": {
+          "description": ""
+        },
+        "b6e2c14d-12b9-44dd-96fa-82de930560a1": {
+          "description": ""
+        },
+        "0e89a393-31c9-4c3c-b1bb-0285a4a618c7": {
+          "description": ""
+        },
+        "fec5eaa1-f93f-4255-b69a-080150de17c0": {
+          "description": ""
+        },
+        "a39d3b79-7607-4435-9ecb-d2b1041334ec": {
+          "description": ""
+        },
+        "6ee3d556-8e43-4ecb-9805-dc5596471be8": {
+          "description": ""
+        },
+        "12ae5d81-38da-43a1-bf10-53d10c0e3e04": {
+          "description": ""
+        },
+        "f027b687-253c-4337-bfa7-815483f163d6": {
+          "description": ""
+        },
+        "d40519ba-f2c6-485e-919d-b4752a96e391": {
+          "description": ""
+        },
+        "6aab1c32-4afe-4d2a-a747-61bf6f0ce7b3": {
+          "description": ""
+        },
+        "db9fbd1e-9028-4c08-8490-2906a54bee8a": {
+          "description": ""
+        },
+        "f6bad7b7-7a94-46b6-8375-016077a5bf54": {
+          "description": ""
+        },
+        "f86060e6-0c95-4d92-85c1-52fc82c32257": {
+          "description": ""
+        },
+        "3f8b9c32-15fb-4b26-9360-9cb6fdfe7ed3": {
+          "description": ""
+        },
+        "11f42eed-8c8c-4fca-b3ff-8bb800a8fbcd": {
+          "description": ""
+        },
+        "5d843877-4608-49b0-a6a5-c33fdab204ba": {
+          "description": ""
+        },
+        "80e00862-0fe7-44a4-9e0c-785e6674f0e5": {
+          "description": ""
+        },
+        "19b5be99-7f7e-42e1-9ce4-6e53d7361d35": {
+          "description": ""
+        },
+        "6ad62a76-15c2-4ee6-812b-89426ccbaf53": {
+          "description": ""
+        },
+        "314c3d2c-32d4-4b31-a7b7-bc848001a0ef": {
+          "description": ""
+        },
+        "a4a38d49-6a85-4c4e-9e9f-b589bc00b61a": {
+          "description": ""
+        },
+        "607265dd-c7c2-4ef7-bb9d-ea8026f769e3": {
+          "description": ""
+        },
+        "3a37860e-7f85-4921-a622-4c0435783261": {
+          "description": ""
+        },
+        "bddab4e2-74ad-4394-8180-11dde4ab88f9": {
+          "description": ""
+        },
+        "572e2633-ed9c-4957-9399-4cdd236c9da9": {
+          "description": ""
+        },
+        "7db30b84-9106-4f12-9a6b-3d4119423ec7": {
+          "description": ""
+        },
+        "1eceabc4-6a94-4939-bdb3-a1084c6e6aa4": {
+          "description": ""
+        },
+        "42021a55-c97c-432b-9420-a62927cc2bba": {
+          "description": ""
+        },
+        "e537dea9-f777-4037-8c48-d20298ba53b2": {
+          "description": ""
+        },
+        "e4ff5379-6af0-43ba-8611-535630489148": {
+          "description": ""
+        },
+        "8f1a62d6-c1b7-400f-9324-3f7cf5cecc72": {
+          "description": ""
+        },
+        "d7b16ab2-6683-4efa-93d9-d425024858bf": {
+          "description": ""
+        },
+        "550ed66e-4795-428a-aee8-9a77e03f667d": {
+          "description": ""
+        },
+        "88327c34-dbb7-4b44-8c32-c76166910b39": {
+          "description": ""
+        },
+        "87ac4c51-43bc-4219-93ba-29f517c309ef": {
+          "description": ""
+        },
+        "98d5856a-9dc5-4d14-bfc1-c79f4d9191d0": {
+          "description": ""
+        },
+        "5ac58714-911b-460c-b34b-73d1e67c160e": {
+          "description": ""
+        },
+        "fd6610c2-f7c5-4e4a-ac5a-b1e358c8a11d": {
+          "description": ""
+        },
+        "8d396418-f31f-438e-b9d8-43730f49868f": {
+          "description": ""
+        },
+        "1d63355b-8406-4aba-a3e7-a4a559c67c5f": {
+          "description": ""
+        },
+        "a656b8a6-b4f4-4014-9c91-ed44f25b2831": {
+          "description": ""
+        },
+        "e645e06c-9cb1-479c-91b6-1b81b8961d54": {
+          "description": ""
+        },
+        "b17ebfe7-f8da-40c2-82d1-43b00a7e8364": {
+          "description": ""
+        },
+        "02c329fa-a4a0-4b23-b77e-788296c2bc7b": {
+          "description": ""
+        },
+        "b8217d7c-960e-42d1-b3f0-1035158a64a0": {
+          "description": ""
+        },
+        "fd3bf488-7c63-4869-9c48-a97556d39150": {
+          "description": ""
+        },
+        "44bb192f-0e71-405f-b8a6-5757ff7f37e1": {
+          "description": ""
+        },
         "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
           "description": "머신 러닝 모델 교육 및 테스트."
         },
         "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
           "description": "인간의 편견이 머신 러닝에서 어떤 역할을 하는지 추론."
+        },
+        "6885b6d1-78d2-4560-8bf5-8f14cfc68bb7": {
+          "description": ""
+        },
+        "b0342e84-056b-46d6-ac84-1d976155c38d": {
+          "description": ""
+        },
+        "b2682f90-e600-48aa-aef4-def3798b261d": {
+          "description": ""
+        },
+        "27e5577c-a619-4ef6-8f34-b252c18deb58": {
+          "description": ""
+        },
+        "e5a564d4-8723-4ee1-92c5-f9262ee8722d": {
+          "description": ""
+        },
+        "92707a88-4d6e-44a5-a1ba-e888e9ea27c8": {
+          "description": ""
+        },
+        "d8f92cff-b148-455d-b1c9-690e0d8c3929": {
+          "description": ""
+        },
+        "1fc6f9a4-a172-4504-a702-e0f6b219e62c": {
+          "description": ""
+        },
+        "5fc17aef-b130-416f-8746-54fe3f0ed390": {
+          "description": ""
+        },
+        "e09ca0a1-6d0c-4177-9bcb-b97ab36faeca": {
+          "description": ""
+        },
+        "557e9ade-ee71-4196-9dce-44f742180fa8": {
+          "description": ""
+        },
+        "71209fa9-4d56-4ced-bb42-b3cf73f523f1": {
+          "description": ""
+        },
+        "40bde7b5-fc47-455e-9d21-5dc53330e8e8": {
+          "description": ""
+        },
+        "99befbcc-2654-44cc-a2f9-fe0cde1ab146": {
+          "description": ""
+        },
+        "c61f1e5d-d728-499d-9729-a1ff2db8de64": {
+          "description": ""
+        },
+        "b40e994c-3d1e-4ba8-9cf1-8674567bb26c": {
+          "description": ""
+        },
+        "d6709c2c-76b3-495d-bb07-af8a4c772363": {
+          "description": ""
+        },
+        "6828e8c6-bde7-4e8f-842d-04bd41a46eb4": {
+          "description": ""
+        },
+        "9ed14237-271b-4890-b05c-04bde1c706fc": {
+          "description": ""
+        },
+        "ef9e41ae-04ee-4b48-a59e-06f87ff5c9d9": {
+          "description": ""
+        },
+        "32725306-4405-48d1-871c-ce44cd180b0c": {
+          "description": ""
+        },
+        "ac9b5e0b-ce84-48f1-8d9e-3957b6d3ac16": {
+          "description": ""
+        },
+        "1bd55841-3a6b-45b8-9a2c-7ad9b9df5102": {
+          "description": ""
+        },
+        "aee02da5-9e5d-4c9b-b43d-7576a405fd5d": {
+          "description": ""
+        },
+        "6c2364e6-a17c-4b0c-856e-71ba8ec2b4c7": {
+          "description": ""
+        },
+        "317b8134-0316-46e4-b56c-4adba284eab6": {
+          "description": ""
+        },
+        "58e13b51-2fb9-4de3-a547-dfe7bb9e71b0": {
+          "description": ""
+        },
+        "286ec7b0-0776-4049-9174-3deeb1d80c14": {
+          "description": ""
+        },
+        "899e51b2-2cb8-4948-9987-aaada64c6a85": {
+          "description": ""
+        },
+        "ebf0954f-2190-4e20-8420-f0275aceee0a": {
+          "description": ""
+        },
+        "01426fc9-55b3-41ec-92ec-fb871a4739b1": {
+          "description": ""
+        },
+        "bb7bce08-c20e-4a8b-8b3e-def24447e33f": {
+          "description": ""
+        },
+        "d3aa02b0-9340-47ab-b258-5446686c77b4": {
+          "description": ""
+        },
+        "63135326-7d2f-4974-af73-f8d7a801cd04": {
+          "description": ""
+        },
+        "6ed44bf4-19c7-4fd2-b72d-527e7c1ed3f3": {
+          "description": ""
+        },
+        "2a7e04b6-f408-4915-a8df-10a590d5b45a": {
+          "description": ""
+        },
+        "ba90afe9-19b4-4a19-b7e7-9cc6dcc94b86": {
+          "description": ""
+        },
+        "3572828f-fdf1-4708-bfd1-1a021799e8fd": {
+          "description": ""
+        },
+        "9d1d61de-4fa4-458f-b11f-aee208854019": {
+          "description": ""
+        },
+        "dd877754-8fc0-4026-9205-385c6a3a2e4e": {
+          "description": ""
+        },
+        "1cfd94eb-3bdf-4628-b8c5-2caeaa3dc189": {
+          "description": ""
+        },
+        "87b37b88-d7c7-4ad7-a5bc-f4be00ef3016": {
+          "description": ""
+        },
+        "cb1a4260-ee88-49c1-abf7-92dfc8d1dc16": {
+          "description": ""
+        },
+        "0b62d335-144f-495a-971c-fb1ee82f154a": {
+          "description": ""
+        },
+        "ea476a5f-3a8d-4c7a-bb2c-c6e58d216ef3": {
+          "description": ""
+        },
+        "7f488fda-a480-4f40-814d-6a2810780b38": {
+          "description": ""
+        },
+        "364c4d7c-4f39-4cef-95ed-9a5b7d7a2e9e": {
+          "description": ""
+        },
+        "d8ec162b-7a19-496b-8f90-2ffb596be6a7": {
+          "description": ""
+        },
+        "a3d13dc7-ae60-458e-aefc-0e6399f6b074": {
+          "description": ""
+        },
+        "0227f8e9-e8ad-40b5-bc8f-ea0fae00241a": {
+          "description": ""
+        },
+        "c783566f-9577-4876-96f7-594f4dccd8aa": {
+          "description": ""
+        },
+        "7298cc4c-c0b2-40d2-b508-5e460f8d7653": {
+          "description": ""
+        },
+        "8301013f-1346-4f62-a416-ed9371bf3588": {
+          "description": ""
+        },
+        "6b4d8978-99c8-4541-9213-fa14c4132c62": {
+          "description": ""
+        },
+        "05f3226e-a69a-45ca-8264-e6cacdfb11ee": {
+          "description": ""
+        },
+        "cec2c627-e5a4-418b-bbd9-2f2811e12060": {
+          "description": ""
+        },
+        "efb37b92-5146-4ab0-803f-3e5af49fdb2b": {
+          "description": ""
+        },
+        "f37f28fd-4bc2-4e94-9dc0-6f33f4cb4788": {
+          "description": ""
+        },
+        "11d70e24-1663-4d02-a703-df9dc90d95ce": {
+          "description": ""
+        },
+        "841a5265-0723-41ea-b44b-d400888b94b3": {
+          "description": ""
+        },
+        "c90f8313-22ae-45e6-9450-a0714af452cc": {
+          "description": ""
+        },
+        "db0482b9-a7da-40d5-a2d1-1a3dc9f4c50a": {
+          "description": ""
+        },
+        "47b9c8f4-c0ee-4b41-9eb6-a30052d7c23c": {
+          "description": ""
+        },
+        "9aafa27a-70aa-484d-badc-18eb0a076314": {
+          "description": ""
+        },
+        "e8ff26cd-097b-400e-889c-c6c44d5a3137": {
+          "description": ""
+        },
+        "b0ff1a83-f9f0-4b45-a330-b8c8c1bcf6fd": {
+          "description": ""
+        },
+        "5b97326f-0ff4-4591-aa66-f7ace264770c": {
+          "description": ""
+        },
+        "aa0cfb82-8457-4535-a490-96e328cee54e": {
+          "description": ""
+        },
+        "791ac437-7323-4d8d-bb8a-7136ea43bdc4": {
+          "description": ""
+        },
+        "a09ff0ba-c097-4db6-819d-99100bf952ff": {
+          "description": ""
+        },
+        "8711be54-fdeb-4dc6-be6a-c4af9e4629bb": {
+          "description": ""
+        },
+        "4682c681-72e1-43df-8443-27ba6ff068de": {
+          "description": ""
+        },
+        "a111be17-a9a7-43e2-9182-6b9b0ae4ea9d": {
+          "description": ""
+        },
+        "508f76b6-d9bd-4052-b568-a76bdfbb91b2": {
+          "description": ""
+        },
+        "f6a20be1-cedd-4c5a-9d72-2abf238ed164": {
+          "description": ""
+        },
+        "6c83a8e6-63cf-4afd-8998-ef34d0c78a76": {
+          "description": ""
+        },
+        "2134f8dd-745f-42bb-a1f2-06303ea9789b": {
+          "description": ""
+        },
+        "01772cd1-ce20-4f26-93f6-599fd6313a7c": {
+          "description": ""
+        },
+        "9237d04e-dcfc-44eb-bdcf-251e970323ef": {
+          "description": ""
+        },
+        "087b1eae-63f8-41c1-9c75-1c59c7681298": {
+          "description": ""
+        },
+        "4c768e88-c4a6-4574-892b-111e9b85e742": {
+          "description": ""
+        },
+        "c2b66c71-919f-4bbb-bdc4-9fbb244e4991": {
+          "description": ""
         }
       }
     }
