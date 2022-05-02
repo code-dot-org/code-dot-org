@@ -27,7 +27,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-28 20:48:25 UTC",
+    "serialized_at": "2022-04-29 15:39:58 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2421,7 +2421,13 @@
       "key": "f58f45ec-972c-4cfc-80d5-b3fb88621914",
       "position": 2,
       "properties": {
-        "description": "## Sample Apps\n\n**Transition:** Send pairs to Code Studio."
+        "description": "## Sample Apps\n\n**Transition:** Send pairs to Code Studio.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Text-to-Speech Options:** The instructions panel includes two options that can support comprehension for students.\n- **Text to Speech** which reads aloud the instructions for students\n- **Microsoft Immersive Reader** which opens a new panel for the instructions and gives controls to change the text size, contrast, or translate to another language.\n\n[Click here to learn more about these options](https://support.code.org/hc/en-us/articles/360058843692-How-to-automatically-play-Read-Aloud-instructions-for-students)"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "f58f45ec-972c-4cfc-80d5-b3fb88621914",

@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "In your unit project, you will be creating your own image filters. What should you keep in mind around the impacts of your image filters?",
+    "long_instructions": "In your unit project, you will be creating your own image filters. What should you keep in mind about the impacts of your image filters?",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -17,7 +17,7 @@
   "created_at": "2022-04-12T19:28:12.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-04-12T19:28:12.862+00:00\",\"changed\":[\"cloned from \\\"CSA U5L5-L1 Contained_2022\\\"\"],\"cloned_from\":\"CSA U5L5-L1 Contained_2022\"},{\"changed_at\":\"2022-04-12 19:28:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-28 21:02:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-04-12T19:28:12.862+00:00\",\"changed\":[\"cloned from \\\"CSA U5L5-L1 Contained_2022\\\"\"],\"cloned_from\":\"CSA U5L5-L1 Contained_2022\"},{\"changed_at\":\"2022-04-12 19:28:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-28 21:02:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-29 13:18:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
