@@ -24,15 +24,15 @@ This is the best option for rapid iteration while writing a new test. ChromeDriv
 
 If you get the error `unknown error: cannot get automation extension`, follow the [chromedriver-helper instructions](https://github.com/flavorjones/chromedriver-helper#updating-to-latest-chromedriver) to upgrade to latest chromedriver.
 
-### With remote browsers: Saucelabs
+### With remote browsers: Sauce Labs
 
-Running tests remotely on [Saucelabs](https://saucelabs.com) lets you review results, view visual logs of test runs and even watch live video of your tests running on different browsers in real-time.
+Running tests remotely on [Sauce Labs](https://saucelabs.com) lets you review results, view visual logs of test runs and even watch live video of your tests running on different browsers in real-time.
 
 We currently have 120 available browsers, and the automated ui tests attempt to run 110.
 
 #### Credentials
 
-Saucelabs requires credentials to be set in locals.yml first.
+Sauce Labs requires credentials to be set in locals.yml first.
 
 ```
 # code-dot-org/locals.yml
@@ -43,11 +43,11 @@ saucelabs_authkey: 'xxxxxx-xxxx-xxxx-xxx-xxxxxxxxx'
 
 You can find the values for these settings in your saucelabs account settings (`https://app.saucelabs.com/users/:username`) The key you need, `saucelabs_authkey`, will be under the "Access Key" header.
 
-#### Saucelabs tunnel
+#### Sauce Labs tunnel
 
-If you want to run tests on saucelabs against localhost you need to set up your tunnel:
+If you want to run tests on Sauce Labs against localhost you need to set up your tunnel:
 
-1. Login to Saucelabs and download the [tunnel](https://app.saucelabs.com/tunnels)
+1. Login to Sauce Labs and download the [tunnel](https://app.saucelabs.com/tunnels)
    - Notes: If you work on a linux EC2 instance, download the linux version (will end in .tar.gz)
      - You will then need to secure copy this file into your dev environment with something like:
      - `scp sc-4.7.1-linux.tar.gz ubuntu@[ip_address]:/ec2-user/environment/code-dot-org`
@@ -55,11 +55,11 @@ If you want to run tests on saucelabs against localhost you need to set up your 
 2. Start the tunnel via `bin/sc --user <saucelabs-username> --api-key <saucelabs-api-key>`
    - Notes: The link above has an example command line with your credentials that you can copy.
      - `bin/sc` should be replaced with the path that points to the tunnel software downloaded in step 1.
-     - The unique tunnel identifier `-i <tunnel-id>` included in that command can usually be safely ignored (see the note below); if you leave it in, you'll also need to set the `tunnelIdentifier` option in the `sauce_capabilities` config. See [Using Sauce Connect Tunnel Identifiers](https://wiki.saucelabs.com/display/DOCS/Using+Sauce+Connect+Tunnel+Identifiers#UsingSauceConnectTunnelIdentifiers-TheBasicsofUsingTunnelIdentifiers) for more details.
-     - If you are running on an EC2 instance, the -i tunnel identifier referred to above is required to launch the tunnel.
+     - The command given by Sauce Labs includes a `--tunnel-name` flag (formally [`--tunnel-id`](https://docs.saucelabs.com/dev/cli/saucectl/run/#--tunnel-name)). This flag can be removed unless on an EC2 instance (see the note below). If you leave it in, you'll also need to set the `tunnelIdentifier` option in the `sauce_capabilities` config. See [Using Sauce Connect Tunnel Identifiers](https://wiki.saucelabs.com/display/DOCS/Using+Sauce+Connect+Tunnel+Identifiers#UsingSauceConnectTunnelIdentifiers-TheBasicsofUsingTunnelIdentifiers) for more details.
+     - If you are running on an EC2 instance, the `--tunnel-name` flag referred to above is required to launch the tunnel.
 3. In a separate terminal window, `./runner.rb -d localhost-studio.code.org:3000 <whatever other arguments you want>`
 
-You can now watch your tests run at the [saucelabs dashboard](https://saucelabs.com/beta/dashboard/tests)
+You can now watch your tests run at the [Sauce Labs dashboard](https://saucelabs.com/beta/dashboard/tests)
 
 ## Options
 
