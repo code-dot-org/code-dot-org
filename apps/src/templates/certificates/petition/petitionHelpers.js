@@ -1,5 +1,6 @@
 import {isEmail, isInt} from '@cdo/apps/util/formatValidation';
 import {forEach, has} from 'lodash';
+import i18n from '@cdo/locale';
 
 export const keyValidation = {
   name: {
@@ -39,8 +40,8 @@ export const getErrorMessage = data => {
   if (invalidFields.length === 0) {
     return '';
   } else if (invalidFields.length === 1) {
-    return 'Please fix the error below';
+    return i18n.formErrorBelow();
   } else {
-    return 'Please fix the errors below';
+    return i18n.formErrorsBelow();
   }
 };
