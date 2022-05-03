@@ -7,15 +7,22 @@
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
-    "encrypted_examples": [
-
-    ]
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "import java.util.ArrayList;\n\npublic class MyConsole {\n  public static void main(String[] args) {\n\n    ArrayList<String> words = new ArrayList<String>();\n\n    words.add(\"pizza\");\n    words.add(\"taco\");\n    words.add(\"sandwich\");\n    words.add(\"lasagna\");\n\n    // TO DO #2: Call the getLongestWord() method.\n\n    \n  }\n}",
+        "isVisible": true
+      },
+      "WordList.java": {
+        "text": "import java.util.ArrayList;\n\n/*\n * Analyzes a list of words\n */\npublic final class WordList {\n\n  /*\n   * Returns the longest word in wordList\n   */\n  public static String getLongestWord(ArrayList<String> wordList) {\n    // TO DO #1: Find and return the word with the maximum length in wordList.\n\n\n    \n  }\n}",
+        "isVisible": true
+      }
+    }
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-04-14T19:21:30.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-04-14T19:21:30.839+00:00\",\"changed\":[\"cloned from \\\"CSA U6L4-L2b_2022\\\"\"],\"cloned_from\":\"CSA U6L4-L2b_2022\"},{\"changed_at\":\"2022-04-14 19:21:32 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-02 23:44:30 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-04-14T19:21:30.839+00:00\",\"changed\":[\"cloned from \\\"CSA U6L4-L2b_2022\\\"\"],\"cloned_from\":\"CSA U6L4-L2b_2022\"},{\"changed_at\":\"2022-04-14 19:21:32 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-02 23:44:30 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-03 16:07:08 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
