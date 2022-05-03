@@ -2,7 +2,7 @@
  * Copyright (c) 2022 Anthony Bau.
  * MIT License.
  *
- * Date: 2022-04-27
+ * Date: 2022-04-29
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.droplet = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
@@ -12976,7 +12976,7 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         } else if (known.anyobj && node.callee.type === 'MemberExpression') {
           this.jsSocketAndMark(indentDepth, node.callee.object, depth + 1, NEVER_PAREN, null, null, known != null ? (ref8 = known.fn) != null ? ref8.objectDropdown : void 0 : void 0);
         } else if (known && node.callee.type === 'MemberExpression' && this.opts.createSocketForKnownBlock) {
-          this.jsSocketAndMark(indentDepth, node.callee.object, depth + 1, NEVER_PAREN, null, null, known != null ? (ref9 = known.fn) != null ? ref9.objectDropdown : void 0 : void 0);
+          this.jsSocketAndMark(indentDepth, node.callee.object, depth + 1, 3, null, null, known != null ? (ref9 = known.fn) != null ? ref9.objectDropdown : void 0 : void 0);
         }
         ref10 = node["arguments"];
         for (i = n = 0, len4 = ref10.length; n < len4; i = ++n) {
@@ -13022,7 +13022,7 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         if (!known || known.anyobj) {
           return this.jsSocketAndMark(indentDepth, node.object, depth + 1);
         } else if (known && this.opts.createSocketForKnownBlock) {
-          return this.jsSocketAndMark(indentDepth, node.object, depth + 1, NEVER_PAREN);
+          return this.jsSocketAndMark(indentDepth, node.object, depth + 1, 3);
         }
         break;
       case 'UpdateExpression':
