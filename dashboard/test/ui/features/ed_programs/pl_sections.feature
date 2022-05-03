@@ -1,3 +1,4 @@
+@no_mobile
 Feature: Professional learning Sections
   Scenario: Create new professional learning section as levelbuilder
     Given I create an authorized teacher-associated student named "Sally"
