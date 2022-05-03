@@ -3,7 +3,7 @@
   "name": "write",
   "category": "UI controls",
   "category_key": "ui_controls",
-  "content": "Displays a string and/or variable values to the app screen. The text can also be formatted as HTML.\n\nwrite() can be used as a debugging tool to help you understand what your code is doing. By displaying a message containing either descriptive text that tells you what is happening or the value of particular variables, you can follow along as your code executes. The user of your app will see the write() messages, so it can also be used to write large blocks of HTML formatted text to the screen instead of using `textLabel()`.\n\n\n",
+  "content": "Displays a string and/or variable values to the app screen. The text can also be formatted as HTML.\n\nwrite() can be used as a debugging tool to help you understand what your code is doing. By displaying a message containing either descriptive text that tells you what is happening or the value of particular variables, you can follow along as your code executes. The user of your app will see the write() messages, so it can also be used to write large blocks of HTML formatted text to the screen instead of using [`textLabel()`(#fff176)](/docs/applab/textLabel/).\n\n\n",
   "examples": [
     {
       "name": "Example: Message Board",
