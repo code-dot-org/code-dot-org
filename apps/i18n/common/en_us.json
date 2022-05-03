@@ -183,6 +183,8 @@
   "back": "Back",
   "background": "background",
   "backgroundMode": "Backgrounds",
+  "backgroundMusicOff": "Background Music: Off",
+  "backgroundMusicOn": "Background Music: On",
   "backToActivity": "Back to activity",
   "backToPreviousLevel": "Back to previous level",
   "backToTop": "Back to top",
