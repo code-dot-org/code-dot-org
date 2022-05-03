@@ -119,8 +119,6 @@ class FirehoseClient
   # @param stream [Symbol] The Firehose Stream to send the data to. A Symbol in the STREAMS hash.
   # @param data [Hash] The data to insert into the stream.
   def put_record(stream, data)
-    puts "put_record: #{data.class.name}"
-    puts "put_record: #{data}"
     return unless Gatekeeper.allows('firehose', default: true)
     raise ArgumentError.new("stream must be defined") if stream.nil? || stream.blank?
     raise ArgumentError.new("Stream #{stream} not found in STREAMS") if (stream_name = STREAMS[stream]).nil?
