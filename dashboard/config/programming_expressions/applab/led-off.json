@@ -3,7 +3,7 @@
   "name": "led.off()",
   "category": "Circuit",
   "category_key": "circuit",
-  "content": "Turns the red LED off.\r\n\r\nUse `led.on` to turn the red LED back on. ",
+  "content": "Turns the red LED off.\r\n\r\nUse [`led.on`(#f78183)](/docs/applab/led.on/) to turn the red LED back on. ",
   "examples": [
     {
       "name": "Toggle Switch Light Switch",

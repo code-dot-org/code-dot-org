@@ -557,8 +557,6 @@ describe('entry tests', () => {
       './src/sites/studio/pages/layouts/_small_footer.js',
     'layouts/_terms_interstitial':
       './src/sites/studio/pages/layouts/_terms_interstitial.js',
-    'layouts/_thank_donors_interstitial':
-      './src/sites/studio/pages/layouts/_thank_donors_interstitial.js',
     'levels/_bubble_choice':
       './src/sites/studio/pages/levels/_bubble_choice.js',
     'levels/_content': './src/sites/studio/pages/levels/_content.js',
@@ -670,6 +668,7 @@ describe('entry tests', () => {
       './src/sites/studio/pages/programming_expressions/edit.js',
     'programming_methods/edit':
       './src/sites/studio/pages/programming_methods/edit.js',
+    'reference_guides/new': './src/sites/studio/pages/reference_guides/new.js',
     'reference_guides/edit':
       './src/sites/studio/pages/reference_guides/edit.js',
     'reference_guides/edit_all':
