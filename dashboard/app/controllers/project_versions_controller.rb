@@ -1,9 +1,9 @@
 class ProjectVersionsController < ApplicationController
-  before_action :authenticate_user!
-
   # POST /project_versions
   def create
-    _, project_id = storage_decrypt_channel_id(params[:storage_id])
+    user_storage_id, project_id = storage_decrypt_channel_id(params[:storage_id])
+    project_owner = User.find_by(id: user_id_for_storage_id(user_storage_id))
+    return render :forbidden unless can?(:create, project_owner, project_id)
     project_version = ProjectVersion.new(project_id: project_id, object_version_id: params[:version_id], comment: params[:comment])
     if project_version.save
       return head :ok
@@ -19,7 +19,9 @@ class ProjectVersionsController < ApplicationController
 
   def project_commits
     user_storage_id, project_id = storage_decrypt_channel_id(params[:channel_id])
-    return render :forbidden unless user_storage_id == current_user.user_storage_id
+    project_owner = User.find_by(id: user_id_for_storage_id(user_storage_id))
+    return render :not_acceptable unless project_owner
+    return render :forbidden unless can?(:project_commits, project_owner, project_id)
     commits = ProjectVersion.where(project_id: project_id).order(created_at: :desc)
     commits = commits.map do |commit|
       {
