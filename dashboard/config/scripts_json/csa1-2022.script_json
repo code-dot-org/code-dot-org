@@ -31,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-26 15:41:43 UTC",
+    "serialized_at": "2022-05-02 15:57:53 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -8711,6 +8711,18 @@
       }
     },
     {
+      "name": "Teacher Toolkit: 10,000 Pyramid (High School)",
+      "url": "https://youtu.be/ZOUS34gDHoM",
+      "key": "teacher_toolkit_10_000_pyramid_high_school_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_toolkit_10_000_pyramid_high_school_"
+      }
+    },
+    {
       "name": "U1L10 Extra Practice",
       "url": "https://docs.google.com/document/d/12VbvABWVpOukT1ARRcTmdd2tz-ZfRc9CAeMF9Uy0E6U/edit?usp=sharing",
       "key": "u1l10_extra_practice",
@@ -9088,6 +9100,12 @@
       "seeding_key": {
         "lesson.key": "lesson-13",
         "resource.key": "patternpainter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "teacher_toolkit_10_000_pyramid_high_school_"
       }
     },
     {
