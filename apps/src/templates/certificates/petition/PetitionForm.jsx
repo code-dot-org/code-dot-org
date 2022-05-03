@@ -44,7 +44,7 @@ const PetitionForm = ({gaPagePath}) => {
       const currentInvalidFields = getInvalidFields(sanitizedData);
       if (currentInvalidFields.length !== 0) {
         setInvalidFields(currentInvalidFields);
-        setErrorMessage(getErrorMessage(data));
+        setErrorMessage(getErrorMessage(sanitizedData));
       } else {
         // Do not send email or name server-side for under sixteen users to protect privacy.
         sendDataToEndpoint(getAgeSafeData(sanitizedData));
