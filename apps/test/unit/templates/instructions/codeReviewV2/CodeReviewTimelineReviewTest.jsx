@@ -50,11 +50,21 @@ describe('CodeReviewTimelineReview', () => {
     expect(timelineElement.props().isLast).to.be.true;
   });
 
-  it('passes project version and is version expired to CodeReviewTimelineElement', () => {
+  it('passes project version to CodeReviewTimelineElement', () => {
     const wrapper = setUp();
     const timelineElement = wrapper.find('CodeReviewTimelineElement');
     expect(timelineElement.props().projectVersionId).to.equal('asdfjkl');
+  });
+
+  it('passes version expired to CodeReviewTimelineElement', () => {
+    let wrapper = setUp();
+    let timelineElement = wrapper.find('CodeReviewTimelineElement');
     expect(timelineElement.props().isProjectVersionExpired).to.be.false;
+
+    const expiredVersionReview = {...DEFAULT_REVIEW, isVersionExpired: true};
+    wrapper = setUp({review: expiredVersionReview});
+    timelineElement = wrapper.find('CodeReviewTimelineElement');
+    expect(timelineElement.props().isProjectVersionExpired).to.be.true;
   });
 
   it('displays the close button if the code review is not closed', () => {
