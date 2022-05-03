@@ -1,9 +1,5 @@
 <Craft>
   <config><![CDATA[{
-  "game_id": 49,
-  "created_at": "2016-10-10T20:32:27.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "properties": {
     "skin": "craft",
     "ground_plane": "[\"dirt\",\"dirt\",\"dirtCoarse\",\"dirt\",\"gravel\",\"dirtCoarse\",\"water\",\"water\",\"dirt\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirt\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirt\",\"water\",\"water\",\"dirt\",\"dirt\",\"dirt\",\"dirtCoarse\",\"grass\",\"grass\",\"grass\",\"dirtCoarse\",\"water\",\"water\",\"dirt\",\"dirt\",\"dirtCoarse\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"grass\",\"grass\",\"grass\",\"grass\",\"dirt\",\"dirt\",\"dirtCoarse\",\"dirtCoarse\",\"dirtCoarse\",\"grass\",\"grass\",\"grass\",\"grass\",\"grass\"]",
@@ -43,10 +39,23 @@
     "use_score": "false",
     "use_verification_function_for_failure": "false",
     "instructions_important": "true",
-    "contained_level_names": null
+    "encrypted": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "agent_start_direction": "0",
+    "is_agent_level": "false",
+    "is_aquatic_level": "false",
+    "boat": "false",
+    "preload_asset_list": null
   },
+  "game_id": 49,
   "published": true,
+  "created_at": "2016-10-10T20:32:27.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "notes": "Puzzle 5: Restore the Sheep\r\nNow that we can make entities move and drop items, let’s go back and finish our sheep. Make the sheep wander, around, drop wool when you use it, and follow you if you touch it by using a move toward player command in the when touched slot.\r\n\r\nSolution:               \r\nSheep\r\n§  When spawned: Give them this code\r\n·       Repeat Forever\r\no   Repeat Random\r\n§  Move Forward\r\no   Turn Random\r\n§  When Touched\r\nRepeat forever\r\n·       Move Toward Player\r\n§  When Clicked\r\n·       Drop Wool\r\n\r\nSuccess criteria: Sheep follows player; Wool drops when sheared.\r\n\r\nTeaches: Building a full entity, Events, reinforce loops",
+  "audit_log": "[{\"changed_at\":\"2022-04-28 22:08:04 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":963,\"changed_by_email\":\"clare@code.org\"},{\"changed_at\":\"2022-04-28 22:11:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":963,\"changed_by_email\":\"clare@code.org\"},{\"changed_at\":\"2022-04-28 22:12:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\"],\"changed_by_id\":963,\"changed_by_email\":\"clare@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -89,8 +98,22 @@
     </required_blocks>
     <solution_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false"/>
-        <block type="craft_sheep"/>
+        <block type="craft_cowSpawnedTouchedClicked" deletable="false" movable="false">
+          <statement name="WHEN_SPAWNED">
+            <block type="craft_forever">
+              <statement name="DO">
+                <block type="craft_moveToward">
+                  <field name="TYPE">Player</field>
+                </block>
+              </statement>
+            </block>
+          </statement>
+          <statement name="WHEN_USED">
+            <block type="craft_drop">
+              <field name="TYPE">milk</field>
+            </block>
+          </statement>
+        </block>
       </xml>
     </solution_blocks>
   </blocks>
