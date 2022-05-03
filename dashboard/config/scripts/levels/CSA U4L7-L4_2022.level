@@ -12,13 +12,14 @@
         "text": "import java.util.Scanner;\n\npublic class MyConsole {\n  public static void main(String[] args) {\n\n    Scanner input = new Scanner(System.in);\n\n    // TO DO #1: Prompt the user to enter a number.\n\n\n    // TO DO #2: Print the square root of the number.\n\n    \n  }\n}",
         "isVisible": true
       }
-    }
+    },
+    "encrypted_exemplar_sources": "HM0H7Z3L+CTAPTxDu6u7zslyjM60me7VHOAdpgMoPI5zHu0zhHA7e+fqDfhj\nPPH0u74WamCXZczcMW+6VKCARiA43ppkD6pJskMOqdLXYi72oxfVg41zSH4i\n8tSgcdcx5LqT/w76M+0hBAN7otAuGBZJgDeQPZwazkmXWT/40EImOXEI587j\nPZoVgxexiBfnkKI/pSRRBiiKsvgGk14n1R3igFGXEtNoBgsYPbskGK8lwSmV\nmRsK+Yh+TRnLRF57EyPXkULnhwlmpHJl3Yti0a0h2dWEGsbvam7w0wG2+An6\nPon2x3+HrBSpCasTeQAZkLG+x7puewdBm2lK0l19SO93xX+42R1pSNWswdJU\nDDpYSIz4UWmMaRvTnNxwqt9JeCFANtduIAWe61heQMadLVWw19bCqjLkTO1h\nvFk/GqRJPMDUCsvD8KGGlNr/4nY2Q2bs2OithDvn2ShNCzAVLpeeaUfmCa6T\n0OlC4/5IXx7Z23PF7HIuicULJ/1qnIfSFY9I3wllBTDgkUDMoP58o/ULEf9T\nQRn0OgY5+NjaxjTy3kQ9IWNUPFTXw34AOmKK65xVaqwc0uD/wzVXesB7ItrE\nWr5XTwxVe9ogodyTWLPblo+px4LdxK8lG+rna+4wE5xy6VrMkuiGcyfX7vWR\nLUvFOgxD6N3Adx5OSjWUWuQ=\n"
   },
   "game_id": 68,
   "created_at": "2022-04-07T18:25:56.000Z",
   "level_num": "custom",
   "user_id": 16889,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-04-07T18:25:56.886+00:00\",\"changed\":[\"cloned from \\\"CSA U4L7-L3_2022\\\"\"],\"cloned_from\":\"CSA U4L7-L3_2022\"},{\"changed_at\":\"2022-04-07 18:25:59 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 16:02:46 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 16:04:36 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-07T18:25:56.886+00:00\",\"changed\":[\"cloned from \\\"CSA U4L7-L3_2022\\\"\"],\"cloned_from\":\"CSA U4L7-L3_2022\"},{\"changed_at\":\"2022-04-07 18:25:59 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 16:02:46 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 16:04:36 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 20:44:33 +0000\",\"changed\":[],\"changed_by_id\":1054,\"changed_by_email\":\"molly@code.org\"}]"
 }]]></config>
 </Javalab>
