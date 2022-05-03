@@ -5,11 +5,16 @@ class ProjectVersionsControllerTest < ActionController::TestCase
     student = create :student
     sign_in student
 
-    @controller.expects(:storage_decrypt_channel_id).with("abcdef").returns([123, 654])
+    fake_storage_id = 123
+    fake_project_id = 654
+    fake_channel_id = 'abcdef'
+    @controller.expects(:user_id_for_storage_id).with(fake_storage_id).returns(student.id)
+    @controller.expects(:storage_decrypt_channel_id).with(fake_channel_id).returns([fake_storage_id, fake_project_id])
+
     assert_creates(ProjectVersion) do
-      post :create, params: {storage_id: 'abcdef', version_id: 'fghj', comment: 'This is a comment'}
+      post :create, params: {storage_id: fake_channel_id, version_id: 'fghj', comment: 'This is a comment'}
     end
-    project_version = ProjectVersion.find_by(project_id: 654, object_version_id: 'fghj')
+    project_version = ProjectVersion.find_by(project_id: fake_project_id, object_version_id: 'fghj')
     assert_not_nil project_version
     assert_equal 'This is a comment', project_version.comment
   end
@@ -21,7 +26,7 @@ class ProjectVersionsControllerTest < ActionController::TestCase
     fake_storage_id = 123
     fake_project_id = 654
     fake_channel_id = 'abcdef'
-    User.any_instance.stubs(:user_storage_id).returns fake_storage_id
+    @controller.expects(:user_id_for_storage_id).with(fake_storage_id).returns(student.id)
     @controller.expects(:storage_decrypt_channel_id).with(fake_channel_id).returns([fake_storage_id, fake_project_id])
 
     create :project_version, project_id: fake_project_id, comment: "First comment", created_at: 2.days.ago
