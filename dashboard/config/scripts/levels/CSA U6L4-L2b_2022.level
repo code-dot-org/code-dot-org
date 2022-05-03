@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##In MyConsole.java:\r\n\r\n1. first step\r\n\r\n2. second step\r\n\r\n3. third step\r\n\r\n::: details [**Show Me How**]\r\nThe length of a `String`(#e7e8ea) can be obtained using the following syntax:\r\n  \r\n  ```\r\n  variableName.length();\r\n  ```\r\n:::",
+    "long_instructions": "##In WordList.java:\r\n\r\n1. Write the method `getTotalLength()`(#e7e8ea) to get the total length of all words in `wordList`(#e7e8ea).\r\n\r\n   * Calculate the sum of the length of each word.\r\n   \r\n   * Return the sum.\r\n\r\n##In MyConsole.java:\r\n\r\n2. Call the `getTotalLength()`(#e7e8ea) method and print the results.\r\n\r\n::: details [**Show Me How**]\r\nThe length of a `String`(#e7e8ea) can be obtained using the following syntax:\r\n  \r\n  ```\r\n  variableName.length();\r\n  ```\r\n:::",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -16,13 +16,18 @@
         "text": "import java.util.ArrayList;\n\n/*\n * Analyzes a list of words\n */\npublic final class WordList {\n\n  /*\n   * Returns the total length of all words in wordList\n   */\n  public static int getTotalLength(ArrayList<String> wordList) {\n    // TO DO #1: Calculate the total length of all words in wordList.\n\n\n    \n  }\n}",
         "isVisible": true
       }
-    }
+    },
+    "encrypted_examples": [
+
+    ],
+    "display_name": "Length of All Words",
+    "bubble_choice_description": "Traverse an ArrayList of words to calculate and return the total length of all words in the list."
   },
   "game_id": 68,
+  "published": true,
   "created_at": "2022-04-14T19:21:20.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-04-14T19:21:20.413+00:00\",\"changed\":[\"cloned from \\\"CSA U6L4-L2a_2022\\\"\"],\"cloned_from\":\"CSA U6L4-L2a_2022\"},{\"changed_at\":\"2022-04-14 19:21:22 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-02 23:44:20 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-02 23:58:55 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-04-14T19:21:20.413+00:00\",\"changed\":[\"cloned from \\\"CSA U6L4-L2a_2022\\\"\"],\"cloned_from\":\"CSA U6L4-L2a_2022\"},{\"changed_at\":\"2022-04-14 19:21:22 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-02 23:44:20 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-02 23:58:55 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-03 16:05:43 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
