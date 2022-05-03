@@ -17,7 +17,7 @@ export function workspaceSvgResize(workspace) {
 }
 
 export function isWorkspaceReadOnly(workspace) {
-  return false; // TODO - Used for feedback
+  return false; // TODO - used for feedback
 }
 
 export function blockLimitExceeded() {
