@@ -74,6 +74,8 @@ const instructionsInitialState = {
   levelVideos: [],
   mapReference: undefined,
   referenceLinks: [],
+  muteBackgroundMusic: () => {},
+  unmuteBackgroundMusic: () => {},
   programmingEnvironment: null
 };
 
@@ -94,6 +96,8 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       levelVideos,
       mapReference,
       referenceLinks,
+      muteBackgroundMusic,
+      unmuteBackgroundMusic,
       programmingEnvironment
     } = action;
     let isCollapsed = state.isCollapsed;
@@ -114,6 +118,8 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       levelVideos,
       mapReference,
       referenceLinks,
+      muteBackgroundMusic,
+      unmuteBackgroundMusic,
       programmingEnvironment
     });
   }
@@ -233,6 +239,8 @@ export const setInstructionsConstants = ({
   levelVideos,
   mapReference,
   referenceLinks,
+  muteBackgroundMusic,
+  unmuteBackgroundMusic,
   programmingEnvironment
 }) => ({
   type: SET_CONSTANTS,
@@ -247,6 +255,8 @@ export const setInstructionsConstants = ({
   levelVideos,
   mapReference,
   referenceLinks,
+  muteBackgroundMusic,
+  unmuteBackgroundMusic,
   programmingEnvironment
 });
 
@@ -380,7 +390,9 @@ export const determineInstructionsConstants = config => {
     level,
     noInstructionsWhenCollapsed,
     hasContainedLevels,
-    teacherMarkdown
+    teacherMarkdown,
+    muteBackgroundMusic,
+    unmuteBackgroundMusic
   } = config;
 
   const {
@@ -473,6 +485,8 @@ export const determineInstructionsConstants = config => {
     levelVideos,
     mapReference,
     referenceLinks,
+    muteBackgroundMusic,
+    unmuteBackgroundMusic,
     programmingEnvironment
   };
 };
