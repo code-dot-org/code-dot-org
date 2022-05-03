@@ -1412,6 +1412,8 @@
   "password": "Password",
   "passwordConfirmation": "Password confirmation",
   "passwordTooShort": "Password too short (minimum is 6 characters)",
+  "passwordUpdateFailed": "Password update failed. Please try again.",
+  "passwordsMustBeSixChars": "Passwords must be six (6) characters or longer.",
   "passwordsMustMatch": "Passwords must match",
   "pause": "Break",
   "percentCorrect": "% correct",
