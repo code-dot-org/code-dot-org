@@ -8,5 +8,15 @@ wrong 'wrong'
 wrong 'wrong'
 
 markdown <<MARKDOWN
-question
+Consider the following code segment.
+
+```
+int days = 365;
+Integer weeks = 52;
+int weekends = weeks;
+int months = new Integer(12);
+Integer numOfSeasons = new Integer(4);
+```
+
+Which variables have the primitive data type `int`?
 MARKDOWN
