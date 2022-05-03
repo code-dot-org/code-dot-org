@@ -1859,19 +1859,13 @@ class Script < ApplicationRecord
   end
 
   def self.locale_native_name_map
-    @@locale_native_name_map ||=
-      PEGASUS_DB[:cdo_languages].
-        select(:locale_s, :native_name_s).
-        map {|row| [row[:locale_s], row[:native_name_s]]}.
-        to_h
+    locales = Dashboard::Application::LOCALES.select {|_, data| data.is_a?(Hash)}
+    locales.reduce({}) {|acc, (locale_code, data)| acc.merge({locale_code => data[:native]})}
   end
 
   def self.locale_english_name_map
-    @@locale_english_name_map ||=
-      PEGASUS_DB[:cdo_languages].
-        select(:locale_s, :english_name_s).
-        map {|row| [row[:locale_s], row[:english_name_s]]}.
-        to_h
+    locales = Dashboard::Application::LOCALES.select {|_, data| data.is_a?(Hash)}
+    locales.reduce({}) {|acc, (locale_code, data)| acc.merge({locale_code => data[:english]})}
   end
 
   # Get all script levels that are level groups, and return a list of those that are

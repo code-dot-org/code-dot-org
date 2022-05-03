@@ -246,6 +246,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     },
     setHSV: function(block, h, s, v) {
       block.setHSV(h, s, v);
+    },
+    workspaceSvgResize: function(workspace) {
+      return workspace.blockSpaceEditor.svgResize();
     }
   };
   return blocklyWrapper;

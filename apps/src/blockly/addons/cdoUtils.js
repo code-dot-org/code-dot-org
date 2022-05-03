@@ -40,6 +40,11 @@ export function getToolboxWidth() {
       return 0;
   }
 }
+
+export function workspaceSvgResize(workspace) {
+  return Blockly.svgResize(workspace);
+}
+
 export function isWorkspaceReadOnly(workspace) {
   return false; // TODO - used for feedback
 }
