@@ -30,6 +30,10 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     CourseOffering.add_course_offering(@script)
     @script.reload
 
+    @pl_unit = create(:script, :is_course, published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    CourseOffering.add_course_offering(@pl_unit)
+    @pl_unit.reload
+
     @script_in_preview_state = create(:script, :is_course, published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
     CourseOffering.add_course_offering(@script_in_preview_state)
     @script_in_preview_state.reload
@@ -404,13 +408,12 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_nil returned_section.grade
   end
 
-  test "create section without participant type defaults to student" do
+  test "create section without participant type gives error" do
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL
     }
-    assert_response :success
-    assert_equal returned_section.participant_type, 'student'
+    assert_response :bad_request
   end
 
   test 'cannot pass an invalid grade' do
@@ -553,6 +556,16 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       login_type: Section::LOGIN_TYPE_EMAIL,
       participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
       course_version_id: @beta_unit_group.course_version.id,
+    }
+    assert_response :forbidden
+  end
+
+  test 'cannot assign a course to a section where participants in the section can not participate in the course' do
+    sign_in @facilitator
+    post :create, params: {
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+      course_version_id: @pl_unit.course_version.id,
     }
     assert_response :forbidden
   end

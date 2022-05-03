@@ -556,7 +556,7 @@ StudioApp.prototype.init = function(config) {
     ReactDOM.render(
       <ChallengeDialog
         isOpen={true}
-        avatar={this.icon}
+        avatar={this.icon || this.skin.staticAvatar}
         handleCancel={() => {
           this.skipLevel();
         }}
