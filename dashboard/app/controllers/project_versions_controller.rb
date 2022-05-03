@@ -18,8 +18,9 @@ class ProjectVersionsController < ApplicationController
   end
 
   def project_commits
-    _, project_id = storage_decrypt_channel_id(params[:storage_id])
-    commits = ProjectVersion.where(project_id: project_id)
+    user_storage_id, project_id = storage_decrypt_channel_id(params[:channel_id])
+    return render :forbidden unless user_storage_id == current_user.user_storage_id
+    commits = ProjectVersion.where(project_id: project_id).order(created_at: :desc)
     commits = commits.map do |commit|
       {
         createdAt: commit.created_at,
