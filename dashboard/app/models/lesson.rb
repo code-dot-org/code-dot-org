@@ -272,9 +272,9 @@ class Lesson < ApplicationRecord
     lesson_summary = Rails.cache.fetch("#{cache_key}/lesson_summary/#{I18n.locale}/#{include_bonus_levels}") do
       cached_levels = include_bonus_levels ? cached_script_levels : cached_script_levels.reject(&:bonus)
 
-      description_student = I18n.t('description_student', scope: [:data, :script, :name, script.name, :lessons, key], smart: true, default: '')
+      description_student = get_localized_property('student_overview')
       description_student = render_codespan_only_markdown(description_student) unless script.is_migrated?
-      description_teacher = I18n.t('description_teacher', scope: [:data, :script, :name, script.name, :lessons, key], smart: true, default: '')
+      description_teacher = get_localized_property('overview')
       description_teacher = render_codespan_only_markdown(description_teacher) unless script.is_migrated?
 
       lesson_data = {
