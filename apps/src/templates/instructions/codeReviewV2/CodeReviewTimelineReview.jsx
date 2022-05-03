@@ -8,13 +8,16 @@ import Button from '@cdo/apps/templates/Button';
 import moment from 'moment';
 import javalabMsg from '@cdo/javalab/locale';
 import Comment from '@cdo/apps/templates/instructions/codeReview/Comment';
+import {reviewShape} from '@cdo/apps/templates/instructions/codeReviewV2/shapes';
 
-const CodeReviewTimelineReview = ({
-  review,
-  comments = [],
-  isLastElementInTimeline
-}) => {
-  const {createdAt, isClosed, projectVersion, isVersionExpired} = review;
+const CodeReviewTimelineReview = ({review, isLastElementInTimeline}) => {
+  const {
+    createdAt,
+    isClosed,
+    projectVersion,
+    isVersionExpired,
+    comments
+  } = review;
   const formattedDate = moment(createdAt).format('M/D/YYYY [at] h:mm A');
 
   return (
@@ -74,14 +77,7 @@ const CodeReviewTimelineReview = ({
 
 CodeReviewTimelineReview.propTypes = {
   isLastElementInTimeline: PropTypes.bool,
-  review: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    createdAt: PropTypes.string.isRequired,
-    isClosed: PropTypes.bool.isRequired,
-    projectVersion: PropTypes.string.isRequired,
-    isVersionExpired: PropTypes.bool.isRequired
-  }),
-  comments: PropTypes.array
+  review: reviewShape
 };
 
 export default CodeReviewTimelineReview;
