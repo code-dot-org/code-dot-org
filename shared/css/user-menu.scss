@@ -34,17 +34,16 @@
   }
 
   .user_options, .create_options {
-    left: 0px;
     top: 50px;
   }
 
   .help_contents {
-    right: 0px;
     top: 58px;
   }
 
   .user_options, .create_options, .help_contents {
     position: absolute;
+    right: 0px;
     background-color: $white;
     border: 1px solid $charcoal;
 
