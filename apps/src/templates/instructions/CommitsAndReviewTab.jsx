@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback, useMemo} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
@@ -12,32 +12,33 @@ import Button from '@cdo/apps/templates/Button';
 
 export const VIEWING_CODE_REVIEW_URL_PARAM = 'viewingCodeReview';
 
-const CommitsAndReviewTab = ({
-  onLoadComplete,
-  channelId,
-  serverLevelId,
-  serverScriptId,
-  viewAsCodeReviewer,
-  viewAsTeacher,
-  userIsTeacher,
-  codeReviewEnabled
-}) => {
+const CommitsAndReviewTab = props => {
+  const {
+    onLoadComplete,
+    channelId,
+    serverLevelId,
+    serverScriptId,
+    viewAsCodeReviewer,
+    viewAsTeacher,
+    userIsTeacher,
+    codeReviewEnabled
+  } = props;
+
   const [loadingReviewData, setLoadingReviewData] = useState(false);
   const [reviewData, setReviewData] = useState([]);
   const [commitsData, setCommitsData] = useState([]);
   const [hasOpenCodeReview, setHasOpenCodeReview] = useState(null);
 
-  const dataApi = new CodeReviewDataApi(
-    channelId,
-    serverLevelId,
-    serverScriptId
+  const dataApi = useMemo(
+    () => new CodeReviewDataApi(channelId, serverLevelId, serverScriptId),
+    [channelId, serverLevelId, serverScriptId]
   );
 
   useEffect(() => {
     refresh();
-  }, []);
+  }, [refresh]);
 
-  const refresh = async () => {
+  const refresh = useCallback(async () => {
     setLoadingReviewData(true);
     try {
       const [codeReviews, commits] = await Promise.all([
@@ -53,7 +54,7 @@ const CommitsAndReviewTab = ({
     }
     onLoadComplete();
     setLoadingReviewData(false);
-  };
+  }, [dataApi, onLoadComplete]);
 
   const setIsCodeReviewOpen = reviewData => {
     if (reviewData.length) {
