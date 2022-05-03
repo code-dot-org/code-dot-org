@@ -1,26 +1,34 @@
 <Javalab>
   <config><![CDATA[{
-  "game_id": 68,
-  "created_at": "2022-02-26T00:28:06.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Practice working with the `Integer` and `Double` classes by:\r\n\r\n1. Declaring and initializing an `Integer` object.\r\n\r\n2. Printing the `Integer` object's value.\r\n\r\n3. Declaring and initializing a `Double` object.\r\n\r\n4. Printing the `Double` object's value.",
+    "long_instructions": "##Debug the Program\r\n\r\nThis program is supposed to read the values in the `temperatures`(#e7e8ea) file into the `dailyTemps`(#e7e8ea) array, but is has an error! Find and fix the error in the program.",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
     "start_sources": {
       "MyConsole.java": {
-        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    // TO DO: Declare and initialize an Integer object.\n    \n\n    // TO DO: Print the Integer object's value.\n    \n\n    // TO DO: Declare and initialize a Double object.\n    \n\n    // TO DO: Print the Double object's value.\n    \n\n  }\n}",
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    Temperatures myTemps = new Temperatures(10);\n    myTemps.readData(\"temps.txt\");\n    myTemps.printTemps();\n\n  }\n}",
+        "isVisible": true
+      },
+      "Temperatures.java": {
+        "text": "import java.util.Scanner;\nimport java.io.File;\nimport java.io.FileNotFoundException;\n\n/*\n * Analyzes data about daily temperatures\n */\npublic class Temperatures {\n\n  private double[] dailyTemps;   // The list of daily temperatures for a city\n\n  /*\n   * Constructor to create a Temperatures object\n   * with the specified file and number of values\n   */\n  public Temperatures(int values) {\n    this.dailyTemps = new double[values];\n  }\n\n  /*\n   * Reads the data from the file into dailyTemps\n   */\n  public void readData(String filename) {\n    File myFile = new File(filename);\n    Scanner fileReader = null;\n    \n    try {\n      fileReader = new Scanner(myFile);\n    } catch(FileNotFoundException error) {\n      System.out.println(\"File not found.\");\n    }\n    \n    for (int index = 0; index < dailyTemps.length; index++) {\n      if (fileReader.hasNext()) {\n        String data = fileReader.next();\n        dailyTemps[index] = Double.parseDouble(data);\n      }\n    }\n\n    fileReader.close();\n  }\n\n  /*\n   * Prints the values in dailyTemps\n   */\n  public void printTemps() {\n    for (int index = 0; index < dailyTemps.length; index++) {\n      System.out.print(dailyTemps[index] + \" \");\n    }\n  }\n  \n}",
+        "isVisible": true
+      },
+      "temps.txt": {
+        "text": "88.5\n76.2\n83.9\n81.7\n78.1\n77.5\n79.8\n82.6\n85.3\n80.2",
         "isVisible": true
       }
     },
     "encrypted_examples": "f0IsrdHx9oayOAswvXWYgoG/TL5XtGZ+9azHHlFb/tM9E9IspvpSby6P4e/Z\n1tOr33lELtLUJP9C/HL4+AYuUc/icTzEY47JI67rtgxeZoE=\n",
     "name_suffix": "_2022"
   },
+  "game_id": 68,
+  "created_at": "2022-02-26T00:28:06.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-02-26T00:28:06.240+00:00\",\"changed\":[\"cloned from \\\"CSA U6L2-L2\\\"\"],\"cloned_from\":\"CSA U6L2-L2\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-02-26T00:28:06.240+00:00\",\"changed\":[\"cloned from \\\"CSA U6L2-L2\\\"\"],\"cloned_from\":\"CSA U6L2-L2\"},{\"changed_at\":\"2022-05-02 12:53:31 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-02 16:58:50 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-02 20:24:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
