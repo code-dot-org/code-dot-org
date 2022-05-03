@@ -15,7 +15,8 @@ class SectionsAsStudentTable extends React.Component {
     isRtl: PropTypes.bool.isRequired,
     canLeave: PropTypes.bool.isRequired,
     updateSections: PropTypes.func,
-    updateSectionsResult: PropTypes.func
+    updateSectionsResult: PropTypes.func,
+    isPlSections: PropTypes.bool
   };
 
   onLeave(sectionCode, sectionName) {
@@ -37,7 +38,14 @@ class SectionsAsStudentTable extends React.Component {
     const {sections, isRtl, canLeave} = this.props;
 
     return (
-      <table style={styles.table}>
+      <table
+        style={styles.table}
+        className={
+          this.props.isPlSections
+            ? 'ui-test-joined-pl-sections-table'
+            : 'ui-test-joined-student-sections-table'
+        }
+      >
         <thead>
           <tr style={styles.headerRow}>
             <td
