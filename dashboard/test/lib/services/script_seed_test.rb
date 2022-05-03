@@ -89,7 +89,8 @@ module Services
       # this is slower for most individual Scripts, but there could be a savings when seeding multiple Scripts.
       # For now, leaving this as a potential future optimization, since it seems to be reasonably fast as is.
       # The game queries can probably be avoided with a little work, though they only apply for Blockly levels.
-      assert_queries(87) do
+      # TODO(dmcavoy): increase number by one when turn validation back on
+      assert_queries(86) do
         ScriptSeed.seed_from_json(json)
       end
 
