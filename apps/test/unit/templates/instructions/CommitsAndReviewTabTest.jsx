@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedCommitsAndReviewTab as CommitsAndReviewTab} from '@cdo/apps/templates/instructions/CommitsAndReviewTab';
 import javalabMsg from '@cdo/javalab/locale';
-import ReviewNavigator from '@cdo/apps/templates/instructions/codeReview/ReviewNavigator';
+import ReviewNavigator from '@cdo/apps/templates/instructions/codeReviewV2/ReviewNavigator';
 import Button from '@cdo/apps/templates/Button';
 
 const DEFAULT_PROPS = {

@@ -305,6 +305,24 @@ class UnitEditor extends React.Component {
       }
     }
 
+    if (
+      this.state.unitPublishedState === PublishedState.in_development &&
+      this.state.unitPublishedState === this.props.initialUnitPublishedState
+    ) {
+      const msg =
+        'This unit is hidden within the course, meaning it is not ' +
+        'visible on the Course Overview page, Section Dialog, or Teacher ' +
+        'Dashboard. It is still visible to Levelbuilders. Would you ' +
+        'like to continue with saving?';
+      if (!window.confirm(msg)) {
+        this.setState({
+          isSaving: false,
+          error: 'Saving cancelled.'
+        });
+        return;
+      }
+    }
+
     let dataToSave = {
       name: this.props.name,
       family_name: this.state.familyName,

@@ -4,15 +4,29 @@ import _ from 'lodash';
 import i18n from '@cdo/locale';
 import {sectionShape, assignmentCourseOfferingShape} from './shapes';
 import AssignmentVersionSelector from './AssignmentVersionSelector';
-import {CourseOfferingCategories} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {
+  CourseOfferingCategories,
+  ParticipantAudiencesByType
+} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
 const noAssignment = '__noAssignment__';
 //Additional valid option in dropdown - no associated course
 const decideLater = '__decideLater__';
 const isValidAssignment = id => id !== noAssignment && id !== decideLater;
 
-export const getCourseOfferingsByCategory = courseOfferings => {
-  let orderedCourseOfferings = _.orderBy(courseOfferings, 'display_name');
+export const getCourseOfferingsByCategory = (
+  courseOfferings,
+  participantType
+) => {
+  const filteredCourseOfferings = _.filter(courseOfferings, function(offering) {
+    return ParticipantAudiencesByType[participantType].includes(
+      offering.participant_audience
+    );
+  });
+  let orderedCourseOfferings = _.orderBy(
+    filteredCourseOfferings,
+    'display_name'
+  );
   orderedCourseOfferings = _.orderBy(
     orderedCourseOfferings,
     'is_featured',
@@ -78,6 +92,7 @@ export default class AssignmentSelector extends Component {
       unitId: isValidAssignment(selectedUnitId) ? selectedUnitId : null
     };
   }
+
   onChangeCourseOffering = event => {
     if (
       (event.target.value === noAssignment &&
@@ -195,7 +210,7 @@ export default class AssignmentSelector extends Component {
   };
 
   render() {
-    const {dropdownStyle, disabled, courseOfferings} = this.props;
+    const {dropdownStyle, disabled, courseOfferings, section} = this.props;
     const {
       selectedCourseOfferingId,
       selectedCourseVersionId,
@@ -203,7 +218,8 @@ export default class AssignmentSelector extends Component {
     } = this.state;
 
     const courseOfferingsByCategories = getCourseOfferingsByCategory(
-      courseOfferings
+      courseOfferings,
+      section.participantType
     );
 
     const selectedCourseOffering = courseOfferings[selectedCourseOfferingId];
