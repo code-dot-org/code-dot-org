@@ -33,7 +33,7 @@
     Type: AWS::RDS::DB<%=key.match('Cluster')%>ParameterGroup
     Properties:
       Description: !Sub "<%=key.titleize%> DB Parameters for ${AWS::StackName}."
-      Family: <%=key.include?('Aurora') ? 'aurora-' : ''%>mysql5.7
+      Family: aurora-mysql5.7
       Parameters: <%=values.compact.to_json%>
 <%end -%>
 
