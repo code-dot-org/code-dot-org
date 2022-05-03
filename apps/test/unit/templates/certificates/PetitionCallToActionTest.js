@@ -3,32 +3,44 @@ import PetitionForm from '@cdo/apps/templates/certificates/petition/PetitionForm
 import React from 'react';
 import {isolateComponent} from 'isolate-react';
 import {expect} from '../../../util/reconfiguredChai';
+import sinon from 'sinon';
+import $ from 'jquery';
+
+const isolateCallToAction = props =>
+  isolateComponent(
+    <PetitionCallToAction gaPagePath={'/congrats/coursetest-2030'} {...props} />
+  );
 
 describe('PetitionCallToAction', () => {
   it('has a petition message', () => {
-    const callToAction = isolateComponent(<PetitionCallToAction />);
     expect(
-      callToAction.findOne('#petition-message').content().length
+      isolateCallToAction()
+        .findOne('#petition-message')
+        .content().length
     ).to.be.greaterThan(0);
   });
   it('has a message to sign the petition', () => {
-    const callToAction = isolateComponent(<PetitionCallToAction />);
     expect(
-      callToAction.findOne('#sign-message').content().length
+      isolateCallToAction()
+        .findOne('#sign-message')
+        .content().length
     ).to.be.greaterThan(0);
   });
   it('has a form with submit button', () => {
-    const callToActionWithForm = isolateComponent(<PetitionCallToAction />);
+    const callToActionWithForm = isolateCallToAction();
     callToActionWithForm.inline(PetitionForm);
     const form = callToActionWithForm.findOne('form');
     expect(form.findOne('Button').content().length).to.be.greaterThan(0);
   });
-  it('has a form with five fields ', () => {
-    // TODO: Once the request is being made,
-    //  refactor this to instead check that the request is sending the correct data
-    const callToActionWithForm = isolateComponent(<PetitionCallToAction />);
+  it('does not send request if there are invalid fields', () => {
+    const requestSpy = sinon.spy($, 'ajax');
+
+    const callToActionWithForm = isolateCallToAction();
     callToActionWithForm.inline(PetitionForm);
-    const fields = callToActionWithForm.findAll('ControlledFieldGroup');
-    expect(fields).to.have.length(5);
+    const form = callToActionWithForm.findOne('form');
+    form.props.onSubmit({preventDefault: sinon.stub()});
+
+    expect(requestSpy).to.have.been.notCalled;
+    $.ajax.restore();
   });
 });
