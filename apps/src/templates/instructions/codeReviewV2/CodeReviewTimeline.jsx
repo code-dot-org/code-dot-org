@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import PropTypes from 'prop-types';
 import CodeReviewTimelineElement, {
   codeReviewTimelineElementType
@@ -15,7 +15,19 @@ const dataType = {
   commit: 'commit'
 };
 
-const CodeReviewTimeline = ({reviewData, commitsData}) => {
+const CodeReviewTimeline = props => {
+  const {reviewData, commitsData} = props;
+
+  const timelineEndRef = useRef(null);
+
+  const scrollToBottom = () => {
+    timelineEndRef.current?.scrollIntoView({behavior: 'smooth'});
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [reviewData, commitsData]);
+
   const labeledReviewData = reviewData.map(review => {
     review.type = dataType.review;
     return review;
@@ -55,6 +67,7 @@ const CodeReviewTimeline = ({reviewData, commitsData}) => {
           );
         }
       })}
+      <div ref={timelineEndRef} />
     </div>
   );
 };
