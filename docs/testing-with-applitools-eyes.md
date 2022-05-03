@@ -4,7 +4,7 @@ Applitools Eyes is a service that lets us upload and compare screenshots of our 
 
 ## Getting an account
 
-As of November 2021, you can use your GitHub credentials or your Google Code.org credentials to get an account.
+Consult the [Getting Started as a Developer at Code.org](https://docs.google.com/document/d/158MiIxJ_1JokzUkw43Wf2bFONPycYoCeXtKEU-ww0Xw/edit) document for details on how to gain access to Sauce Labs.
 
 ## Add your feature to the eyes file
 
