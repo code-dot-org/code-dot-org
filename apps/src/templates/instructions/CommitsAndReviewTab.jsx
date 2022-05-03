@@ -7,6 +7,11 @@ import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import CodeReviewDataApi from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
 import ReviewNavigator from '@cdo/apps/templates/instructions/codeReviewV2/ReviewNavigator';
+import CodeReviewTimelineElement, {
+  codeReviewTimelineElementType
+} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
+import CodeReviewTimelineCommit from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineCommit';
+import CodeReviewTimelineReview from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineReview';
 import Button from '@cdo/apps/templates/Button';
 
 export const VIEWING_CODE_REVIEW_URL_PARAM = 'viewingCodeReview';
@@ -63,6 +68,14 @@ const CommitsAndReviewTab = ({
     );
   }
 
+  const fakeCommit = {
+    id: 1,
+    createdAt: '2022-03-31T04:58:42.000Z',
+    comment: 'This is a comment from your teacher',
+    projectVersion: 'asdfjkl',
+    isVersionExpired: false
+  };
+
   return (
     <div style={styles.reviewsContainer}>
       <div style={styles.header}>
@@ -90,6 +103,15 @@ const CommitsAndReviewTab = ({
           />
         </div>
       </div>
+      <div>Example timeline:</div>
+      <CodeReviewTimelineElement type={codeReviewTimelineElementType.CREATED} />
+      <CodeReviewTimelineCommit commit={fakeCommit} />
+      <CodeReviewTimelineCommit commit={fakeCommit} />
+      <CodeReviewTimelineReview />
+      <CodeReviewTimelineCommit
+        commit={fakeCommit}
+        isLastElementInTimeline={true}
+      />
     </div>
   );
 };
