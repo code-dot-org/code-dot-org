@@ -111,23 +111,23 @@ class CurriculumDocsTest < ActionDispatch::IntegrationTest
       @programming_expression = create :programming_expression, programming_environment: @programming_environment, programming_environment_category: programming_environment_category
     end
 
-    test "docs index should cache all queries" do
+    test "environment index should cache all queries" do
       assert_cached_queries(0) do
-        get '/programming_environments'
+        get programming_environments_path
       end
       assert_response :success
     end
 
-    test "docs ide show should cache all queries" do
+    test "environment show should cache all queries" do
       assert_cached_queries(0) do
-        get "/programming_environments/#{@programming_environment.name}"
+        get programming_environment_path(@programming_environment.name)
       end
       assert_response :success
     end
 
-    test "docs expression show should cache all queries" do
+    test "expression show should cache all queries" do
       assert_cached_queries(0) do
-        get "/programming_environments/#{@programming_environment.name}/programming_expressions/#{@programming_expression.key}"
+        get programming_environment_programming_expression_path(@programming_environment.name, @programming_expression.key)
       end
       assert_response :success
     end
