@@ -66,7 +66,8 @@ table td {
   padding-top: 5px;
 }
 
-#donorslider h1 {
+#donorslider h1,
+.homepage-supporters h1 {
   width: 100%;
   font-size: 24px;
   font-weight: 900;
@@ -99,7 +100,18 @@ table td {
 
 
 
-/* Styles for the updated Supporters page */
+/* Styles for the updated Supporters section on the Homepage
+- changed May 2022 */
+.homepage-supporters {
+  padding: 2em 2em 4em;
+  text-align: center;
+}
+.homepage-supporters .donor-button {
+  margin: 0 auto 1.5em;
+}
+
+/* Styles for the updated Supporters page
+- changed May 2022 */
 .clearfix {
   clear: both;
 }
