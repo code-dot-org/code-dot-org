@@ -5,15 +5,11 @@
   script_level = local_assigns[:script_level]
   level = local_assigns[:level]
   lesson = local_assigns[:lesson]
-  full_width = local_assigns[:full_width]
-
-  show_bug_links = script_level || (level && level.try(:is_project_level))
 
   user_type = nil
 
   header_class = 'header-wrapper'
-  header_class = header_class + (show_bug_links ? ' feedback-bug-links' : '')
-  header_class = header_class + (script_level || level ? ' hide_on_mobile' : '')
+  header_class = header_class + (rack_env?(:levelbuilder) ? ' levelbuilder-header' : '')
 
   if current_user
     if current_user.teacher?
