@@ -135,7 +135,7 @@ class ProgrammingExpressionsController < ApplicationController
   end
 
   def docs_show
-    if DCDO.get('use-studio-code-docs', false)
+    if DCDO.get('use-studio-code-docs', true)
       return render :not_found unless @programming_expression
       return redirect_to(programming_environment_programming_expression_path(@programming_expression.programming_environment.name, @programming_expression.key))
     end

@@ -11,7 +11,7 @@ class ProgrammingEnvironmentsController < ApplicationController
   end
 
   def docs_index
-    if DCDO.get('use-studio-code-docs', false)
+    if DCDO.get('use-studio-code-docs', true)
       @programming_environments = ProgrammingEnvironment.all.order(:name).map(&:summarize_for_index)
       render :index
     else
@@ -72,7 +72,7 @@ class ProgrammingEnvironmentsController < ApplicationController
   end
 
   def docs_show
-    if DCDO.get('use-studio-code-docs', false)
+    if DCDO.get('use-studio-code-docs', true)
       @programming_environment = ProgrammingEnvironment.find_by_name(params[:programming_environment_name])
       return render :not_found unless @programming_environment
       redirect_to(programming_environments_path(@programming_environment.name))
