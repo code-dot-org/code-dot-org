@@ -1,8 +1,13 @@
 /* @file Test of our p5.play Sprite wrapper object */
 /* global p5 */
 import {expect} from '../../util/reconfiguredChai';
-import {sandboxDocumentBody} from '../../util/testUtils';
-import createP5Wrapper from '../../util/gamelab/TestableP5Wrapper';
+import {
+  forEveryBooleanPermutation,
+  sandboxDocumentBody
+} from '../../util/testUtils';
+import createP5Wrapper, {
+  expectAnimationsAreClones
+} from '../../util/gamelab/TestableP5Wrapper';
 
 describe('P5SpriteWrapper', function() {
   let p5Wrapper, createSprite;
@@ -137,6 +142,281 @@ describe('P5SpriteWrapper', function() {
       expect(sprite1.velocityY).to.equal(1);
       expect(sprite2.velocityX).to.equal(0);
       expect(sprite2.velocityY).to.equal(0);
+    });
+  });
+
+  describe('width, height', function() {
+    describe('sprites without animations', function() {
+      var sprite1;
+
+      beforeEach(function() {
+        sprite1 = createSprite(200, 200);
+      });
+
+      it('defaults to 100 by 100 when no width or height are set', function() {
+        expect(sprite1.width).to.equal(100);
+        expect(sprite1.height).to.equal(100);
+      });
+
+      it('gets and sets the same value', function() {
+        sprite1.width = 200;
+        sprite1.height = 450;
+        expect(sprite1.width).to.equal(200);
+        expect(sprite1.height).to.equal(450);
+      });
+
+      it('gets unscaled width and height', function() {
+        sprite1.width = 200;
+        sprite1.height = 450;
+        sprite1.scale = 2;
+        expect(sprite1.width).to.equal(200);
+        expect(sprite1.height).to.equal(450);
+        expect(sprite1.scale).to.equal(2);
+        sprite1.scale = 0.5;
+        expect(sprite1.width).to.equal(200);
+        expect(sprite1.height).to.equal(450);
+        expect(sprite1.scale).to.equal(0.5);
+        sprite1.width = 100;
+        expect(sprite1.width).to.equal(100);
+      });
+    });
+
+    describe('sprites with animations', function() {
+      var sprite;
+      beforeEach(function() {
+        var image = new p5.Image(100, 100, p5Wrapper.p5);
+        var frames = [{name: 0, frame: {x: 0, y: 0, width: 50, height: 50}}];
+        var sheet = new p5Wrapper.p5.SpriteSheet(image, frames);
+        var animation = new p5Wrapper.p5.Animation(sheet);
+        sprite = createSprite(0, 0);
+        sprite.addAnimation('label', animation);
+      });
+
+      it('defaults to image height and width when no width or height are set', function() {
+        expect(sprite.width).to.equal(50);
+        expect(sprite.height).to.equal(50);
+      });
+
+      it('gets and sets the same value', function() {
+        sprite.width = 150;
+        sprite.height = 200;
+        expect(sprite.width).to.equal(150);
+        expect(sprite.height).to.equal(200);
+      });
+
+      it('gets unscaled width and height', function() {
+        sprite.width = 200;
+        sprite.height = 450;
+        sprite.scale = 2;
+        expect(sprite.width).to.equal(200);
+        expect(sprite.height).to.equal(450);
+        expect(sprite.scale).to.equal(2);
+        sprite.scale = 0.5;
+        expect(sprite.width).to.equal(200);
+        expect(sprite.height).to.equal(450);
+        expect(sprite.scale).to.equal(0.5);
+        sprite.width = 100;
+        expect(sprite.width).to.equal(100);
+      });
+    });
+  });
+
+  describe('getScaledWidth, getScaledHeight', function() {
+    describe('sprites without animations', function() {
+      it('returns width and height when no scale is set', function() {
+        var sprite1 = createSprite(200, 200);
+        expect(sprite1.getScaledWidth()).to.equal(100);
+        expect(sprite1.getScaledHeight()).to.equal(100);
+        sprite1.width = 200;
+        sprite1.height = 400;
+        expect(sprite1.getScaledWidth()).to.equal(200);
+        expect(sprite1.getScaledHeight()).to.equal(400);
+      });
+
+      it('gets scaled values', function() {
+        var sprite1 = createSprite(200, 200);
+        sprite1.width = 200;
+        sprite1.height = 450;
+        sprite1.scale = 2;
+        expect(sprite1.getScaledWidth()).to.equal(400);
+        expect(sprite1.getScaledHeight()).to.equal(900);
+        expect(sprite1.scale).to.equal(2);
+        sprite1.scale = 0.5;
+        expect(sprite1.getScaledWidth()).to.equal(100);
+        expect(sprite1.getScaledHeight()).to.equal(225);
+        expect(sprite1.width).to.equal(200);
+        expect(sprite1.height).to.equal(450);
+        expect(sprite1.scale).to.equal(0.5);
+        sprite1.width = 100;
+        expect(sprite1.getScaledWidth()).to.equal(50);
+      });
+    });
+
+    describe('sprites with animations', function() {
+      var sprite1;
+      beforeEach(function() {
+        sprite1 = createSprite(0, 0);
+        sprite1.addAnimation('label', createTestAnimation());
+      });
+
+      it('returns width and height when no scale is set', function() {
+        expect(sprite1.getScaledWidth()).to.equal(50);
+        expect(sprite1.getScaledHeight()).to.equal(50);
+        sprite1.width = 200;
+        sprite1.height = 400;
+        expect(sprite1.getScaledWidth()).to.equal(200);
+        expect(sprite1.getScaledHeight()).to.equal(400);
+      });
+
+      it('gets scaled values', function() {
+        sprite1.width = 200;
+        sprite1.height = 450;
+        sprite1.scale = 2;
+        expect(sprite1.getScaledWidth()).to.equal(400);
+        expect(sprite1.getScaledHeight()).to.equal(900);
+        expect(sprite1.scale).to.equal(2);
+        sprite1.scale = 0.5;
+        expect(sprite1.getScaledWidth()).to.equal(100);
+        expect(sprite1.getScaledHeight()).to.equal(225);
+        expect(sprite1.width).to.equal(200);
+        expect(sprite1.height).to.equal(450);
+        expect(sprite1.scale).to.equal(0.5);
+        sprite1.width = 100;
+        expect(sprite1.getScaledWidth()).to.equal(50);
+      });
+
+      it('gets scaled values regardless of colliders', function() {
+        var sprite2 = createSprite(0, 0);
+        sprite2.addAnimation('label', createTestAnimation());
+
+        sprite1.width = 200;
+        sprite1.height = 400;
+        sprite1.scale = 2;
+
+        expect(sprite1.getScaledWidth()).to.equal(400);
+        expect(sprite1.getScaledHeight()).to.equal(800);
+        sprite1.collide(sprite2);
+        expect(sprite1.getScaledWidth()).to.equal(400);
+        expect(sprite1.getScaledHeight()).to.equal(800);
+      });
+    });
+  });
+
+  describe('setAnimation(label)', function() {
+    const ANIMATION_LABEL = 'animation1',
+      SECOND_ANIMATION_LABEL = 'animation2';
+    let sprite, projectAnimations;
+
+    beforeEach(function() {
+      sprite = createSprite(0, 0);
+
+      // We manually preload animations onto p5._predefinedSpriteAnimations for the use of
+      // setAnimation.
+      projectAnimations = {
+        [ANIMATION_LABEL]: createTestAnimation(8),
+        [SECOND_ANIMATION_LABEL]: createTestAnimation(10)
+      };
+      p5Wrapper.p5._predefinedSpriteAnimations = projectAnimations;
+    });
+
+    it('throws if the named animation is not found in the project', function() {
+      expect(() => {
+        sprite.setAnimation('fakeAnimation');
+      }).to.throw(
+        `Unable to find an animation named "fakeAnimation".  Please make sure the animation exists.`
+      );
+    });
+
+    it('makes the named animaiton the current animation, if the animation is found', function() {
+      sprite.setAnimation(ANIMATION_LABEL);
+
+      // Current animation label should be animation label
+      expect(sprite.getAnimationLabel()).to.equal(ANIMATION_LABEL);
+
+      // Current animation will be a clone of the project animation:
+      expectAnimationsAreClones(
+        sprite.animation,
+        projectAnimations[ANIMATION_LABEL]
+      );
+    });
+
+    it('changes the animation to first frame and plays it by default', function() {
+      sprite.setAnimation(ANIMATION_LABEL);
+
+      // Animation is at frame 1
+      expect(sprite.animation.getFrame()).to.equal(0);
+
+      // Animation is playing
+      expect(sprite.animation.playing).to.be.true;
+    });
+
+    describe('repeat call', function() {
+      beforeEach(function() {
+        // Set first animation and advance a few frames, to simulate an
+        // animation in the middle of playback.
+        sprite.setAnimation(ANIMATION_LABEL);
+        sprite.animation.changeFrame(3);
+      });
+
+      it('resets the current frame if called with a new animation', function() {
+        expect(sprite.getAnimationLabel()).to.equal(ANIMATION_LABEL);
+        expect(sprite.animation.getFrame()).to.equal(3);
+
+        sprite.setAnimation(SECOND_ANIMATION_LABEL);
+
+        expect(sprite.getAnimationLabel()).to.equal(SECOND_ANIMATION_LABEL);
+        expect(sprite.animation.getFrame()).to.equal(0);
+      });
+
+      it('does not reset the current frame if called with the current animation', function() {
+        expect(sprite.getAnimationLabel()).to.equal(ANIMATION_LABEL);
+        expect(sprite.animation.getFrame()).to.equal(3);
+
+        sprite.setAnimation(ANIMATION_LABEL);
+
+        expect(sprite.getAnimationLabel()).to.equal(ANIMATION_LABEL);
+        expect(sprite.animation.getFrame()).to.equal(3);
+      });
+
+      it('unpasuses a paused sprite if called with a new animation', function() {
+        sprite.pause();
+        expect(sprite.getAnimationLabel()).to.equal(ANIMATION_LABEL);
+        expect(sprite.animation.playing).to.be.false;
+
+        sprite.setAnimation(SECOND_ANIMATION_LABEL);
+
+        expect(sprite.getAnimationLabel()).to.equal(SECOND_ANIMATION_LABEL);
+        expect(sprite.animation.playing).to.be.true;
+      });
+
+      it('does not unpause a paused sprite if called with the current animation', function() {
+        expect(sprite.animation.playing).to.be.true;
+        sprite.pause();
+        expect(sprite.getAnimationLabel()).to.equal(ANIMATION_LABEL);
+        expect(sprite.animation.playing).to.be.false;
+
+        sprite.setAnimation(ANIMATION_LABEL);
+
+        expect(sprite.getAnimationLabel()).to.equal(ANIMATION_LABEL);
+        expect(sprite.animation.playing).to.be.false;
+      });
+
+      // Applies to both cases, so unify them
+      forEveryBooleanPermutation(same => {
+        const description = `called with ${
+          same ? 'the current' : 'a new'
+        } animation`;
+        const label = same ? ANIMATION_LABEL : SECOND_ANIMATION_LABEL;
+        it(`does not pause a playing sprite if ${description}`, function() {
+          expect(sprite.getAnimationLabel()).to.equal(ANIMATION_LABEL);
+          expect(sprite.animation.playing).to.be.true;
+
+          sprite.setAnimation(label);
+
+          expect(sprite.getAnimationLabel()).to.equal(label);
+          expect(sprite.animation.playing).to.be.true;
+        });
+      });
     });
   });
 
