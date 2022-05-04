@@ -1,6 +1,8 @@
 class ProjectVersionsController < ApplicationController
   before_action :authenticate_user!
 
+  include ProjectVersionHelper
+
   # POST /project_versions
   def create
     _, project_id = storage_decrypt_channel_id(params[:storage_id])
@@ -23,13 +25,12 @@ class ProjectVersionsController < ApplicationController
     return render :not_acceptable unless project_owner
     return render :forbidden unless can?(:project_commits, ProjectVersion.new, project_owner, project_id)
     commits = ProjectVersion.where(project_id: project_id).where.not(comment: '').order(created_at: :asc)
-    project_expired_date = 1.year.ago
     commits = commits.map do |commit|
       {
         createdAt: commit.created_at,
         comment: commit.comment,
         projectVersion: commit.object_version_id,
-        isVersionExpired: commit.created_at < project_expired_date
+        isVersionExpired: version_expired?(commit.created_at)
       }
     end
     render :ok, json: commits.to_json
