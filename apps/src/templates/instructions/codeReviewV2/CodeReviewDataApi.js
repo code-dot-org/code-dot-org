@@ -1,8 +1,23 @@
+/* global appOptions */
+import {findProfanity} from '@cdo/apps/utils';
+import javalabMsg from '@cdo/javalab/locale';
+
 export default class CodeReviewDataApi {
   constructor(channelId, levelId, scriptId) {
     this.channelId = channelId;
     this.levelId = levelId;
     this.scriptId = scriptId;
+  }
+
+  // Temp method only used to set this.token
+  getCodeReviewCommentsForProject(onDone) {
+    return $.ajax({
+      url: `/code_review_comments/project_comments`,
+      method: 'GET',
+      data: {channel_id: this.channelId}
+    }).done((data, _, request) => {
+      this.token = request.getResponseHeader('csrf-token');
+    });
   }
 
   getReviewablePeers() {
@@ -41,6 +56,8 @@ export default class CodeReviewDataApi {
     //     script_id: this.scriptId
     //   }
     // });
+
+    this.getCodeReviewCommentsForProject();
 
     // For now returning stub data
     return [
@@ -134,5 +151,44 @@ export default class CodeReviewDataApi {
         isVersionExpired: false
       }
     ];
+  }
+
+  submitNewCodeReviewComment(commentText) {
+    return new Promise((resolve, reject) => {
+      findProfanity(commentText, appOptions.locale, this.token)
+        .done(profaneWords => {
+          if (profaneWords?.length > 0) {
+            reject({
+              profanityFoundError: javalabMsg.commentProfanityFound({
+                wordCount: profaneWords.length,
+                words: profaneWords.join(', ')
+              })
+            });
+          } else {
+            // $.ajax({
+            //   url: `/code_review_notes`,
+            //   type: 'POST',
+            //   headers: {'X-CSRF-Token': this.token},
+            //   data: {
+            //     channel_id: this.channelId,
+            //     script_id: this.scriptId,
+            //     level_id: this.levelId,
+            //     comment: commentText
+            //   }
+            // })
+            //   .done(newComment => resolve(newComment))
+            //   .fail(result => reject(result));
+          }
+          const fakeNewComment = {
+            id: 789,
+            commentText: commentText,
+            name: 'Steve',
+            timestampString: '2022-03-31T04:58:42.000Z',
+            isResolved: false
+          };
+          resolve(fakeNewComment);
+        })
+        .fail(error => reject(error));
+    });
   }
 }

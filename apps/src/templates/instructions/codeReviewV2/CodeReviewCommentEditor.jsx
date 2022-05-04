@@ -1,66 +1,82 @@
 import React, {useRef} from 'react';
+import PropTypes from 'prop-types';
 import {Editor} from '@toast-ui/react-editor';
 import '@toast-ui/editor/dist/toastui-editor.css';
 import './codeReviewCommentEditor.scss';
 import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
+import javalabMsg from '@cdo/javalab/locale';
 
-const CodeReviewCommentEditor = () => {
+const CodeReviewCommentEditor = ({addCodeReviewComment}) => {
   const textArea = useRef(null);
 
-  const onChange = () => {
-    console.log(textArea.current.editorInst.getMarkdown());
+  const handleSubmit = () => {
+    addCodeReviewComment(
+      textArea.current.editorInst.getMarkdown(),
+      onSubmitSuccess,
+      onSubmitFailure
+    );
   };
 
-  const handleSubmit = () => {
-    console.log('save the following comment:');
-    console.log(textArea.current.editorInst.getMarkdown());
+  const onSubmitSuccess = () => {
+    clearTextBox();
+  };
+
+  const clearTextBox = () => {
+    textArea.current.editorInst.moveCursorToEnd();
+    const selectionEnd = textArea.current.editorInst.getSelection()[1];
+    textArea.current.editorInst.deleteSelection(0, selectionEnd);
+  };
+
+  const onSubmitFailure = () => {
+    // TODO: handle submit failure
   };
 
   const handleCancel = () => {
-    console.log('canceled');
+    console.log('canceled - effect TBD');
   };
 
   return (
     <>
       <Editor
-        placeholder="Add a comment to the review"
+        placeholder={javalabMsg.addACommentToReview()}
         previewStyle="vertical"
         height="auto"
         minHeight="60px"
         initialEditType="wysiwyg"
         useCommandShortcut={true}
         hideModeSwitch={true}
-        className="testit"
         toolbarItems={[
           [
             {
-              // custom code block button
               name: 'codeblock',
               className: 'code toastui-editor-toolbar-icons',
               command: 'codeBlock',
-              tooltip: 'Insert CodeBlock',
+              tooltip: javalabMsg.insertCodeblock(),
               state: 'codeBlock'
             }
           ]
         ]}
         ref={textArea}
-        onChange={onChange}
       />
       <div style={styles.buttons}>
         <Button
           onClick={handleCancel}
-          text={'Cancel'}
+          text={javalabMsg.cancel()}
           color={Button.ButtonColor.gray}
         />
         <Button
           onClick={handleSubmit}
-          text={'Submit'}
+          text={javalabMsg.submit()}
           color={Button.ButtonColor.orange}
         />
       </div>
     </>
   );
+};
+
+CodeReviewCommentEditor.propTypes = {
+  addCodeReviewComment: PropTypes.func.isRequired
 };
 
 export default CodeReviewCommentEditor;

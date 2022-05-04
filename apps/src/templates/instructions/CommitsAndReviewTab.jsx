@@ -25,9 +25,9 @@ const CommitsAndReviewTab = props => {
   } = props;
 
   const [loadingReviewData, setLoadingReviewData] = useState(false);
-  const [reviewData, setReviewData] = useState([]);
+  const [closedReviewData, setClosedReviewData] = useState([]);
+  const [openReviewData, setOpenReviewData] = useState(null);
   const [commitsData, setCommitsData] = useState([]);
-  const [hasOpenCodeReview, setHasOpenCodeReview] = useState(null);
 
   const dataApi = useMemo(
     () => new CodeReviewDataApi(channelId, serverLevelId, serverScriptId),
@@ -46,8 +46,7 @@ const CommitsAndReviewTab = props => {
         dataApi.getCommits()
       ]);
       setCommitsData(commits);
-      setReviewData(codeReviews);
-      setIsCodeReviewOpen(codeReviews);
+      setCodeReviewData(codeReviews);
     } catch (err) {
       // TODO: display error message TBD
       console.log(err);
@@ -56,10 +55,15 @@ const CommitsAndReviewTab = props => {
     setLoadingReviewData(false);
   }, [dataApi, onLoadComplete]);
 
-  const setIsCodeReviewOpen = reviewData => {
-    if (reviewData.length) {
-      const mostRecentReview = reviewData[reviewData.length - 1];
-      setHasOpenCodeReview(!mostRecentReview.isClosed);
+  const setCodeReviewData = codeReviews => {
+    if (codeReviews.length) {
+      const lastReview = codeReviews[codeReviews.length - 1];
+      if (lastReview.isClosed) {
+        setClosedReviewData(codeReviews);
+      } else {
+        setClosedReviewData(codeReviews.slice(0, -1));
+        setOpenReviewData(lastReview);
+      }
     }
   };
 
@@ -69,6 +73,20 @@ const CommitsAndReviewTab = props => {
       onSuccess(response);
     } catch (err) {
       onFailure(err);
+    }
+  };
+
+  const addCodeReviewComment = async (commentText, onSuccess, onFailure) => {
+    try {
+      const newComment = await dataApi.submitNewCodeReviewComment(commentText);
+      setOpenReviewData({
+        ...openReviewData,
+        comments: [...openReviewData.comments, newComment]
+      });
+      onSuccess();
+    } catch (err) {
+      onFailure();
+      console.log(err);
     }
   };
 
@@ -117,8 +135,15 @@ const CommitsAndReviewTab = props => {
           />
         </div>
       </div>
-      <CodeReviewTimeline reviewData={reviewData} commitsData={commitsData} />
-      {!hasOpenCodeReview && (
+      <CodeReviewTimeline
+        reviewData={[
+          ...closedReviewData,
+          ...(openReviewData ? [openReviewData] : [])
+        ]}
+        commitsData={commitsData}
+        addCodeReviewComment={addCodeReviewComment}
+      />
+      {!openReviewData && (
         <Button
           icon="comment"
           onClick={() => {}}

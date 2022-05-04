@@ -11,7 +11,11 @@ import Comment from '@cdo/apps/templates/instructions/codeReview/Comment';
 import CodeReviewCommentEditor from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewCommentEditor';
 import {reviewShape} from '@cdo/apps/templates/instructions/codeReviewV2/shapes';
 
-const CodeReviewTimelineReview = ({review, isLastElementInTimeline}) => {
+const CodeReviewTimelineReview = ({
+  review,
+  isLastElementInTimeline,
+  addCodeReviewComment
+}) => {
   const {
     createdAt,
     isClosed,
@@ -60,7 +64,11 @@ const CodeReviewTimelineReview = ({review, isLastElementInTimeline}) => {
             viewAsCodeReviewer={true}
           />
         ))}
-        {!isClosed && <CodeReviewCommentEditor />}
+        {!isClosed && (
+          <CodeReviewCommentEditor
+            addCodeReviewComment={addCodeReviewComment}
+          />
+        )}
         {!isClosed && (
           <div style={styles.codeWorkspaceDisabledMsg}>
             <span style={styles.note}>{javalabMsg.noteWorthy()}</span>&nbsp;
@@ -74,7 +82,8 @@ const CodeReviewTimelineReview = ({review, isLastElementInTimeline}) => {
 
 CodeReviewTimelineReview.propTypes = {
   isLastElementInTimeline: PropTypes.bool,
-  review: reviewShape
+  review: reviewShape,
+  addCodeReviewComment: PropTypes.func.isRequired
 };
 
 export default CodeReviewTimelineReview;
