@@ -439,6 +439,9 @@ describe('CircuitPlaygroundBoard', () => {
     let wrappedPort;
     beforeEach(() => {
       wrappedPort = new WebSerialPortWrapper();
+      sinon
+        .stub(wrappedPort, 'open')
+        .returns(new Promise(resolve => resolve(wrappedPort)));
       board = new CircuitPlaygroundBoard(wrappedPort);
       board.port_.vendorId = '0x239A';
     });
