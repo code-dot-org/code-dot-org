@@ -1257,8 +1257,8 @@ body.iframe_embed_app_and_code {
 #codeApp.pin_bottom {
   position: absolute;
   top: 60px;
-  left: $codeApp-left-margin;
-  right: 25px;
+  left: 10px;
+  right: 10px;
   bottom: 10px;
 
   &.centered_embed {
