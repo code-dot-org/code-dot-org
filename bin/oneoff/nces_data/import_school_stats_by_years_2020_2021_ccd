@@ -6,7 +6,7 @@ CDO.log = Logger.new(STDOUT)
 
 SURVEY_YEAR = '2020-2021'.freeze
 
-DRY_RUN = true
+DRY_RUN = false
 
 VIRTUAL_SCHOOL_MAP = {
   'Full Virtual' => 'Yes',

@@ -386,7 +386,7 @@ class School < ApplicationRecord
       # Some of this data has #- appended to the front, so we strip that off with .to_s.slice(2) (it's always a single digit)
       CDO.log.info "Seeding 2020-2021 public school data."
       AWS::S3.seed_from_file('cdo-nces', "2020-2021/ccd/schools_public.csv") do |filename|
-        merge_from_csv(filename, {headers: true, quote_char: "\x00"}, true, is_dry_run: true, ignore_attributes: ['last_known_school_year_open']) do |row|
+        merge_from_csv(filename, {headers: true, quote_char: "\x00"}, true, is_dry_run: false, ignore_attributes: ['last_known_school_year_open']) do |row|
           row = row.to_h.map {|k, v| [k, sanitize_string_for_db(v)]}.to_h
           {
             id:                           row['School ID - NCES Assigned [Public School] Latest available year'].to_i.to_s,
