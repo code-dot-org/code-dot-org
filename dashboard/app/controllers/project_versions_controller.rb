@@ -22,13 +22,14 @@ class ProjectVersionsController < ApplicationController
     project_owner = User.find_by(id: user_id_for_storage_id(user_storage_id))
     return render :not_acceptable unless project_owner
     return render :forbidden unless can?(:project_commits, ProjectVersion.new, project_owner, project_id)
-    commits = ProjectVersion.where(project_id: project_id).order(created_at: :desc)
+    commits = ProjectVersion.where(project_id: project_id).where.not(comment: '').order(created_at: :desc)
+    project_expired_date = 1.year.ago
     commits = commits.map do |commit|
       {
         createdAt: commit.created_at,
         comment: commit.comment,
         projectVersion: commit.object_version_id,
-        isVersionExpired: commit.created_at < 1.year.ago
+        isVersionExpired: commit.created_at < project_expired_date
       }
     end
     render :ok, json: commits.to_json
