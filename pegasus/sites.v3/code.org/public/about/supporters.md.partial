@@ -20,7 +20,7 @@ To contact the Office of Development, please email giving@code.org or call (206)
 
 
 ## Platinum Supporters ($3,000,000+)
-<section>
+<section class="flex-container">
   <img src="/images/fit-150/avatars/amazon.jpg" alt="Amazon logo" />
   <img src="/images/fit-150/avatars/microsoft.jpg" alt="Microsoft logo" />
   <p><strong>Anonymous</strong></p>
@@ -29,19 +29,19 @@ To contact the Office of Development, please email giving@code.org or call (206)
 
 
 ## Gold Supporters ($1,000,000+)
-<section>
+<section class="flex-container logos">
   <img src="/images/fit-150/avatars/ballmer_group.jpg" alt="Ballmer Group logo" />
   <img src="/images/fit-150/avatars/coinbase.png" alt="Coinbase logo" />
   <img src="/images/fit-150/avatars/google.png" alt="Google logo" />
 </section>
-<section>
+<section class="flex-container text">
   <p><strong>Charlie Lee</strong></p>
   <p><strong>Anonymous</strong></p>
 </section>
 
 
 <section class="lists no-flex no-padding">
-  <section class="no-padding mobile-hide">
+  <section class="flex-container no-padding mobile-hide">
     <h3>Institutional Supporters</h3>
     <h3>Individual Supporters</h3>
   </section>
