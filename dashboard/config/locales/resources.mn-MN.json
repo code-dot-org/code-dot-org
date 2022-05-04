@@ -910,6 +910,16 @@
         "teacher_forum/csd/2021": {
           "name": "Багш нарын форум"
         },
+        "computing-innovations/csd/2021": {
+          "name": "Тооцооллын инноваци"
+        },
+        "internet-of-things-video/csd/2021": {
+          "type": "Видео"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "Компьютерийн шинжлэх ухаан бүх зүйлийг өөрчилж байна",
+          "type": "Видео"
+        },
         "designing_screens_with_code/csd/2021": {
           "name": "Дэлгэцийг кодоор загварчлах"
         },
@@ -946,6 +956,12 @@
         "circuits-logic-video/csd/2021": {
           "name": "Компьютерууд хэрхэн ажилладаг: Хэлхээ ба логик",
           "type": "Видео"
+        },
+        "representation-matters-exemplar-2019/csd/2021": {
+          "name": "Төлөөллийн асуудал"
+        },
+        "representation-matters/csd/2021": {
+          "name": "Төлөөллийн асуудал"
         },
         "representing-information-1/csd/2021": {
           "name": "Мэдээллийг төлөөлөх"
@@ -1078,6 +1094,19 @@
         "teacher_forum_1/csd/2021": {
           "name": "Багш нарын форум"
         },
+        "problem-solving-process-exemplar-2020/csd/2021": {
+          "name": "Асуудал шийдэх үйл явц"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "name": "Асуудал шийдэх үйл явц",
+          "type": "Видео"
+        },
+        "the-problem-solving-process/csd/2021": {
+          "name": "Асуудал шийдэх үйл явц"
+        },
+        "problem-solving-process/csd/2021": {
+          "name": "Асуудал шийдэх үйл явц"
+        },
         "what-is-a-computer-2020/csd/2021": {
           "name": "Компьютер гэж юу вэ?"
         },
@@ -1101,6 +1130,12 @@
         },
         "apps_and_problem_solving/csd/2021": {
           "name": "Апп ба асуудлыг шийдэх"
+        },
+        "exploring-web-pages-exemplar-2020/csd/2021": {
+          "name": "Вэб хуудсуудыг судлах"
+        },
+        "exploring-web-pages/csd/2021": {
+          "name": "Вэб хуудсуудыг судлах"
         },
         "intro_to_web_lab_part_2/csd/2021": {
           "type": "Видео"

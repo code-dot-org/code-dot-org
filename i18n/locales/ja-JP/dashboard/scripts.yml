@@ -175,6 +175,7 @@ ja:
               name: プレイラボ
               description_student: このレッスンでは、学習者が、安全で支援的な環境でコンピュータ サイエンスの入門的な体験を積み、基本的なブロックコードを使ってゲームを作成します。
           student_description: プレイラボでお話やゲームを作りましょう！
+          name: プレイラボ
         artist:
           title: アーティスト
           description: アーティストでかっこいい絵やデザインを描きましょう！
@@ -185,6 +186,7 @@ ja:
               description_student: "「アーティスト」をプログラミングして美しい画像を作成しましょう。"
               description_teacher: このレッスンでは、生徒がアーティストを制御して、画面上で絵を完成させます。このアーティストステージでは、「100ピクセルずつ前進」や「90度右に回転」などの新しいブロックを使って、より複雑な画像を作成していきます。
           student_description: アーティストでかっこいい絵やデザインを描きましょう！
+          name: アーティスト
         hourofcode:
           title: 古典的な迷路
           description: アングリーバード、植物対ゾンビ、アイス・エイジのスクラットなどのキャラクターを使って、コンピューター サイエンスの基礎を試してみよう！
@@ -347,6 +349,7 @@ ja:
               name: ディズニー インフィニティ プレイラボ
               description_student: このレッスンでは、学習者が、安全で支援的な環境でコンピュータ サイエンスの入門的な体験を積み、基本的なブロックコードを使ってゲームを作成します。
           student_description: プレイラボで、ディズニー インフィニティ キャラクターが登場するストーリーやゲームを作成しましょう。
+          name: インフィニティ
         algebrademo:
           lessons:
             Defining Simple Functions:
@@ -515,6 +518,7 @@ ja:
               description_student: クリックしてドラッグし、パズルを完成させましょう。
               description_teacher: このレッスンでは、生徒がコンピューターラボに進むときに何が起こるかを理解します。まずはコンピューターラボのマナーを紹介する簡単なディスカッションから始まり、次にコンピューターを使ってオンラインパズルを完成させます。
           student_description: ジグソーチュートリアルをお試しください。
+          name: ジグソーパズル
         step:
           title: ステップ
           description: ステップチュートリアル
@@ -1186,6 +1190,8 @@ ja:
               name: まとめ
         equity-pd:
           lessons:
+            Codeorg Equity PD:
+              name: Code.org エクイティPD
             Necessary Background:
               name: 必要な背景
         science-PD2:
@@ -1545,6 +1551,7 @@ ja:
               name: アイスエイジ プレイラボ
               description_student: このレッスンでは、学習者が、安全で支援的な環境でコンピュータ サイエンスの入門的な体験を積み、基本的なブロックコードを使ってゲームを作成します。
           student_description: アイスエイジ プレイラボでストーリーを作成したり、ゲームを作ったりしましょう！
+          name: 氷河期
         CSPPD3-Unit3:
           lessons:
             Challenge Overview:
@@ -1650,6 +1657,7 @@ ja:
               description_student: チュートリアルの概要：まず、生徒は、オブジェクトを「魚」または「魚ではない」に分類して、海からゴミを取り除く試みを行います。次に、トレーニング データセットを拡張して、水中に属するその他の海洋生物を含めなくてはなりません。アクティビティの後半では、生徒はランダムに生成された魚のイメージに適用する独自のラベルを選択します。このトレーニング データは、新しいイメージに自動的にラベルを付けることができる機械学習モデルに使用されます。
               description_teacher: このレッスンでは、すべての年齢の学習者が、安全で支援的な環境でコーディングとコンピュータ サイエンスの入門的な体験を積むことができます。まず、生徒は、オブジェクトを「魚」または「魚ではない」に分類して、海からゴミを取り除く試みを行います。次に、トレーニング データセットを拡張して、水中に属するその他の海洋生物を含めなくてはなりません。アクティビティの後半では、生徒はランダムに生成された魚のイメージに適用する独自のラベルを選択します。このトレーニング データは、新しいイメージに自動的にラベルを付けることができる機械学習モデルに使用されます。
           student_description: AIと機械学習を使ってどのように世界の問題に対処するかを学びましょう。
+          name: 海
         CSPPD3-Unit3-pt2:
           lessons:
             Challenge Overview:
@@ -2184,6 +2192,8 @@ ja:
               name: 長期的研究にご参加ください！
             CSP Student Post-Course Survey:
               name: CSP生徒向けコース後アンケート
+            Multi-Screen Apps:
+              name: マルチスクリーンアプリ
             '"if" Statements Unplugged':
               name: オフラインで学ぶ「If」文
             Boolean Expressions and "if" Statements:
@@ -12108,6 +12118,8 @@ ja:
               name: シーンの作成
             Text and Captioned Scenes:
               name: テキストとキャプション付きシーン
+            Sprite Properties:
+              name: スプライトのプロパティ
           student_description: ユニット3では、ゲームラボでアニメーション、インタラクティブアート、ゲームをプログラミングしながら、プログラミングエクスペリエンスを構築します。ユニットは、単純な形状から始まり、コンピューター サイエンティストが日常的に使用するのと同じプログラミング概念と設計プロセスを使って、より洗練されたスプライトベースのゲームを構築していきます。最終プロジェクトでは、パーソナライズされたインタラクティブなプログラムを開発します。
         csd-bugs:
           title: CSD教師のバグの例
@@ -13676,6 +13688,8 @@ ja:
               description_teacher: "**今日の質問: 変数を使ってプログラムに情報を格納するにはどうすればよいですか？**このレッスンでは、変数を使って数値にラベルを付ける方法を学習します。生徒は、入力-出力-ストレージ-処理モデルのストレージコンポーネントの文脈の中で、変数の目的の非常に基本的な説明からレッスンを始めます。次のレベルでは、生徒は、変数を数値のラベルまたは名前を付ける方法とするモデルを学習します。"
             Sprites and Animations:
               name: スプライトとアニメーション
+            Sprite Properties:
+              name: スプライトのプロパティ
             Text and Captioned Scenes:
               name: テキストとキャプション付きシーン
             The Draw Loop:
@@ -15250,6 +15264,8 @@ ja:
               description_teacher: "**今日の質問: 変数を使ってプログラムに情報を格納するにはどうすればよいですか？**このレッスンでは、変数を使って数値にラベルを付ける方法を学習します。生徒は、入力-出力-ストレージ-処理モデルのストレージコンポーネントの文脈の中で、変数の目的の非常に基本的な説明からレッスンを始めます。次のレベルでは、生徒は、変数を数値のラベルまたは名前を付ける方法とするモデルを学習します。"
             Sprites:
               name: スプライト
+            Sprite Properties:
+              name: スプライトのプロパティ
             Text:
               name: テキスト
               description_student: "**今日の質問: テキストを使ってシーンとアニメーションを改善するにはどうすればよいですか？** \\\\r \\\\rこのレッスンでは、ゲームラボのテキストコマンドを紹介し、座標平面とパラメータを使用する練習をさらに行います。レッスンの初めに、クラスはゲームラボで作成された漫画にキャプションを付けるよう求められます。次に、Code Studioに移動して、画面にテキストを配置したり、サイズなどの他のテキストプロパティを制御したりします。"
@@ -15613,6 +15629,9 @@ ja:
             Sprites:
               key: スプライト
               name: スプライト
+            Sprite Properties:
+              key: スプライトのプロパティ
+              name: スプライトのプロパティ
             Text:
               key: テキスト
               name: テキスト
@@ -17858,6 +17877,7 @@ ja:
         csa-self-paced-pl:
           lessons:
             Navigating the Codeorg learning platform:
+              name: "  Code.org学習プラットフォームのナビゲート"
               description_teacher: |-
                 **学習内容:**
 
@@ -19750,11 +19770,15 @@ ja:
             'Lesson 11: Assessment Day':
               key: 'レッスン11: 評価日'
               name: 評価日
+            CS Principles Post-Course Survey:
+              name: CS原則 のコース後アンケート
           lesson_groups:
             csp_parameters_return_values:
               display_name: パラメータと戻り値
             csp_libraries:
               display_name: ライブラリ
+            lessonGroup-3:
+              display_name: アンケート
         csp8-2022:
           lessons:
             Create PT - Complete the Task (12 hrs):
@@ -20320,41 +20344,70 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+            lessonGroup-4:
+              display_name: サンド ボックス
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
               key: ドラッグ＆ドロップ
               name: ドラッグ＆ドロップ
+              description_student: クリックしてドラッグし、パズルを完成させましょう。
+              description_teacher: この**スキル構築**レッスンでは、生徒がコンピュータラボに向かうときに、何を期待できるのかを伝えます。コンピュータラボのマナーを紹介する簡単な説明から始め、次に、コンピュータを使ってオンライン パズルを完成させてもらいます。
             Sequencing with Scrat:
               key: スクラッチと学ぶシーケンス
               name: スクラッチと学ぶシーケンス
+              description_student: どんぐりにたどり着けるようにスクラッチをプログラムします。
+              description_teacher: この**スキル構築**レッスンでは、生徒は鳥を迷路の片側から反対側の豚のいるところまで移動させるためのシーケンスアルゴリズムを開発します。 これを行うには、線形のシーケンスでコードブロックを積み上げます。
             Programming with Angry Birds:
               key: めいろ のプログラミング
               name: めいろ のプログラミング
+              description_teacher: この**スキル構築**レッスンでは、生徒は引き続きシーケンスアルゴリズムを開発します。
             Programming with Rey and BB-8:
               key: レイとBB-8と学ぶプログラミング
               name: レイとBB-8と学ぶプログラミング
+              description_teacher: このレッスンでは、新しく学んだプログラミングスキルをより複雑な方法で使って、BB-8がトリッキーなコースをナビゲートできるようにします。
             Programming with Harvester:
               key: ハーベスターと学ぶプログラミング
               name: ハーベスターと学ぶプログラミング
+              description_student: ファーマーが道に沿って野菜を収穫するのを手伝ってあげましょう。
+              description_teacher: この**スキル構築**レッスンでは、生徒は、学習したプログラミングの概念をハーベスターの環境に適用します。生徒は引き続きシーケンスアルゴリズムスキルを展開し、デバッグプロセスを使い始めます。
             Loops with Scrat:
               key: スクラッチと学ぶループ
               name: スクラッチと学ぶループ
+              description_student: ループを使ってスクラッチがより多くの地面をカバーできるようにします。
+              description_teacher: この**スキル構築**レッスンでは、リスがドングリのところに着くのを助けることを目指して、パズルのプログラミングにおけるループの概念を実践に移します。
             Loops with Laurel:
               key: くりかえし あつめる
               name: くりかえし あつめる
+              description_teacher: このレッスンでは、引き続きループの概念を学習します。ここでは、冒険者のローレルが、ループを使って洞窟で宝物を収集します。ローレルの旅を助けるために、新しい「宝物を手に入れる」 (get treasure) ブロックを導入しました。
             Ocean Scene with Loops:
               key: アーティストくりかえし
               name: アーティストくりかえし
+              description_student: ループとパターンを使って画像を完成させましょう。
+              description_teacher: ループに戻って、生徒は一連の簡単な指示をループすることで画像を描く方法を学びます。前のオンラインレッスンでは、ループを使って迷路を進み、宝物を収集しました。ここでは、ループでパターンを作成します。この段階の最後に、生徒はループを使って自分の画像を作成する機会があります。
             Drawing Gardens with Loops:
               key: アーティストくりかえし
               name: アーティストくりかえし
+              description_student: パターンとループを使って画像を完成させましょう。
+              description_teacher: ループに戻って、生徒は一連の簡単な指示をループすることで画像を描く方法を学びます。前のオンラインレッスンでは、ループを使って迷路を進み、宝物を収集しました。ここでは、生徒はループを使ってパターンを作成します。この段階の最後に、生徒はループを使って自分の画像を作成する機会があります。
             On the Move with Events:
               key: プレイ ラボのイベント
               name: プレイ ラボのイベント
+              description_student: 独自のゲームやストーリーを作成しましょう。
+              description_teacher: このオンラインアクティビティでは、生徒はプレイラボでイベントを使用する方法を学び、学習したすべてのプログラミングスキルを適用してアニメーションゲームを作成します。プレイラボでクリエイティブになってストーリーを作りましょう！
             A Royal Battle with Events:
               key: プレイ ラボのイベント
               name: プレイ ラボのイベント
+              description_student: イベントを使って、ストーリーを作成したり、インタラクティブゲームを作成したりしましょう。
+              description_teacher: このオンラインアクティビティでは、生徒はプレイラボでイベントを使用する方法を学び、学習したすべてのプログラミングスキルを適用してアニメーションゲームを作成します。プレイラボでクリエイティブになってゲームを作りましょう！
+            Programming in with Angry Birds:
+              name: めいろ のプログラミング
+              description_teacher: この**スキル構築**レッスンでは、生徒は引き続きシーケンスアルゴリズムを開発します。
+            Programming in Harvester:
+              key: 農夫と学ぶプログラミング
+              name: ハーベスターと学ぶプログラミング
+              description_student: ファーマーが道に沿って野菜を収穫するのを手伝ってあげましょう。
+              description_teacher: この**スキル構築**レッスンでは、生徒は、学習したプログラミングの概念をハーベスターの環境に適用します。生徒は引き続きシーケンスアルゴリズムスキルを展開し、デバッグプロセスを使い始めます。
           lesson_groups:
             csf_sequencing:
               display_name: シークエンス
@@ -20362,6 +20415,10 @@ ja:
               display_name: くりかえし
             csf_events:
               display_name: イベント
+          description_audience: '年齢: 4～8才'
+          description_short: 低学年向けのコンピュータ サイエンス入門です。幼児向けと小学1年生向けコースの良い所をとりだしました。
+          description: 自分のペースで以下のレッスンを試して、コンピューター サイエンスを学びましょう。そしてコンピューター プログラムの作成方法、問題解決スキルの開発方法、楽しい課題への取り組み方を学びましょう。ゲームやクリエイティブプロジェクトを手がけて、友人、家族、先生と共有しましょう。
+          student_description: 自分のペースで以下のレッスンを試して、コンピューター サイエンスを学びましょう。そしてコンピューター プログラムの作成方法、問題解決スキルの開発方法、楽しい課題への取り組み方を学びましょう。ゲームやクリエイティブプロジェクトを手がけて、友人、家族、先生と共有しましょう。
         csa2-2022:
           lessons:
             lesson-5:
@@ -20373,15 +20430,41 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+            lessonGroup-4:
+              display_name: サンド ボックス
         csa3-2022:
           lessons:
+            lesson-3:
+              name: 1次元 (1D) 配列
+            lesson-4:
+              name: 配列エレメント
             lesson-5:
               name: ループ用
+            lesson-6:
+              name: 配列アルゴリズム
+            lesson-7:
+              name: 強化されたForループ
+            lesson-8:
+              name: 静的変数と定数
+            lesson-9:
+              name: 多相性
+            lesson-10:
+              name: 配列アルゴリズムをもっと見る
+            lesson-11:
+              name: 配列のリバース
+            lesson-13:
+              name: Social Goodプロジェクト用データ – 1日目
+            lesson-14:
+              name: Social Goodプロジェクト用データ – 2日目
+            lesson-15:
+              name: Social Goodプロジェクト用データ – 3日目
             lesson-16:
               name: コンソール
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+            lessonGroup-4:
+              display_name: サンド ボックス
         tessplayground:
           name: tessplayground
         cs4all-invasive-species:
@@ -20400,6 +20483,8 @@ ja:
           lessons:
             lesson-2:
               name: ユニット4 評価
+            lesson-11:
+              name: ランダム
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -20407,6 +20492,8 @@ ja:
           lessons:
             lesson-2:
               name: ユニット5 評価
+            lesson-7:
+              name: 強化されたForループ
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -20419,6 +20506,62 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+        pltess:
+          lessons:
+            lesson-2:
+              name: レッスン3
+        self-paced-pl-csa3-2022:
+          lessons:
+            lesson-3:
+              name: JavaのIf文
+              description_student: |-
+                **行うこと:**
+
+                -   論理式の評価
+                -   if、if-else、if-else-if-else文の読み書き
+                -   代入演算子と比較演算子の違いを説明
+
+                \*\* 所要時間目安:\*\* 90分
+              description_teacher: |-
+                **行うこと:**
+
+                -   論理式の評価
+                -   if、if-else、if-else-if-else文の読み書き
+                -   代入演算子と比較演算子の違いを説明
+
+                \*\* 所要時間目安:\*\* 90分
+            lesson-4:
+              name: Javaのループ
+              description_student: |-
+                **行うこと:**
+
+                -   Javaでのループの読み書きとデバッグ
+
+                **所要時間目安:** 90分
+              description_teacher: |-
+                **行うこと:**
+
+                -   Javaでのループの読み書きとデバッグ
+
+                **所要時間目安:** 90分
+            lesson-5:
+              name: Javaの配列
+              description_student: |-
+                **行うこと:**
+
+                -   プリミティブデータ型の1次元配列の宣言および初期化
+                -   配列のエレメントへのアクセスおよび変更
+                -   配列のトラバース
+
+                **所要目安時間:** 120分
+              description_teacher: |-
+                **行うこと:**
+
+                -   プリミティブデータ型の1次元配列の宣言および初期化
+                -   配列のエレメントへのアクセスおよび変更
+                -   配列のトラバース
+
+                **所要目安時間:** 120分
         csa7-pilot-extra:
           lessons:
             Assessment Day:
@@ -20654,6 +20797,8 @@ ja:
             Java Lab:
               name: Javaラボ
               key: Javaラボ
+            lesson-6:
+              name: 知的財産
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -20676,8 +20821,86 @@ ja:
           lessons:
             lesson-1:
               name: ようこそ
-            lesson-9:
+            lesson-4:
+              description_student: |-
+                **行うこと:**
+
+                -   CS Discoveriesカリキュラムを高度に理解。
+              description_teacher: "**概要:**\nこれらの非同期アクティビティは、コース内容とツールの概要、コース構成概要、コース全体における問題解決プロセスの使い方プレビューなど、CS Discoveriesカリキュラム概要を受講者に提供します。 \n\n**生徒が行うこと:**\n\n-   CS Discoveriesカリキュラムの高度な理解。 \n\n**所要目安時間:** 40分"
+            lesson-5:
+              name: 非同期報告
+            lesson-6:
+              name: モデルレッスン2 - ユニット2 レッスン2
+            lesson-7:
+              name: ID
+            lesson-8:
+              name: コースの課題
+            lesson-10:
+              description_student: |-
+                **行うこと:**
+
+                -   CS Discoveries教室における教師としてのあなたの役割を考える。
+              description_teacher: "**概要:**\nこれらの非同期アクティビティは、学習リーダーとしての教師の役割を生徒に説明します。生徒には、CS教室における教師としての自分の役割をどのように見るかについてのCSへの影響に関する経験や信念の考え方が求められます。この振り返りは、ワークショップ後半におけるIDセッションの準備となります。 \n\n**生徒が行うこと:**\n\n-   CS Discoveries教室における教師としてのあなた/他の生徒の役割を考える。 \n\n**所要目安時間:** 20分"
+            lesson-11:
+              name: まとめ
+            Intro to HTML:
+              name: モデルレッスン2 - ユニット2 レッスン2
+        vpl-csd2-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: ようこそ
+            lesson-3:
               name: レッスンプラン
+            lesson-4:
+              name: 準備を非同期にする
+            lesson-6:
+              name: 非同期報告
+            lesson-9:
+              name: まとめ
+        vpl-csd3-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: ようこそ
+            lesson-5:
+              name: 非同期報告
+            lesson-8:
+              name: まとめ
+        vpl-csd4-summer-pilot-2022:
+          lessons:
+            lesson-2:
+              name: "[TEMPLATE] まとめユニット"
+              description_student: "**学習内容:**\n\n-   チャプタープロジェクトの最後を見て回る。 \n\n**所要時間目安:** 10分"
+              description_teacher: "**学習内容:**\n\n-   チャプタープロジェクトの最後を見て回る。 \n\n**所要時間目安:** 10分"
+            lesson-3:
+              name: "[TEMPLATE] コンテンツレッスン"
+              description_student: |-
+                **学習内容:**
+
+                -   レッスン目標の挿入。
+
+                **所要時間目安:** \_\_\_\_分
+              description_teacher: |-
+                **学習内容:**
+
+                -   レッスン目標の挿入。
+
+                **所要時間目安:** \_\_\_\_分
+            lesson-4:
+              name: ようこそ
+            lesson-7:
+              name: 準備を非同期にする
+            lesson-11:
+              name: 非同期報告
+            lesson-14:
+              name: まとめ
+        vpl-csd5-summer-pilot-2022:
+          lessons:
+            lesson-1:
+              name: ようこそ
+            lesson-4:
+              name: 準備を非同期にする
+            lesson-6:
+              name: 非同期報告
         csa2-2022-exemplars:
           lessons:
             lesson-1:
@@ -20725,13 +20948,576 @@ ja:
               key: レッスンプラン
             Next steps:
               key: 次の手順
+        vpl-csd1-ci-pilot-2022:
+          lessons:
+            lesson-4:
+              name: 物理コンピューティング
+          title: 'モジュール 1: 問題解決と計算を教えるための準備'
+          description: "この専門学習モジュールは、Code.orgの問題解決と計算ユニットを教えるための準備を支援するよう設計されています。 \n\n**この専門学習モジュールの学習内容:**\n\n-   問題解決と計算を大まかに知る。\n-   ユニットにある主な概念を訓練。\n-   チャプタープロジェクトの最後を見て回る。\n\n\\*所要目安時間:\\*\\* 30分"
+          student_description: "この専門学習モジュールは、Code.orgの問題解決と計算ユニットを教えるための準備を支援するよう設計されています。 \n\n**この専門学習モジュールの学習内容:**\n\n-   問題解決と計算を大まかに知る。\n-   ユニットにある主な概念を訓練。\n-   チャプタープロジェクトの最後を見て回る。\n\n\\*所要目安時間:\\*\\* 30分"
         vpl-csd2-ci-pilot-2022:
           lessons:
+            lesson-1:
+              name: ウェブ開発の導入
+              description_student: |-
+                **学習内容:**
+
+                -   code.orgのウェブ開発ユニットを大まかに知る
+                -   ウェブ開発ユニットコンテンツの最初の週の予告を見る。
+
+                **学習内容:** 10分
+              description_teacher: |-
+                **学習内容:**
+
+                -   code.orgのウェブ開発ユニットを大まかに知る
+                -   ウェブ開発ユニットコンテンツの最初の週の予告を見る。
+
+                **学習内容:** 10分
+            lesson-2:
+              name: HTMLでウェブサイトを構築しよう
+              description_student: "**学習内容:**\n\n-   Web Labの使い方を大まかに知る。\n-   HMLを使ったウェブページへの構造追加。 \n-   ウェブページへの画像を追加。 \n\n**所要目安時間:** 30分"
+              description_teacher: "**学習内容:**\n\n-   Web Labの使い方を大まかに知る。\n-   HMLを使ったウェブページへの構造追加。 \n-   ウェブページへの画像を追加。 \n\n**所要目安時間:** 30分"
+            lesson-3:
+              name: CSSでウェブサイトにスタイルを設定しよう
+              description_student: |-
+                **学習内容:**
+
+                -   CSSを使ったウェブページのテキストスタイル設定。
+                -   ウェブページインデックスへCSSスタイルシートをリンク。
+                -   ウェブページ上のエレメントにスタイルを設定できる追加プロパティを見てみる。
+
+                **所要目安時間:** 25分
+              description_teacher: |-
+                **学習内容:**
+
+                -   CSSを使ったウェブページのテキストスタイル設定。
+                -   ウェブページインデックスへCSSスタイルシートをリンク。
+                -   ウェブページ上のエレメントにスタイルを設定できる追加プロパティを見てみる。
+
+                **所要目安時間:** 25分
+            lesson-4:
+              name: デジタルメディアに関するロールと責任を考える
+              description_student: |-
+                **学習内容:**
+
+                -   デジタルメディアの作成者および消費者両方のロールと責任を理解するため、生徒の作業方法を見てみる。
+
+                **所要目安時間:** 15分
+              description_teacher: |-
+                **学習内容:**
+
+                -   デジタルメディアの作成者および消費者両方のロールと責任を理解するため、生徒の作業方法を見てみる。
+
+                **所要目安時間:** 15分
             lesson-5:
               name: 物理コンピューティング
+              description_student: "**学習内容:**\n\n-   チャプタープロジェクトの最後を見て回る。 \n\n**所要時間目安:** 10分"
+              description_teacher: "**学習内容:**\n\n-   チャプタープロジェクトの最後を見て回る。 \n\n**所要時間目安:** 10分"
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ウェブ開発を教える
+          title: 'モジュール 2: ウェブ開発を教えるための準備'
+          description: "この専門学習モジュールは、Code.orgのウェブ開発ユニットを教えるための準備を支援するよう設計されています。 \n\n**この専門学習モジュールの学習内容:**\n\n-   ウェブ開発を大まかに知る。\n-   ユニットにある主な概念を訓練。\n-   Web Labに触れる。\n-   チャプタープロジェクトの最後を見て回る。\n\n**所要目安時間:** 90分"
+          student_description: "この専門学習モジュールは、Code.orgのウェブ開発ユニットを教えるための準備を支援するよう設計されています。 \n\n**この専門学習モジュールの学習内容:**\n\n-   ウェブ開発を大まかに知る。\n-   ユニットにある主な概念を訓練。\n-   Web Labに触れる。\n-   チャプタープロジェクトの最後を見て回る。\n\n**所要目安時間:** 90分"
         vpl-csd3-ci-pilot-2022:
+          lessons:
+            lesson-1:
+              name: インタラクティブなアニメーションとゲームを大まかに知る
+            lesson-2:
+              name: シーンの作成
+            lesson-3:
+              name: Spritesでシーンをアニメ化する
+            lesson-4:
+              name: ゲームデザインを見てみる
+            lesson-5:
+              name: 物理コンピューティング
+          lesson_groups:
+            lessonGroup-2:
+              display_name: インタラクティブなアニメーションとゲームを教える準備をする
+          title: 'モジュール3: インタラクティブなアニメーションとゲームを教える準備をする '
+          description: "この専門学習モジュールは、Code.orgのインタラクティブなアニメーションとゲームを教えるための準備を支援するよう設計されています。 \n\n**この専門学習モジュールの学習内容:**\n\n-   インタラクティブなアニメーションとゲームを大まかに知る。\n-   ユニットにある主な概念を訓練。\n-   Game Labに触れる。\n-   チャプタープロジェクトの最後を見て回る。\n\n**所要目安時間:** 120分"
+          student_description: "この専門学習モジュールは、Code.orgのインタラクティブなアニメーションとゲームを教えるための準備を支援するよう設計されています。 \n\n**この専門学習モジュールの学習内容:**\n\n-   インタラクティブなアニメーションとゲームを大まかに知る。\n-   ユニットにある主な概念を訓練。\n-   Game Labに触れる。\n-   チャプタープロジェクトの最後を見て回る。\n\n**所要目安時間:** 120分"
+        vpl-csd4-ci-pilot-2022:
           lessons:
             lesson-5:
               name: 物理コンピューティング
+          title: " モジュール 4: デザインプロセスを教えるための準備"
+          description: "この専門学習モジュールは、Code.orgのデザインプロセスユニットを教えるための準備を支援するよう設計されています。 \n\n**この専門学習モジュールの学習内容:**\n\n-   デザインプロセスを大まかに知る。\n-   ユニットにある主な概念を訓練。\n-   App Labに触れる。\n-   チャプタープロジェクトの最後を見て回る。\n\n**所要目安時間:** 90分"
+          student_description: "この専門学習モジュールは、Code.orgのデザインプロセスユニットを教えるための準備を支援するよう設計されています。 \n\n**この専門学習モジュールの学習内容:**\n\n-   デザインプロセスを大まかに知る。\n-   ユニットにある主な概念を訓練。\n-   App Labに触れる。\n-   チャプタープロジェクトの最後を見て回る。\n\n**所要目安時間:** 90分"
+        vpl-csd5-ci-pilot-2022:
+          lessons:
+            lesson-4:
+              name: データと社会
+            lesson-5:
+              name: 物理コンピューティング
+          title: 'モジュール 5: データとソサエティを教えるための準備'
+          description: "この専門学習モジュールは、Code.orgのデータとソサエティユニットを教えるための準備を支援するよう設計されています。 \n\n**この専門学習モジュールの学習内容:**\n\n-   データとソサエティを大まかに知る。\n-   ユニットにある主な概念を訓練。\n-   チャプタープロジェクトの最後を見て回る。\n\n\\*所要目安時間:\\*\\* 90分"
+          student_description: "この専門学習モジュールは、Code.orgのデータとソサエティユニットを教えるための準備を支援するよう設計されています。 \n\n**この専門学習モジュールの学習内容:**\n\n-   データとソサエティを大まかに知る。\n-   ユニットにある主な概念を訓練。\n-   チャプタープロジェクトの最後を見て回る。\n\n\\*所要目安時間:\\*\\* 90分"
+        vpl-csd6-ci-pilot-2022:
+          lessons:
+            lesson-5:
+              name: 物理コンピューティング
+          title: 'モジュール 6: フィジカルコンピューティングを教えるための準備'
+          description: "この専門学習モジュールは、Code.orgのフィジカルコンピューティングユニットを教えるための準備を支援するよう設計されています。 \n\n**この専門学習モジュールの学習内容:**\n\n-   フィジカルコンピューティングを大まかに知る。\n-   ユニットにある主な概念を訓練。\n-   メーカーアプリに触れる。\n-   チャプタープロジェクトの最後を見て回る。\n\n**所要目安時間:** 90分"
+          student_description: "この専門学習モジュールは、Code.orgのフィジカルコンピューティングユニットを教えるための準備を支援するよう設計されています。 \n\n**この専門学習モジュールの学習内容:**\n\n-   フィジカルコンピューティングを大まかに知る。\n-   ユニットにある主な概念を訓練。\n-   メーカーアプリに触れる。\n-   チャプタープロジェクトの最後を見て回る。\n\n**所要目安時間:** 90分"
+        vpl-csd7-ci-pilot-2022:
+          lessons:
+            lesson-2:
+              name: インタラクティブなアニメーションとゲーム
+            lesson-3:
+              name: 設計プロセス
+            lesson-4:
+              name: データと社会
+            lesson-5:
+              name: 物理コンピューティング
+            Train a machine learning model:
+              name: インタラクティブなアニメーションとゲーム
+            Engage with machine learning apps:
+              name: 設計プロセス
+            Consider real world implications:
+              name: データと社会
+            Unit wrap up:
+              name: 物理コンピューティング
+          title: 'モジュール 7: AIと機械学習を教えるための準備'
+          description: "この専門学習モジュールは、Code.orgの人工知能（AI）と機械学習ユニットを教えるための準備を支援するよう設計されています。 \n\n**この専門学習モジュールの学習内容:**\n\n-   人工知能（AI）と機械学習を大まかに知る。\n-   ユニットにある主な概念を訓練。\n-   AI LabとApp Labに触れる。\n-   チャプタープロジェクトの最後を見て回る。\n-   生徒と一緒にユニットの実施計画を立てる。\n\n**所要目安時間:** 120分"
+          student_description: "この専門学習モジュールは、Code.orgの人工知能（AI）と機械学習ユニットを教えるための準備を支援するよう設計されています。 \n\n**この専門学習モジュールの学習内容:**\n\n-   人工知能（AI）と機械学習を大まかに知る。\n-   ユニットにある主な概念を訓練。\n-   AI LabとApp Labに触れる。\n-   チャプタープロジェクトの最後を見て回る。\n-   生徒と一緒にユニットの実施計画を立てる。\n\n**所要目安時間:** 120分"
         hello-world-csc:
+          lessons:
+            lesson-1:
+              name: ハローワールドCSC
+              description_student: このレッスンではSpritesを作成およびアニメートし、イベントでインタラクティブにする方法を学習します。
+              description_teacher: この**スキルビルド**レッスンではSpritesを作成およびアニメートし、イベントでインタラクティブにする方法を学習します。
           title: ハローワールド
+        csd-playground:
+          lessons:
+            lesson-1:
+              name: レベル アップデート
+            Innovations in Computing:
+              name: コンピューティングにおける革新
+              description_teacher: このコースの最後のユニットを開始するに当たり、生徒はコンピューティングの興味深い革新性について調査します。このレッスンでは、さまざまなコンピューティングフォームファクター (コンピューターはどのようなものか) と、コンピューティングの影響を受けるフィールドについて生徒に説明します。このユニットの後半では、生徒は自分の物理的なコンピューティングデバイスを開発しながら、このレッスンで触れたデバイスを振り返ります。
+          title: CSDプレイグラウンド
+          description_audience: カリキュラム ライター
+          description_short: カリキュラムステージバージョン間でレッスンまたはレベルの更新を実施する場合
+          description: カリキュラムステージバージョン間でレッスンまたはレベルの更新を実施する場合
+        csc-pilot-2022-ecosystems:
+          lessons:
+            Hello World CSC:
+              name: ハローワールドCSC
+              description_student: このレッスンではSpritesを作成およびアニメートし、イベントでインタラクティブにする方法を学習します。
+              description_teacher: この**スキルビルド**レッスンではSpritesを作成およびアニメートし、イベントでインタラクティブにする方法を学習します。
+        csc-pilot-2022-timecapsule:
+          lessons:
+            Poem Art:
+              name: 詩のアート
+              description_teacher: '新人コーダー向けのこのCSとELAの統合レッスンで、生徒はコードでポエムをアニメーション化し、ポエムの内容を説明します。生徒はポエムの雰囲気を読んで本質を見抜きます。それからポエムの内容を説明するのにぴったりのエフェクトやイメージを見つけます。最後に生徒はイベント (コード) を使って内容の変化を描写したり、ポエムの中に新しいイメージを導入するアニメーションを作成します。 '
+        csc-pilot-2022-fables:
+          lessons:
+            Hello World CSC:
+              name: ハローワールドCSC
+              description_student: このレッスンではSpritesを作成およびアニメートし、イベントでインタラクティブにする方法を学習します。
+              description_teacher: この**スキルビルド**レッスンではSpritesを作成およびアニメートし、イベントでインタラクティブにする方法を学習します。
+        csd1-2022:
+          lessons:
+            CS Discoveries Pre-survey:
+              name: CS発見の事前アンケート
+              key: CS発見の事前アンケート
+            Intro to Problem Solving:
+              name: 問題解決入門
+              key: 問題解決入門
+            The Problem Solving Process:
+              name: The Problem Solving Process
+              key: The Problem Solving Process
+            Exploring Problem Solving:
+              name: 問題解決の探求
+              key: 問題解決の探求
+            What is a Computer?:
+              description_teacher: "**今日の質問: コンピューターとは何ですか？** \\\\r \\\\rこのレッスンでは、生徒は「コンピューター」とは何かを考えます。レッスンを開始したら、コンピューターの考えられる定義をブレインストーミングし、このブレインストーミングの結果をボードに配置します。次に、生徒はグループで作業して、ポスター用紙で写真を「コンピューター」か「コンピューターではない」かに分類します。グループはポスターを部屋の周りに配置し、なぜそのように分類したかを簡単に説明します。次に、先生はコンピューターの定義を紹介し、生徒に新しい定義に従ってポスターを修正してもらいます。\\\\"
+            Input and Output:
+              name: 入出力
+              key: 入出力
+            Processing:
+              name: 処理
+              description_teacher: "**今日の質問: コンピューターが情報を処理する方法にはどのようなものがありますか？** \\\\r \\\\rこのレッスンでは、if/then (条件)、一致の発見 (検索)、カウント、そして比較という4つの一般的な処理タイプを生徒に紹介します。まず、サンプルアプリを通じて処理タイプについて説明します。次に、より多くのアプリを調査して、各アプリが使用する処理タイプを決定します。そして自分のアプリについて考え、アプリが機能するために必要な処理タイプを決定します。最後に、他の処理タイプについてブレインストーミングを行います。これは、役立つかもしれないけれどもレッスンの中心テーマとしては扱われなかったものです。"
+              key: 処理
+            Storage:
+              name: ストレージ
+              key: ストレージ
+            Project - Propose an App:
+              name: プロジェクト - アプリの提案
+              description_teacher: "**今日の質問: IOSPモデルは、問題を解決するアプリの設計にどのように役立つでしょうか？** \\\\r \\\\r問題解決プロセスとコンピューターの入力/出力/保存/処理モデルの学習の締めくくりとして、生徒は実際の問題を解決するために設計されたアプリに取り組みます。このプロジェクトの完了には数日間を要し、アプリの機能を紹介するポスターを作成して、クラスメートに示します。プロジェクトガイドにはステップバイステップの指示が示され、生徒が自分の考えを整理するのに役立ちます。プロジェクトは各人で完了することもできますが、ペアで完了するように設計されています。"
+              key: プロジェクト - アプリの提案
+            Post-Project Test:
+              name: プロジェクト後のテスト
+              key: プロジェクト後のテスト
+            Intro to Problem Solving - Newspaper Table (Alternate Lesson 1):
+              name: 問題解決入門 - 新聞の表 (代替レッスン1)
+              key: 問題解決入門 - 新聞の表 (代替レッスン1)
+            Intro to Problem Solving - Spaghetti Bridge (Alternate Lesson 1):
+              name: 問題解決入門 - スパゲッティ ブリッジ (代替レッスン1)
+              key: 問題解決入門 - スパゲッティ ブリッジ (代替レッスン1)
+            Intro to Problem Solving - Paper Tower (Alternate Lesson 1):
+              name: 問題解決入門 - ペーパータワー (代替レッスン1)
+              key: 問題解決入門 - ペーパータワー (代替レッスン1)
+            Exploring Problem Solving - Animals Theme (Alternate Lesson 3):
+              name: 問題解決の探索 - 動物のテーマ (代替レッスン3)
+              key: 問題解決の探索 - 動物のテーマ (代替レッスン3)
+            Exploring Problem Solving - Games Theme (Alternate Lesson 3):
+              name: 問題解決の探索 - ゲームのテーマ (代替レッスン3)
+              key: 問題解決の探索 - ゲームのテーマ (代替レッスン3)
+          lesson_groups:
+            cspSurvey:
+              display_name: アンケート
+            csd1_1:
+              display_name: '第 1章: 問題解決プロセス'
+            csd1_2:
+              display_name: 第 2 章コンピューターと問題解決
+            csd1_3:
+              display_name: 代替レッスン
+          description_short: 人が問題を解決するためにコンピューターを使ってどのように作業をするかを学びます。
+        csd2-2022:
+          lessons:
+            Exploring Web Pages:
+              name: ウェブページの探索
+              key: ウェブページの探索
+            Intro to HTML:
+              name: HTML入門
+              key: HTML入門
+            Headings:
+              name: 見出し
+              key: 見出し
+            'Mini-Project: HTML Web Page':
+              name: 'ミニプロジェクト: HTML ウェブページ'
+              key: 'ミニプロジェクト: HTML ウェブページ'
+            Digital Footprint:
+              name: デジタルフットプリント
+              key: デジタルフットプリント
+            Styling Text with CSS:
+              name: CSSを使用したテキストのスタイル設定
+              description_teacher: "**今日の質問: ウェブページのテキストのスタイルを変更するにはどうすればよいですか？** \\\\r \\\\r \\\\rこのレッスンでは、ページにスタイル要素を盛り込む方法としてCSSを紹介します。生徒は、CSSルールセットの基本的な構文を学び、HTMLテキスト要素に影響を与えるプロパティを詳しく見ます。生徒はギネス世界記録保持者に関するHTMLページで作業し、指定されたページに独自のスタイルを追加します。"
+              key: CSSを使用したテキストのスタイル設定
+            'Mini-Project: Your Personal Style':
+              name: 'ミニプロジェクト: 個人的なスタイル'
+              key: 'ミニプロジェクト: 個人的なスタイル'
+            Intellectual Property:
+              name: 知的財産
+              key: 知的財産
+            Using Images:
+              name: 画像の使用
+              key: 画像の使用
+            Websites for Expression:
+              name: 表現のためのウェブサイト
+            Styling Elements with CSS:
+              name: CSSを使用した要素のスタイル設定
+              description_teacher: "**今日の質問: ページの画像とレイアウトにスタイルを設定するにはどうすればよいですか？**\\\\r \\\\rこのレッスンでは、CSSスタイルプロパティの説明を続けます。今回は、テキスト以外の要素に重点を置きます。生徒は、このレッスンの最初に、世界のデザートに関するウェブサイトを見ます。そして、このウェブサイトのCSSスタイルを調べて新たに変更を加え、独自のスタイルをこのページに追加します。 デザートページで作業した後、生徒は新しいCSSプロパティの知識を自身のウェブサイトに活かします。"
+              key: CSSを使用した要素のスタイル設定
+            Your Web Page - Prepare:
+              name: ウェブページ - 準備
+              key: ウェブページ - 準備
+            Project - Personal Web Page:
+              name: プロジェクト - 個人ウェブページ
+              key: プロジェクト - 個人ウェブページ
+            Websites for a Purpose:
+              name: ある目的のためのウェブサイト
+              key: ある目的のためのウェブサイト
+            Team Problem Solving:
+              name: チームの問題解決
+              key: チームの問題解決
+            Sources and Research:
+              name: 出典と調査
+              key: 出典と調査
+            Linking Pages:
+              name: ページのリンク
+              key: ページのリンク
+            Project - Website for a Purpose:
+              name: プロジェクト - ある目的のためのウェブサイト
+              key: プロジェクト - ある目的のためのウェブサイト
+            Peer Review and Final Touches:
+              name: ピアレビューと最後の仕上げ
+              key: ピアレビューと最後の仕上げ
+            Post-Project Test:
+              name: プロジェクト後のテスト
+              key: プロジェクト後のテスト
+            CS Discoveries Post-Course Survey:
+              name: CS発見 コース後アンケート
+            'Websites for Expression ':
+              key: 表現のためのウェブサイト
+              name: 表現のためのウェブサイト
+            Planning a Multi-page Website:
+              key: マルチページウェブサイトの計画
+            lesson-1:
+              key: レッスン1
+              name: CS発見 コース後アンケート
+          lesson_groups:
+            csd2_1v2:
+              display_name: '第1章: ウェブページの作成'
+            csd2_2v2:
+              display_name: '第2章: マルチページのウェブサイト'
+            cspSurvey:
+              display_name: アンケート
+          student_description: ユニット2では、コンテンツを作成して自分のウェブページで共有する方法を学びます。世界と共有したいコンテンツを決定したら、HTMLとCSSを使ってページを構造化およびスタイル設定する方法を学びます。また、デバッグ、リソースの使用、チームワークなどの貴重なプログラミングスキルも練習します。
+          description_short: ウェブラボで独自のウェブサイトを構築する方法を学びましょう。
+        csd3-2022:
+          lessons:
+            Programming for Entertainment:
+              name: 娯楽のためのプログラミング
+              key: 娯楽のためのプログラミング
+            Plotting Shapes:
+              name: 形状のプロット
+              key: 形状のプロット
+            Drawing in Game Lab:
+              name: ゲームラボでの描画
+              description_teacher: "**今日の質問: 画面に図形を描画する方法をコンピューターに伝えるにはどうすればよいですか？** \\\\r \\\\r生徒は、このユニットのプログラミング環境であるゲームラボに取りかかり、それを使って画面上に図形を配置することを始めます。シーケンスとデバッグの基本、およびいくつかの簡単なコマンドを学びます。レッスンが終わる頃には、生徒は前のレッスンで描画ツールを使って作成したような画像をプログラムできるようになっていることでしょう。"
+              key: ゲームラボでの描画
+            Variables:
+              name: 変数（へんすう）
+              key: 変数（へんすう）
+            Sprites:
+              name: スプライト
+              key: スプライト
+            Sprite Properties:
+              name: スプライトのプロパティ
+              key: スプライトのプロパティ
+            Text:
+              name: テキスト
+              key: テキスト
+            The Draw Loop:
+              description_teacher: "**今日の質問: ゲームラボで画像をアニメーション化するにはどうすればよいですか？** \\\\r \\\\rこのレッスンでは、ゲームラボのコアプログラミングパラダイムの1つである描画ループを紹介します。レッスンを開始するために、生徒はパラパラ漫画を見て、さまざまなイメージを持つフレームが数多くあると、動いているかのような印象が生まれることを確認します。次に、生徒は、ゲームラボの描画ループが、プログラムでこれと同じ印象を生み出すのにどのように役立つかを説明するビデオを視聴します。生徒は、描画ループと乱数を組み合わせて、単純なアニメーションをドットで、次にスプライトで操作します。"
+            Sprite Movement:
+              name: スプライトの動き
+              key: スプライトの動き
+            Mini-Project - Animation:
+              name: ミニプロジェクト- アニメーション
+            Conditionals:
+              name: 条件
+              key: 条件
+            Keyboard Input:
+              name: キーボード入力
+              key: キーボード入力
+            Mouse Input:
+              name: マウスの入力
+              key: マウスの入力
+            Project - Interactive Card:
+              name: プロジェクト - インタラクティブカード
+              key: プロジェクト - インタラクティブカード
+            Velocity:
+              name: 速度
+              description_teacher: "**今日の質問: プログラミング言語で複雑なパターンを隠して、簡単にプログラミングできるようにするにはどうすればよいですか？** \\\\r \\\\r前のレッスンでカウンターパターンを使用してどのようにスプライトを移動させたかを簡単に確認した後、このようなパターンを1つのブロックに隠す方法を紹介します。次に、生徒はCode Studioに移動して、スプライトの速度を直接設定する新しいブロックを試し、スプライトでより複雑な動作をプログラミングするさまざまな方法を見ていきます。"
+              key: 速度
+            Mini-Project - Side Scroller:
+              name: ミニプロジェクト- サイドスクローラー
+            Complex Sprite Movement:
+              name: 複雑なスプライトの動き
+              key: 複雑なスプライトの動き
+            Collisions:
+              name: 衝突
+              description_teacher: "**今日の質問: プログラマーはどのようにして抽象化を基にさらに抽象化できるのですか？** \\\\r \\\\r\nこのレッスンで生徒は、新しい方法で相互作用するようにスプライトをプログラムします。 [`isTouching`(#f78183)](/docs/gamelab/isTouching/)ブロックの使用方法を簡単に確認した後、生徒は2つのスプライトが他に相互作用できる方法はないかブレインストーミングします。次に、[`isTouching`(#f78183)](/docs/gamelab/isTouching/)を使って、画面上で1つのスプライトが別のスプライトを押すようにさせてから、4つの衝突ブロック (([`collide`(#f78183)](/docs/gamelab/collide/)、[`displace`(#f78183)](/docs/gamelab/displace/)、[`bounce`(#f78183)](/docs/gamelab/bounce/)、[`bounceOff`(#f78183)](/docs/gamelab/bounceOff/)) を使う練習をします。"
+              key: 衝突
+            Mini-Project - Flyer Game:
+              name: ミニプロジェクト- フライヤーゲーム
+            Functions:
+              name: 関数(かんすう)
+              description_teacher: "**今日の質問: プログラマーはどのように関数を使って独自の抽象概念を作成できますか？** \\\\r \\\\r生徒は、プログラムを整理して読みやすくするための関数を作成する方法を学びます。関数により、プログラムのブロックを繰り返し用いる作業を省くことができます。生徒はまず、ゲームラボでどのような種類の新しいブロックが必要か、そのブロックにどのようなプログラムが含まれるかを考えます。次に、ゲームラボで関数の作成を開始します。生徒は関数を使って、コードの長いブロックを描画ループから削除し、繰り返しのコードを1つの関数に置き換えます。"
+              key: 関数(かんすう)
+            The Game Design Process:
+              name: ゲームデザインプロセス
+              key: ゲームデザインプロセス
+            Using the Game Design Process:
+              name: ゲームデザインプロセスの使用
+              key: ゲームデザインプロセスの使用
+            Project - Design a Game:
+              name: プロジェクト - ゲームの設計
+              key: プロジェクト - ゲームの設計
+            Post-Project Test:
+              name: プロジェクト後のテスト
+              key: プロジェクト後のテスト
+            CS Discoveries Post-Course Survey:
+              name: CS発見 コース後アンケート
+            'Mini-Project: Captioned Scenes':
+              key: 'ミニプロジェクト: キャプション付きシーン'
+            'Mini-Project: Animation':
+              key: 'ミニプロジェクト: アニメーション'
+              name: ミニプロジェクト- アニメーション
+            'Mini-Project: Side Scroller':
+              key: 'ミニプロジェクト: サイドスクローラー'
+              name: ミニプロジェクト- サイドスクローラー
+            'Mini-Project: Flyer Game':
+              key: 'ミニプロジェクト: フライヤーゲーム'
+              name: ミニプロジェクト- フライヤーゲーム
+            lesson-1:
+              key: レッスン1
+              name: CS発見 コース後アンケート
+          lesson_groups:
+            csd3_1:
+              display_name: '第 1 章: 画像とアニメーション'
+            csd3_2:
+              display_name: '第2章: ゲームを作る'
+            cspSurvey:
+              display_name: アンケート
+          student_description: ユニット3では、ゲームラボでアニメーション、インタラクティブアート、ゲームをプログラミングしながら、プログラミングエクスペリエンスを構築します。ユニットは、単純な形状から始まり、コンピューター サイエンティストが日常的に使用するのと同じプログラミング概念と設計プロセスを使って、より洗練されたスプライトベースのゲームを構築していきます。最終プロジェクトでは、パーソナライズされたインタラクティブなプログラムを開発します。
+          description_short: ゲームラボでアニメーション、インタラクティブアート、ゲームのプログラミングを学びましょう。
+        csd4-2022:
+          lessons:
+            Understanding Your User:
+              name: ユーザーを理解する
+              key: ユーザーを理解する
+            User Interfaces:
+              name: ユーザーインターフェイス
+              key: ユーザーインターフェイス
+            Feedback and Testing:
+              name: フィードバックとテスト
+              key: フィードバックとテスト
+            Identifying User Needs:
+              name: ユーザーのニーズの特定
+              key: ユーザーのニーズの特定
+            Project - Paper Prototype:
+              name: プロジェクト - 紙のプロトタイプ
+              key: プロジェクト - 紙のプロトタイプ
+            Designing Apps for Good:
+              name: 優れたアプリの設計
+              key: 優れたアプリの設計
+            Market Research:
+              name: 市場調査
+              key: 市場調査
+            Prototype Testing:
+              name: " プロトタイプテスト"
+              key: " プロトタイプテスト"
+            Testing the App:
+              name: アプリのテスト
+              key: アプリのテスト
+            Project - App Presentation:
+              name: プロジェクト - アプリのプレゼンテーション
+              key: プロジェクト - アプリのプレゼンテーション
+            Post-Project Test:
+              name: プロジェクト後のテスト
+              key: プロジェクト後のテスト
+            CS Discoveries Post-Course Survey:
+              name: CS発見 コース後アンケート
+              key: CS発見 コース後アンケート
+            Analysis of Design:
+              key: デザインの分析
+            Paper Prototypes:
+              key: 紙のプロトタイプ
+            Digital Design:
+              key: デジタルデザイン
+            Linking Screens:
+              key: 画面のリンク
+          lesson_groups:
+            csd4_1:
+              display_name: 第 1 章：ユーザーを中心にしたデザイン
+            csd4_2:
+              display_name: 第 2 章：アプリのプロトタイピング
+            cspSurvey:
+              display_name: アンケート
+          student_description: ユニット4では、コンピューティングの幅広い社会的影響を紹介します。一連の設計課題を通じて、問題の解決策を開発しながら、他の人のニーズをよりよく理解する方法を学びます。ユニットの後半は、反復して行うチームプロジェクトで構成されています。このプロジェクトでは、チームが関心のあるニーズを特定し、紙とアプリラボの両方でソリューションのプロトタイプを作成し、実際のユーザーでテストして、フィードバックを得てさらに反復を行います。
+          description_short: ユーザーのニーズを満たすプログラムを設計する方法を学びましょう。
+        csd5-2022:
+          lessons:
+            Representation Matters:
+              name: 表現が重要
+              key: 表現が重要
+            Patterns and Representation:
+              name: パターンと表現
+              key: パターンと表現
+            ASCII and Binary Representation:
+              name: ASCIIとバイナリ表現
+              key: ASCIIとバイナリ表現
+            Representing Images:
+              name: 画像の表現
+              key: 画像の表現
+            Representing Numbers:
+              name: 数値の表現
+              key: 数値の表現
+            Combining Representations:
+              name: 表現を組み合わせる
+              key: 表現を組み合わせる
+            Keeping Data Secret:
+              name: データの秘密を守る
+              key: データの秘密を守る
+            Problem Solving and Data:
+              name: 問題解決とデータ
+              key: 問題解決とデータ
+            Structuring Data:
+              name: データの構造化
+              key: データの構造化
+            Interpreting Data:
+              name: データの解釈
+              key: データの解釈
+            Making Decisions with Data:
+              name: データを使った決定
+              key: データを使った決定
+            Automating Data Decisions:
+              name: データ決定の自動化
+              key: データ決定の自動化
+            Problem Solving with Big Data:
+              name: ビッグデータによる問題解決
+              key: ビッグデータによる問題解決
+            Project - Make a Recommendation:
+              name: プロジェクト - 推奨事項の作成
+              key: プロジェクト - 推奨事項の作成
+            Post-Project Test:
+              name: プロジェクト後のテスト
+              key: プロジェクト後のテスト
+            CS Discoveries Post-Course Survey:
+              name: CS発見 コース後アンケート
+              key: CS発見 コース後アンケート
+            Project - Create a Representation:
+              key: プロジェクト - 表現を作成する
+          lesson_groups:
+            csd5_1:
+              display_name: 第1章：情報を表現する
+            csd5_2:
+              display_name: 第 2 章：データ問題を解決
+            cspSurvey:
+              display_name: アンケート
+          student_description: ユニット5では、問題の解決におけるデータの重要性について説明し、このプロセスでコンピューターがどのように役立つかに脚光を浴びせます。最初の章では、コンピューターで情報を表現するために使用するさまざまなシステムと、それらを使用することによってもたらされる課題とトレードオフについて詳しく見ていきます。第2章では、データのコレクションを使って問題を解決する方法と、コンピューターがこのプロセスの手順をどのように自動化しているかを学びます。この章は、データの問題解決プロセスを選択した領域にどのように適用できるかを検討して締めくくります。
+          description_short: コンピューターを使ってデータの問題を解決する方法を学びましょう。
+        csd7-2022:
+          lessons:
+            Survey Planning:
+              name: データ収集の設計
+              key: データ収集の設計
+            CS Discoveries Post-Course Survey:
+              name: CS発見 コース後アンケート
+              key: CS発見 コース後アンケート
+          lesson_groups:
+            lessonGroup-4:
+              display_name: アンケート
+        csd6-2022:
+          lessons:
+            Innovations in Computing:
+              name: コンピューティングにおける革新
+              description_teacher: このコースの最後のユニットを開始するに当たり、生徒はコンピューティングの興味深い革新性について調査します。このレッスンでは、さまざまなコンピューティングフォームファクター (コンピューターはどのようなものか) と、コンピューティングの影響を受けるフィールドについて生徒に説明します。このユニットの後半では、生徒は自分の物理的なコンピューティングデバイスを開発しながら、このレッスンで触れたデバイスを振り返ります。
+            The Circuit Playground:
+              name: サーキット プレイグラウンド
+            Board Events:
+              name: ボードイベント
+            Color LEDs:
+              name: カラーLED
+            Combining Inputs and Outputs:
+              name: 入力を結合中
+            Accelerometer:
+              name: 加速度計
+              description_teacher: このレッスンでは、加速度計とその機能について学習します。生徒はそのイベントやプロパティに慣れるだけでなく、実際のユースケースで遭遇する可能性のあるものと同様の加速度計を利用して複数のプログラムを作成します。
+            Functions:
+              name: 関数(かんすう)
+            Project - Prototype an Innovation:
+              description_teacher: コースのこの最終プロジェクトでは、生徒チームが、サーキット プレイグラウンドに基づく革新的なコンピューティングデバイスのプロトタイプを開発およびテストします。ボードで利用できる入力と出力を使って、グループは興味深いユニークなユーザーインタラクションを可能にするプログラムを作成します。
+            Post-Project Test:
+              name: プロジェクト後のテスト
+            CS Discoveries Post-Course Survey:
+              name: CS発見 コース後アンケート
+          lesson_groups:
+            lessonGroup-3:
+              display_name: '第 2 章: 物理プロパティの構築'
+            lessonGroup-4:
+              display_name: アンケート
+          description_short: 物理デバイスでプログラミングする方法を学びます。
+        csd-post-survey-2022:
+          lessons:
+            Post-Course Survey:
+              name: コース終了後アンケート
+          title: CS発見 コース後アンケート
+          description: このユニットには、CS発見 コース後アンケートが含まれています。このユニットは、生徒がCS発見の最後のユニットを完了した後に割り当てることができます。
+          student_description: このユニットには、クラスがCS発見のユニットを完了したときに受けるアンケートが含まれています。このアンケートをいつ受けたらいいのかは、先生が教えてくれます。
+        csp-post-survey-2022:
+          title: CS原則 のコース後アンケート

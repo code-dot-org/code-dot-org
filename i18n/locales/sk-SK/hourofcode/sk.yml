@@ -573,7 +573,7 @@ sk:
     of millions of students. One-hour tutorials are available in 45+ languages for
     all ages.
   map_title: Hodina kódu mapa
-  map_header: "# Udalosti Hodiny kódu po celom svete"
+  map_header: "# Podujatia Hodiny kódu po celom svete"
   map_header_count_year: V roku %{year} sme mali %{event_count} registrovaných podujatí.
   see_all_events: Zobraziť všetky udalosti
   map_header_company: "# podľa názvu organizátora"
@@ -948,18 +948,18 @@ sk:
   title_signup_thanks: Ďakujeme vám, že organizujete Hodinu kódu!
   title_tutorial_guidelines: Výukový návod
   title_whole_school: Účasť celej školy
-  events_nav_title: Udalosti Hodiny kódu
-  events_nav_all: Všetky udalosti
+  events_nav_title: Podujatia Hodiny kódu
+  events_nav_all: Všetky podujatia
   events_nav_whole_schools: Celoškolské podujatia
   events_nav_special: Špeciálne podujatia
   events_nav_orgs: Organizácie
   events_all_old_title: Všetky podujatia Hodiny kódu v roku @year
   events_all_title: Všetky podujatia Hodiny kódu
-  events_whole_school_title: Celoškolské udalosti Hodiny kódu
+  events_whole_school_title: Celoškolské podujatia Hodiny kódu
   events_special_title: Špeciálne podujatia Hodiny kódu
   events_orgs_title: Všetky Hodiny kódu organizované partnerskými organizáciami
   event: udalosť
-  events: udalostí
+  events: podujatí
   highlights_title: Dávame do pozornosti
   highlights_header: Hodina kódu - Highlights
   highlights_description: Niektoré z našich obľúbených momentov kampane Hodina kódu.
@@ -10511,86 +10511,167 @@ sk:
   all: Všetky
   dont_know: Neviem
   language_label: Jazyk
-  ar: arabčina
-  az: azerbajdžančina
-  bg: bulharčina
-  bn: bengálčina
-  br: bretónčina
-  bs: bosniačtina
-  ca: katalánčina
-  cs: čeština
-  cs-cz: čeština (Česko)
-  da: dánčina
-  da-dk: dánčina (Dánsko)
-  de: nemčina
-  de-de: nemčina (Nemecko)
-  el: gréčtina
-  el-gr: gréčtina (Grécko)
-  en: Angličtina
-  en-gb: angličtina (Spojené kráľovstvo)
-  es: španielčina
-  es-es: španielčina (Španielsko)
-  es-mx: španielčina (Mexiko)
-  et: estónčina
-  eu: baskičtina
-  fa: perzština
-  fa-ir: perzština (Irán)
-  fi: fínčina
-  fi-fi: fínčina (Fínsko)
-  fil-ph: filipínčina (Filipíny)
-  fr: francúzština
-  gl: galícijčina
-  he: hebrejčina
-  hi: hindčina
-  hi-in: hindčina (India)
-  hr: chorvátčina
-  hu: maďarčina
-  ia: interlingua (IALA)
-  id: Indonézčina (Bahasa)
-  is: islandčina
-  it: taliančina
-  it-it: taliančina (Taliansko)
-  ja: japončina
-  ja-jp: japončina (Japonsko)
-  ka: gruzínčina
-  kk: kazaština
-  ko: kórejčina
-  lt: litovčina
-  lv: lotyština
-  mk: macedónčina
-  mr: maráthčina
-  ms: malajčina
-  my: barmčina
-  nl: holandčina
-  nl-nl: holandčina (Holandsko)
-  nn: nórčina (Nynorsk)
-  false: nórčina
-  pl: polština
-  pl-pl: polština (Poľsko)
-  pt: portugalčina
-  pt-br: portugalčina (Brazília)
-  pt-pt: portugalčina (Portugalsko)
-  ro: rumunčina
-  ru: ruština
-  sk: slovenčina
-  sl: slovinčina
-  sq: albánčina
-  sr: srbčina
-  sv: švédčina
-  sv-se: švédčina (Švédsko)
-  sw: swahilčina
-  ta: tamilčina
-  te: telugčina
-  th: thajčina
-  tl: tagalčina
-  tr: turečtina
-  uk: ukrajinčina
-  ur: urdčina
-  ur-in: urdčina (India)
-  ur-pk: urdčina (Pakistan)
-  vi: vietnamčina
-  zh: čínština (zjednodušená)
-  zh-cn: čínština (zjednodušená, Čína)
-  zh-hans: čínština (zjednodušená) (zh-Hans)
-  zh-hant: čínština (tradičná) (zh-Hant)
-  zh-tw: čínština (tradičná, Taiwan)
+  language_code:
+    ar: Arabic
+    az: Azerbaijani
+    bg: Bulgarian
+    bn: Bengali
+    br: Breton
+    bs: Bosnian
+    ca: Catalan
+    co: Corsican
+    cs: Czech
+    da: Danish
+    de: German
+    dv: Dhivehi
+    el: Greek
+    en: Angličtina
+    es: Spanish
+    et: Estonian
+    eu: Basque
+    fa: Persian
+    fi: Finnish
+    fil: Filipino
+    fr: French
+    ga: Irish
+    gl: Galician
+    haw: Hawaiian
+    he: Hebrew
+    hi: Hindi
+    hr: Croatian
+    hu: Hungarian
+    hy: Armenian
+    ia: Interlingua (International Auxiliary Language Association)
+    id: Indonesian
+    is: Icelandic
+    it: Italian
+    ja: Japanese
+    ka: Georgian
+    kk: Kazakh
+    km: Khmer
+    kn: Kannada
+    ko: Korean
+    ku: Kurdish
+    ky: Kyrgyz
+    lt: Lithuanian
+    lv: Latvian
+    mi: Maori
+    mk: Macedonian
+    mn: Mongolian
+    mr: Marathi
+    ms: Malay
+    mt: Maltese
+    my: Burmese
+    ne: Nepali
+    nl: Dutch
+    nn: Norwegian (Nynorsk)
+    false: Norwegian (Bokmål)
+    pl: Polish
+    ps: Pashto
+    pt: Portuguese
+    ro: Romanian
+    ru: Russian
+    se: Northern Sami
+    si: Sinhalese
+    sk: Slovak
+    sl: Slovenian
+    sq: Albanian
+    sr: Serbian
+    sv: Swedish
+    sw: Kiswahili
+    ta: Tamil
+    te: Telugu
+    tg: Tajik
+    th: Thai
+    tl: Tagalog
+    tr: Turkish
+    uk: Ukrainian
+    ur: Urdu
+    uz: Uzbek
+    vi: Vietnamese
+    zh: Chinese (Simplified)
+    zu: Zulu
+  locale_code:
+    ar-sa: Arabic
+    az-az: Azerbaijani
+    bg-bg: Bulgarian
+    bn-bd: Bengali
+    bs-ba: Bosnian
+    ca-es: Catalan
+    co-co: Corsican
+    cs-cz: Czech
+    da-dk: Danish
+    de-de: German
+    dv-mv: Dhivehi
+    el-gr: Greek
+    en-gb: English (United Kingdom)
+    en-us: Angličtina
+    es-es: Spanish (Spain)
+    es-mx: španielčina (Mexiko)
+    et-ee: Estonian
+    eu-es: Basque
+    fa-af: Dari
+    fa-ir: Persian
+    fi-fi: Finnish
+    fil-ph: Filipino
+    fr-fr: French
+    ga-ie: Irish
+    gl-es: Galician
+    haw-hi: Hawaiian
+    he-il: Hebrew
+    hi-in: Hindi
+    hr-hr: Croatian
+    hu-hu: Hungarian
+    hy-am: Armenian
+    id-id: Indonesian
+    is-is: Icelandic
+    it-it: Italian
+    ja-jp: Japanese
+    ka-ge: Georgian
+    kk-kz: Kazakh
+    km-kh: Khmer
+    kn-in: Kannada
+    ko-kr: Korean
+    ku-iq: Kurdish
+    ky-kg: Kyrgyz
+    lt-lt: Lithuanian
+    lv-lv: Latvian
+    mi-nz: Maori
+    mk-mk: Macedonian
+    mn-mn: Mongolian
+    mr-in: Marathi
+    ms-my: Malay
+    mt-mt: Maltese
+    my-mm: Burmese
+    ne-np: Nepali
+    nl-nl: Dutch
+    nn-no: Norwegian (Nynorsk)
+    no-no: Norwegian (Bokmål)
+    pl-pl: Polish
+    ps-af: Pashto
+    pt-br: Portuguese (Brazil)
+    pt-pt: Portuguese (Portugal)
+    ro-ro: Romanian
+    ru-ru: Russian
+    se-fi: Northern Sami
+    si-lk: Sinhalese
+    sk-sk: Slovak
+    sl-si: Slovenian
+    sq-al: Albanian
+    sr-sp: Serbian
+    sv-se: Swedish
+    ta-in: Tamil
+    te-in: Telugu
+    tg-tj: Tajik
+    th-th: Thai
+    tr-tr: Turkish
+    uk-ua: Ukrainian
+    ur-in: Urdu (India)
+    ur-pk: Urdu (Pakistan)
+    uz-uz: Uzbek
+    vi-vn: Vietnamese
+    zh-cn: Chinese (Simplified)
+    zh-hans: Chinese (Simplified)
+    zh-hant: Chinese (Traditional)
+    zh-tw: Chinese (Traditional)
+    zu-za: Zulu

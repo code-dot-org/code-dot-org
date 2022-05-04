@@ -4,10 +4,12 @@
       "lessons": {
         "dance-extras/Dance Party - Go Further": {
           "overview": "Dalam pelajaran ini, siswa dari semua jenjang usia mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan yang aman dan mendukung. Pelajaran ini telah dirancang untuk siswa dari semua jenjang usia namun mengharuskan kemampuan membaca. Kegiatan ini membutuhkan suara karena alatnya dibuat untuk merespon musik.",
+          "purpose": "Pelajaran ini memperkenalkan konsep coding inti dari CS dan pemrograman event (menggunakan blok).",
           "student_overview": "Dalam pelajaran ini, siswa dari semua jenjang usia mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan yang aman dan mendukung. Pelajaran ini telah dirancang untuk siswa dari semua jenjang usia namun mengharuskan kemampuan membaca. Kegiatan ini membutuhkan suara karena alatnya dibuat untuk merespon musik."
         },
         "minecraft/Minecraft Hour of Code Designer": {
           "overview": "Dalam pelajaran ini, siswa dari semua jenjang usia mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan yang aman dan mendukung. Pelajaran ini sangat cocok untuk semua siswa yang telah cukup besar untuk membaca (6 tahun ke atas). Siswa yang lebih muda mungkin tidak akan menyelesaikan tutorialnya, namun akan senang menyelesaikan puzzle selama satu jam. Siswa sekolah menengah kemungkinan besar dapat menyelesaikan tutorialnya dan punya waktu untuk bermain pada level bermain gratis di bagian akhir.",
+          "purpose": "Pelajaran ini memperkenalkan konsep coding inti dari CS dan pemrograman (menggunakan blok), di samping teknik debugging sederhana.",
           "student_overview": "Dalam pelajaran ini, siswa dari semua jenjang usia mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan yang aman dan mendukung. Pelajaran ini sangat cocok untuk semua siswa yang telah cukup besar untuk membaca (6 tahun ke atas). Siswa yang lebih muda mungkin tidak akan menyelesaikan tutorialnya, namun akan senang menyelesaikan puzzle selama satu jam. Siswa sekolah menengah kemungkinan besar dapat menyelesaikan tutorialnya dan punya waktu untuk bermain pada level bermain gratis di bagian akhir."
         },
         "hero/Minecraft Hour of Code": {
@@ -17,23 +19,35 @@
           "overview": "Dalam pelajaran terpadu ilmu komputer (CS) dan seni bahasa (ELA) ini, murid akan membuat animasi puisi dengan kode untuk menggambarkan mood sebuah puisi. Siswa akan membaca dan mengenali mood sebuah puisi. Mereka lalu akan mencari efek dan gambar yang sesuai untuk menggambarkan mood puisi tersebut. Terakhir, siswa akan menggunakan event (kode) untuk menggambarkan perubahan mood atau menganimasikan masuknya gambar baru dalam sebuah puisi.\n\nPelajaran ini dapat diselesaikan sebagai pelajaran mandiri 1 jam. Ada juga opsi untuk menggunakan pelajaran ini sebagai pelajaran pertama dari modul multi pelajaran yang disebut [Coding dengan Puisi](http://studio.code.org/s/poetry-2021).",
           "preparation": "-   Tinjau kembali dan selesaikan sendiri tutorial online: [Seni Puisi](http://studio.code.org/s/poem-art).\n\n-   Pastikan mencoba aktivitasnya terlebih dahulu sebelum meminta murid Anda menyelesaikannya. \n\n-   Periksa teknologi Anda dan ambil keputusan perlu tidaknya mengatasi masalah terlebih dahulu.\n\n-   Beberapa level membutuhkan audio agar bisa dimainkan. Bagikan headphone terlebih dahulu. \n\n-   [Opsional] 2 catatan tempel per murid untuk Penilaian."
         },
+        "flappy/Flappy Code": {
+          "overview": "Dalam pelajaran ini, pelajar mendapatkan pengalaman pengantar dengan ilmu komputer dan menciptakan permainan menggunakan kode blok sederhana. Pelajaran ini telah dirancang untuk pelajar kelas menengah, umur 10-16, tetapi dapat disesuaikan untuk pelajar yang lebih muda dan tua menggunakan saran diferensiasi yang telah disediakan.",
+          "preparation": "### Satu Minggu Sebelum Hour of Code Anda\n\n-   Tinjau kembali [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) dan [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) untuk memulai perencanaan event Hour of Code Anda. \n-   [Register your Hour of Code event](http://hourofcode.com)  jika Anda ingin menerima alat peraga atau bantuan ruang kelas. \n-   Tinjau dan selesaikan tutorial online Anda sendiri: [Make a Flappy Game](https://studio.code.org/flappy/1) \n-   Pastikan mengujinya terlebih dahulu sebelum meminta murid Anda untuk menyelesaikannya. Periksa teknologi Anda dan putuskan apakah Anda perlu menyelesaikan masalah apa saja sebelum Hour of Code Anda.\n\n### Satu Hari Sebelum Hour of Code Anda\n\n-   Tuliskan kata-kata “coding”, “pemrograman”, dan “debugging” di papan atau tambahkan ke dinding kata jika sudah ada.\n-   Setiap murid yang menyelesaikan aktivitas akan mendapatkan sertifikat. [Print one](http://code.org/certificates) untuk semua murid terlebih dahulu untuk membuatnya lebih mudah pada akhir Hour of Code Anda.",
+          "purpose": "Pelajaran ini memperkenalkan konsep coding inti dari CS dan pemrograman (menggunakan blok), di samping teknik debugging sederhana."
+        },
         "hourofcode/Maze": {
           "overview": "Dalam pelajaran ini, siswa dari semua jenjang usia mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan yang aman dan mendukung. Pelajaran ini telah dirancang untuk siswa yang berusia 4-10 tahun, namun dapat disesuaikan untuk siswa yang lebih tua dengan menggunakan saran pembedaan yang telah disediakan.",
+          "purpose": "Pelajaran ini memperkenalkan konsep coding inti dari CS dan pemrograman (menggunakan blok), di samping teknik debugging sederhana.",
           "student_overview": "Dalam pelajaran ini, siswa dari semua jenjang usia mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan yang aman dan mendukung. Pelajaran ini telah dirancang untuk siswa yang berusia 4-10 tahun, namun dapat disesuaikan untuk siswa yang lebih tua dengan menggunakan saran pembedaan yang telah disediakan."
         },
         "frozen/Artist": {
           "overview": "Dalam pelajaran ini, siswa dari semua jenjang usia mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan yang aman dan mendukung. Pelajaran ini telah dirancang untuk siswa yang berusia 10-13 tahun, namun dapat disesuaikan untuk siswa yang lebih muda atau lebih tua dengan menggunakan saran pembedaan yang telah disediakan. Siswa harus memiliki pemahaman dasar tentang geometri sederhana dan menggambar sudut.",
+          "purpose": "Pelajaran ini memperkenalkan konsep coding inti dari CS dan pemrograman (menggunakan blok), di samping teknik debugging sederhana.",
           "student_overview": "Dalam pelajaran ini, siswa dari semua jenjang usia mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan yang aman dan mendukung. Pelajaran ini telah dirancang untuk siswa yang berusia 10-13 tahun, namun dapat disesuaikan untuk siswa yang lebih muda atau lebih tua dengan menggunakan saran pembedaan yang telah disediakan. Siswa harus memiliki pemahaman dasar tentang geometri sederhana dan menggambar sudut."
         },
         "iceage/Ice Age Play Lab": {
+          "purpose": "Pelajaran ini memperkenalkan konsep coding inti dari CS dan pemrograman (menggunakan blok), di samping teknik debugging sederhana.",
           "student_overview": "Dalam pelajaran ini, siswa mendapatkan pengenalan awal tentang ilmu komputer dan membuat game menggunakan kode blok dasar."
         },
         "artist/Artist": {
           "overview": "Dalam pelajaran ini, murid akan mengontrol Artis untuk menyelesaikan gambar di layar. Tahapan Artis ini akan mempersilakan murid membuat gambar-gambar yang semakin kompleks menggunakan blok baru seperti `move forward by 100 pixels` dan `turn right by 90 degrees`.",
           "student_overview": "Buat gambar-gambar yang indah dengan memprogram Artis."
         },
+        "gumball/Gumball Play Lab": {
+          "purpose": "Pelajaran ini memperkenalkan konsep coding inti dari CS dan pemrograman (menggunakan blok), di samping teknik debugging sederhana."
+        },
         "dance/Dance Party": {
           "overview": "Dalam pelajaran ini, siswa dari semua jenjang usia mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan yang aman dan mendukung. Pelajaran ini telah dirancang untuk siswa dari semua jenjang usia namun mengharuskan kemampuan membaca. Kegiatan ini membutuhkan suara karena alatnya dibuat untuk merespon musik.",
+          "purpose": "Pelajaran ini memperkenalkan konsep coding inti dari CS dan pemrograman event (menggunakan blok).",
           "student_overview": "Dalam pelajaran ini, siswa dari semua jenjang usia mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan yang aman dan mendukung. Pelajaran ini telah dirancang untuk siswa dari semua jenjang usia namun mengharuskan kemampuan membaca. Kegiatan ini membutuhkan suara karena alatnya dibuat untuk merespon musik."
         },
         "aquatic/Aquatic": {
@@ -41,25 +55,34 @@
         },
         "hoc-encryption/Simple Encryption": {
           "overview": "Dalam pelajaran ini, siswa dikenalkan pada pentingnya enkripsi dan teknik sederhana untuk memecahkan pesan-pesan rahasia. Mereka mencoba sendiri memecahkan pesan yang dikodekan dengan sandi Caesar klasik dan Random Substitution Cipher. Siswa harus benar-benar memahami bahwa di zaman perangkat komputasi yang kuat, teknik enkripsi harus lebih canggih lagi. Aspek terpenting dari pelajaran ini adalah untuk memahami bagaimana dan mengapa enkripsi berperan dalam semua kehidupan kita sehari-hari di Internet, dan bahwa membuat enkripsi yang baik bukanlah hal sepele. Siswa akan mulai memahami pertimbangan yang harus dilakukan untuk membuat enkripsi yang kuat dalam menghadapi perangkat komputasi yang kuat yang dapat digunakan untuk memecahkannya. Kebutuhan akan kerahasiaan saat mengirim bit di Internet sangat diperlukan oleh siapa pun yang menggunakan Internet.",
+          "preparation": "-   Periksa kedua versi widget",
+          "purpose": "“Enkripsi” adalah proses mengubah pesan agar pesan aslinya “tersembunyi” dari siapa pun yang bukan penerima. Enkripsi sudah bukan lagi untuk militer dan mata-mata. Kita menggunakan enkripsi setiap hari di Internet, terutama untuk melakukan transaksi komersil, dan tanpa itu ekonomi kita mungkin akan terhenti.\n\nLewat pelajaran ini, murid bisa merasakan langsung jenis pemikiran yang berlangsung saat mengenkripsi pesan di hadapan alat komputasi. Alat komputasi benar-benar memacu kekuatan dan kerumitan algorithm yang kita gunakan untuk mengenkripsi informasi, tetapi alat yang sama ini juga meningkatkan kemampuan kita untuk mengurai sebuah enkripsi. Pengembangan enkripsi yang kuat mengandalkan pengetahuan tentang masalah yang “susah” diselesaikan oleh komputer dan menggunakan pengetahuan tersebut untuk mengenkripsi pesan. Sebagai materi pembelajaran, Anda dapat membaca seluruh Bab 5 _Blown to Bits_. Materi tersebut memberikan konteks sosial bagi murid di kelas Anda.",
           "student_overview": "Dalam pelajaran ini, siswa dikenalkan pada pentingnya enkripsi dan teknik sederhana untuk memecahkan pesan-pesan rahasia. Mereka mencoba sendiri memecahkan pesan yang dikodekan dengan sandi Caesar klasik dan Random Substitution Cipher. Siswa harus benar-benar memahami bahwa di zaman perangkat komputasi yang kuat, teknik enkripsi harus lebih canggih lagi. Aspek terpenting dari pelajaran ini adalah untuk memahami bagaimana dan mengapa enkripsi berperan dalam semua kehidupan kita sehari-hari di Internet, dan bahwa membuat enkripsi yang baik bukanlah hal sepele. Siswa akan mulai memahami pertimbangan yang harus dilakukan untuk membuat enkripsi yang kuat dalam menghadapi perangkat komputasi yang kuat yang dapat digunakan untuk memecahkannya. Kebutuhan akan kerahasiaan saat mengirim bit di Internet sangat diperlukan oleh siapa pun yang menggunakan Internet."
         },
         "starwars/Hour of Code 2015": {
+          "purpose": "Pelajaran ini memperkenalkan konsep coding inti dari CS dan pemrograman, termasuk pengurutan dan event. Versi JavaScript dari tutorial juga mempersilakan murid menjalani proses penulisan kode.",
           "student_overview": "Dalam pelajaran ini, pelajar semua umur mendapatkan pengalaman awal tentang coding dan ilmu komputer di lingkungan yang aman dan mendukung. Pelajaran ini memiliki dua versi. "
         },
         "mc/Hour of Code 2015": {
           "overview": "Dalam pelajaran ini, siswa dari semua jenjang usia mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan yang aman dan mendukung. Pelajaran ini sangat cocok untuk semua siswa yang telah cukup besar untuk membaca (6 tahun ke atas). Siswa yang lebih muda mungkin tidak akan menyelesaikan tutorialnya, namun akan senang menyelesaikan puzzle selama satu jam. Siswa sekolah menengah kemungkinan besar dapat menyelesaikan tutorialnya dan punya waktu untuk bermain pada level bermain gratis di bagian akhir.",
+          "purpose": "Pelajaran ini memperkenalkan konsep coding inti dari CS dan pemrograman (menggunakan blok), di samping teknik debugging sederhana.",
           "student_overview": "Dalam pelajaran ini, siswa dari semua jenjang usia mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan yang aman dan mendukung. Pelajaran ini sangat cocok untuk semua siswa yang telah cukup besar untuk membaca (6 tahun ke atas). Siswa yang lebih muda mungkin tidak akan menyelesaikan tutorialnya, namun akan senang menyelesaikan puzzle selama satu jam. Siswa sekolah menengah kemungkinan besar dapat menyelesaikan tutorialnya dan punya waktu untuk bermain pada level bermain gratis di bagian akhir."
         },
         "playlab/Play Lab": {
+          "purpose": "Pelajaran ini memperkenalkan konsep coding inti dari CS dan pemrograman (menggunakan blok), di samping teknik debugging sederhana.",
           "student_overview": "Dalam pelajaran ini, siswa mendapatkan pengenalan awal tentang ilmu komputer dan membuat game menggunakan kode blok dasar."
         },
         "applab-intro/Intro to App Lab": {
           "student_overview": "Di akhir tutorial, Anda dapat memperluas proyek yang mulai Anda buat menjadi aplikasi \"Pilih Petualanganmu Sendiri\", \"Kartu Ucapan\", atau \"Kuis Kepribadian\". Anda juga dapat melanjutkan untuk membuat lebih banyak proyek yang ditampilkan di halaman code.org/applab.\n\nSeru-seruan menyelesaikan Hour of Code Anda dengan App Lab!"
         },
         "starwarsblocks/Hour of Code 2015": {
+          "purpose": "Pelajaran ini memperkenalkan konsep coding inti dari CS dan pemrograman, termasuk pengurutan dan event. Versi JavaScript dari tutorial juga mempersilakan murid menjalani proses penulisan kode.",
           "student_overview": "Dalam pelajaran ini, pelajar semua umur mendapatkan pengalaman awal tentang coding dan ilmu komputer di lingkungan yang aman dan mendukung. Pelajaran ini memiliki dua versi. "
         },
         "text-compression/Text Compression": {
+          "overview": "Suatu saat, kita akan mencapai batasan fisik kecepatan pengiriman bit, dan jika kita ingin mengirim informasi yang besar dengan lebih cepat, kita harus mencari cara untuk mewakili informasi yang sama dengan bit yang lebih kecil - kita harus **mengompresi** data. Di pelajaran ini, murid akan menggunakan Widget Kompresi Teks untuk mengompresi segmen-segmen teks bahasa Inggris dengan mencari pola dan mengganti simbol untuk pola teks yang lebih besar. ",
+          "preparation": "-   Uji Widget Kompresi Teks\n-   Tinjau kembali tips mengajar untuk menentukan opsi yang ingin digunakan",
+          "purpose": "Prinsip dasar kompresi adalah mengembangkan sebuah metode atau protokol untuk menggunakan bit lebih sedikit untuk mewakili informasi asli. Cara kita mewakili data yang dikompresi dalam pelajaran ini, dengan “kamus” pola-pola yang diulang, mirip dengan [LZW compression scheme](http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch), tetapi harus diingat bahwa LZW sedikit berbeda dengan materi yang digeluti murid alam pelajaran ini. Murid menemukan caranya sendiri di sini. LZW digunakan bukan hanya untuk teks (zip files), tapi juga dengan format file gambar GIF.",
           "student_overview": "Suatu saat, kita akan mencapai batasan fisik dalam kecepatan pengiriman bit, dan jika kita ingin mengirim informasi besar dengan lebih cepat, kita harus mencari cara untuk menampilkan informasi yang sama dengan jumlah bit yang lebih kecil - kita harus memadatkan data tersebut."
         },
         "sports/Sports": {
@@ -67,18 +90,24 @@
           "student_overview": "Pernah berangan-angan dapat memainkan permainan video di sekolah? Dalam pelajaran ini, Anda akan belajar membuat permainan sendiri!"
         },
         "infinity/Infinity": {
+          "purpose": "Pelajaran ini memperkenalkan konsep coding inti dari CS dan pemrograman (menggunakan blok), di samping teknik debugging sederhana.",
           "student_overview": "Dalam pelajaran ini, siswa mendapatkan pengenalan awal tentang ilmu komputer dan membuat game menggunakan kode blok dasar."
         },
         "basketball/Bounce": {
           "overview": "Dalam aktivitas online ini, murid akan mempelajari pengertian event, dan cara komputer menggunakan event dalam program seperti permainan video. Murid akan menyelesaikan puzzle yang membuat programnya dapat menanggapi event (seperti tombol panah yang ditekan.) Pada akhir puzzle, Murid berkesempatan menyesuaikan permainan mereka dengan berbagai kecepatan dan suara.",
           "student_overview": "Pernah berangan-angan dapat memainkan permainan video di sekolah? Dalam pelajaran ini, Anda akan belajar membuat permainan sendiri!"
         },
+        "dance-extras-2019/Dance Party - Go Further": {
+          "purpose": "Pelajaran ini memperkenalkan konsep coding inti dari CS dan pemrograman event (menggunakan blok)."
+        },
         "dance-2019/Dance Party": {
           "overview": "Dalam pelajaran ini, siswa dari semua jenjang usia mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan yang aman dan mendukung. Pelajaran ini telah dirancang untuk siswa dari semua jenjang usia namun mengharuskan kemampuan membaca. Kegiatan ini membutuhkan suara karena alatnya dibuat untuk merespon musik.",
+          "purpose": "Pelajaran ini memperkenalkan konsep coding inti dari CS dan pemrograman event (menggunakan blok).",
           "student_overview": "Dalam pelajaran ini, siswa dari semua jenjang usia mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan yang aman dan mendukung. Pelajaran ini telah dirancang untuk siswa dari semua jenjang usia namun mengharuskan kemampuan membaca. Kegiatan ini membutuhkan suara karena alatnya dibuat untuk merespon musik."
         },
         "oceans/Oceans": {
           "overview": "Dalam pelajaran ini, siswa dari semua jenjang usia mendapatkan pengenalan awal tentang coding dan ilmu komputer di lingkungan yang aman dan mendukung. Pertama, siswa menggolongkan objek sebagai \"ikan\" atau \"bukan ikan\" untuk mencoba membuang sampah dari laut. Lalu, siswa harus memperluas kumpulan data latihannya untuk memasukkan makhluk laut lain yang hidup di air. Pada kegiatan kedua, siswa akan memilih labelnya sendiri untuk diterapkan pada gambar ikan yang dihasilkan secara acak. Data latihan ini digunakan untuk model pembelajaran mesin yang nantinya dapat melabeli gambar baru dengan sendirinya.",
+          "purpose": "Tutorial ini dirancang untuk memperkenalkan murid dengan **pembelajaran mesin**, semacam **kecerdasan buatan**. Murid akan menjelajahi cara menggunakan **data latihan** untuk memudahkan model pembelajaran mesin dalam mengelompokkan data baru. Murid hendaknya mendapatkan pengalaman positif selama tutorial dan lebih penting lagi harus termotivasi untuk tetap belajar ilmu komputer. ",
           "student_overview": "Ringkasan Tutorial: Pertama murid menggolongkan objek sebagai “ikan” atau “bukan ikan” sebagai upaya untuk membuang sampah dari lautan. Lalu, murid perlu memperluas himpunan data latihan agar mencakup makhluk laut lainnya yang tergolong hewan air. Di bagian kedua aktivitas, murid akan memilih label sendiri untuk diterapkan pada gambar ikan yang dibuat secara acak. Data latihan ini digunakan untuk sebuah model mesin pembelajaran yang lantas dapat melabeli sendiri gambar baru."
         },
         "jigsaw/Jigsaw": {
@@ -461,6 +490,7 @@
         "coursed-2021/Dance Party": {
           "overview": "Dalam pelajaran ini, murid akan memprogram pesta dansa interaktif mereka sendiri. Aktivitas ini membutuhkan suara karena alatnya dibuat untuk menanggapi musik.",
           "preparation": "-   Kerjakan puzzle untuk menemukan area masalah potensial untuk kelas Anda.-   Pastikan setiap murid memiliki buku catatan refleksi harian.-   Pertimbangkan perlu tidaknya headphone. Aktivitas ini mengandalkan suara.",
+          "purpose": "Pelajaran ini memperkenalkan konsep coding inti dari CS dan pemrograman event (menggunakan blok).",
           "student_overview": "Saatnya merayakan! Dalam pelajaran ini, Anda akan memprogram pesta dansa interaktif Anda sendiri."
         },
         "coursed-2021/Loops in Ice Age": {
@@ -557,6 +587,7 @@
         "express-2021/lesson-1": {
           "overview": "Dalam pelajaran ini, murid akan memprogram pesta dansa interaktif mereka sendiri. Aktivitas ini membutuhkan suara karena alatnya dibuat untuk menanggapi musik.",
           "preparation": "-   Kerjakan puzzle untuk menemukan area masalah potensial untuk kelas Anda.-   Pastikan setiap murid memiliki Buku Catatan Refleksi Harian.-   Coba pertimbangkan perlu tidaknya headphone. Aktivitas ini mengandalkan audio.",
+          "purpose": "Pelajaran ini memperkenalkan konsep coding inti dari CS dan pemrograman event (menggunakan blok).",
           "student_overview": "Saatnya merayakan! Dalam pelajaran ini, Anda akan memprogram pesta dansa interaktif Anda sendiri."
         },
         "express-2021/Loops with Rey and BB-8": {
@@ -826,6 +857,9 @@
           "preparation": "-   Luangkan waktu untuk membuat proyek Anda sendiri dengan Artis dan juga Sprite Lab. Pelajari betul-betul kemampuan dan kekurangan setiap alat.-   Ubah **\\*rubrik** agar sesuai dengan tujuan kelas Anda lalu cetak salinan untuk setiap murid.-   Ubah lembar kerja desain **\\*lembar kerja desain proyek** agar sesuai dengan kelas Anda lalu cetak satu paket untuk setiap murid.",
           "purpose": "Murid mungkin siap untuk langsung melompat ke membangun proyek, tetapi pelajaran kali ini akan membantu membentuk ide-ide mereka menjadi rencana. Struktur pelajaran ini akan menjaga impian murid pemimpi tetap realistis dan menerangi jalan bagi murid-murid yang merasa tertinggal dalam kegelapan. Beri waktu yang longgar kepada murid untuk membangun dan merevisi proyek mereka. Uji coba dan salah yang sudah pasti muncul dalam pelajaran ini akan mengajari murid tentang pemecahan masalah dan kegigihan.",
           "student_overview": "Proyek sebesar ini pasti menyita waktu dan banyak perencanaan. Cari inspirasi, susun rencana, dan kerahkan kreativitas Anda!"
+        },
+        "csd6-2021/Innovations in Computing": {
+          "overview": "Untuk memulai unit terakhir kursus ini, murid akan melakukan penelitian tentang beberapa inovasi menarik di dunia komputasi. Pelajaran ini akan menyingkap beraneka ragam faktor bentuk komputasi (tampilan fisik komputer) dan bidang yang terdampak oleh komputasi kepada murid. Dalam unit ini selanjutnya, murid akan melihat kembali perangkat yang mereka jumpai dalam pelajaran ini pada saat mereka mengembangkan perangkat komputasi fisik mereka sendiri."
         },
         "csd6-2021/The Circuit Playground": {
           "overview": "Dalam pelajaran ini, murid memperoleh kesempatan pertama mereka untuk menulis program yang menggunakan Circuit Playground. Setelah terlebih dahulu menyelidiki papan secara visual dan berhipotesis kemungkinan fungsionalitas, murid berpindah ke online untuk belajar menulis aplikasi yang mengontrol LED. Dengan menggabungkan layar App Lab dan Circuit Playgrounds, murid secara bertahap dapat mulai mengintegrasikan elemen papan sebagai perangkat ouput sambil mengandalkan App Lab untuk input pengguna."
