@@ -53,7 +53,7 @@ table td {
 }
 
 #donorslider {
-  background-color: #cfc9de;
+  background-color: white;
   margin-top: 20px;
   padding-top: 10px;
   margin-bottom: 0px;
@@ -68,33 +68,31 @@ table td {
 
 #donorslider h1 {
   width: 100%;
-  font-size: 20px;
-  margin: 0px;
+  font-size: 24px;
+  font-weight: 900;
+  margin: 0 0 12px 0;
   padding: 0px;
   text-align: center;
-  color: white;
-  position: absolute;
-  top: 0px;
+  color: #4d575f;
   font-family: 'Gotham 4r', sans-serif;
 }
 
 #donorslider .donor-slider {
+  text-align: center;
+  font-size: 13px;
+}
+
+#donorslider .donor-button {
   color: white;
   text-align: center;
   font-size: 13px;
 }
 
-#donorlinks {
-  text-align: right;
-  position: absolute;
-  width: 100%;
-}
-
-#donorlinks a {
-  color: white;
-}
-
 #donorslider .donor-slider a {
-  color: white; 
+  color: #4d575f;
   font-family: 'Gotham 4r', sans-serif;
+}
+
+#donorslider .donor-button button {
+  margin: 12px 8px;
 }

@@ -351,6 +351,7 @@ module LevelsHelper
       @app_options[:level][:levelVideos] = @level.related_videos.map(&:summarize)
       @app_options[:level][:mapReference] = @level.map_reference
       @app_options[:level][:referenceLinks] = @level.reference_links
+      @app_options[:level][:programmingEnvironment] = get_programming_environment
 
       if (@user || current_user) && @script
         @app_options[:level][:isStarted] = level_started?(@level, @script, @user || current_user)
@@ -372,14 +373,14 @@ module LevelsHelper
         # connection (ScriptLevel#show, for example), so
         # make sure that we're using the write connection
         # here.
-        MultipleDatabasesTransitionHelper.use_writer_connection do
+        ActiveRecord::Base.connected_to(role: :writing) do
           section.save(validate: false)
         end
       end
       @app_options[:experiments] =
         Experiment.get_all_enabled(user: current_user, section: section, script: @script).pluck(:name)
       @app_options[:usingTextModePref] = !!current_user.using_text_mode
-      @app_options[:muteMusic] = !!current_user.mute_music
+      @app_options[:muteMusic] = current_user.mute_music?
       @app_options[:displayTheme] = current_user.display_theme
       @app_options[:userSharingDisabled] = current_user.sharing_disabled?
     end
@@ -437,7 +438,7 @@ module LevelsHelper
   def widget_options
     app_options = {}
     app_options[:level] ||= {}
-    app_options[:level].merge! @level.properties.camelize_keys
+    app_options[:level].merge! @level.widget_app_options
     app_options.merge! view_options.camelize_keys
     set_puzzle_position_options(app_options[:level])
     app_options
@@ -1019,6 +1020,19 @@ module LevelsHelper
       POST_MILESTONE_MODE.all
     else
       POST_MILESTONE_MODE.final_level_only
+    end
+  end
+
+  # Get the programming environment for a given level. For now,
+  # getting programming environment information via the level is only
+  # supported by Java Lab, so only Java Lab will return a non-nil value.
+  # This method should return the name of a programming environment, or nil.
+  def get_programming_environment
+    case @level.game
+    when Game.javalab
+      "javalab"
+    else
+      nil
     end
   end
 end

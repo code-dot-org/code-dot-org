@@ -2,21 +2,36 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "write and call a static method",
+    "long_instructions": "The `SoundEditor`(#e7e8ea) class edits sound samples to create effects.\r\n\r\n##In SoundEditor.java:\r\n\r\n1. Write the static method `combineSounds()`(#e7e8ea).\r\n\r\n   * The method takes the parameters `double[] firstSound`(#e7e8ea) for the first sound and `double[] secondSound`(#e7e8ea) for the second sound.\r\n   \r\n   * The method returns a new `double`(#e7e8ea) array containing the first sound followed by the second sound.\r\n   \r\n##In MyTheater.java:\r\n\r\n2. Declare and initialize two `double`(#e7e8ea) arrays that stores the sample values extracted from calling `SoundLoader.read()`(#e7e8ea) on the `\"welcome.wav\"`(#e7e8ea) and `\"beat.wav\"`(#e7e8ea) sound files.\r\n\r\n3. Declare and initialize a `double`(#e7e8ea) array called `newSound`(#e7e8ea) that stores the new sound created from calling your `combineSounds()`(#e7e8ea) method.\r\n\r\n::: details [**Show Me How**]\r\nA static method uses the following syntax:\r\n  \r\n  ```\r\n  public static returnType methodName() {\r\n     // code to execute\r\n  }\r\n  ```\r\n\r\nA static method is called using the following syntax:\r\n\r\n  ```\r\n  ClassName.methodName();\r\n  ```\r\n:::",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "theater",
     "project_template_level_name": "CSA U4L6-L4d PBT_2022",
-    "encrypted_examples": [
-
-    ]
+    "display_name": "Combine Sounds",
+    "bubble_choice_description": "Write a static method to combine two sounds into one sound.",
+    "thumbnail_url": "https://images.code.org/0bc6a9c78cafd85438c4475174e6d17f-image-1650634348178.png",
+    "starter_assets": {
+      "welcome.wav": "6d00ec00-f31a-4cb8-8628-a0e103b1818e.wav",
+      "beat.wav": "064a3df3-395c-4b3c-8d69-0198d9971ac3.wav"
+    },
+    "start_sources": {
+      "MyTheater.java": {
+        "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.io.FileNotFoundException;\n\npublic class MyTheater {\n  public static void main(String[] args) throws FileNotFoundException {\n\n    // TO DO #2: Use SoundLoader.read() to extract the samples from the sound files into double arrays.\n\n\n    // TO DO #3: Call your combineSounds() method on your arrays.\n\n    \n    Scene myScene = new Scene();\n    myScene.playSound(newSound);\n    Theater.playScenes(myScene);\n    \n  }\n}",
+        "isVisible": true
+      },
+      "SoundEditor.java": {
+        "text": "import org.code.theater.*;\nimport org.code.media.*;\n\n/*\n * Edits sound samples to create effects\n */\npublic class SoundEditor {\n\n  // TO DO #1: Write the static method combineSounds to combine two sounds into one.\n\n\n  \n}",
+        "isVisible": true
+      }
+    },
+    "encrypted_exemplar_sources": "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\n"
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-04-07T18:14:56.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-04-07T18:14:56.791+00:00\",\"changed\":[\"cloned from \\\"CSA U4L6-L4c_2022\\\"\"],\"cloned_from\":\"CSA U4L6-L4c_2022\"},{\"changed_at\":\"2022-04-07 18:15:04 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-07 18:18:54 +0000\",\"changed\":[\"csa_view_mode\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-04-07T18:14:56.791+00:00\",\"changed\":[\"cloned from \\\"CSA U4L6-L4c_2022\\\"\"],\"cloned_from\":\"CSA U4L6-L4c_2022\"},{\"changed_at\":\"2022-04-07 18:15:04 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-07 18:18:54 +0000\",\"changed\":[\"csa_view_mode\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 13:35:59 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 15:23:24 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-22 15:24:05 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-01 16:15:19 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

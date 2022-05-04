@@ -310,19 +310,23 @@ class UsersHelperTest < ActionView::TestCase
 
     # Create BubbleChoice level with sublevels, script_level, and user_levels.
     sublevel1 = create :level, name: 'choice_1'
+    sublevel1_contained_level = create :level, name: "choice_1 contained"
+    sublevel1.contained_level_names = [sublevel1_contained_level.name]
+    sublevel1.save!
+
     sublevel2 = create :level, name: 'choice_2'
     level = create :bubble_choice_level, sublevels: [sublevel1, sublevel2]
     create :script_level, script: script, levels: [level], lesson: lesson
 
     # for user_1
-    sublevel1_user_level = create :user_level, user: user_1, level: sublevel1, script: script, best_result: ActivityConstants::BEST_PASS_RESULT, time_spent: 180
+    sublevel1_user_level = create :user_level, user: user_1, level: sublevel1_contained_level, script: script, best_result: ActivityConstants::BEST_PASS_RESULT, time_spent: 180
     sublevel2_user_level = create :user_level, user: user_1, level: sublevel2, script: script, best_result: 20, time_spent: 300
 
     sublevel1_last_progress = UserLevel.find(sublevel1_user_level.id).updated_at.to_i
     sublevel2_last_progress = UserLevel.find(sublevel2_user_level.id).updated_at.to_i
 
     # for user_2
-    sublevel1_user_level_2 = create :user_level, user: user_2, level: sublevel1, script: script, best_result: ActivityConstants::BEST_PASS_RESULT, time_spent: 180
+    sublevel1_user_level_2 = create :user_level, user: user_2, level: sublevel1_contained_level, script: script, best_result: ActivityConstants::BEST_PASS_RESULT, time_spent: 180
     sublevel2_user_level_2 = create :user_level, user: user_2, level: sublevel2, script: script, best_result: 20, time_spent: 300
     create :teacher_feedback, student: user_2, teacher: teacher, level: sublevel2, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
 

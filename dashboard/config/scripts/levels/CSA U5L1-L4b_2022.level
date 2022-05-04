@@ -2,20 +2,27 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Investigate and Modify\r\n\r\nRun the program to observe the results.\r\n\r\nThen, experiment with the program by making the following modifications. Change one line at a time, then run the program after each change to observe the results.\r\n\r\n1. first thing\r\n\r\n2. second thing\r\n\r\n3. third thing\r\n\r\n##Getting Started\r\n1. Import `SomeClass.java`(#e7e8ea) from the ![Backpack](https://images.code.org/b17feeef2e8db2a98abdb4a5860c5c61-image-1642175705297.png)\r\n\r\n*Don't have it or it doesn't work? That's ok! Just copy and paste the code from [**here**](https://linktocode.com).*\r\n\r\n##In MyConsole.java:\r\n\r\n2. first step\r\n\r\n3. second step\r\n\r\n4. third step\r\n\r\n::: details [**Show Me How**]\r\nA `for`(#e7e8ea) loop uses the following syntax:\r\n  \r\n  ```\r\n  for (int variableName = startingValue; condition; variableName_change) {\r\n    // code to execute\r\n  }\r\n  ```\r\n\r\nBe sure to change `variableName`(#e7e8ea) to a name you can easily identify, such as `index`(#e7e8ea), and set the `startingValue`(#e7e8ea) to the value you want to start the loop.\r\n:::",
+    "long_instructions": "The owner of the Project Mercury Pastries Food Truck wants to store the inventories for each food truck. They have the following values:\r\n\r\n![](https://images.code.org/972447c0bb792232427f9739c03e1a7c-image-1650922812556.png)\r\n\r\nwhere each row represents a unique food truck in the business. Each column represents the number of cakes, cookies, and pies, respectively.\r\n\r\n##In MyConsole.java:\r\n\r\n1. Declare and initialize a 2D `int`(#e7e8ea) array called `inventories`(#e7e8ea) to store the values.\r\n\r\n2. Print the number of cookies for each food truck.\r\n\r\n::: details [**Show Me How**]\r\nA 2D array is declared and initialized using the following syntax:\r\n  \r\n  ```\r\n  dataType[][] variableName = { {row1value1, row1value2, row1value3}, {row2value1, row2value2, row2value3} };\r\n  ```\r\n\r\nBe sure to change `variableName`(#e7e8ea) to a name you can easily identify, and add the values for each row in the 2D array inside curly braces `{ }`(#e7e8ea).\r\n\r\nValues are accessed using the following syntax:\r\n\r\n  ```\r\n  variableName[row][col];\r\n  ```\r\n  \r\nSpecify the specific `row`(#e7e8ea) and `col`(#e7e8ea) of the value you want to access.\r\n:::",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
-    "encrypted_examples": [
-
-    ]
+    "bubble_choice_description": "The owner of the Project Mercury Pastries Food Truck wants to store the inventories for each food truck. Declare and initialize a 2D array to store the values.",
+    "start_sources": {
+      "MyConsole.java": {
+        "text": "public class MyConsole {\n  public static void main(String[] args) {\n\n    // TO DO #1: Declare and initialize a 2D array.\n\n\n    // TO DO #2: Print the number of cookies for each food truck.\n\n    \n  }\n}",
+        "isVisible": true
+      }
+    },
+    "display_name": "Food Truck",
+    "thumbnail_url": "https://images.code.org/e494487727cdc1504c5eb085faa76664-image-1650922832011.png",
+    "encrypted_exemplar_sources": "HM0H7Z3L+CTAPTxDu6u7zslyjM60me7VHOAdpgMoPI7qriU5UAWF1G4Q1Qnc\nIb0KmSEtZzSfjeex/CUkz11jVML1HWLKsO3cSl0++9uiZOYvNfQSe8KDZMtI\nMmx38A870ZAOngqj8Ovwy/bAiRFzK23Pjb1Xbs5elK9Uk8bYs/2fkLInJN55\ntCnYsF3h1s9QTkNhDhvMN22eBrdhfqEPhK42u+6HwzOX40oWYUgirLJeabxx\nLmGJY1Tjh1hPPHUrUvpeu7UaNGA42HrvG7aTesZ2wrBBKX73mALfma78nyPm\nv83oQVINBaAy0po5QUeXQUbc/Nd51JGFgVKEQ7KJo510n5m2FtflJe6oE9wo\nWNZSRrBnoN8pXZjb/OLpAQlMFfmTOnmswaD9MW4wt4n5BVInyNAwtqSCwGLu\n3+Xk5fySx3HF29P6ZeWBXPvnjrU9m/i75Qtoo0wXswF8XvWfa17+L7a2SMAl\nbnUMBOnsujL1kCF/ItF6E/gwR2WXAhajR48ffeur0F4FT2ecuoPLx6KOSs96\nIlENYXKaMa1A3K8ZtrBX1F5HdDiiYIyT79+RPb4o088KaotgZRCQNwic2inJ\nSATZdr2W/vKrlsHI/rNnH5y/w4Qfl/2BkD+iq9cexN4Q1mXbhft5Tv39ANsR\nxWfKNyJ7dpsc7CrTr04mEWHtQGH+bKkOtgjSQIKxWwH+ATfM1fnrmrWAzSdY\necOE4yEcMnMRNp5q4pclflPhDT+k/mPLlNFT4OQKajoMHrp4Ug95gxGuaTgg\nLq3+HIX5wb1tU6sVsdkHTt6bN9mwKY8=\n"
   },
   "game_id": 68,
-  "published": true,
   "created_at": "2022-04-12T18:52:13.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2022-04-12T18:52:13.789+00:00\",\"changed\":[\"cloned from \\\"CSA U5L1-L4a_2022\\\"\"],\"cloned_from\":\"CSA U5L1-L4a_2022\"},{\"changed_at\":\"2022-04-12 18:52:15 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2022-04-12T18:52:13.789+00:00\",\"changed\":[\"cloned from \\\"CSA U5L1-L4a_2022\\\"\"],\"cloned_from\":\"CSA U5L1-L4a_2022\"},{\"changed_at\":\"2022-04-12 18:52:15 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 21:16:13 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 21:16:30 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 21:41:07 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-25 23:53:48 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-26 00:42:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-26 00:43:53 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
