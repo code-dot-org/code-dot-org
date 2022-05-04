@@ -396,6 +396,8 @@
   "count": "Count",
   "country": "Country",
   "course": "Course",
+  "course2Title": "Course 2",
+  "course2Desc": "For students with basic reading skills, this course builds on Course 1. Students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.",
   "courseBlocksCsfExpressHeading": "Computer Science Fundamentals Express Courses",
   "courseBlocksCsfExpressDescription": "A great option for students getting started on their own.  You'll learn the fundamentals of computer science with drag & drop blocks.  Create your own drawings and games.",
   "courseBlocksCsfYoungHeading": "Computer Science Fundamentals for Elementary Schools",
