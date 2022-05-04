@@ -33,7 +33,7 @@ class ProjectVersionsControllerTest < ActionController::TestCase
 
     returned_commits = JSON.parse(@response.body)
     assert_equal 3, returned_commits.length
-    assert_equal ['Third comment', 'Second comment', 'First comment'], returned_commits.map {|c| c['comment']}
+    assert_equal ['First comment', 'Second comment', 'Third comment'], returned_commits.map {|c| c['comment']}
   end
 
   test "versions more than a year old have isVersionExpired set to true" do
@@ -54,8 +54,8 @@ class ProjectVersionsControllerTest < ActionController::TestCase
 
     returned_commits = JSON.parse(@response.body)
     assert_equal 2, returned_commits.length
-    refute returned_commits.first['isVersionExpired']
-    assert returned_commits.last['isVersionExpired']
+    refute returned_commits.last['isVersionExpired']
+    assert returned_commits.first['isVersionExpired']
   end
 
   test "can fetch project versions and blank comments are filtered out" do
@@ -77,7 +77,7 @@ class ProjectVersionsControllerTest < ActionController::TestCase
 
     returned_commits = JSON.parse(@response.body)
     assert_equal 2, returned_commits.length
-    assert_equal ['Third comment', 'First comment'], returned_commits.map {|c| c['comment']}
+    assert_equal ['First comment', 'Third comment'], returned_commits.map {|c| c['comment']}
   end
 
   test "can fetch project versions of students project if their teacher" do
