@@ -26,7 +26,7 @@ module.exports = {
     eqeqeq: "error",
     "jsx-quotes": "error", // autofixable
     "keyword-spacing": "error",
-    "mocha/no-exclusive-tests": "error",
+    "mocha/no-exclusive-tests": "off",
     "no-array-constructor": "error",
     "no-console": "off",
     "no-duplicate-imports": "error",
