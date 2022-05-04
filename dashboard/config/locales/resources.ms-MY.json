@@ -410,6 +410,7 @@
           "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview"
         },
         "making_sprites/coursef/2021": {
+          "name": "Membuat Peperi",
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "sprite_lab_documentation/coursef/2021": {
@@ -1364,6 +1365,7 @@
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "making_sprites/express/2021": {
+          "name": "Membuat Peperi",
           "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "sprite_lab_documentation_1/express/2021": {
@@ -1714,6 +1716,13 @@
         "teacher_forum/csd/2021": {
           "name": "Forum Guru"
         },
+        "internet-of-things-video/csd/2021": {
+          "type": "Video"
+        },
+        "innovation-video-1-1/csd/2021": {
+          "name": "Sains Komputer Mengubah Segalanya",
+          "type": "Video"
+        },
         "how_computers_word_hardware_software/csd/2021": {
           "type": "Video"
         },
@@ -1788,6 +1797,9 @@
         "sprites_1/csd/2021": {
           "name": "Jin"
         },
+        "sprite_properties/csd/2021": {
+          "name": "Sifat Peperi"
+        },
         "captioned-scenes/csd/2021": {
           "type": "Rubrik"
         },
@@ -1836,6 +1848,9 @@
         },
         "teacher_forum_1/csd/2021": {
           "name": "Forum Guru"
+        },
+        "problem-solving-process-1/csd/2021": {
+          "type": "Video"
         },
         "what-is-a-computer-1-2-3/csd/2021": {
           "type": "Video"

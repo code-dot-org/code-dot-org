@@ -1,0 +1,20 @@
+{
+  "it-IT": {
+    "data": {
+      "framework": {
+        "ccela": {
+          "name": "Competenze linguistiche"
+        },
+        "ccmath": {
+          "name": "Competenze matematiche"
+        },
+        "csta2011": {
+          "name": "CSTA K-12 Computer Science Standards (2011)"
+        },
+        "iste": {
+          "name": "Standard ISTE per studenti"
+        }
+      }
+    }
+  }
+}

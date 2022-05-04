@@ -615,6 +615,11 @@ zh-CN:
         outbreak_outro: 爆发模拟：自由发挥
         PL_overview_CSP: 什么是计算机科学原则？
         PL_CSP_EIPMOverview: EIPM课程指南
+        CSA-PL-debugging-temp: 在Java实验室中调试简介-temp
+        csd_app_lab_design_mode: CSD应用程序实验室设计模式
+        csd_app_lab_events: CSD应用程序实验室活动
+        csd_u6_circuit_playground: 物理计算
+        csd_u6_input_output: 输入和输出
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块，并将它吸到别的模块下面

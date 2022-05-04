@@ -870,6 +870,7 @@ ro:
         poetry_module_conditionals: Relații de condiționalitate - Programare cu ajutorul
           poeziei
         poemart_intro: Introducere În Arta Poemului
+        CSA-PL-debugging-temp: Introducere în Debugging în Java Lab - temp
     callout:
       text:
         drag_blocks: Trage un bloc "mutare" şi fixează-l sub alt bloc

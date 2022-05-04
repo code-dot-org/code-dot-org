@@ -568,6 +568,9 @@ ja:
         poetry_module_multichoiceprompts: 多肢選択式のプロンプト - 詩を使ったプログラミング
         poetry_module_conditionals: 条件文 - 詩を使ったプログラミング
         poemart_intro: ポエムアート入門
+        CSA-PL-debugging-temp: Java Labへのデバッグ入門 - temp
+        csd_u6_circuit_playground: 物理コンピューティング
+        csd_u6_input_output: 入出力
     callout:
       text:
         drag_blocks: '「移動」ブロックをドラッグして、ほかのブロックの下にくっつけてください。'

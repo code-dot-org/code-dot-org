@@ -4,6 +4,22 @@ da:
     blocks:
       BadGuys_makeNewBadGuysSprite:
         text: dan en ny {ANIMATION_NAME} figur på {LOCATION}
+      BadGuys_setSizeAll_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': mellem
+            '2.00': large
+            '3.00': extra large
+      BadGuys_setSize_dropdown:
+        options:
+          SIZE:
+            '0.50': extra small
+            '0.75': small
+            '1.00': mellem
+            '2.00': large
+            '3.00': extra large
       Dancelab_alternateMoves:
         text: "\"{GROUP} skift hver {N} takter \nmellem {MOVE1} og {MOVE2}\""
         options:
@@ -1029,7 +1045,7 @@ da:
         text: kan flyttes
       gamelab_edgesDisplace:
         text: kant brik {SPRITE} fra flytning
-      gamelab_everySeconds:
+      gamelab_everyInterval:
         text: 'gentag hver {N} {UNIT} '
         options:
           UNIT:
@@ -1161,8 +1177,6 @@ da:
         options:
           EFFECT:
             '"rain"': regn
-      gamelab_makeNewScaledSprite:
-        text: dan en ny {ANIMATION_NAME} figur på {LOCATION}
       gamelab_makeNewSpriteAnon:
         text: dan en ny {ANIMATION_NAME} figur på {LOCATION}
       gamelab_makeProjectile:

@@ -787,6 +787,8 @@
   "parent": "foreldri",
   "parents": "Foreldrar",
   "parentsAndStudents": "Foreldrar og nemendur",
+  "participantTypeStudentTitle": "Nemendur",
+  "participantTypeTeacherTitle": "Kennarar",
   "partner": "Félagi: {partner}",
   "password": "Lykilorð",
   "passwordConfirmation": "Staðfesting lykilorðs",

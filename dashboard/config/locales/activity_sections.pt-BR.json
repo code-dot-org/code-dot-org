@@ -11,7 +11,7 @@
           ]
         },
         "7de94e25-7e33-4258-af1c-1e792ba78c5f": {
-          "name": "Festa Dançante - Ir além"
+          "name": "Não pare de Dançar"
         },
         "473c0737-e82d-49ec-bffa-5b738ba06438": {
           "progression_name": "Continue Dançando!"
@@ -38,7 +38,7 @@
           "name": "Próximas etapas"
         },
         "2c451b2f-6820-47bb-94e0-966633757f93": {
-          "description": "Peça aos alunos que acrescentem suas notas autoadesivas da atividade “Corra por aí” ao seu mapa mental de “Ciência da Computação” quando estiverem saindo da sala. Tente preencher o quadro com muitas ideias excelentes sobre o que é CC e por que ela é importante."
+          "description": "Peça aos alunos para colocarem suas respostas criativas no seu mapa mental da Ciência da Computação quando estiverem saindo da sala. Tente preencher o quadro com muitas opiniões criativas sobre o que é a Ciência da Computação e o por que ela é importante."
         },
         "33f43c10-0c86-45d3-9e95-eebe75e72ac0": {
           "name": "Além da Hora do Código"
@@ -57,7 +57,7 @@
           ]
         },
         "75d779c4-24f7-40be-bf92-b0c094c16d11": {
-          "name": "Designer Minecraft Hora do Código"
+          "name": "Minecraft: Designer"
         },
         "8d4ecee7-5f04-4f80-9673-c2aec0c5ab9d": {
           "tips": [
@@ -160,7 +160,7 @@
           ]
         },
         "d4bf5db5-6884-4166-ae90-3a5cd01b9695": {
-          "name": "Próximas etapas"
+          "name": "Próximos passos"
         },
         "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
           "name": "Além da Hora do Código"
@@ -211,7 +211,7 @@
           "name": "Próximas etapas"
         },
         "144b447f-1c5d-413b-a08c-65dda905a706": {
-          "description": "Peça aos alunos que acrescentem suas notas autoadesivas da atividade “Corra por aí” ao seu mapa mental de “Ciência da Computação” quando estiverem saindo da sala. Tente preencher o quadro com muitas ideias excelentes sobre o que é CC e por que ela é importante."
+          "description": "Peça aos alunos para colocarem suas respostas criativas no seu mapa mental da Ciência da Computação quando estiverem saindo da sala. Tente preencher o quadro com muitas opiniões criativas sobre o que é a Ciência da Computação e o por que ela é importante."
         },
         "3a8c30ae-50bb-4a85-99d8-b62c9f7e1bbf": {
           "name": "Além da Hora do Código"
@@ -242,6 +242,7 @@
           ]
         },
         "0a05af25-05aa-4e56-92ce-f14570cc1c64": {
+          "name": "Suporte Geral",
           "description": "Veja aqui algumas dicas que podem ajudar os alunos de qualquer nível com os quais você esteja trabalhando \n\n-   \\*_Colabore com os colegas:_ Incentive os alunos a verificar com um colega os pontos em que tiverem problemas. Conforme a idade e a capacidade dos alunos, você pode considerar a formação de duplas formalmente na classe, para assistirem ao tutorial utilizando o [pair programmin](https://youtu.be/vgkahOzFH2Q).\n\n-   \\*_Leia as Instruções:_As instruções geralmente fornecem dicas úteis sobre como concluir o nível. Antes de dar a resposta aos alunos, certifique-se de que eles leram as instruções cuidadosamente, viram as dicas, os vídeos e outros códigos iniciais com atenção.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> \\*_Problemas? Procure as dicas:_Cada nível inclui uma dica com orientações sobre como concluir o nível, incluindo blocos de código para o aluno experimentar. \n\n-   \\*_Não tenha pressa e experimente._As instruções geralmente dizem aos alunos o que fazer, mas eles também devem ter a opção de experimentar suas próprias ideias."
         },
         "f6a21949-1c94-4269-acae-98046f6a9052": {
@@ -298,21 +299,72 @@
             null
           ]
         },
+        "e180cd18-ae1a-4a5f-b893-22359586ffe8": {
+          "description": "Hoje faremos algo muito criativo. Qual é a sua forma favorita de expressar  a sua criatividade?"
+        },
+        "ce2578c2-46c6-40c2-8ceb-d05fe1737802": {
+          "description": "Encoraje os alunos a compartilhar o modo como eles expressam criatividade, como a arte, dança, música e a escrita."
+        },
         "c5d3d108-b29a-4955-a63b-e8a35d2b57a1": {
           "tips": [
-            null
+            "Caso você não tenha experiência com codificação, você pode mostrar um dos [nossos vídeos inspiradores](https://hourofcode.com/promote/resources#videos) para te ajudar a introduzir a Hora do Código. Escolha um que os seus alunos acharam inspirador e compartilhe com eles. Para alunos do ensino médio, recomendamos [A Hora do Código Chegou](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
+        "e51e34df-5370-43a4-bae5-14d2ba49a932": {
+          "description": "Explique que hoje seremos criativos com o código, que não é nada além de instruções que o computador consegue entender. Assim como você expressa a sua criatividade ao escolher quais cores tinta usar, ou quais palavras escrever, quando você decide que código vai escrever e como as pessoas interagirão com ele, você também está expressando a sua criatividade! \n\n**Hora de dançar:** Avise à turma que hoje vamos pensar em como combinar codificação com dança de uma forma criativa. Peça aos seus alunos para fazerem a 'dança do fio dental', a dança do 'dab', ou para criarem algum passo de dança criativo por 10 segundos, para deixá-los no clima. Você pode usar alguma música desta [Playlist do Spotify (todas as idades)](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw) para ajudar a animar as coisas.\n\nGrave um vídeo das danças dos alunos.\n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)"
+        },
+        "3d2ec9d2-ed62-4db0-99ca-ddf8e012d75a": {
+          "name": "Filtragem de Música",
+          "description": "Este tutorial possui músicas de artistas famosos. Para ver uma prévia da lista de músicas deste tutorial, confira esta [Playlist do Spotify (todas as idades)](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw). Todas as músicas para alunos com menos de 13 anos são versões censuradas."
+        },
+        "ddf59331-16dc-488f-8170-6d12869fbb9f": {
+          "name": "Suporte Geral",
+          "description": "\\*\\* Suporte geral:\\*\\* Como professor, o seu papel principal é ajudar os alunos enquanto eles fazem o tutorial. Aqui estão algumas dicas que podem ajudar os alunos, independentemente do nível que estão estudando.\n\n-   **Colabore com os Colegas:** Incentive os alunos a se ajudarem quando estiverem com dificuldade. Como este tutorial utiliza vídeos e os alunos talvez estejam usando fones de ouvido, eles podem se isolar facilmente. Quebre esses obstáculos colocando os alunos lado a lado, se eles parecerem precisar de ajuda. Dependendo da idade e capacidade de seus alunos, você pode considerar dividir a sua turma em pares para realizarem o tutorial usando [programação em par](https://youtu.be/vgkahOzFH2Q). \n-   **Leia as instruções:** As instruções geralmente fornecem dicas úteis sobre como completar o nível. Antes de finalizar um nível para um aluno, certifique-se de que ele realmente olhou atentamente para a imagem e leu todo o texto.\n-   ![](https://curriculum.code.org/media/uploads/hint.png)**Com dificuldades? Procure por dicas:** Cada nível possui uma dica com detalhes sobre como concluir o nível. Se os alunos tentarem acabar os quebra-cabeças muito rapidamente, talvez eles percebam que só precisam esperar um pouco para que o código seja executado completamente antes de continuarem. Vários níveis contêm uma segunda dica sugerindo formas de ser ainda mais criativo, através da prolongação da tarefa.\n-   **Faça e Refaça:** Às vezes, os alunos se beneficiarão mais se refizerem um nível difícil. Todos os níveis são independentes entre si, embora dependam um pouco de conceitos introduzidos anteriormente.\n-   Experimente sem pressa.\\*\\* Apesar dos primeiros níveis dizerem aos alunos exatamente o que eles precisam fazer, os alunos devem se sentir livres para experimentar suas próprias ideias."
+        },
+        "4dee8e28-b791-4791-ae95-8276c0da6331": {
+          "description": "#### Nível 1\n\n-   Arraste o bloco vermelho chamado `criar novo`  da caixa de ferramentas à esquerda para a área de trabalho à direita. Conecte-o dentro do bloco `configuração`.\n-   Você acaba de escrever seu primeiro programa. Não se esqueça de pressionar Executar para ver o que acontece. Você ouvirá uma música e verá um personagem se mover na área de exibição."
+        },
         "caf4ebb7-91a6-42bc-a190-6d1a6f595cec": {
+          "description": "#### Nível 2\n\n-   Os blocos verdes são blocos de eventos. Esses blocos iniciam uma nova sequência de códigos e não precisam ser conectados dentro do bloco `configuração`.\n-   Conectar o bloco roxo sob o bloco de eventos verde fará o personagem dançar de acordo com o número de compassos que você definir.",
           "tips": [
-            null
+            "Você já deve ter notado que as lições estão sendo menos prescritivas. Incentive os alunos a serem criativos e explorarem os novos blocos que são apresentados. A partir deste momento, os códigos dos alunos **não serão corrigidos**, a fim de incentivá-los a explorarem em vez de resolver uma tarefa específica."
           ]
+        },
+        "07b80de8-0e4b-442f-925b-28fcf2ad8760": {
+          "description": "#### Nível 3\n\n-   Certifique-se de criar um segundo bloco de eventos verde.  Você deve ter um bloco chamado `após 4 compassos` e um bloco chamado `após 6 compassos` na sua área de trabalho. Ambos devem ter um bloco roxo conectado debaixo."
+        },
+        "81305b4b-d9a7-4ba2-b809-3ce383c146ab": {
+          "description": "#### Nível 4\n\n-   Arraste para fora o bloco `definir efeito de plano de fundo`.\n-   Este bloco pode ser conectado dentro do `configuração`, sob um bloco de evento, ou nos dois!"
+        },
+        "d4133014-cbc7-4f93-aa86-7d54ab8652fe": {
+          "description": "#### Nível 5\n\n-   Com o código certo, você deverá ver o dançarino repetir um movimento diferente a cada 2 compassos.\n-   Certifique-se de que há um bloco roxo `faça para sempre` conectado dentro do bloco `a cada 2 compassos`.\n-   Certifique-se de que o bloco `fazer para sempre` esteja definido como (Próximo), (Anterior) ou (Aleatório). Caso contrário, o dançarino apenas executará o movimento definido repetidamente."
+        },
+        "d164ed5b-5d98-4dd5-a9bf-e53c8c6ac675": {
+          "description": "#### Nível 6\n\n-   Tenha cuidado para não colocar o bloco vermelho `criar novo` dentro do bloco `a cada 2 compassos`. Isso fará com que seu programa crie vários dançarinos idênticos no mesmo lugar."
+        },
+        "200f7860-0f52-4bb6-b546-e4fa9701dad4": {
+          "description": "#### Nível 7\n\n-   Muitos alunos estarão cientes de que é possível fazer algo parecer mais distante ao desenhar em um tamanho menor. Nesse nível, você criará esse efeito tornando os dois dançarinos nas extremidades menores.\n-   Tenha certeza de colocar o bloco de cor azul-petróleo, `definir`, em algum lugar do programa _depois_ que o dançarino for criado. Para resolver esse quebra-cabeça, coloque um bloco `definir tamanho da cópia_de_segurança_dançarino2 para 50` em algum lugar sob o bloco `criar um novo robô chamado cópia_de_segurança_dançarino2`."
+        },
+        "0311d3fc-6b80-4bb1-ab32-34a35ec4f4ba": {
+          "description": "#### Nível 8\n\n-   Assim como no nível anterior, só use o bloco `definir matiz para (cor)` depois de criar o dançarino no seu programa. Por exemplo, colocá-lo em primeiro lugar na área de `configuração` do seu programa não terá nenhum efeito."
+        },
+        "cc4443ec-6def-485c-8824-393650850b8f": {
+          "description": "#### Nível 9\n\n-   A ciência da computação permite que informações de entrada sejam processadas em tipos interessantes de saída. Neste nível, os alunos podem explorar como as propriedades do dançarino podem ser atualizadas automaticamente, de acordo com o som da música."
+        },
+        "27cd3252-fb06-4b7b-9633-751d95810c95": {
+          "description": "#### Nível 10-11\n\n-   Esses níveis explicam como tornar a dança interativa. Experimente o novo evento `quando pressionado` para fazer os dançarinos responderem às teclas pressionadas.\n-   Você pode usar as teclas direcionais do teclado do computador ou clicar nos botões laranjas sob a área de exibição.\n-   Note que os **códigos que os alunos escrevem nesses níveis não são corrigidos**. Isso significa que eles sempre passarão de nível, mesmo se não alterarem o programa. Encoraje os alunos a determinarem sozinhos se o código está fazendo o que deveria antes de continuarem."
+        },
+        "767f8d69-82af-43d0-a4d7-7f3bd7438424": {
+          "description": "#### Nível 12\n\n-   Os seis primeiros blocos desta caixa de ferramentas são parecidos, mas funcionam de uma forma diferente. Em vez de criar ou controlar um dançarino, eles trabalham com grupos de dançarinos.\n-   Assim como nos níveis anteriores, o **código não é corrigido neste nível**. Os alunos devem se sentir livres para experimentar grupos da maneira que for interessante para eles."
+        },
+        "7dcf383e-a583-4aa0-99f2-102652fbbb67": {
+          "description": "#### Nível 13\n\n  Este último nível não tem muitas regras. O tutorial foi projetado para dar aos alunos tempo suficiente para aperfeiçoarem a sua própria dança.\n\n-   **Incentivar à Dividir:** Se os alunos tiverem celulares com um plano de dados, eles podem enviar facilmente um link com seus projetos para seu próprio celular ou para um amigo. Se a política da sua escola permitir, encoraje-os a fazer isso neste nível.\n-   **Incentivar a Criatividade:** A criatividade é importante ao longo de toda essa lição, mas agora é mais importante do que nunca!"
         },
         "456b1d51-129d-43ff-aab9-727995464e36": {
           "name": "Próximas etapas"
         },
         "0600e9df-03bd-4d61-9876-7516a87c2d30": {
-          "description": "Peça aos alunos que acrescentem suas notas autoadesivas da atividade “Corra por aí” ao seu mapa mental de “Ciência da Computação” quando estiverem saindo da sala. Tente preencher o quadro com muitas ideias excelentes sobre o que é CC e por que ela é importante."
+          "description": "Peça aos alunos para colocarem suas respostas criativas no seu mapa mental da Ciência da Computação quando estiverem saindo da sala. Tente preencher o quadro com muitas opiniões criativas sobre o que é a Ciência da Computação e o por que ela é importante."
         },
         "6e3db575-9d35-4bad-b17b-37c9dda2bd7f": {
           "description": "_Nesta atividade, você vai se divertir criando um mundo interativo, com personagens divertidos chamados de fadas. Você poderá fazer com que as fadas digam coisas com balões de texto semelhantes aos das histórias em quadrinho, e vai aprender a fazê-las responder automaticamente quando alguém clicar nelas._\n\n_Hoje, vocês vão escrever um “código”, que nada mais é do que uma série de instruções que o computador pode entender. Quando você escreve uma história, é preciso pensar cuidadosamente sobre as palavras que vai utilizar. Quando você escreve um código, você precisa pensar cuidadosamente sobre as instruções que vai dar ao seu computador._",
@@ -321,6 +373,7 @@
           ]
         },
         "11f167ca-2cf6-4e6b-8857-316c5cb55f82": {
+          "name": "Suporte Geral",
           "description": "Veja aqui algumas dicas que podem ajudar os alunos de qualquer nível com os quais você esteja trabalhando \n\n-   \\*_Colabore com os colegas:_ Incentive os alunos a verificar com um colega os pontos em que tiverem problemas. Conforme a idade e a capacidade dos alunos, você pode considerar a formação de duplas formalmente na classe, para assistirem ao tutorial utilizando o [pair programmin](https://youtu.be/vgkahOzFH2Q).\n\n-   \\*_Leia as Instruções:_As instruções geralmente fornecem dicas úteis sobre como concluir o nível. Antes de dar a resposta aos alunos, certifique-se de que eles leram as instruções cuidadosamente, viram as dicas, os vídeos e outros códigos iniciais com atenção.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> \\*_Problemas? Procure as dicas:_Cada nível inclui uma dica com orientações sobre como concluir o nível, incluindo blocos de código para o aluno experimentar. \n\n-   \\*_Não tenha pressa e experimente._As instruções geralmente dizem aos alunos o que fazer, mas eles também devem ter a opção de experimentar suas próprias ideias."
         },
         "c721eddb-4cfb-4237-a031-0730bbfdc926": {
@@ -409,6 +462,7 @@
           ]
         },
         "ce182c47-efed-4526-bb9c-f4ec66b052a4": {
+          "name": "Suporte Geral",
           "description": "Veja aqui algumas dicas que podem ajudar os alunos de qualquer nível com os quais você esteja trabalhando \n\n-   \\*_Colabore com os colegas:_ Incentive os alunos a verificar com um colega os pontos em que tiverem problemas. Conforme a idade e a capacidade dos alunos, você pode considerar a formação de duplas formalmente na classe, para assistirem ao tutorial utilizando o [pair programmin](https://youtu.be/vgkahOzFH2Q).\n\n-   \\*_Leia as Instruções:_As instruções geralmente fornecem dicas úteis sobre como concluir o nível. Antes de dar a resposta aos alunos, certifique-se de que eles leram as instruções cuidadosamente, viram as dicas, os vídeos e outros códigos iniciais com atenção.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> \\*_Problemas? Procure as dicas:_Cada nível inclui uma dica com orientações sobre como concluir o nível, incluindo blocos de código para o aluno experimentar. \n\n-   \\*_Não tenha pressa e experimente._As instruções geralmente dizem aos alunos o que fazer, mas eles também devem ter a opção de experimentar suas próprias ideias."
         },
         "893dba56-7c8e-4897-949b-de514de76011": {
@@ -442,7 +496,7 @@
           "name": "Além da Hora do Código"
         },
         "d0f5c55b-b19c-418c-8dc6-f87a80e08f45": {
-          "description": "Peça aos alunos que acrescentem suas notas autoadesivas da atividade “Corra por aí” ao seu mapa mental de “Ciência da Computação” quando estiverem saindo da sala. Tente preencher o quadro com muitas ideias excelentes sobre o que é CC e por que ela é importante."
+          "description": "Peça aos alunos para colocarem suas respostas criativas no seu mapa mental da Ciência da Computação quando estiverem saindo da sala. Tente preencher o quadro com muitas opiniões criativas sobre o que é a Ciência da Computação e o por que ela é importante."
         },
         "a16594a7-8312-4ac3-87c8-fd2d5d6e5bfb": {
           "name": "Introdução"
@@ -520,6 +574,7 @@
           ]
         },
         "2ff80a97-db35-4d10-9703-4d0cc3ff0c3a": {
+          "name": "Suporte Geral",
           "description": "Veja aqui algumas dicas que podem ajudar os alunos de qualquer nível com os quais você esteja trabalhando \n\n-   \\*_Colabore com os colegas:_ Incentive os alunos a verificar com um colega os pontos em que tiverem problemas. Conforme a idade e a capacidade dos alunos, você pode considerar a formação de duplas formalmente na classe, para assistirem ao tutorial utilizando o [pair programmin](https://youtu.be/vgkahOzFH2Q).\n\n-   \\*_Leia as Instruções:_As instruções geralmente fornecem dicas úteis sobre como concluir o nível. Antes de dar a resposta aos alunos, certifique-se de que eles leram as instruções cuidadosamente, viram as dicas, os vídeos e outros códigos iniciais com atenção.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> \\*_Problemas? Procure as dicas:_Cada nível inclui uma dica com orientações sobre como concluir o nível, incluindo blocos de código para o aluno experimentar. \n\n-   \\*_Não tenha pressa e experimente._As instruções geralmente dizem aos alunos o que fazer, mas eles também devem ter a opção de experimentar suas próprias ideias."
         },
         "70daba44-c26e-4286-95ae-50cbd8724b2d": {
@@ -550,7 +605,7 @@
           "name": "Além da Hora do Código"
         },
         "b0fff664-80cc-4318-b031-edf88ad1aebc": {
-          "description": "Peça aos alunos que acrescentem suas notas autoadesivas da atividade “Corra por aí” ao seu mapa mental de “Ciência da Computação” quando estiverem saindo da sala. Tente preencher o quadro com muitas ideias excelentes sobre o que é CC e por que ela é importante."
+          "description": "Peça aos alunos para colocarem suas respostas criativas no seu mapa mental da Ciência da Computação quando estiverem saindo da sala. Tente preencher o quadro com muitas opiniões criativas sobre o que é a Ciência da Computação e o por que ela é importante."
         },
         "f5f6ef34-367d-424d-af63-a8a04c146c34": {
           "tips": [
@@ -564,6 +619,9 @@
         },
         "9e4304e5-944c-4b21-88eb-708558b2b82f": {
           "progression_name": "Compressão de texto"
+        },
+        "17878891-5c24-412b-b385-35b54fdaeb11": {
+          "description": "**Mundo Real: Compactação em zip**\n\n-   Experimente o zip usando arquivos de texto com conteúdo diferente. Os resultados com arquivos pequenos são tão bons quanto com arquivos grandes? (Em computadores Mac, no Finder, escolha “Obter informações” de um arquivo para ver o verdadeiro número de bytes do arquivo, pois a tela do Finder mostra 4 KB em qualquer arquivo com menos que isso.)\n    -   Aviso: os resultados podem variar. O zip funciona muito bem com textos, mas talvez não compacte outros arquivos muito bem porque eles já estão compactados ou não têm os mesmos tipos de padrão incorporados que os documentos de texto.\n\n**Desafio: pesquise sobre o algoritmo LZW**\n\n-   A compactação em .zip se baseia no [LZW Compression Scheme](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch).\n\n-   Embora a ideia por trás da ferramenta de compactação de textos seja parecida com a do algoritmo LZW (zip), o rastreamento do caminho de compactação e descompactação é um tanto quanto desafiador. Um excelente projeto de extensão para algumas pessoas seria aprender mais sobre o LZW e o que acontece ao longo desse algoritmo."
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
           "name": "Introdução"
@@ -606,6 +664,9 @@
             null
           ]
         },
+        "03d9b77b-8370-4525-b5ba-d1e198c4bc96": {
+          "description": "#### Vamos jogar bola\n\nLeve os alunos ao ar livre para jogar algum tipo de jogo com bola. Acompanhe os eventos e as ações. Por exemplo: no basquete, quando um jogador não bate a bola no chão, o resultado é uma falta por segurar a bola, que passa para a outra equipe. No futebol, quando um jogador chuta a bola para fora das linhas de fundo, o resultado é que o outro time chuta a bola para dentro do campo. Quando a bola vai parar no gol, o resultado é um ponto! Se os alunos estiverem participando, invente mais eventos. Peça a todos os alunos que gritem “aêêêê\" quando o capitão de uma equipe marcar um ponto. Peça a todos que se joguem no chão e rolem se um aluno fizer dois gols seguidos!"
+        },
         "6874de98-8778-447b-8453-0138809b2c7e": {
           "tips": [
             null
@@ -647,9 +708,18 @@
             null
           ]
         },
+        "25621525-b6e8-47f3-bd9b-e574fc307993": {
+          "description": "Encoraje os alunos a compartilhar o modo como eles expressam criatividade, como a arte, dança, música e a escrita."
+        },
+        "8c86b05c-3d26-4b91-b5a1-dca6c7fd5800": {
+          "name": "Filtragem de Música"
+        },
+        "faf90391-c01a-42d3-b79c-0becac0a50d2": {
+          "name": "Suporte Geral"
+        },
         "bfdf9e27-6c04-46fc-8539-1d87d7e507dd": {
           "tips": [
-            null
+            "Você já deve ter notado que as lições estão sendo menos prescritivas. Incentive os alunos a serem criativos e explorarem os novos blocos que são apresentados. A partir deste momento, os códigos dos alunos **não serão corrigidos**, a fim de incentivá-los a explorarem em vez de resolver uma tarefa específica."
           ]
         },
         "ef4b8eed-a408-4dfa-919f-b5575e3cdea5": {
@@ -683,28 +753,44 @@
           "name": "Próximas etapas"
         },
         "7905508e-c354-4909-93eb-38e2e9ef5661": {
-          "description": "Peça aos alunos que acrescentem suas notas autoadesivas da atividade “Corra por aí” ao seu mapa mental de “Ciência da Computação” quando estiverem saindo da sala. Tente preencher o quadro com muitas ideias excelentes sobre o que é CC e por que ela é importante."
+          "description": "Peça aos alunos para colocarem suas respostas criativas no seu mapa mental da Ciência da Computação quando estiverem saindo da sala. Tente preencher o quadro com muitas opiniões criativas sobre o que é a Ciência da Computação e o por que ela é importante."
         },
         "bf5697ad-2b9a-4960-b5a7-98a1d3fa9ac1": {
           "tips": [
             null
           ]
         },
+        "54fd242d-dc0f-4a52-b6d6-bfd8f396bc85": {
+          "description": "Hoje faremos algo muito criativo. Qual é a sua forma favorita de expressar  a sua criatividade?"
+        },
+        "a88ec05c-98e3-425a-a066-4cbbf37e4af6": {
+          "description": "Encoraje os alunos a compartilhar o modo como eles expressam criatividade, como a arte, dança, música e a escrita."
+        },
         "e1243ccf-be45-4f8e-a138-54953ea12f92": {
           "tips": [
-            null
+            "Caso você não tenha experiência com codificação, você pode mostrar um dos [nossos vídeos inspiradores](https://hourofcode.com/promote/resources#videos) para te ajudar a introduzir a Hora do Código. Escolha um que os seus alunos acharam inspirador e compartilhe com eles. Para alunos do ensino médio, recomendamos [A Hora do Código Chegou](https://youtu.be/FC5FbmsH4fw)."
           ]
+        },
+        "5442c2d2-c29f-4455-a3aa-bb02b59f0bbe": {
+          "name": "Filtragem de Música"
+        },
+        "6c36cec6-95a3-4b8e-87d1-d9f01bc99638": {
+          "name": "Suporte Geral",
+          "description": "\\*\\* Suporte geral:\\*\\* Como professor, o seu papel principal é ajudar os alunos enquanto eles fazem o tutorial. Aqui estão algumas dicas que podem ajudar os alunos, independentemente do nível que estão estudando.\n\n-   **Colabore com os Colegas:** Incentive os alunos a se ajudarem quando estiverem com dificuldade. Como este tutorial utiliza vídeos e os alunos talvez estejam usando fones de ouvido, eles podem se isolar facilmente. Quebre esses obstáculos colocando os alunos lado a lado, se eles parecerem precisar de ajuda. Dependendo da idade e capacidade de seus alunos, você pode considerar dividir a sua turma em pares para realizarem o tutorial usando [programação em par](https://youtu.be/vgkahOzFH2Q). \n-   **Leia as instruções:** As instruções geralmente fornecem dicas úteis sobre como completar o nível. Antes de finalizar um nível para um aluno, certifique-se de que ele realmente olhou atentamente para a imagem e leu todo o texto.\n-   ![](https://curriculum.code.org/media/uploads/hint.png)**Com dificuldades? Procure por dicas:** Cada nível possui uma dica com detalhes sobre como concluir o nível. Se os alunos tentarem acabar os quebra-cabeças muito rapidamente, talvez eles percebam que só precisam esperar um pouco para que o código seja executado completamente antes de continuarem. Vários níveis contêm uma segunda dica sugerindo formas de ser ainda mais criativo, através da prolongação da tarefa.\n-   **Faça e Refaça:** Às vezes, os alunos se beneficiarão mais se refizerem um nível difícil. Todos os níveis são independentes entre si, embora dependam um pouco de conceitos introduzidos anteriormente.\n-   Experimente sem pressa.\\*\\* Apesar dos primeiros níveis dizerem aos alunos exatamente o que eles precisam fazer, os alunos devem se sentir livres para experimentar suas próprias ideias."
+        },
+        "d737dd0e-b1aa-47df-b9a2-620d324f9c10": {
+          "description": "#### Nível 1\n\n-   Arraste o bloco vermelho chamado `criar novo`  da caixa de ferramentas à esquerda para a área de trabalho à direita. Conecte-o dentro do bloco `configuração`.\n-   Você acaba de escrever seu primeiro programa. Não se esqueça de pressionar Executar para ver o que acontece. Você ouvirá uma música e verá um personagem se mover na área de exibição."
         },
         "79a5c039-7ca6-41bb-acb5-ec5e0e29b122": {
           "tips": [
-            null
+            "Você já deve ter notado que as lições estão sendo menos prescritivas. Incentive os alunos a serem criativos e explorarem os novos blocos que são apresentados. A partir deste momento, os códigos dos alunos **não serão corrigidos**, a fim de incentivá-los a explorarem em vez de resolver uma tarefa específica."
           ]
         },
         "34bd90ee-f836-4e48-a793-b97fee0d99c8": {
           "name": "Próximas etapas"
         },
         "e4e53ed4-18d2-4b17-9566-e08ccc20a4f3": {
-          "description": "Peça aos alunos que acrescentem suas notas autoadesivas da atividade “Corra por aí” ao seu mapa mental de “Ciência da Computação” quando estiverem saindo da sala. Tente preencher o quadro com muitas ideias excelentes sobre o que é CC e por que ela é importante."
+          "description": "Peça aos alunos para colocarem suas respostas criativas no seu mapa mental da Ciência da Computação quando estiverem saindo da sala. Tente preencher o quadro com muitas opiniões criativas sobre o que é a Ciência da Computação e o por que ela é importante."
         },
         "54b95e4d-58b7-4551-9782-7ce134f4e457": {
           "tips": [
@@ -717,6 +803,9 @@
           "tips": [
             null
           ]
+        },
+        "5d09fa3e-63ce-4142-ac59-d893889ce78d": {
+          "progression_name": "Treine uma IA para limpar o oceano"
         },
         "917bb837-8f93-4a92-86dc-ed60980f680b": {
           "progression_name": "IA: Dados de treinamento e viés - Vídeo"
@@ -751,6 +840,7 @@
           ]
         },
         "7acfc985-03d8-4d14-b244-203f8cbf4843": {
+          "name": "Suporte Geral",
           "description": "Veja aqui algumas dicas que podem ajudar os alunos de qualquer nível com os quais você esteja trabalhando \n\n-   \\*_Colabore com os colegas:_ Incentive os alunos a verificar com um colega os pontos em que tiverem problemas. Conforme a idade e a capacidade dos alunos, você pode considerar a formação de duplas formalmente na classe, para assistirem ao tutorial utilizando o [pair programmin][0].\n\n-   \\*_Leia as Instruções:_As instruções geralmente fornecem dicas úteis sobre como concluir o nível. Antes de dar a resposta aos alunos, certifique-se de que eles leram as instruções cuidadosamente, viram as dicas, os vídeos e outros códigos iniciais com atenção.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> \\*_Problemas? Procure as dicas:_Cada nível inclui uma dica com orientações sobre como concluir o nível, incluindo blocos de código para o aluno experimentar. \n\n-   \\*_Não tenha pressa e experimente._As instruções geralmente dizem aos alunos o que fazer, mas eles também devem ter a opção de experimentar suas próprias ideias."
         },
         "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
@@ -865,6 +955,16 @@
         "bcae00ac-4d05-444e-bfb3-77d3463c259d": {
           "name": "Curso e Projeto de Laboratório de Sprite ",
           "progression_name": "Curso e Projeto de Laboratório de Sprite "
+        },
+        "6f0c4f43-6167-42df-b2f8-717a5ecc23d1": {
+          "progression_name": "Visão geral da aula"
+        },
+        "f573a627-ebb0-443a-a0a1-6b4b64c933d5": {
+          "progression_name": "Explorando Ciências da Computação no Entretenimento"
+        },
+        "6e6ad22a-99d2-434c-abab-b6d4a6962027": {
+          "name": "Programas de Exemplo",
+          "progression_name": "Programas de Exemplo"
         },
         "80638f32-a3e0-46c4-99fa-74d740d9ff1d": {
           "progression_name": "Visão geral da aula"
@@ -2924,6 +3024,23 @@
           "name": "Projeto",
           "progression_name": "Projeto"
         },
+        "5b798399-282e-49fa-b6ff-49a267c2a88e": {
+          "progression_name": "Visão geral da aula"
+        },
+        "b13e1818-6495-44cb-97f3-69ea42c9ce0b": {
+          "progression_name": "Explorando Ciências da Computação no Entretenimento"
+        },
+        "68f4881c-e3a6-4fb1-bb42-6bfce254e6b9": {
+          "name": "Programas de Exemplo",
+          "progression_name": "Programas de Exemplo"
+        },
+        "bb6a2b90-0730-48ab-b10d-325b0f37b6af": {
+          "progression_name": "Visão geral da aula"
+        },
+        "122c7721-3946-460b-905c-aaf2a8315a7a": {
+          "name": "Desenhando Formas",
+          "progression_name": "Desenhando Formas"
+        },
         "31ea1300-575e-4f67-9fba-ffccd705a373": {
           "progression_name": "Visão geral da aula"
         },
@@ -3271,6 +3388,32 @@
           "name": "Reflexão",
           "progression_name": "Reflexão"
         },
+        "f3b83c25-457b-49e0-97bb-b6cf01729b96": {
+          "progression_name": "Visão geral da aula"
+        },
+        "edb1b531-f884-4cdb-8763-205ccb5ccfb9": {
+          "name": "Pesquisa de Inovação",
+          "progression_name": "Pesquisa de Inovação"
+        },
+        "e8d8ba0c-067a-4b05-afac-49467b70d19a": {
+          "progression_name": "Visão geral da aula"
+        },
+        "dc82808d-bac6-4e90-9047-694410f3090c": {
+          "progression_name": "Propriedades de Configuração"
+        },
+        "22d81b4c-d781-4955-816b-5db96efe24ce": {
+          "progression_name": "Criando telas com código"
+        },
+        "9dda00cc-e51b-48f2-b2a2-d38f5175571b": {
+          "progression_name": "Eventos e Propriedades"
+        },
+        "8aaad068-43af-4e02-ab64-efac8c2f7b7f": {
+          "progression_name": "Exemplo de Máquina de Emoção"
+        },
+        "e63385fd-2aa7-4253-9322-e5872437dac3": {
+          "name": "Construir um App",
+          "progression_name": "Construir um App"
+        },
         "5dd1bd9a-be39-46a3-aea2-9ec7b6961490": {
           "progression_name": "Visão geral da aula"
         },
@@ -3536,6 +3679,14 @@
           "name": "Reflexão",
           "progression_name": "Reflexão"
         },
+        "718cfc6c-7248-4776-8567-743b410346fe": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "32c6086e-831b-4619-bdee-ba1148a43543": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
         "0bd68424-df94-4120-9a38-b4bbdc1c9491": {
           "name": "Visão geral da aula",
           "progression_name": "Visão geral da aula"
@@ -3649,6 +3800,14 @@
           "name": "Reflexão",
           "progression_name": "Reflexão"
         },
+        "bffba681-eb9e-4dc3-8f57-893671e6c2c1": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
+        "6f338ea8-0c2f-46bb-ad95-dc6541ff1cf9": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
+        },
         "a17f73b3-11f1-499b-873e-0543c661ec9b": {
           "name": "Visão geral da aula",
           "progression_name": "Visão geral da aula"
@@ -3734,6 +3893,13 @@
           "name": "Visão geral da aula",
           "progression_name": "Visão geral da aula"
         },
+        "4baf3e55-b479-405e-acfb-99bc0b8c9912": {
+          "progression_name": "Visão geral da aula"
+        },
+        "8044f0e5-2eee-425f-b124-6f80494e5b23": {
+          "name": "Vídeo: Processo de resolução de problemas",
+          "progression_name": "Vídeo: Processo de resolução de problemas"
+        },
         "11df93d2-fda9-467b-bb01-71f213fe5346": {
           "name": "Visão geral da aula",
           "progression_name": "Visão geral da aula"
@@ -3763,6 +3929,16 @@
         "3abf4793-4d90-45c7-a47e-3e44a09581eb": {
           "name": "Reflexão",
           "progression_name": "Reflexão"
+        },
+        "ad55ae28-5794-4f0d-8970-dafde8dd2281": {
+          "progression_name": "Visão geral da aula"
+        },
+        "7d345d9c-3308-4a84-b288-512e51e57815": {
+          "progression_name": "Visão geral da aula"
+        },
+        "0cc1b631-05c8-4129-b2e9-65f02c303d16": {
+          "name": "Exemplo de Websites pessoais",
+          "progression_name": "Exemplo de Websites pessoais"
         },
         "f00dd0ff-7a04-4e7f-b6ca-3c7a96143f2c": {
           "progression_name": "Visão geral da aula"
@@ -4040,6 +4216,23 @@
         "2423f0a7-e415-4f4c-83d0-a6ff79c67ff3": {
           "name": "Curso F: Projeto Play Lab - Revisão",
           "progression_name": "Curso F: Projeto Play Lab - Revisão"
+        },
+        "ceaeda39-02d6-4007-83fb-f037c707389c": {
+          "progression_name": "Visão geral da aula"
+        },
+        "ab7d99c8-e849-41ff-a55b-b66d48e1f5d1": {
+          "progression_name": "Explorando Ciências da Computação no Entretenimento"
+        },
+        "9dbf54b0-360f-45d9-a44e-cee20a3765fb": {
+          "name": "Programas de Exemplo",
+          "progression_name": "Programas de Exemplo"
+        },
+        "c6e24cc7-63f3-4893-95d6-7f4974b6214e": {
+          "progression_name": "Visão geral da aula"
+        },
+        "a4e22b77-a871-48dd-b56a-c73055f6ba15": {
+          "name": "Desenhando Formas",
+          "progression_name": "Desenhando Formas"
         },
         "74674f27-4080-468a-b72c-5eedcd9b0148": {
           "progression_name": "Visão geral da aula"
@@ -4445,6 +4638,13 @@
           "name": "Reflexão",
           "progression_name": "Reflexão"
         },
+        "3e00297e-2875-4c9e-bbaa-0fea483933a1": {
+          "progression_name": "Visão geral da aula"
+        },
+        "82524fd8-6d75-46e4-9cb3-719ff43e17da": {
+          "name": "Pesquisa de Inovação",
+          "progression_name": "Pesquisa de Inovação"
+        },
         "9788e225-92b9-4d11-8bc7-987573ba1b45": {
           "progression_name": "Visão geral da aula"
         },
@@ -4729,6 +4929,9 @@
         "6d0332f9-d670-4588-9e96-5975fb480945": {
           "name": "Reflexão",
           "progression_name": "Reflexão"
+        },
+        "51ac2647-90fe-443e-a77b-48132f4b7680": {
+          "progression_name": "Visão geral da aula"
         },
         "812cc4f7-4fec-46e3-900b-807efdf05bda": {
           "progression_name": "Visão geral da aula"
@@ -5032,6 +5235,10 @@
         "4f744a54-0d8b-49a1-8581-fc05cef356c6": {
           "name": "Reflexão",
           "progression_name": "Reflexão"
+        },
+        "f2b5d0ac-98f0-4ad6-8cba-c70d2053fac6": {
+          "name": "Visão geral da aula",
+          "progression_name": "Visão geral da aula"
         },
         "9f01af5f-25ad-4296-beaf-a93d5604daa7": {
           "name": "Visão geral da aula",
@@ -7545,6 +7752,9 @@
             "Se você tiver tempo e quiser preparar seus alunos com uma atividade desconectada, considere entregar **\\\\ \\*Dance Party: Unplugged** antes desta lição. Esta breve lição apresenta aos alunos a ideia de eventos que desencadeiam diferentes movimentos de dança."
           ]
         },
+        "270c3845-697d-42f7-b720-f6926aceff03": {
+          "description": "Hoje faremos algo muito criativo. Qual é a sua forma favorita de expressar  a sua criatividade?"
+        },
         "2fe76df3-dde6-43fd-a725-2a1c458996b2": {
           "name": "Codifique sua própria festa dançante",
           "description": "#### Filtragem de música\n\nEste tutorial apresenta músicas de artistas populares. Para obter uma prévia da lista de músicas neste tutorial, confira esta **\\\\ \\*Lista de reprodução do Spotif**. Estamos usando versões seguras para rádio de todas as músicas e, para alunos com menos de 13 anos, limitamos a música a esta lista filtrada. Se você quiser usar a lista filtrada com alunos mais velhos, você pode compartilhar **\\\\ \\*Lista de reprodução do Spotif** com sua sala de aula."
@@ -7580,7 +7790,7 @@
         },
         "c7bb438d-7dd6-483a-954a-0431f8ece258": {
           "tips": [
-            null
+            "Você já deve ter notado que as lições estão sendo menos prescritivas. Incentive os alunos a serem criativos e explorarem os novos blocos que são apresentados. A partir deste momento, os códigos dos alunos **não serão corrigidos**, a fim de incentivá-los a explorarem em vez de resolver uma tarefa específica."
           ]
         },
         "19a261df-276b-4f57-98db-a694c8dc0b40": {
@@ -7598,7 +7808,7 @@
         },
         "9c113356-76b9-4324-b22f-e35ce5a49216": {
           "name": "Avaliação",
-          "description": "Peça aos alunos que acrescentem suas notas autoadesivas da atividade “Corra por aí” ao seu mapa mental de “Ciência da Computação” quando estiverem saindo da sala. Tente preencher o quadro com muitas ideias excelentes sobre o que é CC e por que ela é importante."
+          "description": "Peça aos alunos para colocarem suas respostas criativas no seu mapa mental da Ciência da Computação quando estiverem saindo da sala. Tente preencher o quadro com muitas opiniões criativas sobre o que é a Ciência da Computação e o por que ela é importante."
         },
         "18fe5772-b05d-4e30-ada7-28d06b1bdf5d": {
           "name": "Oportunidade transcurricular",
@@ -7877,6 +8087,7 @@
           ]
         },
         "64a65e3a-6b86-4cc4-93fa-d0b4b9104781": {
+          "name": "Projeto de Fim do Curso",
           "description": "Equipados com seus guias de planejamento concluídos, os alunos agora estão prontos para dar vida a seus projetos. Esses níveis correspondem à estrutura do guia de planejamento e ajudam a orientar os alunos pelo processo de transformar suas ideias em código.",
           "tips": [
             "Os alunos experimentarão muitas tentativas e erros durante a codificação. É provável que seus projetos se tornem versões truncadas de seu escopo original. Lembre aos alunos que esse tipo de compromisso é comum no design de software. Tudo bem se eles não conseguirem criar todos os recursos que planejaram!"
@@ -8172,6 +8383,9 @@
         "cea77f0d-7de9-4eb3-8637-2d3f42663d9f": {
           "description": "### Fornecendo energia para seu animal de estimação virtual (60-90 minutos)\n\n![](https://images.code.org/5066103b929a2811e50d5bd54fbb114e-elaSmall.png)\n![](https://images.code.org/6a1508aeb443e243f595f88ecfa9ed7a-mathSmall.png)\n![](https://images.code.org/54b84cd74790e8e37daeff6cd826c185-scienceSmall.png)**Ciência da Computação+Língua Inglesa Artes + Ciência**\n\n[Fornecendo energia para seu animal de estimação virtual](https://docs.google.com/document/d/1ZwHXzgPKSyO5F-QnYT9cvy2WWKMvZ19-GY6-2FxUCf0/edit?usp=sharing) é uma atividade opcional alinhada aos Padrões Científicos do Common Core ELA e Next Generation Science Standards, escritos por nossa comunidade de professores. Os alunos criarão um modelo científico que mostra como seu animal de estimação virtual receberá a energia necessária para sobreviver. \n\n_Padrões Endereçados:_\n\n-   \\*\\*CCSS.ELA.RI.5.7: \\*\\* Desenhe informações de várias fontes impressas ou digitais, demonstrando a capacidade de localizar uma resposta a uma pergunta rapidamente ou de resolver um problema com eficiência. \n\n-   \\*\\*CCSS.ELA.RI.5.9: \\*\\* Integre informações de vários textos sobre o mesmo tópico para escrever ou falar sobre o assunto com conhecimento. \n\n-   \\*\\*5- PS3-1: \\*\\* Use modelos para descrever que a energia na alimentação dos animais (usada para reparar o corpo, crescimento, movimento e manter o calor corporal) já foi energia do sol. \n\n-   \\*\\*5-LS2-1: \\*\\* Desenvolva um modelo para descrever o movimento da matéria entre plantas, animais, decompositores e o ambiente \n\n-   \\*\\*SL.5.5: \\*\\* Incluir componentes multimídia (por exemplo, gráficos, som) e exibições visuais em apresentações quando adequado para melhorar o desenvolvimento de ideias ou temas principais. "
         },
+        "af98f91b-4ac2-4500-97b0-2437e960cb76": {
+          "description": "Hoje faremos algo muito criativo. Qual é a sua forma favorita de expressar  a sua criatividade?"
+        },
         "88b00482-3c11-4079-9869-faaa51c340c2": {
           "name": "Codifique sua própria festa dançante",
           "description": "#### Filtragem de música\n\nEste tutorial apresenta músicas de artistas populares. Para obter uma prévia da lista de músicas neste tutorial, confira esta **\\\\ \\*Lista de reprodução do Spotify.** Estamos usando versões seguras para rádio de todas as músicas. Para alunos menores de 13 anos, limitamos a música a essa lista filtrada. Se você quiser usar a lista filtrada com alunos mais velhos, você pode compartilhar **\\\\ \\*Lista de reprodução do Spotif** com sua sala de aula."
@@ -8204,7 +8418,7 @@
         "7e0f9f67-19cb-455a-bd75-d771183b8773": {
           "description": "#### Propriedades Nível 11\n\n-   Os níveis 11-13 tratam de ajustar as propriedades (por exemplo, tamanho, cor) dos dançarinos.\n-   É importante certificar-se de que o bloco de cerceta esteja colocado em algum lugar do programa _após_ os dançarinos terem sido criados. Para resolver esse quebra-cabeça, coloque um bloco de tamanho definido em qualquer lugar do seu programa e use-o para alterar o tamanho de alguns de seus dançarinos. \n-   Os dançarinos criados como um grupo têm um tamanho padrão de 30. Outros dançarinos têm um tamanho padrão de 100.\n\n#### Propriedades Nível 12\n\n-   Como no nível anterior, certifique-se de usar apenas a tonalidade definida para o bloco (colorido) depois de ter feito os dançarinos em seu programa. Por exemplo, colocá-lo como a primeira etapa na área de configuração do seu programa não terá efeito.\n\n#### Propriedades Nível 13\n\n-   Com o código certo, você deve ver o dançarino percorrer diferentes cores, tamanhos ou movimentos de dança.\n-   Certifique-se de que haja uma mudança verde-azulada, um bloco aleatório azul-petróleo ou um bloco roxo do forever conectado dentro de cada bloco de 2 medidas. \n-   Certifique-se de que os blocos do forever estejam definidos como (Próximo), (Anterior) ou (Aleatório). Caso contrário, o dançarino apenas executará o movimento do set repetidamente.\n    — Observe que o código que os alunos escrevem nesse nível não é verificado quanto à exatidão. Isso significa que eles sempre passarão de nível, mesmo que não mudem o programa. Os alunos devem se sentir à vontade para experimentar seu código de maneiras que sejam interessantes para eles. Clique no botão “Concluir” para seguir em frente.\n-   Fazer novos dançarinos dentro de cada bloco de 2 medidas fará com que seu programa crie vários dançarinos idênticos no (s) mesmo (s) local (s) e pode levar a consequências não intencionais!",
           "tips": [
-            null
+            "Você já deve ter notado que as lições estão sendo menos prescritivas. Incentive os alunos a serem criativos e explorarem os novos blocos que são apresentados. A partir deste momento, os códigos dos alunos **não serão corrigidos**, a fim de incentivá-los a explorarem em vez de resolver uma tarefa específica."
           ],
           "progression_name": "Propriedades"
         },
@@ -10013,6 +10227,26 @@
           ],
           "progression_name": "Instruções de Pesquisa Pós-curso"
         },
+        "a6722c40-2f55-4b5c-8ffa-f9e3982f232b": {
+          "tips": [
+            null
+          ]
+        },
+        "0aae65e7-d504-4b63-9b0e-f9145959ac27": {
+          "tips": [
+            null
+          ]
+        },
+        "0ffa0382-8df9-42a1-8f6b-62612e26f301": {
+          "tips": [
+            null
+          ]
+        },
+        "0158f751-e444-4cd5-ae72-c6daa9d0f859": {
+          "tips": [
+            null
+          ]
+        },
         "7c0f6057-1b87-4d67-a58d-c511e59b2e62": {
           "tips": [
             null
@@ -10558,6 +10792,28 @@
           ],
           "progression_name": "Instruções de Pesquisa Pós-curso"
         },
+        "d34d3ef7-b3ad-41de-8b49-c7460f8b1450": {
+          "tips": [
+            null
+          ]
+        },
+        "9c23f514-e5e6-45f4-9038-c8c68e26c041": {
+          "name": "Inspire-se"
+        },
+        "ecaf188e-1d18-4418-9881-296b1f090f2e": {
+          "name": "Pesquisa de Inovação"
+        },
+        "9e9ce748-fed7-4391-a28d-6c9e5da3cf27": {
+          "tips": [
+            null
+          ]
+        },
+        "fe954bee-319a-49ec-a2d1-033dd539a59b": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Pesquisa de Inovação"
+        },
         "2bddbd31-7cae-4867-96fd-f8ba2f18b6c8": {
           "tips": [
             null
@@ -10960,6 +11216,39 @@
             null
           ],
           "progression_name": "Instruções de Pesquisa Pós-curso"
+        },
+        "322ad615-5d42-4b54-ab60-5d7b7d36e277": {
+          "tips": [
+            null
+          ]
+        },
+        "3e097460-3cde-4714-ba16-61de8a8439ac": {
+          "tips": [
+            null
+          ]
+        },
+        "cf324018-6258-4c8b-98e8-f5de7f3cec14": {
+          "tips": [
+            null
+          ]
+        },
+        "617e101b-5c13-40e7-be75-6a4626bebe3e": {
+          "tips": [
+            null
+          ]
+        },
+        "e94772c1-7ac5-4e4f-b9b3-021ba4b36ef5": {
+          "tips": [
+            null
+          ]
+        },
+        "c670c339-5f6d-475c-b6cf-ad8a35c2d8a2": {
+          "name": "Reflexão"
+        },
+        "0d5d0634-6b05-4c47-b187-594dfd30d625": {
+          "tips": [
+            null
+          ]
         },
         "c80549fe-fb7e-4eef-ba30-247264bf0e1f": {
           "tips": [
@@ -11380,6 +11669,24 @@
             null
           ],
           "progression_name": "Instruções de Pesquisa Pós-curso"
+        },
+        "2e17eccc-2343-4bde-849c-eaf270f343f8": {
+          "tips": [
+            null
+          ]
+        },
+        "f348d317-252e-4581-b489-fe1bbe700f67": {
+          "tips": [
+            null
+          ]
+        },
+        "caeb42d3-998b-49fd-99ec-4c36e013206f": {
+          "tips": [
+            null
+          ]
+        },
+        "1d9fcb2e-5d45-47f4-b834-65c714a78452": {
+          "progression_name": "Programas de Exemplo"
         },
         "31ee2243-fd15-45ab-a0d7-80c2c97d88c7": {
           "tips": [
@@ -12265,6 +12572,39 @@
             null
           ]
         },
+        "fabada45-479f-44d4-bc2d-dbeb8a8e7abd": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "23f003b6-2c1b-4e88-a343-f77714a50d89": {
+          "name": "O Processo de Resolução de Problemas",
+          "tips": [
+            null
+          ],
+          "progression_name": "Vídeo: Processo de resolução de problemas"
+        },
+        "f3ad86f7-7c83-415c-aa5a-a276d6186faa": {
+          "tips": [
+            null
+          ]
+        },
+        "e3e59454-f8cc-47ef-a206-23e55cf74c89": {
+          "tips": [
+            null
+          ]
+        },
+        "971b5c08-a61d-400c-a1ff-8ac3139a3c7c": {
+          "tips": [
+            null
+          ]
+        },
+        "03418848-4f2d-4f45-8f25-38012b191a2a": {
+          "tips": [
+            null
+          ]
+        },
         "10aec291-0c45-453c-8609-5386783ff20e": {
           "tips": [
             null
@@ -12637,6 +12977,22 @@
           ]
         },
         "ab4371e8-c868-4587-9f32-2a0f857b910d": {
+          "tips": [
+            null
+          ]
+        },
+        "c55d809b-5128-4cba-82bf-3bf0e51aec06": {
+          "tips": [
+            null
+          ]
+        },
+        "1265c20c-95ab-4c34-b8fc-b3532b088415": {
+          "name": "Explorando sites",
+          "tips": [
+            null
+          ]
+        },
+        "c1050c6d-1379-4f81-ab69-6f00bbfb363a": {
           "tips": [
             null
           ]

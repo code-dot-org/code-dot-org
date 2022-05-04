@@ -31813,11 +31813,11 @@ en:
             lesson-9:
               name: Polymorphism
               description_student: |-
-                **How can I create and use arrays of objects?**
+                **How can I create and use arrays of different objects?**
 
                 You have used inheritance to create hierarchies of classes and worked with arrays of primitive values and Strings. In this lesson, you explore arrays of objects and learn how to refer to object data when accessing elements in an array. You revisit inheritance and discover using polymorphism to work with 1D arrays of a superclass type. You review overriding methods and traverse an array of objects to use subclass methods.
               description_teacher: |-
-                **How can I create and use arrays of objects?**
+                **How can I create and use arrays of different objects?**
 
                 Students explore arrays of objects and learn how to refer to object data when accessing elements in an array. Students revisit inheritance and discover using polymorphism to work with 1D arrays of a superclass type. Students review overriding methods and traverse an array of objects to use subclass methods.
             lesson-10:
@@ -33925,7 +33925,7 @@ en:
               description_student: |
                 **You will:**
                 * Consider your role as the teacher in a CS Discoveries classroom.
-              description_teacher: "**Overview:**\nThese asynchronous activities will provide participants an introduction to the role of the teacher as the lead learner. Participants will be prompted to consider how their experiences and beliefs about CS influence how they see their role as the teacher in a CS classroom. This reflection will prime participants for the identity session later in the workshop. \n\n**Participants will:**\n\n* Consider your/their role as the teacher in the CS Discoveries classroom. \n\n**Suggested time:** 20 minutes"
+              description_teacher: "**Overview:**\nThese asynchronous activities will provide participants an introduction to the role of the teacher as the lead learner. Participants will be prompted to consider how their experiences and beliefs about CS influence how they see their role as the teacher in a CS classroom. This reflection will prime participants for the identity session later in the workshop. \n\n**Participants will:**\n\n* Consider their role as the teacher in the CS Discoveries classroom. \n\n**Suggested time:** 20 minutes"
             lesson-11:
               name: Wrap Up
               description_student: "**You will:**\n\n* Get an introduction to the asynchronous activities. \n* Reflect on gots and needs. "
@@ -34273,9 +34273,9 @@ en:
               description_student: "**You will:**\n\n* Resolve open questions related to the CS Discoveries curriculum.\n* Share ideas for implementing the CS Discoveries curriculum with students. "
               description_teacher: "**Overview:**\nThis session is intended to be flexible to meet the needs of the workshop participants. The goal is that participants leave the workshop feeling confident and prepared to start teaching the content from at least one unit of the CS Discoveries curriculum.\n\n**Participants will:**\n\n* Resolve open questions related to the CS Discoveries curriculum.\n* Share ideas for implementing the CS Discoveries curriculum with students. \n\n**Suggested time:** 60 minutes"
             lesson-3:
-              name: Making a Plan
+              name: Teacher Resource Exploration
               description_student: "**You will:**\n\n* Make a plan for implementing the CS Discoveries curriculum with your students. "
-              description_teacher: "**Overview:**\nDuring this session, participants will make a plan for implementing CS Discoveries with their students. Participants will consider topics such as which units they will teach and when, how they will assess student learning, routines they will establish at the start of the school year, and the steps they will take to promote a culture of inclusion. Collaboration and sharing of ideas are encouraged in this session. \n\n**Participants will:**\n\n* Make a plan for implementing the CS Discoveries curriculum with your students. \n\n**Suggested time:** 60 minutes"
+              description_teacher: "**Overview:**\nDuring this session, participants will make a plan for implementing CS Discoveries with their students. Participants will consider topics such as which units they will teach and when, how they will assess student learning, routines they will establish at the start of the school year, and the steps they will take to promote a culture of inclusion. Collaboration and sharing of ideas are encouraged in this session. \n\n**Participants will:**\n\n* Make a plan for implementing the CS Discoveries curriculum with their students. \n\n**Suggested time:** 60 minutes"
             lesson-4:
               name: Async Prep
             lesson-5:
