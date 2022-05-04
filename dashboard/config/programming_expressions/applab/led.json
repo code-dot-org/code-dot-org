@@ -3,7 +3,7 @@
   "name": "led",
   "category": "Circuit",
   "category_key": "circuit",
-  "content": "<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/cp_red_led.png\" alt=\"red led\" style=\"float: right; margin: 20px; width: 300px;\">\n\nThe `led` is an object representing the red LED next to the USB port. Internally this LED is connected to pin 13 of the Circuit Playground.\n\n### Properties and Methods\n\n* `led.on()` - Turn the red LED on\n* `led.off()` - Turn the red LED off\n* `led.toggle()` - Alternate between turning the LED on and off\n* `led.blink()` - Blink at a given rate\n* `led.pulse()` - Pulse at a given rate",
+  "content": "<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/cp_red_led.png\" alt=\"red led\" style=\"float: right; margin: 20px; width: 300px;\">\n\nThe [`led`(#f78183)](/docs/applab/led/) is an object representing the red LED next to the USB port. Internally this LED is connected to pin 13 of the Circuit Playground.\n\n### Properties and Methods\n\n* `led.on()` - Turn the red LED on\n* `led.off()` - Turn the red LED off\n* `led.toggle()` - Alternate between turning the LED on and off\n* `led.blink()` - Blink at a given rate\n* `led.pulse()` - Pulse at a given rate",
   "examples": [
     {
       "name": "Blink: Blink Buttons",

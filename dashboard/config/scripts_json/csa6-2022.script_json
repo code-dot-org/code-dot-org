@@ -4,6 +4,22 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "Curriculum Videos",
+          "details": "Some lessons currently do not have links to videos in the lesson plans or slide deck. These videos are in final production and will be linked as soon as these are available.",
+          "link": "",
+          "type": "information",
+          "visibility": "Teacher-only"
+        },
+        {
+          "notice": "More Opportunities for Feedback",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
+          "link": "",
+          "type": "feedback",
+          "visibility": "Teacher-only"
+        }
+      ],
       "curriculum_umbrella": "CSA",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -15,8 +31,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-15 01:20:13 UTC",
-    "published_state": null,
+    "serialized_at": "2022-05-02 23:16:21 UTC",
+    "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -46,6 +62,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa6-2022"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Sandboxes"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa6-2022"
       }
     }
@@ -216,8 +244,8 @@
       "relative_position": 10,
       "properties": {
         "overview": "**How can I modify standard algorithms to implement natural language processing techniques?**\n\nStudents explore a new standard algorithm to obtain individual digits from an integer and learn how sentiment values are used in natural language processing. Students write an algorithm to find the sentiment value of a word and apply their algorithm to various scenarios to find the overall sentiment value of text.",
-        "preparation": "* Create code review groups if you are not reusing the same groups",
-        "student_overview": "**How can I modify standard algorithms to implement natural language processing techniques?**\n\nIn this lesson, you explore a new standard algorithm to obtain individual digits from an integer and learn how sentiment values are used in natural language processing. You write an algorithm to find the sentiment value of a word and apply their algorithm to various scenarios to find the overall sentiment value of text."
+        "preparation": "* Create code review groups if you are not reusing the same groups\n* Print copies of the Unit 6 Study Guide (one for each student)",
+        "student_overview": "**How can I modify standard algorithms to implement natural language processing techniques?**\n\nIn this lesson, you explore a new standard algorithm to obtain individual digits from an integer and learn how sentiment values are used in natural language processing. You write an algorithm to find the sentiment value of a word and apply your algorithm to various scenarios to find the overall sentiment value of text."
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -314,6 +342,51 @@
       "seeding_key": {
         "lesson.key": "lesson-15",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa6-2022"
+      }
+    },
+    {
+      "key": "Console",
+      "name": "Console",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Console",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa6-2022"
+      }
+    },
+    {
+      "key": "The Neighborhood",
+      "name": "The Neighborhood",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa6-2022"
+      }
+    },
+    {
+      "key": "The Theater",
+      "name": "The Theater",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The Theater",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa6-2022"
       }
     }
@@ -946,6 +1019,42 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa6-2022"
       }
+    },
+    {
+      "key": "0097216e-c464-4e33-8837-ab0a5eb6d78f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0097216e-c464-4e33-8837-ab0a5eb6d78f",
+        "lesson.key": "Console",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa6-2022"
+      }
+    },
+    {
+      "key": "a80de89b-84a3-465d-9e20-3fdd541e3f3a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a80de89b-84a3-465d-9e20-3fdd541e3f3a",
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa6-2022"
+      }
+    },
+    {
+      "key": "f9051edf-6114-411a-9f47-c228d9edd62b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f9051edf-6114-411a-9f47-c228d9edd62b",
+        "lesson.key": "The Theater",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa6-2022"
+      }
     }
   ],
   "activity_sections": [
@@ -1238,10 +1347,27 @@
       }
     },
     {
-      "key": "7f809389-24ed-45a1-b8cb-7df9afd51670",
+      "key": "2689da87-15a3-44d1-968d-f389bf33a0f5",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that `Integer` and `Double` objects are instantiated to store integer and decimal values. Students also notice that `Integer` and `Double` objects can be created using both the `new` keyword and the assignment operator. Students may wonder why they would use `Integer` and `Double` objects instead of `int` and `double` values.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Wrapper Classes*."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that `Integer` and `Double` objects are instantiated to store integer and decimal values. Students also notice that `Integer` and `Double` objects can be created using both the `new` keyword and the assignment operator. Students may wonder why they would use `Integer` and `Double` objects instead of `int` and `double` values.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Ask students to consider the similarities and differences between creating `Integer` and `Double` objects and `String` objects. Have students make predictions about what might be happening when `Integer` and `Double` objects are created without the `new` keyword."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2689da87-15a3-44d1-968d-f389bf33a0f5",
+        "lesson_activity.key": "38d28908-84a9-446e-9ea5-c1fdbdae8f5f"
+      }
+    },
+    {
+      "key": "7f809389-24ed-45a1-b8cb-7df9afd51670",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Wrapper Classes*."
       },
       "seeding_key": {
         "activity_section.key": "7f809389-24ed-45a1-b8cb-7df9afd51670",
@@ -1250,7 +1376,7 @@
     },
     {
       "key": "adf69d73-a52d-4d84-940d-b41b0844563e",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "The `Integer` and `Double` classes have methods to work with integer and decimal values. Let's take a look at some of their methods and capabilities.",
         "duration": "10",
@@ -1264,7 +1390,7 @@
     },
     {
       "key": "d6e8606b-4d5c-4ced-b83f-8707efd352d9",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `Integer` class and its methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `Double` class and its methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *parsing*."
       },
@@ -1275,7 +1401,7 @@
     },
     {
       "key": "df2d7f1f-a6a2-42e4-89bb-361c709cc63c",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "When you were exploring the program, you might have noticed something interesting that happens when you add one to the maximum value for an integer or subtract one from the minimum value for an integer.",
         "remarks": true
@@ -1287,7 +1413,7 @@
     },
     {
       "key": "03056206-b674-4ff0-994f-7153bccab613",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What did you notice about the maximum and minimum values for an `int`?*\n* *What happens when you add or subtract one from the maximum or minimum values?*\n\n**Discussion Goal:** Students share the maximum and minimum values and their findings from adding to the maximum value or subtracting from the minimum value.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the minimum and maximum values for integers.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *overflow* and *underflow*."
       },
@@ -1298,7 +1424,7 @@
     },
     {
       "key": "430d4997-36f0-4b3e-a512-8550550bada2",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "Representing integer and decimal values as objects are useful for specific scenarios. When represented as objects, we can use the methods in the `Integer` and `Double` classes to work with these values.",
         "duration": "15",
@@ -1312,7 +1438,7 @@
     },
     {
       "key": "2e5d5104-fdcb-4d7c-89ad-574618a8ca2b",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate autoboxing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate unboxing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students debug the program on Level 2, then continue to complete Levels 3 and 4 to use `Integer` and `Double` objects and their methods.",
         "progression_name": "Using Wrapper Classes"
@@ -1441,7 +1567,13 @@
       "key": "4ad47ec3-8e20-4f7b-bbdb-ee4f9ad7a689",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that an `ArrayList` stores a list of values and that the type is `Integer` instead of `int`. Students also notice that the syntax is different for an `ArrayList` than a 1D or 2D array and that the `add()` methods add elements to either the end of or at a specific location in the `ArrayList`. Students may wonder why they would use an `ArrayList` instead of a 1D array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *The ArrayList Class*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define `ArrayList` and mutable and identify the package that contains the `ArrayList` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *dynamic data structure* and *static data structure*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `add()` methods."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that an `ArrayList` stores a list of values and that the type is `Integer` instead of `int`. Students also notice that the syntax is different for an `ArrayList` than a 1D or 2D array and that the `add()` methods add elements to either the end of or at a specific location in the `ArrayList`. Students may wonder why they would use an `ArrayList` instead of a 1D array.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Ask students to predict the size of the `ArrayList` before and after the values are added. Have students identify how initializing an `ArrayList` is different from initializing a 1D or 2D array, including that they do not need to specify the size of the `ArrayList` like they did for a 1D or 2D array."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4ad47ec3-8e20-4f7b-bbdb-ee4f9ad7a689",
@@ -1449,8 +1581,19 @@
       }
     },
     {
-      "key": "febbf1fa-21d8-4d81-828c-5b969dcb413e",
+      "key": "3917e1f0-c7bc-4f6f-82b2-a3b8532667c7",
       "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *The ArrayList Class*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define `ArrayList` and mutable and identify the package that contains the `ArrayList` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *dynamic data structure* and *static data structure*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `add()` and `size()` methods."
+      },
+      "seeding_key": {
+        "activity_section.key": "3917e1f0-c7bc-4f6f-82b2-a3b8532667c7",
+        "lesson_activity.key": "9d42c3ff-5a59-448b-8bc1-ea9b37f8f505"
+      }
+    },
+    {
+      "key": "febbf1fa-21d8-4d81-828c-5b969dcb413e",
+      "position": 5,
       "properties": {
         "description": "Because `ArrayList` is a class, it has the same three parts that we’ve seen in other classes: instance variables, constructors, and methods. Let's take a look at some of the source code for the `ArrayList` class.",
         "remarks": true
@@ -1462,7 +1605,7 @@
     },
     {
       "key": "9b2d6b34-88e0-48f9-99c4-8c829a06949c",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to discuss the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What is the purpose of each instance variable?*\n* *What is the relationship between an array and an `ArrayList`?*\n\n**Discussion Goal:** Students identify that the `DEFAULT_CAPACITY` instance variable is the default size of an `ArrayList`, the `size` instance variable is the number of elements in the `ArrayList`, and the `data` instance variable is a 1D array. Students suggest that the relationship between an `ArrayList` and an array is a has-a relationship and an `ArrayList` stores data in the array instance variable.\n\n**Do This:** Explain the purpose of each instance variable:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `DEFAULT_CAPACITY` constant\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `size` instance variable\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `data` instance variable",
         "tips": [
@@ -1479,7 +1622,7 @@
     },
     {
       "key": "0045fddd-7806-4e40-8ea8-ed0623e499c6",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "An `ArrayList` is useful when we are working with an unknown amount of data or we need the flexibility to add elements at specific locations or expand the size of the list.",
         "name": "Using ArrayLists",
@@ -1492,7 +1635,7 @@
     },
     {
       "key": "7329cb11-a543-405f-909c-43c65783eb4e",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students complete a Check for Understanding on Level 2, then continue to Level 3 to declare and initialize an `ArrayList`. On Level 4, students complete a choice level to add elements to an `ArrayList`.",
         "progression_name": "Using ArrayLists"
@@ -1598,7 +1741,7 @@
       "key": "e72ffb47-87e6-454c-b169-1f61bc4cfe27",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Hold That Thought strategy to discuss the prompts.\n* *How do we get an individual element from an array?*\n* *How can we do this with an `ArrayList` based on what we know about its structure?*\n\n**Discussion Goal:** Students recall accessing the array element by referring to the index number. Students guess that the `ArrayList` class has methods they can use to access an element.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Hold That Thought strategy to discuss the prompts.\n* *How do we get an individual element from an array?*\n* *How can we do this with an `ArrayList` based on what we know about its structure?*\n\n**Discussion Goal:** Students recall accessing the array element by referring to the index number. Students guess that the `ArrayList` class has methods they can use to access an element.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
         "progression_name": "Investigate: Working with ArrayList Data"
       },
       "seeding_key": {
@@ -1751,7 +1894,7 @@
       "key": "2086bd88-9f9f-4b0f-8dd0-1eba45d00c8c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
         "progression_name": "Investigate: ArrayList of Objects"
       },
       "seeding_key": {
@@ -2521,23 +2664,11 @@
       }
     },
     {
-      "key": "7e4f87ec-8449-4984-8f3d-4df004a92ff4",
+      "key": "b590e69b-3745-46d6-9ce5-9a27820085a9",
       "position": 1,
       "properties": {
-        "description": "We have learned a lot of new terms so far! Let's review some of these terms through a game of CS Pyramid.",
-        "name": "CS Pyramid",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "7e4f87ec-8449-4984-8f3d-4df004a92ff4",
-        "lesson_activity.key": "0c6a557d-91ed-4acb-89f2-3486a1a8731b"
-      }
-    },
-    {
-      "key": "b590e69b-3745-46d6-9ce5-9a27820085a9",
-      "position": 2,
-      "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for playing CS Pyramid.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the CS Pyramid activity, and direct students to play CS Pyramid. Click through the animated slide to display each pyramid, and direct students to switch roles with each new pyramid."
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the problem.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode to solve the problem, then compare their solutions with another group.",
+        "name": "Breaking Up a Number"
       },
       "seeding_key": {
         "activity_section.key": "b590e69b-3745-46d6-9ce5-9a27820085a9",
@@ -2562,7 +2693,7 @@
       "key": "0db16726-5417-4dc0-8e48-f14465b19ee3",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the problem.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
         "progression_name": "Investigate: Obtaining Individual Digits"
       },
       "seeding_key": {
@@ -2636,7 +2767,7 @@
       "key": "8d5d1d2f-d5f2-44d8-b1cc-323f0478acd5",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know week.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Natural Language Processing Project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 6 Study Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know week.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Natural Language Processing Project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "8d5d1d2f-d5f2-44d8-b1cc-323f0478acd5",
@@ -2683,7 +2814,7 @@
       "key": "5b3bcb30-a210-467b-b990-b4e196294820",
       "position": 1,
       "properties": {
-        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. It is completed in three class periods to plan and create the program, including choosing a topic or goal and implementing an algorithm. Students participate in planning and feedback activities to solve problems, reinforce software development practices and self-image as software engineers, and improve their programs. Lessons 11, 12, and 13 collectively include instructions for the three-day project.\n\nIf there is not enough time for the three-day project, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the **Natural Language Processing Project 1 Day Lesson Plan**, which includes a one-day version of the **Natural Language Processing Project Planning Guide**. Direct students to develop their program on Lesson 13 to submit their project. While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use."
+        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. It is completed in three class periods to plan and create the program, including choosing a topic or goal and implementing an algorithm. Students participate in planning and feedback activities to solve problems, reinforce software development practices and self-image as software engineers, and improve their programs. Lessons 11, 12, and 13 collectively include instructions for the three-day project.\n\nIf there is not enough time for the three-day project, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the [**Natural Language Processing Project 1 Day Lesson Plan**](https://docs.google.com/document/d/1ir0g4bRHiT0oRJmj-4drZPTqrxIdIGHox1KbP-5V7QY/edit?usp=sharing), which includes a one-day version of the [**Natural Language Processing Project Planning Guide**](https://docs.google.com/document/d/1L3bPdd1hvNTxseCVBy08Ln7U2hvaXm4HjYrcj16m-k8/edit?usp=sharing). Direct students to develop their program on Lesson 13 to submit their project. While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use."
       },
       "seeding_key": {
         "activity_section.key": "5b3bcb30-a210-467b-b990-b4e196294820",
@@ -2992,7 +3123,7 @@
       "key": "7b94d062-4de1-48d9-91b2-32f33d1e7d5f",
       "position": 1,
       "properties": {
-        "description": "We are almost done with our first project! You should be proud of what you have accomplished in this unit and this project.",
+        "description": "We are almost done with our project! You should be proud of what you have accomplished in this unit and this project.",
         "name": "Reflecting on Your Progress",
         "remarks": true
       },
@@ -3100,6 +3231,18 @@
       },
       "seeding_key": {
         "activity_section.key": "39a7264a-3ee7-4bbc-b4e3-f441774caec6",
+        "lesson_activity.key": "8e4cceda-0b39-40df-8c75-d0957cf50efc"
+      }
+    },
+    {
+      "key": "38bc940a-1649-4cfb-8dff-f5ee84a8bf11",
+      "position": 4,
+      "properties": {
+        "name": "Survey",
+        "progression_name": "Unit 6 Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "38bc940a-1649-4cfb-8dff-f5ee84a8bf11",
         "lesson_activity.key": "8e4cceda-0b39-40df-8c75-d0957cf50efc"
       }
     },
@@ -3299,6 +3442,48 @@
         "activity_section.key": "56c4bb8e-8eba-4355-bde1-cf8c234931dc",
         "lesson_activity.key": "c49dc2bd-a87d-4c70-abeb-74dfc8f48287"
       }
+    },
+    {
+      "key": "d817b871-aed8-44c6-8a81-cf2408791b97",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d817b871-aed8-44c6-8a81-cf2408791b97",
+        "lesson_activity.key": "0097216e-c464-4e33-8837-ab0a5eb6d78f"
+      }
+    },
+    {
+      "key": "175caa9f-e540-4351-9930-cf19aaecd8f4",
+      "position": 1,
+      "properties": {
+        "progression_name": "With Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "175caa9f-e540-4351-9930-cf19aaecd8f4",
+        "lesson_activity.key": "a80de89b-84a3-465d-9e20-3fdd541e3f3a"
+      }
+    },
+    {
+      "key": "0db3d654-5c29-4e08-939d-e38b1e6bd2ce",
+      "position": 2,
+      "properties": {
+        "progression_name": "No Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "0db3d654-5c29-4e08-939d-e38b1e6bd2ce",
+        "lesson_activity.key": "a80de89b-84a3-465d-9e20-3fdd541e3f3a"
+      }
+    },
+    {
+      "key": "94a8f167-b652-4f9a-b447-8fcd6246c4a1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "94a8f167-b652-4f9a-b447-8fcd6246c4a1",
+        "lesson_activity.key": "f9051edf-6114-411a-9f47-c228d9edd62b"
+      }
     }
   ],
   "script_levels": [
@@ -3308,6 +3493,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L1-L1_2022"
+        ],
         "progression": "Natural Language Processing Project Examples"
       },
       "bonus": false,
@@ -3330,6 +3518,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L1-L2_2022"
+        ],
         "progression": "Documenting Program Code"
       },
       "bonus": false,
@@ -3352,6 +3543,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L1-L3v2_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3374,6 +3568,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L1_2022"
+        ],
         "progression": "Investigate: Integer and Double Objects"
       },
       "bonus": false,
@@ -3396,6 +3593,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L2_2022"
+        ],
         "progression": "Using Wrapper Classes"
       },
       "bonus": false,
@@ -3418,6 +3618,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L3_2022"
+        ],
         "progression": "Using Wrapper Classes"
       },
       "bonus": false,
@@ -3440,6 +3643,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L4_2022"
+        ],
         "progression": "Using Wrapper Classes"
       },
       "bonus": false,
@@ -3462,6 +3668,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L5v2_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3484,6 +3693,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L1_2022"
+        ],
         "progression": "Investigate: ArrayLists"
       },
       "bonus": false,
@@ -3506,6 +3718,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L2v2_2022"
+        ],
         "progression": "Using ArrayLists"
       },
       "bonus": false,
@@ -3528,6 +3743,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L3_2022"
+        ],
         "progression": "Using ArrayLists"
       },
       "bonus": false,
@@ -3550,6 +3768,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L4v2_2022"
+        ],
         "progression": "Using ArrayLists"
       },
       "bonus": false,
@@ -3572,6 +3793,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L5v2_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3594,6 +3818,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L1_2022"
+        ],
         "progression": "Investigate: Working with ArrayList Data"
       },
       "bonus": false,
@@ -3616,6 +3843,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L2v2_2022"
+        ],
         "progression": "Changing Values in an ArrayList"
       },
       "bonus": false,
@@ -3638,6 +3868,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L3v2_2022"
+        ],
         "progression": "Changing Values in an ArrayList"
       },
       "bonus": false,
@@ -3660,6 +3893,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L4v2_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3682,6 +3918,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L1_2022"
+        ],
         "progression": "Investigate: ArrayList of Objects"
       },
       "bonus": false,
@@ -3704,6 +3943,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L2v2_2022"
+        ],
         "progression": "ArrayLists of Objects"
       },
       "bonus": false,
@@ -3726,6 +3968,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L3v2_2022"
+        ],
         "progression": "ArrayLists of Objects"
       },
       "bonus": false,
@@ -3748,6 +3993,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L4 CR_2022"
+        ],
         "progression": "Code Review: ArrayLists of Objects"
       },
       "bonus": false,
@@ -3770,6 +4018,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L5_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3792,6 +4043,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L1_2022"
+        ],
         "progression": "Investigate: Removing Values"
       },
       "bonus": false,
@@ -3814,6 +4068,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L2_2022"
+        ],
         "progression": "Predict: Using an Enhanced For Loop"
       },
       "bonus": false,
@@ -3836,6 +4093,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L3_2022"
+        ],
         "progression": "Investigate: Removing with an Enhanced For Loop"
       },
       "bonus": false,
@@ -3858,6 +4118,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L4_2022"
+        ],
         "progression": "Removing Values from an ArrayList"
       },
       "bonus": false,
@@ -3880,6 +4143,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L5_2022"
+        ],
         "progression": "Removing Values from an ArrayList"
       },
       "bonus": false,
@@ -3902,6 +4168,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L6v2_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3924,6 +4193,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L1_2022"
+        ],
         "progression": "Investigate: String Methods"
       },
       "bonus": false,
@@ -3946,6 +4218,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L2v2_2022"
+        ],
         "progression": "Keywords and Parts-of-Speech"
       },
       "bonus": false,
@@ -3968,6 +4243,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L3v2_2022"
+        ],
         "progression": "Keywords and Parts-of-Speech"
       },
       "bonus": false,
@@ -3990,6 +4268,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L4v2_2022"
+        ],
         "progression": "Keywords and Parts-of-Speech"
       },
       "bonus": false,
@@ -4012,6 +4293,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L5v2_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4034,6 +4318,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L1_2022"
+        ],
         "progression": "Investigate: Comparing Strings"
       },
       "bonus": false,
@@ -4056,6 +4343,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L2_2022"
+        ],
         "progression": "Sorting Strings"
       },
       "bonus": false,
@@ -4078,6 +4368,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L3_2022"
+        ],
         "progression": "Sorting Strings"
       },
       "bonus": false,
@@ -4100,6 +4393,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L4v2_2022"
+        ],
         "progression": "Sorting Strings"
       },
       "bonus": false,
@@ -4122,6 +4418,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L5v2_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4144,6 +4443,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L1v2_2022"
+        ],
         "progression": "String Algorithms"
       },
       "bonus": false,
@@ -4166,6 +4468,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L2_2022"
+        ],
         "progression": "String Algorithms"
       },
       "bonus": false,
@@ -4188,6 +4493,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L3v2_2022"
+        ],
         "progression": "String Algorithms"
       },
       "bonus": false,
@@ -4210,6 +4518,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L4 CR_2022"
+        ],
         "progression": "Code Review: String Algorithms"
       },
       "bonus": false,
@@ -4232,6 +4543,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L5_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4254,6 +4568,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L10-L1_2022"
+        ],
         "progression": "Investigate: Obtaining Individual Digits"
       },
       "bonus": false,
@@ -4276,6 +4593,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L10-L2v2_2022"
+        ],
         "progression": "Finding the Sentiment Value"
       },
       "bonus": false,
@@ -4298,6 +4618,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L10-L3v2_2022"
+        ],
         "progression": "Finding the Sentiment Value"
       },
       "bonus": false,
@@ -4320,6 +4643,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L10-L4 CR_2022"
+        ],
         "progression": "Code Review: Finding the Sentiment Value"
       },
       "bonus": false,
@@ -4342,6 +4668,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L10-L5_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4364,6 +4693,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L11-L1_2022"
+        ],
         "progression": "Natural Language Processing Project"
       },
       "bonus": false,
@@ -4386,6 +4718,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L12-L1_2022"
+        ],
         "progression": "Natural Language Processing Project"
       },
       "bonus": false,
@@ -4408,6 +4743,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L12-L2 CR_2022"
+        ],
         "progression": "Code Review: Natural Language Processing Project"
       },
       "bonus": false,
@@ -4430,6 +4768,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L13-L1_2022"
+        ],
         "progression": "Natural Language Processing Project"
       },
       "bonus": false,
@@ -4448,10 +4789,38 @@
     },
     {
       "chapter": 53,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa6-2022"
+        ],
+        "progression": "Unit 6 Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csa6-2022"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa6-2022",
+        "activity_section.key": "38bc940a-1649-4cfb-8dff-f5ee84a8bf11"
+      },
+      "level_keys": [
+        "Student End of Unit Survey_csa6-2022"
+      ]
+    },
+    {
+      "chapter": 54,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 6 Assessment 2022"
+        ],
         "progression": "Unit 6 Assessment"
       },
       "bonus": false,
@@ -4466,6 +4835,104 @@
       },
       "level_keys": [
         "CSA Unit 6 Assessment 2022"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2022 Console Sandbox"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2022 Console Sandbox"
+        ],
+        "lesson.key": "Console",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa6-2022",
+        "activity_section.key": "d817b871-aed8-44c6-8a81-cf2408791b97"
+      },
+      "level_keys": [
+        "CSA 2022 Console Sandbox"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood Sandbox"
+        ],
+        "progression": "With Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2022 Neighborhood Sandbox"
+        ],
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa6-2022",
+        "activity_section.key": "175caa9f-e540-4351-9930-cf19aaecd8f4"
+      },
+      "level_keys": [
+        "CSA 2022 Neighborhood Sandbox"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox"
+        ],
+        "progression": "No Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa6-2022",
+        "activity_section.key": "0db3d654-5c29-4e08-939d-e38b1e6bd2ce"
+      },
+      "level_keys": [
+        "CSA 2022 Neighborhood - No Bucket Sandbox"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2022 Theater Sandbox"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2022 Theater Sandbox"
+        ],
+        "lesson.key": "The Theater",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa6-2022",
+        "activity_section.key": "94a8f167-b652-4f9a-b447-8fcd6246c4a1"
+      },
+      "level_keys": [
+        "CSA 2022 Theater Sandbox"
       ]
     }
   ],
@@ -5096,6 +5563,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "Student End of Unit Survey_csa6-2022",
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csa6-2022"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa6-2022",
+        "activity_section.key": "38bc940a-1649-4cfb-8dff-f5ee84a8bf11"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA Unit 6 Assessment 2022",
         "script_level.level_keys": [
           "CSA Unit 6 Assessment 2022"
@@ -5104,6 +5583,54 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa6-2022",
         "activity_section.key": "8d1c826e-7ac3-4078-8c28-cf72baef091c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2022 Console Sandbox",
+        "script_level.level_keys": [
+          "CSA 2022 Console Sandbox"
+        ],
+        "lesson.key": "Console",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa6-2022",
+        "activity_section.key": "d817b871-aed8-44c6-8a81-cf2408791b97"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2022 Neighborhood Sandbox",
+        "script_level.level_keys": [
+          "CSA 2022 Neighborhood Sandbox"
+        ],
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa6-2022",
+        "activity_section.key": "175caa9f-e540-4351-9930-cf19aaecd8f4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2022 Neighborhood - No Bucket Sandbox",
+        "script_level.level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa6-2022",
+        "activity_section.key": "0db3d654-5c29-4e08-939d-e38b1e6bd2ce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2022 Theater Sandbox",
+        "script_level.level_keys": [
+          "CSA 2022 Theater Sandbox"
+        ],
+        "lesson.key": "The Theater",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa6-2022",
+        "activity_section.key": "94a8f167-b652-4f9a-b447-8fcd6246c4a1"
       }
     }
   ],
@@ -5250,6 +5777,39 @@
       },
       "seeding_key": {
         "resource.key": "_key_u6l9_extra_practice"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/csa6-2022/resources",
+      "key": "all_resources_9",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_9"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa6-2022/standards",
+      "key": "all_standards_8",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_8"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa6-2022/vocab",
+      "key": "all_vocabulary_8",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_8"
       }
     },
     {
@@ -5435,6 +5995,18 @@
     {
       "name": "Unit 6 Guide",
       "url": "https://docs.google.com/document/d/1adl-rqpAW8FvKofCVfMt997IVLzvzhnDW87Q3bG3t_k/edit?usp=sharing",
+      "key": "unit_6_guide",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "unit_6_guide"
+      }
+    },
+    {
+      "name": "Unit 6 Guide",
+      "url": "https://docs.google.com/document/d/1-Kwx3qvUpaTit5A1e69GrfnSPnoluupyJf1HdnRs_iM/edit?usp=sharing",
       "key": "unit_6_guide_1",
       "properties": {
         "audience": "Student",
@@ -5442,6 +6014,18 @@
       },
       "seeding_key": {
         "resource.key": "unit_6_guide_1"
+      }
+    },
+    {
+      "name": "Unit 6 Overview",
+      "url": "https://docs.google.com/document/d/1836auHbzJtC_6S9DLmx5SJFUco3VMAs6-p7W76IjcOA/edit?usp=sharing",
+      "key": "unit_6_overview",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_6_overview"
       }
     },
     {
@@ -5454,6 +6038,18 @@
       },
       "seeding_key": {
         "resource.key": "unit_6_presentation"
+      }
+    },
+    {
+      "name": "Unit 6 Study Guide",
+      "url": "https://docs.google.com/document/d/1KBf15perVzQS17bgSp-3IqffgrQynlERy01L1MwlgVQ/edit?usp=sharing",
+      "key": "unit_6_study_guide",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_6_study_guide"
       }
     },
     {
@@ -5516,6 +6112,12 @@
       "seeding_key": {
         "lesson.key": "lesson-10",
         "resource.key": "unit_6_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "unit_6_study_guide"
       }
     },
     {
@@ -5736,7 +6338,42 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_9",
+        "script.name": "csa6-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_8",
+        "script.name": "csa6-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_8",
+        "script.name": "csa6-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_6_guide",
+        "script.name": "csa6-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_6_overview",
+        "script.name": "csa6-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_6_study_guide",
+        "script.name": "csa6-2022"
+      }
+    }
   ],
   "scripts_student_resources": [
 

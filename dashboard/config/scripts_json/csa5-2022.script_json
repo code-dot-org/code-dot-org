@@ -4,6 +4,22 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "Curriculum Videos",
+          "details": "Some lessons currently do not have links to videos in the lesson plans or slide deck. These videos are in final production and will be linked as soon as these are available.",
+          "link": "",
+          "type": "information",
+          "visibility": "Teacher-only"
+        },
+        {
+          "notice": "More Opportunities for Feedback",
+          "details": "Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom. Students also have the opportunity to leave feedback at the end of each unit, and teachers can answer a short 5-question survey to let the Code.org curriculum team know how the unit went. Some of these features will appear over the summer just before the school year starts.",
+          "link": "",
+          "type": "feedback",
+          "visibility": "Teacher-only"
+        }
+      ],
       "curriculum_umbrella": "CSA",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -15,7 +31,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-04-14 21:25:36 UTC",
+    "serialized_at": "2022-05-02 12:11:58 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -46,6 +62,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-2022"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Sandboxes"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa5-2022"
       }
     }
@@ -164,6 +192,9 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "overview": "**What are the beneficial and harmful impacts of programs?**\n\nStudents explore the beneficial and harmful impacts of programs by analyzing and discussing real-world applications of image manipulation, such as deepfakes. Students discover that deepfakes are created using large amounts of data and reflect on how data is collected and the ethical and social implications of data collection.",
+        "preparation": "* Create stations labeled \"School\", \"Home\", and \"Hobbies\" for the Data Collection activity",
+        "student_overview": "**What are the beneficial and harmful impacts of programs?**\n\nYou explore the beneficial and harmful impacts of programs by analyzing and discussing real-world applications of image manipulation, such as deepfakes. You discover that deepfakes are created using large amounts of data and reflect on how data is collected and the ethical and social implications of data collection."
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
@@ -216,7 +247,7 @@
       "relative_position": 10,
       "properties": {
         "overview": "**How can I shift the elements in an array?**\n\nStudents practice working with 2D arrays and modifying standard algorithms to plan and implement an algorithm to shift a 2D array. Students explore how the elements in a 1D array can be shifted and then write pseudocode to modify the algorithm to be applied to a 2D array.",
-        "preparation": "* Print copies of the Shifting a 2D Array handout and manipulatives (one for each pair of students)\n* (Optional) Cut out the manipulatives from the Shifting a 2D Array handout\n* Create code review groups if you are not reusing the same groups",
+        "preparation": "* Print copies of the Shifting a 2D Array handout and manipulatives (one for each pair of students)\n* (Optional) Cut out the manipulatives from the Shifting a 2D Array handout\n* Create code review groups if you are not reusing the same groups\n* Print copies of the Unit 5 Study Guide (one for each student)",
         "student_overview": "**How can I shift the elements in an array?**\n\nIn this lesson, you practice working with 2D arrays and modifying standard algorithms to plan and implement an algorithm to shift a 2D array. You explore how the elements in a 1D array can be shifted and then write pseudocode to modify the algorithm to be applied to a 2D array."
       },
       "seeding_key": {
@@ -314,6 +345,51 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-2022"
+      }
+    },
+    {
+      "key": "Console",
+      "name": "Console",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Console",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2022"
+      }
+    },
+    {
+      "key": "The Neighborhood",
+      "name": "The Neighborhood",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2022"
+      }
+    },
+    {
+      "key": "The Theater",
+      "name": "The Theater",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The Theater",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa5-2022"
       }
     }
@@ -575,7 +651,7 @@
       "key": "400e454f-27c0-466b-9577-2efc26950e6f",
       "position": 1,
       "properties": {
-        "duration": 5,
+        "duration": 10,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -603,7 +679,7 @@
       "key": "3079a2d1-6dae-4ba5-bb01-4975fff7dff8",
       "position": 3,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -946,6 +1022,42 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa5-2022"
       }
+    },
+    {
+      "key": "2af5c645-2a45-47a9-8ade-ac6dc62f8e62",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2af5c645-2a45-47a9-8ade-ac6dc62f8e62",
+        "lesson.key": "Console",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2022"
+      }
+    },
+    {
+      "key": "dc0cbe02-d34f-49e1-ad89-29e06ff1da7f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dc0cbe02-d34f-49e1-ad89-29e06ff1da7f",
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2022"
+      }
+    },
+    {
+      "key": "5336f88c-a247-4865-b2fe-40eb7f051b27",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5336f88c-a247-4865-b2fe-40eb7f051b27",
+        "lesson.key": "The Theater",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2022"
+      }
     }
   ],
   "activity_sections": [
@@ -1032,7 +1144,7 @@
       "key": "5d4fdb33-5c1f-463a-9344-6f206840a8b6",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how objects are stored in an array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the structure of a 2D array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that 2D arrays are often represented as a table with rows and columns.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate declaring and initializing a 2D array using the `new` keyword."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how objects are stored in an array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the structure of a 2D array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that 2D arrays are often represented as a table with rows and columns.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate declaring and initializing a 2D array using the `new` keyword.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate declaring and initializing a 2D array using an initializer list."
       },
       "seeding_key": {
         "activity_section.key": "5d4fdb33-5c1f-463a-9344-6f206840a8b6",
@@ -1074,7 +1186,7 @@
       "key": "4a2ef543-6abb-45a6-a364-df781c1f6140",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Working with 2D Array Elements*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate declaring and initializing a 2D array using an initializer list.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through an animated slide to demonstrate how to access values from a two-dimensional array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the self-check question. Click through the animated slide to reveal the correct answer and discuss it as a class."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Working with 2D Array Elements*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through an animated slide to demonstrate how to access values from a two-dimensional array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the self-check question. Click through the animated slide to reveal the correct answer and discuss it as a class."
       },
       "seeding_key": {
         "activity_section.key": "4a2ef543-6abb-45a6-a364-df781c1f6140",
@@ -2143,10 +2255,39 @@
       "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students write a method to create a 2D array of `Pixel` objects on Level 2, then continue to Level 3 to complete a choice level to create an image filter.",
-        "progression_name": "Creating Image Filters"
+        "progression_name": "Creating Image Filters",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The `ImagePlus` class is revisited throughout the curriculum. Students develop the `ImagePlus` class in this lesson to practice traversing a 2D array of `Pixel` objects to create image filters. Students expand on this class to add new behaviors in upcoming lessons and units.\n\nYou can choose to ask students how creating an `ImagePlus` class is similar to creating the `PainterPlus` class. Have students consider what this means they can do with the `ImagePlus` class and additional subclasses they might create."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "aa029cc2-0726-4b0d-91ec-ac4eb7f5c062",
+        "lesson_activity.key": "d6614c0e-9620-4f10-bf82-6887543d6204"
+      }
+    },
+    {
+      "key": "a5edc7db-6e4c-410c-b1ec-cbfa1269e30d",
+      "position": 8,
+      "properties": {
+        "description": "This is a good time to commit our code and save our `ImagePlus` class to the Backpack.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a5edc7db-6e4c-410c-b1ec-cbfa1269e30d",
+        "lesson_activity.key": "d6614c0e-9620-4f10-bf82-6887543d6204"
+      }
+    },
+    {
+      "key": "40b94c46-1ba2-4cf3-8cc1-e7142c983924",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving the `ImagePlus` class to the Backpack."
+      },
+      "seeding_key": {
+        "activity_section.key": "40b94c46-1ba2-4cf3-8cc1-e7142c983924",
         "lesson_activity.key": "d6614c0e-9620-4f10-bf82-6887543d6204"
       }
     },
@@ -2214,6 +2355,9 @@
       "key": "9880eb70-f58d-4acd-ab7c-b52010bc1c3d",
       "position": 1,
       "properties": {
+        "description": "In the previous lesson, we discussed examples of image filters that you have seen, and you used your software engineering skills to create image filters. Let's look at some examples of how images are manipulated.",
+        "name": "Is This Real?",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "9880eb70-f58d-4acd-ab7c-b52010bc1c3d",
@@ -2221,9 +2365,41 @@
       }
     },
     {
+      "key": "bc0c2081-1cd4-4b64-b877-7fd4926c7e13",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for the Am I Real? activity.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This activity can also be done without physical movement for different classroom setups. You could ask students to use a signal (raise left or right hand) to decide whether each person is real."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bc0c2081-1cd4-4b64-b877-7fd4926c7e13",
+        "lesson_activity.key": "400e454f-27c0-466b-9577-2efc26950e6f"
+      }
+    },
+    {
+      "key": "2d3faf73-0b55-43db-ae71-474096a9778c",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the first pair of images and have students choose which image they think is real.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why did you choose your image as real? Why does the other image look less real?*\n\n**Discussion Goal:** Students share their reasoning for their choices, which may include features of an image that they believe is fake or real.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show which image is real and which is not real.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the second pair of images and have students choose which image they think is real.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why did you choose your image as real? Why does the other image look less real?*\n\n**Discussion Goal:** Students share their reasoning for their choices, which may include features of an image that they believe is fake or real.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show which image is real and which is not real."
+      },
+      "seeding_key": {
+        "activity_section.key": "2d3faf73-0b55-43db-ae71-474096a9778c",
+        "lesson_activity.key": "400e454f-27c0-466b-9577-2efc26950e6f"
+      }
+    },
+    {
       "key": "78e1f0f7-58c7-4023-b530-28e65959d486",
       "position": 1,
       "properties": {
+        "description": "In each pair of images, one of them was a manipulated image called a deepfake.",
+        "duration": "15",
+        "name": "Deepfakes",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "78e1f0f7-58c7-4023-b530-28e65959d486",
@@ -2231,12 +2407,150 @@
       }
     },
     {
-      "key": "d87fa5db-6a3e-4d92-b4d7-420d7c2ac2a0",
+      "key": "bb1690b7-93b5-48c3-9d29-ac29283ad6a4",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *Where have you seen deepfakes before?*\n\n**Discussion Goal:** Students share examples of deepfakes they have seen, including in media and TV shows or on social media.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – **This is Not Morgan Freeman*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What did this example make you wonder or feel?*\n* *What do you think are some benefits of deepfakes?*\n* *What do you think are some harmful impacts of deepfakes?*\n\n**Discussion Goal:** Students share their thoughts and feelings about this example of deepfakes. Students identify some benefits of deepfakes, such as automatically generating extras in movies. Students also identify some harmful impacts, like creating images and videos that look like someone communicating a message they may not actually support.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *Given the harmful impacts of deepfakes, should software engineers continue to develop them? Why or why not?*\n\n**Discussion Goal:** Students share their ideas about whether or not software to create deepfakes should be developed. Students justify their ideas with positive or negative impacts of deepfakes.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Ask students to consider their role as software engineers in creating software that enables people to create deepfakes. If students support the technology, have students consider if they would implement restrictions or limitations in creating deepfakes."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bb1690b7-93b5-48c3-9d29-ac29283ad6a4",
+        "lesson_activity.key": "01a3b029-db25-4a25-8319-812fa4131e95"
+      }
+    },
+    {
+      "key": "5c4f6ae8-a2ac-498d-b47d-c63936d7796b",
+      "position": 3,
+      "properties": {
+        "description": "To generate deepfakes, software engineers use a technique called machine learning. Machine learning, or ML, uses data and models to make predictions and decisions. This requires lots of data to improve the accuracy of the predictions and decisions. For deepfakes, this requires lots of images for the program to learn from.",
+        "duration": "15",
+        "name": "Data Collection",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5c4f6ae8-a2ac-498d-b47d-c63936d7796b",
+        "lesson_activity.key": "01a3b029-db25-4a25-8319-812fa4131e95"
+      }
+    },
+    {
+      "key": "f1d12301-516b-4258-aae7-06861e97fb64",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Data Collection handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for the Data Collection activity."
+      },
+      "seeding_key": {
+        "activity_section.key": "f1d12301-516b-4258-aae7-06861e97fb64",
+        "lesson_activity.key": "01a3b029-db25-4a25-8319-812fa4131e95"
+      }
+    },
+    {
+      "key": "48c04230-868c-4e6b-a7c0-8fe721a48321",
+      "position": 5,
+      "properties": {
+        "description": "Now that you have a list of how your data is collected, let's think about the ethical and social implications of data collection.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "48c04230-868c-4e6b-a7c0-8fe721a48321",
+        "lesson_activity.key": "01a3b029-db25-4a25-8319-812fa4131e95"
+      }
+    },
+    {
+      "key": "0f5c4fe3-744b-4b57-897e-828d7c3fd927",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Who is collecting data about you?*\n* *Given how data is collected, who is this giving power to? Why?*\n\n**Discussion Goal:** Students identify organizations or companies that are collecting data about them. Students share ideas about what organizations and companies have more power because of the amount and type of data they have about people.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Read the headline and quote to the class.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Prompt students to share their reactions and feelings about the headline. Encourage students to consider the thoughts and ideas they shared throughout the lesson and make connections to their reactions to the headline."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0f5c4fe3-744b-4b57-897e-828d7c3fd927",
+        "lesson_activity.key": "01a3b029-db25-4a25-8319-812fa4131e95"
+      }
+    },
+    {
+      "key": "f8b5d4f4-682c-468e-9888-224c7033db27",
       "position": 1,
       "properties": {
+        "description": "There are a lot of researchers studying the impacts of programs. Let's meet one of them!",
+        "name": "Three W's",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f8b5d4f4-682c-468e-9888-224c7033db27",
+        "lesson_activity.key": "3079a2d1-6dae-4ba5-bb01-4975fff7dff8"
+      }
+    },
+    {
+      "key": "c673e786-5882-462e-9f34-b485905c7487",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Read the biography of Ruha Benjamin to the class.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, you can also choose to show the video [***Ruha Benjamin discusses 'Race After Technology'***](https://youtu.be/rY8RkET3KC0) and have students share their reactions and thoughts about the work she is doing."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c673e786-5882-462e-9f34-b485905c7487",
+        "lesson_activity.key": "3079a2d1-6dae-4ba5-bb01-4975fff7dff8"
+      }
+    },
+    {
+      "key": "dae66009-ecc0-4968-90b9-2baffe9e71e3",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students share the concepts they learned from the lesson, including deepfakes and data collection. Students suggest what they might want to do differently in their lives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "dae66009-ecc0-4968-90b9-2baffe9e71e3",
+        "lesson_activity.key": "3079a2d1-6dae-4ba5-bb01-4975fff7dff8"
+      }
+    },
+    {
+      "key": "e67773cc-a0d1-4840-a3ca-0e513c29d36c",
+      "position": 4,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "e67773cc-a0d1-4840-a3ca-0e513c29d36c",
+        "lesson_activity.key": "3079a2d1-6dae-4ba5-bb01-4975fff7dff8"
+      }
+    },
+    {
+      "key": "d87fa5db-6a3e-4d92-b4d7-420d7c2ac2a0",
+      "position": 5,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "d87fa5db-6a3e-4d92-b4d7-420d7c2ac2a0",
+        "lesson_activity.key": "3079a2d1-6dae-4ba5-bb01-4975fff7dff8"
+      }
+    },
+    {
+      "key": "60de88e8-eacf-4a3f-91b0-e5bb93d765dc",
+      "position": 6,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "activity_section.key": "60de88e8-eacf-4a3f-91b0-e5bb93d765dc",
         "lesson_activity.key": "3079a2d1-6dae-4ba5-bb01-4975fff7dff8"
       }
     },
@@ -2294,7 +2608,7 @@
       "key": "5ad3a73d-f402-459d-890f-58340ba2ecb6",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the color of each pixel is modified by finding the average of the red, green, and blue values. Students may wonder about other ways they can manipulate colors or make connections to image filters they might have seen in other apps and programs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how grayscale images are created.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Grayscale Images handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode for an algorithm to create a grayscale image.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the color of each pixel is modified by calculating new values for the red, green, and blue values. Students may wonder about other ways they can manipulate colors or make connections to image filters they might have seen in other apps and programs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how grayscale images are created.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Grayscale Images handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode for an algorithm to create a grayscale image.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2494,7 +2808,7 @@
       "key": "31ec7960-7864-403b-9f29-a60d7f7ce6a8",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to complete Levels 1 and 2. Students implement their algorithm on Level 1, then continue to Level 2 to complete a choice level to find duplicate elements in 2D arrays using the console or The Theater.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to complete Levels 1 and 2. Students implement their algorithm on Level 1, then continue to Level 2 to complete a choice level to find duplicate elements in 2D arrays.",
         "progression_name": "Finding Duplicates in a 2D Array"
       },
       "seeding_key": {
@@ -2713,7 +3027,7 @@
       "key": "0df5b0c9-8c66-4079-af5b-2bd43b62529e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know week.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Personal Narrative Project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 5 Study Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know week.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Personal Narrative Project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson."
       },
       "seeding_key": {
         "activity_section.key": "0df5b0c9-8c66-4079-af5b-2bd43b62529e",
@@ -3069,7 +3383,7 @@
       "key": "f48331b6-d532-4dfc-86f6-257a216e7413",
       "position": 1,
       "properties": {
-        "description": "We are almost done with our first project! You should be proud of what you have accomplished in this unit and this project.",
+        "description": "We are almost done with our project! You should be proud of what you have accomplished in this unit and this project.",
         "name": "Reflecting on Your Progress",
         "remarks": true
       },
@@ -3178,6 +3492,18 @@
       },
       "seeding_key": {
         "activity_section.key": "1e311a7d-a6df-42c8-8bcf-fe034a3d18ea",
+        "lesson_activity.key": "14640059-e921-4754-ba07-ca8462fcf43a"
+      }
+    },
+    {
+      "key": "60e8f8c2-1847-46d7-9d9b-ea208fac9c00",
+      "position": 4,
+      "properties": {
+        "name": "Survey",
+        "progression_name": "Unit 5 Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "60e8f8c2-1847-46d7-9d9b-ea208fac9c00",
         "lesson_activity.key": "14640059-e921-4754-ba07-ca8462fcf43a"
       }
     },
@@ -3388,6 +3714,48 @@
       "seeding_key": {
         "activity_section.key": "f1f35340-2d4d-4b7b-8167-29f79184b8b4",
         "lesson_activity.key": "8c81776f-083c-4a0e-a021-92bd3b06e3af"
+      }
+    },
+    {
+      "key": "cc4cb957-b0c9-495c-967c-ce91b29d5201",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "cc4cb957-b0c9-495c-967c-ce91b29d5201",
+        "lesson_activity.key": "2af5c645-2a45-47a9-8ade-ac6dc62f8e62"
+      }
+    },
+    {
+      "key": "bd29aef8-6840-41a6-ad96-ac67acf8ef62",
+      "position": 1,
+      "properties": {
+        "progression_name": "With Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "bd29aef8-6840-41a6-ad96-ac67acf8ef62",
+        "lesson_activity.key": "dc0cbe02-d34f-49e1-ad89-29e06ff1da7f"
+      }
+    },
+    {
+      "key": "28a8ba45-5461-49a3-818c-1adeb928c4a3",
+      "position": 2,
+      "properties": {
+        "progression_name": "No Paint Bucket"
+      },
+      "seeding_key": {
+        "activity_section.key": "28a8ba45-5461-49a3-818c-1adeb928c4a3",
+        "lesson_activity.key": "dc0cbe02-d34f-49e1-ad89-29e06ff1da7f"
+      }
+    },
+    {
+      "key": "ef17abb7-0c7e-405d-ad4e-edfc14954e76",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ef17abb7-0c7e-405d-ad4e-edfc14954e76",
+        "lesson_activity.key": "5336f88c-a247-4865-b2fe-40eb7f051b27"
       }
     }
   ],
@@ -4071,6 +4439,31 @@
       "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U5L7-L1_2022"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U5L7-L1_2022"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2022",
+        "activity_section.key": "d87fa5db-6a3e-4d92-b4d7-420d7c2ac2a0"
+      },
+      "level_keys": [
+        "CSA U5L7-L1_2022"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 1,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4093,7 +4486,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4118,7 +4511,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4143,7 +4536,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4168,7 +4561,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4193,7 +4586,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -4218,7 +4611,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4243,7 +4636,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4268,7 +4661,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4293,7 +4686,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -4318,7 +4711,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4343,7 +4736,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4368,7 +4761,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4393,7 +4786,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4418,7 +4811,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4443,7 +4836,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -4468,7 +4861,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4493,7 +4886,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4518,7 +4911,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4543,7 +4936,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4568,7 +4961,32 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa5-2022"
+        ],
+        "progression": "Unit 5 Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csa5-2022"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-2022",
+        "activity_section.key": "60e8f8c2-1847-46d7-9d9b-ea208fac9c00"
+      },
+      "level_keys": [
+        "Student End of Unit Survey_csa5-2022"
+      ]
+    },
+    {
+      "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4590,6 +5008,104 @@
       },
       "level_keys": [
         "CSA Unit 5 Assessment 2022"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2022 Console Sandbox"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2022 Console Sandbox"
+        ],
+        "lesson.key": "Console",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2022",
+        "activity_section.key": "cc4cb957-b0c9-495c-967c-ce91b29d5201"
+      },
+      "level_keys": [
+        "CSA 2022 Console Sandbox"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood Sandbox"
+        ],
+        "progression": "With Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2022 Neighborhood Sandbox"
+        ],
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2022",
+        "activity_section.key": "bd29aef8-6840-41a6-ad96-ac67acf8ef62"
+      },
+      "level_keys": [
+        "CSA 2022 Neighborhood Sandbox"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox"
+        ],
+        "progression": "No Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2022",
+        "activity_section.key": "28a8ba45-5461-49a3-818c-1adeb928c4a3"
+      },
+      "level_keys": [
+        "CSA 2022 Neighborhood - No Bucket Sandbox"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2022 Theater Sandbox"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2022 Theater Sandbox"
+        ],
+        "lesson.key": "The Theater",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2022",
+        "activity_section.key": "ef17abb7-0c7e-405d-ad4e-edfc14954e76"
+      },
+      "level_keys": [
+        "CSA 2022 Theater Sandbox"
       ]
     }
   ],
@@ -4920,6 +5436,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U5L7-L1_2022",
+        "script_level.level_keys": [
+          "CSA U5L7-L1_2022"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa5-2022",
+        "activity_section.key": "d87fa5db-6a3e-4d92-b4d7-420d7c2ac2a0"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U5L8-L1_2022",
         "script_level.level_keys": [
           "CSA U5L8-L1_2022"
@@ -5160,6 +5688,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "Student End of Unit Survey_csa5-2022",
+        "script_level.level_keys": [
+          "Student End of Unit Survey_csa5-2022"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-2022",
+        "activity_section.key": "60e8f8c2-1847-46d7-9d9b-ea208fac9c00"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA Unit 5 Assessment 2022",
         "script_level.level_keys": [
           "CSA Unit 5 Assessment 2022"
@@ -5168,6 +5708,54 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa5-2022",
         "activity_section.key": "c281cc8d-9c66-41d1-a912-ba74bd1a9cf3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2022 Console Sandbox",
+        "script_level.level_keys": [
+          "CSA 2022 Console Sandbox"
+        ],
+        "lesson.key": "Console",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2022",
+        "activity_section.key": "cc4cb957-b0c9-495c-967c-ce91b29d5201"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2022 Neighborhood Sandbox",
+        "script_level.level_keys": [
+          "CSA 2022 Neighborhood Sandbox"
+        ],
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2022",
+        "activity_section.key": "bd29aef8-6840-41a6-ad96-ac67acf8ef62"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2022 Neighborhood - No Bucket Sandbox",
+        "script_level.level_keys": [
+          "CSA 2022 Neighborhood - No Bucket Sandbox"
+        ],
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2022",
+        "activity_section.key": "28a8ba45-5461-49a3-818c-1adeb928c4a3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA 2022 Theater Sandbox",
+        "script_level.level_keys": [
+          "CSA 2022 Theater Sandbox"
+        ],
+        "lesson.key": "The Theater",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-2022",
+        "activity_section.key": "ef17abb7-0c7e-405d-ad4e-edfc14954e76"
       }
     }
   ],
@@ -5182,6 +5770,18 @@
       },
       "seeding_key": {
         "resource.key": "_key_creating_image_filters"
+      }
+    },
+    {
+      "name": "[KEY] Data Collection",
+      "url": "https://docs.google.com/document/d/1eEBLQtcNYopYxqIOzlLD2D6U0dheujMkG6xMZt13zkY/edit?usp=sharing",
+      "key": "_key_data_collection",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_data_collection"
       }
     },
     {
@@ -5377,6 +5977,18 @@
       }
     },
     {
+      "name": "[KEY] U5L7 Extra Practice",
+      "url": "https://docs.google.com/document/d/10g0VJqBGhXq4hma1MuAr_8ZXKpTYUu3QazGqbfP7NzA/edit?usp=sharing",
+      "key": "_key_u5l7_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u5l7_extra_practice"
+      }
+    },
+    {
       "name": "[KEY] U5L8 Extra Practice",
       "url": "https://docs.google.com/document/d/1sf1oBfCvnRUw82PIPILhzksyH5vFOe_e2Ve8ha_KW8s/edit?usp=sharing",
       "key": "_key_u5l8_extra_practice",
@@ -5443,6 +6055,42 @@
       },
       "seeding_key": {
         "resource.key": "creating_image_filters"
+      }
+    },
+    {
+      "name": "CS Bingo Definitions",
+      "url": "https://docs.google.com/document/d/16qhMybtO3vrR0sUUWUEfZm2jw-1U_ydKoH5K0CwTjaw/edit?usp=sharing",
+      "key": "cs_bingo_definitions_4",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_bingo_definitions_4"
+      }
+    },
+    {
+      "name": "CS Bingo Definitions",
+      "url": "https://docs.google.com/presentation/d/1AQwPa-7VUblfOh8XGPPxHi6ycMXqr_g681HyKfSSDzo/edit?usp=sharing",
+      "key": "cs_bingo_definitions_5",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "cs_bingo_definitions_5"
+      }
+    },
+    {
+      "name": "Data Collection",
+      "url": "https://docs.google.com/document/d/1Dpulq-6DqTkObdQzDM4R65nx_Pt-jwKzK4JlsX_x6pA/edit?usp=sharing",
+      "key": "data_collection",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "data_collection"
       }
     },
     {
@@ -5566,6 +6214,18 @@
       }
     },
     {
+      "name": "This is Not Morgan Freeman",
+      "url": "https://youtu.be/oxXpB9pSETo",
+      "key": "this_is_not_morgan_freeman",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "this_is_not_morgan_freeman"
+      }
+    },
+    {
       "name": "Tracing 2D Array Traversals",
       "url": "https://docs.google.com/document/d/1-PGaBIPDJZgg2Fopt_tqHCwcGyVn-CYEWRuO7EQPIaQ/edit?usp=sharing",
       "key": "tracing_2d_array_traversals",
@@ -5686,6 +6346,18 @@
       }
     },
     {
+      "name": "U5L7 Extra Practice",
+      "url": "https://docs.google.com/document/d/1BHrgpzGZ8u-a5ppylHgmHXmqct23bVuuyzmkLqFmk6g/edit?usp=sharing",
+      "key": "u5l7_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u5l7_extra_practice"
+      }
+    },
+    {
       "name": "U5L8 Extra Practice",
       "url": "https://docs.google.com/document/d/1G8GCTW8dbapunJtU1OGanR0Fk_EmnhFKbkXLHq2hwxY/edit?usp=sharing",
       "key": "u5l8_extra_practice",
@@ -5711,7 +6383,7 @@
     },
     {
       "name": "Unit 5 Guide",
-      "url": "https://docs.google.com/document/d/1M4OOFDcM8TunCZtnZJmaC12UiKCwnQ_VDDgpZ-vMUzM/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1Bkn9O58hQarNhiuFOxx5audry1k4BB-skRUsizx2Un4/edit?usp=sharing",
       "key": "unit_5_guide",
       "properties": {
         "audience": "Student",
@@ -5719,6 +6391,18 @@
       },
       "seeding_key": {
         "resource.key": "unit_5_guide"
+      }
+    },
+    {
+      "name": "Unit 5 Overview",
+      "url": "https://docs.google.com/document/d/1lausMFcUUBRtnEwWVz02o2fayHWtDPzrOzeRZK1Yxq8/edit?usp=sharing",
+      "key": "unit_5_overview",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_5_overview"
       }
     },
     {
@@ -5731,6 +6415,18 @@
       },
       "seeding_key": {
         "resource.key": "unit_5_presentation"
+      }
+    },
+    {
+      "name": "Unit 5 Study Guide",
+      "url": "https://docs.google.com/document/d/1SLq__8s9HeiSOhlKIp6doJQfrOf3955_oimoqd_CNDw/edit?usp=sharing",
+      "key": "unit_5_study_guide",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_5_study_guide"
       }
     },
     {
@@ -5865,6 +6561,12 @@
       "seeding_key": {
         "lesson.key": "lesson-12",
         "resource.key": "unit_5_presentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "unit_5_study_guide"
       }
     },
     {
@@ -6008,6 +6710,18 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
+        "resource.key": "cs_bingo_definitions_4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "cs_bingo_definitions_5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
         "resource.key": "reversing_a_2d_array"
       }
     },
@@ -6067,6 +6781,42 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "_key_data_collection"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "_key_u5l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "data_collection"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "this_is_not_morgan_freeman"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "u5l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "unit_5_presentation"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-9",
         "resource.key": "_key_creating_image_filters"
       }
@@ -6112,6 +6862,24 @@
     {
       "seeding_key": {
         "resource.key": "all_vocabulary_7",
+        "script.name": "csa5-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_5_guide",
+        "script.name": "csa5-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_5_overview",
+        "script.name": "csa5-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_5_study_guide",
         "script.name": "csa5-2022"
       }
     }
@@ -6312,6 +7080,16 @@
       }
     },
     {
+      "key": "35624f51-912c-44c1-a544-f24995724d34",
+      "properties": {
+        "description": "Identify ethical and social implications of data collection"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "35624f51-912c-44c1-a544-f24995724d34"
+      }
+    },
+    {
       "key": "409d8d07-5d87-4fdb-ae52-1d214ebe1171",
       "properties": {
         "description": "Conduct code reviews to give and receive feedback on program code"
@@ -6439,6 +7217,16 @@
       "seeding_key": {
         "lesson.key": "lesson-11",
         "objective.key": "b03c38f5-63f1-48a6-a9fd-f6b654ff9b60"
+      }
+    },
+    {
+      "key": "b1ab6ccb-c53e-4e4a-9b61-cdacb3eafab3",
+      "properties": {
+        "description": "Explain the beneficial and harmful impacts of image manipulations"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "b1ab6ccb-c53e-4e4a-9b61-cdacb3eafab3"
       }
     },
     {
@@ -6688,6 +7476,13 @@
         "lesson.key": "lesson-7",
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-2.G.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "IOC-1.A.3"
       }
     },
     {

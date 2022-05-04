@@ -8,5 +8,10 @@ wrong 'wrong'
 wrong 'wrong'
 
 markdown <<MARKDOWN
-question
+`nums` is an `ArrayList` initialized with the values `[3, 5, 7]`. What is stored in the list `nums` after the following code segment is run?
+
+```
+nums.add(5);
+nums.add(2, 4);
+```
 MARKDOWN

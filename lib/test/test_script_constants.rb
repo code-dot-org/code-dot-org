@@ -41,43 +41,6 @@ class ScriptConstantsTest < Minitest::Test
     refute ScriptConstants.unit_in_category?(:hoc, ScriptConstants::COURSE4_NAME)
   end
 
-  def test_category
-    assert_equal ['hoc'], ScriptConstants.categories(ScriptConstants::HOC_NAME)
-    assert_equal ['hoc'], ScriptConstants.categories(ScriptConstants::STARWARS_NAME)
-    assert_equal ['hoc', 'flappy'], ScriptConstants.categories(ScriptConstants::FLAPPY_NAME)
-    assert_equal ['csf_international'], ScriptConstants.categories(ScriptConstants::COURSE1_NAME)
-    assert_equal ['csp'], ScriptConstants.categories(ScriptConstants::CSP_UNIT1_NAME)
-  end
-
-  def test_category_index
-    assert_equal 0, ScriptConstants.position_in_category(ScriptConstants::CSP_UNIT1_NAME, :csp)
-    assert_equal 1, ScriptConstants.position_in_category(ScriptConstants::CSP_UNIT2_NAME, :csp)
-    assert_equal 2, ScriptConstants.position_in_category(ScriptConstants::CSP_UNIT3_NAME, :csp)
-    assert_equal 3, ScriptConstants.position_in_category(ScriptConstants::CSP_UNIT4_NAME, :csp)
-    assert_equal 4, ScriptConstants.position_in_category(ScriptConstants::CSP_UNIT5_NAME, :csp)
-    assert_equal 5, ScriptConstants.position_in_category(ScriptConstants::CSP_UNIT6_NAME, :csp)
-
-    assert_nil ScriptConstants.position_in_category('script', :not_a_category)
-    assert_nil ScriptConstants.position_in_category('not a script', :csp)
-  end
-
-  def test_category_priority
-    assert_equal 8, ScriptConstants.category_priority(:csf_international)
-    assert_equal 10, ScriptConstants.category_priority(:research_studies)
-  end
-
-  def test_assignable_info
-    dance_index = 6
-    assert_equal dance_index, ScriptConstants.assignable_info({name: 'dance-2019'})[:position]
-    assert_equal dance_index + 1, ScriptConstants.assignable_info({name: 'dance-extras-2019'})[:position]
-    assert_equal dance_index + 2, ScriptConstants.assignable_info({name: 'oceans'})[:position]
-    assert_equal dance_index + 3, ScriptConstants.assignable_info({name: 'outbreak'})[:position]
-    assert_equal dance_index + 4, ScriptConstants.assignable_info({name: 'aquatic'})[:position]
-    assert_equal dance_index + 5, ScriptConstants.assignable_info({name: 'hero'})[:position]
-    assert_equal dance_index + 6, ScriptConstants.assignable_info({name: 'mc'})[:position]
-    assert_equal dance_index + 7, ScriptConstants.assignable_info({name: 'minecraft'})[:position]
-  end
-
   def test_congrats_page
     %w(
       coursea-2019

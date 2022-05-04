@@ -364,6 +364,7 @@ describe('entry tests', () => {
           ],
           ['build/package/css/plc.css', 'style/code-studio/plc.scss'],
           ['build/package/css/pd.css', 'style/code-studio/pd.scss'],
+          ['build/package/css/petition.css', 'style/code-studio/petition.scss'],
           [
             'build/package/css/publicKeyCryptography.css',
             'style/publicKeyCryptography/publicKeyCryptography.scss'
@@ -556,8 +557,6 @@ describe('entry tests', () => {
       './src/sites/studio/pages/layouts/_small_footer.js',
     'layouts/_terms_interstitial':
       './src/sites/studio/pages/layouts/_terms_interstitial.js',
-    'layouts/_thank_donors_interstitial':
-      './src/sites/studio/pages/layouts/_thank_donors_interstitial.js',
     'levels/_bubble_choice':
       './src/sites/studio/pages/levels/_bubble_choice.js',
     'levels/_content': './src/sites/studio/pages/levels/_content.js',
@@ -632,6 +631,8 @@ describe('entry tests', () => {
     'levels/editors/_dsl': './src/sites/studio/pages/levels/editors/_dsl.js',
     'levels/editors/fields/_animation':
       './src/sites/studio/pages/levels/editors/fields/_animation.js',
+    'levels/editors/fields/_bubble_choice_sublevel':
+      './src/sites/studio/pages/levels/editors/fields/_bubble_choice_sublevel.js',
     'levels/editors/fields/_blockly':
       './src/sites/studio/pages/levels/editors/fields/_blockly.js',
     'levels/editors/fields/_callouts':
@@ -669,6 +670,7 @@ describe('entry tests', () => {
       './src/sites/studio/pages/programming_expressions/edit.js',
     'programming_methods/edit':
       './src/sites/studio/pages/programming_methods/edit.js',
+    'reference_guides/new': './src/sites/studio/pages/reference_guides/new.js',
     'reference_guides/edit':
       './src/sites/studio/pages/reference_guides/edit.js',
     'reference_guides/edit_all':
